@@ -1,55 +1,55 @@
 ---
-title: Portieren von Funktionen, die Matrizen und Transformationen erhalten
-description: In der folgenden Tabelle werden die Iris GL-Funktionen aufgelistet, die den Status von Matrizen und Transformationen und deren OpenGL-Entsprechungen erhalten.
+title: Portieren von Funktionen zum Abrufen von Matrizen und Transformationen
+description: In der folgenden Tabelle sind die IRIS GL-Funktionen aufgeführt, die den Status von Matrizen und Transformationen und deren OpenGL-Entsprechungen abrufen.
 ms.assetid: 53546bc0-ce1d-47e0-ab5e-5d6789c6db2a
 keywords:
-- IRIS GL portieren, Matrizen
-- Portieren von IRIS GL, Matrizen
-- Portieren auf OpenGL von IRIS GL, Matrizen
-- OpenGL-Portierung von IRIS GL, Matrizen
+- IRIS GL-Portierung,Matrizen
+- Portieren von IRIS GL,Matrizen
+- Portieren von IRIS GL zu OpenGL, Matrizen
+- OpenGL-Portierung von IRIS GL,Matrizen
 - Matrizen
-- IRIS GL portieren, Transformationen
-- Portieren von IRIS GL, Transformationen
-- Portieren auf OpenGL von IRIS GL, Transformationen
-- OpenGL-Portierung von IRIS GL, Transformationen
+- IRIS GL-Portierung, Transformationen
+- Portieren von IRIS GL,Transformationen
+- Portieren von IRIS GL zu OpenGL, Transformationen
+- OpenGL-Portierung von IRIS GL,Transformationen
 - Transformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93b32ab017e81c9875666785786b29d9c94c7fd1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 68eed8722d982d8d93f47f4d2dc02b8f0f97d9c58512400353ab068015455e13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776970"
 ---
-# <a name="porting-functions-that-get-matrices-and-transformations"></a>Portieren von Funktionen, die Matrizen und Transformationen erhalten
+# <a name="porting-functions-that-get-matrices-and-transformations"></a>Portieren von Funktionen zum Abrufen von Matrizen und Transformationen
 
-In der folgenden Tabelle werden die Iris GL-Funktionen aufgelistet, die den Status von Matrizen und Transformationen und deren OpenGL-Entsprechungen erhalten.
+In der folgenden Tabelle sind die IRIS GL-Funktionen aufgeführt, die den Status von Matrizen und Transformationen und deren OpenGL-Entsprechungen abrufen.
 
 
 
-| IRIS GL-Matrix Abfrage                  | OpenGL-glget-Matrix Abfrage         | Bedeutung                                                         |
+| IRIS GL-Matrixabfrage                  | OpenGL glGet-Matrixabfrage         | Bedeutung                                                         |
 |---------------------------------------|-----------------------------------|-----------------------------------------------------------------|
-| **getmmode**                          | GL- \_ Matrix \_ Modus                  | Gibt den aktuellen Matrix Modus zurück.                                |
-| **getMatrix** im **MVIEW** -Modus    | GL- \_ Modelview- \_ Matrix             | Gibt eine Kopie der aktuellen Modell Ansichts Matrix zurück.                |
-| **getMatrix** im **mprojection** -Modus | GL- \_ Projektions \_ Matrix            | Gibt eine Kopie der aktuellen Projektions Matrix zurück.                |
-| **getMatrix** im **mtexture** -Modus    | GL- \_ Textur \_ Matrix               | Gibt eine Kopie der aktuellen Textur Matrix zurück.                   |
-| Nicht zutreffend                       | \_Max. maximale \_ Modelview- \_ Stapel \_ Tiefe  | Gibt die maximal unterstützte Tiefe des Modell Ansichts Matrix Stapels zurück. |
-| Nicht zutreffend                       | \_Maximale maximale \_ Projektions \_ Stapel \_ Tiefe von GL | Gibt die maximal unterstützte Tiefe des Projektions Matrix Stapels zurück. |
-| Nicht zutreffend                       | \_Maximale maximale \_ Textur \_ Stapel \_ Tiefe von GL    | Gibt die maximal unterstützte Tiefe des Textur Matrix Stapels zurück.    |
-| Nicht zutreffend                       | \_ \_ Stapel Tiefe von GL Modelview \_       | Gibt die Anzahl von Matrizen im Modell Ansichts Stapel zurück.             |
-| Nicht zutreffend                       | \_ \_ Stapel \_ Tiefe der GL-Projektion      | Gibt die Anzahl von Matrizen auf dem Projektions Stapel zurück.             |
-| Nicht zutreffend                       | GL- \_ Textur \_ Stapel \_ Tiefe         | Gibt die Anzahl von Matrizen auf dem Textur Stapel zurück.                |
+| **getmmode**                          | GL \_ \_ MATRIX-MODUS                  | Gibt den aktuellen Matrixmodus zurück.                                |
+| **getmatrix** im **MVIEWING-Modus**    | GL \_ MODELVIEW \_ MATRIX             | Gibt eine Kopie der aktuellen Modellansichtsmatrix zurück.                |
+| **getmatrix** im **MPROJECTION-Modus** | \_GL-PROJEKTIONSMATRIX \_            | Gibt eine Kopie der aktuellen Projektionsmatrix zurück.                |
+| **getmatrix** im **MTEXTURE-Modus**    | GL \_ TEXTURE \_ MATRIX               | Gibt eine Kopie der aktuellen Texturmatrix zurück.                   |
+| Nicht zutreffend                       | GL \_ MAX \_ MODELVIEW \_ STACK \_ DEPTH  | Gibt die maximal unterstützte Tiefe des Matrixstapels der Modellansicht zurück. |
+| Nicht zutreffend                       | GL \_ MAX \_ \_ PROJEKTIONSSTAPELTIEFE \_ | Gibt die maximal unterstützte Tiefe des Projektionsmatrixstapels zurück. |
+| Nicht zutreffend                       | GL \_ MAX \_ TEXTURE \_ STACK \_ DEPTH    | Gibt die maximal unterstützte Tiefe des Texturmatrixstapels zurück.    |
+| Nicht zutreffend                       | GL \_ MODELVIEW \_ STACK \_ DEPTH       | Gibt die Anzahl der Matrizen im Modellansichtsstapel zurück.             |
+| Nicht zutreffend                       | \_ \_ GL-PROJEKTIONSSTAPELTIEFE \_      | Gibt die Anzahl der Matrizen auf dem Projektionsstapel zurück.             |
+| Nicht zutreffend                       | GL \_ \_ TEXTURSTAPELTIEFE \_         | Gibt die Anzahl der Matrizen auf dem Texturstapel zurück.                |
 
 
 
- 
+ 
 
 ??
 
- 
+ 
 
- 
+ 
 
 
 

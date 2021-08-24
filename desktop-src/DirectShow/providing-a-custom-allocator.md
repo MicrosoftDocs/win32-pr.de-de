@@ -4,24 +4,24 @@ ms.assetid: 4ce2db4b-c901-43a5-b905-7d6d923c940b
 title: Bereitstellen einer benutzerdefinierten Zuweisung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e85a8d133ee5b686e25bc0d7d4a3e2444cb2791
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 79b2f36f269ff30545d648c5df22e3070ec5588bcc2fa8791852fe9b6a59215c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747910"
 ---
 # <a name="providing-a-custom-allocator"></a>Bereitstellen einer benutzerdefinierten Zuweisung
 
-In diesem Abschnitt wird beschrieben, wie Sie einen benutzerdefinierten Zuweiser für einen Filter bereitstellen. Es werden nur [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Verbindungen beschrieben, die Schritte für eine [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Verbindung sind jedoch ähnlich.
+In diesem Abschnitt wird beschrieben, wie Sie eine benutzerdefinierte Zuweisung für einen Filter bereitstellen. Es [**werden nur IMemInputPin-Verbindungen**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) beschrieben, die Schritte für eine [**IAsyncReader-Verbindung**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) sind jedoch ähnlich.
 
-Definieren Sie zuerst eine C++-Klasse für die Zuweisung. Ihre Zuweisung kann von einer der standardzuordnerklassen, [**cbasezucator**](cbaseallocator.md) oder [**cmemzuordcator**](cmemallocator.md)abgeleitet werden, oder Sie können eine vollständig neue zuordnerklasse erstellen. Wenn Sie eine neue Klasse erstellen, muss Sie die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle verfügbar machen.
+Definieren Sie zunächst eine C++-Klasse für die Zuweisung. Ihre Zuweisung kann von einer der Standardzuweisungsklassen [**,CBaseAllocator**](cbaseallocator.md) oder [**CMemAllocator'**](cmemallocator.md)ableiten, oder Sie können eine völlig neue Zuweisungsklasse erstellen. Wenn Sie eine neue Klasse erstellen, muss sie die [**IMemAllocator-Schnittstelle verfügbar**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) machen.
 
-Die verbleibenden Schritte hängen davon ab, ob ihre Zuweisung zu einer Eingabe-PIN oder einer Ausgabe-PIN in Ihrem Filter gehört. Eingabe Pins spielen während der zuordneraushandlungs Phase eine andere Rolle als Ausgabe Pins, da die Ausgabepin letztendlich die Zuweisung auswählt.
+Die verbleibenden Schritte hängen davon ab, ob Ihre Zuweisung zu einem Eingabepin oder einem Ausgabepin in Ihrem Filter gehört. Eingabepins spielen während der Zuweisungsaushandlungsphase eine andere Rolle als Ausgabepins, da der Ausgabepin letztendlich die Zuweisung auswählt.
 
-**Bereitstellen einer benutzerdefinierten Zuweisung für eine Eingabe-PIN**
+**Bereitstellen einer benutzerdefinierten Zuweisung für einen Eingabepin**
 
-Um eine Zuweisung für eine Eingabe-PIN bereitzustellen, überschreiben Sie die [**cbaseinputpin:: getallocator**](cbaseinputpin-getallocator.md) -Methode der Eingabe-PIN. Überprüfen Sie in dieser Methode die **m \_ pallocator** -Member-Variable. Wenn diese Variable nicht **null** ist, bedeutet dies, dass die Zuweisung bereits für diese Verbindung ausgewählt wurde. Daher muss die **getallocator** -Methode einen Zeiger auf diese Zuweisung zurückgeben. Wenn **m \_ pallocator** **null** ist, bedeutet dies, dass die Zuweisung nicht ausgewählt wurde. Daher sollte die **getallocator** -Methode einen Zeiger auf die bevorzugte Zuweisung der Eingabe-PIN zurückgeben. Erstellen Sie in diesem Fall eine Instanz Ihrer benutzerdefinierten Zuweisung, und geben Sie den [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Zeiger zurück. Der folgende Code zeigt, wie die **getallocator** -Methode implementiert wird:
+Um eine Zuweisung für einen Eingabepin zur Verfügung zu stellen, überschreiben Sie die [**CBaseInputPin::GetAllocator-Methode**](cbaseinputpin-getallocator.md) des Eingabepins. Überprüfen Sie in dieser Methode die **m \_ pAllocator-Membervariable.** Wenn diese Variable nicht NULL **ist,** bedeutet dies, dass die Zuweisung bereits für diese Verbindung ausgewählt wurde, sodass die **GetAllocator-Methode** einen Zeiger auf diese Zuweisung zurückgeben muss. Wenn **m \_ pAllocator** **NULL ist,** bedeutet dies, dass die Zuweisung nicht ausgewählt wurde, sodass die **GetAllocator-Methode** einen Zeiger auf die bevorzugte Zuweisung des Eingabepins zurückgeben sollte. Erstellen Sie in diesem Fall eine Instanz Ihrer benutzerdefinierten Zuweisung, und geben Sie den [**IMemAllocator-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) zurück. Der folgende Code zeigt, wie die **GetAllocator-Methode implementiert** wird:
 
 
 ```C++
@@ -57,11 +57,11 @@ STDMETHODIMP CMyInputPin::GetAllocator(IMemAllocator **ppAllocator)
 
 
 
-Wenn der upstreamfilter eine Zuweisung auswählt, ruft er die [**IMemInputPin:: notifyzuweisung**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) -Methode der Eingabe-PIN auf. Überschreiben Sie die [**cbaseinputpin:: notifyzuweisung**](cbaseinputpin-notifyallocator.md) -Methode, um die zuordnereigenschaften zu überprüfen. In einigen Fällen kann die Eingabe-PIN die Zuweisung ablehnen, wenn Sie nicht Ihre benutzerdefinierte Zuweisung ist, obwohl dies dazu führen kann, dass die gesamte Pin-Verbindung fehlschlägt.
+Wenn der Upstreamfilter eine Zuweisung auswählt, ruft er die [**IMemInputPin::NotifyAllocator-Methode des Eingabepins**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) auf. Überschreiben Sie [**die CBaseInputPin::NotifyAllocator-Methode,**](cbaseinputpin-notifyallocator.md) um die Zuweisungseigenschaften zu überprüfen. In einigen Fällen kann der Eingabepin die Zuweisung ablehnen, wenn es sich nicht um Ihre benutzerdefinierte Zuweisung handelt, obwohl dies dazu führen kann, dass die gesamte Pinverbindung fehlschlägt.
 
-**Bereitstellen einer benutzerdefinierten Zuweisung für eine Ausgabepin**
+**Bereitstellen einer benutzerdefinierten Zuweisung für einen Ausgabepin**
 
-Zum Bereitstellen einer Zuweisung für eine Ausgabepin überschreiben Sie die [**cbaseoutputpin:: initaccesscator**](cbaseoutputpin-initallocator.md) -Methode, um eine Instanz Ihrer Zuweisung zu erstellen:
+Um eine Zuweisung für einen Ausgabepin zur Verfügung zu stellen, überschreiben Sie die [**CBaseOutputPin::InitAllocator-Methode,**](cbaseoutputpin-initallocator.md) um eine Instanz Ihrer Zuweisung zu erstellen:
 
 
 ```C++
@@ -87,7 +87,7 @@ HRESULT MyOutputPin::InitAllocator(IMemAllocator **ppAllocator)
 
 
 
-Standardmäßig fordert die [**cbaseoutputpin**](cbaseoutputpin.md) -Klasse zuerst einen Zuweiser von der eingabepin an. Wenn diese Zuweisung nicht geeignet ist, erstellt die Ausgabe-PIN eine eigene Zuweisung. Um die Verbindung mit der benutzerdefinierten Zuweisung zu erzwingen, überschreiben Sie die [**cbaseoutputpin::D ecidezuordcator**](cbaseoutputpin-decideallocator.md) -Methode. Beachten Sie jedoch, dass dadurch verhindert werden kann, dass Ihre Ausgabe-PIN eine Verbindung mit bestimmten Filtern herstellt, da der andere Filter möglicherweise auch eine eigene benutzerdefinierte Zuweisung erfordert. Eine dritte Möglichkeit besteht darin, die Reihenfolge zu ändern: Testen Sie zuerst die benutzerdefinierte Zuweisung, und greifen Sie dann auf die Zuweisung des anderen Filters zurück.
+Standardmäßig fordert die [**CBaseOutputPin-Klasse**](cbaseoutputpin.md) zuerst eine Zuweisung vom Eingabepin an. Wenn diese Zuweisung nicht geeignet ist, erstellt der Ausgabepin eine eigene Zuweisung. Um zu erzwingen, dass die Verbindung Ihre benutzerdefinierte Zuweisung verwendet, überschreiben Sie [**die CBaseOutputPin::D ecideAllocator-Methode.**](cbaseoutputpin-decideallocator.md) Beachten Sie jedoch, dass dadurch verhindert werden kann, dass Ihr Ausgabepin eine Verbindung mit bestimmten Filtern herstellen kann, da der andere Filter möglicherweise auch eine eigene benutzerdefinierte Zuweisung erfordert. Eine dritte Möglichkeit besteht im Wechseln der Reihenfolge: Testen Sie zuerst Ihre benutzerdefinierte Zuweisung, und lehnen Sie dann auf die Zuweisung des anderen Filters ab.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

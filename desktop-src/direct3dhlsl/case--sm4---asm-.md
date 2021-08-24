@@ -1,34 +1,34 @@
 ---
-title: Case (SM4-ASM)
-description: Eine Bezeichnung in einer Switch-Anweisung.
+title: case (sm4 - asm)
+description: Eine Bezeichnung in einer switch-Anweisung.
 ms.assetid: 456BB918-327E-4E15-8D38-F53850CAF666
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0278b8492575b1ef54fd64fc24b031fdec6cfb21
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3034ca54c6dc87150ac56af53de99161f295f33b4e38ca5b4d47467e1e13d269
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119727090"
 ---
-# <a name="case-sm4---asm"></a>Case (SM4-ASM)
+# <a name="case-sm4---asm"></a>case (sm4 - asm)
 
-Eine Bezeichnung in einer Switch-Anweisung.
+Eine Bezeichnung in einer switch-Anweisung.
 
 
 
-| Groß-/Kleinschreibung \[ 32-Bit\] |
+| \[32-Bit-Fall direkt\] |
 |---------------------------|
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da das Durchlaufen von **Fällen** nur gültig ist, wenn kein Code hinzugefügt wurde, können mehrere **Fälle** (einschließlich [Standard](default--sm4---asm-.md)) denselben Codeblock gemeinsam verwenden.
+Da das **Durchfallen von** Fällen nur gültig ist, wenn kein Code hinzugefügt wird, können mehrere Fälle (einschließlich Standard) denselben Codeblock gemeinsam verwenden.  [](default--sm4---asm-.md)
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -38,26 +38,26 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -66,9 +66,9 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 [Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

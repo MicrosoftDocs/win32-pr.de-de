@@ -1,78 +1,78 @@
-- name: Peer-to-Peer
+- name: Peer-zu-Peer
   href: portal.md
   items:
-    - name: Peer Infrastruktur
+    - name: Peerinfrastruktur
       href: peer-infrastructure.md
       items:
         - name: Neuerungen
           href: what-s-new.md
-        - name: Informationen zu Peer Netzwerken
+        - name: Informationen zu Peernetzwerken
           href: about-peer-networking.md
           items:
-            - name: Was ist Peer Netzwerk?
+            - name: Was ist Peernetzwerk?
               href: what-is-peer-networking-.md
-            - name: Vorteile von Peer Netzwerken
+            - name: Vorteile von Peernetzwerken
               href: benefits-of-peer-networking.md
-            - name: Peer Netzwerk Szenarios
+            - name: Peernetzwerkszenarien
               href: peer-networking-scenarios.md
-            - name: Was ist die Peer Infrastruktur?
+            - name: Was ist die Peerinfrastruktur?
               href: what-is-the-peer-infrastructure-.md
-        - name: Allgemeine Dokumentation zur Peer Infrastruktur
+        - name: Allgemeine Dokumentation zur Peerinfrastruktur
           href: peer-infrastructure-common-documentation.md
           items:
             - name: Peernamen
               href: peer-names.md
             - name: Clouds
               href: clouds.md
-            - name: Verwenden der Peer Infrastruktur
+            - name: Verwenden der Peerinfrastruktur
               href: using-the-peer-infrastructure.md
               items:
-                - name: Installieren der Peer Infrastruktur
+                - name: Installieren der Peerinfrastruktur
                   href: installing-the-peer-infrastructure.md
                 - name: Überlegungen zur Programmierung
                   href: programming-considerations.md
                 - name: Überlegungen zur Sicherheit
                   href: security-considerations.md
-                - name: Daten Bank Import und-Export
+                - name: Datenbankimport und -export
                   href: database-import-and-export.md
                 - name: Direkte Verbindungen
                   href: direct-connections.md
                 - name: Enumerationen
                   href: enumerations.md
-                - name: Freigeben von Peer Daten
+                - name: Freigeben von Peerdaten
                   href: freeing-peer-data.md
-                - name: Peer Ereignis Infrastruktur
+                - name: Infrastruktur für Peerereignisse
                   href: peer-events-infrastructure.md
-                - name: Importieren und Exportieren von Identitäts-und Gruppen Konfigurationen
+                - name: Importieren und Exportieren der Identitäts- und Gruppenkonfiguration
                   href: identity-and-group-configuration-import-and-export.md
-                - name: Die Peer Infrastruktur und Teredo
+                - name: Peerinfrastruktur und Teredo
                   href: the-peer-infrastructure-and-teredo.md
                 - name: Datensätze
                   href: records.md
                   items:
-                    - name: Daten Satz Abhängigkeiten
+                    - name: Datensatzabhängigkeiten
                       href: record-dependencies.md
-                    - name: Daten Satz Verwaltung
+                    - name: Datensatzverwaltung
                       href: record-management.md
-                    - name: Attribut Schema aufzeichnen
+                    - name: Datensatzattributschema
                       href: record-attribute-schema.md
-                    - name: Suchabfrage Format aufzeichnen
+                    - name: Abfrageformat der Datensatzsuche
                       href: record-search-query-format.md
             - name: Beispielanwendungen
               href: sample-applications.md
-            - name: Allgemeine Referenz zur Peer Infrastruktur
+            - name: Peerinfrastruktur – Allgemeine Referenz
               href: peer-infrastructure-common-reference.md
               items:
                 - name: Allgemeine Funktionen
                   href: common-functions.md
                   items:
-                    - name: Peer Enumeration
+                    - name: PeerEndEnumeration
                       href: /windows/desktop/api/P2P/nf-p2p-peerendenumeration
-                    - name: '"Peer"-Daten'
+                    - name: PeerFreeData
                       href: /windows/desktop/api/P2P/nf-p2p-peerfreedata
-                    - name: '"Peer-GetItemCount"'
+                    - name: PeerGetItemCount
                       href: /windows/desktop/api/P2P/nf-p2p-peergetitemcount
-                    - name: '"Peer GetNextItem"'
+                    - name: PeerGetNextItem
                       href: /windows/desktop/api/P2P/nf-p2p-peergetnextitem
                 - name: Allgemeine Strukturen
                   href: common-structures.md
@@ -104,101 +104,101 @@
                       href: /windows/win32/api/P2P/ne-p2p-peer_record_change_type
                     - name: PEER_RECORD_FLAGS
                       href: /windows/win32/api/P2P/ne-p2p-peer_record_flags
-                - name: Allgemeine Rückgabe Codes
+                - name: Allgemeine Rückgabecodes
                   href: common-return-codes.md
-        - name: Graphende-API
+        - name: Graphing-API
           href: graphing-api.md
           items:
-            - name: Informationen zur graphende-API
+            - name: Informationen zur Graphing-API
               href: about-the-graphing-api.md
-            - name: Verwenden der graphenden API
+            - name: Verwenden der Graphing-API
               href: using-the-graphing-api.md
               items:
-                - name: Arbeiten mit Diagrammen
+                - name: Arbeiten mit Graphen
                   href: working-with-graphs.md
-                - name: Sicherheits Dienstanbieter
+                - name: Sicherheitsdienstanbieter
                   href: security-service-providers.md
-            - name: Referenz zur graphende-API
+            - name: Graphing-API-Referenz
               href: the-graphing-api-reference.md
               items:
-                - name: Graphende von API-Funktionen
+                - name: Graphing-API-Funktionen
                   href: graphing-api-functions.md
                   items:
-                    - name: Peer-graphaddrecord
+                    - name: PeerGraphAddRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphaddrecord
-                    - name: Peer graphclose
+                    - name: PeerGraphClose
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphclose
-                    - name: Peer Diagramm closedirectconnection
+                    - name: PeerGraphCloseDirectConnection
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphclosedirectconnection
-                    - name: Peer graphconnect
+                    - name: PeerGraphConnect
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphconnect
-                    - name: Peer graphcreate
+                    - name: PeerGraphCreate
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphcreate
-                    - name: Peer graphdelete
+                    - name: PeerGraphDelete
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphdelete
-                    - name: Peer graphdeleterecord
+                    - name: PeerGraphDeleteRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphdeleterecord
-                    - name: '"Peer graphenumeration"'
+                    - name: PeerGraphEndEnumeration
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphendenumeration
-                    - name: Peergraphenumconnections
+                    - name: PeerGraphEnumConnections
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphenumconnections
-                    - name: '"Peer graphenumnodes"'
+                    - name: PeerGraphEnumNodes
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphenumnodes
-                    - name: '"Peer graphenumrecords"'
+                    - name: PeerGraphEnumRecords
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphenumrecords
-                    - name: Peer graphexportdatabase
+                    - name: PeerGraphExportDatabase
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphexportdatabase
-                    - name: Peer graphfredata
+                    - name: PeerGraphFreeData
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphfreedata
-                    - name: Peer graphgeteventdata
+                    - name: PeerGraphGetEventData
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata
-                    - name: Peer graphgetitemcount
+                    - name: PeerGraphGetItemCount
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetitemcount
-                    - name: Peer graphgetnextitem
+                    - name: PeerGraphGetNextItem
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetnextitem
-                    - name: Peer graphgetnodeinfo
+                    - name: PeerGraphGetNodeInfo
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetnodeinfo
-                    - name: '"Peer graphgetproperties"'
+                    - name: PeerGraphGetProperties
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetproperties
-                    - name: '"Peer graphgetrecord"'
+                    - name: PeerGraphGetRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetrecord
-                    - name: Peergraphgetstatus
+                    - name: PeerGraphGetStatus
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphgetstatus
-                    - name: Peer graphimportdatabase
+                    - name: PeerGraphImportDatabase
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphimportdatabase
-                    - name: Peer Diagramm lauschen
+                    - name: PeerGraphListen
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphlisten
-                    - name: Peer graphopen
+                    - name: PeerGraphOpen
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphopen
-                    - name: Peer graphopendirectconnection
+                    - name: PeerGraphOpenDirectConnection
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphopendirectconnection
-                    - name: '"Peer Diagramm"-Zeitfenster'
+                    - name: PeerGraphPeerTimeToUniversalTime
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphpeertimetouniversaltime
-                    - name: Peer Diagramm Register Event
+                    - name: PeerGraphRegisterEvent
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphregisterevent
-                    - name: Peer Diagramm searchrecords
+                    - name: PeerGraphSearchRecords
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphsearchrecords
-                    - name: Peer Diagramm Daten
+                    - name: PeerGraphSendData
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphsenddata
-                    - name: '"Peer graphsetnodebug"-Attribute'
+                    - name: PeerGraphSetNodeAttributes
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphsetnodeattributes
-                    - name: Peer graphsetpresence
+                    - name: PeerGraphSetPresence
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphsetpresence
-                    - name: '"Peer graphsetproperties"'
+                    - name: PeerGraphSetProperties
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphsetproperties
-                    - name: Peer Diagramm Shutdown
+                    - name: PeerGraphShutdown
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphshutdown
-                    - name: Peer graphstartup
+                    - name: PeerGraphStartup
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphstartup
-                    - name: Peer graphuniversaltimetopeertime
+                    - name: PeerGraphUniversalTimeToPeerTime
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphuniversaltimetopeertime
-                    - name: '"Peer Diagramm"'
+                    - name: PeerGraphUnregisterEvent
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphunregisterevent
-                    - name: Peer graphupdaterecord
+                    - name: PeerGraphUpdateRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphupdaterecord
-                    - name: Peer graphvalidatedeferredrecords
+                    - name: PeerGraphValidateDeferredRecords
                       href: /windows/desktop/api/P2P/nf-p2p-peergraphvalidatedeferredrecords
-                - name: Grafisch darzulegende API-Rückrufe
+                - name: Graphing-API-Rückrufe
                   href: graphing-api-callbacks.md
                   items:
                     - name: PFNPEER_FREE_SECURITY_DATA
@@ -207,7 +207,7 @@
                       href: /windows/desktop/api/P2P/nc-p2p-pfnpeer_secure_record
                     - name: PFNPEER_VALIDATE_RECORD
                       href: /windows/desktop/api/P2P/nc-p2p-pfnpeer_validate_record
-                - name: Grafisch rentieren von API-Strukturen
+                - name: Graphing-API-Strukturen
                   href: graphing-api-structures.md
                   items:
                     - name: PEER_EVENT_NODE_CHANGE_DATA
@@ -224,7 +224,7 @@
                       href: /windows/win32/api/P2P/ns-p2p-peer_node_info
                     - name: PEER_SECURITY_INTERFACE
                       href: /windows/win32/api/P2P/ns-p2p-peer_security_interface
-                - name: Grafisch ersetzende API-Konstanten
+                - name: Graphing-API-Konstanten
                   href: graphing-api-enumerations.md
                   items:
                     - name: PEER_GRAPH_EVENT_TYPE
@@ -237,7 +237,7 @@
                       href: /windows/win32/api/P2P/ne-p2p-peer_graph_status_flags
                     - name: PEER_NODE_CHANGE_TYPE
                       href: /windows/win32/api/P2P/ne-p2p-peer_node_change_type
-                - name: Diagramm Verweis Links
+                - name: Diagrammverweislinks
                   href: graphing-reference-links.md
         - name: Gruppierungs-API
           href: grouping-api.md
@@ -247,98 +247,98 @@
               items:
                 - name: Arbeiten mit Gruppen
                   href: how-to-work-with-groups.md
-                - name: Funktionsweise der Gruppen Sicherheit
+                - name: Funktionsweise der Gruppensicherheit
                   href: how-group-security-works.md
-                - name: Vorgehensweise beim Herstellen einer Verbindung mit einer Peer Gruppe
+                - name: How to Verbinden to a Peer Group
                   href: how-to-connect-to-a-peer-group.md
-                - name: Einladen eines Peers zu einer Gruppe
+                - name: Einladen eines Peers in eine Gruppe
                   href: inviting-a-peer-to-a-group.md
-                - name: Verwalten von Gruppendaten Sätzen
+                - name: Verwalten von Gruppendatensätzen
                   href: managing-group-records.md
             - name: Verwenden der Gruppierungs-API
               href: using-the-grouping-api.md
               items:
-                - name: Erstellen einer Gruppen Chat-Anwendung
+                - name: Erstellen einer Gruppenchatanwendung
                   href: creating-a-group-chat-application.md
-            - name: Gruppieren der API-Referenz
+            - name: Gruppierungs-API-Referenz
               href: the-grouping-api-reference.md
               items:
                 - name: Gruppieren von API-Funktionen
                   href: grouping-api-functions.md
                   items:
-                    - name: '"Peer groupaddrecord"'
+                    - name: PeerGroupAddRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupaddrecord
-                    - name: '"Peer groupclose"'
+                    - name: PeerGroupClose
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupclose
-                    - name: '"Peer groupclosedirectconnection"'
+                    - name: PeerGroupCloseDirectConnection
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupclosedirectconnection
-                    - name: Peer groupconnect
+                    - name: PeerGroupConnect
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupconnect
-                    - name: '"Peer groupconnectbyaddress"'
+                    - name: PeerGroupConnectByAddress
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupconnectbyaddress
-                    - name: Peer groupcreate
+                    - name: PeerGroupErzeugen
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupcreate
-                    - name: '"Peer groupkreateinvitation"'
+                    - name: PeerGroupCreateInvitation
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupcreateinvitation
-                    - name: Peer groupkreatepasswordinvitation
+                    - name: PeerGroupCreatePasswordInvitation
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupcreatepasswordinvitation
-                    - name: '"Peer groupdelete"'
+                    - name: PeerGroupDelete
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupdelete
-                    - name: Peer groupdeleterecord
+                    - name: PeerGroupDeleteRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupdeleterecord
-                    - name: Peergroupumschlag-Verbindungen
+                    - name: PeerGroupEnumConnections
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupenumconnections
-                    - name: '"Peer groupenummembers"'
+                    - name: PeerGroupEnumMembers
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupenummembers
-                    - name: Peer groupumschlag
+                    - name: PeerGroupEnumRecords
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupenumrecords
-                    - name: '"Peer groupexportconfig"'
+                    - name: PeerGroupExportConfig
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupexportconfig
-                    - name: '"Peer groupexportdatabase"'
+                    - name: PeerGroupExportDatabase
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupexportdatabase
-                    - name: '"Peer groupgeteventdata"'
+                    - name: PeerGroupGetEventData
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata
-                    - name: '"Peer groupgetproperties"'
+                    - name: PeerGroupGetProperties
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupgetproperties
-                    - name: '"Peer groupgetrecord"'
+                    - name: PeerGroupGetRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupgetrecord
-                    - name: Peergroupgetstatus
+                    - name: PeerGroupGetStatus
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupgetstatus
-                    - name: '"Peer groupimportconfig"'
+                    - name: PeerGroupImportConfig
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupimportconfig
-                    - name: '"Peer groupimportdatabase"'
+                    - name: PeerGroupImportDatabase
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupimportdatabase
-                    - name: Peer groupissuecredenseins
+                    - name: PeerGroupIssueCredentials
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupissuecredentials
-                    - name: Peer GroupJoin
+                    - name: PeerGroupJoin
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupjoin
-                    - name: Peer groupopen
+                    - name: PeerGroupOpen
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupopen
-                    - name: '"Peer groupopendirectconnection"'
+                    - name: PeerGroupOpenDirectConnection
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupopendirectconnection
-                    - name: Peer-grouppasswordjoin
+                    - name: PeerGroupPasswordJoin
                       href: /windows/desktop/api/P2P/nf-p2p-peergrouppasswordjoin
-                    - name: '"Peer groupparamevitation"'
+                    - name: PeerGroupParseInvitation
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupparseinvitation
-                    - name: '"Peer grouppeer Timeto universaltime"'
+                    - name: PeerGroupPeerTimeToUniversalTime
                       href: /windows/desktop/api/P2P/nf-p2p-peergrouppeertimetouniversaltime
-                    - name: '"Peer-groupregisterevent"'
+                    - name: PeerGroupRegisterEvent
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupregisterevent
-                    - name: '"Peer groupsearchrecords"'
+                    - name: PeerGroupSearchRecords
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupsearchrecords
-                    - name: '"Peer Group"-Daten'
+                    - name: PeerGroupSendData
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupsenddata
-                    - name: '"Peer groupsetproperties"'
+                    - name: PeerGroupSetProperties
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupsetproperties
-                    - name: '"Peer groupshutdown"'
+                    - name: PeerGroupShutdown
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupshutdown
-                    - name: Peer groupstartup
+                    - name: PeerGroupStartup
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupstartup
-                    - name: '"Peer groupuniversaltimetopeertime"'
+                    - name: PeerGroupUniversalTimeToPeerTime
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupuniversaltimetopeertime
-                    - name: '"Peer Register Event"'
+                    - name: PeerGroupUnregisterEvent
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupunregisterevent
-                    - name: Peer-groupupdaterecord
+                    - name: PeerGroupUpdateRecord
                       href: /windows/desktop/api/P2P/nf-p2p-peergroupupdaterecord
                 - name: Gruppieren von API-Strukturen
                   href: grouping-api-structures.md
@@ -382,7 +382,7 @@
             - name: Verwenden von Identity Manager
               href: using-the-identity-manager-api.md
               items:
-                - name: Erstellen einer Peer Identität
+                - name: Erstellen einer Peeridentität
                   href: creating-a-peer-identity.md
             - name: Identity Manager-Referenz
               href: the-identity-manager-api-reference.md
@@ -390,53 +390,53 @@
                 - name: Identity Manager-Funktionen
                   href: identity-manager-functions.md
                   items:
-                    - name: '"Peer Name"'
+                    - name: PeerCreatePeerName
                       href: /windows/desktop/api/P2P/nf-p2p-peercreatepeername
-                    - name: Peer Enumgroups
+                    - name: PeerEnumGroups
                       href: /windows/desktop/api/P2P/nf-p2p-peerenumgroups
-                    - name: Peer-Identitäts dentitäten
+                    - name: PeerEnumIdentities
                       href: /windows/desktop/api/P2P/nf-p2p-peerenumidentities
-                    - name: '"Peer Identity"'
+                    - name: PeerIdentityCreate
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitycreate
-                    - name: '"Peer Identity"'
+                    - name: PeerIdentityDelete
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitydelete
-                    - name: Peer Identity-Export
+                    - name: PeerIdentityExport
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentityexport
-                    - name: '"Peer Identity tygetcryptkey"'
+                    - name: PeerIdentityGetCryptKey
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitygetcryptkey
-                    - name: '"Peer Identity tygetdefault"'
+                    - name: PeerIdentityGetDefault
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitygetdefault
-                    - name: '"Peer Identity Name"'
+                    - name: PeerIdentityGetFriendlyName
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitygetfriendlyname
-                    - name: '"Peer Identity tygetxml"'
+                    - name: PeerIdentityGetXML
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitygetxml
-                    - name: '"Peer Identity"'
+                    - name: PeerIdentityImport
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentityimport
-                    - name: '"Peer Identity Name"'
+                    - name: PeerIdentitySetFriendlyName
                       href: /windows/desktop/api/P2P/nf-p2p-peeridentitysetfriendlyname
                 - name: Identity Manager-Strukturen
                   href: identity-manager-structures.md
                   items:
                     - name: PEER_NAME_PAIR
                       href: /windows/win32/api/P2P/ns-p2p-peer_name_pair
-                - name: Identitäts-Manager-Referenz Links
+                - name: Identity Manager-Referenzlinks
                   href: identity-manager-reference-links.md
         - name: Verteiltes Routing Tabellen-API
           href: distributed-routing-table-api.md
           items:
-            - name: Informationen zu verteilten Routing Tabellen
+            - name: Informationen zu verteilten Routingtabellen
               href: about-distributed-routing-tables.md
-            - name: Verwenden des Tabellen-API für verteilten Routing
+            - name: Verwenden des distributed routing Tabellen-API
               href: using-the-distributed-routing-table-api.md
               items:
                 - name: Registrieren und Aufheben der Registrierung von Schlüsseln
                   href: registering-and-deregistering-keys.md
-                - name: Durchsuchen einer verteilten Routing Tabelle
+                - name: Durchsuchen einer verteilten Routingtabelle
                   href: searching-a-distributed-routing-table.md
-            - name: Tabellen-API Referenz zu verteiltem Routing
+            - name: Tabellen-API-Referenz für verteiltes Routing
               href: distributed-routing-table-api-reference.md
               items:
-                - name: Verteilte Routing Tabellen-Enumerationen
+                - name: Verteilte Routingtabellenenumerationen
                   href: distributed-routing-table-enumerations.md
                   items:
                     - name: DRT_ADDRESS_FLAGS
@@ -455,7 +455,7 @@
                       href: /windows/win32/api/drt/ne-drt-drt_security_mode
                     - name: DRT_STATUS
                       href: /windows/win32/api/drt/ne-drt-drt_status
-                - name: Strukturen verteilter Routing Tabellen
+                - name: Tabellenstrukturen für verteiltes Routing
                   href: distributed-routing-table-structures.md
                   items:
                     - name: DRT_ADDRESS
@@ -478,66 +478,66 @@
                       href: /windows/win32/api/Drt/ns-drt-drt_security_provider
                     - name: DRT_SETTINGS
                       href: /windows/win32/api/drt/ns-drt-drt_settings
-                - name: Tabellen Funktionen für verteilte Routing
+                - name: Tabellenfunktionen für verteiltes Routing
                   href: distributed-routing-table-functions.md
                   items:
-                    - name: Drtclose
+                    - name: DrtClose
                       href: /windows/desktop/api/drt/nf-drt-drtclose
-                    - name: Drtcontinuesearch
+                    - name: DrtContinueSearch
                       href: /windows/desktop/api/drt/nf-drt-drtcontinuesearch
-                    - name: Drtkreatederivedkey
+                    - name: DrtCreateDerivedKey
                       href: /windows/desktop/api/drt/nf-drt-drtcreatederivedkey
-                    - name: Drtkreatederivedkeysecurityprovider
+                    - name: DrtCreateDerivedKeySecurityProvider
                       href: /windows/desktop/api/drt/nf-drt-drtcreatederivedkeysecurityprovider
-                    - name: Drtkreatednsbootstrapresolver
+                    - name: DrtCreateDnsBootstrapResolver
                       href: /windows/desktop/api/drt/nf-drt-drtcreatednsbootstrapresolver
                     - name: DrtCreateIpv6UdpTransport
                       href: /windows/desktop/api/drt/nf-drt-drtcreateipv6udptransport
-                    - name: Drtkreatenullsecurityprovider
+                    - name: DrtCreateNullSecurityProvider
                       href: /windows/desktop/api/drt/nf-drt-drtcreatenullsecurityprovider
-                    - name: Drtkreatepnrpbootstrapresolver
+                    - name: DrtCreatePnrpBootstrapResolver
                       href: /windows/desktop/api/drt/nf-drt-drtcreatepnrpbootstrapresolver
-                    - name: Drtdeletederivedkeysecurityprovider
+                    - name: DrtDeleteDerivedKeySecurityProvider
                       href: /windows/desktop/api/drt/nf-drt-drtdeletederivedkeysecurityprovider
-                    - name: Drtdeletednsbootstrapresolver
+                    - name: DrtDeleteDnsBootstrapResolver
                       href: /windows/desktop/api/drt/nf-drt-drtdeletednsbootstrapresolver
                     - name: DrtDeleteIpv6UdpTransport
                       href: /windows/desktop/api/drt/nf-drt-drtdeleteipv6udptransport
-                    - name: Drtdeletenullsecurityprovider
+                    - name: DrtDeleteNullSecurityProvider
                       href: /windows/desktop/api/drt/nf-drt-drtdeletenullsecurityprovider
-                    - name: Drtdeletepnrpbootstrapresolver
+                    - name: DrtDeletePnrpBootstrapResolver
                       href: /windows/desktop/api/drt/nf-drt-drtdeletepnrpbootstrapresolver
-                    - name: Drtendsearch
+                    - name: DrtEndSearch
                       href: /windows/desktop/api/drt/nf-drt-drtendsearch
-                    - name: Drtgeteventdata
+                    - name: DrtGetEventData
                       href: /windows/desktop/api/drt/nf-drt-drtgeteventdata
-                    - name: Drtgeteventdatasize
+                    - name: DrtGetEventDataSize
                       href: /windows/desktop/api/drt/nf-drt-drtgeteventdatasize
-                    - name: Drtgetinstancename
+                    - name: DrtGetInstanceName
                       href: /windows/desktop/api/drt/nf-drt-drtgetinstancename
-                    - name: Drtgetinstancenamesize
+                    - name: DrtGetInstanceNameSize
                       href: /windows/desktop/api/drt/nf-drt-drtgetinstancenamesize
-                    - name: Drtgetsearchpath
+                    - name: DrtGetSearchPath
                       href: /windows/desktop/api/drt/nf-drt-drtgetsearchpath
-                    - name: Drtgetsearchpathsize
+                    - name: DrtGetSearchPathSize
                       href: /windows/desktop/api/drt/nf-drt-drtgetsearchpathsize
-                    - name: Drtgetsearchresult
+                    - name: DrtGetSearchResult
                       href: /windows/desktop/api/drt/nf-drt-drtgetsearchresult
-                    - name: Drtgetsearchresultsize
+                    - name: DrtGetSearchResultSize
                       href: /windows/desktop/api/drt/nf-drt-drtgetsearchresultsize
-                    - name: Drtopen
+                    - name: DrtOpen
                       href: /windows/desktop/api/drt/nf-drt-drtopen
-                    - name: Drtregisterkey
+                    - name: DrtRegisterKey
                       href: /windows/desktop/api/drt/nf-drt-drtregisterkey
-                    - name: Drtstartsearch
+                    - name: DrtStartSearch
                       href: /windows/desktop/api/drt/nf-drt-drtstartsearch
-                    - name: Drtunregisterkey
+                    - name: DrtUnregisterKey
                       href: /windows/desktop/api/drt/nf-drt-drtunregisterkey
-                    - name: Drtupdatekey
+                    - name: DrtUpdateKey
                       href: /windows/desktop/api/drt/nf-drt-drtupdatekey
-                - name: Rückgabewerte verteilter Routing Tabellen
+                - name: Rückgabewerte für verteilte Routingtabellen
                   href: distributed-routing-table-return-values.md
-        - name: PNRP-Namespace Anbieter-API
+        - name: PNRP-Namespaceanbieter-API
           href: pnrp-namespace-provider-api.md
           items:
             - name: Informationen zu PNRP
@@ -545,13 +545,13 @@
             - name: Verwenden von PNRP
               href: using-pnrp.md
               items:
-                - name: Registrieren eines Peer namens
+                - name: Registrieren eines Peernamens
                   href: registering-a-peer-name.md
-                - name: Aufheben der Registrierung eines Peer namens
+                - name: Aufheben der Registrierung eines Peernamens
                   href: unregistering-a-peer-name.md
                 - name: Auflösen eines Peernamens
                   href: resolving-a-peer-name.md
-                - name: Auflisten von Clouds
+                - name: Aufzählen von Clouds
                   href: enumerating-clouds.md
             - name: PNRP-Referenz
               href: pnrp-reference.md
@@ -559,39 +559,39 @@
                 - name: PNRP-Funktionen
                   href: pnrp-functions.md
                   items:
-                    - name: '"Peer nametopeerhostname"'
+                    - name: PeerNameToPeerHostName
                       href: /windows/desktop/api/P2P/nf-p2p-peernametopeerhostname
-                    - name: '"Peer hostnametopeername"'
+                    - name: PeerHostNameToPeerName
                       href: /windows/desktop/api/P2P/nf-p2p-peerhostnametopeername
-                    - name: Peerpnrpstartup
+                    - name: PeerPnrpStartup
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpstartup
-                    - name: Peerpnrpshutdown
+                    - name: PeerPnrpShutdown
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpshutdown
-                    - name: Peerpnrpregiester
+                    - name: PeerPnrpRegister
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpregister
-                    - name: Peerpnrpupdateregistration
+                    - name: PeerPnrpUpdateRegistration
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpupdateregistration
-                    - name: Peerpnrpunregister
+                    - name: PeerPnrpUnregister
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpunregister
-                    - name: Peerpnrprelösen
+                    - name: PeerPnrpResolve
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpresolve
-                    - name: Peerpnrpstartrelösen
+                    - name: PeerPnrpStartResolve
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpstartresolve
-                    - name: Peerpnrpgetcloudinfo
+                    - name: PeerPnrpGetCloudInfo
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpgetcloudinfo
-                    - name: Peerpnrpgetendpoint
+                    - name: PeerPnrpGetEndpoint
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpgetendpoint
-                    - name: Peerpnrpdrelösungs
+                    - name: PeerPnrpEndResolve
                       href: /windows/desktop/api/P2P/nf-p2p-peerpnrpendresolve
-                    - name: PNRP und wsalookupservicebegin
+                    - name: PNRP und WSALookupServiceBegin
                       href: pnrp-and-wsalookupservicebegin.md
                     - name: PNRP und WSALookupServiceEnd
                       href: pnrp-and-wsalookupserviceend.md
                     - name: PNRP und WSALookupServiceNext
                       href: pnrp-and-wsalookupservicenext.md
-                    - name: PNRP und wsanspioctl
+                    - name: PNRP und WSANSPIoctl
                       href: pnrp-and-wsanspioctl.md
-                    - name: PNRP und wsasetservice
+                    - name: PNRP und WSASetService
                       href: pnrp-and-wsasetservice.md
                 - name: PNRP-Strukturen
                   href: pnrp-structures.md
@@ -602,13 +602,13 @@
                       href: /windows/win32/api/P2P/ns-p2p-peer_pnrp_cloud_info
                     - name: PEER_PNRP_REGISTRATION_INFO
                       href: /windows/win32/api/P2P/ns-p2p-peer_pnrp_registration_info
-                    - name: PNRP und wsaqueryset
+                    - name: PNRP und WSAQUERYSET
                       href: pnrp-and-wsaqueryset.md
                     - name: PNRP_CLOUD_ID
                       href: /windows/win32/api/Pnrpdef/ns-pnrpdef-pnrp_cloud_id
                     - name: PNRP und BLOB
                       href: pnrp-and-blob.md
-                    - name: Pnrpcloudinfo
+                    - name: PNRPCLOUDINFO
                       href: /windows/win32/api/Pnrpns/ns-pnrpns-pnrpcloudinfo
                     - name: PNRPINFO_V1
                       href: /windows/win32/api/Pnrpns/ns-pnrpns-pnrpinfo_v1
@@ -623,34 +623,34 @@
                       href: /windows/win32/api/Pnrpdef/ne-pnrpdef-pnrp_cloud_state
                     - name: PNRP_RESOLVE_CRITERIA
                       href: /windows/win32/api/Pnrpdef/ne-pnrpdef-pnrp_resolve_criteria
-                - name: Winsock NSP-Referenz Verknüpfungen
+                - name: Winsock NSP-Referenzlinks
                   href: winsock-nsp-reference-links.md
-                - name: PNRP-NSP-Fehler Codes
+                - name: PNRP-NSP-Fehlercodes
                   href: pnrp-nsp-error-codes.md
-    - name: Peer Zusammenarbeit
+    - name: Peerzusammenarbeit
       href: peer-collaboration.md
       items:
-        - name: Informationen zur Peer Kollaborations-API
+        - name: Informationen zur Peerzusammenarbeits-API
           href: about-the-peer-collaboration-api.md
         - name: Informationen zu Personen in meiner Umgebung
           href: about-people-near-me.md
           items:
             - name: Gründe für die Verwendung von Personen in meiner Umgebung
               href: why-use-people-near-me-.md
-            - name: Anforderungen an Personen in meiner Nähe
+            - name: Personen in meiner Umgebung Anforderungen
               href: people-near-me-requirements.md
-            - name: Architektur "Personen in meiner Umgebung"
+            - name: Personen in meiner Umgebung-Architektur
               href: people-near-me-architecture.md
               items:
-                - name: APIs für Personen in meiner Umgebung
+                - name: Personen in meiner Umgebung-APIs
                   href: people-near-me-apis.md
-                - name: Personen in meiner Umgebung speichern
+                - name: Personen in meiner Umgebung Stores
                   href: people-near-me-stores.md
-                - name: Windows-Peer Komponenten für "Personen in meiner Umgebung"
+                - name: Windows Peerkomponenten für Personen in meiner Umgebung
                   href: windows-peer-components-for-people-near-me.md
-                - name: Windows Vista-Komponenten für "Personen in meiner Umgebung"
+                - name: Windows Vista-Komponenten für Personen in meiner Umgebung
                   href: windows-vista-components-for-people-near-me.md
-        - name: API-Referenz
+        - name: Referenz zur Zusammenarbeits-API
           href: collaboration-api-reference.md
           items:
             - name: Zusammenarbeits-API-Enumerationen
@@ -672,94 +672,94 @@
                   href: /windows/win32/api/P2P/ne-p2p-peer_signin_flags
                 - name: PEER_WATCH_PERMISSION
                   href: /windows/win32/api/P2P/ne-p2p-peer_watch_permission
-            - name: API-Funktionen
+            - name: Funktionen der Zusammenarbeits-API
               href: collaboration-api-functions.md
               items:
-                - name: '"Peer-collabaddcontact"'
+                - name: PeerCollabAddContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabaddcontact
-                - name: '"Peer-collabasyncinvitecontact"'
+                - name: PeerCollabAsyncInviteContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabasyncinvitecontact
-                - name: '"Peer-collabasyncinviteendpoint"'
+                - name: PeerCollabAsyncInviteEndpoint
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabasyncinviteendpoint
-                - name: Peer collabcanceleinladungs
+                - name: PeerCollabCancelInvitation
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabcancelinvitation
-                - name: '"Peer collabclosehandle"'
+                - name: PeerCollabCloseHandle
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabclosehandle
-                - name: Peer-collabdeletecontact
+                - name: PeerCollabDeleteContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabdeletecontact
-                - name: '"Peer-collabdeleteendpointdata"'
+                - name: PeerCollabDeleteEndpointData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabdeleteendpointdata
-                - name: Peer-collabdeleteobject
+                - name: PeerCollabDeleteObject
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabdeleteobject
-                - name: Peer-collaberumapplications
+                - name: PeerCollabEnumApplications
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumapplications
-                - name: Peer-collabenumapplicationregistrationinfo
+                - name: PeerCollabEnumApplicationRegistrationInfo
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumapplicationregistrationinfo
-                - name: '"Peer collabenumcontacts"'
+                - name: PeerCollabEnumContacts
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumcontacts
-                - name: Peer collabenumendpoints
+                - name: PeerCollabEnumEndpoints
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumendpoints
-                - name: '"Peer collab"-Objekt'
+                - name: PeerCollabEnumObjects
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumobjects
-                - name: Peer-collabenumpeoplenearme
+                - name: PeerCollabEnumPeopleNearMe
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabenumpeoplenearme
-                - name: '"Peer-collabexportcontact"'
+                - name: PeerCollabExportContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabexportcontact
-                - name: '"Peer Update Page Info"'
+                - name: PeerCollabGetAppLaunchInfo
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetapplaunchinfo
-                - name: Peer-collabgetapplicationregistrationinfo
+                - name: PeerCollabGetApplicationRegistrationInfo
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetapplicationregistrationinfo
-                - name: '"Peer-collabgetcontact"'
+                - name: PeerCollabGetContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetcontact
-                - name: '"Peer Name" (Peer Name)'
+                - name: PeerCollabGetEndpointName
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetendpointname
-                - name: Peer collabgeteventdata
+                - name: PeerCollabGetEventData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgeteventdata
-                - name: '"Peer-collabgetinvitationresponse"'
+                - name: PeerCollabGetInvitationResponse
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetinvitationresponse
-                - name: Peer-collabgetpresenceinfo
+                - name: PeerCollabGetPresenceInfo
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetpresenceinfo
-                - name: '"Peer-collabgetsigninoptions"'
+                - name: PeerCollabGetSigninOptions
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabgetsigninoptions
-                - name: '"Peer-collabinvitecontact"'
+                - name: PeerCollabInviteContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabinvitecontact
-                - name: '"Peer-collabinviteendpoint"'
+                - name: PeerCollabInviteEndpoint
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabinviteendpoint
-                - name: '"Peer Contact"'
+                - name: PeerCollabParseContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabparsecontact
-                - name: '"Peer-collabquerycontactdata"'
+                - name: PeerCollabQueryContactData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabquerycontactdata
-                - name: '"Peer-collaberfrischendes endpointdata"'
+                - name: PeerCollabRefreshEndpointData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabrefreshendpointdata
-                - name: '"Peer Application"'
+                - name: PeerCollabRegisterApplication
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabregisterapplication
-                - name: Peer Event Register Event
+                - name: PeerCollabRegisterEvent
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabregisterevent
-                - name: '"Peer Name" (Peer Name)'
+                - name: PeerCollabSetEndpointName
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsetendpointname
-                - name: '"Peer Name"-Objekt'
+                - name: PeerCollabSetObject
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsetobject
-                - name: Peer-collabsetpresenceinfo
+                - name: PeerCollabSetPresenceInfo
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsetpresenceinfo
-                - name: '"Peer-collabsignin"'
+                - name: PeerCollabSignIn
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsignin
-                - name: '"Peer-collabsignout"'
+                - name: PeerCollabSignOut
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsignout
-                - name: '"Peer-collabshutdown"'
+                - name: PeerCollabShutdown
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabshutdown
-                - name: Peer-collabstartup
+                - name: PeerCollabStartup
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabstartup
-                - name: '"Peer Name" für "Peer Name"'
+                - name: PeerCollabSubscribeEndpointData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabsubscribeendpointdata
-                - name: '"Peer Host Application"'
+                - name: PeerCollabUnregisterApplication
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabunregisterapplication
-                - name: Peer Event Password
+                - name: PeerCollabUnregisterEvent
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabunregisterevent
-                - name: '"Peer Name" für "Peer Name"'
+                - name: PeerCollabUnsubscribeEndpointData
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabunsubscribeendpointdata
-                - name: Peer-collabupdatecontact
+                - name: PeerCollabUpdateContact
                   href: /windows/desktop/api/P2P/nf-p2p-peercollabupdatecontact
-            - name: Kollaborationsapi-Strukturen
+            - name: Zusammenarbeits-API-Strukturen
               href: collaboration-api-structures.md
               items:
                 - name: PEER_APPLICATION
@@ -800,22 +800,22 @@
                   href: /windows/win32/api/P2P/ns-p2p-peer_object
                 - name: PEER_PRESENCE_INFO
                   href: /windows/win32/api/P2P/ns-p2p-peer_presence_info
-    - name: Peer Verteilung
+    - name: Peerverteilung
       href: peer-distribution.md
       items:
-        - name: Informationen zur Peer Verteilung
+        - name: Informationen zur Peerverteilung
           href: about-peer-distribution.md
-        - name: Peer Distribution-API-Referenz
+        - name: Referenz zur Peerverteilungs-API
           href: peer-distribution-api-reference.md
           items:
-            - name: Peer Distribution-API-Enumerationen
+            - name: Peerverteilungs-API-Enumerationen
               href: peer-distribution-api-enumerations.md
               items:
                 - name: PEERDIST_CLIENT_INFO_BY_HANDLE_CLASS
                   href: /windows/win32/api/peerdist/ne-peerdist-peerdist_client_info_by_handle_class
                 - name: PEERDIST_STATUS
                   href: /windows/desktop/api/peerdist/ne-peerdist-peerdist_status
-            - name: Peer Distribution-API-Strukturen
+            - name: Peerverteilungs-API-Strukturen
               href: peer-distribution-api-structures.md
               items:
                 - name: PEERDIST_CLIENT_BASIC_INFO
@@ -828,66 +828,66 @@
                   href: /windows/win32/api/peerdist/ns-peerdist-peerdist_retrieval_options
                 - name: PEERDIST_STATUS_INFO
                   href: /windows/win32/api/peerdist/ns-peerdist-peerdist_status_info
-            - name: Peer Distribution-API-Funktionen
+            - name: Peerverteilungs-API-Funktionen
               href: peer-distribution-api-functions.md
               items:
-                - name: Peer-diststartup
+                - name: PeerDistStartup
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdiststartup
-                - name: '"Peer-distshutdown"'
+                - name: PeerDistShutdown
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistshutdown
-                - name: Peerdistgetstatus
+                - name: PeerDistGetStatus
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistgetstatus
-                - name: Peer-distgetstatuusex
+                - name: PeerDistGetStatusEx
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistgetstatusex
-                - name: Peer-distgezu verlappedresult
+                - name: PeerDistGetOverlappedResult
                   href: /windows/desktop/api/peerdist/nf-peerdist-peerdistgetoverlappedresult
-                - name: '"Peer-distregisterforstatuschangenotifi"'
+                - name: PeerDistRegisterForStatusChangeNotification
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistregisterforstatuschangenotification
-                - name: Peer-distregisterforstatuschangenotificationex
+                - name: PeerDistRegisterForStatusChangeNotificationEx
                   href: /windows/desktop/api/peerdist/nf-peerdist-peerdistregisterforstatuschangenotificationex
-                - name: Peer-distunregisterforstatuschangenotifizierung
+                - name: PeerDistUnregisterForStatusChangeNotification
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistunregisterforstatuschangenotification
-                - name: '"Peer-distclientcancelasyncoperation"'
+                - name: PeerDistClientCancelAsyncOperation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientcancelasyncoperation
-                - name: '"Peer-distservercancelasyncoperation"'
+                - name: PeerDistServerCancelAsyncOperation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistservercancelasyncoperation
-                - name: '"Peer-distclientopencontent"'
+                - name: PeerDistClientOpenContent
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientopencontent
-                - name: Peer distclientclosecontent
+                - name: PeerDistClientCloseContent
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientclosecontent
-                - name: Peer distclientgetinformationbyhandle
+                - name: PeerDistClientGetInformationByHandle
                   href: /windows/desktop/api/peerdist/nf-peerdist-peerdistclientgetinformationbyhandle
-                - name: '"Peer-distclientaddcontentinformation"'
+                - name: PeerDistClientAddContentInformation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientaddcontentinformation
-                - name: '"Peer-distclientcompletecontentinformation"'
+                - name: PeerDistClientCompleteContentInformation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientcompletecontentinformation
-                - name: '"Peer-distclientadddata"'
+                - name: PeerDistClientAddData
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientadddata
-                - name: Peer distclientblockread
+                - name: PeerDistClientBlockRead
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientblockread
-                - name: Peer distclientstreamread
+                - name: PeerDistClientStreamRead
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientstreamread
-                - name: Peer distclientflushcontent
+                - name: PeerDistClientFlushContent
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistclientflushcontent
-                - name: Peer-distserverpublishstream
+                - name: PeerDistServerPublishStream
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverpublishstream
-                - name: Peer-distserverpublishaddto-Stream
+                - name: PeerDistServerPublishAddToStream
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverpublishaddtostream
-                - name: Peer-distserverpublishcompletestream
+                - name: PeerDistServerPublishCompleteStream
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverpublishcompletestream
-                - name: '"Peer-distserverclosestreamhandle"'
+                - name: PeerDistServerCloseStreamHandle
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverclosestreamhandle
-                - name: Peer-distserverunpublish
+                - name: PeerDistServerUnpublish
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverunpublish
-                - name: Peer-distserveropencontentinformation
+                - name: PeerDistServerOpenContentInformation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserveropencontentinformation
-                - name: Peer-distserveropencontentinformationex
+                - name: PeerDistServerOpenContentInformationEx
                   href: /windows/desktop/api/peerdist/nf-peerdist-peerdistserveropencontentinformationex
-                - name: Peer-distserverclosecontentinformation
+                - name: PeerDistServerCloseContentInformation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverclosecontentinformation
-                - name: Peer-distserverretrievecontentinformation
+                - name: PeerDistServerRetrieveContentInformation
                   href: /windows/desktop/api/PeerDist/nf-peerdist-peerdistserverretrievecontentinformation
-            - name: Peer Distribution-API-Konstanten
+            - name: Peerverteilungs-API-Konstanten
               href: peer-distribution-api-constants.md
-            - name: Datentypen der Peer Distribution-API
+            - name: Peerverteilungs-API-Datentypen
               href: peer-distribution-api-data-types.md

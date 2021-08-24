@@ -1,7 +1,7 @@
 ---
-description: Schreibt die Filterdaten in den angegebenen Stream.
+description: Schreibt die Daten des Filters in den angegebenen Stream.
 ms.assetid: 1b405050-6cfd-4b69-b449-f00a6ecfac6a
-title: Cpersiststream. Write Items-Methode (pStream. h)
+title: CPersistStream.WriteToStream-Methode (Pstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 893d58986db92e50cbafefe74676481162808abf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 139818d1434163255c62dd5cb109dbf505cea03b5876de14eb2aa4a0636f072f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813290"
 ---
-# <a name="cpersiststreamwritetostream-method"></a>Cpersiststream. Write-Methode
+# <a name="cpersiststreamwritetostream-method"></a>CPersistStream.WriteToStream-Methode
 
-Schreibt die Filterdaten in den angegebenen Stream.
+Schreibt die Daten des Filters in den angegebenen Stream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ virtual HRESULT WriteToStream(
 *pStream* 
 </dt> <dd>
 
-Zeiger auf eine **IStream** -Schnittstelle, die den Zielstream der Filterdaten angibt.
+Zeiger auf eine **IStream-Schnittstelle,** die den Zielstream der Filterdaten angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück. Die abgeleitete Klasse sollte einen gültigen **HRESULT** -Wert zurückgeben.
+Gibt S \_ OK zurück. Die abgeleitete Klasse sollte einen gültigen **HRESULT-Wert** zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standardversion schreibt nichts. Sie kann überschrieben werden, um Daten zu schreiben, die für Ihre Klasse spezifisch sind.
+Die Standardversion schreibt nichts. sie kann überschrieben werden, um datenspezifisch für Ihre Klasse zu schreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Die Standardversion schreibt nichts. Sie kann überschrieben werden, um Daten zu
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>PStream. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pstream.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Die Standardversion schreibt nichts. Sie kann überschrieben werden, um Daten zu
 
 <dl> <dt>
 
-[**Cpersiststream-Klasse**](cpersiststream.md)
+[**CPersistStream-Klasse**](cpersiststream.md)
 </dt> </dl>
 
  

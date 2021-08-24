@@ -1,23 +1,23 @@
 ---
-title: dcl_tgsm_structured (SM5-ASM)
-description: Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Compute-Shader s-Thread Gruppe verfügbar ist. Der Arbeitsspeicher wird als Array von-Strukturen angezeigt.
+title: dcl_tgsm_structured (sm5 – asm)
+description: Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Threadgruppe des Compute-Shaders verfügbar ist. Der Arbeitsspeicher wird als Array von -Strukturen angezeigt.
 ms.assetid: C42CD506-58EB-4740-8403-3F9BF29F0CAE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a639d31c4449a0dfeb152c06b35cfb86c5cc30a
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: cc5bf6a6782c455a9bb51ad941a8b6cb42bd70806512a2eef2ed5bd301e57c77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673900"
 ---
-# <a name="dcl_tgsm_structured-sm5---asm"></a>DCL \_ TGSM \_ strukturiert (SM5-ASM)
+# <a name="dcl_tgsm_structured-sm5---asm"></a>dcl \_ tgsm \_ structured (sm5 – asm)
 
-Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Compute-Shader s-Thread Gruppe verfügbar ist. Der Arbeitsspeicher wird als Array von-Strukturen angezeigt.
+Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Threadgruppe des Compute-Shaders verfügbar ist. Der Arbeitsspeicher wird als Array von -Strukturen angezeigt.
 
 
 
-| DCL \_ TGSM \_ strukturiert g \# , structbytestride, structcount |
+| dcl \_ tgsm \_ structured g , \# structByteStride, structCount |
 |----------------------------------------------------------|
 
 
@@ -26,29 +26,29 @@ Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatze
 
 
 
-| Element                                                                                                                                   | BESCHREIBUNG                                                                                                   |
+| Element                                                                                                                                   | Beschreibung                                                                                                   |
 |----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| <span id="g_"></span><span id="G_"></span>*selbst\#*<br/>                                                                             | \[in \] einem Verweis auf einen Block mit gemeinsam genutzter Arbeitsspeicher Größe von *structbytestride* \* *structcount* bytes. <br/> |
-| <span id="structByteStride"></span><span id="structbytestride"></span><span id="STRUCTBYTESTRIDE"></span>*structbytestride*<br/> | \[in \] der Struktur Stride. Dieser Wert ist ein uint in Bytes und muss ein Vielfaches von 4 sein. <br/>           |
-| <span id="structCount"></span><span id="structcount"></span><span id="STRUCTCOUNT"></span>*structcount*<br/>                     | \[in \] der Anzahl der Strukturen.<br/>                                                                   |
+| <span id="g_"></span><span id="G_"></span>*G\#*<br/>                                                                             | \[in \] Ein Verweis auf einen Block des freigegebenen Arbeitsspeichers der Größe *structByteStride* \* *structCount* Bytes. <br/> |
+| <span id="structByteStride"></span><span id="structbytestride"></span><span id="STRUCTBYTESTRIDE"></span>*structByteStride*<br/> | \[in \] The structure stride. Dieser Wert ist ein uint-Wert in Bytes und muss ein Vielfaches von 4 sein. <br/>           |
+| <span id="structCount"></span><span id="structcount"></span><span id="STRUCTCOUNT"></span>*structCount*<br/>                     | \[in \] Die Anzahl der Strukturen.<br/>                                                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der gesamte Speicherplatz für "g" \# muss <= der Menge an gemeinsam genutzter verfügbarem Arbeitsspeicher pro Thread Gruppe, 32 KB oder 8192 32-Bit-Skaren.
+Der Gesamtspeicher für alle g \# muss <= die Menge des pro Threadgruppe verfügbaren freigegebenen Arbeitsspeichers (32 KB) oder 8192 32-Bit-Skalarmodule sein.
 
-In einem Extremfall können Sie 8192 Gesamt-g s deklarieren \# , wenn beide einen *structbytestride* von 4 und einen *structcount* -Wert von 1 haben.
+Im Extremfall können Sie 8192 g gesamt deklarieren, \# wenn jede *structByteStride* von 4 und eine *structCount* von 1 hat.
 
-Im umgekehrten Extremfall können Sie ein einzelnes g \# mit einem Struktur-Stride von 32 KB und einer Struktur Anzahl von 1 deklarieren.
+Im entgegengesetzten Extremfall können Sie ein einzelnes g \# mit einem Strukturschritt von 32 KB und einer Strukturanzahl von 1 deklarieren.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | X       |
 
@@ -56,20 +56,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -79,7 +79,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

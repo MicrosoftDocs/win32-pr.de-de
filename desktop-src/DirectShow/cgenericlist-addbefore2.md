@@ -53,22 +53,22 @@ Position zum Einfügen der Liste. Die Liste wird vor dieser Position eingefügt.
 *Plist* 
 </dt> <dd>
 
-Zeiger auf die einzufügende Liste.
+Zeiger auf die hinzuzufügende Liste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE** zurück, wenn erfolgreich. Andernfalls gibt **FALSE** zurück.
+Gibt **TRUE zurück,** wenn erfolgreich. Andernfalls wird **FALSE zurückgegeben.**
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
 | Header | Wxlist.h (include Streams.h) |
-| Bibliothek| Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
+| Bibliothek| Strmbase.lib (Einzelhandels-Builds); Strmbasd.lib (Debugbuilds) |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

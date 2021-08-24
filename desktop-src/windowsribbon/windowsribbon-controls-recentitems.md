@@ -1,99 +1,99 @@
 ---
 title: Zuletzt verwendete Elemente
-description: Die Liste der zuletzt verwendeten Elemente ist ein Bereich im Anwendungsmenü, in dem die zuletzt verwendeten Elemente (MRU) für eine Anwendung angezeigt werden.
+description: Die Liste Zuletzt verwendete Elemente ist ein Bereich im Anwendungsmenü, in dem die zuletzt verwendeten Elemente (MRU) für eine Anwendung angezeigt werden.
 ms.assetid: fdead358-d303-46de-9f8e-6fc2832d8e94
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61f78c01fc4d6cc830eba644f7dcf22b6fb03e82
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4f1d67c38e1eb9014cfd3349881ed2849755ebc89489cc925052aa690f54adc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104571556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810880"
 ---
 # <a name="recent-items"></a>Zuletzt verwendete Elemente
 
-Die Liste der zuletzt verwendeten Elemente ist ein Bereich im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md) , in dem die zuletzt verwendeten Elemente (MRU) für eine Anwendung angezeigt werden.
+Die Liste Zuletzt verwendete Elemente ist ein Bereich im [Anwendungsmenü,](windowsribbon-controls-applicationmenu.md) in dem die zuletzt verwendeten Elemente (MRU) für eine Anwendung angezeigt werden.
 
 -   [Details](#details)
--   [Eigenschaften für zuletzt verwendete Elemente](#recent-items-properties)
+-   [Eigenschaften zuletzt verwendeter Elemente](#recent-items-properties)
 -   [Anmerkungen](#remarks)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="details"></a>Details
 
-Der folgende Screenshot veranschaulicht eine Liste zuletzt verwendeter Elemente aus WordPad für Windows 7.
+Der folgende Screenshot veranschaulicht eine Liste zuletzt verwendeter Elemente von WordPad für Windows 7).
 
-![Screenshot der Liste der zuletzt verwendeten Elemente im Microsoft Paint-Menüband.](images/controls/recentitems.png)
+![Screenshot der Liste der zuletzt erstellten Elemente im Microsoft-Farbband.](images/controls/recentitems.png)
 
-Das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md) kann höchstens eine [**applicationmenu. recentitems**](windowsribbon-element-applicationmenu-recentitems.md) -Liste enthalten, die durch ein **applicationmenu. recentitems** -Element dargestellt wird, um aktuelle Dokumente, Bilder, Filme und andere Projekte anzuzeigen, an denen ein Benutzer gearbeitet hat. Die Anzahl der aufgelisteten Elemente liegt zwischen 0 (null) und der maximalen Anzahl, die im Markup angegeben ist. der Standardwert ist 10. Die zuletzt verwendeten Elemente werden als eine nummerierte Liste von Zeichen folgen angezeigt, die Dateinamen angeben. Es wird empfohlen, die [**Command. labeldescription**](windowsribbon-element-command-labeldescription.md) -Eigenschaft zu verwenden, um den vollständigen Pfad für den Datei Speicherort anzugeben, wie im folgenden Screenshot gezeigt.
+Das [](windowsribbon-controls-applicationmenu.md) Anwendungsmenü kann über eine [**ApplicationMenu.RecentItems-Liste**](windowsribbon-element-applicationmenu-recentitems.md) verfügen, die durch ein **ApplicationMenu.RecentItems-Element** dargestellt wird, um aktuelle Dokumente, Bilder, Filme und andere Projekte anzuzeigen, an der ein Benutzer bereits arbeitet. Die Anzahl der aufgelisteten Elemente reicht von null bis zur maximalen Anzahl, die im Markup angegeben ist, mit einem Standardwert von zehn. Die letzten Elemente werden als nummerierte Liste von Zeichenfolgen angezeigt, die Dateinamen angeben. Es wird empfohlen, die [**Command.LabelDescription-Eigenschaft**](windowsribbon-element-command-labeldescription.md) zu verwenden, um den vollständigen Pfad für den Dateispeicherort zu geben, wie im folgenden Screenshot gezeigt.
 
 ![Screenshot einer Liste zuletzt verwendeter Elemente in einem Anwendungsmenü.](images/overviews/applicationmenu-menurecentitems.png)
 
-Das [**recentitems**](windowsribbon-element-recentitems.md) -Element verfügt über ein *enablepinning* -Attribut, das, wenn es auf festgelegt `true` ist, auf der rechten Seite jedes Elements in der Liste ein Pin-Symbol anzeigt, wie im folgenden Screenshot gezeigt.
+Das [**RecentItems-Element**](windowsribbon-element-recentitems.md) verfügt über ein *EnablePinning-Attribut,* das, wenn es auf festgelegt ist, ein Stecknadelsymbol rechts neben jedem Element in der Liste anzeigt, wie im folgenden Screenshot `true` gezeigt.
 
 > [!Note]  
-> Das anhepup ist standardmäßig aktiviert, wenn das Attribut " *enablepinning* " nicht angegeben wird.
+> Das Anheften ist standardmäßig aktiviert, wenn das *EnablePinning-Attribut* nicht angegeben ist.
 
- 
+ 
 
-![Screenshot der letzten Elemente, die in einem Anwendungsmenü fixiert werden.](images/overviews/applicationmenu-menurecentitemspinned.png)
+![Screenshot der zuletzt in einem Anwendungsmenü angeheften Elemente.](images/overviews/applicationmenu-menurecentitemspinned.png)
 
-Der Fixierungs Algorithmus soll verhindern, dass Elemente aus der Liste der **zuletzt verwendeten Elemente** entfernt werden. Der Algorithmus erzeugt das folgende Verhalten:
+Der anheftende Algorithmus soll dazu dienen, dass Elemente nicht aus der Liste Zuletzt **verwendete Elemente fallen.** Der Algorithmus erzeugt das folgende Verhalten:
 
--   Ein neues Element wird immer am oberen Rand der Liste **zuletzt geöffnete Elemente** hinzugefügt.
--   Elemente werden im Laufe der Zeit in der Liste nach unten verschoben. Sobald die Liste voll ist (erreicht die maximale Anzahl der im Markup angegebenen Elemente), werden ältere Elemente am Ende der Liste entfernt, wenn neue Elemente am Anfang der Liste hinzugefügt werden.
--   Wenn ein Element bereits irgendwo in der Liste angezeigt wird, aber wieder darauf zugegriffen wird, wird es wieder an den Anfang der Liste verschoben.
--   Wenn ein Element fixiert ist, wird es immer noch in der Liste nach unten angezeigt, aber es wird nicht vom unteren Rand entfernt. Wenn die Liste voll ist, wird stattdessen das erste nicht angeheftete Element oberhalb des fixierten Elements entfernt, wenn der Liste ein neues Element hinzugefügt wird.
--   Wenn die Anzahl der fixierten Elemente jemals die maximal zulässige Anzahl von Elementen erreicht, werden der Liste keine neuen Elemente hinzugefügt, bis ein Element gelöst wird.
+-   Ein neues Element wird immer oben in der Liste Letzte **Elemente** hinzugefügt.
+-   Elemente werden im Laufe der Zeit in der Liste nach unten bewegt. Sobald die Liste voll ist (erreicht die maximale Anzahl von Elementen, die im Markup angegeben sind), fallen ältere Elemente vom unteren Rand der Liste ab, wenn neue Elemente am Anfang der Liste hinzugefügt werden.
+-   Wenn ein Element bereits in der Liste angezeigt wird, aber erneut darauf zugegriffen wird, wird es wieder an den Anfang der Liste zurück bewegt.
+-   Wenn ein Element angeheftet ist, wird es weiterhin in der Liste nach unten geschaltet, aber nicht vom unteren Rand. Wenn die Liste voll ist, fällt stattdessen das erste entpinnte Element oberhalb des angeheftet Elements aus, wenn der Liste ein neues Element hinzugefügt wird.
+-   Wenn die Anzahl angehefteter Elemente jemals die maximale Anzahl von Elementen erreicht, werden der Liste keine neuen Elemente hinzugefügt, bis ein Element entpinnt ist.
 
-## <a name="recent-items-properties"></a>Eigenschaften für zuletzt verwendete Elemente
+## <a name="recent-items-properties"></a>Eigenschaften zuletzt verwendeter Elemente
 
-Das Menüband-Framework definiert eine Auflistung von [Eigenschafts Schlüsseln](windowsribbon-reference-properties.md) für das Steuerelement "zuletzt verwendete Elemente".
+Das Menübandframework definiert eine Auflistung von [Eigenschaftsschlüsseln für](windowsribbon-reference-properties.md) das Steuerelement Zuletzt verwendete Elemente.
 
-In der Regel wird die Eigenschaft "zuletzt verwendete Elemente" in der Multifunktionsleisten-Benutzeroberfläche aktualisiert, indem der Befehl, der dem Steuerelement zugeordnet ist, durch einen Rückruf der Methode [**iuiframework:: invalidateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig gemacht wird. Das Invalidierung-Ereignis wird durch die [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode behandelt und die Eigenschaften Updates definiert.
+In der Regel wird die Eigenschaft Zuletzt verwendete Elemente in der Menübandbenutzeroberfläche aktualisiert, indem der befehl, der dem Steuerelement zugeordnet ist, durch einen Aufruf der [**IUIFramework::InvalidateUICommand-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig wird. Das Invalidierungsereignis wird von der [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) behandelt und die Eigenschaft aktualisiert.
 
-Die [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode wird nicht ausgeführt, und die Anwendung wird nach einem aktualisierten Eigenschafts Wert abgefragt, bis die Eigenschaft vom Framework benötigt wird. Wenn z. b. eine Registerkarte aktiviert ist und ein Steuerelement in der Menüband-Benutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
+Die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) wird nicht ausgeführt, und die Anwendung fragt einen aktualisierten Eigenschaftswert ab, bis die Eigenschaft vom Framework benötigt wird. Beispielsweise, wenn eine Registerkarte aktiviert und ein Steuerelement auf der Menübandbenutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
 
 > [!Note]  
-> In einigen Fällen kann eine Eigenschaft durch die [**iuiframework:: getuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) -Methode abgerufen und mit der [**iuiframework:: setuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) -Methode festgelegt werden.
+> In einigen Fällen kann eine Eigenschaft über die [**IUIFramework::GetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) abgerufen und mit der [**IUIFramework::SetUICommandProperty-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) festgelegt werden.
 
- 
+ 
 
-In der folgenden Tabelle sind die Eigenschafts Schlüssel aufgelistet, die dem Steuerelement zuletzt verwendete Elemente zugeordnet sind.
+In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem Steuerelement Zuletzt verwendete Elemente zugeordnet sind.
 
 
 
-| Eigenschafts Schlüssel                                                                       | Notizen                                     |
+| Eigenschaftsschlüssel                                                                       | Hinweise                                     |
 |------------------------------------------------------------------------------------|-------------------------------------------|
-| [UI- \_ pkey- \_ KeyTip](windowsribbon-reference-properties-uipkey-keytip.md)           | Kann nur durch Invalidierung aktualisiert werden. |
-| [Benutzeroberflächen- \_ pkey- \_ entitems](windowsribbon-reference-properties-uipkey-recentitems.md) | Kann nur durch Invalidierung aktualisiert werden. |
+| [\_ \_ PKEY-Keytip der Benutzeroberfläche](windowsribbon-reference-properties-uipkey-keytip.md)           | Kann nur durch Ungültigkeit aktualisiert werden. |
+| [UI \_ PKEY \_ RecentItems](windowsribbon-reference-properties-uipkey-recentitems.md) | Kann nur durch Ungültigkeit aktualisiert werden. |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [iapplicationdocumentlists:: GetList](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iapplicationdocumentlists-getlist) -Methode kann verwendet werden, um die MRU-Liste der Windows-Shell für die Menüband-Anwendung abzurufen. Das von dieser Methode abgerufene-Objekt kann dann von der Anwendung verwendet werden, um die Daten zu erstellen, die für das Menüband-Framework zum Auffüllen der Liste zuletzt verwendeter **Elemente** im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)benötigt werden.
+Die [IApplicationDocumentLists::GetList-Methode](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iapplicationdocumentlists-getlist) kann verwendet werden, um die Windows Shell-MRU-Liste für die Menübandanwendung abzurufen. Das von dieser Methode abgerufene Objekt kann dann von der Anwendung verwendet werden,  um die Daten zu erstellen, die vom Menübandframework zum Auffüllen der Liste Zuletzt verwendeter Elemente des Anwendungsmenüs [benötigt werden.](windowsribbon-controls-applicationmenu.md)
 
 > [!Note]  
-> Wenn Sie diese Methode verwenden, sollte *Listentyp* den Wert aufweisen `ADLT_RECENT` .
+> Bei Verwendung dieser Methode sollte *listtype* den Wert `ADLT_RECENT` haben.
 
- 
+ 
 
-Ein Beispiel für das Implementieren einer MRU-Elementliste in einer Menüband-Framework-Anwendung finden Sie im [Beispiel htmleditribbon](windowsribbon-htmleditribbonsample.md).
+Ein Beispiel zum Implementieren einer MRU-Elementliste in einer Menübandframeworkanwendung finden Sie im [HTMLEditRibbon-Beispiel.](windowsribbon-htmleditribbonsample.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Windows-Menüband-Steuerelement Bibliothek](windowsribbon-controls-entry.md)
+[Windows Menüband-Framework-Steuerelementbibliothek](windowsribbon-controls-entry.md)
 </dt> <dt>
 
-[**Zuletzt verwendete Elemente (Markup Element)**](windowsribbon-element-recentitems.md)
+[**Markupelement "Zuletzt verwendete Elemente"**](windowsribbon-element-recentitems.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

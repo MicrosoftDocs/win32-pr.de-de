@@ -1,9 +1,9 @@
 ---
-title: TTM_NEWTOOLRECT Meldung (kommstrg. h)
-description: Legt ein neues Begrenzungs Rechteck für ein Tool fest.
+title: TTM_NEWTOOLRECT (Commctrl.h)
+description: Legt ein neues umgebundenes Rechteck für ein Tool fest.
 ms.assetid: 81d1b745-310e-482e-8c6e-6e98e1e67b66
 keywords:
-- Windows-Steuerelemente für TTM_NEWTOOLRECT Meldung
+- TTM_NEWTOOLRECT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 75417059b0108877d04c79af25ac98245461ad5f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 13889b0e9c0d80392b88130c33e5e9723ceb776a60a6b941d205d514d96ca22f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750980"
 ---
-# <a name="ttm_newtoolrect-message"></a>TTM \_ newtoolrect-Meldung
+# <a name="ttm_newtoolrect-message"></a>TTM \_ NEWTOOLRECT-Meldung
 
-Legt ein neues Begrenzungs Rechteck für ein Tool fest.
+Legt ein neues umgebundenes Rechteck für ein Tool fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Legt ein neues Begrenzungs Rechteck für ein Tool fest.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**toolinfo**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur. Die **HWND** -und **UID** -Member identifizieren ein Tool, und das **Rect** -Element gibt das neue umgebende Rechteck an. Der **CBSIZE** -Member dieser Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
+Zeiger auf eine [**TOOLINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) Die **Elemente hwnd** und **uId** identifizieren ein Tool, und das **Rect-Element** gibt das neue umschlossene Rechteck an. Der **cbSize-Member** dieser -Struktur muss vor dem Senden dieser Nachricht ausgefüllt werden.
 
 </dd> </dl>
 
@@ -51,10 +51,10 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TTM \_ Newtoolrectw** (Unicode) und **TTM \_ newtoolrecta** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TTM \_ NEWTOOLRECTW** (Unicode) und **TTM \_ NEWTOOLRECTA** (ANSI)<br/>           |
 
 
 

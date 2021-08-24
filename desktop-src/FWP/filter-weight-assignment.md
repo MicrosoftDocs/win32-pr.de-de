@@ -1,43 +1,43 @@
 ---
 title: Filtergewichtungszuweisung
-description: Jeder Filter in der Windows-Filter Plattform (Windows Filtering Platform, WFP) verfügt über eine zugeordnete Gewichtung, die bei der Filterung von Filtern verwendet wird.
+description: Jeder Filter in der Windows Filterplattform (WFP) verfügt über eine zugeordnete Gewichtung, die bei der Filterausnahme verwendet wird.
 ms.assetid: c78854c2-9aa1-408f-82d6-4b9e52f38e84
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c77982258bb9c8ef14e22b20e28b6a3039456ae
-ms.sourcegitcommit: 013de6f5280f28a9b04c3cce9387e629b07d70fc
+ms.openlocfilehash: 9042b15da0df5f81c71a32deb923369a54243854e86aeaed1ba30c7fc8484193
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "104390068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746870"
 ---
 # <a name="filter-weight-assignment"></a>Filtergewichtungszuweisung
 
-Jeder Filter in der Windows-Filter Plattform (Windows Filtering Platform, WFP) verfügt über eine zugeordnete Gewichtung, die bei der [Filterung von Filtern](filter-arbitration.md)verwendet wird.
+Jeder Filter in der Windows Filterplattform (WFP) verfügt über eine zugeordnete Gewichtung, die bei der Filterausnahme [verwendet wird.](filter-arbitration.md)
 
-Die von der Basis Filter-Engine (BFE) verwendete Filter Gewichtung ist vom Typ " [**f \_ UINT64**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)". Aufrufer haben beim Hinzufügen von Filtern drei Möglichkeiten.
+Die von der Basisfilter-Engine (Base Filtering Engine, BFE) verwendete Filtergewichtung ist vom [**Typ FWP \_ UINT64.**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) Aufrufer haben drei Optionen beim Hinzufügen von Filtern.
 
--   Legen Sie die Gewichtung auf eine [**FWP- \_ UINT64**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)fest. BFE verwendet die angegebene Gewichtung unverändert.
--   Legen Sie die Gewichtung auf [**FWP \_ leer**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)fest. BFE generiert automatisch eine Gewichtung im Bereich von \[ 0, 2 ⁶ ⁰).
--   Legen Sie die Gewichtung auf eine [**FWP- \_ Uint8**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) im Bereich von \[ 0 bis 15 fest \] . BFE verwendet die angegebene Gewichtung als Gewichtungs Bereichs Bezeichner.
+-   Legen Sie die Gewichtung auf [**einen \_ FWP-UINT64 fest.**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) BFE verwendet die bereitgestellte Gewichtung wie berent.
+-   Legen Sie die Gewichtung auf [**FWP \_ EMPTY fest.**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) BFE generiert automatisch eine Gewichtung im Bereich \[ 0, 2⁶⁰).
+-   Legen Sie die Gewichtung auf [**einen \_ FWP-UINT8**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) im Bereich \[ 0, 15 \] fest. BFE verwendet die angegebene Gewichtung als Gewichtungsbereichsbezeichner.
 
-    BFE generiert automatisch die nieder wertigen 60 Bits (genau so, als ob die Gewichtung auf [**FWP \_ empty**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)festgelegt wurde), und verwendet dann den bereitgestellten Wert, um die vier hohen Bestell Bits festzulegen. Dadurch können Aufrufer den Gewichtungs Bereich manuell in 16 Bereiche aufteilen, während gleichzeitig die automatische Gewichtung innerhalb eines Bereichs verwendet wird.
+    BFE generiert automatisch die niedrigwertigen 60 Bits (genau so, als ob die Gewichtung auf [**FWP \_ EMPTY**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)festgelegt worden wäre) und verwendet dann den angegebenen Wert, um die vier hochwertigen Bits zu setzen. Dadurch können Aufrufer den Gewichtungsbereich manuell in 16 Bereiche unterteilen und gleichzeitig die automatische Gewichtung innerhalb eines Bereichs verwenden.
 
 > [!Note]  
-> Wenn zwei oder mehr Legenden auf derselben Unterschicht registriert werden, können Probleme auftreten, wenn die gleiche Gewichtung den Filtern zugewiesen ist. Dieses Problem kann verhindert werden, indem [**Sie mithilfe von**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsublayeradd0)"Legenden" eine eigene Unterschicht erstellen.
+> Wenn mindestens zwei Aufrufe in derselben Unterschicht registriert werden, können Probleme auftreten, wenn den Filtern die gleiche Gewichtung zugewiesen wird. Dieses Problem kann verhindert werden, indem Aufrufe ihre eigene Unterschicht mithilfe von [**FwpmSubLayerAdd0 erstellen.**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsublayeradd0)
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Filtern von Gewichtungs bezeichlern**](filter-weight-identifiers.md)
+[**Filtergewichtungsbezeichner**](filter-weight-identifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

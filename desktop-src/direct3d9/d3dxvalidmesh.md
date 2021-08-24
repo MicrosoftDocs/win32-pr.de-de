@@ -1,7 +1,7 @@
 ---
-description: Überprüft ein Mesh.
+description: Überprüft ein Gitternetz.
 ms.assetid: e5bec2f3-e914-4677-8114-77c71b8a586e
-title: D3DXValidMesh-Funktion (D3DX9Mesh. h)
+title: D3DXValidMesh-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 469b9b32072107885417266266f804a955301668
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 299092700b015840376f3e4b297d7825366b6083e1458155f5963e1b5b1f4d73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749670"
 ---
 # <a name="d3dxvalidmesh-function"></a>D3DXValidMesh-Funktion
 
-Überprüft ein Mesh.
+Überprüft ein Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT D3DXValidMesh(
 
 <dl> <dt>
 
-*pmeshat* \[ in\]
+*pMeshIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle, die das zu testende Mesh darstellt.
+Zeiger auf eine [**ID3DXMesh-Schnittstelle,**](id3dxmesh.md) die das zu testende Gitternetz darstellt.
 
 </dd> <dt>
 
-*padjacency* \[ in\]
+*pAdencyency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im zu testenden Mesh angibt.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Gitternetz angeben, das getestet werden soll.
 
 </dd> <dt>
 
-*pperrorsandwarning* \[ vorgenommen\]
+*ppErrorsAndWarnings* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Puffer zurück, der eine Zeichenfolge mit Fehlern und Warnungen enthält, die die im Mesh gefundenen Probleme erläutern.
+Gibt einen Puffer zurück, der eine Zeichenfolge mit Fehlern und Warnungen enthält, die die im Netz gefundenen Probleme erklären.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Gibt einen Puffer zurück, der eine Zeichenfolge mit Fehlern und Warnungen enth�
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DXERR \_ invalidmesh, D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DXERR \_ INVALIDMESH, D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überprüft das Mesh, indem auf ungültige Indizes überprüft wird. Fehlerinformationen sind in der Debugger-Ausgabe verfügbar.
+Diese Methode überprüft das Gitternetz, indem auf ungültige Indizes überprüft wird. Fehlerinformationen sind in der Debuggerausgabe verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Diese Methode überprüft das Mesh, indem auf ungültige Indizes überprüft wir
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -94,7 +94,7 @@ Diese Methode überprüft das Mesh, indem auf ungültige Indizes überprüft wir
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

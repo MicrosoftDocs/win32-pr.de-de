@@ -1,84 +1,84 @@
 ---
-description: Die Peer Infrastruktur verwendet Ereignisse, um Anwendungen über Änderungen zu benachrichtigen, die in einem Peer Netzwerk aufgetreten sind, z. b. ein Knoten, der einem Diagramm hinzugefügt oder daraus entfernt wird.
+description: Die Peerinfrastruktur verwendet Ereignisse, um Anwendungen über Änderungen zu benachrichtigen, die innerhalb eines Peernetzwerks aufgetreten sind, z. B. über einen Knoten, der einem Diagramm hinzugefügt oder daraus entfernt wird.
 ms.assetid: a056da1c-b8f9-4dad-8df9-df24c6b359b7
-title: Peer Ereignis Infrastruktur
+title: Peerereignisseinfrastruktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6347ad6a7dd0cf2fae4a0aa623bfda48ab0aa9f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a889f59e4429e64258c047dfbf0249bb4dca125bfc3f9d659e6042dd40be9443
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106363475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119775950"
 ---
-# <a name="peer-events-infrastructure"></a>Peer Ereignis Infrastruktur
+# <a name="peer-events-infrastructure"></a>Peerereignisseinfrastruktur
 
-Die Peer Infrastruktur verwendet Ereignisse, um Anwendungen über Änderungen zu benachrichtigen, die in einem Peer Netzwerk aufgetreten sind, z. b. ein Knoten, der einem Diagramm hinzugefügt oder daraus entfernt wird. Die Infrastrukturen der Peer-und Peer Gruppierung verwenden die Infrastruktur der Peer Ereignisse.
+Die Peerinfrastruktur verwendet Ereignisse, um Anwendungen über Änderungen zu benachrichtigen, die innerhalb eines Peernetzwerks aufgetreten sind, z. B. über einen Knoten, der einem Diagramm hinzugefügt oder daraus entfernt wird. Die Peer graphing- und peer grouping-Infrastruktur verwenden die Peerereignisse-Infrastruktur.
 
-## <a name="receiving-peer-event-notification"></a>Empfangen von Peer Ereignis Benachrichtigungen
+## <a name="receiving-peer-event-notification"></a>Empfangen von Peerereignisbenachrichtigungen
 
-Ein Peer kann sich registrieren, um eine Benachrichtigung zu erhalten, wenn sich ein Attribut eines Diagramms oder einer Gruppe ändert oder ein bestimmtes Peer Ereignis auftritt. Eine Peer Anwendung ruft die [**peergraphregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent) -Funktion oder die [**peergroupregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent) -Funktion auf und übergibt ein Ereignis Handle an die Peer Infrastruktur, die zuvor durch einen Aufruf von " [**kreateevent**](graphing-reference-links.md)" erstellt wurde. Die Peer Infrastruktur verwendet das Handle, um einer Anwendung zu signalisieren, dass ein Peer Ereignis aufgetreten ist.
+Ein Peer kann sich registrieren, um Benachrichtigungen zu erhalten, wenn sich ein Attribut eines Graphen oder einer Gruppe ändert oder ein bestimmtes Peerereignis auftritt. Eine Peeranwendung ruft die [**PeerGraphRegisterEvent-**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent) oder [**PeerGroupRegisterEvent-Funktion**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent) auf und übergibt ein Ereignishand handle an die Peerinfrastruktur, die zuvor durch einen Aufruf von [**CreateEvent erstellt wurde.**](graphing-reference-links.md) Die Peerinfrastruktur verwendet das Handle, um einer Anwendung zu signalisieren, dass ein Peerereignis aufgetreten ist.
 
-Die Anwendung übergibt auch eine Reihe von [**Peer \_ Graph \_ - \_ Ereignisregistrierungs**](/windows/desktop/api/P2P/ns-p2p-peer_graph_event_registration) -oder [**Peer \_ Gruppen- \_ Ereignis \_ Registrierungs**](/windows/desktop/api/P2P/ns-p2p-peer_group_event_registration) Strukturen, die der Peer Infrastruktur die spezifischen Peer Ereignisse anzeigen, für die die Anwendung eine Benachrichtigung anfordert. Die Anwendung muss auch genau angeben, wie viele Strukturen übermittelt werden.
+Die Anwendung übergibt auch eine Reihe von [**PEER \_ \_ \_ GRAPH-EREIGNISREGISTRIERUNGs-**](/windows/desktop/api/P2P/ns-p2p-peer_graph_event_registration) oder [**PEER GROUP EVENT \_ \_ \_ REGISTRATION-Strukturen,**](/windows/desktop/api/P2P/ns-p2p-peer_group_event_registration) die der Peerinfrastruktur die spezifischen Peerereignisse angeben, für die die Anwendung eine Benachrichtigung angibt. Die Anwendung muss auch genau angeben, wie viele Strukturen übergeben werden.
 
-## <a name="peer-graphing-events"></a>Peer graphingereignisse
+## <a name="peer-graphing-events"></a>Peer Graphing Events
 
-Eine Peer graphanwendung kann sich registrieren, um eine Benachrichtigung für 9 Peer Graph-Ereignisse zu erhalten. Jedem Ereignis Namen wird ein **Peer Graph- \_ \_ \_ Ereignis** vorangestellt, z. b. der **Status des Peer \_ Diagramms \_ \_**. Sofern nicht anders angegeben, werden die Informationen zu einer Änderung mithilfe von " [**Peer Diagramm geteventdata**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata)" abgerufen.
+Eine Peer Graphing-Anwendung kann sich registrieren, um Benachrichtigungen für neun Peerdiagrammereignisse zu erhalten. Jedem Ereignisnamen wird PEER **\_ GRAPH EVENT \_ \_ vorangeformt,** z. B. PEER GRAPH STATUS **\_ \_ \_ CHANGED**. Sofern nicht anders angegeben, werden Informationen zu einer Änderung mit [**peerGraphGetEventData abgerufen.**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata)
 
--   **Peer \_ Der Graph- \_ Ereignis \_ Status wurde \_ geändert** und zeigt an, dass der Status eines Diagramms geändert wird, z. b. Wenn ein Knoten mit einem Diagramm synchronisiert wurde.
--   **Peer \_ \_ \_ \_ Geänderte Diagramm Ereignis Eigenschaft** gibt an, dass eine Eigenschaft eines Diagramms oder einer Gruppe geändert wird, z. b. wenn sich der Anzeige Name eines Diagramms geändert hat.
+-   **PEER \_ GRAPH \_ EVENT \_ STATUS \_ CHANGED** gibt an, dass der Status eines Diagramms geändert wird, z. B. wenn ein Knoten mit einem Diagramm synchronisiert wurde.
+-   **PEER \_ GRAPH \_ EVENT \_ PROPERTY \_ CHANGED** gibt an, dass eine Eigenschaft eines Diagramms oder einer Gruppe geändert wird, z. B. der Angezeigte Name eines Graphen geändert wurde.
     > [!Note]  
-    > Die Anwendung muss " [**Peer graphgetproperties**](/windows/desktop/api/P2P/nf-p2p-peergraphgetproperties) " aufrufen, um die geänderten Informationen zu erhalten.
+    > Die Anwendung muss [**PeerGraphGetProperties aufrufen,**](/windows/desktop/api/P2P/nf-p2p-peergraphgetproperties) um die geänderten Informationen zu erhalten.
 
      
 
--   **Peer \_ Diagramm \_ Ereignis \_ Daten Satz \_ geändert** gibt an, dass ein Datensatz geändert wird, z. b. Wenn ein Datensatz gelöscht wird.
--   **Peer \_ Die \_ direkte Graph-Ereignis \_ \_ Verbindung** gibt an, dass eine direkte Verbindung geändert wird, z. b. Wenn ein Knoten eine Verbindung hergestellt hat.
--   **Peer \_ Eine Graph- \_ Ereignis \_ Nachbar \_ Verbindung** gibt an, dass eine Verbindung mit einem Nachbar Knoten geändert wird, z. b. Wenn ein Knoten eine Verbindung hergestellt hat.
--   **Peer \_ \_ \_ Eingehende \_ Daten des Diagramm Ereignisses** zeigen an, dass Daten von einer direkten oder benachbarten Verbindung empfangen wurden.
--   **Peer \_ Graph- \_ Ereignis \_ Verbindung \_ erforderlich** gibt an, dass die graphinginfrastruktur eine neue Verbindung erfordert.
+-   **PEER \_ GRAPH \_ EVENT \_ RECORD \_ CHANGED** gibt an, dass ein Datensatz geändert wird, z. B. ein Datensatz gelöscht wird.
+-   **PEER \_ GRAPH \_ EVENT \_ DIRECT \_ CONNECTION** gibt an, dass eine direkte Verbindung geändert wird, z. B. ein Knoten verbunden wurde.
+-   **PEER \_ GRAPH \_ EVENT \_ NEIGHBOR \_ CONNECTION** gibt an, dass eine Verbindung mit einem benachbarten Knoten geändert wird, z. B. wenn ein Knoten verbunden wurde.
+-   **PEER \_ GRAPH \_ EVENT \_ INCOMING \_ DATA** gibt an, dass Daten von einer direkten oder benachbarten Verbindung empfangen wurden.
+-   **PEER \_ GRAPH \_ EVENT CONNECTION REQUIRED \_ \_ gibt** an, dass die Graphinginfrastruktur eine neue Verbindung erfordert.
     > [!Note]  
-    > Bei einem [**Peer-graphconnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) -Befehl wird eine Verbindung mit einem neuen Knoten hergestellt. Ein Aufrufen von " [**Peer Diagramm geteventdata**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata) " gibt keine Daten zurück.
+    > Ein Aufruf von [**PeerGraphConnect stellt**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) eine Verbindung mit einem neuen Knoten her. Ein Aufruf von [**PeerGraphGetEventData**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata) gibt keine Daten zurück.
 
      
 
--   **Peer \_ Der \_ \_ \_ geänderte Diagramm Ereignis Knoten** zeigt an, dass die Informationen zur Knoten Präsenz geändert werden, z. b. Wenn eine IP-Adresse geändert wurde.
--   **Peer \_ \_ \_ Synchronisierung des Diagramm Ereignisses** gibt an, dass ein bestimmter Daten Recordtyp synchronisiert ist.
+-   **PEER \_ GRAPH \_ EVENT \_ NODE \_ CHANGED** gibt an, dass Informationen zum Vorhandensein von Knoten geändert werden, z. B. eine IP-Adresse geändert wurde.
+-   **PEER \_ GRAPH \_ EVENT \_ SYNCHRONIZED gibt** an, dass ein bestimmter Datensatztyp synchronisiert wird.
 
-Nachdem eine Anwendung eine Benachrichtigung erhalten hat, dass ein Peer Ereignis aufgetreten ist, ruft die Anwendung [**peergraphgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata)auf und übergibt das von [**peergraphregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)zurückgegebene Peer Ereignis handle. Die Peer Infrastruktur gibt einen Zeiger auf eine [**Peer \_ Graph- \_ Ereignis \_ Daten**](/windows/desktop/api/P2P/ns-p2p-peer_graph_event_data) Struktur zurück, die die angeforderten Daten enthält. Diese Funktion sollte aufgerufen werden, bis **Peer \_ S \_ keine \_ Ereignis \_ Daten** zurückgibt.
+Nachdem eine Anwendung eine Benachrichtigung erhalten hat, dass ein Peerereignis aufgetreten ist, ruft die Anwendung [**PeerGraphGetEventData**](/windows/desktop/api/P2P/nf-p2p-peergraphgeteventdata)auf und übergibt das Peerereignishand handle, das von [**PeerGraphRegisterEvent zurückgegeben wird.**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent) Die Peerinfrastruktur gibt einen Zeiger auf eine [**PEER \_ GRAPH EVENT \_ \_ DATA-Struktur**](/windows/desktop/api/P2P/ns-p2p-peer_graph_event_data) zurück, die die angeforderten Daten enthält. Diese Funktion sollte aufgerufen werden, bis **PEER S NO EVENT \_ \_ \_ \_ DATA** zurückgegeben wird.
 
-Wenn eine Anwendung keine Peer Ereignis Benachrichtigung erfordert, ruft die Anwendung entweder [**peergraphunregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergraphunregisterevent)auf und übergibt das Peer Ereignis handle, das von [**peergraphregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent) zurückgegeben wurde, als die Anwendung registriert ist.
+Nachdem eine Anwendung keine Peerereignisbenachrichtigung erfordert, ruft die Anwendung entweder [**PeerGraphUnregisterEvent**](/windows/desktop/api/P2P/nf-p2p-peergraphunregisterevent)auf und übergibt das Peerereignishand handle, das von [**PeerGraphRegisterEvent**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent) zurückgegeben wurde, wenn die Anwendung registriert wurde.
 
-## <a name="handling-graph-connection-referrals"></a>Umgang mit Graph-Verbindungs Referenzen
+## <a name="handling-graph-connection-referrals"></a>Behandeln Graph Verbindungsempfehlungen
 
-Wenn [**peergraphconnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) aufgerufen wird, wird der Verbindungs Peer über das asynchrone **Peer \_ Graph- \_ Ereignis Nachbar- \_ \_ Verbindungs** Ereignis über Erfolg oder Fehler benachrichtigt. Wenn bei der Verbindung aufgrund eines bestimmten Netzwerk Problems (z. b. einer falsch konfigurierten Firewall) ein Fehler aufgetreten ist, wird das Ereignis Nachbar-Verbindungs Ereignis des **Peer \_ Diagramms \_ \_ \_** ausgelöst, wobei der Verbindungsstatus auf **Peer \_ Verbindung ist \_ fehlgeschlagen**.
+Wenn [**PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) aufgerufen wird, wird der verbindende Peer über das asynchrone **PEER GRAPH EVENT NEIGHBOR \_ \_ \_ \_ CONNECTION-Ereignis** über Erfolg oder Fehler benachrichtigt. Wenn die Verbindung aufgrund eines bestimmten Netzwerkproblemes (z. B. einer falsch konfigurierten Firewall) fehlgeschlagen ist, wird das **PEER GRAPH EVENT NEIGHBOR \_ \_ \_ \_ CONNECTION-Ereignis** ausgelöst, bei dem der Verbindungsstatus auf PEER CONNECTION FAILED festgelegt **\_ \_ ist.**
 
-Wenn ein Peer aber einen Verweis erhält, wenn er versucht, eine Verbindung mit einem ausgelasteten Knoten herzustellen, wird die **Peer \_ Graph- \_ \_ Nachbar \_ Verbindung** auf dem Verbindungs Peer ausgelöst, wobei der Verbindungsstatus auf **Peer \_ Verbindung ist \_ fehlgeschlagen** ist. Der Verbindungs Peer kann auf einen anderen Knoten verwiesen werden, der selbst ausgelastet ist und einen Verweis senden kann. das gleiche Ereignis und der gleiche Status werden auf dem Verbindungs Peer ausgelöst. Diese Verweiskette, die zu Fehlern bei der **Peer \_ Verbindungs \_ fehl** Veranstaltung führt, kann fortgesetzt werden, bis die maximale Anzahl von Verbindungs versuchen erschöpft ist. Der Peer verfügt über keinen Mechanismus, um den Unterschied zwischen einem vollen Verbindungsversuch und dem Verbindungs Verweis zu ermitteln.
+Wenn ein Peer jedoch eine Empfehlung empfängt, wenn er versucht, eine Verbindung mit einem ausgelastet knoten herzustellen, wird die **PEER GRAPH EVENT NEIGHBOR \_ \_ \_ \_ CONNECTION** auf dem verbindenden Peer ausgelöst, und der Verbindungsstatus ist auf PEERVERBINDUNG FEHLGESCHLAGEN **\_ \_ festgelegt.** Der verbindende Peer kann auf einen anderen Knoten verwiesen werden, der selbst ausgelastet ist und eine Empfehlung sendet, und das gleiche Ereignis und der gleiche Status werden auf dem verbindenden Peer ausgelöst. Diese Kette von Empfehlungen, die zu peer **\_ connection \_ failed-Ereignisstatus** führen, kann fortgesetzt werden, bis die maximale Anzahl von Verbindungsversuchen erschöpft ist. Der Peer verfügt nicht über einen Mechanismus, um den Unterschied zwischen einem vollständigen Verbindungsversuch und der Verbindungsempfehlung zu bestimmen.
 
-Um dieses Problem zu beheben, sollten Entwickler in Erwägung gezogen werden, die Peer Graph-Status Änderungs Ereignisse zu verwenden, um zu bestimmen, ob der Verbindungsversuch fehlschlägt. Wenn das Ereignis nicht innerhalb eines bestimmten Zeitraums empfangen wird, kann die Anwendung davon ausgehen, dass auf den Verbindungs-Peer verwiesen wird und dass die Peer Anwendung den Verbindungsversuch als Fehler betrachtet.
+Um dieses Problem zu beheben, sollten Entwickler erwägen, die Änderungsereignisse des Peerdiagramms zu verwenden, um zu bestimmen, ob der Verbindungsversuch erfolgreich war. Wenn das Ereignis nicht innerhalb eines bestimmten Zeitraumes empfangen wird, kann die Anwendung davon ausgehen, dass auf den verbindenden Peer verwiesen wird und dass die Peeranwendung den Verbindungsversuch als Fehler betrachten sollte.
 
-## <a name="peer-grouping-events"></a>Peer Gruppierungs Ereignisse
+## <a name="peer-grouping-events"></a>Peer Grouping Events
 
-Eine Peer Gruppierungs Anwendung kann sich registrieren, um Benachrichtigungen für 8-Peer-Ereignisse zu empfangen. Jedem Ereignis Namen wird ein **Peer \_ Gruppen \_ Ereignis \_** vorangestellt, z. b. hat sich der **Peer \_ Gruppen \_ Ereignis \_ Status \_ geändert**. Sofern nicht anders angegeben, werden Informationen zu einer Änderung mithilfe von " [**Peer groupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata)" abgerufen.
+Eine Peergruppenanwendung kann sich registrieren, um Benachrichtigungen für acht Peerereignisse zu erhalten. Jedem Ereignisnamen wird **PEER \_ GROUP EVENT \_ \_ vorangeformt,** z. B. PEER GROUP EVENT STATUS **\_ \_ \_ \_ CHANGED**. Sofern nicht anders angegeben, werden Informationen zu einer Änderung mit [**peerGroupGetEventData abgerufen.**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata)
 
--   **Peer \_ Der Gruppen \_ Ereignis \_ Status wurde \_ geändert** und zeigt an, dass sich der Gruppen Status geändert hat. Es gibt zwei mögliche Statuswerte: **Peer \_ Gruppen \_ Status \_** Überwachung. Dies deutet darauf hin, dass die Gruppe keine Verbindungen hat und auf neue Mitglieder wartet. der **Peer \_ Gruppen \_ Status weist \_ Verbindungen** auf, was darauf hinweist, dass die Gruppe über mindestens eine Verbindung verfügt. Dieser Statuswert kann abgerufen werden, indem [**peergroupgetstatus**](/windows/desktop/api/P2P/nf-p2p-peergroupgetstatus) aufgerufen wird, nachdem dieses Ereignis ausgelöst wurde.
--   **Peer \_ \_ \_ \_ Geänderte Gruppen Ereignis Eigenschaft** gibt an, dass die Gruppen Eigenschaften vom Ersteller der Gruppe geändert oder aktualisiert wurden.
--   **Peer \_ Gruppen \_ Ereignis \_ Daten Satz \_ geändert** gibt an, dass ein Datensatz-Vorgang ausgeführt wurde. Dieses Ereignis wird ausgelöst, wenn ein Peer, der Teil der Gruppe ist, einen Datensatz veröffentlicht, aktualisiert oder löscht. Dieses Ereignis wird z. b. ausgelöst, wenn eine Chat-Anwendung eine Chat Nachricht sendet.
--   **Peer \_ Gruppen \_ \_ Ereignismember \_ geändert** gibt an, dass sich der Status eines Mitglieds innerhalb der Gruppe geändert hat. Zu den Status Änderungen gehören:
-    -   **Peer \_ Mitglied \_ verbunden**. Ein Peer hat eine Verbindung mit der Gruppe hergestellt.
-    -   **Peer \_ Member \_ getrennt**. Ein Peer hat die Verbindung mit der Gruppe getrennt.
-    -   **Peer \_ Member \_** verknüpft. Für einen Peer wurden neue Mitgliedschafts Informationen veröffentlicht.
-    -   **Peer \_ der Member wurde \_ aktualisiert**. Ein Peer wurde mit neuen Informationen aktualisiert, z. b. einer neuen IP-Adresse.
--   **Peer \_ Gruppieren der \_ Ereignis \_ Nachbar \_ Verbindung**. Peers, die an Nachbar Verbindungen innerhalb der Gruppe teilnehmen, müssen sich für dieses Ereignis registrieren. Beachten Sie, dass die Registrierung für dieses Ereignis den Peer nicht zum Empfangen von Daten ermöglicht. durch die Registrierung für dieses Ereignis wird nur dann eine Benachrichtigung sichergestellt, wenn eine Verbindung mit einer Nachbar Verbindung empfangen wird.
--   **Peer \_ Gruppen \_ Ereignis- \_ direkt \_ Verbindung**. Peers, die an direkten Verbindungen innerhalb der Gruppe teilnehmen, müssen sich für dieses Ereignis registrieren. Beachten Sie, dass die Registrierung für dieses Ereignis den Peer nicht zum Empfangen von Daten ermöglicht. die Registrierung für dieses Ereignis gewährleistet nur eine Benachrichtigung, wenn eine Anforderung für eine direkte Verbindung empfangen wird.
--   **Peer \_ Gruppieren \_ \_ eingehender \_ Daten von Ereignissen**. Peers, die Daten über eine Nachbar-oder Direktverbindung empfangen, müssen sich für dieses Ereignis registrieren. Wenn dieses Ereignis ausgelöst wird, können die nicht transparenten Daten, die vom anderen teilnehmenden Peer übertragen werden, durch Aufrufen von [**peergroupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata)abgerufen werden. Beachten Sie, dass für das Empfangen dieses Ereignisses der Peer zuvor für die **Peer \_ Gruppe \_ Ereignis \_ Direct- \_ Verbindung** oder **Peer \_ Group \_ Event NEIGHBOR- \_ \_ Verbindung** registriert sein muss.
--   **Peer \_ Fehler \_ bei der Gruppen Ereignis \_ Verbindung \_**. Eine Verbindung ist aus irgendeinem Grund fehlgeschlagen. Wenn dieses Ereignis ausgelöst wird, werden keine Daten bereitgestellt, und " [**Peer groupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) " sollte nicht aufgerufen werden.
+-   **PEER \_ GROUP \_ EVENT STATUS CHANGED \_ \_ gibt** an, dass sich der Gruppenstatus geändert hat. Es sind zwei Statuswerte möglich: **PEER \_ GROUP STATUS \_ \_ LISTENING**, was angibt, dass die Gruppe keine Verbindungen hat und auf neue Mitglieder wartet, und **PEER GROUP STATUS HAS \_ \_ \_ CONNECTIONS**, was angibt, dass die Gruppe über mindestens eine Verbindung verfügt. Dieser Statuswert kann durch Aufrufen von [**PeerGroupGetStatus ermittelt werden,**](/windows/desktop/api/P2P/nf-p2p-peergroupgetstatus) nachdem dieses Ereignis ausgelöst wurde.
+-   **PEER \_ GROUP \_ EVENT PROPERTY CHANGED \_ \_ gibt** an, dass die Gruppeneigenschaften vom Gruppenersteller geändert oder aktualisiert wurden.
+-   **PEER \_ GROUP \_ EVENT RECORD CHANGED \_ \_ gibt** an, dass ein Datensatzvorgang ausgeführt wurde. Dieses Ereignis wird ausgelöst, wenn ein Peer, der teil der Gruppe ist, einen Datensatz veröffentlicht, aktualisiert oder löscht. Dieses Ereignis wird beispielsweise ausgelöst, wenn eine Chatanwendung eine Chatnachricht sendet.
+-   **PEER \_ GROUP \_ EVENT MEMBER CHANGED \_ \_ gibt** an, dass sich der Status eines Mitglieds innerhalb der Gruppe geändert hat. Zu den Statusänderungen gehören:
+    -   **PEER \_ MEMBER \_ CONNECTED**. Ein Peer wurde mit der Gruppe verbunden.
+    -   **PEER \_ MEMBER \_ DISCONNECTED**. Ein Peer wurde von der Gruppe getrennt.
+    -   **PEER \_ MEMBER \_ JOINED**. Neue Mitgliedschaftsinformationen wurden für einen Peer veröffentlicht.
+    -   **PEER \_ MEMBER \_ AKTUALISIERT.** Ein Peer wurde mit neuen Informationen aktualisiert, z. B. einer neuen IP-Adresse.
+-   **PEER \_ GROUP \_ EVENT \_ NEIGHBOR \_ CONNECTION**. Peers, die an benachbarten Verbindungen innerhalb der Gruppe teilnehmen, müssen sich für dieses Ereignis registrieren. Beachten Sie, dass die Registrierung für dieses Ereignis den Peer nicht zum Empfangen von Daten aktiviert. Die Registrierung für dieses Ereignis stellt nur dann eine Benachrichtigung sicher, wenn eine Anforderung für eine Nachbarverbindung empfangen wird.
+-   **PEER \_ GROUP \_ EVENT \_ DIRECT \_ CONNECTION**. Peers, die an direkten Verbindungen innerhalb der Gruppe teilnehmen, müssen sich für dieses Ereignis registrieren. Beachten Sie, dass die Registrierung für dieses Ereignis den Peer nicht zum Empfangen von Daten aktiviert. Die Registrierung für dieses Ereignis stellt nur dann eine Benachrichtigung sicher, wenn eine Anforderung für eine direkte Verbindung empfangen wird.
+-   **PEER \_ GROUP \_ EVENT \_ INCOMING \_ DATA**. Peers, die Daten über eine benachbarte oder direkte Verbindung empfangen, müssen sich für dieses Ereignis registrieren. Wenn dieses Ereignis ausgelöst wird, können die vom anderen beteiligten Peer übertragenen nicht transparenten Daten durch Aufrufen von [**PeerGroupGetEventData ermittelt werden.**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) Beachten Sie, dass der Peer zuvor für **PEER GROUP EVENT DIRECT \_ \_ \_ \_ CONNECTION** oder PEER GROUP EVENT NEIGHBOR CONNECTION registriert sein muss, um dieses **Ereignis zu \_ \_ \_ \_ empfangen.**
+-   **PEER \_ FEHLER BEI \_ DER \_ \_ GRUPPENEREIGNISVERBINDUNG.** Eine Verbindung ist aus irgendeinem Grund fehlgeschlagen. Wenn dieses Ereignis ausgelöst wird, werden keine Daten bereitgestellt, und [**PeerGroupGetEventData**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata) sollte nicht aufgerufen werden.
 
-Nachdem eine Anwendung benachrichtigt wurde, dass ein Peer Ereignis aufgetreten ist (mit Ausnahme der **Peer \_ Gruppen- \_ Ereignis \_ Verbindung \_**), ruft die Anwendung [**peergroupgeteventdata**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata)auf und übergibt das Peer Ereignis handle, das von [**peergroupregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent)zurückgegeben wurde. Die Peer Infrastruktur gibt einen Zeiger auf eine [**Peer \_ Gruppen- \_ Ereignis \_ Daten**](/windows/win32/api/p2p/ns-p2p-peer_group_event_data-r1) Struktur zurück, die die angeforderten Daten enthält. Diese Funktion muss aufgerufen werden, bis **Peer \_ S \_ keine \_ Ereignis \_ Daten** zurückgibt. Wenn eine Anwendung keine Benachrichtigung mehr für ein Peer Ereignis benötigt, muss ein-Befehl an [**peergroupunregisterevent**](/windows/desktop/api/P2P/nf-p2p-peergroupunregisterevent)gesendet werden. dabei wird das von **peergroupregisterevent** zurückgegebene Peer Ereignis Handle übergeben, wenn die Anwendung für das jeweilige Ereignis registriert ist.
+Nachdem eine Anwendung eine Benachrichtigung empfangen hat, dass ein Peerereignis aufgetreten ist (mit Ausnahme von **PEER GROUP EVENT CONNECTION \_ \_ \_ \_ FAILED),** ruft die Anwendung [**PeerGroupGetEventData**](/windows/desktop/api/P2P/nf-p2p-peergroupgeteventdata)auf und übergibt das peerereignishand handle, das von [**PeerGroupRegisterEvent**](/windows/desktop/api/P2P/nf-p2p-peergroupregisterevent)zurückgegeben wird. Die Peerinfrastruktur gibt einen Zeiger auf eine [**PEER \_ GROUP EVENT \_ \_ DATA-Struktur**](/windows/win32/api/p2p/ns-p2p-peer_group_event_data-r1) zurück, die die angeforderten Daten enthält. Diese Funktion muss aufgerufen werden, bis **PEER S NO EVENT \_ \_ \_ \_ DATA** zurückgegeben wird. Wenn eine Anwendung keine Benachrichtigung mehr für ein Peerereignis erfordert, muss [**peerGroupUnregisterEvent**](/windows/desktop/api/P2P/nf-p2p-peergroupunregisterevent)aufgerufen werden, um das Peerereignishand handle zu übergeben, das von **PeerGroupRegisterEvent** zurückgegeben wird, wenn die Anwendung für das bestimmte Ereignis registriert wurde.
 
-## <a name="example-of-registering-for-peer-graphing-events"></a>Beispiel für das Registrieren von Peer-graphingereignissen
+## <a name="example-of-registering-for-peer-graphing-events"></a>Beispiel für die Registrierung für Peer graphing-Ereignisse
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie sich bei den Peer-graphingereignissen registrieren.
+Das folgende Codebeispiel zeigt, wie Sie sich bei den Peer Graphing-Ereignissen registrieren.
 
 
 ```C++

@@ -13,9 +13,9 @@ ms.locfileid: "119679530"
 ---
 # <a name="msiinstanceguid-property"></a>MSIINSTANCEGUID-Eigenschaft
 
-Das Vorhandensein der **MSIINSTANCEGUID-Eigenschaft** gibt an, dass eine Änderungstransformation für den Produktcode für das Produkt registriert ist. Der Wert der **MSIINSTANCEGUID-Eigenschaft** gibt an, welche Instanz eines Produkts für die Installation verwendet werden soll. Die **MSIINSTANCEGUID-Eigenschaft** kann nur auf ein Produkt verweisen, das bereits mit einer Instanztransformation installiert wurde.
+Das Vorhandensein der **MSIINSTANCEGUID-Eigenschaft** gibt an, dass eine Transformation zum Ändern des Produktcodes für das Produkt registriert ist. Der Wert der **MSIINSTANCEGUID-Eigenschaft** gibt an, welche Instanz eines Produkts für die Installation verwendet werden soll. Die **MSIINSTANCEGUID-Eigenschaft** kann nur auf ein Produkt verweisen, das bereits mit einer Instanztransformation installiert wurde.
 
-Instanztransformationen sind Änderungen am Produktcode, die mit dem Installationsprogramm verfügbar sind, das auf Windows Server 2003 oder Windows XP ausgeführt wird. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches.](installing-multiple-instances-of-products-and-patches.md)
+Instanztransformationen sind Änderungen am Produktcode, die mit dem Installationsprogramm verfügbar sind, das entweder auf Windows Server 2003 oder Windows XP ausgeführt wird. Weitere Informationen finden Sie unter [Installieren mehrerer Instanzen von Produkten und Patches.](installing-multiple-instances-of-products-and-patches.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -23,7 +23,7 @@ Instanztransformationen sind Änderungen am Produktcode, die mit dem Installatio
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind, finden Sie unter Run-Time [Anforderungen](windows-installer-portal.md) für Windows Installer.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

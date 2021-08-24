@@ -1,11 +1,11 @@
 ---
 title: DS-UI-Admin-Notification-Attribut
-description: Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle unterstützen, die von DSAdmin aufgerufen wird, wenn eine Aktion für ein Objekt über die Benutzeroberfläche durchgeführt wurde.
+description: Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückrufschnittstelle unterstützen, die DSAdmin aufruft, wenn eine Aktion für ein Objekt über die Benutzeroberfläche aufgetreten ist.
 ms.assetid: 4845c221-087f-49f5-a95d-71f58a4e8819
 ms.tgt_platform: multiple
 keywords:
-- DS-UI-Admin-Notification-Attribut AD-Schema
-- dsuiadminnotification-Attribut, AD-Schema
+- AD-Schema des DS-UI-Admin-Notification-Attributs
+- Ad-Schema des dSUIAdminNotification-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7082d7a8fd751fa001ac796d2a86b60a28463e8b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c2465796ed1e0069206539a5d4b6b17080e5f751f5c9b79198c668316c6dec26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656560"
 ---
 # <a name="ds-ui-admin-notification-attribute"></a>DS-UI-Admin-Notification-Attribut
 
-Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle unterstützen, die von DSAdmin aufgerufen wird, wenn eine Aktion für ein Objekt über die Benutzeroberfläche durchgeführt wurde.
+Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückrufschnittstelle unterstützen, die DSAdmin aufruft, wenn eine Aktion für ein Objekt über die Benutzeroberfläche aufgetreten ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | DS-UI-Admin-Notification                    |
-| LDAP-Display-Name | dsuiadminnotification                       |
+| Ldap-Anzeigename | dSUIAdminNotification                       |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänenadministrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1343                     |
 | System-ID-GUID    | f6ea0a94-6f91-11d2-9905-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Dies ist eine Liste der GUIDs von COM-Objekten, die eine Rückruf Schnittstelle 
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
 | System-Only            | False                                               |
-| Ist-einwertig       | False                                               |
+| Ist einwertig       | False                                               |
 | Ist indiziert             | False                                               |
 | Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
 | System-Flags           | 0x00000010                                          |
-| In verwendete Klassen        | [**DS-UI-Settings**](c-dsuisettings.md)<br/> |
+| In verwendete Klassen        | [**DS-UI-Einstellungen**](c-dsuisettings.md)<br/> |
 
 
 

@@ -1,21 +1,21 @@
 ---
-title: Datei Replikations Beispiele
+title: Beispiele für die Dateireplikation
 ms.assetid: cc15c17a-796f-4273-a534-e005d07cf05f
-description: 'Weitere Informationen finden Sie hier: Datei Replikations Beispiele'
+description: Weitere Informationen finden Sie unter Dateireplikationsbeispiele.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b41cfca5679a01cb00225edffdd3873cbbeb55f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95bf1dd6591fa5a7a67cb2052fe7c070ed0aaef77f93385f899b433597890ab6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805630"
 ---
-# <a name="file-replication-examples"></a>Datei Replikations Beispiele
+# <a name="file-replication-examples"></a>Beispiele für die Dateireplikation
 
-Im folgenden Beispiel wird die Datei Replikation in der Web Services for Windows-API veranschaulicht:
+Das folgende Beispiel veranschaulicht die Dateireplikation in den Webdiensten für Windows-API:
 
-Ein umfassendes Beispiel, das die Implementierung eines Datei Replikations Dienstanbieter veranschaulicht: Tool: [filereptoolexample](filereptoolexample.md), Service: [filerepserviceexample](filerepserviceexample.md)
+Ein umfassendes Beispiel, das veranschaulicht, wie ein Dateireplikationsdienst implementiert wird: Tool: [FileRepToolExample](filereptoolexample.md), Service: [FileRepServiceExample](filerepserviceexample.md)
 
  
 

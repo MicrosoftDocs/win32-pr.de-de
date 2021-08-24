@@ -1,26 +1,26 @@
 ---
-title: VML-Polar Attribut
-description: VML-Polar Attribut
+title: VML Polar-Attribut
+description: VML Polar-Attribut
 ms.assetid: b7ea8764-057d-4c14-81ad-77ae82b1aa31
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: baea7a8c044436df7e6efbf178ddb0273d7fc59d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 763f6eb0a3271d8e76a0750ad5e1dd85695f938c0d563a75bd862adfd1571a34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655070"
 ---
-# <a name="vml-polar-attribute"></a>VML-Polar Attribut
+# <a name="vml-polar-attribute"></a>VML Polar-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt die Mittelpunkt Position für Polar Handles an. Lese-/Schreibzugriff. **VgVector2D**.
+Gibt die Mittelpunktposition für Polarhandles an. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Gibt die Mittelpunkt Position für Polar Handles an. Lese-/Schreibzugriff. **VgV
 
 **Tagsyntax**
 
-<v: *Element* Polar = " *Ausdruck* " >
+<v: *element* polar=" *ausdruck* ">
 
 **Anmerkungen**
 
-Der Standardwert ist eine NULL-Zeichenfolge. Wenn Werte angegeben werden, gibt dies an, dass die Messung Polar ist und dass das [Positions](position-attribute--h--vml.md) Attribut RADIUS-und Winkelwerte des Handles anstelle von x-und y-Werten definiert.
+Der Standardwert ist eine NULL-Zeichenfolge. Wenn Werte angegeben werden, gibt dies an, dass die Messung polar ist und dass das [Attribut Position](position-attribute--h--vml.md) Radius- und Winkelwerte des Handles anstelle von x- und y-Werten definiert.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
- 
+ 
 
- 
+ 

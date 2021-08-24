@@ -28,7 +28,7 @@ Erstellt ein Renderziel, das in einer Microsoft Windows Imaging Component (WIC)-
 
 
 
-| Methode                                                                                                                                                                                                                            | BESCHREIBUNG                                                                                            |
+| Methode                                                                                                                                                                                                                            | Beschreibung                                                                                            |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
 | [**CreateWicBitmapRenderTarget(IWICBitmap \* ,D2D1 \_ RENDER TARGET PROPERTIES \_ \_ \* ,ID2D1RenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createwicbitmaprendertarget(iwicbitmap_constd2d1_render_target_properties_id2d1rendertarget)) | Erstellt ein Renderziel, das in einer Microsoft Windows Imaging Component (WIC)-Bitmap gerendert wird.<br/> |
 | [**CreateWicBitmapRenderTarget(IWICBitmap \* ,D2D1 \_ RENDER TARGET PROPERTIES \_ \_&,ID2D1RenderTarget \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createwicbitmaprendertarget(iwicbitmap_constd2d1_render_target_properties__id2d1rendertarget))  | Erstellt ein Renderziel, das in einer Microsoft Windows Imaging Component (WIC)-Bitmap gerendert wird.<br/> |
@@ -52,7 +52,7 @@ Ihre Anwendung sollte Renderziele einmal erstellen und sie für die Lebensdauer 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
 title: Time-Refresh-Attribut
-description: Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directory integrierter Zone enthaltener Ressourcen Daten Satz für den DNS-Server aktualisiert werden soll. Das Standardintervall beträgt 7 Tage.
+description: Dieses Attribut verfügt über das Intervall, in dem ein Ressourcendatensatz, der in einer integrierten Active Directory-Zone enthalten ist, für den DNS-Server aktualisiert werden soll. Das Standardintervall beträgt 7 Tage.
 ms.assetid: 9e473c29-7fcf-4d6d-8a7c-2791c7822c7d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Time-Refresh-Attribut
-- timerefresh-Attribut, AD-Schema
+- Time-Refresh AD-Schema
+- ad-Schema des timeRefresh-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 87bc360686b1692d2dbda1ee23ad6351e69d3afe
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 27705c55e3d16003bc40bfb72c3bf9d0b06260e239aa0c83dbd4e05a484dbc1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704070"
 ---
 # <a name="time-refresh-attribute"></a>Time-Refresh-Attribut
 
-Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directory integrierter Zone enthaltener Ressourcen Daten Satz für den DNS-Server aktualisiert werden soll. Das Standardintervall beträgt 7 Tage.
+Dieses Attribut verfügt über das Intervall, in dem ein Ressourcendatensatz, der in einer integrierten Active Directory-Zone enthalten ist, für den DNS-Server aktualisiert werden soll. Das Standardintervall beträgt 7 Tage.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Time-Refresh                         |
-| LDAP-Display-Name | timerefresh                          |
+| Ldap-Anzeigename | timeRefresh                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.503               |
-| System-ID-GUID    | ddac0cf1-af8f-11d0-afeb-00c04fd930c9 |
+| System-Id-Guid    | ddac0cf1-af8f-11d0-afeb-00c04fd930c9 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Is-Single-Valued       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |
@@ -70,7 +70,7 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Is-Single-Valued       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |
@@ -100,10 +100,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Is-Single-Valued       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |
@@ -121,10 +121,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Ist einwertig       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |
@@ -142,10 +142,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Ist einwertig       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |
@@ -163,10 +163,10 @@ Dieses Attribut verfügt über das Intervall, in dem ein in einer Active Directo
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | False                                                                                                                         |
-| Ist-einwertig       | Richtig                                                                                                                          |
+| Ist einwertig       | True                                                                                                                          |
 | Ist indiziert             | False                                                                                                                         |
 | Im globalen Katalog      | False                                                                                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
 | Search-Flags           | 0x00000000                                                                                                                    |

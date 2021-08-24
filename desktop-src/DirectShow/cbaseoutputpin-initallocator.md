@@ -1,7 +1,7 @@
 ---
-description: Die initbelegcator-Methode erstellt eine Speicherzuweisung.
+description: Die InitAllocator-Methode erstellt eine Speicherzuweisung.
 ms.assetid: a1fa0ffb-ed43-446d-811e-6c3594743592
-title: CBaseOutputPin.IniTAllocator-Methode (amfilter. h)
+title: CBaseOutputPin.InitAllocator-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7e5385671ba4c7fdf1b719f83aafba7d84421bce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce1e8f8097ca88d0434f79c20e855d8b61798b5a1b0e32b6a38077e4c7aa1271
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652460"
 ---
-# <a name="cbaseoutputpininitallocator-method"></a>CBaseOutputPin.IniTAllocator-Methode
+# <a name="cbaseoutputpininitallocator-method"></a>CBaseOutputPin.InitAllocator-Methode
 
-Die- `InitAllocator` Methode erstellt eine Speicherzuweisung.
+Die `InitAllocator` -Methode erstellt eine Speicherzuweisung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ virtual HRESULT InitAllocator(
 
 <dl> <dt>
 
-*ppzuweisung* 
+*ppAlloc* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Zuweisung empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" zurück, wenn erfolgreich, oder einen Fehlercode aus der **cokreateinzustance** -Funktion.
+Gibt S \_ OK zurück, wenn erfolgreich, oder einen Fehlercode von der **CoCreateInstance-Funktion.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Eingabe-PIN keine Speicherzuweisung bereitstellt, ruft die [**cbaseoutputpin::D ecidezuordcator**](cbaseoutputpin-decideallocator.md) -Methode diese Methode auf, um eine Zuweisung zu erstellen.
+Wenn der Eingabepin keine Speicherzuweisung bietet, ruft die [**CBaseOutputPin::D ecideAllocator-Methode**](cbaseoutputpin-decideallocator.md) diese Methode auf, um eine Zuweisung zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn die Eingabe-PIN keine Speicherzuweisung bereitstellt, ruft die [**cbaseoutp
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn die Eingabe-PIN keine Speicherzuweisung bereitstellt, ruft die [**cbaseoutp
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: /no_def_idir Schalter
-description: Wenn Verzeichnisse mit dem/I-Schalter angegeben werden, weist der/No \_ DEF \_ Idir-Schalter den Mittelwert-Compiler an, nur Verzeichnisse zu durchsuchen, die mit dem/I-Schalter angegeben wurden.
+description: Wenn Verzeichnisse mit dem Schalter /I angegeben werden, weist der Schalter /no def idir den MIDL-Compiler an, nur verzeichnisse zu durchsuchen, die mit dem \_ \_ Schalter /I angegeben sind.
 ms.assetid: 9a396de4-332d-4832-8e8b-291690cd3a10
 keywords:
-- /no_def_idir-Schalter-Mittel l
+- /no_def_idir MIDL-Switch
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62ed845c73c36fbbfe4ea7dea952ee4541b043a7
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 8c93d61bff28ad0aa4306047755c88419d0b925431f9b3ea476ec957dcd62b98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811300"
 ---
-# <a name="no_def_idir-switch"></a>/No \_ DEF ( \_ Idir-Schalter)
+# <a name="no_def_idir-switch"></a>/no \_ def \_ idir switch
 
-Wenn Verzeichnisse mit dem [**/I**](-i.md) -Schalter angegeben werden, weist der **/No \_ DEF \_ Idir** -Schalter den Mittelwert-Compiler an, nur die Verzeichnisse zu durchsuchen, die mit dem **/I** -Schalter angegeben werden, wobei das aktuelle Verzeichnis sowie die von der INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse ignoriert werden.
+Wenn Verzeichnisse mit dem Schalter [**/I**](-i.md) angegeben werden, weist der Schalter **/no \_ def \_ idir** den MIDL-Compiler an, nur die verzeichnisse zu durchsuchen, die mit dem **/I-Schalter** angegeben sind, und ignoriert dabei das aktuelle Verzeichnis sowie die von der INCLUDE-Umgebungsvariablen angegebenen Verzeichnisse.
 
 ``` syntax
 midl /no_def_idir
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn keine Verzeichnisse mit dem [**/I**](-i.md) -Schalter angegeben werden, weist der **/No \_ DEF \_ Idir** -Schalter den Mittelwert Compiler an, nur das aktuelle Verzeichnis zu durchsuchen.
+Wenn mit dem Schalter [**/I**](-i.md) keine Verzeichnisse angegeben werden, weist der **Schalter /no \_ def \_ idir** den MIDL-Compiler an, nur das aktuelle Verzeichnis zu durchsuchen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -49,7 +49,7 @@ midl /no_def_idir /I c:\c700\include filename.idl
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/acf**](-acf.md)
@@ -58,9 +58,9 @@ midl /no_def_idir /I c:\c700\include filename.idl
 [**/I**](-i.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

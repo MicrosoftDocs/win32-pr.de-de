@@ -1,9 +1,9 @@
 ---
 title: PositionChange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das Positions Change-Ereignis tritt auf, wenn die aktuelle Wiedergabe Position innerhalb des Medien Elements geändert wurde.
+description: Das PositionChange-Ereignis tritt auf, wenn die aktuelle Wiedergabeposition innerhalb des Medienelements geändert wurde.
 ms.assetid: 92d469b9-813a-4148-be68-0fcef2e41491
 keywords:
-- Positions Change-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- PositionChange-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 552b748121668e71ee4d2ffb54feed441620a1cb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 269d83c92687b5debda8b70fb4d6710b55eebd5476153759ebad36e5d17657d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764680"
 ---
 # <a name="positionchange-event-of-the-axwindowsmediaplayer-object"></a>PositionChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das Positions Change-Ereignis tritt auf, wenn die aktuelle Wiedergabe Position innerhalb des Medien Elements geändert wurde.
+Das PositionChange-Ereignis tritt auf, wenn die aktuelle Wiedergabeposition innerhalb des Medienelements geändert wurde.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_PositionChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ positionchangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ PositionChangeEvent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PositionChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PositionChangeEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft    | BESCHREIBUNG                                         |
+| Eigenschaft    | Beschreibung                                         |
 |-------------|-----------------------------------------------------|
-| oldposition | System. doublegibt die alte Position an.<br/> |
-| neuposition | System. doublegibt die neue Position an.<br/> |
+| oldPosition | System.DoubleSpecifiert die alte Position.<br/> |
+| newPosition | System.DoubleSpecifiert die neue Position.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird während der Wiedergabe nicht routinemäßig ausgelöst. Sie tritt nur dann auf, wenn die aktuelle Position des Wiedergabe-Medien Elements aktiv geändert wird, z. b. wenn der Benutzer das Seek-handle verschiebt oder wenn Code ausgeführt wird, der einen Wert für iwmpcontrols angibt. **CurrentPosition**.
+Dieses Ereignis wird während der Wiedergabe nicht routinemäßig ausgelöst. Sie tritt nur auf, wenn etwas die aktuelle Position des wiedergegebenen Medienelements aktiv ändert, z. B. wenn der Benutzer das Suchhandle verschiebt oder wenn Code ausgeführt wird, der einen Wert für IWMPControls angibt. **currentPosition**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Dieses Ereignis wird während der Wiedergabe nicht routinemäßig ausgelöst. Si
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -74,10 +74,10 @@ Dieses Ereignis wird während der Wiedergabe nicht routinemäßig ausgelöst. Si
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. CurrentPosition (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-currentposition--vb-and-c.md)
+[**IWMPControls.currentPosition (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-currentposition--vb-and-c.md)
 </dt> </dl>
 
  

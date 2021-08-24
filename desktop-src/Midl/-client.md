@@ -1,9 +1,9 @@
 ---
-title: /Client-Schalter
-description: Der/Client-Schalter weist den Mittelwert Compiler an, Client seitige C-Quelldateien für eine RPC-Schnittstelle zu generieren.
+title: /client switch
+description: Der Schalter /client leitet den MIDL-Compiler an, clientseitige C-Quelldateien für eine RPC-Schnittstelle zu generieren.
 ms.assetid: bce5af72-2201-4b42-9348-cb97f08b7fdf
 keywords:
-- /Client-Schalter-Mittel l
+- /client switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cbf7e17e1893b918d926cd94a93eb8b1c372ee75
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 8361a41aa0e7c87c42eb41508fee0973d6fd4dd821e2008aa2148c8460fc63ea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764360"
 ---
-# <a name="client-switch"></a>/Client-Schalter
+# <a name="client-switch"></a>/client switch
 
-Der **/Client** -Schalter weist den Mittelwert Compiler an, Client seitige C-Quelldateien für eine RPC-Schnittstelle zu generieren.
+Der **Schalter /client** leitet den MIDL-Compiler an, clientseitige C-Quelldateien für eine RPC-Schnittstelle zu generieren.
 
 ``` syntax
 midl /client { stub | none }
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
@@ -38,37 +38,37 @@ midl /client { stub | none }
 
 <span id="stub"></span><span id="STUB"></span>
 
-<span id="stub"></span><span id="STUB"></span>Stub * * * *
+<span id="stub"></span><span id="STUB"></span>stub**
 
 
 </dt> <dd>
 
-Generiert die Client seitigen Dateien.
+Generiert die clientseitigen Dateien.
 
 </dd> <dt>
 
 <span id="none"></span><span id="NONE"></span>
 
-<span id="none"></span><span id="NONE"></span>keine * * * *
+<span id="none"></span><span id="NONE"></span>none**
 
 
 </dt> <dd>
 
-Generiert keine Client seitigen Dateien.
+Generiert keine clientseitigen Dateien.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der **/Client** -Schalter nicht angegeben wird, generiert der kompilierungscompiler die clientstubdatei. Dieser Schalter wirkt sich nicht auf OLE-Schnittstellen aus.
+Wenn der **Schalter /client** nicht angegeben ist, generiert der MIDL-Compiler die Clientstubdatei. Dieser Schalter wirkt sich nicht auf OLE-Schnittstellen aus.
 
-Der **/Client** -Schalter hat Vorrang vor dem [**/cstub**](-cstub.md) -Schalter.
+Der **Schalter /client** hat Vorrang vor dem [**Schalter /cstub.**](-cstub.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Client keine Datei Name. idl**
+**midl /client none filename.idl**
 
-**Mittel l/Client Stub-Dateiname. idl**
+**midl /client stub filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -77,15 +77,15 @@ Der **/Client** -Schalter hat Vorrang vor dem [**/cstub**](-cstub.md) -Schalter.
 [**/cstub**](-cstub.md)
 </dt> <dt>
 
-[**/Server**](-server.md)
+[**/server**](-server.md)
 </dt> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

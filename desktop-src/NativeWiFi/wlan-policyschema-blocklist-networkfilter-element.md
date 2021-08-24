@@ -1,7 +1,7 @@
 ---
-description: Gibt die Liste der Drahtlos-LAN-Netzwerke an, mit denen ein Computer keine Verbindung herstellen darf.
+description: Gibt die Liste der WLAN-Netzwerke an, mit denen ein Computer keine Verbindung herstellen darf.
 ms.assetid: 01db3f7e-1e27-4378-9c42-bc38192f9507
-title: blocklist-Element (NetworkFilter)
+title: blockList-Element (networkFilter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: e852286d00d93904bd185fef6c2f3444bb5987f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c5bd795ee9f5fc21dc205c24306820b4dec7f074638aa0e4f11ba3acde68cd0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684420"
 ---
-# <a name="blocklist-networkfilter-element"></a>blocklist-Element (NetworkFilter)
+# <a name="blocklist-networkfilter-element"></a>blockList-Element (networkFilter)
 
-Das blocklist-Element (NetworkFilter) gibt die Liste der Drahtlos-LAN-Netzwerke an, mit denen ein Computer keine Verbindung herstellen darf.
+Das blockList-Element (networkFilter) gibt die Liste der WLAN-Netzwerke an, mit denen ein Computer keine Verbindung herstellen darf.
 
 ``` syntax
 <xs:element name="blockList">
@@ -42,15 +42,15 @@ Das blocklist-Element (NetworkFilter) gibt die Liste der Drahtlos-LAN-Netzwerke 
 </xs:element>
 ```
 
-Das **Block List** -Element wird durch das [**NetworkFilter**](wlan-policyschema-networkfilter-wlanpolicy-element.md) -Element definiert.
+Das **blockList-Element** wird durch das [**networkFilter-Element**](wlan-policyschema-networkfilter-wlanpolicy-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                        | type                                                                     | BESCHREIBUNG                      |
+| Element                                                        | Typ                                                                     | Beschreibung                      |
 |----------------------------------------------------------------|--------------------------------------------------------------------------|----------------------------------|
-| [**Netzwerk**](wlan-policyschema-network-blocklist-element.md) | [**networkitemtype**](wlan-policyschema-networkitemtype-complextype.md) | Das blockierte Netzwerk. <br/> |
+| [**Netzwerk**](wlan-policyschema-network-blocklist-element.md) | [**networkItemType**](wlan-policyschema-networkitemtype-complextype.md) | Das blockierte Netzwerk. <br/> |
 
 
 
@@ -60,8 +60,8 @@ Das **Block List** -Element wird durch das [**NetworkFilter**](wlan-policyschema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -69,16 +69,16 @@ Das **Block List** -Element wird durch das [**NetworkFilter**](wlan-policyschema
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Network Filter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
+[**networkFilter**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Network Filter (wlanpolicy)**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
+[**networkFilter (WLANPolicy)**](wlan-policyschema-networkfilter-wlanpolicy-element.md)
 </dt> </dl>
 
  

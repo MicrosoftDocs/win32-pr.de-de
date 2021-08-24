@@ -1,9 +1,9 @@
 ---
-title: CBEM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+title: CBEM_GETUNICODEFORMAT Meldung (Commctrl.h)
+description: Ruft das UNICODE-Zeichenformatflag für das -Steuerelement ab.
 ms.assetid: 854ff8d5-6e2f-4918-a6c5-91356a4454af
 keywords:
-- Windows-Steuerelemente für CBEM_GETUNICODEFORMAT Meldung
+- CBEM_GETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b77bb0daabe6ef14d4be1b5e2de6bb1dd63248d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a4665877c3a9cae9fc559c55040d1972128dbb7404f59e5c61a5739829aca629
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699270"
 ---
-# <a name="cbem_getunicodeformat-message"></a>CBEM \_ getunicodeformat-Meldung
+# <a name="cbem_getunicodeformat-message"></a>CBEM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
+Ruft das UNICODE-Zeichenformatflag für das -Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ getunicodeformat**](ccm-getunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ get
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ get
 
 <dl> <dt>
 
-[**CBEM- \_ Code Format**](cbem-setunicodeformat.md)
+[**CBEM \_ SETUNICODEFORMAT**](cbem-setunicodeformat.md)
 </dt> </dl>
 
  

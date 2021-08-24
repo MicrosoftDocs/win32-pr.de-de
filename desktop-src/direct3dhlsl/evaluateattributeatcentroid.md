@@ -1,9 +1,9 @@
 ---
-title: Evaluateattributeatcentroid-Funktion
-description: Wertet am Pixel Schwerpunkt aus.
+title: EvaluateAttributeAtCentroid-Funktion
+description: Wertet am Pixelschwerpunkt aus.
 ms.assetid: 6735b3f4-765f-4cd9-9f38-326a52709021
 keywords:
-- Evaluateattributeatcentroid-Funktion HLSL
+- EvaluateAttributeAtCentroid-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ee95c7f2f202dfd0065e5e9c30003cc46fd29281
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 867f7dadc2ccf7d86eed602dd9e65d07be7558f0a8a00426e3a45bc1c2c97a3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119744040"
 ---
-# <a name="evaluateattributeatcentroid-function"></a>Evaluateattributeatcentroid-Funktion
+# <a name="evaluateattributeatcentroid-function"></a>EvaluateAttributeAtCentroid-Funktion
 
-Wertet am Pixel Schwerpunkt aus.
+Wertet am Pixelschwerpunkt aus.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 numeric EvaluateAttributeAtCentroid(
-  in attrib numeric value
+  in attrib numeric value
 );
 ```
 
@@ -36,58 +36,58 @@ numeric EvaluateAttributeAtCentroid(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-Type: **atzb numeric**
+Typ: **attrib numeric**
 
 Der Eingabewert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Interpolations Modus kann **linear** oder **linear ( \_ keine \_ Perspektive** ) für die Variable sein. Die Verwendung von " **Schwerpunkt** " oder " **Sample** " wird ignoriert. Attribute mit konstanter Interpolation sind ebenfalls zulässig. in diesem Fall wird der Beispiel Index ignoriert.
+Der Interpolationsmodus kann **linear oder linear** **\_ sein, keine Perspektive \_ auf** die Variable. Die Verwendung **von Schwerpunkten** **oder Stichproben** wird ignoriert. Attribute mit konstanter Interpolation sind ebenfalls zulässig. In diesem Fall wird der Beispielindex ignoriert.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     |         |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

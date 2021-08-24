@@ -1,23 +1,23 @@
 ---
-title: dcl_hs_join_phase_instance_count (SM5-ASM)
-description: Deklarieren Sie die Anzahl der joinphasen-Instanzen in einer Hull-Shader-joinphase.
+title: dcl_hs_join_phase_instance_count (sm5 - asm)
+description: Deklarieren Sie die Anzahl der Joinphaseninstanzen in einer Hüllen-Shader-Joinphase.
 ms.assetid: 9951B849-0537-4D08-9ADE-8CF6FF51A193
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34c3acc7074170ab4561a54e67668698d58b7ac1
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 22747202b5ef0f165914567a5d3f5c6e1b31d26132365a4896a9959cc03b2d3e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726830"
 ---
-# <a name="dcl_hs_join_phase_instance_count-sm5---asm"></a>Anzahl der DCL \_ HS \_ \_ -joinphasen \_ Instanzen \_ (SM5-ASM)
+# <a name="dcl_hs_join_phase_instance_count-sm5---asm"></a>Anzahl der Instanzen der dcl \_ hs \_ \_ \_ \_ join-Phase (sm5 - asm)
 
-Deklarieren Sie die Anzahl der joinphasen-Instanzen in einer Hull-Shader-joinphase.
+Deklarieren Sie die Anzahl der Joinphaseninstanzen in einer Hüllen-Shader-Joinphase.
 
 
 
-| DCL \_ HS \_ \_ -joinphasen- \_ \_ Instanzanzahl {1... Max 32-Bit uint} |
+| dcl \_ hs \_ join phase instance \_ count \_ \_ {1... max 32-bit UINT} |
 |--------------------------------------------------------------|
 
 
@@ -26,21 +26,21 @@ Deklarieren Sie die Anzahl der joinphasen-Instanzen in einer Hull-Shader-joinpha
 
 
 
-| Element                                                   | BESCHREIBUNG                           |
+| Element                                                   | Beschreibung                           |
 |--------------------------------------------------------|---------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/> | \[in \] der Instanzanzahl.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/> | \[in \] Die Anzahl der Instanzen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | X    |        |          |       |         |
 
@@ -48,20 +48,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

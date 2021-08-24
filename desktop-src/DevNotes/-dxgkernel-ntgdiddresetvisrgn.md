@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um den Benutzermodus zu aktivieren, um ein gültiges Verständnis des Clippingbereichs für Windows auf dem Desktop zu erhalten. Dieses Clipping kann sich asynchron aus der Sicht der benutzermodusthreads ändern.
+description: Wird verwendet, um den Benutzermodus zu aktivieren, um ein gültiges Verständnis des Ausschneidebereichs für Fenster auf dem Desktop zu erhalten. Diese Beschneidung kann sich aus Der Sicht von Benutzermodusthreads asynchron ändern.
 ms.assetid: 286f1c06-c27b-42bd-aecc-3a6923e3df29
-title: Ntgdiddresetvisrgn-Funktion (ntgdi. h)
+title: NtGdiDdResetVisrgn-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: dd83bcfd6c1f3dec31fb80cf78750bfdfef5e7a9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3077351b804f854520cff421fcad8a575278bb5a960f60ef760db38e7ca2f3a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833640"
 ---
-# <a name="ntgdiddresetvisrgn-function"></a>Ntgdiddresetvisrgn-Funktion
+# <a name="ntgdiddresetvisrgn-function"></a>NtGdiDdResetVisrgn-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Wird verwendet, um den Benutzermodus zu aktivieren, um ein gültiges Verständnis des Clippingbereichs für Windows auf dem Desktop zu erhalten. Dieses Clipping kann sich asynchron aus der Sicht der benutzermodusthreads ändern.
+Wird verwendet, um den Benutzermodus zu aktivieren, um ein gültiges Verständnis des Ausschneidebereichs für Fenster auf dem Desktop zu erhalten. Diese Beschneidung kann sich aus Der Sicht von Benutzermodusthreads asynchron ändern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,14 +45,14 @@ BOOL APIENTRY NtGdiDdResetVisrgn(
 
 <dl> <dt>
 
-*hsurface* \[ in\]
+*hSurface* \[ In\]
 </dt> <dd>
 
-Zeiger auf das benutzermodusobjekt einer beliebigen Oberfläche, die zu dem DirectDraw-Gerät gehört, für das Clipping zurückgesetzt werden soll. Weitere Informationen finden Sie in der DDK-Dokumentation.
+Zeiger auf das Benutzermodusobjekt einer beliebigen Oberfläche, die zum DirectDraw-Gerät gehört, für das clipping zurückgesetzt werden soll. Weitere Informationen finden Sie in der DDK-Dokumentation.
 
 </dd> <dt>
 
-*HWND* \[ in\]
+*hwnd* \[ In\]
 </dt> <dd>
 
 Reserviert.
@@ -61,15 +61,15 @@ Reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, gibt diese Funktion **true** zurück. Andernfalls wird **false** zurückgegeben.
+Wenn dies erfolgreich ist, gibt diese Funktion **TRUE zurück.** Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Clipping kann sich asynchron von der Sicht der benutzermodusthreads aus ändern. Die kernelmodusteile von DirectDraw und Windows Graphics Device Interface (GDI) behalten einen-Wert bei, der immer dann erhöht wird, wenn sich die clippingliste für den gesamten Desktop ändert. Durch einen Aufrufen dieser Funktion wird dieser Counter mit jeder vorhandenen primären DirectDraw-Oberfläche auf dem System aufgezeichnet.
+Das Ausschneiden kann sich aus Der Sicht von Threads im Benutzermodus asynchron ändern. Die Kernelmodusteile von DirectDraw und Windows Graphics Device Interface (GDI) verwalten einen Leistungsindikator, der erhöht wird, wenn sich die Clippingliste für den gesamten Desktop ändert. Ein Aufruf dieser Funktion zeichnet diesen Indikator mit jeder vorhandenen primären DirectDraw-Oberfläche auf dem System auf.
 
-Wenn eine dieser primären Oberflächen zu einem späteren Zeitpunkt durch einen [IDirectDrawSurface7:: BLT](/windows/win32/api/ddraw/nf-ddraw-idirectdrawsurface7-blt) -oder [IDirectDrawSurface7:: Lock](/previous-versions/ms858221(v=msdn.10)) -Vorgang geändert wird (siehe DDK-Dokumentation), wird der mit der-Oberfläche aufgezeichnete-Wert mit dem globalen-Wert verglichen. Wenn diese Werte unterschiedlich sind, wird ein Fehlercode dderr \_ visrgnchanged an den Benutzermoduscode zurückgegeben. Der Benutzermoduscode fragt dann das aktuelle Clipping für den Desktop erneut ab, ruft **ntgdiddresetvisrgn** auf und wiederholt den auf die primäre Oberfläche angewendeten IDirectDrawSurface7:: BLT, wobei das neue Clipping respektiert wird. Schließlich ist das Clipping, das durch den Benutzermoduscode entnommen wurde, mit dem aktuellen Clipping im Besitz des Kernel Modus identisch, und IDirectDrawSurface7:: BLT kann fortgesetzt werden.
+Zu einem späteren Zeitpunkt, wenn eine dieser primären Oberflächen durch einen [IDirectDrawSurface7::Blt-](/windows/win32/api/ddraw/nf-ddraw-idirectdrawsurface7-blt) oder [IDirectDrawSurface7::Lock-Vorgang](/previous-versions/ms858221(v=msdn.10)) geändert wird (siehe DDK-Dokumentation), wird der mit der Oberfläche aufgezeichnete Zähler mit dem globalen Zähler verglichen. Wenn diese Werte unterschiedlich sind, wird ein Fehlercode DDERR \_ VISRGNCHANGED an den Benutzermoduscode zurückgegeben. Der Benutzermoduscode fragen dann die aktuelle Beschneidung für den Desktop erneut ab, rufen **NtGdiDdResetVisrgn** auf und versuchen erneut, die auf die primäre Oberfläche angewendete IDirectDrawSurface7::Blt unter Einhaltung der neuen Beschneidung zu testen. Schließlich ist der Clipping, der vom Benutzermoduscode entnommen wurde, mit dem aktuellen Clipping im Besitz des Kernelmodus identisch, und IDirectDrawSurface7::Blt kann fortgesetzt werden.
 
-Anwendungen wird empfohlen, die [idirectdrawclipperschnittstelle](/previous-versions/aa919448(v=msdn.10)) oder die [IDirect3DDevice8::P Resent](/previous-versions/ms889707(v=msdn.10)) -Methode zu verwenden, um asynchrone clippingänderungen zu verarbeiten. Diese Konstrukte implementieren ein asynchrones Clipping in automatisierter und Betriebssystem unabhängiger Weise.
+Anwendungen wird empfohlen, die [IDirectDrawClipper-Schnittstelle](/previous-versions/aa919448(v=msdn.10)) oder [die IDirect3DDevice8::P resent-Methode](/previous-versions/ms889707(v=msdn.10)) zu verwenden, um asynchrone Clippingänderungen zu verarbeiten. Diese Konstrukte implementieren asynchrones Clipping auf automatisierte und betriebssystemunabhängige Weise.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,7 +79,7 @@ Anwendungen wird empfohlen, die [idirectdrawclipperschnittstelle](/previous-vers
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Anwendungen wird empfohlen, die [idirectdrawclipperschnittstelle](/previous-vers
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> <dt>
 
-[**Ddresetvisrgn**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-ddresetvisrgn)
+[**DdResetVisrgn**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-ddresetvisrgn)
 </dt> </dl>
 
  

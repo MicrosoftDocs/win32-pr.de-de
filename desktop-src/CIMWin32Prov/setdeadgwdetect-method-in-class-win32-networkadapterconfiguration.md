@@ -1,8 +1,8 @@
 ---
-description: Die statische Methode setdeadgwdetect WMI-Klasse wird verwendet, um die Erkennung von unzustellbaren Gateways zu aktivieren.
+description: Die statische Methode der WMI-Klasse SetDeadGWDetect wird verwendet, um die Erkennung von intakten Gateways zu aktivieren.
 ms.assetid: c813aaef-7215-4759-b68f-7808fd203d9c
 ms.tgt_platform: multiple
-title: Setdeadgwdetect-Methode der Win32_NetworkAdapterConfiguration-Klasse
+title: SetDeadGWDetect-Methode der Win32_NetworkAdapterConfiguration-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 83f62d84af193be99850f1a82b720a2983ca77c3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b08fb6d3c02affbe9c288004e9402808dd9c30318c16df7738f128029f84a3f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760080"
 ---
-# <a name="setdeadgwdetect-method-of-the-win32_networkadapterconfiguration-class"></a>Setdeadgwdetect-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="setdeadgwdetect-method-of-the-win32_networkadapterconfiguration-class"></a>SetDeadGWDetect-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die statische Methode **setdeadgwdetect** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) wird verwendet, um die Erkennung von unzustellbaren Gateways zu aktivieren.
+Die statische Methode der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **SetDeadGWDetect** wird verwendet, um die Erkennung von intakten Gateways zu aktivieren.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 SetDeadGWDetect(
 
 <dl> <dt>
 
-*DeadGWDetectEnabled* \[ in\]
+*DeadGWDetectEnabled* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass die Erkennung von deadlockgateways aktiviert werden soll.
+True gibt **an,** dass die Erkennung von inaktiven Gateways aktiviert sein sollte.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -73,7 +73,7 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt.**
+**Die Methode wird auf dieser Plattform nicht unterstützt.**
 </dt> <dd>
 
 64
@@ -82,7 +82,7 @@ Die Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 65
@@ -91,7 +91,7 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**Ungültige Subnetzmaske.**
+**Ungültige Subnetzmaske**
 </dt> <dd>
 
 66
@@ -100,12 +100,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.**
+**Fehler beim Verarbeiten einer zurückgegebenen Instanz**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.
+Fehler beim Verarbeiten einer zurückgegebenen Instanz.
 
 </dd> <dt>
 
@@ -118,12 +118,12 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben.**
+**Mehr als 5 Gateways angegeben**
 </dt> <dd>
 
 69
 
-Es wurden mehr als fünf Gateways angegeben.
+Mehr als fünf Gateways angegeben.
 
 </dd> <dt>
 
@@ -145,7 +145,7 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.**
+**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
@@ -154,12 +154,12 @@ Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
-**Ungültiger Domänen Name**
+**Ungültiger Domänenname**
 </dt> <dd>
 
 73
 
-Ungültiger Domänen Name.
+Ungültiger Domänenname.
 
 </dd> <dt>
 
@@ -172,12 +172,12 @@ Ungültiger Hostname.
 
 </dd> <dt>
 
-**Kein primärer/sekundärer WINS-Server definiert.**
+**Kein primärer/sekundärer WINS-Server definiert**
 </dt> <dd>
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server
+Es wurde kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -190,7 +190,7 @@ Ungültige Datei.
 
 </dd> <dt>
 
-**Ungültiger Systempfad.**
+**Ungültiger Systempfad**
 </dt> <dd>
 
 77
@@ -217,102 +217,102 @@ Ungültiger Sicherheitsparameter.
 
 </dd> <dt>
 
-**Der TCP/IP-Dienst kann nicht konfiguriert werden.**
+**TCP/IP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 80
 
-Der TCP/IP-Dienst kann nicht konfiguriert werden.
+Tcp/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert werden.**
+**DHCP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 81
 
-Der DHCP-Dienst kann nicht konfiguriert werden.
+Dhcp-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden.**
+**DHCP-Lease kann nicht erneuert werden**
 </dt> <dd>
 
 82
 
-Die DHCP-Lease kann nicht erneuert werden.
+DHCP-Lease kann nicht erneuert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht freigegeben werden**
+**DHCP-Lease kann nicht veröffentlicht werden**
 </dt> <dd>
 
 83
 
-DHCP-Lease kann nicht freigegeben werden.
+DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP ist auf dem Adapter nicht aktiviert.**
+**IP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
 
-Die IP ist auf dem Adapter nicht aktiviert.
+DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert.**
+**IPX auf Adapter nicht aktiviert**
 </dt> <dd>
 
 85
 
-IPX ist auf dem Adapter nicht aktiviert.
+IPX für Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer.**
+**Frame-/Netzwerknummern-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Fehler bei Frame-oder Netzwerk Nummern Begrenzungen.
+Frame- oder Netzwerknummern-Begrenzungsfehler.
 
 </dd> <dt>
 
-**Ungültiger Frame-Typ**
+**Ungültiger Frametyp**
 </dt> <dd>
 
 87
 
-Ungültiger Rahmentyp.
+Ungültiger Frametyp.
 
 </dd> <dt>
 
-**Ungültige Netzwerk Nummer**
+**Ungültige Netzwerknummer**
 </dt> <dd>
 
 88
 
-Ungültige Netzwerk Nummer.
+Ungültige Netzwerknummer.
 
 </dd> <dt>
 
-**Doppelte Netzwerk Nummer**
+**Doppelte Netzwerknummer**
 </dt> <dd>
 
 89
 
-Doppelte Netzwerk Nummer.
+Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb des gültigen Bereichs**
+**Parameter außerhalb der Grenzen**
 </dt> <dd>
 
 90
 
-Der Parameter liegt außerhalb des gültigen Bereichs.
+Parameter, der nicht an grenzende Grenzen gebunden ist.
 
 </dd> <dt>
 
@@ -321,11 +321,11 @@ Der Parameter liegt außerhalb des gültigen Bereichs.
 
 91
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht genügend Arbeitsspeicher**
+**Nicht genügend Arbeitsspeicher.**
 </dt> <dd>
 
 92
@@ -334,7 +334,7 @@ Nicht genügend Arbeitsspeicher.
 
 </dd> <dt>
 
-**Ist bereits vorhanden.**
+**Bereits vorhanden**
 </dt> <dd>
 
 93
@@ -343,16 +343,16 @@ Ist bereits vorhanden.
 
 </dd> <dt>
 
-**Der Pfad, die Datei oder das Objekt wurde nicht gefunden.**
+**Pfad, Datei oder Objekt nicht gefunden**
 </dt> <dd>
 
 94
 
-Der Pfad, die Datei oder das Objekt wurde nicht gefunden.
+Pfad, Datei oder Objekt wurden nicht gefunden.
 
 </dd> <dt>
 
-**Der Dienst kann nicht benachrichtigt werden.**
+**Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 95
@@ -361,7 +361,7 @@ Der Dienst kann nicht benachrichtigt werden.
 
 </dd> <dt>
 
-**DNS-Dienst kann nicht benachrichtigt werden.**
+**DNS-Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 96
@@ -375,7 +375,7 @@ Der DNS-Dienst kann nicht benachrichtigt werden.
 
 97
 
-Schnittstelle nicht konfigurierbar.
+Die Schnittstelle kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -388,7 +388,7 @@ Nicht alle DHCP-Leases konnten freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert.**
+**DHCP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 100
@@ -404,13 +404,13 @@ DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Funktion aktiviert ist, fordert TCP die IP-Adresse auf, um zu einem Sicherungs Gateway zu wechseln, wenn ein Segment mehrmals neu übermittelt wird, ohne eine Antwort zu erhalten
+Wenn dieses Feature aktiviert ist, fordert TCP die IP-Adresse auf, zu einem Sicherungsgateway zu wechseln, wenn es ein Segment mehrmals erneut überträgt, ohne eine Antwort zu erhalten.
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel Aktivieren der Erkennung von unzustellbaren Gateways [für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/4a24b080-1a8b-4085-9419-58d096ef8437) VBScript in der TechNet Gallery verwendet **setdeadgwdetect** , um alle Netzwerkadapter auf einem Computer so zu konfigurieren, dass unzustellbare Gateways automatisch erkannt werden.
+Das VBScript-Beispiel Enable [Dead Gateway Detection for All Network Adapters](https://Gallery.TechNet.Microsoft.Com/4a24b080-1a8b-4085-9419-58d096ef8437) (Erkennung von toten Gateways für alle Netzwerkadapter aktivieren) im TechNet-Katalog verwendet **SetDeadGWDetect,** um alle Netzwerkadapter auf einem Computer so zu konfigurieren, dass dead gateways automatisch erkannt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -420,8 +420,8 @@ Das Beispiel Aktivieren der Erkennung von unzustellbaren Gateways [für alle Net
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -430,19 +430,19 @@ Das Beispiel Aktivieren der Erkennung von unzustellbaren Gateways [für alle Net
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

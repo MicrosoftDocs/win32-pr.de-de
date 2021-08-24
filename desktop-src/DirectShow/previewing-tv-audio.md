@@ -1,37 +1,37 @@
 ---
-description: Vorschau der TV-Audiodatei
+description: Vorschau von TV-Audio
 ms.assetid: 25da8bcc-51c1-49f0-b4b5-885ff4f254d8
-title: Vorschau der TV-Audiodatei
+title: Vorschau von TV-Audio
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1cc63583c946d47ed744eacd51f0939ec852d53
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8e6b67e33ffd6f051363e8851afbc31b9f38bed17790687db615b679f6a80a63
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748314"
 ---
-# <a name="previewing-tv-audio"></a>Vorschau der TV-Audiodatei
+# <a name="previewing-tv-audio"></a>Vorschau von TV-Audio
 
-Zum Anzeigen einer Vorschau der TV-Audiodaten leiten Sie die Audiodecoder-PIN auf dem Querbalken Filter an die audiotuner-Pin weiter. Zum stumm schalten der Audiodatei leiten Sie die PIN des Audiodecoders an-1 weiter, wie im folgenden Diagramm dargestellt. (Crossbar-Filter werden in [Arbeiten mit Kreuz leisten](working-with-crossbars.md)beschrieben.)
+Um eine Vorschau von TV-Audio anzuzeigen, routen Sie den Audiodecoder-Pin am Kreuzleistenfilter an den Audio tuner-Pin. Um das Audio zu stummschalten, routen Sie den Audiodecoder-Pin an -1, wie im folgenden Diagramm dargestellt. (Kreuzleistenfilter werden unter [Arbeiten mit Übergreifenden Leisten beschrieben.)](working-with-crossbars.md)
 
-![Routing der Audiodecoder-PIN](images/vidcap07.png)
+![Weiterleiten des Audiodecoder-Pins](images/vidcap07.png)
 
-Die grundlegende Vorgehensweise sieht wie folgt aus:
+Der grundlegende Ansatz lautet wie folgt:
 
-1.  Verwenden Sie die [**ICaptureGraphBuilder2:: findinterface**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findinterface) -Methode, um den Querbalken Filter zu suchen.
-2.  Verwenden Sie die [**iamcrossbar:: get \_ crossbarpininfo**](/windows/desktop/api/Strmif/nf-strmif-iamcrossbar-get_crossbarpininfo) -Methode, um die Eingabe-und Ausgabe Pins des quer Zieh Filters aufzuzählen. Suchen Sie nach einem Audiodecoder-Ausgabepin und einer audiotuner-Eingabe-PIN.
-3.  Wenn Sie die richtigen Pins gefunden haben, können Sie [**iamcrossbar:: Route**](/windows/desktop/api/Strmif/nf-strmif-iamcrossbar-route) zum Weiterleiten der Pins anrufen. Wenn dies nicht der Grund ist, überprüfen Sie Upstream nach einer anderen quer Leiste, und wiederholen
-4.  Zum stumm schalten der Audiodatei leiten Sie die PIN des Audiodecoders an-1 weiter.
+1.  Verwenden Sie [**die ICaptureGraphBuilder2::FindInterface-Methode,**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findinterface) um den Kreuzleistenfilter zu suchen.
+2.  Verwenden Sie [**die IAMCrossbar::get \_ CrossbarPinInfo-Methode,**](/windows/desktop/api/Strmif/nf-strmif-iamcrossbar-get_crossbarpininfo) um die Eingabe- und Ausgabepins des Kreuzleistenfilters zu aufzählen. Suchen Sie nach einem Audiodecoder-Ausgabepin und einem Audio-Tuner-Eingabepin.
+3.  Wenn Sie die richtigen Stecknadeln finden, rufen Sie [**IAMCrossbar::Route auf,**](/windows/desktop/api/Strmif/nf-strmif-iamcrossbar-route) um die Stecknadeln weiter zu routen. Falls nicht, suchen Sie upstream nach einer anderen Querleiste, und wiederholen Sie den Vorgang.
+4.  Um das Audio zu stummschalten, routen Sie den Audiodecoder-Pin an -1.
 
-Die meisten TV-Tuner verwenden einen einzelnen Querbalken Filter, einige verwenden jedoch zwei Kreuz leisten Filter. Daher müssen Sie möglicherweise nach einer zweiten quer Leiste suchen, wenn der erste Fehler auftritt.
+Die meisten TV-Tuner verwenden einen einzelnen Kreuzleistenfilter, aber einige verwenden zwei Kreuzleistenfilter. Daher müssen Sie möglicherweise nach einer zweiten Querleiste suchen, wenn die erste fehlschlägt.
 
 > [!Note]  
-> Im Gegensatz zu dem, was Sie möglicherweise erwartet haben, ist kein audioerfassungs Filter oder audiorenderer erforderlich, um eine Vorschau der Audiodatei anzuzeigen, da zwischen der gatewaykarte und der Soundkarte eine physische Verbindung besteht.
+> Im Gegensatz zu dem, was Sie erwarten, ist kein Audioaufnahmefilter oder Audiorenderer erforderlich, um die Audiovorschau anzuzeigen, da eine physische Verbindung zwischen der Tunerkarte und der Soundkarte besteht.
 
  
 
-Der folgende Code zeigt diese Schritte ausführlicher. Im folgenden finden Sie eine Hilfsfunktion, die einen Querbalken Filter nach einem angegebenen Pin-Typ durchsucht:
+Im folgenden Code werden diese Schritte ausführlicher dargestellt. Zunächst sehen Sie hier eine Hilfsfunktion, die einen Kreuzleistenfilter nach einem angegebenen Stecknadeltyp durchsucht:
 
 
 ```C++
@@ -69,7 +69,7 @@ HRESULT FindCrossbarPin(
 
 
 
-Die Next-Funktion versucht, die Audiodatei zu aktivieren oder zu stumm schalten, abhängig vom Wert des *bactivate* -Parameters. Es durchsucht den angegebenen Querbalken Filter nach den erforderlichen Pins. Wenn Sie nicht gefunden werden kann, wird ein Fehlercode zurückgegeben.
+Die nächste Funktion versucht, die Audiodaten abhängig vom Wert des *bActivate-Parameters zu* aktivieren oder zu stummschalten. Er durchsucht den angegebenen Kreuzleistenfilter nach den erforderlichen Stecknadeln. Wenn sie nicht finden können, wird ein Fehlercode zurückgegeben.
 
 
 ```C++
@@ -103,7 +103,7 @@ HRESULT ConnectAudio(IAMCrossbar *pXBar, BOOL bActivate)
 
 
 
-Die Next-Funktion durchsucht das Filter Diagramm nach einem Querbalken Filter. Wenn ein solcher gefunden wird, versucht er, das Audiogerät zu aktivieren oder zu stumm schalten (mit der vorherigen Funktion). Wenn bei diesem Vorgang ein Fehler auftritt, durchsucht die Methode Upstream nach einer zweiten quer Leiste und versucht es erneut. Eine allgemeinere Methode zum Verwalten mehrerer Crossbar-Filter in einem Diagramm finden Sie in der ccrossbar-Klasse in der amcap-Beispielanwendung.
+Die nächste Funktion durchsucht das Filterdiagramm nach einem Kreuzleistenfilter. Wenn ein Audio gefunden wird, wird versucht, die Audiodatei zu aktivieren oder zu stummschalten (mithilfe der vorherigen Funktion). Wenn dieser Vorgang fehlschlägt, durchsucht die Methode upstream nach einer zweiten Querleiste und versucht es erneut. Einen allgemeineren Ansatz zum Verwalten mehrerer Kreuzleistenfilter in einem Diagramm finden Sie in der CCrossbar-Klasse in der AmCap-Beispielanwendung.
 
 
 ```C++
@@ -144,7 +144,7 @@ HRESULT ActivateAudio(ICaptureGraphBuilder2 *pBuild, IBaseFilter *pSrc,
 
 
 
-Der folgende Code zeigt, wie diese Funktionen aufgerufen werden:
+Der folgende Code zeigt, wie sie diese Funktionen aufrufen:
 
 
 ```C++
@@ -157,16 +157,16 @@ hr = ActivateAudio(pBuild, pCap, FALSE);
 
 
 
-Beachten Sie, dass diese Beispiel Funktionen viele der gleichen Funktionsaufrufe wiederholen. Sie zählen z. b. jedes Mal die Crossbar-Pins. In einer echten Anwendung können Sie einige dieser Informationen zwischenspeichern.
+Beachten Sie, dass diese Beispielfunktionen viele der gleichen Funktionsaufrufe wiederholen. Beispielsweise werden die Leistenpins jedes Mal aufzählt. In einer echten Anwendung können Sie einige dieser Informationen zwischenspeichern.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Analog zum Fernsehgerät](analog-television-audio.md)
+[Analoge Fernsehaudiodaten](analog-television-audio.md)
 </dt> <dt>
 
-[Arbeiten mit quer leisten](working-with-crossbars.md)
+[Arbeiten mit Übergreifenden Leisten](working-with-crossbars.md)
 </dt> </dl>
 
  

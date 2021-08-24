@@ -1,9 +1,9 @@
 ---
-title: MCI_VD_PLAY_PARMS-Struktur (mciapi. h)
-description: Die Struktur der MCI-" \_ \_ Play-Parser" \_ enthält Positions-und Geschwindigkeitsinformationen für den MCI- \_ Wiedergabe Befehl für Videodisk-Geräte.
+title: MCI_VD_PLAY_PARMS -Struktur (Mciapi.h)
+description: Die MCI VD PLAY PARMS-Struktur enthält Positions- und Geschwindigkeitsinformationen für den \_ \_ \_ MCI \_ PLAY-Befehl für videodisc-Geräte.
 ms.assetid: 9fa8418f-3f69-4a9c-b23e-7d2e2c75c7af
 keywords:
-- MCI_VD_PLAY_PARMS Struktur Windows Multimedia
+- MCI_VD_PLAY_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3ab04ba5cf0a2b507370a4b777c19fd60a05c30
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 62c2aef6915d1e3cc325d5b9f8e1c7fe176a878c2d84080b5f8a77eaf034afc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783865"
 ---
-# <a name="mci_vd_play_parms-structure"></a>MCI-VD-Wiedergabe-Parametern- \_ \_ \_ Struktur
+# <a name="mci_vd_play_parms-structure"></a>MCI \_ VD \_ PLAY \_ PARMS-Struktur
 
-Die Struktur der **MCI-" \_ Play- \_ \_ Parser** " enthält Positions-und Geschwindigkeitsinformationen für den [**MCI- \_ Wiedergabe**](mci-play.md) Befehl für Videodisk-Geräte.
+Die **MCI \_ VD \_ PLAY \_ PARMS-Struktur** enthält Positions- und Geschwindigkeitsinformationen für den [**MCI \_ PLAY-Befehl**](mci-play.md) für videodisc-Geräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Wiedergabe Position
+Position, von der aus sie abspielt werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position der Wiedergabe.
+Position, an der abspielt werden soll.
 
 </dd> <dt>
 
-**dwspeed**
+**dwSpeed**
 </dt> <dd>
 
 Wiedergabegeschwindigkeit in Frames pro Sekunde.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
-Wenn Sie die erweiterten Datenmember nicht verwenden, können Sie die [**MCI- \_ Wiedergabe- \_ Parametern**](mci-play-parms.md) anstelle von **MCI- \_ VD-Play- \_ \_ para** Metern verwenden.
+Sie können die [**MCI \_ PLAY \_ PARMS-Struktur**](mci-play-parms.md) anstelle von **MCI \_ VD \_ PLAY \_ PARMS** verwenden, wenn Sie die erweiterten Datenmitglieder nicht verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,24 +85,24 @@ Wenn Sie die erweiterten Datenmember nicht verwenden, können Sie die [**MCI- \_
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Play**](mci-play.md)
+[**MCI \_ PLAY**](mci-play.md)
 </dt> <dt>
 
-[**MCI- \_ Wiedergabe- \_ Parser**](mci-play-parms.md)
+[**MCI \_ PLAY \_ PARMS**](mci-play-parms.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

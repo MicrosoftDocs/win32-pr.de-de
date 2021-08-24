@@ -1,9 +1,9 @@
 ---
-title: LVM_SETTEXTBKCOLOR Meldung (kommstrg. h)
-description: Legt die Hintergrundfarbe von Text in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des ListView \_ settextbkcolor-Makros senden.
+title: LVM_SETTEXTBKCOLOR-Nachricht (Commctrl.h)
+description: Legt die Hintergrundfarbe von Text in einem Listenansichtssteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des \_ ListView-Makros SetTextBkColor senden.
 ms.assetid: e51d6914-0e98-47f8-b2d8-4c2404b98242
 keywords:
-- Windows-Steuerelemente für LVM_SETTEXTBKCOLOR Meldung
+- LVM_SETTEXTBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2247dfd04d90c2b9eacadcb1c38608f519540fd6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3d9acdc193609f39fb81aa88263724a507695f15dcb8ba0c789df5c2a4f4d128
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656230"
 ---
-# <a name="lvm_settextbkcolor-message"></a>LVM- \_ settextbkcolor-Meldung
+# <a name="lvm_settextbkcolor-message"></a>LVM \_ SETTEXTBKCOLOR-Nachricht
 
-Legt die Hintergrundfarbe von Text in einem Listenansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ settextbkcolor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settextbkcolor) -Makros senden.
+Legt die Hintergrundfarbe von Text in einem Listenansichtssteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros SetTextBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_settextbkcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die Hintergrundfarbe von Text in einem Listenansicht-Steuerelement fest. Si
 *lParam* 
 </dt> <dd>
 
-Neue Text Hintergrundfarbe. Dies kann CLR none sein, \_ Wenn keine Hintergrundfarbe angezeigt wird.
+Neue Texthintergrundfarbe. Dies kann CLR \_ NONE ohne Hintergrundfarbe sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

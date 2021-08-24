@@ -1,9 +1,9 @@
 ---
-title: DRV_LOAD Meldung (MMSYSTEM. h)
-description: Benachrichtigt den Treiber, dass er geladen wurde. Der Treiber sollte sicherstellen, dass Hardware und unterstützende Treiber, die für die ordnungsgemäße Funktion erforderlich sind, vorhanden sind.
+title: DRV_LOAD (Mmsystem.h)
+description: Benachrichtigt den Treiber, dass er geladen wurde. Der Treiber sollte sicherstellen, dass alle Hardware- und unterstützenden Treiber vorhanden sind, die er benötigt, um ordnungsgemäß zu funktionieren.
 ms.assetid: f3642d91-cea8-499d-8d2e-bf01a59a7d72
 keywords:
-- DRV_LOAD-Nachricht (Multimedia)
+- DRV_LOAD-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca7dda950eaa84f924f4845d99d5740e37d6b354
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d74b8d0663e96f0dc700739c7b8b5f9304d478ed02bf9493f24d03a506c14a61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678710"
 ---
-# <a name="drv_load-message"></a>DRV- \_ Lade Nachricht
+# <a name="drv_load-message"></a>DRV \_ LOAD-Nachricht
 
-Benachrichtigt den Treiber, dass er geladen wurde. Der Treiber sollte sicherstellen, dass Hardware und unterstützende Treiber, die für die ordnungsgemäße Funktion erforderlich sind, vorhanden sind.
+Benachrichtigt den Treiber, dass er geladen wurde. Der Treiber sollte sicherstellen, dass alle Hardware- und unterstützenden Treiber vorhanden sind, die er benötigt, um ordnungsgemäß zu funktionieren.
 
 ## <a name="parameters"></a>Parameter
 
-Der *hdrvr* -Parameter ist immer 0 (null). Die Parameter " *dwdriverid*", " *lParam1*" und " *lParam2* " werden nicht verwendet.
+Der *hdrvr-Parameter* ist immer 0 (null). Die *Parameter dwDriverId,* *lParam1* und *lParam2* werden nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn erfolgreich, andernfalls
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **drv- \_ Lade** Nachricht ist immer die erste Meldung, die ein Gerätetreiber erhält.
+Die **DRV \_ LOAD-Nachricht** ist immer die erste Nachricht, die ein Gerätetreiber empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Die **drv- \_ Lade** Nachricht ist immer die erste Meldung, die ein Gerätetreib
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -56,7 +56,7 @@ Die **drv- \_ Lade** Nachricht ist immer die erste Meldung, die ein Gerätetreib
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: Group-Element
 description: Stellt ein Group-Steuerelement dar, das als Container für eine Gruppe von Elementen fungiert.
 ms.assetid: b0d3fcda-7165-40f4-9e57-c7ab88b31711
 keywords:
-- Gruppenelement Windows-Menüband
+- Gruppenelement Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1162055491f61ae6feffa385bbc5015e4f1b66f0
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 2ca9d138e18296bc801fd37931a3b8066761abd3dd697d360513983ad5288dfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111442871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810610"
 ---
 # <a name="group-element"></a>Group-Element
 
@@ -51,7 +51,7 @@ Stellt ein [Group-Steuerelement](windowsribbon-controls-group.md) dar, das als C
 <th>attribute</th>
 <th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -84,7 +84,7 @@ Stellt ein [Group-Steuerelement](windowsribbon-controls-group.md) dar, das als C
 
 
 
-| Element                                                                             | BESCHREIBUNG                                        |
+| Element                                                                             | Beschreibung                                        |
 |-------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -115,7 +115,7 @@ Stellt ein [Group-Steuerelement](windowsribbon-controls-group.md) dar, das als C
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**Tab-Element**](windowsribbon-element-tab.md) auftreten.
 

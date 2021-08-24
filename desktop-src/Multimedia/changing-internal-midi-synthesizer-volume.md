@@ -1,48 +1,48 @@
 ---
-title: Ändern des internen MIDI-synthesizervolumes
-description: Ändern des internen MIDI-synthesizervolumes
+title: Ändern des internen SYNTHESIZER-Volumes
+description: Ändern des internen SYNTHESIZER-Volumes
 ms.assetid: 75ab7ff5-f394-4a79-8dcc-f4eef434a36e
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), interne Synthesizer
-- MIDI (Digital Instrumentation Digital Interface), interne Synthesizer
-- Abspielen von MIDI-Dateien, internen Synthesizern
-- Interne MIDI-Synthesizer
-- Digital Instrumentation Digital Interface (MIDI), Ändern des Volumes
-- MIDI (Digital Instrumentation Digital Interface), Ändern des Volumes
-- Abspielen von MIDI-Dateien, Ändern des Volumes
-- Ändern des MIDI-Volumes
+- Instrument Digital Interface (KEYBOARD), interne Synthesizer
+- KEYBOARD (Keyboard Instrument Digital Interface), interne Synthesizer
+- Wiedergeben von WAVE-Dateien, interne Synthesizer
+- interne SYNTHESIZE-Synthesizer
+- Instrument Digital Interface (KEYBOARD), Ändern der Lautstärke
+- SIGNATURE (Keyboard Instrument Digital Interface), Ändern der Lautstärke
+- Wiedergeben vonUMK-Dateien, Ändern des Volumes
+- Ändern desUMK-Volumes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2369b13483ce6fa45d82ee177282a0de5e86538e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 646c7e17a7e8c0a6902e26dd8bbfdf8eb89c39297fdacdf062749d8c47a3d487
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808210"
 ---
-# <a name="changing-internal-midi-synthesizer-volume"></a>Ändern des internen MIDI-synthesizervolumes
+# <a name="changing-internal-midi-synthesizer-volume"></a>Ändern des internen SYNTHESIZER-Volumes
 
-Windows stellt die folgenden Funktionen zum Abrufen und Festlegen der Volumeebene interner Geräte mit dem Typ "MIDI" bereit:
+Windows stellt die folgenden Funktionen zum Abrufen und Festlegen der Volumeebene interner SYNTHESIZEr-Geräte zur Verfügung:
 
 
 
 | Wert                                        | Bedeutung                                                                       |
 |----------------------------------------------|-------------------------------------------------------------------------------|
-| [**midioutgetvolume**](/windows/win32/api/mmeapi/nf-mmeapi-midioutgetvolume) | Ruft die Volumeebene des angegebenen internen MIDI-Synthesizer-Geräts ab. |
-| [**midioutsetvolume**](/windows/win32/api/mmeapi/nf-mmeapi-midioutsetvolume) | Legt die Volumeebene des angegebenen internen MIDI-Synthesizer-Geräts fest.      |
+| [**ohneGetVolume**](/windows/win32/api/mmeapi/nf-mmeapi-midioutgetvolume) | Ruft die Volumeebene des angegebenen internen SYNTHESIZER-Geräts ab. |
+| [**ohneSetVolume**](/windows/win32/api/mmeapi/nf-mmeapi-midioutsetvolume) | Legt die Volumeebene des angegebenen internen SYNTHESIZER-Geräts fest.      |
 
 
 
- 
+ 
 
-Nicht alle auf den Geräten mit der Ausgabe von "MIDI" ausgebene Einige Geräte können Änderungen einzelner Volumes sowohl auf dem linken als auch auf dem rechten Kanal unterstützen. Informationen dazu, wie Sie feststellen können, ob ein bestimmtes Gerät volumeänderungen unterstützt, finden Sie unter [Abfragen von MIDI-Ausgabegeräten](querying-midi-output-devices.md).
+Nicht alle DEST-Ausgabegeräte unterstützen Volumeänderungen. Einige Geräte können einzelne Volumeänderungen sowohl im linken als auch im rechten Kanal unterstützen. Informationen zum Bestimmen, ob ein bestimmtes Gerät Volumeänderungen unterstützt, finden Sie unter [Abfragen von OUTPUT-Ausgabegeräten.](querying-midi-output-devices.md)
 
-Sie sollten ein Audiogerät öffnen, bevor Sie das Volume ändern können, es sei denn, Ihre Anwendung ist als Master-Volumen Steuerungsanwendung konzipiert (bietet dem Benutzer eine volumesteuerung für alle Audiogeräte in einem System). Sie sollten auch die Volumeebene überprüfen, bevor Sie Sie ändern und die Volumeebene so bald wie möglich auf die vorherige Ebene wiederherstellen.
+Sofern Ihre Anwendung nicht als Masteranwendung zur Volumesteuerung konzipiert ist (stellt dem Benutzer die Lautstärkesteuerung für alle Audiogeräte in einem System zur Verfügung), sollten Sie ein Audiogerät öffnen, bevor Sie dessen Lautstärke ändern. Sie sollten auch die Volumeebene überprüfen, bevor Sie sie ändern, und die Volumeebene so bald wie möglich auf die vorherige Ebene wiederherstellen.
 
-Das Volume wird als Double Word-Wert angegeben. Die oberen 16 Bits geben das relative Volume des rechten Kanals an, und die unteren 16 Bits geben das relative Volume des linken Kanals an.
+Volume wird als Doublewordwert angegeben. Die oberen 16 Bits geben das relative Volumen des rechten Kanals an, und die unteren 16 Bits geben das relative Volumen des linken Kanals an.
 
-Bei Geräten, die keine einzelnen volumeänderungen auf dem linken und rechten Kanal unterstützen, geben die unteren 16 Bits die Volumeebene an, und die oberen 16 Bits werden ignoriert. Werte für die Volumeebene liegen zwischen 0x0 (Ruhe) und 0xFFFF (maximales Volume) und werden logarithmisch interpretiert. Die wahrgenommene Volumenzunahme ist gleich, wenn die Volumeebene von 0x5.000 auf 0x6000 erhöht wird, da Sie zwischen 0x4000 und 0x5.000 liegt.
+Für Geräte, die keine einzelnen Volumeänderungen sowohl im linken als auch im rechten Kanal unterstützen, geben die unteren 16 Bits die Volumeebene an, und die oberen 16 Bits werden ignoriert. Die Werte für die Volumeebene reichen von 0x0 (Stille) bis 0xFFFF (maximale Lautstärke) und werden logarithmisch interpretiert. Der wahrgenommene Anstieg des Volumens ist identisch, wenn die Volumeebene von 0x5000 auf 0x6000 erhöht wird, wie von 0x4000 auf 0x5000.
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentquerynotsupportedexception-Konstruktor'
-title: Esentquerynotsupportedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentQueryNotSupportedException-Konstruktor'
+title: EsentQueryNotSupportedException-Konstruktor
 TOCTitle: 'EsentQueryNotSupportedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentQueryNotSupportedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentquerynotsupportedexception.esentquerynotsupportedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8ae84639cdcd0205c00c5412bac5f3c55b17b96f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb0bc04ae000f1f1aaeb24ed9db0d8f426da5f9bf047925291e0e724aac51880
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722370"
 ---
-# <a name="esentquerynotsupportedexception-constructor"></a>Esentquerynotsupportedexception-Konstruktor
+# <a name="esentquerynotsupportedexception-constructor"></a>EsentQueryNotSupportedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentquerynotsupportedexception-Klasse.
+Initialisiert eine neue Instanz der EsentQueryNotSupportedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentQueryNotSupportedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentquerynotsupportedexception-Klasse](./esentquerynotsupportedexception-class.md)
+[EsentQueryNotSupportedException-Klasse](./esentquerynotsupportedexception-class.md)
 
-[Esentquerynotsupportedexception-Elemente](./esentquerynotsupportedexception-members.md)
+[EsentQueryNotSupportedException-Member](./esentquerynotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

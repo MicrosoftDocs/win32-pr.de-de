@@ -1,31 +1,31 @@
 ---
-description: Mit diesem Attribut kann ein Text Steuerelement die ungefähre Anzahl von Minuten und Sekunden für eine Installation anzeigen.
+description: Mit diesem Attribut kann ein Textsteuerelement die ungefähre Anzahl von Minuten und Sekunden anzeigen, die für eine Installation verbleiben.
 ms.assetid: e1302449-7f80-4881-bd76-49d386bfdafb
-title: Timeremaineing-Steuerungs Attribut
+title: TimeRemaining-Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 668cabe4832e6460b4ab01fcc048e2f8e1bbdf66
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 907db993731172343418fc92d86f2fbab04cf6f41c2a1627bc76e2cd557f505d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810730"
 ---
-# <a name="timeremaining-control-attribute"></a>Timeremaineing-Steuerungs Attribut
+# <a name="timeremaining-control-attribute"></a>TimeRemaining-Steuerelementattribut
 
-Mit diesem Attribut kann ein Text Steuerelement die ungefähre Anzahl von Minuten und Sekunden für eine Installation anzeigen. Ein an das Text-Steuerelement Verlaufder Datensatz enthält eine ganze Zahl, die die Anzahl der verbleibenden Sekunden darstellt Das Text Steuerelement durchsucht die [UIText-Tabelle](uitext-table.md) nach einer Zeichenfolge namens timeremainte und formatiert die Ganzzahl in eine entsprechende Zeichenfolge, die Minuten und Sekunden anzeigt.
+Mit diesem Attribut kann ein Textsteuerelement die ungefähre Anzahl von Minuten und Sekunden anzeigen, die für eine Installation verbleiben. Ein an das Textsteuerelement übergebener Datensatz enthält eine ganze Zahl, die die Anzahl der verbleibenden Sekunden darstellt. Das Textsteuerelement durchsucht die [UIText-Tabelle](uitext-table.md) nach einer Zeichenfolge mit dem Namen TimeRemaining und formatiert die ganze Zahl in eine entsprechende Zeichenfolge, die Minuten und Sekunden anzeigt.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
 [Text](text-control.md)
 
-## <a name="associated-bit-flags"></a>Zugehörige Bitflags
+## <a name="associated-bit-flags"></a>Zugeordnete Bitflags
 
 Dieses Attribut verwendet keine Bitflags.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere Informationen finden Sie unter [Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter [Steuerelemente](controls.md)erstellen müssen.
 
  
 

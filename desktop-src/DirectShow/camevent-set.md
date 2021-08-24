@@ -1,7 +1,7 @@
 ---
-description: Die Set-Methode signalisiert das-Ereignis.
+description: Die Set-Methode signalisiert das Ereignis.
 ms.assetid: dfcb1601-aa65-47f5-ae3c-f13fcd7b1398
-title: Camevent. Set-Methode (wxutil. h)
+title: WEBCAMEvent.Set-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c9caeed17d42d121ae9263bf6c1fcd011ed573c7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 84059a66a77744b7ea570473474f6b773beae8005b7c4a68e73e59c76829f13a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119794280"
 ---
-# <a name="cameventset-method"></a>Camevent. Set-Methode
+# <a name="cameventset-method"></a>CAMEvent.Set-Methode
 
-Die- `Set` Methode signalisiert das-Ereignis.
+Die `Set` -Methode signalisiert das -Ereignis.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,12 +44,12 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Verhalten hängt davon ab, ob es sich bei dem Objekt um ein Auto Reset-Ereignis oder ein manuelles Zurücksetzungs Ereignis handelt:
+Das Verhalten hängt davon ab, ob das Objekt ein Ereignis für die automatische Zurücksetzung oder ein Manuelles Zurücksetzen ist:
 
--   **Automatisch zurückgesetzt**: Wenn Threads auf dieses Ereignis warten, wird ein Thread freigegeben, und das Ereignis wird zurückgesetzt. Wenn keine Threads auf dieses Ereignis warten, bleibt das Ereignis signalisiert.
--   **Manuelles Zurücksetzen**: alle Threads, die auf dieses Ereignis warten, werden freigegeben. Das Ereignis bleibt signalisiert.
+-   **Automatisches Zurücksetzen:** Wenn Threads auf dieses Ereignis warten, wird ein Thread freigegeben, und das Ereignis wird zurückgesetzt. Wenn keine Threads auf dieses Ereignis warten, bleibt das Ereignis signalisiert.
+-   **Manuelles Zurücksetzen:** Alle Threads, die auf dieses Ereignis warten, werden freigegeben. Das Ereignis bleibt signalisiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,8 +57,8 @@ Das Verhalten hängt davon ab, ob es sich bei dem Objekt um ein Auto Reset-Ereig
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -66,7 +66,7 @@ Das Verhalten hängt davon ab, ob es sich bei dem Objekt um ein Auto Reset-Ereig
 
 <dl> <dt>
 
-[**Camevent-Klasse**](camevent.md)
+[**CAMEvent-Klasse**](camevent.md)
 </dt> </dl>
 
  

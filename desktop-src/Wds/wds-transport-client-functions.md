@@ -1,49 +1,49 @@
 ---
-title: WDS-Transport Client Funktionen
-description: Dieses Modul definiert die Strukturen und Funktionen, die die Schnittstelle zwischen dem Inhalts Empfänger und dem Transport Client bilden.
+title: WDS-Transportclientfunktionen
+description: Dieses Modul definiert die Strukturen und Funktionen, aus denen die Schnittstelle zwischen dem Inhaltsempfänger und dem Transportclient besteht.
 ms.assetid: 20c3116b-3a0d-4048-b6f2-81c03e0a80ef
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8449f620eb04045d37e56499be998477d361871c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b3f228370aa0973e124b1877dcf8a458d1356170fbb872a05a1867ac0489c00a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680400"
 ---
-# <a name="wds-transport-client-functions"></a>WDS-Transport Client Funktionen
+# <a name="wds-transport-client-functions"></a>WDS-Transportclientfunktionen
 
-Dieses Modul definiert die Strukturen und Funktionen, die die Schnittstelle zwischen dem Inhalts Empfänger und dem Transport Client bilden.
+Dieses Modul definiert die Strukturen und Funktionen, aus denen die Schnittstelle zwischen dem Inhaltsempfänger und dem Transportclient besteht.
 
 
 
-| Funktion                                                                              | BESCHREIBUNG                                                                                                                                                                 |
+| Funktion                                                                              | Beschreibung                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [*PFN \_ wdstransportclientreceivecontents*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientreceivecontents) | Gibt an, dass ein Datenblock zur Verwendung bereit ist.                                                                                                                         |
-| [*PFN \_ wdstransportclientreceivemetadata*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientreceivemetadata) | Empfängt Metadateninformationen zu einer Datei.                                                                                                                                 |
-| [*PFN \_ wdstransportclientsessioncomplete*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessioncomplete) | Gibt an, dass die Sitzung erfolgreich abgeschlossen wurde oder einen Fehler festgestellt hat.                                                                                                  |
-| [*PFN \_ wdstransportclientsessionstart*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstart)       | Gibt die Dateigröße und andere serverseitige Informationen über die Datei an den Consumer an.                                                                                   |
-| [*PFN \_ wdstransportclientsessionstartex*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstartex)   | Gibt die Dateigröße und andere serverseitige Informationen über die Datei an den Consumer an.                                                                                   |
-| [**Wdstransportclientadress-Puffer**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientaddrefbuffer)              | Erhöht den Verweis Zähler für einen Puffer, der im Besitz des Multicast Clients ist.                                                                                                   |
-| [**Wdstransportclientcancelsession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientcancelsession)            | Gibt die einer Sitzung im Client zugeordneten Ressourcen frei.                                                                                                             |
-| [**Wdstransportclientclosesession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientclosesession)              | Gibt die einer Sitzung im Client zugeordneten Ressourcen frei.                                                                                                             |
-| [**Wdstransportclientcompletereceive**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientcompletereceive)        | Gibt an, dass die gesamte Verarbeitung in einem Datenblock abgeschlossen ist und dass der Multicast Client diesen Datenblock aus dem Cache entfernen kann, um Platz für weitere Empfangs Vorgänge zu schaffen. |
-| [**Wdstransportclientinitialize**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientinitialize)                  | Initialisiert den Multicast Client.                                                                                                                                           |
-| [**Wdstransportclientinitializesession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientinitializesession)    | Initiiert eine Multicast Dateiübertragung.                                                                                                                                        |
-| [**Wdstransportclientquerystatus**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientquerystatus)                | Ruft den aktuellen Status einer laufenden oder kompletten Multicast Übertragung vom Multicast Client ab.                                                                    |
-| [**Wdstransportclientregistercallback**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientregistercallback)      | Registriert einen Rückruf beim Multicast Client.                                                                                                                             |
-| [**Wdstransportclientreleasebuffer**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientreleasebuffer)            | Dekremente den Verweis Zähler für einen Puffer, der im Besitz des Multicast Clients ist.                                                                                                   |
-| [**Wdstransportclientshutdown**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientshutdown)                      | Fährt den Multicast Client herunter.                                                                                                                                            |
-| [**Wdstransportclientstarzession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientstartsession)              | Initiiert eine Multicast Dateiübertragung.                                                                                                                                        |
-| [**Wdstransportclientwaitforcompletion**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientwaitforcompletion)    | Blockiert, bis die Multicast Sitzung entweder beendet oder das angegebene Timeout erreicht wurde.                                                                                  |
+| [*PFN \_ WdsTransportClientReceiveContents*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientreceivecontents) | Gibt an, dass ein Datenblock zur Verwendung bereit ist.                                                                                                                         |
+| [*PFN \_ WdsTransportClientReceiveMetadata*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientreceivemetadata) | Empfängt Metadateninformationen zu einer Datei.                                                                                                                                 |
+| [*PFN \_ WdsTransportClientSessionComplete*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessioncomplete) | Gibt an, dass die Sitzung erfolgreich abgeschlossen wurde oder ein Fehler aufgetreten ist.                                                                                                  |
+| [*PFN \_ WdsTransportClientSessionStart*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstart)       | Gibt die Dateigröße und andere serverseitige Informationen über die Datei an den Consumer an.                                                                                   |
+| [*PFN \_ WdsTransportClientSessionStartEx*](/windows/desktop/api/Wdstci/nc-wdstci-pfn_wdstransportclientsessionstartex)   | Gibt die Dateigröße und andere serverseitige Informationen über die Datei an den Consumer an.                                                                                   |
+| [**WdsTransportClientAddRefBuffer**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientaddrefbuffer)              | Erhöht die Verweisanzahl für einen Puffer im Besitz des Multicastclients.                                                                                                   |
+| [**WdsTransportClientCancelSession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientcancelsession)            | Gibt die Ressourcen frei, die einer Sitzung im Client zugeordnet sind.                                                                                                             |
+| [**WdsTransportClientCloseSession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientclosesession)              | Gibt die Ressourcen frei, die einer Sitzung im Client zugeordnet sind.                                                                                                             |
+| [**WdsTransportClientCompleteReceive**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientcompletereceive)        | Gibt an, dass die Verarbeitung für einen Datenblock abgeschlossen ist und dass der Multicastclient diesen Datenblock aus seinem Cache entfernen kann, um Platz für weitere Empfänge zu machen. |
+| [**WdsTransportClientInitialize**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientinitialize)                  | Initialisiert den Multicastclient.                                                                                                                                           |
+| [**WdsTransportClientInitializeSession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientinitializesession)    | Initiiert eine Multicastdateiübertragung.                                                                                                                                        |
+| [**WdsTransportClientQueryStatus**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientquerystatus)                | Ruft den aktuellen Status einer laufenden oder vollständigen Multicastübertragung vom Multicastclient ab.                                                                    |
+| [**WdsTransportClientRegisterCallback**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientregistercallback)      | Registriert einen Rückruf beim Multicastclient.                                                                                                                             |
+| [**WdsTransportClientReleaseBuffer**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientreleasebuffer)            | Dekrementiert die Verweisanzahl für einen Puffer, der sich im Besitz des Multicastclients befindet.                                                                                                   |
+| [**WdsTransportClientShutdown**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientshutdown)                      | Fährt den Multicastclient herunter.                                                                                                                                            |
+| [**WdsTransportClientStartSession**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientstartsession)              | Initiiert eine Multicastdateiübertragung.                                                                                                                                        |
+| [**WdsTransportClientWaitForCompletion**](/windows/desktop/api/Wdstci/nf-wdstci-wdstransportclientwaitforcompletion)    | Blockiert, bis entweder die Multicastsitzung abgeschlossen ist oder das angegebene Timeout erreicht ist.                                                                                  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

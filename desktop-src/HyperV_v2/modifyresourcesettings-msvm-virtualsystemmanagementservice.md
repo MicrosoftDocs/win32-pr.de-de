@@ -1,5 +1,5 @@
 ---
-description: 'ModifyResourceSettings-Methode der Msvm_VirtualSystemManagementService Klasse: Ändert einstellungen für virtuelle Ressourcen.'
+description: ModifyResourceSettings-Methode der Msvm_VirtualSystemManagementService - Ändert einstellungen für virtuelle Ressourcen.
 ms.assetid: 3fb2a65f-9f40-4eb9-99e8-8fe1451427d9
 title: ModifyResourceSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 09ca0bb9fea02b6acc5599d9f907b1e60fdbd9ec
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ec7a2592bf6919616e424b7be22c6d5228a86ada16624d8732afd08d0f0be1dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693920"
 ---
 # <a name="modifyresourcesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ModifyResourceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen für virtuelle Ressourcen. Wenn sie auf Teile einer aktuellen Konfiguration eines virtuellen Computers angewendet werden, können die Ressourcen des aktiven virtuellen Computers als Nebeneffekt geändert werden.
+Ändert einstellungen für virtuelle Ressourcen. Wenn sie auf Teile einer aktuellen Konfiguration eines virtuellen Computers angewendet werden, können die Ressourcen des aktiven virtuellen Computers als Nebeneffekt geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -92,7 +92,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Methodenparameter überprüft** – Auftrag gestartet (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Reservierte Methode** (4097..32767)
@@ -105,17 +105,17 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

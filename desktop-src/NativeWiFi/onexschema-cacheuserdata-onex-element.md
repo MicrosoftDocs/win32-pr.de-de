@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die Benutzer Anmelde Informationen für nachfolgende Verbindungen zwischengespeichert werden.
+description: Gibt an, ob die Benutzeranmeldeinformationen für nachfolgende Verbindungen zwischengespeichert werden.
 ms.assetid: 65ed03f1-f61e-46f8-a666-91b393618de3
-title: cacheuserdata (Onex)-Element
+title: cacheUserData(OneX)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 8650bb2e5899e96f921d57460c8ba49ffab0ea66
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7f4663153fa9aff176180387ebaf0321ab3d48ec2c382e9e84c0f524d6e0ee1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800870"
 ---
-# <a name="cacheuserdata-onex-element"></a>cacheuserdata (Onex)-Element
+# <a name="cacheuserdata-onex-element"></a>cacheUserData(OneX)-Element
 
-Das cacheuserdata (Onex)-Element gibt an, ob die Benutzer Anmelde Informationen für nachfolgende Verbindungen zwischengespeichert werden. Wenn cacheuserdata den Wert true hat, werden die Anmelde Informationen zwischengespeichert. Wenn cacheuserdata den Wert false hat, werden die Anmelde Informationen nicht zwischengespeichert, und der Benutzer wird möglicherweise bei nachfolgenden Verbindungs versuchen zur Eingabe von Anmelde Informationen aufgefordert
+Das cacheUserData-Element (OneX) gibt an, ob die Benutzeranmeldeinformationen für nachfolgende Verbindungen zwischengespeichert werden. Wenn cacheUserData true ist, werden die Anmeldeinformationen zwischengespeichert. Wenn cacheUserData auf FALSE festgelegt ist, werden die Anmeldeinformationen nicht zwischengespeichert, und der Benutzer wird bei nachfolgenden Verbindungsversuchen möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert.
 
-Dieses Element ist optional. Wenn cacheuserdata nicht in einem Profil angegeben ist, werden die Anmelde Informationen des Benutzers zwischengespeichert.
+Dieses Element ist optional. Wenn cacheUserData nicht in einem Profil angegeben ist, werden die Benutzeranmeldeinformationen zwischengespeichert.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
+**Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
 
 ``` syntax
 <xs:element name="cacheUserData"
@@ -33,7 +33,7 @@ Dieses Element ist optional. Wenn cacheuserdata nicht in einem Profil angegeben 
  />
 ```
 
-Das **cacheuserdata** -Element wird durch das [**Onex**](onexschema-onex-element.md) -Element definiert.
+Das **cacheUserData-Element** wird durch das [**OneX-Element**](onexschema-onex-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,8 +41,8 @@ Das **cacheuserdata** -Element wird durch das [**Onex**](onexschema-onex-element
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,13 +50,13 @@ Das **cacheuserdata** -Element wird durch das [**Onex**](onexschema-onex-element
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)

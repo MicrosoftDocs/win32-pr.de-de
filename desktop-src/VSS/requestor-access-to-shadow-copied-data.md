@@ -1,29 +1,29 @@
 ---
-description: Wenn die Schatten Kopie abgeschlossen ist, ist der wichtigste Mechanismus für den Zugriff auf die darin enthaltenen Datei Daten die Verwendung des Geräte Objekts der Schatten Kopie.
+description: Sobald die Schattenkopie abgeschlossen ist, ist der wichtigste Mechanismus für den Zugriff auf die dateidaten, die sie enthält, die Verwendung des Geräteobjekts der Schattenkopie.
 ms.assetid: 21efdbd6-a487-4e6f-8e3c-b9224bcf92da
-title: Zugriff auf Schatten Kopien von Daten Anforderer
+title: Zugriff des An anfordernden Auf Schattenkopien von Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6265586f70054277170b44f23efc52d56842e3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 779e3947adff28c8f3190026921c398677afc7efaa484903bf165250f41bc191
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767700"
 ---
-# <a name="requester-access-to-shadow-copied-data"></a>Zugriff auf Schatten Kopien von Daten Anforderer
+# <a name="requester-access-to-shadow-copied-data"></a>Zugriff des An anfordernden Auf Schattenkopien von Daten
 
-Wenn die Schatten Kopie abgeschlossen ist, ist der wichtigste Mechanismus für den Zugriff auf die darin enthaltenen Datei Daten die Verwendung des [*Geräte Objekts*](vssgloss-d.md)der Schatten Kopie.
+Sobald die Schattenkopie abgeschlossen ist, ist der wichtigste Mechanismus für den Zugriff auf die dateidaten, die sie enthält, die Verwendung des Geräteobjekts der [*Schattenkopie.*](vssgloss-d.md)
 
-Der **m \_ pwszsnapshotdeviceobject** -Member einer [**VSS \_ \_**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) -momentaufnahmenstruktur ist eine Zeichenfolge, die das Geräte Objekt eines schattenkopierten Volumes enthält. Ein Anforderer kann das **VSS \_ Snapshot \_ Prop** -Objekt eines schattenkopierten Volumes abrufen, wenn es die **VSS- \_ ID** des Volumes kennt (Identifikations-GUID), und es an [**IVssBackupComponents:: getionnapshotproperties**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties)übergibt.
+Das **m \_ pwszSnapshotDeviceObject-Member** einer [**VSS SNAPSHOT \_ \_ PROP-Struktur**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) ist eine Zeichenfolge, die das Geräteobjekt eines kopierten Volumes enthält. Ein Anfordernder kann das **VSS \_ SNAPSHOT \_ PROP-Objekt** eines schattenkopierten Volumes abrufen, wenn er die **VSS-ID \_** des Volumes (identifizierende GUID) kennt und es [**an IVssBackupComponents::GetSnapshotProperties übergibt.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getsnapshotproperties)
 
-Ein Anforderer kann mithilfe des **obj. Snap** -Members der [**VSS- \_ Objekt- \_ Prop**](/windows/desktop/api/Vss/ns-vss-vss_object_prop) -Struktur (bei der es sich um eine [**VSS \_ \_**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) -momentaufnahmenstruktur handelt) auch Informationen über die Eigenschaften der Schatten Kopie [**abrufen, um**](/windows/desktop/api/Vss/nn-vss-ivssenumobject) die Liste der Objekte zu durchlaufen, die durch einen-Befehl von [**IVssBackupComponents:: Query**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-query)zurückgegeben werden.
+Ein Anfrager kann auch Schattenkopie-Eigenschaftsinformationen abrufen, indem er das **Obj.Snap-Member** der [**VSS \_ OBJECT \_ PROP-Struktur**](/windows/desktop/api/Vss/ns-vss-vss_object_prop) (eine [**VSS \_ SNAPSHOT \_ PROP-Struktur)**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) verwendet, die mithilfe von [**IVssEnumObject**](/windows/desktop/api/Vss/nn-vss-ivssenumobject) ermittelt wurde, um die Liste der Objekte zu iterieren, die durch einen Aufruf von [**IVssBackupComponents::Query zurückgegeben werden.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-query)
 
-Das Geräte Objekt sollte als Stamm eines schattenkopierten Volumes interpretiert werden. Aus diesem Grund enthält das Device-Objekt keinen umgekehrten Schrägstrich (" \\ ").
+Das Geräteobjekt sollte als Stamm eines Schattenkopie-Volumes interpretiert werden. Aus diesem Grund enthält das Geräteobjekt keinen zurücken Schrägstrich (" \\ ").
 
-Pfade im schattenkopierten Volume werden abgerufen, indem der Stamm des ursprünglichen Pfads durch das Geräte Objekt ersetzt wird. Wenn Sie z. b. einen Pfad zum ursprünglichen Volume von "C: \\ Database \\ \* . mdb" und eine [**VSS- \_ Momentaufnahme- \_ Prop**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) -Instanz von snapprop erhalten, erhalten Sie den Pfad auf dem schattenkopierten Volume durch Verkettung von snappropm " \_ pwszshadow copydeviceobject", " \\ " und " \\ Database \\ \* . mdb".
+Pfade auf dem kopierten Schattenvolumen werden durch Ersetzen des Stamms des ursprünglichen Pfads durch das Geräteobjekt ermittelt. Wenn Sie beispielsweise einen Pfad auf dem ursprünglichen Volume von "C: DATABASE .mdb" und einer VSS SNAPSHOT PROP-Instanz von snapProp erhalten, erhalten Sie den Pfad auf dem kopierten Schattenvolumen, indem Sie \\ \\ \* snapPropm [**\_ \_**](/windows/desktop/api/Vss/ns-vss-vss_snapshot_prop) \_ pwszShadow copyDeviceObject, " \\ ", und " \\ DATABASE \\ \* .mdb" verketten.
 
-Die VSS-Datei Sätze enthalten möglicherweise Platzhalter Zeichen in ihren Dateideskriptoren, sodass das Abrufen einer vollständigen Liste der Dateien in einer Schatten Kopie, die von einer Komponente verwaltet wird, möglicherweise die Verwendung von Methoden wie " **FindFileFirst**", " **findfilefirstex**" und " **FindNextFile**" erfordert.
+Die VSS-Dateisätze enthalten möglicherweise Platzhalterzeichen in ihren Dateideskriptoren, sodass das Abrufen einer vollständigen Liste der Dateien auf einer Schattenkopie, die von einer Komponente verwaltet wird, möglicherweise die Verwendung von Methoden wie **FindFileFirst,** **FindFileFirstEx** und **FindNextFile erfordert.**
 
  
 

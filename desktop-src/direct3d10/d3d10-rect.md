@@ -1,29 +1,29 @@
 ---
-description: 'D3d10 \_ Rect wird wie folgt deklariert:'
+description: 'D3D10 \_ RECT wird wie folgt deklariert:'
 ms.assetid: a0b27fb0-1e48-4e46-ad8c-99f197c31dc2
-title: D3D10_RECT (d3d10. h)
+title: D3D10_RECT (D3D10.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d978a3040e7dfd1cb916138991aa060f6663543f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 235a991942d2c6feba6070c4da3bb281692cbd6e0de69dc3cdfb9214ef60fb2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635000"
 ---
-# <a name="d3d10_rect"></a>D3d10 \_ Rect
+# <a name="d3d10_rect"></a>D3D10 \_ RECT
 
-D3d10 \_ Rect wird wie folgt deklariert:
+D3D10 \_ RECT wird wie folgt deklariert:
 
 ``` syntax
 typedef RECT D3D10_RECT;
 ```
 
-Weitere Informationen zu dieser GDI-Rechteck Struktur finden Sie unter [Rect](/previous-versions//ms536136(v=vs.85)).
+Weitere Informationen zu dieser GDI-Rechteckstruktur finden Sie unter [RECT](/previous-versions//ms536136(v=vs.85)).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird für die Scheren Rechtecke von [**ID3D10Device:: rsgezcissorrects**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rsgetscissorrects) und [**ID3D10Device:: rssezcissorrects**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rssetscissorrects)verwendet.
+Diese Struktur wird für Scissorrechtecke von [**ID3D10Device::RSGetScissorRects**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rsgetscissorrects) und [**ID3D10Device::RSSetScissorRects**](/windows/desktop/api/D3D10/nf-d3d10-id3d10device-rssetscissorrects)verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,8 +31,8 @@ Diese Struktur wird für die Scheren Rechtecke von [**ID3D10Device:: rsgezcissor
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3d10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3d10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3D10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3D10.lib</dt> </dl> |
 
 
 
@@ -40,7 +40,7 @@ Diese Struktur wird für die Scheren Rechtecke von [**ID3D10Device:: rsgezcissor
 
 <dl> <dt>
 
-[Kern Strukturen](d3d10-graphics-reference-d3d10-core-structures.md)
+[Kernstrukturen](d3d10-graphics-reference-d3d10-core-structures.md)
 </dt> </dl>
 
  

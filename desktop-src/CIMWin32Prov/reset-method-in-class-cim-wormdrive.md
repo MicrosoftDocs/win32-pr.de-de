@@ -2,7 +2,7 @@
 description: Die Reset-Methode der CIM \_ WORMDrive-Klasse fordert eine Zurücksetzung des logischen Geräts an.
 ms.assetid: ece4a618-6748-45a7-90fe-34eccf0f59d7
 ms.tgt_platform: multiple
-title: Reset-Methode der CIM_WORMDrive-Klasse
+title: Reset-Methode der CIM_WORMDrive Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,10 +23,10 @@ ms.locfileid: "119700490"
 ---
 # <a name="reset-method-of-the-cim_wormdrive-class"></a>Reset-Methode der CIM \_ WORMDrive-Klasse
 
-Die **Reset-Methode** der CIM \_ [**WORMDrive-Klasse**](cim-wormdrive.md) fordert eine Zurücksetzung des logischen Geräts an. Diese Methode wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Die **Reset-Methode** der CIM \_ [**WORMDrive-Klasse**](cim-wormdrive.md) fordert eine Zurücksetzung des logischen Geräts an. Diese Methode wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -51,7 +51,7 @@ Gibt 0 (null) zurück, wenn die Anforderung erfolgreich ausgeführt wurde, 1 (ei
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

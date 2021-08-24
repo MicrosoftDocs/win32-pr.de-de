@@ -1,7 +1,7 @@
 ---
-description: Die clearpdingsample-Methode gibt das aktuelle Beispiel frei.
+description: Die ClearPendingSample-Methode gibt das aktuelle Beispiel frei.
 ms.assetid: 55cb8eed-3ae5-4f45-a87e-e6da8ada5cf5
-title: Cbaserderderer. clearpdingsample-Methode (renbase. h)
+title: CBaseRenderer.ClearPendingSample-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 359d3cb7d7cd62d209c309ef4339651ee6cd852a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2368ada89245d35d58e34162e7e5cf07db815f6969e8c7579a91509275651c77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635150"
 ---
-# <a name="cbaserendererclearpendingsample-method"></a>Cbaserderderer. clearpdingsample-Methode
+# <a name="cbaserendererclearpendingsample-method"></a>CBaseRenderer.ClearPendingSample-Methode
 
-Die- `ClearPendingSample` Methode gibt das aktuelle Beispiel frei.
+Die `ClearPendingSample` -Methode gibt das aktuelle Beispiel frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt S \_ OK zurück.
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

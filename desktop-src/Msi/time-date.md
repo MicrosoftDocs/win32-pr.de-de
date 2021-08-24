@@ -1,23 +1,23 @@
 ---
-description: Der Datums-/Uhrzeittyp verfügt über die Uhrzeit und das Datum, das einzeln gespeichert wird. dabei werden Ganzzahlen ohne Vorzeichen als Bitfelder verwendet, die wie folgt verpackt werden.
+description: Der Time/Date-Datentyp verfügt über die Uhrzeit und das Datum, die einzeln gespeichert werden. Dabei werden ganze Zahlen ohne Vorzeichen als Bitfelder verwendet, die wie folgt gepackt werden.
 ms.assetid: 02c6076e-7f81-489c-9997-1435dec81852
 title: Time/Date
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b973143c2043419e4a54348917aa5d38fa97ff67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c3c5cccc2f1211918b52008f0d81a7e4693dfd14766696b77cd184d75f4309d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810740"
 ---
 # <a name="timedate"></a>Time/Date
 
-Der Datums-/Uhrzeittyp verfügt über die Uhrzeit und das Datum, das einzeln gespeichert wird. dabei werden Ganzzahlen ohne Vorzeichen als Bitfelder verwendet, die wie folgt verpackt werden.
+Der Time/Date-Datentyp verfügt über die Uhrzeit und das Datum, die einzeln gespeichert werden. Dabei werden ganze Zahlen ohne Vorzeichen als Bitfelder verwendet, die wie folgt gepackt werden.
 
-## <a name="time"></a>Time
+## <a name="time"></a>Zeit
 
-Die Zeit wird in einer nicht signierten 2-Byte-Ganzzahl mit den folgenden Bitfeldern codiert.
+Die Zeit wird in einer 2-Byte-Ganzzahl ohne Vorzeichen mit den folgenden Bitfeldern codiert.
 
 
 
@@ -25,7 +25,7 @@ Die Zeit wird in einer nicht signierten 2-Byte-Ganzzahl mit den folgenden Bitfel
 |--------------------|-------------|-------------|
 | Stunden              | 0 1 2 3 4   | 0–23        |
 | minutes            | 5 6 7 8 9 A | 0–59        |
-| 2-Sekunden-Intervalle | B C D E F   | 0 – 29        |
+| 2-Sekunden-Intervalle | B C D E F   | 0–29        |
 
 
 
@@ -33,13 +33,13 @@ Die Zeit wird in einer nicht signierten 2-Byte-Ganzzahl mit den folgenden Bitfel
 
 ## <a name="date"></a>Date
 
-Das Datum wird in einer nicht signierten 2-Byte-Ganzzahl mit den folgenden Bitfeldern codiert.
+Date wird in einer 2-Byte-Ganzzahl ohne Vorzeichen mit den folgenden Bitfeldern codiert.
 
 
 
 | Inhalte | Bits          | Wertebereich              |
 |----------|---------------|--------------------------|
-| year     | 0 1 2 3 4 5 6 | 0 – 119 (relativ zu 1980) |
+| year     | 0 1 2 3 4 5 6 | 0–119 (relativ zu 1980) |
 | month    | 7 8 9 A       | 1–12                     |
 | day      | B C D E F     | 1–31                     |
 

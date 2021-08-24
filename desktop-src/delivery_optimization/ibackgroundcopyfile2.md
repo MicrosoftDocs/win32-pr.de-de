@@ -1,6 +1,6 @@
 ---
-title: IBackgroundCopyFile2-Schnittstelle (deliveryoptimization. h)
-description: Geben Sie mit der IBackgroundCopyFile2-Schnittstelle einen neuen Remote Namen für die Datei an, und rufen Sie die Liste der herunter zuladenden Bereiche ab.
+title: IBackgroundCopyFile2-Schnittstelle (Deliveryoptimization.h)
+description: Verwenden Sie die IBackgroundCopyFile2-Schnittstelle, um einen neuen Remotenamen für die Datei anzugeben und die Liste der herunterzuladenden Bereiche abzurufen.
 ms.assetid: 28233310-9F2A-4567-B0B1-B549F862F3C8
 keywords:
 - IBackgroundCopyFile2-Schnittstelle
@@ -16,55 +16,55 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4a866c8f18ee1dfb57f32ac3b2b9999e10106522
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f185fef1ddaa9ceb4298f3e8916bb3d207b311b300f0071d601aadf47b0777a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853860"
 ---
 # <a name="ibackgroundcopyfile2-interface"></a>IBackgroundCopyFile2-Schnittstelle
 
-Geben Sie mit der **IBackgroundCopyFile2** -Schnittstelle einen neuen Remote Namen für die Datei an, und rufen Sie die Liste der herunter zuladenden Bereiche ab.
+Verwenden Sie **die IBackgroundCopyFile2-Schnittstelle,** um einen neuen Remotenamen für die Datei anzugeben und die Liste der herunterzuladenden Bereiche abzurufen.
 
-Die **IBackgroundCopyFile2** -Schnittstelle erbt von der [**ibackgroundcopyfile**](ibackgroundcopyfile.md) -Schnittstelle.
+Die **IBackgroundCopyFile2-Schnittstelle** erbt von der [**IBackgroundCopyFile-Schnittstelle.**](ibackgroundcopyfile.md)
 
-Um einen **IBackgroundCopyFile2** -Schnittstellen Zeiger abzurufen, verwenden Sie die **ibackgroundcopyfile:: QueryInterface** -Methode mithilfe __uuidof (IBackgroundCopyFile2) für den Schnittstellen Bezeichner. Verwenden Sie den **IBackgroundCopyFile2** -Schnittstellen Zeiger, um die [**ibackgroundcopyfile**](ibackgroundcopyfile.md) -Methode und die **IBackgroundCopyFile2** -Methode aufzurufen.
+Um einen **IBackgroundCopyFile2-Schnittstellenzeiger** zu erhalten, rufen Sie die **IBackgroundCopyFile::QueryInterface-Methode** mithilfe von __uuidof(IBackgroundCopyFile2) für den Schnittstellenbezeichner auf. Verwenden Sie **den IBackgroundCopyFile2-Schnittstellenzeiger,** um sowohl die [**IBackgroundCopyFile-**](ibackgroundcopyfile.md) als auch **die IBackgroundCopyFile2-Methode auf** aufruft.
 
 ## <a name="members"></a>Member
 
-Die **IBackgroundCopyFile2** -Schnittstelle erbt von [**ibackgroundcopyfile**](ibackgroundcopyfile.md). **IBackgroundCopyFile2** verfügt auch über die folgenden Typen von Membern:
+Die **IBackgroundCopyFile2-Schnittstelle** erbt von [**IBackgroundCopyFile**](ibackgroundcopyfile.md). **IBackgroundCopyFile2** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IBackgroundCopyFile2** -Schnittstelle verfügt über diese Methoden.
+Die **IBackgroundCopyFile2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                             | BESCHREIBUNG                                                                      |
+| Methode                                                             | Beschreibung                                                                      |
 |:-------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| [**Getfileranges**](ibackgroundcopyfile2-getfileranges-method.md) | Ruft das Array von Bereichen ab, die Sie aus der URL herunterladen möchten.<br/> |
-| [**Servername**](ibackgroundcopyfile2-setremotename-method.md) | Ändert den Remote Namen in eine neue URL.<br/>                                 |
+| [**GetFileRanges**](ibackgroundcopyfile2-getfileranges-method.md) | Ruft das Array von Bereichen ab, die Sie aus der URL herunterladen möchten.<br/> |
+| [**SetRemoteName**](ibackgroundcopyfile2-setremotename-method.md) | Ändert den Remotenamen in eine neue URL.<br/>                                 |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyFile2 ist als 83e81b93-0873-474d-8a8c-f 2018b1a939c definiert.<br/>             |
+| IID<br/>                      | IID_IBackgroundCopyFile2 ist als 83E81B93-0873-474D-8A8C-F2018B1A939C definiert.<br/>             |
 
 
 
@@ -72,7 +72,7 @@ Die **IBackgroundCopyFile2** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**Ibackgroundcopyfile**](ibackgroundcopyfile.md)
+[**IBackgroundCopyFile**](ibackgroundcopyfile.md)
 </dt> </dl>
 
  

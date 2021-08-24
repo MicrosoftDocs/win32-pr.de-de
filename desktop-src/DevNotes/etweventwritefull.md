@@ -1,6 +1,6 @@
 ---
 description: Schreibt ein vollständiges Ereignis in eine Sitzung.
-title: Etweventschreitefull
+title: EtwEventWriteFull
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 api_location:
 - ntetw.h
-ms.openlocfilehash: 5ea3de0dba842544b0ffacc785fb138bdda571a0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1fd25931e6a58b97e052ecd7da43bd651688d2bf726d8b5ba2acd84ce820be7a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119653429"
 ---
-# <a name="etweventwritefull-function"></a>Etweventschreitefull-Funktion
+# <a name="etweventwritefull-function"></a>EtwEventWriteFull-Funktion
 
-[Die etweventwrite tefull-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden.]
+[Die EtwEventWriteFull-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden.]
 
 Schreibt ein vollständiges Ereignis in eine Sitzung.
 
@@ -45,24 +45,24 @@ EtwEventWriteFull(
 
 <dl> <dt>
 
-*Reghandle*
+*RegHandle*
 </dt> <dd>
 
-Reghandle für den Anbieter.
+RegHandle für den Anbieter.
 
 </dd> <dt>
 
-*EventDescriptor* 
+*Eventdescriptor* 
 </dt> <dd>
 
-Der Ereignis Deskriptor des Ereignisses, das protokolliert werden soll.
+Ereignisdeskriptor des zu protokollierende Ereignisses.
 
 </dd> <dt>
 
 *EventProperty*
 </dt> <dd>
 
-Das Flag, das vom Benutzer angegeben wird.
+Vom Benutzer angegebenes Flag.
 
 </dd> <dt>
 
@@ -80,17 +80,17 @@ Zugehörige Aktivitäts-ID.
 
 </dd> <dt>
 
-*Userdatacount*
+*UserDataCount*
 </dt> <dd>
 
-Die Anzahl der Benutzerdaten Elemente.
+Die Anzahl der Benutzerdatenelemente.
 
 </dd> <dt>
 
 *UserData*
 </dt> <dd>
 
-Zeiger auf ein Array von Benutzerdaten Elementen.
+Zeiger auf ein Array von Benutzerdatenelementen.
 
 </dd> </dl>
 
@@ -98,16 +98,16 @@ Zeiger auf ein Array von Benutzerdaten Elementen.
 
 Ein Win32-Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die etweventwrite tefull-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden. Um die Kompatibilität Ihrer Anwendung aufrechtzuerhalten, ist es besser, stattdessen öffentliche Funktionen zu verwenden.
+Die EtwEventWriteFull-Funktion und die zurückgegebenen Strukturen sind intern für das Betriebssystem und können von einer Version von Windows in eine andere geändert werden. Um die Kompatibilität Ihrer Anwendung aufrechtzuerhalten, ist es besser, stattdessen öffentliche Funktionen zu verwenden.
 
 
 ## <a name="requirements"></a>Anforderungen
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Zielplattform** | Windows |
-| **Header** | ntetw. h |
+| **Header** | ntetw.h |
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -116,5 +116,5 @@ Die etweventwrite tefull-Funktion und die zurückgegebenen Strukturen sind inter
 [EventWrite](/windows/desktop/api/evntprov/nf-evntprov-eventwrite)
 </dt> <dt>
 
-[EventWrite-Ex](/windows/desktop/api/evntprov/nf-evntprov-eventwriteex)
+[EventWriteEx](/windows/desktop/api/evntprov/nf-evntprov-eventwriteex)
 </dt></dl>

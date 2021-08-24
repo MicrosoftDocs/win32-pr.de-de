@@ -1,5 +1,5 @@
 ---
-description: 'CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor : Konstruktormethode.'
+description: CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor – Konstruktormethode.
 ms.assetid: f0d30125-5d16-470c-a5fb-a7df96814dad
 title: CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor (Transip.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6b14af4b0d1f33933db8ca2fd1835e9711edad9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 98fb678a2df7c79e40c5ecf39b0a059ebc9e44f4f3f603e1d1a6551446204aa1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767580"
 ---
 # <a name="ctransinplacefilterctransinplacefilter-constructor"></a>CTransInPlaceFilter.CTransInPlaceFilter-Konstruktor
 
@@ -49,14 +49,14 @@ CTransInPlaceFilter(
 *pObjectName* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
+Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *lpUnk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Ignoriert.
 *bModifiesData* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. True **gibt an,** dass der Filter die Daten ändert. Andernfalls übergibt der Filter die Daten unverändert nachgelagert.
+Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. True gibt an, dass der Filter die Daten ändert. Andernfalls übergibt der Filter die Daten im Downstream unverändert.
 
 </dd> </dl>
 
@@ -85,14 +85,14 @@ Boolescher Wert, der angibt, ob der Filter die Eingabedaten ändert. True **gibt
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

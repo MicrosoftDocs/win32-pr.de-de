@@ -1,30 +1,30 @@
 ---
-description: Ein sekundärer Satz von renderingschnittstellen unterstützt das Übergeben von Vertex-und Indexdaten direkt aus Benutzerspeicher Zeigern Diese Schnittstellen unterstützen nur einen einzigen Stream von Vertex-Daten. Weitere Informationen finden Sie in den folgenden Referenz Themen.
+description: Ein sekundärer Satz von Renderingschnittstellen unterstützt das Übergeben von Scheitelpunkt- und Indexdaten direkt von Benutzerspeicherzeigern. Diese Schnittstellen unterstützen nur einen einzelnen Datenstrom von Scheitelpunktdaten. Weitere Informationen finden Sie in den folgenden Referenzthemen.
 ms.assetid: 6f64cc17-cffc-4d18-acf2-73e400fa26f9
-title: Rendering von Benutzerspeicher Zeigern (Direct3D 9)
+title: Rendern aus Benutzerspeicherzeigern (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4b5499032e6fb92ea0f363bba2bd5fd961e53c7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5e9893d3728b3bac8bc38dd8118f995510de834d2c6e54cdadcafe2c26b8a78e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746480"
 ---
-# <a name="rendering-from-user-memory-pointers-direct3d-9"></a>Rendering von Benutzerspeicher Zeigern (Direct3D 9)
+# <a name="rendering-from-user-memory-pointers-direct3d-9"></a>Rendern aus Benutzerspeicherzeigern (Direct3D 9)
 
-Ein sekundärer Satz von renderingschnittstellen unterstützt das Übergeben von Vertex-und Indexdaten direkt aus Benutzerspeicher Zeigern Diese Schnittstellen unterstützen nur einen einzigen Stream von Vertex-Daten. Weitere Informationen finden Sie in den folgenden Referenz Themen.
+Ein sekundärer Satz von Renderingschnittstellen unterstützt das Übergeben von Scheitelpunkt- und Indexdaten direkt von Benutzerspeicherzeigern. Diese Schnittstellen unterstützen nur einen einzelnen Datenstrom von Scheitelpunktdaten. Weitere Informationen finden Sie in den folgenden Referenzthemen.
 
--   [**IDirect3DDevice9::D rawprimitiveup**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitiveup)
--   [**IDirect3DDevice9::D rawindexedprimitiveup**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawindexedprimitiveup)
+-   [**IDirect3DDevice9::D rawPrimitiveUP**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitiveup)
+-   [**IDirect3DDevice9::D rawIndexedPrimitiveUP**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawindexedprimitiveup)
 
-Diese Methoden werden mit Daten, die durch Benutzerspeicher Zeiger angegeben werden, anstelle von Vertex-und Index Puffern.
+Diese Methoden werden mit Daten gerendert, die von Benutzerspeicherzeigern anstelle von Scheitelpunkt- und Indexpuffern angegeben werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Rendern von primitiven](rendering-primitives.md)
+[Rendern von Primitiven](rendering-primitives.md)
 </dt> </dl>
 
  

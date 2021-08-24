@@ -1,11 +1,11 @@
 ---
-title: MS-Imaging-PSP-Identifier-Attribut
-description: Schema Attribut, das den eindeutigen Bezeichner für diesen Post Scan Prozess enthält.
+title: ms-Imaging-PSP-Identifier-Attribut
+description: Schemaattribut, das den eindeutigen Bezeichner für diesen Nachscanprozess enthält.
 ms.assetid: c39eb03b-1433-4962-a238-babec6dc99b8
 ms.tgt_platform: multiple
 keywords:
 - MS-Imaging-PSP-Identifier-Attribut AD-Schema
-- AD-Schema für das msimagding-pspidentifier-Attribut
+- AD-Schema des msImaging-PSPIdentifier-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 245182fe234ba40155c1593153c1e7778d2240e9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 26efb3a3fa902a74b3d1e09af17cc295f9542208f22cb65b0eb98b930a812b56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763150"
 ---
-# <a name="ms-imaging-psp-identifier-attribute"></a>MS-Imaging-PSP-Identifier-Attribut
+# <a name="ms-imaging-psp-identifier-attribute"></a>ms-Imaging-PSP-Identifier-Attribut
 
-Schema Attribut, das den eindeutigen Bezeichner für diesen Post Scan Prozess enthält.
+Schemaattribut, das den eindeutigen Bezeichner für diesen Nachscanprozess enthält.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-Imaging-PSP-Identifier                             |
-| LDAP-Display-Name | msimagding-pspidentifier                               |
+| CN                | ms-Imaging-PSP-Identifier                             |
+| Ldap-Anzeigename | msImaging-PSPIdentifier                               |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2053                               |
-| System-ID-GUID    | 51583ce9-94fa-4b12-b990-304c35b18595                  |
+| System-Id-Guid    | 51583ce9-94fa-4b12-b990-304c35b18595                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -54,15 +54,15 @@ Schema Attribut, das den eindeutigen Bezeichner für diesen Post Scan Prozess en
 | Link-ID                | \-                                                                           |
 | MAPI-Id                | \-                                                                           |
 | System-Only            | False                                                                        |
-| Ist-einwertig       | Richtig                                                                         |
+| Is-Single-Valued       | True                                                                         |
 | Ist indiziert             | False                                                                        |
 | Im globalen Katalog      | False                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                 |
 | Range-Lower            | \-                                                                           |
 | Range-Upper            | \-                                                                           |
 | Search-Flags           | 0x00000000                                                                   |
 | System-Flags           | 0x00000010                                                                   |
-| In verwendete Klassen        | [**MS-Imaging-postscanprocess**](c-msimaging-postscanprocess.md)<br/> |
+| In verwendete Klassen        | [**ms-Imaging-PostScanProcess**](c-msimaging-postscanprocess.md)<br/> |
 
 
 
@@ -75,15 +75,15 @@ Schema Attribut, das den eindeutigen Bezeichner für diesen Post Scan Prozess en
 | Link-ID                | \-                                                                           |
 | MAPI-Id                | \-                                                                           |
 | System-Only            | False                                                                        |
-| Ist-einwertig       | Richtig                                                                         |
+| Is-Single-Valued       | True                                                                         |
 | Ist indiziert             | False                                                                        |
 | Im globalen Katalog      | False                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                 |
 | Range-Lower            | \-                                                                           |
 | Range-Upper            | \-                                                                           |
 | Search-Flags           | 0x00000000                                                                   |
 | System-Flags           | 0x00000010                                                                   |
-| In verwendete Klassen        | [**MS-Imaging-postscanprocess**](c-msimaging-postscanprocess.md)<br/> |
+| In verwendete Klassen        | [**ms-Imaging-PostScanProcess**](c-msimaging-postscanprocess.md)<br/> |
 
 
 

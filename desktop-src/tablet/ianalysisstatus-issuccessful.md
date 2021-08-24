@@ -1,7 +1,7 @@
 ---
-description: Ruft eine boolesche Zusammenfassung der Ergebnisse des Analyse Vorgangs ab.
+description: Ruft eine boolesche Zusammenfassung der Ergebnisse des Analysevorgangs ab.
 ms.assetid: 9bc690f4-fb5f-449e-bde0-bd2277c4573b
-title: 'Ianalysisstatus:: iserfolgreiches-Methode (iacom. h)'
+title: IAnalysisStatus::IsSuccessful-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: daf7ec801773d855f0ed85a795bc492ef673a74e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0028b94042aa9397aea8e0164d57d0d647a75f37e3f5e2fd9d7b3982b5d57031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713830"
 ---
-# <a name="ianalysisstatusissuccessful-method"></a>Ianalysisstatus:: iserfolgreiches-Methode
+# <a name="ianalysisstatusissuccessful-method"></a>IAnalysisStatus::IsSuccessful-Methode
 
-Ruft eine boolesche Zusammenfassung der Ergebnisse des Analyse Vorgangs ab.
+Ruft eine boolesche Zusammenfassung der Ergebnisse des Analysevorgangs ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ HRESULT IsSuccessful(
 
 <dl> <dt>
 
-*pferfolgreich* \[ vorgenommen\]
+*pfSuccessful* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn der Analyse Vorgang ohne Warnungen abgeschlossen wurde, oder **Variant \_ false** , wenn mindestens eine Warnung aufgetreten ist.
+**VARIANT \_ TRUE,** wenn der Analysevorgang ohne Warnung abgeschlossen wurde, oder **VARIANT \_ FALSE,** wenn mindestens eine Warnung aufgetreten ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Gliederung eines Ereignis Handlers für das [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis. Der Handler überprüft **ianalysisstatus:: iserfolg**. Wenn der Analyse Vorgang Warnungen generiert, durchläuft der Handler die Auflistung von [**ianalysiswarning**](ianalysiswarning.md) -Objekten.
+Das folgende Beispiel zeigt eine Gliederung eines Ereignishandlers für das [**\_ IAnalysisEvents::Results-Ereignis.**](-ianalysisevents-results.md) Der Handler überprüft **IAnalysisStatus::IsSuccessful**. Wenn der Analysevorgang Warnungen generiert, durchläuft der Handler die Auflistung der [**IAnalysisWarning-Objekte.**](ianalysiswarning.md)
 
 
 ```C++
@@ -139,9 +139,9 @@ STDMETHODIMP CMyClass::Results(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -150,10 +150,10 @@ STDMETHODIMP CMyClass::Results(
 
 <dl> <dt>
 
-[**Ianalysisstatus**](ianalysisstatus.md)
+[**IAnalysisStatus**](ianalysisstatus.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

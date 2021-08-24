@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die Verbindung mit einem Drahtlos LAN automatisch oder vom Benutzer initiiert werden soll.
+description: Gibt an, ob die Verbindung mit einem WLAN automatisch oder vom Benutzer initiiert werden soll.
 ms.assetid: 0fad8392-3053-494b-9b30-1db85408a437
-title: ConnectionMode (wlanprofile)-Element
+title: connectionMode-Element (WLANProfile)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 3dafb9561bf8b5e3c5c66eb23bd5e286cbd38118
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6ef18eff8ba27a3169399f1f10e0707c4e0b3c010d54830ad8f8f997c5e1b50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119684440"
 ---
-# <a name="connectionmode-wlanprofile-element"></a>ConnectionMode (wlanprofile)-Element
+# <a name="connectionmode-wlanprofile-element"></a>connectionMode-Element (WLANProfile)
 
-Das ConnectionMode (wlanprofile)-Element gibt an, ob die Verbindung mit einem Drahtlos LAN automatisch oder vom Benutzer initiiert werden soll.
+Das connectionMode-Element (WLANProfile) gibt an, ob die Verbindung mit einem WLAN automatisch oder vom Benutzer initiiert werden soll.
 
-Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf ESS festgelegt ist, kann dieser Wert entweder "Auto" oder "Manual" lauten. Der Standardwert ist Auto, wenn dieses Element nicht vorhanden ist.
+Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf ESS festgelegt ist, kann dieser Wert entweder automatisch oder manuell sein. Der Standardwert ist auto, wenn dieses Element nicht vorhanden ist.
 
-Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf IBSS festgelegt ist, muss dieser Wert manuell lauten.
+Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.md) auf IBSS festgelegt ist, muss dieser Wert manuell sein.
 
 ``` syntax
 <xs:element name="connectionMode">
@@ -44,18 +44,18 @@ Wenn [**connectionType**](wlan-profileschema-connectiontype-wlanprofile-element.
 </xs:element>
 ```
 
-Das **ConnectionMode** -Element wird durch das [**wlanprofile**](wlan-profileschema-wlanprofile-element.md) -Element definiert.
+Das **connectionMode-Element** wird durch das [**WLANProfile-Element**](wlan-profileschema-wlanprofile-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der folgenden Tabelle werden die-Enumerationswerte beschrieben.
+In der folgenden Tabelle werden die Enumerationswerte beschrieben.
 
 
 
-| Wert  | BESCHREIBUNG                                                                                                |
+| Wert  | Beschreibung                                                                                                |
 |--------|------------------------------------------------------------------------------------------------------------|
-| auto   | Die Verbindung mit dem Drahtlos Netzwerk sollte automatisch initiiert werden, wenn das Netzwerk in Reichweite ist. |
-| manual | Die Verbindung mit dem Drahtlos Netzwerk wird nur bei der expliziten Anforderung eines Benutzers hergestellt.               |
+| auto   | Die Verbindung mit dem Drahtlosnetzwerk sollte automatisch initiiert werden, wenn sich das Netzwerk in Reichweite befindet. |
+| manual | Die Verbindung mit dem Drahtlosnetzwerk wird nur auf explizite Anforderung eines Benutzers hergestellt.               |
 
 
 
@@ -63,7 +63,7 @@ In der folgenden Tabelle werden die-Enumerationswerte beschrieben.
 
 ## <a name="examples"></a>Beispiele
 
-Beispiel Profile, die das **ConnectionMode** -Element verwenden, finden Sie unter [Beispiele für Funk profile](wireless-profile-samples.md).
+Beispielprofile, die das **connectionMode-Element** verwenden, finden Sie unter [Beispiele für Funkprofile.](wireless-profile-samples.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,9 +71,9 @@ Beispiel Profile, die das **ConnectionMode** -Element verwenden, finden Sie unte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                 |
 
 
 
@@ -81,13 +81,13 @@ Beispiel Profile, die das **ConnectionMode** -Element verwenden, finden Sie unte
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**WLANProfile**](wlan-profileschema-wlanprofile-element.md)

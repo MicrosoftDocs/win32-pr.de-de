@@ -1,6 +1,6 @@
 ---
-title: Bezeichnung (VS)
-description: Markieren Sie die nächste Anweisung mit einem Bezeichnungs Index. | Bezeichnung (VS)
+title: label – im Vergleich zu
+description: Markieren Sie die nächste Anweisung mit einem Bezeichnungsindex. | label – im Vergleich zu
 ms.assetid: e1aee8bc-4655-4bd5-8012-bd7a2d46e712
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,39 +9,39 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6e2b72fe21301aa66d8428dc3696ceb3f12e6214
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 81c36c3db93acdc82d725c9cf7893c52d7177bbe70e16378c3b86f39ec4d6a2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854180"
 ---
-# <a name="label---vs"></a>Bezeichnung (VS)
+# <a name="label---vs"></a>label – im Vergleich zu
 
-Markieren Sie die nächste Anweisung mit einem Bezeichnungs Index.
+Markieren Sie die nächste Anweisung mit einem Bezeichnungsindex.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Bezeichnung l\# |
+| Label l\# |
 |-----------|
 
 
 
  
 
-Gibt an, wo die Bezeichnungs \# Nummer identifiziert.
+, wobei \# die Bezeichnungsnummer identifiziert.
 
-Für vs \_ 2 \_ 0 und vs \_ 2 \_ x muss die Bezeichnungs Nummer zwischen 0 und 15 liegen.
+Bei vs \_ 2 \_ 0 und vs \_ 2 \_ x muss die Bezeichnungsnummer zwischen 0 und 15 sein.
 
-Für vs \_ 2 \_ SW, vs \_ 3 \_ 0 und vs \_ 3 \_ SW, muss die Nummer der Bezeichnung zwischen 0 und 2047 liegen.
+Bei vs \_ 2 \_ sw, vs \_ 3 \_ 0 und vs \_ 3 \_ sw muss die Bezeichnungsnummer zwischen 0 und 2047 sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | label                  |      | x    | x    | x     | x    | x     |
 
@@ -49,13 +49,13 @@ Für vs \_ 2 \_ SW, vs \_ 3 \_ 0 und vs \_ 3 \_ SW, muss die Nummer der Bezeichn
 
  
 
-Diese Anweisung definiert eine Bezeichnung, die sich in der nächsten shaderanweisung befindet. Die Bezeichnungs Anweisung kann nur direkt nach einer [ret](ret---vs.md) -Anweisung vorhanden sein (die das Ende der vorherigen Unterroutine oder des Hauptprogramms definiert).
+Diese Anweisung definiert eine Bezeichnung, die sich in der nächsten Shaderanweisung befindet. Die Bezeichnungsanweisung kann nur direkt nach einer [ret-Anweisung](ret---vs.md) vorhanden sein (die das Ende der vorherigen Unterroutine oder des Hauptprogramms definiert).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

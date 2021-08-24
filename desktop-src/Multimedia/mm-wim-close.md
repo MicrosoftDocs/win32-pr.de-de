@@ -1,9 +1,9 @@
 ---
-title: MM_WIM_CLOSE Meldung (MMSYSTEM. h)
-description: Die \_ Meldung mm WIM \_ Close wird an ein Fenster gesendet, wenn ein Waveform-Audioeingabegerät geschlossen wird. Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+title: MM_WIM_CLOSE Meldung (Mmsystem.h)
+description: Die MM \_ WIM \_ CLOSE-Nachricht wird an ein Fenster gesendet, wenn ein Waveform-Audio-Eingabegerät geschlossen wird. Das Gerätehandle ist nach dem Senden dieser Nachricht nicht mehr gültig.
 ms.assetid: 4ea35b66-6bfa-41f0-9d52-a8cf2b0a69dd
 keywords:
-- MM_WIM_CLOSE-Nachricht (Multimedia)
+- MM_WIM_CLOSE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 90d9934ef7045debbcac2f5baf1c2f750d22dad5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 506311f9938198e2ceb99646670c954eaa433825855e31c036241df6be1b2491
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807110"
 ---
-# <a name="mm_wim_close-message"></a>MM- \_ WIM- \_ Schließen-Nachricht
+# <a name="mm_wim_close-message"></a>MM \_ WIM \_ CLOSE-Nachricht
 
-Die Meldung **mm \_ WIM \_ Close** wird an ein Fenster gesendet, wenn ein Waveform-Audioeingabegerät geschlossen wird. Das Geräte Handle ist nicht mehr gültig, nachdem diese Nachricht gesendet wurde.
+Die **MM \_ WIM \_ CLOSE-Nachricht** wird an ein Fenster gesendet, wenn ein Waveform-Audio-Eingabegerät geschlossen wird. Das Gerätehandle ist nach dem Senden dieser Nachricht nicht mehr gültig.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = reserved
 
 <dl> <dt>
 
-<span id="hInputDev"></span><span id="hinputdev"></span><span id="HINPUTDEV"></span>*hinputdev*
+<span id="hInputDev"></span><span id="hinputdev"></span><span id="HINPUTDEV"></span>*hInputDev*
 </dt> <dd>
 
-Handle für das gesperrte Waveform-Audioeingabegerät.
+Handle für das waveform-audio-Eingabegerät, das geschlossen wurde.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Bleiben muss 0 (null) sein.
+Reserviert; muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -72,10 +72,10 @@ Diese Meldung gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[Waveform-Audiodatei](waveform-audio.md)
+[Waveform-Audio](waveform-audio.md)
 </dt> <dt>
 
-[Wellenform Meldungen](waveform-messages.md)
+[Wellenformnachrichten](waveform-messages.md)
 </dt> </dl>
 
  

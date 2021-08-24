@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_RTType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Routen-through-Ressourcen Daten Satz (RT).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_RTType Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen Rt-Ressourcendatensatz (Route Through).
 ms.assetid: 1ebb0543-d031-4430-acbe-708c4931b7a4
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_RTType
-- DNS-MicrosoftDNS_RTType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS , MicrosoftDNS_RTType-Klasse
+- MicrosoftDNS_RTType DNS-Klasse, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1c3b8d71c41fefa9b78aa9a469ee1426c553e1f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 421278fefa274650e5cff30a01f7d3dff125de0d7ef7e22ac5e340548be52277
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655360"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_rttype-class"></a>Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ rttype"
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_rttype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RTType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Routen-through-Ressourcen Daten Satz (RT).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen Rt-Ressourcendatensatz (Route Through).
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,31 +49,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone-, Cache- oder RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -81,7 +81,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -90,31 +90,31 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Bevorzugen* \[ in\]
+*Einstellung* \[ In\]
 </dt> <dd>
 
-Die Einstellung, die diesem RR unter anderem beim gleichen Besitzer zugewiesen wird. Niedrigere Werte werden bevorzugt.
+Diese RR wird unter anderem beim gleichen Besitzer bevorzugt. Niedrigere Werte werden bevorzugt.
 
 </dd> <dt>
 
-*Intermediatehost* \[ in\]
+*IntermediateHost* \[ In\]
 </dt> <dd>
 
-FQDN, der einen Host angibt, der als zwischengeschalteter Host zum Erreichen des vom Besitzer angegebenen Hosts dienen soll.
+FQDN, der einen Host an, der als Zwischenziel beim Erreichen des vom Besitzer angegebenen Hosts dienen soll.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -131,7 +131,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -139,13 +139,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ rttype**](microsoftdns-rttype.md)
+[**MicrosoftDNS \_ RTType**](microsoftdns-rttype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ rttype-Klasse**](microsoftdns-rttype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ RTType-Klasse**](microsoftdns-rttype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

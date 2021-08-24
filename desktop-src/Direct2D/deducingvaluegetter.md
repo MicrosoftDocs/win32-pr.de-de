@@ -1,9 +1,9 @@
 ---
-title: Deducingvaluegetter (D2d1effecthelpers. h)
-description: Leitet die-Klasse und die-Argumente ab und ruft dann einen getget-Rückruf Rückruf für eine Element Funktion für eine Value-Type-Eigenschaft auf.
+title: DeducingValueGetter (D2d1effecthelpers.h)
+description: Deduces the class and arguments and then calls a member-function property getter callback for a value-type property.
 ms.assetid: E2E5CCC3-B112-4D3C-8840-121A55C4F1A2
 keywords:
-- Deducingvaluegetter Direct2D
+- DeducingValueGetter Direct2D
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6332dd6eac823457882513f97557939db884efcf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 743c4e457c9dc3f6e29c4bfc78e539256869a2d30a055168384d287911ca4d4c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652950"
 ---
-# <a name="deducingvaluegetter"></a>Deducingvaluegetter
+# <a name="deducingvaluegetter"></a>DeducingValueGetter
 
-Leitet die-Klasse und die-Argumente ab und ruft dann einen getget-Rückruf Rückruf für eine Element Funktion für eine Value-Type-Eigenschaft auf.
+Deduces the class and arguments and then calls a member-function property getter callback for a value-type property.
 
 > [!Note]  
-> Deducingvaluegetter sollte nicht direkt aufgerufen werden.
+> DeducingValueGetter sollte nicht direkt aufgerufen werden.
 
  
 
@@ -47,7 +47,7 @@ HRESULT DeducingValueGetter(
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ HRESULT DeducingValueGetter(
 
 <dl> <dt>
 
-[**Direct2D::D educingvaluesetter**](deducingvaluesetter.md)
+[**Direct2D::D EducingValueSetter**](deducingvaluesetter.md)
 </dt> </dl>
 
  

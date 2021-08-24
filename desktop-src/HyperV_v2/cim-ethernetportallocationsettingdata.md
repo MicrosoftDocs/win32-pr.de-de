@@ -1,5 +1,5 @@
 ---
-description: Stellt Einstellungen für die Zuordnung des Ethernet-Ports dar, zusätzlich zu den Einstellungen, die von der CIM- \_ Ethernetport-Klasse bereitgestellt werden. Diese Einstellungen werden verwendet, um spezifische Informationen für die Ressource bereitzustellen.
+description: Stellt einstellungen für die Zuordnung des Ethernetports dar, zusätzlich zu den Einstellungen, die von der CIM \_ EthernetPort-Klasse bereitgestellt werden. Diese Einstellungen werden verwendet, um spezifische Informationen für die Ressource selbst bereitzustellen.
 ms.assetid: f59ebaf1-60dd-49bd-b48e-d7a6c2650909
 title: CIM_EthernetPortAllocationSettingData-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7e77b4387f77e88ceaff273b8be72a354c989e7e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7546af167a6e13712119a081e7dbfaee118dc0c8a4912b8411d898a4ad90bc7b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695800"
 ---
-# <a name="cim_ethernetportallocationsettingdata-class"></a>CIM- \_ ethernetportationscationsettingdata-Klasse
+# <a name="cim_ethernetportallocationsettingdata-class"></a>CIM \_ EthernetPortAllocationSettingData-Klasse
 
-Stellt Einstellungen für die Zuordnung des Ethernet-Ports dar, zusätzlich zu den Einstellungen, die von der [**CIM- \_ Ethernetport**](cim-ethernetport.md) -Klasse bereitgestellt werden. Diese Einstellungen werden verwendet, um spezifische Informationen für die Ressource bereitzustellen.
+Stellt einstellungen für die Zuordnung des Ethernetports dar, zusätzlich zu den Einstellungen, die von der [**CIM \_ EthernetPort-Klasse**](cim-ethernetport.md) bereitgestellt werden. Diese Einstellungen werden verwendet, um spezifische Informationen für die Ressource selbst bereitzustellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ class CIM_EthernetPortAllocationSettingData : CIM_ResourceAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ ethernetportzugewiesene cationsettingdata** " enthält diese Typen von Membern:
+Die **CIM \_ EthernetPortAllocationSettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ ethernetportzugewiesene cationsettingdata** " verfügt über diese Eigenschaften.
+Die **CIM \_ EthernetPortAllocationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Desiredvlanendpointmode**
+**DesiredVLANEndpointMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ vlanendpoint**](cim-vlanendpoint.md)".**Operationalendpointmode**","**CIM \_ vlanendpoint**.**"Desiredendpointmode**", "**CIM \_ ethernetportzuweisung cationsettingdata**".**Otherendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md).**OperationalEndpointMode**", "**CIM \_ VLANEndpoint**.**DesiredEndpointMode**", "**CIM \_ EthernetPortAllocationSettingData**.**OtherEndpointMode**")
 </dt> </dl>
 
-Der angeforderte VLAN-Modus. Diese Eigenschaft wird verwendet, um den ursprünglichen **operationalendpointmode** -Eigenschafts Wert in der Instanz von **CIM \_ vlanendpoint** festzulegen, die dem Ethernet-Port zugeordnet ist.
+Der angeforderte VLAN-Modus. Diese Eigenschaft wird verwendet, um den **anfänglichen OperationalEndpointMode-Eigenschaftswert** in der Instanz von **CIM \_ VLANEndpoint** festzulegen, die dem Ethernetport zugeordnet ist.
 
 <dt>
 
@@ -74,7 +74,7 @@ Der angeforderte VLAN-Modus. Diese Eigenschaft wird verwendet, um den ursprüngl
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -88,14 +88,14 @@ Der angeforderte VLAN-Modus. Diese Eigenschaft wird verwendet, um den ursprüngl
 
 <span id="Dynamic_Auto"></span><span id="dynamic_auto"></span><span id="DYNAMIC_AUTO"></span>
 
-**Dynamisches Auto** (3)
+**Dynamisch automatisch** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dynamic_Desirable"></span><span id="dynamic_desirable"></span><span id="DYNAMIC_DESIRABLE"></span>
 
-**Dynamisch erwünscht** (4)
+**Dynamisch wünschenswert** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -116,33 +116,33 @@ Der angeforderte VLAN-Modus. Diese Eigenschaft wird verwendet, um den ursprüngl
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Otherendpointmode**
+**OtherEndpointMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ethernetportzuweisung-Daten**.**Desiredvlanendpointmode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EthernetPortAllocationSettingData**.**DesiredVLANEndpointMode**")
 </dt> </dl>
 
-Der Typ des VLAN-Endpunkt Modells, das von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der Mode-Eigenschaft auf "1" (sonstige) festgelegt ist. Diese Eigenschaft sollte auf **null** festgelegt werden, wenn die Mode-Eigenschaft einen anderen Wert als "1" hat.
+Der Typ des VLAN-Endpunktmodells, der von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der mode-Eigenschaft auf "1" (Sonstige) festgelegt ist. Diese Eigenschaft sollte auf **NULL** festgelegt werden, wenn die Modeeigenschaft einen anderen Wert als "1" hat.
 
 </dd> </dl>
 
@@ -154,8 +154,8 @@ Der Typ des VLAN-Endpunkt Modells, das von diesem VLAN-Endpunkt unterstützt wir
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -164,7 +164,7 @@ Der Typ des VLAN-Endpunkt Modells, das von diesem VLAN-Endpunkt unterstützt wir
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> </dl>
 
  

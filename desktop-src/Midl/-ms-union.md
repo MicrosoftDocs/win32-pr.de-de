@@ -1,9 +1,9 @@
 ---
-title: /Ms_union Schalter
-description: Der/MS- \_ Union-Switch steuert die NDR-Ausrichtung von nicht gekapselten Unions. Hinweis Dieses Attribut wird aus Gründen der Abwärtskompatibilität bereitgestellt.
+title: /ms_union Switch
+description: Der \_ /ms union-Schalter steuert die NDR-Ausrichtung von nicht gekapselten Unions. Hinweis Dieses Attribut wird aus Gründen der Abwärtskompatibilität bereitgestellt.
 ms.assetid: 683d1498-6419-4600-ad5b-c0b6ea44a8e1
 keywords:
-- /Ms_union-Schalter-Mittel l
+- /ms_union Switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 968618af5c2bb5b32ec14b293225bc09c2997aa5
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9b8e2f4b86929954ad67c845cf546d46f5950698fce7c21d721613af3611a066
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811390"
 ---
-# <a name="ms_union-switch"></a>/MS \_ Union-Switch
+# <a name="ms_union-switch"></a>\_/ms union switch
 
-Der **/MS- \_ Union** -Switch steuert die NDR-Ausrichtung von nicht gekapselten Unions.
+Der **/ms \_ union-Schalter** steuert die NDR-Ausrichtung von nicht gekapselten Unions.
 
 > [!Note]  
-> Dieses Attribut wird aus Gründen der Abwärtskompatibilität bereitgestellt. Es wird nicht empfohlen, in einer neuen-Schnittstelle zu verwenden.
+> Dieses Attribut wird aus Gründen der Abwärtskompatibilität bereitgestellt. Es wird nicht für die Verwendung in einer neuen Schnittstelle empfohlen.
 
- 
+ 
 
 ``` syntax
 midl /ms_union
@@ -34,31 +34,31 @@ midl /ms_union
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der mittlerer l-Compiler spiegelt das Verhalten des OSF-DCE-IDL-Compilers für nicht gekapselte Unions wider. Da jedoch frühere Versionen des Mittel l-Compilers dies nicht getan haben, bietet der **/MS \_ Union** -Switch Kompatibilität mit Schnittstellen, die auf früheren Versionen des Mittel l-Compilers erstellt wurden.
+Der MIDL-Compiler spiegelt das Verhalten des OSF-DCE-IDL-Compilers für nicht gekapselte Unions wider. Da frühere Versionen des MIDL-Compilers dies jedoch nicht getan haben, bietet der **\_ /ms-Union-Switch** Kompatibilität mit Schnittstellen, die auf früheren Versionen des MIDL-Compilers basierten.
 
-Die MS \_ -Union-Funktion kann als Befehls Zeilenschalter (**/MS \_ Union**), als idl-Schnittstellen Attribut oder als IDL-Type-Attribut verwendet werden.
+Das Feature ms \_ union kann als Befehlszeilenschalter (**/ms \_ union**), als IDL-Schnittstellenattribut oder als IDL-Typattribut verwendet werden.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/MS \_ Union file. idl**
+**midl /ms \_ union file.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

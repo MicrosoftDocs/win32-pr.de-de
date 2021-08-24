@@ -1,7 +1,7 @@
 ---
-description: 'Die getrequesthandle-Methode ruft ein Handle für das Ereignis ab, das von der camthread:: callworker-Methode signalisiert wird.'
+description: Die GetRequestHandle-Methode ruft ein Handle für das Ereignis ab, das von der CABThread::CallWorker-Methode signalisiert wird.
 ms.assetid: 6e4496ae-a635-4b55-ae7a-31748f21068b
-title: Camthread. getrequesthandle-Methode (wxutil. h)
+title: CABThread.GetRequestHandle-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 051a6a3e3daed1dae6df3bdbb42e36f07b852d85
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 82fa1be333ff35821f187cea980746c6b729a05c12e2103f4465bb44bbcc6f9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652590"
 ---
-# <a name="camthreadgetrequesthandle-method"></a>Camthread. getrequesthandle-Methode
+# <a name="camthreadgetrequesthandle-method"></a>CABThread.GetRequestHandle-Methode
 
-Die- `GetRequestHandle` Methode ruft ein Handle für das-Ereignis ab, das von der [**camthread:: callworker**](camthread-callworker.md) -Methode signalisiert wird.
+Die `GetRequestHandle` -Methode ruft ein Handle für das -Ereignis ab, das von der [**CABThread::CallWorker-Methode**](camthread-callworker.md) signalisiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Ereignis Handle zurück.
+Gibt ein Ereignishandle zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Klasse "camevent" behält ein privates Manuelles Zurücksetzungs Ereignis bei, das von callworker festgelegt und durch die Methode " [**camthread:: Reply**](camthread-reply.md) " zurückgesetzt wird.
+Die KLASSE CABEvent behält ein privates Ereignis für die manuelle Zurücksetzung bei, das von CallWorker festgelegt und von der [**METHODE "RESETThread::Reply"**](camthread-reply.md) zurückgesetzt wird.
 
-Wenn Sie eine Funktion wie WaitForMultipleObjects aufrufen, verwenden Sie getrequesthandle, um das Ereignis Handle abzurufen.
+Wenn Sie eine Funktion wie WaitForMultipleObjects aufrufen, verwenden Sie GetRequestHandle, um das Ereignishandle abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Wenn Sie eine Funktion wie WaitForMultipleObjects aufrufen, verwenden Sie getreq
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Wenn Sie eine Funktion wie WaitForMultipleObjects aufrufen, verwenden Sie getreq
 
 <dl> <dt>
 
-[**Camthread-Klasse**](camthread.md)
+[**WEBCAMThread-Klasse**](camthread.md)
 </dt> </dl>
 
  
