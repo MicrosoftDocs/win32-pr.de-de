@@ -1,61 +1,61 @@
 ---
-title: Register-vs_5_0
-description: Die folgenden Eingabe-und Ausgabe Register sind in der Vertex-Shader-Version 5 \_ 0 implementiert.
+title: Register – vs_5_0
+description: Die folgenden Eingabe- und Ausgaberegister werden in Version 5 0 des Vertex-Shaders \_ implementiert.
 ms.assetid: 475753C7-C055-4DB7-9DC3-6C734413A92B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6eb1dc211f5f3dd8819577c796849dcb86012cc0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 76f9c80125a4640e558872e29e435d48e7420bbd6c504577a5e0c84781f8a47d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104976136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853900"
 ---
-# <a name="registers---vs_5_0"></a>Register-vs \_ 5 \_ 0
+# <a name="registers---vs_5_0"></a>Registrierungen im Vergleich zu \_ 5 \_ 0
 
-Die folgenden Eingabe-und Ausgabe Register sind in der Vertex-Shader-Version 5 \_ 0 implementiert.
+Die folgenden Eingabe- und Ausgaberegister werden in Version 5 0 des Vertex-Shaders \_ implementiert.
 
-## <a name="input-registers"></a>Eingabe Register
+## <a name="input-registers"></a>Eingaberegister
 
 
 
-| Registriungstyp                                      | Anzahl              | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                      | Anzahl              | R/W | Dimension | Indizierbar von r\# | Standardeinstellungen | Erfordert DCL |
 |----------------------------------------------------|--------------------|-----|-----------|------------------|----------|--------------|
-| 32-Bit-Temp (r \# )                                  | 4096 (r \# + x \# \[ n \] ) | R/W | 4         | Nein               | Keine     | Ja          |
-| 32-Bit indizierbares temporäres Array (x \# \[ n \] )             | 4096 (r \# + x \# \[ n \] ) | R/W | 4         | Ja              | Keine     | Ja          |
+| 32-Bit-Temp (r \# )                                  | 4096(r \# +x \# \[ n \] ) | R/W | 4         | Nein               | Keine     | Ja          |
+| 32-Bit-indizierbares temporäres Array (x \# \[ n \] )             | 4096(r \# +x \# \[ n \] ) | R/W | 4         | Ja              | Keine     | Ja          |
 | 32-Bit-Eingabe (v \# )                                 | 32                 | R   | 4         | Ja              | Keine     | Ja          |
-| -Element in einer Eingabe Ressource (t \# )                 | 128                | R   | 1         | Nein               | Keine     | Ja          |
-| Sampler (e \# )                                      | 16                 | R   | 1         | Nein               | Keine     | Ja          |
-| Constantbuffer-Verweis (CB- \# \[ Index \] )           | 15                 | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
-| iimmediate constantbuffer-Referenz (ICB- \[ Index \] ) | 1                  | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
+| Element in einer Eingaberessource (t \# )                 | 128                | R   | 1         | Nein               | Keine     | Ja          |
+| Sampler (s \# )                                      | 16                 | R   | 1         | Nein               | Keine     | Ja          |
+| ConstantBuffer-Referenz \# \[ (CB-Index \] )           | 15                 | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
+| iImmediate ConstantBuffer-Referenz (icb \[ index \] ) | 1                  | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
 
 
 
- 
+ 
 
-## <a name="output-registers"></a>Ausgabe Register
+## <a name="output-registers"></a>Ausgaberegister
 
 
 
-| Registriungstyp                                                      | Anzahl | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registertyp                                                      | Anzahl | R/W | Dimension | Indizierbar von r\# | Standardeinstellungen | Erfordert DCL |
 |--------------------------------------------------------------------|-------|-----|-----------|------------------|----------|--------------|
-| NULL (Ergebnis verwerfen, nützlich für Vorgänge mit mehreren Ergebnissen) | –   | W   | –       | –              | –      | Nein           |
-| 32-Bit-Ausgabe-Vertex-Daten Element (o \# )                            | 32    | W   | 4         | –              | –      | Ja          |
+| NULL (Verwerfen des Ergebnisses, nützlich für Vorgänge mit mehreren Ergebnissen) | Nicht zutreffend   | W   | Nicht zutreffend       | Nicht zutreffend              | –      | Nein           |
+| 32-Bit-Ausgabe Vertex-Datenelement (o \# )                            | 32    | W   | 4         | Nicht zutreffend              | –      | Ja          |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

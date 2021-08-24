@@ -1,29 +1,29 @@
 ---
-description: WIA wird als Component Object Model (com) out-of-Process-Server implementiert, um den robusten Betrieb von Client Anwendungen zu gewährleisten.
+description: WIA wird als out-of-process-Server (COM) Component Object Model implementiert, um den stabilen Betrieb von Clientanwendungen sicherzustellen.
 ms.assetid: 9f3d1848-36ab-4e0f-a7f4-312bc85ecc00
 title: WIA-Architektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09652258ee249fb3c68e65472e863ccd35154ee5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 159a6bb88fba5a79f2915500786bbfcf8d531bfe0170ec6c6841f419425ee296
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104560671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813264"
 ---
 # <a name="wia-architecture"></a>WIA-Architektur
 
-WIA wird als Component Object Model (com) out-of-Process-Server implementiert, um den robusten Betrieb von Client Anwendungen zu gewährleisten. Im Gegensatz zu den meisten Prozess Server Anwendungen vermeidet die Windows-Abbild Beschaffung (WIA) während der Abbild Datenübertragung durch die Bereitstellung eines eigenen Datenübertragungsmechanismus ( [**iwiadatatransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer)) Leistungseinbußen. Diese Hochleistungs Schnittstelle verwendet ein frei gegebenes Speicherfenster zum Übertragen von Daten an den Client.
+WIA wird als out-of-process-Server (COM) Component Object Model implementiert, um den stabilen Betrieb von Clientanwendungen sicherzustellen. Im Gegensatz zu den meisten Out-of-Process-Serveranwendungen vermeidet Windows Image Acquisition (WIA) Leistungsnachgaben während der Bilddatenübertragung, indem ein eigener Datenübertragungsmechanismus( [**IWiaDataTransfer**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadatatransfer)) zur Verfügung stellt. Diese Hochleistungsschnittstelle verwendet ein Freigegebenes Speicherfenster, um Daten an den Client zu übertragen.
 
-WIA umfasst drei Hauptkomponenten: eine Device Manager, eine Minidriver-Dienst Bibliothek und ein Geräte-Mini Treiber.
+WIA verfügt über drei Hauptkomponenten: einen Geräte-Manager, eine Minidriver-Dienstbibliothek und einen Geräte-Minitreiber.
 
--   Der Device Manager listet Abbild Erstellungs Geräte auf, ruft Geräteeigenschaften ab, richtet Ereignisse für Geräte ein und erstellt Geräte Objekte.
--   Die Minidriver-Dienst Bibliothek implementiert alle Dienste, die Geräte unabhängig sind.
--   Der Geräte-Mini Treiber ordnet einem bestimmten Gerät WIA-Eigenschaften und-Befehle zu.
+-   Der Geräte-Manager listet Bildverarbeitungsgeräte auf, ruft Geräteeigenschaften ab, richtet Ereignisse für Geräte ein und erstellt Geräteobjekte.
+-   Die Minidriver-Dienstbibliothek implementiert alle geräteunabhängigen Dienste.
+-   Der Geräte-Minitreiber ordnet WIA-Eigenschaften und -Befehle dem jeweiligen Gerät zu.
 
 Das folgende Diagramm veranschaulicht die WIA-Architektur:
 
-![WIA-Architektur](images/wiarch.gif)
+![wia-Architektur](images/wiarch.gif)
 
  
 

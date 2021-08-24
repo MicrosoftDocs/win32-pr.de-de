@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Home-Directory-Attribut
-description: Terminal Dienste-Basisverzeichnis gibt das Basisverzeichnis für den Benutzer an.
+title: ms-TS-Home-Directory-Attribut
+description: Terminal Services Home Directory gibt das Startverzeichnis für den Benutzer an.
 ms.assetid: 07ee28e2-34c1-4091-a409-ff74001059c3
 ms.tgt_platform: multiple
 keywords:
 - MS-TS-Home-Directory-Attribut AD-Schema
-- AD-Schema des mstshomedirectory-Attributs
+- MSTSHomeDirectory-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef0cf3b0e2457c0efc3e14861ece3391551339cf
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 34a8e49da3ba1283a54392253dac67d791a43d08689210f984f8f8176a37f316
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761190"
 ---
-# <a name="ms-ts-home-directory-attribute"></a>MS-TS-Home-Directory-Attribut
+# <a name="ms-ts-home-directory-attribute"></a>ms-TS-Home-Directory-Attribut
 
-Terminal Dienste-Basisverzeichnis gibt das Basisverzeichnis für den Benutzer an.
+Terminal Services Home Directory gibt das Startverzeichnis für den Benutzer an.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-TS-Home-Verzeichnis                        |
-| LDAP-Display-Name | mstshomedirectory                           |
+| CN                | ms-TS-Home-Directory                        |
+| Ldap-Anzeigename | msTSHomeDirectory                           |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1977                     |
-| System-ID-GUID    | 5d3510l0-c4e7-4122-B91-a20add90e246        |
+| System-ID-GUID    | 5d3510f0-c4e7-4122-b91f-a20add90e246        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,10 +55,10 @@ Terminal Dienste-Basisverzeichnis gibt das Basisverzeichnis für den Benutzer an
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -76,10 +76,10 @@ Terminal Dienste-Basisverzeichnis gibt das Basisverzeichnis für den Benutzer an
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |
@@ -97,10 +97,10 @@ Terminal Dienste-Basisverzeichnis gibt das Basisverzeichnis für den Benutzer an
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 32767                             |
 | Search-Flags           | 0x00000000                        |

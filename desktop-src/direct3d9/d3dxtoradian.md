@@ -1,7 +1,7 @@
 ---
-description: Wandelt Grad in Bogenmaß um.
+description: Konvertiert Grad in Bogenmaß.
 ms.assetid: 450806bd-db2f-47be-ae80-c261088b1bb8
-title: D3DXToRadian (D3dx9math. h)
+title: D3DXToRadian (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: e06184a0d3c654a2c0e82431ff25a339f5682837
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 81f15ca3c117cb3020165bb820d221d416198893b45285931fa6cf3b1f66eea1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749650"
 ---
 # <a name="d3dxtoradian"></a>D3DXToRadian
 
-Wandelt Grad in Bogenmaß um.
+Konvertiert Grad in Bogenmaß.
 
 ``` syntax
 #define D3DXToRadian(degree) ((degree) * (D3DX_PI / 180.0f))
@@ -32,9 +32,9 @@ Wandelt Grad in Bogenmaß um.
 
 
 
-| Parameter                                                           | BESCHREIBUNG                                              |
+| Parameter                                                           | Beschreibung                                              |
 |---------------------------------------------------------------------|----------------------------------------------------------|
-| <span id="degree"></span><span id="DEGREE"></span>theits<br/> | Der Wert in Grad, der in das Bogenmaß konvertiert werden soll.<br/> |
+| <span id="degree"></span><span id="DEGREE"></span>Grad<br/> | Der Wert in Grad, der in Bogenmaß konvertiert werden soll.<br/> |
 
 
 
@@ -42,7 +42,7 @@ Wandelt Grad in Bogenmaß um.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das-Makro gibt den Wert für den Grad im Bogenmaß zurück.
+Das Makro gibt den Gradwert im Bogenmaß zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Das-Makro gibt den Wert für den Grad im Bogenmaß zurück.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
@@ -64,7 +64,7 @@ Das-Makro gibt den Wert für den Grad im Bogenmaß zurück.
 [**D3DXToDegree**](d3dxtodegree.md)
 </dt> <dt>
 
-[D3DX \_ Pi](other-d3dx-constants.md)
+[D3DX \_ PI](other-d3dx-constants.md)
 </dt> </dl>
 
  

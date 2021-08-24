@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1dd0bf38f2fa3be0e077f2509001680bbfc84e15
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ddd064934eea6ef2c88a4304466b15811910e8e352041e7242c75650dd54b2a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812780"
 ---
 # <a name="ctransformoutputpingetmediatype-method"></a>CTransformOutputPin.GetMediaType-Methode
 
@@ -59,20 +59,20 @@ Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp empfän
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                   |
 |--------------------------------------------------------------------------------------------------------|-------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Erfolg<br/>            |
-| <dl> <dt>**VFW \_ S KEINE ELEMENTE \_ \_ \_ MEHR**</dt> </dl> | Index liegt nicht im Bereich<br/> |
+| <dl> <dt>**VFW \_ S \_ NO \_ MORE \_ ITEMS**</dt> </dl> | Index außerhalb des Bereichs<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode überschreibt die [**CBasePin::GetMediaType-Methode.**](cbasepin-getmediatype.md) Wenn der Eingabepin des Filters nicht verbunden ist, gibt die Methode VFW \_ S NO MORE ITEMS \_ \_ \_ zurück. Andernfalls wird die [**CTransformFilter::GetMediaType-Methode**](ctransformfilter-getmediatype.md) des Filters aufgerufen, um den Medientyp abzurufen. Die **CTransformFilter::GetMediaType-Methode** ist rein virtuell. Die abgeleitete Klasse des Filters muss sie überschreiben.
 
@@ -80,10 +80,10 @@ Diese Methode überschreibt die [**CBasePin::GetMediaType-Methode.**](cbasepin-g
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

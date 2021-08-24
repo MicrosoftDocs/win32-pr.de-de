@@ -1,11 +1,11 @@
 ---
-title: MS-DFS-Generation-GUID-v2-Attribut
-description: Wird jedes Mal aktualisiert, wenn der Eintrag geändert wird, der dieses Attribut enthält.
+title: ms-DFS-Generation-GUID-v2-Attribut
+description: Wird jedes Mal aktualisiert, wenn der Eintrag, der dieses Attribut enthält, geändert wird.
 ms.assetid: 9c343c31-ecce-4ba3-a03f-e61e24b287d0
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-DFS-Generation-GUID-v2-Attribut
-- Schema für msdfs-GenerationGUIDv2-Attribut
+- MS-DFS-Generation-GUID-v2-Attribut AD-Schema
+- MSDFS-GenerationGUIDv2-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 11e20e2a7708bf7264ec447176475d7eda9f04da
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b351ff341a129403a8b04a16739d403595bc8c9b124dc889414c1f8efa9be176
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705130"
 ---
-# <a name="ms-dfs-generation-guid-v2-attribute"></a>MS-DFS-Generation-GUID-v2-Attribut
+# <a name="ms-dfs-generation-guid-v2-attribute"></a>ms-DFS-Generation-GUID-v2-Attribut
 
-Wird jedes Mal aktualisiert, wenn der Eintrag geändert wird, der dieses Attribut enthält.
+Wird jedes Mal aktualisiert, wenn der Eintrag, der dieses Attribut enthält, geändert wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-DFS-Generation-GUID-v2                             |
-| LDAP-Display-Name | msdfs-GenerationGUIDv2                                |
+| CN                | ms-DFS-Generation-GUID-v2                             |
+| Ldap-Anzeigename | msDFS-GenerationGUIDv2                                |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2032                               |
-| System-ID-GUID    | 35b8b3d9-c58t-43D6-930E-5040f.                  |
+| System-ID-GUID    | 35b8b3d9-c58f-43d6-930e-5040f2f1a781                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -54,16 +54,16 @@ Wird jedes Mal aktualisiert, wenn der Eintrag geändert wird, der dieses Attribu
 |------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                |
 | MAPI-Id                | \-                                                                                                                |
-| System-Only            | False                                                                                                             |
-| Ist-einwertig       | Richtig                                                                                                              |
-| Ist indiziert             | False                                                                                                             |
-| Im globalen Katalog      | False                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                      |
+| System-Only            | Falsch                                                                                                             |
+| Ist einwertig       | Richtig                                                                                                              |
+| Ist indiziert             | Falsch                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                      |
 | Range-Lower            | 16                                                                                                                |
 | Range-Upper            | 16                                                                                                                |
 | Search-Flags           | 0x00000000                                                                                                        |
 | System-Flags           | 0x00000010                                                                                                        |
-| In verwendete Klassen        | [**MS-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**MS-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
+| In verwendete Klassen        | [**ms-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**ms-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Wird jedes Mal aktualisiert, wenn der Eintrag geändert wird, der dieses Attribu
 |------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                |
 | MAPI-Id                | \-                                                                                                                |
-| System-Only            | False                                                                                                             |
-| Ist-einwertig       | Richtig                                                                                                              |
-| Ist indiziert             | False                                                                                                             |
-| Im globalen Katalog      | False                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                      |
+| System-Only            | Falsch                                                                                                             |
+| Ist einwertig       | Richtig                                                                                                              |
+| Ist indiziert             | Falsch                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                      |
 | Range-Lower            | 16                                                                                                                |
 | Range-Upper            | 16                                                                                                                |
 | Search-Flags           | 0x00000000                                                                                                        |
 | System-Flags           | 0x00000010                                                                                                        |
-| In verwendete Klassen        | [**MS-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**MS-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
+| In verwendete Klassen        | [**ms-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**ms-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Wird jedes Mal aktualisiert, wenn der Eintrag geändert wird, der dieses Attribu
 |------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                |
 | MAPI-Id                | \-                                                                                                                |
-| System-Only            | False                                                                                                             |
-| Ist-einwertig       | Richtig                                                                                                              |
-| Ist indiziert             | False                                                                                                             |
-| Im globalen Katalog      | False                                                                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                      |
+| System-Only            | Falsch                                                                                                             |
+| Ist einwertig       | Richtig                                                                                                              |
+| Ist indiziert             | Falsch                                                                                                             |
+| Im globalen Katalog      | Falsch                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                      |
 | Range-Lower            | 16                                                                                                                |
 | Range-Upper            | 16                                                                                                                |
 | Search-Flags           | 0x00000000                                                                                                        |
 | System-Flags           | 0x00000010                                                                                                        |
-| In verwendete Klassen        | [**MS-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**MS-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
+| In verwendete Klassen        | [**ms-DFS-Link-v2**](c-msdfs-linkv2.md)<br/> [**ms-DFS-Namespace-v2**](c-msdfs-namespacev2.md)<br/> |
 
 
 

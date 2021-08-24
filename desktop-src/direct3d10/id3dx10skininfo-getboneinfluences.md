@@ -1,7 +1,7 @@
 ---
-description: Eine Liste der Scheitel Punkte, die von einem bestimmten Knochen beeinflusst werden, und eine Liste der Auswirkungen von Bone auf jeden Scheitelpunkt erhalten.
+description: Abrufen einer Liste von Scheitelpunkten, die von einem bestimmten Fluss beeinflusst werden, sowie eine Liste der Einflussfaktoren, die Dies auf jeden Scheitelpunkt hat.
 ms.assetid: d1dea694-874d-4f21-87a8-f6b013617544
-title: 'ID3DX10SkinInfo:: getboneingefluences-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::GetBoneInfluences-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 9aead6b1dd381011a922c5bfbc1874976a78417c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 38d6901abd871a2b65f4d6816ad4d4b7a0d2effb5ccbd3f4ccee20bc0b8d5ea7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752910"
 ---
-# <a name="id3dx10skininfogetboneinfluences-method"></a>ID3DX10SkinInfo:: getboneingefluences-Methode
+# <a name="id3dx10skininfogetboneinfluences-method"></a>ID3DX10SkinInfo::GetBoneInfluences-Methode
 
-Eine Liste der Scheitel Punkte, die von einem bestimmten Knochen beeinflusst werden, und eine Liste der Auswirkungen von Bone auf jeden Scheitelpunkt erhalten.
+Abrufen einer Liste von Scheitelpunkten, die von einem bestimmten Fluss beeinflusst werden, sowie eine Liste der Einflussfaktoren, die Dies auf jeden Scheitelpunkt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT GetBoneInfluences(
 
 <dl> <dt>
 
-*Boneingedex* \[ in\]
+*Unterindex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der einen vorhandenen Knochen Wert angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der einen vorhandenen Auswerter angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen**](id3dx10skininfo-getnumbones.md)Wert sein.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Offset vom oberen Rand der Liste der von ihm beeinflussten Scheitel Punkte. Dieser Wert muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getboneinfluscecount**](id3dx10skininfo-getboneinfluencecount.md)zurückgegebenen Wert liegen.
+Ein Offset vom Anfang der Liste der beeinflussten Scheitelpunkte des Gerüsts. Dies muss zwischen 0 und dem wert sein, der von [**ID3DX10SkinInfo::GetBoneInfluenceCount**](id3dx10skininfo-getboneinfluencecount.md)zurückgegeben wird.
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Indizes und Gewichtungen, die abgerufen werden sollen. Muss zwischen 0 und dem von ID3DX10SkinInfo:: getboneinfluscecount zurückgegebenen Wert liegen.
+Die Anzahl der abzurufenden Indizes und Gewichtungen. Muss zwischen 0 und dem wert sein, der von ID3DX10SkinInfo::GetBoneInfluenceCount zurückgegeben wird.
 
 </dd> <dt>
 
-*pdestindices* \[ in, out\]
+*pDestIndices* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Eine Liste von Indizes in den Scheitelpunkt Puffer, die jeweils einen Vertex darstellen, der durch den Knochen beeinflusst wird. Diese Werte entsprechen den Werten in "pdestgewichtungen", sodass "pdestindices \[ i" \] pdestgewichtungen \[ i entspricht \] .
+Eine Liste der Indizes im Scheitelpunktpuffer, die jeweils einen von der Ziege beeinflussten Scheitelpunkt darstellen. Diese Werte entsprechen den Werten in pDestWeights, sodass pDestIndices \[ i \] pDestWeights \[ i entspricht. \]
 
 </dd> <dt>
 
-*pdestgewichtungen* \[ in, out\]
+*pDestWeights* \[ in, out\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Eine Liste der Auswirkungen, die der Knochen auf jedem Scheitelpunkt hat. Diese Werte entsprechen den Werten in pdestindices, sodass pdestgewichtungen \[ ich \] pdestindices \[ i \] . f verwende.
+Eine Liste der Einflussmöglichkeiten, die die Zählung auf die einzelnen Scheitelpunkte hat. Diese Werte entsprechen den Werten in pDestIndices, sodass pDestWeights \[ i \] pDestIndices \[ i \] entspricht.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Eine Liste der Auswirkungen, die der Knochen auf jedem Scheitelpunkt hat. Diese 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: E \_ invalidArg oder e \_ oudef Memory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ INVALIDARG oder E \_ OUTOFMEMORY sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,12 +101,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

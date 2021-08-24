@@ -1,6 +1,6 @@
 ---
-title: Interaktions Kontext Verweis
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für den Interaktions Kontext.
+title: Interaktionskontextreferenz
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Interaktionskontext.
 ms.assetid: DDD141E3-7DEE-4259-87BE-E11A51CF6EEE
 keywords:
 - Benutzereingriff
@@ -12,27 +12,27 @@ keywords:
 - Tablettstift
 ms.topic: article
 ms.date: 02/06/2020
-ms.openlocfilehash: b4c1be73e57549cb99b31a98f7bf132cfa3d667c
-ms.sourcegitcommit: 6b8d5058d02daacad4d2ed7830da63b63a509586
+ms.openlocfilehash: ce3d21b6f0ae5be8318361e8685d1ea918d5963a2ff82c2ae39f1d550f7f4e1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "104101210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119717480"
 ---
-# <a name="interaction-context-reference"></a>Interaktions Kontext Verweis
+# <a name="interaction-context-reference"></a>Interaktionskontextreferenz
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für den [Interaktions Kontext](interaction-context-portal.md).
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Interaktionskontext](interaction-context-portal.md).
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |---|---|
-| [**Hinteraktionskontext**](hinteractioncontext.md)<br/>                                  | Handle für ein [Interaktions Kontext](interaction-context-portal.md) Objekt.<br/>                                                              |
-| [*Interaktions \_ Kontext- \_ Ausgabe \_ Rückruf*](/windows/win32/api/interactioncontext/nc-interactioncontext-interaction_context_output_callback)<br/> | Ein Rückruf, der Ereignisse von einem [Interaktions Kontext](interaction-context-portal.md) Objekt empfängt.<br/>                                     |
-| [Interaktions Kontext Enumerationen](enumerations.md)<br/>                                | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Interaktions Kontext](interaction-context-portal.md) Enumerationen.<br/> |
-| [Interaktions Kontextfunktionen](functions.md)<br/>                                      | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Interaktions Kontext](interaction-context-portal.md) Funktionen.<br/>    |
-| [Interaktions Kontext Strukturen](structures.md)<br/>                                    | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Interaktions Kontext](interaction-context-portal.md) Strukturen.<br/>   |
+| [**HINTERACTIONCONTEXT**](hinteractioncontext.md)<br/>                                  | Handle für ein [Interaktionskontextobjekt.](interaction-context-portal.md)<br/>                                                              |
+| [*\_ \_ \_ INTERAKTIONSKONTEXTAUSGABERÜCKRUF*](/windows/win32/api/interactioncontext/nc-interactioncontext-interaction_context_output_callback)<br/> | Rückruf, der Ereignisse von einem [Interaktionskontextobjekt](interaction-context-portal.md) empfängt.<br/>                                     |
+| [Interaktionskontextenumerationen](enumerations.md)<br/>                                | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Interaction Context-Enumerationen.](interaction-context-portal.md)<br/> |
+| [Interaktionskontextfunktionen](functions.md)<br/>                                      | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Interaktionskontextfunktionen.](interaction-context-portal.md)<br/>    |
+| [Interaktionskontextstrukturen](structures.md)<br/>                                    | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Interaktionskontextstrukturen.](interaction-context-portal.md)<br/>   |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Interaktions Kontext](interaction-context-portal.md)
+[Interaktionskontext](interaction-context-portal.md)

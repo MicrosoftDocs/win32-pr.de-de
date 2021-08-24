@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob der Encoder am Ende des Streams partielle Gruppen von Bildern (GOPs) verwirft.
+description: Gibt an, ob der Encoder partielle Bildgruppen (GOPs) am Ende des Streams verwirft.
 ms.assetid: 93cf1299-a8ba-4a14-ad4c-09dd931e18fc
-title: Avenccommonstreamendhandling-Eigenschaft (codecapi. h)
+title: AVEncCommonStreamEndHandling-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53d453f1629622b12571064fe6511ec60f42d67b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ccfa6e9eae8e4b554c549ca84553260059e9dbe435df7dcf0c2d52ced16d48a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119794650"
 ---
-# <a name="avenccommonstreamendhandling-property"></a>Avenccommonstreamendhandling (Eigenschaft)
+# <a name="avenccommonstreamendhandling-property"></a>AVEncCommonStreamEndHandling (Eigenschaft)
 
-Gibt an, ob der Encoder am Ende des Streams partielle Gruppen von Bildern (GOPs) verwirft.
+Gibt an, ob der Encoder partielle Bildgruppen (GOPs) am Ende des Streams verwirft.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avenccommonstreamendhandling**
+**CODECAPI \_ AVEncCommonStreamEndHandling**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavenccommonstreamendhandling**](/windows/win32/api/codecapi/ne-codecapi-eavenccommonstreamendhandling) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncCommonStreamEndHandling-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavenccommonstreamendhandling)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavenccommonstreamendhandling*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavenccommonstreamendhandling*
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

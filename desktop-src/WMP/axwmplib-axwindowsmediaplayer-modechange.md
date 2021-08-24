@@ -1,9 +1,9 @@
 ---
-title: Modechange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das modechange-Ereignis tritt auf, wenn ein Windows Media Player-Modus geändert wird. | Modechange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: ModeChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das ModeChange-Ereignis tritt auf, wenn ein Modus von Windows Media Player geändert wird. | ModeChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 56308425-dce5-4691-8970-c0807744abef
 keywords:
-- Modechange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- ModeChange-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c06575fc986f4223056244964c2d070874c890b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aa3b81ce7c48fd34f03131c7ed3f6cafed1029b103f218842a70ecaade08f1af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764840"
 ---
-# <a name="modechange-event-of-the-axwindowsmediaplayer-object"></a>Modechange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="modechange-event-of-the-axwindowsmediaplayer-object"></a>ModeChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das modechange-Ereignis tritt auf, wenn ein Windows Media Player-Modus geändert wird.
+Das ModeChange-Ereignis tritt auf, wenn ein Modus von Windows Media Player geändert wird.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_ModeChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ modechangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ modechangeevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ModeChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ ModeChangeEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                                                    |
+| Eigenschaft | Beschreibung                                                                                    |
 |----------|------------------------------------------------------------------------------------------------|
-| "Name" | System. stringindikiert den Modus, der geändert wurde. Mögliche Werte finden Sie unter "Hinweise".<br/> |
-| newValue | System. booleangibt den neuen Zustand des angegebenen Modus an.<br/>                        |
+| modeName | System.StringIndicates the mode that was changed. Mögliche Werte finden Sie unter Hinweise.<br/> |
+| newValue | System.BooleanIndicates den neuen Zustand des angegebenen Modus.<br/>                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der folgenden Tabelle werden die möglichen Werte für die Eigenschaft "mudename" angezeigt.
+Die folgende Tabelle zeigt die möglichen Werte für die modeName-Eigenschaft.
 
 
 
@@ -75,23 +75,23 @@ In der folgenden Tabelle werden die möglichen Werte für die Eigenschaft "muden
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. getMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
+[**IWMPSettings.getMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. SetMode (VB und c#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
+[**IWMPSettings.setMode (VB und C#)**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md)
 </dt> </dl>
 
  

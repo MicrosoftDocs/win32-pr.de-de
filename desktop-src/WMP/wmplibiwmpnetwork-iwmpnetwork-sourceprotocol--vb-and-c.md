@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork sourceprotocol (Eigenschaft)
-description: Die sourceprotocol-Eigenschaft ruft das Quell Protokoll ab, das zum Empfangen von Daten verwendet wird.
+title: IWMPNetwork sourceProtocol (Eigenschaft)
+description: Die sourceProtocol-Eigenschaft ruft das Quellprotokoll ab, das zum Empfangen von Daten verwendet wird.
 ms.assetid: db1d7651-3f25-4ac9-a3e1-dc3a8ddf8c40
 keywords:
-- sourceprotocol-Eigenschaften Fenster Media Player
-- sourceprotocol-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, sourceprotocol (Eigenschaft)
+- sourceProtocol-Windows Media Player
+- sourceProtocol-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , sourceProtocol-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5017e1a053c124a1f7f50668c6f392eb541d57f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 737bc0a5a4417735c795fc1058a7b821ee52489cf838be9eb934546f0fabacc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760850"
 ---
-# <a name="iwmpnetworksourceprotocol-property"></a>Iwmpnetwork:: sourceprotocol (Eigenschaft)
+# <a name="iwmpnetworksourceprotocol-property"></a>IWMPNetwork::sourceProtocol (Eigenschaft)
 
-Die **sourceprotocol** -Eigenschaft ruft das Quell Protokoll ab, das zum Empfangen von Daten verwendet wird.
+Die **sourceProtocol-Eigenschaft** ruft das Quellprotokoll ab, das zum Empfangen von Daten verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Public ReadOnly Property sourceProtocol As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. String** -Wert, der den Namen des Quell Protokolls ist.
+Eine **System.String,** die der Name des Quellprotokolls ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft erhält eine Zeichenfolge der Länge 0 (null) (""), wenn eine CD oder DVD wiedergegeben wird.
+Diese Eigenschaft ruft eine Zeichenfolge der Länge 0 ("") ab, wenn eine CD oder DVD wiedergibt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **sourceprotocol** verwendet, um das Quell Protokoll anzuzeigen, das zum Empfangen von Daten verwendet wird. Die Informationen werden in einer Bezeichnung als Reaktion auf das **PlayStateChange** -Ereignis angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **sourceProtocol** verwendet, um das Quellprotokoll anzuzeigen, das zum Empfangen von Daten verwendet wird. Die Informationen werden als Reaktion auf das **PlayStateChange-Ereignis** in einer Bezeichnung angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -110,7 +110,7 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

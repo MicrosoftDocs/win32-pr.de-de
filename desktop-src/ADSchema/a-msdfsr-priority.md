@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-priority-Attribut
-description: Prioritätsstufe.
+title: ms-DFSR-Priority-Attribut
+description: Prioritätsebene.
 ms.assetid: 64992cb5-1167-469d-a3bd-a524652475a1
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-DFSR-priority-Attribut
-- AD-Schema für msdfsr-priority-Attribut
+- MS-DFSR-Priority-Attribut AD-Schema
+- AD-Schema des msDFSR-Priority-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a0b80f1ac05f05691c03fa9d62bb29444dbac1a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bace8fd682a00b3d0f4f2252ad792e9c0cf1110975b1e90264c7842e3f1661cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704950"
 ---
-# <a name="ms-dfsr-priority-attribute"></a>MS-DFSR-priority-Attribut
+# <a name="ms-dfsr-priority-attribute"></a>ms-DFSR-Priority-Attribut
 
-Prioritätsstufe.
+Prioritätsebene.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DFSR-Priorität                     |
-| LDAP-Display-Name | msdfsr-Priorität                      |
+| CN                | ms-DFSR-Priority                     |
+| Ldap-Anzeigename | msDFSR-Priority                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.25           |
-| System-ID-GUID    | eb20e7d6-32ad-42de-b141-16ad2631b01b |
+| System-Id-Guid    | eb20e7d6-32ad-42de-b141-16ad2631b01b |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,15 +55,15 @@ Prioritätsstufe.
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                                      |
+| Is-Single-Valued       | True                                                                                                                      |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -76,15 +76,15 @@ Prioritätsstufe.
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                                      |
+| Is-Single-Valued       | True                                                                                                                      |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 
@@ -97,15 +97,15 @@ Prioritätsstufe.
 | Link-ID                | \-                                                                                                                        |
 | MAPI-Id                | \-                                                                                                                        |
 | System-Only            | False                                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                                      |
+| Is-Single-Valued       | True                                                                                                                      |
 | Ist indiziert             | False                                                                                                                     |
 | Im globalen Katalog      | False                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                              |
 | Range-Lower            | \-                                                                                                                        |
 | Range-Upper            | \-                                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                                |
 | System-Flags           | 0x00000000                                                                                                                |
-| In verwendete Klassen        | [**MS-DFSR-contentset**](c-msdfsr-contentset.md)<br/> [**MS-DFSR-Verbindung**](c-msdfsr-connection.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-ContentSet**](c-msdfsr-contentset.md)<br/> [**ms-DFSR-Connection**](c-msdfsr-connection.md)<br/> |
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_RemoteAssistance02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ RemoteAssistance02-Klasse stellt die Remote Unterstützungs Richtlinien dar.
+description: Die MDM \_ Policy \_ Result01 \_ RemoteDesktopAnce02-Klasse stellt die Remoteunterstützungsrichtlinien dar.
 ms.assetid: ddb932ef-b309-4aad-8ab8-9d88739d90be
 keywords:
 - MDM_Policy_Result01_RemoteAssistance02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ed928668e4851c981ea7c68d02cd1cdbefbda4f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 06a1aa88a72b93cb2c8de444867848560de90f456df62326e32a736dd662b6e7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750530"
 ---
-# <a name="mdm_policy_result01_remoteassistance02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ RemoteAssistance02-Klasse
+# <a name="mdm_policy_result01_remoteassistance02-class"></a>MDM \_ Policy \_ Result01 \_ RemoteResultAnce02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Result01 \_ RemoteAssistance02-Klasse stellt die Remote Unterstützungs Richtlinien dar.
+Die MDM \_ Policy \_ Result01 \_ RemoteDesktopAnce02-Klasse stellt die Remoteunterstützungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -49,20 +49,20 @@ class MDM_Policy_Result01_RemoteAssistance02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ RemoteAssistance02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ RemoteDesktopAnce02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ RemoteAssistance02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ RemoteDesktopAnce02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-["Customizewarningmessages"](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-customizewarningmessages)
+[CustomizeWarningMessages](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-customizewarningmessages)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -73,35 +73,35 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Sessionlogging](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-sessionlogging)
+[SessionLogging](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-sessionlogging)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -109,10 +109,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Solicitedremoteassistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)
+[SolicitedRemoteBlendance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -120,10 +120,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Unsolicitedremoteassistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-unsolicitedremoteassistance)
+[UnsolicitedRemoteSendetance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-unsolicitedremoteassistance)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -137,10 +137,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

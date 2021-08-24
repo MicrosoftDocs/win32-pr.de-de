@@ -1,7 +1,7 @@
 ---
-description: 'Die setpreroll-Methode gibt an, ob es sich bei diesem Beispiel um ein vorab Beispiel handelt. Eine ein Vorlauf ausgeführt-Stichprobe sollte nicht angezeigt werden. Diese Methode implementiert die imediasample:: setpreroll-Methode.'
+description: Die SetPreroll-Methode gibt an, ob es sich bei diesem Beispiel um ein Preroll-Beispiel handelt. Ein Vorabrollbeispiel sollte nicht angezeigt werden. Diese Methode implementiert die IMediaSample::SetPreroll-Methode.
 ms.assetid: 2887e627-5999-407a-88d3-811c803c9a43
-title: Cmediasample. setpreroll-Methode (amfilter. h)
+title: CMediaSample.SetPreroll-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 594f26ebb738a986c85a14b88f8896b122b58f47
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 410031ccf60e830c51615d267d3324167169c5de7960f79dc05b8c9e267463bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832100"
 ---
-# <a name="cmediasamplesetpreroll-method"></a>Cmediasample. setpreroll-Methode
+# <a name="cmediasamplesetpreroll-method"></a>CMediaSample.SetPreroll-Methode
 
-Die- `SetPreroll` Methode gibt an, ob es sich bei diesem Beispiel um ein vorab Beispiel handelt. Eine ein Vorlauf ausgeführt-Stichprobe sollte nicht angezeigt werden. Diese Methode implementiert die [**imediasample:: setpreroll**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setpreroll) -Methode.
+Die `SetPreroll` -Methode gibt an, ob es sich bei diesem Beispiel um ein Prerollbeispiel handelt. Ein Vorabrollbeispiel sollte nicht angezeigt werden. Diese Methode implementiert die [**IMediaSample::SetPreroll-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setpreroll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ HRESULT SetPreroll(
 
 <dl> <dt>
 
-*bispreroll* 
+*bIsPreroll* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob es sich um ein vorab Beispiel handelt. **True** gibt an, dass es sich um ein vorab Beispiel handelt.
+Boolescher Wert, der angibt, ob es sich um ein Prerollbeispiel handelt. True gibt an, dass dies ein Vorabrollbeispiel ist.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob es sich um ein vorab Beispiel handelt. **True** 
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) , die die ein Vorlauf ausgeführt-Eigenschaft angibt.
+Diese Methode aktualisiert die [**CMediaSample::m \_ dwFlags-Membervariable,**](cmediasample-m-dwflags.md) die die Preroll-Eigenschaft angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode aktualisiert die Member-Variable [**cmediasample:: m \_ dwFlags**]
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

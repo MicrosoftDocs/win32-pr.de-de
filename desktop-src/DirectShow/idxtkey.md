@@ -1,7 +1,7 @@
 ---
-description: Die idxtkey-Schnittstelle legt Eigenschaften für den Schlüssel Übergang fest. Diese Schnittstelle wird intern von DirectShow-Bearbeitungs Diensten verwendet, wenn der Schlüssel Übergang gerendert wird.
+description: Die IDxtKey-Schnittstelle legt Eigenschaften für den Schlüsselübergang fest. Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Schlüsselübergang gerendert wird.
 ms.assetid: b929bf0c-8aaf-456e-b692-e23d88e480dd
-title: Idxtkey-Schnittstelle (qedit. h)
+title: IDxtKey-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,64 +14,64 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: f4f1bc6a5dd0e89789e098fc4180bfc826f10c93
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d967d15dededf879ffd08671aac00e7892aa8ad2f2c1a39ce478f7f9f3e4db90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792360"
 ---
-# <a name="idxtkey-interface"></a>Idxtkey-Schnittstelle
+# <a name="idxtkey-interface"></a>IDxtKey-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `IDxtKey` Schnittstelle legt Eigenschaften für den [Schlüssel](key-transition.md) Übergang fest.
+Die `IDxtKey` -Schnittstelle legt Eigenschaften für den [Schlüsselübergang](key-transition.md) fest.
 
-Diese Schnittstelle wird intern von DirectShow-Bearbeitungs Diensten verwendet, wenn der Schlüssel Übergang gerendert wird. Die-Anwendungen müssen diese Schnittstelle nicht verwenden. Um die Eigenschaften für einen Übergang in des festzulegen, verwenden Sie die [**ipropertysetter**](ipropertysetter.md) -Schnittstelle.
+Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Schlüsselübergang gerendert wird. DES-Anwendungen müssen diese Schnittstelle nicht verwenden. Verwenden Sie die [**IPropertySetter-Schnittstelle,**](ipropertysetter.md) um die Eigenschaften für einen Übergang in DES festzulegen.
 
 ## <a name="members"></a>Member
 
-Die **idxtkey** -Schnittstelle erbt von **idxeffect**. **Idxtkey** verfügt auch über die folgenden Typen von Membern:
+Die **IDxtKey-Schnittstelle erbt** von **IDXEffect.** **IDxtKey** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idxtkey** -Schnittstelle verfügt über diese Methoden.
+Die **IDxtKey-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                            | BESCHREIBUNG                                                                            |
+| Methode                                            | Beschreibung                                                                            |
 |:--------------------------------------------------|:---------------------------------------------------------------------------------------|
-| [**\_Farbton erhalten**](idxtkey-get-hue.md)               | Ruft den Hue-Wert ab, für den der Schlüssel abgerufen werden soll.<br/>                                    |
-| [**\_Invertieren**](idxtkey-get-invert.md)         | Ruft einen booleschen Wert ab, der angibt, ob der Schlüssel Vorgang invertiert wird.<br/> |
-| [**\_KeyType erhalten**](idxtkey-get-keytype.md)       | Ruft den Typ des Schlüssels ab.<br/>                                                  |
-| [**\_Beleuchtung erhalten**](idxtkey-get-luminance.md)   | Ruft den Wert der Leuchtkraft ab, für den der Schlüssel abgerufen werden soll.<br/>                              |
-| [**\_RGB erhalten**](idxtkey-get-rgb.md)               | Ruft die RGB-Farbe ab, für die der Schlüssel abgerufen werden soll.<br/>                                    |
-| [**\_Ähnlichkeit erhalten**](idxtkey-get-similarity.md) | Ruft den Bereich der Farbdaten ab, der transparent wird.<br/>                 |
-| [**\_Farbton ablegen**](idxtkey-put-hue.md)               | Gibt den Farbton Wert an, auf den der Schlüssel festgelegt wird.<br/>                                    |
-| [**\_Invert einfügen**](idxtkey-put-invert.md)         | Gibt an, ob der Schlüssel Vorgang invertiert wird.<br/>                            |
-| [**\_KeyType platzieren**](idxtkey-put-keytype.md)       | Gibt den Typ des Schlüssels an.<br/>                                                  |
-| [**\_Leuchtkraft einfügen**](idxtkey-put-luminance.md)   | Gibt den Wert der Leuchtkraft an, auf den der Schlüssel festgelegt wird<br/>                              |
-| [**\_RGB einfügen**](idxtkey-put-rgb.md)               | Gibt die RGB-Farbe für den Schlüssel an.<br/>                                    |
-| [**\_Ähnlichkeit**](idxtkey-put-similarity.md) | Gibt den Bereich der Farbdaten an, der transparent wird.<br/>                 |
+| [**\_Get Hue**](idxtkey-get-hue.md)               | Ruft den Farbtonwert ab, für den die Taste geschaltet werden soll.<br/>                                    |
+| [**get \_ Invert**](idxtkey-get-invert.md)         | Ruft einen booleschen Wert ab, der angibt, ob der Schlüsselvorgang invertiert ist.<br/> |
+| [**\_get KeyType**](idxtkey-get-keytype.md)       | Ruft den Typ des Schlüssels ab.<br/>                                                  |
+| [**get \_ Luminance**](idxtkey-get-luminance.md)   | Ruft den Leuchtdichtewert ab, für den die Taste aktiviert werden soll.<br/>                              |
+| [**get \_ RGB**](idxtkey-get-rgb.md)               | Ruft die RGB-Farbe ab, für die ein Schlüssel angezeigt werden soll.<br/>                                    |
+| [**get \_ Similarity (Ähnlichkeit abrufen)**](idxtkey-get-similarity.md) | Ruft den Bereich der Farbdaten ab, der transparent wird.<br/>                 |
+| [**put \_ Hue**](idxtkey-put-hue.md)               | Gibt den Farbtonwert an, für den die Taste festgelegt werden soll.<br/>                                    |
+| [**put \_ Invert**](idxtkey-put-invert.md)         | Gibt an, ob der Schlüsselvorgang invertiert wird.<br/>                            |
+| [**\_put KeyType**](idxtkey-put-keytype.md)       | Gibt den Typ des Schlüssels an.<br/>                                                  |
+| [**put \_ Luminance**](idxtkey-put-luminance.md)   | Gibt den Leuchtdichtewert an, für den ein Schlüssel festgelegt werden soll.<br/>                              |
+| [**put \_ RGB**](idxtkey-put-rgb.md)               | Gibt die RGB-Farbe an, für die die Taste festgelegt werden soll.<br/>                                    |
+| [**put \_ Similarity**](idxtkey-put-similarity.md) | Gibt den Bereich von Farbdaten an, der transparent wird.<br/>                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -81,8 +81,8 @@ Die **idxtkey** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

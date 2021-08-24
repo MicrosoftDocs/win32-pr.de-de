@@ -1,19 +1,19 @@
 ---
 title: round_pi (sm4 - asm)
-description: Gleitkomma rundet auf integraler Gleitkommazahl. | round_pi (sm4 - asm)
+description: Gleitkomma rundet auf integrale Gleitkommazahl. | round_pi (sm4 - asm)
 ms.assetid: AA4E4C2E-A4B0-4892-8660-1EF57767F4C4
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b61282078b3639681eed756e2899d06744f0369e
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: d26356648576cc10256f16cd1e57be469d2d8c2d87690542058f7eba4a547996
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107997107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853510"
 ---
 # <a name="round_pi-sm4---asm"></a>round \_ pi (sm4 - asm)
 
-Gleitkomma rundet auf integraler Gleitkommazahl.
+Gleitkomma rundet auf integrale Gleitkommazahl.
 
 
 
@@ -26,7 +26,7 @@ Gleitkomma rundet auf integraler Gleitkommazahl.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                    |
+| Element                                                            | Beschreibung                                                    |
 |-----------------------------------------------------------------|----------------------------------------------------------------|
 | <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse der Ergebnisse des Vorgangs.<br/> |
 | <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten im Vorgang.<br/>             |
@@ -37,9 +37,9 @@ Gleitkomma rundet auf integraler Gleitkommazahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt eine komponentenweise Gleitkommarunde der Werte in *src0* aus und schreibt integrale Gleitkommawerte, *um zu dest zu schreiben.*
+Diese Anweisung führt eine komponentenweise Gleitkommarunde der Werte in *src0* aus und schreibt integrale Gleitkommawerte in *dest.*
 
-**Round \_ pi** rundet in Richtung +unendlich, häufig als ceil() bekannt.
+**Round \_ pi** rundet auf +unendlich, häufig als ceil() bekannt.
 
 Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden.
 
@@ -67,7 +67,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -75,12 +75,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -90,7 +90,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

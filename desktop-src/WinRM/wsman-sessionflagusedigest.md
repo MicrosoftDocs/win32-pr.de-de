@@ -1,12 +1,12 @@
 ---
-title: WSMAN. sessionflagusedigest-Methode (WSManDisp. h)
-description: Gibt den Wert des wsmanflagusedigest-Authentifizierungsflags für die Verwendung im flags-Parameter der WSMAN. kreatesession-Methode zurück.
+title: WSMan.SessionFlagUseDigest-Methode (WSManDisp.h)
+description: Gibt den Wert des WSManFlagUseDigest-Authentifizierungsflags für die Verwendung im flags-Parameter der WSMan.CreateSession-Methode zurück.
 ms.assetid: dba2448a-4f72-4000-8687-4c1be812fc3b
 ms.tgt_platform: multiple
 keywords:
-- Sessionflagusedigest-Methode Windows-Remoteverwaltung
-- Sessionflagusedigest-Methode Windows-Remoteverwaltung, WSMAN-Objekt
-- WSMAN-Objekt Windows-Remoteverwaltung, sessionflagusedigest-Methode
+- SessionFlagUseDigest-Methode Windows Remoteverwaltung
+- SessionFlagUseDigest-Methode Windows Remoteverwaltung, WSMan-Objekt
+- WSMan-Objekt Windows Remoteverwaltung , SessionFlagUseDigest-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4018428123443836c4f433f3e82f03a93ee9b766
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 888eec55e2c2ec4efc4613c9fa2bdda2713bcfd1761918f00d29816fb6bf43b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795110"
 ---
-# <a name="wsmansessionflagusedigest-method"></a>WSMAN. sessionflagusedigest-Methode
+# <a name="wsmansessionflagusedigest-method"></a>WSMan.SessionFlagUseDigest-Methode
 
-Die Methode **WSMAN. sessionflagusedigest** gibt den Wert des **wsmanflagusedigest** -Authentifizierungsflags zur Verwendung im *Flags* -Parameter der [**WSMAN. kreatesession**](wsman-createsession.md) -Methode zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der-Konstante, damit Skripts keinen konstanten Wert festlegen müssen. Weitere Informationen zum Abrufen dieser Methode finden Sie unter [Sitzungs Konstanten](session-constants.md).
+Die **WSMan.SessionFlagUseDigest-Methode** gibt den Wert des **WSManFlagUseDigest-Authentifizierungsflags** für die Verwendung im *flags-Parameter* der [**WSMan.CreateSession-Methode**](wsman-createsession.md) zurück. Diese Methode bietet eine effizientere Syntax für die Verwendung der -Konstante, sodass skripts nicht erforderlich sind, um einen konstanten Wert festzulegen. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Sitzungskonstanten.](session-constants.md)
 
-**Wsmanflagusedigest** ist ein Wert in der **\_ \_ wsmansessionflags** -Enumeration. Weitere Informationen finden Sie unter [Authentifizierungs Konstanten](authentication-constants.md).
+**WSManFlagUseDigest** ist ein Wert in der **\_ \_ WSManSessionFlags-Enumeration.** Weitere Informationen finden Sie unter [Authentifizierungskonstanten.](authentication-constants.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ WSMan.SessionFlagUseDigest( _
 
 <dl> <dt>
 
-*Flags* \[ vorgenommen\]
+*Flags* \[ out\]
 </dt> <dd>
 
 Der Wert der Konstante.
@@ -54,7 +54,7 @@ Der Wert der Konstante.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
@@ -75,7 +75,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**WSMAN**](wsman.md)
+[**Wsman**](wsman.md)
 </dt> <dt>
 
 [**Sitzung**](session.md)

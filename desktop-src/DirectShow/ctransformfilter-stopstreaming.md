@@ -1,7 +1,7 @@
 ---
-description: Die stopstreaming-Methode wird aufgerufen, wenn der Filter in den Zustand "beendet" wechselt.
+description: Die StopStreaming-Methode wird aufgerufen, wenn der Filter in den Zustand "Beendet" wechselt.
 ms.assetid: cfebfed2-4105-4dea-8d47-60d6160ee337
-title: Ctransformfilter. stopstreaming-Methode (Transfrm. h)
+title: CTransformFilter.StopStreaming-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4990b55ad87a4eb754af7101e762ce227a090993
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b56be25e8628e888fd7532e2646e6f555aba022c14552cc96cd3f274e152b53b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812880"
 ---
-# <a name="ctransformfilterstopstreaming-method"></a>Ctransformfilter. stopstreaming-Methode
+# <a name="ctransformfilterstopstreaming-method"></a>CTransformFilter.StopStreaming-Methode
 
-Die- `StopStreaming` Methode wird aufgerufen, wenn der Filter in den Zustand "beendet" wechselt.
+Die `StopStreaming` -Methode wird aufgerufen, wenn der Filter in den Zustand "Beendet" wechselt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode führt keine Aktion in der Basisklasse durch, aber die abgeleitete Klasse kann Sie überschreiben.
+Diese Methode führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode führt keine Aktion in der Basisklasse durch, aber die abgeleitete
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode führt keine Aktion in der Basisklasse durch, aber die abgeleitete
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

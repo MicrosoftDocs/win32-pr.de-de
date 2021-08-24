@@ -1,19 +1,19 @@
 ---
-description: 'Vollständigkeit der Features: Empfohlene Schnittstellen'
+description: 'Funktionserfändigung: Empfohlene Schnittstellen'
 ms.assetid: 759bf253-7450-4895-a550-9f81f3498f79
-title: 'Vollständigkeit der Features: Empfohlene Schnittstellen'
+title: 'Funktionserfändigung: Empfohlene Schnittstellen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1dba4bcc029b2205985afb443526376c0eecb16
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f54c7ec814d941a1f9c852408123f016182b2891ecf1965c3c3a98c768af210
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811640"
 ---
-# <a name="feature-completeness-recommended-interfaces"></a>Vollständigkeit der Features: Empfohlene Schnittstellen
+# <a name="feature-completeness-recommended-interfaces"></a>Funktionserfändigung: Empfohlene Schnittstellen
 
-In der folgenden Tabelle sind die WIC-Schnittstellen (Windows Imaging Component, Windows Imaging Component) aufgelistet, die von den
+In der folgenden Tabelle sind die Windows WIC-Schnittstellen (Imaging Component) aufgeführt, die RAW-Codecs implementieren sollten.
 
 
 
@@ -27,57 +27,57 @@ In der folgenden Tabelle sind die WIC-Schnittstellen (Windows Imaging Component,
 <tr class="header">
 <th>Schnittstelle</th>
 <th>Erforderlich für</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder"><strong>IWICBitmapDecoder</strong></a></td>
+<td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder"><strong>Iwicbitmapdecoder</strong></a></td>
 <td>Decoder</td>
-<td>Stellt den Startpunkt für das Decodieren einer Bilddatei dar. Bietet Zugriff auf Eigenschaften auf Container Ebene wie Miniaturansichten, Frames und Palette.<br/></td>
+<td>Stellt den Ausgangspunkt für das Decodieren einer Bilddatei dar. Bietet Zugriff auf Eigenschaften auf Containerebene wie Miniaturansichten, Frames und Palette.<br/></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode"><strong>IWICBitmapFrameDecode</strong></a></td>
+<td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode"><strong>Iwicbitmapframedecode</strong></a></td>
 <td>Decoder</td>
-<td>Stellt einen bestimmten Bild Rahmen innerhalb des Containers dar, der Zugriff auf Eigenschaften auf Frame-Ebene bereitstellt. Dies ist die Schnittstelle, die die eigentlichen Bildbits decodiert.<br/></td>
+<td>Stellt einen bestimmten Bildrahmen innerhalb des Containers dar, der Zugriff auf Eigenschaften auf Frameebene bietet. Dies ist die Schnittstelle, die die tatsächlichen Bildbits decodiert.<br/></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>IWICMetadataBlockReader</strong></a></td>
+<td><a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader"><strong>Iwicmetadatablockreader</strong></a></td>
 <td>Decoder</td>
-<td>Erforderlich für das Auflisten und durchlaufen von metadatenblöcken und das Aufrufen der entsprechenden metadatenleser beim Lesen aus einer Bilddatei. <br/>
+<td>Erforderlich zum Aufzählen und Iterieren von Metadatenblöcken und zum Aufrufen der entsprechenden Metadatenleser beim Lesen aus einer Bilddatei. <br/>
 <blockquote>
 [!Note]<br />
-Wenn das RAW-Container-Format TIFF-kompatibel ist oder zum Speichern von EXIF-oder XMP-Metadaten Standard-ifds oder-Spalten verwendet, können die Codec-Autoren die integrierten metadatenleser aufrufen, anstatt Sie zu schreiben.
+Wenn das RAW-Containerformat TIFF-kompatibel ist oder STANDARD-IFDs oder IRBs zum Speichern von EXIF- oder XMP-Metadaten verwendet, können Codecautoren die integrierten Metadatenleser aufrufen, anstatt eigene zu schreiben.
 </blockquote>
 <br/> <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform"><strong>IWICBitmapSourceTransform</strong></a></td>
 <td>Decoder</td>
-<td>Ermöglicht dem Aufrufer, die gewünschte Skalierung, das Zuschneiden, das Drehen oder das Pixel Format für das decodierte Bild anzugeben, wodurch die decoderleistung erheblich verbessert werden kann. Beispielsweise wird von den Decodern von Microsoft JPEG und Wireless Datagram Protocol (WDP) ein Pyramiden Optimierungs Schema verwendet, um eine schnellere Decodierung zu erreichen, wenn die Zielbitmap kleiner als die Quell Bitmap ist. Windows Vista (und höher) versucht, diese Schnittstelle zu verwenden, um eine &quot; schnelle &quot; Vorschau von einem RAW-Image zu extrahieren, wenn die eingebettete Vorschau fehlt oder in der größten Dimension weniger als 1.024 Pixel.<br/></td>
+<td>Ermöglicht es dem Aufrufer, das gewünschte Skalierungs-, Zuschneide-, Drehungs- oder Pixelformat für das decodierte Bild anzugeben, wodurch die Decoderleistung erheblich verbessert werden kann. Beispielsweise verwenden die JPEG- und WDP-Decoder (Wireless Datagram Protocol) von Microsoft ein Pyramidenoptimierungsschema, um eine schnellere Decodierung zu erzielen, wenn die Zielbitmap kleiner als die Quellbitmap ist. Windows Vista (und höher) versucht, diese Schnittstelle zu verwenden, um eine schnelle Vorschau aus einem RAW-Bild zu extrahieren, wenn die eingebettete Vorschau in der größten Dimension fehlt oder weniger als &quot; &quot; 1.024 Pixel beträgt.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw"><strong>IWICDevelopRaw</strong></a></td>
 <td>Decoder</td>
-<td>Erforderlich für Rohdaten Formate. Macht Parameter verfügbar, die für die Rohbild Verarbeitung spezifisch sind. Unformatierte Codecs sollten so viele dieser Parameter unterstützen, wie Sie auf den Codec angewendet werden.<br/></td>
+<td>Erforderlich für RAW-Formate. Macht Parameter verfügbar, die für die RAW-Bildverarbeitung spezifisch sind. RAW-Codecs sollten so viele dieser Parameter unterstützen, wie für den Codec gelten.<br/></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder"><strong>Iwicbitmapcoder</strong></a></td>
+<td><a href="/windows/desktop/api/wincodec/nn-wincodec-iwicbitmapencoder"><strong>IWICBitmapEncoder</strong></a></td>
 <td>Encoder</td>
-<td>Stellt den Startpunkt für das Codieren einer Bilddatei dar. Diese Schnittstelle wird verwendet, um Eigenschaften auf Container Ebene festzulegen, z. b. Miniaturansichten, Frames und Palette. Außerdem müssen Sie einen metadatenwriter aufrufen, um die metadatenpersistenz in der Bilddatei zu aktivieren. Aus diesen Gründen ist diese Schnittstelle notwendig, auch wenn die Codierung der primären Bitmap in das RAW-Format nicht unterstützt wird.<br/></td>
+<td>Stellt den Ausgangspunkt für die Codierung einer Bilddatei dar. Diese Schnittstelle wird zum Festlegen von Eigenschaften auf Containerebene verwendet, z. B. Miniaturansichten, Frames und Paletten. Außerdem muss ein Metadatenwriter aufgerufen werden, um die Metadatenpersistenz für die Bilddatei zu aktivieren. Aus diesen Gründen ist diese Schnittstelle auch dann erforderlich, wenn die Codierung der primären Bitmap in das RAW-Format nicht unterstützt wird.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode"><strong>IWICBitmapFrameEncode</strong></a></td>
 <td>Encoder</td>
-<td>Stellt einen bestimmten Bild Rahmen innerhalb des Containers dar. Diese Schnittstelle wird verwendet, um die eigentlichen Bildbits zu codieren und um die einzelnen Frame-Metadaten und-Eigenschaften festzulegen.<br/></td>
+<td>Stellt einen bestimmten Bildrahmen innerhalb des Containers dar. Diese Schnittstelle wird verwendet, um die tatsächlichen Bildbits zu codieren und Pro-Frame-Metadaten und -Eigenschaften zu festlegen.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter"><strong>IWICMetadataBlockWriter</strong></a></td>
 <td>Encoder</td>
-<td>Erforderlich zum Durchlaufen von metadatenblöcken und zum Aufrufen der entsprechenden metadatenschreiber beim Serialisieren einer Bilddatei.<br/>
+<td>Erforderlich für das Iterieren von Metadatenblöcken und das Aufrufen der entsprechenden Metadatenschreiber beim Serialisieren einer Bilddatei.<br/>
 <blockquote>
 [!Note]<br />
-Wenn das RAW-Containerformat TIFF-kompatibel ist, können Codec-Autoren die integrierten metadatenwriter aufrufen, anstatt Sie selbst zu schreiben.
+Wenn das RAW-Containerformat TIFF-kompatibel ist, können Codecautoren die integrierten Metadatenschreiber aufrufen, anstatt eigene zu schreiben.
 </blockquote>
 <br/> <br/></td>
 </tr>
@@ -92,16 +92,16 @@ Wenn das RAW-Containerformat TIFF-kompatibel ist, können Codec-Autoren die inte
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[WIC-Richtlinien für Kamera Rohbild Formate](-wic-rawguidelines.md)
+[WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Konfigurieren der Codec-DMOS
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Konfigurieren der Codec-DMOS
+title: Konfigurieren der Codec-DMOs
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Konfigurieren der Codec-DMOs
 ms.assetid: f4967de1-cb2e-4839-b59a-49e8bdb0e3d9
 keywords:
-- Konfigurieren des Windows-Medien Formats "Codec DMOS"
+- Konfigurieren des Codec-DMOs-Windows-Medienformats
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a56f3af56a3bacb8971192067c7346c47e88ca6e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7f195ac64088d030efb0c35c39b14df714f6d83cc602fb64f5121317c9bdfdff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104394005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809790"
 ---
-# <a name="configuring-the-codec-dmos"></a>Konfigurieren der Codec-DMOS
+# <a name="configuring-the-codec-dmos"></a>Konfigurieren der Codec-DMOs
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und [DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

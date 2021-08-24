@@ -1,9 +1,9 @@
 ---
-title: Video. wart AspectRatio
-description: Mit dem wart AspectRatio-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Seitenverhältnis des Videos beibehalten wird, wenn die Breite und die Höhe des Steuer Elements angepasst werden.
+title: VIDEO.maintainAspectRatio
+description: Das attribut maintainAspectRatio gibt einen Wert an oder ruft einen Wert ab, der angibt, ob das Video sein Seitenverhältnis beibeinhaltet, wenn versucht wird, in die für das Steuerelement definierte Breite und Höhe zu passen.
 ms.assetid: 42ac2196-b747-48d5-868d-7f7e5eb8dabb
 keywords:
-- Video. wart AspectRatio-Fenster Media Player
+- VIDEO.maintainAspectRatio Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfaca31ff46d20374a5336484e8f67a5bcd9d353
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e435dd64cac30bd2fc1f70e9b3f6b2731ab8fe99bfb2b75021b2576a9b0174b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761780"
 ---
-# <a name="videomaintainaspectratio"></a>Video. wart AspectRatio
+# <a name="videomaintainaspectratio"></a>VIDEO.maintainAspectRatio
 
-Mit dem **wart AspectRatio** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Seitenverhältnis des Videos beibehalten wird, wenn die Breite und die Höhe des Steuer Elements angepasst werden.
+Das **attribut maintainAspectRatio** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob das Video sein Seitenverhältnis beibe hält, wenn versucht wird, in die für das Steuerelement definierte Breite und Höhe zu passen.
 
 ``` syntax
         elementID.maintainAspectRatio
@@ -29,14 +29,14 @@ Mit dem **wart AspectRatio** -Attribut wird ein Wert angegeben oder abgerufen, d
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                              |
 |-------|----------------------------------------------------------|
-| true  | Standard. Video behält das Seitenverhältnis bei der Größenänderung bei. |
-| false | Beim Ändern der Größe wird das Seitenverhältnis des Videos nicht beibehalten.  |
+| true  | Standard. Video behält sein Seitenverhältnis bei, wenn die Größe geändert wird. |
+| false | Video behält sein Seitenverhältnis nicht bei, wenn die Größe geändert wird.  |
 
 
 
@@ -48,15 +48,15 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

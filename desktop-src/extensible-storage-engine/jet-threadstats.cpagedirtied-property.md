@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_THREADSTATS. cpagedirtied-Eigenschaft.'
-title: JET_THREADSTATS. cpagedirtied-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_THREADSTATS.cPageDirtied-Eigenschaft'
+title: JET_THREADSTATS.cPageDirtied-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cPageDirtied property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.cPageDirtied
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.cpagedirtied(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4d1f628ce821a6e35c231ccf4b469b5b1c1ff60c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d633ab829c510d6e44e72d6500da422663f9df17b145e23cb7df51b8d3c7523
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119719510"
 ---
-# <a name="jet_threadstatscpagedirtied-property"></a>JET_THREADSTATS. cpagedirtied (Eigenschaft)
+# <a name="jet_threadstatscpagedirtied-property"></a>JET_THREADSTATS.cPageDirtied-Eigenschaft
 
-Ruft die Gesamtanzahl der Datenbankseiten ohne ungeschriebene Änderungen ab, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
+Ruft die Gesamtzahl der Datenbankseiten ohne ungeschriebene Änderungen ab, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cPageDirtied { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS-Member](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

@@ -4,8 +4,8 @@ description: Enthält den Namen des Assistenten für ein Konto.
 ms.assetid: 8799d5de-2c73-41b3-b707-b6f8bf5edb6a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-Exch-Assistant-Name-Attribut
-- AD-Schema für das Attribut "msExchAssistantName"
+- ms-Exch-Assistant-Name-Attribut AD-Schema
+- ad-Schema des msExchAssistentantName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5eb81eceaed3c22c70fc75ae39b7eccb113013f7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e8638597e234100e6775618472788761af341bc1138c3fed613173038a26dbc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763140"
 ---
 # <a name="ms-exch-assistant-name-attribute"></a>ms-Exch-Assistant-Name-Attribut
 
@@ -30,25 +30,25 @@ Enthält den Namen des Assistenten für ein Konto.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ms-Exch-Assistant-Name                      |
-| LDAP-Display-Name | msExchAssistantName                         |
+| Ldap-Anzeigename | msExchAssistantName                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.444                      |
-| System-ID-GUID    | a8df7394-c5ea-11d1-bbcb-0080c76670c0        |
+| System-Id-Guid    | a8df7394-c5ea-11d1-bbb-0080c76670c0        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Enthält den Namen des Assistenten für ein Konto.
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | 0x896                                                |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 1                                                    |
 | Range-Upper            | 256                                                  |
 | Search-Flags           | 0x00000000                                           |
@@ -77,11 +77,11 @@ Enthält den Namen des Assistenten für ein Konto.
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | 0x896                                                |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 1                                                    |
 | Range-Upper            | 256                                                  |
 | Search-Flags           | 0x00000000                                           |
@@ -98,11 +98,11 @@ Enthält den Namen des Assistenten für ein Konto.
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | 0x896                                                |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 1                                                    |
 | Range-Upper            | 256                                                  |
 | Search-Flags           | 0x00000000                                           |
@@ -119,11 +119,11 @@ Enthält den Namen des Assistenten für ein Konto.
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | 0x896                                                |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 1                                                    |
 | Range-Upper            | 256                                                  |
 | Search-Flags           | 0x00000000                                           |
@@ -140,11 +140,11 @@ Enthält den Namen des Assistenten für ein Konto.
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | 0x896                                                |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 1                                                    |
 | Range-Upper            | 256                                                  |
 | Search-Flags           | 0x00000000                                           |

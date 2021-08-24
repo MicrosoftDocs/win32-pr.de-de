@@ -1,9 +1,9 @@
 ---
 title: Application-Element
-description: Stellt das Element der obersten Ebene in der Markup Spezifikation des Windows-Menü Band Frameworks dar.
+description: Stellt das Element der obersten Ebene in der Markupspezifikation für Windows Menübandframework dar.
 ms.assetid: 05396d8b-fbd1-40bb-8d0f-8ac11506e7db
 keywords:
-- Windows-Menüband für Anwendungs Element
+- Anwendungselement Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9b116879a918ca0437c7f2bdd201ef4ffd6d3c61
-ms.sourcegitcommit: 3d718d8f69d3f86eaecf94c5705d761c5a9ef4a1
+ms.openlocfilehash: 4055e271ecf3313596b73aa36a5cbea37250416d9b517fb4512b89fbc203293a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "103734713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810810"
 ---
 # <a name="application-element"></a>Application-Element
 
-Stellt das Element der obersten Ebene in der Markup Spezifikation des Windows-Menü Band Frameworks dar.
+Stellt das Element der obersten Ebene in der Markupspezifikation für Windows Menübandframework dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Application
@@ -37,9 +37,9 @@ Stellt das Element der obersten Ebene in der Markup Spezifikation des Windows-Me
 
 
 
-| Attribut            | type                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                       |
+| attribute            | Typ                 | Erforderlich       | Beschreibung                                                                                                                                                                                                       |
 |----------------------|----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **xmlns**<br/> | xs:string<br/> | Ja<br/> | <dt>`http://schemas.microsoft.com/windows/2009/Ribbon`<br/> </dt> <dd> Der URI für die Markup-Namespace Bindung des Menübands. <br/> </dd> </dl> |
+| **xmlns**<br/> | xs:string<br/> | Ja<br/> | <dt>`http://schemas.microsoft.com/windows/2009/Ribbon`<br/> </dt> <dd> Der URI für die Markupnamespacebindung des Menübands. <br/> </dd> </dl> |
 
 
 
@@ -47,10 +47,10 @@ Stellt das Element der obersten Ebene in der Markup Spezifikation des Windows-Me
 
 
 
-| Element                                                                               | BESCHREIBUNG                                    |
+| Element                                                                               | Beschreibung                                    |
 |---------------------------------------------------------------------------------------|------------------------------------------------|
-| [**Application. Commands**](windowsribbon-element-application-commands.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/>  |
-| [**Application. views**](windowsribbon-element-application-views.md)<br/>       | Muss genau einmal auftreten<br/> <br/> |
+| [**Application.Commands**](windowsribbon-element-application-commands.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>  |
+| [**Application.Views**](windowsribbon-element-application-views.md)<br/>       | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -58,20 +58,20 @@ Stellt das Element der obersten Ebene in der Markup Spezifikation des Windows-Me
 
 Es gibt keine übergeordneten Elemente.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss genau einmal als Container für alle Menü Band Markup vorkommen.
+Muss genau einmal als Container für das gesamte Menübandmarkup auftreten.
 
-Die untergeordneten Elemente des **Application** -Elements müssen in der angegebenen Reihenfolge vorkommen:
+Die untergeordneten Elemente des **Application-Elements** müssen in der angegebenen Reihenfolge auftreten:
 
-1.  [**Application. Commands**](windowsribbon-element-application-commands.md)
-2.  [**Application. views**](windowsribbon-element-application-views.md)
+1.  [**Application.Commands**](windowsribbon-element-application-commands.md)
+2.  [**Application.Views**](windowsribbon-element-application-views.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Deklaration eines **Anwendungs** Elements.
+Das folgende Beispiel zeigt eine **Application-Elementdeklaration.**
 
 
 ```XML
@@ -97,7 +97,7 @@ Das folgende Beispiel zeigt eine Deklaration eines **Anwendungs** Elements.
 
 <dl> <dt>
 
-[Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup](windowsribbon-schema.md)
+[Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup](windowsribbon-schema.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Die setaddressinfo-Methode legt die Adressinformationen fest.
+description: Die SetAddressInfo-Methode legt die Adressinformationen fest.
 ms.assetid: 100b96af-e6ba-4496-9978-4df133e1c2b5
-title: 'Itconnection:: setaddressinfo-Methode (sdpblb. h)'
+title: ITConnection::SetAddressInfo-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae181911527c22639c8c2da3038c0377734fd1da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d90fd6e92e115966df709626b7b58c739d292fedca4fb855999bc3fd8cd853b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774930"
 ---
-# <a name="itconnectionsetaddressinfo-method"></a>Itconnection:: setaddressinfo-Methode
+# <a name="itconnectionsetaddressinfo-method"></a>ITConnection::SetAddressInfo-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **setaddressinfo** -Methode legt die Adressinformationen fest.
+Die **SetAddressInfo-Methode** legt die Adressinformationen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT SetAddressInfo(
 
 <dl> <dt>
 
-*pStartAddress* \[ in\]
+*pStartAddress* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der die Startadresse enthält.
+Zeiger auf einen **BSTR,** der die Startadresse enthält.
 
 </dd> <dt>
 
-*Numadkleider* \[ in\]
+*NumAddresses* \[ In\]
 </dt> <dd>
 
 Anzahl der Adressen, die für die Sitzung verwendet werden sollen.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in\]
+*Ttl* \[ In\]
 </dt> <dd>
 
-Gültigkeitsbereich der Gültigkeits [*Dauer*](t-tapgloss.md) (TTL) für Übertragungen der Adressen.
+[*Gültigkeitsdauer (Time-to-Live,*](t-tapgloss.md) TTL) für Übertragungen an den Adressen.
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                                          |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                                     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der Parameter " *pStartAddress*", " *numadkleidungs*" oder " *TTL* " ist ungültig.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/>                  |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                                    |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                                   |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *Parameter pStartAddress,* *NumAddresses* oder *Ttl* ist ungültig.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/>                  |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                                    |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *pStartAddress* -Parameter zuzuweisen, und " [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Speicher für den *pStartAddress-Parameter* zuzuweisen, und [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,18 +83,18 @@ Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> </dl>
 
  

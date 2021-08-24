@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7b46838278414442d6c6fc64687fe21e02732e83
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a751c7ed9d10547d34ec491f2e90e5ca6f1ab1f19bc1221c04b15da427da4570
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832520"
 ---
 # <a name="cmediacontrolgettypeinfocount-method"></a>CMediaControl.GetTypeInfoCount-Methode
 
@@ -45,7 +45,7 @@ HRESULT GetTypeInfoCount(
 *pctinfo* 
 </dt> <dd>
 
-Zeiger auf die Anzahl der Typinformationsschnittstellen, die das -Objekt bereitstellt. Wenn das Objekt Typinformationen bereitstellt, ist diese Zahl 1. Andernfalls ist die Zahl 0.
+Zeiger auf die Anzahl der Typinformationsschnittstellen, die das -Objekt bereitstellt. Wenn das -Objekt Typinformationen bereitstellt, ist diese Zahl 1. Andernfalls ist die Zahl 0.
 
 </dd> </dl>
 
@@ -57,7 +57,7 @@ Gibt E \_ POINTER zurück, wenn *pctinfo* ungültig ist, andernfalls S \_ OK.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

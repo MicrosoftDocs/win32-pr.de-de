@@ -1,7 +1,7 @@
 ---
-description: 'Die Endzeit des Mediums. Dieser Wert wird als Offset der Start Zeit des Mediums berechnet, der durch die cmediasample:: m \_ mediastart-Member-Variable angegeben wird.'
+description: Medienstoppzeit. Dieser Wert wird als Offset von der Medienstartzeit berechnet, die durch die CMediaSample::m \_ MediaStart-Membervariable angegeben wird.
 ms.assetid: e61f018a-1d76-4f4a-8a76-6cb102cf1d61
-title: 'Cmediasample:: m_MediaEnd Member (amfilter. h)'
+title: CMediaSample::m_MediaEnd -Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 86995919ee072418cc5d768b2679078538e2a980
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0008f9fbdd0efaa8739c97b8e26c9c0bec86d89106c518e0c1512841c56c0435
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832190"
 ---
-# <a name="cmediasamplem_mediaend-member"></a>Cmediasample:: m \_ mediaend-Member
+# <a name="cmediasamplem_mediaend-member"></a>CMediaSample::m \_ MediaEnd-Member
 
-Die Endzeit des Mediums. Dieser Wert wird als Offset der Start Zeit des Mediums berechnet, der durch die [**cmediasample:: m \_ mediastart**](cmediasample-m-mediastart.md) -Member-Variable angegeben wird.
+Medienstoppzeit. Dieser Wert wird als Offset von der Medienstartzeit berechnet, die durch die [**CMediaSample::m \_ MediaStart-Membervariable**](cmediasample-m-mediastart.md) angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ LONG m_MediaEnd;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ LONG m_MediaEnd;
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

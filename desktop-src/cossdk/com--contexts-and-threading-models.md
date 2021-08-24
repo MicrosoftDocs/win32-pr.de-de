@@ -1,28 +1,28 @@
 ---
-description: Com+-Kontexte und Threading Modelle
+description: COM+-Kontexte und Threadingmodelle
 ms.assetid: 50ccf75e-2652-4254-a771-af83cc9248b3
-title: Com+-Kontexte und Threading Modelle
+title: COM+-Kontexte und Threadingmodelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ba93fa62cc4c9f2f7e01ef23b5c551e4aecac6f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 07c691eafff76b64fb67fa22c2c3ac59eba483d479d6f2c19940091e7c7e685d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119793580"
 ---
-# <a name="com-contexts-and-threading-models"></a>Com+-Kontexte und Threading Modelle
+# <a name="com-contexts-and-threading-models"></a>COM+-Kontexte und Threadingmodelle
 
-In den folgenden Themen werden com+-Kontexte und die Verwendung von COM-Threading Modellen durch com+ erläutert.
+In den folgenden Themen werden COM+-Kontexte und die Verwendung der COM-Threadingmodelle durch COM+ erläutert.
 
--   [Com+-Kontexte](com--contexts.md)
--   [Com+-Threading Modelle](com--threading-models.md)
+-   [COM+-Kontexte](com--contexts.md)
+-   [COM+-Threadingmodelle](com--threading-models.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Prozesse, Threads und Apartments](/windows/desktop/com/processes--threads--and-apartments)
+[Prozesse, Threads und Apartment](/windows/desktop/com/processes--threads--and-apartments)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Groupmemorybarrierwithgroupsync-Funktion
-description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle freigegebenen Gruppen Zugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Befehl erreicht haben.
+title: GroupMemoryBarrierWithGroupSync-Funktion
+description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle freigegebenen Gruppenzugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Aufruf erreicht haben.
 ms.assetid: 64dd78e1-c597-4bd0-8a9b-592123178de5
 keywords:
-- Groupmemorybarrierwithgroupsync-Funktion HLSL
+- GroupMemoryBarrierWithGroupSync-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 07798bb8ad6bd9c4cdfa14bfa57d97818dbd6962
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: bbcfdea451c0cb7ad2b84297c422fa6865b1f45d757612a7b5d220a8829a99b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104976185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119854450"
 ---
-# <a name="groupmemorybarrierwithgroupsync-function"></a>Groupmemorybarrierwithgroupsync-Funktion
+# <a name="groupmemorybarrierwithgroupsync-function"></a>GroupMemoryBarrierWithGroupSync-Funktion
 
-Blockiert die Ausführung aller Threads in einer Gruppe, bis alle freigegebenen Gruppen Zugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Befehl erreicht haben.
+Blockiert die Ausführung aller Threads in einer Gruppe, bis alle freigegebenen Gruppenzugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Aufruf erreicht haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,47 +38,47 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | x       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

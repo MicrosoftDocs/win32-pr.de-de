@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_SPACEHINTS. ulmaintdensity-Eigenschaft.
-title: JET_SPACEHINTS. ulmaintdensity (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_SPACEHINTS.ulMaintDensity-Eigenschaft'
+title: JET_SPACEHINTS.ulMaintDensity-Eigenschaft
 TOCTitle: 'ulMaintDensity property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_SPACEHINTS.ulMaintDensity
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_spacehints.ulmaintdensity(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b2b3351574e5dd73817f66eecede6c0ece37dd7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6c6067aa0cc94a3df0436f68095b2e2b03bde700c3ab75e05175d6b74b8bd67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833230"
 ---
-# <a name="jet_spacehintsulmaintdensity-property"></a>JET_SPACEHINTS. ulmaintdensity (Eigenschaft)
+# <a name="jet_spacehintsulmaintdensity-property"></a>JET_SPACEHINTS.ulMaintDensity-Eigenschaft
 
-Ruft die Dichte ab, bei der gewartet werden soll, oder legt diese fest
+Ruft die Dichte ab, an der verwaltet werden soll, oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int ulMaintDensity { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_SPACEHINTS-Klasse](./jet-spacehints-class.md)
 
-[Mitglieder JET_SPACEHINTS](./jet-spacehints-members.md)
+[JET_SPACEHINTS Member](./jet-spacehints-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

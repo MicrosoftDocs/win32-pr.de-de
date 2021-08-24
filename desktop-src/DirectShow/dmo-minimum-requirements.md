@@ -1,31 +1,31 @@
 ---
-description: Mindestens erforderliche DMO-Anforderungen
+description: DMO Mindestanforderungen
 ms.assetid: cd342f0f-a3dc-4623-a18f-c45071795ef4
-title: Mindestens erforderliche DMO-Anforderungen
+title: DMO Mindestanforderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1c26267f50619062fb8396f93b7578db4d3d8c4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7acc4f664d32112512120f2f20687051a0bff193e00adb7ad595e6975c522fce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749140"
 ---
-# <a name="dmo-minimum-requirements"></a>Mindestens erforderliche DMO-Anforderungen
+# <a name="dmo-minimum-requirements"></a>DMO Mindestanforderungen
 
-Jeder DMO sollte die folgenden Mindestanforderungen erfüllen:
+Jede DMO sollte die folgenden Mindestanforderungen erfüllen:
 
 -   Die Aggregation muss unterstützt werden.
--   Es muss die [**imediaobject**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediaobject) -Schnittstelle verfügbar machen.
--   Das Threading Modell muss "both" lauten. DMOS muss in einer frei Hand Thread Umgebung ordnungsgemäß funktionieren.
+-   Sie muss die [**IMediaObject-Schnittstelle**](/previous-versions/windows/desktop/api/Mediaobj/nn-mediaobj-imediaobject) verfügbar machen.
+-   Das Threadingmodell muss "beide" sein. DMOs müssen in einer Freethreadumgebung ordnungsgemäß funktionieren.
 
-Der Audioeffekt-DMOS sollte die [**imediaobjectinplace**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobjectinplace) -Schnittstelle unterstützen, die in DirectMusic und DirectSound verwendet werden kann.
+Audioeffekt-DMOs sollten die [**IMediaObjectInPlace-Schnittstelle**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobjectinplace) für die Verwendung in DirectObject und DirectSound unterstützen.
 
-Die folgenden Schnittstellen sind an anderer Stelle dokumentiert, sind aber für viele DMOS nützlich. Sie sind jedoch nicht erforderlich.
+Die folgenden Schnittstellen sind an anderer Stelle dokumentiert, sind aber für viele DMOs nützlich. Sie sind jedoch nicht erforderlich.
 
--   **ISpecifyPropertyPages**, **IPropertyPage**: Diese Schnittstellen ermöglichen es einem DMO, eine Eigenschaften Seite bereitzustellen, damit Benutzereigenschaften festlegen können.
--   **IPersistStream**: Diese Schnittstelle ermöglicht es dem DMO, seinen Zustand in einem persistenten Speicher zu speichern.
--   [**Iamstreamconfig**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig), [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression): Diese Schnittstellen ermöglichen es einem Client, das Ausgabeformat und die Komprimierungs Einstellungen eines Encoders zu konfigurieren. (Diese beiden Schnittstellen sind Teil der DirectShow-API, werden aber auch für DMOS empfohlen.)
+-   **ISpecifyPropertyPages**, **IPropertyPage:** Diese Schnittstellen ermöglichen es einem DMO, eine Eigenschaftenseite für den Benutzer zum Festlegen von Eigenschaften zur Verfügung zu stellen.
+-   **IPersistStream:** Diese Schnittstelle ermöglicht dem DMO, seinen Zustand im persistenten Speicher zu speichern.
+-   [**IAMStreamConfig**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig), [**IAMVideoCompression:**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression)Diese Schnittstellen ermöglichen es einem Client, das Ausgabeformat und die Komprimierungseinstellungen eines Encoders zu konfigurieren. (Diese beiden Schnittstellen sind Teil der DirectShow-API, werden aber auch für DMOs empfohlen.)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,38 +1,38 @@
 ---
-description: Das Beispiel Upgradepaket aktualisiert Verknüpfungen zu den neuen Dateien und Features.
+description: Das Beispielupgradepaket aktualisiert Verknüpfungen zu den neuen Dateien und Features.
 ms.assetid: 5a12932d-053d-49c3-9f06-0c122ca293d0
 title: Aktualisieren von Verknüpfungen für ein Upgrade
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a3192bc9468dbe84c2968a968631b4a091b0705
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0bd41fa9377a4c7babbae8f4b12fb44c671b67f8760fe7692e7d5d785cb137a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809820"
 ---
 # <a name="updating-shortcuts-for-an-upgrade"></a>Aktualisieren von Verknüpfungen für ein Upgrade
 
-Das Beispiel Upgradepaket aktualisiert Verknüpfungen zu den neuen Dateien und Features.
+Das Beispielupgradepaket aktualisiert Verknüpfungen zu den neuen Dateien und Features.
 
-Öffnen Sie MNP2001.msi mit dem Datenbank-Editor, und geben Sie die folgenden Daten in die Verknüpfungs [Tabelle](shortcut-table.md)ein.
+Verwenden Sie ihren Datenbank-Editor, um MNP2001.msi, und geben Sie die folgenden Daten in die [Verknüpfungstabelle ein.](shortcut-table.md)
 
 
 
-| Abkürzung    | Verzeichnis\_ | Name           | Komponente\_ | Ziel               | Argumente | BESCHREIBUNG | Hotkey | Symbol\_         | IconIndex | ShowCmd | Wkdir |
+| Verknüpfung    | Verzeichnis\_ | Name           | Komponente\_ | Ziel               | Argumente | BESCHREIBUNG | Hotkey | Symbol\_         | IconIndex | ShowCmd | WkDir |
 |-------------|-------------|----------------|-------------|----------------------|-----------|-------------|--------|----------------|-----------|---------|-------|
-| sbaseball   | Menudir     | Baseba01.txt   | Ball    | Ball             |           |             |        | Orca- \_icon.exe |           |         |       |
-| sconcert    | Menudir     | Concer01.txt   | Konzert     | \[\#Concer01.txt\]   |           |             |        |                |           |         |       |
-| sdancell    | Menudir     | Dance01.txt    | Abhängigkeit       | \[\#Dance01.txt\]    |           |             |        |                |           |         |       |
-| sfußball   | Menudir     | Footba01.txt   | Verbandes    | \[\#Footba01.txt\]   |           |             |        |                |           |         |       |
-| sHelp       | Menudir     | Help.txt       | Hilfe        | \[\#Help.txt\]       |           |             |        |                |           |         |       |
-| sjanuar    | Menudir     | Januar01.txt   | January     | \[\#Januar01.txt\]   |           |             |        |                |           |         |       |
-| snewyears   | Menudir     | NewYea01.txt   | Newyears    | \[\#NewYea01.txt\]   |           |             |        |                |           |         |       |
-| SNotepad    | Menudir     | Redpark.exe    | Editor     | \[\#Redpark.exe\]    |           |             |        |                |           |         |       |
-| sInfo     | Menudir     | Readme.txt     | Editor     | \[\#Readme.txt\]     |           |             |        |                |           |         |       |
-| smemorial   | Menudir     | Memori01.txt   | Denkmals    | \[\#Memori01.txt\]   |           |             |        |                |           |         |       |
-| sbasketball | Menudir     | Basketba01.txt | Erinnen  | \[\#Basketba01.txt\] |           |             |        |                |           |         |       |
-| SOPERA      | Menudir     | Opera01.txt    | Opera       | \[\#Opera01.txt\]    |           |             |        |                |           |         |       |
+| sBaseball   | MENUDIR     | Baseba01.txt   | Baseball    | Baseball             |           |             |        | orca \_icon.exe |           |         |       |
+| sConcert    | MENUDIR     | Concer01.txt   | Konzert     | \[\#Concer01.txt\]   |           |             |        |                |           |         |       |
+| sDancell    | MENUDIR     | Dance01.txt    | Tanz       | \[\#Dance01.txt\]    |           |             |        |                |           |         |       |
+| sFootball   | MENUDIR     | Footba01.txt   | Fußball    | \[\#Footba01.txt\]   |           |             |        |                |           |         |       |
+| sHelp       | MENUDIR     | Help.txt       | Hilfe        | \[\#Help.txt\]       |           |             |        |                |           |         |       |
+| sJanuary    | MENUDIR     | Januar01.txt   | January     | \[\#Januar01.txt\]   |           |             |        |                |           |         |       |
+| sNewYears   | MENUDIR     | NewYea01.txt   | NewYears    | \[\#NewYea01.txt\]   |           |             |        |                |           |         |       |
+| sNotepad    | MENUDIR     | Redpark.exe    | Editor     | \[\#Redpark.exe\]    |           |             |        |                |           |         |       |
+| sReadme     | MENUDIR     | Readme.txt     | Editor     | \[\#Readme.txt\]     |           |             |        |                |           |         |       |
+| sMeial   | MENUDIR     | Memori01.txt   | Memorial    | \[\#Memori01.txt\]   |           |             |        |                |           |         |       |
+| sBasketball | MENUDIR     | Basketba01.txt | Basketball  | \[\#Basketba01.txt\] |           |             |        |                |           |         |       |
+| Sopera      | MENUDIR     | Opera01.txt    | Opera       | \[\#Opera01.txt\]    |           |             |        |                |           |         |       |
 
 
 

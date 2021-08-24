@@ -6,36 +6,36 @@ keywords:
 - Schatteneffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c42fd8755078dd79f2b01b623b1839785beb3c3e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5d88924140caac22b688a0ccb6948ee74312411c770bff99360847ef2cd1b4c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833052"
 ---
 # <a name="shadow-effect"></a>Schatteneffekt
 
-Verwenden Sie den Schatteneffekt, um einen Schatten aus dem Alphakanal eines Bilds zu generieren. Der Schatten ist für höhere Alpha Werte transparenter und transparenter für niedrigere Alpha Werte. Sie können den Grad der weich Zeichnung und die Farbe des Schattens festlegen.
+Verwenden Sie den Schatteneffekt, um einen Schatten aus dem Alphakanal eines Bilds zu generieren. Der Schatten ist für höhere Alphawerte nicht transparent und für niedrigere Alphawerte transparenter. Sie können die Menge an Weichzeichnern und die Farbe des Schattens festlegen.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Optimierungs Modi](#optimization-modes)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Optimierungsmodi](#optimization-modes)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Shadow.
 
 ## <a name="example-image"></a>Beispielbild
 
-Das Beispiel hier zeigt die Ausgabe des Schatten Effekts übersetzt und rechts mit dem Quell Bild am ursprünglichen Speicherort. Der Schatteneffekt gibt nur den Schatten aus.
+Das folgende Beispiel zeigt die Ausgabe des Schatteneffekts, der nach unten und rechts übersetzt wurde, wobei das Quellbild am ursprünglichen Speicherort darüber zusammengesetzt ist. Der Schatteneffekt gibt nur den Schatten aus.
 
 
 
 | Vorher                                                  |
 |---------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/8-crop.png)      |
-| Nach                                                   |
+| Danach                                                   |
 | ![das Bild nach der Transformation.](images/25-shadow.png) |
 
 
@@ -78,43 +78,43 @@ m_d2dContext->EndDraw();
 
 
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                                        | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Anzeigename und Indexenumeration                                                        | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Blurstandardabweichung<br/> D2D1 \_ Shadow \_ Prop \_ - \_ Standard \_ Abweichung<br/> | Der auf den Alpha-Kanal des Bilds anzuwendende Wert. Sie können den weichungs Radius des Kernels berechnen, indem Sie die Standardabweichung um 3 multiplizieren. Die Einheiten der Standardabweichung und des weichungs RADIUS sind Dips.<br/> Diese Eigenschaft ist identisch mit der [Gaußscher Weichzeichner](gaussian-blur.md) Eigenschaft Standardabweichung. <br/> Der Typ ist "float".<br/> Der Standardwert ist 3.0 f.<br/> |
-| Color<br/> D2D1 \_ Schatten- \_ Prop- \_ Farbe<br/>                                     | Die Farbe des Schlagschattens. Diese Eigenschaft ist ein D2D1 \_ Vector \_ 4f, definiert als: (R, G, B, a). Sie müssen diese Farbe in der geraden Alpha Angabe angeben.<br/> Der Typ ist "D2D1 \_ Vector \_ 4f".<br/> Der Standardwert ist {0,0 f, 0,0 f, 0,0 f, 1.0 f}.<br/>                                                                                                                                                                     |
-| Optimization<br/> D2D1- \_ Schatten- \_ Prop- \_ Optimierung<br/>                       | Die Ebene der Leistungsoptimierung.<br/> Der Typ ist die D2D1- \_ Schatten \_ Optimierung.<br/> Der Standardwert ist D2D1 \_ Schatten \_ Optimierung \_ ausgeglichen.<br/>                                                                                                                                                                                                                                                   |
+| BlurStandardDeviation<br/> D2D1 \_ \_ SCHATTENPROP \_ BLUR \_ STANDARD \_ DEVIATION<br/> | Die Menge an Weichzeichnern, die auf den Alphakanal des Bilds angewendet werden soll. Sie können den Weichzeichnerradius des Kernels berechnen, indem Sie die Standardabweichung mit 3 multiplizieren. Die Einheiten der Standardabweichung und des Weichzeichnerradius sind DIPs.<br/> Diese Eigenschaft entspricht der [Gaußscher Weichzeichner](gaussian-blur.md) Standardabweichungseigenschaft. <br/> Der Typ ist FLOAT.<br/> Der Standardwert ist 3,0f.<br/> |
+| Color<br/> D2D1 \_ SHADOW \_ PROP \_ COLOR<br/>                                     | Die Farbe des Schlagschattens. Diese Eigenschaft ist ein D2D1 \_ VECTOR \_ 4F, der wie folgt definiert ist: (R, G, B, A). Sie müssen diese Farbe in geradem Alpha angeben.<br/> Der Typ ist D2D1 \_ VECTOR \_ 4F.<br/> Der Standardwert ist {0.0f, 0.0f, 0.0f, 1.0f}.<br/>                                                                                                                                                                     |
+| Optimization<br/> \_D2D1–SCHATTENPROP-OPTIMIERUNG \_ \_<br/>                       | Der Grad der Leistungsoptimierung.<br/> Der Typ ist D2D1 \_ SHADOW \_ OPTIMIZATION.<br/> Der Standardwert ist D2D1 \_ SHADOW \_ OPTIMIZATION \_ BALANCED.<br/>                                                                                                                                                                                                                                                   |
 
 
 
  
 
-## <a name="optimization-modes"></a>Optimierungs Modi
+## <a name="optimization-modes"></a>Optimierungsmodi
 
 
 
-| Name                                          | BESCHREIBUNG                                                                                                                           |
+| Name                                          | Beschreibung                                                                                                                           |
 |-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1- \_ \_ Optimierungs Geschwindigkeit für directionalblur \_    | Wendet interne Optimierungen an, wie z. b. die vorab Skalierung bei relativ kleinen Radii. Verwendet lineare Filterung.                                  |
-| D2D1 \_ directionalblur- \_ Optimierung \_ ausgeglichen | Verwendet die gleichen Optimierungs Schwellenwerte wie der Geschwindigkeits Modus, verwendet jedoch die drei lineare Filterung.                                                    |
-| D2D1 \_ directionalblur- \_ Optimierungs \_ Qualität  | Verwendet nur interne Optimierungen mit großen weichungs Radien, bei denen es weniger wahrscheinlich ist, dass Näherungen sichtbar sind. Verwendet die drei lineare Filterung. |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ SPEED    | Wendet interne Optimierungen wie die Vorabskalierung bei relativ kleinen Radien an. Verwendet lineare Filterung.                                  |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ BALANCED | Verwendet die gleichen Optimierungsschwellenwerte wie der Geschwindigkeitsmodus, verwendet jedoch die trilineare Filterung.                                                    |
+| D2D1 \_ DIRECTIONALBLUR \_ OPTIMIZATION \_ QUALITY  | Verwendet nur interne Optimierungen mit großen Weichzeichnerradien, bei denen Näherungen weniger wahrscheinlich sichtbar sind. Verwendet die trilineare Filterung. |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap entspricht der Größe der weichzeichnerausgabe. Der Betrag, um den die Ausgabe Bitmap relativ zur ursprünglichen Bitmap vergrößert werden kann, kann mit der folgenden Formel berechnet werden:
+Die Größe der Ausgabebitmap entspricht der Größe der Weichzeichnerausgabe. Der Betrag, um den die Ausgabebitmap relativ zur ursprünglichen Bitmap wächst, kann mithilfe der folgenden Gleichung berechnet werden:
 
-Vergrößerung der Bitmap (X und Y) = blurstandardabweichung (geräteunabhängige Pixel (Dips)) \* 6 \* (Benutzer dpi)/96
+Output Bitmap Growth (X and Y) = BlurStandardDeviation (device-independent pixels (DIPs)) \* 6 \* (User DPI)/96
 
-Die Ausgabe erhöht sich gleichmäßig in alle Richtungen. wenn die Größe beispielsweise um 10 Pixel in jeder Richtung zunimmt, befindet sich die obere linke Ecke der Bitmap bei (-5,-5), und die untere rechte wird um (105, 105), wie im Diagramm dargestellt.
+Die Ausgabe erhöht sich gleichmäßig in alle Richtungen. Wenn die Größe also z. B. in jeder Richtung um 10 Pixel zunimmt, befindet sich die obere linke Ecke der Bitmap bei (-5, -5), und die untere rechte Seite befindet sich bei (105, 105), wie im Diagramm hier dargestellt.
 
-![Diagramm der Größe der Ausgabegröße der Schatteneffekte.](images/drop-shadow-output-growth.png)
+![Diagramm zur Vergrößerung der Schatteneffektausgabegröße.](images/drop-shadow-output-growth.png)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,10 +122,10 @@ Die Ausgabe erhöht sich gleichmäßig in alle Richtungen. wenn die Größe beis
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

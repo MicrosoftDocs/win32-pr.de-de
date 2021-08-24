@@ -68,7 +68,7 @@ Zeiger auf den allgemeinen COM-Rückgabewert. Dieser Wert wird nur geändert, we
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

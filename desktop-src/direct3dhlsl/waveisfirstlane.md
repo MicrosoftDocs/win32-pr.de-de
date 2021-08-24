@@ -1,9 +1,9 @@
 ---
-title: Waveisfirstlane-Funktion
-description: Gibt nur für die aktive Spur in der aktuellen Wave mit dem kleinsten Index true zurück.
+title: WaveIsFirstLane-Funktion
+description: Gibt nur true für die aktive Lane in der aktuellen Welle mit dem kleinsten Index zurück.
 ms.assetid: 5D90F713-08C7-4BD4-867B-2E7CA3A85E87
 keywords:
-- Waveisfirstlane-Funktion HLSL
+- WaveIsFirstLane-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 49e875463d8281ff7e7699694c02d087df1a372f
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: d909d4269db61980325c48b5858d910955512f701fb09adbcb91f5e078fa3b33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104316778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852710"
 ---
-# <a name="waveisfirstlane-function"></a>Waveisfirstlane-Funktion
+# <a name="waveisfirstlane-function"></a>WaveIsFirstLane-Funktion
 
-Gibt nur für die aktive Spur in der aktuellen Wave mit dem kleinsten Index true zurück.
+Gibt nur true für die aktive Lane in der aktuellen Welle mit dem kleinsten Index zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-True gilt nur für die aktive Spur in der aktuellen Wave mit dem kleinsten Index.
+True nur für die aktive Lane in der aktuellen Welle mit dem kleinsten Index.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann verwendet werden, um Vorgänge zu identifizieren, die nur einmal pro Wave ausgeführt werden sollen.
+Diese Funktion kann verwendet werden, um Vorgänge zu identifizieren, die nur einmal pro Welle ausgeführt werden sollen.
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -64,10 +64,10 @@ Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt.
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

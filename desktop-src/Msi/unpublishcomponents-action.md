@@ -1,29 +1,29 @@
 ---
-description: Mit der unpublishcomponents-Aktion wird die nicht Ankündigung der in der Tabelle PublishComponent aufgeführten Komponenten verwaltet.
+description: Die Aktion UnpublishComponents verwaltet die Nichtvertierung von Komponenten, die in der PublishComponent-Tabelle aufgeführt sind.
 ms.assetid: 3e50f668-6d08-405e-a5a4-f422041ef0b1
-title: Unpublishcomponents-Aktion
+title: Aktion "Nicht veröffentlichenKomponenten"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f58d9fff862295bcc06e61e1b35c05cdddb58daa
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: f1feaca4449ffa344eeda828334f879ebc12905406446dd14623e3b9c4474c6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "104394038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810260"
 ---
-# <a name="unpublishcomponents-action"></a>Unpublishcomponents-Aktion
+# <a name="unpublishcomponents-action"></a>Aktion "Nicht veröffentlichenKomponenten"
 
-Mit der unpublishcomponents-Aktion wird die nicht Ankündigung der in der Tabelle PublishComponent aufgeführten Komponenten verwaltet. Dabei handelt es sich um Komponenten, bei denen möglicherweise von anderen Produkten ein Fehler aufgetreten ist. Diese Aktion entfernt Informationen zu veröffentlichten Komponenten aus der [PublishComponent-Tabelle](publishcomponent-table.md) , für die die entsprechende Funktion zurzeit für die Deinstallation ausgewählt ist.
+Die Aktion UnpublishComponents verwaltet die Nichtvertierung von Komponenten, die in der PublishComponent-Tabelle aufgeführt sind. Dies sind Komponenten, die von anderen Produkten möglicherweise fehlerhaft sind. Diese Aktion entfernt Informationen zu veröffentlichten Komponenten aus der [PublishComponent-Tabelle,](publishcomponent-table.md) für die das entsprechende Feature derzeit für die Deinstallation ausgewählt ist.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                                   |
+| Feld | Beschreibung der Aktionsdaten                                   |
 |-------|--------------------------------------------------------------|
 | \[1\] | GUID, die die Komponenten-ID eines angekündigten Features darstellt. |
 | \[2\] | Qualifizierer der Komponenten-ID.                               |

@@ -3,18 +3,18 @@ title: Systemanbieter
 description: Aktivieren Sie die Ereignisse des Systemablaufverfolgungsanbieters mit EnableTraceEx2.
 ms.topic: article
 ms.date: 06/02/2021
-ms.openlocfilehash: 48a93ab94b87a43e0eb8a292320536a04ef43477
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 46c141c6449594b8030ce24bb901b0afede33f3f6e2cefcaa36f4df4bf0dde0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111387799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812150"
 ---
 # <a name="system-providers"></a>Systemanbieter
  
-Ab Windows 10 SDK-Build 20348 können die Ereignisse des Systemablaufverfolgungsanbieters auf die gleiche Weise aktiviert werden wie andere ETW-Anbieter mit [EnableTraceEx2.](/windows/win32/api/evntrace/nf-evntrace-enabletraceex2)  Die verschiedenen Flags und [Gruppenmasken,](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) die dem Systemablaufverfolgungsanbieter zugeordnet sind, wurden neuen Ablaufverfolgungsanbietern zugeordnet, die als Systemanbieter bezeichnet werden, und übereinstimmenden Schlüsselwörtern.  
+Ab Windows 10 SDK-Build 20348 können die Ereignisse des Systemablaufverfolgungsanbieters auf die gleiche Weise wie andere ETW-Anbieter mit [EnableTraceEx2](/windows/win32/api/evntrace/nf-evntrace-enabletraceex2)aktiviert werden.  Die verschiedenen Flags und [Gruppenmasken,](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) die dem Systemablaufverfolgungsanbieter zugeordnet sind, wurden neuen Ablaufverfolgungsanbietern zugeordnet, die als Systemanbieter bezeichnet werden, und übereinstimmenden Schlüsselwörtern.  
  
-Wie beim direkten Aktivieren des Systemablaufverfolgungsanbieters können die Systemanbieter nur durch eine Sitzung aktiviert werden, für die [der EVENT_TRACE_SYSTEM_LOGGER_MODE](/windows/win32/etw/logging-mode-constants) festgelegt ist.
+Wie beim direkten Aktivieren des Systemablaufverfolgungsanbieters können die Systemanbieter nur durch eine Sitzung aktiviert werden, in der [der EVENT_TRACE_SYSTEM_LOGGER_MODE](/windows/win32/etw/logging-mode-constants) festgelegt ist.
 
 ## <a name="system-provider-reference"></a>Systemanbieterreferenz
 
@@ -42,7 +42,7 @@ Stellt Ereignisse im Zusammenhang mit dem ALPC-System bereit.
 
 GUID: SystemAlpcProviderGuid {fcb9baaf-e529-4980-92e9-ced1a6aadfdf}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_ALPC_KW_GENERAL | PERF_ALPC, EVENT_TRACE_FLAG_ALPC |
  
@@ -52,7 +52,7 @@ Stellt Systemkonfigurationsereignisse bereit.
 
 GUID: SystemConfigProviderGuid {fef3a8b6-318d-4b67-a96a-3b0f6b8f18fe}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_CONFIG_KW_SYSTEM | PERF_SYSCFG_SYSTEM |
 | SYSTEM_CONFIG_KW_GRAPHICS | PERF_SYSCFG_GRAPHICS |
@@ -64,11 +64,11 @@ GUID: SystemConfigProviderGuid {fef3a8b6-318d-4b67-a96a-3b0f6b8f18fe}
  
 ### <a name="system-cpu-provider"></a>System-CPU-Anbieter 
 
-Stellt Ereignisse bereit, die sich auf die CPU beziehen.
+Stellt Ereignisse im Zusammenhang mit der CPU bereit.
 
 GUID: SystemCpuProviderGuid {c6c5265f-eae8-4650-aae4-9d48603d8510}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_CPU_KW_CONFIG | PERF_CPU_CONFIG |
 | SYSTEM_CPU_KW_CACHE_FLUSH | PERF_CACHE_FLUSH |
@@ -80,7 +80,7 @@ Stellt Ereignisse bereit, die sich auf den Hypervisor beziehen.
 
 GUID: SystemHypervisorProviderGuid {bafa072a-918a-4bed-b622-bc152097098f}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_HYPERVISOR_KW_PROFILE | PERF_HV_PROFILE |
 | SYSTEM_HYPERVISOR_KW_CALLOUTS | PERF_HV_CALLOUTS |
@@ -92,7 +92,7 @@ Stellt Ereignisse im Zusammenhang mit DPCs und Interrupts bereit.
 
 GUID: SystemInterruptProviderGuid {d4bbee17-b545-4888-858b-744169015b25}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_INTERRUPT_KW_GENERAL | PERF_INTERRUPT, EVENT_TRACE_FLAG_INTERRUPT |
 | SYSTEM_INTERRUPT_KW_CLOCK_INTERRUPT | PERF_CLOCK_INTERRUPT |
@@ -109,7 +109,7 @@ Stellt Ereignisse im Zusammenhang mit mehreren Arten von E/A bereit, einschließ
 
 GUID: SystemIoProviderGuid {3d5c43e3-0f1c-4202-b817-174c0070dc79}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_IO_KW_DISK | EVENT_TRACE_FLAG_DISK_IO |
 | SYSTEM_IO_KW_DISK_INIT | PERF_DISK_IO_INIT, EVENT_TRACE_FLAG_DISK_IO_INIT |
@@ -122,28 +122,28 @@ GUID: SystemIoProviderGuid {3d5c43e3-0f1c-4202-b817-174c0070dc79}
 | SYSTEM_IO_KW_CC | PERF_CC |
 | SYSTEM_IO_KW_NETWORK | PERF_NETWORK, EVENT_TRACE_FLAG_NETWORK_TCPIP |
 
-Hinweis: Wenn Sie das Schlüsselwort SYSTEM_IO_KW_DRIVERS aktivieren, werden auch SYSTEM_IO_KW_FILENAME automatisch aktiviert.  Die SYSTEM_IO_KW_FILENAME wird auch automatisch aktiviert, wenn der Systemspeicheranbieter mit dem Schlüsselwort SYSTEM_MEMORY_KW_MEMORY aktiviert ist.
+Hinweis: Wenn Sie das schlüsselwort SYSTEM_IO_KW_DRIVERS aktivieren, wird SYSTEM_IO_KW_FILENAME automatisch aktiviert.  Die SYSTEM_IO_KW_FILENAME wird auch automatisch aktiviert, wenn der Systemspeicheranbieter mit dem Schlüsselwort SYSTEM_MEMORY_KW_MEMORY wird.
  
 ### <a name="system-io-filter-provider"></a>System-E/A-Filteranbieter 
 
-Stellt Ereignisse im Zusammenhang mit der E/A-Filterung bereit, einschließlich Zeitsteuerung und Fehlern.
+Stellt Ereignisse im Zusammenhang mit der E/A-Filterung einschließlich Zeitsteuerung und Fehlern zur Verfügung.
 
 GUID: SystemIoFilterProviderGuid {fbd09363-9e22-4661-b8bf-e7a34b535b8c}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_IOFILTER_KW_GENERAL | PERF_FLT_IO |
 | SYSTEM_IOFILTER_KW_INIT | PERF_FLT_IO_INIT |
 | SYSTEM_IOFILTER_KW_FASTIO | PERF_FLT_FASTIO |
 | SYSTEM_IOFILTER_KW_FAILURE | PERF_FLT_IO_FAILURE |
  
-### <a name="system-lock-provider"></a>Systemsperranbieter 
+### <a name="system-lock-provider"></a>Systemsperrungsanbieter 
 
-Stellt Ereignisse im Zusammenhang mit Kernelsperrmechanismen bereit.
+Stellt Ereignisse im Zusammenhang mit Kernelsperrmechanismen zur Verfügung.
 
 GUID: SystemLockProviderGuid {721ddfd3-dacc-4e1e-b26a-a2cb31d4705a}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_LOCK_KW_SPINLOCK | PERF_SPINLOCK |
 | SYSTEM_LOCK_KW_SPINLOCK_COUNTERS | PERF_SPINLOCK_CNTRS |
@@ -151,11 +151,11 @@ GUID: SystemLockProviderGuid {721ddfd3-dacc-4e1e-b26a-a2cb31d4705a}
  
 ### <a name="system-memory-provider"></a>Systemspeicheranbieter 
 
-Stellt Ereignisse bereit, die sich auf den Speicher-Manager beziehen.
+Stellt Ereignisse im Zusammenhang mit dem Speicher-Manager zur Verfügung.
 
 GUID: SystemMemoryProviderGuid {82958ca9-b6cd-47f8-a3a8-03ae85a4bc24}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_MEMORY_KW_GENERAL | PERF_MEMORY |
 | SYSTEM_MEMORY_KW_HARD_FAULTS | PERF_HARD_FAULTS, EVENT_TRACE_FLAG_MEMORY_HARD_FAULTS |
@@ -174,8 +174,8 @@ GUID: SystemMemoryProviderGuid {82958ca9-b6cd-47f8-a3a8-03ae85a4bc24}
 | SYSTEM_MEMORY_KW_VAMAP | PERF_VAMAP, EVENT_TRACE_FLAG_VAMAP |
 
 Hinweise: 
-* Wenn Sie das Schlüsselwort SYSTEM_MEMORY_KW_MEMORY aktivieren, wird SYSTEM_IO_KW_FILENAME automatisch auch auf dem System-E/A-Anbieter aktiviert.
-* Die vom SYSTEM_MEMORY_KW_POOL aktivierten Ereignisse unterstützen einen Pooltagfilter, um Ereignisse selektiv nur für bestimmte Pooltags zu schreiben.  Dies wird als [schematisierter Filter](/windows/win32/api/evntprov/ns-evntprov-event_filter_descriptor) für den Systemspeicheranbieter konfiguriert.  Der PoolTag-Filter wird wie folgt erstellt:
+* Wenn Sie das SYSTEM_MEMORY_KW_MEMORY-Schlüsselwort aktivieren, wird SYSTEM_IO_KW_FILENAME automatisch auch auf dem System-E/A-Anbieter aktiviert.
+* Die vom -SYSTEM_MEMORY_KW_POOL aktivierten Ereignisse unterstützen einen Pooltagfilter, um Ereignisse selektiv nur für bestimmte Pooltags zu schreiben.  Dies wird als [schematisierter Filter für](/windows/win32/api/evntprov/ns-evntprov-event_filter_descriptor) den Systemspeicheranbieter konfiguriert.  Der PoolTag-Filter wird wie folgt erstellt:
 
     ```cpp
     {
@@ -184,29 +184,29 @@ Hinweise:
     }
     ```
 
-* Die [EVENT_FILTER_HEADER](/windows/win32/api/evntprov/ns-evntprov-event_filter_header) sollte initialisiert werden, wobei id auf SYSTEM_MEMORY_POOL_FILTER_ID und das Größenfeld auf die Größe von Header plus den verwendeten Teil des PoolTags-Arrays festgelegt ist.  
+* Die [EVENT_FILTER_HEADER](/windows/win32/api/evntprov/ns-evntprov-event_filter_header) muss initialisiert werden, wenn id auf SYSTEM_MEMORY_POOL_FILTER_ID und das Größenfeld auf die Größe von Header plus den verwendeten Teil des PoolTags-Arrays festgelegt ist.  
 
-* Jedes Pooltag ist eine 4-stellige Zeichenfolge, die als ULONG im Filter gespeichert wird.  
+* Jedes Pooltag ist eine Zeichenfolge mit vier Zeichen, die als ULONG im Filter gespeichert wird.  
  
  
 ### <a name="system-object-provider"></a>Systemobjektanbieter 
 
-Stellt Ereignisse bereit, die sich auf den Objekt-Manager beziehen.
+Stellt Ereignisse im Zusammenhang mit dem Objekt-Manager zur Verfügung.
 
 GUID: SystemObjectProviderGuid {febd7460-3d1d-47eb-af49-c9eeb1e146f2}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_OBJECT_KW_HANDLE | PERF_OB_HANDLE |
 | SYSTEM_OBJECT_KW_OBJECT | PERF_OB_OBJECT |
  
-### <a name="system-power-provider"></a>System Power Provider 
+### <a name="system-power-provider"></a>Systemstromanbieter 
 
-Stellt Ereignisse bereit, die sich auf den Energiezustand des Systems beziehen.
+Stellt Ereignisse im Zusammenhang mit dem Energiezustand des Systems zur Verfügung.
 
 GUID: SystemPowerProviderGuid {c134884a-32d5-4488-80e5-14ed7abb8269}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_POWER_KW_GENERAL | PERF_POWER |
 | SYSTEM_POWER_KW_HIBER_RUNDOWN | PERF_HIBER_RUNDOWN |
@@ -220,7 +220,7 @@ Stellt Ereignisse im Zusammenhang mit dem Prozess einschließlich Lebensdauerinf
 
 GUID: SystemProcessProviderGuid {151f55dc-467d-471f-83b5-5f889d46ff66}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_PROCESS_KW_GENERAL | PERF_PROCESS, EVENT_TRACE_FLAG_PROCESS |
 | SYSTEM_PROCESS_KW_INSWAP | PERF_PROCESS_INSWAP |
@@ -242,7 +242,7 @@ Stellt Profilerstellungsereignisse zur Verfügung.
 
 GUID: SystemProfileProviderGuid {bfeb0324-1cee-496f-a409-2ac2b48a6322}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_PROFILE_KW_GENERAL | PERF_PROFILE, EVENT_TRACE_FLAG_PROFILE |
 | SYSTEM_PROFILE_KW_PMC_PROFILE | PERF_PMC_PROFILE |
@@ -253,7 +253,7 @@ Stellt Ereignisse im Zusammenhang mit der Registrierung zur Verfügung.
 
 GUID: SystemRegistryProviderGuid {16156bd9-fab4-4cfa-a232-89d1099058e3}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_REGISTRY_KW_GENERAL | PERF_REGISTRY, EVENT_TRACE_FLAG_REGISTRY |
 | SYSTEM_REGISTRY_KW_HIVE | PERF_REG_HIVE |
@@ -261,11 +261,11 @@ GUID: SystemRegistryProviderGuid {16156bd9-fab4-4cfa-a232-89d1099058e3}
  
 ### <a name="system-scheduler-provider"></a>Systemplaneranbieter 
 
-Stellt Ereignisse im Zusammenhang mit dem Planer zur Verfügung.
+Stellt Ereignisse im Zusammenhang mit dem Scheduler zur Verfügung.
 
 GUID: SystemSchedulerProviderGuid {599a2a76-4d91-4910-9ac7-7d33f2e97a6c}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_SCHEDULER_KW_XSCHEDULER | PERF_XSCHEDULER |
 | SYSTEM_SCHEDULER_KW_DISPATCHER | PERF_DISPATCHER, EVENT_TRACE_FLAG_DISPATCHER |
@@ -284,7 +284,7 @@ Stellt Ereignisse mit Informationen zu Systemaufrufen zur Verfügung.
 
 GUID: SystemSyscallProviderGuid {434286f7-6f1b-45bb-b37e-95f623046c7c}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_SYSCALL_KW_GENERAL | PERF_SYSCALL, EVENT_TRACE_FLAG_SYSTEMCALL |
  
@@ -294,18 +294,18 @@ Stellt Ereignisse im Zusammenhang mit Timern im Kernel zur Verfügung.
 
 GUID: SystemTimerProviderGuid {4f061568-e215-499f-ab2e-eda0ae890a5b}
 
-| Schlüsselwort | Entsprechende Legacyflags und -gruppen |
+| Stichwort | Entsprechende Legacyflags und -gruppen |
 | ------- | ------------------------------------- |
 | SYSTEM_TIMER_KW_GENERAL | PERF_TIMER |
 | SYSTEM_TIMER_KW_CLOCK_TIMER | PERF_CLOCK_TIMER |
  
 ## <a name="remarks"></a>Hinweise
 
-Dieser neue Aktivierungsmechanismus ist zusätzlich zu den bereits vorhandenen Methoden zum Aktivieren dieser Ereignisse vorhanden.  Jeglicher Code, der zuvor funktioniert hat, wird weiterhin verwendet.
+Dieser neue Aktivierungsmechanismus ist zusätzlich zu den bereits vorhandenen Methoden zum Aktivieren dieser Ereignisse vorhanden.  Jeder Code, der bisher funktioniert hat, wird dies auch weiterhin tun.
  
-Die vom Systemablaufverfolgungsanbieter generierten Ereignisse ändern sich aufgrund dieser neuen Funktion nicht.  Dies bedeutet, dass die ausgegebenen Ereignisse nicht als von den einzelnen Systemanbietern ausgegeben markiert sind.
+Die vom Systemverfolgungsanbieter generierten Ereignisse ändern sich aufgrund dieses neuen Features nicht.  Dies bedeutet, dass die ausgegebenen Ereignisse nicht als von den einzelnen Systemanbietern ausgegeben markiert werden.
  
-Weitere Informationen zur Anbieter-GUID und Schlüsselwortdefinitionen finden Sie unter [evntrace.h](/windows/win32/api/evntrace/).
+Weitere Informationen zu Anbieter-GUID und Schlüsselwortdefinitionen finden Sie unter [evntrace.h](/windows/win32/api/evntrace/).
 
 ## <a name="see-also"></a>Weitere Informationen
 

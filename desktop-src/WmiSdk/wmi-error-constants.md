@@ -1,75 +1,75 @@
 ---
-description: Wenn ein Fehler auftritt, gibt WMI einen Fehlercode als HRESULT-Wert zurück. Diese Codes können von Skripts, C++-Anwendungen oder WMIC zurückgegeben werden.
+description: Wenn ein Fehler auftritt, gibt WMI einen Fehlercode als HRESULT-Wert zurück. Diese Codes können von Skripts, C++-Anwendungen oder Wmic zurückgegeben werden.
 ms.assetid: b560f37c-da22-4745-8d1f-b27afdf572ec
 ms.tgt_platform: multiple
-title: WMI-Fehler Konstanten (wbemcli. h)
+title: WMI-Fehlerkonst constants (WbemCli.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e95db7220bdc9669716dbe19f5bf2f4e139dfe5c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 679fd0cb9714e2ee202b12195b10e72778564d7549ed4731d905603a11e073db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119794310"
 ---
-# <a name="wmi-error-constants"></a>WMI-Fehler Konstanten
+# <a name="wmi-error-constants"></a>WMI-Fehlerkonst constants
 
-Wenn ein Fehler auftritt, gibt WMI einen Fehlercode als **HRESULT** -Wert zurück. Diese Codes können von Skripts, C++-Anwendungen oder [**WMIC**](wmic.md)zurückgegeben werden.
+Wenn ein Fehler auftritt, gibt WMI einen Fehlercode als **HRESULT-Wert** zurück. Diese Codes können von Skripts, C++-Anwendungen oder [**Wmic zurückgegeben werden.**](wmic.md)
 
 > [!Note]
 >
-> Die folgende Dokumentation richtet sich an Entwickler und IT-Administratoren. Wenn Sie ein Endbenutzer sind, bei dem eine Fehlermeldung zu WMI aufgetreten ist, sollten Sie [Microsoft-Support](https://support.microsoft.com/) aufrufen und nach dem Fehlercode suchen, der in der Fehlermeldung angezeigt wird. Weitere Informationen zur Behebung von Problemen mit WMI-Skripts und dem WMI-Dienst finden Sie unter [WMI funktioniert nicht!](/previous-versions/tn-archive/ff406382(v=msdn.10)).
+> Die folgende Dokumentation richtet sich an Entwickler und IT-Administratoren. Wenn Sie ein Endbenutzer sind, bei dem eine Fehlermeldung zu WMI aufgetreten ist, sollten Sie zu [Microsoft-Support](https://support.microsoft.com/) wechseln und nach dem Fehlercode suchen, der in der Fehlermeldung angezeigt wird. Weitere Informationen zur Behandlung von Problemen mit WMI-Skripts und dem WMI-Dienst finden Sie unter [WMI Isn't Working!](/previous-versions/tn-archive/ff406382(v=msdn.10)).
 >
-> Wenn WMI Fehlermeldungen zurückgibt, beachten Sie, dass Sie möglicherweise nicht auf Probleme im WMI-Dienst oder in WMI-Anbietern hinweisen. Fehler können aus anderen Teilen des Betriebssystems stammen und als Fehler über WMI auftreten. Löschen Sie das WMI-Repository unter Umständen nicht als erste Aktion, da das Löschen des Repository zu Beschädigungen des Systems oder der installierten Anwendungen führen kann.
+> Wenn WMI Fehlermeldungen zurückgibt, beachten Sie, dass sie möglicherweise nicht auf Probleme im WMI-Dienst oder in WMI-Anbietern hinweisen. Fehler können aus anderen Teilen des Betriebssystems stammen und über WMI als Fehler auftreten. Löschen Sie das WMI-Repository unter keinen Umständen als erste Aktion, da das Löschen des Repositorys schäden am System oder an installierten Anwendungen verursachen kann.
 >
-> Um weitere Informationen zur Ursache des Problems zu erhalten, können Sie das Befehlszeilen Tool [WMI-Diagnosehilfsprogramm](https://www.microsoft.com/downloads/en/details.aspx?familyid=d7ba3cd6-18d1-4d05-b11e-4c64192ae97d&displaylang=en) Diagnose herunterladen und ausführen. Mit diesem Tool wird ein Bericht erstellt, der in der Regel die Ursache des Problems isolieren und Anweisungen zur Behebung des Problems bereitstellen kann. Der Bericht hilft Ihnen auch bei der Unterstützung durch den Microsoft-Support. Sie können die WMI-Diagnosehilfsprogramm [hier](https://www.microsoft.com/downloads/details.aspx?FamilyID=d7ba3cd6-18d1-4d05-b11e-4c64192ae97d)herunterladen.
+> Um weitere Informationen zur Ursache des Problems zu erhalten, können Sie das WMI-Diagnosehilfsprogramm-Befehlszeilentool herunterladen und ausführen. [](https://www.microsoft.com/downloads/en/details.aspx?familyid=d7ba3cd6-18d1-4d05-b11e-4c64192ae97d&displaylang=en) Dieses Tool erstellt einen Bericht, der normalerweise die Ursache des Problems isolieren und Anweisungen zum Beheben des Problems bereitstellen kann. Der Bericht unterstützt Auch Microsoft-Supportdienste bei der Unterstützung. Sie können die Datei hier WMI-Diagnosehilfsprogramm [herunterladen.](https://www.microsoft.com/downloads/details.aspx?FamilyID=d7ba3cd6-18d1-4d05-b11e-4c64192ae97d)
 
  
 
-Einige Methoden in WMI-Klassen können System-und Netzwerkfehler Codes zurückgeben (z. b. 64). Sie können die Definition dieser Arten von Fehlercodes überprüfen, indem Sie den Befehl **net helpmsg** im Eingabe Aufforderungs Fenster verwenden. Der Befehl **net helpmsg 64** gibt beispielsweise die folgende Meldung zurück: der angegebene Netzwerkname ist nicht mehr verfügbar.
+Einige Methoden in WMI-Klassen können System- und Netzwerkfehlercodes zurückgeben (z. B. 64). Sie können die Definition dieser Arten von Fehlercodes überprüfen, indem Sie den **Befehl net helpmsg** im Eingabeaufforderungsfenster verwenden. Beispielsweise gibt der Befehl **net helpmsg 64** die Folgendes zurück: Der angegebene Netzwerkname ist nicht mehr verfügbar.
 
-In der folgenden Liste sind einige allgemeine Fehler Bereiche aufgeführt.
+In der folgenden Liste sind einige häufige Fehlerbereiche aufgeführt.
 
 <dl> <dt>
 
-<span id="0x80041068_-_0x80041099"></span><span id="0X80041068_-_0X80041099"></span>0x80041068-0x80041099
+<span id="0x80041068_-_0x80041099"></span><span id="0X80041068_-_0X80041099"></span>0x80041068 – 0x80041099
 </dt> <dd>
 
-Fehler, die von WMI selbst stammen.
+Fehler, die aus WMI selbst stammen.
 
-Fehler bei einem bestimmten WMI-Vorgang.
+Fehler bei einem bestimmten WMI-Vorgang aufgrund von
 
--   Ein Fehler in der Anforderung, z. b. eine WQL-Abfrage, oder das Konto verfügt nicht über die richtigen Berechtigungen.
--   Ein WMI-Infrastrukturproblem, z. b. eine falsche CIM-oder DCOM-Registrierung.
+-   Ein Fehler in der Anforderung, z. B. wenn eine WQL-Abfrage fehlschlägt oder das Konto nicht über die richtigen Berechtigungen verfügt.
+-   Ein WMI-Infrastrukturproblem, z. B. eine falsche CIM- oder DCOM-Registrierung.
 
 </dd> <dt>
 
 <span id="0x8007xxxx"></span><span id="0X8007XXXX"></span>0x8007xxxx
 </dt> <dd>
 
-Fehler, die im Kernbetriebssystem auftreten. Diese Art von Fehler kann von WMI aufgrund eines externen Fehlers (z. b. DCOM-Sicherheitsfehler) zurückgegeben werden.
+Fehler, die vom Kernbetriebssystem stammen. WMI gibt diese Art von Fehler möglicherweise aufgrund eines externen Fehlers zurück, z. B. eines DCOM-Sicherheitsfehlers.
 
 </dd> <dt>
 
 <span id="0x80040xxx"></span><span id="0X80040XXX"></span>0x80040xxx
 </dt> <dd>
 
-Fehler, die in DCOM ausgelöst werden. Beispielsweise ist die DCOM-Konfiguration für Vorgänge auf einem Remote Computer möglicherweise falsch.
+Fehler, die in DCOM auftreten. Beispielsweise kann die DCOM-Konfiguration für Vorgänge auf einem Remotecomputer falsch sein.
 
 </dd> <dt>
 
 <span id="0x8005xxxx"></span><span id="0X8005XXXX"></span>0x8005xxxx
 </dt> <dd>
 
-Fehler aus ADSI (Active Directory-Dienst Schnittstellen) oder LDAP (Lightweight Directory Access Protocol), z. b. ein Active Directory Zugriffsfehler, wenn die WMI-Active Directory Anbieter verwendet werden.
+Fehler, der von ADSI (Active Directory-Dienstschnittstellen) oder LDAP (Lightweight Directory Access Protocol) stammt, z. B. ein Active Directory-Zugriffsfehler bei Verwendung der WMI-Active Directory-Anbieter.
 
 </dd> </dl>
 
-Einige Methoden in WMI-Klassen können System-und Netzwerkfehler Codes zurückgeben (z. b. 64). Sie können die Definition dieser Arten von Fehlercodes überprüfen, indem Sie den Befehl **net helpmsg** im Eingabe Aufforderungs Fenster verwenden. Der Befehl **net helpmsg 64** gibt beispielsweise die folgende Meldung zurück: der angegebene Netzwerkname ist nicht mehr verfügbar. In C++ können Sie [**FormatMessage**](/windows/desktop/api/winbase/nf-winbase-formatmessage) und **C: \\ Windows \\ system32 \\ WBEM \\wmiutils.dll** als Nachrichten Modul angeben.
+Einige Methoden in WMI-Klassen können System- und Netzwerkfehlercodes zurückgeben (z. B. 64). Sie können die Definition dieser Arten von Fehlercodes überprüfen, indem Sie den **Befehl net helpmsg** im Eingabeaufforderungsfenster verwenden. Beispielsweise gibt der Befehl **net helpmsg 64** die Folgendes zurück: Der angegebene Netzwerkname ist nicht mehr verfügbar. In C++ können Sie [**FormatMessage**](/windows/desktop/api/winbase/nf-winbase-formatmessage) aufrufen und **C: \\ Windows \\ System32 \\ wbem \\** wmiutils.dllals Nachrichtenmodul angeben.
 
 <dl> <dt>
 
-<span id="WBEM_E_FAILED"></span><span id="wbem_e_failed"></span>**WBEM \_ E \_ fehlgeschlagen**
+<span id="WBEM_E_FAILED"></span><span id="wbem_e_failed"></span>**FEHLER bei WBEM \_ E \_**
 </dt> <dd> <dl> <dt>
 
 2147749889 (0x80041001)
@@ -77,15 +77,15 @@ Einige Methoden in WMI-Klassen können System-und Netzwerkfehler Codes zurückge
 
 
 
-Fehler beim Abrufen.
+Fehler beim Aufruf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_FOUND"></span><span id="wbem_e_not_found"></span>**WBEM \_ E \_ nicht \_ gefunden**
+<span id="WBEM_E_NOT_FOUND"></span><span id="wbem_e_not_found"></span>**WBEM \_ E \_ NOT \_ FOUND**
 </dt> <dd> <dl> <dt>
 
-2147749890 (0x80041002 angezeigt)
+2147749890 (0x80041002)
 </dt> <dt>
 
 
@@ -95,7 +95,7 @@ Das Objekt wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ACCESS_DENIED"></span><span id="wbem_e_access_denied"></span>**WBEM \_ E- \_ Zugriff \_ verweigert**
+<span id="WBEM_E_ACCESS_DENIED"></span><span id="wbem_e_access_denied"></span>**WBEM \_ E \_ ACCESS \_ DENIED**
 </dt> <dd> <dl> <dt>
 
 2147749891 (0x80041003)
@@ -108,7 +108,7 @@ Der aktuelle Benutzer verfügt nicht über die Berechtigung zum Ausführen der A
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_FAILURE"></span><span id="wbem_e_provider_failure"></span>**Fehler beim WBEM \_ E- \_ Anbieter. \_**
+<span id="WBEM_E_PROVIDER_FAILURE"></span><span id="wbem_e_provider_failure"></span>**WBEM E PROVIDER FAILURE (FEHLER BEIM \_ WBEM-E-ANBIETER) \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147749892 (0x80041004)
@@ -121,7 +121,7 @@ Der Anbieter ist zu einem anderen Zeitpunkt als während der Initialisierung feh
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TYPE_MISMATCH"></span><span id="wbem_e_type_mismatch"></span>**WBEM \_ E- \_ Typen Konflikt \_**
+<span id="WBEM_E_TYPE_MISMATCH"></span><span id="wbem_e_type_mismatch"></span>**WBEM \_ E \_ TYPE \_ MISMATCH**
 </dt> <dd> <dl> <dt>
 
 2147749893 (0x80041005)
@@ -129,12 +129,12 @@ Der Anbieter ist zu einem anderen Zeitpunkt als während der Initialisierung feh
 
 
 
-Es ist ein Typen Konflikt aufgetreten.
+Typkonflikt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_OUT_OF_MEMORY"></span><span id="wbem_e_out_of_memory"></span>**nicht genügend \_ Arbeits \_ \_ Speicher für \_ WBEM E**
+<span id="WBEM_E_OUT_OF_MEMORY"></span><span id="wbem_e_out_of_memory"></span>**WBEM \_ E NICHT GENÜGEND \_ \_ \_ ARBEITSSPEICHER**
 </dt> <dd> <dl> <dt>
 
 2147749894 (0x80041006)
@@ -147,7 +147,7 @@ Nicht genügend Arbeitsspeicher für den Vorgang.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_CONTEXT"></span><span id="wbem_e_invalid_context"></span>**WBEM \_ E ( \_ ungültiger \_ Kontext)**
+<span id="WBEM_E_INVALID_CONTEXT"></span><span id="wbem_e_invalid_context"></span>**WBEM \_ E \_ INVALID \_ CONTEXT**
 </dt> <dd> <dl> <dt>
 
 2147749895 (0x80041007)
@@ -155,12 +155,12 @@ Nicht genügend Arbeitsspeicher für den Vorgang.
 
 
 
-Das [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Objekt ist ungültig.
+Das [**IWbemContext-Objekt**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PARAMETER"></span><span id="wbem_e_invalid_parameter"></span>**\_Ungültiger WBEM E- \_ \_ Parameter**
+<span id="WBEM_E_INVALID_PARAMETER"></span><span id="wbem_e_invalid_parameter"></span>**WBEM \_ E \_ INVALID \_ PARAMETER**
 </dt> <dd> <dl> <dt>
 
 2147749896 (0x80041008)
@@ -173,7 +173,7 @@ Einer der Parameter für den Aufruf ist nicht korrekt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_AVAILABLE"></span><span id="wbem_e_not_available"></span>**WBEM \_ E \_ nicht \_ verfügbar**
+<span id="WBEM_E_NOT_AVAILABLE"></span><span id="wbem_e_not_available"></span>**WBEM \_ E \_ NICHT \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 2147749897 (0x80041009)
@@ -181,15 +181,15 @@ Einer der Parameter für den Aufruf ist nicht korrekt.
 
 
 
-Die Ressource (in der Regel ein Remote Server) ist zurzeit nicht verfügbar.
+Die Ressource , in der Regel ein Remoteserver, ist derzeit nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CRITICAL_ERROR"></span><span id="wbem_e_critical_error"></span>**kritischer WBEM \_ E- \_ \_ Fehler**
+<span id="WBEM_E_CRITICAL_ERROR"></span><span id="wbem_e_critical_error"></span>**WBEM \_ E \_ CRITICAL \_ ERROR**
 </dt> <dd> <dl> <dt>
 
-2147749898 (0x8004100a)
+2147749898 (0x8004100A)
 </dt> <dt>
 
 
@@ -199,10 +199,10 @@ Interner, kritischer und unerwarteter Fehler. Melden Sie den Fehler an den techn
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_STREAM"></span><span id="wbem_e_invalid_stream"></span>**WBEM \_ E \_ ungültiger \_ Stream**
+<span id="WBEM_E_INVALID_STREAM"></span><span id="wbem_e_invalid_stream"></span>**WBEM \_ E \_ INVALID \_ STREAM**
 </dt> <dd> <dl> <dt>
 
-2147749899 (0x8004100b)
+2147749899 (0x8004100B)
 </dt> <dt>
 
 
@@ -212,23 +212,23 @@ Während einer Remotesitzung wurde mindestens ein Netzwerkpaket beschädigt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_SUPPORTED"></span><span id="wbem_e_not_supported"></span>**WBEM \_ E \_ \_ wird nicht unterstützt.**
+<span id="WBEM_E_NOT_SUPPORTED"></span><span id="wbem_e_not_supported"></span>**WBEM \_ E WIRD NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
-2147749900 (0x8004100c)
+2147749900 (0x8004100C)
 </dt> <dt>
 
 
 
-Die Funktion oder der Vorgang wird nicht unterstützt.
+Das Feature oder der Vorgang wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_SUPERCLASS"></span><span id="wbem_e_invalid_superclass"></span>**WBEM \_ E \_ ungültige \_ Superclass.**
+<span id="WBEM_E_INVALID_SUPERCLASS"></span><span id="wbem_e_invalid_superclass"></span>**WBEM \_ E \_ INVALID \_ SUPERCLASS**
 </dt> <dd> <dl> <dt>
 
-2147749901 (0x8004100d)
+2147749901 (0x8004100D)
 </dt> <dt>
 
 
@@ -238,10 +238,10 @@ Die angegebene übergeordnete Klasse ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_NAMESPACE"></span><span id="wbem_e_invalid_namespace"></span>**WBEM \_ E ( \_ ungültiger \_ Namespace)**
+<span id="WBEM_E_INVALID_NAMESPACE"></span><span id="wbem_e_invalid_namespace"></span>**WBEM \_ E \_ UNGÜLTIGER \_ NAMESPACE**
 </dt> <dd> <dl> <dt>
 
-2147749902 (0x8004100e)
+2147749902 (0x8004100E)
 </dt> <dt>
 
 
@@ -251,10 +251,10 @@ Der angegebene Namespace wurde nicht gefunden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OBJECT"></span><span id="wbem_e_invalid_object"></span>**ungültiges WBEM- \_ \_ \_ Objekt**
+<span id="WBEM_E_INVALID_OBJECT"></span><span id="wbem_e_invalid_object"></span>**WBEM \_ E \_ INVALID \_ OBJECT**
 </dt> <dd> <dl> <dt>
 
-2147749903 (0x8004100f)
+2147749903 (0x8004100F)
 </dt> <dt>
 
 
@@ -264,7 +264,7 @@ Die angegebene Instanz ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_CLASS"></span><span id="wbem_e_invalid_class"></span>**\_ungültige WBEM E- \_ \_ Klasse**
+<span id="WBEM_E_INVALID_CLASS"></span><span id="wbem_e_invalid_class"></span>**WBEM \_ E \_ \_ INVALID-KLASSE**
 </dt> <dd> <dl> <dt>
 
 2147749904 (0x80041010)
@@ -277,7 +277,7 @@ Die angegebene Klasse ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_NOT_FOUND"></span><span id="wbem_e_provider_not_found"></span>**der WBEM \_ E- \_ Anbieter wurde \_ nicht \_ gefunden.**
+<span id="WBEM_E_PROVIDER_NOT_FOUND"></span><span id="wbem_e_provider_not_found"></span>**WBEM E PROVIDER NOT FOUND (WBEM \_ \_ \_ E-ANBIETER NICHT \_ GEFUNDEN)**
 </dt> <dd> <dl> <dt>
 
 2147749905 (0x80041011)
@@ -285,12 +285,12 @@ Die angegebene Klasse ist ungültig.
 
 
 
-Der Anbieter, auf den im Schema verwiesen wird, verfügt über keine entsprechende Registrierung.
+Der Anbieter, auf den im Schema verwiesen wird, verfügt nicht über eine entsprechende Registrierung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PROVIDER_REGISTRATION"></span><span id="wbem_e_invalid_provider_registration"></span>**\_ \_ ungültige \_ Anbieter \_ Registrierung für WBEM E**
+<span id="WBEM_E_INVALID_PROVIDER_REGISTRATION"></span><span id="wbem_e_invalid_provider_registration"></span>**WBEM \_ E \_ INVALID \_ PROVIDER \_ REGISTRATION**
 </dt> <dd> <dl> <dt>
 
 2147749906
@@ -298,20 +298,20 @@ Der Anbieter, auf den im Schema verwiesen wird, verfügt über keine entsprechen
 
 
 
-Der im Schema referenzierte Anbieter weist eine falsche oder unvollständige Registrierung auf.
+Der Anbieter, auf den im Schema verwiesen wird, verfügt über eine falsche oder unvollständige Registrierung.
 
-Dieser Fehler kann durch eine Vielzahl von Bedingungen verursacht werden, einschließlich der folgenden:
+Dieser Fehler kann durch viele Bedingungen verursacht werden, einschließlich der folgenden:
 
--   Ein fehlender [ \# pragma-Namespace](pragma-namespace.md) Befehl in der Managed Object Format (MOF)-Datei, die zum Registrieren des Anbieters verwendet wird. Der Anbieter kann im falschen WMI-Namespace registriert werden.
--   Fehler beim Abrufen der com-Registrierung.
--   Das Hostingmodell ist ungültig. Weitere Informationen finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md).
+-   Ein [ \# fehlender Pragmanamespace-Befehl](pragma-namespace.md) in der Managed Object Format (MOF)-Datei, die zum Registrieren des Anbieters verwendet wird. Der Anbieter kann im falschen WMI-Namespace registriert sein.
+-   Fehler beim Abrufen der COM-Registrierung.
+-   Das Hostingmodell ist ungültig. Weitere Informationen finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md)
 -   Eine in der Registrierung angegebene Klasse ist ungültig.
--   Fehler beim Erstellen einer Instanz von oder Erben von der [**\_ \_ Win32Provider**](--win32provider.md) -Klasse, um die Anbieter Registrierung in der MOF-Datei zu erstellen.
+-   Fehler beim Erstellen einer Instanz von oder Erben von der [**\_ \_ Win32Provider-Klasse,**](--win32provider.md) um die Anbieterregistrierung in der MOF-Datei zu erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_LOAD_FAILURE"></span><span id="wbem_e_provider_load_failure"></span>**Fehler beim Laden des WBEM \_ E- \_ Anbieters \_ \_**
+<span id="WBEM_E_PROVIDER_LOAD_FAILURE"></span><span id="wbem_e_provider_load_failure"></span>**WBEM \_ E \_ PROVIDER \_ LOAD \_ FAILURE**
 </dt> <dd> <dl> <dt>
 
 2147749907 (0x80041013)
@@ -321,18 +321,18 @@ Dieser Fehler kann durch eine Vielzahl von Bedingungen verursacht werden, einsch
 
 COM kann keinen Provider finden, auf den im Schema verwiesen wird.
 
-Dieser Fehler kann durch eine Vielzahl von Bedingungen verursacht werden, einschließlich der folgenden:
+Dieser Fehler kann durch viele Bedingungen verursacht werden, einschließlich der folgenden:
 
--   Der Anbieter verwendet eine WMI-dll, die nicht mit der LIB-Datei identisch ist, die beim Erstellen des Anbieters verwendet wurde.
--   Die Anbieter-DLL oder eine der DLLs, von denen Sie abhängt, ist beschädigt.
--   Der Anbieter konnte [**DllRegisterServer**](/windows/win32/api/olectl/nf-olectl-dllregisterserver)nicht exportieren.
--   Der in-Process-Anbieter wurde nicht mit dem **regsvr32** -Befehl registriert.
--   Der Out-of-Process-Anbieter wurde nicht mit dem Schalter **/RegServer** registriert. Beispielsweise **myprog.exe/RegServer**.
+-   Der Anbieter verwendet eine WMI-DLL, die nicht mit der LIB-Datei überein passt, die beim Erstellen des Anbieters verwendet wurde.
+-   Die DLL des Anbieters oder eine der DLLs, von denen sie abhängt, ist beschädigt.
+-   Der Anbieter konnte [**dllRegisterServer nicht exportieren.**](/windows/win32/api/olectl/nf-olectl-dllregisterserver)
+-   Der In-Process-Anbieter wurde nicht mit dem **Befehl regsvr32** registriert.
+-   Der Out-of-Process-Anbieter wurde nicht mit dem **Schalter /regserver** registriert. Beispiel: **myprog.exe /regserver**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INITIALIZATION_FAILURE"></span><span id="wbem_e_initialization_failure"></span>**WBEM \_ E- \_ Initialisierungs \_ Fehler**
+<span id="WBEM_E_INITIALIZATION_FAILURE"></span><span id="wbem_e_initialization_failure"></span>**FEHLER BEI DER \_ WBEM-E-INITIALISIERUNG \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147749908 (0x80041014)
@@ -340,12 +340,12 @@ Dieser Fehler kann durch eine Vielzahl von Bedingungen verursacht werden, einsch
 
 
 
-Die Komponente, z. b. ein Anbieter, konnte aus internen Gründen nicht initialisiert werden.
+Komponente, z. B. ein Anbieter, konnte aus internen Gründen nicht initialisiert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TRANSPORT_FAILURE"></span><span id="wbem_e_transport_failure"></span>**WBEM \_ E- \_ Transport \_ Fehler**
+<span id="WBEM_E_TRANSPORT_FAILURE"></span><span id="wbem_e_transport_failure"></span>**WBEM \_ \_ E-TRANSPORTFEHLER \_**
 </dt> <dd> <dl> <dt>
 
 2147749909 (0x80041015)
@@ -353,12 +353,12 @@ Die Komponente, z. b. ein Anbieter, konnte aus internen Gründen nicht initialis
 
 
 
-Netzwerkfehler, der den normalen Betrieb verhindert.
+Netzwerkfehler, der den normalen Betrieb verhindert, ist aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OPERATION"></span><span id="wbem_e_invalid_operation"></span>**\_Ungültiger WBEM E- \_ \_ Vorgang**
+<span id="WBEM_E_INVALID_OPERATION"></span><span id="wbem_e_invalid_operation"></span>**WBEM \_ E \_ UNGÜLTIGER \_ VORGANG**
 </dt> <dd> <dl> <dt>
 
 2147749910 (0x80041016)
@@ -371,7 +371,7 @@ Der angeforderte Vorgang ist ungültig. Dieser Fehler betrifft i. A. ungültige
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUERY"></span><span id="wbem_e_invalid_query"></span>**\_ungültige WBEM E- \_ \_ Abfrage**
+<span id="WBEM_E_INVALID_QUERY"></span><span id="wbem_e_invalid_query"></span>**WBEM \_ E \_ INVALID \_ QUERY**
 </dt> <dd> <dl> <dt>
 
 2147749911 (0x80041017)
@@ -379,12 +379,12 @@ Der angeforderte Vorgang ist ungültig. Dieser Fehler betrifft i. A. ungültige
 
 
 
-Die Abfrage war nicht syntaktisch gültig.
+Die Abfrage war syntaktisch ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUERY_TYPE"></span><span id="wbem_e_invalid_query_type"></span>**\_Ungültiger WBEM E- \_ \_ Abfragetyp \_**
+<span id="WBEM_E_INVALID_QUERY_TYPE"></span><span id="wbem_e_invalid_query_type"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ ABFRAGETYP**
 </dt> <dd> <dl> <dt>
 
 2147749912 (0x80041018)
@@ -397,7 +397,7 @@ Die angeforderte Abfragesprache wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ALREADY_EXISTS"></span><span id="wbem_e_already_exists"></span>**WBEM \_ E ist \_ bereits \_ vorhanden.**
+<span id="WBEM_E_ALREADY_EXISTS"></span><span id="wbem_e_already_exists"></span>**WBEM \_ E IST BEREITS \_ \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 2147749913 (0x80041019)
@@ -405,90 +405,90 @@ Die angeforderte Abfragesprache wird nicht unterstützt.
 
 
 
-In einem Put-Vorgang wurde das Flag " **wbemchangeflagkreateonly** " angegeben, aber die Instanz ist bereits vorhanden.
+In einem put-Vorgang wurde das **Flag wbemChangeFlagCreateOnly** angegeben, aber die Instanz ist bereits vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_OVERRIDE_NOT_ALLOWED"></span><span id="wbem_e_override_not_allowed"></span>**außer Kraft Setzung von WBEM \_ E \_ \_ nicht \_ zulässig**
+<span id="WBEM_E_OVERRIDE_NOT_ALLOWED"></span><span id="wbem_e_override_not_allowed"></span>**WBEM \_ \_ E-AUßERKRAFTSETZUNG \_ NICHT \_ ZULÄSSIG**
 </dt> <dd> <dl> <dt>
 
-2147749914 (0x8004101a)
+2147749914 (0x8004101A)
 </dt> <dt>
 
 
 
-Der Add-Vorgang kann für diesen Qualifizierer nicht durchgeführt werden, da das besitzende Objekt keine über schreibungen zulässt.
+Es ist nicht möglich, den Add-Vorgang für diesen Qualifizierer durchzuführen, da das besitzende Objekt keine Überschreibungen zulasst.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROPAGATED_QUALIFIER"></span><span id="wbem_e_propagated_qualifier"></span>**WBEM \_ E \_ - \_ Qualifizierer**
+<span id="WBEM_E_PROPAGATED_QUALIFIER"></span><span id="wbem_e_propagated_qualifier"></span>**WBEM \_ E \_ PROPAGATED-QUALIFIZIERER \_**
 </dt> <dd> <dl> <dt>
 
-2147749915 (0x8004101b)
+2147749915 (0x8004101B)
 </dt> <dt>
 
 
 
-Der Benutzer hat versucht, einen Qualifizierer zu löschen, der nicht im Besitz Der Qualifizierer wurde von einer übergeordneten Klasse vererbt.
+Der Benutzer hat versucht, einen Qualifizierer zu löschen, der nicht im Besitz von war. Der Qualifizierer wurde von einer übergeordneten Klasse vererbt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROPAGATED_PROPERTY"></span><span id="wbem_e_propagated_property"></span>**\_propagierte WBEM E- \_ \_ Eigenschaft**
+<span id="WBEM_E_PROPAGATED_PROPERTY"></span><span id="wbem_e_propagated_property"></span>**WBEM \_ E \_ PROPAGATED-EIGENSCHAFT \_**
 </dt> <dd> <dl> <dt>
 
-2147749916 (0x8004101c)
+2147749916 (0x8004101C)
 </dt> <dt>
 
 
 
-Der Benutzer hat versucht, eine Eigenschaft zu löschen, deren Besitzer er nicht war. Die Eigenschaft wurde von einer übergeordneten Klasse vererbt.
+Der Benutzer hat versucht, eine Eigenschaft zu löschen, die nicht im Besitz von war. Die Eigenschaft wurde von einer übergeordneten Klasse vererbt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNEXPECTED"></span><span id="wbem_e_unexpected"></span>**WBEM \_ E \_ unerwartet**
+<span id="WBEM_E_UNEXPECTED"></span><span id="wbem_e_unexpected"></span>**WBEM \_ E \_ UNEXPECTED**
 </dt> <dd> <dl> <dt>
 
-2147749917 (0x8004101d)
+2147749917 (0x8004101D)
 </dt> <dt>
 
 
 
-Der Client hat eine unerwartete und unzulässige Sequenz von Aufrufen vorgenommen, z. b. das Aufrufen von [**EndEnumeration**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-endenumeration) vor dem Aufrufen von [**beginenumeration**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-beginenumeration).
+Der Client hat eine unerwartete und unzulässige Sequenz von Aufrufen vorgenommen, z. B. das Aufrufen von [**EndEnumeration**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-endenumeration) vor dem Aufruf von [**BeginEnumeration.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-beginenumeration)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ILLEGAL_OPERATION"></span><span id="wbem_e_illegal_operation"></span>**Ungültiger WBEM- \_ \_ \_ Vorgang**
+<span id="WBEM_E_ILLEGAL_OPERATION"></span><span id="wbem_e_illegal_operation"></span>**WBEM \_ E \_ ILLEGAL \_ OPERATION**
 </dt> <dd> <dl> <dt>
 
-2147749918 (0x8004101e)
+2147749918 (0x8004101E)
 </dt> <dt>
 
 
 
-Der Benutzer hat einen ungültigen Vorgang angefordert, z. b. das Abrufen einer Klasse aus einer Instanz.
+Der Benutzer hat einen unzulässigen Vorgang angefordert, z. B. das Erstellen einer Klasse aus einer -Instanz.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CANNOT_BE_KEY"></span><span id="wbem_e_cannot_be_key"></span>**WBEM \_ E \_ darf \_ nicht \_ Schlüssel sein.**
+<span id="WBEM_E_CANNOT_BE_KEY"></span><span id="wbem_e_cannot_be_key"></span>**WBEM \_ E KANN KEIN SCHLÜSSEL \_ \_ \_ SEIN**
 </dt> <dd> <dl> <dt>
 
-2147749919 (0x8004101f)
+2147749919 (0x8004101F)
 </dt> <dt>
 
 
 
-Unzulässiger Versuch, einen Schlüssel Qualifizierer für eine Eigenschaft anzugeben, die kein Schlüssel sein kann. Die Schlüssel sind in der Klassendefinition für ein Objekt angegeben und können nicht für jede Instanz einzeln geändert werden.
+Unzulässiger Versuch, einen Schlüsselqualifizierer für eine Eigenschaft anzugeben, die kein Schlüssel sein darf. Die Schlüssel sind in der Klassendefinition für ein Objekt angegeben und können nicht für jede Instanz einzeln geändert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INCOMPLETE_CLASS"></span><span id="wbem_e_incomplete_class"></span>**unvollständige WBEM \_ E- \_ \_ Klasse**
+<span id="WBEM_E_INCOMPLETE_CLASS"></span><span id="wbem_e_incomplete_class"></span>**WBEM \_ E \_ \_ INCOMPLETE-KLASSE**
 </dt> <dd> <dl> <dt>
 
 2147749920 (0x80041020)
@@ -496,12 +496,12 @@ Unzulässiger Versuch, einen Schlüssel Qualifizierer für eine Eigenschaft anzu
 
 
 
-Das aktuelle Objekt ist keine gültige Klassendefinition. Entweder ist sie unvollständig, oder Sie wurde nicht bei WMI mithilfe von " [**errbemubject. \_ Put**](swbemobject-put-.md)" registriert.
+Das aktuelle Objekt ist keine gültige Klassendefinition. Entweder ist sie unvollständig, oder sie wurde nicht mithilfe von [**SWbemObject.Put \_**](swbemobject-put-.md)bei WMI registriert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_SYNTAX"></span><span id="wbem_e_invalid_syntax"></span>**\_ungültige WBEM E- \_ \_ Syntax**
+<span id="WBEM_E_INVALID_SYNTAX"></span><span id="wbem_e_invalid_syntax"></span>**WBEM \_ E \_ UNGÜLTIGE \_ SYNTAX**
 </dt> <dd> <dl> <dt>
 
 2147749921 (0x80041021)
@@ -514,7 +514,7 @@ Die Abfrage ist syntaktisch ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NONDECORATED_OBJECT"></span><span id="wbem_e_nondecorated_object"></span>**nicht ergänzten WBEM- \_ \_ \_ Objekt**
+<span id="WBEM_E_NONDECORATED_OBJECT"></span><span id="wbem_e_nondecorated_object"></span>**WBEM \_ E \_ NONDECORATED \_ OBJECT**
 </dt> <dd> <dl> <dt>
 
 2147749922 (0x80041022)
@@ -527,7 +527,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_READ_ONLY"></span><span id="wbem_e_read_only"></span>**WBEM \_ E schreibgeschützt \_ \_**
+<span id="WBEM_E_READ_ONLY"></span><span id="wbem_e_read_only"></span>**WBEM \_ E \_ READ \_ ONLY**
 </dt> <dd> <dl> <dt>
 
 2147749923 (0x80041023)
@@ -540,7 +540,7 @@ Es wurde versucht, eine schreibgeschützte Eigenschaft zu ändern.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_NOT_CAPABLE"></span><span id="wbem_e_provider_not_capable"></span>**WBEM \_ E \_ - \_ Anbieter \_ ist nicht fähig**
+<span id="WBEM_E_PROVIDER_NOT_CAPABLE"></span><span id="wbem_e_provider_not_capable"></span>**WBEM \_ E \_ PROVIDER \_ NOT \_ CAPABLE**
 </dt> <dd> <dl> <dt>
 
 2147749924 (0x80041024)
@@ -548,12 +548,12 @@ Es wurde versucht, eine schreibgeschützte Eigenschaft zu ändern.
 
 
 
-Der Anbieter kann den angeforderten Vorgang nicht ausführen. Dies kann eine Abfrage enthalten, die zu komplex ist, eine Instanz abruft, eine Klasse erstellt oder aktualisiert, eine Klasse löscht oder eine Klasse auflistet.
+Der Anbieter kann den angeforderten Vorgang nicht ausführen. Dies kann eine zu komplexe Abfrage, das Abrufen einer Instanz, das Erstellen oder Aktualisieren einer Klasse, das Löschen einer Klasse oder das Aufzählen einer Klasse umfassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CLASS_HAS_CHILDREN"></span><span id="wbem_e_class_has_children"></span>**WBEM \_ E- \_ Klasse \_ hat \_ untergeordnete Elemente**
+<span id="WBEM_E_CLASS_HAS_CHILDREN"></span><span id="wbem_e_class_has_children"></span>**WBEM \_ \_ E-KLASSE VERFÜGT \_ ÜBER \_ CHILDREN**
 </dt> <dd> <dl> <dt>
 
 2147749925 (0x80041025)
@@ -561,12 +561,12 @@ Der Anbieter kann den angeforderten Vorgang nicht ausführen. Dies kann eine Abf
 
 
 
-Es wurde versucht, eine Änderung vorzunehmen, durch die eine Unterklasse ungültig wird.
+Es wurde versucht, eine Änderung zu machen, die eine Unterklasse für ungültig erklärt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CLASS_HAS_INSTANCES"></span><span id="wbem_e_class_has_instances"></span>**WBEM \_ E- \_ Klasse \_ verfügt über \_ Instanzen**
+<span id="WBEM_E_CLASS_HAS_INSTANCES"></span><span id="wbem_e_class_has_instances"></span>**WBEM \_ \_ E-KLASSE \_ VERFÜGT \_ ÜBER INSTANZEN**
 </dt> <dd> <dl> <dt>
 
 2147749926 (0x80041026)
@@ -574,12 +574,12 @@ Es wurde versucht, eine Änderung vorzunehmen, durch die eine Unterklasse ungül
 
 
 
-Es wurde versucht, eine Klasse zu löschen oder zu ändern, die Instanzen enthält.
+Es wurde versucht, eine Klasse mit -Instanzen zu löschen oder zu ändern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_QUERY_NOT_IMPLEMENTED"></span><span id="wbem_e_query_not_implemented"></span>**WBEM \_ E- \_ Abfrage \_ nicht \_ implementiert**
+<span id="WBEM_E_QUERY_NOT_IMPLEMENTED"></span><span id="wbem_e_query_not_implemented"></span>**WBEM E QUERY NOT IMPLEMENTED (WBEM \_ \_ \_ E-ABFRAGE NICHT \_ IMPLEMENTIERT)**
 </dt> <dd> <dl> <dt>
 
 2147749927 (0x80041027)
@@ -592,7 +592,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ILLEGAL_NULL"></span><span id="wbem_e_illegal_null"></span>**WBEM \_ E \_ unzulässig \_ null**
+<span id="WBEM_E_ILLEGAL_NULL"></span><span id="wbem_e_illegal_null"></span>**WBEM \_ E \_ ILLEGAL \_ NULL**
 </dt> <dd> <dl> <dt>
 
 2147749928 (0x80041028)
@@ -600,12 +600,12 @@ Für die zukünftige Verwendung reserviert.
 
 
 
-Der Wert Nothing/**null** wurde für eine Eigenschaft angegeben, die über einen Wert verfügen muss, z. b. einen, der durch einen [**Schlüssel**](key-qualifier.md), einen [**indizierten**](optional-qualifiers.md)oder einen **nicht- \_ null** -Qualifizierer gekennzeichnet ist.
+Der Wert **Nothing/NULL** wurde für eine Eigenschaft angegeben, die einen Wert haben muss, z. B. einen Wert, der durch einen [**Schlüssel-,**](key-qualifier.md) [**indizierten**](optional-qualifiers.md)oder **Not NULL-Qualifizierer \_** gekennzeichnet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUALIFIER_TYPE"></span><span id="wbem_e_invalid_qualifier_type"></span>**\_Ungültiger WBEM E- \_ \_ Qualifizierertyp \_**
+<span id="WBEM_E_INVALID_QUALIFIER_TYPE"></span><span id="wbem_e_invalid_qualifier_type"></span>**WBEM \_ E \_ UNGÜLTIGER \_ QUALIFIZIERERTYP \_**
 </dt> <dd> <dl> <dt>
 
 2147749929 (0x80041029)
@@ -613,15 +613,15 @@ Der Wert Nothing/**null** wurde für eine Eigenschaft angegeben, die über einen
 
 
 
-Der Variant-Wert für einen Qualifizierer wurde bereitgestellt, der kein gültiger qualifizierungstyp ist.
+Ein Variant-Wert für einen Qualifizierer wurde bereitgestellt, der kein legaler Qualifizierertyp ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PROPERTY_TYPE"></span><span id="wbem_e_invalid_property_type"></span>**\_Ungültiger WBEM E- \_ \_ \_ Eigenschaftentyp**
+<span id="WBEM_E_INVALID_PROPERTY_TYPE"></span><span id="wbem_e_invalid_property_type"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ EIGENSCHAFTENTYP**
 </dt> <dd> <dl> <dt>
 
-2147749930 (0x8004102a)
+2147749930 (0x8004102A)
 </dt> <dt>
 
 
@@ -631,36 +631,36 @@ Der für eine Eigenschaft angegebene CIM-Typ ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_VALUE_OUT_OF_RANGE"></span><span id="wbem_e_value_out_of_range"></span>**\_der Wert von WBEM E liegt \_ \_ außerhalb \_ des zulässigen \_ Bereichs.**
+<span id="WBEM_E_VALUE_OUT_OF_RANGE"></span><span id="wbem_e_value_out_of_range"></span>**WBEM \_ E \_ VALUE \_ OUT \_ OF \_ RANGE**
 </dt> <dd> <dl> <dt>
 
-2147749931 (0x8004102b)
+2147749931 (0x8004102B)
 </dt> <dt>
 
 
 
-Die Anforderung wurde mit einem Wert außerhalb des gültigen Bereichs erstellt, oder Sie ist mit dem Typ nicht kompatibel.
+Die Anforderung wurde mit einem Wert vorgenommen, der nicht im bereich liegt, oder sie ist nicht mit dem Typ kompatibel.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CANNOT_BE_SINGLETON"></span><span id="wbem_e_cannot_be_singleton"></span>**WBEM \_ E \_ darf \_ kein \_ Singleton sein.**
+<span id="WBEM_E_CANNOT_BE_SINGLETON"></span><span id="wbem_e_cannot_be_singleton"></span>**WBEM \_ E KANN NICHT \_ \_ \_ SINGLETON SEIN**
 </dt> <dd> <dl> <dt>
 
-2147749932 (0x8004102c)
+2147749932 (0x8004102C)
 </dt> <dt>
 
 
 
-Es wurde ein unzulässiger Versuch unternommen, eine Singleton-Klasse zu erstellen, z. b. wenn die Klasse von einer nicht-Singleton-Klasse abgeleitet wird.
+Es wurde ein unzulässiger Versuch unternommen, ein Klassen-Singleton zu machen, z. B. wenn die Klasse von einer Nicht-Singletonklasse abgeleitet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_CIM_TYPE"></span><span id="wbem_e_invalid_cim_type"></span>**WBEM \_ E, \_ ungültiger \_ CIM- \_ Typ**
+<span id="WBEM_E_INVALID_CIM_TYPE"></span><span id="wbem_e_invalid_cim_type"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ CIM-TYP**
 </dt> <dd> <dl> <dt>
 
-2147749933 (0x8004102d)
+2147749933 (0x8004102D)
 </dt> <dt>
 
 
@@ -670,10 +670,10 @@ Der angegebene CIM-Typ ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_METHOD"></span><span id="wbem_e_invalid_method"></span>**\_ungültige WBEM E- \_ \_ Methode**
+<span id="WBEM_E_INVALID_METHOD"></span><span id="wbem_e_invalid_method"></span>**WBEM \_ E \_ INVALID \_ METHOD**
 </dt> <dd> <dl> <dt>
 
-2147749934 (0x8004102e)
+2147749934 (0x8004102E)
 </dt> <dt>
 
 
@@ -683,20 +683,20 @@ Die angeforderte Methode ist nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_METHOD_PARAMETERS"></span><span id="wbem_e_invalid_method_parameters"></span>**\_ \_ ungültige \_ Methoden \_ Parameter für WBEM E**
+<span id="WBEM_E_INVALID_METHOD_PARAMETERS"></span><span id="wbem_e_invalid_method_parameters"></span>**WBEM \_ E \_ UNGÜLTIGE \_ \_ METHODENPARAMETER**
 </dt> <dd> <dl> <dt>
 
-2147749935 (0x8004102f)
+2147749935 (0x8004102F)
 </dt> <dt>
 
 
 
-Die für die Methode angegebenen Parameter sind ungültig.
+Für die -Methode bereitgestellte Parameter sind ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_SYSTEM_PROPERTY"></span><span id="wbem_e_system_property"></span>**WBEM \_ E- \_ System \_ Eigenschaft**
+<span id="WBEM_E_SYSTEM_PROPERTY"></span><span id="wbem_e_system_property"></span>**WBEM \_ \_ E-SYSTEMEIGENSCHAFT \_**
 </dt> <dd> <dl> <dt>
 
 2147749936 (0x80041030)
@@ -709,7 +709,7 @@ Es wurde versucht, Qualifizierer für eine Systemeigenschaft abzurufen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PROPERTY"></span><span id="wbem_e_invalid_property"></span>**\_ungültige WBEM E- \_ \_ Eigenschaft**
+<span id="WBEM_E_INVALID_PROPERTY"></span><span id="wbem_e_invalid_property"></span>**WBEM \_ E \_ UNGÜLTIGE \_ EIGENSCHAFT**
 </dt> <dd> <dl> <dt>
 
 2147749937 (0x80041031)
@@ -717,12 +717,12 @@ Es wurde versucht, Qualifizierer für eine Systemeigenschaft abzurufen.
 
 
 
-Der Eigenschaftentyp wird nicht erkannt.
+Der Eigenschaftstyp wird nicht erkannt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CALL_CANCELLED"></span><span id="wbem_e_call_cancelled"></span>**WBEM \_ E- \_ Rückruf \_ abgebrochen**
+<span id="WBEM_E_CALL_CANCELLED"></span><span id="wbem_e_call_cancelled"></span>**WBEM \_ E \_ CALL \_ CANCELLED**
 </dt> <dd> <dl> <dt>
 
 2147749938 (0x80041032)
@@ -730,12 +730,12 @@ Der Eigenschaftentyp wird nicht erkannt.
 
 
 
-Der asynchrone Prozess wurde intern oder vom Benutzer abgebrochen. Beachten Sie, dass der Vorgang aufgrund der zeitlichen Steuerung und der Art des asynchronen Vorgangs möglicherweise nicht wirklich abgebrochen wurde.
+Der asynchrone Prozess wurde intern oder vom Benutzer abgebrochen. Beachten Sie, dass der Vorgang aufgrund des zeitlichen Ablaufs und der Art des asynchronen Vorgangs möglicherweise nicht wirklich abgebrochen wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_SHUTTING_DOWN"></span><span id="wbem_e_shutting_down"></span>**WBEM \_ E \_ wird \_ heruntergefahren**
+<span id="WBEM_E_SHUTTING_DOWN"></span><span id="wbem_e_shutting_down"></span>**WBEM \_ E \_ WIRD \_ HERUNTERGEFAHREN**
 </dt> <dd> <dl> <dt>
 
 2147749939 (0x80041033)
@@ -748,7 +748,7 @@ Der Benutzer hat einen Vorgang angefordert, während WMI gerade heruntergefahren
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROPAGATED_METHOD"></span><span id="wbem_e_propagated_method"></span>**\_propagierte WBEM E- \_ \_ Methode**
+<span id="WBEM_E_PROPAGATED_METHOD"></span><span id="wbem_e_propagated_method"></span>**WBEM \_ E \_ PROPAGATED-METHODE \_**
 </dt> <dd> <dl> <dt>
 
 2147749940 (0x80041034)
@@ -756,12 +756,12 @@ Der Benutzer hat einen Vorgang angefordert, während WMI gerade heruntergefahren
 
 
 
-Es wurde versucht, einen vorhandenen Methodennamen aus einer übergeordneten Klasse wiederzuverwenden, und die Signaturen stimmen nicht ab.
+Es wurde versucht, einen vorhandenen Methodennamen aus einer übergeordneten Klasse wiederzuverwenden, und die Signaturen stimmen nicht überein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNSUPPORTED_PARAMETER"></span><span id="wbem_e_unsupported_parameter"></span>**\_nicht unterstützter WBEM E- \_ \_ Parameter**
+<span id="WBEM_E_UNSUPPORTED_PARAMETER"></span><span id="wbem_e_unsupported_parameter"></span>**NICHT UNTERSTÜTZTER WBEM \_ \_ \_ E-PARAMETER**
 </dt> <dd> <dl> <dt>
 
 2147749941 (0x80041035)
@@ -769,12 +769,12 @@ Es wurde versucht, einen vorhandenen Methodennamen aus einer übergeordneten Kla
 
 
 
-Mindestens ein Parameterwert (z. B. ein Abfragetext) ist zu komplex oder wird nicht unterstützt. Daher wird WMI aufgefordert, den Vorgang mit einfacheren Parametern erneut auszuführen.
+Mindestens ein Parameterwert (z. B. ein Abfragetext) ist zu komplex oder wird nicht unterstützt. WMI wird daher aufgefordert, den Vorgang mit einfacheren Parametern zu wiederholen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_MISSING_PARAMETER_ID"></span><span id="wbem_e_missing_parameter_id"></span>**\_ \_ fehlende \_ Parameter- \_ ID für WBEM E**
+<span id="WBEM_E_MISSING_PARAMETER_ID"></span><span id="wbem_e_missing_parameter_id"></span>**WBEM \_ E \_ FEHLENDE \_ \_ PARAMETER-ID**
 </dt> <dd> <dl> <dt>
 
 2147749942 (0x80041036)
@@ -782,12 +782,12 @@ Mindestens ein Parameterwert (z. B. ein Abfragetext) ist zu komplex oder wird n
 
 
 
-Im Methoden aufruffehlte ein Parameter.
+Der Parameter fehlte im Methodenaufruf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PARAMETER_ID"></span><span id="wbem_e_invalid_parameter_id"></span>**\_ \_ ungültige Parameter- \_ \_ ID für WBEM E**
+<span id="WBEM_E_INVALID_PARAMETER_ID"></span><span id="wbem_e_invalid_parameter_id"></span>**WBEM \_ E \_ INVALID \_ PARAMETER \_ ID**
 </dt> <dd> <dl> <dt>
 
 2147749943 (0x80041037)
@@ -795,12 +795,12 @@ Im Methoden aufruffehlte ein Parameter.
 
 
 
-Der Methoden Parameter weist einen ungültigen [**ID**](standard-wmi-qualifiers.md) -Qualifizierer auf.
+Der Methodenparameter verfügt über einen [**ungültigen ID-Qualifizierer.**](standard-wmi-qualifiers.md)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NONCONSECUTIVE_PARAMETER_IDS"></span><span id="wbem_e_nonconsecutive_parameter_ids"></span>**\_ \_ nicht aufeinander folgende Parameter- \_ \_ IDs in WBEM E**
+<span id="WBEM_E_NONCONSECUTIVE_PARAMETER_IDS"></span><span id="wbem_e_nonconsecutive_parameter_ids"></span>**WBEM \_ E \_ NONCONSECUTIVE \_ PARAMETER \_ IDS**
 </dt> <dd> <dl> <dt>
 
 2147749944 (0x80041038)
@@ -808,12 +808,12 @@ Der Methoden Parameter weist einen ungültigen [**ID**](standard-wmi-qualifiers.
 
 
 
-Mindestens ein Methoden Parameter hat [**ID**](standard-wmi-qualifiers.md) -Qualifizierer, die nicht in der Reihenfolge sind.
+Mindestens einer der Methodenparameter weist [**ID-Qualifizierer**](standard-wmi-qualifiers.md) auf, die nicht sequenzierend sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PARAMETER_ID_ON_RETVAL"></span><span id="wbem_e_parameter_id_on_retval"></span>**WBEM \_ E- \_ Parameter- \_ ID \_ in \_ retval**
+<span id="WBEM_E_PARAMETER_ID_ON_RETVAL"></span><span id="wbem_e_parameter_id_on_retval"></span>**WBEM \_ E \_ PARAMETER \_ ID \_ ON \_ RETVAL**
 </dt> <dd> <dl> <dt>
 
 2147749945 (0x80041039)
@@ -821,90 +821,90 @@ Mindestens ein Methoden Parameter hat [**ID**](standard-wmi-qualifiers.md) -Qual
 
 
 
-Der Rückgabewert einer Methode hat einen [**ID**](standard-wmi-qualifiers.md) -Qualifizierer.
+Der Rückgabewert für [](standard-wmi-qualifiers.md) eine Methode verfügt über einen ID-Qualifizierer.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OBJECT_PATH"></span><span id="wbem_e_invalid_object_path"></span>**WBEM \_ E ( \_ ungültiger \_ Objekt \_ Pfad)**
+<span id="WBEM_E_INVALID_OBJECT_PATH"></span><span id="wbem_e_invalid_object_path"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ OBJEKTPFAD**
 </dt> <dd> <dl> <dt>
 
-2147749946 (0x8004103a)
+2147749946 (0x8004103A)
 </dt> <dt>
 
 
 
-Der angegebene Objekt Pfad war ungültig.
+Der angegebene Objektpfad war ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_OUT_OF_DISK_SPACE"></span><span id="wbem_e_out_of_disk_space"></span>**WBEM \_ E \_ nicht mehr genügend \_ \_ Speicher \_ Platz**
+<span id="WBEM_E_OUT_OF_DISK_SPACE"></span><span id="wbem_e_out_of_disk_space"></span>**WBEM \_ E NICHT GENÜGEND \_ \_ \_ \_ SPEICHERPLATZ**
 </dt> <dd> <dl> <dt>
 
-2147749947 (0x8004103b)
+2147749947 (0x8004103B)
 </dt> <dt>
 
 
 
-Nicht genügend Speicherplatz auf dem Datenträger, oder das Limit von 4 GB auf dem WMI-Repository (CIM-Repository) wurde erreicht.
+Der Datenträger hat nicht genügend Speicherplatz, oder die Größe des WMI-Repositorys (CIM-Repository) von 4 GB wird erreicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_BUFFER_TOO_SMALL"></span><span id="wbem_e_buffer_too_small"></span>**WBEM \_ E- \_ Puffer \_ zu \_ klein**
+<span id="WBEM_E_BUFFER_TOO_SMALL"></span><span id="wbem_e_buffer_too_small"></span>**WBEM \_ E \_ BUFFER \_ TOO \_ SMALL**
 </dt> <dd> <dl> <dt>
 
-2147749948 (0x8004103c)
+2147749948 (0x8004103C)
 </dt> <dt>
 
 
 
-Der angegebene Puffer war zu klein, um alle Objekte im Enumerator aufzunehmen oder eine Zeichen folgen Eigenschaft zu lesen.
+Der bereitgestellte Puffer war zu klein, um alle Objekte im Enumerator zu speichern oder eine Zeichenfolgeneigenschaft zu lesen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNSUPPORTED_PUT_EXTENSION"></span><span id="wbem_e_unsupported_put_extension"></span>**\_ \_ nicht unterstützte put- \_ \_ Erweiterung für WBEM E**
+<span id="WBEM_E_UNSUPPORTED_PUT_EXTENSION"></span><span id="wbem_e_unsupported_put_extension"></span>**WBEM \_ E NICHT UNTERSTÜTZTE \_ \_ \_ PUT-ERWEITERUNG**
 </dt> <dd> <dl> <dt>
 
-2147749949 (0x8004103d)
+2147749949 (0x8004103D)
 </dt> <dt>
 
 
 
-Der angeforderte Put-Vorgang wird vom Anbieter nicht unterstützt.
+Der Anbieter unterstützt den angeforderten Put-Vorgang nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNKNOWN_OBJECT_TYPE"></span><span id="wbem_e_unknown_object_type"></span>**\_ \_ unbekannter \_ Objekttyp WBEM E \_**
+<span id="WBEM_E_UNKNOWN_OBJECT_TYPE"></span><span id="wbem_e_unknown_object_type"></span>**WBEM \_ E \_ UNBEKANNTER \_ \_ OBJEKTTYP**
 </dt> <dd> <dl> <dt>
 
-2147749950 (0x8004103e)
+2147749950 (0x8004103E)
 </dt> <dt>
 
 
 
-Beim Mars Hallen wurde ein Objekt mit einem falschen Typ oder einer falschen Version gefunden.
+Beim Marshalling wurde ein Objekt mit einem falschen Typ oder einer falschen Version gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNKNOWN_PACKET_TYPE"></span><span id="wbem_e_unknown_packet_type"></span>**\_ \_ unbekannter \_ \_ Pakettyp WBEM E.**
+<span id="WBEM_E_UNKNOWN_PACKET_TYPE"></span><span id="wbem_e_unknown_packet_type"></span>**WBEM \_ E \_ UNBEKANNTER \_ \_ PAKETTYP**
 </dt> <dd> <dl> <dt>
 
-2147749951 (0x8004103f)
+2147749951 (0x8004103F)
 </dt> <dt>
 
 
 
-Beim Mars Hallen wurde ein Paket mit einem falschen Typ oder einer falschen Version gefunden.
+Beim Marshalling wurde ein Paket mit einem falschen Typ oder einer falschen Version gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_MARSHAL_VERSION_MISMATCH"></span><span id="wbem_e_marshal_version_mismatch"></span>**nicht übereinstimmende WBEM \_ E \_ Marshal- \_ Version \_**
+<span id="WBEM_E_MARSHAL_VERSION_MISMATCH"></span><span id="wbem_e_marshal_version_mismatch"></span>**WBEM \_ E \_ MARSHAL \_ VERSION \_ MISMATCH**
 </dt> <dd> <dl> <dt>
 
 2147749952 (0x80041040)
@@ -912,12 +912,12 @@ Beim Mars Hallen wurde ein Paket mit einem falschen Typ oder einer falschen Vers
 
 
 
-Das Paket weist eine nicht unterstützte Version auf.
+Das Paket verfügt über eine nicht unterstützte Version.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_MARSHAL_INVALID_SIGNATURE"></span><span id="wbem_e_marshal_invalid_signature"></span>**WBEM \_ E \_ Mars Hall \_ ungültige \_ Signatur**
+<span id="WBEM_E_MARSHAL_INVALID_SIGNATURE"></span><span id="wbem_e_marshal_invalid_signature"></span>**WBEM \_ E \_ MARSHALLAL \_ UNGÜLTIGE \_ SIGNATUR**
 </dt> <dd> <dl> <dt>
 
 2147749953 (0x80041041)
@@ -925,12 +925,12 @@ Das Paket weist eine nicht unterstützte Version auf.
 
 
 
-Das Paket ist anscheinend beschädigt.
+Das Paket scheint beschädigt zu sein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUALIFIER"></span><span id="wbem_e_invalid_qualifier"></span>**Ungültiger WBEM- \_ \_ \_ Qualifizierer**
+<span id="WBEM_E_INVALID_QUALIFIER"></span><span id="wbem_e_invalid_qualifier"></span>**WBEM \_ E \_ \_ UNGÜLTIGER QUALIFIZIERER**
 </dt> <dd> <dl> <dt>
 
 2147749954 (0x80041042)
@@ -938,12 +938,12 @@ Das Paket ist anscheinend beschädigt.
 
 
 
-Es wurde versucht, Qualifizierer zu stimmen, wie z. b. das Einfügen \[ \] von Schlüsseln für ein Objekt anstelle einer Eigenschaft.
+Es wurde versucht, nicht übereinstimmende Qualifizierer zu verwenden, z. B. schlüssel für ein Objekt anstelle einer Eigenschaft zu \[ \] setzen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_DUPLICATE_PARAMETER"></span><span id="wbem_e_invalid_duplicate_parameter"></span>**WBEM \_ E mit \_ ungültigem \_ doppelten \_ Parameter**
+<span id="WBEM_E_INVALID_DUPLICATE_PARAMETER"></span><span id="wbem_e_invalid_duplicate_parameter"></span>**WBEM \_ E \_ UNGÜLTIGER \_ DOPPELTER \_ PARAMETER**
 </dt> <dd> <dl> <dt>
 
 2147749955 (0x80041043)
@@ -951,12 +951,12 @@ Es wurde versucht, Qualifizierer zu stimmen, wie z. b. das Einfügen \[ \] von S
 
 
 
-Ein doppelter Parameter wurde in einer CIM-Methode deklariert.
+Doppelter Parameter wurde in einer CIM-Methode deklariert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TOO_MUCH_DATA"></span><span id="wbem_e_too_much_data"></span>**WBEM \_ E \_ zu \_ viele \_ Daten**
+<span id="WBEM_E_TOO_MUCH_DATA"></span><span id="wbem_e_too_much_data"></span>**WBEM \_ E ZU VIELE \_ \_ \_ DATEN**
 </dt> <dd> <dl> <dt>
 
 2147749956 (0x80041044)
@@ -969,7 +969,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_SERVER_TOO_BUSY"></span><span id="wbem_e_server_too_busy"></span>**WBEM \_ E- \_ Server ist \_ \_ ausgelastet.**
+<span id="WBEM_E_SERVER_TOO_BUSY"></span><span id="wbem_e_server_too_busy"></span>**\_WBEM-E-SERVER \_ \_ ZU \_ AUSGELASTET**
 </dt> <dd> <dl> <dt>
 
 2147749957 (0x80041045)
@@ -977,12 +977,12 @@ Für die zukünftige Verwendung reserviert.
 
 
 
-Beim Aufrufen von [**iwbemubjectsink:: Hinweis**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) ist ein Fehler aufgetreten. Der Anbieter kann das Ereignis erneut auslösen.
+Aufruf von [**IWbemObjectSink::Indicate**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) ist fehlgeschlagen. Der Anbieter kann das Ereignis erneut losgehen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_FLAVOR"></span><span id="wbem_e_invalid_flavor"></span>**WBEM \_ E ist \_ ungültig. \_**
+<span id="WBEM_E_INVALID_FLAVOR"></span><span id="wbem_e_invalid_flavor"></span>**WBEM \_ E \_ INVALID \_ FLAVOR**
 </dt> <dd> <dl> <dt>
 
 2147749958 (0x80041046)
@@ -990,12 +990,12 @@ Beim Aufrufen von [**iwbemubjectsink:: Hinweis**](/windows/desktop/api/Wbemcli/n
 
 
 
-Die angegebene qualifiziererkonfiguration war ungültig.
+Die angegebene Qualifizierer-Variante war ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CIRCULAR_REFERENCE"></span><span id="wbem_e_circular_reference"></span>**WBEM \_ E \_ Zirkel \_ Verweis**
+<span id="WBEM_E_CIRCULAR_REFERENCE"></span><span id="wbem_e_circular_reference"></span>**WBEM \_ E \_ CIRCULAR \_ REFERENCE**
 </dt> <dd> <dl> <dt>
 
 2147749959 (0x80041047)
@@ -1003,12 +1003,12 @@ Die angegebene qualifiziererkonfiguration war ungültig.
 
 
 
-Es wurde versucht, einen Zirkel Verweis (z. b. eine Klasse von sich selbst abzuleiten) zu erstellen.
+Es wurde versucht, einen Verweis zu erstellen, der kreisförmig ist (z. B. eine Klasse von sich selbst ableiten).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNSUPPORTED_CLASS_UPDATE"></span><span id="wbem_e_unsupported_class_update"></span>**WBEM \_ E \_ nicht unterstütztes \_ Klassen \_ Update**
+<span id="WBEM_E_UNSUPPORTED_CLASS_UPDATE"></span><span id="wbem_e_unsupported_class_update"></span>**WBEM \_ E \_ UNSUPPORTED \_ CLASS \_ UPDATE**
 </dt> <dd> <dl> <dt>
 
 2147749960 (0x80041048)
@@ -1021,7 +1021,7 @@ Die angegebene Klasse wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CANNOT_CHANGE_KEY_INHERITANCE"></span><span id="wbem_e_cannot_change_key_inheritance"></span>**WBEM \_ E \_ kann \_ die \_ Schlüssel \_ Vererbung nicht ändern**
+<span id="WBEM_E_CANNOT_CHANGE_KEY_INHERITANCE"></span><span id="wbem_e_cannot_change_key_inheritance"></span>**WBEM \_ E \_ KANN \_ \_ \_ SCHLÜSSELVERERBUNG NICHT ÄNDERN**
 </dt> <dd> <dl> <dt>
 
 2147749961 (0x80041049)
@@ -1029,12 +1029,12 @@ Die angegebene Klasse wird nicht unterstützt.
 
 
 
-Es wurde versucht, einen Schlüssel zu ändern, wenn der Schlüssel bereits von Instanzen oder Unterklassen verwendet wird.
+Es wurde versucht, einen Schlüssel zu ändern, wenn Instanzen oder Unterklassen den Schlüssel bereits verwenden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CANNOT_CHANGE_INDEX_INHERITANCE"></span><span id="wbem_e_cannot_change_index_inheritance"></span>**WBEM \_ E \_ kann \_ die \_ Index \_ Vererbung nicht ändern**
+<span id="WBEM_E_CANNOT_CHANGE_INDEX_INHERITANCE"></span><span id="wbem_e_cannot_change_index_inheritance"></span>**WBEM \_ E \_ KANN \_ \_ \_ INDEXVERERBUNG NICHT ÄNDERN**
 </dt> <dd> <dl> <dt>
 
 2147749968 (0x80041050)
@@ -1042,12 +1042,12 @@ Es wurde versucht, einen Schlüssel zu ändern, wenn der Schlüssel bereits von 
 
 
 
-Es wurde versucht, einen Index zu ändern, wenn bereits Instanzen oder Unterklassen den Index verwenden.
+Es wurde versucht, einen Index zu ändern, wenn Instanzen oder Unterklassen den Index bereits verwenden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TOO_MANY_PROPERTIES"></span><span id="wbem_e_too_many_properties"></span>**WBEM \_ E \_ zu \_ viele \_ Eigenschaften**
+<span id="WBEM_E_TOO_MANY_PROPERTIES"></span><span id="wbem_e_too_many_properties"></span>**WBEM \_ E ZU VIELE \_ \_ \_ EIGENSCHAFTEN**
 </dt> <dd> <dl> <dt>
 
 2147749969 (0x80041051)
@@ -1055,12 +1055,12 @@ Es wurde versucht, einen Index zu ändern, wenn bereits Instanzen oder Unterklas
 
 
 
-Es wurde versucht, mehr Eigenschaften zu erstellen, als von der aktuellen Version der Klasse unterstützt werden.
+Es wurde versucht, mehr Eigenschaften zu erstellen, als die aktuelle Version der -Klasse unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UPDATE_TYPE_MISMATCH"></span><span id="wbem_e_update_type_mismatch"></span>**WBEM \_ E \_ - \_ Updatetyp \_ stimmen nicht überein.**
+<span id="WBEM_E_UPDATE_TYPE_MISMATCH"></span><span id="wbem_e_update_type_mismatch"></span>**WBEM \_ E \_ UPDATE \_ TYPE \_ MISMATCH**
 </dt> <dd> <dl> <dt>
 
 2147749970 (0x80041052)
@@ -1068,12 +1068,12 @@ Es wurde versucht, mehr Eigenschaften zu erstellen, als von der aktuellen Versio
 
 
 
-Die Eigenschaft wurde mit einem in Konflikt stehenden Typ in einer abgeleiteten Klasse neu definiert.
+Die Eigenschaft wurde mit einem in Konflikt geratenen Typ in einer abgeleiteten Klasse neu definiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UPDATE_OVERRIDE_NOT_ALLOWED"></span><span id="wbem_e_update_override_not_allowed"></span>**außer Kraft Setzung von WBEM \_ E- \_ Updates \_ \_ nicht \_ zulässig**
+<span id="WBEM_E_UPDATE_OVERRIDE_NOT_ALLOWED"></span><span id="wbem_e_update_override_not_allowed"></span>**WBEM \_ E \_ UPDATE \_ OVERRIDE \_ NOT \_ ALLOWED**
 </dt> <dd> <dl> <dt>
 
 2147749971 (0x80041053)
@@ -1081,12 +1081,12 @@ Die Eigenschaft wurde mit einem in Konflikt stehenden Typ in einer abgeleiteten 
 
 
 
-Es wurde versucht, in einer abgeleiteten Klasse einen Qualifizierer zu überschreiben, der nicht überschrieben werden kann.
+In einer abgeleiteten Klasse wurde versucht, einen Qualifizierer zu überschreiben, der nicht überschrieben werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UPDATE_PROPAGATED_METHOD"></span><span id="wbem_e_update_propagated_method"></span>**\_propagierte WBEM E- \_ Update \_ \_ Methode**
+<span id="WBEM_E_UPDATE_PROPAGATED_METHOD"></span><span id="wbem_e_update_propagated_method"></span>**WBEM \_ E \_ UPDATE \_ PROPAGATED-METHODE \_**
 </dt> <dd> <dl> <dt>
 
 2147749972 (0x80041054)
@@ -1094,12 +1094,12 @@ Es wurde versucht, in einer abgeleiteten Klasse einen Qualifizierer zu überschr
 
 
 
-Die Methode wurde mit einer in Konflikt stehenden Signatur in einer abgeleiteten Klasse neu deklariert.
+Die Methode wurde mit einer in Konfliktstehenden Signatur in einer abgeleiteten Klasse erneut deklariert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_METHOD_NOT_IMPLEMENTED"></span><span id="wbem_e_method_not_implemented"></span>**WBEM \_ E- \_ Methode \_ nicht \_ implementiert**
+<span id="WBEM_E_METHOD_NOT_IMPLEMENTED"></span><span id="wbem_e_method_not_implemented"></span>**WBEM \_ \_ E-METHODE \_ NICHT \_ IMPLEMENTIERT**
 </dt> <dd> <dl> <dt>
 
 2147749973 (0x80041055)
@@ -1107,12 +1107,12 @@ Die Methode wurde mit einer in Konflikt stehenden Signatur in einer abgeleiteten
 
 
 
-Es wurde versucht, eine Methode auszuführen, die nicht \[ mit \] in einer relevanten Klasse implementiert ist.
+Es wurde versucht, eine Methode auszuführen, die nicht mit \[ gekennzeichnet \] ist, die in einer relevanten Klasse implementiert ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_METHOD_DISABLED"></span><span id="wbem_e_method_disabled"></span>**WBEM \_ E- \_ Methode \_ deaktiviert**
+<span id="WBEM_E_METHOD_DISABLED"></span><span id="wbem_e_method_disabled"></span>**WBEM \_ \_ E-METHODE \_ DEAKTIVIERT**
 </dt> <dd> <dl> <dt>
 
 
@@ -1120,12 +1120,12 @@ Es wurde versucht, eine Methode auszuführen, die nicht \[ mit \] in einer relev
 
 
 
-Es wurde versucht, eine mit "deaktiviert" markierte Methode auszuführen \[ \] .
+Es wurde versucht, eine Methode auszuführen, die mit deaktivierter markiert \[ \] ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_REFRESHER_BUSY"></span><span id="wbem_e_refresher_busy"></span>**WBEM \_ E- \_ Auffrischung \_ ausgelastet**
+<span id="WBEM_E_REFRESHER_BUSY"></span><span id="wbem_e_refresher_busy"></span>**WBEM \_ E \_ REFRESHER \_ BUSY**
 </dt> <dd> <dl> <dt>
 
 2147749975 (0x80041057)
@@ -1133,12 +1133,12 @@ Es wurde versucht, eine mit "deaktiviert" markierte Methode auszuführen \[ \] .
 
 
 
-Das Aktualisierungs Programm ist mit einem anderen Vorgang ausgelastet.
+Refresher ist mit einem anderen Vorgang ausgelastet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNPARSABLE_QUERY"></span><span id="wbem_e_unparsable_query"></span>**nicht-alisier Bare WBEM- \_ \_ \_ Abfrage**
+<span id="WBEM_E_UNPARSABLE_QUERY"></span><span id="wbem_e_unparsable_query"></span>**WBEM \_ E \_ UNPARSABLE \_ QUERY**
 </dt> <dd> <dl> <dt>
 
 2147749976 (0x80041058)
@@ -1146,12 +1146,12 @@ Das Aktualisierungs Programm ist mit einem anderen Vorgang ausgelastet.
 
 
 
-Die Filter Abfrage ist syntaktisch ungültig.
+Die Filterabfrage ist syntaktisch ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_EVENT_CLASS"></span><span id="wbem_e_not_event_class"></span>**WBEM \_ E \_ Not ( \_ Ereignis \_ Klasse)**
+<span id="WBEM_E_NOT_EVENT_CLASS"></span><span id="wbem_e_not_event_class"></span>**WBEM \_ E \_ \_ NOT-EREIGNISKLASSE \_**
 </dt> <dd> <dl> <dt>
 
 2147749977 (0x80041059)
@@ -1159,15 +1159,15 @@ Die Filter Abfrage ist syntaktisch ungültig.
 
 
 
-Die from-Klausel einer Filter Abfrage verweist auf eine Klasse, die keine Ereignisklasse ist (nicht vom [**\_ \_ Ereignis**](--event.md)abgeleitet).
+Die FROM-Klausel einer Filterabfrage verweist auf eine Klasse, die keine Ereignisklasse ist (nicht von [**\_ \_ Event abgeleitet).**](--event.md)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_MISSING_GROUP_WITHIN"></span><span id="wbem_e_missing_group_within"></span>**WBEM \_ E \_ fehlt \_ Gruppe \_ in**
+<span id="WBEM_E_MISSING_GROUP_WITHIN"></span><span id="wbem_e_missing_group_within"></span>**WBEM \_ E \_ MISSING \_ GROUP \_ WITHIN**
 </dt> <dd> <dl> <dt>
 
-2147749978 (0x8004105a)
+2147749978 (0x8004105A)
 </dt> <dt>
 
 
@@ -1177,10 +1177,10 @@ Eine GROUP BY-Klausel wurde ohne die entsprechende GROUP WITHIN-Klausel verwen
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_MISSING_AGGREGATION_LIST"></span><span id="wbem_e_missing_aggregation_list"></span>**WBEM \_ E \_ fehlende \_ Aggregations \_ Liste**
+<span id="WBEM_E_MISSING_AGGREGATION_LIST"></span><span id="wbem_e_missing_aggregation_list"></span>**WBEM \_ E \_ MISSING \_ AGGREGATION \_ LIST**
 </dt> <dd> <dl> <dt>
 
-2147749979 (0x8004105b)
+2147749979 (0x8004105B)
 </dt> <dt>
 
 
@@ -1190,10 +1190,10 @@ Es wurde eine GROUP BY-Klausel verwendet. Die Aggregation für alle Eigenschaft
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROPERTY_NOT_AN_OBJECT"></span><span id="wbem_e_property_not_an_object"></span>**WBEM \_ E \_ - \_ Eigenschaft \_ kein \_ Objekt**
+<span id="WBEM_E_PROPERTY_NOT_AN_OBJECT"></span><span id="wbem_e_property_not_an_object"></span>**WBEM \_ \_ E-EIGENSCHAFT \_ KEIN \_ \_ OBJEKT**
 </dt> <dd> <dl> <dt>
 
-2147749980 (0x8004105c)
+2147749980 (0x8004105C)
 </dt> <dt>
 
 
@@ -1203,10 +1203,10 @@ Für eine Eigenschaft, die kein eingebettetes Objekt ist, wurde Punktnotation ve
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_AGGREGATING_BY_OBJECT"></span><span id="wbem_e_aggregating_by_object"></span>**WBEM \_ E \_ Aggregations \_ nach \_ Objekt**
+<span id="WBEM_E_AGGREGATING_BY_OBJECT"></span><span id="wbem_e_aggregating_by_object"></span>**WBEM \_ E \_ AGGREGIEREN \_ NACH \_ OBJEKT**
 </dt> <dd> <dl> <dt>
 
-2147749981 (0x8004105d)
+2147749981 (0x8004105D)
 </dt> <dt>
 
 
@@ -1216,20 +1216,20 @@ Eine GROUP BY-Klausel verweist auf eine Eigenschaft, bei der es sich um ein eing
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNINTERPRETABLE_PROVIDER_QUERY"></span><span id="wbem_e_uninterpretable_provider_query"></span>**Abfrage des \_ \_ nicht interpretierbaren WBEM E- \_ Anbieters \_**
+<span id="WBEM_E_UNINTERPRETABLE_PROVIDER_QUERY"></span><span id="wbem_e_uninterpretable_provider_query"></span>**WBEM \_ E \_ UNINTERPRETABLE \_ PROVIDER \_ QUERY**
 </dt> <dd> <dl> <dt>
 
-2147749983 (0x8004105f)
+2147749983 (0x8004105F)
 </dt> <dt>
 
 
 
-Die Ereignis Anbieter-Registrierungs Abfrage ([**\_ \_ eventproviderregistration**](--eventproviderregistration.md)) hat nicht die Klassen angegeben, für die Ereignisse bereitgestellt wurden.
+Die Ereignisanbieter-Registrierungsabfrage ([**\_ \_ EventProviderRegistration**](--eventproviderregistration.md)) hat nicht die Klassen angegeben, für die Ereignisse bereitgestellt wurden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_BACKUP_RESTORE_WINMGMT_RUNNING"></span><span id="wbem_e_backup_restore_winmgmt_running"></span>**WBEM \_ E \_ Backup \_ Restore \_ WinMgmt wird \_ ausgeführt**
+<span id="WBEM_E_BACKUP_RESTORE_WINMGMT_RUNNING"></span><span id="wbem_e_backup_restore_winmgmt_running"></span>**WBEM \_ E BACKUP RESTORE \_ \_ \_ WINMGMT \_ WIRD AUSGEFÜHRT**
 </dt> <dd> <dl> <dt>
 
 2147749984 (0x80041060)
@@ -1237,12 +1237,12 @@ Die Ereignis Anbieter-Registrierungs Abfrage ([**\_ \_ eventproviderregistration
 
 
 
-Es wurde angefordert, das Repository zu sichern oder wiederherzustellen, während es von WinMgmt.exe oder vom Svchost-Prozess verwendet wurde, der den WMI-Dienst enthält.
+Es wurde eine Anforderung zum Sichern oder Wiederherstellen des Repositorys gestellt, während es von WinMgmt.exe oder vom SVCHOST-Prozess verwendet wurde, der den WMI-Dienst enthält.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_QUEUE_OVERFLOW"></span><span id="wbem_e_queue_overflow"></span>**Überlauf der WBEM \_ E- \_ Warteschlange \_**
+<span id="WBEM_E_QUEUE_OVERFLOW"></span><span id="wbem_e_queue_overflow"></span>**WBEM \_ E \_ QUEUE \_ OVERFLOW**
 </dt> <dd> <dl> <dt>
 
 2147749985 (0x80041061)
@@ -1250,12 +1250,12 @@ Es wurde angefordert, das Repository zu sichern oder wiederherzustellen, währen
 
 
 
-Überlauf der asynchronen Übermittlungs Warteschlange von dem Ereignisconsumer zu langsam.
+Die asynchrone Übermittlungswarteschlange ist überlaufen, da der Ereignis consumer zu langsam war.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PRIVILEGE_NOT_HELD"></span><span id="wbem_e_privilege_not_held"></span>**WBEM \_ E- \_ Berechtigung \_ nicht \_ aufrechterhalten**
+<span id="WBEM_E_PRIVILEGE_NOT_HELD"></span><span id="wbem_e_privilege_not_held"></span>**WBEM \_ \_ E-BERECHTIGUNG \_ NICHT \_ PRIVILEG**
 </dt> <dd> <dl> <dt>
 
 2147749986 (0x80041062)
@@ -1263,12 +1263,12 @@ Es wurde angefordert, das Repository zu sichern oder wiederherzustellen, währen
 
 
 
-Der Vorgang konnte nicht ausgeführt werden, da der Client nicht über die erforderlichen Sicherheits Berechtigungen verfügte.
+Fehler beim Vorgang, da der Client nicht über die erforderlichen Sicherheitsberechtigungen verfügen hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OPERATOR"></span><span id="wbem_e_invalid_operator"></span>**\_Ungültiger WBEM E- \_ \_ Operator**
+<span id="WBEM_E_INVALID_OPERATOR"></span><span id="wbem_e_invalid_operator"></span>**WBEM \_ E \_ INVALID \_ OPERATOR**
 </dt> <dd> <dl> <dt>
 
 2147749987 (0x80041063)
@@ -1281,7 +1281,7 @@ Der Operator ist für diesen Eigenschaftentyp ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_LOCAL_CREDENTIALS"></span><span id="wbem_e_local_credentials"></span>**lokale WBEM \_ E- \_ \_ Anmelde Informationen**
+<span id="WBEM_E_LOCAL_CREDENTIALS"></span><span id="wbem_e_local_credentials"></span>**LOKALE \_ WBEM-ANMELDEINFORMATIONEN \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147749988 (0x80041064)
@@ -1289,12 +1289,12 @@ Der Operator ist für diesen Eigenschaftentyp ungültig.
 
 
 
-Der Benutzer hat einen Benutzernamen/ein Kennwort/eine Autorität für eine lokale Verbindung angegeben. Der Benutzer muss einen leeren Benutzernamen/ein leeres Kennwort verwenden und auf die Standard Sicherheit zurückgreifen.
+Der Benutzer hat einen Benutzernamen/ein Kennwort/eine Autorität für eine lokale Verbindung angegeben. Der Benutzer muss einen leeren Benutzernamen bzw. ein leeres Kennwort verwenden und sich auf die Standardsicherheit verlassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CANNOT_BE_ABSTRACT"></span><span id="wbem_e_cannot_be_abstract"></span>**WBEM \_ E \_ darf \_ nicht \_ abstrakt sein.**
+<span id="WBEM_E_CANNOT_BE_ABSTRACT"></span><span id="wbem_e_cannot_be_abstract"></span>**WBEM \_ E KANN NICHT \_ \_ ABSTRAKT \_ SEIN**
 </dt> <dd> <dl> <dt>
 
 2147749989 (0x80041065)
@@ -1302,12 +1302,12 @@ Der Benutzer hat einen Benutzernamen/ein Kennwort/eine Autorität für eine loka
 
 
 
-Die Klasse wurde als abstrakt erstellt, wenn die übergeordnete Klasse nicht abstrakt ist.
+Die Klasse wurde abstrakt gemacht, wenn ihre übergeordnete Klasse nicht abstrakt ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_AMENDED_OBJECT"></span><span id="wbem_e_amended_object"></span>**WBEM \_ E- \_ geändertes \_ Objekt**
+<span id="WBEM_E_AMENDED_OBJECT"></span><span id="wbem_e_amended_object"></span>**WBEM \_ \_ E-ÄNDERUNGSOBJEKT \_**
 </dt> <dd> <dl> <dt>
 
 2147749990 (0x80041066)
@@ -1315,12 +1315,12 @@ Die Klasse wurde als abstrakt erstellt, wenn die übergeordnete Klasse nicht abs
 
 
 
-Das geänderte Objekt wurde geschrieben, ohne dass das **WBEM- \_ Flag ein \_ \_ geändertes \_ qualifizierungsflag verwendet** .
+Das geänderte Objekt wurde geschrieben, ohne dass das **Flag WBEM \_ FLAG USE AMENDED \_ \_ \_ QUALIFIERS** angegeben wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CLIENT_TOO_SLOW"></span><span id="wbem_e_client_too_slow"></span>**WBEM \_ E- \_ Client \_ zu \_ langsam**
+<span id="WBEM_E_CLIENT_TOO_SLOW"></span><span id="wbem_e_client_too_slow"></span>**WBEM E CLIENT TOO SLOW (WBEM \_ \_ E-CLIENT \_ ZU \_ LANGSAM)**
 </dt> <dd> <dl> <dt>
 
 2147749991 (0x80041067)
@@ -1328,12 +1328,12 @@ Das geänderte Objekt wurde geschrieben, ohne dass das **WBEM- \_ Flag ein \_ \_
 
 
 
-Der Client hat Objekte nicht schnell genug aus einer Enumeration abgerufen. Diese Konstante wird zurückgegeben, wenn ein Client ein Enumerationsobjekt erstellt, aber nicht rechtzeitig Objekte aus dem Enumerator abruft, was dazu führt, dass die Objekt Caches des Enumerators gesichert werden.
+Der Client hat Objekte nicht schnell genug aus einer Enumeration abgerufen. Diese Konstante wird zurückgegeben, wenn ein Client ein Enumerationsobjekt erstellt, aber objekte nicht rechtzeitig aus dem Enumerator abruft, was dazu führt, dass die Objektcaches des Enumerators sichern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NULL_SECURITY_DESCRIPTOR"></span><span id="wbem_e_null_security_descriptor"></span>**WBEM \_ E \_ NULL- \_ Sicherheits \_ Beschreibung**
+<span id="WBEM_E_NULL_SECURITY_DESCRIPTOR"></span><span id="wbem_e_null_security_descriptor"></span>**WBEM \_ E \_ NULL \_ SECURITY \_ DESCRIPTOR**
 </dt> <dd> <dl> <dt>
 
 2147749992 (0x80041068)
@@ -1341,12 +1341,12 @@ Der Client hat Objekte nicht schnell genug aus einer Enumeration abgerufen. Dies
 
 
 
-NULL-Sicherheits Beschreibung wurde verwendet.
+Es wurde ein NULL-Sicherheitsdeskriptor verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TIMED_OUT"></span><span id="wbem_e_timed_out"></span>**Timeout bei WBEM \_ E. \_ \_**
+<span id="WBEM_E_TIMED_OUT"></span><span id="wbem_e_timed_out"></span>**WBEM \_ E \_ TIMED \_ OUT**
 </dt> <dd> <dl> <dt>
 
 2147749993 (0x80041069)
@@ -1354,12 +1354,12 @@ NULL-Sicherheits Beschreibung wurde verwendet.
 
 
 
-Timeout beim Vorgang.
+Time out des Vorgangs.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_ASSOCIATION"></span><span id="wbem_e_invalid_association"></span>**WBEM \_ E \_ ungültige Zuordnung \_**
+<span id="WBEM_E_INVALID_ASSOCIATION"></span><span id="wbem_e_invalid_association"></span>**WBEM \_ E \_ UNGÜLTIGE \_ ZUORDNUNG**
 </dt> <dd> <dl> <dt>
 
 2147749994
@@ -1372,10 +1372,10 @@ Die Zuordnung ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_AMBIGUOUS_OPERATION"></span><span id="wbem_e_ambiguous_operation"></span>**mehrdeutiger WBEM- \_ \_ \_ Vorgang**
+<span id="WBEM_E_AMBIGUOUS_OPERATION"></span><span id="wbem_e_ambiguous_operation"></span>**WBEM \_ E \_ MEHRDEUTIGER \_ VORGANG**
 </dt> <dd> <dl> <dt>
 
-2147749995 (0x8004106b)
+2147749995 (0x8004106B)
 </dt> <dt>
 
 
@@ -1385,59 +1385,59 @@ Der Vorgang war mehrdeutig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_QUOTA_VIOLATION"></span><span id="wbem_e_quota_violation"></span>**\_ \_ Kontingent Verletzung für WBEM E \_**
+<span id="WBEM_E_QUOTA_VIOLATION"></span><span id="wbem_e_quota_violation"></span>**WBEM \_ \_ E-KONTINGENTVERLETZUNG \_**
 </dt> <dd> <dl> <dt>
 
-2147749996 (0x8004106c)
+2147749996 (0x8004106C)
 </dt> <dt>
 
 
 
-WMI nimmt zu viel Arbeitsspeicher in Anspruch. Dies kann auf eine geringe Speicherverfügbarkeit oder eine übermäßige Arbeitsspeicher Auslastung durch WMI zurückzuführen sein.
+WMI nimmt zu viel Arbeitsspeicher ein. Dies kann durch eine geringe Arbeitsspeicherverfügbarkeit oder einen übermäßigen Arbeitsspeicherverbrauch durch WMI verursacht werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TRANSACTION_CONFLICT"></span><span id="wbem_e_transaction_conflict"></span>**WBEM \_ E- \_ Transaktions \_ Konflikt**
+<span id="WBEM_E_TRANSACTION_CONFLICT"></span><span id="wbem_e_transaction_conflict"></span>**WBEM \_ E \_ TRANSACTION \_ CONFLICT**
 </dt> <dd> <dl> <dt>
 
-2147749997 (0x8004106d)
+2147749997 (0x8004106D)
 </dt> <dt>
 
 
 
-Der Vorgang führte zu einem Transaktions Konflikt.
+Der Vorgang führte zu einem Transaktionskonflikt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_FORCED_ROLLBACK"></span><span id="wbem_e_forced_rollback"></span>**\_ \_ erzwungenes Rollback für WBEM E \_**
+<span id="WBEM_E_FORCED_ROLLBACK"></span><span id="wbem_e_forced_rollback"></span>**WBEM \_ E \_ FORCED \_ ROLLBACK**
 </dt> <dd> <dl> <dt>
 
-2147749998 (0x8004106e)
+2147749998 (0x8004106E)
 </dt> <dt>
 
 
 
-Die Transaktion hat ein Rollback erzwungen.
+Die Transaktion hat einen Rollback erzwungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_UNSUPPORTED_LOCALE"></span><span id="wbem_e_unsupported_locale"></span>**von WBEM \_ E \_ nicht unterstütztes Gebiets Schema \_**
+<span id="WBEM_E_UNSUPPORTED_LOCALE"></span><span id="wbem_e_unsupported_locale"></span>**WBEM \_ E \_ UNSUPPORTED \_ LOCALE**
 </dt> <dd> <dl> <dt>
 
-2147749999 (0x8004106f)
+2147749999 (0x8004106F)
 </dt> <dt>
 
 
 
-Das im-Befehl verwendete Gebiets Schema wird nicht unterstützt.
+Das im Aufruf verwendete Locale wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_HANDLE_OUT_OF_DATE"></span><span id="wbem_e_handle_out_of_date"></span>**WBEM \_ E- \_ handle ist \_ \_ \_ veraltet.**
+<span id="WBEM_E_HANDLE_OUT_OF_DATE"></span><span id="wbem_e_handle_out_of_date"></span>**WBEM \_ E \_ HANDLE \_ VERALTET \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147750000 (0x80041070)
@@ -1445,12 +1445,12 @@ Das im-Befehl verwendete Gebiets Schema wird nicht unterstützt.
 
 
 
-Objekt Handle ist veraltet.
+Das Objekthand handle ist veraltet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CONNECTION_FAILED"></span><span id="wbem_e_connection_failed"></span>**WBEM \_ E- \_ Verbindung \_ fehlgeschlagen**
+<span id="WBEM_E_CONNECTION_FAILED"></span><span id="wbem_e_connection_failed"></span>**FEHLER BEI WBEM \_ \_ \_ E-VERBINDUNG**
 </dt> <dd> <dl> <dt>
 
 2147750001 (0x80041071)
@@ -1458,12 +1458,12 @@ Objekt Handle ist veraltet.
 
 
 
-Fehler beim Herstellen einer Verbindung mit der SQL-Datenbank.
+Fehler beim Herstellen SQL Datenbank.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_HANDLE_REQUEST"></span><span id="wbem_e_invalid_handle_request"></span>**WBEM \_ E \_ ungültige \_ handle- \_ Anforderung**
+<span id="WBEM_E_INVALID_HANDLE_REQUEST"></span><span id="wbem_e_invalid_handle_request"></span>**WBEM \_ E \_ INVALID \_ HANDLE \_ REQUEST**
 </dt> <dd> <dl> <dt>
 
 2147750002 (0x80041072)
@@ -1471,12 +1471,12 @@ Fehler beim Herstellen einer Verbindung mit der SQL-Datenbank.
 
 
 
-Die Handle-Anforderung war ungültig.
+Die Handleanforderung war ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROPERTY_NAME_TOO_WIDE"></span><span id="wbem_e_property_name_too_wide"></span>**der \_ Eigenschafts Name für WBEM E ist \_ \_ \_ zu \_ breit.**
+<span id="WBEM_E_PROPERTY_NAME_TOO_WIDE"></span><span id="wbem_e_property_name_too_wide"></span>**WBEM \_ \_ E-EIGENSCHAFTENNAME \_ \_ ZU \_ BREIT**
 </dt> <dd> <dl> <dt>
 
 2147750003 (0x80041073)
@@ -1484,12 +1484,12 @@ Die Handle-Anforderung war ungültig.
 
 
 
-Der Eigenschaftsname enthält mehr als 255 Zeichen.
+Der Eigenschaftenname enthält mehr als 255 Zeichen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_CLASS_NAME_TOO_WIDE"></span><span id="wbem_e_class_name_too_wide"></span>**WBEM \_ E- \_ Klassen \_ Name \_ zu \_ breit**
+<span id="WBEM_E_CLASS_NAME_TOO_WIDE"></span><span id="wbem_e_class_name_too_wide"></span>**WBEM \_ \_ E-KLASSENNAME \_ \_ ZU \_ BREIT**
 </dt> <dd> <dl> <dt>
 
 2147750004 (0x80041074)
@@ -1502,7 +1502,7 @@ Der Klassenname enthält mehr als 255 Zeichen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_METHOD_NAME_TOO_WIDE"></span><span id="wbem_e_method_name_too_wide"></span>**der WBEM \_ E- \_ Methoden \_ Name ist \_ zu \_ breit.**
+<span id="WBEM_E_METHOD_NAME_TOO_WIDE"></span><span id="wbem_e_method_name_too_wide"></span>**WBEM \_ \_ E-METHODENNAME \_ \_ ZU \_ BREIT**
 </dt> <dd> <dl> <dt>
 
 2147750005 (0x80041075)
@@ -1515,7 +1515,7 @@ Der Methodenname enthält mehr als 255 Zeichen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_QUALIFIER_NAME_TOO_WIDE"></span><span id="wbem_e_qualifier_name_too_wide"></span>**WBEM \_ E \_ - \_ qualifizierername \_ zu \_ breit**
+<span id="WBEM_E_QUALIFIER_NAME_TOO_WIDE"></span><span id="wbem_e_qualifier_name_too_wide"></span>**WBEM \_ \_ E-QUALIFIZIERERNAME \_ \_ ZU \_ BREIT**
 </dt> <dd> <dl> <dt>
 
 2147750006 (0x80041076)
@@ -1523,12 +1523,12 @@ Der Methodenname enthält mehr als 255 Zeichen.
 
 
 
-Der qualifizierername enthält mehr als 255 Zeichen.
+Der Qualifizierername enthält mehr als 255 Zeichen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_RERUN_COMMAND"></span><span id="wbem_e_rerun_command"></span>**Befehl "WBEM \_ E \_ erneut ausführen" \_**
+<span id="WBEM_E_RERUN_COMMAND"></span><span id="wbem_e_rerun_command"></span>**BEFEHL "WBEM \_ E \_ \_ RERUN"**
 </dt> <dd> <dl> <dt>
 
 2147750007 (0x80041077)
@@ -1536,12 +1536,12 @@ Der qualifizierername enthält mehr als 255 Zeichen.
 
 
 
-Der SQL-Befehl muss erneut ausgeführt werden, da in SQL ein Deadlock auftritt. Dies kann nur zurückgegeben werden, wenn Daten in einer SQL-Datenbank gespeichert werden.
+Der SQL befehl muss erneut ausgeführt werden, da ein Deadlock in der SQL. Dies kann nur zurückgegeben werden, wenn Daten in einer Datenbank SQL werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_DATABASE_VER_MISMATCH"></span><span id="wbem_e_database_ver_mismatch"></span>**WBEM \_ E- \_ Daten Bank Konflikt nicht \_ \_ übereinstimmen**
+<span id="WBEM_E_DATABASE_VER_MISMATCH"></span><span id="wbem_e_database_ver_mismatch"></span>**WBEM \_ E \_ DATABASE \_ VER \_ MISMATCH**
 </dt> <dd> <dl> <dt>
 
 2147750008 (0x80041078)
@@ -1549,12 +1549,12 @@ Der SQL-Befehl muss erneut ausgeführt werden, da in SQL ein Deadlock auftritt. 
 
 
 
-Die Datenbankversion entspricht nicht der Version, die der Repository-Treiber verarbeitet.
+Die Datenbankversion ist nicht mit der Version übereinstimmen, die der Repositorytreiber verarbeitet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_VETO_DELETE"></span><span id="wbem_e_veto_delete"></span>**WBEM \_ E- \_ Veto \_ Löschen**
+<span id="WBEM_E_VETO_DELETE"></span><span id="wbem_e_veto_delete"></span>**WBEM \_ E \_ EMAIL \_ DELETE**
 </dt> <dd> <dl> <dt>
 
 2147750009 (0x80041079)
@@ -1562,25 +1562,25 @@ Die Datenbankversion entspricht nicht der Version, die der Repository-Treiber ve
 
 
 
-Der Löschvorgang kann von WMI nicht ausgeführt werden, da der Anbieter den Löschvorgang nicht zulässt.
+WMI kann den Löschvorgang nicht ausführen, da er vom Anbieter nicht zulässig ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_VETO_PUT"></span><span id="wbem_e_veto_put"></span>**WBEM \_ E- \_ Veto \_**
+<span id="WBEM_E_VETO_PUT"></span><span id="wbem_e_veto_put"></span>**WBEM \_ E \_ WIE PUT \_**
 </dt> <dd> <dl> <dt>
 
-2147750010 (0x8004107a)
+2147750010 (0x8004107A)
 </dt> <dt>
 
 
 
-Der Put-Vorgang kann von WMI nicht ausgeführt werden, da der Anbieter ihn nicht zulässt.
+WMI kann den Put-Vorgang nicht ausführen, da er vom Anbieter nicht zulässig ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_LOCALE"></span><span id="wbem_e_invalid_locale"></span>**WBEM \_ E, \_ Ungültiges Gebiets Schema \_**
+<span id="WBEM_E_INVALID_LOCALE"></span><span id="wbem_e_invalid_locale"></span>**WBEM \_ E \_ \_ UNGÜLTIGES LOCALE**
 </dt> <dd> <dl> <dt>
 
 2147750016 (0x80041080)
@@ -1588,12 +1588,12 @@ Der Put-Vorgang kann von WMI nicht ausgeführt werden, da der Anbieter ihn nicht
 
 
 
-Der angegebene Gebiets Schema Bezeichner für den Vorgang ist ungültig.
+Der angegebene Locale Identifier war für den Vorgang ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_SUSPENDED"></span><span id="wbem_e_provider_suspended"></span>**WBEM \_ E- \_ Anbieter angeh \_ alten**
+<span id="WBEM_E_PROVIDER_SUSPENDED"></span><span id="wbem_e_provider_suspended"></span>**WBEM \_ E \_ PROVIDER \_ SUSPENDED**
 </dt> <dd> <dl> <dt>
 
 2147750017 (0x80041081)
@@ -1606,7 +1606,7 @@ Der Anbieter wird angehalten.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_SYNCHRONIZATION_REQUIRED"></span><span id="wbem_e_synchronization_required"></span>**WBEM \_ E- \_ Synchronisierung \_ erforderlich**
+<span id="WBEM_E_SYNCHRONIZATION_REQUIRED"></span><span id="wbem_e_synchronization_required"></span>**WBEM \_ \_ E-SYNCHRONISIERUNG \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 2147750018 (0x80041082)
@@ -1614,12 +1614,12 @@ Der Anbieter wird angehalten.
 
 
 
-Das Objekt muss in das WMI-Repository geschrieben und erneut abgerufen werden, bevor der angeforderte Vorgang erfolgreich ausgeführt werden kann. Diese Konstante wird zurückgegeben, wenn ein Objekt committet und abgerufen werden muss, um den Eigenschafts Wert anzuzeigen.
+Das Objekt muss in das WMI-Repository geschrieben und erneut abgerufen werden, bevor der angeforderte Vorgang erfolgreich sein kann. Diese Konstante wird zurückgegeben, wenn für ein Objekt ein Committed und abruft werden muss, um den Eigenschaftswert zu sehen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NO_SCHEMA"></span><span id="wbem_e_no_schema"></span>**WBEM \_ E \_ kein \_ Schema**
+<span id="WBEM_E_NO_SCHEMA"></span><span id="wbem_e_no_schema"></span>**WBEM \_ E \_ NO \_ SCHEMA**
 </dt> <dd> <dl> <dt>
 
 2147750019 (0x80041083)
@@ -1632,10 +1632,10 @@ Der Vorgang kann nicht abgeschlossen werden. Es ist kein Schema verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_ALREADY_REGISTERED"></span><span id="wbem_e_provider_already_registered"></span>**der WBEM \_ E- \_ Anbieter wurde \_ bereits \_ registriert.**
+<span id="WBEM_E_PROVIDER_ALREADY_REGISTERED"></span><span id="wbem_e_provider_already_registered"></span>**WBEM \_ E \_ PROVIDER \_ ALREADY \_ REGISTERED**
 </dt> <dd> <dl> <dt>
 
-02147750020 (0x119f D010)
+02147750020 (0x119FD010)
 </dt> <dt>
 
 
@@ -1645,7 +1645,7 @@ Der Anbieter kann nicht registriert werden, da er bereits registriert ist.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_NOT_REGISTERED"></span><span id="wbem_e_provider_not_registered"></span>**WBEM \_ E- \_ Anbieter \_ nicht \_ registriert**
+<span id="WBEM_E_PROVIDER_NOT_REGISTERED"></span><span id="wbem_e_provider_not_registered"></span>**WBEM \_ E \_ PROVIDER \_ NOT \_ REGISTERED**
 </dt> <dd> <dl> <dt>
 
 2147750021 (0x80041085)
@@ -1658,7 +1658,7 @@ Der Anbieter wurde nicht registriert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_FATAL_TRANSPORT_ERROR"></span><span id="wbem_e_fatal_transport_error"></span>**WBEM E schwerwiegender \_ \_ \_ Transport \_ Fehler**
+<span id="WBEM_E_FATAL_TRANSPORT_ERROR"></span><span id="wbem_e_fatal_transport_error"></span>**WBEM \_ \_ E: \_ SCHWERWIEGENDER \_ TRANSPORTFEHLER**
 </dt> <dd> <dl> <dt>
 
 2147750022 (0x80041086)
@@ -1666,12 +1666,12 @@ Der Anbieter wurde nicht registriert.
 
 
 
-Schwerwiegender Transport Fehler.
+Schwerwiegender Transportfehler.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ENCRYPTED_CONNECTION_REQUIRED"></span><span id="wbem_e_encrypted_connection_required"></span>**WBEM \_ E- \_ verschlüsselte \_ Verbindung \_ erforderlich**
+<span id="WBEM_E_ENCRYPTED_CONNECTION_REQUIRED"></span><span id="wbem_e_encrypted_connection_required"></span>**WBEM \_ E \_ \_ ENCRYPTED-VERBINDUNG \_ ERFORDERLICH**
 </dt> <dd> <dl> <dt>
 
 2147750023 (0x80041087)
@@ -1679,12 +1679,12 @@ Schwerwiegender Transport Fehler.
 
 
 
-Der Benutzer hat versucht, einen Computernamen oder eine Domäne ohne verschlüsselte Verbindung festzulegen.
+Der Benutzer hat versucht, einen Computernamen oder eine Domäne ohne verschlüsselte Verbindung festlegen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_TIMED_OUT"></span><span id="wbem_e_provider_timed_out"></span>**Timeout des WBEM \_ E- \_ Anbieters \_ \_**
+<span id="WBEM_E_PROVIDER_TIMED_OUT"></span><span id="wbem_e_provider_timed_out"></span>**TIME OUT DES WBEM \_ \_ \_ \_ E-ANBIETERS**
 </dt> <dd> <dl> <dt>
 
 2147750024 (0x80041088)
@@ -1692,12 +1692,12 @@ Der Benutzer hat versucht, einen Computernamen oder eine Domäne ohne verschlüs
 
 
 
-Ein Anbieter konnte die Ergebnisse innerhalb des angegebenen Timeouts nicht melden.
+Ein Anbieter konnte keine Ergebnisse innerhalb des angegebenen Timeouts melden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NO_KEY"></span><span id="wbem_e_no_key"></span>**WBEM \_ E \_ kein \_ Schlüssel**
+<span id="WBEM_E_NO_KEY"></span><span id="wbem_e_no_key"></span>**WBEM \_ E \_ NO \_ KEY**
 </dt> <dd> <dl> <dt>
 
 2147750025 (0x80041089)
@@ -1705,25 +1705,25 @@ Ein Anbieter konnte die Ergebnisse innerhalb des angegebenen Timeouts nicht meld
 
 
 
-Der Benutzer hat versucht, eine Instanz ohne definierten Schlüssel zu platzieren.
+Der Benutzer hat versucht, eine Instanz ohne definierten Schlüssel zu erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_DISABLED"></span><span id="wbem_e_provider_disabled"></span>**WBEM \_ E- \_ Anbieter \_ deaktiviert**
+<span id="WBEM_E_PROVIDER_DISABLED"></span><span id="wbem_e_provider_disabled"></span>**WBEM \_ E \_ PROVIDER \_ DISABLED**
 </dt> <dd> <dl> <dt>
 
-2147750026 (0x8004108a)
+2147750026 (0x8004108A)
 </dt> <dt>
 
 
 
-Der Benutzer hat versucht, eine Anbieter Instanz zu registrieren, aber der com-Server für die Anbieter Instanz wurde entladen.
+Der Benutzer hat versucht, eine Anbieterinstanz zu registrieren, aber der COM-Server für die Anbieterinstanz wurde entladen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMESS_E_REGISTRATION_TOO_BROAD"></span><span id="wbemess_e_registration_too_broad"></span>**wbechaos \_ E- \_ Registrierung \_ zu \_ breit**
+<span id="WBEMESS_E_REGISTRATION_TOO_BROAD"></span><span id="wbemess_e_registration_too_broad"></span>**WBEMESS \_ \_ E-REGISTRIERUNG \_ ZU \_ BREIT**
 </dt> <dd> <dl> <dt>
 
 2147753985 (0x80042001)
@@ -1731,12 +1731,12 @@ Der Benutzer hat versucht, eine Anbieter Instanz zu registrieren, aber der com-S
 
 
 
-Die Anbieter Registrierung überschneidet sich mit der System Ereignis Domäne.
+Die Anbieterregistrierung überschneidet sich mit der Systemereignisdomäne.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMESS_E_REGISTRATION_TOO_PRECISE"></span><span id="wbemess_e_registration_too_precise"></span>**wbechaos \_ E \_ \_ zu \_ präzise Registrierung**
+<span id="WBEMESS_E_REGISTRATION_TOO_PRECISE"></span><span id="wbemess_e_registration_too_precise"></span>**WBEMESS \_ \_ E-REGISTRIERUNG \_ ZU \_ PRÄZISE**
 </dt> <dd> <dl> <dt>
 
 2147753986 (0x80042002)
@@ -1749,7 +1749,7 @@ In dieser Abfrage wurde keine WITHIN-Klausel verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMESS_E_AUTHZ_NOT_PRIVILEGED"></span><span id="wbemess_e_authz_not_privileged"></span>**wbechaos \_ E \_ Authz \_ nicht \_ privilegiert**
+<span id="WBEMESS_E_AUTHZ_NOT_PRIVILEGED"></span><span id="wbemess_e_authz_not_privileged"></span>**WBEMESS \_ E \_ OHNE BERECHTIGUNGEN \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147753987 (0x80042003)
@@ -1757,12 +1757,12 @@ In dieser Abfrage wurde keine WITHIN-Klausel verwendet.
 
 
 
-Dieser Computer verfügt nicht über die erforderlichen Domänen Berechtigungen, um die Sicherheitsfunktionen zu unterstützen, die sich auf die erstellte Abonnement Instanz beziehen. Wenden Sie sich an den Domänen Administrator, um diesen Computer der Windows-Autorisierungs Zugriffs Gruppe hinzuzufügen.
+Dieser Computer verfügt nicht über die erforderlichen Domänenberechtigungen zur Unterstützung der Sicherheitsfunktionen, die sich auf die erstellte Abonnementinstanz beziehen. Wenden Sie sich an den Domänenadministrator, um diesen Computer der Windows Autorisierungszugriffsgruppe hinzufügen zu lassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_RETRY_LATER"></span><span id="wbem_e_retry_later"></span>**WBEM \_ E-Wiederholungs \_ Versuch \_ später**
+<span id="WBEM_E_RETRY_LATER"></span><span id="wbem_e_retry_later"></span>**WBEM \_ E \_ RETRY \_ LATER**
 </dt> <dd> <dl> <dt>
 
 2147758081 (0x80043001)
@@ -1775,7 +1775,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_RESOURCE_CONTENTION"></span><span id="wbem_e_resource_contention"></span>**WBEM \_ E- \_ Ressourcen Konflikt \_**
+<span id="WBEM_E_RESOURCE_CONTENTION"></span><span id="wbem_e_resource_contention"></span>**WBEM \_ E \_ RESOURCE \_ CONTENTION**
 </dt> <dd> <dl> <dt>
 
 2147758082 (0x80043002)
@@ -1788,7 +1788,7 @@ Für die zukünftige Verwendung reserviert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_QUALIFIER_NAME"></span><span id="wbemmof_e_expected_qualifier_name"></span>**wbemmof \_ E \_ - \_ qualifizierername erwartet \_**
+<span id="WBEMMOF_E_EXPECTED_QUALIFIER_NAME"></span><span id="wbemmof_e_expected_qualifier_name"></span>**WBEMMOF \_ E \_ ERWARTETER \_ QUALIFIZIERERNAME \_**
 </dt> <dd> <dl> <dt>
 
 2147762177 (0x80044001)
@@ -1796,12 +1796,12 @@ Für die zukünftige Verwendung reserviert.
 
 
 
-Ein qualifizierername wurde erwartet.
+Ein Qualifizierername wurde erwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_SEMI"></span><span id="wbemmof_e_expected_semi"></span>**wbemmof \_ E \_ erwartet \_ Semi**
+<span id="WBEMMOF_E_EXPECTED_SEMI"></span><span id="wbemmof_e_expected_semi"></span>**WBEMMOF \_ E \_ ERWARTET \_ SEMI**
 </dt> <dd> <dl> <dt>
 
 2147762178 (0x80044002)
@@ -1809,12 +1809,12 @@ Ein qualifizierername wurde erwartet.
 
 
 
-Semikolon oder "=" erwartet.
+Semikolon oder '=' wurde erwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_OPEN_BRACE"></span><span id="wbemmof_e_expected_open_brace"></span>**wbemmof \_ E \_ erwartete \_ öffnende geschweifter \_ Klammer**
+<span id="WBEMMOF_E_EXPECTED_OPEN_BRACE"></span><span id="wbemmof_e_expected_open_brace"></span>**WBEMMOF \_ E \_ ERWARTETE \_ GEÖFFNETE \_ GESCHWEIFTE KLAMMER**
 </dt> <dd> <dl> <dt>
 
 2147762179 (0x80044003)
@@ -1822,12 +1822,12 @@ Semikolon oder "=" erwartet.
 
 
 
-Es wurde eine öffnende geschweiften Klammer erwartet.
+Es wurde eine öffnende geschweifte Klammer erwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_CLOSE_BRACE"></span><span id="wbemmof_e_expected_close_brace"></span>**wbemmof \_ E \_ erwartet schließende geschweifter \_ \_ Klammer**
+<span id="WBEMMOF_E_EXPECTED_CLOSE_BRACE"></span><span id="wbemmof_e_expected_close_brace"></span>**WBEMMOF \_ E \_ ERWARTET \_ SCHLIEßENDE \_ GESCHWEIFTE KLAMMER**
 </dt> <dd> <dl> <dt>
 
 2147762180 (0x80044004)
@@ -1835,12 +1835,12 @@ Es wurde eine öffnende geschweiften Klammer erwartet.
 
 
 
-Fehlende schließende geschweifte Klammer oder ein ungültiges Array Element.
+Fehlende schließende geschweifte Klammer oder ein ungültiges Arrayelement.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_CLOSE_BRACKET"></span><span id="wbemmof_e_expected_close_bracket"></span>**wbemmof \_ E \_ erwartet Schließ \_ Ende \_ Klammer**
+<span id="WBEMMOF_E_EXPECTED_CLOSE_BRACKET"></span><span id="wbemmof_e_expected_close_bracket"></span>**WBEMMOF \_ E \_ ERWARTET \_ SCHLIEßENDE \_ KLAMMER**
 </dt> <dd> <dl> <dt>
 
 2147762181 (0x80044005)
@@ -1853,7 +1853,7 @@ Es wurde eine schließende Klammer erwartet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_CLOSE_PAREN"></span><span id="wbemmof_e_expected_close_paren"></span>**wbemmof \_ E \_ erwartet Schließ \_ Ende \_ Parser**
+<span id="WBEMMOF_E_EXPECTED_CLOSE_PAREN"></span><span id="wbemmof_e_expected_close_paren"></span>**WBEMMOF \_ E ERWARTET CLOSE \_ \_ \_ PAREN**
 </dt> <dd> <dl> <dt>
 
 2147762182 (0x80044006)
@@ -1866,7 +1866,7 @@ Schließende Klammer erwartet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_ILLEGAL_CONSTANT_VALUE"></span><span id="wbemmof_e_illegal_constant_value"></span>**wbemmof \_ E \_ \_ Ungültiger konstanter \_ Wert**
+<span id="WBEMMOF_E_ILLEGAL_CONSTANT_VALUE"></span><span id="wbemmof_e_illegal_constant_value"></span>**WBEMMOF \_ E \_ ILLEGAL \_ CONSTANT \_ VALUE**
 </dt> <dd> <dl> <dt>
 
 2147762183 (0x80044007)
@@ -1874,12 +1874,12 @@ Schließende Klammer erwartet.
 
 
 
-Numerischer Wert außerhalb des gültigen Bereichs oder Zeichen folgen ohne Anführungszeichen.
+Numerischer Wert liegt nicht im Bereich oder Zeichenfolgen ohne Anführungszeichen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_TYPE_IDENTIFIER"></span><span id="wbemmof_e_expected_type_identifier"></span>**wbemmof \_ E \_ - \_ \_ Typbezeichner erwartet**
+<span id="WBEMMOF_E_EXPECTED_TYPE_IDENTIFIER"></span><span id="wbemmof_e_expected_type_identifier"></span>**WBEMMOF \_ E \_ ERWARTETER \_ \_ TYPBEZEICHNER**
 </dt> <dd> <dl> <dt>
 
 2147762184 (0x80044008)
@@ -1887,12 +1887,12 @@ Numerischer Wert außerhalb des gültigen Bereichs oder Zeichen folgen ohne Anf�
 
 
 
-Es wurde ein Typbezeichner erwartet.
+Ein Typbezeichner wurde erwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_OPEN_PAREN"></span><span id="wbemmof_e_expected_open_paren"></span>**wbemmof \_ E \_ erwartet \_ offene \_ Parser**
+<span id="WBEMMOF_E_EXPECTED_OPEN_PAREN"></span><span id="wbemmof_e_expected_open_paren"></span>**WBEMMOF \_ E ERWARTET OPEN \_ \_ \_ PAREN**
 </dt> <dd> <dl> <dt>
 
 2147762185 (0x80044009)
@@ -1900,15 +1900,15 @@ Es wurde ein Typbezeichner erwartet.
 
 
 
-Es wurde eine öffnende Klammer erwartet.
+Es wurde eine geöffnete Klammer erwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNRECOGNIZED_TOKEN"></span><span id="wbemmof_e_unrecognized_token"></span>**wbemmof \_ E \_ unbekanntes \_ Token**
+<span id="WBEMMOF_E_UNRECOGNIZED_TOKEN"></span><span id="wbemmof_e_unrecognized_token"></span>**WBEMMOF \_ E \_ UNRECOGNIZED \_ TOKEN**
 </dt> <dd> <dl> <dt>
 
-2147762186 (0x8004400a)
+2147762186 (0x8004400A)
 </dt> <dt>
 
 
@@ -1918,10 +1918,10 @@ Unerwartetes Token in der Datei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNRECOGNIZED_TYPE"></span><span id="wbemmof_e_unrecognized_type"></span>**wbemmof \_ E \_ unbekannter \_ Typ**
+<span id="WBEMMOF_E_UNRECOGNIZED_TYPE"></span><span id="wbemmof_e_unrecognized_type"></span>**WBEMMOF \_ E \_ UNRECOGNIZED \_ TYPE**
 </dt> <dd> <dl> <dt>
 
-2147762187 (0x8004400b)
+2147762187 (0x8004400B)
 </dt> <dt>
 
 
@@ -1931,59 +1931,59 @@ Unbekannter oder nicht unterstützter Typbezeichner.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_PROPERTY_NAME"></span><span id="wbemmof_e_expected_property_name"></span>**wbemmof \_ E \_ - \_ Eigenschafts \_ Name erwartet**
+<span id="WBEMMOF_E_EXPECTED_PROPERTY_NAME"></span><span id="wbemmof_e_expected_property_name"></span>**WBEMMOF \_ E \_ ERWARTETER \_ \_ EIGENSCHAFTENNAME**
 </dt> <dd> <dl> <dt>
 
-2147762187 (0x8004400b)
+2147762187 (0x8004400B)
 </dt> <dt>
 
 
 
-Der Eigenschafts-oder Methodenname wurde erwartet.
+Erwarteter Eigenschafts- oder Methodenname.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_TYPEDEF_NOT_SUPPORTED"></span><span id="wbemmof_e_typedef_not_supported"></span>**wbemmof \_ E \_ typedef \_ \_ wird nicht unterstützt.**
+<span id="WBEMMOF_E_TYPEDEF_NOT_SUPPORTED"></span><span id="wbemmof_e_typedef_not_supported"></span>**WBEMMOF \_ E \_ TYPEDEF NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
-2147762189 (0x8004400d)
+2147762189 (0x8004400D)
 </dt> <dt>
 
 
 
-Typedefs und enumerierte Typen werden nicht unterstützt.
+Typedefs und aufzählte Typen werden nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNEXPECTED_ALIAS"></span><span id="wbemmof_e_unexpected_alias"></span>**wbemmof \_ E \_ unerwarteter \_ Alias**
+<span id="WBEMMOF_E_UNEXPECTED_ALIAS"></span><span id="wbemmof_e_unexpected_alias"></span>**WBEMMOF \_ E \_ UNEXPECTED \_ ALIAS**
 </dt> <dd> <dl> <dt>
 
-2147762190 (0x8004400e)
+2147762190 (0x8004400E)
 </dt> <dt>
 
 
 
-Nur ein Verweis auf ein Klassenobjekt kann einen Alias Wert aufweisen.
+Nur ein Verweis auf ein Klassenobjekt kann einen Aliaswert haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNEXPECTED_ARRAY_INIT"></span><span id="wbemmof_e_unexpected_array_init"></span>**wbemmof \_ E \_ unerwartete \_ array- \_ Init**
+<span id="WBEMMOF_E_UNEXPECTED_ARRAY_INIT"></span><span id="wbemmof_e_unexpected_array_init"></span>**WBEMMOF \_ E \_ UNEXPECTED \_ ARRAY \_ INIT**
 </dt> <dd> <dl> <dt>
 
-2147762191 (0x8004400f)
+2147762191 (0x8004400F)
 </dt> <dt>
 
 
 
-Unerwartete Array Initialisierung. Arrays müssen mit deklariert werden \[ \] .
+Unerwartete Arrayin initialisierung. Arrays müssen mit deklariert \[ \] werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_AMENDMENT_SYNTAX"></span><span id="wbemmof_e_invalid_amendment_syntax"></span>**wbemmof \_ E \_ ungültige \_ Zusatz \_ Syntax**
+<span id="WBEMMOF_E_INVALID_AMENDMENT_SYNTAX"></span><span id="wbemmof_e_invalid_amendment_syntax"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ ZUSATZSYNTAX \_**
 </dt> <dd> <dl> <dt>
 
 2147762192 (0x80044010)
@@ -1991,12 +1991,12 @@ Unerwartete Array Initialisierung. Arrays müssen mit deklariert werden \[ \] .
 
 
 
-Die Syntax für den Namespace Pfad ist ungültig.
+Die Syntax des Namespacepfads ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_DUPLICATE_AMENDMENT"></span><span id="wbemmof_e_invalid_duplicate_amendment"></span>**wbemmof \_ E \_ ungültige \_ doppelte \_ Zusatz Änderung**
+<span id="WBEMMOF_E_INVALID_DUPLICATE_AMENDMENT"></span><span id="wbemmof_e_invalid_duplicate_amendment"></span>**WBEMMOF \_ E \_ INVALID \_ DUPLICATE \_ AMENDMENT**
 </dt> <dd> <dl> <dt>
 
 2147762193 (0x80044011)
@@ -2004,12 +2004,12 @@ Die Syntax für den Namespace Pfad ist ungültig.
 
 
 
-Doppelte Konvertierer für die Änderung.
+Doppelte Zusatzspezifizierer.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_PRAGMA"></span><span id="wbemmof_e_invalid_pragma"></span>**wbemmof \_ E \_ ungültiges \_ pragma**
+<span id="WBEMMOF_E_INVALID_PRAGMA"></span><span id="wbemmof_e_invalid_pragma"></span>**WBEMMOF \_ E \_ INVALID \_ PRAGMA**
 </dt> <dd> <dl> <dt>
 
 2147762194 (0x80044012)
@@ -2017,12 +2017,12 @@ Doppelte Konvertierer für die Änderung.
 
 
 
-auf das [ \# pragma](pragma-namespace.md) muss ein gültiges Schlüsselwort folgen.
+[ \# auf pragma](pragma-namespace.md) muss ein gültiges Schlüsselwort folgen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_NAMESPACE_SYNTAX"></span><span id="wbemmof_e_invalid_namespace_syntax"></span>**wbemmof \_ E \_ ungültige \_ Namespace \_ Syntax.**
+<span id="WBEMMOF_E_INVALID_NAMESPACE_SYNTAX"></span><span id="wbemmof_e_invalid_namespace_syntax"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ NAMESPACESYNTAX \_**
 </dt> <dd> <dl> <dt>
 
 2147762195 (0x80044013)
@@ -2030,12 +2030,12 @@ auf das [ \# pragma](pragma-namespace.md) muss ein gültiges Schlüsselwort folg
 
 
 
-Die Syntax für den Namespace Pfad ist ungültig.
+Die Syntax des Namespacepfads ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_CLASS_NAME"></span><span id="wbemmof_e_expected_class_name"></span>**wbemmof \_ E \_ erwartet \_ Klassen \_ Name**
+<span id="WBEMMOF_E_EXPECTED_CLASS_NAME"></span><span id="wbemmof_e_expected_class_name"></span>**WBEMMOF \_ E \_ ERWARTETER \_ \_ KLASSENNAME**
 </dt> <dd> <dl> <dt>
 
 2147762196 (0x80044014)
@@ -2043,12 +2043,12 @@ Die Syntax für den Namespace Pfad ist ungültig.
 
 
 
-Unerwartetes Zeichen im Klassennamen muss ein Bezeichner sein.
+Ein unerwartetes Zeichen im Klassennamen muss ein Bezeichner sein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_TYPE_MISMATCH"></span><span id="wbemmof_e_type_mismatch"></span>**wbemmof \_ - \_ Typ \_ stimmt nicht überein.**
+<span id="WBEMMOF_E_TYPE_MISMATCH"></span><span id="wbemmof_e_type_mismatch"></span>**WBEMMOF \_ \_ E-TYPKONFLIKT \_**
 </dt> <dd> <dl> <dt>
 
 2147762197 (0x80044015)
@@ -2056,12 +2056,12 @@ Unerwartetes Zeichen im Klassennamen muss ein Bezeichner sein.
 
 
 
-Der angegebene Wert kann nicht in den entsprechenden Typ gebracht werden.
+Der angegebene Wert kann nicht in den entsprechenden Typ festgelegt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_ALIAS_NAME"></span><span id="wbemmof_e_expected_alias_name"></span>**wbemmof \_ E \_ \ \_ Alias \_ Name erwartet**
+<span id="WBEMMOF_E_EXPECTED_ALIAS_NAME"></span><span id="wbemmof_e_expected_alias_name"></span>**WBEMMOF \_ E \_ ERWARTETER \_ \_ ALIASNAME**
 </dt> <dd> <dl> <dt>
 
 2147762198 (0x80044016)
@@ -2069,12 +2069,12 @@ Der angegebene Wert kann nicht in den entsprechenden Typ gebracht werden.
 
 
 
-Auf das Dollar Zeichen muss ein Aliasname als Bezeichner folgen.
+Auf das Dollarzeichen muss ein Aliasname als Bezeichner folgen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_CLASS_DECLARATION"></span><span id="wbemmof_e_invalid_class_declaration"></span>**wbemmof \_ E \_ ungültige \_ Klassen \_ Deklaration.**
+<span id="WBEMMOF_E_INVALID_CLASS_DECLARATION"></span><span id="wbemmof_e_invalid_class_declaration"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ \_ KLASSENDEKLARATION**
 </dt> <dd> <dl> <dt>
 
 2147762199 (0x80044017)
@@ -2082,12 +2082,12 @@ Auf das Dollar Zeichen muss ein Aliasname als Bezeichner folgen.
 
 
 
-Die Klassen Deklaration ist ungültig.
+Die Klassendeklaration ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_INSTANCE_DECLARATION"></span><span id="wbemmof_e_invalid_instance_declaration"></span>**wbemmof \_ E \_ ungültige \_ \_ Instanzdeklaration.**
+<span id="WBEMMOF_E_INVALID_INSTANCE_DECLARATION"></span><span id="wbemmof_e_invalid_instance_declaration"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ \_ INSTANZDEKLARATION**
 </dt> <dd> <dl> <dt>
 
 2147762200 (0x80044018)
@@ -2100,7 +2100,7 @@ Die Instanzdeklaration ist ungültig. Er muss mit "Instanz von" beginnen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_DOLLAR"></span><span id="wbemmof_e_expected_dollar"></span>**wbemmof \_ E \_ erwartet \_ Dollar**
+<span id="WBEMMOF_E_EXPECTED_DOLLAR"></span><span id="wbemmof_e_expected_dollar"></span>**WBEMMOF \_ E \_ ERWARTETER \_ DOLLAR**
 </dt> <dd> <dl> <dt>
 
 2147762201 (0x80044019)
@@ -2108,80 +2108,80 @@ Die Instanzdeklaration ist ungültig. Er muss mit "Instanz von" beginnen.
 
 
 
-Erwartetes Dollarzeichen. Ein Alias in der Form "$Name" muss dem "as"-Schlüsselwort folgen.
+Erwartetes Dollarzeichen. Ein Alias im Formular "$name" muss dem Schlüsselwort "as" folgen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_CIMTYPE_QUALIFIER"></span><span id="wbemmof_e_cimtype_qualifier"></span>**wbemmof \_ E \_ CimType- \_ Qualifizierer**
+<span id="WBEMMOF_E_CIMTYPE_QUALIFIER"></span><span id="wbemmof_e_cimtype_qualifier"></span>**WBEMMOF \_ E \_ \_ CIMTYPE-QUALIFIZIERER**
 </dt> <dd> <dl> <dt>
 
-2147762202 (0x8004401a)
+2147762202 (0x8004401A)
 </dt> <dt>
 
 
 
-Der Qualifizierer "CimType" kann nicht direkt in einer MOF-Datei angegeben werden. Verwenden Sie die Standardtyp Notation.
+Der CIMTYPE-Qualifizierer kann nicht direkt in einer MOF-Datei angegeben werden. Verwenden Sie die Standardtyp-Notation.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_DUPLICATE_PROPERTY"></span><span id="wbemmof_e_duplicate_property"></span>**wbemmof \_ E \_ duplizierte \_ Eigenschaft**
+<span id="WBEMMOF_E_DUPLICATE_PROPERTY"></span><span id="wbemmof_e_duplicate_property"></span>**WBEMMOF \_ E \_ \_ DUPLICATE-EIGENSCHAFT**
 </dt> <dd> <dl> <dt>
 
-2147762203 (0x8004401b)
+2147762203 (0x8004401B)
 </dt> <dt>
 
 
 
-Es wurde ein doppelter Eigenschaftsname in der MOF-Datei gefunden.
+In der MOF wurde ein doppelter Eigenschaftenname gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_NAMESPACE_SPECIFICATION"></span><span id="wbemmof_e_invalid_namespace_specification"></span>**wbemmof \_ E \_ ungültige \_ Namespace \_ Spezifikation**
+<span id="WBEMMOF_E_INVALID_NAMESPACE_SPECIFICATION"></span><span id="wbemmof_e_invalid_namespace_specification"></span>**WBEMMOF \_ E \_ INVALID \_ NAMESPACE \_ SPECIFICATION**
 </dt> <dd> <dl> <dt>
 
-2147762204 (0x8004401c)
+2147762204 (0x8004401C)
 </dt> <dt>
 
 
 
-Die Namespace Syntax ist ungültig. Verweise auf andere Server sind nicht zulässig.
+Die Namespacesyntax ist ungültig. Verweise auf andere Server sind nicht zulässig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_OUT_OF_RANGE"></span><span id="wbemmof_e_out_of_range"></span>**wbemmof \_ E \_ außerhalb \_ des gültigen \_ Bereichs**
+<span id="WBEMMOF_E_OUT_OF_RANGE"></span><span id="wbemmof_e_out_of_range"></span>**WBEMMOF \_ E LIEGT NICHT IM \_ \_ \_ BEREICH**
 </dt> <dd> <dl> <dt>
 
-2147762205 (0x8004401d)
+2147762205 (0x8004401D)
 </dt> <dt>
 
 
 
-Der Wert liegt außerhalb des zulässigen Bereichs.
+Der Wert liegt nicht im Bereich.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_FILE"></span><span id="wbemmof_e_invalid_file"></span>**wbemmof \_ E \_ ungültige \_ Datei.**
+<span id="WBEMMOF_E_INVALID_FILE"></span><span id="wbemmof_e_invalid_file"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ DATEI**
 </dt> <dd> <dl> <dt>
 
-2147762206 (0x8004401e)
+2147762206 (0x8004401E)
 </dt> <dt>
 
 
 
-Die Datei ist keine gültige Text-MOF-Datei oder binäre MOF-Datei.
+Die Datei ist keine gültige MOF-Textdatei oder binäre MOF-Datei.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_ALIASES_IN_EMBEDDED"></span><span id="wbemmof_e_aliases_in_embedded"></span>**wbemmof \_ E \_ Aliase \_ in \_ Embedded**
+<span id="WBEMMOF_E_ALIASES_IN_EMBEDDED"></span><span id="wbemmof_e_aliases_in_embedded"></span>**WBEMMOF \_ \_ E-ALIASE \_ IN \_ EMBEDDED**
 </dt> <dd> <dl> <dt>
 
-2147762207 (0x8004401f)
+2147762207 (0x8004401F)
 </dt> <dt>
 
 
@@ -2191,7 +2191,7 @@ Eingebettete Objekte können keine Aliase sein.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_NULL_ARRAY_ELEM"></span><span id="wbemmof_e_null_array_elem"></span>**wbemmof \_ E \_ NULL \_ array \_ Elem**
+<span id="WBEMMOF_E_NULL_ARRAY_ELEM"></span><span id="wbemmof_e_null_array_elem"></span>**WBEMMOF \_ E \_ NULL \_ ARRAY \_ ELEM**
 </dt> <dd> <dl> <dt>
 
 2147762208 (0x80044020)
@@ -2204,7 +2204,7 @@ NULL-Elemente in einem Array werden nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_DUPLICATE_QUALIFIER"></span><span id="wbemmof_e_duplicate_qualifier"></span>**wbemmof \_ E- \_ doppelter \_ Qualifizierer**
+<span id="WBEMMOF_E_DUPLICATE_QUALIFIER"></span><span id="wbemmof_e_duplicate_qualifier"></span>**WBEMMOF \_ E \_ DUPLICATE \_ QUALIFIER**
 </dt> <dd> <dl> <dt>
 
 2147762209 (0x80044021)
@@ -2212,12 +2212,12 @@ NULL-Elemente in einem Array werden nicht unterstützt.
 
 
 
-Der Qualifizierer wurde für das Objekt mehrmals verwendet.
+Der Qualifizierer wurde für das Objekt mehr als einmal verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_FLAVOR_TYPE"></span><span id="wbemmof_e_expected_flavor_type"></span>**Typ wbemmof \_ E \_ Erwarteter \_ \_ Typ**
+<span id="WBEMMOF_E_EXPECTED_FLAVOR_TYPE"></span><span id="wbemmof_e_expected_flavor_type"></span>**WBEMMOF \_ E \_ ERWARTETER \_ \_ VARIANTENTYP**
 </dt> <dd> <dl> <dt>
 
 2147762210 (0x80044022)
@@ -2225,12 +2225,12 @@ Der Qualifizierer wurde für das Objekt mehrmals verwendet.
 
 
 
-Es wurde ein Typ für die Konfiguration erwartet, z. b. " **starinstance**", " **desubclass**", " **EnableOverride**" oder 
+Es wurde ein Variantentyp wie **ToInstance,** **ToSubClass,** **EnableOverride oder** **DisableOverride erwartet.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INCOMPATIBLE_FLAVOR_TYPES"></span><span id="wbemmof_e_incompatible_flavor_types"></span>**wbemmof \_ E \_ inkompatible \_ Geschmacks \_ Typen**
+<span id="WBEMMOF_E_INCOMPATIBLE_FLAVOR_TYPES"></span><span id="wbemmof_e_incompatible_flavor_types"></span>**WBEMMOF \_ E \_ INCOMPATIBLE \_ FLAVOR \_ TYPES**
 </dt> <dd> <dl> <dt>
 
 2147762211 (0x80044023)
@@ -2238,12 +2238,12 @@ Es wurde ein Typ für die Konfiguration erwartet, z. b. " **starinstance**", " *
 
 
 
-Das Kombinieren von **EnableOverride** und **DisableOverride** für denselben Qualifizierer ist nicht zulässig.
+Die Kombination **von EnableOverride** und **DisableOverride** für denselben Qualifizierer ist nicht rechtsblass.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_MULTIPLE_ALIASES"></span><span id="wbemmof_e_multiple_aliases"></span>**wbemmof \_ E \_ mehrere \_ Aliase**
+<span id="WBEMMOF_E_MULTIPLE_ALIASES"></span><span id="wbemmof_e_multiple_aliases"></span>**WBEMMOF \_ E \_ MEHRERE \_ ALIASE**
 </dt> <dd> <dl> <dt>
 
 2147762212 (0x80044024)
@@ -2256,7 +2256,7 @@ Ein Alias kann nicht zweimal verwendet werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INCOMPATIBLE_FLAVOR_TYPES2"></span><span id="wbemmof_e_incompatible_flavor_types2"></span>**Wbemmof \_ E \_ nicht \_ kompatibel \_ TYPES2**
+<span id="WBEMMOF_E_INCOMPATIBLE_FLAVOR_TYPES2"></span><span id="wbemmof_e_incompatible_flavor_types2"></span>**WBEMMOF \_ E \_ INCOMPATIBLE \_ FLAVOR \_ TYPES2**
 </dt> <dd> <dl> <dt>
 
 2147762213 (0x80044025)
@@ -2264,12 +2264,12 @@ Ein Alias kann nicht zweimal verwendet werden.
 
 
 
-Die Kombination von " **restricted**" und " **deinstance** **" oder "** um" ist nicht zulässig.
+Das Kombinieren **von Restricted**, und **ToInstance** oder **ToSubClass** ist nicht legal.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_NO_ARRAYS_RETURNED"></span><span id="wbemmof_e_no_arrays_returned"></span>**wbemmof \_ E \_ keine \_ Arrays \_ zurückgegeben**
+<span id="WBEMMOF_E_NO_ARRAYS_RETURNED"></span><span id="wbemmof_e_no_arrays_returned"></span>**WBEMMOF \_ E \_ NO \_ ARRAYS \_ RETURNED**
 </dt> <dd> <dl> <dt>
 
 2147762214 (0x80044026)
@@ -2277,12 +2277,12 @@ Die Kombination von " **restricted**" und " **deinstance** **" oder "** um" ist 
 
 
 
-Methoden können keine Array Werte zurückgeben.
+Methoden können keine Arraywerte zurückgeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_MUST_BE_IN_OR_OUT"></span><span id="wbemmof_e_must_be_in_or_out"></span>**wbemmof \_ E \_ muss ein-oder ausgehend \_ sein \_ \_ \_**
+<span id="WBEMMOF_E_MUST_BE_IN_OR_OUT"></span><span id="wbemmof_e_must_be_in_or_out"></span>**WBEMMOF \_ E MUSS IN ODER OUT \_ \_ \_ \_ \_ SEIN.**
 </dt> <dd> <dl> <dt>
 
 2147762215 (0x80044027)
@@ -2290,12 +2290,12 @@ Methoden können keine Array Werte zurückgeben.
 
 
 
-Argumente müssen einen **in** -oder **out** -Qualifizierer aufweisen.
+Argumente müssen einen **In- oder** **Out-Qualifizierer** haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_FLAGS_SYNTAX"></span><span id="wbemmof_e_invalid_flags_syntax"></span>**wbemmof \_ E \_ ungültige \_ Flags- \_ Syntax.**
+<span id="WBEMMOF_E_INVALID_FLAGS_SYNTAX"></span><span id="wbemmof_e_invalid_flags_syntax"></span>**SYNTAX FÜR UNGÜLTIGE \_ \_ \_ FLAGS VON WBEMMOF E \_**
 </dt> <dd> <dl> <dt>
 
 2147762216 (0x80044028)
@@ -2308,7 +2308,7 @@ Die Flags-Syntax ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_EXPECTED_BRACE_OR_BAD_TYPE"></span><span id="wbemmof_e_expected_brace_or_bad_type"></span>**wbemmof \_ E \_ - \_ Klammer \_ oder \_ \_ fehlerhafter Typ erwartet**
+<span id="WBEMMOF_E_EXPECTED_BRACE_OR_BAD_TYPE"></span><span id="wbemmof_e_expected_brace_or_bad_type"></span>**WBEMMOF \_ E ERWARTETE \_ \_ GESCHWEIFTE KLAMMER \_ ODER \_ \_ FEHLERHAFTER TYP**
 </dt> <dd> <dl> <dt>
 
 2147762217 (0x80044029)
@@ -2316,90 +2316,90 @@ Die Flags-Syntax ist ungültig.
 
 
 
-Die abschließende geschweifter Klammer und das Semikolon für eine Klasse fehlen.
+Die letzte geschweifte Klammer und das Semikolon für eine Klasse fehlen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNSUPPORTED_CIMV22_QUAL_VALUE"></span><span id="wbemmof_e_unsupported_cimv22_qual_value"></span>**Wbemmof \_ E \_ nicht unterstützt \_ CIMV22 \_ Qual- \_ Wert**
+<span id="WBEMMOF_E_UNSUPPORTED_CIMV22_QUAL_VALUE"></span><span id="wbemmof_e_unsupported_cimv22_qual_value"></span>**WBEMMOF \_ E \_ UNSUPPORTED \_ CIMV22 \_ QUAL \_ VALUE**
 </dt> <dd> <dl> <dt>
 
-2147762218 (0x8004402a)
+2147762218 (0x8004402A)
 </dt> <dt>
 
 
 
-Eine CIM-Version 2,2 wird für einen qualifiziererwert nicht unterstützt.
+Ein CIM-Feature der Version 2.2 wird für einen Qualifiziererwert nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_UNSUPPORTED_CIMV22_DATA_TYPE"></span><span id="wbemmof_e_unsupported_cimv22_data_type"></span>**Wbemmof \_ E \_ nicht unterstützter \_ CIMV22- \_ \_ Datentyp**
+<span id="WBEMMOF_E_UNSUPPORTED_CIMV22_DATA_TYPE"></span><span id="wbemmof_e_unsupported_cimv22_data_type"></span>**WBEMMOF \_ E \_ UNSUPPORTED CIMV22 DATA TYPE (NICHT UNTERSTÜTZTER \_ CIMV22-DATENTYP) \_ \_**
 </dt> <dd> <dl> <dt>
 
-2147762219 (0x8004402b)
+2147762219 (0x8004402B)
 </dt> <dt>
 
 
 
-Der Datentyp der CIM-Version 2,2 wird nicht unterstützt.
+Der CIM-Datentyp 2.2 wird nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_DELETEINSTANCE_SYNTAX"></span><span id="wbemmof_e_invalid_deleteinstance_syntax"></span>**wbemmof \_ E \_ ungültige \_ Delta einstance- \_ Syntax.**
+<span id="WBEMMOF_E_INVALID_DELETEINSTANCE_SYNTAX"></span><span id="wbemmof_e_invalid_deleteinstance_syntax"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ DELETEINSTANCE-SYNTAX \_**
 </dt> <dd> <dl> <dt>
 
-2147762220 (0x8004402c)
+2147762220 (0x8004402C)
 </dt> <dt>
 
 
 
-Die Delete instance-Syntax ist ungültig. Der Wert sollte `#pragma DeleteInstance("instancepath", FAIL|NOFAIL)`
+Die Syntax der Löschinstanz ist ungültig. Dies sollte `#pragma DeleteInstance("instancepath", FAIL|NOFAIL)`
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_QUALIFIER_SYNTAX"></span><span id="wbemmof_e_invalid_qualifier_syntax"></span>**wbemmof \_ E \_ ungültige \_ qualifizierersyntax. \_**
+<span id="WBEMMOF_E_INVALID_QUALIFIER_SYNTAX"></span><span id="wbemmof_e_invalid_qualifier_syntax"></span>**WBEMMOF \_ E \_ UNGÜLTIGE \_ QUALIFIZIERERSYNTAX \_**
 </dt> <dd> <dl> <dt>
 
-2147762221 (0x8004402d)
+2147762221 (0x8004402D)
 </dt> <dt>
 
 
 
-Die qualifizierersyntax ist ungültig. Dort sollte `qualifiername:type=value,scope(class|instance), flavorname` stehen.
+Die Qualifizierersyntax ist ungültig. Diese sollte `qualifiername:type=value,scope(class|instance), flavorname` lauten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_QUALIFIER_USED_OUTSIDE_SCOPE"></span><span id="wbemmof_e_qualifier_used_outside_scope"></span>**wbemmof \_ E- \_ Qualifizierer außerhalb des Gültigkeits \_ \_ \_ Bereichs**
+<span id="WBEMMOF_E_QUALIFIER_USED_OUTSIDE_SCOPE"></span><span id="wbemmof_e_qualifier_used_outside_scope"></span>**AUßERHALB DES BEREICHS VERWENDETER WBEMMOF \_ \_ \_ \_ \_ E-QUALIFIZIERER**
 </dt> <dd> <dl> <dt>
 
-2147762222 (0x8004402e)
+2147762222 (0x8004402E)
 </dt> <dt>
 
 
 
-Der Qualifizierer wird außerhalb seines Gültigkeits Bereichs verwendet.
+Der Qualifizierer wird außerhalb seines Bereichs verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_ERROR_CREATING_TEMP_FILE"></span><span id="wbemmof_e_error_creating_temp_file"></span>**wbemmof \_ E \_ Fehler beim Erstellen der temporären \_ \_ \_ Datei.**
+<span id="WBEMMOF_E_ERROR_CREATING_TEMP_FILE"></span><span id="wbemmof_e_error_creating_temp_file"></span>**WBEMMOF E ERROR CREATING TEMP FILE (WBEMMOF \_ \_ \_ E-FEHLER BEIM ERSTELLEN \_ EINER \_ TEMPORÄREN DATEI)**
 </dt> <dd> <dl> <dt>
 
-2147762223 (0x8004402f)
+2147762223 (0x8004402F)
 </dt> <dt>
 
 
 
-Fehler beim Erstellen der temporären Datei. Die temporäre Datei ist eine Zwischenphase in der MOF-Kompilierung.
+Fehler beim Erstellen einer temporären Datei. Die temporäre Datei ist eine Zwischenphase der MOF-Kompilierung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_ERROR_INVALID_INCLUDE_FILE"></span><span id="wbemmof_e_error_invalid_include_file"></span>**wbemmof \_ E- \_ Fehler \_ ungültige \_ Includedatei \_**
+<span id="WBEMMOF_E_ERROR_INVALID_INCLUDE_FILE"></span><span id="wbemmof_e_error_invalid_include_file"></span>**WBEMMOF \_ E \_ ERROR \_ INVALID \_ INCLUDE \_ FILE**
 </dt> <dd> <dl> <dt>
 
 2147762224 (0x80044030)
@@ -2407,12 +2407,12 @@ Fehler beim Erstellen der temporären Datei. Die temporäre Datei ist eine Zwisc
 
 
 
-Eine in der MOF-Datei mit dem Präprozessorbefehl enthaltene Datei ist nicht gültig. [ \# ](-include.md)
+Eine Datei, die vom Präprozessorbefehl in der MOF enthalten [ \# ist,](-include.md) ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEMMOF_E_INVALID_DELETECLASS_SYNTAX"></span><span id="wbemmof_e_invalid_deleteclass_syntax"></span>**wbemmof \_ E \_ ungültige \_ deleteclass- \_ Syntax.**
+<span id="WBEMMOF_E_INVALID_DELETECLASS_SYNTAX"></span><span id="wbemmof_e_invalid_deleteclass_syntax"></span>**WBEMMOF \_ E \_ INVALID \_ DELETECLASS \_ SYNTAX**
 </dt> <dd> <dl> <dt>
 
 2147762225 (0x80044031)
@@ -2420,7 +2420,7 @@ Eine in der MOF-Datei mit dem Präprozessorbefehl enthaltene Datei ist nicht gü
 
 
 
-Die Syntax für die Präprozessorbefehle ' [ \# pragma DeleteInstance](pragma-deleteinstance.md) ' oder ' [ \# pragma deleteclass](pragma-deleteclass.md) ' ist ungültig.
+Die Syntax für die Präprozessorbefehle [ \# pragma deleteinstance](pragma-deleteinstance.md) oder [ \# pragma deleteclass](pragma-deleteclass.md) ist ungültig.
 
 
 </dt> </dl> </dd> </dl>
@@ -2433,8 +2433,8 @@ Die Syntax für die Präprozessorbefehle ' [ \# pragma DeleteInstance](pragma-de
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Wbemcli. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Wbemcli. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WbemCli.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WbemCli.idl</dt> </dl> |
 
 
 
@@ -2442,7 +2442,7 @@ Die Syntax für die Präprozessorbefehle ' [ \# pragma DeleteInstance](pragma-de
 
 <dl> <dt>
 
-[WMI-Rückgabe Codes](wmi-return-codes.md)
+[WMI-Rückgabecodes](wmi-return-codes.md)
 </dt> </dl>
 
  

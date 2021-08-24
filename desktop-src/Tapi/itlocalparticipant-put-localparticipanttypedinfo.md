@@ -1,19 +1,19 @@
 ---
-description: Die Put \_ localparticipanttypeer-Methode legt Teilnehmer Informationen fest.
+description: Die put \_ LocalParticipantTypedInfo-Methode legt Teilnehmerinformationen fest.
 ms.assetid: c4afd1d3-6fe4-4e5b-a9bf-81b7dffa9914
-title: Itlocalteilnehmer::p ut_LocalParticipantTypedInfo-Methode (confpriv. h)
+title: ITLocalParticipant::p ut_LocalParticipantTypedInfo-Methode (Confpriv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77809a9a3858b6a098fa3ff6a93878cf38518f92
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: acca83d7ad68ed0974aaa2e7d4fb4755c11939d0711473c406cb09d78451ac41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774900"
 ---
-# <a name="itlocalparticipantput_localparticipanttypedinfo-method"></a>Itlocalteilnehmer::p UT \_ localparticipanttypeer-Methode
+# <a name="itlocalparticipantput_localparticipanttypedinfo-method"></a>ITLocalParticipant::p ut \_ LocalParticipantTypedInfo-Methode
 
-Die **Put \_ localparticipanttypeer** -Methode legt Teilnehmer Informationen fest.
+Die **put \_ LocalParticipantTypedInfo-Methode** legt Teilnehmerinformationen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,27 +31,27 @@ HRESULT put_LocalParticipantTypedInfo(
 
 <dl> <dt>
 
-*InfoType* \[ in\]
+*InfoType* \[ In\]
 </dt> <dd>
 
-[**Teilnehmer \_ Der typisierte \_ Info**](participant-typed-info.md) Bezeichner des Typs der erforderlichen Informationen.
+[**TEILNEHMER \_ TYPED \_ INFO-Bezeichner**](participant-typed-info.md) des erforderlichen Informationstyps.
 
 </dd> <dt>
 
-*ppinfo* \[ in\]
+*ppInfo* \[ In\]
 </dt> <dd>
 
-**BSTR** , das den für die Informationen erforderlichen neuen Wert enthält.
+**BSTR** mit dem erforderlichen neuen Wert für die Informationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *ppinfo* -Parameter zuzuweisen, und " [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Arbeitsspeicher für den *ppInfo-Parameter* zu reservieren, und [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher frei zu geben, wenn die Variable nicht mehr benötigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die Anwendung muss " [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysa
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>"Confpriv. h"</dt> </dl> |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Confpriv.h</dt> </dl> |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl>  |
 
 
@@ -70,10 +70,10 @@ Die Anwendung muss " [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysa
 
 <dl> <dt>
 
-[**Itlocalteilnehmer**](itlocalparticipant.md)
+[**ITLocalParticipant**](itlocalparticipant.md)
 </dt> <dt>
 
-[**\_typisierte Teilnehmer \_ Informationen**](participant-typed-info.md)
+[**VOM \_ TEILNEHMER TYPIERTE \_ INFORMATIONEN**](participant-typed-info.md)
 </dt> </dl>
 
  
