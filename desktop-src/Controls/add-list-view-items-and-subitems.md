@@ -1,37 +1,37 @@
 ---
-title: Vorgehensweise beim Hinzufügen von List-View Elementen und unter Elementen
-description: In diesem Thema wird veranschaulicht, wie Elemente und unter Elemente zu einem Listenansicht-Steuerelement hinzugefügt werden.
+title: Hinzufügen von List-View Elementen und Unterelementen
+description: In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Elemente und Unterelemente hinzugefügt werden.
 ms.assetid: B7E204DC-FD08-4639-985D-1459A1AC0ED6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2b3d20008edc10fda810261427507c77e9cfe34
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 6365e077c65da33424c5dadd32a0ab98ed6ab7c82eb83e1ecb5a3a007b0f27f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104102566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922040"
 ---
-# <a name="how-to-add-list-view-items-and-subitems"></a>Vorgehensweise beim Hinzufügen von List-View Elementen und unter Elementen
+# <a name="how-to-add-list-view-items-and-subitems"></a>Hinzufügen von List-View Elementen und Unterelementen
 
-In diesem Thema wird veranschaulicht, wie Elemente und unter Elemente zu einem Listenansicht-Steuerelement hinzugefügt werden.
+In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Elemente und Unterelemente hinzugefügt werden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Um einem Listenansicht-Steuerelement ein Element hinzuzufügen, muss eine Anwendung zunächst eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur definieren und dann eine [**LVM \_ InsertItem**](lvm-insertitem.md) -Nachricht senden, wobei die Adresse der **lvitem** -Struktur angegeben wird. Wenn eine Anwendung die Berichtsansicht verwendet, muss der untergeordnete Text angegeben werden.
+Um einem Listenansicht-Steuerelement ein Element hinzuzufügen, muss eine Anwendung zuerst eine [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) definieren und dann eine [**LVM \_ INSERTITEM-Nachricht**](lvm-insertitem.md) senden und dabei die Adresse der **LVITEM-Struktur** angeben. Wenn eine Anwendung die Berichtsansicht verwendet, muss Unteritemtext angegeben werden.
 
-Im folgenden C++-Codebeispiel wird eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur gefüllt, und die Listen Ansichts Elemente werden mithilfe der [**LVM- \_ InsertItem**](lvm-insertitem.md) -Nachricht oder des entsprechenden " [**\_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem)"-Makros von ListView hinzugefügt. Da die Anwendung ihren eigenen Text speichert, gibt Sie den LPSTR- \_ textcallback-Wert für den **pszText** -Member der **lvitem** -Struktur an. Wenn Sie den LPSTR- \_ textcallback-Wert angeben, sendet das Steuerelement einen [**LVN \_ getdispinfo**](lvn-getdispinfo.md) -Benachrichtigungs Code an das Besitzer Fenster, wenn ein Element angezeigt werden muss.
+Im folgenden C++-Codebeispiel wird eine [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) auffüllt und die Listenansichtselemente mithilfe der [**LVM \_ INSERTITEM-Nachricht**](lvm-insertitem.md) oder des entsprechenden [**Makros ListView \_ InsertItem hinzugefügt.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertitem) Da die Anwendung ihren eigenen Text speichert, gibt sie den LPSTR \_ TEXTCALLBACK-Wert für den **pszText-Member** der **LVITEM-Struktur** an. Die Angabe des LPSTR TEXTCALLBACK-Werts bewirkt, dass das Steuerelement immer dann einen \_ [**LVN \_ GETDISPINFO-Benachrichtigungscode**](lvn-getdispinfo.md) an das Besitzerfenster sendet, wenn es ein Element anzeigen muss.
 
 
 ```C++
@@ -134,10 +134,10 @@ void HandleWM_NOTIFY(LPARAM lParam)
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[List-View-Steuerelementreferenz](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen List-View Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
 [Verwenden von List-View Steuerelementen](using-list-view-controls.md)

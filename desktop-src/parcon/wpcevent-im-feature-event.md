@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das von einem Instant Messaging-Client generiert wird, wenn definierte Funktionen in Eltern Steuerelementen verwendet werden.
+description: Benutzerspezifisches Ereignis, das von einem Instant Messaging-Client generiert wird, wenn definierte Features in der Jugendschutzfunktion verwendet werden.
 ms.assetid: 45e80314-90b1-4fcf-9c8f-c9840ae1775b
-title: WPCEVENT_IM_FEATURE-Ereignis (wpcevent. h)
+title: WPCEVENT_IM_FEATURE Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee28f004560ed287bc3cb94cbee1bda876355834
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8046e755540a2282e84ea25c5278cf0c0b113264e78a3db31b6bd8a42de599cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951442"
 ---
-# <a name="wpcevent_im_feature-event"></a>Wpcevent \_ im- \_ Funktions Ereignis
+# <a name="wpcevent_im_feature-event"></a>WPCEVENT \_ IM \_ FEATURE-Ereignis
 
-Pro-Benutzer-Ereignis, das von einem Instant Messaging-Client generiert wird, wenn definierte Funktionen in Eltern Steuerelementen verwendet werden.
+Benutzerspezifisches Ereignis, das von einem Instant Messaging-Client generiert wird, wenn definierte Features in der Jugendschutzfunktion verwendet werden.
 
 
 ```C++
@@ -36,18 +36,18 @@ Der Name der Instant Messaging-Anwendung.
 *AppVersion* 
 </dt> <dd>
 
-Die Versions Zeichenfolge für die Anwendung.
+Die Versionszeichenfolge für die Anwendung.
 
 </dd> <dt>
 
 *AccountName* 
 </dt> <dd>
 
-Der Instant Messaging-Konto Name dieses Benutzers.
+Der Name des Instant Messaging-Kontos dieses Benutzers.
 
 </dd> <dt>
 
-*Geseld* 
+*ConvID* 
 </dt> <dd>
 
 Die ID für diese Konversation.
@@ -57,42 +57,42 @@ Die ID für diese Konversation.
 *MediaType* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ im \_**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_im_feature) -featureenumeration, der Informationen zu den Funktionen angibt, auf die während einer sofortigen Messaging Interaktion zugegriffen wurde.
+Ein Wert der [**WPCFLAG \_ IM \_ FEATURE-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_im_feature) der Informationen zu den Features angibt, auf die während einer Sofortnachrichteninteraktion zugegriffen wird.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse für die Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
 
 </dd> <dt>
 
-*Anzahl der Mitarbeiter* 
+*RecipCount* 
 </dt> <dd>
 
-Gibt die Anzahl von Instant Messaging-Benutzern an, die die Funktion erhalten und deren Identitäten im Feld Empfänger definiert sind.
+Die Anzahl der Instant Messaging-Benutzer, die das Feature empfangen und für die identitäten im Feld "Empfänger" definiert sind.
 
 </dd> <dt>
 
 *Recipient* 
 </dt> <dd>
 
-Eine Zeichenfolge mit Trennzeichen, die Instant Messaging-Konto Identitäten aller Benutzer enthält, die das Feature erhalten.
+Eine zeichenfolge mit Trennzeichen, die Instant Messaging-Kontoidentitäten aller Benutzer enthält, die das Feature erhalten.
 
 </dd> <dt>
 
 *Sender* 
 </dt> <dd>
 
-Der Instant Messaging-Kontoname für den Benutzer, der das Feature einrichtet.
+Der Name des Instant Messaging-Kontos für den Benutzer, der das Feature ausgibt.
 
 </dd> <dt>
 
-*Senderip* 
+*SenderIP* 
 </dt> <dd>
 
-Die IP-Adresse des Absenders des Absenders.
+Die IP-Adresse des Computers des Absenders.
 
 </dd> <dt>
 
@@ -109,9 +109,9 @@ Die Beschreibung der Daten in der Funktion.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -119,10 +119,10 @@ Die Beschreibung der Daten in der Funktion.
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

@@ -4,34 +4,34 @@ ms.assetid: 2824DA0C-7155-47BF-BAE1-4847EDD62107
 title: IME-Freigabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5664c61518862a9649a32f6c9f9aa9e1b3a554e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 96c555b4b2edd28f77e39b56b8db93f711b62708a9cc66300111ee37a489dc14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001900"
 ---
 # <a name="ime-share"></a>IME-Freigabe
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Umdimeshare**](endimeshare.md)
--   [**"F"**](fboldimestyle.md)
--   [**Ffundamentalimecolorstyle**](ffundamentalimecolorstyle.md)
--   [**Finitimeshare**](finitimeshare.md)
--   [**Fitalicimestyle**](fitalicimestyle.md)
--   [**Frefreshstyle**](frefreshstyle.md)
--   [**Frgbimecolorstyle**](frgbimecolorstyle.md)
--   [**"Lspezimecolorstyle"**](fspecialimecolorstyle.md)
--   [**Fspecialtextimecolorstyle**](fspecialtextimecolorstyle.md)
--   [**Fspecialwindowimecolorstyle**](fspecialwindowimecolorstyle.md)
--   [**Fulimestyle**](fulimestyle.md)
--   [**"Lwinimecolorstyle"**](fwinimecolorstyle.md)
--   [**Idulimestyle**](idulimestyle.md)
--   [**Pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md)
--   [**Pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md)
--   [**Pimestylefromattr**](pimestylefromattr.md)
--   [**Rgbfromimecolorstyle**](rgbfromimecolorstyle.md)
+-   [**EndIMEShare**](endimeshare.md)
+-   [**FBoldIMEStyle**](fboldimestyle.md)
+-   [**FFundamentalIMEColorStyle**](ffundamentalimecolorstyle.md)
+-   [**FInitIMEShare**](finitimeshare.md)
+-   [**FItalicIMEStyle**](fitalicimestyle.md)
+-   [**FRefreshStyle**](frefreshstyle.md)
+-   [**FRGBIMEColorStyle**](frgbimecolorstyle.md)
+-   [**FSpecialIMEColorStyle**](fspecialimecolorstyle.md)
+-   [**FSpecialTextIMEColorStyle**](fspecialtextimecolorstyle.md)
+-   [**FSpecialWindowIMEColorStyle**](fspecialwindowimecolorstyle.md)
+-   [**FUlIMEStyle**](fulimestyle.md)
+-   [**FWinIMEColorStyle**](fwinimecolorstyle.md)
+-   [**IdUlIMEStyle**](idulimestyle.md)
+-   [**PColorStyleBackFromIMEStyle**](pcolorstylebackfromimestyle.md)
+-   [**PColorStyleTextFromIMEStyle**](pcolorstyletextfromimestyle.md)
+-   [**PIMEStyleFromAttr**](pimestylefromattr.md)
+-   [**RGBFromIMEColorStyle**](rgbfromimecolorstyle.md)
 
  
 

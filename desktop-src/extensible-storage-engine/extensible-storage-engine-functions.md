@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen zu den Funktionen von Extensible Storage Engine
-title: Funktionen der erweiterbaren Speicher-Engine
+description: Weitere Informationen finden Sie unter Erweiterbare Storage-Engine-Funktionen.
+title: Erweiterbare Storage Engine-Funktionen
 TOCTitle: Extensible Storage Engine Functions
 ms:assetid: c105fa69-e558-4e11-995c-dcf1e5cfbe7e
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294078(v=EXCHG.10)
@@ -14,187 +14,187 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ae151bacca3c542f0d1632f077c73f537a071bc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 690167c88ce092aac078da53b559c6f72b41abd4658dba196c1e54124a2e7eed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119969040"
 ---
-# <a name="extensible-storage-engine-functions"></a>Funktionen der erweiterbaren Speicher-Engine
+# <a name="extensible-storage-engine-functions"></a>Erweiterbare Storage Engine-Funktionen
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="extensible-storage-engine-functions"></a>Funktionen der erweiterbaren Speicher-Engine
+## <a name="extensible-storage-engine-functions"></a>Erweiterbare Storage Engine-Funktionen
 
-Die erweiterbare Speicher-Engine-API verfügt über die folgenden Funktionen:
+Die Extensible Storage Engine-API verfügt über die folgenden Funktionen:
 
-  - [Jetaddcolumn](./jetaddcolumn-function.md)
+  - [JetAddColumn](./jetaddcolumn-function.md)
 
-  - [Jetattachdatabase](./jetattachdatabase-function.md)
+  - [JetAttachDatabase](./jetattachdatabase-function.md)
 
   - [JetAttachDatabase2](./jetattachdatabase2-function.md)
 
   - [JetBackup](./jetbackup-function.md)
 
-  - [Jetbackupinstance](./jetbackupinstance-function.md)
+  - [JetBackupInstance](./jetbackupinstance-function.md)
 
-  - [Jetbeginexternalbackup](./jetbeginexternalbackup-function.md)
+  - [JetBeginExternalBackup](./jetbeginexternalbackup-function.md)
 
-  - [Jetbeginexternalbackupinstance](./jetbeginexternalbackupinstance-function.md)
+  - [JetBeginExternalBackupInstance](./jetbeginexternalbackupinstance-function.md)
 
-  - [Jetbeginsession](./jetbeginsession-function.md)
+  - [JetBeginSession](./jetbeginsession-function.md)
 
-  - [Jetbegintransaction](./jetbegintransaction-function.md)
+  - [JetBeginTransaction](./jetbegintransaction-function.md)
 
   - [JetBeginTransaction2](./jetbegintransaction2-function.md)
 
-  - [Jetclosedatabase](./jetclosedatabase-function.md)
+  - [JetCloseDatabase](./jetclosedatabase-function.md)
 
-  - [Jetclosefile](./jetclosefile-function.md)
+  - [JetCloseFile](./jetclosefile-function.md)
 
-  - [Jetclosefilinput Stance](./jetclosefileinstance-function.md)
+  - [JetCloseFileInstance](./jetclosefileinstance-function.md)
 
-  - [Jetclosetable](./jetclosetable-function.md)
+  - [JetCloseTable](./jetclosetable-function.md)
 
-  - [Jetcommittransaction](./jetcommittransaction-function.md)
+  - [JetCommitTransaction](./jetcommittransaction-function.md)
 
-  - [Jetcompact](./jetcompact-function.md)
+  - [JetCompact](./jetcompact-function.md)
 
-  - [Jetcomputestats](./jetcomputestats-function.md)
+  - [JetComputeStats](./jetcomputestats-function.md)
 
-  - [Jetkreatedatabase](./jetcreatedatabase-function.md)
+  - [JetCreateDatabase](./jetcreatedatabase-function.md)
 
   - [JetCreateDatabase2](./jetcreatedatabase2-function.md)
 
-  - [Jetkreateingedex](./jetcreateindex-function.md)
+  - [JetCreateIndex](./jetcreateindex-function.md)
 
   - [JetCreateIndex2](./jetcreateindex2-function.md)
 
-  - [Jetkreateingestance](./jetcreateinstance-function.md)
+  - [JetCreateInstance](./jetcreateinstance-function.md)
 
   - [JetCreateInstance2](./jetcreateinstance2-function.md)
 
-  - [Jetkreatetable](./jetcreatetable-function.md)
+  - [JetCreateTable](./jetcreatetable-function.md)
 
-  - [Jetkreatetablecolumnindex](./jetcreatetablecolumnindex-function.md)
+  - [JetCreateTableColumnIndex](./jetcreatetablecolumnindex-function.md)
 
   - [JetCreateTableColumnIndex2](./jetcreatetablecolumnindex2-function.md)
 
   - [JetCreateTableColumnIndex3](./jetcreatetablecolumnindex3-function.md)
 
-  - [Jetdebug](./jetdefragment-function.md)
+  - [JetDefragment](./jetdefragment-function.md)
 
   - [JetDefragment2](./jetdefragment2-function.md)
 
   - [JetDefragment3](./jetdefragment3-function.md)
 
-  - [Jetdelete](./jetdelete-function.md)
+  - [JetDelete](./jetdelete-function.md)
 
-  - [Jetdeletecolumn](./jetdeletecolumn-function.md)
+  - [JetDeleteColumn](./jetdeletecolumn-function.md)
 
   - [JetDeleteColumn2](./jetdeletecolumn2-function.md)
 
-  - [Jetdelta-eindex](./jetdeleteindex-function.md)
+  - [JetDeleteIndex](./jetdeleteindex-function.md)
 
-  - [Jetdeletetable](./jetdeletetable-function.md)
+  - [JetDeleteTable](./jetdeletetable-function.md)
 
-  - [Jetdetachdatabase](./jetdetachdatabase-function.md)
+  - [JetDetachDatabase](./jetdetachdatabase-function.md)
 
   - [JetDetachDatabase2](./jetdetachdatabase2-function.md)
 
-  - [Jetdupcursor](./jetdupcursor-function.md)
+  - [JetDupCursor](./jetdupcursor-function.md)
 
-  - [Jetdupsession](./jetdupsession-function.md)
+  - [JetDupSession](./jetdupsession-function.md)
 
-  - [Jetenablemultiinstance](./jetenablemultiinstance-function.md)
+  - [JetEnableMultiInstance](./jetenablemultiinstance-function.md)
 
-  - [Jetendexternalbackup](./jetendexternalbackup-function.md)
+  - [JetEndExternalBackup](./jetendexternalbackup-function.md)
 
-  - [Jetendexternalbackupinstance](./jetendexternalbackupinstance-function.md)
+  - [JetEndExternalBackupInstance](./jetendexternalbackupinstance-function.md)
 
   - [JetEndExternalBackupInstance2](./jetendexternalbackupinstance2-function.md)
 
-  - [Jetendsession](./jetendsession-function.md)
+  - [JetEndSession](./jetendsession-function.md)
 
-  - [Jetenreeratecolumschlag](./jetenumeratecolumns-function.md)
+  - [JetEnumerateColumns](./jetenumeratecolumns-function.md)
 
-  - [Jetescrowupdate](./jetescrowupdate-function.md)
+  - [JetEscrowUpdate](./jetescrowupdate-function.md)
 
-  - [Jetexternalrestore](./jetexternalrestore-function.md)
+  - [JetExternalRestore](./jetexternalrestore-function.md)
 
   - [JetExternalRestore2](./jetexternalrestore2-function.md)
 
-  - [Jetfrebuffer](./jetfreebuffer-function.md)
+  - [JetFreeBuffer](./jetfreebuffer-function.md)
 
-  - [Jetgetattachinfo](./jetgetattachinfo-function.md)
+  - [JetGetAttachInfo](./jetgetattachinfo-function.md)
 
-  - [Jetgetattachinfoinstance](./jetgetattachinfoinstance-function.md)
+  - [JetGetAttachInfoInstance](./jetgetattachinfoinstance-function.md)
 
-  - [Jetgetbookmark](./jetgetbookmark-function.md)
+  - [JetGetBookmark](./jetgetbookmark-function.md)
 
-  - [Jetgetcolumninfo](./jetgetcolumninfo-function.md)
+  - [JetGetColumnInfo](./jetgetcolumninfo-function.md)
 
-  - [Jetgetcurrentindex](./jetgetcurrentindex-function.md)
+  - [JetGetCurrentIndex](./jetgetcurrentindex-function.md)
 
-  - [Jetgetcursor Info](./jetgetcursorinfo-function.md)
+  - [JetGetCursorInfo](./jetgetcursorinfo-function.md)
 
-  - [Jetgetdatabasefileingefo](./jetgetdatabasefileinfo-function.md)
+  - [JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)
 
-  - [Jetgetdatabaseingefo](./jetgetdatabaseinfo-function.md)
+  - [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md)
 
-  - [Jetgetindexinfo](./jetgetindexinfo-function.md)
+  - [JetGetIndexInfo](./jetgetindexinfo-function.md)
 
-  - [Jetgetinstanceingefo](./jetgetinstanceinfo-function.md)
+  - [JetGetInstanceInfo](./jetgetinstanceinfo-function.md)
 
-  - [Jetgetinstancefehlinfo](./jetgetinstancemiscinfo-function.md)
+  - [JetGetInstanceMiscInfo](./jetgetinstancemiscinfo-function.md)
 
-  - [Jetgetlock](./jetgetlock-function.md)
+  - [JetGetLock](./jetgetlock-function.md)
 
-  - [Jetgetloginfo](./jetgetloginfo-function.md)
+  - [JetGetLogInfo](./jetgetloginfo-function.md)
 
-  - [Jetgetloginfoinstance](./jetgetloginfoinstance-function.md)
+  - [JetGetLogInfoInstance](./jetgetloginfoinstance-function.md)
 
   - [JetGetLogInfoInstance2](./jetgetloginfoinstance2-function.md)
 
-  - [Jetgetls](./jetgetls-function.md)
+  - [JetGetLS](./jetgetls-function.md)
 
-  - [Jetgetobjectinfo](./jetgetobjectinfo-function.md)
+  - [JetGetObjectInfo](./jetgetobjectinfo-function.md)
 
-  - [Jetgetrecordposition](./jetgetrecordposition-function.md)
+  - [JetGetRecordPosition](./jetgetrecordposition-function.md)
 
-  - [Jetgetrecordsize](./jetgetrecordsize-function.md)
+  - [JetGetRecordSize](./jetgetrecordsize-function.md)
 
-  - [Jetgetsecondaryindexbookmark](./jetgetsecondaryindexbookmark-function.md)
+  - [JetGetSecondaryIndexBookmark](./jetgetsecondaryindexbookmark-function.md)
 
-  - [Jetgetsystemparameter](./jetgetsystemparameter-function.md)
+  - [JetGetSystemParameter](./jetgetsystemparameter-function.md)
 
-  - [Jetgettablecolumninfo](./jetgettablecolumninfo-function.md)
+  - [JetGetTableColumnInfo](./jetgettablecolumninfo-function.md)
 
-  - [Jetgettableindexinfo](./jetgettableindexinfo-function.md)
+  - [JetGetTableIndexInfo](./jetgettableindexinfo-function.md)
 
-  - [Jetgettableinfo](./jetgettableinfo-function.md)
+  - [JetGetTableInfo](./jetgettableinfo-function.md)
 
-  - [Jetgetthreadstats](./jetgetthreadstats-function.md)
+  - [JetGetThreadStats](./jetgetthreadstats-function.md)
 
-  - [Jetgettruneureloginfoinstance](./jetgettruncateloginfoinstance-function.md)
+  - [JetGetTruncateLogInfoInstance](./jetgettruncateloginfoinstance-function.md)
 
-  - [Jetgetversion](./jetgetversion-function.md)
+  - [JetGetVersion](./jetgetversion-function.md)
 
-  - [Jetgojebookmark](./jetgotobookmark-function.md)
+  - [JetGotoBookmark](./jetgotobookmark-function.md)
 
-  - [Jetgoysecondaryindexbookmark](./jetgotosecondaryindexbookmark-function.md)
+  - [JetGotoSecondaryIndexBookmark](./jetgotosecondaryindexbookmark-function.md)
 
-  - [Jetgotoposition](./jetgotoposition-function.md)
+  - [JetGotoPosition](./jetgotoposition-function.md)
 
-  - [Jetgoysecondaryindexbookmark](./jetgotosecondaryindexbookmark-function.md)
+  - [JetGotoSecondaryIndexBookmark](./jetgotosecondaryindexbookmark-function.md)
 
-  - [Jetgrowdatabase](./jetgrowdatabase-function.md)
+  - [JetGrowDatabase](./jetgrowdatabase-function.md)
 
-  - [Jetidle](./jetidle-function.md)
+  - [JetIdle](./jetidle-function.md)
 
-  - [Jetindexrecordcount](./jetindexrecordcount-function.md)
+  - [JetIndexRecordCount](./jetindexrecordcount-function.md)
 
   - [JetInit](./jetinit-function.md)
 
@@ -202,85 +202,85 @@ Die erweiterbare Speicher-Engine-API verfügt über die folgenden Funktionen:
 
   - [JetInit3](./jetinit3-function.md)
 
-  - [Jetintersectindexes](./jetintersectindexes-function.md)
+  - [JetIntersectIndexes](./jetintersectindexes-function.md)
 
-  - [Jetmakekey](./jetmakekey-function.md)
+  - [JetMakeKey](./jetmakekey-function.md)
 
-  - [Jetmove](./jetmove-function.md)
+  - [JetMove](./jetmove-function.md)
 
-  - [Jetopumdatabase](./jetopendatabase-function.md)
+  - [JetOpenDatabase](./jetopendatabase-function.md)
 
-  - [Jetopumfile](./jetopenfile-function.md)
+  - [JetOpenFile](./jetopenfile-function.md)
 
-  - [Jetopeinfileinstance](./jetopenfileinstance-function.md)
+  - [JetOpenFileInstance](./jetopenfileinstance-function.md)
 
-  - [Jetopentable](./jetopentable-function.md)
+  - [JetOpenTable](./jetopentable-function.md)
 
-  - [Jetopumtemporarytable](./jetopentemporarytable-function.md)
+  - [JetOpenTemporaryTable](./jetopentemporarytable-function.md)
 
-  - [Jetopumtemptable](./jetopentemptable-function.md)
+  - [JetOpenTempTable](./jetopentemptable-function.md)
 
   - [JetOpenTempTable2](./jetopentemptable2-function.md)
 
   - [JetOpenTempTable3](./jetopentemptable3-function.md)
 
-  - [Jejessnapshotabort](./jetossnapshotabort-function.md)
+  - [JetOSSnapshotAbort](./jetossnapshotabort-function.md)
 
-  - [Jeto ssnapshotend](./jetossnapshotend-function.md)
+  - [JetOSSnapshotEnd](./jetossnapshotend-function.md)
 
-  - [Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)
+  - [JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)
 
-  - [Jejessnapshotgetfrezeinfo](./jetossnapshotgetfreezeinfo-function.md)
+  - [JetOSSnapshotGetFreezeInfo](./jetossnapshotgetfreezeinfo-function.md)
 
-  - [Jejessnapshotprepare](./jetossnapshotprepare-function.md)
+  - [JetOSSnapshotPrepare](./jetossnapshotprepare-function.md)
 
-  - [Jejessnapshotprepareingestance](./jetossnapshotprepareinstance-function.md)
+  - [JetOSSnapshotPrepareInstance](./jetossnapshotprepareinstance-function.md)
 
-  - [Jejessnapshopthaw](./jetossnapshotthaw-function.md)
+  - [JetOSSnapshopThaw](./jetossnapshotthaw-function.md)
 
-  - [Jeto ssnapshoptruneurelog](./jetossnapshottruncatelog-function.md)
+  - [JetOSSnapshopTruncateLog](./jetossnapshottruncatelog-function.md)
 
-  - [Jeto ssnapshottruneureloginstance](./jetossnapshottruncateloginstance-function.md)
+  - [JetOSSnapshotTruncateLogInstance](./jetossnapshottruncateloginstance-function.md)
 
-  - [Jetprepareupdate](./jetprepareupdate-function.md)
+  - [JetPrepareUpdate](./jetprepareupdate-function.md)
 
-  - [Jetreadfile](./jetreadfile-function.md)
+  - [JetReadFile](./jetreadfile-function.md)
 
-  - [Jetreadfilinput Stance](./jetreadfileinstance-function.md)
+  - [JetReadFileInstance](./jetreadfileinstance-function.md)
 
-  - [Jetregistercallback](./jetregistercallback-function.md)
+  - [JetRegisterCallback](./jetregistercallback-function.md)
 
-  - [Jetrenamecolumschlag](./jetrenamecolumn-function.md)
+  - [JetRenameColumn](./jetrenamecolumn-function.md)
 
-  - [Jetrenametable](./jetrenametable-function.md)
+  - [JetRenameTable](./jetrenametable-function.md)
 
-  - [Jetresessioncontext](./jetresetsessioncontext-function.md)
+  - [JetResetSessionContext](./jetresetsessioncontext-function.md)
 
-  - [Jetresettablesequential](./jetresettablesequential-function.md)
+  - [JetResetTableSequential](./jetresettablesequential-function.md)
 
-  - [Jetrestore](./jetrestore-function.md)
+  - [JetRestore](./jetrestore-function.md)
 
   - [JetRestore2](./jetrestore2-function.md)
 
-  - [Jetrestoreingestance](./jetrestoreinstance-function.md)
+  - [JetRestoreInstance](./jetrestoreinstance-function.md)
 
-  - [Jetretrievecolumschlag](./jetretrievecolumn-function.md)
+  - [JetRetrieveColumn](./jetretrievecolumn-function.md)
 
-  - [Jetretrievecolumschlag](./jetretrievecolumns-function.md)
+  - [JetRetrieveColumns](./jetretrievecolumns-function.md)
 
-  - [Jetretrievekey](./jetretrievekey-function.md)
+  - [JetRetrieveKey](./jetretrievekey-function.md)
 
-  - [Jetrollback](./jetrollback-function.md)
+  - [JetRollback](./jetrollback-function.md)
 
   - [JetSeek](./jetseek-function.md)
 
-  - [Jetsetcolumn](./jetsetcolumn-function.md)
+  - [JetSetColumn](./jetsetcolumn-function.md)
 
-  - [Jetsetcolumndefaultvalue](./jetsetcolumndefaultvalue-function.md)
+  - [JetSetColumnDefaultValue](./jetsetcolumndefaultvalue-function.md)
 
-  - [Jetsetcolumns](./jetsetcolumns-function.md)
+  - [JetSetColumns](./jetsetcolumns-function.md)
 
-  - [Jetsetcurrentindex](./jetsetcurrentindex-function.md)
+  - [JetSetCurrentIndex](./jetsetcurrentindex-function.md)
 
   - [JetSetCurrentIndex2](./jetsetcurrentindex2-function.md)
 
@@ -288,36 +288,36 @@ Die erweiterbare Speicher-Engine-API verfügt über die folgenden Funktionen:
 
   - [JetSetCurrentIndex4](./jetsetcurrentindex4-function.md)
 
-  - [Jetsetdatabasesize](./jetsetdatabasesize-function.md)
+  - [JetSetDatabaseSize](./jetsetdatabasesize-function.md)
 
-  - [Jetsetindexrange](./jetsetindexrange-function.md)
+  - [JetSetIndexRange](./jetsetindexrange-function.md)
 
-  - [Jetsetls](./jetsetls-function.md)
+  - [JetSetLS](./jetsetls-function.md)
 
-  - [Jetabessioncontext](./jetsetsessioncontext-function.md)
+  - [JetSetSessionContext](./jetsetsessioncontext-function.md)
 
-  - [Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+  - [JetSetSystemParameter](./jetsetsystemparameter-function.md)
 
-  - [Jetsettablesequential](./jetsettablesequential-function.md)
+  - [JetSetTableSequential](./jetsettablesequential-function.md)
 
-  - [Jetstopbackup](./jetstopbackup-function.md)
+  - [JetStopBackup](./jetstopbackup-function.md)
 
-  - [Jetstopbackupinstance](./jetstopbackupinstance-function.md)
+  - [JetStopBackupInstance](./jetstopbackupinstance-function.md)
 
-  - [Jetstopservice](./jetstopservice-function.md)
+  - [JetStopService](./jetstopservice-function.md)
 
-  - [Jetstopserviczustance](./jetstopserviceinstance-function.md)
+  - [JetStopServiceInstance](./jetstopserviceinstance-function.md)
 
-  - [Jetterm](./jetterm-function.md)
+  - [JetTerm](./jetterm-function.md)
 
   - [JetTerm2](./jetterm2-function.md)
 
-  - [Jettrueurelog](./jettruncatelog-function.md)
+  - [JetTrucateLog](./jettruncatelog-function.md)
 
-  - [Jettruneureloginstance](./jettruncateloginstance-function.md)
+  - [JetTruncateLogInstance](./jettruncateloginstance-function.md)
 
-  - [Jetunregistercallback](./jetunregistercallback-function.md)
+  - [JetUnregisterCallback](./jetunregistercallback-function.md)
 
-  - [Jetupdate](./jetupdate-function.md)
+  - [JetUpdate](./jetupdate-function.md)
 
   - [JetUpdate2](./jetupdate2-function.md)

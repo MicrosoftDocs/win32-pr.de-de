@@ -1,5 +1,5 @@
 ---
-description: Die IExtender-Schnittstelle stellt eine Reihe von grundlegenden Eigenschaften bereit, die der-Schnittstelle eines-Steuer Elements hinzugefügt werden. Programmierer können diese Eigenschaften verwenden, als wären Sie Teil des-Steuer Elements.
+description: Die IExtender-Schnittstelle stellt einen Satz grundlegender Eigenschaften bereit, die der Schnittstelle eines Steuerelements hinzugefügt werden. Programmierer können diese Eigenschaften so verwenden, als ob sie Teil des Steuerelements sind.
 ms.assetid: 901873bd-af6a-415e-865f-21769367c99f
 title: IExtender-Schnittstelle
 ms.topic: reference
@@ -46,33 +46,33 @@ api_type:
 api_location:
 - Ole2disp.dll
 - Oleaut32.dll
-ms.openlocfilehash: fd600de816889e1c644a0e6074d9b8a97e0ec80c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 75abc6caf0abab25d98152cf9f905fa10fdd0597b7afda2680639bd8dc9c10b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002040"
 ---
 # <a name="iextender-interface"></a>IExtender-Schnittstelle
 
-Die **IExtender** -Schnittstelle stellt eine Reihe von grundlegenden Eigenschaften bereit, die der-Schnittstelle eines-Steuer Elements hinzugefügt werden. Programmierer können diese Eigenschaften verwenden, als wären Sie Teil des-Steuer Elements.
+Die **IExtender-Schnittstelle** stellt einen Satz grundlegender Eigenschaften bereit, die der Schnittstelle eines Steuerelements hinzugefügt werden. Programmierer können diese Eigenschaften so verwenden, als ob sie Teil des Steuerelements sind.
 
 ## <a name="members"></a>Member
 
-Die **IExtender** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **IExtender** verfügt auch über diese Typen von Membern:
+Die **IExkeeper-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IExkeeper** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iextenderschnittstelle** verfügt über diese Methoden.
+Die **IExtender-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                         | BESCHREIBUNG                                    |
+| Methode                         | Beschreibung                                    |
 |:-------------------------------|:-----------------------------------------------|
-| [**Move**](iextender-move.md) | Verschiebt eine MDIForm, ein Formular oder ein Steuerelement.<br/> |
+| [**Move**](iextender-move.md) | Verschiebt ein MDIForm-, Formular- oder -Steuerelement.<br/> |
 
 
 
@@ -80,7 +80,7 @@ Die **iextenderschnittstelle** verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
+Die **IExtender-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
@@ -94,41 +94,41 @@ Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
 <tr class="header">
 <th style="text-align: left;">Eigenschaft</th>
 <th style="text-align: left;">Zugriffstyp</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Ausrichten<br/></td>
 <td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt einen Wert zurück, der bestimmt, ob ein Objekt in einer beliebigen Größe in einem Formular angezeigt wird, oder ob es am oberen, unteren, linken oder rechten Rand des Formulars angezeigt wird und automatisch an die Breite des Formulars angepasst wird, oder legt diesen Wert fest.<br/> 
+<td style="text-align: left;">Gibt einen Wert zurück oder legt einen Wert fest, der bestimmt, ob ein Objekt in beliebiger Größe an einer beliebigen Stelle in einem Formular angezeigt wird oder ob es oben, unten, links oder rechts des Formulars angezeigt wird und automatisch so dimensioniert wird, dass es der Breite des Formulars passt.<br/> 
 <table>
 <thead>
 <tr class="header">
 <th>Konstante</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>vbalignnone 0</td>
-<td>(Standard in einem nicht-MDI-Formular) None – die Größe und der Speicherort können zur Entwurfszeit oder im Code festgelegt werden. Die Einstellung wird ignoriert, wenn sich das Objekt in einem MDI-Formular befindet.</td>
+<td>vbAlignNone 0</td>
+<td>(Standard in einem Nicht-MDI-Formular) Keine– Größe und Position können zur Entwurfszeit oder im Code festgelegt werden. Die Einstellung wird ignoriert, wenn sich das Objekt in einem MDI-Formular befindet.</td>
 </tr>
 <tr class="even">
-<td>vbaligntop 1</td>
-<td>(Standard in einem MDI-Formular) Top – das Objekt befindet sich oben im Formular, und seine Breite entspricht der ScaleWidth-Eigenschafts Einstellung des Formulars.</td>
+<td>vbAlignTop 1</td>
+<td>(Standard in einem MDI-Formular) Top: Das -Objekt befindet sich oben im Formular, und seine Breite entspricht der ScaleWidth-Eigenschafteneinstellung des Formulars.</td>
 </tr>
 <tr class="odd">
-<td>vbalignbottom 2</td>
-<td>Bottom – das Objekt befindet sich am unteren Rand des Formulars, und seine Breite entspricht der ScaleWidth-Eigenschafts Einstellung des Formulars.</td>
+<td>vbAlignBottom 2</td>
+<td>Unten: Das Objekt befindet sich am unteren Rand des Formulars, und seine Breite entspricht der ScaleWidth-Eigenschafteneinstellung des Formulars.</td>
 </tr>
 <tr class="even">
-<td>vbalignleft 3</td>
-<td>Left – das Objekt befindet sich auf der linken Seite des Formulars, und seine Breite entspricht der ScaleWidth-Eigenschafts Einstellung des Formulars.</td>
+<td>vbAlignLeft 3</td>
+<td>Links: Das Objekt befindet sich links vom Formular, und seine Breite entspricht der ScaleWidth-Eigenschafteneinstellung des Formulars.</td>
 </tr>
 <tr class="odd">
-<td>vbalignright 4</td>
-<td>Right – das-Objekt befindet sich rechts vom Formular, und seine Breite entspricht der ScaleWidth-Eigenschafts Einstellung des Formulars.</td>
+<td>vbAlignRight 4</td>
+<td>Rechts: Das Objekt befindet sich rechts vom Formular, und seine Breite entspricht der ScaleWidth-Eigenschafteneinstellung des Formulars.</td>
 </tr>
 </tbody>
 </table>
@@ -138,12 +138,12 @@ Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
 <tr class="even">
 <td style="text-align: left;"><p>Container</p></td>
 <td style="text-align: left;"><p>Schreibgeschützt</p></td>
-<td style="text-align: left;"><p>Gibt den Container eines-Steuer Elements in einem Formular zurück.</p></td>
+<td style="text-align: left;"><p>Gibt den Container eines Steuerelements in einem Formular zurück.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><p>Aktiviert</p></td>
 <td style="text-align: left;"><p>Lesen/Schreiben</p></td>
-<td style="text-align: left;"><p>Gibt einen Wert zurück, der bestimmt, ob ein Formular oder Steuerelement auf benutzergenerierte Ereignisse reagieren kann, oder legt diesen fest.</p></td>
+<td style="text-align: left;"><p>Gibt einen Wert zurück, der bestimmt, ob ein Formular oder Steuerelement auf vom Benutzer generierte Ereignisse reagieren kann, oder legt diesen fest.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><p>Höhe</p></td>
@@ -151,19 +151,19 @@ Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
 <td style="text-align: left;"><p>Gibt die Höhe eines Objekts zurück oder legt diese fest.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><p>HWND</p></td>
+<td style="text-align: left;"><p>Hwnd</p></td>
 <td style="text-align: left;"><p>Schreibgeschützt</p></td>
 <td style="text-align: left;"><p>Gibt ein Handle für ein Formular oder Steuerelement zurück.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><p>Links</p></td>
 <td style="text-align: left;"><p>Lesen/Schreiben</p></td>
-<td style="text-align: left;"><p>Gibt den Abstand zwischen dem inneren linken Rand eines Objekts und dem linken Rand seines Containers zurück oder legt ihn fest.</p></td>
+<td style="text-align: left;"><p>Gibt den Abstand zwischen dem inneren linken Rand eines Objekts und dem linken Rand des Containers zurück oder legt diesen fest.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><p>Name</p></td>
 <td style="text-align: left;"><p>Schreibgeschützt</p></td>
-<td style="text-align: left;"><p>Gibt den Namen zurück, der im Code zum Identifizieren eines Formulars, eines Steuer Elements oder eines Datenzugriffs Objekts verwendet wird.</p></td>
+<td style="text-align: left;"><p>Gibt den Namen zurück, der im Code zum Identifizieren eines Formulars, Steuerelements oder Datenzugriffsobjekts verwendet wird.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><p>Parent</p></td>
@@ -171,14 +171,14 @@ Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
 <td style="text-align: left;"><p>Gibt das Formular, das Objekt oder die Auflistung zurück, das ein Steuerelement oder ein anderes Objekt oder eine andere Auflistung enthält.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><p>TabStop</p></td>
+<td style="text-align: left;"><p>Tabstop</p></td>
 <td style="text-align: left;"><p>Lesen/Schreiben</p></td>
-<td style="text-align: left;"><p>Gibt einen Wert zurück oder legt einen Wert fest, der angibt, ob ein Benutzer die <strong>Tab</strong> -Taste verwenden kann, um dem Fokus ein Objekt zu übergeben.</p></td>
+<td style="text-align: left;"><p>Gibt einen Wert zurück, der angibt, ob ein Benutzer die <strong>TAB-TASTE</strong> verwenden kann, um einem Objekt den Fokus zu geben, oder legt diesen fest.</p></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><p>Oben</p></td>
 <td style="text-align: left;"><p>Lesen/Schreiben</p></td>
-<td style="text-align: left;"><p>Gibt den Abstand zwischen dem internen oberen Rand eines Objekts und dem oberen Rand seines Containers zurück oder legt ihn fest.</p></td>
+<td style="text-align: left;"><p>Gibt den Abstand zwischen dem inneren oberen Rand eines Objekts und dem oberen Rand des Containers zurück oder legt diesen fest.</p></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><p>Sichtbar</p></td>
@@ -188,7 +188,7 @@ Die **iextenderschnittstelle** verfügt über diese Eigenschaften.
 <tr class="even">
 <td style="text-align: left;"><p>Breite</p></td>
 <td style="text-align: left;"><p>Lesen/Schreiben</p></td>
-<td style="text-align: left;"><p>Gibt die Breite eines-Objekts zurück oder legt diese fest.</p></td>
+<td style="text-align: left;"><p>Gibt die Breite eines Objekts zurück oder legt diese fest.</p></td>
 </tr>
 </tbody>
 </table>

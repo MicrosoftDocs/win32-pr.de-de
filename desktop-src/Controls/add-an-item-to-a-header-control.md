@@ -1,37 +1,37 @@
 ---
-title: Vorgehensweise beim Hinzufügen eines Elements zu einem Header Steuerelement
-description: In diesem Thema wird veranschaulicht, wie ein Element einem Header-Steuerelement hinzugefügt wird.
+title: Hinzufügen eines Elements zu einem Headersteuerelement
+description: In diesem Thema wird veranschaulicht, wie einem Headersteuerelement ein Element hinzugefügt wird.
 ms.assetid: DF71EF92-1726-46E1-A10F-57D3B07FB936
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1cf020c95a9dfe06bb06370533fdfd9416ddfef
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 4face974c1b04021afdc9e26976c023e1287439eb3d6d63c7ea7f9f34c5b27f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922053"
 ---
-# <a name="how-to-add-an-item-to-a-header-control"></a>Vorgehensweise beim Hinzufügen eines Elements zu einem Header Steuerelement
+# <a name="how-to-add-an-item-to-a-header-control"></a>Hinzufügen eines Elements zu einem Headersteuerelement
 
-In diesem Thema wird veranschaulicht, wie ein Element einem Header-Steuerelement hinzugefügt wird. Ein Header Steuerelement verfügt in der Regel über mehrere Header Elemente, die die Spalten des Steuer Elements definieren. Sie können einem Header-Steuerelement ein Element hinzufügen, indem Sie die [**HDM \_ InsertItem**](hdm-insertitem.md) -Nachricht an das-Steuerelement senden.
+In diesem Thema wird veranschaulicht, wie einem Headersteuerelement ein Element hinzugefügt wird. Ein Headersteuerelemente verfügt in der Regel über mehrere Headerelemente, die die Spalten des Steuerelements definieren. Sie können einem Headersteuerelement ein Element hinzufügen, indem Sie die [**HDM \_ INSERTITEM-Nachricht**](hdm-insertitem.md) an das Steuerelement senden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Verwenden Sie die [**HDM \_ InsertItem**](hdm-insertitem.md) -Nachricht, um dem Header Steuerelement ein Element hinzuzufügen. Die Nachricht muss die Adresse einer [**HDITEM**](/windows/win32/api/commctrl/ns-commctrl-hditema) -Struktur enthalten. Diese Struktur definiert die Eigenschaften des Header Elements, das eine Zeichenfolge, ein Bitmap-Bild, eine Anfangs Größe und einen Anwendungs definierten 32-Bit-Wert enthalten kann.
+Verwenden Sie die [**HDM \_ INSERTITEM-Nachricht,**](hdm-insertitem.md) um dem Headersteuerelement ein Element hinzuzufügen. Die Nachricht muss die Adresse einer [**HDITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-hditema) enthalten. Diese Struktur definiert die Eigenschaften des Headerelements, die eine Zeichenfolge, ein Bitmapbild, eine Anfangsgröße und einen anwendungsdefinierten 32-Bit-Wert enthalten können.
 
-Im folgenden Beispiel wird veranschaulicht, wie die [**HDM- \_ InsertItem**](hdm-insertitem.md) -Nachricht und die [**HDITEM**](/windows/win32/api/commctrl/ns-commctrl-hditema) -Struktur verwendet werden, um ein Element zu einem Header-Steuerelement hinzuzufügen. Das neue Element besteht aus einer Zeichenfolge, die innerhalb des Element Rechtecks linksbündig ausgerichtet ist.
+Im folgenden Beispiel wird veranschaulicht, wie sie die [**HDM \_ INSERTITEM-Nachricht**](hdm-insertitem.md) und die [**HDITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-hditema) verwenden, um einem Headersteuerelement ein Element hinzuzufügen. Das neue Element besteht aus einer Zeichenfolge, die innerhalb des Elementrechtecks linksbrechtig ist.
 
 
 
@@ -67,13 +67,13 @@ int DoInsertItem(HWND hwndHeader, int iInsertAfter,
 
 <dl> <dt>
 
-[Informationen über Header Steuerelemente](header-controls.md)
+[Informationen zu Headersteuerelementen](header-controls.md)
 </dt> <dt>
 
-[Header Steuerelement Verweis](bumper-header-control-header-control-reference.md)
+[Header-Steuerelementreferenz](bumper-header-control-header-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Header Steuerelementen](using-header-controls.md)
+[Verwenden von Headersteuerelementen](using-header-controls.md)
 </dt> </dl>
 
  

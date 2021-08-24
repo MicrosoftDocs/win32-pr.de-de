@@ -1,30 +1,30 @@
 ---
 title: DNS (Übersicht)
-description: DNS ist ein branchenübliches Dienst, der zum Auffinden von Computern in einem IP-basierten Netzwerk (Internet Protocol) verwendet wird.
+description: DNS ist ein Branchenstandarddienst, mit dem Computer in einem IP-basierten Netzwerk (Internet Protocol) gefunden werden.
 ms.assetid: 98ecf24b-8bd5-4a75-a487-8af3080e8987
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 470807a5775b022834a3ca2f0ee3f91db8bdd5de
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: d5a47874606491c1baf5c52ca7934d7e0c3156a6ab99f9726e6c000d9eb3cb65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "104219413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967470"
 ---
 # <a name="dns-overview"></a>DNS (Übersicht)
 
-DNS ist ein branchenübliches Dienst, der zum Auffinden von Computern in einem IP-basierten Netzwerk (Internet Protocol) verwendet wird. IP-Netzwerke, wie z. b. die Netzwerke Internet und Windows 2000, basieren auf Zahlen basierten Adressen, wie z. b. 207.46.131.137, um Informationen im gesamten Netzwerk zu überarbeiten. Netzwerk Benutzer basieren auf Zeichen basierten Namen, z. b `www.microsoft.com` .. Daher ist es erforderlich, Zeichen-oder benutzerfreundliche Adressen ( `www.microsoft.com` ) in die Zahlen basierten Adressen (207.46.131.137) zu übersetzen, die das Netzwerk erkennen kann. DNS ist der bevorzugte Dienst in Windows 2000, um nach Ressourcen zu suchen und diese in die entsprechenden IP-Adressen zu übersetzen.
+DNS ist ein Branchenstandarddienst, mit dem Computer in einem IP-basierten Netzwerk (Internet Protocol) gefunden werden. IP-Netzwerke wie das Internet und Windows 2000-Netzwerke basieren auf zahlenbasierten Adressen wie 207.46.131.137, um Informationen über das Netzwerk zu verfähren. Netzwerkbenutzer verwenden zeichenbasierte Namen, z. `www.microsoft.com` B. . Daher ist es erforderlich, Zeichen oder benutzerfreundliche Adressen ( ) in die zahlenbasierten Adressen `www.microsoft.com` (207.46.131.137) zu übersetzen, die das Netzwerk erkennen kann. DNS ist der Dienst ihrer Wahl in Windows 2000, um Ressourcen zu suchen und in die entsprechenden IP-Adressen zu übersetzen.
 
-DNS verwendet eine spezialisierte Datenbank mit Ressourcen Einträgen, die in der Regel einfach als RRS bezeichnet werden, um auf Client-namens Auflösungs Abfragen zu reagieren. Vor DNS wurde die Namensauflösung im Internet mit der [*Hosts-Datei*](h-gly.md)erreicht, die manuell erstellte Dateien sind, die Hostnamen mit IP-Adressen verknüpft haben.
+DNS verwendet eine spezielle Datenbank mit Ressourceneinträgen, die häufig einfach als RRs bezeichnet wird, um auf Abfragen zur Clientnamensauflösung zu reagieren. Vor DNS wurde die Namensauflösung im Internet mit der [*Hostdatei*](h-gly.md)erreicht, bei der es sich um manuell erstellte Dateien handelt, die Hostnamen IP-Adressen zugeordnet haben.
 
-Wenn ein neuer Client dem Netzwerk hinzugefügt wurde, musste ein Administrator die Hostdatei manuell aktualisieren und diese Datei dann auf alle anderen Computer im Netzwerk kopieren (replizieren), damit der neue Host vollständig erreicht werden kann. Als das Internet wächst, war diese Form der Namensauflösung deutlich unzureichend. Es war zu viel Verwaltungs intensiv und konnte nicht [*skaliert*](s-gly.md)werden. Die Hostdatei ist jetzt größer, und da Sie einen [*flachen*](f-gly.md) Namespace verwendet hat (siehe [auch](name-space.md)Namespace), konnte Sie nicht partitioniert werden und musste vollständig verteilt werden. Die Lösung war DNS.
+Wenn dem Netzwerk ein neuer Client hinzugefügt wurde, musste ein Administrator die Hostdatei manuell aktualisieren und diese Datei dann auf alle anderen Computer im Netzwerk kopieren (replizieren), damit der neue Host von allen erreicht werden konnte. Mit dem Anwächst des Internets reichte diese Form der Namensauflösung eindeutig nicht aus. es war zu verwaltungsintensiv, und es wurde nicht [*skaliert.*](s-gly.md) Die Hostdatei wurde gerade größer, und da sie einen flachen Namensraum [*verwendet*](f-gly.md) hat (siehe auch [Name Space),](name-space.md)konnte sie nicht partitioniert werden und musste vollständig verteilt werden. Die Lösung war DNS.
 
--   DNS hat den flachen namens Bereich der Hosts-Datei durch einen [*hierarchischen*](h-gly.md)Namespace ersetzt. Mit einem hierarchischen Namespace können Informationen zu Hostnamen und IP-Adressen partitioniert und verteilt werden. Daher wird die Skalierbarkeit erreicht. In der fiktiven Widgets.Products.Microsoft.com-Domäne kann die Verantwortung für die Namensauflösung beispielsweise so partitioniert werden, dass verschiedene Server die Namensauflösung für verschiedene Teile des Namespace verarbeiten können:
-    -   Ein Server kann für die Auflösung des ersten Teils zuständig sein (Microsoft.com) und kann dann die Anforderung zur Namensauflösung an den nächsten DNS-Server in der Hierarchie weiterleiten.
-    -   Der nächste DNS-Server kann dafür verantwortlich sein, den nächsten Teil des Namensraums (Produkte) aufzulösen.
+-   DNS hat den flachen Namensraum der Hostdatei durch einen [*hierarchischen Namensraum ersetzt.*](h-gly.md) Mit einem hierarchischen Namensraum können Informationen zu Hostnamen und IP-Adressen partitioniert und verteilt werden. auf diese Weise wird Skalierbarkeit erreicht. In der fiktiven widgets.products.microsoft.com kann beispielsweise die Verantwortung für die Namensauflösung partitioniert werden, sodass verschiedene Server die Namensauflösung für verschiedene Teile des Namensraums verarbeiten können:
+    -   Ein Server kann für die Auflösung des ersten Teils (microsoft.com) verantwortlich sein und dann die Namensauflösungsanforderung an den nächsten DNS-Server in der Hierarchie weiterverenden.
+    -   Der nächste DNS-Server kann für die Auflösung des nächsten Teils des Namensraums (Produkte) verantwortlich sein.
     -   Schließlich kann die Anforderung an einen dritten DNS-Server weitergeleitet werden, der für die Auflösung des letzten Teils des Namens (Widgets) zuständig ist.
 
-DNS-Server in jedem Teil des hierarchischen namessourcen müssen eine Datenbank mit Ressourcen Einträgen für Hosts verwalten, aber nur in Ihrem Teil der Hierarchie. Der Server (oder die Server) im Products-Teil von Widgets.Products.Microsoft.com verwaltet RRS nur für die Produkte, die Teil des hierarchischen Namespace sind – nicht für den Microsoft.com-Teil oder den Widgets-Teil des Namespace.
+DNS-Server in jedem Teil des hierarchischen Namensraums müssen eine Datenbank mit Ressourceneinträgen für Hosts verwalten, jedoch nur in ihrem Teil der Hierarchie. Daher verwalten die Server (oder Server) im Produktteil von widgets.products.microsoft.com RRs nur für die Produkte, die Teil des hierarchischen Namensraums sind – nicht für den microsoft.com-Teil oder die Widgets, die Teil des Namensraums sind.
 
  
 

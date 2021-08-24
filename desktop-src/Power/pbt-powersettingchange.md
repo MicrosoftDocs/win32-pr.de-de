@@ -1,5 +1,5 @@
 ---
-description: Änderungsereignis der Energieeinstellung, das mit einer WM \_ POWERBROADCAST-Fenstermeldung oder in einem HandlerEx-Benachrichtigungsrückruf für Dienste gesendet wird.
+description: Energieeinstellungsänderungsereignis, das mit einer WM \_ POWERBROADCAST-Fenstermeldung oder einem HandlerEx-Benachrichtigungsrückruf für Dienste gesendet wird.
 ms.assetid: 0bcadb85-47c5-48a9-b3f9-f0a1ca60b503
 title: PBT_POWERSETTINGCHANGE -Ereignis (WinUser.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "119961690"
 ---
 # <a name="pbt_powersettingchange-event"></a>PBT \_ POWERSETTINGCHANGE-Ereignis
 
-Änderungsereignis der Energieeinstellung, das mit einer [**WM \_ POWERBROADCAST-Fenstermeldung**](wm-powerbroadcast.md) oder in einem [**HandlerEx-Benachrichtigungsrückruf**](/windows/desktop/api/winsvc/nc-winsvc-lphandler_function_ex) für Dienste gesendet wird.
+Energieeinstellungsänderungsereignis, das mit einer [**WM \_ POWERBROADCAST-Fenstermeldung**](wm-powerbroadcast.md) oder einem [**HandlerEx-Benachrichtigungsrückruf**](/windows/desktop/api/winsvc/nc-winsvc-lphandler_function_ex) für Dienste gesendet wird.
 
 
 ```C++
@@ -34,7 +34,7 @@ WindowProc( HWND hwnd,      // handle to window
 *Hwnd* 
 </dt> <dd>
 
-Ein Handle für fenster.
+Ein Handle für ein Fenster.
 
 </dd> <dt>*uMsg*</dt> <dd> 
 
@@ -75,13 +75,13 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
 | Header<br/>                   | <dl> <dt>WinUser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -94,7 +94,7 @@ Kein Rückgabewert.
 [**WM \_ POWERBROADCAST**](wm-powerbroadcast.md)
 </dt> <dt>
 
-[**\_POWERBROADCAST-EINSTELLUNG**](/windows/desktop/api/WinUser/ns-winuser-powerbroadcast_setting)
+[**POWERBROADCAST-EINSTELLUNG \_**](/windows/desktop/api/WinUser/ns-winuser-powerbroadcast_setting)
 </dt> </dl>
 
  

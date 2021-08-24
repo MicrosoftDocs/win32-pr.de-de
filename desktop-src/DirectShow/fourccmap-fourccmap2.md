@@ -1,7 +1,7 @@
 ---
-description: Eine Konstruktormethode, die die Zuordnung zwischen den DWORD-Typen für das Format "im Stil" und "GUID" im alten Stil ermöglicht. Diese Methode verwendet den Parameter "FourCC".
+description: Eine Konstruktormethode, die die Zuordnung zwischen DWORD-Typen im alten Multimediaformat und GUID-Untertypen bereitstellt. Diese Methode verwendet den Fourcc-Parameter.
 ms.assetid: 35344aae-ed87-4e5e-8824-84f5482b332e
-title: 'Fourccmap:: fourccmap-Konstruktor (FourCC. h)-FourCC-Parameter'
+title: FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – Fourcc-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cbcd5e8a7c37d3265f508ac7632ffd4b18c8a00f
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 9cfd9cbb93a4d517391be0afe591d3378d9ecef32a0013ab452d31b9eecb6d59
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106364406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043210"
 ---
-# <a name="fourccmapfourccmap-constructor-fourcch---fourcc-parameter"></a>Fourccmap:: fourccmap-Konstruktor (FourCC. h)-FourCC-Parameter
+# <a name="fourccmapfourccmap-constructor-fourcch---fourcc-parameter"></a>FOURCCMap::FOURCCMap-Konstruktor (Fourcc.h) – Fourcc-Parameter
 
-Konstruktormethode. Der-konstuktor stellt die Zuordnung zwischen den **DWORD** -Typen für das Multimedia-Format im alten Stil und **GUID** -Untertypen bereit.
+Konstruktormethode. Der Constuctor stellt die Zuordnung zwischen **DWORD-Typen** im alten Multimediaformat und **GUID-Untertypen** bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ FOURCCMap(
 
 <dl> <dt>
 
-*FourCC* 
+*Fourcc* 
 </dt> <dd>
 
-**DWORD** , das den FourCC angibt.
+**DWORD,** das fourcc angibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Objekt mit dem **FourCC** -Code erstellt wird, wird eine **GUID** erstellt, um Sie abzugleichen. Wenn dieses Objekt mit einer vorhandenen **GUID** erstellt wird, wird der **FourCC** -Wert des-Objekts auf 0 (null) festgelegt. Danach kann der **FourCC** -Wert mit den Element Funktionen [**setfourcc**](fourccmap-setfourcc.md) und [**getfourcc**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
+Wenn dieses Objekt mit dem **FOURCC-Code** erstellt wird, wird eine **GUID** für den Abgleich erstellt. Wenn dieses Objekt mit einer vorhandenen **GUID** erstellt wird, wird der **FOURCC-Wert** des Objekts auf 0 (null) festgelegt. Danach kann der **FOURCC-Wert** mithilfe der [**Memberfunktionen SetFOURCC**](fourccmap-setfourcc.md) bzw. [**GetFOURCC**](fourccmap-getfourcc.md) festgelegt oder abgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
-| Header  | FourCC. h (Include Streams. h) |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Fourcc.h (include Streams.h) |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Fourccmap-Klasse**](fourccmap.md)
+[**FOURCCMap-Klasse**](fourccmap.md)
 </dt> </dl>
 
  

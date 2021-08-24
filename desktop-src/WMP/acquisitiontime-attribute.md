@@ -1,9 +1,9 @@
 ---
-title: Acquisitiontime-Attribut
-description: Das acquisitiontime-Attribut ist das Datum und die Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+title: AcquisitionTime-Attribut
+description: Das AcquisitionTime-Attribut ist das Datum und die Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 ms.assetid: 5184aa35-ef07-47ec-97b3-2d602bd00568
 keywords:
-- Acquisitiontime-Attribut, Windows Media Player
+- AcquisitionTime-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82de862b1bea58c27a245c2fdfe415fb137bf4f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac78dd663addd35657b2aa1b76096b00a26cf3c91770ec0da16fa0f0b9861a03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004370"
 ---
-# <a name="acquisitiontime-attribute"></a>Acquisitiontime-Attribut
+# <a name="acquisitiontime-attribute"></a>AcquisitionTime-Attribut
 
-Das **acquisitiontime** -Attribut ist das Datum und die Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
+Das **AcquisitionTime-Attribut** ist das Datum und die Uhrzeit, zu der das Element der Bibliothek hinzugefügt wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Options Felder](radio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Optionselemente](radio-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

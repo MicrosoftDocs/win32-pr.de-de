@@ -1,31 +1,31 @@
 ---
-description: Die NT Kernel Logger-Sitzung ist eine Ereignis Ablauf Verfolgungs Sitzung, die einen vordefinierten Satz von Kernel Ereignissen aufzeichnet.
+description: Die NT-Kernelprotokollierungssitzung ist eine Ereignisablaufverfolgungssitzung, die einen vordefinierten Satz von Kernelereignissen auf zeichnet.
 ms.assetid: 3c4258d8-8073-4cc5-a29d-ce485a3fdc14
-title: Konfigurieren und Starten der NT Kernel Logger-Sitzung
+title: Konfigurieren und Starten der NT-Kernelprotokollierungssitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d13cb0d429bc4b0e01e02c33e2686040f0b7454b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a41398c9caac3ecd090af68a18bfb148095632d96b8c75eaaee7f04a551360fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901220"
 ---
-# <a name="configuring-and-starting-the-nt-kernel-logger-session"></a>Konfigurieren und Starten der NT Kernel Logger-Sitzung
+# <a name="configuring-and-starting-the-nt-kernel-logger-session"></a>Konfigurieren und Starten der NT-Kernelprotokollierungssitzung
 
-Die NT Kernel Logger-Sitzung ist eine Ereignis Ablauf Verfolgungs Sitzung, die einen vordefinierten Satz von Kernel Ereignissen aufzeichnet. Die Funktion [**EnableTrace**](/windows/win32/api/evntrace/nf-evntrace-enabletrace) wird nicht zum Aktivieren der Kernel Anbieter aufgerufen. Stattdessen verwenden Sie den **enableflags** -Member der [**\_ \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) Struktur der Ereignis Ablauf Verfolgung, um die Kernel Ereignisse anzugeben, die Sie empfangen möchten. Die Funktion [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) verwendet die Aktivierungsflags, die Sie angeben, um die Kernel Anbieter zu aktivieren.
+Die NT-Kernelprotokollierungssitzung ist eine Ereignisablaufverfolgungssitzung, die einen vordefinierten Satz von Kernelereignissen auf zeichnet. Sie rufen die [**EnableTrace-Funktion nicht auf,**](/windows/win32/api/evntrace/nf-evntrace-enabletrace) um die Kernelanbieter zu aktivieren. Stattdessen verwenden Sie den **EnableFlags-Member** der [**EVENT TRACE \_ \_ PROPERTIES-Struktur,**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) um die Kernelereignisse anzugeben, die Sie empfangen möchten. Die [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) verwendet die Aktivierungsflags, die Sie angeben, um die Kernelanbieter zu aktivieren.
 
-Es ist nur eine NT Kernel Logger-Sitzung vorhanden. Wenn die Sitzung bereits verwendet wird, gibt die [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion einen Fehler zurück, der \_ bereits \_ vorhanden ist.
+Es gibt nur eine NT-Kernelprotokollierungssitzung. Wenn die Sitzung bereits verwendet wird, gibt die [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) ERROR \_ ALREADY EXISTS \_ zurück.
 
-Weitere Informationen zum Starten einer Ereignis Ablauf Verfolgungs Sitzung finden Sie unter [Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung](configuring-and-starting-an-event-tracing-session.md).
+Weitere Informationen zum Starten einer Ereignisablaufverfolgungssitzung finden Sie unter Konfigurieren und [Starten einer Ereignisablaufverfolgungssitzung.](configuring-and-starting-an-event-tracing-session.md)
 
-Weitere Informationen zum Starten einer privaten Protokollierungs Sitzung finden Sie unter [Konfigurieren und Starten einer Sitzung für private](configuring-and-starting-a-private-logger-session.md)Protokollierung.
+Weitere Informationen zum Starten einer privaten Protokollierungssitzung finden Sie unter Konfigurieren und [Starten einer privaten Protokollierungssitzung.](configuring-and-starting-a-private-logger-session.md)
 
-Weitere Informationen zum Starten einer globalen Protokollierungs Sitzung finden Sie unter [Konfigurieren und Starten der globalen](configuring-and-starting-the-global-logger-session.md)Protokollierungs Sitzung.
+Weitere Informationen zum Starten einer globalen Protokollierungssitzung finden Sie unter Konfigurieren und [Starten der globalen Protokollierungssitzung.](configuring-and-starting-the-global-logger-session.md)
 
-Weitere Informationen zum Starten einer autologger-Sitzung finden Sie unter [Konfigurieren und Starten einer autologger-Sitzung](configuring-and-starting-an-autologger-session.md).
+Weitere Informationen zum Starten einer AutoLogger-Sitzung finden Sie unter Konfigurieren und [Starten einer AutoLogger-Sitzung.](configuring-and-starting-an-autologger-session.md)
 
-Im folgenden Beispiel wird gezeigt, wie eine NT-Kernel Protokollierungs Sitzung konfiguriert und gestartet wird, die Netzwerk-TCP/IP-Kernel Ereignisse sammelt und Sie in eine 5-MB-zirkuläre Datei schreibt.
+Das folgende Beispiel zeigt, wie Sie eine NT-Kernelprotokollierungssitzung konfigurieren und starten, die TCP/IP-Kernelereignisse des Netzwerks sammelt und in eine zirkuläre 5-MB-Datei schreibt.
 
 
 ```C++
@@ -119,19 +119,19 @@ cleanup:
 
 <dl> <dt>
 
-[Konfigurieren und Starten einer Sitzung für private Logger](configuring-and-starting-a-private-logger-session.md)
+[Konfigurieren und Starten einer privaten Protokollierungssitzung](configuring-and-starting-a-private-logger-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer systemtraceprovider-Sitzung](configuring-and-starting-a-systemtraceprovider-session.md)
+[Konfigurieren und Starten einer SystemTraceProvider-Sitzung](configuring-and-starting-a-systemtraceprovider-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer autologger-Sitzung](configuring-and-starting-an-autologger-session.md)
+[Konfigurieren und Starten einer AutoLogger-Sitzung](configuring-and-starting-an-autologger-session.md)
 </dt> <dt>
 
-[Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung](configuring-and-starting-an-event-tracing-session.md)
+[Konfigurieren und Starten einer Ereignisablaufverfolgungssitzung](configuring-and-starting-an-event-tracing-session.md)
 </dt> <dt>
 
-[Aktualisieren einer Ereignis Ablauf Verfolgungs Sitzung](updating-an-event-tracing-session.md)
+[Aktualisieren einer Ereignisablaufverfolgungssitzung](updating-an-event-tracing-session.md)
 </dt> </dl>
 
  

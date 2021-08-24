@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob die angegebene Farbe eine Windows-Farbe ist.
+description: Gibt an, ob die angegebene Farbe eine Windows ist.
 ms.assetid: 0d2b2039-938c-4f9d-8ddc-9eb711f55009
-title: Funktion "Funktion"
+title: FWinIMEColorStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: 28731672f5f1aff385f9051ba8b641b7cdcdf83c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 723c74ca5017d7908423a9934c002b67ffbc755623da175cc7f1e361f40b42e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002310"
 ---
-# <a name="fwinimecolorstyle-function"></a>Funktion "Funktion"
+# <a name="fwinimecolorstyle-function"></a>FWinIMEColorStyle-Funktion
 
-Gibt an, ob die angegebene Farbe eine Windows-Farbe ist.
+Gibt an, ob die angegebene Farbe eine Windows ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ BOOL __cdecl FWinIMEColorStyle(
 
 <dl> <dt>
 
-*pcolorstyle* \[ in\]
+*pcolorstyle* \[ In\]
 </dt> <dd>
 
-Eine **imecolorsty** -Struktur, die von einer [**pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md) -oder [**pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md) -Funktion zur체ckgegeben wird.
+Eine **IMECOLORSTY-Struktur,** die von einer [**PColorStyleBackFromIMEStyle-**](pcolorstylebackfromimestyle.md) oder [**PColorStyleTextFromIMEStyle-Funktion zur체ckgegeben**](pcolorstyletextfromimestyle.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>R체ckgabewert
 
-Gibt **true** zur체ck, wenn die Farbe eine Windows-Farbe ist.
+Gibt **TRUE zur체ck,** wenn die Farbe eine Windows ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,10 +68,10 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md)
+[**PColorStyleBackFromIMEStyle**](pcolorstylebackfromimestyle.md)
 </dt> <dt>
 
-[**Pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md)
+[**PColorStyleTextFromIMEStyle**](pcolorstyletextfromimestyle.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 UID: ''
-title: Guardchecklongjumptarget-Funktion
+title: GuardCheckLongJumpTarget-Funktion
 description: Versucht, zu überprüfen, ob das Ziel eines longjmp gültig ist.
 old-location: ''
 ms.assetid: na
@@ -35,24 +35,24 @@ api_name:
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: 02f659f77ab2bace129c9b9d9011b4c93e59b2f4
-ms.sourcegitcommit: 61bde60d4c3bc09defc3dcdb64c0ddadf52b214e
+ms.openlocfilehash: bcc8565401e09e8a4a3e0dfb221f240255b00bd0e91b9c2611b21db3ee1c0201
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "106338653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002260"
 ---
-# <a name="guardchecklongjumptarget-function"></a>Guardchecklongjumptarget-Funktion
+# <a name="guardchecklongjumptarget-function"></a>GuardCheckLongJumpTarget-Funktion
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Versucht, zu überprüfen, ob das Ziel eines [longjmp](/cpp/c-runtime-library/reference/longjmp) für einen Prozess gültig ist, für den [Control Flow Guard (CFG)](../secbp/control-flow-guard.md) aktiviert ist.
+Versucht zu überprüfen, ob das Ziel eines [longjmp](/cpp/c-runtime-library/reference/longjmp) für einen Prozess gültig ist, für den [Control Flow Guard (CFG)](../secbp/control-flow-guard.md) aktiviert ist.
 
-Wenn die Zieladresse einer Bild Zuordnung entspricht, werden die gültigen Ziele für die Binärdatei extrahiert.
-Die-Funktion verwendet diese Ziele, um das Ziel zu validieren.
-Wenn die Binärdatei keine Metadaten enthält, mit denen der Satz gültiger *longjmp* -Ziele beschrieben wird, gibt die Funktion **true** zurück.
+Wenn die Zieladresse einer Bildzuordnung entspricht, werden die gültigen Ziele für die Binärdatei extrahiert.
+Die Funktion verwendet diese Ziele, um das Ziel zu überprüfen.
+Wenn die Binärdatei keine Metadaten enthält, die den Satz gültiger *longjmp-Ziele* beschreiben, gibt die Funktion **TRUE** zurück.
 
-Wenn die Zieladresse einer Zuordnung ohne Image entspricht, wie in JIT-Code, wird eine globale schreibgeschützte Richtlinie mit einer globalen schreibgeschützten Richtlinie abgefragt, um zu bestimmen, ob der Sprung zulässig ist.
+Wenn die Zieladresse einer Nicht-Bildzuordnung entspricht, wie im JIT-Code, wird eine globale schreibgeschützte Richtlinie verwendet, um zu bestimmen, ob der Sprung zulässig ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -67,8 +67,8 @@ Wenn Sie **GUARD_CHECK_LONGJUMP_NON_FATAL** (0x1) angeben, beendet diese Funktio
 
 ## <a name="returns"></a>Gibt zurück
 
-**True** , wenn das Ziel gültig ist, andernfalls **false**.
+**TRUE,** wenn das Ziel gültig ist, andernfalls **FALSE**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

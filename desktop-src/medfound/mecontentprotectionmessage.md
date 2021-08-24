@@ -1,39 +1,39 @@
 ---
-description: Wird von einer Pipeline Komponente ausgelöst, wenn sich die Konfiguration für eines der Ausgabe Schutz Schemas ändert. Dieses Ereignis gilt nur für geschützte Inhalte.
+description: Wird von einer Pipelinekomponente ausgelöst, wenn sich die Konfiguration für eines der Ausgabeschutzschemas ändert. Dieses Ereignis gilt nur für geschützten Inhalt.
 ms.assetid: 0a13fc08-2bbe-46d8-a076-6165cca6ea36
-title: Mecontentschutzmessage-Ereignis (mfobjects. h)
+title: MEContentProtectionMessage-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a4f96ac75711559881232ced4cec6bfca2bc030c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0316767025fe4446909146b92cfcea8abcc3e0511990c19485a50c94dbc3fa59
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013830"
 ---
-# <a name="mecontentprotectionmessage-event"></a>Mecontentschutzmessage-Ereignis
+# <a name="mecontentprotectionmessage-event"></a>MEContentProtectionMessage-Ereignis
 
-Wird von einer Pipeline Komponente ausgelöst, wenn sich die Konfiguration für eines der Ausgabe Schutz Schemas ändert. Dieses Ereignis gilt nur für geschützte Inhalte.
+Wird von einer Pipelinekomponente ausgelöst, wenn sich die Konfiguration für eines der Ausgabeschutzschemas ändert. Dieses Ereignis gilt nur für geschützten Inhalt.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vertrauenswürdigen Ausgaben müssen dieses Ereignis behandeln. Media Foundation Transformationen (MFTs) empfangen dieses Ereignis über die [**IMF Transform::P rocesabvent**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processevent) -Methode. Medien senken empfangen dieses Ereignis über die [**IMF streamsink::P lacemarker**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker) -Methode.
+Dieses Ereignis muss von allen vertrauenswürdigen Ausgaben behandelt werden. Media Foundation -Transformationen (MFTs) empfangen dieses Ereignis über die [**METHODE ROCTransform::P rocessEvent.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processevent) Mediensenken empfangen dieses Ereignis über die [**METHODE VORZEICHENStreamSink::P laceMarker.**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker)
 
-Die vertrauenswürdige Ausgabe muss die Richtlinien Änderungen anwenden oder die Fehlercode-MF- \_ E- \_ Richtlinie \_ nicht unterstützt zurückgeben.
+Die vertrauenswürdige Ausgabe muss die Richtlinienänderungen anwenden oder den Fehlercode MF \_ E \_ POLICY \_ UNSUPPORTED zurückgeben.
 
-Die Ereignisdaten und Attribute sind vom verwendeten Inhalts Schutzsystem abhängig.
+Die Ereignisdaten und Attribute hängen vom verwendeten Inhaltsschutzsystem ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Die Ereignisdaten und Attribute sind vom verwendeten Inhalts Schutzsystem abhän
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                                              |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                                              |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Die Ereignisdaten und Attribute sind vom verwendeten Inhalts Schutzsystem abhän
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

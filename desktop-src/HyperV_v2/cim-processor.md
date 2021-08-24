@@ -1,7 +1,7 @@
 ---
 description: Stellt die Funktionen und die Verwaltung eines Prozessors dar.
 ms.assetid: 70cf9776-eeda-42c2-90c4-704ecf1cdafe
-title: CIM_Processor -Klasse (Hyper-V-Verwaltung)
+title: CIM_Processor-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119981230"
 ---
-# <a name="cim_processor-class-hyper-v-management"></a>CIM_Processor -Klasse (Hyper-V-Verwaltung)
+# <a name="cim_processor-class-hyper-v-management"></a>CIM_Processor-Klasse (Hyper-V-Verwaltung)
 
 Stellt die Funktionen und die Verwaltung eines Prozessors dar.
 
@@ -61,7 +61,7 @@ class CIM_Processor : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **\_ CIM-Prozessorklasse** verfügt über die folgenden Membertypen:
+Die **\_ CIM-Prozessorklasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -83,7 +83,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits"), **PUnit** ("bit")
 </dt> </dl>
 
-Die Prozessoradressenbreite in Bits.
+Die Prozessoradressbreite in Bits.
 
 </dd> <dt>
 
@@ -116,28 +116,28 @@ Der aktuelle Status des Prozessors.
 
 <span id="CPU_Disabled_by_User"></span><span id="cpu_disabled_by_user"></span><span id="CPU_DISABLED_BY_USER"></span>
 
-**CPU deaktiviert durch Benutzer** (2)
+**CPU vom Benutzer deaktiviert** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CPU_Disabled_By_BIOS__POST_Error_"></span><span id="cpu_disabled_by_bios__post_error_"></span><span id="CPU_DISABLED_BY_BIOS__POST_ERROR_"></span>
 
-**DURCH BIOS deaktivierte CPU (POST-Fehler)** (3)
+**CPU durch BIOS deaktiviert (POST-Fehler)** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CPU_Is_Idle"></span><span id="cpu_is_idle"></span><span id="CPU_IS_IDLE"></span>
 
-**CPU im Leerlauf** (4)
+**CPU befindet sich im Leerlauf** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (7)
+**Andere** (7)
 
 
 </dt> <dd></dd> </dl>
@@ -188,7 +188,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("MegaHertz"), **PUnit** ("hertz \* 10^6")
 </dt> </dl>
 
-Die Geschwindigkeit der externen Busschnittstelle (auch als Front-Side-Bus bekannt) in MHz.
+Die Geschwindigkeit der externen Busschnittstelle (auch als Front-Side-Bus bezeichnet) in MHz.
 
 </dd> <dt>
 
@@ -210,7 +210,7 @@ Der Prozessorfamilientyp.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -385,14 +385,14 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Athlon_TM__Processor_Family"></span><span id="amd_athlon_tm__processor_family"></span><span id="AMD_ATHLON_TM__PROCESSOR_FAMILY"></span>
 
-**AMD Tm-Prozessorfamilie** (28)
+**AMD-Prozessorfamilie (TM)** (28)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_R__Duron_TM__Processor"></span><span id="amd_r__duron_tm__processor"></span><span id="AMD_R__DURON_TM__PROCESSOR"></span>
 
-**AMD(R) Duron(TM) Processor** (29)
+**AMD(R) Duron(TM)-Prozessor** (29)
 
 
 </dt> <dd></dd> <dt>
@@ -476,14 +476,14 @@ Der Prozessorfamilientyp.
 
 <span id="Intel_R__Core_TM__Duo_mobile_processor"></span><span id="intel_r__core_tm__duo_mobile_processor"></span><span id="INTEL_R__CORE_TM__DUO_MOBILE_PROCESSOR"></span>
 
-**Intel(R) Core(TM) Duo mobile processor** (41)
+**Intel(R) Core(TM) Duo mobiler Prozessor** (41)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Intel_R__Core_TM__Solo_mobile_processor"></span><span id="intel_r__core_tm__solo_mobile_processor"></span><span id="INTEL_R__CORE_TM__SOLO_MOBILE_PROCESSOR"></span>
 
-**Intel(R) Core(TM) Solo mobile processor** (42)
+**Intel(R) Core(TM) Solo Mobile Processor** (42)
 
 
 </dt> <dd></dd> <dt>
@@ -553,21 +553,21 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Turion_TM__II_Ultra_Dual-Core_Mobile_M_Processor_Family"></span><span id="amd_turion_tm__ii_ultra_dual-core_mobile_m_processor_family"></span><span id="AMD_TURION_TM__II_ULTRA_DUAL-CORE_MOBILE_M_PROCESSOR_FAMILY"></span>
 
-**AMD Terion(TM) II Ultra Dual-Core Mobile M Processor Family** (56)
+**AMD Turboion(TM) II Ultra Dual-Core Mobile M-Prozessorfamilie** (56)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Turion_TM__II_Dual-Core_Mobile_M_Processor_Family"></span><span id="amd_turion_tm__ii_dual-core_mobile_m_processor_family"></span><span id="AMD_TURION_TM__II_DUAL-CORE_MOBILE_M_PROCESSOR_FAMILY"></span>
 
-**AMD Turion(TM) II Dual-Core Mobile M Processor Family** (57)
+**AMD Turboion(TM) II Dual-Core Mobile M Processor Family** (57)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__II_Dual-Core_Mobile_M_Processor_Family"></span><span id="amd_athlon_tm__ii_dual-core_mobile_m_processor_family"></span><span id="AMD_ATHLON_TM__II_DUAL-CORE_MOBILE_M_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) II Dual-Core Mobile M Processor Family** (58)
+**AMD Π(TM) II Dual-Core Mobile M-Prozessorfamilie** (58)
 
 
 </dt> <dd></dd> <dt>
@@ -637,56 +637,56 @@ Der Prozessorfamilientyp.
 
 <span id="SuperSPARC"></span><span id="supersparc"></span><span id="SUPERSPARC"></span>
 
-**SuperSINNEN** (81)
+**SuperSEINANDER** (81)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="microSPARC_II"></span><span id="microsparc_ii"></span><span id="MICROSPARC_II"></span>
 
-**microSORGAN II** (82)
+**microSFABRIK II** (82)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="microSPARC_IIep"></span><span id="microsparc_iiep"></span><span id="MICROSPARC_IIEP"></span>
 
-**microSINNEN IIep** (83)
+**microSFABRIK IIep** (83)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UltraSPARC"></span><span id="ultrasparc"></span><span id="ULTRASPARC"></span>
 
-**UltraSFILTRATION** (84)
+**UltraSMODERN** (84)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UltraSPARC_II"></span><span id="ultrasparc_ii"></span><span id="ULTRASPARC_II"></span>
 
-**UltraSFILTRATION II** (85)
+**UltraSMODERN II** (85)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UltraSPARC_IIi"></span><span id="ultrasparc_iii"></span><span id="ULTRASPARC_III"></span>
 
-**UltraSIJ IIi** (86)
+**UltraSMODERN IIi** (86)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UltraSPARC_III"></span><span id="ultrasparc_iii"></span><span id="ULTRASPARC_III"></span>
 
-**UltraSFILTRATION III** (87)
+**UltraSMODERN III** (87)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="UltraSPARC_IIIi"></span><span id="ultrasparc_iiii"></span><span id="ULTRASPARC_IIII"></span>
 
-**UltraSIJ IIIi** (88)
+**UltraSMODERN IIIi** (88)
 
 
 </dt> <dd></dd> <dt>
@@ -735,28 +735,28 @@ Der Prozessorfamilientyp.
 
 <span id="Hobbit_Family"></span><span id="hobbit_family"></span><span id="HOBBIT_FAMILY"></span>
 
-**Bit-Familie** (112)
+**Mussbit-Familie** (112)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Crusoe_TM__TM5000_Family"></span><span id="crusoe_tm__tm5000_family"></span><span id="CRUSOE_TM__TM5000_FAMILY"></span>
 
-**Crusoe(TM) TM5000 Family** (120)
+**Crusoe(TM) TM5000-Familie** (120)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Crusoe_TM__TM3000_Family"></span><span id="crusoe_tm__tm3000_family"></span><span id="CRUSOE_TM__TM3000_FAMILY"></span>
 
-**Crusoe(TM) TM3000 Family** (121)
+**Crusoe(TM) TM3000-Familie** (121)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Efficeon_TM__TM8000_Family"></span><span id="efficeon_tm__tm8000_family"></span><span id="EFFICEON_TM__TM8000_FAMILY"></span>
 
-**Iceon(TM) TM8000 Family** (122)
+**Bimiceon(TM) TM8000-Familie** (122)
 
 
 </dt> <dd></dd> <dt>
@@ -777,7 +777,7 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Athlon_TM__64_Processor_Family"></span><span id="amd_athlon_tm__64_processor_family"></span><span id="AMD_ATHLON_TM__64_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) 64-Prozessorfamilie** (131)
+**AMD Verarbeitende (TM) 64-Prozessorfamilie** (131)
 
 
 </dt> <dd></dd> <dt>
@@ -791,7 +791,7 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Sempron_TM__Processor_Family"></span><span id="amd_sempron_tm__processor_family"></span><span id="AMD_SEMPRON_TM__PROCESSOR_FAMILY"></span>
 
-**AMD Sempron(TM) Processor Family** (133)
+**AMD Sempron(TM)-Prozessorfamilie** (133)
 
 
 </dt> <dd></dd> <dt>
@@ -805,14 +805,14 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_AMD_Opteron_TM__Processor_Family"></span><span id="dual-core_amd_opteron_tm__processor_family"></span><span id="DUAL-CORE_AMD_OPTERON_TM__PROCESSOR_FAMILY"></span>
 
-**Dual-Core AMD Opteron(TM) Processor Family** (135)
+**Dual-Core AMD Opteron(TM)-Prozessorfamilie** (135)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__64_X2_Dual-Core_Processor_Family"></span><span id="amd_athlon_tm__64_x2_dual-core_processor_family"></span><span id="AMD_ATHLON_TM__64_X2_DUAL-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) 64 X2 Dual-Core Processor Family** (136)
+**AMD Act(TM) 64 X2 Dual-Core Prozessorfamilie** (136)
 
 
 </dt> <dd></dd> <dt>
@@ -826,42 +826,42 @@ Der Prozessorfamilientyp.
 
 <span id="Quad-Core_AMD_Opteron_TM__Processor_Family"></span><span id="quad-core_amd_opteron_tm__processor_family"></span><span id="QUAD-CORE_AMD_OPTERON_TM__PROCESSOR_FAMILY"></span>
 
-**Quad-Core AMD Opteron(TM) Processor Family** (138)
+**Quad-Core AMD Opteron(TM)-Prozessorfamilie** (138)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Third-Generation_AMD_Opteron_TM__Processor_Family"></span><span id="third-generation_amd_opteron_tm__processor_family"></span><span id="THIRD-GENERATION_AMD_OPTERON_TM__PROCESSOR_FAMILY"></span>
 
-**AMD Opteron(TM)-Prozessorfamilie der** dritten Generation (139)
+**AMD Opteron(TM)-Prozessorfamilie** der dritten Generation (139)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Phenom_TM__FX_Quad-Core_Processor_Family"></span><span id="amd_phenom_tm__fx_quad-core_processor_family"></span><span id="AMD_PHENOM_TM__FX_QUAD-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Amdm(TM) FX Quad-Core Processor Family** (140)
+**AMD Phenom(TM) FX Quad-Core Processor Family** (140)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Phenom_TM__X4_Quad-Core_Processor_Family"></span><span id="amd_phenom_tm__x4_quad-core_processor_family"></span><span id="AMD_PHENOM_TM__X4_QUAD-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Amdm(TM) X4 Quad-Core Processor Family** (141)
+**AMD Phenom(TM) X4 Quad-Core Processor Family** (141)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Phenom_TM__X2_Dual-Core_Processor_Family"></span><span id="amd_phenom_tm__x2_dual-core_processor_family"></span><span id="AMD_PHENOM_TM__X2_DUAL-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Amdm(TM) X2 Dual-Core Processor Family** (142)
+**AMD Phenom(TM) X2 Dual-Core Processor Family** (142)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__X2_Dual-Core_Processor_Family"></span><span id="amd_athlon_tm__x2_dual-core_processor_family"></span><span id="AMD_ATHLON_TM__X2_DUAL-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) X2 Dual-Core Processor Family** (143)
+**AMD Act(TM) X2 Dual-Core Processor Family** (143)
 
 
 </dt> <dd></dd> <dt>
@@ -924,35 +924,35 @@ Der Prozessorfamilientyp.
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_3200_Series"></span><span id="quad-core_intel_r__xeon_r__processor_3200_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_3200_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 3200 Series** (161)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 3200-Serie** (161)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_3000_Series"></span><span id="dual-core_intel_r__xeon_r__processor_3000_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_3000_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 3000 Series** (162)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 3000-Serie** (162)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_5300_Series"></span><span id="quad-core_intel_r__xeon_r__processor_5300_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_5300_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 5300 Series** (163)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 5300-Serie** (163)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_5100_Series"></span><span id="dual-core_intel_r__xeon_r__processor_5100_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_5100_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 5100 Series** (164)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der Serie 5100** (164)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_5000_Series"></span><span id="dual-core_intel_r__xeon_r__processor_5000_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_5000_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 5000 Series** (165)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 5000er Serie** (165)
 
 
 </dt> <dd></dd> <dt>
@@ -966,21 +966,21 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_ULV"></span><span id="dual-core_intel_r__xeon_r__processor_ulv"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_ULV"></span>
 
-**Intel(R) Xeon(R)-Dual-Core-Prozessor ULV** (167)
+**Dual-Core Intel(R) Xeon(R)-Prozessor ULV** (167)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_7100_Series"></span><span id="dual-core_intel_r__xeon_r__processor_7100_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_7100_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 7100 Series** (168)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der Serie 7100** (168)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_5400_Series"></span><span id="quad-core_intel_r__xeon_r__processor_5400_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_5400_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 5400 Series** (169)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 5400-Serie** (169)
 
 
 </dt> <dd></dd> <dt>
@@ -994,35 +994,35 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_5200_Series"></span><span id="dual-core_intel_r__xeon_r__processor_5200_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_5200_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 5200 Series** (171)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 5200-Serie** (171)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_7200_Series"></span><span id="dual-core_intel_r__xeon_r__processor_7200_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_7200_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 7200 Series** (172)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 7200-Serie** (172)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_7300_Series"></span><span id="quad-core_intel_r__xeon_r__processor_7300_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_7300_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 7300 Series** (173)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 7300-Serie** (173)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_7400_Series"></span><span id="quad-core_intel_r__xeon_r__processor_7400_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_7400_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 7400 Series** (174)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 7400-Serie** (174)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Multi-Core_Intel_R__Xeon_R__processor_7400_Series"></span><span id="multi-core_intel_r__xeon_r__processor_7400_series"></span><span id="MULTI-CORE_INTEL_R__XEON_R__PROCESSOR_7400_SERIES"></span>
 
-**Multi-Core Intel(R) Xeon(R) processor 7400 Series** (175)
+**Multi-Core Intel(R) Xeon(R)-Prozessor der Serie 7400** (175)
 
 
 </dt> <dd></dd> <dt>
@@ -1064,21 +1064,21 @@ Der Prozessorfamilientyp.
 
 <span id="Intel_R__Xeon_TM__processor_MP"></span><span id="intel_r__xeon_tm__processor_mp"></span><span id="INTEL_R__XEON_TM__PROCESSOR_MP"></span>
 
-**Intel(R) Xeon(TM) Processor MP** (181)
+**Intel(R) Xeon(TM)-Prozessor MP** (181)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__XP_Family"></span><span id="amd_athlon_tm__xp_family"></span><span id="AMD_ATHLON_TM__XP_FAMILY"></span>
 
-**AMD Prozessor(TM) XP-Familie** (182)
+**AMD Act(TM) XP-Familie** (182)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__MP_Family"></span><span id="amd_athlon_tm__mp_family"></span><span id="AMD_ATHLON_TM__MP_FAMILY"></span>
 
-**AMD Prozessorfamilie (TM)** (183)
+**AMD Act(TM) MP-Familie** (183)
 
 
 </dt> <dd></dd> <dt>
@@ -1134,7 +1134,7 @@ Der Prozessorfamilientyp.
 
 <span id="Intel_R__Core_TM_2_Duo_Processor"></span><span id="intel_r__core_tm_2_duo_processor"></span><span id="INTEL_R__CORE_TM_2_DUO_PROCESSOR"></span>
 
-**Intel(R) Core(TM)2 Duo-Prozessor** (191)
+**Intel(R) Core(TM)2 Duo Processor** (191)
 
 
 </dt> <dd></dd> <dt>
@@ -1162,21 +1162,21 @@ Der Prozessorfamilientyp.
 
 <span id="Intel_R__Core_TM_2_Extreme_mobile_processor"></span><span id="intel_r__core_tm_2_extreme_mobile_processor"></span><span id="INTEL_R__CORE_TM_2_EXTREME_MOBILE_PROCESSOR"></span>
 
-**Intel(R) Core(TM)2 Extreme mobile processor** (195)
+**Intel(R) Core(TM)2 Extreme Mobile Processor** (195)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Intel_R__Core_TM_2_Duo_mobile_processor"></span><span id="intel_r__core_tm_2_duo_mobile_processor"></span><span id="INTEL_R__CORE_TM_2_DUO_MOBILE_PROCESSOR"></span>
 
-**Intel(R) Core(TM)2 Duo mobile processor** (196)
+**Intel(R) Core(TM)2 Duo mobiler Prozessor** (196)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Intel_R__Core_TM_2_Solo_mobile_processor"></span><span id="intel_r__core_tm_2_solo_mobile_processor"></span><span id="INTEL_R__CORE_TM_2_SOLO_MOBILE_PROCESSOR"></span>
 
-**Intel(R) Core(TM)2 Solo mobile processor** (197)
+**Intel(R) Core(TM)2 Solo Mobile Processor** (197)
 
 
 </dt> <dd></dd> <dt>
@@ -1190,42 +1190,42 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_Intel_R__Celeron_R__Processor"></span><span id="dual-core_intel_r__celeron_r__processor"></span><span id="DUAL-CORE_INTEL_R__CELERON_R__PROCESSOR"></span>
 
-**Dual-Core Intel(R) Celeron(R)-Prozessor** (199)
+**Dual-Core Intel(R) Celeron(R) Processor** (199)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S_390_and_zSeries_Family"></span><span id="s_390_and_zseries_family"></span><span id="S_390_AND_ZSERIES_FAMILY"></span>
 
-**S/390 und zSeries Family** (200)
+**S/390 und zSeries-Familie** (200)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ESA_390_G4"></span><span id="esa_390_g4"></span>
 
-**III/390 G4** (201)
+**MARS/390 G4** (201)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ESA_390_G5"></span><span id="esa_390_g5"></span>
 
-**III/390 G5** (202)
+**MARS/390 G5** (202)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ESA_390_G6"></span><span id="esa_390_g6"></span>
 
-**III/390 G6** (203)
+**MARS/390 G6** (203)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="z_Architectur_base"></span><span id="z_architectur_base"></span><span id="Z_ARCHITECTUR_BASE"></span>
 
-**z/Architectur base** (204)
+**z/Architectur-Basis** (204)
 
 
 </dt> <dd></dd> <dt>
@@ -1281,14 +1281,14 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_3xxx_Series"></span><span id="dual-core_intel_r__xeon_r__processor_3xxx_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_3XXX_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 3xxx Series** (215)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 3xxx-Serie** (215)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_3xxx_Series"></span><span id="quad-core_intel_r__xeon_r__processor_3xxx_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_3XXX_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 3xxx Series** (216)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 3xxx-Serie** (216)
 
 
 </dt> <dd></dd> <dt>
@@ -1302,42 +1302,42 @@ Der Prozessorfamilientyp.
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_5xxx_Series"></span><span id="dual-core_intel_r__xeon_r__processor_5xxx_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_5XXX_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 5xxx Series** (218)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 5xxx-Serie** (218)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_5xxx_Series"></span><span id="quad-core_intel_r__xeon_r__processor_5xxx_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_5XXX_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 5xxx Series** (219)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 5xxx-Serie** (219)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Dual-Core_Intel_R__Xeon_R__processor_7xxx_Series"></span><span id="dual-core_intel_r__xeon_r__processor_7xxx_series"></span><span id="DUAL-CORE_INTEL_R__XEON_R__PROCESSOR_7XXX_SERIES"></span>
 
-**Dual-Core Intel(R) Xeon(R) processor 7xxx Series** (221)
+**Dual-Core Intel(R) Xeon(R)-Prozessor der 7xxx-Serie** (221)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quad-Core_Intel_R__Xeon_R__processor_7xxx_Series"></span><span id="quad-core_intel_r__xeon_r__processor_7xxx_series"></span><span id="QUAD-CORE_INTEL_R__XEON_R__PROCESSOR_7XXX_SERIES"></span>
 
-**Quad-Core Intel(R) Xeon(R) processor 7xxx Series** (222)
+**Quad-Core Intel(R) Xeon(R)-Prozessor der 7xxx-Serie** (222)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Multi-Core_Intel_R__Xeon_R__processor_7xxx_Series"></span><span id="multi-core_intel_r__xeon_r__processor_7xxx_series"></span><span id="MULTI-CORE_INTEL_R__XEON_R__PROCESSOR_7XXX_SERIES"></span>
 
-**Multi-Core Intel(R) Xeon(R) processor 7xxx Series** (223)
+**Multi-Core Intel(R) Xeon(R)-Prozessor der 7xxx-Serie** (223)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Multi-Core_Intel_R__Xeon_R__processor_3400_Series"></span><span id="multi-core_intel_r__xeon_r__processor_3400_series"></span><span id="MULTI-CORE_INTEL_R__XEON_R__PROCESSOR_3400_SERIES"></span>
 
-**Multi-Core Intel(R) Xeon(R) processor 3400 Series** (224)
+**Multi-Core Intel(R) Xeon(R)-Prozessor der 3400-Serie** (224)
 
 
 </dt> <dd></dd> <dt>
@@ -1351,28 +1351,28 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Phenom_TM__Triple-Core_Processor_Family"></span><span id="amd_phenom_tm__triple-core_processor_family"></span><span id="AMD_PHENOM_TM__TRIPLE-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Amdm(TM) Triple-Core Processor Family** (231)
+**AMD Phenom(TM) Triple-Core Processor Family** (231)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Turion_TM__Ultra_Dual-Core_Mobile_Processor_Family"></span><span id="amd_turion_tm__ultra_dual-core_mobile_processor_family"></span><span id="AMD_TURION_TM__ULTRA_DUAL-CORE_MOBILE_PROCESSOR_FAMILY"></span>
 
-**AMD Terion(TM) Ultra Dual-Core Mobile Processor Family** (232)
+**AMD Turboion(TM) Ultra Dual-Core Mobile Processor Family** (232)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Turion_TM__Dual-Core_Mobile_Processor_Family"></span><span id="amd_turion_tm__dual-core_mobile_processor_family"></span><span id="AMD_TURION_TM__DUAL-CORE_MOBILE_PROCESSOR_FAMILY"></span>
 
-**AMD Terion(TM) Dual-Core Mobile Processor Family** (233)
+**AMD Turboion(TM) Dual-Core Mobile Processor Family** (233)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__Dual-Core_Processor_Family"></span><span id="amd_athlon_tm__dual-core_processor_family"></span><span id="AMD_ATHLON_TM__DUAL-CORE_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) Dual-Core Processor Family** (234)
+**AMD Act(TM) Dual-Core Prozessorfamilie** (234)
 
 
 </dt> <dd></dd> <dt>
@@ -1386,21 +1386,21 @@ Der Prozessorfamilientyp.
 
 <span id="AMD_Phenom_TM__II_Processor_Family"></span><span id="amd_phenom_tm__ii_processor_family"></span><span id="AMD_PHENOM_TM__II_PROCESSOR_FAMILY"></span>
 
-**AMD Amdm(TM) II Processor Family** (236)
+**AMD Phenom(TM) II-Prozessorfamilie** (236)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AMD_Athlon_TM__II_Processor_Family"></span><span id="amd_athlon_tm__ii_processor_family"></span><span id="AMD_ATHLON_TM__II_PROCESSOR_FAMILY"></span>
 
-**AMD Hz(TM) II-Prozessorfamilie** (237)
+**AMD Act(TM) II-Prozessorfamilie** (237)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Six-Core_AMD_Opteron_TM__Processor_Family"></span><span id="six-core_amd_opteron_tm__processor_family"></span><span id="SIX-CORE_AMD_OPTERON_TM__PROCESSOR_FAMILY"></span>
 
-**AMD Opteron(TM)-Prozessorfamilie** mit sechs Kernen (238)
+**Sechs-Kern-AMD Opteron(TM)-Prozessorfamilie** (238)
 
 
 </dt> <dd></dd> <dt>
@@ -1435,7 +1435,7 @@ Der Prozessorfamilientyp.
 
 <span id="Reserved__Un-initialized_Flash_Content_-_Lo_"></span><span id="reserved__un-initialized_flash_content_-_lo_"></span><span id="RESERVED__UN-INITIALIZED_FLASH_CONTENT_-_LO_"></span>
 
-**Reservierter (nicht initialisierter Flashinhalt – Lo)** (255)
+**Reserviert (Nicht initialisierter Flashinhalt** – Lo) (255)
 
 
 </dt> <dd></dd> <dt>
@@ -1512,14 +1512,14 @@ Der Prozessorfamilientyp.
 
 <span id="Reserved__For_Future_Special_Purpose_Assignment_"></span><span id="reserved__for_future_special_purpose_assignment_"></span><span id="RESERVED__FOR_FUTURE_SPECIAL_PURPOSE_ASSIGNMENT_"></span>
 
-**Reserviert (für zukünftige Zuweisungen zu speziellen Zwecken)** (65534)
+**Reserviert (für zukünftige Zuweisungen zu besonderen Zwecken)** (65534)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Reserved__Un-initialized_Flash_Content_-_Hi_"></span><span id="reserved__un-initialized_flash_content_-_hi_"></span><span id="RESERVED__UN-INITIALIZED_FLASH_CONTENT_-_HI_"></span>
 
-**Reservierter (nicht initialisierter Flashinhalt – Hi)** (65535)
+**Reserviert (Nicht initialisierter Flashinhalt** – Hi) (65535)
 
 
 </dt> <dd></dd> </dl>
@@ -1535,10 +1535,10 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Prozent"), [**Messgerät,**](/windows/desktop/WmiSdk/standard-qualifiers) [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrProcessorLoad), **PUnit** ("percent")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Prozent"), [**Messgerät**](/windows/desktop/WmiSdk/standard-qualifiers), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrProcessorLoad"), **PUnit** ("Percent")
 </dt> </dl>
 
-Das Laden des Prozessors, gemittelt über die letzte Minute, als Prozentsatz.
+Das Laden des Prozessors, gemittelt in der letzten Minute, als Prozentsatz.
 
 </dd> <dt>
 
@@ -1561,23 +1561,23 @@ Die maximale Geschwindigkeit des Prozessors in MHz.
 **OtherFamilyDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Prozessor**.**Familie**")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Prozessor**.**Family**")
 </dt> </dl>
 
-Der Prozessorfamilientyp, wenn **die Family-Eigenschaft** auf **Andere** ("1") festgelegt ist. Diese Zeichenfolge sollte auf NULL festgelegt werden, wenn die Family-Eigenschaft einen anderen Wert als **Andere ist.**
+Der Prozessorfamilientyp, wenn die **Family-Eigenschaft** auf **Other** ("1") festgelegt ist. Diese Zeichenfolge sollte auf NULL festgelegt werden, wenn die Family-Eigenschaft einen anderen Wert als **Andere** hat.
 
 </dd> <dt>
 
 **Rolle**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1590,13 +1590,13 @@ Die Rolle des Prozessors, z. B. "Zentraler Prozessor" oder "Mathematischer Proze
 **Schrittweises Ausführen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Prozessor**.**Familie**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Prozessor**.**Family**")
 </dt> </dl>
 
 Die Revisionsebene des Prozessors innerhalb der Prozessorfamilie.
@@ -1606,7 +1606,7 @@ Die Revisionsebene des Prozessors innerhalb der Prozessorfamilie.
 **Uniqueid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1634,7 +1634,7 @@ Die CPU-Socketinformationen, die Daten darüber enthalten, wie der Prozessor akt
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1648,7 +1648,7 @@ Die CPU-Socketinformationen, die Daten darüber enthalten, wie der Prozessor akt
 
 <span id="Daughter_Board"></span><span id="daughter_board"></span><span id="DAUGHTER_BOARD"></span>
 
-**Board für Mitglieder** (3)
+**Brett für Kinder** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -1697,7 +1697,7 @@ Die CPU-Socketinformationen, die Daten darüber enthalten, wie der Prozessor akt
 
 <span id="370_Pin_Socket"></span><span id="370_pin_socket"></span><span id="370_PIN_SOCKET"></span>
 
-**370 Pin Socket** (10)
+**370-Pin-Socket** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -1872,7 +1872,7 @@ Die CPU-Socketinformationen, die Daten darüber enthalten, wie der Prozessor akt
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

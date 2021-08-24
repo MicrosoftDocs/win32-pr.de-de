@@ -1,7 +1,7 @@
 ---
-description: Ruft den Bezeichner für das icontextnode-Objekt ab.
+description: Ruft den Bezeichner für das IContextNode-Objekt ab.
 ms.assetid: 7578bcc1-7c69-45fc-b3c2-7350ce4df99c
-title: 'Icontextnode:: GetId-Methode (iacom. h)'
+title: IContextNode::GetId-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: ef316111c7464bac0339a4888b887bc5cf20b93f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7ec4546a6a6e1e5ede96074e5dddcfcd22abf7c2ffcaa4d51a69dde06efb19d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940300"
 ---
-# <a name="icontextnodegetid-method"></a>Icontextnode:: GetId-Methode
+# <a name="icontextnodegetid-method"></a>IContextNode::GetId-Methode
 
-Ruft den Bezeichner für das [**icontextnode**](icontextnode.md) -Objekt ab.
+Ruft den Bezeichner für das [**IContextNode-Objekt**](icontextnode.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ HRESULT GetId(
 
 <dl> <dt>
 
-*pId* \[ vorgenommen\]
+*pId* \[ out\]
 </dt> <dd>
 
-Der Bezeichner für das [**icontextnode**](icontextnode.md) -Objekt.
+Der Bezeichner für das [**IContextNode-Objekt.**](icontextnode.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Ink Analyzer weist allen erstellten Kontext Knoten einen eindeutigen Bezeichner zu. Während der frei Hand Analyse kann der Ink-Analyzer den Bezeichner für einen Kontext Knoten ändern. Beispielsweise kann der Ink Analyzer einen Word-Knoten als zwei Word-Knoten neu klassifizieren und den ursprünglichen Bezeichner dann einem und einem neuen Bezeichner zuweisen. Oder der Ink Analyzer kann zwei Word-Knoten als einen Word-Knoten neu klassifizieren und einen der ursprünglichen Bezeichner dem neuen Word-Knoten zuweisen.
+Das Ink-Analyzer weist allen erstellten Kontextknoten einen eindeutigen Bezeichner zu. Während der Ink-Analyse kann das Ink Analyzer den Bezeichner für einen Kontextknoten ändern. Beispielsweise kann das Ink-Analyseprogramm einen Wortknoten als zwei Wortknoten neu klassifiziert und dann den ursprünglichen Bezeichner einem und einem neuen Bezeichner dem anderen zuweisen. Oder das Ink-Analyseprogramm klassifiziert zwei Wortknoten möglicherweise neu als einen Wortknoten und weist dem neuen Wortknoten einen der ursprünglichen Bezeichner zu.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Hilfsmethode, die Informationen zu einem angegebenen Knoten, dessen *pcontextnode* -Parameter, abruft. Diese Hilfsmethode gibt Informationen aus den folgenden Methoden zurück.
+Das folgende Beispiel zeigt eine Hilfsmethode, die Informationen zu einem angegebenen Knoten, seinem *pContextNode-Parameter, abruft.* Diese Hilfsmethode gibt Informationen aus den folgenden Methoden zurück.
 
--   **Icontextnode:: GetId**
--   [**Icontextnode:: GetType**](icontextnode-gettype.md)
--   [**Icontextnode:: getLocation**](icontextnode-getlocation.md)
--   [**Icontextnode:: getparameentnode**](icontextnode-getparentnode.md)
+-   **IContextNode::GetId**
+-   [**IContextNode::GetType**](icontextnode-gettype.md)
+-   [**IContextNode::GetLocation**](icontextnode-getlocation.md)
+-   [**IContextNode::GetParentNode**](icontextnode-getparentnode.md)
 
 
 ```C++
@@ -141,9 +141,9 @@ HRESULT CMyClass::GetNodeInformation(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -152,10 +152,10 @@ HRESULT CMyClass::GetNodeInformation(
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

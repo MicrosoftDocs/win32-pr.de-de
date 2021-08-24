@@ -63,7 +63,7 @@ Im Standardmodus aktiviert der Serverstub die Speicherumgebung nur, wenn das **\
 
 Der clientseitige Stub kann für die **Rpcss-Speicherverwaltungsumgebung** vertraulich sein. Wenn ein sensibler Clientstub ausgeführt wird, wenn das **Rpcss-Paket** deaktiviert ist, werden die Standardbenutzerzuweisungen bzw. -zuordnungen aufgerufen (z. B. der Midl-Benutzer weist [midl \_ \_](/windows/desktop/Rpc/the-midl-user-allocate-function)user /  [ \_ free \_ zu).](/windows/desktop/Rpc/the-midl-user-free-function) Wenn diese Option aktiviert ist, verwendet das **Rpcss-Paket** das Zuweisungs-/Zuordnungspaar aus dem Paket. Im Standardmodus ist der Client nur dann sensibel, wenn das **\[ Attribut enable \_ allocate \]** verwendet wird. In der Regel wird der clientseitige Stub in der deaktivierten Umgebung ausgeführt. Im **osf-Modus** (wenn Sie mit dem [**Schalter /osf**](-osf.md) kompilieren) ist der Client immer auf die **Rpcss-Speicherverwaltungsumgebung** sensibel, und daher wirkt sich das **\[ Enable \_ \] Allocate-Attribut** nicht auf die Clientstubs aus.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

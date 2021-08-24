@@ -1,9 +1,9 @@
 ---
-title: DTN_FORMAT Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) zum Anfordern von Text gesendet, der in einem Rückruf Feld angezeigt werden soll. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: DTN_FORMAT Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Datums- und Uhrzeitauswahl-Steuerelement (DTP) gesendet, um an anforderungsgemäßen Text zu senden, der in einem Rückruffeld angezeigt werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: ce0ee230-638e-425f-9f34-c379342cea93
 keywords:
-- Windows-Steuerelemente für DTN_FORMAT Benachrichtigungs
+- DTN_FORMAT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fadd11b090777d2226eeed85f32d2062e8340e6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75fb4279f6ec6b95ded673083a024d32785dd5156588852663e6c307f8351dc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916270"
 ---
-# <a name="dtn_format-notification-code"></a>DTN- \_ Format-Benachrichtigungs Code
+# <a name="dtn_format-notification-code"></a>DTN \_ FORMAT-Benachrichtigungscode
 
-Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) zum Anfordern von Text gesendet, der in einem Rückruf Feld angezeigt werden soll. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Datums- und Uhrzeitauswahl-Steuerelement (DTP) gesendet, um an anforderungsgemäßen Text zu senden, der in einem Rückruffeld angezeigt werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,17 +43,17 @@ DTN_FORMAT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMDATETIMEFORMAT**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformata) -Struktur, die Informationen zu dieser Instanz des Benachrichtigungs Codes enthält. Die Struktur enthält die Teil Zeichenfolge, die das Rückruf Feld definiert, und empfängt die formatierte Zeichenfolge, die vom Steuerelement angezeigt wird.
+Ein Zeiger auf eine [**NMDATETIMEFORMAT-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmdatetimeformata) die Informationen zu dieser Instanz des Benachrichtigungscodes enthält. Die -Struktur enthält die Teilzeichenfolge, die das Rückruffeld definiert und die formatierte Zeichenfolge empfängt, die vom Steuerelement angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Besitzer des Steuer Elements muss 0 (null) zurückgeben.
+Der Besitzer des Steuerelements muss 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer Elements eine benutzerdefinierte Zeichenfolge bereitstellen, die vom Steuerelement angezeigt wird. (Weitere Informationen zu Rückruf Feldern finden Sie unter [Rückruf Felder](date-and-time-picker-controls.md).)
+Durch die Behandlung dieses Benachrichtigungscodes kann der Besitzer des Steuerelements eine benutzerdefinierte Zeichenfolge bereitstellen, die vom Steuerelement angezeigt wird. (Weitere Informationen zu Rückruffeldern finden Sie unter [Rückruffelder.)](date-and-time-picker-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Durch die Behandlung dieses Benachrichtigungs Codes kann der Besitzer des Steuer
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dtn \_ Formatw** (Unicode) und **Dtn \_ Formata** (ANSI)<br/>                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **DTN \_ FORMATW** (Unicode) und **DTN \_ FORMATA** (ANSI)<br/>                     |
 
 
 

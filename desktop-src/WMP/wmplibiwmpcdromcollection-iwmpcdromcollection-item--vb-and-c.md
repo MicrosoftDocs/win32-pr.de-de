@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromcollection-Element Methode
-description: Die Item-Methode gibt eine iwmpcdrom-Schnittstelle am angegebenen Index zurück.
+title: IWMPCcollection Item-Methode
+description: Die Item-Methode gibt eine IWMPCface-Schnittstelle am angegebenen Index zurück.
 ms.assetid: 66e51aa9-39c8-4b79-9cc7-d7125516e87e
 keywords:
-- Element-Methoden Fenster Media Player
-- Element-Methode, Windows Media Player, iwmpcdromcollection-Schnittstelle
-- Iwmpcdromcollection-Schnittstelle, Windows Media Player, Element-Methode
+- Elementmethode Windows Media Player
+- Item method Windows Media Player , IWMPCcollection interface
+- IWMPCcollection-Schnittstelle Windows Media Player , Item-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf0c4a0c79a17b1e6956ba640daec74f0cbb2825
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 80ab1ced32918e615230b3267d15dfbe5b2ba28377f6bbf265b735ea666153a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900110"
 ---
-# <a name="iwmpcdromcollectionitem-method"></a>Iwmpcdromcollection:: Item-Methode
+# <a name="iwmpcdromcollectionitem-method"></a>IWMPCcollection::Item-Methode
 
-Die **Item** -Methode gibt eine **iwmpcdrom** -Schnittstelle am angegebenen Index zurück.
+Die **Item-Methode** gibt eine **IWMPCface-Schnittstelle** am angegebenen Index zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,24 +53,24 @@ Implements IWMPCdromCollection.Item
 
 <dl> <dt>
 
-*Lindex* \[ in\]
+*lIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der Index ist.
+Ein **System.Int32,** das der Index ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpcdrom** -Schnittstelle.
+Eine **WMPLib.IWMPCface-Schnittstelle.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das- **Element** verwendet, um den laufwerkspezifizierer und den Wiedergabelisten Namen von allen auf dem Computer verfügbaren CD in einem Listenfeld anzuzeigen. Wenn das Laufwerk tatsächlich DVD-Inhalte enthält, ist Windows XP oder höher erforderlich. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **Item verwendet,** um den Laufwerksspezifizierer und den Wiedergabelistennamen jeder cd anzuzeigen, die auf dem Computer in einem Listenfeld verfügbar ist. Wenn das Laufwerk tatsächlich DVD-Inhalt enthält, Windows XP oder höher erforderlich. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -112,7 +112,7 @@ Next i
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -128,25 +128,25 @@ Next i
 
 <dl> <dt>
 
-[**Iwmpcdrom-Schnittstelle (VB und c#)**](iwmpcdrom--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdrom--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle (VB und c#)**](iwmpcdromcollection--vb-and-c.md)
+[**IWMPCcollection-Schnittstelle (VB und C#)**](iwmpcdromcollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection. Count (VB und c#)**](wmplibiwmpcdromcollection-iwmpcdromcollection-count--vb-and-c.md)
+[**IWMPCcollection.count (VB und C#)**](wmplibiwmpcdromcollection-iwmpcdromcollection-count--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection. getbydrivespecifier (VB und c#)**](wmplibiwmpcdromcollection-iwmpcdromcollection-getbydrivespecifier--vb-and-c.md)
+[**IWMPCcollection.getByDriveSpecifier (VB und C#)**](wmplibiwmpcdromcollection-iwmpcdromcollection-getbydrivespecifier--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPPlaylist.Name (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-name--vb-and-c.md)
+[**IWMPPlaylist.name (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-name--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

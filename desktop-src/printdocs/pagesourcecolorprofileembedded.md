@@ -4,12 +4,12 @@ ms.assetid: 38411802-2b2e-441c-b3a6-334d87b11b5d
 title: PageSourceColorProfileEmbedded
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0633fa061601c1d575f174ab5572582efdf9a89e
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 330d8da4200880e071a50b35d2f713ba544bb2b270335f2de022ab835286cfff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938740"
 ---
 # <a name="pagesourcecolorprofileembedded"></a>PageSourceColorProfileEmbedded
 

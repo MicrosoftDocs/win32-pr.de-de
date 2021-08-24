@@ -1,26 +1,26 @@
 ---
-description: In den Flussdiagrammen in den folgenden Abschnitten werden die Standardregeln für die Datei Versionsverwaltung veranschaulicht, die verwendet werden, wenn die Schlüsseldatei einer installierten Komponente den gleichen Namen wie eine Datei hat, die bereits am Ziel Speicherort installiert ist.
+description: Die Flussdiagramme in den folgenden Abschnitten veranschaulichen die Standardregeln für die Dateiversionsversion, die verwendet werden, wenn die Schlüsseldatei einer komponente, die installiert wird, den gleichen Namen hat wie eine Datei, die bereits am Zielspeicherort installiert ist.
 ms.assetid: a09e091c-ee82-4951-b129-d1d4c8948883
-title: Standardmäßige Datei Versionsverwaltung
+title: Standarddateiversionseinstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fad33a7af49c28b560d9d558abbc86b220c4cb42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c239cd7989308e79dbb0ee621241560ac33a7a049c83c0a44d2cb1c3c32f5fb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039990"
 ---
-# <a name="default-file-versioning"></a>Standardmäßige Datei Versionsverwaltung
+# <a name="default-file-versioning"></a>Standarddateiversionseinstellungen
 
-In den Flussdiagrammen in den folgenden Abschnitten werden die Standardregeln für die Datei Versionsverwaltung veranschaulicht, die verwendet werden, wenn die Schlüsseldatei einer installierten Komponente den gleichen Namen wie eine Datei hat, die bereits am Ziel Speicherort installiert ist. Die Standarddatei Versionsverwaltung wird auch unter [Ersetzen vorhandener Dateien](replacing-existing-files.md)veranschaulicht.
+Die Flussdiagramme in den folgenden Abschnitten veranschaulichen die Standardregeln für die Dateiversionsversion, die verwendet werden, wenn die Schlüsseldatei einer komponente, die installiert wird, den gleichen Namen hat wie eine Datei, die bereits am Zielspeicherort installiert ist. Die Standarddateiversionsierung wird auch unter [Ersetzen vorhandener Dateien veranschaulicht.](replacing-existing-files.md)
 
-Beachten Sie, dass mit Windows Installer Datei Hashwert zur Optimierung des Kopierens von Dateien verfügbar ist. Weitere Informationen finden Sie unter [**msigetflehash**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha) und in der [Tabelle msigetfash](msifilehash-table.md). Die msiflehash-Tabelle kann nur mit Dateien ohne Versions Angabe verwendet werden.
+Beachten Sie, dass Windows Installer dateihashing verfügbar ist, um das Kopieren von Dateien zu optimieren. Weitere Informationen finden Sie unter [**MsiGetFileHash**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha) und in der [MsiFileHash-Tabelle.](msifilehash-table.md) Die MsiFileHash-Tabelle kann nur mit Nichtversionsdateien verwendet werden.
 
--   [Beide Dateien haben eine Version.](both-files-have-a-version.md)
--   [Keine der Dateien hat eine Version.](neither-file-has-a-version.md)
--   [Keine der Dateien weist eine Version mit Datei Hash Überprüfung auf.](neither-file-has-a-version-with-file-hash-check.md)
--   [Eine Datei hat eine Version.](one-file-has-a-version.md)
+-   [Beide Dateien verfügen über eine Version](both-files-have-a-version.md)
+-   [Keine der Dateien verfügt über eine Version](neither-file-has-a-version.md)
+-   [Keine der Dateien verfügt über eine Version mit Dateihashüberprüfung](neither-file-has-a-version-with-file-hash-check.md)
+-   [Eine Datei verfügt über eine Version](one-file-has-a-version.md)
 
  
 

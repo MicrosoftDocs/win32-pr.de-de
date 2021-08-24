@@ -1,7 +1,7 @@
 ---
-description: Ruft den icontextlink am angegebenen Index ab.
+description: Ruft den IContextLink am angegebenen Index ab.
 ms.assetid: 46bb71b9-5ef3-4756-97f6-40e0aaa82826
-title: 'Icontextlinks:: getcontextlink-Methode (iacom. h)'
+title: IContextLinks::GetContextLink-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: ecc0ed9ba457a7a91cb2e1b615ac7419ce5a94c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01cf3b971b8533f21185a9b6e65c3cfb25109e657e2c9e2a931253d86c51dbdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940310"
 ---
-# <a name="icontextlinksgetcontextlink-method"></a>Icontextlinks:: getcontextlink-Methode
+# <a name="icontextlinksgetcontextlink-method"></a>IContextLinks::GetContextLink-Methode
 
-Ruft den [**icontextlink**](icontextlink.md) am angegebenen Index ab.
+Ruft den [**IContextLink am**](icontextlink.md) angegebenen Index ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,28 +40,28 @@ HRESULT GetContextLink(
 
 <dl> <dt>
 
-*ulindex* \[ in\]
+*ulIndex* \[ In\]
 </dt> <dd>
 
-Der null basierte Index des abzurufenden [**icontextlink**](icontextlink.md) -Objekts.
+Der nullbasierte Index des zu erhaltenden [**IContextLink-Objekts.**](icontextlink.md)
 
 </dd> <dt>
 
-*ppcontextlink* \[ vorgenommen\]
+*ppContextLink* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das [**icontextlink**](icontextlink.md) -Objekt am angegebenen Index.
+Ein Zeiger auf das [**IContextLink-Objekt**](icontextlink.md) am angegebenen Index.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, müssen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppcontextlink* abrufen, wenn Sie den Kontext Link nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf ppContextLink auf, wenn Sie den \*  Kontextlink nicht mehr verwenden müssen.
 
  
 
@@ -71,9 +71,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -82,13 +82,13 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Icontextlinks**](icontextlinks.md)
+[**IContextLinks**](icontextlinks.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

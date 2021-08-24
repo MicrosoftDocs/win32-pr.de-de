@@ -1,5 +1,5 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die zum Arbeiten mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
+description: Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die für die Arbeit mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
 ms.assetid: 726dffe9-682f-445b-92a7-2246ad4e3848
 title: X-Dateiverweis
 ms.topic: article
@@ -13,22 +13,22 @@ ms.locfileid: "119986100"
 ---
 # <a name="x-file-reference"></a>X-Dateiverweis
 
-Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die zum Arbeiten mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
+Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die für die Arbeit mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
 
 -   [D3DX X-Dateischnittstellen](dx9-graphics-reference-d3dx-x-file-interfaces.md)
 -   [D3DX X-Dateifunktionen](dx9-graphics-reference-d3dx-x-file-functions.md)
 -   [D3DX X-Dateistrukturen](dx9-graphics-reference-d3dx-x-file-structures.md)
--   [D3DX X-Dateikonstanten](dx9-graphics-reference-d3dx-x-file-constants.md)
+-   [D3DX X-Dateikonst constants](dx9-graphics-reference-d3dx-x-file-constants.md)
 
-Vorlagen werden unter [**Vorlagen**](dx9-graphics-reference-x-file-format-templates.md)beschrieben.
+Vorlagen werden unter [**Vorlagen beschrieben.**](dx9-graphics-reference-x-file-format-templates.md)
 
-Schnittstellen und Funktionen im Dxfile.h-Header sind zur Unterstützung von Legacyanwendungen verfügbar. Siehe [X-Dateireferenz (Legacy)](dx9-graphics-reference-x-file.md).
+Schnittstellen und Funktionen im Dxfile.h-Header sind verfügbar, um Legacyanwendungen zu unterstützen. Weitere Informationen [finden Sie unter X-Dateireferenz (Legacy).](dx9-graphics-reference-x-file.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Referenz für Direct3D 9](dx9-graphics-reference.md)
+[Referenz zu Direct3D 9](dx9-graphics-reference.md)
 </dt> </dl>
 
  

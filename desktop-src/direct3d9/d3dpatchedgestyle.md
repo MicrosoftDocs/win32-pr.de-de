@@ -44,27 +44,27 @@ typedef enum D3DPATCHEDGESTYLE {
 <span id="D3DPATCHEDGE_DISCRETE"></span><span id="d3dpatchedge_discrete"></span>**D3DPATCHEDGE \_ DISCRETE**
 </dt> <dd>
 
-Diskreter Edgestil. Im diskreten Modus können Sie float tessellation angeben, aber es wird auf ganze Zahlen abgeschnitten.
+Diskreter Edgestil. Im diskreten Modus können Sie float-Mosaik angeben, es wird jedoch auf ganze Zahlen gekürzt.
 
 </dd> <dt>
 
 <span id="D3DPATCHEDGE_CONTINUOUS"></span><span id="d3dpatchedge_continuous"></span>**D3DPATCHEDGE \_ CONTINUOUS**
 </dt> <dd>
 
-Fortlaufender Edgestil. Im fortlaufenden Modus wird das Mosaik als float-Werte angegeben, die reibungslos variiert werden können, um "Pop"-Artefakte zu reduzieren.
+Fortlaufender Edgestil. Im fortlaufenden Modus wird das Mosaik als gleitende Werte angegeben, die reibungslos variieren können, um "Popping"-Artefakte zu reduzieren.
 
 </dd> <dt>
 
 <span id="D3DPATCHEDGE_FORCE_DWORD"></span><span id="d3dpatchedge_force_dword"></span>**D3DPATCHEDGE \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass das kontinuierliche Mosaik ein völlig anderes Mosaikmuster als das diskrete Mosaikmuster für die gleichen Mosaikwerte erzeugt (dies ist im Wireframe-Modus offensichtlicher). Daher ist 4.0 continuous nicht identisch mit vier diskreten.
+Beachten Sie, dass das kontinuierliche Mosaik ein völlig anderes Mosaikmuster als das diskrete muster für dieselben Mosaikwerte erzeugt (dies ist im Wireframe-Modus offensichtlicher). Daher ist 4.0 continuous nicht identisch mit 4 diskret.
 
 ## <a name="requirements"></a>Anforderungen
 

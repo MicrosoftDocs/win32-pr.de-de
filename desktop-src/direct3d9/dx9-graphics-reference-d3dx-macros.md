@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen zu den Makros, die von der D3DX Utility Library bereitgestellt werden.
+description: Dieser Abschnitt enthält Referenzinformationen zu den Makros, die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden.
 ms.assetid: 7219363f-b8ac-42e9-96ff-4825c084d00f
 title: Makros (D3DX 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84ec8441a47da7a9e9459003ba37a6e0e0f6a860
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 4aa4e5d61cda72731dd18e8d0b2a888222060a4607d2e0ad49af646a506836c8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952060"
 ---
 # <a name="macros-d3dx-9"></a>Makros (D3DX 9)
 
-Dieser Abschnitt enthält Referenzinformationen zu den Makros, die von der D3DX Utility Library bereitgestellt werden.
+Dieser Abschnitt enthält Referenzinformationen zu den Makros, die von der D3DX-Hilfsprogrammbibliothek bereitgestellt werden.
 
 ## <a name="macros"></a>Makros
 
@@ -21,7 +21,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den Makros, die von der D3DX 
 -   [**D3DSINCOSCONST2**](d3dsincosconst2.md)
 -   [**D3DXToDegree**](d3dxtodegree.md)
 -   [**D3DXToRadian**](d3dxtoradian.md)
--   [**D3DXTX- \_ Version**](d3dxtx-version.md)
+-   [**D3DXTX-VERSION \_**](d3dxtx-version.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

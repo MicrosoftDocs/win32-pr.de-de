@@ -1,11 +1,11 @@
 ---
-title: IWMPClosedCaption2 getsamistylename-Methode
-description: Die getsamistylename-Methode gibt den Namen eines Stils zurück, der von der aktuellen Sami-Datei unterstützt wird.
+title: IWMPClosedCaption2 getSAMIStyleName-Methode
+description: Die getSAMIStyleName-Methode gibt den Namen eines Stils zurück, der von der aktuellen SAMI-Datei unterstützt wird.
 ms.assetid: e7678ca6-f52f-45f4-bd1c-7fbcdf1cc47c
 keywords:
-- getsamistylename-Methode, Windows Media Player
-- getsamistylename-Methode, Windows Media Player, IWMPClosedCaption2-Schnittstelle
-- IWMPClosedCaption2 Interface Windows Media Player, getsamistylename-Methode
+- getSAMIStyleName-Windows Media Player
+- getSAMIStyleName-Methode Windows Media Player , IWMPClosedCaption2-Schnittstelle
+- IWMPClosedCaption2-Schnittstelle Windows Media Player , getSAMIStyleName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34ceb3f598ae603d478af5cad9c78333952530a2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cd599370afb9029a481fbae33264796232e4f129c1a5da0d2658452b785a870c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031350"
 ---
-# <a name="iwmpclosedcaption2getsamistylename-method"></a>IWMPClosedCaption2:: getsamistylename-Methode
+# <a name="iwmpclosedcaption2getsamistylename-method"></a>IWMPClosedCaption2::getSAMIStyleName-Methode
 
-Die **getsamistylename** -Methode gibt den Namen eines Stils zurück, der von der aktuellen Sami-Datei unterstützt wird.
+Die **getSAMIStyleName-Methode** gibt den Namen eines Stils zurück, der von der aktuellen SAMI-Datei unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPClosedCaption2.getSAMIStyleName
 
 <dl> <dt>
 
-*nIndex* \[ in\]
+*nIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der null basierte Index des abzurufenden Format namens ist.
+Ein **System.Int32,** das der nullbasierte Index des abzurufenden Formatnamens ist
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **System. String** , bei der es sich um den Namen des Stils handelt, der in der Sami-Datei angegeben ist.
+Eine **System.String,die** den Namen des Stils wie in der SAMI-Datei angegeben ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Stile in einer Sami-Datei werden in der in der Datei gezeigten Reihenfolge indiziert, beginnend mit 0 (null).
+Die Stile in einer SAMI-Datei werden in der Reihenfolge indiziert, die in der Datei angezeigt wird, beginnend mit 0 (null).
 
-Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück (""), es sei denn, eine digitale Mediendatei ist geöffnet (AxWindowsMediaPlayer. openstate ist gleich 13).
+Diese Methode gibt eine Zeichenfolge der Länge 0 ("") zurück, es sei denn, eine digitale Mediendatei ist geöffnet (AxWindowsMediaPlayer.openState ist gleich 13).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,13 +89,13 @@ Diese Methode gibt eine Zeichenfolge der Länge 0 (null) zurück (""), es sei de
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption. samistyle (VB und c#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-samistyle--vb-and-c.md)
+[**IWMPClosedCaption.SAMIStyle (VB und C#)**](wmplibiwmpclosedcaption-iwmpclosedcaption-samistyle--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

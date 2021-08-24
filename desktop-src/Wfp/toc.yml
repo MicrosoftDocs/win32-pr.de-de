@@ -1,26 +1,26 @@
-- name: Windows-Ressourcenschutz
+- name: Windows Ressourcenschutz
   href: windows-resource-protection-portal.md
   items:
-    - name: Informationen zu Windows-Ressourcenschutz
+    - name: Informationen Windows Resource Protection
       href: about-windows-file-protection.md
       items:
-        - name: Liste geschützter Ressourcen
+        - name: Liste der geschützten Ressourcen
           href: protected-file-list.md
-        - name: Erkennen von Ressourcenaustausch
+        - name: Erkennen des Ressourcenaustauschs
           href: detecting-file-replacement.md
-        - name: Unterstützte Mechanismen für die Ressourcen Ersetzung
+        - name: Unterstützte Mechanismen zum Ersetzen von Ressourcen
           href: supported-file-replacement-mechanisms.md
         - name: System File Checker
           href: system-file-checker.md
-        - name: Überlegungen zur WFP-Remote Verwaltung
+        - name: Überlegungen zur WFP-Remoteverwaltung
           href: remote-administration-considerations.md
-    - name: Windows-Ressourcenschutz Referenz
+    - name: Windows Resource Protection-Referenz
       href: windows-file-protection-reference.md
       items:
         - name: WRP-Funktionen
           href: wfp-functions.md
           items:
-            - name: Sfcgetfiles
+            - name: SfcGetFiles
               href: sfcgetfiles.md
               items:
                 - name: PPROTECT_FILE_ENTRY
@@ -29,7 +29,7 @@
               href: /windows/desktop/api/Sfc/nf-sfc-sfcgetnextprotectedfile
             - name: SfcIsFileProtected
               href: /windows/desktop/api/Sfc/nf-sfc-sfcisfileprotected
-            - name: Sfciskeyprotected
+            - name: SfcIsKeyProtected
               href: /windows/desktop/api/Sfc/nf-sfc-sfciskeyprotected
-        - name: WFP-Registrierungs Werte
+        - name: WFP-Registrierungswerte
           href: wfp-registry-values.md

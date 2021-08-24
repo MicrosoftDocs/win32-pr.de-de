@@ -1,9 +1,9 @@
 ---
-title: Button. hoverdownimage
-description: Das hoverdownimage-Attribut gibt das Bild an oder ruft es ab, das angezeigt wird, wenn sich die Schaltfläche im Zustand "gedrückt" befindet und der Benutzer mit dem Mauszeiger darüber bewegt wird.
+title: BUTTON.hoverDownImage
+description: Das hoverDownImage-Attribut gibt das Bild an, das angezeigt wird, wenn sich button im Abwärtszustand befindet, und der Benutzer mit dem Mauszeiger darauf zeigt, oder ruft es ab.
 ms.assetid: 06645307-50f1-400d-aa73-c48d0fba3ee1
 keywords:
-- Button. hoverdownimage-Fenster Media Player
+- BUTTON.hoverDownImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bc8221875656c38a35eb6539dce25f58133984f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bcdb23f9806e36cebd2f5da6a46a8307c268861d73f68361e07f56e9ce09dcc5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902400"
 ---
-# <a name="buttonhoverdownimage"></a>Button. hoverdownimage
+# <a name="buttonhoverdownimage"></a>BUTTON.hoverDownImage
 
-Das **hoverdownimage** -Attribut gibt das Bild an oder ruft es ab, das angezeigt wird, wenn sich die **Schaltfläche** im Zustand "gedrückt" befindet und der Benutzer mit dem Mauszeiger darüber bewegt wird.
+Das **hoverDownImage-Attribut** gibt das Bild an, das angezeigt wird, wenn sich **button** im Abwärtszustand befindet, und der Benutzer mit dem Mauszeiger darauf zeigt, oder ruft es ab.
 
 ``` syntax
         elementID.hoverDownImage
@@ -29,15 +29,15 @@ Das **hoverdownimage** -Attribut gibt das Bild an oder ruft es ab, das angezeigt
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen der Bilddatei enthält
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff,** die den Namen der Bilddatei enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die unterstützten Bildformate sind BMP, JPG, PNG und GIF.
 
-Das Standard Image ist das im " **downImage** "-Attribut angegebene Standard Image oder der Standardwert.
+Das Standardbild ist das im **downImage-Attribut** angegebene Image bzw. dessen Standardbild.
 
-Wenn das Hover-Bild größer als der definierte Bereich im Ambient-Attribut ist, wird das Bild mit dem Mauszeiger abgeschnitten.
+Wenn das Bild mit dem Hover nach unten größer als der definierte Bereich im Ambient-Attribut ist, wird das Bild mit dem Hover nach unten zugeschnitten.
 
 Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
 
@@ -47,7 +47,7 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -55,10 +55,10 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> <dt>
 
-[**Button. downImage**](button-downimage.md)
+[**BUTTON.downImage**](button-downimage.md)
 </dt> </dl>
 
  

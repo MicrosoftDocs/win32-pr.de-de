@@ -141,7 +141,7 @@ In diesem Abschnitt werden die anweisungen beschrieben, die von ShaderModell 5 u
 [\_ \_ hs-Kontrollpunktphase \_](hs-control-point-phase--sm5---asm-.md)  
 [hs \_ decls](hs-decls--sm5---asm-.md)  
 [hs \_ fork \_ phase](hs-fork-phase--sm5---asm-.md)  
-[hs \_ join phase (hs-Joinphase) \_](hs-join-phase--sm5---asm-.md)  
+[\_hs-Joinphase \_](hs-join-phase--sm5---asm-.md)  
 [iadd](iadd--sm4---asm-.md)  
 [**ibfe**](ibfe--sm5---asm-.md)  
 [ieq](ieq--sm4---asm-.md)  

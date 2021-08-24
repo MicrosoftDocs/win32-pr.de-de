@@ -1,43 +1,43 @@
 ---
-title: Einrichten einer DFÜ-Verbindung mit dem Internet
+title: Herstellen einer DFÜ-Verbindung mit dem Internet
 description: Die folgenden Funktionen werden verwendet, um Modemverbindungen zu verarbeiten.
 ms.assetid: dd33ed4b-eb7c-449c-b309-8f5c290a5a93
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ce03ecc67e27c67bb9807f473aac5210b03f755
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d05ac81096d657453d1ebaa0182f39d31af0fe96c01e73122a2de6e0ba9a765e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955590"
 ---
-# <a name="establishing-a-dial-up-connection-to-the-internet"></a>Einrichten einer DFÜ-Verbindung mit dem Internet
+# <a name="establishing-a-dial-up-connection-to-the-internet"></a>Herstellen einer DFÜ-Verbindung mit dem Internet
 
 Die folgenden Funktionen werden verwendet, um Modemverbindungen zu verarbeiten.
 
--   [**Internetautodial**](/windows/win32/api/winineti/nf-winineti-internetautodial)
--   [**Internetautodialhangup**](/windows/win32/api/winineti/nf-winineti-internetautodialhangup)
--   [**Internetwahl**](/windows/win32/api/winineti/nf-winineti-internetdial)
--   [**Internetgetconnectedstate**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstate)
--   [**Internetgetconnectedstateex**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstateex)
--   [**Internet Explorer**](/windows/win32/api/winineti/nf-winineti-internethangup)
--   [**Internetgoonline**](/windows/win32/api/winineti/nf-winineti-internetgoonline)
+-   [**InternetAutodial**](/windows/win32/api/winineti/nf-winineti-internetautodial)
+-   [**InternetAutodialHangup**](/windows/win32/api/winineti/nf-winineti-internetautodialhangup)
+-   [**InternetDial**](/windows/win32/api/winineti/nf-winineti-internetdial)
+-   [**InternetGetConnectedState**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstate)
+-   [**InternetGetConnectedStateEx**](/windows/win32/api/winineti/nf-winineti-internetgetconnectedstateex)
+-   [**InternetHangUp**](/windows/win32/api/winineti/nf-winineti-internethangup)
+-   [**InternetGoOnline**](/windows/win32/api/winineti/nf-winineti-internetgoonline)
 
 > [!Note]  
-> WinInet-DFÜ-Funktionen unterstützen keine Doppel Wählverbindungen, keine Smartcard-Authentifizierung oder Verbindungen, für die eine Registrierungs basierte Zertifizierung erforderlich ist.
+> WinINet-DFÜ-Funktionen unterstützen keine DFÜ-Verbindungen, SmartCard-Authentifizierung oder Verbindungen, die eine registrierungsbasierte Zertifizierung erfordern.
 
- 
-
-> [!Note]  
-> Ab Windows Vista und Windows Server 2008 verwenden die WinInet-DFÜ-Funktionen die [RAS-Funktionen](/windows/desktop/RRAS/remote-access-service-functions) , um eine DFÜ-Verbindung herzustellen. WinInet unterstützt die Funktionalität, die in der Funktion " [**RasDialDlg**](/windows/desktop/api/rasdlg/nf-rasdlg-rasdialdlga) " dokumentiert ist.
-
- 
+ 
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> Ab Windows Vista und Windows Server 2008 verwenden die WinINet-DFÜ-Funktionen [die RAS-Funktionen,](/windows/desktop/RRAS/remote-access-service-functions) um eine DFÜ-Verbindung herzustellen. WinINet unterstützt die In der [**RasDialDlg-Funktion dokumentierte**](/windows/desktop/api/rasdlg/nf-rasdlg-rasdialdlga) Funktionalität.
 
- 
+ 
 
- 
+> [!Note]  
+> WinINet unterstützt keine Serverimplementierung. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP Services (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
- 
+ 
+
+ 
+
+ 

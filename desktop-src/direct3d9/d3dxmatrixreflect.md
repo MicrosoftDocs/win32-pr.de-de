@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixReflect-Funktion (D3dx9math.h): Erstellt eine Matrix, die das Koordinatensystem einer Ebene widerspiegelt.'
+description: 'D3DXMatrixReflect-Funktion (D3dx9math.h): Erstellt eine Matrix, die das Koordinatensystem über eine Ebene widerspiegelt.'
 ms.assetid: f6dc3834-42f2-4ad0-8098-8c5e25e10d58
 title: D3DXMatrixReflect-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e4118a5f0a1cd997d5fab5fecebae449d4c30b09
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a26548299c73259016a640218a74c1ffa5e922cb52f6d13cdad5978e34a2e3c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027340"
 ---
 # <a name="d3dxmatrixreflect-function-d3dx9mathh"></a>D3DXMatrixReflect-Funktion (D3dx9math.h)
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
 Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Koordinatensystem über die Quellebene widerspiegelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion normalisiert die Ebenengleichung, bevor sie die reflektierte Matrix erstellt.
 
@@ -89,14 +89,14 @@ P = normalize(Plane);
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

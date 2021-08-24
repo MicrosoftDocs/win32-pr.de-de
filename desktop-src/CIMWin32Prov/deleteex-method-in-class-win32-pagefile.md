@@ -1,5 +1,5 @@
 ---
-description: 'DeleteEx-Methode der Win32_PageFile-Klasse: Löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.'
+description: 'DeleteEx-Methode der Win32_PageFile Klasse: Löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.'
 ms.assetid: ea31f92a-94b9-4d4d-abd9-6c304ac5caee
 ms.tgt_platform: multiple
 title: DeleteEx-Methode der Win32_PageFile Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 34e27e80c3cfaea352ee97ad29aed0b7ca358546
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a9e1d63e112ae33f33309e05e1b100f4c25101d158a2f3275d35110af74a20df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918440"
 ---
 # <a name="deleteex-method-of-the-win32_pagefile-class"></a>DeleteEx-Methode der Win32 \_ PageFile-Klasse
 
 Die **DeleteEx** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist. **DeleteEx** ist eine erweiterte Version der [**Delete-Methode.**](delete-method-in-class-win32-directory.md)
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -129,7 +129,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -158,17 +158,17 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ CIMV2<br/>                                                                  |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
 | MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

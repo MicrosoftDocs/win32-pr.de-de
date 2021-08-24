@@ -1,21 +1,21 @@
 ---
-description: Die \_ Methode Get Name Ruft den Namen der Sitzung ab.
+description: Die get \_ Name-Methode ruft den Sitzungsnamen ab.
 ms.assetid: 97b44a01-585b-434c-ad59-51c35e8a1ceb
-title: 'Itsdp:: get_name-Methode (sdpblb. h)'
+title: ITSdp::get_Name-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b41d431a76f3d0bb2122847e8ee5c3a4dde3c1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 930aaa1edcfb93f6a02a4ebe97acbbfcc1cfd42e8187d0ea14cf661c7ad7f66c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012890"
 ---
-# <a name="itsdpget_name-method"></a>Itsdp:: get \_ Name-Methode
+# <a name="itsdpget_name-method"></a>ITSdp::get \_ Name-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Methode **get \_ Name** Ruft den Namen der Sitzung ab. Dies muss eine ASCII-konvertierbare Zeichenfolge sein, wenn es sich um einen ASCII-Zeichensatz handelt. (Andernfalls kann es sich um eine beliebige **BSTR** -Zeichenfolge handeln.)
+Die **get \_ Name-Methode** ruft den Sitzungsnamen ab. Dies muss eine ascii-konvertierbare Zeichenfolge sein, wenn der Zeichensatz ASCII ist. (Andernfalls kann es eine beliebige **BSTR-Zeichenfolge** sein.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_Name(
 
 <dl> <dt>
 
-*ppName* \[ vorgenommen\]
+*ppName* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der den Sitzungs Namen enthält.
+Zeiger auf einen **BSTR,** der den Sitzungsnamen enthält.
 
 </dd> </dl>
 
@@ -48,18 +48,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *ppName* -Parameter ist kein gültiger Zeiger.<br/>       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *ppName-Parameter* ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den Parameter *ppName* zugewiesenen Arbeitsspeicher freizugeben.
+Die Anwendung muss [**SysFreeString verwenden,**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) um den für den *ppName-Parameter* zugeordneten Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -78,10 +78,10 @@ Die Anwendung muss [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sys
 
 <dl> <dt>
 
-[**Itsdp**](itsdp.md)
+[**ITSdp**](itsdp.md)
 </dt> <dt>
 
-[**Itsdp::p UT- \_ Name**](itsdp-put-name.md)
+[**ITSdp::put \_ Name**](itsdp-put-name.md)
 </dt> </dl>
 
  

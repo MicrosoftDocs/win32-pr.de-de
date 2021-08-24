@@ -1,10 +1,10 @@
 ---
-title: Change-Infrastructure-Master erweitert rechts
-description: Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu ändern.
+title: Erweitertes Recht "Change-Infrastructure-Master"
+description: Erweitertes Recht erforderlich, um den Besitzer der FSMO-Rolle der Infrastruktur zu ändern.
 ms.assetid: f91eb790-1a05-4fbb-b269-fd80e3499bdb
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Change-Infrastructure-Master Schema für erweiterte Rechte
+- Change-Infrastructure-Master erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bee4abf74860ba6564af65b9b94f44d08e4177d5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e2de28ff2be401a84a48eb17b3982cb8ae41cbf79200d23538068f596f31ff75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922410"
 ---
-# <a name="change-infrastructure-master-extended-right"></a>Change-Infrastructure-Master erweitert rechts
+# <a name="change-infrastructure-master-extended-right"></a>Erweitertes Recht "Change-Infrastructure-Master"
 
-Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu ändern.
+Erweitertes Recht erforderlich, um den Besitzer der FSMO-Rolle der Infrastruktur zu ändern.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | Change-Infrastructure-Master         |
-| Anzeigename | Infrastruktur Master ändern         |
-| Rights-GUID  | cc17b1fb-33d9-11d2-97d4-00c04fd8d5cd |
+| Anzeigename | Ändern des Infrastrukturmasters         |
+| Rechte-GUID  | cc17b1fb-33d9-11d2-97d4-00c04fd8d5cd |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 
@@ -71,8 +71,8 @@ Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 
@@ -82,8 +82,8 @@ Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 
@@ -93,8 +93,8 @@ Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 
@@ -104,8 +104,8 @@ Erweiterte Rechte erforderlich, um den Besitzer der Infrastruktur-FSMO-Rolle zu 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------------|
-| Applies-To              | [**Infrastruktur-aktualisieren**](c-infrastructureupdate.md)<br/> |
-| Lokalisierung-Display-ID | 50                                                                 |
+| Applies-To              | [**Infrastructure-Update**](c-infrastructureupdate.md)<br/> |
+| Lokalisierungsanzeige-ID | 50                                                                 |
 
 
 

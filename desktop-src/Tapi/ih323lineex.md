@@ -34,7 +34,7 @@ Die **IH323LineEx-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                 | BESCHREIBUNG                                                              |
+| Methode                                                                                 | Beschreibung                                                              |
 |:---------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|
 | [**SetAlias**](ih323lineex-setalias.md)                                               | Konfiguriert einen H.323-Standardalias für die Adresse.<br/>             |
 | [**SetDefaultCapabilityPreferrence**](ih323lineex-setdefaultcapabilitypreferrence.md) | Konfiguriert die Einstellungsgewichtung für Standardfunktionen.<br/> |
@@ -57,7 +57,7 @@ Die **IH323LineEx-Schnittstelle** verfügt über diese Methoden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

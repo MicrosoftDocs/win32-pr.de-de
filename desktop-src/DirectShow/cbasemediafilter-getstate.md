@@ -1,7 +1,7 @@
 ---
-description: 'Die GetState-Methode ruft den Status des Objekts ab (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die imediafilter:: GetState-Methode.'
+description: Die GetState-Methode ruft den Zustand des Objekts ab (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die IMediaFilter::GetState-Methode.
 ms.assetid: d4cc7e2b-5ea5-4165-842f-becc3a81cbce
-title: Cbasemediafilter. GetState-Methode (amfilter. h)
+title: CBaseMediaFilter.GetState-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: eeda91433e0e1474e936902da115e15c37e32e09
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2a4c70412311be5ea4843a823e961fae34de2974f7365f51286ff6da36e41dcb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966700"
 ---
-# <a name="cbasemediafiltergetstate-method"></a>Cbasemediafilter. GetState-Methode
+# <a name="cbasemediafiltergetstate-method"></a>CBaseMediaFilter.GetState-Methode
 
-Die `GetState` -Methode ruft den Status des Objekts ab (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die [**imediafilter:: GetState**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-getstate) -Methode.
+Die `GetState` -Methode ruft den Zustand des Objekts ab (wird ausgeführt, beendet oder angehalten). Diese Methode implementiert die [**IMediaFilter::GetState-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-getstate)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,27 +43,27 @@ HRESULT GetState(
 
 <dl> <dt>
 
-*dwmillisecstimeout* 
+*dwMilliSecsTimeout* 
 </dt> <dd>
 
-Timeout Intervall in Millisekunden.
+Time out interval ,in milliseconds. (Time out interval in milliseconds(Time out-Intervall in Millisekunden))
 
 </dd> <dt>
 
 *State* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Member des Enumerationstyps des [**Filter \_ Zustands**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Objekts angibt.
+Zeiger auf eine Variable, die einen Member des aufzählten [**FILTER \_ STATE-Typs**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Objekts angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den S \_ OK-oder E- \_ Zeiger zurück.
+Gibt S \_ OK oder E \_ POINTER zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Basisklasse sind alle Zustandsübergänge synchron, und der Parameter " *dwmillisecstimeout* " wird ignoriert. Wenn eine abgeleitete Klasse asynchrone Zustandsübergänge ausführt, sollte Sie diese Methode überschreiben, um während der Zustandsübergänge zu warten, wobei ein Timeout von *dwmillisecstimeout* -Millisekunden auftritt.
+In der Basisklasse sind alle Zustandsübergänge synchron, und der *dwMilliSecsTimeout-Parameter* wird ignoriert. Wenn eine abgeleitete Klasse asynchrone Zustandsübergänge ausführt, sollte sie diese Methode überschreiben, um während Zustandsübergängen mit einem Timeout von *dwMilliSecsTimeout* Millisekunden zu warten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ In der Basisklasse sind alle Zustandsübergänge synchron, und der Parameter " *
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

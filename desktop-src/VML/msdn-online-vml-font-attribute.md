@@ -13,14 +13,14 @@ ms.locfileid: "119986660"
 ---
 # <a name="vml-font-attribute"></a>VML-Schriftartattribut
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Gibt einen Verbundwert von Schriftartattributen an. Lese-/Schreibzugriff. **Zeichenfolge.**
+Gibt einen zusammengesetzten Wert von Schriftartattributen an. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -38,13 +38,13 @@ Gibt einen Verbundwert von Schriftartattributen an. Lese-/Schreibzugriff. **Zeic
 
 **Anmerkungen**
 
-Definiert die Attribute einer Schriftart, einschließlich Familie, Stil, Gewichtung, Größe und Variante. Die Reihenfolge der Definitionen in der Zeichenfolge ist: **font-style**, **font-variant**, **font-weight**, **font-size**, **line-height** und **font-family**. Die Werte sind identisch mit den Standardattributen im HTML-Format.
+Definiert die Attribute einer Schriftart, einschließlich Familie, Stil, Gewichtung, Größe und Variante. Die Reihenfolge der Definitionen in der Zeichenfolge lautet: **Schriftschnitt,** **Schriftartvariante,** **Schriftbreite,** **Schriftgrad,** **Zeilenhöhe** und **Schriftfamilie**. Die Werte sind identisch mit den Html-Standardformatattributen.
 
 *VML-Standardattribut*
 
 **Beispiel**
 
-Die Schriftart des Textpfadtexts ist italisch, klein, fett, arial mit 36 Punkt.
+Die Schriftart des Textpfadtexts ist kursiv, kleine Kapselungen, fett, Arial mit 36 Punkten.
 
 
 ```HTML

@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das von einer Instant Messaging-Anwendung generiert wird, wenn eine Entität versucht, einer Konversation in der Jugend Steuerungsmethode beizutreten.
+description: Benutzerspezifisches Ereignis, das von einer Instant Messaging-Anwendung generiert wird, wenn eine Entität versucht, einer Konversation bei der Jugendkontrolle beizukommen.
 ms.assetid: 5251234b-0280-4d5d-80f5-295d720a89d1
-title: WPCEVENT_IM_JOIN-Ereignis (wpcevent. h)
+title: WPCEVENT_IM_JOIN -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b020eb3d4204f946002f59f472e5c95b715f88f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 181bc849cf89e8a78a7a5aaad97463baf0c611d99ca0dc05caf9bfaf879eb804
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951290"
 ---
-# <a name="wpcevent_im_join-event"></a>Wpcevent \_ im \_ Join-Ereignis
+# <a name="wpcevent_im_join-event"></a>WPCEVENT \_ IM \_ JOIN-Ereignis
 
-Pro-Benutzer-Ereignis, das von einer Instant Messaging-Anwendung generiert wird, wenn eine Entität versucht, einer Konversation in der Jugend Steuerungsmethode beizutreten.
+Benutzerspezifisches Ereignis, das von einer Instant Messaging-Anwendung generiert wird, wenn eine Entität versucht, einer Konversation bei der Jugendkontrolle beizukommen.
 
 
 ```C++
@@ -29,70 +29,70 @@ const EVENT_DESCRIPTOR WPCEVENT_IM_JOIN = {0x8, 0x0, 0x10, 0x4, 0x16, 0x8, 0x800
 *AppName* 
 </dt> <dd>
 
-Der Name der Anwendung, die das Ereignis erzeugt.
+Der Name der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Versions Zeichenfolge für die Anwendung, die das Ereignis erzeugt.
+Die Versionszeichenfolge für die Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AccountName* 
 </dt> <dd>
 
-Die Identitäts Zeichenfolge für das Instant Messaging-Konto für diesen Benutzer.
+Die Identitätszeichenfolge des Instant Messaging-Kontos für diesen Benutzer.
 
 </dd> <dt>
 
-*Geseld* 
+*ConvID* 
 </dt> <dd>
 
 Der Bezeichner für diese Konversation.
 
 </dd> <dt>
 
-*Joiningip* 
+*JoiningIP* 
 </dt> <dd>
 
-Eine Zeichenfolge, die die IP-Adresse des Computers enthält, der dieser Konversation Beitritt.
+Eine Zeichenfolge, die die IP-Adresse des Computers enthält, der dieser Konversation beitritt.
 
 </dd> <dt>
 
-*Joininguser* 
+*JoiningUser* 
 </dt> <dd>
 
-Die Identitäts Zeichenfolge für das Instant Messaging-Konto für den Benutzer, der beitreten soll.
+Die Identitätszeichenfolge des Instant Messaging-Kontos für den Benutzer, der beitritt.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse nicht verwendet werden und welche Steuerelemente verwendet werden.
 
 </dd> <dt>
 
 *MemberCount* 
 </dt> <dd>
 
-Die Anzahl der Teilnehmer, die sich in der Konversation befinden und Identitäten im Element Feld definiert sind.
+Die Anzahl der Teilnehmer, die an der Konversation teilnehmen und für die identitäten im Memberfeld definiert sind.
 
 </dd> <dt>
 
 *Member* 
 </dt> <dd>
 
-Eine durch Trennzeichen getrennte Zeichenfolge, die für alle aktuellen Member dieser Konversation Konto Identitäts Zeichenfolgen für Instant Messaging enthält.
+Eine durch Trennzeichen getrennte Zeichenfolge, die Die Identitätszeichenfolgen des Instant Messaging-Kontos für alle aktuellen Mitglieder dieser Konversation enthält.
 
 </dd> <dt>
 
 *Sender* 
 </dt> <dd>
 
-Die Identitäts Zeichenfolge für das Instant Messaging-Konto für den Benutzer, der die Anforderung zum beitreten an die Konversation sendet.
+Die Identitätszeichenfolge des Instant Messaging-Kontos für den Benutzer, der die Anforderung zum Beitreten zur Konversation vorgibt.
 
 </dd> </dl>
 
@@ -102,9 +102,9 @@ Die Identitäts Zeichenfolge für das Instant Messaging-Konto für den Benutzer,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -112,10 +112,10 @@ Die Identitäts Zeichenfolge für das Instant Messaging-Konto für den Benutzer,
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

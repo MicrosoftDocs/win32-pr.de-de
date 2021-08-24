@@ -1,7 +1,7 @@
 ---
-description: Signalisiert, dass die aktuelle audiostreamnummer für den DVD-Haupttitel geändert wurde.
+description: Signalisiert, dass sich die aktuelle Audiostreamnummer für den DVD-Haupttitel geändert hat.
 ms.assetid: ab626c6b-765a-4b2e-be96-f45260d1a078
-title: EC_DVD_AUDIO_STREAM_CHANGE (dvdevcode. h)
+title: EC_DVD_AUDIO_STREAM_CHANGE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 947e19310a77869dbff97851e1ffa0684a3e43a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2ad6015ef132a98d02dc207cb9d43b6324ea3a05c541f43e295e75d13b5bb7ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998130"
 ---
-# <a name="ec_dvd_audio_stream_change"></a>Änderung des EC \_ \_ -DVD- \_ Audiostreams \_
+# <a name="ec_dvd_audio_stream_change"></a>ÄNDERUNG DES \_ \_ EC-DVD-AUDIOSTREAMS \_ \_
 
-Signalisiert, dass die aktuelle audiostreamnummer für den DVD-Haupttitel geändert wurde.
+Signalisiert, dass sich die aktuelle Audiostreamnummer für den DVD-Haupttitel geändert hat.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,7 +31,7 @@ Signalisiert, dass die aktuelle audiostreamnummer für den DVD-Haupttitel geänd
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD** -Wert, der die neue audiostreamnummer des Benutzers angibt. Audiostreamnummern reichen von 0 bis 7. Der Stream 0xFFFFFFFF gibt an, dass kein Stream ausgewählt ist.
+**DWORD-Wert,** der die neue Audiostreamnummer des Benutzers angibt. Audiostreamnummern liegen zwischen 0 und 7. Stream 0xFFFFFFFF gibt an, dass kein Stream ausgewählt ist.
 
 </dd> <dt>
 
@@ -42,9 +42,9 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der aktuelle Audiostream kann sich automatisch ändern, indem ein Navigations Befehl, der auf der Festplatte erstellt wurde, sowie über die Anwendungssteuerung mithilfe der [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) -Schnittstelle erstellt wird.
+Der aktuelle Audiostream kann automatisch mit einem Navigationsbefehl geändert werden, der auf dem Datenträger erstellt wurde, sowie über die Anwendungssteuerung mithilfe der [**IDvdControl2-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2)
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -54,21 +54,21 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

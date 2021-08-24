@@ -1,31 +1,31 @@
 ---
-description: Implementierung der Umstellung von einem Text frei Hand Objekt (Tink) in frei Hand Eingaben.
+description: Implementierung der Konvertierung von einem Freihandobjekt (tInk) in Freihand.
 ms.assetid: 9365da4c-3667-49f0-838f-f099d28dab44
-title: Umrechnen eines Text frei Hand Objekts in frei Hand Eingaben
+title: Konvertieren eines Text-Ink-Objekts in eine Ink-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b8c7fe4a7847834fffda2df9c4ab94293756cee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eef543fda3ed53123e99ee042aed67af9cedfef3533ae47bc40d8dd284a73675
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941160"
 ---
-# <a name="converting-a-text-ink-object-to-ink"></a>Umrechnen eines Text frei Hand Objekts in frei Hand Eingaben
+# <a name="converting-a-text-ink-object-to-ink"></a>Konvertieren eines Text-Ink-Objekts in eine Ink-Datei
 
-Implementierung der Umstellung von einem Text frei Hand Objekt (Tink) in frei Hand Eingaben.
+Implementierung der Konvertierung von einem Freihandobjekt (tInk) in Freihand.
 
-## <a name="to-convert-from-a-text-ink-object-to-ink"></a>So konvertieren Sie ein Text frei Hand Objekt in frei Hand Eingaben
+## <a name="to-convert-from-a-text-ink-object-to-ink"></a>So konvertieren Sie ein Text-Ink-Objekt in eine Ink-Objekt
 
-1.  Verwenden Sie die [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) -Schnittstelle, um den Inhalt des Text frei Hand Objekts in einen Stream zu schreiben. Das Text frei Hand Objekt verwendet das frei Hand Format, um in den Stream zu schreiben.
-2.  Liest den Inhalt des Streams in ein Bytearray ein.
-3.  Verwenden Sie die [**Load**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-load) -Methode des [**InkDisp**](inkdisp-class.md) -Objekts, um den Inhalt des Streams in das **InkDisp** -Objekt zu laden.
+1.  Verwenden Sie die [IPersistStream-Schnittstelle,](/windows/win32/api/objidl/nn-objidl-ipersiststream) um den Inhalt des Freihandtextobjekts in einen Stream zu schreiben. Das Text-Ink-Objekt verwendet das serialisierte Format von Ink, um in den "steam" zu schreiben.
+2.  Liest den Inhalt des Streams in ein BYTE-Array.
+3.  Verwenden Sie die [**Load-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-load) des [**InkDisp-Objekts,**](inkdisp-class.md) um den Inhalt des Streams in das **InkDisp-Objekt** zu laden.
 
-## <a name="text-ink-object-to-ink-object-example"></a>Beispiel für Text frei Hand Objekt an Ink-Objekt
+## <a name="text-ink-object-to-ink-object-example"></a>Beispiel: Text-Ink-Objekt in Ink-Objekt
 
-Das folgende Code Fragment konvertiert ein Text frei Hand Objekt in frei Hand Eingaben.
+Das folgende Codefragment konvertiert ein Text-Ink-Objekt in Ink.
 
-Zuerst erhält der Code ein Text frei Hand Objekt.
+Zunächst ruft der Code ein Text-Ink-Objekt ab.
 
 
 ```C++
@@ -37,7 +37,7 @@ CComPtr<IInkObject *> spITextInk;
 
 
 
-Anschließend erstellt der Code einen Zeiger für den Stream, der den Inhalt des Text frei Hand Objekts enthält.
+Anschließend erstellt der Code einen Zeiger für den Stream, der den Inhalt des Textink-Objekts enthält.
 
 
 ```C++
@@ -47,7 +47,7 @@ CComPtr<IStream *> spStream = NULL;
 
 
 
-Der Code ruft dann die [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) -Schnittstelle aus dem Text frei Hand Objekt ab.
+Anschließend ruft der Code die [IPersistStream-Schnittstelle](/windows/win32/api/objidl/nn-objidl-ipersiststream) aus dem Freihandtextobjekt ab.
 
 
 ```C++
@@ -60,7 +60,7 @@ ASSERT(SUCCEEDED(hr) && spIPersistStream);
 
 
 
-Anschließend wird im Code die [IPersistStream](/windows/win32/api/objidl/nn-objidl-ipersiststream) -Schnittstelle verwendet, um den Inhalt des Text frei Hand Objekts in den Stream zu speichern.
+Anschließend verwendet der Code die [IPersistStream-Schnittstelle,](/windows/win32/api/objidl/nn-objidl-ipersiststream) um den Inhalt des Freihandtextobjekts im Stream zu speichern.
 
 
 ```C++
@@ -77,7 +77,7 @@ if( SUCCEEDED(hr) && pIPersistStream )
 
 
 
-Anschließend erstellt der Code ein [**InkCollector**](inkcollector-class.md) -Objekt, erstellt ein [**InkDisp**](inkdisp-class.md) -Objekt für den **InkCollector**, fügt den **InkCollector** an das Anwendungsfenster an und aktiviert die frei Hand Auflistung für den **InkCollector**.
+Anschließend erstellt der Code ein [**InkCollector-Objekt,**](inkcollector-class.md) erstellt ein [**InkDisp-Objekt**](inkdisp-class.md) für **inkCollector,** fügt das **InkCollector-Objekt** an das Anwendungsfenster an und aktiviert die **InkCollector-Auflistung auf dem InkCollector.**
 
 
 ```C++
@@ -113,7 +113,7 @@ if( SUCCEEDED(hr) && spStream)
 
 
 
-Anschließend ruft der Code die Größe des Streams ab und erstellt ein sicheres Array, um den Inhalt des Streams zu speichern.
+Anschließend ruft der Code die Größe des Streams ab und erstellt ein sicheres Array, das den Inhalt des Streams enthält.
 
 
 ```C++
@@ -144,7 +144,7 @@ Anschließend ruft der Code die Größe des Streams ab und erstellt ein sicheres
 
 
 
-Schließlich greift der Code auf das sichere Array zu und verwendet die [**Load**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-load) -Methode des [**InkDisp**](inkdisp-class.md) -Objekts, um die frei Hand Eingaben aus dem Array zu laden.
+Schließlich greift der Code auf das sichere Array zu und verwendet die [**Load-Methode**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-load) des [**InkDisp-Objekts,**](inkdisp-class.md) um die Ink-Ink aus dem Array zu laden.
 
 
 ```C++

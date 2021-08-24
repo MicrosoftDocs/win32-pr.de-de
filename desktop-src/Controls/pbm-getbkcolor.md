@@ -1,9 +1,9 @@
 ---
-title: PBM_GETBKCOLOR Meldung (kommstrg. h)
+title: PBM_GETBKCOLOR Meldung (Commctrl.h)
 description: Ruft die Hintergrundfarbe der Statusanzeige ab.
 ms.assetid: 9526ed78-08d9-468f-831b-72bb7c8c92d1
 keywords:
-- Windows-Steuerelemente für PBM_GETBKCOLOR Meldung
+- PBM_GETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2240025629bbcc242ea7ed47be2e3db42ae73b15
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1462d864df0440cd0567e6d6b1d04261818bb98ab4a6b5a803272e63abcb8d5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919520"
 ---
-# <a name="pbm_getbkcolor-message"></a>PBM \_ GetBkColor-Nachricht
+# <a name="pbm_getbkcolor-message"></a>PBM \_ GETBKCOLOR-Nachricht
 
 Ruft die Hintergrundfarbe der Statusanzeige ab.
 
@@ -39,11 +39,11 @@ Ruft die Hintergrundfarbe der Statusanzeige ab.
 
 Gibt die Hintergrundfarbe der Statusanzeige zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist die Farbe, die von der [**PBM- \_ SetBkColor**](pbm-setbkcolor.md) -Nachricht festgelegt wird. Der Standardwert ist CLR \_ Default, der in "kommctrl. h" definiert ist.
+Dies ist die Farbe, die von der [**PBM \_ SETBKCOLOR-Nachricht**](pbm-setbkcolor.md) festgelegt wird. Der Standardwert ist CLR \_ DEFAULT, der in commctrl.h definiert ist.
 
-Diese Funktion wirkt sich nur auf den klassischen Modus aus, nicht auf einen visuellen Stil.
+Diese Funktion wirkt sich nur auf den klassischen Modus und nicht auf visuelle Stile aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Diese Funktion wirkt sich nur auf den klassischen Modus aus, nicht auf einen vis
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

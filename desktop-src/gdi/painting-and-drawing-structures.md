@@ -1,5 +1,5 @@
 ---
-description: Die folgende -Struktur wird beim Zeichnen und Zeichnen verwendet.
+description: Die folgende Struktur wird beim Zeichnen und Zeichnen verwendet.
 ms.assetid: 99fa13b8-0b62-4a72-ad08-78bb3779077a
 title: Zeichnen und Zeichnen von Strukturen
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119965600"
 ---
 # <a name="painting-and-drawing-structures"></a>Zeichnen und Zeichnen von Strukturen
 
-Die folgende -Struktur wird beim Zeichnen und Zeichnen verwendet.
+Die folgende Struktur wird beim Zeichnen und Zeichnen verwendet.
 
 [**PAINTSTRUCT**](/windows/win32/api/winuser/ns-winuser-paintstruct)
 

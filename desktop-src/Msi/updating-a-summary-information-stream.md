@@ -1,25 +1,25 @@
 ---
-description: Der Wert der Zusammenfassungs Eigenschaft "Revisionsnummer" im Zusammenfassungs Informationsdaten Strom muss bei der Lokalisierung einer Datenbank in einen neuen, eindeutigen Wert geändert werden, da die Installations Datenbank geändert wird. Siehe Paket Codes.
+description: Der Wert der Zusammenfassungseigenschaft Revisionsnummer im Zusammenfassungsinformationsstream muss beim Lokalisieren einer Datenbank in einen neuen eindeutigen Wert geändert werden, da die Installationsdatenbank geändert wird. Weitere Informationen finden Sie unter Paketcodes.
 ms.assetid: fce292c5-6702-4948-a13a-2a9ccacbd5c9
-title: Aktualisieren eines Zusammenfassungs Informationsdaten Stroms
+title: Aktualisieren eines Zusammenfassungsinformationsstreams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37c022023f79d8f4d3999db6e11e4cf65b73e1ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d95e6a0cf09af5d4a024f707c0694d89def47abf8f731f394c55a11232bc07f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039280"
 ---
-# <a name="updating-a-summary-information-stream"></a>Aktualisieren eines Zusammenfassungs Informationsdaten Stroms
+# <a name="updating-a-summary-information-stream"></a>Aktualisieren eines Zusammenfassungsinformationsstreams
 
-Der Wert der [**Zusammenfassungs Eigenschaft "Revisionsnummer**](revision-number-summary.md) " im [Zusammenfassungs Informationsdaten Strom](summary-information-stream.md) muss bei der Lokalisierung einer Datenbank in einen neuen, eindeutigen Wert geändert werden, da die Installations Datenbank geändert wird. Siehe [Paket Codes](package-codes.md).
+Der Wert der Zusammenfassungseigenschaft [](summary-information-stream.md) [**Revisionsnummer**](revision-number-summary.md) im Zusammenfassungsinformationsstream muss beim Lokalisieren einer Datenbank in einen neuen eindeutigen Wert geändert werden, da die Installationsdatenbank geändert wird. Weitere Informationen [finden Sie unter Paketcodes](package-codes.md).
 
-Der Wert der [**Template Summary**](template-summary.md) -Eigenschaft im Zusammenfassungs Informationsdaten Strom muss in den numerischen sprach Bezeichner (langid) der neuen Sprache geändert werden.
+Der Wert der [**Eigenschaft Vorlagenzusammenfassung**](template-summary.md) im Zusammenfassungsinformationsstream muss in den numerischen Sprachbezeichner (LANGID) der neuen Sprache geändert werden.
 
-Wenn die beschreibenden Text Zeichenfolgen im Zusammenfassungs Informationsdaten Strom in die neue Sprache lokalisiert werden, muss die [**Codepage-Zusammenfassungs**](codepage-summary.md) Eigenschaft auf die richtige Codepage für die neue Sprache festgelegt werden.
+Wenn die beschreibenden Textzeichenfolgen im Zusammenfassungsinformationsstream in der neuen Sprache lokalisiert werden, muss die [**Codepage Summary-Eigenschaft**](codepage-summary.md) auf die richtige Codepage für die neue Sprache festgelegt werden.
 
-Sie können den Zusammenfassungs Datenstrom des lokalisierten Pakets mit dem gleichen Verfahren wie beim [Hinzufügen von Zusammenfassungs Informationen](adding-summary-information.md)ändern. Ein Beispiel für die Verwendung der Methoden zur Daten Bank Zusammenfassung finden Sie auch im Windows Installer SDK als Dienst WiSumInf.vbs. Weitere Informationen zu WiSumInf.vbs finden Sie unter [Verwalten von Zusammenfassungs Informationen](manage-summary-information.md).
+Sie können den Zusammenfassungsinformationsstream des lokalisierten Pakets mit dem gleichen Verfahren wie unter Hinzufügen von [Zusammenfassungsinformationen ändern.](adding-summary-information.md) Ein Beispiel, das die Verwendung der Methoden für Datenbankzusammenfassungsinformationen demonstriert, wird auch im Windows Installer SDK als Hilfsprogramm WiSumInf.vbs. Weitere Informationen zu WiSumInf.vbs finden Sie unter [Verwalten von Zusammenfassungsinformationen.](manage-summary-information.md)
 
 [Fortsetzen](adding-localized-resources.md)
 

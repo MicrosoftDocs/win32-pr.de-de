@@ -15,11 +15,11 @@ ms.locfileid: "119978430"
 
 Anbieter sollten die folgenden Strukturtypen für Authentifizierungsprotokolle und Authentifizierungsanbieter verwenden:
 
--   [**\_EAP-INFO ZU PPS \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_info)
--   [**EMAILS \_ EAP \_ INPUT**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_input)
--   [**AUSGABE DES \_ EAP-AUSGABEWERTS FÜR DIE EAP-AUSGABE \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_output)
--   [**EMAILS \_ EAP \_ PACKET**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_packet)
--   [**\_RAS-AUTH-ATTRIBUT \_**](/windows/desktop/api/Raseapif/ns-raseapif-ras_auth_attribute)
+-   [**INFO \_ ZUM EMAIL-AAP \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_info)
+-   [**\_EMAIL-EAP-EINGABE \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_input)
+-   [**AUSGABE VON COMMERCE \_ EAP \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_output)
+-   [**\_EMAIL-EAP-PAKET \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_packet)
+-   [**\_ \_ RAS-AUTHENTIFIZIERUNGSATTRIBUT**](/windows/desktop/api/Raseapif/ns-raseapif-ras_auth_attribute)
 
  
 

@@ -13,7 +13,7 @@ ms.locfileid: "119961580"
 ---
 # <a name="iagentcommandwindowgetsize"></a>IAgentCommandWindow::GetSize
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetSize(
@@ -22,7 +22,7 @@ HRESULT GetSize(
 );
 ```
 
-Ruft die aktuelle Größe des Fensters "Sprachbefehle" ab.
+Ruft die aktuelle Größe des Sprachbefehlsfensters ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -31,14 +31,14 @@ Ruft die aktuelle Größe des Fensters "Sprachbefehle" ab.
 <span id="plWidth"></span><span id="plwidth"></span><span id="PLWIDTH"></span>*plWidth*
 </dt> <dd>
 
-Adresse einer Variablen, die die Breite des Sprachbefehlsfensters in Pixel relativ zum Bildschirmursprung (oben links) empfängt.
+Adresse einer Variablen, die die Breite des Sprachbefehlsfensters in Pixel empfängt, relativ zum Ursprung des Bildschirms (links oben).
 
 </dd> <dt>
 
 <span id="plHeight"></span><span id="plheight"></span><span id="PLHEIGHT"></span>*plHeight*
 </dt> <dd>
 
-Adresse einer Variablen, die die Höhe des Sprachbefehlsfensters in Pixel relativ zum Ursprung des Bildschirms (oben links) empfängt.
+Adresse einer Variablen, die die Höhe des Fensters für Sprachbefehle in Pixel relativ zum Ursprung des Bildschirms (links oben) empfängt.
 
 </dd> </dl>
 

@@ -1,78 +1,78 @@
 ---
-description: C++-Anwendungen können steuern, wie sich der Nebel auf die Farbe von Objekten in einer Szene auswirkt, indem Sie ändern, wie Microsoft Direct3D Nebeleffekte über die Distanz berechnet.
+description: C++-Anwendungen können steuern, wie sich Beeinträchtigungen auf die Farbe von Objekten in einer Szene auswirken, indem sie ändern, wie Microsoft Direct3D Effekte im Lauf der Entfernung berechnet.
 ms.assetid: b7148ae8-45c7-4dbe-8295-0335c7fdeff0
-title: Nebel Formeln (Direct3D 9)
+title: Formeln für Formeln (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75150a00d491f1e3fc1ea1444209449c1c2a825d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ac92b6d00ff5f4d4ec03dbe7bb40365917f8b835fd121cdc934c470c45c38814
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026998"
 ---
-# <a name="fog-formulas-direct3d-9"></a>Nebel Formeln (Direct3D 9)
+# <a name="fog-formulas-direct3d-9"></a>Formeln für Formeln (Direct3D 9)
 
-C++-Anwendungen können steuern, wie sich der Nebel auf die Farbe von Objekten in einer Szene auswirkt, indem Sie ändern, wie Microsoft Direct3D Nebeleffekte über die Distanz berechnet. Der [**D3DFOGMODE**](./d3dfogmode.md) -Enumerationstyp enthält Elemente, die die drei Nebel Formeln bezeichnen. Alle Formeln berechnen einen Nebel Faktor als eine Funktion der Entfernung, wobei die Parameter angegeben werden, die von der Anwendung festgelegt werden.
+C++-Anwendungen können steuern, wie sich Beeinträchtigungen auf die Farbe von Objekten in einer Szene auswirken, indem sie ändern, wie Microsoft Direct3D Effekte im Lauf der Entfernung berechnet. Der [**D3DFOGMODE-Enumerationstyp**](./d3dfogmode.md) enthält Member, die die drei Formeln identifizieren. Alle Formeln berechnen einen Faktor für die Auslastung als Funktion des Abstands, vorausgesetzt, die Parameter werden von Ihrer Anwendung festgelegt.
 
-## <a name="linear-fog"></a>Linearer Nebel
+## <a name="linear-fog"></a>Lineare Linienlinie
 
-Dies wird mit der folgenden D3DFOG \_ linearen Gleichung festgelegt.
+Dies wird mit der folgenden D3DFOG \_ LINEAR-Gleichung festgelegt.
 
-![Gleichung von Direct3D linear Nebel](images/fogliner.png)
-
-where
-
--   Start ist der Abstand, bei dem die Nebeleffekte beginnen.
--   "End" ist die Entfernung, bei der die Auswirkungen von Nebel nicht mehr zunehmen.
--   d stellt die Tiefe oder die Entfernung vom Standpunkt dar. Bei Bereichs basiertem Nebel ist der Wert für d der Abstand zwischen der Kameraposition und einem Scheitelpunkt. Bei einem nicht Bereichs basierten Nebel ist der Wert für d der absolute Wert der Z-Koordinate im Kamerabereich.
-
-## <a name="exponential-fog"></a>Exponentieller Nebel
-
-Lineare und exponentielle Formeln werden sowohl für Pixel Nebel als auch für Scheitelpunkt Nebel unterstützt.
-
-Dies wird mit der folgenden D3DFOG \_ Exp-Gleichung festgelegt.
-
-![Gleichung des exponentiellen Direct3D-Nebel Werts](images/fogexp.png)
+![Gleichung des linearen Direct3d-Gleichungsrades](images/fogliner.png)
 
 where
 
--   e ist die Basis des natürlichen Logarithmus (ungefähr 2,71828).
--   die Dichte ist eine beliebige Nebeldichte, die zwischen 0,0 und 1,0 liegen kann.
--   d stellt die Tiefe oder die Entfernung vom Standpunkt dar, wie bereits erwähnt.
+-   start ist der Abstand, ab dem Die Effekte beginnen.
+-   end ist der Abstand, bei dem sich die Effekte nicht mehr erhöhen.
+-   d stellt die Tiefe oder den Abstand vom Blickpunkt dar. Bei bereichsbasiertem Licht ist der Wert für d der Abstand zwischen der Kameraposition und einem Scheitelpunkt. Bei nicht bereichsbasierten Abmessungen ist der Wert für d der absolute Wert der Z-Koordinate im Kameraraum.
 
-Dies wird mit der folgenden D3DFOG \_ exp2 Gleichung festgelegt.
+## <a name="exponential-fog"></a>Exponentielles Gleiten
 
-![Gleichung von Direct3D exponentiellem 2-Nebel](images/fogexp2.png)
+Lineare und exponentielle Formeln werden sowohl für Pixel- als auch für Scheitelpunktkurven unterstützt.
+
+Dies wird mit der folgenden D3DFOG \_ EXP-Gleichung festgelegt.
+
+![Gleichung des exponentiellen Direct3d-Gleitens](images/fogexp.png)
 
 where
 
--   e ist die Basis des natürlichen Logarithmus, wie oben angegeben.
--   die Dichte ist eine beliebige Nebeldichte, die wie oben angegeben zwischen 0,0 und 1,0 reichen kann.
--   d stellt die Tiefe oder die Entfernung vom Standpunkt dar, wie oben angegeben.
+-   e ist die Basis natürlicher Logarithmen (ca. 2,71828).
+-   density ist eine beliebige Dichte von 0,0 bis 1,0.
+-   d stellt die Tiefe oder den Abstand vom Standpunkt dar, wie zuvor erwähnt.
+
+Dies wird mit der folgenden D3DFOG \_ EXP2-Gleichung festgelegt.
+
+![Gleichung von direct3d exponential 2-2-Gleichung](images/fogexp2.png)
+
+where
+
+-   e ist die Basis der natürlichen Logarithmen, wie oben beschrieben.
+-   density ist eine beliebige Dichte von 0,0 bis 1,0, wie oben beschrieben.
+-   d stellt die Tiefe oder den Abstand vom Standpunkt dar, wie oben angegeben.
 
 > [!Note]  
-> Das System speichert den Nebel Faktor in der Alpha Komponente der Glanz Farbe eines Scheitel Punkts. Wenn Ihre Anwendung ihre eigene Transformation und Beleuchtung durchführt, können Sie die Werte für den Nebel Faktor manuell einfügen, damit Sie vom System während des Renderings angewendet werden.
+> Das System speichert den Knotenfaktor in der Alphakomponente der Glanzfarbe für einen Scheitelpunkt. Wenn Ihre Anwendung eine eigene Transformation und Beleuchtung ausführt, können Sie manuell Werte für den Faktor "Factor Factor" einfügen, die während des Renderings vom System angewendet werden.
 
  
 
-Das folgende Diagramm zeigt diese Formeln, wobei allgemeine Werte als in den Formel Parametern verwendet werden.
+Das folgende Diagramm zeigt diese Formeln mit allgemeinen Werten wie in den Formelparametern.
 
-![Diagramm der Nebel Formeln in der Entfernung und der Farbmenge](images/foggraph.png)
+![Diagramm der Formeln für Die Formeln über Abstand und Farbmenge](images/foggraph.png)
 
-D3DFOG \_ linear ist 1,0 am Anfang und 0,0 am Ende. Es wird nicht in Bezug auf die Near-oder Far-Plane gemessen.
+D3DFOG \_ LINEAR ist 1,0 am Anfang und 0,0 am Ende. Sie wird nicht relativ zur nah- oder fernen Ebene gemessen.
 
-Wenn Direct3D Nebeleffekte berechnet, wird der Nebel Faktor aus einer der vorangehenden Gleichungen in der folgenden Mischungs Gleichung verwendet.
+Wenn Direct3D Die Effekte von Effekten berechnet, verwendet es den Faktor des Füllfaktors aus einer der vorangehenden Gleichungen in der folgenden Mischungsgleichung.
 
-![Gleichung von Nebeleffekten für Direct3D](images/fogcalc.png)
+![Gleichung von Effekten für direct3d](images/fogcalc.png)
 
-Mit dieser Formel wird die Farbe des aktuellen Polygons c durch den Nebel Faktor f effektiv skaliert, und das Produkt wird der Nebelfarbe C hinzugefügt, die durch die bitweise Umkehrung des Nebel Faktors skaliert wird. Der resultierende Farbwert ist eine Mischung aus der Nebelfarbe und der ursprünglichen Farbe als Faktor der Entfernung. Die Formel gilt für alle Geräte, die in Microsoft DirectX 7,0 und höher unterstützt werden. Bei der Legacy-Anlauf Vorrichtung skaliert der Nebel Faktor die diffusen und Glanz Farben, die auf den Bereich von 0,0 und 1,0 (einschließlich) zugeschnitten sind. Der Nebel Faktor beginnt in der Regel bei 1,0 für die nahe Ebene und sinkt auf der äußersten Ebene auf 0,0.
+Diese Formel skaliert effektiv die Farbe des aktuellen Polygons C um den Faktor f und fügt das Produkt der Farbfarbe C hinzu, skaliert durch die bitweise Umkehrung des Faktors der Striche. Der resultierende Farbwert ist eine Mischung aus der Farbfarbe und der ursprünglichen Farbe als Abstandsfaktor. Die Formel gilt für alle Geräte, die in Microsoft DirectX 7.0 und höher unterstützt werden. Für das Legacy-Rampengerät skaliert der Faktor für die Streufarbe die diffusen und specellarischen Farbkomponenten, die an den Bereich von 0,0 und 1,0 (einschließlich) klammern. Der Verformungsfaktor beginnt in der Regel bei 1,0 für die nahe Ebene und verringert sich auf der fernen Ebene auf 0,0.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Nebel Typen](fog-types.md)
+[Typen von Typen](fog-types.md)
 </dt> </dl>
 
  

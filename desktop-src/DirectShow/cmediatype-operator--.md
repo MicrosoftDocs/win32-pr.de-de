@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator testet auf Gleichheit zwischen cmediatype-Objekten.
+description: Dieser Operator testet auf Gleichheit zwischen CMediaType-Objekten.
 ms.assetid: d50f3a72-c5e8-44a5-aa0e-b1c40a19fee3
-title: 'Cmediatype. cmediatype:: Operator = =-Methode (mtype. h)'
+title: CMediaType.CMediaType::operator==-Methode (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 79631415ce562f1cf3d7251e1f325960f5baa28b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93bc74338f994b967f313b7ed77529f9d90a8d01992b74cf4010f9aa51ab6a9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043650"
 ---
-# <a name="cmediatypecmediatypeoperator-method"></a>Cmediatype. cmediatype:: Operator = =-Methode
+# <a name="cmediatypecmediatypeoperator-method"></a>CMediaType.CMediaType::operator==-Methode
 
-Dieser Operator testet auf Gleichheit zwischen [**cmediatype**](cmediatype.md) -Objekten.
+Dieser Operator testet auf Gleichheit zwischen [**CMediaType-Objekten.**](cmediatype.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL CMediaType::operator==(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis auf das zu vergleichende **cmediatype** -Objekt.
+Verweis auf das zu vergleichende **CMediaType-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn *RT* gleich diesem-Objekt ist. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn *rt* gleich diesem -Objekt ist. Andernfalls gibt **FALSE** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt **true** zurück, wenn *RT* gleich diesem-Objekt ist. Andernfalls wird **fa
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt **true** zurück, wenn *RT* gleich diesem-Objekt ist. Andernfalls wird **fa
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  

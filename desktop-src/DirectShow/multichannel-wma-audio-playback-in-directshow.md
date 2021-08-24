@@ -1,35 +1,35 @@
 ---
-description: Multichannel WMA-Audiowiedergabe in DirectShow
+description: Multichannel-WMA-Audiowiedergabe in DirectShow
 ms.assetid: 99c69290-545a-4368-8f51-74e547c9466d
-title: Multichannel WMA-Audiowiedergabe in DirectShow
+title: Multichannel-WMA-Audiowiedergabe in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 400ee9f0cede6c7268bcd3632365db1b423d114e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c3e7f7841677a7b7bc4087b2644632bbf6ec9cd48bccc15274506c6c57f96f89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119830980"
 ---
-# <a name="multichannel-wma-audio-playback-in-directshow"></a>Multichannel WMA-Audiowiedergabe in DirectShow
+# <a name="multichannel-wma-audio-playback-in-directshow"></a>Multichannel-WMA-Audiowiedergabe in DirectShow
 
-Um eine Multichannel-Windows Media Audio Datei in DirectShow wiederzugeben, müssen Sie die Eigenschaft " **mfpkey \_ wmadec \_ hiresoutput** " direkt auf den Decoder festlegen, nachdem Sie mit dem WM-ASF-Reader verbunden wurde. Diese Eigenschaft ist in der Header Datei "wmcodecdsp. h" definiert, die im Windows SDK verfügbar ist.
+Um eine Multichannel-Windows-Medienaudiodatei in DirectShow wieder geben zu können, müssen Sie die **\_ MFPKEY W \_ TASTENKnaufEINSTELLUNGENOUTPUT-Eigenschaft** direkt im Decoder festlegen, nachdem sie mit dem WM ASF-Reader verbunden wurde. Diese Eigenschaft wird in der Headerdatei wmcodecdsp.h definiert, die im Windows SDK verfügbar ist.
 
 > [!Note]  
-> Diese Konfigurations Prozedur wird nur für Dateien unterstützt, die nicht durch digitale Rights Management geschützt sind.
+> Dieses Konfigurationsverfahren wird nur für Dateien unterstützt, die nicht durch Digital Rights Management.
 
  
 
-Die grundlegenden Schritte zum Aktivieren der Multichannel-Ausgabe lauten wie folgt:
+Die grundlegenden Schritte zum Aktivieren der Multichannelausgabe lauten wie folgt:
 
-1.  Rufen Sie **RenderFile** auf, um das Filter Diagramm zu erstellen.
-2.  Rufen Sie einen Zeiger auf den DMO-Wrapper Filter ab.
-3.  Trennen Sie den DMO-Wrapper vom audiorenderer.
-4.  Verwenden Sie die **IPropertyBag** -Schnittstelle, um die Eigenschaft " **mfpkey \_ wmadec \_ hiresoutput** " für den Decoder festzulegen. Der Eigenschaftsname wird durch die globale Konstante **g \_ wszwmachiresoutput** definiert.
-5.  Verbinden Sie den DMO-Wrapper und den audiorenderer erneut.
+1.  Rufen Sie **RenderFile auf,** um das Filterdiagramm zu erstellen.
+2.  Abrufen eines Zeigers auf den DMO Wrapperfilter.
+3.  Trennen Sie DMO-Wrapper vom Audiorenderer.
+4.  Verwenden Sie **die IPropertyBag-Schnittstelle,** um die **Eigenschaft \_ MFPKEY WKYC \_ HIRESOUTPUT** für den Decoder fest. Der Eigenschaftenname wird durch die globale Konstante **g \_ wszWMACHiResOutput definiert.**
+5.  Verbinden Sie den DMO Wrapper und den Audiorenderer erneut.
 6.  Führen Sie das Diagramm aus.
 
-Diese Schritte werden in den folgenden Code Ausschnitten veranschaulicht. Bei diesem Code wird davon ausgegangen, dass die Quelldatei einen Audiostream und keinen Videostream enthält. Der Videocodec DMO unterstützt die Eigenschaft " **mfpkey \_ wmadec \_ hiresoutput** " nicht.
+Die folgenden Codeausschnitte veranschaulichen diese Schritte. In diesem Code wird davon ausgegangen, dass die Quelldatei einen Audiostream und keinen Videostream enthält. Der Videocodec DMO unterstützt nicht die **Eigenschaft MFPKEY \_ WKYC \_ HIRESOUTPUT.**
 
 
 ```C++
@@ -91,7 +91,7 @@ HRESULT BuildGraph(IGraphBuilder *pGraph, const WCHAR *wFileName)
 
 
 
-Die Hilfsfunktionen aus dem vorherigen Code Ausschnitt werden wie folgt implementiert:
+Die Hilfsfunktionen aus dem vorherigen Codeausschnitt werden wie folgt implementiert:
 
 
 ```C++

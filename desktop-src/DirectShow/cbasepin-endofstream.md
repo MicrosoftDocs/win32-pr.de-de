@@ -1,7 +1,7 @@
 ---
-description: 'Die EndOf-Methode benachrichtigt die PIN, dass keine weiteren Daten erwartet werden. Diese Methode implementiert die IPin:: EndOf Stream-Methode. Diese Methode nur für Eingabe Pins aufzurufen.'
+description: Die EndOfStream-Methode benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden. Diese Methode implementiert die IPin::EndOfStream-Methode. Rufen Sie diese Methode nur bei Eingabepins auf.
 ms.assetid: 52a71c30-bd68-4152-8901-71ef2e65913a
-title: Cbasepin. EndOf Stream-Methode (amfilter. h)
+title: CBasePin.EndOfStream-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2324bae8ec1266dce2471049f8ba2f06b0c9e6e1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f9e1549000be728da0118323303a60a23a5930ad68d3c7d2d2b6c9c92d54c3d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916430"
 ---
-# <a name="cbasepinendofstream-method"></a>Cbasepin. EndOf Stream-Methode
+# <a name="cbasepinendofstream-method"></a>CBasePin.EndOfStream-Methode
 
-Die- `EndOfStream` Methode benachrichtigt die PIN, dass keine weiteren Daten erwartet werden. Diese Methode implementiert die [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) -Methode. Diese Methode nur für Eingabe Pins aufzurufen.
+Die `EndOfStream` -Methode benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden. Diese Methode implementiert die [**IPin::EndOfStream-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) Rufen Sie diese Methode nur bei Eingabepins auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter sollte Streamende Benachrichtigungen an die Eingabe Pins verbundener Filter übergeben. Wenn der Filter ein Renderer ist, sollte er eine [**EC \_ Complete**](ec-complete.md) Event-Benachrichtigung an den Filter Graph-Manager senden. Weitere Informationen finden Sie unter [Datenfluss im Filter Diagramm](data-flow-in-the-filter-graph.md).
+Der Filter sollte End-of-Stream-Benachrichtigungen downstream an die Eingabepins verbundener Filter übergeben. Wenn der Filter ein Renderer ist, sollte er eine [**EC \_ COMPLETE-Ereignisbenachrichtigung**](ec-complete.md) an den Filterdiagramm-Manager senden. Weitere Informationen finden Sie unter [Data Flow in the Filter Graph](data-flow-in-the-filter-graph.md).
 
-In der Basisklasse führt diese Methode keine Aktion aus. Abgeleitete Klassen sollten diese Methode überschreiben.
+In der Basisklasse führt diese Methode nichts aus. Abgeleitete Klassen sollten diese Methode überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ In der Basisklasse führt diese Methode keine Aktion aus. Abgeleitete Klassen so
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ In der Basisklasse führt diese Methode keine Aktion aus. Abgeleitete Klassen so
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

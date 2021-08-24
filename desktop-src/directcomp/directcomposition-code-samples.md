@@ -14,7 +14,7 @@ ms.locfileid: "119980320"
 # <a name="directcomposition-samples"></a>DirectComposition-Beispiele
 
 > [!NOTE]
-> Für Apps in Windows 10 wird empfohlen, Windows.UI.Composition-APIs anstelle von DirectComposition zu verwenden. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
 Die folgenden Beispielanwendungen zeigen, wie Sie die Microsoft DirectComposition-API verwenden und ihre Funktionen veranschaulichen.
 
@@ -22,7 +22,7 @@ Die folgenden Beispielanwendungen zeigen, wie Sie die Microsoft DirectCompositio
 
 
 
-| Thema                                                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                   |
+| Thema                                                                                                                                 | Beschreibung                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DirectComposition-Beispiel für untergeordnetes Fenster mit Mehreren Ebenen](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionLayeredChildWindow)<br/>                           | Veranschaulicht die Verwendung von DirectComposition zum Animieren der Bitmap eines mehrstufigen untergeordneten Fensters.<br/>                                                                                                                                                                         |
 | [Verwalten der DirectComposition-Animation mit Windows Animation Manager v2-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager)<br/> | Veranschaulicht, wie Windows Animation Manager v2 verwendet werden kann, um Animationskurven (Funktionen) zu generieren, die von DirectComposition genutzt werden können? , um animierte Übergänge in einer Desktopanwendung zu erstellen. <br/>                                                            |

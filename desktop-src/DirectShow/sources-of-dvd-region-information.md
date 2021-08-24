@@ -1,29 +1,29 @@
 ---
-description: Quellen der DVD-Regions Informationen
+description: Quellen von DVD-Regionsinformationen
 ms.assetid: f4874aa7-c58a-49a3-9474-c621cc19156b
-title: Quellen der DVD-Regions Informationen
+title: Quellen von DVD-Regionsinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ac426f995323bfd30d3430dccb4044c5f71a119
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 729dc02d07b927dd2bb7938ba87c6435df04459ad3ebd1976ede808bd292552e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904095"
 ---
-# <a name="sources-of-dvd-region-information"></a>Quellen der DVD-Regions Informationen
+# <a name="sources-of-dvd-region-information"></a>Quellen von DVD-Regionsinformationen
 
-Es gibt drei Quellen für DVD-Regions Informationen, die zusammenarbeiten, um die Region für die DVD-Wiedergabe auf einem Windows-PC zu ermitteln.
+Es gibt drei Quellen von DVD-Regionsinformationen, die zusammenarbeiten, um den Bereich für die DVD-Wiedergabe auf einem Windows PC zu bestimmen.
 
--   DVD-Titel. Die meisten DVD-Titel werden für eine bestimmte Region markiert. Einige Titel können nur in einer Region abgespielt werden, einige können in mehreren Regionen abgespielt werden, und andere können alle Bereiche wiedergegeben werden. Die Bereiche 1 bis 6 wurden in der ursprünglichen DVD-Video Spezifikation definiert. Region 7 ist zurzeit nicht definiert. Region 8 wurde in 1999 für besondere Orte, z. b. für Flugzeuge, hinzugefügt. DVD-ROM-Laufwerke (solche ohne Videothek) dürfen keine Regions Codierung enthalten.
--   DVD-ROM-Laufwerk. Es gibt zwei Arten von DVD-ROM-Laufwerken: RPC1-Laufwerke (RPC-Phase 1) und rpc2-Laufwerke (RPC Phase 2). RPC1-Laufwerke verfügen über keine integrierte Hardwareunterstützung für die Regions Verwaltung. Bei diesen Laufwerken behält Windows die Informationen zur Anzahl der Regions Änderungen bei, und die Region kann nur ein Mal geändert werden. Rpc2-Laufwerke behalten die Anzahl der Regions Änderungs Informationen auf der Hardware bei, und im Allgemeinen kann die Region solcher Laufwerke bis zu fünfmal geändert werden.
--   DVD-Decoder. Einige DVD-Decoders, Hardware oder Software werden für eine bestimmte Region festgelegt. Im Allgemeinen kann der Benutzer den Bereich des Decoders nicht ändern.
+-   DVD-Titel. Die meisten DVD-Titel sind für eine bestimmte Region gekennzeichnet. Einige Titel können nur in einer Region, einige in mehreren Regionen und andere in allen Regionen wiedergegeben werden. Die Regionen 1 bis 6 wurden in der ursprünglichen DVD-Video Spezifikation definiert. Region 7 ist derzeit nicht definiert. Region 8 wurde 1999 für spezielle Veranstaltungsorte wie Flugzeugen hinzugefügt. DVD-ROM-Datenträger (datenträger ohne Videozone) dürfen keine Regionscodierung enthalten.
+-   DVD-ROM-Laufwerk. Es gibt zwei Arten von DVD-ROM-Laufwerken: RPC Phase 1-Laufwerke (RPC1) und RPC Phase 2-Laufwerke (RPC2). RPC1-Laufwerke verfügen nicht über integrierte Hardwareunterstützung für die Regionsverwaltung. Für diese Laufwerke verwaltet Windows die Informationen zur Änderungsanzahl der Region, und die Region kann nur einmal geändert werden. RPC2-Laufwerke verwalten die Informationen zur Regionsänderungsanzahl in der Hardware, und im Allgemeinen kann die Region dieser Laufwerke bis zu fünfmal geändert werden.
+-   DVD-Decoder. Einige DVD-Decoder, Hardware oder Software, werden für eine bestimmte Region festgelegt. Im Allgemeinen kann der Benutzer die Region des Decoders nicht ändern.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Unterstützung der Änderung von DVD-Regionen in Windows](dvd-region-change-support-in-windows.md)
+[Unterstützung für DVD-Regionsänderungen in Windows](dvd-region-change-support-in-windows.md)
 </dt> </dl>
 
  

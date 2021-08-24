@@ -1,27 +1,27 @@
 ---
-description: DV in nicht komprimiertem RGB erfassen
+description: Erfassen von DV in unkomprimiertem RGB
 ms.assetid: 02b54070-09c8-45ab-8a08-1493008a5e1f
-title: DV in nicht komprimiertem RGB erfassen
+title: Erfassen von DV in unkomprimiertem RGB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b471bb8be6bc560fda6d3466cebaef8c490cfb8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: eb721dba2912774dd7cad18871484a9d578458161d78ea402261858cac03aa65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966765"
 ---
-# <a name="capture-dv-to-uncompressed-rgb"></a>DV in nicht komprimiertem RGB erfassen
+# <a name="capture-dv-to-uncompressed-rgb"></a>Erfassen von DV in unkomprimiertem RGB
 
-Dieses Beispiel zeigt, wie Sie DV vom Camcorder erfassen und in einer Datei als unkomprimiertes RGB speichern, während die Vorschau angezeigt wird. Verwenden Sie das in der folgenden Abbildung gezeigte Filter Diagramm.
+In diesem Beispiel wird gezeigt, wie Sie DV aus dem Dvd-Speicher erfassen und während der Vorschau als unkomprimiertes RGB in einer Datei speichern. Verwenden Sie das Im folgenden Diagramm dargestellte Filterdiagramm.
 
-![Erfassen von nicht komprimiertem RGB in Datei](images/dv-rgb-cap.png)
+![Erfassen von unkomprimierten RGB-Daten in einer Datei](images/dv-rgb-cap.png)
 
-Der DV-Splitter Filter teilt das überlappende Audioformat/Video in separate Video-und Audiostreams. das DV-codierte Video wird an den [DV-Video Decoder](dv-video-decoder-filter.md) -Filter weitergeleitet, der unkomprimierte RGB-Videos ausgibt. Das RGB-Video wird über den Smart Tee-Filter an den AVI MUX-Filter (für die Erfassung) und den Videorenderer (für die Vorschau) weitergeleitet. In der Zwischenzeit durchläuft der Audiostream aus dem DV-Splitter den unendlichen Pin-Tee-Filter an den AVI MUX und den audiorenderer. Der Filter Graph-Manager behält alle diese Datenströme mit den Zeitstempeln der Stichproben und der Diagramm Referenz Uhr bei.
+Der DV-Splitterfilter teilt das verleerte Audio/Video in separate Video- und Audiostreams auf. Das DV-codierte Video wird an den [DV-Videodecoder-Filter](dv-video-decoder-filter.md) übertragen, der unkomprimierte RGB-Videos ausausgabet. Das RGB-Video wird über den Smart Tee-Filter an den AVI Mux-Filter (zur Erfassung) und den Videorenderer (vorschau) geroutet. In der Zwischenzeit durchläuft der Audiodatenstrom aus dem DV-Splitter den Filter Infinite Pin Tee an den AVI Mux und den Audiorenderer. Der Filter Graph-Manager hält alle diese Datenströme synchronisiert, indem die Zeitstempel in den Beispielen und die Graphreferenzuhr verwendet werden.
 
-Dieses Diagramm mag unnötig kompliziert erscheinen, stellt jedoch sicher, dass der DV-codierte Videostream nur einmal decodiert wird, wodurch die CPU-Anforderungen minimiert werden. Beachten Sie außerdem, dass das Video den intelligenten Tee-Filter durchläuft, während die Audiodaten den unendlichen Pin-Tee-Filter durchläuft. Der Smart Tee kann vorschauframes ablegen, um die Erfassungs Leistung zu verbessern, was für Video, aber nicht für Audiodaten wünschenswert ist, bei dem gelöschte Beispiele sehr bemerkbar sind Da das Audiomaterial eine viel geringere Bandbreite als das Video erfordert, besteht die Möglichkeit, dass Audiodaten in der Datei nicht gelöscht werden.
+Dieses Diagramm mag unnötig kompliziert erscheinen, stellt aber sicher, dass der DV-codierte Videostream nur einmal decodiert wird, wodurch die CPU-Anforderungen minimiert werden. Beachten Sie außerdem, dass das Video den Smart Tee-Filter durchläuft, während das Audio den Filter Infinite Pin Tee durchläuft. Smart Tee kann Vorschauframes zur Verbesserung der Erfassungsleistung ablegen. Dies ist für Videos wünschenswert, aber nicht für Audioinhalte, bei denen verworfene Stichproben deutlich zu sehen sind. Da das Audio viel weniger Bandbreite als das Video erfordert, besteht außerdem relativ wenig Wahrscheinlichkeit, audio in der Datei zu löschen.
 
-Sie müssen dieses Diagramm jeweils einen Abschnitt erstellen, aber die RenderStream-Methode kann weiterhin helfen. Verwenden Sie den folgenden Code:
+Sie müssen dieses Diagramm abschnittsweise erstellen, aber die RenderStream-Methode kann weiterhin helfen. Verwenden Sie den folgenden Code:
 
 
 ```C++
@@ -59,7 +59,7 @@ hr = pBuilder->RenderStream(0, 0, pTee, 0, 0);
 
 
 
-Sie müssen die Filter "DV Splitter", "DV Video Decoder", "Smart Tee" und "Infinite Pin Tee" erstellen und diese dem Filter Diagramm hinzufügen. (Aus Gründen der Kürze werden diese Schritte im vorherigen Code ausgelassen.) In diesem Beispiel wird die [**ICaptureGraphBuilder2:: findpin**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin) -Methode verwendet, um die Erfassungs-und Vorschau Pins im intelligenten Tee-Filter zu suchen. Capture ist immer Ausgabe-PIN 0 und Vorschau ist Ausgabe-PIN 1.
+Sie müssen die Filter DV Splitter, DV Video Decoder, Smart Tee und Infinite Pin Tee erstellen und diese jeweils dem Filterdiagramm hinzufügen. (Aus Kürze werden diese Schritte im vorherigen Code weggelassen.) In diesem Beispiel wird die [**ICaptureGraphBuilder2::FindPin-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-findpin) verwendet, um die Aufnahme- und Vorschaupins im Smart Tee-Filter zu suchen. Capture ist immer Ausgabepin 0, und vorschau ist Ausgabepin 1.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

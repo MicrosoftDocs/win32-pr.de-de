@@ -1,40 +1,40 @@
 ---
-description: Gibt an, ob der Codec die Median Filterung während der Codierung verwenden soll.
+description: Gibt an, ob der Codec median filtering während der Codierung verwenden soll.
 ms.assetid: adfca033-4679-4f36-a802-6dd5df7100c8
-title: MFPKEY_FORCEMEDIANSETTING-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_FORCEMEDIANSETTING-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38d0aa154798e2ed42a7373a6e85a4b46f8eeb7b
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 722fca2f73f2114cf17664f228e00a12f46e5a399f54b8dc6990940f5c18d979
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953950"
 ---
-# <a name="mfpkey_forcemediansetting-property"></a>Mfpkey \_ forcemediansetting (Eigenschaft)
+# <a name="mfpkey_forcemediansetting-property"></a>MFPKEY \_ FORCEMEDIANSETTING-Eigenschaft
 
-Gibt an, ob der Codec die Median Filterung während der Codierung verwenden soll.
+Gibt an, ob der Codec median filtering während der Codierung verwenden soll.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcforcemediansetting
+g \_ wszWMVCForceMedianSetting
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-false
+FALSE
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Median Filterung weist den Codec an, Rauschen und Körner beim Berechnen der Bewegung zwischen Frames zu ignorieren. Dies kann die Qualität des Videos mit sehr lauter Qualität verbessern, kann jedoch zu Bewegungs Pfaden (auch als nachfolgende Artefakte bezeichnet) führen, wenn diese auf das saubere Quellvideo angewendet werden.
+Die Medianfilterung weist den Codec an, beim Berechnen der Bewegung zwischen Frames Rauschen und Grain zu ignorieren. Dies kann die Qualität von sehr lauten Videos verbessern, kann aber zu Bewegungspfaden (auch als nachfolgende Artefakte bezeichnet) führen, wenn sie auf bereinigte Quellvideos angewendet werden.
 
-Standardmäßig verwendet der Codec interne Logik, um zu bestimmen, ob die Median Filterung verwendet werden soll. Wenn Sie diese Eigenschaft festlegen, wird diese Logik überschrieben.
+Standardmäßig verwendet der Codec interne Logik, um zu bestimmen, ob die Medianfilterung verwendet werden soll. Wenn Sie diese Eigenschaft festlegen, wird diese Logik überschrieben.
 
 > [!Note]  
-> Dieser Filter ist nicht mit den in vielen Video Bearbeitungs-und nachträglich verarbeiteten Anwendungen gefundenen Median weich Filtern identisch.
+> Dieser Filter ist nicht identisch mit medianen Weichzeichnerfiltern, die in vielen Anwendungen zur Videobearbeitung und Nachbearbeitung gefunden werden.
 
  
 
@@ -44,9 +44,9 @@ Standardmäßig verwendet der Codec interne Logik, um zu bestimmen, ob die Media
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -54,7 +54,7 @@ Standardmäßig verwendet der Codec interne Logik, um zu bestimmen, ob die Media
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

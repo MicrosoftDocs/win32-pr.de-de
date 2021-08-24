@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119967040"
 ---
-# <a name="windows7paramenabledbscaninrecovery-field"></a>Windows7Param.EnableDbScanInRecovery-Feld
+# <a name="windows7paramenabledbscaninrecovery-field"></a>Feld "Windows7Param.EnableDbScanInRecovery"
 
 Aktivieren Sie die Datenbankwartung während der Wiederherstellung.
 
@@ -53,7 +53,7 @@ value = Windows7Param.EnableDbScanInRecovery
 public const JET_param EnableDbScanInRecovery
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

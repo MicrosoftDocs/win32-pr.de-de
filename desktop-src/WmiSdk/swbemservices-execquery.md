@@ -16,12 +16,12 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 3009d2dc88e9987a3559da91eed1aa5aa1b248f9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9e827b1297a2bdd3bac39a22efa7f80e0d4723ded689e691423c6945a88bb729
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897485"
 ---
 # <a name="swbemservicesexecquery-method"></a>SWbemServices.ExecQuery-Methode
 
@@ -52,27 +52,27 @@ objWbemObjectSet = .ExecQuery( _
 *strQuery* 
 </dt> <dd>
 
-Erforderlich. Zeichenfolge, die den Text der Abfrage enthält. Dieser Parameter darf nicht leer sein. Weitere Informationen zum Erstellen von WMI-Abfragezeichenfolgen finden Sie unter [Abfragen mit WQL](querying-with-wql.md) und in der [WQL-Referenz.](wql-sql-for-wmi.md)
+Erforderlich. Eine Zeichenfolge, die den Text der Abfrage enthält. Dieser Parameter darf nicht leer sein. Weitere Informationen zum Erstellen von WMI-Abfragezeichenfolgen finden Sie unter Abfragen mit [WQL](querying-with-wql.md) und in der [WQL-Referenz.](wql-sql-for-wmi.md)
 
 </dd> <dt>
 
 *strQueryLanguage* \[ Optional\]
 </dt> <dd>
 
-Zeichenfolge, die die zu verwendende Abfragesprache enthält. Wenn angegeben, muss dieser Wert "WQL" sein.
+Eine Zeichenfolge, die die zu verwendende Abfragesprache enthält. Wenn angegeben, muss dieser Wert "WQL" sein.
 
 </dd> <dt>
 
 *iFlags* \[ Optional\]
 </dt> <dd>
 
-Ganze Zahl, die das Verhalten der Abfrage bestimmt und bestimmt, ob dieser Aufruf sofort zurückgegeben wird. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately.** Dieser Parameter kann die folgenden Werte akzeptieren.
+Eine ganze Zahl, die das Verhalten der Abfrage bestimmt und bestimmt, ob dieser Aufruf sofort zurückgegeben wird. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately.** Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
 <span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>
 
-<span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>wbemFlagForwardOnly** (32 (0x20))
+<span id="wbemFlagForwardOnly"></span><span id="wbemflagforwardonly"></span><span id="WBEMFLAGFORWARDONLY"></span>wbemFlagForwardOnly( (32 (0x20))
 
 
 </dt> <dd>
@@ -83,12 +83,12 @@ Bewirkt, dass ein vorwärts enumerator zurückgegeben wird. Vorwärts-Enumerator
 
 <span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>
 
-<span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>wbemFlagBidirectional( (0 (0x0))
+<span id="wbemFlagBidirectional"></span><span id="wbemflagbidirectional"></span><span id="WBEMFLAGBIDIRECTIONAL"></span>wbemFlagBidirectional** (0 (0x0))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI Zeiger auf Objekte der Enumeration behält, bis der Client den Enumerator frei gibt.
+Bewirkt, dass WMI Zeiger auf Objekte der Enumeration beibehalten, bis der Client den Enumerator frei gibt.
 
 </dd> <dt>
 
@@ -145,7 +145,7 @@ In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedVal
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn kein Fehler auftritt, gibt diese Methode ein [**SWbemObjectSet-Objekt**](swbemobjectset.md) zurück. Dies ist eine Objektauflistung, die das Resultset der Abfrage enthält. Der Aufrufer kann die Auflistung mithilfe der Implementierung von Auflistungen für die von Ihnen verwendete Programmiersprache untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf eine Sammlung.](accessing-a-collection.md)
+Wenn kein Fehler auftritt, gibt diese Methode ein [**SWbemObjectSet-Objekt**](swbemobjectset.md) zurück. Dies ist eine Objektsammlung, die das Ergebnisset der Abfrage enthält. Der Aufrufer kann die Auflistung mithilfe der Implementierung von Auflistungen für die von Ihnen verwendete Programmiersprache untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf eine Auflistung.](accessing-a-collection.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -156,7 +156,7 @@ Nach Abschluss der **ExecQuery-Methode** kann das [Err-Objekt](/previous-version
 **wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer verfügt nicht über die Berechtigung, das Resultset anzuzeigen.
+Der aktuelle Benutzer verfügt nicht über die Berechtigung zum Anzeigen des Ergebnisses.
 
 </dd> <dt>
 
@@ -170,7 +170,7 @@ Unbekannter Fehler.
 **wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
-Es wurde ein ungültiger Parameter angegeben.
+Ungültiger Parameter wurde angegeben.
 
 </dd> <dt>
 
@@ -188,14 +188,14 @@ Die angeforderte Abfragesprache wird nicht unterstützt.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** – 2147749894 (0x80041006)
+**wbemErrOutOfMemory** : 2147749894 (0x80041006)
 </dt> <dd>
 
-Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **ExecQuery** ist einer der am häufigsten verwendeten Aufrufe zum Abrufen von WMI-Informationen. Ein Standardaufruf von **ExecQuery** sieht wie folgt aus:
 
@@ -217,7 +217,7 @@ Next
 
 
 
-Beachten Sie, dass Sie das [**SWbemServices-Objekt**](swbemservices.md) mit einem Moniker erstellen, der den entsprechenden Namespace und die entsprechende Sicherheit darstellt, und dann den **ExecQuery-Aufruf** über den Dienst ausführen. Eine ausführlichere Erläuterung finden Sie unter [Erstellen eines WMI-Skripts](creating-a-wmi-script.md) und [Aufzählen von WMI.](enumerating-wmi.md)
+Beachten Sie, dass Sie das [**SWbemServices-Objekt**](swbemservices.md) mit einem Moniker erstellen, der den entsprechenden Namespace und die Sicherheit darstellt, und dann den **ExecQuery-Aufruf** über den Dienst ausführen. Eine vollständigere Erörterung finden Sie unter [Erstellen eines WMI-Skripts](creating-a-wmi-script.md) und [Aufzählen von WMI.](enumerating-wmi.md)
 
 Wie die [**InstancesOf-Methode**](swbemservices-instancesof.md) gibt die **ExecQuery-Methode** immer eine [**SWbemObjectSet-Auflistung**](swbemobjectset.md) zurück. Daher muss Ihr WMI-Skript die Von ExecQuery zurückgegebenen Sammlungen aufzählen, um auf jede verwaltete Ressourceninstanz in der Sammlung zugreifen zu können, wie hier gezeigt:
 
@@ -234,9 +234,9 @@ Next
 
 
 
-Andere [**SWbemServices-Methoden,**](swbemservices.md) die [**ein SWbemObjectSet**](swbemobjectset.md) zurückgeben, sind [**AssociatorsOf,**](swbemservices-associatorsof.md) [**ReferencesTo**](swbemservices-referencesto.md)und [**UnterklassenOf.**](swbemservices-subclassesof.md)
+Andere [**SWbemServices-Methoden,**](swbemservices.md) die [**ein SWbemObjectSet**](swbemobjectset.md) zurückgeben, sind [**AssociatorsOf,**](swbemservices-associatorsof.md) [**ReferencesTo**](swbemservices-referencesto.md)und [**SubclassesOf.**](swbemservices-subclassesof.md)
 
-Es ist kein Fehler für die Abfrage, ein leeres Resultset zurück zu geben. Die **ExecQuery-Methode** gibt Schlüsseleigenschaften zurück, unabhängig davon, ob die Schlüsseleigenschaft im *strQuery-Argument angefordert* wird. Wenn beim Ausführen dieser Methode ein Fehler auftritt und Sie das **Flag wbemFlagReturnImmediately** nicht verwenden, wird das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) erst festgelegt, wenn Sie versuchen, auf den zurückgegebenen Objektsatz zu zugreifen. Wenn Sie jedoch das **Flag wbemFlagReturnWhenComplete** verwenden, wird das Err-Objekt festgelegt, wenn die **ExecQuery-Methode** aufgerufen wird.
+Es ist kein Fehler für die Abfrage, ein leeres Ergebnisset zurück zu geben. Die **ExecQuery-Methode** gibt Schlüsseleigenschaften zurück, unabhängig davon, ob die Schlüsseleigenschaft im *strQuery-Argument angefordert* wird. Wenn beim Ausführen dieser Methode ein Fehler auftritt und Sie das **Flag wbemFlagReturnImmediately** nicht verwenden, wird das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) erst festgelegt, wenn Sie versuchen, auf den zurückgegebenen Objektsatz zu zugreifen. Wenn Sie jedoch das **Flag wbemFlagReturnWhenComplete** verwenden, wird das Err-Objekt festgelegt, wenn die **ExecQuery-Methode** aufgerufen wird.
 
 Die Anzahl der SCHLÜSSELWÖRTER **AND** und **OR,** die in WQL-Abfragen verwendet werden können, ist begrenzt. Eine große Anzahl von WQL-Schlüsselwörtern, die in einer komplexen Abfrage verwendet werden, kann dazu führen, dass WMI den **WBEM \_ E \_ QUOTA \_ VIOLATION-Fehlercode** als **HRESULT-Wert** zurückgibt. Der Grenzwert für WQL-Schlüsselwörter hängt davon ab, wie komplex die Abfrage ist.
 
@@ -275,7 +275,7 @@ Next
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

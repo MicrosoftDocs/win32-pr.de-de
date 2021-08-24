@@ -6,39 +6,39 @@ keywords:
 - WinINet im Vergleich zu WinHTTP
 ms.topic: article
 ms.date: 02/22/2019
-ms.openlocfilehash: 8ced80dd048559fee483e8cf121918eed75fc462
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 20bd0ced1d0ea897dba05680258cae4a2b1a248b204824ded7d2ec5be30ff00b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899090"
 ---
 # <a name="wininet-vs-winhttp"></a>WinINet im Vergleich zu WinHTTP
 
-Mit einigen Ausnahmen ist [WinINet](portal.md) eine Obermenge von [WinHTTP.](/windows/desktop/WinHttp/winhttp-start-page) Wenn Sie zwischen den beiden auswählen, sollten Sie WinINet verwenden, es sei denn, Sie planen die Ausführung in einem dienst- oder dienstspezifischen Prozess, der Identitätswechsel und Sitzungsisolation erfordert.
+Mit einigen Ausnahmen ist [WinINet](portal.md) eine Obermenge von [WinHTTP.](/windows/desktop/WinHttp/winhttp-start-page) Wenn Sie zwischen den beiden auswählen, sollten Sie WinINet verwenden, es sei denn, Sie planen die Ausführung innerhalb eines Diensts oder dienstähnlichen Prozesses, der Identitätswechsel und Sitzungsisolation erfordert.
 
 ## <a name="comparison-of-features"></a>Vergleich der Features
 
 | Funktion | Wininet | WinHTTP |
 |-|-|-|
-| **Anmeldeinformationscache** Ermöglicht allen integrierten Anwendungen in Windows Internet Explorer automatisches Erhalten von Anmeldeinformationen. Außerdem kann eine Anwendung, die außerhalb von Internet Explorer, die Anmeldeinformationen für den Server nur einmal auffordern/angeben. Ab dann werden die Anforderungen automatisch. | Ja | Nein |
+| **Credential Cache** Ermöglicht allen integrierten Anwendungen in Windows Internet Explorer das automatische Abrufen von Anmeldeinformationen. Außerdem kann eine Anwendung, die außerhalb von Internet Explorer ausgeführt wird, die Anmeldeinformationen für den Server nur einmal auffordern/angeben. Ab dann erfolgen die Anforderungen automatisch. | Ja | Nein |
 | **Eingabeaufforderung für Anmeldeinformationen** Stellt eine API bereit, mit der der aufrufende Code den Benutzer zur Eingabe von Anmeldeinformationen auffordern kann. | Ja | Nein |
 | **FTP** | Ja | Nein |
-| **Autodial/RAS-Unterstützung** Dies ist eine Legacyfunktion. Verwenden [Sie stattdessen Remotezugriff.](/windows/desktop/RRAS/portal) | Ja | Nein |
+| **Autodial/RAS-Unterstützung** Dies ist eine Legacyfunktion. Verwenden Sie stattdessen [Remotezugriff.](/windows/desktop/RRAS/portal) | Ja | Nein |
 | **Zonen** Automatische Integration in Internet Explorer Sicherheitszonen. | Ja | Nein |
 | **IDNA-Unterstützung** Integrierte Unterstützung für IDNA RFC/Punycode. | Ja | Ja |
-| **Cookie-JAR-APIs** Persistente und nicht persistente Cookies werden unterstützt. Jede Anwendung oder jedes Skript kann dies verwenden, um die gleichen Cookies wie der Browser zu sehen. | Ja | Nein |
+| **Cookie-JAR-APIs** Persistente und nicht persistente Cookies werden unterstützt. Jede Anwendung oder jedes Skript kann dies verwenden, um die gleichen Cookies wie der Browser anzuzeigen. | Ja | Nein |
 | **IE-Unterstützung im geschützten Modus** | Ja | Nein |
-| **Dekomprimierungsunterstützung** Unterstützung für das gzip- und deflate-Komprimierungsschema. | Ja | Ja |
-| **Unterstützung für blockierte Uploads** Der Clientcode muss die Blockierung ausführen. | Nein | Ja |
+| **Dekomprimierungsunterstützung** Unterstützung für gzip- und deflate-Komprimierungsschema. | Ja | Ja |
+| **Unterstützung für segmentierte Hochladen** Der Clientcode muss die Segmentierung ausführen. | Nein | Ja |
 | **SOCKS v4-Unterstützung** Enthält nicht v4a oder v5. | Ja | Nein |
 | **Bidirektionales Senden und Empfangen** | Nein | Nein |
 | **Überlappende E/A** | Nein | Nein |
-| **Dateischemaunterstützung** Nützlich für Proxyskripts mit einem Dateischema. | Ja | Nein |
+| **Unterstützung von Dateischemas** Nützlich für Proxyskripts mit einem Dateischema. | Ja | Nein |
 | **InternetOpenUrl** Vereinfachter Code zum Öffnen einer URL. | Ja | Nein |
-| **Unterstützung von Diensten** Kann über einen Dienst oder ein Dienstkonto ausgeführt werden. | Nein | Ja |
+| **Dienstunterstützung** Kann über einen Dienst oder ein Dienstkonto ausgeführt werden. | Nein | Ja |
 | **Sitzungsisolation** Separate Sitzungen wirken sich nicht gegenseitig aus. | Nein | Ja |
-| **Identitätswechsel** Unterstützt das Aufrufen von , während der Thread die Identität eines anderen Benutzers anspricht. | Nein | Ja |
+| **Identitätswechsel** Unterstützt das Aufrufen, während der Thread die Identität eines anderen Benutzers angibt. | Nein | Ja |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

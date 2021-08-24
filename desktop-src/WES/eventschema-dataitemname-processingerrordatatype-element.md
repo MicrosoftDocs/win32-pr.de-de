@@ -1,9 +1,9 @@
 ---
-title: Dataitemname (processingerrordatatype)-Element
-description: Enthält den Namen des Ereignisdaten Elements, das einen Fehler verursacht hat, als die Ereignisdaten verarbeitet wurden.
+title: DataItemName (ProcessingErrorDataType)-Element
+description: Enthält den Namen des Ereignisdatenelements, das beim Verarbeiten der Ereignisdaten einen Fehler verursacht hat.
 ms.assetid: 929ff7f1-a8fa-490b-aa58-ccaba05179dc
 keywords:
-- Dataitemname-Element EventLog
+- DataItemName-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 11e4629e33b1fb1f10eb01a230b689babee7b07e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 67e159426ec70f87f23d3c022a6f5ab3049f576daf14363875b70c9ea8e20076
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904940"
 ---
-# <a name="dataitemname-processingerrordatatype-element"></a>Dataitemname (processingerrordatatype)-Element
+# <a name="dataitemname-processingerrordatatype-element"></a>DataItemName (ProcessingErrorDataType)-Element
 
-Enthält den Namen des Ereignisdaten Elements, das einen Fehler verursacht hat, als die Ereignisdaten verarbeitet wurden.
+Enthält den Namen des Ereignisdatenelements, das beim Verarbeiten der Ereignisdaten einen Fehler verursacht hat.
 
 ``` syntax
 <xs:element name="DataItemName"
@@ -30,7 +30,7 @@ Enthält den Namen des Ereignisdaten Elements, das einen Fehler verursacht hat, 
  />
 ```
 
-Das **dataitemname** -Element wird durch den komplexen Typ [**processingerrordatatype**](eventschema-processingerrordatatype-complextype.md) definiert.
+Das **DataItemName-Element** wird vom komplexen [**ProcessingErrorDataType-Typ**](eventschema-processingerrordatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **dataitemname** -Element wird durch den komplexen Typ [**processingerrordat
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **dataitemname** -Element wird durch den komplexen Typ [**processingerrordat
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Processingerrordata (EventType)**](eventschema-processingerrordata-eventtype-element.md)
+[**ProcessingErrorData (EventType)**](eventschema-processingerrordata-eventtype-element.md)
 </dt> </dl>
 
  

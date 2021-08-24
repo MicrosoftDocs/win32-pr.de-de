@@ -1,10 +1,10 @@
 ---
-title: PROTOCOL_SPECIFIC_DATA Struktur (RTM. h)
-description: Die Protokoll \_ spezifische \_ Datenstruktur enthält Arbeitsspeicher, der für spezifische Daten eines bestimmten Routing Protokolls reserviert ist.
+title: PROTOCOL_SPECIFIC_DATA -Struktur (Rtm.h)
+description: Die \_ PROTOKOLLSPEZIFISCHE \_ DATENstruktur enthält Arbeitsspeicher, der für Daten reserviert ist, die für ein bestimmtes Routingprotokoll spezifisch sind.
 ms.assetid: b6c3a342-4726-4f7b-9511-dbe1393faf98
 keywords:
-- PROTOCOL_SPECIFIC_DATA Struktur-RAS
-- PPROTOCOL_SPECIFIC_DATA-Struktur Zeiger RAS
+- PROTOCOL_SPECIFIC_DATA Ras-Struktur
+- PPROTOCOL_SPECIFIC_DATA Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3162aa377c051f6b329e993dfaca3bed17fae780
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fe43e17827a4c6308c7bfd4499de60ec9105a9fa525ab5aad0226887d02ae8e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036460"
 ---
-# <a name="protocol_specific_data-structure"></a>Protokoll \_ spezifische \_ Datenstruktur
+# <a name="protocol_specific_data-structure"></a>PROTOKOLLSPEZIFISCHE \_ \_ DATENstruktur
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die **Protokoll \_ spezifische \_ Daten** Struktur enthält Arbeitsspeicher, der für spezifische Daten eines bestimmten Routing Protokolls reserviert ist.
+Die **\_ PROTOKOLLSPEZIFISCHE \_ DATENstruktur** enthält Arbeitsspeicher, der für Daten reserviert ist, die für ein bestimmtes Routingprotokoll spezifisch sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ typedef struct _PROTOCOL_SPECIFIC_DATA {
 
 <dl> <dt>
 
-**PSD- \_ Daten**
+**\_PSD-Daten**
 </dt> <dd>
 
-Gibt ein Array von **DWORD** -Variablen an. Dieser Speicher ist für Daten reserviert, die für Routing Protokolle spezifisch sind.
+Gibt ein Array von **DWORD-Variablen** an. Dieser Arbeitsspeicher ist für Daten reserviert, die für Routingprotokolle spezifisch sind.
 
 </dd> </dl>
 
@@ -58,25 +58,25 @@ Gibt ein Array von **DWORD** -Variablen an. Dieser Speicher ist für Daten reser
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Routing Table Manager Version 1 Reference](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Routing Tabellen-Manager, Version 1, Strukturen](routing-table-manager-version-1-structures.md)
+[Routingtabellen-Manager- Version 1-Strukturen](routing-table-manager-version-1-structures.md)
 </dt> <dt>
 
-[**RTM \_ -IP- \_ Route**](rtm-ip-route.md)
+[**\_RTM-IP-ROUTE \_**](rtm-ip-route.md)
 </dt> <dt>
 
-[**RTM- \_ IPX- \_ Route**](rtm-ipx-route.md)
+[**\_RTM-IPX-ROUTE \_**](rtm-ipx-route.md)
 </dt> </dl>
 
  

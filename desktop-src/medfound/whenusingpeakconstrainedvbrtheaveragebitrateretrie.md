@@ -1,25 +1,25 @@
 ---
-description: Wenn ich VBR mit hoher Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codec-Objekt abgerufen wird, größer als die Spitzen Bitrate.
+description: Wenn ich vbr mit maximaler Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codecobjekt abgerufen wird, größer als die Spitzenbitrate.
 ms.assetid: 5fc344f8-4492-4878-802a-94606c5f33e0
-title: Wenn ich VBR mit hoher Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codec-Objekt abgerufen wird, größer als die Spitzen Bitrate. Wie ist das möglich?
+title: Wenn ich vbr mit maximaler Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codecobjekt abgerufen wird, größer als die Spitzenbitrate. Wie ist dies möglich?
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa2bb2e09f5210baf8817553377fc832b9826b4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa27e1a03c12f854486c65d7959c66f6592da4c3fea84936ee671a911f7fa46d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011950"
 ---
-# <a name="when-i-use-peak-constrained-vbr-the-average-bit-rate-retrieved-from-the-codec-object-is-larger-than-the-peak-bit-rate-how-is-that-possible"></a>Wenn ich VBR mit hoher Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codec-Objekt abgerufen wird, größer als die Spitzen Bitrate. Wie ist das möglich?
+# <a name="when-i-use-peak-constrained-vbr-the-average-bit-rate-retrieved-from-the-codec-object-is-larger-than-the-peak-bit-rate-how-is-that-possible"></a>Wenn ich vbr mit maximaler Auslastung verwende, ist die durchschnittliche Bitrate, die vom Codecobjekt abgerufen wird, größer als die Spitzenbitrate. Wie ist dies möglich?
 
-Die Beziehung zwischen der durchschnittlichen Bitrate und der Spitzen Bitrate wird häufig falsch verstanden. Die Spitzen Bitrate beschreibt eine Puffer Einschränkung über einen Zeitraum, der durch das Hauptpuffer Fenster angegeben wird. Die durchschnittliche Bitrate für die zweistufige VBR (uneingeschränkt oder mit hoher Einschränkung) ist die durchschnittliche Bits pro Sekunde während der Dauer der Datei.
+Die Beziehung zwischen der durchschnittlichen Bitrate und der Spitzenbitrate wird häufig falsch verstanden. Die Spitzenbitrate beschreibt eine Puffereinschränkung über einen Zeitraum, der vom Spitzenpufferfenster angegeben wird. Die durchschnittliche Bitrate für VBR mit zwei Durchlauf (uneingeschränkt oder spitzenbeschränkt) ist die durchschnittliche Bitrate pro Sekunde über die Dauer der Datei.
 
-Die tatsächliche Bitrate, die für eine Zeitspanne gleich dem Puffer Fenster verwendet [wird, kann die doppelte](the-leaky-bucket-buffer-model.md)Bitrate erreichen. Dies liegt daran, dass der Puffer, der als Anzahl von Bits definiert ist, die gleich der Bitrate für das Puffer Fenster (in Sekunden) ist, mit konstanter Geschwindigkeit geleert wird.
+Wie unter [The Leaky Bucket Buffer Model (The Leaky Bucket Buffer Model)](the-leaky-bucket-buffer-model.md)beschrieben, kann die tatsächliche Bitrate, die über einen bestimmten Zeitraum gleich dem Pufferfenster verwendet wird, die doppelte Bitrate erreichen. Dies liegt daran, dass der Puffer, der als Anzahl von Bits definiert ist, die der Bitrate entspricht, mit der das Pufferfenster (in Sekunden) entspricht, mit konstanter Rate geleert wird.
 
-Beispielsweise erstellt der Encoder in einer Sekunde eines 56-Kbit/s-Streams Stichproben mit einer Gesamtgröße von 59 KB. Somit werden 56 KB Daten aus dem Puffer in dieser Sekunde entfernt, wobei 3 KB im Puffer belassen werden. Wenn der Stream über ein Puffer Fenster von drei Sekunden und somit eine Gesamt Puffergröße von 168 KB verfügt, dauert das Ausfüllen des Puffers fast 40 Sekunden. Die durchschnittliche Bitrate für den Datenstrom (wenn seine Dauer kleiner ist als die Zeitspanne, die zum Ausfüllen des Puffers benötigt wird) beträgt 59 Kbit/s, auch wenn die Bitrate auf 56 Kbit/s festgelegt ist.
+Beispielsweise erstellt der Encoder in einer Sekunde eines Streams mit 56 KBit/s Stichproben von insgesamt 59 Kb. Daher werden in dieser Sekunde 56 KB Daten aus dem Puffer entfernt, sodass 3 KB im Puffer bleiben. Wenn der Stream ein Pufferfenster von drei Sekunden und somit eine Gesamtpuffergröße von 168 Kb hat, dauert es fast 40 Sekunden, bis der Puffer gefüllt ist. Die durchschnittliche Bitrate für den Stream (wenn die Dauer kleiner als die Zeit ist, die zum Füllen des Puffers benötigt wird) beträgt 59 KBit/s, obwohl die Bitrate auf 56 KBit/s festgelegt ist.
 
-Dasselbe Phänomen gilt für Einschränkungen der Spitzen Bitrate. Bei kurzen Inhalten kann die durchschnittliche Bitrate, die nach Abschluss der Codierung vom Codec-Objekt berechnet wird, größer als die Spitzen Bitrate sein.
+Dasselbe Gilt gilt für Einschränkungen der Spitzenbitrate. Bei kurzen Inhalten kann die durchschnittliche Bitrate, die vom Codecobjekt nach Abschluss der Codierung berechnet wird, größer als die Spitzenbitrate sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

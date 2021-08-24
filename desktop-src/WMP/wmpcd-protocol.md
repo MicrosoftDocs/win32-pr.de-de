@@ -1,30 +1,30 @@
 ---
-title: Wmpcd-Protokoll
-description: Wmpcd-Protokoll
+title: WMPCD-Protokoll
+description: WMPCD-Protokoll
 ms.assetid: 385cfb03-88cc-400c-a2b9-174008ebd854
 keywords:
-- Windows-Media Player, Protokolle
-- Windows Media Player-Objektmodell, Protokolle
+- Windows Media Player,Protokolle
+- Windows Media Player Objektmodell,Protokolle
 - Objektmodell, Protokolle
-- Windows Media Player ActiveX-Steuerelement, Protokolle für das Objektmodell
-- ActiveX-Steuerelement, Protokolle für Objektmodell
-- Windows Media Player Mobile ActiveX-Steuerelement, Protokolle für das Objektmodell
-- Windows Media Player Mobile, Protokolle für das Objektmodell
-- Protokolle, Windows Media Player-Objektmodell
-- Protokolle, wmpcd
-- Wmpcd-Protokoll
+- Windows Media Player ActiveX,Protokolle für objektmodell
+- ActiveX-Steuerelement,Protokolle für das Objektmodell
+- Windows Media Player Mobile ActiveX-Steuerelement,Protokolle für objektmodell
+- Windows Media Player Mobil,Protokolle für Objektmodell
+- protocols,Windows Media Player-Objektmodell
+- Protocols,WMPCD
+- WMPCD-Protokoll
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa78c591d0ba9605f1f63e3e152b974d112548d6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 181b1359d22b792587f7cceeb46f0f9e621585dfba296422a227e9012077df7e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900140"
 ---
-# <a name="wmpcd-protocol"></a>Wmpcd-Protokoll
+# <a name="wmpcd-protocol"></a>WMPCD-Protokoll
 
-Mit dem wmpcd-Protokoll können Sie mithilfe der URL-Syntax Spuren auf einer Compact Disk angeben. Dies ist die allgemeine Syntax des Protokolls:
+Mit dem WMPCD-Protokoll können Sie mithilfe der URL-Syntax Spuren auf einem Datenträger angeben. Dies ist die allgemeine Syntax des Protokolls:
 
 
 ```C++
@@ -33,7 +33,7 @@ wmpcd://drive/track
 
 
 
-Das *Laufwerk* Segment ist der Index des CD-Laufwerks. Das *Track* -Segment ist die Nummer des Titels. Im folgenden Beispiel wird die Verwendung des wmpcd-Protokolls veranschaulicht.
+Das *Laufwerksegment* ist der Index des CD-Laufwerks. Das *Tracksegment* ist die Nummer der Spur. Im folgenden Beispiel wird die Verwendung des WMPCD-Protokolls veranschaulicht.
 
 
 ```C++
@@ -42,7 +42,7 @@ player.url = "wmpcd://0/4";
 
 
 
-Im Beispiel wird der vierte Titel auf der Festplatte auf dem ersten CD-Laufwerk (dem Laufwerk mit dem Index 0) wiedergegeben.
+Im Beispiel wird die vierte Spur auf dem Datenträger im ersten CD-Laufwerk (das Laufwerk mit dem Index 0) abgespielt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -51,9 +51,9 @@ Im Beispiel wird der vierte Titel auf der Festplatte auf dem ersten CD-Laufwerk 
 [**Unterstützte Protokolle und Dateitypen**](supported-protocols-and-file-types.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

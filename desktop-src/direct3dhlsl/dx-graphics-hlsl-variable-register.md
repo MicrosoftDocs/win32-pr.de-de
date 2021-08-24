@@ -3,7 +3,7 @@ title: Registrieren
 description: Registrieren
 ms.assetid: 45149f8c-8b76-4247-98d7-d141d7268da3
 keywords:
-- Registrieren von HLSL
+- REGISTRIEREN VON HLSL
 topic_type:
 - apiref
 api_name:
@@ -47,22 +47,22 @@ Erforderliches Schlüsselwort.
 <span id="_shader_profile_"></span><span id="_SHADER_PROFILE_"></span>*\[\_Shaderprofil\]*
 </dt> <dd>
 
-Optionales [Shaderprofil,](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)bei dem es sich um ein Shaderziel oder einfach **ps oder** **vs.**
+Optionales [Shaderprofil,](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)bei dem es sich um ein Shaderziel oder einfach **ps** oder **im Vergleich zu** sein kann.
 
 </dd> <dt>
 
-<span id="Type__subcomponent_"></span><span id="type__subcomponent_"></span><span id="TYPE__SUBCOMPONENT_"></span>*\# \[ Typunterkomponenten\]*
+<span id="Type__subcomponent_"></span><span id="type__subcomponent_"></span><span id="TYPE__SUBCOMPONENT_"></span>*\# \[ Typunterkomponente\]*
 </dt> <dd>
 
-Registrieren Der Typ, die Zahl und die Unterkomponentendeklaration.
+Registertyp, Zahl und Unterkomponentendeklaration.
 
 -   Der Typ ist einer der folgenden:
 
     
 
-    | type | Beschreibung registrieren       |
+    | type | Registerbeschreibung       |
     |------|----------------------------|
-    | b    | Konstanter Puffer            |
+    | b    | Konstantenpuffer            |
     | t    | Textur- und Texturpuffer |
     | c    | Pufferoffset              |
     | s    | Sampler                    |
@@ -72,16 +72,16 @@ Registrieren Der Typ, die Zahl und die Unterkomponentendeklaration.
 
      
 
--   *\#* ist die Registernummer, die eine ganzzahlige Zahl ist.
--   Die *Unterkomponenten ist eine* optionale ganzzahlige Zahl.
+-   *\#* ist die Registernummer, bei der es sich um eine ganzzahlige Zahl handelt.
+-   Die *Unterkomponente* ist eine optionale ganzzahlige Zahl.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können der gleichen Variablendeklaration eine oder mehrere Registerzuweisungen hinzufügen, die durch Leerzeichen getrennt sind.
+Sie können derselben Variablendeklaration eine oder mehrere Registerzuweisungen hinzufügen, die durch Leerzeichen getrennt sind.
 
-Für Direct3D 10-Variablen im globalen Gültigkeitsbereich verhält sich das **Register-Schlüsselwort** genauso wie das [Schlüsselwort packoffset (DirectX HLSL).](dx-graphics-hlsl-variable-packoffset.md)
+Für Direct3D 10-Variablen im globalen Gültigkeitsbereich verhält sich das **Schlüsselwort register** genauso wie das [Schlüsselwort packoffset (DirectX HLSL).](dx-graphics-hlsl-variable-packoffset.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -110,7 +110,7 @@ sampler myVar : register( ps, s[2] )
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

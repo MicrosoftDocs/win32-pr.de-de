@@ -21,7 +21,7 @@ Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/window
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
 | VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
@@ -43,7 +43,7 @@ Die Netzwerkquelle sendet dieses Ereignis direkt über die [**METHODE DER ANWEND
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

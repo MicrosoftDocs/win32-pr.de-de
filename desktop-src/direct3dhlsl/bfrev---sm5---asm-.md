@@ -1,5 +1,5 @@
 ---
-title: bfrev (sm5 - asm)
+title: bfrev (sm5 – asm)
 description: Umkehren einer 32-Bit-Zahl.
 ms.assetid: 24F8209A-093E-4737-BF50-12F228024E9D
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119983540"
 ---
-# <a name="bfrev-sm5---asm"></a>bfrev (sm5 - asm)
+# <a name="bfrev-sm5---asm"></a>bfrev (sm5 – asm)
 
 Umkehren einer 32-Bit-Zahl.
 
@@ -26,10 +26,10 @@ Umkehren einer 32-Bit-Zahl.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                  |
+| Element                                                            | Beschreibung                                                  |
 |-----------------------------------------------------------------|--------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse für *src0 mit* umgekehrten Bits.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die 32-Bit-Zahl, die umgekehrt werden soll.<br/>              |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse für *src0* mit umgekehrten Bits.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die umgekehrte 32-Bit-Zahl.<br/>              |
 
 
 
@@ -37,7 +37,7 @@ Umkehren einer 32-Bit-Zahl.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn sie beispielsweise 0x12345678, wird das Ergebnis 0x1e6a2c48.
+Bei 0x12345678 wäre das Ergebnis beispielsweise 0x1e6a2c48.
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -51,7 +51,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
@@ -59,12 +59,12 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -74,7 +74,7 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: DirectSound-rendererfilter
+description: DirectSound-Rendererfilter
 ms.assetid: ec6cc790-8c1f-4de4-a7ca-a7073894380e
-title: DirectSound-rendererfilter
+title: DirectSound-Rendererfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae932340ea22213e0f9d7234599742d74208f632
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7e754c81ba9ac6d22141735ac1488218461d9ea63ef81f7bb947cb3e72fd81d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966320"
 ---
-# <a name="directsound-renderer-filter"></a>DirectSound-rendererfilter
+# <a name="directsound-renderer-filter"></a>DirectSound-Rendererfilter
 
-Mit diesem Filter wird Audio mithilfe von DirectSound gerendert. Dieser Filter ist derzeit der Standardaudiorenderer für Wellenform Sound.
+Dieser Filter rendert Audio mit DirectSound. Dieser Filter ist derzeit der Standardaudiorenderer für Waveform-Sound.
 
-Zusätzlich zu den grundlegenden Sound Rendering-Funktionen kann dieser Filter DirectSound-API-Aufrufe verarbeiten. Verwenden Sie die [**iamdirectsound**](/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound) -Methoden, um das Fenster festzulegen und abzurufen, das die Audiowiedergabe behandelt. Der DirectSound-audiorenderer ist der standardaudiorenderingfilter für DirectShow.
+Zusätzlich zu den grundlegenden Soundrenderingfunktionen kann dieser Filter DirectSound-API-Aufrufe verarbeiten. Verwenden Sie die [**IAMDirectSound-Methoden,**](/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound) um das Fenster festzulegen und abzurufen, das die Soundwiedergabe verarbeitet. Der DirectSound-Audiorenderer ist der Standardfilter für das Audiorendering für DirectShow.
 
 
 
@@ -26,11 +26,11 @@ Zusätzlich zu den grundlegenden Sound Rendering-Funktionen kann dieser Filter D
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>Filter Schnittstellen</td>
-<td><a href="/windows/desktop/api/Strmif/nn-strmif-iamaudiorendererstats"><strong>Iamaudiorendererstats</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamclockslave"><strong>iamclockslave</strong></a>, <a href="/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound"><strong>iamdirectsound</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol"><strong>iamresourcecontrol</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>ibasefilter</strong></a>, <a href="/windows/desktop/api/Control/nn-control-ibasicaudio"><strong>ibasicaudio</strong></a>, <strong>IDirectSound3DBuffer</strong>, <strong>IDirectSound3dListener</strong>, <a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>imediaposition</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>imediaseeking</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>iqualitycontrol</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ireferenceclock"><strong>IReferenceClock</strong></a></td>
+<td>Filterschnittstellen</td>
+<td><a href="/windows/desktop/api/Strmif/nn-strmif-iamaudiorendererstats"><strong>IAMAudioRendererStats</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamclockslave"><strong>IAMClockSlave</strong></a>, <a href="/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound"><strong>IAMDirectSound</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol"><strong>IAMResourceControl</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a>, <a href="/windows/desktop/api/Control/nn-control-ibasicaudio"><strong>IBasicAudio</strong></a>, <strong>IDirectSound3DBuffer</strong>, <strong>IDirectSound3dListener</strong>, <a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>IMediaPosition</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ireferenceclock"><strong>IReferenceClock</strong></a></td>
 </tr>
 <tr class="even">
-<td>Eingabe-PIN-Medientypen</td>
+<td>Eingabepinmedientypen</td>
 <td>Haupttyp: MEDIATYPE_AudioSubtypes:<br/>
 <ul>
 <li>MEDIASUBTYPE_PCM</li>
@@ -43,24 +43,24 @@ Zusätzlich zu den grundlegenden Sound Rendering-Funktionen kann dieser Filter D
 Formattyp: FORMAT_WaveFormatEx<br/></td>
 </tr>
 <tr class="odd">
-<td>PIN-Eingabeschnittstellen</td>
-<td><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipinconnection"><strong>ipinconnection</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>iqualitycontrol</strong></a></td>
+<td>Eingabe-Pin-Schnittstellen</td>
+<td><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-ipinconnection"><strong>IPinConnection,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></td>
 </tr>
 <tr class="even">
-<td>Ausgabe-PIN-Medientypen</td>
+<td>Medientypen des Ausgabepins</td>
 <td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>PIN-Schnittstellen</td>
+<td>Ausgabe-Pin-Schnittstellen</td>
 <td>Nicht zutreffend</td>
 </tr>
 <tr class="even">
-<td>CLSID Filtern</td>
+<td>Filtern von CLSID</td>
 <td>CLSID_DSoundRender</td>
 </tr>
 <tr class="odd">
-<td>CLSID der Eigenschaften Seite</td>
-<td>CLSID_AudioProperties CLSID_AudioRendererAdvancedProperties</td>
+<td>CLSID der Eigenschaftenseite</td>
+<td>CLSID_AudioProperties, CLSID_AudioRendererAdvancedProperties</td>
 </tr>
 <tr class="even">
 <td>Ausführbare Datei</td>
@@ -71,7 +71,7 @@ Formattyp: FORMAT_WaveFormatEx<br/></td>
 <td>MERIT_PREFERRED</td>
 </tr>
 <tr class="even">
-<td><a href="filter-categories.md">Filter Kategorie</a></td>
+<td><a href="filter-categories.md">Filterkategorie</a></td>
 <td>CLSID_AudioRendererCategory</td>
 </tr>
 </tbody>
@@ -81,24 +81,24 @@ Formattyp: FORMAT_WaveFormatEx<br/></td>
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Filter fungiert als Wrapper für ein Audiogerät. Um die auf dem System des Benutzers verfügbaren Audiogeräte aufzulisten, verwenden Sie die [**ikreatedevenum**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) -Schnittstelle mit der Kategorie audiorenderer (CLSID \_ audiorenderercategory). Für jedes Audiogerät enthält die Kategorie audiorenderer zwei Filter Instanzen. Eine dieser Funktionen entspricht dem DirectSound-Renderer, der andere entspricht dem Filter für [audiorenderer (waveout)](audio-renderer--waveout--filter.md) . Die DirectSound-Instanz hat den anzeigen Amen "DirectSound: *DeviceName*", wobei " *DeviceName* " der Name des Geräts ist. Die waveout-Instanz hat den anzeigen Amen " *DeviceName*".
+Dieser Filter fungiert als Wrapper für ein Audiogerät. Um die auf dem System des Benutzers verfügbaren Audiogeräte aufzuzählen, verwenden Sie die [**ICreateDevEnum-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icreatedevenum) mit der Audiorendererkategorie (CLSID \_ AudioRendererCategory). Für jedes Audiogerät enthält die Kategorie Audiorenderer zwei Filterinstanzen. Eine davon entspricht dem DirectSound-Renderer und die andere dem [Filter Audiorenderer (WaveOut).](audio-renderer--waveout--filter.md) Die DirectSound-Instanz hat den Anzeigenamen "DirectSound: *DeviceName",* wobei *DeviceName* der Name des Geräts ist. Die WaveOut-Instanz hat den Anzeigenamen *DeviceName*.
 
-Die Kategorie audiorenderer enthält zwei zusätzliche Filter Instanzen mit dem Namen "Standard-DirectSound-Gerät" und "standardmäßige Wellen Gerät". Diese entsprechen dem Standard-Audiogerät, das der Benutzer über die Systemsteuerung ausgewählt hat. Sie sind tatsächlich Zuordnungen zu einem der im vorherigen Abschnitt beschriebenen Paare. Wenn das System beispielsweise über zwei Audiogeräte (Gerät A und Gerät B) verfügt, enthält die Kategorie audiorenderer Folgendes:
+Die Audiorendererkategorie enthält zwei zusätzliche Filterinstanzen mit den Namen "Default DirectSound Device" und "Default WaveOut Device". Diese entsprechen dem Standard-Soundgerät, das vom Benutzer über die Systemsteuerung ausgewählt wird. Sie sind tatsächlich Zuordnungen zu einem der im vorherigen Absatz beschriebenen Paare. Wenn das System beispielsweise über zwei Audiogeräte verfügt: Gerät A und Gerät B, enthält die Kategorie Audiorenderer Folgendes:
 
 -   Gerät A
 -   DirectSound: Gerät A
 -   Gerät B
 -   DirectSound: Gerät B
 -   DirectSound-Standardgerät
--   Standardmäßiges Wellen Gerät
+-   WaveOut-Standardgerät
 
-Wenn der Benutzergerät a als Standardgerät ausgewählt hat, entspricht "Standard-DirectSound-Gerät" "DirectSound: Device a" und "standardmäßige Wellen Gerät" dem Gerät "a". Wenn der Benutzergerät B als Standardgerät auswählt, ändern sich diese Zuordnungen.
+Wenn der Benutzer Gerät A als Standardgerät ausgewählt hat, entspricht "DirectSound-Standardgerät" "DirectSound: Gerät A" und "Default WaveOut Device" "Device A". Wenn der Benutzer Gerät B als Standardgerät auswählt, ändern sich diese Zuordnungen.
 
-"DirectSound-Standardgerät" ist einem bevorzugten Verdienst zugewiesen \_ . Die anderen haben einen Verdienst, der \_ \_ nicht verwendet werden kann \_ . Daher wählt Intelligent Connect immer das standardmäßige DirectSound-Gerät aus.
+"Default DirectSound Device" wird ein Leistungswert von PREFER \_ PREFERRED zugewiesen. Die anderen haben sich für DIE VERWENDUNG VON "USE \_ \_ DO NOT \_ USE" (NICHT VERWENDEN) eingesetzt. Daher wählt Intelligent Verbinden immer das DirectSound-Standardgerät aus.
 
-Der DirectSound-rendererfilter unterstützt 3D-Sound durch die DirectSound **IDirectSound3DBuffer** -und **IDirectSound3dListener** -Schnittstellen. Sie können den Filter auch nach den aktuellen Versionen dieser Schnittstellen Abfragen, **IDirectSound3DBuffer8** und **IDirectSound3dListener8**. Führen Sie das Diagramm aus, bevor Sie Methoden für diese Schnittstellen aufrufen.
+Der Filter DirectSound Renderer unterstützt 3D-Sound über die Schnittstellen DirectSound **IDirectSound3DBuffer** und **IDirectSound3dListener.** Sie können auch den Filter für die aktuellen Versionen dieser Schnittstellen abfragen: **IDirectSound3DBuffer8** und **IDirectSound3dListener8.** Führen Sie das Diagramm aus, bevor Sie Methoden für diese Schnittstellen aufrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

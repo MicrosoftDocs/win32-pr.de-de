@@ -1,7 +1,7 @@
 ---
-description: Ruft das angegebene Schaltflächen Objekt aus einem Tablet Tablettstift ab.
+description: Ruft das angegebene Schaltflächenobjekt aus einem Tablettstift ab.
 ms.assetid: 83a26703-4501-4f43-9e86-c5c753347012
-title: 'Itabletcursor:: getbutton-Methode'
+title: ITabletCursor::GetButton-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 0b9e8e1337cacdb26d8c124d10e0a886748e70fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49306160a0c14badc23cb2f359400d0fb2947012078a9318315a6697050f48dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938630"
 ---
-# <a name="itabletcursorgetbutton-method"></a>Itabletcursor:: getbutton-Methode
+# <a name="itabletcursorgetbutton-method"></a>ITabletCursor::GetButton-Methode
 
-Ruft das angegebene Schaltflächen Objekt aus einem Tablet Tablettstift ab.
+Ruft das angegebene Schaltflächenobjekt aus einem Tablettstift ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ HRESULT GetButton(
 
 <dl> <dt>
 
-*iButton* \[ in\]
+*iButton* \[ In\]
 </dt> <dd>
 
-Der Bezeichner der abzurufenden Schaltfläche.
+Bezeichner der abzurufenden Schaltfläche.
 
 </dd> <dt>
 
-*ppbutton* \[ vorgenommen\]
+*ppButton* \[ out\]
 </dt> <dd>
 
-Das durch den *iButton* -Parameter angegebene Schaltflächen Objekt.
+Das durch den *iButton-Parameter angegebene Schaltflächenobjekt.*
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -76,7 +76,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -86,7 +86,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itabletcursor-Schnittstelle**](itabletcursor.md)
+[**ITabletCursor-Schnittstelle**](itabletcursor.md)
 </dt> </dl>
 
  

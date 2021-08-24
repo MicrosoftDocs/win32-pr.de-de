@@ -1,28 +1,28 @@
 ---
 title: MIB-Referenz zur Routerverwaltung
-description: In dieser Dokumentation werden die Verweis Elemente beschrieben, die in der Verwaltungs Informationsbasis-API (MIB) der Routerverwaltung verwendet werden.
+description: In dieser Dokumentation werden die Referenzelemente beschrieben, die in der MIB-API (Management Information Base) für die Routerverwaltung verwendet werden.
 ms.assetid: a7a28ac0-c6f9-450c-9925-67990a62ba08
 keywords:
-- Routing, Verwaltungsinformationen Basis, Referenz
-- Verwaltungsinformationen Basis-RRAS, Referenz
+- Routing, Verwaltungsinformationsbasis, Referenz
+- Verwaltungsinformationsbasis RRAS , Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6535b5e85751a97e86067a91444024464f5b07c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 04ce4acb724fe96be02412d7258b5f5918c6d02e69d60377f8f7b49a63f70852
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027640"
 ---
 # <a name="router-management-mib-reference"></a>MIB-Referenz zur Routerverwaltung
 
-In dieser Dokumentation werden die Verweis Elemente beschrieben, die in der Verwaltungs Informationsbasis-API (MIB) der Routerverwaltung verwendet werden. Verwenden Sie diese Verweis Elemente, um die Werte der MIB-Variablen abzufragen und festzulegen. Routermanager und Routing Protokolle, die der routermanager-Dienst für die MIB-Variablen exportiert:
+In dieser Dokumentation werden die Referenzelemente beschrieben, die in der MIB-API (Management Information Base) für die Routerverwaltung verwendet werden. Verwenden Sie diese Verweiselemente zum Abfragen und Festlegen der Werte der MIB-Variablen. Die Router-Manager und die Routingprotokolle, die die Router-Manager-Dienste exportieren, exportieren die MIB-Variablen:
 
--   [MIB-Funktionen der Routerverwaltung](mib-functions.md)
--   [Transport-und Protokoll Konstanten](transport-and-protocol-constants.md)
+-   [MIB-Funktionen für die Routerverwaltung](mib-functions.md)
+-   [Transport- und Protokollkonst constants](transport-and-protocol-constants.md)
 
-Die Strukturen, die MIB-Variablen definieren, werden im Thema technologieunabhängige [Verwaltungsinformationen Basis-API](/previous-versions/windows/desktop/mib/management-information-base-reference) -Netzwerke dokumentiert.
+Die Strukturen, die MIB-Variablen definieren, sind im Thema netzwerkbasierte [Verwaltungsinformations-API](/previous-versions/windows/desktop/mib/management-information-base-reference) dokumentiert.
 
- 
+ 
 
- 
+ 

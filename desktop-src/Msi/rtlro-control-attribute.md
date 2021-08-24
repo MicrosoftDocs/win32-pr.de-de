@@ -1,19 +1,19 @@
 ---
-description: Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lesereihenfolge von rechts nach links angezeigt.
+description: Wenn dieses Formatbit festgelegt ist, wird der Text im -Steuerelement in einer Leserichtung von rechts nach links angezeigt.
 ms.assetid: 68394498-98ca-4bcd-86c0-3f692a26a258
-title: Rtlro-Steuerungs Attribut
+title: RTLRO-Steuerelementattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c452a4b5b4533b24e8e59b6fe70dc2884baec0c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3c4488b31b0bac714d0f28915c074c0a6e4a8b5105e3ef2be60f3870ebcf88d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039670"
 ---
-# <a name="rtlro-control-attribute"></a>Rtlro-Steuerungs Attribut
+# <a name="rtlro-control-attribute"></a>RTLRO-Steuerelementattribut
 
-Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lesereihenfolge von rechts nach links angezeigt.
+Wenn dieses Formatbit festgelegt ist, wird der Text im -Steuerelement in einer Leserichtung von rechts nach links angezeigt.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
@@ -21,15 +21,15 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
  
 
-[ProgressBar](progressbar-control.md)
+[Progressbar](progressbar-control.md)
 
  
 
-[PUSHBUTTON](pushbutton-control.md)
+[Pushbutton](pushbutton-control.md)
 
  
 
-[Scrollabletext](scrollabletext-control.md)
+[ScrollableText](scrollabletext-control.md)
 
  
 
@@ -37,7 +37,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
  
 
-[Volumecostlist](volumecostlist-control.md)
+[VolumeCostList](volumecostlist-control.md)
 
  
 
@@ -49,11 +49,11 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
  
 
-[Directoren auflisten](directorylist-control.md)
+[DirectoryList](directorylist-control.md)
 
  
 
-[Directoriycombo](directorycombo-control.md)
+[DirectoryCombo](directorycombo-control.md)
 
  
 
@@ -61,7 +61,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
  
 
-[Pathetin](pathedit-control.md)
+[PathEdit](pathedit-control.md)
 
  
 
@@ -81,7 +81,7 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
  
 
-[Volumeselectcombo](volumeselectcombo-control.md)
+[VolumeSelectCombo](volumeselectcombo-control.md)
 
 ## <a name="value"></a>Wert
 
@@ -89,17 +89,17 @@ Wenn dieses Stilbit festgelegt ist, wird der Text im Steuerelement in einer Lese
 
 | Decimal | Hexadezimal | Konstante                        |
 |---------|-------------|---------------------------------|
-| 32      | 0x00000020  | **msidbcontrolattributesrtlro** |
+| 32      | 0x00000020  | **msidbControlAttributesRTLRO** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut für ein Steuerelement festzulegen, schließen Sie das rtlro-Bit in die Spalte Attribute des Datensatzes des Steuer Elements in der [Steuerelement Tabelle](control-table.md)ein.
+Um dieses Attribut für ein Steuerelement zu festlegen, schließen Sie das RTLRO-Bit in die Spalte Attribute des Datensatzes des Steuerelements in die [Control-Tabelle ein.](control-table.md)
 
-Siehe [Steuerelement Attribute](control-attributes.md) und-Steuer [Elemente](controls.md).
+Weitere Informationen [finden Sie unter Steuerelementattribute](control-attributes.md) und [Steuerelemente.](controls.md)
 
  
 
