@@ -25,18 +25,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: dca3da14ac74a8d6fab1ba96db98f9e2eccd74ea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 74e396da1135c481079e9fc20ce940774ef58dab983d36cabc131aa8bbe13f38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693649"
 ---
 # <a name="msvm_abstractresourcepoolsettingdata-class"></a>Msvm \_ AbstractResourcePoolSettingData-Klasse
 
 Stellt die Einstellungen einer [**Msvm \_ ResourcePool-Instanz**](msvm-resourcepool.md) dar, die nicht zuordnungsbezogen sind.
 
-Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,20 +74,20 @@ Die **Msvm \_ AbstractResourcePoolSettingData-Klasse** verfügt über diese Eige
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -100,7 +100,7 @@ Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElem
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -113,7 +113,7 @@ Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedEle
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -135,7 +135,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zuordnungsstrategie an, die vom Ressourcenpool verwendet werden soll, um die Ressourcennutzung über die aggregierten Ressourcen hinweg auszugleichen.
+Gibt die Zuordnungsstrategie an, die vom Ressourcenpool verwendet werden soll, um die Ressourcennutzung über die aggregierten Ressourcen hinweg zu ausgleichen.
 
 <dt>
 
@@ -222,7 +222,7 @@ Gibt an, ob der Ressourcenpool versuchen kann, andere Hostressourcen zu verwende
 
 <span id="Hard_Affinity"></span><span id="hard_affinity"></span><span id="HARD_AFFINITY"></span>
 
-**Harte Affinität** (5)
+**Hard Affinity** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -259,10 +259,10 @@ Gibt die Reihenfolge an, in der über diesen Pool verfügbare Hostressourcen aus
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -275,7 +275,7 @@ Vom Endbenutzer bereitgestellte Hinweise zu diesem Ressourcenpool.
 **OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -291,7 +291,7 @@ Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter W
 **PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -307,7 +307,7 @@ Ein Bezeichner für den Pool. Diese Eigenschaft wird verwendet, um die Korrelati
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -338,7 +338,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Andere** (1)
+**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -387,7 +387,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>
 
-**iSCSI-HBA** (8)
+**iSCSI HBA** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -464,7 +464,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>
 
-**Speicherumfang** (19)
+**Storage Extent** (19)
 
 
 </dt> <dd></dd> <dt>
@@ -478,14 +478,14 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>
 
-**Serieller Anschluss** (21)
+**Serieller** Port (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>
 
-**Paralleler Port** (22)
+**Paralleler** Port (22)
 
 
 </dt> <dd></dd> <dt>
@@ -527,7 +527,7 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Power"></span><span id="power"></span><span id="POWER"></span>
 
-**Stromversorgung** (28)
+**Power** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -548,14 +548,14 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>
 
-**Logischer Datenträger** (31)
+**Logischer** Datenträger (31)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>
 
-**Speichervolume** (32)
+**Storage Volume** (32)
 
 
 </dt> <dd></dd> <dt>
@@ -569,14 +569,14 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 <span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF reserved** (.)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (0x8000. 0xFFFF)
+**Reservierter Anbieter** (0x8000.) 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
@@ -587,10 +587,10 @@ Der Typ der Ressource, die dieser Ressourcenpool zuordnen kann.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |

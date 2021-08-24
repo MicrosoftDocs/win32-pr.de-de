@@ -1,7 +1,7 @@
 ---
-description: Die vtrackgetcount-Methode ruft die Anzahl der in der Komposition enthaltenen virtuellen Spuren ab.
+description: Die VTrackGetCount-Methode ruft die Anzahl der virtuellen Spuren ab, die in der Komposition enthalten sind.
 ms.assetid: a8117b06-4f42-45da-9b93-f547cb70aa5d
-title: 'Iamtimelinecomp:: vtrackgetcount-Methode (qedit. h)'
+title: IAMTimelineComp::VTrackGetCount-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 36800381ce50ea60d5252841d9731b2657fc22cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cde292352bc4ae4403725781345e5331b4409d7b1f3578da1298035cfb9b421d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767410"
 ---
-# <a name="iamtimelinecompvtrackgetcount-method"></a>Iamtimelinecomp:: vtrackgetcount-Methode
+# <a name="iamtimelinecompvtrackgetcount-method"></a>IAMTimelineComp::VTrackGetCount-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `VTrackGetCount` Methode ruft die Anzahl der in der Komposition enthaltenen virtuellen Spuren ab.
+Die `VTrackGetCount` -Methode ruft die Anzahl der virtuellen Spuren ab, die in der Komposition enthalten sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT VTrackGetCount(
 *pVal* 
 </dt> <dd>
 
-Empfängt die Anzahl der virtuellen Spuren.
+Empfängt die Anzahl virtueller Spuren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,19 +74,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinecomp-Schnittstelle**](iamtimelinecomp.md)
+[**IAMTimelineComp-Schnittstelle**](iamtimelinecomp.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

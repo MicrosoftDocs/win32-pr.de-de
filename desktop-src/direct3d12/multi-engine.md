@@ -1,99 +1,99 @@
 ---
 title: Systeme mit mehreren Adaptern
-description: Beschreibt die Unterstützung in Direct3D 12 für Systeme, die mehrere Adapter installiert haben, und umfasst Szenarien, in denen Ihre Anwendung explizit mehrere GPU-Adapter als Ziel verwendet, und Szenarios, in denen Treiber implizit mehrere GPU-Adapter im Auftrag der Anwendung verwenden.
+description: Beschreibt die Unterstützung in Direct3D 12 für Systeme, auf denen mehrere Adapter installiert sind, und deckt Szenarien ab, in denen Ihre Anwendung explizit auf mehrere GPU-Adapter ausgerichtet ist, und Szenarien, in denen Treiber implizit mehrere GPU-Adapter im Auftrag Ihrer Anwendung verwenden.
 ms.assetid: CC4C6594-D48F-40C1-93EE-9F98532BC038
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 09/25/2019
-ms.openlocfilehash: d7d3985c880c4d1732a96b98ac6d3c6579dab8e6
-ms.sourcegitcommit: 9d530b0a2396f2274e9ed693c1f5f10556aadebb
+ms.openlocfilehash: e76c5c1295dab8858ff04830030efb479fe3ae8a09bcdb37ff8c4820f4fd08c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "104548647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728815"
 ---
 # <a name="multi-adapter-systems"></a>Systeme mit mehreren Adaptern
 
-Beschreibt die Unterstützung in Direct3D 12 für Systeme, die mehrere Adapter installiert haben, und umfasst Szenarien, in denen Ihre Anwendung explizit mehrere GPU-Adapter als Ziel verwendet, und Szenarios, in denen Treiber implizit mehrere GPU-Adapter im Auftrag der Anwendung verwenden.
+Beschreibt die Unterstützung in Direct3D 12 für Systeme, auf denen mehrere Adapter installiert sind, und deckt Szenarien ab, in denen Ihre Anwendung explizit auf mehrere GPU-Adapter ausgerichtet ist, und Szenarien, in denen Treiber implizit mehrere GPU-Adapter im Auftrag Ihrer Anwendung verwenden.
 
 ## <a name="multi-adapter-overview"></a>Übersicht über mehrere Adapter
 
-Bei einem GPU-Adapter kann es sich um einen beliebigen Adapter (Grafiken oder COMPUTE, diskret oder integriert) von jedem Hersteller handeln, der Direct3D 12 unterstützt.
+Ein GPU-Adapter kann ein beliebiger Adapter (Grafiken oder Compute, diskret oder integriert) eines beliebigen Herstellers sein, der Direct3D 12 unterstützt.
 
-Mehrere Adapter werden als *Knoten* referenziert. Eine Reihe von Elementen, z. b. die Warteschlangen, gelten für jeden Knoten. Wenn also zwei Knoten vorhanden sind, gibt es zwei 3D-Standard Warteschlangen. Andere Elemente, wie z. b. der Pipeline Status und Stamm-und Befehls Signaturen, können auf einen oder mehrere der Knoten verweisen, wie im Diagramm dargestellt.
+Auf mehrere Adapter wird als *Knoten* verwiesen. Eine Reihe von Elementen, z. B. die Warteschlangen, gelten für jeden Knoten. Wenn also zwei Knoten vorhanden sind, gibt es zwei standardmäßige 3D-Warteschlangen. Andere Elemente, z. B. der Pipelinezustand sowie Stamm- und Befehlssignaturen, können auf einen oder mehrere oder alle Knoten verweisen, wie im Diagramm dargestellt.
 
-![Warteschlangen gelten für jeden Grafikadapter.](images/multigpu.png)
+![Warteschlangen gelten für jeden Grafikkarten](images/multigpu.png)
 
 ## <a name="sharing-heaps-across-adapters"></a>Freigeben von Heaps über Adapter hinweg
 
-Weitere Informationen finden Sie im Thema frei [gegebene Heaps](shared-heaps.md) .
+Weitere Informationen finden Sie im Thema [Freigegebene Heaps.](shared-heaps.md)
 
-## <a name="multi-adapter-apis-and-node-masks"></a>APIs mit mehreren Adaptern und Knoten Masken
+## <a name="multi-adapter-apis-and-node-masks"></a>APIs mit mehreren Adaptern und Knotenmasken
 
-Ähnlich wie bei früheren Direct3D-APIs wird jeder Satz von verknüpften Adaptern als einzelnes [**IDXGIAdapter3**](/windows/win32/api/dxgi1_4/nn-dxgi1_4-idxgiadapter3) -Objekt aufgezählt. Alle Ausgaben, die an einen beliebigen Adapter in der Verknüpfung angefügt sind, werden als angefügt an das einzelne **IDXGIAdapter3** -Objekt aufgezählt.
+Ähnlich wie bei früheren Direct3D-APIs wird jeder Satz von verknüpften Adaptern als einzelnes [**IDXGIAdapter3-Objekt**](/windows/win32/api/dxgi1_4/nn-dxgi1_4-idxgiadapter3) aufzählt. Alle Ausgaben, die an einen beliebigen Adapter im Link angefügt sind, werden als an das einzelne **IDXGIAdapter3-Objekt** angefügt aufgeführt.
 
-Die Anwendung kann die Anzahl von physischen Adaptern ermitteln, die einem bestimmten Gerät zugeordnet sind, indem [**ID3D12Device:: getnodecount**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getnodecount)aufgerufen wird.
+Ihre Anwendung kann die Anzahl der physischen Adapter bestimmen, die einem bestimmten Gerät zugeordnet sind, indem [**SIE ID3D12Device::GetNodeCount**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getnodecount)aufrufen.
 
-Viele APIs in Direct3D 12 akzeptieren eine *Knoten Maske* (eine Bitmaske), die die Gruppe von Knoten angibt, auf die der API-Befehl verweist. Jeder Knoten verfügt über einen NULL basierten Index. In der Knoten Maske wird jedoch 0 (null) in Bit 1 übersetzt. 1 übersetzt in Bit 2; Und so weiter.
+Viele APIs in Direct3D 12 akzeptieren eine *Knotenmaske* (eine Bitmaske), die den Knotensatz angibt, auf den der API-Aufruf verweist. Jeder Knoten verfügt über einen nullbasierten Index. In der Knotenmaske wird 0 jedoch in Bit 1 übersetzt. 1 wird in Bit 2 übersetzt; Und so weiter.
 
 ### <a name="single-nodes"></a>Einzelne Knoten
 
-Beim Aufrufen der folgenden (einzelnen Knoten) APIs gibt Ihre Anwendung einen einzelnen Knoten an, dem der API-Aufruf zugeordnet wird. In den meisten Fällen wird dies durch eine Knoten Maske angegeben. Jedes Bit in der Maske entspricht einem einzelnen Knoten. Für alle in diesem Abschnitt beschriebenen APIs muss in der Knoten Maske genau ein Bit festgelegt werden.
+Beim Aufrufen der folgenden APIs (einzelner Knoten) gibt Ihre Anwendung einen einzelnen Knoten an, dem der API-Aufruf zugeordnet wird. In den meisten Jahren wird dies durch eine Knotenmaske angegeben. Jedes Bit in der Maske entspricht einem einzelnen Knoten. Für alle in diesem Abschnitt beschriebenen APIs müssen Sie genau ein Bit in der Knotenmaske festlegen.
 
--   [**D3D12 \_ \_ \_ DESC der Befehls Warteschlange**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc) : weist einen *nodemask* -Member auf.
--   [**Kreatecommandqueue**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandqueue) : erstellt eine Warteschlange aus einer [**D3D12-Befehls \_ Warteschlange \_ \_**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc) -Struktur.
--   " [**Kreatecommandlist**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandlist) ": nimmt einen *nodemask* -Parameter an.
--   [**D3D12 \_ \_Deskriptorheap- \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc) : weist einen *nodemask* -Member auf.
--   [**Kreatedescriptorheap**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createdescriptorheap) : erstellt einen deskriptorheap aus einer [**D3D12 \_ Deskriptor \_ - \_ Heap**](/windows/win32/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc) -Struktur.
--   [**D3D12 \_ \_Abfrageheap- \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_query_heap_desc) : weist einen *nodemask* -Member auf.
--   " [**Kreatequeryheap**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createqueryheap) ": erstellt einen Abfrage Heap aus einer [**D3D12- \_ Abfrage Heap- \_ \_ debustruktur**](/windows/win32/api/d3d12/ns-d3d12-d3d12_query_heap_desc) .
+-   [**D3D12 \_ COMMAND \_ QUEUE \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc) : verfügt über einen *NodeMask-Member.*
+-   [**CreateCommandQueue:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandqueue) Erstellt eine Warteschlange aus einer [**D3D12 \_ COMMAND QUEUE \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc)
+-   [**CreateCommandList:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandlist) verwendet einen *nodeMask-Parameter.*
+-   [**D3D12 \_ DESCRIPTOR \_ HEAP \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc) : weist einen *NodeMask-Member* auf.
+-   [**CreateDescriptorHeap:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createdescriptorheap) Erstellt einen Deskriptorheap aus einer [**D3D12 \_ DESCRIPTOR \_ HEAP \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc)
+-   [**D3D12 \_ QUERY \_ HEAP \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_query_heap_desc) : weist einen *NodeMask-Member* auf.
+-   [**CreateQueryHeap:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createqueryheap) Erstellt einen Abfrageheap aus einer [**D3D12 \_ QUERY HEAP \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_query_heap_desc)
 
 ### <a name="multiple-nodes"></a>Mehrere Knoten
 
-Wenn Sie die folgenden APIs (mehrere Knoten) aufrufen, gibt Ihre Anwendung eine Gruppe von Knoten an, der der API-Aufruf zugeordnet wird. Sie geben die Knoten Affinität als Knoten Maske an, bei der möglicherweise mehrere Bits festgelegt sind. Wenn die Anwendung 0 für diese Bitmaske übergibt, konvertiert der Direct3D 12-Treiber diese in die Bitmaske 1 (gibt an, dass das Objekt mit Knoten 0 verknüpft ist).
+Beim Aufrufen der folgenden APIs (mehrere Knoten) gibt Ihre Anwendung eine Gruppe von Knoten an, denen der API-Aufruf zugeordnet wird. Sie geben Knotenaffinität als Knotenmaske an, wobei möglicherweise mehrere Bits festgelegt sind. Wenn Ihre Anwendung 0 für diese Bitmaske übergibt, konvertiert der Direct3D 12-Treiber diese in die Bitmaske 1 (was angibt, dass das Objekt Knoten 0 zugeordnet ist).
 
--   [**D3D12 \_ \_Knoten übergreifende \_ Freigabe \_ Ebene**](/windows/win32/api/d3d12/ne-d3d12-d3d12_cross_node_sharing_tier) : bestimmt die Unterstützung für die Knoten übergreifende Freigabe.
--   [**D3D12 \_ Feature \_ Data \_ D3D12 \_ Optionen**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options) : Struktur, die [**auf \_ D3D12 \_ Knoten übergreifende \_ Freigabe \_ Ebene**](/windows/win32/api/d3d12/ne-d3d12-d3d12_cross_node_sharing_tier)verweist.
--   [**D3D12 \_ \_ \_ Architektur von Featuredaten**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_architecture) : enthält ein *nodeindex* -Element.
--   [**D3D12 \_ \_ \_ Status \_ DESC der Grafik Pipeline**](/windows/win32/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) : weist einen *nodemask* -Member auf.
--   [**Kreategraphicspipelinestate**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate) : erstellt ein Grafik Pipeline-Zustands Objekt aus einer [**D3D12- \_ Grafik \_ Pipeline State- \_ \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) -Struktur.
--   [**D3D12 \_ Der COMPUTE- \_ Pipeline \_ Status \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc) : weist einen *nodemask* -Member auf.
--   [**Kreatecomputepipelinestate**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcomputepipelinestate) : erstellt ein Compute Pipeline State-Objekt aus einer [**D3D12 \_ Compute \_ Pipeline \_ State \_**](/windows/win32/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc) -Struktur Struktur.
--   " [**Kreaterootsignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)": nimmt einen *nodemask* -Parameter an.
--   [**D3D12 \_ Befehls \_ Signatur \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_signature_desc): weist einen *nodemask* -Member auf.
--   [**Kreatecommandsignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandsignature) : erstellt ein Befehls Signatur Objekt aus einer [**D3D12- \_ Befehls \_ Signatur- \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_signature_desc) -Struktur.
+-   [**D3D12 \_ \_ \_ KNOTENÜBERGREIFENDER \_ FREIGABETARIF:**](/windows/win32/api/d3d12/ne-d3d12-d3d12_cross_node_sharing_tier) Bestimmt die Unterstützung für knotenübergreifende Freigabe.
+-   [**D3D12 \_ FEATURE \_ DATA \_ D3D12 \_ OPTIONS**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options) : Struktur, die auf [**D3D12 \_ CROSS NODE SHARING \_ \_ \_ TIER**](/windows/win32/api/d3d12/ne-d3d12-d3d12_cross_node_sharing_tier)verweist.
+-   [**D3D12 \_ FEATURE \_ DATA \_ ARCHITECTURE:**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_architecture) enthält einen *NodeIndex-Member.*
+-   [**D3D12 \_ GRAPHICS \_ PIPELINE \_ STATE \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) : weist einen *NodeMask-Member* auf.
+-   [**CreateGraphicsPipelineState:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate) Erstellt ein Grafikpipelinezustandsobjekt aus einer [**D3D12 \_ GRAPHICS PIPELINE STATE \_ \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc)
+-   [**D3D12 \_ COMPUTE \_ PIPELINE \_ STATE \_ DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc) : weist einen *NodeMask-Member* auf.
+-   [**CreateComputePipelineState:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcomputepipelinestate) Erstellt ein Computepipelinezustandsobjekt aus einer [**D3D12 \_ COMPUTE PIPELINE STATE \_ \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_compute_pipeline_state_desc)
+-   [**CreateRootSignature:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)verwendet einen *nodeMask-Parameter.*
+-   [**D3D12 \_ COMMAND \_ SIGNATURE \_ DESC:**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_signature_desc)weist einen *NodeMask-Member* auf.
+-   [**CreateCommandSignature:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandsignature) Erstellt ein Befehlssignaturobjekt aus einer [**D3D12 \_ COMMAND SIGNATURE \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_signature_desc)
 
-### <a name="resource-creation-apis"></a>APIs zum Erstellen von Ressourcen
+### <a name="resource-creation-apis"></a>RESSOURCENERSTELLUNGS-APIs
 
-Die folgenden APIs verweisen auf Knoten Masken.
+Die folgenden APIs verweisen auf Knotenmasken.
 
--   [**D3D12 \_ Heap \_ Eigenschaften**](/windows/win32/api/d3d12/ns-d3d12-d3d12_heap_properties) : verfügt sowohl über die Member " *kreationnodemask* " als auch " *visiblenodemask* ".
--   [**Getresourcezucationinfo**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo) : verfügt über einen *visiblemask* -Parameter.
--   [**Getcustomheapproperties**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getcustomheapproperties) : weist einen *nodemask* -Parameter auf.
+-   [**D3D12 \_ HEAP \_ PROPERTIES**](/windows/win32/api/d3d12/ns-d3d12-d3d12_heap_properties) : enthält sowohl *CreationNodeMask-* als auch *VisibleNodeMask-Member.*
+-   [**GetResourceAllocationInfo:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo) weist einen *visibleMask-Parameter* auf.
+-   [**GetCustomHeapProperties**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getcustomheapproperties) : verfügt über einen *nodeMask-Parameter.*
 
-Wenn Sie eine reservierte Ressource erstellen, wird kein Knoten Index oder keine Maske angegeben. Die reservierte Ressource kann einem Heap auf einem beliebigen Knoten zugeordnet werden (nach den Knoten übergreifenden Freigabe Regeln).
+Beim Erstellen einer reservierten Ressource wird kein Knotenindex oder keine Knotenmaske angegeben. Die reservierte Ressource kann einem Heap auf einem beliebigen Knoten zugeordnet werden (gemäß den Regeln für die knotenübergreifende Freigabe).
 
-Die Methode " [**makeresident**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-makeresident) " funktioniert intern mit Adapter Warteschlangen, es ist nicht erforderlich, dass Ihre Anwendung für diese Angabe etwas angibt.
+Die [**MakeResident-Methode**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-makeresident) funktioniert intern mit Adapterwarteschlangen. Ihre Anwendung muss hierfür nichts angeben.
 
-Wenn Sie die folgenden [**ID3D12Device**](/windows/win32/api/d3d12/nn-d3d12-id3d12device) -APIs aufrufen, muss Ihre Anwendung keinen Satz von Knoten angeben, mit denen der API-Aufruf verknüpft wird, da der API-Aufruf für alle Knoten gilt.
+Beim Aufrufen der folgenden [**ID3D12Device-APIs**](/windows/win32/api/d3d12/nn-d3d12-id3d12device) muss Ihre Anwendung keinen Knotensatz angeben, dem der API-Aufruf zugeordnet wird, da der API-Aufruf für alle Knoten gilt.
 
--   [**Erschluss**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createfence)
--   [**GetDescriptor handleinkrementsize**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getdescriptorhandleincrementsize)
--   [**Setstablepowerstate**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-setstablepowerstate)
--   [**Checkfeaturesupport**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport)
--   [**"Kreatesampler"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createsampler)
--   [**Copydescriptors**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copydescriptors)
--   [**Copydescriptor ssimple**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copydescriptorssimple)
--   [**"Kreatesharedhandle"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createsharedhandle)
--   [**Opensharedlenker byname**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-opensharedhandlebyname)
--   [**Opensharedhandle**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-opensharedhandle) : mit einem *Fence* als Parameter. Bei einer *Ressource* oder einem *Heap* als Parameter akzeptiert diese Methode keine Knoten als Parameter, da Knoten Masken von zuvor erstellten Objekten geerbt werden.
--   [**"Kreatecommandzucator"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandallocator)
--   [**"Kreateconstantbufferview"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview)
--   [**"Kreaterendertargetview"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrendertargetview)
--   [**"Kreateunorderedaccessview"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview)
--   [**"Kreatedepthstencilview"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createdepthstencilview)
--   [**"Kreateshaderresourceview"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview)
+-   [**CreateFence**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createfence)
+-   [**GetDescriptorHandleIncrementSize**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-getdescriptorhandleincrementsize)
+-   [**SetStablePowerState**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-setstablepowerstate)
+-   [**CheckFeatureSupport**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-checkfeaturesupport)
+-   [**CreateSampler**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createsampler)
+-   [**CopyDescriptors**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copydescriptors)
+-   [**CopyDescriptorsSimple**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-copydescriptorssimple)
+-   [**CreateSharedHandle**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createsharedhandle)
+-   [**OpenSharedHandleByName**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-opensharedhandlebyname)
+-   [**OpenSharedHandle:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-opensharedhandle) mit einem *Fence* als Parameter. Bei einer *Ressource* oder einem *Heap* als Parameter akzeptiert diese Methode knoten nicht als Parameter, da Knotenmasken von zuvor erstellten Objekten geerbt werden.
+-   [**CreateCommandAllocator**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandallocator)
+-   [**CreateConstantBufferView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview)
+-   [**CreateRenderTargetView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrendertargetview)
+-   [**CreateUnorderedAccessView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview)
+-   [**CreateDepthStencilView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createdepthstencilview)
+-   [**CreateShaderResourceView**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-[Direct3D 12-Programmier Handbuch](directx-12-programming-guide.md)
+[Direct3D 12-Programmieranleitung](directx-12-programming-guide.md)

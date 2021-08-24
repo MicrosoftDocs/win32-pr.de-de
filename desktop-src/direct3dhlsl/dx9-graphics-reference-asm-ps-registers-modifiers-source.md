@@ -1,5 +1,5 @@
 ---
-title: Pixelshader-Quellregistermodifizierer
+title: Quellregistermodifizierer für Pixelshader
 description: Verwenden Sie Quellregistermodifizierer, um den Aus einem Register gelesenen Wert zu ändern, bevor eine Anweisung ausgeführt wird.
 ms.assetid: b45d0919-7878-4184-ad4a-5623aae9d1f1
 ms.topic: article
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a9dd4476dd7a1a885edb2e62a29b5127f5ff0a14
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 0626449e0a38cb695f5f3c9402969df3a25c192ad7a16ef3311053c7843e0667
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673310"
 ---
-# <a name="pixel-shader-source-register-modifiers"></a>Pixelshader-Quellregistermodifizierer
+# <a name="pixel-shader-source-register-modifiers"></a>Quellregistermodifizierer für Pixelshader
 
 Verwenden Sie Quellregistermodifizierer, um den Aus einem Register gelesenen Wert zu ändern, bevor eine Anweisung ausgeführt wird. Der Inhalt eines Quellregisters bleibt unverändert. Modifizierer sind nützlich, um den Bereich der Registerdaten als Vorbereitung für die Anweisung anzupassen. Eine Reihe von Modifizierern, die als Selektoren bezeichnet werden, kopiert oder repliziert die Daten aus einem einzelnen Kanal (r,g,b,a) in die anderen Kanäle.
 
@@ -26,7 +26,7 @@ In dieser Tabelle sind die Versionen aufgeführt, die die einzelnen Modifizierer
 
 
 
-| Quellregistermodifizierer                                                                                    | Syntax         | Version 1 \_ 1 | Version 1 \_ 2     | Version 1 \_ 3     | Version 1 \_ 4     |
+| Modifizierer für Quellregister                                                                                    | Syntax         | Version 1 \_ 1 | Version 1 \_ 2     | Version 1 \_ 3     | Version 1 \_ 4     |
 |--------------------------------------------------------------------------------------------------------------|----------------|---------|------|------|------|
 | [Vorurteil](dx9-graphics-reference-asm-ps-registers-modifiers-bias.md)                                           | \_Registervoreingenommenheit | X       | X    | X    | X    |
 | [Invertieren](dx9-graphics-reference-asm-ps-registers-modifiers-invert.md)                                       | 1– Registrieren   | X       | X    | X    | X    |
@@ -40,11 +40,11 @@ In dieser Tabelle sind die Versionen aufgeführt, die die einzelnen Modifizierer
 
  
 
-Quellregistermodifizierer können nur für arithmetische Anweisungen verwendet werden. Sie können nicht für Texturadressanweisungen verwendet werden. Eine Ausnahme bildet der Modifizierer [Scale by 2.](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md) Für Version 1 \_ 1 kann die signierte Skalierung für das Quellargument jeder texm-Anweisung verwendet \* werden. Für Version \_ 1 2 oder 1 \_ 3 kann die signierte Skalierung für das Quellargument einer beliebigen Texturadressanweisung verwendet werden.
+Quellregistermodifizierer können nur für arithmetische Anweisungen verwendet werden. Sie können nicht für Texturadressanweisungen verwendet werden. Die Ausnahme ist der Modifizierer [Scale by 2.](dx9-graphics-reference-asm-ps-registers-modifiers-scale-x2.md) Für Version 1 \_ 1 kann die signierte Skalierung für das Quellargument jeder texm-Anweisung verwendet \* werden. Für Version \_ 1 2 oder 1 \_ 3 kann die signierte Skala für das Quellargument einer beliebigen Texturadressanweisung verwendet werden.
 
 Einige modifiziererspezifische Einschränkungen:
 
--   Negate kann entweder mit dem Modifizierer bias, signed scaling oder scalex2 kombiniert werden. In kombination wird "negate" zuletzt ausgeführt.
+-   "Negate" kann entweder mit dem Modifizierer "Bias", "Signed Scaling" oder "scalex2" kombiniert werden. In kombination wird "negate" zuletzt ausgeführt.
 -   Invert kann nicht mit einem anderen Modifizierer kombiniert werden.
 -   Invertieren, Negieren, Voreingenommenheit, signierte Skalierung und Scalex2 können mit jedem der Selektoren kombiniert werden.
 -   Quellregistermodifizierer sollten nicht für Konstantenregister verwendet werden, da sie nicht definierte Ergebnisse verursachen. Für Version 1 \_ 4 sind Modifizierer für Konstanten nicht zulässig und schlagen bei der Überprüfung fehl.
@@ -61,7 +61,7 @@ Negieren Sie den Inhalt des Quellregisters.
 
 | Komponentenmodifizierer | Beschreibung     |
 |--------------------|-----------------|
-| \- R               | Quelln negation |
+| \- R               | Quell negation |
 
 
 

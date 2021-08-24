@@ -1,35 +1,35 @@
 ---
-description: Die Debugversion der XAudio2-Engine überprüft Parameter und stellt ausführliche Warn-und Fehlermeldungen bereit.
+description: Die Debugversion der XAudio2-Engine überprüft Parameter und stellt detaillierte Warnungen und Fehlermeldungen bereit.
 ms.assetid: a7aaebf9-98d4-e96c-993d-b0d0b7074788
-title: XAudio2-Debugging-Funktionen
+title: Debuggen von XAudio2-Einrichtungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc50e710f30969e024078eeaf2660545e1da45c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4dc6a89bb298a2e836e4d8dc63ed0144b9a789950432c5c83f33ec7ad86f4de8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119706990"
 ---
-# <a name="xaudio2-debugging-facilities"></a>XAudio2-Debugging-Funktionen
+# <a name="xaudio2-debugging-facilities"></a>Debuggen von XAudio2-Einrichtungen
 
-Die Debugversion der XAudio2-Engine überprüft Parameter und stellt ausführliche Warn-und Fehlermeldungen bereit.
+Die Debugversion der XAudio2-Engine überprüft Parameter und stellt detaillierte Warnungen und Fehlermeldungen bereit.
 
-## <a name="setting-the-debug-logging-level-at-run-time"></a>Festlegen der debugprotokollierungs Stufe zur Laufzeit
+## <a name="setting-the-debug-logging-level-at-run-time"></a>Festlegen des Debugprotokolliergrads zur Laufzeit
 
-Sie können die Ebene der Debuginformationen, die von XAudio2 angezeigt werden, jederzeit festlegen, indem Sie eine [**XAudio2 \_ Debug- \_ Konfigurations**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_debug_configuration) Struktur mit den Flags für den gewünschten Protokolliergrad ausfüllen und die Struktur dann an die [**IXAudio2:: setdebugconfiguration**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-setdebugconfiguration) -Methode übergeben. Werte, die an die **IXAudio2:: setdebugconfiguration** -Methode übergeben werden, überschreiben immer alle Standardwerte, die in der Windows-Registrierung festgelegt wurden.
+Sie können die Von XAudio2 angezeigten Debuginformationen jederzeit festlegen, indem Sie eine [**XAUDIO2 \_ DEBUG \_ CONFIGURATION-Struktur**](/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_debug_configuration) mit den Flags für den gewünschten Protokolliergrad ausfüllen und dann die Struktur an die [**IXAudio2::SetDebugConfiguration-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-setdebugconfiguration) übergeben. Werte, die an die **IXAudio2::SetDebugConfiguration-Methode** übergeben werden, überschreiben immer alle Standardwerte, die in der registrierung Windows festgelegt wurden.
 
 ## <a name="debug-support"></a>Debugunterstützung
 
-Die Debuggingfunktionen sind für XAUDIO2 in Windows 8 immer verfügbar.
+Die Debugmöglichkeiten sind für XAUDIO2 in Windows 8 immer verfügbar.
 
-Für die DirectX SDK-Versionen von XAUDIO2 müssen Sie die **XAUDIO2 \_ Debug- \_ Engine** verwenden, wenn Sie das XAUDIO2-Objekt mit [**XAudio2Create**](/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create) erstellen, und das System muss die DirectX SDK Developer Runtime installiert haben, damit das Debugging unterstützt wird.
+Für die DirectX SDK-Versionen von XAUDIO2 müssen Sie die **XAUDIO2-DEBUG-ENGINE \_ \_** verwenden, wenn Sie das XAUDIO2-Objekt mit [**XAudio2Create**](/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create) erstellen, und auf dem System muss die DirectX SDK Developer Runtime installiert sein, damit das Debuggen unterstützt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Debugging-Einrichtungen](debugging-facilities.md)
+[Debuggen von Einrichtungen](debugging-facilities.md)
 </dt> <dt>
 
 [XAudio2-Programmierreferenz](programming-reference.md)

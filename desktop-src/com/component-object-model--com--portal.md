@@ -1,52 +1,52 @@
 ---
 title: Component Object Model (COM)
-description: Der Component Object Model ist ein plattformunabhängiges, verteiltes und objektorientiertes System zum Erstellen von binären Softwarekomponenten, die interagieren können. COM ist die Grundtechnologie für OLE (Verbund Dokumente) von Microsoft und ActiveX-Technologien.
+description: Das Component Object Model ist ein plattformunabhängiges, verteiltes, objektorientiertes System zum Erstellen binärer Softwarekomponenten, die interagieren können. COM ist die Grundlagetechnologie für OLE (Verbunddokumente) und ActiveX Von Microsoft.
 ms.assetid: 3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbc808a59f5ebafb4e7c2275db33a71041a0bca0
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: b432942497b5e2d1a3c5d580e141b5abbd92d0c91c134ce72a8c717f3d771ca4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119679167"
 ---
 # <a name="component-object-model-com"></a>Component Object Model (COM)
 
 ## <a name="purpose"></a>Zweck
 
-COM ist ein plattformunabhängiges, verteiltes und objektorientiertes System zum Erstellen von binären Softwarekomponenten, die interagieren können. COM ist die Grundtechnologie für OLE (Verbund Dokumente) und ActiveX-Technologien (Internet fähige Komponenten) von Microsoft.
+COM ist ein plattformunabhängiges, verteiltes, objektorientiertes System zum Erstellen binärer Softwarekomponenten, die interagieren können. COM ist die Grundlagetechnologie für OLE-Technologien (Verbunddokumente) und ActiveX (internetfähige Komponenten) von Microsoft.
 
 ## <a name="where-applicable"></a>Anwendungsbereich
 
-COM-Objekte können mit einer Vielzahl von Programmiersprachen erstellt werden. Objektorientierte Sprachen, wie z. b. C++, stellen Programmier Mechanismen bereit, die die Implementierung von COM-Objekten vereinfachen. Diese Objekte können sich innerhalb eines einzelnen Prozesses befinden, in anderen Prozessen, auch auf Remote Computern.
+COM-Objekte können mit einer Vielzahl von Programmiersprachen erstellt werden. Objektorientierte Sprachen wie C++ bieten Programmiermechanismen, die die Implementierung von COM-Objekten vereinfachen. Diese Objekte können sich innerhalb eines einzelnen Prozesses, in anderen Prozessen, auch auf Remotecomputern, befingen.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Informationen dazu, welche Betriebssysteme für die Verwendung einer bestimmten Schnittstelle oder Funktion erforderlich sind, finden Sie im Abschnitt "Anforderungen" in der Dokumentation für die Schnittstelle oder Funktion.
+Informationen dazu, welche Betriebssysteme für die Verwendung einer bestimmten Schnittstelle oder Funktion erforderlich sind, finden Sie im Abschnitt Anforderungen der Dokumentation für die Schnittstelle oder Funktion.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                     | BESCHREIBUNG                                                                                                                                      |
+| Thema                                                                     | Beschreibung                                                                                                                                      |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Grundlagen zu com](com-fundamentals.md)<br/>                       | Beschreibt die grundlegenden Konzepte und die Programmier Referenz.<br/>                                                                         |
-| [OLE und Datenübertragung](ole-and-data-transfer.md)<br/>             | Beschreibt Verbund Dokumente und Datenübertragungen.<br/>                                                                                       |
-| [Steuerelemente und Eigenschaften Seiten](controls-and-property-pages.md)<br/> | Beschreibt ActiveX-Steuerelemente und Eigenschaften Seiten.<br/>                                                                                        |
-| [COM-Sprachübersetzungen](com-language-translations.md)<br/>     | Beschreibt die Unterschiede zwischen Programmiersprachen und beschreibt, wie COM-Objekt Syntax von einer Sprache in eine andere übersetzt werden kann.<br/> |
+| [COM-Grundlagen](com-fundamentals.md)<br/>                       | Beschreibt die grundlegenden Konzepte und die Programmierreferenz.<br/>                                                                         |
+| [OLE und Datenübertragung](ole-and-data-transfer.md)<br/>             | Beschreibt zusammengesetzte Dokumente und die Datenübertragung.<br/>                                                                                       |
+| [Steuerelemente und Eigenschaftenseiten](controls-and-property-pages.md)<br/> | Beschreibt ActiveX Steuerelementen und Eigenschaftenseiten.<br/>                                                                                        |
+| [COM-Sprachübersetzungen](com-language-translations.md)<br/>     | Beschreibt die Unterschiede zwischen Programmiersprachen und beschreibt, wie die COM-Objektsyntax von einer Sprache in eine andere übersetzt wird.<br/> |
 
 
 ## <a name="related-documentation"></a>verwandten Dokumentation
 
 
 
-| Thema                                                                     | BESCHREIBUNG                                                                                                                                      |
+| Thema                                                                     | Beschreibung                                                                                                                                      |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Grundlagen zu com](com-fundamentals.md)<br/>                       | Beschreibt die grundlegenden Konzepte und die Programmier Referenz.<br/>                                                                         |
-| [OLE und Datenübertragung](ole-and-data-transfer.md)<br/>             | Beschreibt Verbund Dokumente und Datenübertragungen.<br/>                                                                                       |
-| [Steuerelemente und Eigenschaften Seiten](controls-and-property-pages.md)<br/> | Beschreibt ActiveX-Steuerelemente und Eigenschaften Seiten.<br/>                                                                                        |
-| [COM-Sprachübersetzungen](com-language-translations.md)<br/>     | Beschreibt die Unterschiede zwischen Programmiersprachen und beschreibt, wie COM-Objekt Syntax von einer Sprache in eine andere übersetzt werden kann.<br/> |
+| [COM-Grundlagen](com-fundamentals.md)<br/>                       | Beschreibt die grundlegenden Konzepte und die Programmierreferenz.<br/>                                                                         |
+| [OLE und Datenübertragung](ole-and-data-transfer.md)<br/>             | Beschreibt zusammengesetzte Dokumente und die Datenübertragung.<br/>                                                                                       |
+| [Steuerelemente und Eigenschaftenseiten](controls-and-property-pages.md)<br/> | Beschreibt ActiveX Steuerelementen und Eigenschaftenseiten.<br/>                                                                                        |
+| [COM-Sprachübersetzungen](com-language-translations.md)<br/>     | Beschreibt die Unterschiede zwischen Programmiersprachen und beschreibt, wie die COM-Objektsyntax von einer Sprache in eine andere übersetzt wird.<br/> |
 
 
 
@@ -54,13 +54,13 @@ Informationen dazu, welche Betriebssysteme für die Verwendung einer bestimmten 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-| Thema                                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Thema                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)<br/> | COM ist ein plattformunabhängiges, verteiltes und objektorientiertes System zum Erstellen von binären Softwarekomponenten, die interagieren können. COM ist die Grundtechnologie für OLE (Verbund Dokumente) und ActiveX-Technologien (Internet fähige Komponenten) von Microsoft.<br/>                                                                                                                                                                                                              |
-| [Automation](/previous-versions/windows/desktop/automat/automation-programming-reference)<br/>                      | Automation ermöglicht Softwarepaketen, Ihre eindeutigen Features für Skript Erstellungs Tools und andere Anwendungen verfügbar zu machen. Automation verwendet die Component Object Model (com), kann jedoch unabhängig von anderen OLE-Funktionen implementiert werden, z. b. direkte Aktivierung.<br/>                                                                                                                                                                                                                 |
-| [Microsoft Interface Definition Language (Mittel l)](/windows/desktop/Midl/midl-start-page)<br/>  | Der Microsoft Interface Definition Language (mittlerer l) definiert Schnittstellen zwischen Client-und Serverprogrammen. Microsoft umfasst den Mittel l-Compiler mit dem Platform Software Development Kit (SDK), mit dem Entwickler die IDL-Dateien (Interface Definition Language) und die Anwendungs Konfigurationsdateien (ACF) erstellen können, die für Remote Prozedur Aufrufe (RPC)-Schnittstellen und com/DCOM-Schnittstellen erforderlich sind. Die Generierung von Typbibliotheken für OLE-Automatisierung wird von der mittleren l ebenfalls unterstützt. <br/> |
-| [Strukturierter Speicher](/windows/desktop/Stg/structured-storage-start-page)<br/>                 | Die strukturierte Speicherung bietet Datei-und Daten Persistenz in com, indem eine einzelne Datei als strukturierte Auflistung von Objekten behandelt wird, die als Speicher und Streams bezeichnet werden.<br/>                                                                                                                                                                                                                                                                                                                  |
-| [COM+](../cossdk/component-services-portal.md)<br/>                 | Com+ ist eine Weiterentwicklung von Microsoft Component Object Model (com) und Microsoft Transaction Server (MTS). Com+ baut auf Anwendungen auf und erweitert Anwendungen, die mithilfe von com, MTS und anderen COM-basierten Technologien geschrieben wurden.<br/>                                                                                                                                                                                                                                                                                                                  |
+| [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)<br/> | COM ist ein plattformunabhängiges, verteiltes, objektorientiertes System zum Erstellen binärer Softwarekomponenten, die interagieren können. COM ist die Grundlagetechnologie für OLE-Technologien (Verbunddokumente) und ActiveX (internetfähige Komponenten) von Microsoft.<br/>                                                                                                                                                                                                              |
+| [Automation](/previous-versions/windows/desktop/automat/automation-programming-reference)<br/>                      | Mithilfe von Automation können Softwarepakete ihre einzigartigen Features für Skripttools und andere Anwendungen verfügbar machen. Automation verwendet die Component Object Model (COM), kann aber unabhängig von anderen OLE-Features implementiert werden, z. B. der in-place-Aktivierung.<br/>                                                                                                                                                                                                                 |
+| [Microsoft Interface Definition Language (MIDL)](/windows/desktop/Midl/midl-start-page)<br/>  | Die Microsoft Interface Definition Language (MIDL) definiert Schnittstellen zwischen Client- und Serverprogrammen. Microsoft enthält den MIDL-Compiler mit dem Platform Software Development Kit (SDK), damit Entwickler die IDL-Dateien (Interface Definition Language) und Anwendungskonfigurationsdateien (Application Configuration Files, ACF) erstellen können, die für RPC-Schnittstellen (Remote Procedure Call) und COM/DCOM-Schnittstellen erforderlich sind. MIDL unterstützt auch die Generierung von Typbibliotheken für die OLE-Automatisierung. <br/> |
+| [Strukturierte Storage](/windows/desktop/Stg/structured-storage-start-page)<br/>                 | Structured Storage bietet Datei- und Datenpersistenz in COM, indem eine einzelne Datei als strukturierte Sammlung von Objekten, die als Speicher und Streams bezeichnet wird, verwendet wird.<br/>                                                                                                                                                                                                                                                                                                                  |
+| [Com+](../cossdk/component-services-portal.md)<br/>                 | COM+ ist eine Weiterentwicklung von Microsoft Component Object Model (COM) und Microsoft Transaction Server (MTS). COM+ baut auf und erweitert Anwendungen, die mit COM, MTS und anderen COM-basierten Technologien geschrieben wurden.<br/>                                                                                                                                                                                                                                                                                                                  |
 
 
 

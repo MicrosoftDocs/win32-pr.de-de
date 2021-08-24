@@ -1,5 +1,5 @@
 ---
-description: Stellt den System Treiber für einen Basis Dienst dar.
+description: Stellt den Systemtreiber für einen Basisdienst dar.
 ms.assetid: 67dc6e14-c8c1-4168-8f99-b04c6ecd4ad2
 ms.tgt_platform: multiple
 title: Win32_SystemDriver-Klasse
@@ -36,18 +36,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 15be9b176680e8abb259d3d011da9d6cec0c2fa8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b7533e5d1e842e6794a9f9c386103b781afa0404ee181354c420770358f7e8a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751220"
 ---
-# <a name="win32_systemdriver-class"></a>Win32 \_ systemdriver-Klasse
+# <a name="win32_systemdriver-class"></a>Win32 \_ SystemDriver-Klasse
 
-Die  [WMI-Klasse](../wmisdk/retrieving-a-class.md) des Win32-System **\_ Treibers** stellt den System Treiber für einen Basis Dienst dar.
+Die  [WMI-Klasse](../wmisdk/retrieving-a-class.md) **Win32 \_ SystemDriver** stellt den Systemtreiber für einen Basisdienst dar.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -82,29 +82,29 @@ class Win32_SystemDriver : Win32_BaseService
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ System Driver** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SystemDriver-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ System Driver** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ SystemDriver-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                              | BESCHREIBUNG                                                                                     |
+| Methode                                                                              | Beschreibung                                                                                     |
 |:------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
-| [**Klima**](change-method-in-class-win32-systemdriver.md)                         | Klassenmethode, die einen Dienst ändert.<br/>                                                |
-| [**ChangeStartMode**](changestartmode-method-in-class-win32-systemdriver.md)       | Klassenmethode, mit der der Start Modus eines Dienstanbieter geändert wird.<br/>                              |
-| [**Stelle**](create-method-in-class-win32-systemdriver.md)                         | Klassenmethode, mit der ein neuer Dienst erstellt wird.<br/>                                             |
-| [**Lösch**](delete-method-in-class-win32-systemdriver.md)                         | Klassenmethode, mit der ein vorhandener Dienst gelöscht wird.<br/>                                       |
-| [**"InterrogateService"**](interrogateservice-method-in-class-win32-systemdriver.md) | Class-Methode, die anfordert, dass der Dienst seinen Status an den Dienst-Manager aktualisiert.<br/> |
-| [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md)             | Klassenmethode, die versucht, den Dienst in den angehaltenen Zustand zu versetzen.<br/>                 |
-| [**ResumeService**](resumeservice-method-in-class-win32-systemdriver.md)           | Klassenmethode, die versucht, den Dienst in den Status "wieder aufgenommen" zu versetzen.<br/>                |
-| [**Start Service**](startservice-method-in-class-win32-systemdriver.md)             | Klassenmethode, die versucht, den Dienst in seinen Startzustand zu versetzen.<br/>              |
-| [**Stop Service**](stopservice-method-in-class-win32-systemdriver.md)               | Klassenmethode, die den Dienst in den Zustand "beendet" versetzt.<br/>                           |
-| [**UserControlService**](usercontrolservice-method-in-class-win32-systemdriver.md) | Klassenmethode, die versucht, einen benutzerdefinierten Steuerelement Code an einen Dienst zu senden.<br/>         |
+| [**Change**](change-method-in-class-win32-systemdriver.md)                         | Klassenmethode, die einen Dienst ändert.<br/>                                                |
+| [**ChangeStartMode**](changestartmode-method-in-class-win32-systemdriver.md)       | Klassenmethode, die den Startmodus eines Diensts ändert.<br/>                              |
+| [**Erstellen**](create-method-in-class-win32-systemdriver.md)                         | Klassenmethode, die einen neuen Dienst erstellt.<br/>                                             |
+| [**Löschen**](delete-method-in-class-win32-systemdriver.md)                         | Klassenmethode, die einen vorhandenen Dienst löscht.<br/>                                       |
+| [**InterrogateService**](interrogateservice-method-in-class-win32-systemdriver.md) | Klassenmethode, die anfordert, dass der Dienst seinen Zustand an den Dienst-Manager aktualisiert.<br/> |
+| [**PauseService**](pauseservice-method-in-class-win32-systemdriver.md)             | Klassenmethode, die versucht, den Dienst im angehaltenen Zustand zu platzieren.<br/>                 |
+| [**ResumeService**](resumeservice-method-in-class-win32-systemdriver.md)           | Klassenmethode, die versucht, den Dienst im fortgesetzten Zustand zu platzieren.<br/>                |
+| [**Startservice**](startservice-method-in-class-win32-systemdriver.md)             | Klassenmethode, die versucht, den Dienst in den Startzustand zu platzieren.<br/>              |
+| [**StopService**](stopservice-method-in-class-win32-systemdriver.md)               | Klassenmethode, die den Dienst in den Zustand "Beendet" versetzt.<br/>                           |
+| [**UserControlService**](usercontrolservice-method-in-class-win32-systemdriver.md) | Klassenmethode, die versucht, einen benutzerdefinierten Steuerelementcode an einen Dienst zu senden.<br/>         |
 
 
 
@@ -112,56 +112,56 @@ Die **Win32 \_ System Driver** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ System Driver** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SystemDriver-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AcceptPause**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API Service \| Structures \| [**Service \_ Status**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwcontrolsaccepted \| Service \_ Accept \_ Pause \_ Continue"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Service Accept Pause")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| \| [**SERVICE \_ STATUS**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwControlsAccepted \| SERVICE ACCEPT PAUSE \_ \_ \_ CONTINUE"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Dienst akzeptiert Pause")
 </dt> </dl>
 
 Der Dienst kann angehalten werden.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **AcceptStop**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API Service \| Structures \| [**Service \_ Status**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwcontrolsaccepted \| Service \_ Accept End \_ "), [**Display Name**](../wmisdk/standard-qualifiers.md) ("der Dienst akzeptiert das Ende")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures SERVICE \| [**\_ STATUS**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwControlsAccepted \| SERVICE ACCEPT \_ \_ STOP"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Service Accepts Stop")
 </dt> </dl>
 
-Der Dienst kann angehalten werden.
+Der Dienst kann beendet werden.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
 Kurze Beschreibung des Objekts.
@@ -170,34 +170,34 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM \_ Key**](../wmisdk/standard-wmi-qualifiers.md), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Class Name")
+Qualifizierer: [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Klassenname")
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt werden soll, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit den anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen dieser Klasse und ihrer Unterklassen.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Dienst**](cim-service.md)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Beschreibung")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
@@ -209,64 +209,64 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **DesktopInteract**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwservicetype \| Service \_ Interactive \_ Process"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("interagiert with Desktop")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwServiceType \| SERVICE INTERACTIVE \_ \_ PROCESS"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Interagiert mit Desktop")
 </dt> </dl>
 
-Dieser Dienst kann Windows auf dem Desktop erstellen oder mit ihm kommunizieren.
+Dieser Dienst kann Windows auf dem Desktop erstellen oder mit ihnen kommunizieren.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **DisplayName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpdisplayname"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Anzeige Name")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpDisplayName"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Anzeigename")
 </dt> </dl>
 
-Der Anzeige Name des Dienstanbieter. Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager nach Groß-/Kleinschreibung beibehalten. Bei **Display Name** -vergleichen wird immer die Groß-/Kleinschreibung beachtet.
+Anzeigename des Diensts. Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager beibehalten. **Bei DisplayName-Vergleichen** wird die Groß-/Kleinschreibung immer nicht beachtet.
 
-Einschränkungen: akzeptiert denselben Wert wie die **Name** -Eigenschaft.
+Einschränkungen: Akzeptiert den gleichen Wert wie die **Name-Eigenschaft.**
 
-Beispiel: "ATDISK"
+Beispiel: "Atdisk"
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **ErrorControl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwerrorcontrol"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Schweregrad des Start Fehlers")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwErrorControl"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Schweregrad des Startfehlers")
 </dt> </dl>
 
-Der Schweregrad des Fehlers, wenn dieser Dienst während des Starts nicht gestartet werden kann. Dieser Wert gibt die vom Start Programm ausgeführte Aktion an, wenn ein Fehler auftritt. Alle Fehler werden vom Computersystem protokolliert.
+Schweregrad des Fehlers, wenn dieser Dienst während des Starts nicht gestartet werden kann. Dieser Wert gibt die Aktion an, die vom Startprogramm ausgeführt wird, wenn ein Fehler auftritt. Alle Fehler werden vom Computersystem protokolliert.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 <dt>
 
 <span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>
 
-<span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>**Ignorieren** ("ignorieren")
+<span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>**Ignorieren** ("Ignorieren")
 
 
 </dt> <dd>
@@ -299,7 +299,7 @@ Das System wird mit der letzten bekannten, fehlerfreien Konfiguration neu gestar
 
 <span id="Critical"></span><span id="critical"></span><span id="CRITICAL"></span>
 
-<span id="Critical"></span><span id="critical"></span><span id="CRITICAL"></span>**Kritisch** ("kritisch")
+<span id="Critical"></span><span id="critical"></span><span id="CRITICAL"></span>**Kritisch** ("Kritisch")
 
 
 </dt> <dd>
@@ -310,7 +310,7 @@ Das System versucht, mit einer fehlerfreien Konfiguration zu neu starten.
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-<span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** ("unbekannt")
+<span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd>
@@ -324,34 +324,34 @@ Die Ursache des Fehlers ist unbekannt.
 **Exitcode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Service \_ Status**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwWin32ExitCode"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Exitcode")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| \| [**SERVICE \_ STATUS**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwWin32ExitCode"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Exitcode")
 </dt> </dl>
 
-Windows-Fehlercode, der Probleme definiert, die beim Starten oder Beenden des Dienstes aufgetreten sind. Diese Eigenschaft ist auf **Fehler \_ Dienst \_ spezifischer \_ Fehler** (1066) festgelegt, wenn der Fehler für den Dienst eindeutig ist, der durch diese Klasse dargestellt wird. Informationen über den Fehler sind in der **ServiceSpecificExitCode** -Eigenschaft verfügbar. Der Dienst legt diesen Wert bei der Ausführung und erneut bei normaler Beendigung auf **keinen \_ Fehler** fest.
+Windows Fehlercode, der probleme beim Starten oder Beenden des Diensts definiert. Diese Eigenschaft wird auf **ERROR \_ SERVICE SPECIFIC \_ \_ ERROR** (1066) festgelegt, wenn der Fehler für den von dieser Klasse dargestellten Dienst eindeutig ist und Informationen zum Fehler in der **ServiceSpecificExitCode-Eigenschaft** verfügbar sind. Der Dienst legt diesen Wert auf **NO \_ ERROR** fest, wenn er ausgeführt wird, und wieder bei normaler Beendigung.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installationsdatum")
 </dt> </dl>
 
-Das Objekt wurde installiert. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Das Objekt wurde installiert. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -360,7 +360,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -369,65 +369,65 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](../wmisdk/key-qualifier.md)
 </dt> </dl>
 
-Eindeutiger Bezeichner für den Dienst, der eine Angabe der verwalteten Funktionalität bereitstellt. Diese Funktionalität wird in der Objekt **Beschreibungs** Eigenschaft ausführlicher beschrieben.
+Eindeutiger Bezeichner für den Dienst, der einen Hinweis auf die verwaltete Funktionalität bietet. Diese Funktionalität wird in der **Description-Eigenschaft** des Objekts ausführlicher beschrieben.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Dienst**](cim-service.md)geerbt.
 
 </dd> <dt>
 
 **PathName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpbinarypathname"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Dateipfadname")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpBinaryPathName"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Dateipfadname")
 </dt> </dl>
 
-Der voll qualifizierte Pfad der Dienst Binärdatei, die den Dienst implementiert.
+Vollqualifizierte Pfad zur Binärdatei des Diensts, die den Dienst implementiert.
 
-Beispiel: " \\ systemroot \\ system32 \\ Drivers \\afd.sys"
+Beispiel: \\ "SystemRoot \\ \\ System32-Treiber \\afd.sys"
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **ServiceSpecificExitCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Service \_ Status**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwservicespecificexitcode"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Server spezifischer Exitcode")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| \| [**SERVICE \_ STATUS**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwServiceSpecificExitCode"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Serverspezifischer Exitcode")
 </dt> </dl>
 
-Dienst spezifischer Fehlercode für Fehler, die auftreten, während der Dienst gestartet oder beendet wird. Die Exitcodes werden von dem Dienst definiert, der durch diese Klasse dargestellt wird. Dieser Wert wird nur festgelegt, wenn der **Exitcode** -Eigenschafts Wert **Fehler \_ Dienst \_ spezifisch \_** ist (1066).
+Dienstspezifischer Fehlercode für Fehler, die auftreten, während der Dienst gestartet oder beendet wird. Die Exitcodes werden durch den Dienst definiert, der durch diese Klasse dargestellt wird. Dieser Wert wird nur festgelegt, wenn der **ExitCode-Eigenschaftswert** **ERROR SERVICE SPECIFIC \_ \_ \_ ERROR** (1066) lautet.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **ServiceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwservicetype"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Service Type")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwServiceType"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Diensttyp")
 </dt> </dl>
 
 Der für aufrufende Prozesse bereitgestellte Diensttyp.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 Die Werte sind:
 
@@ -435,14 +435,14 @@ Die Werte sind:
 
 <span id="Kernel_Driver"></span><span id="kernel_driver"></span><span id="KERNEL_DRIVER"></span>
 
-**Kernel Treiber** ("Kernel Treiber")
+**Kerneltreiber** ("Kerneltreiber")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="File_System_Driver"></span><span id="file_system_driver"></span><span id="FILE_SYSTEM_DRIVER"></span>
 
-**Dateisystem Treiber** ("Dateisystem Treiber")
+**Dateisystemtreiber** ("Dateisystemtreiber")
 
 
 </dt> <dd></dd> <dt>
@@ -456,14 +456,14 @@ Die Werte sind:
 
 <span id="Recognizer_Driver"></span><span id="recognizer_driver"></span><span id="RECOGNIZER_DRIVER"></span>
 
-**Erkennungs Treiber** ("Erkennungs Treiber")
+**Erkennungstreiber** ("Erkennungstreiber")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Own_Process"></span><span id="own_process"></span><span id="OWN_PROCESS"></span>
 
-**Eigener Prozess** ("eigener Prozess")
+**Eigener Prozess** ("Eigener Prozess")
 
 
 </dt> <dd></dd> <dt>
@@ -484,50 +484,50 @@ Die Werte sind:
 
 </dd> <dt>
 
-**Gestartet**
+**Begann**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Started")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Started")
 </dt> </dl>
 
 Der Dienst wurde gestartet.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Dienst**](cim-service.md)geerbt.
 
 </dd> <dt>
 
 **StartMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Start Modus")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Startmodus")
 </dt> </dl>
 
-Der Start Modus des System Treibers.
+Startmodus des Systemtreibers.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 <dt>
 
 <span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>
 
-<span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>**Start** ("Start")
+<span id="Boot"></span><span id="boot"></span><span id="BOOT"></span>**Start** ("Boot")
 
 
 </dt> <dd>
 
-Der Gerätetreiber wurde vom Betriebssystem Lader gestartet (nur für Treiber Dienste gültig).
+Vom Betriebssystemladeprogramm gestarteter Gerätetreiber (nur für Treiberdienste gültig).
 
 </dd> <dt>
 
@@ -538,7 +538,7 @@ Der Gerätetreiber wurde vom Betriebssystem Lader gestartet (nur für Treiber Di
 
 </dt> <dd>
 
-Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Der Vom Initialisierungsprozess des Betriebssystems gestartete Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
@@ -549,24 +549,24 @@ Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems 
 
 </dt> <dd>
 
-Dienst, der vom Dienststeuerungs-Manager beim Systemstart automatisch gestartet wird.
+Der Dienst wird während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet.
 
 </dd> <dt>
 
 <span id="Manual"></span><span id="manual"></span><span id="MANUAL"></span>
 
-<span id="Manual"></span><span id="manual"></span><span id="MANUAL"></span>**Manuell** ("manuell")
+<span id="Manual"></span><span id="manual"></span><span id="MANUAL"></span>**Manuell** ("Manuell")
 
 
 </dt> <dd>
 
-Der Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService**](startservice-method-in-class-win32-systemdriver.md) -Methode aufruft.
+Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService-Methode**](startservice-method-in-class-win32-systemdriver.md) aufruft.
 
 </dd> <dt>
 
 <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>
 
-<span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** ("deaktiviert")
+<span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** ("Deaktiviert")
 
 
 </dt> <dd>
@@ -580,38 +580,38 @@ Dienst, der nicht mehr gestartet werden kann.
 **StartName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpservicestartname"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Starting Account Name")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| lpServiceStartName"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Startkontoname")
 </dt> </dl>
 
-Der Kontoname, unter dem der Dienst ausgeführt wird. Abhängig vom Diensttyp kann der Kontoname die Form "Domänen Name \\ Benutzername" aufweisen. Der Dienst Prozess wird bei der Ausführung mithilfe einer dieser beiden Formulare protokolliert. , Wenn das Konto zur integrierten Domäne gehört. \\ Der Benutzername kann angegeben werden. Wenn **null** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Bei Kernel-oder System Treibern enthält **StartName** den Treiber Objektnamen ( \\ Dateisystem- \\ rdr oder \\ Treiber- \\ XNS), die vom Eingabe-und Ausgabesystem zum Laden des Gerätetreibers verwendet werden. Wenn **null** angegeben wird, wird der Treiber mit einem Standard Objektnamen ausgeführt, der vom e/a-System basierend auf dem Dienstnamen erstellt wurde.
+Kontoname, unter dem der Dienst ausgeführt wird. Je nach Diensttyp kann der Kontoname die Form DomainName \\ Username aufweisen. Der Dienstprozess wird in einer dieser beiden Formen protokolliert, wenn er ausgeführt wird. Wenn das Konto zur integrierten Domäne gehört, . \\ Der Benutzername kann angegeben werden. Wenn **NULL** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Kernel- oder Treiber auf Systemebene enthält **StartName** den Namen des Treiberobjekts (d. \\ h. FileSystem \\ Rdr oder \\ Driver \\ Xns), den das Ein- und Ausgabesystem (E/A) zum Laden des Gerätetreibers verwendet. Wenn **NULL** angegeben wird, wird der Treiber außerdem mit einem Standardobjektnamen ausgeführt, der vom E/A-System basierend auf dem Dienstnamen erstellt wurde.
 
-Beispiel: "dwdom \\ Admin"
+Beispiel: "DWDOM \\ Admin"
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 </dd> <dt>
 
 **State**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Service \_ Status**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwcurrentstate"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("State")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| \| [**SERVICE \_ STATUS**](/windows/win32/api/winsvc/ns-winsvc-service_status) \| dwCurrentState "), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("State")
 </dt> </dl>
 
-Aktueller Status des Basis Dienes.
+Aktueller Status des Basisdiensts.
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
 Die Werte sind:
 
@@ -619,56 +619,56 @@ Die Werte sind:
 
 <span id="Stopped"></span><span id="stopped"></span><span id="STOPPED"></span>
 
-**Beendet** ("beendet")
+**Beendet** ("Beendet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Start_Pending"></span><span id="start_pending"></span><span id="START_PENDING"></span>
 
-**Start steht aus** ("ausstehende Start")
+**Ausstehend starten** ("Start ausstehend")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stop_Pending"></span><span id="stop_pending"></span><span id="STOP_PENDING"></span>
 
-**Ausstehende Beendigung** ("ausstehenden Vorgang nicht mehr")
+**Stop Pending** ("Stop Pending")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Running"></span><span id="running"></span><span id="RUNNING"></span>
 
-Wird **ausgeführt** ("wird ausgeführt")
+**Wird ausgeführt** ("Wird ausgeführt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Continue_Pending"></span><span id="continue_pending"></span><span id="CONTINUE_PENDING"></span>
 
-**Ausstehende Fortsetzung** ("ausstehende Fortsetzung")
+**Continue Pending** ("Continue Pending")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pause_Pending"></span><span id="pause_pending"></span><span id="PAUSE_PENDING"></span>
 
-Anhalten steht **aus** ("ausstehende Pause")
+**Anhalten ausstehend** ("Ausstehend anhalten")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>
 
-**Angeh** alten ("angehalten")
+**Angehalten** ("Angehalten")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> </dl>
@@ -678,16 +678,16 @@ Anhalten steht **aus** ("ausstehende Pause")
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -711,35 +711,35 @@ Die Werte sind:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -753,101 +753,101 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**"), [**CIM- \_ Schlüssel**](../wmisdk/standard-wmi-qualifiers.md), [**Display Name**](../wmisdk/standard-qualifiers.md) ("System Klassenname")
+Qualifizierer: [**Weitergegeben**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Systemklassenname")
 </dt> </dl>
 
-Der Typname des Systems, das den Dienst hostet.
+Geben Sie den Namen des Systems ein, das diesen Dienst hostet.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Dienst**](cim-service.md)geerbt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**Name**"), [**CIM \_ Key**](../wmisdk/standard-wmi-qualifiers.md), [**Display Name**](../wmisdk/standard-qualifiers.md) (" System Name ")
+Qualifizierer: [**Weitergegeben**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**Name**"), [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Systemname")
 </dt> </dl>
 
-Der Name des Systems, das den Dienst hostet.
+Name des Systems, das diesen Dienst hostet.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dienst**](cim-service.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Dienst**](cim-service.md)geerbt.
 
 </dd> <dt>
 
-**TagID**
+**TagId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Service Structures \| [**Query \_ Service \_ config**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwtagid"), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Tag ID")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Dienststrukturen \| QUERY SERVICE \| [**\_ \_ CONFIG**](/windows/win32/api/winsvc/ns-winsvc-query_service_configa) \| dwTagId"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Tag-ID")
 </dt> </dl>
 
-Eindeutiger Tagwert für diesen Dienst in der Gruppe. Der Wert 0 (null) gibt an, dass dem Dienst kein Tag zugewiesen wurde. Ein Tag kann zum Sortieren des Dienst Starts innerhalb einer Gruppe von Lade Reihenfolgen verwendet werden, indem ein taganordnungs Vektor in der Registrierung unter angegeben wird:
+Eindeutiger Tagwert für diesen Dienst in der Gruppe. Der Wert 0 (null) gibt an, dass dem Dienst kein Tag zugewiesen wurde. Ein Tag kann zum Sortieren des Dienststarts innerhalb einer Lastreihenfolgegruppe verwendet werden, indem in der Registrierung unter ein Tagreihenfolgevektor angegeben wird:
 
-Diese Eigenschaft wird von [**Win32 \_ baseservice**](win32-baseservice.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ BaseService**](win32-baseservice.md)geerbt.
 
-**HKEY \_ Lokales \_ Computer \\ System \\ CurrentControlSet \\ Steuerelement \\ grouporderlist**.
+**HKEY \_ LOCAL \_ MACHINE \\ System \\ CurrentControlSet \\ Control \\ GroupOrderList**.
 
-Tags werden nur für die Start-und Systemstart Modi des Kernel Treibers und des Datei System-Treibers ausgewertet.
+Tags werden nur für Starttypdienste des Kerneltreibers und Dateisystemtreibers ausgewertet, die den Start- oder Systemstartmodus aufweisen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ System Driver** -Klasse wird von [**Win32 \_ baseservice**](win32-baseservice.md)abgeleitet.
+Die **Win32 \_ SystemDriver-Klasse** wird von [**Win32 \_ BaseService**](win32-baseservice.md)abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
-Im Beispiel " [List System Drivers](https://Gallery.TechNet.Microsoft.Com/5629cc13-cefc-4e51-a24f-aac6db23d141) VBScript" werden installierte System Treiber in einer HTML-Datei angezeigt.
+Im VbScript-Beispiel ["Systemtreiber auflisten"](https://Gallery.TechNet.Microsoft.Com/5629cc13-cefc-4e51-a24f-aac6db23d141) werden installierte Systemtreiber in einer HTML-Datei angezeigt.
 
-Das folgende PowerShell-Beispiel ruft eine Reihe von Eigenschaften aus den System Treibern auf einem Computer ab.
+Im folgenden PowerShell-Beispiel werden eine Reihe von Eigenschaften von den ausgeführten Systemtreibern auf einem Computer abgerufen.
 
 
 ```PowerShell
@@ -864,8 +864,8 @@ Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -874,7 +874,7 @@ Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -
 
 <dl> <dt>
 
-[**Win32- \_ baseservice**](win32-baseservice.md)
+[**Win32 \_ BaseService**](win32-baseservice.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

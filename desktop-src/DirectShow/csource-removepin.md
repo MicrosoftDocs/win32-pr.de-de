@@ -1,7 +1,7 @@
 ---
-description: Mit der removepin-Methode wird eine angegebene PIN aus dem Filter entfernt. Die-Methode löscht die PIN nicht.
+description: Die RemovePin-Methode entfernt einen angegebenen Pin aus dem Filter. Die -Methode löscht den Pin nicht.
 ms.assetid: 104eccfa-3fff-4f47-ba1b-3206eab9eef8
-title: CSource. removepin-Methode (Quelle. h)
+title: CSource.RemovePin-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b71ced14a6f92a3056ac4f42e55bc3858c578ff6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 376c2b292b0bdba9a79593c8264ecce17b916a88cfd49407638d637d1fbda6b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119767840"
 ---
-# <a name="csourceremovepin-method"></a>CSource. removepin-Methode
+# <a name="csourceremovepin-method"></a>CSource.RemovePin-Methode
 
-Mit der- `RemovePin` Methode wird eine angegebene PIN aus dem Filter entfernt. Die-Methode löscht die PIN nicht.
+Die `RemovePin` -Methode entfernt einen angegebenen Pin aus dem Filter. Die -Methode löscht den Pin nicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT RemovePin(
 *pStream* 
 </dt> <dd>
 
-Zeiger auf das [**csourcestream**](csourcestream.md) -Objekt, das die PIN implementiert.
+Zeiger auf das [**CSourceStream-Objekt,**](csourcestream.md) das den Pin implementiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                      |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                              |
-| <dl> <dt>**S \_ false**</dt> </dl> | Der Filter enthält diese PIN nicht.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Filter enthält diesen Pin nicht.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die dekonstruktormethode ruft diese Methode auf, um die Ausgabe-PIN aus dem Filter zu entfernen.
+Die Destruktormethode ruft diese Methode auf, um den Ausgabepin aus dem Filter zu entfernen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Die dekonstruktormethode ruft diese Methode auf, um die Ausgabe-PIN aus dem Filt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

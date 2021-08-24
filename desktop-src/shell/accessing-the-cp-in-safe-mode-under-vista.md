@@ -1,6 +1,6 @@
 ---
-description: Standardmäßig werden ab Windows Vista-System Steuerungselemente nicht angezeigt, wenn Windows im abgesicherten Modus ausgeführt wird.
-title: Zugreifen auf die Systemsteuerung im abgesicherten Modus
+description: Standardmäßig werden ab Windows Vista Systemsteuerung elemente nicht angezeigt, wenn Windows im abgesicherten Modus ausgeführt wird.
+title: Zugreifen auf die Systemsteuerung im Tresor Modus
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: f37bcb0f-9417-4cc4-a57d-4f67a9ccda19
@@ -9,30 +9,30 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 0f7a401bbc22a7f8de3618f844bfe463fa3baa50
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 777a44c7fe30b0481096a1c5d62c98410277a3bc76169925aff4ae5e59e549d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710790"
 ---
-# <a name="accessing-the-control-panel-in-safe-mode"></a>Zugreifen auf die Systemsteuerung im abgesicherten Modus
+# <a name="accessing-the-control-panel-in-safe-mode"></a>Zugreifen auf die Systemsteuerung im Tresor Modus
 
-Standardmäßig werden ab Windows Vista-System Steuerungselemente nicht angezeigt, wenn Windows im abgesicherten Modus ausgeführt wird. Damit ein neues System Steuerungselement im abgesicherten Modus angezeigt werden kann, können für den Elementtyp geeignete Registrierungs Werte festgelegt werden. Die Werte werden wie folgt interpretiert:
+Standardmäßig werden ab Windows Vista Systemsteuerung elemente nicht angezeigt, wenn Windows im abgesicherten Modus ausgeführt wird. Damit ein neues Systemsteuerung im abgesicherten Modus angezeigt werden kann, können für den Elementtyp geeignete Registrierungswerte festgelegt werden. Die Werte werden wie folgt interpretiert:
 
 
 
 | Wert | Bedeutung                                                            |
 |-------|--------------------------------------------------------------------|
-| 1     | Das Element sollte nur im minimal abgesicherten Modus angezeigt werden.                  |
-| 2     | Das Element sollte nur im abgesicherten Modus angezeigt werden, wenn das Netzwerk aktiviert ist. |
-| 3     | Das Element sollte immer in beliebiger Form Abgesicherter Modus angezeigt werden.            |
+| 1     | Das Element sollte nur im minimal sicheren Modus angezeigt werden.                  |
+| 2     | Das Element sollte nur dann im abgesicherten Modus angezeigt werden, wenn das Netzwerk aktiviert ist. |
+| 3     | Das Element sollte immer in einer beliebigen Form des abgesicherten Modus angezeigt werden.            |
 
 
 
  
 
-Dieses Beispiel zeigt die Einträge, die für ein Element erforderlich sind, das als cpl-oder DLL-Datei implementiert ist. Er gibt an, dass das Element im abgesicherten Modus mit Netzwerk angezeigt werden soll.
+Dieses Beispiel zeigt die Einträge, die für ein Element erforderlich sind, das als .cpl oder .dll implementiert wird. Sie gibt an, dass das Element im abgesicherten Modus mit Netzwerk angezeigt werden soll.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
                         %ProgramFiles%\MyCorp\MyApp\MyCpl.cpl = [REG_DWORD] 2
 ```
 
-Dieses Beispiel zeigt die Einträge, die für ein Element erforderlich sind, das als exe-Datei implementiert ist. Gibt an, dass das Element in beliebiger Form Abgesicherter Modus angezeigt werden soll.
+Dieses Beispiel zeigt die Einträge, die für ein Element erforderlich sind, das als .exe implementiert ist. Sie gibt an, dass das Element in einer beliebigen Form des abgesicherten Modus angezeigt werden soll.
 
 ```
 HKEY_CLASSES_ROOT
@@ -59,31 +59,31 @@ HKEY_CLASSES_ROOT
 
 <dl> <dt>
 
-[System Steuerungselemente](control-panel-applications.md)
+[Systemsteuerung Elemente](control-panel-applications.md)
 </dt> <dt>
 
 [Richtlinien zur Benutzerfreundlichkeit](user-experience-guidelines.md)
 </dt> <dt>
 
-[System Steuerungselemente werden registriert](registering-control-panel-items.md)
+[Registrieren Systemsteuerung Elementen](registering-control-panel-items.md)
 </dt> <dt>
 
-[Verwenden von CPlApplet](using-cplapplet.md)
+[Verwenden von CPLApplet](using-cplapplet.md)
 </dt> <dt>
 
-[Nachrichtenverarbeitung in der Systemsteuerung](message-processing.md)
+[Systemsteuerung Nachrichtenverarbeitung](message-processing.md)
 </dt> <dt>
 
-[Ausführen von System Steuerungselementen](executing-control-panel-items.md)
+[Ausführen Systemsteuerung Elementen](executing-control-panel-items.md)
 </dt> <dt>
 
-[Erweitern von System Steuerungselementen](extending-system-control-panel-items.md)
+[Erweitern von Systemsteuerung Elementen](extending-system-control-panel-items.md)
 </dt> <dt>
 
-[Zuweisen von System Steuerungs Kategorien](assigning-control-panel-categories.md)
+[Zuweisen Systemsteuerung Kategorien](assigning-control-panel-categories.md)
 </dt> <dt>
 
-[Erstellen von durchsuchbaren Aufgaben Verknüpfungen für ein System Steuerungselement](creating-searchable-task-links.md)
+[Erstellen durchsuchbarer Aufgabenlinks für ein Systemsteuerung Element](creating-searchable-task-links.md)
 </dt> </dl>
 
  

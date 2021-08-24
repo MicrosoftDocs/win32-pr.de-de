@@ -1,7 +1,7 @@
 ---
-description: RequestStateChange-Methode der Msvm_VirtualFcSwitch - Fordert eine Zustandsänderung an.
+description: 'RequestStateChange-Methode der Msvm_VirtualFcSwitch-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: acbc06cd-7f6c-4555-8816-de3f021126aa
-title: RequestStateChange-Methode der Msvm_VirtualFcSwitch Klasse
+title: RequestStateChange-Methode der Msvm_VirtualFcSwitch-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 30a12ba60b19f16fb778fa64335734644fbfd1f3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5e6eb777d609d40cbcffb66d5cac3b1ca802aa495329bcfe33690d7542b5a4a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789260"
 ---
 # <a name="requeststatechange-method-of-the-msvm_virtualfcswitch-class"></a>RequestStateChange-Methode der Msvm \_ VirtualFcSwitch-Klasse
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 (Auftrag ohne Fehler abgeschlossen) oder 4096 (Auftrag gestartet) ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element. Dies muss einer der folgenden Werte sein.
+Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 (Auftrag ohne Fehler abgeschlossen) oder 4096 (Auftrag gestartet) ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das -Element. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -85,14 +85,14 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückern** (8)
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Ruhe** (9)
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -155,7 +155,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

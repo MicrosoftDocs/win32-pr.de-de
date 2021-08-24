@@ -1,17 +1,17 @@
 ---
 description: Stellt den Namen des GPS-Bereichs dar.
 ms.assetid: 7a8a0bb8-9a0a-466c-96e0-3555d723c304
-title: System. GPS. areainformation
+title: System.GPS.AreaInformation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a8521b5615df19bebb377c515831db09d4092c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a56d84dd13ac05cd9a58c9f3e91fb1779bb7a313fc970ab5ad773b19e82ed813
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119598880"
 ---
-# <a name="systemgpsareainformation"></a>System. GPS. areainformation
+# <a name="systemgpsareainformation"></a>System.GPS.AreaInformation
 
 Stellt den Namen des GPS-Bereichs dar.
 
@@ -30,54 +30,54 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

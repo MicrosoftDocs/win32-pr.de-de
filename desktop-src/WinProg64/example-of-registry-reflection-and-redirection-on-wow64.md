@@ -1,27 +1,27 @@
 ---
-title: Beispiel für Registrierungs Umleitung auf WOW64
-description: Der folgende Beispielcode veranschaulicht die separaten Ansichten der Registrierung, die vom registrierungsredirector auf 64-Bit-Fenstern bereitgestellt werden.
+title: Beispiel für die Registrierungsumleitung auf WOW64
+description: Der folgende Beispielcode veranschaulicht die separaten Ansichten der Registrierung, die vom Registrierungs-Redirector auf 64-Bit-Windows bereitgestellt werden.
 ms.assetid: b3ca2a47-402d-4e91-88bc-ddda6c776468
 keywords:
-- Beispiele 64-Bit-Windows-Programmierung
-- 64-Bit-Windows-Programmier Handbuch Beispiele 64-Bit Windows-Programmierung
-- 64-Bit-Windows-Programmier Leit Faden Beispiele 64-Bit Windows-Programmierung, Registrierungs Umleitung auf WOW64
-- Beispiel für die Registrierungs Umleitung 64-Bit-Windows-Programmierung
-- 64-Bit-Windows-Programmier Handbuch 64-Bit Windows-Programmierung, Beispiele finden Sie unter Beispiele für den Windows-Programmier Leit Faden von 64
+- Beispiele für die 64-Bit-Windows-Programmierung
+- 64-Bit-Windows Programmierhandbuch Beispiele für 64-Bit-Windows-Programmierung
+- 64-Bit-Windows Programmierhandbuch Beispiele für 64-Bit-Windows Programmierung, Registrierungsumleitung auf WOW64
+- Beispiel für die 64-Bit-Windows-Programmierung für die Registrierungsumleitung
+- 64-Bit-Windows-Programmierhandbuch 64-Bit-Windows Programmierung, Beispiele siehe 64-Bit-Windows Programmierhandbuchbeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff37b077137e9802e6716319623fe8e372941500
-ms.sourcegitcommit: 46376be61d3fa308f9b1a06d7e2fa122a39755af
+ms.openlocfilehash: 83428edb31e53bdd1c70825c7fa5a4d799a36536fa9c17f9ce1c4587ab096048
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "104391159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119680229"
 ---
-# <a name="example-of-registry-redirection-on-wow64"></a>Beispiel für Registrierungs Umleitung auf WOW64
+# <a name="example-of-registry-redirection-on-wow64"></a>Beispiel für die Registrierungsumleitung auf WOW64
 
-Der folgende Beispielcode veranschaulicht die separaten Ansichten der Registrierung, die vom registrierungsredirector auf 64-Bit-Fenstern bereitgestellt werden. Außerdem wird veranschaulicht, wie die Werte der Schlüssel festgelegt werden, abhängig davon, ob ein Schlüssel freigegeben oder umgeleitet wird. Weitere Informationen finden Sie unter [Registrierungsschlüssel, die von WOW64 betroffen sind](shared-registry-keys.md).
+Der folgende Beispielcode veranschaulicht die separaten Ansichten der Registrierung, die vom Registrierungs-Redirector auf 64-Bit-Windows bereitgestellt werden. Außerdem wird veranschaulicht, wie die Werte von Schlüsseln festgelegt werden, je nachdem, ob ein Schlüssel freigegeben oder umgeleitet wird. Weitere Informationen finden Sie unter [Von WOW64 betroffene Registrierungsschlüssel.](shared-registry-keys.md)
 
-Kompilieren Sie den folgenden Code separat für 32-Bit-und 64-Bit-Windows. Führen Sie jede resultierende ausführbare Datei auf 64-Bit-Windows aus, und vergleichen Sie die Ausgabe. Die Beispielausgabe für beide Versionen ist unterhalb des Quellcodes aufgeführt.
+Kompilieren Sie den folgenden Code separat für 32-Bit- und 64-Bit-Windows. Führen Sie jede resultierende ausführbare Datei auf 64-Bit-Windows aus, und vergleichen Sie die Ausgabe. Die Beispielausgabe für beide Versionen ist unterhalb des Quellcodes aufgeführt.
 
 
 ```C++
@@ -248,9 +248,9 @@ main()
 
 
 
-Wenn die 64-Bit-Version des Beispiels ausgeführt wird, wird die folgende Ausgabe erzeugt. Die Werte sowohl der Standard-als auch der alternativen Ansicht von **HKCR \\ Hello** sind identisch, da dieser Schlüssel gemeinsam verwendet wird. Die Werte der anderen Schlüssel unterscheiden sich, da Sie umgeleitet werden.
+Wenn die 64-Bit-Version des Beispiels ausgeführt wird, erzeugt sie die folgende Ausgabe. Die Werte der Standardansicht und der alternativen Ansichten von **HKCR \\ Hello** sind identisch, da dieser Schlüssel gemeinsam verwendet wird. Die Werte der anderen Schlüssel unterscheiden sich, da sie umgeleitet werden.
 
-**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Wenn dieses Beispiel unter diesen Betriebssystemen ausgeführt wird, haben die standardmäßigen und alternativen Sichten des LocalServer32-Schlüssels denselben Wert. Dies liegt daran, dass die LocalServer32-Taste umgeleitet und *reflektiert* wird, wodurch der Wert zwischen den 64-Bit-und 32-Bit-Sichten der Registrierung synchronisiert wird, sobald das Handle für den Schlüssel geschlossen wird. Die Registrierungs Reflektion wurde ab Windows 7 entfernt. Weitere Informationen finden Sie unter [Registry Reflection](registry-reflection.md).
+**Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Wenn dieses Beispiel unter diesen Betriebssystemen ausgeführt wird, haben die Standardansichten und alternativen Ansichten des LocalServer32-Schlüssels den gleichen Wert. Dies liegt daran, dass der LocalServer32-Schlüssel umgeleitet und *reflektiert* wird, wodurch sein Wert zwischen den 64-Bit- und 32-Bit-Ansichten der Registrierung synchronisiert wird, sobald das Handle für den Schlüssel geschlossen wird. Die Registrierungsreflektion wurde ab Windows 7 entfernt. Weitere Informationen finden Sie unter [Registrierungsreflektion.](registry-reflection.md)
 
 ``` syntax
 Application string: Hello! 64-bit World
@@ -271,7 +271,7 @@ Default view:     Hello! 64-bit World
 Alternate view:   Hello! 32-bit World
 ```
 
-Wenn die 32-Bit-Version des Beispiels ausgeführt wird, wird die folgende Ausgabe erzeugt. Bei einer 32-Bit-Anwendung ist die 64-Bit-Ansicht der Registrierung die Alternative Ansicht, sodass die Werte umgekehrt werden, mit Ausnahme von HKCR \\ Hello, einem gemeinsam verwendeten Schlüssel.
+Wenn die 32-Bit-Version des Beispiels ausgeführt wird, erzeugt sie die folgende Ausgabe. Bei einer 32-Bit-Anwendung ist die 64-Bit-Ansicht der Registrierung die alternative Ansicht, sodass die Werte umgekehrt werden, mit Ausnahme von HKCR \\ Hello, bei dem es sich um einen gemeinsam verwendeten Schlüssel handelt.
 
 ``` syntax
 Application string: Hello! 32-bit World
@@ -292,16 +292,16 @@ Default view:     Hello! 32-bit World
 Alternate view:   Hello! 64-bit World
 ```
 
-Überprüfen Sie die Werte der folgenden Schlüssel, um die Auswirkung der Ausführung dieses Beispiels mit regedit zu überprüfen. Beachten Sie, dass Anwendungen die Verwendung von Wow6432Node in hart codierten Registrierungs Pfaden vermeiden sollten.
+Um die Auswirkungen der Ausführung dieses Beispiels mit regedit zu untersuchen, überprüfen Sie die Werte der folgenden Schlüssel. Beachten Sie, dass Anwendungen die Verwendung von Wow6432Node in hart codierten Registrierungspfaden vermeiden sollten.
 
-**HKLM- \\ Software \\ Hallo Welt**  
-**HKLM \\ Software \\ Wow6432Node \\ Hallo Welt**  
+**HKLM \\ SOFTWARE \\ Hallo Welt**  
+**HKLM \\ SOFTWARE \\ Wow6432Node \\ Hallo Welt**  
 **HKCR \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000}**  
-**HKCR \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ InProcServer32**  
+**HKCR \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ InprocServer32**  
 **HKCR \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ LocalServer32**  
 **HKCR \\ Hello HKCR \\ Wow6432Node \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000}**  
-**HKCR \\ Wow6432Node \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ InProcServer32**  
-**HKCR \\ Wow6432Node \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ LocalServer32**  
+**HKCR \\ Wow6432Node \\ CLSID \\ {00000000-0000-0000-0000-ABCD00000000} \\ InprocServer32**  
+**HKCR \\ Wow6432Node \\ CLSID \\ {00000000-0000-0000-0000-0000-ABCD0000000} \\ LocalServer32**  
 **HKCR \\ Wow6432Node \\ Hello**  
 
 
@@ -309,15 +309,15 @@ Alternate view:   Hello! 64-bit World
 
 <dl> <dt>
 
-[Registrierungs Redirector](registry-redirector.md)
+[Registrierungsumleitung](registry-redirector.md)
 </dt> <dt>
 
-[Registrierungs Reflektion](registry-reflection.md)
+[Registrierungsreflektion](registry-reflection.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

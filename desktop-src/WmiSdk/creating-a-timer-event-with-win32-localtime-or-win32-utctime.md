@@ -1,8 +1,8 @@
 ---
-description: Sie können das Standardmodell der systeminternen Ereignisse und Ereignis Filter in Kombination mit den Win32- \_ Klassen localtime oder Win32 \_ utcTime verwenden, um eine zeitgesteuerte Benachrichtigung zu erhalten.
+description: Sie können das Standardmodell von systeminternen Ereignissen und Ereignisfiltern in Kombination mit den Win32 \_ LocalTime- oder Win32 \_ UTCTime-Klassen verwenden, um eine zeitierte Benachrichtigung zu erhalten.
 ms.assetid: 89ba41e2-c9b5-4914-b8cb-13d21ff03402
 ms.tgt_platform: multiple
-title: Erstellen eines Zeit Geber Ereignisses mit Win32_LocalTime oder Win32_UTCTime
+title: Erstellen eines Timerereignisses mit Win32_LocalTime oder Win32_UTCTime
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,26 +10,26 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 011b2270a80f6b632e832f77e8e7c528228801b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2dc2c3cbec2b87693920c0ed5ca113f7e6a04c9648f0ef2cc4bca9b4fa90f8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612410"
 ---
-# <a name="creating-a-timer-event-with-win32_localtime-or-win32_utctime"></a>Erstellen eines Zeit Geber Ereignisses mit Win32 \_ localtime oder Win32 \_ utcTime
+# <a name="creating-a-timer-event-with-win32_localtime-or-win32_utctime"></a>Erstellen eines Timerereignisses mit Win32 \_ LocalTime oder Win32 \_ UTCTime
 
-Sie können das Standardmodell der systeminternen Ereignisse und Ereignis Filter in Kombination mit den Win32-Klassen [**\_ localtime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ utcTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) verwenden, um eine zeitgesteuerte Benachrichtigung zu erhalten. Die intrinsische Methode ist eine empfohlene Methode zum Erstellen von zeitgesteuerten Ereignissen, da Sie mit dem Rest des Microsoft-Ereignis Modells konsistent ist und komplexe Planungsbedingungen unterstützt.
+Sie können das Standardmodell von systeminternen Ereignissen und Ereignisfiltern in Kombination mit den [**Win32 \_ LocalTime-**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ UTCTime-Klassen**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) verwenden, um eine zeitierte Benachrichtigung zu erhalten. Die systeminterne Methode ist eine empfohlene Methode zum Generieren von Zeitereignissen, da sie mit dem Rest des Microsoft-Ereignismodells konsistent ist und komplexe Planungsbedingungen unterstützt.
 
-Die [**Win32-Klassen \_ localtime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) und [**Win32 \_ utcTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) sind Singleton-Klassen im root \\ CIMV2-Namespace, die die Systemuhr darstellen. Beim Abfragen gibt **Win32 \_ localtime** die aktuelle Zeit zum Zeitpunkt des Datenabrufs in einem 24-Stunden-Format mit lokalem Verweis zurück. Die **Win32 \_ utcTime** -Klasse gibt die aktuelle Uhrzeit mit dem UTC-Verweis zurück.
+Die [**Klassen Win32 \_ LocalTime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) und [**Win32 \_ UTCTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) sind Singletonklassen im \\ Cimv2-Stammnamespace, die die Systemuhr darstellen. Bei der Abfrage gibt **Win32 \_ LocalTime** die aktuelle Uhrzeit zum Zeitpunkt des Datenabrufs in einer 24-Stunden-Zeit mit lokalem Verweis zurück. Die **Win32 \_ UTCTime-Klasse** gibt die aktuelle Zeit mit UTC-Verweis zurück.
 
-**So generieren Sie zeitgesteuerte oder sich wiederholende Ereignisse mit Win32 \_ localtime oder Win32 \_ utcTime**
+**So generieren Sie Zeit- oder Wiederholungsereignisse mit Win32 \_ LocalTime oder Win32 \_ UTCTime**
 
--   Richten Sie einen systeminternen Benachrichtigungs Ereignis Filter für [**Win32 \_ localtime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ utcTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) ein, der eine Benachrichtigung für ein bestimmtes Datum und eine bestimmte Uhrzeit anfordert.
+-   Richten Sie einen systeminternen Benachrichtigungsereignisfilter für [**Win32 \_ LocalTime**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) oder [**Win32 \_ UTCTime**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) ein, der eine Benachrichtigung für ein bestimmtes Datum und eine bestimmte Uhrzeit anfordert.
 
-Wenn z. b. die Ortszeit unter Sommerzeit 4 Uhr ist. und der Speicherort ist GMT-8, dann gibt [**Win32 \_ localtime. Hour**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) den Wert 16 zurück, und [**Win32 \_ utcTime. Hour**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) gibt 23 zurück.
+Beispiel: Die Ortszeit unter Sommerzeit ist 16:00 Uhr. und der Standort ist GMT -8, dann gibt [**Win32 \_ LocalTime.Hour**](/previous-versions/windows/desktop/wmitimepprov/win32-localtime) 16 und [**Win32 \_ UTCTime.Hour**](/previous-versions/windows/desktop/wmitimepprov/win32-utctime) 23 zurück.
 
-Im folgenden Codebeispiel wird beschrieben, wie ein Ereignis Filter erstellt wird, der jeden Tag um Mitternacht ein wiederholtes Ereignis signalisiert.
+Im folgenden Codebeispiel wird beschrieben, wie Sie einen Ereignisfilter erstellen, der jeden Tag um Mitternacht ein sich wiederholendes Ereignis signalisiert.
 
 ``` syntax
 // Win32_LocalTime and Win32_UTCTime reside in root\cimv2 namespace. 

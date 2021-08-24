@@ -1,19 +1,19 @@
 ---
-title: Verwenden der Input-Assembler-Phase ohne Puffer
-description: Das Erstellen und Binden von Puffern ist nicht erforderlich, wenn die Shader keine Puffer erfordern. Dieser Abschnitt enthält ein Beispiel für einfache Vertex-und Pixel-Shader, die ein einzelnes Dreieck zeichnen.
+title: Verwenden der Input-Assembler Phase ohne Puffer
+description: Das Erstellen und Binden von Puffern ist nicht erforderlich, wenn Ihre Shader keine Puffer benötigen. Dieser Abschnitt enthält ein Beispiel für einfache Vertex- und Pixel-Shader, die ein einzelnes Dreieck zeichnen.
 ms.assetid: 84d24494-f2cb-4ca1-84fd-635e20f2c9ad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a3aa4c63176d184e1e67349149bd1f4044159e1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b2bccbdb059e58efbef9e6c80eacbd9af5eb8a24045bdaab20bf540c13a9b719
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104975953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752540"
 ---
-# <a name="using-the-input-assembler-stage-without-buffers"></a>Verwenden der Input-Assembler-Phase ohne Puffer
+# <a name="using-the-input-assembler-stage-without-buffers"></a>Verwenden der Input-Assembler Phase ohne Puffer
 
-Das Erstellen und Binden von Puffern ist nicht erforderlich, wenn die Shader keine Puffer erfordern. Dieser Abschnitt enthält ein Beispiel für einfache Vertex-und Pixel-Shader, die ein einzelnes Dreieck zeichnen.
+Das Erstellen und Binden von Puffern ist nicht erforderlich, wenn Ihre Shader keine Puffer benötigen. Dieser Abschnitt enthält ein Beispiel für einfache Vertex- und Pixel-Shader, die ein einzelnes Dreieck zeichnen.
 
 -   [Vertex-Shader](#vertex-shader)
 -   [Pixelshader](#pixel-shader)
@@ -23,7 +23,7 @@ Das Erstellen und Binden von Puffern ist nicht erforderlich, wenn die Shader kei
 
 ## <a name="vertex-shader"></a>Vertexshader
 
-Beispielsweise können Sie einen Vertexshader deklarieren, der seine eigenen Scheitel Punkte erstellt.
+Beispielsweise können Sie einen Scheitelpunkt-Shader deklarieren, der eigene Scheitelpunkte erstellt.
 
 
 ```
@@ -91,7 +91,7 @@ PSOut PSmain(PSIn input)
 
 ## <a name="technique"></a>Verfahren
 
-Eine Technik ist eine Sammlung von Renderingdurchläufen (es muss mindestens ein Durchlauf vorhanden sein).
+Eine Technik ist eine Auflistung von Renderingdurchläufen (es muss mindestens ein Durchlauf vorhanden sein).
 
 
 ```
@@ -131,12 +131,12 @@ m_pD3D11Device->Draw( 3, 0 );
 
 <dl> <dt>
 
-[Ersten Einstieg in die Input-Assembler Phase](d3d10-graphics-programming-guide-input-assembler-stage-getting-started.md)
+[Erste Schritte mit der Input-Assembler Stage](d3d10-graphics-programming-guide-input-assembler-stage-getting-started.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

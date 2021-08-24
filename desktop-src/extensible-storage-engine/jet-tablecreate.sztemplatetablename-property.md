@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE. sztemplatetablename-Eigenschaft'
-title: JET_TABLECREATE. sztemplatetablename-Eigenschaft
+description: Weitere Informationen zu JET_TABLECREATE.szTemplateTableName-Eigenschaft
+title: JET_TABLECREATE.szTemplateTableName-Eigenschaft
 TOCTitle: 'szTemplateTableName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.szTemplateTableName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate.sztemplatetablename(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f3e78e1493ee14168e53366d320bd2acdebb337d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3820c514851569a5f846256f513a06d2ecf9610da02b3017c78d2c162560dad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729050"
 ---
-# <a name="jet_tablecreatesztemplatetablename-property"></a>JET_TABLECREATE. sztemplatetablename-Eigenschaft
+# <a name="jet_tablecreatesztemplatetablename-property"></a>JET_TABLECREATE.szTemplateTableName-Eigenschaft
 
-Ruft den Namen der Tabelle ab, von der die Basis-DDL geerbt werden soll, oder legt ihn fest.
+Ruft den Namen der Tabelle ab, von der basis-DDL geerbt werden soll, oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string szTemplateTableName { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE-Member](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

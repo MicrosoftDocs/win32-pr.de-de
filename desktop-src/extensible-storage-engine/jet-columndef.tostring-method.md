@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNDEF. Methode "destring"'
-title: JET_COLUMNDEF. Methode "destring"
+description: 'Erfahren Sie mehr über: JET_COLUMNDEF. ToString-Methode'
+title: JET_COLUMNDEF. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columndef.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fd6fec51117aa2c07db93022cc94913c720de5ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 984be1a47717a87c838ddadf0341a547a7c592545a20a1c671a87f99ac276d3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119668110"
 ---
-# <a name="jet_columndeftostring-method"></a>JET_COLUMNDEF. Methode "destring"
+# <a name="jet_columndeftostring-method"></a>JET_COLUMNDEF. ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [JET_COLUMNDEF](./jet-columndef-class.md)darstellt.
+Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die aktuelle [JET_COLUMNDEF](./jet-columndef-class.md)darstellt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_COLUMNDEF](./jet-columndef-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [JET_COLUMNDEF](./jet-columndef-class.md)darstellt.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNDEF-Klasse](./jet-columndef-class.md)
 
-[Mitglieder JET_COLUMNDEF](./jet-columndef-members.md)
+[JET_COLUMNDEF-Member](./jet-columndef-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

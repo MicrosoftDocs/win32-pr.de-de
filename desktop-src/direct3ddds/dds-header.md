@@ -1,9 +1,9 @@
 ---
-title: DDS_HEADER-Struktur (DDS. h)
+title: DDS_HEADER -Struktur (Dds.h)
 description: Beschreibt einen DDS-Dateiheader.
 ms.assetid: 7f8bde30-0ff9-4bb9-b444-5c875e6a0865
 keywords:
-- DDS_HEADER Struktur-DDS
+- DDS_HEADER-Struktur-DDS
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d70fa0c4b05b6655ce0329cc73651ea21d4d808
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d974c319206d0a0cbe6abda291e9d376bd6478a5b8eb8ba3ef3bb12f182b1288
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746000"
 ---
-# <a name="dds_header-structure"></a>DDS- \_ Header Struktur
+# <a name="dds_header-structure"></a>DDS \_ HEADER-Struktur
 
 Beschreibt einen DDS-Dateiheader.
 
@@ -71,94 +71,94 @@ Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Flags, die angeben, welche Member gültige Daten enthalten.
+Flags, um anzugeben, welche Member gültige Daten enthalten.
 
 
 
 | Flag              | Beschreibung                                                  | Wert    |
 |-------------------|--------------------------------------------------------------|----------|
-| ddsd- \_ Caps        | In jeder DDS-Datei erforderlich.                                 | 0x1      |
-| ddsd- \_ Höhe      | In jeder DDS-Datei erforderlich.                                 | 0x2      |
-| ddsd- \_ Breite       | In jeder DDS-Datei erforderlich.                                 | 0x4      |
-| ddsd- \_ Tonhöhe       | Erforderlich, wenn für eine nicht komprimierte Textur eine Tonhöhe bereitgestellt wird. | 0x8      |
-| ddsd- \_ Pixel Format | In jeder DDS-Datei erforderlich.                                 | 0x1000   |
-| ddsd \_ mipmapcount | Erforderlich in einer Mipmapping-Textur.                             | 0x20000  |
-| ddsd \_ linearsize  | Erforderlich, wenn für eine komprimierte Textur eine Tonhöhe bereitgestellt wird.    | 0x80000  |
-| ddsd- \_ Tiefe       | In einer tiefen Textur erforderlich.                                 | 0x800000 |
+| \_DDSD-OBERGRENZEN        | In jeder DDS-Datei erforderlich.                                 | 0x1      |
+| DDSD \_ HEIGHT      | In jeder DDS-Datei erforderlich.                                 | 0x2      |
+| \_DDSD-BREITE       | In jeder DDS-Datei erforderlich.                                 | 0x4      |
+| DDSD \_ PITCH       | Erforderlich, wenn die Tonhöhe für eine unkomprimierte Textur bereitgestellt wird. | 0x8      |
+| DDSD \_ PIXELFORMAT | In jeder DDS-Datei erforderlich.                                 | 0x1000   |
+| DDSD \_ MIPMAPCOUNT | Erforderlich in einer Mipmappentextur.                             | 0x20000  |
+| DDSD \_ LINEARSIZE  | Erforderlich, wenn die Tonhöhe für eine komprimierte Textur bereitgestellt wird.    | 0x80000  |
+| DDSD \_ DEPTH       | Erforderlich in einer Tiefentextur.                                 | 0x800000 |
 
 
 
  
 
 > [!Note]  
-> Wenn Sie DDS-Dateien schreiben, sollten Sie die ddsd \_ Caps-und ddsd- \_ Pixel Formatflags festlegen. für mipzugeordnete Texturen sollten Sie auch das ddsd- \_ Flag "mipmapcount" festlegen. Wenn Sie jedoch eine DDS-Datei lesen, sollten Sie sich nicht darauf verlassen, dass die \_ Flags ddsd Caps, ddsd \_ Pixel Format und ddsd \_ mipmapcount festgelegt werden, da einige Writer einer solchen Datei diese Flags möglicherweise nicht festlegen.
+> Wenn Sie DDS-Dateien schreiben, sollten Sie die Flags DDSD CAPS und \_ DDSD PIXELFORMAT festlegen. Für mipmapped-Texturen sollten Sie auch das \_ DDSD \_ MIPMAPCOUNT-Flag festlegen. Wenn Sie jedoch eine DDS-Datei lesen, sollten Sie sich nicht darauf verlassen, dass die \_ Flags DDSD CAPS, DDSD PIXELFORMAT und \_ DDSD MIPMAPCOUNT festgelegt werden, da einige Writer einer solchen Datei diese Flags möglicherweise nicht \_ festlegen.
 
  
 
-Das \_ \_ \_ in DDS. h definierte DDS-Header Kennzeichen-Textur Kennzeichen ist eine bitweise OR-Kombination aus den ddsd- \_ Caps-, ddsd \_ height-, ddsd \_ Width-und ddsd \_ Pixel Format-Flags.
+Das TEXTURflag DDS HEADER FLAGS, das in Dds.h definiert ist, ist eine \_ \_ \_ bitweise OR-Kombination der Flags DDSD \_ CAPS, DDSD \_ HEIGHT, DDSD WIDTH und \_ DDSD \_ PIXELFORMAT.
 
-Das MipMap-Flag für DDS- \_ Header \_ \_ , das in DDS. h definiert ist, entspricht dem ddsd \_ mipmapcount-Flag.
+Das in Dds.h definierte MIPMAP-Flag DDS HEADER FLAGS entspricht dem \_ \_ \_ DDSD \_ MIPMAPCOUNT-Flag.
 
-Das \_ \_ \_ in DDS. h definierte DDS-Header Kennzeichen-volumenflag ist gleich dem ddsd- \_ tiefen Flag.
+Das \_ volume-Flag DDS HEADER FLAGS, das in Dds.h definiert ist, entspricht dem \_ \_ DDSD \_ DEPTH-Flag.
 
-Das \_ \_ \_ in DDS. h definierte DDS-Header Kennzeichen-pitchflag ist gleich dem ddsd- \_ pitchflag.
+Das IN Dds.h definierte FLAG \_ "DDS HEADER FLAGS PITCH" ist gleich dem \_ \_ DDSD \_ PITCH-Flag.
 
-Das \_ \_ \_ in DDS. h definierte DDS-Header Kennzeichen linearsize-Flag ist gleich dem ddsd \_ linearsize-Flag.
+Das in Dds.h definierte Flag DDS HEADER FLAGS LINEARSIZE entspricht dem \_ \_ \_ DDSD \_ LINEARSIZE-Flag.
 
 </dd> <dt>
 
-**dwheight**
+**dwHeight**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Oberflächen Höhe (in Pixel).
+Oberflächenhöhe (in Pixel).
 
 </dd> <dt>
 
-**dwwidth**
+**dwWidth**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Oberflächen Breite (in Pixel).
+Oberflächenbreite (in Pixel).
 
 </dd> <dt>
 
-**dwpitchorlinearsize**
+**dwPitchOrLinearSize**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Größe und die Anzahl der Bytes pro Scan Zeile in einer unkomprimierten Textur. die Gesamtanzahl der Bytes in der Textur der obersten Ebene für eine komprimierte Textur. Weitere Informationen zum Berechnen der Tonhöhe finden Sie im Abschnitt DDS-Datei Layout des [Programmier Handbuchs für DDS](dx-graphics-dds-pguide.md).
+Die Tonhöhe oder Anzahl von Bytes pro Scanzeile in einer unkomprimierten Textur; Die Gesamtanzahl von Bytes in der Textur der obersten Ebene für eine komprimierte Textur. Informationen zum Berechnen der Tonhöhe finden Sie im Abschnitt DDS-Dateilayout des [Programmierhandbuchs für DDS](dx-graphics-dds-pguide.md).
 
 </dd> <dt>
 
-**dwtiefe**
+**dwDepth**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Tiefe einer volumetextur (in Pixel), andernfalls nicht verwendet.
+Tiefe einer Volumetextur (in Pixel), andernfalls nicht verwendet.
 
 </dd> <dt>
 
-**dwmipmapcount**
+**dwMipMapCount**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl von MipMap-Ebenen, andernfalls nicht verwendet.
+Anzahl der Mipmapebenen, andernfalls nicht verwendet.
 
 </dd> <dt>
 
@@ -176,15 +176,15 @@ Nicht verwendet.
 **ddspf**
 </dt> <dd>
 
-Typ: **[ **DDS \_ Pixel Format**](dds-pixelformat.md)**
+Typ: **[ **DDS \_ PIXELFORMAT**](dds-pixelformat.md)**
 
 </dd> <dd>
 
-Das Pixel Format (siehe [**DDS \_ Pixel Format**](dds-pixelformat.md)).
+Das Pixelformat (siehe [**DDS \_ PIXELFORMAT**](dds-pixelformat.md)).
 
 </dd> <dt>
 
-**dwcaps**
+**dwCaps**
 </dt> <dd>
 
 Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
@@ -197,24 +197,24 @@ Gibt die Komplexität der gespeicherten Oberflächen an.
 
 | Flag             | Beschreibung                                                                                                                              | Wert    |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DDSCAPS \_ Komplex | Optionale muss für jede Datei verwendet werden, die mehr als eine Oberfläche (eine MipMap, eine kubische Umgebungs Zuordnung oder eine mipzugeordnete volumetextur) enthält. | 0x8      |
-| DDSCAPS- \_ MipMap  | Optionale sollte für eine MipMap verwendet werden.                                                                                                   | 0x400000 |
-| DDSCAPS- \_ Textur | Erforderlich                                                                                                                                 | 0x1000   |
+| DDSCAPS \_ COMPLEX | Optional; muss für jede Datei verwendet werden, die mehr als eine Oberfläche enthält (eine Mipmap, eine kubische Umgebungskarte oder eine Mipmappen-Volumetextur). | 0x8      |
+| DDSCAPS \_ MIPMAP  | Optional; sollte für eine Mipmap verwendet werden.                                                                                                   | 0x400000 |
+| DDSCAPS-TEXTUR \_ | Erforderlich                                                                                                                                 | 0x1000   |
 
 
 
  
 
 > [!Note]  
-> Wenn Sie DDS-Dateien schreiben, sollten Sie das DDSCAPS \_ -Textur Kennzeichen festlegen, und für mehrere Oberflächen sollten Sie auch das komplexe DDSCAPS- \_ Flag festlegen. Wenn Sie jedoch eine DDS-Datei lesen, sollten Sie sich nicht darauf verlassen, dass die komplexen DDSCAPS \_ -Textur-und DDSCAPS- \_ Flags festgelegt werden, da einige Writer einer solchen Datei diese Flags möglicherweise nicht festlegen.
+> Wenn Sie DDS-Dateien schreiben, sollten Sie das DDSCAPS TEXTURE-Flag festlegen, und für mehrere Oberflächen sollten Sie auch das \_ DDSCAPS \_ COMPLEX-Flag festlegen. Wenn Sie jedoch eine DDS-Datei lesen, sollten Sie sich nicht darauf verlassen, dass die Flags DDSCAPS TEXTURE und DDSCAPS COMPLEX festgelegt werden, da einige Writer einer solchen Datei diese Flags möglicherweise nicht \_ \_ festlegen.
 
  
 
-Das in " \_ \_ \_ DDS. h" definierte Flag "Mipmap" der DDS-oberflächenflags ist eine bitweise OR-Kombination aus den komplexen DDSCAPS- \_ und DDSCAPS- \_ MipMap-Flags.
+Das in \_ Dds.h definierte MIPMAP-Flag DDS SURFACE FLAGS ist eine \_ \_ bitweise OR-Kombination der DDSCAPS COMPLEX- und \_ DDSCAPS \_ MIPMAP-Flags.
 
-Das Textur Kennzeichen der DDS- \_ Surface- \_ Flags \_ , das in DDS. h definiert ist, entspricht dem DDSCAPS- \_ Textur Kennzeichen.
+Das DDS \_ SURFACE \_ FLAGS TEXTURE-Flag, das in Dds.h definiert ist, entspricht dem \_ DDSCAPS \_ TEXTURE-Flag.
 
-Das cubemap-Flag der DDS- \_ Surface- \_ Flags \_ , das in DDS. h definiert ist, entspricht dem komplexen DDSCAPS- \_ Flag.
+Das \_ CUBEMAP-Flag DDS SURFACE \_ FLAGS, das in \_ Dds.h definiert ist, entspricht dem DDSCAPS \_ COMPLEX-Flag.
 
 </dd> <dt>
 
@@ -225,43 +225,43 @@ Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Weitere Details zu den gespeicherten Oberflächen.
+Zusätzliche Details zu den gespeicherten Oberflächen.
 
 
 
 | Flag                         | Beschreibung                                            | Wert    |
 |------------------------------|--------------------------------------------------------|----------|
-| DDSCAPS2 \_ cubemap            | Erforderlich für eine cubemap.                               | 0x200    |
-| DDSCAPS2 \_ cubemap \_ positivex | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x400    |
-| DDSCAPS2 \_ cubemap \_ negativex | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x800    |
-| DDSCAPS2 \_ cubemap \_ positivey | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x1000   |
-| DDSCAPS2 \_ cubemap \_ negativey | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x2000   |
-| DDSCAPS2 \_ cubemap \_ positivez | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x4000   |
-| DDSCAPS2 \_ cubemap \_ negativez | Erforderlich, wenn diese Oberflächen in einer cubemap gespeichert werden. | 0x8000   |
-| DDSCAPS2- \_ Volume             | Erforderlich für eine volumetextur.                         | 0x200000 |
+| DDSCAPS2 \_ CUBEMAP            | Erforderlich für eine Cubezuordnung.                               | 0x200    |
+| DDSCAPS2 \_ CUBEMAP \_ POSITIVEX | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x400    |
+| DDSCAPS2 \_ CUBEMAP \_ NEGATIVEX | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x800    |
+| DDSCAPS2 \_ CUBEMAP \_ POSITIVEY | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x1000   |
+| DDSCAPS2 \_ CUBEMAP \_ NEGATIV | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x2000   |
+| DDSCAPS2 \_ CUBEMAP \_ POSITIVEZ | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x4000   |
+| DDSCAPS2 \_ CUBEMAP \_ NEGATIVEZ | Erforderlich, wenn diese Oberflächen in einer Cubemap gespeichert werden. | 0x8000   |
+| DDSCAPS2-VOLUME \_             | Erforderlich für eine Volumetextur.                         | 0x200000 |
 
 
 
  
 
-Das \_ \_ in DDS. h definierte DDS-cubemap positivex-Flag ist eine bitweise OR-Kombination der DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap \_ positivex-Flags.
+Das DDS \_ CUBEMAP \_ POSITIVEX-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ CUBEMAP- und DDSCAPS2 \_ CUBEMAP \_ POSITIVEX-Flags.
 
-Das DDS \_ cubemap \_ negativex-Flag, das in DDS. h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap \_ negativex-Flags.
+Das DDS \_ CUBEMAP \_ NEGATIVEX-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ CUBEMAP- und DDSCAPS2 \_ CUBEMAP \_ NEGATIVEX-Flags.
 
-Das \_ \_ in DDS. h definierte Flag "DDS cubemap positivey" ist eine bitweise OR-Kombination aus den DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap- \_ Flags.
+Das DDS \_ CUBEMAP \_ POSITIVEY-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ CUBEMAP- und DDSCAPS2 \_ CUBEMAP \_ POSITIVEY-Flags.
 
-Das DDS \_ -cubemap \_ -negativey-Flag, das in DDS. h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap \_ negativey-Flags.
+Das DDS \_ CUBEMAP \_ NEGATIVEY-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ CUBEMAP- und DDSCAPS2 \_ CUBEMAP \_ NEGATIVEY-Flags.
 
-Das \_ \_ in DDS. h definierte DDS-cubemap-Element, das in DDS. h definiert ist, ist eine bitweise OR-Kombination aus den DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap \_ positivez-Flags.
+Das DDS \_ CUBEMAP \_ POSITIVEZ-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ CUBEMAP- und DDSCAPS2 \_ CUBEMAP \_ POSITIVEZ-Flags.
 
-Das DDS \_ -cubemap \_ negativez-Flag, das in DDS. h definiert ist, ist eine bitweise OR-Kombination der DDSCAPS2 \_ cubemap-und DDSCAPS2 \_ cubemap \_ negativez-Flags.
+Das DDS \_ CUBEMAP \_ NEGATIVEZ-Flag, das in Dds.h definiert ist, ist eine bitweise OR-Kombination der Flags DDSCAPS2 \_ CUBEMAP und DDSCAPS2 \_ CUBEMAP \_ NEGATIVEZ.
 
-Das Flag für die DDS- \_ cubemap \_ allgesichter, die in DDS. h definiert ist, ist eine bitweise OR-Kombination der DDS- \_ cubemap \_ positivex, DDS \_ cubemap \_ negativex, DDS \_ cubemap \_ positivvey, DDS \_ cubemap \_ negativey, DDS \_ cubemap \_ positivvez und DDSCAPS2 \_ cubemap \_ negativez Flags.
+Das in Dds.h definierte DDS \_ CUBEMAP \_ ALLFACES-Flag ist eine bitweise OR-Kombination der Flags DDS \_ CUBEMAP \_ POSITIVEX, DDS \_ CUBEMAP \_ NEGATIVEX, DDS \_ CUBEMAP \_ POSITIVEY, DDS \_ CUBEMAP \_ NEGATIVEY, DDS \_ CUBEMAP \_ POSITIVEZ und DDSCAPS2 \_ CUBEMAP \_ NEGATIVEZ.
 
-Das \_ \_ in DDS. h definierte Flag für das DDS-Flags-Volume ist gleich dem DDSCAPS2- \_ volumenflag.
+Das DDS \_ FLAGS \_ VOLUME-Flag, das in Dds.h definiert ist, entspricht dem DDSCAPS2 \_ VOLUME-Flag.
 
 > [!Note]  
-> Obwohl Direct3D 9 partielle Cubemaps, Direct3D 10, 10,1 und 11 unterstützt, müssen Sie alle sechs Cube-Map-Gesichter definieren (d. h., Sie müssen DDS \_ cubemap \_ allgesichter festlegen).
+> Obwohl Direct3D 9 partielle Cubezuordnungen unterstützt, erfordern Direct3D 10, 10.1 und 11, dass Sie alle sechs Cubemap-Gesichter definieren (d. h., Sie müssen DDS \_ CUBEMAP \_ ALLFACES festlegen).
 
  
 
@@ -300,13 +300,13 @@ Nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einschließen von Flags in **dwFlags** für die Member der Struktur, die gültige Daten enthalten.
+Schließen Sie Flags in **dwFlags für** die Member der -Struktur ein, die gültige Daten enthalten.
 
-Verwenden Sie diese Struktur in Kombination mit einem [**DDS- \_ Header \_ DXT10**](dds-header-dxt10.md) , um ein Ressourcen Array in einer DDS-Datei zu speichern. Weitere Informationen finden Sie unter [Textur Arrays](dx-graphics-dds-pguide.md).
+Verwenden Sie diese Struktur in Kombination mit [**einem DDS \_ HEADER \_ DXT10,**](dds-header-dxt10.md) um ein Ressourcenarray in einer DDS-Datei zu speichern. Weitere Informationen finden Sie unter [Texturarrays.](dx-graphics-dds-pguide.md)
 
-**DDS \_ Der Header** ist mit der DirectDraw DDSURFACEDESC2-Struktur ohne DirectDraw-Abhängigkeiten identisch.
+**DDS \_ HEADER** ist identisch mit der DirectDraw DDSURFACEDESC2-Struktur ohne DirectDraw-Abhängigkeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -314,15 +314,15 @@ Verwenden Sie diese Struktur in Kombination mit einem [**DDS- \_ Header \_ DXT10
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DDS. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dds.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verweis für DDS](dx-graphics-dds-reference.md)
+[Referenz für DDS](dx-graphics-dds-reference.md)
 </dt> </dl>
 
  

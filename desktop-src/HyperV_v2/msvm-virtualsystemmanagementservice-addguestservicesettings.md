@@ -1,7 +1,7 @@
 ---
-description: Fügt einer virtuellen Systemkonfiguration Gast Dienst Einstellungen hinzu.
+description: Fügt einer Konfiguration des virtuellen Systems Gastdiensteinstellungen hinzu.
 ms.assetid: 2c8c2f2b-332a-470e-af7f-80c82e3e2caf
-title: Addguestservicesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: AddGuestServiceSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5bcdfd8c159e92efe633c04e22af5bceb9d003e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f011a0bce545bbde57cbcc9c22861f492cbc27e71ddc717a379d82cbd27bc42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681140"
 ---
-# <a name="addguestservicesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Addguestservicesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="addguestservicesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>AddGuestServiceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Fügt einer virtuellen Systemkonfiguration Gast Dienst Einstellungen hinzu.
+Fügt einer Konfiguration des virtuellen Systems Gastdiensteinstellungen hinzu.
 
-Wenn Sie auf Teile einer "aktuellen" virtuellen Systemkonfiguration angewendet werden, können die Gast Dienste des aktiven virtuellen Systems als Nebeneffekt geändert werden.
+Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet wird, können Gastdienste des aktiven virtuellen Systems als Nebeneffekt geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ uint32 AddGuestServiceSettings(
 
 <dl> <dt>
 
-*Affectedconfiguration* \[ in\]
+*AffectedConfiguration* \[ In\]
 </dt> <dd>
 
-Verweis auf einen [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) , der die betroffene Konfiguration beschreibt.
+Verweis auf ein [**CIM \_ VirtualSystemSettingData,**](cim-virtualsystemsettingdata.md) das die betroffene Konfiguration beschreibt.
 
 </dd> <dt>
 
-*Guestservicesettings* \[ in\]
+*GuestServiceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array, das die Einstellungen des Gast Diensts enthält.
+Ein Array, das die Einstellungen des Gastdiensts enthält.
 
 </dd> <dt>
 
-*Resultingguestservicesettings* \[ vorgenommen\]
+*ResultingGuestServiceSettings* \[ out\]
 </dt> <dd>
 
-Bei Erfolg enthält einen Verweis auf eine [**CIM- \_ SettingData**](cim-settingdata.md) , in der die resultierenden Gast Dienst Einstellungen beschrieben werden.
+Bei Erfolg enthält einen Verweis auf CIM [**\_ SettingData,**](cim-settingdata.md) das die resultierenden Gastdiensteinstellungen beschreibt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -84,7 +84,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -93,16 +93,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -111,10 +111,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -123,7 +123,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

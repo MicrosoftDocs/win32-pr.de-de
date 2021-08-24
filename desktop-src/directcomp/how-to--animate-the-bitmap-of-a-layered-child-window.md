@@ -1,30 +1,30 @@
 ---
-title: Animieren der Bitmap eines untergeordneten Fensters in Schichten
-description: In diesem Thema wird beschrieben, wie ein visuelles Element erstellt und animiert wird, das die Bitmap eines überlappenden untergeordneten Fensters als Inhalt der visuellen Elemente verwendet.
+title: Animieren der Bitmap eines über ebenen untergeordneten Fensters
+description: In diesem Thema wird beschrieben, wie Sie ein Visual erstellen und animieren, das die Bitmap eines über ebenen untergeordneten Fensters als Inhalt des Visuals verwendet.
 ms.assetid: 8912CCF9-C343-45CB-AB31-55D26C118AF2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 038ae3d32fd49a8f795a35f35c6c87889e4c9406
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b882d1be2642f341e74a193605b217a9b7e2d0cc295370c7a5ec8bee4a844f03
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119670970"
 ---
-# <a name="how-to-animate-the-bitmap-of-a-layered-child-window"></a>Animieren der Bitmap eines untergeordneten Fensters in Schichten
+# <a name="how-to-animate-the-bitmap-of-a-layered-child-window"></a>Animieren der Bitmap eines über ebenen untergeordneten Fensters
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene.](/windows/uwp/composition/visual-layer-in-desktop-apps)
 
-In diesem Thema wird beschrieben, wie ein visuelles Element erstellt und animiert wird, das die Bitmap eines überlappenden untergeordneten Fensters als Inhalt der visuellen Elemente verwendet. Das in diesem Thema beschriebene Beispiel verwendet eine animierte Skalierungs Transformation, um die Bitmap eines untergeordneten Fensters von Thumb Size auf Full Size zu vergrößern. Weitere Informationen zu mehrschichtigen Fenstern finden Sie unter [Fenster Bitmaps](bitmap-surfaces.md).
+In diesem Thema wird beschrieben, wie Sie ein Visual erstellen und animieren, das die Bitmap eines über ebenen untergeordneten Fensters als Inhalt des Visuals verwendet. Das in diesem Thema beschriebene Beispiel verwendet eine animierte Skalierungstransformation, um die Bitmap eines untergeordneten Fensters von der Primgröße bis zur vollständigen Größe zu "vergrößern". Weitere Informationen zu mehrschichtigen Fenstern finden Sie unter [Fensterbitmaps](bitmap-surfaces.md).
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -34,11 +34,11 @@ In diesem Thema wird beschrieben, wie ein visuelles Element erstellt und animier
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-a-layered-child-window"></a>Schritt 1: Erstellen eines untergeordneten Fensters in Schichten
+### <a name="step-1-create-a-layered-child-window"></a>Schritt 1: Erstellen eines über ebenen untergeordneten Fensters
 
-Gehen Sie folgendermaßen vor, um ein untergeordnetes Fenster mit Ebenen zu erstellen.
+Führen Sie die folgenden Schritte aus, um ein untergeordnetes Mehrebenenfenster zu erstellen.
 
-1.  Registrieren Sie die Klasse des untergeordneten Fensters, und erstellen Sie ein untergeordnetes Fenster, das über einen überlappenden [**WS \_ \_**](/windows/desktop/winmsg/extended-window-styles) - Im folgenden Beispiel geben Sie `m_dpiX` `m_dpiY` die Bildschirmauflösung in Pixel pro logischem Zoll an und `m_hwndMain` sind das Handle des Haupt Anwendungsfensters.
+1.  Registrieren Sie die untergeordnete Fensterklasse, und erstellen Sie ein untergeordnetes Fenster mit [**dem Format WS \_ EX \_ LAYERED.**](/windows/desktop/winmsg/extended-window-styles) Geben Sie im folgenden Beispiel die Bildschirmauflösung in Pixel pro logischem Zoll an, und ist das Handle `m_dpiX` `m_dpiY` des `m_hwndMain` Hauptanwendungsfensters.
 ```C++
     HWND m_hwndLayeredChild;
 
@@ -82,7 +82,7 @@ HRESULT hr = S_OK;
 
     
 
-2.  Aufrufen der [**SetLayeredWindowAttributes**](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) -Funktion zum Festlegen des Transparenz Farb Schlüssels und der Deckkraft des untergeordneten Fensters. Mit dem folgenden Code wird der Transparenzfarben Schlüssel auf 0 (null) und die Deckkraft auf 255 (nicht transparent) festgelegt.
+2.  Rufen Sie [**die Funktion SetLayeredWindowAttributes auf,**](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) um den Transparenzfarbschlüssel und die Deckkraft des über ebenen untergeordneten Fensters zu setzen. Der folgende Code legt den Transparenzfarbschlüssel auf 0 und die Deckkraft auf 255 (nicht transparent) fest.
 
 ```C++
     if (!SetLayeredWindowAttributes(m_hwndLayeredChild, 0, 255, LWA_ALPHA))
@@ -93,22 +93,22 @@ HRESULT hr = S_OK;
 
     
 
-3.  Inhalt im untergeordneten Fenster darstellen.
+3.  Rendern Sie Inhalte im untergeordneten Fenster.
 
-### <a name="step-2-initialize-directcomposition-objects"></a>Schritt 2: Initialisieren von directcomposition-Objekten
+### <a name="step-2-initialize-directcomposition-objects"></a>Schritt 2: Initialisieren von DirectComposition-Objekten
 
-Erstellen Sie das Geräte Objekt und das Kompositions Zielobjekt. Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Erstellen Sie das Geräteobjekt und das Kompositionszielobjekt. Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
-### <a name="step-3-create-a-visual-object-and-set-the-layered-child-windows-bitmap-as-the-content-property"></a>Schritt 3: Erstellen eines visuellen Objekts und Festlegen der Bitmap des überlappenden untergeordneten Fensters als Content-Eigenschaft
+### <a name="step-3-create-a-visual-object-and-set-the-layered-child-windows-bitmap-as-the-content-property"></a>Schritt 3: Erstellen eines visuellen Objekts und Festlegen der Bitmap des über ebenen untergeordneten Fensters als Inhaltseigenschaft
 
-Führen Sie die folgenden Schritte aus, um ein visuelles Element zu erstellen, seine Content-Eigenschaft so festzulegen, dass die Bitmap des untergeordneten Fensters verwendet wird, und fügen Sie dann der visuellen Struktur die Visualisierung hinzu.
+Führen Sie die folgenden Schritte aus, um ein Visual zu erstellen, dessen Inhaltseigenschaft auf die Verwendung der Bitmap des über ebenen untergeordneten Fensters zu setzen, und fügen Sie das Visual dann der visuellen Struktur hinzu.
 
-1.  Rufen Sie [**idcompositiondevice:: kreatevisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) auf, um ein visuelles Objekt zu erstellen.
-2.  Erstellen Sie eine Microsoft directcomposition-Oberfläche für das untergeordnete Fenster mit untergeordnetem Fenster, indem Sie das Handle des untergeordneten Fensters an die Funktion "| [**atesurfacefromhwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createsurfacefromhwnd) "
-3.  Rufen Sie die [**idcompositionvisual:: setContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent) -Methode des visuellen Objekts auf, um die neue Oberfläche als visuellen Inhalt des untergeordneten Fensters untergeordneter Elemente festzulegen.
-4.  Fügen Sie das visuelle Objekt der visuellen Struktur hinzu. Um dem Stamm der Struktur das visuelle Element hinzuzufügen, rufen Sie die [**idcompositiontarget:: setRoot**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) -Methode auf. Um das visuelle Element als untergeordnetes Element eines anderen visuellen Elements hinzuzufügen, verwenden Sie die [**idcompositionvisual:: addvisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-addvisual) -Methode des übergeordneten visuellen Elements.
+1.  Rufen [**Sie IDCompositionDevice::CreateVisual auf,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) um ein visuelles Objekt zu erstellen.
+2.  Erstellen Sie eine Microsoft DirectComposition-Oberfläche für das über ebenen untergeordnete Fenster, indem Sie das Handle des untergeordneten Fensters an die [**CreateSurfaceFromHwnd-Funktion**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createsurfacefromhwnd) übergeben.
+3.  Rufen Sie die [**IDCompositionVisual::SetContent-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent) des visuellen Objekts auf, um die neue Oberfläche als visuellen Inhalt des über ebenen untergeordneten Fensters zu setzen.
+4.  Fügen Sie das visuelle Objekt der visuellen Struktur hinzu. Um das Visual dem Stamm der Struktur hinzuzufügen, rufen Sie die [**IDCompositionTarget::SetRoot-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) auf. Um das Visual als untergeordnetes Element eines anderen Visuals hinzuzufügen, verwenden Sie die [**IDCompositionVisual::AddVisual-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-addvisual) des übergeordneten Visuals.
 
-Im folgenden Beispiel wird ein visuelles Objekt erstellt, dessen Content-Eigenschaft so festgelegt, dass die Bitmap des untergeordneten Fensters verwendet wird, und das visuelle Element wird dem Stamm der visuellen Struktur hinzugefügt.
+Im folgenden Beispiel wird ein visuelles Objekt erstellt, dessen Content-Eigenschaft auf die Verwendung der Bitmap des über ebenen untergeordneten Fensters und das Visual zum Stamm der visuellen Struktur addiert.
 
 
 ```C++
@@ -134,9 +134,9 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-4-create-an-animation-object-and-a-scale-transform-object"></a>Schritt 4: Erstellen eines Animations Objekts und eines Skalierungs Transformations Objekts
+### <a name="step-4-create-an-animation-object-and-a-scale-transform-object"></a>Schritt 4: Erstellen eines Animationsobjekts und eines Skalierungstransformationsobjekts
 
-Verwenden Sie die [**idcompositiondevice:: kreateanimation**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) -Methode, um ein Animations Objekt zu erstellen, und die [**idcompositiondevice:: deescaletransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createscaletransform) -Methode zum Erstellen eines Skalierungs Transformations Objekts.
+Verwenden Sie die [**IDCompositionDevice::CreateAnimation-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) um ein Animationsobjekt zu erstellen, und die [**IDCompositionDevice::CreateScaleTransform-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createscaletransform) um ein Skalierungstransformationsobjekt zu erstellen.
 
 
 ```C++
@@ -157,11 +157,11 @@ if (SUCCEEDED(hr))
 
 
 
-### <a name="step-5-build-the-animation-function"></a>Schritt 5: Erstellen der Animations Funktion
+### <a name="step-5-build-the-animation-function"></a>Schritt 5: Erstellen der Animationsfunktion
 
-Verwenden Sie die Methoden der [**idcompositionanimation**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) -Schnittstelle des Animations Objekts, um eine Animations Funktion zu erstellen.
+Verwenden Sie die Methoden der [**IDCompositionAnimation-Schnittstelle**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) des Animationsobjekts, um eine Animationsfunktion zu erstellen.
 
-Im folgenden Beispiel wird eine einfache Animations Funktion erstellt, die aus einem kubischen Polynoms-Segment und einem Endsegment besteht.
+Im folgenden Beispiel wird eine einfache Animationsfunktion erstellt, die aus einem kubischen polynomialen Segment und einem Endsegment besteht.
 
 
 ```C++
@@ -176,9 +176,9 @@ pAnimateScale->End(1.0f, 1.0f);
 
 
 
-### <a name="step-6-apply-the-animation-object-to-properties-of-the-scale-transform-object"></a>Schritt 6: Anwenden des Animations Objekts auf Eigenschaften des Skalierungs Transformations Objekts
+### <a name="step-6-apply-the-animation-object-to-properties-of-the-scale-transform-object"></a>Schritt 6: Anwenden des Animationsobjekts auf Eigenschaften des Skalierungstransformationsobjekts
 
-Verwenden Sie die [**idcompositionscale:: setscalex**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform-setscalex(idcompositionanimation)) -Methode und die [**setscaley**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform-setscaley(idcompositionanimation)) -Methode, um das Animations Objekt auf die ScaleX-und ScaleY-Eigenschaften des Skalierungs Transformations Objekts anzuwenden.
+Verwenden Sie [**die Methoden IDCompositionScale::SetScaleX**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform-setscalex(idcompositionanimation)) und [**SetScaleY,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform-setscaley(idcompositionanimation)) um das Animationsobjekt auf die ScaleX- und ScaleY-Eigenschaften des Skalierungstransformationsobjekts anzuwenden.
 
 
 ```C++
@@ -200,9 +200,9 @@ pScale->SetScaleY(pAnimateScale);
 
 
 
-### <a name="step-7-apply-the-scale-transform-object-to-the-transform-property-of-the-visual"></a>Schritt 7: Anwenden des Skalierungs Transformations Objekts auf die Transform-Eigenschaft des visuellen Elements
+### <a name="step-7-apply-the-scale-transform-object-to-the-transform-property-of-the-visual"></a>Schritt 7: Anwenden des Skalierungstransformationsobjekts auf die Transformationseigenschaft des Visuals
 
-Verwenden Sie die [**idcompositionvisual:: setTransform**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(idcompositiontransform)) -Methode, um das Skalierungs Transformations Objekt auf die Transform-Eigenschaft des visuellen Elements anzuwenden.
+Verwenden Sie [**die IDCompositionVisual::SetTransform-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(idcompositiontransform)) um das Skalierungstransformationsobjekt auf die Transform-Eigenschaft des Visuals anzuwenden.
 
 
 ```C++
@@ -211,9 +211,9 @@ hr = pVisual->SetTransform(pScale);
 
 
 
-### <a name="step-8-cloak-the-layered-child-window"></a>Schritt 8: verdecken des untergeordneten Fensters in Schichten
+### <a name="step-8-cloak-the-layered-child-window"></a>Schritt 8: Verkleinern des über ebenen untergeordneten Fensters
 
-Verwenden Sie vor dem Ausführen eines Commits für die Animation die [**DwmSetWindowAttribute**](/windows/desktop/api/dwmapi/nf-dwmapi-dwmsetwindowattribute) -Funktion mit dem dwmwa-umsetzungsflag, um das untergeordnete Fenster zu "verbergen". [**\_**](/windows/desktop/api/dwmapi/ne-dwmapi-dwmwindowattribute) Durch das Cloaking wird das untergeordnete Fenster aus der Ansicht entfernt, während die animierte Version der bitmapansicht des Fensters auf dem Bildschirm gerendert wird.
+Verwenden Sie vor dem Committen der Animation die [**DwmSetWindowAttribute-Funktion**](/windows/desktop/api/dwmapi/nf-dwmapi-dwmsetwindowattribute) mit dem [**DWMWA \_ CLOAK-Flag,**](/windows/desktop/api/dwmapi/ne-dwmapi-dwmwindowattribute) um das über ebenen untergeordnete Fenster zu "verkleinern". Durch das Verkleinern wird das über ebenen untergeordnete Fenster aus der Ansicht entfernt, während die animierte Version der Bitmapansicht des Fensters auf dem Bildschirm gerendert wird.
 
 
 ```C++
@@ -226,17 +226,17 @@ DwmSetWindowAttribute(pDemoApp->m_hwndLayeredChild,
 
 
 
-### <a name="step-9-commit-the-composition"></a>Schritt 9: Commit der Komposition ausführen
+### <a name="step-9-commit-the-composition"></a>Schritt 9: Commit der Komposition
 
-Verwenden Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode, um einen Commit für den Batch der Befehle an Microsoft directcomposition zur Verarbeitung auszuführen. Die Animation wird im Zielfenster angezeigt.
+Verwenden Sie [**die IDCompositionDevice::Commit-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) um den Batch von Befehlen zur Verarbeitung an Microsoft DirectComposition zu commiten. Die Animation wird im Zielfenster angezeigt.
 
-### <a name="step-10-uncloak-the-layered-child-window"></a>Schritt 10: Entdecken des untergeordneten Fensters in Schichten
+### <a name="step-10-uncloak-the-layered-child-window"></a>Schritt 10: Entschärfen des über ebenen untergeordneten Fensters
 
-Nachdem die Animation abgeschlossen ist, verwenden Sie die [**DwmSetWindowAttribute**](/windows/desktop/api/dwmapi/nf-dwmapi-dwmsetwindowattribute) -Funktion mit dem **dwmwa- \_** verseflag, um die Verdeckung des untergeordneten Fensters zu entdecken.
+Nachdem die Animation abgeschlossen ist, verwenden Sie die [**DwmSetWindowAttribute-Funktion**](/windows/desktop/api/dwmapi/nf-dwmapi-dwmsetwindowattribute) mit dem **DWMWA \_ CLOAK-Flag,** um das überschichtige untergeordnete Fenster zu entloaken.
 
-### <a name="step-11-release-directcomposition-objects"></a>Schritt 11: Freigeben von directcomposition-Objekten
+### <a name="step-11-release-directcomposition-objects"></a>Schritt 11: Veröffentlichen von DirectComposition-Objekten
 
-Stellen Sie sicher, dass Sie alle directcomposition-Objekte freigeben, wenn Sie Sie nicht mehr benötigen. Im folgenden Beispiel wird das Anwendungs definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um die directcomposition-Objekte freizugeben.
+Stellen Sie sicher, dass Sie alle DirectComposition-Objekte veröffentlichen, wenn Sie sie nicht mehr benötigen. Das folgende Beispiel ruft das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) auf, um die DirectComposition-Objekte frei zu geben.
 
 
 ```C++
@@ -1281,12 +1281,12 @@ HRESULT DemoApp::LoadResourceD2DBitmap(
 [Animation](animation.md)
 </dt> <dt>
 
-[Bitmap-Objekte](bitmap-surfaces.md)
+[Bitmapobjekte](bitmap-surfaces.md)
 </dt> <dt>
 
-[Beispiel für ein untergeordnetes Fenster von directcomposition](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionLayeredChildWindow)
+[Beispiel für ein überschichtes untergeordnetes DirectComposition-Fenster](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionLayeredChildWindow)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

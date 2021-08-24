@@ -1,9 +1,9 @@
 ---
-title: glgettexenvfv-Funktion (GL. h)
-description: Die Funktionen "glgettexgetvfv" und "glgettexenviv" geben Textur Umgebungsparameter zurück. | glgettexenvfv-Funktion (GL. h)
+title: glGetTexEnvfv-Funktion (Gl.h)
+description: Die Funktionen glGetTexEnvfv und glGetTexEnviv geben Texturumgebungsparameter zurück. | glGetTexEnvfv-Funktion (Gl.h)
 ms.assetid: aa037494-e227-48f1-8d5e-9f82073dc2ea
 keywords:
-- glgettexenvfv-Funktion OpenGL
+- glGetTexEnvfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36d542461b05a824c78bbad82d843735289f2fb4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 14b9b294879711662c67f9ab581e89eaadfa620363e1d19e93f7ea686ba7453a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106353303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119493870"
 ---
-# <a name="glgettexenvfv-function"></a>glgettexenvfv-Funktion
+# <a name="glgettexenvfv-function"></a>glGetTexEnvfv-Funktion
 
-Die Funktionen " **glgettexgetvfv** " und " [**glgettexenviv**](glgettexenviv.md) " geben Textur Umgebungsparameter zurück.
+Die Funktionen **glGetTexEnvfv** und [**glGetTexEnviv**](glgettexenviv.md) geben Texturumgebungsparameter zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glGetTexEnvfv(
 *Ziel* 
 </dt> <dd>
 
-Eine Textur Umgebung. Muss "GL \_ Texture" sein \_ .
+Eine Texturumgebung. Muss GL \_ TEXTURE \_ ENV sein.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der symbolische Name eines Textur Umgebungs Parameters. Die folgenden Werte werden akzeptiert.
+Der symbolische Name eines Texturumgebungsparameters. Die folgenden Werte werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                | Bedeutung                                                                                                                                                                                                                                                                                                                                              |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span><dl> <dt>**GL- \_ Textur \_ env- \_ Modus**</dt> </dl>    | Der Parameter *para* meters gibt den einwertigen Textur Umgebungs Modus zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                           |
-| <span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span><dl> <dt>**GL- \_ Textur Gesamt \_ \_ Farbe**</dt> </dl> | Der Parameter *para* meters gibt vier ganzzahlige Werte oder Gleit Komma Werte zurück, die die Farbe der Textur Umgebung sind. Ganzzahlige Werte werden, wenn angefordert, linear von der internen Gleit Komma Darstellung zugeordnet, sodass 1,0 der positivsten darstellbaren Ganzzahl zugeordnet ist und-1,0 der negativsten darstellbaren Ganzzahl entspricht.<br/> |
+| <span id="GL_TEXTURE_ENV_MODE"></span><span id="gl_texture_env_mode"></span><dl> <dt>**GL \_ TEXTURE \_ ENV \_ MODE**</dt> </dl>    | Der *parameter-Parameter* gibt den Umgebungsmodus für eine einwertige Textur zurück, eine symbolische Konstante.<br/>                                                                                                                                                                                                                                           |
+| <span id="GL_TEXTURE_ENV_COLOR"></span><span id="gl_texture_env_color"></span><dl> <dt>**GL \_ TEXTURE \_ ENV \_ COLOR**</dt> </dl> | Der *Parameter params* gibt vier ganzzahlige Werte oder Gleitkommawerte zurück, die die Farbe der Texturumgebung darstellen. Ganzzahlige Werte werden bei Anforderung linear aus der internen Gleitkommadarstellung zugeordnet, sodass 1,0 der positivsten darstellbaren ganzen Zahl und -1,0 der negativsten darstellbaren ganzen Zahl zugeordnet wird.<br/> |
 
 
 
@@ -80,24 +80,24 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *target* oder *PName* war kein akzeptierter Wert.<br/>                                                                             |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *pname* war kein akzeptierter Wert.<br/>                                                                             |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glgettexenv** -Funktion gibt *in Parameter* ausgewählte Werte einer Textur Umgebung zurück, die mit [**gltexenv**](gltexenv-functions.md)angegeben wurde. Der *Ziel* Parameter gibt eine Textur Umgebung an. Zurzeit wird nur eine Textur Umgebung definiert und unterstützt: GL Texture-Version \_ \_ .
+Die **glGetTexEnv-Funktion** gibt in *params* ausgewählte Werte einer Texturumgebung zurück, die mit [**glTexEnv**](gltexenv-functions.md)angegeben wurde. Der *Zielparameter* gibt eine Texturumgebung an. Derzeit wird nur eine Texturumgebung definiert und unterstützt: GL \_ TEXTURE \_ ENV.
 
-Der *PName* -Parameter benennt einen bestimmten Textur Umgebungsparameter.
+Der *pname-Parameter* benennt einen bestimmten Texturumgebungsparameter.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern vorgenommen.
+Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Parameter* vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,8 +107,8 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -123,7 +123,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**gltexd**](gltexenv-functions.md)
+[**glTexEnv**](gltexenv-functions.md)
 </dt> </dl>
 
  

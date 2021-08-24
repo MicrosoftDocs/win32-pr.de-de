@@ -1,11 +1,11 @@
 ---
-title: Phone-Mobile-anderes Attribut
+title: Telefon-Mobile-Other-Attribut
 description: Eine Liste alternativer Mobiltelefonnummern.
 ms.assetid: c77e435c-e804-4730-ae8f-0365feeb153a
 ms.tgt_platform: multiple
 keywords:
-- Phone-Mobile-anderes Attribut AD-Schema
-- othermobile-Attribut AD-Schema
+- ad-Schema des Telefon-Mobile-Other-Attributs
+- otherMobile-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4961c44660e99f11ffe3860fd6810175f8602c15
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: af56ea1990e6a25653bfa356356744dec618b5df9411a1b7d1304aa75fe50065
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119648140"
 ---
-# <a name="phone-mobile-other-attribute"></a>Phone-Mobile-anderes Attribut
+# <a name="phone-mobile-other-attribute"></a>Telefon-Mobile-Other-Attribut
 
 Eine Liste alternativer Mobiltelefonnummern.
 
@@ -29,13 +29,13 @@ Eine Liste alternativer Mobiltelefonnummern.
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Phone-Mobile-other                                                               |
-| LDAP-Display-Name | otherMobile                                                                      |
+| CN                | Telefon-Mobile-Other                                                               |
+| Ldap-Anzeigename | otherMobile                                                                      |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                           |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt und die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.647                                                           |
-| System-ID-GUID    | 0296c11e-40DA-11d1-a9c0-0000b80367c1                                             |
+| System-ID-GUID    | 0296c11e-40da-11d1-a9c0-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Eine Liste alternativer Mobiltelefonnummern.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,7 +70,7 @@ Eine Liste alternativer Mobiltelefonnummern.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -100,10 +100,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -121,10 +121,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -142,10 +142,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -163,10 +163,10 @@ Eine Liste alternativer Mobiltelefonnummern.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

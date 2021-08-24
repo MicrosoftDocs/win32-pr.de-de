@@ -1,6 +1,6 @@
 ---
-title: if_comp-PS
-description: Startet, wenn bool-PS... Else-PS... der enumerationsblock "enumdif-PS" mit einer Bedingung, die auf Werten basiert, die in einem Shader berechnet werden können. Diese Anweisung wird verwendet, um einen Codeblock auf der Grundlage einer Bedingung zu überspringen.
+title: if_comp ps
+description: Starten Sie eine if bool - ps... else - ps... endif – ps block, mit einer Bedingung, die auf Werten basiert, die in einem Shader berechnet werden können. Diese Anweisung wird verwendet, um einen Codeblock basierend auf einer Bedingung zu überspringen.
 ms.assetid: a641e347-df28-4a3f-a461-0b6aee758e59
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,61 +9,61 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: db30983c83bc7d66e06befd07f4eb1dcdc9b21ea
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5d0a2271dbd67902a039ddadf585611ed98fdb115f468c3962baa8cb46f48508
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788970"
 ---
-# <a name="if_comp---ps"></a>Wenn \_ Comp-PS
+# <a name="if_comp---ps"></a>if \_ comp - ps
 
-Startet, [Wenn bool-PS](if-bool---ps.md)... [else-PS](else---ps.md)... der [enumerationsblock "enumdif-PS](endif---ps.md) " mit einer Bedingung, die auf Werten basiert, die in einem Shader berechnet werden können. Diese Anweisung wird verwendet, um einen Codeblock auf der Grundlage einer Bedingung zu überspringen.
+Starten Sie einen [, wenn bool – ps](if-bool---ps.md)... [else – ps](else---ps.md)... [endif – ps](endif---ps.md) block, mit einer Bedingung, die auf Werten basiert, die in einem Shader berechnet werden können. Diese Anweisung wird verwendet, um einen Codeblock basierend auf einer Bedingung zu überspringen.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| If \_ Comp src0, Quelle1 |
+| if \_ comp src0, src1 |
 |---------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   \_comp ist ein Vergleich zwischen den beiden Quell Registern. Folgende Werte sind möglich: 
+-   \_comp ist ein Vergleich zwischen den beiden Quellregistern. Folgende Werte sind möglich: 
 
     | Syntax | Vergleich            |
     |--------|-----------------------|
-    | \_siegt   | Größer als          |
-    | \_General   | Kleiner als             |
-    | \_Färbung   | Größer als oder gleich |
-    | \_Kirchturm   | Kleiner als oder gleich    |
-    | \_stecken   | Gleich              |
-    | \_NES   | Ungleich          |
+    | \_Gt   | Größer als          |
+    | \_Lt   | Kleiner als             |
+    | \_Ge   | Größer als oder gleich |
+    | \_Le   | Kleiner oder gleich    |
+    | \_Eq   | Gleich              |
+    | \_Ne   | Ungleich          |
 
     
 
-     
+     
 
--   src0 ist ein Quell Register. Das Replizieren der Replizierung ist erforderlich, um eine Komponente auszuwählen.
--   Quelle1 ist ein Quell Register. Das Replizieren der Replizierung ist erforderlich, um eine Komponente auszuwählen.
+-   src0 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, um eine Komponente auszuwählen.
+-   src1 ist ein Quellregister. Replizieren von Swizzle ist erforderlich, um eine Komponente auszuwählen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| If \_ comp              |      |      |      |      |      | x    | x     | x    | x     |
+| if \_ comp              |      |      |      |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Diese Anweisung wird verwendet, um einen Codeblock auf der Grundlage einer Bedingung zu überspringen.
+Diese Anweisung wird verwendet, um einen Codeblock basierend auf einer Bedingung zu überspringen.
 
 
 ```
@@ -73,18 +73,18 @@ if (src0 comparison src1)
 
 
 
-Achten Sie darauf, die Vergleichs Modi "gleich" und "nicht gleich" für Gleit Komma Zahlen zu verwenden. Da während der Ausführung von Gleit Komma Berechnungen eine Rundung stattfindet, kann der Vergleich mit einem Epsilon-Wert (kleine Zahl ungleich null) durchgeführt werden, um Fehler zu vermeiden.
+Seien Sie vorsichtig, wenn Sie die Vergleichsmodi equals und not equals für Gleitkommazahlen verwenden. Da das Runden während gleitkommaberechnungen erfolgt, kann der Vergleich mit einem Epsilonwert (kleine Zahl ungleich 0) durchgeführt werden, um Fehler zu vermeiden.
 
 Es gelten folgende Beschränkungen:
 
--   Wenn \_ comp... [else-PS](else---ps.md)... [EndIf-PS-](endif---ps.md) Blöcke (zusammen mit den Prädikat- [if](if-bool---ps.md) -Blöcken) können bis zu 24 Ebenen tief verschachtelt werden.
--   src0-und Quelle1-Register erfordern ein replizieren.
--   , wenn \_ Comp-Blöcke mit einer [else-vs-](else---vs.md) oder [EndIf-vs-](endif---vs.md) Anweisung enden müssen.
--   Wenn \_ comp... [else-PS](else---ps.md)... " [umdif-PS"-](endif---ps.md) Blöcke können einen Schleifen Block nicht durchlaufen. Der if \_ Comp-Block muss sich vollständig innerhalb oder außerhalb des Schleifen Blocks befinden.
+-   if \_ comp... [else – ps](else---ps.md)... [endif: PS-Blöcke](endif---ps.md) (zusammen mit den prädikatierten if-Blöcken) können bis zu 24 Ebenen tief geschachtelt werden. [](if-bool---ps.md)
+-   src0- und src1-Register erfordern eine Replizieren von Swizzle.
+-   , wenn \_ comp-Blöcke mit einer [else-Anweisung](else---vs.md) enden müssen ( vs oder [endif - vs](endif---vs.md) instruction).
+-   if \_ comp... [else – ps](else---ps.md)... [endif:](endif---ps.md) PS-Blöcke können sich nicht über einen Schleifenblock erstreckt. Der if \_ comp-Block muss sich vollständig innerhalb oder außerhalb des Schleifenblocks befinden.
 
 ## <a name="example"></a>Beispiel
 
-Diese Anweisung stellt die bedingte dynamische Fluss Steuerung bereit.
+Diese Anweisung stellt eine bedingte dynamische Flusssteuerung bereit.
 
 
 ```
@@ -106,9 +106,9 @@ endif
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

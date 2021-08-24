@@ -1,9 +1,9 @@
 ---
-title: 'Byteaddressbuffer:: Load (int)-Funktion'
-description: 'Ruft einen Wert ab. | Byteaddressbuffer:: Load (int)-Funktion'
+title: ByteAddressBuffer::Load(int)-Funktion
+description: Ruft einen Wert ab. | ByteAddressBuffer::Load(int)-Funktion
 ms.assetid: a63f4099-2c3b-4d37-9135-b8c63df30824
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e0de7d1a8ef8a7fe3173016fe07a433a930c3d59
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7a9854f85ebd92b9f57e4b2339f374ad8f7816ea7b9ba31e37c9404b08c14864
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671450"
 ---
-# <a name="byteaddressbufferloadint-function"></a>Byteaddressbuffer:: Load (int)-Funktion
+# <a name="byteaddressbufferloadint-function"></a>ByteAddressBuffer::Load(int)-Funktion
 
 Ruft einen Wert ab.
 
@@ -36,12 +36,12 @@ uint Load(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*Adresse* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln mus
 
 Typ: **uint**
 
-Ein-Wert.
+Ein -Wert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -65,14 +65,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](byteaddressbuffer-load.md)
+[Laden von Methoden](byteaddressbuffer-load.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

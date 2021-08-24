@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen Scheitelpunkt Puffer.
+description: Beschreibt einen Scheitelpunktpuffer.
 ms.assetid: 0ae8f976-d0ca-4d55-b6db-5be85fa3c799
-title: D3DVERTEXBUFFER_DESC-Struktur (D3D9Types. h)
+title: D3DVERTEXBUFFER_DESC-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: b2c0838743f8190eeb0e5c825e7125d2e48c0b6c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1f1809bbf9352b022d2acfb15b119db47b0feab6302020cdaf5b24746945aa05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119750580"
 ---
-# <a name="d3dvertexbuffer_desc-structure"></a>D3DVERTEXBUFFER- \_ Struktur
+# <a name="d3dvertexbuffer_desc-structure"></a>\_D3DVERTEXBUFFER-DESC-Struktur
 
-Beschreibt einen Scheitelpunkt Puffer.
+Beschreibt einen Scheitelpunktpuffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,18 +51,18 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Oberflächen Format der Vertex-Puffer Daten beschreibt.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Oberflächenformat der Vertexpufferdaten beschreibt.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
 Typ: **[ **D3DRESOURCETYPE**](./d3dresourcetype.md)**
 
 </dd> <dd>
 
-Member des [**D3DRESOURCETYPE**](./d3dresourcetype.md) -Enumerationstyps, der diese Ressource als Vertex-Puffer identifiziert.
+Member des [**D3DRESOURCETYPE-Enumerationstyps,**](./d3dresourcetype.md) der diese Ressource als Scheitelpunktpuffer identifiziert.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Kombination von mindestens einem [**D3DUSAGE**](d3dusage.md) -Flags.
+Kombination aus einem oder mehreren [**D3DUSAGE-Flags.**](d3dusage.md)
 
 </dd> <dt>
 
@@ -84,29 +84,29 @@ Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
 </dd> <dd>
 
-Member des [**D3DPOOL**](./d3dpool.md) -Enumerationstyps, der die für diesen Vertex-Puffer zugeordnete Arbeitsspeicher Klasse angibt.
+Member des [**D3DPOOL-Enumerationstyps,**](./d3dpool.md) der die Für diesen Scheitelpunktpuffer zugeordnete Speicherklasse angibt.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Größe des Scheitelpunkt Puffers in Bytes.
+Größe des Scheitelpunktpuffers in Bytes.
 
 </dd> <dt>
 
-**F-VF**
+**FVF**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Eine Kombination aus [D3DFVF](d3dfvf.md) , die das Scheitelpunkt Format der Scheitel Punkte in diesem Puffer beschreibt.
+Kombination aus [D3DFVF,](d3dfvf.md) die das Scheitelpunktformat der Scheitelpunkte in diesem Puffer beschreibt.
 
 </dd> </dl>
 
@@ -116,11 +116,11 @@ Eine Kombination aus [D3DFVF](d3dfvf.md) , die das Scheitelpunkt Format der Sche
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -130,7 +130,7 @@ Eine Kombination aus [D3DFVF](d3dfvf.md) , die das Scheitelpunkt Format der Sche
 [**GetDesc**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dvertexbuffer9-getdesc)
 </dt> <dt>
 
-[Vertex-Puffer (Direct3D 9)](vertex-buffers.md)
+[Vertexpuffer (Direct3D 9)](vertex-buffers.md)
 </dt> </dl>
 
  

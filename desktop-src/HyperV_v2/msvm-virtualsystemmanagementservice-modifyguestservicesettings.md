@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen des Gast Diensts.
+description: Ändert Gastdiensteinstellungen.
 ms.assetid: a308aa59-bd43-4dd5-a690-c435102e8043
-title: Modifyguestservicesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ModifyGuestServiceSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: bc0af24346c445022ba3f8725ea6102c61dc9c69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 514e24f49b2f0b1909e59514a86848dde2497b2f5228b2cfb7cac7fd141113ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789180"
 ---
-# <a name="modifyguestservicesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Modifyguestservicesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="modifyguestservicesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ModifyGuestServiceSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Ändert die Einstellungen des Gast Diensts.
+Ändert Gastdiensteinstellungen.
 
-Wenn Sie auf Teile einer "aktuellen" virtuellen Systemkonfiguration angewendet werden, können die Gast Dienste des aktiven virtuellen Systems als Nebeneffekt geändert werden.
+Wenn sie auf Teile einer "aktuellen" Konfiguration des virtuellen Systems angewendet wird, können Gastdienste des aktiven virtuellen Systems als Nebeneffekt geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 ModifyGuestServiceSettings(
 
 <dl> <dt>
 
-*Guestservicesettings* \[ in\]
+*GuestServiceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array, das die neuen Einstellungen des Gast Diensts enthält.
+Ein Array, das die neuen Gastdiensteinstellungen enthält.
 
 </dd> <dt>
 
-*Resultingguestservicesettings* \[ vorgenommen\]
+*ResultingGuestServiceSettings* \[ out\]
 </dt> <dd>
 
-Bei Erfolg wird ein Array von [**CIM- \_ SettingData**](cim-settingdata.md) zusammenhängender, das auf die resultierenden Gast Dienst Einstellungen verweist.
+Bei Erfolg wird ein Array von [**CIM \_ SettingData-Daten**](cim-settingdata.md) zusammenhängend, die auf die resultierenden Gastdiensteinstellungen verweisen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -76,7 +76,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -85,22 +85,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -109,10 +109,10 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -121,7 +121,7 @@ Nicht **kompatible Parameter** (6)
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

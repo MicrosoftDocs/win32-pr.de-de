@@ -1,9 +1,9 @@
 ---
-title: Interlockedmin-Funktion (HLSL-Referenz)
-description: Führt eine garantierte atomarische Minute aus.
+title: InterlockedMin-Funktion (HLSL-Referenz)
+description: Führt eine garantierte atomare Min. aus.
 ms.assetid: a6d3d81c-45d7-4e15-b8ec-fa2e30f854ce
 keywords:
-- Interlockedmin-Funktion HLSL
+- InterlockedMin-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9c85be82f87ce62d03c824e8cd895166c18c262c
-ms.sourcegitcommit: 12e9b14501d51641b690ee0cf764e2b91eb9a140
+ms.openlocfilehash: c84650ce8f95f9ba0aa6e3d5bf5d54f2915a1a94fdf96d9f89179598004744e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "104389763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672660"
 ---
-# <a name="interlockedmin-function-hlsl-reference"></a>Interlockedmin-Funktion (HLSL-Referenz)
+# <a name="interlockedmin-function-hlsl-reference"></a>InterlockedMin-Funktion (HLSL-Referenz)
 
-Führt eine garantierte atomarische Minute aus.
+Führt eine garantierte atomare Min. aus.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedMin(
-  in  R dest,
-  in  T value,
-  out T original_value
+  in  R dest,
+  in  T value,
+  out T original_value
 );
 ```
 
@@ -38,7 +38,7 @@ void InterlockedMin(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
 Typ: **R**
@@ -47,7 +47,7 @@ Die Zieladresse.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **T**
@@ -56,12 +56,12 @@ Der Eingabewert.
 
 </dd> <dt>
 
-*ursprünglicher \_ Wert* ausgehend \[\]
+*Ursprünglicher \_ Wert* \[ out\]
 </dt> <dd>
 
 Typ: **T**
 
-Optional. Der ursprüngliche Eingabe Wert.
+Optional. Der ursprüngliche Eingabewert.
 
 </dd> </dl>
 
@@ -69,49 +69,49 @@ Optional. Der ursprüngliche Eingabe Wert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für typisierte int-und uint-Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt zwei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion einen atomaren Minimalwert für das Shared Memory-Register aus, auf das von dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die-Funktion einen atomaren Minimalwert für den Ressourcen Speicherort aus, auf den von dest verwiesen wird. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert von dest festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
+Dieser Vorgang kann nur für int- und uint-typisierte Ressourcen und Freigegebene Arbeitsspeichervariablen ausgeführt werden. Es gibt zwei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion einen atomaren Mindestwert für das Shared Memory-Register aus, auf das vom Dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion einen atomaren Mindestwert für den Ressourcenspeicherort aus, auf den vom Dest verwiesen wird. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert dest festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      |  x   |  x     |  x       | x     | x       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
 title: onendalphablend
-description: Der onendalphablend-Ereignishandler behandelt ein Ereignis, das auftritt, wenn ein Element einen alphablendto-Vorgang abschließt.
+description: Der onendalphablend-Ereignishandler behandelt ein Ereignis, das auftritt, wenn ein Element einen alphaBlendTo-Vorgang abschließt.
 ms.assetid: 3d075ce5-3e95-4a00-bc77-068b88d6c54e
 keywords:
-- onendalphablend-Windows-Media Player
+- onendalphablend Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 81780d8a59d386513b97d137d43eb170c93034f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d77f6a488546760f61fb04d57f01fe5ee3a74a23b8b8d975b791ae22a5e2304a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647210"
 ---
 # <a name="onendalphablend"></a>onendalphablend
 
-Der **onendalphablend** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn ein Element einen alphablendto-Vorgang abschließt.
+Der **onendalphablend-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn ein Element einen alphaBlendTo-Vorgang abschließt.
 
 ``` syntax
 onendalphablend
@@ -34,7 +34,7 @@ onendalphablend
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ onendalphablend
 [**Ambient-Ereignishandler**](ambient-event-handlers.md)
 </dt> <dt>
 
-[**Ambientattribute. alphablendto**](ambientattributes-alphablendto.md)
+[**AmbientAttributes.alphaBlendTo**](ambientattributes-alphablendto.md)
 </dt> </dl>
 
  

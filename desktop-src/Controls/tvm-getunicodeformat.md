@@ -1,9 +1,9 @@
 ---
-title: TVM_GETUNICODEFORMAT Meldung (kommstrg. h)
-description: Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese Nachricht explizit senden oder das TreeView \_ getunicodeformat-Makro verwenden.
+title: TVM_GETUNICODEFORMAT-Nachricht (Commctrl.h)
+description: Ruft das Unicode-Zeichenformatflag für das Steuerelement ab. Sie können diese Nachricht explizit senden oder das TreeView \_ GetUnicodeFormat-Makro verwenden.
 ms.assetid: d95f61b6-9ec1-4471-b24b-efe141428747
 keywords:
-- Windows-Steuerelemente für TVM_GETUNICODEFORMAT Meldung
+- TVM_GETUNICODEFORMAT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88478d30e8da98ebf2e2325d6152087a14bc066a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f39bf926d488a8feb6a4015a531da34f88e4dbcb0452922c3f7715d0f14071e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769210"
 ---
-# <a name="tvm_getunicodeformat-message"></a>TVM \_ getunicodeformat-Meldung
+# <a name="tvm_getunicodeformat-message"></a>TVM \_ GETUNICODEFORMAT-Nachricht
 
-Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**TreeView \_ getunicodeformat**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getunicodeformat) -Makro verwenden.
+Ruft das Unicode-Zeichenformatflag für das Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**TreeView \_ GetUnicodeFormat-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getunicodeformat) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft das Unicode-Zeichenformat Flag für das-Steuerelement ab. Sie können diese
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Unicode-formatflag für das-Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
+Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ getunicodeformat**](ccm-getunicodeformat.md) .
+Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Eine Erörterung dieser Nachricht finden Sie in den Hinweisen für [**ccm \_ get
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TVM- \_ Format**](tvm-setunicodeformat.md)
+[**TVM \_ SETUNICODEFORMAT**](tvm-setunicodeformat.md)
 </dt> </dl>
 
  

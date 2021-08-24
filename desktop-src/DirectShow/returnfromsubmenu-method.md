@@ -1,24 +1,24 @@
 ---
-description: Die returnfromsubmenu-Methode gibt die Anzeige aus einem Untermenü in das übergeordnete Menü oder den aktuellen Titel zurück, wenn das Menü ein Menü der obersten Ebene ist.
+description: Die ReturnFromSubmenu-Methode gibt die Anzeige von einem Untermenü zum übergeordneten Menü oder zum aktuellen Titel zurück, wenn es sich bei dem Menü um ein Menü der obersten Ebene handelt.
 ms.assetid: 900151e9-3fb3-4665-9169-c1cae6659e72
-title: Returnfromsubmenu-Methode
+title: ReturnFromSubmenu-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 67dfdbc38d36a1447d54837e788e55b1259bedef
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ef9617b8880c1179d5e5bfff7f9c56904d0bb953abbda7ef95b0ecf85ec12b90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747060"
 ---
-# <a name="returnfromsubmenu-method"></a>Returnfromsubmenu-Methode
+# <a name="returnfromsubmenu-method"></a>ReturnFromSubmenu-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `ReturnFromSubmenu` Methode gibt die Anzeige von einem Untermenü zum übergeordneten Menü oder dem aktuellen Titel zurück, wenn das Menü ein Menü der obersten Ebene ist.
+Die -Methode gibt die Anzeige von einem Untermenü zum übergeordneten Menü oder zum aktuellen Titel zurück, wenn es sich bei dem Menü um `ReturnFromSubmenu` ein Menü der obersten Ebene handelt.
 
 ``` syntax
 MSWebDVD.ReturnFromSubmenu()

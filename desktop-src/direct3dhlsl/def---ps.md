@@ -1,6 +1,6 @@
 ---
-title: DEF-PS
-description: Definiert Pixel-Shader-Gleit Komma Konstanten.
+title: def – ps
+description: Definiert Pixel-Shader-Gleitkommakonstierungen.
 ms.assetid: 679b3074-73f3-48de-8c7a-f43bff76b25a
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,65 +9,65 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b4f035df97de2645983862dd68aa7ec80fc22d4b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ce5f842f44e915d3f3240618261b501f2240c3636227f930538e1bbcbe0d9367
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726560"
 ---
-# <a name="def---ps"></a>DEF-PS
+# <a name="def---ps"></a>def – ps
 
-Definiert Pixel-Shader-Gleit Komma Konstanten.
+Definiert Pixel-Shader-Gleitkommakonstierungen.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| DEF DST, fVvalue1, fValue2, fValue3, fValue4 |
+| def dst, fVvalue1, fValue2, fValue3, fValue4 |
 |----------------------------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   DST ist das Ziel Register.
--   fValue1 to fValue4 sind Gleit Komma Werte.
+-   dst ist das Zielregister.
+-   fValue1 bis fValue4 sind Gleitkommawerte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | def                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Es gibt zwei Möglichkeiten, eine Gleit Komma Konstante in einem Pixelshader festzulegen.
+Es gibt zwei Möglichkeiten, eine Gleitkommakonstance in einem Pixel-Shader zu setzen.
 
 1.  Verwenden Sie def, um die Konstante direkt in einem Shader zu definieren.
-2.  Verwenden Sie die-API, um eine Konstante mit [**setpixelshaderconstantf**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshaderconstantf)festzulegen.
+2.  Verwenden Sie die API, um eine Konstante mit [**SetPixelShaderConstantF festlegen.**](/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setpixelshaderconstantf)
 
-DEF definiert eine shaderkonstante, deren Wert immer dann geladen wird, wenn ein Shader auf ein Gerät festgelegt ist. Diese werden als unmittelbare Konstanten bezeichnet. Unmittelbare Konstanten haben Vorrang vor Konstanten, die von der API-Methode festgelegt werden.
+def definiert eine Shaderkonstation, deren Wert jedes Mal geladen wird, wenn ein Shader auf ein Gerät festgelegt wird. Diese werden als sofortige Konstanten bezeichnet. Direkte Konstanten haben Vorrang vor Konstanten, die von der API-Methode festgelegt werden.
 
--   Muss vor der ersten arithmetischen oder Adressierungs Anweisung im Shader angezeigt werden.
--   Kann mit [DCL-(SM2, SM3-PS ASM)-](dcl---ps.md) Anweisungen gemischt werden (bei denen es sich um den anderen Typ der Anweisung handelt, die sich am Anfang eines Shaders befindet).
--   das DST-Register muss ein [konstantes Register](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)sein.
--   Die Schreib Maske muss voll (Standard) sein.
--   Wenn ein [konstantes Register](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) mehrmals in einem Shader definiert ist, wird das letzte beibehalten.
+-   Muss vor der ersten Arithmetik- oder Adressierungsanweisung im Shader angezeigt werden.
+-   Kann mit [dcl- (sm2, sm3 - ps asm)-Anweisungen](dcl---ps.md) (dies sind die anderen Anweisungstypen, die sich am Anfang eines Shaders befinden) miteinander vermiert werden.
+-   dst register muss ein [konstantes Register sein.](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)
+-   Die Schreibmaske muss voll sein (Standard).
+-   Wenn ein [konstantes](dx9-graphics-reference-asm-ps-registers-ps-1-x.md) Register mehrmals in einem Shader definiert wird, wird das letzte beibehalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

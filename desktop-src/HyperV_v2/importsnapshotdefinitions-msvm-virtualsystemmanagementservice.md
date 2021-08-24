@@ -1,7 +1,7 @@
 ---
-description: Durchsucht den angegebenen Ordner nach allen Momentaufnahme Definitions Dateien, die dem angegebenen geplanten Computersystem zugeordnet sind, und erstellt eine neue Momentaufnahme auf dem geplanten Computersystem für jede zugeordnete Definitionsdatei an diesem Speicherort.
+description: Durchsucht den angegebenen Ordner nach Momentaufnahmedefinitionsdateien, die dem angegebenen geplanten Computersystem zugeordnet sind, und erstellt eine neue Momentaufnahme auf dem geplanten Computersystem für jede zugeordnete Definitionsdatei an diesem Speicherort.
 ms.assetid: d240c24b-f788-4ea9-b3bd-af1f75f4f460
-title: Importsnapshotdefinitions-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ImportSnapshotDefinitions-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9ebb36b030786ab88eab899190afcc7f3022286a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9cfa20eb845546f58201bdc167cfbe38bd4a3bd0ad327a04e009db4504ce0966
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694590"
 ---
-# <a name="importsnapshotdefinitions-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Importsnapshotdefinitions-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="importsnapshotdefinitions-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ImportSnapshotDefinitions-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Durchsucht den angegebenen Ordner nach allen Momentaufnahme Definitions Dateien, die dem angegebenen geplanten Computersystem zugeordnet sind, und erstellt eine neue Momentaufnahme auf dem geplanten Computersystem für jede zugeordnete Definitionsdatei an diesem Speicherort.
+Durchsucht den angegebenen Ordner nach Momentaufnahmedefinitionsdateien, die dem angegebenen geplanten Computersystem zugeordnet sind, und erstellt eine neue Momentaufnahme auf dem geplanten Computersystem für jede zugeordnete Definitionsdatei an diesem Speicherort.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ uint32 ImportSnapshotDefinitions(
 
 <dl> <dt>
 
-*Plannedsystem* \[ in\]
+*PlannedSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein [**MSVM- \_ plannedcomputersystem**](msvm-plannedcomputersystem.md) -Objekt, das die geplante virtuelle Maschine darstellt, die auf die zu importierenden Momentaufnahmen verweist.
+Ein Verweis auf ein [**Msvm \_ PlannedComputerSystem-Objekt, das**](msvm-plannedcomputersystem.md) den geplanten virtuellen Computer darstellt, der auf die zu importierenden Momentaufnahmen verweist.
 
 </dd> <dt>
 
-*Snapshotfolder* \[ in\]
+*SnapshotFolder* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad zum Ordner, in dem die Momentaufnahme Konfigurationen für diesen virtuellen Computer gefunden werden können.
+Der vollqualifizierte Pfad zu dem Ordner, in dem sich die Momentaufnahmekonfigurationen für diesen virtuellen Computer befinden.
 
 </dd> <dt>
 
-*Importedmomentaufnahmen* \[ vorgenommen\]
+*ImportedSnapshots* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang synchron abgeschlossen wird, ein Array von Verweisen auf die [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Instanzen, die die Momentaufnahmen darstellen, die erfolgreich importiert wurden.
+Wenn der Vorgang synchron abgeschlossen wird, ein Array von Verweisen auf die [**Msvm \_ VirtualSystemSettingData-Instanzen,**](msvm-virtualsystemsettingdata.md) die die erfolgreich importierten Momentaufnahmen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,7 +91,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -103,16 +103,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
 **Verwendete Datei** (32779)
@@ -124,10 +124,10 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Das **System ist nicht verfügbar** (32777).
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

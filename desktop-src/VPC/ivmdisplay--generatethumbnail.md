@@ -1,11 +1,11 @@
 ---
-title: Ivmdisplay-_GenerateThumbnail Methode (vpccominterfaces. h)
-description: Ruft ein Array von Pixeln ab, das ein Miniaturbild des Bildschirms der virtuellen Maschine darstellt. | Ivmdisplay-_GenerateThumbnail Methode (vpccominterfaces. h)
+title: IVMDisplay _GenerateThumbnail-Methode (VPCCOMInterfaces.h)
+description: Ruft ein Array von Pixeln ab, die ein Miniaturbild des Bildschirms des virtuellen Computers darstellen. | IVMDisplay _GenerateThumbnail-Methode (VPCCOMInterfaces.h)
 ms.assetid: c97bb0ff-55cd-491f-a706-0ba15c9a6b54
 keywords:
-- _GenerateThumbnail-Methode Virtual PC
-- _GenerateThumbnail-Methode Virtual PC, ivmdisplay-Schnittstelle
-- Ivmdisplay Interface Virtual PC, _GenerateThumbnail-Methode
+- _GenerateThumbnail-Methode Virtueller PC
+- _GenerateThumbnail Virtual PC, IVMDisplay-Schnittstelle
+- IVMDisplay-Schnittstelle Virtual PC , _GenerateThumbnail-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4084549de96330761bca4f4ec6da65ca150c96e5
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5decd1b3c55ab6513408a81eb37d422fac495334fb545c4cad4806050a8af7b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106366414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654370"
 ---
-# <a name="ivmdisplay_generatethumbnail-method"></a>Ivmdisplay:: \_ generatethumschlag bnail-Methode
+# <a name="ivmdisplay_generatethumbnail-method"></a>IVMDisplay:: \_ GenerateThumbnail-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft ein Array von Pixeln ab, das ein Miniaturbild des Bildschirms der virtuellen Maschine darstellt.
+Ruft ein Array von Pixeln ab, die ein Miniaturbild des Bildschirms des virtuellen Computers darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT _GenerateThumbnail(
 
 <dl> <dt>
 
-*thumbnailimage* \[ vorgenommen\]
+*thumbnailImage* \[ out\]
 </dt> <dd>
 
-Das Array von Pixeln, das ein Miniaturbild des Bildschirms der virtuellen Maschine darstellt.
+Das Pixelarray, das ein Miniaturbild des Bildschirms des virtuellen Computers darstellt.
 
 </dd> </dl>
 
@@ -57,19 +57,19 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                  |
+| Rückgabecode/-wert                                                                                                                                                 | Beschreibung                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle gibt die Miniaturansicht effizienter als die [**Miniatur**](ivmdisplay-thumbnail.md) Ansichts Eigenschaft zurück, kann aber nicht von Skript Clients verwendet werden. Die Miniaturansicht ist immer 64 Pixel breit und 48 Pixel hoch. Jedes Pixel ist 32 Bits, wobei die oberen 8 Bits den blauen Wert des Pixels darstellen, die nächsten 8 Bits den grünen Wert des Pixels darstellen und die nächsten 8 Bits den roten Wert des Pixels darstellen. Die ersten 64 Elemente im Array sind die erste Zeile der Miniaturansicht, die nächsten 64 Elemente sind die zweite Zeile usw. Diese Methode gibt ein statisches Array von Pixeln zurück, das effizienter ist als die Rückgabe eines **SAFEARRAY** von **Variant** -Werten, aber nicht mit Skript Clients kompatibel ist.
+Diese Schnittstelle gibt die Miniaturansicht effizienter zurück als die [**Thumbnail-Eigenschaft,**](ivmdisplay-thumbnail.md) kann jedoch nicht von Skriptclients verwendet werden. Die Miniaturansicht ist immer 64 Pixel breit und 48 Pixel hoch. Jedes Pixel ist 32 Bits, wobei die oberen 8 Bits den blauen Wert des Pixels darstellen, die nächsten 8 Bits den grünen Wert des Pixels und die nächsten 8 Bits den roten Wert des Pixels darstellen. Die ersten 64 Elemente im Array sind die erste Zeile der Miniaturansicht, die nächsten 64 Elemente die zweite Zeile und so weiter. Diese Methode gibt ein statisches Array von Pixeln zurück, das effizienter als das Zurückgeben eines **SAFEARRAY-Werts** von **VARIANT-Werten** ist, aber nicht mit Skriptclients kompatibel ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,12 +77,12 @@ Diese Schnittstelle gibt die Miniaturansicht effizienter als die [**Miniatur**](
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmdisplay ist als 960895e9-f 743-4498-96aa-261f 867e7fc5 definiert.<br/>                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMDisplay ist als 960895e9-f743-4498-96aa-261f867e7fc5 definiert.<br/>                 |
 
 
 
@@ -90,7 +90,7 @@ Diese Schnittstelle gibt die Miniaturansicht effizienter als die [**Miniatur**](
 
 <dl> <dt>
 
-[**Ivmdisplay**](ivmdisplay.md)
+[**IVMDisplay**](ivmdisplay.md)
 </dt> </dl>
 
  

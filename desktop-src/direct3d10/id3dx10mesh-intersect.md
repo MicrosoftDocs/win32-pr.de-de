@@ -1,5 +1,5 @@
 ---
-description: Bestimmt, ob sich ein Strahl mit diesem Mesh schneidet.
+description: Bestimmt, ob sich ein Strahl mit diesem Netz überschneidet.
 ms.assetid: 74565d4a-94e6-4faa-bf70-9c1b35e5e5d8
 title: ID3DX10Mesh::Intersect-Methode (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8ceed03ab21debf61371da9e53b5150d2dc83e4a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1693db027baad13d69c43e394407ed8eb037d2dbb95eb217ccca473d1f91d08a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634550"
 ---
-# <a name="id3dx10meshintersect-method"></a>ID3DX10Mesh:: Intersect-Methode
+# <a name="id3dx10meshintersect-method"></a>ID3DX10Mesh::Intersect-Methode
 
-Bestimmt, ob sich ein Strahl mit diesem Mesh schneidet.
+Bestimmt, ob sich ein Strahl mit diesem Netz überschneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT Intersect(
 
 <dl> <dt>
 
-" *praypos* \[ " in\]
+*pRayPos* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die den Punkt angibt, an dem das Ray beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) wobei der Punkt angegeben wird, an dem der Strahl beginnt.
 
 </dd> <dt>
 
-" *praydir* \[ " in\]
+*pRayDir* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3d10-d3dxvector3.md) -Struktur, die die Richtung des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Richtung des Strahls.
 
 </dd> <dt>
 
-*phitcount* \[ in\]
+*pHitCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Gibt an, wie oft sich der Strahl mit dem Mesh interniert hat.
+Die Anzahl der Schnitte des Strahls mit dem Gitter.
 
 </dd> <dt>
 
-*pfakeingedex* \[ in\]
+*pFaceIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf einen Indexwert der Oberfläche, die dem Ray-Ursprung am nächsten ist, wenn Phit **true** ist.
+Zeiger auf einen Indexwert des Gesichts, das dem Ray-Ursprung am nächsten ist, wenn pHit **TRUE ist.**
 
 </dd> <dt>
 
-*pU* \[ in\]
+*pU* \[ In\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, U.
+Zeiger auf eine baryzentrierte Trefferkoordinate, U.
 
 </dd> <dt>
 
-*PV* \[ in\]
+*pV* \[ In\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, V.
+Zeiger auf eine baryzentrierte Trefferkoordinate, V.
 
 </dd> <dt>
 
-*pdist* \[ in\]
+*pDist* \[ In\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Zeiger auf eine Strahl Schnittstellen-Parameter Entfernung.
+Zeiger auf den Abstand eines Ray-Schnittpunktparameters.
 
 </dd> <dt>
 
-*ppallhits* \[ vorgenommen\]
+*ppAllHits* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)\*\***
 
-Zeiger auf eine [**ID3D10Blob-Schnittstelle**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob), die ein Array von [**d3dx10 \_ Intersect \_ Info**](d3dx10-intersect-info.md) -Strukturen enthält. Dies ist eine Liste aller Treffer, die im schnittschnitttest aufgetreten sind.
+Zeiger auf eine [**ID3D10Blob-Schnittstelle,**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)die ein Array von [**D3DX10 \_ INTERSECT \_ INFO-Strukturen**](d3dx10-intersect-info.md) enthält. Dies ist eine Liste aller Treffer, die beim Schnittmengentest aufgetreten sind.
 
 </dd> </dl>
 
@@ -123,17 +123,17 @@ Zeiger auf eine [**ID3D10Blob-Schnittstelle**](/windows/win32/api/D3DCommon/nn-d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese API bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: v1 + U (V2-V1) + V (v3-v1).
+Diese API bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + U(V2 - V1) + V(V3 - V1).
 
-Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U, V) dargestellt werden. Mit dem Parameter U wird gesteuert, wie viel v2 in das Ergebnis gewichtet wird, und mit dem Parameter V wird gesteuert, wie viel v3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von \[ 1-(U + V), \] wie viel V1 in das Ergebnis gewichtet wird.
+Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrierte Koordinate (U,V) dargestellt werden. Der Parameter U steuert, wie viel V2 in das Ergebnis gewichtet wird, und der Parameter V steuert, wie viel V3 in das Ergebnis gewichtet wird. Schließlich steuert der Wert von 1 – (U + V), wie viel \[ \] V1 in das Ergebnis gewichtet wird.
 
-Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von barzentrischen Koordinaten eine Änderung in Koordinatensystemen dar. Was für kartesische Koordinaten true ist, ist für barzentrierte Koordinaten "true".
+Baryzentrierte Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von baryzentrierten Koordinaten eine Änderung der Koordinatensysteme dar. Was für kartesische Koordinaten gilt, gilt für baryzentrierte Koordinaten.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkt des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -141,8 +141,8 @@ In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks def
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

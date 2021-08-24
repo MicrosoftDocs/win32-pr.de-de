@@ -1,29 +1,29 @@
 ---
-title: Servicecancellationexample
-description: Beispiel für eine Client Anwendung, die einen Dienst Abbruch demonstriert.
+title: ServiceCancellationExample
+description: Beispiel für eine Clientanwendung, die den Dienstabbruch veranschaulicht.
 ms.assetid: c9e727c8-5fa7-47b9-8624-18fe4de79026
 keywords:
-- Servicecancellationexample Native Webdienste
-- Wwsapi
+- ServiceCancellationExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ad001bbef0883d32eb8004565b112a3e70057e4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c55ba70eeeb3ec33b071495ba5b35ece6da68b7fb9e9db9aec13323f03aa5ac2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707250"
 ---
-# <a name="servicecancellationexample"></a>Servicecancellationexample
+# <a name="servicecancellationexample"></a>ServiceCancellationExample
 
-Beispiel für eine Client Anwendung, die einen Dienst Abbruch demonstriert.
+Beispiel für eine Clientanwendung, die den Dienstabbruch veranschaulicht.
 
--   [Servicecancel. cpp](#servicecancelcpp)
--   [Blockunblockservice. WSDL](#blockunblockservicewsdl)
+-   [ServiceCancel.cpp](#servicecancelcpp)
+-   [BlockUnBlockService.wsdl](#blockunblockservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="servicecancelcpp"></a>Servicecancel. cpp
+## <a name="servicecancelcpp"></a>ServiceCancel.cpp
 
 
 ```C++
@@ -187,7 +187,7 @@ Exit:
 
 
 
-## <a name="blockunblockservicewsdl"></a>Blockunblockservice. WSDL
+## <a name="blockunblockservicewsdl"></a>BlockUnBlockService.wsdl
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8"?>
@@ -301,9 +301,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_filetype-Enumeration'
+description: 'Weitere Informationen zu: JET_filetype-Enumeration'
 title: JET_filetype-Enumeration
 TOCTitle: JET_filetype enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_filetype
@@ -34,19 +34,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6e1f6b21d521babdf7b5c36411ea8bd19d5ebba3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9fc1eb6da5e60a1e224fbc4313cb11778ec5616e56e090eb35a8cc70ff96216b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617150"
 ---
 # <a name="jet_filetype-enumeration"></a>JET_filetype-Enumeration
 
-ESENT-Dateitypen.
+Esent-Dateitypen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -84,17 +84,17 @@ public enum JET_filetype
 </tr>
 <tr class="odd">
 <td></td>
-<td>Log</td>
+<td>Protokoll wird erstellt</td>
 <td>Transaktionsprotokoll.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Prüfpunkt</td>
-<td>Prüf Punkt Datei.</td>
+<td>Prüfpunktdatei.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Tempdatabase</td>
+<td>TempDatabase</td>
 <td>Temporäre Datenbank.</td>
 </tr>
 </tbody>
@@ -103,6 +103,6 @@ public enum JET_filetype
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

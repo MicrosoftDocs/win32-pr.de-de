@@ -3,24 +3,24 @@ title: Anhalten und Fortsetzen der Wiedergabe
 description: Anhalten und Fortsetzen der Wiedergabe
 ms.assetid: f5a7ef22-993c-4aab-bab0-2700289da7a7
 keywords:
-- Mciwndpause-Makro
-- Mciwndresume-Makro
+- MCIWndPause-Makro
+- MCIWndResume-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1876417b821a57f7ebbac0cd35bec184cc9d2da
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ce70a95000cda6fc471967e5075b16fe7bad837c71eed4e6216ddeaddddc4508
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805970"
 ---
 # <a name="pausing-and-resuming-playback"></a>Anhalten und Fortsetzen der Wiedergabe
 
-Sie können die Wiedergabe eines Geräts oder einer Datei, das einem mciwnd-Fenster zugeordnet ist, mithilfe des [**mciwndpause**](/windows/desktop/api/Vfw/nf-vfw-mciwndpause) -Makros unterbrechen. Anschließend können Sie die Wiedergabe mit dem [**mciwndresume**](/windows/desktop/api/Vfw/nf-vfw-mciwndresume) -Makro neu starten. Wenn das Gerät die Wiederaufnahme nicht unterstützt, oder wenn ein Fehler auftritt, können Sie das [**mciwndplay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay) -Makro verwenden, um die Wiedergabe neu zu starten.
+Sie können die Wiedergabe eines Geräts oder einer Datei unterbrechen, die einem MCIWnd-Fenster zugeordnet ist, indem Sie das [**MCIWndPause-Makro**](/windows/desktop/api/Vfw/nf-vfw-mciwndpause) verwenden. Anschließend können Sie die Wiedergabe mithilfe des [**MCIWndResume-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndresume) neu starten. Wenn das Gerät fortsetzen nicht unterstützt oder ein Fehler auftritt, können Sie das [**MCIWndPlay-Makro**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay) verwenden, um die Wiedergabe neu zu starten.
 
-Im folgenden Beispiel wird ein mciwnd-Fenster erstellt und eine AVI-Datei wiedergegeben. Die Menübefehle anhalten und fortsetzen sind für den Benutzer zum unterbrechen und erneuten Starten der Wiedergabe verfügbar.
+Im folgenden Beispiel wird ein MCIWnd-Fenster erstellt und eine AVI-Datei wiedergegeben. Menübefehle zum Anhalten und Fortsetzen stehen dem Benutzer zur Verfügung, um die Wiedergabe zu unterbrechen und neu zu starten.
 
-Mciwnd-Fenster Stile werden temporär geändert, indem das [**mciwndchangestyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles) -Makro verwendet wird, um zu verhindern, dass ein MCI-Fehler Dialogfeld angezeigt wird, wenn [**mciwndresume**](/windows/desktop/api/Vfw/nf-vfw-mciwndresume) fehlschlägt.
+MCIWnd-Fensterstile werden vorübergehend geändert, indem das [**MCIWndChangeStyles-Makro**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles) verwendet wird, um die Anzeige eines MCI-Fehlerdialogfelds zu verhindern, wenn [**MCIWndResume**](/windows/desktop/api/Vfw/nf-vfw-mciwndresume) fehlschlägt.
 
 
 ```C++
@@ -69,9 +69,9 @@ case WM_COMMAND:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

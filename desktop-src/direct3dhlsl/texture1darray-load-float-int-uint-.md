@@ -1,9 +1,9 @@
 ---
-title: 'Texture1DArray:: Load (int, int, uint)-Funktion'
-description: 'Liest Textur Daten und gibt den Status des Vorgangs zurück. | Texture1DArray:: Load (int, int, uint)-Funktion'
+title: Texture1DArray::Load(int,int,uint)-Funktion
+description: Liest Texturdaten und gibt den Status des Vorgangs zurück. | Texture1DArray::Load(int,int,uint)-Funktion
 ms.assetid: D5877CED-BE73-4E37-B09D-4096726776EC
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ee367aaf98aa971aa10c6859f117f15df9fcdd83
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 794024174f5db39fdaeb6c2cc8456764cc0751dd7363b4b367571412a8c757da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788170"
 ---
-# <a name="texture1darrayloadintintuint-function"></a>Texture1DArray:: Load (int, int, uint)-Funktion
+# <a name="texture1darrayloadintintuint-function"></a>Texture1DArray::Load(int,int,uint)-Funktion
 
-Liest Textur Daten und gibt den Status des Vorgangs zurück.
+Liest Texturdaten und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Liest Textur Daten und gibt den Status des Vorgangs zurück.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
@@ -50,21 +50,21 @@ Texturkoordinaten
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Ein Offset, der vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 
@@ -72,13 +72,13 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture1DArray**](sm5-object-texture1darray.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture1DArray-Objekt.**](sm5-object-texture1darray.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Lade Methoden](texture1darray-load.md)
+[Laden von Methoden](texture1darray-load.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die addheadi-Methode fügt ein Element am Anfang der Liste hinzu.
+description: Die AddHeadI-Methode fügt am Ende der Liste ein Element hinzu.
 ms.assetid: d83b3c5e-2c6d-4369-a74d-18bf19cfd34d
-title: Cbaselist. addheadi-Methode (wxlist. h)
+title: CBaseList.AddHeadI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6104b6acae0f22c028f3bad050567f4da34ff0f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c1f22434aa2c927933c36ec496d5880ca8f3f673b314d7a8197079203757427
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119568120"
 ---
-# <a name="cbaselistaddheadi-method"></a>Cbaselist. addheadi-Methode
+# <a name="cbaselistaddheadi-method"></a>CBaseList.AddHeadI-Methode
 
-Mit der- `AddHeadI` Methode wird ein Element am Anfang der Liste hinzugefügt.
+Die `AddHeadI` -Methode fügt am Ende der Liste ein Element hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ POSITION AddHeadI(
 
 <dl> <dt>
 
-*pobj* 
+*pObj* 
 </dt> <dd>
 
 Zeiger auf das Element.
@@ -51,11 +51,11 @@ Zeiger auf das Element.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Positionswert zurück, der die neue Head-Position angibt.
+Gibt einen POSITION-Wert zurück, der die neue Kopfposition angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, ist der Rückgabewert **null**.
+Wenn die Methode fehlschlägt, ist der Rückgabewert **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn die Methode fehlschlägt, ist der Rückgabewert **null**.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn die Methode fehlschlägt, ist der Rückgabewert **null**.
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

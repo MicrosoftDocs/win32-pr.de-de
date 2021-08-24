@@ -1,19 +1,19 @@
 ---
-description: Enthält die Kamera (extrinsics) für das Beispiel.
+description: Enthält die Kameraextrinsiken für das Beispiel.
 ms.assetid: C970E958-3866-491A-9806-DB300834360E
-title: MFSampleExtension_CameraExtrinsics-Attribut (mfapi. h)
+title: MFSampleExtension_CameraExtrinsics -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3340f1ab84061fa00e12fa65960f1b2902690816
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 109dd0d171468d3a0a3c2c4f06ba1a7edc18707aa1e17afe0d1be65509f4266d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722660"
 ---
-# <a name="mfsampleextension_cameraextrinsics-attribute"></a>MF Sample Extension- \_ Attribut "cameraextrinsics"
+# <a name="mfsampleextension_cameraextrinsics-attribute"></a>MFSampleExtension \_ CameraExtrinsics-Attribut
 
-Enthält die Kamera (extrinsics) für das Beispiel.
+Enthält die Kameraextrinsiken für das Beispiel.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,17 +21,17 @@ Bytearray
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DURCHSCHN.Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert des Attributs ist [**MF cameraextrinsics**](/windows/desktop/api/mfapi/ns-mfapi-mfcameraextrinsics).
+Der Wert des -Attributs ist ein [**MFCameraExtrinsics-**](/windows/desktop/api/mfapi/ns-mfapi-mfcameraextrinsics).
 
 Dieses Attribut ist optional, um Kameras zu unterstützen, die nicht kalibriert sind.
 
@@ -41,17 +41,17 @@ Dieses Attribut ist optional, um Kameras zu unterstützen, die nicht kalibriert 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

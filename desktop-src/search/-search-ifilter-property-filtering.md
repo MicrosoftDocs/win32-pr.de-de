@@ -1,50 +1,50 @@
 ---
-description: Eigenschaften werden aus Elementen mithilfe registrierter Eigenschaften Handler oder mithilfe von Filtern extrahiert, die für bestimmte Dateitypen registriert sind. Ein Filter Handler (eine Implementierung der IFilter-Schnittstelle) kann den Inhalt eines Dateityps auf verschiedene Arten interpretieren.
+description: Eigenschaften werden mithilfe registrierter Eigenschaftenhandler oder mithilfe von Filtern, die für bestimmte Dateitypen registriert sind, aus Elementen extrahiert. Ein Filterhandler (eine Implementierung der IFilter-Schnittstelle) kann den Inhalt eines Dateityps auf verschiedene Weise interpretieren.
 ms.assetid: 6701d151-c36f-43e5-929b-9831c5ce5823
-title: Zurückgeben von Eigenschaften aus einem Filter Handler
+title: Zurückgeben von Eigenschaften von einem Filterhandler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4df0bfc811176e9b0672dbcbe4ef4f04f3c3a6f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b1842710af65e22f5a730891ea6e7f32053b92212f8c3ad4c5f0f68f23578d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119594854"
 ---
-# <a name="returning-properties-from-a-filter-handler"></a>Zurückgeben von Eigenschaften aus einem Filter Handler
+# <a name="returning-properties-from-a-filter-handler"></a>Zurückgeben von Eigenschaften von einem Filterhandler
 
-Eigenschaften werden aus Elementen mithilfe registrierter Eigenschaften Handler oder mithilfe von Filtern extrahiert, die für bestimmte Dateitypen registriert sind. Ein Filter Handler (eine Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle) kann den Inhalt eines Dateityps auf verschiedene Arten interpretieren.
+Eigenschaften werden mithilfe registrierter Eigenschaftenhandler oder mithilfe von Filtern, die für bestimmte Dateitypen registriert sind, aus Elementen extrahiert. Ein Filterhandler (eine Implementierung der [**IFilter-Schnittstelle)**](/windows/win32/api/filter/nn-filter-ifilter) kann den Inhalt eines Dateityps auf verschiedene Weise interpretieren.
 
 Dieses Thema ist wie folgt organisiert:
 
-- [Eigenschaften Filterung](#returning-properties-from-a-filter-handler)
-  - [Einschränkungen der Eigenschafts Größe](#property-size-limitations)
+- [Eigenschaftenfilterung](#returning-properties-from-a-filter-handler)
+  - [Größenbeschränkungen für Eigenschaften](#property-size-limitations)
 - [Weitere Ressourcen](#additional-resources)
 - [Zugehörige Themen](#related-topics)
 
-## <a name="property-filtering"></a>Eigenschaften Filterung
+## <a name="property-filtering"></a>Eigenschaftenfilterung
 
-Die bewährten Methoden für die Eigenschaften Filterung sind in der folgenden Tabelle aufgeführt.
+Bewährte Methoden für die Eigenschaftenfilterung sind in der folgenden Tabelle aufgeführt.
 
-| Methode                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Methode                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IFilter:: init**](/windows/win32/api/filter/nf-filter-ifilter-init)      | Gibt die [**IFilter- \_ Flags**](/windows/win32/api/filter/ne-filter-ifilter_flags) -Enumeration zurück. Wenn das *\_ \_ OLE \_ Properties* -Element der IFilter-Flags auf 1 festgelegt ist, verwendet Windows Search die Schnittstellen [IPropertySetStorage](/windows/win32/api/propidl/nn-propidl-ipropertysetstorage) und [IPropertyStorage](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) Interface, um externe Werttyp Eigenschaften aufzulisten und darauf zuzugreifen. |
-| [**IFilter:: GetChunk**](/windows/win32/api/filter/nf-filter-ifilter-getchunk) | Gibt Informationen aus einem Dokument in "Blöcken" mit Segmenttypen (Text oder Wert), Name und Gebiets Schema zurück. Ein Block enthält eine Dokument Eigenschaft.                                                                                                                                                                                                                                                                                                      |
-| [**IFilter:: gettext**](/windows/win32/api/filter/nf-filter-ifilter-gettext)   | Ruft eine Texttyp Eigenschaft aus einem Segment ab.                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [**IFilter:: GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) | Ruft eine Werttyp Eigenschaft aus einem Segment ab.                                                                                                                                                                                                                                                                                                                                                                                                        |
+| [**IFilter::Init**](/windows/win32/api/filter/nf-filter-ifilter-init)      | Gibt die [**IFILTER \_ FLAGS-Enumeration**](/windows/win32/api/filter/ne-filter-ifilter_flags) zurück. Wenn der *IFILTER \_ FLAGS \_ OLE \_ PROPERTIES-Member* dieser Enumeration auf eins festgelegt ist, verwendet Windows Search die [Schnittstellen IPropertySetStorage](/windows/win32/api/propidl/nn-propidl-ipropertysetstorage) und [IPropertyStorage,](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) um externe Werttypeigenschaften aufzählen und darauf zu zugreifen. |
+| [**IFilter::GetChunk**](/windows/win32/api/filter/nf-filter-ifilter-getchunk) | Gibt Informationen aus einem Dokument in "Chunks" mit Blocktyp (Text oder Wert), Name und Locale zurück. Ein Block enthält eine Dokumenteigenschaft.                                                                                                                                                                                                                                                                                                      |
+| [**IFilter::GetText**](/windows/win32/api/filter/nf-filter-ifilter-gettext)   | Ruft eine Texttypeigenschaft aus einem Block ab.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [**IFilter::GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) | Ruft eine Werttypeigenschaft aus einem Block ab.                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-Die folgende Abbildung zeigt ein Beispiel Dokument. Die Eigenschaft "externer Werttyp" `DocTitle` (abgerufen mithilfe der Methoden der Schnittstellen " [IPropertySetStorage](/windows/win32/api/propidl/nn-propidl-ipropertysetstorage) " und " [IPropertyStorage](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) ") und der Eigenschaft "interner Werttyp" `Book` (abgerufen als Ergebnis einer benutzerdefinierten [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Implementierung) beschreiben das Dokument als Ganzes. Die Texttyp Eigenschaften `Contents` und `Chapter` beschreiben den Inhalt des Dokuments. Bei der Verarbeitung dieses Dokuments identifiziert und extrahiert der Filter Handler (eine Implementierung der **IFilter** -Schnittstelle) diese Eigenschaften.
+Die folgende Abbildung zeigt ein Beispieldokument. Die eigenschaft external value-type (mithilfe der Methoden der `DocTitle` [Schnittstellen IPropertySetStorage](/windows/win32/api/propidl/nn-propidl-ipropertysetstorage) und [IPropertyStorage)](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage) und die interne Werttypeigenschaft (die als Ergebnis einer benutzerdefinierten IFilter-Implementierung ermittelt wurde) beschreiben das Dokument als `Book` Ganzes. [](/windows/win32/api/filter/nn-filter-ifilter) Die Texttypeigenschaften `Contents` und beschreiben den Inhalt des `Chapter` Dokuments. Bei der Verarbeitung dieses Dokuments identifiziert und extrahiert der Filterhandler (eine Implementierung der **IFilter-Schnittstelle)** diese Eigenschaften.
 
-![Diagramm, das die Elemente eines typischen Dokuments anzeigt](images/ifilterpropertyextraction.png)
+![Diagramm, das die Elemente eines typischen Dokuments zeigt](images/ifilterpropertyextraction.png)
 
-### <a name="property-size-limitations"></a>Einschränkungen der Eigenschafts Größe
+### <a name="property-size-limitations"></a>Größenbeschränkungen für Eigenschaften
 
-Für die Eigenschaften Größe gibt es zwei mögliche Einschränkungen:
+Es gibt zwei potenzielle Einschränkungen bei der Eigenschaftengröße:
 
-- Die maximale Größe der Daten, die von Windows Search pro Datei akzeptiert werden.
-- Die maximale Größe pro Eigenschaft, wie in der Eigenschafts Beschreibungsdatei definiert.
+- Die maximale Größe der Daten, die Windows Search akzeptiert, pro Datei.
+- Die maximale Größe pro Eigenschaft, wie in der Eigenschaftenbeschreibungsdatei definiert.
 
-Derzeit verwendet Windows Search die definierte Eigenschaften Größe nicht, wenn die Menge der Daten berechnet wird, die Sie von einem Element akzeptiert. Stattdessen ist der Grenzwert, den Windows Search verwendet, das Produkt der Dateigröße und der `MaxGrowFactor` (Dateigröße N \* MaxGrowFactor), die aus der Registrierung gelesen werden. Der Standardwert `MaxGrowFactor` ist vier.
+Derzeit verwendet Windows Search nicht die definierte Eigenschaftsgröße, wenn die Menge der Daten berechnet wird, die von einem Element akzeptiert werden. Stattdessen ist das limit, Windows Search verwendet, das Produkt aus der Größe der Datei und der `MaxGrowFactor` (Dateigröße N \* MaxGrowFactor), die aus der Registrierung gelesen wird. Der Standardwert `MaxGrowFactor` ist vier.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -54,28 +54,28 @@ HKEY_LOCAL_MACHINE
             MaxGrowFactor
 ```
 
-Wenn Ihr Dateityp tendenziell klein ist, aber größere Eigenschaften hat, akzeptiert Windows Search möglicherweise nicht alle Eigenschaften Daten, die Sie ausgeben möchten. Sie können jedoch die `MaxGrowFactor` an Ihre Anforderungen anpassen.
+Wenn Ihr Dateityp tendenziell klein ist, aber größere Eigenschaften aufweist, akzeptiert Windows Search möglicherweise nicht alle Eigenschaftsdaten, die Sie aus geben möchten. Sie können jedoch erhöhen, `MaxGrowFactor` um Ihren Anforderungen gerecht zu werden.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-- Das in [GitHub](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)verfügbare [ifiltersample](-search-sample-ifiltersample.md) -Codebeispiel veranschaulicht, wie eine IFilter-Basisklasse für die Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle erstellt wird.
-- Eine Übersicht über den Indizierungsprozess finden Sie [im Abschnitt zur Indizierung](-search-indexing-process-overview.md).
-- Eine Übersicht über die Dateitypen finden Sie unter [Dateitypen](../shell/fa-file-types.md).
-- Informationen zum Abfragen von Datei Zuordnungs Attributen für einen Dateityp finden Sie unter " [wahrtentypen", "systemfileassociation" und "Anwendungs Registrierung](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85))".
-- Eine Übersicht über Eigenschaften und Eigenschafts Handler sowie eine Liste der Systemeigenschaften, die Sie für die Dateiformate verwenden können, finden Sie unter [entwickeln von Eigenschaften Handlern für Windows Search](-search-3x-wds-extidx-propertyhandlers.md).
+- Das [IFilterSample-Codebeispiel,](-search-sample-ifiltersample.md) das auf GitHub verfügbar [ist,](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)veranschaulicht, wie eine IFilter-Basisklasse zum Implementieren der [**IFilter-Schnittstelle erstellt**](/windows/win32/api/filter/nn-filter-ifilter) wird.
+- Eine Übersicht über den Indizierungsprozess finden Sie unter [Der Indizierungsprozess](-search-indexing-process-overview.md).
+- Eine Übersicht über Dateitypen finden Sie unter [Dateitypen.](../shell/fa-file-types.md)
+- Informationen zum Abfragen von Dateiassoziationsattributen für einen Dateityp finden Sie unter [PerceivedTypes, SystemFileAssociations und Application Registration.](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85))
+- Eine Übersicht über Eigenschaften und Eigenschaftenhandler sowie eine Liste der Systemeigenschaften, die Sie für Ihre Dateiformate verwenden können, finden Sie unter [Developing Property Handlers for Windows Search](-search-3x-wds-extidx-propertyhandlers.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Entwickeln von Filter Handlern](-search-ifilter-conceptual.md)
+[Entwickeln von Filterhandlern](-search-ifilter-conceptual.md)
 
-[Informationen zu Filter Handlern in Windows Search](-search-ifilter-about.md)
+[Informationen zu Filterhandlern in Windows Search](-search-ifilter-about.md)
 
-[Bewährte Methoden zum Erstellen von Filter Handlern in Windows Search](-search-3x-wds-extidx-filters.md)
+[Bewährte Methoden zum Erstellen von Filterhandlern in Windows Search](-search-3x-wds-extidx-filters.md)
 
-[Filtern von Handlern, die mit Windows ausgeliefert werden](-search-ifilter-implementations.md)
+[Filterhandler, die mit Windows](-search-ifilter-implementations.md)
 
-[Implementieren von Filter Handlern in Windows Search](-search-ifilter-constructing-filters.md)
+[Implementieren von Filterhandlern in Windows Search](-search-ifilter-constructing-filters.md)
 
-[Registrieren von Filter Handlern](-search-ifilter-registering-filters.md)
+[Registrieren von Filterhandlern](-search-ifilter-registering-filters.md)
 
-[Testen von Filter Handlern](-search-ifilter-testing-filters.md)
+[Testen von Filterhandlern](-search-ifilter-testing-filters.md)

@@ -1,7 +1,7 @@
 ---
-description: Nimmt ein Mesh an und gibt ein neues Mesh mit pro-vertexblend-Gewichtungen und einer Tabelle mit einer Kombination aus der Tabelle zurück In der Tabelle ist beschrieben, welche Knochen welche Teilmengen des Netzes beeinflussen.
+description: Nimmt ein Gitternetz und gibt ein neues Gitternetz mit Mischungsgewichtungen pro Scheitelpunkt und einer Kombinationstabelle zurück. In der Tabelle wird beschrieben, welche Ausschnitte sich auf die Teilmengen des Gitternetzes auswirken.
 ms.assetid: c26a9e84-5731-4394-a047-5f1ffe7688d9
-title: 'ID3DXSkinInfo:: convertdeblendedmesh-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::ConvertToBlendedMesh-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 051c51291416dd7e190c83433a9bf84baeb92957
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 026808748f0d94a4b5282bfdad6590e3c030ddf6ce0009bec5e59852e9984163
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747680"
 ---
-# <a name="id3dxskininfoconverttoblendedmesh-method"></a>ID3DXSkinInfo:: convertdeblendedmesh-Methode
+# <a name="id3dxskininfoconverttoblendedmesh-method"></a>ID3DXSkinInfo::ConvertToBlendedMesh-Methode
 
-Nimmt ein Mesh an und gibt ein neues Mesh mit pro-vertexblend-Gewichtungen und einer Tabelle mit einer Kombination aus der Tabelle zurück In der Tabelle ist beschrieben, welche Knochen welche Teilmengen des Netzes beeinflussen.
+Nimmt ein Gitternetz und gibt ein neues Gitternetz mit Mischungsgewichtungen pro Scheitelpunkt und einer Kombinationstabelle zurück. In der Tabelle wird beschrieben, welche Ausschnitte sich auf die Teilmengen des Gitternetzes auswirken.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,16 +49,16 @@ HRESULT ConvertToBlendedMesh(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Eingabe Gitter. Siehe [**ID3DXMesh**](id3dxmesh.md).
+Eingabegitternetz. Siehe [**ID3DXMesh.**](id3dxmesh.md)
 
 </dd> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -67,75 +67,75 @@ Derzeit nicht verwendet.
 
 </dd> <dt>
 
-*padjackocyin* \[ in\]
+*pAdencyencyIn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Informationen zur Eingabe Gitter Informationen.
+Adjazenzinformationen für das Eingabegitternetz.
 
 </dd> <dt>
 
-*padjacumcyout* \[ in\]
+*pAdjaencyOut* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDWORD**](../winprog/windows-data-types.md)**
 
-Informationen zur Ausgabe Gitter Informationen.
+Ausgabe von Mesh-Adjazenzinformationen.
 
 </dd> <dt>
 
-*pfakeremap* \[ vorgenommen\]
+*pFaceRemap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Array von DWords, eines pro Gesicht, das die ursprüngliche Gitterfläche angibt, die den einzelnen Flächen im gemischten Mesh entspricht. Wenn der für dieses Argument angegebene Wert **null** ist, werden keine Gesichts Umwandlungs Daten zurückgegeben.
+Ein Array von DWORDs ,eins pro Gesicht, das das ursprüngliche Netzgesicht identifiziert, das den einzelnen Gesichtern im gemischten Gitternetz entspricht. Wenn der für dieses Argument angegebene Wert **NULL** ist, werden keine Gesichtszuordnungsdaten zurückgegeben.
 
 </dd> <dt>
 
-*ppvertexremap* \[ vorgenommen\]
+*ppVertexRemap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle, die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitel Punkten den alten Scheitel Punkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunkt Zuordnung ändern müssen. Dieser Parameter ist optional. **Null** kann verwendet werden.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitelpunkte den alten Scheitelpunkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunktzuordnung ändern müssen. Dieser Parameter ist optional. **NULL** kann verwendet werden.
 
 </dd> <dt>
 
-*pmaxvertexinfl* \[ vorgenommen\]
+*pMaxVertexInfl* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf ein DWORD-Wert, der die maximale Anzahl der für den Scheitelpunkt für diese Skinning-Methode erforderlichen Knochen Einflüsse enthält.
+Zeiger auf ein DWORD, das die maximale Anzahl von Durchlässigkeitsfaktoren enthält, die pro Scheitelpunkt für diese Skinningmethode erforderlich sind.
 
 </dd> <dt>
 
-*pnumbonekombinationen* \[ vorgenommen\]
+*pNumBoneCombinations* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Anzahl der Knochen in der Tabelle mit der Knochen Kombination.
+Zeiger auf die Anzahl der Pfeile in der Kombinationstabelle für Diess.
 
 </dd> <dt>
 
-*ppbonecombinationtable* \[ vorgenommen\]
+*ppBoneCombinationTable* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Zeiger auf die Tabelle mit der Knochen Kombination. Die Daten werden in einer [**D3DXBONECOMBINATION**](d3dxbonecombination.md) -Struktur organisiert.
+Zeiger auf die Verbundtabelle. Die Daten sind in einer [**D3DXBONECOMBINATION-Struktur**](d3dxbonecombination.md) organisiert.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Zeiger auf das neue Mesh.
+Zeiger auf das neue Gitternetz.
 
 </dd> </dl>
 
@@ -143,13 +143,13 @@ Zeiger auf das neue Mesh.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Element im Umwandlungs-Array gibt den vorherigen Index für diese Position an. Wenn sich z. b. ein Scheitelpunkt an Position 3, aber an Position 5 neu zugeordnet wurde, enthält das fünfte Element von pvertexremap 3.
+Jedes Element im Neuzuordnungsarray gibt den vorherigen Index für diese Position an. Wenn sich beispielsweise ein Scheitelpunkt an Position 3 befand, aber an Position 5 neu zugeordnet wurde, enthält das fünfte Element von pVertexRemap 3.
 
-Diese Methode kann nicht auf Hardware ausgeführt werden, die eine Scheitelpunkt Mischung mit fester Funktion nicht unterstützt.
+Diese Methode wird nicht auf Hardware ausgeführt, die keine Vertexmischung mit festen Funktionen unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -157,12 +157,12 @@ Diese Methode kann nicht auf Hardware ausgeführt werden, die eine Scheitelpunkt
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

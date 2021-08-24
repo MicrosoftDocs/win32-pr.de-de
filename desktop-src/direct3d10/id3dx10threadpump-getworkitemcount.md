@@ -1,7 +1,7 @@
 ---
-description: Gibt die Anzahl der Arbeitselemente an, die sich zurzeit in der Thread Pumpe befinden.
+description: Hier wird die Anzahl der Arbeitselemente, die derzeit in der Threadpump-Pumpe enthalten sind, aufgerufen.
 ms.assetid: 0a3d5a7e-6fa5-4580-8912-c142eb99cef5
-title: 'ID3DX10ThreadPump:: getworkitemcount-Methode (d3dx10. h)'
+title: ID3DX10ThreadPump::GetWorkItemCount-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 71c7bf8f73b79982b933ee5fa0481dc361685682
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e3980d2fc0e1756d1c3dc322bc053ca4d041efe7c7942a14acb8465553aff136
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634200"
 ---
-# <a name="id3dx10threadpumpgetworkitemcount-method"></a>ID3DX10ThreadPump:: getworkitemcount-Methode
+# <a name="id3dx10threadpumpgetworkitemcount-method"></a>ID3DX10ThreadPump::GetWorkItemCount-Methode
 
-Gibt die Anzahl der Arbeitselemente an, die sich zurzeit in der Thread Pumpe befinden.
+Hier wird die Anzahl der Arbeitselemente, die derzeit in der Threadpump-Pumpe enthalten sind, aufgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Arbeitselemente, die sich derzeit in der Thread Pumpe in der Warteschlange befinden.
+Die Anzahl der Arbeitselemente, die sich derzeit in der Threadpumpwarteschlange befinden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Die Anzahl der Arbeitselemente, die sich derzeit in der Thread Pumpe in der Wart
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
 title: STRINGTABLE-Ressource
-description: Definiert eine oder mehrere Zeichen folgen Ressourcen für eine Anwendung. Zeichen folgen Ressourcen sind einfach mit NULL endende Unicode-oder ASCII-Zeichen folgen, die bei Bedarf aus der ausführbaren Datei mithilfe der LoadString-Funktion geladen werden können.
+description: Definiert mindestens eine Zeichenfolgenressourcen für eine Anwendung. Zeichenfolgenressourcen sind einfach auf NULL terminierte Unicode- oder ASCII-Zeichenfolgen, die bei Bedarf mithilfe der LoadString-Funktion aus der ausführbaren Datei geladen werden können.
 ms.assetid: 5868245d-3445-4792-86f5-253945310d36
 keywords:
-- STRINGTABLE-Ressourcen Menüs und andere Ressourcen
+- STRINGTABLE-Ressourcenmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 271abd022bdedd3b27e0434e7364542fa51c8987
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7994b6853195ba164c766ca6ee275e4535ab1249c0c78907ab996b9dc644013a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720650"
 ---
 # <a name="stringtable-resource"></a>STRINGTABLE-Ressource
 
-Definiert eine oder mehrere Zeichen folgen Ressourcen für eine Anwendung. Zeichen folgen Ressourcen sind einfach mit NULL endende Unicode-oder ASCII-Zeichen folgen, die bei Bedarf aus der ausführbaren Datei mithilfe der [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa) -Funktion geladen werden können.
+Definiert mindestens eine Zeichenfolgenressourcen für eine Anwendung. Zeichenfolgenressourcen sind einfach auf NULL terminierte Unicode- oder ASCII-Zeichenfolgen, die bei Bedarf mithilfe der [**LoadString-Funktion**](/windows/win32/api/winuser/nf-winuser-loadstringa) aus der ausführbaren Datei geladen werden können.
 
-Es gibt zwei Möglichkeiten, eine **STRINGTABLE** -Anweisung zu formatieren:
+Es gibt zwei Möglichkeiten, eine **STRINGTABLE-Anweisung zu** formatieren:
 
 ``` syntax
 STRINGTABLE  [optional-statements] {stringID string  ...}
 ```
 
-\- oder -
+\- oder –
 
 ``` syntax
 STRINGTABLE
@@ -44,22 +44,22 @@ END
 
 <dl> <dt>
 
-<span id="optional-statements"></span><span id="OPTIONAL-STATEMENTS"></span>*optionale-Anweisungen*
+<span id="optional-statements"></span><span id="OPTIONAL-STATEMENTS"></span>*optional-statements*
 </dt> <dd>
 
-Dieser Parameter kann NULL oder mehr der folgenden-Anweisungen sein.
+Dieser Parameter kann null oder mehr der folgenden Anweisungen sein.
 
 
 
 | -Anweisung.                                                        | BESCHREIBUNG                                                                                                                                                                             |
 |------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Merkmale**](characteristics-statement.md) *DWORD*     | Benutzerdefinierte Informationen zu einer Ressource, die von Tools verwendet werden kann, die Ressourcen Dateien lesen und schreiben. Weitere Informationen finden Sie unter [**Merkmale**](characteristics-statement.md). |
-| [**Sprach**](language-statement.md) *Sprache*, *unter Sprache* | Gibt die Sprache für die Ressource an. Weitere Informationen finden Sie unter [**Sprache**](language-statement.md).                                                                              |
-| [**Version**](version-statement.md) *DWORD*                     | Eine benutzerdefinierte Versionsnummer für die Ressource, die von Tools verwendet werden kann, die Ressourcen Dateien lesen und schreiben. Weitere Informationen finden Sie unter [**Version**](version-statement.md).              |
+| [](characteristics-statement.md) *CHARACTERISTICS-DWORD*     | Benutzerdefinierte Informationen zu einer Ressource, die von Tools verwendet werden können, die Ressourcendateien lesen und schreiben. Weitere Informationen finden Sie unter [**CHARACTERISTICS**](characteristics-statement.md). |
+| [](language-statement.md) *LANGUAGE-Sprache,* *Untersprache* | Gibt die Sprache für die Ressource an. Weitere Informationen finden Sie unter [**LANGUAGE**](language-statement.md).                                                                              |
+| [**VERSIONSdword**](version-statement.md)                      | Benutzerdefinierte Versionsnummer für die Ressource, die von Tools verwendet werden kann, die Ressourcendateien lesen und schreiben. Weitere Informationen finden Sie unter [**VERSION**](version-statement.md).              |
 
 
 
- 
+ 
 
 </dd> <dt>
 
@@ -70,37 +70,37 @@ Dieser Parameter kann NULL oder mehr der folgenden-Anweisungen sein.
 
 </dd> <dt>
 
-<span id="string"></span><span id="STRING"></span>*Schnür*
+<span id="string"></span><span id="STRING"></span>*Schnur*
 </dt> <dd>
 
-Eine oder mehrere Zeichen folgen, die in Anführungszeichen eingeschlossen sind. Die Zeichenfolge darf nicht länger als 4097 Zeichen sein und muss eine einzelne Zeile in der Quelldatei belegen. Um der Zeichenfolge einen Wagen Rücklauf hinzuzufügen, verwenden Sie diese Zeichenfolge: \\ 012. Beispiel: "Line One \\ 012line Two" definiert eine Zeichenfolge, die wie folgt angezeigt wird:
+Mindestens eine Zeichenfolge, die in Anführungszeichen eingeschlossen ist. Die Zeichenfolge darf nicht länger als 4097 Zeichen sein und muss eine einzelne Zeile in der Quelldatei belegen. Um der Zeichenfolge einen Wagenrücklauf hinzuzufügen, verwenden Sie diese Zeichenfolge: \\ 012. Beispielsweise definiert "Zeile \\ eins 012Linie zwei" eine Zeichenfolge, die wie folgt angezeigt wird:
 
 ``` syntax
 Line one
 Line two
 ```
 
-Um Anführungszeichen in die Zeichenfolge einzubetten, verwenden Sie die folgende Sequenz: "". Beispielsweise wird in "" in Zeile drei "" "eine Zeichenfolge definiert, die wie folgt angezeigt wird:
+Verwenden Sie die folgende Sequenz, um Anführungszeichen in die Zeichenfolge einbetten: "". Beispielsweise definiert """Zeile 3""" eine Zeichenfolge, die wie folgt angezeigt wird:
 
 ``` syntax
 "Line three"
 ```
 
-Um Unicode-Zeichen zu codieren, verwenden Sie eine "L", gefolgt von den in Anführungszeichen eingeschlossenen Unicode-Zeichen. Ein Beispiel finden Sie im Abschnitt "Beispiele".
+Verwenden Sie zum Codieren von Unicode-Zeichen ein "L", gefolgt von den Unicode-Zeichen, die in Anführungszeichen eingeschlossen sind. Ein Beispiel finden Sie im Abschnitt Beispiele.
 
-Der Ressourcen Compiler unterstützt auch Zeilen Fortsetzungen in der *Zeichenfolge*. Ein Beispiel finden Sie im Abschnitt "Beispiele".
+Der Ressourcencompiler unterstützt auch Zeilenfortsetzungen in der *Zeichenfolge*. Ein Beispiel finden Sie im Abschnitt Beispiele.
 
 </dd> </dl>
 
-Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [allgemeine Ressourcen Attribute](common-resource-attributes.md).
+Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [Allgemeine Ressourcenattribute.](common-resource-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-RC ordnet 16 Zeichen folgen pro Abschnitt zu und verwendet den Bezeichnerwert, um zu bestimmen, welcher Abschnitt die Zeichenfolge enthalten soll. Zeichen folgen, deren Bezeichner sich nur in den unteren 4 Bits unterscheiden, werden im gleichen Abschnitt platziert. Weitere Informationen finden Sie unter [Q196774](https://support.microsoft.com/kb/196774).
+RC ordnet 16 Zeichenfolgen pro Abschnitt zu und verwendet den Bezeichnerwert, um zu bestimmen, welcher Abschnitt die Zeichenfolge enthalten soll. Zeichenfolgen, deren Bezeichner sich nur in den unteren 4 Bits unterscheiden, werden im gleichen Abschnitt platziert. Weitere Informationen finden Sie unter [Q196774](https://support.microsoft.com/kb/196774).
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel veranschaulicht die Verwendung der **STRINGTABLE** -Anweisung zum Anzeigen von ASCII-Zeichen folgen:
+Im folgenden Beispiel wird die Verwendung der **STRINGTABLE-Anweisung** zum Anzeigen von ASCII-Zeichenfolgen veranschaulicht:
 
 ``` syntax
 #define IDS_HELLO    1
@@ -113,7 +113,7 @@ STRINGTABLE
 } 
 ```
 
-Im folgenden Beispiel wird gezeigt, wie Unicode-Zeichen codiert werden:
+Das folgende Beispiel zeigt, wie Unicode-Zeichen codiert werden:
 
 ``` syntax
 STRINGTABLE
@@ -123,7 +123,7 @@ IDS_ARABICSTRING L"\x062a\x0639\x0644\x064a\x0645\x0627\x062a"
 END
 ```
 
-Das folgende Beispiel zeigt Zeichen folgen mit ASCII und Unicode. Beachten Sie, dass Zeichen folgen ohne das ursprüngliche "L" das zweistellige escapeformat verwenden:
+Das folgende Beispiel zeigt Zeichenfolgen mit ASCII und Unicode. Beachten Sie, dass Zeichenfolgen ohne das anfängliche "L" das 2-stellige Escapeformat verwenden:
 
 ``` syntax
 STRINGTABLE
@@ -136,7 +136,7 @@ IDS_3a L"Copyright \x00a92001"
 END
 ```
 
-Im folgenden Beispiel wird gezeigt, wie Zeilen Fortsetzungen verwendet werden können:
+Das folgende Beispiel zeigt, wie Zeilenfortsetzungen verwendet werden können:
 
 ``` syntax
 STRINGTABLE
@@ -148,31 +148,31 @@ blah blah blah blah blah blah"
 END
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa)
 </dt> <dt>
 
-[**Accelerators**](accelerators-resource.md)
+[**Beschleuniger**](accelerators-resource.md)
 </dt> <dt>
 
-[**Charakteristik**](characteristics-statement.md)
+[**Merkmale**](characteristics-statement.md)
 </dt> <dt>
 
-[**Kurse**](language-statement.md)
+[**Sprache**](language-statement.md)
 </dt> <dt>
 
-[**Stehen**](menu-resource.md)
+[**Menü**](menu-resource.md)
 </dt> <dt>
 
-[**RCDATA**](rcdata-resource.md)
+[**Rcdata**](rcdata-resource.md)
 </dt> <dt>
 
 [**Version**](version-statement.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

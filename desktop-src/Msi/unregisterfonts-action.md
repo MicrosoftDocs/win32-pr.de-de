@@ -1,39 +1,39 @@
 ---
-description: Die unregisterfonts-Aktion entfernt Registrierungsinformationen zu installierten Schriftarten aus dem System.
+description: Die Aktion UnregisterFonts entfernt Registrierungsinformationen zu installierten Schriftarten aus dem System.
 ms.assetid: 97cbbcbe-eb1c-45f0-91d2-4b17984498ae
-title: Unregisterfonts-Aktion
+title: UnregisterFonts-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fcc847203b72b0e2d92fb5e9a4dc465bebb001b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03ec15a7a431a03d678fb2fd8c39460ea40ebbcadf3efd0c24814c84e6042fb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787000"
 ---
-# <a name="unregisterfonts-action"></a>Unregisterfonts-Aktion
+# <a name="unregisterfonts-action"></a>UnregisterFonts-Aktion
 
-Die unregisterfonts-Aktion entfernt Registrierungsinformationen zu installierten Schriftarten aus dem System.
+Die Aktion UnregisterFonts entfernt Registrierungsinformationen zu installierten Schriftarten aus dem System.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die [RemoveFiles](removefiles-action.md) -Aktion muss nach ' unregisterfonts ' aufgerufen werden.
+Die [RemoveFiles-Aktion](removefiles-action.md) muss nach UnregisterFonts aufgerufen werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
-| \[1\] | Schriftart Datei.                 |
+| \[1\] | Schriftartdatei.                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unregisterfonts-Aktion wird ausgeführt, wenn die Datei, die in der Datei \_ Spalte der [Schriftart Tabelle](font-table.md) angegeben ist, zu einer Komponente gehört, die deinstalliert wird.
+Die Aktion UnregisterFonts wird ausgeführt, wenn die in der Spalte Datei der Tabelle Schriftart angegebene Datei \_ zu einer komponente gehört, die deinstalliert [](font-table.md) wird.
 
  
 

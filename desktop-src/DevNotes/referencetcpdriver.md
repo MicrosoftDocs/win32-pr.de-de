@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Verweis auf ein TCP V4-Treiber Objekt ab.
+description: Erhält einen Verweis auf ein TCP v4-Treiberobjekt.
 ms.assetid: 8f12fa58-1622-40d0-9a99-e7c8ede08b38
-title: Referencetcpdriver-Funktion
+title: ReferenceTcpDriver-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - LibDef
 api_location:
 - Drvref.lib
-ms.openlocfilehash: 4a9068739517cceedee72a675739b2d8b067b2ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 36329ecb695c6fcc011f7e1fe4f44a149fbeac48b0125c34330b9bde51342f5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690840"
 ---
-# <a name="referencetcpdriver-function"></a>Referencetcpdriver-Funktion
+# <a name="referencetcpdriver-function"></a>ReferenceTcpDriver-Funktion
 
-Ruft einen Verweis auf ein TCP V4-Treiber Objekt ab.
+Erhält einen Verweis auf ein TCP v4-Treiberobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ NTSTATUS WINAPI ReferenceTcpDriver(
 
 <dl> <dt>
 
-*ppdriverobject* \[ vorgenommen\]
+*ppDriverObject* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **Treiber \_ Objekt** Struktur. Weitere Informationen finden Sie in der Dokumentation für das WDK.
+Ein Zeiger auf eine **DRIVER \_ OBJECT-Struktur.** Weitere Informationen finden Sie in der Dokumentation zum WDK.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird der **Status \_ erfolgreich** zurückgegeben. Wenn ein Fehler auftritt, wird der entsprechende Statuscode zurückgegeben.
+Wenn die Funktion erfolgreich ist, wird **STATUS \_ SUCCESS zurückgegeben.** Wenn ein Fehler auftritt, wird der entsprechende Statuscode zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann nur aus dem Kernel Modus aufgerufen werden. Der Aufrufer muss den Verweis Zähler verringern, indem er die **obdereferenceobject** -Funktion aufruft, wenn er mit dem-Objekt abgeschlossen ist.
+Diese Funktion kann nur im Kernelmodus aufgerufen werden. Der Aufrufer muss die Verweisanzahl durch Aufrufen der **ObDereferenceObject-Funktion** dekrementieren, wenn er mit dem -Objekt fertig ist.
 
-Diese Funktion ist in drvref. lib implementiert, das zum Download verfügbar ist. Siehe [Referenz-API-Bibliothek für Windows-Netzwerktreiber](https://www.microsoft.com/downloads/details.aspx?FamilyID=85037e05-f8f8-46b4-a013-3aa6248396c0).
+Diese Funktion wird in "Dridof.lib" implementiert, die zum Download verfügbar ist. Weitere Informationen [finden Windows Referenz zur Netzwerktreiber-API-Bibliothek.](https://www.microsoft.com/downloads/details.aspx?FamilyID=85037e05-f8f8-46b4-a013-3aa6248396c0)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Diese Funktion ist in drvref. lib implementiert, das zum Download verfügbar ist
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Drvref. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Drrankf.lib</dt> </dl> |
 
 
 

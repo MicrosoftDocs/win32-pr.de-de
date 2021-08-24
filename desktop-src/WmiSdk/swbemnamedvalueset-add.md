@@ -1,8 +1,8 @@
 ---
-description: Die Add-Methode des-Objekts "Swap Name" fügt der-Auflistung ein "-Objekt"-Objekt hinzu. Wenn ein Element bereits in der Auflistung mit dem gleichen Namen vorhanden ist, wird es durch das neue Element ersetzt.
+description: Die Add-Methode des SWbemNamedValueSet-Objekts fügt der Auflistung ein SWbemNamedValue-Objekt hinzu. Wenn ein Element bereits in der Auflistung mit dem gleichen Namen vorhanden ist, ersetzt das neue Element es.
 ms.assetid: 471b23f5-6c53-40e2-a2a9-0798044c9dfb
 ms.tgt_platform: multiple
-title: "' Taubemnamedvalueset. Add '-Methode (wbemdisp. h)"
+title: SWbemNamedValueSet.Add-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 3aa1a3a982d7621c910a5afca95b26db1dd5f4d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7a911dcfa6371421fd4033524400d0c818e814d3bd52f90b677ac7c9fcf1b60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119612120"
 ---
-# <a name="swbemnamedvaluesetadd-method"></a>Methode ' Swap-namedvalueset. Add '
+# <a name="swbemnamedvaluesetadd-method"></a>SWbemNamedValueSet.Add-Methode
 
-Die **Add** -Methode des-Objekts " [**Swap Name**](swbemnamedvalueset.md) " fügt der-Auflistung [**ein "**](swbemnamedvalue.md) -Objekt"-Objekt hinzu. Wenn ein Element bereits in der Auflistung mit dem gleichen Namen vorhanden ist, wird es durch das neue Element ersetzt.
+Die **Add-Methode** des [**SWbemNamedValueSet-Objekts**](swbemnamedvalueset.md) fügt der Auflistung ein [**SWbemNamedValue-Objekt**](swbemnamedvalue.md) hinzu. Wenn ein Element bereits in der Auflistung mit dem gleichen Namen vorhanden ist, ersetzt das neue Element es.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,34 +46,34 @@ objNamedValue = .Add( _
 
 <dl> <dt>
 
-" *Name* \[ " in\]
+*strName* \[ In\]
 </dt> <dd>
 
-Erforderlich. Der Name des neuen Werts.
+Erforderlich. Name des neuen Werts.
 
 </dd> <dt>
 
-*varval* \[ in\]
+*varVal* \[ In\]
 </dt> <dd>
 
-Erforderlich. Variant, der den neuen Wert darstellt.
+Erforderlich. Variante, die den neuen Wert darstellt.
 
 </dd> <dt>
 
-*IFlags* \[ in, optional\]
+*iFlags* \[ in, optional\]
 </dt> <dd>
 
-Reserviert und muss auf 0 (null) festgelegt werden, wenn angegeben.
+Reserviert und müssen bei Angabe auf 0 (null) festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, gibt diese Methode das neu geänderte oder neu erstellte " [**Swap Name**](swbemnamedvalue.md) "-Objekt zurück.
+Bei Erfolg gibt diese Methode das neu geänderte oder neu erstellte [**SWbemNamedValue-Objekt**](swbemnamedvalue.md) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beispiele zum Hinzufügen und Abrufen benannter [**Werte finden Sie**](swbemnamedvalue-value.md)unter "".
+Beispiele zum Hinzufügen und Abrufen benannter Werte finden Sie unter [**SWbemNamedValue.Value.**](swbemnamedvalue-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,11 +83,11 @@ Beispiele zum Hinzufügen und Abrufen benannter [**Werte finden Sie**](swbemname
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-namedvalueset<br/>                                                    |
-| IID<br/>                      | IID \_ iswbemnamedvalueset<br/>                                                     |
+| CLSID<br/>                    | CLSID \_ SWbemNamedValueSet<br/>                                                    |
+| IID<br/>                      | IID \_ ISWbemNamedValueSet<br/>                                                     |
 
 
 
@@ -95,7 +95,7 @@ Beispiele zum Hinzufügen und Abrufen benannter [**Werte finden Sie**](swbemname
 
 <dl> <dt>
 
-[**Austausch Elementname**](swbemnamedvalueset.md)
+[**SWbemNamedValueSet**](swbemnamedvalueset.md)
 </dt> </dl>
 
  

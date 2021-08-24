@@ -1,49 +1,49 @@
 ---
-title: Multimedia-Zeit Geber Verweis
-description: Multimedia-Zeit Geber Verweis
+title: Multimedia-Timerreferenz
+description: Multimedia-Timerreferenz
 ms.assetid: e96bc9a6-4e9d-4231-9e35-4a6ff59e6521
 keywords:
-- Windows Multimedia, Timer-Referenz
-- Multimedia, Timer-Referenz
-- Multimedia-Eingabe, Zeit Geber Verweis
-- Multimedia-Timer, Referenz
+- Windows Multimedia, Timerreferenz
+- Multimedia, Timerreferenz
+- Multimediaeingabe, Timerreferenz
+- Multimediatimer, Referenz
 - Timer, Referenz
-- Referenz für Timer, Informationen zu
-- Zeit Geber Verweis, Info
+- Referenz für Timer, Informationen
+- Timerreferenz, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d926f7a76e6f16b95eaf3308db5c8da7371a11fd
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8fb409c17686e675049c36c5c93b3231aaa711bda0d23676026e679d1c6d6fd6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119806700"
 ---
-# <a name="multimedia-timer-reference"></a>Multimedia-Zeit Geber Verweis
+# <a name="multimedia-timer-reference"></a>Multimedia-Timerreferenz
 
-In diesem Abschnitt werden die Funktionen und Strukturen beschrieben, die Multimediatimer-Diensten zugeordnet sind. Diese Elemente werden wie folgt gruppiert.
+In diesem Abschnitt werden die Funktionen und Strukturen beschrieben, die multimedialen Timerdiensten zugeordnet sind. Diese Elemente sind wie folgt gruppiert.
 
-## <a name="retrieving-the-system-time"></a>Abrufen der System Zeit
+## <a name="retrieving-the-system-time"></a>Abrufen der Systemzeit
 
--   [**Mmtime**](/previous-versions//dd757347(v=vs.85))
--   [**timegetsystemtime**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetsystemtime)
+-   [**MMTIME**](/previous-versions//dd757347(v=vs.85))
+-   [**timeGetSystemTime**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetsystemtime)
 -   [**timeGetTime**](/windows/desktop/api/TimeAPI/nf-timeapi-timegettime)
 
-## <a name="retrieving-timer-information"></a>Abrufen von Zeit Geber Informationen
+## <a name="retrieving-timer-information"></a>Abrufen von Timerinformationen
 
--   [**Timecaps**](/windows/desktop/api/TimeAPI/ns-timeapi-timecaps)
--   [**timegetdevcaps**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetdevcaps)
+-   [**TIMECAPS**](/windows/desktop/api/TimeAPI/ns-timeapi-timecaps)
+-   [**timeGetDevCaps**](/windows/desktop/api/TimeAPI/nf-timeapi-timegetdevcaps)
 
-## <a name="time-events"></a>Zeit Ereignisse
+## <a name="time-events"></a>Zeitereignisse
 
--   [**timekillevent**](/previous-versions//dd757630(v=vs.85))
--   [**Timeproc**](/previous-versions//dd757631(v=vs.85))
--   [**timesetevent**](/previous-versions//dd757634(v=vs.85))
+-   [**timeKillEvent**](/previous-versions//dd757630(v=vs.85))
+-   [**TimeProc**](/previous-versions//dd757631(v=vs.85))
+-   [**timeSetEvent**](/previous-versions//dd757634(v=vs.85))
 
 ## <a name="time-periods"></a>Zeiträume
 
--   [**TimeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod)
--   [**timeendperiod**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod)
+-   [**timeBeginPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timebeginperiod)
+-   [**timeEndPeriod**](/windows/desktop/api/TimeAPI/nf-timeapi-timeendperiod)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,6 +52,6 @@ In diesem Abschnitt werden die Funktionen und Strukturen beschrieben, die Multim
 [Multimedia-Timer](multimedia-timers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

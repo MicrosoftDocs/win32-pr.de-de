@@ -1,17 +1,17 @@
 ---
 description: Gibt die Zeichenfolge an, die den UPnP ConnectionManager-Dienst identifiziert.
 ms.assetid: DEB9C310-0AFF-463F-82C2-52CE1B7BB55C
-title: MFNETSOURCE_FRIENDLYNAME-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_FRIENDLYNAME-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b3a47c7255f3cb6beceae5a3e361d788c6e45653
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50277ea93e38572002237385b351a81cca6a0d3bb987da10fa2a8fa8ee9be11c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714320"
 ---
-# <a name="mfnetsource_friendlyname-property"></a>MF NetSource \_ FriendlyName (Eigenschaft)
+# <a name="mfnetsource_friendlyname-property"></a>MFNETSOURCE \_ FRIENDLYNAME-Eigenschaft
 
 Gibt die Zeichenfolge an, die den UPnP ConnectionManager-Dienst identifiziert.
 
@@ -19,15 +19,15 @@ Gibt die Zeichenfolge an, die den UPnP ConnectionManager-Dienst identifiziert.
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-Breit Zeichen-Zeichenfolge (**WCHAR** \* )
+Breitzeichenfolge (**WCHAR** \* )
 
 VT \_ LPWSTR
 
-**pwszval**
+**pwszVal**
 
 
 
@@ -37,9 +37,9 @@ VT \_ LPWSTR
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ VT \_ LPWSTR
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

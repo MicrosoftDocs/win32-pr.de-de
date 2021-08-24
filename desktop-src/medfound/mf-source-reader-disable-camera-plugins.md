@@ -1,29 +1,29 @@
 ---
-description: Deaktiviert die Verwendung von Postprocessing-Kamera-Plug-ins durch den Quell Reader.
+description: Deaktiviert die Verwendung von Kamera-Plug-Ins nach der Verarbeitung durch den Quellleser.
 ms.assetid: 837A6BA8-9C79-4B0A-B40D-C094009BFF2C
-title: MF_SOURCE_READER_DISABLE_CAMERA_PLUGINS-Attribut (mfreadwrite. h)
+title: MF_SOURCE_READER_DISABLE_CAMERA_PLUGINS -Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b7c72529d1cb684c547d283ce7f9ec92782f359
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f66ae9c69d13b6af3e368b57a3f864f031d0cc7e63716d2267ae5d3869d102b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119600290"
 ---
-# <a name="mf_source_reader_disable_camera_plugins-attribute"></a>MF- \_ Quell \_ Leser Deaktivieren von \_ \_ Kamera \_ -Plug-ins
+# <a name="mf_source_reader_disable_camera_plugins-attribute"></a>MF \_ SOURCE READER DISABLE CAMERA PLUGINS attribute (MF-QUELLLESER: \_ DISABLE CAMERA \_ \_ \_ PLUGINS-Attribut)
 
-Deaktiviert die Verwendung von Postprocessing-Kamera-Plug-ins durch den [Quell Reader](source-reader.md).
+Deaktiviert die Verwendung von Kamera-Plug-Ins nach der Verarbeitung durch den [Quellleser.](source-reader.md)
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt, wenn der Quell Leser mit einer Video Erfassungs Quelle verwendet wird. Wenn dieses Attribut **true** ist, wird verhindert, dass der Quell Leser nach Verarbeitungs-Plug-ins lädt, die die Kamera möglicherweise bereitstellt. Andernfalls lädt der Quell Leser Sie standardmäßig.
+Dieses Attribut gilt, wenn der Quellleser mit einer Videoaufnahmequelle verwendet wird. Wenn dieses Attribut **TRUE ist,** verhindert es, dass der Quellleser alle Nachbearbeitungs-Plug-Ins lädt, die die Kamera bereitstellen könnte. Andernfalls werden sie standardmäßig vom Quellleser geladen.
 
-Der Standardwert dieses Attributs ist **false**. Legen Sie beim Erstellen des Quell Readers das-Attribut fest.
+Der Standardwert dieses Attributs ist **FALSE.** Legen Sie das -Attribut fest, wenn Sie den Quellleser erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Der Standardwert dieses Attributs ist **false**. Legen Sie beim Erstellen des Qu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
@@ -41,10 +41,10 @@ Der Standardwert dieses Attributs ist **false**. Legen Sie beim Erstellen des Qu
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Attribute des Quell Readers](source-reader-attributes.md)
+[Quellleseattribute](source-reader-attributes.md)
 </dt> </dl>
 
  

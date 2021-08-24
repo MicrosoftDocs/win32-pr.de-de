@@ -1,27 +1,27 @@
 ---
-description: Dieses Attribut gibt zusätzlichen Schutz an, der von einer Video-Output Trust Authority (OTA) geboten wird, wenn ein Connector keinen Ausgabe Schutz bietet.
+description: Dieses Attribut gibt zusätzlichen Schutz an, der von einer Videoausgabe-Vertrauensstellungsstelle (Video Output Trust Authority, OTA) geboten wird, wenn ein Connector keinen Ausgabeschutz bietet.
 ms.assetid: D3EAD386-E730-44E8-9E05-773E1E2175C5
-title: MFPROTECTION_CONSTRICTVIDEO_NOOPM-Attribut (mspdl. h)
+title: MFPROTECTION_CONSTRICTVIDEO_NOOPM-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 617bd629852a3aa03708d12dca7736b4f773094b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72d1d7cd858ec9cf254cca1dffc5fef4e24fbb5a3a288975a9f70c9ae118dde3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713740"
 ---
-# <a name="mfprotection_constrictvideo_noopm-attribute"></a>Noopm-Attribut für MF Protection- \_ \_ Attribut
+# <a name="mfprotection_constrictvideo_noopm-attribute"></a>MFPROTECTION \_ CONSTRICTVIDEO \_ NOOPM-Attribut
 
-Dieses Attribut gibt zusätzlichen Schutz an, der von einer Video-Output Trust Authority (OTA) geboten wird, wenn ein Connector keinen Ausgabe Schutz bietet.
+Dieses Attribut gibt zusätzlichen Schutz an, der von einer Videoausgabe-Vertrauensstellungsstelle (Video Output Trust Authority, OTA) geboten wird, wenn ein Connector keinen Ausgabeschutz bietet.
 
 ## <a name="data-type"></a>Datentyp
 
 **GUID**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein zusätzlicher Schutz, der von einer Video-Output Trust Authority (OTA) geboten wird, wenn ein Connector keinen Ausgabe Schutz bietet (siehe [**IMF outputtrustauthority**](/windows/desktop/api/mfidl/nn-mfidl-imfoutputtrustauthority)). In diesem Fall bietet das OTA ggf. diesen Schutz, dessen Auswirkung mit dem Schutz durch den Schutz durch den [mfprotection-Schutz \_ überein](mfprotection-constrictvideo.md) stimmt. Dies wird definiert, um Verwechslungen mit vorherigen Aufrufen von [**imfoutputpolicy:: generaterequiredschemas**](/windows/desktop/api/mfidl/nf-mfidl-imfoutputpolicy-generaterequiredschemas) -Interaktionen zu vermeiden, bei denen das vorhanden sein von "mfprotection" \_ für den Connector "Windows-Manager" verwendet wurde.
+Dies ist ein zusätzlicher Schutz, der von einer Videoausgabe-Vertrauensstellungsstelle (Video Output Trust Authority, OTA) geboten wird, wenn ein Connector keinen Ausgabeschutz bietet (weitere Informationen finden Sie unter [**DEROUTPUTTrustAuthority**](/windows/desktop/api/mfidl/nn-mfidl-imfoutputtrustauthority)). In diesem Fall kann die OTA diesen Schutz bieten, dessen Auswirkung mit dem [MFPROTECTION \_ CONSTRICTVIDEO-Schutz](mfprotection-constrictvideo.md) identisch ist. Dies wird definiert, um Verwechslungen mit vorherigen Aufrufen von [**INTERACTIONSOutputPolicy::GenerateRequiredSchemas-Interaktionen**](/windows/desktop/api/mfidl/nf-mfidl-imfoutputpolicy-generaterequiredschemas) zu vermeiden, bei denen das Vorhandensein des MFPROTECTION \_ CONSTRICTVIDEO-Schutzes verwendet wurde, um den Pseudoconnector des Desktopfenster-Managers zu identifizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Dies ist ein zusätzlicher Schutz, der von einer Video-Output Trust Authority (O
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

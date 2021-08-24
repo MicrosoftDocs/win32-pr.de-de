@@ -1,6 +1,6 @@
 ---
 title: Stream-Output-Objekt
-description: Ein Stream-Output-Objekt ist ein Vorlagen Objekt, das Daten aus der Geometrie-Shader-Stufe streamt. Verwenden Sie die folgende Syntax, um ein Stream-Output-Objekt zu deklarieren.
+description: Ein Streamausgabeobjekt ist ein Vorlagenobjekt, das Daten aus der Geometry-Shader-Phase streamt. Verwenden Sie die folgende Syntax, um ein Streamausgabeobjekt zu deklarieren.
 ms.assetid: 07a5489c-c238-4466-9282-5b168448aff7
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,56 +9,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 98063ddb45633dda6c897abf0f82f29a394c3f95
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 79e0247b424ebb6f72622565845c17b622ab715cd8860a83ce24ae58ac7420c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789480"
 ---
 # <a name="stream-output-object"></a>Stream-Output-Objekt
 
-Ein Stream-Output-Objekt ist ein Vorlagen Objekt, das Daten aus der [Geometrie-Shader-Stufe](/previous-versions//bb205146(v=vs.85))streamt. Verwenden Sie die folgende Syntax, um ein Stream-Output-Objekt zu deklarieren.
+Ein Streamausgabeobjekt ist ein Vorlagenobjekt, das Daten aus der [Geometry-Shader-Phase streamt.](/previous-versions//bb205146(v=vs.85)) Verwenden Sie die folgende Syntax, um ein Streamausgabeobjekt zu deklarieren.
 
 
 
-| INOUT *streamoutputobject* < *DataType* >  *Name;* |
+| inout *StreamOutputObject* < *DataType* >  *Name;* |
 |------------------------------------------------------|
 
 
 
- 
+ 
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="StreamOutputObject___________________________DataType_________________________________________Name"></span><span id="streamoutputobject___________________________datatype_________________________________________name"></span><span id="STREAMOUTPUTOBJECT___________________________DATATYPE_________________________________________NAME"></span>*Streamoutputobject*  <  *DataType*  >    *Name*
+<span id="StreamOutputObject___________________________DataType_________________________________________Name"></span><span id="streamoutputobject___________________________datatype_________________________________________name"></span><span id="STREAMOUTPUTOBJECT___________________________DATATYPE_________________________________________NAME"></span>*StreamOutputObject*  <  *DataType*  >    *Name*
 </dt> <dd>
 
-Die Deklaration des Stream-Output-Objekts (so).
+Die Stream-Output-Objektdeklaration (SO).
 
 
 
-| Stream-Output von Objekttypen | BESCHREIBUNG                       |
+| Stream-Output Objekttypen | Beschreibung                       |
 |----------------------------|-----------------------------------|
-| *Pointstream*              | Eine Sequenz von Punkt primitiven    |
-| *LineStream*               | Eine Sequenz von Zeilen primitiven     |
-| *"Test-Stream"*           | Eine Sequenz von Dreiecks primitiven |
+| *PointStream*              | Eine Sequenz von Punktprimitiven    |
+| *LineStream*               | Eine Sequenz von Linienprimitiven     |
+| *TriangleStream*           | Eine Sequenz von Dreiecksprimitiven |
 
 
 
- 
+ 
 
-*DataType* -Output-Datentyp; kann ein beliebiger [HLSL-Datentyp](dx-graphics-hlsl-data-types.md)sein. Muss von den spitzen Klammern umgeben sein.
+*DataType :* Ausgabedatentyp; kann ein [beliebiger HLSL-Datentyp sein.](dx-graphics-hlsl-data-types.md) Muss von den eckigen Klammern umgeben sein.
 
-*Name* : Variablenname; eine ASCII-Zeichenfolge, die das-Objekt eindeutig identifiziert.
+*Name* – Variablenname; Eine ASCII-Zeichenfolge, die das Objekt eindeutig identifiziert.
 
 </dd> </dl>
 
 ## <a name="example"></a>Beispiel
 
-Dies ist ein Beispiel für eine Datenstrom Ausgabe-Objekt Deklaration, die Dreiecks primitive ausgibt, deren Daten durch die PS- \_ cubemap in der Struktur definiert werden \_ . Der Geometry-Shader ist auf das Erstellen von 18 Vertices beschränkt.
+Dies ist ein Beispiel für eine Streamausgabe-Objektdeklaration, die Dreiecksprimitiven ausstreamt, deren Daten von der PS \_ CUBEMAP \_ IN-Struktur definiert werden. Der geometry-shader ist auf das Generieren von 18 Scheiteltices beschränkt.
 
 
 ```
@@ -78,11 +78,11 @@ void main( inout TriangleStream<PS_CUBEMAP_IN> CubeMapStream, triangle PS_CUBEMA
 
 
 
-Dies ist ein Code Ausschnitt aus dem [cubemapgs-Beispiel](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx).
+Dies ist ein Codeausschnitt aus dem [CubeMapGS-Beispiel.](https://msdn.microsoft.com/library/Ee416398(v=VS.85).aspx)
 
-## <a name="stream-output-object-methods"></a>Stream-Output-Objektmethoden
+## <a name="stream-output-object-methods"></a>Stream-Output Objektmethoden
 
-Verwenden Sie die folgende Syntax, um Stream-Output-Object-Methoden aufzurufen.
+Verwenden Sie die folgende Syntax zum Aufrufen von stream-output-object-Methoden.
 
 
 ```
@@ -97,26 +97,26 @@ Die folgenden Methoden werden implementiert.
 
 | Methoden                                              | BESCHREIBUNG                                                      |
 |------------------------------------------------------|------------------------------------------------------------------|
-| [Append](dx-graphics-hlsl-so-append.md)             | Anfügen von Ausgabedaten an einen vorhandenen Datenstrom.                        |
-| [Restartstrip](dx-graphics-hlsl-so-restartstrip.md) | Beenden Sie den aktuellen primitiven Bereich, und starten Sie einen neuen primitiven Strip. |
+| [Append](dx-graphics-hlsl-so-append.md) (Anfügen)             | Fügen Sie Ausgabedaten an einen vorhandenen Stream an.                        |
+| [RestartStrip](dx-graphics-hlsl-so-restartstrip.md) | Beenden Sie den aktuellen primitiven Strip, und starten Sie einen neuen primitiven Strip. |
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shader Model 4](dx-graphics-hlsl-sm4.md) und höhere shadermodelle | ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -125,6 +125,6 @@ Dieses Objekt wird in den folgenden shadermodellen unterstützt.
 [Shadermodell 4](dx-graphics-hlsl-sm4.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

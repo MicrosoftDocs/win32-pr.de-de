@@ -1,7 +1,7 @@
 ---
-description: Die inactivatewindow-Methode aktiviert das Fenster. In der Basisklasse blendet diese Methode das Fenster aus.
+description: Die InactivateWindow-Methode deaktiviert das Fenster. In der Basisklasse blendet diese Methode das Fenster aus.
 ms.assetid: b575d4fd-dee1-4ae5-abb4-e92ae361e82a
-title: Cbasewindow. inactivatewindow-Methode (winutil. h)
+title: CBaseWindow.InactivateWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d1c5e925a3d9b510918636a221d5ad6e1b7da736
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3cf175a55ab5739b0fa171fe4c9553d3691be82d71b38fd5eb480d6e28043440
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119567460"
 ---
-# <a name="cbasewindowinactivatewindow-method"></a>Cbasewindow. inactivatewindow-Methode
+# <a name="cbasewindowinactivatewindow-method"></a>CBaseWindow.InactivateWindow-Methode
 
-Mit der- `InactivateWindow` Methode wird das Fenster deaktiviert. In der Basisklasse blendet diese Methode das Fenster aus.
+Die `InactivateWindow` -Methode deaktiviert das Fenster. In der Basisklasse blendet diese Methode das Fenster aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                            |
 |-----------------------------------------------------------------------------------------|----------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                    |
-| <dl> <dt>**S \_ false**</dt> </dl> | Das Fenster ist bereits inaktiv.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Das Fenster ist bereits inaktiv.<br/> |
 
 
 
@@ -61,8 +61,8 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

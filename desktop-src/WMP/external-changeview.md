@@ -1,11 +1,11 @@
 ---
-title: Extern. changeView-Methode
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die changeView-Methode ändert die Ansicht in Windows Media Player.
+title: External.changeView-Methode
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die changeView-Methode ändert die Ansicht in Windows Media Player.
 ms.assetid: bd9d7d4b-ee4c-4d7c-92ef-dd0b8ab46d9d
 keywords:
-- changeView-Methode (Windows Media Player)
-- changeView-Methode, Windows Media Player, externe Klasse
-- Externe Klasse, Windows Media Player, changeView-Methode
+- changeView-Windows Media Player
+- changeView-Methode Windows Media Player , Externe Klasse
+- Externe Klasse Windows Media Player , changeView-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35adb253d5dd14d755353c29f9278b1c122133d4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fa982e87e0a25fa8ae6cc80b428524844f60e2ec76f50d246e7b2a76b3ca942a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119649370"
 ---
-# <a name="externalchangeview-method"></a>Extern. changeView-Methode
+# <a name="externalchangeview-method"></a>External.changeView-Methode
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **changeView** -Methode ändert die Ansicht in Windows Media Player.
+Die **changeView-Methode** ändert die Ansicht in Windows Media Player.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,31 +50,31 @@ External.changeView(
 
 <dl> <dt>
 
-*Librarylocationtype* \[ in\]
+*LibraryLocationType* \[ In\]
 </dt> <dd>
 
-Eine [Bibliotheks Speicherort Konstante](library-location-constants.md) , die den Typ der neuen Ansicht angibt. Beispielsweise gibt die Konstante cpgenreid an, dass in der neuen Ansicht ein bestimmtes Genre angezeigt wird.
+Eine [Bibliotheksspeicherort-Konstante,](library-location-constants.md) die den Typ der neuen Ansicht angibt. Beispielsweise gibt die Konstante CPGenreID an, dass die neue Ansicht ein bestimmtes Genre zeigt.
 
 </dd> <dt>
 
-*Librarylocationid* \[ in\]
+*LibraryLocationID* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die die ID des bestimmten Elements enthält, das in der neuen Ansicht angezeigt werden soll. Wenn *librarylocationtype* beispielsweise cpgenreid ist, gibt dieser Parameter die ID des Genres an, das in der neuen Ansicht angezeigt werden soll. Diese Zeichenfolge kann leer sein. Siehe Hinweise.
+**Eine Zeichenfolge,** die die ID des bestimmten Elements enthält, das in der neuen Ansicht angezeigt werden soll. Wenn *LibraryLocationType* beispielsweise CPGenreID ist, gibt dieser Parameter die ID des Genre an, das in der neuen Ansicht angezeigt werden soll. Diese Zeichenfolge kann leer sein. Siehe Hinweise.
 
 </dd> <dt>
 
-*Filter* \[ in\]
+*Filter* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Filter für die neue Ansicht enthält. Die Ansicht wird so gefiltert, als ob der Benutzer diesen Text im Word-Wheel-Steuerelement des Players eingegeben hätte. Diese Zeichenfolge kann leer sein.
+**Eine Zeichenfolge,** die den Filter für die neue Sicht enthält. Die Ansicht wird gefiltert, als ob der Benutzer diesen Text in das Wortrad-Steuerelement des Players eingegeben hätte. Diese Zeichenfolge kann leer sein.
 
 </dd> <dt>
 
-*Viewparametriams* \[ in\]
+*ViewParams* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die Parameter enthält, die von Windows Media Player der neuen Ermittlungs Seite zur Verfügung gestellt werden, die in der neuen Ansicht angezeigt wird. Diese Parameter werden von Windows Media Player nicht interpretiert. Sie werden vom Online Shop erstellt und sind nur für den Online Shop von Bedeutung.
+**Zeichenfolge** mit Parametern, Windows Media Player der neuen Ermittlungsseite zur Verfügung gestellt werden, die mit der neuen Ansicht angezeigt wird. Diese Parameter werden von der -Windows Media Player. Sie werden vom Onlineshop erstellt und haben nur eine Bedeutung für den Onlineshop.
 
 </dd> </dl>
 
@@ -82,11 +82,11 @@ Eine [Bibliotheks Speicherort Konstante](library-location-constants.md) , die de
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einigen Fällen ist es sinnvoll, den *librarylocationid* -Parameter auf die leere Zeichenfolge festzulegen. Wenn Sie z. b. den *librarylocationtype* -Parameter auf allcpalbumids festlegen, stellt die neue Ansicht Alle Alben dar. Kein einzelnes Album ist der Schwerpunkt der neuen Ansicht, daher ist es nicht erforderlich, eine Album-ID im *librarylocationid* -Parameter bereitzustellen.
+In einigen Fällen ist es sinnvoll, den *LibraryLocationID-Parameter* auf die leere Zeichenfolge zu setzen. Wenn Sie beispielsweise den *Parameter LibraryLocationType* auf AllCPTeriIDs festlegen, stellt die neue Ansicht alle Albums dar. Kein einzelnes Album wird der Fokus der neuen Ansicht sein, sodass im *Parameter LibraryLocationID* keine Album-ID angegeben werden muss.
 
-Der *viewparameams* -Parameter bietet die Möglichkeit, eine Ermittlungs Seite mit einer anderen Ermittlungs Seite zu kommunizieren. Wenn das Skript auf einer Ermittlungs Seite **changeView** aufruft, wird die Benutzeroberfläche von Windows Media Player angepasst. Diese Anpassung bewirkt, dass der Spieler die [iwmpcontentpartner:: GetTemplate](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) -Methode des Plug-Ins aufruft, um die URL einer neuen Ermittlungs Seite zu erhalten. Die Zeichenfolge, die die ursprüngliche Ermittlungs Seite in den *viewparameams* -Parameter übergibt, wird nicht an **GetTemplate** übergeben. Die neue Ermittlungs Seite kann jedoch die *viewparameterzeichenfolge* abrufen, indem [externe. viewparameters](external-viewparameters.md)aufgerufen wird.
+Der *ViewParams-Parameter* bietet einer Ermittlungsseite die Möglichkeit, mit einer anderen Ermittlungsseite zu kommunizieren. Wenn das Skript auf einer Ermittlungsseite **changeView aufruft,** Windows Media Player Die Benutzeroberfläche wird angepasst. Diese Anpassung bewirkt, dass der Player die [IWMPContentPartner::GetTemplate-Methode](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate) des Plug-Ins aufruft, um die URL einer neuen Ermittlungsseite zu erhalten. Die Zeichenfolge, die die ursprüngliche Ermittlungsseite im *ViewParams-Parameter* übergibt, wird nicht an **GetTemplate übergeben.** Die neue Ermittlungsseite kann jedoch die *ViewParams-Zeichenfolge* abrufen, indem [External.viewParameters aufgerufen wird.](external-viewparameters.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,19 +103,19 @@ Der *viewparameams* -Parameter bietet die Möglichkeit, eine Ermittlungs Seite m
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlinespeicher vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> <dt>
 
-[**Extern. changeviewonlinelist**](external-changeviewonlinelist.md)
+[**External.changeViewOnlineList**](external-changeviewonlinelist.md)
 </dt> <dt>
 
-[**Extern. librarylocationid**](external-librarylocationid.md)
+[**External.libraryLocationID**](external-librarylocationid.md)
 </dt> <dt>
 
-[**Extern. librarylocationtype**](external-librarylocationtype.md)
+[**External.libraryLocationType**](external-librarylocationtype.md)
 </dt> <dt>
 
-[**Extern. viewparameters**](external-viewparameters.md)
+[**External.viewParameters**](external-viewparameters.md)
 </dt> </dl>
 
  

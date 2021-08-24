@@ -1,11 +1,11 @@
 ---
-title: Methode ' iwmdrmdevice getmeterchallenge '
-description: Die getmeterchallenge-Methode ruft die Messungs Herausforderung ab.
+title: IWMDRMDevice GetMeterChallenge-Methode
+description: Die GetMeterChallenge-Methode ruft die Messungsforderung ab.
 ms.assetid: 4c122886-46bd-4e63-8e7d-5e6132363662
 keywords:
-- Getmeterchallenge-Methode, Windows Media Device Manager
-- Getmeterchallenge-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, getmeterchallenge-Methode
+- GetMeterChallenge-Methode windows Media Geräte-Manager
+- GetMeterChallenge-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice-Schnittstelle windows Media Geräte-Manager , GetMeterChallenge-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a916afa90d1db310041f9b92be94d3af9154df4b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8ccccf8ffe17bdcbf25c89830e34e7a52294a6c661bc4b7d9193afd215246cf9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766630"
 ---
-# <a name="iwmdrmdevicegetmeterchallenge-method"></a>Iwmdrmdevice:: getmeterchallenge-Methode
+# <a name="iwmdrmdevicegetmeterchallenge-method"></a>IWMDRMDevice::GetMeterChallenge-Methode
 
-Die **getmeterchallenge** -Methode ruft die Messungs Herausforderung ab.
+Die **GetMeterChallenge-Methode** ruft die Messungsforderung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ HRESULT GetMeterChallenge(
 
 <dl> <dt>
 
-*bstrinmetercert* \[ in\]
+*bstrMeterCert* \[ In\]
 </dt> <dd>
 
-Das Messungs Zertifikat, das der Inhalts Besitzer zum Erfassen der zugeordneten Messungs Daten auf dem Gerät an den Host Computer sendet.
+Messungszertifikat, das der Inhaltsbesitzer zum Sammeln der zugeordneten Messungsdaten auf dem Gerät an den Hostcomputer sendet
 
 </dd> <dt>
 
-*ppbmeterchallenge* \[ vorgenommen\]
+*ppbMeterC wiege* \[ out\]
 </dt> <dd>
 
-Ergebnis der abgerufenen Messungs Abfrage.
+Abgerufenes Messungs-Challenge-Ergebnis.
 
 </dd> <dt>
 
-*pcbmeterchallenge* \[ vorgenommen\]
+*-MeterC wiege* \[ out\]
 </dt> <dd>
 
-Die Größe der Messungs Herausforderung in Bytes.
+Die Größe der Messungsforderung in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -80,11 +80,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Messungs Daten werden im DRM-Datenspeicher auf dem Gerät für Inhalte mit aktivierter Messung gesammelt und gespeichert. Aktionen wie z. b. Play werden aufgezeichnet. Wenn diese Funktion aufgerufen wird, sammelt das Gerät die Messungs Daten im DRM-Datenspeicher in Form eines XML-Dokuments und sendet Sie an den Host Computer. Wenn zu viele Daten vorhanden sind, werden Sie in Phasen gesendet.
+Messdaten werden gesammelt und im DRM-Datenspeicher auf dem Gerät für Inhalte mit aktivierter Messung gespeichert. Aktionen wie wiedergabe werden aufgezeichnet. Wenn diese Funktion aufgerufen wird, sammelt das Gerät die Messdaten im DRM-Datenspeicher in Form eines XML-Dokuments und sendet sie an den Hostcomputer. Wenn zu viele Daten gespeichert sind, werden sie in Phasen gesendet.
 
-Wenn der Host Computer die Messungs Daten empfängt, sendet er die Daten über das Internet an die im Messungs Zertifikat angegebene URL.
+Wenn der Hostcomputer die Messungsdaten empfängt, sendet er die Daten über das Internet an die im Messungszertifikat angegebene URL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,8 +92,8 @@ Wenn der Host Computer die Messungs Daten empfängt, sendet er die Daten über d
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
@@ -101,7 +101,7 @@ Wenn der Host Computer die Messungs Daten empfängt, sendet er die Daten über d
 
 <dl> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> </dl>
 
  

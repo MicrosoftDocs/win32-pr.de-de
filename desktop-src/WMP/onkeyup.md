@@ -1,9 +1,9 @@
 ---
-title: OnKeyUp
-description: Der OnKeyUp-Ereignishandler behandelt ein Ereignis, das auftritt, wenn eine Taste losgelassen wird.
+title: Onkeyup
+description: Der onkeyup-Ereignishandler behandelt ein Ereignis, das auftritt, wenn ein Schlüssel freigegeben wird.
 ms.assetid: 80a94856-4ee3-4219-be17-6cb804f0cd5e
 keywords:
-- OnKeyUp-Windows-Media Player
+- onkeyup Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 71f4a0e3df10cff6b2d3b3f4fc9ea2b618f5fc0f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 680384b8b36bdbe1f22a6626e64a3347ddca091f4f88f74daae2c5ec13136e2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119647040"
 ---
-# <a name="onkeyup"></a>OnKeyUp
+# <a name="onkeyup"></a>Onkeyup
 
-Der **onkeyup** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn eine Taste losgelassen wird.
+Der **onkeyup-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn ein Schlüssel freigegeben wird.
 
 ``` syntax
 onkeyup
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignishandler ist für das **Wiedergabe** Listenelement, das **Effects** -Element oder das **Video** Element bei *Video* nicht anwendbar. **Windows less** ist false.
+Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element,** das **EFFECTS-Element** oder das **VIDEO-Element,** wenn *VIDEO*. **"windowless"** ist "false".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Dieser Ereignishandler ist für das **Wiedergabe** Listenelement, das **Effects*
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 

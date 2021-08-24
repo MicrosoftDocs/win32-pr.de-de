@@ -1,7 +1,7 @@
 ---
 description: RequestStateChange-Methode der Msvm_FcSwitchPort - Fordert eine Zustandsänderung an.
 ms.assetid: 42b9b67d-ee64-4c78-860c-9af61f780ff8
-title: RequestStateChange-Methode der Msvm_FcSwitchPort-Klasse
+title: RequestStateChange-Methode der Msvm_FcSwitchPort Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 74ef1d921cac8d6dc5b5ac1db84c343f0ff4bd06
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 10b3b57c783dc57c1c08d9fae7c45689ca7da57dd7dba52f3fbc5d97f11af698
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789911"
 ---
 # <a name="requeststatechange-method-of-the-msvm_fcswitchport-class"></a>RequestStateChange-Methode der Msvm \_ FcSwitchPort-Klasse
 
@@ -120,7 +120,7 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (32768..65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
@@ -128,14 +128,14 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den Zustandsübergang nachzuverfolgen, der durch den Methodenaufruf initiiert wurde.
+Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den durch den Methodenaufruf initiierten Zustandsübergang nachverfolgung zu verfolgen.
 
 </dd> <dt>
 
 *TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL** gibt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
@@ -155,11 +155,11 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

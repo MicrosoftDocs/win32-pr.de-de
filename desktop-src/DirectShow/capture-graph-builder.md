@@ -4,16 +4,16 @@ ms.assetid: df59afcf-6e11-463f-80ac-8b1fcc496d5b
 title: Capture Graph Builder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c94ef389ab7183ba44e3296e70cf3459c67ef1e
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 925b2a2a7c7aee991a10fa2975106d7693ec6d01b3321f060a4777ccb9944b97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107910198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768300"
 ---
 # <a name="capture-graph-builder"></a>Capture Graph Builder
 
-Der Capture Graph Builder ist ein Hilfsobjekt zum Erstellen von Video- und Audioaufzeichnungsdiagrammen. Erfassungs- und Bearbeitungsanwendungen können diese Komponente verwenden, um Filterdiagramme zu erstellen. Erstellen Sie dieses Objekt, indem **Sie CoCreateInstance** aufrufen.
+Der Capture Graph Builder ist ein Hilfsobjekt zum Erstellen von Video- und Audioaufnahmegraphen. Erfassungs- und Bearbeitungsanwendungen können diese Komponente verwenden, um Filterdiagramme zu erstellen. Erstellen Sie dieses Objekt, indem Sie **CoCreateInstance aufrufen.**
 
 
 

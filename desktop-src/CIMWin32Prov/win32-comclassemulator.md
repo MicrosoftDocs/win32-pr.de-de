@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32 comclassemulator-Zuordnung bezieht zwei Versionen einer Component Object Model-Klasse (com).
+description: Die \_ WMI-Zuordnungsklasse Win32 ComClassEmulator bezieht sich auf zwei Versionen einer Component Object Model -Klasse (COM).
 ms.assetid: 33899c1e-911d-49ad-be25-355dcdb8f0c7
 ms.tgt_platform: multiple
 title: Win32_ComClassEmulator-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9966ed85b0e0b4eeb25073e13ad679759f1d460b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 171210633fc829e6eca844979b66cbaa827f9106b0017079dffc9ce56f076a22
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751380"
 ---
-# <a name="win32_comclassemulator-class"></a>Win32 \_ comclassemulator-Klasse
+# <a name="win32_comclassemulator-class"></a>Win32 \_ ComClassEmulator-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) der **Win32 \_ comclassemulator** -Zuordnung bezieht zwei Versionen einer Component Object Model-Klasse (com).
+Die **Win32 ComClassEmulator-Zuordnungs-WMI-Klasse \_** verknüpft zwei Versionen einer Component Object Model -Klasse (COM). [](/windows/desktop/WmiSdk/retrieving-a-class)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,45 +42,45 @@ class Win32_ComClassEmulator
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ comclassemulator** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ComClassEmulator-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ comclassemulator** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ComClassEmulator-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**NewVersion**
+**Newversion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ classiccomclass**
+Datentyp: **Win32 \_ ClassicCOMClass**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ classiccomclass")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ClassicCOMClass")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die COM-Komponente darstellt, die Schnittstellen enthält, die die ältere Version der Komponente emuzieren.
+Verweis auf die -Instanz, die die COM-Komponente darstellt, die Schnittstellen enthält, die die ältere Version der Komponente simulieren.
 
 </dd> <dt>
 
 **OldVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ classiccomclass**
+Datentyp: **Win32 \_ ClassicCOMClass**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ classiccomclass")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ClassicCOMClass")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die COM-Komponente mit Schnittstellen darstellt, die von der neuen Version der Komponente emuliert werden können.
+Verweis auf die -Instanz, die die COM-Komponente mit Schnittstellen darstellt, die von der neuen Version der Komponente emuliert werden können.
 
 </dd> </dl>
 
@@ -92,13 +92,13 @@ Verweis auf die-Instanz, die die COM-Komponente mit Schnittstellen darstellt, di
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

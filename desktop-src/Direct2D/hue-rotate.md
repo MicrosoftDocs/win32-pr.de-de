@@ -1,40 +1,40 @@
 ---
-title: Effekt der Hue-rotatung
-description: Verwenden Sie den Effekt Hue Drehung, um den Farbton eines Bilds zu ändern, indem Sie eine Farbmatrix auf Grundlage des Drehwinkels anwenden.
+title: Hue-Rotatationseffekt
+description: Verwenden Sie den Farbtonrotationseffekt, um den Farbton eines Bilds zu ändern, indem Sie eine Farbmatrix basierend auf dem Drehwinkel anwenden.
 ms.assetid: D322DB2C-2B8B-4101-BFB2-97E49CAC7BF6
 keywords:
-- Effekt der Hue-rotatung
+- Farbtonrotationseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 525dbe8fc94377080fbae34b80252c84c05073ac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 531ab9b1649db96bc5ee100df98ed10b4021b506e3ad71bb426778655348b2df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104551345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119569129"
 ---
-# <a name="hue-rotatation-effect"></a>Effekt der Hue-rotatung
+# <a name="hue-rotatation-effect"></a>Hue-Rotatationseffekt
 
-Verwenden Sie den Effekt Hue Drehung, um den Farbton eines Bilds zu ändern, indem Sie eine Farbmatrix auf Grundlage des Drehwinkels anwenden.
+Verwenden Sie den Farbtonrotationseffekt, um den Farbton eines Bilds zu ändern, indem Sie eine Farbmatrix basierend auf dem Drehwinkel anwenden.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1HueRotation.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-Das Beispiel zeigt die Eingabe-und Ausgabe Bilder des Hue-Drehungs Effekts mit einem Drehungs Winkel von 270 Grad.
+Das folgende Beispiel zeigt die Ein- und Ausgabebilder des Farbtonrotationseffekts mit einem Drehwinkel von 270 Grad.
 
 
 
 | Vorher                                                       |
 |--------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)   |
-| Nach                                                        |
+| Danach                                                        |
 | ![das Bild nach der Transformation.](images/17-huerotation.png) |
 
 
@@ -56,27 +56,27 @@ m_d2dContext->EndDraw();
 
 
 
-Der Effekt berechnet eine Farbmatrix basierend auf dem Drehungs Winkel (*?*), den Sie mit der \_ \_ Prop Angle-Eigenschaft D2D1 huerotation angeben \_ . Im folgenden finden Sie die Matrix Gleichungen.
+Der Effekt berechnet eine Farbmatrix basierend auf dem Drehwinkel (*?*), den Sie mit der D2D1 \_ HUEROTATION \_ PROP \_ ANGLE-Eigenschaft angeben. Hier sind die Matrixgleichungen.
 
-![Hue-Rotations Berechnungen](images/hue-formula.png)
+![Berechnungen der Farbtonrotation](images/hue-formula.png)
 
-Die erstellte Matrix hängt nur vom Drehungs Winkel ab. Sie können den [Farbmatrix](color-matrix.md) Effekt verwenden, wenn Sie eine bestimmte Matrix benötigen.
+Die erstellte Matrix hängt nur vom Drehwinkel ab. Sie können den [Farbmatrixeffekt](color-matrix.md) verwenden, wenn Sie eine bestimmte Matrix benötigen.
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                         | Typ und Standardwert           | BESCHREIBUNG                              |
+| Anzeigename und Indexenumeration                         | Typ und Standardwert           | Beschreibung                              |
 |------------------------------------------------------------|----------------------------------|------------------------------------------|
-| Angle<br/> D2D1 \_ huerotations- \_ Prop- \_ Winkel<br/> | GLEITKOMMAZAHL<br/> 0,0 f<br/> | Der Winkel, um den Farbton in Grad zu drehen. |
+| Angle<br/> D2D1 \_ HUEROTATION \_ PROP \_ ANGLE<br/> | GLEITKOMMAZAHL<br/> 0.0f<br/> | Der Winkel, um den der Farbton in Grad gedreht werden soll. |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap entspricht der Größe der Eingabe Bitmap.
+Die Ausgabebitmapgröße entspricht der Größe der Eingabebitmap.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,10 +84,10 @@ Die Größe der Ausgabe Bitmap entspricht der Größe der Eingabe Bitmap.
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

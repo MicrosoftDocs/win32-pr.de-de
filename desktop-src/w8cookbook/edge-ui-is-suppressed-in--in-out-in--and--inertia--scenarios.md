@@ -1,48 +1,48 @@
 ---
-title: Die Edge-Benutzeroberfläche wird in Szenarios mit "in-out-in" und "Trägheit" unterdrückt.
-description: Die Edge-Benutzeroberfläche wird in Szenarios mit "in-out-in" und "Trägheit" unterdrückt.
+title: Die Edge-Benutzeroberfläche wird in "In-Out-In"- und "Trägheit"-Szenarien unterdrückt.
+description: Die Edge-Benutzeroberfläche wird in "In-Out-In"- und "Trägheit"-Szenarien unterdrückt.
 ms.assetid: 005B6D03-52A6-4780-8D3E-4A5CDA5EED8C
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef08eab653349beab0710d59d45bedc2874ced44
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ec032fa97f54fc1b1325055c9b02bdebe9e817b0f85971c2e2a7062e93c284c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593960"
 ---
-# <a name="edge-ui-is-suppressed-in-in-out-in-and-inertia-scenarios"></a>Die Edge-Benutzeroberfläche wird in Szenarios mit "in-out-in" und "Trägheit" unterdrückt.
+# <a name="edge-ui-is-suppressed-in-in-out-in-and-inertia-scenarios"></a>Die Edge-Benutzeroberfläche wird in "In-Out-In"- und "Trägheit"-Szenarien unterdrückt.
 
 ## <a name="platform"></a>Plattform
 
-<dl> Clients-Windows 8.1  
+<dl> Clients – Windows 8.1  
 </dl>
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-In einigen Fällen kann es vorkommen, dass Benutzer versehentlich Edge-UI aufrufen (Charms, App-Leiste, App-Wechsel). Wir haben eine Funktion eingeführt, die es Entwicklern ermöglicht, Ihre Benutzeroberfläche für den gesamten Bildschirm zu entwerfen, ohne dass Sie eine Fülle (z. b. Rahmen) erstellen müssen, um zu verhindern, dass der Benutzer versehentlich die Ränder
+Es gibt einige Fälle, in denen Benutzer versehentlich die Edge-Benutzeroberfläche aufrufen können (Charms, App-Leiste, App-Wechsel). Wir haben ein Feature eingeführt, mit dem Entwickler ihre Benutzeroberfläche für den gesamten Bildschirm entwerfen können, ohne Sichten (z. B. Rahmen) zu leisten, um zu verhindern, dass der Benutzer versehentlich auf die Ränder trifft.
 
-Es gibt zwei Fälle, die in den meisten Fällen dazu führen können, dass unbeabsichtigte Kanten geroutete Kanten entstehen:
+Es gibt zwei Fälle, die am häufigsten zu unbeabsichtigten Kantenwischen führen können:
 
--   Beim schnellen schwenken können die Geschwindigkeit und die Ungenauigkeit der Interaktion gelegentlich bewirken, dass Sie vom Bildschirmrand ausgehen.
--   Wenn Benutzer den Bildschirmbereich beim Binden mit dem Finger, z. b. in einer Zeichnungs-APP, schnell verlassen und erneut eingeben, kann dieses Voreingegebene Verhalten versehentlich die Edge-Benutzeroberfläche auslöst und die Benutzeroberfläche unterbrechen.
+-   Beim schnellen Schwenken kann die Geschwindigkeit und Ungenauigkeit der Interaktion gelegentlich dazu führen, dass sie vom Rand des Bildschirms ein-
+-   Wenn Benutzer den Bildschirmbereich schnell verlassen und erneut aufrufen, während sie sich mit dem Finger z. B. in einer Zeichnungs-App einschließen, kann dieses ein- und ausgehende Verhalten versehentlich die Edge-Benutzeroberfläche auslösen und die Benutzeroberfläche unterbrechen.
 
-Um die Benutzer-und Entwickler Oberfläche zu verbessern, wird die Edge-Benutzeroberfläche nun in zwei bestimmten Instanzen unterdrückt:
+Um die Benutzer- und Entwicklererfahrung zu verbessern, wird die Edge-Benutzeroberfläche jetzt in zwei bestimmten Instanzen unterdrückt:
 
--   Wenn ein Benutzer in einer Anwendung, die dmanip-Trägheit unterstützt und während der Trägheit auftritt, auf den Bildschirm zeigt, wird die Edge-Benutzeroberfläche nicht innerhalb eines Timeout Fensters aufgerufen.
--   Auf zertifizierten Geräten wird die Edge-Benutzeroberfläche nicht aufgerufen, wenn ein Benutzer innerhalb bestimmter Parameter schnell vom Bildschirm auf den Bildschirm außerhalb des Bildschirms und wieder in (in-out-of-Motion) aufzieht.
+-   Wenn ein Benutzer in einer Anwendung schwenkt, die DManip Inertia unterstützt und während der Trägheit außerhalb des Bildschirms wischt, wird die Edge-Benutzeroberfläche nicht innerhalb eines Timeoutfensters aufgerufen.
+-   Auf zertifizierten Geräten wird die Edge-Benutzeroberfläche nicht aufgerufen, wenn ein Benutzer innerhalb des Bildschirms schnell von außerhalb des Bildschirms nach außen wischt und innerhalb bestimmter Parameter wieder zurück in den Bildschirm (In-Out-In-Bewegung) wischt.
 
-## <a name="manifestations"></a>Kundgebungen
+## <a name="manifestations"></a>Manifestationen
 
-Benutzer können schnell auf den Rand schwenken, während bei der Verwendung einer App eine Abnahme des unbeabsichtigten Edge-Aufforderungen angezeigt wird.
+Benutzer, die während der Verwendung einer App schnell über den Rand wischen, sehen eine Verringerung des unbeabsichtigten Edgeaufrufs.
 
 ## <a name="solution"></a>Lösung
 
-Entwickler sollten diese entschärfungen berücksichtigen und sollten in der Lage sein, den Vollbildmodus zu verwenden, ohne zu befürchten, dass Benutzer bei der Interaktion mit der Anwendung auf dem Edge versehentlich die Edge-Benutzeroberfläche auslöst.
+Entwickler sollten diese Entschärfungen im Hinterkopf behalten und in der Lage sein, den Vollbildmodus zu verwenden, ohne zu befürchten, dass Benutzer versehentlich die Edge-Benutzeroberfläche auslösen, während sie mit der Anwendung entlang des Edgebereichs interagieren.
 
- 
+ 
 
- 
+ 
 
 
 
