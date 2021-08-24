@@ -5,22 +5,22 @@ ms.assetid: b8d6d026-819c-4889-a894-c82fe81ec922
 keywords:
 - Windows Media Player Mobile Skins, Statusanzeige
 - Skins, Statusanzeige
-- Verweis für Skins, Statusanzeige
-- Statusanzeige in Skins, Info
+- Referenz für Skins, Statusanzeige
+- Statusanzeige in Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f6f1cd9e0df209d6a37ed880765fd607e939765
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 0bc4ca5db8da51cc00b99c91b8bdf77728089e82583f39828f869f24dab8c6c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118832437"
 ---
 # <a name="status-windows-media-player-sdk"></a>Status (Windows Media Player SDK)
 
-Möglicherweise möchten Sie eine Statusanzeige in der Skin verwenden. Wenn dies der Fall ist, muss das Status-Element in der Skin-Definitionsdatei definiert werden. Als Alternative können Sie diese Informationen auch mithilfe des Status-Attributs im Text-Element anzeigen.
+Möglicherweise möchten Sie eine Statusanzeige in Ihrer Skin verwenden. In diesem Zustand muss das Statuselement in der Skindefinitionsdatei definiert werden. Alternativ können Sie diese Informationen auch mithilfe des Status-Attributs im Text -Element anzeigen.
 
-Der Status Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden Zeile:
+Der Abschnitt Status der Skindefinitionsdatei beginnt mit dieser Zeile:
 
 
 ```C++
@@ -30,7 +30,7 @@ Der Status Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden Zeile:
 
 
 
-Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen über die Statusanzeige in der Skin enthalten.
+Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zur Statusanzeige in Ihrer Skin enthalten.
 
 
 ```C++
@@ -40,7 +40,7 @@ Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informatione
 
 
 
-Sie können die folgende Vorlage für den Status Abschnitt Ihrer Skin-Definitionsdatei verwenden:
+Sie können die folgende Vorlage für den Abschnitt Status Ihrer Skindefinitionsdatei verwenden:
 
 
 ```C++
@@ -51,15 +51,15 @@ Sie können die folgende Vorlage für den Status Abschnitt Ihrer Skin-Definition
 
 
 
-Sie müssen die in der vorangehenden Vorlage gezeigte Reihenfolge für Statusanzeige Informationen für jede Zeile im Abschnitt Status verwenden. Jeder Teil der Zeile ist erforderlich. In den folgenden Abschnitten werden die einzelnen Elemente beschrieben:
+Sie müssen die in der vorherigen Vorlage gezeigte Reihenfolge für Statusanzeigeinformationen für jede Zeile im Abschnitt Status verwenden. Jeder Teil der Zeile ist erforderlich. In den folgenden Abschnitten wird jedes Element beschrieben:
 
 -   [Angezeigter Status](status-item.md)
--   [Status Speicherort](status-location.md)
--   [Status Ausrichtung](status-alignment.md)
--   [Status Schriftart](status-font.md)
--   [Status Farbe](status-color.md)
+-   [Statusspeicherort](status-location.md)
+-   [Statusausrichtung](status-alignment.md)
+-   [Statusschriftart](status-font.md)
+-   [Statusfarbe](status-color.md)
 
-Ein Beispiel für einen Statuscode finden Sie im [Abschnitt Sample Status](sample-status-section.md).
+Ein Beispiel für den Statuscode finden Sie im [Abschnitt "Beispielstatus".](sample-status-section.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

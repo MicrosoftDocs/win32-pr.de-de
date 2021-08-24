@@ -1,9 +1,9 @@
 ---
-title: BN_DISABLE Benachrichtigungs Code (Winuser. h)
+title: BN_DISABLE Benachrichtigungscode (Winuser.h)
 description: Wird gesendet, wenn eine Schaltfläche deaktiviert ist.
 ms.assetid: 5e2bb434-f20d-42f1-a9e9-46c4d10b8c7e
 keywords:
-- Windows-Steuerelemente für BN_DISABLE Benachrichtigungs
+- BN_DISABLE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,23 +14,23 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: faaba622c056366fe0c49683adc2c020a6302929
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 305515d7735da4528f91a961005ce50e9e1bb63459489947cb2ba5afd4d119e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439146"
 ---
-# <a name="bn_disable-notification-code"></a>BN \_ Deaktivieren des Benachrichtigungs Codes
+# <a name="bn_disable-notification-code"></a>BN \_ DISABLE-Benachrichtigungscode
 
 Wird gesendet, wenn eine Schaltfläche deaktiviert ist.
 
 > [!Note]  
-> Dieser Benachrichtigungs Code wird nur für die Kompatibilität mit 16-Bit-Versionen von Windows vor Version 3,0 bereitgestellt. Anwendungen sollten für diese [**Aufgabe \_ den Schrift**](button-styles.md) Schnitt-Stil und die [**drawitemstruct**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) -Struktur des s verwenden.
+> Dieser Benachrichtigungscode wird nur zur Kompatibilität mit 16-Bit-Versionen von Windows 3.0 bereitgestellt. Anwendungen sollten den [**BS \_ OWNERDRAW-Schaltflächenstil**](button-styles.md) und die [**DRAWITEMSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-drawitemstruct) für diese Aufgabe verwenden.
 
  
 
-Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -49,7 +49,7 @@ BN_DISABLE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner der Schaltfläche. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Steuerelementbezeichner der Schaltfläche. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -66,9 +66,9 @@ Handle für die Schaltfläche.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

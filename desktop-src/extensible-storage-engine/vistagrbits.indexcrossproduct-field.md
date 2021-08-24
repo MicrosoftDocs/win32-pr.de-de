@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistagrbits. indexcrossproduct-Feld'
-title: Vistagrbits. indexcrossproduct-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen finden Sie im Feld VistaGrbits.IndexCrossProduct.
+title: VistaGrbits.IndexCrossProduct-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: IndexCrossProduct field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.IndexCrossProduct
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistagrbits.indexcrossproduct(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f1b16f741c63d455d18a887331505080aef62990
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad3828411177d1c500c1b21b62797f093143ba1ac5b9770d9d6444d5c1a7aa9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119471130"
 ---
-# <a name="vistagrbitsindexcrossproduct-field"></a>Vistagrbits. indexcrossproduct-Feld
+# <a name="vistagrbitsindexcrossproduct-field"></a>VistaGrbits.IndexCrossProduct-Feld
 
-Wenn dieses Flag für einen Index angegeben wird, der mehr als eine Schlüssel Spalte aufweist, die eine mehrwertige Spalte ist, führt dies dazu, dass für jedes Ergebnis eines Kreuz Produkts aller Werte in diesen Schlüssel Spalten ein Index Eintrag erstellt wird. Andernfalls würde der Index nur einen Eintrag für jeden multiwert in der signifikantesten Schlüssel Spalte enthalten, bei der es sich um eine mehrwertige Spalte handelt, und jede dieser Indexeinträge würde den ersten mehrwertigen Wert aus anderen Schlüssel Spalten verwenden, die mehrwertige Spalten sind. Wenn Sie z. B. dieses Flag für einen Index über Spalte A mit den Werten "Red" und "Blue" und over column B mit den Werten "1" und "2" angegeben haben, werden die folgenden Indexeinträge erstellt: "Red", "1"; "Red", "2"; "Blue", "1"; "Blue", "2". Andernfalls werden die folgenden Indexeinträge erstellt: "Red", "1"; "Blue", "1".
+Wenn Sie dieses Flag für einen Index angeben, der mehr als eine Schlüsselspalte enthält, bei der es sich um eine mehrwertige Spalte handelt, wird für jedes Ergebnis eines Kreuzprodukts aller Werte in diesen Schlüsselspalten ein Indexeintrag erstellt. Andernfalls hätte der Index nur einen Eintrag für jeden Mehrwert in der wichtigsten Schlüsselspalte, bei der es sich um eine mehrwertige Spalte handelt, und jeder dieser Indexeinträge würde den ersten Mehrwert aus allen anderen Schlüsselspalten verwenden, bei denen es sich um mehrwertige Spalten handelt. Wenn Sie dieses Flag beispielsweise für einen Index über Spalte A mit den Werten "red" und "blue" und für Spalte B mit den Werten "1" und "2" angegeben haben, werden die folgenden Indexeinträge erstellt: "red", "1"; "red", "2"; "blue", "1"; "blue", "2". Andernfalls werden die folgenden Indexeinträge erstellt: "red", "1"; "blue", "1".
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = VistaGrbits.IndexCrossProduct
 public const CreateIndexGrbit IndexCrossProduct
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistagrbits-Klasse](./vistagrbits-class.md)
+[VistaGrbits-Klasse](./vistagrbits-class.md)
 
-[Vistagrbits-Member](./vistagrbits-members.md)
+[VistaGrbits-Member](./vistagrbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

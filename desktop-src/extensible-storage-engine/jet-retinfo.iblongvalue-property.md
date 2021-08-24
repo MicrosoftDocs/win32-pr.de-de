@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RETINFO. iblongvalue-Eigenschaft'
-title: JET_RETINFO. iblongvalue (Eigenschaft)
+description: 'Weitere Informationen zu: JET_RETINFO.ibLongValue-Eigenschaft'
+title: JET_RETINFO.ibLongValue-Eigenschaft
 TOCTitle: 'ibLongValue property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RETINFO.ibLongValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_retinfo.iblongvalue(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 39b2ed312f7db54ff799ce2aa52554349d020dab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 755a22e4cb0dbbee9d10ee45224ca54007a782f89f6220489722881dfe8524e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107304"
 ---
-# <a name="jet_retinfoiblongvalue-property"></a>JET_RETINFO. iblongvalue (Eigenschaft)
+# <a name="jet_retinfoiblongvalue-property"></a>JET_RETINFO.ibLongValue-Eigenschaft
 
-Ruft den Offset auf das erste Byte ab, das aus einer Spalte vom Typ [LONGBINARY](./jet-coltyp-enumeration.md)oder [LONGTEXT](./jet-coltyp-enumeration.md)abgerufen werden soll, oder legt diesen fest.
+Ruft den Offset auf das erste Byte ab, das aus einer Spalte vom Typ [LongBinary](./jet-coltyp-enumeration.md)oder [LongText](./jet-coltyp-enumeration.md)abgerufen werden soll, oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int ibLongValue { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RETINFO-Klasse](./jet-retinfo-class.md)
 
-[Mitglieder JET_RETINFO](./jet-retinfo-members.md)
+[JET_RETINFO-Member](./jet-retinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

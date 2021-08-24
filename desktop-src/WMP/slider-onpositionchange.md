@@ -1,9 +1,9 @@
 ---
-title: Schieberegler. onpositionchange
-description: Der onpositionchange-Ereignishandler behandelt ein Ereignis, das auftritt, wenn sich die Position des Schiebereglers durch Klicken oder ziehen ändert. | Schieberegler. onpositionchange
+title: SLIDER.onPositionChange
+description: Der onPositionChange-Ereignishandler behandelt ein Ereignis, das auftritt, wenn sich die Position des Schiebereglers ändert, wenn der Benutzer klickt oder zieht. | SLIDER.onPositionChange
 ms.assetid: c18e9a49-9576-42ae-9f30-249c44d40f41
 keywords:
-- Schieberegler. onpositionchange-Fenster Media Player
+- SLIDER.onPositionChange Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd68faa9e7addd85b9b5f02b8a6c445e7ddf54e9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e45fbb87c8b48b008c3f7d60d9bc83685fd24d8160e7eaf075dcd0b1b94b9141
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507770"
 ---
-# <a name="slideronpositionchange"></a>Schieberegler. onpositionchange
+# <a name="slideronpositionchange"></a>SLIDER.onPositionChange
 
-Der **onpositionchange** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn sich die Position des Schiebereglers durch Klicken oder ziehen ändert.
+Der **onPositionChange-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn sich die Position des Schiebereglers ändert, wenn der Benutzer klickt oder zieht.
 
 ``` syntax
 onPositionChange
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich die Position des Schiebereglers aufgrund des im Skript geänderten **Wert** Attributs ändert, wird dieses Ereignis nicht ausgelöst. Um diese Möglichkeit zu berücksichtigen, implementieren Sie stattdessen den **Wert des \_ OnChange** -Ereignis Handlers.
+Wenn sich die Position des Schiebereglers ändert, weil das Wertattribut im Skript geändert wird, wird dieses Ereignis nicht ausgelöst.  Implementieren Sie stattdessen den Ereignishandler **\_ value onchange,** um diese Möglichkeit zu nutzen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Wenn sich die Position des Schiebereglers aufgrund des im Skript geänderten **W
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Wenn sich die Position des Schiebereglers aufgrund des im Skript geänderten **W
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

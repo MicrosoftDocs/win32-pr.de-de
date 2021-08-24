@@ -1,7 +1,7 @@
 ---
-description: 'CABEvent.CABEvent-Konstruktor : Konstruktormethode.'
+description: 'TAREvent.CAMEvent-Konstruktor: Konstruktormethode.'
 ms.assetid: 35c9ac07-8756-42b1-beeb-5f0e79466742
-title: CABEvent.CABEvent-Konstruktor (Wxutil.h)
+title: TAREvent.CAMEvent-Konstruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cdd37ba72d9467c16d46b2aec3ec40c206466eaf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f0fd5895ada4bbbd1bf4ad24710f7782fdfb9c932f2d9446ff0d992335437da9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540554"
 ---
-# <a name="cameventcamevent-constructor"></a>CABEvent.CABEvent-Konstruktor
+# <a name="cameventcamevent-constructor"></a>KONSTRUKTOR "TAREVENT.TAREVENT"
 
 Konstruktormethode.
 
@@ -46,7 +46,7 @@ CAMEvent(
 *fManualReset* 
 </dt> <dd>
 
-Ein boolescher Wert, der angibt, ob es sich bei dem Objekt um ein Ereignis mit manueller oder automatischer Zurücksetzung handelt. True gibt an, dass das Objekt ein Ereignis für die manuelle Zurücksetzung ist. Andernfalls handelt es sich um ein Ereignis für die automatische Zurücksetzung.
+Ein boolescher Wert, der angibt, ob es sich bei dem Objekt um ein Ereignis mit manueller oder automatischer Zurücksetzung handelt. True **gibt an,** dass das -Objekt ein Ereignis mit manueller Zurücksetzung ist. Andernfalls handelt es sich um ein Ereignis zur automatischen Zurücksetzung.
 
 </dd> <dt>
 
@@ -55,32 +55,32 @@ Ein boolescher Wert, der angibt, ob es sich bei dem Objekt um ein Ereignis mit m
 
 Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt dieser Parameter einen Fehlercode. In diesem Fall befindet sich das Objekt nicht in einem gültigen Zustand.
 
-Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird dieser Parameter standardmäßig auf **NULL** gesetzt. Die Übergabe eines Werts ungleich **NULL** wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
+Aus Gründen der Abwärtskompatibilität mit früheren Versionen von strmbase.lib wird dieser Parameter standardmäßig auf **NULL festgelegt.** Die Übergabe eines Werts, der nicht **NULL** ist, wird jedoch bevorzugt, damit der Aufrufer den Status des Objekts überprüfen kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ereignis beginnt in einem nicht signalisierten Zustand.
+Das Ereignis beginnt in einem nicht signalisiertem Zustand.
 
-Bei einem Ereignis für die automatische Zurücksetzung setzt die [**RESETEvent::Wait-Methode**](camevent-wait.md) das Ereignis auf nicht signalisiert zurück, wenn die Methode zurückgegeben wird. Bei einem Ereignis für die manuelle Zurücksetzung bleibt das Ereignis signalisiert, bis Sie die [**METHODE RESETEvent::Reset**](camevent-reset.md) aufrufen.
+Bei einem Ereignis für die automatische Zurücksetzung setzt die [**METHODE WEBCAMEvent::Wait**](camevent-wait.md) das Ereignis auf nicht signalisiert zurück, wenn die Methode zurückgegeben wird. Bei einem Manuellzurücksetzungsereignis bleibt das Ereignis signalisiert, bis Sie die [**METHODECAMEvent::Reset**](camevent-reset.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**WEBCAMEvent-Klasse**](camevent.md)
+[**CAMEvent-Klasse**](camevent.md)
 </dt> </dl>
 
  

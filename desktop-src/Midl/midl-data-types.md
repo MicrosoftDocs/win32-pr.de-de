@@ -1,35 +1,35 @@
 ---
-title: Datentypen in der Mitte
-description: In der mittleren l gibt es eine Vielzahl von Datentypen und Sprachkonstrukten zum Erstellen von Datentypen.
+title: MIDL-Datentypen
+description: MIDL bietet eine Vielzahl von Datentypen und Sprachkonstrukten zum Erstellen von Datentypen.
 ms.assetid: 6bc7db39-84c9-4ec5-8ff6-403635663b1b
 keywords:
-- Microsoft Interface Definition Language in der Mitte beschriebene Datentypen
-- Mittel l, Datentypen
-- Datentypen-Mittel l
+- Microsoft Interface Definition Language MIDL , beschrieben, Datentypen
+- MIDL MIDL , Datentypen
+- Datentypen MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bf37703c56beec56dec67055272d4ba25d34e6f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 69f8e1e2b747069b9b07b9292932a8134d7f5c7c9c1456fdf63b725ea700a983
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067160"
 ---
-# <a name="midl-data-types"></a>Datentypen in der Mitte
+# <a name="midl-data-types"></a>MIDL-Datentypen
 
-In der mittleren l gibt es eine Vielzahl von Datentypen und Sprachkonstrukten zum Erstellen von Datentypen. Beide werden in den folgenden Themen erläutert:
+MIDL bietet eine Vielzahl von Datentypen und Sprachkonstrukten zum Erstellen von Datentypen. Beides wird in den folgenden Themen erläutert:
 
--   [Mittel l-Basis Typen](midl-base-types.md)
--   [Mittelgroße Arrays](midl-arrays.md)
--   [Mittel l-Typdefinitionen](midl-type-definitions.md)
--   [Enumerationstypen der Mitte](midl-enumerated-types.md)
--   [Mittel l-Strukturen](midl-structures.md)
--   [Mittel l-Unions](midl-unions.md)
--   [Mittel l-Bindungs Handles](midl-binding-handles.md)
+-   [MIDL-Basistypen](midl-base-types.md)
+-   [MIDL-Arrays](midl-arrays.md)
+-   [MIDL-Typdefinitionen](midl-type-definitions.md)
+-   [MIDL-Aufzähltypen](midl-enumerated-types.md)
+-   [MIDL-Strukturen](midl-structures.md)
+-   [MIDL-Unions](midl-unions.md)
+-   [MIDL-Bindungshandles](midl-binding-handles.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die Drucker \_ Info \_ 4-Struktur gibt allgemeine Drucker Informationen an. Die-Struktur kann verwendet werden, um beim Aufrufen von enumdruckern minimale Drucker Informationen abzurufen.
+description: Die \_ PRINTER INFO \_ 4-Struktur gibt allgemeine Druckerinformationen an. Die -Struktur kann verwendet werden, um minimale Druckerinformationen bei einem Aufruf von EnumPrinters abzurufen.
 ms.assetid: 81bd0eab-dc1e-4cf1-8f63-3686f1711c1f
-title: PRINTER_INFO_4 Struktur (winspool. h)
+title: PRINTER_INFO_4-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 9a1501008f0235ea303dd1457fc8756c28abc21c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ba6e372b495c47dd92e61e51ba6487e6d9c2c0aca924bf6ed3a092ba0816820
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119446990"
 ---
-# <a name="printer_info_4-structure"></a>Drucker \_ Info \_ 4-Struktur
+# <a name="printer_info_4-structure"></a>PRINTER \_ INFO \_ 4-Struktur
 
-Die **Drucker \_ Info \_ 4** -Struktur gibt allgemeine Drucker Informationen an.
+Die **PRINTER \_ INFO \_ 4-Struktur** gibt allgemeine Druckerinformationen an.
 
-Die-Struktur kann verwendet werden, um beim Aufrufen von [**enumdruckern**](enumprinters.md)minimale Drucker Informationen abzurufen. Ein solcher Rückruf ist eine schnelle und einfache Möglichkeit zum Abrufen der Namen und Attribute aller lokal installierten Drucker auf einem System und aller Remote Drucker Verbindungen, die ein Benutzer eingerichtet hat.
+Die -Struktur kann verwendet werden, um minimale Druckerinformationen bei einem Aufruf von [**EnumPrinters**](enumprinters.md)abzurufen. Ein solcher Aufruf ist eine schnelle und einfache Möglichkeit zum Abrufen der Namen und Attribute aller lokal installierten Drucker auf einem System und aller Remotedruckerverbindungen, die ein Benutzer hergestellt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ typedef struct _PRINTER_INFO_4 {
 
 <dl> <dt>
 
-**pprintername**
+**pPrinterName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Druckers angibt (lokal oder Remote).
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckers angibt (lokal oder remote).
 
 </dd> <dt>
 
-**pservername**
+**pServerName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Servers ist.
+Zeiger auf eine auf NULL endende Zeichenfolge, die dem Namen des Servers entspricht.
 
 </dd> <dt>
 
@@ -68,8 +68,8 @@ Gibt Informationen zu den zurückgegebenen Daten an.
 
 | Wert                       | Bedeutung                          |
 |-----------------------------|----------------------------------|
-| Drucker \_ Attribut \_ lokal   | Der Drucker ist ein lokaler Drucker.  |
-| Drucker \_ Attribut \_ Netzwerk | Der Drucker ist ein Remote Drucker. |
+| \_DRUCKERATTRIBUT \_ LOKAL   | Der Drucker ist ein lokaler Drucker.  |
+| \_DRUCKERATTRIBUTNETZWERK \_ | Der Drucker ist ein Remotedrucker. |
 
 
 
@@ -77,13 +77,13 @@ Gibt Informationen zu den zurückgegebenen Daten an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Drucker \_ Info \_ 4** -Struktur bietet eine einfache und äußerst schnelle Möglichkeit, die Namen der Drucker, die auf einem lokalen Computer installiert sind, sowie die von einem Benutzer eingerichteten Remote Verbindungen abzurufen. Wenn [**enumprinter**](enumprinters.md) mit einer Datenstruktur vom Typ " **Printer \_ Info \_ 4** " aufgerufen wird, fragt diese Funktion die Registrierung nach den angegebenen Informationen ab und wird dann sofort zurückgegeben. Dies unterscheidet sich vom Verhalten von **enumdruckern** , wenn es mit anderen Ebenen von **Drucker \_ Informationen \_ xxx** -Datenstrukturen aufgerufen wird. Insbesondere, wenn **enumprinter** mit einer Datenstruktur der Ebene 2 (**Printer \_ Info \_ 2** ) aufgerufen wird, führt Sie einen **OpenPrinter** -Aufruf für jede Remote Verbindung aus. Wenn eine Remote Verbindung nicht mehr vorhanden ist, wenn der Remote Server nicht mehr vorhanden ist oder der Remote Drucker nicht mehr vorhanden ist, muss die Funktion auf das Timeout von RPC warten und somit den **OpenPrinter** -Aufruf fehlschlagen. Dies kann eine Weile dauern. Durch die Übergabe einer **Drucker \_ Info \_ 4** -Struktur kann eine Anwendung ein Minimum an erforderlichen Informationen abrufen. wenn ausführlichere Informationen gewünscht werden, kann ein nachfolgende **aufrufergrad** 2 aufgerufen werden.
+Die **PRINTER \_ INFO \_ 4-Struktur** bietet eine einfache und äußerst schnelle Möglichkeit, die Namen der drucker, die auf einem lokalen Computer installiert sind, sowie die Remoteverbindungen abzurufen, die ein Benutzer hergestellt hat. Wenn [**EnumPrinters**](enumprinters.md) mit einer **PRINTER INFO \_ \_ 4-Datenstruktur** aufgerufen wird, fragt diese Funktion die Registrierung nach den angegebenen Informationen ab und gibt dann sofort zurück. Dies unterscheidet sich vom Verhalten von **EnumPrinters,** wenn es mit anderen Ebenen von **PRINTER INFO \_ \_ xxx-Datenstrukturen** aufgerufen wird. Insbesondere wenn **EnumPrinters** mit einer Datenstruktur der Ebene 2 (**PRINTER \_ INFO \_ 2** ) aufgerufen wird, wird für jede Remoteverbindung ein **OpenPrinter-Aufruf** ausgeführt. Wenn eine Remoteverbindung getrennt ist, der Remoteserver nicht mehr vorhanden ist oder der Remotedrucker nicht mehr vorhanden ist, muss die Funktion warten, bis für RPC ein Time out aufgetreten ist, und der **OpenPrinter-Aufruf** schlägt daher fehl. Dies kann eine Weile dauern. Wenn eine **PRINTER \_ INFO \_ 4-Struktur** übergeben wird, kann eine Anwendung ein absolutes Minimum an erforderlichen Informationen abrufen. Wenn ausführlichere Informationen gewünscht werden, kann ein **nachfolgender EnumPrinter** Level 2-Aufruf erfolgen.
 
-**Attribute** können auch Werte enthalten, die im Feld **Attribute** von **Printer \_ Info \_ 2** definiert sind.
+**Attribute** können auch Werte enthalten, die im Feld **Attribute** von **PRINTER INFO \_ \_ 2** definiert sind.
 
-Einige Drucker Konfigurationen, wie z. b. Drucker Verbindungen mit einigen nicht auf Windows basierenden Druckservern, geben möglicherweise sowohl das **\_ \_ lokale Drucker Attribut** als auch das **Drucker Attribut \_ \_ Netzwerk** zurück.
+Einige Druckerkonfigurationen, z. B. Druckerverbindungen mit einigen nicht Windows-basierten Druckerservern, geben möglicherweise sowohl **PRINTER \_ ATTRIBUTE \_ LOCAL** als auch **PRINTER ATTRIBUTE \_ \_ NETWORK** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,37 +93,37 @@ Einige Drucker Konfigurationen, wie z. b. Drucker Verbindungen mit einigen nicht
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Drucker \_ Info \_ 4W** (Unicode) und **\_ Drucker \_ Info \_ 4a** (ANSI)<br/>                           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PRINTER \_ INFO \_ 4W** (Unicode) und **\_ PRINTER INFO \_ \_ 4A** (ANSI)<br/>                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**GetPrinter**](getprinter.md)
 </dt> <dt>
 
-[**Enumdrucker**](enumprinters.md)
+[**EnumPrinters**](enumprinters.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 1**](printer-info-1.md)
+[**DRUCKERINFORMATIONEN \_ \_ 1**](printer-info-1.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 2**](printer-info-2.md)
+[**DRUCKERINFORMATIONEN \_ \_ 2**](printer-info-2.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 3**](printer-info-3.md)
+[**DRUCKERINFORMATIONEN \_ \_ 3**](printer-info-3.md)
 </dt> </dl>
 
  

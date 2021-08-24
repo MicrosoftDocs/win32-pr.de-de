@@ -1,11 +1,11 @@
 ---
 title: Possible-Inferiors-Attribut
-description: Die Liste der-Objekte, die dieses-Objekt enthalten kann.
+description: Die Liste der Objekte, die dieses Objekt enthalten kann.
 ms.assetid: f5588b24-7e50-4a65-bc70-a6b649b84fcb
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Possible-Inferiors-Attribut
-- possiblzuferiors-Attribut AD-Schema
+- Possible-Inferiors AD-Schema des Attributs
+- possibleInferiors-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24b42808fc3e47eaef66a58b62f2ca2527374a95
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ca86027c138a2556c7c7a0514389c13e82533526a17dcffdde6bec2e530f83d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442080"
 ---
 # <a name="possible-inferiors-attribute"></a>Possible-Inferiors-Attribut
 
-Die Liste der-Objekte, die dieses-Objekt enthalten kann.
+Die Liste der Objekte, die dieses Objekt enthalten kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
 | CN                | Possible-Inferiors                                              |
-| LDAP-Display-Name | possibleinzuferiors                                               |
+| Ldap-Anzeigename | possibleInferiors                                               |
 | Size              | \-                                                              |
-| Berechtigung aktualisieren  | Domänen Administrator                                            |
-| Aktualisierungshäufigkeit  | Wenn die Klasse definiert ist.                                      |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                            |
+| Updatehäufigkeit  | Wenn die -Klasse definiert ist.                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.915                                          |
-| System-ID-GUID    | 9a7ad94c-ca53-11d1-bbd0-0080c76670c0                            |
+| System-Id-Guid    | 9a7ad94c-ca53-11d1-bbd0-0080c76670c0                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
 
 
@@ -43,7 +43,7 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Die Liste der-Objekte, die dieses-Objekt enthalten kann.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

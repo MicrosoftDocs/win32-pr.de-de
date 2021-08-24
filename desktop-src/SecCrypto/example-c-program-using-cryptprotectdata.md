@@ -1,28 +1,28 @@
 ---
-description: Im folgenden Beispiel wird ein Daten-BLOB mithilfe von CryptProtectData und CryptUnprotectData verschlüsselt und entschlüsselt.
+description: Im folgenden Beispiel wird ein Datenblob mit CryptProtectData und CryptUnprotectData verschlüsselt und entschlüsselt.
 ms.assetid: 51607aad-9fa8-4db6-bd2a-3821dce619e7
-title: 'Beispiel-C-Programm: Verwenden von "CryptProtectData"'
+title: 'C-Beispielprogramm: Verwenden von CryptProtectData'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87359bf6e4d90c4e46140aa9e114ffabf0a5ad80
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6639bc3f0dbabc3b82c41aaa858d9ad1c8a5b9e7b10661a3a53f7b1730baad40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140770"
 ---
-# <a name="example-c-program-using-cryptprotectdata"></a>Beispiel-C-Programm: Verwenden von "CryptProtectData"
+# <a name="example-c-program-using-cryptprotectdata"></a>C-Beispielprogramm: Verwenden von CryptProtectData
 
-Im folgenden Beispiel wird ein Daten- [*BLOB*](../secgloss/b-gly.md) mithilfe von [**CryptProtectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptunprotectdata)verschlüsselt und entschlüsselt.
+Im folgenden Beispiel wird ein [*Datenblob*](../secgloss/b-gly.md) mit [**CryptProtectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptunprotectdata)verschlüsselt und entschlüsselt.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
--   Initialisieren einer [**cryptprotect \_ promptstruct**](/windows/desktop/api/Dpapi/ns-dpapi-cryptprotect_promptstruct) -Datenstruktur.
--   Verwenden von ' [**CryptProtectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptprotectdata) ' zum Verschlüsseln eines Daten-BLOBs.
+-   Initialisieren einer [**CRYPTPROTECT \_ PROMPTSTRUCT-Datenstruktur.**](/windows/desktop/api/Dpapi/ns-dpapi-cryptprotect_promptstruct)
+-   Verwenden von [**CryptProtectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptprotectdata) zum Verschlüsseln eines Datenblobs.
 -   Verwenden von [**CryptUnprotectData**](/windows/desktop/api/Dpapi/nf-dpapi-cryptunprotectdata) zum Entschlüsseln der Daten.
--   Verwenden von [**LocalFree**](/windows/win32/api/winbase/nf-winbase-localfree) zum Freigeben von zugewiesener Arbeitsspeicher.
+-   Verwenden von [**LocalFree**](/windows/win32/api/winbase/nf-winbase-localfree) zum Freigeben des belegten Arbeitsspeichers.
 
-In diesem Beispiel wird die [**mylenker Error**](myhandleerror.md) -Funktion verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion**](myhandleerror.md) verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
 Das folgende Beispiel zeigt den Schutz von Daten.
 

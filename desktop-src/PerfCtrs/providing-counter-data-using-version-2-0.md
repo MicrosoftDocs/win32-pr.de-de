@@ -1,60 +1,60 @@
 ---
-description: Mit Version 2,0 haben Leistungsindikatoren die Architektur geändert, um den Prozess für die Bereitstellung von Leistungsindikator Daten für Consumer zu vereinfachen.
+description: Mit Version 2.0 haben Leistungsindikatoren die Architektur geändert, um den Prozess für die Bereitstellung von Indikatordaten für Consumer zu vereinfachen.
 ms.assetid: 37f75b15-3f52-4259-a6d9-5a1a14f88379
-title: Bereitstellen von Counter-Daten mit Version 2,0
+title: Bereitstellen von Indikatordaten mit Version 2.0
 ms.topic: article
 ms.date: 08/17/2020
-ms.openlocfilehash: 67976c8a0b6c77582ed8c50c2e5cf753c77fcf6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e839fb72f8cbd8272f9afd89aa3456e1e0b08fc7197dd992b1069fec7ce108d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143793"
 ---
-# <a name="providing-counter-data-using-version-20"></a>Bereitstellen von Counter-Daten mit Version 2,0
+# <a name="providing-counter-data-using-version-20"></a>Bereitstellen von Indikatordaten mit Version 2.0
 
-Die Anbieter von modernen Leistungsdaten verwenden ein Manifest zum Definieren der Leistungsdaten und zum Verwalten von Daten im Kontext des Anbieters. Anbieter, die mit einem Manifest und Leistungs Anbieter-APIs implementiert werden, werden häufig als **v2-Anbieter** bezeichnet. Windows unterstützt Benutzermodus-v2-Anbieter unter Windows Vista oder höher und Kernel Modus-v2-Anbieter unter Windows 7 oder höher.
+Moderne Leistungsdatenanbieter verwenden ein Manifest, um die Indikatordaten zu definieren, und verwenden Leistungsindikatoranbieter-APIs, um Daten im Kontext des Anbieters zu verwalten. Anbieter, die mithilfe von Manifest- und Leistungsindikatoranbieter-APIs implementiert werden, werden häufig als **V2-Anbieter** bezeichnet. Windows unterstützt V2-Anbieter im Benutzermodus auf Windows Vista oder höher und Kernelmodus-V2-Anbieter auf Windows 7 oder höher.
 
-Auf dieser Seite werden Benutzermodus v2-Anbieter beschrieben. Weitere Informationen zu Kernel Modus-v2-Anbietern finden Sie unter [Kernel Mode Performance Monitoring](/windows-hardware/drivers/devtest/kernel-mode-performance-monitoring).
+Auf dieser Seite werden V2-Anbieter im Benutzermodus beschrieben. Informationen zu Kernelmodus-V2-Anbietern finden Sie unter [Kernelmodus-Leistungsüberwachung.](/windows-hardware/drivers/devtest/kernel-mode-performance-monitoring)
 
-Zur Laufzeit funktionieren v2-Anbieter wie folgt:
+Zur Laufzeit funktionieren V2-Anbieter wie folgt:
 
-- Der Anbieter Prozess registriert sich selbst beim Windows-Leistungsindikator System, indem perfstartprovider und perfsetcountersetinfo aufgerufen werden. Der Anbieter stellt optional eine Rückruffunktion bereit, die über Consumeranforderungen benachrichtigt wird.
-- Der Anbieter Prozess fügt mithilfe von perfkreateinstance und perfdelta eteinstance Instanzen nach Bedarf hinzu oder entfernt Sie. Der Anbieter aktualisiert Leistungswerte bei der Änderung mithilfe von perfset * * _-APIs.
-- Ein Consumer sendet eine Anforderung an Daten aus einem CounterSet. Das System überprüft, ob der Aufrufer über Berechtigungen zum Sammeln der Daten verfügt. Das System verwendet dann einen Arbeits Thread, der im Anbieter Prozess ausgeführt wird, um die Anforderung zu verarbeiten, wobei die Rückruffunktion des Anbieters bei Bedarf aufgerufen wird. Der Arbeits Thread kopiert die gesammelten Daten in einen vom System verwalteten Puffer, und das System gibt die Daten dann an den Consumer zurück.
+- Der Anbieterprozess registriert sich selbst beim Windows Leistungsindikatorsystem, indem PerfStartProvider und PerfSetCounterSetInfo aufgerufen werden. Der Anbieter stellt optional eine Rückruffunktion bereit, die über Consumeranforderungen benachrichtigt wird.
+- Der Anbieterprozess fügt instanzen mit perfCreateInstance und PerfDeleteInstance nach Bedarf hinzu oder entfernt sie. Der Anbieter aktualisiert Leistungsindikatorwerte, wenn sie sich mithilfe von PerfSet-APIs ändern.
+- Ein Consumer stellt eine Anforderung für Daten aus einem Counterset. Das System überprüft, ob der Aufrufer über Berechtigungen zum Sammeln der Daten verfügt. Das System verwendet dann einen Arbeitsthread, der im Anbieterprozess ausgeführt wird, um die Anforderung zu verarbeiten, und ruft ggf. die Rückruffunktion des Anbieters auf. Der Arbeitsthread kopiert die gesammelten Daten in einen vom System verwalteten Puffer, und das System gibt die Daten dann an den Consumer zurück.
 
 ## <a name="steps-to-creating-a-provider"></a>Schritte zum Erstellen eines Anbieters
 
-1. Schreiben Sie ein Manifest, das die vom Anbieter bereitgestellten gegen Daten definiert. Ausführliche Informationen zum Schreiben des Manifests finden Sie unter [Leistungsindikator Schema](performance-counters-schema.md).
-2. Verwenden Sie [ctrpp](ctrpp.md) , um den Vorlagen Code zu generieren, den Sie in Ihren Anbieter einschließen. Der Vorlagen Code umfasst die Strukturen, die die Indikatorensätze definieren, die Funktionen [_ *counterinitialize* *](counterinitialize.md) und [**countercleanup**](countercleanup.md) sowie die Ressourcen Zeichenfolgen.
+1. Schreiben Sie ein Manifest, das die Indikatordaten definiert, die ihr Anbieter bereitstellt. Ausführliche Informationen zum Schreiben des Manifests finden Sie unter [Schema für Leistungsindikatoren.](performance-counters-schema.md)
+2. Verwenden Sie [CTRPP,](ctrpp.md) um den Vorlagencode zu generieren, den Sie in Ihren Anbieter einschließen. Der Vorlagencode enthält die Strukturen, die die Indikatorensätze definieren, die Funktionen [**CounterInitialize**](counterinitialize.md) und [**CounterCleanup**](countercleanup.md) sowie die Ressourcenzeichenfolgen.
 
-   Der Anbieter muss die Funktionen [**counterinitialize**](counterinitialize.md) und [**countercleanup**](countercleanup.md) aufzurufen. Die **counterinitialize** -Funktion Ruft die [**perfstartprovider**](/windows/desktop/api/Perflib/nf-perflib-perfstartprovider) -Funktion auf, um den Anbieter zu registrieren, und ruft auch die Funktion [**perfsetcountersetinfo**](/windows/desktop/api/Perflib/nf-perflib-perfsetcountersetinfo) auf, um den Indikatorsatz zu initialisieren. Das **countercleanup** Ruft die [**perfstopprovider**](/windows/desktop/api/Perflib/nf-perflib-perfstopprovider) -Funktion auf, um die Registrierung des Anbieters zu entfernen.
+   Ihr Anbieter muss die Funktionen [**CounterInitialize**](counterinitialize.md) und [**CounterCleanup**](countercleanup.md) aufrufen. **CounterInitialize** ruft die [**PerfStartProvider-Funktion**](/windows/desktop/api/Perflib/nf-perflib-perfstartprovider) auf, um den Anbieter zu registrieren, und ruft auch die [**PerfSetCounterSetInfo-Funktion**](/windows/desktop/api/Perflib/nf-perflib-perfsetcountersetinfo) auf, um den Indikatorsatz zu initialisieren. **CounterCleanup** ruft die [**PerfStopProvider-Funktion**](/windows/desktop/api/Perflib/nf-perflib-perfstopprovider) auf, um die Registrierung des Anbieters zu entfernen.
 
-3. Schließen Sie den Vorlagen Code aus dem vorherigen Schritt in Ihr Projekt ein, und vervollständigen Sie den Anbieter.
+3. Fügen Sie den Vorlagencode aus dem vorherigen Schritt in Ihr Projekt ein, und schließen Sie Ihren Anbieter ab.
 
-   Zum Vervollständigen des Anbieters müssen Sie die [**perfkreateinstance**](/windows/desktop/api/Perflib/nf-perflib-perfcreateinstance) -Funktion für jede Instanz des von Ihnen bereitgestellten Leistungs Zählers aufrufen.
+   Um den Anbieter abzuschließen, müssen Sie die [**PerfCreateInstance-Funktion**](/windows/desktop/api/Perflib/nf-perflib-perfcreateinstance) für jede Instanz des von Ihnen festgelegten Indikatorensatzes aufrufen.
 
-   Um die Werte für die Zählers festzulegen, müssen Sie eine der folgenden Funktionen aufzurufen:
+   Um die Zählerwerte festzulegen, rufen Sie eine der folgenden Funktionen auf:
 
-   - [**Perfsetulongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfsetulongcountervalue)
-   - [**Perfsetulonglongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfsetulonglongcountervalue)
-   - [**Perfsetcounterref-Wert**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue)
+   - [**PerfSetULongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfsetulongcountervalue)
+   - [**PerfSetULongLongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfsetulonglongcountervalue)
+   - [**PerfSetCounterRefValue**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue)
 
-   Der Vorteil der Verwendung von [**perfsetcounterrefvalue**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue) besteht darin, dass Sie keinen Funktions aufrufmachen müssen, um den Zählerwert festzulegen oder zu aktualisieren. Sie aktualisieren einfach die lokale Indikator Variable (die Variable, auf die die Verweis Punkte verweisen) und die Leistungsindikatoren verwenden den Zeiger, um auf den Indikator Wert zuzugreifen.
+   Der Vorteil der Verwendung von [**PerfSetCounterRefValue**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue) besteht darin, dass Sie keinen Funktionsaufruf durchführen müssen, um den Indikatorwert festzulegen oder zu aktualisieren. Sie aktualisieren einfach Ihre lokale Indikatorvariable (die Variable, auf die die Verweispunkte verweisen), und Leistungsindikatoren verwenden den Zeiger, um auf den Indikatorwert zuzugreifen.
 
-   Wenn Sie [**perfsetcounterrefvalue**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue)nicht verwenden, können Sie die folgenden Funktionen verwenden, um den Indikator Wert zu erhöhen oder zu verringern:
+   Wenn Sie [**PerfSetCounterRefValue**](/windows/desktop/api/Perflib/nf-perflib-perfsetcounterrefvalue)nicht verwenden, können Sie die folgenden Funktionen verwenden, um den Indikatorwert zu erhöhen oder zu dekrementieren:
 
-   - [**Perfdecrementulongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfdecrementulongcountervalue)
-   - [**Perfdecrementulonglongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfdecrementulonglongcountervalue)
-   - [**Perfinkrementulongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfincrementulongcountervalue)
-   - [**Perfinkrementulonglongcountervalue**](/windows/desktop/api/Perflib/nf-perflib-perfincrementulonglongcountervalue)
+   - [**PerfDecrementULongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfdecrementulongcountervalue)
+   - [**PerfDecrementULongLongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfdecrementulonglongcountervalue)
+   - [**PerfIncrementULongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfincrementulongcountervalue)
+   - [**PerfIncrementULongLongCounterValue**](/windows/desktop/api/Perflib/nf-perflib-perfincrementulonglongcountervalue)
 
-   Bevor der Anbieter beendet wird, muss er den [**perfdelta eteinstance**](/windows/desktop/api/Perflib/nf-perflib-perfdeleteinstance) für jede erstellte Instanz von Counter-Set-Instanz abrufen.
+   Bevor der Anbieter beendet wird, muss er die [**PerfDeleteInstance**](/windows/desktop/api/Perflib/nf-perflib-perfdeleteinstance) für jede erstellte Indikatorsatzinstanz aufrufen.
 
-   Wenn Sie das **Rückruf** Attribut im [**Provider**](/windows/desktop/PerfCtrs/performance-counters-provider--counters--element) -Element im Manifest angegeben oder das **-notificationcallback-** Argument beim Aufrufen von [ctrpp](ctrpp.md)verwendet haben, müssen Sie die [*controlcallback*](/windows/desktop/api/Perflib/nc-perflib-perflibrequest) -Rückruffunktion implementieren. Sie übergeben die Rückruffunktion an [**counterinitialize**](counterinitialize.md).
+   Wenn Sie  das Rückrufattribut im [**Provider-Element**](/windows/desktop/PerfCtrs/performance-counters-provider--counters--element) im Manifest angegeben oder das **-NotificationCallback-Argument** beim Aufrufen von [CTRPP](ctrpp.md)verwendet haben, müssen Sie die [*ControlCallback-Rückruffunktion*](/windows/desktop/api/Perflib/nc-perflib-perflibrequest) implementieren. Sie übergeben die Rückruffunktion an [**CounterInitialize**](counterinitialize.md).
 
-   Wenn Sie " **-memoryroutinen** " beim Aufrufen [von ctrpp](ctrpp.md)verwendet haben, müssen Sie die Rückruf Funktionen " [*zugscatememory*](/windows/desktop/api/Perflib/nc-perflib-perf_mem_alloc) " und " [*Freispeicher*](/windows/desktop/api/Perflib/nc-perflib-perf_mem_free) " implementieren. Sie übergeben die Rückruf Funktionen an [**counterinitialize**](counterinitialize.md).
+   Wenn Sie die **-MemoryRoutines** beim Aufrufen von [CTRPP](ctrpp.md)verwendet haben, müssen Sie die Rückruffunktionen [*AllocateMemory*](/windows/desktop/api/Perflib/nc-perflib-perf_mem_alloc) und [*FreeMemory*](/windows/desktop/api/Perflib/nc-perflib-perf_mem_free) implementieren. Sie übergeben die Rückruffunktionen an [**CounterInitialize**](counterinitialize.md).
 
-4. Verwenden Sie bei der Installation des Anbieters das lodctr-Tool, um den Namen der Binärdatei mit den lokalisierten Ressourcen Zeichenfolgen und Ressourcen-IDs in die Registrierung zu schreiben. Ausführliche Informationen zur Verwendung von lodctr finden Sie unter [Leistungsindikator Schema](performance-counters-schema.md).
+4. Verwenden Sie bei der Installation Ihres Anbieters das LodCtr-Tool, um den Namen der Binärdatei, die die lokalisierten Ressourcenzeichenfolgen und Ressourcen-IDs enthält, in die Registrierung zu schreiben. Ausführliche Informationen zur Verwendung von LodCtr finden Sie unter [Schema der Leistungsindikatoren.](performance-counters-schema.md)
 
-5. Wenn Sie den Anbieter deinstallieren, verwenden Sie das unlodctr-Tool, um die Informationen des Anbieters aus der Registrierung zu entfernen.
+5. Verwenden Sie beim Deinstallieren Ihres Anbieters das UnlodCtr-Tool, um die Informationen Ihres Anbieters aus der Registrierung zu entfernen.

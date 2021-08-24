@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt wird die Typdefinition für die aufgerufene Partei Nummer aufgelistet.
+description: In diesem Abschnitt wird die Typdefinition für die aufgerufene Parteinummer aufgelistet.
 ms.assetid: cc267edc-bde9-44d3-ab14-0a5e07a74b8c
-title: Partei Nummer genannt
+title: Nummer der aufgerufenen Partei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b59c9ccf51cea542cbd01bb2e9a1ba193b9710a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 180bcf02f4422244029acef29e3ee5b3b6e875f9ec92391ed28865b680ff418a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132703"
 ---
-# <a name="called-party-number"></a>Partei Nummer genannt
+# <a name="called-party-number"></a>Nummer der aufgerufenen Partei
 
-In diesem Abschnitt wird die Typdefinition für die aufgerufene Partei Nummer aufgelistet.
+In diesem Abschnitt wird die Typdefinition für die aufgerufene Parteinummer aufgelistet.
 
 ``` syntax
 typedef ATM_ADDRESS ATM_CALLED_PARTY_NUMBER_IE;

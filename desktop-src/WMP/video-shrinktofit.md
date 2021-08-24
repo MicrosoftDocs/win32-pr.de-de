@@ -1,9 +1,9 @@
 ---
-title: Video. ShrinkToFit
-description: Mit dem ShrinkToFit-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Video auf die für das Video-Steuerelement definierte Breite und Höhe verkleinert wird.
+title: VIDEO.shrinkToFit
+description: Das shrinkToFit-Attribut gibt einen Wert an, der angibt, ob das Video auf die für das Video-Steuerelement definierte Breite und Höhe verkleinert wird, oder ruft einen Wert ab.
 ms.assetid: 94ab33b0-b08c-4063-a3e6-1315bb527e1c
 keywords:
-- Video. ShrinkToFit-Windows-Media Player
+- VIDEO.shrinkToFit Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0eb049ac8a307b243a7b4b82bdd0f2834f30b315
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 186c43ce664f4da5490168232310a9e4cd640651a035a16097c8875d74270b2e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119465660"
 ---
-# <a name="videoshrinktofit"></a>Video. ShrinkToFit
+# <a name="videoshrinktofit"></a>VIDEO.shrinkToFit
 
-Mit dem **ShrinkToFit** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Video auf die für das Video-Steuerelement definierte Breite und Höhe verkleinert wird.
+Das **shrinkToFit-Attribut** gibt einen Wert an, der angibt, ob das Video auf die für das Video-Steuerelement definierte Breite und Höhe verkleinert wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.shrinkToFit
@@ -29,20 +29,20 @@ Mit dem **ShrinkToFit** -Attribut wird ein Wert angegeben oder abgerufen, der an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                        |
 |-------|----------------------------------------------------|
-| true  | Standard. Das Video wird verkleinert, damit es an das Steuerelement angepasst wird. |
-| false | Das Video wird nicht an das Steuerelement angepasst.      |
+| true  | Standard. Das Video wird verkleinert, damit es an das Steuerelement passt. |
+| false | Das Video wird nicht verkleinert, um es an das Steuerelement zu passen.      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn keine Breite oder Höhe angegeben wird, wird dieses Attribut ignoriert.
 
@@ -52,15 +52,15 @@ Wenn keine Breite oder Höhe angegeben wird, wird dieses Attribut ignoriert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

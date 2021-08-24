@@ -1,31 +1,31 @@
 ---
-description: In einigen Fällen können Sockets, die einer Multipoint-Sitzung beitreten, einige Unterschiede im Verhalten von Punkt-zu-Punkt-Sockets aufweisen.
+description: In einigen Fällen können Sockets, die mit einer Multipointsitzung verbunden sind, einige Unterschiede im Verhalten von Point-to-Point-Sockets haben.
 ms.assetid: e59b701f-f85f-4fd6-8d6d-e46199250c22
-title: Bits für wsasocket markieren
+title: Flagbits für WSASocket
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51fede5d160d89b08064d8dff1c1a901c048526f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd1bbe8a282fe0255e3efd9889216b7d44aee2a41feedb611ba5c2b1d38bae68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132473"
 ---
-# <a name="flag-bits-for-wsasocket"></a>Bits für wsasocket markieren
+# <a name="flag-bits-for-wsasocket"></a>Flagbits für WSASocket
 
-In einigen Fällen können Sockets, die einer Multipoint-Sitzung beitreten, einige Unterschiede im Verhalten von Punkt-zu-Punkt-Sockets aufweisen. So kann z. b. ein d- \_ Blatt-Socket in einem Daten Ebenen Schema, das nur Informationen an den d-Stamm \_ Teilnehmer sendet. Dies führt dazu, dass die Anwendung in der Lage ist, die beabsichtigte Verwendung eines socketcovorfalls mit ihrer Erstellung anzugeben. Dies erfolgt über vier-Flag-Bits, die im *dwFlags* -Parameter auf [**wsasocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)festgelegt werden können:
+In einigen Fällen können Sockets, die mit einer Multipointsitzung verbunden sind, einige Unterschiede im Verhalten von Point-to-Point-Sockets haben. Beispielsweise kann ein Blattsocket in einem Schema mit Root-Datenebene nur Informationen \_ an den \_ d-Stammteilnehmer senden. Dies führt dazu, dass die Anwendung in der Lage sein muss, die beabsichtigte Verwendung eines Sockets im Zusammenhang mit der Erstellung anzugeben. Dies erfolgt über Bits mit vier Flags, die im *dwFlags-Parameter* auf [**WSASocket festgelegt werden können:**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)
 
--   WSA \_ Flag \_ -Multipoint- \_ C \_ -Stamm für die Erstellung eines als C-Stamm fungierenden Sockets \_ und nur zulässig, wenn im entsprechenden [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Eintrag eine Stamm Steuerungsebene angegeben wird.
--   WSA \_ Flag \_ \_ \_ für das Multipoint-C-Blatt, für die Erstellung eines als C-Blatt fungierenden Sockets \_ und nur zulässig, wenn die XP1- \_ Unterstützung \_ für Multipoint im entsprechenden [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Eintrag angegeben wird.
--   WSA \_ Flag \_ Multipoint \_ D \_ root für die Erstellung eines als D-Stamm fungierenden Sockets \_ und nur zulässig, wenn im entsprechenden [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Eintrag eine Datenebene mit Stamms angegeben wird.
--   WSA \_ Flag \_ -Multipoint \_ -D- \_ Blatt für die Erstellung eines als D-Blatt fungierenden Sockets \_ und nur zulässig, wenn die XP1- \_ Unterstützung von \_ Multipoint im entsprechenden [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Eintrag angegeben wird.
+-   WSA FLAG MULTIPOINT C ROOT für die Erstellung eines Sockets, der als c-Stamm verwendet wird, und nur zulässig, wenn im entsprechenden \_ \_ \_ \_ \_ [**WSAPROTOCOL \_ INFO-Eintrag**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) eine Root-Steuerungsebene angegeben ist.
+-   WSA FLAG MULTIPOINT C LEAF für die Erstellung eines Sockets, der als Blatt c verwendet wird, und nur zulässig, wenn \_ \_ \_ \_ \_ XP1 SUPPORT MULTIPOINT im entsprechenden \_ \_ [**WSAPROTOCOL \_ INFO-Eintrag angegeben**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) ist.
+-   WSA FLAG MULTIPOINT D ROOT für die Erstellung eines Sockets, der als d-Stamm verwendet wird, und nur zulässig, wenn im entsprechenden \_ \_ \_ \_ \_ [**WSAPROTOCOL \_ INFO-Eintrag**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) eine Root-Datenebene angegeben ist.
+-   WSA FLAG MULTIPOINT D LEAF, für die Erstellung eines Sockets, der als Blatt d verwendet wird, und nur zulässig, wenn \_ \_ \_ \_ \_ XP1 SUPPORT MULTIPOINT im entsprechenden \_ \_ [**WSAPROTOCOL \_ INFO-Eintrag angegeben**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) ist.
 
-Beachten Sie, dass beim Erstellen eines Multipoint-Sockets genau eines der beiden Flags der Steuerungsebene und eines der beiden Flags für die Datenebene im *dwFlags* -Parameter von [**wsasocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)festgelegt werden muss. Daher sind die vier Möglichkeiten zum Erstellen von Multipoint-Sockets:
+Beachten Sie, dass beim Erstellen eines Multipointsockets genau eines der beiden Flags der Steuerungsebene und eines der beiden Datenebenenflags im *dwFlags-Parameter* von [**WSASocket**](/windows/desktop/api/Winsock2/nf-winsock2-wsasocketa)festgelegt werden muss. Daher sind die vier Möglichkeiten zum Erstellen von Multipointsockets:
 
 -   "c \_ root/d \_ root"
--   "c \_ root/d- \_ Blatt"
--   "c- \_ Blatt/d-Stamm \_ "
--   "c- \_ Blatt/d \_ Blatt"
+-   "c \_ root/d \_ leaf"
+-   "c \_ leaf/d \_ root"
+-   "c \_ leaf /d \_ leaf"
 
  
 

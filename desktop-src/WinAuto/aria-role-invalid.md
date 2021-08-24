@@ -1,33 +1,33 @@
 ---
-title: Aria-Rollen Fehler
-description: Aria-Rollen Fehler
+title: ARIA-Rollenfehler
+description: ARIA-Rollenfehler
 ms.assetid: FEEB4F28-4A71-4417-A2F9-ABCB86B44F0F
 keywords:
-- Ariaroleerrorid
+- AriaRoleErrorId
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df04ad94d68ae1e8e2e8d3352aa349834a2389fa
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 51c0fcef639a54bcd805bcb3f239e8d42cfeda8c5111d128c5f54157db75d7ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "106341337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134013"
 ---
-# <a name="aria-role-error"></a>Aria-Rollen Fehler
+# <a name="aria-role-error"></a>ARIA-Rollenfehler
 
 ## <a name="text"></a>Text
 
-Das Element hat eine ungültige WAI-ARIA-Rolle.
+Das Element verfügt über eine ungültige MSI-ARIA-Rolle.
 
 ## <a name="type"></a>type
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieser Fehler gilt für alle Elemente, die über das [**Role**](https://developer.mozilla.org/docs/Web/HTML/Reference) -Attribut verfügen. Der Wert gibt an, dass das **Role** -Attribut kein gültiger Rollen Wert für die webobarrierefreiheits Initiative ist, der von der WAI-ARIA-Spezifikation definiert wurde. Durch Festlegen einer gültigen Rolle wird sichergestellt, dass das Element von sprach Lesern und anderen hilfstechnologietools richtig interpretiert wird.
+Dieser Fehler gilt für alle [](https://developer.mozilla.org/docs/Web/HTML/Reference) Elemente, die über das Rollenattribut verfügen. Es gibt an, dass es sich bei dem **Rollenattribut** nicht um einen gültigen Rollenwert der Initiative für webbarrierefreiheit – barrierefreie Rich Internet Applications (WLAN-ARIA) handelt, wie in der SPEZIFIKATION DER ARIA-Spezifikation definiert. Durch das Festlegen einer gültigen Rolle wird sichergestellt, dass das Element von Sprachausgaben und anderen Hilfstechnologietools ordnungsgemäß interpretiert wird.
 
-Legen Sie zum Beheben dieses Fehlers das [**Role**](https://developer.mozilla.org/docs/Web/HTML/Reference) -Attribut auf einen gültigen Wert der Rolle "WAI-ARIA" fest. Beachten Sie, dass abstrakte WAI-ARIA-Rollen nicht gültig sind.
+Um diesen Fehler zu [](https://developer.mozilla.org/docs/Web/HTML/Reference) beheben, legen Sie das Rollenattribut auf einen gültigen ATTRIBUT-ARIA-Rollenwert fest. Beachten Sie, dass abstrakte CAB-ARIA-Rollen ungültig sind.
 
 ## <a name="example"></a>Beispiel
 
@@ -46,12 +46,12 @@ Legen Sie zum Beheben dieses Fehlers das [**Role**](https://developer.mozilla.or
 
 <dl> <dt>
 
-[Fehler bei der Aria-Container Rolle](aria-container-role.md)
+[ARIA-Containerrollenfehler](aria-container-role.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

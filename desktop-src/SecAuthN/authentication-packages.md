@@ -1,44 +1,44 @@
 ---
-description: Authentifizierungs Pakete sind in Dynamic Link Libraries enthalten.
+description: Authentifizierungspakete sind in Dynamic Link-Bibliotheken enthalten.
 ms.assetid: b0d7bca1-b4bb-4b3f-822e-04a6a500cd9a
-title: Authentifizierungs Pakete
+title: Authentifizierungspakete
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff02017b653521d80741bcdf3c205ab924c4bceb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d556489d520ebf45224e3e9b8a5526cc4debcf1c7e7ab95028ecd9e35a6de217
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119141363"
 ---
-# <a name="authentication-packages"></a>Authentifizierungs Pakete
+# <a name="authentication-packages"></a>Authentifizierungspakete
 
-[*Authentifizierungs Pakete*](/windows/desktop/SecGloss/a-gly) sind in Dynamic Link Libraries enthalten. Die [*Lokale Sicherheits Autorität (Local Security Authority*](/windows/desktop/SecGloss/l-gly) , LSA) lädt Authentifizierungs Pakete mithilfe von Konfigurationsinformationen, die in der Registrierung gespeichert sind. Durch das Laden mehrerer Authentifizierungs Pakete wird der LSA die Unterstützung mehrerer Anmelde Prozesse und mehrerer [*Sicherheitsprotokolle*](/windows/desktop/SecGloss/s-gly)ermöglicht.
+[*Authentifizierungspakete*](/windows/desktop/SecGloss/a-gly) sind in Dynamic Link-Bibliotheken enthalten. Die lokale Sicherheitsstelle (Local [*Security Authority,*](/windows/desktop/SecGloss/l-gly) LSA) lädt Authentifizierungspakete mithilfe der in der Registrierung gespeicherten Konfigurationsinformationen. Durch das Laden mehrerer Authentifizierungspakete kann das LSA mehrere Anmeldeprozesse und mehrere [*Sicherheitsprotokolle unterstützen.*](/windows/desktop/SecGloss/s-gly)
 
-Anmelde Prozesse verwenden Authentifizierungs Pakete, um Anmeldedaten zu analysieren. Neue Anmelde Prozesse werden einem System hinzugefügt, indem eine [*Gina*](/windows/desktop/SecGloss/g-gly) hinzugefügt wird, um die erforderlichen Anmeldedaten zu erfassen, und ggf. durch Hinzufügen eines neuen Authentifizierungs Pakets, um die Daten zu analysieren.
+Anmeldeprozesse verwenden Authentifizierungspakete, um Anmeldedaten zu analysieren. Neue Anmeldeprozesse werden einem System hinzugefügt, indem eine [*GINA*](/windows/desktop/SecGloss/g-gly) hinzugefügt wird, um die erforderlichen Anmeldedaten zu sammeln, und bei Bedarf durch Hinzufügen eines neuen Authentifizierungspakets zum Analysieren der Daten.
 
-Sicherheitsprotokolle werden von Authentifizierungs Paketen implementiert. Ein Authentifizierungs Paket analysiert Anmeldedaten anhand der Regeln und Prozeduren, die in einem Sicherheitsprotokoll festgelegt sind.
+Sicherheitsprotokolle werden durch Authentifizierungspakete implementiert. Ein Authentifizierungspaket analysiert Anmeldedaten, indem die in einem Sicherheitsprotokoll festgelegten Regeln und Verfahren befolgen.
 
-Authentifizierungs Pakete sind für die folgenden Aufgaben verantwortlich:
+Authentifizierungspakete sind für die folgenden Aufgaben verantwortlich:
 
--   Analysieren von Anmeldedaten, um zu bestimmen, ob sich ein [*Sicherheits Prinzipal*](/windows/desktop/SecGloss/s-gly) an einem System anmelden darf.
--   Einrichten einer neuen [*Anmelde Sitzung*](/windows/desktop/SecGloss/l-gly) und Erstellen eines eindeutigen [*Anmelde Bezeichners*](/windows/desktop/SecGloss/l-gly) für den erfolgreich authentifizierten Prinzipal.
--   Übergeben von Sicherheitsinformationen an die LSA für das Sicherheits Token des Prinzipals.
+-   Analysieren von Anmeldedaten, um zu bestimmen, ob [*sich*](/windows/desktop/SecGloss/s-gly) ein Sicherheitsprinzipal bei einem System anmelden darf.
+-   Einrichten einer neuen [*Anmeldesitzung*](/windows/desktop/SecGloss/l-gly) und Erstellen eines eindeutigen [*Anmeldebezeichners*](/windows/desktop/SecGloss/l-gly) für den erfolgreich authentifizierten Prinzipal.
+-   Übergeben von Sicherheitsinformationen an das LSA für das Sicherheitstoken des Prinzipals.
 
-Wenn ein Benutzer versucht, eine interaktive Anmeldung durchzusetzen, ruft die LSA ein Authentifizierungs Paket auf, um zu bestimmen, ob der Benutzer sich anmelden darf. MSV1 \_ 0 ist beispielsweise ein Authentifizierungs Paket, das mit dem Betriebssystem Microsoft Windows installiert wird. Das \_ Paket MSV1 0 akzeptiert einen Benutzernamen und ein [](/windows/desktop/SecGloss/h-gly) Hash Kennwort. Die Kombination aus Benutzername und Hashwert des Kennworts wird in der Security Accounts Manager (Sam)-Datenbank nachgeschlagen. Wenn die Anmeldedaten mit den gespeicherten [*Anmelde*](/windows/desktop/SecGloss/c-gly)Informationen übereinstimmen, kann das Authentifizierungs Paket die Anmeldung erfolgreich durchführen.
+Wenn ein Benutzer eine interaktive Anmeldung versucht, ruft die LSA ein Authentifizierungspaket auf, um zu bestimmen, ob der Benutzer sich anmelden kann. MSV1 0 ist beispielsweise ein Authentifizierungspaket, das mit dem Microsoft Windows \_ installiert wird. Das MSV1 \_ 0-Paket akzeptiert einen Benutzernamen und ein [*Hashkennwort.*](/windows/desktop/SecGloss/h-gly) Er sucht die Kombination aus Benutzername und Kennworthash in der SAM-Datenbank (Security Accounts Manager). Wenn die Anmeldedaten den gespeicherten Anmeldeinformationen [*entspricht,*](/windows/desktop/SecGloss/c-gly)lässt das Authentifizierungspaket zu, dass die Anmeldung erfolgreich ist.
 
-Nachdem die Anmelde Informationen eines [*Sicherheits Prinzipals*](/windows/desktop/SecGloss/s-gly) erfolgreich authentifiziert wurden, ist ein Authentifizierungs Paket für das Erstellen einer neuen LSA-Anmelde Sitzung für den Prinzipal und die Zuordnung des [*Anmelde Bezeichners*](/windows/desktop/SecGloss/l-gly) verantwortlich, der die Anmelde Sitzung eindeutig identifiziert. Das Authentifizierungs Paket kann Anmelde Informationen in der Anmelde Sitzung für nachfolgende Authentifizierungsanforderungen zuordnen. Beispielsweise ordnet das \_ Authentifizierungs Paket MSV1 0 (von Microsoft bereitgestellt) den Benutzerkonto Namen und einen Hash des Benutzer Kennworts zu jeder Anmelde Sitzung zu.
+Nach der erfolgreichen Authentifizierung der Anmeldeinformationen eines Sicherheitsprinzipals ist ein Authentifizierungspaket dafür [](/windows/desktop/SecGloss/l-gly) verantwortlich, eine neue LSA-Anmeldesitzung für den Prinzipal zu erstellen und den Anmeldebezeichner zu zuordnen, der die Anmeldesitzung eindeutig identifiziert. [](/windows/desktop/SecGloss/s-gly) Das Authentifizierungspaket kann der Anmeldesitzung Anmeldeinformationen für nachfolgende Authentifizierungsanforderungen zuordnen. Beispielsweise ordnet das Authentifizierungspaket MSV1 0 (von Microsoft bereitgestellt) den Benutzernamen und einen Hash des Kennworts des Benutzers jeder \_ Anmeldesitzung zu.
 
-Das Authentifizierungs Paket bietet auch eine Reihe von [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -IDs (SIDs) und weitere Informationen, die für die Einbindung in das von der LSA erstellten Sicherheits Token geeignet sind. Dieses Token stellt den Sicherheits [*Kontext*](/windows/desktop/SecGloss/c-gly) des Prinzipals für den Zugriff auf Windows-Vorgänge dar.
+Das [*Authentifizierungspaket*](/windows/desktop/SecGloss/s-gly) stellt auch eine Reihe von Sicherheits-IDs (SIDs) und andere Informationen zur Verfügung, die für die Aufnahme in das vom LSA erstellte Sicherheitstoken geeignet sind. Dieses Token stellt den Sicherheitskontext des Prinzipals [*für den Zugriff*](/windows/desktop/SecGloss/c-gly) auf Windows dar.
 
-Nachdem eine Anmelde Sitzung erstellt und einem Prinzipal zugeordnet wurde, werden nachfolgende Authentifizierungsanforderungen, die im Namen des Prinzipals erfolgen, anders behandelt als bei der ersten Anmeldung. Das Authentifizierungs Paket erstellt keine neue Anmelde Sitzung und gibt keine Informationen zum Erstellen eines Tokens zurück. Das Authentifizierungs Paket kann jedoch [*zusätzliche Anmelde*](/windows/desktop/SecGloss/s-gly) Informationen zuordnen, die während einer nachfolgenden Authentifizierung mit der vorhandenen Anmelde Sitzung des Prinzipals abgerufen wurden. Zusätzliche Anmelde Informationen werden abgerufen, wenn der Zugriff auf eine angeforderte Ressource über die Anmelde Informationen hinausgeht, die von der anfänglichen Anmeldung festgelegt wurden. Wenn ein angemeldeter Benutzer z. b. eine Novell-Netzwerk Anmeldung anfordert, kann ein Novell-spezifisches Authentifizierungs Paket aufgerufen werden, und Novell-spezifische Anmelde Informationen können authentifiziert und der Anmelde Sitzung zugeordnet werden. Diese Anmelde Informationen können von einem Novell Redirector (über das Novell-Authentifizierungs Paket) referenziert werden, wenn der Benutzer auf das Novell-Netzwerk zugreift.
+Nachdem eine Anmeldesitzung erstellt und einem Prinzipal zugeordnet wurde, werden nachfolgende Authentifizierungsanforderungen, die im Auftrag des Prinzipals vorgenommen werden, anders behandelt als die erste Anmeldung. Das Authentifizierungspaket erstellt keine neue Anmeldesitzung und gibt keine Informationen zum Erstellen eines Tokens zurück. Das Authentifizierungspaket kann [](/windows/desktop/SecGloss/s-gly) jedoch zusätzliche Anmeldeinformationen, die während einer nachfolgenden Authentifizierung erhalten wurden, der vorhandenen Anmeldesitzung des Prinzipals zuordnen. Zusätzliche Anmeldeinformationen werden erhalten, wenn für den Zugriff auf eine angeforderte Ressource Informationen erforderlich sind, die über die anmeldeinformationen hinausgehen, die bei der ersten Anmeldung festgelegt wurden. Wenn ein angemeldeter Benutzer z. B. eine Anmeldung über das Netzwerk anklangt, kann ein Protokoll-spezifisches Authentifizierungspaket aufgerufen werden, und Es können anmeldespezifische Anmeldeinformationen authentifiziert und der Anmeldesitzung zugeordnet werden. Auf diese Anmeldeinformationen kann (über dasKtor-Authentifizierungspaket) von einem Bein-Redirector verwiesen werden, wenn der Benutzer auf das Netzwerk vonAuthent zutritt.
 
-In den folgenden Themen werden die verschiedenen Typen von [*Authentifizierungs Paketen*](/windows/desktop/SecGloss/a-gly)erläutert:
+In den folgenden Themen werden die verschiedenen Typen von [*Authentifizierungspaketen behandelt:*](/windows/desktop/SecGloss/a-gly)
 
--   [Windows-Authentifizierungs Pakete](windows-authentication-packages.md)
--   [Anbieter für Sicherheitsunterstützung/Authentifizierungs Pakete](security-support-provider-authentication-packages.md)
--   [Von Microsoft bereitgestellte Authentifizierungs Pakete](authentication-packages-provided-by-microsoft.md)
--   [Unter Authentifizierungs Pakete](subauthentication-packages.md)
+-   [Windows Authentifizierungspakete](windows-authentication-packages.md)
+-   [Sicherheitssupportanbieter/Authentifizierungspakete](security-support-provider-authentication-packages.md)
+-   [Von Microsoft bereitgestellte Authentifizierungspakete](authentication-packages-provided-by-microsoft.md)
+-   [Unterauthentifizierungspakete](subauthentication-packages.md)
 
  
 

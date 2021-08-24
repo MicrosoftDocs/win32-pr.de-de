@@ -1,7 +1,7 @@
 ---
-description: 'Die cdispparameams-Klasse implementiert die dispparameams-Struktur, die in Automation als C++-Basisklasse verwendet wird. Die Methode IDispatch:: Aufrufen verwendet die OLE DISPPARAMS-Struktur, um die Argumente zu enthalten, die an eine beliebige Methode oder Eigenschaft weitergegeben werden.'
+description: Die CDispParams-Klasse implementiert die DISPPARAMS-Struktur, die in Automation als C++-Basisklasse verwendet wird. Die IDispatch::Invoke-Methode verwendet die OLE DISPPARAMS-Struktur, um die Argumente zu enthalten, die an eine beliebige Methode oder Eigenschaft übergeben werden.
 ms.assetid: ac81f2f3-0340-4feb-83e7-e15aeb53b671
-title: Cdispparameams-Klasse
+title: CDispParams-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,24 +12,24 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 7471d7be9f7068c00150981db0c7b08c53f82074
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c0d3b958849a4d1910a4b00b787cb48cca0fa63968ced5030aab81734a1ac901
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119537324"
 ---
-# <a name="cdispparams-class"></a>Cdispparameams-Klasse
+# <a name="cdispparams-class"></a>CDispParams-Klasse
 
-![cdispparameams-Klassenhierarchie](images/cutil11.png)
+![cdispparams-Klassenhierarchie](images/cutil11.png)
 
-Die- `CDispParams` Klasse implementiert die **dispparameams** -Struktur, die in Automation als C++-Basisklasse verwendet wird. Die Methode **IDispatch:: Aufrufen** verwendet die OLE **DISPPARAMS** -Struktur, um die Argumente zu enthalten, die an eine beliebige Methode oder Eigenschaft weitergegeben werden.
+Die `CDispParams` -Klasse implementiert die **DISPPARAMS-Struktur,** die in Automation als C++-Basisklasse verwendet wird. Die **IDispatch::Invoke-Methode** verwendet die OLE **DISPPARAMS-Struktur,** um die Argumente zu enthalten, die an eine beliebige Methode oder Eigenschaft übergeben werden.
 
 
 
-| Elementfunktionen                               | BESCHREIBUNG                          |
+| Elementfunktionen                               | Beschreibung                          |
 |------------------------------------------------|--------------------------------------|
-| [**Cdispparameams**](cdispparams-cdispparams.md) | Erstellt ein **cdispparameams** -Objekt. |
+| [**CDispParams**](cdispparams-cdispparams.md) | Erstellt ein **CDispParams-Objekt.** |
 
 
 

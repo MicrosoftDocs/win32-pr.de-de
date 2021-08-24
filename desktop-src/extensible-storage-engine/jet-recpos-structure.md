@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECPOS Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_RECPOS Struktur'
 title: JET_RECPOS Struktur
 TOCTitle: JET_RECPOS Structure
 ms:assetid: 7c335120-4b84-4095-8f13-e5315d4996b1
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e24e16aaac4228f35350f55f57a14f2820add0cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8b693f96d80352c758a1700bd2af4e435a948beeb73a268c08e997ef3e3b1d3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107489"
 ---
 # <a name="jet_recpos-structure"></a>JET_RECPOS Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_recpos-structure"></a>JET_RECPOS Struktur
 
-Die **JET_RECPOS** -Struktur enthält eine Auflistung von ganzen Zahlen, die eine Bruch Position innerhalb eines Indexes darstellen. **centrieslt** ist die Anzahl der Indexeinträge, die kleiner sind als der aktuelle Index Schlüssel. **centriesinrange** ist die Anzahl der Indexeinträge, die dem aktuellen Schlüssel entsprechen. **centriesinrange** wird nicht unterstützt und wird immer als 1 zurückgegeben. " **zentriestotal** " ist die Anzahl der Indexeinträge im Index. Alle Werte sind Näherungen, ohne die Genauigkeit zu gewährleisten.
+Die **JET_RECPOS-Struktur** enthält eine Auflistung von ganzen Zahlen, die eine Bruchposition innerhalb eines Indexes darstellen. **centriesLT** ist die Anzahl von Indexeinträgen, die kleiner als der aktuelle Indexschlüssel sind. **centriesInRange** ist die Anzahl von Indexeinträgen, die dem aktuellen Schlüssel entspricht. **centriesInRange** wird nicht unterstützt und immer als 1 zurückgegeben. **centriesTotal ist** die Anzahl der Indexeinträge im Index. Alle Werte sind Näherungen ohne Genauigkeitsgarantie.
 
 ```cpp
     typedef struct {
@@ -44,17 +44,17 @@ Die **JET_RECPOS** -Struktur enthält eine Auflistung von ganzen Zahlen, die ein
 
 **cbStruct**
 
-Die Größe der [JET_RETINFO](./jet-retinfo-structure.md) Struktur in Bytes. Dieser Wert bestätigt, dass die folgenden Felder vorhanden sind.
+Die Größe [](./jet-retinfo-structure.md) der JET_RETINFO-Struktur in Bytes. Dieser Wert bestätigt das Vorhandensein der folgenden Felder.
 
-**centrieslt**
+**centriesLT**
 
-Die ungefähre Anzahl der Indexeinträge, die kleiner als der aktuelle Schlüssel sind.
+Die ungefähre Anzahl von Indexeinträgen, die kleiner als der aktuelle Schlüssel sind.
 
-**centriesinrange**
+**centriesInRange**
 
-Die ungefähre Anzahl der Indexeinträge, die dem aktuellen Schlüssel entsprechen. Dieses Feld wird immer auf 1 festgelegt, unabhängig von der Anzahl der Indexeinträge, die tatsächlich dem aktuellen Schlüssel entsprechen.
+Die ungefähre Anzahl von Indexeinträgen, die dem aktuellen Schlüssel entspricht. Dieses Feld ist immer auf 1 festgelegt, unabhängig davon, wie viele Indexeinträge tatsächlich gleich dem aktuellen Schlüssel sind.
 
-**zentriestotal**
+**centriesTotal**
 
 Die ungefähre Anzahl von Einträgen im Index.
 
@@ -76,7 +76,7 @@ Die ungefähre Anzahl von Einträgen im Index.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -85,4 +85,4 @@ Die ungefähre Anzahl von Einträgen im Index.
 ### <a name="see-also"></a>Weitere Informationen
 
 [JET_RETINFO](./jet-retinfo-structure.md)  
-[Jetgetrecordposition](./jetgetrecordposition-function.md)
+[JetGetRecordPosition](./jetgetrecordposition-function.md)

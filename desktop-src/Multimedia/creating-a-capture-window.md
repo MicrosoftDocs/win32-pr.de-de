@@ -1,21 +1,21 @@
 ---
-title: Erstellen eines Aufzeichnungs Fensters
-description: Erstellen eines Aufzeichnungs Fensters
+title: Erstellen eines Erfassungsfensters
+description: Erstellen eines Erfassungsfensters
 ms.assetid: a727ce14-9b12-4f21-bab4-fa2eb245dce7
 keywords:
-- capkreatecapturewindow-Funktion
+- capCreateCaptureWindow-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28375da063839d3120ca60bdabd5ca997fa31b02
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 49d44e7701900d090a8d73b226039d468e2da817e9c0f9746fc10eaa13578d5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144773"
 ---
-# <a name="creating-a-capture-window"></a>Erstellen eines Aufzeichnungs Fensters
+# <a name="creating-a-capture-window"></a>Erstellen eines Erfassungsfensters
 
-Im folgenden Beispiel wird ein Aufzeichnungs Fenster mithilfe der [**capanatecapturewindow**](/windows/desktop/api/Vfw/nf-vfw-capcreatecapturewindowa) -Funktion erstellt.
+Im folgenden Beispiel wird ein Erfassungsfenster mithilfe der [**capCreateCaptureWindow-Funktion**](/windows/desktop/api/Vfw/nf-vfw-capcreatecapturewindowa) erstellt.
 
 
 ```C++
@@ -33,12 +33,12 @@ hWndC = capCreateCaptureWindow (
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video Capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

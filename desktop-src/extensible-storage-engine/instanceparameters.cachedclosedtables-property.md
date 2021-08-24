@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Eigenschaft "instanceparameters. cachedclosedtables".
-title: Instanceparameters. cachedclosedtables (Eigenschaft)
+description: Weitere Informationen finden Sie unter InstanceParameters.CachedClosedTables (Eigenschaft).
+title: InstanceParameters.CachedClosedTables (Eigenschaft)
 TOCTitle: 'CachedClosedTables property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.CachedClosedTables
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.cachedclosedtables(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8f2465de2df3d25293f5298d40700512b6a086d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae5a15f0e89dd01218690dd1654a24a883e1ef3b7f8d6f44edc359b72d0429e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112429"
 ---
-# <a name="instanceparameterscachedclosedtables-property"></a>Instanceparameters. cachedclosedtables (Eigenschaft)
+# <a name="instanceparameterscachedclosedtables-property"></a>InstanceParameters.CachedClosedTables (Eigenschaft)
 
-Ruft einen Wert ab, der die Anzahl der B +-strukturressourcen angibt, die von der-Instanz zwischengespeichert wurden, nachdem die von Ihnen dargestellten Tabellen von der Anwendung geschlossen wurden Große Werte für diesen Parameter bewirken, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, aber die Geschwindigkeit erhöht, mit der eine große Anzahl von Tabellen nach dem Zufallsprinzip von der Anwendung geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen. Unterstützt unter Windows Vista und up. Wird unter Windows XP und Windows Server 2003 ignoriert.
+Ruft einen Wert ab, der die Anzahl der B+-Strukturressourcen an gibt, die von der -Instanz zwischengespeichert werden, nachdem die tabellen, die sie darstellen, von der Anwendung geschlossen wurden, oder legt einen Wert fest. Große Werte für diesen Parameter führen dazu, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, erhöht jedoch die Geschwindigkeit, mit der eine große Anzahl von Tabellen nach dem Zufallsprinzip von der Anwendung geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen. Wird unter Windows Vista und up unterstützt. Wird auf Windows XP und Windows Server 2003 ignoriert.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int CachedClosedTables { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

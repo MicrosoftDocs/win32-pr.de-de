@@ -1,8 +1,8 @@
 ---
-description: Die CIM \_ mediapresent-Zuordnung beschreibt eine Beziehung, bei der über ein Medien Zugriffsgerät auf einen Speicherblock zugegriffen werden muss.
+description: Die CIM \_ MediaPresent-Zuordnung beschreibt eine Beziehung, in der über ein Medienzugriffsgerät auf einen Speicherbereich zugegriffen werden muss.
 ms.assetid: 84c4931c-1dc6-4fc1-b3b9-8252ecb627f5
 ms.tgt_platform: multiple
-title: CIM_MediaPresent-Klasse (cimwin32-WMI-Anbieter)
+title: CIM_MediaPresent-Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d033871a77a0433292c4a2ca1fae185df6aa5015
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: fb23d535c2bb189292281464e35897c5a877d467aac595ab18b3ef4f91d5e6e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103869540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119507050"
 ---
-# <a name="cim_mediapresent-class-cimwin32-wmi-providers"></a>CIM_MediaPresent-Klasse (cimwin32-WMI-Anbieter)
+# <a name="cim_mediapresent-class-cimwin32-wmi-providers"></a>CIM_MediaPresent-Klasse (CIMWin32-WMI-Anbieter)
 
-Die **CIM \_ mediapresent** -Zuordnung beschreibt eine Beziehung, bei der über ein Medien Zugriffsgerät auf einen Speicherblock zugegriffen werden muss.
+Die **CIM \_ MediaPresent-Zuordnung** beschreibt eine Beziehung, in der über ein Medienzugriffsgerät auf einen Speicherbereich zugegriffen werden muss.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_MediaPresent : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ mediapresent** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MediaPresent-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ mediapresent** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MediaPresent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ mediaaccessdevice**
+Datentyp: **CIM \_ MediaAccessDevice**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM \_ mediaaccessdevice**](cim-mediaaccessdevice.md) , das das Medien Zugriffsgerät beschreibt.
+Ein [**CIM \_ MediaAccessDevice,**](cim-mediaaccessdevice.md) der das Medienzugriffsgerät beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ storageblock**](cim-storageextent.md) , der den Speicherblock beschreibt, auf den über das Medien Zugriffsgerät zugegriffen wird.
+Cim [**\_ StorageExtent,**](cim-storageextent.md) der den Speicherbereich beschreibt, auf den über das Medienzugriffsgerät zugegriffen wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ mediapresent** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ MediaPresent-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu von **CIM \_ mediapresent** abgeleiteten Klassen finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Informationen zu Klassen, die von **CIM \_ MediaPresent** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

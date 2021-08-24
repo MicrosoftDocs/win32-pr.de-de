@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung, die Leistungsindikatoren unterstützt, muss unter dem Dienst Schlüssel über einen Leistungs Schlüssel verfügen. Das folgende Beispiel zeigt die Werte, die Sie für diesen Schlüssel einschließen müssen.
+description: Eine Anwendung, die Leistungsindikatoren unterstützt, muss unter dem Dienstschlüssel über einen Leistungsschlüssel verfügen. Das folgende Beispiel zeigt die Werte, die Sie für diesen Schlüssel einschließen müssen.
 ms.assetid: b6cdf130-699f-49bd-97b6-a580818b3fab
-title: Erstellen des Anwendungs Leistungs Schlüssels
+title: Erstellen des Anwendungsleistungsschlüssels
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d39fb89f7f5feb4e34284b541775b5c093a6bfe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c149e8142b892edeb43f5459fe68bc6ad4b7453118c64cb2e288bb334c054fff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144033"
 ---
-# <a name="creating-the-applications-performance-key"></a>Erstellen des Leistungs Schlüssels der Anwendung
+# <a name="creating-the-applications-performance-key"></a>Erstellen des Leistungsschlüssels der Anwendung
 
-Eine Anwendung, die Leistungsindikatoren unterstützt, muss unter dem **Dienst** Schlüssel über einen **Leistungs** Schlüssel verfügen. Das folgende Beispiel zeigt die Werte, die Sie für diesen Schlüssel einschließen müssen.
+Eine Anwendung, die Leistungsindikatoren unterstützt, muss unter dem **Dienstschlüssel** über einen **Leistungsschlüssel** verfügen. Das folgende Beispiel zeigt die Werte, die Sie für diesen Schlüssel einschließen müssen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -28,13 +28,13 @@ HKEY_LOCAL_MACHINE
                   Close = Name of your Close function in your DLL
 ```
 
-Der **Bibliotheks** Wert gibt den Namen der Leistungs-DLL an, und die Werte " **Open**", " **Collect**" und " **Close** " stellen die Namen der Funktionen bereit, die von der Leistungs-DLL exportiert werden. Der Datentyp dieser Werte ist **reg \_ SZ**. Wenn ein Consumer Leistungsdaten anfordert, verwendet das System diese Werte, um zu bestimmen, welche Leistungs-DLLs geladen und welche DLL-Funktionen aufgerufen werden.
+Der **Wert Library** stellt den Namen der Leistungs-DLL bereit, und die Werte **Open**, **Collect** und **Close** stellen die Namen der Funktionen bereit, die aus der Leistungs-DLL exportiert werden. Der Datentyp dieser Werte ist **REG \_ SZ.** Wenn ein Consumer Leistungsdaten anfordert, verwendet das System diese Werte, um zu bestimmen, welche Leistungs-DLLs geladen und welche DLL-Funktionen aufgerufen werden sollen.
 
-Der **Bibliotheks** Wert kann den DLL-Namen oder einen vollständigen Pfad zur dll enthalten. Wenn Sie den reg-Datentyp "reg" für die **Bibliothek** verwenden, können Sie Umgebungsvariablen in Ihrem Pfad angeben. **\_ \_**
+Der **Library-Wert** kann den DLL-Namen oder einen vollständigen Pfad zur DLL enthalten. Wenn Sie den **REG \_ EXPAND \_ SZ-Datentyp** für **Library** verwenden, können Sie Umgebungsvariablen in Ihrem Pfad angeben.
 
-Der Dienst Schlüssel der Anwendung muss vorhanden sein, bevor Sie **Lodctr** ausführen können, um ihre Namen und Hilfe Zeichenfolgen zu laden.
+Der Dienstschlüssel der Anwendung muss vorhanden sein, bevor Sie **lodctr** ausführen können, um Ihre Indikatornamen und Hilfezeichenfolgen zu laden.
 
-Weitere Registrierungs Werte, die Sie erstellen können, wie z. b. das Angeben von Timeout Werten für die [**openperformancedata**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) -Funktion und die [**collectperformancedata**](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) -Funktion, finden Sie unter [Erstellen anderer Registrierungseinträge](creating-other-registry-entries.md).
+Weitere Registrierungswerte, die Sie erstellen können, z. B. das Angeben von Time out-Werten für die Funktionen [**OpenPerformanceData**](/previous-versions/windows/desktop/legacy/aa372200(v=vs.85)) und [**CollectPerformanceData,**](/windows/win32/api/winperf/nc-winperf-pm_collect_proc) finden Sie unter [Creating Other Registry Entries](creating-other-registry-entries.md).
 
  
 

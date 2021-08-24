@@ -1,25 +1,25 @@
 ---
-title: Beispiel Abschnitt "Marquee"
-description: Beispiel Abschnitt "Marquee"
+title: Beispielabschnitt "Marquee"
+description: Beispielabschnitt "Marquee"
 ms.assetid: 44ed3257-2e1a-4b8d-9d55-a13b0400422d
 keywords:
-- Windows Media Player Mobile Skins, marquees
-- Skins, marquees
-- Referenz für Skins, marquees
-- marquees in Skins, Marquee (Abschnitt)
-- Skin-Definitions Dateien, Marquee-Abschnitt
+- Windows Media Player Mobile Skins, Marquees
+- Skins, Marquees
+- Referenz für Skins,Marquees
+- Marquees in skins,Marquee section
+- Skindefinitionsdateien,Abschnitt "Marquee"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f66588d81b22051a9289a80c8733d5cfe154bed
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 70f8a3e013bb3a09a06f03715f0e7c4914e8e8d344c55843a643d5b8a9bf0479
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119508120"
 ---
-# <a name="sample-marquee-section"></a>Beispiel Abschnitt "Marquee"
+# <a name="sample-marquee-section"></a>Beispielabschnitt "Marquee"
 
-Die folgenden Zeilen zeigen einen typischen Marquee-Abschnitt einer Skin-Definitionsdatei:
+Die folgenden Zeilen zeigen einen typischen Abschnitt "Marquee" einer Skindefinitionsdatei:
 
 
 ```C++
@@ -34,7 +34,7 @@ Die folgenden Zeilen zeigen einen typischen Marquee-Abschnitt einer Skin-Definit
 
 
 
-Dadurch wird ein Marquee-Anzeige Feld definiert, das den Titel und den Autor anzeigt, wenn beide definiert sind, den Titel, wenn nur der Titel definiert ist, oder den Namen des Autors, wenn nur der Autor definiert ist. Wenn keines von beiden definiert ist, wird nichts angezeigt.
+Dadurch wird ein Festzelt-Anzeigefeld definiert, in dem titel und author angezeigt werden, wenn beide definiert sind, den Titel, wenn nur Title definiert ist, oder den Namen des Autors, wenn nur Author definiert ist. Wenn keines von beiden definiert ist, wird nichts angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,9 +43,9 @@ Dadurch wird ein Marquee-Anzeige Feld definiert, das den Titel und den Autor anz
 [**Marquee**](marquee.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

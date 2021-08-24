@@ -1,63 +1,63 @@
 ---
-description: WMI-Anwendungen, die in C++ geschrieben wurden, können asynchrone Aufrufe durchführen, indem Sie viele der Methoden der COM-Schnittstelle IWbemServices verwenden.
+description: In C++ geschriebene WMI-Anwendungen können asynchrone Aufrufe mithilfe vieler Methoden der IWbemServices-COM-Schnittstelle vornehmen.
 ms.assetid: 5179969f-bc7d-4408-84ef-7b003950a59f
 ms.tgt_platform: multiple
-title: Erstellen eines asynchronen Aufrufes mit C++
+title: Erstellen eines asynchronen Aufrufs mit C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7f093aef4b1a1b4dbede53333e77d737f8efd69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcd988382399f3fc377476c486b363cf51db6c4d9ef559c787236e41bb74117a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131192"
 ---
-# <a name="making-an-asynchronous-call-with-c"></a>Erstellen eines asynchronen Aufrufes mit C++
+# <a name="making-an-asynchronous-call-with-c"></a>Erstellen eines asynchronen Aufrufs mit C++
 
-WMI-Anwendungen, die in C++ geschrieben wurden, können asynchrone Aufrufe durchführen, indem Sie viele der Methoden der COM-Schnittstelle [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) verwenden. Die empfohlene Vorgehensweise zum Aufrufen einer [*WMI-Methode*](gloss-w.md) oder einer [*Anbieter Methode*](gloss-p.md) ist jedoch die Verwendung von semisynchronen aufrufen, da semisynchrone Aufrufe sicherer als asynchrone Aufrufe sind. Weitere Informationen finden Sie unter [Erstellen eines semisynchronen Aufrufes mit C++](making-a-semisynchronous-call-with-c--.md) und [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+In C++ geschriebene WMI-Anwendungen können asynchrone Aufrufe mithilfe vieler Methoden der [**IWbemServices-COM-Schnittstelle**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) vornehmen. Das empfohlene Verfahren zum Aufrufen einer [*WMI-*](gloss-w.md) oder [*Anbietermethode*](gloss-p.md) ist jedoch die Verwendung von semisynchronen Aufrufen, da semisynchrone Aufrufe sicherer sind als asynchrone Aufrufe. Weitere Informationen finden Sie unter [Erstellen eines semisynchronen Aufrufs mit C++](making-a-semisynchronous-call-with-c--.md) und [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-Im folgenden Verfahren wird beschrieben, wie Sie einen asynchronen-Befehl durchführen, indem Sie die-Senke in Ihrem Prozess verwenden.
+Im folgenden Verfahren wird beschrieben, wie Sie mithilfe der Senke in Ihrem Prozess einen asynchronen Aufruf ausführen.
 
-**So führen Sie einen asynchronen aufrufbefehl mithilfe von C++ aus**
+**So erstellen Sie einen asynchronen Aufruf mit C++**
 
-1.  Implementieren Sie die [**iwbebobjectsink**](iwbemobjectsink.md) -Schnittstelle.
+1.  Implementieren Sie die [**IWbemObjectSink-Schnittstelle.**](iwbemobjectsink.md)
 
-    Alle Anwendungen, die asynchrone Aufrufe ausführen, müssen [**iwbemjebjectsink**](iwbemobjectsink.md)implementieren. Temporäre Ereignisconsumer implementieren ebenfalls " **iwbemubjectsink** ", um Benachrichtigungen über Ereignisse zu empfangen.
+    Alle Anwendungen, die asynchrone Aufrufe ausführen, müssen [**IWbemObjectSink**](iwbemobjectsink.md)implementieren. Temporäre Ereignisverbraucher implementieren auch **IWbemObjectSink,** um Benachrichtigungen über Ereignisse zu empfangen.
 
-2.  Melden Sie sich beim Ziel-WMI-Namespace an.
+2.  Melden Sie sich beim WMI-Zielnamespace an.
 
-    Anwendungen müssen während der Initialisierungsphase immer die com-Funktion [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) aufruft. Wenn dies nicht der Fall ist, bevor ein asynchroner Rückruf durchzuführen ist, gibt WMI die Anwendungs Senke frei, ohne dass der asynchrone-Befehl abgeschlossen ist. Weitere Informationen finden Sie unter [Initialisieren von com für eine WMI-Anwendung](initializing-com-for-a-wmi-application.md).
+    Anwendungen müssen während der Initialisierungsphase immer die COM-Funktion [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) aufrufen. Wenn sie dies nicht tun, bevor sie einen asynchronen Aufruf durchführen, gibt WMI die Anwendungssenke frei, ohne den asynchronen Aufruf abzuschließen. Weitere Informationen finden Sie unter [Initialisieren von COM für eine WMI-Anwendung.](initializing-com-for-a-wmi-application.md)
 
-3.  Legen Sie die Sicherheit für die Senke fest.
+3.  Legen Sie die Sicherheit für Ihre Senke fest.
 
-    Asynchrone Aufrufe erstellen eine Vielzahl von Sicherheitsproblemen, die möglicherweise behoben werden müssen, z. b., um den WMI-Zugriff auf Ihre Anwendung zuzulassen. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+    Asynchrone Aufrufe erzeugen eine Vielzahl von Sicherheitsproblemen, mit denen Sie möglicherweise umgehen müssen, z. B. das Zulassen des WMI-Zugriffs auf Ihre Anwendung. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-4.  Führen Sie den asynchronen aufrufsbefehl aus.
+4.  Nehmen Sie den asynchronen Aufruf vor.
 
-    Die-Methode gibt sofort mit dem Code für die **\_ \_ \_ Fehlermeldung "kein Fehler** " zurück. Die Anwendung kann mit anderen Aufgaben fortfahren, während darauf gewartet wird, dass der Vorgang beendet wird. WMI meldet an die Anwendung zurück, indem Methoden in der [**iwbemubjectsink**](iwbemobjectsink.md) -Implementierung der Anwendung aufgerufen werden.
+    Die -Methode gibt sofort mit dem **Erfolgscode WBEM \_ S NO \_ \_ ERROR** zurück. Die Anwendung kann mit anderen Aufgaben fortfahren, während auf den Abschluss des Vorgangs gewartet wird. WMI meldet die Anwendung zurück, indem Methoden in der [**IWbemObjectSink-Implementierung**](iwbemobjectsink.md) Ihrer Anwendung aufgerufen werden.
 
-5.  Überprüfen Sie ggf. die Implementierung regelmäßig auf Updates.
+5.  Überprüfen Sie bei Bedarf Ihre Implementierung in regelmäßigen Abständen auf Updates.
 
-    Anwendungen können eine Benachrichtigung über den zwischen Status erhalten, indem Sie den *lFlags* -Parameter im asynchronen WBEM-aufrufsflag- **\_ \_ Sende \_ Status** festlegen. WMI meldet den Status Ihres Aufrufes, indem er den *lFlags* -Parameter von [**iwbemubjectsink**](iwbemobjectsink.md) auf den **Status des WBEM- \_ Status \_** festlegt.
+    Anwendungen können eine Benachrichtigung über den Zwischenstatus erhalten, indem sie den *lFlags-Parameter* im asynchronen Aufruf von **WBEM \_ FLAG SEND \_ \_ STATUS** festlegen. WMI meldet den Status Ihres Aufrufs, indem der *lFlags-Parameter* von [**IWbemObjectSink**](iwbemobjectsink.md) auf **WBEM STATUS PROGRESS festgelegt \_ \_ wird.**
 
-6.  Falls erforderlich, können Sie den Aufruf abbrechen, bevor die Verarbeitung von WMI abgeschlossen ist, indem Sie die [**IWbemServices:: cancelcallasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) -Methode aufrufen.
+6.  Bei Bedarf können Sie den Aufruf abbrechen, bevor WMI die Verarbeitung beendet, indem Sie die [**IWbemServices::CancelCallAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) aufrufen.
 
-    Die [**cancelasynccall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) -Methode bricht die asynchrone Verarbeitung ab, indem Sie den Zeiger auf die [**IWbemObjectSink**](iwbemobjectsink.md) -Schnittstelle unmittelbar freigibt und sicherstellt, dass der Zeiger freigegeben wird, bevor **cancelasynccall** zurückgegeben wird.
+    Die [**CancelAsyncCall-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) bricht die asynchrone Verarbeitung ab, indem der Zeiger sofort auf die [**IWbemObjectSink-Schnittstelle**](iwbemobjectsink.md) freigegeben wird, und garantiert, dass der Zeiger freigegeben wird, bevor **CancelAsyncCall** zurückgegeben wird.
 
-    Wenn Sie ein Wrapper Objekt verwenden, das die **iunsichere** -Schnittstelle zum Hosten von [**iwbewbjectsink**](iwbemobjectsink.md)implementiert, finden Sie möglicherweise einige zusätzliche Komplikationen. Da die Anwendung denselben Zeiger an [**cancelasynccall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) übergeben muss, der in den ursprünglichen asynchronen-Befehl übergeben wurde, muss die Anwendung bis zum-Wrapper Objekt speichern, bis klar wird, dass kein Abbruch erforderlich ist. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+    Wenn Sie ein Wrapperobjekt verwenden, das die **IUnsecured-Schnittstelle** zum Hosten von [**IWbemObjectSink**](iwbemobjectsink.md)implementiert, treten möglicherweise zusätzliche Schwierigkeiten auf. Da die Anwendung den gleichen Zeiger an [**CancelAsyncCall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) übergeben muss, der im ursprünglichen asynchronen Aufruf übergeben wurde, muss die Anwendung an das Wrapperobjekt halten, bis klar wird, dass kein Abbruch erforderlich ist. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-7.  Wenn Sie fertig sind, bereinigen Sie die Zeiger, und fahren Sie die Anwendung herunter.
+7.  Wenn Sie fertig sind, bereinigen Sie Zeiger, und fahren Sie die Anwendung herunter.
 
-    WMI stellt den abschließenden Status-aufrufen über die [**SetStatus**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinitsink-setstatus) -Methode bereit.
+    WMI stellt den endgültigen Statusaufruf über die [**SetStatus-Methode**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemproviderinitsink-setstatus) bereit.
 
     > [!Note]  
-    > Nachdem die endgültige Statusaktualisierung gesendet wurde, wird die Objekt Senke von WMI freigegeben, indem die **releasemethode** für die Klasse aufgerufen wird, die die [**iwbewbjectsink**](iwbemobjectsink.md) -Schnittstelle implementiert. Im vorherigen Beispiel ist dies die **querysink:: Release** -Methode. Wenn Sie die Kontrolle über die Lebensdauer des Sink-Objekts haben möchten, können Sie die Senke mit einem anfänglichen Verweis Zähler von einem (1) implementieren.
+    > Nach dem Senden des endgültigen Statusupdates gibt WMI die Objektsenke frei, indem die **Release-Methode** für die Klasse aufgerufen wird, die die [**IWbemObjectSink-Schnittstelle**](iwbemobjectsink.md) implementiert. Im vorherigen Beispiel ist dies die **QuerySink::Release-Methode.** Wenn Sie die Lebensdauer des Senkenobjekts steuern möchten, können Sie die Senke mit einem anfänglichen Verweiszähler (1) implementieren.
 
      
 
-    Wenn eine Client Anwendung die gleiche Senke-Schnittstelle in zwei unterschiedlichen asynchronen Aufrufen übergibt, garantiert WMI nicht die Reihenfolge des Rückrufs. Eine Client Anwendung, die überlappende asynchrone Aufrufe durchläuft, sollte entweder unterschiedliche Sink-Objekte übergeben oder die Aufrufe serialisieren.
+    Wenn eine Clientanwendung dieselbe Senkenschnittstelle in zwei verschiedenen überlappenden asynchronen Aufrufen übergibt, garantiert WMI nicht die Reihenfolge des Rückrufs. Eine Clientanwendung, die überlappende asynchrone Aufrufe vornimmt, sollte entweder verschiedene Senkenobjekte übergeben oder die Aufrufe serialisieren.
 
-Im folgenden Beispiel sind die folgenden Referenz-und \# include-Anweisungen erforderlich.
+Das folgende Beispiel erfordert den folgenden Verweis und \# include-Anweisungen.
 
 
 ```C++
@@ -69,7 +69,7 @@ using namespace std;
 
 
 
-Im folgenden Beispiel wird beschrieben, wie eine asynchrone Abfrage mithilfe der [**ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) -Methode erstellt wird, aber keine Sicherheitseinstellungen erstellt oder das [**iwbemubjectsink**](iwbemobjectsink.md) -Objekt freigegeben wird. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+Im folgenden Beispiel wird beschrieben, wie eine asynchrone Abfrage mit der [**ExecQueryAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) erstellt wird, aber keine Sicherheitseinstellungen erstellt oder das [**IWbemObjectSink-Objekt**](iwbemobjectsink.md) veröffentlicht wird. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
 
 ```C++
@@ -103,7 +103,7 @@ if (hRes)
 
 
 > [!Note]  
-> Der obige Code wird nicht ohne Fehler kompiliert, weil die **querysink** -Klasse nicht definiert wurde. Weitere Informationen zu **querysink** finden Sie unter [**iwbemubjectsink**](iwbemobjectsink.md).
+> Der obige Code wird nicht ohne Fehler kompiliert, da die **QuerySink-Klasse** nicht definiert wurde. Weitere Informationen zu **QuerySink** finden Sie unter [**IWbemObjectSink**](iwbemobjectsink.md).
 
  
 

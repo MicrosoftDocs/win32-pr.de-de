@@ -1,7 +1,7 @@
 ---
-description: 'Die setclockdelta-Methode passt die Uhrzeit an. Diese Methode implementiert die iamclockadjust:: setclockdelta-Methode.'
+description: Die SetClockDelta-Methode passt die Uhrzeit an. Diese Methode implementiert die IAMClockAdjust::SetClockDelta-Methode.
 ms.assetid: 2bb9266f-3866-4b2e-92a8-cde31a501047
-title: Csystemclock. setclockdelta-Methode (sysclock. h)
+title: CSystemClock.SetClockDelta-Methode (Sysclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cc1027081cc8713cffd2979e20627c037d0799f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c98ccf35e41886594a3aab8c3abec6737128d8d7e22f6dfb75d0ac88ac3b7a02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538660"
 ---
-# <a name="csystemclocksetclockdelta-method"></a>Csystemclock. setclockdelta-Methode
+# <a name="csystemclocksetclockdelta-method"></a>CSystemClock.SetClockDelta-Methode
 
-Die- `SetClockDelta` Methode passt die Uhrzeit an. Diese Methode implementiert die [**iamclockadjust:: setclockdelta**](/windows/desktop/api/Strmif/nf-strmif-iamclockadjust-setclockdelta) -Methode.
+Die `SetClockDelta` -Methode passt die Uhrzeit an. Diese Methode implementiert die [**IAMClockAdjust::SetClockDelta-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamclockadjust-setclockdelta)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT SetClockDelta(
 
 <dl> <dt>
 
-*rtdelta* 
+*rtDelta* 
 </dt> <dd>
 
-Gibt den Betrag an, um den die Uhr als [**Verweis \_ Zeitwert**](reference-time.md) angepasst werden soll. Ein positiver Wert verschiebt die Uhr vorwärts, und ein negativer Wert verschiebt die Uhr nach unten.
+Gibt den Betrag an, um den die Uhr als [**REFERENCE \_ TIME-Wert**](reference-time.md) angepasst werden soll. Ein positiver Wert verschiebt die Uhr vorwärts, und ein negativer Wert verschiebt die Uhr rückwärts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen **HRESULT** -Fehlercode zurück.
+Gibt S \_ OK oder einen **HRESULT-Fehlercode** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft einfach [**cbasereferenceclock:: settimedelta**](cbasereferenceclock-settimedelta.md)auf.
+Diese Methode ruft einfach [**CBaseReferenceClock::SetTimeDelta**](cbasereferenceclock-settimedelta.md)auf.
 
-Die von [**IReferenceClock:: getTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) zurückgegebenen Zeit Werte werden monoton vergrößert. Wenn Sie die Uhr wieder festlegen, meldet **GetTime** weiterhin die alte Zeit, bis die interne Uhr abfängt.
+Die von [**IReferenceClock::GetTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) zurückgegebenen Zeitwerte erhöhen sich monoton. Wenn Sie die Uhr zurückgesetzt haben, meldet **GetTime** weiterhin die alte Zeit, bis die interne Uhr aufholt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,9 +65,9 @@ Die von [**IReferenceClock:: getTime**](/windows/desktop/api/Strmif/nf-strmif-ir
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Csystemclock-Klasse<br/>                                                                                                                                                              |
-| Header<br/>  | <dl> <dt>Sysclock. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Version<br/> | CSystemClock-Klasse<br/>                                                                                                                                                              |
+| Header<br/>  | <dl> <dt>Sysclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

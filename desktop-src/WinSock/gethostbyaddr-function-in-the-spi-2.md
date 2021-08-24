@@ -1,26 +1,26 @@
 ---
-description: Die wsalookupservicebegin-Abfrage verwendet svcid \_ inet \_ hostnamebyaddr als Dienst Klassen-GUID.
+description: Die WSALookupServiceBegin-Abfrage verwendet SVCID \_ INET \_ HOSTNAMEBYADDR als GUID der Dienstklasse.
 ms.assetid: 6fd54708-dbd0-4402-8eb8-9cdc42cd56ad
-title: Funktion "gethostbyaddr" in SPI
+title: gethostbyaddr-Funktion in der SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c94f4cdead3a19814e535e2dee80dfdcd0c9fa26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e343bcd66b7b1482f14a07239ae73710fd789486633219952696406dd8f1bd3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132313"
 ---
-# <a name="gethostbyaddr-function-in-the-spi"></a>Funktion "gethostbyaddr" in SPI
+# <a name="gethostbyaddr-function-in-the-spi"></a>gethostbyaddr-Funktion in der SPI
 
-Die [**wsalookupservicebegin**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) -Abfrage verwendet svcid \_ inet \_ hostnamebyaddr als Dienst Klassen-GUID. Die Host Adresse wird in *lpszserviceinstancename* als gepunktete Dezimalstellen-IPv4-Adress Zeichenfolge (z. b. 192.9.200.120) bereitgestellt. Der *Ws2 \_32.dll* gibt das \_ luprückgabeblob \_ an, und der NSP platziert eine [**hostende**](/windows/desktop/api/winsock/ns-winsock-hostent) Struktur im BLOB (verwendet Offsets anstelle von Zeigern, wie oben beschrieben). NSPs sollten auch diese anderen Lup- \_ rückgabeflags berücksichtigen \_ \* .
+Die [**WSALookupServiceBegin-Abfrage**](/windows/desktop/api/Winsock2/nf-winsock2-wsalookupservicebegina) verwendet SVCID \_ INET \_ HOSTNAMEBYADDR als GUID der Dienstklasse. Die Hostadresse wird in *lpszServiceInstanceName* als IPv4-Adresszeichenfolge mit gepunkteten Dezimalstellen angegeben (z.B. 192.9.200.120). Der *Ws232.dll\_* gibt LUP RETURN BLOB an, und der NSP platziert eine \_ \_ [**HOSTENT-Struktur**](/windows/desktop/api/winsock/ns-winsock-hostent) im Blob (mit Offsets anstelle von Zeigern, wie oben beschrieben). NSPs sollten auch diese anderen \_ LUP-RETURN-Flags \_ \* honoriert werden.
 
 
 
 | Flag              | Beschreibung                                                                                                                                                  |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name der Lup- \_ Rückgabe \_ | Gibt den **h- \_ Namen** Member aus der [**hostent**](/windows/desktop/api/winsock/ns-winsock-hostent) -Struktur in *lpszserviceinstancename* zurück.                                                     |
-| Lup \_ Return \_ addr | Gibt Adressierungs Informationen vom [**hostent**](/windows/desktop/api/winsock/ns-winsock-hostent) in [**csaddr \_**](/windows/win32/api/ws2def/ns-ws2def-csaddr_info) -Informationsstrukturen zurück, Port Informationen werden standardmäßig auf 0 (null) gesetzt. |
+| \_LUP-RÜCKGABENAME \_ | Gibt den **Member h \_ name** aus [**der HOSTENT-Struktur**](/windows/desktop/api/winsock/ns-winsock-hostent) in *lpszServiceInstanceName zurück.*                                                     |
+| \_ \_ LUP-RÜCKGABE-ADDR | Gibt Adressierungsinformationen [**von HOSTENT**](/windows/desktop/api/winsock/ns-winsock-hostent) in [**CSADDR \_ INFO-Strukturen**](/windows/win32/api/ws2def/ns-ws2def-csaddr_info) zurück. Portinformationen werden standardmäßig auf 0 (null) festgelegt. |
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: Generieren von RSoP-Planen von erweiterten Rechten
-description: Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne verfügt, kann die RSoP-Daten des Planungsmodus für die Benutzer oder Computer in der Organisationseinheit generieren.
+title: Erweitertes Recht "Generate-RSoP-Planning"
+description: Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne verfügt, kann RSoP-Daten im Planungsmodus für die Benutzer oder Computer innerhalb der Organisationseinheit generieren.
 ms.assetid: 4a874e47-c88b-4945-912b-7d4a2dd799df
 ms.tgt_platform: multiple
 keywords:
-- Generieren von RSoP-Planen des AD-Schemas für erweiterte Rechte
+- Generate-RSoP-Planning erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f20b7d3a6431dcc19e83f95c594fd0332e35eb2b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e00e8365f032559484d9c4dc1790586493dc5bb1b897e96dafb118c2c77c23a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531870"
 ---
-# <a name="generate-rsop-planning-extended-right"></a>Generieren von RSoP-Planen von erweiterten Rechten
+# <a name="generate-rsop-planning-extended-right"></a>Erweitertes Recht "Generate-RSoP-Planning"
 
-Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne verfügt, kann die RSoP-Daten des Planungsmodus für die Benutzer oder Computer in der Organisationseinheit generieren.
+Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne verfügt, kann RSoP-Daten im Planungsmodus für die Benutzer oder Computer innerhalb der Organisationseinheit generieren.
 
 
 
 | Eingabe | Wert |
 |--------------|---------------------------------------------|
-| CN           | Generieren von RSoP-Planning                      |
+| CN           | Generate-RSoP-Planning                      |
 | Anzeigename | Richtlinienergebnissatz erstellen (Planung) |
 | Rights-GUID  | b7b1b3dd-ab09-4242-9e30-9980e5d322f7        |
 
@@ -36,20 +36,20 @@ Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne v
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 55                                                                                                          |
+| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 55                                                                                                          |
 
 
 
@@ -59,8 +59,8 @@ Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne v
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 55                                                                                                          |
+| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 55                                                                                                          |
 
 
 
@@ -70,8 +70,8 @@ Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne v
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 55                                                                                                          |
+| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 55                                                                                                          |
 
 
 
@@ -81,8 +81,8 @@ Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne v
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 55                                                                                                          |
+| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 55                                                                                                          |
 
 
 
@@ -92,8 +92,8 @@ Der Benutzer, der über die Rechte für eine Organisationseinheit oder Domäne v
 
 | Eingabe | Wert |
 |-------------------------|-------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domäne: DNS**](c-domaindns.md)<br/> |
-| Lokalisierung-Display-ID | 55                                                                                                          |
+| Applies-To              | [**Organisationseinheit**](c-organizationalunit.md)<br/> [**Domänen-DNS**](c-domaindns.md)<br/> |
+| Lokalisierungsanzeige-ID | 55                                                                                                          |
 
 
 

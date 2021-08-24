@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvownermappagenotfoundexception-Konstruktor'
-title: Esentslvownermappagenotfoundexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVOwnerMapPageNotFoundException-Konstruktor'
+title: EsentSLVOwnerMapPageNotFoundException-Konstruktor
 TOCTitle: 'EsentSLVOwnerMapPageNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVOwnerMapPageNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvownermappagenotfoundexception.esentslvownermappagenotfoundexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6f24eab90f560b0e49d953588bc9f224ab289392
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85b29d0cecee551549f5de330d5379856dbf57e44458c76f685393d606824659
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119115020"
 ---
-# <a name="esentslvownermappagenotfoundexception-constructor"></a>Esentslvownermappagenotfoundexception-Konstruktor
+# <a name="esentslvownermappagenotfoundexception-constructor"></a>EsentSLVOwnerMapPageNotFoundException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVOwnerMapPageNotFoundException()
 public EsentSLVOwnerMapPageNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvownermappagenotfoundexception-Klasse](./esentslvownermappagenotfoundexception-class.md)
+[EsentSLVOwnerMapPageNotFoundException-Klasse](./esentslvownermappagenotfoundexception-class.md)
 
-[Esentslvownermappagenotfoundexception-Elemente](./esentslvownermappagenotfoundexception-members.md)
+[EsentSLVOwnerMapPageNotFoundException-Member](./esentslvownermappagenotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

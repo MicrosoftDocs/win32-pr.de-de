@@ -1,5 +1,5 @@
 ---
-description: Beschreibt eine Reihe von Klassen mit erforderlichen Eigenschaften und Methoden, die zum Verwalten einer realen Entität oder zur Unterstützung eines Verwendungs Szenarios auf interoperable Weise erforderlich sind.
+description: Beschreibt eine Gruppe von Klassen mit erforderlichen Eigenschaften und Methoden, die zum Verwalten einer realen Entität oder zur Unterstützung eines Verwendungsszenarios auf interoperable Weise erforderlich sind.
 ms.assetid: 75644856-3B47-43B8-835C-783A6BEE7251
 title: Msvm_RegisteredProfile-Klasse
 ms.topic: reference
@@ -23,16 +23,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a7014687355524fbe10ff01869cac6c3fd35a894
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0773ad1b7c992211e8bc578ac2cf2bea7706313918581ef2da9df8e2887b536d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119535770"
 ---
-# <a name="msvm_registeredprofile-class"></a>MSVM \_ registeredprofile-Klasse
+# <a name="msvm_registeredprofile-class"></a>Msvm \_ RegisteredProfile-Klasse
 
-Beschreibt eine Reihe von Klassen mit erforderlichen Eigenschaften und Methoden, die zum Verwalten einer realen Entität oder zur Unterstützung eines Verwendungs Szenarios auf interoperable Weise erforderlich sind.
+Beschreibt eine Gruppe von Klassen mit erforderlichen Eigenschaften und Methoden, die zum Verwalten einer realen Entität oder zur Unterstützung eines Verwendungsszenarios auf interoperable Weise erforderlich sind.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -56,39 +56,39 @@ class Msvm_RegisteredProfile : CIM_RegisteredProfile
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ registeredprofile** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ RegisteredProfile-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ registeredprofile** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ RegisteredProfile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Werbe Beschreibungen"**
+**AdvertiseTypeDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Zeichen folgen, das zusätzliche Informationen bereitstellt, die sich auf die " **Werbung** "-Eigenschaft beziehen. Es muss eine Beschreibung angegeben werden, wenn der **Typ** von "1 (sonstige)" lautet. Ein Eintrag in diesem Array entspricht dem gleichen Index im **Werbe Types** -Array. Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Ein Array von Zeichenfolgen, das zusätzliche Informationen im Zusammenhang mit der **AdvertiseType-Eigenschaft** enthält. Eine Beschreibung muss angegeben werden, wenn **"AdvertiseType"** den Wert 1 (Sonstige) hat. Ein Eintrag in diesem Array entspricht demselben Index im **AdvertiseTypes-Array.** Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 </dd> <dt>
 
-**Werbung Typen**
+**AdvertiseTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Ankündigung für die Profilinformationen an. Sie wird von den Ankündigungs Diensten der WBEM-Infrastruktur verwendet, um zu bestimmen, was durch welche Mechanismen angekündigt werden soll. Die-Eigenschaft ist ein Array, sodass das Profil mithilfe verschiedener Mechanismen angekündigt werden kann. Wenn diese Eigenschaft **null** ist, entspricht dies der Angabe des Werts 2 (nicht angekündigt). Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Gibt die Ankündigung für die Profilinformationen an. Sie wird von den Werbediensten der WBEM-Infrastruktur verwendet, um zu bestimmen, was mit welchen Mechanismen angekündigt werden soll. Die -Eigenschaft ist ein Array, sodass das Profil mit mehreren Mechanismen angekündigt werden kann. Wenn diese Eigenschaft NULL **ist,** entspricht dies der Angabe des Werts 2 (Nicht angekündigt). Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 <dl> <dt>
 
@@ -98,7 +98,7 @@ Gibt die Ankündigung für die Profilinformationen an. Sie wird von den Ankündi
 <span id="Not_Advertised"></span><span id="not_advertised"></span><span id="NOT_ADVERTISED"></span>**Nicht angekündigt** (2)
 </dt> <dt>
 
-<span id="SLP_"></span><span id="slp_"></span>**SLP** (3)
+<span id="SLP_"></span><span id="slp_"></span>**SLP** (3 )
 </dt> </dl>
 
 </dd> <dt>
@@ -112,7 +112,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -125,7 +125,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -138,7 +138,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
@@ -151,14 +151,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **override**
+Qualifizierer: **Schlüssel,** **Überschreibung**
 </dt> </dl>
 
-Eine Zeichenfolge, die eine Instanz dieser Klasse eindeutig identifiziert. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Zeichenfolge, die eine Instanz dieser Klasse eindeutig identifiziert. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Otherregisteredorganization**
+**OtherRegisteredOrganization**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -167,14 +167,14 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (256)
+Qualifizierer: **MaxLen** ( 256 )
 </dt> </dl>
 
-Eine Zeichenfolge, die eine Beschreibung der Organisation bereitstellt, wenn **RegisteredOrganization** 1 (Sonstiges) enthält. Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Eine Zeichenfolge, die eine Beschreibung der Organisation enthält, **wenn RegisteredOrganization** 1 (Other) enthält. Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 </dd> <dt>
 
-**Registeredname**
+**RegisteredName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -183,23 +183,23 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (256)
+Qualifizierer: **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name dieses registrierten Profils. Da für denselben **registeredname** mehrere Versionen vorhanden sein können, muss die Kombination von **registeredname**, **RegisteredOrganization** und **registeredversion** das registrierte Profil innerhalb des Bereichs der Organisation eindeutig identifizieren. Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Der Name dieses registrierten Profils. Da mehrere Versionen für denselben **RegisteredName** vorhanden sein können, muss die Kombination aus **RegisteredName,** **RegisteredOrganization** und **RegisteredVersion** das registrierte Profil innerhalb des Bereichs der Organisation eindeutig identifizieren. Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 </dd> <dt>
 
 **RegisteredOrganization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Organisation, die dieses Profil definiert. Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Die Organisation, die dieses Profil definiert. Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 <dl> <dt>
 
@@ -212,16 +212,16 @@ Die Organisation, die dieses Profil definiert. Diese Eigenschaft wird von [**CIM
 <span id="CompTIA"></span><span id="comptia"></span><span id="COMPTIA"></span>**CompTIA** (3)
 </dt> <dt>
 
-<span id="Consortium_for_Service_Innovation"></span><span id="consortium_for_service_innovation"></span><span id="CONSORTIUM_FOR_SERVICE_INNOVATION"></span>**Konsortium für Dienst Innovation** (4)
+<span id="Consortium_for_Service_Innovation"></span><span id="consortium_for_service_innovation"></span><span id="CONSORTIUM_FOR_SERVICE_INNOVATION"></span>**Consortium for Service Innovation** (4)
 </dt> <dt>
 
-<span id="FAST"></span><span id="fast"></span>**Schnell** (5)
+<span id="FAST"></span><span id="fast"></span>**FAST** (5)
 </dt> <dt>
 
-<span id="GGF"></span><span id="ggf"></span>**Ggf** . (6)
+<span id="GGF"></span><span id="ggf"></span>**GGF** (6)
 </dt> <dt>
 
-<span id="INTAP"></span><span id="intap"></span>**Einzug** (7)
+<span id="INTAP"></span><span id="intap"></span>**INTAP** (7)
 </dt> <dt>
 
 <span id="itSMF"></span><span id="itsmf"></span><span id="ITSMF"></span>**itSMF** (8)
@@ -230,10 +230,10 @@ Die Organisation, die dieses Profil definiert. Diese Eigenschaft wird von [**CIM
 <span id="NAC"></span><span id="nac"></span>**NAC** (9)
 </dt> <dt>
 
-<span id="__10___________Northwest_Energy_Efficiency_Alliance"></span><span id="__10___________northwest_energy_efficiency_alliance"></span><span id="__10___________NORTHWEST_ENERGY_EFFICIENCY_ALLIANCE"></span>**10 Nordwest-Energieeffizienz-Alliance** (10)
+<span id="__10___________Northwest_Energy_Efficiency_Alliance"></span><span id="__10___________northwest_energy_efficiency_alliance"></span><span id="__10___________NORTHWEST_ENERGY_EFFICIENCY_ALLIANCE"></span>**"10 Northwest Energy Efficiency Alliance"** (10)
 </dt> <dt>
 
-<span id="SNIA"></span><span id="snia"></span>**Sja** (11)
+<span id="SNIA"></span><span id="snia"></span>**SNIA** (11)
 </dt> <dt>
 
 <span id="TM_Forum"></span><span id="tm_forum"></span><span id="TM_FORUM"></span>**TM-Forum** (12)
@@ -260,18 +260,18 @@ Die Organisation, die dieses Profil definiert. Diese Eigenschaft wird von [**CIM
 <span id="W3C"></span><span id="w3c"></span>**W3C** (19)
 </dt> <dt>
 
-<span id="__20___________OGF"></span><span id="__20___________ogf"></span>**20 OGF** . (20)
+<span id="__20___________OGF"></span><span id="__20___________ogf"></span>**/20 OGF** (20)
 </dt> <dt>
 
-<span id="The_Green_Grid"></span><span id="the_green_grid"></span><span id="THE_GREEN_GRID"></span>**Grünes Raster** (21)
+<span id="The_Green_Grid"></span><span id="the_green_grid"></span><span id="THE_GREEN_GRID"></span>**Das grüne Raster** (21)
 </dt> <dt>
 
-<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF reserviert** (.. )
+<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF Reserved** (.. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Registeredversion**
+**RegisteredVersion**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -280,13 +280,13 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version dieses Profils. Die Zeichenfolge muss folgendes Format aufweisen: "*M*. *N*. *U*"WHERE:
+Die Version dieses Profils. Die Zeichenfolge muss im folgenden Formular sein: "*M*. *N*. *U*" Where:
 
--   *M* ist die Hauptversion (in numerischer Form), in der die Profilerstellung oder die letzte Änderung beschrieben wird.
--   *N* ist die neben Version (in numerischer Form), in der die Profilerstellung oder die letzte Änderung beschrieben wird.
--   *U* ist das Update (in numerischer Form), das die Profilerstellung oder die letzte Änderung beschreibt.
+-   *M* ist die Hauptversion (in numerischer Form), die die Erstellung oder letzte Änderung des Profils beschreibt.
+-   *N* ist die Nebenversion (in numerischer Form), die die Erstellung oder letzte Änderung des Profils beschreibt.
+-   *U* ist das Update (in numerischer Form), das die Erstellung oder letzte Änderung des Profils beschreibt.
 
-Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ RegisteredProfile geerbt.**](/previous-versions//ee309375(v=vs.85))
 
 </dd> </dl>
 
@@ -296,10 +296,10 @@ Diese Eigenschaft wird von [**CIM \_ registeredprofile**](/previous-versions//ee
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root- \\ Interop<br/>                                                                                |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\Stamm-Interop<br/>                                                                                |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -3,9 +3,9 @@ title: IMsRdpCameraRedirConfigCollection RedirectByDefault-Eigenschaft
 description: Gibt an, ob eine neue Kamera standardmäßig umgeleitet wird.
 ms.tgt_platform: multiple
 keywords:
-- Redirectbydefault-Eigenschaft Remotedesktopdienste
-- Redirectbydefault-Eigenschaft Remotedesktopdienste, imsrdpcameraredirconfigcollection-Schnittstelle
-- Imsrdpcameraredirconfigcollection-Schnittstelle Remotedesktopdienste, redirectbydefault (Eigenschaft)
+- RedirectByDefault-Remotedesktopdienste
+- RedirectByDefault-Eigenschaft Remotedesktopdienste , IMsRdpCameraRedirConfigCollection-Schnittstelle
+- IMsRdpCameraRedirConfigCollection-Schnittstelle Remotedesktopdienste , RedirectByDefault-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,14 +18,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 810af200eefee0008aea21af684c02b6d31325eb
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: 8c95431132acf5e3c08ede859520c844c4cae542f6b07dcb8e5781726078e754
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "104123284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475870"
 ---
-# <a name="imsrdpcameraredirconfigcollectionredirectbydefault-property"></a>Imsrdpcameraredirconfigcollection:: redirectbydefault (Eigenschaft)
+# <a name="imsrdpcameraredirconfigcollectionredirectbydefault-property"></a>IMsRdpCameraRedirConfigCollection::RedirectByDefault (Eigenschaft)
 
 Gibt an, ob eine neue Kamera standardmäßig umgeleitet wird.
 
@@ -45,7 +45,7 @@ HRESULT get_RedirectByDefault(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Wert, der angibt, ob eine neue Kamera standardmäßig umgeleitet wird.
+Ein -Wert, der angibt, ob standardmäßig eine neue Kamera umgeleitet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,9 +54,9 @@ Ein Wert, der angibt, ob eine neue Kamera standardmäßig umgeleitet wird.
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpcameraredirconfigcollection ist als AE45252B-aaab-4504-B681-649d6073a37a definiert.          |
+| IID                      | IID \_ IMsRdpCameraRedirConfigCollection ist als AE45252B-AAAB-4504-B681-649D6073A37A definiert.          |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

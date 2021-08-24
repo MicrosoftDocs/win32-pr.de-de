@@ -1,7 +1,7 @@
 ---
 description: Fordert an, dass der Status des Auftrags in den angegebenen Zustand geändert wird.
 ms.assetid: 5D7D7D20-4BB9-4375-BBBF-7AA64FEE6D13
-title: RequestStateChange-Methode der Msvm_ConcreteJob-Klasse
+title: RequestStateChange-Methode der Msvm_ConcreteJob Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0e7abf5f4bf78ac469e528ab72bb5786130e9cf8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 579ad52bd83bd43dc3071f704914eb7b5f9cae4f0be89f018e56b9608b1c12be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119501130"
 ---
-# <a name="requeststatechange-method-of-the-msvm_concretejob-class"></a>RequestStateChange-Methode der MSVM- \_ Klasse "concretejob"
+# <a name="requeststatechange-method-of-the-msvm_concretejob-class"></a>RequestStateChange-Methode der Msvm \_ ConcreteJob-Klasse
 
-Fordert an, dass der Status des Auftrags in den angegebenen Zustand geändert wird. Wenn Sie die **requestStateChange** -Methode mehrmals aufrufen, kann dies dazu führen, dass frühere Anforderungen überschrieben werden oder verloren gehen. Wenn 0 zurückgegeben wird, wurde der Task erfolgreich abgeschlossen. Jeder andere Rückgabecode weist auf eine Fehlerbedingung hin.
+Fordert an, dass der Status des Auftrags in den angegebenen Zustand geändert wird. Das mehrfache Aufrufen **der RequestStateChange-Methode** kann dazu führen, dass frühere Anforderungen überschrieben oder verloren gehen. Wenn 0 zurückgegeben wird, wurde die Aufgabe erfolgreich abgeschlossen. Jeder andere Rückgabecode gibt einen Fehlerzustand an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
-Typ: **UInt16**
+Typ: **uint16**
 
-Der neue Status eines Auftrags.
+Der neue Zustand eines Auftrags.
 
 <dt>
 
@@ -56,29 +56,29 @@ Der neue Status eines Auftrags.
 
 </dt> <dd>
 
-Ändert den Zustand in "wird ausgeführt".
+Ändert den Status in "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>
 
-<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Aussetzen** (3)
+<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Suspend** (3)
 
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Die Absicht besteht darin, den Auftrag mit "Start" neu zu starten. Möglicherweise ist es möglich, den Status "Dienst" in den Status "angehalten" einzugeben. (Dies ist Auftrags spezifisch.)
+Beendet den Auftrag vorübergehend. Anschließend soll der Auftrag mit "Start" neu gestartet werden. Es kann möglich sein, den Status "Dienst" zu erhalten, während er angehalten wird. (Dies ist auftragsspezifisch.)
 
 </dd> <dt>
 
 <span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>
 
-<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Beenden** (4)
+<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Terminate** (4)
 
 
 </dt> <dd>
 
-Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei und schließt alle zugrunde liegenden Prozesse ordnungsgemäß herunter.
+Beendet den Auftrag sauber, wobei Daten gespeichert, der Zustand beibehalten und alle zugrunde liegenden Prozesse in einer geordneten Weise heruntergefahren werden.
 
 </dd> <dt>
 
@@ -89,7 +89,7 @@ Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei un
 
 </dt> <dd>
 
-Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern oder den Zustand beizubehalten.
+Beendet den Auftrag sofort, ohne dass Daten gespeichert oder der Zustand beibehalten werden muss.
 
 </dd> <dt>
 
@@ -100,13 +100,13 @@ Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern od
 
 </dt> <dd>
 
-Versetzt den Auftrag in einen herstellerspezifischen Dienst Zustand. Möglicherweise ist es möglich, den Auftrag neu zu starten.
+Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Möglicherweise ist es möglich, den Auftrag neu zu starten.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert**
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved**
 
 
 </dt> <dd>
@@ -117,7 +117,7 @@ Reserviert.
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert**
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter**
 
 
 </dt> <dd>
@@ -126,18 +126,18 @@ Reserviert.
 
 </dd> </dl> </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Type: **DateTime**
+Typ: **datetime**
 
-Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (Use of Timeout Parameter not supported) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (Use Of Timeout Parameter Not Supported) zurückgegeben werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Werte zurück.
 
@@ -149,31 +149,31 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-**Unbekannter/nicht** angegebener Fehler (2)
+**Unbekannter/nicht angegebener Fehler** (2)
 </dt> <dt>
 
-**Kann nicht innerhalb des Timeout Zeitraums** (3) beendet werden.
+**Innerhalb des Timeoutzeitraums** (3) kann nicht abgeschlossen werden.
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**In Gebrauch** (6)
+**Wird verwendet** (6)
 </dt> <dt>
 
-**DMTF reserviert** (7 4095)
+**DMTF Reserved** (7 4095)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-der Übergang wurde gestartet** (4096).
+**Überprüfte Methodenparameter – Übergang gestartet** (4096)
 </dt> <dt>
 
-**Ungültiger Status Übergang** (4097).
+**Ungültiger Zustandsübergang** (4097)
 </dt> <dt>
 
-**Verwendung des timeout-Parameters wird nicht unterstützt** (4098)
+**Verwendung des Timeoutparameters nicht unterstützt** (4098)
 </dt> <dt>
 
 **Ausgelastet** (4099)
@@ -182,12 +182,12 @@ Fehler **(4** )
 **Reservierte Methode** (4100 32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768 65535)
+**Herstellerspezifisch** (32768 65535)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM-Klasse " \_ concretejob**](msvm-concretejob.md) " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -195,10 +195,10 @@ Der Zugriff auf die [**MSVM-Klasse " \_ concretejob**](msvm-concretejob.md) " ka
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -207,7 +207,7 @@ Der Zugriff auf die [**MSVM-Klasse " \_ concretejob**](msvm-concretejob.md) " ka
 
 <dl> <dt>
 
-[**MSVM- \_ concretejob**](msvm-concretejob.md)
+[**Msvm \_ ConcreteJob**](msvm-concretejob.md)
 </dt> </dl>
 
  

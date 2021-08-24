@@ -1,9 +1,9 @@
 ---
-title: TB_SETINSERTMARKCOLOR Meldung (kommstrg. h)
-description: Legt die Farbe fest, mit der die Einfügemarke für die Symbolleiste gezeichnet wird.
+title: TB_SETINSERTMARKCOLOR Nachricht (Commctrl.h)
+description: Legt die Farbe fest, die zum Zeichnen der Einfügemarke für die Symbolleiste verwendet wird.
 ms.assetid: 09a04449-9a1f-4f9a-b09f-9f22f930d735
 keywords:
-- Windows-Steuerelemente für TB_SETINSERTMARKCOLOR Meldung
+- TB_SETINSERTMARKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 954654d71a3e3b7bba9af287d3e92fb2362e8711
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 466c9bfe27462b11cc0c6cf3a183328ddedb1b422b4d0c07b4496c7a90f83890
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540040"
 ---
-# <a name="tb_setinsertmarkcolor-message"></a>TB- \_ Meldung "tmarkcolor"
+# <a name="tb_setinsertmarkcolor-message"></a>TB \_ SETINSERTMARKCOLOR-Meldung
 
-Legt die Farbe fest, mit der die Einfügemarke für die Symbolleiste gezeichnet wird.
+Legt die Farbe fest, die zum Zeichnen der Einfügemarke für die Symbolleiste verwendet wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die Farbe fest, mit der die Einfügemarke für die Symbolleiste gezeichnet 
 *lParam* 
 </dt> <dd>
 
-**COLORREF** -Wert, der die neue einfügemarkierungs Farbe enthält.
+**COLORREF-Wert,** der die neue Einfügemarkierungsfarbe enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **COLORREF** -Wert zurück, der die vorherige Einfügemarke enthält.
+Gibt einen **COLORREF-Wert** zurück, der die vorherige Einfügemarkierungsfarbe enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen **COLORREF** -Wert zurück, der die vorherige Einfügemarke enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen **COLORREF** -Wert zurück, der die vorherige Einfügemarke enthält.
 
 <dl> <dt>
 
-[**TB \_ getinsertmarkcolor**](tb-getinsertmarkcolor.md)
+[**TB \_ GETINSERTMARKCOLOR**](tb-getinsertmarkcolor.md)
 </dt> </dl>
 
  

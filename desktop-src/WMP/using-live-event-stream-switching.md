@@ -1,23 +1,23 @@
 ---
-title: Verwenden von Live ereignisstreamumschaltung
-description: Verwenden von Live ereignisstreamumschaltung
+title: Verwenden von Live Event Stream Switching
+description: Verwenden von Live Event Stream Switching
 ms.assetid: fa8af007-2db6-438f-9551-8e748bb79ef4
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Live ereignisstreamwechsel
-- Wiedergabelisten, Live ereignisstreamwechsel
-- Metadatei-Wiedergabelisten, Live ereignisstreamwechsel
-- Windows Media Metadatei-Wiedergabelisten, ereignisstreamwechsel
-- Wiedergabelisten, ereignisstreamwechsel
-- Metadatei-Wiedergabelisten, ereignisstreamwechsel
-- Windows Media Metadatei-Wiedergabelisten, AD-Einfügung
-- Wiedergabelisten, Werbe Einfügung
-- Metadatei-Wiedergabelisten, AD-Einfügung
-- Windows Media Player, Live ereignisstreamwechsel
-- Windows Media Player, ereignisstreamwechsel
-- Windows Media Player, Werbe Einfügung
-- Live ereignisstreamwechsel
-- ereignisstreamwechsel
-- Werbe Einfügung
+- Windows Wiedergabelisten von Medienmetadateien, Wechseln des Liveereignisstreams
+- Wiedergabelisten,Liveereignisstreamwechsel
+- Metafile-Wiedergabelisten,Liveereignisstreamwechsel
+- Windows Wiedergabelisten der Medienmetadatei, Wechseln des Ereignisdatenstroms
+- Wiedergabelisten, Wechseln des Ereignisdatenstroms
+- Metafile-Wiedergabelisten, Wechseln des Ereignisdatenstroms
+- Windows Wiedergabelisten von Medienmetadateien,Ad-Einfügung
+- Wiedergabelisten,Werbeeinfügung
+- Metafile-Wiedergabelisten, Werbeeinfügung
+- Windows Media Player,Liveereignisstreamwechsel
+- Windows Media Player,Ereignisstreamwechsel
+- Windows Media Player,Ad-Einfügung
+- Liveereignisstreamwechsel
+- Ereignisdatenstromwechsel
+- Werbeeinfügung
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -25,20 +25,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: fd5c586e0f1ef2b36913dee822e461daeffbfcbf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d8524fe1a83a6b3276c274726fa27fa7fcccb97b88f0384a54e5433d09380501
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134363"
 ---
-# <a name="using-live-event-stream-switching"></a>Verwenden von Live ereignisstreamumschaltung
+# <a name="using-live-event-stream-switching"></a>Verwenden von Live Event Stream Switching
 
-Streamingmedien können auch durch die Interaktion von Skript Befehlen gesteuert werden, die in einem Mediendaten Strom mit Windows Media-Metadatei-Elementen in einer Metadatei-Wiedergabeliste eingebettet sind.
+Streamingmedien können auch durch die Interaktion von Skriptbefehlen gesteuert werden, die in einen Medienstream eingebettet sind, Windows Medienmetadateielemente in einer Metadateiwiedergabeliste enthalten.
 
-Ein Ereignis ist eine bestimmte Art von Skript Befehl, der in einen Mediendaten Strom oder eine Mediendatei eingebettet ist. Wenn das Windows Media Player-Steuerelement den Skript Befehl empfängt, verarbeitet es das Ereignis gemäß der Definition durch das **Ereignis** Element in der Metadatendatei-Wiedergabeliste. Windows Media Player schaltet aus dem aktuellen Stream, der gerendert wird, und rendert den Inhalt, auf den im metadatenwiedergabe- **Ereignis** Element verwiesen wird. Das **Ereignis** Element wird in der Regel in der aktiven Produktion verwendet.
+Ein Ereignis ist ein bestimmter Typ von Skriptbefehl, der in einen Medienstream oder eine Mediendatei eingebettet ist. Wenn das Windows Media Player-Steuerelement den Skriptbefehl empfängt, verarbeitet es das Ereignis gemäß definition des **EVENT-Elements** in der Metadateiwiedergabeliste. Windows Media Player aus dem aktuellen Stream, der gerendert wird, und rendert den Inhalt, auf den im EVENT-Element der Metadateiwiedergabeliste **verwiesen** wird. Das **EVENT-Element** wird normalerweise in der Liveproduktion verwendet.
 
-Ein **Ereignis** Element ähnelt einem **Entry** -Element, aber jedes behandelt die Wiedergabe von Streams und Mediendateien anders. Das **Entry** -Element dient zum Erstellen von Wiedergabelisten. Ein Stream oder eine Mediendatei, auf die in einem **Entry** -Element verwiesen wird, beginnt, wenn der Stream oder die Mediendatei, auf die im vorherigen **Eintrag** verwiesen wird Ein in einem **Ereignis** referenzierter Stream wird nur wiedergegeben, wenn ein bestimmter Skript Befehl empfangen wird. Wenn Windows Media Player z. b. einen Skript Befehl mit dem Typ String "Event" und der Befehls Zeichenfolge "AdLINK" empfängt, wird die Wiedergabeliste nach den folgenden Elementen durchsucht.
+Ein **EVENT-Element** ähnelt einem **ENTRY-Element,** aber jedes behandelt die Wiedergabe von Streams und Mediendateien unterschiedlich. Das **ENTRY-Element** wird verwendet, um Wiedergabelisten zu erstellen. Ein Stream oder eine Mediendatei, auf die in einem **ENTRY-Element** verwiesen wird, beginnt mit der Wiedergabe, wenn der Stream oder die Mediendatei, auf die im vorherigen **ENTRY-Element** verwiesen wird, abgeschlossen ist. Ein Stream, auf den in einem **EVENT verwiesen** wird, wird nur dann wieder verwendet, wenn ein bestimmter Skriptbefehl empfangen wird. Wenn Windows Media Player beispielsweise einen Skriptbefehl mit der Typzeichenfolge "EVENT" und der Befehlszeichenfolge "Adlink" empfängt, durchsucht er die Wiedergabeliste nach den folgenden Elementen.
 
 
 ```XML
@@ -50,22 +50,22 @@ Ein **Ereignis** Element ähnelt einem **Entry** -Element, aber jedes behandelt 
 
 
 
-Windows Media Player wechselt dann aus dem Livestream zum Wiedergeben des Streams oder der Mediendatei, die im **Ereignis** enthalten ist, in diesem Fall "AdLINK. wma". Der Code `WHENDONE="RESUME"` weist Windows Media Player an, die Wiedergabe des vorherigen Streams fortzusetzen, wenn "AdLINK. wma" abgeschlossen ist.
+Windows Media Player dann aus dem Livestream, um den Stream oder die Mediendatei aus **dem EVENT** wiederderherzustellen , in diesem Fall Adlink.wma. Der Code weist Windows Media Player, die Wiedergabe des vorherigen Streams wieder `WHENDONE="RESUME"` aufzunehmen, wenn "Adlink.wma" abgeschlossen ist.
 
 > [!Note]  
-> Fehler bei der Behandlung von Ereignissen, die in einen Medienstrom oder eine Mediendatei eingebettet sind, können zu unerwarteten Ergebnissen führen.
+> Wenn nicht jedes in einen Medienstream oder eine Mediendatei eingebettete Ereignis behandelt wird, kann dies zu unerwarteten Ergebnissen führen.
 
- 
+ 
 
-Wenn Sie Live-ereignisstreamwechsel verwenden möchten, müssen Sie ein- **Ereignis** Element in die Wiedergabeliste einschließen, um jeden in den Mediendaten Strömen oder in den Mediendateien in der Wiedergabeliste eingebetteten Ereignis Skript Befehl zu verarbeiten. Bevor Sie die Wiedergabeliste erstellen, müssen Sie die Details darüber kennen, welche Skript Befehle in Ihren digitalen Medieninhalt eingebettet sind. Wenn ein Ereignis Skript Befehl ignoriert werden soll, der von Windows Media Player ignoriert werden soll, fügen Sie ein **Ereignis** Element in die Wiedergabeliste ein, um das Ereignis zu behandeln, aber verweisen Sie im Ereignishandler auf eine Pseudo-URL.
+Wenn Sie den Liveereignisstreamwechsel verwenden möchten, müssen Sie ein **EVENT-Element** in Ihre Wiedergabeliste einbetten, um jeden Ereignisskriptbefehl zu verarbeiten, der in die Medienstreams oder Mediendateien in Ihrer Wiedergabeliste eingebettet ist. Bevor Sie Ihre Wiedergabeliste erstellen, müssen Sie die Details darüber kennen, welche Skriptbefehle in Ihre digitalen Medieninhalte eingebettet sind. Wenn es einen Ereignisskriptbefehl gibt, den Windows Media Player ignorieren soll, schließen Sie ein **EVENT-Element** in Ihre Wiedergabeliste ein, um das Ereignis zu behandeln, verweisen sie jedoch im Ereignishandler auf eine Dummy-URL.
 
-## <a name="ad-insertion"></a>Werbe Einfügung
+## <a name="ad-insertion"></a>Werbeeinfügung
 
-Diese Technik kann für Werbe Einfügungs Vorgänge verwendet werden. Beispielsweise kann während eines Live-Internet Broadcast eines Ballspiels ein Befehl an den Anfang jeder kommerziellen Pause gesendet werden, der jeden Client (Windows Media Player) anweist, in der Wiedergabeliste aufgeführten Werbespots zu spielen. Wenn die Wiedergabe der Werbespots durch Clients abgeschlossen ist, weist die Wiedergabeliste jeden Client an, zur Liveübertragung zurückzukehren. Der Inhalt der **Ereignis** Medien wird nur dann gerendert, wenn die Streamingmedien, auf die zugegriffen wird, eingebettetes Skript mit dem passenden **Ereignis** Namen überträgt
+Diese Technik kann zum Einfügen von Werbeeinblendung verwendet werden. Beispielsweise kann während einer Liveübertragung eines Ballspiels im Internet ein Befehl zu Beginn jeder kommerziellen Pause gesendet werden, der jeden Client (Windows Media Player) anweisen soll, in seiner Wiedergabeliste aufgeführte Werbespots zu spielen. Wenn clients die Wiedergabe der Werbespots abgeschlossen hat, weist die Wiedergabeliste jeden Client an, die Liveübertragung wieder zu verwenden. Der  EVENT-Medieninhalt wird nur gerendert, wenn das Streamingmedium, auf das zugegriffen wird, eingebettete Skripts mit dem entsprechenden **EVENT-Namen** sendet.
 
-Die Möglichkeiten für den **Ereignis** Wechsel sind am besten zu schätzen, indem Sie den Betrachter über den standardmäßigen Broadcast Übertragungen erreichen, um zu erfahren, wie ADS mithilfe von Windows Media-Technologien Betrachter erreichen können. In der Vergangenheit konnten Broadcast-Werbeeinblendungen nur annähernd an Betrachter gerichtet sein, wobei die Bewertungsdaten als primäre Kriterien verwendet werden. Mithilfe von Windows Media-Technologien gesendete anzeigen können direkt auf den Ziel Benutzer ausgerichtet werden, da **Ereignisse** und Wiedergabelisten basierend auf Benutzereingaben dynamisch erstellt werden können. Weitere Informationen finden Sie unter [Personalisieren der Medien Bereitstellung](personalizing-media-delivery.md).
+Die Möglichkeiten des **EREIGNISwechsels** werden am besten geschätzt, indem sie gegenüber stellen, wie Anzeigen über die standardmäßige, over-the-air-Übertragung zu erreichenden Viewern gegenüber stehen, wie Anzeigen mithilfe von Medientechnologien Windows erreichen können. In der Vergangenheit konnten Broadcastanzeigen nur grob auf Betrachter ausgerichtet sein, indem Bewertungsdaten als primäre Kriterien verwendet werden. Anzeigen, die mithilfe Windows Media Technologies gesendet werden, können direkt auf den Zielbenutzer ausgerichtet werden, da **EVENTs** und Wiedergabelisten basierend auf Benutzereingaben direkt erstellt werden können. Weitere Informationen finden Sie unter [Personalizing Media Delivery (Personalisieren der Medienbereitstellung).](personalizing-media-delivery.md)
 
-Sie können auch Metadatei-Wiedergabelisten verwenden, um angepasste Grafiken, Audiodaten und Text für Werbung anzuzeigen. Sie können das **Banner** -Element als untergeordnetes Element eines **Ereignisses** verwenden, um eine Werbe Meldungs Grafik anzuzeigen. Das **Banner** -Element enthält den Pfad und die Datei mit den Grafiken für Ihr Werbe Banner. Mithilfe des untergeordneten **moreinfo** -Elements können Sie auch einen Link zu einer Website oder Datei bereitstellen. Die URL im **moreingefo** -Element kann einen Link zu weiteren Ankündigungen im Internet bereitstellen. Im folgenden Beispiel wird die Verwendung dieser Elemente veranschaulicht.
+Sie können auch Wiedergabelisten für Metadateien verwenden, um benutzerdefinierte Grafiken, Audiodaten und Text für Werbung anzuzeigen. Sie können das **BANNER-Element** als untergeordnetes Element eines **EREIGNISSEs verwenden,** um eine Werbemeldungsgrafik anzuzeigen. Das **BANNER-Element** stellt den Pfad und die Datei mit den Grafiken für Ihr Werbebanner dar. Sie können auch einen Link zu einer Website oder Datei bereitstellen, indem Sie das **untergeordnete MOREINFO-Element** verwenden. Die URL im **MOREINFO-Element** kann einen Link zu noch mehr Ankündigungen im Web bereitstellen. Im folgenden Beispiel wird die Verwendung dieser Elemente veranschaulicht.
 
 Beispielcode
 
@@ -80,7 +80,7 @@ Beispielcode
 
 
 
-Im folgenden Beispiel wird die Werbe Einblendungs-Datei "AD" in den Broadcast-Unicastdatenstrom eingefügt, wenn ein Client ein Skript Befehls **Ereignis** empfängt, bei dem das Attribut " **Name** " auf "Timeout" festgelegt ist. **Clientskip** ist auf "Nein" festgelegt, um zu verhindern, dass die gestreamte Werbung ausgelassen wird. In diesem Beispiel muss die gestreamte-Werbe Einblendung vor dem zurückkehren zum ursprünglichen Stream abgespielt werden. Wenn die Werbe Einstellung abgeschlossen ist, setzt der Client die Wiedergabe des ursprünglichen Streams fort.
+Im folgenden Beispiel wird die Ad-Datei "Streams.wma" in den Broadcast-Unicaststream BallGame eingefügt, wenn ein Client einen Skriptbefehl **EVENT** empfängt, bei dem das **NAME-Attribut** auf "Time-Out" festgelegt ist. **CLIENTSKIP ist** auf NO festgelegt, um zu verhindern, dass die gestreamte Werbeanzeige übersprungen wird. In diesem Beispiel muss die gestreamte Werbeanzeige vor der Rückkehr zum ursprünglichen Stream abgespielt werden. Wenn die Werbeanzeige abgeschlossen ist, setzt der Client die Wiedergabe des ursprünglichen Streams wieder.
 
 Beispielcode
 
@@ -112,15 +112,15 @@ Beispielcode
 [**Verwenden von Metafile-Wiedergabelisten**](using-metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

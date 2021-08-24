@@ -1,68 +1,68 @@
 ---
-title: Prozesse, Threads und Apartments
-description: Bei einem Prozess handelt es sich um eine Sammlung von virtuellem Speicherbereich, Code, Daten und Systemressourcen.
+title: Prozesse, Threads und Apartment
+description: Ein Prozess ist eine Sammlung von virtuellem Arbeitsspeicher, Code, Daten und Systemressourcen.
 ms.assetid: cb62412a-d079-40f9-89dc-cce0bf3889af
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d598fc9d7dd39ab070b58aa7ba45a6e2fcae90db
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 320b09d76200739c77c7202af4d53a35089b2eca2e6fd282dd507f048aa7a10b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130032"
 ---
-# <a name="processes-threads-and-apartments"></a>Prozesse, Threads und Apartments
+# <a name="processes-threads-and-apartments"></a>Prozesse, Threads und Apartment
 
-Bei einem *Prozess* handelt es sich um eine Sammlung von virtuellem Speicherbereich, Code, Daten und Systemressourcen. Ein *Thread* ist ein Code, der in einem Prozess seriell ausgeführt werden soll. Ein Prozessor führt Threads und keine Prozesse aus, sodass jede Anwendung mindestens einen Prozess aufweist und ein Prozess immer mindestens einen Ausführungs Thread aufweist, der als primärer Thread bezeichnet wird. Ein Prozess kann neben dem primären Thread mehrere Threads aufweisen.
+Ein *Prozess* ist eine Sammlung von virtuellem Arbeitsspeicher, Code, Daten und Systemressourcen. Ein *Thread* ist Code, der in einem Prozess seriell ausgeführt werden soll. Ein Prozessor führt Threads und keine Prozesse aus, sodass jede Anwendung über mindestens einen Prozess verfügt und ein Prozess immer über mindestens einen Ausführungsthread verfügt, der als primärer Thread bezeichnet wird. Ein Prozess kann zusätzlich zum primären Thread mehrere Threads haben.
 
-Prozesse kommunizieren über Nachrichten miteinander und verwenden die RPC-Technologie (Remote Procedure Aufruf) von Microsoft, um Informationen an einander zu übergeben. Es gibt keinen Unterschied zwischen einem Aufruf von einem Prozess auf einem Remote Computer und einem Aufruf von einem anderen Prozess auf demselben Computer.
+Prozesse kommunizieren über Nachrichten miteinander, indem sie die RPC-Technologie (Remote Procedure Call) von Microsoft verwenden, um Informationen aneinander zu übergeben. Es gibt keinen Unterschied zwischen einem Aufruf, der von einem Prozess auf einem Remotecomputer kommt, und einem Aufruf, der von einem anderen Prozess auf demselben Computer kommt.
 
-Wenn ein Thread gestartet wird, wird er so lange fortgesetzt, bis er abgebrochen wird, oder bis er von einem Thread mit höherer Priorität (durch eine Benutzeraktion oder den Thread Planer des Kernels) unterbrochen wird. Jeder Thread kann separate Code Abschnitte ausführen, oder mehrere Threads können denselben Code Abschnitt ausführen. Threads, die denselben Codeblock ausführen, behalten separate Stapel. Jeder Thread in einem Prozess teilt die globalen Variablen und Ressourcen dieses Prozesses.
+Wenn die Ausführung eines Threads beginnt, wird er fortgesetzt, bis er abgebrochen oder durch einen Thread mit höherer Priorität unterbrochen wird (durch eine Benutzeraktion oder den Threadplaner des Kernels). Jeder Thread kann separate Codeabschnitte ausführen, oder mehrere Threads können denselben Codeabschnitt ausführen. Threads, die denselben Codeblock ausführen, verwalten separate Stapel. Jeder Thread in einem Prozess teilt sich die globalen Variablen und Ressourcen dieses Prozesses.
 
-Der Thread Planer legt fest, wann und wie oft ein Thread ausgeführt werden soll. Dies entspricht einer Kombination des Prioritäts Klassen Attributs des Prozesses und der Basis Priorität des Threads. Sie legen das Prioritäts Klassen Attribut eines Prozesses fest, indem Sie die [**setpriorityclass**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) -Funktion aufrufen, und Sie legen die Basis Priorität eines Threads mit einem Aufruf von [**SetThreadPriority**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)fest.
+Der Threadplaner bestimmt anhand einer Kombination aus dem Prioritätsklassenattribut des Prozesses und der Basispriorität des Threads, wann und wie oft ein Thread ausgeführt werden soll. Sie legen das Prioritätsklassenattribut eines Prozesses fest, indem Sie die [**SetPriorityClass-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setpriorityclass) aufrufen, und Sie legen die Basispriorität eines Threads mit einem Aufruf von [**SetThreadPriority fest.**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)
 
-Multithreadanwendungen müssen zwei Threading Probleme vermeiden: *Deadlocks* und *Races*. Ein Deadlock tritt auf, wenn jeder Thread darauf wartet, etwas auszuführen. Das com-Aufruf Steuerelement hilft dabei, Deadlocks in Aufrufen zwischen Objekten zu verhindern. Eine Racebedingung tritt auf, wenn ein Thread vor einem anderen beendet wird, von dem er abhängt, sodass der erste einen nicht initialisierten Wert verwendet, da letztere noch keinen gültigen Wert bereitgestellt hat. COM bietet einige Funktionen, die speziell entwickelt wurden, um Racebedingungen in Prozess externen Servern zu vermeiden. (Siehe [Implementierungs Hilfen für Out-of-Process-Server](out-of-process-server-implementation-helpers.md).)
+Multithreadanwendungen müssen zwei Threadingprobleme vermeiden: *Deadlocks* und *.* Ein Deadlock tritt auf, wenn jeder Thread darauf wartet, dass der andere etwas macht. Die COM-Aufrufsteuerung hilft, Deadlocks in Aufrufen zwischen Objekten zu verhindern. Eine Racebedingung tritt auf, wenn ein Thread vor einem anderen abgeschlossen wird, von dem er abhängt, was dazu führt, dass ersterer einen nicht initialisierten Wert verwendet, da letzterer noch keinen gültigen bereitgestellt hat. COM bietet einige Funktionen, die speziell entwickelt wurden, um Racebedingungen auf Out-of-Process-Servern zu vermeiden. (Weitere Informationen [finden Sie unter Out-of-Process Server Implementation Helpers](out-of-process-server-implementation-helpers.md).)
 
-## <a name="the-apartment-and-the-com-threading-architecture"></a>Das Apartment und die COM-Threading Architektur
+## <a name="the-apartment-and-the-com-threading-architecture"></a>Das Apartment und die COM-Threadingarchitektur
 
-COM unterstützt das Modell mit einem Thread pro Prozess, das vor der Einführung mehrerer Ausführungs Threads weit verbreitet ist, aber Sie können Code schreiben, um mehrere Threads zu nutzen, was zu effizienteren Anwendungen führt, indem ein Thread ausgeführt werden kann, während ein anderer Thread auf den Abschluss eines zeitaufwändigen Vorgangs wartet.
-
-> [!Note]  
-> Die Verwendung mehrerer Threads ist keine Garantie für eine bessere Leistung. Tatsächlich verursacht die Verwendung mehrerer Threads häufig Leistungsprobleme, da die Thread Factoring ein schwieriges Problem ist. Der Schlüssel besteht darin, mehrere Threads nur zu verwenden, wenn Sie sich sehr sicher sind, was Sie tun.
-
- 
-
-Im Allgemeinen besteht die einfachste Möglichkeit zum Anzeigen der com-Threading Architektur darin, alle COM-Objekte im Prozess als unterteilt in Gruppen, die als " *Apartments*" bezeichnet werden, zu betrachten. Ein COM-Objekt befindet sich in genau einem Apartment, in dem Sinne, dass seine Methoden rechtmäßig direkt von einem Thread aufgerufen werden können, der zu diesem Apartment gehört. Jeder andere Thread, der das-Objekt aufrufen möchte, muss über einen Proxy verfügen.
-
-Es gibt zwei Arten von Apartments: [Single Thread-Apartments](single-threaded-apartments.md)und [Multithread-Apartments](multithreaded-apartments.md).
-
--   Single Thread-Apartments bestehen aus genau einem Thread, sodass alle COM-Objekte, die in einem Single Thread-Apartment Leben, nur Methodenaufrufe von einem Thread empfangen können, der zu diesem Apartment gehört. Alle Methodenaufrufe an ein COM-Objekt in einem Single Thread-Apartment werden mit der Windows-Nachrichten Warteschlange für den Thread des Single Thread-Apartment synchronisiert. Ein Prozess mit einem einzigen Ausführungs Thread ist einfach ein Sonderfall dieses Modells.
--   Multithreadwohnungen bestehen aus mindestens einem Thread, sodass alle COM-Objekte, die sich in einem Multithreadapartment befinden, Methodenaufrufe direkt von jedem Thread empfangen können, der zum Multithreadapartment gehört. Für Threads in einem Multithreadapartment wird ein Modell namens " *Free-Threading*" verwendet. Aufrufe von COM-Objekten in einem Multithread-Apartment werden von den Objekten selbst synchronisiert.
+Com unterstützt zwar das Singlethread-pro-Prozess-Modell, das vor der Einführung mehrerer Ausführungsthreads weit verbreitet war, aber Sie können Code schreiben, um mehrere Threads zu nutzen, was zu effizienteren Anwendungen führt, indem ein Thread ausgeführt werden kann, während ein anderer Thread auf den Abschluss eines zeitaufwändigen Vorgangs wartet.
 
 > [!Note]  
-> Eine Beschreibung der Kommunikation zwischen Single Thread-Apartments und Multithread-Apartments innerhalb desselben Prozesses finden Sie unter [Single Thread-und Multithread-Kommunikation](single-threaded-and-multithreaded-communication.md).
+> Die Verwendung mehrerer Threads ist keine Garantie für eine bessere Leistung. Da thread factoring ein schwieriges Problem ist, führt die Verwendung mehrerer Threads häufig zu Leistungsproblemen. Der Schlüssel ist, nur dann mehrere Threads zu verwenden, wenn Sie sicher sind, was Sie tun.
 
- 
+ 
 
-Ein Prozess kann über NULL oder mehr Single Thread-Apartments und NULL oder ein Multithread-Apartment verfügen.
+Im Allgemeinen besteht die einfachste Möglichkeit zum Anzeigen der COM-Threadingarchitektur in der Ansicht aller COM-Objekte im Prozess in Gruppen, die als *"Apartment" bezeichnet werden.* Ein COM-Objekt befindet sich in genau einem Apartment, in dem Sinne, dass seine Methoden nur direkt von einem Thread aufgerufen werden können, der zu diesem Apartment gehört. Jeder andere Thread, der das Objekt aufrufen möchte, muss einen Proxy verwenden.
 
-In einem Prozess ist das Haupt Apartment das erste, das initialisiert werden soll. In einem Single Thread-Prozess ist dies das einzige Apartment. Die Rückruf Parameter werden zwischen den Apartments gemarshallt, und com behandelt die Synchronisierung über Messaging. Wenn Sie mehrere Threads in einem Prozess als frei Thread festgelegt haben, befinden sich alle freien Threads in einem einzelnen Apartment, und die Parameter werden direkt an jeden Thread im Apartment übermittelt, und Sie müssen die gesamte Synchronisierung verarbeiten. In einem Prozess, der sowohl das kostenlose Threading als auch das Apartment Threading hat, befinden sich alle freien Threads in einem einzigen Apartment, und alle anderen Apartments sind Single Thread-Apartments. Ein Prozess, bei dem com funktioniert, ist eine Sammlung von Apartments, bei denen höchstens ein Multithread-Apartment, aber eine beliebige Anzahl von Single Thread-Apartments vorhanden ist.
+Es gibt zwei Arten von Apartment: [Singlethread-Apartment und](single-threaded-apartments.md) [Multithread-Apartment.](multithreaded-apartments.md)
 
-Die Threading Modelle in com bieten den Mechanismus für Clients und Server, die verschiedene Threading Architekturen für die Zusammenarbeit verwenden. Aufrufe zwischen Objekten mit unterschiedlichen Threading Modellen in verschiedenen Prozessen werden natürlich unterstützt. Aus der Perspektive des aufrufenden Objekts Verhalten sich alle Aufrufe von Objekten außerhalb eines Prozesses identisch, unabhängig davon, wie das Objekt, das aufgerufen wird, Thread Weise ist. Ebenso verhalten sich eintreffende Aufrufe aus der Perspektive des aufgerufenen Objekts identisch, unabhängig vom Threading Modell des Aufrufers.
+-   Singlethread-Apartment besteht aus genau einem Thread, sodass alle COM-Objekte, die in einem Singlethread-Apartment leben, Methodenaufrufe nur von dem einen Thread empfangen können, der zu diesem Apartment gehört. Alle Methodenaufrufe an ein COM-Objekt in einem Singlethread-Apartment werden mit der Windows-Nachrichtenwarteschlange für den Thread des Singlethread-Apartment synchronisiert. Ein Prozess mit einem einzelnen Ausführungsthread ist einfach ein Sonderfall dieses Modells.
+-   Multithread-Apartment besteht aus einem oder mehreren Threads, sodass alle COM-Objekte, die in einem Multithread-Apartment leben, Methodenaufrufe direkt von jedem der Threads empfangen können, die zum Multithread-Apartment gehören. Threads in einem Multithread-Apartment verwenden ein Modell namens *Freethreading.* Aufrufe von COM-Objekten in einem Multithread-Apartment werden von den Objekten selbst synchronisiert.
 
-Die Interaktion zwischen einem Client und einem Out-of-Process-Objekt ist einfach, auch wenn es verschiedene Threading Modelle verwendet, da sich der Client und das Objekt in verschiedenen Prozessen befinden. COM, das zwischen dem Client und dem Server interagiert, kann den Code für die Zusammenarbeit der Threading Modelle bereitstellen, indem Standard-Marshalling und RPC verwendet werden. Wenn z. b. ein Single Thread-Objekt gleichzeitig von mehreren frei Thread Clients aufgerufen wird, werden die Aufrufe durch com synchronisiert, indem entsprechende Fenster Meldungen in der Nachrichten Warteschlange des Servers platziert werden. Das Apartment des Objekts erhält jedes Mal einen Aufruf, wenn Nachrichten abgerufen und gesendet werden. Es muss jedoch ein gewisses Vorsicht geboten werden, um sicherzustellen, dass Prozess interne Server ordnungsgemäß mit ihren Clients interagieren. (Siehe [Threading Probleme in Process Server](in-process-server-threading-issues.md).)
+> [!Note]  
+> Eine Beschreibung der Kommunikation zwischen Singlethread-Apartment und Multithread-Apartment innerhalb desselben Prozesses finden Sie unter [Singlethread-Kommunikation und Multithreadkommunikation](single-threaded-and-multithreaded-communication.md).
 
-Das wichtigste Problem bei der Programmierung mit einem multithreadmodell besteht darin, den Code Thread sicher zu machen, sodass Nachrichten, die für einen bestimmten Thread vorgesehen sind, nur an diesen Thread gesendet werden und der Zugriff auf Threads geschützt ist.
+ 
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Ein Prozess kann null oder mehr Singlethread-Apartment und null oder ein Multithread-Apartment haben.
 
--   [Auswählen des Threading Modells](choosing-the-threading-model.md)
--   [Single Thread-Apartments](single-threaded-apartments.md)
--   [Multithread-Apartments](multithreaded-apartments.md)
--   [Single Thread-und Multithread-Kommunikation](single-threaded-and-multithreaded-communication.md)
--   [Threading Probleme im Prozess internen Server](in-process-server-threading-issues.md)
--   [Zugreifen auf Schnittstellen über mehrere Apartments](accessing-interfaces-across-apartments.md)
+In einem Prozess ist das Haupta apartment das erste, das initialisiert wird. In einem Singlethreadprozess ist dies das einzige Apartment. Aufrufparameter werden zwischen Apartments gemarshallt, und COM übernimmt die Synchronisierung per Messaging. Wenn Sie mehrere Threads in einem Prozess als Freethread festlegen, befinden sich alle freien Threads in einem einzigen Apartment, Parameter werden direkt an jeden Thread im Apartment übergeben, und Sie müssen die Synchronisierung durchführen. Bei einem Prozess mit Freethreading und Apartmentthreading befinden sich alle freien Threads in einem einzigen Apartment, und alle anderen Apartment-Threads sind Singlethread-Apartments. Ein Prozess, der COM-Arbeit abarbeitet, ist eine Sammlung von Apartments mit mindestens einem Multithread-Apartment, aber einer beliebigen Anzahl von Singlethread-Apartments.
 
- 
+Die Threadingmodelle in COM stellen den Mechanismus für Clients und Server dar, die unterschiedliche Threadingarchitekturen verwenden, um zusammen zu arbeiten. Aufrufe zwischen Objekten mit unterschiedlichen Threadingmodellen in verschiedenen Prozessen werden natürlich unterstützt. Aus Sicht des aufrufenden Objekts verhalten sich alle Aufrufe von Objekten außerhalb eines Prozesses identisch, unabhängig davon, wie das aufgerufene Objekt gethreadt wird. Aus Sicht des aufgerufenen Objekts verhalten sich die eintreffenden Aufrufe unabhängig vom Threadingmodell des Aufrufers identisch.
 
- 
+Die Interaktion zwischen einem Client und einem Out-of-Process-Objekt ist unkompliziert, auch wenn sie unterschiedliche Threadingmodelle verwenden, da sich Client und Objekt in unterschiedlichen Prozessen befinden. COM, das zwischen dem Client und dem Server erstellt wurde, kann den Code für die Interoperabilität der Threadingmodelle bereitstellen, indem Standard-Marshalling und RPC verwendet werden. Wenn beispielsweise ein Singlethreadobjekt gleichzeitig von mehreren Freethreadclients aufgerufen wird, werden die Aufrufe von COM synchronisiert, indem entsprechende Fenstermeldungen in der Nachrichtenwarteschlange des Servers platziert werden. Das Apartment des Objekts erhält bei jedem Abrufen und Senden von Nachrichten einen Aufruf. Es muss jedoch mit Vorsicht sichergestellt werden, dass Prozessserver ordnungsgemäß mit ihren Clients interagieren. (Weitere Informationen [finden Sie unter In-Process Server Threading Issues](in-process-server-threading-issues.md).)
+
+Das wichtigste Problem bei der Programmierung mit einem Multithreadmodell besteht in der Threadsicherheit Ihres Codes, sodass Nachrichten, die für einen bestimmten Thread vorgesehen sind, nur an diesen Thread gesendet werden und der Zugriff auf Threads geschützt ist.
+
+Weitere Informationen finden Sie in den folgenden Themen:
+
+-   [Auswählen des Threadingmodells](choosing-the-threading-model.md)
+-   [Singlethread-Apartment](single-threaded-apartments.md)
+-   [Multithread-Apartment](multithreaded-apartments.md)
+-   [Singlethread- und Multithreadkommunikation](single-threaded-and-multithreaded-communication.md)
+-   [In-Process-Serverthreadingprobleme](in-process-server-threading-issues.md)
+-   [Zugriff auf Schnittstellen über Mehrere Schnittstellen hinweg](accessing-interfaces-across-apartments.md)
+
+ 
+
+ 

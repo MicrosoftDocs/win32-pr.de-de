@@ -1,8 +1,8 @@
 ---
-description: Die Authority-Eigenschaft des "errbemubjectpath"-Objekts enthält eine Zeichenfolge, die die Autoritäts Komponente des Objekt Pfads definiert.
+description: Die Authority-Eigenschaft des SWbemObjectPath-Objekts enthält eine Zeichenfolge, die die Authority-Komponente des Objektpfads definiert.
 ms.assetid: f00e5759-03b4-4333-b89e-5f54db73c3b7
 ms.tgt_platform: multiple
-title: Errbemubjectpath. Authority-Eigenschaft (wbemdisp. h)
+title: SWbemObjectPath.Authority-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: c2b452f37f9f8d36b33596e032a82441a3507d42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a22ce7d66c965f612c1d50e619f8f1acdb1d92ad131894a5c2673eff29421e91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119503960"
 ---
-# <a name="swbemobjectpathauthority-property"></a>Errbemubjectpath. Authority (Eigenschaft)
+# <a name="swbemobjectpathauthority-property"></a>SWbemObjectPath.Authority-Eigenschaft
 
-Die **Authority** -Eigenschaft des " [**errbemubjectpath**](swbemobjectpath.md) "-Objekts enthält eine Zeichenfolge, die die Autoritäts Komponente des Objekt Pfads definiert. Weitere Informationen finden Sie unter dem Parameter " *stranauthority* " der Methode " [**Swap. ConnectServer**](swbemlocator-connectserver.md) " und [Festlegen der Sicherheit für IWbemServices und andere](setting-the-security-on-iwbemservices-and-other-proxies.md)Proxys.
+Die **Authority-Eigenschaft** des [**SWbemObjectPath-Objekts**](swbemobjectpath.md) enthält eine Zeichenfolge, die die Authority-Komponente des Objektpfads definiert. Weitere Informationen finden Sie im *strAuthority-Parameter* der [**SWbemLocator.ConnectServer-Methode**](swbemlocator-connectserver.md) und [unter Festlegen der Sicherheit für IWbemServices und andere Proxys.](setting-the-security-on-iwbemservices-and-other-proxies.md)
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,11 +51,11 @@ SWbemObjectPath.Authority As String
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Austausch Pfad<br/>                                                       |
-| IID<br/>                      | IID \_ iswbemubjectpath<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemObjectPath<br/>                                                       |
+| IID<br/>                      | IID \_ ISWbemObjectPath<br/>                                                        |
 
 
 

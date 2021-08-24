@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7dc0edc642687518979eab1d47c69af039bc3173
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3894e701b22f6380e591eccf978e84a1321f57a84485cea8a6e3116181f3f2c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538460"
 ---
 # <a name="ctransformoutputpincheckmediatype-method"></a>CTransformOutputPin.CheckMediaType-Methode
 
@@ -64,18 +64,18 @@ Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode implementiert die rein virtuelle [**CBasePin::CheckMediaType-Methode.**](cbasepin-checkmediatype.md) Die Methode schlägt fehl, wenn der Eingabepin des Filters nicht verbunden ist. Andernfalls wird die [**CTransformFilter::CheckTransform-Methode**](ctransformfilter-checktransform.md) des Filters aufgerufen, die ebenfalls rein virtuell ist. Die abgeleitete Klasse des Filters muss **CheckTransform** implementieren, wodurch bestimmt wird, ob der vorgeschlagene Ausgabemedientyp mit dem Eingabemedientyp kompatibel ist.
+Diese Methode implementiert die rein virtuelle [**CBasePin::CheckMediaType-Methode.**](cbasepin-checkmediatype.md) Die -Methode schlägt fehl, wenn der Eingabepin des Filters nicht verbunden ist. Andernfalls ruft sie die [**CTransformFilter::CheckTransform-Methode**](ctransformfilter-checktransform.md) des Filters auf, die ebenfalls rein virtuell ist. Die abgeleitete Klasse des Filters muss **CheckTransform** implementieren, das bestimmt, ob der vorgeschlagene Ausgabemedientyp mit dem Eingabemedientyp kompatibel ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

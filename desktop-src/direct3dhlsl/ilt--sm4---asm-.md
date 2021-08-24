@@ -1,23 +1,23 @@
 ---
-title: ILT (SM4-ASM)
-description: Der Komponenten Weise Vektor Integerwert ist kleiner als der Vergleich.
+title: ilt (sm4 - asm)
+description: Komponentenweiser Vektor ganzzahliger Kleiner-als-Vergleich.
 ms.assetid: 5F06E568-6234-4778-8169-D8352FAB5297
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2c2e5e47272412bb483e4782e9a6c35e971293c
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5b8d70e2c71ad0e503e7119abc2b28e76819053d843b0091d15bfd2045d5351d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119454"
 ---
-# <a name="ilt-sm4---asm"></a>ILT (SM4-ASM)
+# <a name="ilt-sm4---asm"></a>ilt (sm4 - asm)
 
-Der Komponenten Weise Vektor Integerwert ist kleiner als der Vergleich.
+Komponentenweiser Vektor ganzzahliger Kleiner-als-Vergleich.
 
 
 
-| ILT dest \[ . mask \] , src0 \[ . Swizzle \] , Quelle1 \[ . Swizzle\] |
+| ilt dest \[ .mask \] , src0 \[ .swizzle \] , src1 \[ .swizzle\] |
 |-------------------------------------------------------|
 
 
@@ -26,23 +26,23 @@ Der Komponenten Weise Vektor Integerwert ist kleiner als der Vergleich.
 
 
 
-| Element                                                            | BESCHREIBUNG                                       |
+| Element                                                            | Beschreibung                                       |
 |-----------------------------------------------------------------|---------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | Das Ergebnis des Vorgangs.<br/>           |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Wert, der mit *Quelle1* verglichen werden soll.<br/> |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[im \] Wert, der mit *src0* verglichen werden soll.<br/> |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | Das Ergebnis des Vorgangs.<br/>           |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der wert, der mit *src1 verglichen werden soll.*<br/> |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Der wert, der mit *src0 verglichen werden soll.*<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Führt den ganzzahligen Vergleich *(src0*  <  *Quelle1*) für jede Komponente aus und schreibt das Ergebnis in *dest*.
+Führt den *ganzzahligen Vergleich (src0*  <  *src1)* für jede Komponente aus und schreibt das Ergebnis in *dest.*
 
-Wenn der Vergleich true ist, wird 0xFFFFFFFF für diese Komponente zurückgegeben. Andernfalls wird 0x0000000 zurückgegeben.
+Wenn der Vergleich true ist, wird 0xFFFFFFFF Komponente zurückgegeben. Andernfalls 0x0000000 zurückgegeben.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -54,18 +54,18 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

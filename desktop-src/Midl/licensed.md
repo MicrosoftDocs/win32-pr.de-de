@@ -1,9 +1,9 @@
 ---
 title: licensed-Attribut
-description: Das Attribut \ lizenzierte \ gibt an, dass die Co-Klasse, auf die es angewendet wird, lizenziert ist und mit IClassFactory2 instanziiert werden muss.
+description: Das Attribut \licensed\ gibt an, dass die Co-Klasse, für die sie gilt, lizenziert ist und mit IClassFactory2 instanziiert werden muss.
 ms.assetid: c4789ea2-8ff6-423e-8b69-22a7a5392854
 keywords:
-- lizenzierte Attribute-Mittel l
+- lizenziertes Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1394f24d8b6136cab86615e74838737bbda543b9
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1b4320157216db18f595d67e172bc49de2d6050551732265060cb5a21339c908
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067206"
 ---
 # <a name="licensed-attribute"></a>licensed-Attribut
 
-Das **\[ lizenzierte \]** Attribut gibt an, dass die [**Co-Klasse**](coclass.md) , auf die Sie angewendet wird, lizenziert ist und mit [**IClassFactory2**](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)instanziiert werden muss.
+Das **\[ lizenzierte Attribut \]** gibt an, dass die [**Co-Klasse,**](coclass.md) für die es gilt, lizenziert ist und mit [**IClassFactory2 instanziiert werden muss.**](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)
 
 ``` syntax
 [
@@ -38,34 +38,34 @@ coclass classname
 
 <dl> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die [**Co-Klasse**](coclass.md) -Anweisung gelten. Zulässige **Co-Klasse** -Attribute sind **\[** [**HelpString**](helpstring.md) **\]** , **\[** [**HelpContext**](helpcontext.md) **\]** , **\[ lizenziert \]**, **\[** [**Version**](version.md) **\]** , **\[** [**Control**](control.md) **\]** und **\[** [**Hidden**](hidden.md) **\]** .
+Gibt null oder mehr Attribute an, die für die [**coclass-Anweisung gelten.**](coclass.md) Zulässige **Co-Klasse-Attribute** sind **\[** [**helpstring,**](helpstring.md) **\]** **\[** [**helpcontext,**](helpcontext.md) **\]** **\[ lizenziert, \]** **\[** [**version,**](version.md) **\]** **\[** [**control**](control.md)und **\]** **\[** [**hidden.**](hidden.md) **\]**
 
 </dd> <dt>
 
 *classname* 
 </dt> <dd>
 
-Gibt den Namen an, mit dem das Komponenten Objekt in der Typbibliothek bekannt ist.
+Gibt den Namen an, unter dem das Komponentenobjekt in der Typbibliothek bekannt ist.
 
 </dd> <dt>
 
-*coclass-Definition* 
+*coclass-definition* 
 </dt> <dd>
 
-Gibt die-Anweisungen an, die die [**Co-Klassen**](coclass.md) Definition bilden.
+Gibt Anweisungen an, aus denen sich die [**Co-Klasse-Definition**](coclass.md) zusammengibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Lizenzierung ist eine Funktion von com, die die Kontrolle über die Objekt Erstellung ermöglicht. Lizenzierte Objekte können nur von Clients erstellt werden, die zur Verwendung autorisiert sind. Die Lizenzierung wird in com über die [**IClassFactory2**](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) -Schnittstelle und durch Unterstützung eines Lizenzschlüssels implementiert, der zur Laufzeit übermittelt werden kann.
+Die Lizenzierung ist ein Feature von COM, das die Kontrolle über die Objekterstellung bietet. Lizenzierte Objekte können nur von Clients erstellt werden, die für deren Verwendung autorisiert sind. Die Lizenzierung wird in COM über die [**IClassFactory2-Schnittstelle**](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) und durch Unterstützung eines Lizenzschlüssels implementiert, der zur Laufzeit übergeben werden kann.
 
 ### <a name="flags"></a>Flags
 
-TYPEFLAG \_ geflichtet
+TYPEFLAG \_ FLICENSED
 
 ## <a name="examples"></a>Beispiele
 
@@ -91,10 +91,10 @@ coclass MyClass
 [Inhalt einer Typbibliothek](/previous-versions/windows/desktop/automat/contents-of-a-type-library)
 </dt> <dt>
 
-[**Steuerelement**](control.md)
+[**Steuerung**](control.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
 [**helpstring**](helpstring.md)
@@ -103,18 +103,18 @@ coclass MyClass
 [**helpcontext**](helpcontext.md)
 </dt> <dt>
 
-[**verbirgt**](hidden.md)
+[**Versteckte**](hidden.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
 [**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

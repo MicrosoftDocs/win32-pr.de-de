@@ -1,7 +1,7 @@
 ---
-description: Die Größe der einzelnen Puffer.
+description: Größe jedes Puffers.
 ms.assetid: 2f3b6409-6858-4975-98b8-c0c29cb14b90
-title: 'Cbasezucator:: m_lSize Member (amfilter. h)'
+title: CBaseAllocator::m_lSize-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ea8b1b81c5b6b324bc2fe5efda6ad36ad2fb3e48
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 476255140540743c9a24fab558f196364474bb38efba49c1312c0133424f1d3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119257260"
 ---
-# <a name="cbaseallocatorm_lsize-member"></a>Cbasezucator:: m \_ LSIZE-Member
+# <a name="cbaseallocatorm_lsize-member"></a>CBaseAllocator::m \_ lSize-Member
 
-Die Größe der einzelnen Puffer.
+Größe jedes Puffers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ long m_lSize;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

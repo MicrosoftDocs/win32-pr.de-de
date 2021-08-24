@@ -1,7 +1,7 @@
 ---
 description: Lädt eine Oberfläche von einer anderen Oberfläche mit Farbkonvertierung.
 ms.assetid: eddb420d-fd32-4c09-afec-435887c4e905
-title: D3DXLoadSurfaceFromSurface-Funktion (D3dx9tex. h)
+title: D3DXLoadSurfaceFromSurface-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7b5138ddf540c3e4a87fe65f29938cb3557b2360
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 28f239fb57ec0bccec120c5b2ea493a094e9cc6acc5b47fb19e9f7495ecde46f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119495310"
 ---
 # <a name="d3dxloadsurfacefromsurface-function"></a>D3DXLoadSurfaceFromSurface-Funktion
 
@@ -47,75 +47,75 @@ HRESULT D3DXLoadSurfaceFromSurface(
 
 <dl> <dt>
 
-*pdestsurface* \[ in\]
+*pDestSurface* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DSURFACE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9)**
 
-Zeiger auf eine [**IDirect3DSurface9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) -Schnittstelle. Gibt die Ziel Oberfläche an, die das Bild empfängt.
+Zeiger auf eine [**IDirect3DSurface9-Schnittstelle.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) Gibt die Zieloberfläche an, die das Bild empfängt.
 
 </dd> <dt>
 
-*pdestpalette* \[ in\]
+*pDestPalette* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die Ziel Palette von 256 Farben oder **null**.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die Zielpalette mit 256 Farben oder **NULL**.
 
 </dd> <dt>
 
-*pdestrect* \[ in\]
+*pDestRect* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**Rect**](/previous-versions//dd162897(v=vs.85)) \***
+Typ: **const [**RECT**](/previous-versions//dd162897(v=vs.85)) \***
 
-Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Gibt das Ziel Rechteck an. Legen Sie diesen Parameter auf **null** fest, um die gesamte Oberfläche anzugeben.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt das Zielrechteck an. Legen Sie diesen Parameter auf **NULL** fest, um die gesamte Oberfläche anzugeben.
 
 </dd> <dt>
 
-*psrcsurface* \[ in\]
+*pSrcSurface* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DSURFACE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9)**
 
-Zeiger auf eine [**IDirect3DSurface9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) -Schnittstelle, die die Quell Oberfläche darstellt.
+Zeiger auf eine [**IDirect3DSurface9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) die die Quelloberfläche darstellt.
 
 </dd> <dt>
 
-*psrcpalette* \[ in\]
+*pSrcPalette* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die Quell Palette von 256 Farben oder **null**.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die Quellpalette von 256 Farben oder **NULL**.
 
 </dd> <dt>
 
-*psrcrect* \[ in\]
+*pSrcRect* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**Rect**](/previous-versions//dd162897(v=vs.85)) \***
+Typ: **const [**RECT**](/previous-versions//dd162897(v=vs.85)) \***
 
-Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Gibt das Quell Rechteck an. Legen Sie diesen Parameter auf **null** fest, um die gesamte Oberfläche anzugeben.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt das Quellrechteck an. Legen Sie diesen Parameter auf **NULL** fest, um die gesamte Oberfläche anzugeben.
 
 </dd> <dt>
 
-*Filter* \[ in\]
+*Filterung* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md), die steuert, wie das Bild gefiltert wird. Die Angabe \_ von D3DX default für diesen Parameter entspricht der Angabe von D3DX \_ Filter \_ Dreieck \| D3DX \_ Filter \_ Dither.
+Eine Kombination aus einem oder mehreren [ \_ D3DX-FILTERN,](d3dx-filter.md)die steuern, wie das Bild gefiltert wird. Die Angabe von D3DX \_ DEFAULT für diesen Parameter entspricht der Angabe von D3DX FILTER TRIANGLE \_ \_ \| D3DX \_ FILTER \_ DITHER.
 
 </dd> <dt>
 
-*Colorkey* \[ in\]
+*ColorKey* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
-[**D3DCOLOR**](d3dcolor.md) -Wert, der durch transparente schwarze ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dabei handelt es sich immer um eine 32-Bit-ARGB-Farbe, die unabhängig vom Quell Bildformat ist. Alpha ist signifikant und sollte normalerweise für nicht transparente Farbtasten auf FF festgelegt werden. Daher wäre der Wert für den Wert "0xFF000000" gleich.
+[**D3DCOLOR-Wert,**](d3dcolor.md) der durch transparentes Schwarz ersetzt werden soll, oder 0, um den Farbschlüssel zu deaktivieren. Dies ist immer eine 32-Bit-ARGB-Farbe, unabhängig vom Quellbildformat. Alpha ist von Bedeutung und sollte in der Regel für nicht transparente Farbschlüssel auf FF festgelegt werden. Daher wäre der Wert für nicht transparentes Schwarz gleich 0xFF000000.
 
 </dd> </dl>
 
@@ -123,13 +123,13 @@ Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion übernimmt die Konvertierung in und aus komprimierten Textur Formaten.
+Diese Funktion verarbeitet die Konvertierung in und aus komprimierten Texturformaten.
 
-Das Schreiben in eine Oberfläche ohne Ebene bewirkt nicht, dass das geänderte Rechteck aktualisiert wird. Wenn **D3DXLoadSurfaceFromSurface** aufgerufen wird und die Oberfläche nicht bereits geändert wurde (Dies ist unwahrscheinlich in normalen Verwendungs Szenarien), muss die Anwendung [**AddDirtyRect**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dtexture9-adddirtyrect) explizit auf der-Oberfläche aufrufen.
+Das Schreiben in eine Oberfläche ungleich null führt nicht dazu, dass das geänderte Rechteck aktualisiert wird. Wenn **D3DXLoadSurfaceFromSurface** aufgerufen wird und die Oberfläche nicht bereits geändert wurde (dies ist in normalen Verwendungsszenarien unwahrscheinlich), muss die Anwendung [**AddDirtyRect**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dtexture9-adddirtyrect) explizit auf der Oberfläche aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,8 +137,8 @@ Das Schreiben in eine Oberfläche ohne Ebene bewirkt nicht, dass das geänderte 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -146,7 +146,7 @@ Das Schreiben in eine Oberfläche ohne Ebene bewirkt nicht, dass das geänderte 
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

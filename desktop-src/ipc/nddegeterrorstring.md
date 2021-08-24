@@ -1,7 +1,7 @@
 ---
-description: Konvertiert einen Fehlercode, der von einer Network DDE-Funktion zurückgegeben wird, in eine Fehler Zeichenfolge, die den zurückgegebenen Fehlercode
+description: Konvertiert einen Fehlercode, der von einer Netzwerk-DDE-Funktion zurückgegeben wird, in eine Fehlerzeichenfolge, die den zurückgegebenen Fehlercode erläutert.
 ms.assetid: 7077e3bc-df6e-401b-9ac7-15144b79af96
-title: Nddebug. String-Funktion (nddecoapi. h)
+title: NDdeGetErrorString-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: 8e043c8281d3ad049346ac7ce68991eb6bd08af6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 728ccd283f0f65caafd6f23781bd75f18e9c796ad2fb147f00ab6350c53bfd2c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119557040"
 ---
-# <a name="nddegeterrorstring-function"></a>Nddebug-terrorstring-Funktion
+# <a name="nddegeterrorstring-function"></a>NDdeGetErrorString-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NICHT \_ IMPLEMENTIERT zurück.\]
 
-Konvertiert einen Fehlercode, der von einer Network DDE-Funktion zurückgegeben wird, in eine Fehler Zeichenfolge, die den zurückgegebenen Fehlercode
+Konvertiert einen Fehlercode, der von einer Netzwerk-DDE-Funktion zurückgegeben wird, in eine Fehlerzeichenfolge, die den zurückgegebenen Fehlercode erläutert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,24 +45,24 @@ UINT NDdeGetErrorString(
 
 <dl> <dt>
 
-*uerrorcode* \[ in\]
+*uErrorCode* \[ In\]
 </dt> <dd>
 
-Der Fehlercode, der in eine Fehler Zeichenfolge konvertiert werden soll.
+Der Fehlercode, der in eine Fehlerzeichenfolge konvertiert werden soll.
 
 </dd> <dt>
 
-*lpszerrorstring* \[ vorgenommen\]
+*lpszErrorString* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die übersetzte Fehler Zeichenfolge empfängt. Dieser Parameter darf nicht **null** sein. Wenn der Puffer nicht groß genug ist, um die gesamte Fehler Zeichenfolge zu speichern, wird die Zeichenfolge abgeschnitten.
+Ein Zeiger auf einen Puffer, der die übersetzte Fehlerzeichenfolge empfängt. Dieser Parameter darf nicht **NULL sein.** Wenn der Puffer nicht groß genug ist, um die vollständige Fehlerzeichenfolge zu speichern, wird die Zeichenfolge abgeschnitten.
 
 </dd> <dt>
 
-*cbubsize* \[ in\]
+*cBufSize* \[ In\]
 </dt> <dd>
 
-Die Größe des Puffers, der die Fehler Zeichenfolge empfängt, in **tchars**.
+Die Größe des Puffers, der die Fehlerzeichenfolge empfangen soll, in **TCHARs**.
 
 </dd> </dl>
 
@@ -70,7 +70,7 @@ Die Größe des Puffers, der die Fehler Zeichenfolge empfängt, in **tchars**.
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert „0“.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null). Wenn der *lpszerrorstring* -Puffer nicht groß genug ist, um die gesamte Fehler Zeichenfolge zu akzeptieren, und die Zeichenfolge abgeschnitten wird, gibt die Funktion den Wert "ndde \_ internal error" zurück \_ .
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null). Wenn der *lpszErrorString-Puffer* nicht groß genug ist, um die vollständige Fehlerzeichenfolge zu akzeptieren, und die Zeichenfolge abgeschnitten wird, gibt die Funktion den Wert NDDE \_ INTERNAL ERROR \_ zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,10 +80,10 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Ndbegeterrorstringw** (Unicode) und **nddebug** (ANSI)<br/>        |
+| Unicode- und ANSI-Name<br/>   | **NDdeGetErrorStringW** (Unicode) und **NDdeGetErrorStringA** (ANSI)<br/>        |
 
 
 
@@ -91,10 +91,10 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Übersicht dynamische Daten Exchange Netzwerksicherheit](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[DDE-Netzwerkfunktionen](network-dde-functions.md)
 </dt> </dl>
 
  

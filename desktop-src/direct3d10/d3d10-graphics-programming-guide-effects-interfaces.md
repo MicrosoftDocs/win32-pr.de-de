@@ -1,72 +1,72 @@
 ---
-description: 'Das Effect-System definiert mehrere Schnittstellen zur Verwaltung des Wirkungs Zustands. Es gibt zwei Arten von Schnittstellen: solche, die von der Laufzeit verwendet werden, um einen Effekt und reflektionsschnittstellen zum erhalten und Festlegen von Effekt Variablen zu erzeugen.'
+description: 'Das Effektsystem definiert mehrere Schnittstellen zum Verwalten des Effektzustands. Es gibt zwei Arten von Schnittstellen: diejenigen, die von der Laufzeit zum Rendern von Effekt- und Reflektionsschnittstellen zum Abrufen und Festlegen von Effektvariablen verwendet werden.'
 ms.assetid: 068d49d2-0e14-4080-9fee-20d984f22545
-title: Effect-System Schnittstellen (Direct3D 10)
+title: Effektsystemschnittstellen (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b40b21d98bedaec65550343260e7c52e2df1c302
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5d5d640b31d0d1db9ac9b58ed166b45acff762b30edc0e71f1d7138b5818b3e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128392"
 ---
-# <a name="effect-system-interfaces-direct3d-10"></a>Effect-System Schnittstellen (Direct3D 10)
+# <a name="effect-system-interfaces-direct3d-10"></a>Effektsystemschnittstellen (Direct3D 10)
 
-Das Effect-System definiert mehrere Schnittstellen zur Verwaltung des Wirkungs Zustands. Es gibt zwei Arten von Schnittstellen: solche, die von der Laufzeit verwendet werden, um einen Effekt und reflektionsschnittstellen zum erhalten und Festlegen von Effekt Variablen zu erzeugen.
+Das Effektsystem definiert mehrere Schnittstellen zum Verwalten des Effektzustands. Es gibt zwei Arten von Schnittstellen: diejenigen, die von der Laufzeit zum Rendern von Effekt- und Reflektionsschnittstellen zum Abrufen und Festlegen von Effektvariablen verwendet werden.
 
--   [Lauf Zeit Schnittstellen von Effekten](#effect-runtime-interfaces)
--   [Effekt reflektionseschnittstellen](#effect-reflection-interfaces)
+-   [Effektlaufzeitschnittstellen](#effect-runtime-interfaces)
+-   [Effektreflektionsschnittstellen](#effect-reflection-interfaces)
 
-## <a name="effect-runtime-interfaces"></a>Lauf Zeit Schnittstellen von Effekten
+## <a name="effect-runtime-interfaces"></a>Effektlaufzeitschnittstellen
 
-Verwenden Sie Lauf Zeit Schnittstellen zum Rendering eines Effekts.
+Verwenden Sie Laufzeitschnittstellen, um einen Effekt zu rendern.
 
 
 
-| Lauf Zeit Schnittstellen                                               | BESCHREIBUNG                                                          |
+| Laufzeitschnittstellen                                               | Beschreibung                                                          |
 |------------------------------------------------------------------|----------------------------------------------------------------------|
-| [**ID3D10Effect-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effect)                   | Sammlung von einer oder mehreren Techniken zum Rendern.                  |
-| [**ID3D10Include-Schnittstelle**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))                 | Eine Schnittstelle zum Hinzufügen benutzerdefinierter Verhalten beim Lesen von Includedateien. |
-| [**ID3D10EffectPass-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectpass)           | Eine Auflistung von Zustands Zuweisungen.                                   |
-| [**ID3D10EffectPool-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectpool)           | Erstellen Sie einen Speicherort für Variablen, die zwischen Effekten gemeinsam verwendet werden sollen. |
+| [**ID3D10Effect-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effect)                   | Auflistung von einem oder mehreren Techniken zum Rendern.                  |
+| [**ID3D10Include-Schnittstelle**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))                 | Eine Schnittstelle zum Hinzufügen benutzerdefinierter Verhaltensweisen beim Lesen von Includedateien. |
+| [**ID3D10EffectPass-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectpass)           | Eine Auflistung von Zustandszuweisungen.                                   |
+| [**ID3D10EffectPool-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectpool)           | Erstellen Sie einen Speicherort für Variablen, die von den Effekten gemeinsam genutzt werden sollen. |
 | [**ID3D10EffectTechnique-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effecttechnique) | Eine Auflistung von einem oder mehreren Durchläufen.                                  |
 
 
 
  
 
-## <a name="effect-reflection-interfaces"></a>Effekt reflektionseschnittstellen
+## <a name="effect-reflection-interfaces"></a>Effektreflektionsschnittstellen
 
-Reflektion wird im Effektsystem implementiert, um das Lesen (und schreiben) des Wirkungs Zustands zu unterstützen. Es gibt mehrere Möglichkeiten, auf Wirkungs Variablen zuzugreifen.
+Reflektion wird im Effektsystem implementiert, um das Lesen (und Schreiben) des Effektzustands zu unterstützen. Es gibt mehrere Möglichkeiten, auf Effektvariablen zuzugreifen.
 
-### <a name="setting-groups-of-effect-state"></a>Festlegen von Gruppen von Effekt Zuständen
+### <a name="setting-groups-of-effect-state"></a>Festlegen von Effect-Statusgruppen
 
-Verwenden Sie diese Schnittstellen, um eine Gruppe des Zustands zu erhalten und festzulegen.
+Verwenden Sie diese Schnittstellen, um eine Statusgruppe abzurufen und festzulegen.
 
 
 
-| Reflektionseschnittstellen                                                                  | BESCHREIBUNG                      |
+| Reflektionsschnittstellen                                                                  | Beschreibung                      |
 |----------------------------------------------------------------------------------------|----------------------------------|
-| [**ID3D10EffectBlendVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectblendvariable)               | Get-und Set-Blend-Zustand.         |
-| [**ID3D10EffectDepthStencilVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectdepthstencilvariable) | Get und Set tiefen Schablone State. |
-| [**ID3D10EffectRasterizerVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectrasterizervariable)     | Get-und Set-Status des Rasterizers.    |
-| [**ID3D10EffectSamplerVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectsamplervariable)           | Holen Sie sich den samplerzustand.       |
+| [**ID3D10EffectBlendVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectblendvariable)               | Abrufen und Festlegen des Blendzustands.         |
+| [**ID3D10EffectDepthStencilVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectdepthstencilvariable) | Abrufen und Festlegen des Tiefenschablonenzustands. |
+| [**ID3D10EffectRasterizerVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectrasterizervariable)     | Abrufen und Festlegen des Rasterizerzustands.    |
+| [**ID3D10EffectSamplerVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectsamplervariable)           | Abrufen und Festlegen des Samplerzustands.       |
 
 
 
  
 
-### <a name="setting-effect-resources"></a>Festlegen von Effekt Ressourcen
+### <a name="setting-effect-resources"></a>Festlegen von Effect-Ressourcen
 
-Verwenden Sie diese Schnittstellen, um Ressourcen zu erhalten und festzulegen.
+Verwenden Sie diese Schnittstellen, um Ressourcen abzurufen und festzulegen.
 
 
 
-| Reflektionseschnittstellen                                                                          | BESCHREIBUNG                                         |
+| Reflektionsschnittstellen                                                                          | Beschreibung                                         |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| [**ID3D10EffectConstantBuffer-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectconstantbuffer)                     | Zugreifen auf Daten in einem Textur Puffer oder Konstantenpuffer. |
-| [**ID3D10EffectDepthStencilViewVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectdepthstencilviewvariable) | Zugreifen auf Daten in einer tiefen Schablone-Ressource.            |
+| [**ID3D10EffectConstantBuffer-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectconstantbuffer)                     | Zugreifen auf Daten in einem Texturpuffer oder konstanten Puffer. |
+| [**ID3D10EffectDepthStencilViewVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectdepthstencilviewvariable) | Zugreifen auf Daten in einer Tiefenschablonenressource.            |
 | [**ID3D10EffectRenderTargetViewVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectrendertargetviewvariable) | Zugreifen auf Daten in einem Renderziel.                     |
 | [**ID3D10EffectShaderResourceVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectshaderresourcevariable)     | Zugreifen auf Daten in einer Shaderressource.                   |
 
@@ -74,26 +74,26 @@ Verwenden Sie diese Schnittstellen, um Ressourcen zu erhalten und festzulegen.
 
  
 
-### <a name="setting-other-effect-variables"></a>Festlegen anderer Effekt Variablen
+### <a name="setting-other-effect-variables"></a>Festlegen anderer Effektvariablen
 
-Verwenden Sie diese Schnittstellen, um den Status anhand des Variablen Typs zu erhalten und festzulegen.
+Verwenden Sie diese Schnittstellen, um den Zustand anhand des Variablentyps abzurufen und festzulegen.
 
 
 
-| Reflektionseschnittstellen                                                      | BESCHREIBUNG                    |
+| Reflektionsschnittstellen                                                      | Beschreibung                    |
 |----------------------------------------------------------------------------|--------------------------------|
-| [**ID3D10EffectMatrixVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectmatrixvariable) | Gibt eine Matrix an und legt Sie fest.          |
-| [**ID3D10EffectScalarVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectscalarvariable) | Ein Skalarwert wird abgerufen und festgelegt.          |
-| [**ID3D10EffectShaderVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectshadervariable) | Get und Set a Shader Variable. |
-| [**ID3D10EffectStringVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectstringvariable) | Gibt eine Zeichenfolge zurück und legt Sie fest.          |
-| [**ID3D10EffectType-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effecttype)                     | Einen Variablentyp erhalten.           |
-| [**ID3D10EffectVectorVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvectorvariable) | Get und Set a Vector.          |
+| [**ID3D10EffectMatrixVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectmatrixvariable) | Abrufen und Festlegen einer Matrix.          |
+| [**ID3D10EffectScalarVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectscalarvariable) | Abrufen und Festlegen eines Skalars.          |
+| [**ID3D10EffectShaderVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectshadervariable) | Abrufen und Festlegen einer Shadervariablen. |
+| [**ID3D10EffectStringVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectstringvariable) | Abrufen und Festlegen einer Zeichenfolge.          |
+| [**ID3D10EffectType-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effecttype)                     | Abrufen eines Variablentyps.           |
+| [**ID3D10EffectVectorVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvectorvariable) | Abrufen und Festlegen eines Vektors.          |
 
 
 
  
 
-Alle Reflexions Schnittstellen werden von der [**ID3D10EffectVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvariable)abgeleitet.
+Alle Reflektionsschnittstellen werden von [**der ID3D10EffectVariable-Schnittstelle**](/windows/desktop/api/D3D10Effect/nn-d3d10effect-id3d10effectvariable)abgeleitet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -102,7 +102,7 @@ Alle Reflexions Schnittstellen werden von der [**ID3D10EffectVariable-Schnittste
 [Effekte](d3d10-graphics-programming-guide-effects.md)
 </dt> <dt>
 
-[Programmier Handbuch für Direct3D 10](d3d10-graphics-programming-guide.md)
+[Programmierhandbuch für Direct3D 10](d3d10-graphics-programming-guide.md)
 </dt> </dl>
 
  

@@ -1,20 +1,20 @@
 ---
-title: Beispiel für DVC-Client-Plug-in
-description: C++-Codebeispiel, das veranschaulicht, wie Remotedesktopverbindung ein RDC-Client (Dynamic Virtual Channel)-Plug-in für Clients erstellt wird.
+title: Beispiel für ein DVC-Client-Plug-In
+description: C++-Codebeispiel, das zeigt, wie sie ein Remotedesktopverbindung (RDC) Client Dynamic Virtual Channel (DVC)-Plug-In erstellen.
 ms.assetid: ecc673ec-1bea-4e7c-b1b5-a2342445f6cf
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85f843200e2a4ab92a3763d86ba4b6711737938c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eb8b8d79df4156f90c7480296a89685be1bc77f70afb10c3feb2fdded28eff7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119285600"
 ---
-# <a name="dvc-client-plug-in-example"></a>Beispiel für DVC-Client-Plug-in
+# <a name="dvc-client-plug-in-example"></a>Beispiel für ein DVC-Client-Plug-In
 
-Im folgenden Codebeispiel für C++ finden Sie ein Beispiel für die Erstellung eines Remotedesktopverbindung (RDC)-Client-DVC-Plug-ins (Dynamic Virtual Channel).
+Das folgende C++-Codebeispiel enthält ein Beispiel zum Erstellen eines Remotedesktopverbindung(RDC)-Client-DVC-Plug-Ins (Dynamic Virtual Channel).
 
 
 ```C++
@@ -204,9 +204,9 @@ HRESULT
 
 
 
- 
+ 
 
- 
+ 
 
 
 
