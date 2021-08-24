@@ -1,11 +1,11 @@
 ---
-title: Ivmdisplay Height-Eigenschaft (vpccominterfaces. h)
+title: IVMDisplay Height-Eigenschaft (VPCCOMInterfaces.h)
 description: Höhe der Anzeige des virtuellen Computers in Pixel.
 ms.assetid: 4fbb7c2b-6d5f-4af6-b8cc-3a7546b15cbd
 keywords:
-- Height-Eigenschaft virtueller PC
-- Height-Eigenschaft Virtual PC, ivmdisplay-Schnittstelle
-- Ivmdisplay Interface Virtual PC, Height-Eigenschaft
+- Height-Eigenschaft Virtueller PC
+- Height-Eigenschaft Virtual PC, IVMDisplay-Schnittstelle
+- IVMDisplay-Schnittstelle Virtueller PC, Height-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab6ff5746c817dcc81b353f80e2daa345b5587fd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ab20a1990d16591bec284514a2d8ad7b3f2a05ea9f6fcae234037078d66f4ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654320"
 ---
-# <a name="ivmdisplayheight-property"></a>Ivmdisplay:: Height-Eigenschaft
+# <a name="ivmdisplayheight-property"></a>IVMDisplay::Height-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft die Höhe der Anzeige des virtuellen Computers in Pixel ab.
 
@@ -54,11 +54,11 @@ Die Höhe in Pixel.
 | Name/Wert                                                                                                                                                         | Bedeutung                                                                  |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                            | Der Vorgang wurde durchgeführt.<br/>                                 |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>              | Der-Parameter ist **null**.<br/>                                    |
-| <dl> <dt>VM \_ E \_ - \_ VM \_ führt</dt> <dt>0xa0040206</dt> nicht aus </dl> | Der virtuelle Computer muss für diesen Vorgang ausgeführt werden.<br/>       |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl>      | Der virtuelle Computer ist ungültig oder wird zurzeit nicht ausgeführt.<br/> |
-| <dl> <dt>VM \_ E \_ keine \_ Anzeige</dt> <dt>0xa0040850</dt> </dl>      | Für den virtuellen Computer kann keine gültige Anzeige gefunden werden.<br/>     |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>                             |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>              | Der Parameter ist **NULL.**<br/>                                    |
+| <dl> <dt>VM \_ E \_ VM \_ NOT \_ RUNNING</dt> <dt>0xA0040206</dt> </dl> | Der virtuelle Computer muss für diesen Vorgang ausgeführt werden.<br/>       |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl>      | Der virtuelle Computer ist ungültig oder wird derzeit nicht ausgeführt.<br/> |
+| <dl> <dt>VM \_ E \_ \_ KEINE</dt> <dt>0XA0040850</dt> </dl>      | Es wurde keine gültige Anzeige für den virtuellen Computer gefunden.<br/>     |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>                             |
 
 
 
@@ -68,20 +68,20 @@ Die Höhe in Pixel.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmdisplay ist als 960895e9-f 743-4498-96aa-261f 867e7fc5 definiert.<br/>                 |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMDisplay ist als 960895e9-f743-4498-96aa-261f867e7fc5 definiert.<br/>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmdisplay**](ivmdisplay.md)
+[**IVMDisplay**](ivmdisplay.md)
 </dt> </dl>
 
  

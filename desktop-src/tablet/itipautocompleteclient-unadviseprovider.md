@@ -1,7 +1,7 @@
 ---
-description: Hebt die Registrierung des zugeordneten Anbieters auf.
+description: Aufheben der Registrierung des zugeordneten Anbieters.
 ms.assetid: b5edc33d-dfd0-4350-b8cd-eaa30b726771
-title: 'Itipaudecompleteclient:: unadviseprovider-Methode (tipaudecomplete. h)'
+title: ITipAutocompleteClient::UnadviseProvider-Methode (TipAutoComplete.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - tiptsf.dll
-ms.openlocfilehash: 1100ebb700ef2fb769a13f9b62aacf5c1d007e0d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4f573e1dab88e8556dc8c6011173cd3a2284a87d9f98ac6d05cea13cef65ab8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712100"
 ---
-# <a name="itipautocompleteclientunadviseprovider-method"></a>Itipaudecompleteclient:: unadviseprovider-Methode
+# <a name="itipautocompleteclientunadviseprovider-method"></a>ITipAutocompleteClient::UnadviseProvider-Methode
 
-Hebt die Registrierung des zugeordneten Anbieters auf.
+Aufheben der Registrierung des zugeordneten Anbieters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT UnadviseProvider(
 
 <dl> <dt>
 
-*hwndfield* \[ in\]
+*hWndField* \[ In\]
 </dt> <dd>
 
-Fenster Handle des Felds, das die Funktion für automatisches Vervollständigen bereitstellt.
+Fensterhandpunkt des Felds, das das Feature für die automatische Vervollstehung bietet.
 
 </dd> <dt>
 
-*piacprovider* \[ in\]
+*pIACProvider* \[in\]
 </dt> <dd>
 
-Der Schnittstellen Zeiger auf die Auto Vervollständigen-Anbieter Schnittstelle, deren Registrierung aufgehoben werden soll.
+Schnittstellenzeiger auf die Automatisch vollständige Anbieterschnittstelle, deren Registrierung aufgehoben werden soll.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -75,9 +75,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                       |
-| Header<br/>                   | <dl> <dt>Tipautocomplete. h (erfordert auch "pinputpanel \_ i. c")</dt> </dl> |
+| Header<br/>                   | <dl> <dt>TipAutoComplete.h (erfordert auch Peninputpanel \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Tiptsf.dll</dt> </dl>                                           |
 
 
@@ -86,10 +86,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itipauwebcompleteclient-Schnittstelle**](itipautocompleteclient.md)
+[**ITipAutocompleteClient-Schnittstelle**](itipautocompleteclient.md)
 </dt> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> </dl>
 
  

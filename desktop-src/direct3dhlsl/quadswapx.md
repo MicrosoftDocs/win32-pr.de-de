@@ -1,9 +1,9 @@
 ---
-title: Quad-acrossx-Funktion
-description: Gibt den angegebenen lokalen Wert zurück, der von der anderen Strecke in diesem Quad in der X-Richtung gelesen wird.
+title: QuadReadAcrossX-Funktion
+description: Gibt den angegebenen lokalen Wert zurück, der von der anderen Spur in diesem Quad in X-Richtung gelesen wird.
 ms.assetid: 7A7E0623-30EC-4167-90A5-D79E10A394CC
 keywords:
-- Quads-acrossx-Funktion (HLSL)
+- QuadReadAcrossX-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cd41b0bd84861d23153f02ba6328d17b70287866
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
+ms.openlocfilehash: 86a2f525a79fa2458e4f7e0ef44379053e03128782d2625e1bdceb23ec518b16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104102554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672440"
 ---
-# <a name="quadreadacrossx-function"></a>Quad-acrossx-Funktion
+# <a name="quadreadacrossx-function"></a>QuadReadAcrossX-Funktion
 
-Gibt den angegebenen lokalen Wert zurück, der von der anderen Strecke in diesem Quad in der X-Richtung gelesen wird.
+Gibt den angegebenen lokalen Wert zurück, der von der anderen Spur in diesem Quad in X-Richtung gelesen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ Gibt den angegebenen lokalen Wert zurück, der von der anderen Strecke in diesem
 
 <dl> <dt>
 
-*localvalue* 
+*localValue* 
 </dt> <dd>
 
 Der angeforderte Typ.
@@ -45,23 +45,23 @@ Der angeforderte Typ.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der angegebene lokale Wert. Wenn der Quellpfad inaktiv ist, sind die Ergebnisse nicht definiert.
+Der angegebene lokale Wert. Wenn die Quellspur inaktiv ist, sind die Ergebnisse nicht definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu den Quads finden Sie unter [Übersicht über Shader Model 6](hlsl-shader-model-6-0-features-for-direct3d-12.md).
+Weitere Informationen zu Quads finden Sie unter [Übersicht über Shadermodell 6.](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 
-Diese Funktion wird vom Shader-Modell 6,0 nur in Pixel-und Compute-Shadern unterstützt.
+Diese Funktion wird von Shadermodell 6.0 nur in Pixel- und Compute-Shadern unterstützt.
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM_NEXTDLGCTL Meldung (Winuser. h)
-description: Wird an eine Dialogfeld Prozedur gesendet, um den Tastaturfokus auf ein anderes Steuerelement im Dialogfeld festzulegen.
+title: WM_NEXTDLGCTL (Winuser.h)
+description: Wird an eine Dialogfeldprozedur gesendet, um den Tastaturfokus auf ein anderes Steuerelement im Dialogfeld zu setzen.
 ms.assetid: 63d9fac2-3057-4bfa-9960-911fd18877d4
 keywords:
-- Dialog Felder WM_NEXTDLGCTL Meldung
+- WM_NEXTDLGCTL-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc6b70dbaf010b839a0069513f97de8fdab1c0a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1a14de889e614aaba28757716326bcd1cf843aed64fe2dc58ca86430d65db628
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606220"
 ---
-# <a name="wm_nextdlgctl-message"></a>WM- \_ nextdlgctl-Nachricht
+# <a name="wm_nextdlgctl-message"></a>WM \_ NEXTDLGCTL-Meldung
 
-Wird an eine Dialogfeld Prozedur gesendet, um den Tastaturfokus auf ein anderes Steuerelement im Dialogfeld festzulegen.
+Wird an eine Dialogfeldprozedur gesendet, um den Tastaturfokus auf ein anderes Steuerelement im Dialogfeld zu setzen.
 
 
 ```C++
@@ -39,26 +39,26 @@ Wird an eine Dialogfeld Prozedur gesendet, um den Tastaturfokus auf ein anderes 
 *wParam* 
 </dt> <dd>
 
-Wenn *LPARAM* den Wert **true** hat, identifiziert dieser Parameter das Steuerelement, das den Fokus erhält. Wenn *LPARAM* auf **false** festgelegt ist, gibt dieser Parameter an, ob das nächste oder vorherige Steuerelement mit dem **WS \_ tabstoppstil** den Fokus erhält. Wenn *wParam* gleich 0 (null) ist, erhält das nächste Steuerelement den Fokus. Andernfalls erhält das vorherige Steuerelement mit dem **WS \_ tabstoppstil** den Fokus.
+Wenn *lParam* **true ist,** identifiziert dieser Parameter das Steuerelement, das den Fokus erhält. Wenn *lParam* **FALSE ist, gibt** dieser Parameter an, ob das nächste oder vorherige Steuerelement mit dem **WS \_ TABSTOP-Stil** den Fokus erhält. Wenn *wParam* 0 (null) ist, erhält das nächste Steuerelement den Fokus. Andernfalls erhält das vorherige Steuerelement mit **dem WS \_ TABSTOP-Format** den Fokus.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt an, wie das System *wParam* verwendet. Wenn das nieder wertige Wort **true** ist, ist *wParam* ein Handle, das dem Steuerelement zugeordnet ist, das den Fokus erhält. Andernfalls ist *wParam* ein Flag, das angibt, ob das nächste oder vorherige Steuerelement mit dem **WS \_ tabstoppstil** den Fokus erhält.
+Das Wort in niedriger Reihenfolge gibt an, wie das System *wParam verwendet.* Wenn das niedrig geordnete Wort **TRUE ist,** *ist wParam* ein Handle, das dem Steuerelement zugeordnet ist, das den Fokus erhält. *andernfalls ist wParam* ein Flag, das angibt, ob das nächste oder vorherige Steuerelement mit dem **WS \_ TABSTOP-Stil** den Fokus erhält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung sollte NULL zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte 0 (null) zurückgeben, wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung führt zusätzliche Dialogfeld-Verwaltungsvorgänge aus, die über diejenigen hinausgehen, die von der [**SetFocus**](/windows/desktop/api/winuser/nf-winuser-setfocus) -Funktion **WM- \_ nextdlgctl** ausgeführt werden, aktualisiert den standardmäßigen PUSHBUTTON-Rahmen, legt den Standard Steuerelement Bezeichner fest und wählt automatisch den Text eines Bearbeitungs Steuer Elements aus
+Diese Meldung führt zusätzliche Dialogfeldverwaltungsvorgänge aus, die über die von der [**SetFocus-Funktion**](/windows/desktop/api/winuser/nf-winuser-setfocus) **WM \_ NEXTDLGCTL** ausgeführten Vorgänge hinausgehen, aktualisiert den Standard-Pushbuttonrahmen, legt den Standardsteuersteuerzeichner fest und wählt automatisch den Text eines Bearbeitungssteuerfelds aus (wenn das Zielfenster ein Bearbeitungssteuerfeld ist).
 
-Verwenden Sie die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) -Funktion nicht, um eine **WM- \_ nextdlgctl** -Nachricht zu senden, wenn Ihre Anwendung andere Nachrichten, die den Fokus festlegen, gleichzeitig verarbeitet. Verwenden Sie stattdessen die [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) -Funktion.
+Verwenden Sie die [**SendMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-sendmessage) nicht, um eine **WM \_ NEXTDLGCTL-Nachricht** zu senden, wenn Ihre Anwendung gleichzeitig andere Nachrichten verarbeiten wird, die den Fokus festlegen. Verwenden Sie [**stattdessen die PostMessage-Funktion.**](/windows/desktop/api/winuser/nf-winuser-postmessagea)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Verwenden Sie die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-send
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Verwenden Sie die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-send
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea)
@@ -88,10 +88,10 @@ Verwenden Sie die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-send
 [**SetFocus**](/windows/desktop/api/winuser/nf-winuser-setfocus)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Dialog Felder](dialog-boxes.md)
+[Dialogfelder](dialog-boxes.md)
 </dt> </dl>
 
  

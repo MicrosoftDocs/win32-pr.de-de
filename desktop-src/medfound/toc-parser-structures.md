@@ -1,26 +1,26 @@
 ---
-description: Tabelle mit Inhalts Parserstrukturen
+description: Inhaltsverzeichnisparserstrukturen
 ms.assetid: 7438b09e-e649-462d-9a36-fb19e0817d75
-title: Tabelle mit Inhalts Parserstrukturen
+title: Inhaltsverzeichnisparserstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50c4b5129c0418970050886bf65d8f1da4f9cb76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e9346b52d7f3a4836473b2b2356cafd4fc9121f6a42dec90a17e9d90167ae0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119599850"
 ---
-# <a name="table-of-contents-parser-structures"></a>Tabelle mit Inhalts Parserstrukturen
+# <a name="table-of-contents-parser-structures"></a>Inhaltsverzeichnisparserstrukturen
 
-Die folgenden Strukturen werden vom Inhaltsverzeichnis für Inhaltsverzeichnisse verwendet.
+Die folgenden Strukturen werden vom Inhaltsverzeichnisparser verwendet.
 
 
 
-| Struktur                                              | BESCHREIBUNG                                                        |
+| Struktur                                              | Beschreibung                                                        |
 |--------------------------------------------------------|--------------------------------------------------------------------|
-| [**TOC- \_ Deskriptor**](/windows/desktop/api/wmcodecdsp/ns-wmcodecdsp-toc_descriptor)              | Enthält beschreibende Informationen für ein Inhaltsverzeichnis.             |
-| [**TOC- \_ Eintrags \_ Deskriptor**](/windows/desktop/api/wmcodecdsp/ns-wmcodecdsp-toc_entry_descriptor) | Enthält beschreibende Informationen für einen Eintrag in einem Inhaltsverzeichnis. |
+| [**\_TOC-DESKRIPTOR**](/windows/desktop/api/wmcodecdsp/ns-wmcodecdsp-toc_descriptor)              | Enthält beschreibende Informationen für ein Inhaltsverzeichnis.             |
+| [**\_ \_ TOC-EINTRAGSDESKRIPTOR**](/windows/desktop/api/wmcodecdsp/ns-wmcodecdsp-toc_entry_descriptor) | Enthält beschreibende Informationen für einen Eintrag in einem Inhaltsverzeichnis. |
 
 
 
@@ -30,7 +30,7 @@ Die folgenden Strukturen werden vom Inhaltsverzeichnis für Inhaltsverzeichnisse
 
 <dl> <dt>
 
-[Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)](toc-parser-reference.md)
+[Inhaltsverzeichnisparserreferenz](toc-parser-reference.md)
 </dt> </dl>
 
  

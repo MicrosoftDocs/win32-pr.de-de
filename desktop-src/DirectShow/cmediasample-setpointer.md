@@ -1,7 +1,7 @@
 ---
-description: Die setpointer-Methode legt den Zeiger auf den Arbeitsspeicher Puffer fest.
+description: Die SetPointer-Methode legt den Zeiger auf den Speicherpuffer fest.
 ms.assetid: 60627600-c982-462e-b540-327a58e57615
-title: Cmediasample. setpointer-Methode (amfilter. h)
+title: CMediaSample.SetPointer-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 67d9fc5d260cc627919a458593328c36f0de9a94
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: af6747eb9ed39a973d795d8701fd9d7afd1b88e9d0b0db577de6a8e963b840bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634350"
 ---
-# <a name="cmediasamplesetpointer-method"></a>Cmediasample. setpointer-Methode
+# <a name="cmediasamplesetpointer-method"></a>CMediaSample.SetPointer-Methode
 
-Die- `SetPointer` Methode legt den Zeiger auf den Arbeitsspeicher Puffer fest.
+Die `SetPointer` -Methode legt den Zeiger auf den Speicherpuffer fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ HRESULT SetPointer(
 
 <dl> <dt>
 
-*ptr* 
+*Ptr* 
 </dt> <dd>
 
-Zeiger auf einen vom Aufrufer zugeordneten Speicherpuffer mit einer Größe von *cbytes*.
+Zeiger auf einen vom Aufrufer zugeordneten Speicherpuffer der Größe *cBytes.*
 
 </dd> <dt>
 
-*cbytes* 
+*cBytes* 
 </dt> <dd>
 
 Länge des Puffers in Bytes.
@@ -61,11 +61,11 @@ Länge des Puffers in Bytes.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ermöglicht es der Zuweisung, einen neuen Zeiger für das Beispiel festzulegen.
+Mit dieser Methode kann die Zuweisung einen neuen Zeiger für das Beispiel festlegen.
 
-Diese Methode ist nicht über die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle verfügbar. Das Objekt, das das Beispiel erstellt, kann auf diese Methode (über **cmediasample**) zugreifen, andere Objekte hingegen nicht.
+Diese Methode ist nicht über die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) verfügbar. Das Objekt, das das Beispiel erstellt, kann (über **CMediaSample)** auf diese Methode zugreifen, andere Objekte jedoch nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ Diese Methode ist nicht über die [**imediasample**](/windows/desktop/api/Strmif
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

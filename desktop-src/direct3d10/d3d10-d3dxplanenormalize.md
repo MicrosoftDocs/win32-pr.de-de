@@ -1,5 +1,5 @@
 ---
-description: 'D3DXPlaneNormalize-Funktion (D3DX10Math.h): Normalisiert die Ebenenkoeffizienten so, dass die Normalebene die Einheitslänge aufwies.'
+description: 'D3DXPlaneNormalize-Funktion (D3DX10Math.h): Normalisiert die Ebenenkoeffizienten, sodass die Normalität der Ebene eine Einheitslänge hat.'
 ms.assetid: 52ae36a7-e37b-457a-9832-e62900a85bde
 title: D3DXPlaneNormalize-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8b3499297a008b0d8f5dc705080bbd1d5bbe3af4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cf4429e324a5ce1554c5c37c929625153c74764cb9d03618f633f35ecd416748
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754150"
 ---
 # <a name="d3dxplanenormalize-function-d3dx10mathh"></a>D3DXPlaneNormalize-Funktion (D3DX10Math.h)
 
-Normalisiert die Ebenenkoeffizienten so, dass der Ebenennormar die Einheitslänge aufwies.
+Normalisiert die Ebenenkoeffizienten, sodass die Ebenennormalisierung eine Einheitslänge hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,9 +65,9 @@ Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
 Zeiger auf eine D3DXPLANE-Struktur, die die Normalität der Ebene darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion normalisiert eine Ebene so, dass \| a,b,c \| == 1.
+Diese Funktion normalisiert eine Ebene, sodass \| a,b,c \| == 1.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann diese Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -75,7 +75,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

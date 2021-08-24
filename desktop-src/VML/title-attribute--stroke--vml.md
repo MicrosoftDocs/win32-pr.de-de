@@ -1,51 +1,51 @@
 ---
-title: Title-Attribut (Strich) (VML)
-description: Title-Attribut (Strich) (VML)
+title: Title-Attribut (Stroke)(VML)
+description: Title-Attribut (Stroke)(VML)
 ms.assetid: 47cdec4a-9b35-47d7-a44d-e128c6c8a812
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a52a5f121ff93d2fe43320dad6587dab45185713
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a7aaae273b6b5348b7d89e0a4e660d94ce1fb68b2192f35e316d404f756de94c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654490"
 ---
-# <a name="title-attribute-strokevml"></a>Title-Attribut (Strich) (VML)
+# <a name="title-attribute-strokevml"></a>Title-Attribut (Stroke)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Titel eines Strich Bilds. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Titel eines Strichbilds. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Title = " *Ausdruck* " >
+<v: *element* title=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Title = "*Ausdruck*"
+*element* .title="*expression*"
 
-*Ausdruck* = *Element*. Title
+*expression* = *Element*.title
 
 **Anmerkungen**
 
-Wenn dieses Attribut über einen Wert verfügt, wird das Strich Bild *eingebettet*. Der tatsächliche Wert des-Attributs ist der Text, der mit dem Bild angezeigt werden soll, wenn der Mauszeiger über dem Bild bewegt wird.
+Wenn dieses Attribut über einen Wert verfügt, wird das Strichbild *eingebettet.* Der tatsächliche Wert des Attributs ist der Text, der mit dem Bild angezeigt werden soll, wenn der Mauszeiger über das Bild bewegt wird.
 
-Wenn das **href** -Tag verwendet wird, wird der **Titel** ignoriert.
+Wenn das **HRef-Tag** verwendet wird, wird **Titel** ignoriert.
 
-Dieses Attribut wird von Microsoft Office verwendet, wird aber nicht von Microsoft Internet Explorer verwendet.
+Dieses Attribut wird von Microsoft Office, aber nicht von Microsoft Internet Explorer.
 
 **Microsoft Office Extensions-Attribut**
 
- 
+ 
 
- 
+ 

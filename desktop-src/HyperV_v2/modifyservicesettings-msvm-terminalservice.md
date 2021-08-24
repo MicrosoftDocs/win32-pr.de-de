@@ -1,5 +1,5 @@
 ---
-description: ModifyServiceSettings-Methode der Msvm_TerminalService - Ändert die Einstellungsdaten für den Dienst.
+description: 'ModifyServiceSettings-Methode der Msvm_TerminalService klasse: Ändert die Einstellungsdaten für den Dienst.'
 ms.assetid: 76669180-fa95-4d6e-b89a-53e45da664c4
 title: ModifyServiceSettings-Methode der Msvm_TerminalService Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 930b29c5c07c755b493a0aabad88ae776c0803e0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b4e77cb68e1052cc91cd5b1ef459051fdde108ac3a044a6c8dcc6251ad57baca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693890"
 ---
 # <a name="modifyservicesettings-method-of-the-msvm_terminalservice-class"></a>ModifyServiceSettings-Methode der Msvm \_ TerminalService-Klasse
 
@@ -103,17 +103,17 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

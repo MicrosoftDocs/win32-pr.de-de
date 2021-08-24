@@ -1,7 +1,7 @@
 ---
-description: 'Die setactualdatalength-Methode legt die Länge der gültigen Daten im Puffer fest. Diese Methode implementiert die imediasample:: setactualdatalength-Methode.'
+description: Die SetActualDataLength-Methode legt die Länge der gültigen Daten im Puffer fest. Diese Methode implementiert die IMediaSample::SetActualDataLength-Methode.
 ms.assetid: a80a67ef-e490-4874-a123-f2d193cec4d7
-title: Cmediasample. setactualdatalength-Methode (amfilter. h)
+title: CMediaSample.SetActualDataLength-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 825b02f43195424f9ceb5ecd23c4dcf26727ef8f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: db090ad96f6c53f725aef7864e729b8083bfd1a02b30f0d699d30b5c6f8f71aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634376"
 ---
-# <a name="cmediasamplesetactualdatalength-method"></a>Cmediasample. setactualdatalength-Methode
+# <a name="cmediasamplesetactualdatalength-method"></a>CMediaSample.SetActualDataLength-Methode
 
-Die- `SetActualDataLength` Methode legt die Länge der gültigen Daten im Puffer fest. Diese Methode implementiert die [**imediasample:: setactualdatalength**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setactualdatalength) -Methode.
+Die `SetActualDataLength` -Methode legt die Länge der gültigen Daten im Puffer fest. Diese Methode implementiert die [**IMediaSample::SetActualDataLength-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-setactualdatalength)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT SetActualDataLength(
 
 <dl> <dt>
 
-*Verdammten* 
+*lLen* 
 </dt> <dd>
 
 Länge der gültigen Daten in Bytes.
@@ -51,22 +51,22 @@ Länge der gültigen Daten in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                 |
 |---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                                         |
-| <dl> <dt>**VFW \_ E- \_ Puffer \_ Überlauf**</dt> </dl> | *lLen* ist größer als die zugeordnete Puffergröße.<br/> |
+| <dl> <dt>**VFW \_ E \_ BUFFER \_ OVERFLOW**</dt> </dl> | *lLen* ist größer als die zugeordnete Puffergröße.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt die Element Variable [**cmediasample: \_ : m**](cmediasample-m-lactual.md) fest.
+Diese Methode legt die [**Membervariable CMediaSample::m \_ lActual**](cmediasample-m-lactual.md) fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,16 +74,16 @@ Diese Methode legt die Element Variable [**cmediasample: \_ : m**](cmediasample-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

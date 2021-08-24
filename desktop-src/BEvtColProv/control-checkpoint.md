@@ -1,8 +1,8 @@
 ---
-description: Wenn die aktuelle Konfiguration das Ergebnis der rückgängig/Wiederherstellung/Wiederherstellung ist, kennzeichnet Sie diese als explizit festgelegt, sodass der Verlauf den Zeitpunkt der Festlegung beibehält und bei der nächsten Konfigurationsänderung eine Sicherungsdatei erstellt wird.
+description: Wenn die aktuelle Konfiguration ein Ergebnis der Rückgängig-/Wiederholungs-/Wiederherstellungsfunktion ist, markiert sie so, als ob sie explizit festgelegt wurde, sodass der Verlauf die Zeit bei der Festlegung beibehalten und bei der nächsten Konfigurationsänderung eine Sicherungsdatei für sie erstellt wird.
 ms.assetid: 1b3d398a-c7f9-4e21-9e43-1245a13fe564
 ms.tgt_platform: multiple
-title: Checkpoint-Methode der Steuerelement Klasse (srrestoreptapi. h)
+title: Checkpoint-Methode der Control-Klasse (Srrestoreptapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - BEvtCol.exe
-ms.openlocfilehash: 44453f647d55f29a9a6cfc5622e29dcc88ad2446
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ff71086703e409331e420fd064f73ff2406ec4e5167ea97da78b2afc498bf244
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119579850"
 ---
-# <a name="checkpoint-method-of-the-control-class"></a>Checkpoint-Methode der Steuerelement Klasse
+# <a name="checkpoint-method-of-the-control-class"></a>Checkpoint-Methode der Control-Klasse
 
-Wenn die aktuelle Konfiguration das Ergebnis der rückgängig/Wiederherstellung/Wiederherstellung ist, kennzeichnet Sie diese als explizit festgelegt, sodass der Verlauf den Zeitpunkt der Festlegung beibehält und bei der nächsten Konfigurationsänderung eine Sicherungsdatei erstellt wird. Wenn die aktuelle Konfiguration bereits explizit festgelegt wurde, hat keine Auswirkungen.
+Wenn die aktuelle Konfiguration ein Ergebnis der Rückgängig-/Wiederholungs-/Wiederherstellungsfunktion ist, markiert sie so, als ob sie explizit festgelegt wurde, sodass der Verlauf die Zeit bei der Festlegung beibehalten und bei der nächsten Konfigurationsänderung eine Sicherungsdatei für sie erstellt wird. Wenn die aktuelle Konfiguration bereits explizit festgelegt wurde, hat keine Auswirkungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,45 +45,45 @@ Uint32 Checkpoint(
 
 <dl> <dt>
 
-*Oldtimestamplow* \[ in\]
+*OldTimestampLow* \[ In\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die aktuelle Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die atomizitäts Überprüfung: die Aktion wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h., die Konfiguration wurde nicht in between geändert). Dies ist der niedrige Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die aktuelle Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die Atomaritätsprüfung: Die Aktion wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h. die Konfiguration wurde zwischendurch nicht geändert). Dies ist der untere Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*Oldtimestamphigh* \[ in\]
+*OldTimestampHigh* \[ In\]
 </dt> <dd>
 
-Der Zeitstempel, zu dem die aktuelle Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die atomizitäts Überprüfung: die Aktion wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h., die Konfiguration wurde nicht in between geändert). Dies ist der große Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
+Der Zeitstempel des Zeitpunkts, zu dem die aktuelle Konfiguration festgelegt wurde. Wenn nicht 0, aktiviert die Atomaritätsprüfung: Die Aktion wird nur angewendet, wenn der Zeitstempel der alten Konfiguration übereinstimmt (d. h. die Konfiguration wurde zwischendurch nicht geändert). Dies ist der hohe Teil von [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime).
 
 </dd> <dt>
 
-*ErrorString* \[ vorgenommen\]
+*ErrorString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit einer Erläuterung des Fehlers.
+Die Textzeichenfolge mit Erklärung des Fehlers.
 
 </dd> <dt>
 
-*Warningstring* \[ vorgenommen\]
+*WarningString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit Warnungen.
+Die Textzeichenfolge mit Warnungen.
 
 </dd> <dt>
 
-*InfoString* \[ vorgenommen\]
+*InfoString* \[ out\]
 </dt> <dd>
 
-Die Text Zeichenfolge mit Informationen zur Konfiguration.
+Die Textzeichenfolge mit Informationen zur Konfiguration.
 
 </dd> <dt>
 
-*ErrorType* \[ vorgenommen\]
+*ErrorType* \[ out\]
 </dt> <dd>
 
-Der Typ des Fehlers. Beachten Sie, dass 0 oder nicht vorhanden den Erfolg angibt.
+Der Typ des Fehlers. Beachten Sie, dass "0" oder "fehlt" auf Erfolg hinweist.
 
 <dt>
 
@@ -97,35 +97,35 @@ Erfolg.
 1
 </dt> <dd>
 
-Ungültiges Argument Format
+Ungültiges Argumentformat
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Ungültiger Argument Wert
+Ungültiger Argumentwert
 
 </dd> <dt>
 
 3
 </dt> <dd>
 
-Fehler beim Öffnen der Ressource (Socket).
+Fehler beim Öffnen der Ressource (Socket)
 
 </dd> <dt>
 
 4
 </dt> <dd>
 
-Persistenz (Datei Schreibfehler)
+Persistenzfehler (Dateischreibfehler)
 
 </dd> <dt>
 
 5
 </dt> <dd>
 
-Unteilbarkeit-Fehler (der alte Zeitstempel entsprach nicht.)
+Atomicity-Fehler (der alte Zeitstempel stimmte nicht überein)
 
 </dd> </dl> </dd> </dl>
 
@@ -157,11 +157,11 @@ Erfolg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                       |
-| Namespace<br/>                | Stammverzeichnis von \\ Microsoft \\ Windows \\ booteventcollector<br/>                                              |
-| Header<br/>                   | <dl> <dt>Srrestoreptapi. h</dt> </dl>          |
-| MOF<br/>                      | <dl> <dt>Booteventcollector WMI. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-Microsoft \\ Windows \\ BootEventCollector<br/>                                              |
+| Header<br/>                   | <dl> <dt>Srrestoreptapi.h</dt> </dl>          |
+| MOF<br/>                      | <dl> <dt>BootEventCollectorWMI.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>BEvtCol.exe</dt> </dl>               |
 
 

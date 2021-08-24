@@ -1,27 +1,27 @@
 ---
-description: Der Pfad Datentyp ist eine Text Zeichenfolge, die einen gültigen vollständigen Pfad enthält.
+description: Der Path-Datentyp ist eine Textzeichenfolge, die einen gültigen vollständigen Pfad enthält.
 ms.assetid: 3006f4c9-872a-4d9e-9d27-f17c64d178f1
 title: Pfad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea0c81f6688c2d4741f0425b7c3842a4317646cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86996743c60c036d7ed12f1ff20975570fe8f94ac23b68631fc8149f3c28a4dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754050"
 ---
 # <a name="path"></a>Pfad
 
-Der Pfad Datentyp ist eine Text Zeichenfolge, die einen gültigen vollständigen Pfad enthält.
+Der Path-Datentyp ist eine Textzeichenfolge, die einen gültigen vollständigen Pfad enthält.
 
-Die Zeichenfolge kann auch einen Eigenschaftsnamen enthalten, der in eckigen Klammern eingeschlossen ist \[ \] . In einem solchen Fall wird der Name der Eigenschaft, einschließlich der Klammern, durch den Wert der-Eigenschaft in der Zeichenfolge ersetzt.
+Die Zeichenfolge kann auch einen Eigenschaftsnamen enthalten, der in eckige Klammern eingeschlossen \[ \] ist. In einem solchen Fall wird der Name der Eigenschaft, einschließlich der Klammern, in der Zeichenfolge durch den Wert der -Eigenschaft ersetzt.
 
 Beispiele:
 
--   UNC-Pfad: \\ \\ Server \\ Freigabe
--   Lokales Laufwerk: c: \\ Temp
--   Mit einem Eigenschaftsnamen: \[ Laufwerk \] \\ Temp
+-   UNC-Pfad: \\ \\ \\ Serverfreigabe
+-   Lokales Laufwerk: c: \\ temp
+-   Mit einem Eigenschaftennamen: \[ DRIVE \] \\ temp
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

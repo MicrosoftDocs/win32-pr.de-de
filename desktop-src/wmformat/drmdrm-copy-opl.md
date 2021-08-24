@@ -1,10 +1,10 @@
 ---
-title: DRM_COPY_OPL Struktur (wmdrmsdk. h)
-description: Die DRM- \_ Kopier- \_ OPL-Struktur enthält Informationen zu den in einer Lizenz für Kopieraktionen angegebenen Ausgabe Schutz Ebenen (opls).
+title: DRM_COPY_OPL-Struktur (Wmdrmsdk.h)
+description: Die DRM \_ COPY \_ OPL-Struktur enthält Informationen zu den Ausgabeschutzebenen (Output Protection Levels, OPLs), die in einer Lizenz für Kopieraktionen angegeben sind.
 ms.assetid: 439cbd56-05c1-46f8-86b9-ac1341902a40
 keywords:
-- DRM_COPY_OPL Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_COPY_OPL Strukturfenster Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d28655e220588bb704567de033e1117dd569d3ec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2ec6e376b2df4cd3e5462766d6fd992ed7d2356a1bc81d0ff74c662a99697af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119708980"
 ---
-# <a name="drm_copy_opl-structure"></a>DRM- \_ Kopier- \_ OPL-Struktur
+# <a name="drm_copy_opl-structure"></a>DRM \_ COPY \_ OPL-Struktur
 
-Die **DRM- \_ Kopier- \_ OPL** -Struktur enthält Informationen zu den in einer Lizenz für Kopieraktionen angegebenen Ausgabe Schutz Ebenen (opls).
+Die **DRM \_ COPY \_ OPL-Struktur** enthält Informationen zu den Ausgabeschutzebenen (Output Protection Levels, OPLs), die in einer Lizenz für Kopieraktionen angegeben sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef struct DRM_COPY_OPL {
 
 <dl> <dt>
 
-**wminimumcopylevel**
+**wMinimumCopyLevel**
 </dt> <dd>
 
 Minimale OPL für Kopieraktionen.
 
 </dd> <dt>
 
-**oplidincludes**
+**oplIdIncludes**
 </dt> <dd>
 
-[**DRM \_ Struktur der OPL- \_ Ausgabe- \_ IDs**](drmdrm-opl-output-ids.md) , die die Bezeichner der zu Zulassungs enden Technologien enthält. Dieser Member wird für Ausgabe Technologien verwendet, denen opls zugewiesen sind, die niedriger als die mindestkopieebene sind, aber auf die der Inhalt kopiert werden kann.
+[**DRM \_ OPL \_ OUTPUT \_ IDS-Struktur,**](drmdrm-opl-output-ids.md) die die Bezeichner der zuzulassenden Technologien enthält. Dieser Member wird für Ausgabetechnologien verwendet, denen OPLs zugewiesen werden, die niedriger als die minimale Kopierebene sind, aber in die der Inhalt kopiert werden kann.
 
 </dd> <dt>
 
-**oplidexcludes**
+**oplIdExcludes**
 </dt> <dd>
 
-[**DRM \_ Struktur der OPL- \_ Ausgabe- \_ IDs**](drmdrm-opl-output-ids.md) , die die Ausgabe Bezeichner der zu Beschränkungs enden Technologien enthält. Dieser Member wird für Ausgabe Technologien verwendet, denen opls zugewiesen sind, die die mindestkopieebene überschreiten, aber dass der Lizenz Aussteller keine Rechte zum Kopieren in erteilt.
+[**DRM \_ OPL \_ OUTPUT \_ IDS-Struktur,**](drmdrm-opl-output-ids.md) die die Ausgabebezeichner der einzuschränkenden Technologien enthält. Dieses Element wird für Ausgabetechnologien verwendet, denen OPLs zugewiesen sind, die den Mindestkopiergrad überschreiten, der Lizenzaussteller jedoch keine Rechte zum Kopieren in gewährt.
 
 </dd> </dl>
 
@@ -70,15 +70,15 @@ Minimale OPL für Kopieraktionen.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DRM- \_ Wiedergabe- \_ OPL**](drmdrm-play-opl.md)
+[**DRM \_ PLAY \_ OPL**](drmdrm-play-opl.md)
 </dt> <dt>
 
 [**Strukturen**](drm-structures.md)

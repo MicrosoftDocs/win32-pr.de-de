@@ -1,7 +1,7 @@
 ---
-description: Typspezifische Flags. Die Bedeutung dieser Member-Variable hängt vom Medientyp des Beispiels ab.
+description: Typspezifische Flags. Die Bedeutung dieser Membervariablen hängt vom Medientyp des Beispiels ab.
 ms.assetid: 3aca168e-b253-468e-a1a1-3c213f710dfd
-title: 'Cmediasample:: m_dwTypeSpecificFlags Member (amfilter. h)'
+title: CMediaSample::m_dwTypeSpecificFlags-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5cbe44c15d9d14eb7a31fc5378ca2f66e03fe150
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d85f1629906206013ddffde721f9eb213008412b899678c88f2a40efba25d323
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634610"
 ---
-# <a name="cmediasamplem_dwtypespecificflags-member"></a>Cmediasample:: m \_ dwtypespecificflags-Member
+# <a name="cmediasamplem_dwtypespecificflags-member"></a>CMediaSample::m \_ dwTypeSpecificFlags-Member
 
-Typspezifische Flags. Die Bedeutung dieser Member-Variable hängt vom Medientyp des Beispiels ab.
+Typspezifische Flags. Die Bedeutung dieser Membervariablen hängt vom Medientyp des Beispiels ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ DWORD m_dwTypeSpecificFlags;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

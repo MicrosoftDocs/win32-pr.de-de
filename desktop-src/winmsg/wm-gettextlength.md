@@ -1,19 +1,19 @@
 ---
-description: Bestimmt die Länge des Texts, der einem Fenster zugeordnet ist, in Zeichen.
+description: Bestimmt die Länge des einem Fenster zugeordneten Texts in Zeichen.
 ms.assetid: 9e185435-a624-4380-adfd-be4f3645ee5d
-title: WM_GETTEXTLENGTH Meldung (Winuser. h)
+title: WM_GETTEXTLENGTH Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0efc058033f9c4939137414d305d0717b54bef54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1bc01f6f7a2b74df41e97a84bb4d7e17d9c3e21966215fcbcca04222d1d5537f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710390"
 ---
-# <a name="wm_gettextlength-message"></a>WM \_ getTextLength-Meldung
+# <a name="wm_gettextlength-message"></a>WM \_ GETTEXTLENGTH-Nachricht
 
-Bestimmt die Länge des Texts, der einem Fenster zugeordnet ist, in Zeichen.
+Bestimmt die Länge des einem Fenster zugeordneten Texts in Zeichen.
 
 
 ```C++
@@ -29,14 +29,14 @@ Bestimmt die Länge des Texts, der einem Fenster zugeordnet ist, in Zeichen.
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -44,17 +44,17 @@ Dieser Parameter wird nicht verwendet und muss NULL sein.
 
 Typ: **LRESULT**
 
-Der Rückgabewert ist die Länge des Texts in Zeichen, ohne das abschließende Null Zeichen.
+Der Rückgabewert ist die Länge des Texts in Zeichen, ohne das abschließende NULL-Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einem Bearbeitungs Steuerelement ist der Text, der kopiert werden soll, der Inhalt des Bearbeitungs Steuer Elements. Bei einem Kombinations Feld ist der Text der Inhalt des Bearbeitungs Steuer Elements (oder statischer Text) des Kombinations Felds. Für eine Schaltfläche ist der Text der Schaltflächen Name. Bei anderen Fenstern ist der Text der Fenstertitel. Zum Ermitteln der Länge eines Elements in einem Listenfeld kann eine Anwendung die [**\_ gettextlen**](../controls/lb-gettextlen.md) -Nachricht des lb-Elements verwenden.
+Bei einem Bearbeitungssteuerelement ist der zu kopierende Text der Inhalt des Bearbeitungssteuerelements. Bei einem Kombinationsfeld ist der Text der Inhalt des Bearbeitungssteuerelements (oder des statischen Texts) des Kombinationsfelds. Bei einer Schaltfläche ist der Text der Schaltflächenname. Bei anderen Fenstern ist der Text der Fenstertitel. Um die Länge eines Elements in einem Listenfeld zu bestimmen, kann eine Anwendung die [**LB \_ GETTEXTLEN-Nachricht**](../controls/lb-gettextlen.md) verwenden.
 
-Wenn die **WM \_ getTextLength** -Nachricht gesendet wird, gibt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die Länge des Texts in Zeichen zurück. Unter bestimmten Bedingungen gibt die **defwindowproc** -Funktion einen Wert zurück, der größer ist als die tatsächliche Textlänge. Dies tritt bei bestimmten Kombinationen von ANSI und Unicode auf und ist darauf zurückzuführen, dass das System das vorhanden sein von DBCS-Zeichen (Double-Byte Character Set) im Text zulässt. Der Rückgabewert ist jedoch immer mindestens so groß wie die tatsächliche Textlänge. Sie können Sie daher immer verwenden, um die Puffer Zuordnung zu steuern. Dieses Verhalten kann auftreten, wenn eine Anwendung sowohl ANSI-Funktionen als auch allgemeine Dialogfelder verwendet, die Unicode verwenden.
+Wenn die **WM \_ GETTEXTLENGTH-Nachricht** gesendet wird, gibt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Länge des Texts in Zeichen zurück. Unter bestimmten Bedingungen gibt die **DefWindowProc-Funktion** einen Wert zurück, der größer als die tatsächliche Länge des Texts ist. Dies tritt bei bestimmten Mischungen von ANSI und Unicode auf und ist darauf zurückzuführen, dass das System das mögliche Vorhandensein von Doppel-Byte-Zeichensatzzeichen (Double-Byte Character Set, DBCS) im Text zulässt. Der Rückgabewert ist jedoch immer mindestens so groß wie die tatsächliche Länge des Texts. Sie können es daher immer verwenden, um die Pufferzuordnung zu steuern. Dieses Verhalten kann auftreten, wenn eine Anwendung sowohl ANSI-Funktionen als auch allgemeine Dialoge verwendet, die Unicode verwenden.
 
-Um die genaue Länge des Texts zu erhalten, verwenden Sie die Nachrichten [**WM \_ gettext**](wm-gettext.md), [**lb \_ gettext**](../controls/lb-gettext.md)oder [**CB \_ getlbtext**](../controls/cb-getlbtext.md) oder die Funktion [**GetWindowText**](/windows/win32/api/winuser/nf-winuser-getwindowtexta) .
+Um die genaue Länge des Texts abzurufen, verwenden Sie die [**WM \_ GETTEXT-,**](wm-gettext.md) [**LB \_ GETTEXT-**](../controls/lb-gettext.md)oder [**CB \_ GETLBTEXT-Nachrichten**](../controls/cb-getlbtext.md) oder die [**GetWindowText-Funktion.**](/windows/win32/api/winuser/nf-winuser-getwindowtexta)
 
-Das Senden einer **WM- \_ getTextLength** -Nachricht an ein statisches, nicht-Text-Steuerelement, z. b. eine statische Bitmap oder ein statisches Symbol, gibt keinen Zeichen folgen Wert zurück. Stattdessen wird 0 (null) zurückgegeben.
+Das Senden einer **WM \_ GETTEXTLENGTH-Nachricht** an ein statisches Steuerelement ohne Text, z. B. eine statische Bitmap oder ein statisches Symbolsteuerelement, gibt keinen Zeichenfolgenwert zurück. Stattdessen wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Das Senden einer **WM- \_ getTextLength** -Nachricht an ein statisches, nicht-Te
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Das Senden einer **WM- \_ getTextLength** -Nachricht an ein statisches, nicht-Te
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
@@ -81,13 +81,13 @@ Das Senden einer **WM- \_ getTextLength** -Nachricht an ein statisches, nicht-Te
 [**GetWindowText**](/windows/win32/api/winuser/nf-winuser-getwindowtexta)
 </dt> <dt>
 
-[**Getwindowtextlength**](/windows/win32/api/winuser/nf-winuser-getwindowtextlengtha)
+[**GetWindowTextLength**](/windows/win32/api/winuser/nf-winuser-getwindowtextlengtha)
 </dt> <dt>
 
-[**WM \_ gettext**](wm-gettext.md)
+[**WM \_ GETTEXT**](wm-gettext.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)
@@ -96,13 +96,13 @@ Das Senden einer **WM- \_ getTextLength** -Nachricht an ein statisches, nicht-Te
 **Andere Ressourcen**
 </dt> <dt>
 
-[**CB \_ getlbtext**](../controls/cb-getlbtext.md)
+[**CB \_ GETLBTEXT**](../controls/cb-getlbtext.md)
 </dt> <dt>
 
-[**LB- \_ gettext**](../controls/lb-gettext.md)
+[**LB \_ GETTEXT**](../controls/lb-gettext.md)
 </dt> <dt>
 
-[**LB- \_ gettextlen**](../controls/lb-gettextlen.md)
+[**LB \_ GETTEXTLEN**](../controls/lb-gettextlen.md)
 </dt> </dl>
 
  

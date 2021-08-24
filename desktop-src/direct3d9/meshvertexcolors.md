@@ -1,19 +1,19 @@
 ---
-description: Gibt Scheitelpunkt Farben für ein Mesh an, anstatt ein Material pro Gesicht oder pro Mesh anzuwenden.
+description: Gibt Scheitelpunktfarben für ein Gitternetz an, anstatt ein Material pro Gesicht oder Gitternetz anzuwenden.
 ms.assetid: 9ffd365f-11a5-420b-af5e-6a8be79a304c
-title: Meshvertexcolors
+title: MeshVertexColors
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba55d601b29e0962c5d56e86ae052c454bf3adc7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 035f8d51ae692b0edd20f7b06b5ab8e756ff73d9cd8265d64700ce5374f9a15b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119628330"
 ---
-# <a name="meshvertexcolors"></a>Meshvertexcolors
+# <a name="meshvertexcolors"></a>MeshVertexColors
 
-Gibt Scheitelpunkt Farben für ein Mesh an, anstatt ein Material pro Gesicht oder pro Mesh anzuwenden.
+Gibt Scheitelpunktfarben für ein Gitternetz an, anstatt ein Material pro Gesicht oder Gitternetz anzuwenden.
 
 ``` syntax
 template MeshVertexColors
@@ -26,8 +26,8 @@ template MeshVertexColors
 
 Hierbei gilt:
 
--   nvertexcolors: Anzahl der Farben. Dies entspricht der Anzahl der Scheitel Punkte im Mesh.
--   Array indexcolor vertexcolors \[ nvertexcolors \] -Array von indizierten Farben. Siehe [**indexedcolor**](indexedcolor.md).
+-   nVertexColors: Anzahl der Farben. Dies entspricht der Anzahl der Scheitelpunkte im Netz.
+-   array IndexColor vertexColors \[ nVertexColors \] : Array der indizierten Farben. Siehe [**IndexedColor**](indexedcolor.md).
 
 ## <a name="see-also"></a>Siehe auch
 

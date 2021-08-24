@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, bevor Striche aus der Ink-Eigenschaft gelöscht werden.
+description: Tritt ein, bevor Striche aus der Ink-Eigenschaft gelöscht werden.
 ms.assetid: 09468416-ad08-48ea-aa4a-3af0fe553f3d
-title: InkOverlay. strokeslösch-Ereignis (msink AUT. h)
+title: InkOverlay.StrokesDeleting-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64422e61869c633514c3e219e3d090476a693dd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b85e01eabc46e8e9cc4ca844ae8f5efa8b58e83fdee2724792a3856445b7dbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712670"
 ---
-# <a name="inkoverlaystrokesdeleting-event"></a>InkOverlay. strokeslösch-Ereignis
+# <a name="inkoverlaystrokesdeleting-event"></a>InkOverlay.StrokesDeleting-Ereignis
 
-Tritt auf, bevor Striche aus der [**Ink**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_ink) -Eigenschaft gelöscht werden.
+Tritt ein, bevor Striche aus der [**Ink-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_ink) gelöscht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,10 +30,10 @@ void StrokesDeleting(
 
 <dl> <dt>
 
-*Striche* \[ in\]
+*Striche* \[ In\]
 </dt> <dd>
 
-Die [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, die beim Auslösen des **strokeslösch** -Ereignisses gelöscht wird.
+Die [Sammlung InkStrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) wurde gelöscht, wenn das **StrokesDeleting-Ereignis** ausgelöst wird.
 
 </dd> </dl>
 
@@ -41,9 +41,9 @@ Die [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -A
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID "DISPID \_ ioestrokeslösch" definiert.
+Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOEStrokesDeleting definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayeve
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -65,7 +65,7 @@ Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayeve
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Ink \[ -Eigenschaft InkCollector/InkOverlay-Klasse\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_ink)
+[**Ink-Eigenschaft \[ InkCollector/InkOverLay-Klasse\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcollector-get_ink)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob GetDisplayName-Methode (deliveryoptimization. h)
-description: Ruft den anzeigen Amen für den Auftrag ab. In der Regel verwenden Sie den anzeigen Amen, um den Auftrag auf einer Benutzeroberfläche zu identifizieren.
+title: IBackgroundCopyJob GetDisplayName-Methode (Deliveryoptimization.h)
+description: Ruft den Anzeigenamen für den Auftrag ab. In der Regel verwenden Sie den Anzeigenamen, um den Auftrag auf einer Benutzeroberfläche zu identifizieren.
 ms.assetid: E3D906E1-5D58-4BA8-A3AB-24BCDCD487F5
 keywords:
 - GetDisplayName-Methode
-- GetDisplayName-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, GetDisplayName-Methode
+- GetDisplayName-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, GetDisplayName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 981e4b60ea3c25d48a3b098237232e517e4ed1c5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1a50d2bdc1c492725b79368774f07755c7b629d73209a7d53f865cc738eb7025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755540"
 ---
-# <a name="ibackgroundcopyjobgetdisplayname-method"></a>Ibackgroundcopyjob:: GetDisplayName-Methode
+# <a name="ibackgroundcopyjobgetdisplayname-method"></a>IBackgroundCopyJob::GetDisplayName-Methode
 
-Ruft den anzeigen Amen für den Auftrag ab. In der Regel verwenden Sie den anzeigen Amen, um den Auftrag auf einer Benutzeroberfläche zu identifizieren.
+Ruft den Anzeigenamen für den Auftrag ab. In der Regel verwenden Sie den Anzeigenamen, um den Auftrag auf einer Benutzeroberfläche zu identifizieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ HRESULT GetDisplayName(
 
 <dl> <dt>
 
-*ppdisplayname* \[ vorgenommen\]
+*ppDisplayName* \[ out\]
 </dt> <dd>
 
-Eine auf NULL endenden Zeichenfolge, die den anzeigen Amen enthält, der den Auftrag identifiziert. Mehrere Aufträge können denselben anzeigen Amen aufweisen. Aufrufen der Funktion " [**CoTaskMemFree**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um " *ppdisplayname* " zu beenden
+Auf NULL endende Zeichenfolge, die den Anzeigenamen enthält, der den Auftrag identifiziert. Mehr als ein Auftrag kann den gleichen Anzeigenamen aufweisen. Rufen Sie die [**CoTaskMemFree-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um *ppDisplayName* frei zu machen, wenn Sie fertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                  |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl>     | Der Anzeige Name wurde erfolgreich abgerufen.<br/>          |
-| <dl> <dt>**E_INVALIDARG**</dt> </dl> | Der *ppdisplayname* -Parameter darf nicht **null** sein.<br/> |
+| <dl> <dt>S_OK</dt> </dl>     | Der Anzeigename wurde erfolgreich abgerufen.<br/>          |
+| <dl> <dt>**E_INVALIDARG**</dt> </dl> | Der *ppDisplayName-Parameter* darf nicht **NULL** sein.<br/> |
 
 
 
@@ -71,17 +71,17 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

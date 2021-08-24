@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmissingrestorelogfilesexception-Konstruktor'
-title: Esentmissingrestorelogfilesexception-Konstruktor
+description: 'Weitere Informationen zu: EsentMissingRestoreLogFilesException-Konstruktor'
+title: EsentMissingRestoreLogFilesException-Konstruktor
 TOCTitle: 'EsentMissingRestoreLogFilesException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMissingRestoreLogFilesException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmissingrestorelogfilesexception.esentmissingrestorelogfilesexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7f7aae7942fb70c2e1d59c265292d30ca96b91d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd02f59a528260f4c67459a56327297dc7fb9a4e2803a9abcd405dbfbb0682f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119734166"
 ---
-# <a name="esentmissingrestorelogfilesexception-constructor"></a>Esentmissingrestorelogfilesexception-Konstruktor
+# <a name="esentmissingrestorelogfilesexception-constructor"></a>EsentMissingRestoreLogFilesException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmissingrestorelogfilesexception-Klasse.
+Initialisiert eine neue Instanz der EsentMissingRestoreLogFilesException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentMissingRestoreLogFilesException()
 public EsentMissingRestoreLogFilesException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmissingrestorelogfilesexception-Klasse](./esentmissingrestorelogfilesexception-class.md)
+[EsentMissingRestoreLogFilesException-Klasse](./esentmissingrestorelogfilesexception-class.md)
 
-[Esentmissingrestorelogfilesexception-Elemente](./esentmissingrestorelogfilesexception-members.md)
+[EsentMissingRestoreLogFilesException-Member](./esentmissingrestorelogfilesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

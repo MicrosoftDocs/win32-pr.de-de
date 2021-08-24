@@ -1,7 +1,7 @@
 ---
-description: 'LocationDisp.CivicAddressReportFactory.DesiredAccuracy-Eigenschaft: Der aktuelle gewünschte Genauigkeitswert.'
+description: 'LocationDisp.CivicAddressReportFactory.DesiredAccuracy-Eigenschaft: Der aktuelle Wert für die gewünschte Genauigkeit.'
 ms.assetid: 296164cf-a8ed-4277-bb4c-83ac09e63291
-title: LocationDisp.CivicAddressReportFactory.DesiredAccuracy (Eigenschaft)
+title: LocationDisp.CivicAddressReportFactory.DesiredAccuracy-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 3a18a363c2f24e9b17e16064b7375a4f075a1a8e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ca2d4f4a7be4afa800cfe81b5df7396be579197e7f997019f4ece3a39598c975
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693130"
 ---
-# <a name="locationdispcivicaddressreportfactorydesiredaccuracy-property"></a>LocationDisp.CivicAddressReportFactory.DesiredAccuracy (Eigenschaft)
+# <a name="locationdispcivicaddressreportfactorydesiredaccuracy-property"></a>LocationDisp.CivicAddressReportFactory.DesiredAccuracy-Eigenschaft
 
-\[Das Location-API-Objektmodell steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Verwenden Sie die [**Windows.Devices.Geolocation-API,**](/uwp/api/Windows.Devices.Geolocation) um über eine Desktopanwendung auf den Standort zuzugreifen.\]
+\[Das Location API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Um von einer Desktopanwendung aus auf den Speicherort zuzugreifen, verwenden Sie die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
-Der aktuelle gewünschte Genauigkeitswert.
+Der aktuelle Wert für die gewünschte Genauigkeit.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -39,30 +39,30 @@ LocationDisp.CivicAddressReportFactory.DesiredAccuracy = DesiredAccuracy
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft ist ein ULONG-Objekt mit **Lese-/Schreibzugriff.**
+Diese Eigenschaft ist ein **ULONG-Objekt** mit Lese-/Schreibzugriff.
 
 
 
 | Wert                                                                        | Bedeutung                                                                                                                                                                                            |
 |------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Standard. Der Sensor sollte die Genauigkeit verwenden, für die er den Stromverbrauch optimieren kann, und andere Kostenaspekte berücksichtigen.<br/>                                                                          |
-| <dl> <dt>1</dt> </dl> | Der Sensor sollte den bestmöglichen Bericht liefern. Dies beinhaltet die Verwendung von kostenpflichtigen Diensten oder Diensten mit höherem Akkuverbrauch oder höherer Verbindungsbandbreite.<br/> |
+| <dl> <dt>0</dt> </dl> | Standard. Der Sensor sollte die Genauigkeit verwenden, für die er die Energienutzung und andere Kostenaspekte optimieren kann.<br/>                                                                          |
+| <dl> <dt>1</dt> </dl> | Der Sensor sollte den genauesten Bericht liefern. Dies beinhaltet die Verwendung von kostenpflichtigen Diensten oder Diensten mit höherem Akkuverbrauch oder höherer Verbindungsbandbreite.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert ist eine Anforderung an den Standortanbieter. Der Standortanbieter muss nicht die von Ihnen geforderte Genauigkeit bereitstellen. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung für die echte Genauigkeit zu finden.
+Dieser Wert ist eine Anforderung an den Standortanbieter. Der Standortanbieter ist nicht erforderlich, um die von Ihnen angeforderte Genauigkeit bereitzustellen. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung für die echte Genauigkeit zu ermitteln.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ 7-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

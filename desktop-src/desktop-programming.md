@@ -1,80 +1,80 @@
 ---
-description: Beginnen Sie mit dem Erlernen der Grundlagen der Einführung von hervorragend Desktop-Apps in diesem Abschnitt.
+description: Lernen Sie in diesem Abschnitt die Grundlagen der Entwicklung hervorragender Desktop-Apps.
 ms.assetid: 15690E05-9AF7-41A3-AF7C-8DB7C5FB9BE4
 title: Erste Schritte
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84879e6373f4bfeb5a7e4b6a6138423d7688afe2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f791589d73447798a7721c52164a2002b48a792959c698b835039293ce6004d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755010"
 ---
-# <a name="get-started-with-desktop-windows-apps-that-use-the-win32-api"></a>Einstieg in Windows-Desktop-Apps, die die Win32-API verwenden
+# <a name="get-started-with-desktop-windows-apps-that-use-the-win32-api"></a>Erste Schritte mit Desktop-Windows-Apps, die die Win32-API verwenden
 
-Die Win32-API (auch als Windows-API bezeichnet) ist die ursprüngliche Plattform für native C/C++-Windows-Anwendungen, die direkten Zugriff auf Windows und Hardware erfordern. Sie bietet eine erstklassige Entwicklungsumgebung ohne Abhängigkeit von einer verwalteten Laufzeitumgebung wie .net und WinRT (für UWP-Apps für Windows 10). Dadurch ist die Win32-API die Plattform der Wahl für Anwendungen, die das höchste Maß an Leistung und den direkten Zugriff auf die Systemhardware benötigen.
+Die Win32-API (auch als Windows-API bezeichnet) ist die ursprüngliche Plattform für native C/C++-Windows-Anwendungen, die direkten Zugriff auf Windows und Hardware erfordern. Es bietet eine erstklassige Entwicklungsumgebung ohne Abhängigkeit von einer verwalteten Laufzeitumgebung wie .NET und WinRT (für UWP-Apps für Windows 10). Dadurch ist die Win32-API die Plattform der Wahl für Anwendungen, die das höchste Maß an Leistung und den direkten Zugriff auf die Systemhardware benötigen.
 
 > [!NOTE]
-> In dieser Dokumentation wird das Erstellen von Windows-Desktop-Apps mit der Win32-API behandelt. Die Win32-API ist eine von mehreren App-Plattformen, die Sie zum Erstellen von Windows-Desktop Anwendungen verwenden können. Weitere Informationen zu anderen APP-Plattformen finden [Sie unter Auswählen Ihrer Plattform](/windows/apps/desktop/choose-your-platform).
+> In dieser Dokumentation wird beschrieben, wie Sie Desktop-Windows-Apps mit der Win32-API erstellen. Die Win32-API ist eine von mehreren App-Plattformen, die Sie zum Erstellen von Desktop-Apps Windows können. Weitere Informationen zu anderen App-Plattformen finden Sie unter [Auswählen Ihrer Plattform.](/windows/apps/desktop/choose-your-platform)
 
 ## <a name="get-set-up"></a>Vorbereiten
 
-Befolgen Sie diese Anweisungen, und beginnen Sie mit dem Erstellen von Desktop-Apps für Windows 10, die die Win32-API
+Befolgen Sie diese Anweisungen, und beginnen Sie mit dem Erstellen von Desktop-Apps für Windows 10, die die Win32-API verwenden.
 
-1. Laden Sie Visual Studio 2019 herunter, oder aktualisieren Sie es. Wenn Sie Visual Studio 2019 noch nicht verwenden, können Sie Microsoft Visual Studio Community 2019 kostenlos installieren. Wenn Sie Visual Studio installieren, stellen Sie sicher, dass Sie die Option " **Desktop Entwicklung mit C++** " auswählen. Download Links finden Sie auf der Seite [Downloads](https://developer.microsoft.com/windows/downloads) .
+1. Laden Sie das Update Visual Studio 2019 herunter, oder aktualisieren Sie es. Wenn Sie Visual Studio 2019 noch nicht verwenden, können Sie Microsoft Visual Studio Community 2019 kostenlos installieren. Wenn Sie die Visual Studio installieren, stellen Sie sicher, dass Sie die **Option Desktopentwicklung mit C++** auswählen. Downloadlinks finden Sie auf unserer [Downloadseite.](https://developer.microsoft.com/windows/downloads)
 
     > [!NOTE]
-    > Wenn Sie Visual Studio installieren, können Sie optional die Optionen für die **.net-Desktop Entwicklung** und **universelle Windows-Plattform Entwicklung** für den Zugriff auf andere Projekttypen und App-Plattformen für die Erstellung von Windows-Desktop-Apps auswählen.
+    > Wenn Sie Visual Studio installieren, können Sie optional die **Entwicklungsoptionen .NET-Desktopentwicklung** und **Universelle Windows-Plattform** für den Zugriff auf andere Projekttypen und App-Plattformen zum Erstellen von Desktop- und Windows auswählen.
 
-2. Wenn Sie Ihre Desktop-app in einem [msix-Paket](/windows/msix/desktop/desktop-to-uwp-root) erstellen und die APP auf dem Entwicklungs Computer testen oder debuggen möchten, müssen Sie den [Entwicklermodus auf Ihrem Computer aktivieren](/windows/uwp/get-started/enable-your-device-for-development).
+2. Wenn Sie Ihre Desktop-App in ein [MSIX-Paket](/windows/msix/desktop/desktop-to-uwp-root) erstellen und die gepackte App auf Ihrem Entwicklungscomputer testen oder debuggen möchten, müssen Sie den Entwicklermodus auf Ihrem [Computer aktivieren.](/windows/uwp/get-started/enable-your-device-for-development)
 
 > [!NOTE]
-> Skripts, die Sie zum Einrichten des Entwicklungs Computers und zum Installieren anderer Features oder Pakete verwenden können, finden Sie in [diesem GitHub-Projekt](https://github.com/Microsoft/windows-dev-box-setup-scripts).
+> Informationen zu Skripts, mit derenHilfe Sie Ihren Entwicklungscomputer einrichten und andere Features oder Pakete installieren können, finden Sie [in GitHub Projekt](https://github.com/Microsoft/windows-dev-box-setup-scripts).
 
-## <a name="learn-how-to-create-desktop-apps-using-the-win32-api"></a>Erfahren Sie, wie Sie Desktop-Apps mithilfe der Win32-API erstellen.
+## <a name="learn-how-to-create-desktop-apps-using-the-win32-api"></a>Erfahren Sie, wie Sie Desktop-Apps mit der Win32-API erstellen.
 
-Wenn Sie noch nicht mit der Verwendung der Win32-API für Desktop-Apps vertraut sind, helfen Ihnen die folgenden Tutorials und Artikel beim Einstieg.
+Wenn Sie noch nicht mit dem Erstellen von Desktop-Apps mit der Win32-API beginnen, helfen Ihnen die folgenden Tutorials und Artikel beim Einstieg.
 
-| Thema        | BESCHREIBUNG      |
+| Thema        | Beschreibung      |
 |---------------|-----------------|
-| [Erstellen Ihrer ersten C++ Win32-App](LearnWin32/learn-to-program-for-windows.md)    | In diesem Tutorial erfahren Sie, wie Sie ein Windows-Programm mit Win32-und com-APIs in C++ schreiben.  |
-| [Erstellen Ihrer ersten App mithilfe von DirectX](direct3dgetstarted/building-your-first-directx-app.md) | In diesem grundlegenden Tutorial erhalten Sie einen Einstieg in die Entwicklung von DirectX-apps.            |
-| [Programmierhandbuch für 64-Bit-Windows](WinProg64/programming-guide-for-64-bit-windows.md)    | Beschreibt die Programmierung für 64-Bit-Versionen des Windows-Betriebssystems. |
-| [Verwenden der Windows-Header](WinProg/using-the-windows-headers.md)     | Bietet einen Überblick über einige der Konventionen, die in den Windows-Header Dateien verwendet werden. |
+| [Erstellen Ihrer ersten C++-Win32-App](LearnWin32/learn-to-program-for-windows.md)    | In diesem Tutorial erfahren Sie, wie Sie ein Windows in C++ schreiben, indem Sie Win32- und COM-APIs verwenden.  |
+| [Erstellen Ihrer ersten App mit DirectX](direct3dgetstarted/building-your-first-directx-app.md) | In diesem einfachen Tutorial erhalten Sie Informationen zu den ersten Schritte bei der Entwicklung von DirectX-Apps.            |
+| [Programmierhandbuch für 64-Bit-Windows](WinProg64/programming-guide-for-64-bit-windows.md)    | Beschreibt die Programmierung für 64-Bit-Versionen des Windows Betriebssystems. |
+| [Verwenden der Windows Header](WinProg/using-the-windows-headers.md)     | Bietet eine Übersicht über einige der Konventionen, die in den Headerdateien Windows werden. |
 
-Sie können auch die [Desktop-App-Beispiele](https://github.com/Microsoft/Windows-classic-samples)durchsuchen.
+Sie können auch die [Desktop-App-Beispiele durchsuchen.](https://github.com/Microsoft/Windows-classic-samples)
 
-## <a name="modernize-your-desktop-apps-for-windows-10"></a>Modernisieren ihrer Desktop-Apps für Windows 10
+## <a name="modernize-your-desktop-apps-for-windows-10"></a>Modernisieren Ihrer Desktop-Apps für Windows 10
 
-Wenn Sie über eine vorhandene Win32-Desktop-App verfügen, stehen Ihnen viele Features in der universelle Windows-Plattform (UWP) zur Verfügung, die Sie verwenden können, um die bestmögliche Benutzer Leistung für Windows 10 bereitzustellen. Beispielsweise können Sie ab Windows 10, Version 1903, UWP-XAML-Steuerelemente in Ihrer Desktop-Win32-App mithilfe eines Features namens XAML-Inseln hosten.
+Wenn Sie über eine vorhandene Desktop-Win32-App verfügen, gibt es viele Features in der universellen Windows-Plattform (UWP), mit denen Sie die bestmögliche Benutzererfahrung auf der Windows 10. Beispielsweise können Sie ab Windows 10 Version 1903 UWP-XAML-Steuerelemente in Ihrer Win32-Desktop-App hosten, indem Sie ein Feature namens XAML Islands verwenden.
 
-Die meisten dieser UWP-Funktionen sind als modulare Komponenten verfügbar, die Sie in Ihrer Desktop-app in Ihrem eigenen Tempo übernehmen können, ohne die gesamte Anwendung neu schreiben zu müssen. Sie können Ihre vorhandene Desktop-App verbessern, indem Sie auswählen, welche Teile von Windows 10 und UWP übernommen werden.
+Die meisten dieser UWP-Features sind als modulare Komponenten verfügbar, die Sie in Ihrer Desktop-App in Ihrem eigenen Tempo übernehmen können, ohne die gesamte Anwendung neu schreiben zu müssen. Sie können Ihre vorhandene Desktop-App verbessern, indem Sie auswählen, welche Teile Windows 10 und UWP übernehmen.
 
 Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-Apps](/windows/apps/desktop/modernize).
 
 ## <a name="cwinrt"></a>C++/WinRT
 
-Optional können Sie den Entwicklungs Computer so konfigurieren, dass er [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)verwendet. C++/WinRT ist eine vollständig standardmäßige moderne C++ 17-sprach Projektion und ermöglicht Ihnen die einfache Nutzung von Windows-Runtime APIs Windows-Runtime (WinRT)-APIs aus Ihrer C++ Win32-Desktop Anwendung. C++/WinRT wird als auf Header Dateien basierende Bibliothek implementiert.
+Optional können Sie Ihren Entwicklungscomputer für die Verwendung von [C++/WinRT konfigurieren.](/windows/uwp/cpp-and-winrt-apis/) C++/WinRT ist eine vollständig standardmäßige moderne C++17-Sprachprojektion, mit der Sie ganz einfach Windows-Runtime-APIs Windows Runtime-APIs (WinRT)-APIs aus Ihrer C++-Win32-Desktopanwendung nutzen können. C++/WinRT wird als headerdateibasierte Bibliothek implementiert.
 
 Konfigurieren Ihres Projekts für C++/WinRT:
 
 * Für neue Projekte können Sie die [C++/WinRT-Visual Studio-Erweiterung (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) installieren und eine der in dieser Erweiterung enthaltenen C++/WinRT-Projektvorlagen verwenden.
-* Für vorhandene Windows-Desktop Anwendungsprojekte können Sie das nuget-Paket [Microsoft. Windows. cppwinrt](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) im Projekt installieren.
+* Für vorhandene Windows Desktopanwendungsprojekte können Sie [Microsoft.Windows. CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) NuGet Paket im Projekt.
 
 Weitere Informationen zu diesen Optionen finden Sie in [diesem Artikel](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package).
 
-## <a name="whats-new-for-win32-apis-in-windows-10"></a>Neuerungen bei Win32-APIs in Windows 10
+## <a name="whats-new-for-win32-apis-in-windows-10"></a>Neues bei Win32-APIs in Windows 10
 
-Weitere Informationen zu neuen Win32-APIs, die in Windows 10 eingeführt wurden, finden Sie unter [What es New](whats-new.md)(Neuerungen).
+Informationen zu neuen Win32-APIs, die in Windows 10 wurden, finden Sie unter [Neues.](whats-new.md)
 
-## <a name="get-started-with-win32-features-and-technologies"></a>Beginnen Sie mit Win32-Features und-Technologien
+## <a name="get-started-with-win32-features-and-technologies"></a>Erste Schritte mit Win32-Features und -Technologien
 
-Win32-APIs sind für viele Features und Technologien in Windows 10 vorhanden, einschließlich der Kern Benutzeroberfläche und der windowingapis, Audiofunktionen und Grafiken sowie von Netzwerkfunktionen. Anleitungen und Codebeispiele zur Verwendung dieser APIs finden Sie in [unserem Funktions-und Technologien Index](desktop-app-technologies.md).
+Win32-APIs stehen für viele Features und Technologien in Windows 10 zur Verfügung, einschließlich Kern-Benutzeroberflächen- und Fenster-APIs, Audio- und Grafik- und Netzwerkfunktionen. Anleitungen und Codebeispiele zur Verwendung dieser APIs finden Sie [in unserem Index für Features und Technologien.](desktop-app-technologies.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 * [Entwickeln von Desktop-Apps](/windows/apps/desktop)
-* [Windows-API-Referenz](/windows/desktop/api/)
+* [Windows API-Referenz](/windows/desktop/api/)
 * [Windows-API-Index](/windows/desktop/apiindex/api-index-portal)
-* [Windows-Runtime C++ Verweis](/windows/desktop/winrt/reference)
+* [Windows C++-Referenz zur Laufzeit](/windows/desktop/winrt/reference)

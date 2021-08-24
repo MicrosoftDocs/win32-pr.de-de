@@ -1,7 +1,7 @@
 ---
-description: Legt die markveroffsetmatrix fest.
+description: Legt die Offsetmatrix des Offsets fest.
 ms.assetid: f8ac1117-510d-42af-a6bf-422cbaaf6b74
-title: 'ID3DXSkinInfo:: setboneoffsetmatrix-Methode (D3DX9Mesh. h)'
+title: ID3DXSkinInfo::SetBoneOffsetMatrix-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 283d36bb68e33cfa0e2349bab304b0cdde7ef77e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9d5daf20697777cfbf1b72d4ab18936f81c262ba9b23379d6089bffca8b9a516
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103761919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119674710"
 ---
-# <a name="id3dxskininfosetboneoffsetmatrix-method"></a>ID3DXSkinInfo:: setboneoffsetmatrix-Methode
+# <a name="id3dxskininfosetboneoffsetmatrix-method"></a>ID3DXSkinInfo::SetBoneOffsetMatrix-Methode
 
-Legt die markveroffsetmatrix fest.
+Legt die Offsetmatrix des Offsets fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetBoneOffsetMatrix(
 
 <dl> <dt>
 
-*Knochen* \[ in\]
+*Dies ist ein* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Die Knochen Nummer.
+Anzahl der Zahlen.
 
 </dd> <dt>
 
-*pbonetransform* \[ in\]
+*pBoneTransform* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Ein Zeiger auf die-markveroffset-Matrix.
+Zeiger auf die Offsetmatrix des Offsets.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Ein Zeiger auf die-markveroffset-Matrix.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Feldnamen werden von [**D3DXLoadMeshFromXof**](d3dxloadmeshfromxof.md)zurückgegeben.
+Namen von Namen werden von [**D3DXLoadMeshFromXof**](d3dxloadmeshfromxof.md)zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die Feldnamen werden von [**D3DXLoadMeshFromXof**](d3dxloadmeshfromxof.md)zurüc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -87,7 +87,7 @@ Die Feldnamen werden von [**D3DXLoadMeshFromXof**](d3dxloadmeshfromxof.md)zurüc
 [ID3DXSkinInfo](id3dxskininfo.md)
 </dt> <dt>
 
-[**ID3DXSkinInfo:: getboneoffsetmatrix**](id3dxskininfo--getboneoffsetmatrix.md)
+[**ID3DXSkinInfo::GetBoneOffsetMatrix**](id3dxskininfo--getboneoffsetmatrix.md)
 </dt> </dl>
 
  

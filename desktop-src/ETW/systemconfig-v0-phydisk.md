@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_V0_PhyDisk-Klasse: Diese Klasse ist die Ereignistypklasse für Physische Datenträgerkonfigurationsereignisse.'
+description: 'SystemConfig_V0_PhyDisk Klasse: Diese Klasse ist die Ereignistypklasse für physische Datenträgerkonfigurationsereignisse.'
 ms.assetid: 90ca3089-de5c-4e15-8abf-eaab9aafff06
 title: SystemConfig_V0_PhyDisk-Klasse
 ms.topic: reference
@@ -25,18 +25,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: fdb12fac8b2b902f21258fd4c7cfe9846d0456eb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1bfa7b994bfe0950ccc7a97b19fbd705838950d7461712b114a16f62e7ad0aec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754760"
 ---
 # <a name="systemconfig_v0_phydisk-class"></a>SystemConfig \_ V0 \_ PhyDisk-Klasse
 
-Diese Klasse ist die Ereignistypklasse für Physische Datenträgerkonfigurationsereignisse.
+Diese Klasse ist die Ereignistypklasse für physische Datenträgerkonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,13 +62,13 @@ class SystemConfig_V0_PhyDisk : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ V0 \_ PhyDisk-Klasse** verfügt über folgende Typen von Membern:
+Die **SystemConfig \_ V0 \_ PhyDisk-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig \_ V0 \_ PhyDisk-Klasse** verfügt über diese Eigenschaften.
+Die **SystemConfig \_ \_ V0-Klasse PhyDisk** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -84,7 +84,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (13), **Max** (3)
 </dt> </dl>
 
-Laufwerkbuchstabe des Startlaufwerks im Format <letter> ":".
+Laufwerkbuchstaben des Startlaufwerks im Folgenden: <letter> ":".
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
-Anzahl der Bytes in jedem Sektor für das physische Laufwerk.
+Anzahl von Bytes in jedem Sektor für das physische Laufwerk.
 
 </dd> <dt>
 
@@ -116,7 +116,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Gesamtanzahl der Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h abgerufen. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
+Gesamtanzahl der Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h ermittelt. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
 
 </dd> <dt>
 
@@ -260,7 +260,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
-Anzahl der Spuren in jedem Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h abgerufen. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
+Anzahl der Spuren in jedem Zylinder auf dem physischen Laufwerk. Hinweis: Der Wert für diese Eigenschaft wird über erweiterte Funktionen des BIOS-Interrupts 13h ermittelt. Der Wert kann ungenau sein, wenn das Laufwerk ein Übersetzungsschema verwendet, um Datenträgergrößen mit hoher Kapazität zu unterstützen. Wenden Sie sich an den Hersteller, um genaue Laufwerkspezifikationen zu erhalten.
 
 </dd> <dt>
 
@@ -276,7 +276,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (12)
 </dt> </dl>
 
-True, wenn der Schreibcache aktiviert ist.
+TRUE, wenn der Schreibcache aktiviert ist.
 
 </dd> </dl>
 
@@ -284,10 +284,10 @@ True, wenn der Schreibcache aktiviert ist.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

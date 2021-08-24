@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SPACEHINTS. Methode "destring"'
-title: JET_SPACEHINTS. Methode "destring"
+description: 'Weitere Informationen finden Sie unter: JET_SPACEHINTS. ToString-Methode'
+title: JET_SPACEHINTS. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_SPACEHINTS.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_spacehints.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 10ae80ebaf4622afb3e6f9b9717c65f6c56f7838
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc4706f88d65b8a3e66da10639038b3bcfd24c4df5f84a89204f2d9649960a86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729390"
 ---
-# <a name="jet_spacehintstostring-method"></a>JET_SPACEHINTS. Methode "destring"
+# <a name="jet_spacehintstostring-method"></a>JET_SPACEHINTS. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Instanz.
+Generiert eine Zeichenfolgendarstellung der -Instanz.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_SPACEHINTS-Klasse](./jet-spacehints-class.md)
 
-[Mitglieder JET_SPACEHINTS](./jet-spacehints-members.md)
+[JET_SPACEHINTS Member](./jet-spacehints-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

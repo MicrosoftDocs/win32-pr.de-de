@@ -1,9 +1,9 @@
 ---
-title: ICM_SET_STATUS_PROC Meldung (VFW. h)
-description: Die ICM \_ Set \_ Status \_ proc-Nachricht stellt eine Status Rückruffunktion mit dem Status eines langwierigen Vorgangs bereit.
+title: ICM_SET_STATUS_PROC (Vfw.h)
+description: Die ICM \_ SET \_ STATUS \_ PROC-Nachricht stellt eine Statusrückruffunktion mit dem Status eines längeren Vorgangs zur Veranschlagung.
 ms.assetid: a1bcd840-b94b-487e-91d6-67411a8a3a2d
 keywords:
-- ICM_SET_STATUS_PROC-Nachricht (Multimedia)
+- ICM_SET_STATUS_PROC-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53d7ad2745ab53c2e04a1588ddbf1b1e5d755202
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c02019bb6375aa18fd37ba34d2603839b37291d58822858b0b9cabc01e47d7b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678340"
 ---
-# <a name="icm_set_status_proc-message"></a>ICM \_ - \_ Status-proc- \_ Nachricht
+# <a name="icm_set_status_proc-message"></a>\_ICM SET \_ STATUS \_ PROC-Meldung
 
-Die **ICM \_ Set \_ Status \_ proc** -Nachricht stellt eine Status Rückruffunktion mit dem Status eines langwierigen Vorgangs bereit.
+Die **ICM SET STATUS \_ \_ \_ PROC** enthält eine Statusrückruffunktion mit dem Status eines längeren Vorgangs.
 
 
 ```C++
@@ -38,29 +38,29 @@ lParam = sizeof(ICSETSTATUSPROC);
 
 <dl> <dt>
 
-<span id="icsetstatusProc"></span><span id="icsetstatusproc"></span><span id="ICSETSTATUSPROC"></span>*icsetstatusproc*
+<span id="icsetstatusProc"></span><span id="icsetstatusproc"></span><span id="ICSETSTATUSPROC"></span>*icsetstatusProc*
 </dt> <dd>
 
-Zeiger auf eine [**icsetstatusproc**](/windows/desktop/api/Vfw/ns-vfw-icsetstatusproc) -Struktur.
+Zeiger auf eine [**ICSETSTATUSPROC-Struktur.**](/windows/desktop/api/Vfw/ns-vfw-icsetstatusproc)
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Größe von **icsetstatusproc** in Byte.
+Größe von **ICSETSTATUSPROC** in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich oder andernfalls ein Fehler aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Unterstützung dieser Nachricht ist optional, wird jedoch dringend empfohlen, wenn die Komprimierung oder Dekomprimierung länger als ungefähr eine Zehntelsekunde dauert.
+Die Unterstützung dieser Meldung ist optional, wird jedoch dringend empfohlen, wenn die Komprimierung oder Dekomprimierung länger als etwa ein Zehntel einer Sekunde dauert.
 
-Eine Anwendung kann diese Nachricht in regelmäßigen Abständen an eine Status Rückruffunktion senden.
+Eine Anwendung kann diese Nachricht bei längeren Vorgängen in regelmäßigen Abständen an eine Statusrückruffunktion senden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Eine Anwendung kann diese Nachricht in regelmäßigen Abständen an eine Status 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Eine Anwendung kann diese Nachricht in regelmäßigen Abständen an eine Status 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

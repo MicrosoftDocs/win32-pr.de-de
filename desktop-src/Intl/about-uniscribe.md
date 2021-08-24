@@ -1,24 +1,24 @@
 ---
-description: Informationen zu uniscri
+description: Informationen zu Uniscribe
 ms.assetid: ad0faead-63db-4682-8db0-fa97b54217c6
-title: Informationen zu uniscri
+title: Informationen zu Uniscribe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ef0e69cd714174d811b1a4715532a5e74ec2851
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e516af2aac6999535e4d0b6453d8c2bed5fcfa1ae9e0eb4ce4377a4040209b10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754900"
 ---
-# <a name="about-uniscribe"></a>Informationen zu uniscri
+# <a name="about-uniscribe"></a>Informationen zu Uniscribe
 
-Uniscriist eine von mehreren Möglichkeiten, um feine typografieskripts zu implementieren und komplexe Skripts zu verarbeiten. Die folgenden Themen beginnen mit einer kurzen Beschreibung komplexer Skripts und ihrer speziellen Probleme und beschreiben dann die anderen Standardmethoden für die Behandlung komplexer Skripts.
+Uniscribe ist eine von mehreren Methoden zum Implementieren von feiner Typografie und zum Verarbeiten komplexer Skripts. Die folgenden Themen beginnen mit einer kurzen Beschreibung komplexer Skripts und ihrer speziellen Probleme und beschreiben dann die anderen Standardverfahren für den Umgang mit komplexen Skripts.
 
 -   [Informationen zu komplexen Skripts](about-complex-scripts.md)
--   [Komplexe Skript Verarbeitung](complex-script-processing.md)
+-   [Komplexe Skriptverarbeitung](complex-script-processing.md)
 -   [OpenType-Schriftartformat](opentype-font-format.md)
--   [Glossar für uniscri](uniscribe-glossary.md)
+-   [Uniscribe Glossary](uniscribe-glossary.md)
 
  
 

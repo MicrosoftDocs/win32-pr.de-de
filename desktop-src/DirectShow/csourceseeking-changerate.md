@@ -1,7 +1,7 @@
 ---
-description: Die changerate-Methode wird aufgerufen, wenn sich die Wiedergabe Rate ändert.
+description: Die ChangeRate-Methode wird aufgerufen, wenn sich die Wiedergaberate ändert.
 ms.assetid: c4f1f9d0-6c09-4cab-8a37-dd1ff3f5619f
-title: Csourceseeking. changerate-Methode (ctlutil. h)
+title: CSourceSeeking.ChangeRate-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 02fab05d65929233b97f7d53e497bae6593c472a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ee74c8eb39fbebab1e58442c3b12f8342610ed792f4eb80ee70e5f44c3cca236
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633940"
 ---
-# <a name="csourceseekingchangerate-method"></a>Csourceseeking. changerate-Methode
+# <a name="csourceseekingchangerate-method"></a>CSourceSeeking.ChangeRate-Methode
 
-Die- `ChangeRate` Methode wird aufgerufen, wenn sich die Wiedergabe Rate ändert.
+Die `ChangeRate` -Methode wird aufgerufen, wenn sich die Wiedergaberate ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**csourceseeking:: ctrate**](csourceseeking-setrate.md) -Methode ruft diese Methode auf, die von der abgeleiteten Klasse implementiert werden muss. Die **Methode "** -Methode" aktualisiert die Element Variable " [**csourceseeking:: m \_ drateseeking**](csourceseeking-m-drateseeking.md) ", überprüft jedoch nicht den neuen Wert. Eine Rate von NULL sollte immer abgelehnt werden. Die Raten kleiner als 0 (null) deuten auf eine negative Die meisten Filter unterstützen keine negativen Raten.
+Die [**CSourceSeeking::SetRate-Methode**](csourceseeking-setrate.md) ruft diese Methode auf, die die abgeleitete Klasse implementieren muss. Die **SetRate-Methode** aktualisiert die [**Membervariable CSourceSeeking::m \_ dRateSeeking,**](csourceseeking-m-drateseeking.md) überprüft den neuen Wert jedoch nicht. Eine Rate von 0 (null) sollte immer abgelehnt werden. Raten kleiner als 0 (null) deuten auf eine negative Wiedergabe hin. Die meisten Filter unterstützen keine negativen Raten.
 
 Das folgende Beispiel zeigt eine mögliche Implementierung:
 
@@ -74,8 +74,8 @@ HRESULT CMyStream::ChangeRate( )
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ HRESULT CMyStream::ChangeRate( )
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

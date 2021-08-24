@@ -1,9 +1,9 @@
 ---
-title: Command. ToolTipTitle (Eigenschaft)
+title: Command.TooltipTitle-Eigenschaft
 description: Stellt einen QuickInfo-Titel dar.
 ms.assetid: b06a7a6a-fbdd-464b-b804-e62912d6e176
 keywords:
-- Command. ToolTipTitle-Eigenschaften Fenster (Menüband)
+- Command.TooltipTitle-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c60f4ddea77fbf88a15d5d27e90ca5660bc0edb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9f9050c97980b0ffa2c2c4828a8ac1d85dfbd1a40ed8330d144db2c0d3802524
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710550"
 ---
-# <a name="commandtooltiptitle-property"></a>Command. ToolTipTitle (Eigenschaft)
+# <a name="commandtooltiptitle-property"></a>Command.TooltipTitle-Eigenschaft
 
 Stellt einen QuickInfo-Titel dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Command.TooltipTitle>
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                   | BESCHREIBUNG                                   |
+| Element                                                   | Beschreibung                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**Schnür**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**String**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -55,33 +55,33 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
 
-**Command. ToolTipTitle** kann einen Wert vom Typ *xs: String* enthalten, der auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+**Command.TooltipTitle** kann einen Wert vom Typ *xs:string* enthalten, der auf eine beliebige Zeichensequenz beschränkt ist, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.
 
 > [!Note]  
-> Verwenden Sie den XML-Zeichen Verweis Universal Character Set (UCS) `&#xA;` , um einen Zeilenumbruch anzugeben.
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenbreak anzugeben.
 
  
 
-Die maximale Länge ist unbegrenzt.
+Die maximale Länge ist ungebunden.
 
-Wenn für **Command. ToolTipTitle** kein Wert angegeben wird, ist das untergeordnete [**Zeichen**](windowsribbon-element-string.md) folgen Element erforderlich.
+Wenn für **Command.TooltipTitle** kein Wert angegeben wird, ist das untergeordnete [**String-Element**](windowsribbon-element-string.md) erforderlich.
 
 > [!Note]  
-> Wenn **Command. ToolTipTitle** sowohl einen Wert als auch ein untergeordnetes [**Zeichen**](windowsribbon-element-string.md) folgen Element enthält, hat die **Zeichenfolge** Vorrang.
+> Wenn **Command.TooltipTitle** sowohl einen Wert als auch ein untergeordnetes [**String-Element**](windowsribbon-element-string.md) enthält, hat **String** Vorrang.
 
  
 
-**Command. ToolTipTitle** unterstützt nur die linke Ausrichtung.
+**Command.TooltipTitle** unterstützt nur die linke Ausrichtung.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-element-command.md) -Element mit der **Command. ToolTipTitle** -Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command-Element**](windowsribbon-element-command.md) mit einer **Command.TooltipTitle-Deklaration** veranschaulicht.
 
 
 ```XML
@@ -111,8 +111,8 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -120,7 +120,7 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 <dl> <dt>
 
-[UI- \_ pkey- \_ ToolTipTitle](windowsribbon-reference-properties-uipkey-tooltiptitle.md)
+[UI \_ PKEY \_ TooltipTitle](windowsribbon-reference-properties-uipkey-tooltiptitle.md)
 </dt> </dl>
 
  

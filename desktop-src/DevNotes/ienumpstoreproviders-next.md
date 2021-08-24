@@ -1,7 +1,7 @@
 ---
-description: Ruft die nächste angegebene Anzahl von Anbietern in der enumerationssequenz ab.
+description: Ruft die nächste angegebene Anzahl von Anbietern in der Enumerationssequenz ab.
 ms.assetid: 9ef8d330-6f78-4063-825c-9cf5b4f283cf
-title: 'Ienumpstoreproviders:: Next-Methode (pstore. h)'
+title: IEnumPStoreProviders::Next-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: f468d29682c4e3767d4d8fe7d59e60976f103484
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ad35f76622abd61c6830f338a670c42a2c2f9178d0d6692044eec62621617976
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691290"
 ---
-# <a name="ienumpstoreprovidersnext-method"></a>Ienumpstoreproviders:: Next-Methode
+# <a name="ienumpstoreprovidersnext-method"></a>IEnumPStoreProviders::Next-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
-Ruft die nächste angegebene Anzahl von Anbietern in der enumerationssequenz ab.
+Ruft die nächste angegebene Anzahl von Anbietern in der Enumerationssequenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ HRESULT Next(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*celt* \[ In\]
 </dt> <dd>
 
-Die Anzahl der angeforderten Anbieter Typen.
+Die Anzahl der angeforderten Anbietertypen.
 
 </dd> <dt>
 
-*rgelt* \[ vorgenommen\]
+*rgelt* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, in die der Anbietertyp Name zurückgegeben werden soll.
+Ein Zeiger auf eine Zeichenfolge, in der der Anbietertypname zurückgegeben werden soll.
 
 </dd> <dt>
 
-*pceltfetch* \[ in, out\]
+*pceltFetched* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der tatsächlich bereitgestellten Anbieter Typen.
+Ein Zeiger auf die Anzahl der Anbietertypen, die tatsächlich bereitgestellt wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert.
+Der Rückgabewert ist ein **HRESULT-Wert.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
@@ -83,7 +83,7 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 <dl> <dt>
 
-[**Ienumpstoreproviders**](ienumpstoreproviders.md)
+[**IEnumPStoreProviders**](ienumpstoreproviders.md)
 </dt> </dl>
 
  

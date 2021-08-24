@@ -1,29 +1,29 @@
 ---
-title: Elemente der Benutzeroberfläche System-Provided
+title: System-Provided Benutzeroberfläche-Elemente
 description: Microsoft Active Accessibility bietet Unterstützung für die meisten vordefinierten und allgemeinen Steuerelemente.
 ms.assetid: 6b5b24e1-db08-45f7-8a85-aa28d3e55ebf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b739244aa916f654aebb1022b5d4913a164d5ff8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5682d2a2530ed0e55446daaef997d55ce727b7a629544cbcbf3e4844a07d4dcd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119734205"
 ---
-# <a name="system-provided-user-interface-elements"></a>Elemente der Benutzeroberfläche System-Provided
+# <a name="system-provided-user-interface-elements"></a>System-Provided Benutzeroberfläche-Elemente
 
-Microsoft Active Accessibility bietet Unterstützung für die meisten vordefinierten und allgemeinen Steuerelemente. Die folgende Abbildung zeigt ein typisches Fenster und einige der vom System bereitgestellten Benutzeroberflächen Elemente, die von Microsoft Active Accessibility verfügbar gemacht werden, z. b. Titelleisten, Menüs, Kombinations Felder, Symbolleisten-Steuerelemente, Strukturansicht-Steuerelemente, Status leisten, Größen Griffe, Listenansicht-Steuerelemente und Bild Lauf leisten.
+Microsoft Active Accessibility bietet Unterstützung für die meisten vordefinierten und allgemeinen Steuerelemente. Die folgende Abbildung zeigt ein typisches Fenster und einige der vom System bereitgestellten Benutzeroberflächenelemente, die Microsoft Active Accessibility verfügbar machen, z. B. Titelleisten, Menüs, Kombinationsfelder, Symbolleisten-Steuerelemente, Strukturansichtssteuerelemente, Statusleisten, Größen-Klammern, Listenansichtssteuerelemente und Bildlaufleisten.
 
-![Screenshot mit mehreren unterschiedlichen Benutzeroberflächen Elementen](images/explorer.gif)
+![Screenshot mit mehreren verschiedenen Elementen der Benutzeroberfläche](images/explorer.gif)
 
-Microsoft Active Accessibility macht Server Anwendungen vom System bereitgestellte Benutzeroberflächen Elemente verfügbar, ohne dass der Server Entwickler die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle implementieren muss. Jede Anwendung, die diese Elemente enthält, erbt automatisch Ihren Zugriff.
+Microsoft Active Accessibility macht vom System bereitgestellte Benutzeroberflächenelemente für Serveranwendungen verfügbar, ohne dass der Serverentwickler die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) implementieren muss. Jede Anwendung, die diese Elemente enthält, erbt automatisch ihre Barrierefreiheit.
 
-Eine Liste der Steuerelemente und anderer vom System bereitgestellter Benutzeroberflächen Elemente, die von Microsoft Active Accessibility unterstützt werden, finden Sie unter [Anhang a: Unterstützte Elemente der Benutzeroberflächen Elemente](appendix-a--supported-user-interface-elements-reference.md).
+Eine Liste der Steuerelemente und anderen vom System bereitgestellten Benutzeroberflächenelemente, die von Microsoft Active Accessibility unterstützt werden, finden Sie unter [Anhang A: Unterstützte Benutzeroberfläche Elements Reference](appendix-a--supported-user-interface-elements-reference.md).
 
- 
+ 
 
- 
+ 
 
 
 

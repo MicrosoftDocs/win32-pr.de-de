@@ -1,6 +1,6 @@
 ---
 title: D3DCompiler-Konstanten
-description: Dieser Abschnitt enthält Informationen zu den folgenden Direct3D HLSL-Compilerkonstanten.
+description: Dieser Abschnitt enthält Informationen zu den folgenden Direct3D HLSL-Compilerkonst constants.
 ms.assetid: 27A19D5B-7B6D-4CA4-89BB-9DD6A5AEB8B9
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,27 +9,27 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c89553abf9cd9839ba6583dbf60b510278f6cfd6
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5fcf840f2a95cb3c2ef80fc93760439202968e3183b14e6b2ab588ce60d84d07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673760"
 ---
 # <a name="d3dcompiler-constants"></a>D3DCompiler-Konstanten
 
-Dieser Abschnitt enthält Informationen zu den folgenden Direct3D HLSL-Compilerkonstanten:
+Dieser Abschnitt enthält Informationen zu den folgenden Direct3D HLSL-Compilerkonst constants:
 
 
 
 | Enumeration                                                         | Beschreibung                                  |
 |---------------------------------------------------------------------|----------------------------------------------|
-| [**D3DCOMPILE-Konstanten**](d3dcompile-constants.md)                | Diese Konstanten sind Shader-Compileroptionen. |
-| [**D3DCOMPILE \_ Effect-Konstanten**](d3dcompile-effect-constants.md) | Diese Konstanten sind Effekt-Compileroptionen. |
+| [**D3DCOMPILE-Konstanten**](d3dcompile-constants.md)                | Diese Konstanten sind Shadercompileroptionen. |
+| [**D3DCOMPILE \_ EFFECT-Konstanten**](d3dcompile-effect-constants.md) | Diese Konstanten sind Effektcompileroptionen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,9 +38,9 @@ Dieser Abschnitt enthält Informationen zu den folgenden Direct3D HLSL-Compilerk
 [D3DCompiler-Referenz](dx-graphics-d3dcompiler-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,27 +1,27 @@
 ---
-description: Legt die maximale Bildhöhe fest, die ein Video Decoder als Eingabetyp akzeptiert.
+description: Legt die maximale Bildhöhe fest, die ein Videodecoder als Eingabetyp akzeptiert.
 ms.assetid: 4122B150-3415-4288-8273-AB600901808A
-title: CODECAPI_AVDecVideoMaxCodedHeight-Eigenschaft (codecapi. h)
+title: CODECAPI_AVDecVideoMaxCodedHeight-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16ff4ddb68acde1b778c5b8656923dd80b7765a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9216a4ee0000dbbe1a883b6d9a02056f135b43783d2f8b386c51e495bbdb7082
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606500"
 ---
-# <a name="codecapi_avdecvideomaxcodedheight-property"></a>Codecapi \_ avdecvideomaxcodedheight-Eigenschaft
+# <a name="codecapi_avdecvideomaxcodedheight-property"></a>CODECAPI \_ AVDecVideoMaxCodedHeight-Eigenschaft
 
-Legt die maximale Bildhöhe fest, die ein Video Decoder als Eingabetyp akzeptiert.
+Legt die maximale Bildhöhe fest, die ein Videodecoder als Eingabetyp akzeptiert.
 
 ## <a name="data-type"></a>Datentyp
 
-**Long** (**VT \_ I4**)
+**LONG** (**VT \_ I4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-Codecapi \_ avdecvideomaxcodedheight
+CODECAPI \_ AVDecVideoMaxCodedHeight
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Codecapi \_ avdecvideomaxcodedheight
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -39,10 +39,10 @@ Codecapi \_ avdecvideomaxcodedheight
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[**Icodecapi**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
+[**ICodecAPI**](/windows/desktop/api/strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

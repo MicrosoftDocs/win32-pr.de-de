@@ -1,9 +1,9 @@
 ---
-title: XTYP_XACT_COMPLETE Transaktion (Ddeml. h)
-description: Eine dynamischer Datenaustausch (DDE)-Client Rückruffunktion (DDE Callback) empfängt die vollständige xD- \_ \_ Transaktion, wenn eine asynchrone Transaktion, die durch einen-Aufrufs der DDE clienttransaction-Funktion initiiert wurde, abgeschlossen wurde.
+title: XTYP_XACT_COMPLETE Transaktion (Ddeml.h)
+description: Die Clientrückruffunktion DdeCallback (dynamische Daten Exchange Client Callback) empfängt die XTYP \_ XACT \_ COMPLETE-Transaktion, wenn eine asynchrone Transaktion, die durch einen Aufruf der DdeClientTransaction-Funktion initiiert wurde, abgeschlossen wurde.
 ms.assetid: d34a6fab-0e3c-44fe-b25f-7011228fe261
 keywords:
-- XTYP_XACT_COMPLETE Transaktionsdaten Austausch
+- XTYP_XACT_COMPLETE Exchange von Transaktionsdaten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03a81869270a771836c4dd5c1a6b300f148ea13d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d3833207371bbfab059f67ecb5bdb72b77334ef3ffc73618e013ce137835c6d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678010"
 ---
-# <a name="xtyp_xact_complete-transaction"></a>\_Xttxact- \_ Transaktion abgeschlossen
+# <a name="xtyp_xact_complete-transaction"></a>XTYP \_ XACT \_ COMPLETE-Transaktion
 
-Eine dynamischer Datenaustausch (DDE)-Client Rückruffunktion ( [*DDE Callback*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)) empfängt die **\_ \_ vollständige xD** -Transaktion, wenn eine asynchrone Transaktion, die durch einen-Aufrufs der [**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) -Funktion initiiert wurde, abgeschlossen wurde.
+Eine dynamische Daten Exchange (DDE)-Clientrückruffunktion, [*DdeCallback,*](/windows/win32/api/ddeml/nc-ddeml-pfncallback)empfängt die **XTYP \_ XACT \_ COMPLETE-Transaktion,** wenn eine asynchrone Transaktion, die durch einen Aufruf der [**DdeClientTransaction-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction) initiiert wurde, abgeschlossen wurde.
 
 
 ```C++
@@ -44,14 +44,14 @@ Der Transaktionstyp:
 
 </dd> <dt>
 
-*UF* 
+*uFmt* 
 </dt> <dd>
 
-Das Format der Daten, die der abgeschlossenen Transaktion (falls zutreffend) zugeordnet sind, oder **null** , wenn während der Transaktion keine Daten ausgetauscht wurden.
+Das Format der Daten, die der abgeschlossenen Transaktion zugeordnet sind (falls zutreffend) oder **NULL,** wenn während der Transaktion keine Daten ausgetauscht wurden.
 
 </dd> <dt>
 
-*has* 
+*hconv* 
 </dt> <dd>
 
 Ein Handle für die Konversation.
@@ -61,7 +61,7 @@ Ein Handle für die Konversation.
 *hsz1* 
 </dt> <dd>
 
-Ein Handle für den Themen Namen, der an der abgeschlossenen Transaktion beteiligt ist.
+Ein Handle für den Themennamen, der an der abgeschlossenen Transaktion beteiligt ist.
 
 </dd> <dt>
 
@@ -75,27 +75,27 @@ Ein Handle für den Elementnamen, der an der abgeschlossenen Transaktion beteili
 *hdata* 
 </dt> <dd>
 
-Ein Handle für die Daten, die an der abgeschlossenen Transaktion beteiligt sind, falls zutreffend. Wenn die Transaktion erfolgreich war, aber keine Daten umfasste, ist dieser Parameter **true**. Dieser Parameter ist **null** , wenn die Transaktion nicht erfolgreich war.
+Ein Handle für die Daten, die an der abgeschlossenen Transaktion beteiligt sind, falls zutreffend. Wenn die Transaktion erfolgreich war, aber keine Daten umfasste, ist dieser Parameter **TRUE.** Dieser Parameter ist **NULL,** wenn die Transaktion nicht erfolgreich war.
 
 </dd> <dt>
 
 *dwData1* 
 </dt> <dd>
 
-Der Transaktions Bezeichner der abgeschlossenen Transaktion.
+Der Transaktionsbezeichner der abgeschlossenen Transaktion.
 
 </dd> <dt>
 
 *dwData2* 
 </dt> <dd>
 
-Alle anwendbaren **DDE \_** -Statusflags im unteren Wort. Dieser Parameter bietet Unterstützung für Anwendungen, die von **DDE \_ appstatus** Bits abhängig sind. Es wird empfohlen, dass Anwendungen diese Bits nicht mehr verwenden, da Sie möglicherweise in zukünftigen Versionen der Ddeml nicht mehr unterstützt werden.
+Alle anwendbaren **\_ DDE-Statusflags** im unteren Wort. Dieser Parameter bietet Unterstützung für Anwendungen, die von **DDE \_ APPSTATUS-Bits** abhängig sind. Es wird empfohlen, dass Anwendungen diese Bits nicht mehr verwenden, da sie in zukünftigen Versionen der DDEML möglicherweise nicht mehr unterstützt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung darf das Daten handle, das während dieser Transaktion abgerufen wurde, nicht freigeben. Eine Anwendung muss jedoch die Daten kopieren, die dem Daten Handle zugeordnet sind, wenn die Anwendung die Daten verarbeiten muss, nachdem die Rückruffunktion zurückgegeben hat. Eine Anwendung kann die [**DDE GetData**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata) -Funktion verwenden, um die Daten zu kopieren.
+Eine Anwendung darf das datenhandle, das während dieser Transaktion abgerufen wurde, nicht freigeben. Eine Anwendung muss jedoch die dem Datenhandle zugeordneten Daten kopieren, wenn die Anwendung die Daten verarbeiten muss, nachdem die Rückruffunktion zurückgegeben wurde. Eine Anwendung kann die [**DdeGetData-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata) verwenden, um die Daten zu kopieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,7 +105,7 @@ Eine Anwendung darf das Daten handle, das während dieser Transaktion abgerufen 
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>Ddeml. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ddeml.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -113,19 +113,19 @@ Eine Anwendung darf das Daten handle, das während dieser Transaktion abgerufen 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**DDE clienttransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
+[**DdeClientTransaction**](/windows/desktop/api/Ddeml/nf-ddeml-ddeclienttransaction)
 </dt> <dt>
 
-[**DDE GetData**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata)
+[**DdeGetData**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[dynamischer Datenaustausch-Verwaltungs Bibliothek](dynamic-data-exchange-management-library.md)
+[dynamische Daten Exchange-Verwaltungsbibliothek](dynamic-data-exchange-management-library.md)
 </dt> </dl>
 
  

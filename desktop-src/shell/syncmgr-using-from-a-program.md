@@ -1,5 +1,5 @@
 ---
-description: Damit Ihre Anwendung mit dem Synchronisierungs-Manager zusammenarbeiten kann, müssen Sie ein Component Object Model (com)-Objekt implementieren, um Synchronisierungs Benachrichtigungen zu verarbeiten, die Sie von syncmgr erhalten.
+description: Damit Ihre Anwendung mit dem Synchronisierungs-Manager arbeiten kann, müssen Sie ein COM-Objekt (Component Object Model) implementieren, um Synchronisierungsbenachrichtigungen zu verarbeiten, die Sie von SyncMgr erhalten.
 title: Verwenden des Synchronisierungs-Managers aus einem Programm
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,37 +9,37 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 9bd5abdc382c82c6c1aafcda3a967337384dc807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 11e959399624d30e1e6d7ce87fb8bb247de7c9c420ef9b2427c7b9bdeb00e7f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709380"
 ---
 # <a name="using-synchronization-manager-from-a-program"></a>Verwenden des Synchronisierungs-Managers aus einem Programm
 
-Damit Ihre Anwendung mit dem Synchronisierungs-Manager zusammenarbeiten kann, müssen Sie ein Component Object Model (com)-Objekt implementieren, um Synchronisierungs Benachrichtigungen zu verarbeiten, die Sie von syncmgr erhalten. Der Handler Ihrer Anwendung führt die Synchronisierung für die Elemente aus, die Sie verarbeiten. In Ihrem Handler enthalten ist, müssen Sie die [**isyncmgrsync**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) -Schnittstelle implementieren. Außerdem müssen Sie ein Enumeratorobjekt und [**isyncmgrenumitems**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems) für alle separaten Elemente bereitstellen, die Ihre Anwendung synchronisieren kann.
+Damit Ihre Anwendung mit dem Synchronisierungs-Manager arbeiten kann, müssen Sie ein COM-Objekt (Component Object Model) implementieren, um Synchronisierungsbenachrichtigungen zu verarbeiten, die Sie von SyncMgr erhalten. Der Handler Ihrer Anwendung führt die Synchronisierung für die elemente aus, die Sie behandeln. In Ihrem Handler enthalten, müssen Sie die [**ISyncMgrSynchronize-Schnittstelle**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) implementieren. Außerdem müssen Sie ein Enumeratorobjekt und [**ISyncMgrEnumItems**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems) für alle separaten Elemente bereitstellen, die ihre Anwendung synchronisieren kann.
 
-Syncmgr implementiert [**isyncmgrsynchronizecallback**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) und [**isyncmgrsynchronizone voke**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronizeinvoke).
+SyncMgr implementiert [**ISyncMgrSynchronizeCallback**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) und [**ISyncMgrSynchronizeInvoke.**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronizeinvoke)
 
-Die syncmgr ruft Methoden in Ihrer [**isyncmgrsync**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) -Funktion auf, um Informationen zu den Elementen, die von der Anwendung verarbeitet werden, und Informationen zu dem Handler zu erhalten, den Sie für die Synchronisierung dieser Elemente bereitstellen.
+SyncMgr ruft Methoden in [**ISyncMgrSynchronize**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) auf, um Informationen zu den Elementen abzurufen, die ihre Anwendung verarbeitet, sowie Informationen zu dem Handler, den Sie zum Synchronisieren dieser Elemente bereitstellen.
 
-Zur Laufzeit führt der Synchronisierungs Vorgang die folgenden Schritte aus.
+Zur Laufzeit folgt der Synchronisierungsprozess diesen Schritten.
 
-1.  Syncmgr benachrichtigt Ihre Anwendung, dass es Zeit für die Synchronisierung für eines der Elemente ist, die Ihre Anwendung verarbeitet, indem Sie die [**isyncmgrsync:: Initialize**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-initialize) -Methode aufrufen.
-2.  Syncmgr ruft [**isyncmgrsync:: enumsyncmgritems**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-enumsyncmgritems) auf, um die [**isyncmgrenumitems**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems) -Schnittstelle für die Elemente zu erhalten, die von Ihrer Anwendung verarbeitet werden.
-3.  Syncmgr ruft [**isyncmgrsync:: setprogresscallback**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-setprogresscallback) auf, um dem Handler den Schnittstellen Zeiger für die [**isyncmgrsynchronizecallback**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) -Schnittstelle bereitzustellen. Der Handler verwendet diese Schnittstelle, um während der Synchronisierung einen Rückruf an syncmgr durchzusetzen.
-4.  Syncmgr ruft dann Ihre [**isyncmgrsync::P Analyse forsync**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-prepareforsync) -Methode auf, um dem Handler zu gestatten, alle Benutzeroberflächen Elemente anzuzeigen, die vor Beginn der Synchronisierung erforderlich sind. Eine e-Mail-Anwendung kann z. b. ein Benutzer Anmelde Dialogfeld anzeigen.
-5.  Der Handler ruft [**isyncmgrsynchronizecallback:: enablemodeless**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-enablemodeless) vor und nach dem Anzeigen von Elementen der Benutzeroberfläche auf. Der Handler ruft [**isyncmgrsynchronizecallback**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-prepareforsynccompleted) auf, wenn Sie fertig sind:P.
-6.  Syncmgr ruft Ihre [**isyncmgrsync::**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-synchronize) Sync-Methode auf, um die Synchronisierung zu starten.
+1.  SyncMgr benachrichtigt Ihre Anwendung, dass es an der Zeit ist, die Synchronisierung für eines der Elemente durchzuführen, die ihre Anwendung verarbeitet, indem die [**ISyncMgrSynchronize::Initialize-Methode**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-initialize) aufgerufen wird.
+2.  SyncMgr ruft [**ISyncMgrSynchronize::EnumSyncMgrItems**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-enumsyncmgritems) auf, um die [**ISyncMgrEnumItems-Schnittstelle**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrenumitems) für die elemente abzurufen, die von Ihrer Anwendung verarbeitet werden.
+3.  SyncMgr ruft [**ISyncMgrSynchronize::SetProgressCallback**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-setprogresscallback) auf, um Ihrem Handler den Schnittstellenzeiger für die [**ISyncMgrSynchronizeCallback-Schnittstelle**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) bereitzustellen. Ihr Handler verwendet diese Schnittstelle, um während der Synchronisierung einen Rückruf an SyncMgr durchzuführen.
+4.  SyncMgr ruft dann die [**ISyncMgrSynchronize::P repareForSync-Methode**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-prepareforsync) auf, um dem Handler die Möglichkeit zu geben, alle Benutzeroberflächenelemente anzuzeigen, die vor Beginn der Synchronisierung erforderlich sind. Beispielsweise kann eine E-Mail-Anwendung ein Benutzeranmeldungsdialogfeld anzeigen.
+5.  Ihr Handler ruft [**ISyncMgrSynchronizeCallback::EnableModeless**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-enablemodeless) vor und nach dem Anzeigen von Benutzeroberflächenelementen auf. Der Handler ruft [**ISyncMgrSynchronizeCallback::P repareForSyncCompleted**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-prepareforsynccompleted) auf, wenn Sie fertig sind.
+6.  SyncMgr ruft Ihre [**ISyncMgrSynchronize::Synchronize-Methode**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronize-synchronize) auf, um die Synchronisierung zu starten.
 
-Während des Synchronisierungs Vorgangs ruft syncmgr weiterhin Methoden in Ihrer [**isyncmgrsync**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) -Schnittstelle auf. Sie kann Ihre Handlerfehler, den Fortschritt und Benachrichtigungen senden. Sie kann auch die Elemente auflisten, die von der Anwendung verarbeitet werden, oder Ihre Anwendung können Eigenschaften für die Elemente anzeigen.
+Während des Synchronisierungsprozesses ruft SyncMgr weiterhin Methoden in Ihrer [**ISyncMgrSynchronize-Schnittstelle**](/windows/desktop/api/Mobsync/nn-mobsync-isyncmgrsynchronize) auf. Sie kann Handlerfehler, Status und Benachrichtigungen senden. Sie kann auch die Elemente aufzählen, die von Ihrer Anwendung verarbeitet werden, oder es der Anwendung ermöglichen, Eigenschaften für die Elemente anzuzeigen.
 
-Der Handler ruft Methoden in [**isyncmgrsynchronizecallback**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) auf, um zu bestimmen, ob ein Element übersprungen werden soll, um Fehler zu protokollieren und während des Synchronisierungs Vorgangs Statusinformationen bereitzustellen.
+Ihr Handler ruft Methoden in [**ISyncMgrSynchronizeCallback**](/windows/desktop/api/mobsync/nn-mobsync-isyncmgrsynchronizecallback) auf, um zu bestimmen, ob ein Element übersprungen werden soll, um Fehler zu protokollieren und Während des Synchronisierungsprozesses Statusinformationen zu veröffentlichen.
 
-Weitere Informationen finden Sie auf den entsprechenden Referenzseiten für die beteiligten Schnittstellen.
+Weitere Informationen finden Sie auf den zugehörigen Referenzseiten für die beteiligten Schnittstellen.
 
-Wenn die Synchronisierung abgeschlossen ist, ruft der Handler [**isyncmgrsynchronizecallback:: synchronizeabgeschlossene**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-synchronizecompleted)auf.
+Wenn die Synchronisierung abgeschlossen ist, ruft Ihr Handler [**ISyncMgrSynchronizeCallback::SynchronizeCompleted auf.**](/windows/desktop/api/Mobsync/nf-mobsync-isyncmgrsynchronizecallback-synchronizecompleted)
 
  
 

@@ -1,6 +1,6 @@
 ---
-title: setp_comp vs
-description: Legen Sie das Prädikat Register fest. | setp_comp vs
+title: setp_comp – vs
+description: Legen Sie das Prädikatregister fest. | setp_comp – vs
 ms.assetid: bfead3f8-f7fe-4fc1-939f-8e5fbc3e0adf
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 77d9e5f46e9fb8bbcfb96e56d13cd6f7cebfecc2
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 892acf44000e178e7ed6774a3841760db32e3ced4d8348a7f9e9c22969bf9024
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104393978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671770"
 ---
-# <a name="setp_comp---vs"></a>SETP \_ -Comp-vs
+# <a name="setp_comp---vs"></a>setp \_ comp – vs
 
-Legen Sie das Prädikat Register fest.
+Legen Sie das Prädikatregister fest.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| SETP \_ Comp DST, src0, Quelle1 |
+| setp \_ comp dst, src0, src1 |
 |----------------------------|
 
 
@@ -33,38 +33,38 @@ Legen Sie das Prädikat Register fest.
 
 Hierbei gilt:
 
--   \_comp ist ein pro-Kanal-Vergleich zwischen den beiden Quell Registern. Folgende Werte sind möglich: 
+-   \_comp ist ein Kanalvergleich zwischen den beiden Quellregistern. Folgende Werte sind möglich: 
 
     | Syntax | Vergleich            |
     |--------|-----------------------|
-    | \_siegt   | Größer als          |
-    | \_General   | Kleiner als             |
-    | \_Färbung   | Größer als oder gleich |
-    | \_Kirchturm   | Kleiner als oder gleich    |
-    | \_stecken   | Gleich              |
-    | \_NES   | Ungleich          |
+    | \_Gt   | Größer als          |
+    | \_Lt   | Kleiner als             |
+    | \_Ge   | Größer als oder gleich |
+    | \_Le   | Kleiner oder gleich    |
+    | \_Eq   | Gleich              |
+    | \_Ne   | Ungleich          |
 
     
 
      
 
--   DST ist das [Registrierungs](dx9-graphics-reference-asm-vs-registers-predicate.md) registerregister, p0.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das [Prädikatregister,](dx9-graphics-reference-asm-vs-registers-predicate.md) p0.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| SETP \_ comp             |      |      | x    | x     | x    | x     |
+| setp \_ comp             |      |      | x    | x     | x    | x     |
 
 
 
  
 
-Diese Anweisung funktioniert wie folgt:
+Diese Anweisung funktioniert wie:
 
 
 ```
@@ -76,17 +76,17 @@ per channel in destination write mask
 
 
 
-Speichern Sie für jeden Kanal, der gemäß der Ziel Schreib Maske geschrieben werden kann, das boolesche Ergebnis der Vergleichsoperation zwischen den entsprechenden Kanälen von src0 und Quelle1 (nachdem die Eigenschaften des quellmodifizierers aufgelöst wurden).
+Speichern Sie für jeden Kanal, der gemäß der Ziel-Schreibmaske geschrieben werden kann, das boolesche Ergebnis des Vergleichsvorgang zwischen den entsprechenden Kanälen von src0 und src1 (nachdem die Quellmodifizierer swizzles aufgelöst wurden).
 
-Mit Quell Registern können beliebige Komponenten Streifen angegeben werden.
+Quellregister ermöglichen die Angabe beliebiger Komponenten swizzles.
 
-Das Ziel Register ermöglicht willkürliche Schreib Masken.
+Das Zielregister lässt beliebige Schreibmasken zu.
 
-Das dest-Register muss das Prädikat Register sein.
+Das dest-Register muss das Prädikatregister sein.
 
-## <a name="applying-the-predicate-register"></a>Anwenden des Prädikats Register
+## <a name="applying-the-predicate-register"></a>Anwenden des Prädikatregisters
 
-Wenn das Prädikat Register mit SETP initialisiert wurde, kann es verwendet werden, um eine Anweisung pro Komponente zu steuern. Hier ist die Syntax:
+Sobald das Prädikatregister mit setp initialisiert wurde, kann es verwendet werden, um eine Anweisung pro Komponente zu steuern. Dies ist die Syntax:
 
 
 ```
@@ -97,13 +97,13 @@ Wenn das Prädikat Register mit SETP initialisiert wurde, kann es verwendet werd
 
 Hierbei gilt:
 
--   \[!\] ist ein optionaler boolescher Wert.
--   P0 ist das Prädikats Register
--   \[. Swizzle \] ist ein optionales Swizzle, das auf den Inhalt des Prädikats angewendet wird, bevor es zum Maskieren der Anweisung verwendet wird. Zu den verfügbaren Strichen gehören:. xyzw (Standardwert, wenn kein Wert angegeben ist) oder eine beliebige Replikation:. x/. r,. y/. g,. z/. b oder. a/. w.
--   die Anweisung ist eine beliebige aritmetic-oder Textur Anweisung. Dabei kann es sich nicht um eine statische oder dynamische Fluss Steuerungs Anweisung handeln.
--   dest, srkreg,... sind die von der Anweisung benötigten Register
+-   \[!\] ist ein optionaler boolescher NOT-Wert.
+-   p0 ist das Prädikatregister.
+-   \[.swizzle ist ein optionaler Swizzle, der auf den Inhalt des Prädikatregisters angewendet werden kann, bevor er zum \] Maskieren der Anweisung verwendet wird. Die verfügbaren Swizzles sind: .xyzw (Standard, wenn kein Wert angegeben ist) oder ein beliebiges Replizieren von Swizzle: .x/.r, .y/.g, .z/.b oder .a/.w.
+-   -Anweisung ist eine beliebige aritmetic- oder texture-Anweisung. Dies darf keine statische oder dynamische Flusssteuerungsanweisung sein.
+-   dest, srcReg, ... sind die registers, die für die Anweisung erforderlich sind.
 
-Angenommen, das Prädikat Register wurde mit den Komponenten Werten (true, true, false, false) eingerichtet, die auf diese Anweisung angewendet werden können:
+Wenn das Prädikatregister mit Komponentenwerten (true, true, false, false) eingerichtet wurde, kann es auf diese Anweisung angewendet werden:
 
 
 ```
@@ -115,7 +115,7 @@ setp_le p0, r0, r1
 
 
 
-zum Ausführen einer 2-Komponente hinzufügen.
+, um ein 2-Komponenten-Add-Element durchzuführen.
 
 
 ```
@@ -125,17 +125,17 @@ r2.y = r3.y + r4.y
 
 
 
-Die x-und y-Komponenten von R2 werden nicht geschrieben, da das Prädikat Register in den Komponenten z und w false enthielt.
+Die x- und y-Komponenten von r2 werden nicht geschrieben, da das Prädikatregister false in den Komponenten z und w enthielt.
 
-Wenn Sie das Prädikat Register auf eine arithmetische oder Textur Anweisung anwenden, erhöht sich die Anzahl der Anweisungs Slots um 1.
+Durch anwenden des Prädikatregisters auf eine arithmetische oder Texturanweisung erhöht sich die Anzahl der Anweisungsslots um 1.
 
-Das Prädikat Register kann auch auf angewendet werden, wenn es sich um [pred-vs](if-pred---vs.md), [callnz pred-vs](callnz-pred---vs.md) und [breakp-vs-](breakp---vs.md) Anweisungen handelt. Diese Fluss Steuerungs Anweisungen weisen keine Zunahme der Anweisungs Slot-Anzahl auf, wenn das Prädikat Register verwendet wird.
+Das Prädikatregister kann auch auf angewendet werden, wenn [pred – vs](if-pred---vs.md), [callnz pred – vs](callnz-pred---vs.md) und [breakp – vs](breakp---vs.md) instructions. Bei Verwendung des Prädikatregisters haben diese Anweisungsanweisungen für die Flusssteuerung keine Erhöhung der Anzahl von Anweisungsslots.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

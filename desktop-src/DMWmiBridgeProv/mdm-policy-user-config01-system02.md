@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_System02-Klasse
-description: Die Benutzer Config01 System02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren telemetrierichtlinien dar.
+description: Die MDM \_ Policy \_ User \_ Config01 \_ System02-Klasse stellt die verfügbaren Telemetrierichtlinien dar.
 ms.assetid: 3f049152-6868-4b10-8711-dadc4cb012b4
 keywords:
 - MDM_Policy_User_Config01_System02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9eefa8a08320b79c80d4e0cb359fd1194a21ae4a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 24245bc793dd47af6e26610ec28494603309d107ffac72e3c8badd5fb2d388c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693860"
 ---
-# <a name="mdm_policy_user_config01_system02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ System02-Klasse
+# <a name="mdm_policy_user_config01_system02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ System02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Benutzer Config01 System02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die verfügbaren telemetrierichtlinien dar.
+Die MDM \_ Policy \_ User \_ Config01 \_ System02-Klasse stellt die verfügbaren Telemetrierichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,13 +46,13 @@ class MDM_Policy_User_Config01_System02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ System02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ System02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ System02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ System02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -81,7 +81,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

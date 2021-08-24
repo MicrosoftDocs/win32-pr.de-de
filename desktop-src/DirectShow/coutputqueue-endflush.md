@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 37701526de66c8cd679f6849703c4eb2a1feb3ee
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d9a283867036254b7a13b45ba152c3f16ecccbdb59d4d59e98c8d1dae7480e13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634220"
 ---
 # <a name="coutputqueueendflush-method"></a>COutputQueue.EndFlush-Methode
 
@@ -44,18 +44,18 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Objekt einen Thread verwendet, wartet diese Methode auf das [**Ereignis COutputQueue::m \_ evFlushComplete.**](coutputqueue-m-evflushcomplete.md) Der Thread signalisiert dieses Ereignis, nachdem alle ausstehenden Stichproben frei gegeben wurden. Wenn das Objekt keinen Thread verwendet, ruft diese Methode die [**COutputQueue::FreeSamples-Methode**](coutputqueue-freesamples.md) auf. Anschließend ruft die `EndFlush` -Methode die [**IPin::EndFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) auf dem Eingabepin auf.
+Wenn das Objekt einen Thread verwendet, wartet diese Methode auf das [**COutputQueue::m \_ evFlushComplete-Ereignis.**](coutputqueue-m-evflushcomplete.md) Der Thread signalisiert dieses Ereignis, nachdem alle ausstehenden Stichproben freigegeben wurden. Wenn das Objekt keinen Thread verwendet, ruft diese Methode die [**COutputQueue::FreeSamples-Methode**](coutputqueue-freesamples.md) auf. Anschließend ruft die `EndFlush` -Methode die [**IPin::EndFlush-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) auf dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Holen Sie sich die Anzahl der Vertices in ID3DX10SkinInfo.
+description: Abrufen der Anzahl von Scheitelpunkten in ID3DX10SkinInfo.
 ms.assetid: c4e6542b-807f-41df-9940-6899ad8f8eb9
-title: 'ID3DX10SkinInfo:: getnumvertices-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::GetNumVertices-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 366b958f09d0571ef6345ae020e66f321ebb9331
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e14fbd289a728bb0eeb3e4a384ffab483b3eba70bfa84d7309dc9c09a3630e9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634270"
 ---
-# <a name="id3dx10skininfogetnumvertices-method"></a>ID3DX10SkinInfo:: getnumvertices-Methode
+# <a name="id3dx10skininfogetnumvertices-method"></a>ID3DX10SkinInfo::GetNumVertices-Methode
 
-Holen Sie sich die Anzahl der Vertices in ID3DX10SkinInfo.
+Abrufen der Anzahl von Scheitelpunkten in ID3DX10SkinInfo.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,9 +40,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Vertices in ID3DX10SkinInfo.
+Die Anzahl der Scheitelpunkte in ID3DX10SkinInfo.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Die Anzahl der Vertices in ID3DX10SkinInfo.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

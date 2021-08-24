@@ -1,85 +1,85 @@
 ---
-description: Windows Installer Eigenschaften sind globale Variablen, die vom Installationsprogramm während einer Installation verwendet werden.
+description: Windows Installereigenschaften sind globale Variablen, die das Installationsprogramm während einer Installation verwendet.
 ms.assetid: 1c59939b-de0f-4bf4-ab1f-4f1aa2488bfa
 title: Angeben von Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cd4294f35595e723491398172dc4c73337a1416
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f538bb354ef793a54f3eb60ddfe7b75b2aa96310abdd8a7331813d887433816
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119627800"
 ---
 # <a name="specifying-properties"></a>Angeben von Eigenschaften
 
-Windows Installer Eigenschaften sind globale Variablen, die vom Installationsprogramm während einer Installation verwendet werden. Weitere Informationen finden Sie in den Abschnitten unter [Eigenschaften](properties.md). Wenn Sie im Abschnitt [Importieren einer leeren Datenbank](importing-a-blank-database.md) , die Sie uisample.msi aus dem Windows Installer SDK verwendet haben, die Eigenschaften [Tabelle](property-table.md) in Ihrer Kopie von MNP2000.msi bereits viele Eigenschaften enthält, die von der Benutzeroberfläche verwendet werden. In diesem Abschnitt fügen Sie der Eigenschaften Tabelle, die für die Installation des Notepad-Beispiels spezifisch ist, zusätzliche Informationen hinzu. Weitere Informationen finden Sie auch in der [Gruppe Programm Informationstabellen](program-information-tables-group.md).
+Windows Installereigenschaften sind globale Variablen, die das Installationsprogramm während einer Installation verwendet. Weitere Informationen finden Sie in den Abschnitten unter [Eigenschaften.](properties.md) Wenn Sie [](importing-a-blank-database.md) im Abschnitt Importieren einer leeren Datenbank uisample.msi aus dem Windows Installer SDK verwendet haben, enthält die Tabelle [Eigenschaft](property-table.md) in Ihrer Kopie von MNP2000.msi bereits viele Eigenschaften, die von der Benutzeroberfläche verwendet werden. In diesem Abschnitt fügen Sie der Tabelle Eigenschaft zusätzliche Informationen hinzu, die für die Installation des Beispiels Editor sind. Weitere Informationen finden Sie [auch in der Gruppe "Program Information Tables".](program-information-tables-group.md)
 
-In jedem Installationspaket sind fünf Eigenschaften erforderlich, die für das Notepad-Beispiel in der [Eigenschaften Tabelle](property-table.md) MNP2000.msi aktualisiert werden müssen:
+Es gibt fünf Eigenschaften, die in jedem Installationspaket erforderlich sind. Diese müssen für das Editor-Beispiel in der [Tabelle Eigenschaft](property-table.md) des MNP2000.msi:
 
 -   [**ProductCode**](productcode.md)
--   [**Productlanguage**](productlanguage.md)
+-   [**ProductLanguage**](productlanguage.md)
 -   [**Hersteller**](manufacturer.md)
 -   [**ProductVersion**](productversion.md)
--   [**ProductName**](productname.md)
+-   [**Productname**](productname.md)
 
-Obwohl Sie nicht für alle Installationspakete erforderlich sind, sollten Anwendungen, die in Zukunft ein Upgrade erhalten, auch über eine [**UpgradeCode**](upgradecode.md) -Eigenschaft verfügen. Weitere [wichtige Upgrades finden Sie unter Vorbereiten einer Anwendung](preparing-an-application-for-future-major-upgrades.md).
+Obwohl dies nicht für alle Installationspakete erforderlich ist, sollten Anwendungen, die in Zukunft möglicherweise ein Upgrade erhalten, auch eine [**UpgradeCode-Eigenschaft**](upgradecode.md) haben. Weitere Informationen finden Sie unter Preparing an Application for Future Major Upgrades (Vorbereiten einer Anwendung [für zukünftige Hauptupgrades).](preparing-an-application-for-future-major-upgrades.md)
 
-Öffnen Sie MNP2000.msi mit dem Datenbank-Editor, und geben Sie die folgenden Daten in die Eigenschaften Tabelle ein. Die Liste enthält Links zu den Referenz Themen für integrierte Installer-Eigenschaften. Die Eigenschaftsnamen, die keine Verknüpfungen sind, sind vom Autor definierte Eigenschaften. Viele der aus uisample.msi importierten Eigenschaften gelten für die Beispiel Benutzeroberfläche. Der spätere Abschnitt Benutzeroberfläche für das Installations Beispiel erläutert die Benutzeroberfläche.
+Verwenden Sie ihren Datenbank-Editor, um MNP2000.msi, und geben Sie die folgenden Daten in die Tabelle Eigenschaft ein. Die Liste enthält Links zu den Referenzthemen für integrierte Installereigenschaften. Die Eigenschaftsnamen, die keine Links sind, sind vom Autor definierte Eigenschaften. Viele der eigenschaften, die aus uisample.msi importiert werden, sind für die Beispiel-Benutzeroberfläche. Im späteren Abschnitt Benutzeroberfläche für das Installationsbeispiel wird die Benutzeroberfläche erläutert.
 
-[Eigenschaften Tabelle](property-table.md)
+[Eigenschaftentabelle](property-table.md)
 
 
 
 | Eigenschaft                                         | Wert                                     |
 |--------------------------------------------------|-------------------------------------------|
-| [**Arphelplink**](arphelplink.md)               | https://www.microsoft.com/management       |
-| BannerBitmap                                     | bannrbmp                                  |
-| ButtonText \_ zurück                                 | < &zurück                                |
-| ButtonText \_ Durchsuchen                               | BR&owse                                   |
-| ButtonText \_ Abbrechen                               | Abbrechen                                    |
-| ButtonText \_ Beenden                                 | &beenden                                     |
-| ButtonText- \_ Fertigstellen                               | &Fertigstellen                                   |
-| ButtonText \_ ignorieren                               | &ignorieren                                   |
-| ButtonText- \_ Installation                              | &Installation                                  |
-| ButtonText \_ Next                                 | &nächsten >                                |
+| [**ARPHELPLINK**](arphelplink.md)               | https://www.microsoft.com/management       |
+| Bannerbitmap                                     | bannrbmp                                  |
+| ButtonText \_ Back                                 | < &Zurück                                |
+| ButtonText \_ Browse                               | Br&owse                                   |
+| ButtonText \_ Cancel                               | Abbrechen                                    |
+| ButtonText \_ Exit                                 | &Beenden                                     |
+| ButtonText \_ Finish                               | &Fertig stellen                                   |
+| ButtonText \_ Ignore                               | &Ignorieren                                   |
+| ButtonText \_ Install                              | &Installieren                                  |
+| ButtonText \_ Next                                 | &nächste >                                |
 | ButtonText \_ Nein                                   | &Nein                                       |
 | ButtonText \_ OK                                   | OK                                        |
-| ButtonText \_ Entfernen                               | &entfernen                                   |
-| ButtonText \_ Reset                                | &zurücksetzen                                    |
-| Fortsetzen von \_ ButtonText                               | &fortsetzen                                   |
-| ButtonText- \_ Wiederholung                                | &Wiederholung                                    |
-| ButtonText- \_ Rückgabe                               | &Rückgabe                                   |
-| ButtonText \_ Ja                                  | &ja                                      |
-| Completesetupicon                                | completi                                  |
-| Componentdownload                                | ftp://anonymous@microsoft.com/components/ |
-| Customsetupicon                                  | custicon                                  |
-| [**Defaultuifont**](defaultuifont.md)           | DlgFont8                                  |
-| Dialogbitmap                                     | dlgbmp                                    |
+| ButtonText \_ Remove                               | &Entfernen                                   |
+| ButtonText \_ Reset                                | &Zurücksetzen                                    |
+| ButtonText \_ Resume                               | &Fortsetzen                                   |
+| ButtonText \_ Retry                                | &Wiederholen                                    |
+| ButtonText \_ Return                               | &Return                                   |
+| ButtonText \_ Ja                                  | &Ja                                      |
+| CompleteSetupIcon                                | completi                                  |
+| ComponentDownload                                | ftp://anonymous@microsoft.com/components/ |
+| CustomSetupIcon                                  | cus wie                                  |
+| [**DefaultUIFont**](defaultuifont.md)           | DlgFont8                                  |
+| DialogBitmap                                     | dlgbmp                                    |
 | DlgTitleFont                                     | {&DlgFontBold8}                           |
-| ErrorDialog                                      | Errordlg                                  |
-| Exclamationicon                                  | exclamic                                  |
+| ErrorDialog                                      | ErrorDlg                                  |
+| AusrufezeichenIcon                                  | Ausrufezeichen                                  |
 | False                                            | 0                                         |
-| Izustimmung                                           | Nein                                        |
-| Infoicon                                         | info                                      |
-| Installericon                                    | Initiator                                  |
+| Iagree                                           | Nein                                        |
+| InfoIcon                                         | info                                      |
+| InstallerIcon                                    | ins wie                                  |
 | [**INSTALLLEVEL**](installlevel.md)             | 3                                         |
 | InstallMode                                      | Typisch                                   |
 | [**Hersteller**](manufacturer.md)             | Microsoft                                 |
-| [**Pidtemplate**](pidtemplate.md)               | 12345<\#\#\#-%%%%%%%>@@@@@          |
-| [**ProductCode**](productcode.md)               | {18a9233c-0b34-4127-a966-c257386270bc}    |
-| [**ProductID**](productid.md)                   | none                                      |
-| [**Productlanguage**](productlanguage.md)       | 1033                                      |
-| [**ProductName**](productname.md)               | MNP2000                                   |
+| [**PIDTemplate**](pidtemplate.md)               | 12345<\#\#\#-%%%%%%%>@@@@@          |
+| [**ProductCode**](productcode.md)               | {18A9233C-0B34-4127-A966-C257386270BC}    |
+| [**Productid**](productid.md)                   | Keine                                      |
+| [**ProductLanguage**](productlanguage.md)       | 1033                                      |
+| [**Productname**](productname.md)               | MNP2000                                   |
 | [**ProductVersion**](productversion.md)         | 01.40.0000                                |
 | Progress1                                        | Installation                                |
 | Progress2                                        | installs                                  |
-| [**Promptrollbackcost**](promptrollbackcost.md) | P                                         |
-| Removeicon                                       | removico                                  |
-| Repairicon                                       | repairic                                  |
-| Setup                                            | Setup                                     |
+| [**PROMPTROLLBACKCOST**](promptrollbackcost.md) | P                                         |
+| RemoveIcon                                       | removico                                  |
+| RepairIcon                                       | repairic                                  |
+| Einrichten                                            | Einrichten                                     |
 | True                                             | 1                                         |
-| [**UpgradeCode auch**](upgradecode.md)               | {908e378a-9551-4772-BF1D-5cfaf6fd9cb4}    |
+| [**Upgradecode**](upgradecode.md)               | {908E378A-9551-4772-BF1D-5CFAF6FD9CB4}    |
 | Assistent                                           | Setup-Assistenten                              |
 
 

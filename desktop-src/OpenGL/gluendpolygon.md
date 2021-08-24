@@ -1,9 +1,9 @@
 ---
-title: gluendpolygon-Funktion (glu. h)
-description: Die Funktionen "glubeginpolygon" und "gluendpolygon" begrenzen eine Polygon Beschreibung. | gluendpolygon-Funktion (glu. h)
+title: gluEndPolygon-Funktion (Glu.h)
+description: Die Funktionen gluBeginPolygon und gluEndPolygon begrenzen eine Polygonbeschreibung. | gluEndPolygon-Funktion (Glu.h)
 ms.assetid: fdb8cc73-c6c3-4377-aa5b-36a79791e7a9
 keywords:
-- gluendpolygon-Funktion OpenGL
+- gluEndPolygon-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbf69bfb16f9c83462bbe6b53c86f319b3d09623
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b12d3565938dbc963a720333bbbba23a42d0d2e775297af4de3c2f2c1362760e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106351874"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675390"
 ---
-# <a name="gluendpolygon-function"></a>gluendpolygon-Funktion
+# <a name="gluendpolygon-function"></a>gluEndPolygon-Funktion
 
-\[Die Funktion " **gluendpolygon** " ist veraltet und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Die Funktion " **gluendpolygon** " ist " **glutessendpolygon** " gefolgt von " **gluTessEndContour**" zugeordnet.\]
+\[Die **gluEndPolygon-Funktion** ist veraltet und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. Die **funktion gluEndPolygon** wird **gluTessEndPolygon** gefolgt von **gluTessEndContour** zugeordnet.\]
 
-Die Funktionen " [**glubeginpolygon**](glubeginpolygon.md) " und " **gluendpolygon** " begrenzen eine Polygon Beschreibung.
+Die Funktionen [**gluBeginPolygon**](glubeginpolygon.md) und **gluEndPolygon** begrenzen eine Polygonbeschreibung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void gluEndPolygon(
 
 <dl> <dt>
 
-*ATI* 
+*Tess* 
 </dt> <dd>
 
-Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
+Das Mosaikobjekt (erstellt mit [**gluNewTess**](glunewtess.md)).
 
 </dd> </dl>
 
@@ -53,19 +53,19 @@ Das Mosaik Objekt (mit [**glunewtess**](glunewtess.md)erstellt).
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie " [**glubeginpolygon**](glubeginpolygon.md) " und " **gluendpolygon** ", um die Definition eines nicht konvexen Polygons zu begrenzen.
+Verwenden Sie [**gluBeginPolygon**](glubeginpolygon.md) und **gluEndPolygon,** um die Definition eines Nichtkonvexpolygons zu begrenzen.
 
-1.  Aufrufen von " **glubeginpolygon**".
-2.  Definieren Sie die Kontur des Polygons, indem Sie für jeden Scheitelpunkt und [**glunextcontour**](glunextcontour.md) den Wert " [**glutess Vertex**](glutessvertex.md) " aufrufen, um die einzelnen neuen Konturen zu starten
-3.  Nennen Sie " **gluendpolygon** ", um das Ende der Definition zu signalisieren.
+1.  Rufen Sie **gluBeginPolygon** auf.
+2.  Definieren Sie die Konturen des Polygons, indem [**Sie gluTessVertex**](glutessvertex.md) für jeden Scheitelpunkt und [**gluNextContour**](glunextcontour.md) aufrufen, um jede neue Kontur zu starten.
+3.  Rufen Sie **gluEndPolygon** auf, um das Ende der Definition zu signalisieren.
 
-    Nachdem " **gluendpolygon** " aufgerufen wurde, wird das Polygon im Mosaik Prozess dargestellt, und die resultierenden Dreiecke werden durch Rückrufe beschrieben. Beschreibungen der Rückruf Funktionen finden Sie unter [*glutesscallback*](glutess.md).
+    Sobald **gluEndPolygon** aufgerufen wird, wird das Polygon mosaikiert, und die resultierenden Dreiecke werden durch Rückrufe beschrieben. Beschreibungen der Rückruffunktionen finden Sie unter [*gluTessCallback*](glutess.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Viereck mit einer dreieckigen Lücke beschrieben:
+Im folgenden Beispiel wird ein Quadernatral mit einer dreieckigen Lücke beschrieben:
 
 ``` syntax
 gluBeginPolygon(tess); 
@@ -88,8 +88,8 @@ gluEndPolygon(tess);
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -98,22 +98,22 @@ gluEndPolygon(tess);
 
 <dl> <dt>
 
-[**glunewtess**](glunewtess.md)
+[**gluNewTess**](glunewtess.md)
 </dt> <dt>
 
-[**glunextcontour**](glunextcontour.md)
+[**gluNextContour**](glunextcontour.md)
 </dt> <dt>
 
-[**glutess begincontour**](glutessbegincontour.md)
+[**gluTessBeginContour**](glutessbegincontour.md)
 </dt> <dt>
 
-[**glutess beginpolygon**](glutessbeginpolygon.md)
+[**gluTessBeginPolygon**](glutessbeginpolygon.md)
 </dt> <dt>
 
-[*glutesscallback*](glutess.md)
+[*gluTessCallback*](glutess.md)
 </dt> <dt>
 
-[**glutess Vertex**](glutessvertex.md)
+[**gluTessVertex**](glutessvertex.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: glulookat-Funktion (glu. h)
-description: Die Funktion "glulookat" definiert eine Anzeige Transformation.
+title: gluLookAt-Funktion (Glu.h)
+description: Die gluLookAt-Funktion definiert eine Ansichtstransformation.
 ms.assetid: 1fd87701-19c2-49b9-99ac-10e70aaedbfd
 keywords:
-- glulookat-Funktion OpenGL
+- gluLookAt-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5866f3c06ef6969c95eeef4b23fff7a4e7852eb0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e9b21d0cb2fac6573ab2999eb96b2af8b1ecb670f4e51d1ffd2ad91ba001c9ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675300"
 ---
-# <a name="glulookat-function"></a>glulookat-Funktion
+# <a name="glulookat-function"></a>gluLookAt-Funktion
 
-Die Funktion " **glulookat** " definiert eine Anzeige Transformation.
+Die **gluLookAt-Funktion** definiert eine Ansichtstransformation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,63 +51,63 @@ void WINAPI gluLookAt(
 *eyex* 
 </dt> <dd>
 
-Die Position des Augen Punkts.
+Die Position des Augenpunkts.
 
 </dd> <dt>
 
-*pipey* 
+*eyey* 
 </dt> <dd>
 
-Die Position des Augen Punkts.
+Die Position des Augenpunkts.
 
 </dd> <dt>
 
-*pipez* 
+*eyez* 
 </dt> <dd>
 
-Die Position des Augen Punkts.
+Die Position des Augenpunkts.
 
 </dd> <dt>
 
-*CenterX* 
-</dt> <dd>
-
-Die Position des Bezugspunkts.
-
-</dd> <dt>
-
-*CenterY* 
+*Centerx* 
 </dt> <dd>
 
 Die Position des Bezugspunkts.
 
 </dd> <dt>
 
-*CenterZ* 
+*Centery* 
 </dt> <dd>
 
 Die Position des Bezugspunkts.
 
 </dd> <dt>
 
-*UPX* 
+*centerz* 
 </dt> <dd>
 
-Die Richtung des aufwärts Vektors.
+Die Position des Bezugspunkts.
 
 </dd> <dt>
 
-*UPY* 
+*Upx* 
 </dt> <dd>
 
-Die Richtung des aufwärts Vektors.
+Die Richtung des Auf-Oben-Vektors.
 
 </dd> <dt>
 
-*UPZ* 
+*upy* 
 </dt> <dd>
 
-Die Richtung des aufwärts Vektors.
+Die Richtung des Auf-Oben-Vektors.
+
+</dd> <dt>
+
+*Upz* 
+</dt> <dd>
+
+Die Richtung des Auf-Oben-Vektors.
 
 </dd> </dl>
 
@@ -115,11 +115,11 @@ Die Richtung des aufwärts Vektors.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glulookat** " erstellt eine von einem Augen Punkt abgeleitete Anzeige Matrix, einen Bezugspunkt, der den Mittelpunkt der Szene angibt, und einen aufwärts Vektor. Die Matrix ordnet den Verweis Punkt der negativen z-Achse und dem Augenblick auf den Ursprung zu. Wenn Sie also eine typische Projektions Matrix verwenden, wird der Mittelpunkt der Szene der Mitte des Viewports zugeordnet. Entsprechend wird die Richtung, die durch den auf die Anzeige Ebene projizierten aufwärts Vektor beschrieben wird, der positiven y-Achse zugeordnet, sodass Sie im Viewport nach oben zeigt. Der Up-Vektor darf nicht parallel zum Bezugspunkt für die Sichtlinie gleich sein.
+Die **gluLookAt-Funktion** erstellt eine von einem Augenpunkt abgeleitete Anzeigematrix, einen Bezugspunkt, der den Mittelpunkt der Szene angibt, und einen Auf-Oben-Vektor. Die Matrix ordnet den Bezugspunkt der negativen Z-Achse und den Augenpunkt dem Ursprung zu. Wenn Sie also eine typische Projektionsmatrix verwenden, wird der Mittelpunkt der Szene der Mitte des Viewports angezeigt. Auf ähnliche Weise wird die von dem auf die Anzeigeebene projizierte Aufwärtsvektor beschriebene Richtung der positiven y-Achse zugeordnet, sodass sie im Viewport nach oben zeigt. Der Auf-Oben-Vektor darf nicht parallel zur Sichtlinie vom Auge zum Bezugspunkt sein.
 
-Die von " **glulookat** " generierte Matrix stellt die aktuelle Matrix dar.
+Die von **gluLookAt** generierte Matrix postmultipliert die aktuelle Matrix.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,8 +129,8 @@ Die von " **glulookat** " generierte Matrix stellt die aktuelle Matrix dar.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
@@ -139,10 +139,10 @@ Die von " **glulookat** " generierte Matrix stellt die aktuelle Matrix dar.
 
 <dl> <dt>
 
-[**glfrustum**](glfrustum.md)
+[**glFrustum**](glfrustum.md)
 </dt> <dt>
 
-[**gluperspective**](gluperspective.md)
+[**gluPerspective**](gluperspective.md)
 </dt> </dl>
 
  

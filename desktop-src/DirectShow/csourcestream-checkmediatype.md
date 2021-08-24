@@ -1,7 +1,7 @@
 ---
-description: 'Die checkmediatype-Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert. Diese Methode implementiert die rein virtuelle cbasepin:: checkmediatype-Methode.'
+description: Die CheckMediaType-Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert. Diese Methode implementiert die rein virtuelle CBasePin::CheckMediaType-Methode.
 ms.assetid: 3db7c74c-a6aa-4b49-b2a5-9bf8db35fd7e
-title: Csourcestream. checkmediatype-Methode (Quelle. h)
+title: CSourceStream.CheckMediaType-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 62f8b6c18613f5c187fc637febd08b74260a1e44
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4cb900d4de448b59eadb4cfd4de28aebf3ac07845fff6a2769c003d37cac846a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119633930"
 ---
-# <a name="csourcestreamcheckmediatype-method"></a>Csourcestream. checkmediatype-Methode
+# <a name="csourcestreamcheckmediatype-method"></a>CSourceStream.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob die PIN einen bestimmten Medientyp akzeptiert. Diese Methode implementiert die rein virtuelle [**cbasepin:: checkmediatype**](cbasepin-checkmediatype.md) -Methode.
+Die `CheckMediaType` -Methode bestimmt, ob der Pin einen bestimmten Medientyp akzeptiert. Diese Methode implementiert die rein virtuelle [**CBasePin::CheckMediaType-Methode.**](cbasepin-checkmediatype.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ virtual HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*pmediatype* 
+*pMediaType* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den vorgeschlagenen Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den vorgeschlagenen Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                            | Beschreibung                                          |
 |----------------------------------------------------------------------------------------|------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>   | Diese PIN unterstützt diesen Medientyp.<br/>        |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Dieser Medientyp wird von der PIN nicht unterstützt.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>   | Dieser Pin unterstützt diesen Medientyp.<br/>        |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Der Pin unterstützt diesen Medientyp nicht.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig unterstützt die PIN einen einzelnen Medientyp. Diese Methode ruft den unterstützten Typ durch Aufrufen der Einzel Parameter Version der [**csourcestream:: getmediatype**](csourcestream-getmediatype.md) -Methode ab und vergleicht sie mit dem vorgeschlagenen Typ. Wenn Ihre PIN mehr als einen Medientyp unterstützt, überschreiben Sie diese Methode.
+Standardmäßig unterstützt der Pin einen einzelnen Medientyp. Diese Methode ruft den unterstützten Typ ab, indem die Einzelparameterversion der [**CSourceStream::GetMediaType-Methode**](csourcestream-getmediatype.md) aufgerufen und mit dem vorgeschlagenen Typ verglichen wird. Wenn Ihr Pin mehrere Medientypen unterstützt, überschreiben Sie diese Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Standardmäßig unterstützt die PIN einen einzelnen Medientyp. Diese Methode ru
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Standardmäßig unterstützt die PIN einen einzelnen Medientyp. Diese Methode ru
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

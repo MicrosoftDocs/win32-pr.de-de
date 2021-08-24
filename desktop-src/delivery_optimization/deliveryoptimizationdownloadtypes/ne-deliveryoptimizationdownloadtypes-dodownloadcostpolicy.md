@@ -1,8 +1,8 @@
 ---
-title: Dodownloadcostpolicy-Enumeration
-description: Gibt die ID der Kosten Richtlinien Optionen an, die mit der **DODownloadProperty_CostPolicy** Eigenschaft verknüpft sind.
+title: DODownloadCostPolicy-Enumeration
+description: Gibt die ID der Kostenrichtlinienoptionen an, die der **eigenschaft DODownloadProperty_CostPolicy** zugeordnet sind.
 keywords:
-- Dodownloadcostpolicy-Enumeration, dodownloadcostpolicy
+- DODownloadCostPolicy-Enumeration, DODownloadCostPolicy
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/02/2019
-ms.openlocfilehash: c70384f7c7da1633b910db36c42a335d1c463bae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 763042ed6d0df6fa287fbe66d23528a199a73041cb3500c6a2812e6db86cb698
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119677880"
 ---
-# <a name="dodownloadcostpolicy-enumeration"></a>Dodownloadcostpolicy-Enumeration
+# <a name="dodownloadcostpolicy-enumeration"></a>DODownloadCostPolicy-Enumeration
 
-Die **dodownloadcostpolicy** -Enumeration gibt die ID der Kosten Richtlinien Optionen an, die mit der **DODownloadProperty_CostPolicy** -Eigenschaft verknüpft sind.
+Die **DODownloadCostPolicy-Enumeration** gibt die ID der Kostenrichtlinienoptionen an, die der **eigenschaft DODownloadProperty_CostPolicy** zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,16 +44,16 @@ typedef enum _DODownloadCostPolicy
 | Anforderung | Wert |
 |-|-|
 | DODownloadCostPolicy_Always | Der Download wird unabhängig von den Kosten ausgeführt. |
-| DODownloadCostPolicy_Unrestricted | Download Ausführungen, es sei denn, Sie erzwingen Kosten oder Datenverkehrs Limits |
-| DODownloadCostPolicy_Standard | Der Download wird ausgeführt, es sei denn, es gibt keine Zuschläge und keine beinahe-Erschöpfung |
-| DODownloadCostPolicy_NoRoaming | Download wird ausgeführt, es sei denn, die Konnektivität unterliegt roamingzuschläge |
-| DODownloadCostPolicy_NoSurcharge | Download wird ausgeführt, es sei denn, es wird ein Zuschlag |
-| DODownloadCostPolicy_NoCellular | Der Download wird ausgeführt, es sei denn, das Netzwerk ist |
+| DODownloadCostPolicy_Unrestricted | Der Download wird ausgeführt, es sei denn, kosten- oder datenverkehrseinschränkungen. |
+| DODownloadCostPolicy_Standard | Der Download wird ausgeführt, es sei denn, sie unterliegen weder einem Aufschlag noch einer nahezuen Erschöpfung. |
+| DODownloadCostPolicy_NoRoaming | Der Download wird ausgeführt, es sei denn, diese Konnektivität unterliegt Roamingzuschlägen. |
+| DODownloadCostPolicy_NoSurcharge | Der Download wird ausgeführt, es sei denn, es wird ein Aufschlag berechnet. |
+| DODownloadCostPolicy_NoCellular | Der Download wird ausgeführt, es sei denn, das Netzwerk befindet sich im Mobilfunk. |
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Deliveryoptimizationdownloadtypes. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | DeliveryOptimizationDownloadTypes.h |

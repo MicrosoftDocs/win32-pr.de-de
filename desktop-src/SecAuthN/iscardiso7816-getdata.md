@@ -1,7 +1,7 @@
 ---
-description: Die GetData-Methode erstellt einen APDU-Befehl (Application Protocol Data Unit), der je nach ausgewähltem Dateityp entweder ein einzelnes Primitives Datenobjekt oder einen Satz von Datenobjekten (in einem konstruierten Datenobjekt enthalten) abruft.
+description: Die GetData-Methode erstellt einen APDU-Befehl (Application Protocol Data Unit), der je nach ausgewähltem Dateityp entweder ein einzelnes primitives Datenobjekt oder einen Satz von Datenobjekten (in einem konstruierten Datenobjekt enthalten) abruft.
 ms.assetid: d764a765-f451-4bf7-9d06-f5901062dcac
-title: 'ISCardISO7816:: GetData-Methode (scardssp. h)'
+title: ISCardISO7816::GetData-Methode (Scardssp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 93dca04daa50e068a68dc62cf11a580eb8e3b1c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ef783092edb87a29203c83afcf67fb594eb84dcc296621379c9f39a9ccbcc79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672380"
 ---
-# <a name="iscardiso7816getdata-method"></a>ISCardISO7816:: GetData-Methode
+# <a name="iscardiso7816getdata-method"></a>ISCardISO7816::GetData-Methode
 
-\[Die **GetData** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **GetData-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **GetData** -Methode erstellt einen APDU-Befehl ( [*Application Protocol Data Unit*](../secgloss/a-gly.md) ), der je nach ausgewähltem Dateityp entweder ein einzelnes Primitives Datenobjekt oder einen Satz von Datenobjekten (in einem konstruierten Datenobjekt enthalten) abruft.
+Die **GetData-Methode** erstellt einen APDU-Befehl [*(Application Protocol Data Unit),*](../secgloss/a-gly.md) der je nach ausgewähltem Dateityp entweder ein einzelnes primitives Datenobjekt oder einen Satz von Datenobjekten (in einem konstruierten Datenobjekt enthalten) abruft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ HRESULT GetData(
 
 <dl> <dt>
 
-*byP1* \[ in\]
+*byP1* \[ In\]
 </dt> <dd>
 
 Parameter.
@@ -53,11 +53,11 @@ Parameter.
 
 | Wert                                                                                  | Bedeutung                                          |
 |----------------------------------------------------------------------------------------|--------------------------------------------------|
-| <dl> <dt>0000-003F</dt> </dl> | RFU<br/>                                   |
-| <dl> <dt>0040 Uhr</dt> </dl> | BER-TLV-Tag (1 Byte) in P2<br/>            |
-| <dl> <dt>0100-01FF</dt> </dl> | Anwendungsdaten (proprietäre Codierung)<br/> |
-| <dl> <dt>0200-02FF</dt> </dl> | Simple-TLV-Tag in P2<br/>                  |
-| <dl> <dt>0300-03FF</dt> </dl> | RFU<br/>                                   |
+| <dl> <dt>0000 - 003F</dt> </dl> | Rfu<br/>                                   |
+| <dl> <dt>0040 - 00FF</dt> </dl> | BER-TLV-Tag (1 Byte) in P2<br/>            |
+| <dl> <dt>0100 - 01FF</dt> </dl> | Anwendungsdaten (proprietäre Codierung)<br/> |
+| <dl> <dt>0200 - 02FF</dt> </dl> | SIMPLE-TLV-Tag in P2<br/>                  |
+| <dl> <dt>0300 - 03FF</dt> </dl> | Rfu<br/>                                   |
 | <dl> <dt>0400 - 04FF</dt> </dl> | BER-TLV-Tag (2 Bytes) in P1-P2<br/>        |
 
 
@@ -66,7 +66,7 @@ Parameter.
 
 </dd> <dt>
 
-*byP2* \[ in\]
+*byP2* \[ In\]
 </dt> <dd>
 
 Parameter.
@@ -75,11 +75,11 @@ Parameter.
 
 | Wert                                                                                  | Bedeutung                                          |
 |----------------------------------------------------------------------------------------|--------------------------------------------------|
-| <dl> <dt>0000-003F</dt> </dl> | RFU<br/>                                   |
-| <dl> <dt>0040 Uhr</dt> </dl> | BER-TLV-Tag (1 Byte) in P2<br/>            |
-| <dl> <dt>0100-01FF</dt> </dl> | Anwendungsdaten (proprietäre Codierung)<br/> |
-| <dl> <dt>0200-02FF</dt> </dl> | Simple-TLV-Tag in P2<br/>                  |
-| <dl> <dt>0300-03FF</dt> </dl> | RFU<br/>                                   |
+| <dl> <dt>0000 - 003F</dt> </dl> | Rfu<br/>                                   |
+| <dl> <dt>0040 - 00FF</dt> </dl> | BER-TLV-Tag (1 Byte) in P2<br/>            |
+| <dl> <dt>0100 - 01FF</dt> </dl> | Anwendungsdaten (proprietäre Codierung)<br/> |
+| <dl> <dt>0200 - 02FF</dt> </dl> | SIMPLE-TLV-Tag in P2<br/>                  |
+| <dl> <dt>0300 - 03FF</dt> </dl> | Rfu<br/>                                   |
 | <dl> <dt>0400 - 04FF</dt> </dl> | BER-TLV-Tag (2 Bytes) in P1-P2<br/>        |
 
 
@@ -88,48 +88,48 @@ Parameter.
 
 </dd> <dt>
 
-*lbytestoget* \[ in\]
+*lBytesToGet* \[ In\]
 </dt> <dd>
 
-Anzahl von Bytes, die in der Antwort erwartet werden.
+Anzahl der in der Antwort erwarteten Bytes.
 
 </dd> <dt>
 
-*ppcmd* \[ in, out\]
+*ppCmd* \[ in, out\]
 </dt> <dd>
 
-Bei der Eingabe ein Zeiger auf ein [**iscardcmd**](iscardcmd.md) -Schnittstellen Objekt oder **null**.
+Bei der Eingabe ein Zeiger auf ein [**ISCardCmd-Schnittstellenobjekt**](iscardcmd.md) oder **NULL.**
 
-Bei der Rückgabe wird der Befehl mit dem von diesem Vorgang erstellten APDU-Befehl ausgefüllt. Wenn *ppcmd* auf **null** festgelegt wurde, wird ein [*Smartcard*](../secgloss/s-gly.md) - [**iscardcmd**](iscardcmd.md) -Objekt intern erstellt und mit dem *ppcmd* -Zeiger zurückgegeben.
+Bei der Rückgabe wird er mit dem APDU-Befehl gefüllt, der von diesem Vorgang erstellt wurde. Wenn *ppCmd* auf **NULL** festgelegt wurde, wird intern ein [**ISCardCmd-Smartcardobjekt**](iscardcmd.md) erstellt und mit dem *ppCmd-Zeiger* zurückgegeben. [](../secgloss/s-gly.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der gekapselte Befehl kann nur ausgeführt werden, wenn der Sicherheitsstatus der [*Smartcard*](../secgloss/s-gly.md) den Sicherheits Attributen der zu lesenden elementaren Datei entspricht. Sicherheitsbedingungen sind von der Richtlinie der Karte abhängig und können durch [**externalauthenticate**](iscardiso7816-externalauthenticate.md), [**internalauthenticate**](iscardiso7816-internalauthenticate.md), [**iscardauth**](iscardauth.md)usw. manipuliert werden.
+Der gekapselte Befehl kann nur ausgeführt werden, wenn der Sicherheitsstatus der [*Smartcard*](../secgloss/s-gly.md) die Sicherheitsattribute der zu lesenden elementaren Datei erfüllt. Sicherheitsbedingungen sind von der Richtlinie der Karte abhängig und können über [**ExternalAuthenticate,**](iscardiso7816-externalauthenticate.md) [**InternalAuthenticate,**](iscardiso7816-internalauthenticate.md) [**ISCardAuth**](iscardauth.md)usw. bearbeitet werden.
 
-Um eine Datei auszuwählen, wählen Sie [**selectfile**](iscardiso7816-selectfile.md)aus.
+Um eine Datei auszuwählen, rufen [**Sie SelectFile auf.**](iscardiso7816-selectfile.md)
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,14 +137,14 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardssp. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardsrv. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardssp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardsrv.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ ISCardISO7816 ist als 53b6aa68-3F 56-11D0-916b-00aa00c18068 definiert<br/>        |
+| IID<br/>                      | IID \_ ISCardISO7816 ist als 53B6AA68-3F56-11D0-916B-00AA00C18068 definiert.<br/>        |
 
 
 
@@ -152,22 +152,22 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Externalauthenticate**](iscardiso7816-externalauthenticate.md)
+[**ExternalAuthenticate**](iscardiso7816-externalauthenticate.md)
 </dt> <dt>
 
-[**Internalauthenticate**](iscardiso7816-internalauthenticate.md)
+[**InternalAuthenticate**](iscardiso7816-internalauthenticate.md)
 </dt> <dt>
 
-[**Iscardauth**](iscardauth.md)
+[**ISCardAuth**](iscardauth.md)
 </dt> <dt>
 
 [**ISCardISO7816**](iscardiso7816.md)
 </dt> <dt>
 
-[**Putdata**](iscardiso7816-putdata.md)
+[**PutData**](iscardiso7816-putdata.md)
 </dt> <dt>
 
-[**Selectfile**](iscardiso7816-selectfile.md)
+[**SelectFile**](iscardiso7816-selectfile.md)
 </dt> </dl>
 
  

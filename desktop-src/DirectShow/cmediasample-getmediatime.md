@@ -1,7 +1,7 @@
 ---
-description: 'Die getmediatime-Methode ruft die Medien Zeiten für dieses Beispiel ab. Diese Methode implementiert die imediasample:: getmediatime-Methode.'
+description: Die GetMediaTime-Methode ruft die Medienzeiten für dieses Beispiel ab. Diese Methode implementiert die IMediaSample::GetMediaTime-Methode.
 ms.assetid: f58a2162-5764-48f2-8984-ee4bba1229ab
-title: Cmediasample. getmediatime-Methode (amfilter. h)
+title: CMediaSample.GetMediaTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f9a41d29e46d29cff9023421a661cc90731d4c06
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 901531b3aaff882700a6a6196330cc7b0823b8b0069024101953f5f79a54e17d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634680"
 ---
-# <a name="cmediasamplegetmediatime-method"></a>Cmediasample. getmediatime-Methode
+# <a name="cmediasamplegetmediatime-method"></a>CMediaSample.GetMediaTime-Methode
 
-Die- `GetMediaTime` Methode ruft die Medien Zeiten für dieses Beispiel ab. Diese Methode implementiert die [**imediasample:: getmediatime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatime) -Methode.
+Die `GetMediaTime` -Methode ruft die Medienzeiten für dieses Beispiel ab. Diese Methode implementiert die [**IMediaSample::GetMediaTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,40 +43,40 @@ HRESULT GetMediaTime(
 
 <dl> <dt>
 
-*PStart* 
+*pStart* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Start Zeit der Medien empfängt.
+Zeiger auf eine Variable, die die Startzeit des Mediums empfängt.
 
 </dd> <dt>
 
-*ausgesetzt* 
+*Pend* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit des Mediums empfängt.
+Zeiger auf eine Variable, die die Medienstoppzeit empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                  | Beschreibung                                         |
 |--------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                         | Erfolg.<br/>                                 |
-| <dl> <dt>**VFW \_ E \_ Medien \_ Zeit \_ nicht \_ festgelegt**</dt> </dl> | Für dieses Beispiel wurden keine Medien Zeiten festgelegt.<br/> |
+| <dl> <dt>**VFW \_ E \_ MEDIA \_ TIME \_ NOT \_ SET**</dt> </dl> | Für dieses Beispiel wurden keine Medienzeiten festgelegt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cmediasample:: m \_ mediaend**](cmediasample-m-mediaend.md) -Member-Variable gibt einen Offset von [**cmediasample:: m \_ mediastart**](cmediasample-m-mediastart.md)an, aber der vom *Pend* -Parameter empfangene Wert ist eine absolute Medien Zeit, berechnet als **m \_ mediastart**  +  **m \_ mediaend**.
+Die [**CMediaSample::m \_ MediaEnd-Elementvariable**](cmediasample-m-mediaend.md) gibt einen Offset von [**CMediaSample::m \_ MediaStart**](cmediasample-m-mediastart.md)an. Der vom *pEnd-Parameter* empfangene Wert ist jedoch eine absolute Medienzeit, die als **m \_ MediaStart**  +  **m \_ MediaEnd** berechnet wird.
 
-Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Informationen zu Medienzeiten finden Sie unter [Uhrzeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit und Uhren in Direc
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit und Uhren in Direc
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

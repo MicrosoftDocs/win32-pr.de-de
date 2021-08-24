@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmnettransmitter getrootlicenseresponse-Methode (wmdrmsdk. h)
-description: Die getrootlicenseresponse-Methode generiert eine Stamm Lizenz-Antwortnachricht.
+title: IWMDRMNetTransmitter GetRootLicenseResponse-Methode (Wmdrmsdk.h)
+description: Die GetRootLicenseResponse-Methode generiert eine Antwortnachricht zur Stammlizenz.
 ms.assetid: c735ee52-f0e0-4404-881b-18ee9a7fa9f9
 keywords:
-- Getrootlicenseresponse-Methode Windows Media-Format
-- Getrootlicenseresponse-Methode, Windows Media-Format, iwmdrmnettransmitter-Schnittstelle
-- Iwmdrmnettransmitter-Schnittstelle Windows Media-Format, getrootlicenseresponse-Methode
+- GetRootLicenseResponse-Methode windows Media Format
+- GetRootLicenseResponse-Methode windows Media Format , IWMDRMNetTransmitter-Schnittstelle
+- IWMDRMNetTransmitter-Schnittstelle windows Media Format , GetRootLicenseResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3497a3eaedb872b7d2c9eb5d7782d01f8b35462
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de89389163a9eae66a0dcda14dd6b9699d3db9650140cceac6498b2ab77a4e44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707930"
 ---
-# <a name="iwmdrmnettransmittergetrootlicenseresponse-method"></a>Iwmdrmnettransmitter:: getrootlicenseresponse-Methode
+# <a name="iwmdrmnettransmittergetrootlicenseresponse-method"></a>IWMDRMNetTransmitter::GetRootLicenseResponse-Methode
 
-Die **getrootlicenseresponse** -Methode generiert eine Stamm Lizenz-Antwortnachricht.
+Die **GetRootLicenseResponse-Methode** generiert eine Antwortnachricht zur Stammlizenz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,49 +44,49 @@ HRESULT GetRootLicenseResponse(
 
 <dl> <dt>
 
-*bstrinkid* \[ in\]
+*bstrKID* \[ In\]
 </dt> <dd>
 
-Base64-codierter Schlüssel Bezeichner, der für die neue Stamm Lizenz verwendet werden soll. Der Schlüssel Bezeichner muss ein zufällig generierter GUID-Wert sein.
+Base64-codierter Schlüsselbezeichner, der für die neue Stammlizenz verwendet werden soll. Der Schlüsselbezeichner sollte ein zufällig generierter GUID-Wert sein.
 
 </dd> <dt>
 
-*ppblicenseresponse* \[ vorgenommen\]
+*ppbLicenseResponse* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Adresse der generierten Lizenz Antwort empfängt. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie " **CoTaskMemFree**" aufrufen.
+Adresse einer Variablen, die die Adresse der generierten Lizenzantwort empfängt. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie **CoTaskMemFree** aufrufen.
 
 </dd> <dt>
 
-*pcblicenseresponse* \[ vorgenommen\]
+*pwLicenseResponse* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Größe der Lizenz Antwort erhält (in Bytes).
+Adresse einer Variablen, die die Größe der Lizenzantwort in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ DRM- \_ RIV \_ zu \_ klein**</dt> </dl> | Es wird eine aktualisierte Inhalts Sperr Liste benötigt.<br/> |
+| <dl> <dt>**NS \_ E \_ \_ DRM- WIES ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die generierte Stamm Lizenz wird mithilfe der Informationen aus den Lizenz Abfrage Daten erstellt, die für die Schnittstelle verarbeitet werden, indem [**setlicensechallenge**](iwmdrmnettransmitter-setlicensechallenge.md)aufgerufen wird.
+Die generierte Stammlizenz wird mithilfe der Informationen aus den Lizenzaufforderungsdaten erstellt, die für die Schnittstelle verarbeitet werden, indem [**SetLicenseChallenge**](iwmdrmnettransmitter-setlicensechallenge.md)aufgerufen wird.
 
-Die Stamm Lizenz wird bei der Generierung von Blatt Lizenzen verwendet. Dies wird durch Aufrufen der [**getleaflicenseresponse**](iwmdrmnettransmitter-getleaflicenseresponse.md) -Methode erreicht. Die **iwmdrmnettransmitter** -Schnittstelle verwaltet eine Kopie der Stamm Lizenz für diese Verwendung.
+Die Stammlizenz wird bei der Generierung von Blattlizenzen verwendet, die durch Aufrufen der [**GetLeafLicenseResponse-Methode**](iwmdrmnettransmitter-getleaflicenseresponse.md) erreicht wird. Die **IWMDRMNetTransmitter-Schnittstelle** verwaltet eine Kopie der Stammlizenz für diese Verwendung.
 
-Die Stamm Lizenz, die durch den Aufruf dieser Methode erstellt wurde, verfügt über keine Richtlinien und ist so konfiguriert, dass Sie auf dem empfangenden Gerät nicht persistent gespeichert werden kann.
+Die Stammlizenz, die durch Aufrufen dieser Methode erstellt wurde, verfügt über keine Richtlinien und ist so konfiguriert, dass sie nicht auf dem empfangenden Gerät beibehalten werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,15 +94,15 @@ Die Stamm Lizenz, die durch den Aufruf dieser Methode erstellt wurde, verfügt �
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmnettransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
+[**IWMDRMNetTransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
 </dt> </dl>
 
  
