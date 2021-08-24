@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "mactypedeadresssstype" konvertiert einen angegebenen Mac-Typ in einen Adresstyp.
+description: Die MacTypeToAddressType-Funktion konvertiert einen angegebenen MAC-Typ in einen Adresstyp.
 ms.assetid: 7ede39a8-9a71-4c7a-8d2d-84a4ea2173bb
-title: Mactypedeadresssstype-Funktion (Netmon. h)
+title: MacTypeToAddressType-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: b0a0eb7a18126062c201fb7f0b122bca3ea8b631
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe02cb6f0bec62a3bda35eabe288eafc2d5c3c15e422b7d68dc0b488546b83b7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742320"
 ---
-# <a name="mactypetoaddresstype-function"></a>Mactypedeadresssstype-Funktion
+# <a name="mactypetoaddresstype-function"></a>MacTypeToAddressType-Funktion
 
-Die Funktion " **mactypedeadresssstype** " konvertiert einen angegebenen Mac-Typ in einen Adresstyp.
+Die **MacTypeToAddressType-Funktion** konvertiert einen angegebenen MAC-Typ in einen Adresstyp.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ DWORD WINAPI MacTypeToAddressType(
 
 <dl> <dt>
 
-*MacType* \[ in\]
+*MacType* \[ In\]
 </dt> <dd>
 
-Der Mac-Typ, der konvertiert werden soll. Geben Sie einen der folgenden Werte an.
+Der zu konvertierende MAC-Typ. Geben Sie einen der folgenden Werte an.
 
-Mac \_ Type \_ Ethernet Mac \_ Type \_ TokenRing Mac \_ Type \_ f
+MAC \_ TYPE \_ ETHERNET MAC \_ TYPE \_ TOKENRING MAC \_ TYPE \_ FDDI
 
 </dd> </dl>
 
@@ -52,13 +52,13 @@ Mac \_ Type \_ Ethernet Mac \_ Type \_ TokenRing Mac \_ Type \_ f
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert einer der folgenden Adresstypen.
 
-Address \_ Type \_ Ethernet Address \_ Type \_ TokenRing Address \_ Type \_ f
+ADRESSTYP \_ \_ ETHERNET-ADRESSTYP \_ \_ TOKENRING ADDRESS \_ TYPE \_ FDDI
 
-Wenn die Funktion nicht erfolgreich ist, ist der Mac-Typ unbekannt. der Rückgabewert ist-1.
+Wenn die Funktion nicht erfolgreich ist, der MAC-Typ unbekannt ist, ist der Rückgabewert -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die Funktion " **mactypedeadresssstype** " aufzurufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **MacTypeToAddressType-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Mac-Typ unbekannt. der Rückgab
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

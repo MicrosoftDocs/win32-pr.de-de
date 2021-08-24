@@ -1,11 +1,11 @@
 ---
 title: Sync-With-SID-Attribut
-description: Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinien ist dies die lokale Gruppe, der ein Objekt entspricht.
+description: Für die sam-integrierte Gruppenobjekt-/lokale Richtliniensynchronisierung ist dies die lokale Gruppe, der ein Objekt entspricht.
 ms.assetid: b983210d-1c54-4355-bc37-771e51016175
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Sync-With-SID-Attribut
-- syncWithSID-Attribut AD-Schema
+- AD-Schema des Sync-With-SID-Attributs
+- AD-Schema des syncWithSID-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119802020"
 ---
 # <a name="sync-with-sid-attribute"></a>Sync-With-SID-Attribut
 
-Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinien ist dies die lokale Gruppe, der ein Objekt entspricht.
+Für die sam-integrierte Gruppenobjekt-/lokale Richtliniensynchronisierung ist dies die lokale Gruppe, der ein Objekt entspricht.
 
 
 
@@ -35,7 +35,7 @@ Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinie
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.667               |
-| System-ID-GUID    | 037651e5-441d-11d1-a9c3-0000f80367c1 |
+| System-Id-Guid    | 037651e5-441d-11d1-a9c3-0000f80367c1 |
 | Syntax            | [**String(Sid)**](s-string-sid.md)  |
 
 
@@ -58,7 +58,7 @@ Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinie
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist einwertig       | True         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -79,7 +79,7 @@ Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinie
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist einwertig       | True         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |
@@ -100,7 +100,7 @@ Bei der Synchronisierung von integrierten SAM-Gruppenobjekten/lokalen Richtlinie
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist einwertig       | True         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
 | NT-Security-Descriptor | O:BAG:BAD:S: |

@@ -1,5 +1,5 @@
 ---
-description: Eine Union-Ansichtsklasse ist eine logische Union von Quellklasseninstanzen. Eine Union-Ansichtsklasse enthält alle Instanzen der Quellklassen, es sei denn, Sie beschränken die Instanzen, indem Sie eine WHERE-Klausel in die Quellabfrage hinzufügen.
+description: Eine Union-Ansichtsklasse ist eine logische Vereinigung von Quellklasseninstanzen. Eine Union-Ansichtsklasse enthält alle Instanzen der Quellklassen, es sei denn, Sie beschränken die Instanzen, indem Sie eine WHERE-Klausel in die Quellabfrage einschließen.
 ms.assetid: 54a9804d-644d-4ab6-a3d5-c9c4f7761967
 ms.tgt_platform: multiple
 title: Erstellen einer Union-Ansichtsklasse
@@ -19,33 +19,33 @@ ms.locfileid: "119612390"
 ---
 # <a name="creating-a-union-view-class"></a>Erstellen einer Union-Ansichtsklasse
 
-Eine Union-Ansichtsklasse ist eine logische Union von Quellklasseninstanzen. Eine Union-Ansichtsklasse enthält alle Instanzen der Quellklassen, es sei denn, Sie beschränken die Instanzen, indem Sie eine WHERE-Klausel in die Quellabfrage hinzufügen.
+Eine Union-Ansichtsklasse ist eine logische Vereinigung von Quellklasseninstanzen. Eine Union-Ansichtsklasse enthält alle Instanzen der Quellklassen, es sei denn, Sie beschränken die Instanzen, indem Sie eine WHERE-Klausel in die Quellabfrage einschließen.
 
-Union-Ansichtsklassen sind nützlich, wenn Sie Instanzen ähnlicher oder identischer Klassen anzeigen möchten, die sich in unterschiedlichen Namespaces oder auf verschiedenen Computern befinden. Beispielsweise können Sie eine Union-Klasse erstellen, die Instanzen verschiedener zu überwachenden Laufwerke enthält.
+Union-Ansichtsklassen sind nützlich, wenn Sie Instanzen ähnlicher oder identischer Klassen anzeigen möchten, die sich in unterschiedlichen Namespaces oder auf verschiedenen Computern befinden. Sie können z. B. eine Union-Klasse erstellen, die Instanzen von verschiedenen Datenträgerlaufwerken enthält, die überwacht werden sollen.
 
-Sie können die Eigenschaften einer Union-Ansichtsklasse auch auf Eigenschaften stützen, die nicht in allen Quellklasseninstanzen vorhanden sind. Wenn die Quellklasseninstanzen nicht über die gleiche Eigenschaft verfügen, haben die Eigenschaften von Union-Klasseninstanzen den Wert **NULL.** Wenn beispielsweise eine Festplatte über  eine Temperatureigenschaft verfügt, eine andere jedoch nicht, können Sie trotzdem eine Vereinigung zwischen den beiden Laufwerken erstellen.
+Sie können die Eigenschaften einer Union-Ansichtsklasse auch auf Eigenschaften basieren, die nicht in allen Quellklasseninstanzen vorhanden sind. Wenn die Quellklasseninstanzen nicht über die gleiche Eigenschaft verfügen, weisen die Eigenschaften von Union-Klasseninstanzen den Wert **NULL** auf. Wenn beispielsweise ein Festplattenlaufwerk über eine **Temperatureigenschaft** verfügt, die andere jedoch nicht, können Sie trotzdem eine Union zwischen den beiden erstellen.
 
 Im folgenden Verfahren wird beschrieben, wie eine Union-Ansichtsklasse erstellt wird.
 
 **So erstellen Sie eine Union-Ansichtsklasse**
 
-1.  Beginnen Sie die [](qualifiers-specific-to-the-view-provider.md) Klassendefinition mit dem Union-Zeichenfolgenqualifizierer.
+1.  Beginnen Sie ihre [](qualifiers-specific-to-the-view-provider.md) Klassendefinition mit dem Union-Zeichenfolgenqualifizierer.
 
-    Die [**Qualifizierer JoinOn,**](qualifiers-specific-to-the-view-provider.md) **Association** und **Union** schließen sich gegenseitig aus.
+    Die [**JoinOn-,**](qualifiers-specific-to-the-view-provider.md) **Association-** und Union-Qualifizierer schließen sich gegenseitig aus. 
 
-2.  Erstellen Sie die Abfragen, die quellklassen definieren, die in der Ansichtsklasse mit dem [**ViewSources-Qualifizierer**](viewsources-qualifier.md) verwendet werden.
-3.  Definieren Sie die Namen und den Speicherort der Namespaces, in denen sich die Quellklassen befinden, mit dem [**ViewSpaces-Qualifizierer.**](viewspaces-qualifier.md)
-4.  Definieren Sie die Eigenschaften, die den Eigenschaften in den Quellklassen mit dem [**PropertySources-Qualifizierer**](propertysources-qualifier.md) zuordnen.
+2.  Erstellen Sie mit dem ViewSources-Qualifizierer die Abfragen, die Quellklassen definieren, die in der [**Ansichtsklasse**](viewsources-qualifier.md) verwendet werden.
+3.  Definieren Sie mit dem ViewSpaces-Qualifizierer die Namen und den Speicherort der [**Namespaces,**](viewspaces-qualifier.md) in denen sich die Quellklassen befinden.
+4.  Definieren Sie die Eigenschaften, die den Eigenschaften in den Quellklassen zugeordnet sind, mit dem [**PropertySources-Qualifizierer.**](propertysources-qualifier.md)
 
     Bei Bedarf können Sie jede der Eigenschaften mithilfe des [**HiddenDefault-Qualifizierers**](qualifiers-specific-to-the-view-provider.md) als zu einer Quellklasse gehörend markieren.
 
 5.  Definieren Sie die Schlüsseleigenschaften der Quellklassen Ihrer Union-Ansichtsklasse.
 
-    Jede Quellklasse muss über die gleiche Anzahl von Schlüsseleigenschaften verfügen, die mit [**CIMType übereinstimmen.**](swbemproperty-cimtype.md) Außerdem müssen die Schlüssel ihrer Union-Ansichtsklasse alle Quellinstanzen eindeutig identifizieren. In einigen Fällen müssen Sie möglicherweise Systemeigenschaften angeben, um sicherzustellen, dass Instanzen eindeutig sind. Wenn Sie beispielsweise eine Ansicht aus der Vereinigung von zwei identischen Klassen in zwei verschiedenen Namespaces erstellen, können Sie die [**\_ \_ Namespace-Eigenschaft**](--namespace.md) als Schlüssel in die Ansichtsklasse hinzufügen, um zwischen den beiden Instanzen zu unterscheiden. Wenn Sie zwei ähnliche Klassen aus demselben Namespace verwenden, um eine Ansicht zu erstellen, können Sie die **\_ \_ Class-Eigenschaft** verwenden, um zwischen den beiden klassen zu unterscheiden. Benennen Sie alle Systemeigenschaften in der Ansicht um, damit Sie einen Konflikt mit den Systemeigenschaften der Ansichtsklasse vermeiden können.
+    Jede Quellklasse muss über die gleiche Anzahl von Schlüsseleigenschaften verfügen, die mit [**CIMType**](swbemproperty-cimtype.md)übereinstimmen. Außerdem müssen die Schlüssel der Union-Ansichtsklasse alle Quellinstanzen eindeutig identifizieren. In einigen Fällen müssen Sie möglicherweise Systemeigenschaften angeben, um sicherzustellen, dass Instanzen eindeutig sind. Wenn Sie beispielsweise eine Ansicht aus der Vereinigung zweier identischer Klassen in zwei verschiedenen Namespaces erstellen, können Sie die [**\_ \_ Namespace-Eigenschaft**](--namespace.md) als Schlüssel in die Ansichtsklasse einschließen, um zwischen den beiden Instanzen zu unterscheiden. Wenn Sie zwei ähnliche Klassen aus demselben Namespace verwenden, um eine Sicht zu erstellen, können Sie die **\_ \_ Class-Eigenschaft** verwenden, um zwischen den beiden klassen zu unterscheiden. Benennen Sie alle Systemeigenschaften in der Ansicht um, damit Sie einen Konflikt mit den Systemeigenschaften der Ansichtsklasse vermeiden können.
 
-6.  Definieren Sie alle Methoden, die Sie mit dem [**MethodSource-Qualifizierer**](qualifiers-specific-to-the-view-provider.md) verwenden möchten.
+6.  Definieren Sie alle gewünschten Methoden mit dem [**MethodSource-Qualifizierer.**](qualifiers-specific-to-the-view-provider.md)
 
-    Im Gegensatz zu anderen Ansichtsklassen können Sie Methoden erstellen, um eine Unionansicht zu ändern.
+    Im Gegensatz zu anderen Ansichtsklassen können Sie Methoden erstellen, um eine Union-Ansicht zu ändern.
 
 Im folgenden Codebeispiel wird eine Union-Ansichtsklasse beschrieben.
 

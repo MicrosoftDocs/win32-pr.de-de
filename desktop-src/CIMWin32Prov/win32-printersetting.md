@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der Win32-printersetting-Zuordnung bezieht einen Drucker und seine Konfigurationseinstellungen ein.
+description: Die \_ WMI-Zuordnungsklasse Win32 PrinterSetting bezieht sich auf einen Drucker und dessen Konfigurationseinstellungen.
 ms.assetid: 5d0f0724-0583-449b-a6da-336e7c8e526e
 ms.tgt_platform: multiple
 title: Win32_PrinterSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 90a77678e61b755550ebb1818c34ccdc3159a88c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: be39a9f614ab172c75e5ddc857254cdd91ea20d1352a33071cd6fa3627132d71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119759380"
 ---
-# <a name="win32_printersetting-class"></a>Win32- \_ Klasse "printersetting"
+# <a name="win32_printersetting-class"></a>Win32 \_ PrinterSetting-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) der **Win32- \_ printersetting** -Zuordnung bezieht einen Drucker und seine Konfigurationseinstellungen ein.
+Die **WMI-Zuordnungsklasse Win32 \_ PrinterSetting** bezieht sich auf einen Drucker und dessen Konfigurationseinstellungen. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,13 +41,13 @@ class Win32_PrinterSetting : Win32_DeviceSettings
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ printersetting** " verfügt über diese Typen von Membern:
+Die **Win32 \_ PrinterSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ printersetting** " verfügt über diese Eigenschaften.
+Die **Win32 \_ PrinterSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -60,36 +60,36 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Schlüssel**](../wmisdk/key-qualifier.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das die Eigenschaften des logischen Geräts darstellt, auf das die Einstellungen angewendet werden können.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das Eigenschaften des logischen Geräts darstellt, auf das die Einstellungen angewendet werden können.
 
-Diese Eigenschaft wird von [**Win32- \_**](win32-devicesettings.md)Geräte-Debug-Elementen geerbt.
+Diese Eigenschaft wird von [**Win32 \_ DeviceSettings geerbt.**](win32-devicesettings.md)
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Einstellung**
+Datentyp: **\_ CIM-Einstellung**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM- \_ Einstellung")
+Qualifizierer: [**Schlüssel**](../wmisdk/key-qualifier.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| \_ CIM-Einstellung")
 </dt> </dl>
 
-Eine [**CIM- \_ Einstellung**](cim-setting.md) , die Einstellungen darstellt, die auf das logische Gerät angewendet werden können.
+Eine [**\_ CIM-Einstellung,**](cim-setting.md) die Einstellungen darstellt, die auf das logische Gerät angewendet werden können.
 
-Diese Eigenschaft wird von [**Win32- \_**](win32-devicesettings.md)Geräte-Debug-Elementen geerbt.
+Diese Eigenschaft wird von [**Win32 \_ DeviceSettings geerbt.**](win32-devicesettings.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ printersetting** " wird von [**Win32- \_ devicesettings**](win32-devicesettings.md)abgeleitet.
+Die **Win32 \_ PrinterSetting-Klasse** wird von [**Win32 \_ DeviceSettings abgeleitet.**](win32-devicesettings.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Die Win32-Klasse " **\_ printersetting** " wird von [**Win32- \_ devicesettings*
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
@@ -109,10 +109,10 @@ Die Win32-Klasse " **\_ printersetting** " wird von [**Win32- \_ devicesettings*
 
 <dl> <dt>
 
-[**Win32-Geräte-Manager \_**](win32-devicesettings.md)
+[**Win32 \_ DeviceSettings**](win32-devicesettings.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

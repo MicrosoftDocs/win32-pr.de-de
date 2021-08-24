@@ -1,53 +1,53 @@
 ---
 title: IPaper-Methoden
-description: Stellt copaper-Objekte bereit, die hauptsächlich von ihrer nativen iPaper-Schnittstelle gesteuert werden.
+description: Stellt COPaper-Objekte bereit, die hauptsächlich über ihre native IPaper-Schnittstelle gesteuert werden.
 ms.assetid: 3b77a6b3-8ec3-4a91-82cd-1f08d10fbf73
 keywords:
-- IPaper
+- Ipaper
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f84153c9fcec021d9084807d73d46198e3a56482
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 91a45322e35f07a6f136e76ecaad6ae237891a741dfb44a6b5db0702c87bda33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119662720"
 ---
 # <a name="ipaper-methods"></a>IPaper-Methoden
 
-**Stoservice** bietet copaper-Objekte, die in erster Linie von ihrer nativen **iPaper** -Schnittstelle gesteuert werden.
+**StoServe stellt** COPaper-Objekte bereit, die hauptsächlich über ihre native **IPaper-Schnittstelle gesteuert** werden.
 
-In der folgenden Tabelle sind die **iPaper** -Methoden aus iPaper aufgeführt. H im neben geordneten \\ Inc-Verzeichnis.
+In der folgenden Tabelle sind **die IPaper-Methoden** von IPAPER aufgeführt. H im verzeichnis der \\ gleichgeordneten INC.
 
 
 
-| Methode    | BESCHREIBUNG                                                         |
+| Methode    | Beschreibung                                                         |
 |-----------|---------------------------------------------------------------------|
-| Initpaper | Initialisiert ein Papierobjekt und erstellt ein frei Hand Daten Array.                 |
-| Sperre      | Ermöglicht die Client Steuerung des Papiers und sperrt andere Clients.      |
-| Unlock    | Gibt die Client Steuerung des Papiers aus.                           |
-| Laden      | Lädt Papier Inhalt aus der Verbund Datei des Clients und benachrichtigt senken. |
-| Speichern      | Speichert Papier Inhalt in der Verbund Datei des Clients.                      |
-| Inkstart  | Startet das Zeichnen von Farb Freihand auf der Papieroberfläche.                      |
-| Inkdraw   | Legt frei Hand Datenpunkte auf der elektronischen Papieroberfläche ab.               |
-| Inkstopps   | Stoppt das Zeichnen von frei Hand Eingaben auf die Papieroberfläche.                             |
-| Löschen     | Löscht den aktuellen Papier Inhalt und benachrichtigt senken.                 |
-| Größe ändern    | Ändert die Größe der Größe des Zeichnungs Papier Rechtecks und benachrichtigt senken.        |
-| Neu zeichnen    | Zeichnet den Inhalt des Papier Objekts neu und benachrichtigt senken.                |
+| InitPaper | Initialisiert das Papierobjekt und erstellt ein Ink-Datenarray.                 |
+| Sperre      | Ermöglicht die Clientsteuerung des Papiers und sperrt andere Clients.      |
+| Unlock    | Gibt die Clientsteuerung des Papiers auf.                           |
+| Laden      | Lädt Papierinhalte aus der Verbunddatei des Clients und benachrichtigt Senken. |
+| Speichern      | Speichert Papierinhalte in der Verbunddatei des Clients.                      |
+| InkStart  | Startet die Farbzeichnung auf der Papieroberfläche.                      |
+| InkDraw   | Legt Ink-Datenpunkte auf der elektronischen Papieroberfläche ab.               |
+| InkStop   | Beendet das Zeichnen von Ink-Zeichen auf der Papieroberfläche.                             |
+| Löschen     | Löscht den aktuellen Papierinhalt und benachrichtigt Senken.                 |
+| Größe ändern    | Passt die Größe des Zeichnungsdokumentrechtecks an und benachrichtigt Senken.        |
+| Zeichnen    | Der Inhalt des Papierobjekts wird neu gedrammt, und senken werden benachrichtigt.                |
 
 
 
- 
+ 
 
-Relevante Methoden für dieses Codebeispiel für Verbund Dateien sind [**Laden**](ipaper--load.md), [**Speichern**](ipaper--save.md)und [**neu zeichnen**](ipaper--redraw.md).
+Die für dieses Codebeispiel für Verbunddateien von Interesse sind [**Load**](ipaper--load.md), [**Save**](ipaper--save.md)und [**Redraw.**](ipaper--redraw.md)
 
-[**Inkstart**](inkstart-method.md), [**inkdraw**](inkdraw-method.md)und [**inkstopps**](cguipaper-methods.md) sind Methoden, die von Clients verwendet werden, um copaper zum Aufzeichnen von Handzeichen Sequenzen zu Befehlen. Der Client antwortet in der Regel auf eine WM- \_ lbuttondown-Meldung als Anfang einer frei Hand Zeichnungs Sequenz durch Aufrufen von **inkstart** bei copaper. Wenn der Benutzer die Maus oder den Stift zum Zeichnen bewegt, während er die linke Schaltfläche gedrückt hält, antwortet der Client auf wiederholte WM- \_ MouseMove-Meldungen mit entsprechenden Aufrufen von **inkdraw**. Wenn der Benutzer die linke Maustaste loslässt, antwortet der Client auf eine WM- \_ lbuttonup-Meldung mit dem aufzurufenden Ink-Befehl, der das Ende der frei Hand Zeichnungs Sequenz markiert. 
+[**InkStart,**](inkstart-method.md) [**InkDraw**](inkdraw-method.md)und [**InkStop**](cguipaper-methods.md) sind Methoden, die von Clients verwendet werden, um COPaper zum Aufzeichnen von Freischaltsequenzen zu befehlen. Der Client antwortet in der Regel auf eine WM-LBUTTONDOWN-Nachricht als Start einer Ink-Zeichnungssequenz, indem er \_ **InkStart** auf COPaper aufruft. Wenn der Benutzer die Maus oder den Stift bewegt, um zu zeichnen, während er die linke Schaltfläche gedrückt hält, antwortet der Client mit entsprechenden Aufrufen von InkDraw auf wiederholte WM \_ MOUSEMOVE-Nachrichten.  Wenn der Benutzer die linke Maustaste loslässt, antwortet der Client auf eine WM-LBUTTONUP-Nachricht mit einem Aufruf von \_ **InkStop,** der das Ende der Freitext-Zeichnungssequenz markiert.
 
-[**Inkstart**](inkstart-method.md) weist copaper die Anfangsposition der Zeichnungs Sequenz in Client Fenster Koordinaten zu. Außerdem übergibt Sie die aktuell ausgewählte frei Hand Farbe und-Breite. Diese Auswahl wird vom Client beibehalten. Copaper zeichnet Sie nur auf, wenn der **inkstart** -Rückruf erfolgt. [**Inkdraw**](inkdraw-method.md) wird wiederholt aufgerufen, um copaper die Abfolge der Fenster Koordinaten anzugeben, die die Zeichnungs Bewegung der Maus oder des Stifts darstellen. [**Inkbeenden**](cguipaper-methods.md) weist copaper an, das Ende einer Zeichnungs Sequenz zu markieren.
+[**InkStart teilt**](inkstart-method.md) COPaper die Startposition für die Zeichnungssequenz in Clientfensterkoordinaten mit. Außerdem wird die aktuell ausgewählte Farbe und Breite der Ink-Farbe übergibt. Der Client behält diese Auswahl bei. COPaper zeichnet sie lediglich auf, wenn der **InkStart-Aufruf** erfolgt. [**InkDraw**](inkdraw-method.md) wird wiederholt aufgerufen, um COPaper die Folge von Fensterkoordinaten zu mitteilen, die die Zeichnungsbewegung der Maus oder des Stifts darstellen. [**InkStop weist**](cguipaper-methods.md) COPaper an, das Ende einer Zeichnungssequenz zu markieren.
 
- 
+ 
 
- 
+ 
 
 
 

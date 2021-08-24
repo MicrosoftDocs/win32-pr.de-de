@@ -1,9 +1,9 @@
 ---
-title: WM_POINTERROUTEDRELEASED Meldung
-description: Wird an alle Prozesse gesendet (für die prozessübergreifende Verkettung durch addcontentwithcrossprocesschaining konfiguriert und ist zurzeit keine Zeiger Eingabe), wenn eine WM_POINTERUP Nachricht im aktuellen Prozess empfangen wird.
+title: WM_POINTERROUTEDRELEASED-Nachricht
+description: Wird an alle Prozesse gesendet (für prozessübergreifende Verkettung über AddContentWithCrossProcessChaining konfiguriert und verarbeitet derzeit keine Zeigereingaben), die jemals einer bestimmten Zeiger-ID zugeordnet sind, wenn eine WM_POINTERUP-Nachricht im aktuellen Prozess empfangen wird.
 ms.assetid: B031ED80-6F1B-42A7-B4E2-55934E2C456C
 keywords:
-- Eingabe Meldungen und Benachrichtigungen der WM_POINTERROUTEDRELEASED Nachricht
+- 'WM_POINTERROUTEDRELEASED-Nachricht: Eingabemeldungen und Benachrichtigungen'
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 8e24a0df1a2bbdf2b0a9df97057686aa6045eff8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 318134779d94824daef0b05903f45121665892fbcafbeb48589ef150f324d2b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611290"
 ---
-# <a name="wm_pointerroutedreleased-message"></a>WM_POINTERROUTEDRELEASED Meldung
+# <a name="wm_pointerroutedreleased-message"></a>WM_POINTERROUTEDRELEASED-Nachricht
 
-Wird an alle Prozesse gesendet (für die prozessübergreifende Verkettung durch [**addcontentwithcrossprocesschaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining) konfiguriert und ist zurzeit keine Zeiger Eingabe), wenn eine [**WM_POINTERUP**](wm-pointerup.md) Nachricht im aktuellen Prozess empfangen wird.
+Wird an alle Prozesse gesendet (für prozessübergreifende Verkettung über [**AddContentWithCrossProcessChaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining) konfiguriert und verarbeitet derzeit keine Zeigereingaben), die jemals einer bestimmten Zeiger-ID zugeordnet sind, wenn eine [**WM_POINTERUP-Nachricht**](wm-pointerup.md) im aktuellen Prozess empfangen wird.
 
 
 ```C++
@@ -60,9 +60,9 @@ NULL
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

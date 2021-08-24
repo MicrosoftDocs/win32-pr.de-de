@@ -1,43 +1,43 @@
 ---
-description: Die bitflagkonstanten von linecallcomplend \_ beschreiben die Bedingungen, unter denen ein-Vorgang abgeschlossen werden kann.
+description: Die LINECALLCOMPLCOND-Bitflagkonstitionen beschreiben die Bedingungen, unter denen \_ ein Aufruf abgeschlossen werden kann.
 ms.assetid: 0d7b82e8-ce97-410a-a946-30055cd2d558
-title: LINECALLCOMPLCOND_ Konstanten (TAPI. h)
+title: LINECALLCOMPLCOND_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23663b2939761ea8ef1293875bc78d3ed1ccb31d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 515a3def9167624af60f93abfebc47ba56363880bb375dd1f224aceb38bab18c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682002"
 ---
-# <a name="linecallcomplcond_-constants"></a>Linecallcompld- \_ Konstanten
+# <a name="linecallcomplcond_-constants"></a>LINECALLCOMPLCOND-Konstanten \_
 
-Die bitflagkonstanten von **linecallcomplend \_** beschreiben die Bedingungen, unter denen ein-Vorgang abgeschlossen werden kann.
+Die **\_ LINECALLCOMPLCOND-Bitflagkonstitionen** beschreiben die Bedingungen, unter denen ein Aufruf abgeschlossen werden kann.
 
 <dl> <dt>
 
-<span id="LINECALLCOMPLCOND_BUSY"></span><span id="linecallcomplcond_busy"></span>**linecallcompld \_ ausgelastet**
+<span id="LINECALLCOMPLCOND_BUSY"></span><span id="linecallcomplcond_busy"></span>**LINECALLCOMPLCOND \_ BUSY**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Abschluss des Aufrufes unter ausgelasteten Bedingungen.
+Abschluss des Aufrufs unter ausgelasteten Bedingungen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLCOMPLCOND_NOANSWER"></span><span id="linecallcomplcond_noanswer"></span>**linecallcompld \_ noanswer**
+<span id="LINECALLCOMPLCOND_NOANSWER"></span><span id="linecallcomplcond_noanswer"></span>**LINECALLCOMPLCOND \_ NOANSWER**
 </dt> <dd> <dl> <dt>
 
 
 
-Abschluss des Aufrufens unter "Rollback" keine Antwort Bedingungen.
+Abschluss des Aufrufs unter Ringback- und Antwortbedingungen.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
@@ -47,8 +47,8 @@ Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

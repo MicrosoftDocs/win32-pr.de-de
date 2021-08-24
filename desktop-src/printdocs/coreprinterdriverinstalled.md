@@ -1,7 +1,7 @@
 ---
-description: Die coreprinterdriverinstallierte-Funktion meldet, ob ein Kern Druckertreiber mit der angegebenen GUID, dem angegebenen Datum und der angegebenen Version installiert ist.
+description: Die CorePrinterDriverInstalled-Funktion meldet, ob ein Hauptdruckertreiber mit einer angegebenen GUID, einem angegebenen Datum und einer angegebenen Version installiert ist.
 ms.assetid: fb859aca-bb7b-495d-bd38-16ffa084c240
-title: Coreprinterdriverinstallierte-Funktion (winspool. h)
+title: CorePrinterDriverInstalled-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: 2e4f7033e5ca15a892a208621049c2f500873d73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 014b9932046ab6d66b64794bbe042f43a390f9f6a4b6183d36a6338eca434526
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119719770"
 ---
-# <a name="coreprinterdriverinstalled-function"></a>Coreprinterdriverinstallierte-Funktion
+# <a name="coreprinterdriverinstalled-function"></a>CorePrinterDriverInstalled-Funktion
 
-Die **coreprinterdriverinstallierte** -Funktion meldet, ob ein Kern Druckertreiber mit der angegebenen GUID, dem angegebenen Datum und der angegebenen Version installiert ist.
+Die **CorePrinterDriverInstalled-Funktion** meldet, ob ein Hauptdruckertreiber mit einer angegebenen GUID, einem angegebenen Datum und einer angegebenen Version installiert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,58 +46,58 @@ HRESULT CorePrinterDriverInstalled(
 
 <dl> <dt>
 
-*pszserver* \[ in\]
+*pszServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Namen des Drucker Servers angibt. Verwenden Sie für den lokalen Computer **null** .
+Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Namen des Druckerservers angibt. Verwenden **Sie NULL** für den lokalen Computer.
 
 </dd> <dt>
 
-*pszenvironment* \[ in\]
+*pszEnvironment* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die Prozessorarchitektur angibt (z. b. Windows NT x86). Dieser Wert kann **null** sein.
+Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die Prozessorarchitektur angibt (z. B. Windows NT x86). Dies kann **NULL sein.**
 
 </dd> <dt>
 
-*Coredriverguid* \[ in\]
+*CoreDriverGUID* \[ In\]
 </dt> <dd>
 
-Die GUID des Haupt Druckertreibers.
+Die GUID des Hauptdruckertreibers.
 
 </dd> <dt>
 
-*ftdriverdate* \[ in\]
+*ftDriverDate* \[ In\]
 </dt> <dd>
 
-Das Datum des Haupt Druckertreibers.
+Das Datum des Hauptdruckertreibers.
 
 </dd> <dt>
 
-*dwldriverversion* \[ in\]
+*dwlDriverVersion* \[ In\]
 </dt> <dd>
 
-Die Version des Haupt Druckertreibers.
+Die Version des Hauptdruckertreibers.
 
 </dd> <dt>
 
-*pbdriverinstalliert* \[ vorgenommen\]
+*pbDriverInstalled* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf **true** , wenn der Treiber oder eine neuere Version installiert ist, andernfalls **false** .
+Ein Zeiger auf **TRUE,** wenn der Treiber oder eine neuere Version installiert ist, **andernfalls FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich ist, ist der Rückgabewert S \_ OK; andernfalls enthält das **HRESULT** einen Fehlercode.
+Wenn der Vorgang erfolgreich ist, ist der Rückgabewert S \_ OK, andernfalls enthält **das HRESULT** einen Fehlercode.
 
-Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
@@ -107,12 +107,12 @@ Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
-| Unicode- und ANSI-Name<br/>   | **Coreprinterdriverinstalledw** (Unicode) und **coreprinterdriverinstalleda** (ANSI)<br/>           |
+| Unicode- und ANSI-Name<br/>   | **CorePrinterDriverInstalledW** (Unicode) und **CorePrinterDriverInstalledA** (ANSI)<br/>           |
 
 
 

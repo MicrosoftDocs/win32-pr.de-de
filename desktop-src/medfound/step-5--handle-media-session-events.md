@@ -1,40 +1,40 @@
 ---
-description: Dieses Thema ist Schritt 5 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 5 des Tutorials Wiedergeben von Mediendateien mit Media Foundation.
 ms.assetid: db9b896f-6f56-47b1-b129-331c984e0b16
-title: 'Schritt 5: Behandeln von Medien Sitzungs Ereignissen'
+title: 'Schritt 5: Behandeln von Mediensitzungsereignissen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2ea3092189644f800a5cb27d2e8b07744f5d90c
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: be80d8d336cb5f3996c72d806259ae8c74eed464245ac439fdd356f091965bde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106357157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721900"
 ---
-# <a name="step-5-handle-media-session-events"></a>Schritt 5: Behandeln von Medien Sitzungs Ereignissen
+# <a name="step-5-handle-media-session-events"></a>Schritt 5: Behandeln von Mediensitzungsereignissen
 
-Dieses Thema ist Schritt 5 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 5 des Tutorials Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Mediensitzung – Wiedergabebeispiel](media-session-playback-example.md)gezeigt.
 
-Hintergrundinformationen zu diesem Thema finden Sie unter [Medienereignis Generatoren](media-event-generators.md). Dieses Thema enthält folgende Abschnitte:
+Hintergrundinformationen zu diesem Thema finden Sie unter [Media Event Generators](media-event-generators.md). Dieses Thema enthält folgende Abschnitte:
 
--   [Sitzungs Ereignisse werden erhalten.](#getting-session-events)
--   [Mesessiontopologystatus](#mesessiontopologystatus)
--   [Meendof Presentation](#meendofpresentation)
--   [Menewpresentation](#menewpresentation)
+-   [Abrufen von Sitzungsereignissen](#getting-session-events)
+-   [MESessionTopologyStatus](#mesessiontopologystatus)
+-   [MEEndOfPresentation](#meendofpresentation)
+-   [MENewPresentation](#menewpresentation)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="getting-session-events"></a>Sitzungs Ereignisse werden erhalten.
+## <a name="getting-session-events"></a>Abrufen von Sitzungsereignissen
 
-Um Ereignisse aus der Medien Sitzung zu erhalten, ruft das cplayer-Objekt die [**imfmediaeventgenerator:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) -Methode auf, wie in [Schritt 4: Erstellen der Medien Sitzung](step-4--create-the-media-session.md)gezeigt. Diese Methode ist asynchron und bedeutet, dass Sie sofort an den Aufrufer zurückgegeben wird. Wenn das nächste Sitzungs Ereignis auftritt, ruft die Medien Sitzung die [**imfasynccallback:: Aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) -Methode des cplayer-Objekts auf.
+Um Ereignisse aus der Mediensitzung abzurufen, ruft das CPlayer-Objekt die [**METHODE SFCMediaEventGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) auf, wie in [Schritt 4: Erstellen der Mediensitzung](step-4--create-the-media-session.md)gezeigt. Diese Methode ist asynchron, d. h. sie kehrt sofort zum Aufrufer zurück. Wenn das nächste Sitzungsereignis auftritt, ruft die Mediensitzung die [**METHODE AWAITAsyncCallback::Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) des CPlayer-Objekts auf.
 
-Beachten Sie, dass der [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) von einem Arbeits Thread, nicht vom Anwendungs Thread aufgerufen wird. Daher **muss die** Implementierung des Aufrufs multithreadsicher sein. Ein Ansatz besteht darin, die Elementdaten mit einem kritischen Abschnitt zu schützen. Die- `CPlayer` Klasse zeigt jedoch einen alternativen Ansatz:
+Es ist wichtig zu beachten, dass [**Invoke**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) von einem Arbeitsthread aufgerufen wird, nicht vom Anwendungsthread. Daher muss die Implementierung von **Invoke** multithreadsicher sein. Ein Ansatz wäre, die Memberdaten mit einem kritischen Abschnitt zu schützen. Die -Klasse zeigt jedoch `CPlayer` einen alternativen Ansatz:
 
-1.  In der [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode stellt das cplayer-Objekt eine **WM \_ App \_ Player- \_ Ereignis** Meldung an die Anwendung. Der Message-Parameter ist ein [**IMF Media Event**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent) -Zeiger.
-2.  Die Anwendung empfängt die **WM \_ App \_ Player- \_ Ereignis** Meldung.
-3.  Die Anwendung ruft die- `CPlayer::HandleEvent` Methode auf und übergibt den [**IMF Media Event**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent) -Zeiger.
-4.  Die- `HandleEvent` Methode antwortet auf das-Ereignis.
+1.  In der [**Invoke-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) sendet das CPlayer-Objekt eine **WM APP PLAYER \_ \_ \_ EVENT-Nachricht** an die Anwendung. Der Message-Parameter ist ein [**POINTERMediaEvent-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
+2.  Die Anwendung empfängt die **WM \_ APP PLAYER \_ \_ EVENT-Nachricht.**
+3.  Die Anwendung ruft die -Methode auf `CPlayer::HandleEvent` und übergibt den [**POINTERMediaEvent-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent)
+4.  Die `HandleEvent` -Methode antwortet auf das -Ereignis.
 
-Der folgende Code zeigt die Methode zum [**aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) :
+Der folgende Code zeigt die [**Invoke-Methode:**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke)
 
 
 ```C++
@@ -101,15 +101,15 @@ done:
 
 
 
-Die [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode führt die folgenden Schritte aus:
+Die [**Invoke-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) führt die folgenden Schritte aus:
 
-1.  Zum Abrufen des Ereignisses muss [**imfmediaeventgenerator:: endgetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-endgetevent) aufgerufen werden. Diese Methode gibt einen Zeiger auf die [**imfmediaevent**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent) -Schnittstelle zurück.
-2.  Wenn Sie [**imfmediaevent:: GetType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype) aufrufen, um den Ereignis Code abzurufen.
-3.  Wenn der Ereignis Code [mesessionclosed](mesessionclosed.md)ist, wird SetEvent aufgerufen, um *das \_ m hcloseevent* -Ereignis festzulegen. Der Grund für diesen Schritt wird in [Schritt 7: Herunterfahren der Medien Sitzung](step-7--shut-down-the-media-session.md)und auch in den Code Kommentaren erläutert.
-4.  Für alle anderen Ereignis Codes müssen Sie [**imfmediaeventgenerator:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) aufrufen, um das nächste Ereignis anzufordern.
-5.  Hiermit wird eine **WM \_ App Player- \_ \_ Ereignis** Meldung im Fenster gepostet.
+1.  Rufen Sie [**DENMEDIAEventGenerator::EndGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-endgetevent) auf, um das Ereignis abzurufen. Diese Methode gibt einen Zeiger auf die [**INTERFACESMediaEvent-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaevent) zurück.
+2.  Rufen Sie [**ÜBERMEDIAEVENT::GetType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype) auf, um den Ereigniscode abzurufen.
+3.  Wenn der Ereigniscode [MESessionClosed](mesessionclosed.md)ist, rufen Sie SetEvent auf, um das *m \_ hCloseEvent-Ereignis* festzulegen. Der Grund für diesen Schritt wird in [Schritt 7: Herunterfahren der Mediensitzung](step-7--shut-down-the-media-session.md)und auch in den Codekommentaren erläutert.
+4.  Rufen Sie für alle anderen Ereigniscodes [**DIE AKTION ÜBERMEDIAEVENTGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) auf, um das nächste Ereignis anzufordern.
+5.  Posten Sie eine **WM \_ APP \_ \_ PLAYER-EREIGNISmeldung** im Fenster.
 
-Der folgende Code zeigt die Methode "Lenker Ereignis", die aufgerufen wird, wenn die Anwendung die Ereignismeldung " **WM \_ App \_ Player \_** " empfängt:
+Der folgende Code zeigt die HandleEvent-Methode, die aufgerufen wird, wenn die Anwendung die **WM \_ APP PLAYER \_ \_ EVENT-Nachricht** empfängt:
 
 
 ```C++
@@ -173,11 +173,11 @@ done:
 
 
 
-Diese Methode ruft [**imfmediaevent:: GetType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype) auf, um den Ereignistyp und [**imfmediaevent:: GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) zu erhalten, um den Erfolg des Fehlercodes zu erhalten, der dem Ereignis zugeordnet ist. Die nächste Aktion, die ausgeführt wird, hängt vom Ereignis Code ab.
+Diese Methode ruft [**DASMEDIAEvent::GetType**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-gettype) auf, um den Ereignistyp abzurufen, und [**DENMEDIAEvent::GetStatus,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) um den Erfolg des Fehlercodes abzurufen, der dem Ereignis zugeordnet ist. Die nächste ausgeführte Aktion hängt vom Ereigniscode ab.
 
-## <a name="mesessiontopologystatus"></a>Mesessiontopologystatus
+## <a name="mesessiontopologystatus"></a>MESessionTopologyStatus
 
-Das Ereignis [mesessiontopologystatus](mesessiontopologystatus.md) signalisiert eine Änderung des Status der Topologie. Das [**MF- \_ Ereignis \_ topologiestatusattribut \_**](mf-event-topology-status-attribute.md) des Ereignis Objekts enthält den Status. In diesem Beispiel ist der einzige relevante Wert " **MF \_ topostatus \_ Ready**", was darauf hinweist, dass die Wiedergabe bereit ist.
+Das [MESessionTopologyStatus-Ereignis](mesessiontopologystatus.md) signalisiert eine Änderung des Status der Topologie. Das [**MF \_ EVENT \_ TOPOLOGY \_ STATUS-Attribut**](mf-event-topology-status-attribute.md) des Ereignisobjekts enthält den Status. In diesem Beispiel ist MF **\_ TOPOSTATUS \_ READY** der einzige interessante Wert, der angibt, dass die Wiedergabe für den Start bereit ist.
 
 
 ```C++
@@ -204,13 +204,13 @@ HRESULT CPlayer::OnTopologyStatus(IMFMediaEvent *pEvent)
 
 
 
-Die- `CPlayer::StartPlayback` Methode wird in [Schritt 6: Wiedergabe von Steuer](step-6--control-playback.md)Elementen angezeigt.
+Die `CPlayer::StartPlayback` -Methode wird in [Schritt 6: Steuern der Wiedergabe](step-6--control-playback.md)gezeigt.
 
-In diesem Beispiel wird auch [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) aufgerufen, um die [**imfvideodisplaycontrol**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol) -Schnittstelle vom [erweiterten Videorenderer](enhanced-video-renderer.md) (EVR) zu erhalten. Diese Schnittstelle ist erforderlich, um das Neuzeichnen und die Größe des Videofensters zu verarbeiten, das auch in [Schritt 6: Wiedergabe von Steuer](step-6--control-playback.md)Elementen angezeigt wird.
+In diesem Beispiel wird auch [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) aufgerufen, um die [**SCHNITTSTELLE "THICKNESSVideoDisplayControl"**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol) vom [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR) abzurufen. Diese Schnittstelle ist erforderlich, um das Neumalieren und Ändern der Größe des Videofensters zu verarbeiten. Dies wird auch in [Schritt 6: Steuern der Wiedergabe](step-6--control-playback.md)gezeigt.
 
-## <a name="meendofpresentation"></a>Meendof Presentation
+## <a name="meendofpresentation"></a>MEEndOfPresentation
 
-Das [meendof Presentation](meendofpresentation.md) -Ereignis signalisiert, dass die Wiedergabe das Ende der Datei erreicht hat. Die Medien Sitzung wechselt automatisch wieder in den Zustand "beendet".
+Das [MEEndOfPresentation-Ereignis](meendofpresentation.md) signalisiert, dass die Wiedergabe das Ende der Datei erreicht hat. Die Mediensitzung wechselt automatisch wieder in den Zustand "Beendet".
 
 
 ```C++
@@ -225,11 +225,11 @@ HRESULT CPlayer::OnPresentationEnded(IMFMediaEvent *pEvent)
 
 
 
-## <a name="menewpresentation"></a>Menewpresentation
+## <a name="menewpresentation"></a>MENewPresentation
 
-Das [menewpresentation](menewpresentation.md) -Ereignis signalisiert den Anfang einer neuen Präsentation. Bei den Ereignisdaten handelt es sich um einen [**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) -Zeiger für die neue Präsentation.
+Das [MENewPresentation-Ereignis](menewpresentation.md) signalisiert den Beginn einer neuen Präsentation. Die Ereignisdaten sind ein [**POINTERPresentationDescriptor-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) für die neue Präsentation.
 
-In vielen Fällen wird dieses Ereignis überhaupt nicht empfangen. Verwenden Sie in diesem Fall den [**imfpresentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) -Zeiger zum Erstellen einer neuen Wiedergabe Topologie, wie in [Schritt 3: Öffnen einer Mediendatei](step-3--open-a-media-file.md)gezeigt. Stellen Sie dann die neue Topologie in die Medien Sitzung.
+In vielen Fällen erhalten Sie dieses Ereignis überhaupt nicht. Wenn Sie dies tun, verwenden Sie den [**POINTERPresentationDescriptor-Zeiger,**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor) um eine neue Wiedergabetopologie zu erstellen, wie in [Schritt 3: Öffnen einer Mediendatei](step-3--open-a-media-file.md)gezeigt. Anschließend wird die neue Topologie in der Mediensitzung in die Warteschlange aufgenommen.
 
 
 ```C++
@@ -275,7 +275,7 @@ done:
 
 
 
-Nächstes: [Schritt 6: Wiedergabe von Steuer](step-6--control-playback.md) Elementen
+Weiter: [Schritt 6: Steuern der Wiedergabe](step-6--control-playback.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

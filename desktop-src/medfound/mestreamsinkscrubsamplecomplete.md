@@ -1,33 +1,33 @@
 ---
-description: Wird durch eine streamsenke ausgelöst, wenn eine Bereinigungs Anforderung abgeschlossen ist.
+description: Wird von einer Streamsenke ausgelöst, wenn eine Bereinigungsanforderung abgeschlossen wird.
 ms.assetid: 451c7e09-868e-4c05-b970-d222b97223f2
-title: Mestreamsinkscrubsamplecomplete-Ereignis (mfobjects. h)
+title: MEStreamSinkScrubSampleComplete-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81f29d478635d5a9ba7e7c5356c49ebd8da216f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2ae6e0ea7a90db33fe21d39017ac99908ace86bb263e0ad6e2047f70e70f5de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715170"
 ---
-# <a name="mestreamsinkscrubsamplecomplete-event"></a>Mestreamsinkscrubsamplecomplete-Ereignis
+# <a name="mestreamsinkscrubsamplecomplete-event"></a>MEStreamSinkScrubSampleComplete-Ereignis
 
-Wird durch eine streamsenke ausgelöst, wenn eine Bereinigungs Anforderung abgeschlossen ist.
+Wird von einer Streamsenke ausgelöst, wenn eine Bereinigungsanforderung abgeschlossen wird.
 
-Ein Scrubbing tritt auf, wenn die Wiedergabe Rate 0 (null) ist und die Präsentationszeit mit einer angegebenen sreiben-Zeit gestartet wird. Wenn eine Medien Senke Scrubbing unterstützt, löst jeder Datenstrom auf der Senke dieses Ereignis aus, wenn die [**imfclockstaatink:: onclockstart**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclockstart) -Methode aufgerufen wird, während die Wiedergabe Rate 0 (null) ist.
+Die Bereinigung erfolgt, wenn die Wiedergaberate 0 (null) ist und die Präsentationsuhr mit einer angegebenen Srubbingzeit gestartet wird. Wenn eine Mediensenke die Bereinigung unterstützt, löst jeder Stream in der Senke dieses Ereignis aus, wenn die [**Bereinigungsmethode VONClockStateSink::OnClockStart**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclockstart) aufgerufen wird, während die Wiedergaberate 0 (null) ist.
 
-Wenn der Stream während des Bereinigungs Vorgang Daten rendert, sendet er das Ereignis, sobald die Daten gerendert werden. Wenn der Stream keine Daten gerendet, sendet er das Ereignis sofort nach dem Aufruf von [**onclockstart**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclockstart) .
+Wenn der Stream Daten während der Bereinigung rendert, sendet er das Ereignis, sobald die Daten gerendert werden. Wenn der Stream keine Daten rendert, sendet er das Ereignis sofort nach dem Aufruf von [**OnClockStart.**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclockstart)
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -37,9 +37,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                              | BESCHREIBUNG                                                                                                                                                   |
+| attribute                                                                              | Beschreibung                                                                                                                                                   |
 |----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_ \_ scrubsample-Zeit für MF-Ereignis \_**](mf-event-scrubsample-time-attribute.md)<br/> | Präsentationszeit, für die Daten gerendert wurden. Wenn die Medien Senke während des Bereinigungs Vorgang keine Daten enthält, wird dieses Attribut nicht festgelegt.<br/> <br/> |
+| [**MF \_ EVENT \_ SCRUBSAMPLE \_ TIME**](mf-event-scrubsample-time-attribute.md)<br/> | Präsentationszeit, für die Daten gerendert wurden. Wenn die Mediensenke während der Bereinigung keine Daten rendert, wird dieses Attribut nicht festgelegt.<br/> <br/> |
 
 
 
@@ -49,9 +49,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -59,13 +59,13 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> <dt>
 
-[Mesessionscrubsamplecomplete](mesessionscrubsamplecomplete.md)
+[MESessionScrubSampleComplete](mesessionscrubsamplecomplete.md)
 </dt> </dl>
 
  

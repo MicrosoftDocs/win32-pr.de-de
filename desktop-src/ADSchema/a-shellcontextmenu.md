@@ -1,11 +1,11 @@
 ---
-title: Shell-Kontextmenü-Attribut
-description: Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
+title: Shell-Context-Menu-Attribut
+description: Die Bestellnummer und GUID des Kontextmenüs für dieses Objekt.
 ms.assetid: eea0d8d2-e676-4434-b589-aebc7cff3655
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Shell-Kontextmenü-Attributs
-- AD-Schema des shellcontextmenu-Attributs
+- SHELL-Kontextmenüattribut AD-Schema
+- shellContextMenu-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ef12abe3b35fffdbf3dbe4bdaf809340b5ba242
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 115fa5905f543fa0e9ec4dc4b5c4a97670b4ee15132712e43d0a85c81551b85e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802320"
 ---
-# <a name="shell-context-menu-attribute"></a>Shell-Kontextmenü-Attribut
+# <a name="shell-context-menu-attribute"></a>Shell-Context-Menu-Attribut
 
-Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
+Die Bestellnummer und GUID des Kontextmenüs für dieses Objekt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Shell-Kontextmenü                          |
-| LDAP-Display-Name | shellcontextmenu                            |
+| Ldap-Anzeigename | shellContextMenu                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Schema Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.615                      |
-| System-ID-GUID    | 553b0bc-00c04\d0-b0bc c04bd8dca6        |
+| System-ID-GUID    | 553fd039-f32e-11d0-b0bc-00c04fd8dca6        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Ist einwertig       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Anzeigespezifizierer**](c-displayspecifier.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die Bestellnummer und die GUID des Kontextmenüs für dieses Objekt.
 | Link-ID                | \-                                                         |
 | MAPI-Id                | \-                                                         |
 | System-Only            | False                                                      |
-| Ist-einwertig       | False                                                      |
+| Is-Single-Valued       | False                                                      |
 | Ist indiziert             | False                                                      |
 | Im globalen Katalog      | False                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                               |
 | Range-Lower            | \-                                                         |
 | Range-Upper            | \-                                                         |
 | Search-Flags           | 0x00000000                                                 |
 | System-Flags           | 0x00000010                                                 |
-| In verwendete Klassen        | [**Anzeige-Spezifizierer**](c-displayspecifier.md)<br/> |
+| In verwendete Klassen        | [**Display-Specifier**](c-displayspecifier.md)<br/> |
 
 
 

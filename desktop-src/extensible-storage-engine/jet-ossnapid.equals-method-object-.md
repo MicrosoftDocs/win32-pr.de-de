@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OSSNAPID. Gleichheits Methode (Objekt)'
-title: JET_OSSNAPID. Gleichheits Methode (Objekt)
+description: 'Weitere Informationen finden Sie unter: JET_OSSNAPID. Equals-Methode (Objekt)'
+title: JET_OSSNAPID. Equals-Methode (Objekt)
 TOCTitle: Equals method (Object)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_OSSNAPID.Equals(System.Object)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_ossnapid.equals(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ffd82ce1b803dfeaf7ad2bcfec2eea1cd9679043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0656d9a2fe5e89b6c9ec58f99137b432111f3f594b487f0e026a28ac5d4b7147
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720260"
 ---
-# <a name="jet_ossnapidequals-method-object"></a>JET_OSSNAPID. Gleichheits Methode (Objekt)
+# <a name="jet_ossnapidequals-method-object"></a>JET_OSSNAPID. Equals-Methode (Objekt)
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,23 +58,23 @@ public override bool Equals(
 #### <a name="parameters"></a>Parameter
 
   - obj  
-    Type: [System. Object](/dotnet/api/system.object)  
+    Typ: [System.Object](/dotnet/api/system.object)  
     
     Ein Objekt, das mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_OSSNAPID Struktur](./jet-ossnapid-structure.md)
+[JET_OSSNAPID-Struktur](./jet-ossnapid-structure.md)
 
-[Mitglieder JET_OSSNAPID](./jet-ossnapid-members.md)
+[JET_OSSNAPID Member](./jet-ossnapid-members.md)
 
-[Gleichheits Überladung](./jet-ossnapid.equals-method.md)
+[Equals-Überladung](./jet-ossnapid.equals-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

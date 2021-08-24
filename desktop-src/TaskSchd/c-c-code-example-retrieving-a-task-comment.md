@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel Abrufen eines Aufgaben Kommentars
-description: In diesem Beispiel wird die Kommentar Zeichenfolge einer bekannten Aufgabe abgerufen und die Kommentar Zeichenfolge auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: 'C/C++-Codebeispiel: Abrufen eines Aufgabenkommentars'
+description: In diesem Beispiel wird die Kommentarzeichenfolge einer bekannten Aufgabe abgerufen und die Kommentarzeichenfolge auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: f6f558d8-2e34-4314-9583-f815921aac7e
 keywords:
-- Abrufen von Aufgaben Kommentaren Taskplaner
-- Abrufen von Arbeits Element Eigenschaften Taskplaner, Aufgaben Kommentar
+- Abrufen von Aufgabenkommentaren Taskplaner
+- Abrufen von Arbeitselementeigenschaften Taskplaner , Aufgabenkommentar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b89ada9b135e42e25a81baf9bee60910b4e1a483
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 77aa94b5832d8f0a109ad07f1d8cbdd799dd81ac7ab25c4ed202d87f16ae468c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738890"
 ---
-# <a name="cc-code-example-retrieving-a-task-comment"></a>C/C++-Code Beispiel: Abrufen eines Aufgaben Kommentars
+# <a name="cc-code-example-retrieving-a-task-comment"></a>C/C++-Codebeispiel: Abrufen eines Aufgabenkommentars
 
-In diesem Beispiel wird die Kommentar Zeichenfolge einer bekannten Aufgabe abgerufen und die Kommentar Zeichenfolge auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird die Kommentarzeichenfolge einer bekannten Aufgabe abgerufen und die Kommentarzeichenfolge auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -119,12 +119,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

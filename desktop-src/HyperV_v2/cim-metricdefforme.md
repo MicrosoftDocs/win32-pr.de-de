@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der ein CIM \_ basemetricdefinition-Objekt Metriken für ein verwaltetes Element definiert.
+description: Stellt eine Zuordnung dar, bei der ein CIM \_ BaseMetricDefinition-Objekt Metriken für ein verwaltetes Element definiert.
 ms.assetid: 10905038-fc23-4018-bae8-f336e4f001e7
 title: CIM_MetricDefForME-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d0bcc115bdb5d501567223a307dd30e62f624214
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06af1d23e640988caf90c54f519670ddace9b920d31c8e97cdc087132faaee26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695310"
 ---
-# <a name="cim_metricdefforme-class"></a>CIM- \_ metricdefforme-Klasse
+# <a name="cim_metricdefforme-class"></a>\_CIM-Klasse "MetricDefForME"
 
-Stellt eine Zuordnung dar, in der ein [**CIM \_ basemetricdefinition**](cim-basemetricdefinition.md) -Objekt Metriken für ein verwaltetes Element definiert.
+Stellt eine Zuordnung dar, bei der ein [**CIM \_ BaseMetricDefinition-Objekt**](cim-basemetricdefinition.md) Metriken für ein verwaltetes Element definiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,52 +41,52 @@ class CIM_MetricDefForME : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ metricdefforme** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse MetricDefForME** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ metricdefforme** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse MetricDefForME** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Das verwaltete Element, das der metrikdefinition zugeordnet ist.
+Das verwaltete Element, das der Metrikdefinition zugeordnet ist.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ basemetricdefinition**
+Datentyp: **CIM \_ BaseMetricDefinition**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Die metrikdefinition, die dem verwalteten Element zugeordnet ist.
+Die Metrikdefinition, die dem verwalteten Element zugeordnet ist.
 
 </dd> <dt>
 
-**Metriccollectionaktivierte**
+**MetricCollectionEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -119,14 +119,14 @@ Gibt an, ob die Metrik für das verwaltete Element erfasst wird.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -142,7 +142,7 @@ Gibt an, ob die Metrik für das verwaltete Element erfasst wird.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -151,7 +151,7 @@ Gibt an, ob die Metrik für das verwaltete Element erfasst wird.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

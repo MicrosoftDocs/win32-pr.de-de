@@ -1,8 +1,8 @@
 ---
-description: SetDNSServerSearchOrder &\# 32; Die WMI-Klassenmethode verwendet ein Array von Zeichen folgen Elementen, um die Server Such Reihenfolge festzulegen.
+description: SetDNSServerSearchOrder &\# 32; Die WMI-Klassenmethode verwendet ein Array von Zeichenfolgenelementen zum Festlegen der Serversuch reihenfolge.
 ms.assetid: fce688fa-7264-4965-8e1c-138160e03a7e
 ms.tgt_platform: multiple
-title: SetDNSServerSearchOrder-Methode der Win32_NetworkAdapterConfiguration-Klasse
+title: SetDNSServerSearchOrder-Methode der Win32_NetworkAdapterConfiguration Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2bfe731ea1d89e8e0ad702bfa229a61fba30dfc7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2ae53996e2f8199d552909a186ab17e6b7ec89857c9be24dc4d8d4bfe583cfea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119759800"
 ---
-# <a name="setdnsserversearchorder-method-of-the-win32_networkadapterconfiguration-class"></a>SetDNSServerSearchOrder-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="setdnsserversearchorder-method-of-the-win32_networkadapterconfiguration-class"></a>SetDNSServerSearchOrder-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **SetDNSServerSearchOrder** verwendet ein Array von Zeichen folgen Elementen, um die Server Such Reihenfolge festzulegen.
+Die **WMI-Klassenmethode SetDNSServerSearchOrder** [](/windows/desktop/WmiSdk/retrieving-a-class) verwendet ein Array von Zeichenfolgenelementen, um die Serversuch reihenfolge fest zu legen.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ uint32 SetDNSServerSearchOrder(
 
 <dl> <dt>
 
-*DNSServerSearchOrder* \[ in\]
+*DNSServerSearchOrder* \[ In\]
 </dt> <dd>
 
-Liste der Server-IP-Adressen für die Abfrage von DNS-Servern.
+Liste der Server-IP-Adressen, die für DNS-Server abfragen werden.
 
 Beispiel: 130.215.24.1 oder 157.54.164.1
 
@@ -53,7 +53,7 @@ Beispiel: 130.215.24.1 oder 157.54.164.1
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -63,22 +63,22 @@ Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn ke
 **Erfolgreicher Abschluss, Neustart erforderlich** (1)
 </dt> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt** (64).
+**Methode wird auf dieser Plattform nicht unterstützt** (64)
 </dt> <dt>
 
-**Unbekannter Fehler** (65).
+**Unbekannter Fehler** (65)
 </dt> <dt>
 
-**Ungültige Subnetzmaske** (66).
+**Ungültige Subnetzmaske** (66)
 </dt> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde** (67).
+**Fehler beim Verarbeiten einer instanz, die zurückgegeben wurde** (67)
 </dt> <dt>
 
 **Ungültiger Eingabeparameter** (68)
 </dt> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben** (69).
+**Mehr als 5 Gateways angegeben** (69)
 </dt> <dt>
 
 **Ungültige IP-Adresse** (70)
@@ -87,102 +87,102 @@ Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn ke
 **Ungültige Gateway-IP-Adresse** (71)
 </dt> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen** (72).
+**Fehler beim Zugreifen auf die Registrierung für die angeforderten Informationen** (72)
 </dt> <dt>
 
-**Ungültiger Domänen Name** (73).
+**Ungültiger Domänenname** (73)
 </dt> <dt>
 
-**Ungültiger Hostname** (74).
+**Ungültiger Hostname** (74)
 </dt> <dt>
 
 **Kein primärer/sekundärer WINS-Server definiert** (75)
 </dt> <dt>
 
-**Ungültige Datei** (76)
+**Ungültige** Datei (76)
 </dt> <dt>
 
-**Ungültiger Systempfad** (77).
+**Ungültiger Systempfad** (77)
 </dt> <dt>
 
-Fehler beim **Kopieren der Datei** (78).
+**Fehler beim Kopieren der** Datei (78)
 </dt> <dt>
 
-**Ungültiger Sicherheitsparameter** (79).
+**Ungültiger Sicherheitsparameter** (79)
 </dt> <dt>
 
-Der **TCP/IP-Dienst kann nicht konfiguriert** werden (80).
+**TCP/IP-Dienst kann nicht konfiguriert werden** (80)
 </dt> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert** werden (81).
+**DHCP-Dienst kann nicht konfiguriert werden** (81)
 </dt> <dt>
 
-**DHCP-Lease kann nicht erneuert** werden (82).
+**DHCP-Lease kann nicht erneuert werden** (82)
 </dt> <dt>
 
-**DHCP-Lease kann nicht frei** gegeben werden (83).
+**DHCP-Lease kann nicht veröffentlicht werden** (83)
 </dt> <dt>
 
-Die **IP ist auf dem Adapter nicht aktiviert** (84).
+**IP-Adresse auf Adapter nicht aktiviert** (84)
 </dt> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert** (85).
+**IPX auf Adapter nicht aktiviert** (85)
 </dt> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer** (86)
+**Frame-/Netzwerknummer-Begrenzungsfehler** (86)
 </dt> <dt>
 
-**Ungültiger Frame-Typ** (87).
+**Ungültiger Frametyp** (87)
 </dt> <dt>
 
-**Ungültige Netzwerk Nummer** (88).
+**Ungültige Netzwerknummer** (88)
 </dt> <dt>
 
-**Doppelte Netzwerk Nummer** (89)
+**Doppelte Netzwerknummer** (89)
 </dt> <dt>
 
-**Parameter außerhalb des** gültigen Bereichs (90)
+**Parameter out-of-bounds** (90)
 </dt> <dt>
 
 **Zugriff verweigert** (91)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (92)
+**Nicht genügend Arbeitsspeicher** (92)
 </dt> <dt>
 
 **Bereits vorhanden** (93)
 </dt> <dt>
 
-Der **Pfad, die Datei oder das Objekt wurde nicht gefunden** (94).
+**Pfad, Datei oder Objekt nicht gefunden** (94)
 </dt> <dt>
 
-Der **Dienst kann nicht benachrichtigt** werden (95).
+**Dienst kann nicht benachrichtigt werden** (95)
 </dt> <dt>
 
-Der **DNS-Dienst kann nicht benachrichtigt** werden (96).
+**Dns-Dienst kann nicht benachrichtigt werden** (96)
 </dt> <dt>
 
 **Schnittstelle nicht konfigurierbar** (97)
 </dt> <dt>
 
-**Nicht alle DHCP-Leases konnten freigegeben/erneuert werden** (98).
+**Nicht alle DHCP-Leases konnten freigegeben/erneuert werden** (98)
 </dt> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert** (100).
+**DHCP auf Adapter nicht aktiviert** (100)
 </dt> <dt>
 
-**Sonstige** (101 4294967295)
+**Andere** (101 4294967295)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dabei handelt es sich um einen instanzabhängigen Methoden Aufrufwert, der pro Adapter angewendet wird. Nachdem statische DNS-Server angegeben wurden, um mit der Verwendung des Dynamic Host Configuration-Protokolls (DHCP) anstelle statischer DNS-Server zu beginnen, können Sie die Methode ohne Angabe von "in"-Parametern abrufen.
+Dies ist ein instanzabhängiger Methodenaufruf, der pro Adapter gilt. Nachdem statische DNS-Server angegeben wurden, um mit der Verwendung des Dynamic Host Configuration-Protokolls (DHCP) anstelle von statischen DNS-Servern zu beginnen, können Sie die -Methode aufrufen, ohne "in"-Parameter anzugeben.
 
 ## <a name="examples"></a>Beispiele
 
-Die [Such Reihenfolge der DNS-Server Suche für mehrere Computer in einer Organisationseinheit](https://Gallery.TechNet.Microsoft.Com/Set-DNS-Server-Search-6a3e3ede) "VBScript" in der TechNet Gallery Ruft die DNS-Server Such Reihenfolge für mehrere Computer ab, die einer Organisationseinheit angehören, oder legt diese fest
+Im VbScript-Beispiel Set [DNS Server Search Order for Multiple Computers in an Organizational Unit](https://Gallery.TechNet.Microsoft.Com/Set-DNS-Server-Search-6a3e3ede) (DNS-Serversuch reihenfolge für mehrere Computer in einer Organisationseinheit) im TechNet-Katalog wird die DNS-Serversuch reihenfolge für mehrere Computer abgerufen oder festgelegt, die zu einer Organisationseinheit gehören.
 
-Das Beispiel [Ändern der DNS-Server-Such Reihenfolge für ein Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/7824348c-5a92-42cb-b4e9-ef2187702e02) VBScript konfiguriert einen TCP/IP-gebundenen Netzwerkadapter für die Verwendung von zwei DNS-Servern.
+Im VbScript-Beispiel Ändern der [DNS-Serversuch](https://Gallery.TechNet.Microsoft.Com/7824348c-5a92-42cb-b4e9-ef2187702e02) reihenfolge für einen Netzwerkadapter wird ein TCP/IP-gebundener Netzwerkadapter für die Verwendung von zwei DNS-Servern konfiguriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -192,8 +192,8 @@ Das Beispiel [Ändern der DNS-Server-Such Reihenfolge für ein Netzwerkadapter](
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -202,19 +202,19 @@ Das Beispiel [Ändern der DNS-Server-Such Reihenfolge für ein Netzwerkadapter](
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

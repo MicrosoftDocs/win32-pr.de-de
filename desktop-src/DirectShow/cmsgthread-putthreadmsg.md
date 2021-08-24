@@ -1,7 +1,7 @@
 ---
-description: Fügt eine Anforderung zur Ausführung durch den Arbeits Thread in die Warteschlange ein.
+description: Reiht eine Anforderung zur Ausführung durch den Arbeitsthread in die Warteschlange ein.
 ms.assetid: a854f962-143d-4776-bf98-119d003867df
-title: Cmsgthread. putthreadmsg-Methode (msgthrd. h)
+title: CMsgThread.PutThreadMsg-Methode (Msgthrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3445d9af4ec9c7abe6a4401e219fc305e254d555
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7eefa95c4fd6ab19c895b4d1d47dba3a19302023985a4631708c3cf7ccc10d06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119585640"
 ---
-# <a name="cmsgthreadputthreadmsg-method"></a>Cmsgthread. putthreadmsg-Methode
+# <a name="cmsgthreadputthreadmsg-method"></a>CMsgThread.PutThreadMsg-Methode
 
-Fügt eine Anforderung zur Ausführung durch den Arbeits Thread in die Warteschlange ein.
+Reiht eine Anforderung zur Ausführung durch den Arbeitsthread in die Warteschlange ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ void PutThreadMsg(
 
 <dl> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Anforderungs Code.
+Anforderungscode.
 
 </dd> <dt>
 
-*dwmsgflags* 
+*dwMsgFlags* 
 </dt> <dd>
 
-Optionaler Flags-Parameter.
+Optionaler Flagparameter.
 
 </dd> <dt>
 
-*lpmsgparam* 
+*lpMsgParam* 
 </dt> <dd>
 
-Optionaler Zeiger auf einen Datenblock mit zusätzlichen Parametern oder Rückgabe Werten. Muss statisch oder Heap zugeordnet sein, nicht automatisch.
+Optionaler Zeiger auf einen Datenblock, der zusätzliche Parameter oder Rückgabewerte enthält. Muss statisch oder heap-zugeordnet und nicht automatisch sein.
 
 </dd> <dt>
 
-*Peer Event* 
+*pEvent* 
 </dt> <dd>
 
-Optionaler Zeiger auf ein Ereignis Objekt, das nach Abschluss signalisiert werden soll.
+Optionaler Zeiger auf ein Ereignisobjekt, das nach Abschluss signalisiert werden soll.
 
 </dd> </dl>
 
@@ -77,11 +77,11 @@ Optionaler Zeiger auf ein Ereignis Objekt, das nach Abschluss signalisiert werde
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion fügt eine Anforderung zur Ausführung durch den Arbeits Thread in die Warteschlange ein. Die Parameter dieser Member-Funktion werden in die Warteschlange eingereiht (in einem [**CMSG**](cmsg.md) -Objekt) und an die [**cmsgthread:: threadmessageproc**](cmsgthread-threadmessageproc.md) -Member-Funktion des Arbeits Thread übergeben. Diese Member-Funktion gibt sofort zurück, nachdem die Anforderung in die Warteschlange eingereiht wurde, und wartet nicht, bis der Thread die Anforderung erfüllt. Die **cmsgthread:: threadmessageproc** -Member-Funktion der abgeleiteten Klasse definiert die vier Parameter.
+Diese Memberfunktion reiht eine Anforderung zur Ausführung durch den Arbeitsthread in die Warteschlange ein. Die Parameter dieser Memberfunktion werden in die Warteschlange gestellt (in einem [**CMsg-Objekt)**](cmsg.md) und an die [**CMsgThread::ThreadMessageProc-Memberfunktion**](cmsgthread-threadmessageproc.md) des Arbeitsthreads übergeben. Diese Memberfunktion gibt unmittelbar nach dem Einrücken der Anforderung in die Warteschlange zurück und wartet nicht, bis der Thread die Anforderung erfüllt. Die **CMsgThread::ThreadMessageProc-Memberfunktion** der abgeleiteten Klasse definiert die vier Parameter.
 
-Diese Member-Funktion verwendet eine Multithreadsichere Liste, sodass mehrere Aufrufe dieser Element Funktion aus unterschiedlichen Threads sicher durchgeführt werden können.
+Diese Memberfunktion verwendet eine sichere Multithreadliste, sodass mehrere Aufrufe dieser Memberfunktion aus verschiedenen Threads sicher ausgeführt werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Diese Member-Funktion verwendet eine Multithreadsichere Liste, sodass mehrere Au
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Msgthrd. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msgthrd.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Diese Member-Funktion verwendet eine Multithreadsichere Liste, sodass mehrere Au
 
 <dl> <dt>
 
-[**Cmsgthread-Klasse**](cmsgthread.md)
+[**CMsgThread-Klasse**](cmsgthread.md)
 </dt> </dl>
 
  

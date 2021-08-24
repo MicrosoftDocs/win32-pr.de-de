@@ -1,9 +1,9 @@
 ---
 title: ConnectionStatus-Enumeration
-description: Stellt den Status des Geräts im Netzwerk als zuletzt angezeigt dar.
+description: Stellt den Zustand des Geräts im Netzwerk wie zuletzt gesehen dar.
 ms.assetid: e1893a59-ce7d-4e9c-a013-02ac916d4ee8
 keywords:
-- ConnectionStatus-Enumeration Medien Streaming-API
+- Media Streaming-API für ConnectionStatus-Enumeration
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - IDLDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61368a494e5bff0f6aca575380937b98f9d6b650
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8617012abe75d213e0de7be70811152315a888693c7336ef58cd34ceb98eba55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721250"
 ---
 # <a name="connectionstatus-enumeration"></a>ConnectionStatus-Enumeration
 
-Stellt den Status des Geräts im Netzwerk als zuletzt angezeigt dar.
+Stellt den Zustand des Geräts im Netzwerk wie zuletzt gesehen dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ typedef enum ConnectionStatus {
 
 <dl> <dt>
 
-<span id="Online"></span><span id="online"></span><span id="ONLINE"></span>**Internet**
+<span id="Online"></span><span id="online"></span><span id="ONLINE"></span>**Online**
 </dt> <dd>
 
 Das Gerät ist online und im Netzwerk aktiv.
 
 </dd> <dt>
 
-<span id="Offline"></span><span id="offline"></span><span id="OFFLINE"></span>**Aufzu**
+<span id="Offline"></span><span id="offline"></span><span id="OFFLINE"></span>**Offline**
 </dt> <dd>
 
 Gerät ist offline.
 
 </dd> <dt>
 
-<span id="Sleeping"></span><span id="sleeping"></span><span id="SLEEPING"></span>**Geschlafen**
+<span id="Sleeping"></span><span id="sleeping"></span><span id="SLEEPING"></span>**Schlafen**
 </dt> <dd>
 
-Das Gerät ist zurzeit offline, wird jedoch möglicherweise automatisch aktiviert, wenn versucht wird, damit zu kommunizieren.
+Das Gerät ist derzeit offline, wird aber möglicherweise automatisch aktiviert, wenn versucht wird, mit ihm zu kommunizieren.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Das Gerät ist zurzeit offline, wird jedoch möglicherweise automatisch aktivier
 
 | Anforderung | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| IDL<br/> | <dl> <dt>Windows. Media. Streaming. idl (Referenz zu Windows. Media. Streaming. idl)</dt> </dl> |
+| Idl<br/> | <dl> <dt>Windows. Media.Streaming.idl (Referenz Windows. Media.Streaming.idl)</dt> </dl> |
 
 
 

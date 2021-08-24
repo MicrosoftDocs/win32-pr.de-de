@@ -1,36 +1,36 @@
 ---
-title: Bereitstellen von fensterlosen Bearbeitungs Steuerelementen mit Fenster Funktionen
-description: Die Fenster Funktionalität umfasst die Möglichkeit, Nachrichten zu empfangen, und den Besitz eines Geräte Kontexts, in den gezeichnet werden soll. Fensterlose Rich Edit-Steuerelemente erhalten diese Funktionalität über ein paar von Schnittstellen itextservices und itexthost.
+title: Bereitstellen von fensterlosen Rich Edit-Steuerelementen mit Fensterfunktionen
+description: Die Fensterfunktion umfasst die Fähigkeit, Nachrichten zu empfangen, und den Besitz eines Gerätekontexts, in den gelost werden soll. Fensterlose Rich Edit-Steuerelemente erhalten diese Funktionalität über ein Paar von Schnittstellen ITextServices und ITextHost.
 ms.assetid: 085CBC61-50AE-4F74-8C6A-436176DE0031
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fce987630c21b1e15a2237066b39dd264125a857
-ms.sourcegitcommit: f0ca63c18dc52c357d3398af7be766d2bdd40be7
+ms.openlocfilehash: 3ce68a9e4e186be79e8f62cb009748916725e4af4f67d6522ed5eb47a92f33fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "103948527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119698600"
 ---
-# <a name="how-to-provide-windowless-rich-edit-controls-with-window-functionality"></a>Bereitstellen von fensterlosen Bearbeitungs Steuerelementen mit Fenster Funktionen
+# <a name="how-to-provide-windowless-rich-edit-controls-with-window-functionality"></a>Bereitstellen von fensterlosen Rich Edit-Steuerelementen mit Fensterfunktionen
 
-Die Fenster Funktionalität umfasst die Möglichkeit, Nachrichten zu empfangen, und den Besitz eines Geräte Kontexts, in den gezeichnet werden soll. Fensterlose Rich Edit-Steuerelemente erhalten diese Funktionalität über ein paar von Schnittstellen: [**itextservices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) und [**itexthost**](/windows/desktop/api/Textserv/nl-textserv-itexthost).
+Die Fensterfunktion umfasst die Fähigkeit, Nachrichten zu empfangen, und den Besitz eines Gerätekontexts, in den gelost werden soll. Fensterlose Rich-Edit-Steuerelemente erhalten diese Funktionalität über ein Schnittstellenpaar: [**ITextServices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) und [**ITextHost.**](/windows/desktop/api/Textserv/nl-textserv-itexthost)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="establish-the-window-functionality"></a>Einrichten der Fenster Funktionalität
+### <a name="establish-the-window-functionality"></a>Einrichten der Fensterfunktionalität
 
-Im folgenden Beispielcode wird veranschaulicht, wie der texthost und die Text Dienste erstellt werden.
+Der folgende Beispielcode veranschaulicht das Erstellen des Texthosts und der Textdienste.
 
 
 ```
@@ -63,9 +63,9 @@ Im folgenden Beispielcode wird veranschaulicht, wie der texthost und die Text Di
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *hthchechedit* -Parameter im Codebeispiel ist ein Handle für das Msftedit.dll Modul, und es wird davon ausgegangen, dass dieses Handle bereits durch einen Aufrufen der **GetModuleHandle** -Funktion abgerufen wurde.
+Der *hmodRichEdit-Parameter* im Codebeispiel ist ein Handle für das Msftedit.dll-Modul, und es wird davon ausgegangen, dass dieses Handle bereits durch einen Aufruf der **GetModuleHandle-Funktion abgerufen** wurde.
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -73,18 +73,18 @@ Der *hthchechedit* -Parameter im Codebeispiel ist ein Handle für das Msftedit.d
 
 <dl> <dt>
 
-[Verwenden von fensterlosen Rich-Edit-Steuerelementen](using-windowless-rich-edit-controls.md)
+[Verwenden von Fensterlosen Rich Edit-Steuerelementen](using-windowless-rich-edit-controls.md)
 </dt> <dt>
 
 [Verwenden von Rich Edit-Steuerelementen](using-rich-edit-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Ändert den Wert, der angibt, ob dieser icontextnode teilweise oder vollständig ausgefüllt ist.
+description: Ändert den Wert, der angibt, ob dieser IContextNode teilweise oder vollständig aufgefüllt ist.
 ms.assetid: 4d8e1ec0-757d-4346-a77e-263bd612972b
-title: 'Icontextnode:: setpartiallygefüllte-Methode (iacom. h)'
+title: IContextNode::SetPartiallyPopulated-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 31707468945fd3c5eb413bcdb984748a55867982
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6df87085a82117a694b48d08c3e6e1f8500c8959060052f553a53f1a285d9707
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713465"
 ---
-# <a name="icontextnodesetpartiallypopulated-method"></a>Icontextnode:: setpartiallygefüllte-Methode
+# <a name="icontextnodesetpartiallypopulated-method"></a>IContextNode::SetPartiallyPopulated-Methode
 
-Ändert den Wert, der angibt, ob dieser [**icontextnode**](icontextnode.md) teilweise oder vollständig ausgefüllt ist.
+Ändert den Wert, der angibt, ob [**dieser IContextNode**](icontextnode.md) teilweise oder vollständig aufgefüllt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ HRESULT SetPartiallyPopulated(
 
 <dl> <dt>
 
-nicht aufgefüllt  \[ in\]
+*fPartiallyPopulated* \[ In\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn dieser [**icontextnode**](icontextnode.md) teilweise aufgefüllt ist. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn [**dieser IContextNode**](icontextnode.md) teilweise aufgefüllt ist; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Weitere Informationen finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Verwenden Sie diese Methode, wenn Ihre Anwendung eine eigene Datenstruktur verwaltet, die mit der von [**IInkAnalyzer synchronisiert wird.**](iinkanalyzer.md) Weitere Informationen finden Sie unter [Datenproxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
 
-Wenn Sie die Dokumentstruktur virtualisieren, achten Sie darauf, den PropertyGuidsForContextNodes. rotatedboundingbox-Wert (mithilfe von ContextNode. addpropertyvalue) für alle ContextNode-Objekte festzulegen. Die rotatedboundingbox-Eigenschaft wird vom InkAnalyzer berechnet und sollte standardmäßig für alle geschriebenen ContextNodes lauten. Wenn Ihre Anwendung jedoch die Analyseergebnisse durch Festlegen der Eigenschaft partiallyaufgefüllt durch Festlegen der Eigenschaft PopulateContextNode verarbeitet, achten Sie darauf, die rotatedboundingbox-Eigenschaft aufzufüllen. Wenn die rotatedboundingbox-Eigenschaft nicht festgelegt wird, werden möglicherweise mehr Dokument Daten im aktuellen Analyse Vorgang verwendet.
+Stellen Sie beim Virtualisieren der Dokumentstruktur sicher, dass Sie den PropertyGuidsForContextNodes.RotatedBoundingBox-Wert (mit ContextNode.AddPropertyValue) für alle ContextNode-Objekte festlegen. Die RotatedBoundingBox-Eigenschaft wird vom InkAnalyzer berechnet und sollte standardmäßig für alle schreibenden ContextNodes verwendet werden. Wenn Ihre Anwendung die Analyseergebnisse jedoch virtualisiert, indem die PartiallyPopulated-Eigenschaft gesetzt wird, stellen Sie beim Behandeln des PopulateContextNode-Ereignisses sicher, dass Sie die RotatedBoundingBox-Eigenschaft auffüllen. Wenn die RotatedBoundingBox-Eigenschaft nicht festgelegt wird, werden möglicherweise mehr Dokumentdaten im aktuellen Analysevorgang verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Wenn Sie die Dokumentstruktur virtualisieren, achten Sie darauf, den PropertyGui
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -73,19 +73,19 @@ Wenn Sie die Dokumentstruktur virtualisieren, achten Sie darauf, den PropertyGui
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**\_Ianalysisproxyevents::P opulatecontextnode**](-ianalysisproxyevents-populatecontextnode.md)
+[**\_IAnalysisProxyEvents::P opulateContextNode**](-ianalysisproxyevents-populatecontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: kreatepartiallypopulatedsubnode**](icontextnode-createpartiallypopulatedsubnode.md)
+[**IContextNode::CreatePartiallyPopulatedSubNode**](icontextnode-createpartiallypopulatedsubnode.md)
 </dt> <dt>
 
-[**Icontextnode:: getpartiallyaufgefüllt**](icontextnode-getpartiallypopulated.md)
+[**IContextNode::GetPartiallyPopulated**](icontextnode-getpartiallypopulated.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

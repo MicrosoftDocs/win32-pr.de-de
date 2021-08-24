@@ -1,10 +1,10 @@
 ---
-title: DRM_AUDIO_OUTPUT_PROTECTION_IDS Struktur (wmdrmsdk. h)
-description: Die Struktur der DRM \_ -audioausgabeschutz- \_ \_ \_ IDs enthält eine Liste der audioausgabeschutzbezeichner.
+title: DRM_AUDIO_OUTPUT_PROTECTION_IDS -Struktur (Wmdrmsdk.h)
+description: Die IDS-Struktur von DRM \_ AUDIO OUTPUT PROTECTION enthält eine Liste mit \_ \_ \_ Audioausgabeschutzbezeichnern.
 ms.assetid: 21972b18-334b-4a4d-812d-21cbfaf7cc58
 keywords:
-- DRM_AUDIO_OUTPUT_PROTECTION_IDS Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_AUDIO_OUTPUT_PROTECTION_IDS struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d3c7142f5f575413f72885aa60a0ccb826ecfab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7e31589a229dcd5e32a0198cf7f3679846574bdb605e25a8df272b1793704b92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659010"
 ---
-# <a name="drm_audio_output_protection_ids-structure"></a>Struktur der DRM \_ -audioausgabeschutzids \_ \_ \_
+# <a name="drm_audio_output_protection_ids-structure"></a>\_IDS-Struktur des DRM-AUDIOAUSGABESCHUTZES \_ \_ \_
 
-Die Struktur der **DRM \_ -audioausgabeschutz- \_ \_ \_ IDs** enthält eine Liste der audioausgabeschutzbezeichner.
+Die **\_ \_ \_ \_ IDS-Struktur von DRM AUDIO OUTPUT PROTECTION** enthält eine Liste mit Audioausgabeschutzbezeichnern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ typedef struct DRM_AUDIO_OUTPUT_PROTECTION_IDS {
 
 <dl> <dt>
 
-**centries**
+**cEntries**
 </dt> <dd>
 
-Anzahl der Einträge im **rgaop** -Array.
+Anzahl der Einträge im **rgAop-Array.**
 
 </dd> <dt>
 
-**rgaop**
+**rgAop**
 </dt> <dd>
 
-Array von **DRM \_ - \_ audioausgabeschutzstrukturen \_** . **DRM \_ Der \_ audioausgabeschutz \_** ist ein Typ, der als [**DRM- \_ Ausgabe \_ Schutz**](drm-output-protection.md)definiert ist
+Array von **DRM \_ AUDIO OUTPUT \_ \_ PROTECTION-Strukturen.** **DRM \_ AUDIO \_ OUTPUT \_ PROTECTION ist** ein Typ, der als [**DRM OUTPUT PROTECTION definiert \_ \_ ist.**](drm-output-protection.md)
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
@@ -74,10 +74,10 @@ Keine.
 
 <dl> <dt>
 
-[**DRM \_ - \_ audioausgabeschutz- \_ \_ IDs \_ Ex**](drm-audio-output-protection-ids-ex.md)
+[**DRM \_ AUDIO \_ OUTPUT \_ PROTECTION \_ IDS \_ EX**](drm-audio-output-protection-ids-ex.md)
 </dt> <dt>
 
-[**DRM- \_ Video- \_ Ausgabe Schutz- \_ \_ IDs**](drmdrm-video-output-protection-ids.md)
+[**\_ \_ \_ DRM-VIDEOAUSGABESCHUTZ-IDS \_**](drmdrm-video-output-protection-ids.md)
 </dt> <dt>
 
 [**Strukturen**](drm-structures.md)

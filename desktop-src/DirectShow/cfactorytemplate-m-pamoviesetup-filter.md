@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf eine amoviesetup- \_ Filter Struktur.
+description: Zeiger auf eine \_ AMOVIESETUP-FILTER-Struktur.
 ms.assetid: 72db601b-78a3-484a-a27f-147ec36022ab
-title: 'Cfactoriytemplate:: m_pAMovieSetup_Filter Member (ComBase. h)'
+title: CFactoryTemplate::m_pAMovieSetup_Filter Member (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 087612acf99a41966ccd98d3b41d2b83255a86f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bc4ee059eb47e08ae827392e8f29968463bb9bd4ca86e0c6b8a87a9f3bbd5667
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697710"
 ---
-# <a name="cfactorytemplatem_pamoviesetup_filter-member"></a>Cfactorytemplate:: m \_ pamoviesetup- \_ Filter Element
+# <a name="cfactorytemplatem_pamoviesetup_filter-member"></a>CFactoryTemplate::m \_ pAMovieSetup \_ Filter-Member
 
-Zeiger auf eine [**amoviesetup- \_ Filter**](amoviesetup-filter.md) Struktur.
+Zeiger auf eine [**AMOVIESETUP-FILTER-Struktur. \_**](amoviesetup-filter.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ const AMOVIESETUP_FILTER *m_pAMovieSetup_Filter;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Struktur, um die Selbstregistrierung eines Filters vorzunehmen. Wenn es sich bei der Komponente nicht um einen Filter handelt, kann diese Element Variable **null** sein. Weitere Informationen finden Sie unter Vorgehensweise beim Registrieren von DirectShow-filtern.
+Verwenden Sie diese Struktur, um einen Filter selbst zu registrieren. Wenn ihre Komponente kein Filter ist, kann diese Membervariable **NULL sein.** Weitere Informationen finden Sie unter Registrieren von DirectShow-Filtern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Verwenden Sie diese Struktur, um die Selbstregistrierung eines Filters vorzunehm
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Verwenden Sie diese Struktur, um die Selbstregistrierung eines Filters vorzunehm
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

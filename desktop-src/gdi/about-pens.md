@@ -1,24 +1,24 @@
 ---
-description: 'Es gibt zwei Arten von Pen: kosmetisch und geometrisch.'
+description: 'Es gibt zwei Arten von Stiften: geometrische und geometrische Stifte.'
 ms.assetid: e1e49ee8-07f1-4f1a-95bb-f6757a72da99
-title: Informationen zu stiften
+title: Informationen zu Stiften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 059f024b80ec70d0b20ba2dc8e9a97b6ba3e5431
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 44a982c8c0016470b411b371acea2b2338e8935f4e55e4a9d68ceb261169ca31
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779410"
 ---
-# <a name="about-pens"></a>Informationen zu stiften
+# <a name="about-pens"></a>Informationen zu Stiften
 
-Es gibt zwei Arten von Pen: kosmetisch und geometrisch. Ein *kosmetischer Stift* wird für Anwendungen verwendet, die Zeilen mit fester Breite und Zeilen erfordern, die schnell gezeichnet werden. Eine CAD-Anwendung verwendet z. b. einen kosmetischen Stift, um ausgeblendete, Abschnitts-, Mittel-und Dimensions Linien zu generieren, die unabhängig vom Skalierungsfaktor zwischen .015 und .022 Zoll breit sind. Ein *geometrischer Stift* wird für Anwendungen verwendet, die skalierbare Linien, Linien mit eindeutigen Schluss-oder joinstilen und Linien erfordern, die breiter als ein einzelnes Pixel sind. Eine Tabellenkalkulationsanwendung verwendet beispielsweise einen geometrischen Stift, um die einzelnen Balken in einem Balkendiagramm als Breite Linie zu definieren.
+Es gibt zwei Arten von Stiften: geometrische und geometrische Stifte. Ein *zeichenstärker* Stift wird bei Anwendungen verwendet, die Linien mit fester Breite und Linien erfordern, die schnell gezeichnet werden. Eine CAD-Anwendung verwendet z. B. einen Generierungsstift, um ausgeblendete, Abschnitts-, Mittelpunkt- und Dimensionslinien zu generieren, die unabhängig vom Skalierungsfaktor zwischen 0,015 und 0,022 Zoll breit sind. Ein *geometrischer Stift* wird mit Anwendungen verwendet, die skalierbare Linien, Linien mit eindeutigen End- oder Joinstilen und Linien erfordern, die breiter als ein einzelnes Pixel sind. Eine Tabellenkalkulationsanwendung verwendet beispielsweise einen geometrischen Stift, um jeden Balken in einem Balkendiagramm als breite Linie zu definieren.
 
--   [Kosmetische Stifte](cosmetic-pens.md)
+-   [Cosmetic Pens](cosmetic-pens.md)
 -   [Geometrische Stifte](geometric-pens.md)
--   [Stift Attribute](pen-attributes.md)
--   [ICM-aktivierte Stift Funktionen](icm-enabled-pen-functions.md)
+-   [Stiftattribute](pen-attributes.md)
+-   [ICM Stiftfunktionen](icm-enabled-pen-functions.md)
 
  
 

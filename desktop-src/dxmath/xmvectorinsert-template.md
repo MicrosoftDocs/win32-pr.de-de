@@ -1,19 +1,19 @@
 ---
-description: Dreht einen Vektor nach links um eine bestimmte Anzahl von 32-Bit-Komponenten und fügt ausgewählte Elemente dieses Ergebnisses in einen anderen Vektor ein.
+description: Rotiert einen Vektor nach links um eine bestimmte Anzahl von 32-Bit-Komponenten und fügt ausgewählte Elemente dieses Ergebnisses in einen anderen Vektor ein.
 ms.assetid: m:microsoft.directx_sdk.template.xmvectorinsert(xmvector,xmvector)
-title: Xmvector INSERT-Vorlage (directxmath. h)
+title: XMVectorInsert-Vorlage (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3250ad52ab19a127b110b02ecf71543f44708681
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b90eb7348639e6993cb69ef9e82ab78ed989999ea8423f1f6ff8bd9deb7c70d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739751"
 ---
-# <a name="xmvectorinsert-template"></a>Xmvector INSERT-Vorlage
+# <a name="xmvectorinsert-template"></a>XMVectorInsert-Vorlage
 
-Dreht einen Vektor nach links um eine bestimmte Anzahl von 32-Bit-Komponenten und fügt ausgewählte Elemente dieses Ergebnisses in einen anderen Vektor ein.
+Rotiert einen Vektor nach links um eine bestimmte Anzahl von 32-Bit-Komponenten und fügt ausgewählte Elemente dieses Ergebnisses in einen anderen Vektor ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,36 +28,36 @@ template<uint32_t VSLeftRotateElements, uint32_t Select0, uint32_t Select1, uint
 
 <dl> <dt>
 
-<span id="VD"></span><span id="vd"></span>*Abbiegen*
+<span id="VD"></span><span id="vd"></span>*Vd*
 </dt> <dd>
 
-\[in \] Vektor, das in eingefügt werden soll.
+\[in \] Vektor, in den eingefügt werden soll.
 
 </dd> <dt>
 
-<span id="VS"></span><span id="vs"></span>*Jews*
+<span id="VS"></span><span id="vs"></span>*Vs*
 </dt> <dd>
 
-\[im \] Vektor zum Drehen nach links.
+\[in \] Vektor, der nach links gedreht werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den [**xmvector**](xmvector-data-type.md) zurück, der sich aus der Drehung und dem Einfügen ergibt.
+Gibt den [**XMVECTOR**](xmvector-data-type.md) zurück, der sich aus der Drehung und Einfügung ergibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Funktion handelt es sich um eine Vorlagen Version von [**xmvectorinsert**](/windows/win32/api/directxmath/nf-directxmath-xmvectorinsert) , bei der die *Select \** -Argumente Vorlagen Werte sind.
+Diese Funktion ist eine Vorlagenversion von [**XMVectorInsert,**](/windows/win32/api/directxmath/nf-directxmath-xmvectorinsert) wobei die *Select-Argumente \** Vorlagenwerte sind.
 
-Um die optimale Leistung zu erzielen, sollte das Ergebnis von `XMVectorInsert` zurück zu *VD* zugewiesen werden.
+Um eine optimale Leistung zu erzielen, sollte das Ergebnis von `XMVectorInsert` wieder *vd* zugewiesen werden.
 
 > [!Note]  
-> Die `XMVectorInsert` Vorlage ist neu für directxmath und für xnamath 2. x nicht verfügbar.
+> Die `XMVectorInsert` Vorlage ist neu für DirectXMath und nicht für XNAMath 2.x verfügbar.
 
  
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** Verwenden von DirectX
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -69,7 +69,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
@@ -77,19 +77,19 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 <dl> <dt>
 
-[Directxmath-Bibliotheks Vorlagen Funktionen](ovw-xnamath-templates.md)
+[Vorlagenfunktionen der DirectXMath-Bibliothek](ovw-xnamath-templates.md)
 </dt> <dt>
 
-[**Xmvector perstumm Zeichen**](xmvectorpermute-template.md)
+[**XMVectorPermute**](xmvectorpermute-template.md)
 </dt> <dt>
 
-[**Xmvector rotateleft**](xmvectorrotateleft-template.md)
+[**XMVectorRotateLeft**](xmvectorrotateleft-template.md)
 </dt> <dt>
 
-[**Xmvector rotateright**](xmvectorrotateright-template.md)
+[**XMVectorRotateRight**](xmvectorrotateright-template.md)
 </dt> <dt>
 
-[**Xmvector shiftleft**](xmvectorshiftleft-template.md)
+[**XMVectorShiftLeft**](xmvectorshiftleft-template.md)
 </dt> </dl>
 
  

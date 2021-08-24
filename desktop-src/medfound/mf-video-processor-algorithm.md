@@ -1,7 +1,7 @@
 ---
 description: Legt den vom Videoprozessor verwendeten Algorithmus fest.
 ms.assetid: 68AA3D7A-787F-4F0A-A6C6-A1C7E5D99719
-title: MF_VIDEO_PROCESSOR_ALGORITHM-Attribut (Mfidl.h)
+title: MF_VIDEO_PROCESSOR_ALGORITHM -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 7317f1e472ca3e919c5323211d2a74c67e811c1276c05ba27a4a7426a20884ac
@@ -17,11 +17,11 @@ Legt den vom Videoprozessor verwendeten Algorithmus fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**[**MF \_ ALS UINT32 gespeichertER \_ \_ \_ VIDEOPROZESSORALGORITHMUSTYP**](mf-video-processor-algorithm-type.md)** 
+**[**MF \_ ALS UINT32 \_ \_ \_ gespeicherter VIDEOPROZESSORALGORITHMUSTYP**](mf-video-processor-algorithm-type.md)** 
 
 ## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein [**MF VIDEO PROCESSOR ALGORITHM \_ \_ \_ \_ TYPE**](mf-video-processor-algorithm-type.md).
+Der Wert dieses Attributs ist ein [**MF \_ VIDEO PROCESSOR ALGORITHM \_ \_ \_ TYPE**](mf-video-processor-algorithm-type.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,17 +36,17 @@ Der Wert dieses Attributs ist ein [**MF VIDEO PROCESSOR ALGORITHM \_ \_ \_ \_ TY
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
+[**ATTRIBUTEs::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 </dt> <dt>
 
-[**ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
+[**ZEICHENFOLGEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 </dt> </dl>
 
  

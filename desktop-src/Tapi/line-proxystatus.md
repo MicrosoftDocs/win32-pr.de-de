@@ -1,21 +1,21 @@
 ---
-description: Die Meldung "line \_ proxystatus" wird gesendet, wenn sich die verfügbaren Proxys in einer Zeile ändern, die derzeit von der Anwendung geöffnet wurde.
+description: Die MELDUNG LINE \_ PROXYSTATUS wird gesendet, wenn sich die verfügbaren Proxys in einer Zeile ändern, in der die Anwendung derzeit geöffnet ist.
 ms.assetid: e20d4b48-a72a-4a83-ae04-a608791a1a3a
-title: LINE_PROXYSTATUS Meldung (TAPI. h)
+title: LINE_PROXYSTATUS Meldung (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8cb00c5df4f531309bdd1311fb7c34c3e9967a8a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 585feda6194a13ecfbe17292aadb9036784d244c9ee5b7df4361981ab7401f65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682350"
 ---
-# <a name="line_proxystatus-message"></a>Zeile \_ proxystatus-Meldung
+# <a name="line_proxystatus-message"></a>LINE \_ PROXYSTATUS-Meldung
 
-Die Meldung " **line \_ proxystatus** " wird gesendet, wenn sich die verfügbaren Proxys in einer Zeile ändern, die derzeit von der Anwendung geöffnet wurde.
+Die **MELDUNG LINE \_ PROXYSTATUS** wird gesendet, wenn sich die verfügbaren Proxys in einer Zeile ändern, in der die Anwendung derzeit geöffnet ist.
 
-Tapisrv generiert diese Nachricht während einer [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) -Funktion mithilfe von lineproxystatus \_ Open und lineproxystatus \_ allopenforacd oder einer [**lineclose**](/windows/desktop/api/Tapi/nf-tapi-lineclose) -Funktion mithilfe von lineproxystatus \_ Close (alle [**lineproxystatus- \_ Konstanten**](lineproxystatus--constants.md)).
+TAPISRV generiert diese Meldung während einer [**lineOpen-Funktion**](/windows/desktop/api/Tapi/nf-tapi-lineopen) mit LINEPROXYSTATUS \_ OPEN und LINEPROXYSTATUS \_ ALLOPENFORACD oder einer [**lineClose-Funktion**](/windows/desktop/api/Tapi/nf-tapi-lineclose) mit LINEPROXYSTATUS \_ CLOSE (alle [**LINEPROXYSTATUS-Konstanten \_**](lineproxystatus--constants.md)).
 
 
 ```C++
@@ -28,54 +28,54 @@ Tapisrv generiert diese Nachricht während einer [**lineOpen**](/windows/desktop
 
 <dl> <dt>
 
-*dwdevice* 
+*dwDevice* 
 </dt> <dd>
 
-Das Handle der Anwendung für das liniengerät. Dies bezieht sich auf den-Agent-Handler.
+Das Handle der Anwendung für das Zeilengerät. Dies bezieht sich auf den Agenthandler.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wird.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Gibt den Status der Warteschlange an, der geändert wurde. Kann eine oder mehrere der [**lineproxystatus- \_ Konstanten**](lineproxystatus--constants.md)sein.
+Gibt den geänderten Warteschlangenstatus an. Kann eine oder mehrere [**LINEPROXYSTATUS-Konstanten \_ sein.**](lineproxystatus--constants.md)
 
 </dd> <dt>
 
 *dwParam2* 
 </dt> <dd>
 
-Wenn *dwParam1* auf lineproxystatus \_ Open oder lineproxystatus close festgelegt ist \_ , gibt *dwParam2* den zugehörigen Proxy Anforderungstyp an. Dies ist einer der folgenden:
+Wenn *dwParam1* auf LINEPROXYSTATUS \_ OPEN oder LINEPROXYSTATUS CLOSE festgelegt \_ ist, gibt *dwParam2* den entsprechenden Proxyanforderungstyp an. Dies ist einer der folgenden:
 
--   lineproxyrequest \_ setagentgroup
--   lineproxyrequest \_ setagentstate
--   lineproxyrequest \_ setagentactivity
--   lineproxyrequest \_ getagentcaps
--   lineproxyrequest \_ getagentstatus
--   lineproxyrequest- \_ agentspezifisch
--   lineproxyrequest \_ getagentactivitylist
--   lineproxyrequest \_ getagentgrouplist
--   lineproxyrequest- \_ kreateagent
--   lineproxyrequest \_ setagentmessrementperiod
--   lineproxyrequest \_ getagentinfo
--   lineproxyrequest- \_ Sitzung
--   lineproxyrequest \_ getagentsessionlist
--   lineproxyrequest \_ setagentsessionstate
--   lineproxyrequest \_ getagentsessioninfo
--   lineproxyrequest \_ getqueuelist
--   lineproxyrequest \_ setqueuemessrementperiod
--   lineproxyrequest \_ getqueueinfo
--   "lineproxyrequest" \_ getgrouplist
--   lineproxyrequest \_ setagentstateex
+-   LINEPROXYREQUEST \_ SETAGENTGROUP
+-   LINEPROXYREQUEST \_ SETAGENTSTATE
+-   LINEPROXYREQUEST \_ SETAGENTACTIVITY
+-   LINEPROXYREQUEST \_ GETAGENTCAPS
+-   LINEPROXYREQUEST \_ GETAGENTSTATUS
+-   LINEPROXYREQUEST \_ AGENTSPECIFIC
+-   LINEPROXYREQUEST \_ GETAGENTACTIVITYLIST
+-   LINEPROXYREQUEST \_ GETAGENTGROUPLIST
+-   LINEPROXYREQUEST \_ CREATEAGENT
+-   LINEPROXYREQUEST \_ SETAGENTMEASUREMENTPERIOD
+-   LINEPROXYREQUEST \_ GETAGENTINFO
+-   LINEPROXYREQUEST \_ CREATEAGENTSESSION
+-   LINEPROXYREQUEST \_ GETAGENTSESSIONLIST
+-   LINEPROXYREQUEST \_ SETAGENTSESSIONSTATE
+-   LINEPROXYREQUEST \_ GETAGENTSESSIONINFO
+-   LINEPROXYREQUEST \_ GETQUEPROXYIST
+-   LINEPROXYREQUEST \_ SETQUEUEMEASUREMENTPERIOD
+-   LINEPROXYREQUEST \_ GETQUEUEINFO
+-   LINEPROXYREQUEST \_ GETGROUPLIST
+-   LINEPROXYREQUEST \_ SETAGENTSTATEEX
 
-Andernfalls ist *dwParam2* auf 0 (null) festgelegt.
+Andernfalls wird *dwParam2* auf 0 (null) festgelegt.
 
 </dd> <dt>
 
@@ -92,8 +92,8 @@ Reserviert. Auf NULL festlegen.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -101,16 +101,16 @@ Reserviert. Auf NULL festlegen.
 
 <dl> <dt>
 
-[**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen)
+[**lineÖffnen**](/windows/desktop/api/Tapi/nf-tapi-lineopen)
 </dt> <dt>
 
-[**lineclose**](/windows/desktop/api/Tapi/nf-tapi-lineclose)
+[**lineClose**](/windows/desktop/api/Tapi/nf-tapi-lineclose)
 </dt> <dt>
 
-[**\_linienproxyrequest**](line-proxyrequest.md)
+[**LINE \_ PROXYREQUEST**](line-proxyrequest.md)
 </dt> <dt>
 
-[**Lineproxyrequest- \_ Konstanten**](lineproxyrequest--constants.md)
+[**\_LINEPROXYREQUEST-Konstanten**](lineproxyrequest--constants.md)
 </dt> </dl>
 
  

@@ -1,63 +1,63 @@
 ---
-title: Benutzerdefinierter Fensterrahmen mithilfe von DWM
-description: In diesem Thema wird veranschaulicht, wie Sie die Desktopfenster-Manager (DWM)-APIs verwenden, um benutzerdefinierte Fensterrahmen für Ihre Anwendung zu erstellen.
+title: Benutzerdefinierter Fensterrahmen mit DWM
+description: In diesem Thema wird veranschaulicht, wie Sie die DWM-APIs (Desktopfenster-Manager) verwenden, um benutzerdefinierte Fensterrahmen für Ihre Anwendung zu erstellen.
 ms.assetid: 7f7dc902-40d3-44e9-adc2-05a39c634eb3
 keywords:
 - Desktopfenster-Manager (DWM), benutzerdefinierte Fensterrahmen
-- Dwm (Desktopfenster-Manager), benutzerdefinierte Fensterrahmen
-- benutzerdefinierte Fensterrahmen
-- Entfernen von Standard Frames
-- Erweitern von Client Frames
-- Desktopfenster-Manager (DWM), Erweitern von Client Frames
-- Dwm (Desktopfenster-Manager), Erweitern von Client Frames
-- Desktopfenster-Manager (DWM), Standardrahmen entfernen
-- Dwm (Desktopfenster-Manager), Standardrahmen werden entfernt
-- Desktopfenster-Manager (DWM), zeichnen in erweiterten Frames
-- Dwm (Desktopfenster-Manager), zeichnen in erweiterten Frames
+- DWM (Desktopfenster-Manager), benutzerdefinierte Fensterrahmen
+- Benutzerdefinierte Fensterrahmen
+- Entfernen von Standardframes
+- Erweitern von Clientframes
+- Desktopfenster-Manager (DWM),Erweitern von Clientframes
+- DWM (Desktopfenster-Manager),Erweitern von Clientframes
+- Desktopfenster-Manager (DWM), Entfernen von Standardframes
+- DWM (Desktopfenster-Manager),Entfernen von Standardframes
+- Desktopfenster-Manager (DWM), Zeichnen in erweiterten Frames
+- DWM (Desktopfenster-Manager),Zeichnen in erweiterten Frames
 - Zeichnen in erweiterten Frames
 - Treffertests
-- Desktopfenster-Manager (DWM), Treffer Test
-- Dwm (Desktopfenster-Manager), Treffer Test
+- Desktopfenster-Manager (DWM), Treffertests
+- DWM (Desktopfenster-Manager),Treffertests
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 66a27a9b71dd2dd91cb000a352ef039de2a71cd9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0b440f475dfacc610354ce151ab0be42dbbe3069390b1efa211195252f7a3914
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119741454"
 ---
-# <a name="custom-window-frame-using-dwm"></a>Benutzerdefinierter Fensterrahmen mithilfe von DWM
+# <a name="custom-window-frame-using-dwm"></a>Benutzerdefinierter Fensterrahmen mit DWM
 
-In diesem Thema wird veranschaulicht, wie Sie die Desktopfenster-Manager (DWM)-APIs verwenden, um benutzerdefinierte Fensterrahmen für Ihre Anwendung zu erstellen.
+In diesem Thema wird veranschaulicht, wie Sie die DWM-APIs (Desktopfenster-Manager) verwenden, um benutzerdefinierte Fensterrahmen für Ihre Anwendung zu erstellen.
 
 -   [Introduction (Einführung)](#introduction)
--   [Erweitern des Client Frames](#extending-the-client-frame)
--   [Entfernen des Standard Rahmens](#removing-the-standard-frame)
--   [Zeichnen im erweiterten Rahmen Fenster](#drawing-in-the-extended-frame-window)
--   [Aktivieren von Treffer Tests für den benutzerdefinierten Frame](#enabling-hit-testing-for-the-custom-frame)
--   [Anhang A: Beispiel Fenster Prozedur](#appendix-a-sample-window-procedure)
--   [Anhang B: Zeichnen des Beschriftungs Titels](#appendix-b-painting-the-caption-title)
--   [Anhang C: hittestnca-Funktion](#appendix-c-hittestnca-function)
+-   [Erweitern des Clientframes](#extending-the-client-frame)
+-   [Entfernen des Standardframes](#removing-the-standard-frame)
+-   [Zeichnen im erweiterten Rahmenfenster](#drawing-in-the-extended-frame-window)
+-   [Aktivieren von Treffertests für den benutzerdefinierten Frame](#enabling-hit-testing-for-the-custom-frame)
+-   [Anhang A: Beispielfensterprozedur](#appendix-a-sample-window-procedure)
+-   [Anhang B: Zeichnen des Titels der Beschriftung](#appendix-b-painting-the-caption-title)
+-   [Anhang C: HitTestNCA-Funktion](#appendix-c-hittestnca-function)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-In Windows Vista und höher wird die Darstellung der nicht-Client Bereiche von Anwendungs Fenstern (Titelleiste, Symbol, Fensterrahmen und Beschriftungs Schaltflächen) durch die DWM gesteuert. Mithilfe der DWM-APIs können Sie die Art und Weise ändern, in der die DWM den Rahmen eines Fensters rendert.
+In Windows Vista und höher wird die Darstellung der Nicht-Clientbereiche von Anwendungsfenstern (Titelleiste, Symbol, Fensterrahmen und Beschriftungsschaltflächen) vom DWM gesteuert. Mithilfe der DWM-APIs können Sie die Art und Weise ändern, in der dwm den Rahmen eines Fensters rendert.
 
-Ein Feature der DWM-APIs ist die Möglichkeit, den Anwendungs Frame in den Client Bereich zu erweitern. Dies ermöglicht es Ihnen, ein Client Benutzeroberflächen Element – z. b. eine Symbolleiste – in den Frame zu integrieren, sodass die UI-Steuerelemente in der Benutzeroberfläche der Anwendung wichtiger werden. Windows Internet Explorer 7 unter Windows Vista integriert z. b. die Navigationsleiste in den Fensterrahmen, indem die obere Seite des Frames erweitert wird, wie im folgenden Screenshot gezeigt.
+Ein Feature der DWM-APIs ist die Möglichkeit, den Anwendungsrahmen auf den Clientbereich zu erweitern. Auf diese Weise können Sie ein Benutzeroberflächenelement des Clients , z. B. eine Symbolleiste, in den Rahmen integrieren, sodass die Steuerelemente der Benutzeroberfläche in der Benutzeroberfläche der Anwendung einen besseren Platz erhalten. Beispielsweise integriert Windows Internet Explorer 7 auf Windows Vista die Navigationsleiste in den Fensterrahmen, indem der obere Rand des Frames erweitert wird, wie im folgenden Screenshot gezeigt.
 
-![Navigationsleiste, die in den Fensterrahmen integriert ist.](images/ie7-extendedborder-boxed.png)
+![in den Fensterrahmen integrierte Navigationsleiste.](images/ie7-extendedborder-boxed.png)
 
-Durch die Möglichkeit, den Fensterrahmen zu erweitern, können Sie auch benutzerdefinierte Frames erstellen und gleichzeitig das Aussehen und das Erscheinungsbild des Fensters beibehalten. Microsoft Office Word 2007 zeichnet z. b. die Office-Schaltfläche und die Symbolleiste für den schnell Zugriff im benutzerdefinierten Frame und stellt dabei die Standard Schaltflächen Minimieren, maximieren und schließen bereit, wie im folgenden Screenshot gezeigt.
+Die Möglichkeit, den Fensterrahmen zu erweitern, ermöglicht es Ihnen auch, benutzerdefinierte Frames zu erstellen und gleichzeitig das Aussehen und Haptik des Fensters beizubehalten. Beispielsweise zeichnet Microsoft Office Word 2007 die Schaltfläche "Office" und die Symbolleiste "Schnellzugriff" innerhalb des benutzerdefinierten Frames und stellt die Standardschaltflächen "Minimieren", "Maximieren" und "Schließen" für Untertitel bereit, wie im folgenden Screenshot gezeigt.
 
-![Office-Schaltfläche und Symbolleiste für den schnell Zugriff in Word 2007](images/word2007-customborder-boxed.png)
+![Office-Schaltfläche und Symbolleiste für den Schnellzugriff in Word 2007](images/word2007-customborder-boxed.png)
 
-## <a name="extending-the-client-frame"></a>Erweitern des Client Frames
+## <a name="extending-the-client-frame"></a>Erweitern des Clientframes
 
-Die Funktionalität zum Erweitern des Frames in den Client Bereich wird von der Funktion " [**dwmextendframeinesclientarea**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmextendframeintoclientarea) " verfügbar gemacht. Um den Frame zu erweitern, übergeben Sie das Handle des Zielfensters mit den Margin-einfügen-Werten an **DwmExtendFrameIntoClientArea**. Die Werte für den Margin-Wert legen fest, wie weit der Frame auf den vier Seiten des Fensters erweitert werden soll.
+Die Funktionalität zum Erweitern des Frames in den Clientbereich wird von der [**DwmExtendFrameIntoClientArea-Funktion**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmextendframeintoclientarea) verfügbar gemacht. Um den Frame zu erweitern, übergeben Sie das Handle des Zielfensters zusammen mit den randinset-Werten an **DwmExtendFrameIntoClientArea.** Die Randinsetwerte bestimmen, wie weit der Rahmen auf den vier Seiten des Fensters erweitert werden soll.
 
-Der folgende Code veranschaulicht die Verwendung von [**dwmextendframeinumclientarea**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmextendframeintoclientarea) zum Erweitern des Frames.
+Der folgende Code veranschaulicht die Verwendung von [**DwmExtendFrameIntoClientArea**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmextendframeintoclientarea) zum Erweitern des Frames.
 
 
 ```
@@ -86,25 +86,25 @@ if (message == WM_ACTIVATE)
 
 
 
-Beachten Sie, dass die Frame Erweiterung innerhalb der [**WM- \_ Aktivierungs**](/windows/desktop/inputdev/wm-activate) Nachricht statt in der [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Meldung erfolgt. Dadurch wird sichergestellt, dass die Frame Erweiterung ordnungsgemäß verarbeitet wird, wenn das Fenster seine Standardgröße hat und wenn es maximiert ist.
+Beachten Sie, dass die Frameerweiterung nicht in der [**WM \_ CREATE-Nachricht,**](/windows/desktop/winmsg/wm-create) sondern in der [**WM \_ ACTIVATE-Nachricht**](/windows/desktop/inputdev/wm-activate) erfolgt. Dadurch wird sichergestellt, dass die Frameerweiterung ordnungsgemäß verarbeitet wird, wenn das Fenster seine Standardgröße hat und maximiert wird.
 
-In der folgenden Abbildung wird ein Standardfenster Rahmen (auf der linken Seite) und der erweiterte Fensterrahmen (auf der rechten Seite) angezeigt. Der Frame wird mit dem vorherigen Codebeispiel und dem Standard Microsoft Visual Studio [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) / [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Hintergrund (Farb \_ Fenster + 1) erweitert.
+Die folgende Abbildung zeigt einen Standardfensterrahmen (links) und den gleichen erweiterten Fensterrahmen (auf der rechten Seite). Der Frame wird mithilfe des vorherigen Codebeispiels erweitert, und die Standardeinstellung Microsoft Visual Studio [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) / [**WNDCLASSEX-Hintergrund**](/windows/win32/api/winuser/ns-winuser-wndclassexa) (COLOR \_ WINDOW +1).
 
-![Screenshot eines standardmäßigen (linken) und erweiterten Rahmens (rechts) mit weißem Hintergrund](images/white-sidebyside.png)
+![Screenshot eines Standardframes (links) und eines erweiterten Frames (rechts) mit weißem Hintergrund](images/white-sidebyside.png)
 
-Der visuelle Unterschied zwischen diesen beiden Fenstern ist sehr gering. Der einzige Unterschied zwischen den beiden besteht darin, dass der schlanke schwarze Linien Rand des Client Bereichs im Fenster links im Fenster auf der rechten Seite fehlt. Der Grund für diese fehlende Grenze ist, dass Sie in den erweiterten Frame integriert ist, aber der Rest des Client Bereichs ist nicht. Damit die erweiterten Frames sichtbar sind, müssen die Regionen, die den einzelnen Seiten des erweiterten Frames zugrunde liegen, Pixeldaten mit einem Alphawert von 0 aufweisen. Der schwarze Rahmen um den Client Bereich verfügt über Pixeldaten, in denen alle Farbwerte (rot, grün, blau und Alpha) auf 0 festgelegt sind. Im restlichen Hintergrund ist der Alpha-Wert nicht auf 0 festgelegt, sodass der restliche Rahmen nicht sichtbar ist.
+Der visuelle Unterschied zwischen diesen beiden Fenstern ist sehr dezent. Der einzige Unterschied zwischen den beiden besteht darin, dass der schlanke schwarze Linienrahmen des Clientbereichs im Fenster auf der linken Seite im Fenster auf der rechten Seite fehlt. Der Grund für diesen fehlenden Rahmen ist, dass er in den erweiterten Frame integriert ist, der Rest des Clientbereichs jedoch nicht. Damit die erweiterten Frames sichtbar sind, müssen die Bereiche, die den Seiten des erweiterten Frames zugrunde liegen, Pixeldaten mit einem Alphawert von 0 aufweisen. Der schwarze Rahmen um den Clientbereich enthält Pixeldaten, in denen alle Farbwerte (rot, grün, blau und alpha) auf 0 festgelegt sind. Im restlichen Hintergrund ist der Alphawert nicht auf 0 festgelegt, sodass der Rest des erweiterten Frames nicht sichtbar ist.
 
-Die einfachste Möglichkeit, um sicherzustellen, dass die erweiterten Frames sichtbar sind, besteht darin, den gesamten Client Bereich schwarz zu zeichnen. Um dies zu erreichen, initialisieren Sie den *hbrbackground* -Member der [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -oder [**WNDCLASSEX**](/windows/win32/api/winuser/ns-winuser-wndclassexa) -Struktur mit dem Handle des Stock Black- \_ Pinsels. Die folgende Abbildung zeigt den gleichen Standard Frame (links) und den erweiterten Frame (rechts), der zuvor gezeigt wurde. Dieses Mal wird jedoch *hbrbackground* auf das schwarze Pinsel handle festgelegt, das \_ von der [**GetStockObject**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) -Funktion abgerufen wird.
+Die einfachste Möglichkeit, sicherzustellen, dass die erweiterten Frames sichtbar sind, besteht darin, den gesamten Clientbereich schwarz zu zeichnen. Um dies zu erreichen, initialisieren Sie den *hbrBackground-Member* Ihrer [**WNDCLASS-**](/windows/win32/api/winuser/ns-winuser-wndclassa) oder [**WNDCLASSEX-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassexa) mit dem Handle des \_ black-Pinsels auf Lager. Die folgende Abbildung zeigt den gleichen Standardframe (links) und den erweiterten Frame (rechts), der zuvor gezeigt wurde. Dieses Mal wird *hbrBackground* jedoch auf das BLACK BRUSH-Handle festgelegt, \_ das von der [**GetStockObject-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) abgerufen wurde.
 
-![Screenshot eines standardmäßigen (linken) und erweiterten Rahmens (rechts) mit schwarzem Hintergrund](images/standard-extended-sidebyside.png)
+![Screenshot eines Standardframes (links) und eines erweiterten Frames (rechts) mit schwarzem Hintergrund](images/standard-extended-sidebyside.png)
 
-## <a name="removing-the-standard-frame"></a>Entfernen des Standard Rahmens
+## <a name="removing-the-standard-frame"></a>Entfernen des Standardframes
 
-Nachdem Sie den Frame der Anwendung erweitert und sichtbar gemacht haben, können Sie den Standard Frame entfernen. Wenn Sie den Standardrahmen entfernen, können Sie die Breite jeder Seite des Frames steuern, anstatt einfach den Standardrahmen zu erweitern.
+Nachdem Sie den Rahmen Ihrer Anwendung erweitert und sichtbar gemacht haben, können Sie den Standardframe entfernen. Wenn Sie den Standardrahmen entfernen, können Sie die Breite der einzelnen Seiten des Rahmens steuern, anstatt einfach den Standardrahmen zu erweitern.
 
-Um den Standardfenster Rahmen zu entfernen, müssen Sie die [**WM- \_ nccalcsize**](/windows/desktop/winmsg/wm-nccalcsize) -Nachricht behandeln, insbesondere wenn der *wParam* -Wert " **true** " und der Rückgabewert "0" ist. Dadurch wird die gesamte Fenster Region als Client Bereich verwendet, wobei der Standardrahmen entfernt wird.
+Um den Standardfensterrahmen zu entfernen, müssen Sie die [**WM \_ NCCALCSIZE-Meldung**](/windows/desktop/winmsg/wm-nccalcsize) behandeln, insbesondere wenn der *wParam-Wert* **TRUE** und der Rückgabewert 0 ist. Auf diese Weise verwendet Ihre Anwendung den gesamten Fensterbereich als Clientbereich, sodass der Standardframe entfernt wird.
 
-Die Ergebnisse der Verarbeitung der [**WM- \_ nccalcsize**](/windows/desktop/winmsg/wm-nccalcsize) -Nachricht sind erst sichtbar, wenn die Größe des Client Bereichs geändert werden muss. Bis zu diesem Zeitpunkt wird die anfängliche Ansicht des Fensters mit dem Standardrahmen und den erweiterten Rahmen angezeigt. Um dies zu umgehen, müssen Sie entweder die Größe des Fensters ändern oder eine Aktion ausführen, die zum Zeitpunkt der Fenster Erstellung eine **WM- \_ nccalcsize** -Nachricht auslöst. Dies kann mithilfe der [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion erreicht werden, um das Fenster zu verschieben und seine Größe zu ändern. Der folgende Code veranschaulicht einen Aufrufen von **SetWindowPos** , der erzwingt, dass eine **WM- \_ nccalcsize** -Nachricht mithilfe der aktuellen Fenster Rechteck Attribute und des das- \_ Flag "framechanout" gesendet wird.
+Die Ergebnisse der Verarbeitung der [**WM \_ NCCALCSIZE-Nachricht**](/windows/desktop/winmsg/wm-nccalcsize) sind erst sichtbar, wenn die Größe der Clientregion geändert werden muss. Bis zu diesem Zeitpunkt wird die anfängliche Ansicht des Fensters mit dem Standardrahmen und erweiterten Rahmen angezeigt. Um dies zu umgehen, müssen Sie entweder die Größe Ihres Fensters ändern oder eine Aktion ausführen, die zum Zeitpunkt der Fenstererstellung eine **WM \_ NCCALCSIZE-Nachricht** initiiert. Dies kann erreicht werden, indem Sie die [**SetWindowPos-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) verwenden, um Ihr Fenster zu verschieben und seine Größe zu ändern. Der folgende Code veranschaulicht einen Aufruf von **SetWindowPos,** der erzwingt, dass eine **WM \_ NCCALCSIZE-Nachricht** mit den aktuellen Fensterrechteckattributen und dem SWP \_ FRAMECHANGED-Flag gesendet wird.
 
 
 ```
@@ -128,34 +128,34 @@ if (message == WM_CREATE)
 
 
 
-In der folgenden Abbildung wird der Standardrahmen (links) und der neu erweiterte Rahmen ohne den Standardrahmen (right) angezeigt.
+Die folgende Abbildung zeigt den Standardframe (links) und den neu erweiterten Frame ohne den Standardframe (rechts).
 
-![Screenshot eines Standardrahmens (links) und benutzerdefiniertem Frame (rechts)](images/standard-custom-sidebyside.png)
+![Screenshot eines Standardframes (links) und eines benutzerdefinierten Frames (rechts)](images/standard-custom-sidebyside.png)
 
-## <a name="drawing-in-the-extended-frame-window"></a>Zeichnen im erweiterten Rahmen Fenster
+## <a name="drawing-in-the-extended-frame-window"></a>Zeichnen im erweiterten Rahmenfenster
 
-Wenn Sie den Standardrahmen entfernen, verlieren Sie das automatische Zeichnen des Anwendungs Symbols und des Titels. Wenn Sie diese wieder der Anwendung hinzufügen möchten, müssen Sie Sie selbst zeichnen. Betrachten Sie hierzu zunächst die Änderung, die in Ihrem Client Bereich aufgetreten ist.
+Wenn Sie den Standardrahmen entfernen, verlieren Sie das automatische Zeichnen des Anwendungssymbols und des Titels. Um diese wieder zu Ihrer Anwendung hinzuzufügen, müssen Sie sie selbst zeichnen. Sehen Sie sich hierzu zunächst die Änderung an Ihrem Clientbereich an.
 
-Wenn Sie den Standard Frame entfernen, besteht der Client Bereich nun aus dem gesamten Fenster, einschließlich des erweiterten Frames. Dies umfasst die Region, in der die Beschriftungs Schaltflächen gezeichnet werden. In der folgenden Seite-an-Seite-Vergleich wird der Client Bereich für den Standard Frame und den benutzerdefinierten erweiterten Frame rot hervorgehoben. Der Client Bereich für das Standardrahmen Fenster (links) ist der schwarze Bereich. Im erweiterten Rahmen Fenster (rechts) ist der Client Bereich das gesamte Fenster.
+Mit dem Entfernen des Standardframes besteht Ihr Clientbereich jetzt aus dem gesamten Fenster, einschließlich des erweiterten Rahmens. Dies schließt den Bereich ein, in dem die Beschriftungsschaltflächen gezeichnet werden. Im folgenden parallelen Vergleich wird der Clientbereich für den Standardframe und den benutzerdefinierten erweiterten Frame rot hervorgehoben. Der Clientbereich für das Standardrahmenfenster (links) ist der schwarze Bereich. Im erweiterten Rahmenfenster (rechts) ist der Clientbereich das gesamte Fenster.
 
-![Screenshot eines rot markierten Client Bereichs in Standard-und benutzerdefiniertem Frame](images/clientarea-sidebyside.png)
+![Screenshot eines rot hervorgehobenen Clientbereichs im standard- und benutzerdefinierten Frame](images/clientarea-sidebyside.png)
 
-Da es sich bei dem gesamten Fenster um Ihren Client Bereich handelt, können Sie einfach die gewünschten Elemente im erweiterten Frame zeichnen. Um der Anwendung einen Titel hinzuzufügen, zeichnen Sie einfach Text in der entsprechenden Region. Die folgende Abbildung zeigt den Text für den Text, der im benutzerdefinierten Beschriftungs Rahmen gezeichnet wurde Der Titel wird mithilfe der [**drawdermetextex**](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) -Funktion gezeichnet. Informationen zum Anzeigen des Codes, der den Titel zeichnet, finden Sie unter [Anhang B: Zeichnen des Beschriftungs Titels](#appendix-b-painting-the-caption-title).
+Da das gesamte Fenster Ihr Clientbereich ist, können Sie einfach die gewünschten Daten im erweiterten Frame zeichnen. Um Ihrer Anwendung einen Titel hinzuzufügen, zeichnen Sie einfach Text in der entsprechenden Region. Die folgende Abbildung zeigt themenspezifischen Text, der auf dem benutzerdefinierten Beschriftungsrahmen gezeichnet wird. Der Titel wird mithilfe der [**DrawThemeTextEx-Funktion**](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) gezeichnet. Informationen zum Anzeigen des Codes, der den Titel zeichnet, finden Sie unter [Anhang B: Zeichnen des Titels der Beschriftung](#appendix-b-painting-the-caption-title).
 
-![Screenshot eines benutzerdefinierten Frames mit dem Titel](images/custom-caption-title.png)
+![Screenshot eines benutzerdefinierten Frames mit Titel](images/custom-caption-title.png)
 
 > [!Note]  
-> Wenn Sie in Ihren benutzerdefinierten Frame zeichnen, gehen Sie beim Platzieren von UI-Steuerelementen vorsichtig vor Da es sich bei dem gesamten Fenster um die Client Region handelt, müssen Sie die Platzierung des UI-Steuer Elements für jede Frame Breite anpassen, wenn Sie nicht im erweiterten Frame angezeigt werden sollen.
+> Achten Sie beim Zeichnen im benutzerdefinierten Frame beim Platzieren von Ui-Steuerelementen auf Vorsicht. Da das gesamte Fenster Ihre Clientregion ist, müssen Sie die Platzierung des Benutzeroberflächensteuerelements für jede Framebreite anpassen, wenn sie nicht auf oder im erweiterten Frame angezeigt werden soll.
 
- 
+ 
 
-## <a name="enabling-hit-testing-for-the-custom-frame"></a>Aktivieren von Treffer Tests für den benutzerdefinierten Frame
+## <a name="enabling-hit-testing-for-the-custom-frame"></a>Aktivieren von Treffertests für den benutzerdefinierten Frame
 
-Ein Nebeneffekt beim Entfernen des Standardrahmens ist der Verlust der standardmäßigen Änderung der Größe und des Verschiebungs Verhaltens. Damit Ihre Anwendung das Standardverhalten des Fensters ordnungsgemäß emulieren kann, müssen Sie eine Logik implementieren, um Treffer Tests für Beschriftungs Schaltflächen und die Größe der Frame Größe/Verschiebung zu verarbeiten
+Ein Nebeneffekt des Entfernens des Standardframes ist der Verlust des standardmäßigen Größenänderungs- und Verlagerungsverhaltens. Damit Ihre Anwendung das Standardfensterverhalten ordnungsgemäß emuliert, müssen Sie Logik implementieren, um Treffertests für Beschriftungsschaltflächen zu verarbeiten und die Größe des Frames zu ändern bzw. zu verschieben.
 
-Für die Treffer Tests der Beschriftungs Schaltfläche stellt DWM die [**DwmDefWindowProc**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) -Funktion bereit. Um die Beschriftungs Schaltflächen in benutzerdefinierten Frame Szenarios ordnungsgemäß zu erreichen, sollten Nachrichten zur Behandlung an **DwmDefWindowProc** übermittelt werden. **DwmDefWindowProc** gibt **true** zurück, wenn eine Nachricht behandelt wird, andernfalls **false** . Wenn die Nachricht nicht von **DwmDefWindowProc** behandelt wird, sollte die Anwendung die Nachricht selbst verarbeiten oder die Nachricht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben.
+Für Treffertests der Beschriftungsschaltfläche stellt DWM die [**DwmDefWindowProc-Funktion**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) bereit. Um die Beschriftungsschaltflächen in benutzerdefinierten Frameszenarien ordnungsgemäß zu testen, sollten Nachrichten zuerst zur Verarbeitung an **DwmDefWindowProc** übergeben werden. **DwmDefWindowProc** gibt **TRUE** zurück, wenn eine Nachricht verarbeitet wird, **andernfalls FALSE.** Wenn die Nachricht nicht von **DwmDefWindowProc** verarbeitet wird, sollte Ihre Anwendung die Nachricht selbst verarbeiten oder die Nachricht an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben.
 
-Wenn Sie die Größe der Frame Größe ändern und verschieben, muss Ihre Anwendung die Treffer Test Logik bereitstellen und Frame-Treffer Testnachrichten verarbeiten. Frame Treffer Test-Meldungen werden über die WM- [**\_ nchittest**](/windows/desktop/inputdev/wm-nchittest) -Nachricht gesendet, auch wenn Ihre Anwendung einen benutzerdefinierten Frame ohne den Standardrahmen erstellt. Der folgende Code veranschaulicht die Verarbeitung der **WM- \_ nchittest** -Nachricht, wenn Sie von [**DwmDefWindowProc**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) nicht behandelt wird. Den Code der aufgerufenen Funktion finden Sie unter `HitTestNCA` [Anhang C: hittestnca-Funktion](#appendix-c-hittestnca-function).
+Zum Ändern und Verschieben der Frame-Größe muss Ihre Anwendung die Treffertestlogik bereitstellen und Frametreffertestmeldungen verarbeiten. Frametreffertestmeldungen werden über die [**WM \_ NCHITTEST-Nachricht**](/windows/desktop/inputdev/wm-nchittest) an Sie gesendet, auch wenn Ihre Anwendung einen benutzerdefinierten Frame ohne den Standardframe erstellt. Der folgende Code veranschaulicht die Verarbeitung der **WM \_ NCHITTEST-Nachricht,** wenn [**dwmDefWindowProc**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) sie nicht verarbeitet. Den Code der aufgerufenen `HitTestNCA` Funktion finden Sie unter Anhang [C: HitTestNCA-Funktion.](#appendix-c-hittestnca-function)
 
 
 ```
@@ -173,9 +173,9 @@ if ((message == WM_NCHITTEST) && (lRet == 0))
 
 
 
-## <a name="appendix-a-sample-window-procedure"></a>Anhang A: Beispiel Fenster Prozedur
+## <a name="appendix-a-sample-window-procedure"></a>Anhang A: Beispielfensterprozedur
 
-Im folgenden Codebeispiel wird eine Fenster Prozedur und die unterstützenden workerfunktionen veranschaulicht, die zum Erstellen einer benutzerdefinierten Frame Anwendung verwendet werden.
+Im folgenden Codebeispiel werden eine Fensterprozedur und die unterstützenden Workerfunktionen veranschaulicht, die zum Erstellen einer benutzerdefinierten Frameanwendung verwendet werden.
 
 
 ```
@@ -350,9 +350,9 @@ LRESULT AppWinProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
 
-## <a name="appendix-b-painting-the-caption-title"></a>Anhang B: Zeichnen des Beschriftungs Titels
+## <a name="appendix-b-painting-the-caption-title"></a>Anhang B: Malen des Titels der Beschriftung
 
-Der folgende Code veranschaulicht, wie Sie einen Beschriftungs Titel für den erweiterten Frame zeichnen. Diese Funktion muss in den [**BeginPaint**](/windows/desktop/api/winuser/nf-winuser-beginpaint) -und [**endpaint**](/windows/desktop/api/winuser/nf-winuser-endpaint) -aufrufen aufgerufen werden.
+Der folgende Code veranschaulicht das Zeichnen eines Titels einer Beschriftung auf dem erweiterten Frame. Diese Funktion muss innerhalb der [**BeginPaint-**](/windows/desktop/api/winuser/nf-winuser-beginpaint) und [**EndPaint-Aufrufe aufgerufen**](/windows/desktop/api/winuser/nf-winuser-endpaint) werden.
 
 
 ```
@@ -436,9 +436,9 @@ void PaintCustomCaption(HWND hWnd, HDC hdc)
 
 
 
-## <a name="appendix-c-hittestnca-function"></a>Anhang C: hittestnca-Funktion
+## <a name="appendix-c-hittestnca-function"></a>Anhang C: HitTestNCA-Funktion
 
-Der folgende Code zeigt die-Funktion, die zum `HitTestNCA` [Aktivieren von Treffer Tests für den benutzerdefinierten Frame](#enabling-hit-testing-for-the-custom-frame)verwendet wird. Diese Funktion verarbeitet die Treffer Test Logik für den [**WM- \_ nchittest**](/windows/desktop/inputdev/wm-nchittest) , wenn [**DwmDefWindowProc**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) die Nachricht nicht verarbeitet.
+Der folgende Code zeigt die `HitTestNCA` Funktion, die in [Aktivieren von Treffertests für den benutzerdefinierten Frame verwendet wird.](#enabling-hit-testing-for-the-custom-frame) Diese Funktion verarbeitet die Treffertestlogik für [**WM \_ NCHITTEST,**](/windows/desktop/inputdev/wm-nchittest) [**wenn DwmDefWindowProc**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmdefwindowproc) die Nachricht nicht verarbeitet.
 
 
 ```
@@ -503,6 +503,6 @@ LRESULT HitTestNCA(HWND hWnd, WPARAM wParam, LPARAM lParam)
 [Übersicht über Desktop Window Manager](dwm-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

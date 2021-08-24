@@ -1,23 +1,23 @@
 ---
-title: NDF-Hilfsklassen Erweiterung mit Übergabe
-description: Diese Hilfsklasse weist eine geringe Integritäts Abhängigkeit von der simplefilehelperclass auf, die im ersten Beispiel programmiert ist.
+title: NDF-Hilfsklassenerweiterung mit Übergabe
+description: Diese Hilfsklasse verfügt über eine Abhängigkeit mit geringer Integrität von der SimpleFileHelperClass, die im ersten Beispiel codiert wurde.
 ms.assetid: b59cd855-c68a-4f5c-b145-ceac395ddcc4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b799b795fcf23cbddf268056e23db433566c8a1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1dab07fb29b8ccebad0263cd3c71cccd83c98ba6d28b8ceb05e4334d61d1059c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802180"
 ---
-# <a name="ndf-helper-class-extension-with-handoff"></a>NDF-Hilfsklassen Erweiterung mit Übergabe
+# <a name="ndf-helper-class-extension-with-handoff"></a>NDF-Hilfsklassenerweiterung mit Übergabe
 
-Diese Hilfsklasse weist eine geringe Integritäts Abhängigkeit von der simplefilehelperclass auf, die im ersten Beispiel programmiert ist.
+Diese Hilfsklasse verfügt über eine Abhängigkeit mit geringer Integrität von der SimpleFileHelperClass, die im ersten Beispiel codiert wurde.
 
-Die zweite handsehilfsobjekte ist eine einfache Pass-Through-Hilfsklasse, die keine Diagnose selbst ausführt. Stattdessen generiert Sie immer eine niedrigere Integritäts Hypothese für simplefilehelperclass. Dies ist nützlich, wenn Sie als Platzhalter für die spätere Hinzufügung der Diagnosefunktion in dieser Hilfsklasse fungieren. Die Übergabe-Hilfsklasse implementiert zwei Methoden.
+Die Zweite Handoff-Hilfsklasse ist eine einfache Pass-Through-Hilfsklasse, die selbst keine Diagnose durchführen kann. Stattdessen wird immer eine niedrigere Integritätshypothese für die SimpleFileHelperClass generiert. Dies ist nützlich, um als Platzhalter für das zukünftige Addition von Diagnosefunktionen in dieser Hilfsklasse zu dienen. Die Handoff-Hilfsklasse implementiert zwei Methoden.
 
-Die lowhealth-Methode wird verwendet, um den Diagnose Status auf DS \_ unbestimmt festzulegen. Dies bewirkt, dass NDF getlowerhypothesen aufruft.
+Mit der LowHealth-Methode wird der Diagnosestatus auf DS \_ INDETERMINATE festgelegt. Dies macht den NDF-Aufruf GetLowerHypotheses.
 
 
 ```C++
@@ -38,7 +38,7 @@ HRESULT HandOffTestHelperClass::LowHealth(
 
 
 
-Im nächsten Schritt wird getlowerhypothesen implementiert, um NDF mitzuteilen, welche Hilfsklasse diagnostiziert werden soll.
+Als Nächstes wird GetLowerHypotheses implementiert, um NDF zu informieren, welche Hilfsklasse zu diagnostizieren ist.
 
 
 ```C++
@@ -124,9 +124,9 @@ Error:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,12 +4,12 @@ ms.assetid: 54303cfc-7737-47d4-a0ea-b5a531c3014d
 title: Drahtlosnetzwerke
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db62638d0db19b43567fc070171f6d1742e81f41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ada423afc39c041b32bbbc252ca117caaca62f466eb9939f56dd51c38b2199f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659410"
 ---
 # <a name="wireless-networking"></a>Drahtlosnetzwerke
 
@@ -17,14 +17,14 @@ ms.locfileid: "106349235"
 
 
 
-| Thema                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                     |
+| Thema                                                                          | Beschreibung                                                                                                                                                                                                                                                                                                     |
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Bluetooth](./bluetooth/bluetooth-start-page.md)<br/>                         | Bluetooth ist ein Industriestandard Protokoll, das drahtlose Konnektivität für Computer, Hand Held Geräte, Mobiltelefone und andere Geräte ermöglicht.<br/>                                                                                                                                                     |
-| [Infrarot Datenzuordnung (irren)](/previous-versions/windows/desktop/irda/irda-start-page)<br/>            | Bei der Infrarot-Datenzuordnung handelt es sich um eine Protokoll Suite, mit der drahtlose Verbindungen zwischen Geräten bereitgestellt werden können. <br/>                                                                                                                                                                      |
-| [Mobiles Breitband](./mbn/mobile-broadband-networks-portal.md)<br/>            | Die mobile Breitband-API wird zum Implementieren der Konnektivität mit Mobilfunknetzen verwendet. Anwendungen sollten nicht direkt mit solchen mobilen Breitbandgeräten kommunizieren. Stattdessen müssen Sie die mobile Breitband-API verwenden. <br/>                                                                                  |
-| [Natives WiFi](./nativewifi/portal.md)<br/>                                         | Die systemeigene drahtlose WLAN-Konfigurationskomponente konfiguriert, stellt eine Verbindung mit Drahtlos Netzwerken her und trennt diese. Native WiFi kann Profile in den Netzwerken speichern, mit denen es in Form von XML-Dokumenten interagiert. <br/>                                                                                   |
-| [Windows Connect jetzt](./wcn/portal.md)<br/>                                   | Windows Connect Now (WCN) ermöglicht mobilen und eingebetteten Geräten, 802,11 Zugriffs Punkten (APS) und Computern, sichere Verbindungen herzustellen und Einstellungen untereinander auszutauschen. WCN ist für den Benutzer "Home" oder "Small Business" konzipiert und stellt einen angemessenen Kompromiss zwischen benutzerfreundlicher und stabiler Sicherheit dar. <br/> |
-| [Windows-Verbindungs-Manager](./wcm/windows-connection-manager-portal.md)<br/> | Der Windows-Verbindungs-Manager (WCM) ermöglicht die Erstellung und Konfiguration von Verbindungs-Manager-Software.<br/>                                                                                                                                                                                              |
+| [Bluetooth](./bluetooth/bluetooth-start-page.md)<br/>                         | Bluetooth ist ein branchenübliches Protokoll, das drahtlose Konnektivität für Computer, Kabelgeräte, Mobiltelefone und andere Geräte ermöglicht.<br/>                                                                                                                                                     |
+| [Infrared Data Association (IrDA)](/previous-versions/windows/desktop/irda/irda-start-page)<br/>            | Infrared Data Association (IrDA) ist eine Protokollsuite, die für drahtlose Konnektivität über die Sichtverbindung zwischen Geräten konzipiert ist. <br/>                                                                                                                                                                      |
+| [Mobiles Breitband](./mbn/mobile-broadband-networks-portal.md)<br/>            | Die mobile Breitband-API wird verwendet, um Konnektivität mit Mobilfunknetzen zu implementieren. Anwendungen sollten nicht direkt mit mobilen Breitbandgeräten kommunizieren. Stattdessen müssen sie die mobile Breitband-API verwenden. <br/>                                                                                  |
+| [Natives WLAN](./nativewifi/portal.md)<br/>                                         | Die automatische Konfigurationskomponente natives Wlan konfiguriert, stellt eine Verbindung mit Drahtlosnetzwerken her und trennt diese. Natives WLAN kann Profile in den Netzwerken speichern, mit der es interagiert, in Form von XML-Dokumenten. <br/>                                                                                   |
+| [Windows-Sofortverbindung](./wcn/portal.md)<br/>                                   | Windows-Sofortverbindung (WCN) ermöglicht es mobilen und eingebetteten Geräten, 802.11-Zugriffspunkten (APs) und Computern, eine sichere Verbindung herzustellen und Einstellungen miteinander auszutauschen. WCN ist für Heim- oder Kleine-Business-Benutzer konzipiert und bietet einen angemessenen Kompromiss zwischen Benutzerfreundlichkeit und robuster Sicherheit. <br/> |
+| [Windows-Verbindungs-Manager](./wcm/windows-connection-manager-portal.md)<br/> | Windows Verbindungs-Manager (WCM) ermöglicht die Erstellung und Konfiguration von Verbindungs-Manager-Software.<br/>                                                                                                                                                                                              |
 
 
 

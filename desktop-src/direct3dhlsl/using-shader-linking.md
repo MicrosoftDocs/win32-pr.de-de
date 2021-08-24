@@ -1,21 +1,21 @@
 ---
-title: Verwenden der Shader-Verknüpfung
-description: Wir zeigen, wie vorkompilierte HLSL-Funktionen erstellt, in Bibliotheken Verpacken und zur Laufzeit mit vollständigen Shadern verknüpft werden.
+title: Verwenden der Shaderverknüpfung
+description: Wir zeigen, wie Sie vorkompilierte HLSL-Funktionen erstellen, in Bibliotheken packen und zur Laufzeit in vollständige Shader verknüpfen.
 ms.assetid: 3A1597FF-F848-415E-BDF8-199C69C05C3B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7528415f1bedb0364a9c4b09126a983222fc42b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e44f382596f3839460943fdbefe5687c4e7b18401db016ad3f834284e994217b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742280"
 ---
-# <a name="using-shader-linking"></a>Verwenden der Shader-Verknüpfung
+# <a name="using-shader-linking"></a>Verwenden der Shaderverknüpfung
 
-Wir zeigen, wie vorkompilierte HLSL-Funktionen erstellt, in Bibliotheken Verpacken und zur Laufzeit mit vollständigen Shadern verknüpft werden. Das Verknüpfen von Shader wird beginnend mit Windows 8.1 unterstützt.
+Wir zeigen, wie Sie vorkompilierte HLSL-Funktionen erstellen, in Bibliotheken packen und zur Laufzeit in vollständige Shader verknüpfen. Die Shaderverknüpfung wird ab Windows 8.1 unterstützt.
 
-**Ziel:** Erfahren Sie, wie Sie Shader-Verknüpfung verwenden.
+**Ziel:** Erfahren Sie, wie Sie Die Shaderverknüpfung verwenden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -25,19 +25,19 @@ Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem 
 
 ## <a name="where-to-go-from-here"></a>Weiterführende Informationen
 
-Siehe auch [HLSL-compilerapis](dx-graphics-d3dcompiler-reference.md).
+Siehe auch [HLSL-Compiler-APIs.](dx-graphics-d3dcompiler-reference.md)
 
 Folgende Inhalte werden behandelt:
 
--   Kompilieren Sie den Shader-Code.
--   Laden des kompilierten Codes in eine Shader-Bibliothek
--   Binden der Ressourcen von Quell Slots an Ziel Slots
--   Erstellen von funktionsverknüpfungs Diagrammen (FLGS) für Shader
--   Verknüpfen von shaderdiagrammen mit einer shaderbibliothek, um ein Shader-BLOB zu erzeugen, das von der Direct3D-Laufzeit verwendet werden kann
+-   Kompilieren des Shadercodes
+-   Laden des kompilierten Codes in eine Shaderbibliothek
+-   Binden der Ressourcen von Quellslots an Zielslots
+-   Erstellen von Funktionsverknüpfungsdiagrammen (FLGs) für Shader
+-   Verknüpfen von Shaderdiagrammen mit einer Shaderbibliothek, um ein Shaderblob zu erzeugen, das von der Direct3D-Runtime verwendet werden kann
 
-Als Nächstes erstellen wir eine shaderbibliothek und binden Ressourcen von Quell Slots an Ziel Slots.
+Als Nächstes erstellen wir eine Shaderbibliothek und binden Ressourcen von Quellslots an Zielslots.
 
-[Verpacken einer shaderbibliothek](pachaging-a-shader-library.md)
+[Verpacken einer Shaderbibliothek](pachaging-a-shader-library.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,6 +52,6 @@ Als Nächstes erstellen wir eine shaderbibliothek und binden Ressourcen von Quel
 [DXGI](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

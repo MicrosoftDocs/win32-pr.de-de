@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse stellt einen Sammlungs Referenz-Export Vorgangs Auftrag dar.
+description: Diese Klasse stellt einen Exportvorgangauftrag für einen Auflistungsverweispunkt dar.
 ms.assetid: c752ff1d-163c-4aa9-b29e-76478a18a08c
 title: Msvm_CollectionReferencePointExportJob-Klasse
 ms.topic: reference
@@ -25,16 +25,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d21fab1519664471bdc2bb5d7102d94cbe3dde1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3baf6405f160401b3a2fe8024861d92560484a513e1c55436f9e149e92daed7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681910"
 ---
-# <a name="msvm_collectionreferencepointexportjob-class"></a>MSVM \_ collectionreferencepointexportjob-Klasse
+# <a name="msvm_collectionreferencepointexportjob-class"></a>Msvm \_ CollectionReferencePointExportJob-Klasse
 
-Diese Klasse stellt einen Sammlungs Referenz-Export Vorgangs Auftrag dar.
+Diese Klasse stellt einen Exportvorgangauftrag für einen Auflistungsverweispunkt dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -61,22 +61,22 @@ class Msvm_CollectionReferencePointExportJob : CIM_ConcreteJob
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ collectionreferencepointexportjob** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CollectionReferencePointExportJob-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ collectionreferencepointexportjob** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ CollectionReferencePointExportJob-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                  | BESCHREIBUNG                                        |
+| Methode                                                                                  | Beschreibung                                        |
 |:----------------------------------------------------------------------------------------|:---------------------------------------------------|
 | [**GetError**](msvm-collectionreferencepointexportjob-geterror.md)                     | Ruft einen Fehler ab.<br/>                     |
-| [**Geterrorex**](msvm-collectionreferencepointexportjob-geterrorex.md)                 | Ruft zusätzliche Fehlerinformationen ab.<br/> |
-| [**RequestStateChange**](msvm-collectionreferencepointexportjob-requeststatechange.md) | Fordert eine Statusänderung an.<br/>                |
+| [**GetErrorEx**](msvm-collectionreferencepointexportjob-geterrorex.md)                 | Ruft zusätzliche Fehlerinformationen ab.<br/> |
+| [**RequestStateChange**](msvm-collectionreferencepointexportjob-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/>                |
 
 
 
@@ -84,27 +84,27 @@ Die **MSVM \_ collectionreferencepointexportjob** -Klasse verfügt über diese M
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ collectionreferencepointexportjob** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CollectionReferencePointExportJob-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Basereferencepointgroupid**
+**BaseReferencePointGroupId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-GUID des Auflistungs Verweis Punkts, der als Basis in "Exportoperation" verwendet wird.
+GUID des Auflistungsverweispunkts, der als Basis in der Exportoperation verwendet wird.
 
 </dd> <dt>
 
-**Abbrechbar**
+**Unkündbarem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -114,52 +114,52 @@ Gibt an, ob der Auftrag abgebrochen werden kann. Der Wert dieser Eigenschaft gar
 
 </dd> <dt>
 
-**Sammlungs**
+**CollectionId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-GUID der virtuellen Computergruppe, für die Protokolldateien wereexportiert werden.
+GUID der VM-Gruppe, für die Protokolldateien exportiert wurden.
 
 </dd> <dt>
 
 **ErrorSummaryDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ Auftrag**](cim-job.md)".**ErrorCode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-Auftrag**](cim-job.md).**ErrorCode**")
 </dt> </dl>
 
-Enthält eine Beschreibung der Fehler Zusammenfassung.
+Enthält eine Fehlerzusammenfassungsbeschreibung.
 
 </dd> <dt>
 
-**Exportdirectory**
+**ExportDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Export Speicherort.
+Exportspeicherort.
 
 </dd> <dt>
 
-**Exportedconfigfilepath**
+**ExportedConfigFilePaths**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -169,10 +169,10 @@ Pfad der exportierten Konfigurationsdatei des virtuellen Computers.
 
 </dd> <dt>
 
-**Exporteddisks**
+**ExportedDisks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -182,28 +182,28 @@ Instanz-IDs von virtuellen Datenträgern, für die Protokolldateien exportiert w
 
 </dd> <dt>
 
-**Exportedgueststatefilepath**
+**ExportedGuestStateFilePaths**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Pfad der exportierten Gast Zustands Datei der virtuellen Maschine.
+Pfad der exportierten Gastzustandsdatei des virtuellen Computers.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Exportedlogfilepath**
+**ExportedLogFilePaths**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -213,42 +213,42 @@ Pfade der Protokolldateien, die exportiert wurden.
 
 </dd> <dt>
 
-**Exportedruntimefilepath**
+**ExportedRuntimeFilePaths**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Pfad der exportierten Lauf Zeit Zustands Datei des virtuellen Computers.
+Pfad der exportierten Laufzeitstatusdatei des virtuellen Computers.
 
 </dd> <dt>
 
-**Referencepointgroupid**
+**ReferencePointGroupId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-GUID des Sammlungs Verweis Punkts, der exportiert wird.
+GUID des Auflistungsverweispunkts, der exportiert wird.
 
 </dd> <dt>
 
-**Virtualmachineid**
+**VirtualMachineId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-GUID der virtuellen Computer, für die der Export Vorgang durchgeführt wurde.
+GUID der virtuellen Computer, für die der Exportvorgang ausgeführt wurde.
 
 </dd> </dl>
 
@@ -258,10 +258,10 @@ GUID der virtuellen Computer, für die der Export Vorgang durchgeführt wurde.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -270,7 +270,7 @@ GUID der virtuellen Computer, für die der Export Vorgang durchgeführt wurde.
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](cim-concretejob.md)
+[**CIM \_ ConcreteJob**](cim-concretejob.md)
 </dt> </dl>
 
  

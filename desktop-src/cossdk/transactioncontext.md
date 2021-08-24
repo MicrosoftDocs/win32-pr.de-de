@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein generisches Transaktions Objekt, das eine Transaktion startet.
+description: Erstellt ein generisches Transaktionsobjekt, das eine Transaktion startet.
 ms.assetid: efaf1468-4973-472f-af91-85957a52b7df
-title: Transaktioncontext-Klasse (Comsvcs. h)
+title: TransactionContext-Klasse (ComSvcs.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,28 +11,28 @@ api_name:
 - TransactionContext
 api_type:
 - COM
-ms.openlocfilehash: 595b5a3192b87420855eb43f1e1e33df37a45c23
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: aa0a90cee2b0af7d5ebe3679dca46aa04c6326fb5fd62fe5f57699d610b9efe8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678150"
 ---
-# <a name="transactioncontext-class"></a>Transaktioncontext-Klasse
+# <a name="transactioncontext-class"></a>TransactionContext-Klasse
 
-Erstellt ein generisches Transaktions Objekt, das eine Transaktion startet. Indem Sie die Methoden dieser Klasse aufrufen, können Sie die Arbeit mehrerer COM-Objekte in einer einzelnen Transaktion verfassen und die Transaktion explizit Committe oder Abbrechen.
+Erstellt ein generisches Transaktionsobjekt, das eine Transaktion startet. Durch Aufrufen der Methoden dieser Klasse können Sie die Arbeit mehrerer COM-Objekte in einer einzelnen Transaktion zusammenstellen und die Transaktion explizit committen oder abbrechen.
 
 ## <a name="when-to-implement"></a>Gründe für die Implementierung
 
-Diese Klasse wird von com+ implementiert.
+Diese Klasse wird von COM+ implementiert.
 
 
 
 | Anforderung | Wert |
 |------------|----------------------------------------------------|
-| CLSID      | CLSID- \_ Transaktionskontext                          |
-| ProgID     | L "txctx. transaktioncontext"                        |
-| Schnittstellen | [**Itransaktioncontext**](/windows/desktop/api/ComSvcs/nn-comsvcs-itransactioncontext) |
+| CLSID      | CLSID \_ TransactionContext                          |
+| ProgID     | L"TxCTx.TransactionContext"                        |
+| Schnittstellen | [**ITransactionContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-itransactioncontext) |
 
 
 
@@ -40,15 +40,15 @@ Diese Klasse wird von com+ implementiert.
 
 ## <a name="when-to-use"></a>Verwendung
 
-Ein nicht transaktionaler Client verwendet diese Klasse, um eine Transaktion zu starten. Mithilfe der Methoden dieser Klasse kann der Client zusätzliche com-Objekte abrufen, die, wenn Sie für die Teilnahme an einer Transaktion konfiguriert sind, innerhalb der Transaktions Begrenzung des Transaktionskontext Objekts ausgeführt werden. Basierend auf der Geschäftslogik kann der Client den Commit für die Transaktion explizit durchsetzen oder Abbrechen.
+Ein nicht transaktionaler Client verwendet diese Klasse, um eine Transaktion zu starten. Mithilfe der Methoden dieser Klasse kann der Client zusätzliche COM-Objekte aufrufen, die innerhalb der Transaktionsgrenze des Transaktionskontextobjekts ausgeführt werden, wenn sie für die Teilnahme an einer Transaktion konfiguriert sind. Basierend auf seiner Geschäftslogik kann der Client die Transaktion explizit committen oder abbrechen.
 
-Die **transaktioncontext** -Klasse schränkt die Wiederverwendung der Geschäftslogik ein, die die Transaktion steuert. Aus diesem Grund wird empfohlen, dass Objekte, die von der **transaktioncontext** -Klasse instanziiert werden, sparsam verwendet werden.
+Die **TransactionContext-Klasse** schränkt die Wiederverwendung der Geschäftslogik ein, die die Transaktion antreibt. Aus diesem Grund wird empfohlen, objekte, die aus der **TransactionContext-Klasse** instanziiert wurden, nur selten zu verwenden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Objekt zu erstellen, rufen Sie [**IObjectContext:: kreateinstance**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-createinstance)auf.
+Um dieses Objekt zu erstellen, rufen [**Sie IObjectContext::CreateInstance**](/windows/desktop/api/ComSvcs/nf-comsvcs-iobjectcontext-createinstance)auf.
 
-Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-Diensttyp Bibliothek hinzu. Ein transaktioncontext-Objekt kann mithilfe von "COMSVCSLIB. transaktioncontext" als Klassenname deklariert werden.
+Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verweis auf die COM+-Diensttypbibliothek hinzu. Ein TransactionContext-Objekt kann mit "COMSVCSLib.TransactionContext" als Klassenname deklariert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verwei
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>"Comsvcs. h"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>ComSvcs.h</dt> </dl> |
 
 
 
@@ -69,10 +69,10 @@ Um diese Klasse von Microsoft Visual Basic zu verwenden, fügen Sie einen Verwei
 [Konfigurieren von Transaktionen](configuring-transactions.md)
 </dt> <dt>
 
-[**Itransaktioncontext**](/windows/desktop/api/ComSvcs/nn-comsvcs-itransactioncontext)
+[**ITransactionContext**](/windows/desktop/api/ComSvcs/nn-comsvcs-itransactioncontext)
 </dt> <dt>
 
-[**Transaction contextex**](transactioncontextex.md)
+[**TransactionContextEx**](transactioncontextex.md)
 </dt> </dl>
 
  

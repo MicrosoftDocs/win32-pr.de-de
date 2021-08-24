@@ -1,5 +1,5 @@
 ---
-description: Die Win32 \_ -Klasse implementedcategory Association WMI verknüpft eine Komponenten Kategorie und die Component Object Model (com)-Klasse mithilfe ihrer Schnittstellen.
+description: Die \_ WMI-Zuordnungsklasse Win32 ImplementedCategory verknüpft eine Komponentenkategorie und die com-Klasse (Component Object Model) mithilfe ihrer Schnittstellen.
 ms.assetid: 7cf32b50-9ae6-44e5-b364-bc74dea3dc17
 ms.tgt_platform: multiple
 title: Win32_ImplementedCategory-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1d885c8c8e92ea661e06b46f338924355438ff9a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d461dd4e1ac6601b9d088b517ac0592f828782b9e48be2b5d08acd25657d7f48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119699600"
 ---
-# <a name="win32_implementedcategory-class"></a>Win32 \_ implementedcategory-Klasse
+# <a name="win32_implementedcategory-class"></a>Win32 \_ ImplementedCategory-Klasse
 
-Die **Win32-Klasse \_ implementedcategory** Association [WMI](/windows/desktop/WmiSdk/retrieving-a-class) verknüpft eine Komponenten Kategorie und die Component Object Model (com)-Klasse mithilfe ihrer Schnittstellen.
+Die [WMI-Zuordnungsklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ ImplementedCategory** verknüpft eine Komponentenkategorie und die com-Klasse (Component Object Model) mithilfe ihrer Schnittstellen.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,45 +42,45 @@ class Win32_ImplementedCategory
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ implementedcategory** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ImplementedCategory-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ implementedcategory** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ImplementedCategory-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Kategorie**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ componentcategory**
+Datentyp: **Win32 \_ ComponentCategory**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ componentcategory")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ComponentCategory")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die von der com-Klasse verwendete Komponenten Kategorie darstellt.
+Verweis auf die -Instanz, die die von der COM-Klasse verwendete Komponentenkategorie darstellt.
 
 </dd> <dt>
 
 **Komponente**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ classiccomclass**
+Datentyp: **Win32 \_ ClassicCOMClass**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ classiccomclass")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ClassicCOMClass")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die com-Klasse unter Verwendung der zugeordneten Kategorie darstellt.
+Verweis auf die -Instanz, die die COM-Klasse mithilfe der zugeordneten Kategorie darstellt.
 
 </dd> </dl>
 
@@ -92,8 +92,8 @@ Verweis auf die-Instanz, die die com-Klasse unter Verwendung der zugeordneten Ka
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

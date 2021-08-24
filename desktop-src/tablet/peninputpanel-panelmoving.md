@@ -1,21 +1,21 @@
 ---
-description: Veraltet. Der "tzinputpanel" wurde durch den Text Eingabe Panel (Tip) ersetzt. Tritt auf, wenn das Objekt "pinputpanel" verschoben wird.
+description: Veraltet. PenInputPanel wurde durch den Texteingabebereich (TIP) ersetzt. Tritt ein, wenn das PenInputPanel-Objekt verschoben wird.
 ms.assetid: 0c51d875-cef9-4087-b17d-5c5af04f81a5
-title: "\"Pinputpanel. PanelMoving\"-Ereignis (\"msink AUT. h\")"
+title: PenInputPanel.PanelMoving-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7be69e227188739cb656e6a1eb471716e1aa4feb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4a152afdef9fcd10fb92fdec55d9a460faf58ca91536e96c9876203fbad44c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119596599"
 ---
-# <a name="peninputpanelpanelmoving-event"></a>"Pinputpanel. PanelMoving"-Ereignis
+# <a name="peninputpanelpanelmoving-event"></a>PenInputPanel.PanelMoving-Ereignis
 
-Veraltet. Der " [**tzinputpanel**](peninputpanel-class.md) " wurde durch den [Text Eingabe Panel (Tip)](text-input-panel-reference.md)ersetzt.
+Veraltet. Das [**PenInputPanel**](peninputpanel-class.md) wurde durch den [Texteingabebereich (TIP)](text-input-panel-reference.md)ersetzt.
 
-Tritt auf, wenn das Objekt " [**pinputpanel**](peninputpanel-class.md) " verschoben wird.
+Tritt ein, wenn das [**PenInputPanel-Objekt**](peninputpanel-class.md) verschoben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,26 +36,26 @@ HRESULT PanelMoving(
 *Links* \[ in, out\]
 </dt> <dd>
 
-Die neue horizontale bzw. x-Achse, Position des linken Rands des " [**tabinputpanel**](peninputpanel-class.md) "-Objekts in Bildschirm Koordinaten.
+Die neue horizontale Position (x-Achse) des linken Rands des [**PenInputPanel-Objekts**](peninputpanel-class.md) in Bildschirmkoordinaten.
 
 </dd> <dt>
 
-Nach *oben* \[ in, out\]
+*Top* \[ in, out\]
 </dt> <dd>
 
-Die neue vertikale Achse bzw. y-Achse, Position des linken Randes des ""- [**raninputpanel**](peninputpanel-class.md) -Objekts in Bildschirm Koordinaten.
+Die neue vertikale Position (y-Achse) des linken Rands des [**PenInputPanel-Objekts**](peninputpanel-class.md) in Bildschirmkoordinaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **PanelMoving** -Ereignis ist so konzipiert, dass es verwendet wird, um die Position des Stift Eingabe Panels durch Ändern des *linken* und des *oberen* Parameters zu ändern.
+Das **PanelMoving-Ereignis** wurde entwickelt, um die Position des Stifteingabebereichs durch Ändern der Parameter *Left* und *Top* zu ändern.
 
-Die Methoden " [**pveto**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) " und " [**Refresh**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-refresh) " bewirken, dass das Objekt " [**pinputpanel**](peninputpanel-class.md) " seinen automatischen Positions Code aufruft, der ein **PanelMoving** -Ereignis auslöst. Folglich kann das Aufrufen dieser Methoden in einem **PanelMoving** -Handler zu einer rekursiven Endlosschleife führen.
+Die [**Methoden MoveTo**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-moveto) und [**Refresh**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-refresh) bewirken, dass das [**PenInputPanel-Objekt**](peninputpanel-class.md) seinen Automatischpositionierungscode aufruft, der ein **PanelMoving-Ereignis** auslöst. Folglich kann das Aufrufen dieser Methoden innerhalb eines **PanelMoving-Handlers** zu einer rekursiven Endlosschleife führen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Die Methoden " [**pveto**](/windows/desktop/api/peninputpanel/nf-peninputpanel-i
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -74,7 +74,7 @@ Die Methoden " [**pveto**](/windows/desktop/api/peninputpanel/nf-peninputpanel-i
 
 <dl> <dt>
 
-[**"Pendel Panel"**](peninputpanel-class.md)
+[**Peninputpanel**](peninputpanel-class.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe-Methode "muveitem"
-description: Die Methode "muveitem" ändert den Speicherort eines Medien Elements in der Wiedergabeliste.
+title: IWMPPlaylist moveItem-Methode
+description: Die moveItem-Methode ändert die Position eines Medienelements in der Wiedergabeliste.
 ms.assetid: e82c820f-4640-4289-88c1-79a92e520f00
 keywords:
-- Windows-Media Player für die Windows-
-- muveitem-Methode, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, Methode "muveitem"
+- moveItem-Methode Windows Media Player
+- moveItem-Methode Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , moveItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c2d5be745fc3dcf799eb7203e607e493b284b4b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f9f2c4f2aa3d4478a114e405b1b40816fc1697c2c291c272aabc68db3813766d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760660"
 ---
-# <a name="iwmpplaylistmoveitem-method"></a>Iwmpwiedergabe:: muveitem-Methode
+# <a name="iwmpplaylistmoveitem-method"></a>IWMPPlaylist::moveItem-Methode
 
-Die Methode " **muveitem** " ändert den Speicherort eines Medien Elements in der Wiedergabeliste.
+Die **moveItem-Methode** ändert die Position eines Medienelements in der Wiedergabeliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Implements IWMPPlaylist.moveItem
 
 <dl> <dt>
 
-*lindexold* \[ in\]
+*lIndexOld* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der ursprüngliche Index ist.
+Ein **System.Int32,** das der ursprüngliche Index ist.
 
 </dd> <dt>
 
-*lindexnew* \[ in\]
+*lIndexNeu* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der der neue Index ist.
+Eine **System.Int32,die** der neue Index ist.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Ein **System. Int32** -Wert, der der neue Index ist.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Elemente nach dem eingefügten Element werden die Indexnummern um 1 erhöhen.
+Für alle Elemente nach dem eingefügten Element werden die Indexnummern um eins erhöht.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -95,13 +95,13 @@ Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

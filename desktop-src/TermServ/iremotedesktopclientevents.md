@@ -1,11 +1,11 @@
 ---
-title: Iremotedesktopclientevents-Schnittstelle
-description: Stellt Methoden bereit, die Informationen vom Server empfangen, die mit Client Steuerungs Ereignissen verknüpft sind.
+title: IRemoteDesktopClientEvents-Schnittstelle
+description: Stellt Methoden bereit, die Informationen vom Server empfangen, die sich auf Clientsteuerungsereignisse beziehen.
 ms.assetid: CF1DA4C8-94A5-4E6A-AEB7-6F46117E9DF2
 ms.tgt_platform: multiple
 keywords:
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, beschrieben
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,45 +16,45 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7533ee7fea7c522b6129bda06891630c3e5ad15
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8bae11edf7e6c603c534afb75fe5c90bcc868f1e359f1d78748dd94b18b5627e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657070"
 ---
-# <a name="iremotedesktopclientevents-interface"></a>Iremotedesktopclientevents-Schnittstelle
+# <a name="iremotedesktopclientevents-interface"></a>IRemoteDesktopClientEvents-Schnittstelle
 
-Stellt Methoden bereit, die Informationen vom Server empfangen, die mit Client Steuerungs Ereignissen verknüpft sind. Zu den Ereignissen gehören das Herstellen von Verbindungen und trennen von Anforderungen im Vollbildmodus, das erfolgreiche anmelden und Fehlerbedingungen.
+Stellt Methoden bereit, die Informationen vom Server empfangen, die sich auf Clientsteuerungsereignisse beziehen. Zu den Ereignissen gehören Das Verbinden und Trennen, Anforderungen im Vollbildmodus, erfolgreiche Anmeldung und Fehlerbedingungen.
 
 ## <a name="members"></a>Member
 
-Die **iremotedesktopclientevents** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iremotedesktopclientevents** verfügt auch über die folgenden Typen von Membern:
+Die **IRemoteDesktopClientEvents-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IRemoteDesktopClientEvents** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iremotedesktopclientevents** -Schnittstelle verfügt über diese Methoden.
+Die **IRemoteDesktopClientEvents-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                      | BESCHREIBUNG                                                                                                                                                         |
+| Methode                                                                                      | Beschreibung                                                                                                                                                         |
 |:--------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Onadminmessagereceived**](iremotedesktopclientevents-onadminmessagereceived.md)         | Wird aufgerufen, wenn das Client Steuerelement eine administrative Nachricht empfängt. <br/>                                                                                      |
-| [**Onautoreconnected**](iremotedesktopclientevents-onautoreconnected.md)                   | Wird aufgerufen, wenn das Client Steuerelement automatisch eine Verbindung mit einer Remote Sitzung hergestellt hat. <br/>                                                                       |
-| [**Onautoreconnecting**](iremotedesktopclientevents-onautoreconnecting.md)                 | Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung automatisch wiederherzustellen. <br/>                                                  |
-| [**Onconnected**](iremotedesktopclientevents-onconnected.md)                               | Wird aufgerufen, wenn das Client Steuerelement eine Verbindung mit einer Remote Sitzung hergestellt hat.<br/>                                                                                        |
-| [**Verbindung wird hergestellt**](iremotedesktopclientevents-onconnecting.md)                             | Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung herzustellen. <br/>                                                                  |
-| [**Ondialogverworfen**](iremotedesktopclientevents-ondialogdismissed.md)                   | Wird aufgerufen, nachdem ein vom Client Steuerelement angezeigtes Dialogfeld verworfen wurde. <br/>                                                                                 |
-| [**Ondialogdisplay**](iremotedesktopclientevents-ondialogdisplaying.md)                 | Wird aufgerufen, bevor das-Steuerelement ein Dialogfeld anzeigt. <br/>                                                                                                        |
-| [**Nicht getrennt**](iremotedesktopclientevents-ondisconnected.md)                         | Wird aufgerufen, wenn das Client Steuerelement von einer Remote Sitzung getrennt wurde. <br/>                                                                             |
-| [**Onkeycombinationpressed**](iremotedesktopclientevents-onkeycombinationpressed.md)       | Wird aufgerufen, wenn in der Remote Sitzung Sondertasten Kombinationen gedrückt werden. <br/>                                                                                 |
-| [**Onloginabgeschlossene**](iremotedesktopclientevents-onlogincompleted.md)                     | Wird aufgerufen, wenn sich das Client Steuerelement erfolgreich bei einer Remote Sitzung angemeldet hat. <br/>                                                                          |
-| [**Onnetworkstatuschge**](iremotedesktopclientevents-onnetworkstatuschanged.md)         | Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat. <br/>                                                                                                             |
-| [**"Onremotedesktopsizechanged"**](iremotedesktopclientevents-onremotedesktopsizechanged.md) | Wird aufgerufen, wenn sich die Remote Desktop Größe geändert hat. <br/>                                                                                                        |
-| [**Onstatuschge**](iremotedesktopclientevents-onstatuschanged.md)                       | Wird aufgerufen, wenn das Client Steuerelement seinen Status aktualisiert hat. <br/>                                                                                                  |
-| [**Ontouchpointercurrsorverschohe**](iremotedesktopclientevents-ontouchpointercursormoved.md)   | Wird aufgerufen, wenn der Fingerabdruck Cursor verschoben wurde und die [**EventsEnabled**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) -Eigenschaft auf true festgelegt ist. <br/> |
+| [**OnAdminMessageReceived**](iremotedesktopclientevents-onadminmessagereceived.md)         | Wird aufgerufen, wenn das Clientsteuerelement eine Administrative Nachricht empfängt. <br/>                                                                                      |
+| [**OnAutoReconnected**](iremotedesktopclientevents-onautoreconnected.md)                   | Wird aufgerufen, wenn das Clientsteuerelement automatisch wieder eine Verbindung mit einer Remotesitzung hergestellt hat. <br/>                                                                       |
+| [**OnAutoReconnecting**](iremotedesktopclientevents-onautoreconnecting.md)                 | Wird aufgerufen, wenn das Clientsteuerelement versucht, automatisch eine Verbindung mit einer Remotesitzung wiederherzustellen. <br/>                                                  |
+| [**OnConnected**](iremotedesktopclientevents-onconnected.md)                               | Wird aufgerufen, wenn das Clientsteuerelement eine Verbindung mit einer Remotesitzung hergestellt hat.<br/>                                                                                        |
+| [**OnConnecting**](iremotedesktopclientevents-onconnecting.md)                             | Wird aufgerufen, wenn das Clientsteuerelement versucht, eine Verbindung mit einer Remotesitzung herzustellen. <br/>                                                                  |
+| [**OnDialogDismissed**](iremotedesktopclientevents-ondialogdismissed.md)                   | Wird aufgerufen, nachdem ein vom Clientsteuerelement angezeigtes Dialogfeld verworfen wurde. <br/>                                                                                 |
+| [**OnDialogDisplaying**](iremotedesktopclientevents-ondialogdisplaying.md)                 | Wird aufgerufen, bevor das Steuerelement ein Dialogfeld anzeigt. <br/>                                                                                                        |
+| [**OnDisconnected**](iremotedesktopclientevents-ondisconnected.md)                         | Wird aufgerufen, wenn das Clientsteuerelement von einer Remotesitzung getrennt wurde. <br/>                                                                             |
+| [**OnKeyCombinationPressed**](iremotedesktopclientevents-onkeycombinationpressed.md)       | Wird aufgerufen, wenn in der Remotesitzung spezielle Tastenkombinationen gedrückt werden. <br/>                                                                                 |
+| [**OnLoginCompleted**](iremotedesktopclientevents-onlogincompleted.md)                     | Wird aufgerufen, wenn das Clientsteuerelement erfolgreich bei einer Remotesitzung angemeldet wurde. <br/>                                                                          |
+| [**OnNetworkStatusChanged**](iremotedesktopclientevents-onnetworkstatuschanged.md)         | Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat. <br/>                                                                                                             |
+| [**OnRemoteDesktopSizeChanged**](iremotedesktopclientevents-onremotedesktopsizechanged.md) | Wird aufgerufen, wenn sich die Größe des Remotedesktops geändert hat. <br/>                                                                                                        |
+| [**OnStatusChanged**](iremotedesktopclientevents-onstatuschanged.md)                       | Wird aufgerufen, wenn das Clientsteuerelement seinen Status aktualisiert hat. <br/>                                                                                                  |
+| [**OnTouchPointerCursorMoved**](iremotedesktopclientevents-ontouchpointercursormoved.md)   | Wird aufgerufen, wenn der Touchzeigercursor verschoben wurde und die [**EventsEnabled-Eigenschaft**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) auf TRUE festgelegt ist. <br/> |
 
 
 
@@ -70,8 +70,8 @@ Die **iremotedesktopclientevents** -Schnittstelle verfügt über diese Methoden.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| CLSID<br/>                    | CLSID \_ Remotedesktopclient ist als EAB16C5D-EED1-4E95-868B-0FBA1B42C092 definiert.<br/>       |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| CLSID<br/>                    | CLSID \_ RemoteDesktopClient ist als EAB16C5D-EED1-4E95-868B-0FBA1B42C092 definiert.<br/>       |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -79,7 +79,7 @@ Die **iremotedesktopclientevents** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[Remotedesktop ActiveX-Steuerelement Verweis](remote-desktop-activex-control-reference.md)
+[referenz zum Remotedesktop ActiveX-Steuerelement](remote-desktop-activex-control-reference.md)
 </dt> </dl>
 
  

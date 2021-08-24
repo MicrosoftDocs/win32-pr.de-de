@@ -1,9 +1,9 @@
 ---
-title: Devicearrival-Ereignis
-description: Tritt auf, wenn der Liste der Geräte, die von der cacheddevices-Methode zurückgegeben werden, ein neues Gerät hinzugefügt wird.
+title: DeviceAvaval-Ereignis
+description: Tritt ein, wenn ein neues Gerät der Liste der Geräte hinzugefügt wird, die von der CachedDevices-Methode zurückgegeben werden.
 ms.assetid: C7CB49AE-C05F-4A2A-8A30-4B4BB7C7D9D2
 keywords:
-- Devicearrival-Ereignis Medien-Streaming-API
+- Media Streaming-API für DevicePolicyval-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79fbdd68ae6c77c6a0f3e7bbd3cf976b5d056987
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ed65c2b1c37eb91f9bf0a0c060fb76b85cd1f5b3d06b6ff1ab795ec89a0db6bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721210"
 ---
-# <a name="devicearrival-event"></a>Devicearrival-Ereignis
+# <a name="devicearrival-event"></a>DeviceAvaval-Ereignis
 
-Tritt auf, wenn der Liste der Geräte, die von der [**cacheddevices**](idevicecontroller-cacheddevices.md) -Methode zurückgegeben werden, ein neues Gerät hinzugefügt wird.
+Tritt ein, wenn ein neues Gerät der Liste der Geräte hinzugefügt wird, die von der [**CachedDevices-Methode**](idevicecontroller-cacheddevices.md) zurückgegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,16 +34,16 @@ void DeviceArrival();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Benachrichtigungen von diesem Ereignis zu behandeln, registrieren Sie eine [**DeviceControllerFinderHandler**](/previous-versions/windows/desktop/legacy/hh828843(v=vs.85)) -Ereignishandlerfunktion mithilfe der [**Add \_ devicearrival**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-idevicecontroller-add_devicearrival) -Methode. Um die Registrierung des Ereignis Handlers aufzuheben, verwenden Sie die [**Remove \_ devicearrival**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-idevicecontroller-remove_devicearrival) -Methode.
+Um Benachrichtigungen von diesem Ereignis zu behandeln, registrieren Sie eine [**DeviceControllerHandler-Ereignishandlerfunktion**](/previous-versions/windows/desktop/legacy/hh828843(v=vs.85)) mithilfe der [**Add Device \_ Handler-Methode.**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-idevicecontroller-add_devicearrival) Um die Registrierung des Ereignishandlers aufzuheben, verwenden Sie die [**\_ Remove Device Ausdrückungsmethode.**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-idevicecontroller-remove_devicearrival)
 
- 
+ 
 
- 
+ 

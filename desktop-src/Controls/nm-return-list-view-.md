@@ -1,9 +1,9 @@
 ---
-title: NM_RETURN (Listenansicht) Benachrichtigungs Code (kommstrg. h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass das Steuerelement den Eingabefokus besitzt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_RETURN -Benachrichtigungscode (Listenansicht) (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass das Steuerelement den Eingabefokus besitzt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 21a8d308-d747-4020-8925-d982234bcf81
 keywords:
-- NM_RETURN (Listenansicht) Windows-Steuerelemente für Benachrichtigungs Code
+- NM_RETURN -Benachrichtigungscode (Listenansicht) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b221189ced0e351f088493f00fa7b8849717668
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d230315d09bf56a7a139b5cb089cdcd177bf21128f2407859e1c010abc6d6766
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119816370"
 ---
-# <a name="nm_return-list-view-notification-code"></a>NM \_ Rückgabe (Listenansicht) Benachrichtigungs Code
+# <a name="nm_return-list-view-notification-code"></a>NM \_ RETURN-Benachrichtigungscode (Listenansicht)
 
-Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass das Steuerelement den Eingabefokus besitzt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass das Steuerelement den Eingabefokus besitzt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ NM_RETURN
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

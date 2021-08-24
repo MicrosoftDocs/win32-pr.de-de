@@ -1,9 +1,9 @@
 ---
-title: TB_GETIDEALSIZE Meldung (kommstrg. h)
+title: TB_GETIDEALSIZE Meldung (Commctrl.h)
 description: Ruft die ideale Größe der Symbolleiste ab.
 ms.assetid: d3b5ea4d-fd80-4f07-be4f-89b53a8bdf4d
 keywords:
-- Windows-Steuerelemente für TB_GETIDEALSIZE Meldung
+- TB_GETIDEALSIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a59b8701a4f4debcfb8e43f37068e7e7a4ef4f11
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1844f3ae4200c1120f784c03e5f80d2df4457319cf81e12c88ce0ed84525117d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119816310"
 ---
-# <a name="tb_getidealsize-message"></a>TB- \_ getidealsize-Nachricht
+# <a name="tb_getidealsize-message"></a>TB \_ GETIDEALSIZE-Nachricht
 
 Ruft die ideale Größe der Symbolleiste ab.
 
@@ -30,18 +30,18 @@ Ruft die ideale Größe der Symbolleiste ab.
 <dl> <dt>
 
 *wParam* 
-</dt> <dd>Ein **boolescher** Wert, der angibt, ob die ideale Höhe oder Breite der Symbolleiste abgerufen wird. Verwenden Sie " **true** ", um die ideale Höhe abzurufen, " **false** ", um die ideale Breite abzurufen.</dd> <dt>
+</dt> <dd>Eine **BOOL,** die angibt, ob die ideale Höhe oder Breite der Symbolleiste abgerufen werden soll. Verwenden Sie **TRUE,** um die ideale Höhe abzurufen, **FALSE,** um die ideale Breite abzurufen.</dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Größen**](/previous-versions//dd145106(v=vs.85)) Struktur, die die Höhe oder Breite empfängt, bei der alle Schaltflächen angezeigt werden. Wenn *wParam* den Wert **true** hat, ist nur der **CY** -Member (Height) gültig. Wenn *wParam* den Wert **false** hat, ist nur der **CX** -Member (Width) gültig.
+Zeiger auf eine [**SIZE-Struktur,**](/previous-versions//dd145106(v=vs.85)) die die Höhe oder Breite empfängt, an der alle Schaltflächen angezeigt werden. Wenn *wParam* **TRUE** ist, ist nur das **Cy-Element** (Höhe) gültig. Wenn *wParam* **FALSE** ist, ist nur der **cx-Member** (Breite) gültig.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

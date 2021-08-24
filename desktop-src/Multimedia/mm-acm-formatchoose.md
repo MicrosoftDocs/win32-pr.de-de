@@ -1,9 +1,9 @@
 ---
-title: MM_ACM_FORMATCHOOSE Meldung (MSACM. h)
-description: Die mm \_ ACM \_ formatchoose-Meldung benachrichtigt eine acmformatchoose-Dialog Hook-Funktion, bevor ein Element zu einem der drei Dropdown-Listenfelder hinzugefügt wird.
+title: MM_ACM_FORMATCHOOSE (Msacm.h)
+description: Die Meldung MM ACM FORMATCHOOSE benachrichtigt eine \_ acmFormatChoose-Dialoghookfunktion, bevor einem der drei \_ Dropdownlistenfelder ein Element hinzugefügt wird.
 ms.assetid: f77e41c6-14e9-45c0-971e-4d6325145f1c
 keywords:
-- MM_ACM_FORMATCHOOSE-Nachricht (Multimedia)
+- MM_ACM_FORMATCHOOSE von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 35808e06521cbd83d07f8d6c799779a16f50236b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cceaa67bc0ce4ee922b48d1cff20eb2bf6414f93506dcc70ccd6e0e912211544
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119782960"
 ---
-# <a name="mm_acm_formatchoose-message"></a>MM- \_ ACM \_ formatchoose-Meldung
+# <a name="mm_acm_formatchoose-message"></a>MM \_ ACM \_ FORMATCHOOSE-Meldung
 
-Die **mm \_ ACM \_ formatchoose** -Meldung benachrichtigt eine [**acmformatchoose**](/windows/desktop/api/Msacm/nf-msacm-acmformatchoose) -Dialog Hook-Funktion, bevor ein Element zu einem der drei Dropdown-Listenfelder hinzugefügt wird. Diese Meldung ermöglicht es einer Anwendung, die auf der Benutzeroberfläche verfügbare Auswahl weiter anzupassen.
+Die **Meldung MM \_ ACM \_ FORMATCHOOSE** benachrichtigt eine [**acmFormatChoose-Dialoghookfunktion,**](/windows/desktop/api/Msacm/nf-msacm-acmformatchoose) bevor einem der drei Dropdownlistenfelder ein Element hinzugefügt wird. Diese Meldung ermöglicht einer Anwendung, die über die Benutzeroberfläche verfügbare Auswahl weiter anzupassen.
 
 
 ```C++
@@ -38,20 +38,20 @@ lParam = (LONG) lCustom
 
 <dl> <dt>
 
-<span id="wDropDown"></span><span id="wdropdown"></span><span id="WDROPDOWN"></span>*wdropdown*
+<span id="wDropDown"></span><span id="wdropdown"></span><span id="WDROPDOWN"></span>*wDropDown*
 </dt> <dd>
 
-Dropdown-Listenfeld, das initialisiert wird, und ein Vorgang zum Überprüfen oder hinzufügen.
+Das dropdown-Listenfeld, das initialisiert wird, und ein Überprüfungs- oder Add-Vorgang.
 
 
 
 | Anforderung | Wert |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| formatchoose \_ Custom \_ Verify    | Der *LPARAM* -Parameter ist ein Zeiger auf eine [**WaveFormatEx**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) -Struktur, die dem Dropdown-Listenfeld benutzerdefinierter Name hinzugefügt wird.                                                                                                   |
-| formatchoose- \_ Format \_ Hinzufügen       | Der *LPARAM* -Parameter ist ein Zeiger auf einen Puffer, der dem Dropdown-Listenfeld Format eine [**WaveFormatEx**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) -Struktur zuweist. Die Anwendung muss die Format Struktur kopieren, die in diesen Puffer eingefügt werden soll. |
-| formatchoose- \_ Format \_ überprüfen    | Der *LPARAM* -Parameter ist ein Zeiger auf eine [**WaveFormatEx**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) -Struktur, die dem Dropdown-Listenfeld Format hinzugefügt wird.                                                                                                        |
-| Formattag \_ Formattag \_ Hinzufügen    | Der *LPARAM* -Parameter ist ein Zeiger auf eine Variable, die ein Waveform-audioformattag akzeptiert, das dem Dropdown-Listenfeld Formattag hinzugefügt wird.                                                                                             |
-| formatchoose \_ Formattag \_ Verify | Der *LPARAM* -Parameter ist ein Waveform-audioformattag, das im Dropdown-Listenfeld Formattag aufgeführt wird.                                                                                                                                     |
+| FORMATCHOOSE \_ CUSTOM \_ VERIFY    | Der *lParam-Parameter* ist ein Zeiger auf eine [**WAVEFORMATEX-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) die dem benutzerdefinierten Dropdownlistenfeld Name hinzugefügt werden soll.                                                                                                   |
+| FORMATCHOOSE \_ FORMAT \_ HINZUFÜGEN       | Der *lParam-Parameter* ist ein Zeiger auf einen Puffer, der eine [**WAVEFORMATEX-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) akzeptiert, die dem Dropdown-Listenfeld Format hinzugefügt werden soll. Die Anwendung muss die Formatstruktur kopieren, die diesem Puffer hinzugefügt werden soll. |
+| FORMATCHOOSE \_ FORMAT \_ VERIFY    | Der *lParam-Parameter* ist ein Zeiger auf eine [**WAVEFORMATEX-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-waveformatex) die dem Dropdownlistenfeld Format hinzugefügt werden soll.                                                                                                        |
+| FORMATCHOOSE \_ FORMATTAG \_ ADD    | Der *lParam-Parameter* ist ein Zeiger auf eine Variable, die ein Waveform-Audio-Formattag akzeptiert, das dem Dropdownlistenfeld Formattag hinzugefügt werden soll.                                                                                             |
+| FORMATCHOOSE \_ FORMATTAG \_ VERIFY | Der *lParam-Parameter* ist ein Waveform-Audio-Formattag, das im Dropdown-Listenfeld Formattag aufgeführt werden soll.                                                                                                                                     |
 
 
 
@@ -59,24 +59,24 @@ Dropdown-Listenfeld, das initialisiert wird, und ein Vorgang zum Überprüfen od
 
 </dd> <dt>
 
-<span id="lCustom"></span><span id="lcustom"></span><span id="LCUSTOM"></span>*lcustom*
+<span id="lCustom"></span><span id="lcustom"></span><span id="LCUSTOM"></span>*lCustom*
 </dt> <dd>
 
-Der Wert, der durch das im **wParam** -Parameter angegebene ListBox-Element definiert wird.
+Der Wert, der durch das im **wParam-Parameter angegebene Listenfeld definiert** wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn eine Anwendung diese Nachricht behandelt, andernfalls " **false** ".
+Gibt **TRUE zurück,** wenn eine Anwendung diese Meldung verarbeitet, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung den Vorgang zum Hinzufügen des filterchoose- \_ Formats verarbeitet \_ , wird die Größe des in *LPARAM* angegebenen Speicherpuffers aus der [**acmmetrics**](/windows/desktop/api/Msacm/nf-msacm-acmmetrics) -Funktion bestimmt.
+Wenn die Anwendung den VORGANG FILTERCHOOSE FORMAT ADD verarbeitet, wird die Größe des in lParam bereitgestellten Speicherpuffers von der \_ \_ [**acmMetrics-Funktion**](/windows/desktop/api/Msacm/nf-msacm-acmmetrics) bestimmt. 
 
-Wenn Ihre Anwendung einen Verifizierungs Vorgang verarbeitet, kann Sie verhindern, dass das Dialogfeld diese Auswahl auflistet, indem Sie die **SetWindowLong** -Funktion aufruft, wobei *nIndex* auf DWL \_ msgresult und *lnewlong* auf **false** festgelegt ist (in einen **Long** -Datentyp umgewandelt). Damit das Dialogfeld diese Auswahl auflisten kann, wird diese Funktion aufgerufen, wenn *lnewlong* auf **true** festgelegt ist.
+Wenn Ihre Anwendung einen Überprüfungsvorgang verarbeitet, kann sie verhindern, dass das Dialogfeld diese Auswahl auflistet, indem die **SetWindowLong-Funktion** aufgerufen wird, bei der *nIndex* auf DWL \_ MSGRESULT und *lNewLong* auf **FALSE** festgelegt ist (in einen **LONG-Datentyp** cast). Damit das Dialogfeld diese Auswahl auflisten kann, rufen Sie diese Funktion auf, und *legen Sie lNewLong* auf **TRUE fest.**
 
-Wenn Ihre Anwendung einen Add-Vorgang verarbeitet, kann Sie angeben, dass keine weiteren Ergänzungen erforderlich sind, indem Sie die **SetWindowLong** -Funktion aufrufen, wobei *nIndex* auf DWL \_ msgresult und *lnewlong* auf **false** festgelegt ist (in einen **Long** -Datentyp umgewandelt). Um anzugeben, dass weitere Ergänzungen erforderlich sind, können Sie diese Funktion mit " *lnewlong* " auf " **true**" setzen.
+Wenn Ihre Anwendung einen Add-Vorgang verarbeitet, kann dies darauf hindeuten, dass keine weiteren Ergänzungen erforderlich sind, indem die **SetWindowLong-Funktion** aufgerufen wird, bei der *nIndex* auf DWL \_ MSGRESULT und *lNewLong* auf **FALSE** festgelegt ist (in einen **LONG-Datentyp** cast). Um anzugeben, dass weitere Ergänzungen erforderlich sind, rufen Sie diese Funktion auf, bei der *lNewLong* auf **TRUE festgelegt ist.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,18 +86,18 @@ Wenn Ihre Anwendung einen Add-Vorgang verarbeitet, kann Sie angeben, dass keine 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>MSACM. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msacm.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Audiokomprimierungs-Manager](audio-compression-manager.md)
 </dt> <dt>
 
-[Audiokomprimierungs Meldungen](audio-compression-messages.md)
+[Audiokomprimierungsmeldungen](audio-compression-messages.md)
 </dt> </dl>
 
  

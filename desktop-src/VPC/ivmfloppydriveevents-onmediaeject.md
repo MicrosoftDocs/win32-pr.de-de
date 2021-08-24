@@ -1,11 +1,11 @@
 ---
-title: Ivmfloppydriveevents onmediaeject-Methode (vpccominterfaces. h)
-description: Empfängt eine Benachrichtigung, dass Medien vom Laufwerk ausworfen wurden. | Ivmfloppydriveevents onmediaeject-Methode (vpccominterfaces. h)
+title: IVMFloppyDriveEvents OnMediaEject-Methode (VPCCOMInterfaces.h)
+description: Empfängt die Benachrichtigung, dass Medien vom Laufwerk ausgesendet wurden. | IVMFloppyDriveEvents OnMediaEject-Methode (VPCCOMInterfaces.h)
 ms.assetid: 3e9c0b5d-8fec-4f34-93d2-c5975403798b
 keywords:
-- Onmediaeject-Methode Virtual PC
-- Onmediaeject-Methode Virtual PC, ivmfloppydriveevents-Schnittstelle
-- Ivmfloppydriveevents Interface Virtual PC, onmediaeject-Methode
+- OnMediaEject-Methode Virtueller PC
+- OnMediaEject-Methode Virtual PC , IVMFloppyDriveEvents-Schnittstelle
+- IVMFloppyDriveEvents-Schnittstelle Virtueller PC, OnMediaEject-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd640f7b8eb143eba4f3b19e984792f2b6779ad6
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e624dcbf028caf58a2f50109789e5f89cd34d1d70c4679333b8b742c3b071ec0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103870055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119653600"
 ---
-# <a name="ivmfloppydriveeventsonmediaeject-method"></a>Ivmfloppydriveevents:: onmediaeject-Methode
+# <a name="ivmfloppydriveeventsonmediaeject-method"></a>IVMFloppyDriveEvents::OnMediaEject-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Empfängt eine Benachrichtigung, dass Medien vom Laufwerk ausworfen wurden.
+Empfängt die Benachrichtigung, dass Medien vom Laufwerk ausgesendet wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ HRESULT OnMediaEject(
 
 <dl> <dt>
 
-*mediapath* \[ in\]
+*mediaPath* \[ In\]
 </dt> <dd>
 
-Der Buchstabe des Host Laufwerks bzw. der Pfad des Disketten Bilds.
+Der Laufwerkbuchstabe des Hosts oder der Pfad zum Diskettenimage.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Medien (ein Disketten Image oder eine Diskette in einem Host Laufwerk) ausgeworfen werden. Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das vmfloppydriveevent \_ onmediaeject-Ereignis zu erhalten, das von [**ivmfloppydrive**](ivmfloppydrive.md)stammt.
+Diese Methode wird aufgerufen, wenn Medien (ein Diskettenimage oder ein Diskettendatenträger auf einem Hostlaufwerk) eingefügt werden. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um Benachrichtigungen über das onMediaEject-Ereignis vmFloppyDriveEvent zu erhalten, das \_ von [**IVMFloppyDrive**](ivmfloppydrive.md)stammt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,12 +65,12 @@ Diese Methode wird aufgerufen, wenn Medien (ein Disketten Image oder eine Disket
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmfloppydriveevents ist als a9ed3401-4e09-4177-86ec-a13bf9fa7d4e definiert.<br/>      |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMFloppyDriveEvents ist als a9ed3401-4e09-4177-86ec-a13bf9fa7d4e definiert.<br/>      |
 
 
 
@@ -78,7 +78,7 @@ Diese Methode wird aufgerufen, wenn Medien (ein Disketten Image oder eine Disket
 
 <dl> <dt>
 
-[**Ivmfloppydriveevents**](ivmfloppydriveevents.md)
+[**IVMFloppyDriveEvents**](ivmfloppydriveevents.md)
 </dt> </dl>
 
  

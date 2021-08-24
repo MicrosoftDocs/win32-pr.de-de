@@ -1,6 +1,6 @@
 ---
-title: Structured Storage Server-Beispiel (StoServe)
-description: Das Structured Storage Server-Tutorial für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses.
+title: Structured Storage Server Sample (StoServe) (Beispiel für strukturierten Storage Server (StoServe))
+description: Das Tutorial zu strukturierten Storage-Servern für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses.
 ms.assetid: 0607c77a-32c0-4b5a-b58d-f5fe56a3f614
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,15 +11,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119661680"
 ---
-# <a name="structured-storage-server-sample-stoserve"></a>Structured Storage Server-Beispiel (StoServe)
+# <a name="structured-storage-server-sample-stoserve"></a>Structured Storage Server Sample (StoServe) (Beispiel für strukturierten Storage Server (StoServe))
 
-Das Structured Storage Server-Tutorial für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses. **StoServe ist** eine DLL, die hauptsächlich als COM-Server vorgesehen ist und sich selbst registriert.
+Das Tutorial zu strukturierten Storage-Servern für StoServe enthält vollständige Informationen und Codebeispiele zum Erstellen eines Modellserverprozesses. **StoServe** ist eine DLL, die in erster Linie als COM-Server vorgesehen ist und ein selbst registrierender In-Process-Server ist.
 
-Die folgenden Abschnitte enthalten die **StoServe-Beispielanweisungen,** Referenzinformationen und Links zum **StoServe-Beispielcode.**
+Die folgenden Abschnitte enthalten die Anweisungen für das **StoServe-Beispiel,** Referenzinformationen und Links zum **StoServe-Beispielcode.**
 
 -   [Übersicht über StoServe](stoserve-overview.md)
 -   [Verwenden von StoServe](using-stoserve.md)
--   [Erstellen und Ausführen des StoServe-Beispiels](create-and-run-stoserve-sample.md)
+-   [Erstellen und Ausführen des Beispiels "StoServe"](create-and-run-stoserve-sample.md)
 
  
 

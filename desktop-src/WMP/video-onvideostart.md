@@ -1,9 +1,9 @@
 ---
-title: Video. onvideostart
-description: Der onvideostart-Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video geladen wird und mit dem Rendering beginnt.
+title: VIDEO.onvideostart
+description: Der onvideostart-Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video geladen wird und mit dem Rendern beginnt.
 ms.assetid: 5569bf1c-cc78-47b7-a6a1-a56511c40276
 keywords:
-- Video. onvideostart-Windows-Media Player
+- VIDEO.onvideostart Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e136209d1ff8d99a021f90ca3db09f669b739c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18362d263047a91e2f71b29ea37676924c0c958e1701ea46bd855ff75d010d93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372766"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761750"
 ---
-# <a name="videoonvideostart"></a>Video. onvideostart
+# <a name="videoonvideostart"></a>VIDEO.onvideostart
 
-Der **onvideostart** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video geladen wird und mit dem Rendering beginnt.
+Der **onvideostart-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn das Video geladen wird und mit dem Rendern beginnt.
 
 ``` syntax
 
@@ -34,15 +34,15 @@ onvideostart
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

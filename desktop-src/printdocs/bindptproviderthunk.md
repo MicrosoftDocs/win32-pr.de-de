@@ -1,7 +1,7 @@
 ---
-description: Öffnet eine Instanz eines Druck Ticket Anbieters.
+description: Öffnet eine Instanz eines Druckticketanbieters.
 ms.assetid: 815cc360-8dcd-4c58-a64d-5d77436a8623
-title: Bindptproviderthunk-Funktion
+title: BindPTProviderThunk-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - prntvpt.dll
-ms.openlocfilehash: bf63fc6faf9d47993fafb97c8d3a1c18d6d6c985
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 460728eac742fb96ca122981a5874408e12e6c8eddd36fc901e70874e5e040c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720230"
 ---
-# <a name="bindptproviderthunk-function"></a>Bindptproviderthunk-Funktion
+# <a name="bindptproviderthunk-function"></a>BindPTProviderThunk-Funktion
 
-\[Diese Funktion wird nicht unterstützt und wird in zukünftigen Versionen von Windows möglicherweise deaktiviert oder gelöscht. [**Ptoperproviderex**](/windows/desktop/api/prntvpt/nf-prntvpt-ptopenproviderex) bietet gleichwertige Funktionen und sollte stattdessen verwendet werden.\]
+\[Diese Funktion wird nicht unterstützt und kann in zukünftigen Versionen von Windows deaktiviert oder gelöscht werden. [**PTOpenProviderEx**](/windows/desktop/api/prntvpt/nf-prntvpt-ptopenproviderex) bietet entsprechende Funktionen und sollte stattdessen verwendet werden.\]
 
-Öffnet eine Instanz eines Druck Ticket Anbieters.
+Öffnet eine Instanz eines Druckticketanbieters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,48 +45,48 @@ HRESULT BindPTProviderThunk(
 
 <dl> <dt>
 
-*pszprintername* \[ in\]
+*pszPrinterName* \[ In\]
 </dt> <dd>
 
-Der vollständige Name einer Druck Warteschlange.
+Der vollständige Name einer Druckwarteschlange.
 
 </dd> <dt>
 
-*MaxVersion* \[ in\]
+*maxVersion* \[ In\]
 </dt> <dd>
 
-Die neueste Version des [Druck Schemas](./printschema.md) , das der Aufrufer unterstützt.
+Die neueste Version des [Druckschemas,](./printschema.md) das der Aufrufer unterstützt.
 
 </dd> <dt>
 
-*präfesversion* \[ in\]
+*prefVersion* \[ In\]
 </dt> <dd>
 
-Die vom Aufrufer angeforderte Version des [Druck Schemas](./printschema.md) .
+Die Vom Aufrufer angeforderte Version des [Druckschemas.](./printschema.md)
 
 </dd> <dt>
 
-*phprovider* \[ vorgenommen\]
+*phProvider* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Handle für den Druck ticketanbieter.
+Ein Zeiger auf ein Handle für den Druckticketanbieter.
 
 </dd> <dt>
 
-*usedversion* \[ vorgenommen\]
+*usedVersion* \[ out\]
 </dt> <dd>
 
-Die Version des [Druck Schemas](./printschema.md) , das der Druck ticketanbieter verwendet.
+Die Version des [Druckschemas,](./printschema.md) das vom Druckticketanbieter verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Wenn die Methode erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Funktion muss der aufrufenden Thread com durch Aufrufen von [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)initialisieren.
+Vor dem Aufrufen dieser Funktion muss der aufrufende Thread COM durch Aufrufen von [**CoInitializeEx initialisieren.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,8 +94,8 @@ Vor dem Aufrufen dieser Funktion muss der aufrufenden Thread com durch Aufrufen 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Prntvpt.dll</dt> </dl> |
 
 
@@ -104,10 +104,10 @@ Vor dem Aufrufen dieser Funktion muss der aufrufenden Thread com durch Aufrufen 
 
 <dl> <dt>
 
-[Druck Schema](./printschema.md)
+[Druckschema](./printschema.md)
 </dt> <dt>
 
-[**Ptopzuproviderex**](/windows/desktop/api/prntvpt/nf-prntvpt-ptopenproviderex)
+[**PTOpenProviderEx**](/windows/desktop/api/prntvpt/nf-prntvpt-ptopenproviderex)
 </dt> <dt>
 
 [Drucken](printdocs-printing.md)

@@ -1,11 +1,11 @@
 ---
-title: MS-KDS-PublicKey-length-Attribut
-description: Die Länge des öffentlichen Schlüssels der geheimen Vereinbarung.
+title: ms-Kds-PublicKey-Length-Attribut
+description: Die Länge des öffentlichen Schlüssels der Geheimvereinbarung.
 ms.assetid: d99e1ad8-1dab-4763-a2d3-ec1ded36788d
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-KDS-PublicKey-length\"-Attribut, AD-Schema"
-- "\"mskds-publickeylength\"-Attribut, AD-Schema"
+- AD-Schema des ms-Kds-PublicKey-Length-Attributs
+- AD-Schema des msKds-PublicKeyLength-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e09630516b45c9400d34f1f0ee66f4eb1fc59eb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 49015468756c2017c759a2f635340d180dd04dd4904a85e6a19ae6e76fa5b3b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762950"
 ---
-# <a name="ms-kds-publickey-length-attribute"></a>MS-KDS-PublicKey-length-Attribut
+# <a name="ms-kds-publickey-length-attribute"></a>ms-Kds-PublicKey-Length-Attribut
 
-Die Länge des öffentlichen Schlüssels der geheimen Vereinbarung.
+Die Länge des öffentlichen Schlüssels der Geheimvereinbarung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-KDS-PublicKey-Länge              |
-| LDAP-Display-Name | mskds-publickeylength                |
+| CN                | ms-Kds-PublicKey-Length              |
+| Ldap-Anzeigename | msKds-PublicKeyLength                |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2173              |
-| System-ID-GUID    | e338f470-39cd-4549-ab5b-f69f9e583fe0 |
+| System-Id-Guid    | e338f470-39cd-4549-ab5b-f69f9e583fe0 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -52,16 +52,16 @@ Die Länge des öffentlichen Schlüssels der geheimen Vereinbarung.
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                  |
 | MAPI-Id                | \-                                                                                                                                                  |
-| System-Only            | False                                                                                                                                               |
-| Ist-einwertig       | Richtig                                                                                                                                                |
-| Ist indiziert             | False                                                                                                                                               |
-| Im globalen Katalog      | False                                                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                        |
+| System-Only            | Falsch                                                                                                                                               |
+| Is-Single-Valued       | Richtig                                                                                                                                                |
+| Ist indiziert             | Falsch                                                                                                                                               |
+| Im globalen Katalog      | Falsch                                                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                        |
 | Range-Lower            | \-                                                                                                                                                  |
 | Range-Upper            | \-                                                                                                                                                  |
 | Search-Flags           | 0x00000280                                                                                                                                          |
 | System-Flags           | 0x00000010                                                                                                                                          |
-| In verwendete Klassen        | [**MS-KDS-Prov-serverconfiguration**](c-mskds-provserverconfiguration.md)<br/> [**MS-KDS-Prov-RootKey**](c-mskds-provrootkey.md)<br/> |
+| In verwendete Klassen        | [**ms-Kds-Prov-ServerConfiguration**](c-mskds-provserverconfiguration.md)<br/> [**ms-Kds-Prov-RootKey**](c-mskds-provrootkey.md)<br/> |
 
 
 

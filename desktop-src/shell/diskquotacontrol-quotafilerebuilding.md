@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab, der angibt, ob die Kontingent Datei für das Volume gerade neu erstellt wird.
+description: Ruft einen booleschen Wert ab, der angibt, ob die Kontingentdatei für das Volume gerade neu erstellt wird.
 ms.assetid: 66a6bafe-bda4-41b3-9207-2ea6b8e63835
-title: Diskquotacontrol. quotafilerebuilding (Eigenschaft)
+title: DiskQuotaControl.QuotaFileRebuilding (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: e06b73e53670a136e53721b4e6bc6b2f635d601b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e90d5d920392b9b518fed619aeb4f8c7b99d830fad9f6f901c59fe6128ca94b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710520"
 ---
-# <a name="diskquotacontrolquotafilerebuilding-property"></a>Diskquotacontrol. quotafilerebuilding (Eigenschaft)
+# <a name="diskquotacontrolquotafilerebuilding-property"></a>DiskQuotaControl.QuotaFileRebuilding (Eigenschaft)
 
-Ruft einen booleschen Wert ab, der angibt, ob die Kontingent Datei für das Volume gerade neu erstellt wird.
+Ruft einen booleschen Wert ab, der angibt, ob die Kontingentdatei für das Volume gerade neu erstellt wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ bQuotaFileRebuilding = DiskQuotaControl.QuotaFileRebuilding
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft wird auf **true** festgelegt, wenn die Kontingent Datei neu erstellt wird, andernfalls **false** .
+Diese Eigenschaft wird auf **TRUE festgelegt,** wenn die Kontingentdatei neu erstellt wird, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Kontingent Datei wird automatisch neu erstellt, wenn Kontingente auf dem System aktiviert sind oder wenn mindestens ein Benutzereintrag zum Löschen markiert ist.
+Die Kontingentdatei wird automatisch neu erstellt, wenn Kontingente auf dem System aktiviert sind oder wenn mindestens ein Benutzereintrag zum Löschen markiert ist.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -51,15 +51,15 @@ Die Kontingent Datei wird automatisch neu erstellt, wenn Kontingente auf dem Sys
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

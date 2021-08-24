@@ -1,7 +1,7 @@
 ---
-description: Zeichenfolge mit breit Zeichen, die den Namen des Filters enthält.
+description: Breitzeichenzeichenfolge, die den Namen des Filters enthält.
 ms.assetid: 7d41990f-aba2-4ea9-9d83-50a99cd0a648
-title: 'Cfactoriytemplate:: m_Name Member (ComBase. h)'
+title: CFactoryTemplate::m_Name-Member (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ea8a6f3ee79ec5a487456e7571928d91fd2da307
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3d78833707384825b6b2c6694b70a62618f9fb6cf40bb16bbd2d329ea725807
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697870"
 ---
-# <a name="cfactorytemplatem_name-member"></a>Cfactoriytemplate:: m- \_ Namensmember
+# <a name="cfactorytemplatem_name-member"></a>CFactoryTemplate::m-Name-Member \_
 
-Zeichenfolge mit breit Zeichen, die den Namen des Filters enthält.
+Breitzeichenzeichenfolge, die den Namen des Filters enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ const WCHAR *m_Name;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ const WCHAR *m_Name;
 
 <dl> <dt>
 
-[**Cfactorytemplate-Klasse**](cfactorytemplate.md)
+[**CFactoryTemplate-Klasse**](cfactorytemplate.md)
 </dt> </dl>
 
  

@@ -47,7 +47,7 @@ HRESULT GetName(
 
 Typ: **WCHAR \***
 
-Ein Zeiger auf eine Zeichenfolge mit Breitzeichen, die den Namen dieser Benutzeridentität empfängt.
+Ein Zeiger auf eine Breitzeichenzeichenfolge, die den Namen dieser Benutzeridentität empfängt.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Ein Zeiger auf eine Zeichenfolge mit Breitzeichen, die den Namen dieser Benutzer
 
 Typ: **ULONG**
 
-Ein -Wert, der die Größe von *pszName* angibt.
+Ein -Wert, der die Größe von *pszName angibt.*
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Ein -Wert, der die Größe von *pszName* angibt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
 | Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
@@ -82,7 +82,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

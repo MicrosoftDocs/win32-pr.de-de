@@ -1,49 +1,49 @@
 ---
-description: Wenn Sie die Registrierung eines Peer namens aufheben, wird ein registrierter Name aus einer PNRP-Cloud (Peer Name Resolution Protocol) entfernt.
+description: Wenn Sie die Registrierung eines Peernamens aufheben, wird ein registrierter Name aus einer PNRP-Cloud (Peer Name Resolution Protocol) entfernt.
 ms.assetid: a451988e-7026-4b3c-a7a3-366f9886aa02
-title: Aufheben der Registrierung eines Peer namens
+title: Aufheben der Registrierung eines Peernamens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd482cc9cfd8c32d7bc95edd00e866e2d87b7a55
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6ee0bd03e881f93321c31dfccd03cc71459b323f1ed356a88f829489c578a80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119675010"
 ---
-# <a name="unregistering-a-peer-name"></a>Aufheben der Registrierung eines Peer namens
+# <a name="unregistering-a-peer-name"></a>Aufheben der Registrierung eines Peernamens
 
-Wenn Sie die Registrierung eines Peer namens aufheben, wird ein registrierter Name aus einer PNRP-Cloud (Peer Name Resolution Protocol) entfernt.
+Wenn Sie die Registrierung eines Peernamens aufheben, wird ein registrierter Name aus einer PNRP-Cloud (Peer Name Resolution Protocol) entfernt.
 
-## <a name="unregistering-a-peer-name"></a>Aufheben der Registrierung eines Peer namens
+## <a name="unregistering-a-peer-name"></a>Aufheben der Registrierung eines Peernamens
 
-Um die Registrierung eines Peer namens aufzuheben, wenden Sie [**wsasetservice**](pnrp-and-wsasetservice.md)an. Der *ESS Operation* -Parameter muss den Wert **rnrservice \_ Delete** aufweisen. Verwenden Sie die Richtlinien in den folgenden Abschnitten dieses Themas, um die erforderlichen Konfigurationen für die **wsasetservice** -Parameter und die [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur vorzunehmen.
+Um die Registrierung eines Peernamens zu aufheben, rufen Sie [**WSASetService**](pnrp-and-wsasetservice.md)auf. Der *essOperation-Parameter* muss den Wert **RNRSERVICE \_ DELETE aufweisen.** Verwenden Sie die Richtlinien in den folgenden Abschnitten dieses Themas, um die erforderlichen Konfigurationen für die **WSASetService-Parameter** und die [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) vorzunehmen.
 
-## <a name="configuring-wsasetservice"></a>Konfigurieren von wsasetservice
+## <a name="configuring-wsasetservice"></a>Konfigurieren von WSASetService
 
-Wenn eine Anwendung [**wsasetservice**](pnrp-and-wsasetservice.md)aufruft, müssen die Parameter entsprechend den folgenden Spezifikationen konfiguriert werden:
+Wenn eine Anwendung [**WSASetService aufruft,**](pnrp-and-wsasetservice.md)müssen die Parameter gemäß den folgenden Spezifikationen konfiguriert werden:
 
--   " *ESS Operation* " muss den Wert " **rnrservice \_ Delete**" aufweisen.
--   *dwFlags* muss NULL (0) sein.
--   *lpqsreginfo* muss auf eine [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur verweisen, die mithilfe der Richtlinien im folgenden Abschnitt dieses Themas konfiguriert werden muss.
+-   *essOperation* muss den Wert **RNRSERVICE \_ DELETE** aufweisen.
+-   *dwFlags* muss null (0) sein.
+-   *lpqsRegInfo* muss auf eine [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) verweisen, die mithilfe der Richtlinien im folgenden Abschnitt dieses Themas konfiguriert werden muss.
 
-## <a name="configuring-wsaqueryset"></a>Konfigurieren von wsaqueryset
+## <a name="configuring-wsaqueryset"></a>Konfigurieren von WSAQUERYSET
 
-Die [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur muss entsprechend den folgenden Spezifikationen konfiguriert werden:
+Die [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) muss gemäß den folgenden Spezifikationen konfiguriert werden:
 
--   **dwSize** muss die Größe der [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur angeben.
--   **lpszserviceinstancename** muss auf den Peernamen verweisen, für den die Registrierung aufgehoben wird.
--   **lpblob** muss auf eine [**pnrpinfo**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) -Struktur zeigen.
--   **lpcsabuffer** muss auf die Adressliste zeigen.
+-   **dwSize** muss die Größe der [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) angeben.
+-   **lpszServiceInstanceName** muss auf den Peernamen verweisen, der nicht registriert wird.
+-   **lpBlob** muss auf eine [**PNRPINFO-Struktur**](/windows/desktop/api/Pnrpns/ns-pnrpns-pnrpinfo_v1) zeigen.
+-   **lpcsaBuffer** muss auf die Adressliste verweisen.
 
 > [!Note]  
-> Die übrigen Elemente werden in [**PNRP und wsasetservice**](pnrp-and-wsasetservice.md)beschrieben.
+> Die verbleibenden Member werden in [**PNRP und WSASetService**](pnrp-and-wsasetservice.md)beschrieben.
 
  
 
-## <a name="an-example-of-unregistering-a-peer-name"></a>Ein Beispiel für die Aufhebung der Registrierung eines Peer namens
+## <a name="an-example-of-unregistering-a-peer-name"></a>Beispiel für das Aufheben der Registrierung eines Peernamens
 
-Der folgende Code Ausschnitt zeigt, wie Sie die Registrierung eines Peer namens aufheben, indem Sie beim Aufrufen von [**wsasetservice**](pnrp-and-wsasetservice.md) mithilfe der [**wsaqueryset**](pnrp-and-wsaqueryset.md) -Struktur die korrekten Informationen bereitstellen.
+Der folgende Codeausschnitt zeigt, wie Sie die Registrierung eines Peernamens aufheben, indem Sie beim Aufrufen von [**WSASetService**](pnrp-and-wsasetservice.md) mithilfe der [**WSAQUERYSET-Struktur**](pnrp-and-wsaqueryset.md) die richtigen Informationen bereitstellen.
 
 
 ```C++

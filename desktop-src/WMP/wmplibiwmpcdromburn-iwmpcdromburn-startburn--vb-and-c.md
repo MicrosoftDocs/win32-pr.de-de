@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn-startburn-Methode
-description: Die startburn-Methode verbrennt die CD.
+title: IWMPC über die start Ausweichmethode
+description: Die startMethod-Methode lädt die CD.
 ms.assetid: e852c011-5f54-469f-aead-37fa711ef876
 keywords:
-- startburn-Methode (Windows Media Player)
-- startburn-Methode, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, startburn-Methode
+- startMethod Windows Media Player
+- startMethod Windows Media Player , IWMPCnutzeroberfläche
+- IWMPC über die Schnittstelle Windows Media Player , startFace-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe185d8993286e4be3935b43f6c1e9757623309d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7806501a619d6172d9f1ce0715045c822b30326c2b59c268f432708ea13923ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761070"
 ---
-# <a name="iwmpcdromburnstartburn-method"></a>Iwmpcdromburn:: startburn-Methode
+# <a name="iwmpcdromburnstartburn-method"></a>IWMPC über die Methode "IWMPCakuSy"::start Auswendung
 
-Die **startburn** -Methode verbrennt die CD.
+Die **startMethod-Methode** lädt die CD.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,11 +53,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufruf dieser Methode sollte " **burnstate** " den Wert "wmpbsready" oder "wmpbsbeendet" aufweisen.
+Der Wert von **burnstate** sollte wmpbsReady oder wmpbsStopped sein, bevor diese Methode aufgerufen wird.
 
-Diese Methode funktioniert nicht, wenn das CD-Laufwerk kein Brenner ist, oder wenn die Festplatte im Laufwerk nicht beschreibbar ist. Verwenden Sie **IsAvailable** , um zu bestimmen, ob eine CD gebrannt werden kann.
+Diese Methode funktioniert nicht, wenn das CD-Laufwerk kein Burner ist oder wenn der Datenträger auf dem Laufwerk nicht beschreibbar ist. Verwenden Sie **isAvailable,** um zu bestimmen, ob eine CD verbraucht werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,16 +75,16 @@ Diese Methode funktioniert nicht, wenn das CD-Laufwerk kein Brenner ist, oder we
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCorpora Überl-Schnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromburn. burnstate (VB und c#)**](wmplibiwmpcdromburn-iwmpcdromburn-burnstate--vb-and-c.md)
+[**IWMPC csvOrpora.burnState (VB und C#)**](wmplibiwmpcdromburn-iwmpcdromburn-burnstate--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromburn. IsAvailable (VB und c#)**](wmplibiwmpcdromburn-iwmpcdromburn-isavailable--vb-and-c.md)
+[**IWMPC csvOrpora.isAvailable (VB und C#)**](wmplibiwmpcdromburn-iwmpcdromburn-isavailable--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromburn. stopburn (VB und c#)**](wmplibiwmpcdromburn-iwmpcdromburn-stopburn-iwmpcdromburn.md)
+[**IWMPC csvOrpora.stop Auswendung (VB und C#)**](wmplibiwmpcdromburn-iwmpcdromburn-stopburn-iwmpcdromburn.md)
 </dt> </dl>
 
  

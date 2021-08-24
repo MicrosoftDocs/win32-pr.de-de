@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETSTYLES Meldung (VFW. h)
-description: Die mciwndm \_ getStyles-Nachricht Ruft die Flags ab, die die aktuellen, von einem Fenster verwendeten mciwnd-Fenster Stile angeben. Sie können diese Nachricht explizit oder mit dem mciwndgetstyles-Makro senden.
+title: MCIWNDM_GETSTYLES Nachricht (Vfw.h)
+description: Die MCIWNDM \_ GETSTYLES-Nachricht ruft die Flags ab, die die aktuellen MCIWnd-Fensterstile angeben, die von einem Fenster verwendet werden. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetStyles-Makros senden.
 ms.assetid: cd34ba05-47cb-488e-a6c6-4ec1c0d25de8
 keywords:
-- MCIWNDM_GETSTYLES-Nachricht (Multimedia)
+- MCIWNDM_GETSTYLES nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 983e37291977edf2473c2b603cd5b40792fb7989
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 036bd687c5d7828fade23994b9141488354added5ee38d38bafc9c5ce22a954c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783290"
 ---
-# <a name="mciwndm_getstyles-message"></a>Mciwndm \_ getStyles-Nachricht
+# <a name="mciwndm_getstyles-message"></a>MCIWNDM \_ GETSTYLES-Nachricht
 
-Die **mciwndm \_ getStyles** -Nachricht Ruft die Flags ab, die die aktuellen, von einem Fenster verwendeten mciwnd-Fenster Stile angeben. Sie können diese Nachricht explizit oder mit dem [**mciwndgetstyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles) -Makro senden.
+Die **MCIWNDM \_ GETSTYLES-Nachricht** ruft die Flags ab, die die aktuellen MCIWnd-Fensterstile angeben, die von einem Fenster verwendet werden. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetStyles-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert zurück, der die aktuellen Stile des mciwnd-Fensters darstellt. Der Rückgabewert ist der bitweise OR-Operator der mciwnd-Fenster Stile (mciwndf-Flags).
+Gibt einen Wert zurück, der die aktuellen Stile des MCIWnd-Fensters darstellt. Der Rückgabewert ist der bitweise OR-Operator der MCIWnd-Fensterstile (MCIWNDF-Flags).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt einen Wert zurück, der die aktuellen Stile des mciwnd-Fensters darstellt. 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,7 +54,7 @@ Gibt einen Wert zurück, der die aktuellen Stile des mciwnd-Fensters darstellt. 
 
 <dl> <dt>
 
-[**Mciwndgetstyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles)
+[**MCIWndGetStyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles)
 </dt> </dl>
 
  

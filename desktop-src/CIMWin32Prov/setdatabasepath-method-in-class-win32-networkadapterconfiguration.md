@@ -1,8 +1,8 @@
 ---
-description: Mit der statischen Methode SetDatabasePath WMI-Klasse wird der Pfad zu den standardmäßigen Internet Datenbankdateien (Hosts, LMHOSTS, Netzwerke und Protokolle) festgelegt.
+description: Die statische WMI-Klasse SetDatabasePath legt den Pfad zu den Standardmäßig-Internetdatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS) fest.
 ms.assetid: 373fef0f-9cdf-4785-8d73-3f00bbd60ae2
 ms.tgt_platform: multiple
-title: SetDatabasePath-Methode der Win32_NetworkAdapterConfiguration-Klasse
+title: SetDatabasePath-Methode der Win32_NetworkAdapterConfiguration Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b66a9979ec97d4ceda16acad6488d3b84d5d3a54
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 24fd4802afd29d11c6c5f11a4f86f72cc818a5413cdd8f12f298f46a85a63b9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119760130"
 ---
-# <a name="setdatabasepath-method-of-the-win32_networkadapterconfiguration-class"></a>SetDatabasePath-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="setdatabasepath-method-of-the-win32_networkadapterconfiguration-class"></a>SetDatabasePath-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Mit der statischen Methode **SetDatabasePath** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) wird der Pfad zu den standardmäßigen Internet Datenbankdateien (Hosts, LMHOSTS, Netzwerke und Protokolle) festgelegt.
+Die statische [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) **SetDatabasePath** legt den Pfad zu den Standardmäßig-Internetdatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS) fest.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 SetDatabasePath(
 
 <dl> <dt>
 
-*DatabasePath* \[ in\]
+*DatabasePath* \[ In\]
 </dt> <dd>
 
-Gültiger Dateipfad zu standardmäßigen Internet Datenbankdateien (Hosts, LMHOSTS, Netzwerke und Protokolle), die von der Windows Sockets-Schnittstelle verwendet werden.
+Gültiger Dateipfad zu Internet-Standarddatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS), die von der Windows Sockets-Schnittstelle verwendet werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, eine andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -73,16 +73,16 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt.**
+**Methode wird auf dieser Plattform nicht unterstützt**
 </dt> <dd>
 
 64
 
-Die Methode wird auf dieser Plattform nicht unterstützt.
+Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 65
@@ -91,7 +91,7 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**Ungültige Subnetzmaske.**
+**Ungültige Subnetzmaske**
 </dt> <dd>
 
 66
@@ -100,12 +100,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.**
+**Fehler beim Verarbeiten einer instanz, die zurückgegeben wurde**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.
+Fehler beim Verarbeiten einer instanz, die zurückgegeben wurde.
 
 </dd> <dt>
 
@@ -118,7 +118,7 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben.**
+**Mehr als fünf Gateways angegeben**
 </dt> <dd>
 
 69
@@ -145,21 +145,21 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.**
+**Fehler beim Zugreifen auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
 
-Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
+Fehler beim Zugreifen auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
-**Ungültiger Domänen Name**
+**Ungültiger Domänenname**
 </dt> <dd>
 
 73
 
-Ungültiger Domänen Name.
+Ungültiger Domänenname.
 
 </dd> <dt>
 
@@ -172,12 +172,12 @@ Ungültiger Hostname.
 
 </dd> <dt>
 
-**Kein primärer/sekundärer WINS-Server definiert.**
+**Kein primärer/sekundärer WINS-Server definiert**
 </dt> <dd>
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server
+Kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -190,7 +190,7 @@ Ungültige Datei.
 
 </dd> <dt>
 
-**Ungültiger Systempfad.**
+**Ungültiger Systempfad**
 </dt> <dd>
 
 77
@@ -217,7 +217,7 @@ Ungültiger Sicherheitsparameter.
 
 </dd> <dt>
 
-**Der TCP/IP-Dienst kann nicht konfiguriert werden.**
+**TCP/IP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 80
@@ -226,93 +226,93 @@ Der TCP/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert werden.**
+**DHCP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 81
 
-Der DHCP-Dienst kann nicht konfiguriert werden.
+DHCP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden.**
+**DHCP-Lease kann nicht verlängert werden**
 </dt> <dd>
 
 82
 
-Die DHCP-Lease kann nicht erneuert werden.
+DHCP-Lease kann nicht erneuert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht freigegeben werden**
+**DHCP-Lease kann nicht veröffentlicht werden**
 </dt> <dd>
 
 83
 
-DHCP-Lease kann nicht freigegeben werden.
+DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP ist auf dem Adapter nicht aktiviert.**
+**IP-Adresse auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
 
-Die IP ist auf dem Adapter nicht aktiviert.
+DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert.**
+**IPX auf Adapter nicht aktiviert**
 </dt> <dd>
 
 85
 
-IPX ist auf dem Adapter nicht aktiviert.
+IPX ist auf adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer.**
+**Frame-/Netzwerknummer-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Fehler bei Frame-oder Netzwerk Nummern Begrenzungen.
+Frame- oder Netzwerknummer-Begrenzungsfehler.
 
 </dd> <dt>
 
-**Ungültiger Frame-Typ**
+**Ungültiger Frametyp**
 </dt> <dd>
 
 87
 
-Ungültiger Rahmentyp.
+Ungültiger Frametyp.
 
 </dd> <dt>
 
-**Ungültige Netzwerk Nummer**
+**Ungültige Netzwerknummer**
 </dt> <dd>
 
 88
 
-Ungültige Netzwerk Nummer.
+Ungültige Netzwerknummer.
 
 </dd> <dt>
 
-**Doppelte Netzwerk Nummer**
+**Doppelte Netzwerknummer**
 </dt> <dd>
 
 89
 
-Doppelte Netzwerk Nummer.
+Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb des gültigen Bereichs**
+**Parameter über grenzenlose Grenzen**
 </dt> <dd>
 
 90
 
-Der Parameter liegt außerhalb des gültigen Bereichs.
+Parameter außerhalb der Grenzen.
 
 </dd> <dt>
 
@@ -321,11 +321,11 @@ Der Parameter liegt außerhalb des gültigen Bereichs.
 
 91
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht genügend Arbeitsspeicher**
+**Nicht genügend Arbeitsspeicher.**
 </dt> <dd>
 
 92
@@ -334,7 +334,7 @@ Nicht genügend Arbeitsspeicher.
 
 </dd> <dt>
 
-**Ist bereits vorhanden.**
+**Bereits vorhanden**
 </dt> <dd>
 
 93
@@ -343,16 +343,16 @@ Ist bereits vorhanden.
 
 </dd> <dt>
 
-**Der Pfad, die Datei oder das Objekt wurde nicht gefunden.**
+**Pfad, Datei oder Objekt nicht gefunden**
 </dt> <dd>
 
 94
 
-Der Pfad, die Datei oder das Objekt wurde nicht gefunden.
+Pfad, Datei oder Objekt nicht gefunden.
 
 </dd> <dt>
 
-**Der Dienst kann nicht benachrichtigt werden.**
+**Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 95
@@ -361,7 +361,7 @@ Der Dienst kann nicht benachrichtigt werden.
 
 </dd> <dt>
 
-**DNS-Dienst kann nicht benachrichtigt werden.**
+**DNS-Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 96
@@ -375,7 +375,7 @@ Der DNS-Dienst kann nicht benachrichtigt werden.
 
 97
 
-Schnittstelle nicht konfigurierbar.
+Die Schnittstelle kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -388,12 +388,12 @@ Nicht alle DHCP-Leases konnten freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert.**
+**DHCP für Adapter nicht aktiviert**
 </dt> <dd>
 
 100
 
-DHCP ist auf dem Adapter nicht aktiviert.
+DHCP für Adapter nicht aktiviert.
 
 </dd> <dt>
 
@@ -404,13 +404,13 @@ DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird von der Windows Sockets-Schnittstelle verwendet. Der Standardpfad lautet% systemroot% \\ system32 \\ Drivers \\ .
+Diese Methode wird von der Windows Sockets-Schnittstelle verwendet. Der Standardpfad ist %SystemRoot% \\ \\ system32-Treiber. \\
 
 ## <a name="examples"></a>Beispiele
 
-Im Beispiel [Ändern des Daten Bank Pfads für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/94bfa42f-f6a3-482f-8d5a-5445a2475bee) VBScript in der TechNet Gallery wird **SetDatabasePath** verwendet, um den Pfad zu den standardmäßigen Internet Datenbankdateien (Hosts, LMHOSTS, Netzwerke, Protokolle) festzulegen, die von der Windows Sockets-Schnittstelle verwendet werden.
+Im VbScript-Beispiel [Ändern des Datenbankpfads für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/94bfa42f-f6a3-482f-8d5a-5445a2475bee) im TechNet-Katalog wird **SetDatabasePath** verwendet, um den Pfad auf die standardmäßigen Internetdatenbankdateien (HOSTS, LMHOSTS, NETZWERKE, PROTOKOLLE) festzulegen, die von der Windows Sockets-Schnittstelle verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -420,29 +420,29 @@ Im Beispiel [Ändern des Daten Bank Pfads für alle Netzwerkadapter](https://Gal
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

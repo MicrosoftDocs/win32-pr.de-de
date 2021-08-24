@@ -1,9 +1,9 @@
 ---
-title: EM_SETCARETINDEX Meldung (kommstrg. h)
-description: Legt den NULL basierten Indexwert der Position der Einfügemarke in einem Bearbeitungs Steuerelement fest.
+title: EM_SETCARETINDEX (CommCtrl.h)
+description: Legt den nullbasierten Indexwert der Position des Caretwerts in einem Bearbeitungssteuerpunkt fest.
 ms.assetid: 5cb7ff1e-18e8-49c8-8072-872cf32b18b0
 keywords:
-- Windows-Steuerelemente für EM_SETCARETINDEX Meldung
+- EM_SETCARETINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 10/19/2018
-ms.openlocfilehash: ea0c49ebad91532e82dc7e96facb62f38b2abfa1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8b80202ed5294828441abcfa66a914514e31944902e52926de7fa3af92794b46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799960"
 ---
-# <a name="em_setcaretindex-message"></a>EM \_ setcaretindex-Meldung
+# <a name="em_setcaretindex-message"></a>EM \_ SETCARETINDEX-Meldung
 
-Legt den NULL basierten Indexwert der Position der Einfügemarke in einem Bearbeitungs Steuerelement fest.
+Legt den nullbasierten Indexwert der Position des Caretwerts in einem Bearbeitungssteuerpunkt fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt den NULL basierten Indexwert der Position der Einfügemarke in einem Bearbe
 *wParam* 
 </dt> <dd>
 
-Der neue null basierte Indexwert der Position der Einfügemarke.
+Der neue nullbasierte Indexwert der Position des Caretpunkts.
 
 </dd> <dt>
 
@@ -43,9 +43,9 @@ Der neue null basierte Indexwert der Position der Einfügemarke.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Index außerhalb des Bereichs des Texts in einem Bearbeitungs Steuerelement liegt, wird der Index so angepasst, dass er in den Textbereich passt.
+Wenn der Index außerhalb des Bereichs des Texts in einem Bearbeitungssteuerfeld liegt, wird der Index so angepasst, dass er in den Textbereich passt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn der Index außerhalb des Bereichs des Texts in einem Bearbeitungs Steuerele
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10, 1809 \[ Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2019 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur 1809 \[ Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2019-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 
@@ -63,10 +63,10 @@ Wenn der Index außerhalb des Bereichs des Texts in einem Bearbeitungs Steuerele
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getcaretindex**](em-getcaretindex.md)
+[**EM \_ GETCARETINDEX**](em-getcaretindex.md)
 </dt> </dl>
 
  

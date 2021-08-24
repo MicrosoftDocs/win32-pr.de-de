@@ -1,11 +1,11 @@
 ---
 title: ms-DS-TDO-Egress-BL-Attribut
-description: Backlink zu TDO Egress Regellink für Objekt.
+description: Link backlink to TDO Egress rules (Backlink zu TDO-Regeln) für das Objekt.
 ms.assetid: 3bf7a566-4e9b-45b4-b408-329f21b914db
 ms.tgt_platform: multiple
 keywords:
-- MS-DS-TDO-Egress-BL-Attribut-AD-Schema
-- MSDS-TDOEgressBL-Attribut-AD-Schema
+- AD-Schema des ms-DS-TDO-Egress-BL-Attributs
+- AD-Schema des msDS-TDOEgressBL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119763390"
 ---
 # <a name="ms-ds-tdo-egress-bl-attribute"></a>ms-DS-TDO-Egress-BL-Attribut
 
-Backlink zu TDO Egress Regellink für Objekt.
+Link backlink to TDO Egress rules (Backlink zu TDO-Regeln) für das Objekt.
 
 
 
@@ -35,7 +35,7 @@ Backlink zu TDO Egress Regellink für Objekt.
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2194                 |
-| System-ID-GUID    | d5006229-9913-2242-8b17-83761d1e0e5b    |
+| System-Id-Guid    | d5006229-9913-2242-8b17-83761d1e0e5b    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -53,7 +53,7 @@ Backlink zu TDO Egress Regellink für Objekt.
 | Link-ID                | 2193                            |
 | MAPI-Id                | \-                              |
 | System-Only            | True                            |
-| Ist einwertig       | False                           |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

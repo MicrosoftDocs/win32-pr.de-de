@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_RETRIEVECOLUMN. ColumnID-Eigenschaft.
-title: JET_RETRIEVECOLUMN. ColumnID-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_RETRIEVECOLUMN.columnid-Eigenschaft.'
+title: JET_RETRIEVECOLUMN.columnid-Eigenschaft
 TOCTitle: 'columnid property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RETRIEVECOLUMN.columnid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_retrievecolumn.columnid(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ec74f88fdd87916b5a19987f8eee531606ef0fc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c14150a068a2d8925b3230f4218943a18a7b0a50492058c20dae1e5749a9f044
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119719880"
 ---
-# <a name="jet_retrievecolumncolumnid-property"></a>JET_RETRIEVECOLUMN. ColumnID-Eigenschaft
+# <a name="jet_retrievecolumncolumnid-property"></a>JET_RETRIEVECOLUMN.columnid-Eigenschaft
 
-Ruft den Spalten Bezeichner für die abzurufende Spalte ab oder legt ihn fest.
+Ruft den Spaltenbezeichner für die abzurufende Spalte ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_COLUMNID columnid { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RETRIEVECOLUMN-Klasse](./jet-retrievecolumn-class.md)
 
-[Mitglieder JET_RETRIEVECOLUMN](./jet-retrievecolumn-members.md)
+[JET_RETRIEVECOLUMN Mitglieder](./jet-retrievecolumn-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

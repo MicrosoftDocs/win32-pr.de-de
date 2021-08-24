@@ -1,25 +1,25 @@
 ---
-title: NDF-Hilfsklassen Erweiterung
-description: In diesem Beispiel wird veranschaulicht, wie NDF-Diagnose-und Reparaturfunktionen implementiert werden.
+title: NDF-Hilfsklassenerweiterung
+description: In diesem Beispiel wird veranschaulicht, wie NDF-Diagnose- und Reparaturfunktionen implementiert werden.
 ms.assetid: 18e66d09-e565-4b86-8bc3-600f2159a4bd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5b2a0dbcba29449b8f21850fa0669f8154dcbd7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b1fd8fd7683aded0573034ffec56097256093c61e2bb0f9ec2e7bcd353ff8d3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802110"
 ---
-# <a name="ndf-helper-class-extension"></a>NDF-Hilfsklassen Erweiterung
+# <a name="ndf-helper-class-extension"></a>NDF-Hilfsklassenerweiterung
 
-In diesem Beispiel wird veranschaulicht, wie NDF-Diagnose-und Reparaturfunktionen implementiert werden. In diesem Beispiel muss eine wichtige Konfigurationsdatei vorhanden sein, damit das Systemfehler frei bleibt. Dementsprechend besteht das Problem darin, zu bestimmen, ob die Datei vorhanden ist. Wenn dies nicht der Fall ist, ist das Systemfehler Haft, und das Problem wird von der NDF diagnostiziert. Die Reparatur besteht darin, die fehlende Datei neu zu erstellen.
+In diesem Beispiel wird veranschaulicht, wie NDF-Diagnose- und Reparaturfunktionen implementiert werden. In diesem Beispiel muss eine kritische Konfigurationsdatei vorhanden sein, damit das System fehlerfrei bleibt. Entsprechend besteht das Problem in der Ermittlung, ob die Datei vorhanden ist. Wenn dies nicht der Problem ist, ist das System fehlerhaft, und das Problem wird von NDF diagnostiziert. Bei der Reparatur wird die fehlende Datei neu erstellt.
 
-Um das Problem zu diagnostizieren und zu beheben, müssen Sie vier [**inetdiaghelper**](/windows/desktop/api/ndhelper/nn-ndhelper-inetdiaghelper) -Methoden verwenden: [**Initialize**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-initialize), [**lowhealth**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth), [**getrepirren Info**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo)und [**Repair**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-repair).
+Um das Problem zu diagnostizieren und zu beheben, müssen vier [**INetDiagHelper-Methoden**](/windows/desktop/api/ndhelper/nn-ndhelper-inetdiaghelper) verwendet werden: [**Initialize**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-initialize), [**LowHealth**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth), [**GetRepairInfo**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo)und [**Repair**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-repair).
 
 ## <a name="initializing-the-helper-class"></a>Initialisieren der Hilfsklasse
 
-Initialisieren Sie den Namen der zu suchenden Datei, und rufen Sie ihn ab. Der Dateiname wird während der Diagnose als hilfsattribut mit dem Namen "Dateiname" übermittelt.
+Initialisieren Sie den Namen der datei, die sie suchen soll, und rufen Sie sie ab. Dieser Dateiname wird während der Diagnose als Hilfsattribut namens "Dateiname" übergeben.
 
 
 ```C++
@@ -85,9 +85,9 @@ HRESULT SimpleFileHelperClass::Initialize(
 
 
 
-## <a name="checking-on-the-files-existence"></a>Es wird geprüft, ob die Datei vorhanden ist.
+## <a name="checking-on-the-files-existence"></a>Überprüfen des Vorhandenseins der Datei
 
-Die [**lowhealth**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth) -Methode wird verwendet, um das vorhanden sein der Datei zu überprüfen. Wenn die Datei vorhanden ist, wird der Diagnose Status **auf \_ Abgelehnte DS** festgelegt, was darauf hinweist, dass nichts falsch ist. Wenn die Datei nicht gefunden werden kann, wird der Diagnose Status auf **DS \_ bestätigt** festgelegt.
+Die [**LowHealth-Methode**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth) wird verwendet, um das Vorhandensein der Datei zu überprüfen. Wenn die Datei vorhanden ist, wird der Diagnosestatus auf **DS \_ REJECTED** festgelegt, was darauf hinweist, dass nichts falsch ist. Wenn die Datei nicht gefunden werden kann, wird der Diagnosestatus auf **DS \_ CONFIRMED festgelegt.**
 
 
 ```C++
@@ -138,7 +138,7 @@ HRESULT SimpleFileHelperClass::LowHealth(
 
 ## <a name="determining-the-repair-action"></a>Bestimmen der Reparaturaktion
 
-Wenn [**lowhealth**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth) **DS \_ bestätigt** zurückgibt, wird [**getrepirren Info**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo) implementiert, um die entsprechende Reparaturaktion zu bestimmen. In diesem Beispiel bedeutet dies, dass die Datei neu erstellt wird.
+Wenn [**LowHealth**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-lowhealth) **DS \_ CONFIRMED zurückgibt,** [**wird GetRepairInfo**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo) implementiert, um die entsprechende Reparaturaktion zu bestimmen. In diesem Beispiel bedeutet dies, dass die Datei neu erstellt wird.
 
 
 ```C++
@@ -206,7 +206,7 @@ Error:
 
 ## <a name="repairing-the-problem"></a>Beheben des Problems
 
-Dem Benutzer werden die von [**getrepaarinfo**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo)zurückgegebenen Korrektur Optionen angezeigt, es sei denn, es gibt nur eine Reparaturoption. in diesem Fall wird er automatisch ausgeführt. Die [**Repair**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-repair) -Methode wird mit der entsprechenden [**repairiinfo**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) -Struktur aufgerufen, damit die Konfigurationsdatei wieder hergestellt werden kann.
+Dem Benutzer werden die fix-Optionen angezeigt, die von [**GetRepairInfo**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-getrepairinfo)zurückgegeben werden, es sei denn, es gibt nur eine Reparaturoption. In diesem Fall wird sie automatisch ausgeführt. Die [**Repair-Methode**](/windows/desktop/api/ndhelper/nf-ndhelper-inetdiaghelper-repair) wird mit der entsprechenden [**RepairInfo-Struktur**](/windows/win32/api/ndattrib/ns-ndattrib-repairinfo) aufgerufen, damit die Konfigurationsdatei wiederhergestellt werden kann.
 
 
 ```C++
@@ -247,9 +247,9 @@ SimpleFileHelperClass::Repair(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

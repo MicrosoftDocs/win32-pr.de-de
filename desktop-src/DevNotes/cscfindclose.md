@@ -1,5 +1,5 @@
 ---
-description: Schließt ein Suchhandle.
+description: Schließt ein Suchhand handle.
 ms.assetid: 2e6a547f-26a7-401a-b1e4-3f085ce82729
 title: CSCFindClose-Funktion
 ms.topic: reference
@@ -24,7 +24,7 @@ ms.locfileid: "119758720"
 
 \[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden.\]
 
-Schließt ein Suchhandle.
+Schließt ein Suchhand handle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ BOOL WINAPI CSCFindClose(
 *hFind* \[ In\]
 </dt> <dd>
 
-Ein von der [**CSCFindFirstFileW-Funktion**](cscfindfirstfilew.md) zurückgegebenes Suchhandle.
+Ein Suchhandle, das von der [**CSCFindFirstFileW-Funktion zurückgegeben**](cscfindfirstfilew.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird **FALSE** zurückgegeben.
+Diese Funktion gibt **TRUE zurück,** wenn sie erfolgreich ist. andernfalls wird **FALSE zurückgegeben.**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -66,7 +66,7 @@ Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müs
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
