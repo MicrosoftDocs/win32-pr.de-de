@@ -1,9 +1,9 @@
 ---
-title: SourceFilter-Element
-description: Das SourceFilter-Element enthält Elemente, die Elemente aus einer Bibliothek auswählen.
+title: sourceFilter-Element
+description: Das sourceFilter-Element enthält Elemente, die Elemente aus einer Bibliothek auswählen.
 ms.assetid: c961990f-8c57-448d-b4dc-dcfe70300e5a
 keywords:
-- Windows Media Player SourceFilter-Element
+- sourceFilter-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cb43a9577c5fe8857b63067db5be90d314037b84
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 14294f227e5ebe29e422d60a95734f7b93207880ea82ef9fb70ed3f7cf6dac4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763270"
 ---
-# <a name="sourcefilter-element"></a>SourceFilter-Element
+# <a name="sourcefilter-element"></a>sourceFilter-Element
 
-Das **SourceFilter** -Element enthält Elemente, die Elemente aus einer Bibliothek auswählen.
+Das **sourceFilter-Element** enthält Elemente, die Elemente aus einer Bibliothek auswählen.
 
 ``` syntax
 <sourceFilter
@@ -37,26 +37,26 @@ Das **SourceFilter** -Element enthält Elemente, die Elemente aus einer Biblioth
 
 <dl> <dt>
 
-<span id="type"></span><span id="TYPE"></span>**Sorte**
+<span id="type"></span><span id="TYPE"></span>**Typ**
 </dt> <dd>
 
-Der Typ des Filter Objekts. Es sind keine vordefinierten Werte für dieses Attribut vorhanden.
+Der Typ des Filterobjekts. Es gibt keine vordefinierten Werte für dieses Attribut.
 
 </dd> <dt>
 
-<span id="id__required______________"></span><span id="ID__REQUIRED______________"></span>**ID** (erforderlich) 
+<span id="id__required______________"></span><span id="ID__REQUIRED______________"></span>**id** (erforderlich) 
 </dt> <dd>
 
-Der GUID, der das Quell Filter Objekt eindeutig identifiziert. Die Methoden des Quell Filter Objekts werden aufgerufen, um die im **SourceFilter** -Element enthaltenen **fragmentelemente** zu interpretieren.
+Die GUID, die das Quellfilterobjekt eindeutig identifiziert. Die Methoden des Quellfilterobjekts werden aufgerufen, um die im **sourceFilter-Element** enthaltenen **Fragmentelemente** zu interpretieren.
 
 
 
-| Wert                                  | BESCHREIBUNG                                              |
+| Wert                                  | Beschreibung                                              |
 |----------------------------------------|----------------------------------------------------------|
-| {4202947a-a563-4b05-A754-a1b4b5989849} | Der GUID für den Quell Filter "Musik in meiner Bibliothek".    |
-| {B2D9BDDC-8E49-444B-9BA4-193ABF9C7870} | Der GUID für den Quell Filter "Video in der Bibliothek".    |
-| {CC823400-A8E4-4081-B073-D3B6D952FE69} | Der GUID für den Quell Filter "Bilder in der Bibliothek". |
-| {E5415A66-7763-4BDE-B97F-5557CA73C303} | Der GUID für den Quell Filter "Fernsehsendungen in meiner Bibliothek". |
+| {4202947A-A563-4B05-A754-A1B4B5989849} | Die GUID für den Quellfilter "Musik in meiner Bibliothek".    |
+| {B2D9BDDC-8E49-444B-9BA4-193ABF9C7870} | Die GUID für den Quellfilter "Video in meiner Bibliothek".    |
+| {CC823400-A8E4-4081-B073-D3B6D952FE69} | Die GUID für den Quellfilter "Bilder in meiner Bibliothek". |
+| {E5415A66-7763-4BDE-B97F-5557CA73C303} | Die GUID für den Quellfilter "TV shows in my library" (TV-Shows in meiner Bibliothek). |
 
 
 
@@ -64,19 +64,19 @@ Der GUID, der das Quell Filter Objekt eindeutig identifiziert. Die Methoden des 
 
 </dd> <dt>
 
-<span id="name__required______________"></span><span id="NAME__REQUIRED______________"></span>**Name** (erforderlich) 
+<span id="name__required______________"></span><span id="NAME__REQUIRED______________"></span>**name** (erforderlich) 
 </dt> <dd>
 
-Der Name des Filter Objekts.
+Der Name des Filterobjekts.
 
 
 
-| Wert                  | BESCHREIBUNG                                                                                     |
+| Wert                  | Beschreibung                                                                                     |
 |------------------------|-------------------------------------------------------------------------------------------------|
-| Musik in meiner Bibliothek    | Ein Filter Objekt, das angegebene Elemente aus dem Satz von Musikelementen in der Bibliothek des Benutzers auswählt. |
-| Video in meiner Bibliothek    | Ein Filter Objekt, das angegebene Elemente aus dem Satz von Videoelementen in der Bibliothek des Benutzers auswählt. |
-| Bilder in meiner Bibliothek | Ein Filter Objekt, das die angegebenen Elemente aus dem Satz von Fotoelementen in der Bibliothek des Benutzers auswählt. |
-| Fernsehsendungen in meiner Bibliothek | Ein Filter Objekt, das die angegebenen Elemente aus der Gruppe der TV-Elemente in der Bibliothek des Benutzers auswählt.    |
+| Musik in meiner Bibliothek    | Ein Filterobjekt, das angegebene Elemente aus dem Satz von Musikelementen in der Bibliothek des Benutzers auswählt. |
+| Video in meiner Bibliothek    | Ein Filterobjekt, das angegebene Elemente aus dem Satz von Videoelementen in der Bibliothek des Benutzers auswählt. |
+| Bilder in meiner Bibliothek | Ein Filterobjekt, das angegebene Elemente aus dem Satz von Fotoelementen in der Bibliothek des Benutzers auswählt. |
+| TV-Shows in meiner Bibliothek | Ein Filterobjekt, das angegebene Elemente aus dem Satz von TV-Elementen in der Bibliothek des Benutzers auswählt.    |
 
 
 
@@ -84,22 +84,22 @@ Der Name des Filter Objekts.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                         |
 |-----------|----------------------------------|
-| Parent    | [Queryset](queryset-element.md) |
-| Untergeordnet     | [Bruch](fragment-element.md) |
+| Parent    | [querySet](queryset-element.md) |
+| Untergeordnet     | [Fragment](fragment-element.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **SourceFilter** -Element wählt Elemente aus der Bibliothek ohne Berücksichtigung der Größe des Resultsets aus. Das **Filter** -Element hingegen schränkt die Größe des Resultsets ein.
+Das **element sourceFilter** wählt Elemente aus der Bibliothek aus, ohne die Größe des Resultsets zu betrachten. Das **Filterelement** schränkt hingegen die Größe des Resultsets ein.
 
 ## <a name="examples"></a>Beispiele
 
@@ -128,24 +128,24 @@ Das **SourceFilter** -Element wählt Elemente aus der Bibliothek ohne Berücksic
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Filter-Element**](filter-element.md)
+[**filter-Element**](filter-element.md)
 </dt> <dt>
 
-[**Fragment-Element**](fragment-element.md)
+[**fragment-Element**](fragment-element.md)
 </dt> <dt>
 
-[**Queryset-Element**](queryset-element.md)
+[**querySet-Element**](queryset-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

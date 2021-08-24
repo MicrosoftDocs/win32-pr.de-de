@@ -1,7 +1,7 @@
 ---
-description: Fügt Subnetze für die Migration des virtuellen System Migrations Dienstanbieter hinzu.
+description: Fügt Netzwerksubnetze für die Migration des virtuellen Systems hinzu.
 ms.assetid: b0e0f187-beeb-4fdf-a91c-f6c5500f0f6d
-title: Addnetworksettings-Methode der Msvm_VirtualSystemMigrationService-Klasse
+title: AddNetworkSettings-Methode der Msvm_VirtualSystemMigrationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 75d168b1a49d8ac44ab66ba9da13d1e598c647b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a46faa340bfe53e7db2afd0dd909d1adb9fcfd9621742451604ae0e25e71936
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765710"
 ---
-# <a name="addnetworksettings-method-of-the-msvm_virtualsystemmigrationservice-class"></a>Addnetworksettings-Methode der MSVM \_ virtualsystemmigrationservice-Klasse
+# <a name="addnetworksettings-method-of-the-msvm_virtualsystemmigrationservice-class"></a>AddNetworkSettings-Methode der Msvm \_ VirtualSystemMigrationService-Klasse
 
-Fügt Subnetze für die Migration des virtuellen System Migrations Dienstanbieter hinzu.
+Fügt Netzwerksubnetze für die Migration des virtuellen Systems hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 AddNetworkSettings(
 
 <dl> <dt>
 
-*Network Settings* \[ in\]
+*NetworkSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von eingebetteten Instanzen der [**MSVM \_ virtualsystemmigrationnetworksettingdata**](msvm-virtualsystemmigrationnetworksettingdata.md) -Klasse, die die Migrationsnetzwerk Einstellungen enthalten.
+Ein Array eingebetteter Instanzen der [**Msvm \_ VirtualSystemMigrationNetworkSettingData-Klasse,**](msvm-virtualsystemmigrationnetworksettingdata.md) die die Netzwerkeinstellungen für die Migration enthalten.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,28 +75,28 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -105,25 +105,25 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Modifynetworksettings**](modifynetworksettings-msvm-virtualsystemmigrationservice.md)
+[**ModifyNetworkSettings**](modifynetworksettings-msvm-virtualsystemmigrationservice.md)
 </dt> <dt>
 
-[**Removenetworksettings**](removenetworksettings-msvm-virtualsystemmigrationservice.md)
+[**RemoveNetworkSettings**](removenetworksettings-msvm-virtualsystemmigrationservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md)
+[**Msvm \_ VirtualSystemMigrationService**](msvm-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

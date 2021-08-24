@@ -1,10 +1,10 @@
 ---
-title: msradius callbacknumber-Attribut
-description: Das msradius callbacknumber-Attribut wird intern verwendet.
+title: msRADIUSCallbackNumber-Attribut
+description: Das msRADIUSCallbackNumber-Attribut wird intern verwendet.
 ms.assetid: a8861fc5-a2c0-41fd-b66f-65062c7f1b1b
 ms.tgt_platform: multiple
 keywords:
-- "\"msradius callbacknumber\"-Attribut, AD-Schema"
+- AD-Schema des msRADIUSCallbackNumber-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c58edd286f9390f19055f1006328424a6dfb0644
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6add47133a5d8b84c7a5b98f126c284225614407b3867a0a91e432b85e9d58ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802840"
 ---
-# <a name="msradiuscallbacknumber-attribute"></a>msradius callbacknumber-Attribut
+# <a name="msradiuscallbacknumber-attribute"></a>msRADIUSCallbackNumber-Attribut
 
-Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
+Das **msRADIUSCallbackNumber-Attribut** wird intern verwendet. Ändern Sie diesen Wert nicht direkt.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msradius callbacknumber               |
-| LDAP-Display-Name | msradius callbacknumber               |
+| CN                | msRADIUSCallbackNumber               |
+| Ldap-Anzeigename | msRADIUSCallbackNumber               |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1145              |
-| System-ID-GUID    | db0c909c-c1f2-11d1-bbc5-0080c76670c0 |
+| System-Id-Guid    | db0c909c-c1f2-11d1-bb5-0080c76670c0 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -42,7 +42,7 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,10 +57,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -69,7 +69,7 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,10 +78,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -99,10 +99,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -120,10 +120,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -141,10 +141,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |
@@ -162,10 +162,10 @@ Das **msradius callbacknumber** -Attribut wird intern verwendet. Ändern Sie die
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000010                        |

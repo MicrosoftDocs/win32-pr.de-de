@@ -1,11 +1,11 @@
 ---
-title: ms-DS-optional-Feature-Flags-Attribut
-description: Ein ganzzahliger Wert, der Flags enthält, die das Verhalten einer optionalen Funktion in Active Directory definieren.
+title: ms-DS-Optional-Feature-Flags-Attribut
+description: Ein ganzzahliger Wert, der Flags enthält, die das Verhalten eines optionalen Features in Active Directory definieren.
 ms.assetid: 02695ad1-3401-42c3-a7eb-aac8afa56327
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-optional-Feature-Flags-Attribut AD-Schema
-- das msDS-optionalfeatureflags-Attribut, AD-Schema
+- MS-DS-Optional-Feature-Flags-Attribut AD-Schema
+- MSDS-OptionalFeatureFlags-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 803250911d5180e9242f8043dcde25a9548ac34c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5db77d341b302004d65a99a09df539d51f8308da2cbbeed8bff51a57e1d78714
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803820"
 ---
-# <a name="ms-ds-optional-feature-flags-attribute"></a>ms-DS-optional-Feature-Flags-Attribut
+# <a name="ms-ds-optional-feature-flags-attribute"></a>ms-DS-Optional-Feature-Flags-Attribut
 
-Ein ganzzahliger Wert, der Flags enthält, die das Verhalten einer optionalen Funktion in Active Directory definieren.
+Ein ganzzahliger Wert, der Flags enthält, die das Verhalten eines optionalen Features in Active Directory definieren.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-optional-Feature-Flags         |
-| LDAP-Display-Name | MSDS-optionalfeatureflags            |
+| CN                | ms-DS-Optional-Feature-Flags         |
+| Ldap-Anzeigename | msDS-OptionalFeatureFlags            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2063              |
 | System-ID-GUID    | 8a0560c1-97b9-4811-9db7-dc061598965b |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -53,16 +53,16 @@ Ein ganzzahliger Wert, der Flags enthält, die das Verhalten einer optionalen Fu
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | Richtig                                                                |
-| Ist-einwertig       | Richtig                                                                |
+| System-Only            | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**ms-DS-optional-Feature**](c-msds-optionalfeature.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Optional-Feature**](c-msds-optionalfeature.md)<br/> |
 
 
 
@@ -74,16 +74,16 @@ Ein ganzzahliger Wert, der Flags enthält, die das Verhalten einer optionalen Fu
 |------------------------|---------------------------------------------------------------------|
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
-| System-Only            | Richtig                                                                |
-| Ist-einwertig       | Richtig                                                                |
+| System-Only            | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**ms-DS-optional-Feature**](c-msds-optionalfeature.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Optional-Feature**](c-msds-optionalfeature.md)<br/> |
 
 
 

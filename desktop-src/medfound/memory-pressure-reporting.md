@@ -1,36 +1,36 @@
 ---
-description: Mithilfe der Arbeitsspeicher Auslastung kann eine Direct3D-Anwendung ermitteln, wann der Arbeits Satz für den Video Arbeitsspeicher zu groß geworden ist.
+description: Mit der Berichterstellung für hohe Arbeitsspeicherauslastung kann eine Direct3D-Anwendung ermitteln, wann ihr Videoarbeitssatz zu groß geworden ist.
 ms.assetid: 3aa2f81e-81a1-40a3-ad24-72781d36f713
-title: Berichterstellung für Speicherauslastung
+title: Berichterstellung zu Auslastung des Arbeitsspeichers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d380a4c9f88fca3d25eebfcfaf67759226ab040c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52dc0df8db30281c6f7225309bdca5edfdbd3759f21a9e61cdc848f534dcce41
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723770"
 ---
-# <a name="memory-pressure-reporting"></a>Berichterstellung für Speicherauslastung
+# <a name="memory-pressure-reporting"></a>Berichterstellung zu Auslastung des Arbeitsspeichers
 
-Mithilfe der Arbeitsspeicher Auslastung kann eine Direct3D-Anwendung ermitteln, wann der Arbeits Satz für den Video Arbeitsspeicher zu groß geworden ist.
+Mit der Berichterstellung für hohe Arbeitsspeicherauslastung kann eine Direct3D-Anwendung ermitteln, wann ihr Videoarbeitssatz zu groß geworden ist.
 
-Arbeits *Speicher* Auslastung ist die Anforderung, die von einer Anwendung für das Speichersubsystem gestellt wird. Obwohl jede Direct3D-Anwendung Arbeitsspeicher Auslastung verwenden kann, ist diese Funktion besonders nützlich für Anwendungen, die Videos mithilfe von Direct3D Rendering. Die Video Wiedergabe bietet in der Regel große Mengen an Pufferung, sodass Frames im Voraus decodiert werden können. Während die Pufferung in der Regel zu einer reibungsloseren Wiedergabe führt, kann die Leistung tatsächlich beeinträchtigt werden, wenn die Workingsets aufgrund der folgenden Faktoren zu groß werden:
+*Arbeitsspeicherauslastung* ist die Anforderung, die von einer Anwendung auf das Speichersubsystem gestellt wird. Während jede Direct3D-Anwendung berichte zu arbeitsspeicherauslastungen verwenden kann, ist dieses Feature besonders nützlich für Anwendungen, die Videos mithilfe von Direct3D rendern. Die Videowiedergabe profitiert in der Regel von großen Mengen an Pufferung, sodass Frames im Voraus decodiert werden können. Die Pufferung führt in der Regel zu einer reibungsloseren Wiedergabe, kann jedoch die Leistung beeinträchtigen, wenn das Arbeitsset aufgrund der folgenden Faktoren zu groß wird:
 
--   Der Arbeitsspeicher kann aus dem Cache entfernt werden. Im schlimmsten Fall kann dies in jedem Video Frame vorkommen.
--   Speicher Belegungen werden möglicherweise in nicht optimalen Speicher Segmenten platziert.
+-   Der Arbeitsspeicher kann aus dem Cache entfernt werden. Im schlimmsten Fall kann dies auf jedem Videoframe auftreten.
+-   Speicherbelegungen können in nicht optimalen Speichersegmenten platziert werden.
 
-Ab Windows 7 kann Direct3D einige Statistiken über den Druck des Grafik Speichers melden:
+Ab Windows 7 kann Direct3D einige Statistiken zur Auslastung des Videospeichers melden:
 
--   Die Anzahl der Bytes, die vom Prozess in einem bestimmten Zeitraum entfernt wurden.
--   Die Menge an Arbeitsspeicher in nicht optimalen Speicher Segmenten.
--   Eine grobe Angabe der Gesamteffizienz der Speicher Belegungen, die im nicht optimalen Arbeitsspeicher platziert werden.
+-   Die Anzahl der Bytes, die vom Prozess in einem Zeitintervall entfernt wurden.
+-   Die Menge an Arbeitsspeicher, die in nicht optimalen Speichersegmenten platziert wird.
+-   Ein grober Hinweis auf die Gesamteffizienz der Speicherbelegungen im nicht optimalen Speicher.
 
-Diese Informationen können einer Anwendung helfen, einen angemessenen Arbeits Satz zu verwalten.
+Diese Informationen können einer Anwendung helfen, einen angemessenen Arbeitssatz zu verwalten.
 
-## <a name="using-memory-pressure-reporting"></a>Verwenden der Speicherdruck Berichterstattung
+## <a name="using-memory-pressure-reporting"></a>Verwenden der Speicherauslastungsberichterstellung
 
-Die Arbeitsspeicher Auslastung verwendet die vorhandene **IDirect3DQuery9** -Schnittstelle, um das Gerät abzufragen. Der **D3DQUERYTYPE** -Enumeration wurde ein neuer Abfragetyp hinzugefügt.
+Die Speicherauslastungsberichterstellung verwendet die vorhandene **IDirect3DQuery9-Schnittstelle,** um das Gerät abzufragen. Der **D3DQUERYTYPE-Enumeration** wurde ein neuer Abfragetyp hinzugefügt.
 
 
 ```C++
@@ -41,14 +41,14 @@ D3DQUERYTYPE_MEMORYPRESSURE        = 19,
 
 Führen Sie die folgenden Schritte aus, um diese Abfrage zu verwenden:
 
-1.  Aufrufen von **IDirect3DDevice9Ex:: kreatequery** mit dem **D3DQUERYTYPE \_ memorypressure** -Flag. Diese Methode gibt einen Zeiger auf die **IDirect3DQuery9** -Schnittstelle zurück.
-2.  Wenden Sie **IDirect3DQuery9:: Issue** mit dem **D3DISSUE \_ Begin** -Flag an, um das Mess Intervall zu beginnen.
-3.  Nennen Sie **IDirect3DQuery9:: Issue** mit dem **D3DISSUE \_ End** -Flag.
-4.  Aufrufen von **IDirect3DQuery9:: GetData** , um das Abfrageergebnis zu erhalten. Die Abfrage gibt eine [**D3DMEMORYPRESSURE**](d3dmemorypressure.md) -Struktur zurück.
+1.  Rufen Sie **IDirect3DDevice9Ex::CreateQuery** mit dem **Flag D3DQUERYTYPE \_ MEMORYPRESSURE** auf. Diese Methode gibt einen Zeiger auf die **IDirect3DQuery9-Schnittstelle** zurück.
+2.  Rufen Sie **IDirect3DQuery9::Issue** mit dem **D3DISSUE \_ BEGIN-Flag** auf, um das Messintervall zu starten.
+3.  Rufen Sie **IDirect3DQuery9::Issue** mit dem **D3DISSUE \_ END-Flag** auf.
+4.  Rufen Sie **IDirect3DQuery9::GetData** auf, um das Abfrageergebnis abzurufen. Die Abfrage gibt eine [**D3DMEMORYPRESSURE-Struktur**](d3dmemorypressure.md) zurück.
 
 ## <a name="example-code"></a>Beispielcode
 
-Das folgende Beispiel zeigt zwei Funktionen, die Arbeitsspeicher Auslastung messen. Der erste beginnt mit dem Mess Intervall, und der zweite Ruft die Ergebnisse der Messung ab.
+Das folgende Beispiel zeigt zwei Funktionen, die die Arbeitsspeicherauslastung messen. Die erste beginnt mit dem Messintervall, und die zweite ruft die Ergebnisse der Messung ab.
 
 
 ```C++
@@ -91,7 +91,7 @@ HRESULT EndMemoryPressureQuery(
 
 <dl> <dt>
 
-[Direct3D-Video-APIs](direct3d-video-apis.md)
+[Direct3D Video-APIs](direct3d-video-apis.md)
 </dt> </dl>
 
  

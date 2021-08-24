@@ -1,52 +1,52 @@
 ---
-title: Gestureat-Methode
-description: Gestureat-Methode
+title: GestureAt-Methode
+description: GestureAt-Methode
 ms.assetid: c84e9363-e905-476a-832b-9acf6ddee5f1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7222c2c0529a486583999f4f9f363e3a30cafc02
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1d7c18c2a3913e8c9e805725f184bd5e969de6272ed05c562799805bd8c74256
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119725720"
 ---
-# <a name="gestureat-method"></a>Gestureat-Methode
+# <a name="gestureat-method"></a>GestureAt-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt die gesturdende Animation für das angegebene Zeichen an der angegebenen Position wieder.
+Gibt die Gesturinganimation für das angegebene Zeichen an der angegebenen Position wieder.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen ("*** Merkmal-ID * * *"). Gestureat* *  *x, y*
+*agent***. Zeichen ("**_CharacterID_*_"). GestureAt_ *  *x,y*
 
 
 
-| Teil  | BESCHREIBUNG                                                                                                                                                                                               |
+| Teil  | Beschreibung                                                                                                                                                                                               |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *x, y* | Erforderlich. Ein ganzzahliger Wert, der die horizontale Bildschirm Koordinate (*x*) und die vertikale Bildschirm Koordinate (*y*) angibt, auf die das Zeichen zeigt. Diese Koordinaten müssen in Pixel angegeben werden. |
+| *x,y* | Erforderlich. Ein ganzzahliger Wert, der die horizontale Bildschirmkoordinate (*x*) und die vertikale Bildschirmkoordinate (*y*) angibt, auf die das Zeichen zeigt. Diese Koordinaten müssen in Pixel angegeben werden. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Server übernimmt automatisch die entsprechende Animation, um an den angegebenen Speicherort zu Gesten. Die Koordinaten sind immer relativ zum Bildschirm Ursprung (oben links).
+Der Server gibt automatisch die entsprechende Animation ab, um eine Geste an die angegebene Position zu bewegen. Die Koordinaten sind immer relativ zum Bildschirmursprung (oben links).
 
-Wenn Sie einen Objekt Verweis deklarieren und diesen auf diese Methode festlegen, wird ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurückgegeben. Wenn die zugeordnete Animation nicht auf dem lokalen Computer geladen wurde, legt der Server außerdem die [**Status**](status-property.md) -Eigenschaft des **Anforderungs** Objekts auf "failed" (Fehler) mit einer entsprechenden Fehlernummer fest. Wenn Sie also das HTTP-Protokoll für den Zugriff auf Daten der Zeichen Animation verwenden, verwenden Sie die [**Get**](get-method.md) -Methode, um die **gestischen** Zustands Animationen zu laden, bevor Sie die **gestureat** -Methode aufrufen.
+Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurückgegeben. Wenn die zugeordnete Animation nicht auf dem lokalen Computer geladen wurde, legt der Server außerdem die [**Status-Eigenschaft**](status-property.md) des **Request-Objekts** auf "failed" mit einer entsprechenden Fehlernummer fest. Wenn Sie das HTTP-Protokoll für den Zugriff auf Zeichenanimationsdaten verwenden, verwenden [**Sie**](get-method.md) daher die Get-Methode, um die Gesturing-Zustandsanimationen zu laden, bevor Sie die **GestureAt-Methode** aufrufen. 
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-description: Standard für Gebiets Schema \_ System \_
+description: '\_LOCALE-SYSTEMSTANDARD \_'
 ms.assetid: 57de328c-3afc-4fbb-882c-fa35d3552c13
 title: LOCALE_SYSTEM_DEFAULT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 461176b8a43dd9c29d299470f994b0394015c1f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0ecfc5c360add889a63e4ef2933e3cd8654534899bb26a996582d069c5b3a24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765330"
 ---
-# <a name="locale_system_default"></a>Standard für Gebiets Schema \_ System \_
+# <a name="locale_system_default"></a>\_LOCALE-SYSTEMSTANDARD \_
 
-Das Standard Gebiets Schema für das Betriebssystem. Der Wert dieser Konstante ist 0x0800.
+Das Standardschema für das Betriebssystem. Der Wert dieser Konstante ist 0x0800.
 
  
 

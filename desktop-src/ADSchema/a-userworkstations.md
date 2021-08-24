@@ -1,11 +1,11 @@
 ---
 title: User-Workstations-Attribut
-description: Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird, von der der Benutzer sich anmelden kann.
+description: Enthält die NetBIOS- oder DNS-Namen der Computer, auf denen Windows NT-Arbeitsstation oder Windows 2000 Professional, über die sich der Benutzer anmelden kann.
 ms.assetid: 92af070b-dadd-404d-8305-d85974639958
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für User-Workstations-Attribut
-- userworkstations-Attribut AD-Schema
+- User-Workstations AD-Schema
+- userWorkstations-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3cad59905dbf24c8baa13969d9a2ce5452767163
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: dfe243275271088ed5634aa4a18ab053ecbad23ba6e844f8bbc18c5809cdfd72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702890"
 ---
 # <a name="user-workstations-attribute"></a>User-Workstations-Attribut
 
-Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird, von der der Benutzer sich anmelden kann. Jeder NetBIOS-Name wird durch ein Komma getrennt. Mehrere Namen sollten durch Kommas getrennt werden.
+Enthält die NetBIOS- oder DNS-Namen der Computer, auf denen Windows NT-Arbeitsstation oder Windows 2000 Professional, über die sich der Benutzer anmelden kann. Jeder NetBIOS-Name wird durch ein Komma getrennt. Mehrere Namen sollten durch Kommas getrennt werden.
 
 >[!Note]
->Dieses Benutzer Attribut sollte nicht mehr verwendet werden. Zum Verwalten der Konten, die sich bei den Arbeitsstationen anmelden können, empfiehlt es sich, die Option "Lokales anmelden zulassen" und "Lokal anmelden zulassen" oder "Anmelden über Remotedesktopdienste zulassen" und "anmelden durch Remotedesktopdienste zulassen" zu verwenden.
+>Dieses Benutzerattribut sollte nicht mehr verwendet werden. Um zu verwalten, welche Konten sich bei welchen Arbeitsstationen anmelden können, empfehlen wir die Verwendung von "Lokale Anmeldung zulassen", "Lokale Anmeldung verweigern" oder "Anmeldung über Remotedesktopdienste zulassen" und "Anmeldung über Remotedesktopdienste verweigern".
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
 | CN                | User-Workstations                                                                          |
-| LDAP-Display-Name | Benutzer Arbeitsstationen                                                                           |
+| Ldap-Anzeigename | userWorkstations                                                                           |
 | Size              | \-                                                                                         |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                                     |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt wird, und immer dann, wenn die Anmelde Berechtigung des Benutzers geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                                     |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer sich die Anmeldeberechtigung des Benutzers ändern muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.86                                                                      |
-| System-ID-GUID    | bf9679d7-0de6-11d0-a285-00aa003049e2                                                       |
+| System-Id-Guid    | bf9679d7-0de6-11d0-a285-00aa003049e2                                                       |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                                |
 
 
@@ -44,7 +44,7 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -59,10 +59,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |
@@ -71,7 +71,7 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |
@@ -101,10 +101,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Is-Single-Valued       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |
@@ -122,10 +122,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |
@@ -143,10 +143,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |
@@ -164,10 +164,10 @@ Enthält die NetBIOS-oder DNS-Namen der Computer, auf denen die Windows NT-Arbei
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | 0                                 |
 | Range-Upper            | 1024                              |
 | Search-Flags           | 0x00000010                        |

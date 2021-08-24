@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlogfile otcopiedexception-Konstruktor'
-title: Esentlogfile otcopiedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLogFileNotCopiedException-Konstruktor'
+title: EsentLogFileNotCopiedException-Konstruktor
 TOCTitle: 'EsentLogFileNotCopiedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogFileNotCopiedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogfilenotcopiedexception.esentlogfilenotcopiedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8f3849abb9f61a6b8f68038d96c58e8932b08b5d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e895ca373c815effb9c1f3d958daa84fd99865376218f99a56984cbf655d082b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836700"
 ---
-# <a name="esentlogfilenotcopiedexception-constructor"></a>Esentlogfile otcopiedexception-Konstruktor
+# <a name="esentlogfilenotcopiedexception-constructor"></a>EsentLogFileNotCopiedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogfile otcopiedexception-Klasse.
+Initialisiert eine neue Instanz der EsentLogFileNotCopiedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLogFileNotCopiedException()
 public EsentLogFileNotCopiedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogfile otcopiedexception-Klasse](./esentlogfilenotcopiedexception-class.md)
+[EsentLogFileNotCopiedException-Klasse](./esentlogfilenotcopiedexception-class.md)
 
-[Esentlogfile otcopiedexception-Elemente](./esentlogfilenotcopiedexception-members.md)
+[EsentLogFileNotCopiedException-Member](./esentlogfilenotcopiedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,19 +1,19 @@
 ---
-description: ICE79 überprüft die Verweise auf Komponenten und Funktionen, die in den Datenbankfeldern eingegeben wurden, mithilfe des Bedingungs Datentyps.
+description: ICE79 überprüft die Verweise auf Komponenten und Features, die in die Datenbankfelder eingegeben wurden, mithilfe des Condition-Datentyps.
 ms.assetid: f0a8ceac-084a-4693-b27d-f610eec4702a
 title: ICE79
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9081297f2bf2f11283380c0f057bd0fbec417975
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f11ab5bcf0cd538005a5188559b0426e27004cb5a6d043852be3e361d10e509
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119821570"
 ---
 # <a name="ice79"></a>ICE79
 
-ICE79 überprüft die Verweise auf Komponenten und Funktionen, die in den Datenbankfeldern eingegeben wurden, [mithilfe des Bedingungs](condition.md) Datentyps.
+ICE79 überprüft die Verweise auf Komponenten und Features, die in die Datenbankfelder eingegeben wurden, mithilfe des [Condition-Datentyps.](condition.md)
 
 ## <a name="result"></a>Ergebnis
 
@@ -23,21 +23,21 @@ ICE79 gibt zwei Warnungen aus.
 
 | ICE79-Warnung                                                                      | BESCHREIBUNG                                                      |
 |------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| Die Validierungs Tabelle der Datenbank fehlt \_ . Eigenschaftsnamen konnten nicht vollständig überprüft werden. | Die [ \_ Validierungs Tabelle](-validation-table.md)der Datenbank fehlt. |
-| Fehler beim Abrufen von Werten aus Spalte \[ 2 \] in Tabelle \[ 1 \] . Die Spalte wird übersprungen.         | Fehler beim Abrufen des Werts.                                          |
+| Der Datenbank fehlt die \_ Validierungstabelle. Eigenschaftennamen konnten nicht vollständig überprüft werden. | Der Datenbank fehlt [ \_ die Validierungstabelle](-validation-table.md). |
+| Fehler beim Abrufen von Werten aus Spalte \[ 2 \] in Tabelle \[ \] 1. Überspringen der Spalte.         | Fehler beim Abrufen des Werts.                                          |
 
 
 
  
 
-ICE79 gibt zwei Fehler aus.
+ICE79 sendet zwei Fehler.
 
 
 
 | ICE79-Fehler                                                          | BESCHREIBUNG                               |
 |----------------------------------------------------------------------|-------------------------------------------|
-| Auf die '% ls '-Komponente wurde in der '% s '-Spalte verwiesen. ' '% s ' der Zeile '% s ' ist ungültig. | Es wurde ein ungültiger Komponenten Verweis gefunden. |
-| Auf das Feature "% ls" wurde in der Spalte "% s" verwiesen. '% s ' der Zeile '% s ' ist ungültig.   | Es wurde ein ungültiger Funktions Verweis gefunden.    |
+| Die Komponente '%ls', auf die in der '%s'-Spalte verwiesen wird. %s' der Zeile %s ist ungültig. | Ein ungültiger Komponentenverweis wurde gefunden. |
+| Das Feature '%ls', auf das in spalte '%s' verwiesen wird.' %s' der Zeile %s ist ungültig.   | Ein ungültiger Funktionsverweis wurde gefunden.    |
 
 
 
@@ -54,7 +54,7 @@ Feature 'NoSuchFeature' referenced in column
 'InstallExecuteSequence'.'Condition' of row Custom1 is invalid.
 ```
 
-In diesem Beispiel fehlt nosuchcomponent in der Component- [Tabelle](component-table.md) , und nosuchfeature ist in der Featuretabelle nicht vorhanden. [](feature-table.md)
+In diesem Beispiel fehlt NoSuchComponent in der [Component-Tabelle](component-table.md) und NoSuchFeature in der [Featuretabelle](feature-table.md).
 
 [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) (partiell)
 
@@ -62,20 +62,20 @@ In diesem Beispiel fehlt nosuchcomponent in der Component- [Tabelle](component-t
 
 | Aktion  | Bedingung                                |
 |---------|------------------------------------------|
-| Custom1 | TestAction = 1046 und &nosuchfeature>2  |
-| Custom2 | TestAction = 146 und $NoSuchComponent>2 |
+| Custom1 | TESTACTION=1046 AND &NoSuchFeature>2  |
+| Custom2 | TESTACTION=146 AND $NoSuchComponent>2 |
 
 
 
  
 
-Um diese Fehler zu beheben, geben Sie in den Funktions-und Komponenten Tabellen gültige Datensätze für nosuchfeature und nosuchcomponent ein.
+Geben Sie gültige Datensätze für NoSuchFeature und NoSuchComponent in die Tabellen Feature und Component ein, um diese Fehler zu beheben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

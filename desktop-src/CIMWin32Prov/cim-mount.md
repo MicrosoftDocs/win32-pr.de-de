@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -Bereitstellungs Klasse stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
+description: Die CIM \_ Mount-Klasse stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
 ms.assetid: abf1833b-9b39-45c0-8400-2be2bf3a1c3c
 ms.tgt_platform: multiple
 title: CIM_Mount-Klasse
@@ -16,25 +16,25 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5b86587466517a10302b3109a521e902a66892c4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1298c695237ac40097b0c081d313769ee4e4e1190571b1bdd58137e25d53c10a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119821020"
 ---
-# <a name="cim_mount-class"></a>CIM \_ Mount-Klasse
+# <a name="cim_mount-class"></a>\_CIM-Bereitstellungsklasse
 
-Die **CIM \_** -Bereitstellungs Klasse stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
+Die **CIM \_ Mount-Klasse** stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
 
-Die Semantik dieser Beziehung erfordert, dass das eingebundene Verzeichnis in einem Dateisystem (über die Dateispeicher Zuordnung) enthalten ist, das sich von dem Dateisystem unterscheidet, auf das als abhängige verwiesen wird. Das Dateisystem, das das Verzeichnis enthält, kann lokal oder Remote sein. Beispielsweise kann ein lokales Dateisystem auf einem Solaris-Computersystem ein Verzeichnis aus dem Dateisystem einbinden, auf das über das Crom-Laufwerk des Computers (d. h. ein anderes lokales Dateisystem) zugegriffen wird. Auf der anderen Seite wird das Verzeichnis zunächst in einem "Remote Fall" vom Dateisystem exportiert, das auf einem anderen Computersystem gehostet wird, z. b. als Dateiserver. Um die beiden bereit Stellungen zu unterscheiden, sollte für die Verzeichnisse, auf die Remote zugegriffen werden kann, immer eine [**CIM- \_ Export**](cim-export.md) Zuordnung definiert werden.
+Die Semantik dieser Beziehung erfordert, dass das bereitgestellte Verzeichnis in einem Dateisystem (über die Dateispeicherzuordnung) enthalten ist, das sich vom Dateisystem unterscheidet, auf das als abhängig verwiesen wird. Das Verzeichnis, das das Dateisystem enthält, kann lokal oder remote sein. Beispielsweise kann ein lokales Dateisystem auf einem Solaris-Computersystem ein Verzeichnis aus dem Dateisystem einbinden, auf das über das C DOSE-Laufwerk des Computers (d. h. ein anderes lokales Dateisystem) zugegriffen wird. Andererseits wird das Verzeichnis in einem "Remote"-Fall zuerst von seinem Dateisystem exportiert, das auf einem anderen Computersystem gehostet wird, das z. B. als Dateiserver fungiert. Um die beiden Bereitstellungen zu unterscheiden, sollte immer eine [**CIM \_ Export-Zuordnung**](cim-export.md) für die Remotezugriffs-/eingebundenen Verzeichnisse definiert werden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,33 +49,33 @@ class CIM_Mount : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Einstellungsklasse verfügt über diese Typen von Membern:
+Die **CIM \_ Mount-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_** -Einstellungsklasse verfügt über diese Eigenschaften.
+Die **CIM \_ Mount-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Verzeichnis**
+Datentyp: **CIM \_ Directory**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ Verzeichnis**](cim-directory.md) , das das eingebundene Verzeichnis beschreibt.
+Ein [**\_ CIM-Verzeichnis,**](cim-directory.md) das das bereitgestellte Verzeichnis beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ NFS**
@@ -84,20 +84,20 @@ Datentyp: **CIM \_ NFS**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ NFS**](cim-nfs.md) , das das Dateisystem beschreibt, in dem das Verzeichnis eingebunden ist.
+Ein [**\_ CIM-NFS,**](cim-nfs.md) der das Dateisystem beschreibt, in dem das Verzeichnis eingebunden ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**CIM \_** Die Einschleusung wird von [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+**CIM \_ Die Bereitstellung** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,8 +107,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -117,7 +117,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

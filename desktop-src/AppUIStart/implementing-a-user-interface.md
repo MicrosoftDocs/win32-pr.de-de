@@ -1,112 +1,112 @@
 ---
-title: Implementieren einer Benutzeroberfläche
-description: In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows-Anwendung verknüpft sind.
+title: Implementieren eines Benutzeroberfläche
+description: In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows Anwendung verbunden sind.
 ms.assetid: 889791a7-d12c-4ec6-9b04-8fed14ecdb2c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0941458e046a85dc6e27a684d8aa3a7ea609e889
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7967474781e180ab29a42fce6884cc391515eef0211107852659eace3490e712
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702340"
 ---
-# <a name="implementing-a-user-interface"></a>Implementieren einer Benutzeroberfläche
+# <a name="implementing-a-user-interface"></a>Implementieren eines Benutzeroberfläche
 
-In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows-Anwendung verknüpft sind.
+In diesem Abschnitt werden einige der Aufgaben beschrieben, die mit der Implementierung einer Benutzeroberfläche für eine Windows Anwendung verbunden sind.
 
 -   [Prototyp](#prototype)
 -   [Erstellen](#construct)
 -   [Vereinfachen](#simplify)
-    -   [Reduzieren, wieder verwenden, überhäufen](#reduce-reuse-declutter)
+    -   [Reduce, Reuse, Declutter](#reduce-reuse-declutter)
     -   [Die beste Benutzeroberfläche ist keine Benutzeroberfläche.](#the-best-ui-is-no-ui)
-    -   [Weniger Benutzeroberfläche ist eine bessere Benutzeroberfläche](#less-ui-is-better-ui)
-    -   [Konsistente Benutzeroberfläche ist eine gute Benutzeroberfläche](#consistent-ui-is-good-ui)
+    -   [Weniger Benutzeroberfläche ist bessere Benutzeroberfläche](#less-ui-is-better-ui)
+    -   [Konsistente Benutzeroberfläche ist gute Benutzeroberfläche](#consistent-ui-is-good-ui)
 
 ## <a name="prototype"></a>Prototyp
 
-Benutzeroberflächen (UI) sollten aus der Liste der Benutzer Szenarios und Anforderungen entworfen werden, die im Schritt zur Benutzer Analyse identifiziert wurden.
+Benutzeroberflächen (UI) sollten aus der Liste der Benutzerszenarien und Anforderungen entworfen werden, die im Schritt zur Benutzeranalyse identifiziert wurden.
 
-Prototypen können so einfach wie Stift Skizzen oder so komplex sein wie interaktive Bildschirm-Mockups. Behalten Sie alle vorherigen Aufgaben bei, da dies hilfreich sein kann, wenn Sie den beteiligten Alternativen zeigen, warum Sie verworfen wurden.
+Prototypen können so einfach wie Stiftzeichnungen oder so komplex wie interaktive Bildschirmmodelle sein. Behalten Sie alle vorherigen Arbeiten bei, da dies hilfreich sein kann, wenn Die beteiligten Personen die alternativen Alternativen zeigen, die berücksichtigt wurden, und erklären, warum sie verworfen wurden.
 
-Versuchen Sie, diesen Schritt höchstens auf zwei oder drei Prototypen zu beschränken. Prototypen müssen nicht vollständig sein. Sie müssen lediglich die Verwendung der realen Anwendung effektiv simulieren.
+Versuchen Sie, diesen Schritt auf maximal zwei oder drei Prototypen zu beschränken. Prototypen müssen nicht vollständig sein. Sie müssen lediglich die Erfahrung mit der Verwendung der echten Anwendung effektiv simulieren.
 
-Veranschaulichen Sie die Prototypen, und verfolgen Sie das Benutzer Feedback, um die allgemeinen Verb Nutzbarkeits Trends zu ermitteln. Verwerfen Sie ggf. die am wenigsten erfolgreichen Prototypen, und integrieren Sie so viel nützliches Feedback wie möglich in einen oder mehrere der verbleibenden Prototypen. Wiederholen Sie diesen Vorgang als Zeit und Ressourcen zulassen.
+Zeigen Sie die Prototypen, und verfolgen Sie Benutzerfeedback nach, um die allgemeinen Benutzerfreundlichkeitstrends zu identifizieren. Wenn möglich, verwerfen Sie die am wenigsten erfolgreichen Prototypen, und integrieren Sie so viel nützliches Feedback wie möglich in einen oder mehrere der verbleibenden Prototypen. Wiederholen Sie diesen Vorgang, wenn Zeit und Ressourcen dies zulassen.
 
-Es gibt verschiedene prototyptools, einschließlich " [schrägerflow](/previous-versions/visualstudio/design-tools/expression-studio-3/ee341458(v=expression.30)) " in Microsoft Expression Studio 3, den Layout-Editor in Microsoft Visual Studio und sogar Microsoft Paint.
+Es stehen verschiedene Prototyptools zur Verfügung, darunter [SketchFlow](/previous-versions/visualstudio/design-tools/expression-studio-3/ee341458(v=expression.30)) in Microsoft Expression Studio 3, der Layout-Editor in Microsoft Visual Studio und sogar Microsoft Paint.
 
 ## <a name="construct"></a>Konstrukt
 
-Beachten Sie Folgendes, wenn Sie die Benutzeroberfläche für eine Anwendung implementieren:
+Berücksichtigen Sie beim Implementieren der Benutzeroberfläche für eine Anwendung Folgendes:
 
 -   Befehlsstruktur
 
-    Bestimmen Sie, ob eine herkömmliche Befehlsstruktur auf der Grundlage von Menüs und Symbolleisten implementiert werden soll, oder eine Alternative Befehlsstruktur, die auf dem Windows-Menü Band Framework basiert. Weitere Informationen finden Sie unter [Menüs](../menurc/menus.md), [Symbolleisten](../controls/toolbar-control-reference.md)und Windows-Menü [Band Framework](../windowsribbon/-uiplat-windowsribbon-entry.md).
+    Bestimmen Sie, ob eine herkömmliche Befehlsstruktur basierend auf Menüs und Symbolleisten oder eine alternative Befehlsstruktur basierend auf dem Windows Menübandframework implementiert werden soll. Weitere Informationen finden Sie unter [Menüs,](../menurc/menus.md) [Symbolleisten](../controls/toolbar-control-reference.md)und [Windows Menübandframework.](../windowsribbon/-uiplat-windowsribbon-entry.md)
 
--   Fenster und Dialogfelder
+-   Windows und Dialogfelder
 
-    Implementieren Sie basierend auf dem Design der Benutzeroberfläche und der prototypenarbeit die Anwendungsfenster, einschließlich des Hauptfensters, der untergeordneten Fenster, Dialogfelder und Meldungs Felder. Befolgen Sie die UX-Richtlinien, um zu bestimmen, welche Stile und Steuerelemente in den Fenstern und Dialogfeldern verwendet werden sollen. Weitere Informationen finden Sie unter [Fenster](../winmsg/windows.md), [Dialog Felder](../dlgbox/dialog-boxes.md)und Windows-Steuer [Elemente](../controls/window-controls.md).
+    Implementieren Sie basierend auf dem Benutzeroberflächenentwurf und der Prototyperstellung die Anwendungsfenster, einschließlich hauptfenster, untergeordneter Fenster, Dialogfelder und Meldungsfelder. Befolgen Sie die UX-Richtlinien, um zu bestimmen, welche Stile und Steuerelemente in den Fenstern und Dialogfeldern verwendet werden sollen. Weitere Informationen finden Sie unter [Windows](../winmsg/windows.md), [Dialogfeldern](../dlgbox/dialog-boxes.md)und [Windows-Steuerelementen.](../controls/window-controls.md)
 
 -   Benutzerdefinierte Steuerelemente
 
-    Erstellen Sie neue benutzerdefinierte Steuerelemente nur dann, wenn Sie die gewünschte Funktionalität von einem der standardmäßigen Windows-Steuerelemente nicht erhalten können. Neue benutzerdefinierte Steuerelemente sind sehr kostspielig zu entwickeln und erfordern zusätzliche Arbeit, um Sie zugänglich zu machen. Wenn Ihre Anwendung benutzerdefinierte Steuerelemente erfordert, stellen Sie sicher, dass Sie den Hilfstechnologien angemessen ausgesetzt sind. Weitere Informationen finden Sie unter [benutzerdefinierte Steuerelemente](../controls/user-controls-intro.md) und [Windows-Automatisierungs-API](../winauto/windows-automation-api-portal.md).
+    Erstellen Sie neue benutzerdefinierte Steuerelemente nur, wenn Sie die gewünschte Funktionalität nicht von einem der Standardsteuerelemente Windows abrufen können. Die Entwicklung neuer benutzerdefinierter Steuerelemente ist sehr kostspielig und erfordert zusätzlichen Aufwand, um sie zugänglich zu machen. Wenn Ihre Anwendung benutzerdefinierte Steuerelemente erfordert, stellen Sie sicher, dass sie ausreichend für Hilfstechnologien verfügbar gemacht werden. Weitere Informationen finden Sie unter [Benutzerdefinierte Steuerelemente](../controls/user-controls-intro.md) und [Windows Automation-API.](../winauto/windows-automation-api-portal.md)
 
--   Unterstützung für Standardbenutzer-Eingabegeräte
+-   Unterstützung für Standardbenutzereingabegeräte
 
-    Die meisten Windows-Anwendungen müssen Benutzereingaben über die Tastatur und die Maus unterstützen. Die Möglichkeit, nur über die Tastatur zu navigieren und auf alle Anwendungsfunktionen zuzugreifen, ist besonders wichtig für Benutzer, die sich sehbehindert oder Probleme mit der Mobilität haben. Weitere Informationen finden Sie unter [User Input](../inputdev/user-input.md) und The [Engineering Software for Barrierefreiheits](https://www.microsoft.com/download/details.aspx?id=19262)-e-book.
+    Die meisten Windows Anwendungen müssen Benutzereingaben über Tastatur und Maus unterstützen. Die Möglichkeit, allein über die Tastatur zu navigieren und auf alle Anwendungsfunktionen zuzugreifen, ist besonders wichtig für Benutzer mit Sehbehinderung oder Mobilitätsproblemen. Weitere Informationen finden Sie unter [Benutzereingabe](../inputdev/user-input.md) und Engineering [Software for Accessibility eBook](https://www.microsoft.com/download/details.aspx?id=19262).
 
 -   Visuelle Stile, Animationen und visuelle Effekte
 
-    Windows umfasst verschiedene Technologien, mit denen Sie visuelle Interessen hinzufügen und die Benutzeroberfläche von anderen Anwendungen trennen können. Hierzu gehören das Angeben der visuellen Stile von Steuerelementen, das Hinzufügen von Animationen zu Benutzeroberflächen Elementen und das Implementieren verschiedener visueller Effekte in der Benutzeroberfläche. Weitere Informationen finden Sie unter [visuelle Stile](../controls/themes-overview.md), [Windows Animation Manager](../uianimation/-main-portal.md)und [Desktopfenster-Manager](../dwm/dwm-overview.md).
+    Windows enthält mehrere Technologien, mit denen Sie visuelles Interesse hinzufügen und die Benutzeroberfläche von denen anderer Anwendungen unterscheiden können. Dazu gehören das Angeben der visuellen Stile von Steuerelementen, das Hinzufügen von Animationen zu Benutzeroberflächenelementen und das Implementieren verschiedener visueller Effekte in der Benutzeroberfläche. Weitere Informationen finden Sie unter [Visual Styles](../controls/themes-overview.md), Windows [Animation Manager](../uianimation/-main-portal.md)und [Desktopfenster-Manager](../dwm/dwm-overview.md).
 
 ## <a name="simplify"></a>Vereinfachen von 
 
-Eine erfolgreiche Benutzer Leistung hängt von dem Ansatz, der Perspektive und den Annahmen des Entwicklers während des Entwurfsprozesses ab. Wenn Sie ein grundlegendes Verständnis dafür haben, wie eine Anwendung von der Zielgruppe verwendet werden kann, müssen Sie sich über die Einschränkungen der Anforderungen des Entwicklers im allgemeinen Gedanken machen. Wenn Sie diese Zeit, den Aufwand und die Untersuchung am Anfang eines Projekts investieren, fallen am Ende Dividenden an.
+Eine erfolgreiche Benutzererfahrung hängt vom Ansatz, der Perspektive und den Annahmen des Entwicklers während des Entwurfsprozesses ab. Um ein grundlegendes Verständnis dafür zu erlangen, wie eine Anwendung von der Zielgruppe verwendet werden kann, müssen Sie über die Einschränkungen der Anforderungen des Entwicklers hinaus umfassend denken können. Wenn Sie diese Zeit, den Aufwand und die Forschung am Anfang eines Projekts investieren, zahlen Sie am Ende einen Gewinn aus.
 
-### <a name="reduce-reuse-declutter"></a>Reduzieren, wieder verwenden, überhäufen
+### <a name="reduce-reuse-declutter"></a>Reduce, Reuse, Declutter
 
-Features verbessern nur ein Produkt, wenn Sie tatsächlich verwendet werden. In vielen Fällen kann die Verbreitung von Features eine Komplexität mit sich bringen, indem weitere Symbole, Menü Elemente, Symbolleisten und Dialogfelder hinzugefügt werden, die die Effizienz und Produktivität beeinträchtigen, anstatt einen Wert hinzuzufügen.
+Features verbessern ein Produkt nur, wenn sie tatsächlich verwendet werden. In vielen Fällen kann die Verbreitung von Features zu Komplexität führen, da mehr Symbole, Menüelemente, Symbolleisten und Dialogfelder die Effizienz und Produktivität beeinträchtigen, anstatt einen Mehrwert zu schaffen.
 
 ### <a name="the-best-ui-is-no-ui"></a>Die beste Benutzeroberfläche ist keine Benutzeroberfläche.
 
-Die Benutzeroberfläche impliziert, dass der Benutzer mit der Anwendung interagieren muss, damit etwas passiert. Im Idealfall ist keine Interaktion erforderlich. Aus Sicht des Benutzers funktioniert das nur. Wenn eine Funktion hinzugefügt werden kann, mit der eine Benutzerinteraktion sicher entfernt wird, ist die Benutzer Funktionalität deutlich besser.
+Die Benutzeroberfläche impliziert, dass der Benutzer mit der Anwendung interagieren muss, um etwas zu bewirken. Im Idealfall ist keine Interaktion erforderlich. Aus Sicht des Benutzers funktioniert dies einfach. Wenn ein Feature hinzugefügt werden kann, das eine Benutzerinteraktion sicher entfernt, wird die Benutzerfreundlichkeit erheblich verbessert.
 
-### <a name="less-ui-is-better-ui"></a>Weniger Benutzeroberfläche ist eine bessere Benutzeroberfläche
+### <a name="less-ui-is-better-ui"></a>Weniger Benutzeroberfläche ist bessere Benutzeroberfläche
 
-In vielen Fällen ist es nicht möglich, die UI-Interaktion vollständig aus der Benutzeroberfläche zu entfernen. Der weniger Benutzereingriff, der von einer Anwendung benötigt wird, ist jedoch besser.
+In vielen Fällen ist es nicht möglich, die Benutzeroberflächeninteraktion vollständig aus der Benutzeroberfläche zu entfernen. Je weniger Benutzerinteraktion von einer Anwendung benötigt wird, desto besser ist es jedoch.
 
-Identifizieren Sie die gängigsten und wichtigsten Aktivitäten, die Benutzer mit der Anwendung durchführen, und machen Sie diese Funktionen in der Benutzeroberfläche am prominentesten. Setzen Sie andere Funktionen und Aktivitäten entweder visuell, hierarchisch oder durch optionale Anwendungseinstellungen und Benutzereinstellungen auf einen niedrigeren Status um.
+Identifizieren Sie die gängigsten und wichtigsten Aktivitäten, die Benutzer mit der Anwendung ausführen, und machen Sie diese Funktionen in der Benutzeroberfläche zu den wichtigsten. Verwerfen Sie andere Funktionen und Aktivitäten entweder visuell, hierarchisch oder über optionale Anwendungseinstellungen und Benutzereinstellungen in einen niedrigeren Status.
 
--   Anstelle von "Add" ersetzen
+-   Ersetzen statt Hinzufügen
 
-    Die Erhaltung der UI-Regel gibt an, dass Sie etwas nur dann hinzufügen, wenn Sie etwas entfernen können. Diese Regel zwingt einen Entwickler, eine neue Funktion in Erwägung zu ziehen, indem er die Auswirkungen der Funktion auf die gesamte Benutzer Funktionalität berücksichtigt.
+    Die Ui-Regel besagt, dass Sie etwas nur hinzufügen, wenn Sie etwas wegnehmen können. Diese Regel zwingt einen Entwickler, kritisch über ein neues Feature nachzudenken, indem er die Auswirkungen berücksichtigt, die das Feature auf die gesamte Benutzeroberfläche hat.
 
-    Neue Features sollten nicht höher gestuft werden, da Sie neu sind: Marketing nicht mit Nutzbarkeit verwechseln. Um Benutzern zu helfen, neue Funktionen in Ihrem Produkt zu finden, fügen Sie dem Menü **Hilfe** ein Element hinzu, das die Änderungen beschreibt, die seit der letzten Version der Anwendung aufgetreten sind.
+    Neue Features sollten nicht heraufgestuft werden, da sie neu sind: Verwechseln Sie Marketing nicht mit Benutzerfreundlichkeit. Damit Benutzer neue Features in Ihrem Produkt finden können, fügen Sie dem **Menü Hilfe** ein Element hinzu, das die Änderungen beschreibt, die seit der letzten Version der Anwendung aufgetreten sind.
 
 -   Der Benutzer ist eine eingeschränkte Ressource.
 
-    Die mehr Funktionalität, die zu einem beliebigen Zeitpunkt verfügbar gemacht wird, desto schwieriger ist es, dass ein Benutzer die benötigte Funktionalität findet.
+    Je mehr Funktionen gleichzeitig verfügbar gemacht werden, desto schwieriger ist es für einen Benutzer, die benötigte Funktionalität zu finden.
 
--   Das unterbrechen ist grob.
+-   Es ist nur schwer zu unterbrechen.
 
-    Wenn eine Anwendung ein Dialogfeld anzeigt, zwingt Sie den Benutzer, den Vorgang zu beenden, den Sie tatsächlich durchgeführt haben, und muss auf etwas anderes achten. Wenn möglich, entfernen Sie ein Dialogfeld vollständig, indem Sie Fehlerfälle und andere Benutzeroberflächen vermeiden. Weitere Informationen zu Nachrichten Richtlinien finden Sie unter [Nachrichten](https://msdn.microsoft.com/library/dd535525.aspx).
+    Wenn eine Anwendung ein Dialogfeld anzeigt, zwingt sie den Benutzer, das zu beenden, was er gerade tut, und auf etwas anderes zu achten. Wenn möglich, entfernen Sie die Notwendigkeit eines Dialogfelds vollständig, indem Sie Fehlerfälle und andere unterbrechungsfreie Benutzeroberflächen vermeiden. Weitere Informationen zu Nachrichtenrichtlinien finden Sie unter [Meldungen.](https://msdn.microsoft.com/library/dd535525.aspx)
 
--   Einfach kann leistungsfähig sein
+-   Einfach kann leistungsstark sein
 
-    Eine einfache Benutzeroberfläche impliziert keine fehlende Funktionalität. In der Regel ist das Ergebnis einer einfacheren Benutzeroberfläche eine verkürzte Lernkurve, eine höhere Effizienz und eine verbesserte Produktivität. Dies ermöglicht es einem Benutzer, seine Kenntnisse mit der Anwendung zu erhöhen.
+    Eine einfache Benutzeroberfläche impliziert keine fehlende Funktionalität. In der Regel ist das Ergebnis einer einfacheren Benutzeroberfläche eine verkürzte Lernkurve, eine höhere Effizienz und eine verbesserte Produktivität. Dies ermöglicht es einem Benutzer, seine Kenntnisse über die Anwendung zu verbessern.
 
-### <a name="consistent-ui-is-good-ui"></a>Konsistente Benutzeroberfläche ist eine gute Benutzeroberfläche
+### <a name="consistent-ui-is-good-ui"></a>Konsistente Benutzeroberfläche ist gute Benutzeroberfläche
 
-Im Allgemeinen wird empfohlen, Konsistenz in einer Anwendungs Benutzeroberfläche zu gewährleisten. Durch die Bereitstellung einer konsistenten Benutzeroberfläche kann ein Benutzer in viel kürzerer Zeit mit einer Anwendung besser vertraut werden. Sie sind in der Lage, Ihre vorhandenen Kenntnisse der Anwendung auf unterschiedliche Situationen anzuwenden und mit vertrauenswürdiger Funktionalität zu verwenden.
+Im Allgemeinen wird empfohlen, die Konsistenz in der gesamten Benutzeroberfläche einer Anwendung zu gewährleisten. Durch die Bereitstellung einer konsistenten Benutzeroberfläche kann ein Benutzer in viel kürzerer Zeit mit einer Anwendung vertrauter werden. Sie sind in der Lage, ihre vorhandenen Kenntnisse der Anwendung auf verschiedene Situationen anzuwenden und unbekannte Funktionen mit Zuverlässigkeit zu nutzen.
 
-In seltenen Fällen bietet die Konsistenz keinen Vorteil für den Benutzer und kann sogar die Benutzer Leistung beeinträchtigen. Machen Sie die Benutzeroberfläche nicht konsistent, wenn diese Konsistenz die Fähigkeit zum Ausführen einer Aufgabe beeinträchtigt. Die Konsistenz in sich selbst garantiert nicht die Verwendbarkeit. Es ist ein Fehler, zu bedenken, dass die Konsistenz in der Schnittstelle zu einem guten Entwurf führt.
+In seltenen Fällen bietet Konsistenz dem Benutzer keinen Vorteil und kann sogar die Benutzerfreundlichkeit beeinträchtigen. Machen Sie die Benutzeroberfläche nicht konsistent, wenn diese Konsistenz die Fähigkeit beeinträchtigt, eine Aufgabe auszuführen. Die Konsistenz an sich garantiert keine Benutzerfreundlichkeit. Es ist ein Fehler zu glauben, dass Konsistenz in der Schnittstelle zu einem guten Design führt.
 
-Beispielsweise ist die Videospiel-Benutzeroberfläche in der Regel sehr spezifisch für die Art des Spiels. Wenn Sie versuchen, eine generische Benutzeroberfläche zu entwerfen, die für zwei spezialisierte Spiele geeignet ist, eine, die ein Mausrad erfordert, und eine andere, die am besten mit einem Joystick und Schaltflächen funktioniert, wird für jedes Spiel wahrscheinlich nicht erfolgreich sein. Es ist wahrscheinlich, dass ein mittlerer Grund wahrscheinlich erreicht wird, der für beides nicht geeignet ist.
+Beispielsweise ist die Benutzeroberfläche von Spielen in der Regel sehr spezifisch für die Art des Spiels. Der Versuch, eine generische Benutzeroberfläche zu entwerfen, die gut für zwei spezialisierte Spiele geeignet ist, eines, das ein reifes Rad erfordert, und ein anderes, das am besten mit einem Kasten und Schaltflächen funktioniert, wird wahrscheinlich für beide Spiele nicht erfolgreich sein. Bestnfalls wird ein Mittelweg erreicht, der auch nicht gut geeignet ist.
 
-Wenn Sie gute Daten darüber haben, wie Dinge verwendet werden, können Sie diese Entscheidung treffen. Machen Sie sich mit den vor-und Nachteile der einzelnen Kompromisse vertraut (Geschwindigkeit und Zuverlässigkeit, einfaches lernen im Vergleich zu Fachkenntnissen, globale Konsistenz und lokale Optimierung), und treffen Sie die besten Entscheidungen für das Feature im Zusammenhang mit dem gesamten Produkt.
+Gute Daten zur Verwendung der Dinge sind der Schlüssel für diese Entscheidung. Machen Sie sich mit den Vor- und Nachteilen der einzelnen Kompromisse (Geschwindigkeit und Zuverlässigkeit, Einfaches Lernen im Vergleich zu Expertenkenntnissen, globale Konsistenz und lokale Optimierung) klar, und treffen Sie die besten Entscheidungen für das Feature in Bezug auf das gesamte Produkt.
 
-Der Entwurf wählt, wie ein Fehler auftritt: die Optimierung für ein anderes bedeutet, dass er fehlschlägt. Der Schlüssel zu gutem Design der Benutzeroberfläche ist die Entscheidung, welche Merkmale der Anwendung am wichtigsten sind und welche ausgeschnitten werden können.
+Der Entwurf wählt aus, wie ein Fehler vorliegt: Die Optimierung für eine Sache bedeutet, dass ein Fehler bei einem anderen fehlschlägt. Der Schlüssel zu einem guten Benutzeroberflächenentwurf besteht darin, entscheiden zu können, welche Merkmale der Anwendung am wichtigsten sind und welche ausgeschnitten werden können.
 
- 
+ 
 
- 
+ 

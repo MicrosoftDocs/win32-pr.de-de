@@ -1,33 +1,33 @@
 ---
-description: Die Präsentationszeit, zu der die Medien senken das erste Beispiel der neuen Topologie Rendering.
+description: Die Präsentationszeit, zu der die Mediensenken das erste Beispiel der neuen Topologie rendern.
 ms.assetid: 02a8c542-b519-495e-9fb2-8db2f5384db7
-title: MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT-Attribut (mfapi. h)
+title: MF_EVENT_START_PRESENTATION_TIME_AT_OUTPUT -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a588bc6604deed6c6865cd8283390d28e3ffd49
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8bd5949a73244eec26fb0390805c11f630291a470b2016b5a3575311261b72a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119723180"
 ---
-# <a name="mf_event_start_presentation_time_at_output-attribute"></a>\_ \_ \_ Zeitpunkt der Präsentation des MF-Ereignisses \_ \_ beim \_ Ausgabe Attribut
+# <a name="mf_event_start_presentation_time_at_output-attribute"></a>MF \_ EVENT START PRESENTATION TIME AT \_ \_ \_ \_ \_ OUTPUT-Attribut
 
-Die Präsentationszeit, zu der die Medien senken das erste Beispiel der neuen Topologie Rendering.
+Die Präsentationszeit, zu der die Mediensenken das erste Beispiel der neuen Topologie rendern.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-Als **Longlong** -Wert behandeln.
+Als **LONGLONG-Wert** behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn alle Pipeline Objekte in der vorherigen Topologie Daten gepuffert haben, ist dieser Wert etwas niedriger als der Wert im [**\_ \_ \_ Zeit \_ Offset Attribut der MF-Ereignis Präsentation**](mf-event-presentation-time-offset-attribute.md) , da die senken die gepufferten Daten renderten müssen.
+Wenn Pipelineobjekte in den zuvor gepufferten Topologiedaten enthalten sind, ist dieser Wert etwas kleiner als der Wert im [**MF \_ EVENT PRESENTATION \_ TIME \_ \_ OFFSET-Attribut,**](mf-event-presentation-time-offset-attribute.md) da die Senken die gepufferten Daten rendern müssen.
 
-Dieses Attribut ist ein Wert mit Vorzeichen, obwohl er als **UINT64** gespeichert wird.
+Dieses Attribut ist ein signierter Wert, obwohl es als **UINT64 gespeichert wird.**
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,26 +35,26 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Ereignisattribute](event-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
+[**ATTRIBUTEs::GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
+[**ATTRIBUTEs::SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 </dt> </dl>
 
  

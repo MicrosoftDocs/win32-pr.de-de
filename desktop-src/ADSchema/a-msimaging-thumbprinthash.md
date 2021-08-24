@@ -1,11 +1,11 @@
 ---
-title: MS-Imaging-Thumbprint-Hash-Attribut
-description: Enthält einen Hash des Sicherheitszertifikats für das scanerepository/sicheres Druck Gerät.
+title: ms-Imaging-Thumbprint-Hash-Attribut
+description: Enthält einen Hash des Sicherheitszertifikats für das Scan-Repository/das sichere Druckgerät.
 ms.assetid: 51b3bf02-2914-4af1-8b38-bb46e43093d6
 ms.tgt_platform: multiple
 keywords:
 - MS-Imaging-Thumbprint-Hash-Attribut AD-Schema
-- msimagung-thumbprinthash-Attribut AD-Schema
+- msImaging-ThumbprintHash-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 13535c385c2e4765a50e359e2ef51bced4100018
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e12077ecb0ef2a10cf18a408c3b7e7bd303a37ec04a9946295a0126359889ca2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763060"
 ---
-# <a name="ms-imaging-thumbprint-hash-attribute"></a>MS-Imaging-Thumbprint-Hash-Attribut
+# <a name="ms-imaging-thumbprint-hash-attribute"></a>ms-Imaging-Thumbprint-Hash-Attribut
 
-Enthält einen Hash des Sicherheitszertifikats für das scanerepository/sicheres Druck Gerät.
+Enthält einen Hash des Sicherheitszertifikats für das Scan-Repository/das sichere Druckgerät.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MS-Imaging-Thumbprint-Hash                            |
-| LDAP-Display-Name | msimaging-thumbprinthash                              |
+| CN                | ms-Imaging-Thumbprint-Hash                            |
+| Ldap-Anzeigename | msImaging-ThumbprintHash                              |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2180                               |
-| System-ID-GUID    | 9cdfdbc5-0304-4569-95fi6-C4F 663fe5ae6                  |
+| System-ID-GUID    | 9cdfdbc5-0304-4569-95f6-c4f663fe5ae6                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -52,11 +52,11 @@ Enthält einen Hash des Sicherheitszertifikats für das scanerepository/sicheres
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

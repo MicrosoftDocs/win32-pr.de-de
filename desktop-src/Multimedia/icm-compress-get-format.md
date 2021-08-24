@@ -1,9 +1,9 @@
 ---
-title: ICM_COMPRESS_GET_FORMAT Meldung (VFW. h)
-description: Die ICM \_ Compress \_ get \_ Format-Meldung fordert das Ausgabeformat der komprimierten Daten von einem Video Komprimierungs Treiber an. Sie können diese Nachricht explizit oder mithilfe des iccompressgetformat-Makros senden.
+title: ICM_COMPRESS_GET_FORMAT (Vfw.h)
+description: Die ICM COMPRESS GET FORMAT fordert das Ausgabeformat der komprimierten Daten \_ \_ von einem \_ Videokomprimierungstreiber an. Sie können diese Nachricht explizit oder mithilfe des Makros ICCompressGetFormat senden.
 ms.assetid: ac12d415-bad5-4838-b206-09c8097d3fd9
 keywords:
-- ICM_COMPRESS_GET_FORMAT-Nachricht (Multimedia)
+- ICM_COMPRESS_GET_FORMAT-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d096ceafa382bdbae5e4efe16975b3518735e773
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7ac1bf9b3c9a3ae0535da008786bf8baef19c8b51e27446b84e4b95805a1c4a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785030"
 ---
-# <a name="icm_compress_get_format-message"></a>ICM \_ Compress \_ - \_ Format Meldung "Get"
+# <a name="icm_compress_get_format-message"></a>\_ICM COMPRESS \_ GET \_ FORMAT-Nachricht
 
-Die **ICM \_ Compress \_ get \_ Format** -Meldung fordert das Ausgabeformat der komprimierten Daten von einem Video Komprimierungs Treiber an. Sie können diese Nachricht explizit oder mithilfe des [**iccompressgetformat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat) -Makros senden.
+Die **ICM COMPRESS GET \_ \_ \_ FORMAT-Nachricht** fordert das Ausgabeformat der komprimierten Daten von einem Videokomprimierungstreiber an. Sie können diese Nachricht explizit oder mithilfe des [**Makros ICCompressGetFormat**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformat) senden.
 
 
 ```C++
@@ -38,29 +38,29 @@ lParam = (DWORD_PTR) (LPVOID) lpbiOutput;
 
 <dl> <dt>
 
-<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiinput*
+<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiInput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Eingabeformat enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Eingabeformat enthält.
 
 </dd> <dt>
 
-<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbioutput*
+<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbiOutput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Ausgabeformat enthalten soll. Sie können NULL für diesen Parameter angeben, um nur die Größe des Ausgabeformats anzufordern, wie im " [**iccompressgetformatsize**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformatsize) "-Makro.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Ausgabeformat enthalten soll. Sie können null angeben, damit dieser Parameter nur die Größe des Ausgabeformats angibt, wie im [**ICCompressGetFormatSize-Makro.**](/windows/desktop/api/Vfw/nf-vfw-iccompressgetformatsize)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn *lpbioutput* gleich 0 (null) ist, wird die Größe der Struktur zurückgegeben.
+Wenn *lpbiOutput* 0 (null) ist, gibt die Größe der -Struktur zurück.
 
-Wenn *lpbioutput* ungleich NULL ist, gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Wenn *lpbiOutput* ungleich 0 (null) ist, gibt ICERR OK zurück, wenn \_ erfolgreich, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *lpbioutput* ungleich NULL ist, sollte der Treiber die [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur mit dem Standardausgabeformat auffüllen, das dem für *lpbiinput* angegebenen Eingabeformat entspricht. Wenn der-Kompressor mehrere Formate liefern kann, sollte das Standardformat das Standardformat aufweisen, das die größte Menge an Informationen beibehält.
+Wenn *lpbiOutput* ungleich null ist, sollte der Treiber die [**BITMAPINFO-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) mit dem Standardausgabeformat füllen, das dem für *lpbiInput angegebenen Eingabeformat entspricht.* Wenn die Komprimierung mehrere Formate erzeugen kann, sollte das Standardformat das Format sein, das die größte Menge an Informationen beibwahrt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Wenn *lpbioutput* ungleich NULL ist, sollte der Treiber die [**BitmapInfo**](/wi
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -81,7 +81,7 @@ Wenn *lpbioutput* ungleich NULL ist, sollte der Treiber die [**BitmapInfo**](/wi
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

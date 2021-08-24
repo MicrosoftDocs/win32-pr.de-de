@@ -1,68 +1,68 @@
 ---
-description: In diesem Thema werden die wichtigsten Überlegungen zur Programmierung beim Hinzufügen von MUI-Funktionen zu Ihren Anwendungen zusammengefasst.
+description: In diesem Thema werden die wichtigsten Überlegungen zur Programmierung zusammengefasst, die beim Hinzufügen von MSI-Funktionen zu Ihren Anwendungen zu berücksichtigen sind.
 ms.assetid: 10064f5c-5563-44f8-afb5-c6c77991e13c
-title: Entwicklung von MUI-Anwendungen
+title: Entwicklung von APPLICATIONS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb4a3278b4cc70969c1aa968de895d99fd3363a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32cc647069577a2ff3b137573b85308aa66e685df2310c2ea01973d19d1dc0d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822770"
 ---
-# <a name="development-of-mui-applications"></a>Entwicklung von MUI-Anwendungen
+# <a name="development-of-mui-applications"></a>Entwicklung von APPLICATIONS
 
-In diesem Thema werden die wichtigsten Überlegungen zur Programmierung beim Hinzufügen von MUI-Funktionen zu Ihren Anwendungen zusammengefasst.
+In diesem Thema werden die wichtigsten Überlegungen zur Programmierung zusammengefasst, die beim Hinzufügen von MSI-Funktionen zu Ihren Anwendungen zu berücksichtigen sind.
 
-## <a name="requirements-for-a-mui-application"></a>Anforderungen an eine MUI-Anwendung
+## <a name="requirements-for-a-mui-application"></a>Anforderungen für eineLIK-Anwendung
 
-MUI-Funktionen werden nur auf die Lokalisierung einer vollständig globalisierte Anwendung angewendet, die mit einem Prozess namens Software Internationalisierung erstellt wurde. Das Microsoft [Go Global Developer Center](https://msdn.microsoft.com/goglobal) bietet eine große Auswahl an verwandter Dokumentation, die Sie beim Entwerfen, entwickeln und Bereitstellen weltweit einsatzbereiter Anwendungen unterstützt. Mit diesen Dokumenten können Sie in Erwägung gezogen werden, wie sich die Merkmale unterschiedlicher Sprachen auf den Entwurf Ihrer Software auswirken können. Beachten Sie, dass das Portal auch ein umfassendes Archiv der Dr. International-Spalten enthält.
+DIE FUNKTIONALITÄT WIRD nur auf die Lokalisierung einer vollständig globalisierten Anwendung angewendet, die mithilfe eines Prozesses namens Software internationalization erstellt wird. Das Microsoft [Go Global Developer Center](https://msdn.microsoft.com/goglobal) bietet eine große Auswahl an zugehöriger Dokumentation, die Sie beim Entwerfen, Erstellen und Bereitstellen von weltweit einsatzbereiten Anwendungen unterstützt. Diese Dokumente helfen Ihnen zu überlegen, wie sich die Merkmale verschiedener menschlicher Sprachen auf den Entwurf Ihrer Software auswirken können. Beachten Sie, dass das Portal auch ein vollständiges Archiv von Dr. International-Spalten bereitstellt.
 
-Ihre MUI-Anwendung kann unter jeder beliebigen Sprache oder Gebiets Schema Einstellung ausgeführt werden, und der Benutzer kann jede beliebige Sprache anfordern, für die die Anwendung Unterstützung bietet. Daher muss die Anwendung Benutzeroberflächen Text codieren, um die größtmögliche Vielfalt von Sprachen zu unterstützen. Der wichtigste Punkt, den Sie beachten müssen, ist die Verwendung von [Unicode](unicode.md) , um die gesamte Textverarbeitung zu verarbeiten. Weitere Informationen zur Globalisierung mithilfe von Unicode finden Sie im Microsoft [Go Global Developer Center](https://msdn.microsoft.com/goglobal).
+Ihre LANGUAGE-Anwendung kann unter einer beliebigen Sprach- oder Gebietsschemaeinstellung ausgeführt werden, und der Benutzer kann eine beliebige Sprache anfordern, für die die Anwendung Unterstützung enthält. Aus diesem Grund muss die Anwendung Benutzeroberflächentext codieren, um die größtmögliche Vielfalt von Sprachen zu unterstützen. Das Wichtigste, was Sie sich merken sollten, ist die Verwendung von [Unicode,](unicode.md) um die gesamte Textverarbeitung zu verarbeiten. Weitere Informationen zur Globalisierung mit Unicode finden Sie im Microsoft [Go Global Developer Center.](https://msdn.microsoft.com/goglobal)
 
 ## <a name="supported-programming-environments"></a>Unterstützte Programmierumgebungen
 
-Sie können MUI-Funktionen zu einer globalisierten Win32 Forms-Anwendung oder-Konsolenanwendung hinzufügen, wie in diesem SDK beschrieben. Außerdem können Sie mit .NET Framework verwaltete Anwendungen erstellen, die mit MUI kompatibel sind. Weitere Informationen finden Sie unter [.net-Entwicklung](/previous-versions/ff361664(v=vs.100)).
+Sie können EINER globalisierten Win32 Forms-Anwendung oder Konsolenanwendung wie in diesem SDK beschrieben DIE FUNKTIONALITÄT hinzufügen. Darüber hinaus können Sie verwaltete Anwendungen mithilfe von .NET Framework erstellen, die mit DEM TON kompatibel ist. Weitere Informationen finden Sie unter [.NET-Entwicklung.](/previous-versions/ff361664(v=vs.100))
 
-## <a name="user-interface-language-settings"></a>Spracheinstellungen der Benutzeroberfläche
+## <a name="user-interface-language-settings"></a>Benutzeroberfläche Language Einstellungen
 
-Wenn Sie Ihre MUI-Anwendung planen, müssen Sie zuerst die Sprachen für die Benutzeroberfläche und die Art der Darstellung für den Benutzer festlegen. Die Anwendung kann Sprachen auf eine der folgenden Arten unterstützen:
+Bei der Planung Ihrer ZIP-Anwendung müssen Sie sich zunächst für die Sprachen für die Benutzeroberfläche und die Möglichkeit entscheiden, sie dem Benutzer zu präsentieren. Die Anwendung kann Sprachen auf eine der folgenden Arten unterstützen:
 
--   Befolgen Sie die Einstellungen der Systemsprache. Nehmen Sie an, dass die bevorzugten Benutzeroberflächen Sprachen und die bevorzugten Benutzeroberflächen Sprachen des Benutzers die Sprachen darstellen, die für den Benutzer verfügbar sind. Verwenden Sie den Fall Back Mechanismus des Ressourcen Laders für die Sprachauswahl.
--   Nehmen Sie anwendungsspezifische Spracheinstellungen vor. Unterstützen Sie bestimmte Sprachen, und stellen Sie dem Benutzer einen Auswahlmechanismus zur Verfügung.
+-   Befolgen Sie die Einstellungen der Systemsprache. Angenommen, die vom Benutzer bevorzugten Benutzeroberflächensprachen und die vom System bevorzugten Benutzeroberflächensprachen stellen zusammen die sprachen dar, die dem Benutzer zur Verfügung stehen. Verwenden Sie den Fallbackmechanismus des Ressourcenladeprogramms für die Sprachauswahl.
+-   Nehmen Sie anwendungsspezifische Spracheinstellungen vor. Unterstützen sie bestimmte Sprachen, und stellen Sie dem Benutzer einen Auswahlmechanismus zur Verfügung.
 
-## <a name="resource-creation"></a>Erstellen von Ressourcen
+## <a name="resource-creation"></a>Ressourcenerstellung
 
-In diesem Abschnitt werden die Möglichkeiten beschrieben, die Benutzeroberflächen Sprachressourcen für die Anwendung zu erstellen. Weitere Informationen finden Sie unter [Vorbereiten von Ressourcen](preparing-resources.md).
+In diesem Abschnitt werden die Möglichkeiten zum Erstellen der Benutzeroberflächen-Sprachressourcen für die Anwendung beschrieben. Weitere Informationen finden Sie unter [Vorbereiten von Ressourcen.](preparing-resources.md)
 
 > [!Note]  
-> Bei Betriebssystemen vor Windows Vista erstellen Sie in der Regel statische und separat gepackte lokalisierte Anwendungen mit einer Sprache, die von den in den ausführbaren Dateien enthaltenen Ressourcen Abschnitten unterstützt werden. Dieser Implementierungstyp ist größtenteils veraltet, und es wird empfohlen, eine der anderen Verfahren zur Ressourcen Erstellung auszuwählen, die in diesem Abschnitt beschrieben werden, der für Windows Vista und höher unterstützt wird. Die Anwendung kann dann unter Verwendung von [**loadmuilibrary**](/windows/desktop/api/Muiload/nf-muiload-loadmuilibrarya)auf Betriebssystemen vor Windows Vista ausgeführt werden.
+> Bei Betriebssystemen vor Windows Vista erstellen Sie im Allgemeinen statische und separat gepackte lokalisierte Einzelsprachanwendungen mit den Sprachen, die von ressourcenabschnitten unterstützt werden, die in den ausführbaren Dateien enthalten sind. Diese Art der Implementierung ist größtenteils veraltet, und Es wird empfohlen, eine der anderen In diesem Abschnitt beschriebenen Verfahren zum Erstellen von Ressourcen auszuwählen, die für Windows Vista und höher unterstützt werden. Die Anwendung kann dann mithilfe von [**LoadMUILibrary**](/windows/desktop/api/Muiload/nf-muiload-loadmuilibrarya)auf Betriebssystemen vor Windows Vista ausgeführt werden.
 
  
 
-### <a name="use-of-a-single-language-in-a-resource-dll-mui-resource-technology"></a>Verwendung einer einzelnen Sprache in einer Ressourcen-DLL (MUI-Ressourcen Technologie)
+### <a name="use-of-a-single-language-in-a-resource-dll-mui-resource-technology"></a>Verwenden einer einzelnen Sprache in einer Ressourcen-DLL (RESOURCE Technology)
 
-Eine Standard-Satelliten-DLL-Ressourcen Implementierung wird von vielen Microsoft-Anwendungen verwendet. In diesem Fall wird eine ausführbare Kerndatei für die MUI-Anwendung verwendet, und für jede unterstützte Sprache wird eine Ressourcen-DLL erstellt. Die Verwendung einer Satelliten-DLL gilt für Anwendungen, die unter jedem Windows-Betriebssystem ausgeführt werden. Wie in der [MUI-Ressourcenverwaltung](mui-resource-management.md)beschrieben, unterstützt die MUI-Ressourcen Technologie eine Variation der Standard-Satelliten-DLL-Implementierung.
+Eine Standardmäßige Implementierung von Satelliten-DLL-Ressourcen wird von vielen Microsoft-Anwendungen verwendet. In diesem Fall wird eine ausführbare Kerndatei für die WEBANWENDUNG verwendet, und für jede unterstützte Sprache wird eine Ressourcen-DLL erstellt. Die Verwendung einer Satelliten-DLL gilt für Anwendungen, die auf einem beliebigen Windows Betriebssystem ausgeführt werden. Wie in [DER RESSOURCENverwaltung](mui-resource-management.md)mit DEM THEMA BESCHRIEBEN, unterstützt die RESSOURCENtechnologie VON SICHE eine Variation der Standardmäßig-Satelliten-DLL-Implementierung.
 
-### <a name="use-of-multiple-languages-in-a-resource-dll"></a>Verwendung mehrerer Sprachen in einer Ressourcen-DLL
+### <a name="use-of-multiple-languages-in-a-resource-dll"></a>Verwenden mehrerer Sprachen in einer Ressourcen-DLL
 
-Sie können auswählen, dass Sie eine ausführbare Datei für Ihre MUI-Anwendung und eine Ressourcen-DLL für die Ressourcen erstellen, die unterstützten Sprachen zugeordnet sind. Kopien desselben Ressourcen Bezeichners werden in der Ressourcen Datei der Basis Sprache (RC-Erweiterung) unter verschiedenen sprach Tags für alle unterstützten Sprachen definiert.
+Sie können eine ausführbare Kerndatei für Ihre CSV-Anwendung und eine Ressourcen-DLL für die Ressourcen erstellen, die unterstützten Sprachen zugeordnet sind. Kopien desselben Ressourcenbezeichners werden in der Ressourcendatei der Basissprache (RC-Erweiterung) unter verschiedenen Sprachtags für alle unterstützten Sprachen definiert.
 
-### <a name="use-of-an-application-specific-resource-mechanism"></a>Verwendung eines Application-Specific-Ressourcenmechanismus
+### <a name="use-of-an-application-specific-resource-mechanism"></a>Verwenden eines Application-Specific-Ressourcenmechanismus
 
-Sie können Ihre MUI-Anwendung für die Verwendung eines angepassten Ressourcenmechanismus planen. In diesem Fall behandelt die Anwendung das Laden von Ressourcen auf spezielle Weise.
+Sie können Ihre PLANS-Anwendung so planen, dass sie einen benutzerdefinierten Ressourcenmechanismus verwendet. In diesem Fall verarbeitet die Anwendung das Laden von Ressourcen auf spezielle Weise.
 
-## <a name="resource-localization"></a>Ressourcen Lokalisierung
+## <a name="resource-localization"></a>Ressourcenlokalisierung
 
-Um die Sprachen der Benutzeroberfläche für Ihre MUI-Anwendung zu unterstützen, müssen Sie die Sprachressourcen lokalisiert haben. MUI unterstützt zwei Arten von Lokalisierung, wie in der folgenden Tabelle beschrieben.
+Um die Sprachen der Benutzeroberfläche für Ihre LANGUAGE-Anwendung zu unterstützen, müssen Sie die Sprachressourcen lokalisiert haben. WIE in der folgenden Tabelle beschrieben, werden zwei Lokalisierungstypen unterstützt.
 
 
 
-| Lokalisierungs Typen       | BESCHREIBUNG                                                                                                                                                                                                                                                                |
+| Lokalisierungstyp       | BESCHREIBUNG                                                                                                                                                                                                                                                                |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Lokalisierung vor dem Build  | Anfordern der Lokalisierung vor dem entwickeln der Anwendungs-und sprachspezifischen Ressourcen. Die Ressourcen Datei für die Basis Sprache der unterstützten Benutzeroberflächen Sprachen wird für jede unterstützte Sprache kopiert und umbenannt, und die Kopien werden den Lokalisierern nach Bedarf bereitgestellt. |
-| Lokalisierung nach dem Build | Anforderungs Lokalisierung nach dem Aufbau der ausführbaren Datei und der Ressourcen-DLL für Ihre Anwendung. In diesem Fall wird für jeden Lokalisierer eine Kopie der Ressourcen-DLL bereitgestellt.                                                                                                     |
+| Lokalisierung vor dem Build  | Fordern Sie die Lokalisierung an, bevor Sie die Anwendung und sprachspezifische Ressourcen erstellen. Die Ressourcendatei der Basissprache für die unterstützten Sprachen der Benutzeroberfläche wird für jede unterstützte Sprache kopiert und umbenannt, und die Kopien werden nach Bedarf für Diesser bereitgestellt. |
+| Lokalisierung nach dem Build | Fordern Sie die Lokalisierung an, nachdem Sie die ausführbare Datei und die Ressourcen-DLL für Ihre Anwendung erstellt haben. In diesem Fall wird jedem Lokalisierer eine Kopie der Ressourcen-DLL bereitgestellt.                                                                                                     |
 
 
 
@@ -72,7 +72,7 @@ Um die Sprachen der Benutzeroberfläche für Ihre MUI-Anwendung zu unterstützen
 
 <dl> <dt>
 
-[Informationen über mehrsprachige Benutzeroberfläche](about-multilingual-user-interface.md)
+[Informationen zu mehrsprachige Benutzeroberfläche](about-multilingual-user-interface.md)
 </dt> </dl>
 
  

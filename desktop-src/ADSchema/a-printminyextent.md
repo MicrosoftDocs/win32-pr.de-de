@@ -1,11 +1,11 @@
 ---
-title: Print-min-Y-Block-Attribut
+title: Print-Min-Y-Extent-Attribut
 description: Der minimale vertikale Druckbereich.
 ms.assetid: a612c0a1-aef1-4aa4-aa68-3bff1eb9cc08
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Attribut für den Druckbereich
-- printminyblock-Attribut AD-Schema
+- AD-Schema des Print-Min-Y-Extent-Attributs
+- printMinYExtent-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bc7c432cd75df926d952811692969414ad5cb30
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6af2efbaaa6f73566344cb6db571625a418a57adf0c1672ed52e9cb1e6bbf640
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837850"
 ---
-# <a name="print-min-y-extent-attribute"></a>Print-min-Y-Block-Attribut
+# <a name="print-min-y-extent-attribute"></a>Print-Min-Y-Extent-Attribut
 
 Der minimale vertikale Druckbereich.
 
@@ -29,11 +29,11 @@ Der minimale vertikale Druckbereich.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Druck-min-Y-Block                   |
-| LDAP-Display-Name | printminyblock                      |
+| CN                | Print-Min-Y-Extent                   |
+| Ldap-Anzeigename | printMinYExtent                      |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.280               |
 | System-ID-GUID    | ba305f72-47e3-11d0-a1a6-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Der minimale vertikale Druckbereich.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der minimale vertikale Druckbereich.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

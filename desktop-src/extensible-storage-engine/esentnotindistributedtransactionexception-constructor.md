@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentnotindistributedtransaktionexception-Konstruktor'
-title: Esentnotindistributedtransaktionexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentNotInDistributedTransactionException-Konstruktor'
+title: EsentNotInDistributedTransactionException-Konstruktor
 TOCTitle: 'EsentNotInDistributedTransactionException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNotInDistributedTransactionException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnotindistributedtransactionexception.esentnotindistributedtransactionexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b1e3a121d71d243b91b0924f09703844213a012b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df7bb390097538ec28b6d4ed21e51b4b562e189fbcea2b657de2568782749520
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722770"
 ---
-# <a name="esentnotindistributedtransactionexception-constructor"></a>Esentnotindistributedtransaktionexception-Konstruktor
+# <a name="esentnotindistributedtransactionexception-constructor"></a>EsentNotInDistributedTransactionException-Konstruktor
 
-Initialisiert eine neue Instanz der esentnotindistributedtransaktionexception-Klasse.
+Initialisiert eine neue Instanz der EsentNotInDistributedTransactionException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentNotInDistributedTransactionException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentnotindistributedtransaktionexception-Klasse](./esentnotindistributedtransactionexception-class.md)
+[EsentNotInDistributedTransactionException-Klasse](./esentnotindistributedtransactionexception-class.md)
 
-[Esentnotindistributedtransaktionexception-Member](./esentnotindistributedtransactionexception-members.md)
+[EsentNotInDistributedTransactionException-Member](./esentnotindistributedtransactionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,44 +1,44 @@
 ---
-description: Volumeumschlags Effekt
+description: Effekt "VolumeUmschlag"
 ms.assetid: 17b6d842-e79c-49b0-baa4-1535b4a2c6ae
-title: Volumeumschlags Effekt
+title: Effekt "VolumeUmschlag"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9364b88b1928e533a031f0700cb8a2c44bc9822d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4ecb66914063596849522a0e4bb340fc84f7d80e5ea1113bfdae2d32e855d3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746950"
 ---
-# <a name="volume-envelope-effect"></a>Volumeumschlags Effekt
+# <a name="volume-envelope-effect"></a>Effekt "VolumeUmschlag"
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Der volumeumschlags Effekt legt das Volume in einem Audiostream fest.
+Der Effekt VolumeUmschlag legt das Volume in einem Audiostream fest.
 
-Klassen-ID (CLSID): {036a9790-C153-11d2-9ef7-006008039e37}
+Klassen-ID (CLSID): {036A9790-C153-11D2-9EF7-006008039E37}
 
-CLSID-Variablen Name: CLSID- \_ audmixer
+CLSID-Variablenname: CLSID \_ AudMixer
 
 Eigenschaften
 
 
 
-| Eigenschaft | type   | Standard | BESCHREIBUNG                                                                                                           |
+| Eigenschaft | type   | Standard | Beschreibung                                                                                                           |
 |----------|--------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| Volumen      | double | 1.0     | Volume als Prozentsatz des erstellten Volumes. Sie können Audioüberblendungen entwickeln, indem Sie diesen Eigenschafts Wert im Zeitverlauf variieren |
+| Vol      | double | 1.0     | Volume als Prozentsatz des erstellten Volumes. Sie können Audiowiedergaben erzeugen, indem Sie diesen Eigenschaftswert im Laufe der Zeit variieren. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Objekt in einer Zeitachse kann höchstens einen volumeumschlags Effekt haben. In einer Komposition oder einer Gruppe wird der volumeumschlag vor allen anderen Audioeffekten unabhängig von seiner Priorität zuerst angewendet. In einer Quelle oder einer Spur wird der volumeeffekt entsprechend seiner Priorität angewendet.
+Jedes Objekt in einer Zeitachse kann höchstens einen Volumeumschlageffekt haben. In einer Komposition oder Gruppe wird der Volumeumschlag unabhängig von seiner Priorität zuerst vor anderen Audioeffekten angewendet. In einer Quelle oder einer Spur wird der Volumeeffekt entsprechend seiner Priorität angewendet.
 
  
 

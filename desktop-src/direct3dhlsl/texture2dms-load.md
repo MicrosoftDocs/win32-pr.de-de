@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DMS:: Texture2DMS Load-Methoden'
-description: 'Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab. | Texture2DMS:: Texture2DMS Load-Methoden'
+title: Texture2DMS::Texture2DMS Load-Methoden
+description: Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab. | Texture2DMS::Texture2DMS Load-Methoden
 ms.assetid: d597fc42-0b21-4e89-bb33-0b8c12ae00ae
 keywords:
-- Lade Methoden HLSL
+- Lademethoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,26 +12,26 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: a29324dc108464359e333ac401a24be4cadb461d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 24df3d58413c873df4113cbd9b876ad531cb8307fbc5c8b5062d4a94847e8e2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104393954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119742700"
 ---
-# <a name="texture2dmsload-methods"></a>Texture2DMS:: Load-Methoden
+# <a name="texture2dmsload-methods"></a>Texture2DMS::Load-Methoden
 
-Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab.
+Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                        |
+| Methode                                                           | Beschreibung                                                        |
 |:-----------------------------------------------------------------|:-------------------------------------------------------------------|
-| [**Load (int, int)**](sm5-object-texture2dms-load.md)             | Liest Textur Daten.<br/>                                     |
-| [**Load (int, int, int)**](dx-graphics-hlsl-to-load.md)            | Liest Textur Daten.<br/>                                     |
-| [**Load (int, int, int, uint)**](t2dms-load-float-int-int-uint-.md) | Liest Textur Daten und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load(int,int)**](sm5-object-texture2dms-load.md)             | Liest Texturdaten.<br/>                                     |
+| [**Load(int,int,int)**](dx-graphics-hlsl-to-load.md)            | Liest Texturdaten.<br/>                                     |
+| [**Load(int,int,int,uint)**](t2dms-load-float-int-int-uint-.md) | Liest Texturdaten und gibt den Status des Vorgangs zurück.<br/> |
 
 
 

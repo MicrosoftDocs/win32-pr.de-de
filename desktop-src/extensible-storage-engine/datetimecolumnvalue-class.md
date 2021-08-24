@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: datetimecolumnvalue-Klasse'
-title: Datetimecolumnvalue-Klasse
+description: 'Weitere Informationen zu: DateTimeColumnValue-Klasse'
+title: DateTimeColumnValue-Klasse
 TOCTitle: DateTimeColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.DateTimeColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.datetimecolumnvalue(v=EXCHG.10)
@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 59275ae13287645447b0095259b1dfce34fa53d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba1417ce3b724eb028376bc9ae219af54da512c70dfafdea8f182b891b411523
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119725483"
 ---
-# <a name="datetimecolumnvalue-class"></a>Datetimecolumnvalue-Klasse
+# <a name="datetimecolumnvalue-class"></a>DateTimeColumnValue-Klasse
 
-Ein [GUID](/dotnet/api/system.guid) -Spaltenwert.
+Ein [Guid-Spaltenwert.](/dotnet/api/system.guid)
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[DateTime](/dotnet/api/system.datetime)\>  
-      Microsoft. ISAM. ESENT. Interop. datetimecolumnvalue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[DateTime](/dotnet/api/system.datetime)\>  
+      Microsoft.Isam.Esent.Interop.DateTimeColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,8 +65,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Datetimecolumnvalue-Member](./datetimecolumnvalue-members.md)
+[DateTimeColumnValue-Elemente](./datetimecolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

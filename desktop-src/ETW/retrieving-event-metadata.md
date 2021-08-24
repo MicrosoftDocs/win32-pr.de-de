@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird gezeigt, wie Sie die Funktionen für Ablauf Verfolgungs Daten verwenden, um Metadaten für jedes Ereignis abzurufen.
+description: Das folgende Beispiel zeigt, wie sie die Hilfsfunktionen für Ablaufverfolgungsdaten verwenden, um Metadaten für jedes Ereignis abzurufen.
 ms.assetid: 599e0405-b125-4742-b134-964e25413f59
-title: Abrufen von Ereignis Metadaten
+title: Abrufen von Ereignismetadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6fe687e9a06e7aaef56121db5c098b74465de45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4e98e14c7e5bb7bb1b5f8016404c8b0bd630321b9d98702b7b6f9085d445c2a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766540"
 ---
-# <a name="retrieving-event-metadata"></a>Abrufen von Ereignis Metadaten
+# <a name="retrieving-event-metadata"></a>Abrufen von Ereignismetadaten
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Funktionen für Ablauf Verfolgungs Daten verwenden, um Metadaten für jedes Ereignis abzurufen. Weitere Informationen finden Sie auch in den Beispielen für die Funktionen " [**tdhqueryproviderfieldinformation**](/windows/desktop/api/Tdh/nf-tdh-tdhqueryproviderfieldinformation) " und " [**tdhenenerateproviderfieldinformation**](/windows/desktop/api/Tdh/nf-tdh-tdhenumerateproviderfieldinformation) ".
+Das folgende Beispiel zeigt, wie sie die Hilfsfunktionen für Ablaufverfolgungsdaten verwenden, um Metadaten für jedes Ereignis abzurufen. Sehen Sie sich auch die Beispiele an, die in den [**Funktionen TdhQueryProviderFieldInformation**](/windows/desktop/api/Tdh/nf-tdh-tdhqueryproviderfieldinformation) und [**TdhEnumerateProviderFieldInformation enthalten**](/windows/desktop/api/Tdh/nf-tdh-tdhenumerateproviderfieldinformation) sind.
 
 
 ```C++

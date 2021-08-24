@@ -1,7 +1,7 @@
 ---
-description: Behandelt Wörter, die von Wort Umbrüchen während der Index Zeit und der Abfragezeit identifiziert werden.
+description: Behandelt Wörter, die sowohl während der Indexzeit als auch während der Abfragezeit durch Wortumbrüche identifiziert werden.
 ms.assetid: 220FCAE5-D22D-45ED-9689-E78C0D8E0BB3
-title: Iwordsink-Schnittstelle (Search. h)
+title: IWordSink-Schnittstelle (Search.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,46 +13,46 @@ api_type:
 - COM
 api_location:
 - search.h
-ms.openlocfilehash: 2eab8eee4f7b07b0f712e68d7ad05b970506b00b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 109a852f37f3118cd1012c7385a4f9071fdd2f8867f57036e7607c20fd2dadbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822310"
 ---
-# <a name="iwordsink-interface"></a>Iwordsink-Schnittstelle
+# <a name="iwordsink-interface"></a>IWordSink-Schnittstelle
 
-Behandelt Wörter, die von Wort Umbrüchen während der Index Zeit und der Abfragezeit identifiziert werden.
+Behandelt Wörter, die sowohl während der Indexzeit als auch während der Abfragezeit durch Wortumbrüche identifiziert werden.
 
 ## <a name="members"></a>Member
 
-Die **iwordsink** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwordsink** verfügt auch über die folgenden Typen von Membern:
+Die **IWordSink-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWordSink** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwordsink** -Schnittstelle verfügt über diese Methoden.
+Die **IWordSink-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                             | BESCHREIBUNG                                                                                                                             |
+| Methode                                             | Beschreibung                                                                                                                             |
 |:---------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| [**Endaltphrase**](iwordsink-endaltphrase.md)     | Gibt das Ende des abschließenden Ausdrucks in einer Sequenz alternativer Ausdrücke an, die eine Wörter Trennung während der Index Zeit generiert.<br/>  |
-| [**Putaltword**](iwordsink-putaltword.md)         | Fügt ein alternatives Wort und seine Position in das **iwordsink** -Objekt ein.<br/>                                                       |
-| [**Putbreak**](iwordsink-putbreak.md)             | Versetzt nach dem vorangehenden Wort einen Umbruch.<br/>                                                                                       |
-| [**Putword**](iwordsink-putword.md)               | Fügt ein Wort und seine Position in das **iwordsink** -Objekt ein.<br/>                                                                    |
-| [**Startaltphrase**](iwordsink-startaltphrase.md) | Gibt die Begrenzung zwischen Ausdrücken in einer Sequenz alternativer Ausdrücke an, die eine Wörter Trennung während der Index Zeit generiert.<br/> |
+| [**EndAltPhrase**](iwordsink-endaltphrase.md)     | Gibt das Ende des endgültigen Ausdrucks in einer Abfolge alternativer Ausdrücke an, die eine Wörterpause während der Indexzeit generiert.<br/>  |
+| [**PutAltWord**](iwordsink-putaltword.md)         | Fügt ein alternatives Wort und seine Position in das **IWordSink-Objekt** ein.<br/>                                                       |
+| [**PutBreak**](iwordsink-putbreak.md)             | Fügt eine Unterbrechung nach dem vorherigen Wort ein.<br/>                                                                                       |
+| [**PutWord**](iwordsink-putword.md)               | Fügt ein Wort und seine Position in das **IWordSink-Objekt** ein.<br/>                                                                    |
+| [**StartAltPhrase**](iwordsink-startaltphrase.md) | Gibt die Grenze zwischen Ausdrücken in einer Sequenz alternativer Ausdrücke an, die eine Wörterpause während der Indexzeit generiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Search erstellt und Initialisiert Instanzen des **iwordsink** -Objekts. Das **iwordsink** -Objekt empfängt den *fquery* -Parameter während der Initialisierung und verwendet diesen Parameter, um den Wort Umbruch Kontext zu bestimmen, in dem das-Objekt verwendet wird.
+Windows Die Suche erstellt und initialisiert Instanzen des **IWordSink-Objekts.** Das **IWordSink-Objekt** empfängt während der Initialisierung den *fQuery-Parameter* und verwendet diesen Parameter, um den Wörterbruchkontext zu bestimmen, in dem das Objekt verwendet wird.
 
-[**Iwordbreaker**](/windows/win32/api/indexsrv/nn-indexsrv-iwordbreaker) -Implementierungen erhalten einen Zeiger auf das **iwordsink** -Objekt in der [**iwordbreaker:: breaktext**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext) -Methode.
+[**IWordBreaker-Implementierungen**](/windows/win32/api/indexsrv/nn-indexsrv-iwordbreaker) erhalten einen Zeiger auf das **IWordSink-Objekt** in der [**IWordBreaker::BreakText-Methode.**](/windows/win32/api/indexsrv/nf-indexsrv-iwordbreaker-breaktext)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Windows Search erstellt und Initialisiert Instanzen des **iwordsink** -Objekts. 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Search. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Search.h</dt> </dl> |
 
 
 

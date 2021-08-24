@@ -1,9 +1,9 @@
 ---
-title: MCI_WINDOW Befehl (MMSYSTEM. h)
-description: Der MCI \_ -Fenster Befehl gibt das Fenster und die Fenster Eigenschaften für Grafikgeräte an. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+title: MCI_WINDOW Befehl (Mmsystem.h)
+description: Der \_ MCI WINDOW-Befehl gibt das Fenster und die Fenstermerkmale für Grafikgeräte an. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: 8b6c4d9a-ee72-4c64-aebe-6c8153167496
 keywords:
-- MCI_WINDOW Befehl Windows-Multimedia
+- MCI_WINDOW Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41b4d630dbc9dbc7403e93cd0bda3de2eef1e5cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3270dce8b2127cce783c7c3b8bf21102590cd3e82d74a3e990a3117c59772381
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783690"
 ---
-# <a name="mci_window-command"></a>Befehl "MCI- \_ Fenster"
+# <a name="mci_window-command"></a>MCI \_ WINDOW-Befehl
 
-Der MCI \_ -Fenster Befehl gibt das Fenster und die Fenster Eigenschaften für Grafikgeräte an. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+Der \_ MCI WINDOW-Befehl gibt das Fenster und die Fenstermerkmale für Grafikgeräte an. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,102 +43,102 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder, für Digital Video-Geräte, MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder, für Digital Video-Geräte, MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpWindow"></span><span id="lpwindow"></span><span id="LPWINDOW"></span>*lpwindow*
+<span id="lpWindow"></span><span id="lpwindow"></span><span id="LPWINDOW"></span>*lpWindow*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**GENERISCHE \_ MCI-PARMS-Struktur. \_**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Grafikgeräte sollten ein Standardfenster erstellen, wenn ein Gerät geöffnet wird, das jedoch erst angezeigt werden soll, wenn der Befehl " [MCI \_ Play](mci-play.md) " empfangen wird. Der MCI \_ -Fenster Befehl wird verwendet, um ein von der Anwendung erstelltes Fenster für das Gerät bereitzustellen und die Anzeigeeigenschaften eines Anwendungs definierten oder standardmäßigen Anzeige Fensters zu ändern. Wenn die Anwendung das Anzeige Fenster bereitstellt, sollte Sie darauf vorbereitet sein, ein ungültiges Rechteck im Fenster zu aktualisieren.
+Grafikgeräte sollten beim Öffnen eines Geräts ein Standardfenster erstellen, es jedoch erst anzeigen, wenn sie den [MCI \_ PLAY-Befehl](mci-play.md) erhalten. Der \_ MCI WINDOW-Befehl wird verwendet, um dem Gerät ein von der Anwendung erstelltes Fenster zur Verfügung zu stellen und die Anzeigemerkmale eines anwendungsdefiniert oder standardmäßigen Anzeigefensters zu ändern. Wenn die Anwendung das Anzeigefenster zur Verfügung stellt, sollte sie darauf vorbereitet sein, ein ungültiges Rechteck im Fenster zu aktualisieren.
 
-Die folgenden zusätzlichen Flags werden mit dem **Digitalvideo** -Gerätetyp verwendet:
-
-<dl> <dt>
-
-<span id="MCI_DGV_WINDOW_HWND"></span><span id="mci_dgv_window_hwnd"></span>MCI- \_ DGV- \_ Fenster ( \_ HWND)
-</dt> <dd>
-
-Das Handle des Fensters, das für die Verwendung als Ziel benötigt wird, ist im **HWND** -Member der durch *lpwindow* identifizierten Struktur enthalten.
-
-</dd> <dt>
-
-<span id="MCI_DGV_WINDOW_STATE"></span><span id="mci_dgv_window_state"></span>Status des MCI- \_ DGV- \_ Fensters \_
-</dt> <dd>
-
-Der **nCmdShow** -Member der Struktur, die von *lpwindow* identifiziert wird, enthält Parameter zum Festlegen des Fenster Zustands.
-
-</dd> <dt>
-
-<span id="MCI_DGV_WINDOW_TEXT"></span><span id="mci_dgv_window_text"></span>MCI- \_ DGV- \_ Fenster \_ Text
-</dt> <dd>
-
-Der **lpstrautext** -Member der durch *lpwindow* identifizierten Struktur enthält die Adresse eines Puffers, der die in der Fenstertitelleiste verwendete Beschriftung enthält.
-
-</dd> </dl>
-
-Für Digital Video-Geräte verweist der *lpwindow* -Parameter auf eine [**MCI- \_ DGV- \_ Fenster \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_window_parmsa) -Struktur.
-
-Die folgenden zusätzlichen Flags werden mit dem **Überlagerungs** Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Gerätetyp digitalvideo** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_OVLY_WINDOW_DISABLE_STRETCH"></span><span id="mci_ovly_window_disable_stretch"></span>MCI- \_ OVLY- \_ Fenster zum Deaktivieren der \_ \_ Streckung
+<span id="MCI_DGV_WINDOW_HWND"></span><span id="mci_dgv_window_hwnd"></span>MCI \_ DGV \_ WINDOW \_ HWND
 </dt> <dd>
 
-Deaktiviert die Streckung des Bilds.
+Das Handle des Fensters, das für die Verwendung als Ziel benötigt wird, ist im **hWnd-Member** der von *lpWindow* identifizierten Struktur enthalten.
 
 </dd> <dt>
 
-<span id="MCI_OVLY_WINDOW_ENABLE_STRETCH"></span><span id="mci_ovly_window_enable_stretch"></span>MCI- \_ OVLY- \_ Fenster zum Aktivieren der \_ \_ Streckung
+<span id="MCI_DGV_WINDOW_STATE"></span><span id="mci_dgv_window_state"></span>MCI \_ DGV \_ WINDOW \_ STATE
 </dt> <dd>
 
-Ermöglicht das Stretching des Bilds.
+Der **nCmdShow-Member** der von *lpWindow* identifizierten Struktur enthält Parameter zum Festlegen des Fensterzustands.
 
 </dd> <dt>
 
-<span id="MCI_OVLY_WINDOW_HWND"></span><span id="mci_ovly_window_hwnd"></span>MCI \_ OVLY \_ Window \_ HWND
+<span id="MCI_DGV_WINDOW_TEXT"></span><span id="mci_dgv_window_text"></span>MCI \_ DGV \_ WINDOW \_ TEXT
 </dt> <dd>
 
-Das Handle des Fensters, das für das Ziel verwendet wird, ist in das **HWND** -Element der von *lpwindow* identifizierten Struktur eingeschlossen. Legen Sie dieses Flag auf MCI \_ OVLY \_ Window \_ default fest, um zum Standardfenster zurückzukehren.
-
-</dd> <dt>
-
-<span id="MCI_OVLY_WINDOW_STATE"></span><span id="mci_ovly_window_state"></span>Status des MCI- \_ OVLY- \_ Fensters \_
-</dt> <dd>
-
-Der **nCmdShow** -Member der *lpwindow* -Struktur enthält Parameter zum Festlegen des Fenster Zustands. Dieses Flag entspricht dem Aufrufen von [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) mit dem *State* -Parameter. Die Konstanten sind identisch mit den in Windows definierten Konstanten. H (z. b \_ . SW Hide, SW \_ minimieren oder SW \_ shownormal).
-
-</dd> <dt>
-
-<span id="MCI_OVLY_WINDOW_TEXT"></span><span id="mci_ovly_window_text"></span>Text des MCI- \_ OVLY- \_ Fensters \_
-</dt> <dd>
-
-Der **lpstrautext** -Member der durch *lpwindow* identifizierten Struktur enthält eine Adresse eines Puffers, der die für das Fenster verwendete Beschriftung enthält.
+Der **lpstrText-Member** der von *lpWindow* identifizierten Struktur enthält eine Adresse eines Puffers, der die beschriftung enthält, die in der Titelleiste des Fensters verwendet wird.
 
 </dd> </dl>
 
-Bei Video Überlagerungs Geräten zeigt der *lpwindow* -Parameter auf eine Struktur des [**MCI- \_ OVLY- \_ Fensters \_**](mci-ovly-window-parms.md) .
+Bei Digitalvideogeräten verweist der *lpWindow-Parameter* auf eine [**MCI \_ DGV \_ WINDOW \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_window_parmsa)
+
+Die folgenden zusätzlichen Flags werden mit dem **Überlagerungsgerätetyp** verwendet:
+
+<dl> <dt>
+
+<span id="MCI_OVLY_WINDOW_DISABLE_STRETCH"></span><span id="mci_ovly_window_disable_stretch"></span>MCI \_ OVLY \_ WINDOW \_ DISABLE \_ STRETCH
+</dt> <dd>
+
+Deaktiviert das Stretching des Bilds.
+
+</dd> <dt>
+
+<span id="MCI_OVLY_WINDOW_ENABLE_STRETCH"></span><span id="mci_ovly_window_enable_stretch"></span>MCI \_ OVLY \_ WINDOW \_ ENABLE \_ STRETCH
+</dt> <dd>
+
+Aktiviert stretching des Bilds.
+
+</dd> <dt>
+
+<span id="MCI_OVLY_WINDOW_HWND"></span><span id="mci_ovly_window_hwnd"></span>MCI \_ OVLY \_ WINDOW \_ HWND
+</dt> <dd>
+
+Das Handle des für das Ziel verwendeten Fensters ist im **hWnd-Member** der von *lpWindow* identifizierten Struktur enthalten. Legen Sie dieses Flag auf MCI \_ OVLY \_ WINDOW \_ DEFAULT fest, um zum Standardfenster zurückzukehren.
+
+</dd> <dt>
+
+<span id="MCI_OVLY_WINDOW_STATE"></span><span id="mci_ovly_window_state"></span>\_ \_ MCI-OVLY-FENSTERSTATUS \_
+</dt> <dd>
+
+Der **nCmdShow-Member** der *lpWindow-Struktur* enthält Parameter zum Festlegen des Fensterzustands. Dieses Flag entspricht dem Aufrufen von [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) mit dem *State-Parameter.* Die Konstanten sind mit denen identisch, die in WINDOWS definiert sind. H (z. B. SW \_ HIDE, SW \_ MINIMIZE oder SW \_ SHOWNORMAL).
+
+</dd> <dt>
+
+<span id="MCI_OVLY_WINDOW_TEXT"></span><span id="mci_ovly_window_text"></span>MCI \_ \_ OVLY-FENSTERTEXT \_
+</dt> <dd>
+
+Der **lpstrText-Member** der von *lpWindow* identifizierten Struktur enthält eine Adresse eines Puffers, der die für das Fenster verwendete Beschriftung enthält.
+
+</dd> </dl>
+
+Bei Videoüberlagerungsgeräten zeigt der *lpWindow-Parameter* auf eine [**\_ MCI-OVLY \_ WINDOW \_ PARMS-Struktur.**](mci-ovly-window-parms.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -148,15 +148,15 @@ Bei Video Überlagerungs Geräten zeigt der *lpwindow* -Parameter auf eine Struk
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

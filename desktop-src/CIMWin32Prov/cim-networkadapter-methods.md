@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ netzwerkadapterklasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ NetworkAdapter-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: C36E9588-6309-4650-A878-7D397C4B24C5
 ms.tgt_platform: multiple
-title: CIM_NetworkAdapter Methoden
+title: CIM_NetworkAdapter-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 96fe835a321334724f21e2b291203511249dfcb8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 561acbf4fa9c7246d295faf79b83022f3fe924eb2c7a200269c83dbf98f22fd7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119820980"
 ---
-# <a name="cim_networkadapter-methods"></a>CIM- \_ NetworkAdapter-Methoden
+# <a name="cim_networkadapter-methods"></a>CIM \_ NetworkAdapter-Methoden
 
-Die [**CIM- \_ netzwerkadapterklasse**](cim-networkadapter.md) stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ NetworkAdapter-Klasse**](cim-networkadapter.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

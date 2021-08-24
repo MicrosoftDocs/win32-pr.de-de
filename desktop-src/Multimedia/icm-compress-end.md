@@ -1,9 +1,9 @@
 ---
-title: ICM_COMPRESS_END Meldung (VFW. h)
-description: Die ICM \_ -Komprimierungs \_ Nachricht benachrichtigt einen Video Komprimierungs Treiber, um die Komprimierung zu beenden und die für die Komprimierung zugewiesenen Ressourcen freizugeben Sie können diese Nachricht explizit oder mithilfe des iccompressend-Makros senden.
+title: ICM_COMPRESS_END (Vfw.h)
+description: Die ICM COMPRESS END-Nachricht benachrichtigt einen Videokomprimierungstreiber, um die Komprimierung zu beenden und Ressourcen frei zu \_ \_ machen, die für die Komprimierung zugeordnet sind. Sie können diese Nachricht explizit oder mithilfe des ICCompressEnd-Makros senden.
 ms.assetid: 5d4b5962-c4f0-44eb-a3a9-36026f167a5a
 keywords:
-- ICM_COMPRESS_END-Nachricht (Multimedia)
+- ICM_COMPRESS_END von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 320cc99ed4223b7919b85d2b39e15d4d9b76aa90
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9c320190da37d286db1c20329a849ea09ac6d915087e9d3bdbb2333d31cec3e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785040"
 ---
-# <a name="icm_compress_end-message"></a>ICM- \_ Komprimierungs \_ Nachricht beenden
+# <a name="icm_compress_end-message"></a>\_ICM COMPRESS \_ END-Nachricht
 
-Die **ICM \_ - \_** Komprimierungs Nachricht benachrichtigt einen Video Komprimierungs Treiber, um die Komprimierung zu beenden und die für die Komprimierung zugewiesenen Ressourcen freizugeben Sie können diese Nachricht explizit oder mithilfe des [**iccompressend**](/windows/desktop/api/Vfw/nf-vfw-iccompressend) -Makros senden.
+Die **ICM \_ COMPRESS \_ END-Nachricht** benachrichtigt einen Videokomprimierungstreiber, um die Komprimierung und die für die Komprimierung reservierten freien Ressourcen zu beenden. Sie können diese Nachricht explizit oder mithilfe des [**ICCompressEnd-Makros**](/windows/desktop/api/Vfw/nf-vfw-iccompressend) senden.
 
 
 ```C++
@@ -36,11 +36,11 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich oder andernfalls ein Fehler aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-VCM speichert die Einstellungen der letzten [**ICM- \_ Komprimierungs \_ Begin**](icm-compress-begin.md) -Nachricht. **ICM \_ Das Komprimieren von \_ Begin** und **ICM- \_ Komprimierung \_** wird nicht geschachtelt. Wenn der Treiber **ICM \_ Compress \_ Begin** empfängt, bevor die Komprimierung mit **ICM- \_ Komprimierung \_ beendet** wird, sollte die Komprimierung mit neuen Parametern neu gestartet werden.
+VCM speichert die Einstellungen der letzten ICM [**\_ COMPRESS \_ BEGIN-Nachricht.**](icm-compress-begin.md) **ICM \_ COMPRESS \_ BEGIN und** ICM COMPRESS **\_ \_ END** werden nicht geschachtelt. Wenn Ihr Treiber ICM **\_ COMPRESS \_ BEGIN** empfängt, bevor die Komprimierung mit ICM COMPRESS **\_ \_ END** beendet wird, sollte die Komprimierung mit neuen Parametern neu gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,18 +50,18 @@ VCM speichert die Einstellungen der letzten [**ICM- \_ Komprimierungs \_ Begin**
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

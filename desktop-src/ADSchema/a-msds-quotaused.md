@@ -1,11 +1,11 @@
 ---
-title: 'ms-DS-Kontingent: verwendetes Attribut'
-description: Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis Datenbank genutzt wird.
+title: ms-DS-Quota-Used-Attribut
+description: Das aktuelle Kontingent, das von einem Sicherheitsprinzipal in der Verzeichnisdatenbank verbraucht wird.
 ms.assetid: 3a31c0c7-9791-4e00-81e5-ee596f94e3c9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Quota-used-Attributs
-- AD-Schema des msDS-quotaused-Attributs
+- AD-Schema des ms-DS-Quota-Used-Attributs
+- AD-Schema des msDS-QuotaUsed-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c59cc425c83fd7f1a85f41cd9d23e234115e0b55
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9a1194415d07fec5b5d6655c9721f843ebbb409441bae82fa845962e6b500489
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803590"
 ---
-# <a name="ms-ds-quota-used-attribute"></a>ms-DS-Kontingent: verwendetes Attribut
+# <a name="ms-ds-quota-used-attribute"></a>ms-DS-Quota-Used-Attribut
 
-Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis Datenbank genutzt wird.
+Das aktuelle Kontingent, das von einem Sicherheitsprinzipal in der Verzeichnisdatenbank verbraucht wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Kontingent-verwendet                     |
-| LDAP-Display-Name | MSDS-quotaused                       |
+| CN                | ms-DS-Quota-Used                     |
+| Ldap-Anzeigename | msDS-QuotaUsed                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1849              |
-| System-ID-GUID    | b5a84308-615d-4bb7-b05f-2f1746aa439f |
+| System-Id-Guid    | b5a84308-615d-4bb7-b05f-2f1746aa439f |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -79,10 +79,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -100,10 +100,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -121,10 +121,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -142,10 +142,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
@@ -163,10 +163,10 @@ Das aktuelle Kontingent, das von einem Sicherheits Prinzipal in der Verzeichnis 
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |

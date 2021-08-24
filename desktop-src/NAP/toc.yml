@@ -4,18 +4,18 @@
     - name: Informationen zu NAP
       href: about-nap.md
       items:
-        - name: NAP-Client Architektur
+        - name: NAP-Clientarchitektur
           href: nap-client-architecture.md
-        - name: Server seitige NAP-Architektur
+        - name: NAP ( Serverseitige Architektur)
           href: nap-server-side-architecture.md
-        - name: Kommunikation zwischen NAP-Client und Server seitiger Komponente
+        - name: Nap-Client- und serverseitige Komponentenkommunikation
           href: nap-client-and-server-side-component-communication.md
     - name: Verwenden von NAP
       href: using-nap.md
       items:
         - name: Einrichten eines einfachen SHA
           href: setting-up-a-simple-sha.md
-        - name: Beispiel-SHV
+        - name: ShV-Beispiel
           href: exampleshv.md
         - name: SHV-Modul
           href: shv-module.md
@@ -25,120 +25,120 @@
         - name: NAP-Konstanten
           href: nap-constants.md
           items:
-            - name: NAP-Fehler Konstanten
+            - name: NAP-Fehlerkonst constants
               href: nap-error-constants.md
-            - name: NAP-Typkonstanten
+            - name: NAP-Typkonst constants
               href: nap-type-constants.md
-            - name: NAP-Anbieter Konstanten
+            - name: NAP-Anbieterkonst constants
               href: nap-vendor-constants.md
         - name: NAP-Datentypen
           href: nap-datatypes.md
-        - name: NAP-Enumerationstypen
+        - name: NAP-Aufzähltypen
           href: nap-enumerated-types.md
           items:
             - name: FailureCategory
               href: /windows/win32/api/NapTypes/ne-naptypes-failurecategory
-            - name: Fixupstate
+            - name: FixupState
               href: /windows/win32/api/NapTypes/ne-naptypes-fixupstate
-            - name: Healthclassvalue
+            - name: HealthClassValue
               href: healthclassvalue-enum.md
-            - name: Isolationstate
+            - name: IsolationState
               href: /windows/win32/api/NapTypes/ne-naptypes-isolationstate
-            - name: Extendedisolationstate
+            - name: ExtendedIsolationState
               href: /windows/win32/api/NapTypes/ne-naptypes-extendedisolationstate
-            - name: Napnotifytype
+            - name: NapNotifyType
               href: /windows/win32/api/NapTypes/ne-naptypes-napnotifytype
-            - name: Remoteconfigurationtype
+            - name: RemoteConfigurationType
               href: /windows/win32/api/NapTypes/ne-naptypes-remoteconfigurationtype
-            - name: Sohattributetype
+            - name: SoHAttributeType
               href: sohattributetype-enum.md
         - name: NAP-Schnittstellen
           href: nap-interfaces.md
           items:
-            - name: Inapcertrelyingparty
+            - name: INapCertRelyingParty
               href: inapcertrelyingparty.md
               items:
-                - name: Getabonbedrelyingparties-Methode
+                - name: GetSubscribedRelyingParties-Methode
                   href: inapcertrelyingparty-getsubscribedrelyingparties.md
-                - name: Abonnebecertbygroup-Methode
+                - name: SubscribeCertByGroup-Methode
                   href: inapcertrelyingparty-subscribecertbygroup.md
-                - name: Unabonnebecertbygroup-Methode
+                - name: UnSubscribeCertByGroup-Methode
                   href: inapcertrelyingparty-unsubscribecertbygroup.md
-            - name: Inapclientmanagement
+            - name: INapClientManagement
               href: inapclientmanagement.md
               items:
-                - name: Getnapclientinfo-Methode
+                - name: GetNapClientInfo-Methode
                   href: inapclientmanagement-getnapclientinfo.md
-                - name: Getsystemisolationinfo-Methode
+                - name: GetSystemIsolationInfo-Methode
                   href: inapclientmanagement-getsystemisolationinfo.md
-                - name: Registersystemhealthagent-Methode
+                - name: RegisterSystemHealthAgent-Methode
                   href: inapclientmanagement-registersystemhealthagent.md
-                - name: Unregistersystemhealthagent-Methode
+                - name: UnregisterSystemHealthAgent-Methode
                   href: inapclientmanagement-unregistersystemhealthagent.md
-                - name: Registerenforcementclient-Methode
+                - name: RegisterEnforcementClient-Methode
                   href: inapclientmanagement-registerenforcementclient.md
-                - name: Unregisterenforcementclient-Methode
+                - name: UnregisterEnforcementClient-Methode
                   href: inapclientmanagement-unregisterenforcementclient.md
-                - name: Getregisteredsystemhealthagents-Methode
+                - name: GetRegisteredSystemHealthAgents-Methode
                   href: inapclientmanagement-getregisteredsystemhealthagents.md
-                - name: Getregisteredenforcementclients-Methode
+                - name: GetRegisteredEnforcementClients-Methode
                   href: inapclientmanagement-getregisteredenforcementclients.md
             - name: INapClientManagement2
               href: inapclientmanagement2.md
               items:
-                - name: Getsystemisolationinfoex-Methode
+                - name: GetSystemIsolationInfoEx-Methode
                   href: inapclientmanagement2-getsystemisolationinfoex.md
-            - name: Inapcomponentconfig
+            - name: INapComponentConfig
               href: inapcomponentconfig.md
               items:
-                - name: Isuisupported-Methode
+                - name: IsUISupported-Methode
                   href: inapcomponentconfig-isuisupported.md
-                - name: Invokeui-Methode
+                - name: InvokeUI-Methode
                   href: inapcomponentconfig-invokeui.md
                 - name: GetConfig-Methode
                   href: inapcomponentconfig-getconfig.md
-                - name: Setconfig-Methode
+                - name: SetConfig-Methode
                   href: inapcomponentconfig-setconfig.md
             - name: INapComponentConfig2
               href: inapcomponentconfig2.md
               items:
-                - name: Isremoteconfigsupported-Methode
+                - name: IsRemoteConfigSupported-Methode
                   href: inapcomponentconfig2-isremoteconfigsupported.md
-                - name: Invokeuiformachine-Methode
+                - name: InvokeUIForMachine-Methode
                   href: inapcomponentconfig2-invokeuiformachine.md
-                - name: Invokeuifromconfigblob-Methode
+                - name: InvokeUIFromConfigBlob-Methode
                   href: inapcomponentconfig2-invokeuifromconfigblob.md
             - name: INapComponentConfig3
               href: inapcomponentconfig3.md
               items:
-                - name: Newconfig-Methode
+                - name: NewConfig-Methode
                   href: inapcomponentconfig3-newconfig.md
                 - name: DeleteConfig-Methode
                   href: inapcomponentconfig3-deleteconfig.md
-                - name: Deleteallconfig-Methode
+                - name: DeleteAllConfig-Methode
                   href: inapcomponentconfig3-deleteallconfig.md
-                - name: Getconfigfromid-Methode
+                - name: GetConfigFromID-Methode
                   href: inapcomponentconfig3-getconfigfromid.md
-                - name: Setconfigtoid-Methode
+                - name: SetConfigToID-Methode
                   href: inapcomponentconfig3-setconfigtoid.md
-            - name: Inapcomponentinfo
+            - name: INapComponentInfo
               href: inapcomponentinfo.md
               items:
-                - name: Getfriendlyname-Methode
+                - name: GetFriendlyName-Methode
                   href: inapcomponentinfo-getfriendlyname-method.md
                 - name: GetDescription-Methode
                   href: inapcomponentinfo-getdescription-method.md
-                - name: Getvendorname-Methode
+                - name: GetVendorName-Methode
                   href: inapcomponentinfo-getvendorname-method.md
                 - name: GetVersion-Methode
                   href: inapcomponentinfo-getversion-method.md
                 - name: GetIcon-Methode
                   href: inapcomponentinfo-geticon-method.md
-                - name: Converterrorcodetomess ageid-Methode
+                - name: ConvertErrorCodeToMessageId-Methode
                   href: inapcomponentinfo-converterrorcodetomessageid-method.md
                 - name: GetLocalizedString-Methode
                   href: inapcomponentinfo-getlocalizedstring-method.md
-            - name: Inapenforcementclientbinding
+            - name: INapEnforcementClientBinding
               href: inapenforcementclientbinding.md
               items:
                 - name: Initialize-Methode
@@ -147,196 +147,196 @@
                   href: inapenforcementclientbinding-uninitialize-method.md
                 - name: CreateConnection-Methode
                   href: inapenforcementclientbinding-createconnection-method.md
-                - name: Getsohrequest-Methode
+                - name: GetSoHRequest-Methode
                   href: inapenforcementclientbinding-getsohrequest-method.md
-                - name: Processsohresponse-Methode
+                - name: ProcessSoHResponse-Methode
                   href: inapenforcementclientbinding-processsohresponse-method.md
-                - name: Notifyconnectionstatedown-Methode
+                - name: NotifyConnectionStateDown-Methode
                   href: inapenforcementclientbinding-notifyconnectionstatedown-method.md
-                - name: Notifysohchangefailure-Methode
+                - name: NotifySoHChangeFailure-Methode
                   href: inapenforcementclientbinding-notifysohchangefailure-method.md
-            - name: Inapenforcementclientcallback
+            - name: INapEnforcementClientCallback
               href: inapenforcementclientcallback.md
               items:
                 - name: GetConnections-Methode
                   href: inapenforcementclientcallback-getconnections-method.md
-                - name: Notifysohchange-Methode
+                - name: NotifySoHChange-Methode
                   href: inapenforcementclientcallback-notifysohchange-method.md
-            - name: Inapenforcementclientconnection
+            - name: INapEnforcementClientConnection
               href: inapenforcementclientconnection.md
               items:
-                - name: GetConnectionID-Methode
+                - name: GetConnectionId-Methode
                   href: inapenforcementclientconnection-getconnectionid-method.md
-                - name: Getcorrelationid-Methode
+                - name: GetCorrelationId-Methode
                   href: inapenforcementclientconnection-getcorrelationid-method.md
-                - name: Getenforcerprivatedata-Methode
+                - name: GetEnforcerPrivateData-Methode
                   href: inapenforcementclientconnection-getenforcerprivatedata-method.md
                 - name: GetFlags-Methode
                   href: inapenforcementclientconnection-getflags-method.md
-                - name: Getisolationinfo-Methode
+                - name: GetIsolationInfo-Methode
                   href: inapenforcementclientconnection-getisolationinfo-method.md
-                - name: Getmaxsize-Methode
+                - name: GetMaxSize-Methode
                   href: inapenforcementclientconnection-getmaxsize-method.md
-                - name: Getprivatedata-Methode
+                - name: GetPrivateData-Methode
                   href: inapenforcementclientconnection-getprivatedata-method.md
-                - name: Getsohrequest-Methode
+                - name: GetSoHRequest-Methode
                   href: inapenforcementclientconnection-getsohrequest-method.md
-                - name: Getsohresponse-Methode
+                - name: GetSoHResponse-Methode
                   href: inapenforcementclientconnection-getsohresponse-method.md
-                - name: Getstringcorrelationid-Methode
+                - name: GetStringCorrelationId-Methode
                   href: inapenforcementclientconnection-getstringcorrelationid-method.md
                 - name: Initialize-Methode
                   href: inapenforcementclientconnection-initialize-method.md
-                - name: Setconnectionid-Methode
+                - name: SetConnectionId-Methode
                   href: inapenforcementclientconnection-setconnectionid-method.md
-                - name: Setcorrelationid-Methode
+                - name: SetCorrelationId-Methode
                   href: inapenforcementclientconnection-setcorrelationid-method.md
-                - name: Die Methode "stenforcerprivatedata"
+                - name: SetEnforcerPrivateData-Methode
                   href: inapenforcementclientconnection-setenforcerprivatedata-method.md
                 - name: SetFlags-Methode
                   href: inapenforcementclientconnection-setflags-method.md
-                - name: Methode "-Methode"
+                - name: SetIsolationInfo-Methode
                   href: inapenforcementclientconnection-setisolationinfo-method.md
-                - name: Setmaxsize-Methode
+                - name: SetMaxSize-Methode
                   href: inapenforcementclientconnection-setmaxsize-method.md
-                - name: Setprivatedata-Methode
+                - name: SetPrivateData-Methode
                   href: inapenforcementclientconnection-setprivatedata-method.md
-                - name: Setsohrequest-Methode
+                - name: SetSoHRequest-Methode
                   href: inapenforcementclientconnection-setsohrequest-method.md
-                - name: Setsohresponse-Methode
+                - name: SetSoHResponse-Methode
                   href: inapenforcementclientconnection-setsohresponse-method.md
             - name: INapEnforcementClientConnection2
               href: inapenforcementclientconnection2.md
               items:
-                - name: Getisolationinfoex-Methode
+                - name: GetIsolationInfoEx-Methode
                   href: inapenforcementclientconnection2-getisolationinfoex.md
-                - name: Methode "-Methode"
+                - name: SetIsolationInfoEx-Methode
                   href: inapenforcementclientconnection2-setisolationinfoex.md
-                - name: Getinstalledshvs-Methode
+                - name: GetInstalledShvs-Methode
                   href: inapenforcementclientconnection2-getinstalledshvs.md
-                - name: Setinstalledshvs-Methode
+                - name: SetInstalledShvs-Methode
                   href: inapenforcementclientconnection2-setinstalledshvs.md
-            - name: Inapservercallback
+            - name: INapServerCallback
               href: inapservercallback.md
               items:
                 - name: OnComplete-Methode
                   href: inapservercallback-oncomplete-method.md
-            - name: Inapserverinfo
+            - name: INapServerInfo
               href: inapserverinfo.md
               items:
-                - name: Getfailurecategorymappings-Methode
+                - name: GetFailureCategoryMappings-Methode
                   href: inapserverinfo-getfailurecategorymappings-method.md
-                - name: Getnapserverinfo-Methode
+                - name: GetNapServerInfo-Methode
                   href: inapserverinfo-getnapserverinfo-method.md
-                - name: Getregisteredsystemhealthvalidators-Methode
+                - name: GetRegisteredSystemHealthValidators-Methode
                   href: inapserverinfo-getregisteredsystemhealthvalidators-method.md
-            - name: Inapservermanagement
+            - name: INapServerManagement
               href: inapservermanagement.md
               items:
-                - name: Registersystemhealthvalidator-Methode
+                - name: RegisterSystemHealthValidator-Methode
                   href: inapservermanagement-registersystemhealthvalidator-method.md
-                - name: Setfailurecategorymappings-Methode
+                - name: SetFailureCategoryMappings-Methode
                   href: inapservermanagement-setfailurecategorymappings-method.md
-                - name: Unregistersystemhealthvalidator-Methode
+                - name: UnregisterSystemHealthValidator-Methode
                   href: inapservermanagement-unregistersystemhealthvalidator-method.md
-            - name: Inapsohconstructor
+            - name: INapSoHConstructor
               href: inapsohconstructor.md
               items:
-                - name: Appendattribute-Methode
+                - name: AppendAttribute-Methode
                   href: inapsohconstructor-appendattribute-method.md
-                - name: Getsoh-Methode
+                - name: GetSoH-Methode
                   href: inapsohconstructor-getsoh-method.md
                 - name: Initialize-Methode
                   href: inapsohconstructor-initialize-method.md
                 - name: Validate-Methode
                   href: inapsohconstructor-validate-method.md
-            - name: Inapsohprocessor
+            - name: INapSoHProcessor
               href: inapsohprocessor.md
               items:
-                - name: Findnextattribute-Methode
+                - name: FindNextAttribute-Methode
                   href: inapsohprocessor-findnextattribute-method.md
                 - name: GetAttribute-Methode
                   href: inapsohprocessor-getattribute-method.md
-                - name: Getnumofattributes-Methode
+                - name: GetNumberOfAttributes-Methode
                   href: inapsohprocessor-getnumberofattributes-method.md
                 - name: Initialize-Methode
                   href: inapsohprocessor-initialize-method.md
-            - name: Inapsystemhealthagentbinding
+            - name: INapSystemHealthAgentBinding
               href: inapsystemhealthagentbinding.md
               items:
-                - name: Flushcache-Methode
+                - name: FlushCache-Methode
                   href: inapsystemhealthagentbinding-flushcache-method.md
-                - name: Getsystemisolationinfo-Methode
+                - name: GetSystemIsolationInfo-Methode
                   href: inapsystemhealthagentbinding-getsystemisolationinfo-method.md
                 - name: Initialize-Methode
                   href: inapsystemhealthagentbinding-initialize-method.md
-                - name: Notifysohchange-Methode
+                - name: NotifySoHChange-Methode
                   href: inapsystemhealthagentbinding-notifysohchange-method.md
                 - name: Uninitialize-Methode
                   href: inapsystemhealthagentbinding-uninitialize-method.md
             - name: INapSystemHealthAgentBinding2
               href: inapsystemhealthagentbinding2.md
               items:
-                - name: Getsystemisolationinfoex-Methode
+                - name: GetSystemIsolationInfoEx-Methode
                   href: inapsystemhealthagentbinding2-getsystemisolationinfoex.md
-            - name: Inapsystemhealthagentcallback
+            - name: INapSystemHealthAgentCallback
               href: inapsystemhealthagentcallback.md
               items:
-                - name: Comparesohrequests-Methode
+                - name: CompareSoHRequests-Methode
                   href: inapsystemhealthagentcallback-comparesohrequests-method.md
-                - name: Getfixupinfo-Methode
+                - name: GetFixupInfo-Methode
                   href: inapsystemhealthagentcallback-getfixupinfo-method.md
-                - name: Getsohrequest-Methode
+                - name: GetSoHRequest-Methode
                   href: inapsystemhealthagentcallback-getsohrequest-method.md
-                - name: Notisyorphanedsohrequest-Methode
+                - name: NotifyOrphanedSoHRequest-Methode
                   href: inapsystemhealthagentcallback-notifyorphanedsohrequest-method.md
-                - name: Notifysystemisolationstatechange-Methode
+                - name: NotifySystemIsolationStateChange-Methode
                   href: inapsystemhealthagentcallback-notifysystemisolationstatechange-method.md
-                - name: Processsohresponse-Methode
+                - name: ProcessSoHResponse-Methode
                   href: inapsystemhealthagentcallback-processsohresponse-method.md
-            - name: Inapsystemhealthagentrequest
+            - name: INapSystemHealthAgentRequest
               href: inapsystemhealthagentrequest.md
               items:
-                - name: Getcachesohflag-Methode
+                - name: GetCacheSoHFlag-Methode
                   href: inapsystemhealthagentrequest-getcachesohflag-method.md
-                - name: Getcorrelationid-Methode
+                - name: GetCorrelationId-Methode
                   href: inapsystemhealthagentrequest-getcorrelationid-method.md
-                - name: Getsohrequest-Methode
+                - name: GetSoHRequest-Methode
                   href: inapsystemhealthagentrequest-getsohrequest-method.md
-                - name: Getsohresponse-Methode
+                - name: GetSoHResponse-Methode
                   href: inapsystemhealthagentrequest-getsohresponse-method.md
-                - name: Getstringcorrelationid-Methode
+                - name: GetStringCorrelationId-Methode
                   href: inapsystemhealthagentrequest-getstringcorrelationid-method.md
-                - name: Setsohrequest-Methode
+                - name: SetSoHRequest-Methode
                   href: inapsystemhealthagentrequest-setsohrequest-method.md
-            - name: Inapsystemhealthvalidator
+            - name: INapSystemHealthValidator
               href: inapsystemhealthvalidator.md
               items:
                 - name: Validate-Methode
                   href: inapsystemhealthvalidator-validate-method.md
-            - name: Inapsystemhealthvalidationrequest
+            - name: INapSystemHealthValidationRequest
               href: inapsystemhealthvalidationrequest.md
               items:
-                - name: Getcorrelationid-Methode
+                - name: GetCorrelationId-Methode
                   href: inapsystemhealthvalidationrequest-getcorrelationid-method.md
                 - name: GetMachineName-Methode
                   href: inapsystemhealthvalidationrequest-getmachinename-method.md
-                - name: Getprivatedata-Methode
+                - name: GetPrivateData-Methode
                   href: inapsystemhealthvalidationrequest-getprivatedata-method.md
-                - name: Getsohrequest-Methode
+                - name: GetSoHRequest-Methode
                   href: inapsystemhealthvalidationrequest-getsohrequest-method.md
-                - name: Getsohresponse-Methode
+                - name: GetSoHResponse-Methode
                   href: inapsystemhealthvalidationrequest-getsohresponse-method.md
-                - name: Getstringcorrelationid-Methode
+                - name: GetStringCorrelationId-Methode
                   href: inapsystemhealthvalidationrequest-getstringcorrelationid-method.md
-                - name: Setprivatedata-Methode
+                - name: SetPrivateData-Methode
                   href: inapsystemhealthvalidationrequest-setprivatedata-method.md
-                - name: Setsohresponse-Methode
+                - name: SetSoHResponse-Methode
                   href: inapsystemhealthvalidationrequest-setsohresponse-method.md
             - name: INapSystemHealthValidationRequest2
               href: inapsystemhealthvalidationrequest2.md
               items:
-                - name: Getconfigid-Methode
+                - name: GetConfigID-Methode
                   href: inapsystemhealthvalidationrequest2-getconfigid.md
         - name: NAP-Strukturen
           href: nap-structures.md
@@ -345,11 +345,11 @@
               href: connections-struct.md
             - name: CorrelationId
               href: /windows/win32/api/NapTypes/ns-naptypes-correlationid
-            - name: '"Zählzeichen Folge"'
+            - name: CountedString
               href: /windows/win32/api/NapTypes/ns-naptypes-countedstring
-            - name: Failurecategorymapping
+            - name: FailureCategoryMapping
               href: /windows/win32/api/NapTypes/ns-naptypes-failurecategorymapping
-            - name: Fixupinfo
+            - name: FixupInfo
               href: /windows/win32/api/NapTypes/ns-naptypes-fixupinfo
             - name: Ipv4Address
               href: /windows/win32/api/NapTypes/ns-naptypes-ipv4address
@@ -357,56 +357,56 @@
               href: /windows/win32/api/NapTypes/ns-naptypes-ipv6address
             - name: IsolationInfo
               href: /windows/win32/api/NapTypes/ns-naptypes-isolationinfo
-            - name: Isolationinfoex
+            - name: IsolationInfoEx
               href: /windows/win32/api/NapTypes/ns-naptypes-isolationinfoex
-            - name: Napcomponentregistrationinfo
+            - name: NapComponentRegistrationInfo
               href: /windows/win32/api/NapTypes/ns-naptypes-napcomponentregistrationinfo
-            - name: Network SoH
+            - name: NetworkSoH
               href: /windows/win32/api/NapTypes/ns-naptypes-networksoh
             - name: PrivateData
               href: /windows/win32/api/NapTypes/ns-naptypes-privatedata
             - name: ResultCodes
               href: /windows/win32/api/NapTypes/ns-naptypes-resultcodes
-            - name: SoH
+            - name: Soh
               href: /windows/win32/api/NapTypes/ns-naptypes-soh
-            - name: Sohattribute
+            - name: SoHAttribute
               href: /windows/win32/api/NapTypes/ns-naptypes-sohattribute
-            - name: Sohattributevalue
+            - name: SoHAttributeValue
               href: sohattributevalue-union.md
-            - name: Systemhealthagentstate
+            - name: SystemHealthAgentState
               href: /windows/win32/api/NapTypes/ns-naptypes-systemhealthagentstate
         - name: NAP-Hilfsprogrammfunktionen
           href: nap-utility-functions.md
           items:
-            - name: Zuordnung von Verbindungen
+            - name: AllocConnections
               href: allocconnections-func.md
-            - name: '"Zuweisung"'
+            - name: AllocCountedString
               href: alloccountedstring-func.md
-            - name: Zuordnung von "Zuweisung"
+            - name: AllocFixupInfo
               href: allocfixupinfo-func.md
-            - name: Freeconnections
+            - name: FreeConnections
               href: freeconnections-func.md
-            - name: Freizähltedstring
+            - name: FreeCountedString
               href: freecountedstring-func.md
-            - name: '"Freifixupinfo"'
+            - name: FreeFixupInfo
               href: freefixupinfo-func.md
-            - name: Freeisolationinfo
+            - name: FreeIsolationInfo
               href: freeisolationinfo-func.md
-            - name: Freeisolationinfoex
+            - name: FreeIsolationInfoEx
               href: freeisolationinfoex.md
-            - name: Freenapcomponentregistrationinfoarray
+            - name: FreeNapComponentRegistrationInfoArray
               href: freenapcomponentregistrationinfoarray-func.md
-            - name: Freumetworksoh
+            - name: FreeNetworkSoH
               href: freenetworksoh-func.md
-            - name: '"Freiprivatedata"'
+            - name: FreePrivateData
               href: freeprivatedata-func.md
-            - name: Freesoh
+            - name: FreeSoH
               href: freesoh-func.md
-            - name: Freesohattributevalue
+            - name: FreeSoHAttributeValue
               href: freesohattributevalue-func.md
-            - name: Freesystemhealthagentstate
+            - name: FreeSystemHealthAgentState
               href: freesystemhealthagentstate-func.md
-            - name: Initializenapagentnotifier
+            - name: InitializeNapAgentNotifier
               href: initializenapagentnotifier.md
-            - name: Uninitializenapagentnotifier
+            - name: UninitializeNapAgentNotifier
               href: uninitializenapagentnotifier.md

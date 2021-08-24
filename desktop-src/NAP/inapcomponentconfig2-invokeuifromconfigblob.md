@@ -1,11 +1,11 @@
 ---
-title: INapComponentConfig2 invokeuifromconfigblob-Methode (napcommon. h)
-description: Wird von System Integritätsprüfungen (SHVs) nach Bedarf implementiert, um die Konfiguration eines Remote Computers oder eines lokalen Computers in den Arbeitsspeicher zu laden und eine Benutzeroberfläche anzuzeigen, die die Bearbeitung der Konfigurationsdaten ermöglicht.
+title: INapComponentConfig2 InvokeUIFromConfigBlob-Methode (NapCommon.h)
+description: Wird nach Bedarf von SYSTEM HEALTH Validators (SHVs) implementiert, um die Konfiguration eines Remotecomputers oder lokalen Computers im Arbeitsspeicher zu laden und eine Benutzeroberfläche anzuzeigen, die die Bearbeitung der Konfigurationsdaten ermöglicht.
 ms.assetid: 9c012690-6751-4a47-8683-74abac610c77
 keywords:
-- Invokeuifromconfigblob-Methode NAP
-- Invokeuifromconfigblob-Methode NAP, INapComponentConfig2-Schnittstelle
-- INapComponentConfig2 Interface NAP, invokeuifromconfigblob-Methode
+- InvokeUIFromConfigBlob-Methode NAP
+- InvokeUIFromConfigBlob-Methode NAP, INapComponentConfig2-Schnittstelle
+- INapComponentConfig2-Schnittstelle NAP , InvokeUIFromConfigBlob-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 54cc1efaf7da3434e1aff10d57c2e175481a3d2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 45d85e0506b8adf084b65a13a117a9dea3856fcff2e73f65a229bdb31b283fb9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803160"
 ---
-# <a name="inapcomponentconfig2invokeuifromconfigblob-method"></a>INapComponentConfig2:: invokeuifromconfigblob-Methode
+# <a name="inapcomponentconfig2invokeuifromconfigblob-method"></a>INapComponentConfig2::InvokeUIFromConfigBlob-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **invokeuifromconfigblob** -Methode wird nach Bedarf von System Integritätsprüfungen (SHVs) implementiert, um die Konfiguration eines Remote Computers oder eines lokalen Computers in den Arbeitsspeicher zu laden und eine Benutzeroberfläche anzuzeigen, die die Bearbeitung der Konfigurationsdaten ermöglicht. Die Konfigurationskomponente muss die Verwendung von [**inapcomponentconfig**](inapcomponentconfig.md) über DCOM unterstützen.
+Die **InvokeUIFromConfigBlob-Methode** wird nach Bedarf von SYSTEM HEALTH Validators (SHVs) implementiert, um die Konfiguration eines Remotecomputers oder lokalen Computers im Arbeitsspeicher zu laden und eine Benutzeroberfläche anzuzeigen, die die Bearbeitung der Konfigurationsdaten ermöglicht. Die Konfigurationskomponente muss die Verwendung von [**INapComponentConfig**](inapcomponentconfig.md) über DCOM unterstützen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,55 +52,55 @@ HRESULT InvokeUIFromConfigBlob(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
-Ein Handle für das übergeordnete Fenster oder Besitzer Fenster. Ein gültiges Fenster Handle muss angegeben werden.
+Ein Handle für das übergeordnete Oder Besitzerfenster. Ein gültiges Fensterhandle muss angegeben werden.
 
 </dd> <dt>
 
-*inbcount* \[ in\]
+*inbCount* \[ In\]
 </dt> <dd>
 
-Die Größe von *InData* in Byte.
+Die Größe von *inData in* Bytes.
 
 </dd> <dt>
 
-*InData* \[ in\]
+*inData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, in dem die anfänglichen Konfigurationsdaten gespeichert werden. Diese Daten werden vom Remote-oder lokalen Computer exportiert.
+Ein Zeiger auf einen Puffer, in dem die anfänglichen Konfigurationsdaten gespeichert werden. Diese Daten werden vom Remotecomputer oder lokalen Computer exportiert.
 
 </dd> <dt>
 
-*outbcount* \[ vorgenommen\]
+*outbCount* \[ out\]
 </dt> <dd>
 
-Die Größe (in Bytes) der *OutData*.
+Die Größe von *outdata* in Bytes.
 
 </dd> <dt>
 
-*OutData* \[ vorgenommen\]
+*outdata* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, in dem Konfigurationsdaten gespeichert werden, die von der SHV-Konfigurations Benutzeroberfläche geändert wurden. Diese Daten werden vom Remote-oder lokalen Computer importiert.
+Ein Zeiger auf einen Puffer, der Konfigurationsdaten speichert, die von der SHV-Konfigurations-Benutzeroberfläche geändert wurden. Diese Daten werden vom Remotecomputer oder lokalen Computer importiert.
 
 </dd> <dt>
 
-nicht *geändert* \[ vorgenommen\]
+*fConfigChanged* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **booleschen** Wert, der auf **true** festgelegt ist, wenn die Konfiguration während des UI-Vorgangs geändert wurde, andernfalls **false** .
+Ein Zeiger auf eine **BOOL,** die auf **TRUE** festgelegt ist, wenn die Konfiguration während des Ui-Vorgangs geändert wurde, andernfalls **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen der standardmäßigen Windows-Fehlercodes zurück.
+Gibt bei Erfolg S \_ OK oder einen der Standardfehlercodes Windows zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Verwendung für einen lokalen Computer kann diese Funktion für die SHV-Konfiguration pro Richtlinie verwendet werden. Es bietet eine Möglichkeit, eine SHV-Benutzeroberfläche aufzurufen und eine vorhandene SHV-Konfiguration zu bearbeiten.
+Wenn diese Funktion für einen lokalen Computer verwendet wird, kann sie für die SHV-Konfiguration pro Richtlinie verwendet werden. Sie bietet eine Möglichkeit, eine SHV-Benutzeroberfläche aufzurufen und eine vorhandene SHV-Konfiguration zu bearbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,9 +109,9 @@ Bei Verwendung für einen lokalen Computer kann diese Funktion für die SHV-Konf
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 

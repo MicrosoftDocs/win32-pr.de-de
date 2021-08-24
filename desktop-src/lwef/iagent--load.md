@@ -4,12 +4,12 @@ description: IAgent Load
 ms.assetid: 8f25e6b6-a117-4b37-969a-d8f80c7be224
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80ce2835d60f3edce6f45d181927437ba6e58b18
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: ae718ee8c6566de42645c5c02c2efada90ef85ba0136a112bcf0420d18a7b511
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119725393"
 ---
 # <a name="iagentload"></a>IAgent::Load
 
@@ -65,9 +65,9 @@ Sie können Zeichen aus dem Microsoft-Agent-Unterverzeichnis laden, indem Sie ei
 
 Sie können das gleiche Zeichen (ein Zeichen mit derselben GUID) nicht mehr als einmal aus einer einzelnen Verbindung laden. Ebenso können Sie das Standardzeichen und andere Zeichen nicht gleichzeitig aus einer einzelnen Verbindung laden, da das Standardzeichen mit dem anderen Zeichen identisch sein kann. Sie können jedoch eine weitere Verbindung (mit CoCreateInstance) erstellen und das gleiche Zeichen laden.
 
-Der Datenanbieter des Microsoft-Agents unterstützt das Laden von Zeichendaten, die als einzelne strukturierte Datei gespeichert sind (. ACS) mit Zeichendaten und Animationsdaten zusammen oder als separate Zeichendaten (. ACF) und Animation (. ACA)-Dateien. Verwenden Sie im Allgemeinen die einzelne strukturierte . ACS-Datei zum Laden eines Zeichens, das auf einem lokalen Laufwerk oder Netzwerk gespeichert ist und auf das mithilfe eines herkömmlichen Dateiprotokolls (z. B. UNC-Pfadnamen) zugegriffen wird. Verwenden Sie die separate . ACF und . ACA-Dateien, wenn Sie die Animationsdateien einzeln von einem Remotestandort laden möchten, auf den über das HTTP-Protokoll zugegriffen wird.
+Der Datenanbieter des Microsoft-Agents unterstützt das Laden von Zeichendaten, die als einzelne strukturierte Datei gespeichert sind (. ACS) mit Zeichendaten und Animationsdaten zusammen oder als separate Zeichendaten (. ACF) und Animation (. ACA)-Dateien. Verwenden Sie im Allgemeinen die einzelne strukturierte . ACS-Datei zum Laden eines Zeichens, das auf einem lokalen Laufwerk oder Netzwerk gespeichert ist und auf das mithilfe eines herkömmlichen Dateiprotokolls (z. B. UNC-Pfadnamen) zugegriffen wird. Verwenden Sie die separate . ACF und . ACA-Dateien, wenn Sie die Animationsdateien einzeln von einem Remotestandort laden möchten, an dem über das HTTP-Protokoll auf sie zugegriffen wird.
 
-Für. ACS-Dateien, die die [**Load-Methode**](load-method.md) verwenden, bieten Zugriff auf die Animationen eines Zeichens. Nach dem Laden können Sie die [**Play-Methode**](play-method.md) verwenden, um das Zeichen zu animieren. Für. ACF-Dateien verwenden Sie auch die [**Prepare-Methode,**](/windows/desktop/lwef/iagentcharacter--prepare) um Animationsdaten zu laden. Das Herunterladen von wird von der **Load-Methode** nicht unterstützt. ACS-Dateien von einer HTTP-Website.
+Für. ACS-Dateien, die die [**Load-Methode**](load-method.md) verwenden, bieten Zugriff auf die Animationen eines Zeichens. Nach dem Laden können Sie das Zeichen mithilfe der [**Play-Methode**](play-method.md) animieren. Für. ACF-Dateien verwenden Sie auch die [**Prepare-Methode,**](/windows/desktop/lwef/iagentcharacter--prepare) um Animationsdaten zu laden. Das Herunterladen von wird von der **Load-Methode** nicht unterstützt. ACS-Dateien von einer HTTP-Website.
 
 Beim Laden eines Zeichens wird das Zeichen nicht automatisch angezeigt. Verwenden [](show-method.md) Sie zuerst die Show-Methode, um das Zeichen sichtbar zu machen.
 

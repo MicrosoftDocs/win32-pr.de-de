@@ -3,65 +3,65 @@ title: Festlegen von Metadaten für eine Datei
 description: Festlegen von Metadaten für eine Datei
 ms.assetid: 478a5412-e8b4-41c8-802f-9c2748dbaeae
 keywords:
-- Windows Media-Device Manager, Metadaten
-- Device Manager, Metadaten
-- Programmier Handbuch, Metadaten
-- Desktop Anwendungen, Metadaten
-- Erstellen von Windows Media Device Manager-Anwendungen, Metadaten
+- Windows Medien Geräte-Manager,Metadaten
+- Geräte-Manager,Metadata
+- Programmierhandbuch,Metadaten
+- Desktopanwendungen, Metadaten
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, Metadaten
 - Schreiben von Dateien auf Geräte, Metadaten
 - metadata
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56a6fa7002d4fafffe0793ef91b00dd3f1f0e20c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d64bdd173258272801886b90dca2265425eb65fd8ec3e5a25d01db37453d7eb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766271"
 ---
 # <a name="setting-metadata-on-a-file"></a>Festlegen von Metadaten für eine Datei
 
-Sie können Metadaten für eine Datei festlegen, bevor Sie Sie auf das Gerät schreiben (bei Verwendung von [**IWMDMStorageControl3:: Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)) oder in einem vorhandenen Speicher (durch Aufrufen von [**IWMDMStorage3:: SetMetadata**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage3-setmetadata)). Attribute können nur für einen vorhandenen Speicher festgelegt werden (durch Aufrufen von [**iwmdmstorage:: SetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-setattributes) oder [**IWMDMStorage2:: SetAttributes2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage2-setattributes2)).
+Sie können Metadaten für eine Datei festlegen, bevor Sie sie auf das Gerät schreiben (bei Verwendung von [**IWMDMStorageControl3::Insert3)**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)oder in einem vorhandenen Speicher (durch Aufrufen von [**IWMDMStorage3::SetMetadata**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage3-setmetadata)). Sie können Attribute nur für einen vorhandenen Speicher festlegen (durch Aufrufen von [**IWMDMStorage::SetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-setattributes) oder [**IWMDMStorage2::SetAttributes2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage2-setattributes2)).
 
-Das Festlegen von Metadaten erfolgt durch Erstellen und Auffüllen einer [**iwmdmmetadata**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmmetadata) -Schnittstelle, die an [**IWMDMStorageControl3:: Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)übergeben wird. Diese Methode kann jedoch alle vorhandenen Metadaten für die Datei löschen, außer hart codierte Metadaten, die im Dateisystem selbst gespeichert sind, wie z. b. Dateiname oder Größe. Daher müssen Sie alle vorhandenen Metadaten, die Sie beibehalten möchten, in die von Ihnen gesendeten iwmdmmetadata-Schnittstelle kopieren. Da Windows Media Device Manager nicht zum Abrufen von Metadaten aus lokalen Dateien verwendet werden kann, müssen Sie das Windows Media-Format-SDK (oder ein anderes Tool) verwenden, um diese Metadaten abzurufen.
+Zum Festlegen von Metadaten wird eine [**IWMDMMetaData-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmmetadata) erstellt und ausgefüllt, die an [**IWMDMStorageControl3::Insert3**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol3-insert3)übergeben wird. Diese Methode kann jedoch alle vorhandenen Metadaten in der Datei löschen, außer hart codierte Metadaten, die im Dateisystem selbst gespeichert sind, z. B. Dateiname oder -größe. Daher müssen Sie alle vorhandenen Metadaten, die Sie beibehalten möchten, in die IWMDMMetaData-Schnittstelle kopieren, die Sie übermitteln. Da Windows Media Geräte-Manager nicht zum Abrufen von Metadaten aus lokalen Dateien verwendet werden kann, müssen Sie das Windows Media Format SDK (oder ein anderes Tool) verwenden, um diese Metadaten abzurufen.
 
-Führen Sie die folgenden Schritte aus, um die Eigenschaften von ASF-Dateien mit dem Windows Media-Format-SDK abzurufen:
+Führen Sie die folgenden Schritte aus, um das Windows Media Format SDK zum Abrufen von ASF-Dateieigenschaften zu verwenden:
 
-1.  Erstellen Sie ein Metadateneditor-Objekt, indem Sie **wmcreateeditor** aufrufen und eine **IWMMetadataEditor** -Schnittstelle anfordern.
-2.  Öffnen Sie die Datei für das Lesen von Metadaten durch Aufrufen von **IWMMetadataEditor:: Open**.
-3.  Wenn die Datei eine gültige ASF-Datei ist und geöffnet werden kann, Fragen Sie den Editor nach der **iwmheaderinfo** -Schnittstelle ab.
-4.  Rufen Sie die Dateieigenschaften durch Aufrufen von **iwmheaderinfo:: getattributebyname** ab, und übergeben Sie die gewünschte Eigenschafts Konstante für das Windows Media-Format. In der folgenden Tabelle finden Sie eine Liste der Format-SDK-Konstanten mit äquivalenten Windows Media Device Manager SDK-Konstanten.
+1.  Erstellen Sie ein Metadaten-Editor-Objekt, indem **Sie WMCreateEditor** aufrufen und eine **IWMMetadataEditor-Schnittstelle** anfordern.
+2.  Öffnen Sie die Datei zum Lesen von Metadaten, indem **Sie IWMMetadataEditor::Open aufrufen.**
+3.  Wenn die Datei eine gültige ASF-Datei ist und geöffnet werden kann, fragen Sie den Editor nach der **IWMHeaderInfo-Schnittstelle** ab.
+4.  Rufen Sie Dateieigenschaften ab, indem **Sie IWMHeaderInfo::GetAttributeByName** aufrufen und die gewünschte Windows Media Format SDK-Eigenschaftskonstante übergeben. Eine Liste der FORMAT SDK-Konstanten mit entsprechenden Windows Media Geräte-Manager SDK-Konstanten finden Sie in der folgenden Tabelle.
 
 
 
-| SDK-Konstante für Windows Media-Format    | Windows Media Device Manager SDK-Konstante      |
+| Windows Medienformat-SDK-Konstante    | Windows Media Geräte-Manager SDK-Konstante      |
 |--------------------------------------|------------------------------------------------|
-| g \_ wszwmtitle                        | g \_ wszwmdmtitle                                |
-| g \_ wszwmauthor                       | g \_ wszwmdmauthor                               |
-| g \_ wszwmalbumtitle                   | g \_ wszwmdmalbumtitle                           |
-| g \_ wszwmgenre                        | g \_ wszwmdmgenre                                |
-| g \_ wszwmyear                         | g \_ wszwmdmyear                                 |
-| g \_ wszwmtracknumber oder g \_ wszwmtrack | g \_ wszwmdmtrack                                |
-| g \_ wszwmcomposer                     | g \_ wszwmdmcomposer                             |
-| g \_ wszwmduration                     | g \_ wszwmdmduration                             |
-| g \_ wszwmcopyright                    | g \_ wszwmdmprovidercopyright                    |
-| g \_ wszwmdescription                  | g \_ wszwmdmdescription                          |
-| g \_ wszwmbitrate                      | g \_ wszwmdmbitrate                              |
-| g \_ wszwmrating                       | g \_ wszwmdmuserrating                           |
-| g \_ wszwmalbumartist                  | g \_ wszwmdmalbumartist                          |
-| g \_ wszwmparametrialrating               | "g \_ wszwmdmparameentalrating"                       |
-| g \_ wszwmradiostationname             | g \_ wszwmdmmediastationname                     |
-| g \_ wszwmuntertitel                     | g \_ wszwmdmuntertitel                             |
-| g \_ wszwmvideowidth                   | g \_ wszwmdmwidth                                |
-| g \_ wszwmvideoheight                  | g \_ wszwmdmheight                               |
-| g \_ wszwmmood                         | g \_ wszwmdmtrackmood                            |
-| g \_ wszwmcodec                        | g \_ wszaudiowavecodec oder g \_ wszvideofourcccodec |
+| g \_ wszWMTitle                        | g \_ wszWMDMTitle                                |
+| g \_ wszWMAuthor                       | g \_ wszWMDMAuthor                               |
+| g \_ wszWMIedtitle                   | g \_ wszWMDMWeissTitle                           |
+| g \_ wszWMGenre                        | g \_ wszWMDMGenre                                |
+| g \_ wszWMYear                         | g \_ wszWMDMYear                                 |
+| g \_ wszWMTrackNumber oder g \_ wszWMTrack | g \_ wszWMDMTrack                                |
+| g \_ wszWMComposer                     | g \_ wszWMDMComposer                             |
+| g \_ wszWMDuration                     | g \_ wszWMDMDuration                             |
+| g \_ wszWMCopyright                    | g \_ wszWMDMProviderCopyright                    |
+| g \_ wszWMDescription                  | g \_ wszWMDMDescription                          |
+| g \_ wszWMBitrate                      | g \_ wszWMDMBitrate                              |
+| g \_ wszWMRating                       | g \_ wszWMDMUserRating                           |
+| g \_ wszWMMeldungArtist                  | g \_ wszWMDMWeisArtist                          |
+| g \_ wszWMParentalRating               | g \_ wszWMDMParentalRating                       |
+| g \_ wszWMRadioStationName             | g \_ wszWMDMMediaStationName                     |
+| g \_ wszWMSubTitle                     | g \_ wszWMDMSubTitle                             |
+| g \_ wszWMVideoWidth                   | g \_ wszWMDMWidth                                |
+| g \_ wszWMVideoHeight                  | g \_ wszWMDMHeight                               |
+| g \_ wszWMMood                         | g \_ wszWMDMTrackMood                            |
+| g \_ wszWMCodec                        | g \_ wszAudioWAVECodec oder g \_ wszVideoFourCCCodec |
 
 
 
- 
+ 
 
-Der folgende C++-Beispielcode veranschaulicht das Abrufen einer Reihe von Metadateneigenschaften aus einer ASF-Datei mithilfe des SDK für den Windows Media-Format und deren Umrechnung in die entsprechenden Windows Media Device Manager-Werte.
+Der folgende C++-Beispielcode veranschaulicht das Abrufen einer Reihe von Metadateneigenschaften aus einer ASF-Datei mit dem Windows Media Format SDK und deren Konvertierung in die entsprechenden Windows Media Geräte-Manager-Werte.
 
 
 ```C++
@@ -196,7 +196,7 @@ HRESULT GetFileMetadataFromFormatSDK(IWMDMMetaData* pMetadata, LPCWSTR file)
 
 
 
-Die folgende C++-Beispiel Funktion zeigt, wie Sie mit DirectShow einige Dateiinformationen erhalten und diese den Metadaten hinzufügen.
+Die folgende C++-Beispielfunktion zeigt, wie Sie directShow verwenden, um einige Dateiinformationen abzurufen und sie den Metadaten hinzuzufügen.
 
 
 ```C++
@@ -313,9 +313,9 @@ HRESULT GetFileMetadataFromDShow(IWMDMMetaData* pMetadata, LPCWSTR file)
 [**Schreiben von Dateien auf das Gerät**](writing-files-to-the-device.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

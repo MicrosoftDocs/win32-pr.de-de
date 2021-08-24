@@ -1,7 +1,7 @@
 ---
-description: Die getnpppatternfilterfromblob-Funktion Ruft den Muster Übereinstimmungs Filter aus einem bestimmten BLOB ab.
+description: Die GetNPPPatternFilterFromBlob-Funktion ruft den Musterabbildfilter aus einem bestimmten BLOB ab.
 ms.assetid: b17cde55-8abb-4699-960f-676cbbb24326
-title: Getnpppatternfilterfromblob-Funktion (Netmon. h)
+title: GetNPPPatternFilterFromBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 5758c53fe21231d300058a9168e556e9f9ceaa43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f54be7ac5d5b7a443f967d0f6aa1b4737f798a9459833fc87f07f50328f824c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119743890"
 ---
-# <a name="getnpppatternfilterfromblob-function"></a>Getnpppatternfilterfromblob-Funktion
+# <a name="getnpppatternfilterfromblob-function"></a>GetNPPPatternFilterFromBlob-Funktion
 
-Die **getnpppatternfilterfromblob** -Funktion Ruft den Muster Übereinstimmungs Filter aus einem bestimmten BLOB ab.
+Die **GetNPPPatternFilterFromBlob-Funktion** ruft den Musterabbildfilter aus einem bestimmten BLOB ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ DWORD GetNPPPatternFilterFromBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Handle für das BLOB.
 
 </dd> <dt>
 
-*pexpression* \[ in\]
+*pExpression* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Filter Ausdruck.
+Zeiger auf den Filterausdruck.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für ein fehlerblob, das angibt, wo der Fehler im ursprünglichen BLOB aufgetreten ist (falls vorhanden).
+Handle für ein Fehlerblob, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (sofern ein Fehler aufgetreten ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert eine NMERR-Funktion, die den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Filter Informationen für die Muster Übereinstimmung werden in der Kategorie **config** des BLOBs gespeichert.
+Die Filterinformationen für Musterein treffer werden in der **Config-Kategorie** des BLOB gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,44 +80,44 @@ Die Filter Informationen für die Muster Übereinstimmung werden in der Kategori
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Getboolfromblob](getboolfromblob.md)
+[GetBoolFromBlob](getboolfromblob.md)
 </dt> <dt>
 
-[Getclassidfromblob](getclassidfromblob.md)
+[GetClassIDFromBlob](getclassidfromblob.md)
 </dt> <dt>
 
-[Getdwordfromblob](getdwordfromblob.md)
+[GetDwordFromBlob](getdwordfromblob.md)
 </dt> <dt>
 
-[Getmacaddressfromblob](getmacaddressfromblob.md)
+[GetMacAddressFromBlob](getmacaddressfromblob.md)
 </dt> <dt>
 
-[Getnetworkinfofromblob](getnetworkinfofromblob.md)
+[GetNetworkInfoFromBlob](getnetworkinfofromblob.md)
 </dt> <dt>
 
-[Getnppaddressfilterfromblob](getnppaddressfilterfromblob.md)
+[GetNPPAddressFilterFromBlob](getnppaddressfilterfromblob.md)
 </dt> <dt>
 
-[Getnpptriggerfromblob](getnpptriggerfromblob.md)
+[GetNPPTriggerFromBlob](getnpptriggerfromblob.md)
 </dt> <dt>
 
-[Getstringfromblob](getstringfromblob.md)
+[GetStringFromBlob](getstringfromblob.md)
 </dt> <dt>
 
-[Getstringsfromblob](getstringsfromblob.md)
+[GetStringsFromBlob](getstringsfromblob.md)
 </dt> </dl>
 
  

@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 897e683fd56ce3e7496dd945ee068a9e6f0c0f77
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: aab1e66dd4208817f854db88c57db5b6269a7a0b912242da649dffcf24cabab3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107492269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119821370"
 ---
 # <a name="installeropendatabase-method"></a>Installer.OpenDatabase-Methode
 
@@ -61,7 +61,7 @@ Ein Parameter aus der folgenden Liste oder eine Zeichenfolge, die den Pfadnamen 
 | <span id="msiOpenDatabaseModeDirect"></span><span id="msiopendatabasemodedirect"></span><span id="MSIOPENDATABASEMODEDIRECT"></span><dl> <dt>**msiOpenDatabaseModeDirect**</dt> <dt>2</dt> </dl>                         | Öffnet eine Datenbank mit direktem Lese-/Schreibzugriff ohne Transaktion.<br/>                                                                                                      |
 | <span id="msiOpenDatabaseModeCreate"></span><span id="msiopendatabasemodecreate"></span><span id="MSIOPENDATABASEMODECREATE"></span><dl> <dt>**msiOpenDatabaseModeCreate**</dt> <dt>3</dt> </dl>                         | Erstellt eine neue Datenbank im Transact-Modus mit Lese-/Schreibzugriff.<br/>                                                                                                            |
 | <span id="msiOpenDatabaseModeCreateDirect"></span><span id="msiopendatabasemodecreatedirect"></span><span id="MSIOPENDATABASEMODECREATEDIRECT"></span><dl> <dt>**msiOpenDatabaseModeCreateDirect**</dt> <dt>4</dt> </dl> | Erstellt eine neue Datenbank mit Lese-/Schreibzugriff im direkten Modus.<br/>                                                                                                              |
-| <span id="msiOpenDatabaseModeListScript"></span><span id="msiopendatabasemodelistscript"></span><span id="MSIOPENDATABASEMODELISTSCRIPT"></span><dl> <dt>**msiOpenDatabaseModeListScript**</dt> <dt>5</dt> </dl>         | Öffnet eine Datenbank zum Anzeigen von Ankündigen von Skriptdateien, z. B. die von der [**CreateAdvertiseScript-Methode**](installer-createadvertisescript.md) generierten Dateien.<br/> |
+| <span id="msiOpenDatabaseModeListScript"></span><span id="msiopendatabasemodelistscript"></span><span id="MSIOPENDATABASEMODELISTSCRIPT"></span><dl> <dt>**msiOpenDatabaseModeListScript**</dt> <dt>5</dt> </dl>         | Öffnet eine Datenbank zum Anzeigen von Anklangskriptdateien, z. B. die von der [**CreateAdvertiseScript-Methode generierten**](installer-createadvertisescript.md) Dateien.<br/> |
 | <span id="msiOpenDatabaseModePatchFile"></span><span id="msiopendatabasemodepatchfile"></span><span id="MSIOPENDATABASEMODEPATCHFILE"></span><dl> <dt>**msiOpenDatabaseModePatchFile**</dt> <dt>32</dt> </dl>            | Fügt dieses Flag hinzu, um eine Patchdatei anzugeben.<br/>                                                                                                                     |
 
 
@@ -74,17 +74,17 @@ Ein Parameter aus der folgenden Liste oder eine Zeichenfolge, die den Pfadnamen 
 
 Ein [**Database-Objekt,**](database-object.md) das die vorhandene oder neue Installationsdatenbank darstellt, die geöffnet wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Datenbank als Ausgabe einer anderen Datenbank geöffnet wird, ist der Zusammenfassungsinformationsdatenstrom der Ausgabedatenbank tatsächlich eine schreibgeschützte Spiegelung der ursprünglichen Datenbank und kann daher nicht geändert werden. Darüber hinaus wird sie nicht in der Datenbank beibehalten. Um die Zusammenfassungsinformationen für die Ausgabedatenbank zu erstellen oder zu ändern, müssen sie geschlossen und erneut geöffnet werden.
+Wenn eine Datenbank als Ausgabe einer anderen Datenbank geöffnet wird, ist der Zusammenfassungsinformationsstream der Ausgabedatenbank tatsächlich ein schreibgeschützter Spiegel der ursprünglichen Datenbank und kann daher nicht geändert werden. Darüber hinaus wird es nicht in der Datenbank beibehalten. Um die Zusammenfassungsinformationen für die Ausgabedatenbank zu erstellen oder zu ändern, muss sie geschlossen und erneut geöffnet werden.
 
-Um Änderungen an einer Datenbank vorzunehmen und zu speichern, öffnen Sie zuerst die Datenbank in der Transaktion (msiOpenDatabaseModeTransact), erstellen (msiOpenDatabaseModeCreate oder msiOpenDatabaseModeCreateDirect) oder den direkten Modus (msiOpenDatabaseModeDirect). Rufen Sie nach dem Vornehmen der Änderungen immer die [**Commit-Methode**](database-commit.md) auf, bevor Sie das Datenbankhandle schließen. Die **Commit-Methode** leert alle Puffer.
+Öffnen Sie zum Vornehmen und Speichern von Änderungen an einer Datenbank zunächst die Datenbank im Transaktionsmodus (msiOpenDatabaseModeTransact), erstellen Sie (msiOpenDatabaseModeCreate oder msiOpenDatabaseModeCreateDirect) oder den direkten Modus (msiOpenDatabaseModeDirect). Rufen Sie nach dem Vornehmen der Änderungen immer die [**Commit-Methode auf,**](database-commit.md) bevor Sie das Datenbankhand handle schließen. Die **Commit-Methode** leert alle Puffer.
 
-Rufen Sie immer die [**Commit-Methode**](database-commit.md) für eine Datenbank auf, die im direkten Modus geöffnet wurde (msiOpenDatabaseModeDirect oder msiOpenDatabaseModeCreateDirect), bevor Sie die Datenbank schließen. Wenn dies nicht geschieht, kann die Datenbank beschädigt werden.
+Rufen Sie immer die [**Commit-Methode**](database-commit.md) für eine Datenbank auf, die im direkten Modus geöffnet wurde (msiOpenDatabaseModeDirect oder msiOpenDatabaseModeCreateDirect), bevor Sie die Datenbank schließen. Wenn dies nicht der Fall ist, kann die Datenbank beschädigt werden.
 
-Da die **OpenDatabase-Methode** den Datenbankzugriff initiiert, kann sie nicht mit einer ausgeführten Installation verwendet werden.
+Da die **OpenDatabase-Methode** den Datenbankzugriff initiiert, kann sie nicht mit einer laufenden Installation verwendet werden.
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
+Wenn bei der Methode ein Fehler auftritt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,9 +92,9 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

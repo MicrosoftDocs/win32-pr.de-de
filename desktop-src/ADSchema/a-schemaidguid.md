@@ -4,8 +4,8 @@ description: Der eindeutige Bezeichner für ein Attribut.
 ms.assetid: 50f0a4b6-dded-42db-9ac5-123f2885c658
 ms.tgt_platform: multiple
 keywords:
-- Schema-ID-GUID-Attribut AD-Schema
-- Schema für Schema Schema Schema
+- AD-Schema des Schema-ID-GUID-Attributs
+- SCHEMAIDGUID-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72f0b16cc45ecfbcd03e2104cbc6c5b5b41bd813
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: afbf6f45b2c4518c0140eaf3188447740849ad79933d4e4eb71fe57f769f0455
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837043"
 ---
 # <a name="schema-id-guid-attribute"></a>Schema-ID-GUID-Attribut
 
@@ -30,12 +30,12 @@ Der eindeutige Bezeichner für ein Attribut.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------|
 | CN                | Schema-ID-GUID                                                      |
-| LDAP-Display-Name | schemaIDGUID                                                        |
+| Ldap-Anzeigename | schemaIDGUID                                                        |
 | Size              | 16 Bytes                                                            |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                                    |
-| Aktualisierungshäufigkeit  | Dieser Wert wird festgelegt, wenn das Objekt erstellt wird, und kann nicht geändert werden. |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                    |
+| Updatehäufigkeit  | Dieser Wert wird beim Erstellen des Objekts festgelegt und kann nicht geändert werden. |
 | Attribute-Id      | 1.2.840.113556.1.4.148                                              |
-| System-ID-GUID    | bf967923-0de6-11d0-a285-00aa003049e2                                |
+| System-Id-Guid    | bf967923-0de6-11d0-a285-00aa003049e2                                |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md)               |
 
 
@@ -43,7 +43,7 @@ Der eindeutige Bezeichner für ein Attribut.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Der eindeutige Bezeichner für ein Attribut.
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | \-                                                                                                        |
 | System-Only            | Richtig                                                                                                      |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | False                                                                                                     |
-| Im globalen Katalog      | False                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | Richtig                                                                                                      |
+| Ist indiziert             | Falsch                                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 16                                                                                                        |
 | Range-Upper            | 16                                                                                                        |
 | Search-Flags           | 0x00000000                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 

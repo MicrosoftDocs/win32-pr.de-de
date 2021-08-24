@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentclientrequesttostopjetserviceexception-Konstruktor'
-title: Esentclientrequesttostopjetserviceexception-Konstruktor
+description: 'Weitere Informationen zu: EsentClientRequestToStopJetServiceException-Konstruktor'
+title: EsentClientRequestToStopJetServiceException-Konstruktor
 TOCTitle: 'EsentClientRequestToStopJetServiceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentClientRequestToStopJetServiceException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentclientrequesttostopjetserviceexception.esentclientrequesttostopjetserviceexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 888484650a604389679f169ae6f62cca867d986a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8853b3c1a3d0b0c2bb3e5592b1330efe9dca3204d1ddaad24414c2883eb115fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785740"
 ---
-# <a name="esentclientrequesttostopjetserviceexception-constructor"></a>Esentclientrequesttostopjetserviceexception-Konstruktor
+# <a name="esentclientrequesttostopjetserviceexception-constructor"></a>EsentClientRequestToStopJetServiceException-Konstruktor
 
-Initialisiert eine neue Instanz der esentclientrequesttostopjetserviceexception-Klasse.
+Initialisiert eine neue Instanz der EsentClientRequestToStopJetServiceException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentClientRequestToStopJetServiceException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentclientrequesttostopjetserviceexception-Klasse](./esentclientrequesttostopjetserviceexception-class.md)
+[EsentClientRequestToStopJetServiceException-Klasse](./esentclientrequesttostopjetserviceexception-class.md)
 
-[Esentclientrequesttostopjetserviceexception-Member](./esentclientrequesttostopjetserviceexception-members.md)
+[EsentClientRequestToStopJetServiceException-Member](./esentclientrequesttostopjetserviceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

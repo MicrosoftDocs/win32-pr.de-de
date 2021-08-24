@@ -1,46 +1,46 @@
 ---
 title: WFP-Architektur
-description: Dieser Abschnitt enthält eine kurze Übersicht über die Architektur der Windows-Filter Plattform.
+description: Dieser Abschnitt bietet eine kurze Übersicht über die Architektur Windows Filterplattform.
 ms.assetid: 17a90f5c-ef82-4b14-b7f1-dd025d5f7303
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8740fed254aca97ab77566e2a7f0ace9a6679d56
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 41989a11ff5412b3185f6987f9588f0309c3fde3ca386c71e4613ab6bc8237f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104209178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766604"
 ---
 # <a name="wfp-architecture"></a>WFP-Architektur
 
-Die folgende Abbildung zeigt die grundlegende Architektur der Windows-Filter Plattform (WFP).
+Die folgende Abbildung zeigt die grundlegende Architektur der Windows Filtering Platform (WFP).
 
-![grundlegende Architektur des Windows-Filter Platt Form Diagramms](images/wfp-architecture.png)
+![Grundlegende Architektur des Diagramms der Windows-Filterplattform](images/wfp-architecture.png)
 
 ## <a name="filter-engine"></a>Filter-Engine
 
-Die Filter-Engine enthält eine Benutzermoduskomponente und eine Kernelmoduskomponente, die alle Filter Vorgänge für Netzwerkdaten ausführt. Die Filter-Engine enthält mehrere Filter Ebenen, die den Netzwerk Stapel Ebenen des Betriebssystems lose zugeordnet werden. Die Filter-Engine-Ebenen werden basierend auf der Filter-Engine-Komponente, die Sie besitzt, in benutzermodusebenen und Kernel Modus-Ebenen aufgeteilt.
+Die Filter-Engine enthält eine Benutzermoduskomponente und eine Kernelmoduskomponente, die zusammen alle Filtervorgänge für Netzwerkdaten ausführen. Die Filter-Engine enthält mehrere Filterebenen, die den Netzwerkstapelebenen des Betriebssystems lose zuordnen. Die Filter-Engine-Ebenen werden basierend auf der Filter-Engine-Komponente, die sie besitzt, in Benutzermodusebenen und Kernelmodusebenen unterteilt.
 
-Die Benutzermoduskomponente führt RPC-und IPSec-Filterung aus. Die Filter-Engine enthält ungefähr 10 Benutzermodus-Filter Ebenen.
+Die Benutzermoduskomponente führt RPC- und IPsec-Filterung durch. Die Filter-Engine enthält ca. 10 Filterebenen im Benutzermodus.
 
-Die Kernelmoduskomponente führt das Filtern auf der Netzwerk-und Transport Ebene des TC/IP-Stapels durch. Diese Komponente ruft während des [Klassifizierungs](basic-operation.md) Prozesses auch die verfügbaren Legenden Funktionen auf. Die Filter-Engine enthält ungefähr 50 Kernel Modus-Filter Ebenen.
+Die Kernelmoduskomponente filtert die Netzwerk- und Transportebenen des TC/IP-Stapels. Diese Komponente ruft auch die verfügbaren Calloutfunktionen während des [Klassifizierungsprozesses](basic-operation.md) auf. Die Filter-Engine enthält ungefähr 50 Filterebenen im Kernelmodus.
 
-Unter [**Filtern von ebenenbezeichern**](management-filtering-layer-identifiers-.md) finden Sie eine Beschreibung der einzelnen Filter-Engine-Ebenen.
+Eine [**Beschreibung der einzelnen Filter-Engine-Ebenen**](management-filtering-layer-identifiers-.md) finden Sie unter Filtern von Ebenenbezeichnern.
 
 ## <a name="base-filtering-engine"></a>Basisfiltermodul
 
-Die Basis Filter-Engine (Basis Filter-Engine, BFE) ist ein Dienst im Benutzermodus (bfe.dll in einem svchost.exe Prozess ausgeführt), der die WFP-Komponenten koordiniert. Die Prinzipal Aufgaben, die von BFE durchgeführt werden, sind das Hinzufügen und Entfernen von Filtern aus dem System, das Speichern der Filter Konfiguration und das Erzwingen der WFP Anwendungen kommunizieren über die [WFP-Verwaltungsfunktionen](fwp-mgmt-functions.md)mit BFE.
+Die Basisfilterungs-Engine (Base Filtering Engine, BFE) ist ein Benutzermodusdienst (bfe.dll, der in einem svchost.exe-Prozess ausgeführt wird), der die WFP-Komponenten koordiniert. Die wichtigsten Aufgaben von BFE sind das Hinzufügen und Entfernen von Filtern aus dem System, das Speichern der Filterkonfiguration und das Erzwingen der WFP-Konfigurationssicherheit. Anwendungen kommunizieren mit BFE über die [WFP-Verwaltungsfunktionen.](fwp-mgmt-functions.md)
 
 ## <a name="callout-drivers"></a>Callout-Treiber
 
-Legenden-Treiber bieten zusätzliche Filter Funktionalität durch Hinzufügen von benutzerdefinierten Legenden Funktionen zur Filter-Engine auf einer oder mehreren kernelmodusfilterungs-Ebenen. Callouts unterstützen tiefgreifende Überprüfungen und Pakete sowie Datenstrom Änderungen. Nachdem ein Legenden Treiber seine Legenden Funktionen zur Filter-Engine hinzugefügt hat, können Filter, die die Legenden-Funktion eines bestimmten Treibers angeben, dem Filter Vorgang hinzugefügt werden. Solche Filter können entweder von einer Verwaltungs Anwendung im Benutzermodus oder vom Legenden Treiber selbst hinzugefügt werden. Die im Windows Development Kit gelieferte kernelmodusschnittstelle sollte nur bei Bedarf verwendet und nicht als Ersatz für die benutzermodusapi verwendet werden.
+Callouttreiber bieten zusätzliche Filterfunktionen, indem sie der Filter-Engine auf einer oder mehreren Filterebenen im Kernelmodus benutzerdefinierte Calloutfunktionen hinzufügen. Callouts unterstützen eine tiefe Überprüfung und Paketüberprüfung sowie Streamänderungen. Nachdem ein Callouttreiber seine Calloutfunktionen zur Filter-Engine hinzugefügt hat, können Filter, die die Calloutfunktion eines bestimmten Treibers angeben, dem Filterprozess hinzugefügt werden. Solche Filter können entweder von einer Verwaltungsanwendung im Benutzermodus oder vom Callouttreiber selbst hinzugefügt werden. Die im Windows Development Kit bereitgestellte Kernelmodusschnittstelle sollte nur bei Bedarf und nicht als Ersatz für die Benutzermodus-API verwendet werden.
 
 > [!Note]  
-> Weitere Informationen zu Legenden Treibern finden Sie im Abschnitt Windows-Filter Plattform des [Windows Development Kits](/windows-hardware/drivers/network/windows-filtering-platform-callout-drivers2).
+> Weitere Informationen zu Callouttreibern finden Sie im Abschnitt Windows Filtering Platform des [Windows Development Kit.](/windows-hardware/drivers/network/windows-filtering-platform-callout-drivers2)
 
- 
+ 
 
-Die Windows-Filter Plattform enthält eine Reihe integrierter Legenden Funktionen, die für die sichere IPSec-Datenkommunikation, Zustands behaftete Filtereinstellungen und das Filtern im verborgenen Modus verwendet werden können. Eine komplette Liste der integrierten Legenden Funktionen finden Sie unter [**integrierte**](built-in-callout-identifiers.md) Legenden Bezeichner.
+Die Windows Filterplattform enthält eine Reihe von integrierten Rückruffunktionen, die für die sichere IPsec-Datenkommunikation, zustandsbehaftete Filtereinstellungen und filterung im geschützten Modus verwendet werden können. Eine [**vollständige Liste der integrierten Calloutfunktionen**](built-in-callout-identifiers.md) finden Sie unter Integrierte Aufrufbezeichner.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,12 +52,12 @@ Die Windows-Filter Plattform enthält eine Reihe integrierter Legenden Funktione
 [WFP-Vorgang](basic-operation.md)
 </dt> <dt>
 
-[Windows-Filter Plattform-Callout-Treiber-Entwurfs Handbuch](/windows-hardware/drivers/network/windows-filtering-platform-callout-drivers2)
+[Windows Filtern von Plattformaufruftreibern – Entwurfshandbuch](/windows-hardware/drivers/network/windows-filtering-platform-callout-drivers2)
 </dt> <dt>
 
-[Windows-Filter Plattform-Callout-Treiber-Referenz](/windows-hardware/drivers/ddi/_netvista/)
+[Windows Filtern von Plattform-Callouttreibern – Referenz](/windows-hardware/drivers/ddi/_netvista/)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

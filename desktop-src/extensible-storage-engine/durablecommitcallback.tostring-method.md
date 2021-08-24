@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: durablecommitcallback. destring-Methode'
-title: Durablecommitcallback. destring-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: Weitere Informationen zur DurableCommitCallback.ToString-Methode
+title: DurableCommitCallback.ToString-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.DurableCommitCallback.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.durablecommitcallback.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e5283942b17da17309175f1fb2260a5b20b5bf5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ceeae9a04a423a2129c59601e883886a99072e690d97e9f5c56cf1a0ad3f68e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119786240"
 ---
-# <a name="durablecommitcallbacktostring-method"></a>Durablecommitcallback. destring-Methode
+# <a name="durablecommitcallbacktostring-method"></a>DurableCommitCallback.ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Struktur.
+Generiert eine Zeichenfolgendarstellung der -Struktur.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Durablecommitcallback-Klasse](./durablecommitcallback-class.md)
+[DurableCommitCallback-Klasse](./durablecommitcallback-class.md)
 
-[Durablecommitcallback-Member](./durablecommitcallback-members.md)
+[DurableCommitCallback-Member](./durablecommitcallback-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

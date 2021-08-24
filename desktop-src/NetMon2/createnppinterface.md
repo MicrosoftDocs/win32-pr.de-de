@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "-Funktion" verwendet das BLOB, das vom Finder zurückgegeben wurde, um eine NPP zu erstellen, die von der Anwendung verwendet werden kann.
+description: Die CreateNPPInterface-Funktion verwendet das vom Finder zurückgegebene BLOB, um ein NPP zu erstellen, das die Anwendung verwenden kann.
 ms.assetid: 41f48c72-3284-4ebc-baff-63553c8971e6
-title: Kreatenppinterface-Funktion (Netmon. h)
+title: CreateNPPInterface-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: d0efa1c33dd5e0778f13ddd59290de324c92e813
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03c2bb7fae0f68e6d38016df353266cfc9ec11757eeb98f6a5e41ab4316e63c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119744540"
 ---
-# <a name="createnppinterface-function"></a>Kreatenppinterface-Funktion
+# <a name="createnppinterface-function"></a>CreateNPPInterface-Funktion
 
-Die **Funktion "** -Funktion" verwendet das BLOB, das vom Finder zurückgegeben wurde, um eine NPP zu erstellen, die von der Anwendung verwendet werden kann.
+Die **CreateNPPInterface-Funktion** verwendet das vom Finder zurückgegebene BLOB, um ein NPP zu erstellen, das die Anwendung verwenden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ DWORD CreateNPPInterface(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das vom Finder zurückgegeben wurde.
+Handle für das BLOB, das vom Finder zurückgegeben wird.
 
 </dd> <dt>
 
-*IID* \[ in\]
+*iid* \[ in\]
 </dt> <dd>
 
-Der Bezeichner der Schnittstelle, die Sie von der NPP (z. b. "**iritc** " oder " **idelta aydc**") abrufen.
+Bezeichner der Schnittstelle, die Sie vom NPP aufrufen (**z.** B. IRTC oder **IDelaydC).**
 
 </dd> <dt>
 
-*ppvobject* \[ vorgenommen\]
+*ppvObject* \[ out\]
 </dt> <dd>
 
 Zeiger auf den zurückgegebenen Zeiger auf die angeforderte Schnittstelle.
@@ -64,9 +64,9 @@ Zeiger auf den zurückgegebenen Zeiger auf die angeforderte Schnittstelle.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler beschreibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler beschreibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 

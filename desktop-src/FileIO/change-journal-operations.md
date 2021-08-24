@@ -1,36 +1,36 @@
 ---
-description: Steuern Sie Codes und Strukturen, die mit dem Änderungs Journal für die NTFS-Dateisystem-Aktualisierungs Sequenznummer verwendet werden sollen.
+description: Steuern Sie Codes und Strukturen, die mit dem Änderungsjournal der NTFS-Dateisystem-Updatesequenznummer (USN) verwendet werden sollen.
 ms.assetid: 2215f0d4-6ac8-42a5-87a5-9c76d1fae3ed
-title: Ändern von Journal Vorgängen
+title: Change Journal Operations
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a52cda51d0efc4cbae1333fc197f42d6a5cc0f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87177bc636771c1a02b22fc8ad74cf4c16294e7a3b02e8a366c22c346f511f9f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766080"
 ---
-# <a name="change-journal-operations"></a>Ändern von Journal Vorgängen
+# <a name="change-journal-operations"></a>Change Journal Operations
 
-In der folgenden Liste sind die Steuerungs Codes aufgeführt, die mit dem Änderungs Journal des NTFS-Dateisystem-Aktualisierungs Sequenznummer (Aktualisierungs Sequenznummer) funktionieren.
+In der folgenden Liste sind die Steuerungscodes aufgeführt, die mit dem Änderungsjournal der NTFS-Dateisystem-Updatesequenznummer (USN) funktionieren.
 
--   [**fisctl- \_ Create- \_ US- \_ Journal**](/windows/win32/api/winioctl/ni-winioctl-fsctl_create_usn_journal)
--   [**f- \_ v-Lösch \_ \_ Journal**](/windows/win32/api/winioctl/ni-winioctl-fsctl_delete_usn_journal)
--   [**usctl \_ Enum- \_ \_ Daten**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data)
--   [**\_Kennzeichen \_ handle**](/windows/win32/api/winioctl/ni-winioctl-fsctl_mark_handle)
--   [**"f"- \_ Abfrage \_ \_ Journal**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_usn_journal)
--   [**Lese-und Schreib- \_ \_ \_ Journal von ssctl**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal)
+-   [**FSCTL \_ CREATE \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_create_usn_journal)
+-   [**FSCTL \_ DELETE \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_delete_usn_journal)
+-   [**\_ \_ FSCTL-ENUM-USN-DATEN \_**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data)
+-   [**FSCTL \_ MARK \_ HANDLE**](/windows/win32/api/winioctl/ni-winioctl-fsctl_mark_handle)
+-   [**FSCTL \_ QUERY \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_query_usn_journal)
+-   [**FSCTL \_ READ \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal)
 
-In der folgenden Liste sind die Strukturinformationen aufgeführt, die sich auf das Änderungs Journal für das NTFS-Dateisystem beziehen.
+In der folgenden Liste sind die Strukturinformationen aufgeführt, die sich auf das USN-Änderungsjournal des NTFS-Dateisystems beziehen.
 
--   [**Erstellen von \_ \_ Daten im \_ Daten Journal**](/windows/desktop/api/WinIoCtl/ns-winioctl-create_usn_journal_data)
--   [**Löschen von \_ \_ Daten im \_ Daten Journal**](/windows/desktop/api/WinIoCtl/ns-winioctl-delete_usn_journal_data)
--   [**Info zum Markierungs \_ handle \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-mark_handle_info)
--   [**MFT- \_ Enum- \_ Daten**](/windows/desktop/api/WinIoCtl/ns-winioctl-mft_enum_data_v0)
--   [**Lesen von \_ \_ Daten Journal \_ Daten**](/windows/desktop/api/WinIoCtl/ns-winioctl-read_usn_journal_data_v0)
--   [**Daten zum \_ Datenblatt des \_ Datenblatts**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_journal_data_v0)
--   [**\_Datensatz**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2)
+-   [**ERSTELLEN \_ VON USN-JOURNALDATEN \_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-create_usn_journal_data)
+-   [**LÖSCHEN \_ VON USN-JOURNALDATEN \_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-delete_usn_journal_data)
+-   [**MARK \_ HANDLE INFO \_ (HANDLEINFORMATIONEN MARKIEREN)**](/windows/desktop/api/WinIoCtl/ns-winioctl-mark_handle_info)
+-   [**\_MFT-ENUM-DATEN \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-mft_enum_data_v0)
+-   [**LESEN \_ VON USN-JOURNALDATEN \_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-read_usn_journal_data_v0)
+-   [**\_USN-JOURNALDATEN \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_journal_data_v0)
+-   [**USN \_ RECORD**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2)
 
  
 

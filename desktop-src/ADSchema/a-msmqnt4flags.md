@@ -5,7 +5,7 @@ ms.assetid: 08984fd8-7bbb-4d3e-accc-8fee033457fb
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des MSMQ-Nt4-Flags-Attributs
-- mSMQNt4Flags-Attribut AD-Schema
+- mSMQNt4Flags-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Das **MSMQ-Nt4-Flags-Attribut** enthält MSMQ-Informationen im gemischten Modus.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.964               |
-| System-Id-Guid    | eb38a158-d57f-11d1-90a2-00c04fd91ab1 |
+| System-ID-GUID    | eb38a158-d57f-11d1-90a2-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -58,7 +58,7 @@ Das **MSMQ-Nt4-Flags-Attribut** enthält MSMQ-Informationen im gemischten Modus.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Is-Single-Valued       | True                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                       |
@@ -79,7 +79,7 @@ Das **MSMQ-Nt4-Flags-Attribut** enthält MSMQ-Informationen im gemischten Modus.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Is-Single-Valued       | True                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                       |
@@ -100,7 +100,7 @@ Das **MSMQ-Nt4-Flags-Attribut** enthält MSMQ-Informationen im gemischten Modus.
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Is-Single-Valued       | True                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                       |

@@ -1,7 +1,7 @@
 ---
-description: Entfernt Funktionseinstellungen aus einer Ethernet-Verbindung eines virtuellen Computers.
+description: Entfernt Featureeinstellungen aus einer Ethernet-Verbindung eines virtuellen Computers.
 ms.assetid: 457056d0-7e69-47e4-8744-0136a1816f4a
-title: Removefeaturesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: RemoveFeatureSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c29151f6544d7eb803ec72ee49e455556d8b2d70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17e87cd7c09b22758ba863d9d591370ae49a5a408e43223970c431bac9f3450b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822900"
 ---
-# <a name="removefeaturesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Removefeaturesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="removefeaturesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>RemoveFeatureSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Entfernt Funktionseinstellungen aus einer Ethernet-Verbindung eines virtuellen Computers.
+Entfernt Featureeinstellungen aus einer Ethernet-Verbindung eines virtuellen Computers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 RemoveFeatureSettings(
 
 <dl> <dt>
 
-*Featuresettings* \[ in\]
+*FeatureSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz einer Klasse enthalten, die von der [**MSVM-Klasse \_ ethernetzwitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md) abgeleitet ist, die die zu entfernenden Funktionseinstellungen definiert. Die **InstanceId-** Eigenschaft der einzelnen Instanzen identifiziert die zu entfernenden Funktionseinstellungen.
+Ein Array von Zeichenfolgen, die eine eingebettete Instanz einer Klasse enthalten, die von der [**Msvm \_ EthernetSwitchFeatureSettingData-Klasse**](msvm-ethernetswitchfeaturesettingdata.md) abgeleitet wurde, die die zu entfernenden Featureeinstellungen definiert. Die **InstanceID-Eigenschaft** jeder dieser Instanzen identifiziert die feature-Einstellungen, die entfernt werden sollen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -75,19 +75,19 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -96,10 +96,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -108,7 +108,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

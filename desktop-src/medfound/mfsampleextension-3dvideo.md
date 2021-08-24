@@ -1,29 +1,29 @@
 ---
-description: Gibt an, ob ein Medien Beispiel einen 3D-Videoframe enthält.
+description: Gibt an, ob ein Medienbeispiel einen 3D-Videoframe enthält.
 ms.assetid: 1B0B9DBD-80EB-4876-B2F2-BE419AC84265
-title: MFSampleExtension_3DVideo-Attribut (mfapi. h)
+title: MFSampleExtension_3DVideo -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e30ea247f6f12f05414df0ae4305ecaaa6e3e283
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbb959accfb3326e90068a26247eeab25e9aeaddacb720a0dfd64aa6e5b237a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722800"
 ---
-# <a name="mfsampleextension_3dvideo-attribute"></a>MF Sample Extension \_ 3dvideo-Attribut
+# <a name="mfsampleextension_3dvideo-attribute"></a>MFSampleExtension \_ 3DVideo-Attribut
 
-Gibt an, ob ein Medien Beispiel einen 3D-Videoframe enthält.
+Gibt an, ob ein Medienbeispiel einen 3D-Videoframe enthält.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut " **true**" ist, enthält das Beispiel "Media" einen Videorahmen mit mindestens zwei stereoskopischen Ansichten. Der Standardwert ist **FALSE**.
+Wenn dieses Attribut **TRUE ist,** enthält das Medienbeispiel einen Videoframe, der über zwei oder mehr stereoleere Ansichten verfügt. Der Standardwert ist **FALSE**.
 
-Eine Komponente, die 3D-Video Frames generiert, sollte dieses Attribut für jedes Medien Beispiel, das einen 3D-Frame enthält, auf " **true** " festlegen.
+Eine Komponente, die 3D-Videoframes generiert, sollte dieses Attribut für jedes Medienbeispiel, das einen 3D-Frame enthält, auf **TRUE** festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,20 +31,20 @@ Eine Komponente, die 3D-Video Frames generiert, sollte dieses Attribut für jede
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[MF Sample Extension \_ 3dvideo \_ Sample Format](mfsampleextension-3dvideo-sampleformat.md)
+[MFSampleExtension \_ 3DVideo \_ SampleFormat](mfsampleextension-3dvideo-sampleformat.md)
 </dt> </dl>
 
  

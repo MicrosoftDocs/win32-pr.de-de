@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthvalidator Validate-Methode (napsystemhealthvalidator. h)
-description: Das NAP-System zum Überprüfen der sohrequest, die von einem Client empfangen wurde.
+title: INapSystemHealthValidator Validate-Methode (NapSystemHealthValidator.h)
+description: Das NAP-System zum Überprüfen der soHRequest, die von einem Client empfangen wurde.
 ms.assetid: d67dc2c8-f18c-4e06-a51e-a538ca75c3f1
 keywords:
-- Validate-Methode für NAP
-- Validate-Methode, NAP, inapsystemhealthvalidator-Schnittstelle
-- Inapsystemhealthvalidator-Schnittstelle NAP, Validate-Methode
+- Überprüfen der NAP-Methode
+- Überprüfen der NAP-Methode, INapSystemHealthValidator-Schnittstelle
+- INapSystemHealthValidator-Schnittstelle NAP , Validate-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f7589a67b9a3b1454e3c65b17ad6f584ce0e655
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f1c200e96024075d0c2880b294c197938a5ec0a6f3e1da4cb019d5ecd3ed32b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802770"
 ---
-# <a name="inapsystemhealthvalidatorvalidate-method"></a>Inapsystemhealthvalidator:: Validate-Methode
+# <a name="inapsystemhealthvalidatorvalidate-method"></a>INapSystemHealthValidator::Validate-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthvalidator:: Validate** -Methode wird vom SHV-Entwickler definiert und vom NAP-System aufgerufen, um die [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) zu validieren, die von einem Client empfangen wurde.
+Die **INapSystemHealthValidator::Validate-Methode** wird vom SHV-Entwickler definiert und vom NAP-System aufgerufen, um die von einem Client empfangene [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) zu überprüfen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,71 +49,71 @@ HRESULT Validate(
 
 <dl> <dt>
 
-*Anforderung* \[ in\]
+*Anforderung* \[ In\]
 </dt> <dd>
 
-Ein com-Zeiger auf ein [**inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md) -Objekt, das das Validierungs Anforderungs Objekt identifiziert.
+Ein COM-Zeiger auf ein [**INapSystemHealthValidationRequest-Objekt,**](inapsystemhealthvalidationrequest.md) das das Validierungsanforderungsobjekt identifiziert.
 
 </dd> <dt>
 
-*hinttimeoutinmsec* \[ in\]
+*hintTimeOutInMsec* \[ In\]
 </dt> <dd>
 
-Die Dauer des Kommunikations Timeout Zeitraums in Millisekunden. Der System Integritäts Prüfungs Punkt (System Health Validator, SHV) sollte innerhalb dieser Zeitspanne Antworten. Andernfalls wird die Antwort gelöscht.
+Die Dauer des Kommunikationstimeoutzeitraums in Millisekunden. Das System health Validator (SHV) sollte innerhalb dieser Zeitspanne reagieren. andernfalls wird die Antwort gelöscht.
 
 > [!Note]  
-> Das Standard Timeout für alle SHVs beträgt 2000 Millisekunden. Wenn Sie einen anderen Wert als den Standardwert verwenden, wird das Timeout für alle registrierten SHVs geändert.
+> Das Standardtimeout für alle SHVs beträgt 2000 Millisekunden. Wenn Sie einen anderen Wert als den Standardwert verwenden, ändert sich das Timeout für alle registrierten SHVs.
 
  
 
 </dd> <dt>
 
-*Rückruf* \[ in\]
+*Rückruf* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das Rückruf Objekt [**inapservercallback**](inapservercallback.md). Dieser Rückruf Zeiger wird von den SHVs verwendet, wenn er aus dem Aufrufen von **inapsystemhealthvalidator:: Validate** **E \_** aussteht. Diese wird für die asynchrone Validierung verwendet. Es wird erwartet, dass die SHVs innerhalb der *hinttimeoutinmsec* -Zeit reagieren, oder andernfalls wird die Antwort gelöscht.
+Ein Zeiger auf das Rückrufobjekt [**INapServerCallback**](inapservercallback.md). Dieser Rückrufzeiger wird von den SHVs verwendet, wenn sie **E \_ PENDING** aus dem Aufruf von **INapSystemHealthValidator::Validate** zurückgeben. Dies wird für die asynchrone Validierung verwendet. Es wird erwartet, dass die SHVs innerhalb der *HintTimeOutInMsec-Zeit* reagieren, andernfalls wird die Antwort gelöscht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein anderer Fehlercode zurückgegeben wird, geht das System davon aus, dass der Server Component-Fehler aufgetreten ist, und die entsprechende Zuordnung erfolgt, um erfolgreich bzw. fehlerhaft zu sein.
+Wenn ein anderer Fehlercode zurückgegeben wird, geht das System davon aus, dass ein serverComponent-Fehler aufgetreten ist, und die entsprechende Zuordnung erfolgt, um den Fehler zu übergeben bzw. zu fehlschlagen.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>                       | Gibt an, dass das Validierungs Steuerelement für das Objekt "Request" eine sohresponse festgelegt hat.<br/>                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <dl> <dt>**E \_ Ausstehend**</dt> </dl>                  | Gibt an, dass OnComplete () in einem separaten Thread aufgerufen wird.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| <dl> <dt>**RPC \_ S- \_ Server nicht \_ verfügbar**</dt> </dl> | Gibt an, dass der SHV-Prozess (System Health Validator) beendet wurde, ohne dass der napserver einen Verweis darauf freigibt. Der napserver versucht erneut, einen neuen Verweis auf den SHV zu erstellen und führt den Validate-Rückruf einmal erneut aus. Wenn bei der Erstellung des Objekts oder der erneut ausgeführten Überprüfung ein Fehler auftritt, wird der SHV aus der Liste der geladenen SHVs entfernt. Dieser SHV kann nun nur erneut geladen werden, indem die Registrierung und die erneute Registrierung des SHV erneut aufgehoben werden, oder wenn der napserver neu gestartet wird.<br/> |
+| <dl> <dt>**S \_ OK**</dt> </dl>                       | Gibt an, dass das Validierungszeichen eine SoHResponse für das Request-Objekt festgelegt hat.<br/>                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**E \_ AUSSTEHEND**</dt> </dl>                  | Gibt an, dass OnComplete() in einem separaten Thread aufgerufen wird.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| <dl> <dt>**\_ \_ RPC-S-SERVER \_ NICHT VERFÜGBAR**</dt> </dl> | Gibt an, dass der SHV-Prozess (System Health Validator) beendet wurde, ohne dass der NapServer tatsächlich einen Verweis darauf freigibt. Der NapServer versucht, einen neuen Verweis auf die SHV neu zu erstellen, und führt den Validate-Aufruf einmal erneut durch. Wenn bei der Erstellung des Objekts oder der erneut ausgeführten Validate-Anweisung ein Fehler auftritt, wird die SHV aus der Liste der geladenen SHVs entfernt. Diese SHV kann jetzt nur erneut geladen werden, indem Sie die Registrierung aufheben und die SHV erneut registrieren oder wenn der NapServer neu gestartet wird.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Erkennung von Eindring Versuchen zu unterstützen, werden SHVs aufgefordert, den Client Computer zu validieren, unabhängig davon, ob der Client einen für den SHV vorgesehenen [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) gesendet hat.
+Zur Unterstützung der Angriffserkennung werden SHVs aufgefordert, den Clientcomputer unabhängig davon zu überprüfen, ob der Client eine [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) für die SHV gesendet hat.
 
-Der SHV muss folgende Aktionen ausführen:
+Die SHV muss folgende Schritte ausführen:
 
--   Rufen Sie den [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) aus der *Anforderung* ab, indem Sie [**Request aufrufen. Getsohrequest ()**](inapsystemhealthvalidationrequest-getsohrequest-method.md).
--   Wenn das [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) -Paket NULL ist:
-    -   Wenn der SHV ein Angriffs Erkennungssystem ist, füllen Sie ein [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) -Paket mit dem entsprechenden [**NAP-Fehlercode**](nap-error-constants.md) aus, um zu ermitteln, warum der Client Computer schädlich ist.
-    -   Alle anderen SHVs sollten ein [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) -Paket mit dem Fehlercode " [**NAP \_ E \_ Missing \_ SoH**](nap-error-constants.md)" auffüllen.
--   Wenn ' *napsystemgenerated* ' vom Anforderungs Aufrufwert ' **true** ' ist [**. Getsohrequest ()**](inapsystemhealthvalidationrequest-getsohrequest-method.md), der SHV sollte ein [**SoH**](/windows/win32/api/naptypes/ns-naptypes-soh) -Paket mit den folgenden 3 TLVS erwarten: [**sohattributetypesystemhealthid**](sohattributetype-enum.md), **sohattributetypefailurecategory**, **sohattributetypeerrorcodes**. Dieser **sohrequest** wird vom NAPAgent im Auftrag des Systemintegritäts-Agents (SHA) generiert, weil beim Abrufen eines Anforderungs Pakets aus dem SHA ein Fehler aufgetreten ist.
--   Überprüfen Sie das [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) -Paket.
-    -   Wenn die [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) falsch formatiert ist, erstellen Sie ein **sohresponse** -Paket mit dem Fehlercode [**NAP \_ E \_ ungültiges \_ Paket**](nap-error-constants.md).
-    -   Wenn der SHV nur zwischengespeicherte Informationen für die Überprüfung des [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) -Pakets verwendet (d. h. keine e/a-Vorgänge durchgeführt werden), kann er **sohresponse** erstellen, ihn für das Objekt in der *Anforderung* festlegen und **S \_ OK** zurückgeben.
-    -   Wenn der SHV e/a-Vorgänge ausführt, um mit den Back-End-Servern zum Überprüfen der Integrität des Clients zu kommunizieren, muss er die E/a in die Warteschlange stellen und diese Funktion mit **E \_ Pending** zurückgeben. In diesem Fall muss der SHV Callback aufrufen [**. OnComplete ()**](inapservercallback-oncomplete-method.md) in einem separaten Thread innerhalb des Timeout Zeitraums *hinttimeoutinmsec*. Andernfalls wird die Antwort des SHV gelöscht.
--   Geben Sie außer den oben aufgeführten Fehlern keinen anderen Fehler zurück. Wenn vom SHV ein anderer Fehlercode zurückgegeben wird (z. b. Systemfehler), wird das Paket verworfen.
+-   Rufen Sie [**die SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) von *der Anforderung* ab, indem Sie die [**Anforderung aufrufen. GetSoHRequest()**](inapsystemhealthvalidationrequest-getsohrequest-method.md).
+-   Wenn das [**SoHRequest-Paket**](/windows/win32/api/naptypes/ns-naptypes-soh) NULL ist:
+    -   Wenn die SHV ein Angriffserkennungssystem ist, füllen Sie ein [**SoHRequest-Paket**](/windows/win32/api/naptypes/ns-naptypes-soh) mit dem entsprechenden [**NAP-Fehlercode**](nap-error-constants.md) auf, um zu verstehen, warum der Clientcomputer schädlich ist.
+    -   Alle anderen SHVs sollten ein [**SoHRequest-Paket**](/windows/win32/api/naptypes/ns-naptypes-soh) mit dem Fehlercode [**NAP E MISSING \_ \_ \_ SOH**](nap-error-constants.md)auffüllen.
+-   Wenn *napSystemGenerated* **vom** Aufruf der Anforderung true [**ist. GetSoHRequest()**](inapsystemhealthvalidationrequest-getsohrequest-method.md), sollte die SHV ein [**SoH-Paket**](/windows/win32/api/naptypes/ns-naptypes-soh) mit den folgenden drei TLVs erwarten: [**sohAttributeTypeSystemHealthId**](sohattributetype-enum.md), **sohAttributeTypeFailureCategory**, **sohAttributeTypeErrorCodes**. Diese **SoHRequest** wird vom NapAgent im Auftrag des System Health Agent (SHA) generiert, da beim Abrufen eines Anforderungspakets aus dem SHA ein Fehler aufgetreten ist.
+-   Überprüfen Sie das [**SoHRequest-Paket.**](/windows/win32/api/naptypes/ns-naptypes-soh)
+    -   Wenn [**die SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) falsch formatiert ist, erstellen Sie ein **SoHResponse-Paket** mit dem Fehlercode [**NAP E INVALID \_ \_ \_ PACKET**](nap-error-constants.md).
+    -   Wenn der SHV nur zwischengespeicherte Informationen verwendet, um das [**SoHRequest-Paket**](/windows/win32/api/naptypes/ns-naptypes-soh) zu überprüfen (d.h. es wird keine E/A ausgeführt), kann er **das SoHResponse-Objekt** erstellen, es für das Objekt in *der Anforderung* festlegen und **S \_ OK** zurückgeben.
+    -   Wenn der SHV E/A ausführt, um mit seinen Back-End-Servern zu kommunizieren, um die Integrität des Clients zu überprüfen, muss er die E/A in die Warteschlange stellen und diese Funktion mit **E \_ PENDING** zurückgeben. In diesem Fall muss die SHV [**einen Rückruf aufrufen. OnComplete()**](inapservercallback-oncomplete-method.md) für einen separaten Thread innerhalb des Timeoutzeitraums, *hintTimeOutInMsec.* Andernfalls wird die Antwort der SHV gelöscht.
+-   Geben Sie keinen anderen Fehler als die oben aufgeführten zurück. Wenn ein anderer Fehlercode von der SHV zurückgegeben wird (z. B. systemfehler), wird das Paket verworfen.
 
-Ein SHV muss entweder einen **sohattributetypecomplianceresultcodes** oder **sohattributetypefailurecategory** TLV in seinem [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh)zurückgeben.
+Eine SHV muss entweder **sohAttributeTypeComplianceResultCodes** oder **sohAttributeTypeFailureCategory** TLV in ihrer [**SoHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh)zurückgeben.
 
--   [**sohattributetypecomplianceresultcodes TLV**](sohattributetype-enum.md): Wenn die Integrität des Clients von SHV überprüft werden konnte (d. h. fehlerfrei oder fehlerhaft), wird dieses TLV zurückgegeben.
--   [**sohattributetypefailurecategory TLV**](sohattributetype-enum.md): Wenn auf dem Client oder Server ein Komponenten-oder Kommunikationsfehler aufgetreten ist, muss dies von diesem TLV angegeben werden. Dieses TLV wird in Abhängigkeit von der Konfiguration des SHV weiterhin fehlerfrei oder fehlerfrei zugeordnet. Weitere Informationen finden Sie unter der [**inapservermanagement**](inapservermanagement.md) -Schnittstelle und der [**failurecategorymapping**](/windows/win32/api/naptypes/ns-naptypes-failurecategorymapping) -Struktur.
+-   [**sohAttributeTypeComplianceResultCodes TLV:**](sohattributetype-enum.md)Wenn die SHV die Integrität des Clients überprüfen konnte (d. h. fehlerfrei oder fehlerhaft), wird diese TLV zurückgegeben.
+-   [**sohAttributeTypeFailureCategory TLV:**](sohattributetype-enum.md)Wenn komponenten- oder kommunikationsfehler auf dem Client oder Server aufgetreten sind, muss dies von dieser TLV angegeben werden. Diese TLV wird je nach Shv-Konfiguration weiterhin fehlerfrei oder fehlerhaft zugeordnet. Weitere Informationen finden Sie unter der [**INapServerManagement-Schnittstelle**](inapservermanagement.md) und der [**FailureCategoryMapping-Struktur.**](/windows/win32/api/naptypes/ns-naptypes-failurecategorymapping)
 
-Der SHV darf keine Verweise auf die *Anforderung* oder den *Rückruf* enthalten, wenn der asynchrone-Befehl abgeschlossen ist.
+Die SHV darf keine Verweise auf *Anforderungen* oder *Rückrufe* enthalten, sobald der asynchrone Aufruf abgeschlossen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,9 +122,9 @@ Der SHV darf keine Verweise auf die *Anforderung* oder den *Rückruf* enthalten,
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 
 
 
@@ -132,7 +132,7 @@ Der SHV darf keine Verweise auf die *Anforderung* oder den *Rückruf* enthalten,
 
 <dl> <dt>
 
-[**Inapsystemhealthvalidator**](inapsystemhealthvalidator.md)
+[**INapSystemHealthValidator**](inapsystemhealthvalidator.md)
 </dt> </dl>
 
  

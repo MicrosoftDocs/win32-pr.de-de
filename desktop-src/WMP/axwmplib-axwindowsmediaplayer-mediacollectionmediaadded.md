@@ -1,9 +1,9 @@
 ---
-title: Mediacollectionmediaadded-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das mediacollectionmediaadded-Ereignis tritt auf, wenn der lokalen Bibliothek ein Medien Element hinzugefügt wird. | Mediacollectionmediaadded-Ereignis des AxWindowsMediaPlayer-Objekts
+title: MediaCollectionMediaAdded-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaCollectionMediaAdded-Ereignis tritt auf, wenn der lokalen Bibliothek ein Medienelement hinzugefügt wird. | MediaCollectionMediaAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: ba1779f6-a212-44f4-b52a-c88e22aebcce
 keywords:
-- Mediacollectionmediaadded-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MediaCollectionMediaAdded-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbb839fccf9a5048b5647480eca36fcfcaeb904e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fb48a41970840a45344e2e6fdd578f4e84e23751fd8e337052e66ccd0a058d5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765100"
 ---
-# <a name="mediacollectionmediaadded-event-of-the-axwindowsmediaplayer-object"></a>Mediacollectionmediaadded-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediacollectionmediaadded-event-of-the-axwindowsmediaplayer-object"></a>MediaCollectionMediaAdded-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das mediacollectionmediaadded-Ereignis tritt auf, wenn der lokalen Bibliothek ein Medien Element hinzugefügt wird.
+Das MediaCollectionMediaAdded-Ereignis tritt auf, wenn der lokalen Bibliothek ein Medienelement hinzugefügt wird.
 
 ``` syntax
 [C#]
@@ -41,19 +41,19 @@ Private Sub player_MediaCollectionMediaAdded(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionmediaaddedeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ mediacollectionmediaaddedevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionMediaAddedEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ MediaCollectionMediaAddedEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft | BESCHREIBUNG                                                                                                                  |
+| Eigenschaft | Beschreibung                                                                                                                  |
 |----------|------------------------------------------------------------------------------------------------------------------------------|
-| pmedia   | System. objectdas Medien Element, das der lokalen Bibliothek hinzugefügt wurde. Sie können dies in eine iwmpmedia-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| pMedia   | System.ObjectDas Medienelement, das der lokalen Bibliothek hinzugefügt wurde. Sie können diese in eine IWMPMedia-Schnittstelle umleiten, um darauf zuzugreifen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis tritt nur für die lokale Bibliothek auf.
 
@@ -73,16 +73,16 @@ Dieses Ereignis tritt nur für die lokale Bibliothek auf.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. mediacollection (VB und c#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
+[**AxWindowsMediaPlayer.mediaCollection (VB und C#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

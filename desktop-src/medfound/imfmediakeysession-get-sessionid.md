@@ -1,7 +1,7 @@
 ---
 description: Ruft eine eindeutige Sitzungs-ID ab, die für diese Sitzung erstellt wurde.
 ms.assetid: 779ebea9-69ff-469a-8ee0-06d570ede6cb
-title: 'IMF mediakeysession:: get_SessionId-Methode'
+title: METHODE FÜR DIE 1000-get_SessionId KEYKeySession::get_SessionId
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 7110dbe6c24d1189019fb242621c7e3c01253264
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: f598cbb1d7122bb8597d5849778a833462b4e6d9de48942fdfabbc95bbc30898
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106369929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119724550"
 ---
-# <a name="imfmediakeysessionget_sessionid-method"></a>IMF mediakeysession:: get \_ SessionID-Methode
+# <a name="imfmediakeysessionget_sessionid-method"></a>EINEMEDIAKeySession::get \_ SessionId-Methode
 
 Ruft eine eindeutige Sitzungs-ID ab, die für diese Sitzung erstellt wurde.
 
@@ -42,13 +42,13 @@ HRESULT get_SessionId(
 *sessionId* 
 </dt> <dd>
 
-Die ID der Medien schlüsselsitzung.
+Die Sitzungs-ID des Medienschlüssels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -66,7 +66,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF mediakeysession**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeysession)
+[**DURCHTASTEMediaKeySession**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediakeysession)
 </dt> </dl>
 
  

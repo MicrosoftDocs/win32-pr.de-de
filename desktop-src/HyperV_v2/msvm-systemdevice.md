@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: be31a51ad4e24bd31785e64400bf5b266624d8d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67c538d82657d1ac07246f21dc2688f968ce969d1bf20238b20eeb4eea6f71cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119746570"
 ---
-# <a name="msvm_systemdevice-class"></a>MSVM \_ SystemDevice-Klasse
+# <a name="msvm_systemdevice-class"></a>Msvm \_ SystemDevice-Klasse
 
-Logische Geräte können von einem System aggregiert werden. Diese Beziehung wird von der Systemgeräte Zuordnung explizit gemacht.
+Logische Geräte können von einem System aggregiert werden. Diese Beziehung wird durch die Systemgeräte-Zuordnung explizit gemacht.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,29 +41,29 @@ class Msvm_SystemDevice : CIM_SystemDevice
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ SystemDevice** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SystemDevice-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ SystemDevice** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SystemDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ System**](/windows/desktop/CIMWin32Prov/cim-system)**
+Datentyp: **[ **\_ CIM-System**](/windows/desktop/CIMWin32Prov/cim-system)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers)setzung, [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) ( 1 ), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) ( 1 )
 </dt> </dl>
 
-Das übergeordnete System in der Zuordnung. Diese Eigenschaft wird von der [**CIM- \_ Komponente**](/windows/desktop/CIMWin32Prov/cim-component)geerbt.
+Das übergeordnete System in der Zuordnung. Diese Eigenschaft wird von der [**CIM-Komponente \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-component)
 
 </dd> <dt>
 
@@ -76,13 +76,13 @@ Datentyp: **[ **CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logica
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das logische Gerät, das ein Element eines Systems ist. Diese Eigenschaft wird von der [**CIM- \_ Komponente**](/windows/desktop/CIMWin32Prov/cim-component)geerbt.
+Das logische Gerät, das ein Element eines Systems ist. Diese Eigenschaft wird von der [**CIM-Komponente \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-component)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM- \_ SystemDevice** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ SystemDevice-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,25 +90,25 @@ Der Zugriff auf die **MSVM- \_ SystemDevice** -Klasse kann durch die UAC-Filteru
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ System Gerät**](cim-systemdevice.md)
+[**\_CIM-SystemGeräte**](cim-systemdevice.md)
 </dt> <dt>
 
-[**CIM- \_ System Gerät**](/windows/desktop/CIMWin32Prov/cim-systemdevice)
+[**\_CIM-SystemGeräte**](/windows/desktop/CIMWin32Prov/cim-systemdevice)
 </dt> <dt>
 
-[Klassen des virtuellen Systems](virtual-system-classes.md)
+[Virtuelle Systemklassen](virtual-system-classes.md)
 </dt> </dl>
 
  
