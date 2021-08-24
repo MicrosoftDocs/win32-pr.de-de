@@ -1,10 +1,10 @@
 ---
-title: Iwmperror (VB und C)-Schnittstelle (WMP. h)
-description: Stellt Eigenschaften und Methoden für den Zugriff auf eine Auflistung von iwmperroritem-Schnittstellen zum Abrufen von Fehlerinformationen bereit. Die iwmperror-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IWMPError-Schnittstelle (VB und C ) (Wmp.h)
+description: Stellt Eigenschaften und Methoden für den Zugriff auf eine Auflistung von IWMPErrorItem-Schnittstellen zum Abrufen von Fehlerinformationen bereit. Die IWMPError-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: c7d9f834-43ed-40a2-95a3-b1633f025118
 keywords:
-- Iwmperror (VB und C) Interface Windows Media Player
-- Iwmperror (VB und C) Interface Windows Media Player, beschrieben
+- IWMPError-Schnittstelle (VB und C) Windows Media Player
+- IWMPError-Schnittstelle (VB und C) Windows Media Player , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,36 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 289a39093c38e7a4b0cc43cb8f318e321ae8ef53
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5f3ff7635e423d70447e371d61fbbadf02aa14c2476e118be79cbb25d974348b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119736180"
 ---
-# <a name="iwmperror-vb-and-c-interface"></a>Iwmperror (VB und c#)-Schnittstelle
+# <a name="iwmperror-vb-and-c-interface"></a>IWMPError-Schnittstelle (VB und C#)
 
-Stellt Eigenschaften und Methoden für den Zugriff auf eine Auflistung von **iwmperroritem** -Schnittstellen zum Abrufen von Fehlerinformationen bereit.
+Stellt Eigenschaften und Methoden für den Zugriff auf eine Auflistung von **IWMPErrorItem-Schnittstellen zum** Abrufen von Fehlerinformationen bereit.
 
-Die **iwmperror** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPError-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **iwmperror (VB und c#)** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWMPError-Schnittstelle (VB und C#)** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmperror (VB und c#)** -Schnittstelle verfügt über diese Methoden.
+Die **IWMPError-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                                         | BESCHREIBUNG                                                                                                                                   |
+| Methode                                                                         | Beschreibung                                                                                                                                   |
 |:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**clearerrorqueue**](wmplibiwmperror-iwmperror-clearerrorqueue--vb-and-c.md) | Löscht die Fehler in der Fehler Warteschlange.<br/>                                                                                            |
-| [**WebHelp**](wmplibiwmperror-iwmperror-webhelp--vb-and-c.md)                 | Öffnet die Microsoft Windows Media Player-Webhilfe Seite, um weitere Informationen zum ersten Fehler in der Fehler Warteschlange anzuzeigen.<br/> |
+| [**clearErrorQueue**](wmplibiwmperror-iwmperror-clearerrorqueue--vb-and-c.md) | Entfernt die Fehler aus der Fehlerwarteschlange.<br/>                                                                                            |
+| [**Webhelp**](wmplibiwmperror-iwmperror-webhelp--vb-and-c.md)                 | Startet die Microsoft Windows Media Player-Webhilfeseite, um weitere Informationen zum ersten Fehler in der Fehlerwarteschlange anzuzeigen.<br/> |
 
 
 
@@ -52,20 +52,20 @@ Die **iwmperror (VB und c#)** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iwmperror (VB und c#)** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IWMPError-Schnittstelle (VB und C#)** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                                                         |
+| Eigenschaft                                                                        | Zugriffstyp           | Beschreibung                                                                                                                         |
 |:--------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| [**errorCount**](wmplibiwmperror-iwmperror-errorcount--vb-and-c.md)<br/> | Schreibgeschützt<br/>  | Ruft die Anzahl der Fehler in der Fehler Warteschlange ab.<br/>                                                                            |
-| [**Element**](iwmperror-item--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft eine **iwmperroritem** -Schnittstelle am angegebenen Index in der Fehler Warteschlange ab. In c# ist dies die **get \_ Item** -Methode.<br/> |
+| [**errorCount**](wmplibiwmperror-iwmperror-errorcount--vb-and-c.md)<br/> | Schreibgeschützt<br/>  | Ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.<br/>                                                                            |
+| [**Element**](iwmperror-item--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft eine **IWMPErrorItem-Schnittstelle** am angegebenen Index in der Fehlerwarteschlange ab. In C# ist dies die **get \_ Item-Methode.**<br/> |
 
 
 
  
 
-Verwenden Sie die folgende Eigenschaft, um eine **iwmperror** -Schnittstelle zu erhalten.
+Verwenden Sie die folgende Eigenschaft, um eine **IWMPError-Schnittstelle** zu erhalten.
 
 
 
@@ -83,7 +83,7 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmperror** -Schnittstelle zu 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmperror** -Schnittstelle zu 
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmperroritem-Schnittstelle (VB und c#)**](iwmperroritem--vb-and-c.md)
+[**IWMPErrorItem-Schnittstelle (VB und C#)**](iwmperroritem--vb-and-c.md)
 </dt> </dl>
 
  

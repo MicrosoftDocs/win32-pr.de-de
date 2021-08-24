@@ -1,11 +1,11 @@
 ---
-title: Idevicebroker opendevicefrominterfacepath-Methode
-description: Versucht, eine Geräteschnittstellen Instanz im Namen eines Clients zu öffnen. IID 8604b268-34a6-4b1a-a59b-cdbd8379bd98.
+title: IDeviceBroker OpenDeviceFromInterfacePath-Methode
+description: Versucht, eine Geräteschnittstelleninstanz im Namen eines Clients zu öffnen. IID 8604b268-34A6-4b1A-A59F-CDBD8379FD98.
 ms.assetid: 5ADDB994-3AAB-49B2-8B83-F71883AFD854
 keywords:
-- Opendevicefrominterfacepath-Methode Geräte Zugriffs Broker-API
-- Opendevicefrominterfacepath-Methode Geräte Zugriffs Broker-API, idevicebroker-Schnittstelle
-- Idevicebroker-Schnittstelle Geräte Zugriffs Broker-API, opendevicefrominterfacepath-Methode
+- OpenDeviceFromInterfacePath-Methode– Gerätezugriffsbroker-API
+- OpenDeviceFromInterfacePath-Methode Gerätezugriffsbroker-API, IDeviceBroker-Schnittstelle
+- IDeviceBroker-Schnittstelle Gerätezugriffsbroker-API, OpenDeviceFromInterfacePath-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,29 +16,29 @@ ms.topic: article
 ms.date: 02/11/2020
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5363600455ee1ba5c1c86cb12690afd242f68118
-ms.sourcegitcommit: 01a4383738056cf3de4f45f36d98ef73d4dc694d
+ms.openlocfilehash: 4d9bd4e03b489a899e182c86207e11ae9ec0fb66cc6c917584d83dcc0aa97918
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "104389818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635330"
 ---
-# <a name="idevicebrokeropendevicefrominterfacepath-method"></a>Idevicebroker:: opendevicefrominterfacepath-Methode
+# <a name="idevicebrokeropendevicefrominterfacepath-method"></a>IDeviceBroker::OpenDeviceFromInterfacePath-Methode
 
 > [!Important]  
-> Diese Schnittstellen werden nicht unterstützt und sollten nicht verwendet werden. Verwenden Sie stattdessen die APIs in der [C++-Programmier Referenz für die Geräte Zugriffs-API](device-access-api-c---programming-reference.md) .
+> Diese Schnittstellen werden nicht unterstützt und sollten nicht verwendet werden. Verwenden Sie stattdessen die APIs im [Gerätezugriffs-API C++-Programmierreferenz.](device-access-api-c---programming-reference.md)
 
-Versucht, eine Geräteschnittstellen Instanz im Namen eines Clients zu öffnen. IID = 8604b268-34a6-4b1a-a59b-cdbd8379bd98.
+Versucht, eine Geräteschnittstelleninstanz im Namen eines Clients zu öffnen. IID = 8604b268-34A6-4b1A-A59F-CDBD8379FD98.
 
 ## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT OpenDeviceFromInterfacePath(
-  [in]  PCWSTR pszDeviceInterfacePath,
-  [in]  DWORD  desiredAccess,
-  [in]  DWORD  shareMode,
-  [in]  DWORD  flagsAndAttributes,
-  [out] Handle *phDevice
+  [in]  PCWSTR pszDeviceInterfacePath,
+  [in]  DWORD  desiredAccess,
+  [in]  DWORD  shareMode,
+  [in]  DWORD  flagsAndAttributes,
+  [out] Handle *phDevice
 );
 ```
 
@@ -46,38 +46,38 @@ HRESULT OpenDeviceFromInterfacePath(
 
 <dl> <dt>
 
-*pszde viceinterfacepath* \[ in\]
+*pszDeviceInterfacePath* \[ In\]
 </dt> <dd>
 
-Zu öffnende Geräteschnittstellen Instanz.
+Zu öffnende Geräteschnittstelleninstanz.
 
 </dd> <dt>
 
-*desiredAccess* \[ in\]
+*desiredAccess* \[ In\]
 </dt> <dd>
 
-Gewünschter Zugriff zum Öffnen an
+Gewünschter Zugriff, der an das Öffnen übergeben werden soll.
 
 </dd> <dt>
 
-*share Mode* \[ in\]
+*shareMode* \[ In\]
 </dt> <dd>
 
-Der Freigabe Modus, der an "Öffnen" weitergegeben werden
+Freigabemodus, der an das Öffnen übergeben werden soll.
 
 </dd> <dt>
 
-*flagsandattribute* \[ in\]
+*flagsAndAttributes* \[ In\]
 </dt> <dd>
 
-Flags und Attribute, die an Open übermittelt werden sollen.
+Flags und Attribute, die an das Öffnen übergeben werden sollen.
 
 </dd> <dt>
 
-*\* phdevice* \[ out\]
+*\* phDevice* \[ out\]
 </dt> <dd>
 
-Resultierende Handle, wenn das Öffnen erfolgreich war.
+Resultierendes Handle, wenn das Öffnen erfolgreich war.
 
 </dd> </dl>
 

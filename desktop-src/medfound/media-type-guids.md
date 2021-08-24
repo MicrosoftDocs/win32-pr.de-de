@@ -4,12 +4,12 @@ ms.assetid: 1cca3539-a920-4938-93b9-ae41e1c0a287
 title: Hauptmedientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56553ac635f0e767e43e057b2a468027dcefb730
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: ec660dcb86cfd1da5a80bef106ee8ddd17cf1e89899fea6b824fba5ab9be04e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715300"
 ---
 # <a name="major-media-types"></a>Hauptmedientypen
 
@@ -35,16 +35,16 @@ Die folgenden Haupttypen sind definiert.
 | Haupttyp                    | Beschreibung                                                                                                                                                | Untertypen                                             |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | **MFMediaType \_ Audio**        | Audio.                                                                                                                                                     | [Audiountertyp-GUIDs](audio-subtype-guids.md).      |
-| **MFMediaType \_ Binary**       | Binärer Stream.                                                                                                                                             | Keine.                                                |
+| **MFMediaType \_ Binary**       | Binärer Datenstrom.                                                                                                                                             | Keine.                                                |
 | **MFMediaType \_ FileTransfer** | Ein Stream, der Datendateien enthält.                                                                                                                         | Keine.                                                |
 | **MFMediaType \_ HTML**         | HTML-Stream.                                                                                                                                               | Keine.                                                |
-| **MFMediaType-Image \_**        | Noch-Bilddatenstrom.                                                                                                                                        | [WIC-GUIDs und CLSIDs](../wic/-wic-guids-clsids.md).       |
-| **MFMediaType-Metadaten \_**        | Metadatenstream.                                                                                                                                        | Keine.       |
+| **\_MFMediaType-Bild**        | Noch-Bilddatenstrom.                                                                                                                                        | [WIC-GUIDs und CLSIDs](../wic/-wic-guids-clsids.md).       |
+| **\_MFMediaType-Metadaten**        | Metadatenstream.                                                                                                                                        | Keine.       |
 | **MFMediaType \_ Protected**    | Geschützte Medien.                                                                                                                                           | Der Untertyp gibt das Inhaltsschutzschema an. |
-| **MFMediaType \_ Perception**   | Datenströme von einem Kamerasensor oder einer Verarbeitungseinheit, die unformatiert Videodaten auslösen und verstehen und ein Verständnis der Umgebung oder der Menschen in ihr bieten. | Keine.                                                |
+| **MFMediaType \_ Perception**   | Streams von einem Kamerasensor oder einer Verarbeitungseinheit aus, die rohe Videodaten begründet und versteht und ein Verständnis der Umgebung oder der Darin enthaltenen Menschen bietet. | Keine.                                                |
 | **MFMediaType \_ SAMI**         | Synchronisierte SAMI-Untertitel (Accessible Media Interchange).                                                                                                 | Keine.                                                |
-| **MFMediaType-Skript \_**       | Skriptstream.                                                                                                                                             | Keine.                                                |
-| **MFMediaType-Stream \_**       | Multiplexstream oder elementarer Stream.                                                                                                                   | [GuiDs des Streamuntertyps](stream-subtype-guids.md)     |
+| **\_MFMediaType-Skript**       | Skriptstream.                                                                                                                                             | Keine.                                                |
+| **\_MFMediaType-Stream**       | Multiplexstream oder elementarer Stream.                                                                                                                   | [Stream-Untertyp-GUIDs](stream-subtype-guids.md)     |
 | **\_MFMediaType-Video**        | Video.                                                                                                                                                     | [Video-Untertyp-GUIDs](video-subtype-guids.md).      |
 
 

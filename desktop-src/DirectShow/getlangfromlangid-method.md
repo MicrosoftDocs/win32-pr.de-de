@@ -1,24 +1,24 @@
 ---
-description: Die getlangfromlangid-Methode ruft eine lesbare Zeichenfolge ab, wenn eine primäre Sprach-ID angegeben ist.
+description: Die GetLangFromLangID-Methode ruft eine für Menschen lesbare Zeichenfolge ab, wenn eine primäre Sprach-ID angegeben wird.
 ms.assetid: 73cff3df-bfcd-4e51-bd41-51545ed82f09
-title: Getlangfromlangid-Methode
+title: GetLangFromLangID-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23afddf746852028c26732eb658e786588f7e9ec
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6041f12c82f0e659928db9f5aa02fd916d3ff9907bf3114eb40c525b8b1d8d2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756750"
 ---
-# <a name="getlangfromlangid-method"></a>Getlangfromlangid-Methode
+# <a name="getlangfromlangid-method"></a>GetLangFromLangID-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die `GetLangFromLangID` -Methode ruft eine lesbare Zeichenfolge ab, wenn eine primäre Sprach-ID angegeben ist.
+Die `GetLangFromLangID` -Methode ruft eine für Menschen lesbare Zeichenfolge ab, wenn eine primäre Sprach-ID angegeben wird.
 
 ``` syntax
 [ sLanguage = ] MSWebDVD.GetLangFromLangID(iPrimaryLangID)
@@ -28,7 +28,7 @@ Die `GetLangFromLangID` -Methode ruft eine lesbare Zeichenfolge ab, wenn eine pr
 
 <dl> <dt>
 
-<span id="iPrimaryLangID"></span><span id="iprimarylangid"></span><span id="IPRIMARYLANGID"></span>*iprimarylangid*
+<span id="iPrimaryLangID"></span><span id="iprimarylangid"></span><span id="IPRIMARYLANGID"></span>*iPrimaryLangID*
 </dt> <dd>
 
 Gibt die primäre Sprach-ID als ganze Zahl an.
@@ -37,20 +37,20 @@ Gibt die primäre Sprach-ID als ganze Zahl an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine Zeichen folgen Darstellung der Sprache zurück, die in der Benutzeroberfläche der Anwendung angezeigt werden kann.
+Gibt eine Zeichenfolgendarstellung der Sprache zurück, die auf der Benutzeroberfläche der Anwendung angezeigt werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl diese Methode den Namen `GetLangFromLangID` hat, ist der Parameter, den Sie übergeben, tatsächlich die primäre Sprachen-ID, nicht die Sprachen-ID.
+Obwohl diese Methode den Namen `GetLangFromLangID` hat, ist der übergebene Parameter tatsächlich die primäre Sprach-ID, nicht die Sprach-ID.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Getaudiolanguage**](getaudiolanguage-method.md)
+[**GetAudioLanguage**](getaudiolanguage-method.md)
 </dt> <dt>
 
-[**Getdvdtextlanguagelcid**](getdvdtextlanguagelcid-method.md)
+[**GetDVDTextLanguageLCID**](getdvdtextlanguagelcid-method.md)
 </dt> </dl>
 
  

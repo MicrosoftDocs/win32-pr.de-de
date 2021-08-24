@@ -1,7 +1,7 @@
 ---
-description: Die propertyinst-Struktur definiert eine Instanz einer Eigenschaft in einem erkannten Datenelement. Netzwerkmonitor ordnet eine propertyinst-Struktur zu und füllt sie aus, wenn eine Eigenschaft an die Erfassung angefügt wird.
+description: Die PROPERTYINST-Struktur definiert eine Instanz einer Eigenschaft in einem Teil der erkannten Daten. Netzwerkmonitor ordnet eine PROPERTYINST-Struktur zu und füllt sie aus, wenn eine Eigenschaft an die Erfassung angefügt wird.
 ms.assetid: d8382a38-b634-4c65-b56b-44fee067a0fe
-title: Propertyinst-Struktur (Netmon. h)
+title: PROPERTYINST-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 5ee4ba108b8231646a2c0749dee6b5cc9f0f21c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d1c338fb8b4e63f03bff422e25578132476f70d932e8f17d5b0c39a0f6416e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778500"
 ---
-# <a name="propertyinst-structure"></a>Propertyinst-Struktur
+# <a name="propertyinst-structure"></a>PROPERTYINST-Struktur
 
-Die **propertyinst** -Struktur definiert eine Instanz einer Eigenschaft in einem erkannten Datenelement. Netzwerkmonitor ordnet eine **propertyinst** -Struktur zu und füllt sie aus, wenn eine Eigenschaft an die Erfassung angefügt wird.
+Die **PROPERTYINST-Struktur** definiert eine Instanz einer Eigenschaft in einem Teil der erkannten Daten. Netzwerkmonitor ordnet eine **PROPERTYINST-Struktur** zu und füllt sie aus, wenn eine Eigenschaft an die Erfassung angefügt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,102 +53,102 @@ typedef struct _PROPERTYINST {
 
 <dl> <dt>
 
-**lppropertyinfo**
+**lpPropertyInfo**
 </dt> <dd>
 
-Ein Zeiger auf die [PropertyInfo](propertyinfo.md) -Struktur, die die Eigenschaft definiert.
+Zeiger auf die [PROPERTYINFO-Struktur,](propertyinfo.md) die die Eigenschaft definiert.
 
 </dd> <dt>
 
-**szpropertytext**
+**szPropertyText**
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die im Detailbereich der Netzwerkmonitor-Benutzeroberfläche angezeigt wird.
+Zeiger auf eine Zeichenfolge, die im Detailbereich der Netzwerkmonitor Ui angezeigt wird.
 
 </dd> <dt>
 
-**lpdata**
+**lpData**
 </dt> <dd>
 
-Zeiger auf den Anfang der Daten für die Eigenschaft. Der Parser bestimmt, wo die Eigenschaften Daten gestartet werden.
+Zeiger auf den Anfang der Daten für die Eigenschaft. Der Parser bestimmt, wo die Eigenschaftsdaten beginnen.
 
 </dd> <dt>
 
-**LPBYTE**
+**lpByte**
 </dt> <dd>
 
-Zeiger auf die **Bytedaten** .
+Zeiger auf die **BYTE-Daten.**
 
 </dd> <dt>
 
-**lpword**
+**lpWord**
 </dt> <dd>
 
-Zeiger auf das **Word** -Daten.
+Zeiger auf die **WORD-Daten.**
 
 </dd> <dt>
 
-**LPDWORD**
+**lpDword**
 </dt> <dd>
 
-Zeiger auf die **DWORD** -Daten.
+Zeiger auf die **DWORD-Daten.**
 
 </dd> <dt>
 
-**lplargeint**
+**lpLargeInt**
 </dt> <dd>
 
-Zeiger auf die [**largeint**](largeint.md) -Daten.
+Zeiger auf die [**LARGEINT-Daten.**](largeint.md)
 
 </dd> <dt>
 
-**lpsystime**
+**lpSysTime**
 </dt> <dd>
 
-Zeiger auf die [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Daten.
+Zeiger auf die [**SYSTEMTIME-Daten.**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 
 </dd> <dt>
 
-**lppropertyinstex**
+**lpPropertyInstEx**
 </dt> <dd>
 
-Zeiger auf eine [propertyinstex](propertyinstex.md) -Struktur. Der **lppropertyinstex** -Member wird nur verwendet, wenn Sie [attachpropertyinstanceex](attachpropertyinstanceex.md)aufrufen.
+Zeiger auf eine [PROPERTYINSTEX-Struktur.](propertyinstex.md) Der **lpPropertyInstEx-Member** wird nur verwendet, wenn Sie [AttachPropertyInstanceEx](attachpropertyinstanceex.md)aufrufen.
 
-Wenn " **lppropertyinstex** " verwendet wird, müssen Sie das **DATALENGTH** -Element auf "0xFFFF" festlegen.
+Wenn **lpPropertyInstEx** verwendet wird, müssen Sie den **DataLength-Member** auf 0xFFFF festlegen.
 
 </dd> <dt>
 
-**DATALENGTH**
+**Datalength**
 </dt> <dd>
 
-Daten Länge für diese Instanz der-Eigenschaft. Wenn das **lppropertyinstex** -Element auf eine [**propertyinstex**](propertyinstex.md) -Struktur verweist, müssen Sie **DATALENGTH** auf 0xFFFF festlegen.
+Datenlänge für diese Instanz der -Eigenschaft. Wenn der **lpPropertyInstEx-Member** auf eine [**PROPERTYINSTEX-Struktur**](propertyinstex.md) zeigt, müssen Sie **DataLength** auf 0xFFFF festlegen.
 
 </dd> <dt>
 
 **Level**
 </dt> <dd>
 
-Informationen zur Ebene.
+Ebeneninformationen.
 
 </dd> <dt>
 
 **HelpID**
 </dt> <dd>
 
-Kontext Bezeichner der Hilfedatei.
+Hilfedateikontextbezeichner.
 
 </dd> <dt>
 
 **IFlags**
 </dt> <dd>
 
-Fehlerbedingungs-Flag.
+Fehlerbedingungsflag.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **propertyinst** -Struktur definiert eine Instanz einer angefügten-Eigenschaft. Der Parser greift über mehrere Hilfsfunktionen auf die **propertyinst** -Struktur zu. Wenn z. b. die [**formatpropertyinstance**](formatpropertyinstance.md) -Funktion aufgerufen wird, um die Daten einer Eigenschaft zu formatieren, ändert Sie den **szpropertytext** -Member der **propertyinst** -Struktur.
+Die **PROPERTYINST-Struktur** definiert eine Instanz einer angefügten Eigenschaft. Der Parser greift über mehrere Hilfsfunktionen auf die **PROPERTYINST-Struktur** zu. Wenn beispielsweise die [**FormatPropertyInstance-Funktion**](formatpropertyinstance.md) aufgerufen wird, um die Daten einer Eigenschaft zu formatieren, ändert sie den **szPropertyText-Member** der **PROPERTYINST-Struktur.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -158,7 +158,7 @@ Die **propertyinst** -Struktur definiert eine Instanz einer angefügten-Eigensch
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -166,10 +166,10 @@ Die **propertyinst** -Struktur definiert eine Instanz einer angefügten-Eigensch
 
 <dl> <dt>
 
-[Attachpropertyinstance](attachpropertyinstance.md)
+[AttachPropertyInstance](attachpropertyinstance.md)
 </dt> <dt>
 
-[Attachpropertyinstanceex](attachpropertyinstanceex.md)
+[AttachPropertyInstanceEx](attachpropertyinstanceex.md)
 </dt> </dl>
 
  

@@ -1,26 +1,26 @@
 ---
-title: VML-ruleinitiator-Attribut
-description: VML-ruleinitiator-Attribut
+title: VML RuleInitiator-Attribut
+description: VML RuleInitiator-Attribut
 ms.assetid: 2c9b1131-b088-4b70-b132-bdb4296433ae
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80201ad80fbb8dc5bbff2e8ed4e0b8db2863fdad
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b015ba3742eda42fd506d955bbc8d2b9d7285999581897952dede665c9eb3361
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654960"
 ---
-# <a name="vml-ruleinitiator-attribute"></a>VML-ruleinitiator-Attribut
+# <a name="vml-ruleinitiator-attribute"></a>VML RuleInitiator-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob eine Regel-Engine verwendet wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob eine Regel-Engine verwendet wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,11 +28,11 @@ Bestimmt, ob eine Regel-Engine verwendet wird. Lese-/Schreibzugriff. **Vgder Sta
 
 **Tagsyntax**
 
-<v: *Element* o:ruleinitiator = " *Ausdruck* " >
+<v: *Element* o:ruleinitiator=" *Ausdruck* ">
 
 **Anmerkungen**
 
-Der Standardwert ist **False**. Wenn der Wert **true** ist, wird eine Regel-Engine verwendet.
+Der Standardwert ist **False**. Wenn der Wert True **ist,** wird eine Regel-Engine verwendet.
 
 *Microsoft Office Extensions-Attribut*
 
@@ -49,6 +49,6 @@ Die Form wird von einer Regel-Engine verarbeitet.
 
 
 
- 
+ 
 
- 
+ 

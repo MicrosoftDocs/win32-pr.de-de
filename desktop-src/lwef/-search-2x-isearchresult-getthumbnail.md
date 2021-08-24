@@ -1,11 +1,11 @@
 ---
-title: Isearchresult getminiatur-Methode
-description: Reserviert. | Isearchresult getminiatur-Methode
+title: ISearchResult GetThumbnail-Methode
+description: Reserviert. | ISearchResult GetThumbnail-Methode
 ms.assetid: e9102d4f-140e-42f1-991a-38a6ef3e71a4
 keywords:
-- Getminiatur-Methode Legacy Windows-Umgebungs Features
-- Getminiatur-Methode Legacy Windows-Umgebungs Features, isearchresult-Schnittstelle
-- Isearchresult Interface, ältere Windows-Umgebungs Features, getminiatur-Methode
+- GetThumbnail-Methode – Legacy Windows Umgebungsfeatures
+- GetThumbnail-Methode Legacy Windows Environment Features , ISearchResult-Schnittstelle
+- ISearchResult-Schnittstelle Legacy Windows Environment Features , GetThumbnail-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dd6602e14b8534b56aa7ed8cee9a9cd2a494ea1d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 3ce4addacd63541f5dd3907a4cb5b5c84fcfe4e7f38cf98be599e9f2e8546ca3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716760"
 ---
-# <a name="isearchresultgetthumbnail-method"></a>Isearchresult:: getminiatur-Methode
+# <a name="isearchresultgetthumbnail-method"></a>ISearchResult::GetThumbnail-Methode
 
 Diese Methode ist nicht implementiert.
 

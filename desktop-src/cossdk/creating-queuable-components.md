@@ -1,42 +1,42 @@
 ---
-description: Eine Komponente mit mindestens einer Warteschlangen Schnittstelle ist eine in der Warteschlange befindliche Komponente.
+description: Eine Komponente mit mindestens einer Warteschlangenschnittstelle ist eine Warteschlangenkomponente.
 ms.assetid: 8183f640-4bf3-4555-8837-90a26130c618
-title: Erstellen von Warteschlangen fähigen Komponenten
+title: Erstellen von Queuable-Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03533168a24da1e1f7279a6f2108e25717054103
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9d8ca7b4717da44145121508ed3e8b208e8401a240f1a2ceb858be299bf2b32f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637840"
 ---
-# <a name="creating-queuable-components"></a>Erstellen von Warteschlangen fähigen Komponenten
+# <a name="creating-queuable-components"></a>Erstellen von Queuable-Komponenten
 
-Eine Komponente mit mindestens einer Warteschlangen Schnittstelle ist eine in der *Warteschlange befindliche Komponente*. Damit eine Komponente von einer Warteschlange aufgerufen werden kann, müssen die Schnittstellen als in die Warteschlange eingereiht werden, und die Komponente muss in einer Anwendung in der Warteschlange installiert sein. Eine in der Warteschlange befindliche Komponente kann jedoch eine Komponente einer Anwendung sein, die keine Warteschlange ist.
+Eine Komponente mit mindestens einer Warteschlangenschnittstelle ist eine *Warteschlangenkomponente.* Damit eine Komponente von einer Warteschlange aufgerufen werden kann, müssen die Schnittstellen als Warteschlangenfähig gekennzeichnet sein, und die Komponente muss in einer Anwendung in der Warteschlange installiert werden. Eine Warteschlangenkomponente kann jedoch eine Komponente einer Nicht-Warteschlangenanwendung sein.
 
-Eine queuable-Schnittstelle darf nur in-Parameter enthalten – keine out-Parameter und keine Rückgabewerte. Diese Eigenschaften werden durch die Analyse der Typinformationen während der Installation von Komponenten überprüft. Wenn die Schnittstelle nicht in die Warteschlange eingereiht werden kann, kann die Warteschlange der Anwendung mit der Komponente nicht aktiviert werden.
+Eine Warteschlangenschnittstelle darf nur in Parametern enthalten– keine out-Parameter und keine Rückgabewerte. Diese Merkmale werden überprüft, indem die Typinformationen während der Komponenteninstallation analysiert werden. Wenn die Schnittstelle nicht in die Warteschlange gestellt werden kann, kann die Warteschlange der Anwendung, die die Komponente enthält, nicht aktiviert werden.
 
-Um eine COM+-Schnittstelle als Warteschlange anzugeben, führen Sie die folgenden Schritte aus:
+Um eine COM+-Schnittstelle als queuable anzugeben, führen Sie die folgenden Schritte aus:
 
-1.  Öffnen Sie in der Konsolen Struktur des Verwaltungs Programms Komponenten Dienste unter **Komponenten Dienste** den Ordner **com+-Anwendungen** , der dem Computer zugeordnet ist, den Sie verwalten möchten.
+1.  Öffnen Sie in der Konsolenstruktur des Verwaltungstool Komponentendienste unter Komponentendienste den **Ordner COM+-Anwendungen,** der dem Computer zugeordnet ist, den Sie verwalten möchten.
 
-2.  Öffnen Sie den Ordner **Interfaces** der Komponente der com+-Anwendung, die Sie in die Warteschlange stellen möchten.
+2.  Öffnen Sie **den Ordner Schnittstellen** der Komponente der COM+-Anwendung, die Sie in die Warteschlange stellen möchten.
 
-3.  Klicken Sie mit der rechten Maustaste auf die Schnittstelle, die Sie als Warteschlange markieren möchten, und klicken Sie dann auf **Eigenschaften**.
+3.  Klicken Sie mit der rechten Maustaste auf die Schnittstelle, die Sie als Warteschlangenfähig markieren möchten, und klicken Sie dann auf **Eigenschaften.**
 
-4.  Wählen Sie **im Dialog** Feldeigenschaften die Registerkarte Queue aus.
+4.  Wählen Sie **im Eigenschaftendialogfeld** die Registerkarte Queuing aus.
 
-5.  Aktivieren Sie das Kontrollkästchen mit der Bezeichnung **Warteschlange**.
+5.  Aktivieren Sie das Kontrollkästchen mit der Bezeichnung **Queued**.
 
     > [!Note]  
-    > Wenn das Kontrollkästchen in der **Warteschlange abgeblendet** ist, erfüllt die Schnittstelle nicht die oben beschriebenen Warteschlangen Einschränkungen.
+    > Wenn das **Kontrollkästchen Queued** (Warteschlange) ausgegraut ist, erfüllt die Schnittstelle die oben beschriebenen Queuable-Einschränkungen nicht.
 
      
 
 6.  Klicken Sie auf **OK**.
 
-    Eine in die Warteschlange einsetzbare Komponente kann als solche identifiziert werden, indem dem Schnittstellen Abschnitt der IDL-Quelldatei (Interface Definition Language) für alle Schnittstellen, die in die Warteschlange eingereiht werden können, das queuable-Attribut Makro
+    Eine Warteschlangenkomponente kann als solche identifiziert werden, indem das QUEUEABLE-Attributmakro zum Abschnitt Interface der IDL-Quelldatei (Interface Definition Language) für alle Schnittstellen hinzugefügt wird, die in die Warteschlange gestellt werden können.
 
     ``` syntax
 #include "mtxattr.h"
@@ -53,7 +53,7 @@ Um eine COM+-Schnittstelle als Warteschlange anzugeben, führen Sie die folgende
 
 <dl> <dt>
 
-[Komponenten Warteschlangen erstellen](creating-component-queues.md)
+[Erstellen von Komponentenwarteschlangen](creating-component-queues.md)
 </dt> <dt>
 
 [Entwickeln von Komponenten in der Warteschlange](developing-queued-components.md)

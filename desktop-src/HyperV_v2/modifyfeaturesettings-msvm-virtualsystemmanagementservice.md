@@ -1,7 +1,7 @@
 ---
-description: Ändert die aktuellen Featureeinstellungen einer Ethernet-Verbindung einer virtuellen Maschine.
+description: Ändert die aktuellen Featureeinstellungen einer Ethernet-Verbindung eines virtuellen Computers.
 ms.assetid: 3caa810f-0444-45cf-88a4-e93d04accb46
-title: Modifyfeaturesettings-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ModifyFeatureSettings-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c376158008c5ad0e611d3a05c7e73d2e7d1b44cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be963ee0bc57ddc0a9570c3ac9b35b1d8dadaeca48d295b45f0134b6c05f632a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694070"
 ---
-# <a name="modifyfeaturesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Modifyfeaturesettings-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="modifyfeaturesettings-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ModifyFeatureSettings-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Ändert die aktuellen Featureeinstellungen einer Ethernet-Verbindung einer virtuellen Maschine.
+Ändert die aktuellen Featureeinstellungen einer Ethernet-Verbindung eines virtuellen Computers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ModifyFeatureSettings(
 
 <dl> <dt>
 
-*Featuresettings* \[ in\]
+*FeatureSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz einer Klasse enthalten, die von der [**MSVM-Klasse \_ ethernetswitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md) abgeleitet wurde, die Änderungen an den aktuellen Featureeinstellungen einer vorhandenen Ethernet-Verbindung beschreibt. Die **InstanceId-** Eigenschaft der einzelnen Instanzen identifiziert die Funktionseinstellungen, die geändert werden sollen.
+Ein Array von Zeichenfolgen, das eine eingebettete Instanz einer Klasse enthält, die von der [**Msvm \_ EthernetSwitchFeatureSettingData-Klasse**](msvm-ethernetswitchfeaturesettingdata.md) abgeleitet wurde und Änderungen an den aktuellen Featureeinstellungen einer vorhandenen Ethernet-Verbindung beschreibt. Die **InstanceID-Eigenschaft** jeder dieser Instanzen identifiziert die zu ändernden Featureeinstellungen.
 
 </dd> <dt>
 
-*Resultingfeaturesettings* \[ vorgenommen\]
+*ResultingFeatureSettings* \[ out\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen der [**MSVM-Klasse " \_ ethernetzwitchportfeaturesettingdata**](msvm-ethernetswitchportfeaturesettingdata.md) ", die die geänderten Funktionseinstellungen darstellen.
+Ein Array von Verweisen auf Instanzen der [**Msvm \_ EthernetSwitchPortFeatureSettingData-Klasse,**](msvm-ethernetswitchportfeaturesettingdata.md) die die geänderten Featureeinstellungen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -83,22 +83,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,10 +107,10 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -119,7 +119,7 @@ Nicht **kompatible Parameter** (6)
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

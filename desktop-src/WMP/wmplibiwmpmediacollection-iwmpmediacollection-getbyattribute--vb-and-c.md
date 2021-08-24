@@ -1,11 +1,11 @@
 ---
-title: "' Iwmpmediacollection ' getbyattribute-Methode"
-description: Die getbyattribute-Methode gibt eine iwmpwiedergabe-Schnittstelle zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.
+title: IWMPMediaCollection getByAttribute-Methode
+description: Die getByAttribute-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.
 ms.assetid: ece70a2c-38bc-4652-8319-efcde5f9720a
 keywords:
-- getbyattribute-Methode, Windows-Media Player
-- getbyattribute-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle, Windows Media Player, getbyattribute-Methode
+- getByAttribute-Windows Media Player
+- getByAttribute-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , getByAttribute-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd7adba98fbfa450cd938b56ec6d91598b918d0d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7fb8dab44cd1f26c080d438c15f545c882d2e4427af7fa04049b539ce8b3cf13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119735020"
 ---
-# <a name="iwmpmediacollectiongetbyattribute-method"></a>Iwmpmediacollection:: getbyattribute-Methode
+# <a name="iwmpmediacollectiongetbyattribute-method"></a>IWMPMediaCollection::getByAttribute-Methode
 
-Die **getbyattribute** -Methode gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.
+Die **getByAttribute-Methode** gibt eine **IWMPPlaylist-Schnittstelle** zurück, die dem angegebenen Attribut mit dem angegebenen Wert entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,54 +55,54 @@ Implements IWMPMediaCollection.getByAttribute
 
 <dl> <dt>
 
-*bstrattribute* \[ in\]
+*bstrAttribute* \[ In\]
 </dt> <dd>
 
-Die **System. String** -Eigenschaft, die das angegebene Attribut ist.
+Die **System.String,** die das angegebene Attribut ist.
 
 </dd> <dt>
 
-*bstrauvalue* \[ in\]
+*bstrValue* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den angegebenen Wert ist.
+Die **System.String,** die der angegebene Wert ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufenen Medienelemente.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufenen Medienelemente.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann verwendet werden, um eine generische Abfrage für Medienelemente zu erstellen, die einem Wert für ein Attribut in der Bibliothek entsprechen. Dies ist nützlich für benutzerdefinierte Attribute. Wenn das Attribut nicht vorhanden ist, führt dies zu einem Fehler.
+Diese Methode kann verwendet werden, um eine generische Abfrage für Medienelemente zu erstellen, die mit einem Wert für ein Attribut in der Bibliothek übereinstimmen. Dies ist bei benutzerdefinierten Attributen nützlich. Wenn das Attribut nicht vorhanden ist, tritt ein Fehler auf.
 
-Mit dieser Methode können Sie alle Medienelemente eines bestimmten Typs abrufen. Verwenden Sie den Attributnamen " **mediaType** " und einen der folgenden Werte.
+Sie können diese Methode verwenden, um alle Medienelemente eines bestimmten Typs abzurufen. Verwenden Sie den Attributnamen **MediaType** und einen der folgenden Werte.
 
 
 
-| Wert    | BESCHREIBUNG                                               |
+| Wert    | Beschreibung                                               |
 |----------|-----------------------------------------------------------|
-| Audio    | Musik und andere reine Audioelemente                          |
-| andere    | Andere Elemente, wie z. b. eine. ASF-Datei oder die URL eines Streams. |
-| Foto    | Foto Elemente. Erfordert Windows Media Player 10.            |
-| Abspielen | Wiedergabelisten, die als Medienelemente dargestellt werden.                     |
-| radio    | Radio Station-Elemente. Wird nicht von Windows Media Player 10 verwendet. |
-| video    | Video Elemente.                                              |
+| Audio    | Musik und andere Nur-Audio-Elemente                          |
+| Sonstige    | Andere Elemente, z. B. eine ASF-Datei oder die URL eines Streams. |
+| Foto    | Fotoelemente. Erfordert Windows Media Player 10.            |
+| Playlist | Wiedergabelisten, die als Medienelemente dargestellt werden.                     |
+| radio    | Radiostationselemente. Wird nicht von Windows Media Player 10 verwendet. |
+| video    | Videoelemente.                                              |
 
 
 
  
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).
+Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)
 
-Es gibt zwei Möglichkeiten, wie Sie eine **iwmpmediacollection** -Schnittstelle abrufen können, und das Verhalten der **getbyattribute** -Methode hängt davon ab, welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle abrufen, indem Sie [AxWindowsMediaPlayer. mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)aufrufen, gibt die **getbyattribute** -Methode alle Medienelemente in der Bibliothek zurück. Wenn Sie jedoch die Schnittstelle abrufen, indem Sie [iwmplibrary. mediacollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)aufrufen, gibt die **getbyattribute** -Methode nur die Audioelemente in der Bibliothek zurück, die über das angegebene Attribut und den angegebenen Wert verfügen.
+Es gibt zwei Möglichkeiten, wie Sie eine **IWMPMediaCollection-Schnittstelle** abrufen können, und das Verhalten der **getByAttribute-Methode** hängt davon ab, welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle durch Aufrufen von [AxWindowsMediaPlayer.mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abrufen, gibt die **getByAttribute-Methode** alle Medienelemente in der Bibliothek zurück. Wenn Sie die Schnittstelle jedoch durch Aufrufen von [IWMPLibrary.mediaCollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abrufen, gibt die **getByAttribute-Methode** nur die Audioelemente in der Bibliothek zurück, die über das angegebene Attribut und den angegebenen Wert verfügen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **getbyattribute** verwendet, um den gesamten Inhalt der Bibliothek von der Künstlerin mit dem Namen "testode 48" wiederzugeben. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **getByAttribute** verwendet, um alle Inhalte aus der Bibliothek des Interpreten namens Attributde 48 wieder zu spielen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -145,17 +145,17 @@ player.Ctlcontrols.play()
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection. GetAll (VB und c#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md)
+[**IWMPPlaylistCollection.getAll (VB und C#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-getall--vb-and-c.md)
 </dt> </dl>
 
  

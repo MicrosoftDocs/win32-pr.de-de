@@ -3,50 +3,50 @@ title: Sekundäre Ereignisse
 description: Sekundäre Ereignisse
 ms.assetid: cc9eb382-82ca-4416-a04e-1572e4c69c90
 keywords:
-- Windows Media Player Skins, sekundäre Ereignisse
+- Windows Media Player Skins,sekundäre Ereignisse
 - Skins, sekundäre Ereignisse
-- Ereignisse, Sekundär
+- Ereignisse,sekundär
 - Schreiben von Code für Skins, sekundäre Ereignisse
-- sekundäre Ereignisse
+- Sekundäre Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e04785a7468353665083287ac1b74bce5cbf0f8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 35fd121330a99c73ed7a52def712bb53949113745a8af0f4c01ded8f9aeaea4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119735780"
 ---
 # <a name="secondary-events"></a>Sekundäre Ereignisse
 
-Sie können bestimmen, welche anderen Ereignisse stattfinden, wenn ein bestimmtes Ereignis ausgelöst wird. Wenn z. b. auf eine Maustaste geklickt wird, möchten Sie möglicherweise wissen, ob die Alt-Taste gleichzeitig gedrückt war.
+Sie können bestimmen, welche anderen Ereignisse stattfinden, wenn ein bestimmtes Ereignis ausgelöst wird. Wenn Sie z. B. auf eine Maustaste klicken, möchten Sie möglicherweise wissen, ob die ALT-TASTE gleichzeitig gedrückt war.
 
 ## <a name="event-attributes"></a>Ereignisattribute
 
-Die folgenden Ereignis Attribute werden für Skins unterstützt:
+Die folgenden Ereignisattribute werden für Skins unterstützt:
 
 -   **altKey**
--   **gedrückt**
+-   **Schaltfläche**
 -   **clientX**
 -   **clientY**
--   **ctrlKey**
--   **fromelements**
--   **OffsetX**
--   **offität**
+-   **STRGKEY**
+-   **fromElement**
+-   **Offsetx**
+-   **Offsety**
 -   **screenX**
 -   **Screeny**
 -   **shiftKey**
--   **srcelements**
--   **"Element"**
+-   **srcElement**
+-   **toElement**
 -   **x**
 -   **y**
--   **Keycode**
+-   **Schlüsselcode**
 
-Weitere Informationen zu diesen Attributen finden Sie in der [Skin-Programmier Referenz](skin-programming-reference.md).
+Weitere Informationen zu diesen Attributen finden Sie in der [Referenz zur Skinprogrammierung.](skin-programming-reference.md)
 
 ## <a name="using-secondary-events"></a>Verwenden sekundärer Ereignisse
 
-Ereignis Attribute können nur in JScript-Code verarbeitet werden. Sie müssen die folgende Syntax verwenden:
+Ereignisattribute können nur im Code JScript werden. Sie müssen die folgende Syntax verwenden:
 
 
 ```C++
@@ -55,7 +55,7 @@ event.eventattributename
 
 
 
-*eventattributename* ist der Name des Ereignis Attributs. Wenn Sie z. b. ermitteln möchten, ob die Alt-Taste während eines Click-Ereignisses gedrückt wurde, können Sie die folgenden Zeilen in Ihrem JScript-Code verwenden:
+*eventattributename* ist der Name des Ereignisattributs. Um beispielsweise zu bestimmen, ob die ALT-TASTE während eines Klick-Ereignisses gedrückt wurde, können Sie die folgenden Zeilen in Ihrem JScript verwenden:
 
 
 ```C++
@@ -75,9 +75,9 @@ if (wasAlt = true)
 [**Behandeln von Ereignissen**](handling-events.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

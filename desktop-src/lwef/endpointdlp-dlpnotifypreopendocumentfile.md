@@ -1,5 +1,5 @@
 ---
-description: Stellt dem System Informationen zu einer Dokumentdatei zur Verfügung, bevor ein Geöffnet-Vorgang initiiert wird.
+description: Stellt dem System Informationen zu einer Dokumentdatei bereit, bevor ein Öffnungsvorgang initiiert wird.
 title: DlpNotifyPreOpenDocumentFile-Funktion (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 api_location:
 - EndpointDlp.dll
-ms.openlocfilehash: 12caf5230d8affce195a63da155ed6b6ca409b72
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: f2be797d0f4045f17e753031247797406f332afa2fcc47b3ca83973527d99216
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778230"
 ---
 # <a name="dlpnotifypreopendocumentfile-function"></a>DlpNotifyPreOpenDocumentFile-Funktion
 
-Stellt dem System Informationen zu einer Dokumentdatei zur Verfügung, bevor ein Geöffnet-Vorgang initiiert wird.
+Stellt dem System Informationen zu einer Dokumentdatei bereit, bevor ein Öffnungsvorgang initiiert wird.
 
 ## <a name="syntax"></a>Syntax
 

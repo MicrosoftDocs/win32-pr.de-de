@@ -1,7 +1,7 @@
 ---
-description: Sperrt einen Bereich von Vertex-oder Texel-Beispiel Daten und erhält einen Zeiger auf die Position im Pufferspeicher.
+description: Sperrt einen Bereich von Scheitelpunkt- oder Texel-Beispieldaten und ruft einen Zeiger auf die Position im Pufferspeicher ab.
 ms.assetid: 8de2725f-507e-41ee-828d-2fb19cc2252c
-title: 'ID3DXPRTBuffer:: LockBuffer-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTBuffer::LockBuffer-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a2da8cb5a6a2e036fb7b495a129a5ef29d9ff749
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5d8e3b6310951a5784af99b913298c20d5556baa10b012926f3b68e44d402dbb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606890"
 ---
-# <a name="id3dxprtbufferlockbuffer-method"></a>ID3DXPRTBuffer:: LockBuffer-Methode
+# <a name="id3dxprtbufferlockbuffer-method"></a>ID3DXPRTBuffer::LockBuffer-Methode
 
-Sperrt einen Bereich von Vertex-oder Texel-Beispiel Daten und erhält einen Zeiger auf die Position im Pufferspeicher.
+Sperrt einen Bereich von Scheitelpunkt- oder Texel-Beispieldaten und ruft einen Zeiger auf die Position im Pufferspeicher ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT LockBuffer(
 
 <dl> <dt>
 
-*Starten* \[ Sie in\]
+*Starten Sie* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Index der Stichprobenentnahme von Vertex-oder textex.
+Index der Stichprobe von Scheitelpunkt- oder Texeldaten.
 
 </dd> <dt>
 
-*NumSamples* \[ in\]
+*NumSamples* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der abtasteten Scheitel Punkte (oder Texels).
+Anzahl der Scheitelpunkte (oder Texel), die als Stichprobe entnommen wurden.
 
 </dd> <dt>
 
-*ppData* \[ vorgenommen\]
+*ppData* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\*\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\*\***
 
-Zeiger auf den Speicherort im Arbeitsspeicher, an dem das Start Beispiel beginnt. Das Speicher Layout der Puffer Daten lautet:
+Zeiger auf die Position im Arbeitsspeicher, an der das Startbeispiel beginnt. Das Speicherlayout der Pufferdaten lautet:
 
 
 ```
@@ -80,7 +80,7 @@ float fData[NumberSamples][NumberChannels][NumberCoefficients]
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben:
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben:
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -90,8 +90,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -102,13 +102,13 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 [ID3DXPRTBuffer](id3dxprtbuffer.md)
 </dt> <dt>
 
-[**ID3DXPRTBuffer:: getnumchannels**](id3dxprtbuffer--getnumchannels.md)
+[**ID3DXPRTBuffer::GetNumChannels**](id3dxprtbuffer--getnumchannels.md)
 </dt> <dt>
 
-[**ID3DXPRTBuffer:: getnumcoeffs**](id3dxprtbuffer--getnumcoeffs.md)
+[**ID3DXPRTBuffer::GetNumCoeffs**](id3dxprtbuffer--getnumcoeffs.md)
 </dt> <dt>
 
-[**ID3DXPRTBuffer:: getnumsamples**](id3dxprtbuffer--getnumsamples.md)
+[**ID3DXPRTBuffer::GetNumSamples**](id3dxprtbuffer--getnumsamples.md)
 </dt> </dl>
 
  

@@ -1,34 +1,34 @@
 ---
-title: Vorab Zuordnung des Speicherplatzes für die Erfassungs Datei
-description: Vorab Zuordnung des Speicherplatzes für die Erfassungs Datei
+title: Vorabzuordnung des Speicherplatzes für die Erfassungsdatei
+description: Vorabzuordnung des Speicherplatzes für die Erfassungsdatei
 ms.assetid: 7a11b769-65b9-4eaa-bc42-5d1d744bf181
 keywords:
-- WM_CAP_FILE_ALLOCATE Meldung
-- capfilezuweisung-Makro
+- WM_CAP_FILE_ALLOCATE-Nachricht
+- capFileAlloc-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7442b08170fb6f018555c043c59d96860701ed4f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 687a14fa0f3a01a65ad2cb90062fcd4e237eb3e94ef99460d77883bd26df9213
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678761"
 ---
-# <a name="disk-space-preallocation-for-the-capture-file"></a>Vorab Zuordnung des Speicherplatzes für die Erfassungs Datei
+# <a name="disk-space-preallocation-for-the-capture-file"></a>Vorabzuordnung des Speicherplatzes für die Erfassungsdatei
 
-Durch die vorab Zuordnung von Speicherplatz für die Erfassungs Datei wird eine Datei mit einer angegebenen Größe auf dem Datenträger erstellt, bevor ein Aufzeichnungs Vorgang gestartet wird. Durch das vorab zuordnen einer Erfassungs Datei wird die während der Erfassung erforderliche Verarbeitung reduziert, und es werden weniger gelöschte Frames erzielt. Sie können eine Aufzeichnungsdatei vorab zuordnen, indem Sie [**die \_ \_ Datei \_**](wm-cap-file-allocate.md) Zuordnungs Nachricht der WM-Abdeckung (oder das [**capfilealloc**](/windows/desktop/api/Vfw/nf-vfw-capfilealloc) -Makro) verwenden.
+Durch vorab zugewiesenen Speicherplatz für die Erfassungsdatei wird eine Datei mit einer angegebenen Größe auf dem Datenträger erstellt, bevor ein Erfassungsvorgang gestartet wird. Durch das Vorabbestellen einer Erfassungsdatei wird die Verarbeitung reduziert, die während der Erfassung erforderlich ist, und es werden weniger Frames gelöscht. Sie können eine Erfassungsdatei vorab zuordnen, indem Sie die [**WM \_ CAP FILE \_ \_ ALLOCATE-Nachricht**](wm-cap-file-allocate.md) (oder das [**Makro capFileAlloc)**](/windows/desktop/api/Vfw/nf-vfw-capfilealloc) verwenden.
 
-In der Regel sollte Ihre Anwendung ausreichend Speicherplatz zuordnen, um die größte erwartete Erfassungs Datei zu enthalten. Durch die vorab Zuordnung von Speicherplatz wird die Größe der erfassten Datei nicht eingeschränkt. Die Dateigröße wird automatisch vergrößert, wenn die erfassten Daten den zugewiesenen Speicherplatz überschreiten. Bei nachfolgenden Schreibvorgängen in der Erfassungs Datei werden die für die Datei zugeordneten Teile des Speicherplatzes wieder verwendet, und die Größe und Fragmentierung der Datei werden beibehalten.
+In der Regel sollte Ihre Anwendung genügend Speicherplatz vorab zur Verfügung stellen, um die größte erwartete Erfassungsdatei zu enthalten. Durch das Vorabbelegung von Speicherplatz wird die Größe der erfassten Datei nicht beschränkt. Die Dateigröße wird automatisch vergrößert, wenn die erfassten Daten den zugeordneten Speicherplatz überschreiten. Nachfolgende Schreibvorgänge in die Erfassungsdatei wiederverwenden die Teile des Speicherplatzes, die der Datei zugeordnet sind, und bewahren die Größe und Fragmentierung der Datei auf.
 
-Sie können die Erfassungs Leistung auch verbessern, indem Sie die Erfassungs Datei defragmentieren. Verwenden Sie zum Defragmentieren der Datei ein Defragmentierungsdienstprogramm, z. b. Datenträger Defragmentierung. Wenn Sie eine defragmentierte Erfassungs Datei verwenden und Sie später vergrößern, sollten Sie die erweiterte Datei defragmentieren. Durch das Vergrößern einer defragmentierten Erfassungs Datei kann der erweiterte Teil der Datei fragmentiert und die Leistung beim Aufzeichnungs Vorgang reduziert werden.
+Sie können die Erfassungsleistung auch verbessern, indem Sie die Erfassungsdatei defragmentieren. Verwenden Sie zum Defragmentieren der Datei ein Defragmentierungs-Hilfsprogramm, z. B. Datenträgerdefragmentierung. Wenn Sie eine defragmentierte Erfassungsdatei verwenden und später vergrößern, sollten Sie die vergrößerte Datei defragmentieren. Das Erweitern einer defragmentierten Erfassungsdatei kann den erweiterten Teil der Datei fragmentieren und die Leistung beim Erfassungsvorgang verringern.
 
-Sie können die Leistung auch verbessern, indem Sie einen unkomprimierten Datenträger für die Video Erfassung verwenden. Durch das Komprimieren von Daten während der Erfassung kann der Aufzeichnungs Durchsatz auf den Datenträger beschränkt werden.
+Sie können auch die Leistung verbessern, indem Sie einen unkomprimierten Datenträger für die Videoaufnahme verwenden. Das Komprimieren von Daten während der Erfassung kann den Erfassungsdurchsatz auf dem Datenträger einschränken.
 
-Eine Anwendung kann eine permanente Erfassungs Datei reservieren, um die erforderliche Zeit für das vorab zuordnen und Defragmentieren einer Datei zu vermeiden, wenn Sie gestartet wird. Da eine Aufzeichnungsdatei beträchtlichen Speicherplatz erfordern kann und die vorab Zuordnung einer Erfassungs Datei alle Daten aus einer vorhandenen Erfassungs Datei entfernt, sollte eine Anwendung den Benutzer entscheiden können, ob die Datei permanent oder temporär ist.
+Eine Anwendung kann eine permanente Erfassungsdatei reservieren, um die Zeit zu vermeiden, die benötigt wird, um eine Datei bei jedem Start vorab zu defragmentieren und zu defragmentieren. Da eine Erfassungsdatei erheblichen Speicherplatz erfordern kann und durch vorab zugewiesene Erfassungsdatei alle Daten aus einer vorhandenen Erfassungsdatei entfernt werden, sollte eine Anwendung den Benutzer entscheiden lassen, ob die Datei dauerhaft oder temporär ist.
 
- 
+ 
 
- 
+ 
 
 
 

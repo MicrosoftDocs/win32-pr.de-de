@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection-Methode entfernen
-description: Die Remove-Methode entfernt ein angegebenes Element aus der Medien Auflistung.
+title: IWMPMediaCollection-Remove-Methode
+description: Die remove-Methode entfernt ein angegebenes Element aus der Medienauflistung.
 ms.assetid: 2ed45159-0a92-4353-8bf1-1d20de404bf7
 keywords:
-- Methode "Windows Media Player entfernen"
-- Remove-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle, Windows Media Player, Methode entfernen
+- remove-Methode Windows Media Player
+- remove-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , remove-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d341f8974255dab5e3cdce356a9b221eddff193c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 771ae8be7a8a4586c132cb29b3af4d5d9180398d7db7d05e66c6e84b5a013b48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119735000"
 ---
-# <a name="iwmpmediacollectionremove-method"></a>Iwmpmediacollection:: Remove-Methode
+# <a name="iwmpmediacollectionremove-method"></a>IWMPMediaCollection::remove-Methode
 
-Die- `remove` Methode entfernt ein angegebenes Element aus der Medien Auflistung.
+Die `remove` -Methode entfernt ein angegebenes Element aus der Medienauflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Implements IWMPMediaCollection.remove
 
 <dl> <dt>
 
-*pitem* \[ in\]
+*pItem* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle, die das zu entfernende Element identifiziert.
+Eine **WMPLib.IWMPMedia-Schnittstelle,** die das zu entfernende Element identifiziert.
 
 </dd> <dt>
 
-*varbdeletefile* \[ in\]
+*varfDeleteFile* \[ In\]
 </dt> <dd>
 
-Ein **System. Boolean** -Wert, der angibt, ob die-Methode das angegebene Element aus der Bibliothek entfernen soll.
+Ein **System.Boolean-Wert,** der angibt, ob die Methode das angegebene Element aus der Bibliothek entfernen soll.
 
 </dd> </dl>
 
@@ -73,15 +73,15 @@ Ein **System. Boolean** -Wert, der angibt, ob die-Methode das angegebene Element
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode löscht ein Element aus der Bibliothek. Mit dieser Methode werden keine Dateien auf dem Computer des Benutzers gelöscht.
+Diese Methode löscht ein Element aus der Bibliothek. Diese Methode löscht keine Dateien vom Computer des Benutzers.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird nach dem auffordern des Benutzers das erste Medien Element in der Medien Auflistung dauerhaft mithilfe von gelöscht `remove` . Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird nach aufforderung des Benutzers das erste Medienelement in der Medienauflistung mithilfe von dauerhaft `remove` gelöscht. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -149,7 +149,7 @@ End If
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -159,13 +159,13 @@ End If
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection. Add (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)
+[**IWMPMediaCollection.add (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)
 </dt> </dl>
 
  

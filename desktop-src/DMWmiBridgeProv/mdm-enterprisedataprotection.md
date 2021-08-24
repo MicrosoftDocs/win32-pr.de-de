@@ -1,6 +1,6 @@
 ---
 title: MDM_EnterpriseDataProtection-Klasse
-description: Die MDM \_ enterprisedataprotection-Klasse wird verwendet, um den aktuellen Status von Windows Information Protection (WIP)-spezifischen Einstellungen zu bestimmen.
+description: Die MDM \_ EnterpriseDataProtection-Klasse wird verwendet, um den aktuellen Status von spezifischen Einstellungen für Windows Information Protection (WIP) (früher als Enterprise Data Protection bezeichnet) zu bestimmen.
 ms.assetid: 2b97de12-76d1-4b74-a979-f0484807b840
 keywords:
 - MDM_EnterpriseDataProtection-Klasse
@@ -17,20 +17,20 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00b4a3a1d9d491b6970ee95a081de8bb240d54d2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0c9ab641873f95f3b7d7b60772dd10ed0a38c12f57497304478a4c469ee1c645
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694880"
 ---
-# <a name="mdm_enterprisedataprotection-class"></a>MDM \_ enterprisdataprotection-Klasse
+# <a name="mdm_enterprisedataprotection-class"></a>MDM \_ EnterpriseDataProtection-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ enterprisedataprotection** -Klasse wird verwendet, um den aktuellen Status von Windows Information Protection (WIP)-spezifischen Einstellungen zu bestimmen.
+Die **MDM \_ EnterpriseDataProtection-Klasse** wird verwendet, um den aktuellen Status von spezifischen Einstellungen für Windows Information Protection (WIP) (früher als Enterprise Data Protection bezeichnet) zu bestimmen.
 
-Weitere Informationen zu WIP finden Sie unter [Schützen von Unternehmensdaten mithilfe von Enterprise Data Protection (EDP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Weitere Informationen zu WIP finden Sie unter [Schützen Ihrer Unternehmensdaten mit enterprise data protection (EDP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,45 +48,45 @@ class MDM_EnterpriseDataProtection
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ enterpritardataprotection** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseDataProtection-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ enterprigendataprotection** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ EnterpriseDataProtection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "enterprisdataprotection".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "EnterpriseDataProtection".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> <dt>
 
@@ -107,11 +107,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

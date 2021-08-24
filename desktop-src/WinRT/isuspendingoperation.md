@@ -1,7 +1,7 @@
 ---
-description: Enthält Informationen über eine APP, die den Vorgang angehalten.
+description: Stellt Informationen zu einem Vorgang zum Anhalten einer App bereit.
 ms.assetid: B380AEA2-6486-46CC-AD0A-CF25C144DC01
-title: Isuspendingoperation-Schnittstelle (Windows. applicationmodel. h)
+title: ISuspendingOperation-Schnittstelle (Windows. ApplicationModel.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,33 +13,33 @@ api_type:
 - COM
 api_location:
 - Windows.ApplicationModel.h
-ms.openlocfilehash: 09a3c37216298fa672cdd676e835454b4e0f4bd2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f17cd3d3b1eab67d0abfea200e657d8c4a17d8df9e3bb850e4ea361a760d19df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758630"
 ---
-# <a name="isuspendingoperation-interface"></a>Isuspendingoperation-Schnittstelle
+# <a name="isuspendingoperation-interface"></a>ISuspendingOperation-Schnittstelle
 
-Enthält Informationen über eine APP, die den Vorgang angehalten.
+Stellt Informationen zu einem Vorgang zum Anhalten einer App bereit.
 
 ## <a name="members"></a>Member
 
-Die **isuspendingoperation** -Schnittstelle erbt von [**iinspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable). **Isuspendingoperation** verfügt auch über die folgenden Typen von Membern:
+Die **ISuspendingOperation-Schnittstelle** erbt von [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable). **ISuspendingOperation** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **isuspendingoperation** -Schnittstelle verfügt über diese Methoden.
+Die **ISuspendingOperation-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                  | BESCHREIBUNG                                                       |
+| Methode                                                  | Beschreibung                                                       |
 |:--------------------------------------------------------|:------------------------------------------------------------------|
-| [**GetDeferral**](isuspendingoperation-getdeferral.md) | Fordert an, dass der Vorgang zum Anhalten der APP verzögert wird.<br/> |
+| [**GetDeferral**](isuspendingoperation-getdeferral.md) | Fordert an, dass der Vorgang zum Anhalten der App verzögert wird.<br/> |
 
 
 
@@ -47,13 +47,13 @@ Die **isuspendingoperation** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **isuspendingoperation** -Schnittstelle verfügt über diese Eigenschaften.
+Die **ISuspendingOperation-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp           | BESCHREIBUNG                                                                             |
+| Eigenschaft                                                     | Zugriffstyp           | Beschreibung                                                                             |
 |:-------------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------------------|
-| [**Stichtag**](isuspendingoperation-deadline.md)<br/> | Lesen/Schreiben<br/> | Ruft die verbleibende Zeit ab, bevor eine verzögerte App angehalten wird.<br/> |
+| [**Stichtag**](isuspendingoperation-deadline.md)<br/> | Lesen/Schreiben<br/> | Ruft die verbleibende Zeit ab, bevor ein verzögerter App-Unterbrechungsvorgang fortgesetzt wird.<br/> |
 
 
 
@@ -67,22 +67,22 @@ Die **isuspendingoperation** -Schnittstelle verfügt über diese Eigenschaften.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Header<br/>                   | <dl> <dt>Windows. applicationmodel. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Windows. applicationmodel. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Windows. ApplicationModel.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Windows. ApplicationModel.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)
 </dt> <dt>
 
-[**Isuspendingdeferral**](isuspendingdeferral.md)
+[**ISuspendingDeferral**](isuspendingdeferral.md)
 </dt> <dt>
 
-[**Isuspendingeventargs**](isuspendingeventargs.md)
+[**ISuspendingEventArgs**](isuspendingeventargs.md)
 </dt> </dl>
 
  

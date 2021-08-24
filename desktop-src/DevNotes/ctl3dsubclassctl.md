@@ -1,5 +1,5 @@
 ---
-description: Unterklassen eines einzelnen Steuer Elements, wenn das Steuerelement nicht in einem Dialogfeld angezeigt wird.
+description: Unterklassen eines einzelnen Steuerelements, es sei denn, das Steuerelement wird in einem Dialogfeld angezeigt.
 ms.assetid: 07a2bce1-4c69-4f8d-bb24-b17351f5e771
 title: Ctl3dSubclassCtl-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 0ff6c6744c4ddda203149981218b8143fb78bce7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1d25bdc189ad80f1976ee76cc7f9909d099f34c8a88b83771ebf3f297c78934
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654480"
 ---
 # <a name="ctl3dsubclassctl-function"></a>Ctl3dSubclassCtl-Funktion
 
-Unterklassen eines einzelnen Steuer Elements, wenn das Steuerelement nicht in einem Dialogfeld angezeigt wird.
+Unterklassen eines einzelnen Steuerelements, es sei denn, das Steuerelement wird in einem Dialogfeld angezeigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ BOOL Ctl3dSubclassCtl(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für das Steuerelement Fenster.
+Ein Handle für das Steuerelementfenster.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn das Steuerelement erfolgreich untergeordnet ist. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn das Steuerelement erfolgreich als Unterklasse klassifiziert wurde. andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

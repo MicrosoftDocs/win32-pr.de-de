@@ -339,7 +339,7 @@ Die maximale Übertragungseinheit (MTU), die vom Port unterstützt wird.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

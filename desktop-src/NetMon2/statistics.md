@@ -1,7 +1,7 @@
 ---
-description: Die Statistik Struktur enthält Statistiken für die Erfassung. Einige dieser Statistiken werden von Netzwerkmonitor generiert, während andere von der NIC generiert werden, mit der der NPP verbunden ist.
+description: Die STATISTICS-Struktur stellt Statistiken für die Erfassung bereit. Einige dieser Statistiken werden von Netzwerkmonitor generiert, während andere von der NIC generiert werden, mit der das NPP verbunden ist.
 ms.assetid: 5e30ae30-d8ad-4336-9e4d-fa10ceefc966
-title: Statistik Struktur (Netmon. h)
+title: STATISTICS-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: a3798f32f7341722432441272eded7d7605cf8a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 273e6ba9e32337cc65b3dce979d2ff407b904595237b60025e42fc58e57d9823
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778280"
 ---
-# <a name="statistics-structure"></a>Statistik Struktur
+# <a name="statistics-structure"></a>STATISTICS-Struktur
 
-Die **Statistik** Struktur enthält Statistiken für die Erfassung. Einige dieser Statistiken werden von Netzwerkmonitor generiert, während andere von der NIC generiert werden, mit der der NPP verbunden ist.
+Die **STATISTICS-Struktur** stellt Statistiken für die Erfassung bereit. Einige dieser Statistiken werden von Netzwerkmonitor generiert, während andere von der NIC generiert werden, mit der das NPP verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,151 +58,151 @@ typedef struct _STATISTICS {
 
 <dl> <dt>
 
-**Verstrichene Zeit**
+**TimeElapsed**
 </dt> <dd>
 
 Verstrichene Zeit in Mikrosekunden.
 
 </dd> <dt>
 
-**Totalframeseraufgezeichnet**
+**TotalFramesCaptured**
 </dt> <dd>
 
-Gesamtanzahl der aktuell gespeicherten Frames. Diese Anzahl wird durch die Größe der Erfassungs Datei oder des Puffers beschränkt, die zum Speichern der Rahmen verwendet wird.
+Gesamtzahl der derzeit gespeicherten Frames. Diese Anzahl wird durch die Größe der Erfassungsdatei oder des Puffers beschränkt, die zum Speichern der Frames verwendet wird.
 
 </dd> <dt>
 
-**Totalbytescaptured**
+**TotalBytesCaptured**
 </dt> <dd>
 
-Gesamtanzahl der aktuell gespeicherten Bytes. Diese Anzahl wird durch die Größe der Erfassungs Datei oder des Puffers beschränkt, die zum Speichern der Rahmen verwendet wird.
+Gesamtzahl der derzeit gespeicherten Bytes. Diese Anzahl wird durch die Größe der Erfassungsdatei oder des Puffers beschränkt, die zum Speichern der Frames verwendet wird.
 
 </dd> <dt>
 
-**Totalframesgefilterte**
+**TotalFramesFiltered**
 </dt> <dd>
 
-Gesamtanzahl der Frames, die den aktuellen Erfassungs Filter durchlaufen haben. Wenn ein Filter nicht verwendet wird, ist dieser Wert mit **totalframesseen** identisch.
+Gesamtanzahl der Frames, die durch den aktuellen Erfassungsfilter übergeben wurden. Wenn kein Filter verwendet wird, ist dieser Wert identisch mit **TotalFramesSeen.**
 
 </dd> <dt>
 
-**Totalbytesgefiltert**
+**TotalBytesFiltered**
 </dt> <dd>
 
-Gesamtanzahl der Frames, die den aktuellen Erfassungs Filter durchlaufen haben. Wenn ein Filter nicht verwendet wird, ist dieser Wert mit **totalbytesseen** identisch.
+Gesamtanzahl der Frames, die durch den aktuellen Erfassungsfilter übergeben wurden. Wenn kein Filter verwendet wird, ist dieser Wert identisch mit **TotalBytesSeen.**
 
 </dd> <dt>
 
-**Totalmulticastsgefilterte**
-</dt> <dd>
-
-Dieser Member ist veraltet.
-
-</dd> <dt>
-
-**Totalbroadcastsgefilterte**
+**TotalMulticastsFiltered**
 </dt> <dd>
 
 Dieser Member ist veraltet.
 
 </dd> <dt>
 
-**Totalframesseen**
+**TotalBroadcastsFiltered**
+</dt> <dd>
+
+Dieser Member ist veraltet.
+
+</dd> <dt>
+
+**TotalFramesSeen**
 </dt> <dd>
 
 Gesamtanzahl der von der NIC behandelten Frames.
 
 </dd> <dt>
 
-**Totalbytesseen**
+**TotalBytesSeen**
 </dt> <dd>
 
-Gesamtanzahl der Bytes, die von der NIC verarbeitet werden.
+Gesamtanzahl der von der NIC behandelten Bytes.
 
 </dd> <dt>
 
-**Totalmulticastsempfangene**
+**TotalMulticastsReceived**
 </dt> <dd>
 
 Dieser Member ist veraltet.
 
 </dd> <dt>
 
-**Totalbroadcastsempfangene**
+**TotalBroadcastsReceived**
 </dt> <dd>
 
 Dieser Member ist veraltet.
 
 </dd> <dt>
 
-**Totalframesdrop**
+**TotalFramesDropped**
 </dt> <dd>
 
-Gesamtzahl der gelöschten Frames (Frames, die den Filter erfolgreich waren, aber nicht gespeichert wurden).
+Gesamtanzahl der gelöschten Frames (Frames, die den Filter bestanden, aber nicht gespeichert wurden).
 
 </dd> <dt>
 
-**Totalframesdroppedfrombuffer**
+**TotalFramesDroppedFromBuffer**
 </dt> <dd>
 
-Anzahl der Frames, die aus der Erfassungs Datei oder dem Puffer gelöscht wurden. Wenn der Puffer voll ist, werden ältere Frames entfernt, um Platz für neue zu schaffen.
+Anzahl der Frames, die aus der Erfassungsdatei oder dem Puffer gelöscht wurden. Wenn der Puffer voll ist, werden ältere Frames entfernt, um Platz für neue zu schaffen.
 
 </dd> <dt>
 
-**Macframesempfangene**
+**MacFramesReceived**
 </dt> <dd>
 
-Anzahl der Frames, die von der NIC berichtet wurden.
+Anzahl der Frames, die von der NIC empfangen wurden.
 
 </dd> <dt>
 
-**Maccrcerrors**
+**MacCRCErrors**
 </dt> <dd>
 
-Anzahl von CRC-Fehlern, die von der NIC gemeldet werden.
+Anzahl der von der NIC gemeldeten CRC-Fehler.
 
 </dd> <dt>
 
-**Macbytesreceivedex**
+**MacBytesReceivedEx**
 </dt> <dd>
 
-Anzahl von Bytes, die von der NIC berichtet wurden.
+Anzahl der Bytes, die von der NIC empfangen wurden.
 
 </dd> <dt>
 
-**Macframesdrop- \_ nobuffers**
+**MacFramesDropped \_ NoBuffers**
 </dt> <dd>
 
-Die Anzahl der Frames, die die NIC meldet, weil kein Pufferspeicher Platz vorhanden ist.
+Anzahl der Frames, die die NIC meldet, dass sie aufgrund eines fehlenden Pufferspeichers gelöscht wurden.
 
 </dd> <dt>
 
-**Macmulticastsempfangene**
+**MacMulticastsReceived**
 </dt> <dd>
 
-Anzahl der mit, die der NIC-Bericht empfangen hat.
+Anzahl der Multicasts, die die NIC empfangen hat.
 
 </dd> <dt>
 
-**Macbroadcastsempfangene**
+**MacBroadcastsReceived**
 </dt> <dd>
 
-Anzahl der Übertragungen, die die NIC meldet.
+Anzahl empfangener Broadcasts der NIC-Berichte.
 
 </dd> <dt>
 
-**Macframesdrop \_ hwerror**
+**MacFramesDropped \_ HwError**
 </dt> <dd>
 
-Anzahl der Frames, die die NIC aufgrund von Hardwarefehlern gelöscht hat.
+Die Anzahl der Frames, die die NIC meldet, wurde aufgrund von Hardwarefehlern gelöscht.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird verwendet, um die [*Gesamtstatistik*](t.md)abzurufen und die aktuelle Erfassung anzuhalten oder zu stoppen.
+Diese Struktur wird verwendet, um [*Gesamtstatistiken*](t.md)abzurufen und die aktuelle Erfassung anzuhalten oder zu beenden.
 
-Die Gesamtstatistik kann nicht abgerufen werden, wenn die [iESP](iesp.md) NPP-Schnittstelle verwendet wird.
+Gesamtstatistiken können nicht abgerufen werden, wenn die [IESP-NPP-Schnittstelle](iesp.md) verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -212,7 +212,7 @@ Die Gesamtstatistik kann nicht abgerufen werden, wenn die [iESP](iesp.md) NPP-Sc
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -220,37 +220,37 @@ Die Gesamtstatistik kann nicht abgerufen werden, wenn die [iESP](iesp.md) NPP-Sc
 
 <dl> <dt>
 
-[Idelta-DC:: gettotalstatistics](idelaydc-gettotalstatistics.md)
+[IDelaydC::GetTotalStatistics](idelaydc-gettotalstatistics.md)
 </dt> <dt>
 
-["Irren:: gettotalstatistics"](irtc-gettotalstatistics.md)
+[IRTC::GetTotalStatistics](irtc-gettotalstatistics.md)
 </dt> <dt>
 
-[IStats:: gettotalstatistics](istats-gettotalstatistics.md)
+[IStats::GetTotalStatistics](istats-gettotalstatistics.md)
 </dt> <dt>
 
-[Idelta aydc::P ause](idelaydc-pause.md)
+[IDelaydC::P ause](idelaydc-pause.md)
 </dt> <dt>
 
 [IESP::P ause](iesp-pause.md)
 </dt> <dt>
 
-[Iran::P ause](irtc-pause.md)
+[IRTC::P ause](irtc-pause.md)
 </dt> <dt>
 
 [IStats::P ause](istats-pause.md)
 </dt> <dt>
 
-[Idelta aydc:: Beendigung](idelaydc-stop.md)
+[IDelaydC::Stop](idelaydc-stop.md)
 </dt> <dt>
 
-[IESP:: Beendigung](iesp-stop.md)
+[IESP::Stop](iesp-stop.md)
 </dt> <dt>
 
-[Iran:: Beendigung](irtc-stop.md)
+[IRTC::Stop](irtc-stop.md)
 </dt> <dt>
 
-[Istatusc:: Beendigung](istats-stop.md)
+[IStatsC::Stop](istats-stop.md)
 </dt> </dl>
 
  

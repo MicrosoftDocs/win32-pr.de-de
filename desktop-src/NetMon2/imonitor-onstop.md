@@ -1,7 +1,7 @@
 ---
-description: Die onstoppt-Methode muss vom Monitor implementiert werden. Mscvc ruft diese Methode auf, um den Monitor zu benachrichtigen, dass die Erfassung beendet wird.
+description: Die OnStop-Methode muss vom Monitor implementiert werden. MSCVC ruft diese Methode auf, um den Monitor zu benachrichtigen, dass die Erfassung beendet wird.
 ms.assetid: 5988bfb8-2068-42a1-a774-6f6be9828568
-title: 'Imonitor:: onstoppt-Methode (Netmon. h)'
+title: IMonitor::OnStop-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Netmon.h
-ms.openlocfilehash: a737aa5bede443b63f2074239eec17ea8a205cc8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb81042395de2a2381921cfd0b30c18af22df320b8ce8db228cf65743b1fe334
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778990"
 ---
-# <a name="imonitoronstop-method"></a>Imonitor:: onstoppt-Methode
+# <a name="imonitoronstop-method"></a>IMonitor::OnStop-Methode
 
-Die **onstoppt** -Methode muss vom Monitor implementiert werden. Mscvc ruft diese Methode auf, um den Monitor zu benachrichtigen, dass die Erfassung beendet wird.
+Die **OnStop-Methode** muss vom Monitor implementiert werden. MSCVC ruft diese Methode auf, um den Monitor zu benachrichtigen, dass die Erfassung beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK (entspricht noError).
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S OK (was mit \_ NOERROR identisch ist).
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. Wenn ein Fehlercode zurückgegeben wird, kann der Monitor nicht neu gestartet werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mcsvc ruft diese Methode auf, nachdem " [iritc:: Beendigung](irtc-stop.md) " aufgerufen wurde.
+McSVC ruft diese Methode auf, nachdem [IRTC::Stop](irtc-stop.md) aufgerufen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Die mcsvc ruft diese Methode auf, nachdem " [iritc:: Beendigung](irtc-stop.md) "
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

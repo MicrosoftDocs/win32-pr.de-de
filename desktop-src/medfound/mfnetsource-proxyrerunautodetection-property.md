@@ -1,41 +1,41 @@
 ---
-description: Gibt an, ob der standardproxylocator die automatische Proxy Erkennung erzwingen soll.
+description: Gibt an, ob der Standardproxylocator die automatische Proxyerkennung erzwingen soll.
 ms.assetid: ab547a92-94a2-482e-b7ac-aeb3fdfb6b91
-title: MFNETSOURCE_PROXYRERUNAUTODETECTION-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_PROXYRERUNAUTODETECTION -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37021c7e96b135389f0dffa2f8c26b8067df2b7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3351766302952390bbe67ea2d86cd76e93b9267328fe2c07e2656a38b3fd2906
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713990"
 ---
-# <a name="mfnetsource_proxyrerunautodetection-property"></a>MF-Quelle \_ proxyrerunautoerkennungs (Eigenschaft)
+# <a name="mfnetsource_proxyrerunautodetection-property"></a>MFNETSOURCE \_ PROXYRERUNAUTODETECTION (Eigenschaft)
 
-Gibt an, ob der standardproxylocator die automatische Proxy Erkennung erzwingen soll.
+Gibt an, ob der Standardproxylocator die automatische Proxyerkennung erzwingen soll.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-Boolescher Wert (**Long**)
+Boolescher Wert (**LONG**)
 
 VT \_ I4
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante " **MF NetSource"- \_ Proxy Settings** definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ PROXYSETTINGS** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Anwendungen können diese Eigenschaft verwenden, um den proxylocator bei der Erstellung des proxylocator-Objekts zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger im *pproxyconfig* -Parameter der [**mfkreateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) -Funktion. Im Modus für die automatische Erkennung verwendet der proxylocator den Mechanismus zum Erkennen von WinInet-Proxys. Legen Sie den Wert auf 0 fest, um die automatische Erkennung zu erzwingen.
+Anwendungen können diese Eigenschaft verwenden, um den Proxylocator beim Erstellen des Proxylocatorobjekts zu konfigurieren. Übergeben Sie zum Festlegen der Eigenschaft einen **IPropertyStore-Zeiger** im *pProxyConfig-Parameter* der [**MFCreateProxyLocator-Funktion.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) Im Modus für die automatische Erkennung verwendet der Proxylocator den WinInet-Proxyerkennungsmechanismus. Um die automatische Erkennung zu erzwingen, legen Sie den Wert auf 0 fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,23 +43,23 @@ Anwendungen können diese Eigenschaft verwenden, um den proxylocator bei der Ers
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)
 </dt> <dt>
 
-[Proxy Unterstützung für Netzwerk Quellen](proxy-support-for-network-sources.md)
+[Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Gibt eine Zahl zwischen 0 und 100 an, die den Kompromiss zwischen Codierungsqualität und Codierungs Geschwindigkeit angibt.
+description: Gibt eine Zahl zwischen 0 und 100 an, die den Kompromiss zwischen Codierungsqualität und Codierungsgeschwindigkeit angibt.
 ms.assetid: 872140e8-fd39-446c-a84f-1e04ea95076e
-title: MF_TRANSCODE_QUALITYVSSPEED-Attribut (mspdl. h)
+title: MF_TRANSCODE_QUALITYVSSPEED -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec4d95fab92276e926189c885dad2ecb8f164a97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7498cd319f347d8509f42e1713e1b2e267b32406eceb073ea9ca1e4cb4ea8d80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119604670"
 ---
-# <a name="mf_transcode_qualityvsspeed-attribute"></a>MF- \_ transcode \_ qualityvsspeed-Attribut
+# <a name="mf_transcode_qualityvsspeed-attribute"></a>MF \_ TRANSCODE \_ QUALITYVSSPEED-Attribut
 
-Gibt eine Zahl zwischen 0 und 100 an, die den Kompromiss zwischen Codierungsqualität und Codierungs Geschwindigkeit angibt.
+Gibt eine Zahl zwischen 0 und 100 an, die den Kompromiss zwischen Codierungsqualität und Codierungsgeschwindigkeit angibt.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -34,17 +34,17 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut hat denselben GUID-Wert wie die Eigenschaft " [avenccommonqualityvsspeed](../directshow/avenccommonqualityvsspeed-property.md) ", die für [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi)definiert ist, und hat dieselbe Interpretation.
+Dieses Attribut verfügt über den gleichen GUID-Wert wie die [avencCommonQualityVsSpeed-Eigenschaft,](../directshow/avenccommonqualityvsspeed-property.md) die für [**ICodecAPI**](/windows/win32/api/strmif/nn-strmif-icodecapi)definiert ist, und hat die gleiche Interpretation.
 
-Die Anwendung kann dieses Attribut für das transcodieren-Profil festlegen, bevor die transcodieren-Topologie für Windows Media Codecs zu erstellen ist. Der Wert muss zwischen 0 und 100 liegen. Für den Videostream ordnet der transcodieren-Topologiegenerator dem von der Anwendung angegebenen Wert einen Wert zu und gibt den zugeordneten Wert an die **\_ complexityex-Eigenschaft von mfpkey** des Encoders an. Niedrigere Werte ermöglichen es dem Encoder, weniger komplizierte Codierungs Algorithmen zu verwenden. Die Verwendung einfacherer Algorithmen erzeugt eine Ausgabe mit geringerer Qualität, aber der Codierungsprozess ist schneller und erfordert weniger Verarbeitungsleistung.
+Die Anwendung kann dieses Attribut für das Transcodierungsprofil festlegen, bevor die Transcodierungstopologie für Windows Mediencodecs erstellt wird. Der Wert muss im Bereich von 0 bis 100 liegen. Bei Videostreams ordnet der Transcodierungstopologie-Generator dem von der Anwendung angegebenen Wert einen Wert zu und stellt den zugeordneten Wert der **MFPKEY \_ COMPLEXITYEX-Eigenschaft** des Encoders zur Verfügung. Niedrigere Werte ermöglichen es dem Encoder, weniger komplizierte Codierungsalgorithmen zu verwenden. Durch die Verwendung einfacherer Algorithmen wird eine Ausgabe mit geringerer Qualität erzeugt, der Codierungsprozess ist jedoch schneller und erfordert weniger Verarbeitungsleistung.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Mspdl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -60,13 +60,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Transcode-API](transcode-api.md)
+[Transcodierungs-API](transcode-api.md)
 </dt> <dt>
 
-[**IMF transcodeprofile:: setvideoattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes)
+[**CODIERUNGTranscodeProfile::SetVideoAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setvideoattributes)
 </dt> </dl>
 
  

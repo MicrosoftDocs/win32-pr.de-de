@@ -1,7 +1,7 @@
 ---
-description: Die onlinedevice-Methode wurde als veraltet markiert, anstelle der allgemeineren requestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt.
+description: Die OnlineDevice-Methode ist veraltet und nicht mehr die allgemeinere RequestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 ms.assetid: c96b5653-1e5e-421a-b2fe-65ee9ee94ee4
-title: Onlinedevice-Methode der CIM_LogicalDevice-Klasse
+title: OnlineDevice-Methode der CIM_LogicalDevice-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 56e5fae557198a713aec338f92ad8f2865b2c351
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f34d08ad72bd04cd94e35ac229fde82ca4847ec13410e35d57d0de0778d50af2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695510"
 ---
-# <a name="onlinedevice-method-of-the-cim_logicaldevice-class"></a>Onlinedevice-Methode der CIM \_ LogicalDevice-Klasse
+# <a name="onlinedevice-method-of-the-cim_logicaldevice-class"></a>OnlineDevice-Methode der CIM \_ LogicalDevice-Klasse
 
-Die **onlinedevice** -Methode wurde als veraltet markiert, anstelle der allgemeineren **requestStateChange** -Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt.
+Die **OnlineDevice-Methode** ist veraltet und nicht mehr die allgemeinere **RequestStateChange-Methode,** die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ uint32 OnlineDevice(
 
 <dl> <dt>
 
-*Online* \[ in\]
+*Online* \[ In\]
 </dt> <dd>
 
-Wenn der Wert **true** ist, schalten Sie das Gerät online, und schalten Sie das Gerät bei **false** offline.
+True **gibt an,** dass das Gerät online geschaltet wird, wenn **FALSE,** das Gerät offline schalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

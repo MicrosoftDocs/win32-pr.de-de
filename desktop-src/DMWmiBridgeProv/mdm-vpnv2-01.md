@@ -1,6 +1,6 @@
 ---
 title: MDM_VPNv2_01-Klasse
-description: Die MDM \_ - \_ Klasse VPNv2 01 ermöglicht die Konfiguration des VPN-Profils des Geräts.
+description: Die MDM \_ VPNv2 \_ 01-Klasse ermöglicht die Konfiguration des VPN-Profils des Geräts.
 ms.assetid: cfef674b-880c-4c9f-a2c1-6c2cb03189da
 keywords:
 - MDM_VPNv2_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3457220c438d0143db90c1955d48352353fee29d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7580d3592f1479475bf93d899a35864c0ca95ef36fa01fc9c5b07bc284395773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693430"
 ---
 # <a name="mdm_vpnv2_01-class"></a>MDM \_ VPNv2 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM-Klasse \_ VPNv2 \_ 01** ermöglicht die Konfiguration des VPN-Profils des Geräts.
+Die **MDM \_ VPNv2 \_ 01-Klasse** ermöglicht die Konfiguration des VPN-Profils des Geräts.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -53,20 +53,20 @@ class MDM_VPNv2_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ VPNv2 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ VPNv2 \_ 01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ VPNv2 \_ 01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ VPNv2 \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [AlwaysOn](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-alwayson)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -74,10 +74,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Bypassforlocal](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-bypassforlocal)
+[ByPassForLocal](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-bypassforlocal)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 [DnsSuffix](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-dnssuffix)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,10 +96,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Edpmodeid](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-edpmodeid)
+[EdpModeId](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-edpmodeid)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -119,14 +119,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Bei dieser Klasse ist die Zeichenfolge der Name des VPN-Profils.
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge der Name des VPN-Profils.
 
 </dd> <dt>
 
 [Sperrmodus](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-lockdown)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -134,10 +134,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -153,7 +153,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 [ProfileXML](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-profilexml)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -164,7 +164,7 @@ Zugriffstyp: Lesen/Schreiben
 [RememberCredentials](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-remembercredentials)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -172,10 +172,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhänder-networkerkennung](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-trustednetworkdetection)
+[TrustedNetworkDetection](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-trustednetworkdetection)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -189,10 +189,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ Stamm-CIMv2-MDM-DMMap \\<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -201,7 +201,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,47 +1,47 @@
 ---
-description: ICE14 überprüft die Funktions Tabelle einer Windows Installer Datenbank.
+description: ICE14 überprüft die Featuretabelle einer Windows Installer-Datenbank.
 ms.assetid: fb1970f8-1dba-4b06-aa03-5b33d213fc79
 title: ICE14
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b2e64a6106ae359fe02c6ead271bbae267eeb18
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85a0789b7844fcbee52654d29b700b167a073fa51778ef3882b1fcbe2864fbb7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119638170"
 ---
 # <a name="ice14"></a>ICE14
 
-ICE14 überprüft Folgendes für die Features:
+ICE14 überprüft Folgendes auf Features:
 
--   Für diese übergeordneten Stamm Funktionen ist das msidbfeatureattributesfollowparent-Bit nicht in der Attribute-Spalte der [Funktions Tabelle](feature-table.md)festgelegt. Eine Stamm Funktion verfügt über kein übergeordnetes Element.
--   Diese Funktion enthält nicht denselben Eintrag in den \_ übergeordneten Spalten des Features und Features der [Funktions Tabelle](feature-table.md). Keine Funktion kann ein eigenes übergeordnetes Element sein.
+-   Für diese übergeordneten Stammfunktionen ist das Bit msidbFeatureAttributesFollowParent in der Spalte Attribute der [Featuretabelle nicht festgelegt.](feature-table.md) Ein Stammfeature verfügt nicht über ein übergeordnetes Element.
+-   Diese Funktion verfügt nicht über den gleichen Eintrag in den Spalten Feature und Feature \_ Parent der [Featuretabelle](feature-table.md). Kein Feature kann ein eigenes übergeordnetes Element sein.
 
 ## <a name="result"></a>Ergebnis
 
-ICE14 gibt eine Fehlermeldung aus, wenn eine Funktion mit dem msidbfeatureattributesfollowparent-Bit festgelegt wurde, oder eine Funktion mit identischen Einträgen in den übergeordneten Spalten der Funktion und der Funktion \_ der Featuretabelle.
+ICE14 gibt eine Fehlermeldung aus, wenn ein Stammfeature mit dem Bitsatz msidbFeatureAttributesFollowParent oder ein Feature mit identischen Einträgen in den Spalten Feature und Übergeordnetes Feature der Tabelle Feature gefunden \_ wird.
 
 ## <a name="example"></a>Beispiel
 
-ICE14 gibt die folgenden Fehler für das folgende Beispiel zurück:
+ICE14 würde die folgenden Fehler für das folgende Beispiel zurückgeben:
 
--   Die Funktion "Sport" hat denselben Wert in den übergeordneten Spalten der Funktion und des Features der \_ Dateitabelle.
--   Das "msidbfeatureattributesfollowparent"-Bit ist für die Hauptfunktion "Sport" festgelegt.
+-   Das Feature Sport hat den gleichen Wert in den Spalten Feature und Feature \_ Parent der Tabelle File.
+-   Für das Stammfeature Sport ist das Bit msidbFeatureAttributesFollowParent festgelegt.
 
-In der Funktionsstruktur dieses Beispiels ist Sport das Stamm Feature und ein übergeordnetes Element der Features "Swimming" und "Football". Freestyle ist ein untergeordnetes Feature von Swimming. Touchfootball ist ein untergeordnetes Feature von Fußball.
+In der Featurestruktur dieses Beispiels ist Sport das Stammfeature und ein übergeordnetes Element der Features "Sport" und "Football". "Free" ist ein untergeordnetes Merkmal von "Child". TouchFootball ist ein untergeordnetes Feature von Football.
 
-[Funktions Tabelle](feature-table.md) (partiell)
+[Featuretabelle](feature-table.md) (partiell)
 
 
 
-| Funktion       | Attribute | Über \_ geordnetes Element |
+| Feature       | Attribute | Übergeordnetes \_ Feature |
 |---------------|------------|-----------------|
 | Sport         | 4          | Sport           |
-| Innenpool      | 1          | Sport           |
-| Verbandes      | 4          | Sport           |
-| Frei     | 1          | Innenpool        |
-| Touchfootball | 4          | Verbandes        |
+| Schwimmen      | 1          | Sport           |
+| Fußball      | 4          | Sport           |
+| Freestyle     | 1          | Schwimmen        |
+| TouchFootball | 4          | Fußball        |
 
 
 
@@ -51,7 +51,7 @@ In der Funktionsstruktur dieses Beispiels ist Sport das Stamm Feature und ein ü
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

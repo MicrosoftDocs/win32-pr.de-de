@@ -1,7 +1,7 @@
 ---
-description: Die inaktive Methode wird aufgerufen, wenn der Status in "beendet" versetzt wird.
+description: Die Inactive-Methode wird aufgerufen, wenn der Zustand in Beendet wechselt.
 ms.assetid: 2bad81ef-d2a4-4c20-a49b-e40e5097b430
-title: Cbaserderderer. inaktive-Methode (renbase. h)
+title: CBaseRenderer.Inactive-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9ac328c772b740a0d7ab05be4c6ea9f2a24f852e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e84afd1d4e4ffb013a2029f7d56a223f0aef2f019bc3beb11bd7bd6c202b88d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652400"
 ---
-# <a name="cbaserendererinactive-method"></a>Cbaserderderer. inaktive-Methode
+# <a name="cbaserendererinactive-method"></a>CBaseRenderer.Inactive-Methode
 
-Die- `Inactive` Methode wird aufgerufen, wenn der Zustand in "beendet" versetzt wird.
+Die `Inactive` -Methode wird aufgerufen, wenn der Zustand in Beendet wechselt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: inaktiven**](crendererinputpin-inactive.md) -Methode auf. Der Filter Ruft die [**cbaserdenderer:: clearpdingsample**](cbaserenderer-clearpendingsample.md) -Methode auf, um das aktuelle Beispiel freizugeben.
+Der Eingabepin ruft diese Methode aus seiner eigenen [**CRendererInputPin::Inactive-Methode**](crendererinputpin-inactive.md) auf. Der Filter ruft die [**CBaseRenderer::ClearPendingSample-Methode**](cbaserenderer-clearpendingsample.md) auf, um das neueste Beispiel frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: inak
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

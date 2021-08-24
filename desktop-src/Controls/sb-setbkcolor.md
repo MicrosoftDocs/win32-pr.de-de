@@ -1,9 +1,9 @@
 ---
-title: SB_SETBKCOLOR Meldung (kommstrg. h)
+title: SB_SETBKCOLOR Meldung (Commctrl.h)
 description: Legt die Hintergrundfarbe in einer Statusleiste fest.
 ms.assetid: 49bcd816-e3e2-45f4-8845-ef67789b8a01
 keywords:
-- Windows-Steuerelemente für SB_SETBKCOLOR Meldung
+- SB_SETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc08687c6d228074bc3e4dd7c8442a1c1e35a835
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b97893d49d475789b07c28e17e88097aa4df4336154d6b4e0f9c4fa081e52635
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637080"
 ---
-# <a name="sb_setbkcolor-message"></a>SB- \_ SetBkColor-Nachricht
+# <a name="sb_setbkcolor-message"></a>SB \_ SETBKCOLOR-Nachricht
 
 Legt die Hintergrundfarbe in einer Statusleiste fest.
 
@@ -35,13 +35,13 @@ Legt die Hintergrundfarbe in einer Statusleiste fest.
 *lParam* 
 </dt> <dd>
 
-[**COLORREF**](/windows/desktop/gdi/colorref) -Wert, der die neue Hintergrundfarbe angibt. Geben Sie den CLR- \_ Standardwert an, damit die Statusleiste die Standard Hintergrundfarbe verwendet.
+[**COLORREF-Wert,**](/windows/desktop/gdi/colorref) der die neue Hintergrundfarbe angibt. Geben Sie den CLR \_ DEFAULT-Wert an, damit die Statusleiste die Standardhintergrundfarbe verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die vorherige Hintergrundfarbe bzw. CLR-Standardwert zurück, \_ Wenn die Hintergrundfarbe die Standardfarbe ist.
+Gibt die vorherige Hintergrundfarbe oder CLR \_ DEFAULT zurück, wenn die Hintergrundfarbe die Standardfarbe ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt die vorherige Hintergrundfarbe bzw. CLR-Standardwert zurück, \_ Wenn die H
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

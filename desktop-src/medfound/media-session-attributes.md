@@ -1,30 +1,30 @@
 ---
-description: Medien Sitzungs Attribute
+description: Mediensitzungsattribute
 ms.assetid: 7f9cef1c-b419-485f-ac01-afb9f42e5bd6
-title: Medien Sitzungs Attribute
+title: Mediensitzungsattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a58c0ac1f6ccd3132bb83324a4abec333a079d7
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: dba62adf7988d28d95da4a01bce64c2296514c4cc6e71fb17afc7b4bdd2f40b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106363032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715320"
 ---
-# <a name="media-session-attributes"></a>Medien Sitzungs Attribute
+# <a name="media-session-attributes"></a>Mediensitzungsattribute
 
-Die folgenden Attribute werden verwendet, um die Medien Sitzung zu konfigurieren.
+Die folgenden Attribute werden verwendet, um die Mediensitzung zu konfigurieren.
 
 
 
-| Attribut                                                                                            | BESCHREIBUNG                                                                                                 |
+| attribute                                                                                            | Beschreibung                                                                                                 |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| [**MF- \_ Sitzungs \_ Inhalts Schutz- \_ \_ Manager**](mf-session-content-protection-manager-attribute.md) | Stellt eine Rückruf Schnittstelle bereit, damit die Anwendung ein Content Wegbereiter-Objekt von der PMP-Sitzung empfängt. |
-| [**\_ \_ globale \_ Zeit der MF-Sitzung**](mf-session-global-time-attribute.md)                                | Gibt an, ob Topologien eine globale Start-und Endzeit haben werden.                                        |
-| [**\_ \_ Quality \_ Manager für MF-Sitzung**](mf-session-quality-manager-attribute.md)                        | Enthält die CLSID eines Quality Managers für die Medien Sitzung.                                              |
-| [**\_ \_ Remote \_ Quell \_ Modus der MF-Sitzung**](mf-session-remote-source-mode-attribute.md)                 | Gibt an, dass die Medienquelle in einem Remote Prozess ausgeführt wird.                                             |
-| [**MF- \_ Sitzungs \_ Server \_ Kontext**](mf-session-server-context-attribute.md)                          | Ermöglicht zwei Instanzen der Medien Sitzung, denselben PMP-Prozess gemeinsam zu nutzen.                                   |
-| [**MF \_ - \_ sitzungstopoloader**](mf-session-topoloader-attribute.md)                                   | Enthält die CLSID eines topologieladers für die Medien Sitzung.                                              |
+| [**MF \_ SESSION \_ CONTENT \_ PROTECTION \_ MANAGER**](mf-session-content-protection-manager-attribute.md) | Stellt eine Rückrufschnittstelle bereit, über die die Anwendung ein Content Enabler-Objekt aus der PMP-Sitzung empfangen kann. |
+| [**MF \_ SESSION \_ GLOBAL \_ TIME**](mf-session-global-time-attribute.md)                                | Gibt an, ob Topologien über eine globale Start- und Beendigungszeit verfügen.                                        |
+| [**MF \_ SESSION \_ QUALITY \_ MANAGER**](mf-session-quality-manager-attribute.md)                        | Enthält die CLSID eines Qualitäts-Managers für die Mediensitzung.                                              |
+| [**MF \_ SESSION \_ REMOTE \_ SOURCE \_ MODE**](mf-session-remote-source-mode-attribute.md)                 | Gibt an, dass die Medienquelle in einem Remoteprozess ausgeführt wird.                                             |
+| [**\_ \_ MF-SITZUNGSSERVERKONTEXT \_**](mf-session-server-context-attribute.md)                          | Ermöglicht zwei Instanzen der Mediensitzung, denselben PMP-Prozess gemeinsam zu nutzen.                                   |
+| [**MF \_ SESSION \_ TOPOLOADER**](mf-session-topoloader-attribute.md)                                   | Enthält die CLSID eines Topologieladeprogramm für die Mediensitzung.                                              |
 
 
 
@@ -34,7 +34,7 @@ Die folgenden Attribute werden verwendet, um die Medien Sitzung zu konfigurieren
 
 <dl> <dt>
 
-[**Imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
+[**WFMEDIASession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

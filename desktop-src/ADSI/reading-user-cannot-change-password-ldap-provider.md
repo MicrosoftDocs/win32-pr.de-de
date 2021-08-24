@@ -1,41 +1,41 @@
 ---
-title: Lesebenutzer kann Kennwort nicht ändern (LDAP-Anbieter)
+title: Lesen von Benutzer kann Kennwort nicht ändern (LDAP-Anbieter)
 description: Erfahren Sie, wie Sie ermitteln, ob ein Benutzer über die Berechtigung zum Ändern eines Kennworts für den LDAP-Anbieter verfügt. Die Fähigkeit eines Benutzers, ein Kennwort zu ändern, kann gewährt oder verweigert werden.
 ms.assetid: d0d95d20-dcdb-453a-9d15-c386217927c8
 ms.tgt_platform: multiple
 keywords:
-- Lesebenutzer kann Kennwort (LDAP-Anbieter) ADSI nicht ändern
-- Benutzer kann Kennwort (LDAP-Anbieter) ADSI nicht ändern, lesen
-- LDAP-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Benutzer muss Kennwort bei der nächsten Anmeldung ändern, Lesen
+- Lesen von ADSI vom Benutzer kann kein Kennwort ändern (LDAP-Anbieter)
+- User Cannot Change Password (LDAP Provider) ADSI , reading
+- LDAP-Anbieter ADSI , Benutzerverwaltungsbeispiele, Benutzer muss Kennwort bei der nächsten Anmeldung ändern, Lesen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b26818ee02d3876aa209dcd4990288ea1cfe96fc
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 4ebbccc3147ffb1e29c0081d6e19ef1a615b7020cdc7e246fea294df7d2d38c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637580"
 ---
-# <a name="reading-user-cannot-change-password-ldap-provider"></a>Lesebenutzer kann Kennwort nicht ändern (LDAP-Anbieter)
+# <a name="reading-user-cannot-change-password-ldap-provider"></a>Lesen von Benutzer kann Kennwort nicht ändern (LDAP-Anbieter)
 
 Die Fähigkeit eines Benutzers, sein Kennwort zu ändern, ist eine Berechtigung, die erteilt oder verweigert werden kann.
 
 **So bestimmen Sie, ob die Berechtigung zum Ändern des Kennworts erteilt oder verweigert wird**
 
 1.  Binden sie an das Benutzerobjekt.
-2.  Rufen Sie das [**IADsSecurityDescriptor-Objekt**](/windows/desktop/api/Iads/nn-iads-iadssecuritydescriptor) aus der **ntSecurityDescriptor-Eigenschaft** des Benutzerobjekts ab.
-3.  Rufen Sie eine [**IADsAccessControlList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrollist) für den Sicherheitsdeskriptor aus der [**IADsSecurityDescriptor.DiscretionaryAcl-Eigenschaft**](iadssecuritydescriptor-property-methods.md) ab.
-4.  Aufzählen der Zugriffssteuerungseinträge (ACCESS Control Entries, ACE) für das Objekt und Suchen nach den ACEs mit der Guid für die Kennwortänderung ({AB721A53-1E2F-11D0-9819-- 00AA0040529B}) für die [**IADsAccessControlEntry.ObjectType-Eigenschaft**](iadsaccesscontrolentry-property-methods.md) und "Everyone" oder "NT AUTHORITY \\ SELF" bekannte Sicherheitsprinzipale für die **IADsAccessControlEntry.Trustee-Eigenschaft.**
+2.  Abrufen des [**IADsSecurityDescriptor-Objekts**](/windows/desktop/api/Iads/nn-iads-iadssecuritydescriptor) aus der **ntSecurityDescriptor-Eigenschaft** des Benutzerobjekts.
+3.  Abrufen einer [**IADsAccessControlList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrollist) für den Sicherheitsdeskriptor aus der [**IADsSecurityDescriptor.DiscretionaryAcl-Eigenschaft.**](iadssecuritydescriptor-property-methods.md)
+4.  Aufzählen der Zugriffssteuerungseinträge (ACE) für das Objekt und Suchen nach den ACEs mit der GUID zum Ändern des Kennworts ({AB721A53-1E2F-11D0-9819-00AA0040529B}) für die [**IADsAccessControlEntry.ObjectType-Eigenschaft**](iadsaccesscontrolentry-property-methods.md) und "Everyone" oder "NT AUTHORITY SELF" bekannte Sicherheitsprinzipale für die \\ **IADsAccessControlEntry.Trustee-Eigenschaft.**
     > [!Note]  
-    > Die Zeichenfolgen "Jeder" und "NT AUTHORITY \\ SELF" werden basierend auf der Sprache des ersten Domänencontrollers in der Domäne lokalisiert. Daher sollten die Zeichenfolgen nicht direkt verwendet werden. Die Kontonamen sollten zur Laufzeit durch Aufrufen der [**LookupAccountSid-Funktion**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) mit der SID für die bekannten Sicherheitsprinzipale "Jeder" ("S-1-1-0") und "NT AUTHORITY \\ SELF" ("S-1-5-10") abgerufen werden. Die folgenden C++-Codebeispiele **GetSidAccountName,** **GetSidAccountName \_ Everyone** und **GetSidAccountName \_ Self** zeigen dies.
+    > Die Zeichenfolgen "Everyone" und "NT AUTHORITY SELF" werden basierend auf der Sprache des ersten \\ Domänencontrollers in der Domäne lokalisiert. Daher sollten die Zeichenfolgen nicht direkt verwendet werden. Die Kontonamen sollten zur Laufzeit durch Aufrufen der [**LookupAccountSid-Funktion**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) mit der SID für die bekannten Sicherheitsprinzipale "Everyone" ("S-1-1-0") und "NT AUTHORITY \\ SELF" ("S-1-5-10") ermittelt werden. In den folgenden C++-Codebeispielen **GetSidAccountName,** **GetSidAccountName \_ Everyone** und **GetSidAccountName \_ Self** wird dies gezeigt.
 
      
 
-5.  Wenn sowohl die ACEs "Everyone" als auch "NT AUTHORITY \\ SELF" den **ADS \_ ACETYPE \_ ACCESS \_ DENIED \_ OBJECT-Wert** für die [**IADsAccessControlEntry.AceType-Eigenschaft**](iadsaccesscontrolentry-property-methods.md) aufweisen, wird die Berechtigung verweigert.
+5.  Wenn sowohl die ACEs "Everyone" als auch "NT AUTHORITY SELF" den \\ **ADS \_ ACETYPE \_ ACCESS \_ DENIED \_ OBJECT-Wert** für die [**IADsAccessControlEntry.AceType-Eigenschaft**](iadsaccesscontrolentry-property-methods.md) haben, wird die Berechtigung verweigert.
 
 ## <a name="example-code"></a>Beispielcode
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie mithilfe des LDAP-Anbieters ermitteln, ob die Berechtigung "Benutzer kann Kennwort nicht ändern" verwendet wird.
+Im folgenden Codebeispiel wird gezeigt, wie Sie mithilfe des LDAP-Anbieters ermitteln, ob die Kennwortberechtigung des Benutzers nicht geändert werden kann.
 
 
 ```C++
@@ -414,10 +414,10 @@ HRESULT UserCannotChangePassword(LPCWSTR pwszUserDN,
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie sie die Berechtigung Benutzer kann Kennwort nicht ändern mithilfe des LDAP-Anbieters bestimmen.
+Im folgenden Codebeispiel wird gezeigt, wie Sie die Berechtigung "Benutzer kann Kennwort nicht ändern" mithilfe des LDAP-Anbieters bestimmen.
 
 > [!Note]  
-> Das folgende Codebeispiel funktioniert nur für Domänen, in denen die primäre Sprache Englisch ist, da die Zeichenfolgen "Jeder" und "NT AUTHORITY \\ SELF" basierend auf der Sprache des ersten Domänencontrollers in der Domäne lokalisiert werden. Es gibt keine Möglichkeit in Visual Basic, die Kontonamen für einen bekannten Sicherheitsprinzipal abzurufen, ohne die [**LookupAccountSid-Funktion**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) aufzurufen. Wenn Sie Visual Basic verwenden, wird empfohlen, den WinNT-Anbieter zu verwenden, um die Berechtigung User Cannot Change Password (Benutzer kann Kennwort nicht ändern) zu bestimmen, wie unter [Lesen von User Cannot Change Password (WinNT Provider)](reading-user-cannot-change-password-winnt-provider.md)gezeigt.
+> Das folgende Codebeispiel funktioniert nur für Domänen, in denen die primäre Sprache Englisch ist, da die Zeichenfolgen "Everyone" und "NT AUTHORITY SELF" basierend auf der Sprache des ersten Domänencontrollers in der Domäne lokalisiert \\ werden. Es gibt keine Möglichkeit, Visual Basic Kontonamen für einen bekannten Sicherheitsprinzipal ohne Aufrufen der [**LookupAccountSid-Funktion zu**](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) erhalten. Wenn Sie Visual Basic verwenden, wird empfohlen, den WinNT-Anbieter zu verwenden, um die Berechtigung Benutzer kann Kennwort nicht ändern zu bestimmen, wie unter Lesen von Benutzer kann Kennwort nicht geändert [(WinNT-Anbieter) gezeigt wird.](reading-user-cannot-change-password-winnt-provider.md)
 
  
 

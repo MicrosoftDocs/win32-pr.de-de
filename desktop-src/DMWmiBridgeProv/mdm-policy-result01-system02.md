@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_System02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ System02-Klasse stellt die verfügbaren System Richtlinien dar.
+description: Die Klasse MDM \_ Policy \_ Result01 \_ System02 stellt die verfügbaren Systemrichtlinien dar.
 ms.assetid: 9A0D9688-9062-429F-897F-75705DC8FD79
 keywords:
 - MDM_Policy_Result01_System02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffedc3c4e0eda857c071a3174690ad9677fd97da
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 15c4ea62ee18a2e5cbba25bb561fe2aefe1ced581d0bea51889ac2ddab1195c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694630"
 ---
-# <a name="mdm_policy_result01_system02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ System02-Klasse
+# <a name="mdm_policy_result01_system02-class"></a>MDM \_ Policy \_ Result01 \_ System02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ System02** -Klasse stellt die verfügbaren System Richtlinien dar. Diese Richtlinien bestimmen System Konfigurationen, die zulässig sind.
+Die **Klasse MDM Policy \_ \_ Result01 \_ System02** stellt die verfügbaren Systemrichtlinien dar. Diese Richtlinien bestimmen die zulässigen Systemkonfigurationen.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -60,17 +60,17 @@ class MDM_Policy_Result01_System02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ System02** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ Result01 \_ System02-Klasse der MDM-Richtlinie** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ System02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ System02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowbuildpreview](/windows/client-management/mdm/policy-csp-system#system-allowbuildpreview)
+[AllowBuildPreview](/windows/client-management/mdm/policy-csp-system#system-allowbuildpreview)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,7 +81,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zugwembeddedmode](/windows/client-management/mdm/policy-csp-system#system-allowembeddedmode)
+[AllowEmbeddedMode](/windows/client-management/mdm/policy-csp-system#system-allowembeddedmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -92,7 +92,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnungs Datei](/windows/client-management/mdm/policy-csp-system#system-allowexperimentation)
+[AllowExperimentation](/windows/client-management/mdm/policy-csp-system#system-allowexperimentation)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -103,7 +103,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowfontproviders](/windows/client-management/mdm/policy-csp-system#system-allowfontproviders)
+[AllowFontProviders](/windows/client-management/mdm/policy-csp-system#system-allowfontproviders)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -147,7 +147,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["Zuordnung"](/windows/client-management/mdm/policy-csp-system#system-allowusertoresetphone)
+[AllowUserToResetPhone](/windows/client-management/mdm/policy-csp-system#system-allowusertoresetphone)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -158,10 +158,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Bootstartdriverinitialization](/windows/client-management/mdm/policy-csp-system#system-bootstartdriverinitialization)
+[BootStartDriverInitialization](/windows/client-management/mdm/policy-csp-system#system-bootstartdriverinitialization)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -180,7 +180,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableonedrivefilesync](/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+[DisableOneDriveFileSync](/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -191,10 +191,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablesystemrestore](/windows/client-management/mdm/policy-csp-system#system-disablesystemrestore)
+[DisableSystemRestore](/windows/client-management/mdm/policy-csp-system#system-disablesystemrestore)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -202,7 +202,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Feedbackhubalwayssavediagnosticslosch](/windows/client-management/mdm/policy-csp-system#system-feedbackhubalwayssavediagnosticslocally)
+[FeedbackHubAlwaysSaveDiagnosticsLocally](/windows/client-management/mdm/policy-csp-system#system-feedbackhubalwayssavediagnosticslocally)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -216,16 +216,16 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "System".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "System".
 
 </dd> <dt>
 
@@ -240,26 +240,26 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
-[Telemetryproxy](/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
+[TelemetryProxy](/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -273,10 +273,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -285,7 +285,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

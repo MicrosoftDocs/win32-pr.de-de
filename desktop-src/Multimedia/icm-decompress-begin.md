@@ -1,9 +1,9 @@
 ---
-title: ICM_DECOMPRESS_BEGIN Meldung (VFW. h)
-description: Die ICM \_ dekomprimieren \_ Begin-Meldung benachrichtigt einen Video Dekomprimierung-Treiber, um die Dekomprimierung von Daten vorzubereiten. Sie können diese Nachricht explizit oder mithilfe des icdecompressbegin-Makros senden.
+title: ICM_DECOMPRESS_BEGIN (Vfw.h)
+description: Die ICM DECOMPRESS BEGIN-Nachricht benachrichtigt einen Videodekomprimierungstreiber, um die Dekomprimierung \_ \_ von Daten vorzubereiten. Sie können diese Nachricht explizit oder mithilfe des Makros ICDecompressBegin senden.
 ms.assetid: 24cd5220-d473-4968-8678-b00670eecf8f
 keywords:
-- ICM_DECOMPRESS_BEGIN-Nachricht (Multimedia)
+- ICM_DECOMPRESS_BEGIN-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59b8f55ebb5543c73e0d7a9c9ee800fabfc483d8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f1d26a0ea99f089d558da639dfad99d4551237b180e595912973e0d22f634f5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119678350"
 ---
-# <a name="icm_decompress_begin-message"></a>ICM- \_ Dekomprimierungs \_ anfangs Nachricht
+# <a name="icm_decompress_begin-message"></a>\_ICM DECOMPRESS \_ BEGIN-Nachricht
 
-Die **ICM \_ dekomprimieren \_ Begin** -Meldung benachrichtigt einen Video Dekomprimierung-Treiber, um die Dekomprimierung von Daten vorzubereiten. Sie können diese Nachricht explizit oder mithilfe des [**icdecompressbegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin) -Makros senden.
+Die **ICM \_ DECOMPRESS \_ BEGIN-Nachricht** benachrichtigt einen Videodekomprimierungstreiber, um die Dekomprimierung von Daten vorzubereiten. Sie können diese Nachricht explizit oder mithilfe des [**Makros ICDecompressBegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressbegin) senden.
 
 
 ```C++
@@ -38,31 +38,31 @@ lParam = (DWORD_PTR) (LPVOID) lpbiOutput;
 
 <dl> <dt>
 
-<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiinput*
+<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiInput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Eingabeformat enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Eingabeformat enthält.
 
 </dd> <dt>
 
-<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbioutput*
+<span id="lpbiOutput"></span><span id="lpbioutput"></span><span id="LPBIOUTPUT"></span>*lpbiOutput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das Ausgabeformat enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das Ausgabeformat enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ICERR \_ OK zurück, wenn die angegebene Dekomprimierung unterstützt wird oder andernfalls ICERR \_ badformat.
+Gibt ICERR \_ OK zurück, wenn die angegebene Dekomprimierung unterstützt wird, andernfalls ICERR \_ BADFORMAT.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Treiber diese Nachricht empfängt, sollte er Puffer zuordnen und zeitaufwändige Vorgänge ausführen, damit [**ICM \_**](icm-decompress.md) -Nachrichten effizient verarbeitet werden können.
+Wenn der Treiber diese Nachricht empfängt, sollte er Puffer zuordnen und zeitaufwändige Vorgänge für die effiziente Verarbeitung ICM [**\_ DECOMPRESS-Nachrichten**](icm-decompress.md) erledigen.
 
-Wenn Sie möchten, dass der Treiber Daten direkt auf dem Bildschirm dekomprimiert, senden Sie die [**ICM \_ Draw**](icm-draw.md) -Nachricht.
+Wenn der Treiber Daten direkt auf dem Bildschirm dekomprimieren soll, senden Sie die ICM [**\_ DRAW-Nachricht.**](icm-draw.md)
 
-Die **ICM- \_ Dekomprimierungs \_ Begin** -und [**ICM \_ Decompress \_**](icm-decompress-end.md) -Meldungen werden nicht geschachtelt. Wenn der Treiber **ICM \_ Decompress \_** vor dem Beenden der Dekomprimierung mit **ICM \_ Decompress \_ Beenden** empfängt, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
+Die **ICM \_ DECOMPRESS \_ BEGIN-** [**und ICM \_ DECOMPRESS \_ END-Meldungen**](icm-decompress-end.md) werden nicht geschachtelt. Wenn Ihr Treiber ICM **\_ DECOMPRESS \_ BEGIN** empfängt, bevor die Dekomprimierung mit ICM **\_ DECOMPRESS \_ END** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Die **ICM- \_ Dekomprimierungs \_ Begin** -und [**ICM \_ Decompress \_**](icm-de
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Die **ICM- \_ Dekomprimierungs \_ Begin** -und [**ICM \_ Decompress \_**](icm-de
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

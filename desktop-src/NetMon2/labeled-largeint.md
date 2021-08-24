@@ -1,7 +1,7 @@
 ---
-description: Die bezeichnete \_ largeint-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter largeint-Eigenschafts Wert erkannt wird.
+description: Die LABELED \_ LARGEINT-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter LARGEINT-Eigenschaftswert erkannt wird.
 ms.assetid: ca565be0-96bb-4265-9422-793db0723563
-title: LABELED_LARGEINT Struktur (Netmon. h)
+title: LABELED_LARGEINT-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 4de92c3e67567ef86bb3d46905e595bd9d54c194
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fab2942a2a5188527c57663af0c6000aa2cb628eaa2499eef054854df9187784
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778770"
 ---
-# <a name="labeled_largeint-structure"></a>Bezeichnung \_ largeint-Struktur
+# <a name="labeled_largeint-structure"></a>BEZEICHNETE \_ LARGEINT-Struktur
 
-Die **bezeichnete \_ largeint** -Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter largeint-Eigenschafts Wert erkannt wird.
+Die **LABELED \_ LARGEINT-Struktur** definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter LARGEINT-Eigenschaftswert erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ typedef struct _LABELED_LARGEINT {
 **Wert**
 </dt> <dd>
 
-Largeint-Wert der Eigenschaft, die Sie erkennen möchten.
+LARGEINT-Wert der Eigenschaft, die Sie erkennen möchten.
 
 </dd> <dt>
 
 **Label**
 </dt> <dd>
 
-Die Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene largeint-Wert erkannt wird.
+Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene LARGEINT-Wert erkannt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **lplabeledlargeintting** -Member der [set](set.md) -Struktur verweist auf ein Array von **set** -Strukturen, die ein **oder mehrere** Bezeichnungs Member der largeint-Wertpaare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung anstelle eines bestimmten largeint-Werts anzeigen möchten, der in einem Protokoll Paket enthalten ist.
+Der **lpLabeledLargeIntTable-Member** der [SET-Struktur](set.md) zeigt auf ein Array von **SET-Strukturen,** die ein oder mehrere **Label-Member** der LARGEINT-Wertpaare definieren. Die Paare werden verwendet, wenn Sie anstelle eines bestimmten LARGEINT-Werts, der sich in einem Protokollpaket befindet, eine Bezeichnung anzeigen möchten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Der **lplabeledlargeintting** -Member der [set](set.md) -Struktur verweist auf e
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

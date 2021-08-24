@@ -1,11 +1,11 @@
 ---
 title: Win32_TSIssuedLicense-Klasse
-description: Beschreibt Instanzen von Remotedesktopdienste Client Zugriffs Lizenzen pro Gerät (RDS \ 160; Pro-Gerät-CALs), die von einem Remotedesktop Lizenzserver ausgestellt werden.
+description: Beschreibt Instanzen von Remotedesktopdienste Clientzugriffslizenzen pro Gerät (RDS \ 160; CaLs pro Gerät), die von einem lizenzseitigen Remotedesktop ausgestellt werden.
 ms.assetid: 15825dc5-9ada-4c11-ac77-beb681e9b33c
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSIssuedLicense-Klasse Remotedesktopdienste
-- Win32_TSIssuedLicense Klasse Remotedesktopdienste, beschrieben
+- Win32_TSIssuedLicense-Remotedesktopdienste
+- Win32_TSIssuedLicense klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c3d08a68ddcc15a912de4c674403928211a297e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b76127d41c6a571b6bc75bc74378b21f76f4b38c05f0a223d36e979dccf89a4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656160"
 ---
-# <a name="win32_tsissuedlicense-class"></a>Win32- \_ Klasse "tsissuedlicense"
+# <a name="win32_tsissuedlicense-class"></a>Win32 \_ TSIssuedLicense-Klasse
 
-Beschreibt Instanzen von Remotedesktopdienste pro Geräte-Client Zugriffs Lizenzen (RDS pro Gerät CALs), die von einem Remotedesktop Lizenzserver ausgestellt werden.
+Beschreibt Instanzen von Remotedesktopdienste Clientzugriffslizenzen pro Gerät (RDS per Device CALs), die von einem Remotedesktop ausgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,20 +54,20 @@ class Win32_TSIssuedLicense
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ tsissuedlicense** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSIssuedLicense-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ tsissuedlicense** " verfügt über diese Methoden.
+Die **Win32 \_ TSIssuedLicense-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                         | BESCHREIBUNG                                                                                               |
+| Methode                                         | Beschreibung                                                                                               |
 |:-----------------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| [**Erteilte**](revoke-win32-tsissuedlicense.md) | Widerruft die RDS-CALs pro Gerät, die durch das Win32-Objekt " **\_ tsissuedlicense** " dargestellt werden.<br/> |
+| [**Widerrufen**](revoke-win32-tsissuedlicense.md) | Widerruft die RDS-CALs pro Gerät, die durch das **Win32 \_ TSIssuedLicense-Objekt dargestellt** werden.<br/> |
 
 
 
@@ -75,14 +75,14 @@ Die Win32-Klasse " **\_ tsissuedlicense** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ tsissuedlicense** " verfügt über diese Eigenschaften.
+Die **Win32 \_ TSIssuedLicense-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ExpirationDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -95,7 +95,7 @@ Gibt das Datum an, an dem die Lizenz abläuft.
 **IssueDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -105,10 +105,10 @@ Gibt das Datum an, an dem die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**Keypackid**
+**KeyPackId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -117,14 +117,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Identifiziert das Remotedesktopdienste License Key Pack.
+Identifiziert das Remotedesktopdienste Lizenzschlüsselpaket.
 
 </dd> <dt>
 
-**Licenseid**
+**LicenseId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -140,13 +140,13 @@ Eindeutiger Bezeichner für diese Lizenz.
 **LicenseStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Status der Lizenz.
+Status der Lizenz.
 
 <dt>
 
@@ -188,7 +188,7 @@ Die Lizenz wurde widerrufen.
 5
 </dt> <dd>
 
-Der Lizenzstatus ist "Ausstehend".
+Der Lizenzstatus steht aus.
 
 </dd> <dt>
 
@@ -201,50 +201,50 @@ Die Lizenz ist eine gleichzeitige Lizenz.
 
 </dd> <dt>
 
-**shardwareid**
+**sHardwareId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Hardware Bezeichner, für den die Lizenz ausgestellt wurde.
+Hardwarebezeichner, für den die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**sissuedto Computer**
+**sIssuedToComputer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computers, für den die Lizenz ausgestellt wurde.
+Computername, für den die Lizenz ausgestellt wurde.
 
 </dd> <dt>
 
-**sissuedtouser**
+**sIssuedToUser**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Benutzername, für den die Lizenz ausgestellt wurde.
+Benutzername, für den die Lizenz ausgestellt wurde.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Klasse verwenden zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Klasse verwenden zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -255,7 +255,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -264,16 +264,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-Schlüssel-Lizenz-Schlüssel \_ ACK**](win32-tslicensekeypack.md)
+[**Win32 \_ TSLicenseKeyPack**](win32-tslicensekeypack.md)
 </dt> <dt>
 
-[**Win32-Datei- \_ /licensereport**](win32-tslicensereport.md)
+[**Win32 \_ TSLicenseReport**](win32-tslicensereport.md)
 </dt> <dt>
 
-[**Win32-Wert für "- \_ Lizenzserver"**](win32-tslicensereportentry.md)
+[**Win32 \_ TSLicenseReportEntry**](win32-tslicensereportentry.md)
 </dt> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

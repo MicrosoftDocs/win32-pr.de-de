@@ -1,9 +1,9 @@
 ---
-title: D1115-Enumerationswert ist ungültig.
-description: D1115-Enumerationswert ist ungültig.
+title: D1115-Enumerationswert ungültig
+description: D1115-Enumerationswert ungültig
 ms.assetid: cfffd2b8-a7d3-4a60-8586-81d8435936a6
 keywords:
-- D1115-Enumerationswert ungültig Direct2D
+- D1115-Enumerationswert Ungültiges Direct2D
 topic_type:
 - apiref
 api_name:
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: edcfe70c67e61a3b8bfc435adfdaa017a1c62b22
-ms.sourcegitcommit: 80ee822f6ebcbcc8f60042e0d14a39ef6989c731
+ms.openlocfilehash: 11800acaae350b5289b339738448300c91db32a16c0d3f3d9224f08b6079fba2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "106360469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758120"
 ---
-# <a name="d1115-enumeration-value-not-valid"></a>D1115: der Enumerationswert ist ungültig.
+# <a name="d1115-enumeration-value-not-valid"></a>D1115: Enumerationswert ungültig
 
-Der Parameter Parameter mit dem Wert "Value" für die " \[  \] \[  \] *Interface*::*method* " ist kein gültiger Enumerationswert.
+Der \[ *Parameterparameter* \] mit dem \[ *Wertwert* für die \] *Schnittstelle*::*-Methode* ist kein gültiger Enumerationswert.
 
 ## <a name="placeholders"></a>Platzhalter
 
 <dl> <dt>
 
-<span id="parameter"></span><span id="PARAMETER"></span>*Parame*
+<span id="parameter"></span><span id="PARAMETER"></span>*Parameter*
 </dt> <dd>
 
 Der Name des Parameters, der den unerwarteten Typ empfangen hat.
@@ -41,14 +41,14 @@ Der ungültige Enumerationswert.
 
 </dd> <dt>
 
-<span id="interface"></span><span id="INTERFACE"></span>*berfläche*
+<span id="interface"></span><span id="INTERFACE"></span>*Schnittstelle*
 </dt> <dd>
 
 Der Name der Schnittstelle, zu der die *Methode* gehört.
 
 </dd> <dt>
 
-<span id="method"></span><span id="METHOD"></span>*anzuwenden*
+<span id="method"></span><span id="METHOD"></span>*Methode*
 </dt> <dd>
 
 Der Name der Methode, die den ungültigen Enumerationswert empfangen hat.
@@ -62,7 +62,7 @@ Der Name der Methode, die den ungültigen Enumerationswert empfangen hat.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird der Enumerationswert " [**D2D1 \_ Rendering \_ Target \_ Type**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) " von 30 angegeben, der außerhalb des erwarteten Bereichs liegt.
+Im folgenden Beispiel wird der [**D2D1 \_ RENDER \_ TARGET \_ TYPE-Enumerationswert**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) 30 angegeben, der außerhalb des erwarteten Bereichs liegt.
 
 
 ```C++
@@ -75,7 +75,7 @@ Im folgenden Beispiel wird der Enumerationswert " [**D2D1 \_ Rendering \_ Target
 
 
 
-Dieses Beispiel erzeugt die folgende Debugmeldung:
+In diesem Beispiel wird die folgende Debugmeldung erzeugt:
 
 ``` syntax
 D2D DEBUG ERROR - The parameter [renderTargetProperties->type] with value [30] 
@@ -88,10 +88,10 @@ Ein Parameter hat einen ungültigen Enumerationswert verwendet.
 
 ## <a name="fixes"></a>Fehlerbehebungen
 
-Verwenden Sie einen gültigen-Enumerationswert.
+Verwenden Sie einen gültigen Enumerationswert.
 
 > [!Note]  
-> Die debugschicht überprüft derzeit nur die einzelnen Enumerationswerte. Es wird nicht überprüft, ob eine bitweise Kombination gültig ist.
+> Die Debugebene überprüft derzeit nur die einzelnen Enumerationswerte. es überprüft nicht, ob eine bitweise Kombination gültig ist.
 
  
 

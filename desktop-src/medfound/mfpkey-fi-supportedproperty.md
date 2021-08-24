@@ -1,31 +1,31 @@
 ---
-description: Gibt an, ob der Decoder Frame Interpolation unterstützt.
+description: Gibt an, ob der Decoder die Frameinterpolation unterstützt.
 ms.assetid: cc7fb83d-8423-4e0a-a520-b58d3345ef89
-title: MFPKEY_FI_SUPPORTED-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_FI_SUPPORTED-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bd056ec0895b63d315c5f3371ab7befff7ca85a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4504e3bf6b6010fb27c08750e521aaa740b05f78c434dfac5a11ffacbbd66327
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713950"
 ---
-# <a name="mfpkey_fi_supported-property"></a>Unterstützte mfpkey \_ fi- \_ Eigenschaft
+# <a name="mfpkey_fi_supported-property"></a>MFPKEY \_ FI \_ SUPPORTED-Eigenschaft
 
-Gibt an, ob der Decoder Frame Interpolation unterstützt.
+Gibt an, ob der Decoder die Frameinterpolation unterstützt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-**g \_ wszwmvcframeinterpolationsupported**
+**g \_ wszWMVCFrameInterpolationSupported**
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="default-value"></a>Standardwert
 
-**Variant \_ false**
+**VARIANT \_ FALSE**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,7 +34,7 @@ Gibt an, ob der Decoder Frame Interpolation unterstützt.
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows XP, Windows Vista oder Windows 7<br/>                                       |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -42,10 +42,10 @@ Gibt an, ob der Decoder Frame Interpolation unterstützt.
 
 <dl> <dt>
 
-[**mfpkey \_ fi \_ aktiviert**](mfpkey-fi-enabledproperty.md)
+[**MFPKEY \_ FI \_ AKTIVIERT**](mfpkey-fi-enabledproperty.md)
 </dt> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

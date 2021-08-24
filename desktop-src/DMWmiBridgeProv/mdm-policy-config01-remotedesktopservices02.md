@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_RemoteDesktopServices02-Klasse
-description: Die MDM \_ -Richtlinie \_ Config01 \_ RemoteDesktopServices02-Klasse konfiguriert die Richtlinien für den Remote Desktop Dienst.
+description: Die MDM \_ Policy \_ Config01 \_ RemoteDesktopServices02-Klasse konfiguriert die Remotedesktopdienstrichtlinien.
 ms.assetid: d2c53be7-6dec-4603-b851-e9c979475496
 keywords:
 - MDM_Policy_Config01_RemoteDesktopServices02-Klasse
-- MDM_Policy_Config01_RemoteDesktopServices02-Klasse, beschrieben
+- MDM_Policy_Config01_RemoteDesktopServices02-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5a023ae44c7b8ab170d4efe9c38aaacdeca3cc6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 530fd2be50979f9c6dc14426acdaf57cb72fd379f749d900a5d4c1cdc046cf72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694810"
 ---
-# <a name="mdm_policy_config01_remotedesktopservices02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ RemoteDesktopServices02-Klasse
+# <a name="mdm_policy_config01_remotedesktopservices02-class"></a>MDM \_ Policy \_ Config01 \_ RemoteDesktopServices02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM \_ -Richtlinie \_ Config01 \_ RemoteDesktopServices02-Klasse konfiguriert die Richtlinien für den Remote Desktop Dienst.
+Die MDM \_ Policy \_ Config01 \_ RemoteDesktopServices02-Klasse konfiguriert die Remotedesktopdienstrichtlinien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -51,20 +51,20 @@ class MDM_Policy_Config01_RemoteDesktopServices02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ RemoteDesktopServices02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ RemoteDesktopServices02-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ RemoteDesktopServices02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ RemoteDesktopServices02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Zuordnung von "zugebeserstoconnectremutly"](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely)
+[AllowUsersToConnectRemotely](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,10 +72,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Clientconnectionverschlüsselunglevel](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-clientconnectionencryptionlevel)
+[ClientConnectionEncryptionLevel](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-clientconnectionencryptionlevel)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -83,10 +83,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotallowdriveredirection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection)
+[DoNotAllowDriveRedirection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -94,10 +94,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotallowpasswordsave](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowpasswordsaving)
+[DoNotAllowPasswordSaving](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowpasswordsaving)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -108,35 +108,35 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Promptforpassworduponconnection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-promptforpassworduponconnection)
+[PromptForPasswordUponConnection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-promptforpassworduponconnection)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -144,10 +144,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements securerpccommunication](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-requiresecurerpccommunication)
+[RequireSecureRPCCommunication](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-requiresecurerpccommunication)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -161,10 +161,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

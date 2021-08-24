@@ -1,23 +1,23 @@
 ---
 title: Tunnel Modus
-description: Im Tunnel Modus-IPSec-Richtlinien Szenario wird der IPSec-tunnelmodusschutz für den gesamten übereinstimmenden Datenverkehr zwischen zwei Tunnel Endpunkten angewendet.
+description: Das Tunnel IPsec-Richtlinienszenario im IPsec-Modus wird verwendet, um den IPsec-Tunnelmodusschutz für den abgleichenden Datenverkehr zwischen zwei Tunnelendpunkten anzuwenden.
 ms.assetid: 170046c5-28ec-4341-89e2-93494bf9c6b8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a75fdecb7f959a2f95aae2649a6e3f8f94def9b3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fbac16de0dc01bc37e0e4f4b997d00d19339de021ffce66a0d3cf6957addbe90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119639070"
 ---
 # <a name="tunnel-mode"></a>Tunnel Modus
 
-Im Tunnel Modus-IPSec-Richtlinien Szenario wird der IPSec-tunnelmodusschutz für den gesamten übereinstimmenden Datenverkehr zwischen zwei Tunnel Endpunkten angewendet.
+Das Tunnel IPsec-Richtlinienszenario im IPsec-Modus wird verwendet, um den IPsec-Tunnelmodusschutz für den abgleichenden Datenverkehr zwischen zwei Tunnelendpunkten anzuwenden.
 
-Dieses Richtlinien Szenario wird normalerweise verwendet, um den Datenverkehr zwischen mehreren Zweigstellen Subnetzen zu schützen, wenn dieser zwischen den entsprechenden Gateways im Internet weitergeleitet wird. Sie kann auch verwendet werden, um die End-to-End-Kommunikation zwischen zwei Host Computern zu sichern, auch als Punkt-zu-Punkt-Tunnel bezeichnet.
+Dieses Richtlinienszenario wird in der Regel zum Schutz des Datenverkehrs zwischen mehreren Subnetzen der Filiale verwendet, wenn er zwischen den entsprechenden Gateways im Internet weitergeleitet wird. Sie kann auch verwendet werden, um die End-to-End-Kommunikation zwischen zwei Hostcomputern zu schützen, die auch als Punkt-zu-Punkt-Tunnel bezeichnet werden.
 
-Um eine tunnelmodusrichtlinie mithilfe der Windows-Filter Plattform (WFP) zu implementieren, nennen Sie die [**FwpmIPsecTunnelAdd0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmipsectunneladd0) -Funktion, die die entsprechenden Tunnel Modusfilter auf den entsprechenden Ebenen im Namen des Aufrufers instanziiert. Der Aufrufer muss den Hauptmodus, den Schnellmodus-Anbieter Kontext und die Filterbedingungen angeben, die den Datenverkehr beschreiben, der innerhalb des Tunnels gesichert werden soll.
+Um die Tunnel Mode-Richtlinie mithilfe der Windows Filtering Platform (WFP) zu implementieren, rufen Sie die [**FwpmIPsecTunnelAdd0-Funktion**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmipsectunneladd0) auf, die die entsprechenden Tunnelmodusfilter auf den entsprechenden Ebenen im Namen des Aufrufers instanziiert. Der Aufrufer muss den Hauptmodus, die Anbieterkontexte im Schnellmodus und die Filterbedingungen angeben, die den Datenverkehr beschreiben, der innerhalb des Tunnels geschützt werden soll.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -26,12 +26,12 @@ Um eine tunnelmodusrichtlinie mithilfe der Windows-Filter Plattform (WFP) zu imp
 [Beispielcode: Verwenden des Tunnel Modus](using-tunnel-mode.md)
 </dt> <dt>
 
-[**Filtern von ebenenbezeichgern**](management-filtering-layer-identifiers-.md)
+[**Filtern von Ebenenbezeichnern**](management-filtering-layer-identifiers-.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

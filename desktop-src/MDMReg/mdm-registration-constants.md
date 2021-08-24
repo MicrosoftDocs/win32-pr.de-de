@@ -68,12 +68,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb62977a48400866e9fa8829696c884e58e54325
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 2ff5c73941b0235788772522f5551f73faea30d06e91e582dcdbe97433ca85c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119638460"
 ---
 # <a name="mdm-registration-error-values"></a>Fehlerwerte für die MDM-Registrierung
 
@@ -150,7 +150,7 @@ Der Server konnte den Benutzer nicht authentifizieren.
 
 </dt> </dl> </dd> <dt>
 
-<span id="MREGISTER_E_DEVICE_AUTHORIZATION_ERROR"></span><span id="mregister_e_device_authorization_error"></span>**MREGISTER \_ E \_ DEVICE \_ AUTHORIZATION \_ ERROR**
+<span id="MREGISTER_E_DEVICE_AUTHORIZATION_ERROR"></span><span id="mregister_e_device_authorization_error"></span>**MREGISTER \_ E DEVICE AUTHORIZATION ERROR (MREGISTER \_ \_ E-GERÄTEAUTORISIERUNGSFEHLER) \_**
 </dt> <dd> <dl> <dt>
 
 0x80190003
@@ -158,12 +158,12 @@ Der Server konnte den Benutzer nicht authentifizieren.
 
 
 
-Der Benutzer ist nicht für die Registrierung autorisiert.
+Der Benutzer ist nicht berechtigt, sich zu registrieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="MENROLL_E_DEVICE_AUTHORIZATION_ERROR"></span><span id="menroll_e_device_authorization_error"></span>**MENROLL \_ \_ E-GERÄTEAUTORISIERUNGSFEHLER \_ \_**
+<span id="MENROLL_E_DEVICE_AUTHORIZATION_ERROR"></span><span id="menroll_e_device_authorization_error"></span>**MENROLL \_ E \_ DEVICE \_ AUTHORIZATION \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 0x80180003
@@ -171,9 +171,9 @@ Der Benutzer ist nicht für die Registrierung autorisiert.
 
 
 
-Der Benutzer ist nicht für die Registrierung autorisiert.
+Der Benutzer ist nicht berechtigt, sich zu registrieren.
 
-**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
+**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
 
 </dt> </dl> </dd> <dt>
@@ -201,7 +201,7 @@ Der Benutzer hat keine Berechtigung für die Zertifikatvorlage, oder die Zertifi
 
 Der Benutzer hat keine Berechtigung für die Zertifikatvorlage, oder die Zertifizierungsstelle ist nicht erreichbar.
 
-**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
+**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
 
 </dt> </dl> </dd> <dt>
@@ -242,7 +242,7 @@ Auf dem Verwaltungsserver ist ein Fehler aufgetreten, z. B. ein Datenbankzugriff
 
 
 
-Es gab eine nicht behandelte Ausnahme auf dem Server.
+Auf dem Server ist eine nicht behandelte Ausnahme vorgehanden.
 
 
 </dt> </dl> </dd> <dt>
@@ -270,7 +270,7 @@ Auf dem Server ist eine nicht behandelte Ausnahme vorgehanden.
 
 
 
-Es gab eine nicht behandelte Ausnahme auf dem Server.
+Auf dem Server ist eine nicht behandelte Ausnahme vorgehanden.
 
 
 </dt> </dl> </dd> <dt>
@@ -283,7 +283,7 @@ Es gab eine nicht behandelte Ausnahme auf dem Server.
 
 
 
-Es gab eine nicht behandelte Ausnahme auf dem Server.
+Auf dem Server ist eine nicht behandelte Ausnahme vorgehanden.
 
 **Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
@@ -313,12 +313,12 @@ Unbekannter Serverfehler.
 
 Unbekannter Serverfehler.
 
-**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
+**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="MREGISTER_E_REGISTRATION_IN_PROGRESS"></span><span id="mregister_e_registration_in_progress"></span>**MREGISTER \_ E REGISTRATION IN \_ \_ \_ BEARBEITUNG**
+<span id="MREGISTER_E_REGISTRATION_IN_PROGRESS"></span><span id="mregister_e_registration_in_progress"></span>**MREGISTER \_ \_ E-REGISTRIERUNG \_ WIRD \_ DURCHGEFÜHRT**
 </dt> <dd> <dl> <dt>
 
 0x80190009
@@ -341,7 +341,7 @@ Derzeit wird ein weiterer Registrierungsvorgang durchgeführt.
 
 Derzeit wird ein weiterer Registrierungsvorgang durchgeführt.
 
-**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
+**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
 
 </dt> </dl> </dd> <dt>
@@ -361,7 +361,7 @@ Nicht mehr verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="MENROLL_E_DEVICE_ALREADY_ENROLLED"></span><span id="menroll_e_device_already_enrolled"></span>**MENROLL \_ \_ E-GERÄT \_ BEREITS \_ REGISTRIERT**
+<span id="MENROLL_E_DEVICE_ALREADY_ENROLLED"></span><span id="menroll_e_device_already_enrolled"></span>**MENROLL \_ E \_ DEVICE \_ ALREADY \_ ENROLLED**
 </dt> <dd> <dl> <dt>
 
 0x8018000A
@@ -371,7 +371,7 @@ Nicht mehr verwendet.
 
 Das Gerät ist bereits registriert.
 
-**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
+**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
 
 
 </dt> </dl> </dd> <dt>
@@ -391,7 +391,7 @@ Nicht mehr verwendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="MENROLL_E_DEVICE_NOT_ENROLLED"></span><span id="menroll_e_device_not_enrolled"></span>**MENROLL \_ \_ E-GERÄT \_ NICHT \_ REGISTRIERT**
+<span id="MENROLL_E_DEVICE_NOT_ENROLLED"></span><span id="menroll_e_device_not_enrolled"></span>**MENROLL \_ E \_ DEVICE \_ NOT \_ ENROLLED**
 </dt> <dd> <dl> <dt>
 
 0x8018000B
@@ -461,7 +461,7 @@ Während der Ermittlung war das Datum des Sec-Zertifikats ungültig.
 
 Nicht mehr verwendet.
 
-**Windows 8.1:** Fehler bei der Ermittlung; -Umleitung ist erforderlich.
+**Windows 8.1:** Fehler bei der Ermittlung; Die Umleitung ist erforderlich.
 
 
 </dt> </dl> </dd> <dt>
@@ -476,12 +476,12 @@ Nicht mehr verwendet.
 
 Ein Kennwort ist erforderlich, wurde aber nicht angegeben.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="MENROLL_E_WAB_ERROR"></span><span id="menroll_e_wab_error"></span>**MENROLL \_ E \_ WAB-FEHLER \_**
+<span id="MENROLL_E_WAB_ERROR"></span><span id="menroll_e_wab_error"></span>**MENROLL \_ E \_ WAB \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 0x8018000F
@@ -489,7 +489,7 @@ Ein Kennwort ist erforderlich, wurde aber nicht angegeben.
 
 
 
-Fehler bei der WAB-Registrierung.
+Während der WAB-Registrierung ist ein Fehler aufgetreten.
 
 **Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
@@ -551,7 +551,7 @@ Das SSL-Zertifikat war ungültig.
 
 Der Benutzer hat bereits zu viele Geräte registriert. Löschen Sie alte, oder entfernen Sie die Registrierung, um diesen Fehler zu beheben. Beachten Sie, dass der Benutzer diesen Fehler ohne Administratorunterstützung beheben kann.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -564,9 +564,9 @@ Der Benutzer hat bereits zu viele Geräte registriert. Löschen Sie alte, oder e
 
 
 
-Eine bestimmte Plattform (z. B. Windows) oder Version wird nicht unterstützt. Die allgemeine Fehlerbehebung für diesen Fehler besteht im Upgrade des Geräts.
+Eine bestimmte Plattform (z. B. Windows) oder Version wird nicht unterstützt. Die allgemeine Behebung dieses Fehlers besteht darin, das Gerät zu aktualisieren.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -579,9 +579,9 @@ Eine bestimmte Plattform (z. B. Windows) oder Version wird nicht unterstützt. D
 
 
 
-Die Verwaltung mobiler Geräte wird für dieses Gerät im Allgemeinen nicht unterstützt. Der Benutzer kann den Administrator anrufen, wird dieses Problem jedoch wahrscheinlich nicht beheben.
+Die Verwaltung mobiler Geräte wird für dieses Gerät im Allgemeinen nicht unterstützt. Der Benutzer kann den Administrator anrufen, aber es ist unwahrscheinlich, dass dieses Problem behoben wird.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -594,9 +594,9 @@ Die Verwaltung mobiler Geräte wird für dieses Gerät im Allgemeinen nicht unte
 
 
 
-Das Gerät versucht zu erneuern, aber der Server hat die Anforderung abgelehnt. Überprüfen Sie die Zeit auf dem Gerät. Der Benutzer kann diesen Fehler möglicherweise beheben, indem er sich erneut registriert.
+Das Gerät versucht, sich zu erneuern, aber der Server hat die Anforderung abgelehnt. Überprüfen Sie die Zeit auf dem Gerät. Der Benutzer kann diesen Fehler möglicherweise beheben, indem er sich erneut registriert.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -609,7 +609,7 @@ Das Gerät versucht zu erneuern, aber der Server hat die Anforderung abgelehnt. 
 
 
 
-Das Konto befindet sich in Wartung; Wiederholen Sie den Vorgang später. Der Benutzer kann den Vorgang später wiederholen. Der Benutzer kann jedoch den Administrator aufrufen, um den Wartungszeitplan zu bestimmen.
+Das Konto befindet sich in der Wartung. Wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Der Benutzer kann den Vorgang später wiederholen. Der Benutzer kann jedoch den Administrator aufrufen, um den Wartungszeitplan zu bestimmen.
 
 **Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
@@ -654,7 +654,7 @@ Der Server hat die Registrierungsdaten abgelehnt. Der Server ist möglicherweise
 
 
 
-Der Server hat HTTP anstelle von HTTPS angefordert, aber er wurde nicht akzeptiert.
+Der Server hat HTTP anstelle von HTTPS angefordert, wurde aber nicht akzeptiert.
 
 **Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
@@ -684,9 +684,9 @@ Es wurde ein ungültiger Vorgang versucht, z. B. zweimal dasselbe Gerät zu regi
 
 
 
-Die auf dem Client installierte Windows-Version unterstützt diesen Registrierungstyp nicht.
+Die auf dem Client installierte Version von Windows unterstützt diesen Registrierungstyp nicht.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -701,7 +701,7 @@ Die auf dem Client installierte Windows-Version unterstützt diesen Registrierun
 
 Auf dem Client ist ein unbekannter Fehler aufgetreten.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -716,7 +716,7 @@ Auf dem Client ist ein unbekannter Fehler aufgetreten.
 
 Fehler bei der Bereitstellung im Zertifikatspeicher-CSP.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -729,9 +729,9 @@ Fehler bei der Bereitstellung im Zertifikatspeicher-CSP.
 
 
 
-Fehler bei der Bereitstellung in einem W7/DMAcc-CPP.
+Fehler bei der Bereitstellung in einem W7/DMAcc CPP.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -746,7 +746,7 @@ Fehler bei der Bereitstellung in einem W7/DMAcc-CPP.
 
 Fehler bei der Bereitstellung in einem DM-Client-CSP.
 
-**Windows 8.1:** Diese Konstante ist nicht verfügbar, bevor Windows 10.
+**Windows 8.1:** Diese Konstante ist vor Windows 10 nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -837,7 +837,7 @@ Fehler bei der Bereitstellung im EnterpriseAppManagement-CSP.
 
 
 
-Mobile Geräteverwaltung (MDM) wurde blockiert, möglicherweise durch Gruppenrichtlinie oder die [**SetManagedExternally-Funktion.**](/windows/desktop/api/MDMRegistration/nf-mdmregistration-setmanagedexternally)
+Mobile Geräteverwaltung (MDM) wurde blockiert, möglicherweise durch Gruppenrichtlinie oder die [**Funktion SetManagedExternally.**](/windows/desktop/api/MDMRegistration/nf-mdmregistration-setmanagedexternally)
 
 > [!Note]  
 > Diese Konstante ist vor Windows 10 Version 1709 nicht verfügbar.
@@ -865,7 +865,7 @@ Fehler beim Erstellen des privaten Schlüssels.
 
 </dt> </dl> </dd> <dt>
 
-<span id="MENROLL_E_CERTAUTH_FAILED_TO_FIND_CERT"></span><span id="menroll_e_certauth_failed_to_find_cert"></span>**MENROLL E CERTAUTH FAILED TO FIND CERT (MENROLL \_ E \_ CERTAUTH \_ KONNTE \_ \_ \_ CERT NICHT FINDEN)**
+<span id="MENROLL_E_CERTAUTH_FAILED_TO_FIND_CERT"></span><span id="menroll_e_certauth_failed_to_find_cert"></span>**MENROLL \_ E \_ CERTAUTH \_ FAILED \_ TO \_ FIND \_ CERT**
 </dt> <dd> <dl> <dt>
 
 0x80180028
@@ -873,7 +873,7 @@ Fehler beim Erstellen des privaten Schlüssels.
 
 
 
-Die Zertifikatauthentifizierung wurde angefordert, aber es ist ein Fehler beim Suchen eines zu verwendenden Zertifikats fehlgeschlagen.
+Die Zertifikatauthentifizierung wurde angefordert, es wurde jedoch kein zertifikatsbasiertes Zertifikat gefunden.
 
 > [!Note]  
 > Diese Konstante ist vor Windows 10 Version 1709 nicht verfügbar.
@@ -941,7 +941,7 @@ Mobile Geräteverwaltung (MDM) ist nicht konfiguriert.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                    |
 | Header<br/>                   | <dl> <dt>MDMRegistration.h</dt> </dl> |
 

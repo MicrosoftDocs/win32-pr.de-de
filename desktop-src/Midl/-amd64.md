@@ -1,9 +1,9 @@
 ---
-title: /amd64-Schalter
-description: Der/amd64-Schalter leitet den Mittelwert Compiler zum Generieren von Stub-Dateien oder einer Typbibliotheks Datei für eine erweiterte Micro-Geräte-64-Bit-Umgebung.
+title: /amd64-Switch
+description: Der Schalter /amd64 weist den MIDL-Compiler an, Stubdateien oder eine Typbibliotheksdatei für eine 64-Bit-Umgebung mit erweiterten Mikrogeräten zu generieren.
 ms.assetid: 224e81c0-a43b-4bb9-82ac-38c6c87a71aa
 keywords:
-- /amd64-Schalter-Mittel l
+- /amd64 switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,38 +12,38 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa254e67a0d774c85160e4b6004d1f12c34e0072
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: d5862c91af93a4ffce2602a7e49f06f74b458a4bbb3c15eec93837472862c6a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119638330"
 ---
-# <a name="amd64-switch"></a>/amd64-Schalter
+# <a name="amd64-switch"></a>/amd64-Switch
 
-Der **/amd64** -Schalter leitet den Mittelwert Compiler zum Generieren von Stub-Dateien oder einer Typbibliotheks Datei für eine erweiterte Micro-Geräte-64-Bit-Umgebung.
+Der **Schalter /amd64** weist den MIDL-Compiler an, Stubdateien oder eine Typbibliotheksdatei für eine 64-Bit-Umgebung mit erweiterten Mikrogeräten zu generieren.
 
 ``` syntax
 midl /amd64
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Der **/x64** -Schalter, der in der MIDL.exe-Befehlszeilen Hilfe beschrieben wird, ist veraltet. **/amd64** sollte stattdessen verwendet werden.
+> Der **/x64-Switch,** der von der MIDL.exe Befehlszeilenhilfe beschrieben wird, ist veraltet. Stattdessen sollte **/amd64** verwendet werden.
 
- 
+ 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**/ia64**](-ia64.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

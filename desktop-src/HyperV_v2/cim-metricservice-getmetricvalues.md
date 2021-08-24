@@ -1,7 +1,7 @@
 ---
-description: Bietet die Möglichkeit, eine gefilterte Liste von CIM \_ basemetricvalue-Instanzen zurückzugeben.
+description: Bietet die Möglichkeit, eine gefilterte Liste von CIM \_ BaseMetricValue-Instanzen zurück zu geben.
 ms.assetid: c207a0ef-11f1-42c4-af77-3dcf3fbff8a7
-title: Getmetricvalues-Methode der CIM_MetricService-Klasse
+title: GetMetricValues-Methode der CIM_MetricService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3c84ae9f5128edecfd3dd4cb591f811fdbd86010
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d010128bdef9bec4ce7df5fb3b1021a80a6ac99bdfbaf797958a76b27a812479
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695000"
 ---
-# <a name="getmetricvalues-method-of-the-cim_metricservice-class"></a>Getmetricvalues-Methode der CIM \_ metricservice-Klasse
+# <a name="getmetricvalues-method-of-the-cim_metricservice-class"></a>GetMetricValues-Methode der CIM \_ MetricService-Klasse
 
-Bietet die Möglichkeit, eine gefilterte Liste von [**CIM \_ basemetricvalue**](cim-basemetricvalue.md) -Instanzen zurückzugeben.
+Bietet die Möglichkeit, eine gefilterte Liste von [**CIM \_ BaseMetricValue-Instanzen**](cim-basemetricvalue.md) zurück zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ uint32 GetMetricValues(
 
 <dl> <dt>
 
-*Definition* \[ in\]
+*Definition* \[ In\]
 </dt> <dd>
 
-Gibt eine [**CIM- \_ basemetricdefinition**](cim-basemetricdefinition.md) an, für die Metriken zurückgegeben werden.
+Identifiziert eine [**CIM \_ BaseMetricDefinition,**](cim-basemetricdefinition.md) für die Metriken zurückgegeben werden.
 
 </dd> <dt>
 
-*Bereich* \[ in\]
+*Bereich* \[ In\]
 </dt> <dd>
 
-Gibt an, wie die Instanzen ausgewählt werden. Der Algorithmus zum Anordnen von Wert Instanzen ist metrikdefinitionsspezifisch.
+Gibt an, wie die Instanzen ausgewählt werden. Der Algorithmus zum Ordnen von Wertinstanzen ist metrikdefinitionsspezifisch.
 
 <dt>
 
 <span id="Minimum"></span><span id="minimum"></span><span id="MINIMUM"></span>
 
-**Minimal** (2)
+**Minimum** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -72,35 +72,35 @@ Gibt an, wie die Instanzen ausgewählt werden. Der Algorithmus zum Anordnen von 
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Specific"></span><span id="vendor_specific"></span><span id="VENDOR_SPECIFIC"></span>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Gibt die maximale Anzahl von-Instanzen an, die von der-Methode zurückgegeben werden sollen.
+Gibt die maximale Anzahl von Instanzen an, die von der -Methode zurückgegeben werden sollen.
 
 </dd> <dt>
 
-*Werte* \[ vorgenommen\]
+*Werte* \[ out\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss der-Methode enthält Verweise auf Instanzen von [**CIM \_ basemetricvalue**](cim-basemetricvalue.md), die entsprechend den Werten der Eingabeparameter gefiltert werden.
+Enthält nach erfolgreichem Abschluss der -Methode Verweise auf Instanzen von [**CIM \_ BaseMetricValue,**](cim-basemetricvalue.md)gefiltert nach den Werten der Eingabeparameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -110,13 +110,13 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Reservierte Methode** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -128,7 +128,7 @@ Fehler **(2** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -137,7 +137,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**CIM- \_ metricservice**](cim-metricservice.md)
+[**CIM \_ MetricService**](cim-metricservice.md)
 </dt> </dl>
 
  

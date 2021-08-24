@@ -1,29 +1,29 @@
 ---
-description: Menü Steuerelemente
+description: Menü "Steuerelemente"
 ms.assetid: 1b6f31e3-f228-4169-9c8e-d4a8baec701a
-title: Menü Steuerelemente
+title: Menü "Steuerelemente"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8c72135c97851e6686079e7ebb3b05a86892d7f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01b7b8430729a273435f9052915efdcdf51ec509d85b579472b561fc26592bd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119606050"
 ---
-# <a name="controls-menu"></a>Menü Steuerelemente
+# <a name="controls-menu"></a>Menü "Steuerelemente"
 
-Das Menü Steuer **Elemente** bietet Transport Steuerungsbefehle für eine Topologie, die für die Medien Sitzung festgelegt ist. Dieses Menü wird erst aktiviert, nachdem eine Topologie erfolgreich aufgelöst wurde. Um schnell auf diese Befehle zuzugreifen, können Sie die [topoedit-Symbolleiste](topoedit-toolbar.md)verwenden.
+Das Menü **Steuerelemente** stellt Transportsteuerelementbefehle für eine Topologie bereit, die für die Mediensitzung festgelegt ist. Dieses Menü wird erst aktiviert, nachdem eine Topologie erfolgreich aufgelöst wurde. Um schnell auf diese Befehle zuzugreifen, können Sie die [TopoEdit-Symbolleiste](topoedit-toolbar.md)verwenden.
 
-Das Menü Steuer **Elemente** bietet die folgenden Befehle:
+Im Menü **Steuerelemente** werden die folgenden Befehle angezeigt:
 
 
 
-| Get-Help   | BESCHREIBUNG                                                              |
+| Befehl   | Beschreibung                                                              |
 |-----------|--------------------------------------------------------------------------|
 | **Abspielen**  | Startet die Wiedergabe der zuletzt aufgelösten Topologie.                           |
-| **Beenden**  | Beendet die Wiedergabe der zuletzt aufgelösten Topologie.  |
-| **Anhalten** | Hält die Wiedergabe der zuletzt aufgelösten Topologie an. |
+| **Beenden**  | Beendet die Wiedergabe der zuletzt aufgelösten Topologie, die gerade wiedergegeben wird.  |
+| **Anhalten** | Hält die Wiedergabe der zuletzt aufgelösten Topologie an, die gerade wiedergegeben wird. |
 
 
 
@@ -33,13 +33,13 @@ Das Menü Steuer **Elemente** bietet die folgenden Befehle:
 
 <dl> <dt>
 
-[Wiedergabe Steuerelemente in topoedit](playback-controls-in-topoedit.md)
+[Wiedergabesteuerelemente in TopoEdit](playback-controls-in-topoedit.md)
 </dt> <dt>
 
-[Topoedit-Menüs](topoedit-menus.md)
+[TopoEdit-Menüs](topoedit-menus.md)
 </dt> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

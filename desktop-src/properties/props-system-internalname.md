@@ -1,19 +1,19 @@
 ---
-description: Der Name einer exe-oder DLL-Datei, die in einem Ressourcenabschnitt innerhalb dieser Datei gespeichert ist.
+description: Der Name eines .exe oder .dll, wie er in einem Ressourcenabschnitt in dieser Datei gespeichert ist.
 ms.assetid: a521f727-b024-44ef-98ae-98986254857f
-title: System. InternalName
+title: System.InternalName
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07a1ed9063d19aa0bd2735c6c59626de483173c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75aa55edafe0f66faf6ed5474617738e6a02a01d00e434254514c44c8b7a352f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716780"
 ---
-# <a name="systeminternalname"></a>System. InternalName
+# <a name="systeminternalname"></a>System.InternalName
 
-Der Name einer exe-oder DLL-Datei, die in einem Ressourcenabschnitt innerhalb dieser Datei gespeichert ist.
+Der Name eines .exe oder .dll, wie er in einem Ressourcenabschnitt in dieser Datei gespeichert ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
@@ -30,56 +30,56 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-In der Vergangenheit wurden diese Informationen häufig auf der Eigenschaften Blattseite der Windows- **Xpversion** angezeigt. Unter Windows Vista wurden die Informationen auf die Registerkarte **Details** verschoben. Diese Eigenschaft wurde in Windows Vista bis Service Pack 1 (SP1) jedoch nicht öffentlich gemacht.
+In der Vergangenheit wurden diese Informationen häufig auf der Eigenschaftenblattseite Windows **XP-Version** angezeigt. Unter Windows Vista wurden die Informationen auf die Registerkarte **Details** verschoben. Diese bestimmte Eigenschaft wurde jedoch erst in Windows Vista veröffentlicht, sondern erst in Service Pack 1 (SP1).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

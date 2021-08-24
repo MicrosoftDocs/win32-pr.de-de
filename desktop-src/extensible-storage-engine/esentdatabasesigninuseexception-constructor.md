@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentdatabasesigninuseexception-Konstruktor'
-title: Esentdatabasesigninuseexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseSignInUseException-Konstruktor'
+title: EsentDatabaseSignInUseException-Konstruktor
 TOCTitle: 'EsentDatabaseSignInUseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseSignInUseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasesigninuseexception.esentdatabasesigninuseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 62948d9d338542ce39643839568fbd8f3b4c7694
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 965bbddfa99555481ac8a642ddab2cf8485a0bf0f794d81451e58a071d186654
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119735690"
 ---
-# <a name="esentdatabasesigninuseexception-constructor"></a>Esentdatabasesigninuseexception-Konstruktor
+# <a name="esentdatabasesigninuseexception-constructor"></a>EsentDatabaseSignInUseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasesigninuseexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseSignInUseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDatabaseSignInUseException()
 public EsentDatabaseSignInUseException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasesigninuseexception-Klasse](./esentdatabasesigninuseexception-class.md)
+[EsentDatabaseSignInUseException-Klasse](./esentdatabasesigninuseexception-class.md)
 
-[Esentdatabasesigninuseexception-Member](./esentdatabasesigninuseexception-members.md)
+[EsentDatabaseSignInUseException-Member](./esentdatabasesigninuseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

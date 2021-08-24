@@ -4,12 +4,12 @@ description: Routingprotokolle
 ms.assetid: 85302ad2-77f9-474e-a20f-ae64bfd3b45c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 836c6bcaddafc22243367a4dec98a0faac886ee6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6e0e330e12e30328326b3ae55f8983ebb0bdeb27fdd001082d172d60f960e6d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672680"
 ---
 # <a name="routing-protocols"></a>Routingprotokolle
 
@@ -23,14 +23,14 @@ Die Routing-APIs sind für die Verwendung durch C/C++-Programmierer konzipiert. 
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-Routingprotokolle sind eine serverbasierte Technologie. Alle Funktionen von Routingprotokollen sind in Windows Server 2008, Windows Server 2003 und Windows 2000 Server integriert. Routinganwendungen können nicht auf Clientbetriebssystemen wie Windows XP oder Windows Vista ausgeführt werden. Spezifischere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten anforderungen in der Dokumentation.
+Routingprotokolle sind eine serverbasierte Technologie. Alle Funktionen von Routingprotokollen sind in Windows Server 2008, Windows Server 2003 und Windows 2000 Server integriert. Routinganwendungen können nicht auf Clientbetriebssystemen wie Windows XP oder Windows Vista ausgeführt werden. Ausführlichere Informationen dazu, welche Betriebssysteme eine bestimmte Funktion unterstützen, finden Sie in den Abschnitten zu Anforderungen in der Dokumentation.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Multicastgruppen-Manager](about-multicast-group-manager.md)
 -   [Routingprotokollschnittstelle](about-routing-protocol-interface.md)
--   [Routingtabellen-Manager Version 1](about-routing-table-manager-version-1.md)
--   [Routingtabellen-Manager Version 2](about-routing-table-manager-version-2.md)
+-   [Routingtabellen-Manager, Version 1](about-routing-table-manager-version-1.md)
+-   [Routingtabellen-Manager, Version 2](about-routing-table-manager-version-2.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

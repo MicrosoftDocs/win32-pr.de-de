@@ -1,7 +1,7 @@
 ---
-description: Initialisiert die aux \_ KLIB-Bibliothek.
+description: Initialisiert die \_ Hilfsbibliothek .
 ms.assetid: 516bb359-d3a3-415b-90af-09e544366a12
-title: Funktion "auxklibinitialize" (AUX \_ KLIB. h)
+title: AuxKlibInitialize-Funktion \_ (Aux-Funktion "Aux"-Datei ".h")
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - LibDef
 api_location:
 - Aux_klib.lib
-ms.openlocfilehash: d16ea418d2012b24ce19ad14afab12e198e7ab2e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f35d2d17d581d17a6d89a7bc10d185a67a5fb0b695a29492922f5950241f2ab7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654880"
 ---
-# <a name="auxklibinitialize-function"></a>Funktion "auxklibinitialize"
+# <a name="auxklibinitialize-function"></a>AuxKlibInitialize-Funktion
 
-Initialisiert die aux \_ KLIB-Bibliothek. Diese Funktion muss aufgerufen werden, bevor eine andere Funktion in der Bibliothek aufgerufen werden kann.
+Initialisiert die \_ Hilfsbibliothek . Diese Funktion muss aufgerufen werden, bevor eine andere Funktion in der Bibliothek aufgerufen werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert Status \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert STATUS \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der in "NTSTATUS. h" definierten Statuscodes sein, die im WDK verfügbar ist.
+Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der status-Codes sein, die in Ntstatus.h definiert sind, der im WDK verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Objektbibliothek, die diese API implementiert, kann [hier](https://www.microsoft.com/?ref=go)heruntergeladen werden.
+Die Objektbibliothek, die diese API implementiert, kann hier heruntergeladen [werden.](https://www.microsoft.com/?ref=go)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die Objektbibliothek, die diese API implementiert, kann [hier](https://www.micro
 
 | Anforderung | Wert |
 |----------------------------|------------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-Erweiterungs-API-Bibliothek, Version 1,0 oder höher<br/>                            |
-| Header<br/>          | <dl> <dt>AUX \_ KLIB. h</dt> </dl>   |
-| Bibliothek<br/>         | <dl> <dt>AUX \_ KLIB. lib</dt> </dl> |
+| Verteilbare Komponente<br/> | Windows Zusätzliche API-Bibliothek, Version 1.0 oder höher<br/>                            |
+| Header<br/>          | <dl> <dt>\_Aux-Datei ".h"</dt> </dl>   |
+| Bibliothek<br/>         | <dl> <dt>\_Aux-Datei "Aux"-Datei ".lib"</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Objektbibliothek, die diese API implementiert, kann [hier](https://www.micro
 
 <dl> <dt>
 
-[**"Auxklibquerymoduleinformation"**](auxklibquerymoduleinformation-func.md)
+[**AuxKlibQueryModuleInformation**](auxklibquerymoduleinformation-func.md)
 </dt> </dl>
 
  

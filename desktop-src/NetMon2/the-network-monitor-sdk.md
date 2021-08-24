@@ -1,29 +1,29 @@
 ---
-description: Der Netzwerkmonitor Teil des Platform Software Development Kit (SDK) erweitert die Funktionalität von Netzwerkmonitor, indem es Ihnen hilft, benutzerdefinierte Experten, Protokoll Parser und Netzwerk Paketanbieter (NPPs) zu erstellen.
+description: Der Netzwerkmonitor Teil des Platform Software Development Kit (SDK) erweitert die Funktionalität von Netzwerkmonitor, indem es Ihnen hilft, benutzerdefinierte Experten, Protokollparser und Netzwerkpaketanbieter (Network Packet Providers, NPPs) zu erstellen.
 ms.assetid: d9a61ad7-aa85-4b18-90df-7a8051ff80bc
-title: Netzwerkmonitor Einführung
+title: einführung in Netzwerkmonitor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bbf3deda734c3e4c54982356427c3d541f2a71d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e29142d2beeb42b9eb89635a8902a090b93fae86599a711bdbe063408562ea50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778170"
 ---
-# <a name="network-monitor-introduction"></a>Netzwerkmonitor Einführung
+# <a name="network-monitor-introduction"></a>einführung in Netzwerkmonitor
 
-Der Netzwerkmonitor Teil des Platform Software Development Kit (SDK) erweitert die Funktionalität von Netzwerkmonitor, indem es Ihnen hilft, benutzerdefinierte Experten, Protokoll Parser und Netzwerk Paketanbieter (NPPs) zu erstellen. Dieser Abschnitt enthält die folgende Dokumentation:
+Der Netzwerkmonitor Teil des Platform Software Development Kit (SDK) erweitert die Funktionalität von Netzwerkmonitor, indem es Ihnen hilft, benutzerdefinierte Experten, Protokollparser und Netzwerkpaketanbieter (Network Packet Providers, NPPs) zu erstellen. Dieser Abschnitt enthält die folgende Dokumentation:
 
--   Programmierthemen, die zum Erstellen von Experten und Parser benötigt werden. Diese Informationen umfassen auch das Schreiben eines Erfassungs Filters und das Verwenden von blobdaten und NPPs.
--   API-bezogene Referenzinformationen zu Experten, Parser, blobdaten und NPPs.
--   Ein Glossar der Begriffe, die in Netzwerkmonitor-Dokumentation verwendet werden.
+-   Programmierthemen, die zum Erstellen von Experten und Parsern erforderlich sind. In diesen Informationen wird auch erläutert, wie Sie einen Erfassungsfilter schreiben und BLOBs und NPPs verwenden.
+-   API-bezogene Referenzinformationen zu Experten, Parsern, BLOBs und NPPs.
+-   Ein Glossar mit Begriffen, die in Netzwerkmonitor Dokumentation verwendet werden.
 
-Die folgenden Unterthemen bieten Hilfe beim Abrufen und Installieren von Netzwerkmonitor.
+Die folgenden Unterthemen werden bereitgestellt, um beim Abrufen und Installieren von Netzwerkmonitor zu helfen.
 
 -   [Systemanforderungen](system-requirements.md)
--   [Abrufen von Netzwerkmonitor 2,1](obtaining-network-monitor-2-1.md)
--   [Installieren von Netzwerkmonitor Dateien](installing-network-monitor-files.md)
+-   [Abrufen von Netzwerkmonitor 2.1](obtaining-network-monitor-2-1.md)
+-   [Installieren von Netzwerkmonitor-Dateien](installing-network-monitor-files.md)
 
  
 

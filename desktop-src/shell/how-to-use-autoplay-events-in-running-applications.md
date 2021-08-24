@@ -1,46 +1,46 @@
 ---
-description: Die ihweventhandler-Schnittstelle kann in der Running Object Table (rot) registriert werden, damit die Ausführung von Anwendungen auf AutoPlay-Ereignisse zugreifen kann.
+description: Die IHWEventHandler-Schnittstelle kann in der laufenden Objekttabelle (Running Object Table, ROT) registriert werden, damit ausgeführte Anwendungen Zugriff auf AutoPlay-Ereignisse haben.
 ms.assetid: 6FEFFB5D-DD8B-4FEA-B273-D32FC30CAFEA
-title: Verwenden von AutoPlay-Ereignissen in laufenden Anwendungen
+title: Verwenden von AutoPlay-Ereignissen in ausgeführten Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51795a3992bdb40dde833bb3e352905efaa2be63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab30fa020b5501f8832a5b350ad409934ecbb4258d75adf147e908c699516474
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714816"
 ---
-# <a name="how-to-use-autoplay-events-in-running-applications"></a>Verwenden von AutoPlay-Ereignissen in laufenden Anwendungen
+# <a name="how-to-use-autoplay-events-in-running-applications"></a>Verwenden von AutoPlay-Ereignissen in ausgeführten Anwendungen
 
-Die [**ihweventhandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) -Schnittstelle kann in der Running Object Table (rot) registriert werden, damit die Ausführung von Anwendungen auf AutoPlay-Ereignisse zugreifen kann.
+Die [**IHWEventHandler-Schnittstelle**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) kann in der laufenden Objekttabelle (Running Object Table, ROT) registriert werden, damit ausgeführte Anwendungen Zugriff auf AutoPlay-Ereignisse haben.
 
-In den folgenden Anweisungen wird beschrieben, wie Sie Autoplay-Ereignisse in Ausführung von-Anwendungen verwenden.
+In den folgenden Anweisungen wird beschrieben, wie AutoPlay-Ereignisse in ausgeführten Anwendungen verwendet werden.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1"></a>Schritt 1:
 
-Erstellen Sie eine neue-Komponente, die die [**ihweventhandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) -Schnittstelle implementiert.
+Erstellen Sie eine neue Komponente, die die [**IHWEventHandler-Schnittstelle**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) implementiert.
 
 ### <a name="step-2"></a>Schritt 2:
 
-Initialisieren Sie die neue Komponente mit dem initcmdline-Wert aus dem Eintrag eines bestimmten **Handlers** unter dem Handler-Schlüssel.
+Initialisieren Sie die neue Komponente mit dem InitCmdLine-Wert aus dem Eintrag des **jeweiligen** Handlers unter dem Handlerschlüssel.
 
-Dieser Schritt ist erforderlich, da die Methode "Initialize" nicht von der automatischen Wiedergabe aufgerufen wird.
+Dieser Schritt ist erforderlich, da die automatische Wiedergabe die Initialize-Methode nicht aufruft.
 
 ### <a name="step-3"></a>Schritt 3:
 
-Aufrufen der Funktion " [**reatehardwareeventmoniker**](createhardwareeventmoniker.md) ", um einen Moniker zu erhalten, der die Komponente und den Ereignishandler darstellt, den Sie aufrufen möchten.
+Rufen Sie die [**CreateHardwareEventMoniker-Funktion**](createhardwareeventmoniker.md) auf, um einen Moniker abzurufen, der Ihre Komponente und den Ereignishandler darstellt, den Sie aufrufen möchten.
 
 ### <a name="step-4"></a>Schritt 4:
 
-Verwenden Sie den *ppmoniker* -Parameter, um die Komponente in der rot zu registrieren.
+Verwenden Sie den *ppmoniker-Parameter,* um Ihre Komponente im ROT zu registrieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann Sicherheitsrisiken darstellen. Informationen zum ordnungsgemäßen Laden von DLLs mit unterschiedlichen Versionen von Windows finden Sie in der Dokumentation zu **LoadLibrary** .
+> [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann Sicherheitsrisiken darstellen. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Windows finden Sie in der **LoadLibrary-Dokumentation.**
 
 ```cpp
 typedef HRESULT (*CREATEHARDWAREEVENTMONIKER)(REFCLSID clsid, LPCWSTR pszEventHandler, IMoniker **ppmoniker);
@@ -78,7 +78,7 @@ HRESULT RegisterComponent(IUnknown* punk, DWORD* dpwToken)
 }
 ```
 
-Für den Aufrufen von " [**ununningobjec\:: Register**](/windows/win32/api/objidl/nf-objidl-irunningobjecttable-register) " ist es erforderlich, dass die Komponente über die folgenden **AppID** -Informationen in der Registrierung verfügt.
+Der Aufruf von [**IRunningObjectTable::Register**](/windows/win32/api/objidl/nf-objidl-irunningobjecttable-register) erfordert, dass die Komponente über die folgenden **AppID-Informationen** in der Registrierung verfügt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -98,6 +98,6 @@ HKEY_CLASSES_ROOT
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[**Ihweventhandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler)
+[**IHWEventHandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler)
 
-[**"Kreatehardwareeventmoniker"**](createhardwareeventmoniker.md)
+[**CreateHardwareEventMoniker**](createhardwareeventmoniker.md)

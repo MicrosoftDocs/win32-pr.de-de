@@ -1,9 +1,9 @@
 ---
-title: TB_GETSTYLE Meldung (kommstrg. h)
-description: Ruft die Formate ab, die derzeit für ein ToolBar-Steuerelement verwendet werden.
+title: TB_GETSTYLE Meldung (Commctrl.h)
+description: Ruft die derzeit für ein Symbolleistensteuerelement verwendeten Stile ab.
 ms.assetid: 6fbe8733-79df-462e-acb6-6568105e5058
 keywords:
-- Windows-Steuerelemente für TB_GETSTYLE Meldung
+- TB_GETSTYLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14f8de0addae729a4a8c641d21fd1771137d8c8e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a0704e1cb886bb8a684ab4a1a1e827218fc5f57d4d90778e859e5224ef5f129e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119696170"
 ---
-# <a name="tb_getstyle-message"></a>TB \_ GetStyle-Nachricht
+# <a name="tb_getstyle-message"></a>TB \_ GETSTYLE-Nachricht
 
-Ruft die Formate ab, die derzeit für ein ToolBar-Steuerelement verwendet werden.
+Ruft die derzeit für ein Symbolleistensteuerelement verwendeten Stile ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Formate ab, die derzeit für ein ToolBar-Steuerelement verwendet werden
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **DWORD** -Wert zurück, der eine Kombination aus [ToolBar-Steuerelement Stilen](toolbar-control-and-button-styles.md)ist.
+Gibt einen **DWORD-Wert** zurück, der eine Kombination aus [Symbolleisten-Steuerelementstilen](toolbar-control-and-button-styles.md)ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen **DWORD** -Wert zurück, der eine Kombination aus [ToolBar-Steuerelem
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

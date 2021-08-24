@@ -1,40 +1,40 @@
 ---
-description: Gibt die audiostreamkategorie für den streamingaudiorenderer (SAR) an.
+description: Gibt die Audiostreamkategorie für den StreamingAudiorenderer (SAR) an.
 ms.assetid: 88E79DE6-2062-4471-A939-D1D4DD2EC42D
-title: MF_AUDIO_RENDERER_ATTRIBUTE_STREAM_CATEGORY-Attribut (mspdl. h)
+title: MF_AUDIO_RENDERER_ATTRIBUTE_STREAM_CATEGORY-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd96c219e43f85c516a5f862e2a978724328a69f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4acb6bd0f40d3c6fb3caa6b4dce8801f8fa60d31222265d5dca6ff5a132444e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714880"
 ---
-# <a name="mf_audio_renderer_attribute_stream_category-attribute"></a>\_Kategorie-Attribut für das MF- \_ audiorenderattribut \_ \_ Stream \_
+# <a name="mf_audio_renderer_attribute_stream_category-attribute"></a>MF \_ AUDIO \_ RENDERER ATTRIBUTE STREAM \_ \_ \_ CATEGORY-Attribut
 
-Gibt die audiostreamkategorie für den [streamingaudiorenderer](streaming-audio-renderer.md) (SAR) an.
+Gibt die Audiostreamkategorie für den [StreamingAudiorenderer](streaming-audio-renderer.md) (SAR) an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können dieses Attribut verwenden, um den audiorenderer zu konfigurieren. Die Verwendung hängt von der Funktion ab, die Sie zum Erstellen des audiorenderers aufgerufen haben.
+Sie können dieses Attribut verwenden, um den Audiorenderer zu konfigurieren. Die Verwendung hängt davon ab, welche Funktion Sie aufrufen, um den Audiorenderer zu erstellen.
 
 
 
 | Funktion                                                               | Festlegen des Attributs                                                                                                                                                                       |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Mskreateaudiorenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer)                 | Verwenden Sie den [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger, der im *paudioattribute* -Parameter angegeben ist.                                                                                          |
-| [**MF | ateaudiorendereraktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) | Verwenden Sie den [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger, der im *ppaktivierungs* -Parameter zurückgegeben wird. Legen Sie das-Attribut vor dem Aufrufen von [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject)fest. |
+| [**MFCreateAudioRenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer)                 | Verwenden Sie den IM *pAudioAttributes-Parameter angegebenen* [**POINTERAttributes-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)                                                                                          |
+| [**MFCreateAudioRendererActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate) | Verwenden Sie den IM *ppActivate-Parameter* zurückgegebenen [**POINTERACTIVATE-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) Legen Sie das -Attribut fest, bevor Sie [**DIE AKTIONACTIVATE::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject)aufrufen. |
 
 
 
  
 
-Der Wert des-Attributs ist ein Member der [**\_ \_ Kategorie-**](/windows/win32/api/audiosessiontypes/ne-audiosessiontypes-audio_stream_category) Enumeration des Audiostreams. Der Audiodienst verwendet die Kategorie Stream, um Audiorichtlinien zu ermitteln, wenn mehrere Anwendungen gleichzeitig Audiodaten abspielen.
+Der Wert des Attributs ist ein Member der [**AUDIO \_ STREAM \_ CATEGORY-Enumeration.**](/windows/win32/api/audiosessiontypes/ne-audiosessiontypes-audio_stream_category) Der Audiodienst verwendet die Streamkategorie, um Audiorichtlinien zu bestimmen, wenn mehrere Anwendungen Gleichzeitig Audio wiedergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,13 +42,13 @@ Der Wert des-Attributs ist ein Member der [**\_ \_ Kategorie-**](/windows/win32/
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

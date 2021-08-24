@@ -1,7 +1,7 @@
 ---
-description: Start Zeit des Mediums.
+description: Startzeit des Mediums.
 ms.assetid: 04ae3862-00b1-4c99-b535-756067cdf4c4
-title: 'Cmediasample:: m_MediaStart Member (amfilter. h)'
+title: CMediaSample::m_MediaStart-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6878f24a13c660eb5fb0560152e334547a248036
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c564b85843b93364daf55f31f17e33ef4e7d60a1653dd4fa70cf0fb59b62034
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634590"
 ---
-# <a name="cmediasamplem_mediastart-member"></a>Cmediasample:: m \_ mediastart-Member
+# <a name="cmediasamplem_mediastart-member"></a>CMediaSample::m \_ MediaStart-Member
 
-Start Zeit des Mediums.
+Startzeit des Mediums.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ LONGLONG m_MediaStart;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

@@ -1,69 +1,69 @@
 ---
-title: Bild Lauf Leiste (MSAA UI Element Reference)
-description: Mithilfe von Bild Lauf leisten können Benutzer die Richtung und die Entfernung auswählen, um einen Bildlauf durch die Informationen in einem verwandten Fenster oder Listenfeld durchführen Der Fenster Klassenname für eine Schiebe Leiste lautet \ 0034; ScrollBar \ 0034;.
+title: Scrollleiste (MSAA UI-Elementreferenz)
+description: Mithilfe von Bildlaufleisten können Benutzer die Richtung und den Abstand auswählen, in der bzw. dem informationen in einem verknüpften Fenster oder Listenfeld angezeigt werden sollen. Der Name der Fensterklasse für eine Bildlaufleiste lautet \ 0034; SCROLLBAR \ 0034;.
 ms.assetid: a4ec1708-d751-4526-bd69-9796c43872a0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df381e0d532991f164f2c17d0a261dd3c5006619
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6acb609ee56d6e766a2f94cf75406211741ba0a711699f4e8c912790dc71cffe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119734330"
 ---
-# <a name="scroll-bar-msaa-ui-element-reference"></a>Bild Lauf Leiste (MSAA UI Element Reference)
+# <a name="scroll-bar-msaa-ui-element-reference"></a>Scrollleiste (MSAA UI-Elementreferenz)
 
 > [!Note]  
-> In diesem Thema werden **ScrollBar** -Objekte für den MSAA-Benutzeroberflächen-Element Verweis beschrieben. Das Erstellen von **ScrollBar** -Objekten in verschiedenen Benutzeroberflächen-Frameworks wird hier nicht beschrieben. Weitere Informationen finden Sie in der API-Referenz Dokumentation für das von Ihnen verwendete UI-Framework.
+> In diesem Thema werden **Scrollleistenobjekte** für die MSAA UI-Elementreferenz beschrieben. Das Erstellen von **Scrollleistenobjekten** in verschiedenen Benutzeroberflächenframeworks wird hier nicht beschrieben. Informationen zum verwendeten BENUTZERoberflächenframework finden Sie in der API-Referenzdokumentation.
 
- 
+ 
 
-Mithilfe von Bild Lauf leisten können Benutzer die Richtung und die Entfernung auswählen, um einen Bildlauf durch die Informationen in einem verwandten Fenster oder Listenfeld durchführen Der Fenster Klassenname für eine Schiebe Leiste ist "ScrollBar".
+Mithilfe von Bildlaufleisten können Benutzer die Richtung und den Abstand auswählen, in der bzw. dem informationen in einem verknüpften Fenster oder Listenfeld angezeigt werden sollen. Der Name der Fensterklasse für eine Bildlaufleiste lautet "SCROLLBAR".
 
-Der Inhalt der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften hängt davon ab, ob die Bild Lauf Leiste vertikal oder horizontal ist und ob die folgenden Teile der Bild Lauf Leiste vom Client abgefragt werden:
+Der Inhalt der [**IAccessible-Eigenschaften**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) hängt davon ab, ob die Scrollleiste vertikal oder horizontal ist und von welchem der folgenden Teile der Scrollleiste vom Client abgefragt wird:
 
--   Die Scrollleiste selbst
--   Die obere oder nach-rechts-Taste
--   Schaltfläche "unten" oder "nach links"
--   Das Bild Lauf Feld (Thumb)
--   Der Bild-auf-oder Seiten rechten Bereich
--   Die Bild-ab-oder linke Seite
+-   Die Bildlaufleiste selbst
+-   Schaltfläche "Pfeil nach oben" oder "Nach rechts"
+-   Schaltfläche "Unten" oder "Pfeil nach links"
+-   Das Bildlauffeld ( Thumb)
+-   Die Region nach oben oder rechts der Seite
+-   Die Nach-unten-Seite oder der linke Bereich der Seite
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Eine Schiebe Leiste unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Eine Bildlaufleiste unterstützt die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
--   [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction)– das Bild Lauf leisten Objekt selbst und der Bild Lauf Zieh Punkt unterstützen die Methode " **accDoDefaultAction** " nicht.
+-   [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction): Das Scrollleistenobjekt selbst und der Bildlauffinger unterstützen die **accDoDefaultAction-Methode** nicht.
 
-    Für die anderen Bild Lauf leisten Teile auf einer vertikalen Bild Lauf Leiste ruft " [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) " [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) mit der " [**WM \_ VScroll**](/windows/desktop/Controls/wm-vscroll) "-Meldung auf, wobei *wParam* auf die folgenden Werte festgelegt ist.
+    Für die anderen Teile der Bildlaufleiste auf einer vertikalen Schiebeleiste ruft [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) auf, wobei die [**\_ WM-VSCROLL-Nachricht**](/windows/desktop/Controls/wm-vscroll) mit *wParam* auf die folgenden Werte festgelegt ist.
 
     
 
-    | Schaltfläche/Region       | Erwarteter        |
+    | Schaltfläche/Region       | Vaule        |
     |---------------------|--------------|
-    | Schaltfläche "Oberer Pfeil    | SB \_ -Auflistung   |
-    | Schaltfläche zum unteren Pfeil | SB- \_ LineDown |
-    | Bild-auf-Seite      | SB- \_ PageUp   |
-    | Bild-ab-Region    | SB- \_ PageDown |
+    | Schaltfläche "Pfeil oben"    | SB \_ LINEUP   |
+    | Schaltfläche "Pfeil unten" | SB \_ LINEDOWN |
+    | Vorherige Seite Region      | SB \_ PAGEUP   |
+    | Nächste Seite Region    | SB \_ PAGEDOWN |
 
     
 
-     
+     
 
-    Für die anderen Bild Lauf leisten Teile auf einer horizontalen Schiebe Leiste ruft [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) mit der [**WM- \_ HScroll**](/windows/desktop/Controls/wm-hscroll) -Nachricht auf, wobei *wParam* auf die folgenden Werte festgelegt ist.
+    Für die anderen Bildlaufleistenteile auf einer horizontalen Scrollleiste ruft [**accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction) [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) auf, wobei die [**WM \_ HSCROLL-Nachricht**](/windows/desktop/Controls/wm-hscroll) mit *wParam* auf die folgenden Werte festgelegt ist.
 
     
 
     | Schaltfläche/Region      | Wert         |
     |--------------------|---------------|
-    | Schaltfläche nach links  | SB- \_ LineLeft  |
-    | Schaltfläche mit Pfeil nach rechts | SB- \_ LineRight |
-    | Seiten Linker Bereich   | SB- \_ PageLeft  |
-    | Seite Rechter Bereich  | SB- \_ PageRight |
+    | Schaltfläche "Pfeil nach links"  | SB \_ LINELEFT  |
+    | Schaltfläche mit Pfeil nach rechts | SB \_ LINERIGHT |
+    | Linker Bereich der Seite   | SB \_ PAGELEFT  |
+    | Rechte Region der Seite  | SB \_ PAGERIGHT |
 
     
 
-     
+     
 
 -   [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 -   [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
@@ -71,110 +71,110 @@ Eine Schiebe Leiste unterstützt die folgenden [**IAccessible**](/windows/deskto
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Eine Schiebe Leiste unterstützt die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften:
+Eine Bildlaufleiste unterstützt die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
--   [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)– die **childCount** -Eigenschaft für das ScrollBar-Objekt ist 5. Für die anderen Bild Lauf leisten Teile ist die **childCount** -Eigenschaft gleich 0 (null).
--   [**get \_ accdefaultaction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)– das ScrollBar-Objekt selbst und der Bild Lauf Zieh Punkt unterstützen die **DEFAULTACTION** -Eigenschaft nicht. Die **DEFAULTACTION** -Eigenschaft für die Pfeil Schaltflächen und die schattierten Bereiche auf beiden Seiten des Bild Lauf Zieh Punkts sind "drücken".
--   [**get \_ accdescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)– die **Description** -Eigenschaft hängt von dem Teil der Scrollleiste ab, der abgefragt wird.
+-   [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)– Die **ChildCount-Eigenschaft** für das Scrollleistenobjekt ist fünf. Für die anderen Bildlaufleistenteile ist die **ChildCount-Eigenschaft** 0 (null).
+-   [**get \_ accDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction): Das Bildlaufleistenobjekt selbst und der Bildlauffinger unterstützen die **DefaultAction-Eigenschaft** nicht. Die **DefaultAction-Eigenschaft** für die Pfeilschaltflächen und die schattierten Bereiche auf beiden Seiten des Bildlauffingerabdrucks lautet "Press".
+-   [**get \_ accDescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)– Die **Description-Eigenschaft** hängt von dem Teil der abgefragten Scrollleiste ab.
 
-    Die Teile einer vertikalen Schiebe Leiste enthalten die folgenden Beschreibungen.
+    Die Teile einer vertikalen Bildlaufleiste weisen die folgenden Beschreibungen auf.
 
     
 
-    | Teil                | BESCHREIBUNG                                                                         |
+    | Teil                | Beschreibung                                                                         |
     |---------------------|-------------------------------------------------------------------------------------|
-    | Scrollleiste selbst   | "Wird verwendet, um den vertikalen Anzeigebereich zu ändern."                                          |
-    | Schaltfläche "Oberer Pfeil    | "Verschiebt die vertikale Position um eine Zeile nach oben"                                           |
-    | Schaltfläche zum unteren Pfeil | "Verschiebt die vertikale Position um eine Zeile nach unten"                                         |
-    | Bild Lauf Thumb        | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um Sie direkt zu ändern." |
-    | Bild-auf-Seite      | "Verschiebt die vertikale Position um einige Zeilen nach oben"                                  |
-    | Bild-ab-Region    | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um Sie direkt zu ändern." |
+    | Scrollleiste selbst   | "Wird verwendet, um den vertikalen Anzeigebereich zu ändern"                                          |
+    | Schaltfläche "Pfeil oben"    | "Verschiebt die vertikale Position um eine Zeile nach oben"                                           |
+    | Schaltfläche "Pfeil unten" | "Verschiebt die vertikale Position um eine Zeile nach unten"                                         |
+    | Bildlauffinger        | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um sie direkt zu ändern." |
+    | Vorherige Seite Region      | "Verschiebt die vertikale Position um einige Zeilen nach oben"                                  |
+    | Nächste Seite Region    | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um sie direkt zu ändern." |
 
     
 
-     
+     
 
-    Die Teile einer horizontalen Schiebe Leiste haben folgende Beschreibungen.
+    Die Teile einer horizontalen Bildlaufleiste weisen die folgenden Beschreibungen auf.
 
     
 
-    | Teil               | BESCHREIBUNG                                                                           |
+    | Teil               | Beschreibung                                                                           |
     |--------------------|---------------------------------------------------------------------------------------|
-    | Scrollleiste selbst  | "Wird verwendet, um den horizontalen Anzeigebereich zu ändern.                                          |
-    | Schaltfläche nach links  | "Verschiebt die horizontale Position um eine Spalte nach links"                                       |
-    | Schaltfläche mit Pfeil nach rechts | ' Verschiebt die horizontale Position um eine Spalte nach rechts                                      |
-    | Bild Lauf Thumb       | "Gibt die aktuelle horizontale Position an und kann gezogen werden, um Sie direkt zu ändern." |
-    | Seiten Linker Bereich   | "Verschiebt die horizontale Position um eine Reihe von Spalten nach links"                              |
-    | Seite Rechter Bereich  | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um Sie direkt zu ändern."   |
+    | Scrollleiste selbst  | "Wird verwendet, um den horizontalen Anzeigebereich zu ändern"                                          |
+    | Schaltfläche "Pfeil nach links"  | "Verschiebt die horizontale Position nach links um eine Spalte"                                       |
+    | Schaltfläche mit Pfeil nach rechts | "Verschiebt die horizontale Position um eine Spalte nach rechts".                                      |
+    | Bildlauffinger       | "Gibt die aktuelle horizontale Position an und kann gezogen werden, um sie direkt zu ändern." |
+    | Linker Bereich der Seite   | "Verschiebt die horizontale Position nach links um einige Spalten".                              |
+    | Rechte Region der Seite  | "Gibt die aktuelle vertikale Position an und kann gezogen werden, um sie direkt zu ändern."   |
 
     
 
-     
+     
 
--   [**\_accHelp erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)
--   [**\_accHelpTopic erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)
--   [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)– die **Name** -Eigenschaft hängt von dem Teil der Scrollleiste ab, der abgefragt wird.
+-   [**get \_ accHelp**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)
+-   [**get \_ accHelpTopic**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)
+-   [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname): Die **Name-Eigenschaft** hängt von dem Teil der abgefragten Scrollleiste ab.
 
-    Die Teile einer vertikalen Scrollleiste haben die folgenden Namen.
+    Die Teile einer vertikalen Bildlaufleiste haben die folgenden Namen.
 
     | Teil                | Name        |
     |---------------------|-------------|
-    | ScrollBar-Fenster   | Rechtes  |
-    | Schaltfläche "Oberer Pfeil    | "Zeile nach oben"   |
-    | Schaltfläche zum unteren Pfeil | "Zeile nach unten" |
-    | Bild Lauf Thumb        | Gebracht  |
-    | Bild-auf-Seite      | "Seite nach oben"   |
-    | Bild-ab-Region    | "Bild-ab" |
+    | Bildlaufleistenfenster   | "Vertikal"  |
+    | Schaltfläche "Pfeil oben"    | "Line up"   |
+    | Schaltfläche "Pfeil unten" | "Line down" (Nach unten) |
+    | Bildlauffinger        | "Position"  |
+    | Vorherige Seite Region      | "Vorherige Seite"   |
+    | Nächste Seite Region    | "Nächste Seite" |
 
     
 
-     
+     
 
-    Die Teile einer horizontalen Scrollleiste haben die folgenden Namen.
+    Die Teile einer horizontalen Bildlaufleiste haben die folgenden Namen.
 
     
 
     | Teil               | Name           |
     |--------------------|----------------|
-    | ScrollBar-Fenster  | Ales   |
-    | Schaltfläche nach links  | "Spalte links"  |
-    | Schaltfläche mit Pfeil nach rechts | "Column right" |
-    | Bild Lauf Thumb       | Gebracht     |
-    | Seite Rechter Bereich  | "Page Right"   |
-    | Seiten Linker Bereich   | "Seite Links"    |
+    | Bildlaufleistenfenster  | "Horizontal"   |
+    | Schaltfläche "Pfeil nach links"  | "Spalte links"  |
+    | Schaltfläche mit Pfeil nach rechts | "Spalte rechts" |
+    | Bildlauffinger       | "Position"     |
+    | Rechte Region der Seite  | "Seite rechts"   |
+    | Linker Bereich der Seite   | "Seite links"    |
 
     
 
-     
+     
 
--   [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)– die **Parent** -Eigenschaft der Pfeil Schaltflächen, der Bild Lauf Zieh Punkt und der schattierte Bereich auf beiden Seiten des Zieh Punkts ist das Fenster der Schiebe Leiste. Die **Parent** -Eigenschaft des ScrollBar-Fensters ist ein Fenster (Rollen \_ System \_ Fenster), das das Steuerelement umgibt und die **Name** -Eigenschaft und den Fenster Klassennamen aufweist.
--   [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)– die **Role** -Eigenschaft hängt von dem Teil der Scrollleiste ab, der abgefragt wird. Die Teile einer Scrollleiste haben die folgenden Rollen. 
+-   [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)– Die **parent-Eigenschaft** der Pfeilschaltflächen, der Bildlauffinger, und der schattierte Bereich auf beiden Seiten des Ziehfelds ist das Scrollleistenfenster. Die **Parent-Eigenschaft** des Scrollleistenfensters ist ein Fenster (ROLE \_ SYSTEM \_ WINDOW), das das Steuerelement umschließt und über die gleiche **Name-Eigenschaft** und den gleichen Fensterklassennamen verfügt.
+-   [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole): Die **Role-Eigenschaft** hängt von dem Teil der abgefragten Scrollleiste ab. Die Teile einer Bildlaufleiste weisen die folgenden Rollen auf. 
 
-    | Teil                                                  | Role                                                                    |
+    | Teil                                                  | Rolle                                                                    |
     |-------------------------------------------------------|-------------------------------------------------------------------------|
-    | Scrollleiste selbst                                     | [**Rollen \_ System- \_ Scrollleiste**](object-roles.md)   |
-    | Schaltflächen oben, nach unten, Links und nach rechts              | [**\_ \_ Schaltfläche "Rollen System"**](object-roles.md) |
-    | Bild Lauf Thumb                                          | [**Rollen \_ System \_ Indikator**](object-roles.md)   |
-    | Bild-auf, Bild-ab, Seite Links und Seiten Rechte | [**\_ \_ Schaltfläche "Rollen System"**](object-roles.md) |
+    | Scrollleiste selbst                                     | [**\_SCROLLLEISTE DES ROLLENSYSTEMS \_**](object-roles.md)   |
+    | Schaltflächen "Oben", "Nach unten", "Links" und "Nach rechts"              | [**\_ \_ ROLLENSYSTEM-PUSHBUTTON**](object-roles.md) |
+    | Bildlauffinger                                          | [**ROLE \_ SYSTEM \_ INDICATOR**](object-roles.md)   |
+    | Vorherige Seite, Nach unten, Seite links und Seiten rechts | [**\_ \_ ROLLENSYSTEM-PUSHBUTTON**](object-roles.md) |
 
     
 
-     
+     
 
--   [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)– die **State** -Eigenschaft jeder ScrollBar-Komponente enthält eine Kombination der folgenden [Werte](object-state-constants.md).
+-   [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate): Die **State-Eigenschaft** jeder Scrollleistenkomponente enthält eine Kombination der folgenden [Werte.](object-state-constants.md)
 
     | State                                                                                 | Wert                                                                                                                                                                                                                       |
     |---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | [**Zustands \_ System \_ unsichtbar**](object-state-constants.md)     | In der Bild Lauf Leiste selbst gibt dies an, dass die angegebene vertikale oder horizontale Schiebe Leiste nicht vorhanden ist. Dies bedeutet, dass für die Bild-auf-oder-nach-unten-Bereiche der Ziehpunkt so positioniert ist, dass der Bereich nicht vorhanden ist. |
-    | [**Zustands \_ System- \_ Offscreen**](object-state-constants.md)     | In der Bild Lauf Leiste selbst gibt dies an, dass das Fenster so groß ist, dass die angegebene vertikale oder horizontale Schiebe Leiste momentan nicht angezeigt wird.                                                                         |
-    | [**Zustands \_ System wurde \_ gedrückt**](object-state-constants.md)         | Die Pfeil Schaltfläche oder der Seitenbereich wird gedrückt.                                                                                                                                                                                 |
-    | [**Zustands \_ System nicht \_ verfügbar**](object-state-constants.md) | Die Komponente ist deaktiviert.                                                                                                                                                                                                  |
+    | [**STATUSSYSTEM \_ \_ UNSICHTBAR**](object-state-constants.md)     | Für die Bildlaufleiste selbst gibt dies an, dass die angegebene vertikale oder horizontale Scrollleiste nicht vorhanden ist. Für die Bereiche nach oben oder nach unten zeigt dies an, dass der Daumen so positioniert ist, dass der Bereich nicht vorhanden ist. |
+    | [**OFFSCREEN \_ DES ZUSTANDSSYSTEMS \_**](object-state-constants.md)     | Für die Bildlaufleiste selbst gibt dies an, dass das Fenster so dimensioniert ist, dass die angegebene vertikale oder horizontale Bildlaufleiste derzeit nicht angezeigt wird.                                                                         |
+    | [**ZUSTANDSSYSTEM \_ \_ GEDRÜCKT**](object-state-constants.md)         | Die Pfeilschaltfläche oder der Seitenbereich wird gedrückt.                                                                                                                                                                                 |
+    | [**STATUSSYSTEM \_ \_ NICHT VERFÜGBAR**](object-state-constants.md) | Die Komponente ist deaktiviert.                                                                                                                                                                                                  |
 
     
 
-     
+     
 
--   [**\_ accValue erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue)– die Eigenschaft **Wert** für das Fenster Scrollleiste gibt die Position der Scrollleiste an und ist eine Zeichenfolge, die eine ganze Zahl zwischen 0 und 100 enthält.
+-   [**get \_ accValue**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue): Die **Value-Eigenschaft** für das Scrollleistenfenster gibt die Position der Scrollleiste an und ist eine Zeichenfolge, die eine ganze Zahl von "0" bis "100" enthält.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -183,6 +183,6 @@ Eine Schiebe Leiste unterstützt die folgenden [**IAccessible**](/windows/deskto
 [IAccessible-Schnittstelle](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

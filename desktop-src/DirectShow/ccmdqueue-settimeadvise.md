@@ -1,7 +1,7 @@
 ---
-description: Die settimereference-Methode richtet ein Zeit Geber Ereignis mit der Referenzuhr ein.
+description: Die SetTimeAdvise-Methode richtet ein Timerereignis mit der Referenzuhr ein.
 ms.assetid: d0ab5c21-3585-413b-ba75-8591ed4527e4
-title: Ccmdqueue. settimeempfehlung-Methode (winutil. h)
+title: CCmdQueue.SetTimeAdvise-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 24313b908f1271f270e28b08058c415ed82396fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ecfa02354ad3662a6fd9060fff80b74635c63ade57539fbbd1307fa1d65e8872
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757130"
 ---
-# <a name="ccmdqueuesettimeadvise-method"></a>Ccmdqueue. settimeempfehlung-Methode
+# <a name="ccmdqueuesettimeadvise-method"></a>CCmdQueue.SetTimeAdvise-Methode
 
-Die- `SetTimeAdvise` Methode richtet ein Timer-Ereignis mit der Referenzuhr ein.
+Die `SetTimeAdvise` -Methode richtet ein Timerereignis mit der Referenzuhr ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion Ruft die [**IReferenceClock:: AdviseTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime) -Methode auf, um eine Benachrichtigung für den frühesten Zeitraum einzurichten, der in der Warteschlange erforderlich ist. Zurück gestellte Präsentationszeit Befehle sind immer aktiviert. Wenn sich das Filter Diagramm im laufenden Modus befindet, werden auch verzögerte Befehle mit streamzeit geprüft.
+Diese Memberfunktion ruft die [**IReferenceClock::AdviseTime-Methode**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime) auf, um eine Benachrichtigung so früh wie möglich in der Warteschlange einrichten zu können. Verzögerte Präsentationszeitbefehle werden immer überprüft. Wenn sich das Filterdiagramm im Ausführungsmodus befindet, werden auch verzögerte Befehle mit Streamzeit überprüft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Member-Funktion Ruft die [**IReferenceClock:: AdviseTime**](/windows/deskt
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Member-Funktion Ruft die [**IReferenceClock:: AdviseTime**](/windows/deskt
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

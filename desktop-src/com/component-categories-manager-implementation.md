@@ -1,45 +1,45 @@
 ---
-title: Implementierung des Komponenten Kategorien-Managers
-description: Wenn die Anzahl der verfügbaren Komponenten zunimmt, wird es zunehmend schwieriger, diese Komponenten zu verwalten. Im Hinblick auf die Schnittstellen, die Sie verfügbar machen, und die Aufgaben, die Sie ausführen, bieten viele Komponenten eine ähnliche Funktionalität.
+title: Implementierung des Komponentenkategorien-Managers
+description: Mit zunehmender Anzahl verfügbarer Komponenten wird es immer schwieriger, diese Komponenten zu verwalten. In Bezug auf die verfügbar gemachten Schnittstellen und die aufgaben, die sie ausführen, bieten viele Komponenten ähnliche Funktionen.
 ms.assetid: c2c67129-bf19-465b-8354-193922aeafaa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2414567beba159c05ea08b3561f0a97ddda1cb70
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 941ba5f422a4305a3bb6056d1d02648dde3bffc9c9f872fe7f7804ebb90a19ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119679211"
 ---
-# <a name="component-categories-manager-implementation"></a>Implementierung des Komponenten Kategorien-Managers
+# <a name="component-categories-manager-implementation"></a>Implementierung des Komponentenkategorien-Managers
 
-Wenn die Anzahl der verfügbaren Komponenten zunimmt, wird es zunehmend schwieriger, diese Komponenten zu verwalten. Im Hinblick auf die Schnittstellen, die Sie verfügbar machen, und die Aufgaben, die Sie ausführen, bieten viele Komponenten eine ähnliche Funktionalität.
+Mit zunehmender Anzahl verfügbarer Komponenten wird es immer schwieriger, diese Komponenten zu verwalten. In Bezug auf die verfügbar gemachten Schnittstellen und die aufgaben, die sie ausführen, bieten viele Komponenten ähnliche Funktionen.
 
-Häufig müssen die Komponenten aufgelistet werden, die in einem bestimmten Kontext verwendet werden können. Beispiele hierfür sind das Dialogfeld " **Objekt einfügen** ", das in OLE-Verbund Dokumenten verwendet wird, und das Dialogfeld " **Steuerelement einfügen** " in OLE-Steuerelementen In diesen Dialogfeldern werden alle Komponenten aufgelistet, die die Schnittstellen Verträge für Verbund Dokumente oder Steuerelemente erfüllen (oder den Anspruch darauf erfüllen). Diese vorhandenen Kategorien (OLE-Dokument, OLE-Steuerelement) implizieren keine exakte Schnittstellen Signatur. OLE-Dokumente müssen einen bestimmten Satz von Kern Schnittstellen (z. b. [**IOleObject**](/windows/desktop/api/OleIdl/nn-oleidl-ioleobject) oder [**IPersistStorage**](/windows/desktop/api/ObjIdl/nn-objidl-ipersiststorage)) verfügbar machen, können aber auch zusätzliche Schnittstellen wie [**iolelink**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink)verfügbar machen.
+Häufig müssen die Komponenten aufzählt werden, die in einem bestimmten Kontext verwendet werden können. Beispiele hierfür sind das **Dialogfeld Objekt** einfügen, das  in OLE-Verbunddokumenten verwendet wird, und das Dialogfeld Steuerelement einfügen, das in OLE-Steuerelementen verwendet wird. In diesen Dialogfeldern werden alle Komponenten aufgeführt, die die Schnittstellenverträge für Verbunddokumente oder Steuerelemente erfüllen (oder erfüllen). Diese vorhandenen Kategorien (OLE-Dokument, OLE-Steuerelement) implizieren keine exakte Schnittstellensignatur. OLE-Dokumente müssen einen bestimmten Satz von Kernschnittstellen (z. B. [**IOleObject**](/windows/desktop/api/OleIdl/nn-oleidl-ioleobject) oder [**IPersistStorage)**](/windows/desktop/api/ObjIdl/nn-objidl-ipersiststorage)verfügbar machen, können aber auch zusätzliche Schnittstellen wie [**IOleLink verfügbar machen.**](/windows/desktop/api/OleIdl/nn-oleidl-iolelink)
 
-In der Vergangenheit wurden Komponenten gekennzeichnet, indem ein lesbarer Name ("Insertable", "Control" usw.) als Unterschlüssel für die Stamm- **\_ \_ \\ CLSID \\ {...} der HKEY-Klassen** hinzugefügt wurde. Registrierungsschlüssel, der der Komponente entspricht. Dies funktioniert gut für eine zentrale Definition von Kategorien, birgt jedoch Risiken Namenskollisionen, wenn viele unabhängige Parteien neue Kategorien definieren. Wie in anderen Bereichen von com liegt die Lösung zur Bereitstellung eines erweiterbaren Namespace in der Verwendung von GUIDs (Global Unique Identifier). Anstatt einen lesbaren Namen zu verwenden, wird jeder Kategorie eine eindeutige Zahl (CATID) zugewiesen.
+In der Vergangenheit wurden Komponenten markiert, indem der **HKEY \_ CLASSES ROOT \_ \\ CLSID \\ {...}** ein für Menschen lesbarer Name ("Insertable", "Control" und so weiter) als Unterschlüssel hinzugefügt wurde. Registrierungsschlüssel, der der Komponente entspricht. Dies funktioniert gut für eine zentrale Definition von Kategorien, birgt jedoch das Risiko von Namenskollisionen, wenn viele unabhängige Parteien neue Kategorien definieren. Wie in anderen Bereichen von COM besteht die Lösung für die Bereitstellung eines erweiterbaren Namespace in der Verwendung von global eindeutigen Bezeichnern (GUIDs). Anstatt einen lesbaren Namen zu verwenden, wird jeder Kategorie eine eindeutige Zahl (CATID) zugewiesen.
 
-Eine weitere Einschränkung bei der vorhandenen Kategorisierung besteht darin, dass Sie auf das Ausdrücken der Funktionen der Komponente selbst beschränkt ist. Viele Komponenten erfordern bestimmte Funktionen aus den Containern. Wenn eine solche Komponente in einen Container eingefügt wird, kann die Einfügung fehlschlagen oder sich unerwartet Verhalten, auch wenn die Komponente die Verträge erfüllt, die von einer ihrer Kategorien impliziert werden. Zum Auflisten der Komponenten, die in bestimmten Situationen erfolgreich verwendet werden können, müssen die Funktionen der Komponente und des Containers berücksichtigt werden.
+Eine weitere Einschränkung bei der vorhandenen Kategorisierung ist, dass sie auf das Ausdrücken der Funktionen der Komponente selbst beschränkt ist. Viele Komponenten erfordern bestimmte Funktionen der Container. Wenn eine solche Komponente in einen Container eingefügt wird, kann die Einfügung fehlschlagen oder sich unerwartet verhalten, obwohl die Komponente die Verträge erfüllt, die von einer ihrer Kategorien impliziert werden. Um die Komponenten aufzählen zu können, die in bestimmten Situationen erfolgreich verwendet werden können, müssen die Funktionen der Komponente und des Containers berücksichtigt werden.
 
 Aufgrund dieser Überlegungen wurden die folgenden Änderungen an der vorhandenen Kategorisierung vorgenommen:
 
 -   Kategorien werden mithilfe von CATIDs angegeben, die global eindeutige Bezeichner sind.
--   Unter dem **Komponenten** Unterschlüssel des Stamm- **\_ \_ \\ CLSID** -Registrierungsschlüssels der HKEY-Klassen wurden zwei separate Unterschlüssel ("implementierte Kategorien" und "erforderliche Kategorien") entwickelt. Diese Unterschlüssel enthalten die Listen der CATIDs, die von der Komponente bereitgestellt werden, oder die der Container der Komponente bereitstellen muss.
+-   Unter dem **Unterschlüssel Components** des **HKEY \_ CLASSES ROOT \_ \\ CLSID-Registrierungsschlüssels** wurden zwei separate Unterschlüssel entwickelt: "Implementierte Kategorien" und "Erforderliche Kategorien". Diese Unterschlüssel enthalten die Listen von CATIDs, die von der Komponente bereitgestellt werden oder die der Container der Komponente bereitstellen muss.
 
-Um die Verwaltung der Komponenten Kategorien zu vereinfachen, werden Kategorien an einem zentralen Ort in der Registrierung aufgeführt: **HKEY- \_ Klassen Stamm \_ \\ Komponenten Kategorien**. Mit diesem Schlüssel werden die installierten Kategorien sowohl mit ihrer CATID als auch mit lokalisierten, lesbaren Namen aufgelistet.
+Um die Verwaltung der Komponentenkategorien zu erleichtern, werden Kategorien an einem zentralen Ort in der Registrierung aufgeführt: **HKEY \_ CLASSES ROOT \_ Component \\ Categories**. Dieser Schlüssel listet die installierten Kategorien sowohl mit ihrer CATID als auch mit lokalisierten, lesbaren Namen auf.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Kategorisierung nach Komponenten Funktionen](categorizing-by-component-capabilities.md)
--   [Kategorisierung nach Container Funktionen](categorizing-by-container-capabilities.md)
--   [Der Komponenten Kategorien-Manager](the-component-categories-manager.md)
--   [Standardklassen und-Zuordnungen](default-classes-and-associations.md)
--   [Definieren von Komponenten Kategorien](defining-component-categories.md)
+-   [Kategorisieren nach Komponentenfunktionen](categorizing-by-component-capabilities.md)
+-   [Kategorisieren nach Containerfunktionen](categorizing-by-container-capabilities.md)
+-   [Der Komponentenkategorien-Manager](the-component-categories-manager.md)
+-   [Standardklassen und Zuordnungen](default-classes-and-associations.md)
+-   [Definieren von Komponentenkategorien](defining-component-categories.md)
 -   [Zuordnen von Symbolen zu einer Kategorie](associating-icons-with-a-category.md)
 
- 
+ 
 
- 
+ 
 
 
 

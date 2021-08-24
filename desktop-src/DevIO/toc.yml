@@ -6,13 +6,13 @@
       items:
         - name: Kommunikationsressourcenhandles
           href: communications-resource-handles.md
-        - name: Änderung der Kommunikationsressourcen Einstellungen
+        - name: Änderung der Einstellungen für Kommunikationsressourcen
           href: modification-of-communications-resource-settings.md
-        - name: Kommunikationsressourcen Konfiguration
+        - name: Konfiguration von Kommunikationsressourcen
           href: communications-resource-configuration.md
-        - name: Modem Konfiguration
+        - name: Modemkonfiguration
           href: modem-configuration.md
-        - name: Lese-und Schreibvorgänge
+        - name: Lese- und Schreibvorgänge
           href: read-and-write-operations.md
           items:
             - name: Überlappende Vorgänge
@@ -21,18 +21,18 @@
               href: time-outs.md
             - name: Kommunikationsfehler
               href: communications-errors.md
-        - name: Kommunikations Ereignisse
+        - name: Kommunikationsereignisse
           href: communications-events.md
         - name: Erweiterte Funktionen
           href: extended-functions.md
     - name: Verwenden von Kommunikationsressourcen
       href: using-communications-resources.md
       items:
-        - name: Konfigurieren einer Kommunikations Ressource
+        - name: Konfigurieren einer Kommunikationsressource
           href: configuring-a-communications-resource.md
-        - name: Überwachen von Kommunikations Ereignissen
+        - name: Überwachen von Kommunikationsereignissen
           href: monitoring-communications-events.md
-    - name: Kommunikations Referenz
+    - name: Kommunikationsreferenz
       href: communications-reference.md
       items:
         - name: Kommunikationsfunktionen
@@ -40,51 +40,51 @@
           items:
             - name: BuildCommDCB
               href: /windows/desktop/api/Winbase/nf-winbase-buildcommdcba
-            - name: Buildcommdcbandtimeouts
+            - name: BuildCommDCBAndTimeouts
               href: /windows/desktop/api/Winbase/nf-winbase-buildcommdcbandtimeoutsa
-            - name: Clearcommbreak
+            - name: ClearCommBreak
               href: /windows/desktop/api/Winbase/nf-winbase-clearcommbreak
-            - name: Clearcommerror
+            - name: ClearCommError
               href: /windows/desktop/api/Winbase/nf-winbase-clearcommerror
-            - name: Commconfigdialog
+            - name: CommConfigDialog
               href: /windows/desktop/api/Winbase/nf-winbase-commconfigdialoga
-            - name: Escapecommfunction
+            - name: EscapeCommFunction
               href: /windows/desktop/api/Winbase/nf-winbase-escapecommfunction
-            - name: Getcommconfig
+            - name: GetCommConfig
               href: /windows/desktop/api/Winbase/nf-winbase-getcommconfig
-            - name: Getcommmask
+            - name: GetCommMask
               href: /windows/desktop/api/Winbase/nf-winbase-getcommmask
-            - name: Getcommmudemstatus
+            - name: GetCommModemStatus
               href: /windows/desktop/api/Winbase/nf-winbase-getcommmodemstatus
-            - name: Getcommproperties
+            - name: GetCommProperties
               href: /windows/desktop/api/Winbase/nf-winbase-getcommproperties
             - name: GetCommState
               href: /windows/desktop/api/Winbase/nf-winbase-getcommstate
-            - name: Getcommtimeouts
+            - name: GetCommTimeouts
               href: /windows/desktop/api/Winbase/nf-winbase-getcommtimeouts
-            - name: Getdefaultcommconfig
+            - name: GetDefaultCommConfig
               href: /windows/desktop/api/Winbase/nf-winbase-getdefaultcommconfiga
             - name: PurgeComm
               href: /windows/desktop/api/Winbase/nf-winbase-purgecomm
-            - name: Setcommbreak
+            - name: SetCommBreak
               href: /windows/desktop/api/Winbase/nf-winbase-setcommbreak
-            - name: Setcommconfig
+            - name: SetCommConfig
               href: /windows/desktop/api/Winbase/nf-winbase-setcommconfig
-            - name: Setcommmask
+            - name: SetCommMask
               href: /windows/desktop/api/Winbase/nf-winbase-setcommmask
             - name: SetCommState
               href: /windows/desktop/api/Winbase/nf-winbase-setcommstate
             - name: SetCommTimeouts
               href: /windows/desktop/api/Winbase/nf-winbase-setcommtimeouts
-            - name: Setdefaultcommconfig
+            - name: SetDefaultCommConfig
               href: /windows/desktop/api/Winbase/nf-winbase-setdefaultcommconfiga
             - name: SetupComm
               href: /windows/desktop/api/Winbase/nf-winbase-setupcomm
-            - name: Transmitcommchar
+            - name: TransmitCommChar
               href: /windows/desktop/api/Winbase/nf-winbase-transmitcommchar
             - name: WaitCommEvent
               href: /windows/desktop/api/Winbase/nf-winbase-waitcommevent
-        - name: Kommunikations Steuerungs Codes
+        - name: Kommunikationssteuerungscodes
           href: communications-control-codes.md
           items:
             - name: 'IOCTL_SERIAL_LSRMST_INSERT '
@@ -92,77 +92,77 @@
         - name: Kommunikationsstrukturen
           href: communications-structures.md
           items:
-            - name: CommConfig
+            - name: COMMCONFIG
               href: /windows/win32/api/Winbase/ns-winbase-commconfig
-            - name: Kommprop
+            - name: COMMPROP
               href: /windows/win32/api/WinBase/ns-winbase-commprop
             - name: COMMTIMEOUTS
               href: /windows/win32/api/Winbase/ns-winbase-commtimeouts
-            - name: Comstat
+            - name: COMSTAT
               href: /windows/win32/api/Winbase/ns-winbase-comstat
             - name: DCB
               href: /windows/win32/api/Winbase/ns-winbase-dcb
-            - name: '"Mudemdevcaps"'
+            - name: MODEMDEVCAPS
               href: /windows/win32/api/Mcx/ns-mcx-modemdevcaps
-            - name: '"Mudesettings"'
+            - name: MODEMSETTINGS
               href: /windows/win32/api/Mcx/ns-mcx-modemsettings
 - name: '-Geräteverwaltung'
   href: device-management.md
   items:
-    - name: Informationen zur Geräteverwaltung
+    - name: Informationen Geräteverwaltung
       href: about-device-management.md
       items:
         - name: Gerätemeldungen
           href: device-messages.md
-        - name: Geräte Ereignis Typen
+        - name: Geräteereignistypen
           href: device-event-types.md
-        - name: Geräte Benachrichtigungen
+        - name: Gerätebenachrichtigungen
           href: device-notifications.md
-        - name: Geräte Ereignisse
+        - name: Geräteereignisse
           href: device-events.md
-        - name: Geräte Eingabe-und-Ausgabe Steuerung (IOCTL)
+        - name: Geräteeingabe- und -ausgabesteuerung (IOCTL)
           href: device-input-and-output-control-ioctl-.md
-    - name: Verwenden der Geräteverwaltung
+    - name: Verwenden von Geräteverwaltung
       href: using-device-management.md
       items:
         - name: Aufrufen von DeviceIoControl
           href: calling-deviceiocontrol.md
         - name: Registrierung für Gerätebenachrichtigungen
           href: registering-for-device-notification.md
-        - name: Erkennen von Medien einfügen oder entfernen
+        - name: Erkennen des Ein- oder Entfernens von Medien
           href: detecting-media-insertion-or-removal.md
         - name: Verarbeiten einer Anforderung zum Entfernen eines Geräts
           href: processing-a-request-to-remove-a-device.md
-    - name: Referenz zur Geräteverwaltung
+    - name: Geräteverwaltung-Referenz
       href: device-management-reference.md
       items:
-        - name: Geräte Verwaltungsfunktionen
+        - name: Geräteverwaltung Functions
           href: device-management-functions.md
           items:
-            - name: Cdromdisabledigitalplayback
+            - name: C cybersecurityDisableDigitalPlayback
               href: /windows/desktop/api/StorProp/nf-storprop-cdromdisabledigitalplayback
-            - name: Cdromenabledigitalplayback
+            - name: C cybersecurityEnableDigitalPlayback
               href: /windows/desktop/api/StorProp/nf-storprop-cdromenabledigitalplayback
-            - name: Cdromisdigitalplaybackaktivierte
+            - name: C cybersecurityIsDigitalPlaybackEnabled
               href: /windows/desktop/api/StorProp/nf-storprop-cdromisdigitalplaybackenabled
-            - name: Cdromknowngooddigitalplayback
+            - name: C cybersecurityKnownGoodDigitalPlayback
               href: /windows/desktop/api/Storprop/nf-storprop-cdromknowngooddigitalplayback
-            - name: DeviceIoControl
+            - name: Deviceiocontrol
               href: /windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol
-            - name: DVDLauncher
+            - name: DvdLauncher
               href: dvdlauncher.md
-            - name: Installnewdevice
+            - name: InstallNewDevice
               href: installnewdevice.md
-            - name: Registerdevicenotifizierung
+            - name: RegisterDeviceNotification
               href: /windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa
-            - name: Unregisterdevicenotifizierung
+            - name: UnregisterDeviceNotification
               href: /windows/desktop/api/Winuser/nf-winuser-unregisterdevicenotification
-        - name: Geräte Verwaltungs Konstanten
+        - name: Geräteverwaltung Konstanten
           href: device-management-constants.md
           items:
             - name: DEVICE_DATA_MANAGEMENT_SET_ACTION
               href: device-data-management-set-action.md
-        - name: Steuerungs Codes für die Geräteverwaltung
+        - name: Geräteverwaltung-Steuerelementcodes
           href: device-management-control-codes.md
           items:
             - name: IOCTL_CHANGER_EXCHANGE_MEDIUM
@@ -215,7 +215,7 @@
               href: /windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_read_capacity
             - name: 'IOCTL_STORAGE_SET_HOTPLUG_INFO '
               href: /windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_set_hotplug_info
-        - name: Geräte Verwaltungs Meldungen
+        - name: Geräteverwaltung Nachrichten
           href: device-management-messages.md
           items:
             - name: WM_DEVICECHANGE
@@ -247,7 +247,7 @@
               href: dbt-querychangeconfig.md
             - name: DBT_USERDEFINED
               href: dbt-userdefined.md
-        - name: Geräte Verwaltungsstrukturen
+        - name: Geräteverwaltung Strukturen
           href: device-management-structures.md
           items:
             - name: CHANGER_ELEMENT
@@ -330,7 +330,7 @@
               href: /windows/win32/api/WinIoCtl/ns-winioctl-storage_offload_write_output
             - name: STORAGE_READ_CAPACITY
               href: storage-read-capacity.md
-        - name: Geräteverwaltungs-Enumerationstypen
+        - name: Geräteverwaltung Enumerationstypen
           href: device-management-enumeration-types.md
           items:
             - name: ELEMENT_TYPE
@@ -342,7 +342,7 @@
 - name: PWM-API
   href: pwm-api.md
   items:
-    - name: PWM-Steuerungs Codes
+    - name: PWM-Steuerungscodes
       href: pwm-control-codes.md
       items:
         - name: IOCTL_PWM_CONTROLLER_GET_ACTUAL_PERIOD

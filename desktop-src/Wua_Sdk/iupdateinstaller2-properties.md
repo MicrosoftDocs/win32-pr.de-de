@@ -4,30 +4,30 @@ ms.assetid: 54aa215a-e457-44e9-bb73-b74a6ed56b26
 title: IUpdateInstaller2-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56d89d4382b5a84a5e2ffc4032440485e0ff12b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c29a8704a7d71005d07d5f14ab53d4d2a612a340b7ec1180000f982419236d13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357362"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119679153"
 ---
 # <a name="iupdateinstaller2-properties"></a>IUpdateInstaller2-Eigenschaften
 
-Die [**IUpdateInstaller2**](/windows/desktop/api/Wuapi/nn-wuapi-iupdateinstaller2) -Schnittstelle definiert die folgende Eigenschaft.
+Die [**IUpdateInstaller2-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iupdateinstaller2) definiert die folgende Eigenschaft.
 
 
 
-| Eigenschaft                                           | BESCHREIBUNG                                                                                                                       |
+| Eigenschaft                                           | Beschreibung                                                                                                                       |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**Forcequiet**](/windows/desktop/api/Wuapi/nf-wuapi-iupdateinstaller2-get_forcequiet) | Ruft einen booleschen Wert ab, der angibt, ob Windows Installer die Installation der Updates ohne Benutzerinteraktion erzwungen wird, oder legt diesen fest. |
+| [**ForceQuiet**](/windows/desktop/api/Wuapi/nf-wuapi-iupdateinstaller2-get_forcequiet) | Ruft einen booleschen Wert ab, der angibt, ob Windows Installationsprogramm die Updates ohne Benutzerinteraktion installieren muss, und legt ihn fest. |
 
 
 
  
 
-Informationen zu den Membern, die von dieser Schnittstelle geerbt werden, finden Sie in der folgenden Schnittstelle.
+Informationen zu den von dieser Schnittstelle geerbten Membern finden Sie auf der folgenden Schnittstelle.
 
--   [**Iupdateingestaller**](/windows/desktop/api/Wuapi/nn-wuapi-iupdateinstaller)
+-   [**IUpdateInstaller**](/windows/desktop/api/Wuapi/nn-wuapi-iupdateinstaller)
 
  
 

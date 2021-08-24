@@ -1,38 +1,38 @@
 ---
-title: Das-Agent-Objektmodell
-description: Das-Agent-Objektmodell
+title: Das Agent-Objektmodell
+description: Das Agent-Objektmodell
 ms.assetid: 4ec6ec3f-9772-4e29-9482-b9860092f053
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a97bcc104cb7835c3335b22bcfd185b152b1c290
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 430e63bd0f0ddf3d412ff5fa731972caeb2ff90b11f8257775d5583b0ab7e2b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104564180"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715844"
 ---
-# <a name="the-agent-object-model"></a>Das-Agent-Objektmodell
+# <a name="the-agent-object-model"></a>Das Agent-Objektmodell
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 Das Microsoft-Agent-Objektmodell besteht aus den folgenden Objekten:
 
 -   Anforderung
 -   Agent (Steuerung)
--   Zeichen (Auflistung)
+-   Zeichen (Sammlung)
 -   Zeichen
 -   Befehle (Sammlung)
--   Get-Help
--   Ballons
--   Animationnames (Sammlung)
--   Speechinput
--   Audiooutput
--   Commandswindow
--   Eigenschaften Blatt
+-   Befehl
+-   Ballon
+-   AnimationNames (Sammlung)
+-   SpeechInput
+-   AudioOutput
+-   BefehleWindow
+-   Propertysheet.showdialog
 
-Diese Objekte sind in der folgenden Hierarchie angeordnet. (Die gepunktete Linie nach einem Objekt gibt an, dass mehrere Objekte vorhanden sein können.)
+Diese Objekte sind in der folgenden Hierarchie organisiert. (Die gepunktete Linie nach einem Objekt gibt an, dass mehrere Objekte vorhanden sein können.)
 
-![Diagramm, das die Hierarchie der Objekte anzeigt, beginnend mit "Request".](images/pro358.gif)
+![Diagramm, das die Hierarchie der Objekte zeigt, beginnend mit "Request".](images/pro358.gif)
 
  
 

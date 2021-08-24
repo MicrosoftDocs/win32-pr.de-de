@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClient7 SecuredSettings3-Eigenschaft
+title: IMsRdpClient7 SecuredSettings3 (Eigenschaft)
 description: Ruft ein Objekt ab, das die IMsRdpClientSecuredSettings2-Schnittstelle unterstützt.
 ms.assetid: 500ce7ed-bd86-434c-baf8-f30dd667dca3
 ms.tgt_platform: multiple
 keywords:
-- SecuredSettings3-Eigenschaft Remotedesktopdienste
-- SecuredSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, SecuredSettings3-Eigenschaft
-- SecuredSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, SecuredSettings3-Eigenschaft
-- SecuredSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, SecuredSettings3-Eigenschaft
-- SecuredSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, SecuredSettings3-Eigenschaft
+- SecuredSettings3-Remotedesktopdienste
+- SecuredSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , SecuredSettings3-Eigenschaft
+- SecuredSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , SecuredSettings3-Eigenschaft
+- SecuredSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , SecuredSettings3-Eigenschaft
+- SecuredSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , SecuredSettings3-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -30,16 +30,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 219e3373a6ecb2f5b963a82800f4415f7de64534
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 77bcdaae672ca59c65bea46d97a34046c7e48c6f0964c1a5b97cdcef77c14ffd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119737170"
 ---
-# <a name="imsrdpclient7securedsettings3-property"></a>IMsRdpClient7:: SecuredSettings3-Eigenschaft
+# <a name="imsrdpclient7securedsettings3-property"></a>IMsRdpClient7::SecuredSettings3 (Eigenschaft)
 
-Ruft ein Objekt ab, das die [**IMsRdpClientSecuredSettings2**](imsrdpclientsecuredsettings2.md) -Schnittstelle unterstützt.
+Ruft ein Objekt ab, das die [**IMsRdpClientSecuredSettings2-Schnittstelle**](imsrdpclientsecuredsettings2.md) unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -56,7 +56,7 @@ HRESULT get_SecuredSettings3(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse eines [**IMsRdpClientSecuredSettings2**](imsrdpclientsecuredsettings2.md) -Schnittstellen Zeigers, der das-Objekt empfängt.
+Die Adresse eines [**IMsRdpClientSecuredSettings2-Schnittstellenzeigers,**](imsrdpclientsecuredsettings2.md) der das -Objekt empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Die Adresse eines [**IMsRdpClientSecuredSettings2**](imsrdpclientsecuredsettings
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

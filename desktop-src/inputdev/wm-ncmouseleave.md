@@ -1,9 +1,9 @@
 ---
-title: WM_NCMOUSELEAVE Meldung (Winuser. h)
-description: Wird an ein Fenster gesendet, wenn der Cursor den nicht-Client Bereich des Fensters verlässt, das in einem vorherigen Befehl von trackmouserevent angegeben wurde.
+title: WM_NCMOUSELEAVE (Winuser.h)
+description: Wird in einem Fenster veröffentlicht, wenn der Cursor den Nicht-Clientbereich des Fensters verlässt, das in einem vorherigen Aufruf von TrackMouseEvent angegeben wurde.
 ms.assetid: b3ada6db-93ce-45d7-b408-d08692328aeb
 keywords:
-- Tastatur-und Maus Eingaben für WM_NCMOUSELEAVE Nachricht
+- WM_NCMOUSELEAVE der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cf7f9d0931c2623d2e92010abfca96f391107b6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 141c4f1f2483e1cbd725a70454b1df1be12c46ec1970c052938181fb511ed248
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778450"
 ---
-# <a name="wm_ncmouseleave-message"></a>WM- \_ ncmouseleave-Nachricht
+# <a name="wm_ncmouseleave-message"></a>WM \_ NCMOUSELEAVE-Meldung
 
-Wird an ein Fenster gesendet, wenn der Cursor den nicht-Client Bereich des Fensters verlässt, das in einem vorherigen Befehl von [**trackmouserevent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)angegeben wurde.
+Wird in einem Fenster veröffentlicht, wenn der Cursor den Nicht-Clientbereich des Fensters verlässt, das in einem vorherigen Aufruf von [**TrackMouseEvent angegeben wurde.**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,24 +41,24 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Meldung generiert wird, wird die gesamte von [**trackmouserevent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) angeforderte Überwachung abgebrochen. Die Anwendung muss **TrackMouseEvent** aufrufen, wenn der Mauszeiger wieder in das Fenster wechselt, wenn Sie das Verhalten der Mausbewegung weiter verfolgen muss.
+Alle von [**TrackMouseEvent angeforderten Nachverfolgungen**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) werden abgebrochen, wenn diese Nachricht generiert wird. Die Anwendung muss **TrackMouseEvent aufrufen,** wenn die Maus ihr Fenster erneut einlädt, wenn eine weitere Nachverfolgung des Mauszeigerzeigerverhaltens erforderlich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Wenn diese Meldung generiert wird, wird die gesamte von [**trackmouserevent**](/
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Wenn diese Meldung generiert wird, wird die gesamte von [**trackmouserevent**](/
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
@@ -85,13 +85,13 @@ Wenn diese Meldung generiert wird, wird die gesamte von [**trackmouserevent**](/
 [**TRACKMOUSEEVENT**](/windows/win32/api/winuser/ns-winuser-trackmouseevent)
 </dt> <dt>
 
-[**WM ( \_ syscommand)**](/windows/desktop/menurc/wm-syscommand)
+[**WM \_ SYSCOMMAND**](/windows/desktop/menurc/wm-syscommand)
 </dt> <dt>
 
-[**WM- \_ MouseLeave**](wm-mouseleave.md)
+[**WM \_ MOUSELEAVE**](wm-mouseleave.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Mauseingabe](mouse-input.md)

@@ -1,23 +1,23 @@
 ---
-description: Um Betriebssystemressourcen effizient zu verwenden, sollte eine Anwendung Dateien schließen, wenn Sie nicht mehr benötigt werden, indem Sie die CloseHandle-Funktion verwenden. Wenn eine Datei geöffnet ist, wenn eine Anwendung beendet wird, wird Sie vom System automatisch geschlossen.
+description: Um Betriebssystemressourcen effizient zu verwenden, sollte eine Anwendung Dateien schließen, wenn sie nicht mehr benötigt werden, indem die CloseHandle-Funktion verwendet wird. Wenn eine Datei geöffnet ist, wenn eine Anwendung beendet wird, schließt das System sie automatisch.
 ms.assetid: 6cf9694a-00c4-4750-8822-c25a1a102fd4
 title: Schließen und Löschen von Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3da31fe7ff38a1bbd1555e2685ceab9ae432574
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03c74ad36f2f099b8d2430f52cc2c40b789862c691f56df1ccebcd20e82586ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119696300"
 ---
 # <a name="closing-and-deleting-files"></a>Schließen und Löschen von Dateien
 
-Um Betriebssystemressourcen effizient zu verwenden, sollte eine Anwendung Dateien schließen, wenn Sie nicht mehr benötigt werden, indem Sie die [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) -Funktion verwenden. Wenn eine Datei geöffnet ist, wenn eine Anwendung beendet wird, wird Sie vom System automatisch geschlossen.
+Um Betriebssystemressourcen effizient zu verwenden, sollte eine Anwendung Dateien schließen, wenn sie nicht mehr benötigt werden, indem die [**CloseHandle-Funktion**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) verwendet wird. Wenn eine Datei geöffnet ist, wenn eine Anwendung beendet wird, schließt das System sie automatisch.
 
-Die [**DeleteFile**](/windows/desktop/api/FileAPI/nf-fileapi-deletefilea) -Funktion kann verwendet werden, um eine Datei beim Schließen zu löschen. Eine Datei kann erst gelöscht werden, wenn alle Handles geschlossen wurden. Wenn eine Datei nicht gelöscht werden kann, kann Ihr Name nicht wieder verwendet werden. Um einen Dateinamen sofort wiederzuverwenden, benennen Sie die vorhandene Datei um.
+Die [**DeleteFile-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-deletefilea) kann verwendet werden, um eine Datei beim Schließen zu löschen. Eine Datei kann erst gelöscht werden, wenn alle Handles für sie geschlossen wurden. Wenn eine Datei nicht gelöscht werden kann, kann ihr Name nicht wiederverwendet werden. Um einen Dateinamen sofort wiederzuverwenden, benennen Sie die vorhandene Datei um.
 
-Wenn Sie eine geöffnete Datei oder ein Verzeichnis auf einem Remote Computer löschen, die bereits auf dem Remote Computer ohne den Berechtigungs Satz für die Lese Freigabe geöffnet wurde [**, dürfen Sie**](/windows/desktop/api/WinBase/nf-winbase-openfile) nicht die Datei oder das Verzeichnis für den Lösch [**Vorgang aufrufen.**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) Dies führt zu einer Freigabe Verletzung.
+Wenn Sie eine geöffnete Datei oder ein Verzeichnis auf einem Remotecomputer löschen und diese bereits auf dem Remotecomputer geöffnet wurde, ohne dass die Berechtigung für die Lesefreigabe festgelegt wurde, rufen [**Sie createFile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) oder [**OpenFile**](/windows/desktop/api/WinBase/nf-winbase-openfile) nicht auf, um die Datei oder das Verzeichnis zuerst zum Löschen zu öffnen. Dies führt zu einem Freigabeverstoß.
 
  
 

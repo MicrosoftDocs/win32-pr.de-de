@@ -1,7 +1,7 @@
 ---
-description: Ruft eine geordnete Auflistung von iinkanalysiserkenzer-Objekten ab.
+description: Ruft eine geordnete Auflistung von IInkAnalysisRecognizer-Objekten ab.
 ms.assetid: 67399237-38e2-4905-a97c-10ca72c7799b
-title: 'Iinkanalyzer:: getinkanalysiserkenzersbypriority-Methode (iacom. h)'
+title: IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: d596a8138f8ab16852ce99116eef66372ff2b074
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc663385006eedaca163f529af1f9f8a2da2eb5d3d41db823ffb53ee91775b93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713410"
 ---
-# <a name="iinkanalyzergetinkanalysisrecognizersbypriority-method"></a>Iinkanalyzer:: getinkanalysiserkenzersbypriority-Methode
+# <a name="iinkanalyzergetinkanalysisrecognizersbypriority-method"></a>IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode
 
-Ruft eine geordnete Auflistung von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) -Objekten ab.
+Ruft eine geordnete Auflistung von [**IInkAnalysisRecognizer-Objekten**](iinkanalysisrecognizer.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,27 +39,27 @@ HRESULT GetInkAnalysisRecognizersByPriority(
 
 <dl> <dt>
 
-*ppinkanalysiserkenzers* \[ vorgenommen\]
+*ppInkAnalysisRecognizers* \[ out\]
 </dt> <dd>
 
-Eine geordnete Auflistung von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) -Objekten.
+Eine geordnete Auflistung von [**IInkAnalysisRecognizer-Objekten.**](iinkanalysisrecognizer.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppinkanalysiserkenzers* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppInkAnalysisRecognizers* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Die Reihenfolge der erkenungen in dieser Auflistung gibt die Reihenfolge an, in der [**iinkanalyzer**](iinkanalyzer.md) die verfügbaren erkenungen auswertet. **Iinkanalyzer** verwendet die Sprache der Striche als primäres Kriterium für das Anwenden eines [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md). Als sekundäres Kriterium vergleicht **iinkanalyzer** Analyse Hinweis Informationen mit den unterstützten Funktionen eines **iinkanalysiserkenzer** -Objekts (siehe [**iinkanalysiserkenzer:: getfunktionen**](iinkanalysisrecognizer-getcapabilities.md)). Weitere Informationen zu Analyse hinweisen finden Sie unter [**iinkanalyzer:: erkreateanalysishint-Methode**](iinkanalyzer-createanalysishint.md).
+Die Reihenfolge der Erkennungen in dieser Auflistung gibt die Reihenfolge an, in der [**IInkAnalyzer**](iinkanalyzer.md) die verfügbaren Erkennungen auswertet. **IInkAnalyzer** verwendet die Sprache der Striche als primäres Kriterium für die Anwendung eines [**IInkAnalysisRecognizer.**](iinkanalysisrecognizer.md) Als sekundäres Kriterium vergleicht **der IInkAnalyzer** Analysehinweisinformationen mit den unterstützten Funktionen eines **IInkAnalysisRecognizer-Objekts** (siehe [**IInkAnalysisRecognizer::GetCapabilities**](iinkanalysisrecognizer-getcapabilities.md)). Weitere Informationen zu Analysehinweisen finden Sie unter [**IInkAnalyzer::CreateAnalysisHint-Methode.**](iinkanalyzer-createanalysishint.md)
 
-Wenn mehr als ein [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) einen sprach Bezeichner unterstützt, verwendet [**iinkanalyzer**](iinkanalyzer.md) einen "First-Fit"-Algorithmus, um den ersten **iinkanalysiserkenzer** auszuwählen, um Striche dieser Sprache zu analysieren.
+Wenn mehr als ein [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) einen Sprachbezeichner unterstützt, verwendet [**IInkAnalyzer**](iinkanalyzer.md) einen "first-fit"-Algorithmus, um den ersten **IInkAnalysisRecognizer** auszuwählen, um Striche dieser Sprache zu analysieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,27 +67,27 @@ Wenn mehr als ein [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) einen sp
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalysiserkenzers**](iinkanalysisrecognizers.md)
+[**IInkAnalysisRecognizers**](iinkanalysisrecognizers.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: sethighestpriorityinkanalysiserkenzer-Methode**](iinkanalyzer-sethighestpriorityinkanalysisrecognizer.md)
+[**IInkAnalyzer::SetHighestPriorityInkAnalysisRecognizer-Methode**](iinkanalyzer-sethighestpriorityinkanalysisrecognizer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

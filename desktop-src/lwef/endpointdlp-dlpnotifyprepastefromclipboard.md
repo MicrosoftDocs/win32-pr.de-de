@@ -12,12 +12,12 @@ api_type:
 - DllExport
 api_location:
 - EndpointDlp.dll
-ms.openlocfilehash: cfec6e7abbf2b94ce8bf78e0b1a10082ec54419d
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: b490f4f5a258805c785822d815d9e341feb8bbd494e428eb7bf1be6da843d775
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778180"
 ---
 # <a name="dlpnotifyprepastefromclipboard-function"></a>DlpNotifyPrePasteFromClipboard-Funktion
 

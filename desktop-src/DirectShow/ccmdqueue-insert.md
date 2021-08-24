@@ -1,7 +1,7 @@
 ---
-description: Die Insert-Methode fügt der Warteschlange ein cdeferredcommand-Objekt hinzu.
+description: Die Insert-Methode fügt der Warteschlange ein CDeferredCommand-Objekt hinzu.
 ms.assetid: 41f9c30c-6267-435a-9089-eb34ae606896
-title: Ccmdqueue. Insert-Methode (winutil. h)
+title: CCmdQueue.Insert-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6bad004641258e29ed42d7142a5b0ab2c0ceb78d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90e2bab4a3545e8a02315155ad4a477511ecf961c93a511ccba268b7fde7dd0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757320"
 ---
-# <a name="ccmdqueueinsert-method"></a>Ccmdqueue. Insert-Methode
+# <a name="ccmdqueueinsert-method"></a>CCmdQueue.Insert-Methode
 
-Die- `Insert` Methode fügt der Warteschlange ein [**cdeferredcommand**](cdeferredcommand.md) -Objekt hinzu.
+Die `Insert` -Methode fügt der Warteschlange ein [**CDeferredCommand-Objekt**](cdeferredcommand.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ virtual HRESULT Insert(
 *pCmd* 
 </dt> <dd>
 
-Zeiger auf das **cdeferredcommand** -Objekt, das der Warteschlange hinzugefügt werden soll.
+Zeiger auf das **CDeferredCommand-Objekt,** das der Warteschlange hinzugefügt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK in der Standard Implementierung zurück.
+Gibt S \_ OK in der Standardimplementierungen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,16 +59,16 @@ Gibt S \_ OK in der Standard Implementierung zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ccmdqueue-Klasse**](ccmdqueue.md)
+[**CCmdQueue-Klasse**](ccmdqueue.md)
 </dt> </dl>
 
  

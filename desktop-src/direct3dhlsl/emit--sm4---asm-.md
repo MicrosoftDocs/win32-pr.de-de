@@ -1,40 +1,40 @@
 ---
-title: Ausgabe (SM4-ASM)
-description: Gibt einen Scheitelpunkt aus.
+title: emit (sm4 - asm)
+description: Geben Sie einen Scheitelpunkt aus.
 ms.assetid: FDD18CCD-8088-46BD-897C-434B77FF81E6
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b17711b6f9cf5d707fb8eae3465100a78620c0c
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ce90ed4ea87c74c09c6f45d590e8bc7a70bbb8178988b059c2b3a79726aabcb2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673080"
 ---
-# <a name="emit-sm4---asm"></a>Ausgabe (SM4-ASM)
+# <a name="emit-sm4---asm"></a>emit (sm4 - asm)
 
-Gibt einen Scheitelpunkt aus.
+Geben Sie einen Scheitelpunkt aus.
 
 
 
-| ausgeben |
+| Emittieren |
 |------|
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-die **Ausgabe bewirkt,** dass alle deklarierten o- \# Register aus dem Geometry-Shader ausgelesen werden, um einen Scheitelpunkt zu generieren.
+**emit** bewirkt, dass alle \# deklarierten o-Register aus dem Geometry Shader gelesen werden, um einen Scheitelpunkt zu generieren.
 
-Wenn mehrere **Ausgabe** Aufrufe ausgegeben werden, werden primitive generiert.
+Wenn mehrere **Aufrufe** ausgegeben werden, werden Primitive generiert.
 
-die **Ausgabe kann beliebig** oft in einem Geometry-Shader vorkommen, einschließlich innerhalb der Fluss Steuerung.
+**"emit"** kann in einem Geometry-Shader eine beliebige Anzahl von Malen angezeigt werden, auch innerhalb der Flusssteuerung.
 
-Wenn Streams deklariert wurden, müssen Sie den [ \_ Ausgabestream](emit-stream--sm5---asm-.md)verwenden.
+Wenn Streams deklariert wurden, müssen Sie stream [ \_ verwenden.](emit-stream--sm5---asm-.md)
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -44,26 +44,26 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
 
 
- 
+ 
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -72,9 +72,9 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 [Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

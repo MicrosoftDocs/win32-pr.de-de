@@ -1,26 +1,26 @@
 ---
-title: Erstellen einer Präsentations Webseite
-description: Der Beispielcode in diesem Abschnitt verwendet die Steuerungspunkt-API mit UPnP-Technologie, um eine einfache Webseite zum Steuern einer fiktiven UPnP-basierten Media Player-Geräte zu erstellen. Die Webseite wird in der folgenden Abbildung dargestellt.
+title: Erstellen einer Präsentationswebseite
+description: Im Beispielcode in diesem Abschnitt wird die Steuerungspunkt-API mit UPnP-Technologie verwendet, um eine einfache Webseite zum Steuern eines fiktiven UPnP-basierten Media Player-Geräts zu erstellen. Die Webseite wird in der folgenden Abbildung dargestellt.
 ms.assetid: 7eae71eb-9ec9-4c0f-b231-5d659f12b9f5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31133a6e92b31fa7ddeef94174cc29a4c07a1d9f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b3bfe5ffdb4781ed42f0bcab5d1a8c1bf172fe098906860bec5384311e403adb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655964"
 ---
-# <a name="creating-a-presentation-web-page"></a>Erstellen einer Präsentations Webseite
+# <a name="creating-a-presentation-web-page"></a>Erstellen einer Präsentationswebseite
 
-Der Beispielcode in diesem Abschnitt verwendet die Steuerungspunkt-API mit UPnP-Technologie, um eine einfache Webseite zum Steuern einer fiktiven UPnP-basierten Media Player-Geräte zu erstellen. Die Webseite wird in der folgenden Abbildung dargestellt.
+Im Beispielcode in diesem Abschnitt wird die Steuerungspunkt-API mit UPnP-Technologie verwendet, um eine einfache Webseite zum Steuern eines fiktiven UPnP-basierten Media Player-Geräts zu erstellen. Die Webseite wird in der folgenden Abbildung dargestellt.
 
 > [!Note]  
-> Dieser Beispielcode funktioniert nur für Browser, die unter Windows ausgeführt werden. Es funktioniert nicht in Browsern, die unter anderen Betriebssystemen ausgeführt werden.
+> Dieser Beispielcode funktioniert nur für Browser, die unter Windows ausgeführt werden. sie funktioniert nicht in Browsern, die unter anderen Betriebssystemen ausgeführt werden.
 
- 
+ 
 
-![Beispiel Darstellung einer Webseite](images/new-samp-media-player.png)
+![Beispielpräsentation einer Webseite](images/new-samp-media-player.png)
 
 ``` syntax
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -200,9 +200,9 @@ end function
 </HTML>
 ```
 
- 
+ 
 
- 
+ 
 
 
 
