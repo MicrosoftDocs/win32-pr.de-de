@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Instanz eines directxfile-Objekts. Veraltet.
+description: Erstellt eine Instanz eines DirectXFile-Objekts. Veraltet.
 ms.assetid: c920d480-2557-491d-87ea-7eea1f470498
-title: Directxfilecreate-Funktion (dxfile. h)
+title: DirectXFileCreate-Funktion (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - d3dxof.dll
-ms.openlocfilehash: 8ee1787941bbb902e6f0f50b082867aaf2f0a8bc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6dbcf4836c33fd2acfc1adc21e47430a54ba7c54aeb2b220199846d31572619e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952180"
 ---
-# <a name="directxfilecreate-function"></a>Directxfilecreate-Funktion
+# <a name="directxfilecreate-function"></a>DirectXFileCreate-Funktion
 
-Erstellt eine Instanz eines directxfile-Objekts. Veraltet.
+Erstellt eine Instanz eines DirectXFile-Objekts. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ HRESULT STDAPICALLTYPE DirectXFileCreate(
 
 <dl> <dt>
 
-*lplpdirectxfile* 
+*lplpDirectXFile* 
 </dt> <dd>
 
-Typ: **[ **lpdirectxfile**](idirectxfile.md)\***
+Typ: **[ **LPDIRECTXFILE**](idirectxfile.md)\***
 
-Adresse eines Zeigers auf eine [**idirectxfile**](idirectxfile.md) -Schnittstelle, die das erstellte directxfile-Objekt darstellt.
+Adresse eines Zeigers auf eine [**IDirectXFile-Schnittstelle,**](idirectxfile.md) die das erstellte DirectXFile-Objekt darstellt.
 
 </dd> </dl>
 
@@ -52,11 +52,11 @@ Adresse eines Zeigers auf eine [**idirectxfile**](idirectxfile.md) -Schnittstell
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: dxfileerr \_ badzuzuweisung, dxfileerr \_ badvalue.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: DXFILEERR \_ BADALLOC, DXFILEERR \_ BADVALUE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie diese Funktion verwendet haben, verwenden Sie [**registertemplates**](idirectxfile--registertemplates.md) , um Vorlagen zu [**registrieren, und erstellen Sie ein**](idirectxfile--createenumobject.md) Enumeratorobjekt mit dem Befehl "" [**, oder erstellen Sie ein**](idirectxfile--createsaveobject.md) "Save"-Objekt.
+Nachdem Sie diese Funktion verwendet haben, verwenden [**Sie RegisterTemplates**](idirectxfile--registertemplates.md) zum Registrieren von Vorlagen, [**CreateEnumObject**](idirectxfile--createenumobject.md) zum Erstellen eines Enumeratorobjekts oder [**CreateSaveObject**](idirectxfile--createsaveobject.md) zum Erstellen eines Speicherobjekts.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Nachdem Sie diese Funktion verwendet haben, verwenden Sie [**registertemplates**
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3dxof.dll</dt> </dl> |
 
 
@@ -77,13 +77,13 @@ Nachdem Sie diese Funktion verwendet haben, verwenden Sie [**registertemplates**
 [X-Dateifunktionen](dx9-graphics-reference-x-file-functions.md)
 </dt> <dt>
 
-[**"Kreateendumuject"**](idirectxfile--createenumobject.md)
+[**CreateEnumObject**](idirectxfile--createenumobject.md)
 </dt> <dt>
 
-[**"Kreatesaveobject"**](idirectxfile--createsaveobject.md)
+[**CreateSaveObject**](idirectxfile--createsaveobject.md)
 </dt> <dt>
 
-[**Register Templates**](idirectxfile--registertemplates.md)
+[**RegisterTemplates**](idirectxfile--registertemplates.md)
 </dt> </dl>
 
  

@@ -1,22 +1,22 @@
 ---
-description: Der Inhalts-Parser (Inhaltsverzeichnis) ist eine Windows-Komponente, mit der Sie erweiterte Indexinformationen in ASF-Dateien (Advanced Systems Format) speichern können.
+description: Der Inhaltsverzeichnisparser (TOC Parser) ist eine Windows-Komponente, mit der Sie erweiterte Indexinformationen in ASF-Dateien (Advanced Systems Format) speichern können.
 ms.assetid: 123083b0-dc1b-4c5c-8702-e236cffcf2da
-title: Inhaltsverzeichnis (Inhaltsverzeichnis)
+title: Inhaltsverzeichnisparser
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62d4f931013ba091a740c27c3af541c3bcb7200a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 348d98ed50057727407f0fd339a16f0d20538864289441846c3de7ef5e611614
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953150"
 ---
-# <a name="table-of-contents-parser"></a>Inhaltsverzeichnis (Inhaltsverzeichnis)
+# <a name="table-of-contents-parser"></a>Inhaltsverzeichnisparser
 
-Der Inhalts-Parser (Inhaltsverzeichnis) ist eine Windows-Komponente, mit der Sie erweiterte Indexinformationen in ASF-Dateien (Advanced Systems Format) speichern können.
+Der Inhaltsverzeichnisparser (TOC Parser) ist eine Windows-Komponente, mit der Sie erweiterte Indexinformationen in ASF-Dateien (Advanced Systems Format) speichern können.
 
 > [!Note]  
-> Der Inhaltsverzeichnis Dienst ist nicht direkt mit den Microsoft Media Foundation-APIs verknüpft, obwohl er in Verbindung mit Media Foundation verwendet werden kann.
+> Der TOC-Parser ist nicht direkt mit den Microsoft Media Foundation-APIs verknüpft, obwohl er in Verbindung mit Media Foundation.
 
  
 
@@ -24,9 +24,9 @@ Der Inhalts-Parser (Inhaltsverzeichnis) ist eine Windows-Komponente, mit der Sie
 
 | `Section`                                                                        | BESCHREIBUNG                                                                                                |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [Info zum Inhaltsverzeichnis des Parsers](about-toc-parser.md)                         | Bietet eine Übersicht über den Inhaltsverzeichnis-Parser                                                                     |
-| [Programmier Handbuch für das Inhaltsverzeichnis des Parsers](toc-parser-programming-guide.md) | Beschreibt, wie der Inhalts-Parser zum Ausführen bestimmter Aufgaben verwendet wird.                                             |
-| [Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)](toc-parser-reference.md)                 | Enthält Referenzseiten für Objekte, Schnittstellen, Strukturen und Enumerationen, die dem TOC-Parser zugeordnet sind. |
+| [Informationen zum Inhaltsverzeichnisparser](about-toc-parser.md)                         | Bietet eine Übersicht über den TOC-Parser.                                                                     |
+| [Table of Contents Parser Programming Guide](toc-parser-programming-guide.md) | Beschreibt, wie der TOC-Parser zum Ausführen bestimmter Aufgaben verwendet wird.                                             |
+| [Inhaltsverzeichnisparserreferenz](toc-parser-reference.md)                 | Enthält Referenzseiten für Objekte, Schnittstellen, Strukturen und Enumerationen, die dem TOC-Parser zugeordnet sind. |
 
 
 

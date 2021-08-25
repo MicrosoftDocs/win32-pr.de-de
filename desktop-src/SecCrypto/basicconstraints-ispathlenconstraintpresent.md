@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab, der angibt, ob die Einschränkung der Pfadlänge vorhanden ist.
+description: Ruft einen booleschen Wert ab, der angibt, ob die Pfadlängeneinschränkung vorhanden ist.
 ms.assetid: 25840a62-13d1-4b54-9b09-64f77a465e06
-title: Basiceinschränkungs. ispathlenbeschränintpresent (Eigenschaft)
+title: BasicConstraints.IsPathLenConstraintPresent-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 9809b6747bac548b14b37384719dbe2660188582
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c6faf267508476f423efaff6b012a25114eca25e7bc21c51c51b9a3e66dde802
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879730"
 ---
-# <a name="basicconstraintsispathlenconstraintpresent-property"></a>Basiceinschränkungs. ispathlenbeschränintpresent (Eigenschaft)
+# <a name="basicconstraintsispathlenconstraintpresent-property"></a>BasicConstraints.IsPathLenConstraintPresent-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**X509BasicConstraintsExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/previous-versions/windows/) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**X509BasicConstraintsExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/previous-versions/windows/)\]
 
-Die **ispathleneinschränintpresent** -Eigenschaft ruft einen booleschen Wert ab, der angibt, ob die Einschränkung der Pfadlänge vorhanden ist.
+Die **IsPathLenConstraintPresent-Eigenschaft** ruft einen booleschen Wert ab, der angibt, ob die Pfadlängeneinschränkung vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ BasicConstraints.IsPathLenConstraintPresent As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**True** gibt an, dass die Einschränkung der Pfadlänge vorhanden ist.
+True **gibt an,** dass die Pfadlängeneinschränkung vorhanden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ BasicConstraints.IsPathLenConstraintPresent As Boolean
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

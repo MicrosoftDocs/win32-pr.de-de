@@ -1,7 +1,7 @@
 ---
-description: Die drawvideoimagehere-Methode zeichnet ein Bild aus einem Medien Beispiel in einen angegebenen Gerätekontext.
+description: Die DrawVideoImageHere-Methode zeichnet ein Bild aus einem Medienbeispiel in einen angegebenen Gerätekontext.
 ms.assetid: b11e1c6b-5a29-444f-a0a9-049cd9d49b13
-title: Cdrawimage. drawvideoimagehere-Methode (winutil. h)
+title: CDrawImage.DrawVideoImageHere-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 599dd82e282f2d14ac7e974363a62695e209c080
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8137c4e18708ce6a0402d1d34caf9560054f267d8de0280a6efb5c3dd36e6517
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909810"
 ---
-# <a name="cdrawimagedrawvideoimagehere-method"></a>Cdrawimage. drawvideoimagehere-Methode
+# <a name="cdrawimagedrawvideoimagehere-method"></a>CDrawImage.DrawVideoImageHere-Methode
 
-Die- `DrawVideoImageHere` Methode zeichnet ein Bild aus einem Medien Beispiel in einen angegebenen Gerätekontext.
+Die `DrawVideoImageHere` -Methode zeichnet ein Bild aus einem Medienbeispiel in einen angegebenen Gerätekontext.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,37 +45,37 @@ BOOL DrawVideoImageHere(
 
 <dl> <dt>
 
-*HDC* 
+*Hdc* 
 </dt> <dd>
 
-Handle für einen Gerätekontext, in dem die Zeichnung stattfindet.
+Handle für einen Gerätekontext, in dem die Zeichnung ausgeführt wird.
 
 </dd> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels, das das Bild enthält.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels, das das Bild enthält.
 
 </dd> <dt>
 
-*lprcsrc* 
+*lprcSrc* 
 </dt> <dd>
 
-Zeiger auf ein Quell Rechteck, das zum Zeichnen verwendet werden soll. Wenn der Wert **null** ist, wird das Rechteck in [**cdrawimage:: m \_ SourceRect**](cdrawimage-m-sourcerect.md) verwendet.
+Zeiger auf ein Quellrechteck, das zum Zeichnen verwendet werden soll. Bei **NULL** wird das Rechteck in [**CDrawImage::m \_ SourceRect**](cdrawimage-m-sourcerect.md) verwendet.
 
 </dd> <dt>
 
-*lprcdst* 
+*lprcDst* 
 </dt> <dd>
 
-Zeiger auf ein Ziel Rechteck, das zum Zeichnen verwendet werden soll. Wenn der Wert **null** ist, wird das Rechteck in [**cdrawimage:: m \_ targetrect**](cdrawimage-m-targetrect.md) verwendet.
+Zeiger auf ein Zielrechteck, das zum Zeichnen verwendet werden soll. Bei **NULL** wird das Rechteck in [**CDrawImage::m \_ TargetRect**](cdrawimage-m-targetrect.md) verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich.
+Gibt **TRUE** zurück, wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Gibt **true** zurück, wenn erfolgreich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -92,7 +92,7 @@ Gibt **true** zurück, wenn erfolgreich.
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

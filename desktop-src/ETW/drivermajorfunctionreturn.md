@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Treiber-Haupt Funktionsaufrufe-Rückgabe Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Rückgabeereignisse für Hauptfunktionsaufrufe des Treibers. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: b3358935-d6fb-49eb-bdf7-4366b4fd14c5
-title: Drivermajorfunctionreturn-Klasse
+title: DriverMajorFunctionReturn-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 21340224253d1eb3f3ddc733bf2d43e847844282
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de8c18d7655aec0f9ae4748c384b26015a5a1083721aae367e132ea7c39f80a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914470"
 ---
-# <a name="drivermajorfunctionreturn-class"></a>Drivermajorfunctionreturn-Klasse
+# <a name="drivermajorfunctionreturn-class"></a>DriverMajorFunctionReturn-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Treiber-Haupt Funktionsaufrufe-Rückgabe Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Rückgabeereignisse für Hauptfunktionsaufrufe des Treibers.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,64 +40,64 @@ class DriverMajorFunctionReturn : DiskIo
 
 ## <a name="members"></a>Member
 
-Die **drivermajorfunctionreturn** -Klasse verfügt über diese Typen von Membern:
+Die **DriverMajorFunctionReturn-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **drivermajorfunctionreturn** -Klasse verfügt über diese Eigenschaften.
+Die **DriverMajorFunctionReturn-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket.
+E/A-Anforderungspaket.
 
 </dd> <dt>
 
-**Uniqmatchid**
+**UniqMatchId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Ein Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiber Ereignissen, z. b. dem [**drivercompleterequest**](drivercompleterequest.md) -Ereignis, zu korrelieren.
+Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiberereignissen zu korrelieren, z. B. dem [**DriverCompleteRequest-Ereignis.**](drivercompleterequest.md)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

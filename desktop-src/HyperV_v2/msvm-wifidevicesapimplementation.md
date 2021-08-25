@@ -1,5 +1,5 @@
 ---
-description: 'Msvm_WiFiDeviceSAPImplementation Klasse: Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung.'
+description: 'Msvm_WiFiDeviceSAPImplementation-Klasse: Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung.'
 ms.assetid: d1d99299-f2d9-4025-a48d-cf8180f2f7af
 title: Msvm_WiFiDeviceSAPImplementation-Klasse
 ms.topic: reference
@@ -24,7 +24,7 @@ ms.locfileid: "119980420"
 ---
 # <a name="msvm_wifidevicesapimplementation-class"></a>Msvm \_ WiFiDeviceSAPImplementation-Klasse
 
-Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung. Die Kardinalität dieser Zuordnung ist n:n. Ein SAP kann von mehr als einem logischen Gerät bereitgestellt werden, das in Verbindung ausgeführt wird. Jedes Gerät kann mehrere SAP-Daten bereitstellen. Wenn viele logische Geräte einem einzelnen SAP zugeordnet sind, wird davon ausgegangen, dass diese Elemente zusammen zum Bereitstellen des Zugriffspunkts verwendet werden. Wenn verschiedene Implementierungen eines SAP vorhanden sind, würde jede dieser Implementierungen zu einzelnen Instanziierungen des SAP-Objekts führen. Diese einzelnen Instanziierungen würden dann Zuordnungen zu den eindeutigen Implementierungen haben.
+Eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung. Die Kardinalität dieser Zuordnung ist m:n. Ein SAP kann von mehreren logischen Geräten bereitgestellt werden, die in Verbindung stehen. Jedes Gerät kann mehrere SAP-Geräte bereitstellen. Wenn viele logische Geräte einem einzelnen SAP zugeordnet sind, wird davon ausgegangen, dass diese Elemente zusammen ausgeführt werden, um den Zugriffspunkt bereitzustellen. Wenn unterschiedliche Implementierungen eines SAP vorhanden sind, würde jede dieser Implementierungen zu einzelnen Instanziierungen des SAP-Objekts führen. Diese einzelnen Instanziierungen verfügen dann über Zuordnungen zu den eindeutigen Implementierungen.
 
 Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,7 +41,7 @@ class Msvm_WiFiDeviceSAPImplementation : CIM_DeviceSAPImplementation
 
 ## <a name="members"></a>Member
 
-Die **Msvm \_ WiFiDeviceSAPImplementation-Klasse** verfügt über die folgenden Membertypen:
+Die **Msvm \_ WiFiDeviceSAPImplementation-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -60,7 +60,7 @@ Datentyp: **[ **Msvm \_ WiFiPort**](msvm-wifiport.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorerst")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Eine Instanz der [**Msvm \_ WiFiPort-Klasse,**](msvm-wifiport.md) die das logische Gerät darstellt.
@@ -76,10 +76,10 @@ Datentyp: **[ **Msvm \_ WiFiEndpoint**](msvm-wifiendpoint.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Eine Instanz der [**Msvm \_ WiFiEndpoint-Klasse,**](msvm-wifiendpoint.md) die den dienstzugriffspunkt darstellt, der mit dem logischen Gerät implementiert wurde.
+Eine Instanz der [**Msvm \_ WiFiEndpoint-Klasse,**](msvm-wifiendpoint.md) die den Dienstzugriffspunkt darstellt, der mit dem logischen Gerät implementiert wurde.
 
 </dd> </dl>
 

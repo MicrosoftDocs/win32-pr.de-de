@@ -1,9 +1,9 @@
 ---
-title: TVM_SETHOT Meldung (kommstrg. h)
-description: Legt das heiße Element für ein Strukturansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des TreeView-Makros "-Host" senden \_ .
+title: TVM_SETHOT Nachricht (Commctrl.h)
+description: Legt das heiße Element für ein Strukturansichtssteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SetHot-Makros senden.
 ms.assetid: 5e7368f5-40ce-4e7b-bbe3-5fe0b17181a8
 keywords:
-- Windows-Steuerelemente für TVM_SETHOT Meldung
+- TVM_SETHOT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: beccd5429267350682a6721cde66cca9316cf438
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 87ca61fd0bd3e25f37229cd5cee54f9bbb59b3a5c7556ae745821a8dc4d595d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913950"
 ---
-# <a name="tvm_sethot-message"></a>TVM- \_ Nachricht
+# <a name="tvm_sethot-message"></a>TVM \_ SETHOT-Nachricht
 
-\[Zur internen Verwendung vorgesehen. wird nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird möglicherweise in zukünftigen Versionen von Windows nicht mehr unterstützt.\]
+\[Für die interne Verwendung vorgesehen; nicht für die Verwendung in Anwendungen empfohlen. Diese Meldung wird in zukünftigen Versionen von Windows möglicherweise nicht mehr unterstützt.\]
 
-Legt das heiße Element für ein Strukturansicht-Steuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sethot) -Makros "-Host" senden.
+Legt das heiße Element für ein Strukturansichtssteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SetHot-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sethot) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,27 +41,27 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Handle für das neue heiße Element. Wenn dieser Wert **null** ist, wird für das Strukturansicht-Steuerelement festgelegt, dass kein heißes Element vorhanden ist.
+Handle für das neue heiße Element. Wenn dieser Wert **NULL** ist, wird das Strukturansichtssteuerelement auf kein heißes Element festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Die Verwendung dieser Nachricht kann die Sicherheit des Programms beeinträchtigen.
+Die Verwendung dieser Meldung kann die Sicherheit Ihres Programms gefährden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das *heiße Element* ist das Element, auf das der Mauszeiger zeigt. Mit dieser Meldung wird ein Element so aussehen, als wäre es das heiße Element, auch wenn der Mauszeiger nicht darauf zeigt.
+Das *heiße Element* ist das Element, auf das die Maus zeigen soll. Diese Meldung bewirkt, dass ein Element so aussieht, als wäre es das heiße Element, auch wenn die Maus nicht darauf zeigen würde.
 
-Diese Meldung hat keinen sichtbaren Effekt, wenn der Stil für die [**TV- \_ trackselect**](tree-view-control-window-styles.md) -Einstellung nicht festgelegt ist
+Diese Meldung hat keine sichtbaren Auswirkungen, wenn der [**TVS \_ TRACKSELECT-Stil**](tree-view-control-window-styles.md) nicht festgelegt ist.
 
 Wenn dies erfolgreich ist, bewirkt diese Meldung, dass das heiße Element neu gezeichnet wird.
 
-Diese Meldung wird ignoriert, wenn *LPARAM* den Wert **null** hat und das Strukturansicht-Steuerelement die Maus nachverfolgt.
+Diese Meldung wird ignoriert, wenn *lParam* **NULL** ist und das Strukturansichtssteuerelement die Maus nachverfolgt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ Diese Meldung wird ignoriert, wenn *LPARAM* den Wert **null** hat und das Strukt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Diese Meldung wird ignoriert, wenn *LPARAM* den Wert **null** hat und das Strukt
 
 <dl> <dt>
 
-[**TreeView \_ -Element**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sethot)
+[**TreeView \_ SetHot**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sethot)
 </dt> </dl>
 
  

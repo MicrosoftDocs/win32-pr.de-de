@@ -1,40 +1,40 @@
 ---
-title: Abrufen der Antwort von einem Upload-Reply Auftrag
-description: Wenn Sie Daten in eine Serveranwendung hochladen und Daten an den Client zurückgeben lassen möchten, geben Sie den Auftrag als BG- \_ \_ Auftragstyp \_ Upload- \_ Antwort Auftrag an.
+title: Abrufen der Antwort aus einem Upload-Reply Auftrag
+description: Wenn Sie Daten in eine Serveranwendung hochladen und an den Client zurückgeben möchten, geben Sie den Auftrag als AUFTRAGSTYP \_ \_ UPLOAD \_ \_ REPLY-Auftrag an.
 ms.assetid: bab28a2c-1e2f-4b76-9dc6-57df26f7efec
 ms.topic: article
 ms.date: 11/29/2018
-ms.openlocfilehash: 582a37a31c13c5cc3e0b44c51a767cfbe465c64c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 79ca145a3ed243209fc0059b20823e32da3cf3974850a6bc3e872f43dbd40aa1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004880"
 ---
-# <a name="retrieving-the-reply-from-an-upload-reply-job"></a>Abrufen der Antwort von einem Upload-Reply Auftrag
+# <a name="retrieving-the-reply-from-an-upload-reply-job"></a>Abrufen der Antwort aus einem Upload-Reply Auftrag
 
-Bei einem Bits-Upload-Reply Auftrag, zusätzlich zum Hochladen einer Datei auf einen Server, wird auch eine Antwort-URL untersucht, die als Teil der Serverantwort gesendet wird, und anschließend wird die Antwort-URL automatisch befolgt und eine Antwort davon heruntergeladen. Weitere Informationen zum Header Wert "Bits-Reply-URL" finden Sie in der Dokumentation [zu "ACK for Fragment](/windows/desktop/Bits/ack-for-fragment) ".
+Ein BITS Upload-Reply-Auftrag überprüft zusätzlich zum Hochladen einer Datei auf einen Server auch eine Antwort-URL, die als Teil der Serverantwort gesendet wird, und folgt dann automatisch der Antwort-URL und lädt eine Antwort von ihr herunter. Weitere Informationen zum Bits-Reply-URL-Headerwert finden Sie in der Dokumentation zu [Ack for Fragment.](/windows/desktop/Bits/ack-for-fragment)
 
-Legen Sie den Auftragstyp auf "BG \_ Job \_ Type \_ Upload Reply" fest \_ , um einen Upload-Reply Type-Auftrag zu erstellen. Die Antwortdaten stehen dem Client zur Verfügung, nachdem der Auftrag in den Status des Status "BG- \_ Auftrag \_ übertragen" gelangt ist \_ . Rufen Sie zum Abrufen der Antwort eine der folgenden Methoden auf:
+Legen Sie den Auftragstyp auf BG \_ JOB TYPE UPLOAD REPLY \_ \_ \_ fest, um einen Upload-Reply zu erstellen. Die Antwortdaten sind für den Client verfügbar, nachdem der Auftrag in den Status BG \_ JOB \_ STATE \_ TRANSFERD (BG-AUFTRAGSSTATUS ÜBERTRAGEN) versetzt wurde. Rufen Sie zum Abrufen der Antwort eine der folgenden Methoden auf:
 
--   [**IBackgroundCopyJob2:: getreplydata**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplydata)
+-   [**IBackgroundCopyJob2::GetReplyData**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplydata)
 
-    Stellt eine Kopie der Antwortdaten im Arbeitsspeicher bereit. Verwenden Sie diese Methode, um die Antwortdaten vor oder nach dem Aufruf der [**ibackgroundcopyjob:: Complete**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete) -Methode zu lesen. Wenn die Antwortdaten 1 MB überschreiten, muss die Anwendung die [**IBackgroundCopyJob2:: getreplyfilename**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename) -Methode aufrufen, um den Namen der Antwortdatei abzurufen und den Inhalt direkt zu lesen.
+    Stellt eine Speicherkopie der Antwortdaten zur Verfügung. Verwenden Sie diese Methode, um die Antwortdaten vor oder nach dem Aufruf der [**IBackgroundCopyJob::Complete-Methode zu**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-complete) lesen. Wenn die Antwortdaten 1 MB überschreiten, muss die Anwendung die [**IBackgroundCopyJob2::GetReplyFileName-Methode**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename) aufrufen, um den Namen der Antwortdatei abzurufen und ihren Inhalt direkt zu lesen.
 
--   [**IBackgroundCopyJob2:: getreplyfilename**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename)
+-   [**IBackgroundCopyJob2::GetReplyFileName**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename)
 
-    Gibt den Namen der Datei an, die die Antwort enthält. Vor dem Öffnen und Lesen der Antwortdatei müssen Sie die **ibackgroundcopyjob:: Complete** -Methode abrufen. die Antwortdatei steht dem Client erst zur Verfügung, wenn Sie die **Complete** -Methode aufgerufen haben.
+    Gibt den Namen der Datei an, die die Antwort enthält. Sie müssen die **IBackgroundCopyJob::Complete-Methode aufrufen,** bevor Sie die Antwortdatei öffnen und lesen. Die Antwortdatei ist für den Client erst verfügbar, wenn Sie die **Complete-Methode** aufrufen.
 
-Rufen Sie diese Methoden in Ihrer [**ibackgroundcopycallback:: jobtransfer**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopycallback-jobtransferred) -Methode nur auf, wenn die Antwort klein ist und schnell verarbeitet werden kann, damit der Rückruf Thread nicht blockiert wird. Wenn Sie anstelle des Rückrufs eine [**Befehlszeilen Benachrichtigung**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setnotifycmdline) verwenden, übergeben Sie den Auftrags Bezeichner an die ausführbare Datei. Die ausführbare Datei verwendet den Auftrags Bezeichner, um die **Complete** -Methode aufzurufen, um die Antwortdatei verfügbar zu machen.
+Rufen Sie diese Methoden nur dann in Ihrer [**IBackgroundCopyCallback::JobTransferred-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopycallback-jobtransferred) auf, wenn die Antwort klein ist und schnell verarbeitet werden kann, um den Rückrufthread nicht zu blockieren. Wenn Sie anstelle [**des Rückrufs die**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setnotifycmdline) Befehlszeilenbenachrichtigung verwenden, übergeben Sie die Auftrags-ID an die ausführbare Datei. Die ausführbare Datei verwendet den Auftragsbezeichner zum Aufrufen der **Complete-Methode,** um die Antwortdatei verfügbar zu machen.
 
-In den folgenden Beispielen wird gezeigt, wie die einzelnen Methoden zum Abrufen der Antwortdaten verwendet werden.
+In den folgenden Beispielen wird gezeigt, wie sie jede Methode verwenden, um die Antwortdaten abzurufen.
 
--   [Verwenden von getreplydata](#using-getreplydata)
--   [Verwenden von getreplyfilename](#using-getreplyfilename)
+-   [Verwenden von GetReplyData](#using-getreplydata)
+-   [Verwenden von GetReplyFileName](#using-getreplyfilename)
 
-## <a name="using-getreplydata"></a>Verwenden von getreplydata
+## <a name="using-getreplydata"></a>Verwenden von GetReplyData
 
-Im folgenden Beispiel wird gezeigt, wie die Antwortdaten mithilfe der [**IBackgroundCopyJob2:: getreplydata**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplydata) -Methode abgerufen werden. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist, der Typ des Auftrags "Upload-Reply" und der Status des Auftrags "BG Job State Transfer" lautet \_ \_ \_ .
+Das folgende Beispiel zeigt, wie die Antwortdaten mithilfe der [**IBackgroundCopyJob2::GetReplyData-Methode abgerufen**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplydata) werden. Im Beispiel wird davon ausgegangen, dass der [**IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist, der Typ des Auftrags upload-reply und der Status des Auftrags BG \_ JOB STATE \_ \_ TRANSFERD ist.
 
 
 ```C++
@@ -83,9 +83,9 @@ else
 
 
 
-## <a name="using-getreplyfilename"></a>Verwenden von getreplyfilename
+## <a name="using-getreplyfilename"></a>Verwenden von GetReplyFileName
 
-Im folgenden Beispiel wird gezeigt, wie die Antwortdaten mithilfe der [**IBackgroundCopyJob2:: getreplyfilename**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename) -Methode abgerufen werden. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist, der Typ des Auftrags "Upload-Reply" und der Status des Auftrags "BG Job State Transfer" lautet \_ \_ \_ .
+Das folgende Beispiel zeigt, wie die Antwortdaten mithilfe der [**IBackgroundCopyJob2::GetReplyFileName-Methode abgerufen**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-getreplyfilename) werden. Im Beispiel wird davon ausgegangen, dass der [**IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist, der Typ des Auftrags upload-reply und der Status des Auftrags BG \_ JOB STATE \_ \_ TRANSFERD ist.
 
 
 ```C++
@@ -123,9 +123,9 @@ else
 
 
 
- 
+ 
 
- 
+ 
 
 
 

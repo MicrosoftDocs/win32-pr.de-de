@@ -1,10 +1,10 @@
 ---
-title: Ideliveryoptimizationjob-Schnittstelle (deliveryoptimization. h)
-description: Verwenden Sie die ideliveryoptimizationjob-Schnittstelle, um Bereiche einer Datei herunterzuladen.
+title: IDeliveryOptimizationJob-Schnittstelle (Deliveryoptimization.h)
+description: Verwenden Sie die IDeliveryOptimizationJob-Schnittstelle, um Bereiche einer Datei herunterzuladen.
 ms.assetid: 7549F3B2-47E9-44DA-BD9C-AEFB0C36FF15
 keywords:
-- Ideliveryoptimizationjob-Schnittstelle
-- Ideliveryoptimizationjob-Schnittstelle, beschrieben
+- IDeliveryOptimizationJob-Schnittstelle
+- IDeliveryOptimizationJob-Schnittstelle, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,32 +16,32 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6ee2ce35b8089e9b05b7291f535361e39140f856
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 71f978be993e21ad487af5469327b5f66804166a7e5247dffb841f7815b2279e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895680"
 ---
-# <a name="ideliveryoptimizationjob-interface"></a>Ideliveryoptimizationjob-Schnittstelle
+# <a name="ideliveryoptimizationjob-interface"></a>IDeliveryOptimizationJob-Schnittstelle
 
-Verwenden Sie die **ideliveryoptimizationjob** -Schnittstelle, um Bereiche einer Datei herunterzuladen.
+Verwenden Sie die **IDeliveryOptimizationJob-Schnittstelle,** um Bereiche einer Datei herunterzuladen.
 
 ## <a name="members"></a>Member
 
-Die **ideliveryoptimizationjob** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ideliveryoptimizationjob** verfügt auch über die folgenden Typen von Membern:
+Die **IDeliveryOptimizationJob-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IDeliveryOptimizationJob** verfügt auch über diese Typen von Membern:
 
 - [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ideliveryoptimizationjob** -Schnittstelle verfügt über diese Methoden.
+Die **IDeliveryOptimizationJob-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                  | BESCHREIBUNG                                                                                         |
 |:------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
-| [**ADDFILEWITHRANGES**](ideliveryoptimizationjob-addfilewithranges.md) | Fügt einem Download Auftrag eine Datei hinzu und gibt die Bereiche der Datei an, die Sie herunterladen möchten.<br/> |
+| [**AddFileWithRanges**](ideliveryoptimizationjob-addfilewithranges.md) | Fügt einem Downloadauftrag eine Datei hinzu und gibt die Bereiche der Datei an, die Sie herunterladen möchten.<br/> |
 
 
 
@@ -53,13 +53,13 @@ Die **ideliveryoptimizationjob** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IDeliveryOptimizationJob ist als EE2584CF-A69C-4848-B633-2649962b3ef7 definiert.<br/>         |
+| IID<br/>                      | IID_IDeliveryOptimizationJob ist als EE2584CF-A69C-4848-B633-2649962B3EF7 definiert.<br/>         |
 
 
 

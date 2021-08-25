@@ -1,7 +1,7 @@
 ---
-description: Die Methode "nettunsignedintegervalue" fügt einen neuen ulong-Wert (Type VT \_ UI4) hinzu oder überschreibt eine vorhandene.
+description: Die SetUnsignedIntegerValue-Methode fügt einen neuen ULONG-Wert (VT \_ UI4-Typ) hinzu oder überschreibt einen vorhandenen.
 ms.assetid: 9b5d1b8c-7863-4807-a34b-56d30a47bd5c
-title: 'Iportabledevicevalues:: Server Value-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetUnsignedIntegerValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7dc237e5cdba120a08899035dc20f6fb6b2b63f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9c58569554cf9170788524bdcb233bf42b3318f1e954050bb713711c93337543
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928460"
 ---
-# <a name="iportabledevicevaluessetunsignedintegervalue-method"></a>Iportabledevicevalues:: Server Value-Methode
+# <a name="iportabledevicevaluessetunsignedintegervalue-method"></a>IPortableDeviceValues::SetUnsignedIntegerValue-Methode
 
-Die Methode " **nettunsignedintegervalue** " fügt einen neuen **ulong** -Wert (Type VT \_ UI4) hinzu oder überschreibt eine vorhandene.
+Die **SetUnsignedIntegerValue-Methode** fügt einen neuen **ULONG-Wert** (VT \_ UI4-Typ) hinzu oder überschreibt einen vorhandenen Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetUnsignedIntegerValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Ein **ulong** -Wert, der den neuen Wert angibt.
+Eine **ULONG,** die den neuen Wert angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,13 +69,13 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
+Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter [**Angeben von Client Informationen**](specifying-client-information.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [**Angeben von Clientinformationen.**](specifying-client-information.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter [**Angeben von 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -92,13 +92,13 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter [**Angeben von 
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getunsignedintegervalue**](iportabledevicevalues-getunsignedintegervalue.md)
+[**IPortableDeviceValues::GetUnsignedIntegerValue**](iportabledevicevalues-getunsignedintegervalue.md)
 </dt> <dt>
 
-[**Angeben von Client Informationen**](specifying-client-information.md)
+[**Angeben von Clientinformationen**](specifying-client-information.md)
 </dt> </dl>
 
  

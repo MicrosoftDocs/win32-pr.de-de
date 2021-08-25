@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: a14e837a0903290c3197bbb17ec4b2da3f68b419
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6205c0de94747bfe4a30e1c07f48383bac347b1bbd3cc9dce1dc0c925296cf03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848580"
 ---
 # <a name="id3dxbaseeffectsetintarray-method"></a>ID3DXBaseEffect::SetIntArray-Methode
 
@@ -47,7 +47,7 @@ HRESULT SetIntArray(
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Array von ganzen Zahlen.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der ganzen Zahlen im Array.
+Anzahl von ganzen Zahlen im Array.
 
 </dd> </dl>
 
@@ -73,20 +73,20 @@ Anzahl der ganzen Zahlen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

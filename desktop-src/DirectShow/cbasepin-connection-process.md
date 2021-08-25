@@ -1,53 +1,53 @@
 ---
-description: Cbasepin-Verbindungsprozess
+description: CBasePin-Verbindungsprozess
 ms.assetid: 4b3a9023-0267-4caa-9d89-88237009df05
-title: Cbasepin-Verbindungsprozess
+title: CBasePin-Verbindungsprozess
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1441b0daba58857e00da0139d3312fb277287fc2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6134c9094e00ea43c5e4bb9f92c9132287fab3c16f98d56497affc8c1015bd6a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916785"
 ---
-# <a name="cbasepin-connection-process"></a>Cbasepin-Verbindungsprozess
+# <a name="cbasepin-connection-process"></a>CBasePin-Verbindungsprozess
 
-In diesem Abschnitt wird beschrieben, wie die [**cbasepin**](cbasepin.md) -Klasse den PIN-Verbindungsprozess implementiert.
+In diesem Abschnitt wird beschrieben, wie die [**CBasePin-Klasse**](cbasepin.md) den Pinverbindungsprozess implementiert.
 
-Der Filter Graph-Manager initiiert alle Pin-Verbindungen. Sie ruft die [**IPin:: Connect**](/windows/desktop/api/Strmif/nf-strmif-ipin-connect) -Methode der Ausgabe-PIN auf, wobei die Eingabe-PIN angegeben wird. Die Ausgabe-PIN schließt die Verbindung ab, indem die [**IPin:: receiveconnection**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) -Methode der Eingabe-PIN aufgerufen wird. Die Eingabe-PIN kann die Verbindung akzeptieren oder ablehnen.
+Der Filter-Graph-Manager initiiert alle Pinverbindungen. Sie ruft die [**IPin::Verbinden-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-connect) des Ausgabepins auf und gibt den Eingabepin an. Der Ausgabepin schließt die Verbindung ab, indem die [**IPin::ReceiveConnection-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) des Eingabepins aufgerufen wird. Der Eingabepin kann die Verbindung akzeptieren oder ablehnen.
 
-Der Filter Graph-Manager kann auch einen Medientyp für die Verbindung angeben. Wenn dies der Fall ist, versuchen die Pins, eine Verbindung mit diesem Typ herzustellen. Andernfalls müssen die Pins den Typ aushandeln. Der Filter Graph-Manager kann auch einen *partiellen* Medientyp angeben, der den Wert GUID \_ NULL für den Haupttyp, den Untertyp oder den Formattyp aufweist. In diesem Fall versuchen die Pins, die jeweiligen Teile des Medientyps abzugleichen. der Wert GUID \_ Null fungiert als Platzhalter.
+Der Filter-Graph-Manager kann auch einen Medientyp für die Verbindung angeben. Wenn ja, versuchen die Pins, eine Verbindung mit diesem Typ herzustellen. Falls nicht, müssen die Pins den Typ aushandeln. Der Filter-Graph-Manager kann auch einen *partiellen* Medientyp angeben, der den Wert GUID \_ NULL für den Haupttyp, Untertyp oder Formattyp hat. In diesem Fall versuchen die Pins, mit den angegebenen Teilen des Medientyps übereinzugleichen. der Wert GUID \_ NULL fungiert als Platzhalter.
 
-Die [**cbasepin:: Connect**](cbasepin-connect.md) -Methode wird gestartet, indem überprüft wird, ob die PIN eine Verbindung annehmen kann. Beispielsweise wird überprüft, ob die PIN bereits verbunden ist. Der Rest des Verbindungsprozesses wird an die [**cbasepin:: agreemediatype**](cbasepin-agreemediatype.md) -Methode delegiert. Alles, was folgt, wird von **agreemediatype** ausgeführt.
+Die [**CBasePin::Verbinden-Methode**](cbasepin-connect.md) beginnt mit der Überprüfung, ob der Pin eine Verbindung akzeptieren kann. Beispielsweise wird überprüft, ob der Stecknadel nicht bereits verbunden ist. Der Rest des Verbindungsprozesses wird an die [**CBasePin::AgreeMediaType-Methode**](cbasepin-agreemediatype.md) delegiert. Alles, was folgt, wird von **AgreeMediaType** ausgeführt.
 
-Wenn der Medientyp vollständig angegeben ist, ruft die PIN die [**cbasepin::**](cbasepin-attemptconnection.md) der Connection-Methode auf, um die Verbindung herzustellen. Andernfalls werden Medientypen in der folgenden Reihenfolge ausprobiert:
+Wenn der Medientyp vollständig angegeben ist, ruft der Pin die [**CBasePin::AttemptConnection-Methode**](cbasepin-attemptconnection.md) auf, um die Verbindung herzustellen. Andernfalls werden Medientypen in der folgenden Reihenfolge versucht:
 
-1.  Die bevorzugten Typen der Eingabe-PIN.
-2.  Die bevorzugten Typen der Ausgabepin.
+1.  Die bevorzugten Typen des Eingabepins.
+2.  Die bevorzugten Typen des Ausgabepins.
 
-Sie können diese Reihenfolge umkehren, indem Sie das [**cbasepin:: m \_ btrymytypesfirst**](cbasepin-m-btrymytypesfirst.md) -Flag auf " **true**" festlegen.
+Sie können diese Reihenfolge umkehren, indem Sie das [**Flag CBasePin::m \_ bTryMyTypesFirst**](cbasepin-m-btrymytypesfirst.md) auf **TRUE** festlegen.
 
-In jedem Fall ruft die PIN [**IPin:: enummediatypes**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) auf, um die Medientypen aufzuzählen. Diese Methode ruft ein Enumeratorobjekt ab, das an die [**cbasepin:: trymediatypes**](cbasepin-trymediatypes.md) -Methode übergeben wird. Die **trymediatypes** -Methode durchläuft jeden Medientyp und ruft "Try- [**Connection**](cbasepin-attemptconnection.md) " für jeden Typ auf.
+In jedem Fall ruft der Pin [**IPin::EnumMediaTypes**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) auf, um die Medientypen aufzuzählen. Diese Methode ruft ein Enumeratorobjekt ab, das an die [**CBasePin::TryMediaTypes-Methode**](cbasepin-trymediatypes.md) übergeben wird. Die **TryMediaTypes-Methode** durchläuft jeden Medientyp und ruft [**AttemptConnection**](cbasepin-attemptconnection.md) für jeden Typ auf.
 
-In der [**Methode "**](cbasepin-attemptconnection.md) Methode" wird die Ausgabe-PIN die folgenden Methoden aufrufen:
+Innerhalb der [**AttemptConnection-Methode**](cbasepin-attemptconnection.md) ruft der Ausgabepin die folgenden Methoden auf:
 
--   [**Cbasepin:: checkConnect**](cbasepin-checkconnect.md) wird für sich selbst aufgerufen, um zu überprüfen, ob die Eingabe-PIN geeignet ist.
--   [**Cbasepin:: checkmediatype**](cbasepin-checkmediatype.md) wird auf sich selbst aufgerufen, um den Medientyp zu validieren.
--   Er ruft [**IPin:: receiveconnection**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) für die Eingabe-PIN auf. Die Eingabe-PIN verwendet diese Methode, um zu bestimmen, ob die Verbindung akzeptiert werden soll.
--   [**Cbasepin:: completeconnect**](cbasepin-completeconnect.md) wird für sich selbst aufgerufen, um die Verbindung fertigzustellen.
+-   Sie ruft [**CBasePin::CheckConnect**](cbasepin-checkconnect.md) für sich selbst auf, um zu überprüfen, ob der Eingabepin geeignet ist.
+-   Sie ruft [**CBasePin::CheckMediaType**](cbasepin-checkmediatype.md) für sich selbst auf, um den Medientyp zu überprüfen.
+-   Sie ruft [**IPin::ReceiveConnection**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) auf dem Eingabepin auf. Der Eingabepin verwendet diese Methode, um zu bestimmen, ob die Verbindung akzeptiert werden soll.
+-   Sie ruft [**CBasePin::CompleteConnect**](cbasepin-completeconnect.md) für sich selbst auf, um die Verbindung abzuschließen.
 
 Beachten Sie Folgendes:
 
--   [**CheckConnect**](cbasepin-checkconnect.md) ist eine virtuelle Methode. In der Basisklasse überprüft diese Methode, ob die PIN-Anweisungen kompatibel sind. Ausgabe Pins müssen mit Eingabe-Pins verbunden werden und umgekehrt. Die abgeleitete Pin-Klasse überschreibt diese Methode in der Regel, um andere Überprüfungen auszuführen. Beispielsweise kann die andere PIN nach einer Schnittstelle abgefragt werden, die für die Verbindung erforderlich ist. Wenn die abgeleitete Klasse **checkConnect** überschreibt, sollte Sie auch die [**cbasepin**](cbasepin.md) -Methode aufzurufen.
--   [**Checkmediatype**](cbasepin-checkmediatype.md) ist eine rein virtuelle Methode, die von der abgeleiteten Klasse implementiert werden muss.
--   [**Completeconnect**](cbasepin-completeconnect.md) ist eine virtuelle Methode, die in der Basisklasse nichts bewirkt. Abgeleitete Klassen können diese Methode überschreiben, um zusätzliche Aufgaben auszuführen, die zum Abschluss der Verbindung erforderlich sind, z. b. die Entscheidung für eine Speicherzuweisung.
+-   [**CheckConnect**](cbasepin-checkconnect.md) ist eine virtuelle Methode. In der Basisklasse überprüft diese Methode, ob die Stecknadelrichtungen kompatibel sind. Ausgabepins müssen eine Verbindung mit Eingabepins herstellen und umgekehrt. Die abgeleitete Pin-Klasse überschreibt diese Methode in der Regel, um andere Überprüfungen durchzuführen. Beispielsweise kann der andere Pin nach einer Schnittstelle abgefragt werden, die für die Verbindung erforderlich ist. Wenn die abgeleitete Klasse **CheckConnect** überschreibt, sollte sie auch die [**CBasePin-Methode**](cbasepin.md) aufrufen.
+-   [**CheckMediaType**](cbasepin-checkmediatype.md) ist eine reine virtuelle Methode, die von der abgeleiteten Klasse implementiert werden muss.
+-   [**CompleteConnect**](cbasepin-completeconnect.md) ist eine virtuelle Methode, die in der Basisklasse nichts tut. Abgeleitete Klassen können diese Methode überschreiben, um alle zusätzlichen Aufgaben auszuführen, die zum Abschließen der Verbindung erforderlich sind, z. B. die Entscheidung für eine Speicherzuweisung.
 
-Wenn einer dieser Schritte fehlschlägt, ruft die Ausgabepin die [**cbasepin:: breakconnect**](cbasepin-breakconnect.md) -Methode auf, um die von [**checkConnect**](cbasepin-checkconnect.md)ausgeführten Schritte rückgängig zu machen.
+Wenn einer dieser Schritte fehlschlägt, ruft der Ausgabepin die [**CBasePin::BreakConnect-Methode**](cbasepin-breakconnect.md) auf, um alle Schritte rückgängig zu machen, die von [**CheckConnect**](cbasepin-checkconnect.md)ausgeführt wurden.
 
-Die [**receiveconnection**](cbasepin-receiveconnection.md) -Methode der Eingabe-PIN Ruft die Methoden [**checkConnect**](cbasepin-checkconnect.md), [**checkmediatype**](cbasepin-checkmediatype.md)und [**completeconnect**](cbasepin-completeconnect.md) der Eingabe-PIN auf. Wenn einer dieser Fehler ausfällt, tritt beim Verbindungsversuch ebenfalls ein Fehler auf.
+Die [**ReceiveConnection-Methode**](cbasepin-receiveconnection.md) des Eingabepins ruft die [**Methoden CheckConnect,**](cbasepin-checkconnect.md) [**CheckMediaType**](cbasepin-checkmediatype.md)und [**CompleteConnect**](cbasepin-completeconnect.md) des Eingabepins auf. Wenn einer dieser Fehler auftritt, schlägt der Verbindungsversuch ebenfalls fehl.
 
-Das folgende Diagramm zeigt den Verbindungsprozess in [**cbasepin**](cbasepin.md):
+Das folgende Diagramm zeigt den Verbindungsprozess in [**CBasePin:**](cbasepin.md)
 
 ![cbasepin-Verbindungsprozess](images/cbasepin-connect.png)
 
@@ -55,7 +55,7 @@ Das folgende Diagramm zeigt den Verbindungsprozess in [**cbasepin**](cbasepin.md
 
 <dl> <dt>
 
-[**Cbasepin**](cbasepin.md)
+[**CBasePin**](cbasepin.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: ptr-Attribut
-description: Das Attribut \ PTR \ legt einen Zeiger als vollständigen Zeiger fest.
+description: Das Attribut \ptr\ bezeichnet einen Zeiger als vollständigen Zeiger.
 ms.assetid: a1233a25-b651-4a01-8abf-a64dc9ee168e
 keywords:
-- PTR-Attribut-Mittel l
+- ptr-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2d8b2ee2e3ea4daccd1c4fa37ff1c1f1899dd3c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 53e9b85be5e9073a272dafd63a2a01ba64f440f90cc5d9c41f44260f235f9ab5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927420"
 ---
 # <a name="ptr-attribute"></a>ptr-Attribut
 
-Das **\[ ptr \]** -Attribut legt einen Zeiger als vollständigen Zeiger fest.
+Das **\[ ptr-Attribut \]** bestimmt einen Zeiger als vollständigen Zeiger.
 
 ``` syntax
 pointer_default(ptr)
@@ -47,88 +47,88 @@ typedef [ struct | union ]
 
 <dl> <dt>
 
-*Type-Attribute-List* 
+*type-attribute-list* 
 </dt> <dd>
 
-Gibt ein oder mehrere Attribute an, die auf den Typ angewendet werden. Gültige Typattribute sind **\[** [**handle**](handle.md) **\]** , **\[** [**\_ Switchtyp**](switch-type.md) **\]** , über **\[** [**Tragung \_ als**](transmit-as.md) **\]** ; Zeiger Attribut Verweis **\[** [](ref.md) **\]** , **\[** [**eindeutig**](unique.md)oder **\[ ptr \]**; und die Verwendungs Attribute **\[** [**Kontext \_ handle**](context-handle.md) **\]** , **\[** [**String**](string.md) **\]** und **\[** [**Ignore**](ignore.md) **\]** . Trennen Sie mehrere Attribute durch Kommas.
+Gibt ein oder mehrere Attribute an, die für den Typ gelten. Gültige Typattribute sind handle , switch type , transmit as , das **\[** [](handle.md) **\]** **\[** [**\_**](switch-type.md) **\]** **\[** [**\_**](transmit-as.md) **\]** Zeigerattribut **\[** [**ref,**](ref.md) **\]** unique oder **\[** [](unique.md) **\[ ptr \]** sowie **\[** [**\_**](context-handle.md) **\]** **\[** [](string.md) **\]** **\[** [](ignore.md) **\]** das Kontexthand handle für die Verwendungsattribute , string und ignore . Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
 *Typspezifizierer* 
 </dt> <dd>
 
-Gibt einen [Basistyp](midl-base-types.md), eine [**Struktur**](struct.md), eine [**Union**](union.md)oder einen Aufzählungstyp [**oder einen**](enum.md) Typbezeichner an. Eine optionale Speicher Spezifikation kann dem *Typspezifizierer* vorangestellt werden.
+Gibt einen [Basistyp, eine](midl-base-types.md) [**Struktur,**](struct.md)eine [**Union**](union.md)oder einen [**enum-Typ**](enum.md) oder Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer vorangestellt werden.*
 
 </dd> <dt>
 
-*Standard-declarator* 
+*Standarddeklarator* 
 </dt> <dd>
 
-Gibt einen Standard-C-Deklarator an, z. b. einen Bezeichner, einen zeigerdeklarator oder einen Arraydeklarator. Weitere Informationen finden Sie unter [Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md), [**Arrays**](arrays-1.md)und [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers).
+Gibt einen C-Standarddeklarator an, z. B. einen Bezeichner, einen Zeigerdeklarator oder einen Arraydeklarator. Weitere Informationen finden Sie unter [Array- und Sized-Pointer Attribute,](array-and-sized-pointer-attributes.md) [**Arrays**](arrays-1.md)und [Arrays und Zeiger.](/windows/desktop/Rpc/arrays-and-pointers)
 
 </dd> <dt>
 
-*Deklarator-List* 
+*declarator-list* 
 </dt> <dd>
 
-Gibt Standard-C-Deklaratoren an, z. b. Bezeichner, Zeiger Deklaratoren und Array Deklaratoren. Weitere Informationen finden Sie unter [Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md), [**Arrays**](arrays-1.md)und [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers). Die *declarator-List* besteht aus einem oder mehreren Deklaratoren, die durch Kommas getrennt sind. Der Parameter-Name-Bezeichner im funktionsdedeclarator ist optional.
+Gibt C-Standarddeklaratoren an, z. B. Bezeichner, Zeigerdeklaratoren und Arraydeklaratoren. Weitere Informationen finden Sie unter [Array- und Sized-Pointer Attribute,](array-and-sized-pointer-attributes.md) [**Arrays**](arrays-1.md)und [Arrays und Zeiger.](/windows/desktop/Rpc/arrays-and-pointers) Die *Declaratorliste besteht* aus einem oder mehreren Deklaratoren, die durch Kommas getrennt sind. Der Parameternamenbezeichner im Funktionsdeklarator ist optional.
 
 </dd> <dt>
 
-*Field-Attribute-List* 
+*Feldattributliste* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Feld Attribute an, die für den Struktur-oder Union-Member oder Funktionsparameter gelten. Gültige Feld Attribute sind **\[** [**First \_ is**](first-is.md) **\]** , **\[** [**Last \_ is**](last-is.md) **\]** , **\[** [**length \_ is**](length-is.md) **\]** , **\[** [**Max \_ is**](max-is.md) **\]** , **\[** [**size \_ is**](size-is.md), **\]** die Usage-Attribute **\[** [**String**](string.md) **\]** , **\[** [**Ignore**](ignore.md) **\]** und **\[** [**context \_ handle**](context-handle.md), **\]** das Zeiger Attribut **\[** [**ref**](ref.md) **\]** , **\[** [**Unique**](unique.md) **\]** oder **\[ \] ptr** und der Typ des Union-Attribut **\[** [**Schalters \_**](switch-type.md) **\]** . Trennen Sie mehrere Feld Attribute durch Kommas.
+Gibt null oder mehr Feldattribute an, die für den Struktur- oder Union-Member oder Funktionsparameter gelten. Zu den gültigen Feldattributen zählen zuerst ist , last ist , length ist , max ist , size ist ; die Verwendungsattribute string , ignore und context **\[** [**\_**](first-is.md)handle; das **\]** **\[** [**\_**](last-is.md) **\]** **\[** [**\_**](length-is.md) **\]** **\[** [**\_**](max-is.md) **\]** **\[** [**\_**](size-is.md) **\]** **\[** [](string.md) **\]** **\[** [](ignore.md) **\]** **\[** [**\_**](context-handle.md) **\]** Zeigerattribut **\[** [**ref,**](ref.md) **\]** **\[** [**unique**](unique.md) **\]** oder **\[ ptr \]** und der Union-Attributschaltertyp **\[** [**\_**](switch-type.md) **\]** . Trennen Sie mehrere Feldattribute durch Kommas.
 
 </dd> <dt>
 
-*Function-Attribute-List* 
+*function-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die Funktion gelten. Gültige Funktions Attribute sind **\[** [**Callback**](callback.md) **\]** , **\[** [**local**](local.md), **\]** das Zeiger Attribut **\[** [**ref**](ref.md) **\]** , **\[** [**Unique**](unique.md) **\]** oder **\[ \] ptr** und die Zeichenfolge der Verwendungs Attribute **\[** [**Zeichenfolge**](string.md) **\]** , **\[** [**ignorieren**](ignore.md) **\]** und **\[** [**Kontext \_ handle**](context-handle.md) **\]** .
+Gibt null oder mehr Attribute an, die für die Funktion gelten. Gültige Funktionsattribute sind rückruf , local, das **\[** [](callback.md) **\]** **\[** [](local.md) **\]** Zeigerattribut **\[** [**ref,**](ref.md) **\]** unique oder **\[** [](unique.md) **\]** **\[ \] ptr** und die Verwendungsattribute **\[** [](string.md) **\]** **\[** [](ignore.md) **\]** **\[** [**\_**](context-handle.md) **\]** Zeichenfolge , ignorieren und Kontexthand handle .
 
 </dd> <dt>
 
-*PTR-decl* 
+*ptr-decl* 
 </dt> <dd>
 
-Gibt mindestens einen zeigerdeklarator an, auf den das **\[ ptr \]** -Attribut angewendet wird. Ein zeigerdeklarator ist derselbe wie der in C verwendete zeigerdeklarator. Sie wird aus dem Kenn \* Zeichner, den Modifizierern, z. b. **weit**, und dem Qualifizierer " [**Konstanten**](const.md)" erstellt.
+Gibt mindestens einen Zeigerdeklarator an, auf den das **\[ ptr-Attribut \]** angewendet wird. Ein Zeigerdeklarator ist mit dem in C verwendeten Zeigerdeklarator identisch. sie wird aus dem \* Designator, Modifizierern wie **far** und dem Qualifizierer [**const erstellt.**](const.md)
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Remote Prozedur an.
+Gibt den Namen der Remoteprozedur an.
 
 </dd> <dt>
 
-*Parameter-Attribute-List* 
+*parameter-attribute-list* 
 </dt> <dd>
 
-Besteht aus null oder mehr Attributen, die für den angegebenen Parametertyp geeignet sind. Parameter Attribute können die direktionalen Attribute [**ein-und**](in.md) [**Auslagern**](out-idl.md). die Feld Attribute [**\_ sind zuerst**](first-is.md), "Last", "length", " [**Max \_ is**](max-is.md)" [**\_**](last-is.md), "size" und " [**Switch \_ Type**](switch-type.md)", "Pointer Attribute [**ref**](ref.md)", " [**Unique**](unique.md)" oder " **\[ ptr \]**" und das [**Kontext \_ handle**](context-handle.md) und die [**Zeichenfolge**](string.md)der Verwendungs Attribute. [**\_**](length-is.md) [**\_**](size-is.md) Das Usage-Attribut " [**Ignore**](ignore.md) " kann nicht als Parameter Attribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
+Besteht aus 0 (null) oder mehr Attributen, die für den angegebenen Parametertyp geeignet sind. Parameterattribute können die direktionalen Attribute [**in und aus**](in.md) [**übernehmen.**](out-idl.md) Die [**Feldattribute \_**](first-is.md)sind zuerst , die letzte ist [**, \_**](last-is.md)die Länge ist [**, \_**](length-is.md) [**max \_ ist**](max-is.md), die Größe ist , und der Switchtyp [**, \_**](switch-type.md)das Zeigerattribut [**ref,**](ref.md) [**unique**](unique.md)oder **\[ ptr \]** und das Kontexthand handle und die Zeichenfolge der [**Verwendungsattribute \_**](context-handle.md) [**.**](string.md) [**\_**](size-is.md) Das ignorierte [**Verwendungsattribut**](ignore.md) kann nicht als Parameterattribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der durch das **\[ ptr \]** -Attribut festgelegte vollständige Zeiger nähert sich der vollständigen Funktionalität des C-sprach Zeigers. Der vollständige Zeiger kann den Wert **null** aufweisen und sich während des Aufrufes von **null** in einen nicht-**null**-Wert ändern. Speicher, auf den von vollständigen Zeigern verwiesen wird, kann von anderen Namen in der Anwendung erreicht werden, die Aliasing und Zyklen unterstützen Diese Funktionalität erfordert während eines Remote Prozedur Aufrufes mehr Aufwand, um die Daten zu identifizieren, auf die der Zeiger verweist, um zu bestimmen, ob der Wert **null** ist, und um zu ermitteln, ob zwei Zeiger auf dieselben Daten zeigen.
+Der vollständige Zeiger, der vom **\[ \] ptr-Attribut** angegeben wird, nähert sich der vollständigen Funktionalität des C-Sprachzeigers. Der vollständige Zeiger kann den Wert **NULL haben** und sich während des Aufrufs von **NULL** in Nicht-NULL **ändern.** Storage, auf die durch vollständige Zeiger verwiesen wird, können durch andere Namen in der Anwendung erreicht werden, die Aliasing und Zyklen unterstützen. Diese Funktion erfordert mehr Aufwand während eines Remoteprozeduraufrufs, um die Daten zu identifizieren, auf die der Zeiger verwiesen wird, um zu bestimmen, ob der Wert **NULL** ist, und um zu ermitteln, ob zwei Zeiger auf dieselben Daten zeigen.
 
-Vollständige Zeiger verwenden für:
+Verwenden Sie vollständige Zeiger für:
 
--   Remote Rückgabewerte.
--   Doppelte Zeiger, wenn die Größe eines Ausgabe Parameters nicht bekannt ist.
--   **Null** -Zeiger.
+-   Remote-Rückgabewerte.
+-   Doppelte Zeiger, wenn die Größe eines Ausgabeparameters nicht bekannt ist.
+-   **NULL-Zeiger.**
 
-Vollständige (und eindeutige) Zeiger können nicht verwendet werden, um die Größe eines Arrays oder einer Union zu beschreiben, da diese Zeiger den Wert **null** haben können. Diese Einschränkung durch das Mittel l verhindert einen Fehler, der auftreten kann, wenn ein **null** -Wert als Größe verwendet wird.
+Vollständige (und eindeutige) Zeiger können nicht verwendet werden, um die Größe eines Arrays oder einer Union zu beschreiben, da diese Zeiger den Wert **NULL haben können.** Diese Einschränkung durch MIDL verhindert einen  Fehler, der bei Verwendung eines NULL-Werts als Größe entstehen kann.
 
-Bei Verweis-und eindeutigen Zeigern wird davon ausgegangen, dass keine Daten gelöscht werden. Ein gerichtetes Diagramm, das durch das Starten eines eindeutigen oder Verweis Zeigers abgerufen wird und nur eindeutige Verweise oder Verweis Zeiger enthält, enthält weder eine erneute Konvergenz noch Zyklen.
+Es wird davon ausgegangen, dass Verweis- und eindeutige Zeiger kein Aliasing von Daten verursachen. Ein gerichtetes Diagramm, das von einem eindeutigen - oder Verweiszeiger aus ermittelt wird und nur eindeutigen - oder Verweiszeigern folgt, enthält weder Reconvergence noch Zyklen.
 
-Um Aliasing zu vermeiden, sollten alle Zeiger Werte von einem Eingabe Zeiger der gleichen Klasse des Zeigers abgerufen werden. Wenn mehr als ein Zeiger auf denselben Speicherort verweist, müssen alle Zeiger vollständig Zeiger sein.
+Um Aliasing zu vermeiden, sollten alle Zeigerwerte von einem Eingabezeiger derselben Zeigerklasse erhalten werden. Wenn mehr als ein Zeiger auf denselben Speicherort zeigt, müssen alle diese Zeiger vollständige Zeiger sein.
 
-In einigen Fällen können vollständige und eindeutige Zeiger gemischt werden. Einem vollständigen Zeiger kann der Wert eines eindeutigen Zeigers zugewiesen werden, solange die Zuweisung nicht gegen die Einschränkungen bei der Änderung des Werts eines eindeutigen Zeigers verstößt. Wenn Sie jedoch einen eindeutigen Zeiger auf den Wert eines vollständigen Zeigers zuweisen, können Sie Aliasing auslösen.
+In einigen Fällen können vollständige und eindeutige Zeiger gemischt werden. Einem vollständigen Zeiger kann der Wert eines eindeutigen Zeigers zugewiesen werden, solange die Zuweisung nicht gegen die Einschränkungen zum Ändern des Werts eines eindeutigen Zeigers verstößt. Wenn Sie jedoch einem eindeutigen Zeiger den Wert eines vollständigen Zeigers zuweisen, können Sie aliasing verursachen.
 
-Das Kombinieren von vollständigen und eindeutigen Zeigern kann Aliasing verursachen, wie im folgenden Beispiel gezeigt:
+Das Kombinieren von vollständigen und eindeutigen Zeigern kann aliasing verursachen, wie im folgenden Beispiel gezeigt:
 
 ``` syntax
 typedef struct 
@@ -153,7 +153,7 @@ t->right = &h;
 // t->left->pdata == t->right->pdata == &a
 ```
 
-Obwohl "t->Left" und "t->right" auf eindeutige Speicherorte verweisen, sind "t->Left->pData" und "t->right->pData" ein Alias. Aus diesem Grund müssen Aliasing-Unterstützungs Algorithmen allen Zeigern folgen (einschließlich eindeutiger Verweis Zeiger und Verweis Zeiger), die schließlich möglicherweise einen vollständigen Zeiger erreichen.
+Obwohl "t->left" und "t->right" auf eindeutige Speicherorte zeigen, werden "t->left->pdata" und "t->right->pdata" als Alias verwendet. Aus diesem Grund müssen Aliasing-Unterstützungsalgorithmen allen Zeigern (einschließlich eindeutiger und Referenzzeiger) folgen, die letztendlich einen vollständigen Zeiger erreichen können.
 
 ## <a name="examples"></a>Beispiele
 
@@ -169,16 +169,16 @@ typedef [ptr, string] unsigned char * MY_STRING_TYPE;
 
 <dl> <dt>
 
-[**Mikro**](arrays-1.md)
+[**Arrays**](arrays-1.md)
 </dt> <dt>
 
 [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers)
 </dt> <dt>
 
-[Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
+[Array- Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
 </dt> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
 [**Rückruf**](callback.md)
@@ -187,52 +187,52 @@ typedef [ptr, string] unsigned char * MY_STRING_TYPE;
 [**const**](const.md)
 </dt> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**Kontexthand \_ handle**](context-handle.md)
 </dt> <dt>
 
-[**Enumeration**](enum.md)
+[**Enum**](enum.md)
 </dt> <dt>
 
-[**der erste \_ ist**](first-is.md)
+[**first \_ is**](first-is.md)
 </dt> <dt>
 
-[**bewältigen**](handle.md)
+[**Handlebezeichner**](handle.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**lassen**](ignore.md)
+[**Ignorieren**](ignore.md)
 </dt> <dt>
 
-[**Letzter \_ ist**](last-is.md)
+[**last \_ is**](last-is.md)
 </dt> <dt>
 
-[**Länge \_ ist**](length-is.md)
+[**length \_ ist**](length-is.md)
 </dt> <dt>
 
-[**nah**](local.md)
+[**lokal**](local.md)
 </dt> <dt>
 
-[**Max \_ ist**](max-is.md)
+[**max \_ is**](max-is.md)
 </dt> <dt>
 
-[**Zeiger \_ Standard**](pointer-default.md)
+[**Zeiger \_ standard**](pointer-default.md)
 </dt> <dt>
 
 [**ref**](ref.md)
 </dt> <dt>
 
-[**Größe \_ :**](size-is.md)
+[**size \_ ist**](size-is.md)
 </dt> <dt>
 
-[**Zeichenfolge**](string.md)
+[**Schnur**](string.md)
 </dt> <dt>
 
-[**struct**](struct.md)
+[**Struktur**](struct.md)
 </dt> <dt>
 
-[**\_Switchtyp**](switch-type.md)
+[**\_switch-Typ**](switch-type.md)
 </dt> <dt>
 
 [**übertragen \_ als**](transmit-as.md)
@@ -241,9 +241,9 @@ typedef [ptr, string] unsigned char * MY_STRING_TYPE;
 [**Union**](union.md)
 </dt> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

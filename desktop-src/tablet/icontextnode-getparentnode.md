@@ -1,7 +1,7 @@
 ---
-description: Ruft den übergeordneten Knoten dieses icontextnode in der Kontext Knoten Struktur ab.
+description: Ruft den übergeordneten Knoten dieses IContextNode in der Kontextknotenstruktur ab.
 ms.assetid: 782fd973-f8f3-4902-b8e0-cc5e70a66d28
-title: 'Icontextnode:: getcentnode-Methode (iacom. h)'
+title: IContextNode::GetParentNode-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 50bba716486910802e91cbe6d3f003d172f1cb29
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23739bd92da2e8337c949ac7b1fd66e456da1c803cccbe4d0980821a062ec9da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935380"
 ---
-# <a name="icontextnodegetparentnode-method"></a>Icontextnode:: getcentnode-Methode
+# <a name="icontextnodegetparentnode-method"></a>IContextNode::GetParentNode-Methode
 
-Ruft den übergeordneten Knoten dieses [**icontextnode**](icontextnode.md) in der Kontext Knoten Struktur ab.
+Ruft den übergeordneten Knoten dieses [**IContextNode**](icontextnode.md) in der Kontextknotenstruktur ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,34 +39,34 @@ HRESULT GetParentNode(
 
 <dl> <dt>
 
-*ppparameentcontextnode* \[ vorgenommen\]
+*ppParentContextNode* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den übergeordneten Knoten dieses [**icontextnode**](icontextnode.md) -Objekts.
+Ein Zeiger auf den übergeordneten Knoten dieses [**IContextNode-Objekts.**](icontextnode.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppparameentcontextnode* , wenn Sie den übergeordneten Kontext Knoten nicht mehr verwenden müssen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppParentContextNode* auf, wenn Sie den übergeordneten Kontextknoten nicht mehr verwenden müssen.
 
  
 
-Wenn dies der Stamm Knoten ist, wird der Parameter *ppparameentcontextnode* auf **null** festgelegt.
+Wenn dies der Stammknoten ist, wird *der ppParentContextNode-Parameter* auf **NULL festgelegt.**
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Hilfsmethode, die Informationen zu einem angegebenen Knoten, dessen *pcontextnode* -Parameter, abruft. Diese Hilfsmethode gibt Informationen aus den folgenden Methoden zurück.
+Das folgende Beispiel zeigt eine Hilfsmethode, die Informationen zu einem angegebenen Knoten, seinem *pContextNode-Parameter, abruft.* Diese Hilfsmethode gibt Informationen aus den folgenden Methoden zurück.
 
--   [**Icontextnode:: GetId**](icontextnode-getid.md)
--   [**Icontextnode:: GetType**](icontextnode-gettype.md)
--   [**Icontextnode:: getLocation**](icontextnode-getlocation.md)
--   **Icontextnode:: getparameentnode**
+-   [**IContextNode::GetId**](icontextnode-getid.md)
+-   [**IContextNode::GetType**](icontextnode-gettype.md)
+-   [**IContextNode::GetLocation**](icontextnode-getlocation.md)
+-   **IContextNode::GetParentNode**
 
 
 ```C++
@@ -146,9 +146,9 @@ HRESULT CMyClass::GetNodeInformation(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -157,13 +157,13 @@ HRESULT CMyClass::GetNodeInformation(
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: getsubnodes**](icontextnode-getsubnodes.md)
+[**IContextNode::GetSubNodes**](icontextnode-getsubnodes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

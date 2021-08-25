@@ -1,7 +1,7 @@
 ---
-description: Die DataSize-Eigenschaft des Datensatz-Objekts ist eine schreibgeschützte Eigenschaft, die die Größe der Daten für das angegebene Feld zurückgibt.
+description: Die DataSize-Eigenschaft des Record-Objekts ist eine schreibgeschützte Eigenschaft, die die Größe der Daten für das designierte Feld zurückgibt.
 ms.assetid: 6f89321e-bdb2-4c18-bdf8-01dea38b47c9
-title: Record. DataSize-Eigenschaft
+title: Record.DataSize (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 500ee0039f4bfe638f4eca3740669e821c97ca6b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 067fc09e65d644413e75ccd8a9c0173e30df8060dff0f772ae5d12705ab610aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912960"
 ---
-# <a name="recorddatasize-property"></a>Record. DataSize-Eigenschaft
+# <a name="recorddatasize-property"></a>Record.DataSize (Eigenschaft)
 
-Die **DataSize** -Eigenschaft des [**Datensatz**](record-object.md) -Objekts ist eine schreibgeschützte Eigenschaft, die die Größe der Daten für das angegebene Feld zurückgibt. Wenn es sich bei den Daten um einen Datenstrom handelt, wird die Datenstrom Länge in Bytes zurückgegeben. Wenn es sich bei den Daten um eine Zeichenfolge handelt, wird die Zeichen folgen Länge ohne NULL zurückgegeben. Wenn es sich bei den Daten um eine ganze Zahl handelt, wird der Wert 4 zurückgegeben (was die Größe der ganzen Zahl angibt). Wenn die Daten NULL sind, wird 0 zurückgegeben.
+Die **DataSize-Eigenschaft** des [**Record-Objekts**](record-object.md) ist eine schreibgeschützte Eigenschaft, die die Größe der Daten für das designierte Feld zurückgibt. Wenn es sich bei den Daten um einen Stream handelt, wird die Streamlänge in Bytes zurückgegeben. Wenn die Daten eine Zeichenfolge sind, wird die Zeichenfolgenlänge ohne NULL zurückgegeben. Wenn die Daten eine ganze Zahl sind, wird der Wert 4 zurückgegeben (gibt die Größe der ganzen Zahl an). Wenn die Daten NULL sind, wird 0 zurückgegeben.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,7 +37,7 @@ propVal = Record.DataSize
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Erforderliche Feldnummer des Werts im Datensatz, 1-basiert.
+Erforderliche Feldnummer des Werts innerhalb des Datensatzes, 1-basiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Erforderliche Feldnummer des Werts im Datensatz, 1-basiert.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iRecord ist definiert als 000c1093-0000-0000-C000-000000000046<br/>                                                                                                                                                                              |
+| IID<br/>     | IID \_ IRecord ist als 000C1093-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                              |
 
 
 

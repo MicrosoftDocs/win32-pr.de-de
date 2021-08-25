@@ -1,7 +1,7 @@
 ---
-description: Die Lock-Methode sperrt das Critical Section-Objekt.
+description: Die Lock-Methode sperrt das kritische Abschnittsobjekt.
 ms.assetid: b08be5ec-3f02-4ed8-8791-20e4d2a0c55f
-title: Ccritsec. Lock-Methode (wxutil. h)
+title: CCritSec.Lock-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 19599e9cd3c3b8fa913bd07d22fe743aaaa1382f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4241b2cd5e94fbd6a3cbe0abd91d47ad6312c44b71f76c214cffb22836033a7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928589"
 ---
-# <a name="ccritseclock-method"></a>Ccritsec. Lock-Methode
+# <a name="ccritseclock-method"></a>CCritSec.Lock-Methode
 
-Die **Lock** -Methode sperrt das Critical Section-Objekt.
+Die **Lock-Methode** sperrt das kritische Abschnittsobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**EnterCriticalSection**](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection) -Funktion auf.
+Diese Methode ruft die [**EnterCriticalSection-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection) auf.
 
-Zum Entsperren des kritischen Abschnitts wird die [**ccritsec:: Unlock**](ccritsec-unlock.md) -Member-Funktion aufgerufen. Sie können mehrere Aufrufe der **Lock** -Methode im gleichen Thread durchführen. Stellen Sie sicher, dass Sie die **Sperre** beliebig oft aufzurufen.
+Rufen Sie die [**CCritSec::Unlock-Memberfunktion**](ccritsec-unlock.md) auf, um den kritischen Abschnitt zu entsperren. Sie können mehrere Aufrufe der **Lock-Methode** für denselben Thread tätigen. Stellen Sie sicher, dass **Sie Die** Entsperrung entsprechend oft aufrufen.
 
-Wenn das Objekt bereits von einem anderen Thread gesperrt ist, wird die **ccritsec:: Lock** -Methode blockiert, bis das Objekt freigegeben wird, oder bis eine mögliche deadlockausnahme auftritt.
+Wenn das Objekt bereits von einem anderen Thread gesperrt ist, wird die **CCritSec::Lock-Methode** blockiert, bis das Objekt freigegeben wird oder bis eine mögliche Deadlockausnahme auftritt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,8 +58,8 @@ Wenn das Objekt bereits von einem anderen Thread gesperrt ist, wird die **ccrits
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -67,7 +67,7 @@ Wenn das Objekt bereits von einem anderen Thread gesperrt ist, wird die **ccrits
 
 <dl> <dt>
 
-[**Ccritsec-Klasse**](ccritsec.md)
+[**CCritSec-Klasse**](ccritsec.md)
 </dt> </dl>
 
  

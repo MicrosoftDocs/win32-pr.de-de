@@ -1,8 +1,8 @@
 ---
-description: Die CIM \_ sapsapabhängigkeits-Klasse ist eine Zuordnung zwischen zwei Dienst Zugriffs Punkten (SAPS), mit der angegeben wird, dass die zweite SAP-Komponente erforderlich ist, damit der erste SAP eine Verbindung mit dem Dienst herstellt.
+description: Die CIM \_ SAPSAPDependency-Klasse ist eine Zuordnung zwischen zwei Dienstzugriffspunkten (SAPs), die angibt, dass der zweite SAP erforderlich ist, damit der erste SAP eine Verbindung mit seinem Dienst herstellen kann.
 ms.assetid: ba5f47d9-ebe5-4dcb-8a6d-0974acf67385
 ms.tgt_platform: multiple
-title: CIM_SAPSAPDependency-Klasse (cimwin32-WMI-Anbieter)
+title: CIM_SAPSAPDependency-Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b75cb397120ac2d4af041187f38f826e6b56be11
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 34b02a77f5dc67d1149f07e66f5740d6b99ab73e4c0dfbc637d387d47b8c54fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920240"
 ---
-# <a name="cim_sapsapdependency-class-cimwin32-wmi-providers"></a>CIM_SAPSAPDependency-Klasse (cimwin32-WMI-Anbieter)
+# <a name="cim_sapsapdependency-class-cimwin32-wmi-providers"></a>CIM_SAPSAPDependency-Klasse (CIMWin32-WMI-Anbieter)
 
-Die **CIM \_ sapsapabhängigkeits** -Klasse ist eine Zuordnung zwischen zwei Dienst Zugriffs Punkten (SAPS), mit der angegeben wird, dass die zweite SAP-Komponente erforderlich ist, damit der erste SAP eine Verbindung mit dem Dienst herstellt. Um z. b. auf einem Netzwerkdrucker zu drucken, müssen lokale Drucker Zugriffspunkte zugrunde liegende netzwerkbezogene SAPS oder Protokoll Endpunkte verwenden, um die Druck Anforderung zu senden.
+Die **CIM \_ SAPSAPDependency-Klasse** ist eine Zuordnung zwischen zwei Dienstzugriffspunkten (SAPs), die angibt, dass der zweite SAP erforderlich ist, damit der erste SAP eine Verbindung mit seinem Dienst herstellen kann. Um beispielsweise auf einem Netzwerkdrucker zu drucken, müssen lokale Druckerzugriffspunkte zugrunde liegende netzwerkbezogene SAPs oder Protokollendpunkte verwenden, um die Druckanforderung zu senden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_SAPSAPDependency : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ sapsapdepenpklasse** verfügt über die folgenden Typen von Membern:
+Die **\_ CIM SAPSAPDependency-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ sapsapdepenpklasse** verfügt über diese Eigenschaften.
+Die **CIM \_ SAPSAPDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md) , der den erforderlichen Dienst Zugriffspunkt beschreibt.
+Ein [**CIM \_ ServiceAccessPoint,**](cim-serviceaccesspoint.md) der den erforderlichen Dienstzugriffspunkt beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md) , der den Dienst Zugriffspunkt beschreibt, der von einem zugrunde liegenden SAP abhängig ist.
+Ein [**CIM \_ ServiceAccessPoint,**](cim-serviceaccesspoint.md) der den Dienstzugriffspunkt beschreibt, der von einem zugrunde liegenden SAP abhängig ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ sapsapabhängigkeits** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **\_ CIM-SAPSAPDependency-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

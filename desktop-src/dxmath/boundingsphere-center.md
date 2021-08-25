@@ -1,19 +1,19 @@
 ---
-description: Der Mittelpunkt der boundingsphere.
+description: Die Mitte von BoundingSphere.
 ms.assetid: 5e8a6cd6-a38b-406c-a759-8685bfecc0e6
-title: Boundingsphere. Center (directxcollision. h)
+title: BoundingSphere.Center (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98dd6a002e2316d1bb4778bbfdbba209f5cbeda7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2ddbab102d4644fa435431880e70a0cf2923088723cbd2f1cc6a09bf76128bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948940"
 ---
-# <a name="boundingspherecenter"></a>Boundingsphere. Center
+# <a name="boundingspherecenter"></a>BoundingSphere.Center
 
-Der Mittelpunkt der boundingsphere.
+Die Mitte von BoundingSphere.
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -36,7 +36,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 | Anforderung | Wert |
 |----------------------|-----------------------------------------------------------------------------------------------|
 | Namespace<br/> | Verwenden Sie DirectX.<br/>                                                                       |
-| Header<br/>    | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/>    | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 [Fields](boundingsphere-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)

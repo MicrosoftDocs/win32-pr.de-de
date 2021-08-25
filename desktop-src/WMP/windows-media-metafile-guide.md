@@ -1,16 +1,16 @@
 ---
-title: Leitfaden für Windows Media-Metadateien
-description: Leitfaden für Windows Media-Metadateien
+title: Windows Media Metafile Guide
+description: Windows Media Metafile Guide
 ms.assetid: d2360a63-f073-44b0-8637-1f22b577f51a
 keywords:
-- Windows Media-Metadateien, Informationen zu
-- Windows Media Player, Metafiles
-- Windows Media Player, Windows Media-Metadateien
-- Metadatendateien, Informationen zu
-- Windows Media, Metafiles
-- Windows Media Metadatei-Wiedergabelisten, Informationen zu
+- Windows Medienmetadateien, Informationen
+- Windows Media Player,Metadateien
+- Windows Media Player,Windows Media-Metadateien
+- Metadateien, Informationen
+- Windows Medien, Metadateien
+- Windows Medienmetadatei-Wiedergabelisten,Informationen
 - Wiedergabelisten, Informationen
-- Metadatei-Wiedergabelisten, Informationen
+- Metafile-Wiedergabelisten, Informationen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -18,46 +18,46 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: fcf0a4c98ae49d1cdf3b7e36e8a278f184cd4632
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a16f539d232271843c891760f319fc26decc87a9b1c3bcf4a3d575ffb7d86856
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900640"
 ---
-# <a name="windows-media-metafile-guide"></a>Leitfaden für Windows Media-Metadateien
+# <a name="windows-media-metafile-guide"></a>Windows Media Metafile Guide
 
-Eine Windows Media-Metadatei kann so einfach oder komplex sein, wie Sie es benötigen. Die grundlegendste Windows Media-Metadatendatei enthält nur die Uniform Resource Locator (URL) einiger multimediakhalte auf einem Server. Der Client, Windows Media Player, analysiert diese Informationen und öffnet dann die in der Windows Media-Metadatendatei definierte Mediendatei oder den Stream. Eine komplexe Metadatei kann mehrere Dateien oder Streams enthalten, die in einer Wiedergabeliste angeordnet sind, Anweisungen zum Abspielen der Dateien oder Streams, Text-und Grafikelemente, wie z. b. Titel, Autor und Urheberrechts Text, personalisiertes einfügevorschub in einen Livestream, Links, die Elementen in der Windows Media Player-Schnittstelle zugeordnet sind.
+Eine Windows Media-Metadatei kann so einfach oder komplex sein, wie Sie benötigen. Die einfachste Windows Media-Metadatei enthält nur die Uniform Resource Locator (URL) einiger Multimediainhalte auf einem Server. Der Client analysiert diese Informationen Windows Media Player und öffnet dann die Mediendatei oder den Stream, die bzw. der in der Windows Medienmetadatei definiert ist. Eine komplexe Metadatei kann mehrere Dateien oder Streams enthalten, die in einer Wiedergabeliste angeordnet sind, Anweisungen zum Wiedergeben der Dateien oder Streams, Text- und Grafikelemente wie Titel-, Autor- und Copyrighttext, personalisierte Werbeeinfügung in einen Livestream, Links, die Elementen auf der Windows Media Player-Schnittstelle zugeordnet sind usw.
 
-Die folgenden Abschnitte enthalten ausführliche Informationen zum Erstellen und Verwenden von Windows Media-metadateiwiedergabe Listen.
+Die folgenden Abschnitte enthalten ausführliche Informationen zum Erstellen und Verwenden Windows Media-Metadateiwiedergabelisten.
 
 
 
 | `Section`                                                            | BESCHREIBUNG                                                                         |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [Typen von Wiedergabelisten](types-of-playlists.md)                       | Listet die verfügbaren Dateinamen Erweiterungen auf.                                               |
-| [Erstellen von Metafile-Wiedergabelisten](creating-metafile-playlists.md)     | Hier wird beschrieben, wie Windows Media Metadatei-Wiedergabelisten erstellt werden.                           |
-| [Metafile-Wiedergabelisten](metafile-playlists.md)                       | Beschreibt die Verwendung, Skripterstellung, Metadaten und Verarbeitung von Metadatei-Wiedergabelisten.             |
-| [Metadatenerweiterungs-Richtlinien](metafile-extension-guidelines.md) | Beschreibt die bevorzugte Verwendung von Dateinamen Erweiterungen für das Streamen von Mediendateien.      |
-| [Rangfolge](order-of-precedence.md)                     | Beschreibt, wie Metadatei-Wiedergabelisten Elemente andere Metadatei-Wiedergabelisten Elemente überschreiben. |
+| [Arten von Wiedergabelisten](types-of-playlists.md)                       | Listet verfügbare Dateinamenerweiterungen auf.                                               |
+| [Erstellen von Metafile-Wiedergabelisten](creating-metafile-playlists.md)     | Beschreibt, wie Windows Media-Metadateiwiedergabelisten erstellt werden.                           |
+| [Metafile-Wiedergabelisten](metafile-playlists.md)                       | Beschreibt die Verwendung, Skripterstellung, Metadaten und Verarbeitung von Metadateien-Wiedergabelisten.             |
+| [Richtlinien für Metafileerweiterungen](metafile-extension-guidelines.md) | Beschreibt die bevorzugte Verwendung von Dateinamenerweiterungen für das Streaming von Mediendateien.      |
+| [Rangfolge](order-of-precedence.md)                     | Beschreibt, wie Metafile-Wiedergabelistenelemente andere Metafile-Wiedergabelistenelemente überschreiben. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Windows Media-Metadateien**](windows-media-metafiles.md)
+[**Windows Medienmetadateien**](windows-media-metafiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

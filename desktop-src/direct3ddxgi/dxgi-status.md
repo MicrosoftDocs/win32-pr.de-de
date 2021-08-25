@@ -1,33 +1,33 @@
 ---
-description: Status Codes, die von DXGI-Funktionen zurückgegeben werden können.
+description: Statuscodes, die von DXGI-Funktionen zurückgegeben werden können.
 ms.assetid: dd7480b4-8218-4716-ab9f-74a9955b8aa7
-title: DXGI_STATUS (dxgi. h)
+title: DXGI_STATUS (DXGI.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b39c402880ccdcbda009402d56127e70a61543d0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2151c2c209feb630dfe445af2f5afc9d20048c08872fc73f9f5388abc5abb4b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951230"
 ---
-# <a name="dxgi_status"></a>DXGI- \_ Status
+# <a name="dxgi_status"></a>\_DXGI-STATUS
 
-Status Codes, die von DXGI-Funktionen zurückgegeben werden können.
+Statuscodes, die von DXGI-Funktionen zurückgegeben werden können.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DXGI_STATUS_OCCLUDED"></span><span id="dxgi_status_occluded"></span><dl> <dt>**DXGI \_ Der \_ Status**</dt> lautet " <dt>0x087a0001</dt> ". </dl>                                                 | Der Fensterinhalt ist nicht sichtbar. Beim Empfang dieses Status kann eine Anwendung das Rendering beenden und den vorhandenen DXGI- \_ \_ Test verwenden, um zu bestimmen, wann das Rendering fortgesetzt werden soll. Der DXGI-Status wird nicht angezeigt, \_ \_ Wenn Sie eine Swapkette für das Kippen von Modellen verwenden.<br/>                                                                                                                           |
-| <span id="DXGI_STATUS_MODE_CHANGED"></span><span id="dxgi_status_mode_changed"></span><dl> <dt>**DXGI \_ Status \_ Modus \_ geändert**</dt> <dt>0x087a0007</dt> </dl>                                    | Der Desktop Anzeigemodus wurde geändert, möglicherweise ist die Farbkonvertierung/-Streckung vorhanden. Die Anwendung sollte [**idxgiswapchain:: resizebuffers**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizebuffers) aufrufen, damit Sie dem neuen Anzeigemodus entspricht.<br/>                                                                       |
-| <span id="DXGI_STATUS_MODE_CHANGE_IN_PROGRESS"></span><span id="dxgi_status_mode_change_in_progress"></span><dl> <dt>**DXGI \_ Status \_ Modus \_ - \_ Änderung \_ in**</dt> Bearbeitung <dt>0x087a0008</dt> </dl> | [**Idxgiswapchain:: resizetarget**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizetarget) und [**idxgiswapchain:: setfullscreenstate**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-setfullscreenstate) gibt \_ eine Änderung im DXGI-Status Modus zurück, \_ \_ \_ \_ Wenn ein Übergang im Vollbild-/Windos-Modus stattfindet, wenn eine der beiden APIs aufgerufen wird.<br/> |
+| <span id="DXGI_STATUS_OCCLUDED"></span><span id="dxgi_status_occluded"></span><dl> <dt>**DXGI \_ STATUS \_ OCCLUDED**</dt> <dt>0x087A0001</dt> </dl>                                                 | Der Fensterinhalt ist nicht sichtbar. Wenn dieser Status empfangen wird, kann eine Anwendung das Rendering beenden und DXGI PRESENT TEST verwenden, um zu \_ \_ bestimmen, wann das Rendering fortgesetzt werden soll. Sie erhalten DXGI STATUS OCCLUDED nicht, wenn \_ \_ Sie eine Tauschkette für Flip-Modelle verwenden.<br/>                                                                                                                           |
+| <span id="DXGI_STATUS_MODE_CHANGED"></span><span id="dxgi_status_mode_changed"></span><dl> <dt>**DXGI \_ STATUSMODUS \_ \_ GEÄNDERT**</dt> <dt>0X087A0007</dt> </dl>                                    | Der Desktopanzeigemodus wurde geändert, es kann farbkonvertieren/strecken. Die Anwendung sollte [**IDXGISwapChain::ResizeBuffers**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizebuffers) aufrufen, um dem neuen Anzeigemodus zu passen.<br/>                                                                       |
+| <span id="DXGI_STATUS_MODE_CHANGE_IN_PROGRESS"></span><span id="dxgi_status_mode_change_in_progress"></span><dl> <dt>**DXGI \_ \_ \_ STATUSMODUSÄNDERUNG IN \_ \_ BEARBEITUNG**</dt> <dt>0X087A0008</dt> </dl> | [**IDXGISwapChain::ResizeTarget**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-resizetarget) und [**IDXGISwapChain::SetFullscreenState**](/windows/desktop/api/DXGI/nf-dxgi-idxgiswapchain-setfullscreenstate) geben DXGI STATUS MODE CHANGE IN PROGRESS zurück, wenn ein Übergang im Vollbildmodus/Fenstermodus auftritt, wenn eine api aufgerufen \_ \_ \_ \_ \_ wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **HRESULT** -Wert für jeden **DXGI- \_ Status** Wert wird von diesem Makro bestimmt, das in "dxgitype. h" definiert ist:
+Der **HRESULT-Wert** für jeden **DXGI \_ STATUS-Wert** wird von diesem Makro bestimmt, das in DXGItype.h definiert ist:
 
 
 ```
@@ -37,7 +37,7 @@ Der **HRESULT** -Wert für jeden **DXGI- \_ Status** Wert wird von diesem Makro 
 
 
 
-Der **DXGI- \_ Status " \_ okded** " wird beispielsweise als " **0x087a0001**" definiert:
+DXGI **STATUS \_ \_ OCCLUDED** wird beispielsweise **als** 0x087A0001:
 
 
 ```
@@ -52,7 +52,7 @@ Der **DXGI- \_ Status " \_ okded** " wird beispielsweise als " **0x087a0001**" d
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DXGI. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DXGI.h</dt> </dl> |
 
 
 

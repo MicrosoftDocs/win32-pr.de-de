@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e424b4e5fd1c97f5aec01571d887b54dbb143b7
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 932168d2d251d5506727503053cb56cab2e50e57209276649beb35932478ab26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981470"
 ---
 # <a name="xmuint4-structure"></a>XMUINT4-Struktur
 
@@ -48,7 +48,7 @@ typedef struct _XMUINT4 {
 **x**
 </dt> <dd>
 
-x-component des Vektors.
+x-Komponente des Vektors.
 
 </dd> <dt>
 
@@ -62,14 +62,14 @@ y-Komponente des Vektors.
 **Z**
 </dt> <dd>
 
-z-component des Vektors.
+z-Komponente des Vektors.
 
 <dl> <dt>
 
 **w**
 </dt> <dd>
 
-w-component des Vektors.
+w-Komponente des Vektors.
 
 </dd> </dl> </dd> </dl> </dd> </dl>
 
@@ -78,7 +78,7 @@ w-component des Vektors.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird im ``D3DX\_DXGIFormatConvert.inl`` Header im DirectX SDK (Juni 2010) für die Verwendung in C++ definiert. Die neueste Version dieses Headers im NuGet-Paket [Microsoft.DXSDK.D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) definiert ihn nicht mehr und basiert stattdessen auf [DirectX::XMUINT4](/windows/win32/api/directxmath/ns-directxmath-xmuint4) in DirectXMath.
+Diese Struktur wird im Header ``D3DX\_DXGIFormatConvert.inl`` im DirectX SDK (Juni 2010) für die Verwendung von C++ definiert. Die neueste Version dieses Headers im [Microsoft.DXSDK.D3DX](https://www.nuget.org/packages/Microsoft.DXSDK.D3DX) NuGet-Paket definiert ihn nicht mehr und basiert stattdessen auf [DirectX::XMUINT4](/windows/win32/api/directxmath/ns-directxmath-xmuint4) in DirectXMath.
 
 
 
@@ -93,12 +93,12 @@ Diese Struktur wird im ``D3DX\_DXGIFormatConvert.inl`` Header im DirectX SDK (Ju
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Strukturen](format-conversion-structures.md)
 </dt> <dt>
 
-[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>

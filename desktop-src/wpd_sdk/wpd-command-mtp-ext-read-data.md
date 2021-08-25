@@ -1,23 +1,23 @@
 ---
-description: Mit dem Befehl "MTP ext-Daten lesen" des WPD- \_ Befehls werden \_ \_ \_ \_ Daten vom Gerät abgerufen, nachdem der Befehl " \_ MTP ext ausführen" des Befehls "WPD-Befehl mit dem Befehl \_ \_ \_ \_ \_ \_ \_ zum Lesen von Daten \_
+description: Der BEFEHL WPD COMMAND MTP EXT READ DATA ruft Daten vom Gerät ab, nachdem der \_ \_ BEFEHL \_ \_ \_ WPD COMMAND \_ \_ MTP EXT EXECUTE COMMAND \_ WITH DATA TO READ ausgeführt \_ \_ \_ \_ \_ \_ wurde.
 ms.assetid: d7acb2cc-28b0-4314-99fd-4e7eded22122
-title: WPD_COMMAND_MTP_EXT_READ_DATA Befehl (wpdmtpextensions. h)
+title: WPD_COMMAND_MTP_EXT_READ_DATA Befehl (WpdMtpExtensions.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4671101ee9be6e355a4e64d2a467d83d0028db69
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c5aeee37e1922f91e9a9fac7881369364d01340893829678a5651f89ed428440
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927950"
 ---
-# <a name="wpd_command_mtp_ext_read_data-command"></a>WPD- \_ Befehl \_ MTP \_ ext-Befehl zum Lesen von \_ \_ Daten
+# <a name="wpd_command_mtp_ext_read_data-command"></a>\_WPD-BEFEHL \_ MTP \_ EXT READ \_ \_ DATA-Befehl
 
-Mit dem Befehl " **\_ \_ MTP \_ Ext \_ \_** -Daten lesen" des WPD-Befehls werden Daten vom Gerät abgerufen, nachdem der Befehl " **\_ \_ MTP \_ Ext \_ Ausführen \_ \_ \_ \_ \_** " des Befehls "WPD-Befehl mit dem Befehl zum Lesen von Daten
+Der **BEFEHL WPD \_ COMMAND \_ MTP EXT READ \_ \_ \_ DATA** ruft Daten vom Gerät ab, nachdem der **BEFEHL WPD COMMAND \_ \_ MTP EXT EXECUTE COMMAND \_ WITH DATA TO \_ \_ \_ \_ \_ \_ READ** ausgeführt wurde.
 
 ## <a name="command-category"></a>Befehlskategorie
 
-**WPD- \_ Kategorie \_ MTP \_ Ext- \_ Anbieter \_ Vorgänge**
+**WPD \_ CATEGORY \_ MTP \_ EXT \_ VENDOR \_ OPERATIONS**
 
 ## <a name="parameters"></a>Parameter
 
@@ -25,11 +25,11 @@ Der Treiber erwartet die folgenden Parameter.
 
 
 
-| Parameter                                                   | VarType             | BESCHREIBUNG                                                                            |
+| Parameter                                                   | VarType             | Beschreibung                                                                            |
 |-------------------------------------------------------------|---------------------|----------------------------------------------------------------------------------------|
-| **WPD- \_ Eigenschaften- \_ MTP-Ext- \_ \_ Übertragungs \_ Kontext**              | VT \_ LPWSTR          | Erforderlich. Gibt den Kontext an, der durch den vorherigen-Anrufe des Geräts zurückgegeben wurde. |
-| **WPD- \_ Eigenschaft \_ MTP \_ Ext \_ überträgt \_ NUM \_ Bytes \_ in den \_ Lesevorgang** | VT \_ UI4             | Erforderlich. Gibt die Anzahl der zu lesenden Bytes an.                                       |
-| **WPD- \_ Eigenschaft \_ MTP \_ Ext- \_ Übertragungs \_ Daten**                 | VT \_ Vector \| VT \_ UI1 | Erforderlich. Identifiziert den Puffer, in den die Gerätedaten kopiert werden.                  |
+| **\_WPD-EIGENSCHAFT \_ MTP \_ EXT TRANSFER \_ \_ CONTEXT**              | VT \_ LPWSTR          | Erforderlich. Identifiziert den Kontext, der durch den vorherigen Aufruf des Geräts zurückgegeben wurde. |
+| **\_WPD-EIGENSCHAFT \_ MTP \_ EXT TRANSFER NUM BYTES TO \_ \_ \_ \_ \_ READ** | VT \_ UI4             | Erforderlich. Gibt die Anzahl der zu lesenden Bytes an.                                       |
+| **\_WPD-EIGENSCHAFT \_ MTP \_ EXT TRANSFER \_ \_ DATA**                 | VT \_ VECTOR \| VT \_ UI1 | Erforderlich. Identifiziert den Puffer, in den die Gerätedaten kopiert werden.                  |
 
 
 
@@ -41,10 +41,10 @@ Der Treiber gibt die folgenden Ergebnisse zurück.
 
 
 
-| Ergebnis                                                  | VarType             | BESCHREIBUNG                                                       |
+| Ergebnis                                                  | VarType             | Beschreibung                                                       |
 |---------------------------------------------------------|---------------------|-------------------------------------------------------------------|
-| **WPD- \_ Eigenschaft \_ MTP \_ Ext- \_ Übertragung \_ NUM \_ Bytes \_ gelesen** | VT \_ UI4             | Erforderlich. Gibt die Anzahl von Bytes an, die vom Gerät empfangen werden. |
-| **WPD- \_ Eigenschaft \_ MTP \_ Ext- \_ Übertragungs \_ Daten**             | VT \_ Vector \| VT \_ UI1 | Erforderlich. Der Puffer, der die Gerätedaten enthält.               |
+| **\_WPD-EIGENSCHAFT \_ MTP \_ EXT TRANSFER NUM BYTES \_ \_ \_ \_ READ** | VT \_ UI4             | Erforderlich. Gibt die Anzahl der vom Gerät empfangenen Bytes an. |
+| **\_WPD-EIGENSCHAFT \_ MTP \_ EXT TRANSFER \_ \_ DATA**             | VT \_ VECTOR \| VT \_ UI1 | Erforderlich. Der Puffer, der die Gerätedaten enthält.               |
 
 
 
@@ -52,7 +52,7 @@ Der Treiber gibt die folgenden Ergebnisse zurück.
 
 ## <a name="calling-methods"></a>Aufrufen von Methoden
 
-Kann nur direkt mithilfe von [**iportabledevice:: Send Command**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
+Kann nur direkt mithilfe von [**IPortableDevice::SendCommand aufgerufen werden.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Kann nur direkt mithilfe von [**iportabledevice:: Send Command**](/windows/deskt
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wpdmtpextensions. h</dt> </dl> |
+| Header<br/> | <dl> <dt>WpdMtpExtensions.h</dt> </dl> |
 
 
 

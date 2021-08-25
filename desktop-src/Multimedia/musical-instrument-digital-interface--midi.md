@@ -1,34 +1,34 @@
 ---
-title: Digital Instrumentation Digital Interface (MIDI)
-description: Digital Instrumentation Digital Interface (MIDI)
+title: Instrument Digital Interface (KEYBOARD)
+description: Instrument Digital Interface (KEYBOARD)
 ms.assetid: 5c81e1dc-ee6b-4a59-8992-8ec869264d4f
 keywords:
-- Windows Multimedia, Digital Instrumentation Digital Interface (MIDI)
-- Multimedia, Digital Instrumentation Digital Interface (MIDI)
-- Multimedia-Audiodatei, Digital Instrumentation Digital Interface (MIDI)
-- Audioschnittstelle (Digital Instrumentation Digital Interface, MIDI)
-- Digital Instrumentation Digital Interface (MIDI), Informationen zu
-- MIDI (Digital Instrumentation Digital Interface), Informationen zu
+- Windows Multimedia,Instrument Digital Interface (KEYBOARD)
+- multimedia,Instrument Digital Interface (KEYBOARD)
+- Multimediaaudio, Keyboard Instrument Digital Interface (KEYBOARD)
+- audio,Instrument Digital Interface (KEYBOARD)
+- Instrument Digital Interface (KEYBOARD), Über
+- KEYBOARD (Instrument Digital Interface), Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb479ef03657a31b1cf8e488551f0893746edab9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a75bdf54a57f64c0ed074cf37cd0ba99990acd72eb86c03cf5ac82f9caae04a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893270"
 ---
-# <a name="musical-instrument-digital-interface-midi"></a>Digital Instrumentation Digital Interface (MIDI)
+# <a name="musical-instrument-digital-interface-midi"></a>Instrument Digital Interface (KEYBOARD)
 
-Bei der Digital Instrumentation Digital Interface (MIDI) handelt es sich um ein Protokoll und eine Reihe von Befehlen zum Speichern und übertragen von Informationen über Musik. Diese Informationen werden von den MIDI-Ausgabegeräten interpretiert und zum synthetisieren von Musik verwendet.
+Das Instrument Digital Interface (KEYBOARD) ist ein Protokoll und eine Reihe von Befehlen zum Speichern und Übertragen von Informationen über Musik. DIE Ausgabegeräte interpretieren diese Informationen und verwenden sie zum Synthetisieren von Musik.
 
--   [Informationen zu MIDI](about-midi.md)
--   [Verwenden von MIDI](using-midi.md)
+-   [Informationen zuVERT](about-midi.md)
+-   [Verwenden vonVERT](using-midi.md)
 -   [MIDI-Referenz](midi-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

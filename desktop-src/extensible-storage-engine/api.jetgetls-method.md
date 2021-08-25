@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetls-Methode.
-title: API. jetgetls-Methode
+description: Weitere Informationen finden Sie unter Api.JetGetLS-Methode.
+title: Api.JetGetLS-Methode
 TOCTitle: 'JetGetLS method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetLS(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_LS@,Microsoft.Isam.Esent.Interop.LsGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetls(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 611f92e21dad83121b4e4a6226838ac9ebce2d7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0453bae6f966ee358d9c62e360cb3184153dd7fe20ce586f707ae4ce55f6961
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840800"
 ---
-# <a name="apijetgetls-method"></a>API. jetgetls-Methode
+# <a name="apijetgetls-method"></a>Api.JetGetLS-Methode
 
-Ermöglicht der Anwendung das Abrufen des Kontext Handles, das als lokaler Speicher bezeichnet wird, der einem Cursor oder der diesem Cursor zugeordneten Tabelle zugeordnet ist. Dieses Kontext Handle muss zuvor mithilfe von [jetsetls (JET_SESID, JET_TABLEID, JET_LS, lsgrbit)](./api.jetsetls-method.md)festgelegt werden. Jetgetls kann auch zum gleichzeitigen Abrufen des aktuellen Kontext Handles für einen Cursor oder eine Tabelle und zum Zurücksetzen dieses Kontext Handles verwendet werden.
+Ermöglicht der Anwendung, das Kontexthandle abzurufen, das als Lokale Storage bezeichnet wird, das einem Cursor oder der tabelle zugeordnet ist, die diesem Cursor zugeordnet ist. Dieses Kontexthandle muss zuvor mit [JetSetLS (JET_SESID, JET_TABLEID, JET_LS, LsGrbit)](./api.jetsetls-method.md)festgelegt worden sein. JetGetLS kann auch verwendet werden, um gleichzeitig das aktuelle Kontexthandle für einen Cursor oder eine Tabelle abzurufen und dieses Kontexthandle zurückzusetzen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetGetLS(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der zu verwendende Cursor.
 
 <!-- end list -->
 
   - ls  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_LS](./jet-ls-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_LS](./jet-ls-structure.md)  
     
-    Gibt das abgerufene Kontext Handle zurück.
+    Gibt das abgerufene Kontexthandle zurück.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. lsgrbit](./lsgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.LsGrbit](./lsgrbit-enumeration.md)  
     
     Abrufen von Optionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

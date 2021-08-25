@@ -1,25 +1,25 @@
 ---
-description: Pro Benutzer-Ereignis, das bis zu drei Felder unterstützt.
+description: Benutzerspezifisches Ereignis, das bis zu drei Felder unterstützt.
 ms.assetid: e6cf8008-b896-453b-9946-a6b3d94a991a
-title: WPCEVENT_CUSTOM-Ereignis (wpcevent. h)
+title: WPCEVENT_CUSTOM -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d20cb2450cd18bb0c77993622d226cfc06dff6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8082e03aa6dfea8cd2fd461feec093de71a1ada8051b8fb88295d0bbbf570b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951550"
 ---
-# <a name="wpcevent_custom-event"></a>Benutzerdefiniertes wpcevent- \_ Ereignis
+# <a name="wpcevent_custom-event"></a>WPCEVENT \_ CUSTOM-Ereignis
 
-Pro Benutzer-Ereignis, das bis zu drei Felder unterstützt.
+Benutzerspezifisches Ereignis, das bis zu drei Felder unterstützt.
 
-Ereignisse werden in der **Aktivitäts** Anzeige im **anderen** Abschnitt mit der folgenden Hierarchie angezeigt:
+Ereignisse werden im **Aktivitäts-Viewer** im Abschnitt **Sonstige** mit der folgenden Hierarchie angezeigt:
 
-1.  Publisher
+1.  Herausgeber
 
-2.  Application
+2.  Anwendung
 
 3.  Ereignis
 
@@ -37,32 +37,32 @@ const EVENT_DESCRIPTOR WPCEVENT_CUSTOM = {0xd, 0x0, 0x10, 0x4, 0x17, 0xd, 0x8000
 *Publisher* 
 </dt> <dd>
 
-Der Herausgeber des Ereignisses (z. b. ein Firmenname).
+Der Herausgeber des Ereignisses (z. B. ein Firmenname).
 
 </dd> <dt>
 
 *AppName* 
 </dt> <dd>
 
-Der Name der Anwendung, die das Ereignis erzeugt.
+Der Name der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Version der Anwendung, die das Ereignis erzeugt.
+Die Version der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *Event* 
 </dt> <dd>
 
-Der Name des Ereignisses.
+Der Name für das Ereignis.
 
 </dd> <dt>
 
-*Value1* 
+*Wert1* 
 </dt> <dd>
 
 Benutzerdefiniertes Feld 1.
@@ -76,24 +76,24 @@ Benutzerdefiniertes Feld 2.
 
 </dd> <dt>
 
-*Wert3* 
+*Value3* 
 </dt> <dd>
 
 Benutzerdefiniertes Feld 3.
 
 </dd> <dt>
 
-*Gesperrt* 
+*Blockiert* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse nicht verwendet werden und welche Steuerelemente verwendet werden.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Eine benutzerdefinierte Zeichenfolge, die zusätzliche Informationen über den Grund für das Blockieren oder nicht blockieren bereitstellt.
+Eine benutzerdefinierte Zeichenfolge, die zusätzliche Informationen über den Grund für das Blockieren oder nicht das Blockieren enthält.
 
 </dd> </dl>
 
@@ -103,9 +103,9 @@ Eine benutzerdefinierte Zeichenfolge, die zusätzliche Informationen über den G
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -113,10 +113,10 @@ Eine benutzerdefinierte Zeichenfolge, die zusätzliche Informationen über den G
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

@@ -1,28 +1,28 @@
 ---
-title: Erstellen eines neuen Computer Kontos
-description: Im folgenden Codebeispiel wird veranschaulicht, wie ein neues Computer Konto mithilfe der Funktion "nettuseradd" erstellt wird.
+title: Erstellen eines neuen Computerkontos
+description: Im folgenden Codebeispiel wird veranschaulicht, wie Sie mithilfe der NetUserAdd-Funktion ein neues Computerkonto erstellen.
 ms.assetid: 1e180b8e-b948-4836-b789-cb9dff0829e8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cfd02a9d2053310c50e40957e6afee6e3a4a5ab1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6d9b54b3e3b157bfed33b3f2429024e005b9b859bba563c0173b2ca02ab5f499
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912300"
 ---
-# <a name="creating-a-new-computer-account"></a>Erstellen eines neuen Computer Kontos
+# <a name="creating-a-new-computer-account"></a>Erstellen eines neuen Computerkontos
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein neues Computer Konto mithilfe der Funktion " [**nettuseradd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd) " erstellt wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie mithilfe der [**NetUserAdd-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd) ein neues Computerkonto erstellen.
 
-Im folgenden finden Sie Überlegungen zum Verwalten von Computer Konten:
+Im Folgenden werden Überlegungen zur Verwaltung von Computerkonten berücksichtigt:
 
--   Der Name des Computer Kontos sollte für die Konsistenz mit Konto Verwaltungs Dienstprogrammen Großbuchstaben sein.
--   Ein Computer Konto Name hat immer ein nach gestelltes Dollarzeichen ($). Alle Funktionen, die zum Verwalten von Computer Konten verwendet werden, müssen den Computernamen so erstellen, dass das letzte Zeichen des Computer Konto namens ein Dollarzeichen ($) ist. Bei einer vertrauenswürdigen Vertrauensstellung lautet der Kontoname trustingdomainname $.
--   Die maximale Länge des Computer namens beträgt Max \_ . Computername \_ (15). Diese Länge schließt nicht das nachfolgende Dollarzeichen ($) ein.
--   Das Kennwort für ein neues Computer Konto sollte die Kleinbuchstaben Darstellung des Computer Konto namens ohne das nachfolgende Dollarzeichen ($) sein. Bei einer vertrauenswürdigen Vertrauensstellung kann das Kennwort ein beliebiger Wert sein, der mit dem auf der Vertrauens Seite der Beziehung angegebenen Wert übereinstimmt.
--   Die maximale Kenn Wort Länge ist LM20 \_ pwlen (14). Das Kennwort sollte auf diese Länge gekürzt werden, wenn der Computer Konto Name diese Länge überschreitet.
--   Das zum Zeitpunkt der Erstellung des Computer Kontos angegebene Kennwort ist nur gültig, bis das Computer Konto in der Domäne aktiv wird. Während der Aktivierung der Vertrauensstellungs Beziehung wird ein neues Kennwort eingerichtet.
+-   Der Name des Computerkontos sollte aus Gründen der Konsistenz mit den Hilfsprogrammen für die Kontoverwaltung groß geschrieben werden.
+-   Ein Computerkontoname weist immer ein nachgestelltes Dollarzeichen ($) auf. Alle Funktionen, die zum Verwalten von Computerkonten verwendet werden, müssen den Computernamen so erstellen, dass das letzte Zeichen des Computerkontonamens ein Dollarzeichen ($) ist. Bei domänenübergreifender Vertrauensstellung lautet der Kontoname TrustingDomainName$.
+-   Die maximale Länge des Computernamens ist MAX \_ COMPUTERNAME \_ LENGTH (15). Diese Länge enthält nicht das nachgestellte Dollarzeichen ($).
+-   Das Kennwort für ein neues Computerkonto sollte die Kleinbuchstabendarstellung des Computerkontonamens ohne das nachgestellte Dollarzeichen ($) sein. Bei domänenübergreifender Vertrauensstellung kann das Kennwort ein beliebiger Wert sein, der mit dem auf der Vertrauensstellungsseite der Beziehung angegebenen Wert übereinstimmt.
+-   Die maximale Kennwortlänge beträgt LM20 \_ PWLEN (14). Das Kennwort sollte auf diese Länge abgeschnitten werden, wenn der Name des Computerkontos diese Länge überschreitet.
+-   Das bei der Erstellung des Computerkontos angegebene Kennwort ist nur gültig, bis das Computerkonto in der Domäne aktiv wird. Während der Aktivierung der Vertrauensstellung wird ein neues Kennwort erstellt.
 
 
 ```C++
@@ -142,10 +142,10 @@ BOOL AddMachineAccount(
 
 
 
-Der Benutzer, der die Konto Verwaltungsfunktionen aufruft, muss auf dem Bereitstellungs Zielcomputer über Administrator Rechte verfügen. Im Fall vorhandener Computer Konten kann der Ersteller des Kontos das Konto unabhängig von der administrativen Mitgliedschaft verwalten. Weitere Informationen zum Aufrufen von Funktionen, für die Administratorrechte erforderlich sind, finden Sie unter [Ausführen mit speziellen Berechtigungen](/windows/desktop/SecBP/running-with-special-privileges).
+Der Benutzer, der die Kontoverwaltungsfunktionen aufruft, muss auf dem Zielcomputer über Administratorrechte verfügen. Bei vorhandenen Computerkonten kann der Ersteller des Kontos das Konto unabhängig von der Administratormitgliedschaft verwalten. Weitere Informationen zum Aufrufen von Funktionen, die Administratorrechte erfordern, finden Sie unter [Ausführen mit speziellen Berechtigungen.](/windows/desktop/SecBP/running-with-special-privileges)
 
-Auf dem Bereitstellungs Zielcomputer kann die Berechtigung "" festgelegt werden, um angegebenen Benutzern die Möglichkeit zu geben, Computer Konten zu erstellen. Dadurch haben nicht Administratoren die Möglichkeit, Computer Konten zu erstellen. Der Aufrufer muss dieses Privileg vor dem Hinzufügen des Computer Kontos aktivieren. Weitere Informationen zu Konto Berechtigungen finden Sie unter [Berechtigungen](/windows/desktop/SecAuthZ/privileges) und [Autorisierungs Konstanten](/windows/desktop/SecAuthZ/authorization-constants).
+SeMachineAccountPrivilege kann auf dem Zielcomputer gewährt werden, um angegebenen Benutzern die Möglichkeit zu geben, Computerkonten zu erstellen. Dadurch können Nichtadministratoren Computerkonten erstellen. Der Aufrufer muss diese Berechtigung aktivieren, bevor er das Computerkonto hinzufügt. Weitere Informationen zu Kontoberechtigungen finden Sie unter [Berechtigungen](/windows/desktop/SecAuthZ/privileges) und [Autorisierungskonstanten.](/windows/desktop/SecAuthZ/authorization-constants)
 
- 
+ 
 
- 
+ 

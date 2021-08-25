@@ -1,31 +1,31 @@
 ---
-title: Löschen von Lizenzen
-description: Löschen von Lizenzen
+title: Lizenzlöschung
+description: Lizenzlöschung
 ms.assetid: f941efeb-145d-48a1-a3e2-d12f66b7fdcf
 keywords:
-- Windows Media-Format-SDK, Lizenzen
-- Windows Media-Format-SDK, Löschen von Lizenzen
+- Windows Medienformat-SDK, Lizenzen
+- Windows Medienformat-SDK, Löschen von Lizenzen
 - Digital Rights Management (DRM), Lizenzen
 - DRM (Digital Rights Management), Lizenzen
 - Digital Rights Management (DRM), Löschen von Lizenzen
 - DRM (Digital Rights Management), Löschen von Lizenzen
-- Erweiterte APIs für den DRM-Client, Lizenzen
-- Erweiterte Client-APIs, Lizenzen
-- Erweiterte APIs für den DRM-Client, Löschen von Lizenzen
+- ERWEITERTE APIs für DEN DRM-Client, Lizenzen
+- Erweiterte Client-APIs,Lizenzen
+- Erweiterte APIs für DEN DRM-Client, Löschen von Lizenzen
 - Erweiterte Client-APIs, Löschen von Lizenzen
-- Lizenzen, löschen
+- licenses,deleting
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f297db679ac2c8afe2c836d032fa045d6955665
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8dd1e20c0e98fd2129b807cf11f27f5975701d851d9301eda894ccb24015360a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808300"
 ---
-# <a name="license-deletion"></a>Löschen von Lizenzen
+# <a name="license-deletion"></a>Lizenzlöschung
 
-Alle lokal erstellten Drittanbieter Lizenzen (z. b. über den DRM-Import) können durch Aufrufen der Methode [**iwmdrmlicensmanagement::P rocess licenabdeletionmessage**](iwmdrmlicensemanagement-processlicensedeletionmessage.md) gelöscht werden. Die Zeichenfolge, die Sie an diese Methode übergeben, ist eine XMR-Lizenz, die der folgenden ähnelt:
+Alle lokal erstellten Drittanbieterlizenzen, z. B. durch DRM-Import, können durch Aufrufen der [**IWMDRMLicenseManagement::P rocessLicenseDeletionMessage-Methode**](iwmdrmlicensemanagement-processlicensedeletionmessage.md) gelöscht werden. Die Zeichenfolge, die Sie an diese Methode übergeben, ist eine XMR-Lizenz, die der folgenden ähnelt:
 
 
 ```C++
@@ -52,13 +52,13 @@ Alle lokal erstellten Drittanbieter Lizenzen (z. b. über den DRM-Import) könne
 
 
 
-Das Feld Besitzer spezifischer Benutzer-ID (UID) ist optional. Optionale Felder dürfen nicht in die Lizenz Antwort eingeschlossen werden, wenn Ihnen keine Daten zugeordnet sind.
+Das Feld für die besitzerspezifische Benutzer-ID (UID) ist optional. Optionale Felder dürfen nicht in der Lizenzantwort enthalten sein, wenn ihnen keine Daten zugeordnet sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Aufbauen einer XMR-Lizenz**](building-an-xmr-license.md)
+[**Erstellen einer XMR-Lizenz**](building-an-xmr-license.md)
 </dt> <dt>
 
 [**DRM-Import**](drm-import.md)
@@ -67,9 +67,9 @@ Das Feld Besitzer spezifischer Benutzer-ID (UID) ist optional. Optionale Felder 
 [**Programmierhandbuch**](drm-programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

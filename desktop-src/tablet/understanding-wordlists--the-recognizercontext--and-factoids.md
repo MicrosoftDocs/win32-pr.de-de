@@ -1,44 +1,44 @@
 ---
-description: Alle Anwendungs Wörterbücher werden mithilfe des WordList-Objekts implementiert.
+description: Alle Anwendungswörterbücher werden mithilfe des WordList-Objekts implementiert.
 ms.assetid: 805788ec-1672-462a-b188-c680f56c2641
-title: Grundlegendes zu Wortlisten, Erkennungs Kontext und Faktoiden
+title: Grundlegendes zu Wortlisten, Kontext der Wiedererkennung und Factoids
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d27f15d64f353b8702695b0067f13857427fc34e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e60fbfc7a3a3099a1146307637d20e777cca416789a61f5dd034f9d86911f1a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119842810"
 ---
-# <a name="understanding-word-lists-recognizer-context-and-factoids"></a>Grundlegendes zu Wortlisten, Erkennungs Kontext und Faktoiden
+# <a name="understanding-word-lists-recognizer-context-and-factoids"></a>Grundlegendes zu Wortlisten, Kontext der Wiedererkennung und Factoids
 
-Alle Anwendungs Wörterbücher werden mithilfe des [**WordList**](inkwordlist-class.md) -Objekts implementiert. Das [**erkenzercontext**](inkrecognizercontext-class.md) -Objekt verwaltet die Erkennung teilweise durch die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft dieses Objekts. Das **erkenzercontext** -Objekt übergibt die Wortliste an die Erkennung. Sie können ein Anwendungs Wörterbuch in jedem **Erkennungs Kontext** in der Anwendung aktivieren, indem Sie die **WordList** -Eigenschaft des **Erkennungs Kontext** -Objekts festlegen. Um die Wort Liste für die gesamte Anwendung verfügbar zu machen, müssen Sie die **WordList** -Eigenschaft jedes **Erkennungs Kontext** -Objekts in der Anwendung festlegen.
+Alle Anwendungswörterbücher werden mithilfe des [**WordList-Objekts**](inkwordlist-class.md) implementiert. Das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) verwaltet die Erkennung, teilweise über die [**WordList-Eigenschaft dieses**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) Objekts. Das **RecognizerContext-Objekt** übergibt die Wortliste an die Erkennende. Sie können ein Anwendungswörterbuch in einem **beliebigen RecognizerContext** in Ihrer Anwendung aktivieren, indem Sie die **WordList-Eigenschaft** des **RecognizerContext-Objekts** festlegen. Um die Wortliste für die gesamte Anwendung verfügbar zu machen, müssen Sie die **WordList-Eigenschaft** jedes **RecognizerContext-Objekts** in der Anwendung festlegen.
 
-Auf der Erkennungs Ebene werden alle Wörterbücher außer dem System Wörterbuch als Wortlisten implementiert. Allerdings kann die Erkennung jeweils nur eine aktive Wort Liste haben. Dies bedeutet, dass Sie nicht sowohl ein Anwendungs Wörterbuch als auch das Benutzerwörterbuch gleichzeitig aktiv haben können. Auf der anderen Seite ist das System Wörterbuch immer verfügbar, es sei denn, es ist ein Faktoid festgelegt, das das System Wörterbuch deaktiviert.
+Auf der Recognizer-Ebene werden alle Wörterbücher mit Ausnahme des Systemwörterbuchs als Wortlisten implementiert. Die -Erkannte kann jedoch nur eine aktive Wortliste gleichzeitig haben. Dies bedeutet, dass sie nicht gleichzeitig sowohl ein Anwendungswörterbuch als auch das Benutzerwörterbuch aktiv haben können. Andererseits ist das Systemwörterbuch immer verfügbar, es sei denn, es wird ein Factoid festgelegt, das das Systemwörterbuch deaktiviert.
 
-Das Benutzerwörterbuch ist die Liste der Wörter, die der Benutzer seinem Tablet PC hinzugefügt hat. Wenn die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft des [**erkenzercontext**](inkrecognizercontext-class.md) nicht festgelegt ist, übergibt der **Erkennungs Kontext** das Benutzerwörterbuch als Wort Liste an die Erkennung. Wenn jedoch die **WordList** -Eigenschaft des **erkenzercontext** -Objekts festgelegt ist, wird die Wortliste anstelle des Benutzer Wörterbuchs an die Erkennung übermittelt.
+Das Benutzerwörterbuch ist die Liste der Wörter, die der Benutzer seinem Tablet-PC hinzugefügt hat. Wenn die [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) von [**RecognizerContext**](inkrecognizercontext-class.md) nicht festgelegt ist, übergibt **recognizerContext** das Benutzerwörterbuch als Wortliste an die Recognizer-Klasse. Wenn jedoch die **WordList-Eigenschaft** des **RecognizerContext-Objekts** festgelegt ist, wird die Wortliste an die Erkennende statt an das Benutzerwörterbuch übergeben.
 
 > [!Note]  
-> Die [**Strokes**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_strokes) -Eigenschaft des [**erkenzercontext**](inkrecognizercontext-class.md) -Objekts muss leer sein, bevor Sie die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft festlegen. Wenn die **Strokes** -Eigenschaft nicht leer ist, wird eine Ausnahme ausgelöst. Wörter sollten niemals zu einer Word-Liste hinzugefügt werden, nachdem Sie einem **erkenzercontext** -Objekt zugewiesen wurde.
+> Die [**Strokes-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_strokes) des [**RecognizerContext-Objekts**](inkrecognizercontext-class.md) muss leer sein, bevor Sie die [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) festlegen. Wenn die **Strokes-Eigenschaft** nicht leer ist, wird eine Ausnahme ausgelöst. Wörter sollten niemals einer Wortliste hinzugefügt werden, nachdem sie einem **RecognizerContext-Objekt zugewiesen** wurde.
 
  
 
-Das Festlegen einer Faktoid für das [**erkennzercontext**](inkrecognizercontext-class.md) -Objekt wirkt sich auch darauf aus, wie Anwendungs Wörterbücher von der Erkennung verwendet werden. Die Faktoide, die sich auf das Verhalten von Wörterbüchern auswirken, sind:
+Das Festlegen eines Factoids für das [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) wirkt sich auch darauf aus, wie Anwendungswörterbücher von der Recognizer verwendet werden. Die Factoids, die sich auf das Verhalten von Wörterbüchern auswirken, sind:
 
--   **"WordList**
--   **System Dictionary**
--   **None**
+-   **Wordlist**
+-   **SystemDictionary**
+-   **Keine**
 
-Der wichtigste Faktoid für Anwendungs Wörterbücher ist die **WordList** -Faktoid. Das **WordList** -Faktoid Bias die Erkennungsfunktion, um nur die Wörter zurückzugeben, die in der Wort Liste gefunden werden. Diese Faktoid deaktiviert alle anderen Wörterbücher außer der Wort Liste. Wenn die **WordList** -Faktoid festgelegt ist und keine Word-Liste im Erkennungs Kontext angegeben ist, wird das Benutzerwörterbuch als Word-Liste verwendet.
+Das bei weitem nützlichste Faktenoid für Anwendungswörterbücher ist das **WordList-Factoid.** Das **WordList-Factoid** verzerrt die Erkannten in Richtung der Rückgabe von nur Wörtern, die in der Wortliste gefunden wurden. Dieses Factoid deaktiviert alle anderen Wörterbücher mit Ausnahme der Wortliste. Wenn das **WordList-Factoid** festgelegt ist und keine Wortliste im Kontext der Erkannten angegeben wird, wird das Benutzerwörterbuch als Wortliste verwendet.
 
-Wenn Sie z. b. eine Anwendung für Flugzeugteile mit einem Feld entwerfen, das einen von zehn Namen spezieller Teile annimmt, können Sie eine Wort Liste erstellen, die nur diese Teilnamen enthält. Durch das Festlegen des Faktoid **WordList** für das Feld wird die Erkennung der in das Feld eingegebenen Wörter erheblich verbessert. Die Erkennung muss nicht zwischen Wörtern im System Wörterbuch und Wörtern in der Word-Liste wählen.
+Wenn Sie beispielsweise eine Anwendung für Flugzeugteile mit einem Feld entwerfen, das einen von zehn Namen spezialisierter Teile akzeptiert, können Sie eine Wortliste erstellen, die nur diese Teilenamen enthält. Das Festlegen **des WordList-Factoids** für das Feld verbessert die Erkennung der in dieses Feld eingegebenen Wörter erheblich. Die Erkannten müssen nicht zwischen Wörtern im Systemwörterbuch und Wörtern in der Wortliste wählen.
 
-Das System **Dictionary** -Faktoid aktiviert nur das System Wörterbuch. Mit dem Faktoid **None** werden alle Wörterbücher deaktiviert. Diese beiden Faktoide werden verwendet, um die Erkennungsgenauigkeit in bestimmten Instanzen zu erhöhen. Da Sie jedoch Anwendungs Wörterbücher deaktivieren, werden Sie selten in Verbindung mit Anwendungs Wörterbüchern verwendet.
+Das **SystemDictionary-Factoid** aktiviert nur das Systemwörterbuch. Das **Faktenoid** None deaktiviert alle Wörterbücher. Diese beiden Factoide werden verwendet, um die Erkennungsgenauigkeit in bestimmten Instanzen zu erhöhen. Da sie Jedoch Anwendungswörterbücher deaktivieren, werden sie selten in Verbindung mit Anwendungswörterbüchern verwendet.
 
-Weitere Informationen zur Auswirkung von Faktoids auf die Erkennung finden [Sie unter Verwenden von Kontext zur Verbesserung der Genauigkeit](using-context-to-improve-accuracy.md).
+Weitere Informationen dazu, wie factoids die Erkennung beeinflussen, finden Sie unter [Using Context to Improve Accuracy](using-context-to-improve-accuracy.md).
 
-Weitere Informationen zu " **System Dictionary** " und " **None** " finden Sie [unter Unterstützte Faktoide aus Version 1](supported-factoids-from-version-1.md).
+Weitere Informationen zu den **Fakten "SystemDictionary"** und **"None"** finden Sie unter [Unterstützte Factoids aus Version 1.](supported-factoids-from-version-1.md)
 
  
 

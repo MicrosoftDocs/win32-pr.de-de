@@ -1,5 +1,5 @@
 ---
-description: 'CSource.CSource-Konstruktor : Konstruktormethode.'
+description: 'CSource.CSource-Konstruktor: Konstruktormethode.'
 ms.assetid: 94a92c1e-9768-4293-8290-a2b1938cd196
 title: CSource.CSource-Konstruktor (Source.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fab398f3f4e3fdd8c23ce1e1c08f5c130478dfb4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 93ccaa1791726cd5efceae78de2b64df76c3defce70dde50c6a8dfeaea8308a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907940"
 ---
 # <a name="csourcecsource-constructor"></a>CSource.CSource-Konstruktor
 
@@ -47,14 +47,14 @@ CSource(
 *pName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
+Zeiger auf eine Zeichenfolge, die den Namen des Objekts enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *lpunk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
@@ -69,14 +69,14 @@ Klassenbezeichner des Filters.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source.h (streams.h einschließen)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

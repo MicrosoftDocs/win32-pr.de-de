@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GRAB_FRAME Meldung (VFW. h)
-description: Die Sende \_ \_ \_ Rahmen Nachricht des WM-Abbilds Ruft einen einzelnen Frame aus dem Erfassungs Treiber ab und zeigt ihn an. Nach der Erfassung sind Overlay und Vorschau deaktiviert. Sie können diese Nachricht explizit oder mithilfe des capgrabframe-Makros senden.
+title: WM_CAP_GRAB_FRAME-Nachricht (Vfw.h)
+description: Die WM \_ CAP \_ GRAB \_ FRAME-Nachricht ruft einen einzelnen Frame vom Erfassungstreiber ab und zeigt sie an. Nach der Erfassung sind Overlay und Vorschau deaktiviert. Sie können diese Nachricht explizit oder mithilfe des CapGrabFrame-Makros senden.
 ms.assetid: 91d58c1c-53b9-4813-88c2-7a1acf641d96
 keywords:
-- WM_CAP_GRAB_FRAME-Nachricht (Multimedia)
+- WM_CAP_GRAB_FRAME Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2ffd91ce767ad86ddac002bb216420b604883d7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cdccfc9df0f3abac7febfa78029b4ecb351ec3044c618dc4c811e91b433f0f49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892040"
 ---
-# <a name="wm_cap_grab_frame-message"></a>WM- \_ Abdeckungs \_ \_ Nachricht zum Abbild
+# <a name="wm_cap_grab_frame-message"></a>WM \_ CAP \_ GRAB \_ FRAME-Nachricht
 
-Die Sende Rahmen Nachricht des **WM- \_ \_ \_ Abbilds** Ruft einen einzelnen Frame aus dem Erfassungs Treiber ab und zeigt ihn an. Nach der Erfassung sind Overlay und Vorschau deaktiviert. Sie können diese Nachricht explizit oder mithilfe des [**capgrabframe**](/windows/desktop/api/Vfw/nf-vfw-capgrabframe) -Makros senden.
+Die **WM CAP GRAB \_ \_ \_ FRAME-Nachricht** ruft einen einzelnen Frame vom Erfassungstreiber ab und zeigt einen frame an. Nach der Erfassung sind Overlay und Vorschau deaktiviert. Sie können diese Nachricht explizit oder mithilfe des [**CapGrabFrame-Makros**](/windows/desktop/api/Vfw/nf-vfw-capgrabframe) senden.
 
 
 ```C++
@@ -36,11 +36,11 @@ lParam = (LPARAM)0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Installieren von Rückruf Funktionen finden Sie in den Rückruf-und [**WM- \_ Cap \_ - \_ \_**](wm-cap-set-callback-frame.md) Set-Rückruf [**\_ \_ \_ \_ Fehlern**](wm-cap-set-callback-error.md) .
+Informationen zum Installieren von Rückruffunktionen finden Sie in den Meldungen [**WM \_ CAP SET \_ \_ CALLBACK \_ ERROR**](wm-cap-set-callback-error.md) und [**WM CAP SET \_ \_ \_ CALLBACK \_ FRAME.**](wm-cap-set-callback-frame.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Weitere Informationen zum Installieren von Rückruf Funktionen finden Sie in den
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -58,10 +58,10 @@ Weitere Informationen zum Installieren von Rückruf Funktionen finden Sie in den
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

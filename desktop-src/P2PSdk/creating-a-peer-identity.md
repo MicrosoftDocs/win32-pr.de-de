@@ -1,34 +1,34 @@
 ---
-description: Mit der Identity Manager-API können Sie eine Peer Identität erstellen, die in einem Peer Netzwerk verwendet werden kann.
+description: Mit der Identity Manager-API können Sie eine Peeridentität für die Verwendung in einem Peernetzwerk erstellen.
 ms.assetid: 44b85bbc-9594-4f68-b930-51a28422b571
-title: Erstellen einer Peer Identität
+title: Erstellen einer Peeridentität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ab240b9fa1265ba03bfb1ce584dabed92988620
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de7d7e2a1bfba386ede4bf3f10e8b009794c3e17676abc65d797d42e203f214f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887820"
 ---
-# <a name="creating-a-peer-identity"></a>Erstellen einer Peer Identität
+# <a name="creating-a-peer-identity"></a>Erstellen einer Peeridentität
 
-Mit der Identity Manager-API können Sie eine Peer Identität erstellen, die in einem Peer Netzwerk verwendet werden kann.
+Mit der Identity Manager-API können Sie eine Peeridentität für die Verwendung in einem Peernetzwerk erstellen.
 
-Wenn Sie eine Peer Identität erstellen, können Sie die folgenden optionalen Informationen bereitstellen:
+Wenn Sie eine Peeridentität erstellen, können Sie die folgenden optionalen Informationen bereitstellen:
 
 -   [Klassifizierung](peer-names.md)
 -   Anzeigename
 -   Kryptografiedienstanbieter
 
 > [!Note]  
-> Verwenden Sie nach Möglichkeit eine Peer Identität erneut.
+> Verwenden Sie nach Möglichkeit eine Peeridentität erneut.
 
  
 
-## <a name="example-of-creating-and-deleting-a-peer-identity"></a>Beispiel für das Erstellen und Löschen einer Peer Identität
+## <a name="example-of-creating-and-deleting-a-peer-identity"></a>Beispiel für das Erstellen und Löschen einer Peeridentität
 
-Der folgende Code Ausschnitt zeigt, wie Sie eine Peer Identität mit einem Klassifizierer und einem anzeigen Amen erstellen und löschen.
+Im folgenden Codeausschnitt wird veranschaulicht, wie Sie eine Peeridentität mithilfe eines Klassifizierers und eines Bezeichnernamens erstellen und löschen.
 
 
 ```C++

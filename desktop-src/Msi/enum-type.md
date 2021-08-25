@@ -1,21 +1,21 @@
 ---
-description: Der Enumerationstyp des semantischen Typs ist einer der Text Format Typen.
+description: Der Enum-Typ des semantischen Typs ist einer der Textformattypen.
 ms.assetid: fff01044-5749-42a5-b026-5b22671870bd
-title: Aufzählungs Typen
+title: Enum-Typ
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc582a7f96d8fc91aad66387f579f05f9255346f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56c5df6b0f76cc789c148e841827a75e7184aca2892d7d6e2233843e26aac80f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869320"
 ---
-# <a name="enum-type"></a>Aufzählungs Typen
+# <a name="enum-type"></a>Enum-Typ
 
-Der Enumerationstyp des [semantischen Typs](semantic-types.md) ist einer der [Text Format Typen](text-format-types.md). Dieser Typ besteht aus einer vom Benutzer ausgewählten Text Zeichenfolge aus einem Satz von Optionen. Das Merge-Tool ersetzt die ausgewählte ausgewählte Zeichenfolge in den Vorlagen, die in der Spalte Wert der [Tabelle ModuleSubstitution](modulesubstitution-table.md)angegeben sind.
+Der Enum-Typ des [semantischen Typs](semantic-types.md) ist einer der [Textformattypen](text-format-types.md). Dieser Typ besteht aus einer Textzeichenfolge, die vom Benutzer aus einer Reihe von Optionen ausgewählt wird. Das Mergetool ersetzt die ausgewählte Zeichenfolge in den Vorlagen, die in der Spalte Wert der [Tabelle ModuleSubs standardwert angegeben sind.](modulesubstitution-table.md)
 
-Um ein konfigurierbares Element dieses Typs anzugeben, sollten Modul Autoren den Namen der Text Zeichenfolge in die Spalte "Name" eingeben, "0" in die Spalte "Format" eingeben, "Enum" in die Spalte "Type" eingeben und die Liste der möglichen Zeichen folgen in der Spalte "ContextData" der [Tabelle "ModuleConfiguration](moduleconfiguration-table.md)" eingeben. Die Liste der möglichen Zeichen folgen muss als Liste von Zeichen folgen angegeben werden, die durch Semikolons getrennt werden. Jede Auswahl muss das Format "Name = Wert" aufweisen. Dem Wert kann ein literales Semikolon hinzugefügt werden, indem dem Semikolon ein umgekehrter Schrägstrich vorangestellt wird. NULL ist ein gültiger Wert, es sei denn, der msmconfigitemnonable-Wert ist im Feld Attribute der Tabelle ModuleConfiguration enthalten.
+Um ein konfigurierbares Element dieses Typs anzugeben, sollten Modulautoren den Namen der Textzeichenfolge in die Spalte Name eingeben, "0" in die Spalte Format eingeben, "Enum" in die Spalte Typ eingeben und die Liste der möglichen Zeichenfolgen in der ContextData -Spalte der [ModuleConfiguration-Tabelle eingeben.](moduleconfiguration-table.md) Die Liste der möglichen Zeichenfolgen muss als Liste von Zeichenfolgen bereitgestellt werden, die durch Semikolons getrennt werden. Jede Auswahl muss das Formular "Name=Wert" haben. Ein literales Semikolon kann dem Wert hinzugefügt werden, indem dem Semikolon ein schräger Schrägstrich vorangestellt wird. NULL ist ein gültiger Wert, es sei denn, msmConfigItemNonNullable wurde in das Feld Attribute der ModuleConfiguration-Tabelle aufgenommen.
 
  
 

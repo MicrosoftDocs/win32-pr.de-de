@@ -1,7 +1,7 @@
 ---
-description: Mit der Put \_ prerolltime-Methode wird die Datenmenge festgelegt, die vor der Startposition in die Warteschlange eingereiht wird. Diese Methode implementiert die imediaposition::p UT- \_ prerolltime-Methode.
+description: Die put \_ PrerollTime-Methode legt die Menge der Daten fest, die vor der Startposition in die Warteschlange gestellt werden. Diese Methode implementiert die IMediaPosition::p ut \_ PrerollTime-Methode.
 ms.assetid: 5c35fb1d-2296-493f-8104-601127d7dd9f
-title: CPosPassThru.put_PrerollTime-Methode (ctlutil. h)
+title: CPosPassThru.put_PrerollTime -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 60bd4eddc7688373386147ea7999fdbd17f9af6b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 825c3c584fc6db7eb9f94b4e8d01e003f5cf6c36ff8adac4041fd48f792ca858
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909200"
 ---
-# <a name="cpospassthruput_prerolltime-method"></a>Cpospassthru. Put \_ prerolltime-Methode
+# <a name="cpospassthruput_prerolltime-method"></a>CPosPassThru.put \_ PrerollTime-Methode
 
-Die- `put_PrerollTime` Methode legt die Menge der Daten fest, die vor der Startposition in die Warteschlange eingereiht werden. Diese Methode implementiert die [**imediaposition::p UT- \_ prerolltime**](/windows/desktop/api/Control/nf-control-imediaposition-put_prerolltime) -Methode.
+Die `put_PrerollTime` -Methode legt die Datenmenge fest, die vor der Startposition in die Warteschlange gestellt wird. Diese Methode implementiert die [**IMediaPosition::p ut \_ PrerollTime-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-put_prerolltime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT put_PrerollTime(
 
 <dl> <dt>
 
-*lltime* 
+*llTime* 
 </dt> <dd>
 
-Vorab-Zeit in Sekunden.
+Vorabrollzeit in Sekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

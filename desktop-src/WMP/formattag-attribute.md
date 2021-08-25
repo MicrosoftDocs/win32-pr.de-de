@@ -1,9 +1,9 @@
 ---
-title: Formattag-Attribut
-description: Das Formattag-Attribut ist das Formattag des Audiocodecs.
+title: FormatTag-Attribut
+description: Das FormatTag-Attribut ist das Formattag des Audiocodecs.
 ms.assetid: 67c453ee-eb58-4273-9b4b-fd48dc02e4ab
 keywords:
-- Formattag-Attribut (Windows Media Player)
+- FormatTag-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,25 +12,25 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b958baf6e0f2d9baa40059ce1719e14dfb0a48d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18fdeb1f32d8aa337293c728f90cdf5a93ef2457be9e45bc80f017c5cc2d6db1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862700"
 ---
-# <a name="formattag-attribute"></a>Formattag-Attribut
+# <a name="formattag-attribute"></a>FormatTag-Attribut
 
-Das **Formattag** -Attribut ist das Formattag des Audiocodecs.
+Das **FormatTag-Attribut** ist das Formattag des Audiocodecs.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert ist eine Zeichen folgen Darstellung des Tagwerts für den Dezimal Format. Beispielsweise würde für Windows Media Audio 9-Codec das **Formattag** -Attribut die Zeichenfolge "354" enthalten.
+Der Wert ist eine Zeichenfolgendarstellung des Dezimalformattagwerts. Beispielsweise würde das **FormatTag-Attribut** für Windows Media Audio 9-Codec die Zeichenfolge "354" enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Der Wert ist eine Zeichen folgen Darstellung des Tagwerts für den Dezimal Forma
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

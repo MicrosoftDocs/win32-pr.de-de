@@ -1,7 +1,7 @@
 ---
-description: Textur Stufen Zustände definieren MULTIMIXER-Textur Vorgänge.
+description: Texturphasenzustände definieren Texturvorgänge mit mehreren Blendern.
 ms.assetid: 87a5a1bb-e748-4c72-8320-ea82250dcc0e
-title: D3DTEXTURESTAGESTATETYPE-Enumeration (D3D9Types. h)
+title: D3DTEXTURESTAGESTATETYPE-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 0530f428c9ebf89607fa89509c65ddd336fee293
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4879009f603a6943302f0595f37176ec5edf8e1a1d3212efedb66c923d775104
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894150"
 ---
 # <a name="d3dtexturestagestatetype-enumeration"></a>D3DTEXTURESTAGESTATETYPE-Enumeration
 
-Textur Stufen Zustände definieren MULTIMIXER-Textur Vorgänge. Einige samplerzustände richten die Vertexverarbeitung ein, und einige richten die Pixel Verarbeitung ein. Textur Stufen Zustände können mithilfe von stateblocks gespeichert und wieder hergestellt werden (siehe [Status Blöcke speichern und Wiederherstellen (Direct3D 9)](state-blocks-save-and-restore-state.md)).
+Texturphasenzustände definieren Texturvorgänge mit mehreren Blendern. Einige Samplerzustände richten die Scheitelpunktverarbeitung ein, und einige richten die Pixelverarbeitung ein. Zustandszustände der Texturphase können mithilfe von Zustandsblöcken gespeichert und wiederhergestellt werden (siehe [Zustandsblöcke Speichern und Wiederherstellen des Zustands (Direct3D 9)](state-blocks-save-and-restore-state.md)).
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,152 +57,152 @@ typedef enum D3DTEXTURESTAGESTATETYPE {
 
 <dl> <dt>
 
-<span id="D3DTSS_COLOROP"></span><span id="d3dtss_colorop"></span>**D3DTSS \_ colorop**
+<span id="D3DTSS_COLOROP"></span><span id="d3dtss_colorop"></span>**D3DTSS \_ COLOROP**
 </dt> <dd>
 
-Der Textur Zustand ist ein Textur Farb Mischungs Vorgang, der durch einen Member des [**D3DTEXTUREOP**](./d3dtextureop.md) -Enumerationstyps identifiziert wird. Der Standardwert für die erste Textur Phase (Phase 0) ist D3DTOP \_ modulate; für alle anderen Stufen lautet der Standardwert D3DTOP \_ deaktivieren.
+Der Texturphasenzustand ist ein Texturfarbmischungsvorgang, der von einem Member des [**D3DTEXTUREOP-Enumerationstyps**](./d3dtextureop.md) identifiziert wird. Der Standardwert für die erste Texturphase (Stufe 0) ist D3DTOP \_ MODULATE. Für alle anderen Phasen ist der Standardwert D3DTOP \_ DISABLE.
 
 </dd> <dt>
 
 <span id="D3DTSS_COLORARG1"></span><span id="d3dtss_colorarg1"></span>**D3DTSS \_ COLORARG1**
 </dt> <dd>
 
-Der Textur Stufen Status ist das erste Farb Argument für die Stufe, das durch eine der [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ Texture.
+Der Texturphasenzustand ist das erste Farbargument für die Stufe, das durch einen der [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ TEXTURE.
 
-Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
+Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
 <span id="D3DTSS_COLORARG2"></span><span id="d3dtss_colorarg2"></span>**D3DTSS \_ COLORARG2**
 </dt> <dd>
 
-Der Textur Zustand ist das zweite Farb Argument für die Stufe, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ Current. Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
+Der Texturphasenzustand ist das zweite Farbargument für die Stufe, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ CURRENT. Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
-<span id="D3DTSS_ALPHAOP"></span><span id="d3dtss_alphaop"></span>**D3DTSS \_ alphaop**
+<span id="D3DTSS_ALPHAOP"></span><span id="d3dtss_alphaop"></span>**D3DTSS \_ ALPHAOP**
 </dt> <dd>
 
-Der Textur Zustand ist ein Textur Alpha-Mischungs Vorgang, der durch einen Member des [**D3DTEXTUREOP**](./d3dtextureop.md) -Enumerationstyps identifiziert wird. Der Standardwert für die erste Textur Phase (Phase 0) ist D3DTOP \_ SELECTARG1, und für alle anderen Stufen lautet der Standardwert D3DTOP \_ deaktivieren.
+Der Texturphasenzustand ist ein Textur-Alphablendingvorgang, der von einem Member des [**D3DTEXTUREOP-Enumerationstyps**](./d3dtextureop.md) identifiziert wird. Der Standardwert für die erste Texturphase (Stufe 0) ist D3DTOP \_ SELECTARG1, und für alle anderen Phasen ist der Standardwert D3DTOP \_ DISABLE.
 
 </dd> <dt>
 
 <span id="D3DTSS_ALPHAARG1"></span><span id="d3dtss_alphaarg1"></span>**D3DTSS \_ ALPHAARG1**
 </dt> <dd>
 
-Der Textur Zustand ist das erste Alpha Argument für die Stufe, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ Texture. Wenn für diese Stufe keine Textur festgelegt ist, ist das Standardargument D3DTA \_ diffus. Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
+Der Texturphasenzustand ist das erste Alphaargument für die Stufe, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ TEXTURE. Wenn für diese Phase keine Textur festgelegt ist, ist das Standardargument D3DTA \_ DIFFUSE. Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
 <span id="D3DTSS_ALPHAARG2"></span><span id="d3dtss_alphaarg2"></span>**D3DTSS \_ ALPHAARG2**
 </dt> <dd>
 
-Der Textur Zustand ist das zweite Alpha Argument für die Stufe, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ Current. Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
+Der Texturphasenzustand ist das zweite Alphaargument für die Phase, das durch [D3DTA](d3dta.md)identifiziert wird. Das Standardargument ist D3DTA \_ CURRENT. Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
 <span id="D3DTSS_BUMPENVMAT00"></span><span id="d3dtss_bumpenvmat00"></span>**D3DTSS \_ BUMPENVMAT00**
 </dt> <dd>
 
-Der Textur Zustand ist ein Gleit Komma Wert für den \[ \] \[ Koeffizienten 0 0 \] in einer Bump-mappingmatrix. Der Standardwert ist 0,0.
+Der Texturphasenzustand ist ein Gleitkommawert für den \[ \] \[ Koeffizienten 0 0 \] in einer Bumpmappingmatrix. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
 <span id="D3DTSS_BUMPENVMAT01"></span><span id="d3dtss_bumpenvmat01"></span>**D3DTSS \_ BUMPENVMAT01**
 </dt> <dd>
 
-Der Textur Zustand ist ein Gleit Komma Wert für den \[ \] \[ Koeffizienten 0 1 \] in einer Bump-mappingmatrix. Der Standardwert ist 0,0.
+Der Texturphasenzustand ist ein Gleitkommawert für den \[ \] \[ Koeffizienten 0 1 \] in einer Bump-Mapping-Matrix. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
 <span id="D3DTSS_BUMPENVMAT10"></span><span id="d3dtss_bumpenvmat10"></span>**D3DTSS \_ BUMPENVMAT10**
 </dt> <dd>
 
-Der Textur Zustand ist ein Gleit Komma Wert für den \[ 1 \] \[ 0 \] -Koeffizienten in einer Bump-mappingmatrix. Der Standardwert ist 0,0.
+Der Texturphasenzustand ist ein Gleitkommawert für den \[ \] \[ Koeffizienten 1 0 \] in einer Bumpmappingmatrix. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
 <span id="D3DTSS_BUMPENVMAT11"></span><span id="d3dtss_bumpenvmat11"></span>**D3DTSS \_ BUMPENVMAT11**
 </dt> <dd>
 
-Der Textur Zustand ist ein Gleit Komma Wert für den \[ 1 1- \] \[ \] Koeffizienten in einer Bump-mappingmatrix. Der Standardwert ist 0,0.
+Der Texturphasenzustand ist ein Gleitkommawert für den \[ \] \[ Koeffizienten 1 1 \] in einer Bump-Mapping-Matrix. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
-<span id="D3DTSS_TEXCOORDINDEX"></span><span id="d3dtss_texcoordindex"></span>**D3DTSS \_ texcoordindex**
+<span id="D3DTSS_TEXCOORDINDEX"></span><span id="d3dtss_texcoordindex"></span>**D3DTSS \_ TEXCOORDINDEX**
 </dt> <dd>
 
-Der Index der Texturkoordinaten Menge, die mit dieser Textur Phase verwendet werden soll. Sie können bis zu acht Sätze von Texturkoordinaten pro Scheitelpunkt angeben. Wenn ein Scheitelpunkt keinen Satz von Texturkoordinaten am angegebenen Index enthält, werden standardmäßig die Koordinaten "You" und "v" (0, 0) verwendet.
+Index des Texturkoordinatensatzes, der mit dieser Texturphase verwendet werden soll. Sie können bis zu acht Sätze von Texturkoordinaten pro Scheitelpunkt angeben. Wenn ein Scheitelpunkt keinen Satz von Texturkoordinaten am angegebenen Index enthält, verwendet das System standardmäßig die Sie- und v-Koordinaten (0,0).
 
-Beim Rendering mithilfe von Vertex-Shadern muss der Texturkoordinaten Index jeder Phase auf den Standardwert festgelegt werden. Der Standard Index für jede Stufe ist gleich dem Phasen Index. Legen Sie diesen Status auf den NULL basierten Index des Koordinaten Satzes für jeden Scheitelpunkt fest, den diese Textur Phase verwendet.
+Beim Rendern mit Vertex-Shadern muss der Texturkoordinatenindex jeder Phase auf den Standardwert festgelegt werden. Der Standardindex für jede Phase ist gleich dem Phasenindex. Legen Sie diesen Zustand auf den nullbasierten Index des Koordinatensatzes für jeden Scheitelpunkt fest, der von dieser Texturphase verwendet wird.
 
-Darüber hinaus können Anwendungen, als logisch oder mit dem Index festgelegt werden, eine der Konstanten, die Direct3D automatisch die Eingabe Texturkoordinaten für eine Textur Transformation generieren. Eine Liste aller Konstanten finden Sie unter [D3DTSS \_ TCI](d3dtss-tci.md).
+Darüber hinaus können Anwendungen als logisches OR mit dem festgelegten Index eine der Konstanten enthalten, die anfordern, dass Direct3D automatisch die Eingabetexturkoordinaten für eine Texturtransformation generiert. Eine Liste aller Konstanten finden Sie unter [D3DTSS \_ TCI](d3dtss-tci.md).
 
-Mit Ausnahme von D3DTSS \_ TCI \_ passthru, das in NULL aufgelöst wird, verwendet das System den Index streng, um den Textur umschließmodus zu bestimmen, wenn einer der folgenden Werte im festgelegten Index enthalten ist. Diese Flags sind besonders nützlich, wenn Sie die Umgebungs Zuordnung durchführen.
+Mit Ausnahme von D3DTSS \_ TCI \_ PASSTHRU, das in 0 (null) aufgelöst wird, verwendet das System den Index ausschließlich, um den Texturumbruchmodus zu bestimmen, wenn einer der folgenden Werte in den festzulegenden Index eingeschlossen wird. Diese Flags sind besonders nützlich beim Durchführen der Umgebungszuordnung.
 
 </dd> <dt>
 
-<span id="D3DTSS_BUMPENVLSCALE"></span><span id="d3dtss_bumpenvlscale"></span>**D3DTSS \_ bumpendvlscale**
+<span id="D3DTSS_BUMPENVLSCALE"></span><span id="d3dtss_bumpenvlscale"></span>**D3DTSS \_ BUMPENVLSCALE**
 </dt> <dd>
 
-Gleit Komma-Skalierungs Wert für die Bump-Map-Beleuchtung. Der Standardwert ist 0,0.
+Gleitkomma-Skalierungswert für die Leuchtdichte von Bumpmaps. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
-<span id="D3DTSS_BUMPENVLOFFSET"></span><span id="d3dtss_bumpenvloffset"></span>**D3DTSS \_ bumpenvloffset**
+<span id="D3DTSS_BUMPENVLOFFSET"></span><span id="d3dtss_bumpenvloffset"></span>**D3DTSS \_ BUMPENVLOFFSET**
 </dt> <dd>
 
-Gleit Komma Offset Wert für die Bild-und Bild Lauf Beleuchtung. Der Standardwert ist 0,0.
+Gleitkommaoffsetwert für die Leuchtdichte von Bumpmaps. Der Standardwert ist 0,0.
 
 </dd> <dt>
 
-<span id="D3DTSS_TEXTURETRANSFORMFLAGS"></span><span id="d3dtss_texturetransformflags"></span>**D3DTSS \_ texturetransformflags**
+<span id="D3DTSS_TEXTURETRANSFORMFLAGS"></span><span id="d3dtss_texturetransformflags"></span>**D3DTSS \_ TEXTURETRANSFORMFLAGS**
 </dt> <dd>
 
-Member des [**D3DTEXTURETRANSFORMFLAGS**](./d3dtexturetransformflags.md) -Enumerationstyps, der die Transformation von Texturkoordinaten für diese Textur Phase steuert. Der Standardwert ist D3DTTFF \_ deaktivieren.
+Member des [**D3DTEXTURETRANSFORMFLAGS-Enumerationstyps,**](./d3dtexturetransformflags.md) der die Transformation von Texturkoordinaten für diese Texturphase steuert. Der Standardwert ist D3DTTFF \_ DISABLE.
 
 </dd> <dt>
 
 <span id="D3DTSS_COLORARG0"></span><span id="d3dtss_colorarg0"></span>**D3DTSS \_ COLORARG0**
 </dt> <dd>
 
-Einstellungen für den dritten Farb Operanden für die Ausführung von Vorgängen (multiplizieren, addieren und Linear Interpolate), die durch [D3DTA](d3dta.md)identifiziert werden. Diese Einstellung wird unterstützt, wenn die \_ Gerätefunktionen D3DTEXOPCAPS MultiplyAdd oder D3DTEXOPCAPS \_ Lerp vorhanden sind. Das Standardargument ist D3DTA \_ Current. Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
+Einstellungen für den dritten Farbopernden für trikoische Operationen (Multiplizieren, Hinzufügen und lineares Interpolieren), die durch [D3DTA](d3dta.md)identifiziert werden. Diese Einstellung wird unterstützt, wenn die LERP-Gerätefunktionen D3DTEXOPCAPS \_ MULTIPLYADD oder D3DTEXOPCAPS \_ vorhanden sind. Das Standardargument ist D3DTA \_ CURRENT. Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Der Standardwert für das Register ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
 <span id="D3DTSS_ALPHAARG0"></span><span id="d3dtss_alphaarg0"></span>**D3DTSS \_ ALPHAARG0**
 </dt> <dd>
 
-Einstellungen für den Alphakanal Auswahl-Operanden für Selektor-Vorgänge (multiplizieren, addieren und Linear Interpolate), die durch [D3DTA](d3dta.md)identifiziert werden. Diese Einstellung wird unterstützt, wenn die \_ Gerätefunktionen D3DTEXOPCAPS MultiplyAdd oder D3DTEXOPCAPS \_ Lerp vorhanden sind. Das Standardargument ist D3DTA \_ Current. Geben \_ Sie D3DTA Temp an, um eine temporäre Register Farbe für Lese-oder Schreibvorgänge auszuwählen. D3DTA \_ Temp wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist. Das Standardargument ist (0,0, 0,0, 0,0, 0,0).
+Einstellungen für den Alphakanalselektoropernden für trikoische Vorgänge (Multiplizieren, Hinzufügen und lineares Interpolieren), die durch [D3DTA](d3dta.md)identifiziert werden. Diese Einstellung wird unterstützt, wenn die LERP-Gerätefunktionen D3DTEXOPCAPS \_ MULTIPLYADD oder D3DTEXOPCAPS \_ vorhanden sind. Das Standardargument ist D3DTA \_ CURRENT. Geben Sie D3DTA \_ TEMP an, um eine temporäre Registerfarbe für Lese- oder Schreibzugriff auszuwählen. D3DTA \_ TEMP wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist. Das Standardargument ist (0,0, 0,0, 0,0, 0,0).
 
 </dd> <dt>
 
-<span id="D3DTSS_RESULTARG"></span><span id="d3dtss_resultarg"></span>**D3DTSS \_ resultarg**
+<span id="D3DTSS_RESULTARG"></span><span id="d3dtss_resultarg"></span>**D3DTSS \_ RESULTARG**
 </dt> <dd>
 
-Die Einstellung zum Auswählen des Ziels für das Ergebnis dieser Phase wird durch [D3DTA](d3dta.md)identifiziert. Dieser Wert kann auf D3DTA \_ Current (Standardwert) oder auf D3DTA Temp festgelegt werden. dabei handelt es sich um \_ ein einzelnes temporäres Register, das als Eingabe Argument in nachfolgende Stufen gelesen werden kann. Die endgültige Farbe, die an den nebelmixer und den Frame Puffer übertragen wird, wird von D3DTA \_ Current übernommen, sodass der letzte aktive Textur Phasen Zustand auf den aktuellen Wert festgelegt werden muss. Diese Einstellung wird unterstützt, wenn die D3DPMISCCAPS \_ tssargtemp-Geräte Funktion vorhanden ist.
+Einstellung zum Auswählen des Zielregisters für das Ergebnis dieser Phase, identifiziert durch [D3DTA.](d3dta.md) Dieser Wert kann auf D3DTA CURRENT (Standardwert) oder auf D3DTA TEMP festgelegt werden. Dabei handelt es sich \_ um ein \_ einzelnes temporäres Register, das als Eingabeargument in nachfolgende Phasen eingelesen werden kann. Die endgültige Farbe, die an den Blender und den Framepuffer übergeben wird, wird von D3DTA \_ CURRENT übernommen, sodass der Zustand der letzten aktiven Texturphase auf "Aktuell" festgelegt werden muss. Diese Einstellung wird unterstützt, wenn die D3DPMISCCAPS \_ TSSARGTEMP-Gerätefunktion vorhanden ist.
 
 </dd> <dt>
 
-<span id="D3DTSS_CONSTANT"></span><span id="d3dtss_constant"></span>**D3DTSS- \_ Konstante**
+<span id="D3DTSS_CONSTANT"></span><span id="d3dtss_constant"></span>**D3DTSS-KONSTANTE \_**
 </dt> <dd>
 
-Einstufige Konstante Farbe. Informationen dazu, ob ein Gerät eine einstufige Konstante Konstante unterstützt, finden Sie \_ in der D3DPMISCCAPS perstageconstant-Konstante in [D3DPMISCCAPS](d3dpmisccaps.md). D3DTSS- \_ Konstante wird von D3DTA- \_ Konstanten verwendet. Siehe [D3DTA](d3dta.md).
+Konstante Farbe pro Stufe. Um festzustellen, ob ein Gerät eine stufenspezifische Konstante unterstützt, lesen Sie die D3DPMISCCAPS \_ PERSTAGECONSTANT-Konstante in [D3DPMISCCAPS.](d3dpmisccaps.md) D3DTSS \_ CONSTANT wird von D3DTA CONSTANT \_ verwendet. Siehe [D3DTA](d3dta.md).
 
 </dd> <dt>
 
-<span id="D3DTSS_FORCE_DWORD"></span><span id="d3dtss_force_dword"></span>**D3DTSS \_ Erzwingen von \_ DWORD**
+<span id="D3DTSS_FORCE_DWORD"></span><span id="d3dtss_force_dword"></span>**D3DTSS \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Member dieses Enumerationstyps werden mit den Methoden [**IDirect3DDevice9:: gettexturestagestate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-gettexturestagestate) und [**IDirect3DDevice9:: settexturestagestate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate) verwendet, um Textur Zustands Werte abzurufen und festzulegen.
+Member dieses Enumerationstyps werden mit den [**Methoden IDirect3DDevice9::GetTextureStageState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-gettexturestagestate) und [**IDirect3DDevice9::SetTextureStageState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate) verwendet, um Texturzustandswerte abzurufen und festzulegen.
 
-Der gültige Wertebereich für die \_ Matrizen der D3DTSS BUMPENVMAT00, D3DTSS \_ BUMPENVMAT01, D3DTSS \_ BUMPENVMAT10 und D3DTSS \_ BUMPENVMAT11 Bump-Mapping-Matrix ist größer als oder gleich-8,0 und kleiner als 8,0. Dieser Bereich wird in mathematischer Notation ausgedrückt (-8.0, 8.0).
+Der gültige Wertebereich für die Matrixkoeffizienten D3DTSS \_ BUMPENVMAT00, D3DTSS \_ BUMPENVMAT01, D3DTSS \_ BUMPENVMAT10 und D3DTSS \_ BUMPENVMAT11 ist größer oder gleich -8,0 und kleiner als 8,0. Dieser In mathematischer Notation ausgedrückte Bereich ist (-8,0,8,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -210,7 +210,7 @@ Der gültige Wertebereich für die \_ Matrizen der D3DTSS BUMPENVMAT00, D3DTSS \
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
@@ -221,10 +221,10 @@ Der gültige Wertebereich für die \_ Matrizen der D3DTSS BUMPENVMAT00, D3DTSS \
 [Direct3D-Enumerationen](dx9-graphics-reference-d3d-enums.md)
 </dt> <dt>
 
-[**IDirect3DDevice9:: gettexturestagestate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-gettexturestagestate)
+[**IDirect3DDevice9::GetTextureStageState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-gettexturestagestate)
 </dt> <dt>
 
-[**IDirect3DDevice9:: settexturestagestate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate)
+[**IDirect3DDevice9::SetTextureStageState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate)
 </dt> </dl>
 
  

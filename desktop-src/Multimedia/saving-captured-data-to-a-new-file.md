@@ -3,26 +3,26 @@ title: Speichern erfasster Daten in einer neuen Datei
 description: Speichern erfasster Daten in einer neuen Datei
 ms.assetid: 2e6db328-c45e-4a98-9d21-f3c9da261f44
 keywords:
-- WM_CAP_FILE_SAVEAS Meldung
-- capfilesaveas-Makro
+- WM_CAP_FILE_SAVEAS Nachricht
+- capFileSaveAs-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce1966b8cf1e189038e9ee427a868b84a1fb1b50
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f552f6f2f94ed1a7c7f7f8cae20b20c6fa4b5aa27e8105ab3f5dc33e60b7aff8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892910"
 ---
 # <a name="saving-captured-data-to-a-new-file"></a>Speichern erfasster Daten in einer neuen Datei
 
-Wenn der Benutzer erfasste Daten speichern möchte, sollte die Anwendung den Inhalt der Erfassungs Datei in einer anderen Datei speichern, indem [**die \_ \_ Datei " \_ SaveAs**](wm-cap-file-saveas.md) " der WM-Cap-Datei (oder das Makro " [**capfilesaveas**](/windows/desktop/api/Vfw/nf-vfw-capfilesaveas) ") verwendet wird. Diese Meldung ändert nicht den Namen oder den Inhalt der Erfassungs Datei. Die Anwendung muss einen Namen für die neue Datei angeben, da die Erfassungs Datei den ursprünglichen Dateinamen beibehält.
+Wenn der Benutzer erfasste Daten speichern möchte, sollte die Anwendung den Inhalt der Erfassungsdatei mithilfe der [**WM \_ CAP FILE \_ \_ SAVEAS-Meldung**](wm-cap-file-saveas.md) (oder des [**Makros capFileSaveAs)**](/windows/desktop/api/Vfw/nf-vfw-capfilesaveas) in einer anderen Datei speichern. Diese Meldung ändert weder den Namen noch den Inhalt der Erfassungsdatei. Ihre Anwendung muss einen Namen für die neue Datei angeben, da die Erfassungsdatei ihren ursprünglichen Dateinamen beibebehalte.
 
-In der Regel wird eine Erfassungs Datei für das größte erwartete Erfassungs Segment reserviert, und es kann nur ein Teil davon zum Erfassen von Daten verwendet werden. In dieser Meldung wird nur der Teil der Erfassungs Datei kopiert, der die Aufzeichnungsdaten enthält.
+In der Regel ist eine Erfassungsdatei für das größte erwartete Erfassungssegment vorab zugewiesen, und es kann nur ein Teil davon zum Erfassen von Daten verwendet werden. Diese Meldung kopiert nur den Teil der Erfassungsdatei, der die Erfassungsdaten enthält.
 
- 
+ 
 
- 
+ 
 
 
 

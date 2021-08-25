@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispielprogramm veranschaulicht die Address windowingextensions.
+description: Das folgende Beispielprogramm veranschaulicht die Adressfenstererweiterungen.
 ms.assetid: 1a67bd2f-afc0-48f4-91f2-34fd2b94910d
 title: AWE-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dde288fced54e70fa9d3db8bf6368e947fb14d64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8fedff45b7c10622139caf41d3d240f46d34a206930fd9a430b3669957493a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963350"
 ---
 # <a name="awe-example"></a>AWE-Beispiel
 
-Das folgende Beispielprogramm veranschaulicht die [**Address windowingextensions**](address-windowing-extensions.md).
+Das folgende Beispielprogramm veranschaulicht die [**Adressfenstererweiterungen**](address-windowing-extensions.md).
 
 
 ```C++

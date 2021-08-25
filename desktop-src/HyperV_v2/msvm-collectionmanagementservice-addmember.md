@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6b885701086262fda48c5d50abd750eca6866c72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f97781c07c3d7d6f351c671a86c83d71153375b59b4e5bdab5d6607518cd8e34
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870390"
 ---
-# <a name="addmember-method-of-the-msvm_collectionmanagementservice-class"></a>AddMember-Methode der MSVM \_ collectionmanagementservice-Klasse
+# <a name="addmember-method-of-the-msvm_collectionmanagementservice-class"></a>AddMember-Methode der Msvm \_ CollectionManagementService-Klasse
 
-Fügt das angegebene verwaltete Element als Member des angegebenen [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) -Objekts hinzu.
+Fügt das angegebene verwaltete Element als Member des angegebenen [**CIM \_ CollectionOfMSEs-Objekts**](cim-collectionofmses.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ uint32 AddMember(
 
 <dl> <dt>
 
-*Mitglied* \[ in\]
+*Mitglied* \[ In\]
 </dt> <dd>
 
 Der Member, der der Auflistung hinzugefügt werden soll.
 
 </dd> <dt>
 
-*Sammlung* \[ in\]
+*Sammlung* \[ In\]
 </dt> <dd>
 
-Die Auflistung, der das Element hinzugefügt werden soll.
+Die Auflistung, der der Member hinzugefügt werden soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn erfolgreich, oder 4096, wenn der Auftrag gestartet wurde. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 oder 4096 zurück, wenn der Auftrag gestartet wurde. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,7 +83,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -95,19 +95,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,10 +116,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,7 +128,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ collectionmanagementservice**](msvm-collectionmanagementservice.md)
+[**Msvm \_ CollectionManagementService**](msvm-collectionmanagementservice.md)
 </dt> </dl>
 
  

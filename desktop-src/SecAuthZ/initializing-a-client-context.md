@@ -1,36 +1,36 @@
 ---
-description: Eine Anwendung muss einen Client Kontext erstellen, bevor Sie mit der Authz-API Zugriffs Überprüfungen oder-Überwachungen durchführen kann.
+description: Eine Anwendung muss einen Clientkontext erstellen, bevor sie Authz API zum Durchführen von Zugriffsüberprüfungen oder Überwachungen verwenden kann.
 ms.assetid: 82f207ff-cac4-4e9a-a9e6-ddb3f6c8b30a
-title: Initialisieren eines Client Kontexts
+title: Initialisieren eines Clientkontexts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be229a60a12e33ab0c2bbd3e52fc533cf29ed1bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da8a3c3191f323cf6ce35fda90f4bd75299dac67183986998cf21a80c0ee6995
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908040"
 ---
-# <a name="initializing-a-client-context"></a>Initialisieren eines Client Kontexts
+# <a name="initializing-a-client-context"></a>Initialisieren eines Clientkontexts
 
-Eine Anwendung muss einen Client Kontext erstellen, bevor Sie mit der Authz-API Zugriffs Überprüfungen oder-Überwachungen durchführen kann.
+Eine Anwendung muss einen Clientkontext erstellen, bevor sie Authz API zum Durchführen von Zugriffsüberprüfungen oder Überwachungen verwenden kann.
 
-Eine Anwendung muss die [**authzinitializeresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager) -Funktion zum Initialisieren des Ressourcen-Managers aufruft. Die Anwendung kann dann eine von mehreren Funktionen aufzurufen, um einen Client Kontext zu erstellen. Wenn Sie Zugriffs Überprüfungen oder die Überwachung Remote ausführen, müssen Sie außerdem die [**authzinitializeremoteresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager) -Funktion verwenden.
+Eine Anwendung muss die [**AuthzInitializeResourceManager-Funktion**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager) aufrufen, um den Ressourcen-Manager zu initialisieren. Die Anwendung kann dann eine von mehreren Funktionen aufrufen, um einen Clientkontext zu erstellen. Wenn Sie Zugriffsüberprüfungen oder Remoteüberwachungen durchführen, müssen Sie außerdem die [**Funktion AuthzInitializeRemoteResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager) verwenden.
 
-Um einen Client Kontext zu erstellen, der auf einem vorhandenen Client Kontext basiert, rufen Sie die [**authzinitializecontextfromauthzcontext**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext) -Funktion auf.
+Um einen Clientkontext auf Grundlage eines vorhandenen Clientkontexts zu erstellen, rufen Sie die [**Funktion AuthzInitializeContextFromAuthzContext**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext) auf.
 
-Die [**AuthzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) -Funktion erstellt mithilfe der Informationen in einem Anmelde Token einen neuen Client Kontext. Die [**AuthzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid) -Funktion erstellt mithilfe der angegebenen [**sid**](/windows/desktop/api/Winnt/ns-winnt-sid)einen neuen Client Kontext.
+Die [**AutohzInitializeContextFromToken-Funktion**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) erstellt mithilfe von Informationen in einem Anmeldetoken einen neuen Clientkontext. Die [**AutohzInitializeContextFromSid-Funktion**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid) erstellt mithilfe der angegebenen [**SID**](/windows/desktop/api/Winnt/ns-winnt-sid)einen neuen Clientkontext.
 
-Wenn möglich, wird anstelle von [**AuthzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)die [**AuthzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) -Funktion aufgerufen. **AuthzInitializeContextFromSid** versucht, die in einem Anmelde Token verfügbaren Informationen abzurufen, wenn der Client tatsächlich angemeldet ist. Ein tatsächliches Anmelde Token bietet weitere Informationen, wie z. b. den Anmeldetyp und die Anmelde Eigenschaften, und gibt das Verhalten des Authentifizierungs Pakets an, das für die Anmeldung verwendet wird. Der von **AuthzInitializeContextFromToken** erstellte Client Kontext verwendet ein Anmelde Token, und der resultierende Client Kontext ist ausführender und präziser als ein von **AuthzInitializeContextFromSid** erstellter Client Kontext.
+Rufen Sie nach Möglichkeit die [**AutohzInitializeContextFromToken-Funktion**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) anstelle von [**AuthzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)auf. **AutoritititializeContextFromSid** versucht, die in einem Anmeldetoken verfügbaren Informationen abzurufen, bei denen der Client tatsächlich angemeldet war. Ein tatsächliches Anmeldetoken stellt weitere Informationen bereit, z. B. Anmeldetyp und Anmeldeeigenschaften, und gibt das Verhalten des Authentifizierungspakets wieder, das für die Anmeldung verwendet wird. Der von **AuthzInitializeContextFromToken** erstellte Clientkontext verwendet ein Anmeldetoken, und der resultierende Clientkontext ist vollständiger und genauer als ein Clientkontext, der von **AutorhzInitializeContextFromSid** erstellt wurde.
 
 > [!Note]  
-> Sicherheits Attribut Variablen müssen im Client Kontext vorhanden sein, wenn in einem bedingten Ausdruck darauf verwiesen wird. Andernfalls wird der Ausdruck für den bedingten Ausdruck, der auf ihn verweist, als unbekannt ausgewertet. Weitere Informationen zu bedingten Ausdrücken finden Sie im Thema [Security Descriptor Definition Language for Conditional ACEs](security-descriptor-definition-language-for-conditional-aces-.md) .
+> Sicherheitsattributvariablen müssen im Clientkontext vorhanden sein, wenn in einem bedingten Ausdruck darauf verwiesen wird. Andernfalls wird der bedingte Ausdrucksausdruck, der auf sie verweist, als unbekannt ausgewertet. Weitere Informationen zu bedingten Ausdrücken finden Sie im Thema [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
 
  
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird der Authz-Ressourcen-Manager initialisiert und die [**AuthzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) -Funktion aufgerufen, um einen Client Kontext aus dem Anmelde Token zu erstellen, das dem aktuellen Prozess zugeordnet ist.
+Im folgenden Beispiel wird der Authz-Ressourcen-Manager initialisiert und die [**AutohzInitializeContextFromToken-Funktion aufruft,**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) um einen Clientkontext aus dem Anmeldetoken zu erstellen, das dem aktuellen Prozess zugeordnet ist.
 
 
 ```C++
@@ -97,28 +97,28 @@ BOOL AuthzInitFromToken(AUTHZ_CLIENT_CONTEXT_HANDLE *phClientContext)
 
 <dl> <dt>
 
-[Hinzufügen von SIDs zu einem Client Kontext](adding-sids-to-a-client-context.md)
+[Hinzufügen von SIDs zu einem Clientkontext](adding-sids-to-a-client-context.md)
 </dt> <dt>
 
-[Caching-Zugriffs Überprüfungen](caching-access-checks.md)
+[Zwischenspeichern von Zugriffsüberprüfungen](caching-access-checks.md)
 </dt> <dt>
 
-[Überprüfen des Zugriffs mit der Authz-API](checking-access-with-authz-api.md)
+[Überprüfen des Zugriffs mit Authz API](checking-access-with-authz-api.md)
 </dt> <dt>
 
-[Funktionsweise von Access Check](how-dacls-control-access-to-an-object.md)
+[Funktionsweise von AccessCheck](how-dacls-control-access-to-an-object.md)
 </dt> <dt>
 
-[Abfragen eines Client Kontexts](querying-a-client-context.md)
+[Abfragen eines Clientkontexts](querying-a-client-context.md)
 </dt> <dt>
 
-[Sicherheits Deskriptor-Definitions Sprache für bedingte ACEs](security-descriptor-definition-language-for-conditional-aces-.md)
+[Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs](security-descriptor-definition-language-for-conditional-aces-.md)
 </dt> <dt>
 
-[**Authzinitializeremoteresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager)
+[**AuthzInitializeRemoteResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager)
 </dt> <dt>
 
-[**Authzinitializeresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
+[**AuthzInitializeResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
 </dt> </dl>
 
  

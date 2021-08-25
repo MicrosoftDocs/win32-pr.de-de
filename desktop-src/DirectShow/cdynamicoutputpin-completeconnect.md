@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5fa15c84b9d9e0b686e17110c656b74161687705
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6d051bdd2757e37d3939616300ab0763ef2bebec727d48477f15a23e0f5178f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983170"
 ---
 # <a name="cdynamicoutputpincompleteconnect-method"></a>CDynamicOutputPin.CompleteConnect-Methode
 
@@ -51,20 +51,20 @@ Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ip
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder einen **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**CBaseOutputPin::CompleteConnect-Methode.**](cbaseoutputpin-completeconnect.md) Um dynamische Wiederherstellungsverknüpfungen zu unterstützen, committet diese Methode die Zuweisung, wenn der Filter aktiv ist. In der Basisklasse können Verbindungen nur auftreten, wenn der Filter beendet wird, sodass für die Zuweisung immer ein Commit in der [**CBaseOutputPin::Active-Methode**](cbaseoutputpin-active.md) ausgeführt wird.
+Diese Methode überschreibt die [**CBaseOutputPin::CompleteConnect-Methode.**](cbaseoutputpin-completeconnect.md) Um dynamische erneute Verbindungsleitungen zu unterstützen, committ diese Methode die Zuweisung, wenn der Filter aktiv ist. In der Basisklasse können Verbindungen nur auftreten, wenn der Filter beendet wird, sodass für die Zuweisung in der [**CBaseOutputPin::Active-Methode**](cbaseoutputpin-active.md) immer ein Committed erfolgt.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

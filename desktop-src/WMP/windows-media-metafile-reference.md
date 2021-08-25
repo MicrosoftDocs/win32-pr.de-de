@@ -1,11 +1,11 @@
 ---
-title: Referenz zu Windows Media-Metadateien
-description: Referenz zu Windows Media-Metadateien
+title: Windows Referenz zur Medienmetadatei
+description: Windows Referenz zur Medienmetadatei
 ms.assetid: 03dadba3-0143-46f0-990a-108196eb58ab
 keywords:
-- Windows Media-Metadateien, Referenz
-- Metadatendateien, Referenz
-- Referenz für Windows Media-Metadatendateien
+- Windows Medienmetadateien,Referenz
+- metafiles,reference
+- Referenz für Windows Medienmetadateien
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -13,50 +13,50 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 31d2c8d20d64e9a363fb37594519253206d30483
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b00cd604ec94c42ef90f08a8875edb4fda92ba8267c7e4a7d7b5505c2fb57932
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862260"
 ---
-# <a name="windows-media-metafile-reference"></a>Referenz zu Windows Media-Metadateien
+# <a name="windows-media-metafile-reference"></a>Windows Referenz zur Medienmetadatei
 
-Dieser Verweis dokumentiert Elemente und Dateinamen Erweiterungen für Windows Media-Metadatendateien. Der Verweis ist in die folgenden Abschnitte unterteilt.
+In dieser Referenz werden Elemente und Dateinamenerweiterungen für Windows Medienmetadateien dokumentiert. Der Verweis ist in die folgenden Abschnitte unterteilt.
 
 
 
 | `Section`                                                                                    | BESCHREIBUNG                                                                                                                      |
 |--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [Verweis auf Windows Media-Metadateielemente](windows-media-metafile-elements-reference.md) | Dokumentiert Metadatei-Elemente, einschließlich Definitionen, Attribute und deren Werte, sowie spezielle Bedingungen, die sich auf die einzelnen Elemente beziehen. |
-| [Dateinamenerweiterungen](file-name-extensions.md)                                           | Dokumentiert Dateinamen Erweiterungen für Metadateien mit Regeln und Richtlinien zur Verwendung.                                                  |
+| [Windows Referenz zu Medienmetadateielementen](windows-media-metafile-elements-reference.md) | Dokumentiert Metadateielemente, einschließlich Definitionen, Attribute und deren Werte sowie spezielle Bedingungen im Zusammenhang mit den einzelnen Elementen. |
+| [Dateinamenerweiterungen](file-name-extensions.md)                                           | Dokumentiert Dateinamenerweiterungen für Metadateien mit Regeln und Richtlinien für deren Verwendung.                                                  |
 
 
 
- 
+ 
 
-Windows Media-Metadateien sind Textdateien, die Informationen über einen Dateistream und seine Präsentation bereitstellen. Die Metadatendateien basieren auf der Syntax von Extensible Markup Language (XML) und bestehen aus verschiedenen XML-ähnlichen Elementen mit ihren Tags und Attributen. Jedes Element definiert eine Einstellung oder Aktion für Streaming-Medien.
+Windows Medienmetadateien sind Textdateien, die Informationen zu einem Dateistream und seiner Darstellung bereitstellen. Die Metadateien basieren auf der Extensible Markup Language(XML)-Syntax und werden aus verschiedenen XML-ähnlichen Elementen mit ihren Tags und Attributen erstellt. Jedes Element definiert eine Einstellung oder Aktion für Streamingmedien.
 
-Es sind zwei Sätze von Element Tags für Metadateien verfügbar. Client seitige Metadateien haben einen Satz von Elementen, und serverseitige Metadateien verfügen über einen anderen Satz von Elementen.
+Für Metadateien sind zwei Sätze von Elementtags verfügbar. Clientseitige Metadateien verfügen über einen Satz von Elementen, und serverseitige Metadateien haben einen anderen Satz von Elementen.
 
-Wenn ein Elementtag keine untergeordneten Elemente hat (die Elemente, die sich in einem anderen Element ändern oder befinden), kann ein einzelner Schrägstrich (/) am Ende des öffnenden Tags anstelle eines Endtags verwendet werden. Wenn untergeordnete Elemente nicht zwischen dem öffnenden und dem schließenden Tag für ein Element angezeigt werden, sind Sie keine untergeordneten Elemente für dieses Element und werden ignoriert, oder es wird ein Fehler in der Syntax der Metadatei verursacht.
+Wenn ein Elementtag keine untergeordneten Elemente enthält (elemente, die ändern oder in einem anderen Element enthalten sind), kann ein einzelner Schrägstrich (/) am Ende des öffnenden Tags statt eines schließenden Tags verwendet werden. Wenn untergeordnete Elemente nicht zwischen dem öffnenden und dem schließenden Tag für ein Element angezeigt werden, sind sie keine untergeordneten Elemente für dieses Element und werden ignoriert oder verursachen einen Fehler in der Syntax der Metadatei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Windows Media-Metadateien**](about-windows-media-metafiles.md)
+[**Informationen Windows Medienmetadateien**](about-windows-media-metafiles.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Leitfaden zur Medienmetadatei**](windows-media-metafile-guide.md)
 </dt> <dt>
 
-[**Windows Media-Metadateien**](windows-media-metafiles.md)
+[**Windows Medienmetadateien**](windows-media-metafiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die Drucker \_ Info \_ 8-Struktur gibt die globalen Standarddrucker Einstellungen an.
+description: Die \_ PRINTER INFO \_ 8-Struktur gibt die globalen Standarddruckereinstellungen an.
 ms.assetid: 98f26a45-5302-4358-bed6-691d9bc37554
-title: PRINTER_INFO_8 Struktur (winspool. h)
+title: PRINTER_INFO_8-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: e17780dc2f39dc3041e690de1ef7b5728c8743e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0aa5d516dd099caeba5699a8328fa52add64f14ea970e6ccec28ea8bfbe87271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947670"
 ---
-# <a name="printer_info_8-structure"></a>Drucker \_ Info \_ 8-Struktur
+# <a name="printer_info_8-structure"></a>PRINTER \_ INFO \_ 8-Struktur
 
-Die **Drucker \_ Info \_ 8** -Struktur gibt die globalen Standarddrucker Einstellungen an.
+Die **PRINTER \_ INFO \_ 8-Struktur** gibt die globalen Standarddruckereinstellungen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ typedef struct _PRINTER_INFO_8 {
 
 <dl> <dt>
 
-**pdevmode**
+**pDevMode**
 </dt> <dd>
 
-Ein Zeiger auf eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur, die die globalen Standarddrucker Daten definiert, z. b. die Papier Ausrichtung und die Auflösung.
+Ein Zeiger auf eine [**DEVMODE-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die die globalen Standarddruckerdaten definiert, z. B. die Papierausrichtung und die Auflösung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die globalen Standardwerte werden vom Administrator eines Druckers festgelegt, der von jedem verwendet werden kann. Im Gegensatz dazu wirken sich die benutzerspezifischen Standardeinstellungen auf einen bestimmten Benutzer oder andere Benutzer aus, die das Profil verwenden. Verwenden Sie für benutzerspezifische Standardeinstellungen [**Drucker \_ Informationen \_ 9**](printer-info-9.md).
+Die globalen Standardwerte werden vom Administrator eines Druckers festgelegt, der von jedem verwendet werden kann. Im Gegensatz dazu wirken sich die Standardwerte pro Benutzer auf einen bestimmten Benutzer oder jede andere Person aus, die das Profil verwendet. Verwenden Sie für Standardeinstellungen pro Benutzer [**PRINTER \_ INFO \_ 9**](printer-info-9.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Die globalen Standardwerte werden vom Administrator eines Druckers festgelegt, d
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Drucker \_ Info \_ 8W** (Unicode) und **\_ Drucker \_ Info \_ 8a** (ANSI)<br/>                           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PRINTER \_ INFO \_ 8W** (Unicode) und **\_ PRINTER INFO \_ \_ 8A** (ANSI)<br/>                           |
 
 
 
@@ -72,7 +72,7 @@ Die globalen Standardwerte werden vom Administrator eines Druckers festgelegt, d
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**GetPrinter**](getprinter.md)
@@ -81,7 +81,7 @@ Die globalen Standardwerte werden vom Administrator eines Druckers festgelegt, d
 [**SetPrinter**](setprinter.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 9**](printer-info-9.md)
+[**DRUCKERINFORMATIONEN \_ \_ 9**](printer-info-9.md)
 </dt> </dl>
 
  

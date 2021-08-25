@@ -3,7 +3,7 @@ title: Disconnect-Ereignis des AxWindowsMediaPlayer-Objekts
 description: Das Disconnect-Ereignis ist für die zukünftige Verwendung reserviert.
 ms.assetid: 3baecc6c-e772-4269-96c1-900be270543e
 keywords:
-- Disconnect-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- Disconnect-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89dffe3191efeddba74eb22c7c5c72b8c52bc095
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f0554de8fe71ae13e510733ed2204ff4ed79d575a40f23a1769a5fb36eeb560
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902693"
 ---
 # <a name="disconnect-event-of-the-axwindowsmediaplayer-object"></a>Disconnect-Ereignis des AxWindowsMediaPlayer-Objekts
 
@@ -41,19 +41,19 @@ Private Sub player_Disconnect(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ disconnecteventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ disconnectevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DisconnectEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ DisconnectEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft | BESCHREIBUNG                               |
 |----------|-------------------------------------------|
-| result   | **System. Int32** Nicht unterstützt.<br/> |
+| result   | **System.Int32** Wird nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
@@ -63,7 +63,7 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,7 +73,7 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

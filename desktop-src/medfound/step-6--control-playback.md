@@ -1,32 +1,32 @@
 ---
-description: Dieses Thema ist Schritt 6 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 6 des Tutorials How to Play Media Files with Media Foundation.
 ms.assetid: e2e3e95b-41b2-45fb-b495-0e700220e5f5
-title: 'Schritt 6: Wiedergabe von Steuerelementen'
+title: 'Schritt 6: Steuern der Wiedergabe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfdfecea3484ac6b06cc44e23fd3bd1b3235324e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eef0aa18f671c994837ba195cddba38976c3ffba990eb95748d2bede09141317
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887260"
 ---
-# <a name="step-6-control-playback"></a>Schritt 6: Wiedergabe von Steuerelementen
+# <a name="step-6-control-playback"></a>Schritt 6: Steuern der Wiedergabe
 
-Dieses Thema ist Schritt 6 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 6 des Tutorials [How to Play Media Files with Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Media Session Playback Example (Media Session Playback Example) gezeigt.](media-session-playback-example.md)
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Wiedergabe wird gestartet](#starting-playback)
+-   [Starten der Wiedergabe](#starting-playback)
 -   [Anhalten der Wiedergabe](#pausing-playback)
 -   [Beenden der Wiedergabe](#stopping-playback)
--   [Neuzeichnen des Video Fensters](#repainting-the-video-window)
--   [Ändern der Größe des Video Fensters](#resizing-the-video-window)
+-   [Neupaintieren des Videofensters](#repainting-the-video-window)
+-   [Ändern der Größe des Videofensters](#resizing-the-video-window)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="starting-playback"></a>Wiedergabe wird gestartet
+## <a name="starting-playback"></a>Starten der Wiedergabe
 
-Um die Wiedergabe zu starten, geben Sie [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)an. Der folgende Code zeigt, wie von der aktuellen Wiedergabe Position aus begonnen wird.
+Um die Wiedergabe zu starten, rufen [**Sie DIEMEDIASession::Start auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) Der folgende Code zeigt, wie Sie mit der aktuellen Wiedergabeposition beginnen.
 
 
 ```C++
@@ -69,11 +69,11 @@ HRESULT CPlayer::Play()
 
 
 
-Die [**Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) -Methode kann auch eine Anfangsposition relativ zum Anfang der Datei angeben. Weitere Informationen finden Sie im Thema zur API-Referenz.
+Die [**Start-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) kann auch eine Anfangsposition relativ zum Anfang der Datei angeben. Weitere Informationen finden Sie im API-Referenzthema.
 
 ## <a name="pausing-playback"></a>Anhalten der Wiedergabe
 
-Um die Wiedergabe anzuhalten, nennen Sie [**imfmediasession::P ause**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-pause).
+Um die Wiedergabe anzuhalten, rufen [**Sie DIEMEDIASession::P ause auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-pause)
 
 
 ```C++
@@ -103,7 +103,7 @@ HRESULT CPlayer::Pause()
 
 ## <a name="stopping-playback"></a>Beenden der Wiedergabe
 
-Um die Wiedergabe anzuhalten, nennen Sie [**imfmediasession:: Beendigung**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-stop). Beim Beenden der Wiedergabe wird das Videobild gelöscht, und das Videofenster wird mit der Hintergrundfarbe (standardmäßig schwarz) gezeichnet.
+Um die Wiedergabe zu beenden, rufen [**Sie DIEMEDIASession::Stop auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-stop) Während die Wiedergabe beendet wird, wird das Videobild deaktiviert, und das Videofenster wird mit der Hintergrundfarbe (standardmäßig schwarz) gestrichen.
 
 
 ```C++
@@ -130,9 +130,9 @@ HRESULT CPlayer::Stop()
 
 
 
-## <a name="repainting-the-video-window"></a>Neuzeichnen des Video Fensters
+## <a name="repainting-the-video-window"></a>Neupaintieren des Videofensters
 
-Der [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR) zeichnet das Video in dem von der Anwendung angegebenen Fenster. Dies erfolgt in einem separaten Thread, und die Anwendung muss den Prozess größtenteils nicht verwalten. Wenn die Wiedergabe angehalten oder angehalten wird, muss der EVR benachrichtigt werden, wenn das Videofenster eine [**WM \_ Paint**](../gdi/wm-paint.md) -Meldung empfängt. Dadurch kann der EVR das Fenster neu zeichnen. Um den EVR zu benachrichtigen, wenden Sie die [**imfvideodisplaycontrol:: repaintvideo**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-repaintvideo) -Methode an:
+Der [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR) zeichnet das Video in dem von der Anwendung angegebenen Fenster. Dies tritt in einem separaten Thread auf, und in den meisten Jahren muss Ihre Anwendung diesen Prozess nicht verwalten. Wenn die Wiedergabe angehalten oder beendet wird, muss der EVR jedoch benachrichtigt werden, wenn das Videofenster eine [**WM \_ PAINT-Nachricht**](../gdi/wm-paint.md) empfängt. Dadurch kann der EVR das Fenster neu anpainten. Um den EVR zu benachrichtigen, rufen Sie [**die METHODE VORVIDEODisplayControl::RepaintVideo**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-repaintvideo) auf:
 
 
 ```C++
@@ -153,7 +153,7 @@ HRESULT CPlayer::Repaint()
 
 
 
-Der folgende Code zeigt den Handler für die [**WM \_**](../gdi/wm-paint.md) -Zeichnungs Nachricht. Diese Funktion sollte von der Nachrichten Schleife der Anwendung aufgerufen werden.
+Der folgende Code zeigt den Handler für die [**WM \_ PAINT-Meldung.**](../gdi/wm-paint.md) Diese Funktion sollte über die Meldungsschleife der Anwendung aufgerufen werden.
 
 
 ```C++
@@ -181,7 +181,7 @@ void OnPaint(HWND hwnd)
 
 
 
-Die- `HasVideo` Methode gibt **true** zurück, wenn das- `CPlayer` Objekt einen gültigen [**imfvideodisplaycontrol**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol) -Zeiger aufweist. (Siehe [Schritt 1: Deklarieren der cplayer-Klasse](step-1--declare-the-cplayer-class.md).)
+Die `HasVideo` -Methode **gibt TRUE zurück,** `CPlayer` wenn das -Objekt über einen gültigen [**POINTERVIDEODisplayControl-Zeiger**](/windows/desktop/api/evr/nn-evr-imfvideodisplaycontrol) verfügt. (Siehe [Schritt 1: Deklarieren der CPlayer-Klasse](step-1--declare-the-cplayer-class.md).)
 
 
 ```C++
@@ -190,9 +190,9 @@ Die- `HasVideo` Methode gibt **true** zurück, wenn das- `CPlayer` Objekt einen 
 
 
 
-## <a name="resizing-the-video-window"></a>Ändern der Größe des Video Fensters
+## <a name="resizing-the-video-window"></a>Ändern der Größe des Videofensters
 
-Wenn Sie die Größe des Videofensters ändern, aktualisieren Sie das Ziel Rechteck im EVR, indem Sie die [**imfvideodisplaycontrol:: setvideoposition**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition) -Methode aufrufen:
+Wenn Sie die Größe des Videofensters ändern, aktualisieren Sie das Zielrechteck auf der EVR, indem Sie die [**METHODE RECTANGLEVideoDisplayControl::SetVideoPosition**](/windows/desktop/api/evr/nf-evr-imfvideodisplaycontrol-setvideoposition) aufrufen:
 
 
 ```C++
@@ -220,7 +220,7 @@ HRESULT CPlayer::ResizeVideo(WORD width, WORD height)
 
 
 
-Weiter: [Schritt 7: Herunterfahren der Medien Sitzung](step-7--shut-down-the-media-session.md)
+Weiter: [Schritt 7: Herunterfahren der Mediensitzung](step-7--shut-down-the-media-session.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -229,7 +229,7 @@ Weiter: [Schritt 7: Herunterfahren der Medien Sitzung](step-7--shut-down-the-med
 [Audio-/Videowiedergabe](audio-video-playback.md)
 </dt> <dt>
 
-[Wiedergeben von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)
+[Wiederspielen von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)
 </dt> </dl>
 
  

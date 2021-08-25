@@ -1,11 +1,11 @@
 ---
-title: IPSec-Aushandlungs Richtlinien-Attributtyp
-description: Das IPSec-Aushandlungs Richtlinien-Attribut ist nur für die interne Verwendung vorgesehen.
+title: IPSEC-Negotiation-Policy-Type-Attribut
+description: Das Attribut Ipsec-Negotiation-Policy-Type ist nur für die interne Verwendung vorgesehen.
 ms.assetid: 7f0a9d9e-42ab-4f5f-89fc-b0c385bc9d42
 ms.tgt_platform: multiple
 keywords:
-- IPsec-Aushandlung-Richtlinientyp-Attribut AD-Schema
-- adschema des ipsecaushandationpolicytype-Attributs
+- AD-Schema des IPSEC-Negotiation-Policy-Type-Attributs
+- iPSECNegotiationPolicyType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ec47eaab889d05a0bc9ce8401494a9591627bc2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7a990ed65c68cec4cacbff64f5433c825726cd1e884776791771ba6127b342d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925070"
 ---
-# <a name="ipsec-negotiation-policy-type-attribute"></a>IPSec-Aushandlungs Richtlinien-Attributtyp
+# <a name="ipsec-negotiation-policy-type-attribute"></a>IPSEC-Negotiation-Policy-Type-Attribut
 
-Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwendung vorgesehen.
+Das **Attribut Ipsec-Negotiation-Policy-Type** ist nur für die interne Verwendung vorgesehen.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | IPsec-Aushandlung: Richtlinientyp               |
-| LDAP-Display-Name | ipsecaushandationpolicytype                  |
+| CN                | IPSEC-Negotiation-Policy-Type               |
+| Ldap-Anzeigename | iPSECNegotiationPolicyType                  |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.887                      |
-| System-ID-GUID    | 07383074-91df-11d1-AEbc-0000e80367c1        |
+| System-ID-GUID    | 07383074-91df-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das **IPSec-Aushandlungs Richtlinien-** Attribut ist nur für die interne Verwen
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**IPsec-Aushandlung: Richtlinie**](c-ipsecnegotiationpolicy.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Negotiation-Policy**](c-ipsecnegotiationpolicy.md)<br/> |
 
 
 

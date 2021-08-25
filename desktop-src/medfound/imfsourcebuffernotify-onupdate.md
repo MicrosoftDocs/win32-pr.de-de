@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um anzugeben, dass der Quell Puffer aktualisiert wird.
+description: Wird verwendet, um anzugeben, dass der Quellpuffer aktualisiert wird.
 ms.assetid: 3c41f50f-7f0b-4676-9522-3866aedab047
-title: 'IMF sourcebuffernotify:: OnUpdate-Methode'
+title: DIESOURCEBufferNotify::OnUpdate-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 0e9149e6c0dca6166df3cad179681a90e57aaa44
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06b46c0467468153400225415df1c26b675b81d6f2eac0e9c2cee8b1ef7107ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957809"
 ---
-# <a name="imfsourcebuffernotifyonupdate-method"></a>IMF sourcebuffernotify:: OnUpdate-Methode
+# <a name="imfsourcebuffernotifyonupdate-method"></a>DIESOURCEBufferNotify::OnUpdate-Methode
 
-Wird verwendet, um anzugeben, dass der Quell Puffer aktualisiert wird.
+Wird verwendet, um anzugeben, dass der Quellpuffer aktualisiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,17 +47,17 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF sourcebuffernotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffernotify)
+[**DURCHSCHN. SourceBufferNotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffernotify)
 </dt> </dl>
 
  

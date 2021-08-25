@@ -1,12 +1,12 @@
 ---
-title: PauseService-Methode der Win32_Service -Klasse (Remotedesktopdienste)
-description: 'PauseService-Methode der Win32_Service -Klasse (Remotedesktopdienste): Versucht, den Dienst im angehaltenen Zustand zu platzieren.'
+title: PauseService-Methode der Win32_Service-Klasse (Remotedesktopdienste)
+description: 'PauseService-Methode der Win32_Service-Klasse (Remotedesktopdienste): Versucht, den Dienst im angehaltenen Zustand zu platzieren.'
 ms.assetid: 101987F6-FBAB-4E79-B1FA-346B1EF58DE1
 ms.tgt_platform: multiple
 keywords:
-- PauseService-Remotedesktopdienste
+- PauseService-Methode Remotedesktopdienste
 - PauseService-Methode Remotedesktopdienste , Win32_Service-Klasse
-- Win32_Service klasse Remotedesktopdienste , PauseService-Methode
+- Win32_Service Klasse Remotedesktopdienste , PauseService-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d7c9847f363d9bc6d1743da6189d2c4290c00dd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c3bce9626b67b989ca9ec323f2c1150599696c6bf203a09a1b77aabb88e6f6b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867930"
 ---
-# <a name="pauseservice-method-of-the-win32_service-class-remote-desktop-services"></a>PauseService-Methode der Win32_Service -Klasse (Remotedesktopdienste)
+# <a name="pauseservice-method-of-the-win32_service-class-remote-desktop-services"></a>PauseService-Methode der Win32_Service-Klasse (Remotedesktopdienste)
 
 Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **PauseService** versucht, den Dienst im angehaltenen Zustand zu platzieren.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -87,7 +87,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](/windows/desktop/CIMWin32Prov/win32-baseservice)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService**](/windows/desktop/CIMWin32Prov/win32-baseservice)) ist.**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -136,7 +136,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -192,7 +192,7 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Dienstname enthält ungültige Zeichen.
+Der Dienstname weist ungültige Zeichen auf.
 
 </dd> <dt>
 
@@ -224,13 +224,13 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Nachdem Sie ermittelt haben, welche Dienste beendet oder angehalten werden können, können Sie die Dienste mithilfe der Methoden [**StopService**](win32-terminalservice-stopservice.md) und **PauseService** beenden und anhalten. Die Entscheidung, einen Dienst anzuhalten, anstatt ihn anzuhalten oder umgekehrt, hängt von mehreren Faktoren ab, einschließlich der folgenden:
 
 -   Kann der Dienst angehalten werden? Wenn dies nicht dere ist, ist die einzige Option das Beenden des Diensts.
 -   Müssen Sie weiterhin Clientanforderungen für personen verarbeiten, die bereits mit dem Dienst verbunden sind? In diesem Falle ermöglicht das Anhalten eines Diensts in der Regel die Verarbeitung vorhandener Clients, während der Zugriff auf neue Clients verweigert wird. Wenn Sie dagegen einen Dienst beenden, werden alle Clients sofort getrennt.
--   Müssen Sie einen Dienst neu konfigurieren, damit die Änderungen sofort wirksam werden? Obwohl Diensteigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten erst wirksam, wenn der Dienst tatsächlich beendet und neu gestartet wurde.
+-   Müssen Sie einen Dienst neu konfigurieren und lassen sie sofort wirksam werden? Obwohl Diensteigenschaften geändert werden können, während ein Dienst angehalten wird, werden die meisten erst wirksam, wenn der Dienst tatsächlich beendet und neu gestartet wurde.
 
 Der Skriptcode, der zum Beenden eines Diensts erforderlich ist, ist fast identisch mit dem Code, der zum Anhalten des Diensts erforderlich ist.
 
@@ -242,7 +242,7 @@ Im VBScript-Beispiel Dienste anhalten, die [unter einem bestimmten Konto ausgef�
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -252,7 +252,7 @@ Im VBScript-Beispiel Dienste anhalten, die [unter einem bestimmten Konto ausgef�
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

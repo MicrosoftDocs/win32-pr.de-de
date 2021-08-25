@@ -1,7 +1,7 @@
 ---
-description: Entfernt Migrationsnetzwerksubnetze aus dem Migrationsdienst des virtuellen Systems.
+description: Entfernt Netzwerksubnetze für die Migration aus dem Migrationsdienst des virtuellen Systems.
 ms.assetid: 6ae8de07-552b-4525-8806-bfb9da73bd42
-title: RemoveNetworkSettings-Methode der Msvm_VirtualSystemMigrationService-Klasse
+title: RemoveNetworkSettings-Methode der Msvm_VirtualSystemMigrationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "119980080"
 ---
 # <a name="removenetworksettings-method-of-the-msvm_virtualsystemmigrationservice-class"></a>RemoveNetworkSettings-Methode der Msvm \_ VirtualSystemMigrationService-Klasse
 
-Entfernt Migrationsnetzwerksubnetze aus dem Migrationsdienst des virtuellen Systems.
+Entfernt Netzwerksubnetze für die Migration aus dem Migrationsdienst des virtuellen Systems.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Ein Array eingebetteter Instanzen der [**Msvm \_ VirtualSystemMigrationNetworkSe
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftragsstart** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -81,7 +81,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -113,7 +113,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: LVM_GETTOPINDEX Meldung (kommstrg. h)
-description: Ruft den Index des obersten sichtbaren Elements ab, wenn es sich in der Liste oder in der Berichtsansicht handelt. Sie können diese Nachricht explizit oder mit dem ListView \_ gettopindex-Makro senden.
+title: LVM_GETTOPINDEX-Nachricht (Commctrl.h)
+description: Ruft den Index des am höchsten sichtbaren Elements ab, wenn es sich in der Listen- oder Berichtsansicht befindet. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetTopIndex-Makros senden.
 ms.assetid: vs|controls|~\controls\listview\messages\lvm_gettopindex.htm
 keywords:
-- Windows-Steuerelemente für LVM_GETTOPINDEX Meldung
+- LVM_GETTOPINDEX Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb1cb080588d1825fcbd9e6c5e7b1b573fd7ad2b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6434aa2c7382a4a4d54fc3a76edd5eb4b70ccae858b8d9fcf41547590a8bc69c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920040"
 ---
-# <a name="lvm_gettopindex-message"></a>LVM \_ gettopindex-Meldung
+# <a name="lvm_gettopindex-message"></a>LVM \_ GETTOPINDEX-Nachricht
 
-Ruft den Index des obersten sichtbaren Elements ab, wenn es sich in der Liste oder in der Berichtsansicht handelt. Sie können diese Nachricht explizit oder mit dem [**ListView \_ gettopindex**](/windows/desktop/api/Commctrl/nf-commctrl-listview_gettopindex) -Makro senden.
+Ruft den Index des am höchsten sichtbaren Elements ab, wenn es sich in der Listen- oder Berichtsansicht befindet. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetTopIndex-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_gettopindex) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft den Index des obersten sichtbaren Elements ab, wenn es sich in der Liste od
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des Elements zurück, wenn erfolgreich. Gibt 0 (null) zurück, wenn das Listenansicht-Steuerelement in der Symbol Ansicht oder in der kleinen Symbol Ansicht angezeigt wird, oder wenn sich das Listenansicht-Steuerelement in der Detailansicht befindet
+Gibt bei Erfolg den Index des Elements zurück. Gibt 0 (null) zurück, wenn sich das Listenansichts-Steuerelement in der Symbolansicht oder kleinen Symbolansicht befindet oder wenn sich das Listenansichts-Steuerelement in der Detailansicht mit aktivierten Gruppen befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt den Index des Elements zurück, wenn erfolgreich. Gibt 0 (null) zurück, we
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

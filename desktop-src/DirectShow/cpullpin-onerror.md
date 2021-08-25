@@ -1,7 +1,7 @@
 ---
-description: Die OnError-Methode wird aufgerufen, wenn beim Streaming ein Fehler auftritt. Diese Methode muss von der abgeleiteten Klasse implementiert werden.
+description: Die OnError-Methode wird aufgerufen, wenn während des Streamings ein Fehler auftritt. Die abgeleitete Klasse muss diese Methode implementieren.
 ms.assetid: 0f135cab-611c-4464-9605-360a30de7eb3
-title: Cpullpin. OnError-Methode (pullpin. h)
+title: CPullPin.OnError-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2dc8bf7f307ab56609b5f90f6955a1f666854270
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b0d9873e2d327c424b2cd1ffda7112676f53399a63d2a9ca92dca1f50a02f62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908880"
 ---
-# <a name="cpullpinonerror-method"></a>Cpullpin. OnError-Methode
+# <a name="cpullpinonerror-method"></a>CPullPin.OnError-Methode
 
-Die- `OnError` Methode wird aufgerufen, wenn beim Streaming ein Fehler auftritt. Diese Methode muss von der abgeleiteten Klasse implementiert werden.
+Die `OnError` -Methode wird aufgerufen, wenn während des Streamings ein Fehler auftritt. Die abgeleitete Klasse muss diese Methode implementieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ virtual void OnError(
 *Std.* 
 </dt> <dd>
 
-Gibt den **HRESULT** -Wert an, der von der fehlerhaften Methode zurückgegeben wurde.
+Gibt den **HRESULT-Wert** an, der von der fehlgeschlagenen Methode zurückgegeben wurde.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Gibt den **HRESULT** -Wert an, der von der fehlerhaften Methode zurückgegeben w
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das-Objekt ruft diese Methode immer dann auf, wenn ein Fehler auftritt, der den datenzieh Thread stoppt. Der Filter kann diese Methode verwenden, um Streamingfehler ordnungsgemäß wiederherzustellen. In den meisten Fällen wird der Fehler vom upstreamfilter zurückgegeben, sodass der upstreamfilter dafür zuständig ist, ihn an den Filter Graph-Manager zu melden. Wenn der Fehler innerhalb der [**cpullpin:: Receive**](cpullpin-receive.md) -Methode auftritt, sollte der Filter ein [**EC \_ errorabort**](ec-errorabort.md) -Ereignis senden. (Weitere Informationen finden Sie unter [**imediaeventsink:: notify**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify).)
+Das -Objekt ruft diese Methode auf, wenn ein Fehler auftritt, der den Daten-Pullthread an hält. Der Filter kann diese Methode verwenden, um streamingfehler ordnungsgemäß wiederhergestellt zu werden. In den meisten Fällen wird der Fehler vom Upstreamfilter zurückgegeben, sodass der Upstreamfilter dafür verantwortlich ist, ihn an den Filter Graph Manager zu melden. Wenn der Fehler innerhalb der [**CPullPin::Receive-Methode**](cpullpin-receive.md) auftritt, sollte Ihr Filter ein [**EC \_ ERRORABORT-Ereignis**](ec-errorabort.md) senden. (Siehe [**IMediaEventSink::Notify**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify).)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Das-Objekt ruft diese Methode immer dann auf, wenn ein Fehler auftritt, der den 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Das-Objekt ruft diese Methode immer dann auf, wenn ein Fehler auftritt, der den 
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: /char-Schalter
-description: Mithilfe des/Char-Schalters können Sie sicherstellen, dass der Mittelwert Compiler und der C-Compiler ordnungsgemäß für alle char-und Small-Typen funktionieren.
+description: Mit dem Schalter /char können Sie sicherstellen, dass der MIDL-Compiler und der C-Compiler für alle char- und kleinen Typen ordnungsgemäß zusammenarbeiten.
 ms.assetid: 83f204cf-9cd0-42f3-bce7-b8f582e50e67
 keywords:
-- /char-Schalter-Mittel l
+- /char switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2254db9d0f4efcd003362e4126c5c295ca532b2f
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: feb459f7c2d6ff98a35e139cf07d9d95c4bed575e52b3d20258f570f07297943
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963190"
 ---
 # <a name="char-switch"></a>/char-Schalter
 
-Mithilfe des **/char** -Schalters können Sie sicherstellen, dass der Mittelwert Compiler und der C-Compiler ordnungsgemäß für alle [**char**](char-idl.md) -und [**Small**](small.md) -Typen funktionieren.
+Mit **dem Schalter /char** können Sie sicherstellen, dass der MIDL-Compiler und der C-Compiler für alle [**char-**](char-idl.md) und kleinen Typen [**ordnungsgemäß zusammenarbeiten.**](small.md)
 
 ``` syntax
 midl /char { signed | unsigned | ascii7 }
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
@@ -38,78 +38,78 @@ midl /char { signed | unsigned | ascii7 }
 
 <span id="signed"></span><span id="SIGNED"></span>
 
-<span id="signed"></span><span id="SIGNED"></span>signiert * * * *
+<span id="signed"></span><span id="SIGNED"></span>signed**
 
 
 </dt> <dd>
 
-Gibt an, dass der C-Compiler-Standard Typ für [**char**](char-idl.md) signiert ist. Alle Vorkommen von **char** , die nicht von einer Vorzeichen Spezifikation begleitet werden, werden als unsigniertes char generiert.
+Gibt an, dass der C-Compiler-Standardtyp für [**char**](char-idl.md) signiert ist. Alle Vorkommen von **char, die** nicht von einer Vorzeichenspezifikation begleitet werden, werden als zeichen ohne Vorzeichen generiert.
 
 </dd> <dt>
 
 <span id="unsigned"></span><span id="UNSIGNED"></span>
 
-<span id="unsigned"></span><span id="UNSIGNED"></span>nicht signiert * * * *
+<span id="unsigned"></span><span id="UNSIGNED"></span>unsigned**
 
 
 </dt> <dd>
 
-Gibt an, dass der Standard-C-Compilertyp für [**char**](char-idl.md) nicht signiert ist. Alle Verwendungszwecke von [**Small**](small.md) , die nicht von einer Signierungs Spezifikation begleitet werden, werden als klein signiert generiert.
+Gibt an, dass der C-Compiler-Standardtyp für [**char**](char-idl.md) nicht signiert ist. Alle Verwendungen von [**"small"**](small.md) werden nicht zusammen mit einer Vorzeichenspezifikation als klein mit Vorzeichen generiert.
 
 </dd> <dt>
 
 <span id="ascii7"></span><span id="ASCII7"></span>
 
-<span id="ascii7"></span><span id="ASCII7"></span>ASCII7 * * * *
+<span id="ascii7"></span><span id="ASCII7"></span>ascii7**
 
 
 </dt> <dd>
 
-Gibt an, dass alle [**char**](char-idl.md) -Werte ohne bestimmtes Signierungs Schlüsselwort an die generierten Dateien übermittelt werden sollen. Alle Verwendungszwecke von " [**Small**](small.md) ", die nicht von einer Vorzeichen Spezifikation begleitet werden, werden als **klein** generiert.
+Gibt an, dass [**alle char-Werte**](char-idl.md) ohne ein bestimmtes Sign-Schlüsselwort an die generierten Dateien übergeben werden sollen. Alle Verwendungen von [**"small"**](small.md) werden nicht zusammen mit einer Vorzeichenspezifikation als klein **generiert.**
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Definitions [**gemäß ist "**](char-idl.md) Mittelwert Zeichen" nicht signiert. "Small" ist im Hinblick auf **char** ( \# define Small Char) und in der Mitte [**Small**](small.md) signiert.
+Definitionsgemäß ist MIDL [**char**](char-idl.md) nicht signiert. "Small" ist in Bezug auf **char** definiert ( \# small char definieren), und MIDL [**small**](small.md) wird signiert.
 
-Der **/char** -Schalter weist den Mittelwert Compiler an, explizite [**signierte**](signed.md) oder [**unsignierte**](unsigned.md) Deklarationen in den generierten Dateien anzugeben, wenn die C-compilersignier Deklaration mit dem Standardwert für diesen Typ in Konflikt steht.
+Der **Schalter /char** weist den MIDL-Compiler [](unsigned.md) an, explizite signierte oder nicht signierte Deklarationen in den generierten Dateien anzugeben, wenn die C-Compiler-Signdeklaration mit dem MIDL-Standard für diesen Typ in Konflikt steht. [](signed.md)
 
-Beachten Sie, dass der mittlerer l-Compiler die Stub als C-Quellcode generiert, den Sie als Teil der Client-und Serverprogramme kompilieren müssen. Einige Compiler verwenden eine **signierte char** Everywhere [**-**](char-idl.md) Daten, die im Quellcode angegeben sind. Der stubquellcode, den der Mittell-Compiler generiert, behandelt alle **char** -Daten als **unsigniertes char**. Wenn der Mittell-Compiler einfach alle **char** -Daten in der IDL-Datei als **char** -Daten in den Stubs generiert hat, verursachen Compiler, die ein **signiertes char** für **char** -Daten verwenden, einen Konflikt im stubquellcode.
+Denken Sie daran, dass der MIDL-Compiler die Stubs als C-Quellcode generiert, den Sie als Teil Ihrer Client- und Serverprogramme kompilieren müssen. Einige Compiler verwenden überall [](char-idl.md) dort, wo **char-Daten** im Quellcode angegeben werden, ein zeichensigniertes Zeichen. Der Stub-Quellcode, den der MIDL-Compiler generiert, behandelt alle **char-Daten** als **char ohne Vorzeichen.** Wenn der MIDL-Compiler  einfach alle char-Daten  in der IDL-Datei als char-Daten in den Stubs generiert, würden Compiler, die ein signiertes **zeichen** für **char-Daten** verwenden, einen Konflikt im Stub-Quellcode verursachen.
 
-Der Zweck des Befehls Zeilenschalters **/char** besteht darin, diese potenziellen Konflikte zu beheben. Alle Daten, die als " [**char**](char-idl.md) " in der IDL-Datei angegeben sind, werden im stubquellcode als **Ganzzahl ohne Vorzeichen char** -Zeichen beibehalten. Außerdem werden [**kleine**](small.md) Daten als signiert verwaltet.
+Der Befehlszeilenschalter **/char** dient dazu, diese potenziellen Konflikte zu lösen. Alle als char in der IDL-Datei angegebenen Daten [**werden**](char-idl.md) im Stub-Quellcode als **unsigned char** beibehalten. Außerdem werden kleine [**Daten als**](small.md) signiert verwaltet.
 
 In der folgenden Tabelle werden die generierten Typen zusammengefasst.
 
 
 
-| Mittel l/char (Option)       | Generierter char-Typ | Generierter kleiner Typ |
+| midl /char-Option       | Generierter char-Typ | Generierter kleiner Typ |
 |-------------------------|---------------------|----------------------|
-| **Mittel l/char signiert**   | **unsigned char**   | **small**            |
-| **Mittel l/char unsigniert** | **char**            | **klein signiert**     |
-| **Mittel l/char ASCII7**   | **char**            | **small**            |
+| **midl /char signed**   | **unsigned char**   | **small**            |
+| **midl /char unsigned** | **char**            | **klein signiert**     |
+| **midl /char ascii7**   | **char**            | **small**            |
 
 
 
- 
+ 
 
-Die Option **/char** signed gibt an, dass der C-Compiler char und Small Typen signiert sind. Damit die mittlere Standardeinstellung für **char** gefunden werden kann, muss der-compilercompiler alle Verwendungszwecke von **char** konvertieren, die nicht von einer **Signierungs** Spezifikation in ein Zeichen ohne Vorzeichen begleitet werden. Der [**kleine**](small.md) Typ wird nicht geändert, da dieser C-Compiler-Standard für **Small** mit dem mittleren Standardwert übereinstimmt.
+Die **Option /char signed** gibt an, dass der C-Compiler char und kleine Typen signiert sind. Um dem MIDL-Standardwert für **char zu** entsprechen, muss der MIDL-Compiler alle Verwendungen von **char,** die nicht von einer Vorzeichenspezifikation begleitet werden, in **unsigned char konvertieren.** Der [**kleine**](small.md) Typ wird nicht geändert, da dieser C-Compiler-Standardwert dem MIDL-Standard für kleine **entspricht.**
 
-Die Option **/char** Ganzzahl ohne Vorzeichen gibt an, dass der C-Compiler- [**char**](char-idl.md) -Typ nicht signiert ist. Der-compilercompiler konvertiert alle Verwendungszwecke von [**Small**](small.md) , nicht von einer Vorzeichen Spezifikation in eine **klein** **signierte** .
+Die **Option /char** unsigned gibt an, dass der C-Compiler [**char-Typ**](char-idl.md) unsigned ist. Der MIDL-Compiler konvertiert alle Verwendungen von [**small**](small.md) nicht zusammen mit einer Vorzeichenspezifikation in einen kleinen mit **Vorzeichen.** 
 
-Die ASCII7-Option gibt an, dass [**char**](char-idl.md) -Typen keine explizite Signierungs Spezifikation hinzugefügt wird. Der Typ [**Small**](small.md) wird als **kleiner** generiert.
+Die Ascii7-Option gibt an, dass char-Typen keine explizite [**Vorzeichenspezifikation hinzugefügt**](char-idl.md) wird. Der Typ [**small**](small.md) wird als kleiner **generiert.**
 
-Um Verwirrung zu vermeiden, sollten Sie nach Möglichkeit explizite Vorzeichen Spezifikationen für [**char**](char-idl.md) und Small types in der IDL-Datei verwenden. Beachten Sie, dass die Verwendung explizit signierter **char** -Typen in ihrer IDL-Datei von DCE IDL nicht unterstützt wird. Diese Funktion ist daher nicht verfügbar, wenn Sie mit dem [**/OSF**](-osf.md) -Schalter für mittlere Kompilierung kompilieren.
+Um Verwirrung zu vermeiden, sollten Sie nach Möglichkeit explizite Vorzeichenspezifikationen für [**char**](char-idl.md) und kleine Typen in der IDL-Datei verwenden. Beachten Sie, dass die Verwendung explizit signierter **char-Typen** in Ihrer IDL-Datei von DCE IDL nicht unterstützt wird. Daher ist dieses Feature nicht verfügbar, wenn Sie mit dem MIDL-Switch [**/osf kompilieren.**](-osf.md)
 
-Weitere Informationen zu **/char** finden Sie unter [**Small**](small.md).
+Weitere Informationen zu **/char finden** Sie unter [**small**](small.md).
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/char signierte Datei Name. idl**
+**midl /char signed filename.idl**
 
-**Mittel l/char Dateiname. idl ohne Vorzeichen**
+**midl /char unsigned filename.idl**
 
-**Mittel l/char ASCII7 filename. idl**
+**midl /char ascii7 filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -118,18 +118,18 @@ Weitere Informationen zu **/char** finden Sie unter [**Small**](small.md).
 [**Char**](char-idl.md)
 </dt> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[**zuletzt**](small.md)
+[**klein**](small.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

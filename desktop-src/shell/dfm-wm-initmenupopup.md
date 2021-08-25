@@ -1,6 +1,6 @@
 ---
-description: 'DFM_WM_INITMENUPOPUP: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
-title: DFM_WM_INITMENUPOPUP (Shlobj.h)
+description: 'DFM_WM_INITMENUPOPUP Meldung: Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern.'
+title: DFM_WM_INITMENUPOPUP Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 314e83f7-839d-4ca0-b5c1-842c5bf14923
@@ -13,12 +13,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 9df2700403dcdc0ce00b6d90d9c3a87d373b0a34
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4cb68b8251fa383ae9386eae3e6753158330c4be7566f02a8758a72dfe05de03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943150"
 ---
 # <a name="dfm_wm_initmenupopup-message"></a>DFM \_ WM \_ INITMENUPOPUP-Meldung
 
@@ -44,16 +44,16 @@ DFM_WM_INITMENUPOPUP
 *wParam* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Dropdownmenü oder Untermenü.
+Ein Handle für das Dropdownmenü oder untermenü.
 
 </dd> <dt>
 
 *lParam* \[ In\]
 </dt> <dd>
 
-Das Wort in niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
+Das Wort mit niedriger Reihenfolge gibt die nullbasierte relative Position des Menüelements an, das das Dropdownmenü oder Untermenü öffnet.
 
-Das obere Wort gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE;** Andernfalls ist dies **FALSE.**
+Das Wort in hoher Reihenfolge gibt an, ob das Dropdownmenü das Fenstermenü ist. Wenn das Menü das Fenstermenü ist, ist dieser Parameter **TRUE.** Andernfalls ist es **FALSE.**
 
 </dd> </dl>
 
@@ -65,10 +65,10 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgebe
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
 | Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 

@@ -1,10 +1,10 @@
 ---
-description: Eine asynchrone Anforderung zum Abrufen der RVAs (relative virtuelle Adressen) der aufrufsstapel des angegebenen Ereignisses.
+description: Eine asynchrone Anforderung zum Abrufen der Aufruflisten-RVAs (relative virtuelle Adressen) des angegebenen Ereignisses.
 MS-HAID: vspixengine.ICallStackRequest\_RequestAsync\_EventID\_ICallStackCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Icallstackrequest:: requestasync-Methode'
+title: ICallStackRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 1951716F-5382-41EE-90BB-A9053DB38A78
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: cad4007a8bc3d0e7b7c9cf1efc7218ce09813a5a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 131ec6fac8c5549aa455be42e1c9ca623987750bcbc620257dffdb5716aa31eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981630"
 ---
-# <a name="span-idvspixengineicallstackrequest_requestasync_eventid_icallstackcallback_ptr_dword_dwordspanicallstackrequestrequestasync-method"></a><span id="vspixengine.icallstackrequest_requestasync_eventid_icallstackcallback_ptr_dword_dword"></span>Icallstackrequest:: requestasync-Methode
+# <a name="span-idvspixengineicallstackrequest_requestasync_eventid_icallstackcallback_ptr_dword_dwordspanicallstackrequestrequestasync-method"></a><span id="vspixengine.icallstackrequest_requestasync_eventid_icallstackcallback_ptr_dword_dword"></span>ICallStackRequest::RequestAsync-Methode
 
-Eine asynchrone Anforderung zum Abrufen der RVAs (relative virtuelle Adressen) der aufrufsstapel des angegebenen Ereignisses.
+Eine asynchrone Anforderung zum Abrufen der Aufruflisten-RVAs (relative virtuelle Adressen) des angegebenen Ereignisses.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*EventID*   
+*Eventid*   
 Das angegebene Ereignis.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Icallstackrequest**](/windows/desktop/direct3dtools/icallstackrequest)
+[**ICallStackRequest**](/windows/desktop/direct3dtools/icallstackrequest)
 
  
 

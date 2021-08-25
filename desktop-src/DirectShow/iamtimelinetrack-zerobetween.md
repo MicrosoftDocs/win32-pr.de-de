@@ -1,7 +1,7 @@
 ---
-description: Die zerobetween-Methode entfernt alle Elemente aus der Spur zwischen den angegebenen Uhrzeiten. Diese Methode teilt alle Objekte, die den angegebenen Zeitbereich überspannen, und entfernt die Teile, die innerhalb des Bereichs liegen.
+description: Die ZeroBetween-Methode entfernt alles aus der Spur zwischen den angegebenen Zeiten. Diese Methode teilt alle Objekte auf, die den angegebenen Zeitbereich umfassen, und entfernt die Teile, die in den Bereich fallen.
 ms.assetid: df173a3c-147b-4f2d-9bcb-a8c2873f5420
-title: 'Iamtimelinetrack:: zerobetween-Methode (qedit. h)'
+title: IAMTimelineTrack::ZeroBetween-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: bef669bae5e5e5c4c31a49b545fcfc7f58285f97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b5ec57833ed34a432988c42351a333362168112174cccd7a989e0c2e1bddd694
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982900"
 ---
-# <a name="iamtimelinetrackzerobetween-method"></a>Iamtimelinetrack:: zerobetween-Methode
+# <a name="iamtimelinetrackzerobetween-method"></a>IAMTimelineTrack::ZeroBetween-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `ZeroBetween` Methode entfernt alle Elemente aus der Spur zwischen den angegebenen Uhrzeiten. Diese Methode teilt alle Objekte, die den angegebenen Zeitbereich überspannen, und entfernt die Teile, die innerhalb des Bereichs liegen.
+Die `ZeroBetween` -Methode entfernt alles aus der Spur zwischen den angegebenen Zeiten. Diese Methode teilt alle Objekte auf, die den angegebenen Zeitbereich umfassen, und entfernt die Teile, die in den Bereich fallen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,44 +46,44 @@ HRESULT ZeroBetween(
 
 <dl> <dt>
 
-*rtstart* 
+*rtStart* 
 </dt> <dd>
 
-Der Anfang des Bereichs, der gelöscht werden soll, in 100-Nanosecond-Einheiten.
+Anfang des zu löschenden Bereichs in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*rtend* 
+*rtEnd* 
 </dt> <dd>
 
-Das Ende des Bereichs, der gelöscht werden soll, in 100-Nanosecond-Einheiten.
+Ende des zu löschenden Bereichs in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Der Zeitbereich fällt über alle Elemente in der Spur hinaus.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Zeitbereich geht über alles hinaus, was in der Spur vorliegt.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -93,19 +93,19 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinetrack-Schnittstelle**](iamtimelinetrack.md)
+[**IAMTimelineTrack-Schnittstelle**](iamtimelinetrack.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

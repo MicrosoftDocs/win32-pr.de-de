@@ -1,10 +1,10 @@
 ---
-title: ID3DX11ThreadPump-Schnittstelle (D3DX11core. h)
-description: Ein Thread-Pump führt Aufgaben asynchron aus.
+title: ID3DX11ThreadPump-Schnittstelle (D3DX11core.h)
+description: Eine Threadpumpe führt Aufgaben asynchron aus.
 ms.assetid: 1a99f728-149d-4800-a6e4-e3a00cf8cf4f
 keywords:
 - ID3DX11ThreadPump-Schnittstelle Direct3D 11
-- ID3DX11ThreadPump Interface Direct3D 11, beschrieben
+- ID3DX11ThreadPump-Schnittstelle Direct3D 11 , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,31 +16,31 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b60cedaa4ef84cb9f3ea31cd619d7335cc09324e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b4bcfbc5fcf128f3ef71250180b487c83ce3c0d5430a563dfa3b7069e4235e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858040"
 ---
 # <a name="id3dx11threadpump-interface"></a>ID3DX11ThreadPump-Schnittstelle
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
-Ein Thread-Pump führt Aufgaben asynchron aus. Sie wird durch Aufrufen von [**D3DX11CreateThreadPump**](d3dx11createthreadpump.md)erstellt. Es gibt mehrere APIs, die ein optionales threadpump als Parameter akzeptieren, z. b. [**D3DX11CreateTextureFromFile**](d3dx11createtexturefromfile.md) und [**D3DX11CompileFromFile**](d3dx11compilefromfile.md). Wenn Sie eine Thread-Pump-Schnittstelle an diese APIs übergeben, werden die Funktionen asynchron in einem separaten Thread ausgeführt. Vor allem bei Multiprozessorcomputern kann ein Thread-Pump Ressourcen laden und Daten verarbeiten, ohne eine spürbare Leistungsminderung zu erzielen.
+Eine Threadpumpe führt Aufgaben asynchron aus. Sie wird durch Aufrufen von [**D3DX11CreateThreadPump**](d3dx11createthreadpump.md)erstellt. Es gibt mehrere APIs, die eine optionale Threadpumpe als Parameter verwenden, z. B. [**D3DX11CreateTextureFromFile**](d3dx11createtexturefromfile.md) und [**D3DX11CompileFromFile**](d3dx11compilefromfile.md); Wenn Sie eine Threadpumpschnittstelle an diese APIs übergeben, werden die Funktionen asynchron in einem separaten Thread ausgeführt. Insbesondere auf Multiprozessorcomputern kann eine Threadpumpe Ressourcen laden und Daten verarbeiten, ohne dass die Leistung merklich abnimmt.
 
 ## <a name="members"></a>Member
 
-Die **ID3DX11ThreadPump** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ID3DX11ThreadPump** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DX11ThreadPump-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ID3DX11ThreadPump** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DX11ThreadPump** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DX11ThreadPump-Schnittstelle** verfügt über diese Methoden.
 
 
 
@@ -57,52 +57,52 @@ Die **ID3DX11ThreadPump** -Schnittstelle verfügt über diese Methoden.
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="id3dx11threadpump-addworkitem.md"><strong>Addworkitem</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-addworkitem.md"><strong>AddWorkItem</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Fügt der Thread Pumpe ein Arbeits Element hinzu.<br/></td>
+<br/> Fügt der Threadpumpe ein Arbeitselement hinzu.<br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="id3dx11threadpump-getqueuestatus.md"><strong>Getqueuestatus</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-getqueuestatus.md"><strong>GetQueueStatus</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Ruft die Anzahl der Elemente in jeder der drei Warteschlangen innerhalb der Thread Pumpe ab.<br/></td>
+<br/> Ruft die Anzahl der Elemente in jeder der drei Warteschlangen innerhalb der Threadpumpe ab.<br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="id3dx11threadpump-getworkitemcount.md"><strong>Getworkitemcount</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-getworkitemcount.md"><strong>GetWorkItemCount</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Ruft die Anzahl der Arbeitselemente in der Thread Pumpe ab.<br/></td>
+<br/> Ruft die Anzahl der Arbeitselemente in der Threadpumpe ab.<br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="id3dx11threadpump-processdeviceworkitems.md"><strong>Processdeviceworkitems</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-processdeviceworkitems.md"><strong>ProcessDeviceWorkItems</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Legt Arbeitselemente auf das Gerät fest, nachdem Sie geladen und verarbeitet wurden.<br/></td>
+<br/> Legt Arbeitselemente auf dem Gerät fest, nachdem sie geladen und verarbeitet wurden.<br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="id3dx11threadpump-purgeallitems.md"><strong>Purgeallitems</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-purgeallitems.md"><strong>PurgeAllItems</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Löscht alle Arbeitselemente aus der Thread Pumpe.<br/></td>
+<br/> Löscht alle Arbeitselemente aus der Threadpumpe.<br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="id3dx11threadpump-waitforallitems.md"><strong>Waitforallitems</strong></a></td>
+<td style="text-align: left;"><a href="id3dx11threadpump-waitforallitems.md"><strong>WaitForAllItems</strong></a></td>
 <td style="text-align: left;"><blockquote>
 [!Note]<br />
-Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 </blockquote>
-<br/> Wartet, bis alle Arbeitselemente in der Thread Pumpe abgeschlossen sind.<br/></td>
+<br/> Wartet, bis alle Arbeitselemente in der Threadpumpe abgeschlossen sind.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -111,34 +111,34 @@ Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="using-a-thread-pump"></a>Verwenden eines Thread Pump
+### <a name="using-a-thread-pump"></a>Verwenden einer Threadpumpe
 
-Die Thread Pumpe lädt und verarbeitet Daten mit dem folgenden dreistufigen Prozess:
+Die Threadpumpe lädt und verarbeitet Daten mithilfe des folgenden dreistufigen Prozesses:
 
-1.  Laden und decokomprimieren der Daten mit einem [**Daten Lader**](id3dx11dataloader.md). Das Data Loader-Objekt verfügt über drei Methoden, die vom threadpump intern beim Laden und Dekomprimieren der Daten aufgerufen werden: [**ID3DX11DataLoader:: Load**](id3dx11dataloader-load.md), [**ID3DX11DataLoader::D eComPress**](id3dx11dataloader-decompress.md)und [**ID3DX11DataLoader::D estroy**](id3dx11dataloader-destroy.md). Die spezifischen Funktionen dieser drei APIs unterscheiden sich abhängig vom Typ der geladenen und dekomprimierten Daten. Die Schnittstelle des Daten Laders kann auch geerbt werden, und die zugehörigen APIs können geändert werden, wenn eine Datendatei geladen wird, die in einem eigenen benutzerdefinierten Format definiert ist.
-2.  Verarbeiten Sie die Daten mit einem [**Datenprozessor**](id3dx11dataprocessor.md). Das Data Processor-Objekt verfügt über drei Methoden, die von der Thread Pumpe intern aufgerufen werden, während Sie die Daten verarbeitet: [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md), [**ID3DX11DataProcessor:: foratedeviceobject**](id3dx11dataprocessor-createdeviceobject.md)und [**ID3DX11DataProcessor::D estroy**](id3dx11dataprocessor-destroy.md). Die Art und Weise, wie die Daten verarbeitet werden, unterscheidet sich je nach Art der Daten. Wenn es sich bei den Daten z. b. um eine Textur handelt, die als JPEG gespeichert ist, führt [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md) eine JPEG-Komprimierung durch, um die rohbildbits des Bilds abzurufen. Wenn es sich bei den Daten um einen Shader handelt, kompiliert [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md) den HLSL in Bytecode. Nachdem die Daten verarbeitet wurden, wird ein Geräte Objekt für diese Daten erstellt (mit [**ID3DX11DataProcessor:: kreatedeviceobject**](id3dx11dataprocessor-createdeviceobject.md)), und das Objekt wird einer Warteschlange von Geräte Objekten hinzugefügt. Die Datenprozessor Schnittstelle kann auch geerbt werden, und die zugehörigen APIs können geändert werden, wenn eine Datendatei verarbeitet wird, die in einem eigenen benutzerdefinierten Format definiert ist.
-3.  Binden Sie das Geräte Objekt an das Gerät. Dies geschieht, wenn eine Anwendung [**ID3DX11ThreadPump::P rocess deviceworkitems**](id3dx11threadpump-processdeviceworkitems.md)aufruft, die eine angegebene Anzahl von Objekten in der Warteschlange von Geräte Objekten an das Gerät bindet.
+1.  Laden und Dekomprimen der Daten mit einem [**Datenladeprogramm.**](id3dx11dataloader.md) Das Datenladeprogrammobjekt verfügt über drei Methoden, die die Threadpump beim Laden und Dekomprimieren der Daten intern aufruft: [**ID3DX11DataLoader::Load**](id3dx11dataloader-load.md), [**ID3DX11DataLoader::D ecompress**](id3dx11dataloader-decompress.md)und [**ID3DX11DataLoader::D estobald**](id3dx11dataloader-destroy.md). Die spezifischen Funktionen dieser drei APIs unterscheiden sich je nach Typ der geladenen und dekomprimierten Daten. Die Datenladeprogrammschnittstelle kann auch geerbt werden, und ihre APIs können geändert werden, wenn eine Datendatei geladen wird, die im eigenen benutzerdefinierten Format definiert ist.
+2.  Verarbeiten Sie die Daten mit einem [**Datenprozessor.**](id3dx11dataprocessor.md) Das Datenprozessorobjekt verfügt über drei Methoden, die die Threadpump intern aufruft, während es die Daten verarbeitet: [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md), [**ID3DX11DataProcessor::CreateDeviceObject**](id3dx11dataprocessor-createdeviceobject.md)und [**ID3DX11DataProcessor::D est dll**](id3dx11dataprocessor-destroy.md). Die Art und Weise, wie die Daten verarbeitet werden, hängt vom Typ der Daten ab. Wenn es sich bei den Daten beispielsweise um eine als JPEG gespeicherte Textur handelt, führt [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md) die JPEG-Dekomprimierung durch, um die unformatierten Bildbits des Bilds abzurufen. Wenn es sich bei den Daten um einen Shader handelt, kompiliert [**ID3DX11DataProcessor::P rocess**](id3dx11dataprocessor-process.md) die HLSL in Bytecode. Nachdem die Daten verarbeitet wurden, wird ein Geräteobjekt für diese Daten erstellt (mit [**ID3DX11DataProcessor::CreateDeviceObject),**](id3dx11dataprocessor-createdeviceobject.md)und das Objekt wird einer Warteschlange von Geräteobjekten hinzugefügt. Die Datenprozessorschnittstelle kann auch geerbt werden, und ihre APIs können geändert werden, wenn eine Datendatei im eigenen benutzerdefinierten Format definiert wird.
+3.  Binden Sie das Geräteobjekt an das Gerät. Dies geschieht, wenn die Anwendung [**ID3DX11ThreadPump::P rocessDeviceWorkItems**](id3dx11threadpump-processdeviceworkitems.md)aufruft, wodurch eine angegebene Anzahl von Objekten in der Warteschlange von Geräteobjekten an das Gerät gebunden wird.
 
-Die Thread Pumpe kann zum Laden von Daten auf zwei Arten verwendet werden: durch Aufrufen einer API, die eine Thread Pumpe als Parameter annimmt, z. b. [**D3DX11CreateTextureFromFile**](d3dx11createtexturefromfile.md) und [**D3DX11CompileFromFile**](d3dx11compilefromfile.md), oder durch Aufrufen von [**ID3DX11ThreadPump:: addworkitem**](id3dx11threadpump-addworkitem.md). Bei den APIs, die eine Thread Pumpe verwenden, werden der Daten Lader und der Datenprozessor intern erstellt. Im Fall von addworkitem müssen der Daten Lader und der Datenprozessor vorab erstellt und dann an addworkitem übergeben werden. Bibliothek d3dx11 bietet eine Reihe von APIs zum Erstellen von Daten Lade Programmen und Datenprozessoren mit Funktionen zum Laden und Verarbeiten von allgemeinen Datenformaten. Bei benutzerdefinierten Datenformaten müssen die Daten Lader-und Datenprozessor Schnittstellen geerbt werden, und ihre Methoden müssen neu definiert werden.
+Die Threadpumpe kann zum Laden von Daten auf zwei Arten verwendet werden: durch Aufrufen einer API, die eine Threadpumpe als Parameter verwendet, z. B. [**D3DX11CreateTextureFromFile**](d3dx11createtexturefromfile.md) und [**D3DX11CompileFromFile,**](d3dx11compilefromfile.md)oder durch Aufrufen von [**ID3DX11ThreadPump::AddWorkItem**](id3dx11threadpump-addworkitem.md). Im Fall der APIs, die eine Threadpumpe verwenden, werden das Datenladeprogramm und der Datenprozessor intern erstellt. Im Fall von AddWorkItem müssen das Datenladeprogramm und der Datenprozessor vorab erstellt und dann an AddWorkItem übergeben werden. D3DX11 bietet eine Reihe von APIs zum Erstellen von Datenladern und Datenprozessoren, die funktionen zum Laden und Verarbeiten gängiger Datenformate aufweisen. Bei benutzerdefinierten Datenformaten müssen das Datenladeprogramm und die Datenprozessorschnittstellen geerbt und ihre Methoden neu definiert werden.
 
-Das Thread-Pump Objekt nimmt eine beträchtliche Menge an Ressourcen in Rechnung, daher sollte im Allgemeinen nur eine pro Anwendung erstellt werden.
+Das Threadpumpobjekt nimmt eine beträchtliche Menge an Ressourcen in Anspruch, sodass in der Regel nur eine pro Anwendung erstellt werden sollte.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>D3DX11core. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Bibliothek d3dx11. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>D3DX11core.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>D3DX11.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

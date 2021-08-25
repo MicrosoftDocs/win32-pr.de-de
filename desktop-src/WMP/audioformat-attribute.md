@@ -1,9 +1,9 @@
 ---
-title: Audioformat-Attribut
-description: Das Audioformat-Attribut ist ein FourCC-Code, der das Audioformat des Elements identifiziert.
+title: AudioFormat-Attribut
+description: Das AudioFormat-Attribut ist ein FourCC-Code, der das Audioformat des Elements identifiziert.
 ms.assetid: 66a65317-4a01-4e1e-9f13-a41ad7a40d71
 keywords:
-- Audioformat-Attribut, Windows Media Player
+- Windows Media Player des AudioFormat-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,25 +12,25 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a9761e6df8dfd5c163aa39baf390f0843e57b16
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 65f9e49e8ce8a52e175f0a23847b72c5fb56a14902cfa3e68c02dcc0903f8c59
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902682"
 ---
-# <a name="audioformat-attribute"></a>Audioformat-Attribut
+# <a name="audioformat-attribute"></a>AudioFormat-Attribut
 
-Das **Audioformat** -Attribut ist ein FourCC-Code, der das Audioformat des Elements identifiziert.
+Das **AudioFormat-Attribut** ist ein FourCC-Code, der das Audioformat des Elements identifiziert.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

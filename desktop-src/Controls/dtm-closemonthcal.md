@@ -1,9 +1,9 @@
 ---
-title: DTM_CLOSEMONTHCAL Meldung (kommstrg. h)
-description: Schließt ein DTP-Steuerelement (Datums-und Zeitauswahl). Senden Sie diese Nachricht explizit oder mithilfe des "DateTime \_ closemonthcal"-Makros.
+title: DTM_CLOSEMONTHCAL (Commctrl.h)
+description: Schließt ein DTP-Steuerelement (Date and Time Picker). Senden Sie diese Nachricht explizit oder mithilfe des DateTime \_ CloseMonthCal-Makros.
 ms.assetid: f60af77f-ec34-4f3d-9427-cda7ac6083bf
 keywords:
-- Windows-Steuerelemente für DTM_CLOSEMONTHCAL Meldung
+- DTM_CLOSEMONTHCAL meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd79f33576490196bf29fd51316f8ce3daf4ad4b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f458592d2842625b9826eda5963c66cbd182e3f052a2b2a70ff5219a054e8cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878240"
 ---
-# <a name="dtm_closemonthcal-message"></a>DTM \_ closemonthcal-Nachricht
+# <a name="dtm_closemonthcal-message"></a>MESSAGE \_ CLOSEMONTHCAL -Meldung von CLOSEMONTHCAL
 
-Schließt ein DTP-Steuerelement (Datums-und Zeitauswahl). Senden Sie diese Nachricht explizit oder mithilfe des " [**DateTime \_ closemonthcal**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_closemonthcal) "-Makros.
+Schließt ein DTP-Steuerelement (Date and Time Picker). Senden Sie diese Nachricht explizit oder mithilfe des [**DateTime \_ CloseMonthCal-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_closemonthcal)
 
 ## <a name="parameters"></a>Parameter
 
@@ -43,9 +43,9 @@ Muss Null sein.
 
 Gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zerstört das-Steuerelement und sendet eine [Dtn- \_ closeup](dtn-closeup.md) -Benachrichtigung, dass das-Steuerelement geschlossen wird, anstatt das-Steuerelement zu öffnen (in der [Dtn- \_ Dropdown](dtn-dropdown.md) Benachrichtigung), an das übergeordnete Steuerelement des Steuer Elements.
+Zerstört das Steuerelement und sendet eine [DTN \_ CLOSEUP-Benachrichtigung,](dtn-closeup.md) dass das Steuerelement geschlossen wird, anstatt dass das Steuerelement geöffnet wird (dropdown-down wie in der [DTN-DROPDOWNbenachrichtigung), \_ ](dtn-dropdown.md) an das übergeordnete Element des Steuerelements.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Zerstört das-Steuerelement und sendet eine [Dtn- \_ closeup](dtn-closeup.md) -B
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Zerstört das-Steuerelement und sendet eine [Dtn- \_ closeup](dtn-closeup.md) -B
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[DTN- \_ Dropdown](dtn-dropdown.md)
+[\_DTN-DROPDOWNliste](dtn-dropdown.md)
 </dt> <dt>
 
-[DTN- \_ Schließung](dtn-closeup.md)
+[DTN \_ CLOSEUP](dtn-closeup.md)
 </dt> </dl>
 
  

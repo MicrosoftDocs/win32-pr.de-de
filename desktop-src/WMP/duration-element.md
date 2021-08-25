@@ -1,9 +1,9 @@
 ---
-title: Duration-Element
-description: Mit dem Duration-Element wird die Zeitspanne definiert, mit der Windows Media Player den zugehörigen Wiedergabelisten Eintrag render.
+title: DURATION-Element
+description: Das DURATION-Element definiert die Zeitspanne Windows Media Player den zugeordneten Wiedergabelisteneintrag rendert.
 ms.assetid: fe5c242e-08c9-44f0-a6fc-3f0fa432ba38
 keywords:
-- Fenster "Duration"-Element Media Player
+- DURATION-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c0446fd207ce04ab08d4c7bd2e055ef8d11a5a36
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5b06b497a6d31b03c4cbec23748f6995a1382fb806ad18fabaa542ed8ff33e4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863350"
 ---
-# <a name="duration-element"></a>Duration-Element
+# <a name="duration-element"></a>DURATION-Element
 
-Mit dem **Duration** -Element wird die Zeitspanne definiert, mit der Windows Media Player den zugehörigen Wiedergabelisten Eintrag render.
+Das **DURATION-Element** definiert die Zeitspanne, Windows Media Player den zugeordneten Wiedergabelisteneintrag rendert.
 
 ``` syntax
 <DURATION
@@ -32,17 +32,17 @@ Mit dem **Duration** -Element wird die Zeitspanne definiert, mit der Windows Med
 
 ## <a name="attributes"></a>Attribute
 
-**Wert** (erforderlich)
+**VALUE** (erforderlich)
 
-Die Zeitspanne in Stunden, Minuten, Sekunden und Hundertstel Sekunden, in der ein Eintrag von Windows Media Player gerendert wird. Der Standardwert ist die gesamte Länge des Eintrags. Wenn es sich bei dem Eintrag um eine Grafikdatei handelt, muss ein Duration-Wert angegeben werden.
+Die Zeitspanne in Stunden, Minuten, Sekunden und Hundertstelsekunden, die ein Eintrag von Windows Media Player gerendert wird. Der Standardwert ist die gesamte Länge des Eintrags. Wenn es sich bei dem Eintrag um eine Grafikdatei handelt, muss ein Duration-Wert angegeben werden.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente           |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **Eintrag**, **ref** |
+| Übergeordnete Elemente | **ENTRY**, **REF** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -51,11 +51,11 @@ Die Zeitspanne in Stunden, Minuten, Sekunden und Hundertstel Sekunden, in der ei
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element definiert die Zeitspanne, für die ein Stream gerendert werden soll. Wenn das **value** -Attribut die Länge des Inhaltsstreams überschreitet, wird der Stream am normalen Endpunkt beendet.
+Dieses Element definiert die Zeitdauer, die ein Stream gerendert werden soll. Wenn das **VALUE-Attribut** die Länge des Inhaltsstreams überschreitet, wird der Stream am normalen Endpunkt beendet.
 
-Dieses Element kann entweder in einem **ref** -Element oder in einem **Entry** -Element vorkommen. Ein Duration-Element, das in einem **ref** -Element definiert ist, überschreibt jedoch ein **Duration** -Element, das im übergeordneten **Entry** -Element des **ref** -Elements
+Dieses Element kann entweder innerhalb eines **REF-Elements** oder in einem **ENTRY-Element** angezeigt werden. Ein **DURATION-Element,** das in einem **REF-Element** definiert ist, überschreibt jedoch eines, das innerhalb des übergeordneten **ENTRY-Elements** des **REF-Elements** angezeigt wird.
 
-Das **Duration** -Element überschreibt ein **previewduration** -Element.
+Das **DURATION-Element** überschreibt ein **PREVIEWDURATION-Element.**
 
 ## <a name="examples"></a>Beispiele
 
@@ -74,7 +74,7 @@ Das **Duration** -Element überschreibt ein **previewduration** -Element.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -82,10 +82,10 @@ Das **Duration** -Element überschreibt ein **previewduration** -Element.
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: /Confirm-Schalter
-description: Der/Confirm-Schalter weist den Compiler an, alle mittleren Compileroptionen anzuzeigen, ohne die Eingabe-IDL und optionale ACF-Dateien zu verarbeiten.
+title: /confirm-Schalter
+description: Der Schalter /confirm weist den Compiler an, alle MIDL-Compileroptionen anzuzeigen, ohne die Eingabe-IDL und optionale ACF-Dateien zu verarbeiten.
 ms.assetid: 15a92062-1503-4cdc-91cb-9c125dbfe950
 keywords:
-- /Confirm-Schalter-Mittel l
+- /confirm switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 035b25c782b66818124a5728bcc7462b42d5cd6e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3fd71fc71195d37927c0b8b040d2ca426b6889feec60e4eaa334407f6afbf332
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896140"
 ---
-# <a name="confirm-switch"></a>/Confirm-Schalter
+# <a name="confirm-switch"></a>/confirm-Schalter
 
-Der **/Confirm** -Schalter weist den Compiler an, alle mittleren Compileroptionen anzuzeigen, ohne die Eingabe-IDL und optionale ACF-Dateien zu verarbeiten.
+Der Schalter **/confirm** weist den Compiler an, alle MIDL-Compileroptionen anzuzeigen, ohne die Eingabe-IDL und optionale ACF-Dateien zu verarbeiten.
 
 ``` syntax
 midl /confirm
@@ -29,27 +29,27 @@ midl /confirm
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Confirm**
+**midl /confirm**
 
-**Mittel l/Confirm @response.rsp Dateiname. idl**
+**midl /confirm @response.rsp filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**/Help**](-help-.md)
+[**/help**](-help-.md)
 </dt> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

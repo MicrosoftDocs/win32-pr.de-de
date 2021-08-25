@@ -1,25 +1,25 @@
 ---
-description: Ordnungsgemäß erstellte Komponenten machen weder die Umgebung der Host Anwendung noch auch Aktivierungs Kontexte aus.
+description: Gut verfasste Komponenten machen weder die Umgebung der Hostinganwendung aus noch geben sie Aktivierungskontexte frei.
 ms.assetid: cc3e21fd-5fd3-40b6-9218-cb5f47be3567
 title: Isolieren von Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e201375f50324209380a4ecef5fa762ae70e56d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 411d5e90114b7509dff2e5e48a4770841774df52fce804895155d2bd4d43e514
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885190"
 ---
 # <a name="isolating-components"></a>Isolieren von Komponenten
 
-Ordnungsgemäß erstellte Komponenten machen weder die Umgebung der Host Anwendung noch auch Aktivierungs Kontexte aus. Gut erstellte Komponenten führen eine eigene Kontext Verwaltung aus, anstatt sich auf die Umgebung der Host Anwendung zu verlassen.
+Gut verfasste Komponenten machen weder die Umgebung der Hostinganwendung aus noch geben sie Aktivierungskontexte frei. Gut verfasste Komponenten führen ihre eigene Kontextverwaltung durch, anstatt sich auf die Umgebung der Hostinganwendung zu verlassen.
 
-Der Autor der gehosteten Komponente hat die beste Position, um genau zu wissen, welche anderen Assemblys für die Komponente erforderlich sind. Die Verwendung der Host Anwendung, um die richtige Umgebung für die gehostete Komponente bereitzustellen, ist eine wahrscheinliche Fehlerquelle. Erstellen Sie stattdessen ein Manifest für die gehostete Komponente, das alle Abhängigkeiten angibt, und kompilieren Sie dann mit aktivierter Isolations Unterstützung \_ \_ . Dadurch wird sichergestellt, dass externe Aufrufe von Ihrer Komponente isoliert sind und die richtigen Versionen verwenden. Da der Aktivierungs Kontext, den Isolations \_ \_ fähig ist, pro-dll verwendet, ist es sicher, in mehreren DLLs zu verwenden, die jeweils über ein eigenes Manifest verfügen, das Abhängigkeiten aufruft.
+Der Autor der gehosteten Komponente ist am besten in der Lage, genau zu wissen, welche anderen Assemblys die Komponente benötigt. Die Verwendung der Hostanwendung zur Bereitstellung der richtigen Umgebung für Ihre gehostete Komponente ist eine wahrscheinliche Fehlerquelle. Erstellen Sie stattdessen ein Manifest für Ihre gehostete Komponente, das alle Abhängigkeiten angibt, und kompilieren Sie dann mit ISOLATION \_ AWARE \_ ENABLED. Dadurch wird sichergestellt, dass externe Aufrufe Ihrer Komponente isoliert sind und die richtigen Versionen verwenden. Da der Aktivierungskontext, den ISOLATION AWARE ENABLED verwendet, pro DLL ist, ist es sicher, in mehreren DLLs zu verwenden, die jeweils über ein eigenes Manifest verfügen, das \_ \_ Abhängigkeiten aufruft.
 
-Wenn die Kompilierung mit aktivierter Isolations Funktion nicht möglich ist \_ \_ , verwenden Sie eine Lösung wie die unter [Verwenden von Rückrufen von gehosteten Komponenten](using-callbacks-from-hosted-components.md).
+Wenn es nicht möglich ist, mit ISOLATION AWARE ENABLED zu kompilieren, verwenden Sie eine Lösung wie die unter Using Callbacks From Hosted Components (Verwenden von Rückrufen \_ \_ aus [gehosteten Komponenten).](using-callbacks-from-hosted-components.md)
 
-Sie sollten ihren eigenen Aktivierungs Kontext in allen Einstiegspunkten aktivieren, die von der Hostinganwendung aufgerufen werden können, um sicherzustellen, dass die gehostete Komponente vollständig mit dem richtigen Aktivierungs Kontext ausgeführt wird. Sie können ein C++ Helper-Objekt verwenden, um das Ändern aller entrypunkte zu vereinfachen. Beispielsweise können Sie eine C++-Klasse wie die folgende verwenden:
+Sie sollten ihren eigenen Aktivierungskontext in allen Einstiegspunkten aktivieren, die die Hostanwendung aufrufen kann, um sicherzustellen, dass Ihre gehostete Komponente vollständig mit dem richtigen Aktivierungskontext ausgeführt wird. Sie können ein C++-Hilfsobjekt verwenden, um das Ändern aller Einstiegpunkte zu vereinfachen. Beispielsweise können Sie eine C++-Klasse wie die folgende verwenden:
 
 
 ```C++
@@ -90,7 +90,7 @@ public:
 
 
 
-Dies kann dann in der Komponente verwendet werden, wobei eine globale Variable zum Speichern des Aktivierungs Kontexts verwendet wird, der für jeden Einstiegspunkt aktiviert werden soll. Auf diese Weise können Sie die Komponente von ihrer Hostinganwendung isolieren.
+Dies kann dann in Ihrer Komponente verwendet werden, indem eine globale Variable verwendet wird, um den Aktivierungskontext zu speichern, der an jedem Einstiegspunkt aktiviert werden soll. Auf diese Weise können Sie Ihre Komponente von Ihrer Hostinganwendung isolieren.
 
 
 ```C++

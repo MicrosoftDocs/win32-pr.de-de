@@ -1,49 +1,49 @@
 ---
-title: Leitfaden für internationale Text-und Schriftarten
-description: Leitfaden für internationale Text-und Schriftarten
+title: Internationale Text- und Schriftführung
+description: Internationale Text- und Schriftführung
 ms.assetid: 0540C9AD-8774-4F0F-B013-48C3EAE59BF2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2f9d94c53e4db45666d28a7c23a0e883043ba27
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 76eeeeaf59f777610603787c3b8e6ed248f36810d34fc2026466b72ca57a1883
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935400"
 ---
-# <a name="international-text-and-font-guidance"></a>Leitfaden für internationale Text-und Schriftarten
+# <a name="international-text-and-font-guidance"></a>Internationale Text- und Schriftführung
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-<dl> Clients-Windows 8 \| Windows 8.1  
-Server-Windows Server 2012 \| Windows Server 2012 R2  
+<dl> Clients – Windows 8 \| Windows 8.1  
+Server – Windows Server 2012 \| Windows Server 2012 R2  
 </dl>
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Seit Windows 2000 wurde in jeder Hauptversion von Windows eine Textanzeige Unterstützung für neue Skripts hinzugefügt. Sie finden Beschreibungen der Änderungen, die in den einzelnen Hauptversionen des Artikels [Skript-und Schriftart Unterstützung für Windows](https://msdn.microsoft.com/goglobal/bb688099.aspx) im Artikel zum [globalen Entwicklungs Center von Go](https://msdn.microsoft.com/goglobal/default)vorgenommen wurden.
+Seit Windows 2000 wurde in jeder Hauptversion von Windows Textanzeigeunterstützung für neue Skripts hinzugefügt. Beschreibungen der Änderungen, die in den einzelnen Hauptversionen vorgenommen wurden, finden Sie im Artikel [Skript- und Schriftartunterstützung für Windows](https://msdn.microsoft.com/goglobal/bb688099.aspx) im [Go Global Development Center.](https://msdn.microsoft.com/goglobal/default)
 
-Beachten Sie, dass die Unterstützung für ein Skript bestimmte Änderungen an Text Stapel Komponenten und Änderungen an Schriftarten erfordern kann. Das Windows-Betriebssystem verfügt über viele Text Stapel Komponenten: DirectWrite, GDI, uniscri, GDI+, WPF, RichEdit, ComCtl32 und andere. Die bereitgestellten Informationen betreffen hauptsächlich GDI und DirectWrite. Dies gilt auch für Benutzeroberflächen-Frameworks wie RichEdit oder den MSHTML-renderingagent, der für Windows 8 Store-Apps und für das Rendern von Webinhalt verwendet wird, obwohl diese Komponenten möglicherweise bestimmte Unterschiede aufweisen.
+Beachten Sie, dass die Unterstützung eines Skripts bestimmte Änderungen an Textstapelkomponenten sowie Änderungen an Schriftarten erfordern kann. Das Windows Betriebssystem verfügt über viele Textstapelkomponenten: DirectWrite, GDI, Uniscribe, GDI+, WPF, RichEdit, ComCtl32 und andere. Die bereitgestellten Informationen beziehen sich hauptsächlich auf GDI und DirectWrite. Sie gilt auch allgemein für Benutzeroberflächenframeworks wie RichEdit oder den MSHTML-Rendering-Agent, der für Windows 8 Store-Apps und für das Rendern von Webinhalten verwendet wird, obwohl diese Komponenten bestimmte Unterschiede aufweisen können.
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="best-practices"></a>Empfehlungen
 
-**Typografieanleitung für Entwickler**
+**Leitfaden zur Typografie für Entwickler**
 
-Typografie ist der Kern der Microsoft-Entwurfs Sprache. Jedes der Microsoft-Entwurfs Prinzipien stärkt die Wichtigkeit der Typografie. Zum ersten Mal verfügen App-Entwickler über eine Reihe von Frameworks, die erweiterte typografische Features unterstützen. Informationen zur Verwendung von JavaScript und HTML zum Anzeigen und Bearbeiten von Text in Windows Store-Apps finden Sie unter [anzeigen und](/previous-versions/windows/apps/hh465442(v=win.10)) Bearbeiten von Text.
+Typografie ist das Kernstück der Microsoft-Entwurfssprache. Jedes der Microsoft-Entwurfsprinzipien bestätigt die Bedeutung der Typografie. App-Entwickler verfügen zum ersten Mal über eine Reihe von Frameworks, die erweiterte typografische Features unterstützen. Informationen zur Verwendung von JavaScript und HTML zum [Anzeigen und](/previous-versions/windows/apps/hh465442(v=win.10)) Bearbeiten von Text in Windows Store Apps, erfahren Sie unter Anzeigen und Bearbeiten von Text.
 
-**Schriftmetriken**
+**Schriftartmetriken**
 
-Die Schriftart Metrik ist ein Bereich, der für Anwendungsentwickler besonders wichtig ist. Schriftart Dateien enthalten verschiedene Werte im Zusammenhang mit vertikalen und horizontalen Metriken. Diese Werte sind in der [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/) dokumentiert und sind über eine Vielzahl von APIs verfügbar, die in der [Struktur der dwrite- \_ Schriftart \_ Metriken](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics) und in der [TextMetric-Struktur](/windows/win32/api/wingdi/ns-wingdi-textmetrica)gefunden werden.
+Schriftartmetriken sind ein Bereich, der für Anwendungsentwickler von besonderer Bedeutung ist. Schriftartdateien enthalten verschiedene Werte im Zusammenhang mit vertikalen und horizontalen Metriken. Diese Werte sind in der [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/) dokumentiert und werden über eine Vielzahl von APIs verfügbar gemacht, die unter [DWRITE FONT METRICS structure (DWRITE \_ FONT \_ METRICS-Struktur)](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics) und [TEXTMETRIC Structure (TEXTMETRIC-Struktur)](/windows/win32/api/wingdi/ns-wingdi-textmetrica)verfügbar gemacht werden.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Skript-und Schriftart Unterstützung für Windows](https://msdn.microsoft.com/goglobal/bb688099.aspx)
+-   [Skript- und Schriftartunterstützung für Windows](https://msdn.microsoft.com/goglobal/bb688099.aspx)
 -   [Go Global Development Center](https://msdn.microsoft.com/goglobal/default)
 -   [Anzeigen und Bearbeiten von Text](/previous-versions/windows/apps/hh465442(v=win.10))
 -   [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/)
--   [Dwrite- \_ Schriftart \_ metrikstruktur](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics)
--   [TextMetric-Struktur](/windows/win32/api/wingdi/ns-wingdi-textmetrica)
+-   [DWRITE \_ FONT \_ METRICS-Struktur](/windows/win32/api/dwrite/ns-dwrite-dwrite_font_metrics)
+-   [TEXTMETRIC-Struktur](/windows/win32/api/wingdi/ns-wingdi-textmetrica)
 
- 
+ 
 
- 
+ 

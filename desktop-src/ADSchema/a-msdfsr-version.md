@@ -1,11 +1,11 @@
 ---
-title: MS-DFSR-Version-Attribut
-description: Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Dateisystem).
+title: ms-DFSR-Version-Attribut
+description: Enthält die Versionsnummer des DFS-Replikationsdiensts (verteiltes Dateisystem).
 ms.assetid: 2e49aef2-d3a5-43b8-aad8-1cd99ae51ea3
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-DFSR-Version-Attribut
-- AD-Schema für msdfsr-Version-Attribut
+- MS-DFSR-Version-Attribut AD-Schema
+- MSDFSR-Version-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9742e81689285966ccf2b9bfd7d3510a06507a5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f68a3d2d501c6aab88f6b281e37f9fa9e0c6d7b928dac67c2422fe2069b670ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924660"
 ---
-# <a name="ms-dfsr-version-attribute"></a>MS-DFSR-Version-Attribut
+# <a name="ms-dfsr-version-attribute"></a>ms-DFSR-Version-Attribut
 
-Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Dateisystem).
+Enthält die Versionsnummer des DFS-Replikationsdiensts (verteiltes Dateisystem).
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-DFSR-Version                             |
-| LDAP-Display-Name | msdfsr-Version                              |
+| CN                | ms-DFSR-Version                             |
+| Ldap-Anzeigename | msDFSR-Version                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.6.13.3.1                   |
-| System-ID-GUID    | 1a861408-38c3-49ea-Ba75-85481a77c655        |
+| System-ID-GUID    | 1a861408-38c3-49ea-ba75-85481a77c655        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,16 +55,16 @@ Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Date
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                          |
 | MAPI-Id                | \-                                                                                                                                          |
-| System-Only            | False                                                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                                                        |
-| Ist indiziert             | False                                                                                                                                       |
-| Im globalen Katalog      | False                                                                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                |
+| System-Only            | Falsch                                                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                                       |
+| Im globalen Katalog      | Falsch                                                                                                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                |
 | Range-Lower            | \-                                                                                                                                          |
 | Range-Upper            | \-                                                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                                                  |
 | System-Flags           | 0x00000000                                                                                                                                  |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> |
 
 
 
@@ -76,16 +76,16 @@ Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Date
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                          |
 | MAPI-Id                | \-                                                                                                                                          |
-| System-Only            | False                                                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                                                        |
-| Ist indiziert             | False                                                                                                                                       |
-| Im globalen Katalog      | False                                                                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                |
+| System-Only            | Falsch                                                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                                       |
+| Im globalen Katalog      | Falsch                                                                                                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                |
 | Range-Lower            | \-                                                                                                                                          |
 | Range-Upper            | \-                                                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                                                  |
 | System-Flags           | 0x00000000                                                                                                                                  |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> |
 
 
 
@@ -97,16 +97,16 @@ Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Date
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                          |
 | MAPI-Id                | \-                                                                                                                                          |
-| System-Only            | False                                                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                                                        |
-| Ist indiziert             | False                                                                                                                                       |
-| Im globalen Katalog      | False                                                                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                |
+| System-Only            | Falsch                                                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                                       |
+| Im globalen Katalog      | Falsch                                                                                                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                |
 | Range-Lower            | \-                                                                                                                                          |
 | Range-Upper            | \-                                                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                                                  |
 | System-Flags           | 0x00000000                                                                                                                                  |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> |
 
 
 
@@ -118,22 +118,22 @@ Enthält die Versionsnummer des DFS-Replikations Dienstanbieter (verteiltes Date
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                          |
 | MAPI-Id                | \-                                                                                                                                          |
-| System-Only            | False                                                                                                                                       |
-| Ist-einwertig       | Richtig                                                                                                                                        |
-| Ist indiziert             | False                                                                                                                                       |
-| Im globalen Katalog      | False                                                                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                |
+| System-Only            | Falsch                                                                                                                                       |
+| Ist einwertig       | Richtig                                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                                       |
+| Im globalen Katalog      | Falsch                                                                                                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                |
 | Range-Lower            | \-                                                                                                                                          |
 | Range-Upper            | \-                                                                                                                                          |
 | Search-Flags           | 0x00000000                                                                                                                                  |
 | System-Flags           | 0x00000000                                                                                                                                  |
-| In verwendete Klassen        | [**MS-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**MS-DFSR-replicationgroup**](c-msdfsr-replicationgroup.md)<br/> |
+| In verwendete Klassen        | [**ms-DFSR-LocalSettings**](c-msdfsr-localsettings.md)<br/> [**ms-DFSR-ReplicationGroup**](c-msdfsr-replicationgroup.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das-Attribut ist ein Teil der DFS-Replikation Service-Unterstützung.
+Das Attribut ist Teil der DFS-Replikation Dienstunterstützung.
 
  
 

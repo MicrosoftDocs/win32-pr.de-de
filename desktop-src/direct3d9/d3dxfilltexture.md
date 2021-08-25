@@ -1,7 +1,7 @@
 ---
-description: Verwendet eine vom Benutzer bereitgestellte Funktion, um die einzelnen texttwerte der MIP-Ebene einer angegebenen Textur auszufüllen.
+description: Verwendet eine vom Benutzer bereitgestellte Funktion, um jedes Texel jeder MIP-Ebene einer bestimmten Textur zu füllen.
 ms.assetid: 9c822472-2bbf-4629-bdb3-6491573e8de2
-title: D3DXFillTexture-Funktion (D3dx9tex. h)
+title: D3DXFillTexture-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 20790a9e4c1a9ce242a5e067dd617c7871a70b7c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 28df3b7396ea0c34c39a87d2285f565f25d6ff6dc89dcfb8613890e79c4c5cf7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849770"
 ---
 # <a name="d3dxfilltexture-function"></a>D3DXFillTexture-Funktion
 
-Verwendet eine vom Benutzer bereitgestellte Funktion, um die einzelnen texttwerte der MIP-Ebene einer angegebenen Textur auszufüllen.
+Verwendet eine vom Benutzer bereitgestellte Funktion, um jedes Texel jeder MIP-Ebene einer bestimmten Textur zu füllen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT D3DXFillTexture(
 
 <dl> <dt>
 
-*ptexture* \[ vorgenommen\]
+*pTexture* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf eine [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Schnittstelle, die die gefüllte Textur darstellt.
+Zeiger auf eine [**IDirect3DTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) die die gefüllte Textur darstellt.
 
 </dd> <dt>
 
-*pfunction* \[ in\]
+*pFunction* \[ In\]
 </dt> <dd>
 
 Typ: **[LPD3DXFILL2D](lpd3dxfill2d.md)**
 
-Ein Zeiger auf eine vom Benutzer bereitgestellte Auswertungsfunktion, die verwendet wird, um den Wert der einzelnen Texttypen zu berechnen. Die-Funktion folgt dem Prototyp von [LPD3DXFILL2D](lpd3dxfill2d.md).
+Zeiger auf eine vom Benutzer bereitgestellte Auswertungsfunktion, die zum Berechnen des Werts der einzelnen Texel verwendet wird. Die Funktion folgt dem Prototyp von [LPD3DXFILL2D.](lpd3dxfill2d.md)
 
 </dd> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf einen beliebigen Block von benutzerdefinierten Daten. Dieser Zeiger wird an die Funktion übergeben, die in *pfunction* bereitgestellt wird.
+Zeiger auf einen beliebigen Block benutzerdefinierter Daten. Dieser Zeiger wird an die in *pFunction bereitgestellte Funktion übergeben.*
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Zeiger auf einen beliebigen Block von benutzerdefinierten Daten. Dieser Zeiger w
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden Beispiel wird eine Funktion namens ColorFill erstellt, die auf D3DXFillTexture basiert.
+Hier ist ein Beispiel, in dem eine Funktion namens ColorFill erstellt wird, die auf D3DXFillTexture basiert.
 
 
 ```
@@ -104,8 +104,8 @@ if (FAILED (hr = D3DXFillTexture (m_pTexture, ColorFill, NULL)))
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
@@ -113,7 +113,7 @@ if (FAILED (hr = D3DXFillTexture (m_pTexture, ColorFill, NULL)))
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

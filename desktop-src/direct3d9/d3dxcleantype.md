@@ -1,7 +1,7 @@
 ---
-description: Definiert Vorgänge, die für Scheitel Punkte zur Vorbereitung der Mesh-Bereinigung durchgeführt werden.
+description: Definiert Vorgänge, die für Scheitelungen als Vorbereitung für die Gitternetzbereinigung durchzuführen sind.
 ms.assetid: f222acaa-fa82-4591-b7c2-b520cb648ed5
-title: D3DXCLEANTYPE-Enumeration (D3dx9mesh. h)
+title: D3DXCLEANTYPE-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: b38578d0f50521def552b8bd6608c2696b405d0f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2517c59d5505a8f2892ef0aee1d3884b8d489625637002d6e69a4f86434237fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894110"
 ---
 # <a name="d3dxcleantype-enumeration"></a>D3DXCLEANTYPE-Enumeration
 
-Definiert Vorgänge, die für Scheitel Punkte zur Vorbereitung der Mesh-Bereinigung durchgeführt werden.
+Definiert Vorgänge, die für Scheitelungen als Vorbereitung für die Gitternetzbereinigung durchzuführen sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ typedef enum D3DXCLEANTYPE {
 
 <dl> <dt>
 
-<span id="D3DXCLEAN_BACKFACING"></span><span id="d3dxclean_backfacing"></span>**D3DXCLEAN \_**
+<span id="D3DXCLEAN_BACKFACING"></span><span id="d3dxclean_backfacing"></span>**D3DXCLEAN \_ BACKFACING**
 </dt> <dd>
 
-Das Zusammenführen von Dreiecken, die die gleichen Scheitelpunkt Indizes aufweisen, aber über Gesichts normale verfügen, die auf entgegengesetzte Richtungen zeigen Wenn die Dreiecke nicht durch Hinzufügen eines replizierten Scheitel Punkts geteilt werden, können die Gitter einfügdaten der beiden Dreiecke einen Konflikt verursachen.
+Zusammenführen von Dreiecken, die dieselben Scheitelpunktindizes gemeinsam haben, aber Gesichtsnormwerte haben, die in entgegengesetzte Richtungen zeigen (hintere Dreiecke). Sofern die Dreiecke nicht durch Hinzufügen eines replizierten Scheitelpunkts geteilt werden, können Mesh-Adjakencydaten aus den beiden Dreiecken in Konflikt stehen.
 
 </dd> <dt>
 
-<span id="D3DXCLEAN_BOWTIES"></span><span id="d3dxclean_bowties"></span>**D3DXCLEAN- \_ bowties**
+<span id="D3DXCLEAN_BOWTIES"></span><span id="d3dxclean_bowties"></span>**D3DXCLEAN \_ BOWTIES**
 </dt> <dd>
 
-Wenn ein Scheitelpunkt die Spitze zweier Dreiecks Lüfter (ein Bowtie) ist und Mesh-Vorgänge einen der Lüfter beeinflussen, teilen Sie den freigegebenen Scheitelpunkt in zwei neue Scheitel Punkte auf. Bowties können Probleme bei Vorgängen verursachen, z. b. bei der Mesh-Vereinfachung, bei der Vertices entfernt werden, da das Entfernen eines Scheitel Punkts zwei unterschiedliche Dreiecke
+Wenn ein Scheitelpunkt der Apex von zwei Dreiecks-Lüftern (eine Bowtie) ist und Gitternetzvorgänge einen der Lüfter betreffen, teilen Sie den gemeinsamen Scheitelpunkt in zwei neue Scheitelpunkte auf. Schleifen können Probleme bei Vorgängen wie Gitternetz-Vereinfachungen verursachen, die Scheitelpunkte entfernen, da das Entfernen eines Scheitelpunkts zwei unterschiedliche Sätze von Dreiecken betrifft.
 
 </dd> <dt>
 
-<span id="D3DXCLEAN_SKINNING"></span><span id="d3dxclean_skinning"></span>**D3DXCLEAN- \_ Skinning**
+<span id="D3DXCLEAN_SKINNING"></span><span id="d3dxclean_skinning"></span>**D3DXCLEAN \_ SKINNING**
 </dt> <dd>
 
-Verwenden Sie dieses Flag, um unendliche Schleifen während der Einrichtung von settervorgängen zu vermeiden.
+Verwenden Sie dieses Flag, um endlose Schleifen bei Skinningsetup-Gitternetzvorgängen zu verhindern.
 
 </dd> <dt>
 
-<span id="D3DXCLEAN_OPTIMIZATION"></span><span id="d3dxclean_optimization"></span>**D3DXCLEAN- \_ Optimierung**
+<span id="D3DXCLEAN_OPTIMIZATION"></span><span id="d3dxclean_optimization"></span>**D3DXCLEAN-OPTIMIERUNG \_**
 </dt> <dd>
 
-Verwenden Sie dieses Flag, um unendliche Schleifen während Gitter Optimierungs Vorgängen zu verhindern.
+Verwenden Sie dieses Flag, um Endlosschleifen während Gitternetzoptimierungsvorgängen zu verhindern.
 
 </dd> <dt>
 
-<span id="D3DXCLEAN_SIMPLIFICATION"></span><span id="d3dxclean_simplification"></span>**D3DXCLEAN- \_ Vereinfachung**
+<span id="D3DXCLEAN_SIMPLIFICATION"></span><span id="d3dxclean_simplification"></span>**D3DXCLEAN-VEREINFACHUNG \_**
 </dt> <dd>
 
-Verwenden Sie dieses Flag, um unendliche Schleifen während Mesh-Vereinfachungs Vorgängen zu verhindern.
+Verwenden Sie dieses Flag, um Endlosschleifen während Vorgängen zur Vereinfachung des Gitters zu verhindern.
 
 </dd> </dl>
 
@@ -84,7 +84,7 @@ Verwenden Sie dieses Flag, um unendliche Schleifen während Mesh-Vereinfachungs 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 

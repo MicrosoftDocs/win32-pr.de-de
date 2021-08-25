@@ -1,7 +1,7 @@
 ---
-description: Mit der Methode "" von "" wird ein neuer ULONGLONG-Wert (Typ "VT UI8" \_ ) hinzugefügt oder ein vorhandener überschrieben.
+description: Die SetUnsignedLargeIntegerValue-Methode fügt einen neuen ULONGLONG-Wert (VT \_ UI8-Typ) hinzu oder überschreibt einen vorhandenen Wert.
 ms.assetid: 64874b86-7bf1-407a-8fff-a2c07c22f0cb
-title: Iportabledevicevalues::-Methode (portabledevicetypes. h)
+title: IPortableDeviceValues::SetUnsignedLargeIntegerValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 0c1ade76b4242c7508cb325e90c567349afcdc9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: be1f6673e4cdc5d1454c05e0df3ff43490e30e661f2b21324cf104d926f4b306
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930030"
 ---
-# <a name="iportabledevicevaluessetunsignedlargeintegervalue-method"></a>Iportabledevicevalues:: Server-/signedlargeintegervalue-Methode
+# <a name="iportabledevicevaluessetunsignedlargeintegervalue-method"></a>IPortableDeviceValues::SetUnsignedLargeIntegerValue-Methode
 
-Mit **der Methode** "" von "" wird ein neuer **ULONGLONG** -Wert (Typ "VT UI8" \_ ) hinzugefügt oder ein vorhandener überschrieben.
+Die **SetUnsignedLargeIntegerValue-Methode** fügt einen neuen **ULONGLONG-Wert** (VT \_ UI8-Typ) hinzu oder überschreibt einen vorhandenen Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetUnsignedLargeIntegerValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Ein **ULONGLONG** , der den neuen Wert angibt.
+Ein **ULONGLONG-Wert,** der den neuen Wert angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -75,8 +75,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 [Hinzufügen einer Ressource zu einem Objekt](adding-a-resource-to-an-object.md)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getunsignedlargeingetegervalue**](iportabledevicevalues-getunsignedlargeintegervalue.md)
+[**IPortableDeviceValues::GetUnsignedLargeIntegerValue**](iportabledevicevalues-getunsignedlargeintegervalue.md)
 </dt> </dl>
 
  
