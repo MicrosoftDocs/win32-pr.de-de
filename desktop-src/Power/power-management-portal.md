@@ -1,27 +1,27 @@
 ---
-description: Verwalten Sie die Stromversorgung, um die Akku Lebensdauer zu verbreiten, Energie zu sparen, Hitze und Rauschen zu verringern und die Zuverlässigkeit von Daten Rufen Sie den System Energiestatus ab, Benachrichtigen Sie Anwendungen von Energie Verwaltungs Ereignissen, und Benachrichtigen Sie das System über die Energieanforderungen der einzelnen Anwendungen.
+description: Verwalten Sie die Stromversorgung, um die Akkulebensdauer zu verlängern, Energie zu sparen, Wärme und Rauschen zu reduzieren und die Datenzulässigkeit sicherzustellen. Rufen Sie den Systemleistungsstatus ab, benachrichtigen Sie Anwendungen über Energieverwaltungsereignisse, und benachrichtigen Sie das System über die Energieanforderungen der einzelnen Anwendungen.
 ms.assetid: ba917d15-bbdb-46fe-9ad8-56a8837f7b2d
-title: Energie Verwaltung (Energie Verwaltung)
+title: Energieverwaltung (Energieverwaltung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9964d0a02d9a2510825730ce47193b30de69b9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 014c89518e4c40b181dd85315f1c435420f2a7c9a3cda1294f25e22ed4d57615
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868660"
 ---
 # <a name="power-management"></a>Energieverwaltung
 
 ## <a name="purpose"></a>Zweck
 
-In dieser Übersicht wird die Unterstützung der Energie Verwaltung im Windows-Betriebssystem beschrieben und erläutert, wie Sie diese in Ihren Anwendungen verwenden können.
+In dieser Übersicht wird die Unterstützung der Energieverwaltung im Windows Betriebssystem beschrieben und erläutert, wie Sie es in Ihren Anwendungen verwenden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Informationen zur Energie Verwaltung](about-power-management.md)
--   [Verwenden der Energie Verwaltung](using-power-management.md)
--   [Referenz zur Energie Verwaltung](power-management-reference.md)
+-   [Informationen zur Energieverwaltung](about-power-management.md)
+-   [Verwenden der Energieverwaltung](using-power-management.md)
+-   [Referenz zur Energieverwaltung](power-management-reference.md)
 
  
 

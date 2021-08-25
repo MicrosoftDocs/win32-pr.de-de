@@ -4,22 +4,22 @@ description: . | DDE-Strukturen
 ms.assetid: 5d2b3518-777f-4be0-9fd8-f33aee846b15
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c1047c593d6e139c370be9f3d24b20a2a439af68
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 948bb11b088f0693fae1c1ad15eb33217b7364c6dcf3e16d208b59ba24b3443a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858830"
 ---
 # <a name="dde-structures"></a>DDE-Strukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**DDE ACK**](/windows/desktop/api/Dde/ns-dde-ddeack)
--   [**DDE-Empfehlung**](/windows/desktop/api/Dde/ns-dde-ddeadvise)
--   [**DDE-Daten**](/windows/desktop/api/Dde/ns-dde-ddedata)
--   [**DDE Poke**](/windows/desktop/api/Dde/ns-dde-ddepoke)
--   [**Hszpair**](/windows/win32/api/ddeml/ns-ddeml-hszpair)
+-   [**DDEACK**](/windows/desktop/api/Dde/ns-dde-ddeack)
+-   [**DDEADVISE**](/windows/desktop/api/Dde/ns-dde-ddeadvise)
+-   [**DDEDATA**](/windows/desktop/api/Dde/ns-dde-ddedata)
+-   [**DDEPOKE**](/windows/desktop/api/Dde/ns-dde-ddepoke)
+-   [**HSZPAIR**](/windows/win32/api/ddeml/ns-ddeml-hszpair)
 
  
 

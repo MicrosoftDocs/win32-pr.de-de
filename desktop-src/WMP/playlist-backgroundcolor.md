@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. BackgroundColor
-description: Das BackgroundColor-Attribut gibt die Hintergrundfarbe an oder ruft Sie ab.
+title: PLAYLIST.backgroundColor
+description: Das backgroundColor-Attribut gibt die Hintergrundfarbe an oder ruft sie ab.
 ms.assetid: 7fd3100e-fd5a-4b3b-824a-c7a0878a6fe9
 keywords:
-- Wiedergabeliste. BackgroundColor-Fenster Media Player
+- PLAYLIST.backgroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57ed142eaaf7239df054093421db9ad7dddc28ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 27a2594e8a20ee7f9321254975487750baa27effbf5d01208078e602d03bb8ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862360"
 ---
-# <a name="playlistbackgroundcolor"></a>Wiedergabeliste. BackgroundColor
+# <a name="playlistbackgroundcolor"></a>PLAYLIST.backgroundColor
 
-Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe an oder ruft Sie ab.
+Das **backgroundColor-Attribut** gibt die Hintergrundfarbe an oder ruft sie ab.
 
 ``` syntax
         elementID.backgroundColor
@@ -29,7 +29,7 @@ Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe an oder ruft Sie ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Es verfügt über einen Standardwert, der der Windows-System Fenster Farbe entspricht.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Er hat einen Standardwert, der der Windows-Fensterfarbe entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,13 +45,13 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. BackgroundImage**](playlist-backgroundimage.md)
+[**PLAYLIST.backgroundImage**](playlist-backgroundimage.md)
 </dt> </dl>
 
  

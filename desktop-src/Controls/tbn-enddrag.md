@@ -1,9 +1,9 @@
 ---
-title: TBN_ENDDRAG Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster der Symbolleiste, dass der Benutzer das Ziehen einer Schaltfläche auf einer Symbolleiste beendet hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_ENDDRAG Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster der Symbolleiste, dass der Benutzer das Ziehen einer Schaltfläche auf einer Symbolleiste beendet hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 846ba42e-6e0d-45bb-88ce-7b4d2cb17e13
 keywords:
-- Windows-Steuerelemente für TBN_ENDDRAG Benachrichtigungs
+- TBN_ENDDRAG Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd493ac338e11716ea381e83102b200334a1eec4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fff6cfff7448f452223681ef1ebf720e0330c1fee52ba48862411978d53a0616
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876870"
 ---
-# <a name="tbn_enddrag-notification-code"></a>TBN- \_ EndDrag-Benachrichtigungs Code
+# <a name="tbn_enddrag-notification-code"></a>TBN \_ ENDDRAG-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster der Symbolleiste, dass der Benutzer das Ziehen einer Schaltfläche auf einer Symbolleiste beendet hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster der Symbolleiste, dass der Benutzer das Ziehen einer Schaltfläche auf einer Symbolleiste beendet hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ TBN_ENDDRAG
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtoolbar**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) -Struktur. Der **iItem** -Member enthält den Befehls Bezeichner der gezogenen Schaltfläche.
+Zeiger auf eine [**NMTOOLBAR-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) Das **iItem-Element** enthält den Befehlsbezeichner der gezogenen Schaltfläche.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

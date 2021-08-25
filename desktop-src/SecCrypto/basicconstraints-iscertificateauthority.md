@@ -1,7 +1,7 @@
 ---
-description: Ruft einen booleschen Wert ab, der angibt, ob das Zertifikat für eine Zertifizierungsstelle (Certification Authority, ca) gilt.
+description: Ruft einen booleschen Wert ab, der angibt, ob das Zertifikat für eine Zertifizierungsstelle (Ca) vorgesehen ist.
 ms.assetid: 3ca43475-fe97-4eb4-875d-dbc15a0b953c
-title: Basiceinschränkungs. iscertificateauthority (Eigenschaft)
+title: BasicConstraints.IsCertificateAuthority-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 5d4878a8cb21f89f3abeeb9e4b530948ef12e9aa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90d616f4a7a0fe8522118848826bee88523ad45c34cb8a3fff23c722e68f2495
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879760"
 ---
-# <a name="basicconstraintsiscertificateauthority-property"></a>Basiceinschränkungs. iscertificateauthority (Eigenschaft)
+# <a name="basicconstraintsiscertificateauthority-property"></a>BasicConstraints.IsCertificateAuthority-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**X509BasicConstraintsExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/previous-versions/windows/) -Namespace.\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**X509BasicConstraintsExtension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509basicconstraintsextension?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/previous-versions/windows/)\]
 
-Die **iscertificateauthority** -Eigenschaft ruft einen booleschen Wert ab, der angibt, ob das Zertifikat für eine Zertifizierungsstelle ( [*Certification Authority*](../secgloss/c-gly.md) , ca) gilt.
+Die **IsCertificateAuthority-Eigenschaft** ruft einen booleschen Wert ab, der angibt, ob das Zertifikat für eine [*Zertifizierungsstelle*](../secgloss/c-gly.md) (Ca) vorgesehen ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ BasicConstraints.IsCertificateAuthority As Boolean
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

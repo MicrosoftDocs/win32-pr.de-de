@@ -1,9 +1,9 @@
 ---
-title: DTM_GETRANGE Meldung (kommstrg. h)
-description: Ruft die aktuellen minimal-und maximal zulässigen Systemzeiten für ein DTP-Steuerelement (Datums-und Zeitauswahl) ab. Sie können diese Nachricht explizit senden oder das DateTime- \_ GetRange-Makro verwenden.
+title: DTM_GETRANGE (Commctrl.h)
+description: Ruft die aktuellen minimalen und maximalen zulässigen Systemzeiten für ein Datums- und Uhrzeitauswahl-Steuerelement (DTP) ab. Sie können diese Nachricht explizit senden oder das DateTime \_ GetRange-Makro verwenden.
 ms.assetid: 190cada6-49ee-483f-a464-d3d789127159
 keywords:
-- Windows-Steuerelemente für DTM_GETRANGE Meldung
+- DTM_GETRANGE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a50a2ae9fe4ca77198f9e63548f709e0f571fdb0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7d9c0c90780e4bcd35da2d410f7b4743547cbd8d31ac06293c411f2415e4e408
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877950"
 ---
-# <a name="dtm_getrange-message"></a>DTM- \_ GetRange-Nachricht
+# <a name="dtm_getrange-message"></a>SMS \_ GETRANGE-Nachricht
 
-Ruft die aktuellen minimal-und maximal zulässigen Systemzeiten für ein DTP-Steuerelement (Datums-und Zeitauswahl) ab. Sie können diese Nachricht explizit senden oder das [**DateTime- \_ GetRange**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getrange) -Makro verwenden.
+Ruft die aktuellen minimalen und maximalen zulässigen Systemzeiten für ein Datums- und Uhrzeitauswahl-Steuerelement (DTP) ab. Sie können diese Nachricht explizit senden oder das [**DateTime \_ GetRange-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getrange) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Ruft die aktuellen minimal-und maximal zulässigen Systemzeiten für ein DTP-Ste
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf ein zwei-Element-Array von [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Strukturen.
+Ein Zeiger auf ein Zwei-Element-Array von [**SYSTEMTIME-Strukturen.**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **DWORD** -Wert zurück, der eine Kombination aus dstr \_ Min oder dstr \_ Max ist. Das erste Element des [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Arrays enthält die zulässige Mindestzeit, wenn dstr \_ Min festgelegt ist. Das zweite Element des **SYSTEMTIME** -Arrays enthält die maximal zulässige Zeit, wenn dstr \_ Max festgelegt ist.
+Gibt einen **DWORD-Wert** zurück, der eine Kombination aus GDTR \_ MIN oder GDTR \_ MAX ist. Das erste Element des [**SYSTEMTIME-Arrays**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) enthält die minimal zulässige Zeit, wenn GDTR \_ MIN festgelegt ist. Das zweite Element des **SYSTEMTIME-Arrays** enthält die maximal zulässige Zeit, wenn GDTR \_ MAX festgelegt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Datums-und Uhrzeit Auswahl zeigt nur Datumsangaben/Uhrzeiten an, die innerhalb des angegebenen Bereichs liegen, sodass der Benutzer kein Datum und keine Uhrzeit auswählen kann, die außerhalb des Bereichs liegt. Wenn die [**DTM- \_ SetSystemTime**](dtm-setsystemtime.md) -Nachricht ein Datum und eine Uhrzeit angibt, die außerhalb des Bereichs liegen, tritt ein Fehler auf.
+Die Datums- und Uhrzeitauswahl zeigt nur Datums- und Uhrzeitangaben an, die innerhalb des angegebenen Bereichs liegen, was den Benutzer daran hindert, ein Datum und eine Uhrzeit auszuwählen, die außerhalb des Bereichs liegen. Wenn die [**MELDUNG \_ SETSYSTEMTIME des SYSTEMS**](dtm-setsystemtime.md) ein Datum und eine Uhrzeit angibt, die außerhalb des Bereichs liegen, wird ein Fehler angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die Datums-und Uhrzeit Auswahl zeigt nur Datumsangaben/Uhrzeiten an, die innerha
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

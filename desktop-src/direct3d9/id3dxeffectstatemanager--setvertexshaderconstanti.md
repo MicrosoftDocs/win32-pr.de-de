@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXEffectStateManager::SetVertexShaderConstantI-Methode: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von ganzzahligen Vertexshaderkonstanten festlegen zu können.'
+description: 'ID3DXEffectStateManager::SetVertexShaderConstantI-Methode: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von ganzzahligen Vertexshaderkonstanten festzulegen.'
 ms.assetid: 0035c97a-1b17-4665-9032-7b3b9a9d2cff
 title: ID3DXEffectStateManager::SetVertexShaderConstantI-Methode (D3DX9Effect.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: c129e3e01fe6fbae6ba7ede1b9ea8c4bee5338a4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 949f2cb23e15e3cfb99fcb6880795cfbd6019a8c858198b23bb9db6508714d44
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856690"
 ---
 # <a name="id3dxeffectstatemanagersetvertexshaderconstanti-method"></a>ID3DXEffectStateManager::SetVertexShaderConstantI-Methode
 
-Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von ganzzahligen Vertex-Shaderkonstten festlegen zu können.
+Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Array von ganzzahligen Vertex-Shaderkonstanten festzulegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT SetVertexShaderConstantI(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der nullbasierte Index des ersten konstanten Registers.
+Der nullbasierte Index des ersten Konstantenregisters.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Der nullbasierte Index des ersten konstanten Registers.
 
 Typ: **const [**INT**](../winprog/windows-data-types.md) \***
 
-Ein Array von ganzzahligen Konstanten.
+Ein Array ganzzahliger Konstanten.
 
 </dd> <dt>
 
@@ -73,23 +73,23 @@ Die Anzahl der Register in pConstantData.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätestatus fehlschlägt, tritt eine der folgenden Bedingungen auf:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätezustands fehlschlägt, tritt eine der folgenden Schritte auf:
 
--   Die Auswirkung tritt während [**ID3DXEffect::BeginPass auf.**](id3dxeffect--beginpass.md)
--   Beim Dynamischen Effektzustandsaufruf (z. B. [**IDirect3DDevice9::SetVertexShaderConstantI)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshaderconstanti)tritt ein Fehler auf.
+-   Die Auswirkung schlägt während [**id3DXEffect::BeginPass**](id3dxeffect--beginpass.md)fehl.
+-   Der Dynamische Effektzustandsaufruf (z.B. [**IDirect3DDevice9::SetVertexShaderConstantI)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setvertexshaderconstanti)schlägt fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

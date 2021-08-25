@@ -1,45 +1,45 @@
 ---
-description: Übersicht über die Verwendung der Benutzeroberflächen Automatisierung und anderer Tools zum Testen Ihrer Apps.
+description: Übersicht über die Verwendung von Benutzeroberflächenautomatisierung und anderen Tools zum Testen Ihrer Apps.
 title: Testen für Barrierefreiheit
 ms.topic: article
 ms.date: 04/18/2019
-ms.openlocfilehash: 0d589c9b7bd598c0829ff9941ab2facabfaf10d2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0cc1d118c84e2689b6cf329da29bb518a566fb8588c311229be17fcd28825ddc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896580"
 ---
 # <a name="testing-for-accessibility"></a>Testen für Barrierefreiheit
 
-Programm gesteuerter Zugriff und Tastatur Zugriff sind wichtige Anforderungen für die Unterstützung von Barrierefreiheit in Ihrer Anwendung. Das Testen des Zugriffs auf Ihre Windows-Anwendungen, Hilfstechnologien (at) und Benutzeroberflächen-Frameworks ist entscheidend, um eine erfolgreiche Benutzerfreundlichkeit für Personen mit unterschiedlichen Behinderungen und Einschränkungen (einschließlich Vision, Learning, Dexterität/Mobilität und sprach-/kommunikationbehinderungen) zu gewährleisten.
+Programmgesteuerter Zugriff und Tastaturzugriff sind wichtige Anforderungen zur Unterstützung der Barrierefreiheit in Ihrer Anwendung. Das Testen der Barrierefreiheit Ihrer Windows-Anwendungen, At-Tools (Assistive Technology, Hilfstechnologie) und Benutzeroberflächenframeworks ist entscheidend, um eine erfolgreiche Benutzererfahrung für Personen mit verschiedenen Behinderungen und Einschränkungen (einschließlich Seh-, Lern-, Dexteritäts-/Mobilitäts- und Sprach-/Kommunikationsbehinderungen) oder personen sicherzustellen, die einfach eine Tastatur verwenden möchten.
 
-Ohne ausreichenden Zugriff auf, wie z. b. Bildschirm Reader und Bildschirm Tastaturen, können Benutzer mit Vision, Learning, Dexterity/Mobility und sprach-/kommunikationsbehinderungen oder-Einschränkungen (und Benutzern, die die Tastatur einfach verwenden) Ihre Anwendung nicht verwenden.
+Ohne ausreichenden Zugriff über AT wie Sprachausgaben und Bildschirmtastaturen können Benutzer mit Seh-, Lern-, Dexteritäts-/Mobilitäts- und Sprach-/Kommunikationsbehindigungen oder Einschränkungen (und Benutzer, die nur die Tastatur bevorzugen) Ihre Anwendung nicht verwenden.
 
-In diesem Abschnitt werden die verschiedenen Tools beschrieben, die verwendet werden können, um die Barrierefreiheits Implementierung von Windows-und Webanwendungen zu testen.
+In diesem Abschnitt werden die verschiedenen Tools beschrieben, mit denen die Implementierung der Barrierefreiheit von Windows und Webanwendungen getestet werden kann.
 
 > [!NOTE]
-> Es ist auch wichtig, manuelle Tests durchzuführen, um den Tastatur Zugriff auf Ihre Anwendung zu überprüfen.
+> Es ist auch wichtig, manuelle Tests durchzuführen, um den Tastaturzugriff auf Ihre Anwendung zu überprüfen.
 
 ## <a name="tools"></a>Tools
 
-[Einblicke in Barrierefreiheit](https://accessibilityinsights.io/) : unterstützt Entwickler beim Suchen und Beheben von Barrierefreiheits Problemen in Websites und Windows-Anwendungen.
+[Barrierefreiheit Insights:](https://accessibilityinsights.io/) Unterstützt Entwickler bei der Suche und Behebung von Problemen mit der Barrierefreiheit auf Websites und Windows Anwendungen.
 
-- [Einblicke in die Barrierefreiheit für das Web](https://accessibilityinsights.io/docs/web/overview) ist eine Erweiterung für den Chrome-und [Microsoft Edge-Insider](https://www.microsoftedgeinsider.com) , der Entwicklern hilft, Barrierefreiheits Probleme in Web-Apps und Websites zu finden Es unterstützt zwei primäre Szenarien:
-  - **FASTPASS** : ein schlanker, zweistufiger Prozess, der Entwicklern hilft, häufige, äußerst Wirkungs freie Barrierefreiheits Probleme in weniger als fünf Minuten zu identifizieren.  
-  - **Bewertung** : ermöglicht allen Benutzern zu überprüfen, ob eine Website 100% mit Barrierefreiheits Standards und-Richtlinien kompatibel ist. Mit [Barrierefreiheits](https://accessibilityinsights.io/) Informationen können Sie auch Benutzeroberflächenautomatisierungs-Elemente,-Eigenschaften,-Steuerelement Muster und-Ereignisse überprüfen (ähnlich wie im folgenden Abschnitt unter [Suchen](/windows/desktop/winauto/inspect-objects) und [AccEvent](/windows/desktop/winauto/accessible-event-watcher) -Legacy Tools).
+- [Accessibility Insights for Web](https://accessibilityinsights.io/docs/web/overview) ist eine Erweiterung für Chrome und [Microsoft Edge Insider,](https://www.microsoftedgeinsider.com) mit der Entwickler Probleme mit der Barrierefreiheit in Web-Apps und -Websites finden und beheben können. Es unterstützt zwei primäre Szenarien:
+  - **FastPass:** Ein einfacher, zweistufiger Prozess, mit dem Entwickler häufige Probleme mit hoher Barrierefreiheit in weniger als fünf Minuten identifizieren können.  
+  - **Bewertung:** Ermöglicht jedem Benutzer, zu überprüfen, ob eine Website zu 100 % mit Barrierefreiheitsstandards und -richtlinien konform ist. [Mit Insights](https://accessibilityinsights.io/) können Sie auch Benutzeroberflächenautomatisierung Elemente, Eigenschaften, Steuerelementmuster und Ereignisse überprüfen (ähnlich wie die im folgenden Abschnitt beschriebenen Legacytools [Inspect](/windows/desktop/winauto/inspect-objects) und [AccEvent).](/windows/desktop/winauto/accessible-event-watcher)
 
-- [Barrierefreiheits Informationen für Windows](https://accessibilityinsights.io/docs/windows/overview) helfen Entwicklern, Barrierefreiheits Probleme in Windows-apps zu finden und zu beheben. Das Tool unterstützt drei primäre Szenarien:
-  - Mit **Live** Überprüfung können Entwickler überprüfen, ob ein Element in einer APP über die richtigen Benutzeroberflächenautomatisierungs-Eigenschaften verfügt, indem Sie einfach auf das Element zeigen oder den Tastaturfokus festlegen.
-  - **FASTPASS** : ein schlanker, zweistufiger Prozess, der Entwicklern hilft, häufige, äußerst Wirkungs freie Barrierefreiheits Probleme in weniger als fünf Minuten zu identifizieren.
-  - Mit der **Problem** Behandlung können Sie bestimmte Barrierefreiheits Probleme diagnostizieren und beheben.
+- [Barrierefreiheits-Insights für Windows](https://accessibilityinsights.io/docs/windows/overview) hilft Entwicklern, Probleme mit der Barrierefreiheit in Windows-Apps zu finden und zu beheben. Das Tool unterstützt drei primäre Szenarien:
+  - **Mit Live Inspect** können Entwickler überprüfen, ob ein Element in einer App über die richtigen Benutzeroberflächenautomatisierung Eigenschaften verfügt, indem sie einfach mit dem Mauszeiger auf das Element zeigen oder den Tastaturfokus darauf festlegen.
+  - **FastPass:** Ein einfacher, zweistufiger Prozess, mit dem Entwickler häufige Probleme mit hoher Barrierefreiheit in weniger als fünf Minuten identifizieren können.
+  - **Mit der Problembehandlung** können Sie bestimmte Probleme mit der Barrierefreiheit diagnostizieren und beheben.
 
-### <a name="legacy-testing-tools"></a>Legacy TestTools
+### <a name="legacy-testing-tools"></a>Legacytesttools
 
-Die folgenden Tools sind weiterhin in der Windows SDK verfügbar und sind hier für den fortgesetzten Support dokumentiert. es wird jedoch empfohlen, den Übergang in [Einblicke in Barrierefreiheit](https://accessibilityinsights.io/)zu übertragen.
+Die folgenden Tools sind weiterhin im Windows SDK verfügbar und werden hier zur weiteren Unterstützung dokumentiert. Es wird jedoch empfohlen, zu [Barrierefreiheit Insights](https://accessibilityinsights.io/)zu übergehen.
 
-- Über [prüfen](/windows/desktop/winauto/inspect-objects): Hiermit können Sie die Barrierefreiheits Daten eines beliebigen Benutzeroberflächen Elements anzeigen. Dies ist besonders nützlich, um sicherzustellen, dass Eigenschaften und Steuerelement Muster ordnungsgemäß festgelegt werden, wenn ein gängiges Steuerelement erweitert oder ein benutzerdefiniertes
-- [Barrierefreie Ereignisüberwachung (AccEvent)](/windows/desktop/winauto/accessible-event-watcher): überprüft Barrierefreiheits Daten, um Anwendungs Benutzeroberflächen Elemente zu validieren und sicherzustellen, dass Benutzeroberflächen Elemente ordnungsgemäße Ereignisse von Microsoft Active Accessibility und Benutzeroberflächenautomatisierungs für Benutzeroberflächen Ereignisse AccEvent wird normalerweise zum Debuggen von Problemen und zum Überprüfen verwendet, ob benutzerdefinierte und erweiterte Steuerelemente ordnungsgemäß funktionieren.
-- [Accscope](/windows/desktop/winauto/accscope): ermöglicht die visuelle Auswertung einer Anwendungs Barrierefreiheit während der frühen Entwurfs-und Entwicklungsphase. Mithilfe von accscope können Sie visualisieren, wie eine Sprachausgabe Informationen zur Benutzeroberflächenautomatisierung verwendet, die von einer APP bereitgestellt werden
-- [UI-Barrierefreiheits](/windows/desktop/winauto/ui-accessibility-checker)Prüfung: überprüft, ob die wichtigsten Barrierefreiheits Anforderungen der Benutzeroberfläche in einer Anwendung erreicht werden. Die Zugriffs Prüfung umfasst überprüfungsprüfungen für die Benutzeroberflächen Automatisierung, Microsoft Active Accessibility und barrierefreie Internet Anwendungen (Aria). Es kann eine statische Überprüfung auf Fehler wie fehlende Namen, Strukturprobleme usw. bereitstellen. Er hilft bei der Überprüfung des programmgesteuerten Zugriffs und umfasst erweiterte Funktionen für die Automatisierung von Barrierefreiheits Tests.
-- [Benutzeroberflächenautomatisierungs-Überprüfung](/windows/desktop/winauto/ui-automation-verify): ein Framework für manuelle und automatisierte Tests der Benutzeroberflächenautomatisierungs-Implementierung in einem Steuerelement oder einer Anwendung (Ergebnisse können protokolliert werden). Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Überprüfungen der Benutzeroberflächenautomatisierungs-Szenarios durchführen. Mit diesem Tool können Sie überprüfen, ob Änderungen an Anwendungen mit bewährten Features keine neuen Probleme oder Regressionen in Bereichen aufweisen, die über die neuen Features hinausgehen.
+- [Inspect](/windows/desktop/winauto/inspect-objects): Ermöglicht ihnen das Anzeigen der Barrierefreiheitsdaten eines beliebigen Benutzeroberflächenelements. Es ist besonders nützlich, um sicherzustellen, dass Eigenschaften und Steuerelementmuster ordnungsgemäß festgelegt werden, wenn ein allgemeines Steuerelement erweitert oder ein benutzerdefiniertes Steuerelement erstellt wird.
+- [Accessible Event Watcher (AccEvent):](/windows/desktop/winauto/accessible-event-watcher)Überprüft Barrierefreiheitsdaten, um Elemente der Anwendungsbenutzeroberfläche zu überprüfen und sicherzustellen, dass Benutzeroberflächenelemente geeignete Microsoft Active Accessibility auslösen und Ereignisse auf Benutzeroberflächenereignissen Benutzeroberflächenautomatisierung. AccEvent wird in der Regel verwendet, um Probleme zu debuggen und zu überprüfen, ob benutzerdefinierte und erweiterte Steuerelemente ordnungsgemäß funktionieren.
+- [AccScope:](/windows/desktop/winauto/accscope)Ermöglicht die visuelle Auswertung der Barrierefreiheit einer Anwendung während der frühen Entwurfs- und Entwicklungsphasen. AccScope hilft zu visualisieren, wie eine Sprachausgabe Benutzeroberflächenautomatisierung von einer App bereitgestellten Informationen verwendet, und zeigt, wo das Hinzufügen von Informationen oder Unterstützung zu Ihrer Anwendung die Barrierefreiheit verbessern kann.
+- [Benutzeroberflächen-Barrierefreiheitsprüfung:](/windows/desktop/winauto/ui-accessibility-checker)Überprüft, ob wichtige Anforderungen an die Barrierefreiheit der Benutzeroberfläche in einer Anwendung erfüllt werden. AccChecker umfasst Überprüfungsprüfungen für Benutzeroberflächenautomatisierung, Microsoft Active Accessibility und ARIA (Accessible Rich Internet Applications). Sie kann eine statische Überprüfung auf Fehler wie fehlende Namen, Strukturprobleme und vieles mehr bereitstellen. Es hilft bei der Überprüfung des programmgesteuerten Zugriffs und umfasst erweiterte Features zum Automatisieren von Barrierefreiheitstests.
+- [Benutzeroberflächenautomatisierung Überprüfen:](/windows/desktop/winauto/ui-automation-verify)Ein Framework für manuelle und automatisierte Tests der Benutzeroberflächenautomatisierung Implementierung in einem Steuerelement oder einer Anwendung (Ergebnisse können protokolliert werden). Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Spot-Überprüfungen Ihrer Benutzeroberflächenautomatisierung Szenarien durchführen. Dieses Tool ist nützlich, um zu überprüfen, ob Änderungen an Anwendungen mit eingerichteten Features in Bereichen, die über die neuen Features hinausgehen, keine neuen Probleme oder Regressionen aufweisen.

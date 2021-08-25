@@ -1,35 +1,35 @@
 ---
-description: Die Tabelle TargetImages enthält Informationen zu den Ziel Images des Produkts. Ein Windows Installer Patch-Paket aktualisiert ein Zielimage in ein aktualisiertes Image.
+description: Die Tabelle TargetImages enthält Informationen zu den Zielimages des Produkts. Ein Windows Installer-Patchpaket aktualisiert ein Zielimage in ein aktualisiertes Image.
 ms.assetid: 4681715e-9918-4d7b-8f33-1cca2bb34eb7
 title: TargetImages-Tabelle (Patchwiz.dll)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4bbb8e7bae92fbc25b217808aaae709f079d65dd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec35a9090f89e93e807cda9429ae48d8cc28d175acc4c83e97150e3a98ce5fb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893590"
 ---
 # <a name="targetimages-table-patchwizdll"></a>TargetImages-Tabelle (Patchwiz.dll)
 
-Die Tabelle TargetImages enthält Informationen zu den Ziel Images des Produkts. Ein Windows Installer Patch-Paket aktualisiert ein Zielimage in ein aktualisiertes Image.
+Die Tabelle TargetImages enthält Informationen zu den Zielimages des Produkts. Ein Windows Installer-Patchpaket aktualisiert ein Zielimage in ein aktualisiertes Image.
 
-In jeder Datenbank der Patcherstellung (PCP-Datei) ist eine TargetImages-Tabelle erforderlich, die mindestens einen Datensatz enthält. Diese Tabelle wird von der [uikreatepatchpackage](uicreatepatchpackage-patchwiz-dll-.md) -Funktion verwendet.
+Eine TargetImages-Tabelle, die mindestens einen Datensatz enthält, ist in jeder Patcherstellungsdatenbank (PCP-Datei) erforderlich. Diese Tabelle wird von der [UiCreatePatchPackage-Funktion](uicreatepatchpackage-patchwiz-dll-.md) verwendet.
 
-Die TargetImages-Tabelle weist die folgenden Spalten auf.
+Die Tabelle TargetImages enthält die folgenden Spalten.
 
 
 
-| Spalte                | Typ    | Schlüssel | Nullwerte zulässig |
+| Spalte                | Typ    | Key | Nullwerte zulässig |
 |-----------------------|---------|-----|----------|
 | Ziel                | text    | J   | N        |
-| Msipath               | text    |     | N        |
-| SymbolPath           | text    |     | J        |
+| MsiPath               | text    |     | N        |
+| SymbolPaths           | text    |     | J        |
 | Upgraded              | text    |     | N        |
 | Auftrag                 | integer |     | N        |
-| Productvalidateflags  | text    |     | J        |
-| Ignoremissingsrcfiles | integer |     | N        |
+| ProductValidateFlags  | text    |     | J        |
+| IgnoreMissingSrcFiles | integer |     | N        |
 
 
 
@@ -39,63 +39,63 @@ Die TargetImages-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Target"></span><span id="target"></span><span id="TARGET"></span>Spar
+<span id="Target"></span><span id="target"></span><span id="TARGET"></span>Ziel
 </dt> <dd>
 
-Der Bezeichner für ein Zielbild. Das Patchpaket aktualisiert das in dieser Spalte angegebene Zielbild auf das aktualisierte Image, das in der aktualisierten Spalte angegeben ist. Es gibt ein oder mehrere Ziel Images für jedes aktualisierte Image. Das Zielimage muss ein vollständig dekomprimiertes Setup Abbild des Produkts sein, z. b. ein administratives Image oder ein nicht komprimiertes Setup Abbild auf einer CD-ROM. Beachten Sie, dass die [uikreatepatchpackageex](uicreatepatchpackageex--patchwiz-dll-.md) -Funktion keine binären Patches für Dateien in kabinatendateien generiert. Der Wert in diesem Feld wird mit dem Wert im Feld aktualisiert verwendet, um die Namen der Transformationen zu generieren, die das Installationsprogramm dem Patchpaket hinzufügt.
+Bezeichner für ein Zielbild. Das Patchpaket aktualisiert das in dieser Spalte angegebene Zielimage auf das aktualisierte Image, das in der Spalte Aktualisiert angegeben ist. Es gibt mindestens ein Zielimage für jedes aktualisierte Image. Das Zielimage muss ein vollständig unkomprimiertes Setupimage des Produkts sein, z. B. ein Administratives Image oder ein nicht komprimiertes Setupimage auf einer CD-ROM. Beachten Sie, dass die [UiCreatePatchPackageEx-Funktion](uicreatepatchpackageex--patchwiz-dll-.md) keine binären Patches für Dateien in Schränken generiert. Der Wert in diesem Feld wird zusammen mit dem Wert im Feld Upgrade verwendet, um die Namen der Transformationen zu generieren, die das Installationsprogramm dem Patchpaket hinzufügt.
 
 </dd> <dt>
 
-<span id="MsiPath"></span><span id="msipath"></span><span id="MSIPATH"></span>Msipath
+<span id="MsiPath"></span><span id="msipath"></span><span id="MSIPATH"></span>MsiPath
 </dt> <dd>
 
-Dieses Feld gibt den vollständigen Pfad, einschließlich des Datei namens, zum Speicherort der MSI-Datei für das Zielbild an. Dies ist der Speicherort der Quelldateien für das Zielimage.
+Dieses Feld gibt den vollständigen Pfad einschließlich des Dateinamens zum Speicherort der .msi-Datei für das Zielimage an. Dies ist der Speicherort der Quelldateien für das Zielimage.
 
 </dd> <dt>
 
-<span id="SymbolPaths"></span><span id="symbolpaths"></span><span id="SYMBOLPATHS"></span>SymbolPath
+<span id="SymbolPaths"></span><span id="symbolpaths"></span><span id="SYMBOLPATHS"></span>SymbolPaths
 </dt> <dd>
 
-Eine durch Semikolons getrennte Liste von Ordnern, die nach Symbol Dateien durchsucht werden sollen, die zur Optimierung der Generierung des binären Patches verwendet werden kann. Beachten Sie, dass die Unterverzeichnisse der in diesem Feld angegebenen Ordner nicht durchsucht werden. Ein optimierter binärer Patch kann kleiner sein. Microsoft Visual C++ müssen auf dem Computer installiert sein, der den Patch erzeugt und zum Erstellen der Symbol Dateien verwendet wird. Dieses Feld ist optional, und das Installationsprogramm erstellt einen binären Patch, auch wenn keine Symbol Dateien angegeben sind oder wenn die Symbol Dateien nicht zum Patchwiz.dll verfügbar sind.
+Eine durch Semikolons getrennte Liste von Ordnern, die nach Symboldateien durchsucht werden sollen, die zum Optimieren der Generierung des binären Patches verwendet werden können. Beachten Sie, dass die in diesem Feld angegebenen Unterverzeichnisse von Ordnern nicht durchsucht werden. Ein optimierter binärer Patch ist möglicherweise kleiner. Microsoft Visual C++ müssen auf dem Computer installiert sein, der den Patch generiert und zum Erstellen der Symboldateien verwendet wird. Dieses Feld ist optional, und das Installationsprogramm erstellt einen binären Patch, auch wenn keine Symboldateien angegeben sind oder wenn die Symboldateien für Patchwiz.dll nicht mehr verfügbar sind.
 
 </dd> <dt>
 
 <span id="Upgraded"></span><span id="upgraded"></span><span id="UPGRADED"></span>Aktualisiert
 </dt> <dd>
 
-Fremdschlüssel für die aktualisierte Spalte der [UpgradedImages-Tabelle](upgradedimages-table-patchwiz-dll-.md). Die [uikreatepatchpackageex](uicreatepatchpackageex--patchwiz-dll-.md) -Funktion ignoriert alle aktualisierten Images, auf die nicht durch mindestens einen Datensatz der TargetImages-Tabelle verwiesen wird.
+Fremdschlüssel für die Spalte "Upgraded" der [Tabelle "UpgradedImages".](upgradedimages-table-patchwiz-dll-.md) Die [UiCreatePatchPackageEx-Funktion](uicreatepatchpackageex--patchwiz-dll-.md) ignoriert alle aktualisierten Images, auf die nicht von mindestens einem Datensatz der Tabelle TargetImages verwiesen wird.
 
 </dd> <dt>
 
-<span id="Order"></span><span id="order"></span><span id="ORDER"></span>Reihenfolge
+<span id="Order"></span><span id="order"></span><span id="ORDER"></span>Bestellung
 </dt> <dd>
 
-Relative Reihenfolge des zielbilds. Da mehrere Ziele für ein aktualisiertes Image gepatcht werden können, bietet das Feld Order die Möglichkeit, die Transformationen in der Liste patchtransformationen zu sequenzieren. Im Allgemeinen ist die Reihenfolge vom ältesten zum neuesten Image.
+Relative Reihenfolge des Zielbilds. Da mehrere Ziele auf ein aktualisiertes Image gepatcht werden können, bietet das Feld Order eine Möglichkeit, die Transformationen in der Liste der Patchtransformationen zu sequenzieren. In der Regel ist die Reihenfolge vom ältesten zum neuesten Bild.
 
 </dd> <dt>
 
-<span id="ProductValidateFlags"></span><span id="productvalidateflags"></span><span id="PRODUCTVALIDATEFLAGS"></span>Productvalidateflags
+<span id="ProductValidateFlags"></span><span id="productvalidateflags"></span><span id="PRODUCTVALIDATEFLAGS"></span>ProductValidateFlags
 </dt> <dd>
 
-Das Feld productvalidateflags dient zum Angeben der Produkt Überprüfung, um zu vermeiden, dass irrelevante Transformationen angewendet werden. Der in diesem Feld eingegebene Wert muss eine 8-stellige hexadezimal Zahl und einer der gültigen Werte für den *ivalidation* -Parameter der [**msikreatetransformsummaryinfo**](/windows/desktop/api/Msiquery/nf-msiquery-msicreatetransformsummaryinfoa) -Funktion sein. Der Standardwert ist 0x00000922, der gleich **msitransform Validate \_ \_ Updateversion** msitransform Validate  +  **\_ \_ netzwequalbaseversion**  +  **msitransform \_ Validate \_ UpgradeCode**  +  **msitransform \_ Validate \_ Product** ist.
+Das Feld ProductValidateFlags wird verwendet, um die Produktüberprüfung anzugeben, um das Anwenden irrelevanter Transformationen zu vermeiden. Der in dieses Feld eingegebene Wert muss eine achtstellige Hexadezimalzahl und einer der gültigen Werte für den *iValidation-Parameter* der [**MsiCreateTransformSummaryInfo-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msicreatetransformsummaryinfoa) sein. Der Standardwert ist 0x00000922, der **MSITRANSFORM \_ VALIDATE \_ UPDATEVERSION**  +  **MSITRANSFORM \_ VALIDATE \_ NEWEQUALBASEVERSION**  +  **MSITRANSFORM \_ VALIDATE \_ UPGRADECODE**  +  **MSITRANSFORM \_ VALIDATE \_ PRODUCT** entspricht.
 
 </dd> <dt>
 
-<span id="IgnoreMissingSrcFiles"></span><span id="ignoremissingsrcfiles"></span><span id="IGNOREMISSINGSRCFILES"></span>Ignoremissingsrcfiles
+<span id="IgnoreMissingSrcFiles"></span><span id="ignoremissingsrcfiles"></span><span id="IGNOREMISSINGSRCFILES"></span>IgnoreMissingSrcFiles
 </dt> <dd>
 
-Wenn dieses Feld auf einen Wert ungleich 0 (null) festgelegt ist, werden Dateien, die im Zielbild fehlen, vom Installationsprogramm ignoriert und während des Patchens unverändert gelassen. Dadurch können Patches erstellt werden, ohne dass das gesamte Bild erforderlich ist. Es sind nur die geänderten Dateien des Produkts und die MSI-Datei erforderlich. Dadurch kann die Zeit, die zum Generieren des Patches erforderlich ist, reduziert werden.
+Wenn dieses Feld auf einen Wert ungleich 0 (null) festgelegt ist, werden Dateien, die im Zielimage fehlen, vom Installationsprogramm ignoriert und während des Patchens unverändert gelassen. Dadurch können Patches erstellt werden, ohne dass das gesamte Image erforderlich ist. nur die geänderten Dateien des Produkts und die .msi Datei erforderlich sind. Dies kann die Zeit verkürzen, die zum Generieren des Patches erforderlich ist.
 
 > [!Note]  
-> Verwenden Sie nicht den ignoremissingsrcfiles-Wert mit trustmsi, der in der [Properties-Tabelle](properties-table-patchwiz-dll-.md)auf 1 festgelegt ist.
+> Verwenden Sie den IgnoreMissingSrcFiles-Wert nicht, wenn TrustMsi in der [Eigenschaftentabelle](properties-table-patchwiz-dll-.md)auf 1 festgelegt ist.
 
  
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Tabelle akzeptiert Umgebungsvariablen als Pfade, die mit Version 4,0 von Patchwiz.dll beginnen.
+Diese Tabelle akzeptiert Umgebungsvariablen als Pfade ab Version 4.0 Patchwiz.dll.
 
  
 

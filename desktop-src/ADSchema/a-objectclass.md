@@ -1,11 +1,11 @@
 ---
 title: Object-Class-Attribut
-description: Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
+description: Die Liste der Klassen, von denen diese Klasse abgeleitet wird.
 ms.assetid: def98723-2d8a-49ea-84f8-afe6ff9cdfd9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Object-Class-Attribut
-- AD-Schema für objectClass-Attribut
+- Object-Class AD-Schema
+- objectClass-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 851d48bcbcc40640af3ee555c343feaab05edf6b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8270c247ec276058b1060f68158004802b9775dbafa69e79fccb09105dcccdab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925320"
 ---
 # <a name="object-class-attribute"></a>Object-Class-Attribut
 
-Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
+Die Liste der Klassen, von denen diese Klasse abgeleitet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
 | CN                | Object-Class                                                    |
-| LDAP-Display-Name | objectClass                                                     |
-| Size              | Im Durchschnitt ungefähr 20 Bytes.                                      |
-| Berechtigung aktualisieren  | Dieser Wert wird vom Designer des-Objekts festgelegt.                |
-| Aktualisierungshäufigkeit  | Dieser Wert sollte sich nie ändern.                                 |
+| Ldap-Anzeigename | objectClass                                                     |
+| Size              | Durchschnittlich ca. 20 Bytes.                                      |
+| Aktualisieren von Berechtigungen  | Der Designer des -Objekts würde diesen Wert festlegen.                |
+| Updatehäufigkeit  | Dieser Wert sollte sich nie ändern.                                 |
 | Attribute-Id      | 2.5.4.0                                                         |
-| System-ID-GUID    | bf9679e5-0de6-11d0-a285-00aa003049e2                            |
+| System-Id-Guid    | bf9679e5-0de6-11d0-a285-00aa003049e2                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
 
 
@@ -43,7 +43,7 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -71,7 +71,7 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -101,10 +101,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -122,10 +122,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000008                      |
@@ -143,10 +143,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -164,10 +164,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |
@@ -185,10 +185,10 @@ Die Liste der Klassen, von denen diese Klasse abgeleitet ist.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Richtig                            |
 | Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000009                      |

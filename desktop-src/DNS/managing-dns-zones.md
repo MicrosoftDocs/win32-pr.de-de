@@ -1,29 +1,29 @@
 ---
 title: Verwalten von DNS-Zonen
-description: Eine DNS-Zone ist eine Datenbank mit RR-Einträgen, die einem Teil des hierarchischen DNS-namesplatzes entspricht. DNS-Zonen werden verwendet, um die autorisierenden DNS-Server zum Auflösen von namens Auflösungs Abfragen für einen bestimmten Abschnitt der DNS-Hierarchie zu definieren.
+description: Eine DNS-Zone ist eine Datenbank mit RR-Einträgen, die einem Teil des hierarchischen DNS-Namensraums entspricht. DNS-Zonen werden verwendet, um abzugrenzen, welche DNS-Server autoritativ zum Auflösen von Namensauflösungsabfragen für einen bestimmten Abschnitt der DNS-Hierarchie sind.
 ms.assetid: d4aa94e0-36f7-4b97-8a0a-c677c8a826a0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58c4cc991821f88076d3c3e9b2bfcbddc3ab662d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d886a3a92d0c0265fd5da27af4a3c3fcd9a98243b5949406e9840250f6d2b98e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874930"
 ---
 # <a name="managing-dns-zones"></a>Verwalten von DNS-Zonen
 
-Eine DNS-Zone ist eine Datenbank mit RR-Einträgen, die einem Teil des hierarchischen DNS-namesplatzes entspricht. DNS-Zonen werden verwendet, um die autorisierenden DNS-Server zum Auflösen von namens Auflösungs Abfragen für einen bestimmten Abschnitt der DNS-Hierarchie zu definieren.
+Eine DNS-Zone ist eine Datenbank mit RR-Einträgen, die einem Teil des hierarchischen DNS-Namensraums entspricht. DNS-Zonen werden verwendet, um abzugrenzen, welche DNS-Server autoritativ zum Auflösen von Namensauflösungsabfragen für einen bestimmten Abschnitt der DNS-Hierarchie sind.
 
 ## <a name="administration-steps"></a>Verwaltungsschritte
 
-Der DNS-WMI-Anbieter ermöglicht die Verwaltung von DNS-Zonen über den autorisierenden DNS-Server selbst oder über Remote Hosts. Die folgenden allgemeinen Schritte sind erforderlich, um eine Zone mit dem DNS-WMI-Anbieter zu verwalten:
+Der DNS-WMI-Anbieter ermöglicht die Verwaltung von DNS-Zonen vom autoritativen DNS-Server selbst oder von Remotehosts. Die allgemeinen Schritte, die zum Verwalten einer Zone mit dem DNS-WMI-Anbieter erforderlich sind, sind:
 
 -   Herstellen einer Verbindung mit dem DNS-WMI-Anbieter
--   So erhalten Sie eine Zonen Instanz
--   Auflisten oder Ändern einer Zonen Eigenschaft oder Verwenden einer Methode
+-   Abrufen einer Zoneninstanz
+-   Auflisten oder Ändern einer Zoneneigenschaft oder Verwenden einer Methode
 
-Die folgenden Aufgaben sind mit den dazugehörigen Skript Beispielen verknüpft:
+Die folgenden Aufgaben sind mit den zugehörigen Skriptbeispielen verknüpft:
 
 -   [Erstellen einer DNS-Zone](dns-wmi-provider-samples-managing-dns-zones.md)
 -   [Ändern einer DNS-Zone](dns-wmi-provider-samples-managing-dns-zones.md)
@@ -36,9 +36,9 @@ Die folgenden Aufgaben sind mit den dazugehörigen Skript Beispielen verknüpft:
 -   [Erneutes Laden einer Zone](dns-wmi-provider-samples-managing-dns-zones.md)
 -   [Aktualisieren einer Zone](dns-wmi-provider-samples-managing-dns-zones.md)
 
- 
+ 
 
- 
+ 
 
 
 

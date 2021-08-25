@@ -1,39 +1,39 @@
 ---
-title: Enumerationen für den Typ 2-Online Speicher
-description: Enumerationen für den Typ 2-Online Speicher
+title: Enumerationen für Onlinespeicher vom Typ 2
+description: Enumerationen für Onlinespeicher vom Typ 2
 ms.assetid: b4d27310-9902-4c46-a558-f46f19735ec7
 keywords:
-- Windows Media Player Online Stores, Enumerationen
-- Online Stores, Enumerationen
-- Typ 2 Online Stores, Enumerationen
-- Enumerationen, Typ 2 Online Stores
+- Windows Media Player,Enumerationen
+- Onlineshops,Enumerationen
+- 'Typ 2: Onlineshops,Enumerationen'
+- Enumerationen,Typ 2 Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dd9cd733f39cb3c99b09986ea7136e984b3c666
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 05a203342d675eaac6e0565c9b120ab42f42a29799f9a2a84dc18ac165fc3ae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862970"
 ---
-# <a name="enumerations-for-type-2-online-stores"></a>Enumerationen für den Typ 2-Online Speicher
+# <a name="enumerations-for-type-2-online-stores"></a>Enumerationen für Onlinespeicher vom Typ 2
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Der folgende Enumerationstyp ist für Online-Stores mit C++-Code verfügbar.
+Der folgende Enumerationstyp ist für Onlineshops mit C++-Code verfügbar.
 
 
 
 | Enumeration                                                    | Beschreibung                                         |
 |----------------------------------------------------------------|-----------------------------------------------------|
-| [Wmpabonnemenserviceevent](/previous-versions/windows/desktop/api/subscriptionservices/ne-subscriptionservices-wmpsubscriptionserviceevent) | Definiert die Typen der Dienst Ereignisse, die auftreten können. |
+| [WMPSubscriptionServiceEvent](/previous-versions/windows/desktop/api/subscriptionservices/ne-subscriptionservices-wmpsubscriptionserviceevent) | Definiert die Typen von Dienstereignissen, die auftreten können. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Der folgende Enumerationstyp ist für Online-Stores mit C++-Code verfügbar.
 [**Referenz für Typ 2-Onlineshops**](reference-for-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

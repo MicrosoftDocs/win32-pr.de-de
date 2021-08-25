@@ -1,19 +1,19 @@
 ---
 title: Definieren von Schweregraden
-description: Ebenen werden verwendet, um Ereignisse zu gruppieren und in der Regel den Schweregrad oder die Ausführlichkeit eines Ereignisses anzugeben.
+description: Ebenen werden verwendet, um Ereignisse zu gruppieren und geben in der Regel den Schweregrad oder die Ausführlichkeit eines Ereignisses an.
 ms.assetid: dfa4e0a9-4d89-4f50-aef9-1dae0dc11726
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c8e2e979e75057a77cca267e540b3ec5469562f
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: 4b3c3c5e663e476f98bef5c9be3f20cae5e0e88a74a7996f6f515d1d92599eb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104390089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863680"
 ---
 # <a name="defining-severity-levels"></a>Definieren von Schweregraden
 
-Ebenen werden verwendet, um Ereignisse zu gruppieren und in der Regel den Schweregrad oder die Ausführlichkeit eines Ereignisses anzugeben. Verwenden Sie das **Level** -Element, um eine Ebene zu definieren. Die Winmeta.xml Datei definiert die folgenden häufig verwendeten Schweregrade:
+Ebenen werden verwendet, um Ereignisse zu gruppieren und geben in der Regel den Schweregrad oder die Ausführlichkeit eines Ereignisses an. Um eine Ebene zu  definieren, verwenden Sie das level-Element. Die Winmeta.xml-Datei definiert die folgenden häufig verwendeten Schweregrade:
 
 -   win:Critical
 -   win:Error
@@ -21,9 +21,9 @@ Ebenen werden verwendet, um Ereignisse zu gruppieren und in der Regel den Schwer
 -   win:Informational
 -   win:Verbose
 
-Consumer verwenden Ebenen zum Abfragen von Ereignissen, die einen bestimmten Level-Wert enthalten. Eine ETW-Ablauf Verfolgungs Sitzung kann auch Ebenen verwenden, um die Ereignisse einzuschränken, die in die Protokolldatei für die Ereignis Ablauf Verfolgung geschrieben werden. Ereignisse mit einem ebenendwert, der gleich oder kleiner als der angegebene ebenendwert ist, werden in die Protokolldatei geschrieben. Wenn die Sitzung z. b. den Level-Wert für Win: Warning angegeben hat, enthält die Protokolldatei Warnungen, Fehler und kritische Ereignisse.
+Consumer verwenden Ebenen, um Ereignisse abzufragen, die einen bestimmten Ebenenwert enthalten. Eine ETW-Ablaufverfolgungssitzung kann auch Ebenen verwenden, um die Ereignisse einzuschränken, die in die Ereignisablaufverfolgungsprotokolldatei geschrieben werden. Ereignisse mit einem Ebenenwert, der gleich oder kleiner als der angegebene Ebenenwert ist, werden in die Protokolldatei geschrieben. Wenn die Sitzung beispielsweise den Ebenenwert für win:Warning angegeben hat, enthält die Protokolldatei Warnungs-, Fehler- und kritische Ereignisse.
 
-Im folgenden Beispiel wird gezeigt, wie eine Ebene definiert wird. Sie müssen die Attribute **Name** und **value** der Ebene angeben. Der Wert des **value** -Attributs muss zwischen 16 und 255 liegen. Das **Symbol** und die **Nachrichten** Attribute sind optional.
+Das folgende Beispiel zeigt, wie eine Ebene definiert wird. Sie müssen den **Namen** und die **Wertattribute** der Ebene angeben. Der Wert  des Wertattributs muss im Bereich von 16 bis 255 liegen. Die **Symbol-** und **Meldungsattribute** sind optional.
 
 
 ```XML

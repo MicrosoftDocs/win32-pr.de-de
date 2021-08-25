@@ -1,27 +1,27 @@
 ---
-description: Ein Experte ist eine Microsoft Win32-DLL (Dynamic-Link Library), die den Netzwerk Datenverkehr analysiert, der von einem Netzwerk Paketanbieter (NPP) erfasst und in einer Erfassungs Datei abgelegt wird.
+description: Ein Experte ist eine Microsoft Win32-DLL (Dynamic Link Library), die netzwerkbasierten Datenverkehr analysiert, der von einem Netzwerkpaketanbieter (Network Packet Provider, NPP) erfasst und in einer Erfassungsdatei platziert wird.
 ms.assetid: 57d8164e-f587-4bb9-a0b1-6094037e584c
 title: Experte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bbf5fc0096b15d590bf70859443667f2d9969f1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c2f4c3e34a9f6b8b36fdc6aa4793acfa5b652b9fa2c2117afc62943c0947af6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890915"
 ---
 # <a name="expert"></a>Experte
 
-Ein Experte ist eine Microsoft Win32-DLL (Dynamic-Link Library), die den Netzwerk Datenverkehr analysiert, der von einem [*Netzwerk Paketanbieter*](n.md) (NPP) erfasst und in einer Erfassungs Datei abgelegt wird. Nachdem die Daten aufgezeichnet und in einer Erfassungs Datei gespeichert wurden, arbeitet der Experte mit einem Parser, der auch als Protokoll Parser bezeichnet wird, um die Daten in der Datei zu analysieren. Beispielsweise können Sie die Frames der Erfassungs Datei überprüfen und einen [*Parser*](p.md) verwenden, um Protokolle wie SMB (Server Message Block) oder TCP/IP (Transmission Control Protocol/Internet Protocol) zu erkennen.
+Ein Experte ist eine Microsoft Win32-DLL (Dynamic Link Library), die netzwerkbasierten Datenverkehr analysiert, der von einem Netzwerkpaketanbieter (Network [*Packet Provider,*](n.md) NPP) erfasst und in einer Erfassungsdatei platziert wird. Nachdem die Daten erfasst und in einer Erfassungsdatei gespeichert wurden, arbeitet der Experte mit einem Parser zusammen, der auch als Protokollparser bezeichnet wird, um die Daten in der Datei zu analysieren. Beispielsweise können Sie die Frames der Erfassungsdatei untersuchen und einen [*Parser*](p.md) verwenden, um Protokolle wie Server Message Block (SMB) oder Transmission Control Protocol/Internet Protocol (TCP/IP) zu erkennen.
 
-Sie können einen Experten so entwerfen, dass er mit allen Netzwerkmonitor Parser und sämtlichen Parser arbeitet, die Sie selbst erstellen.
+Sie können einen Experten so entwerfen, dass er mit allen Netzwerkmonitor Parsern und allen Parsern arbeitet, die Sie selbst erstellen.
 
-Nachdem eine angeforderte Entsprechung von Protokollen einen bestimmten Frame identifiziert hat, extrahiert der Experte Daten aus dem Frame. Sie können den Experten programmieren, um Informationen in nutzbare Daten zu bearbeiten, die in der Netzwerkmonitor Ereignisanzeige angezeigt werden.
+Nachdem eine angeforderte Übereinstimmung von Protokollen einen bestimmten Frame identifiziert hat, extrahiert der Experte Daten aus dem Frame. Sie können den Experten programmieren, um Informationen in nutzbare Daten zu ändern, die Netzwerkmonitor Ereignisanzeige werden.
 
-Sie können einen Experten zur Laufzeit konfigurieren und dann Netzwerkmonitor verwenden, um die Benutzer Konfigurationsdaten für die Wiederverwendung mit unterschiedlichen Erfassungs Dateien zu speichern. Sie können einen Experten verwenden, um Korrelations Daten und benutzerdefinierte Lösungen für Endbenutzer bereitzustellen. Weitere Informationen zur Erstellung von HTML-basierten Konfigurationsinformationen finden Sie auf der [Seite mit der Ereignis Referenz](event-reference-page.md).
+Sie können einen Experten zur Laufzeit konfigurieren und dann Netzwerkmonitor, um Benutzerkonfigurationsdaten für die Wiederverwendung mit verschiedenen Erfassungsdateien zu speichern. Sie können einen Experten verwenden, um Korrelationsdaten und benutzerdefinierte Lösungen für Endbenutzer zur Verfügung zu stellen. Weitere Informationen zum Erstellen von HTML-basierten Konfigurationsinformationen finden Sie auf der [Ereignisreferenzseite.](event-reference-page.md)
 
-Während der Netzwerkmonitor-Installation werden die folgenden Experten-DLLs im Unterverzeichnis für Experten installiert:
+Während Netzwerkmonitor setup werden die folgenden Experten-DLLs im Unterverzeichnis Experts installiert:
 
 -   Coalesce.dll
 -   Propdist.dll
@@ -30,18 +30,18 @@ Während der Netzwerkmonitor-Installation werden die folgenden Experten-DLLs im 
 -   Tcpipe.dll
 -   Topuser.dll
 
-Wenn Sie Netzwerkmonitor starten, erstellt die [**DllMain**](dllmain-expert.md) -Funktion alle Experten im Unterverzeichnis "Experten". Wenn der Benutzer **im Menü Extras der Netzwerkmonitor** -Benutzeroberfläche auf **Experten** klickt, lädt Netzwerkmonitor die Experten-DLLs. Der Experte wird über den Einstiegspunkt " [Register Expert](register-expert.md) " aufgerufen, um grundlegende Details zum Experten bereitzustellen.
+Wenn Sie mit Netzwerkmonitor, erstellt die [**DllMain-Funktion**](dllmain-expert.md) alle Experten im Unterverzeichnis experts. Wenn der Benutzer experten im **Menü** **Extras** der benutzeroberfläche Netzwerkmonitor auswählt, Netzwerkmonitor die Experten-DLLs. Der Experte wird über den Einstiegspunkt ["Experten](register-expert.md) registrieren" aufgerufen, um grundlegende Informationen zum Experten zu erhalten.
 
-![Dialogfeld "Experten für Netzwerküberwachung"](images/expick.png)
+![Netzwerkmonitor-Experten (Dialogfeld)](images/expick.png)
 
-Netzwerkmonitor die folgenden Funktionen zum Verwalten des Experten aufruft:
+Netzwerkmonitor ruft die folgenden Funktionen auf, um den Experten zu verwalten:
 
 -   [**DllMain**](dllmain-expert.md)
--   [**Experte registrieren**](register-expert.md)
--   [**Ausführen**](run.md)
+-   [**Registrieren eines Experten**](register-expert.md)
+-   [**Ausführung**](run.md)
 -   [**Konfigurieren**](configure.md)
 
-Der Experte muss jede der vorangehenden Funktionen implementieren.
+Der Experte muss jede der oben genannten Funktionen implementieren.
 
  
 

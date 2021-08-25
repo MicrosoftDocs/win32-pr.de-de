@@ -1,9 +1,9 @@
 ---
-title: TCM_SETITEMSIZE Meldung (kommstrg. h)
-description: Legt die Breite und Höhe von Registerkarten in einem Registerkarten-Steuerelement mit fester Breite oder einem vom Besitzer gezeichneten Steuerelement fest Sie können diese Nachricht explizit oder mithilfe des tabctrl-Objekts tabstrg * senden \_ .
+title: TCM_SETITEMSIZE Meldung (Commctrl.h)
+description: Legt die Breite und Höhe von Registerkarten in einem Steuerelement mit fester Breite oder einem besitzergezeichneten Registerkartensteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des \_ TabCtrl-Makros SetItemSize senden.
 ms.assetid: 3935d686-f8bc-41fb-b025-04120cf03f02
 keywords:
-- Windows-Steuerelemente für TCM_SETITEMSIZE Meldung
+- TCM_SETITEMSIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e306af3f6462507a181de91104169c5ac7d6ce14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8845aa54cd3cca413f31ee01f4a9583e24dc875a876d1aff691f574214f6f793
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876230"
 ---
-# <a name="tcm_setitemsize-message"></a>TCM- \_ Nachricht
+# <a name="tcm_setitemsize-message"></a>TCM \_ SETITEMSIZE-Nachricht
 
-Legt die Breite und Höhe von Registerkarten in einem Registerkarten-Steuerelement mit fester Breite oder einem vom Besitzer gezeichneten Steuerelement fest Sie können diese Nachricht explizit oder mithilfe des [**tabctrl-Objekts \_ tabstrg**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_setitemsize) * senden.
+Legt die Breite und Höhe von Registerkarten in einem Steuerelement mit fester Breite oder einem besitzergezeichneten Registerkartensteuerelement fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ TabCtrl-Makros SetItemSize**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_setitemsize) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,17 +35,17 @@ Legt die Breite und Höhe von Registerkarten in einem Registerkarten-Steuereleme
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **int** -Wert, der die neue Breite in Pixel angibt. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **int** -Wert, der die neue Höhe in Pixel angibt.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **INT-Wert,** der die neue Breite in Pixel angibt. [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **INT-Wert,** der die neue Höhe in Pixel angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die alte Breite und Höhe zurück. Die Breite liegt im [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) des Rückgabewerts, und die Höhe liegt im [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))-Wert.
+Gibt die alte Breite und Höhe zurück. Die Breite befindet sich im [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) des Rückgabewerts, und die Höhe befindet sich im [**HIWORD.**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Breite auf einen Wert festgelegt ist, der kleiner als die von [**ImageList \_ Create**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_create)festgelegte Bildbreite ist, wird die Breite der Registerkarte auf den niedrigsten Wert festgelegt, der größer ist als die Breite des Bilds.
+Wenn die Breite auf einen Wert kleiner als die von [**ImageList \_ Create**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_create)festgelegte Bildbreite festgelegt ist, wird die Breite der Registerkarte auf den niedrigsten Wert festgelegt, der größer als die Bildbreite ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn die Breite auf einen Wert festgelegt ist, der kleiner als die von [**ImageL
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

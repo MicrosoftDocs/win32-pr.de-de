@@ -1,19 +1,19 @@
 ---
-description: In der Regel als mehr Netzwerk freundlich als bei einem Broadcast für alle Routen, wird eine gesteuerte Übertragung auf das von Ihnen angegebene lokale Netzwerk beschränkt.
+description: Im Allgemeinen gilt eine gerichtete Übertragung als netzwerkfreundlicher als eine Allrouten-Übertragung und beschränkt sich auf das von Ihnen angegebene lokale Netzwerk.
 ms.assetid: e2358580-5a65-434d-ba4c-a6b0615bccc3
-title: Gesteuerte Übertragung
+title: Gerichtete Übertragung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f3a47bd47e9800e1f9c93cffa555b76feb77373
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85a8872443bd97662f104402486245f1b9c6d23b7ac0571c1395cc2470db1976
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858390"
 ---
-# <a name="directed-broadcast"></a>Gesteuerte Übertragung
+# <a name="directed-broadcast"></a>Gerichtete Übertragung
 
-In der Regel als mehr Netzwerk freundlich als bei einem Broadcast für alle Routen, wird eine gesteuerte Übertragung auf das von Ihnen angegebene lokale Netzwerk beschränkt. Füllen Sie **sa \_ netnum** mit der Zielnetzwerk Nummer und dem **sa- \_ nodenum** mit Binärdateien. Router leiten diese Anforderung an das Zielnetzwerk weiter, wo Sie zu einer lokalen Übertragung wird. Zwischen Netzwerken wird dieses Paket nicht als Broadcast angezeigt.
+Im Allgemeinen gilt eine gerichtete Übertragung als netzwerkfreundlicher als eine Allrouten-Übertragung und beschränkt sich auf das von Ihnen angegebene lokale Netzwerk. Füllen **Sie sa \_ netnum** mit der Zielnetzwerknummer und **sa \_ nodenum** mit binären Einsen aus. Router geben diese Anforderung an das Zielnetzwerk weiter, wo sie zu einer lokalen Übertragung wird. Zwischennetzwerke sehen dieses Paket nicht als Broadcast.
 
  
 

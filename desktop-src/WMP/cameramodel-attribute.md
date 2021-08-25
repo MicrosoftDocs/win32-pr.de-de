@@ -3,7 +3,7 @@ title: CameraModel-Attribut
 description: Das CameraModel-Attribut ist eine Zeichenfolge, die das Modell der Kamera darstellt.
 ms.assetid: 21718367-7a05-465a-958d-ea4b229ca3cb
 keywords:
-- Media Player des CameraModel-Attributs
+- CameraModel-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 533f0fc33c391f51b3e109cb27c0a6cae78a79db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 09c9b9f204c41392005f5d7e0722bfa7d9e597e95613d0cce2dc18aca0a4c4ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864220"
 ---
 # <a name="cameramodel-attribute"></a>CameraModel-Attribut
 
-Das **CameraModel** -Attribut ist eine Zeichenfolge, die das Modell der Kamera darstellt.
+Das **CameraModel-Attribut** ist eine Zeichenfolge, die das Modell der Kamera darstellt.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

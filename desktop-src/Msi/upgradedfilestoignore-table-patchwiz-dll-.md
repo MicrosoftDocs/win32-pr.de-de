@@ -1,25 +1,25 @@
 ---
-description: Die Tabelle "upgradedfilestoignore" verhindert, dass bestimmte Dateien, die tatsächlich im aktualisierten Image geändert wurden, relativ zu den Ziel Images aktualisiert werden.
+description: Die Tabelle UpgradedFilesToIgnore verhindert, dass bestimmte Dateien aktualisiert werden, die im aktualisierten Image relativ zu den Zielimages geändert wurden.
 ms.assetid: 3b5f4360-887a-4a21-8f16-faa84da34328
-title: Tabelle "Upgrade dfilestoignore" (Patchwiz.dll)
+title: UpgradedFilesToIgnore-Tabelle (Patchwiz.dll)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f4a235759251ac3dadbe01b030c0d984d1f66b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f51143fcf7db350d5ee8aa1e43d49984914bcf9f05a2f8f5f787834a69b7e1a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809550"
 ---
-# <a name="upgradedfilestoignore-table-patchwizdll"></a>Tabelle "Upgrade dfilestoignore" (Patchwiz.dll)
+# <a name="upgradedfilestoignore-table-patchwizdll"></a>UpgradedFilesToIgnore-Tabelle (Patchwiz.dll)
 
-Die Tabelle "upgradedfilestoignore" verhindert, dass bestimmte Dateien, die tatsächlich im aktualisierten Image geändert wurden, relativ zu den Ziel Images aktualisiert werden. In bestimmten Fällen ist es möglicherweise hilfreich, dies zu tun. Beispielsweise muss ein Patchpaket, das nur für die Verwendung mit nicht administrativen Installationen vorgesehen ist, keine Dateien für das Patchen enthalten, die nur Teil von administrativen Images sind. Das Ausschließen von Dateien, die nur in administrativen Images verwendet werden, kann die Größe des Patchpakets verringern. Administratoren sollten jedoch darüber informiert werden, wie Sie diese Dateien separat aktualisieren. Diese Tabelle ist in der Datenbank für die Patcherstellung (PCP-Datei) optional und wird von der [uikreatepatchpackageex](uicreatepatchpackageex--patchwiz-dll-.md) -Funktion verwendet.
+Die Tabelle UpgradedFilesToIgnore verhindert, dass bestimmte Dateien aktualisiert werden, die im aktualisierten Image relativ zu den Zielimages geändert wurden. Dies kann in bestimmten Fällen nützlich sein. Beispielsweise muss ein Patchpaket, das nur für die Verwendung mit nicht administrativen Installationen vorgesehen ist, keine Patchdateien enthalten, die nur Teil administrativer Images sind. Das Ausschließen solcher Dateien, die nur in administrativen Images verwendet werden, kann die Größe des Patchpakets verringern. Administratoren sollten jedoch darüber informiert werden, wie diese Dateien separat aktualisiert werden. Diese Tabelle ist in der Patcherstellungsdatenbank (PCP-Datei) optional und wird von der [UiCreatePatchPackageEx-Funktion](uicreatepatchpackageex--patchwiz-dll-.md) verwendet.
 
-Die Tabelle "Upgrade dfilestoignore" weist die folgenden Spalten auf.
+Die Tabelle UpgradedFilesToIgnore enthält die folgenden Spalten.
 
 
 
-| Spalte   | Typ | Schlüssel | Nullwerte zulässig |
+| Spalte   | Typ | Key | Nullwerte zulässig |
 |----------|------|-----|----------|
 | Upgraded | text | J   | N        |
 | FTK      | text | J   | N        |
@@ -35,14 +35,14 @@ Die Tabelle "Upgrade dfilestoignore" weist die folgenden Spalten auf.
 <span id="Upgraded"></span><span id="upgraded"></span><span id="UPGRADED"></span>Aktualisiert
 </dt> <dd>
 
-Fremdschlüssel für die aktualisierte Spalte der [Tabelle "UpgradedImages" (Patchwiz.dll)](upgradedimages-table-patchwiz-dll-.md). Das Tool für die Patcherstellung schließt die Aktualisierung der in der FTK-Spalte der Tabelle "upgradedfilestoignore" angegebenen Datei aus, wenn ein Ziel auf das im aktualisierten Feld angegebene Bild aktualisiert wird. Geben Sie \* im Feld aktualisiert den Wert "" ein, um das Aktualisieren der Datei auf alle aktualisierten Images auszuschließen.
+Fremdschlüssel für die Spalte "Aktualisiert" der [Tabelle "UpgradedImages" (Patchwiz.dll).](upgradedimages-table-patchwiz-dll-.md) Das Tool zum Erstellen von Patches schließt das Aktualisieren der Datei aus, die in der FTK-Spalte der Tabelle UpgradedFilesToIgnore angegeben ist, wenn ein Ziel auf das im Feld Upgrade angegebene Image aktualisiert wird. Geben Sie im Feld Aktualisiert den Wert " " ein, um das \* Aktualisieren der Datei für alle aktualisierten Images auszuschließen.
 
 </dd> <dt>
 
 <span id="FTK"></span><span id="ftk"></span>FTK
 </dt> <dd>
 
-Fremdschlüssel in die [Dateitabelle](file-table.md) des aktualisierten Abbilds. Ein Wert im <prefix> \* Format "" entspricht allen Datei Tabellen Schlüsseln in der Dateitabelle, die mit diesem Präfix beginnen. Es kann kein Text auf das Sternchen folgen.
+Fremdschlüssel in der [Tabelle Datei des](file-table.md) aktualisierten Images. Ein Wert im Formular " <prefix> \* " entspricht allen Dateitabellenschlüsseln in der Tabelle Datei, die mit diesem Präfix beginnen. Dem Sternchen kann kein Text folgen.
 
 </dd> </dl>
 

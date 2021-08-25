@@ -1,7 +1,7 @@
 ---
-description: 'Die Thread proc-Methode ist die Thread Prozedur für den Arbeits Thread. Diese Methode implementiert die pure Virtual camthread:: ThreadProc-Methode.'
+description: Die ThreadProc-Methode ist die Threadprozedur für den Arbeitsthread. Diese Methode implementiert die rein virtuelleCAMThread::ThreadProc-Methode.
 ms.assetid: 8e66b609-d795-45a8-8fe5-774c659ee350
-title: Csourcestream. ThreadProc-Methode (Source. h)
+title: CSourceStream.ThreadProc-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6dc7d08643cc0ca76d3d05f0b9090f30200eb181
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 10ef0d29ab46ada118dc97c2d767b8377556086b949b6b9969cf5671b51e5359
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915270"
 ---
-# <a name="csourcestreamthreadproc-method"></a>Csourcestream. ThreadProc-Methode
+# <a name="csourcestreamthreadproc-method"></a>CSourceStream.ThreadProc-Methode
 
-Die- `ThreadProc` Methode ist die Thread Prozedur für den Arbeits Thread. Diese Methode implementiert die pure Virtual [**camthread:: ThreadProc**](camthread-threadproc.md) -Methode.
+Die `ThreadProc` -Methode ist die Threadprozedur für den Arbeitsthread. Diese Methode implementiert die rein [**virtuelleCAMThread::ThreadProc-Methode.**](camthread-threadproc.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn der Thread erfolgreich abgeschlossen wurde, oder andernfalls 1. Wenn der Rückgabewert 1 ist, werden die Ressourcen des Threads möglicherweise trotzdem zugeordnet.
+Gibt 0 zurück, wenn der Thread erfolgreich abgeschlossen wurde, andernfalls 1. Wenn der Rückgabewert 1 ist, werden die Ressourcen des Threads möglicherweise weiterhin zugeordnet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wartet unbegrenzt auf Thread Anforderungen, indem die Methode " [**camthread:: GetRequest**](camthread-getrequest.md) " aufgerufen wird. Wenn eine [**csourcestream:: Run**](csourcestream-run.md) -oder [**csourcestream::P ause**](csourcestream-pause.md) -Anforderung empfangen wird, wird die [**csourcestream::D obufferprocessingloop**](csourcestream-dobufferprocessingloop.md) -Methode aufgerufen. Die Methode **dobufferprocessingloop** überträgt Daten, bis Sie eine [**csourcestream:: Stoppanforderung**](csourcestream-stop.md) empfängt. Die Thread Prozedur wird beendet, wenn Sie eine [**csourcestream:: Exit**](csourcestream-exit.md) -Anforderung empfängt.
+Diese Methode wartet unbegrenzt auf Threadanforderungen, indem sie die [**METHODECAMThread::GetRequest**](camthread-getrequest.md) aufruft. Wenn sie eine [**CSourceStream::Run-**](csourcestream-run.md) oder [**CSourceStream::P ause-Anforderung**](csourcestream-pause.md) empfängt, ruft sie die [**CSourceStream::D oBufferProcessingLoop-Methode**](csourcestream-dobufferprocessingloop.md) auf. Die **DoBufferProcessingLoop-Methode** über pusht Daten, bis sie eine [**CSourceStream::Stop-Anforderung**](csourcestream-stop.md) empfängt. Die Threadprozedur wird beendet, wenn sie eine [**CSourceStream::Exit-Anforderung**](csourcestream-exit.md) empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode wartet unbegrenzt auf Thread Anforderungen, indem die Methode " [*
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode wartet unbegrenzt auf Thread Anforderungen, indem die Methode " [*
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

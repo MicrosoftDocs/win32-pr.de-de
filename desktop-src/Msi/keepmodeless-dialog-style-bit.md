@@ -1,19 +1,19 @@
 ---
-description: Wenn dieses Bit nicht festgelegt ist und ein Dialogfeld durch doaction erstellt wird, werden normalerweise alle anderen (üblicherweise nicht modal) Dialogfelder zerstört. Wenn dieses Bit festgelegt ist, bleiben die anderen Dialogfelder aktiv, wenn dieses Dialogfeld erstellt wird.
+description: Wenn dieses Bit nicht festgelegt ist und ein Dialogfeld über DoAction erstellt wird, werden normalerweise alle anderen (in der Regel nicht moduslosen) Dialoge zerstört. Wenn dieses Bit festgelegt ist, bleiben die anderen Dialoge aktiviert, wenn dieses Dialogfeld erstellt wird.
 ms.assetid: e114f992-18c3-4d96-91d0-e1bea02715c4
-title: Keepmodeless-Dialog Feld Stilbit
+title: KeepModeless Dialog Style Bit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e04b187e85d31331e004e3db599e6845abfec2e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: df42ad7a51e90fa05c869d96138f1bf02f902220403e27f95062123035290266
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913470"
 ---
-# <a name="keepmodeless-dialog-style-bit"></a>Keepmodeless-Dialog Feld Stilbit
+# <a name="keepmodeless-dialog-style-bit"></a>KeepModeless Dialog Style Bit
 
-Wenn dieses Bit nicht festgelegt ist und ein Dialogfeld durch doaction erstellt wird, werden normalerweise alle anderen (üblicherweise nicht modal) Dialogfelder zerstört. Wenn dieses Bit festgelegt ist, bleiben die anderen Dialogfelder aktiv, wenn dieses Dialogfeld erstellt wird.
+Wenn dieses Bit nicht festgelegt ist und ein Dialogfeld über DoAction erstellt wird, werden normalerweise alle anderen (in der Regel nicht moduslosen) Dialoge zerstört. Wenn dieses Bit festgelegt ist, bleiben die anderen Dialoge aktiviert, wenn dieses Dialogfeld erstellt wird.
 
 ## <a name="value"></a>Wert
 
@@ -21,7 +21,7 @@ Wenn dieses Bit nicht festgelegt ist und ein Dialogfeld durch doaction erstellt 
 
 | Decimal | Hexadezimal | Konstante                              |
 |---------|-------------|---------------------------------------|
-| 16      | 0x00000010  | **msidbdialogattributeskeepmodeless** |
+| 16      | 0x00000010  | **msidbDialogAttributesKeepModeless** |
 
 
 

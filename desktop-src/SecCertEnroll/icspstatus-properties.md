@@ -1,27 +1,27 @@
 ---
-description: Die icspstatus-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+description: Die ICspStatus-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: F62997D5-0008-4884-9F86-3B0D0C19BF57
-title: Eigenschaften von icspstatus
+title: ICspStatus-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c46fed108f6d41e544555f8083a0204ba9918771
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 649f503b778cf67b6212fb7c30d7209ebfa4b4227ef0619acbf73e641ebf2346
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960650"
 ---
-# <a name="icspstatus-properties"></a>Eigenschaften von icspstatus
+# <a name="icspstatus-properties"></a>ICspStatus-Eigenschaften
 
-Die [**icspstatus**](/windows/desktop/api/CertEnroll/nn-certenroll-icspstatus) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**ICspStatus-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icspstatus) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Cspalgorithmuseigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_cspalgorithm)
--   [**Cspinformation (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_cspinformation)
+-   [**CspAlgorithm-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_cspalgorithm)
+-   [**CspInformation-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_cspinformation)
 -   [**DisplayName-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_displayname)
--   [**Eigenschaft "registrimentstatus"**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_enrollmentstatus)
--   [**Ordinal-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_ordinal)
+-   [**EnrollmentStatus-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_enrollmentstatus)
+-   [**Ordinaleigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspstatus-get_ordinal)
 
  
 

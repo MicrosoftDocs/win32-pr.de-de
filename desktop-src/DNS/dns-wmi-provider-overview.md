@@ -1,33 +1,33 @@
 ---
-title: DNS WMI-Anbieter (Übersicht)
-description: Ein Anbieter ist ein Architektur Element von Windows-Verwaltungsinstrumentation (WMI).
+title: Übersicht über den DNS-WMI-Anbieter
+description: Ein Anbieter ist ein Architekturelement der Windows Management Instrumentation (WMI).
 ms.assetid: e6ada7b5-dd46-4c47-8db8-55f910429e31
 keywords:
 - Domain Name System, WMI-Anbieter, Architektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6aed54d0d9cbac4070483e8e72e9917607e824c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ea44103edba64a1f572beef9cff9b8aeb31f02344f172f42b2a7378a6fbf3677
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913160"
 ---
-# <a name="dns-wmi-provider-overview"></a>DNS WMI-Anbieter (Übersicht)
+# <a name="dns-wmi-provider-overview"></a>Übersicht über den DNS-WMI-Anbieter
 
-Ein Anbieter ist ein Architektur Element von *Windows-Verwaltungsinstrumentation (WMI)*. WMI definiert eine einheitliche Architektur zum beschreiben, zugreifen auf und Instrumentieren von Objekten. Ein Teil dieser Architektur ist eine große Datenbank von WMI-Klassen, die zum Ausführen von Remote Verwaltungsaufgaben für bestimmte Objekte verwendet werden.
+Ein Anbieter ist ein Architekturelement von *Windows Management Instrumentation (WMI).* WMI definiert eine einheitliche Architektur zum Beschreiben, Zugreifen auf und Instrumentieren von Objekten. Teil dieser Architektur ist eine große Datenbank mit WMI-Klassen, die zum Ausführen von Remoteverwaltungsaufgaben für bestimmte Objekte verwendet werden.
 
-WMI-Anbieter fungieren als Vermittler zwischen WMI und einem oder mehreren verwalteten Objekten. Wenn WMI eine Anforderung von einer Verwaltungs Anwendung für Daten empfängt, die nicht im CIM-Repository verfügbar sind, oder für Benachrichtigungen von Ereignissen, die von WMI nicht unterstützt werden, wird die Anforderung an einen Anbieter weitergeleitet. Anbieter stellen Daten und Ereignisbenachrichtigungen für verwaltete Objekte bereit, die für die jeweilige Domäne spezifisch sind. Ein Anbieter erweitert das WMI-Schema der Klassen, damit WMI mit neuen Objekttypen arbeiten kann. Der DNS-WMI-Anbieter definiert Klassen zum Abfragen und Konfigurieren eines DNS-Servers sowie die zugehörigen DNS-Zonen und DNS-Einträge.
+WMI-Anbieter fungieren als Vermittler zwischen WMI und mindestens einem verwalteten Objekt. Wenn WMI eine Anforderung von einer Verwaltungsanwendung für Daten empfängt, die nicht aus dem CIM-Repository verfügbar sind, oder für Benachrichtigungen über Ereignisse, die von WMI nicht unterstützt werden, wird die Anforderung an einen Anbieter weitergeleitet. Anbieter stellen Daten und Ereignisbenachrichtigungen für verwaltete Objekte bereit, die für die jeweilige Domäne spezifisch sind. Ein Anbieter erweitert das WMI-Schema von Klassen, damit WMI mit neuen Objekttypen arbeiten kann. Der DNS-WMI-Anbieter definiert Klassen zum Abfragen und Konfigurieren eines DNS-Servers sowie die zugehörigen DNS-Zonen und DNS-Einträge.
 
-Der DNS-WMI-Anbieter macht für Clients eine Reihe von DNS-Objekten verfügbar, einschließlich DNS-Server, DNS-Domäne und DNS-RR-Objekten. Über diese Objekte können Clients DNS-Verwaltungsaktivitäten durchführen.
+Der DNS-WMI-Anbieter macht eine Reihe von DNS-Objekten für Clients verfügbar, einschließlich DNS-Server, DNS-Domäne und DNS-RR-Objekten. Über diese Objekte können Clients DNS-Verwaltungsaktivitäten ausführen.
 
-Mit dem DNS-WMI-Anbieter können Sie eigene Tools erstellen, um die meisten Verwaltungsaufgaben für DNS-Server auszuführen. Beispielsweise können Sie Zonen und Datensätze erstellen, löschen und anzeigen. Server-und Zonen Eigenschaften zurücksetzen; und führen routinemäßige Verwaltungsvorgänge aus, z. b. das Aktualisieren der Zone, das erneute Laden der Zone, das Aktualisieren der Zone, das Zurückschreiben der Zone in eine Datei oder Active Directory, das Anhalten und Fortsetzen der Zone, das Löschen des Caches, das Beenden und Starten des DNS-Dienstes und das Anzeigen von Statistiken.
+Mithilfe des DNS-WMI-Anbieters können Sie eigene Tools erstellen, um die meisten DNS-Serververwaltungsaufgaben auszuführen. Beispielsweise können Sie Zonen und Datensätze erstellen, löschen und anzeigen. Zurücksetzen von Server- und Zoneneigenschaften; und führen Routinemäßige Verwaltungsvorgänge aus, z. B. Aktualisieren der Zone, erneutes Laden der Zone, Aktualisieren der Zone, Zurückschreiben der Zone in eine Datei oder Active Directory, Anhalten und Fortsetzen der Zone, Löschen des Caches, Beenden und Starten des DNS-Diensts und Anzeigen von Statistiken.
 
-Der DNS-WMI-Anbieter verfügt über eine Reihe eindeutiger Verhalten, die in anderen Anbietern nicht gefunden wurden. Klassen Details finden Sie in der [DNS-WMI-Anbieter Referenz](dns-wmi-provider-reference.md) .
+Der DNS-WMI-Anbieter verfügt über eine Reihe eindeutiger Verhaltensweisen, die in anderen Anbietern nicht gefunden werden. Klassendetails finden Sie in der [DNS-WMI-Anbieterreferenz.](dns-wmi-provider-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

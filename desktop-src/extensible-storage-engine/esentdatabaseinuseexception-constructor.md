@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentdatabaseingeuseexception-Konstruktor'
-title: Esentdatabaseingeuseexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseInUseException-Konstruktor'
+title: EsentDatabaseInUseException-Konstruktor
 TOCTitle: 'EsentDatabaseInUseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseInUseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabaseinuseexception.esentdatabaseinuseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5bb643bc884cd7d737479f82b75d40cc042e611a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0cca1ccafd50f075b79d571ab1ebe02c43ddbb563cd7de7ad937651ea503aef3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852190"
 ---
-# <a name="esentdatabaseinuseexception-constructor"></a>Esentdatabaseingeuseexception-Konstruktor
+# <a name="esentdatabaseinuseexception-constructor"></a>EsentDatabaseInUseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabaseinuseexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseInUseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseInUseException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabaseingeuseexception-Klasse](./esentdatabaseinuseexception-class.md)
+[EsentDatabaseInUseException-Klasse](./esentdatabaseinuseexception-class.md)
 
-[Esentdatabaseingeuseexception-Member](./esentdatabaseinuseexception-members.md)
+[EsentDatabaseInUseException-Member](./esentdatabaseinuseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Ein Zeiger auf die IMemInputPin-Schnittstelle der Eingabe-PIN.
+description: Zeiger auf die IMemInputPin-Schnittstelle des Eingabepins.
 ms.assetid: 59383b5d-cfd2-40ae-9075-c55aa20139ae
-title: 'Coutputqueue:: m_pInputPin-Member (outputq. h)'
+title: COutputQueue::m_pInputPin Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d47444a95d8497e67c72fa399308ff7d8e815f46
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 497eaf85f1884da3817564d06f2a1989f5e33fec99f5aae50cd435cff76dce0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871531"
 ---
-# <a name="coutputqueuem_pinputpin-member"></a>Coutputqueue:: m \_ pinputpin-Element
+# <a name="coutputqueuem_pinputpin-member"></a>COutputQueue::m \_ pInputPin-Member
 
-Ein Zeiger auf die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle der Eingabe-PIN.
+Zeiger auf die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) des Eingabepins.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ IMemInputPin *m_pInputPin;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ IMemInputPin *m_pInputPin;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

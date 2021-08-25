@@ -1,11 +1,11 @@
 ---
-title: ms-DS-minimal-Password-length-Attribut
-description: Mindestlänge für Kenn Wörter von Benutzerkonten.
+title: ms-DS-Minimum-Password-Length-Attribut
+description: Mindestlänge für Benutzerkonten-Kennwörter.
 ms.assetid: 1d29d3f9-e3af-4fe9-b865-0316ad4548f6
 ms.tgt_platform: multiple
 keywords:
-- "' ms-DS-Attribute '-Attribut ' AD Schema '"
-- AD-Schema des msDS-MinimumPasswordLength-Attributs
+- MS-DS-Minimum-Password-Length-Attribut AD-Schema
+- msDS-MinimumPasswordLength-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04b383310225c52c4ea136646dc1689943123a25
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f3c21812dd716c6dd1ea92b7813fec78840c1e7cea869a0fccb90b63ce2d3695
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803940"
 ---
-# <a name="ms-ds-minimum-password-length-attribute"></a>ms-DS-minimal-Password-length-Attribut
+# <a name="ms-ds-minimum-password-length-attribute"></a>ms-DS-Minimum-Password-Length-Attribut
 
-Mindestlänge für Kenn Wörter von Benutzerkonten.
+Mindestlänge für Benutzerkonten-Kennwörter.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-minimal-Kennwort-Länge        |
-| LDAP-Display-Name | msDS-MinimumPasswordLength           |
+| CN                | ms-DS-Minimum-Password-Length        |
+| Ldap-Anzeigename | msDS-MinimumPasswordLength           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2013              |
 | System-ID-GUID    | b21b3439-4c3a-441c-bb5f-08f20e9b315e |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -55,15 +55,15 @@ Mindestlänge für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | 0                                                                     |
 | Range-Upper            | 255                                                                   |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -76,15 +76,15 @@ Mindestlänge für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | 0                                                                     |
 | Range-Upper            | 255                                                                   |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -97,15 +97,15 @@ Mindestlänge für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | 0                                                                     |
 | Range-Upper            | 255                                                                   |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 

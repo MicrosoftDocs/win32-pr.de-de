@@ -1,5 +1,5 @@
 ---
-description: Stellt die Ressourcen Zuordnungs Einstellungen eines verwalteten Elements für einen bestimmten Ressourcentyp dar.
+description: Stellt die Ressourcenzuordnungseinstellungen eines verwalteten Elements für einen bestimmten Ressourcentyp dar.
 ms.assetid: f27910c7-a88a-4694-80fe-7761945782e0
 title: CIM_AllocationCapabilities-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d022023142b38905067e30a4c1be3b133e49a86f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b3a30b6df2b4fea50022f047df42f04e3635b37d015e16fed50e2d971827b61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829650"
 ---
-# <a name="cim_allocationcapabilities-class"></a>CIM- \_ Klasse "Zuordnung"
+# <a name="cim_allocationcapabilities-class"></a>CIM \_ AllocationCapabilities-Klasse
 
-Stellt die Ressourcen Zuordnungs Einstellungen eines verwalteten Elements für einen bestimmten Ressourcentyp dar.
+Stellt die Ressourcenzuordnungseinstellungen eines verwalteten Elements für einen bestimmten Ressourcentyp dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,42 +49,42 @@ class CIM_AllocationCapabilities : CIM_Capabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Klasse "-Zuordnung" weist die folgenden Typen von Membern auf:
+Die **CIM \_ AllocationCapabilities-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_** -Klasse "Zuweisung von Klassen" verfügt über diese Eigenschaften.
+Die **CIM \_ AllocationCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md)".**ResourceType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md).**ResourceType**")
 </dt> </dl>
 
-Der Ressourcentyp für diese Zuordnungs Einstellung, wenn die **ResourceType** -Eigenschaft auf "1" (sonstige) festgelegt ist.
+Der Ressourcentyp für diese Zuordnungseinstellung, wenn die **ResourceType-Eigenschaft** auf "1" (Sonstige) festgelegt ist.
 
 </dd> <dt>
 
-**Requesttypessupported**
+**RequestTypesSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Anforderung einer bestimmten Ressource unterstützt wird.
+Gibt an, ob das Anfordern einer bestimmten Ressource unterstützt wird.
 
 <dt>
 
@@ -119,7 +119,7 @@ Die Anforderung enthält keine bestimmte Ressource.
 
 <span id="Both"></span><span id="both"></span><span id="BOTH"></span>
 
-<span id="Both"></span><span id="both"></span><span id="BOTH"></span>**Beides** (4)
+<span id="Both"></span><span id="both"></span><span id="BOTH"></span>**Beide** (4)
 
 
 </dt> <dd>
@@ -137,7 +137,7 @@ Sowohl spezifische als auch allgemeine Anforderungen werden unterstützt.
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (0X8000.. 0xFFFF
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
@@ -147,42 +147,42 @@ Sowohl spezifische als auch allgemeine Anforderungen werden unterstützt.
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung eines Implementierungs spezifischen unter Typs für diese Ressource. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden.
+Eine Beschreibung eines implementierungsspezifischen Untertyps für diese Ressource. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM-Zuweisung- \_ Funktionen**".**Otherresourcetype**","[**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md).**ResourceType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ AllocationCapabilities**.**OtherResourceType**", "[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md).**ResourceType**")
 </dt> </dl>
 
-Der Typ der Ressource, die dieser Zuordnungs Einstellung zugewiesen ist.
+Der Typ der Ressource, die dieser Zuordnungseinstellung zugewiesen ist.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>
 
-**Computer System** (2)
+**Computersystem** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -196,7 +196,7 @@ Der Typ der Ressource, die dieser Zuordnungs Einstellung zugewiesen ist.
 
 <span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>
 
-Arbeits **Speicher** (4)
+**Arbeitsspeicher** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -217,7 +217,7 @@ Arbeits **Speicher** (4)
 
 <span id="FC_HBA"></span><span id="fc_hba"></span>
 
-**FC-HBA** (7)
+**FC HBA** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -245,21 +245,21 @@ Arbeits **Speicher** (4)
 
 <span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>
 
-**Anderer Netzwerk Adapter** (11)
+**Anderer Netzwerkadapter** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>
 
-E **/a-Slot** (12)
+**E/A-Slot** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>
 
-E **/a-Gerät** (13)
+**E/A-Gerät** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -287,7 +287,7 @@ E **/a-Gerät** (13)
 
 <span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>
 
-**Laufwerk (17** )
+**Laufwerk** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -301,28 +301,28 @@ E **/a-Gerät** (13)
 
 <span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>
 
-**Speicher** Block (19)
+**Storage Extent** (19)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Other_Storage_Device"></span><span id="other_storage_device"></span><span id="OTHER_STORAGE_DEVICE"></span>
 
-**Anderes Speichergerät** (20)
+**Other Storage Device** (20)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>
 
-**Seriellen Anschluss** (21)
+**Serieller Anschluss** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>
 
-**Paralleler Anschluss** (22)
+**Paralleler Port** (22)
 
 
 </dt> <dd></dd> <dt>
@@ -343,28 +343,28 @@ E **/a-Gerät** (13)
 
 <span id="IEEE_1394_Controller"></span><span id="ieee_1394_controller"></span><span id="IEEE_1394_CONTROLLER"></span>
 
-**IEEE 1394-Controller** (25)
+**IEEE 1394 Controller** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>
 
-**Partitionier Bare Einheit** (26)
+**Partitionierbare Einheit** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>
 
-**Partitionier bare Basiseinheit** (27)
+**Partitionierbare Basiseinheit** (27)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power"></span><span id="power"></span><span id="POWER"></span>
 
-**Energie** (28)
+**Stromversorgung** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -385,14 +385,14 @@ E **/a-Gerät** (13)
 
 <span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>
 
-**Logischer** Datenträger (31)
+**Logischer Datenträger** (31)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>
 
-**Speicher Volume** (32)
+**Storage Volume** (32)
 
 
 </dt> <dd></dd> <dt>
@@ -413,25 +413,25 @@ E **/a-Gerät** (13)
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Sharingmode**
+**SharingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie der Zugriff auf die zugrunde liegende Ressource gewährt wird.
+Gibt an, wie Zugriff auf die zugrunde liegende Ressource gewährt wird.
 
-Die tatsächliche Menge wird durch min, maximale Größe, Gewichtungen usw. gesteuert.
+Die tatsächliche Menge wird durch min, max size, weights usw. gesteuert.
 
 <dt>
 
@@ -444,7 +444,7 @@ Die tatsächliche Menge wird durch min, maximale Größe, Gewichtungen usw. gest
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dediziert** (2)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (2)
 
 
 </dt> <dd>
@@ -455,12 +455,12 @@ Exklusiver Zugriff auf die zugrunde liegende Ressource.
 
 <span id="Shared"></span><span id="shared"></span><span id="SHARED"></span>
 
-<span id="Shared"></span><span id="shared"></span><span id="SHARED"></span>Frei **gegeben** (3)
+<span id="Shared"></span><span id="shared"></span><span id="SHARED"></span>**Freigegeben** (3)
 
 
 </dt> <dd>
 
-Freigegebene Verwendung der zugrunde liegenden Ressource.
+Gemeinsame Verwendung der zugrunde liegenden Ressource.
 
 </dd> <dt>
 
@@ -473,26 +473,26 @@ Freigegebene Verwendung der zugrunde liegenden Ressource.
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (0X8000.. 0xFFFF
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Supportedaddstates**
+**SupportedAddStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)".**Enabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md).**EnabledState**")
 </dt> </dl>
 
-Der Systemstatus, der beim Erstellen einer neuen Ressource unterstützt wird.
+Die Systemzustände, die unterstützt werden, wenn eine neue Ressource erstellt wird.
 
 <dt>
 
@@ -519,7 +519,7 @@ Der Systemstatus, der beim Erstellen einer neuen Ressource unterstützt wird.
 
 <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -547,68 +547,68 @@ Der Systemstatus, der beim Erstellen einer neuen Ressource unterstützt wird.
 
 <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>
 
-Verzögert **(8** )
+**Verzögert** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** (10)
+**Ab** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>
 
-**Angeh** alten (11)
+**Angehalten** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-Angeh **alten (12** )
+**Angehalten** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Supportedremuvestates**
+**SupportedRemoveStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)".**Enabledstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md).**EnabledState**")
 </dt> </dl>
 
-Der Systemstatus, der beim Entfernen einer Ressource unterstützt wird.
+Die Systemzustände, die unterstützt werden, wenn eine Ressource entfernt wird.
 
 <dt>
 
@@ -635,7 +635,7 @@ Der Systemstatus, der beim Entfernen einer Ressource unterstützt wird.
 
 <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -663,49 +663,49 @@ Der Systemstatus, der beim Entfernen einer Ressource unterstützt wird.
 
 <span id="Deferred"></span><span id="deferred"></span><span id="DEFERRED"></span>
 
-Verzögert **(8** )
+**Verzögert** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** (10)
+**Ab** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>
 
-**Angeh** alten (11)
+**Angehalten** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-Angeh **alten (12** )
+**Angehalten** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (0X8000.. 0xFFFF
+**Reservierter Anbieter** (0x8000. 0xFFFF)
 
 
 </dt> <dd></dd> </dl>
@@ -720,17 +720,17 @@ Angeh **alten (12** )
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Funktionen**](cim-capabilities.md)
+[**\_CIM-Funktionen**](cim-capabilities.md)
 </dt> </dl>
 
  

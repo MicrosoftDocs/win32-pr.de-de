@@ -1,7 +1,7 @@
 ---
-description: Die getiid-Methode ruft den Schnittstellen Bezeichner (IID) der Schnittstelle ab, auf der die Methode ausgeführt wird.
+description: Die GetIID-Methode ruft den Schnittstellenbezeichner (IID) der Schnittstelle ab, auf der die Methode ausgeführt wird.
 ms.assetid: d6eb7d46-294a-4169-96d3-4bed02c48c08
-title: Cdeferredcommand. getiid-Methode (ctlutil. h)
+title: CDeferredCommand.GetIID-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d8677c70ab9c2c04224194bd825b106d33de8893
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c5d43f04d8331f39e46e3223a64c09ad306585a1e29fd7627a0f50159d74cde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910080"
 ---
-# <a name="cdeferredcommandgetiid-method"></a>Cdeferredcommand. getiid-Methode
+# <a name="cdeferredcommandgetiid-method"></a>CDeferredCommand.GetIID-Methode
 
-Die- `GetIID` Methode ruft den Schnittstellen Bezeichner (IID) der Schnittstelle ab, auf der die Methode ausgeführt wird.
+Die `GetIID` -Methode ruft den Schnittstellenbezeichner (IID) der Schnittstelle ab, auf der die Methode ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,16 +50,16 @@ Gibt die IID der Schnittstelle zurück, auf der die Methode ausgeführt wird.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

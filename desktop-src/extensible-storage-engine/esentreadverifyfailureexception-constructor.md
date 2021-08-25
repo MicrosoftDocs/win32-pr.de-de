@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentluverifyfailureexception-Konstruktor.
-title: Esentluverifyfailureexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentReadVerifyFailureException-Konstruktor'
+title: EsentReadVerifyFailureException-Konstruktor
 TOCTitle: 'EsentReadVerifyFailureException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentReadVerifyFailureException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentreadverifyfailureexception.esentreadverifyfailureexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 37f767c5a0376fb0cd55ebe798c0553e07e239ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76daadb8709cb169aa813a8d0866e0f8387c12e5ebe65448cc45b742996994d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119835950"
 ---
-# <a name="esentreadverifyfailureexception-constructor"></a>Esentluverifyfailureexception-Konstruktor
+# <a name="esentreadverifyfailureexception-constructor"></a>EsentReadVerifyFailureException-Konstruktor
 
-Initialisiert eine neue Instanz der esentluverifyfailureexception-Klasse.
+Initialisiert eine neue Instanz der EsentReadVerifyFailureException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentReadVerifyFailureException()
 public EsentReadVerifyFailureException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlesverifyfailureexception-Klasse](./esentreadverifyfailureexception-class.md)
+[EsentReadVerifyFailureException-Klasse](./esentreadverifyfailureexception-class.md)
 
-[Esentluverifyfailureexception-Member](./esentreadverifyfailureexception-members.md)
+[EsentReadVerifyFailureException-Member](./esentreadverifyfailureexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

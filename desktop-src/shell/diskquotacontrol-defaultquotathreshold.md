@@ -1,7 +1,7 @@
 ---
-description: Legt den Standard Kontingent Schwellenwert fest oder ruft ihn ab.
+description: Legt den Standardkontingentschwellenwert fest oder ruft sie ab.
 ms.assetid: d3f23e52-586f-4cb8-b91c-44a71f8f94b2
-title: Diskquotacontrol. defaultquotathreshold (Eigenschaft)
+title: DiskQuotaControl.DefaultQuotaThreshold-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: a4ce4205ee8bcc73c78bd1aabe7d8659ac3f5489
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46d44f2e2df24c5ee1cbf646643810e09d007eb15ba6c9a352eb492dfb104752
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943110"
 ---
-# <a name="diskquotacontroldefaultquotathreshold-property"></a>Diskquotacontrol. defaultquotathreshold (Eigenschaft)
+# <a name="diskquotacontroldefaultquotathreshold-property"></a>DiskQuotaControl.DefaultQuotaThreshold-Eigenschaft
 
-Legt den Standard Kontingent Schwellenwert fest oder ruft ihn ab.
+Legt den Standardkontingentschwellenwert fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,13 +38,13 @@ DiskQuotaControl.DefaultQuotaThreshold = iDefaultQuotaThreshold
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **ganzzahliger** Wert, der auf den Standard Warnungs Schwellenwert für neue Benutzer in Bytes festgelegt wird.
+Ein **ganzzahliger** Wert, der für neue Benutzer auf den Standardmäßigen Warnungsschwellenwert in Bytes festgelegt ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Standard Schwellenwert für Kontingente wird automatisch auf neue Benutzer des Volumes angewendet. Wenn die Datenträger Nutzung eines Benutzers diesen Wert überschreitet und die [**logquotathreshold**](diskquotacontrol-logquotathreshold.md) -Eigenschaft auf **true** festgelegt ist, generiert das System einen Ereignisprotokoll Eintrag. Wenn der Standard Schwellenwert z. b. 10,0 MB beträgt, lautet der Wert der Eigenschaft "10,0 MB". Wenn für das Volume kein Standard Schwellenwert festgelegt ist, wird die-Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
+Der Standardkontingentschwellenwert wird automatisch auf neue Benutzer des Volumes angewendet. Wenn die Datenträgerverwendung eines Benutzers diesen Wert überschreitet und die [**LogQuotaThreshold-Eigenschaft**](diskquotacontrol-logquotathreshold.md) auf **TRUE** festgelegt ist, generiert das System einen Ereignisprotokolleintrag. Wenn der Standardschwellenwert beispielsweise 10,0 MB beträgt, ist der Wert der Eigenschaft "10,0 MB". Wenn das Volume über keinen Standardschwellenwert verfügt, wird die -Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -52,15 +52,15 @@ Der Standard Schwellenwert für Kontingente wird automatisch auf neue Benutzer d
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Diskquotacontrol**](diskquotacontrol-object.md)
+[**DiskQuotaControl**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 498beda4f2f6c61af918d542542c4ed7b789ba1a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: dd39cb83c90c566f0022679e70680e916daeb2a43a4d62e993e096930ee2f14e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890470"
 ---
 # <a name="iespresume-method"></a>IESP::Resume-Methode
 
@@ -49,26 +49,26 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 | Rückgabecode                                                                                                | Beschreibung                                                                                                               |
 |------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**NMERR \_ CAPTURE \_ NOT \_ PAUSED**</dt> </dl> | Die Erfassung wird nicht angehalten. Rufen Sie [**IESP::P ause**](iesp-pause.md) auf, um die Erfassung anzuhalten.<br/>                        |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [**IESP::Connect**](iesp-connect.md) auf, um eine Verbindung mit dem Netzwerk herzustellen.<br/> |
-| <dl> <dt>**NMERR \_ NOT \_ ESP**</dt> </dl>             | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [**IESP::Connect-Methode.**](iesp-connect.md)<br/>            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>       | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [**IESP::Verbinden**](iesp-connect.md) auf, um eine Verbindung mit dem Netzwerk herzustellen.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ ESP**</dt> </dl>             | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [**IESP::Verbinden-Methode.**](iesp-connect.md)<br/>            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen [*Erfassungsdatei*](c.md) erst neue Daten hinzugefügt, wenn **IESP::Resume** aufgerufen wird, um die Erfassung neu zu starten. Wenn **Anhalten** und **Fortsetzen** zum Beenden und Neustarten der Erfassung verwendet werden, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
+Während sich die Erfassung in einem angehaltenen Zustand befindet, werden der aktuellen [*Erfassungsdatei*](c.md) erst neue Daten hinzugefügt, wenn **IESP::Resume** aufgerufen wird, um die Erfassung neu zu starten. Wenn **Anhalten** und **Fortsetzen** verwendet werden, um die Erfassung zu beenden und neu zu starten, werden alle erfassten Informationen in derselben Erfassungsdatei gespeichert.
 
-Wenn **Sie anhalten** und **fortsetzen** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor den vorhandenen Statistiken für die aktuelle Erfassung weiterhin [*Konversationsstatistiken*](c.md) hinzu.
+Wenn **Sie Anhalten** und **Fortsetzen** verwenden, um die Erfassung zu steuern, fügt Netzwerkmonitor den vorhandenen Statistiken für die aktuelle Erfassung weiterhin [*Konversationsstatistiken*](c.md) hinzu.
 
-Um die Erfassung zu beenden, rufen Sie [**IESP::Stop**](iesp-stop.md)auf.
+Rufen Sie [**IESP::Stop**](iesp-stop.md)auf, um die Erfassung zu beenden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -77,14 +77,14 @@ Um die Erfassung zu beenden, rufen Sie [**IESP::Stop**](iesp-stop.md)auf.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [IESP](iesp.md)
 </dt> <dt>
 
-[**IESP::Connect**](iesp-connect.md)
+[**IESP::Verbinden**](iesp-connect.md)
 </dt> <dt>
 
 [**IESP::P ause**](iesp-pause.md)

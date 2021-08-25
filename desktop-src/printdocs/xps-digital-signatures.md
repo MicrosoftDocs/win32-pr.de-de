@@ -1,39 +1,39 @@
 ---
-description: Mit der XPS Digital Signature-API kann ein Benutzer ein Dokument signieren, die Identität des Signatur Gebers überprüfen und angeben, ob ein XPS-Dokument seit der Signierung geändert wurde.
+description: Mit der XPS Digital Signature-API kann ein Benutzer ein Dokument signieren, die Identität des Signaturers überprüfen und angeben, ob sich ein XPS-Dokument seit der Signatur geändert hat.
 ms.assetid: 8a23617e-92fe-4662-b602-47add5716358
-title: XPS-API für digitale Signaturen
+title: XPS Digital Signature-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c56485a532afbb148e62901c38db49ab81963c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f3903e1802d811e6166024132c0d983fff7a1b2d3fd015a91bce4c4e50d6911
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823650"
 ---
-# <a name="xps-digital-signature-api"></a>XPS-API für digitale Signaturen
+# <a name="xps-digital-signature-api"></a>XPS Digital Signature-API
 
-Mit der XPS Digital Signature-API kann ein Benutzer ein Dokument signieren, die Identität des Signatur Gebers überprüfen und angeben, ob ein XPS-Dokument seit der Signierung geändert wurde. Die API für die digitale Signatur von XPS basiert auf der digitalen Signatur Technologie, die in den Open Packaging-Konventionen verwendet wird, die in der ersten Edition, Teil 2, "Open Packaging Conventions", in den [Standard mäßigen ECMA-376-und Office Open XML-Dateiformaten](https://www.ecma-international.org/publications/standards/Ecma-376.htm)festgelegt sind.
+Mit der XPS Digital Signature-API kann ein Benutzer ein Dokument signieren, die Identität des Signaturers überprüfen und angeben, ob sich ein XPS-Dokument seit der Signatur geändert hat. Die XPS Digital Signature-API basiert auf der Technologie für digitale Signaturen, die im Open Packaging-Konventionen verwendet wird. Diese sind in der 1. Edition, Teil 2, "Open Packaging-Konventionen", von [Standard ECMA-376, Office Open XML File Formats, angegeben.](https://www.ecma-international.org/publications/standards/Ecma-376.htm)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
-### <a name="about-xps-digital-signature-api"></a>Informationen über die XPS Digital Signature-API
+### <a name="about-xps-digital-signature-api"></a>Informationen zur XPS Digital Signature-API
 
-[Informationen zur digitalen Signatur-API von XPS](about-xps-digital-signatures.md) beschreiben die API für die digitale Signatur von XPS auf hoher Ebene.
+[Über die XPS Digital Signature-API](about-xps-digital-signatures.md) wird die XPS Digital Signature-API auf hoher Ebene beschrieben.
 
 ### <a name="using-xps-digital-signature-api"></a>Verwenden der XPS Digital-Signatur-API
 
-[Mithilfe der XPS Digital Signature-API](using-digital-signatures-in-xps-documents.md) wird beschrieben, wie Sie die XPS Digital Signature-API verwenden.
+[Unter Verwendung der XPS Digital Signature-API](using-digital-signatures-in-xps-documents.md) wird die Verwendung der XPS Digital Signature-API beschrieben.
 
-### <a name="xps-digital-signatures-reference"></a>XPS-Referenz für digitale Signaturen
+### <a name="xps-digital-signatures-reference"></a>XPS Digital Signatures Reference
 
-Die [XPS Digital Signature-API-Referenz](xps-digital-signatures-programming-reference.md) enthält eine komplette Liste der Schnittstellen, Methoden und Enumeratoren, die von der XPS Digital Signature-API implementiert werden.
+Die [XPS Digital Signature-API-Referenz](xps-digital-signatures-programming-reference.md) enthält eine vollständige Liste der Schnittstellen, Methoden und Enumeratoren, die von der XPS Digital Signatures-API implementiert werden.
 
-## <a name="platform-update-for-windows-vista"></a>Platt Form Update für Windows Vista
+## <a name="platform-update-for-windows-vista"></a>Plattformupdate für Windows Vista
 
-Die in diesem Abschnitt beschriebenen XPS-Schnittstellen für digitale Signaturen werden vom Platt Form Update für Windows Vista oder dem Platt Form Update für Windows Server 2008 nicht unterstützt. Eine Anwendung, die diese Schnittstellen erfordert, sollte unter Windows 7 oder höher oder Windows Server 2008 R2 oder höher ausgeführt werden. Andernfalls stellt die Anwendung dem Benutzer möglicherweise nicht die gesamte Funktionalität der Anwendung bereit.
+Die in diesem Abschnitt beschriebenen XPS Digital Signature-Schnittstellen werden vom Plattformupdate für Windows Vista oder vom Plattformupdate für Windows Server 2008 nicht unterstützt. Eine Anwendung, die diese Schnittstellen erfordert, sollte auf Windows 7 oder höher oder auf Windows Server 2008 R2 oder höher ausgeführt werden. Andernfalls stellt die Anwendung dem Benutzer möglicherweise nicht die vollständige Funktionalität der Anwendung zur Verfügung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

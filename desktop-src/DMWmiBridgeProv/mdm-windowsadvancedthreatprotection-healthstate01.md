@@ -1,6 +1,6 @@
 ---
 title: MDM_WindowsAdvancedThreatProtection_HealthState01-Klasse
-description: Die MDM \_ windowsadvancedfixprotection \_ HealthState01-Klasse wird verwendet, um den Integritäts Status von Windows Defender Advanced Threat Protection (wdatp)-Endpunkten zu ermitteln.
+description: Die \_ MDM-Klasse WindowsAdvancedThreatProtection HealthState01 wird verwendet, um den Integritätsstatus von \_ Windows Defender Advanced Threat Protection-Endpunkten (WDATP) zu bestimmen.
 ms.assetid: 8d630b95-9895-4cb8-99f2-8f869c4dfd18
 keywords:
 - MDM_WindowsAdvancedThreatProtection_HealthState01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5519b731cf54a633a659ec865e7a1f0e12deda75
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9fa8638aaa4aa99c22a67c8b3d680bb6a90a4b9aa0d37eb43cd2199e7b64f977
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913380"
 ---
-# <a name="mdm_windowsadvancedthreatprotection_healthstate01-class"></a>MDM \_ windowsadvancedo Protection \_ HealthState01-Klasse
+# <a name="mdm_windowsadvancedthreatprotection_healthstate01-class"></a>\_MDM-Klasse "WindowsAdvancedThreatProtection \_ HealthState01"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ windowsadvancedfixprotection \_ HealthState01** -Klasse wird verwendet, um den Integritäts Status von Windows Defender Advanced Threat Protection (wdatp)-Endpunkten zu ermitteln.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ HealthState01** wird verwendet, um den Integritätsstatus von Windows Defender Advanced Threat Protection-Endpunkten (WDATP) zu bestimmen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -49,20 +49,20 @@ class MDM_WindowsAdvancedThreatProtection_HealthState01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ windowsadvancedo Protection \_ HealthState01** -Klasse verfügt über diese Typen von Membern:
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ HealthState01** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ windowsadvancedbedrohlich Protection \_ HealthState01** -Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection \_ HealthState01** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -71,14 +71,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "healthstate".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "HealthState".
 
 </dd> <dt>
 
-[Last verbunden](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#healthstate-lastconnected)
+[LastConnected](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#healthstate-lastconnected)
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -97,10 +97,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Organisations](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#healthstate-orgid)
+[OrgId](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#healthstate-orgid)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -108,10 +108,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -127,7 +127,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 [SenseIsRunning](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#healthstate-senseisrunning)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -141,11 +141,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
@@ -153,7 +153,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

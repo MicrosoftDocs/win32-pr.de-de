@@ -1,7 +1,7 @@
 ---
-description: Die attachpropertyinstanceex-Funktion ordnet eine vorhandene Eigenschaft einer bestimmten Position in den erkannten Daten zu und ändert den Wert der Eigenschafts Daten.
+description: Die AttachPropertyInstanceEx-Funktion ordnet eine vorhandene Eigenschaft einer bestimmten Position in den erkannten Daten zu und ändert den Wert der Eigenschaftsdaten.
 ms.assetid: 08bd1959-5ce8-4cb8-af8b-abbf4839c484
-title: Attachpropertyinstanceex-Funktion (Netmon. h)
+title: AttachPropertyInstanceEx-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 1e0841c49e54d10d38a56d6206bc255b0aa7c49a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e184ec0b874d55d149c9d049b8c6b2cafd716fe82c66410e2d3e1550b397c366
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911280"
 ---
-# <a name="attachpropertyinstanceex-function"></a>Attachpropertyinstanceex-Funktion
+# <a name="attachpropertyinstanceex-function"></a>AttachPropertyInstanceEx-Funktion
 
-Die **attachpropertyinstanceex** -Funktion ordnet eine vorhandene Eigenschaft einer bestimmten Position in den erkannten Daten zu und ändert den Wert der Eigenschafts Daten.
+Die **AttachPropertyInstanceEx-Funktion** ordnet eine vorhandene Eigenschaft einer bestimmten Position in den erkannten Daten zu und ändert den Wert der Eigenschaftsdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,78 +47,78 @@ BOOL WINAPI AttachPropertyInstanceEx(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
-Handle für den Frame, der analysiert wird. Verwenden Sie das Handle, das an die Parser-DLL im *hframe* -Parameter der [**attachproperties**](attachproperties.md) -Funktion übergeben wird.
+Handle für den Frame, der analysiert wird. Verwenden Sie das Handle, das an die Parser-DLL im *hFrame-Parameter* der [**AttachProperties-Funktion**](attachproperties.md) übergeben wird.
 
 </dd> <dt>
 
-*hproperty* \[ in\]
+*hProperty* \[ In\]
 </dt> <dd>
 
-Handle für eine [**PropertyInfo**](propertyinfo.md) -Struktur, die die Eigenschaft definiert. Beim Implementieren der [**Register**](register-parser.md) Export-Funktion geben Sie die **PropertyInfo** -Struktur an, die die Eigenschaft definiert.
+Handle für eine [**PROPERTYINFO-Struktur,**](propertyinfo.md) die die Eigenschaft definiert. Wenn Sie die [**Exportfunktion Register**](register-parser.md) implementieren, geben Sie die **PROPERTYINFO-Struktur** an, die die Eigenschaft definiert.
 
 </dd> <dt>
 
-*Länge* \[ in\]
+*Länge* \[ In\]
 </dt> <dd>
 
-Länge der Daten für diese Instanz der-Eigenschaft.
+Länge der Daten für diese Instanz der -Eigenschaft.
 
 </dd> <dt>
 
-*lpdata* \[ in\]
+*lpData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Position in den erkannten Daten, in der sich der Eigenschafts Wert befindet. Verwenden Sie den Zeiger, der an die Parser-DLL im *lpprotocol* -Parameter der [**attachproperties**](attachproperties.md) -Funktion übergeben wird.
+Zeiger auf die Position in den erkannten Daten, an der sich der Eigenschaftswert befindet. Verwenden Sie den Zeiger, der an die Parser-DLL im *lpProtocol-Parameter* der [**AttachProperties-Funktion**](attachproperties.md) übergeben wird.
 
 </dd> <dt>
 
-*Verlängert* \[ in\]
+*LengthEx* \[ In\]
 </dt> <dd>
 
-Länge der erweiterten Daten Länge in Bytes.
+Länge der erweiterten Datenlänge in Bytes.
 
 </dd> <dt>
 
-*lpdataex* \[ in\]
+*lpDataEx* \[ In\]
 </dt> <dd>
 
-Zeiger auf die erweiterten Daten, bei dem es sich in der Regel um eine Stapel Variable handelt, die die erweiterten Daten enthält.
+Zeiger auf die erweiterten Daten, bei denen es sich in der Regel um eine Stapelvariable handelt, die die Extend-Daten enthält.
 
 </dd> <dt>
 
-*HelpID* \[ in\]
+*HelpID* \[ In\]
 </dt> <dd>
 
-Bezeichner (von 0 bis 2047), der verwendet wird, um die kontextbezogene Hilfe für eine Eigenschaft festzulegen.
+Bezeichner (von 0 bis 2047), der verwendet wird, um kontextbezogene Hilfe für eine Eigenschaft festzulegen.
 
-Die *HelpID* -Nummer ist relativ zur Hilfedatei, die der Protokoll [*Eigenschaften Datenbank*](p.md)zugeordnet ist.
+Die *HelpID-Nummer* ist relativ zur Hilfedatei, die der [*Protokolleigenschaftsdatenbank*](p.md)zugeordnet ist.
 
 </dd> <dt>
 
-*Einzug* \[ in\]
+*IndentLevel* \[ In\]
 </dt> <dd>
 
-Einzugs Ebene (von 0 bis 15) wird verwendet, um eine Eigenschaft hierarchisch anzuzeigen.
+Einzugsebene (von 0 bis 15), die verwendet wird, um eine Eigenschaft hierarchisch anzuzeigen.
 
-Netzwerkmonitor verwendet die Ebenen 0 bis 9. Ebene 15 ist ein spezieller Wert, der es dem Parser ermöglicht, eine verborgene Eigenschaft anzufügen, die nicht sichtbar ist.
+Netzwerkmonitor verwendet die Ebenen 0 bis 9. Ebene 15 ist ein spezieller Wert, mit dem der Parser eine ausgeblendete Eigenschaft anfügen kann, die nicht sichtbar ist.
 
 </dd> <dt>
 
-*IFlags* \[ in\]
+*IFlags* \[ In\]
 </dt> <dd>
 
-Ein bitfeldwert, der die Reihenfolge der Bits innerhalb einer Eigenschaft angibt. Vorherige Parser, die *ferror* auf 0 oder 1 festgelegt haben, sollten nun *ferror* auf den iflag- \_ Fehler festlegen. Legen Sie diesen Parameter auf einen der folgenden Werte fest.
+Ein BIT-Feldwert, der die Reihenfolge der BITs innerhalb einer Eigenschaft angibt. Vorherige Parser, die *fError* auf 0 oder 1 festgelegt haben, sollten jetzt *fError* auf IFLAG \_ ERROR festlegen. Legen Sie diesen Parameter auf einen der folgenden Werte fest.
 
 
 
 | Wert                                                                                                                                                         | Bedeutung                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| <span id="IFLAG_ERROR"></span><span id="iflag_error"></span><dl> <dt>**iflag- \_ Fehler**</dt> </dl>       | Die Daten im Frame weisen einen Fehler auf.<br/>                      |
-| <span id="IFLAG_SWAPPED"></span><span id="iflag_swapped"></span><dl> <dt>**iflag wurde \_ ausgetauscht**</dt> </dl> | Zum Anfüge Zeitpunkt ist **Word** Byte ein nicht-Intel-Format.<br/> |
-| <span id="IFLAG_UNICODE"></span><span id="iflag_unicode"></span><dl> <dt>**iflag- \_ Unicode**</dt> </dl> | Zum Anfüge Zeitpunkt ist die **Zeichenfolge** Unicode.<br/>               |
+| <span id="IFLAG_ERROR"></span><span id="iflag_error"></span><dl> <dt>**\_IFLAG-FEHLER**</dt> </dl>       | Daten im Frame haben einen Fehler.<br/>                      |
+| <span id="IFLAG_SWAPPED"></span><span id="iflag_swapped"></span><dl> <dt>**IFLAG \_ GETAUSCHT**</dt> </dl> | Zum Zeitpunkt der Anfügezeit ist **das WORD-Byte** ein Nicht-Intel-Format.<br/> |
+| <span id="IFLAG_UNICODE"></span><span id="iflag_unicode"></span><dl> <dt>**IFLAG \_ UNICODE**</dt> </dl> | Beim Anfügen ist **STRING** Unicode.<br/>               |
 
 
 
@@ -128,17 +128,17 @@ Ein bitfeldwert, der die Reihenfolge der Bits innerhalb einer Eigenschaft angibt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert " **true**".
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **TRUE.**
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die " **attachpropertyinstanceex** "-Funktion wird während der Implementierung der " [**attachproperties**](attachproperties.md) "-Exportfunktion aufgerufen. Wenn eine Eigenschaft mithilfe von attachpropertyinstanceex an die Daten angefügt wird, erstellt Netzwerkmonitor eine [**propertyinst**](propertyinst.md) -Struktur, die die Instanz der angefügten Eigenschaft definiert, und eine [**propertyinstex**](propertyinstex.md) -Struktur, die die erweiterten Daten definiert.
+Die **AttachPropertyInstanceEx-Funktion** wird während der Implementierung der [**AttachProperties-Exportfunktion**](attachproperties.md) aufgerufen. Wenn eine Eigenschaft mit AttachPropertyInstanceEx an die Daten angefügt wird, erstellt Netzwerkmonitor eine [**PROPERTYINST-Struktur,**](propertyinst.md) die die Instanz der angefügten Eigenschaft definiert, und eine [**PROPERTYINSTEX-Struktur,**](propertyinstex.md) die die erweiterten Daten definiert.
 
-Wenn " **attachpropertyinstanceex** " aufgerufen wird und keine erweiterten Daten bereitgestellt werden, ist der *lpdataex* -Parameter **null** , oder der Parameter " *verlänex* " ist 0, der **attachpropertyinstanceex** -Aufruf ist funktional äquivalent zu einem [**attachpropertyinstance**](attachpropertyinstance.md) -Aufruf.
+Wenn **AttachPropertyInstanceEx** aufgerufen wird und keine erweiterten Daten bereitgestellt werden, der *lpDataEx-Parameter* **NULL** oder der *LengthEx-Parameter* 0 ist, entspricht der **AttachPropertyInstanceEx-Aufruf** funktional einem [**AttachPropertyInstance-Aufruf.**](attachpropertyinstance.md)
 
-Bei der Implementierung von [**attachproperties**](attachproperties.md)wird [**attachpropertyinstance**](attachpropertyinstance.md) aufgerufen, um die Daten zu verwenden, wie Sie in der Erfassung vorhanden sind. Sie können auch die **attachpropertyinstanceex** -Funktion aufrufen, um die Eigenschaften Daten zu ändern. Es wird jedoch empfohlen, dass Sie die Daten verwenden, wie Sie in der Erfassung vorhanden sind.
+Rufen Sie während der Implementierung von [**AttachProperties**](attachproperties.md) [**AttachPropertyInstance**](attachpropertyinstance.md) auf, um die Daten so zu verwenden, wie sie in der Erfassung vorhanden sind. Sie können auch **die AttachPropertyInstanceEx-Funktion** aufrufen, um die Eigenschaftsdaten zu ändern. Es wird jedoch empfohlen, die Daten so zu verwenden, wie sie in der Erfassung vorhanden sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -148,8 +148,8 @@ Bei der Implementierung von [**attachproperties**](attachproperties.md)wird [**a
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

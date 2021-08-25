@@ -1,7 +1,7 @@
 ---
-description: Die Receive-Methode übergibt ein Medien Beispiel an die Eingabe-PIN.
+description: Die Receive-Methode übergibt ein Medienbeispiel an den Eingabepin.
 ms.assetid: a8ee0988-8955-48d0-be1b-24eea72d560d
-title: Coutputqueue. Receive-Methode (outputq. h)
+title: COutputQueue.Receive-Methode (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0ce8a0d44730fa35b38cf6d738edd26168284a46
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8fb896429e53c16b30dbc4301f2e54fca5a2087dc1c89635fa33395f68ba0f5b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871500"
 ---
-# <a name="coutputqueuereceive-method"></a>Coutputqueue. Receive-Methode
+# <a name="coutputqueuereceive-method"></a>COutputQueue.Receive-Methode
 
-Die- `Receive` Methode übergibt ein Medien Beispiel an die Eingabe-PIN.
+Die `Receive` -Methode übergibt ein Medienbeispiel an den Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ HRESULT Receive(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                                   |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | End-of-Stream-Benachrichtigung empfangen, bevor dieses Beispiel verarbeitet wird.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | End-of-Stream-Benachrichtigung, die vor der Verarbeitung dieses Beispiels empfangen wurde.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                                           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**coutputqueue:: receivemultiple**](coutputqueue-receivemultiple.md) -Methode auf.
+Diese Methode ruft die [**COutputQueue::ReceiveMultiple-Methode**](coutputqueue-receivemultiple.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,16 +74,16 @@ Diese Methode ruft die [**coutputqueue:: receivemultiple**](coutputqueue-receive
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

@@ -3,44 +3,44 @@ title: Multichannel-Audiowiedergabe in DirectShow
 description: Multichannel-Audiowiedergabe in DirectShow
 ms.assetid: 5123854a-0f1f-40f4-bf57-47622b91103f
 keywords:
-- Windows Media-Format-SDK, DirectShow
-- Windows Media-Format-SDK, Multichannel-Audiowiedergabe
-- Windows Media-Format-SDK, Audiowiedergabe
-- Advanced Systems Format (ASF), DirectShow
+- Windows Medienformat-SDK, DirectShow
+- Windows Medienformat-SDK, Multichannel-Audiowiedergabe
+- Windows Medienformat-SDK, Audiowiedergabe
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
 - Advanced Systems Format (ASF), Multichannel-Audiowiedergabe
 - ASF (Advanced Systems Format), Multichannel-Audiowiedergabe
 - Advanced Systems Format (ASF), Audiowiedergabe
 - ASF (Advanced Systems Format), Audiowiedergabe
-- DirectShow, Multichannel-Audiowiedergabe
-- DirectShow, Audiowiedergabe
-- Multichannel-Audiodatei, Wiedergabe
+- DirectShow,Multichannel-Audiowiedergabe
+- DirectShow,Audiowiedergabe
+- Multichannelaudio, Wiedergabe
 - Audiowiedergabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d44c6eec473c8bbbff81d35f4127d5d132d0b6cd
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 99734ddf32be6e0340e26fafef0f22f1127ec3652cc0db0a9d2e94ce2f694b96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104389946"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808160"
 ---
 # <a name="multichannel-audio-playback-in-directshow"></a>Multichannel-Audiowiedergabe in DirectShow
 
-Wenn Sie eine Multichannel-Windows Media Audio Datei in DirectShow wiedergeben möchten, müssen Sie die \_ Eigenschaft "hiresoutput" direkt auf den Decoder festlegen, nachdem Sie mit dem WM-ASF-Reader verbunden wurde. Es ist keine Konfiguration des Reader-Objekts erforderlich. Wenn Sie jedoch direkt mit dem DMO arbeiten möchten, benötigen Sie wmcodecinst. h aus dem [Beispiel Code für die Verwendung des Download Pakets für die Windows Media Audio-und Video Codec-Schnittstellen](https://www.microsoft.com/downloads/details.aspx?FamilyId=92490D8A-4F2E-46F1-8835-B1D987B3C985&displaylang=en) .
+Um eine Multichannel- Windows Media Audio-Datei in DirectShow wieder geben zu können, müssen Sie die Eigenschaft "HIRESOUTPUT" direkt auf dem Decoder festlegen, nachdem sie mit dem \_ WM ASF-Reader verbunden wurde. Es ist keine Konfiguration des Readerobjekts erforderlich. Um jedoch direkt mit dem DMO arbeiten zu können, benötigen Sie wmcodecconst.h aus dem Beispielcode für die Verwendung des Downloadpakets [Windows Media Audio and Video Codec Interfaces.](https://www.microsoft.com/downloads/details.aspx?FamilyId=92490D8A-4F2E-46F1-8835-B1D987B3C985&displaylang=en)
 
-**Hinweis** Diese Konfigurations Prozedur wird nur für Dateien unterstützt, die nicht durch digitale Rights Management geschützt sind.
+**Hinweis:** Dieses Konfigurationsverfahren wird nur für Dateien unterstützt, die nicht durch Digital Rights Management.
 
-Die grundlegenden Schritte zum Aktivieren der Multichannel-Ausgabe lauten wie folgt:
+Die grundlegenden Schritte zum Aktivieren der Multichannelausgabe lauten wie folgt:
 
-1.  Rufen Sie RenderFile auf, um das Filter Diagramm zu erstellen.
-2.  Abrufen eines Zeigers auf den DMO-Wrapper Filter
-3.  Trennen des DMO-Wrappers vom audiorenderer
-4.  Legen Sie die \_ Eigenschaft "hiresoutput" für den Decoder fest.
-5.  Verbinden Sie den DMO-Wrapper und den audiorenderer erneut.
+1.  Rufen Sie RenderFile auf, um das Filterdiagramm zu erstellen.
+2.  Abrufen eines Zeigers auf den DMO Wrapperfilter
+3.  Trennen des DMO Wrappers vom Audiorenderer
+4.  Legen Sie die \_ HIRESOUTPUT-Eigenschaft für den Decoder fest.
+5.  Verbinden Sie den DMO Wrapper und den Audiorenderer erneut.
 6.  Führen Sie das Diagramm aus.
 
-Diese Schritte werden in den folgenden Code Ausschnitten veranschaulicht. (Die gesamte Fehlerüberprüfung wurde aus Gründen der Einfachheit ausgelassen. Wenn Sie diesen Code in einer Anwendung verwenden, sollten Sie die richtigen Fehlerbehandlungsroutinen hinzufügen.)
+Die folgenden Codeausschnitte veranschaulichen diese Schritte. (Der Einfachheit halber wurden alle Fehlerüberprüfungen ausgelassen. Sie sollten ordnungsgemäße Fehlerbehandlungsroutinen hinzufügen, wenn Sie diesen Code in einer Anwendung verwenden.)
 
 
 ```C++
@@ -79,7 +79,7 @@ Diese Schritte werden in den folgenden Code Ausschnitten veranschaulicht. (Die g
 
 
 
-Die Funktionen "getdmuwrapper" und "getpin" aus dem vorherigen Code Ausschnitt werden wie folgt implementiert:
+Die GetDMOWrapper- und GetPin-Funktionen aus dem vorherigen Codeausschnitt werden wie folgt implementiert:
 
 
 ```C++
@@ -141,9 +141,9 @@ HRESULT GetPin(IBaseFilter *pFilter, PIN_DIRECTION PinDir, IPin** ppPin)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

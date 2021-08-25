@@ -1,24 +1,24 @@
 ---
-description: 'Die folgenden Konstanten werden mit Energierichtlinien Schemas verwendet:'
+description: 'Die folgenden Konstanten werden mit Energierichtlinienschemas verwendet:'
 ms.assetid: 475c2819-5ed7-4b83-a119-4c55b215b9b6
-title: Energie Verwaltungs Konstanten
+title: Energieverwaltungskonstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41e869ef7e9b897180cd297ec854401a9250776c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 476c0f00764b29aeefcfce970c7bfa0a71066ed31312e59cf40f261c31645e8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961653"
 ---
-# <a name="power-management-constants"></a>Energie Verwaltungs Konstanten
+# <a name="power-management-constants"></a>Energieverwaltungskonstanten
 
-Die folgenden Konstanten werden mit Energierichtlinien Schemas verwendet:
+Die folgenden Konstanten werden mit Energierichtlinienschemas verwendet:
 
--   [Entlade Richtlinien Konstanten](discharge-policy-constants.md)
--   [Globale Flags-Konstanten](global-flags-constants.md)
--   [Richtlinien Konstanten für die Prozessor Leistungssteuerung](processor-performance-control-policy-constants.md)
--   [Energie Einstellungs-GUIDs](power-setting-guids.md)
+-   [Richtlinienkonstanten](discharge-policy-constants.md)
+-   [Globale Flagkonstanten](global-flags-constants.md)
+-   [Richtlinienkonstanten für die Prozessorleistungssteuerung](processor-performance-control-policy-constants.md)
+-   [Power Setting-GUIDs](power-setting-guids.md)
 
  
 

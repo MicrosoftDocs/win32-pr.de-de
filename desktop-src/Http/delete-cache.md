@@ -1,9 +1,9 @@
 ---
 title: delete cache
-description: Leert den gesamten URL-Cache oder löscht Einträge entsprechend der angegebenen URL.
+description: Leert den gesamten URL-Cache oder löscht Einträge gemäß der angegebenen URL.
 ms.assetid: 499ce0f9-01db-4648-89f7-1ecafd25a805
 keywords:
-- Cache löschen http
+- DELETE CACHE HTTP
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f963d12812140d11923460235ef780a621ba3db5
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: c41f2147f0101f312a7fa76796032ec8c821fcea9c08cf89bb3174ddace43d47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "106338235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870560"
 ---
 # <a name="delete-cache"></a>delete cache
 
-Leert den gesamten URL-Cache oder löscht Einträge entsprechend der angegebenen URL.
+Leert den gesamten URL-Cache oder löscht Einträge gemäß der angegebenen URL.
 
 ``` syntax
 delete cache [url=]string [[recursive=]{yes|no}]
@@ -32,16 +32,16 @@ delete cache [url=]string [[recursive=]{yes|no}]
 
 <dl> <dt>
 
-<span id="_url__string"></span><span id="_URL__STRING"></span>**\[URL = \] * * * Zeichenfolge*
+<span id="_url__string"></span><span id="_URL__STRING"></span>**\[ url= \]**_string_
 </dt> <dd>
 
-Erforderlich. Gibt die voll qualifizierte URL an.
+Erforderlich. Gibt die vollqualifizierte URL an.
 
 </dd> </dl>
 
 <dl> <dt>
 
-<span id="_recursive___yes_no_"></span><span id="_RECURSIVE___YES_NO_"></span>**\[rekursiv = \] {Yes \| No}**
+<span id="_recursive___yes_no_"></span><span id="_RECURSIVE___YES_NO_"></span>**\[recursive= \] {yes \| no}**
 </dt> <dd>
 
 Wenn ja, werden alle Einträge unter der angegebenen URL entfernt.
@@ -50,11 +50,11 @@ Wenn ja, werden alle Einträge unter der angegebenen URL entfernt.
 
 ## <a name="examples"></a>Beispiele
 
-**Cache-URL löschen = https://www.contoso.com:80/myresource/ rekursiv = ja**
+**delete cache url= https://www.contoso.com:80/myresource/ recursive=yes**
 
- 
+ 
 
- 
+ 
 
 
 

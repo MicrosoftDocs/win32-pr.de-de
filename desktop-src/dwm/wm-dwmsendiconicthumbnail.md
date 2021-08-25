@@ -1,9 +1,9 @@
 ---
-title: WM_DWMSENDICONICTHUMBNAIL Meldung (dwmapi. h)
-description: Weist ein Fenster an, ein statisches Bitmap bereitzustellen, das als Miniaturansicht dieses Fensters verwendet werden soll.
+title: WM_DWMSENDICONICTHUMBNAIL Nachricht (Dwmapi.h)
+description: Weist ein Fenster an, eine statische Bitmap bereitzustellen, die als Miniaturansichtsdarstellung dieses Fensters verwendet werden soll.
 ms.assetid: 476c2542-f4d0-4777-93d3-bf50da26d94f
 keywords:
-- WM_DWMSENDICONICTHUMBNAIL Meldung Desktopfenster-Manager
+- WM_DWMSENDICONICTHUMBNAIL Desktopfenster-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ded5b734278973afe35f5ed3d9fbb5b0aec9242b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3263f34cd59ba68ee895e5d5c77e297144cbadd6c8d8bbaa49ca6272248c2024
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119842650"
 ---
-# <a name="wm_dwmsendiconicthumbnail-message"></a>WM \_ dwmsendiimimanthumbnail-Meldung
+# <a name="wm_dwmsendiconicthumbnail-message"></a>WM \_ DWMSENDICONICTHUMBNAIL-Nachricht
 
-Weist ein Fenster an, ein statisches Bitmap bereitzustellen, das als Miniaturansicht dieses Fensters verwendet werden soll.
+Weist ein Fenster an, eine statische Bitmap bereitzustellen, die als Miniaturansichtsdarstellung dieses Fensters verwendet werden soll.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,37 +32,37 @@ Weist ein Fenster an, ein statisches Bitmap bereitzustellen, das als Miniaturans
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) dieses Werts ist die maximale x-Koordinate der Miniaturansicht. Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist die maximale y-Koordinate. Wenn eine Miniaturansicht eine Dimension aufweist, die einen oder beide dieser Werte überschreitet, akzeptiert die DWM die Miniaturansicht nicht.
+[**HiWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) dieses Werts ist die maximale x-Koordinate der Miniaturansicht. [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist die maximale y-Koordinate. Wenn eine Miniaturansicht eine Dimension aufweist, die einen oder beide dieser Werte überschreitet, akzeptiert dwm die Miniaturansicht nicht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 DWM sendet diese Nachricht an ein Fenster, wenn alle der folgenden Situationen zutreffen:
 
--   DWM zeigt eine Darstellung des Fensters an.
--   Das [**dwmwa-Attribut \_ enthält ein \_ berühmtes \_ Bitmap**](/windows/desktop/api/Dwmapi/ne-dwmapi-dwmwindowattribute) -Attribut, das im Fenster festgelegt ist.
--   Das Fenster hat keine zwischengespeicherte Bitmap festgelegt.
--   Es ist Platz im Cache für eine andere Bitmap vorhanden.
+-   DWM zeigt eine repräsentative Darstellung des Fensters an.
+-   Das [**\_ \_ BITMAP-Attribut \_ DWMWA HAS BITMAP**](/windows/desktop/api/Dwmapi/ne-dwmapi-dwmwindowattribute) ist im Fenster festgelegt.
+-   Im Fenster wurde keine zwischengespeicherte Bitmap festgelegt.
+-   Im Cache ist Platz für eine andere Bitmap.
 
-Das Fenster, das diese Nachricht empfängt, sollte Antworten, indem Sie eine Bitmap erzeugen, die nicht größer als die in den Nachrichten Parametern angeforderte Größe ist. Das Fenster ruft dann die Funktion " [**dwmsetticonfiguration**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmseticonicthumbnail) " auf, um die Standard Miniaturansicht zu überschreiben. Wenn das Fenster keine Bitmap in einem bestimmten Zeitraum bereitstellt, verwendet DWM eine eigene Standarddarstellung für das Fenster.
+Das Fenster, das diese Nachricht empfängt, sollte reagieren, indem eine Bitmap generiert wird, die nicht größer als die in den Nachrichtenparametern angeforderte Größe ist. Das Fenster ruft dann die [**DwmSetIconicThumbnail-Funktion**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmseticonicthumbnail) auf, um die Standardminiaturansicht zu überschreiben. Wenn das Fenster in einem bestimmten Zeitraum keine Bitmap liefert, verwendet DWM eine eigene Standarddarstellung für das Fenster.
 
-Das Fenster muss dem aufrufenden Prozess angehören.
+Das Fenster muss zum aufrufenden Prozess gehören.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie auf die **WM- \_ dwmsendiimc-Meldung** reagiert wird. Im Beispiel wird [**dwmtarticonfiguration**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmseticonicthumbnail)mit einem Handle für eine angepasste, geräteunabhängige Bitmap aufgerufen, die als Windows-Darstellung verwendet werden soll.
+Das folgende Codebeispiel zeigt, wie sie auf die **WM-Nachricht \_ DWMSENDICONICTHUMBNAIL** reagieren. Im Beispiel wird [**DwmSetIconicThumbnail**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwmseticonicthumbnail)mit einem Handle für eine benutzerdefinierte, geräteunabhängige Bitmap zur Verwendung als Darstellung des Fensters verwendet.
 
 
 ```C++
@@ -82,7 +82,7 @@ Im folgenden Codebeispiel wird gezeigt, wie auf die **WM- \_ dwmsendiimc-Meldung
 
 
 
-Das komplette Beispiel finden Sie im Beispiel [Anpassen einer Miniaturansicht und Live Vorschau Bitmap](dwm-sample-customizethumbnail.md) .
+Das vollständige Beispiel finden Sie im Beispiel [Customize an Thumbnail Thumbnail and a Live Preview Bitmap (Anpassen einer miniaturisierten Miniaturansicht und einer Livevorschaubitmap).](dwm-sample-customizethumbnail.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,9 +90,9 @@ Das komplette Beispiel finden Sie im Beispiel [Anpassen einer Miniaturansicht un
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>Dwmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Dwmapi.h</dt> </dl> |
 
 
 
@@ -100,10 +100,10 @@ Das komplette Beispiel finden Sie im Beispiel [Anpassen einer Miniaturansicht un
 
 <dl> <dt>
 
-[**Dwminvalidateiconfiguration**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwminvalidateiconicbitmaps)
+[**DwmInvalidateIconicBitmaps**](/windows/desktop/api/Dwmapi/nf-dwmapi-dwminvalidateiconicbitmaps)
 </dt> <dt>
 
-[**WM \_ dwmsendiconiclivepreviewbitmap**](wm-dwmsendiconiclivepreviewbitmap.md)
+[**WM \_ DWMSENDICONICLIVEPREVIEWBITMAP**](wm-dwmsendiconiclivepreviewbitmap.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: D3DX_INT_to_FLOAT-Funktion
-description: Konvertiert einen int-Wert in float.
+description: Konvertiert einen INT-Wert in FLOAT.
 ms.assetid: bee2fb3e-ffde-4013-a321-275d6beb5f77
 keywords:
 - D3DX_INT_to_FLOAT-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06a4d588661b1b2f5ddc14c7564699c7d2b47b4e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 97d49320c2b7bfd53b2fa4e0303a7d2e9bf6c22427557ee3827aed31f5915d1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855490"
 ---
-# <a name="d3dx_int_to_float-function"></a>D3DX \_ int \_ to \_ float-Funktion
+# <a name="d3dx_int_to_float-function"></a>D3DX \_ INT \_ zu \_ FLOAT-Funktion
 
-Konvertiert einen int-Wert in float.
+Konvertiert einen INT-Wert in FLOAT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ FLOAT D3DX_INT_to_FLOAT(
 
 <dl> <dt>
 
-*\_Ramelow* 
+*\_V* 
 </dt> <dd>
 
 Der v-Wert.
@@ -48,7 +48,7 @@ Der v-Wert.
 *\_Skalieren* 
 </dt> <dd>
 
-Der Skalierungs Wert.
+Der Skalierungswert.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Der konvertierte int-Wert.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -73,7 +73,7 @@ Der konvertierte int-Wert.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

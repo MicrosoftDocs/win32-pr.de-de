@@ -1,33 +1,33 @@
 ---
-description: Wenn eine SOAP-fähige Anwendung von einem Server im Proxy Modus exportiert wurde, können Clients, die Sie importieren, automatisch auf die Methoden der enthaltenen Komponenten zugreifen, Remote als Webdienste, die vom Server im Client aktivierten Objekt Modus (Cao) angeboten werden. Dies ermöglicht die einfache Bereitstellung der Funktionalität einer COM+-Anwendung in einem Netzwerk als XML-Webdienst.
+description: Wenn eine SOAP-fähige Anwendung von einem Server im Proxymodus exportiert wurde, können Clients, die sie importieren, automatisch auf die Methoden der Enthaltenen Komponenten zugreifen, die sie remote als Webdienste enthält, die vom Server im clientaktivierten Objektmodus (CAO) angeboten werden. Dadurch können Sie die Funktionalität einer COM+-Anwendung ganz einfach über ein Netzwerk als XML-Webdienst bereitstellen.
 ms.assetid: 7f4783f7-4f53-4f0b-bb64-ae7903097d6c
-title: Importieren einer SOAP-Enabled Anwendung
+title: Importieren einer SOAP-Enabled-Anwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d9faca91a726caea765d4b2ca227ddba0ff3a2f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1a41a60c2b5ca69197582a684920e9e935f28631779bc632810049f1a7d03945
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858920"
 ---
-# <a name="importing-a-soap-enabled-application"></a>Importieren einer SOAP-Enabled Anwendung
+# <a name="importing-a-soap-enabled-application"></a>Importieren einer SOAP-Enabled-Anwendung
 
-Wenn eine SOAP-fähige Anwendung von einem Server im Proxy Modus [exportiert](exporting-a-soap-enabled-application.md) wurde, können Clients, die Sie importieren, automatisch auf die Methoden der enthaltenen Komponenten zugreifen, Remote als Webdienste, die vom Server im Client aktivierten Objekt Modus (Cao) angeboten werden. Dies ermöglicht die einfache Bereitstellung der Funktionalität einer COM+-Anwendung in einem Netzwerk als XML-Webdienst.
+Wenn eine SOAP-fähige Anwendung von einem Server im Proxymodus [exportiert](exporting-a-soap-enabled-application.md) wurde, können Clients, die sie importieren, automatisch auf die Methoden der Enthaltenen Komponenten zugreifen, die sie remote als Webdienste enthält, die vom Server im clientaktivierten Objektmodus (CAO) angeboten werden. Dadurch können Sie die Funktionalität einer COM+-Anwendung ganz einfach über ein Netzwerk als XML-Webdienst bereitstellen.
 
-Wenn die Komponenten einer Anwendung, die auf diese Weise importiert werden, auf dem Client verwendet werden, werden Sie nicht auf dem Client ausgeführt, sondern der Zugriff erfolgt über einen Remote Zugriff mithilfe des XML-Webdiensts, der von dem Server bereitgestellt wird, von dem die Anwendung exportiert wurde. Ausführliche Informationen zur Verwendung der Komponenten einer Anwendung, die auf diese Weise importiert werden, finden Sie unter [zugreifen auf XML-Webdienste im Modus "Cao](accessing-xml-web-services-in-cao-mode.md)".
+Wenn die Auf diese Weise importierten Komponenten einer Anwendung auf dem Client verwendet werden, werden sie nicht auf dem Client ausgeführt, sondern über den XML-Webdienst, der vom Server bereitgestellt wird, von dem die Anwendung exportiert wurde, remote aufgerufen. Ausführliche Informationen zur Verwendung der Komponenten einer Auf diese Weise importierten Anwendung finden Sie unter [Zugreifen auf XML-Webdienste im CAO-Modus.](accessing-xml-web-services-in-cao-mode.md)
 
-## <a name="component-services-administrative-tool"></a>Verwaltungs Tool für Komponenten Dienste
+## <a name="component-services-administrative-tool"></a>Verwaltungstool "Komponentendienste"
 
-Führen Sie die folgenden Schritte aus, um eine SOAP-fähige Anwendung in einen Client zu importieren:
+Um eine SOAP-fähige Anwendung in einen Client zu importieren, verwenden Sie die folgenden Schritte:
 
-1.  Öffnen Sie in der Konsolen Struktur des Verwaltungs Programms Komponenten Dienste unter **Komponenten Dienste** den Ordner, der dem Client Computer zugeordnet ist, auf dem Sie die Anwendung installieren möchten.
+1.  Öffnen Sie in der Konsolenstruktur des Component Services-Verwaltungstools unter **Komponentendienste** den Ordner, der dem Clientcomputer zugeordnet ist, auf dem Sie die Anwendung installieren möchten.
 
-2.  Klicken Sie mit der rechten Maustaste auf den **com+-Anwendungs** Ordner des Clients, und wählen Sie dann **neu** aus. Der **COM+-Anwendungsinstallations-Assistent** wird angezeigt.
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **COM+-Anwendungen** des Clients, und wählen Sie dann **Neu** aus. Der **COM+-Anwendungsinstallations-Assistent** wird angezeigt.
 
-3.  Klicken Sie im **com+**-Anwendungsinstallations-Assistenten auf **vorgefertigte Anwendung (en) installieren**.
+3.  Klicken Sie im **COM+-Anwendungsinstallations-Assistenten** auf **Vordefinierte Anwendungen installieren.**
 
-4.  Suchen Sie im Netzwerk nach dem Netzwerkpfad der MSI-Datei auf dem Server, auf dem Sie die Anwendung installieren möchten, oder geben Sie ihn an.
+4.  Durchsuchen Sie das Netzwerk, um den Netzwerkpfad der MSI-Datei auf dem Server zu suchen oder anzugeben, von dem aus Sie die Anwendung installieren möchten.
 
 ## <a name="visual-basic"></a>Visual Basic
 
@@ -37,21 +37,21 @@ Nicht anwendbar.
 
 Nicht anwendbar.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-COM-Komponenten werden durch eine GUID identifiziert, die sich ändert, wenn die Komponenten neu kompiliert werden. Wenn eine konfigurierte COM-Komponente, die als XML-Webdienst verfügbar gemacht wird, neu kompiliert wird, werden die Client Anwendungen, die Sie verwenden, unterbrechen. Wenn also eine Komponente, die als XML-Webdienst verfügbar gemacht wird, neu kompiliert wird, sollten die Clients die Anwendungen erneut importieren, die die Komponente verwenden.
+COM-Komponenten werden durch eine GUID identifiziert, die sich ändert, wenn die Komponenten neu kompiliert werden. Wenn eine konfigurierte COM-Komponente, die als XML-Webdienst verfügbar gemacht wird, neu kompiliert wird, werden Clientanwendungen, die sie verwenden, ausfallen. Wenn daher eine Komponente, die als XML-Webdienst verfügbar gemacht wird, neu kompiliert wird, sollten Clients die Anwendungen, die die Komponente verwenden, erneut importieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Übersicht über den COM+ SOAP-Dienst](com--soap-service-overview.md)
+[Übersicht über den COM+-SOAP-Dienst](com--soap-service-overview.md)
 </dt> <dt>
 
 [Erstellen von XML-Webdiensten](creating-xml-web-services.md)
 </dt> <dt>
 
-[Exportieren einer SOAP-Enabled Anwendung](exporting-a-soap-enabled-application.md)
+[Exportieren einer SOAP-Enabled-Anwendung](exporting-a-soap-enabled-application.md)
 </dt> </dl>
 
  

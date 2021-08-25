@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen rechteckigen Patch für hohe Reihenfolge.
+description: Beschreibt einen rechteckigen, hochwertigen Patch.
 ms.assetid: 5f195009-d047-4dc0-a386-e1a434914e34
-title: D3DRECTPATCH_INFO-Struktur (D3D9Types. h)
+title: D3DRECTPATCH_INFO-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: a2b7fedbaac2cc9c204d4691828d31794cea1f47
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b73ebc548031fd931cce0d34edfadf81a73d71d60edf649718875c52cfc992f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850225"
 ---
-# <a name="d3drectpatch_info-structure"></a>D3DRECTPATCH \_ Info-Struktur
+# <a name="d3drectpatch_info-structure"></a>D3DRECTPATCH \_ INFO-Struktur
 
-Beschreibt einen rechteckigen Patch für hohe Reihenfolge.
+Beschreibt einen rechteckigen, hochwertigen Patch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,58 +45,58 @@ typedef struct D3DRECTPATCH_INFO {
 
 <dl> <dt>
 
-**Startvertexoffsetwidth**
+**StartVertexOffsetWidth**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Vertex-Offset Breite wird als Anzahl von Vertices gestartet.
+Beginnende Scheitelpunktoffsetbreite in Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
-**Startvertexoffsetheight**
+**StartVertexOffsetHeight**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Vertex-Offset Höhe wird in der Anzahl der Scheitel Punkte gestartet.
+Anfangshöhe des Scheitelpunktoffsets in Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Breite der einzelnen Scheitel Punkte (in Anzahl der Vertices).
+Breite der einzelnen Scheitelpunkte in Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
 **Height**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Höhe der einzelnen Scheitel Punkte (in Anzahl der Vertices).
+Höhe jedes Scheitelpunkts in Anzahl der Scheitelpunkte.
 
 </dd> <dt>
 
 **Schritt**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Breite des imaginären zweidimensionalen Scheitelpunkt Arrays, das denselben Raum einnimmt wie der Scheitelpunkt Puffer. Ein Beispiel finden Sie im folgenden Diagramm.
+Breite des imaginären zweidimensionalen Vertexarrays, das denselben Raum wie der Scheitelpunktpuffer einnimmt. Ein Beispiel finden Sie im folgenden Diagramm.
 
 </dd> <dt>
 
@@ -107,15 +107,15 @@ Typ: **[ **D3DBASISTYPE**](./d3dbasistype.md)**
 
 </dd> <dd>
 
-Member des [**D3DBASISTYPE**](./d3dbasistype.md) -Enumerationstyps, der den Basistyp für den rechteckigen hochwertigen Patch definiert.
+Member des [**aufzählten D3DBASISTYPE-Typs,**](./d3dbasistype.md) der den Basistyp für den rechteckigen, hochwertigen Patch definiert.
 
 
 
-| Wert                 | Unterstützte Reihenfolge            | Breite und Höhe                  |
+| Wert                 | Auftrag unterstützt            | Breite und Höhe                  |
 |-----------------------|----------------------------|-----------------------------------|
-| D3DBASIS \_ Bezier      | Linear, kubisch und quintisch | Width = Height = (DWORD) Reihenfolge + 1 |
-| D3DBASIS \_ Bspline     | Linear, kubisch und quintisch | Width = Height > Reihenfolge (DWORD)  |
-| D3DBASIS \_ Interpolate | Kilometern                      | Width = Height > Reihenfolge (DWORD)  |
+| D3DBASIS \_ BEZIER      | Linear, kubisch undic | Width = height = (DWORD)order + 1 |
+| D3DBASIS \_ BSPLINE     | Linear, kubisch undic | Width = height > (DWORD)order  |
+| D3DBASIS \_ INTERPOLATE | Kubische                      | Width = height > (DWORD)order  |
 
 
 
@@ -130,19 +130,19 @@ Typ: **[ **D3DDEGREETYPE**](./d3ddegreetype.md)**
 
 </dd> <dd>
 
-Member des [**D3DDEGREETYPE**](./d3ddegreetype.md) -Enumerationstyps, der den Grad für den rechteckigen Patch definiert.
+Member des [**aufzählten D3DDEGREETYPE-Typs,**](./d3ddegreetype.md) der den Grad für den rechteckigen Patch definiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden Diagramm werden die Parameter angegeben, die einen Rechteck Patch angeben.
+Das folgende Diagramm identifiziert die Parameter, die einen Rechteckpatch angeben.
 
-![Diagramm eines rechteckigen hochwertigen Patches und der Parameter, die es angeben](images/hop-rectpatch.png)
+![Diagramm eines rechteckigen, hochwertigen Patches und der Parameter, die ihn angeben](images/hop-rectpatch.png)
 
-Alle Scheitel Punkte im Scheitelpunkt Puffer werden als schwarzer Punkt angezeigt. In diesem Fall verfügt der Vertex-Puffer über 20 Vertices, von denen 16 im Rechteck Patch sind. Der Stride-Wert ist die Anzahl der Scheitel Punkte in der Breite des Scheitelpunkt Puffers (in diesem Fall fünf). Der x-Offset bis zum ersten Scheitelpunkt wird startindexvertexwidth genannt und ist in diesem Fall 1. Der y-Offset für den ersten patchvertex heißt startindexvertexheight und ist in diesem Fall 0.
+Jeder Scheitelpunkt im Scheitelpunktpuffer wird als schwarzer Punkt angezeigt. In diesem Fall enthält der Scheitelpunktpuffer 20 Scheitelpunkte, von denen sich 16 im Rechteckpatch befinden. Der Schritt ist die Anzahl der Scheitelpunkte in der Breite des Scheitelpunktpuffers, in diesem Fall fünf. Der x-Offset zum ersten Scheitelpunkt wird startIndexVertexWidth genannt und ist in diesem Fall 1. Der y-Offset zum ersten Patchvertex wird als StartIndexVertexHeight bezeichnet und ist in diesem Fall 0.
 
-Wenn Sie einen Stream einzelner rechteckiger Patches (nicht-Mosaik) rendern möchten, sollten Sie die Geometrie als lange schmale (1 x N) rechteckige Patch interpretieren. Die **D3DRECTPATCH \_ Info** -Struktur für einen solchen Strip (kubische Bézier) würde wie folgt eingerichtet werden.
+Zum Rendern eines Streams einzelner rechteckiger Patches (nicht-ung) sollten Sie Ihre Geometrie als langen schmalen (1 x N) rechteckigen Patch interpretieren. Die **D3DRECTPATCH \_ INFO-Struktur** für einen solchen Strip (kubischer Bézier) wird wie folgt eingerichtet.
 
 
 ```
@@ -167,7 +167,7 @@ RectInfo.StartVertexOffsetHeight = 4*i;  // The variable i is the index of the
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
@@ -178,7 +178,7 @@ RectInfo.StartVertexOffsetHeight = 4*i;  // The variable i is the index of the
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**Drawrectpatch**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawrectpatch)
+[**DrawRectPatch**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawrectpatch)
 </dt> <dt>
 
 [**D3DXTessellateRectPatch**](d3dxtessellaterectpatch.md)

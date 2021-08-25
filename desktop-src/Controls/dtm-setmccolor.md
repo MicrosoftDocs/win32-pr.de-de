@@ -1,9 +1,9 @@
 ---
-title: DTM_SETMCCOLOR Meldung (kommstrg. h)
-description: Legt die Farbe für einen bestimmten Teil des Monats Kalenders innerhalb eines DTP-Steuer Elements fest. Sie können diese Nachricht explizit senden oder das DateTime- \_ setmonthcalcolor-Makro verwenden.
+title: DTM_SETMCCOLOR (Commctrl.h)
+description: Legt die Farbe für einen bestimmten Teil des Monatskalenders innerhalb eines DTP-Steuerelements (Date and Time Picker) fest. Sie können diese Nachricht explizit senden oder das \_ DateTime-Makro SetMonthCalColor verwenden.
 ms.assetid: cee72c1d-58da-4ee5-850e-a615ec6ad079
 keywords:
-- Windows-Steuerelemente für DTM_SETMCCOLOR Meldung
+- DTM_SETMCCOLOR von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e496abb4dd28b040dd4a8035073ffa32a3f3847
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5154c2e450f5ef3c12c85fe3307f37958fea807226ab436241038c9ad639d4dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877820"
 ---
-# <a name="dtm_setmccolor-message"></a>DTM- \_ Nachricht "Abmeldung"
+# <a name="dtm_setmccolor-message"></a>SMS \_ SETMCCOLOR-Meldung
 
-Legt die Farbe für einen bestimmten Teil des Monats Kalenders innerhalb eines DTP-Steuer Elements fest. Sie können diese Nachricht explizit senden oder das [**DateTime- \_ setmonthcalcolor**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setmonthcalcolor) -Makro verwenden.
+Legt die Farbe für einen bestimmten Teil des Monatskalenders innerhalb eines DTP-Steuerelements (Date and Time Picker) fest. Sie können diese Nachricht explizit senden oder das [**\_ DateTime-Makro SetMonthCalColor**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setmonthcalcolor) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,18 +32,18 @@ Legt die Farbe für einen bestimmten Teil des Monats Kalenders innerhalb eines D
 *wParam* 
 </dt> <dd>
 
-Ein Wert vom Typ **int** , der angibt, welche Monatskalender Farbe festgelegt werden soll. Die folgenden Werte sind möglich:
+Ein Wert vom Typ **int,** der an gibt, welche Monatskalenderfarbe festgelegt werden soll. Die folgenden Werte sind möglich:
 
 
 
 | Wert                                                                                                                                                                     | Bedeutung                                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="MCSC_BACKGROUND"></span><span id="mcsc_background"></span><dl> <dt>**MCSC- \_ Hintergrund**</dt> </dl>       | Legen Sie die zwischen den Monaten angezeigte Hintergrundfarbe fest.<br/>                                                                                                                                      |
-| <span id="MCSC_MONTHBK"></span><span id="mcsc_monthbk"></span><dl> <dt>**MCSC \_ monthbk**</dt> </dl>                | Legen Sie die im Monat angezeigte Hintergrundfarbe fest.<br/>                                                                                                                                    |
-| <span id="MCSC_TEXT"></span><span id="mcsc_text"></span><dl> <dt>**MCSC- \_ Text**</dt> </dl>                         | Legen Sie die Farbe fest, mit der Text innerhalb eines Monats angezeigt wird.<br/>                                                                                                                                      |
-| <span id="MCSC_TITLEBK"></span><span id="mcsc_titlebk"></span><dl> <dt>**MCSC \_ titlebk**</dt> </dl>                | Legen Sie die im Titel des Kalenders angezeigte Hintergrundfarbe fest.<br/>                                                                                                                             |
-| <span id="MCSC_TITLETEXT"></span><span id="mcsc_titletext"></span><dl> <dt>**MCSC \_ TitleText**</dt> </dl>          | Legen Sie die Farbe fest, die verwendet wird, um Text innerhalb des Kalender Titels anzuzeigen.<br/>                                                                                                                         |
-| <span id="MCSC_TRAILINGTEXT"></span><span id="mcsc_trailingtext"></span><dl> <dt>**MCSC- \_ trailingtext**</dt> </dl> | Legen Sie die Farbe fest, die verwendet wird, um den Header Tag und den nachfolgenden Tag Header und nachfolgende Tage sind die Tage aus den vorherigen und den nächsten Monaten, die im Kalender des aktuellen Monats angezeigt werden.<br/> |
+| <span id="MCSC_BACKGROUND"></span><span id="mcsc_background"></span><dl> <dt>**\_MCSC-HINTERGRUND**</dt> </dl>       | Legen Sie die Hintergrundfarbe fest, die zwischen Monaten angezeigt wird.<br/>                                                                                                                                      |
+| <span id="MCSC_MONTHBK"></span><span id="mcsc_monthbk"></span><dl> <dt>**MCSC \_ MONTHBK**</dt> </dl>                | Legen Sie die Hintergrundfarbe fest, die innerhalb des Monats angezeigt wird.<br/>                                                                                                                                    |
+| <span id="MCSC_TEXT"></span><span id="mcsc_text"></span><dl> <dt>**\_MCSC-TEXT**</dt> </dl>                         | Legen Sie die Farbe fest, die zum Anzeigen von Text innerhalb eines Monats verwendet wird.<br/>                                                                                                                                      |
+| <span id="MCSC_TITLEBK"></span><span id="mcsc_titlebk"></span><dl> <dt>**MCSC \_ TITLEBK**</dt> </dl>                | Legen Sie die Hintergrundfarbe fest, die im Titel des Kalenders angezeigt wird.<br/>                                                                                                                             |
+| <span id="MCSC_TITLETEXT"></span><span id="mcsc_titletext"></span><dl> <dt>**MCSC \_ TITLETEXT**</dt> </dl>          | Legen Sie die Farbe fest, die zum Anzeigen von Text im Titel des Kalenders verwendet wird.<br/>                                                                                                                         |
+| <span id="MCSC_TRAILINGTEXT"></span><span id="mcsc_trailingtext"></span><dl> <dt>**MCSC \_ TRAILINGTEXT**</dt> </dl> | Legen Sie die Farbe fest, die verwendet wird, um Kopfzeilentag- und Nachtagstext anzuzeigen. Header und nachfolgende Tage sind die Tage aus den vorherigen und folgenden Monaten, die im Kalender des aktuellen Monats angezeigt werden.<br/> |
 
 
 
@@ -54,17 +54,17 @@ Ein Wert vom Typ **int** , der angibt, welche Monatskalender Farbe festgelegt we
 *lParam* 
 </dt> <dd>
 
-Ein **COLORREF** -Wert, der die Farbe darstellt, die für den angegebenen Bereich des Monats Kalenders festgelegt wird.
+Ein **COLORREF-Wert,** der die Farbe darstellt, die für den angegebenen Bereich des Monatskalenders festgelegt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **COLORREF** -Wert zurück, der die vorherige Farbeinstellung für den angegebenen Teil des Monatskalender-Steuer Elements darstellt, wenn erfolgreich. Andernfalls gibt die Meldung-1 zurück.
+Gibt einen **COLORREF-Wert** zurück, der bei Erfolg die vorherige Farbeinstellung für den angegebenen Teil des Monatskalender-Steuerelements darstellt. Andernfalls gibt die Meldung -1 zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkung, es sei denn, *wParam* ist ein MCSC- \_ Hintergrund.
+Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen, es sei *denn, wParam* ist MCSC \_ BACKGROUND.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkung, es sei d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

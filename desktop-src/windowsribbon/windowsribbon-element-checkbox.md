@@ -3,7 +3,7 @@ title: CheckBox-Element
 description: Stellt ein Kontrollkästchen-Steuerelement dar.
 ms.assetid: ebb44d6d-91fb-4a59-9b62-4a694fea8a4d
 keywords:
-- CheckBox-Element Im Windows-Menüband
+- CheckBox-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4d9357337e569f43b14c34798c9c6e8da4b7b10b
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: e1b4e1af322a573d5d51ddb35f11f51f6a873c60651e364cf81fc4d6adb5f082
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840940"
 ---
 # <a name="checkbox-element"></a>CheckBox-Element
 
 Stellt ein [Kontrollkästchen-Steuerelement](windowsribbon-controls-checkbox.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <CheckBox
@@ -46,9 +46,9 @@ Stellt ein [Kontrollkästchen-Steuerelement](windowsribbon-controls-checkbox.md)
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -56,10 +56,10 @@ Stellt ein [Kontrollkästchen-Steuerelement](windowsribbon-controls-checkbox.md)
 <td><strong>ApplicationDefaults.IsChecked</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Dieses Attribut ist nur gültig, wenn das <strong>CheckBox-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults ist.</strong></a> <br/> Auf einen der folgenden Werte beschränkt:<br/>
+<td>Dieses Attribut ist nur gültig, wenn das <strong>CheckBox-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults</strong></a>ist. <br/> Beschränkt auf einen der folgenden Werte:<br/>
 <blockquote>
 [!Note]<br />
-Das <strong>CheckBox-Kontrollkästchen</strong> unterstützt keinen tertiären oder unbestimmten Zustand.
+Das <strong>CheckBox-Kontrollkästchen</strong> unterstützt keinen bildungs- oder unbestimmten Zustand.
 </blockquote>
 <br/> <br/>
 <dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
@@ -68,8 +68,8 @@ Das <strong>CheckBox-Kontrollkästchen</strong> unterstützt keinen tertiären o
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -101,13 +101,13 @@ Es gibt keine untergeordneten Elemente.
 
 Optional oder erforderlich, je nach übergeordnetem Element.
 
-Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
 
 ## <a name="examples"></a>Beispiele
 
 Im folgenden Beispiel wird das grundlegende Markup für das **CheckBox-Element** veranschaulicht.
 
-Dieser Codeabschnitt zeigt die **Deklarationen des** CheckBox-Befehls.
+Dieser Codeabschnitt zeigt die Deklarationen von **CheckBox-Befehlen.**
 
 
 ```XML
@@ -123,7 +123,7 @@ Dieser Codeabschnitt zeigt die **Deklarationen des** CheckBox-Befehls.
 
 
 
-Dieser Codeabschnitt zeigt die **CheckBox-Steuerelementdeklarationen.**
+Dieser Codeabschnitt zeigt die CheckBox-Steuerelementdeklarationen. 
 
 
 ```XML
@@ -140,7 +140,7 @@ Dieser Codeabschnitt zeigt die **CheckBox-Steuerelementdeklarationen.**
 * **Kann leer sein:** Ja
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

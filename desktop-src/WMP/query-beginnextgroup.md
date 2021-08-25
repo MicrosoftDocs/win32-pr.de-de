@@ -1,11 +1,11 @@
 ---
-title: Query. beginnextgroup-Methode
-description: Die beginnextgroup-Methode beginnt mit einer neuen Bedingungs Gruppe. | Query. beginnextgroup-Methode
+title: Query.beginNextGroup-Methode
+description: Die beginNextGroup-Methode beginnt eine neue Bedingungsgruppe. | Query.beginNextGroup-Methode
 ms.assetid: e0c59bd0-0789-413e-ade8-8d53c6f3e19b
 keywords:
-- beginnextgroup-Methode, Windows-Media Player
-- beginnextgroup-Methode, Windows Media Player, Abfrage Klasse
-- Query-Klasse, Windows Media Player, beginnextgroup-Methode
+- beginNextGroup-Windows Media Player
+- beginNextGroup-Methode Windows Media Player , Query-Klasse
+- Abfrageklasse Windows Media Player , beginNextGroup-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46c043b9a0ea506e054877b4d8122304ced75e28
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d12f8e37c32b83afb3e518deda09643033c7f396d8c52a2898893a01dc930d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861850"
 ---
-# <a name="querybeginnextgroup-method"></a>Query. beginnextgroup-Methode
+# <a name="querybeginnextgroup-method"></a>Query.beginNextGroup-Methode
 
-Die **beginnextgroup** -Methode beginnt mit einer neuen Bedingungs Gruppe.
+Die **beginNextGroup-Methode** beginnt eine neue Bedingungsgruppe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Starten einer neuen Bedingungs Gruppe impliziert, dass Sie die aktuelle Bedingungs Gruppe abgeschlossen haben. Die neue Bedingungs Gruppe wird immer mit der-oder-Logik mit der vorherigen Bedingungs Gruppe verkettet.
+Das Beginnen einer neuen Bedingungsgruppe impliziert, dass Sie die aktuelle Bedingungsgruppe abgeschlossen haben. Die neue Bedingungsgruppe wird immer mithilfe der OR-Logik mit der vorherigen Bedingungsgruppe verkettet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,19 +63,19 @@ Das Starten einer neuen Bedingungs Gruppe impliziert, dass Sie die aktuelle Bedi
 
 <dl> <dt>
 
-[**Mediacollection. kreatequery**](mediacollection-createquery.md)
+[**MediaCollection.createQuery**](mediacollection-createquery.md)
 </dt> <dt>
 
-[**Mediacollection. getplaylistbyquery**](mediacollection-getplaylistbyquery.md)
+[**MediaCollection.getPlaylistByQuery**](mediacollection-getplaylistbyquery.md)
 </dt> <dt>
 
-[**Mediacollection. getstringcollectionbyquery**](mediacollection-getstringcollectionbyquery.md)
+[**MediaCollection.getStringCollectionByQuery**](mediacollection-getstringcollectionbyquery.md)
 </dt> <dt>
 
-[**Query-Objekt**](query-object.md)
+[**Abfrageobjekt**](query-object.md)
 </dt> <dt>
 
-[**Query. addcondition**](query-addcondition.md)
+[**Query.addCondition**](query-addcondition.md)
 </dt> </dl>
 
  

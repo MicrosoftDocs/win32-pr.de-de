@@ -1,68 +1,68 @@
 ---
-title: Bearbeiten von Steuerelement Meldungen
-description: Bearbeiten von Steuerelement Meldungen
+title: Bearbeiten von Steuerungsmeldungen
+description: Bearbeiten von Steuerungsmeldungen
 ms.assetid: b5c12b71-b7c3-4331-a656-15718121ddf4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d57fcf4077b74217140b201cf3ac95bfc620912
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5eb870fbb76eff8e90b5a8cf92bc8826653c04e021bc49e099d610c5cb62a173
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827340"
 ---
-# <a name="edit-control-messages"></a>Bearbeiten von Steuerelement Meldungen
+# <a name="edit-control-messages"></a>Bearbeiten von Steuerungsmeldungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**EM \_ CanUndo**](em-canundo.md)
--   [**EM \_ charfrompos**](em-charfrompos.md)
--   [**EM \_ emptyundobuffer**](em-emptyundobuffer.md)
--   [**EM- \_ Zeilen Trennlinien**](em-fmtlines.md)
--   [**EM \_ getcuebanner**](em-getcuebanner.md)
--   [**EM \_ getfirstvisibleline**](em-getfirstvisibleline.md)
--   [**EM \_ GetHandle**](em-gethandle.md)
--   [**\_gethilite EM**](em-gethilite.md)
--   [**EM \_ getimestatus**](em-getimestatus.md)
--   [**EM \_ getlimittext**](em-getlimittext.md)
--   [**EM \_ getline**](em-getline.md)
--   [**EM \_ getLineCount**](em-getlinecount.md)
--   [**EM- \_ getMargin**](em-getmargins.md)
--   [**EM \_ getmodify**](em-getmodify.md)
--   [**EM \_ getpasswordchar**](em-getpasswordchar.md)
--   [**EM \_ GetRect**](em-getrect.md)
--   [**EM- \_ GetSEL**](em-getsel.md)
--   [**EM \_ getthumb**](em-getthumb.md)
--   [**EM \_ getwordbreakproc**](em-getwordbreakproc.md)
--   [**EM \_ hideballontip**](em-hideballoontip.md)
--   [**EM- \_ limittext**](em-limittext.md)
--   [**EM \_ linefromchar**](em-linefromchar.md)
--   [**EM \_ Linan DEX**](em-lineindex.md)
--   [**EM- \_ LineLength**](em-linelength.md)
--   [**EM- \_ linescroll**](em-linescroll.md)
--   [**EM \_ nosetfocus**](em-nosetfocus.md)
--   [**EM \_ posfromchar**](em-posfromchar.md)
--   [**EM \_ replacesel**](em-replacesel.md)
--   [**EM- \_ Scroll**](em-scroll.md)
--   [**EM \_ scrollcaret**](em-scrollcaret.md)
--   [**EM \_ setcuebanner**](em-setcuebanner.md)
--   [**EM- \_ andle**](em-sethandle.md)
--   [**EM \_ -Server**](em-sethilite.md)
--   [**EM- \_ Zeit Status**](em-setimestatus.md)
--   [**EM \_ SetLimitText**](em-setlimittext.md)
--   [**EM- \_ setMargin**](em-setmargins.md)
--   [**EM \_ setmodify**](em-setmodify.md)
--   [**EM \_ setpasswordchar**](em-setpasswordchar.md)
--   [**EM- \_ treadonly**](em-setreadonly.md)
--   [**EM \_ SetRect**](em-setrect.md)
--   [**EM \_ setrectnp**](em-setrectnp.md)
--   [**EM- \_ tsel**](em-setsel.md)
--   [**EM- \_ settabstopps**](em-settabstops.md)
--   [**EM \_ setwordbreakproc**](em-setwordbreakproc.md)
--   [**EM \_ ShowBalloonTip**](em-showballoontip.md)
--   [**EM- \_ Fokus**](em-takefocus.md)
--   [**EM \_ rückgängig machen**](em-undo.md)
--   [**WM \_ rückgängig machen**](wm-undo.md)
+-   [**EM \_ CANUNDO**](em-canundo.md)
+-   [**EM \_ CHARFROMPOS**](em-charfrompos.md)
+-   [**EM \_ EMPTYUNDOBUFFER**](em-emptyundobuffer.md)
+-   [**EM \_ FMTLINES**](em-fmtlines.md)
+-   [**EM \_ GETCUEBANNER**](em-getcuebanner.md)
+-   [**EM \_ GETFIRSTVISIBLELINE**](em-getfirstvisibleline.md)
+-   [**EM \_ GETHANDLE**](em-gethandle.md)
+-   [**EM \_ GETHILITE**](em-gethilite.md)
+-   [**EM \_ GETIMESTATUS**](em-getimestatus.md)
+-   [**EM \_ GETLIMITTEXT**](em-getlimittext.md)
+-   [**EM \_ GETLINE**](em-getline.md)
+-   [**EM \_ GETLINECOUNT**](em-getlinecount.md)
+-   [**EM \_ GETMARGINS**](em-getmargins.md)
+-   [**EM \_ GETMODIFY**](em-getmodify.md)
+-   [**EM \_ GETPASSWORDCHAR**](em-getpasswordchar.md)
+-   [**EM \_ GETRECT**](em-getrect.md)
+-   [**EM \_ GETSEL**](em-getsel.md)
+-   [**EM \_ GETTHUMB**](em-getthumb.md)
+-   [**EM \_ GETWORDBREAKPROC**](em-getwordbreakproc.md)
+-   [**EM \_ HIDEBALLOONTIP**](em-hideballoontip.md)
+-   [**EM \_ LIMITTEXT**](em-limittext.md)
+-   [**EM \_ LINEFROMCHAR**](em-linefromchar.md)
+-   [**EM \_ LINEINDEX**](em-lineindex.md)
+-   [**EM \_ LINELENGTH**](em-linelength.md)
+-   [**EM \_ LINESCROLL**](em-linescroll.md)
+-   [**EM \_ NOSETFOCUS**](em-nosetfocus.md)
+-   [**EM \_ POSFROMCHAR**](em-posfromchar.md)
+-   [**EM \_ REPLACESEL**](em-replacesel.md)
+-   [**EM \_ SCROLL**](em-scroll.md)
+-   [**EM \_ SCROLLCARET**](em-scrollcaret.md)
+-   [**EM \_ SETCUEBANNER**](em-setcuebanner.md)
+-   [**EM \_ SETHANDLE**](em-sethandle.md)
+-   [**EM \_ SETHILITE**](em-sethilite.md)
+-   [**EM \_ SETIMESTATUS**](em-setimestatus.md)
+-   [**EM \_ SETLIMITTEXT**](em-setlimittext.md)
+-   [**EM \_ SETMARGINS**](em-setmargins.md)
+-   [**EM \_ SETMODIFY**](em-setmodify.md)
+-   [**EM \_ SETPASSWORDCHAR**](em-setpasswordchar.md)
+-   [**EM \_ SETREADONLY**](em-setreadonly.md)
+-   [**EM \_ SETRECT**](em-setrect.md)
+-   [**EM \_ SETRECTNP**](em-setrectnp.md)
+-   [**EM \_ SETSEL**](em-setsel.md)
+-   [**EM \_ SETTABSTOPS**](em-settabstops.md)
+-   [**EM \_ SETWORDBREAKPROC**](em-setwordbreakproc.md)
+-   [**EM \_ SHOWBALLOONTIP**](em-showballoontip.md)
+-   [**EM \_ TAKEFOCUS**](em-takefocus.md)
+-   [**EM \_ UNDO**](em-undo.md)
+-   [**WM \_ UNDO**](wm-undo.md)
 
  
 

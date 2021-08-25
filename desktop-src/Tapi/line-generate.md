@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Zeile \_ zum Generieren der Nachricht wird gesendet, um die Anwendung zu benachrichtigen, dass die aktuelle Ziffern-oder Tongenerierung beendet wurde.
+description: Die TAPI LINE GENERATE-Meldung wird gesendet, um die Anwendung zu benachrichtigen, dass die aktuelle Ziffern- oder \_ Tongenerierung beendet wurde.
 ms.assetid: 375823c5-22c2-4010-bfb4-5b8b46141c72
-title: LINE_GENERATE Meldung (TAPI. h)
+title: LINE_GENERATE (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b916dc95d1a6343b0f8ebc0eef9e589b04aa2112
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bd3ab0d503d7515fec2cdbd1676eed235cced88e2adfa9fcc1dd354663929e95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774240"
 ---
-# <a name="line_generate-message"></a>Zeile \_ generieren (Meldung)
+# <a name="line_generate-message"></a>LINE \_ GENERATE-Nachricht
 
-Die TAPI- **Zeile zum \_ generieren** der Nachricht wird gesendet, um die Anwendung zu benachrichtigen, dass die aktuelle Ziffern-oder Tongenerierung beendet wurde. Es kann immer nur eine solche Generierungs Anforderung für einen bestimmten Aufruf ausgeführt werden. Diese Meldung wird auch gesendet, wenn die Ziffern-oder Tongenerierung abgebrochen wird.
+Die TAPI **LINE \_ GENERATE-Meldung** wird gesendet, um die Anwendung zu benachrichtigen, dass die aktuelle Ziffern- oder Tongenerierung beendet wurde. Es kann immer nur eine solche Generierungsanforderung für einen bestimmten Aufruf in Bearbeitung sein. Diese Meldung wird auch gesendet, wenn die Ziffern- oder Tongenerierung abgebrochen wird.
 
 
 ```C++
@@ -26,24 +26,24 @@ Die TAPI- **Zeile zum \_ generieren** der Nachricht wird gesendet, um die Anwend
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für den-Befehl.
+Ein Handle für den Aufruf.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wurde.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Der Grund, warum die Ziffern-oder Tongenerierung beendet wurde. Dieser Parameter darf nur eine der [**linegenerateterm- \_ Konstanten**](linegenerateterm--constants.md)sein.
+Der Grund, warum die Ziffern- oder Tongenerierung beendet wurde. Dieser Parameter muss eine und nur eine der [**LINEGENERATETERM-Konstanten \_ sein.**](linegenerateterm--constants.md)
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Nicht verwendet.
 *dwParam3* 
 </dt> <dd>
 
-Die "Takt Anzahl" (Anzahl der Millisekunden seit dem Start von Windows), zu der die Ziffern-oder Tongenerierung abgeschlossen wurde. Bei API-Versionen vor 2,0 wird dieser Parameter nicht verwendet.
+Die "Tickanzahl" (Anzahl von Millisekunden seit Windows gestartet), bei der die Ziffern- oder Tongenerierung abgeschlossen wurde. Bei API-Versionen vor 2.0 wird dieser Parameter nicht verwendet.
 
 </dd> </dl>
 
@@ -65,13 +65,13 @@ Die "Takt Anzahl" (Anzahl der Millisekunden seit dem Start von Windows), zu der 
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Zeile Nachricht \_ generieren** wird nur an die Anwendung gesendet, die die Ziffern-oder Tongenerierung angefordert hat.
+Die **LINE \_ GENERATE-Nachricht** wird nur an die Anwendung gesendet, die die Ziffern- oder Tongenerierung angefordert hat.
 
-Da der durch *dwParam3* angegebene Zeitstempel möglicherweise auf einem anderen Computer als dem erstellt wurde, auf dem die Anwendung ausgeführt wird, ist er nur für den Vergleich mit anderen gleichzeitig auf demselben Zeilen Medium ( [**Zeilen \_ gatherziffern**](line-gatherdigits.md), [**Zeilen \_ monitorziffern**](line-monitordigits.md), [**line \_ monitormedia**](line-monitormedia.md), [**line \_ monitortone**](line-monitortone.md)) generierten Zeitstempel nützlich. Der Tick-Zähler kann nach ungefähr 49,7 Tagen umbrochen werden. Anwendungen müssen dies beim Durchführen von Berechnungen berücksichtigen.
+Da der von *dwParam3* angegebene Zeitstempel möglicherweise auf einem anderen Computer als dem generiert wurde, auf dem die Anwendung ausgeführt wird, ist er nur für den Vergleich mit anderen ähnlich zeitstempelierten Nachrichten nützlich, die auf demselben Zeilengerät generiert wurden [**(LINE \_ GATHERDIGITS,**](line-gatherdigits.md) [**LINE \_ MONITORDIGITS,**](line-monitordigits.md) [**LINE \_ MONITORMEDIA,**](line-monitormedia.md) [**LINE \_ MONITORTONE),**](line-monitortone.md)um deren relative Zeitsteuerung (Trennung zwischen Ereignissen) zu bestimmen. Die Tickanzahl kann nach ungefähr 49,7 Tagen "umschließen". -Anwendungen müssen dies beim Ausführen von Berechnungen berücksichtigen.
 
-Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. b. wenn er mit einer früheren Version von TAPI erstellt wurde), gibt TAPI einen Zeitstempel an dem Punkt an, der dem Dienstanbieter am nächsten liegt, der das Ereignis generiert, sodass der erzeugte Zeitstempel so genau wie möglich ist.
+Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. B. wenn er mit einer früheren Version von TAPI erstellt wurde), stellt TAPI einen Zeitstempel an dem Punkt zur Verfügung, der dem Dienstanbieter am nächsten ist, der das Ereignis generiert, sodass der synthetisierte Zeitstempel so genau wie möglich ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,25 +79,25 @@ Wenn der Dienstanbieter den Zeitstempel nicht generiert (z. b. wenn er mit einer
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Zeilen \_ gatherziffern**](line-gatherdigits.md)
+[**LINE \_ GATHERDIGITS**](line-gatherdigits.md)
 </dt> <dt>
 
-[**Zeilen \_ monitorziffern**](line-monitordigits.md)
+[**LINE \_ MONITORDIGITS**](line-monitordigits.md)
 </dt> <dt>
 
-[**Zeilen- \_ monitormedia**](line-monitormedia.md)
+[**LINE \_ MONITORMEDIA**](line-monitormedia.md)
 </dt> <dt>
 
-[**\_linienmonitortone**](line-monitortone.md)
+[**LINE \_ MONITORTONE**](line-monitortone.md)
 </dt> </dl>
 
  

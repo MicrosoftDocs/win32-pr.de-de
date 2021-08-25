@@ -1,9 +1,9 @@
 ---
-title: EM_EXLIMITTEXT Meldung (RichEdit. h)
-description: Legt eine Obergrenze für den Text fest, der vom Benutzer in ein Rich-Edit-Steuerelement eingefügt oder eingefügt werden kann.
+title: EM_EXLIMITTEXT Nachricht (Richedit.h)
+description: Legt eine Obergrenze auf die Textmenge fest, die der Benutzer in ein Rich-Edit-Steuerelement eingeben oder einfügen kann.
 ms.assetid: 66fcdbb9-99ac-4122-b89c-be4aef80fbae
 keywords:
-- Windows-Steuerelemente für EM_EXLIMITTEXT Meldung
+- EM_EXLIMITTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49c4ebb554e3aa3139a66ca63970356e1261a23f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 98f9879323f3feade3ece536cd130b274b423c98aebedd6b6f5ef1497d995d07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915680"
 ---
-# <a name="em_exlimittext-message"></a>EM \_ exlimittext-Nachricht
+# <a name="em_exlimittext-message"></a>EM \_ EXLIMITTEXT-Nachricht
 
-Legt eine Obergrenze für den Text fest, der vom Benutzer in ein Rich-Edit-Steuerelement eingefügt oder eingefügt werden kann.
+Legt eine Obergrenze auf die Textmenge fest, die der Benutzer in ein Rich-Edit-Steuerelement eingeben oder einfügen kann.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt eine Obergrenze für den Text fest, der vom Benutzer in ein Rich-Edit-Steue
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Gibt die maximale Menge an Text an, die eingegeben werden kann. Wenn dieser Parameter NULL ist, wird das Standard Maximum verwendet, das 64 KB groß ist. Ein COM-Objekt zählt als einzelnes Zeichen.
+Gibt die maximale Textmenge an, die eingegeben werden kann. Wenn dieser Parameter 0 (null) ist, wird das Standardmaximum verwendet, d.h. 64.000 Zeichen. Ein COM-Objekt zählt als einzelnes Zeichen.
 
 </dd> </dl>
 
@@ -47,11 +47,11 @@ Gibt die maximale Menge an Text an, die eingegeben werden kann. Wenn dieser Para
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das durch die **EM \_ exlimittext** -Nachricht festgelegte Text Limit schränkt nicht die Menge an Text ein, die Sie in ein Rich-Edit-Steuerelement mithilfe der [**EM- \_ StreamIn**](em-streamin.md) -Nachricht streamen können, wobei *LPARAM* auf SF Text festgelegt ist \_ . Allerdings wird die Menge des Texts, den Sie in ein Rich-Edit-Steuerelement streamen können, mithilfe der **EM- \_ StreamIn** -Nachricht mit *LPARAM* , die auf SF RTF festgelegt ist, eingeschränkt \_ .
+Der von der **EM \_ EXLIMITTEXT-Nachricht** festgelegte Textgrenzwert beschränkt nicht die Textmenge, die Sie mithilfe der [**EM \_ STREAMIN-Nachricht**](em-streamin.md) in ein Rich Edit-Steuerelement streamen können, wobei *lParam* auf SF TEXT festgelegt \_ ist. Sie schränkt jedoch die Textmenge ein, die Sie in ein Rich Edit-Steuerelement streamen können, indem Sie die **EM \_ STREAMIN-Nachricht** verwenden, wobei *lParam* auf SF RTF festgelegt \_ ist.
 
-Bevor **EM \_ exlimittext** aufgerufen wird, ist der Standard Grenzwert für die Text Menge, die ein Benutzer eingeben kann, 32.767 Zeichen.
+Bevor **EM \_ EXLIMITTEXT** aufgerufen wird, beträgt das Standardlimit für die Textmenge, die ein Benutzer eingeben kann, 32.767 Zeichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Bevor **EM \_ exlimittext** aufgerufen wird, ist der Standard Grenzwert für die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Bevor **EM \_ exlimittext** aufgerufen wird, ist der Standard Grenzwert für die
 
 <dl> <dt>
 
-[**EM- \_ StreamIn**](em-streamin.md)
+[**EM \_ STREAMIN**](em-streamin.md)
 </dt> </dl>
 
  

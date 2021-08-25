@@ -1,9 +1,9 @@
 ---
-title: Previewduration-Element
-description: Das previewduration-Element definiert die Zeitspanne, während der ein Clip im Vorschaumodus abgespielt wird.
+title: PREVIEWDURATION-Element
+description: Das PREVIEWDURATION-Element definiert die Zeitdauer, die ein Clip im Vorschaumodus abspielt.
 ms.assetid: 428a4e3d-9c08-4b6c-acc7-b630aab37de3
 keywords:
-- Previewduration-Element, Windows Media Player
+- PREVIEWDURATION-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a944e86a4bd82bf57961d4d6b474c34afadba6b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd01180b56816aa3458396f1c6183518d4365dce2f41643328e899057ed1ee72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862020"
 ---
-# <a name="previewduration-element"></a>Previewduration-Element
+# <a name="previewduration-element"></a>PREVIEWDURATION-Element
 
-Das **previewduration** -Element definiert die Zeitspanne, während der ein Clip im Vorschaumodus abgespielt wird.
+Das **PREVIEWDURATION-Element** definiert die Zeitdauer, die ein Clip im Vorschaumodus abspielt.
 
 ``` syntax
 <PREVIEWDURATION
@@ -32,17 +32,17 @@ Das **previewduration** -Element definiert die Zeitspanne, während der ein Clip
 
 ## <a name="attributes"></a>Attribute
 
-**Wert** (erforderlich)
+**VALUE** (erforderlich)
 
-Zeitspanne (in Stunden, Minuten, Sekunden und Hundertstel Sekunden), die der Clip im Vorschaumodus abspielt.
+Die Dauer (in Stunden, Minuten, Sekunden und Hundertstelsekunden), die der Clip im Vorschaumodus abspielt.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente                    |
 |-----------------|-----------------------------|
-| Übergeordnete Elemente | **ASX**, **Eintrag**, **ref** |
+| Übergeordnete Elemente | **ASX**, **ENTRY**, **REF** |
 | Untergeordnete Elemente  | Keine                        |
 
 
@@ -51,11 +51,11 @@ Zeitspanne (in Stunden, Minuten, Sekunden und Hundertstel Sekunden), die der Cli
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element definiert die Zeitspanne, in der ein Clip im Vorschaumodus abgespielt wird. Wenn dieses Element in einem **Entry** -Element oder einem **ref** -Element angezeigt wird, gilt es für den Clip, der durch dieses Element definiert wird. Wenn Sie im Gültigkeitsbereich eines **ASX** -Elements angezeigt wird, gilt sie für jeden Clip in der Metadatei. Ein **previewduration** -Element in einem **ref** - **Element hat Vorrang** vor einem Element in einem Entry-Element und hat entweder Vorrang vor einem **previewduration** -Element in einem **ASX** -Element. Wenn kein **previewduration** -Element für einen Clip definiert ist, beträgt die Standard Vorschau Zeit 10 Sekunden.
+Dieses Element definiert die Zeitdauer, die ein Clip im Vorschaumodus abspielt. Wenn dieses Element innerhalb eines **ENTRY-** oder **REF-Elements** angezeigt wird, gilt es für den Clip, der von diesem Element definiert wird. Wenn sie innerhalb des Bereichs eines **ASX-Elements** angezeigt wird, gilt sie für jeden Clip in der Metadatei. Ein **PREVIEWDURATION-Element** in einem **REF-Element** hat Vorrang vor einem in einem **ENTRY-Element** und hat entweder Vorrang vor einem **PREVIEWDURATION-Element** in einem **ASX-Element.** Wenn kein **PREVIEWDURATION-Element** für einen Clip definiert ist, beträgt die Standardvorschauzeit 10 Sekunden.
 
-Wenn ein **StartTime** -oder **Startmarker** -Element für den Clip vorhanden ist, rendert Windows Media Player den Clip, beginnend an dem Punkt, der von einem dieser Elemente definiert wurde. Andernfalls wird Sie am Anfang des Clips gerendert. Der Clip wird normal beendet, wenn er kürzer ist als die Zeit, die vom **previewduration** -Element definiert wurde.
+Wenn es ein **STARTTIME- oder** **STARTMARKER-Element** für den Clip gibt, rendert Windows Media Player den Clip beginnend mit dem Punkt, der von einem dieser Elemente definiert wird. Andernfalls wird sie vom Anfang des Clips gerendert. Der Clip wird normal beendet, wenn er kürzer als die vom **PREVIEWDURATION-Element definierte Zeit** ist.
 
-Das **Duration** -Element überschreibt ein **previewduration** -Element.
+Das **DURATION-Element** überschreibt ein **PREVIEWDURATION-Element.**
 
 ## <a name="examples"></a>Beispiele
 
@@ -72,7 +72,7 @@ Das **Duration** -Element überschreibt ein **previewduration** -Element.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -80,10 +80,10 @@ Das **Duration** -Element überschreibt ein **previewduration** -Element.
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zur Medienmetadatei**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Win32_RDCentralPublishedRemoteDesktop-Klasse
-description: Auf einem anderen Computer veröffentlichter Desktop für die Remote Verwendung durch Terminal Dienste.
+description: Desktop, der auf einem anderen Computer zur Remoteverwendung über Terminaldienste veröffentlicht wird.
 ms.assetid: 2b28a2d3-048f-446f-9ce0-eb684b393eaa
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDCentralPublishedRemoteDesktop-Klasse Remotedesktopdienste
-- Win32_RDCentralPublishedRemoteDesktop Klasse Remotedesktopdienste, beschrieben
+- Win32_RDCentralPublishedRemoteDesktop-Klassen-Remotedesktopdienste
+- Win32_RDCentralPublishedRemoteDesktop Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -27,16 +27,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04696331b7027b7cc65d2202c29e6ce95bb3f4b8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5560407da5a88fb17c39f76a91bdb0e193a246496c3f7333e4efccbe70c60ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868410"
 ---
-# <a name="win32_rdcentralpublishedremotedesktop-class"></a>Win32 \_ rdcentralpublishedremotedesktop-Klasse
+# <a name="win32_rdcentralpublishedremotedesktop-class"></a>Win32 \_ RDCentralPublishedRemoteDesktop-Klasse
 
-Auf einem anderen Computer veröffentlichter Desktop für die Remote Verwendung durch Terminal Dienste
+Desktop, der auf einem anderen Computer zur Remoteverwendung über Terminaldienste veröffentlicht wurde
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -62,26 +62,26 @@ class Win32_RDCentralPublishedRemoteDesktop : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ -Klasse rdcentralpublishedremotedesktop** verfügt über diese Typen von Membern:
+Die **Win32 \_ RDCentralPublishedRemoteDesktop-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ -Klasse rdcentralpublishedremotedesktop** verfügt über diese Eigenschaften.
+Die **Win32 \_ RDCentralPublishedRemoteDesktop-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Alias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Alias des Desktops.
@@ -91,16 +91,16 @@ Alias des Desktops.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilige Zeichenfolge) des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -109,7 +109,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -124,7 +124,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Ordner**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -134,10 +134,10 @@ Liste der Ordner, in denen diese Ressource angezeigt werden soll.
 
 </dd> <dt>
 
-**Iconcontent**
+**IconContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -153,16 +153,16 @@ Inhalt des Symbols, das der Anwendung entspricht.
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -171,7 +171,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -183,26 +183,26 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Publishingfarm**
+**PublishingFarm**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Alias der Farm, die den Desktop veröffentlicht hat.
 
 </dd> <dt>
 
-**Rdpfilecontents**
+**RDPFileContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -212,32 +212,32 @@ Inhalt der RDP-Datei, die dem Desktop entspricht.
 
 </dd> <dt>
 
-**Showinportal**
+**ShowInPortal**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**true** , wenn diese Anwendung in der TS-Webzugriff angezeigt werden soll. andernfalls **false**.
+**TRUE,** wenn diese Anwendung im TS-Webzugriff angezeigt werden soll; andernfalls **FALSE.**
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -309,8 +309,8 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>Tscpub. MOF</dt> </dl>    |
+| Namespace<br/>                | Root \\ cimv2 \\ TerminalServices<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>Tscpub.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>TscPubWmi.dll</dt> </dl> |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Konvertiert die angegebene Gitter Teilmenge in einen einzelnen Dreieck Streifen.
+description: Konvertiert die angegebene Gitternetzteilmenge in einen einzelnen Dreiecksstreifen.
 ms.assetid: 618c7bee-dd09-4379-bb8b-30505e809df9
-title: D3DXConvertMeshSubsetToSingleStrip-Funktion (D3DX9Mesh. h)
+title: D3DXConvertMeshSubsetToSingleStrip-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c76aa52b08a21faf9bc2a6ef35745513063cc3b4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 53d3ec4a0362ec923fdbeaa1d880188039e866292897d3fe5518ae34d4e2622d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857370"
 ---
 # <a name="d3dxconvertmeshsubsettosinglestrip-function"></a>D3DXConvertMeshSubsetToSingleStrip-Funktion
 
-Konvertiert die angegebene Gitter Teilmenge in einen einzelnen Dreieck Streifen.
+Konvertiert die angegebene Gitternetzteilmenge in einen einzelnen Dreiecksstreifen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXConvertMeshSubsetToSingleStrip(
 
 <dl> <dt>
 
-*Mesda* \[ in\]
+*MeshIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBASEMESH**](id3dxbasemesh.md)**
 
-Zeiger auf eine [**ID3DXBaseMesh**](id3dxbasemesh.md) -Schnittstelle, die das Mesh darstellt, das in einen Strip konvertiert werden soll.
+Zeiger auf eine [**ID3DXBaseMesh-Schnittstelle,**](id3dxbasemesh.md) die das Gitternetz darstellt, das in einen Strip konvertiert werden soll.
 
 </dd> <dt>
 
-*Atungbid* \[ in\]
+*AttribId* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Attribut-ID der Mesh-Teilmenge, die in Striche konvertiert werden soll.
+Attribut-ID der Gitternetzteilmenge, die in Strips konvertiert werden soll.
 
 </dd> <dt>
 
-*Iboptions* \[ in\]
+*IBOptions* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren Flags aus der [**D3DXMESH**](./d3dxmesh.md) -Enumeration, die Optionen zum Erstellen des Index Puffers angeben. Darf nicht D3DXMESH \_ 32 Bit sein. Der Index Puffer wird mit 32-Bit-oder 16-Bit-Indizes erstellt, abhängig vom Format des Index Puffers des Netzes, das durch den *mesda* -Parameter angegeben wird.
+Kombination aus einem oder mehreren Flags aus der [**D3DXMESH-Enumeration,**](./d3dxmesh.md) die Optionen zum Erstellen des Indexpuffers angeben. D3DXMESH \_ kann nicht 32 BIT sein. Der Indexpuffer wird mit 32-Bit- oder 16-Bit-Indizes erstellt, abhängig vom Format des Indexpuffers des Gitternetzes, das durch den *MeshIn-Parameter* angegeben wird.
 
 </dd> <dt>
 
-*ppindexbuffer* \[ vorgenommen\]
+*ppIndexBuffer* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DINDEXBUFFER9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dindexbuffer9)\***
 
-Ein Zeiger auf eine [**IDirect3DIndexBuffer9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dindexbuffer9) -Schnittstelle, die den Index Puffer darstellt, der den Strip enthält.
+Zeiger auf eine [**IDirect3DIndexBuffer9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dindexbuffer9) die den Indexpuffer darstellt, der den Strip enthält.
 
 </dd> <dt>
 
-*pnumindizes* \[ vorgenommen\]
+*pNumIndices* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Anzahl der Indizes im Puffer, die im *ppindexbuffer* -Parameter zurückgegeben werden.
+Anzahl der Indizes im Puffer, die im *ppIndexBuffer-Parameter* zurückgegeben werden.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Anzahl der Indizes im Puffer, die im *ppindexbuffer* -Parameter zurückgegeben w
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Stellen Sie vor dem Ausführen dieser Funktion " [**optimieren**](id3dxmesh--optimize.md) " oder " [**D3DXOptimizeFaces**](d3dxoptimizefaces.md)" mit dem D3DXMESHOPT \_ attrsort-Flag her.
+Rufen Sie vor dem Ausführen dieser Funktion [**Optimize**](id3dxmesh--optimize.md) oder [**D3DXOptimizeFaces**](d3dxoptimizefaces.md)auf, wobei das D3DXMESHOPT \_ ATTRSORT-Flag festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,16 +105,16 @@ Stellen Sie vor dem Ausführen dieser Funktion " [**optimieren**](id3dxmesh--opt
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

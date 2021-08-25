@@ -1,6 +1,6 @@
 ---
-title: Date (registrationinfotype)-Element
-description: Gibt das Datum und die Uhrzeit der Registrierung der Aufgabe an.
+title: Date (registrationInfoType)-Element
+description: Gibt das Datum und die Uhrzeit der Registrierung des Tasks an.
 ms.assetid: 0b226786-152d-4231-afa6-db5a630525f3
 keywords:
 - Date-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1e7d61b9cc637fcc39c8bfd114999a84ede4153d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f191d6181e450deff8ffdb7bda0bf97cd0b27901fe454c25599d17b8edb30628
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866640"
 ---
-# <a name="date-registrationinfotype-element"></a>Date (registrationinfotype)-Element
+# <a name="date-registrationinfotype-element"></a>Date (registrationInfoType)-Element
 
-Gibt das Datum und die Uhrzeit der Registrierung der Aufgabe an.
+Gibt das Datum und die Uhrzeit der Registrierung des Tasks an.
 
 ``` syntax
 <xs:element name="Date"
@@ -31,7 +31,7 @@ Gibt das Datum und die Uhrzeit der Registrierung der Aufgabe an.
  />
 ```
 
-Das **Date** -Element wird durch den komplexen Typ [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
+Das **Date-Element** wird durch den komplexen [**registrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,15 +39,15 @@ Das **Date** -Element wird durch den komplexen Typ [**registrationinfotype**](ta
 
 | Element                                                                           | Abgeleitet von                                                                         | BESCHREIBUNG                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationinfotype**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen zum Task an, z. b. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert ist.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen über den Task an, z. B. den Ersteller der Aufgabe und das Datum, an dem der Task registriert ist.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird das Registrierungsdatum einer Aufgabe mithilfe der [**RegistrationInfo. Date**](registrationinfo-date.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird das Registrierungsdatum eines Tasks mithilfe der [**RegistrationInfo.Date-Eigenschaft**](registrationinfo-date.md) angegeben.
 
-Bei der C++-Entwicklung wird das Registrierungsdatum einer Aufgabe mithilfe der [**iregistrationinfo::D Ate**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_date) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird das Registrierungsdatum einer Aufgabe mithilfe der [**IRegistrationInfo::D ate-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_date) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,8 +55,8 @@ Bei der C++-Entwicklung wird das Registrierungsdatum einer Aufgabe mithilfe der 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -64,7 +64,7 @@ Bei der C++-Entwicklung wird das Registrierungsdatum einer Aufgabe mithilfe der 
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

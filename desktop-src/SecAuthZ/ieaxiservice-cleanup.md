@@ -1,7 +1,7 @@
 ---
-description: Gibt die von der ieaxiservice-Schnittstelle verwendeten Ressourcen frei.
+description: Gibt von der IeAxiService-Schnittstelle verwendete Ressourcen frei.
 ms.assetid: 11f5cfdc-dcdd-4b41-b02c-b19b9452509e
-title: 'Ieaxiservice:: Cleanup-Methode'
+title: IeAxiService::Cleanup-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b29784ae360ec78b9f7e01d2045617615333a5c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de0413c39a4abf47a24913f347ceed0158d0b51aa4e1da0b3005cace1326b53f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908380"
 ---
-# <a name="ieaxiservicecleanup-method"></a>Ieaxiservice:: Cleanup-Methode
+# <a name="ieaxiservicecleanup-method"></a>IeAxiService::Cleanup-Methode
 
-Die **cleanupmethode** gibt Ressourcen frei, die von der [**ieaxiservice**](ieaxiservice.md) -Schnittstelle verwendet werden.
+Die **Cleanup-Methode** gibt ressourcen frei, die von der [**IeAxiService-Schnittstelle verwendet**](ieaxiservice.md) werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +38,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](/windows/desktop/SecCrypto/common-hresult-values).
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](/windows/desktop/SecCrypto/common-hresult-values).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,7 +50,7 @@ Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der de
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista Business, Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                 |
-| IID<br/>                      | IID \_ ieaxiservice ist definiert als E9E92380-9ecd-4982-A0EB-6815a56ccb27<br/>                           |
+| IID<br/>                      | IID \_ IeAxiService ist als E9E92380-9ECD-4982-A0EB-6815A56CCF27 definiert.<br/>                           |
 
 
 
@@ -58,7 +58,7 @@ Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der de
 
 <dl> <dt>
 
-[**Ieaxiservice**](ieaxiservice.md)
+[**IeAxiService**](ieaxiservice.md)
 </dt> </dl>
 
  

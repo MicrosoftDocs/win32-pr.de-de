@@ -1,9 +1,9 @@
 ---
-title: TBN_GETOBJECT Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem ToolBar-Steuerelement gesendet, das den tbstyle \_ registerdrop-Stil verwendet, um ein Ablage Zielobjekt anzufordern, wenn der Zeiger über eine seiner Schaltflächen weitergeleitet wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_GETOBJECT Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Symbolleistensteuerelement gesendet, das den TBSTYLE \_ REGISTERDROP-Stil verwendet, um ein Ablagezielobjekt anzufordern, wenn der Zeiger eine seiner Schaltflächen übergibt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 9fd8516d-fe2e-4f84-9035-e2246aba369a
 keywords:
-- Windows-Steuerelemente für TBN_GETOBJECT Benachrichtigungs
+- TBN_GETOBJECT Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ed144245e351ca4e872128e68fe658bde7c0066
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c50f3d403089ca7db42ab89232e57d68121424c066914c534ba13a826adb8ea3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876730"
 ---
-# <a name="tbn_getobject-notification-code"></a>TBN- \_ GetObject-Benachrichtigungs Code
+# <a name="tbn_getobject-notification-code"></a>TBN \_ GETOBJECT-Benachrichtigungscode
 
-Wird von einem ToolBar-Steuerelement gesendet, das den [**tbstyle \_ registerdrop**](toolbar-control-and-button-styles.md) -Stil verwendet, um ein Ablage Zielobjekt anzufordern, wenn der Zeiger über eine seiner Schaltflächen weitergeleitet wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Symbolleistensteuerelement gesendet, das den [**TBSTYLE \_ REGISTERDROP-Stil**](toolbar-control-and-button-styles.md) verwendet, um ein Ablagezielobjekt anzufordern, wenn der Zeiger eine seiner Schaltflächen übergibt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,19 +41,19 @@ TBN_GETOBJECT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmujectnotify**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) -Struktur, die Informationen über die Schaltfläche enthält, über die der Zeiger übergeben wurde und die Daten empfängt, die die Anwendung als Reaktion auf diesen Benachrichtigungs Code bereitstellt.
+Zeiger auf eine [**NMOBJECTNOTIFY-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) die Informationen über die Schaltfläche enthält, die der Zeiger übergibt und Daten empfängt, die die Anwendung als Reaktion auf diesen Benachrichtigungscode bereitstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anwendung, die diesen Benachrichtigungs Code verarbeitet, muss NULL zurückgeben.
+Die Anwendung, die diesen Benachrichtigungscode verarbeitet, muss null zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um ein Objekt bereitzustellen, muss eine Anwendung Werte in einigen Membern der [**nmujectnotify**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) -Struktur bei *LPARAM* festlegen. Das **pObject** -Element muss auf einen gültigen Objekt Zeiger festgelegt werden, und das **HRESULT** -Element muss auf ein Success-Flag festgelegt werden. Um die Component Object Model (com)-Standards einzuhalten, erhöhen Sie immer den Verweis Zähler des Objekts, wenn Sie einen Objekt Zeiger bereitstellen.
+Um ein Objekt bereitzustellen, muss eine Anwendung Werte in einigen Membern der [**NMOBJECTNOTIFY-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) in *lParam* festlegen. Der **pObject-Member** muss auf einen gültigen Objektzeiger und der **hResult-Member** auf ein Erfolgsflag festgelegt werden. Um den COM-Standards (Component Object Model) zu entsprechen, erhöhen Sie immer den Verweiszähler des Objekts, wenn Sie einen Objektzeiger bereitstellen.
 
-Wenn eine Anwendung kein Objekt bereitstellt, muss **pObject** auf **null** und **HRESULT** auf ein Fehlerflag festgelegt werden.
+Wenn eine Anwendung kein Objekt bereitstellt, muss **pObject** auf **NULL** und **hResult** auf ein Fehlerflag festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Wenn eine Anwendung kein Objekt bereitstellt, muss **pObject** auf **null** und 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

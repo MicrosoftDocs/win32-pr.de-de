@@ -1,25 +1,25 @@
 ---
-description: Aufgaben der com+-Dienst Anwendung
+description: COM+-Dienstanwendungsaufgaben
 ms.assetid: b25b4838-7d3b-41d7-9d02-0edd4bd2f97c
-title: Aufgaben der com+-Dienst Anwendung
+title: COM+-Dienstanwendungsaufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d9331fc81be9eae3b2d039119aa5cc9ff1f4843e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6de15c7800d6fea98043ec5f33865f531aca078ce67a1fba9114b77478c9410b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991492"
 ---
-# <a name="com-service-application-tasks"></a>Aufgaben der com+-Dienst Anwendung
+# <a name="com-service-application-tasks"></a>COM+-Dienstanwendungsaufgaben
 
-Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitungen zum Konfigurieren einer COM+-Anwendung, die als Dienst Anwendung ausgeführt werden soll.
+Die folgenden Themen in diesem Abschnitt enthalten schrittweise Anweisungen zum Konfigurieren einer COM+-Anwendung für die Ausführung als Dienstanwendung.
 
 
 
 | Thema                                                                                                                                | BESCHREIBUNG                                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [Konfigurieren einer com+-Server Anwendung als Dienst Anwendung](configuring-a-com--server-application-as-a-service-application.md) | Enthält Schritt-für-Schritt-Anleitungen zum Erstellen und Konfigurieren einer COM+-Serveranwendung, die als Dienst Anwendung ausgeführt werden soll. |
+| [Konfigurieren einer COM+-Serveranwendung als Dienstanwendung](configuring-a-com--server-application-as-a-service-application.md) | Enthält schrittweise Anweisungen zum Erstellen und Konfigurieren einer COM+-Serveranwendung für die Ausführung als Dienstanwendung. |
 
 
 
@@ -29,7 +29,7 @@ Die folgenden Themen in diesem Abschnitt enthalten Schritt-für-Schritt-Anleitun
 
 <dl> <dt>
 
-[Konzepte der com+-Dienst Anwendung](com--service-application-concepts.md)
+[COM+-Dienstanwendungskonzepte](com--service-application-concepts.md)
 </dt> </dl>
 
  

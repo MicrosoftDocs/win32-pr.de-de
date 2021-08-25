@@ -1,7 +1,7 @@
 ---
-description: Der Experte muss die Register-expertenfunktion implementieren. Netzwerkmonitor Ruft die Register-expertenfunktion auf, um Informationen über den Experten zu erhalten.
+description: Der Experte muss die Register expert-Funktion implementieren. Netzwerkmonitor ruft die Register expert-Funktion auf, um Informationen zum Experten abzurufen.
 ms.assetid: 58cfe525-99b1-40ce-b8d8-fa1c62a20c40
-title: Expertenrückruf Funktion registrieren (Netmon. h)
+title: Registrieren der Rückruffunktion "Expert" (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Netmon.h
-ms.openlocfilehash: 085d5c59b17b10949ad39d07354906f40e123988
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1203682e82b01b7665c9661c3f58c14bbf2cd479cac62c72a64505b0e25feaa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889570"
 ---
-# <a name="register-expert-callback-function"></a>Expertenrückruf Funktion registrieren
+# <a name="register-expert-callback-function"></a>Registrieren der Rückruffunktion "Expert"
 
-Der Experte muss die **Register** -expertenfunktion implementieren. Netzwerkmonitor Ruft die **Register** -expertenfunktion auf, um Informationen über den Experten zu erhalten.
+Der Experte muss die **Register** expert-Funktion implementieren. Netzwerkmonitor ruft die **Register** expert-Funktion auf, um Informationen zum Experten abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ BOOL WINAPI Register(
 
 <dl> <dt>
 
-*pexpertinfo* \[ in, out\]
+*pExpertInfo* \[ in, out\]
 </dt> <dd>
 
-Zeiger auf eine [**expertenuminfo**](expertenuminfo.md) -Struktur, die von Netzwerkmonitor zugeordnet wird. Der Experte füllt die Struktur mit allen angeforderten Informationen aus.
+Zeiger auf eine [**EXPERTENUMINFO-Struktur,**](expertenuminfo.md) die Netzwerkmonitor zuordnet. Der Experte füllt die Struktur mit allen angeforderten Informationen aus.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert **true**, und die Funktion gibt die angeforderten Informationen zurück.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **TRUE,** und die Funktion gibt die angeforderten Informationen zurück.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das  Versionsmember der [**expertenenuminfo**](expertenuminfo.md) -Struktur muss NULL sein.
+Der **Version-Member** der [**EXPERTENUMINFO-Struktur**](expertenuminfo.md) muss 0 (null) sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Das  Versionsmember der [**expertenenuminfo**](expertenuminfo.md) -Struktur muss
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

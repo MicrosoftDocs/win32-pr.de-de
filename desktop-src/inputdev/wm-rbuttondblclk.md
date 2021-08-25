@@ -1,9 +1,9 @@
 ---
-title: WM_RBUTTONDBLCLK Meldung (Winuser. h)
-description: Wird gesendet, wenn der Benutzer mit der rechten Maustaste doppelklickt, während sich der Cursor im Client Bereich eines Fensters befindet.
+title: WM_RBUTTONDBLCLK Meldung (Winuser.h)
+description: Wird gesendet, wenn der Benutzer mit der rechten Maustaste doppelklickt, während sich der Cursor im Clientbereich eines Fensters befindet.
 ms.assetid: 2db9a947-f052-4738-9fae-6ecaba3de9b9
 keywords:
-- Tastatur-und Maus Eingaben für WM_RBUTTONDBLCLK Nachricht
+- WM_RBUTTONDBLCLK Meldung Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2acde97e19b02ad08b3833f1c1c4eb3e0dd4b147
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a4b2ee4722825f0404d590d593a2c7f72c815f8cfd2ad4991b0a604c188bfbfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829870"
 ---
-# <a name="wm_rbuttondblclk-message"></a>\_Rbuttondblclk-Meldung für WM
+# <a name="wm_rbuttondblclk-message"></a>WM \_ RBUTTONDBLCLK-Nachricht
 
-Wird gesendet, wenn der Benutzer mit der rechten Maustaste doppelklickt, während sich der Cursor im Client Bereich eines Fensters befindet. Wenn die Maus nicht erfasst wird, wird die Nachricht im Fenster unterhalb des Cursors gepostet. Andernfalls wird die Nachricht an das Fenster gesendet, das die Maus erfasst hat.
+Wird gesendet, wenn der Benutzer mit der rechten Maustaste doppelklickt, während sich der Cursor im Clientbereich eines Fensters befindet. Wenn die Maus nicht erfasst wird, wird die Meldung an das Fenster unterhalb des Cursors gesendet. Andernfalls wird die Nachricht an das Fenster gesendet, in dem die Maus erfasst wurde.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,19 +41,19 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob verschiedene virtuelle Schlüssel nicht angezeigt werden. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Gibt an, ob verschiedene virtuelle Schlüssel ausgeschaltet sind. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                                                               | Bedeutung                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| <span id="MK_CONTROL"></span><span id="mk_control"></span><dl> <dt>**MK \_ Steuer**</dt> Element <dt>0x0008</dt> </dl>    | Die STRG-Taste ist nicht gedrückt.<br/>            |
-| <span id="MK_LBUTTON"></span><span id="mk_lbutton"></span><dl> <dt>**MK \_ Lbutton**</dt> <dt>0x0001</dt> </dl>    | Die linke Maustaste ist nicht mehr vorhanden.<br/>   |
-| <span id="MK_MBUTTON"></span><span id="mk_mbutton"></span><dl> <dt>**MK \_ MButton**</dt> <dt>0x0010</dt> </dl>    | Die mittlere Maustaste ist nicht mehr angezeigt.<br/> |
-| <span id="MK_RBUTTON"></span><span id="mk_rbutton"></span><dl> <dt>**MK \_ Rbutton**</dt> <dt>0x0002</dt> </dl>    | Die Rechte Maustaste ist nicht mehr angezeigt.<br/>  |
-| <span id="MK_SHIFT"></span><span id="mk_shift"></span><dl> <dt>**MK \_ UMSCHALT**</dt> <dt>0x0004</dt> </dl>          | Die UMSCHALTTASTE ist nicht mehr festgelegt.<br/>           |
-| <span id="MK_XBUTTON1"></span><span id="mk_xbutton1"></span><dl> <dt>**MK \_ XButton1**</dt> <dt>0x0020</dt> </dl> | Die erste X-Schaltfläche ist nicht angezeigt.<br/>      |
-| <span id="MK_XBUTTON2"></span><span id="mk_xbutton2"></span><dl> <dt>**MK \_ XButton2**</dt> <dt>0x0040</dt> </dl> | Die zweite X-Schaltfläche ist nicht mehr festgelegt.<br/>     |
+| <span id="MK_CONTROL"></span><span id="mk_control"></span><dl> <dt>**MK \_ CONTROL**</dt> <dt>0x0008</dt> </dl>    | Die STRG-TASTE ist gedrückt.<br/>            |
+| <span id="MK_LBUTTON"></span><span id="mk_lbutton"></span><dl> <dt>**MK \_ LBUTTON**</dt> <dt>0x0001</dt> </dl>    | Die linke Maustaste ist nach unten geschaltet.<br/>   |
+| <span id="MK_MBUTTON"></span><span id="mk_mbutton"></span><dl> <dt>**MK \_ MBUTTON**</dt> <dt>0x0010</dt> </dl>    | Die mittlere Maustaste ist gedrückt.<br/> |
+| <span id="MK_RBUTTON"></span><span id="mk_rbutton"></span><dl> <dt>**MK \_ RBUTTON**</dt> <dt>0x0002</dt> </dl>    | Die rechte Maustaste ist nach unten geschaltet.<br/>  |
+| <span id="MK_SHIFT"></span><span id="mk_shift"></span><dl> <dt>**MK \_ UMSCHALT**</dt> <dt>0X0004</dt> </dl>          | Die UMSCHALTTASTE ist nicht mehr gedrückt.<br/>           |
+| <span id="MK_XBUTTON1"></span><span id="mk_xbutton1"></span><dl> <dt>**MK \_ XBUTTON1-0x0020**</dt> <dt></dt> </dl> | Die erste X-Schaltfläche ist ausgeschaltet.<br/>      |
+| <span id="MK_XBUTTON2"></span><span id="mk_xbutton2"></span><dl> <dt>**MK \_ XBUTTON2**</dt> <dt>0x0040</dt> </dl> | Die zweite X-Schaltfläche ist nicht mehr angezeigt.<br/>     |
 
 
 
@@ -64,21 +64,21 @@ Gibt an, ob verschiedene virtuelle Schlüssel nicht angezeigt werden. Dieser Par
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt die x-Koordinate des Cursors an. Die Koordinate ist relativ zur oberen linken Ecke des Client Bereichs.
+Das Wort mit niedriger Reihenfolge gibt die x-Koordinate des Cursors an. Die Koordinate ist relativ zur oberen linken Ecke des Clientbereichs.
 
-Das höchst wertige Wort gibt die y-Koordinate des Cursors an. Die Koordinate ist relativ zur oberen linken Ecke des Client Bereichs.
+Das Wort in hoher Reihenfolge gibt die y-Koordinate des Cursors an. Die Koordinate ist relativ zur oberen linken Ecke des Clientbereichs.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur Fenster mit dem Format **CS \_ dblclks** können WM- **\_ rbuttondblclk** -Meldungen empfangen, die vom System generiert werden, wenn der Benutzer die Maustaste drückt, loslässt, und die Rechte Maustaste im Doppelklick-Zeit Limit des Systems drückt. Durch Doppelklicken auf die Rechte Maustaste werden tatsächlich vier Meldungen generiert [**: \_ WM rbuttondown**](wm-rbuttondown.md), [**WM \_ rbuttonup**](wm-rbuttonup.md), **WM \_ rbuttondblclk** und **WM \_ rbuttonup** .
+Nur Fenster im **CS \_ DBLCLKS-Stil** können **WM \_ RBUTTONDBLCLK-Nachrichten** empfangen, die das System generiert, wenn der Benutzer die rechte Maustaste innerhalb des Doppelklick-Zeitlimits des Systems drückt, loslässt und erneut drückt. Wenn Sie mit der rechten Maustaste doppelklicken, werden vier Meldungen generiert: [**WM \_ RBUTTONDOWN,**](wm-rbuttondown.md) [**WM \_ RBUTTONUP,**](wm-rbuttonup.md) **WM \_ RBUTTONDBLCLK** und **WM \_ RBUTTONUP.**
 
-Verwenden Sie den folgenden Code zum Abrufen der horizontalen und vertikalen Position:
+Verwenden Sie den folgenden Code, um die horizontale und vertikale Position abzurufen:
 
 
 ```
@@ -88,10 +88,10 @@ yPos = GET_Y_LPARAM(lParam);
 
 
 
-Wie bereits erwähnt, befindet sich die x-Koordinate in der unteren **Reihenfolge** des Rückgabewerts. die y-Koordinate befindet sich in der hohen Reihenfolge ( **kurz** ) (beide stellen *signierte* Werte dar, da Sie negative Werte für Systeme mit mehreren Monitoren annehmen können). Wenn der Rückgabewert einer Variablen zugewiesen ist, können Sie mit dem [**makepoints**](/windows/desktop/api/wingdi/nf-wingdi-makepoints) -Makro eine [**Points**](/previous-versions//dd162808(v=vs.85)) -Struktur aus dem Rückgabewert abrufen. Sie können auch das [**get \_ x \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) -oder [**get \_ y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) -Makro verwenden, um die X-oder y-Koordinate zu extrahieren.
+Wie oben erwähnt, befindet sich die x-Koordinate in der unteren Reihenfolge **unter** dem Rückgabewert. Die y-Koordinate befindet sich in der hohen **Kurzreihenfolge** (beide stellen *signierte* Werte dar, da sie negative Werte auf Systemen mit mehreren Monitoren annehmen können). Wenn der Rückgabewert einer Variablen zugewiesen wird, können Sie das [**MAKEPOINTS-Makro**](/windows/desktop/api/wingdi/nf-wingdi-makepoints) verwenden, um eine [**POINTS-Struktur**](/previous-versions//dd162808(v=vs.85)) aus dem Rückgabewert abzurufen. Sie können auch das [**MAKRO GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) oder [**GET \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) verwenden, um die x- oder y-Koordinate zu extrahieren.
 
 > [!IMPORTANT]
-> Verwenden Sie die [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) -oder [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) -Makros nicht, um die x-und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse für Systeme mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können über negative x-und y-Koordinaten verfügen, und **LoWord** und **HIWORD** behandeln die Koordinaten als nicht signierte Mengen.
+> Verwenden Sie nicht die [**LOWORD-**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) oder [**HIWORD-Makros,**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) um die x- und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse auf Systemen mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können negative x- und y-Koordinaten aufweisen, und **LOWORD** und **HIWORD** behandeln die Koordinaten als Mengen ohne Vorzeichen.
 
  
 
@@ -103,42 +103,42 @@ Wie bereits erwähnt, befindet sich die x-Koordinate in der unteren **Reihenfolg
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Include WINDOWSX. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (windowsx.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam)
 </dt> <dt>
 
-[**\_Y- \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
+[**GET \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
 </dt> <dt>
 
 [**GetCapture**](/windows/win32/api/winuser/nf-winuser-getcapture)
 </dt> <dt>
 
-[**Getdoubleclicktime**](/windows/win32/api/winuser/nf-winuser-getdoubleclicktime)
+[**GetDoubleClickTime**](/windows/win32/api/winuser/nf-winuser-getdoubleclicktime)
 </dt> <dt>
 
 [**SetCapture**](/windows/win32/api/winuser/nf-winuser-setcapture)
 </dt> <dt>
 
-[**Setdoubleclicktime**](/windows/win32/api/winuser/nf-winuser-setdoubleclicktime)
+[**SetDoubleClickTime**](/windows/win32/api/winuser/nf-winuser-setdoubleclicktime)
 </dt> <dt>
 
-[**WM- \_ rbuttondown**](wm-rbuttondown.md)
+[**WM \_ RBUTTONDOWN**](wm-rbuttondown.md)
 </dt> <dt>
 
-[**WM- \_ rbuttonup**](wm-rbuttonup.md)
+[**WM \_ RBUTTONUP**](wm-rbuttonup.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Mauseingabe](mouse-input.md)
@@ -147,10 +147,10 @@ Wie bereits erwähnt, befindet sich die x-Koordinate in der unteren **Reihenfolg
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Makepoints**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
+[**MAKEPOINTS**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
 </dt> <dt>
 
-[**Punkt**](/previous-versions//dd162808(v=vs.85))
+[**Punkte**](/previous-versions//dd162808(v=vs.85))
 </dt> </dl>
 
  

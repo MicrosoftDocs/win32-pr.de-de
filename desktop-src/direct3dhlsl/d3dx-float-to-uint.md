@@ -1,6 +1,6 @@
 ---
 title: D3DX_FLOAT_to_UINT-Funktion
-description: Konvertiert einen float-Wert in uint.
+description: Konvertiert einen FLOAT-Wert in UINT.
 ms.assetid: 05c5de72-8915-4541-a82d-242e46bfa883
 keywords:
 - D3DX_FLOAT_to_UINT-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e729ba805d63068844192a134236722288fe8a9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 37665d3630979dee3fad7c109152a852883455f5de40c064faa8f1ea4f0645cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855620"
 ---
-# <a name="d3dx_float_to_uint-function"></a>D3DX \_ float \_ in \_ uint-Funktion
+# <a name="d3dx_float_to_uint-function"></a>D3DX-Funktion \_ "FLOAT \_ zu \_ UINT"
 
-Konvertiert einen float-Wert in uint.
+Konvertiert einen FLOAT-Wert in UINT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ UINT D3DX_FLOAT_to_UINT(
 
 <dl> <dt>
 
-*\_Ramelow* 
+*\_V* 
 </dt> <dd>
 
 Der v-Vektor.
@@ -48,21 +48,21 @@ Der v-Vektor.
 *\_Skalieren* 
 </dt> <dd>
 
-Der Skalierungs Wert.
+Der Skalierungswert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der konvertierte float-Wert.
+Der konvertierte FLOAT-Wert
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -73,7 +73,7 @@ Der konvertierte float-Wert.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

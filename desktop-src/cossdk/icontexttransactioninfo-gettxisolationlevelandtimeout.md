@@ -1,7 +1,7 @@
 ---
-description: Ruft die Isolationsstufe und den Timeout Wert einer Transaktion ab, die im Stamm Transaktionskontext gehostet wird.
+description: Ruft die Isolationsstufe und den Timeoutwert einer Transaktion ab, die im Stammtransaktionskontext gehostet wird.
 ms.assetid: bb3ff03e-e69e-4a50-af36-4938eb4323df
-title: 'Icontexttransaktioninfo:: gettxisolationlevelandtimeout-Methode'
+title: IContextTransactionInfo::GetTxIsolationLevelAndTimeout-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b8545a697e672af7206a69ffa19618d5b70e055c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 41888a859b6b665390290ba66bed69418cbddd9b708355dc78cc2670ba4d240f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896080"
 ---
-# <a name="icontexttransactioninfogettxisolationlevelandtimeout-method"></a>Icontexttransaktioninfo:: gettxisolationlevelandtimeout-Methode
+# <a name="icontexttransactioninfogettxisolationlevelandtimeout-method"></a>IContextTransactionInfo::GetTxIsolationLevelAndTimeout-Methode
 
-Ruft die Isolationsstufe und den Timeout Wert einer Transaktion ab, die im Stamm Transaktionskontext gehostet wird.
+Ruft die Isolationsstufe und den Timeoutwert einer Transaktion ab, die im Stammtransaktionskontext gehostet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,14 +39,14 @@ HRESULT GetTxIsolationLevelAndTimeout(
 
 <dl> <dt>
 
-*pisolevel* \[ vorgenommen\]
+*pIsoLevel* \[ out\]
 </dt> <dd>
 
-Der [IsolationLevel](/previous-versions/windows/desktop/ms679234(v=vs.85)) -Wert für die Transaktion.
+Der [ISOLATIONLEVEL-Wert](/previous-versions/windows/desktop/ms679234(v=vs.85)) für die Transaktion.
 
 </dd> <dt>
 
-*dwTime* \[ vorgenommen\]
+*dwTime* \[ out\]
 </dt> <dd>
 
 Das Timeout der Transaktion in Sekunden.
@@ -55,7 +55,7 @@ Das Timeout der Transaktion in Sekunden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memory, e \_ unerwartet und S OK zurückgeben \_ .
+Diese Methode kann die Standardrückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED und S OK \_ zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memor
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ oudef Memor
 
 <dl> <dt>
 
-[**Icontexttransaktioninfo**](icontexttransactioninfo.md)
+[**IContextTransactionInfo**](icontexttransactioninfo.md)
 </dt> </dl>
 
  

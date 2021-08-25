@@ -1,7 +1,7 @@
 ---
-description: Fügt der Auflistung der Puffer, die der imfmediasourceextension zugeordnet sind, einen imfsourcebuffer hinzu.
+description: Fügt der Auflistung von Puffern, die der NSMMediaSourceExtension zugeordnet sind, einen 1000222111111 hinzu.
 ms.assetid: 1ecb7047-4dc9-4657-8a19-12108de299c0
-title: 'Imfmediasourceextension:: addsourcebuffer-Methode'
+title: MÜSSENMediaSourceExtension::AddSourceBuffer-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: a62a62d8cf11afaa0190ac442f84b00cfe23517b
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: b49a7c4fb0cb9e45ab0c2823d92ceb6e4076dfcaef4d2e8450f1f3d07f474279
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106355713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942030"
 ---
-# <a name="imfmediasourceextensionaddsourcebuffer-method"></a>Imfmediasourceextension:: addsourcebuffer-Methode
+# <a name="imfmediasourceextensionaddsourcebuffer-method"></a>MÜSSENMediaSourceExtension::AddSourceBuffer-Methode
 
-Fügt der Auflistung der Puffer, die der [**imfmediasourceextension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)zugeordnet sind, einen [**imfsourcebuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer) hinzu.
+Fügt [**der Auflistung von Puffern,**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer) die mit [**dem -OBJEKT VERKNÜPFT sind, einen 50-0-Puffer hinzu.**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,18 +41,18 @@ HRESULT AddSourceBuffer(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*type* \[ In\]
 </dt> <dd></dd> <dt>
 
-*pnotify* \[ in\]
+*pNotify* \[ In\]
 </dt> <dd></dd> <dt>
 
-*ppsourcebuffer* \[ vorgenommen\]
+*ppSourceBuffer* \[ out\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Imfmediasourceextension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
+[**DURCHSCHN.MediaSourceExtension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
 </dt> </dl>
 
  

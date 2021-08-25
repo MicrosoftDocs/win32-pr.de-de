@@ -1,9 +1,9 @@
 ---
-title: Wmdmmess-Enumeration
-description: Der wmdmmess-Enumerationstyp definiert Nachrichten Typen und-Zustände.
+title: WMDMMessage-Enumeration
+description: Der WMDMMessage-Enumerationstyp definiert Nachrichtentypen und -zustände.
 ms.assetid: 49a77100-8890-4e40-852f-c6fd436f22c5
 keywords:
-- Wmdmmess-Enumeration Windows Media Device Manager
+- WMDMMessage-Enumeration windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7489dc7059f10e1a6f61d1a290f8f664a385f96c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 348092e079428e0b147d8143411cee7766365913115f968ed0e112b209383077
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862660"
 ---
-# <a name="wmdmmessage-enumeration"></a>Wmdmmess-Enumeration
+# <a name="wmdmmessage-enumeration"></a>WMDMMessage-Enumeration
 
-Der **wmdmmess** -Enumerationstyp definiert Nachrichten Typen und-Zustände.
+Der **WMDMMessage-Enumerationstyp** definiert Nachrichtentypen und -zustände.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ enum WMDMMessage {
 
 <dl> <dt>
 
-<span id="WMDM_MSG_DEVICE_ARRIVAL"></span><span id="wmdm_msg_device_arrival"></span>**WMDM-Meldung \_ \_ Geräte \_ Ankunft**
+<span id="WMDM_MSG_DEVICE_ARRIVAL"></span><span id="wmdm_msg_device_arrival"></span>**WMDM \_ MSG \_ DEVICE \_ ARRIVAL**
 </dt> <dd>
 
-Ein Windows Media Device Manager-Gerät wurde angeschlossen.
+Ein Windows Media Geräte-Manager gerät wurde angeschlossen.
 
 </dd> <dt>
 
-<span id="WMDM_MSG_DEVICE_REMOVAL"></span><span id="wmdm_msg_device_removal"></span>**WMDM-Meldung \_ \_ Geräte \_ Entfernung**
+<span id="WMDM_MSG_DEVICE_REMOVAL"></span><span id="wmdm_msg_device_removal"></span>**WMDM \_ MSG \_ DEVICE \_ REMOVAL**
 </dt> <dd>
 
-Ein Windows Media Device Manager-Gerät wurde entfernt.
+Ein Windows Media Geräte-Manager wurde entfernt.
 
 </dd> <dt>
 
-<span id="WMDM_MSG_MEDIA_ARRIVAL"></span><span id="wmdm_msg_media_arrival"></span>**WMDM- \_ msg- \_ Medien \_ Ankunft**
+<span id="WMDM_MSG_MEDIA_ARRIVAL"></span><span id="wmdm_msg_media_arrival"></span>**WMDM \_ MSG \_ MEDIA \_ ARRIVAL**
 </dt> <dd>
 
-Medien wurden in ein Windows Media Device Manager-Gerät eingefügt.
+Medien wurden in ein Mediengerät Windows Medien Geräte-Manager eingefügt.
 
 </dd> <dt>
 
-<span id="WMDM_MSG_MEDIA_REMOVAL"></span><span id="wmdm_msg_media_removal"></span>**Entfernen von WMDM- \_ msg- \_ Medien \_**
+<span id="WMDM_MSG_MEDIA_REMOVAL"></span><span id="wmdm_msg_media_removal"></span>**WMDM: \_ ENTFERNEN VON \_ MSG-MEDIEN \_**
 </dt> <dd>
 
-Das Medium wurde von einem Windows Media Device Manager-Gerät entfernt.
+Medien wurden aus einem Mediengerät entfernt, Windows Medien Geräte-Manager wurden.
 
 </dd> </dl>
 
@@ -78,7 +78,7 @@ Das Medium wurde von einem Windows Media Device Manager-Gerät entfernt.
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 

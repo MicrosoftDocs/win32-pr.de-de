@@ -4,27 +4,27 @@ description: Asynchrone Moniker
 ms.assetid: 24c50f7b-f085-4086-aa44-81e5cab011cb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e19323af3a972a2b83a290176a4b26fb79382da0
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 4d9e9b5e427df882b7e0be84507b79c9113a46e44dad614e571a831fedecedff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106340943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119859650"
 ---
 # <a name="asynchronous-monikers"></a>Asynchrone Moniker
 
-Die OLE-monikerarchitektur bietet ein konsistentes, erweiterbares Programmiermodell für das Arbeiten mit Internet Objekten, das Bereitstellen von Methoden zum Durchsuchen von Namen, das darstellen von URLs (Universal Resource Locators) als Druck Bare Namen sowie das Suchen und Binden von Objekten, die durch URL-Zeichen folgen dargestellt werden. (Siehe auch [URL-Moniker](url-monikers.md).) Standard-OLE-Moniker (insbesondere Element-, Datei-und zeigermoniker) sind jedoch für das Internet ungeeignet, da sie synchron sind. Sie geben einen Zeiger auf ein Objekt oder den Speicher nur zu dem Zeitpunkt zurück, an dem alle Daten verfügbar sind. Abhängig von der Menge der Daten, die heruntergeladen werden sollen, kann die Bindung synchron die Benutzeroberfläche des Clients über längere Zeiträume hinweg binden.
+Die OLE-Monikerarchitektur bietet ein konsistentes, erweiterbares Programmiermodell für die Arbeit mit Internetobjekten, stellt Methoden zum Analysieren von Namen bereit, stellt URLs (Universal Resource Locators) als druckbare Namen dar und sucht und bindet die durch URL-Zeichenfolgen dargestellten Objekte. (Siehe auch [URL-Moniker.)](url-monikers.md) Ole-Standardmoniker (insbesondere Element-, Datei- und Zeigermoniker) sind jedoch für das Internet ungeeignet, da sie synchron sind und nur dann einen Zeiger auf ein Objekt oder dessen Speicher zurückgeben, wenn alle Daten verfügbar sind. Abhängig von der Menge der herunterzuladenden Daten kann die synchrone Bindung die Benutzeroberfläche des Clients über einen längeren Zeitraum binden.
 
-Das Internet erfordert neue Ansätze für den Anwendungs Entwurf. Anwendungen sollten in der Lage sein, alle teuren Netzwerk Vorgänge asynchron auszuführen, um zu verhindern, dass die Benutzeroberfläche blockiert wird. Eine Anwendung sollte in der Lage sein, einen Vorgang zu initiieren und eine Benachrichtigung zu vollständigen oder partiellen Abschluss zu erhalten. An diesem Punkt sollte die Anwendung die Wahl haben, entweder mit dem nächsten Schritt des Vorgangs fortzufahren oder bei Bedarf zusätzliche Informationen bereitzustellen. Wenn ein Download fortgesetzt wird, sollte eine Anwendung auch in der Lage sein, den Benutzern Statusinformationen und die Möglichkeit zu geben, den Vorgang jederzeit abzubrechen.
+Das Internet erfordert neue Ansätze für den Anwendungsentwurf. Anwendungen sollten alle teuren Netzwerkvorgänge asynchron ausführen können, um zu vermeiden, dass die Benutzeroberfläche angehalten wird. Eine Anwendung sollte in der Lage sein, einen Vorgang auszulösen und bei vollständiger oder teilweiser Vervollständigung eine Benachrichtigung zu erhalten. An diesem Punkt sollte die Anwendung die Wahl haben, entweder mit dem nächsten Schritt des Vorgangs fortzufahren oder bei Bedarf zusätzliche Informationen bereitzustellen. Während ein Download fortgesetzt wird, sollte eine Anwendung auch in der Lage sein, Benutzern Statusinformationen und die Möglichkeit zur Verfügung zu stellen, den Vorgang jederzeit abzubrechen.
 
-Asynchrone Moniker stellen diese Funktionen sowie verschiedene Ebenen des asynchronen Bindungs Verhaltens bereit und bieten gleichzeitig eine Abwärtskompatibilität für Anwendungen, die entweder nicht über ein asynchrones Verhalten verfügen oder dieses nicht benötigen. Eine andere OLE-Technologie, asynchroner Speicher, funktioniert mit asynchronen Monikern, um das asynchrone herunterladen des permanenten Zustands eines Internet Objekts bereitzustellen. Der asynchrone Moniker löst den Bindungs Vorgang aus und richtet die erforderlichen Komponenten ein, einschließlich Speicher-und Streamobjekte, Bytearray-Objekte und Benachrichtigungs senken. Nachdem die Komponenten verbunden sind, wird der Moniker von der Art und Weise ausgeführt, und der Rest der Bindung wird hauptsächlich zwischen den Komponenten ausgeführt, die die asynchronen Speicherkomponenten und das-Objekt implementieren.
+Asynchrone Moniker bieten diese Funktionen sowie verschiedene Ebenen des asynchronen Bindungsverhaltens, während sie Abwärtskompatibilität für Anwendungen bereitstellen, die kein asynchrones Verhalten haben oder nicht benötigen. Eine andere OLE-Technologie, der asynchrone Speicher, arbeitet mit asynchronen Monikern zusammen, um das asynchrone Herunterladen des persistenten Zustands eines Internetobjekts bereitzustellen. Der asynchrone Moniker löst den Bindungsvorgang aus und richtet die erforderlichen Komponenten ein, einschließlich Speicher- und Streamobjekte, Bytearrayobjekte und Benachrichtigungssenken. Sobald die Komponenten verbunden sind, wird der Moniker nicht mehr ausgeführt, und der Rest der Bindung wird hauptsächlich zwischen den Komponenten ausgeführt, die die asynchronen Speicherkomponenten implementieren, und dem -Objekt.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
 -   [Asynchrone und synchrone Moniker](./asynchronous-vs.-synchronous-monikers.md)
 -   [Asynchrone und synchrone Bindung](./asynchronous-vs.-synchronous-binding.md)
--   [Asynchroner und synchroner Speicher](./asynchronous-vs.-synchronous-storage.md)
--   [Datenpull-Modell und Data-Push Modell](./data-pull-model-vs.-data-push-model.md)
+-   [Asynchrone und synchrone Storage](./asynchronous-vs.-synchronous-storage.md)
+-   [Daten-Pull-Modell und Data-Push-Modell](./data-pull-model-vs.-data-push-model.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,6 +33,6 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 [URL-Moniker](url-monikers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
