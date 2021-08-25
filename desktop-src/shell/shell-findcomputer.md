@@ -1,5 +1,5 @@
 ---
-description: Shell.FindComputer-Methode: Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt."
+description: Shell.FindComputer-Methode : Zeigt das Dialogfeld Suchergebnisse: Computer an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt."
 ms.assetid: 0304b955-afde-4de4-824a-9ec9c9530360 title: Shell.FindComputer method (Shldisp.h) ms.topic: reference ms.date: 05/31/2018 topic_type: 
 - APIRef
 - kbSyntax api_name: 
@@ -10,7 +10,7 @@ ms.assetid: 0304b955-afde-4de4-824a-9ec9c9530360 title: Shell.FindComputer metho
 
 # <a name="shellfindcomputer-method"></a>Shell.FindComputer-Methode
 
-Zeigt das Dialogfeld **Suchergebnisse: Computer** an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.
+Zeigt das **Dialogfeld Suchergebnisse: Computer** an. Im Dialogfeld wird das Ergebnis der Suche nach einem angegebenen Computer angezeigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +45,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die Verwendung von **FindComputer.** Das Ergebnis dieses Codes entspricht dem Drücken der Schaltfläche **Start,** klicken Sie auf **Suchen**, klicken Sie auf die Option **Drucker, Computer oder Personen, und** klicken Sie dann **auf Ein Computer im Netzwerk.** Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Das folgende Beispiel zeigt, **dass FindComputer** verwendet wird. Das Ergebnis dieses Codes ist das gleiche wie das Klicken auf die Schaltfläche **Start,** das Klicken auf Suchen, das Klicken auf die Option **Drucker,** Computer oder Personen und dann auf Einen Computer im **Netzwerk**. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -103,7 +103,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

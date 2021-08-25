@@ -1,77 +1,77 @@
 ---
-description: Mithilfe der Klasse smtpeer-Consumer können Sie eine e-Mail an einen bestimmten Benutzer senden, wenn ein bestimmtes Ereignis eintritt. Diese Klasse ist ein Standard Ereignisconsumer, den WMI bereitstellt.
+description: Mithilfe der SMTPEventConsumer-Klasse können Sie E-Mails an einen angegebenen Benutzer senden, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein Standardereignis-Consumer, der von WMI zur Verfügung steht.
 ms.assetid: ed10e6f7-8e18-4cde-bd46-a7791547c7da
 ms.tgt_platform: multiple
-title: Senden von e-Mails auf der Grundlage eines Ereignisses
+title: Senden von E-Mails basierend auf einem Ereignis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4929b7c8c29d514d73a6e4c9d14049a19f306233
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68bcef0858f7022fcb36006f038b20dedc940da60ee6c61e0372f5a74663093a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358514"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860418"
 ---
-# <a name="sending-email-based-on-an-event"></a>Senden von e-Mails auf der Grundlage eines Ereignisses
+# <a name="sending-email-based-on-an-event"></a>Senden von E-Mails basierend auf einem Ereignis
 
-Mithilfe der Klasse [smtpeer-Consumer](smtpeventconsumer.md) können Sie eine e-Mail an einen bestimmten Benutzer senden, wenn ein bestimmtes Ereignis eintritt. Diese Klasse ist ein [Standard Ereignisconsumer](standard-consumer-classes.md) , den WMI bereitstellt.
+Mithilfe der [SMTPEventConsumer-Klasse](smtpeventconsumer.md) können Sie E-Mails an einen angegebenen Benutzer senden, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein [Standardereignis-Consumer,](standard-consumer-classes.md) der von WMI zur Verfügung steht.
 
-Die Klasse [smtpventconsumer](smtpeventconsumer.md) erfordert die folgenden Bedingungen, um eine e-Mail-Nachricht als Antwort auf ein Ereignis zu senden:
+Die [SMTPEventConsumer-Klasse](smtpeventconsumer.md) erfordert die folgenden Bedingungen, um eine E-Mail-Nachricht als Reaktion auf ein Ereignis zu senden:
 
--   Die Klasse [smtpeer-Consumer](smtpeventconsumer.md) muss in den richtigen Namespace kompiliert werden. Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern.
+-   Die [SMTPEventConsumer-Klasse](smtpeventconsumer.md) muss in den richtigen Namespace kompiliert werden. Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md)
 -   Ein SMTP-Server muss im Netzwerk vorhanden sein.
--   Die e-Mail-Nachricht darf keine Anlage enthalten.
--   Die e-Mail-Nachricht muss in US-ASCII codiert werden.
+-   Die E-Mail-Nachricht darf keine Anlage enthalten.
+-   Die E-Mail-Nachricht muss in US-ASCII codiert sein.
 
-Das grundlegende Verfahren für die Verwendung von Standardconsumern ist immer identisch und befindet sich in [Überwachung und Reaktion auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern. Das folgende Verfahren fügt dem grundlegenden Verfahren hinzu. ist spezifisch für die Klasse [smtpeer Event Consumer](smtpeventconsumer.md) . und beschreibt, wie ein Ereignisconsumer erstellt wird, der eine e-Mail sendet.
+Das grundlegende Verfahren für die Verwendung von Standard-Consumern ist immer identisch und befindet sich unter [Überwachung und Reagieren auf Ereignisse mit Standard-Consumern.](monitoring-and-responding-to-events-with-standard-consumers.md) Die folgende Prozedur fügt der grundlegenden Prozedur hinzu: ist spezifisch für die [SMTPEventConsumer-Klasse.](smtpeventconsumer.md) und beschreibt, wie ein Ereignisverbraucher erstellt wird, der E-Mails sendet.
 
-Im folgenden Verfahren wird beschrieben, wie ein Ereignisconsumer erstellt wird, der eine e-Mail sendet.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Ereignisverbraucher erstellen, der E-Mails sendet.
 
-**So erstellen Sie einen Ereignisconsumer, der eine e-Mail sendet**
+**So erstellen Sie einen Ereignisverbraucher, der E-Mails sendet**
 
-1.  Installieren und registrieren Sie ggf. die Klasse [smtpventconsumer](smtpeventconsumer.md) .
+1.  Installieren und registrieren Sie bei Bedarf die [SMTPEventConsumer-Klasse.](smtpeventconsumer.md)
 
-    Die Klasse [smtpventconsumer](smtpeventconsumer.md) wird \\ vom WMI-Setup Programm in den Namespace des Stamm Abonnements kompiliert.
+    Die [SMTPEventConsumer-Klasse](smtpeventconsumer.md) wird \\ vom WMI-Setupprogramm in den Stammabonnementnamespace kompiliert.
 
-2.  Identifizieren Sie das Ereignis, das Sie überwachen möchten, und erstellen Sie die Ereignis Abfrage.
+2.  Identifizieren Sie das Ereignis, das Sie überwachen möchten, und erstellen Sie die Ereignisabfrage.
 
-    Möglicherweise ist ein System internes Ereignis vorhanden, das zum Überwachen Ihres Ereignisses verwendet. Die meisten systeminternen Ereignisse werden Änderungen an Klassen Instanzen im \\ Namespace "root cimv2" zugeordnet. Wenn Sie die Klassen in der [WMI-Klassen](wmi-classes.md) Referenz analysieren, finden Sie wahrscheinlich eine Klasse, die das Ereignis identifiziert, das Sie überwachen möchten. Verwenden Sie z. b. die [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse, um Änderungen an einem Festplattenlaufwerk zu überwachen.
+    Möglicherweise gibt es ein vorhandenes systeminternes Ereignis, das zum Überwachen Ihres Ereignisses verwendet. Die meisten systeminternen Ereignisse sind Änderungen an Klasseninstanzen im Namespace "root \\ cimv2" zugeordnet. Wenn Sie die Klassen im [WMI-Klassenverweis](wmi-classes.md) analysieren, können Sie wahrscheinlich eine Klasse finden, die das zu überwachende Ereignis identifiziert. Verwenden Sie beispielsweise die [**Win32 \_ LogicalDisk-Klasse,**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) um Änderungen an einem Festplattenlaufwerk zu überwachen.
 
-    Wenn keine systeminternen Ereignisse vorhanden sind, die verwenden, kann möglicherweise ein System externe-Ereignis Anbieter funktionieren. Verwenden Sie z. b. die [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) -Klasse des Registrierungs Anbieters, um Änderungen an der Systemregistrierung zu überwachen.
+    Wenn keine systeminternen Ereignisse vorhanden sind, die verwenden, kann es einen extrinsischen Ereignisanbieter geben, der funktionieren kann. Verwenden Sie beispielsweise die [**RegistryTreeChangeEvent-Klasse**](/previous-versions/windows/desktop/regprov/registrytreechangeevent) des Registrierungsanbieters, um Änderungen an der Systemregistrierung zu überwachen.
 
-    Wenn keine Klasse vorhanden ist, die das Ereignis identifiziert, das Sie überwachen möchten, müssen Sie einen eigenen Ereignis Anbieter erstellen und neue System externe-Ereignis Klassen definieren. Weitere Informationen finden Sie unter [Schreiben eines Ereignis Anbieters](writing-an-event-provider.md).
+    Wenn keine Klasse vorhanden ist, die das zu überwachende Ereignis identifiziert, müssen Sie einen eigenen Ereignisanbieter erstellen und neue extrinsische Ereignisklassen definieren. Weitere Informationen finden Sie unter [Schreiben eines Ereignisanbieters.](writing-an-event-provider.md)
 
-3.  Erstellen Sie in der MOF-Datei (Managed Object Format) eine Instanz von [smtpeer-Consumer](smtpeventconsumer.md) , um Ereignisse zu empfangen.
+3.  Erstellen Sie in der MOF-Datei (Managed Object Format) eine Instanz von [SMTPEventConsumer,](smtpeventconsumer.md) um Ereignisse zu empfangen.
 
-    Verwenden Sie die Eigenschaften der-Instanz, um die e-Mail-Nachricht zu definieren, die bei einem Ereignis gesendet wird. Die **Toline** -Eigenschaft definiert z. b. die e-Mail-Adresse, und die **Message** -Eigenschaft definiert den Text der e-Mail-Nachricht. Sie müssen die e-Mail-Adresse, den Betreff und den Text einer Nachricht definieren, aber eine e-Mail-Nachricht kann keine Anlage enthalten. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md).
+    Verwenden Sie die Eigenschaften der -Instanz, um die E-Mail-Nachricht zu definieren, die gesendet werden soll, wenn ein Ereignis auftritt. Beispielsweise definiert die **ToLine-Eigenschaft** die E-Mail-Adresse und die **Message-Eigenschaft** den Text der E-Mail-Nachricht. Sie müssen die E-Mail-Adresse, den Betreff und den Text einer Nachricht definieren, aber eine E-Mail-Nachricht darf keine Anlage enthalten. Weitere Informationen finden Sie unter [Entwerfen von MOF-Klassen (Managed Object Format).](designing-managed-object-format--mof--classes.md)
 
-4.  Erstellen Sie eine Ereignis Abfrage, mit der die Ereignisse angegeben werden, die Sie überwachen möchten.
+4.  Erstellen Sie eine Ereignisabfrage, die die Ereignisse angibt, die Sie überwachen möchten.
 
-    Weitere Informationen finden Sie unter [Abfragen mit WQL](querying-with-wql.md).
+    Weitere Informationen finden Sie unter [Abfragen mit WQL.](querying-with-wql.md)
 
-5.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter**](--eventfilter.md) , und speichern Sie die Abfrage in der **Query** -Eigenschaft.
+5.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter,**](--eventfilter.md) und speichern Sie Ihre Abfrage in der **Query-Eigenschaft.**
 
-    Weitere Informationen finden Sie unter [Abfragen mit WQL](querying-with-wql.md).
+    Weitere Informationen finden Sie unter [Abfragen mit WQL.](querying-with-wql.md)
 
-6.  Erstellen Sie eine Instanz von [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) , um den Filter und den Consumer zuzuordnen.
-7.  Kompilieren Sie die MOF-Datei mit [**Mofcomp.exe**](mofcomp.md).
+6.  Erstellen Sie eine Instanz von [**\_ \_ FilterToConsumerBinding,**](--filtertoconsumerbinding.md) um den Filter und den Consumer zuzuordnen.
+7.  Kompilieren Sie die MOF-Datei [**mit**](mofcomp.md)Mofcomp.exe.
 
 
 ## <a name="example"></a>Beispiel
 
-Das Beispiel in diesem Abschnitt ist ein MOF-Code, aber Sie können die Instanzen Programm gesteuert mithilfe der [Skript-API für WMI](scripting-api-for-wmi.md) oder der [com-API für WMI](com-api-for-wmi.md)erstellen.
+Das Beispiel in diesem Abschnitt befindet sich im MOF-Code. Sie können die Instanzen jedoch programmgesteuert erstellen, indem Sie die [Skript-API für WMI](scripting-api-for-wmi.md) oder die [COM-API für WMI](com-api-for-wmi.md)verwenden.
 
-Im folgenden Verfahren wird beschrieben, wie das Beispiel verwendet wird.
+Im folgenden Verfahren wird die Verwendung des Beispiels beschrieben.
 
 **So verwenden Sie das Beispiel**
 
-1.  Kopieren Sie die folgende MOF-Datei in eine Textdatei, und speichern Sie Sie mit der Erweiterung MOF.
-2.  Kompilieren Sie die MOF-Datei in einem Eingabe Aufforderungs Fenster mit dem folgenden Befehl:
+1.  Kopieren Sie die folgende MOF-Datei in eine Textdatei, und speichern Sie sie mit der Erweiterung MOF.
+2.  Kompilieren Sie die MOF-Datei in einem Eingabeaufforderungsfenster mit dem folgenden Befehl:
 
-    " **Mamacomp** *filename * * *. MOF* "*
+     *Mofcomp-Dateiname}.mof**
 
 > [!Note]  
-> Wenn der MOF-Code in den Namespace des Stamm Abonnements kompiliert wird \\ , wird der [smtpeer-Consumer](smtpeventconsumer.md) in den gleichen Namespace kompiliert.
+> Wenn MOF-Code in den \\ Stammabonnementnamespace kompiliert wird, wird [SMTPEventConsumer](smtpeventconsumer.md) in den gleichen Namespace kompiliert.
 
  
 
@@ -117,7 +117,7 @@ instance of __FilterToConsumerBinding
 
 <dl> <dt>
 
-[Überwachen von und reagieren auf Ereignisse mit Standard Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
+[Überwachen und Reagieren auf Ereignisse mit Standard-Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
 </dt> </dl>
 
  

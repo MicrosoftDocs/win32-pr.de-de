@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispielcode wird veranschaulicht, wie eine vektorbasierte Ausnahmebehandlung verwendet wird. Er verwendet die addvectoredexceptionhandler-Funktion zum Hinzufügen von mehreren Handlern, testet die Handler und verwendet dann die removevectoredexceptionhandler-Funktion, um die Handler zu entfernen.
+description: Der folgende Beispielcode veranschaulicht die Verwendung der Behandlung von Vektorausnahmen. Er verwendet die AddVectoredExceptionHandler-Funktion, um mehrere Handler hinzuzufügen, testet die Handler und verwendet dann die RemoveVectoredExceptionHandler-Funktion, um die Handler zu entfernen.
 ms.assetid: dbf7016b-09ac-4ca7-9b47-38b0dd763462
-title: Verwenden eines Vektoren-Ausnahme Handlers
+title: Verwenden eines Vektorausnahmehandlers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09c766d6695ebebdcb65f2895356866233117d87
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1a74fa8d603997afcd5b2700a052c924315f2514651d588539a68f9bbc0e2068
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929230"
 ---
-# <a name="using-a-vectored-exception-handler"></a>Verwenden eines Vektoren-Ausnahme Handlers
+# <a name="using-a-vectored-exception-handler"></a>Verwenden eines Vektorausnahmehandlers
 
-Im folgenden Beispielcode wird veranschaulicht, wie eine vektorbasierte Ausnahmebehandlung verwendet wird. Er verwendet die [**addvectoredexceptionhandler**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-addvectoredexceptionhandler) -Funktion zum Hinzufügen von mehreren Handlern, testet die Handler und verwendet dann die [**removevectoredexceptionhandler**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-removevectoredexceptionhandler) -Funktion, um die Handler zu entfernen.
+Der folgende Beispielcode veranschaulicht die Verwendung der Behandlung von Vektorausnahmen. Er verwendet die [**AddVectoredExceptionHandler-Funktion,**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-addvectoredexceptionhandler) um mehrere Handler hinzuzufügen, testet die Handler und verwendet dann die [**RemoveVectoredExceptionHandler-Funktion,**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-removevectoredexceptionhandler) um die Handler zu entfernen.
 
 **64-Bit-Windows:** Dieser Code eignet sich nicht für 64-Bit-Windows.
 

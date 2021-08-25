@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Interrupt Service Routine (ISR)-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für ISR-Ereignisse (Interrupt Service Routine). Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 2c7ccace-3384-43f4-905e-e7eeeee6f87b
 title: ISR-Klasse
 ms.topic: reference
@@ -17,18 +17,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 5e27d5aa2712f8493b80ea11884aae1d0ef7abee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 621bf9c97aef9ea23fba6186a419f7c205d98fba608c2539702607986de0d258
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901000"
 ---
 # <a name="isr-class"></a>ISR-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Interrupt Service Routine (ISR)-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für ISR-Ereignisse (Interrupt Service Routine).
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,42 +46,42 @@ class ISR : PerfInfo
 
 ## <a name="members"></a>Member
 
-Die **ISR** -Klasse verfügt über diese Typen von Membern:
+Die **ISR-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ISR** -Klasse verfügt über diese Eigenschaften.
+Die **ISR-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Initialtime**
+**InitialTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Erweiterung ("wmitime")
+Qualifizierer: WmiDataId(1), Extension("WmiTime")
 </dt> </dl>
 
-ISR-Eintrags Zeit.
+ISR-Einstiegszeit.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Zeiger
+Qualifizierer: WmiDataId(5), Zeiger
 </dt> </dl>
 
 Reserviert.
@@ -91,59 +91,59 @@ Reserviert.
 **ReturnValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Boolescher Wert, der angibt, ob der Interrupt beansprucht wurde (ist true, wenn der Interrupt beansprucht wurde).
+Boolescher Wert, der angibt, ob der Interrupt beansprucht wurde (ist TRUE, wenn der Interrupt beansprucht wurde).
 
 </dd> <dt>
 
 **-Routine zurückgegebener Wert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Die Adresse der ISR-Routine. Verwenden Sie die Adresse mit den Bild Ereignissen, um zu ermitteln, welches Image gestartet wurde.
+Adresse der ISR-Routine. Verwenden Sie die Adresse mit den Imageereignissen, um zu suchen, welches Image gestartet wurde.
 
 </dd> <dt>
 
 **Vektor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Vektor aus der Interrupt-Deskriptortabelle, der die ISR-Routine zugewiesen ist.
+Vektor aus interrupt-Deskriptortabelle, der ISR-Routine zugewiesen ist.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -1,22 +1,22 @@
 ---
-title: Erkennen, ob die Remotedesktopdienste Rolle installiert ist
-description: C \ Codebeispiel, das eine Methode anzeigt, die true zurückgibt, wenn die Remotedesktopdienste Server-Rolle installiert ist und ausgeführt wird oder andernfalls false ist, beginnend mit Windows Server 2008.
+title: Erkennen, ob die Remotedesktopdienste-Rolle installiert ist
+description: C\-Codebeispiel, das eine Methode zeigt, die TRUE zurückgibt, wenn die Remotedesktopdienste-Serverrolle installiert ist und ausgeführt wird, andernfalls false, beginnend mit Windows Server 2008.
 ms.assetid: 53ef8d43-2141-4df7-b9e6-baf0677924ba
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49f7d094f88271346c97f8d0467b48a266c865d5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1cf7ac1932c32ea797783d04f4e279bab03339c9b7620c11e72d4b755f084736
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871760"
 ---
-# <a name="detecting-whether-the-remote-desktop-services-role-is-installed"></a>Erkennen, ob die Remotedesktopdienste Rolle installiert ist
+# <a name="detecting-whether-the-remote-desktop-services-role-is-installed"></a>Erkennen, ob die Remotedesktopdienste-Rolle installiert ist
 
-Sie können die WMI-Klasse [**Win32 \_ Server Feature**](/windows/desktop/WmiSdk/win32-serverfeature) verwenden, um zu ermitteln, ob die Remotedesktopdienste Server-Rolle installiert ist.
+Sie können die [**WMI-Klasse Win32 \_ ServerFeature**](/windows/desktop/WmiSdk/win32-serverfeature) verwenden, um zu ermitteln, ob Remotedesktopdienste Serverrolle installiert ist.
 
-Im folgenden c#-Beispiel wird eine Methode veranschaulicht, die **true** zurückgibt, wenn die Remotedesktopdienste Server-Rolle installiert ist und ausgeführt wird oder andernfalls **false** . Da die WMI-Klasse der Win32-Server [**\_ Funktion**](/windows/desktop/WmiSdk/win32-serverfeature) nur ab Windows Server 2008 verfügbar ist, ist dieser Code mit früheren Versionen von Windows nicht kompatibel.
+Das folgende C#-Beispiel zeigt eine Methode, die **True** zurückgibt, wenn Remotedesktopdienste Serverrolle installiert ist und ausgeführt wird, andernfalls **FALSE.** Da die WMI-Klasse [**\_ Win32 ServerFeature**](/windows/desktop/WmiSdk/win32-serverfeature) nur ab Windows Server 2008 verfügbar ist, ist dieser Code nicht mit früheren Versionen von Windows.
 
 
 ```CSharp
@@ -54,6 +54,6 @@ static bool HasServerFeatureById(UInt32 roleId)
 
 
 
- 
+ 
 
- 
+ 

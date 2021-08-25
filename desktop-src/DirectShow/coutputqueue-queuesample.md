@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8efe0ec3b2326d1af0d0075770bdc6443ab9dcad
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 3770029f732629f12d94c9304d144226d873f38cc1b8452036d39ca2abdd757a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107910068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909590"
 ---
 # <a name="coutputqueuequeuesample-method"></a>COutputQueue.QueueSample-Methode
 
@@ -45,7 +45,7 @@ void QueueSample(
 *pSample* 
 </dt> <dd>
 
-Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels.
 
 </dd> </dl>
 
@@ -53,21 +53,21 @@ Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode fügt dem Ende der Warteschlange ein Beispiel hinzu. Halten Sie den kritischen Abschnitt vor dem Aufrufen dieser Methode, und rufen Sie ihn nur auf, wenn das -Objekt einen Thread verwendet, um Beispiele zu liefern. Um zu bestimmen, ob das Objekt einen Thread verwendet, rufen Sie die [**COutputQueue::IsQueued-Methode**](coutputqueue-isqueued.md) auf.
+Diese Methode fügt dem Ende der Warteschlange ein Beispiel hinzu. Halten Sie den kritischen Abschnitt vor dem Aufrufen dieser Methode bei, und rufen Sie ihn nur auf, wenn das Objekt einen Thread zum Übermitteln von Beispielen verwendet. Um zu bestimmen, ob das Objekt einen Thread verwendet, rufen Sie die [**COutputQueue::IsQueued-Methode**](coutputqueue-isqueued.md) auf.
 
-Diese Methode kann auch verwendet werden, um Steuernachrichten in die Warteschlange zu stellen. Eine Steuermeldung ist eine definierte Konstante (in einen LONG PTR-Typ wandelt), die den Thread anweisen, \_ eine Aktion durchzuführen. Die **COutputQueue-Klasse** definiert die in der folgenden Tabelle gezeigten Steuerungsmeldungen.
+Diese Methode kann auch verwendet werden, um Steuernachrichten in die Warteschlange zu stellen. Eine Steuernachricht ist eine definierte Konstante (umwandlung in einen LONG \_ PTR-Typ), die den Thread anweist, eine Aktion auszuführen. Die **COutputQueue-Klasse** definiert die in der folgenden Tabelle gezeigten Steuermeldungen.
 
 
 
 | Bezeichnung | Wert |
 |---------------|----------------------------------------|
 | `Message`       | Aktion                                 |
-| PAKET VOM \_ PAKET "EOS"   | Stellen Sie eine Benachrichtigung über das Ende des Datenstroms zu. |
-| NEUES \_ SEGMENT  | Geben Sie ein neues Segment an.                 |
+| EOS \_ PACKET   | Übermitteln sie eine Benachrichtigung über das Ende des Streams. |
+| NEUES \_ SEGMENT  | Stellen Sie ein neues Segment bereit.                 |
 | PAKET \_ ZURÜCKSETZEN | Setzen Sie den Status der Warteschlange zurück.          |
-| PAKET \_ SENDEN  | Senden Sie einen Teilbatch von Beispielen.       |
+| SEND \_ PACKET  | Senden sie einen Teilbatch von Beispielen.       |
 
 
 

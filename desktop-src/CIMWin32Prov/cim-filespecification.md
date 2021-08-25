@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ filespecification-Klasse stellt eine Datei dar, die sich entweder in einem oder aus dem System befindet.
+description: Die CIM \_ FileSpecification-Klasse stellt eine Datei dar, die im System ein- oder ausgeschaltet ist.
 ms.assetid: 25d6cc79-1497-4615-9251-8e00524dff1b
 ms.tgt_platform: multiple
 title: CIM_FileSpecification-Klasse
@@ -29,23 +29,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 503cf9678d2be7a3afb3f8c205f0d042b4bcaec2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: de9661b63272328f74ea2634011973a5570d9f719ca8826565a432a0eee215ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923780"
 ---
-# <a name="cim_filespecification-class"></a>CIM- \_ filespecification-Klasse
+# <a name="cim_filespecification-class"></a>CIM \_ FileSpecification-Klasse
 
-Die **CIM- \_ filespecification** -Klasse stellt eine Datei dar, die sich entweder in einem oder aus dem System befindet. Die Datei befindet sich in dem Verzeichnis, das durch die [**CIM \_ Director yspecificationfile-Zuordnung**](cim-directoryspecificationfile.md) identifiziert wird. Die [**Aufruf**](invoke-method-in-class-cim-filespecification.md) Methode verwendet die Informationen, um zu überprüfen, ob die Datei vorhanden ist. Beachten Sie, dass Eigenschaften mit einem **null** -Wert nicht geprüft werden.
+Die **CIM \_ FileSpecification-Klasse** stellt eine Datei dar, die im System ein- oder ausgeschaltet ist. Die Datei befindet sich in dem Verzeichnis, das durch die [**CIM \_ DirectorySpecificationFile-Zuordnung**](cim-directoryspecificationfile.md) identifiziert wird. Die [**Invoke-Methode**](invoke-method-in-class-cim-filespecification.md) verwendet die Informationen, um zu überprüfen, ob die Datei vorhanden ist. Beachten Sie, dass Eigenschaften mit einem **NULL-Wert** nicht überprüft werden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,20 +73,20 @@ class CIM_FileSpecification : CIM_Check
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ filespecification** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ FileSpecification-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ filespecification** -Klasse verfügt über diese Methoden.
+Die **CIM \_ FileSpecification-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                         | BESCHREIBUNG                                                      |
 |:---------------------------------------------------------------|:-----------------------------------------------------------------|
-| [**Invoke**](invoke-method-in-class-cim-filespecification.md) | Wertet eine bestimmte Überprüfung aus. Wird nicht von WMI implementiert.<br/> |
+| [**Invoke**](invoke-method-in-class-cim-filespecification.md) | Wertet eine bestimmte Überprüfung aus. Nicht von WMI implementiert.<br/> |
 
 
 
@@ -94,121 +94,121 @@ Die **CIM- \_ filespecification** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ filespecification** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ FileSpecification-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Eine kurze Textbeschreibung des Subjekts.
+Eine kurze Textbeschreibung des Betreffs.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
-**CheckId**
+**CheckID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Bezeichner, der in Verbindung mit anderen Schlüsseln zum eindeutigen Identifizieren der Überprüfung verwendet wird.
+Bezeichner, der in Verbindung mit anderen Schlüsseln verwendet wird, um die Überprüfung eindeutig zu identifizieren.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
-**Checkmode**
+**CheckMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, wird erwartet, dass die Bedingung in der Umgebung vorhanden ist. Beispielsweise wird erwartet, dass eine Datei auf einem System ausgeführt wird, daher sollte die [**Aufruf**](invoke-method-in-class-cim-check.md) Methode **true** zurückgeben.
+True gibt an, dass die Bedingung in der Umgebung vorhanden sein soll. Es wird beispielsweise erwartet, dass sich eine Datei auf einem System befindet, daher sollte die [**Invoke-Methode**](invoke-method-in-class-cim-check.md) **TRUE** zurückgeben.
 
-Wenn der Wert **false** ist, wird erwartet, dass die Bedingung nicht vorhanden ist. Eine Datei befindet sich z. b. nicht in einem System, daher sollte die [**Aufruf**](invoke-method-in-class-cim-check.md) Methode **false** zurückgeben.
+False gibt an, dass die Bedingung nicht vorhanden ist. Beispielsweise befindet sich eine Datei nicht auf einem System, daher sollte die [**Invoke-Methode**](invoke-method-in-class-cim-check.md) **FALSE** zurückgeben.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **Prüfsumme**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Software Signatur \| 002,4 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Signature \| 002.4")
 </dt> </dl>
 
-Der Wert wird als 16-Bit-Summe der ersten 32 Bytes der Datei berechnet.
+Der Als 16-Bit-Summe der ersten 32 Bytes der Datei berechnete Wert.
 
 </dd> <dt>
 
 **CRC1**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Software Signatur \| 002,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Signature \| 002.5")
 </dt> </dl>
 
-CRC-Wert, berechnet mithilfe der mittleren 512 KB.
+CRC-Wert, der mit der mittleren 512 KB berechnet wird.
 
 </dd> <dt>
 
 **CRC2**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Software Signatur \| 002,6 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Signature \| 002.6")
 </dt> </dl>
 
-CRC-Wert für die mittlere 512 KB der Datei, Modulo 3.
+CRC-Wert für die mittlere 512 KB der Datei, modulo 3.
 
 </dd> <dt>
 
-**"Kreatetimestamp"**
+**CreateTimeStamp**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Datum und Uhrzeit der Dateierstellung.
@@ -218,40 +218,40 @@ Datum und Uhrzeit der Dateierstellung.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung der-Objekte.
+Eine Beschreibung der -Objekte.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **FileSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
 Größe der Datei in Bytes.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **MD5Checksum**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -260,103 +260,103 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (16)
 </dt> </dl>
 
-Algorithmus zum Berechnen einer 128-Bit-Prüfsumme für eine beliebige Datei oder ein beliebiges Objekt. Die Wahrscheinlichkeit, dass zwei verschiedene Dateien, die dieselbe MD5-Prüfsumme erzeugen, sehr klein ist (ungefähr 1 in 2 ^ 64), und die MD5-Prüfsumme einer Datei kann verwendet werden, um einen zuverlässigen Inhalts Bezeichner zu erstellen, der die Datei wahrscheinlich eindeutig identifiziert. Das Gegenteil trifft ebenfalls zu. Wenn zwei Dateien dieselbe MD5-Prüfsumme aufweisen, ist es sehr wahrscheinlich, dass die Dateien identisch sind. Zum Zwecke der MOF-Spezifikation der MD5-Eigenschaft generiert der MD5-Algorithmus immer eine Zeichenfolge mit 32 Zeichen. Die Zeichenfolge "abcdefghijklmnopqrstuvwxyz" generiert beispielsweise die Zeichenfolge "c3fcd3d76192e4007dfb496cca67e13b". Weitere Informationen zum Implementieren des MD5-Algorithmus finden Sie unter [RFC 1321](https://www.ietf.org/rfc/rfc1321.txt).
+Algorithmus zum Berechnen einer 128-Bit-Prüfsumme für jede Datei oder jedes Objekt. Die Wahrscheinlichkeit, dass zwei verschiedene Dateien die gleiche MD5-Prüfsumme erzeugen, ist sehr gering (etwa 1 in 2^64), und die MD5-Prüfsumme einer Datei kann verwendet werden, um einen zuverlässigen Inhaltsbezeichner zu erstellen, der die Datei wahrscheinlich eindeutig identifiziert. Das Gegenteil trifft ebenfalls zu. Wenn zwei Dateien die gleiche MD5-Prüfsumme aufweisen, ist es sehr wahrscheinlich, dass die Dateien identisch sind. Für die MOF-Spezifikation der MD5-Eigenschaft generiert der MD5-Algorithmus immer eine Zeichenfolge mit 32 Zeichen. Beispielsweise generiert die Zeichenfolge "abcdefghlmnopqrstuvwxyz" die Zeichenfolge "c3fcd3d76192e4007dfb496cca67e13b". Weitere Informationen zum Implementieren des MD5-Algorithmus finden Sie unter [RFC 1321](https://www.ietf.org/rfc/rfc1321.txt).
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung (Name), [**korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) (Name), [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
 </dt> </dl>
 
-Entweder der Name der Datei oder der Name der Datei mit einem Verzeichnis Präfix.
+Entweder der Name der Datei oder der Name der Datei mit einem Verzeichnispräfix.
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM \_ Softwareelement**](cim-softwareelement.md).**SoftwareElementID**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Dies ist ein Bezeichner für dieses Softwareelement.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **SoftwareElementState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM \_ Softwareelement**](cim-softwareelement.md).**SoftwareElementState**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Der Softwareelement Zustand eines Software Elements.
+Der Softwareelementzustand eines Softwareelements.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 <dt>
 
 <span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>
 
-<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellbar** (0)
+<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellungsfähig** (0)
 
 
 </dt> <dd>
 
-Beschreibt die für die erfolgreiche Verteilung erforderlichen Details und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im installierbaren Zustand (d. h. im nächsten Zustand) zu erstellen.
+Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installierbaren Zustand (d. h. dem nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Installable"></span><span id="installable"></span><span id="INSTALLABLE"></span>
 
-<span id="Installable"></span><span id="installable"></span><span id="INSTALLABLE"></span>**Installier Bar** (1)
+<span id="Installable"></span><span id="installable"></span><span id="INSTALLABLE"></span>**Installierbar** (1)
 
 
 </dt> <dd>
 
-Beschreibt die für die erfolgreiche Installation erforderlichen Details und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Zustand "ausführbare Datei" (d. h. im nächsten Zustand) zu erstellen.
+Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, sowie die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d. h. im nächsten Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>
 
-<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare Datei** (2)
+<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare** Datei (2)
 
 
 </dt> <dd>
 
-Beschreibt die für die erfolgreiche Ausführung erforderlichen Details und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Zustand "wird ausgeführt" (d. h. im nächsten Zustand) zu erstellen.
+Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Ausführungszustand (d. h. im nächsten Zustand) zu erstellen.
 
 </dd> <dt>
 
 <span id="Running"></span><span id="running"></span><span id="RUNNING"></span>
 
-<span id="Running"></span><span id="running"></span><span id="RUNNING"></span>Wird **ausgeführt** (3)
+<span id="Running"></span><span id="running"></span><span id="RUNNING"></span>**Wird ausgeführt** (3)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für die Überwachung und den Betrieb eines Start Elements erforderlich sind.
+Beschreibt die Details, die zum Überwachen und Betreiben eines Startelements erforderlich sind.
 
 </dd> </dl>
 
@@ -365,18 +365,18 @@ Beschreibt die Details, die für die Überwachung und den Betrieb eines Start El
 **TargetOperatingSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM \_ Softwareelement**](cim-softwareelement.md).**TargetOperatingSystem**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". Informationen zur DMTF- \| Software Komponente \| 002,5 ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**TargetOperatingSystem**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.5")
 </dt> </dl>
 
-Ziel Betriebssystem des Software Elements.
+Zielbetriebssystem des Softwareelements.
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 <dt>
 
@@ -396,7 +396,7 @@ Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
 
 <span id="MACOS"></span><span id="macos"></span>
 
-<span id="MACOS"></span><span id="macos"></span>**MacOS** (2)
+<span id="MACOS"></span><span id="macos"></span>**MACOS** (2)
 
 
 </dt> <dd>
@@ -407,32 +407,32 @@ Mac OS
 
 <span id="ATTUNIX"></span><span id="attunix"></span>
 
-<span id="ATTUNIX"></span><span id="attunix"></span>**Attunix** (3)
+<span id="ATTUNIX"></span><span id="attunix"></span>**ATTUNIX** (3)
 
 
 </dt> <dd>
 
-ATT UNIX
+ATT-UNIX
 
 </dd> <dt>
 
 <span id="DGUX"></span><span id="dgux"></span>
 
-<span id="DGUX"></span><span id="dgux"></span>**Dgux** (4)
+<span id="DGUX"></span><span id="dgux"></span>**DGUX** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DECNT"></span><span id="decnt"></span>
 
-<span id="DECNT"></span><span id="decnt"></span>**Decnt** (5)
+<span id="DECNT"></span><span id="decnt"></span>**DECNT** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital UNIX** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digitales Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -512,13 +512,13 @@ Microsoft Virtual Machine (VM) für Java
 
 </dt> <dd>
 
-Windows 3. x
+Windows 3.x
 
 </dd> <dt>
 
 <span id="WIN95"></span><span id="win95"></span>
 
-<span id="WIN95"></span><span id="win95"></span>**Win95** (16)
+<span id="WIN95"></span><span id="win95"></span>**WIN95** (16)
 
 
 </dt> <dd>
@@ -529,7 +529,7 @@ Windows 95
 
 <span id="WIN98"></span><span id="win98"></span>
 
-<span id="WIN98"></span><span id="win98"></span>**Win98** (17)
+<span id="WIN98"></span><span id="win98"></span>**WIN98** (17)
 
 
 </dt> <dd>
@@ -540,7 +540,7 @@ Windows 98
 
 <span id="WINNT"></span><span id="winnt"></span>
 
-<span id="WINNT"></span><span id="winnt"></span>**Winnt** (18)
+<span id="WINNT"></span><span id="winnt"></span>**WINNT** (18)
 
 
 </dt> <dd>
@@ -551,7 +551,7 @@ Windows NT
 
 <span id="WINCE"></span><span id="wince"></span>
 
-<span id="WINCE"></span><span id="wince"></span>**WinCE** (19)
+<span id="WINCE"></span><span id="wince"></span>**WINCE** (19)
 
 
 </dt> <dd>
@@ -594,7 +594,7 @@ NCR 3000
 
 <span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>
 
-<span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>**Abhängige UNIX** -(24)
+<span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>**Reliant UNIX** (24)
 
 
 </dt> <dd></dd> <dt>
@@ -615,7 +615,7 @@ NCR 3000
 
 <span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>
 
-<span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>**Sequenent** (27)
+<span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>**Sequent** (27)
 
 
 </dt> <dd></dd> <dt>
@@ -636,7 +636,7 @@ NCR 3000
 
 <span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>
 
-<span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>**Sonnen Betriebssystem** (30)
+<span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>**SunOS** (30)
 
 
 </dt> <dd></dd> <dt>
@@ -650,18 +650,18 @@ NCR 3000
 
 <span id="ASERIES"></span><span id="aseries"></span>
 
-<span id="ASERIES"></span><span id="aseries"></span>**Aseries** (32)
+<span id="ASERIES"></span><span id="aseries"></span>**ASERIES** (32)
 
 
 </dt> <dd>
 
-Eine Reihe
+A-Serie
 
 </dd> <dt>
 
 <span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>
 
-<span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>**Tandemnsk** (33)
+<span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>**TandemNSK** (33)
 
 
 </dt> <dd>
@@ -672,7 +672,7 @@ Tandem NSK
 
 <span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>
 
-<span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>**Tandemnt** (34)
+<span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>**TandemNT** (34)
 
 
 </dt> <dd>
@@ -694,7 +694,7 @@ BS2000/OSD
 
 <span id="LINUX"></span><span id="linux"></span>
 
-<span id="LINUX"></span><span id="linux"></span>**Linux** (36)
+<span id="LINUX"></span><span id="linux"></span>**LINUX** (36)
 
 
 </dt> <dd></dd> <dt>
@@ -715,26 +715,26 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/ESA** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>
 
-<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interaktives UNIX** (40)
+<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interactive UNIX** (40)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BSDUNIX"></span><span id="bsdunix"></span>
 
-<span id="BSDUNIX"></span><span id="bsdunix"></span>**Bsdunix** (41)
+<span id="BSDUNIX"></span><span id="bsdunix"></span>**BSDUNIX** (41)
 
 
 </dt> <dd>
 
-BSD UNIX
+BSD-UNIX
 
 </dd> <dt>
 
@@ -754,7 +754,7 @@ BSD UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Hurd** (44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU** Gnu(44)
 
 
 </dt> <dd></dd> <dt>
@@ -772,7 +772,7 @@ Mac OS 9
 
 <span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>
 
-<span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>**Mach-Kernel** (46)
+<span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>**MACH-Kernel** (46)
 
 
 </dt> <dd></dd> <dt>
@@ -793,14 +793,14 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**EPOC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**OBC** (49)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>
 
-<span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>**Ixworks** (50)
+<span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>**IxWorks** (50)
 
 
 </dt> <dd></dd> <dt>
@@ -814,7 +814,7 @@ Mac OS 9
 
 <span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>
 
-<span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>**Mint** (52)
+<span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>**MiNT** (52)
 
 
 </dt> <dd></dd> <dt>
@@ -835,7 +835,7 @@ Mac OS 9
 
 <span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>
 
-<span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>**NeXTStep** (55)
+<span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>**NextStep** (55)
 
 
 </dt> <dd></dd> <dt>
@@ -847,7 +847,7 @@ Mac OS 9
 
 </dt> <dd>
 
-Palm OS
+Handflächenbetriebssystem
 
 </dd> <dt>
 
@@ -867,7 +867,7 @@ Palm OS
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dediziert** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (59)
 
 
 </dt> <dd></dd> <dt>
@@ -891,31 +891,31 @@ Palm OS
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](/windows/desktop/WmiSdk/standard-qualifiers) gegeben ("[**CIM \_ Softwareelement**](cim-softwareelement.md).**Version**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) (" MIF ". DMTF \| ComponentID \| 001,3 ")
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte eine der folgenden Formen aufweisen:
+Die Version des Vorgangs sollte eine der folgenden Formen haben:
 
 -   <major>.<minor>.<revision>
 -   <major>.<minor><letter><revision>
 
-Diese Eigenschaft wird von der [**CIM- \_ Überprüfung**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu Klassen, die von **CIM \_ File Specification** abgeleitet sind, finden Sie unter [Win32 Classes](win32-provider.md).
+WMI implementiert diese Klasse nicht. Informationen zu Klassen, die von **CIM \_ FileSpecification** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -925,17 +925,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Überprüfung**](cim-check.md)
+[**\_CIM-Überprüfung**](cim-check.md)
 </dt> </dl>
 
  

@@ -1,68 +1,68 @@
 ---
-description: Ein Anforderer ist eine beliebige Anwendung, die die VSS-API (insbesondere die IVssBackupComponents-Schnittstelle) zum Anfordern der Dienste des Volumeschattenkopie-Dienst zum Erstellen und Verwalten von Schatten Kopien und schattenkopiesätzen von einem oder mehreren Volumes verwendet.
+description: Ein Anforderer ist jede Anwendung, die die VSS-API (insbesondere die IVssBackupComponents-Schnittstelle) verwendet, um die Dienste der Volumeschattenkopie-Dienst anzufordern, um Schattenkopien und Schattenkopiesätze von einem oder mehreren Volumes zu erstellen und zu verwalten.
 ms.assetid: e49920d0-5b66-4aa1-b3ca-641629df5f8a
 title: Anfordernde Personen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b676b8cd287365b257e3b6ee85a7e47a70f88ef3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59f0e7fa7b1718b0da278dabb164fbffee43c939cd688c150e202bfafc4731a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866380"
 ---
 # <a name="requesters"></a>Anfordernde Personen
 
-Ein [*Anforderer*](vssgloss-r.md) ist eine beliebige Anwendung, die die VSS-API (insbesondere die [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle) zum Anfordern der Dienste des Volumeschattenkopie-Dienst zum Erstellen und Verwalten von Schatten Kopien und schattenkopiesätzen von einem oder mehreren Volumes verwendet.
+Ein [*Anforderer*](vssgloss-r.md) ist jede Anwendung, die die VSS-API (insbesondere die [**IVssBackupComponents-Schnittstelle)**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) verwendet, um die Dienste der Volumeschattenkopie-Dienst anzufordern, um Schattenkopien und Schattenkopiesätze von einem oder mehreren Volumes zu erstellen und zu verwalten.
 
-Das typische Beispiel für einen Anforderer (und der einzige, der in dieser Dokumentation behandelt wird) ist eine VSS-fähige Sicherungs-/Wiederherstellungsanwendung, die Schatten kopierte Daten als stabile Quelle für die Sicherungs Vorgänge verwendet.
+Das typischste Beispiel für einen Anforderer (und das einzige, das in dieser Dokumentation behandelt wird) ist eine VSS-fähige Sicherungs-/Wiederherstellungsanwendung, die schattenkopierte Daten als stabile Quelle für die Sicherungsvorgänge verwendet.
 
-Neben der Einleitung von Schatten Kopien kommunizieren Sicherungs-/Wiederherstellungs Anforderer-Anwendungen mit Daten Producer (Writer), um Informationen zum System zu sammeln und Writer zu signalisieren, Ihre Daten für die Sicherung vorzubereiten.
+Zusätzlich zum Initiieren von Schattenkopien kommunizieren Sicherungs-/Wiederherstellungsanwendungen von Anfordernden mit Datenerstellern (Writern), um Informationen über das System zu sammeln und Writern zu signalisieren, ihre Daten für die Sicherung vorzubereiten.
 
-## <a name="requester-state"></a>Status der Anforderer
+## <a name="requester-state"></a>Anfordererstatus
 
-Ein Anforderer behält seine Zustandsinformationen in einem XML-basierten Metadatenobjekt bei, das als Sicherungs Komponenten Dokument bezeichnet wird. Die Anforderer-Metadaten sind erforderlich, aber nicht ausreichend, damit ein Anforderer ein Dateisystem sichern und wiederherstellen kann. Hierfür gibt es die folgenden Gründe:
+Ein Anforderer verwaltet seine Zustandsinformationen in einem XML-basierten Metadatenobjekt namens Sicherungskomponentendokument. Die Anforderermetadaten sind erforderlich, aber nicht ausreichend, um einem Anforderer das Sichern und anschließende Wiederherstellen eines Dateisystems zu ermöglichen. Dies hat folgende Gründe:
 
--   Während eines Sicherungs Vorgangs wird nur eine Teilmenge aller Komponenten, die an der Sicherung beteiligt sind –[*nicht auswählbar für Sicherungs*](vssgloss-s.md) Komponenten ohne auswählbare für Sicherungs-und auswählbare Sicherungs Komponenten, die explizit in der Sicherung [*enthalten*](vssgloss-e.md) sind, dem Dokument mit den Sicherungs Komponenten der Anforderer hinzugefügt.
--   Die Informationen selbst für die Komponenten, die dem Dokument mit den Sicherungs Komponenten hinzugefügt werden, sind unvollständig – Datei-und Pfadspezifikationen sind nicht enthalten.
--   Während des Wiederherstellungs Vorgangs kann eine Komponente, die implizit in der Sicherung [*enthalten*](vssgloss-i.md) ist, [*für die Wiederherstellung ausgewählt*](vssgloss-s.md) werden und kann daher explizit in die Wiederherstellung eingeschlossen werden. Hierfür muss das Dokument mit den Sicherungs Komponenten der Anforderer mit Informationen aus gespeicherten Kopien des Writer-Metadatendokuments eines Writers aktualisiert werden.
+-   Während eines Sicherungsvorgangs wurden dem Sicherungskomponentendokument des Anfordernden nur für eine Teilmenge aller an der Sicherung beteiligten Komponenten , die [*für Sicherungskomponenten nicht ausgewählt*](vssgloss-s.md) werden können, ohne für Sicherungsvorher auswählbar und für Sicherungskomponenten auswählbar, die explizit in die Sicherung [*eingeschlossen*](vssgloss-e.md) wurden, ihre Informationen hinzugefügt.
+-   Die Informationen, auch für die Komponenten, die dem Sicherungskomponentendokument hinzugefügt wurden, sind unvollständig– Datei- und Pfadspezifikationen sind nicht enthalten.
+-   Bei Wiederherstellungsvorgängen kann eine [*Komponente,*](vssgloss-i.md) die implizit in die Sicherung eingeschlossen ist, für die [*Wiederherstellung ausgewählt*](vssgloss-s.md) werden und kann daher explizit in die Wiederherstellung eingeschlossen werden. Dies erfordert die Aktualisierung des Sicherungskomponentendokuments des Anforderers mit Informationen aus gespeicherten Kopien des Writer-Metadatendokuments eines Writers.
 
-Um die vollständige Angabe eines Sicherungs-oder Wiederherstellungs Vorgangs zu ermöglichen, ermöglicht die VSS-API dem Anforderer das Abfragen der Metadaten von Writern (während der Sicherungen) oder das Überprüfen gespeicherter Writer-Metadaten (während der Wiederherstellung) Außerdem kann ein Writer im Rahmen eines Sicherungs-oder Wiederherstellungs Vorgangs Komponenten Informationen im Sicherungs Komponenten Dokument ändern.
+Um eine vollständige Spezifikation eines Sicherungs- oder Wiederherstellungsvorgangs zu ermöglichen, ermöglicht die VSS-API dem Anforderer, ausgeführte Writermetadaten (während sicherungen) abzufragen oder gespeicherte Writermetadaten (während der Wiederherstellungen) zu untersuchen. Darüber hinaus kann ein Writer komponenteninformationen im Sicherungskomponentendokument während eines Sicherungs- oder Wiederherstellungsvorgangs ändern.
 
-Mithilfe der Informationen zu den Komponenten, die für die Sicherung und Wiederherstellung ausgewählt wurden, und den Regeln bezüglich der Komponentenauswahl (Weitere Informationen finden Sie unter [Einrichten der Komponenten Organisation](definition-of-components-by-writers.md) und [Arbeiten mit Selektierbarkeit und logischen Pfaden](working-with-selectability-and-logical-paths.md)), kann ein Anforderer ermitteln, welche Dateien er sichern oder wiederherstellen muss und wo er diese Dateien finden kann.
+Anhand der Informationen darüber, welche Komponenten für die Sicherung und Wiederherstellung ausgewählt wurden, und den Regeln für die Komponentenauswahl (weitere Informationen finden Sie unter Einrichten der [Komponentenorganisation](definition-of-components-by-writers.md) und [Arbeiten mit Auswählbarkeit und logischen Pfaden),](working-with-selectability-and-logical-paths.md)kann ein Anforderer bestimmen, welche Dateien von welchem Writer er sichern oder wiederherstellen muss und wo er diese Dateien finden kann.
 
-Als Teil einer Sicherung müssen sowohl die Anforderer-als auch die Writer-Metadaten gespeichert werden, damit Sie in der Wiederherstellung verwendet werden können. Im Gegensatz dazu erfordern Wiederherstellungs Vorgänge das Abrufen der alten Sicherungs Komponenten und Writer-Metadatendokumente, um vollständige Anweisungen zum Wiederherstellen von Dateien zu erhalten.
+Im Rahmen einer Sicherung müssen die Metadaten des Anfordernden und des Writers gespeichert werden, damit sie bei der Wiederherstellung verwendet werden können. Umgekehrt erfordern Wiederherstellungsvorgänge das Abrufen der alten Sicherungskomponenten und WriterMetadatendokumente, um vollständige Anweisungen zum Wiederherstellen von Dateien zu erhalten.
 
-## <a name="requester-interprocess-communication"></a>Prozessübergreifende Kommunikation mit Anforderer
+## <a name="requester-interprocess-communication"></a>Prozessübergreifende Kommunikation des Anfordernden
 
-Der Anforderer behält die Kontrolle über VSS-Sicherungs-und Wiederherstellungs Vorgänge, indem er com-Ereignisse über verschiedene Aufrufe in der requestapi erzeugt. Diese Aufrufe können folgende Aktionen ausführen:
+Der Anforderer behält die Kontrolle über VSS-Sicherungs- und -Wiederherstellungsvorgänge, indem er COM-Ereignisse über verschiedene Aufrufe in der Anfordernden-API generiert. Diese Aufrufe können folgendermaßen ausführen:
 
--   Anforderungen an die Anbieter stellen, z. b. [**IVssBackupComponents::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) bewirkt, dass der Anbieter eine Schatten Kopie des ausgewählten Volumes erstellt.
--   Veranlassen Sie, dass die Writer Informationen zurückgeben, z. b. [**IVssBackupComponents:: gatherwritermetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) ermöglicht dem Anforderer, das Writer-Metadatendokument jedes Writers abzurufen.
--   Erfordert, dass Writer verschiedene Phasen der Schattenkopie-und Sicherungs Vorgänge vorbereiten oder verarbeiten können, z. b. [**IVssBackupComponents::P Analyse forbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) signalisiert Writer, dass die e/a-Sperre eingerichtet werden soll.
+-   Stellen Sie Anforderungen der Anbieter, z. [**B. bewirkt IVssBackupComponents::D oSnapshotSet,**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) dass der Anbieter eine Schattenkopie des ausgewählten Volumes erstellt.
+-   Lösen Sie die Writer aus, um Informationen zurückzugeben, z. B. [**ermöglicht IVssBackupComponents::GatherWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) dem Anforderer das Abrufen des Writer-Metadatendokuments jedes Writers.
+-   Writer müssen sich auf verschiedene Phasen der Schattenkopie- und Sicherungsvorgänge vorbereiten oder diese verarbeiten, z. [**B. IVssBackupComponents::P repareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) signalisiert Writern, dass sie für das Einfrieren der E/A eingerichtet werden.
 
-Ein Anforderer empfängt Informationen von den Writern mithilfe von livedokumenten oder gespeicherten Writer-Metadatendokumenten und durch die Verwendung der [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Schnittstelle, die der Writer aktualisieren kann.
+Ein Anforderer empfängt Informationen von den Writern über live gespeicherte Writer-Metadatendokumente und über die [**IVssComponent-Schnittstelle,**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) die der Writer aktualisieren kann.
 
 ## <a name="life-cycle-of-a-requester-during-backup"></a>Lebenszyklus eines Anforderers während der Sicherung
 
-Im folgenden finden Sie eine Zusammenfassung des Lebenszyklus der Anforderer für die Sicherung:
+Im Folgenden wird der Lebenszyklus des Anfordernden für die Sicherung zusammengefasst:
 
 1.  Instanziieren und Initialisieren von VSS-API-Schnittstellen.
-2.  Wenden Sie sich an Writer, und rufen Sie Ihre Informationen ab
-3.  Wählen Sie die zu sichernden Daten aus.
-4.  Fordern Sie eine Schatten Kopie des Anbieters an.
+2.  Wenden Sie sich an Writer, und rufen Sie ihre Informationen ab.
+3.  Wählen Sie zu sichernde Daten aus.
+4.  Fordern Sie eine Schattenkopie des Anbieters an.
 5.  Sichern Sie die Daten.
-6.  Geben Sie die-Schnittstelle und die Schatten Kopie frei.
+6.  Geben Sie die Schnittstelle und die Schattenkopie frei.
 
-## <a name="life-cycle-of-a-requester-during-restore"></a>Lebenszyklus eines Anforderers während der Wiederherstellung
+## <a name="life-cycle-of-a-requester-during-restore"></a>Lebenszyklus einer Anfordernden während der Wiederherstellung
 
-Der Lebenszyklus der Wiederherstellung erfordert keine Schatten Kopie, erfordert aber trotzdem die Writer-Zusammenarbeit:
+Für den Wiederherstellungslebenszyklus ist keine Schattenkopie erforderlich, aber dennoch eine Zusammenarbeit mit dem Writer:
 
-1.  Instanziieren von VSS-API-Schnittstellen.
-2.  Initialisieren Sie den Anforderer für den Wiederherstellungs Vorgang, indem Sie ein Dokument mit gespeicherten Sicherungs Komponenten laden.
-3.  Abrufen gespeicherter Writer-Metadaten und Sicherungs Komponenten Dokumente.
-4.  Kontaktieren Sie die Writer, um die Zusammenarbeit zu initialisieren
-5.  Überprüfen Sie das Dokument mit den Sicherungs Komponenten auf Writer-Updates.
+1.  Instanziieren sie VSS-API-Schnittstellen.
+2.  Initialisieren Sie den Anforderer für den Wiederherstellungsvorgang, indem Sie ein gespeichertes Sicherungskomponentendokument laden.
+3.  Ruft gespeicherte Writermetadaten und Sicherungskomponentendokumente ab.
+4.  Wenden Sie sich an die Autoren, um die Zusammenarbeit zu initialisieren.
+5.  Suchen Sie nach Writerupdates für das Sicherungskomponentendokument.
 6.  Stellen Sie die Daten wieder her.
 
  

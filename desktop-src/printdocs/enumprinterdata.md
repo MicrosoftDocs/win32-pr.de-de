@@ -1,7 +1,7 @@
 ---
-description: Die enumprinterdata-Funktion Listet Konfigurationsdaten für einen angegebenen Drucker auf.
+description: Die EnumPrinterData-Funktion listet Konfigurationsdaten für einen angegebenen Drucker auf.
 ms.assetid: 0a4c8436-46fe-4e21-8d55-c5031a3d1b38
-title: Enumprinterdata-Funktion (winspool. h)
+title: EnumPrinterData-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: d7c175b0c90853a592e0ff979095d41432c16b38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a542b6a0432ccf7065d94eeb8ebb3acbd8e2ace22044f2cc8984a1f4b2404299
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846080"
 ---
-# <a name="enumprinterdata-function"></a>Enumprinterdata-Funktion
+# <a name="enumprinterdata-function"></a>EnumPrinterData-Funktion
 
-Die **enumprinterdata** -Funktion Listet Konfigurationsdaten für einen angegebenen Drucker auf.
+Die **EnumPrinterData-Funktion** listet Konfigurationsdaten für einen angegebenen Drucker auf.
 
-Um die Konfigurationsdaten in einem einzelnen-Befehl abzurufen, verwenden Sie die [**enumprinterdataex**](enumprinterdataex.md) -Funktion.
+Um die Konfigurationsdaten in einem einzelnen Aufruf abzurufen, verwenden Sie die [**EnumPrinterDataEx-Funktion.**](enumprinterdataex.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,103 +51,103 @@ DWORD EnumPrinterData(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, dessen Konfigurationsdaten abgerufen werden sollen. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für den Drucker, dessen Konfigurationsdaten abgerufen werden sollen. Verwenden Sie die [**OpenPrinter-**](openprinter.md) oder [**AddPrinter-Funktion,**](addprinter.md) um ein Druckerhandle abzurufen.
 
 </dd> <dt>
 
-*dwIndex* \[ in\]
+*dwIndex* \[ In\]
 </dt> <dd>
 
-Ein Indexwert, der den abzurufenden Konfigurationsdaten Wert angibt.
+Ein Indexwert, der den abzurufenden Konfigurationsdatenwert angibt.
 
-Legen Sie diesen Parameter auf 0 (null) für den ersten **enumprinterdata** -Aufrufwert für ein bestimmtes Drucker Handle fest. Erhöhen Sie den Parameter dann um einen für nachfolgende Aufrufe, die denselben Drucker betreffen, bis die Funktion Fehler \_ ohne \_ Weitere Elemente zurückgibt \_ . Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Legen Sie diesen Parameter für den ersten Aufruf von **EnumPrinterData** für ein angegebenes Druckerhandle auf 0 fest. Erhöhen Sie dann den Parameter für nachfolgende Aufrufe, die den gleichen Drucker betreffen, um einen Parameter, bis die Funktion ERROR \_ NO MORE ITEMS zurückgibt. \_ \_ Weitere Informationen finden Sie im abschnitt "Hinweise".
 
-Wenn Sie das in den Beschreibungen der Parameter *cbvaluename* und *cbData* erwähnte Verfahren verwenden, um geeignete Puffergrößen Werte zu erhalten, wobei beide Parameter beim ersten **Aufzählen von enumprinterdata** für ein angegebenes Drucker Handle auf 0 (null) festgelegt werden, ist der Wert von *dwIndex* für diesen Befehl nicht von Bedeutung. Legen Sie *dwIndex* beim nächsten Aufzählung von **enumprinterdata** auf NULL fest, um den eigentlichen enumerationsprozess zu starten.
+Wenn Sie die in den Beschreibungen der *CbValueName-* und *cbData-Parameter* beschriebene Technik verwenden, um geeignete Puffergrößenwerte zu erhalten und beide Parameter bei einem ersten Aufruf von **EnumPrinterData** für ein angegebenes Druckerhandle auf null festzulegen, spielt der Wert von *dwIndex* für diesen Aufruf keine Rolle. Legen Sie *dwIndex* im nächsten Aufruf von **EnumPrinterData** auf null fest, um den tatsächlichen Enumerationsprozess zu starten.
 
-Konfigurationsdaten Werte sind nicht geordnet. Neue Werte haben einen beliebigen Index. Dies bedeutet, dass die **enumprinterdata** -Funktion Werte in beliebiger Reihenfolge zurückgeben kann.
+Konfigurationsdatenwerte sind nicht sortiert. Neue Werte verfügen über einen beliebigen Index. Dies bedeutet, dass die **EnumPrinterData-Funktion** Werte in beliebiger Reihenfolge zurückgeben kann.
 
 </dd> <dt>
 
-*pvaluename* \[ vorgenommen\]
+*pValueName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Namen des Konfigurationsdaten Werts einschließlich eines abschließenden NULL-Zeichens empfängt.
+Ein Zeiger auf einen Puffer, der den Namen des Konfigurationsdatenwerts empfängt, einschließlich eines abschließenden NULL-Zeichens.
 
 </dd> <dt>
 
-*cbvaluename* \[ in\]
+*cbValueName* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pvaluename* zeigt.
+Die Größe des Puffers in Bytes, auf den *pValueName* zeigt.
 
-Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereitstellt, legen Sie für den ersten **enumprinterdata** -aufzurufenden Parameter sowohl diesen Parameter als auch den *cbData* -Parameter auf 0 (null) fest. Wenn die Funktion zurückgegeben wird, enthält die Variable, auf die von *pcbvaluename* verwiesen wird, eine Puffergröße, die groß genug ist, um alle Namen von Konfigurationsdaten für den Drucker erfolgreich aufzulisten.
+Wenn das Betriebssystem eine angemessene Puffergröße bereitstellen soll, legen Sie sowohl diesen Parameter als auch den *cbData-Parameter* für den ersten Aufruf von **EnumPrinterData** für ein angegebenes Druckerhandle auf null fest. Wenn die Funktion zurückgegeben wird, enthält die Variable, auf die von *"pwValueName"* verwiesen wird, eine Puffergröße, die groß genug ist, um alle Namen der Konfigurationsdatenwerte des Druckers erfolgreich aufzulisten.
 
 </dd> <dt>
 
-*pcbvaluename* \[ vorgenommen\]
+*pwValueName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der Bytes empfängt, die im Puffer gespeichert werden, auf die von *pvaluename* verwiesen wird.
+Ein Zeiger auf eine Variable, die die Anzahl von Bytes empfängt, die in dem Puffer gespeichert sind, auf den *pValueName* zeigt.
 
 </dd> <dt>
 
-*pType* \[ vorgenommen\]
+*pType* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Code empfängt, der den Typ der im angegebenen Wert gespeicherten Daten angibt. Eine Liste der möglichen Typcodes finden Sie unter [Registrierungs Werttypen](/windows/desktop/SysInfo/registry-value-types). Der *pType* -Parameter kann **null** sein, wenn der Typcode nicht erforderlich ist.
+Ein Zeiger auf eine Variable, die einen Code empfängt, der den Typ der im angegebenen Wert gespeicherten Daten angibt. Eine Liste der möglichen Typcodes finden Sie unter [Registrierungswerttypen.](/windows/desktop/SysInfo/registry-value-types) Der *pType-Parameter* kann **NULL** sein, wenn der Typcode nicht erforderlich ist.
 
 </dd> <dt>
 
-*pData* \[ vorgenommen\]
+*pData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Konfigurationsdaten Wert empfängt.
+Ein Zeiger auf einen Puffer, der den Konfigurationsdatenwert empfängt.
 
-Dieser Parameter kann **null** sein, wenn der Wert für die Konfigurationsdaten nicht erforderlich ist.
+Dieser Parameter kann **NULL** sein, wenn der Konfigurationsdatenwert nicht erforderlich ist.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pData* zeigt.
+Die Größe des Puffers in Bytes, auf den *pData* zeigt.
 
-Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereitstellt, legen Sie für den ersten **enumprinterdata** -aufzurufenden Parameter sowohl diesen Parameter als auch den *cbvaluename* -Parameter auf 0 (null) fest. Wenn die Funktion zurückgegeben wird, enthält die Variable, auf die von *pcbData* verwiesen wird, eine Puffergröße, die groß genug ist, um alle Namen von Konfigurationsdaten für den Drucker erfolgreich aufzulisten.
+Wenn das Betriebssystem eine angemessene Puffergröße bereitstellen soll, legen Sie sowohl diesen Parameter als auch den *cbValueName-Parameter* für den ersten Aufruf von **EnumPrinterData** für ein angegebenes Druckerhandle auf 0 (null) fest. Wenn die Funktion zurückgegeben wird, enthält die Variable, auf die *von "data"* verwiesen wird, eine Puffergröße, die groß genug ist, um alle Namen der Konfigurationsdatenwerte des Druckers erfolgreich aufzulisten.
 
 </dd> <dt>
 
-*pcbData* \[ vorgenommen\]
+*data* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der Bytes empfängt, die im Puffer gespeichert werden, auf die *pData* verweist.
+Ein Zeiger auf eine Variable, die die Anzahl von Bytes empfängt, die in dem Puffer gespeichert sind, auf den *pData* zeigt.
 
-Dieser Parameter kann **null** sein, wenn *pData* **null** ist.
+Dieser Parameter kann **NULL** sein, wenn *pData* **NULL** ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehlercode.
 
-Die Funktion gibt \_ einen Fehler ohne \_ Weitere Elemente zurück \_ , wenn keine weiteren Konfigurationsdaten Werte für ein angegebenes Drucker handle vorhanden sind.
+Die Funktion gibt ERROR \_ NO \_ MORE ITEMS \_ zurück, wenn für ein angegebenes Druckerhandle keine Konfigurationsdatenwerte mehr abgerufen werden müssen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-**Enumprinterdata** Ruft das von der [**setprinterdata**](setprinterdata.md) -Funktion festgelegte Drucker Konfigurations DataSet ab. Die Konfigurationsdaten eines Druckers bestehen aus einem Satz von benannten und typisierten Werten. Die **enumprinterdata** -Funktion Ruft bei jedem Aufruf einen dieser Werte und ihren Namen sowie einen Typcode ab. Rufen Sie die **enumprinterdata** -Funktion mehrmals nacheinander auf, um alle Konfigurationsdaten Werte eines Druckers zu erhalten.
+**EnumPrinterData** ruft das Druckerkonfigurationsdataset von der [**SetPrinterData-Funktion**](setprinterdata.md) ab. Die Konfigurationsdaten eines Druckers bestehen aus einem Satz benannter und typisierter Werte. Die **EnumPrinterData-Funktion** ruft bei jedem Aufruf einen dieser Werte sowie ihren Namen und einen Typcode ab. Rufen Sie die **EnumPrinterData-Funktion** mehrmals nacheinander auf, um alle Konfigurationsdatenwerte eines Druckers abzurufen.
 
-Die Drucker Konfigurationsdaten werden in der Registrierung gespeichert. Beim Auflisten von Drucker Konfigurationsdaten sollten Sie keine Registrierungsfunktionen aufrufen, die diese Daten möglicherweise ändern.
+Druckerkonfigurationsdaten werden in der Registrierung gespeichert. Beim Aufzählen von Druckerkonfigurationsdaten sollten Sie das Aufrufen von Registrierungsfunktionen vermeiden, die diese Daten möglicherweise ändern.
 
-Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereitstellt, müssen Sie zuerst **enumprinterdata** mit den Parametern *cbvaluename* und *cbData* auf NULL festlegen, wie zuvor im Abschnitt Parameters angegeben. Der Wert von *dwIndex* ist für diesen-Befehl nicht von Bedeutung. Wenn die Funktion zurückgegeben \* wird, enthalten *pcbvaluename* und \* *pcbData* Puffergrößen, die groß genug sind, um alle Namen und Werte der Konfigurationsdaten des Drucker aufzulisten. Beim nächsten-Befehl werden Werte Name und Datenpuffer zugewiesen, *cbvaluename* und *cbData* auf die Größen in Bytes der zugeordneten Puffer festgelegt, und *dwIndex* wird auf 0 (null) festgelegt. Setzen Sie anschließend die **enumprinterdata** -Funktion fort, und erhöhen Sie *dwIndex* jedes Mal um 1, bis die Funktion Fehler \_ ohne \_ Weitere \_ Elemente zurückgibt.
+Wenn das Betriebssystem eine angemessene Puffergröße bereitstellen soll, rufen Sie zunächst **EnumPrinterData** auf, wobei die Parameter *cbValueName* und *cbData* auf 0 (null) festgelegt sind, wie weiter oben im Abschnitt Parameter beschrieben. Der Wert von *dwIndex* spielt für diesen Aufruf keine Rolle. Wenn die Funktion zurückgegeben \* wird, enthalten *"valueName"* und \* *"data"* Puffergrößen, die groß genug sind, um alle Namen und Werte der Konfigurationsdatenwerte des Druckers aufzulisten. Weisen Sie beim nächsten Aufruf Wertname und Datenpuffer zu, legen Sie *cbValueName* und *cbData* auf die Größen in Bytes der zugeordneten Puffer fest, und legen Sie *dwIndex* auf 0 (null) fest. Danach rufen Sie weiterhin die **EnumPrinterData-Funktion** auf und erhöhen *dwIndex* jedes Mal um eins, bis die Funktion ERROR NO MORE ITEMS zurückgibt. \_ \_ \_
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -157,10 +157,10 @@ Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereit
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Enumprinterdataw** (Unicode) und **enumprinterdataa** (ANSI)<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **EnumPrinterDataW** (Unicode) und **EnumPrinterDataA** (ANSI)<br/>                                 |
 
 
 
@@ -174,13 +174,13 @@ Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereit
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Deleteprinterdata**](deleteprinterdata.md)
+[**DeletePrinterData**](deleteprinterdata.md)
 </dt> <dt>
 
-[**Enumprinterdataex**](enumprinterdataex.md)
+[**EnumPrinterDataEx**](enumprinterdataex.md)
 </dt> <dt>
 
-[**Getprinterdata**](getprinterdata.md)
+[**GetPrinterData**](getprinterdata.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -189,7 +189,7 @@ Wenn Sie möchten, dass das Betriebssystem eine angemessene Puffergröße bereit
 [**SetPrinter**](setprinter.md)
 </dt> <dt>
 
-[**Setprinterdata**](setprinterdata.md)
+[**SetPrinterData**](setprinterdata.md)
 </dt> </dl>
 
  

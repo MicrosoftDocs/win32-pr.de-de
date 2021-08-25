@@ -1,7 +1,7 @@
 ---
-description: Verarbeitet Anforderungen. Dies ist eine reine virtuelle Member-Funktion.
+description: Verarbeitet Anforderungen. Dies ist eine reine virtuelle Memberfunktion.
 ms.assetid: ffdbc287-ca17-44e4-b00a-d72a2367f510
-title: Cmsgthread. threadmessageproc-Methode (msgthrd. h)
+title: CMsgThread.ThreadMessageProc-Methode (Msgthrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: cf47eb63a6f9d8fe4921985bb64567de6678b44c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb11a7cac567bd645d0e3fd1c294636b5df9410fbc54012633ec0c0d161b43d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909700"
 ---
-# <a name="cmsgthreadthreadmessageproc-method"></a>Cmsgthread. threadmessageproc-Methode
+# <a name="cmsgthreadthreadmessageproc-method"></a>CMsgThread.ThreadMessageProc-Methode
 
-Verarbeitet Anforderungen. Dies ist eine reine virtuelle Member-Funktion.
+Verarbeitet Anforderungen. Dies ist eine reine virtuelle Memberfunktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,43 +45,43 @@ virtual LRESULT ThreadMessageProc(
 
 <dl> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Anforderungs Code.
+Anforderungscode.
 
 </dd> <dt>
 
 *dwFlags* 
 </dt> <dd>
 
-Optionaler Flag-Parameter für die Anforderung.
+Optionaler flag-Parameter, der angefordert werden soll.
 
 </dd> <dt>
 
-*lpparam* 
+*lpParam* 
 </dt> <dd>
 
-Optionaler Zeiger auf zusätzliche Daten oder einen Rückgabe Datenblock.
+Optionaler Zeiger auf zusätzliche Daten oder einen Rückgabedatenblock.
 
 </dd> <dt>
 
-*Peer Event* 
+*pEvent* 
 </dt> <dd>
 
-Optionaler Zeiger auf ein Ereignis Objekt.
+Optionaler Zeiger auf ein Ereignisobjekt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Rückgabe ungleich NULL bewirkt, dass der Thread beendet wird. Gibt NULL zurück, es sei denn, eine Beendigungs Anforderung wurde kürzlich verarbeitet.
+Jede Rückgabe ungleich 0 führt dazu, dass der Thread beendet wird. Gibt 0 (null) zurück, es sei denn, eine Beendigungsanforderung wurde kürzlich verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese reine virtuelle Funktion muss in der abgeleiteten Klasse überschrieben werden. Sie wird einmal für jede Anforderung aufgerufen, die durch einen Aufruf der [**cmsgthread::P utthreadmsg**](cmsgthread-putthreadmsg.md) -Member-Funktion in der Warteschlange eingereiht wird.
+Diese rein virtuelle Funktion muss in Ihrer abgeleiteten Klasse überschrieben werden. Sie wird einmal für jede Anforderung aufgerufen, die durch einen Aufruf der [**Memberfunktion CMsgThread::P utThreadMsg**](cmsgthread-putthreadmsg.md) in die Warteschlange eingereiht wird.
 
-Die Member-Funktion definiert die vier Parameter. Verwenden Sie in der Regel den Parameter " *übersg* ", um die Anforderung anzugeben, und die anderen drei Parameter sind optionale zusätzliche Parameter. Die aufrufenden Anwendung kann einen Zeiger auf ein [**camevent**](camevent.md) -Objekt im Parameter " *GVENT* " bereitstellen, wenn dies für Ihre Anwendung erforderlich ist. Sie müssen dieses Ereignis festlegen, nachdem Sie das Ereignis mithilfe eines Ausdrucks wie z. b. verarbeitet haben:
+Die Memberfunktion definiert die vier Parameter. Verwenden Sie in der Regel den *uMsg-Parameter,* um die Anforderung anzugeben, und die anderen drei Parameter sind optionale zusätzliche Parameter. Die aufrufende Anwendung kann einen Zeiger auf ein [**TAREvent-Objekt**](camevent.md) im *pEvent-Parameter* bereitstellen, wenn dies für Ihre Anwendung erforderlich ist. Sie müssen dieses Ereignis nach der Verarbeitung des Ereignisses mithilfe eines Ausdrucks festlegen, z. B.:
 
 
 ```C++
@@ -90,7 +90,7 @@ pEvent->SetEvent
 
 
 
-Ein Anforderungs Code muss reserviert werden, um dem Arbeits Thread mitzuteilen, dass er beendet werden soll. Wenn diese Anforderung empfangen wird, wird 1 von dieser Member-Funktion zurückgegeben. Gibt 0 zurück, wenn der Arbeits Thread nicht beendet werden soll.
+Ein Anforderungscode muss zurückgestellt werden, um den Arbeitsthread anzuweisen, den Code zu beenden. Geben Sie nach Dem Empfang dieser Anforderung 1 von dieser Memberfunktion zurück. Gibt 0 zurück, wenn der Arbeitsthread nicht beendet werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,8 +98,8 @@ Ein Anforderungs Code muss reserviert werden, um dem Arbeits Thread mitzuteilen,
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Msgthrd. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Msgthrd.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -107,7 +107,7 @@ Ein Anforderungs Code muss reserviert werden, um dem Arbeits Thread mitzuteilen,
 
 <dl> <dt>
 
-[**Cmsgthread-Klasse**](cmsgthread.md)
+[**CMsgThread-Klasse**](cmsgthread.md)
 </dt> </dl>
 
  

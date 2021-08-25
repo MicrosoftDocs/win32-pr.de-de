@@ -1,24 +1,24 @@
 ---
 title: Verwendung von Threads
-description: Sie sollten die Anwendungs Thread Verwendung für eine mehr Benutzer-, multiprozessorRemotedesktopdienste Umgebung optimieren und ausgleichen.
+description: Sie sollten die Verwendung von Anwendungsthreads für eine Multiuser-, Multiprozessor- und Remotedesktopdienste optimieren und ausgleichen.
 ms.assetid: 88f4e61f-4a59-4a84-8dca-fdb661835b51
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75a3b432cf4960c6ec7a8e51b458b9f574663ffe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 22959c6950458c95670d71479a2efe04fdafea765048508b9bd371b0a215064d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869520"
 ---
 # <a name="thread-usage"></a>Verwendung von Threads
 
-Threads bieten eine bequeme Möglichkeit, eine Anwendung zu ermöglichen, die Nutzung von CPU-Ressourcen in einem System zu maximieren, insbesondere in einer Konfiguration mit mehreren Prozessoren. In einer Remotedesktopdienste Umgebung können allerdings mehrere Benutzer Multithreadanwendungen ausführen, und alle Threads für alle Benutzer konkurrieren mit den zentralen CPU-Ressourcen dieses Systems. Vor diesem Hintergrund sollten Sie die Anwendungs Thread Verwendung für eine mehr Benutzer-, multiprozessorRemotedesktopdienste Umgebung optimieren und ausgleichen. Obwohl eine schlecht entwickelte Multithreadanwendung mit Leerlauf-oder verschwendeten Threads auf einem Client Computer ausreichend funktionieren kann, kann die gleiche Anwendung auf einem mehr Benutzer-Remotedesktopdienste Server nicht gut funktionieren.
+Threads bieten eine praktische Möglichkeit, einer Anwendung zu ermöglichen, ihre Nutzung von CPU-Ressourcen in einem System zu maximieren, insbesondere in einer Konfiguration mit mehreren Prozessoren. In einer Remotedesktopdienste-Umgebung können jedoch mehrere Benutzer Multithreadanwendungen ausführen, und alle Threads für alle Benutzer konkurrieren um die zentralen CPU-Ressourcen dieses Systems. Vor diesem Hintergrund sollten Sie die Verwendung von Anwendungsthreads für eine Umgebung mit mehreren Prozessoren und Remotedesktopdienste ausgleichen. Während eine schlecht entworfene Multithreadanwendung mit leeren oder verschwendeten Threads auf einem Clientcomputer möglicherweise eine angemessene Leistung auf einem Clientcomputer hat, kann dieselbe Anwendung auf einem Server mit mehreren Remotedesktopdienste sein.
 
- 
+ 
 
- 
+ 
 
 
 

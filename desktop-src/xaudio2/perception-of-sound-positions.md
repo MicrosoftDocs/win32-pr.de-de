@@ -1,33 +1,33 @@
 ---
-description: Faktoren, die die Wahrnehmung von Sound Positionen beeinflussen.
+description: Faktoren, die die Wahrnehmung von Soundpositionen beeinflussen.
 ms.assetid: 2c460e4a-c655-dcd1-fbd6-7c33e3b7343d
-title: Wahrnehmung von Sound Positionen
+title: Wahrnehmung von Soundpositionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9ca72ea4eb86f4328bd84ce53e1ff839e158a38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d49f91a1cdfbb9313384d37f2272c89b6b0f7ac13ace858ef4d8ab9e63657d29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926420"
 ---
-# <a name="perception-of-sound-positions"></a>Wahrnehmung von Sound Positionen
+# <a name="perception-of-sound-positions"></a>Wahrnehmung von Soundpositionen
 
-Faktoren, die die Wahrnehmung von Sound Positionen beeinflussen.
+Faktoren, die die Wahrnehmung von Soundpositionen beeinflussen.
 
-In den realen hinweisen der Klänge selbst sind folgende Punkte zu finden:
+In der realen Welt enthalten die Sounds folgende Hinweise:
 
--   Allgemeine Lautstärke. Wenn eine Audioquelle von dem Listener entfernt wird, verringert sich das wahrgenommene Volume mit einer festgelegten Rate. Dieses Phänomen wird als Rolloff bezeichnet.
--   Der Unterschied der interalen Intensität. Ein Sound, der aus dem rechten Listener kommt, klingt im rechten Ohr lauter als auf der linken Seite.
--   Der Zeitunterschied der interaura. Ein Sound, der von einer Quelle an die Rechte des Listener ausgegeben wird, wird direkt im rechten Ohr angezeigt, bevor er im linken Ohr ankommt. Die Dauer dieses Offsets beträgt ungefähr eine Millisekunde.
--   Gedämpfte. Durch die Form und Ausrichtung der Ohren wird sichergestellt, dass die hinter dem Listener kommenden Sounds im Vergleich zu den vor-und nach-Klängen etwas gedämpft werden. Wenn ein Sound von der rechten Seite stammt, wird der Sound, der das linke Ohr erreicht, von der Masse des listenerkopfes und von der Ausrichtung des linken Kopfes gedämpft.
--   Die Auswirkung des earlobes. Der pinnae oder die folds des Ohr führen zu geringfügigen Änderungen an der Tonhöhe und der zeitlichen Steuerung von Sounds, die aus verschiedenen Richtungen eintreffen. Die Mathematik hinter diesem Effekt wird als Head-Related Transfer Function (HRTF) bezeichnet.
+-   Gesamtlaute. Wenn sich eine Soundquelle vom Listener entfernt, nimmt das wahrgenommene Volumen mit einer festen Rate ab. Dieser Vorgang wird als Rolloff bezeichnet.
+-   Unterschied bei der terauralen Intensität. Ein Sound, der von der rechten Seite des Listeners kommt, klingt im rechten Gehör lauter als im linken.
+-   Interauraler Zeitunterschied. Ein Sound, der von einer Quelle auf der rechten Seite des Listeners ausgegeben wird, erreicht das rechte Gehör leicht, bevor es am linken Hörer eintrifft. Die Dauer dieses Offsets beträgt etwa eine Millisekunde.
+-   Muffling. Die Form und Ausrichtung des Rauschens stellt sicher, dass Töne, die von hinter dem Listener stammen, im Vergleich zu Tönen von vorn leicht muffig sind. Wenn ein Sound von rechts kommt, wird der Sound, der das linke Gehör erreicht, durch die Menge des Kopfes des Listeners sowie durch die Ausrichtung des linken Gehörs erstickt.
+-   Auswirkung der Hörhörnchen. Die Stecknadeln oder Folds des Gehörs verursachen geringfügige Änderungen an der Tonhöhe und dem Zeitlichen Ablauf von Tönen, die aus verschiedenen Richtungen eintreffen. Die Mathematik hinter diesem Effekt wird als kopfbezogene Übertragungsfunktion (HEAD-Related Transfer Function, HRTF) bezeichnet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Allgemeine audiokonzepte](common-audio-concepts.md)
+[Allgemeine Audiokonzepte](common-audio-concepts.md)
 </dt> </dl>
 
  

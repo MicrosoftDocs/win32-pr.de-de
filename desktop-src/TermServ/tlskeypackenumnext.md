@@ -1,10 +1,10 @@
 ---
-title: Tlskeypackenumnext-Funktion
-description: Wird von einem vorherigen-Befehl der tlskeypackenumbegin-Funktion fortgesetzt und gibt das nächste Key Pack zurück, das auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
+title: TLSKeyPackEnumNext-Funktion
+description: Setzt einen vorherigen Aufruf der TLSKeyPackEnumBegin-Funktion fort und gibt das nächste Schlüsselpaket zurück, das auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
 ms.assetid: 2614eb7a-df57-42a6-ad34-0a3211a6b8c3
 ms.tgt_platform: multiple
 keywords:
-- Tlskeypackenumnext-Funktion Remotedesktopdienste
+- TLSKeyPackEnumNext-Funktion Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 897874f333ed7933ea1616f7f5ba5f1686736d0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d352d94204e4c590668018546f0d6304d4faa3836bcc7289b675b05b1ae2b825
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869260"
 ---
-# <a name="tlskeypackenumnext-function"></a>Tlskeypackenumnext-Funktion
+# <a name="tlskeypackenumnext-function"></a>TLSKeyPackEnumNext-Funktion
 
-Wird von einem vorherigen-Befehl der [**tlskeypackenumbegin**](tlskeypackenumbegin.md) -Funktion fortgesetzt und gibt das nächste Key Pack zurück, das auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
+Setzt einen vorherigen Aufruf der [**TLSKeyPackEnumBegin-Funktion**](tlskeypackenumbegin.md) fort und gibt das nächste Schlüsselpaket zurück, das auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mstlsapi.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mstlsapi.dll herzustellen.
 
  
 
@@ -48,52 +48,52 @@ DWORD WINAPI TLSKeyPackEnumNext(
 
 <dl> <dt>
 
-*hHandle* \[ in\]
+*hHandle* \[ In\]
 </dt> <dd>
 
-Handle für einen Remotedesktop-Lizenzserver. Geben Sie ein Handle an, das von der [**tlsconnecttolsserver**](tlsconnecttolsserver.md) -Funktion geöffnet wird.
+Verarbeiten eines Remotedesktop Lizenzservers. Geben Sie ein Handle an, das von der [**TLSConnectToLsServer-Funktion**](tlsconnecttolsserver.md) geöffnet wird.
 
 </dd> <dt>
 
-*lpkeypack* \[ in\]
+*lpKeyPack* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**lschräypack**](lskeypack.md) -Struktur, die das nächste Key Pack empfängt, das mit den Suchkriterien übereinstimmt.
+Zeiger auf eine [**LSKeyPack-Struktur,**](lskeypack.md) die das nächste Schlüsselpaket empfängt, das den Suchkriterien entspricht.
 
 </dd> <dt>
 
-*pdwerrcode* \[ vorgenommen\]
+*pdwErrCode* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
+Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
 
 <dt>
 
 <span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>
 
-<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**Lserver \_ S \_ erfolgreich** (0)
+<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**LSERVER \_ S \_ SUCCESS** (0)
 
 
 </dt> <dd>
 
-Der-Vorgang wurde erfolgreich ausgeführt.
+Der Aufruf ist erfolgreich.
 
 </dd> <dt>
 
 <span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>
 
-<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**Lserver \_ \_Keine \_ weiteren \_ Daten** (4001)
+<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**LSERVER \_ I \_ NO \_ MORE \_ DATA** (4001)
 
 
 </dt> <dd>
 
-Es sind keine weiteren Schlüsselpakete mit den Suchkriterien übereinstimmen.
+Keine weiteren Schlüsselpakete, die den Suchkriterien entsprechen.
 
 </dd> <dt>
 
 <span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>
 
-<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**Lserver \_ Interner E- \_ \_ Fehler** (5001)
+<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**LSERVER \_ E \_ INTERNER \_ FEHLER** (5001)
 
 
 </dt> <dd>
@@ -104,18 +104,18 @@ Interner Fehler auf dem Lizenzserver.
 
 <span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>
 
-<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**Lserver \_ E \_ ungültige \_ Reihenfolge** (5006)
+<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**LSERVER \_ E \_ UNGÜLTIGE \_ SEQUENZ** (5006)
 
 
 </dt> <dd>
 
-Die Aufruf Sequenz war nicht gültig. Vor diesem muss die [**tlskeypackenumbegin ()**](tlskeypackenumbegin.md) -Funktion aufgerufen werden.
+Die aufrufende Sequenz war ungültig. Muss zuvor die [**TLSKeyPackEnumBegin()-Funktion**](tlskeypackenumbegin.md) aufrufen.
 
 </dd> <dt>
 
 <span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>
 
-<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**Lserver \_ E- \_ Server \_ ausgelastet** (5007)
+<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**LSERVER \_ E \_ SERVER \_ AUSGELASTET** (5007)
 
 
 </dt> <dd>
@@ -126,7 +126,7 @@ Der Lizenzserver ist zu stark ausgelastet, um die Anforderung zu verarbeiten.
 
 <span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>
 
-<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**Lserver \_ E \_ outo-Memory** (5008)
+<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**LSERVER \_ E \_ OUTOFMEMORY** (5008)
 
 
 </dt> <dd>
@@ -144,11 +144,11 @@ Diese Funktion gibt die folgenden möglichen Rückgabewerte zurück.
 **RPC \_ S \_ OK**
 </dt> <dd>
 
-Der-Befehl wurde erfolgreich ausgeführt. Überprüfen Sie den Wert des Parameters " *pdwerrcode* ", um den Rückgabecode für den-Befehl abzurufen.
+Der Aufruf war erfolgreich. Überprüfen Sie den Wert des *pdwErrCode-Parameters,* um den Rückgabecode für den Aufruf abzurufen.
 
 </dd> <dt>
 
-**RPC \_ S \_ ungültig \_**
+**RPC \_ S \_ INVALID \_ ARG**
 </dt> <dd>
 
 Das Argument war ungültig.
@@ -171,16 +171,16 @@ Das Argument war ungültig.
 
 <dl> <dt>
 
-[**Lschräypack**](lskeypack.md)
+[**LSKeyPack**](lskeypack.md)
 </dt> <dt>
 
-[**Tlsconnecttolsserver**](tlsconnecttolsserver.md)
+[**TLSConnectToLsServer**](tlsconnecttolsserver.md)
 </dt> <dt>
 
-[**Tlskeypackenumbegin**](tlskeypackenumbegin.md)
+[**TLSKeyPackEnumBegin**](tlskeypackenumbegin.md)
 </dt> <dt>
 
-[**Tlskeypackenumend**](tlskeypackenumend.md)
+[**TLSKeyPackEnumEnd**](tlskeypackenumend.md)
 </dt> </dl>
 
  

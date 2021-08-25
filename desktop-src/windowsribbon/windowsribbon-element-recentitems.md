@@ -3,7 +3,7 @@ title: RecentItems-Element
 description: Stellt das Steuerelement Letzte Elemente im Anwendungsmenü dar.
 ms.assetid: a3df0bb0-e0f8-413a-879d-8e39164535d0
 keywords:
-- RecentItems-Element Windows-Menüband
+- RecentItems-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a433e2f04eae8607b0c14c5494c734ad0f0dd83a
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 6ae49864fea057aa942b121f21813acfd0f26c6cc4411d4f1b3c59cda12014c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881560"
 ---
 # <a name="recentitems-element"></a>RecentItems-Element
 
 Stellt das Steuerelement [Letzte Elemente](windowsribbon-controls-recentitems.md) im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <RecentItems
@@ -47,7 +47,7 @@ Stellt das Steuerelement [Letzte Elemente](windowsribbon-controls-recentitems.md
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -58,7 +58,7 @@ Stellt das Steuerelement [Letzte Elemente](windowsribbon-controls-recentitems.md
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>EnablePinning</strong><br/></td>
@@ -103,7 +103,7 @@ Das Steuerelement Zuletzt verwendete [Elemente](windowsribbon-controls-recentite
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das [Steuerelement Recent Items](windowsribbon-controls-recentitems.md) veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für das [Steuerelement Zuletzt durchgeführte Elemente](windowsribbon-controls-recentitems.md) veranschaulicht.
 
 Das folgende Beispiel zeigt eine **RecentItems** Command-Deklaration.
 

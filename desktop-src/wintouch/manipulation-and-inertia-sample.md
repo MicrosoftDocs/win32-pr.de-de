@@ -1,24 +1,24 @@
 ---
-title: Beispiel für Manipulation und Trägheit
-description: Das Beispiel für Manipulation und Trägheit zeigt, wie systemeigenen Windows-basierten Anwendungen, die die Windows-Eingabe-API verwenden, Windows-Berührungs Unterstützung hinzugefügt wird.
+title: Manipulations- und Trägheitsbeispiel
+description: Das Manipulations- und Trägheitsbeispiel zeigt, wie Sie nativen Windows-basierten Anwendungen, die die Windows Touch-API verwenden, Windows Touch-Unterstützung hinzufügen.
 ms.assetid: 6a6e2e39-026e-47a3-b936-16f6a740a3af
 keywords:
-- Windows-Fingereingabe, Codebeispiele
-- Windows-Fingereingabe, Beispielcode
-- Windows-Fingereingabe, Manipulationen
-- Windows-Fingereingabe, Trägheit
-- Beispiel für Windows-Fingereingabe, Manipulation und Trägheit
-- Beispiel für Manipulation und Trägheit
-- Windows-Touchscreen, _IManipulationEventSink-Schnittstelle
-- Windows-Berührungs-, IManipulationProcessor-Schnittstelle
-- Windows-Berührungs-, IInertiaProcessor-Schnittstelle
+- Windows Toucheingabe, Codebeispiele
+- Windows Toucheingabe, Beispielcode
+- Windows Toucheingabe, Bearbeitungen
+- Windows Toucheingabe, Trägheit
+- Windows Touch-, Manipulations- und Trägheitsbeispiel
+- Manipulations- und Trägheitsbeispiel
+- Windows Touch,_IManipulationEventSink-Schnittstelle
+- Windows Touch,IManipulationProcessor-Schnittstelle
+- Windows Touch,IInertiaProcessor-Schnittstelle
 - Manipulationen, Beispielcode
 - Manipulationen, Codebeispiele
-- Manipulationen, _IManipulationEventSink-Schnittstelle
+- Manipulationen, _IManipulationEventSink Schnittstelle
 - Manipulationen, IManipulationProcessor-Schnittstelle
 - Trägheit, Beispielcode
 - Trägheit, Codebeispiele
-- Trägheit, IInertiaProcessor-Schnittstelle
+- Trägheit,IInertiaProcessor-Schnittstelle
 - _IManipulationEventSink-Schnittstelle
 - IManipulationProcessor-Schnittstelle, Codebeispiele
 - IManipulationProcessor-Schnittstelle, Beispielcode
@@ -26,24 +26,24 @@ keywords:
 - IInertiaProcessor-Schnittstelle, Beispielcode
 ms.topic: article
 ms.date: 02/18/2020
-ms.openlocfilehash: a17b634fbe79d72e79fc5c9e03ef64a30cb46411
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8b6471362d30b6efc9dfa0c4f07df70f014c8cb72866c92bbb04c9eb33463410
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104551320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840594"
 ---
-# <a name="manipulation-and-inertia-sample"></a>Beispiel für Manipulation und Trägheit
+# <a name="manipulation-and-inertia-sample"></a>Manipulations- und Trägheitsbeispiel
 
-Das Beispiel für Manipulation und Trägheit zeigt, wie systemeigenen Windows-basierten Anwendungen, die die Windows-Eingabe-API verwenden, Windows-Berührungs Unterstützung hinzugefügt wird. Das Beispiel implementiert die grundlegenden Funktionen der API, um die Übersetzung, Drehung und Skalierung von Objekten und das Anwenden von Trägheit-Eigenschaften zu ermöglichen. Das Beispiel zeigt auch, wie Sie Ihren Windows-Berührungs Anwendungen grundlegende Mausunterstützung zur Verfügung gestellt werden. In der folgenden Abbildung wird gezeigt, wie das Beispiel aussieht, wenn es ausgeführt wird.
+Das Manipulations- und Trägheitsbeispiel zeigt, wie Sie nativen Windows-basierten Anwendungen, die die Windows Touch-API verwenden, Windows Touch-Unterstützung hinzufügen. Im Beispiel werden die grundlegenden Features der API implementiert, um die Übersetzung, Drehung und Skalierung für Objekte zu ermöglichen und Trägheitseigenschaften auf diese anzuwenden. Das Beispiel zeigt auch, wie Sie Ihren Windows Touch-Anwendungen einfache Mausunterstützung bieten. Die folgende Abbildung zeigt, wie das Beispiel aussieht, wenn es ausgeführt wird.
 
-![Screenshot, der zwei Felder mit Farbverläufen im Beispiel für Manipulation und Trägheit anzeigt](images/manip-inertia-sample.png)
+![Screenshot mit zwei Feldern mit Farbverläufen im Manipulations- und Trägheitsbeispiel](images/manip-inertia-sample.png)
 
-Die Felder mit Farbverläufen können unabhängig von einem Benutzer bearbeitet werden, wenn Sie die Anwendung von einem Computer ausführen, der Windows-Fingereingabe unterstützt.
+Die Felder mit Farbverläufen können unabhängig von einem Benutzer bearbeitet werden, wenn er die Anwendung von einem Computer aus ausführen, der Windows Touch unterstützt.
 
-## <a name="register-the-touch-window"></a>Registrieren des Finger eingabefensters
+## <a name="register-the-touch-window"></a>Registrieren des Touchfensters
 
-Bevor Sie Finger Eingaben erhalten können, müssen Sie das System zuerst Benachrichtigen, dass es sich bei Ihrer Anwendung um eine Windows-Berührungs Anwendung handelt, indem Sie die folgende Funktion aufrufen:
+Bevor Sie Toucheingaben empfangen können, müssen Sie zunächst das System benachrichtigen, dass Ihre Anwendung eine Windows Touch-Anwendung ist, indem Sie die folgende Funktion aufrufen:
 
 ```C++
    RegisterTouchWindow(g_hWnd, 0);
@@ -51,7 +51,7 @@ Bevor Sie Finger Eingaben erhalten können, müssen Sie das System zuerst Benach
 
 ## <a name="implement-the-_imanipulationeventsink-interface"></a>Implementieren der _IManipulationEventSink-Schnittstelle
 
-Die [**_IManipulationEvents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) Ereignis Senke enthält drei Funktionen: [**ManipulationStarted**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationstarted), [**ManipulationDelta**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta)und [**manipulationabgeschlossene**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted). Diese Rückruf Funktionen werden von der [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle und der [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle verwendet, um die Werte zurückzugeben, die von den Prozessoren berechnet werden, nachdem Sie die Funktionen [**ProcessTime**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-processtime), [**processupwithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processupwithtime), [**processdownwithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processdownwithtime)und [**processmuvewithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processmovewithtime) aufgerufen haben. Das folgende Codebeispiel zeigt eine Beispiel Implementierung einer **_IManipulationEvents** -Schnittstelle.
+Die [](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) _IManipulationEvents-Ereignissenke enthält drei Funktionen: [**ManipulationStarted**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationstarted), [**ManipulationDelta**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta)und [**ManipulationCompleted**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted). Diese Rückruffunktionen werden von der [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) und der [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) verwendet, um die von den Prozessoren berechneten Werte zurückzugeben, nachdem sie die Funktionen [**ProcessTime,**](/windows/desktop/api/manipulations/nf-manipulations-iinertiaprocessor-processtime) [**ProcessUpWithTime,**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processupwithtime) [**ProcessDownWithTime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processdownwithtime)und [**ProcessMoveWithTime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processmovewithtime) aufgerufen haben. Das folgende Codebeispiel zeigt eine  Beispielimplementierungen einer _IManipulationEvents-Schnittstelle.
 
 ```C++
 #include "cmanipulationeventsink.h"
@@ -165,11 +165,11 @@ HRESULT STDMETHODCALLTYPE CManipulationEventSink::ManipulationCompleted(
 
 ## <a name="create-com-objects-and-set-up-the-imanipulationprocessor-and-iinertiaprocessor-interfaces"></a>Erstellen von COM-Objekten und Einrichten der Schnittstellen IManipulationProcessor und IInertiaProcessor
 
-Die API stellt eine Implementierung der Schnittstellen [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) und [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) bereit. Erstellen Sie eine Instanz von, und verweisen Sie auf die COM-Objekte aus der zuvor implementierten [**imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Ereignis Senke.
+Die API stellt eine Implementierung der [**Schnittstellen IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) und [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) bereit. Sie sollten eine Instanz von erstellen und auf die COM-Objekte aus der zuvor [**implementierten IManipulationEvents-Ereignissenke**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) verweisen.
 
-## <a name="handle-wm_touch-messages"></a>Behandeln von WM_TOUCH Meldungen
+## <a name="handle-wm_touch-messages"></a>Verarbeiten WM_TOUCH Nachrichten
 
-Die Eingabedaten müssen aus den [**WM_TOUCH**](wm-touchdown.md) Nachrichten extrahiert werden, und später muss Sie verarbeitet werden, um den richtigen Bearbeitungs Prozessor zu übermitteln.
+Die Eingabedaten müssen aus den [**WM_TOUCH**](wm-touchdown.md) Nachrichten extrahiert und später verarbeitet werden, um den richtigen Bearbeitungsprozessor zu übermitteln.
 
 ```C++
 switch (msg)
@@ -209,14 +209,14 @@ switch (msg)
 ```
 
 > [!Note]  
-> Um die [**ScreenToClient**](/windows/desktop/api/winuser/nf-winuser-screentoclient) -Funktion verwenden zu können, müssen Sie in Ihrer Anwendung über eine hohe dpi-Unterstützung verfügen. Weitere Informationen zur Unterstützung von High dpi finden Sie im Abschnitt " [High dpi]( ../hidpi/high-dpi-desktop-application-development-on-windows.md) " in MSDN.
+> Um die [**ScreenToClient-Funktion**](/windows/desktop/api/winuser/nf-winuser-screentoclient) verwenden zu können, benötigen Sie eine hohe DPI-Unterstützung in Ihrer Anwendung. Weitere Informationen zur Unterstützung hoher DPI-Daten finden Sie im MSDN-Abschnitt [High DPI (Hohe DPI-Anzahl).]( ../hidpi/high-dpi-desktop-application-development-on-windows.md)
 
 ## <a name="pass-touchinput-structures-to-the-appropriate-processor"></a>Übergeben von TOUCHINPUT-Strukturen an den entsprechenden Prozessor
 
-Nachdem die Daten mithilfe der [**GetTouchInputInfo**](/windows/desktop/api/winuser/nf-winuser-gettouchinputinfo) -Funktion aus den [**WM_TOUCH**](wm-touchdown.md) Nachrichten extrahiert wurden, können Sie die Daten in den Manipulations Prozessor übertragen, indem Sie die Funktionen [**processupwithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processupwithtime), [**processdownwithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processdownwithtime)oder [**processfuvewithtime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processmovewithtime) aufrufen, je nachdem, welches **dwFlag** in der [**TOUCHINPUT**](/windows/win32/api/winuser/ns-winuser-touchinput) -Struktur festgelegt ist.
+Nachdem die Daten mithilfe der [**GetTouchInputInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-gettouchinputinfo) aus den [**WM_TOUCH-Nachrichten**](wm-touchdown.md) extrahiert wurden, geben Sie die Daten abhängig vom **dwFlag-Satz** in der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) durch Aufrufen der Funktionen [**ProcessUpWithTime,**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processupwithtime) [**ProcessDownWithTime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processdownwithtime)oder [**ProcessMoveWithTime**](/windows/desktop/api/manipulations/nf-manipulations-imanipulationprocessor-processmovewithtime) in den Bearbeitungsprozessor ein.
 
 > [!Note]  
-> Bei der Unterstützung mehrerer Manipulationen muss ein neuer Manipulations Prozessor erstellt werden, wenn das in der [**TOUCHINPUT**](/windows/win32/api/winuser/ns-winuser-touchinput) -Struktur definierte **dwID** zum Senden der Daten an das korrekte [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Objekt verwendet werden muss.
+> Wenn mehrere Manipulationen unterstützt werden, muss ein neuer Manipulationsprozessor erstellt werden, wenn die in der [**TOUCHINPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-touchinput) definierte **dwID** verwendet werden muss, um die Daten an das richtige [**IManipulationProcessor-Objekt**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) zu senden.
 
 ```C++
 CoreObject* coCurrent = m_coHead;
@@ -259,9 +259,9 @@ VOID CComTouchDriver::DownEvent(CoreObject* coRef, tagTOUCHINPUT inData, BOOL* b
 }
 ```
 
-## <a name="set-up-inertia-within-manipulationcompleted"></a>Einrichten der Trägheit innerhalb von "manipulationabgeschlossene"
+## <a name="set-up-inertia-within-manipulationcompleted"></a>Einrichten der Trägheit in ManipulationCompleted
 
-Nachdem die [**manipulationabgeschlossene**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted) -Methode aufgerufen wurde, muss das [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Objekt die Werte für das [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Objekt, das mit **IManipulationProcessor** verknüpft ist, zum Aufrufen von Trägheit festlegen. Im folgenden Codebeispiel wird gezeigt, wie das **IInertiaProcessor** -Objekt aus der **IManipulationProcessor** -Methode " **manipulationabgeschlossene**" eingerichtet wird.
+Nachdem die [**ManipulationCompleted-Methode**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted) aufgerufen wurde, muss das [**IManipulationProcessor-Objekt**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) die Werte für das [**IInertiaProcessor-Objekt**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) festlegen, das mit **dem IManipulationProcessor** verknüpft ist, um Trägheit aufzurufen. Das folgende Codebeispiel zeigt, wie das **IInertiaProcessor-Objekt** über die **IManipulationProcessor-Methode** **ManipulationCompleted** eingerichtet wird.
 
 ```C++
     int iVWidth       = GetSystemMetrics(SM_CXVIRTUALSCREEN);
@@ -328,7 +328,7 @@ Nachdem die [**manipulationabgeschlossene**](/windows/win32/api/manipulations/nf
     m_inert->put_InitialAngularVelocity(fVR);
 ```
 
-## <a name="clean-up-your-com-objects"></a>Bereinigen der COM-Objekte
+## <a name="clean-up-your-com-objects"></a>Bereinigen von COM-Objekten
 
 Wenn die Anwendung geschlossen wird, müssen Sie die COM-Objekte bereinigen. Der folgende Code zeigt, wie Sie die Ressourcen freigeben können, die im Beispiel zugeordnet wurden.
 
@@ -351,4 +351,4 @@ CComTouchDriver::~CComTouchDriver(VOID) {
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-Beispiel für [Multitouch-Bearbeitungs Anwendung](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTManipulation/cpp), [Manipulation und Trägheit](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTManipulationInertia/cpp), [Windows Touch-Beispiele](windows-touch-samples.md)
+[Multitouch-Manipulationsanwendung,](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTManipulation/cpp) [Manipulations- und Trägheitsbeispiel,](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/Touch/MTManipulationInertia/cpp) [Windows Touchbeispiele](windows-touch-samples.md)

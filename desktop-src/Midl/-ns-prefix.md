@@ -1,9 +1,9 @@
 ---
-title: /ns_prefix Schalter
-description: Mit dem/NS- \_ Präfix Schalter wird "\ 0034;" vorangestellt. ABI \ 0034; Präfix für alle Typen.
+title: /ns_prefix-Schalter
+description: Der Präfixschalter /ns steht dem \_ Präfix \0034 voran. ABI \ 0034; Präfix für alle Typen.
 ms.assetid: 8602C849-843A-4404-842D-4B7890AF3916
 keywords:
-- /ns_prefix-Schalter-Mittel l
+- /ns_prefix MIDL-Switch
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a85681182f9c6d89f3ada0014b406b4580b2c7fa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0f39483b10b8776e484946f67655de8cbfcaf0f3f96c972e9865cdfa490deda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896040"
 ---
-# <a name="ns_prefix-switch"></a>/NS- \_ Präfix Schalter
+# <a name="ns_prefix-switch"></a>Präfixschalter "/ns" \_
 
-Mit dem Schalter **/NS \_ prefix** wird das Präfix "abi" allen Typen vorangestellt.
+Mit **dem Präfixschalter \_ /ns** wird allen Typen das Präfix "ABI" vorangestellt.
 
 ``` syntax
 midlrt /ns_prefix 
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ## <a name="examples"></a>Beispiele
 
-**/NS- \_ Präfix für mittlere**
+**midlrt /ns-Präfix \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Dieser Switch hat keine Parameter.
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

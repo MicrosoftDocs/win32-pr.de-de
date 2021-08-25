@@ -1,8 +1,8 @@
 ---
-description: Das taubemproperty-Objekt stellt eine einzelne WMI-Eigenschaft eines verwalteten Objekts dar. Dieses Objekt kann nicht durch den VBScript-Befehl "up-Object" erstellt werden.
+description: Das SWbemProperty-Objekt stellt eine einzelne WMI-Eigenschaft eines verwalteten Objekts dar. Dieses Objekt kann nicht durch den VBScript-CreateObject-Aufruf erstellt werden.
 ms.assetid: 2ddcfffa-a7b4-4fd6-926d-411de27f6212
 ms.tgt_platform: multiple
-title: Taubemproperty-Objekt (wbemdisp. h)
+title: SWbemProperty-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,38 +15,38 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 9c71db4063f5de6b48b2e8213f21ca1320a880fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51f4b1b22849fc5a6ae22f49c5c30411563efb9d133cf2440c301eabfde18e0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119898070"
 ---
-# <a name="swbemproperty-object"></a>Swap Property-Objekt
+# <a name="swbemproperty-object"></a>SWbemProperty-Objekt
 
-Das **taubemproperty** -Objekt stellt eine einzelne WMI-Eigenschaft eines verwalteten Objekts dar. Dieses Objekt kann nicht durch den VBScript-Befehl "up- [Object](creating-an-object-using-vbscript.md) " erstellt werden.
+Das **SWbemProperty-Objekt** stellt eine einzelne WMI-Eigenschaft eines verwalteten Objekts dar. Dieses Objekt kann nicht durch den [VBScript-CreateObject-Aufruf](creating-an-object-using-vbscript.md) erstellt werden.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **Swap Property** " verfügt über diese Typen von Membern:
+Das **SWbemProperty-Objekt** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **taubemproperty** -Objekt verfügt über diese Eigenschaften.
+Das **SWbemProperty-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp           | BESCHREIBUNG                                                                                                                   |
+| Eigenschaft                                                     | Zugriffstyp           | Beschreibung                                                                                                                   |
 |:-------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------------------------------|
-| [**CimType**](swbemproperty-cimtype.md)<br/>          | Schreibgeschützt<br/>  | Der Typ dieser Eigenschaft.<br/>                                                                                             |
-| [**IsArray**](swbemproperty-isarray.md)<br/>          | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob diese Eigenschaft einen Arraytyp aufweist.<br/>                                                   |
+| [**Cimtype**](swbemproperty-cimtype.md)<br/>          | Schreibgeschützt<br/>  | Typ dieser Eigenschaft.<br/>                                                                                             |
+| [**Isarray**](swbemproperty-isarray.md)<br/>          | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob diese Eigenschaft über einen Arraytyp verfügt.<br/>                                                   |
 | [**IsLocal**](swbemproperty-islocal.md)<br/>          | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob diese Eigenschaft lokal ist.<br/>                                                            |
-| [**Name**](swbemproperty-name.md)<br/>                | Schreibgeschützt<br/>  | Der Name dieser WMI-Eigenschaft.<br/>                                                                                         |
-| [**Entstehungs**](swbemproperty-origin.md)<br/>            | Schreibgeschützt<br/>  | Enthält die Ursprungs Klasse dieser Eigenschaft.<br/>                                                                   |
-| [**Qualifikation\_**](swbemproperty-qualifiers-.md)<br/> | Schreibgeschützt<br/>  | Ein " [**taubemqualifierset**](swbemqualifierset.md) "-Objekt, das die Auflistung der Qualifizierer für diese Eigenschaft ist.<br/> |
-| [**Wert**](swbemproperty-value.md)<br/>              | Lesen/Schreiben<br/> | Tatsächlicher Wert dieser Eigenschaft. Dies ist die standardmäßige Automatisierungs Eigenschaft dieses Objekts.<br/>                             |
+| [**Name**](swbemproperty-name.md)<br/>                | Schreibgeschützt<br/>  | Name dieser WMI-Eigenschaft.<br/>                                                                                         |
+| [**Origin**](swbemproperty-origin.md)<br/>            | Schreibgeschützt<br/>  | Enthält die ursprüngliche Klasse dieser Eigenschaft.<br/>                                                                   |
+| [**Qualifikation\_**](swbemproperty-qualifiers-.md)<br/> | Schreibgeschützt<br/>  | Ein [**SWbemQualifierSet-Objekt,**](swbemqualifierset.md) das die Auflistung der Qualifizierer für diese Eigenschaft ist.<br/> |
+| [**Wert**](swbemproperty-value.md)<br/>              | Lesen/Schreiben<br/> | Tatsächlicher Wert dieser Eigenschaft. Dies ist die Standardautomatisierungseigenschaft dieses Objekts.<br/>                             |
 
 
 
@@ -60,19 +60,19 @@ Das **taubemproperty** -Objekt verfügt über diese Eigenschaften.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Eigenschaft<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemproperty<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemProperty<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemProperty<br/>                                                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

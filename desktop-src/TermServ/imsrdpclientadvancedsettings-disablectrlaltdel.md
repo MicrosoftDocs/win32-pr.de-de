@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-Eigenschaft disablectrlaltdel
-description: Gibt an, ob der erste erklärende Bildschirm in Winlogon angezeigt werden soll.
+title: IMsRdpClientAdvancedSettings DisableCtrlAltDel (Eigenschaft)
+description: Gibt an, ob der erste erläuternde Bildschirm in Winlogon angezeigt werden soll.
 ms.assetid: 79212472-105f-4e92-8065-f97819637d02
 ms.tgt_platform: multiple
 keywords:
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
-- Disablectrlaltdel-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, disablectrlaltdel-Eigenschaft
+- DisableCtrlAltDel-Remotedesktopdienste
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
+- DisableCtrlAltDel-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , DisableCtrlAltDel-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3380aa78c16c7e937637cc727fe81f054649f929
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 79c524945afe4fbaaa0498f579641a32d3f55f37e88335be82e8fa308fae502f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871052"
 ---
-# <a name="imsrdpclientadvancedsettingsdisablectrlaltdel-property"></a>Imsrdpclientadvancedsettings::D isablectrlaltdel-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsdisablectrlaltdel-property"></a>IMsRdpClientAdvancedSettings::D isableCtrlAltDel-Eigenschaft
 
-Gibt an, ob der erste erklärende Bildschirm in Winlogon angezeigt werden soll.
+Gibt an, ob der erste erläuternde Bildschirm in Winlogon angezeigt werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,15 +84,15 @@ HRESULT get_DisableCtrlAltDel(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Funktion zu deaktivieren, oder einen Wert ungleich NULL, um das Feature zu aktivieren.
+Legen Sie diesen Parameter auf 0 fest, um das Feature oder einen Wert ungleich 0 (null) zu deaktivieren, um das Feature zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,7 +104,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

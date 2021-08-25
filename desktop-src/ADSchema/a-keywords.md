@@ -1,11 +1,11 @@
 ---
 title: Keywords-Attribut
-description: Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestimmten Verbindungspunkt zu suchen.
+description: Eine Liste von Schlüsselwörtern, die zum Suchen eines bestimmten Verbindungspunkts verwendet werden können.
 ms.assetid: 24297ebf-8d32-4b22-9dd9-b26bce675118
 ms.tgt_platform: multiple
 keywords:
-- Schlüsselwort Attribut AD-Schema
-- Schlüsselwort Attribut AD-Schema
+- Schlüsselwörterattribut AD-Schema
+- KEYWORDS-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c5c1fba475505ee03cda4813f90a28d1c91fb69
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0f2efa6f3b24aae32cdd0501a5474133981f2c9e582997663480814c6d1167e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924820"
 ---
 # <a name="keywords-attribute"></a>Keywords-Attribut
 
-Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestimmten Verbindungspunkt zu suchen.
+Eine Liste von Schlüsselwörtern, die zum Suchen eines bestimmten Verbindungspunkts verwendet werden können.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Keywords                                    |
-| LDAP-Display-Name | keywords                                    |
+| Ldap-Anzeigename | keywords                                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.48                       |
 | System-ID-GUID    | bf967993-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|----------------------------------------------------------|
 | Link-ID                | \-                                                       |
 | MAPI-Id                | \-                                                       |
-| System-Only            | False                                                    |
-| Ist-einwertig       | False                                                    |
+| System-Only            | Falsch                                                    |
+| Ist einwertig       | Falsch                                                    |
 | Ist indiziert             | Richtig                                                     |
 | Im globalen Katalog      | Richtig                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                             |
 | Range-Lower            | 1                                                        |
 | Range-Upper            | 256                                                      |
 | Search-Flags           | 0x00000001                                               |
@@ -71,7 +71,7 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                                                                                                                                                   |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                                    |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                            |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                       |
 | Range-Upper            | 256                                                                                                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Anwendungs Version**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-DFS**](c-ftdfs.md)<br/> [**ms-DS-App-Konfiguration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Daten**](c-msds-appdata.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsversion**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-Dfs**](c-ftdfs.md)<br/> [**ms-DS-App-Configuration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Data**](c-msds-appdata.md)<br/> |
 
 
 
@@ -100,11 +100,11 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                       |
 | MAPI-Id                | \-                                                                                                                       |
-| System-Only            | False                                                                                                                    |
-| Ist-einwertig       | False                                                                                                                    |
+| System-Only            | Falsch                                                                                                                    |
+| Ist einwertig       | Falsch                                                                                                                    |
 | Ist indiziert             | Richtig                                                                                                                     |
 | Im globalen Katalog      | Richtig                                                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                             |
 | Range-Lower            | 1                                                                                                                        |
 | Range-Upper            | 256                                                                                                                      |
 | Search-Flags           | 0x00000001                                                                                                               |
@@ -121,16 +121,16 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                                                                                                                                                   |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                                    |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                            |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                       |
 | Range-Upper            | 256                                                                                                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Anwendungs Version**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-DFS**](c-ftdfs.md)<br/> [**ms-DS-App-Konfiguration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Daten**](c-msds-appdata.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsversion**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-Dfs**](c-ftdfs.md)<br/> [**ms-DS-App-Configuration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Data**](c-msds-appdata.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                                                                                                                                                   |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                                    |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                            |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                       |
 | Range-Upper            | 256                                                                                                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Anwendungs Version**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-DFS**](c-ftdfs.md)<br/> [**ms-DS-App-Konfiguration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Daten**](c-msds-appdata.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsversion**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-Dfs**](c-ftdfs.md)<br/> [**ms-DS-App-Configuration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Data**](c-msds-appdata.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                                                                                                                                                   |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                                    |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                            |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                       |
 | Range-Upper            | 256                                                                                                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Anwendungs Version**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-DFS**](c-ftdfs.md)<br/> [**ms-DS-App-Konfiguration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Daten**](c-msds-appdata.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsversion**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-Dfs**](c-ftdfs.md)<br/> [**ms-DS-App-Configuration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Data**](c-msds-appdata.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Eine Liste von Schlüsselwörtern, die verwendet werden können, um einen bestim
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                                                                                                                                                   |
-| Ist-einwertig       | False                                                                                                                                                                                                                                                                                   |
+| System-Only            | Falsch                                                                                                                                                                                                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                                                                                                                                                                                                   |
 | Ist indiziert             | Richtig                                                                                                                                                                                                                                                                                    |
 | Im globalen Katalog      | Richtig                                                                                                                                                                                                                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                            |
 | Range-Lower            | 1                                                                                                                                                                                                                                                                                       |
 | Range-Upper            | 256                                                                                                                                                                                                                                                                                     |
 | Search-Flags           | 0x00000001                                                                                                                                                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                                                                                                                                                              |
-| In verwendete Klassen        | [**Anwendungs Version**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-DFS**](c-ftdfs.md)<br/> [**ms-DS-App-Konfiguration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Daten**](c-msds-appdata.md)<br/> |
+| In verwendete Klassen        | [**Anwendungsversion**](c-applicationversion.md)<br/> [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**FT-Dfs**](c-ftdfs.md)<br/> [**ms-DS-App-Configuration**](c-msds-app-configuration.md)<br/> [**ms-DS-App-Data**](c-msds-appdata.md)<br/> |
 
 
 

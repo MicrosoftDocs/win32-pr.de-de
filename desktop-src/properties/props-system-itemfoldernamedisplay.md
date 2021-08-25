@@ -1,23 +1,23 @@
 ---
-description: Der benutzerfreundliche Anzeige Name des übergeordneten Ordners eines Elements.
+description: Der benutzerfreundliche Anzeigename des übergeordneten Ordners eines Elements.
 ms.assetid: 4049b6cb-41a1-4df6-89d1-a2022d3a285d
-title: System. itemfoldernamedisplay
+title: System.ItemFolderNameDisplay
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d637412b02345b52fee2e1c13e8f499314af4c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7c8e8ca12af7c7665a2fd4b64f2911a1e6dbc99805cf4355ea1bb1ceec764c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119945170"
 ---
-# <a name="systemitemfoldernamedisplay"></a>System. itemfoldernamedisplay
+# <a name="systemitemfoldernamedisplay"></a>System.ItemFolderNameDisplay
 
-Der benutzerfreundliche Anzeige Name des übergeordneten Ordners eines Elements.
+Der benutzerfreundliche Anzeigename des übergeordneten Ordners eines Elements.
 
-Dies wird von [System. itemfolderpathdisplay](./props-system-itemfolderpathdisplay.md)abgeleitet. Wenn diese Eigenschaft den Wert VT \_ empty hat, sollte diese Eigenschaft ebenfalls sein.
+Dies wird von [System.ItemFolderPathDisplay abgeleitet.](./props-system-itemfolderpathdisplay.md) Wenn diese Eigenschaft VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls sein.
 
-Wenn es sich bei dem Ordner um einen Datei Ordner handelt, wird der Wert lokalisiert, wenn ein lokalisierter Name verfügbar ist.
+Wenn der Ordner ein Dateiordner ist, wird der Wert lokalisiert, wenn ein lokalisierter Name verfügbar ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
@@ -35,23 +35,23 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Wenn [System. itemfolderpathdisplay](./props-system-itemfolderpathdisplay.md) den Wert VT \_ empty hat, sollte diese Eigenschaft auch leer sein. Andernfalls sollte Sie von der Datenquelle aus System. itemfolderpathdisplay ordnungsgemäß abgeleitet werden.
+Wenn [System.ItemFolderPathDisplay](./props-system-itemfolderpathdisplay.md) VT \_ EMPTY ist, sollte diese Eigenschaft ebenfalls leer sein. Andernfalls sollte sie von der Datenquelle von System.ItemFolderPathDisplay entsprechend abgeleitet werden.
 
 Beispiele:
 
 
 
-| Gegebener Pfad                             | Anzeige Name des Ordners |
+| Angegebener Pfad                             | Anzeigename des Ordners |
 |----------------------------------------|---------------------|
-| c: \\ myfiles- \\ Text \\hello.txt           | Text                |
-| \\\\Server \\ Freigabe \\ "MyDir" \\goodnews.doc | "MyDir"               |
-| \\\\Server \\ Freigabe \\numbers.xls         | Freigeben               |
+| c: \\ \\ MyFiles-hello.txt \\           | Text                |
+| \\\\server \\ share \\ mydir \\goodnews.doc | mydir               |
+| \\\\\\ \\ Serverfreigabe-numbers.xls         | Freigeben               |
 | c: \\ Ordner \\ MyFolder                  | Ordner             |
-| /Mailbox Account/Inbox/"Re: Hello!"    | Posteingang               |
+| /Postfachkonto/Posteingang/'Re: Hello!    | Posteingang               |
 
 
 
@@ -61,46 +61,46 @@ Beispiele:
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

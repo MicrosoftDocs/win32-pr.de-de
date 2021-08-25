@@ -1,9 +1,9 @@
 ---
-title: RAS_PARAMETERS Struktur (rassapi. h)
-description: Die Struktur der RAS- \_ Parameter wird von der rasadminportgetinfo-Funktion verwendet, um den Namen und den Wert eines medienspezifischen Parameters zurückzugeben, der einem Port auf einem RAS-Server zugeordnet ist.
+title: RAS_PARAMETERS -Struktur (Rassapi.h)
+description: Die RAS PARAMETERS-Struktur wird von der RasAdminPortGetInfo-Funktion verwendet, um den Namen und Wert eines medienspezifischen Parameters zurückgibt, der einem Port auf einem \_ RAS-Server zugeordnet ist.
 ms.assetid: b46b6176-9a0c-4d9b-b961-b20fdc41653b
 keywords:
-- RAS_PARAMETERS Struktur-RAS
+- RAS_PARAMETERS-Struktur
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fffaefa8a6f2cffb895cc18882ed8fc0c382a4bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e38ec1a8febbca4319a9c098eafee3705fe59602af81b3ec94e4e974892be771
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909670"
 ---
-# <a name="ras_parameters-structure"></a>Struktur der RAS- \_ Parameter
+# <a name="ras_parameters-structure"></a>RAS \_ PARAMETERS-Struktur
 
-\[Die Struktur der **RAS- \_ Parameter** wird ab Windows Vista nicht unterstützt.\]
+\[Die **\_ RAS-PARAMETER-Struktur** wird ab Windows Vista nicht mehr unterstützt.\]
 
-Die Struktur der **RAS- \_ Parameter** wird von der [**rasadminportgetinfo**](rasadminportgetinfo.md) -Funktion verwendet, um den Namen und den Wert eines medienspezifischen Parameters zurückzugeben, der einem Port auf einem RAS-Server zugeordnet ist.
+Die **RAS \_ PARAMETERS-Struktur** wird von der [**RasAdminPortGetInfo-Funktion**](rasadminportgetinfo.md) verwendet, um den Namen und Wert eines medienspezifischen Parameters zurückgibt, der einem Port auf einem RAS-Server zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ typedef struct RAS_PARAMETERS {
 
 <dl> <dt>
 
-**P- \_ Taste**
+**\_P-Taste**
 </dt> <dd>
 
-Gibt den Namen des Schlüssels an, der den medienspezifischen Parameter darstellt, z. b. maxconnectbit/s.
+Gibt den Namen des Schlüssels an, der den medienspezifischen Parameter darstellt, z. B. MAXCONNECTBPS.
 
 </dd> <dt>
 
-**P- \_ Typ**
+**\_P-Typ**
 </dt> <dd>
 
-Identifiziert den Typ der Daten, die dem-Parameter zugeordnet sind. Dieser Member kann einer der folgenden Werte aus der RAS- [**\_ parametriams- \_ formatenumeration**](ras-params-format-str.md) sein.
+Identifiziert den Datentyp, der dem Parameter zugeordnet ist. Dieser Member kann einer der folgenden Werte aus der [**RAS \_ PARAMS \_ FORMAT-Enumeration**](ras-params-format-str.md) sein.
 
 
 
@@ -70,17 +70,17 @@ Identifiziert den Typ der Daten, die dem-Parameter zugeordnet sind. Dieser Membe
 
 </dd> <dt>
 
-**P- \_ Attribute**
+**\_P-Attribute**
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-**P- \_ Wert**
+**\_P-Wert**
 </dt> <dd>
 
-Gibt den Wert an, der dem Parameter zugeordnet ist. Dieser Member ist ein [**RAS-Parameter \_ \_ Wert**](ras-params-value-str.md) Union. Wenn der **P- \_ Typmember** eine paramnumber ist, enthält der **Number** -Member der Union den Wert. Wenn der **P- \_ Typ** paramString ist, enthält der **Zeichen** folgen Member der Union den Wert.
+Gibt den Wert an, der dem Parameter zugeordnet ist. Dieser Member ist eine [**RAS \_ PARAMS \_ VALUE-Union.**](ras-params-value-str.md) Wenn das **P \_ Type-Member** ParamNumber ist, enthält **das Number-Member** der Union den Wert. Wenn **P \_ Type** paramString ist, enthält das **String-Member** der Union den Wert.
 
 </dd> </dl>
 
@@ -93,8 +93,8 @@ Gibt den Wert an, der dem Parameter zugeordnet ist. Dieser Member ist ein [**RAS
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
@@ -102,19 +102,19 @@ Gibt den Wert an, der dem Parameter zugeordnet ist. Dieser Member ist ein [**RAS
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsstrukturen](ras-server-administration-structures.md)
+[RAS-Serververwaltungsstrukturen](ras-server-administration-structures.md)
 </dt> <dt>
 
-[**Rasadminakzeptnewconnection**](rasadminacceptnewconnection.md)
+[**RasAdminAcceptNewConnection**](rasadminacceptnewconnection.md)
 </dt> <dt>
 
-[**Rasadminconnectionhangupnotification**](rasadminconnectionhangupnotification.md)
+[**RasAdminConnectionHangupNotification**](rasadminconnectionhangupnotification.md)
 </dt> <dt>
 
-[**Rasadminportgetinfo**](rasadminportgetinfo.md)
+[**RasAdminPortGetInfo**](rasadminportgetinfo.md)
 </dt> </dl>
 
  

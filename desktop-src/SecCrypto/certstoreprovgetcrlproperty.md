@@ -1,7 +1,7 @@
 ---
-description: Ruft eine angegebene Eigenschaft einer CRL ab.
+description: Ruft eine angegebene Eigenschaft einer Sperrliste ab.
 ms.assetid: b02f4f92-952a-4625-a7d4-6e78e542774e
-title: Certstoreprovgetcrlproperty-Rückruffunktion
+title: Rückruffunktion "CertStoreProvGetCRLProperty"
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: bcf69653f03ccfbb52c8247c9ea459000db55e2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2662c29ede9feec90b10869a4dc21277a8c6bdc6243e60ce894819e4b27dce5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877050"
 ---
-# <a name="certstoreprovgetcrlproperty-callback-function"></a>Certstoreprovgetcrlproperty-Rückruffunktion
+# <a name="certstoreprovgetcrlproperty-callback-function"></a>Rückruffunktion "CertStoreProvGetCRLProperty"
 
-Die **certstoreprovgetcrlproperty** -Rückruffunktion Ruft eine angegebene Eigenschaft einer [*CRL*](../secgloss/c-gly.md)ab.
+Die **Rückruffunktion CertStoreProvGetCRLProperty** ruft eine angegebene Eigenschaft einer [*Zertifikatsperrliste*](../secgloss/c-gly.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,51 +43,51 @@ BOOL WINAPI CertStoreProvGetCRLProperty(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-**Hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+**HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pcrlcontext* \[ in\]
+*pCrlContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CRL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context) Struktur.
+Ein Zeiger auf eine [**CRL \_ CONTEXT-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context)
 
 </dd> <dt>
 
-*dwpropid* \[ in\]
+*dwPropId* \[ In\]
 </dt> <dd>
 
-Gibt einen Eigenschafts Bezeichner an.
+Gibt einen Eigenschaftenbezeichner an.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> <dt>
 
-*pvData* \[ vorgenommen\]
+*pvData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Zeiger auf eine [**CRL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context) Struktur enthalten soll, die von der Funktion zurückgegeben werden soll. Kann bei einem ersten Aufrufe der-Funktion auf **null** festgelegt werden, um den Wert von *pcbData* abzurufen, bevor für den Pufferspeicher zugewiesen wird.
+Ein Zeiger auf einen Puffer, der den Zeiger auf eine [**CRL \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context) enthält, die von der Funktion zurückgegeben werden soll. Kann bei einem ersten Aufruf der Funktion auf **NULL** festgelegt werden, um den Wert von *"data"* abzurufen, bevor Arbeitsspeicher für den Puffer zugewiesen wird.
 
 </dd> <dt>
 
-*pcbData* \[ in, out\]
+*data* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf ein **DWORD** , das die Länge des *pvData* -Puffers angibt.
+Ein Zeiger auf ein **DWORD,** der die Länge des *pvData-Puffers* angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn Sie fehlschlägt.
+Gibt **TRUE** zurück, wenn die Funktion erfolgreich ist, oder **FALSE,** wenn sie fehlschlägt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,8 +95,8 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -104,7 +104,7 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 <dl> <dt>
 
-[**CRL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context)
+[**\_CRL-KONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-crl_context)
 </dt> </dl>
 
  

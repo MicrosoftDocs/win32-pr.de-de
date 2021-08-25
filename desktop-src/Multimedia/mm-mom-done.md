@@ -1,9 +1,9 @@
 ---
-title: MM_MOM_DONE Meldung (MMSYSTEM. h)
-description: Die \_ von mm MOM \_ durchgeführte Nachricht wird an ein Fenster gesendet, wenn der angegebene System exklusive System-oder Streampuffer wiedergegeben wurde und an die Anwendung zurückgegeben wird.
+title: MM_MOM_DONE (Mmsystem.h)
+description: Die MM MOM DONE-Nachricht wird an ein Fenster gesendet, wenn der angegebene exklusive SYSTEM- oder Streampuffer wiedergegeben wurde und an \_ \_ die Anwendung zurückgegeben wird.
 ms.assetid: 4651d5b4-3c98-4fa7-b761-dafb30e0d31e
 keywords:
-- MM_MOM_DONE-Nachricht (Multimedia)
+- MM_MOM_DONE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46ad5d4a7e91cc05aa51017cba79418b34445362
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4fcbcde545c7d29a313e729761c2e565db3405b10faf3156d9ef7dd0585b16b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807140"
 ---
-# <a name="mm_mom_done-message"></a>Nach \_ richten von mm MOM \_
+# <a name="mm_mom_done-message"></a>MM \_ MOM \_ DONE-Nachricht
 
-Die von **mm \_ MOM \_ durch** geführte Nachricht wird an ein Fenster gesendet, wenn der angegebene System exklusive System-oder Streampuffer wiedergegeben wurde und an die Anwendung zurückgegeben wird.
+Die **MM \_ MOM \_ DONE-Nachricht** wird an ein Fenster gesendet, wenn der angegebene exklusive SYSTEM- oder Streampuffer wiedergegeben wurde und an die Anwendung zurückgegeben wird.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LPARAM) lpMidiHdr
 
 <dl> <dt>
 
-<span id="hOutput"></span><span id="houtput"></span><span id="HOUTPUT"></span>*houtput*
+<span id="hOutput"></span><span id="houtput"></span><span id="HOUTPUT"></span>*hOutput*
 </dt> <dd>
 
-Handle für das MIDI-Ausgabegerät, das den Puffer wiedergegeben hat.
+Handle für das OUTPUT-Gerät des DEST-Geräts, das den Puffer wiedergegeben hat.
 
 </dd> <dt>
 
-<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpmidihdr*
+<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpMidiHdr*
 </dt> <dd>
 
-Zeiger auf eine [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur, die den Puffer identifiziert.
+Zeiger auf eine [**DABEIHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) die den Puffer identifiziert.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Meldung gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MESSAGES-Meldungen](midi-messages.md)
 </dt> </dl>
 
  

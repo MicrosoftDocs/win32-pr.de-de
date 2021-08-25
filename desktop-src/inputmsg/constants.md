@@ -1,35 +1,35 @@
 ---
-title: Zeiger Eingabe Meldungen und Benachrichtigungs Konstanten
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Zeiger Eingabe Meldungen und Benachrichtigungs Konstanten.
+title: Zeigereingabemeldungen und Benachrichtigungskonst constants
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Zeigereingabemeldungen und Benachrichtigungskonst constants.
 ms.assetid: 2224DCD0-DAE1-4AC2-AB36-23D114803138
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 6db54614e10c02cea5dfd4df9b7cf637abb3977c
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 600ae37234c64ab313d38666b83f926795b08e21d91f23eeaec68aa68b24b9db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106358190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829770"
 ---
-# <a name="pointer-input-messages-and-notifications-constants"></a>Zeiger Eingabe Meldungen und Benachrichtigungs Konstanten
+# <a name="pointer-input-messages-and-notifications-constants"></a>Zeigereingabemeldungen und Benachrichtigungskonst constants
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeiger Eingabe Meldungen und Benachrichtigungs](messages-and-notifications-portal.md) Konstanten.
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigereingabemeldungen und Benachrichtigungskonst](messages-and-notifications-portal.md) constants.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                             | BESCHREIBUNG                                                                                                                                                                                                 |
+| Thema                                                                             | Beschreibung                                                                                                                                                                                                 |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Modifiziererschlüsselzustand**](modifier-key-states-constants.md)<br/>            | Gibt an, welche Tastatur Modifizierertasten beim Generieren der Eingabe gedrückt wurden.<br/>                                                                                                       |
-| [**Pen-Flags**](pen-flags-constants.md)<br/>                               | Werte, die im Feld " **kflags** " der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.<br/>                                                                         |
-| [**Stift Maske**](pen-mask-constants.md)<br/>                                 | Werte, die im Feld " **Straf Maske** " der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.<br/>                                                                          |
-| [**Zeiger Geräte Änderung**](pointer-device-change-constants.md)<br/>       | Werte, die im *wParam* -Parameter der [**WM_POINTERDEVICECHANGE**](wm-pointerdevicechange.md) Nachricht übergeben werden können.<br/>                                                                    |
-| [**Zeigerflags**](pointer-flags-contants.md)<br/>                        | Werte, die im Feld **pointerflags** der [**POINTER_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.<br/>                                                                              |
-| [**Zeigernachrichtenflags**](pointer-message-flags.md)<br/>                 | Werte, die in verschiedenen Zeiger Makros verwendet werden (siehe [Makros](macros.md)).<br/>                                                                                                                       |
-| [**Berührungs Flags**](touch-flags-constants.md)<br/>                           | Werte, die im Feld **touchflags** der [**POINTER_TOUCH_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.<br/>                                                                   |
-| [**Berührungs Treffer-Test Fenster**](touch-hit-testing-window-constants.md)<br/> | Gibt an, wie Nachrichten für Touch-Treffer Tests von Fenstern verarbeitet werden, die über die [**registertouchhittestingwindow**](/windows/win32/api/winuser/nf-winuser-registertouchhittestingwindow) -Funktion registriert werden.<br/> |
-| [**Berührungs Maske**](touch-mask-constants.md)<br/>                             | Werte, die im Feld **touchmask** der [**POINTER_TOUCH_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.<br/>                                                                    |
+| [**Schlüsselzustand des Modifizierers**](modifier-key-states-constants.md)<br/>            | Gibt an, welche Tastaturmodifizierertasten beim Erstellen der Eingabe gedrückt wurden.<br/>                                                                                                       |
+| [**Stiftflags**](pen-flags-constants.md)<br/>                               | Werte, die im **PenFlags-Feld** der -Struktur POINTER_PEN_INFO [**werden**](/previous-versions/windows/desktop/api) können.<br/>                                                                         |
+| [**Stiftmaske**](pen-mask-constants.md)<br/>                                 | Werte, die im **penMask-Feld** der -Struktur POINTER_PEN_INFO [**werden**](/previous-versions/windows/desktop/api) können.<br/>                                                                          |
+| [**Zeigergeräteänderung**](pointer-device-change-constants.md)<br/>       | Werte, die im *wParam-Parameter* der WM_POINTERDEVICECHANGE [**werden**](wm-pointerdevicechange.md) können.<br/>                                                                    |
+| [**Zeigerflags**](pointer-flags-contants.md)<br/>                        | Werte, die im **Feld pointerFlags** der -Struktur POINTER_INFO [**werden**](/previous-versions/windows/desktop/api) können.<br/>                                                                              |
+| [**Zeigermeldungsflags**](pointer-message-flags.md)<br/>                 | Werte, die in verschiedenen Zeigermakros verwendet werden (siehe [Makros](macros.md)).<br/>                                                                                                                       |
+| [**Touchflags**](touch-flags-constants.md)<br/>                           | Werte, die im Feld **touchFlags** der -Struktur POINTER_TOUCH_INFO [**werden**](/previous-versions/windows/desktop/api) können.<br/>                                                                   |
+| [**Touch-Treffertestfenster**](touch-hit-testing-window-constants.md)<br/> | Gibt an, wie Nachrichten für Touchtreffertests von Fenstern verarbeitet werden, die über die [**RegisterTouchHitTestingWindow-Funktion registriert**](/windows/win32/api/winuser/nf-winuser-registertouchhittestingwindow) werden.<br/> |
+| [**TouchMaske**](touch-mask-constants.md)<br/>                             | Werte, die im **touchMask-Feld** der -Struktur POINTER_TOUCH_INFO [**werden**](/previous-versions/windows/desktop/api) können.<br/>                                                                    |
 
 
 
@@ -39,7 +39,7 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeig
 
 <dl> <dt>
 
-[Verweis auf Zeiger-Eingabe Nachricht](wmpointer-reference.md)
+[Zeigereingabemeldungsreferenz](wmpointer-reference.md)
 </dt> </dl>
 
  

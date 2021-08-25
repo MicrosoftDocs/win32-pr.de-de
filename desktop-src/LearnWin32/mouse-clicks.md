@@ -1,42 +1,42 @@
 ---
-title: Antworten auf Mausklicks
-description: Antworten auf Mausklicks
+title: Reagieren auf Mausklicks
+description: Reagieren auf Mausklicks
 ms.assetid: FED1CA3B-94C6-4780-B82D-C10171F36D98
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32c37903264ca638aeca1c0b28fb2ea7fa792660
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 947b50726e79fbf29c4f013d4ac0a449c009c1817b74b1a8063e63a68c4dd6c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897210"
 ---
-# <a name="responding-to-mouse-clicks"></a>Antworten auf Mausklicks
+# <a name="responding-to-mouse-clicks"></a>Reagieren auf Mausklicks
 
-Wenn der Benutzer auf eine Maustaste klickt, während sich der Cursor über dem Client Bereich eines Fensters befindet, empfängt das Fenster eine der folgenden Meldungen.
+Wenn der Benutzer auf eine Maustaste klickt, während sich der Cursor über dem Clientbereich eines Fensters befindet, empfängt das Fenster eine der folgenden Meldungen.
 
 
 
 | Nachricht                                        | Bedeutung                   |
 |------------------------------------------------|---------------------------|
-| [**WM \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown) | Linke Schaltfläche nach unten          |
-| [**WM- \_ lbuttonup**](/windows/desktop/inputdev/wm-lbuttonup)     | Linke Schaltfläche nach oben            |
-| [**WM- \_ mbuttondown**](/windows/desktop/inputdev/wm-mbuttondown) | Mittlere Schaltfläche nach unten        |
-| [**WM- \_ mbuttonup**](/windows/desktop/inputdev/wm-mbuttonup)     | Mittlere Schaltfläche nach oben          |
-| [**WM- \_ rbuttondown**](/windows/desktop/inputdev/wm-rbuttondown) | Nach-rechts-Taste         |
-| [**WM- \_ rbuttonup**](/windows/desktop/inputdev/wm-rbuttonup)     | Rechter Schaltfläche nach oben           |
-| [**WM- \_ xbuttondown**](/windows/desktop/inputdev/wm-xbuttondown) | XButton1 oder XButton2 Down |
-| [**WM- \_ xbuttonup**](/windows/desktop/inputdev/wm-xbuttonup)     | XButton1 oder XButton2 up   |
+| [**WM \_ LBUTTONDOWN**](/windows/desktop/inputdev/wm-lbuttondown) | Linke Schaltfläche nach unten          |
+| [**WM \_ LBUTTONUP**](/windows/desktop/inputdev/wm-lbuttonup)     | Linke Schaltfläche nach oben            |
+| [**WM \_ MBUTTONDOWN**](/windows/desktop/inputdev/wm-mbuttondown) | Mittlere Schaltfläche nach unten        |
+| [**WM \_ MBUTTONUP**](/windows/desktop/inputdev/wm-mbuttonup)     | Mittlere Schaltfläche nach oben          |
+| [**WM \_ RBUTTONDOWN**](/windows/desktop/inputdev/wm-rbuttondown) | Schaltfläche "Rechts nach unten"         |
+| [**WM \_ RBUTTONUP**](/windows/desktop/inputdev/wm-rbuttonup)     | Rechte Schaltfläche nach oben           |
+| [**WM \_ XBUTTONDOWN**](/windows/desktop/inputdev/wm-xbuttondown) | XBUTTON1 oder XBUTTON2 nach unten |
+| [**WM \_ XBUTTONUP**](/windows/desktop/inputdev/wm-xbuttonup)     | XBUTTON1 oder XBUTTON2 nach oben   |
 
 
 
- 
+ 
 
-Beachten Sie, dass der Client Bereich der Teil des Fensters ist, in dem der Frame ausgeschlossen ist. Weitere Informationen zu Client Bereichen finden Sie unter [Was ist ein Fenster?](what-is-a-window-.md)
+Denken Sie daran, dass der Clientbereich der Teil des Fensters ist, der den Rahmen ausschließt. Weitere Informationen zu Clientbereichen finden Sie unter [Was ist ein Fenster?](what-is-a-window-.md)
 
-### <a name="mouse-coordinates"></a>Maus Koordinaten
+### <a name="mouse-coordinates"></a>Mauskoordinaten
 
-In allen diesen Nachrichten enthält der *LPARAM* -Parameter die x-und y-Koordinaten des Mauszeigers. Die niedrigsten 16 Bits von *LPARAM* enthalten die x-Koordinate, und die nächsten 16 Bits enthalten die y-Koordinate. Verwenden Sie die lParam-Makros [**get \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) und [**get \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) , um die Koordinaten aus *LPARAM* zu entpacken.
+In all diesen Nachrichten enthält der *lParam-Parameter* die x- und y-Koordinaten des Mauszeigers. Die niedrigsten 16 Bits von *lParam* enthalten die x-Koordinate, und die nächsten 16 Bits enthalten die y-Koordinate. Verwenden Sie die [**Makros GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) und [**GET \_ Y \_ LPARAM,**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) um die Koordinaten aus *lParam* zu entpacken.
 
 
 ```C++
@@ -46,33 +46,33 @@ int yPos = GET_Y_LPARAM(lParam);
 
 
 
-Diese Makros sind in der Header Datei WINDOWSX. h definiert.
+Diese Makros werden in der Headerdatei WindowsX.h definiert.
 
-Bei 64-Bit-Fenstern ist *LPARAM* 64-Bit-Wert. Die oberen 32 Bits von *LPARAM* werden nicht verwendet. In der MSDN-Dokumentation werden das "nieder wertige Wort" und "High-Order Word" von *LPARAM* erwähnt. Im 64-Bit-Fall bedeutet dies, dass das niedrige und das hochwertige Wort der unteren 32 Bits ist. Die Makros extrahieren die richtigen Werte, sodass Sie sicher sind, wenn Sie Sie verwenden.
+Bei 64-Bit-Windows ist *lParam* ein 64-Bit-Wert. Die oberen 32 Bits von *lParam* werden nicht verwendet. In der MSDN-Dokumentation werden die Wörter "Wort mit niedriger Ordnung" und "Wort in hoher Reihenfolge" von *lParam* erwähnt. Im 64-Bit-Fall bedeutet dies die Wörter in niedriger und hoher Reihenfolge der unteren 32 Bits. Die Makros extrahieren die richtigen Werte. Wenn Sie sie also verwenden, sind Sie sicher.
 
-Maus Koordinaten werden in Pixel angegeben, nicht in geräteunabhängigen Pixeln (Dips) und werden relativ zum Client Bereich des Fensters gemessen. Koordinaten sind signierte Werte. Positionen oberhalb und Links vom Client Bereich haben negative Koordinaten, was wichtig ist, wenn Sie die Mausposition außerhalb des Fensters verfolgen. Dies wird in einem späteren Thema erläutert, wobei [die Mausbewegung außerhalb des Fensters erfasst](mouse-movement.md)wird.
+Mauskoordinaten werden in Pixel und nicht in geräteunabhängigen Pixeln (DIPs) angegeben und relativ zum Clientbereich des Fensters gemessen. Koordinaten sind signierte Werte. Positionen oberhalb und links vom Clientbereich weisen negative Koordinaten auf. Dies ist wichtig, wenn Sie die Mausposition außerhalb des Fensters nachverfolgen. Dies erfahren Sie in einem späteren Thema, [Erfassen von Mausbewegungen außerhalb des Fensters.](mouse-movement.md)
 
 ### <a name="additional-flags"></a>Zusätzliche Flags
 
-Der *wParam* -Parameter enthält ein bitweises **or** von-Flags, das den Zustand der anderen Maustasten sowie die UMSCHALTTASTE und die STRG-Taste angibt.
+Der *wParam-Parameter* enthält ein bitweises **OR** von Flags, das den Zustand der anderen Maustasten sowie die UMSCHALT- und STRG-Taste angibt.
 
 
 
 | Flag             | Bedeutung                          |
 |------------------|----------------------------------|
-| **MK- \_ Steuerelement**  | Die STRG-Taste ist nicht gedrückt.            |
-| **MK \_ lbutton**  | Die linke Maustaste ist nicht mehr vorhanden.   |
-| **MK- \_ MButton**  | Die mittlere Maustaste ist nicht mehr angezeigt. |
-| **MK \_ rbutton**  | Die Rechte Maustaste ist nicht mehr angezeigt.  |
-| **MK \_ UMSCHALT**    | Die UMSCHALTTASTE ist nicht mehr festgelegt.           |
-| **MK \_ XButton1** | Die Schaltfläche XButton1 ist nicht angezeigt.     |
-| **MK \_ XButton2** | Die Schaltfläche XButton2 ist nicht angezeigt.     |
+| **\_MK-STEUERUNG**  | Die STRG-TASTE ist gedrückt.            |
+| **MK \_ LBUTTON**  | Die linke Maustaste ist nach unten geschaltet.   |
+| **MK \_ MBUTTON**  | Die mittlere Maustaste ist gedrückt. |
+| **MK \_ RBUTTON**  | Die rechte Maustaste ist nach unten geschaltet.  |
+| **MK \_ SHIFT**    | Die UMSCHALTTASTE ist nicht mehr gedrückt.           |
+| **MK \_ XBUTTON1** | Die XBUTTON1-Schaltfläche ist ausgeschaltet.     |
+| **MK \_ XBUTTON2** | Die XBUTTON2-Schaltfläche ist ausgeschaltet.     |
 
 
 
- 
+ 
 
-Das Fehlen eines Flags bedeutet, dass die entsprechende Schaltfläche oder der entsprechende Schlüssel nicht gedrückt wurde. So können Sie beispielsweise testen, ob die STRG-Taste gedrückt ist:
+Das Fehlen eines Flags bedeutet, dass die entsprechende Schaltfläche oder Taste nicht gedrückt wurde. So testen Sie beispielsweise, ob die STRG-TASTE gedrückt ist:
 
 
 ```C++
@@ -81,9 +81,9 @@ if (wParam & MK_CONTROL) { ...
 
 
 
-Wenn Sie neben STRG und UMSCHALT den Zustand anderer Schlüssel ermitteln müssen, verwenden Sie die [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) -Funktion, die in [Tastatureingaben](keyboard-input.md)beschrieben wird.
+Wenn Sie den Zustand anderer Tasten neben STRG und UMSCHALT suchen müssen, verwenden Sie die [**GetKeyState-Funktion,**](/windows/desktop/api/winuser/nf-winuser-getkeystate) die unter [Tastatureingabe](keyboard-input.md)beschrieben wird.
 
-Die Nachrichten " [**WM \_ xbuttondown**](/windows/desktop/inputdev/wm-xbuttondown) " und " [**WM \_ xbuttonup" werden**](/windows/desktop/inputdev/wm-xbuttonup) sowohl auf XButton1 als auch auf XButton2 angewendet. Der *wParam* -Parameter gibt an, auf welche Schaltfläche geklickt wurde.
+Die Wm [**\_ XBUTTONDOWN-**](/windows/desktop/inputdev/wm-xbuttondown) und [**WM \_ XBUTTONUP-Fenstermeldungen**](/windows/desktop/inputdev/wm-xbuttonup) gelten sowohl für XBUTTON1 als auch für XBUTTON2. Der *wParam-Parameter* gibt an, auf welche Schaltfläche geklickt wurde.
 
 
 ```C++
@@ -100,9 +100,9 @@ else if (button == XBUTTON2)
 
 
 
-## <a name="double-clicks"></a>Doppelte Klicks
+## <a name="double-clicks"></a>Doppelklicken
 
-Ein Fenster erhält standardmäßig keine Doppelklick-Benachrichtigungen. Um doppelte Klicks zu erhalten, legen Sie das **CS \_ dblclert** -Flag in der [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa) -Struktur fest, wenn Sie die Fenster Klasse registrieren.
+Ein Fenster empfängt standardmäßig keine Doppelklickbenachrichtigungen. Um Doppelklicks zu erhalten, legen Sie das **CS \_ DBLCLKS-Flag** in der [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) fest, wenn Sie die Fensterklasse registrieren.
 
 
 ```C++
@@ -117,28 +117,28 @@ Ein Fenster erhält standardmäßig keine Doppelklick-Benachrichtigungen. Um dop
 
 
 
-Wenn Sie das Flag **CS \_ dblclcs** wie gezeigt festlegen, empfängt das Fenster Doppelklick-Benachrichtigungen. Ein Doppelklick wird durch eine Fenster Meldung mit dem Namen "dblclk" angezeigt. Ein Doppelklick mit der linken Maustaste erzeugt beispielsweise die folgende Sequenz von Meldungen:
+Wenn Sie das **CS \_ DBLCLKS-Flag** wie gezeigt festlegen, empfängt das Fenster Doppelklickbenachrichtigungen. Ein Doppelklick wird durch eine Fenstermeldung mit "DBLCLK" im Namen angezeigt. Ein Doppelklick auf die linke Maustaste erzeugt z. B. die folgende Sequenz von Nachrichten:
 
 <dl>
 
-[**WM \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown)  
-[**WM- \_ lbuttonup**](/windows/desktop/inputdev/wm-lbuttonup)  
-[**WM \_ lbuttondblclk**](/windows/desktop/inputdev/wm-lbuttondblclk)  
-[**WM- \_ lbuttonup**](/windows/desktop/inputdev/wm-lbuttonup)  
+[**WM \_ LBUTTONDOWN**](/windows/desktop/inputdev/wm-lbuttondown)  
+[**WM \_ LBUTTONUP**](/windows/desktop/inputdev/wm-lbuttonup)  
+[**WM \_ LBUTTONDBLCLK**](/windows/desktop/inputdev/wm-lbuttondblclk)  
+[**WM \_ LBUTTONUP**](/windows/desktop/inputdev/wm-lbuttonup)  
 </dl>
 
-Tatsächlich wird die zweite [**WM- \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown) -Meldung, die normalerweise generiert wird, zu einer [**WM \_ lbuttondblclk**](/windows/desktop/inputdev/wm-lbuttondblclk) -Nachricht. Äquivalente Nachrichten werden für die Schaltflächen right, Middle und XButton definiert.
+Tatsächlich wird die zweite [**\_ WM-LBUTTONDOWN-Nachricht,**](/windows/desktop/inputdev/wm-lbuttondown) die normalerweise generiert wird, zu einer [**\_ WM-LBUTTONDBLCLK-Nachricht.**](/windows/desktop/inputdev/wm-lbuttondblclk) Äquivalente Nachrichten werden für rechte, mittlere und XBUTTON-Schaltflächen definiert.
 
-Bis Sie die Doppelklick Nachricht erhalten haben, gibt es keine Möglichkeit, zu erkennen, dass der erste Mausklick den Anfang eines Doppelklicks enthält. Aus diesem Grund sollte eine Doppelklick Aktion eine Aktion fortsetzen, die mit dem ersten Mausklick beginnt. Beispielsweise wird in der Windows-Shell mit einem einzigen Klick ein Ordner ausgewählt, während mit einem Doppelklick der Ordner geöffnet wird.
+Bis sie die Doppelklicknachricht erhalten, gibt es keine Möglichkeit, zu erkennen, dass der erste Mausklick der Anfang eines Doppelklicks ist. Daher sollte eine Doppelklickaktion eine Aktion fortsetzen, die mit dem ersten Mausklick beginnt. In der Windows Shell wählt beispielsweise ein einziger Klick einen Ordner aus, während ein Doppelklick den Ordner öffnet.
 
-## <a name="non-client-mouse-messages"></a>Nicht-Client-Maus Meldungen
+## <a name="non-client-mouse-messages"></a>Nicht-Client-Mausnachrichten
 
-Für Mausereignisse, die im nicht-Client Bereich des Fensters auftreten, wird ein separater Satz von Meldungen definiert. Diese Nachrichten enthalten den Buchstaben "NC" im Namen. Beispielsweise ist [**WM \_ nclbuttondown**](/windows/desktop/inputdev/wm-nclbuttondown) die nicht-Client-Entsprechung von [**WM \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown). Diese Nachrichten werden von einer typischen Anwendung nicht abgefangen, da diese Nachrichten von der [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion ordnungsgemäß verarbeitet werden. Allerdings können Sie für bestimmte erweiterte Funktionen nützlich sein. Beispielsweise können Sie diese Nachrichten verwenden, um ein benutzerdefiniertes Verhalten in der Titelleiste zu implementieren. Wenn Sie diese Nachrichten verarbeiten, sollten Sie Sie in der Regel an **defwindowproc** weiterleiten. Andernfalls werden von der Anwendung Standardfunktionen wie z. b. ziehen oder Minimieren des Fensters unterbricht.
+Für Mausereignisse, die im Nicht-Clientbereich des Fensters auftreten, wird ein separater Satz von Nachrichten definiert. Diese Nachrichten enthalten die Buchstaben "NC" im Namen. WM [**\_ NCLBUTTONDOWN**](/windows/desktop/inputdev/wm-nclbuttondown) ist beispielsweise die Nicht-Cliententsprechung von [**WM \_ LBUTTONDOWN**](/windows/desktop/inputdev/wm-lbuttondown). Eine typische Anwendung fängt diese Nachrichten nicht ab, da die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) diese Nachrichten ordnungsgemäß verarbeitet. Sie können jedoch für bestimmte erweiterte Funktionen nützlich sein. Sie können diese Meldungen beispielsweise verwenden, um benutzerdefiniertes Verhalten in der Titelleiste zu implementieren. Wenn Sie diese Nachrichten verarbeiten, sollten Sie sie im Allgemeinen später an **DefWindowProc** übergeben. Andernfalls unterbricht Ihre Anwendung die Standardfunktionalität, z. B. das Ziehen oder Minimieren des Fensters.
 
 ## <a name="next"></a>Nächste
 
 [Mausbewegung](mouse-movement.md)
 
- 
+ 
 
- 
+ 

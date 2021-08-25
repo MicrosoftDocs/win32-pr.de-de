@@ -1,40 +1,40 @@
 ---
 title: PSAPI-Funktionen
-description: Im folgenden sind die PSAPI-Funktionen
+description: Im Folgenden finden Sie die PSAPI-Funktionen.
 ms.assetid: e158792b-fec2-498d-aae3-d5679fa55783
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58ed7bb2f1ad9f65a56ab997aad343c96406d56d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d7b93a5dc64aafa459929e1447275d7388f8e4a8cc267b0fa4c360e9f252ae2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774000"
 ---
 # <a name="psapi-functions"></a>PSAPI-Funktionen
 
-Im folgenden sind die PSAPI-Funktionen aufgeführt:
+Im Folgenden finden Sie die PSAPI-Funktionen:
 
 -   [**EmptyWorkingSet**](/windows/desktop/api/Psapi/nf-psapi-emptyworkingset)
--   [**Enumdevicedrivers**](/windows/desktop/api/Psapi/nf-psapi-enumdevicedrivers)
--   [**Enumpagefiles**](/windows/desktop/api/Psapi/nf-psapi-enumpagefilesa)
+-   [**EnumDeviceDrivers**](/windows/desktop/api/Psapi/nf-psapi-enumdevicedrivers)
+-   [**EnumPageFiles**](/windows/desktop/api/Psapi/nf-psapi-enumpagefilesa)
 -   [**EnumProcesses**](/windows/desktop/api/Psapi/nf-psapi-enumprocesses)
--   [**Enumprocessmodules**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodules)
--   [**Enumprocessmodulesex**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodulesex)
--   [**Getdevicedriverbasename**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverbasenamea)
--   [**Getdevicedriverfilename**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverfilenamea)
+-   [**EnumProcessModules**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodules)
+-   [**EnumProcessModulesEx**](/windows/desktop/api/Psapi/nf-psapi-enumprocessmodulesex)
+-   [**GetDeviceDriverBaseName**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverbasenamea)
+-   [**GetDeviceDriverFileName**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverfilenamea)
 -   [**GetMappedFileName**](/windows/desktop/api/Psapi/nf-psapi-getmappedfilenamea)
--   [**Getmodulebasename**](/windows/desktop/api/Psapi/nf-psapi-getmodulebasenamea)
--   [**Getmoduledateinameex**](/windows/desktop/api/Psapi/nf-psapi-getmodulefilenameexa)
--   [**Getmoduleinformation**](/windows/desktop/api/Psapi/nf-psapi-getmoduleinformation)
--   [**Getperformanceingefo**](/windows/desktop/api/Psapi/nf-psapi-getperformanceinfo)
--   [**Getprocessimagefilename**](/windows/desktop/api/Psapi/nf-psapi-getprocessimagefilenamea)
--   [**Getprocessmemoryinfo**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo)
--   [**Getwschanges**](/windows/desktop/api/Psapi/nf-psapi-getwschanges)
--   [**Getwschangesex**](/windows/desktop/api/Psapi/nf-psapi-getwschangesex)
--   [**Initializeprocessforwswatch**](/windows/desktop/api/Psapi/nf-psapi-initializeprocessforwswatch)
--   [**Queryworkingset**](/windows/desktop/api/Psapi/nf-psapi-queryworkingset)
--   [**Queryworkingsekunden**](/windows/desktop/api/Psapi/nf-psapi-queryworkingsetex)
+-   [**GetModuleBaseName**](/windows/desktop/api/Psapi/nf-psapi-getmodulebasenamea)
+-   [**GetModuleFileNameEx**](/windows/desktop/api/Psapi/nf-psapi-getmodulefilenameexa)
+-   [**GetModuleInformation**](/windows/desktop/api/Psapi/nf-psapi-getmoduleinformation)
+-   [**GetPerformanceInfo**](/windows/desktop/api/Psapi/nf-psapi-getperformanceinfo)
+-   [**GetProcessImageFileName**](/windows/desktop/api/Psapi/nf-psapi-getprocessimagefilenamea)
+-   [**GetProcessMemoryInfo**](/windows/desktop/api/Psapi/nf-psapi-getprocessmemoryinfo)
+-   [**GetWsChanges**](/windows/desktop/api/Psapi/nf-psapi-getwschanges)
+-   [**GetWsChangesEx**](/windows/desktop/api/Psapi/nf-psapi-getwschangesex)
+-   [**InitializeProcessForWsWatch**](/windows/desktop/api/Psapi/nf-psapi-initializeprocessforwswatch)
+-   [**QueryWorkingSet**](/windows/desktop/api/Psapi/nf-psapi-queryworkingset)
+-   [**QueryWorkingSetEx**](/windows/desktop/api/Psapi/nf-psapi-queryworkingsetex)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,9 +43,9 @@ Im folgenden sind die PSAPI-Funktionen aufgeführt:
 [PSAPI-Referenz](psapi-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

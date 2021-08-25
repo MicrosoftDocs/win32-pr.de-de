@@ -1,36 +1,36 @@
 ---
-description: Verschieben von Inhalt auf dem Gerät
+description: Verschieben von Inhalten auf dem Gerät
 ms.assetid: 5072d308-d376-4141-96df-dbef23fb9f9b
-title: Verschieben von Inhalt auf dem Gerät
+title: Verschieben von Inhalten auf dem Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3eb4a9638e656d5cab8437448d64b79947df337b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0830dab93b4ac0cd11f988c34edef24b1eb11b8869f63efdc4b0b518fc9380b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928370"
 ---
-# <a name="moving-content-on-the-device"></a>Verschieben von Inhalt auf dem Gerät
+# <a name="moving-content-on-the-device"></a>Verschieben von Inhalten auf dem Gerät
 
-Ein weiterer häufiger Vorgang, der von einer WPD-Anwendung ausgeführt wird, ist die Übertragung von Inhalt von einem Speicherort auf dem Gerät zu einem anderen.
+Ein weiterer gängiger Vorgang, der von einer WPD-Anwendung durchgeführt wird, ist die Übertragung von Inhalten von einem Standort auf dem Gerät an einen anderen.
 
-Vorgänge zum Verschieben von Inhalten werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausgeführt.
+Vorgänge zum Verschieben von Inhalten werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen durchgeführt.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                       |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.  |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Bietet Zugriff auf die Eigenschaften spezifischen Methoden. |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.  |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Ermöglicht den Zugriff auf die eigenschaftenspezifischen Methoden. |
 
 
 
  
 
-Die Funktion movecontentalleseyondevice im Modul contenttransfer. cpp der Beispielanwendung veranschaulicht, wie eine Anwendung Inhalte von einem Speicherort zu einem anderen verschieben kann.
+Die MoveContentAlreadyOnDevice-Funktion im ContentTransfer.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung Inhalte von einem Speicherort an einen anderen verschieben kann.
 
-Die erste Aufgabe, die von der Funktion "muvecontentalleseyondevice" durchgeführt wird, besteht darin, den Gerätetreiber abzufragen, um festzustellen, ob die Inhalts Verschiebung Dies wird erreicht, indem die Hilfsfunktion supportscommand aufgerufen und WPD \_ Command \_ Object \_ Management \_ Move \_ Objects als zweites Argument übergeben wird.
+Die erste Aufgabe, die von der MoveContentAlreadyOnDevice-Funktion ausgeführt wird, besteht darin, den Gerätetreiber abzufragen, um festzustellen, ob er die Inhaltsbewegung unterstützt. Dies wird erreicht, indem die SupportsCommand-Hilfsfunktion aufgerufen und WPD COMMAND OBJECT MANAGEMENT MOVE OBJECTS als zweites Argument übergeben \_ \_ \_ \_ \_ wird.
 
 
 ```C++
@@ -49,7 +49,7 @@ if (SupportsCommand(pDevice, WPD_COMMAND_OBJECT_MANAGEMENT_MOVE_OBJECTS) == FALS
 
 
 
-Der nächste Schritt erfordert, dass der Benutzer aufgefordert wird, zwei Objekt Bezeichner einzugeben. Der erste ist der Bezeichner für den Inhalt, der verschoben wird. Die zweite ist der Bezeichner für den Speicherort, an den die Anwendung diesen Inhalt verschieben soll.
+Der nächste Schritt umfasst die Aufforderung des Benutzers, zwei Objektbezeichner einzugeben. Der erste ist der Bezeichner für den Inhalt, der verschoben wird. Die zweite ist der Bezeichner für den Speicherort, an den die Anwendung diesen Inhalt verschieben soll.
 
 
 ```C++
@@ -77,7 +77,7 @@ if (FAILED(hr))
 
 
 
-Als nächstes Ruft das Beispiel ein [**iportabledevicecontent**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) -Objekt ab, das für den Zugriff auf die [**iportabledevicecontent:: Move**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-move) -Methode verwendet wird.
+Als Nächstes ruft das Beispiel ein [**IPortableDeviceContent-Objekt**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) ab, das für den Zugriff auf die [**IPortableDeviceContent::Move-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-move) verwendet wird.
 
 
 ```C++
@@ -99,11 +99,11 @@ if (SUCCEEDED(hr))
 
 
 
-Schließlich wird der Inhalt verschoben. Dieser Vorgang umfasst Folgendes:
+Schließlich wird der Inhalt verschoben. Dieser Prozess umfasst Folgendes:
 
-1.  Erstellen eines [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekts, das eine PROPVARIANT-Struktur für das zu bewegende Objekt empfängt.
-2.  Das PROPVARIANT-Objekt wird dem iportabledevicepropvariantcollection-Objekt hinzugefügt.
-3.  Aufrufen der iportabledevicecontent:: Move-Methode.
+1.  Erstellen eines [**IPortableDevicePropVariantCollection-Objekts,**](iportabledevicepropvariantcollection.md) das eine PROPVARIANT-Struktur für das zu verschiebende Objekt empfängt.
+2.  Hinzufügen von PROPVARIANT zum IPortableDevicePropVariantCollection-Objekt.
+3.  Aufrufen der IPortableDeviceContent::Move-Methode.
 
 
 ```C++
@@ -197,13 +197,13 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

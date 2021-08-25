@@ -1,7 +1,7 @@
 ---
-description: Die getparams-Methode ruft die DISPPARAMS-Argumentliste an die-Methode ab.
+description: Die GetParams-Methode ruft die DISPPARAMS-Argumentliste an die -Methode ab.
 ms.assetid: e32645ad-938b-4142-acc6-94ef573776c4
-title: Cdeferredcommand. getparameams-Methode (ctlutil. h)
+title: CDeferredCommand.GetParams-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8f506f7e278c26478ab23ec27cf464f1be5956df
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b7d2d904c979e619d22441209d2cb490878afcd910c68b81de10f74ad9b93c91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872150"
 ---
-# <a name="cdeferredcommandgetparams-method"></a>Cdeferredcommand. getparameams-Methode
+# <a name="cdeferredcommandgetparams-method"></a>CDeferredCommand.GetParams-Methode
 
-Die- `GetParams` Methode ruft die **DISPPARAMS** -Argumentliste an die-Methode ab.
+Die `GetParams` -Methode ruft die **DISPPARAMS-Argumentliste** an die -Methode ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine **DISPPARAMS** -Argumentliste zurück.
+Gibt eine **DISPPARAMS-Argumentliste** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt eine **DISPPARAMS** -Argumentliste zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt eine **DISPPARAMS** -Argumentliste zurück.
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

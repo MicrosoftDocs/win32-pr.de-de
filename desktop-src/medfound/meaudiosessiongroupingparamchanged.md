@@ -1,39 +1,39 @@
 ---
-description: Wird vom audiorenderer ausgelöst, wenn sich die Gruppierungs Parameter für die Audiositzung ändern.
+description: Wird vom Audiorenderer ausgelöst, wenn sich die Gruppierungsparameter für die Audiositzung ändern.
 ms.assetid: d6f7757c-fd91-40bd-b2b5-a3e808445250
-title: Meaudiosessiongroupingparamchanged-Ereignis (mfobjects. h)
+title: MEAudioSessionGroupingParamChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ac115bb30a4c01247da537f3255e9bc40099e3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ab9a271ebaa4e3a0044dc425de2d6a7f313e17d63c693acede63773e94619c6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957510"
 ---
-# <a name="meaudiosessiongroupingparamchanged-event"></a>Meaudiosessiongroupingparamchanged-Ereignis
+# <a name="meaudiosessiongroupingparamchanged-event"></a>MEAudioSessionGroupingParamChanged-Ereignis
 
-Wird vom audiorenderer ausgelöst, wenn sich die Gruppierungs Parameter für die Audiositzung ändern.
+Wird vom Audiorenderer ausgelöst, wenn sich die Gruppierungsparameter für die Audiositzung ändern.
 
-Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Die Mediensitzung leitet dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE                | BESCHREIBUNG                                                                               |
+| VARTYPE                | Beschreibung                                                                               |
 |------------------------|-------------------------------------------------------------------------------------------|
-| VT \_ unbekannt<br/> | Ein Zeiger auf die [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Schnittstelle.<br/> <br/> |
+| VT \_ UNKNOWN<br/> | Zeiger auf die [**INTERFACESAudioPolicy-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy)<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird von der streamsenke des audiorenderer gesendet. Das-Ereignis wird ausgelöst, wenn der audiorenderer ein [**iaudiosessionevents:: ongroupingparamchanged**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-ongroupingparamchanged) -Ereignis von der Audiositzung empfängt.
+Dieses Ereignis wird von der Streamsenke des Audiorenderers gesendet. Das Ereignis wird ausgelöst, wenn der Audiorenderer ein [**IAudioSessionEvents::OnGroupingParamChanged-Ereignis**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-ongroupingparamchanged) aus der Audiositzung empfängt.
 
-Um die neuen Gruppierungs Parameter abzurufen, nennen Sie [**imfaudiopolicy:: getgroupingparam**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-getgroupingparam).
+Rufen Sie ZUM Abrufen der neuen Gruppierungsparameter [**DEN AUFRUF VONAUDIOPOLICY::GetGroupingParam auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-getgroupingparam)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,23 +41,23 @@ Um die neuen Gruppierungs Parameter abzurufen, nennen Sie [**imfaudiopolicy:: ge
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[**IMF audiopolicy:: getgroupingparam**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-getgroupingparam)
+[**ORCHESTRAAudioPolicy::GetGroupingParam**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-getgroupingparam)
 </dt> <dt>
 
-[Streamingaudiorenderer](streaming-audio-renderer.md)
+[StreamingAudiorenderer](streaming-audio-renderer.md)
 </dt> </dl>
 
  

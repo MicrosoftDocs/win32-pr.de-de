@@ -1,9 +1,9 @@
 ---
 title: helpcontext-Attribut
-description: Das Attribut \ HelpContext \ gibt einen Kontext Bezeichner an, mit dem der Benutzerinformationen zu diesem Element in der Hilfedatei anzeigen kann.
+description: Das \helpcontext\-Attribut gibt einen Kontextbezeichner an, mit dem der Benutzer Informationen zu diesem Element in der Hilfedatei anzeigen kann.
 ms.assetid: 44a60c75-be69-4cd9-afb0-5eb988830e6c
 keywords:
-- HelpContext-Attribut-Mittel l
+- helpcontext attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 75a8811a73515528981a8214caba3fe2778e2ea9
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3caa5dd32257fb5d75bbf77cde4ae5e71c6e97574cd1c263ead47aacedccadc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895250"
 ---
 # <a name="helpcontext-attribute"></a>helpcontext-Attribut
 
-Das \[ **HelpContext** - \] Attribut gibt einen Kontext Bezeichner an, mit dem der Benutzerinformationen zu diesem Element in der Hilfedatei anzeigen kann.
+Das \[ **helpcontext-Attribut** gibt einen Kontextbezeichner an, mit dem der Benutzer Informationen zu diesem \] Element in der Hilfedatei anzeigen kann.
 
 ``` syntax
 [
@@ -39,53 +39,53 @@ element element-name
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige ID für die [**Bibliothek**](library.md), die \[ [**importlib**](importlib.md) \] , die [**Schnittstelle**](interface.md), die [**dispinterface**](dispinterface.md), das [**Modul**](module.md), die [**typedef**](typedef.md), die **Methoden**, die **\[ Eigenschaft \]** oder die Co- [**Klasse**](coclass.md)an.
+Gibt eine universell eindeutige ID für die Bibliothek [**,**](library.md) \[ [**importlib**](importlib.md) \] , [**interface**](interface.md), [**dispinterface**](dispinterface.md), [**module**](module.md), [**typedef**](typedef.md), **methods**, **\[ \] property** oder [**coclass an.**](coclass.md)
 
 </dd> <dt>
 
-*HelpContext-Wert* 
+*helpcontext-value* 
 </dt> <dd>
 
-Eine eindeutige ganze Zahl, die den Hilfetext identifiziert, der dem aktuellen Mittel l-Element zugeordnet ist.
+Eine eindeutige ganze Zahl, die den Hilfetext identifiziert, der dem aktuellen MIDL-Element zugeordnet ist.
 
 </dd> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
-Gibt eine Liste mit einem oder mehreren Attributen an, die auf das Mittel l-Element als Ganzes angewendet werden.
+Gibt eine Liste von Attributen an, die für das MIDL-Element als Ganzes gelten.
 
 </dd> <dt>
 
-*gewisses* 
+*Element* 
 </dt> <dd>
 
-Eine der folgenden Direktiven: [**Library**](library.md), \[ [**importlib**](importlib.md) \] , [**Interface**](interface.md), [**dispinterface**](dispinterface.md), [**Module**](module.md), [**typedef**](typedef.md), **method**, **Property** oder [**Co-Klasse**](coclass.md).
+Eine der folgenden Anweisungen: [**Bibliothek**](library.md), \[ [**importlib**](importlib.md) \] , [**Schnittstelle**](interface.md), [**Dispinterface**](dispinterface.md), [**Modul**](module.md), [**Typedef**](typedef.md), **Methode**, Eigenschaft oder [**Co-Klasse**](coclass.md). 
 
 </dd> <dt>
 
 *Elementname* 
 </dt> <dd>
 
-Der Name, den andere Softwarekomponenten verwenden können, um das aktuelle Element zu definieren.
+Der Name, mit dem andere Softwarekomponenten das aktuelle Element abgrenzen können.
 
 </dd> <dt>
 
-*definiert* 
+*Definitionen* 
 </dt> <dd>
 
-Gibt die-Anweisungen an, die die Element Definition bilden.
+Gibt Anweisungen an, die die Elementdefinition enthalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das \[ **HelpContext** - \] Attribut kann auf die folgenden Elemente angewendet werden: [**Library**](library.md), \[ [**importlib**](importlib.md) \] , [**Interface**](interface.md), [**dispinterface**](dispinterface.md), [**Module**](module.md), [**typedef**](typedef.md), **method**, **Property** oder [**Co-Klasse**](coclass.md).
+Das helpcontext-Attribut kann auf die folgenden Elemente angewendet \[  \] werden: [**Bibliothek**](library.md), \[ [**importlib**](importlib.md) \] , [**Schnittstelle**](interface.md), [**Dispinterface**](dispinterface.md), Modul [](module.md), [**Typedef**](typedef.md), **Methode**, **Eigenschaft** oder [**Co-Klasse**](coclass.md).
 
-Der *HelpContext-Wert* ist ein 32-Bit-Kontext Bezeichner in der Hilfedatei, der mit den [**GetDocumentation**](/windows/win32/api/oaidl/nf-oaidl-itypelib-getdocumentation) -Funktionen in der [**ITypeLib**](/windows/win32/api/oaidl/nn-oaidl-itypelib) -Schnittstelle und der [**ITypeInfo**](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) -Schnittstelle abgerufen werden kann.
+*Der helpcontext-value ist* ein 32-Bit-Kontextbezeichner in der Hilfedatei, der mit den [**GetDocumentation-Funktionen**](/windows/win32/api/oaidl/nf-oaidl-itypelib-getdocumentation) in den [**Schnittstellen ITypeLib**](/windows/win32/api/oaidl/nn-oaidl-itypelib) und [**ITypeInfo abgerufen werden**](/windows/win32/api/oaidl/nn-oaidl-itypeinfo) kann.
 
 ## <a name="examples"></a>Beispiele
 
@@ -110,33 +110,33 @@ coclass Hello
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
 [**importlib**](importlib.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[**Mond**](module.md)
+[**Modul**](module.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

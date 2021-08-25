@@ -1,7 +1,7 @@
 ---
 description: Ruft die Größe der Binärdaten ab. Veraltet.
 ms.assetid: 99a74043-ce87-4545-961f-dade54e77735
-title: 'Idirectxfilebinary:: GetSize-Methode (dxfile. h)'
+title: IDirectXFileBinary::GetSize-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 664e2bf026df6d9e4b5bc07067ce1ce7fe7669db
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1af59f6a32d163275df02d1469ba4777bf5c5152535c2df52fcf7d7c40218e2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846940"
 ---
-# <a name="idirectxfilebinarygetsize-method"></a>Idirectxfilebinary:: GetSize-Methode
+# <a name="idirectxfilebinarygetsize-method"></a>IDirectXFileBinary::GetSize-Methode
 
 Ruft die Größe der Binärdaten ab. Veraltet.
 
@@ -40,12 +40,12 @@ HRESULT GetSize(
 
 <dl> <dt>
 
-*pcbSize* \[ vorgenommen\]
+*layoutSize* \[ out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die zurückgegebene Größe der Binärdaten in Bytes.
+Zeiger auf die zurückgegebene Größe der Binärdaten in Bytes.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Ein Zeiger auf die zurückgegebene Größe der Binärdaten in Bytes.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert dxfileerr \_ badvalue lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert DXFILEERR \_ BADVALUE sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 <dl> <dt>
 
-[Idirectxfilebinary](idirectxfilebinary.md)
+[IDirectXFileBinary](idirectxfilebinary.md)
 </dt> </dl>
 
  

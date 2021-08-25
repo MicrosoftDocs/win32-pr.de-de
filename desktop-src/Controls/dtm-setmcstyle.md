@@ -1,9 +1,9 @@
 ---
-title: DTM_SETMCSTYLE Meldung (kommstrg. h)
-description: Legt den Stil eines Steuer Elements für die Datums-und Zeitauswahl fest. Senden Sie diese Nachricht explizit oder mithilfe des DateTime- \_ setmonthcalstyle-Makros.
+title: DTM_SETMCSTYLE Nachricht (Commctrl.h)
+description: Legt den Stil eines DTP-Steuerelements (Date and Time Picker) fest. Senden Sie diese Nachricht explizit oder mithilfe des \_ DateTime-Makros SetMonthCalStyle.
 ms.assetid: 6b480a1e-c76e-4026-ab2a-5ec53df6fa28
 keywords:
-- Windows-Steuerelemente für DTM_SETMCSTYLE Meldung
+- DTM_SETMCSTYLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3691dfbd62847bc490c3a45e1d640d19b09cca6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2805f2213bcbb1fa91a10ea80005b8b23bbc7447973bba6930bfdcb1e52a9e91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877800"
 ---
-# <a name="dtm_setmcstyle-message"></a>DTM- \_ ltmcstyle-Nachricht
+# <a name="dtm_setmcstyle-message"></a>FEHLERMELDUNG \_ SETMCSTYLE
 
-Legt den Stil eines Steuer Elements für die Datums-und Zeitauswahl fest. Senden Sie diese Nachricht explizit oder mithilfe des [**DateTime- \_ setmonthcalstyle**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setmonthcalstyle) -Makros.
+Legt den Stil eines DTP-Steuerelements (Date and Time Picker) fest. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ DateTime-Makros SetMonthCalStyle.**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_setmonthcalstyle)
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,8 +36,8 @@ Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
-</dt> <dd>Ein-Stilwert. Weitere Informationen finden Sie unter <a href="month-calendar-control-styles.md">Month Calendar Control Styles</a>.</dd> </dl>
+*lParam* \[ In\]
+</dt> <dd>Ein Stilwert. Weitere Informationen finden Sie unter <a href="month-calendar-control-styles.md">Monatskalender-Steuerelementstile.</a></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -49,9 +49,9 @@ Gibt den Wert des vorherigen Stils zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

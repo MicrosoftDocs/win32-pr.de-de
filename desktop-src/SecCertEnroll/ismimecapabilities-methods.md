@@ -1,25 +1,25 @@
 ---
-description: Die ismimefunktionalitäten-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ISmimeCapabilities-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: AA8C1904-06BC-47A4-B8AE-C90176FF0DAA
-title: Ismimemethods-Methoden
+title: ISmimeCapabilities-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14ee3362c2403ea79c7a9a7d248bc735597787f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c3c34a13a6cc9c1aeb62be86bd88a3c9c8242dbbfaa5d1607e6d1d853a011b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882540"
 ---
-# <a name="ismimecapabilities-methods"></a>Ismimemethods-Methoden
+# <a name="ismimecapabilities-methods"></a>ISmimeCapabilities-Methoden
 
-Die [**ismimefunktionalitäten**](/windows/desktop/api/CertEnroll/nn-certenroll-ismimecapabilities) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ISmimeCapabilities-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ismimecapabilities) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Add-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-add)
--   [**Addavailablesmimefunktionalitäten-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-addavailablesmimecapabilities)
--   [**Addfromcsp-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-addfromcsp)
+-   [**AddAvailableSmimeCapabilities-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-addavailablesmimecapabilities)
+-   [**AddFromCsp-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-addfromcsp)
 -   [**Clear-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-clear)
 -   [**Remove-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ismimecapabilities-remove)
 

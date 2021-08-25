@@ -1,7 +1,7 @@
 ---
-description: Mit dem Befehl "WPD \_ Command \_ Storage \_ eject" wird ein Speichermedium eingefügt, das per Remote Zugriff vom Computer entfernt werden kann.
+description: Der WPD \_ COMMAND \_ STORAGE \_ EJECT-Befehl wirft ein Speichermedium aus, das remote vom Computer ausgeworfen werden kann.
 ms.assetid: 38d4dd56-e898-4890-8328-eb2b03cdbd12
-title: WPD_COMMAND_STORAGE_EJECT Befehl (portabledevice. h)
+title: WPD_COMMAND_STORAGE_EJECT Befehl (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 3eab2c6296b957b8edf1d65f21264cb93144aeb0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2a35b376ed9688217edfde03c76aed962d3e5fb74dc3d8bb7cc927ef1f621c9b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839010"
 ---
-# <a name="wpd_command_storage_eject-command"></a>Befehl "Speicher für WPD- \_ Befehl" \_ \_
+# <a name="wpd_command_storage_eject-command"></a>\_WPD-BEFEHL \_ STORAGE \_ EJECT-Befehl
 
-Mit dem Befehl " **WPD \_ Command \_ Storage \_ eject** " wird ein Speichermedium eingefügt, das per Remote Zugriff vom Computer entfernt werden kann.
+Der **WPD \_ COMMAND STORAGE \_ \_ EJECT-Befehl** wirft ein Speichermedium aus, das remote vom Computer ausjiziert werden kann.
 
 ## <a name="command-category"></a>Befehlskategorie
 
-**WPD \_ - \_ kategoriespeicher**
+**WPD \_ CATEGORY \_ STORAGE**
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,9 +34,9 @@ Der Treiber erwartet die folgenden Parameter.
 
 
 
-| Parameter                          | VarType    | BESCHREIBUNG                                             |
+| Parameter                          | VarType    | Beschreibung                                             |
 |------------------------------------|------------|---------------------------------------------------------|
-| WPD- \_ Eigenschaften \_ Speicher Objekt- \_ \_ ID | VT \_ LPWSTR | Erforderlich. Die Objekt-ID des zu ausgelösten Speicher Objekts. |
+| \_WPD-EIGENSCHAFT \_ – \_ SPEICHEROBJEKT-ID \_ | VT \_ LPWSTR | Erforderlich. Die Objekt-ID des auswerfenden Speicherobjekts. |
 
 
 
@@ -48,10 +48,10 @@ Als Ergebnisse des Treibers werden erwartet:
 
 
 
-| Ergebnis                                         | VarType   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                            |
+| Ergebnis                                         | VarType   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ HRESULT**             | VT- \_ Fehler | Erforderlich. Ein **HRESULT** , das den Erfolg oder Fehler beim Ausführen des Befehls angibt. Wenn der Aufrufer eine ungültige Anforderung sendet, sollte der Treiber **HRESULT \_ aus Win32 zurückgeben \_ (Fehler \_ nicht \_ unterstützt)** , und es ist nicht erforderlich, andere Ergebnis Werte zurückzugeben. Fehlercodes enthalten [Fehlercodes für tragbare Windows-Geräte](error-constants.md) oder andere geeignete Fehlercodes. |
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ Treiber \_ Fehler \_ Code** | VT \_ UI4   | Dies ist optional. Ein Treiber spezifischer Fehlercode. Dies wird in der Regel nur für Treiber Tests verwendet, oder wenn der Treiber, das Gerät und der Client verbunden sind.                                                                                                                                                                                                                                |
+| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**             | \_VT-FEHLER | Erforderlich. Ein **HRESULT,** das eine erfolgreiche oder nicht erfolgreiche Durchführung des Befehls angibt. Wenn der Aufrufer eine ungültige Anforderung vorgibt, sollte der Treiber **HRESULT \_ FROM \_ WIN32 (ERROR \_ NOT \_ SUPPORTED)** zurückgeben und muss keine anderen Ergebniswerte zurückgeben. Fehlercodes umfassen [Windows Fehlercodes für](error-constants.md) portable Geräte oder andere geeignete Fehlercodes. |
+| **\_WPD-EIGENSCHAFT \_ COMMON DRIVER \_ ERROR \_ \_ CODE** | VT \_ UI4   | Optional. Ein treiberspezifischer Fehlercode. Dies wird in der Regel nur für Treibertests verwendet, oder wenn Treiber, Gerät und Client zusammen entworfen werden.                                                                                                                                                                                                                                |
 
 
 
@@ -59,7 +59,7 @@ Als Ergebnisse des Treibers werden erwartet:
 
 ## <a name="calling-methods"></a>Aufrufen von Methoden
 
-Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
+Kann nur direkt mit [**IPortableDevice::SendCommand aufgerufen werden.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,11 +67,11 @@ Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/Po
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

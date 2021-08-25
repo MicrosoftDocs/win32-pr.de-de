@@ -1,9 +1,9 @@
 ---
-title: BN_SETFOCUS Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn eine Schaltfläche den Tastaturfokus erhält. Die Schaltfläche muss den Typ "b Benachrichtigen" aufweisen \_ , um diesen Benachrichtigungs Code zu senden. Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: BN_SETFOCUS Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn eine Schaltfläche den Tastaturfokus erhält. Die Schaltfläche muss den Stil BS \_ NOTIFY haben, um diesen Benachrichtigungscode zu senden. Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: 6b8d9bde-67f9-454f-ba2c-e5c8d9ff2709
 keywords:
-- Windows-Steuerelemente für BN_SETFOCUS Benachrichtigungs
+- BN_SETFOCUS Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3eb9204f5b23b62b6cee9fb2652a16d546f6ef62
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2a10cb9b728d6f98f984ff6b70fb76c42102d8414d486cdba3db27b3ac6fbe99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827590"
 ---
-# <a name="bn_setfocus-notification-code"></a>BN- \_ SetFocus-Benachrichtigungs Code
+# <a name="bn_setfocus-notification-code"></a>BN \_ SETFOCUS-Benachrichtigungscode
 
-Wird gesendet, wenn eine Schaltfläche den Tastaturfokus erhält. Die Schaltfläche muss den Typ " [**b \_ Benachrichtigen**](button-styles.md) " aufweisen, um diesen Benachrichtigungs Code zu senden.
+Wird gesendet, wenn eine Schaltfläche den Tastaturfokus erhält. Die Schaltfläche muss den [**Stil BS \_ NOTIFY**](button-styles.md) haben, um diesen Benachrichtigungscode zu senden.
 
-Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Das übergeordnete Fenster der Schaltfläche empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -44,7 +44,7 @@ BN_SETFOCUS
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner der Schaltfläche. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Steuerelementbezeichner der Schaltfläche. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
@@ -61,9 +61,9 @@ Ein Handle für die Schaltfläche.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -71,7 +71,7 @@ Ein Handle für die Schaltfläche.
 
 <dl> <dt>
 
-[BN- \_ killfokus](bn-killfocus.md)
+[BN \_ KILLFOCUS](bn-killfocus.md)
 </dt> </dl>
 
  

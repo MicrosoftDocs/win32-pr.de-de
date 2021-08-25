@@ -1,7 +1,7 @@
 ---
-description: Konvertiert einen Gebiets Schema Namen in einen Gebiets Schema Bezeichner, der zum erhalten von Informationen aus dem Betriebssystem verwendet werden kann.
+description: Konvertiert einen Gebietsschemanamen in einen Gebietsschemabezeichner, der zum Abrufen von Informationen aus dem Betriebssystem verwendet werden kann.
 ms.assetid: dc776c41-0376-4222-bebf-86be7e4be122
-title: Downlevellocalenametolcid-Funktion (nlsdl. h)
+title: DownlevelLocaleNameToLCID-Funktion (Nlsdl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - NlsMap.dll
-ms.openlocfilehash: c41b82c59b63a5b324e15f89c1f77118d454e428
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39a0a6b274ba141553d2ddda927f71754cc9639ff5fc3a0d3870a974e46526a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119898730"
 ---
-# <a name="downlevellocalenametolcid-function"></a>Downlevellocalenametolcid-Funktion
+# <a name="downlevellocalenametolcid-function"></a>DownlevelLocaleNameToLCID-Funktion
 
-Konvertiert einen Gebiets Schema [Namen](locale-names.md) in einen Gebiets Schema [Bezeichner](locale-identifiers.md) , der zum erhalten von Informationen aus dem Betriebssystem verwendet werden kann.
+Konvertiert einen [Gebietsschemanamen](locale-names.md) in einen [Gebietsschemabezeichner,](locale-identifiers.md) der zum Abrufen von Informationen aus dem Betriebssystem verwendet werden kann.
 
 > [!Note]  
-> Diese Funktion wird nur von Anwendungen verwendet, die auf Betriebssystemen vor Windows Vista ausgeführt werden. Die Verwendung erfordert ein Downloadpaket. Anwendungen, die nur unter Windows Vista und höher ausgeführt werden, sollten [**LocaleNameToLCID**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) aufrufen, um einen Gebiets Schema Bezeichner abzurufen.
+> Diese Funktion wird nur von Anwendungen verwendet, die unter Betriebssystemen vor Windows Vista ausgeführt werden. Die Verwendung erfordert ein Downloadpaket. Anwendungen, die nur auf Windows Vista und höher ausgeführt werden, sollten [**LocaleNameToLCID**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) aufrufen, um einen Gebietsschemabezeichner abzurufen.
 
  
 
@@ -45,37 +45,37 @@ LCID DownlevelLocaleNameToLCID(
 
 <dl> <dt>
 
-*lpname* \[ in\]
+*lpName* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen Gebiets Schema [Namen](locale-names.md)darstellt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen [Gebietsschemanamen](locale-names.md)darstellt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Flags, die den Typ des Namens angeben. Der Standardwert ist der Name des Gebiets Schema \_ \_ namens.
+Flags, die den Typ des Namens angeben. Der Standardwert ist DOWNLEVEL \_ LOCALE \_ NAME.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung den Gebiets Schema Bezeichner zurück, der dem Gebiets Schema Namen entspricht.
+Gibt bei Erfolg den Gebietsschemabezeichner zurück, der dem Gebietsschemanamen entspricht.
 
-Die Funktion gibt 0 zurück, wenn Sie nicht erfolgreich ist. Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, die einen der folgenden Fehlercodes zurückgeben kann:
+Die Funktion gibt 0 zurück, wenn sie nicht erfolgreich ist. Um erweiterte Fehlerinformationen abzurufen, kann die Anwendung [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)aufrufen, wodurch einer der folgenden Fehlercodes zurückgegeben werden kann:
 
--   \_ungültige \_ Flags. Die für Flags angegebenen Werte waren ungültig.
--   Fehler \_ : Ungültiger \_ Parameter. Jeder Parameterwert war ungültig.
+-   FEHLER \_ \_ UNGÜLTIGE FLAGS. Die für Flags angegebenen Werte waren ungültig.
+-   FEHLER: \_ UNGÜLTIGER \_ PARAMETER. Jeder der Parameterwerte war ungültig.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Diese Funktion unterstützt keine neutralen Gebiets Schemas. Die entsprechende [**LocaleNameToLCID**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) -Funktion unterstützt [benutzerdefinierte](custom-locales.md)Gebiets Schemas, aber nur für Windows Vista und höher.
+> Diese Funktion unterstützt keine neutralen Gebietsschemas. Die entsprechende [**LocaleNameToLCID-Funktion**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) unterstützt [benutzerdefinierte Gebietsschemas,](custom-locales.md)jedoch nur für Windows Vista und höher.
 
  
 
-Die erforderlichen Header Dateien und dll-Dateien sind Bestandteil des Downloads "Microsoft nls-downleveldatenmapping-APIs", der im [Microsoft Download Center](https://www.microsoft.com/downloads/details.aspx?FamilyID=eb72cda0-834e-4c35-9419-ff14bc349c9d&DisplayLang=en)zur Verfügung steht.
+Die erforderliche Headerdatei und DLL sind Teil des Downloads "Downlevel Data Mapping APIs" von Microsoft NLS, der im [Microsoft Download Center](https://www.microsoft.com/downloads/details.aspx?FamilyID=eb72cda0-834e-4c35-9419-ff14bc349c9d&DisplayLang=en)verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,25 +83,25 @@ Die erforderlichen Header Dateien und dll-Dateien sind Bestandteil des Downloads
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                |
-| Verteilbare Komponente<br/>          | Microsoft nls-Downlevel-Daten Mapping-APIs onwindows XP mit SP2 und lateral Order Windows Vista<br/> |
-| Header<br/>                   | <dl> <dt>Nlsdl. h</dt> </dl>                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                |
+| Verteilbare Komponente<br/>          | Microsoft NLS Downlevel Data Mapping APIs onWindows XP with SP2 and laterorWindows Vista<br/> |
+| Header<br/>                   | <dl> <dt>Nlsdl.h</dt> </dl>                  |
 | DLL<br/>                      | <dl> <dt>NlsMap.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung für nationale Sprache](national-language-support.md)
+[Unterstützung für nationale Sprachen](national-language-support.md)
 </dt> <dt>
 
-[Funktionen zur Unterstützung der Landessprache](national-language-support-functions.md)
+[Unterstützungsfunktionen für nationale Sprachen](national-language-support-functions.md)
 </dt> <dt>
 
-[Zuordnung von Gebiets Schema Daten](mapping-locale-data.md)
+[Zuordnen von Gebietsschemadaten](mapping-locale-data.md)
 </dt> <dt>
 
 [**LocaleNameToLCID**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid)

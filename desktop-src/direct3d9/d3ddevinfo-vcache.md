@@ -1,7 +1,7 @@
 ---
-description: Vertex-Cache Optimierungs Hinweise.
+description: Vertexcache-Optimierungshinweise.
 ms.assetid: 891624cd-03dd-4ddd-93f5-4899e1470325
-title: D3DDEVINFO_VCACHE-Struktur (D3D9Types. h)
+title: D3DDEVINFO_VCACHE-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 80870c330adf185a869ac5e3543055c82fc7115c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3e065c981cc42db6adbad8cfa7a14e415712aae74942e9f3aab3ecb0b353f5ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894500"
 ---
-# <a name="d3ddevinfo_vcache-structure"></a>D3DDEVINFO \_ VCACHE-Struktur
+# <a name="d3ddevinfo_vcache-structure"></a>\_D3DDEVINFO-VCACHE-Struktur
 
-Vertex-Cache Optimierungs Hinweise.
+Vertexcache-Optimierungshinweise.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,18 +49,18 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Bitmuster. Der Rückgabewert muss "FourCC" ("c", "A", "c", "H") sein.
+Bitmuster. Der Rückgabewert muss FOURCC ('C', 'A', 'C', 'H') sein.
 
 </dd> <dt>
 
-**Optmethod**
+**OptMethod**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Optimierungsmethode. Verwenden Sie 0, um die längsten Striche zu erhalten. Verwenden Sie 1, um die Vertex-Cache Verwendung zu optimieren.
+Optimierungsmethode. Verwenden Sie 0, um die längsten Strips abzurufen. Verwenden Sie 1, um die Verwendung des Scheitelpunktcaches zu optimieren.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Cache Größe, die als Ziel für die Optimierung verwendet wird. Dies ist nur erforderlich, wenn optmethod den Wert 1 hat.
+Cachegröße, die als Ziel für die Optimierung verwendet wird. Dies ist nur erforderlich, wenn OptMethod 1 ist.
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Wird von internen Optimierungsmethoden verwendet, um zu bestimmen, wann Striche neu gestartet werden sollen. Dies kann von einem Benutzer nicht festgelegt oder geändert werden. Dies ist nur erforderlich, wenn optmethod den Wert 1 hat.
+Wird von internen Optimierungsmethoden verwendet, um zu bestimmen, wann Strips neu gestartet werden sollen. Dies kann nicht von einem Benutzer festgelegt oder geändert werden. Dies ist nur erforderlich, wenn OptMethod 1 ist.
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Wird von internen Optimierungsmethoden verwendet, um zu bestimmen, wann Striche 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 

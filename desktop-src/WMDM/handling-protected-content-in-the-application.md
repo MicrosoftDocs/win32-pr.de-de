@@ -1,45 +1,45 @@
 ---
-title: Behandeln geschützter Inhalte in der Anwendung
-description: Behandeln geschützter Inhalte in der Anwendung
+title: Behandeln von geschützten Inhalten in der Anwendung
+description: Behandeln von geschützten Inhalten in der Anwendung
 ms.assetid: b59d4abc-e59d-47a7-8d91-825ac20ae2eb
 keywords:
-- Windows Media Device Manager, Zertifikate
-- Device Manager, Zertifikate
-- Programmier Handbuch, Zertifikate
-- Desktop Anwendungen, Zertifikate
-- Erstellen von Windows Media Device Manager-Anwendungen,-Zertifikaten
+- Windows Medien Geräte-Manager,Zertifikate
+- Geräte-Manager, Zertifikate
+- Programmierhandbuch,Zertifikate
+- Desktopanwendungen, Zertifikate
+- Erstellen von Windows Media Geräte-Manager-Anwendungen,Zertifikaten
 - certificates
-- Windows Media Device Manager, DRM-geschützter Inhalt
-- Device Manager, DRM-geschützter Inhalt
-- Programmier Handbuch, DRM-geschützter Inhalt
-- Desktop Anwendungen, DRM-geschützter Inhalt
-- Erstellen von Windows Media Device Manager-Anwendungen, DRM-geschütztem Inhalt
+- Windows Medien Geräte-Manager, DRM-geschützte Inhalte
+- Geräte-Manager, DRM-geschützter Inhalt
+- Programmierhandbuch, DRM-geschützter Inhalt
+- Desktopanwendungen, DRM-geschützte Inhalte
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, DRM-geschützten Inhalten
 - DRM-geschützter Inhalt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc354e78b9c937db339f5bf6a167f504986fbb64
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d0befd0eb9fe2fecf06235b0b9424776ed25f3b1c411439cac5ecdfa71910d16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106340516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957370"
 ---
-# <a name="handling-protected-content-in-the-application"></a>Behandeln geschützter Inhalte in der Anwendung
+# <a name="handling-protected-content-in-the-application"></a>Behandeln von geschützten Inhalten in der Anwendung
 
-\[Das Windows Media DRM-Feature ist veraltet und sollte nicht verwendet werden. Verwenden Sie stattdessen [Microsoft PlayReady](/windows/uwp/audio-video-camera/playready-client-sdk) .\]
+\[Die Windows Medien-DRM-Funktion ist veraltet und sollte nicht verwendet werden. Verwenden Sie stattdessen [Microsoft PlayReady.](/windows/uwp/audio-video-camera/playready-client-sdk)\]
 
-Eine Anwendung muss über ein Übertragungs Zertifikat verfügen, um durch DRM geschützte Inhalte verarbeiten zu können. Informationen dazu, wo Sie dieses Zertifikat erhalten, finden Sie unter [Tools für die Entwicklung](tools-for-development.md). Zum Verarbeiten von ungeschütztem Inhalt können Sie ein dummyzertifikat verwenden, wie unter [Authentifizieren der Anwendung](authenticating-the-application.md)beschrieben.
+Eine Anwendung muss über ein Übertragungszertifikat verfügen, um DRM-geschützte Inhalte verarbeiten zu können. Informationen zum Abrufen dieses Zertifikats finden Sie unter [Tools for Development](tools-for-development.md). Für die Behandlung von ungeschütztem Inhalt können Sie ein Dummyzertifikat verwenden, wie unter [Authentifizieren der Anwendung](authenticating-the-application.md)beschrieben.
 
-Vor der Verwendung eines Geräts sollte Ihre Anwendung bestimmen, ob das Gerät Windows Media DRM 10 für tragbare Geräte unterstützt, und wenn ja, dass die DRM-Komponenten aktuell sind. (Aktuell bedeutet das, dass die sichere Uhr korrekt ist und dass das Gerät ordnungsgemäß individualisiert wurde.) Wenn das Gerät diese DRM-Version nicht unterstützt, oder wenn es nicht aktualisiert werden kann, können Sie weiterhin Dateien an das Gerät senden, Sie können jedoch je nach Lizenz Version möglicherweise nicht mehr verwendet werden.
+Vor der Verwendung eines Geräts sollte Ihre Anwendung bestimmen, ob das Gerät Windows Medien-DRM 10 für portable Geräte unterstützt, und wenn ja, ob die DRM-Komponenten aktuell sind. (Aktuell bedeutet, dass die sichere Uhr richtig ist und dass das Gerät ordnungsgemäß individualisiert wurde.) Wenn das Gerät diese Version von DRM nicht unterstützt oder nicht aktualisiert werden kann, können Sie weiterhin Dateien an das Gerät senden, die jedoch je nach Lizenzversion möglicherweise nicht wiedergegeben werden können.
 
 > [!Note]  
-> Die individuelle Personalisierung von Geräten wird derzeit nicht unterstützt.
+> Die Individualisierung von Geräten wird derzeit nicht unterstützt.
 
- 
+ 
 
-Wenn Ihre Anwendung mit den Windows Media-Format-SDK-Methoden verknüpft ist, muss Sie mit der Windows Media-Format Bibliothek wmstubdrm. lib verknüpft werden. Weitere Informationen zum Aufrufen von Windows Media-Methoden auf DRM-geschützten Inhalten finden Sie unter "Aktivieren der DRM-Unterstützung" in der Dokumentation zum Windows Media-Format-SDK. Beachten Sie, dass ein Problem mit dem Verknüpfen mit mssachlp. lib und wmstubdrm. lib vorliegt. Dies wird im [KB-Artikel 890079 auf MSDN](https://support.microsoft.com/default.aspx?scid=kb;en-us;890079)behandelt.
+Wenn Ihre Anwendung mit Windows Medienformat-SDK-Methoden verknüpft wird, muss sie mit der bibliothek WMStubDRM.lib Windows Medienformat verknüpft werden. Weitere Informationen zum Aufrufen Windows Medienformatmethoden für DRM-geschützte Inhalte finden Sie in der Dokumentation zum Windows Media Format SDK unter "Enabling DRM Support" (Aktivieren der DRM-Unterstützung). Beachten Sie, dass beim Verknüpfen mit Mssachlp.lib und WMStubDRM.lib ein Problem auftritt. Dies wird im [KB-Artikel 890079 auf MSDN](https://support.microsoft.com/default.aspx?scid=kb;en-us;890079)behandelt.
 
-Im folgenden C++-Codebeispiel wird festgelegt, ob ein Gerät ein Windows Media DRM 10-Gerät ist, und wenn dies der Fall ist, ist die Uhr auf dem neuesten Stand.
+Im folgenden C++-Codebeispiel wird bestimmt, ob es sich bei einem Gerät um ein Windows Media DRM 10-Gerät handelt und, falls ja, ob die Uhr auf dem neuesten Stand ist.
 
 `HRESULT IsDRMClockUpToDate()`
 
@@ -75,9 +75,9 @@ Im folgenden C++-Codebeispiel wird festgelegt, ob ein Gerät ein Windows Media D
 
 
 
-Wenn das Gerät Windows Media DRM 10 für tragbare Geräte unterstützt und aktualisiert werden muss (das heißt, wenn der Wert des *Status* im vorherigen Beispiel nicht einfach WMDM- \_ Gerät \_ iswmdrm ist), sollte die Anwendung [**iwmdrmdeviceapp:: acquiredevicedata**](iwmdrmdeviceapp-acquiredevicedata.md) aufrufen und den Wert von *Status* übergeben, um die erforderlichen Updates auszuführen. Der Desktop Computer muss mit dem Internet verbunden sein.
+Wenn das Gerät Windows Medien-DRM 10 für portable Geräte unterstützt und aktualisiert werden muss (d. h. wenn der *Statuswert* im vorherigen Beispiel nicht einfach WMDM \_ DEVICE \_ ISWMDRM lautet), sollte die Anwendung [**IWMDRMDeviceApp::AcquireDeviceData**](iwmdrmdeviceapp-acquiredevicedata.md) aufrufen und den Wert des *Status* übergeben, um die erforderlichen Updates auszuführen. Der Desktopcomputer muss mit dem Internet verbunden sein.
 
-Die folgende C++-Beispiel Funktion versucht, ein DRM-Gerät zu aktualisieren.
+Die folgende C++-Beispielfunktion versucht, ein DRM-Gerät zu aktualisieren.
 
 
 ```C++
@@ -99,12 +99,12 @@ HRESULT UpdateDRM(DWORD status)
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Device Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> <dt>
 
-[**Behandeln geschützter Inhalte**](handling-protected-content.md)
+[**Behandeln von geschützten Inhalten**](handling-protected-content.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

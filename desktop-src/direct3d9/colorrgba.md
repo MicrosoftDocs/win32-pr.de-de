@@ -1,19 +1,19 @@
 ---
-description: Definiert ein Color-Objekt mit einer Alpha Komponente. Diese wird für die Vordergrundfarbe in der Material Template-Definition verwendet.
+description: Definiert ein Farbobjekt mit einer Alphakomponente. Dies wird für die Gesichtsfarbe in der Materialvorlagendefinition verwendet.
 ms.assetid: a79d359d-242e-4ce1-be94-2912939ba3b0
-title: Colorrgba
+title: ColorRGBA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d0cef90e6626e8a67e60628b06ff5f5045cc9c5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b4ca848909058803776baf7fee9f819d359baf3ff002233714e0b585b85ea64e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850540"
 ---
-# <a name="colorrgba"></a>Colorrgba
+# <a name="colorrgba"></a>ColorRGBA
 
-Definiert ein Color-Objekt mit einer Alpha Komponente. Diese wird für die Vordergrundfarbe in der Material Template-Definition verwendet.
+Definiert ein Farbobjekt mit einer Alphakomponente. Dies wird für die Gesichtsfarbe in der Materialvorlagendefinition verwendet.
 
 ``` syntax
 template ColorRGBA
@@ -26,7 +26,7 @@ template ColorRGBA
 } 
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

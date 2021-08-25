@@ -1,19 +1,19 @@
 ---
-description: Definiert normale für ein Mesh.
+description: Definiert Normals für ein Gitternetz.
 ms.assetid: 05f17128-dfc9-4a78-b23c-0420a1c3d1bd
-title: Meshnormals
+title: MeshNormals
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65b9e0ffc89af5a0a55ef7bd1fa2575a4943137e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 02a261dd8dbd46cf26116657b983eca4f693603869a80bf2fb110c0f165221ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846460"
 ---
-# <a name="meshnormals"></a>Meshnormals
+# <a name="meshnormals"></a>MeshNormals
 
-Definiert normale für ein Mesh. Das erste Array von Vektoren stellt die normalen Vektoren selbst dar, und das zweite Array ist ein Array von Indizes, das angibt, welche normale auf eine bestimmte Fläche angewendet werden sollen. Der Wert des nfakenormals-Members sollte gleich der Anzahl der Gesichter in einem Mesh sein.
+Definiert Normals für ein Gitternetz. Das erste Array von Vektoren sind die normalen Vektoren selbst, und das zweite Array ist ein Array von Indizes, die angeben, welche Normalwerte auf ein bestimmtes Gesicht angewendet werden sollen. Der Wert des nFaceNormals-Members sollte der Anzahl der Gesichter in einem Gitternetz entspricht.
 
 ``` syntax
 template MeshNormals
@@ -28,12 +28,12 @@ template MeshNormals
 
 Hierbei gilt:
 
--   nnormals-Anzahl der Normals.
--   Array Vektor normale \[ nnormals \] -Array von normale. Siehe [**Vektor**](vector.md).
--   nfakenormals-Anzahl der Gesichts normale.
--   Array meshface fakenormals \[ nfakenormals \] -Array von Netz Gesicht normalen. Siehe [**meshface**](meshface.md).
+-   nNormale: Anzahl der Normalzahlen.
+-   array Vector normals \[ nNormals \] : Array von Normals. Siehe [**Vektor**](vector.md).
+-   nFaceNormals: Anzahl der Gesichtsnormale.
+-   Array MeshFace faceNormals \[ nFaceNormals \] – Array von Gitternetz-Gesichtsnormalen. Weitere Informationen [**finden Sie unter MeshFace**](meshface.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-title: D3DX12SerializeVersionedRootSignature-Funktion (D3dx12. h)
-description: Unterstützt die Aktivierung von root Signature 1,1-Features, wenn diese verfügbar sind. es ist nicht erforderlich, zwei Codepfade zum Aufbauen von Stamm Signaturen zu verwalten. Diese Hilfsmethode rekonstruiert eine Stamm Signatur der Version 1,0, wenn Version 1,1 nicht unterstützt wird.
+title: D3DX12SerializeVersionedRootSignature-Funktion (D3dx12.h)
+description: Unterstützt die Aktivierung von Stammsignatur 1.1-Features, wenn diese verfügbar sind, und erfordert keine Verwaltung von zwei Codepfaden zum Erstellen von Stammsignaturen. Diese Hilfsmethode rekonstruiert eine Stammsignatur der Version 1.0, wenn Version 1.1 nicht unterstützt wird.
 ms.assetid: 0F6BA6C1-9A33-4E99-BF34-4A0358E7427D
 keywords:
 - D3DX12SerializeVersionedRootSignature-Funktion
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 70a9d0424f7f7a7f89edde18273c5d1fa22fae28
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3f69e3bf66bcbad61e3d9bf676038f27511f756d7a3a473be2c513553862eb90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851154"
 ---
 # <a name="d3dx12serializeversionedrootsignature-function"></a>D3DX12SerializeVersionedRootSignature-Funktion
 
-Unterstützt die Aktivierung von root Signature 1,1-Features, wenn diese verfügbar sind. es ist nicht erforderlich, zwei Codepfade zum Aufbauen von Stamm Signaturen zu verwalten. Diese Hilfsmethode rekonstruiert eine Stamm Signatur der Version 1,0, wenn Version 1,1 nicht unterstützt wird.
+Unterstützt die Aktivierung von Stammsignatur 1.1-Features, wenn diese verfügbar sind, und erfordert keine Verwaltung von zwei Codepfaden zum Erstellen von Stammsignaturen. Diese Hilfsmethode rekonstruiert eine Stammsignatur der Version 1.0, wenn Version 1.1 nicht unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ HRESULT inline D3DX12SerializeVersionedRootSignature(
 
 <dl> <dt>
 
-*prootsignatueinlösen* \[ in\]
+*pRootSignatureDesc* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten D3D12 \_ versionierte Stamm \_ \_ Signatur \_ DESC \***
+Typ: **const D3D12 \_ VERSIONED \_ ROOT SIGNATURE \_ \_ DESC \***
 
-Gibt eine mit [**D3D12 \_ versionierte Stamm \_ \_ Signatur \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) an, die eine Beschreibung einer beliebigen Version einer Stamm Signatur enthält.
+Gibt einen [**D3D12 \_ VERSIONED \_ ROOT SIGNATURE \_ \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc) an, der eine Beschreibung einer beliebigen Version einer Stammsignatur enthält.
 
 </dd> <dt>
 
 *MaxVersion* 
 </dt> <dd>
 
-Type: **D3D \_ root \_ Signature \_ Version**
+Typ: **\_ D3D-STAMMSIGNATURVERSION \_ \_**
 
-Gibt die maximal unterstützte D3D-Stamm [**\_ \_ Signatur \_ Version**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)an.
-
-</dd> <dt>
-
-*ppBlob* \[ vorgenommen\]
-</dt> <dd>
-
-Typ: **ID3DBlob \* \***
-
-Ein Zeiger auf einen Speicherblock, der einen Zeiger auf die [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) -Schnittstelle empfängt, mit der Sie auf die serialisierte Stamm Signatur zugreifen können.
+Gibt die maximal unterstützte [**D3D-STAMMSIGNATURVERSION \_ \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d_root_signature_version)an.
 
 </dd> <dt>
 
-*pperrorblob* \[ Out, optional\]
+*ppBlob* \[ out\]
 </dt> <dd>
 
-Typ: **ID3DBlob \* \***
+Typ: **\* \* ID3DBlob**
 
-Ein Zeiger auf einen Speicherblock, der einen Zeiger auf die [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) -Schnittstelle empfängt, die Sie verwenden können, um auf Fehlermeldungen des Serialisierungsprogramms zuzugreifen, oder **null** , wenn keine Fehler vorliegen.
+Ein Zeiger auf einen Speicherblock, der einen Zeiger auf die [**ID3DBlob-Schnittstelle**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) empfängt, mit der Sie auf die serialisierte Stammsignatur zugreifen können.
+
+</dd> <dt>
+
+*ppErrorBlob* \[ out, optional\]
+</dt> <dd>
+
+Typ: **\* \* ID3DBlob**
+
+Ein Zeiger auf einen Speicherblock, der einen Zeiger auf die [**ID3DBlob-Schnittstelle**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) empfängt, die Sie für den Zugriff auf Serialisierungsfehlermeldungen verwenden können, oder **NULL,** wenn keine Fehler vorliegen.
 
 </dd> </dl>
 
@@ -84,11 +84,11 @@ Ein Zeiger auf einen Speicherblock, der einen Zeiger auf die [**ID3DBlob**](/pre
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt bei Erfolg **S \_ OK** zurück; andernfalls wird einer der [Rückgabe Codes Direct3D 12 zurückgegeben](d3d12-graphics-reference-returnvalues.md).
+Gibt **S \_ OK** zurück, wenn erfolgreich. Andernfalls wird einer der [Direct3D 12-Rückgabecodes zurückgegeben.](d3d12-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wurde im Zusammenhang mit dem Windows 10 Anniversary Update (14393) veröffentlicht. Um Windows 10-Versionen zu unterstützen, muss für die Verwendung dieser Funktion d3d12. lib für das *verzögerte Laden* eingerichtet werden.
+Diese Funktion wurde zusammen mit dem Windows 10 Anniversary Update (14393) veröffentlicht. Um Windows 10 Versionen vor diesem zu unterstützen, erfordert die Verwendung dieser Funktion, dass d3d12.lib für *das verzögerte Laden* von eingerichtet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,13 +96,13 @@ Diese Funktion wurde im Zusammenhang mit dem Windows 10 Anniversary Update (1439
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

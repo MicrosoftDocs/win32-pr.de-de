@@ -1,33 +1,33 @@
 ---
-description: Die folgenden Funktionen beziehen sich auf Medientyp-Objekte.
+description: Die folgenden Funktionen beziehen sich auf Medientypobjekte.
 ms.assetid: 7d4f3581-8cb9-4d31-b2f7-c8fbde24cf2a
-title: Medientyp-Hilfsfunktionen
+title: Hilfsfunktionen für Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7e5edb9748bad8ee16903eb9ff1ada50c1c043b
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: b488eb706338926aaffd3c3c4e13a5da4d1d004bd21dbbd1f5871c6d4818dae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104530530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827360"
 ---
-# <a name="media-type-helper-functions"></a>Medientyp-Hilfsfunktionen
+# <a name="media-type-helper-functions"></a>Hilfsfunktionen für Medientypen
 
-Die folgenden Funktionen beziehen sich auf Medientyp-Objekte.
+Die folgenden Funktionen beziehen sich auf Medientypobjekte.
 
 
 
-| Funktion                                                                     | BESCHREIBUNG                                                           |
+| Funktion                                                                     | Beschreibung                                                           |
 |------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**Mfaveragetimeperframeumframerate**](/windows/desktop/api/mfapi/nf-mfapi-mfaveragetimeperframetoframerate) | Berechnet die Framerate aus der durchschnittlichen Dauer eines Video Frames. |
-| [**MF calculateimagesize**](/windows/desktop/api/mfapi/nf-mfapi-mfcalculateimagesize)                         | Ruft die Bildgröße für ein unkomprimiertes Videoformat ab.            |
-| [**Mficomparefulltopartialmediatype**](/windows/desktop/api/mfapi/nf-mfapi-mfcomparefulltopartialmediatype)   | Vergleicht einen vollständigen Medientyp mit einem partiellen Medientyp.                   |
-| [**MF | atemediatype**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatemediatype)                               | Erstellt einen leeren Medientyp.                                          |
-| [**Mfframerateesaveragetimeperframe**](/windows/desktop/api/mfapi/nf-mfapi-mfframeratetoaveragetimeperframe) | Konvertiert eine Video Frame Rate in eine Frame Dauer.                    |
-| [**Mfgetstrideforbitmapinfoheader**](/windows/desktop/api/mfapi/nf-mfapi-mfgetstrideforbitmapinfoheader)     | Ruft den minimalen Oberflächen Schritt für ein Videoformat ab.              |
-| [**Mfisformatyuv**](/windows/desktop/api/mfapi/nf-mfapi-mfisformatyuv)                                       | Fragt ab, ob ein FourCC-Code oder **D3DFORMAT** -Wert ein YUV-Format ist. |
-| [**MF validatemediatypesize**](/windows/desktop/api/mfapi/nf-mfapi-mfvalidatemediatypesize)                   | Überprüft die Größe eines Puffers für einen Videoformat Block.              |
-| [**MF wrapmediatype**](/windows/desktop/api/mfapi/nf-mfapi-mfwrapmediatype)                                   | Erstellt einen Medientyp, der einen anderen Medientyp umschließt.                   |
+| [**MFAverageTimePerFrameToFrameRate**](/windows/desktop/api/mfapi/nf-mfapi-mfaveragetimeperframetoframerate) | Berechnet die Bildfrequenz aus der durchschnittlichen Dauer eines Videoframes. |
+| [**MFCalculateImageSize**](/windows/desktop/api/mfapi/nf-mfapi-mfcalculateimagesize)                         | Ruft die Bildgröße für ein nicht komprimiertes Videoformat ab.            |
+| [**MFCompareFullToPartialMediaType**](/windows/desktop/api/mfapi/nf-mfapi-mfcomparefulltopartialmediatype)   | Vergleicht einen vollständigen Medientyp mit einem partiellen Medientyp.                   |
+| [**MFCreateMediaType**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatemediatype)                               | Erstellt einen leeren Medientyp.                                          |
+| [**MFFrameRateToAverageTimePerFrame**](/windows/desktop/api/mfapi/nf-mfapi-mfframeratetoaveragetimeperframe) | Konvertiert eine Videobildrate in eine Framedauer.                    |
+| [**MFGetStrideForBitmapInfoHeader**](/windows/desktop/api/mfapi/nf-mfapi-mfgetstrideforbitmapinfoheader)     | Ruft den minimalen Oberflächenschritt für ein Videoformat ab.              |
+| [**MFIsFormatYUV**](/windows/desktop/api/mfapi/nf-mfapi-mfisformatyuv)                                       | Fragt ab, ob ein FOURCC-Code oder **ein D3DFORMAT-Wert** ein YUV-Format ist. |
+| [**MFValidateMediaTypeSize**](/windows/desktop/api/mfapi/nf-mfapi-mfvalidatemediatypesize)                   | Überprüft die Größe eines Puffers für einen Videoformatblock.              |
+| [**MFWrapMediaType**](/windows/desktop/api/mfapi/nf-mfapi-mfwrapmediatype)                                   | Erstellt einen Medientyp, der einen anderen Medientyp umschließt.                   |
 
 
 
@@ -37,10 +37,10 @@ Die folgenden Funktionen beziehen sich auf Medientyp-Objekte.
 
 <dl> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Konvertierungen](media-type-conversions.md)
+[Medientypkonvertierungen](media-type-conversions.md)
 </dt> <dt>
 
 [Medientypen](media-types.md)

@@ -1,28 +1,28 @@
 ---
-description: In Media Foundation werden mehrere grundlegende Objekttypen definiert, die in den Media Foundation-APIs verwendet werden.
+description: Media Foundation definiert mehrere grundlegende Objekttypen, die in den Media Foundation-APIs verwendet werden.
 ms.assetid: 581340b2-9c7f-43c4-9c7b-47d76fd1c45c
-title: Media Foundation primitiver
+title: Media Foundation Primitive
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbdaaa35bcf15348cafdee84ca377cd977483a4c
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 51f169d8f23e30f840ee712ce4f675ff350010d9f1e079444f0f0cff2b6418df
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106371821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941750"
 ---
-# <a name="media-foundation-primitives"></a>Media Foundation primitiver
+# <a name="media-foundation-primitives"></a>Media Foundation Primitive
 
-In Media Foundation werden mehrere grundlegende Objekttypen definiert, die in den Media Foundation-APIs verwendet werden.
+Media Foundation definiert mehrere grundlegende Objekttypen, die in den Media Foundation-APIs verwendet werden.
 
 
 
 | Thema                                       | Beschreibung                                                                         |
 |---------------------------------------------|-------------------------------------------------------------------------------------|
-| [Attribute](attributes-and-properties.md) | Attribute und Eigenschaften sind Schlüssel-Wert-Paare, die auf einem Objekt gespeichert werden.                  |
-| [Medientypen](media-types.md)              | Ein Medientyp beschreibt das Format eines Digital Media-Streams.                        |
-| [Medien Puffer](media-buffers.md)          | Ein Medien Puffer verwaltet einen Speicherblock, sodass er von Objekten gemeinsam genutzt werden kann. |
-| [Medien Beispiele](media-samples.md)          | Ein Medien Beispiel ist ein Objekt, das eine Liste von Medien Puffern enthält.                  |
+| [Attribute](attributes-and-properties.md) | Attribute und Eigenschaften sind Schlüssel-Wert-Paare, die in einem Objekt gespeichert sind.                  |
+| [Medientypen](media-types.md)              | Ein Medientyp beschreibt das Format eines digitalen Medienstreams.                        |
+| [Medienpuffer](media-buffers.md)          | Ein Medienpuffer verwaltet einen Speicherblock, sodass er von Objekten gemeinsam genutzt werden kann. |
+| [Medienbeispiele](media-samples.md)          | Ein Medienbeispiel ist ein Objekt, das eine Liste von Medienpuffern enthält.                  |
 
 
 

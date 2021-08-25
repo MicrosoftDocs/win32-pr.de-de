@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetretrievecolumschlag-Methode.
-title: API. jetretrievecolumschlag-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetRetrieveColumns-Methode'
+title: Api.JetRetrieveColumns-Methode
 TOCTitle: 'JetRetrieveColumns method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetRetrieveColumns(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_RETRIEVECOLUMN[],System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetretrievecolumns(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d3fd4db2ce8cbcad5f74db7d4c95363aa68e9b38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be958a40b4d5617d7c972933e472d911c96d481d7d020f082c5b063281e7d879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840702"
 ---
-# <a name="apijetretrievecolumns-method"></a>API. jetretrievecolumschlag-Methode
+# <a name="apijetretrievecolumns-method"></a>Api.JetRetrieveColumns-Methode
 
-Ruft in einem einzelnen Vorgang mehrere Spaltenwerte aus dem aktuellen Datensatz ab. Ein Array von JET_RETRIEVECOLUMN Strukturen wird verwendet, um den Satz von Spaltenwerten zu beschreiben, die abgerufen werden sollen, und um Ausgabepuffer für jeden abzurufenden Spaltenwert zu beschreiben.
+Ruft mehrere Spaltenwerte aus dem aktuellen Datensatz in einem einzelnen Vorgang ab. Ein Array von JET_RETRIEVECOLUMN Strukturen wird verwendet, um den Satz der abzurufenden Spaltenwerte und ausgabepuffer für jeden abzurufenden Spaltenwert zu beschreiben.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,43 +70,43 @@ public static JET_wrn JetRetrieveColumns(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem die Daten abgerufen werden sollen.
+    Der Cursor, aus dem die Daten abgerufen werden sollen.
 
 <!-- end list -->
 
-  - Abruf Ereignisse  
-    Sorte \[\]  
+  - retrievecolumns  
+    Typ: \[\]  
     
-    Ein Array aus einem oder mehreren [JET_RETRIEVECOLUMN](./jet-retrievecolumn-class.md) -Objekten, die die abzurufenden Daten beschreiben.
+    Ein Array von [](./jet-retrievecolumn-class.md) einem oder mehreren JET_RETRIEVECOLUMN-Objekten, die die abzurufenden Daten beschreiben.
 
 <!-- end list -->
 
-  - NumColumns  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numColumns  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Anzahl der Einträge im Spalten Array.
+    Die Anzahl der Einträge im Spaltenarray.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_wrn](./jet-wrn-enumeration.md)  
-Wenn eine abgerufene Spalte aufgrund eines unzureichenden Längen Puffers abgeschnitten wird, gibt die API [buffertruncated](./jet-wrn-enumeration.md)zurück. Andere Fehler JET_wrnColumnNull werden jedoch nur im Fehler Feld des [JET_RETRIEVECOLUMN](./jet-retrievecolumn-class.md) Objekts zurückgegeben.  
+Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
+Wenn eine abgerufene Spalte aufgrund eines Puffers mit unzureichender Länge abgeschnitten wird, gibt die API [BufferTruncated zurück.](./jet-wrn-enumeration.md) Andere Fehler JET_wrnColumnNull werden jedoch nur im Fehlerfeld des [JET_RETRIEVECOLUMN-Objekts](./jet-retrievecolumn-class.md) zurückgegeben.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

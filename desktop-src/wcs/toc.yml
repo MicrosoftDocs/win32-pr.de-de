@@ -1,9 +1,9 @@
 - name: Windows Color System (WCS)
   href: windows-color-system.md
   items:
-    - name: 'Sicherheitsüberlegungen: Windows Color System'
+    - name: 'Sicherheitsüberlegungen: Windows Farbsystem'
       href: security-considerations--windows-color-system.md
-    - name: Konzepte der grundlegenden Farbverwaltung
+    - name: Grundlegende Konzepte der Farbverwaltung
       href: basic-color-management-concepts.md
       items:
         - name: Farbe in der Bildverarbeitung
@@ -39,9 +39,9 @@
     - name: 'Windows Color System: Schemas und Algorithmen'
       href: windows-color-system-schemas-and-algorithms.md
       items:
-        - name: 'Allgemeine WCS-Profiltypen Schema, Versionsverwaltung und Lokalisierungsstrategien'
+        - name: 'SCHEMA, Versions- und Lokalisierungsstrategien für allgemeine WCS-Profiltypen'
           href: windows-color-system-common-profile-types-schema--versioning-and-localization-strategies.md
-        - name: WCS-Farbdarstellung Modell Profil Schema und-Algorithmen
+        - name: WCS Color Appearance Model Profile Schema and Algorithms
           href: wcs-color-appearance-model-profile-schema-and-algorithm.md
         - name: WCS-Kalibrierungsschema
           href: wcs-calibration-schema.md
@@ -76,14 +76,14 @@
         - name: Verwenden von Farbverwaltung im Internet
           href: using-color-management-on-the-internet.md
           items:
-            - name: 'sRGB: ein Standard Farbraum'
+            - name: 'sRGB: Ein Standardfarbraum'
               href: srgb--a-standard-color-space.md
         - name: Verwenden von GDI-Funktionen mit WCS
           href: using-gdi-functions-with-wcs.md
     - name: Verweis
       href: reference.md
       items:
-        - name: Functions
+        - name: Funktionen
           href: functions.md
           items:
             - name: Grundlegende Funktionen zur Verwendung innerhalb eines Gerätekontexts
@@ -113,7 +113,7 @@
                   href: /windows/win32/api/icm/nf-icm-checkbitmapbits
                 - name: 'CheckColors '
                   href: /windows/win32/api/icm/nf-icm-checkcolors
-                - name: Checkcolorsingamut
+                - name: CheckColorsInGamut
                   href: /windows/win32/api/wingdi/nf-wingdi-checkcolorsingamut
                 - name: 'CloseColorProfile '
                   href: /windows/win32/api/icm/nf-icm-closecolorprofile
@@ -121,7 +121,7 @@
                   href: /windows/win32/api/icm/nf-icm-cmcheckcolors
                 - name: 'CMCheckColorsInGamut '
                   href: /windows/win32/api/icm/nf-icm-cmcheckcolorsingamut
-                - name: Cmcheckrgsb
+                - name: CMCheckRGBs
                   href: /windows/win32/api/icm/nf-icm-cmcheckrgbs
                 - name: 'CMConvertColorNameToIndex '
                   href: /windows/win32/api/icm/nf-icm-cmconvertcolornametoindex
@@ -137,9 +137,9 @@
                   href: /windows/win32/api/icm/nf-icm-cmcreateprofilew
                 - name: 'CMCreateTransform '
                   href: /windows/win32/api/icm/nf-icm-cmcreatetransform
-                - name: Cmkreatetransformext
+                - name: CMCreateTransformExt
                   href: /windows/win32/api/icm/nf-icm-cmcreatetransformext
-                - name: Cmkreatetransformextw
+                - name: CMCreateTransformExtW
                   href: /windows/win32/api/icm/nf-icm-cmcreatetransformextw
                 - name: 'CMCreateTransformW '
                   href: /windows/win32/api/icm/nf-icm-cmcreatetransformw
@@ -159,15 +159,15 @@
                   href: /windows/win32/api/icm/nf-icm-cmisprofilevalid
                 - name: 'CMTranslateColors '
                   href: /windows/win32/api/icm/nf-icm-cmtranslatecolors
-                - name: Cmtranslatergb
+                - name: CMTranslateRGB
                   href: /windows/win32/api/icm/nf-icm-cmtranslatergb
-                - name: Cmtranslatergsb
+                - name: 'CMTranslateRGBs '
                   href: /windows/win32/api/icm/nf-icm-cmtranslatergbs
                 - name: 'CMTranslateRGBsExt '
                   href: /windows/win32/api/icm/nf-icm-cmtranslatergbsext
-                - name: Colorcorrectpalette
+                - name: ColorCorrectPalette
                   href: /windows/win32/api/wingdi/nf-wingdi-colorcorrectpalette
-                - name: Colormatchdetarget
+                - name: ColorMatchToTarget
                   href: /windows/win32/api/wingdi/nf-wingdi-colormatchtotarget
                 - name: 'ColorProfileAddDisplayAssociation '
                   href: /windows/win32/api/wingdi/nf-icm-colorprofileadddisplayassociation
@@ -181,11 +181,11 @@
                   href: /windows/win32/api/wingdi/nf-icm-colorprofileremovedisplayassociation
                 - name: 'ColorProfileSetDisplayDefaultAssociation '
                   href: /windows/win32/api/wingdi/nf-icm-colorprofilesetdisplaydefaultassociation
-                - name: Convertcolornametoindex
+                - name: ConvertColorNameToIndex
                   href: /windows/win32/api/icm/nf-icm-convertcolornametoindex
-                - name: Convertindexycolorname
+                - name: ConvertIndexToColorName
                   href: /windows/win32/api/icm/nf-icm-convertindextocolorname
-                - name: '"Kreatecolorspace"'
+                - name: CreateColorSpace
                   href: /windows/win32/api/wingdi/nf-wingdi-createcolorspacea
                 - name: 'CreateColorTransformA '
                   href: /windows/win32/api/icm/nf-icm-createcolortransforma
@@ -199,25 +199,25 @@
                   href: /windows/win32/api/icm/nf-icm-createprofilefromlogcolorspacea
                 - name: 'CreateProfileFromLogColorSpaceW '
                   href: /windows/win32/api/icm/nf-icm-createprofilefromlogcolorspacew
-                - name: Deletecolorspace
+                - name: DeleteColorSpace
                   href: /windows/win32/api/wingdi/nf-wingdi-deletecolorspace
                 - name: 'DeleteColorTransform '
                   href: /windows/win32/api/icm/nf-icm-deletecolortransform
-                - name: Disassociatecolorprofilefromdevicea
+                - name: DisassociateColorProfileFromDeviceA
                   href: /windows/win32/api/icm/nf-icm-disassociatecolorprofilefromdevicea
-                - name: Disassociatecolorprofilefromdevicew
+                - name: DisassociateColorProfileFromDeviceW
                   href: /windows/win32/api/icm/nf-icm-disassociatecolorprofilefromdevicew
                 - name: 'EnumColorProfilesA '
                   href: /windows/win32/api/icm/nf-icm-enumcolorprofilesa
                 - name: 'EnumColorProfilesW '
                   href: /windows/win32/api/icm/nf-icm-enumcolorprofilesw
-                - name: '"Umumicmprofiles"'
+                - name: EnumICMProfiles
                   href: /windows/win32/api/wingdi/nf-wingdi-enumicmprofilesa
                 - name: 'GetCMMInfo '
                   href: /windows/win32/api/icm/nf-icm-getcmminfo
-                - name: Getcolordirector ya
+                - name: GetColorDirectoryA
                   href: /windows/win32/api/icm/nf-icm-getcolordirectorya
-                - name: Getcolordirector
+                - name: GetColorDirectoryW
                   href: /windows/win32/api/icm/nf-icm-getcolordirectoryw
                 - name: 'GetColorProfileElement '
                   href: /windows/win32/api/icm/nf-icm-getcolorprofileelement
@@ -231,11 +231,11 @@
                   href: /windows/win32/api/wingdi/nf-wingdi-getcolorspace
                 - name: 'GetCountColorProfileElements '
                   href: /windows/win32/api/icm/nf-icm-getcountcolorprofileelements
-                - name: Getde vicegammaramp
+                - name: GetDeviceGammaRamp
                   href: /windows/win32/api/wingdi/nf-wingdi-getdevicegammaramp
-                - name: Geticmprofile
+                - name: GetICMProfile
                   href: /windows/win32/api/wingdi/nf-wingdi-geticmprofilea
-                - name: Getlogcolorspace
+                - name: GetLogColorSpace
                   href: /windows/win32/api/wingdi/nf-wingdi-getlogcolorspacea
                 - name: 'GetNamedProfileInfo '
                   href: /windows/win32/api/icm/nf-icm-getnamedprofileinfo
@@ -261,9 +261,9 @@
                   href: /windows/win32/api/icm/nf-icm-opencolorprofilea
                 - name: 'OpenColorProfileW '
                   href: /windows/win32/api/icm/nf-icm-opencolorprofilew
-                - name: Registercmma
+                - name: RegisterCMMA
                   href: /windows/win32/api/icm/nf-icm-registercmma
-                - name: Registercmmw
+                - name: RegisterCMMW
                   href: /windows/win32/api/icm/nf-icm-registercmmw
                 - name: 'SelectCMM '
                   href: /windows/win32/api/icm/nf-icm-selectcmm
@@ -275,17 +275,17 @@
                   href: /windows/win32/api/icm/nf-icm-setcolorprofileelementsize
                 - name: 'SetColorProfileHeader '
                   href: /windows/win32/api/icm/nf-icm-setcolorprofileheader
-                - name: Setcolorspace
+                - name: SetColorSpace
                   href: /windows/win32/api/wingdi/nf-wingdi-setcolorspace
-                - name: Setde vicegammaramp
+                - name: SetDeviceGammaRamp
                   href: /windows/win32/api/wingdi/nf-wingdi-setdevicegammaramp
-                - name: '-Modus'
+                - name: SetICMMode
                   href: /windows/win32/api/wingdi/nf-wingdi-seticmmode
-                - name: '"Abbild profile"'
+                - name: SetICMProfile
                   href: /windows/win32/api/wingdi/nf-wingdi-seticmprofilea
-                - name: Setstandardcolorspaceprofilea
+                - name: SetStandardColorSpaceProfileA
                   href: /windows/win32/api/icm/nf-icm-setstandardcolorspaceprofilea
-                - name: Setstandardcolorspaceprofilew
+                - name: SetStandardColorSpaceProfileW
                   href: /windows/win32/api/icm/nf-icm-setstandardcolorspaceprofilew
                 - name: 'SetupColorMatchingA '
                   href: /windows/win32/api/icm/nf-icm-setupcolormatchinga
@@ -295,9 +295,9 @@
                   href: /windows/win32/api/icm/nf-icm-translatebitmapbits
                 - name: 'TranslateColors '
                   href: /windows/win32/api/icm/nf-icm-translatecolors
-                - name: Uninstallcolorprofilea
+                - name: UninstallColorProfileA
                   href: /windows/win32/api/icm/nf-icm-uninstallcolorprofilea
-                - name: Uninstallcolorprofilew
+                - name: UninstallColorProfileW
                   href: /windows/win32/api/icm/nf-icm-uninstallcolorprofilew
                 - name: 'UnregisterCMMA '
                   href: /windows/win32/api/icm/nf-icm-unregistercmma
@@ -342,7 +342,7 @@
         - name: Veraltete WCS-Funktionen
           href: obsolete-wcs-functions.md
           items:
-            - name: Updateicmregkey
+            - name: UpdateICMRegKey
               href: /windows/win32/api/wingdi/nf-wingdi-updateicmregkeya
         - name: Enumerationen
           href: enumerations.md
@@ -362,64 +362,64 @@
         - name: Schnittstellen
           href: interfaces.md
           items:
-            - name: Idevicemodelplugin
+            - name: IDeviceModelPlugIn
               href: /windows/win32/api/wcsplugin/nn-wcsplugin-idevicemodelplugin
               items:
-                - name: Farbige metrictodevicecolors
+                - name: ColorimetricToDeviceColors
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-colorimetrictodevicecolors
-                - name: Farbige metrictodevicecolorswithblack
+                - name: ColorimetricToDeviceColorsWithBlack
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-colorimetrictodevicecolorswithblack
-                - name: Devicetocolormetriccolors
+                - name: DeviceToColorimetricColors
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-devicetocolorimetriccolors
-                - name: Getgamutboundarymesh
+                - name: GetGamutBoundaryMesh
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getgamutboundarymesh
-                - name: Getgamutboundarymeschsize
+                - name: GetGamutBoundaryMeshSize
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getgamutboundarymeshsize
-                - name: Getneutralaxis
+                - name: GetNeutralAxis
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getneutralaxis
-                - name: Getneutralaxissize
+                - name: GetNeutralAxisSize
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getneutralaxissize
-                - name: Getnumchannels
+                - name: GetNumChannels
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getnumchannels
-                - name: Getprimarysamples
+                - name: GetPrimarySamples
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-getprimarysamples
                 - name: Initialisieren
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-initialize
-                - name: Settransformdevicemodelinfo
+                - name: SetTransformDeviceModelInfo
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-idevicemodelplugin-settransformdevicemodelinfo
-            - name: Igamutmapmodelplugin
+            - name: IGamutMapModelPlugIn
               href: /windows/win32/api/wcsplugin/nn-wcsplugin-igamutmapmodelplugin
               items:
                 - name: Initialisieren
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-igamutmapmodelplugin-initialize
-                - name: Sourceesdestinationdestinancecolors
+                - name: SourceToDestinationAppearanceColors
                   href: /windows/win32/api/WcsPlugIn/nf-wcsplugin-igamutmapmodelplugin-sourcetodestinationappearancecolors
         - name: Strukturen
           href: structures.md
           items:
-            - name: Blackinformation
+            - name: BlackInformation
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-blackinformation
             - name: CIEXYZ
               href: /windows/win32/api/wingdi/ns-wingdi-tagciexyz
-            - name: Ciexyztriple
+            - name: CIEXYZTRIPLE
               href: /windows/win32/api/wingdi/ns-wingdi-tagicexyztriple
             - name: 'CMYKCOLOR '
               href: /windows/win32/api/icm/ns-icm-cmykcolor
             - name: COLOR
               href: /windows/win32/api/icm/ns-icm-color
-            - name: Colormatchsetupa
+            - name: 'COLORMATCHSETUPA '
               href: /windows/win32/api/icm/ns-icm-colormatchsetupw
-            - name: Colormatchsetupw
+            - name: 'COLORMATCHSETUPW '
               href: /windows/win32/api/icm/ns-icm-colormatchsetupw
             - name: 'ENUMTYPEA '
               href: /windows/win32/api/icm/ns-icm-enumtypea
             - name: 'ENUMTYPEW '
               href: /windows/win32/api/icm/ns-icm-enumtypew
-            - name: Gamutboundarydescription
+            - name: GamutBoundaryDescription
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-gamutboundarydescription
-            - name: Gamutshell
+            - name: GamutShell
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-gamutshell
-            - name: Gamutshelldreieck
+            - name: GamutShellTringle
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-gamutshelltriangle
             - name: 'GENERIC3CHANNEL '
               href: /windows/win32/api/icm/ns-icm-generic3channel
@@ -427,21 +427,21 @@
               href: /windows/win32/api/icm/ns-icm-graycolor
             - name: 'HiFiCOLOR '
               href: /windows/win32/api/icm/ns-icm-hificolor
-            - name: Jabcolorf
+            - name: JabColorF
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-jabcolorf
-            - name: Jchcolorf
+            - name: JChColorF
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-jchcolorf
             - name: 'LabCOLOR '
               href: /windows/win32/api/icm/ns-icm-labcolor
-            - name: Logcolorspace
+            - name: LOGCOLORSPACE
               href: /windows/win32/api/wingdi/ns-wingdi-taglogcolorspacea
             - name: 'NAMEDCOLOR '
               href: /windows/win32/api/icm/ns-icm-namedcolor
             - name: 'NAMED_PROFILE_INFO '
               href: /windows/win32/api/icm/ns-icm-named_profile_info
-            - name: Primaryjabcolors
+            - name: PrimaryJabColors
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-primaryjabcolors
-            - name: Primaryxyzcolors
+            - name: PrimaryXYZColors
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-primaryxyzcolors
             - name: PROFILE
               href: /windows/win32/api/icm/ns-icm-profile
@@ -451,22 +451,22 @@
               href: /windows/win32/api/icm/ns-icm-rgbcolor
             - name: 'XYZCOLOR '
               href: /windows/win32/api/icm/ns-icm-xyzcolor
-            - name: Xyzcolorf
+            - name: XYZColorF
               href: /windows/win32/api/wcsplugin/ns-wcsplugin-xyzcolorf
             - name: 'YxyCOLOR '
               href: /windows/win32/api/icm/ns-icm-yxycolor
         - name: Makros für CMYK-Werte und -Farben
           href: macros-for-cmyk-values-and-colors.md
           items:
-            - name: CMYK
+            - name: Cmyk
               href: /windows/win32/api/wingdi/nf-wingdi-cmyk
-            - name: Getcvalue
+            - name: GetCValue
               href: /windows/win32/api/wingdi/nf-wingdi-getcvalue
-            - name: Getkvalue
+            - name: GetKValue
               href: /windows/win32/api/wingdi/nf-wingdi-getkvalue
-            - name: Getmvalue
+            - name: GetMValue
               href: /windows/win32/api/wingdi/nf-wingdi-getmvalue
-            - name: Getyvalue
+            - name: GetYValue
               href: /windows/win32/api/wingdi/nf-wingdi-getyvalue
         - name: WCS-Konstanten
           href: wcs-constants.md
@@ -479,7 +479,7 @@
               href: color-space-type-identifiers.md
             - name: Allgemeine Farbmeldungen
               href: common-color-messages.md
-            - name: Wcscm-spezifische Fehler Codes
+            - name: Spezifische Fehlercodes für WCSCM
               href: error-codes-specific-to-wcs.md
         - name: WCS-Registrierungsschlüssel
           href: wcs-registry-keys.md

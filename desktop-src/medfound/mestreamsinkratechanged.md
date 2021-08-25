@@ -1,35 +1,35 @@
 ---
-description: Wird von einer streamsenke ausgelöst, wenn sich die Rate geändert hat.
+description: Wird von einer Streamsenke ausgelöst, wenn sich die Rate geändert hat.
 ms.assetid: c61c71de-fd3c-429b-a29f-f9d2bbfcb531
-title: Mestreamsinkratechanged-Ereignis (mfobjects. h)
+title: MEStreamSinkRateChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47a26adbdb64ffd5af0896d8aebe0cef474bee9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d43a3a4cbff4464f78e71d3047e2b9ccaddfcbf38adcb5e84bab8f5ae49c5d80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827140"
 ---
-# <a name="mestreamsinkratechanged-event"></a>Mestreamsinkratechanged-Ereignis
+# <a name="mestreamsinkratechanged-event"></a>MEStreamSinkRateChanged-Ereignis
 
-Wird von einer streamsenke ausgelöst, wenn sich die Rate geändert hat.
+Wird von einer Streamsenke ausgelöst, wenn sich die Rate geändert hat.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine streamsenke Raten Änderungen unterstützt, sendet Sie dieses Ereignis, nachdem die Raten Änderung durchgeführt wurde. Das Ereignis wird einmal für jeden Aufrufe der [**imfclockstaatink:: onclockertrate**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclocksetrate) -Methode der Senke gesendet. Wenn die Raten Änderung nicht erfolgreich ist, ist der Ereignis Statuswert ein Fehlercode.
+Wenn eine Datenstromsenke Ratenänderungen unterstützt, sendet sie dieses Ereignis, nachdem die Ratenänderung abgeschlossen ist. Das -Ereignis wird einmal für jeden Aufruf der [**SINK-Methode VONClockStateSink::OnClockSetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclocksetrate) gesendet. Wenn die Ratenänderung nicht erfolgreich ist, ist der Ereignisstatuswert ein Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,20 +37,20 @@ Wenn eine streamsenke Raten Änderungen unterstützt, sendet Sie dieses Ereignis
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> </dl>
 
  

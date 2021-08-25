@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_BOX-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Box-Struktur zu ermöglichen.
+title: CD3DX12_BOX -Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ BOX-Struktur zu ermöglichen.
 ms.assetid: 7E1A352C-D664-4538-BA78-91493980559D
 keywords:
-- CD3DX12_BOX Struktur
+- CD3DX12_BOX-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.localizationpriority: low
 ms.date: 05/31/2018
-ms.openlocfilehash: c689c9bfe611651248280f7536bd91a9f4d003d4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f2aa358d8b2d772d45c6387221dd9e660a9630fbf90535ada7dcceefc3257879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851410"
 ---
-# <a name="cd3dx12_box-structure"></a>CD3DX12 \_ Box-Struktur
+# <a name="cd3dx12_box-structure"></a>CD3DX12 \_ BOX-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Box**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ BOX-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box) ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,76 +47,76 @@ struct CD3DX12_BOX  : public D3D12_BOX{
 
 <dl> <dt>
 
-**CD3DX12 \_ Box ()**
+**CD3DX12 \_ BOX()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 Box-Felds \_ .
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ BOX.
 
 </dd> <dt>
 
-**explizites CD3DX12 Box-Feld \_ (konstant D3D12 \_ Box& o)**
+**explicit CD3DX12 \_ BOX(const D3D12 \_ BOX& o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12-Felds \_ , das mit dem Inhalt einer anderen [**D3D12 \_ Box**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box) -Struktur initialisiert wird.
+Erstellt eine neue Instanz einer CD3DX12 BOX, die mit dem Inhalt einer anderen \_ [**D3D12 \_ BOX-Struktur initialisiert**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box) wird.
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Feld (Long Left, Long right)**
+**explicit CD3DX12 \_ BOX(LONG Left, LONG Right)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 Felds \_ und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz einer CD3DX12 \_ BOX und initialisiert die folgenden Parameter:
 
-Long Left
+LONG Left
 
-Long right
+LONG Right
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Feld (Long Left, Long Top, Long right, Long Bottom)**
+**explicit CD3DX12 \_ BOX(LONG Left, LONG Top, LONG Right, LONG Bottom)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 Felds \_ und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz einer CD3DX12 \_ BOX und initialisiert die folgenden Parameter:
 
-Long Left
+LONG Left
 
-Langer Anfang
+LONG Top
 
-Long right
+LONG Right
 
-Long-Bottom
+LONG Bottom
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Feld (Long Left, Long Top, Long Front, Long right, Long Bottom, Long Back)**
+**explicit CD3DX12 \_ BOX(LONG Left, LONG Top, LONG Front, LONG Right, LONG Bottom, LONG Back)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 Felds \_ und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz einer CD3DX12 \_ BOX und initialisiert die folgenden Parameter:
 
-Long Left
+LONG Left
 
-Langer Anfang
+LONG Top
 
-Lange Vorderseite
+LONG Front
 
-Long right
+LONG Right
 
-Long-Bottom
+LONG Bottom
 
-Lange wieder
+LONG Back
 
 </dd> <dt>
 
-**~ CD3DX12 \_ Box ()**
+**~CD3DX12 \_ BOX()**
 </dt> <dd>
 
-Zerstört eine Instanz einer CD3DX12 \_ Box.
+Zerstört eine Instanz einer CD3DX12 \_ BOX.
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Box& () Konstanten**
+**operator const D3D12 \_ BOX&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -126,15 +126,15 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12- \_ Feld**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box)
+[**D3D12 \_ BOX**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_box)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

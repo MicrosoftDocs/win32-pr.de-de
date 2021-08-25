@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. IsDeleted-Methode
-description: Die IsDeleted-Methode ruft einen Wert ab, der angibt, ob sich die angegebene Wiedergabeliste im Ordner "Gelöschte Elemente" befindet.
+title: PlaylistCollection.isDeleted-Methode
+description: Die isDeleted-Methode ruft einen Wert ab, der angibt, ob sich die angegebene Wiedergabeliste im Ordner für gelöschte Elemente befindet.
 ms.assetid: 5023927a-5d1a-4b61-8122-476947d537c4
 keywords:
-- IsDeleted-Methode (Windows Media Player)
-- IsDeleted-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, IsDeleted-Methode
+- isDeleted-Windows Media Player
+- isDeleted-Methode Windows Media Player , PlaylistCollection-Klasse
+- PlaylistCollection-Klasse Windows Media Player , isDeleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fed3e7e8ff41f23d0f9f741ea99f3382d20532e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a59f6ad587740911d55ae2837607c651e3f3be875bfb24f8bfa765ba415e9bc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862200"
 ---
-# <a name="playlistcollectionisdeleted-method"></a>Playlistcollection. IsDeleted-Methode
+# <a name="playlistcollectionisdeleted-method"></a>PlaylistCollection.isDeleted-Methode
 
-Die **isDeleted** -Methode ruft einen Wert ab, der angibt, ob sich die angegebene Wiedergabeliste im Ordner "Gelöschte Elemente" befindet.
+Die **isDeleted-Methode** ruft einen Wert ab, der angibt, ob sich die angegebene Wiedergabeliste im Ordner für gelöschte Elemente befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,18 +42,18 @@ bRetVal = PlaylistCollection.isDeleted(
 
 <dl> <dt>
 
-*Wiedergabeliste* \[ in\]
+*Wiedergabeliste* \[ In\]
 </dt> <dd>
 
-Das **Wiedergabe** Listen Objekt, nach dem gesucht werden soll.
+Das  Wiedergabelistenobjekt, nach dem gesucht werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **booleschen** Wert zurück.
+Diese Methode gibt einen **booleschen zurück.**
 
-**Windows Media Player 10 Mobile**: Diese Methode gibt immer **false** zurück.
+**Windows Media Player 10 Mobile:** Diese Methode gibt immer **false zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Methode gibt einen **booleschen** Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0, Windows Media Player Version 7,1 oder Windows Media Player für Windows XP. Diese Methode wird für Windows Media Player 9-Serie oder höher nicht unterstützt.<br/> |
+| Version<br/> | Windows Media Player Version 7.0, Windows Media Player Version 7.1 oder Windows Media Player für Windows XP. Diese Methode wird für die Windows Media Player 9-Serie oder höher nicht unterstützt.<br/> |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl>                                                                                                              |
 
 
@@ -70,7 +70,7 @@ Diese Methode gibt einen **booleschen** Wert zurück.
 
 <dl> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> </dl>
 
  

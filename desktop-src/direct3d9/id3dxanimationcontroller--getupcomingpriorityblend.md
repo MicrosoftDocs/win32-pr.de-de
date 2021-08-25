@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Ereignis Handle an das nächste in der nächsten Priorität angegebene Blend-Ereignis zurück, das nach einem angegebenen Ereignis geplant ist.
+description: Gibt ein Ereignishand handle für das nächste Prioritätsmischungsereignis zurück, das nach einem angegebenen Ereignis auftreten soll.
 ms.assetid: 64fa6fca-dc4a-4534-ab8e-b11b3c7ed23c
-title: 'ID3DXAnimationController:: getupcomingpriorityblend-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetUpcomingPriorityBlend-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 72f9b8854041094d43d9e8250ab61b5f59a67848
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4c58bf5e2a8736db98e0461988f984709e756d269d09c74dd673356676702ff9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849080"
 ---
-# <a name="id3dxanimationcontrollergetupcomingpriorityblend-method"></a>ID3DXAnimationController:: getupcomingpriorityblend-Methode
+# <a name="id3dxanimationcontrollergetupcomingpriorityblend-method"></a>ID3DXAnimationController::GetUpcomingPriorityBlend-Methode
 
-Gibt ein Ereignis Handle an das nächste in der nächsten Priorität angegebene Blend-Ereignis zurück, das nach einem angegebenen Ereignis geplant ist.
+Gibt ein Ereignishand handle für das nächste Prioritätsmischungsereignis zurück, das nach einem angegebenen Ereignis auftreten soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ D3DXEVENTHANDLE GetUpcomingPriorityBlend(
 
 <dl> <dt>
 
-*hevent* \[ in\]
+*hEvent* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für ein angegebenes Ereignis, nach dem nach einem folgenden Ereignis für die Prioritäts Mischung gesucht werden soll. Wenn der Wert auf **null** festgelegt ist, gibt die Methode das nächste Ereignis für die nächste geplante Priorität zurück.
+Ereignishand handle für ein angegebenes Ereignis, nach dem nach einem folgenden Prioritätsmischungsereignis gesucht werden soll. Wenn null festgelegt **ist,** gibt die Methode das nächste geplante Prioritätsmischungsereignis zurück.
 
 </dd> </dl>
 
@@ -53,14 +53,14 @@ Ereignis Handle für ein angegebenes Ereignis, nach dem nach einem folgenden Ere
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle zum nächsten geplanten Prioritäts-Blend-Ereignis. **Null** wird zurückgegeben, wenn kein neues Prioritäts-Blend-Ereignis geplant ist.
+Ereignishand handle für das nächste geplante Prioritätsmischungsereignis. **NULL** wird zurückgegeben, wenn kein neues Prioritätsmischungsereignis geplant ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann iterativ verwendet werden, um ein gewünschtes Prioritäts-Blend-Ereignis durch wiederholtes übergeben von **null** für hevent zu suchen.
+Diese Methode kann iterativ verwendet werden, um ein gewünschtes Prioritätsüberblendungsereignis zu finden, indem wiederholt **NULL** für hEvent übergeben wird.
 
 > [!Note]  
-> Iterieren Sie nicht weiter, nachdem die Methode **null** zurückgegeben hat.
+> Iterieren Sie nicht weiter, nachdem die Methode NULL zurückgegeben **hat.**
 
  
 
@@ -70,8 +70,8 @@ Diese Methode kann iterativ verwendet werden, um ein gewünschtes Prioritäts-Bl
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

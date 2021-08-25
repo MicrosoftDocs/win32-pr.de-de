@@ -1,11 +1,11 @@
 ---
-title: TaskVariables. GetContext-Methode
-description: Bei der Skripterstellung wird verwendet, um den Kontext zwischen verschiedenen Schritten und Aufgaben zu teilen, die sich in derselben Auftrags Instanz befinden.
+title: TaskVariables.GetContext-Methode
+description: Für die Skripterstellung wird verwendet, um den Kontext zwischen verschiedenen Schritten und Aufgaben in derselben Auftragsinstanz freizugeben.
 ms.assetid: c3f1245c-531b-43f4-a3e4-8cb5deedd375
 keywords:
 - GetContext-Methode Taskplaner
-- GetContext-Methode Taskplaner, taskVariables-Objekt
-- TaskVariables-Objekt Taskplaner, GetContext-Methode
+- GetContext-Methode Taskplaner , TaskVariables-Objekt
+- TaskVariables-Objekt Taskplaner , GetContext-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 897f0b160afd2276831ad5adb59a91fec9d0820d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5c98714d92aba0cffce9d6410ac575c35ec1b7b3e683b954015caebd7719d72b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974700"
 ---
-# <a name="taskvariablesgetcontext-method"></a>TaskVariables. GetContext-Methode
+# <a name="taskvariablesgetcontext-method"></a>TaskVariables.GetContext-Methode
 
-Bei der Skripterstellung wird verwendet, um den Kontext zwischen verschiedenen Schritten und Aufgaben zu teilen, die sich in derselben Auftrags Instanz befinden. Diese Methode ist nicht implementiert.
+Für die Skripterstellung wird verwendet, um den Kontext zwischen verschiedenen Schritten und Aufgaben in derselben Auftragsinstanz freizugeben. Diese Methode ist nicht implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ TaskVariables.GetContext( _
 
 <dl> <dt>
 
-*Kontext* \[ vorgenommen\]
+*Context (Kontext)* \[ out\]
 </dt> <dd>
 
-Der Kontext, der verwendet wird, um den Kontext zwischen verschiedenen Schritten und Aufgaben zu teilen, die sich in derselben Auftrags Instanz befinden.
+Der Kontext, der verwendet wird, um den Kontext zwischen verschiedenen Schritten und Aufgaben zu teilen, die sich in derselben Auftragsinstanz befinden.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

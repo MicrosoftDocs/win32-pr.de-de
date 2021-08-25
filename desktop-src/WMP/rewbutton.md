@@ -1,9 +1,9 @@
 ---
-title: Rewbutton
-description: Dies ist eine vordefinierte Schaltfläche mit den folgenden Standardwerten. | Rewbutton
+title: REWBUTTON
+description: Dies ist eine vordefinierte SCHALTFLÄCHE mit den folgenden Standardwerten. | REWBUTTON
 ms.assetid: 941ea1b3-d276-4073-b9ae-60574052f544
 keywords:
-- Windows-Media Player "rewbutton"
+- REWBUTTON-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6c94836e09b5b6a63cc45af850464787218f228a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c3020ecf13971cd6e23b9807988703a5b9d081d5124562522a5f11cbb59f3fb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901020"
 ---
-# <a name="rewbutton"></a>Rewbutton
+# <a name="rewbutton"></a>REWBUTTON
 
-Dies ist eine vordefinierte **Schaltfläche** mit den folgenden Standardwerten.
+Dies ist eine vordefinierte **SCHALTFLÄCHE** mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:player.controls.fastReverse()"
@@ -31,9 +31,9 @@ cursor="system"
 enabled="wmpenabled:player.controls.fastReverse"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieser **SCHALTFLÄCHE können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,7 +49,7 @@ Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  

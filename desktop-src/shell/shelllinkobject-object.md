@@ -1,5 +1,5 @@
 ---
-description: Verwaltet Shelllinks. Dieses Objekt macht einen Großteil der Funktionalität der IShellLink-Schnittstelle für Skriptanwendungen verfügbar.
+description: Verwaltet Shelllinks. Dieses Objekt macht einen Großen Teil der Funktionalität der IShellLink-Schnittstelle für Skriptanwendungen verfügbar.
 title: ShellLinkObject-Objekt (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,20 +13,20 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: d3c0ccf8-0f83-42f7-9d6f-1fb293da6364
-ms.openlocfilehash: 5862ae3c9b7bf1262edbc28b06f2963f2e577275
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 9908fa86b79ff230c2c6320685cd605a97c9b0747db31cc395f8f449ae2fbfa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941490"
 ---
 # <a name="shelllinkobject-object"></a>ShellLinkObject-Objekt
 
-Verwaltet Shelllinks. Dieses Objekt macht einen Großteil der Funktionalität der [**IShellLink-Schnittstelle**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka) für Skriptanwendungen verfügbar.
+Verwaltet Shelllinks. Dieses Objekt macht einen Großen Teil der Funktionalität der [**IShellLink-Schnittstelle**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ishelllinka) für Skriptanwendungen verfügbar.
 
 ## <a name="members"></a>Member
 
-Das **ShellLinkObject-Objekt** verfügt über diese Typen von Membern:
+Das **ShellLinkObject-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -60,7 +60,7 @@ Das **ShellLinkObject-Objekt** verfügt über diese Eigenschaften.
 | [**Beschreibung**](shelllinkobject-description.md)<br/>           | Lesen/Schreiben<br/> | Ruft die Beschreibung des Links ab oder legt sie fest.<br/>                                                      |
 | [**Hotkey**](shelllinkobject-hotkey.md)<br/>                     | Lesen/Schreiben<br/> | Ruft die Tastenkombination für den Link ab oder legt sie fest.<br/>                                               |
 | [**Pfad**](shelllinkobject-path.md)<br/>                         | Lesen/Schreiben<br/> | Ruft den Pfad zum Linkobjekt ab oder legt diesen fest.<br/>                                                      |
-| [**ShowCommand**](shelllinkobject-showcommand.md)<br/>           | Lesen/Schreiben<br/> | Ruft den anfänglichen Anzeigezustand (größe, minimiert oder maximiert) des Linkbefehls ab oder legt diesen fest.<br/> |
+| [**ShowCommand**](shelllinkobject-showcommand.md)<br/>           | Lesen/Schreiben<br/> | Ruft den anfänglichen Anzeigezustand (Größe, Minimiert oder Maximierung) des Linkbefehls ab oder legt diesen fest.<br/> |
 | [**WorkingDirectory**](shelllinkobject-workingdirectory.md)<br/> | Lesen/Schreiben<br/> | Ruft das im Link angegebene Arbeitsverzeichnis ab oder legt es fest.<br/>                                      |
 
 
@@ -73,8 +73,8 @@ Das **ShellLinkObject-Objekt** verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

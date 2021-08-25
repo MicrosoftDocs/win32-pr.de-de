@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_GET_USER_DATA Meldung (VFW. h)
-description: Die WM- \_ Obergrenze \_ get \_ User \_ Data Ruft einen langen \_ ptr-Datenwert ab, der einem Aufzeichnungs Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des capgetuserdata-Makros senden.
+title: WM_CAP_GET_USER_DATA-Nachricht (Vfw.h)
+description: Die \_ WM CAP \_ GET USER \_ \_ DATA-Nachricht ruft einen LONG PTR-Datenwert ab, der \_ einem Erfassungsfenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des Makros capGetUserData senden.
 ms.assetid: f7c121ba-44a1-4916-b602-c53d8332c2af
 keywords:
-- WM_CAP_GET_USER_DATA-Nachricht (Multimedia)
+- WM_CAP_GET_USER_DATA nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02951667600acba115f506a610b167b72b69ea99
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a79a513d415d166ab2715a181a6d8fc366b60480caf2982f6bbc53eadf90d96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892030"
 ---
-# <a name="wm_cap_get_user_data-message"></a>WM- \_ Cap- \_ Meldung " \_ Benutzer \_ Daten erhalten"
+# <a name="wm_cap_get_user_data-message"></a>WM \_ CAP GET USER DATA \_ \_ \_ message
 
-Die **WM- \_ Obergrenze \_ get \_ User \_ Data** Ruft einen **langen \_ ptr** -Datenwert ab, der einem Aufzeichnungs Fenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**capgetuserdata**](/windows/desktop/api/Vfw/nf-vfw-capgetuserdata) -Makros senden.
+Die **WM CAP GET USER \_ \_ \_ \_ DATA-Nachricht** ruft einen **LONG \_ PTR-Datenwert** ab, der einem Erfassungsfenster zugeordnet ist. Sie können diese Nachricht explizit oder mithilfe des [**Makros capGetUserData**](/windows/desktop/api/Vfw/nf-vfw-capgetuserdata) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert zurück, der zuvor mit [**der \_ \_ \_ Benutzer \_ Daten**](wm-cap-set-user-data.md) Meldung für die WM-Abdeckung festgelegt wurde.
+Gibt einen Wert zurück, der zuvor mithilfe der [**WM CAP SET USER \_ \_ \_ \_ DATA-Meldung**](wm-cap-set-user-data.md) gespeichert wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt einen Wert zurück, der zuvor mit [**der \_ \_ \_ Benutzer \_ Daten**](wm-c
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,10 +54,10 @@ Gibt einen Wert zurück, der zuvor mit [**der \_ \_ \_ Benutzer \_ Daten**](wm-c
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

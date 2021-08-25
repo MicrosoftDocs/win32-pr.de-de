@@ -1,177 +1,177 @@
 ---
-description: Im folgenden finden Sie die dbghelp-Funktionen.
+description: Im Folgenden finden Sie die DbgHelp-Funktionen.
 ms.assetid: 7b28f70b-2d97-4cc2-8064-dfb806f9cffa
-title: Dbghelp-Funktionen
+title: DbgHelp-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db65e46fe407b26b1a6ec9ae3cb8d5d7301d5821
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8afacd44409004034ed727920c98487a0e2e34ad03e7af4ef5a2e5e13ab5303c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912770"
 ---
-# <a name="dbghelp-functions"></a>Dbghelp-Funktionen
+# <a name="dbghelp-functions"></a>DbgHelp-Funktionen
 
-Im folgenden finden Sie die dbghelp-Funktionen.
+Im Folgenden finden Sie die DbgHelp-Funktionen.
 
 ## <a name="general"></a>Allgemein
 
-Im folgenden sind allgemeine Hilfsfunktionen aufgeführt:
+Im Folgenden finden Sie allgemeine Hilfsfunktionen:
 
 <dl>
 
-[**Enumdirtree**](/windows/desktop/api/Dbghelp/nf-dbghelp-enumdirtree)  
-[**Imagehlpapiversion**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagehlpapiversion)  
-[**Imagehlpapiversionex**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagehlpapiversionex)  
-[**Makesuredirectoriypathist vorhanden**](/windows/desktop/api/Dbghelp/nf-dbghelp-makesuredirectorypathexists)  
-[**Searchtreeforfile**](/windows/desktop/api/Dbghelp/nf-dbghelp-searchtreeforfile)  
+[**EnumDirTree**](/windows/desktop/api/Dbghelp/nf-dbghelp-enumdirtree)  
+[**ImagehlpApiVersion**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagehlpapiversion)  
+[**ImagehlpApiVersionEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagehlpapiversionex)  
+[**MakeSureDirectoryPathExists**](/windows/desktop/api/Dbghelp/nf-dbghelp-makesuredirectorypathexists)  
+[**SearchTreeForFile**](/windows/desktop/api/Dbghelp/nf-dbghelp-searchtreeforfile)  
 </dl>
 
 ## <a name="debugger"></a>Debugger
 
-Die Debugging-Dienstfunktionen sind die Funktionen, die am besten für die Verwendung durch einen Debugger oder den Debugcode in einer Anwendung geeignet sind. Diese Funktionen können gemeinsam mit den Symbol Handlerfunktionen verwendet werden, um die Verwendung zu vereinfachen.
+Die Debugdienstfunktionen sind die Funktionen, die am besten für die Verwendung durch einen Debugger oder den Debugcode in einer Anwendung geeignet sind. Diese Funktionen können zur einfacheren Verwendung zusammen mit den Symbolhandlerfunktionen verwendet werden.
 
 <dl>
 
 [**EnumerateLoadedModules64**](/windows/desktop/api/Dbghelp/nf-dbghelp-enumerateloadedmodules)  
-[**Enumerateloadedmodulesex**](/windows/desktop/api/Dbghelp/nf-dbghelp-enumerateloadedmodulesex)  
-[**Finddebuginfofile**](/windows/desktop/api/Dbghelp/nf-dbghelp-finddebuginfofile)  
-[**Finddebuginfofileex**](/windows/desktop/api/Dbghelp/nf-dbghelp-finddebuginfofileex)  
-[**Findexecutableimage**](/windows/desktop/api/Dbghelp/nf-dbghelp-findexecutableimage)  
-[**Findexecutableimageex**](/windows/desktop/api/Dbghelp/nf-dbghelp-findexecutableimageex)  
+[**EnumerateLoadedModulesEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-enumerateloadedmodulesex)  
+[**FindDebugInfoFile**](/windows/desktop/api/Dbghelp/nf-dbghelp-finddebuginfofile)  
+[**FindDebugInfoFileEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-finddebuginfofileex)  
+[**FindExecutableImage**](/windows/desktop/api/Dbghelp/nf-dbghelp-findexecutableimage)  
+[**FindExecutableImageEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-findexecutableimageex)  
 [**StackWalk64**](/windows/desktop/api/DbgHelp/nf-dbghelp-stackwalk)  
-[**Symsetpartwindow**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetparentwindow)  
-[**Undecoratesymbolname**](/windows/desktop/api/Dbghelp/nf-dbghelp-undecoratesymbolname)  
+[**SymSetParentWindow**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetparentwindow)  
+[**UnDecorateSymbolName**](/windows/desktop/api/Dbghelp/nf-dbghelp-undecoratesymbolname)  
 </dl>
 
-## <a name="image-access"></a>Bildzugriff
+## <a name="image-access"></a>Imagezugriff
 
-Die Bild Zugriffs Funktionen greifen auf die Daten in einem ausführbaren Image zu. Die-Funktionen bieten Zugriff auf hoher Ebene auf die Basis von Bildern und einen sehr spezifischen Zugriff auf die gängigsten Teile der Daten eines Bilds.
+Die Bildzugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Die Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
 
 <dl>
 
-[**Gettimestampforloadedlibrary**](/windows/desktop/api/Dbghelp/nf-dbghelp-gettimestampforloadedlibrary)  
-[**Fehler bei imagedirectoryentrytodata**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagedirectoryentrytodata)  
-[**Imagedirectoriyentry"dataex"**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagedirectoryentrytodataex)  
-[**Imagenderader**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagentheader)  
-[**Imagervatosection**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagervatosection)  
-[**Imagervatova**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagervatova)  
+[**GetTimestampForLoadedLibrary**](/windows/desktop/api/Dbghelp/nf-dbghelp-gettimestampforloadedlibrary)  
+[**ImageDirectoryEntryToData**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagedirectoryentrytodata)  
+[**ImageDirectoryEntryToDataEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagedirectoryentrytodataex)  
+[**ImageNtHeader**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagentheader)  
+[**ImageRvaToSection**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagervatosection)  
+[**ImageRvaToVa**](/windows/desktop/api/Dbghelp/nf-dbghelp-imagervatova)  
 </dl>
 
-## <a name="symbol-handler"></a>Symbol Handler
+## <a name="symbol-handler"></a>Symbolhandler
 
-Mit den Funktionen des [Symbol Handlers](symbol-handling.md) können Anwendungen einfach und portabel auf die symbolischen Debuginformationen eines Bilds zugreifen. Diese Funktionen sollten ausschließlich verwendet werden, um den Zugriff auf symbolische Informationen sicherzustellen. Dies ist erforderlich, da diese Funktionen die Anwendung vom Symbol Format isolieren.
+Die [Symbolhandlerfunktionen](symbol-handling.md) ermöglichen Anwendungen einfachen und portablen Zugriff auf die symbolischen Debuginformationen eines Bilds. Diese Funktionen sollten ausschließlich verwendet werden, um den Zugriff auf symbolische Informationen sicherzustellen. Dies ist erforderlich, da diese Funktionen die Anwendung vom Symbolformat isolieren.
 
 <dl>
 
-[**Symaddsourcestream**](/windows/desktop/api/Dbghelp/nf-dbghelp-symaddsourcestream)  
-[**Symaddsymbol**](/windows/desktop/api/Dbghelp/nf-dbghelp-symaddsymbol)  
-[**Symcleanup**](/windows/desktop/api/Dbghelp/nf-dbghelp-symcleanup)  
-[**Symdelta etesymbol**](/windows/desktop/api/Dbghelp/nf-dbghelp-symdeletesymbol)  
+[**SymAddSourceStream**](/windows/desktop/api/Dbghelp/nf-dbghelp-symaddsourcestream)  
+[**SymAddSymbol**](/windows/desktop/api/Dbghelp/nf-dbghelp-symaddsymbol)  
+[**SymCleanup**](/windows/desktop/api/Dbghelp/nf-dbghelp-symcleanup)  
+[**SymDeleteSymbol**](/windows/desktop/api/Dbghelp/nf-dbghelp-symdeletesymbol)  
 [**SymEnumerateModules64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumeratemodules)  
-[**Symenumlines**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumlines)  
-[**Symenum Processes**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumprocesses)  
-[**Symenzusourcefiles**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumsourcefiles)  
-[**Symenum SourceLines**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumsourcelines)  
-[**Symenum Symbols**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsymbols)  
-[**Symen-symbolsforaddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsymbolsforaddr)  
-[**Symenenumtypes**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumtypes)  
-[**Symenentypesbyname**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumtypesbyname)  
-[**Symfinddebuginfofile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfinddebuginfofile)  
-[**Symfindexecutableimage**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfindexecutableimage)  
-[**Symfindfileinpath**](/windows/desktop/api/DbgHelp/nf-dbghelp-symfindfileinpath)  
-[**Symfromaddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromaddr)  
-[**Symfromindex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromindex)  
-[**Symfromname**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromname)  
-[**Symfromtoken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromtoken)  
+[**SymEnumLines**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumlines)  
+[**SymEnumProcesses**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumprocesses)  
+[**SymEnumSourceFiles**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumsourcefiles)  
+[**SymEnumSourceLines**](/windows/desktop/api/DbgHelp/nf-dbghelp-symenumsourcelines)  
+[**SymEnumSymbols**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsymbols)  
+[**SymEnumSymbolsForAddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsymbolsforaddr)  
+[**SymEnumTypes**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumtypes)  
+[**SymEnumTypesByName**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumtypesbyname)  
+[**SymFindDebugInfoFile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfinddebuginfofile)  
+[**SymFindExecutableImage**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfindexecutableimage)  
+[**SymFindFileInPath**](/windows/desktop/api/DbgHelp/nf-dbghelp-symfindfileinpath)  
+[**SymFromAddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromaddr)  
+[**SymFromIndex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromindex)  
+[**SymFromName**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromname)  
+[**SymFromToken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfromtoken)  
 [**SymFunctionTableAccess64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symfunctiontableaccess)  
 [**SymGetFileLineOffsets64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetfilelineoffsets64)  
-[**Symgethomedirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgethomedirectory)  
+[**SymGetHomeDirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgethomedirectory)  
 [**SymGetLineFromAddr64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromaddr)  
 [**SymGetLineFromName64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinefromname)  
 [**SymGetLineNext64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlinenext)  
 [**SymGetLinePrev64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetlineprev)  
 [**SymGetModuleBase64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetmodulebase)  
 [**SymGetModuleInfo64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetmoduleinfo)  
-[**Symgetomaps**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetomaps)  
-[**Symgetoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetoptions)  
-[**Symgetscope**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetscope)  
-[**Symgetsearchpath**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsearchpath)  
-[**Symgetsymbolfile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymbolfile)  
-[**Symgettypeer FromName**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypefromname)  
-[**Symgettypeingefo**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypeinfo)  
-[**Symgettypeingefoex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypeinfoex)  
-[**Syminitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize)  
+[**SymGetOmaps**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetomaps)  
+[**SymGetOptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetoptions)  
+[**SymGetScope**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetscope)  
+[**SymGetSearchPath**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsearchpath)  
+[**SymGetSymbolFile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymbolfile)  
+[**SymGetTypeFromName**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypefromname)  
+[**SymGetTypeInfo**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypeinfo)  
+[**SymGetTypeInfoEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgettypeinfoex)  
+[**SymInitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize)  
 [**SymLoadModule64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmodule)  
-[**Symloadmoduleex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex)  
-[**Symmatchfilename**](/windows/desktop/api/Dbghelp/nf-dbghelp-symmatchfilename)  
-[**Symmatchstring**](/windows/desktop/api/DbgHelp/nf-dbghelp-symmatchstring)  
-[**Symnext**](/windows/desktop/api/DbgHelp/nf-dbghelp-symnext)  
-[**Symprev**](/windows/desktop/api/DbgHelp/nf-dbghelp-symprev)  
-[**Symaktumodulelist**](/windows/desktop/api/Dbghelp/nf-dbghelp-symrefreshmodulelist)  
+[**SymLoadModuleEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex)  
+[**SymMatchFileName**](/windows/desktop/api/Dbghelp/nf-dbghelp-symmatchfilename)  
+[**SymMatchString**](/windows/desktop/api/DbgHelp/nf-dbghelp-symmatchstring)  
+[**SymNext**](/windows/desktop/api/DbgHelp/nf-dbghelp-symnext)  
+[**SymPrev**](/windows/desktop/api/DbgHelp/nf-dbghelp-symprev)  
+[**SymRefreshModuleList**](/windows/desktop/api/Dbghelp/nf-dbghelp-symrefreshmodulelist)  
 [**SymRegisterCallback64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symregistercallback)  
 [**SymRegisterFunctionEntryCallback64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symregisterfunctionentrycallback)  
-[**Symsearch**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsearch)  
-[**Symsetcontext**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetcontext)  
-[**SYM-thomedirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsethomedirectory)  
-[**Symabtoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions)  
-[**Symsetscopefromaddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetscopefromaddr)  
-[**Symsetscopefromindex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetscopefromindex)  
-[**Symsetsearchpath**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetsearchpath)  
+[**SymSearch**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsearch)  
+[**SymSetContext**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetcontext)  
+[**SymSetHomeDirectory**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsethomedirectory)  
+[**SymSetOptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions)  
+[**SymSetScopeFromAddr**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetscopefromaddr)  
+[**SymSetScopeFromIndex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetscopefromindex)  
+[**SymSetSearchPath**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetsearchpath)  
 [**SymUnDName64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symundname)  
 [**SymUnloadModule64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symunloadmodule)  
 </dl>
 
-## <a name="symbol-server"></a>Symbol Server
+## <a name="symbol-server"></a>Symbolserver
 
-Der [Symbol Server](symbol-servers-and-symbol-stores.md) ermöglicht es Debuggern, die richtigen Symbol Dateien ohne Produktnamen, Releases oder Buildnummern automatisch abzurufen. Die folgenden Funktionen werden mit dem Symbol Server verwendet.
+Mit [dem Symbolserver](symbol-servers-and-symbol-stores.md) können Debugger automatisch die richtigen Symboldateien ohne Produktnamen, Releases oder Buildnummern abrufen. Die folgenden Funktionen werden mit dem Symbolserver verwendet.
 
 <dl>
 
-[**Symsrvdelta Name**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvdeltaname)  
-[**Symsrvgetfileingedexes**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetfileindexes)  
-[**Symsrvgetfileindexinfo**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsrvgetfileindexinfo)  
-[**Symsrvgetfileingedexstring**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetfileindexstring)  
-[**Symsrvgetsupplement**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetsupplement)  
-[**Symsrvisstore**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvisstore)  
-[**Symsrvstorefile**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvstorefile)  
-[**Symsrvstoresupplement**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvstoresupplement)  
+[**SymSrvDeltaName**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvdeltaname)  
+[**SymSrvGetFileIndexes**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetfileindexes)  
+[**SymSrvGetFileIndexInfo**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsrvgetfileindexinfo)  
+[**SymSrvGetFileIndexString**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetfileindexstring)  
+[**SymSrvGetSupplement**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvgetsupplement)  
+[**SymSrvIsStore**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvisstore)  
+[**SymSrvStoreFile**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvstorefile)  
+[**SymSrvStoreSupplement**](/windows/desktop/api/DbgHelp/nf-dbghelp-symsrvstoresupplement)  
 </dl>
 
-## <a name="user-mode-minidump-files"></a>Minidump-Dateien im Benutzermodus
+## <a name="user-mode-minidump-files"></a>Minidumpdateien im Benutzermodus
 
-Die Minidump-Funktionen bieten eine Möglichkeit für Anwendungen, crashdump-Dateien zu erstellen, die eine nützliche Teilmenge des gesamten Prozess Kontexts enthalten. Dies wird als [Minidumpdatei](minidump-files.md)bezeichnet. Die folgenden Funktionen werden für Minidump-Dateien verwendet.
+Die Minidumpfunktionen bieten Anwendungen die Möglichkeit, Absturzabbilddateien zu erstellen, die eine nützliche Teilmenge des gesamten Prozesskontexts enthalten. dies wird als [Minidumpdatei](minidump-files.md)bezeichnet. Die folgenden Funktionen werden mit Minidumpdateien verwendet.
 
 <dl>
 
-[**Minidumpcallback**](/windows/desktop/api/minidumpapiset/nc-minidumpapiset-minidump_callback_routine)  
-[**Minidumpreaddumpstream**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpreaddumpstream)  
+[**MiniDumpCallback**](/windows/desktop/api/minidumpapiset/nc-minidumpapiset-minidump_callback_routine)  
+[**MiniDumpReadDumpStream**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpreaddumpstream)  
 [**MiniDumpWriteDump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)  
 </dl>
 
 ## <a name="source-server"></a>Quellserver
 
-Der [Quell Server](source-server-and-source-indexing.md) ermöglicht einem Client das Abrufen der exakten Version der Quelldateien, die zum Erstellen einer Anwendung verwendet wurden. Die folgenden Funktionen werden mit dem Quell Server verwendet.
+Mit dem [Quellserver](source-server-and-source-indexing.md) kann ein Client die genaue Version der Quelldateien abrufen, die zum Erstellen einer Anwendung verwendet wurden. Die folgenden Funktionen werden mit dem Quellserver verwendet.
 
--   [**Symgetsourcefile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefile)
--   [**Symenzusourcefiletokens**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsourcefiletokens)
--   [**Symenum SourceFile-SPROC**](/windows/desktop/api/Dbghelp/nc-dbghelp-penumsourcefiletokenscallback)
--   [**Symgetsourcefilefromtoken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefilefromtoken)
--   [**Symgetsourcefiletoken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefiletoken)
--   [**Symgetsourcevarfromtoken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcevarfromtoken)
+-   [**SymGetSourceFile**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefile)
+-   [**SymEnumSourceFileTokens**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumsourcefiletokens)
+-   [**SymEnumSourceFileTokensProc**](/windows/desktop/api/Dbghelp/nc-dbghelp-penumsourcefiletokenscallback)
+-   [**SymGetSourceFileFromToken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefilefromtoken)
+-   [**SymGetSourceFileToken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcefiletoken)
+-   [**SymGetSourceVarFromToken**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsourcevarfromtoken)
 
 ## <a name="obsolete-functions"></a>Veraltete Funktionen
 
 <dl>
 
-[**Mapdebuginformation**](/windows/desktop/api/Dbghelp/nf-dbghelp-mapdebuginformation)  
+[**MapDebugInformation**](/windows/desktop/api/Dbghelp/nf-dbghelp-mapdebuginformation)  
 [**SymEnumerateSymbols64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symenumeratesymbols)  
 [**SymGetSymFromAddr64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymfromaddr)  
 [**SymGetSymFromName64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymfromname)  
 [**SymGetSymNext64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymnext)  
 [**SymGetSymPrev64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symgetsymprev)  
-[**Unmapdebuginformation**](/windows/desktop/api/Dbghelp/nf-dbghelp-unmapdebuginformation)  
+[**UnMapDebugInformation**](/windows/desktop/api/Dbghelp/nf-dbghelp-unmapdebuginformation)  
 </dl>
 
  

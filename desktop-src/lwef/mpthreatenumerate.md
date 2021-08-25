@@ -1,9 +1,9 @@
 ---
-title: Mperate Enumerate-Funktion (mpclient. h)
-description: Gibt Informationen über die nächste Bedrohung in der Enumerationsliste zurück. Diese Funktion kann wiederholt aufgerufen werden, bis die Enumeration aller Bedrohungen vollständig ist.
+title: MpThreatEnumerate-Funktion (MpClient.h)
+description: Gibt Informationen zur nächsten Bedrohung in der Enumerationsliste zurück. Diese Funktion kann wiederholt aufgerufen werden, bis die Enumeration aller Bedrohungen abgeschlossen ist.
 ms.assetid: 33244F4F-4FB7-4FA7-BC56-B9A30ABC3644
 keywords:
-- Mpenenumerate-Funktion Legacy Funktionen der Windows-Umgebung
+- MpThreatEnumerate-Funktion Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acdbb7971371015a401c1a951ace8c55869fd405
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9525ad44901bd62044721e634559e1c803b88b05e9250097d939b3a5a04d229a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943830"
 ---
-# <a name="mpthreatenumerate-function"></a>Mpbedrohlich Enumerate-Funktion
+# <a name="mpthreatenumerate-function"></a>MpThreatEnumerate-Funktion
 
-Gibt Informationen über die nächste Bedrohung in der Enumerationsliste zurück. Diese Funktion kann wiederholt aufgerufen werden, bis die Enumeration aller Bedrohungen vollständig ist.
+Gibt Informationen zur nächsten Bedrohung in der Enumerationsliste zurück. Diese Funktion kann wiederholt aufgerufen werden, bis die Enumeration aller Bedrohungen abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT WINAPI MpThreatEnumerate(
 
 <dl> <dt>
 
-*hbedrohlich-enumhandle* \[ in\]
+*hThreatEnumHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für einen Bedrohungs enumerationskontext, der von [**mpbedrohlich Open**](mpthreatopen.md)zurückgegeben wird.
+Verarbeiten Sie einen von [**MpThreatOpen zurückgegebenen**](mpthreatopen.md)Bedrohungsenumerationskontext.
 
 </dd> <dt>
 
-*ppbedrohlich Info* \[ vorgenommen\]
+*ppThreatInfo* \[ out\]
 </dt> <dd>
 
-Typ: **pmpthreat \_ Info \** _
+Typ: **PMPTHREAT \_ \* INFO**
 
-Gibt einen Zeiger auf eine Bedrohungs Informationsstruktur zurück, [_ *mpthreat \_ Info* *](mpthreat-info.md). Die Struktur enthält Informationen wie die Bedrohungs-ID, den Namen und den Schweregrad.
+Gibt einen Zeiger auf eine Bedrohungsinformationsstruktur zurück, [**MPTHREAT \_ INFO.**](mpthreat-info.md) Die Struktur enthält Informationen wie Bedrohungs-ID, Name und Schweregrad.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Gibt einen Zeiger auf eine Bedrohungs Informationsstruktur zurück, [_ *mpthreat
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert **S \_ OK.**
 
-Wenn keine weiteren Elemente vorhanden sind, die zurückgegeben werden sollen, ist der Rückgabewert **S \_ false**.
+Wenn keine Elemente mehr vorhanden sind, die zurückgegeben werden sollen, lautet der Rückgabewert **S \_ FALSE**.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,9 +75,9 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
@@ -86,13 +86,13 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpbedrohlich öffnen**](mpthreatopen.md)
+[**MpThreatOpen**](mpthreatopen.md)
 </dt> <dt>
 
-[**mpthreat- \_ Informationen**](mpthreat-info.md)
+[**\_MPTHREAT-INFORMATIONEN**](mpthreat-info.md)
 </dt> </dl>
 
  

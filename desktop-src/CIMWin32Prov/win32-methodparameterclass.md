@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Basisklasse "Win32 methodparameterclass abstract" leitet eine beliebige Klasse ab, die als Container von Parameterwerten definiert ist, die an eine Methode übergeben werden.
+description: Die abstrakte \_ WMI-Basisklasse Win32 MethodParameterClass leitet jede Klasse ab, die als Container mit Parameterwerten definiert ist, die an eine Methode übergeben werden.
 ms.assetid: 293fa378-432d-4e97-a8ab-8dc4917d5476
 ms.tgt_platform: multiple
 title: Win32_MethodParameterClass-Klasse
@@ -14,22 +14,22 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 4e791941df681b2e46c4de6f0714b1290baecfde
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 90a6477235b6046fad2767cad35fe7aaad3fa4ae7003106b619e9d8b33150d2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973028"
 ---
-# <a name="win32_methodparameterclass-class"></a>Win32 \_ methodparameterclass-Klasse
+# <a name="win32_methodparameterclass-class"></a>Win32 \_ MethodParameterClass-Klasse
 
-Die [WMI](/windows/desktop/WmiSdk/retrieving-a-class) -Basisklasse " **Win32 \_ methodparameterclass** abstract" leitet eine beliebige Klasse ab, die als Container von Parameterwerten definiert ist, die an eine Methode übergeben werden. Diese Klasse dient als Klassifizierungs Knoten und besitzt keine eigenen Eigenschaften. Ein ähnliches Beispiel ist [**CIM \_ PhysicalElement**](cim-physicalelement.md). Ableitung von **CIM \_ PhysicalElement** gibt an, dass die Klasse eine physische anstelle einer logischen Entität beschreibt. Im Fall von **Win32 \_ methodparameterclass** werden Klassen, die von dieser abgeleitet werden, speziell erstellt, um Parameter an eine Methode zu übergeben.
+Die abstrakte [WMI-Basisklasse](/windows/desktop/WmiSdk/retrieving-a-class) **Win32 \_ MethodParameterClass** leitet jede Klasse ab, die als Container mit Parameterwerten definiert ist, die an eine Methode übergeben werden. Da keine eigenen Eigenschaften vorhanden sind, dient diese Klasse als Klassifizierungsknoten. Ein ähnliches Beispiel ist [**CIM \_ PhysicalElement**](cim-physicalelement.md). Die Ableitung von **CIM \_ PhysicalElement** gibt an, dass die Klasse eine physische anstatt eine logische Entität beschreibt. Im Fall von **Win32 \_ MethodParameterClass** werden von dieser abgeleitete Klassen speziell erstellt, um Parameter an eine Methode zu übergeben.
 
 ## <a name="syntax"></a>Syntax
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ methodparameterclass** -Klasse definiert keine Member.
+Die **Klasse Win32 \_ MethodParameterClass** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,17 +39,17 @@ Die **Win32 \_ methodparameterclass** -Klasse definiert keine Member.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[WMI-Dienst Verwaltungs Klassen](/windows/desktop/CIMWin32Prov/wmi-service-management-classes)
+[WMI-Dienstverwaltungsklassen](/windows/desktop/CIMWin32Prov/wmi-service-management-classes)
 </dt> </dl>
 
  

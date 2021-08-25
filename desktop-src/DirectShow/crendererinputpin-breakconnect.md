@@ -1,7 +1,7 @@
 ---
-description: 'Die breakconnect-Methode gibt die PIN von einer Verbindung frei. Diese Methode überschreibt die cbasinput PIN:: breakconnect-Methode.'
+description: Die BreakConnect-Methode gibt den Pin von einer Verbindung frei. Diese Methode überschreibt die CBaseInputPin::BreakConnect-Methode.
 ms.assetid: 47bfd666-4ef2-4978-a4f8-a83647dd782d
-title: Crendererinputpin. breakconnect-Methode (renbase. h)
+title: CRendererInputPin.BreakConnect-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2df44a190d2cc127da390556e52f3f960b07d57b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 15326b2ad7b09ec46ec6d8cc77d59107baa211ce2ba1a71eaf5f65fea5ff2382
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908500"
 ---
-# <a name="crendererinputpinbreakconnect-method"></a>Crendererinputpin. breakconnect-Methode
+# <a name="crendererinputpinbreakconnect-method"></a>CRendererInputPin.BreakConnect-Methode
 
-Die **breakconnect** -Methode gibt die PIN von einer Verbindung frei. Diese Methode überschreibt die [**cbasinput PIN:: breakconnect**](cbaseinputpin-breakconnect.md) -Methode.
+Die **BreakConnect-Methode** gibt den Pin von einer Verbindung frei. Diese Methode überschreibt die [**CBaseInputPin::BreakConnect-Methode.**](cbaseinputpin-breakconnect.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Crendererinputpin-Klasse**](crendererinputpin.md)
+[**CRendererInputPin-Klasse**](crendererinputpin.md)
 </dt> </dl>
 
  

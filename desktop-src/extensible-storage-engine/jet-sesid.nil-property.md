@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SESID. Nil-Eigenschaft'
+description: 'Erfahren Sie mehr über: JET_SESID. Nil-Eigenschaft'
 title: JET_SESID. Nil-Eigenschaft
 TOCTitle: 'Nil property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_SESID.Nil
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b381e902e88ec9a065c83e0f89a87a8e8ab46c4f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50b6b81aeaab2edc24a4277ec4818b48988760005d04ba7007035d6a2947dd73
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119945290"
 ---
 # <a name="jet_sesidnil-property"></a>JET_SESID. Nil-Eigenschaft
 
-Ruft eine NULL-JET_SESID ab.
+Ruft einen NULL-JET_SESID ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ public static JET_SESID Nil { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_SESID Struktur](./jet-sesid-structure.md)
+[JET_SESID-Struktur](./jet-sesid-structure.md)
 
-[Mitglieder JET_SESID](./jet-sesid-members.md)
+[JET_SESID-Member](./jet-sesid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

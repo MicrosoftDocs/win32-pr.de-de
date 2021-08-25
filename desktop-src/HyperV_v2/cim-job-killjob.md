@@ -1,7 +1,7 @@
 ---
-description: Eine Methode, um diesen Auftrag und alle zugrunde liegenden Prozesse zu beenden und um alle verbleibenden Zuordnungen zu entfernen. Diese Methode ist veraltet. Verwenden Sie stattdessen requestchangestate.
+description: Eine Methode, um diesen Auftrag und alle zugrunde liegenden Prozesse zu löschen und alle verfingenden Zuordnungen zu entfernen. Diese Methode ist veraltet. Verwenden Sie stattdessen RequestChangeState.
 ms.assetid: b116631f-34b8-43ed-9c17-062b5e6058d0
-title: Killjob-Methode der CIM_Job-Klasse
+title: KillJob-Methode der CIM_Job Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 967e5e8510d4456a085f393291f8c41afb5be446
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 681d6a878f90f29708812fce2c39f27024ed588deb5f3b8066cc4833487fd91f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900330"
 ---
-# <a name="killjob-method-of-the-cim_job-class"></a>Killjob-Methode der CIM- \_ Auftrags Klasse
+# <a name="killjob-method-of-the-cim_job-class"></a>KillJob-Methode der CIM \_ Job-Klasse
 
-Eine Methode, um diesen Auftrag und alle zugrunde liegenden Prozesse zu beenden und alle "verbleibenden" Zuordnungen zu entfernen. Diese Methode ist veraltet. Verwenden Sie stattdessen **requestchangestate** . " **Killjob** " ist veraltet, da zwischen einem ordnungsgemäßen Herunterfahren und einem sofortigen Abbruch kein Unterschied besteht. [**CIM \_ "Concretejob**](cim-concretejob.md)". **RequestStateChange**() stellt die Optionen "beenden" und "Kill" bereit, um diesen Unterschied zuzulassen.
+Eine Methode, um diesen Auftrag und alle zugrunde liegenden Prozesse zu löschen und alle "vergenden" Zuordnungen zu entfernen. Diese Methode ist veraltet. Verwenden **Sie stattdessen RequestChangeState.** **KillJob** ist veraltet, da kein Unterschied zwischen einem geordneten Herunterfahren und einem sofortigen Beenden besteht. [**CIM \_ ConcreteJob**](cim-concretejob.md). **RequestStateChange**() stellt die Optionen "Terminate" und "Kill" zur Verfügung, um diese Unterscheidung zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ uint32 KillJob(
 
 <dl> <dt>
 
-*Deleteonkill* \[ in\]
+*DeleteOnKill* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Auftrag bei Beendigung automatisch gelöscht werden soll. Dieser Parameter hat Vorrang vor der **deleteoncompletion** -Eigenschaft.
+Gibt an, ob der Auftrag bei Beendigung automatisch gelöscht werden soll. Dieser Parameter hat Vorrang vor der **DeleteOnCompletion-Eigenschaft.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -64,7 +64,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Timeout** (3)
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Zugriff verweigert** (6)
@@ -73,13 +73,13 @@ Fehler **(4** )
 **Nicht gefunden** (7)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -88,7 +88,7 @@ Fehler **(4** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -97,7 +97,7 @@ Fehler **(4** )
 
 <dl> <dt>
 
-[**CIM- \_ Auftrag**](cim-job.md)
+[**\_CIM-Auftrag**](cim-job.md)
 </dt> </dl>
 
  

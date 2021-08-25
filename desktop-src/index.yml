@@ -1,19 +1,19 @@
 ### YamlMime:Landing
-title: Erstellen von Windows-Desktop-Apps mit der Win32-API
-summary: Erfahren Sie, wie Sie Desktop-Apps für Windows-PCs mithilfe von C++ und der Win32-API erstellen.
+title: Erstellen von Desktop Windows-Apps mithilfe der Win32-API
+summary: Erfahren Sie, wie Sie Desktop-Apps für Windows PCs mit C++ und der Win32-API erstellen.
 metadata:
   author: mcleanbyron
-  description: Erfahren Sie, wie Sie Desktop-Apps für Windows-PCs mithilfe von C++ und der Win32-API erstellen.
+  description: Erfahren Sie, wie Sie Desktop-Apps für Windows PCs mit C++ und der Win32-API erstellen.
   manager: jken
   ms.author: mcleans
   ms.date: 09/15/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 99090d109a717c1008a11e6a9c9e6cf7a31f2b7c
-  ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+  ms.openlocfilehash: cc2d2b66adddba0b164f5f3eccae1e076fd91d451d9857ba901ec4a81ac6e9f0
+  ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/19/2020
-  ms.locfileid: "104038828"
+  ms.lasthandoff: 08/11/2021
+  ms.locfileid: "119848950"
 landingContent:
 - title: Erste Schritte
   linkLists:
@@ -23,27 +23,27 @@ landingContent:
       url: /windows/desktop/desktop-programming
   - linkListType: tutorial
     links:
-    - text: Erstellen Sie Ihre erste APP mit Win32 und C++
+    - text: Erstellen Ihrer ersten App mit Win32 und C++
       url: ./learnwin32/learn-to-program-for-windows.md
   - linkListType: download
     links:
     - text: Entwicklungstools
       url: https://developer.microsoft.com/windows/downloads
-    - text: Windows-Codebeispiele
+    - text: Windows Codebeispiele
       url: https://developer.microsoft.com/windows/samples
 - title: Entwickeln
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows-Features und-Technologien
+    - text: Windows Features und Technologien
       url: desktop-app-technologies.md
     - text: Modernisieren von Apps für Windows 10
       url: /windows/apps/desktop/modernize
   - linkListType: reference
     links:
-    - text: Win32-API-Referenz nach Funktion
+    - text: Win32-API-Referenz nach Feature
       url: ./apiindex/windows-api-list.md
-    - text: Win32-API-Verweis per Header
+    - text: Win32-API-Referenz nach Header
       url: /windows/win32/api/
 - title: Ressourcen und Community
   linkLists:
@@ -67,7 +67,7 @@ landingContent:
   linkLists:
   - linkListType: overview
     links:
-    - text: Wählen Sie Ihre Desktop Plattform aus
+    - text: Auswählen Ihrer Desktopplattform
       url: /windows/apps/desktop/choose-your-platform
     - text: C++/WinRT
       url: /windows/uwp/cpp-and-winrt-apis/

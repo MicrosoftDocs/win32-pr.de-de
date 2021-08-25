@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_SETREPEAT Meldung (VFW. h)
-description: Die mciwndm \_ SetRepeat-Nachricht legt das wiederholungsflag fest, das der kontinuierlichen Wiedergabe zugeordnet ist.
+title: MCIWNDM_SETREPEAT (Vfw.h)
+description: Die MCIWNDM SETREPEAT-Meldung legt das Wiederholungsflag fest, \_ das der kontinuierlichen Wiedergabe zugeordnet ist.
 ms.assetid: 9a8da201-9ce8-4b6c-8b76-cd9e1356c75d
 keywords:
-- MCIWNDM_SETREPEAT-Nachricht (Multimedia)
+- MCIWNDM_SETREPEAT-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aeae2ac3cb57f8ddbb2343ee3f42d30fa8def370
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 158e0b52f01431886fd8a70e89efadfdd7335258c0808cdb6780bf06071e3280
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807590"
 ---
-# <a name="mciwndm_setrepeat-message"></a>Mciwndm- \_ Nachricht
+# <a name="mciwndm_setrepeat-message"></a>MCIWNDM \_ SETREPEAT-Meldung
 
-Die **mciwndm \_ SetRepeat** -Nachricht legt das wiederholungsflag fest, das der kontinuierlichen Wiedergabe zugeordnet ist. Die **mciwndm \_** -Nachricht "" wird zusammen mit dem Befehl " [MCI \_ Play](mci-play.md) " verwendet, um eine fortlaufende Wiedergabe Schleife bereitzustellen. Sie können diese Nachricht explizit oder mit dem [**mciwndltrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat) -Makro senden.
+Die **MCIWNDM \_ SETREPEAT-Meldung** legt das Wiederholungsflag fest, das der kontinuierlichen Wiedergabe zugeordnet ist. Die **MCIWNDM \_ SETREPEAT-Nachricht** funktioniert in Verbindung mit dem [MCI \_ PLAY-Befehl,](mci-play.md) um eine kontinuierliche Wiedergabeschleife zu ermöglichen. Sie können diese Nachricht explizit oder mithilfe des [**Makros MCIWndSetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat) senden.
 
 
 ```C++
@@ -38,10 +38,10 @@ lParam = (LPARAM) (BOOL) f;
 
 <dl> <dt>
 
-<span id="f"></span><span id="F"></span>*c*
+<span id="f"></span><span id="F"></span>*F*
 </dt> <dd>
 
-Neuer Zustand des Wiederholungs Flags. Geben Sie **true** an, um die kontinuierliche Wiedergabe zu aktivieren
+Neuer Zustand des Wiederholungsflags. Geben Sie **TRUE an,** um die fortlaufende Wiedergabe zu aktivieren.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Neuer Zustand des Wiederholungs Flags. Geben Sie **true** an, um die kontinuierl
 
 Gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Derzeit ist MCIAVI das einzige Gerät, das die fortlaufende Wiedergabe unterstützt.
+Derzeit ist MCIAVI das einzige Gerät, das fortlaufende Wiedergabe unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Derzeit ist MCIAVI das einzige Gerät, das die fortlaufende Wiedergabe unterstü
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -69,10 +69,10 @@ Derzeit ist MCIAVI das einzige Gerät, das die fortlaufende Wiedergabe unterstü
 
 <dl> <dt>
 
-[MCI- \_ Play](mci-play.md)
+[MCI \_ PLAY](mci-play.md)
 </dt> <dt>
 
-[**Mciwndgtrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
+[**MCIWndSetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
 </dt> </dl>
 
  

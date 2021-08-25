@@ -1,28 +1,28 @@
 ---
-description: Ein Befehl zum Abbrechen der Stream-Steuerung wurde wirksam.
+description: Ein Befehl zum Beenden der Streamsteuerung ist wirksam.
 ms.assetid: a2f7a959-fafd-47ff-9b3d-1a898fdb1f81
-title: EC_STREAM_CONTROL_STOPPED (DShow. h)
+title: EC_STREAM_CONTROL_STOPPED (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8c5488ba400d90623955c3e9adcba0dde07e04a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 69884ecc573b2bb775092529cb81e1b33a1514d4799af9f55c7bcebb5ebd2b24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928420"
 ---
-# <a name="ec_stream_control_stopped"></a>EC- \_ Stream- \_ Steuerelement \_ beendet
+# <a name="ec_stream_control_stopped"></a>EC \_ STREAM \_ CONTROL \_ STOPPED
 
-Ein Befehl zum Abbrechen der Stream-Steuerung wurde wirksam.
+Ein Befehl zum Beenden der Streamsteuerung ist wirksam.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="pSender"></span><span id="psender"></span><span id="PSENDER"></span>*psender*
+<span id="pSender"></span><span id="psender"></span><span id="PSENDER"></span>*pSender*
 </dt> <dd>
 
-(**IUnknown** \* ) Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN, die den Stream beendet hat.
+(**IUnknown** \* ) Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Pins, der den Stream beendet hat.
 
 </dd> <dt>
 
@@ -37,13 +37,13 @@ Ein Befehl zum Abbrechen der Stream-Steuerung wurde wirksam.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Filter Senden dieses Ereignis als Antwort auf die [**iamstreamcontrol:: STOPAT**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) -Methode. Die **STOPAT** -Methode gibt eine Bezugszeit für eine PIN zum Beenden des Streamings an. Wenn das Streaming angehalten wird, sendet der Filter dieses Ereignis.
+Filter senden dieses Ereignis als Antwort auf die [**IAMStreamControl::StopAt-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) Die **StopAt-Methode** gibt eine Referenzzeit für einen Pin an, um das Streaming zu beenden. Wenn das Streaming nicht mehr funktioniert, sendet der Filter dieses Ereignis.
 
-Der *psender* -Parameter gibt die PIN an, mit der der Befehl zum Abbrechen ausgeführt wird. Abhängig von der Implementierung ist es möglicherweise nicht die PIN, die den [**Stop at**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) -Befehl empfangen hat.
+Der *pSender-Parameter* gibt den Pin an, der den Stop-Befehl ausgibt. Je nach Implementierung ist es möglicherweise nicht der Pin, der den [**StopAt-Aufruf empfangen**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) hat.
 
-Der *dwCookie* -Parameter wird von der Anwendung in der [**STOPAT**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) -Methode angegeben. Dieser Parameter ermöglicht der Anwendung die Nachverfolgung mehrerer Aufrufe der-Methode.
+Der *dwCookie-Parameter* wird von der Anwendung in der [**StopAt-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-stopat) angegeben. Mit diesem Parameter kann die Anwendung mehrere Aufrufe der -Methode nachverfolgen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,18 +51,18 @@ Der *dwCookie* -Parameter wird von der Anwendung in der [**STOPAT**](/windows/de
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

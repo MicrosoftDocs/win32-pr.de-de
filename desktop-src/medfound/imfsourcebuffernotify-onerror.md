@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um anzugeben, dass ein Fehler im Quell Puffer aufgetreten ist.
+description: Wird verwendet, um anzugeben, dass beim Quellpuffer ein Fehler aufgetreten ist.
 ms.assetid: a7187b7a-0090-4380-82bb-a7f72d54232e
-title: 'IMF sourcebuffernotify:: OnError-Methode'
+title: DURCHSCHN. SourceBufferNotify::OnError-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 8b5f48c3517eb62b0a70acb9cbb28a5ecf7c90cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0602340011bae5af974a3441b42d62d392394b79854015acc68da0b1c2fcf538
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957800"
 ---
-# <a name="imfsourcebuffernotifyonerror-method"></a>IMF sourcebuffernotify:: OnError-Methode
+# <a name="imfsourcebuffernotifyonerror-method"></a>DURCHSCHN. SourceBufferNotify::OnError-Methode
 
-Wird verwendet, um anzugeben, dass ein Fehler im Quell Puffer aufgetreten ist.
+Wird verwendet, um anzugeben, dass beim Quellpuffer ein Fehler aufgetreten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ void OnError(
 
 <dl> <dt>
 
-*Personalabteilung* \[ in\]
+*hr* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
@@ -52,9 +52,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -62,7 +62,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**IMF sourcebuffernotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffernotify)
+[**DURCHSCHN. SourceBufferNotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffernotify)
 </dt> </dl>
 
  

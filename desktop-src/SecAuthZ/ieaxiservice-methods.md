@@ -1,23 +1,23 @@
 ---
-description: Die ieaxiservice-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IeAxiService-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 80FC76D6-B830-46E9-9332-63B70CBCB04B
-title: Ieaxiservice-Methoden
+title: IeAxiService-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25ee20f6ce1a0efa55205eb6d716e27b530c4eef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b704643d9f49418599b67ab253541565bd7a63d833df622d8841964078a0fb2f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908370"
 ---
-# <a name="ieaxiservice-methods"></a>Ieaxiservice-Methoden
+# <a name="ieaxiservice-methods"></a>IeAxiService-Methoden
 
-Die [**ieaxiservice**](ieaxiservice.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IeAxiService-Schnittstelle**](ieaxiservice.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Bereinigungs Methode**](ieaxiservice-cleanup.md)
+-   [**Cleanup-Methode**](ieaxiservice-cleanup.md)
 -   [**Initialize-Methode**](ieaxiservice-initialize.md)
 
  

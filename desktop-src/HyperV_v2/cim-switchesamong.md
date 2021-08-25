@@ -1,5 +1,5 @@
 ---
-description: Stellt einen switchdienst dar, mit dem Frames zwischen Switchports gewechselt werden.
+description: Stellt einen Switchdienst dar, der Frames zwischen Switchports umschaltet.
 ms.assetid: ee2d4831-df00-408c-b350-26d2d1d3e8aa
 title: CIM_SwitchesAmong-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 16a87797b4a138ef79be3d5ea8c6304d2ce4a942
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a12d4ffa10f8a1a921b64fab26082a9b99e00022d2ae6363a1d093a0627b044
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899637"
 ---
-# <a name="cim_switchesamong-class"></a>CIM \_ switchesunter-Klasse
+# <a name="cim_switchesamong-class"></a>CIM \_ SwitchesAmong-Klasse
 
-Stellt einen switchdienst dar, mit dem Frames zwischen Switchports gewechselt werden.
+Stellt einen Switchdienst dar, der Frames zwischen Switchports umschaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,49 +39,49 @@ class CIM_SwitchesAmong : CIM_ForwardsAmong
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ Switchesin** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SwitchesAmong-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ Switchesin** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SwitchesAmong-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Switchport**
+Datentyp: **CIM \_ SwitchPort**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM- \_ switchportverweis auf den Switchport**](cim-switchport.md) .
+Ein [**CIM \_ SwitchPort-Verweis**](cim-switchport.md) auf den Switchport.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ switchservice**
+Datentyp: **CIM \_ SwitchService**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM \_ switchservice**](cim-switchservice.md) -Verweis auf den Wechseldienst.
+Ein [**CIM \_ SwitchService-Verweis**](cim-switchservice.md) auf den Wechseldienst.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -90,7 +90,7 @@ Ein [**CIM \_ switchservice**](cim-switchservice.md) -Verweis auf den Wechseldie
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Ein [**CIM \_ switchservice**](cim-switchservice.md) -Verweis auf den Wechseldie
 
 <dl> <dt>
 
-[**CIM \_ forwardsamong**](cim-forwardsamong.md)
+[**CIM \_ ForwardsAmong**](cim-forwardsamong.md)
 </dt> </dl>
 
  

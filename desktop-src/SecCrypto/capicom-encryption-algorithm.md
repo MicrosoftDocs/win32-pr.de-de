@@ -1,7 +1,7 @@
 ---
 description: Definiert die Algorithmen, die bei der Verschlüsselung und Entschlüsselung verwendet werden sollen.
 ms.assetid: c7aacd1c-02f6-4cf5-9305-50e2330f243c
-title: CAPICOM_ENCRYPTION_ALGORITHM-Enumeration (CAPICOM. h)
+title: CAPICOM_ENCRYPTION_ALGORITHM -Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: 19626ba560ead406005612db3ed90cabc61d98ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d0f66c1e8ec59819f4f01c5f46989e1f904930f3699f978b26c6ab7c5107154c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879340"
 ---
-# <a name="capicom_encryption_algorithm-enumeration"></a>CAPICOM- \_ Verschlüsselungs \_ Algorithmus-Enumeration
+# <a name="capicom_encryption_algorithm-enumeration"></a>CAPICOM \_ ENCRYPTION \_ ALGORITHM-Enumeration
 
-Der Enumerationstyp " **CAPICOM- \_ Verschlüsselungs \_ Algorithmus** " definiert die Algorithmen, die bei der Verschlüsselung und Entschlüsselung verwendet werden sollen.
+Der **CAPICOM \_ ENCRYPTION \_ ALGORITHM-Enumerationstyp** definiert die Algorithmen, die bei der Verschlüsselung und Entschlüsselung verwendet werden sollen.
 
 ## <a name="members"></a>Member
 
@@ -30,17 +30,17 @@ Der Enumerationstyp " **CAPICOM- \_ Verschlüsselungs \_ Algorithmus** " definie
 
 | Member                                   | BESCHREIBUNG                                                                                                                                                                                              | Wert     |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **CAPICOM- \_ Verschlüsselungs \_ Algorithmus \_ RC2**  | Verwenden Sie die RSA RC2-Verschlüsselung.<br/>                                                                                                                                                                       | 0         |
-| **CAPICOM- \_ Verschlüsselungs \_ Algorithmus \_ RC4**  | Verwenden Sie die RSA RC4-Verschlüsselung.<br/>                                                                                                                                                                       | 1         |
-| **CAPICOM- \_ Verschlüsselungs \_ Algorithmus \_ des**  | Verwenden Sie die des-Verschlüsselung.<br/>                                                                                                                                                                           | 2         |
-| **CAPICOM \_ \_ -Verschlüsselungsalgorithmus \_ 3DES** | Verwenden Sie die Triple des-Verschlüsselung.<br/>                                                                                                                                                                    | 3         |
-| **CAPICOM- \_ Verschlüsselungs \_ Algorithmus \_ AES**  | Verwenden Sie den [*Advanced Encryption Standard*](../secgloss/a-gly.md) -Algorithmus (AES). Dieser Wert gilt nur für das Objekt " [**verschlüsselteddata**](encrypteddata.md) ".<br/> | 4//v 2.0 |
+| **\_CAPICOM-VERSCHLÜSSELUNGSALGORITHMUS \_ \_ RC2**  | Verwenden Sie die RSA RC2-Verschlüsselung.<br/>                                                                                                                                                                       | 0         |
+| **\_CAPICOM-VERSCHLÜSSELUNGSALGORITHMUS \_ \_ RC4**  | Verwenden Sie die RSA RC4-Verschlüsselung.<br/>                                                                                                                                                                       | 1         |
+| **CAPICOM \_ ENCRYPTION \_ ALGORITHM \_ DES**  | Verwenden Sie die DES-Verschlüsselung.<br/>                                                                                                                                                                           | 2         |
+| **CAPICOM \_ ENCRYPTION \_ ALGORITHM \_ 3DES** | Verwenden Sie die dreifache DES-Verschlüsselung.<br/>                                                                                                                                                                    | 3         |
+| **AES FÜR \_ CAPICOM-VERSCHLÜSSELUNGSALGORITHMUS \_ \_**  | Verwenden Sie [*Advanced Encryption Standard*](../secgloss/a-gly.md) -Algorithmus (AES). Dieser Wert ist nur für das [**EncryptedData-Objekt**](encrypteddata.md) gültig.<br/> | 4 / v2.0 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Enumerationstyp des **CAPICOM- \_ Verschlüsselungs \_ Algorithmus** wird von der [**Algorithm.Name**](algorithm-name.md) -Eigenschaft verwendet.
+Der **CAPICOM \_ ENCRYPTION \_ ALGORITHM-Enumerationstyp** wird von der [**Algorithm.Name**](algorithm-name.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,8 +48,8 @@ Der Enumerationstyp des **CAPICOM- \_ Verschlüsselungs \_ Algorithmus** wird vo
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 
