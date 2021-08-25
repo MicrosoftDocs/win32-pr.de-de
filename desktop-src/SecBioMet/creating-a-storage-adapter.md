@@ -1,19 +1,19 @@
 ---
-title: Erstellen eines Speicher Adapters
-description: Grundlegende Struktur eines Speicher Adapter-Plug-ins, das als C++ Dynamic Link Library (dll) implementiert ist.
+title: Erstellen eines Storage Adapters
+description: Grundlegende Struktur eines Speicheradapter-Plug-Ins, das als C++-DLL (Dynamic Link Library) implementiert ist.
 ms.assetid: c37e4c46-d11c-4458-b87b-78f693188e3c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a4f922035b84593d812380991d0574a3ebeb141
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c8ff7ab15b1f94a37c77a7b3f4f014d34794999ae83429d663d7f97ac29ab5e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993770"
 ---
-# <a name="creating-a-storage-adapter"></a>Erstellen eines Speicher Adapters
+# <a name="creating-a-storage-adapter"></a>Erstellen eines Storage Adapters
 
-Das folgende Codebeispiel zeigt die grundlegende Struktur eines Speicher Adapter-Plug-ins, das als C++ Dynamic Link Library (dll) implementiert ist. Um Pseudo Code-Implementierungen jeder öffentlichen Funktion in der dll anzuzeigen, wechseln Sie zu [Speicher Adapter Funktionen](storage-adapter-functions.md). Wenn Sie keine Funktionalität für eine bestimmte Funktion bereitstellen möchten, müssen Sie dafür einen Stub definieren und E \_ notimpl zurückgeben.
+Das folgende Codebeispiel zeigt die grundlegende Struktur eines Speicheradapter-Plug-Ins, das als C++-DLL (Dynamic Link Library) implementiert ist. Um Pseudocodeimplementierungen jeder öffentlichen Funktion in der DLL zu sehen, wechseln Sie zu [Storage Adapterfunktionen](storage-adapter-functions.md). Wenn Sie keine Funktionalität für eine bestimmte Funktion bereitstellen möchten, müssen Sie einen Stub dafür definieren und E \_ NOTIMPL zurückgeben.
 
 
 ```C++
@@ -735,12 +735,12 @@ StorageAdapterControlUnitPrivileged(
 
 <dl> <dt>
 
-[Erstellen von Adapter-Plug-ins](creating-adapter-plug-ins.md)
+[Erstellen von Adapter-Plug-Ins](creating-adapter-plug-ins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

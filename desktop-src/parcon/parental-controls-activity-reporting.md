@@ -1,27 +1,27 @@
 ---
-description: Aktivitätsberichte für Eltern Steuerelemente
+description: Jugendschutz Aktivitätsberichterstattung
 ms.assetid: 5ffac4f8-7112-4383-bf73-16e2289a3942
-title: Aktivitätsberichte für Eltern Steuerelemente
+title: Jugendschutz Aktivitätsberichterstattung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a41527e166b683e2ae7cd72129d9c9f3e032c7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a5d45a180114c2c53dbccc48836697b1a4fdab733db4f06237696d3dd50f42c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939360"
 ---
-# <a name="parental-controls-activity-reporting"></a>Aktivitätsberichte für Eltern Steuerelemente
+# <a name="parental-controls-activity-reporting"></a>Jugendschutz Aktivitätsberichterstattung
 
-Die Aktivitäts Berichterstellung ist bei Problemen mit Social Engineering von entscheidender Bedeutung. Unterstützende Anwendungen oder Filter werden aufgefordert, Aktivitäten zu protokollieren, wie im Abschnitt using Jugend Steuerungs-APIs angegeben.
+Die Aktivitätsberichterstattung wird aufgrund von Problemen mit der Sozialen Entwicklung als wesentlich angesehen. Beachtende Anwendungen oder Filter werden angefordert, um Aktivitäten zu protokollieren, wie im Abschnitt Verwenden von Jugendschutz-APIs angegeben.
 
-Wenn Sie auf den Link für die Aktivitäts Berichterstattung klicken, wird eine Protokoll Anzeige Seite angezeigt, auf der alle Protokolleinträge für ein Intervall von maximal einer Woche (weiter durch Größenbeschränkungen für die Protokoll Größe) angezeigt werden.
+Wenn Sie auf den Link Aktivitätsberichterstellung klicken, wird eine Protokollanzeigeseite mit allen Protokolleinträgen für ein maximales Intervall von einer Woche (weiter begrenzt durch Protokollgrößenlimits) mit Datenbereich für Kategoriestruktur und Spaltenformat angezeigt.
 
-Das Übersichts Feld in der oberen rechten Ecke des Bereichs Jugend Steuerungs Bereich zeigt den aktuellen Status der Aktivitäts Berichterstattung an.
+Das Zusammenfassungsfeld in der oberen rechten Ecke des Jugendschutzbereichs gibt den aktuellen Status für die Aktivitätsberichte an.
 
-Aktivitäts Ereignisse sind auch im Ereignisanzeige mit dem Namen Microsoft.com/Windows/parentalcontrols in den Anwendungs Protokollen sichtbar.
+Aktivitätsereignisse sind auch in der Ereignisanzeige mit dem Namen Microsoft.com/Windows/ParentalControls in den Anwendungsprotokollen sichtbar.
 
-Diese Funktionalität hängt von der neuen Ereignis Protokollierungsfunktion in Windows Vista mithilfe der bereitgestellten Veröffentlichungs-APIs ab.
+Diese Funktionalität hängt von der neuen Ereignisprotokollierungsfunktion in Windows Vista mithilfe der bereitgestellten Veröffentlichungs-APIs ab.
 
  
 

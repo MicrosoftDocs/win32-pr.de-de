@@ -1,42 +1,42 @@
 ---
-title: Itssbtaskplugin-Methoden
-description: Die itssbtaskplugin-Schnittstellen stellen die folgenden Methoden zur Verfügung.
+title: ITsSbTaskPlugin-Methoden
+description: Die ITsSbTaskPlugin-Schnittstellen machen die folgenden Methoden verfügbar.
 ms.assetid: 835BAB19-D91F-4F30-9EAB-4301C2E5F485
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae134da8b1ea6063c0fc262ed636a640b160314e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 47d3cc1ec36a9e68cfee566d4720a386f5599c1f345fc18df9a83828773ee565
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989750"
 ---
-# <a name="itssbtaskplugin-methods"></a>Itssbtaskplugin-Methoden
+# <a name="itssbtaskplugin-methods"></a>ITsSbTaskPlugin-Methoden
 
-Die [**itssbtaskplugin**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskplugin) -Schnittstellen stellen die folgenden Methoden zur Verfügung.
+Die [**ITsSbTaskPlugin-Schnittstellen**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskplugin) machen die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Initializetaskplugin-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskplugin-initializetaskplugin)
+[**InitializeTaskPlugin-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskplugin-initializetaskplugin)
 </dt> <dd>
 
-Initialisiert einen Task in der Warteschlange eines Remotedesktopverbindung Broker-Plug-ins.
+Initialisiert einen Task, der sich in der Warteschlange eines Remotedesktopverbindung Broker-Plug-Ins befindet.
 
 </dd> <dt>
 
-[**Settaskqueue-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskplugin-settaskqueue)
+[**SetTaskQueue-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtaskplugin-settaskqueue)
 </dt> <dd>
 
-Aktualisiert einen Task in der Warteschlange eines Remotedesktopverbindung Broker-Plug-ins.
+Aktualisiert eine Aufgabe in der Warteschlange eines Remotedesktopverbindung Broker-Plug-Ins.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

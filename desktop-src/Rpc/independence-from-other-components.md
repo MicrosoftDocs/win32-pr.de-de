@@ -1,35 +1,35 @@
 ---
-title: Unabhängigkeit von anderen Komponenten
-description: Erweiterte Fehler Daten sind auch dann nützlich, wenn der Server oder die Anwendung, über den die Kette übermittelt wurde, erweiterte Fehler Daten nicht erkennt oder Sie nicht nutzt. Empfohlene Vorgehensweisen für derartige Situationen werden am Ende dieses Abschnitts bereitgestellt.
+title: Unabhängig von anderen Komponenten
+description: Erweiterte Fehlerdaten sind auch dann nützlich, wenn der Server oder die Anwendung, über den die Kette übergeben wurde, keine erweiterten Fehlerdaten erkennt oder sie nicht nutzt. Empfohlene Ansätze für solche Situationen finden Sie am Ende dieses Abschnitts.
 ms.assetid: 32c52afd-cd79-4df3-bf30-72a17ce22089
 keywords:
-- Unabhängigkeit von anderen Komponenten
+- Unabhängig von anderen Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ba20a47a5bb30d8e23c1a90d666bc6b957ebb98
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7b8174ffa0469550d3a7b274fb28f2f30dd807314e6bd596b75469f717f5924a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020450"
 ---
-# <a name="independence-from-other-components"></a>Unabhängigkeit von anderen Komponenten
+# <a name="independence-from-other-components"></a>Unabhängig von anderen Komponenten
 
-Erweiterte Fehler Daten sind auch dann nützlich, wenn der Server oder die Anwendung, über den die Kette übermittelt wurde, erweiterte Fehler Daten nicht erkennt oder Sie nicht nutzt. Empfohlene Vorgehensweisen für derartige Situationen werden am Ende dieses Abschnitts bereitgestellt.
+Erweiterte Fehlerdaten sind auch dann nützlich, wenn der Server oder die Anwendung, über den die Kette übergeben wurde, keine erweiterten Fehlerdaten erkennt oder sie nicht nutzt. Empfohlene Ansätze für solche Situationen finden Sie am Ende dieses Abschnitts.
 
-Erweiterte Fehler Daten sind besonders nützlich, wenn Anwendungen oder Server, die RPC verwenden, erweiterte Fehlerinformationen nutzen. Wenn Sie einen RPC \_ \_ \* -Fehlercode untersuchen und die beteiligten Server oder Anwendungen keine erweiterten Fehler Daten verfügbar machen, sollten Sie die folgenden Ansätze beachten:
+Erweiterte Fehlerdaten sind besonders nützlich, wenn Anwendungen oder Server, die RPC verwenden, erweiterte Fehlerinformationen nutzen. Wenn Sie einen RPC S-Fehlercode untersuchen und die beteiligten Server oder Anwendungen keine erweiterten Fehlerdaten verfügbar machen, sollten \_ Sie die folgenden Ansätze in Betracht \_ \* ziehen:
 
--   Nehmen Sie einen Sniff vor.
+-   Nehmen Sie einen Sniff.
 
-    Reproduzieren Sie das Szenario, während Sie den Sniff ausführen. Der Ausspionieren der Verbindung enthält die erweiterten Fehler Daten.
+    Reproduzieren Sie das Szenario, während Sie den Sniff verwenden. Der Sniff des Kabels enthält die erweiterten Fehlerdaten.
 
--   Überprüfen Sie diese im Debugger.
+-   Untersuchen Sie sie über den Debugger.
 
-    Wenn das Erstellen eines Problems mit dem Problem nicht funktioniert, weil der Aufruf lokal erfolgt oder weil der Fehler lokal auftritt, fügen Sie einen Debugger an den Prozess an, der den Fehler zurückgibt, und platzieren Sie unmittelbar nach dem RPC-Aufruf, der den Fehler erzeugt, einen Haltepunkt. RPC weist häufig auf Fehler hin, indem Ausnahmen ausgelöst werden. Wenn Sie also nach Fehler 1825 (RPC \_ S S \_ \_ pkg- \_ Fehler) suchen, aktivieren Sie Exception 1825, und wenn der Debugger bei dieser Ausnahme anhält, überprüfen Sie die erweiterten Fehlerinformationen für den Thread.
+    Wenn eine Problemsniffe nicht funktioniert, weil der Aufruf lokal ist oder der Fehler lokal auftritt, fügen Sie einen Debugger an den Prozess an, der den Fehler zurücksendet, und setzen Sie unmittelbar nach dem RPC-Aufruf, der den Fehler generiert, einen Haltepunkt. RPC weist häufig auf Fehler hin, indem Ausnahmen ausgelöst werden. Wenn Sie also nach Fehler 1825 (RPC S SEC PKG ERROR) suchen, aktivieren Sie Ausnahme \_ \_ \_ 1825, und wenn der Debugger bei dieser Ausnahme unterbricht, überprüfen Sie die erweiterten Fehlerinformationen für den \_ Thread.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Mul-vs
-description: Multipliziert Quellen mit dem Ziel. | Mul-vs
+title: mul – vs
+description: Multipliziert Quellen mit dem Ziel. | mul – vs
 ms.assetid: 0b048cc2-b165-418f-893e-6dee28ca5ad3
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e33ac35831b19f771f4f5b64d94bcc47c6657db5
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d14603f077ddc61287d8d22580b161b59ddf8c6b67dad62141ecf4afb44d1f04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023760"
 ---
-# <a name="mul---vs"></a>Mul-vs
+# <a name="mul---vs"></a>mul – vs
 
 Multipliziert Quellen mit dem Ziel.
 
@@ -24,7 +24,7 @@ Multipliziert Quellen mit dem Ziel.
 
 
 
-| Mul DST, src0, Quelle1 |
+| mul dst, src0, src1 |
 |---------------------|
 
 
@@ -33,15 +33,15 @@ Multipliziert Quellen mit dem Ziel.
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | mul                    | x    | x    | x    | x     | x    | x     |
 
@@ -49,7 +49,7 @@ where
 
  
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -65,7 +65,7 @@ dest.w = src0.w * src1.w;
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

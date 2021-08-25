@@ -1,12 +1,12 @@
 ---
-title: Itssbtaskinfo-Status Eigenschaft
-description: Ruft einen RDV- \_ \_ aufgabenstatusenumerationswert ab, der den Zustand der Aufgabe darstellt.
+title: ITsSbTaskInfo-Statuseigenschaft
+description: Ruft einen RDV \_ TASK \_ STATUS-Enumerationswert ab, der den Zustand der Aufgabe darstellt.
 ms.assetid: 779af127-133c-47ff-8fca-bfd2c96c9768
 ms.tgt_platform: multiple
 keywords:
-- Status Eigenschaften Remotedesktopdienste
-- Status Eigenschaften Remotedesktopdienste, itssbtaskinfo-Schnittstelle
-- Itssbtaskinfo-Schnittstelle Remotedesktopdienste, Status-Eigenschaft
+- Statuseigenschaft Remotedesktopdienste
+- Status-Eigenschaft Remotedesktopdienste , ITsSbTaskInfo-Schnittstelle
+- ITsSbTaskInfo-Schnittstelle Remotedesktopdienste , Status-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3206013c32ee6cf3323f19c9e95e89c8d6756eb9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d497bd46d1adfca88cce3a4b5c58cf72619ef1c38a03823ff26a14f2e6dfebd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009240"
 ---
-# <a name="itssbtaskinfostatus-property"></a>Itssbtaskinfo:: Status-Eigenschaft
+# <a name="itssbtaskinfostatus-property"></a>ITsSbTaskInfo::Status-Eigenschaft
 
-Ruft einen RDV-aufgabenstatusenumerationswert ab, der den Zustand der Aufgabe darstellt. [**\_ \_**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status)
+Ruft einen [**RDV \_ TASK \_ STATUS-Enumerationswert**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status) ab, der den Zustand der Aufgabe darstellt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_Status(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein RDV-aufgabenstatusenumerationswert, der den Zustand der Aufgabe darstellt. [**\_ \_**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status)
+Ein [**RDV \_ TASK STATUS-Enumerationswert, \_**](/windows/desktop/api/SessDirPublicTypes/ne-sessdirpublictypes-rdv_task_status) der den Zustand des Tasks darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,15 +54,15 @@ Ein RDV-aufgabenstatusenumerationswert, der den Zustand der Aufgabe darstellt. [
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                       |
-| IDL<br/>                      | <dl> <dt>Sbtsv. idl</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Sbtsv.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itssbtaskinfo**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskinfo)
+[**ITsSbTaskInfo**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtaskinfo)
 </dt> </dl>
 
  

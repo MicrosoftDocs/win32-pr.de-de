@@ -1,9 +1,9 @@
 ---
-title: Logging (channelType)-Element
-description: Definiert die Eigenschaften der Protokolldatei, die den Kanal sichert, z. b. die Kapazität und ob Sie sequenziell oder zirkulär ist. | Logging (channelType)-Element
+title: logging (ChannelType)-Element
+description: Definiert die Eigenschaften der Protokolldatei, die den Kanal sichern, z. B. die Kapazität und ob sie sequenziell oder kreisförmig ist. | logging (ChannelType)-Element
 ms.assetid: c16b4622-ed49-489e-8751-c374c6f12bd3
 keywords:
-- Protokollierungs Element-Ereignisprotokoll
+- Protokollierungselement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 92219c5bfb921dc0d90774b17a572ba4ace3505b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: cc3c77c119090d34a8ed8314dd162c0a466bf53ec8ecca58cf155478f4c8782f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005961"
 ---
-# <a name="logging-channeltype-element"></a>Logging (channelType)-Element
+# <a name="logging-channeltype-element"></a>logging (ChannelType)-Element
 
-Definiert die Eigenschaften der Protokolldatei, die den Kanal sichert, z. b. die Kapazität und ob Sie sequenziell oder zirkulär ist.
+Definiert die Eigenschaften der Protokolldatei, die den Kanal sichern, z. B. die Kapazität und ob sie sequenziell oder kreisförmig ist.
 
 ``` syntax
 <xs:element name="logging"
@@ -30,7 +30,7 @@ Definiert die Eigenschaften der Protokolldatei, die den Kanal sichert, z. b. die
  />
 ```
 
-Das **Protokollierungs** Element wird durch den komplexen [**channelType**](eventmanifestschema-channeltype-complextype.md) -Typ definiert.
+Das **Protokollierungselement** wird durch den komplexen [**ChannelType-Typ**](eventmanifestschema-channeltype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Protokollierungs** Element wird durch den komplexen [**channelType**](even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Channel (channelellisttype)**](eventmanifestschema-channel-channellisttype-element.md)
+[**channel (ChannelListType)**](eventmanifestschema-channel-channellisttype-element.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: MDM_WindowsAdvancedThreatProtection-Klasse
-description: Die MDM \_ windowsadvancedfixprotection-Klasse wird zum integrieren und offboarding von Endpunkten für Windows Defender Advanced Threat Protection (wdatp) verwendet.
+description: Die \_ MDM-Klasse WindowsAdvancedThreatProtection wird verwendet, um Endpunkte für Windows Defender Advanced Threat Protection (WDATP) zu integrieren und zu offboarden.
 ms.assetid: 7a95253e-6d13-4c1b-b78d-c56c6378f7c3
 keywords:
 - MDM_WindowsAdvancedThreatProtection-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c369406a3c8bcf982aeb18b4bbb53c1af4983e84
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3f274a8802bd2c7975479ed6a3fa140807f81d1442575dfe767a4b5e57ce19c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967480"
 ---
-# <a name="mdm_windowsadvancedthreatprotection-class"></a>MDM \_ windowsadvancedo Protection-Klasse
+# <a name="mdm_windowsadvancedthreatprotection-class"></a>\_MDM-Klasse "WindowsAdvancedThreatProtection"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ windowsadvancedfixprotection** -Klasse wird zum integrieren und offboarding von Endpunkten für Windows Defender Advanced Threat Protection (wdatp) verwendet.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection** wird verwendet, um Endpunkte für Windows Defender Advanced Threat Protection (WDATP) zu integrieren und zu offboarden.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,36 +47,36 @@ class MDM_WindowsAdvancedThreatProtection
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ windowsadvancedo Protection** -Klasse verfügt über diese Typen von Membern:
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ windowsadvancedo Protection** -Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-Klasse WindowsAdvancedThreatProtection** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse lautet die Zeichenfolge "windowsadvanced-Protection".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "WindowsAdvancedThreatProtection".
 
 </dd> <dt>
 
 [Offboarding](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#offboarding)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -87,7 +87,7 @@ Zugriffstyp: Lesen/Schreiben
 [Onboarding](/windows/client-management/mdm/windowsadvancedthreatprotection-csp#onboarding)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -95,19 +95,19 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> </dl>
 
@@ -117,11 +117,11 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
@@ -129,7 +129,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

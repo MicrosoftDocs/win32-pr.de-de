@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. clippingcolor
-description: Das clippingcolor-Attribut gibt die Farbe an, die aus der clippingimage-Bitmap abgeschnitten werden soll, oder ruft diese ab.
+title: AmbientAttributes.clippingColor
+description: Das clippingColor-Attribut gibt die Farbe an, die aus der ClippingImage-Bitmap abgeschnitten werden soll, oder ruft sie ab.
 ms.assetid: d6ea43d3-c118-43d3-bfdc-29ddd6ea4978
 keywords:
-- Ambientattribute. clippingcolor-Fenster Media Player
+- AmbientAttributes.clippingColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ad526eb0f705d1fce95f3813a666420b29db9de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 299ee63b93abfdea337bb25e8b399e6011fb42d7fa4e1e0c09b3feb259d4f1d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902810"
 ---
-# <a name="ambientattributesclippingcolor"></a>Ambientattribute. clippingcolor
+# <a name="ambientattributesclippingcolor"></a>AmbientAttributes.clippingColor
 
-Das **clippingcolor** -Attribut gibt die Farbe an, die aus der **clippingimage** -Bitmap abgeschnitten werden soll, oder ruft diese ab.
+Das **clippingColor-Attribut** gibt die Farbe an, die aus der **ClippingImage-Bitmap** abgeschnitten werden soll, oder ruft sie ab.
 
 ``` syntax
         elementID.clippingColor
@@ -29,24 +29,24 @@ Das **clippingcolor** -Attribut gibt die Farbe an, die aus der **clippingimage**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert                                       | BESCHREIBUNG                                       |
 |---------------------------------------------|---------------------------------------------------|
-| Auto                                        | Standard. Die Farbe an Pixelposition 0, 0 wird verwendet. |
-| Jeder Microsoft Internet Explorer-Farbwert | Die angegebene Internet Explorer-Farbe wird verwendet.    |
+| Automatisch                                        | Standard. Die Farbe an pixelposition 0,0 wird verwendet. |
+| einen beliebigen Microsoft Internet Explorer-Farbwert | Die angegebene Internet Explorer wird verwendet.    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die clippingfarbe gibt die Bereiche von **clippingimage** (oder **BackgroundImage** für **Ansicht** oder **unter Ansicht**) an, die transparenten, nicht klickbaren Teilen des Steuer Elements entsprechen. Die clippingfarbe kann angeben, dass mehrere Bereiche abgeschnitten werden sollen. Eine Warnung wird ausgegeben, wenn **clippingimage** ein JPG ist, um den Verlust von Farben in den JPGs zu warnen.
+Die Clippingfarbe gibt die Bereiche des **clippingImage** (oder **backgroundImage** für **VIEW** oder **SUBVIEW)** an, die transparenten, nicht klickbaren Teilen des Steuerelements entsprechen. Die Clippingfarbe kann mehrere Bereiche angeben, die abgeschnitten werden sollen. Eine Warnung wird ausgegeben, wenn **clippingImage ein** JPG ist, um vor Farbverlusten in JPGs zu warnen.
 
-Das **clippingcolor** -Attribut wird vom **Wiedergabe** Listenelement nicht unterstützt.
+Das **clippingColor-Attribut** wird vom **PLAYLIST-Element nicht** unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Das **clippingcolor** -Attribut wird vom **Wiedergabe** Listenelement nicht unte
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -65,10 +65,10 @@ Das **clippingcolor** -Attribut wird vom **Wiedergabe** Listenelement nicht unte
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. clippingimage**](ambientattributes-clippingimage.md)
+[**AmbientAttributes.clippingImage**](ambientattributes-clippingimage.md)
 </dt> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> </dl>
 
  

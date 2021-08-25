@@ -1,9 +1,9 @@
 ---
 title: Query (QueryListType)-Element
-description: Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Ergebnisset ein- oder auszuschließen.
+description: Definiert eine Reihe von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Resultset einzuschließen oder aus dem Resultset auszuschließen.
 ms.assetid: 2491d7b7-6fbb-4230-92cf-4bef3d2a51cc
 keywords:
-- Query-Element "EventLog"
+- Query-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "120005180"
 ---
 # <a name="query-querylisttype-element"></a>Query (QueryListType)-Element
 
-Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Ergebnisset ein- oder auszuschließen.
+Definiert eine Reihe von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Resultset einzuschließen oder aus dem Resultset auszuschließen.
 
 ``` syntax
 <xs:element name="Query"
@@ -30,7 +30,7 @@ Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, 
  />
 ```
 
-Das **Query-Element** wird durch den komplexen [**QueryListType-Typ**](queryschema-querylisttype-complextype.md) definiert.
+Das **Query-Element** wird vom komplexen [**QueryListType-Typ**](queryschema-querylisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,12 +38,12 @@ Das **Query-Element** wird durch den komplexen [**QueryListType-Typ**](querysche
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

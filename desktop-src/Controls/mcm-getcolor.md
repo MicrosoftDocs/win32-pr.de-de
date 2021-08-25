@@ -1,9 +1,9 @@
 ---
-title: MCM_GETCOLOR Meldung (kommstrg. h)
-description: Ruft die Farbe für einen angegebenen Teil eines Monatskalender-Steuer Elements ab. Sie können diese Nachricht explizit oder mit dem monthcal \_ GetColor-Makro senden.
+title: MCM_GETCOLOR (Commctrl.h)
+description: Ruft die Farbe für einen bestimmten Teil eines Monatskalender-Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetColor-Makros senden.
 ms.assetid: 6c30ad0d-7584-402a-9c27-3c12c49c87f3
 keywords:
-- Windows-Steuerelemente für MCM_GETCOLOR Meldung
+- MCM_GETCOLOR meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 932b457bd1ddd870fd84facdb540e31188825504
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 254b140e801f4d4440c9b292999e5c8f91175a30750b08bfd30abd6afd84f73d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062090"
 ---
-# <a name="mcm_getcolor-message"></a>MCM- \_ GetColor-Meldung
+# <a name="mcm_getcolor-message"></a>MCM \_ GETCOLOR-Nachricht
 
-Ruft die Farbe für einen angegebenen Teil eines Monatskalender-Steuer Elements ab. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ GetColor**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcolor) -Makro senden.
+Ruft die Farbe für einen bestimmten Teil eines Monatskalender-Steuerelements ab. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetColor-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,18 +32,18 @@ Ruft die Farbe für einen angegebenen Teil eines Monatskalender-Steuer Elements 
 *wParam* 
 </dt> <dd>
 
-Ein Wert vom Typ **int** , der angibt, welche Monatskalender Farbe abgerufen werden soll. Die folgenden Werte sind möglich:
+Wert vom Typ **int,** der an gibt, welche Monatskalenderfarbe abgerufen werden soll. Die folgenden Werte sind möglich:
 
 
 
 | Wert                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="MCSC_BACKGROUND"></span><span id="mcsc_background"></span><dl> <dt>**MCSC- \_ Hintergrund**</dt> </dl>       | Rufen Sie die zwischen Monaten angezeigte Hintergrundfarbe ab.<br/>                                                                                                                                      |
-| <span id="MCSC_MONTHBK"></span><span id="mcsc_monthbk"></span><dl> <dt>**MCSC \_ monthbk**</dt> </dl>                | Rufen Sie die im Monat angezeigte Hintergrundfarbe ab.<br/>                                                                                                                                    |
-| <span id="MCSC_TEXT"></span><span id="mcsc_text"></span><dl> <dt>**MCSC- \_ Text**</dt> </dl>                         | Ruft die Farbe ab, die zum Anzeigen von Text innerhalb eines Monats verwendet wird.<br/>                                                                                                                                      |
-| <span id="MCSC_TITLEBK"></span><span id="mcsc_titlebk"></span><dl> <dt>**MCSC \_ titlebk**</dt> </dl>                | Ruft die im Titel des Kalenders angezeigte Hintergrundfarbe ab.<br/>                                                                                                                             |
-| <span id="MCSC_TITLETEXT"></span><span id="mcsc_titletext"></span><dl> <dt>**MCSC \_ TitleText**</dt> </dl>          | Ruft die Farbe ab, die zum Anzeigen von Text innerhalb des Kalender Titels verwendet wird.<br/>                                                                                                                         |
-| <span id="MCSC_TRAILINGTEXT"></span><span id="mcsc_trailingtext"></span><dl> <dt>**MCSC- \_ trailingtext**</dt> </dl> | Ruft die Farbe ab, die zum Anzeigen des Header Tags und des nachfolgenden Tages Textes verwendet wird Header und nachfolgende Tage sind die Tage aus den vorherigen und den nächsten Monaten, die im Kalender des aktuellen Monats angezeigt werden.<br/> |
+| <span id="MCSC_BACKGROUND"></span><span id="mcsc_background"></span><dl> <dt>**\_MCSC-HINTERGRUND**</dt> </dl>       | Ruft die Zwischenmonate angezeigte Hintergrundfarbe ab.<br/>                                                                                                                                      |
+| <span id="MCSC_MONTHBK"></span><span id="mcsc_monthbk"></span><dl> <dt>**MCSC \_ MONTHBK**</dt> </dl>                | Ruft die im Monat angezeigte Hintergrundfarbe ab.<br/>                                                                                                                                    |
+| <span id="MCSC_TEXT"></span><span id="mcsc_text"></span><dl> <dt>**\_MCSC-TEXT**</dt> </dl>                         | Ruft die Farbe ab, die zum Anzeigen von Text innerhalb eines Monats verwendet wird.<br/>                                                                                                                                      |
+| <span id="MCSC_TITLEBK"></span><span id="mcsc_titlebk"></span><dl> <dt>**MCSC \_ TITLEBK**</dt> </dl>                | Ruft die im Titel des Kalenders angezeigte Hintergrundfarbe ab.<br/>                                                                                                                             |
+| <span id="MCSC_TITLETEXT"></span><span id="mcsc_titletext"></span><dl> <dt>**MCSC \_ TITLETEXT**</dt> </dl>          | Ruft die Farbe ab, die zum Anzeigen von Text im Titel des Kalenders verwendet wird.<br/>                                                                                                                         |
+| <span id="MCSC_TRAILINGTEXT"></span><span id="mcsc_trailingtext"></span><dl> <dt>**MCSC \_ TRAILINGTEXT**</dt> </dl> | Ruft die Farbe ab, die verwendet wird, um Kopfzeilentag und Nachtagstext anzuzeigen. Header und nachfolgende Tage sind die Tage aus den vorherigen und folgenden Monaten, die im Kalender des aktuellen Monats angezeigt werden.<br/> |
 
 
 
@@ -56,7 +56,7 @@ Ein Wert vom Typ **int** , der angibt, welche Monatskalender Farbe abgerufen wer
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **COLORREF** -Wert zurück, der die Farbeinstellung für den angegebenen Teil des Monatskalender-Steuer Elements darstellt, wenn erfolgreich. Andernfalls gibt diese Meldung-1 zurück.
+Gibt einen **COLORREF-Wert** zurück, der bei Erfolg die Farbeinstellung für den angegebenen Teil des Monatskalender-Steuerelements darstellt. Andernfalls gibt diese Meldung -1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Gibt einen **COLORREF** -Wert zurück, der die Farbeinstellung für den angegebe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

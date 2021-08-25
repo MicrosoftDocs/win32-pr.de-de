@@ -53,11 +53,11 @@ Adresse eines Zeigers auf eine [**IDirectXFileData-Schnittstelle,**](idirectxfil
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADVALUE, DXFILEERR \_ NOMOREOBJECTS
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADVALUE, DXFILEERR \_ NOMOREOBJECTS
 
 ## <a name="remarks"></a>Hinweise
 
-Objekte der obersten Ebene sind immer Datenobjekte. Datenverweisobjekte und binäre Objekte können nur untere Datenobjekte sein.
+Objekte der obersten Ebene sind immer Datenobjekte. Datenverweisobjekte und binäre Objekte können nur untergeordnete Elemente von Datenobjekten sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Objekte der obersten Ebene sind immer Datenobjekte. Datenverweisobjekte und bin�
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

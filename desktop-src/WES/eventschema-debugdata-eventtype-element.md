@@ -43,7 +43,7 @@ Das **DebugData-Element** wird durch den komplexen [**EventType-Typ**](eventsche
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

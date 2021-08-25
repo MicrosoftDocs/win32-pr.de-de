@@ -1,30 +1,30 @@
 ---
-title: Imsrdpclient RequestClose-Methode
-description: Fordert ein ordnungsgemäßes Herunterfahren des Remotedesktop ActiveX-Steuer Elements an.
+title: IMsRdpClient RequestClose-Methode
+description: Fordert ein ordnungsgemäßes Herunterfahren des Remotedesktop ActiveX-Steuerelements an.
 ms.assetid: 0b930a00-f134-4da2-a752-8fd131a22043
 ms.tgt_platform: multiple
 keywords:
 - RequestClose-Methode Remotedesktopdienste
-- RequestClose-Methode Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, RequestClose-Methode
-- RequestClose-Methode Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , RequestClose-Methode
+- RequestClose-Methode Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , RequestClose-Methode
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1679b08680b962cdbff57e9bbbd1c392607d8709
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ae812c27b0c280ca3a6cd879d5af86181de85793ec6092441fb83b45c74d8656
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010180"
 ---
-# <a name="imsrdpclientrequestclose-method"></a>Imsrdpclient:: RequestClose-Methode
+# <a name="imsrdpclientrequestclose-method"></a>IMsRdpClient::RequestClose-Methode
 
-Fordert ein ordnungsgemäßes Herunterfahren des Remotedesktop ActiveX-Steuer Elements an. Ein ordnungsgemäßes Herunterfahren kann das Beenden der Remotedesktopdienste Sitzung des Benutzers einschließen, aber der Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server wird nicht heruntergefahren.
+Fordert ein ordnungsgemäßes Herunterfahren des Remotedesktop ActiveX-Steuerelements an. Ein ordnungsgemäßes Herunterfahren kann das Beenden der Remotedesktopdienste Sitzung des Benutzers umfassen, aber nicht das Herunterfahren des Remotedesktop-Sitzungshost -Servers (RD-Sitzungshost).
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,47 +70,47 @@ HRESULT RequestClose(
 
 <dl> <dt>
 
-*pclosestatus* \[ vorgenommen\]
+*pCloseStatus* \[ out\]
 </dt> <dd>
 
-Der Wert aus der [**controlclosestatus**](controlclosestatus.md) -Enumeration, der angibt, ob die Anwendung das Steuerelement sofort schließen kann. Im folgenden finden Sie eine Liste möglicher Werte.
+Wert aus der [**ControlCloseStatus-Enumeration,**](controlclosestatus.md) der angibt, ob die Anwendung das Steuerelement sofort schließen kann. Es folgt eine Liste der möglichen Werte.
 
 <dt>
 
 <span id="controlCloseCanProceed"></span><span id="controlclosecanproceed"></span><span id="CONTROLCLOSECANPROCEED"></span>
 
-<span id="controlCloseCanProceed"></span><span id="controlclosecanproceed"></span><span id="CONTROLCLOSECANPROCEED"></span>**controlclosecanfortsetzung** (0x0000)
+<span id="controlCloseCanProceed"></span><span id="controlclosecanproceed"></span><span id="CONTROLCLOSECANPROCEED"></span>**controlCloseCanProceed** (0x0000)
 
 
 </dt> <dd>
 
-Die Containeranwendung kann fortfahren, um das Steuerelement sofort zu schließen. Dieser Wert kann auch darauf hindeuten, dass die Verbindung bereits beendet wurde.
+Die Containeranwendung kann fortfahren, um das Steuerelement sofort zu schließen. Dieser Wert kann auch angeben, dass die Verbindung bereits beendet wurde.
 
 </dd> <dt>
 
 <span id="controlCloseWaitForEvents"></span><span id="controlclosewaitforevents"></span><span id="CONTROLCLOSEWAITFOREVENTS"></span>
 
-<span id="controlCloseWaitForEvents"></span><span id="controlclosewaitforevents"></span><span id="CONTROLCLOSEWAITFOREVENTS"></span>**controlclosewaitforevents** (0x0001)
+<span id="controlCloseWaitForEvents"></span><span id="controlclosewaitforevents"></span><span id="CONTROLCLOSEWAITFOREVENTS"></span>**controlCloseWaitForEvents** (0x0001)
 
 
 </dt> <dd>
 
-Die Containeranwendung sollte das Steuerelement nicht sofort schließen. die Anwendung sollte warten, bis eines der im folgenden Abschnitt "Hinweise" beschriebenen Ereignisse vor dem Schließen auftritt.
+Die Containeranwendung sollte das Steuerelement nicht sofort schließen. Die Anwendung sollte warten, bis eines der im folgenden Abschnitt "Hinweise" beschriebenen Ereignisse vor dem Schließen auftritt.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Parameter " *pclosestatus* " gleich " **controlclosewaitforevents**" ist, muss die Anwendung warten, bis eines der folgenden Ereignisse eintritt, bevor die Anwendung das Steuerelement schließt:
+Wenn der *pCloseStatus-Parameter* **controlCloseWaitForEvents** entspricht, sollte die Anwendung warten, bis eines der folgenden Ereignisse eintritt, bevor die Anwendung das Steuerelement schließt:
 
--   [**Imstscaxevents:: ongetrennte**](imstscaxevents-ondisconnected.md). Wenn der Benutzer nicht bei der Remotedesktopdienste Sitzung angemeldet ist, kann die Anwendung die [**DestroyWindow**](/windows/desktop/api/winuser/nf-winuser-destroywindow) -Funktion aufzurufen, um alle Fenster zu zerstören und dann das Steuerelement zu schließen.
--   [**Imstscaxevents:: onconfirmclose**](imstscaxevents-onconfirmclose.md). Wenn der Benutzer bei der Remotedesktopdienste Sitzung angemeldet ist, löst das Steuerelement ein **onconfirmclose** -Ereignis aus. Dieses Ereignis ermöglicht der Anwendung, den Benutzer zur Eingabe aufzufordern, ob die Verbindung geschlossen werden soll. Wenn der Benutzer die Eingabeaufforderung auf Ja antwortet, kann die Containeranwendung [**DestroyWindow**](/windows/desktop/api/winuser/nf-winuser-destroywindow) zum zerstören aller Fenster und zum Schließen des Steuer Elements auffordern.
+-   [**IMsTscAxEvents::OnDisconnected**](imstscaxevents-ondisconnected.md). Wenn der Benutzer nicht bei der Remotedesktopdienste Sitzung angemeldet ist, kann die Anwendung die [**DestroyWindow-Funktion**](/windows/desktop/api/winuser/nf-winuser-destroywindow) aufrufen, um alle Fenster zu zerstören, und dann das Steuerelement schließen.
+-   [**IMsTscAxEvents::OnConfirmClose**](imstscaxevents-onconfirmclose.md). Wenn der Benutzer bei der Remotedesktopdienste-Sitzung angemeldet ist, löst das Steuerelement ein **OnConfirmClose-Ereignis** aus. Dieses Ereignis ermöglicht der Anwendung, den Benutzer dazu aufzufordern, die Verbindung zu schließen. Wenn der Benutzer ja auf die Eingabeaufforderung antwortet, kann die Containeranwendung [**DestroyWindow**](/windows/desktop/api/winuser/nf-winuser-destroywindow) aufrufen, um alle Fenster zu zerstören, und das Steuerelement schließen.
 
-**RequestClose** ermöglicht einer Containeranwendung, den Benutzer aufzufordern, ob eine Verbindung geschlossen werden soll. Weitere Informationen finden Sie unter [**imstscaxevents:: onconfirmclose**](imstscaxevents-onconfirmclose.md).
+**RequestClose** ermöglicht einer Containeranwendung, den Benutzer dazu aufzufordern, eine Verbindung zu schließen. Weitere Informationen finden Sie unter [**IMsTscAxEvents::OnConfirmClose**](imstscaxevents-onconfirmclose.md).
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -124,15 +124,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpClient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -162,10 +162,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient10**](imsrdpclient10.md)
 </dt> <dt>
 
-[**Imstscaxevents:: onconfirmclose**](imstscaxevents-onconfirmclose.md)
+[**IMsTscAxEvents::OnConfirmClose**](imstscaxevents-onconfirmclose.md)
 </dt> <dt>
 
-[**Imstscaxevents:: ongetrennte**](imstscaxevents-ondisconnected.md)
+[**IMsTscAxEvents::OnDisconnected**](imstscaxevents-ondisconnected.md)
 </dt> </dl>
 
  

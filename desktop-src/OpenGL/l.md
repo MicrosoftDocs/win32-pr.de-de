@@ -9,37 +9,37 @@ keywords:
 - Leuchtdichte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 091964e8d6a80ebad0c3c150a80c22ab71daaa12
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 73ce4625d515fc76831c5ed2c212ed99bdd092fb341fb925077ca789c80fc830
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035000"
 ---
 # <a name="l-opengl"></a>L (OpenGL)
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) [J K](jk.md) L [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) [U V](u-v.md) [W](w.md) [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) J [K](jk.md) L [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) U [V](u-v.md) [W](w.md) X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
-<span id="opengl_lighting"></span><span id="OPENGL_LIGHTING"></span>**Sonder**
+<span id="opengl_lighting"></span><span id="OPENGL_LIGHTING"></span>**Beleuchtung**
 </dt> <dd>
 
-Der Prozess, bei dem die Farbe eines Scheitel Punkts basierend auf den aktuellen Lichtern, Materialeigenschaften und Beleuchtungsmodell Modi berechnet wird.
+Der Prozess der Berechnung der Farbe eines Scheitelpunkts basierend auf aktuellen Beleuchtungen, Materialeigenschaften und Beleuchtungsmodellmodi.
 
 </dd> <dt>
 
-<span id="opengl_line"></span><span id="OPENGL_LINE"></span>**Stimmen**
+<span id="opengl_line"></span><span id="OPENGL_LINE"></span>**Linie**
 </dt> <dd>
 
-Ein geradliniger Bereich der begrenzten Breite zwischen zwei Scheitel Punkten. (Im Gegensatz zu mathematischen Linien haben OpenGL-Linien eine endliche Breite und Länge.) Jedes Segment eines Bereichs Streifens ist selbst eine Linie.
+Ein gerader Bereich mit endlicher Breite zwischen zwei Scheitelpunkten. (Im Gegensatz zu mathematischen Linien weisen OpenGL-Linien eine endliche Breite und Länge auf.) Jedes Segment eines Linienstreifens ist selbst eine Linie.
 
 </dd> <dt>
 
 <span id="opengl_luminance"></span><span id="OPENGL_LUMINANCE"></span>**Leuchtdichte**
 </dt> <dd>
 
-Die wahrgenommene Helligkeit einer Oberfläche. Bezieht sich häufig auf einen gewichteten Durchschnitt von roten, grünen und blauen Farbwerten, die die wahrgenommene Helligkeit der Kombination erhalten.
+Die wahrgenommene Helligkeit einer Oberfläche. Bezieht sich häufig auf einen gewichteten Durchschnitt von Rot-, Grün- und Blau-Farbwerten, der die wahrgenommene Helligkeit der Kombination liefert.
 
 </dd> </dl>
 

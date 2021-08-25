@@ -1,6 +1,6 @@
 ---
-title: Opcode (renderinginfotype)-Element
-description: Die gerenderte Meldungs Zeichenfolge des im Ereignis angegebenen OpCodes.
+title: Opcode-Element (RenderingInfoType)
+description: Die gerenderte Meldungszeichenfolge des im -Ereignis angegebenen Opcodes.
 ms.assetid: 5fdc94ca-edc0-4eae-8dab-d58d9172b8fc
 keywords:
 - Opcode-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9ab6ed5bea91b5d05e21239d876f9efc86bbe51a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b8ab181b57b91f3fbc9587833c3bd7d2e1c12b3f8c723961eae2a523573925ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904570"
 ---
-# <a name="opcode-renderinginfotype-element"></a>Opcode (renderinginfotype)-Element
+# <a name="opcode-renderinginfotype-element"></a>Opcode-Element (RenderingInfoType)
 
-Die gerenderte Meldungs Zeichenfolge des im Ereignis angegebenen OpCodes.
+Die gerenderte Meldungszeichenfolge des im -Ereignis angegebenen Opcodes.
 
 ``` syntax
 <xs:element name="Opcode"
@@ -30,7 +30,7 @@ Die gerenderte Meldungs Zeichenfolge des im Ereignis angegebenen OpCodes.
  />
 ```
 
-Das **Opcode** -Element wird durch den komplexen [**renderinginfotype**](eventschema-renderingtype-complextype.md) -Typ definiert.
+Das **Opcode-Element** wird durch den komplexen [**RenderingInfoType-Typ**](eventschema-renderingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Opcode** -Element wird durch den komplexen [**renderinginfotype**](eventsc
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Opcode** -Element wird durch den komplexen [**renderinginfotype**](eventsc
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Renderinginfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
+[**RenderingInfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
 </dt> </dl>
 
  

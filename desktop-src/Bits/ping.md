@@ -52,7 +52,7 @@ Identifiziert dieses Anforderungspaket als Pingpaket.
 
 Das **Pingpaket** ist optional. Anstatt ein **Pingpaket** zu senden, können Sie das [**Paket Create-Session**](create-session.md) verwenden, um eine Verbindung herzustellen und die Sicherheit auszuhandeln. Es ist jedoch effizienter, das **Ping-Paket** für diesen Zweck zu verwenden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

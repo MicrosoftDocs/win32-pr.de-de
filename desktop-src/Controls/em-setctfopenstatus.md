@@ -1,9 +1,9 @@
 ---
-title: EM_SETCTFOPENSTATUS Meldung (RichEdit. h)
-description: Öffnet oder schließt die TSF-Tastatur (Text Services Framework).
+title: EM_SETCTFOPENSTATUS (Richedit.h)
+description: Öffnet oder schließt die TASTATUR Textdienstframework (TSF).
 ms.assetid: 9bdabf5a-93db-4b0e-9528-807d262de866
 keywords:
-- Windows-Steuerelemente für EM_SETCTFOPENSTATUS Meldung
+- EM_SETCTFOPENSTATUS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf4163a415f129dfc5d3f98aa06578d13bb462e5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85ac27017abbadeb038f5b881aefe1aff394036931529c84c9c5a34a36e556c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048630"
 ---
-# <a name="em_setctfopenstatus-message"></a>EM \_ setctfopenstatus-Meldung
+# <a name="em_setctfopenstatus-message"></a>EM \_ SETCTFOPENSTATUS-Meldung
 
-Öffnet oder schließt die TSF-Tastatur (Text Services Framework).
+Öffnet oder schließt die TASTATUR Textdienstframework (TSF).
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ ms.locfileid: "104040899"
 *wParam* 
 </dt> <dd>
 
-Verwenden Sie " **true**", um die TSF-Tastatur zu aktivieren. Um die TSF-Tastatur zu deaktivieren, verwenden Sie **false**.
+Um die TSF-Tastatur zu aktivieren, verwenden Sie **TRUE**. Verwenden Sie FALSE, um die TSF-Tastatur **zu deaktivieren.**
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung gibt diese Meldung **true** zurück. Wenn nicht erfolgreich, gibt diese Meldung **false** zurück.
+Wenn dies erfolgreich ist, gibt diese Meldung **TRUE zurück.** Wenn dies nicht erfolgreich ist, gibt diese Meldung **FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Bei erfolgreicher Ausführung gibt diese Meldung **true** zurück. Wenn nicht er
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Bei erfolgreicher Ausführung gibt diese Meldung **true** zurück. Wenn nicht er
 
 <dl> <dt>
 
-[**EM \_ getctfopenstatus**](em-getctfopenstatus.md)
+[**EM \_ GETCTFOPENSTATUS**](em-getctfopenstatus.md)
 </dt> </dl>
 
  

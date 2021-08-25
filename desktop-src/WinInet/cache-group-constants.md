@@ -48,7 +48,7 @@ Die folgende Liste enthält die Konstanten, die von den Cachegruppenfunktionen v
 
 
 
-Ruft die Flags, den Typ und die Datenträgerkontingentattribute der Cachegruppe ab. Dies wird von der [**GetUrlCacheGroupAttribute-Funktion**](/windows/desktop/api/Wininet/nf-wininet-geturlcachegroupattributea) verwendet.
+Ruft die Attribute flags, type und disk quota der Cachegruppe ab. Dies wird von der [**GetUrlCacheGroupAttribute-Funktion**](/windows/desktop/api/Wininet/nf-wininet-geturlcachegroupattributea) verwendet.
 
 
 </dt> </dl> </dd> <dt>

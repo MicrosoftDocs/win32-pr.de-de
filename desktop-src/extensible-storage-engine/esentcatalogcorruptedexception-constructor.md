@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcatalogverdertedexception-Konstruktor'
-title: Esentcatalogverdertedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentCatalogCorruptedException-Konstruktor'
+title: EsentCatalogCorruptedException-Konstruktor
 TOCTitle: 'EsentCatalogCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCatalogCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcatalogcorruptedexception.esentcatalogcorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b4668ca76b012168eaf1461ff6c03fda10e0d24f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd015b94cc1f3a9e4df47bbf27243d8bc9eb3512a701f386645b34667b050ef8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021180"
 ---
-# <a name="esentcatalogcorruptedexception-constructor"></a>Esentcatalogverdertedexception-Konstruktor
+# <a name="esentcatalogcorruptedexception-constructor"></a>EsentCatalogCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcatalogverdertedexception-Klasse.
+Initialisiert eine neue Instanz der EsentCatalogCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentCatalogCorruptedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcatalogverdertedexception-Klasse](./esentcatalogcorruptedexception-class.md)
+[EsentCatalogCorruptedException-Klasse](./esentcatalogcorruptedexception-class.md)
 
-[Esentcatalogverdertedexception-Member](./esentcatalogcorruptedexception-members.md)
+[EsentCatalogCorruptedException-Member](./esentcatalogcorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

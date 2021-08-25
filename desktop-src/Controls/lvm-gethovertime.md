@@ -1,9 +1,9 @@
 ---
-title: LVM_GETHOVERTIME Meldung (kommstrg. h)
-description: Ruft die Zeitspanne ab, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Sie können diese Nachricht explizit senden oder das ListView \_ gethovertime-Makro verwenden.
+title: LVM_GETHOVERTIME Meldung (Commctrl.h)
+description: Ruft die Zeitspanne ab, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Sie können diese Nachricht explizit senden oder das ListView \_ GetHoverTime-Makro verwenden.
 ms.assetid: e7646024-f868-459f-88be-b232b6b4bb2a
 keywords:
-- Windows-Steuerelemente für LVM_GETHOVERTIME Meldung
+- LVM_GETHOVERTIME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 83e243ece42f06ffe35eb31954d9ca0dd44957be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 150a8eff54f8b3c27f0e7783ceda67af60c326e370d1a518d83e6bdd214fb529
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920100"
 ---
-# <a name="lvm_gethovertime-message"></a>LVM- \_ gethovertime-Nachricht
+# <a name="lvm_gethovertime-message"></a>LVM \_ GETHOVERTIME-Nachricht
 
-Ruft die Zeitspanne ab, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Sie können diese Nachricht explizit senden oder das [**ListView \_ gethovertime**](/windows/desktop/api/Commctrl/nf-commctrl-listview_gethovertime) -Makro verwenden.
+Ruft die Zeitspanne ab, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Sie können diese Nachricht explizit senden oder das [**ListView \_ GetHoverTime-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_gethovertime) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Zeitspanne ab, die der Mauszeiger auf ein Element zeigen muss, bevor es
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeitspanne in Millisekunden zurück, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Wenn der Rückgabewert (**DWORD**)-1 ist, ist die Hover-Zeit die standardmäßige Hover-Zeit.
+Gibt die Zeitspanne in Millisekunden zurück, die der Mauszeiger auf ein Element zeigen muss, bevor es ausgewählt wird. Wenn der Rückgabewert (**DWORD**)-1 ist, ist die Hoverzeit die Standardzeigerzeit.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Hover-Zeit wirkt sich nur auf Listenansicht-Steuerelemente aus, die über die [**LVS \_ Ex \_ trackselect**](extended-list-view-styles.md)-, [**LVS \_ Ex \_ oneclickreaktivierungs**](extended-list-view-styles.md)-oder [**LVS \_ Ex \_ twoclickaktivierungs**](extended-list-view-styles.md) -Stil der erweiterten Listenansicht verfügen.
+Die Hoverzeit wirkt sich nur auf Listenansichtssteuerelemente aus, die den erweiterten Listenansichtsstil [**LVS \_ EX \_ TRACKSELECT,**](extended-list-view-styles.md) [**LVS \_ EX \_ ONECLICKACTIVATE**](extended-list-view-styles.md)oder [**LVS EX \_ \_ TWOCLICKACTIVATE**](extended-list-view-styles.md) aufweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Die Hover-Zeit wirkt sich nur auf Listenansicht-Steuerelemente aus, die über di
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

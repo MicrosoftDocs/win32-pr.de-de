@@ -1,9 +1,9 @@
 ---
-title: BCM_GETNOTELENGTH Meldung (kommstrg. h)
-description: Ruft die Länge des Notiz Texts ab, der in der Beschreibung für eine Befehls Link Schaltfläche angezeigt werden kann. Senden Sie diese Nachricht explizit oder mithilfe der Schaltfläche \_ getnotelength-Makro.
+title: BCM_GETNOTELENGTH Meldung (Commctrl.h)
+description: Ruft die Länge des Hinweistexts ab, der in der Beschreibung für eine Befehlslinkschaltfläche angezeigt werden kann. Senden Sie diese Nachricht explizit oder mithilfe des \_ Schaltflächenmakros GetNoteLength.
 ms.assetid: 62385485-b553-47e9-9f15-696cc4694752
 keywords:
-- Windows-Steuerelemente für BCM_GETNOTELENGTH Meldung
+- BCM_GETNOTELENGTH Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b33c5245778481033bd97326c3d66a40bf03210
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 385cb5d7694818a0e0e03ab74bcc31b76d13f5d304c7415b1f70a0fd43e1b31b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921660"
 ---
-# <a name="bcm_getnotelength-message"></a>BCM \_ getnotelength-Meldung
+# <a name="bcm_getnotelength-message"></a>BCM \_ GETNOTELENGTH-Nachricht
 
-Ruft die Länge des Notiz Texts ab, der in der Beschreibung für eine Befehls Link Schaltfläche angezeigt werden kann. Senden Sie diese Nachricht explizit oder mithilfe der [**Schaltfläche \_ getnotelength**](/windows/desktop/api/Commctrl/nf-commctrl-button_getnotelength) -Makro.
+Ruft die Länge des Hinweistexts ab, der in der Beschreibung für eine Befehlslinkschaltfläche angezeigt werden kann. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ Schaltflächenmakros GetNoteLength.**](/windows/desktop/api/Commctrl/nf-commctrl-button_getnotelength)
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Länge des Notiz Texts in **WCHARs** zurück, ohne abschließende **null**-Werte, oder 0 (null), wenn kein Hinweis Text vorhanden ist.
+Gibt die Länge des Notiztexts in **WCHARs** zurück, einschließlich aller abschließenden NULL-Werte oder **0**(null), wenn kein Notiztext vorhanden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ab ComCtl32 dll, Version 6,01, können Befehls Link Schaltflächen einen Hinweis enthalten. Weitere Informationen zu DLL-Versionen finden Sie unter [allgemeine Steuerelement Versionen](common-control-versions.md).
+Ab comctl32 DLL Version 6.01 können Befehlslinkschaltflächen einen Hinweis enthalten. Informationen zu DLL-Versionen finden Sie unter [Allgemeine Steuerungsversionen.](common-control-versions.md)
 
-Die **BCM \_ getnotelength** -Nachricht funktioniert nur mit den Schaltflächen Stilen " [**SB \_ CommandLink**](button-styles.md) " und " [**SB \_ defcommandlink**](button-styles.md) ".
+Die **BCM \_ GETNOTELENGTH-Nachricht** funktioniert nur mit den Schaltflächenstilen [**BS \_ COMMANDLINK**](button-styles.md) und [**BS \_ DEFCOMMANDLINK.**](button-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die **BCM \_ getnotelength** -Nachricht funktioniert nur mit den Schaltflächen 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Die **BCM \_ getnotelength** -Nachricht funktioniert nur mit den Schaltflächen 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [Schaltflächenstile](button-styles.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Schaltflächentypen](button-types-and-styles.md)

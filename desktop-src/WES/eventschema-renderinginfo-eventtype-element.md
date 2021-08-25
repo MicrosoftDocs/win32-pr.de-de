@@ -1,9 +1,9 @@
 ---
-title: Renderinginfo (EventType)-Element
-description: Enthält die gerenderten Meldungs Zeichenfolgen für das Ereignis (einschließlich der Meldungs Zeichenfolge des Ereignisses und der Meldungs Zeichenfolgen für alle Eigenschaften des Ereignisses, z. b. Ebene, Aufgabe und OpCode).
+title: RenderingInfo -Element (EventType)
+description: Enthält die gerenderten Meldungszeichenfolgen für das Ereignis (enthält die Meldungszeichenfolge des Ereignisses und die Meldungszeichenfolgen für alle Ereigniseigenschaften wie Ebene, Aufgabe und Opcode).
 ms.assetid: a0b2a21d-16a0-4c88-9d57-4c99706eeea1
 keywords:
-- Renderinginfo-Element EventLog
+- RenderingInfo-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 771901196c4988025cce203ffc3134450d38ed7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7434ff25600daf72d678d0d67e3b5d581474835de10498ba005986f28c057048
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340297"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904380"
 ---
-# <a name="renderinginfo-eventtype-element"></a>Renderinginfo (EventType)-Element
+# <a name="renderinginfo-eventtype-element"></a>RenderingInfo -Element (EventType)
 
-Enthält die gerenderten Meldungs Zeichenfolgen für das Ereignis (einschließlich der Meldungs Zeichenfolge des Ereignisses und der Meldungs Zeichenfolgen für alle Eigenschaften des Ereignisses, z. b. Ebene, Aufgabe und OpCode).
+Enthält die gerenderten Meldungszeichenfolgen für das Ereignis (enthält die Meldungszeichenfolge des Ereignisses und die Meldungszeichenfolgen für alle Ereigniseigenschaften wie Ebene, Aufgabe und Opcode).
 
 ``` syntax
 <xs:element name="RenderingInfo"
@@ -30,7 +30,7 @@ Enthält die gerenderten Meldungs Zeichenfolgen für das Ereignis (einschließli
  />
 ```
 
-Das **renderinginfo** -Element wird durch den komplexen [**eventType**](eventschema-eventtype-complextype.md) -Typ definiert.
+Das **RenderingInfo-Element** wird durch den komplexen [**EventType-Typ**](eventschema-eventtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **renderinginfo** -Element wird durch den komplexen [**eventType**](eventsch
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

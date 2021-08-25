@@ -1,18 +1,18 @@
 ---
 title: DWM-Beispiele
-description: Desktopfenster-Manager (DWM) ist ein Satz von Schnittstellen, die in Windows Vista eingeführt wurden, und einige neue Features, die in Windows 7 eingeführt wurden.
+description: Desktopfenster-Manager (DWM) ist eine Reihe von Schnittstellen, die in Windows Vista mit einigen neuen Features eingeführt wurden, die in Windows 7 eingeführt wurden.
 ms.assetid: 43fe71e7-4e5c-46fb-876b-e26996071662
 keywords:
 - Desktopfenster-Manager (DWM), Beispiele
-- Dwm (Desktopfenster-Manager), Beispiele
+- DWM (Desktopfenster-Manager),Beispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a04bf6b56aef18f09096599745bdd805ed09a68b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e8d6b13ce917c21e033f118ac8b62b8fbe03fe9f63065a220f3cccb45d3371a3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022140"
 ---
 # <a name="dwm-samples"></a>DWM-Beispiele
 
@@ -22,7 +22,7 @@ ms.locfileid: "103856259"
 
 | Thema                                                                                                   | BESCHREIBUNG                                                                                                   |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| [Anpassen eines Miniaturansichtsymbols und einer Bitmap für die Livevorschau](dwm-sample-customizethumbnail.md)<br/> | Zeigt, wie Sie eine Miniaturansicht und eine Live Vorschau-Bitmap (auch als Peek Preview bezeichnet) anpassen können.<br/> |
+| [Anpassen eines Miniaturansichtsymbols und einer Bitmap für die Livevorschau](dwm-sample-customizethumbnail.md)<br/> | Zeigt, wie Sie eine miniaturisierte Miniaturansicht und eine Livevorschaubitmap (auch als Vorschauvorschau bezeichnet) anpassen.<br/> |
 
 
 

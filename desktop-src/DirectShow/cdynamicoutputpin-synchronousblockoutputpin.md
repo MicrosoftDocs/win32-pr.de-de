@@ -1,7 +1,7 @@
 ---
-description: Die synchronousblockoutputpin-Methode blockiert die PIN. gibt erst zurück, wenn die PIN blockiert ist.
+description: Die SynchronousBlockOutputPin-Methode blockiert den Pin. gibt erst dann zurück, wenn die Stecknadel blockiert ist.
 ms.assetid: 10fdb788-bc72-4eda-b60b-af83f954d689
-title: Cdynamicoutputpin. synchronousblockoutputpin-Methode (amfilter. h)
+title: CDynamicOutputPin.SynchronousBlockOutputPin-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7fff1a0a1f093b97d07c74d7916ef2a7511d0e16
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d8613a27d8af2dc2b69a93a1f324db17b054cf2dd312fdb0c9d6cd63e6c89ca8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916310"
 ---
-# <a name="cdynamicoutputpinsynchronousblockoutputpin-method"></a>Cdynamicoutputpin. synchronousblockoutputpin-Methode
+# <a name="cdynamicoutputpinsynchronousblockoutputpin-method"></a>CDynamicOutputPin.SynchronousBlockOutputPin-Methode
 
-Die- `SynchronousBlockOutputPin` Methode blockiert die PIN und gibt erst zurück, wenn die PIN blockiert ist.
+Die `SynchronousBlockOutputPin` -Methode blockiert die Stecknadel; gibt erst dann zurück, wenn die Stecknadel blockiert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                                                    | Beschreibung                                              |
 |--------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                           | Erfolg.<br/>                                      |
-| <dl> <dt>**VFW \_ E \_ Pin \_ bereits \_ blockiert**</dt> </dl>                   | Die PIN ist bereits in einem anderen Thread blockiert.<br/>     |
-| <dl> <dt>**VFW \_ E \_ Pin \_ ist \_ \_ in \_ diesem \_ Thread bereits blockiert.**</dt> </dl> | Die PIN ist bereits im aufrufenden Thread blockiert.<br/> |
+| <dl> <dt>**VFW \_ \_ E-PIN \_ BEREITS \_ BLOCKIERT**</dt> </dl>                   | Das Anheften ist bereits in einem anderen Thread blockiert.<br/>     |
+| <dl> <dt>**VFW \_ \_ E-PIN \_ FÜR \_ DIESEN \_ \_ \_ THREAD BEREITS BLOCKIERT**</dt> </dl> | Pin ist im aufrufenden Thread bereits blockiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode nicht aus dem streamingthread aufzurufen.
+Rufen Sie diese Methode nicht aus dem Streamingthread auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Diese Methode nicht aus dem streamingthread aufzurufen.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Diese Methode nicht aus dem streamingthread aufzurufen.
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice ManufacturerName-Methode
+title: IBasicDevice ManufacturerName-Methode
 description: Ruft den Herstellernamen des Geräts ab.
 ms.assetid: F04400C9-02FC-4CB5-B355-A7E84BECD098
 keywords:
-- ManufacturerName-Methode Medien Streaming-API
-- ManufacturerName-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, ManufacturerName-Methode
+- 'ManufacturerName-Methode: Medienstreaming-API'
+- ManufacturerName-Methode Media Streaming-API, IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , ManufacturerName-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 698b4b6c202ed157737b20296976a282c7f97ba3
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 453e11fc547998b6dc3e39017684c30cacd205c0c17b21846925d4de472f43a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011830"
 ---
-# <a name="ibasicdevicemanufacturername-method"></a>Ibasicdevice:: ManufacturerName-Methode
+# <a name="ibasicdevicemanufacturername-method"></a>IBasicDevice::ManufacturerName-Methode
 
 Ruft den Herstellernamen des Geräts ab.
 
@@ -41,7 +41,7 @@ HRESULT ManufacturerName(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf den Herstellernamen des Geräts.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf den Herstellernamen des Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

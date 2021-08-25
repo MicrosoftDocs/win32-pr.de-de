@@ -1,9 +1,9 @@
 ---
-title: EM_UNDO Meldung (Winuser. h)
-description: Diese Nachricht macht den letzten Bearbeitungs Steuerungs Vorgang in der Rückgängig-Warteschlange des-Steuer Elements rückgängig. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_UNDO Meldung (Winuser.h)
+description: Diese Meldung rückgängigt den letzten Bearbeitungssteuerelementvorgang in der Rückgängig-Warteschlange des Steuerelements. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 ms.assetid: c4bff128-0383-40c5-8f29-7738f7f26871
 keywords:
-- Windows-Steuerelemente für EM_UNDO Meldung
+- EM_UNDO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c75d79e7ed25e582682830b1323c27878bbdbb3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 452d82e6d0685314a79f1f95cff487ee3f52e2d1b70925c3e6e72f9263f442e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047920"
 ---
-# <a name="em_undo-message"></a>EM- \_ Rückgängig Meldung
+# <a name="em_undo-message"></a>EM \_ UNDO-Nachricht
 
-Diese Nachricht macht den letzten Bearbeitungs Steuerungs Vorgang in der Rückgängig-Warteschlange des-Steuer Elements rückgängig. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Diese Meldung rückgängigt den letzten Bearbeitungssteuerelementvorgang in der Rückgängig-Warteschlange des Steuerelements. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,17 +45,17 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem einzeiligen Bearbeitungs Steuerelement ist der Rückgabewert immer " **true**".
+Für ein einzeiliges Bearbeitungssteuerelement ist der Rückgabewert immer **TRUE.**
 
-Bei einem mehrzeiligen Bearbeitungs Steuerelement ist der Rückgabewert **true** , wenn der Rückgängig-Vorgang erfolgreich ist, oder **false** , wenn der Rückgängig-Vorgang fehlschlägt.
+Bei einem mehrzeiligen Bearbeitungssteuerelement ist der Rückgabewert **TRUE,** wenn der Rückgängig-Vorgang erfolgreich ist, oder **FALSE,** wenn der Rückgängig-Vorgang fehlschlägt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 1,0:** Ein Rückgängig-Vorgang kann auch rückgängig gemacht werden. Beispielsweise können Sie gelöschten Text mit der ersten **EM- \_ Rückgängig** -Nachricht wiederherstellen und den Text erneut mit einer zweiten **EM- \_ Rückgängig** -Meldung entfernen, solange es keinen dazwischen liegenden Bearbeitungsvorgang gibt.
+**Steuerelemente bearbeiten und Rich Edit 1.0:** Ein Rückgängig-Vorgang kann ebenfalls rückgängig sein. Beispielsweise können Sie gelöschten Text mit der ersten **\_ EM-UNDO-Nachricht** wiederherstellen und den Text mit einer zweiten **\_ EM-UNDO-Nachricht** wieder entfernen, solange kein eingreifender Bearbeitungsvorgang erfolgt.
 
-**Rich Edit 2,0 und höher:** Die Rückgängig-Funktion ist eine mehrstufige Funktion, sodass das Senden von zwei **EM- \_ Rückgängig** -Nachrichten die letzten beiden Vorgänge in der rückgängig- Um einen Vorgang wiederholen, senden Sie die EM-Wiederholungs Nachricht. [**\_**](em-redo.md)
+**Rich Edit 2.0 und höher:** Das Rückgängig-Feature ist auf mehreren Ebenen, sodass beim Senden von zwei **\_ EM-UNDO-Nachrichten** die letzten beiden Vorgänge in der Rückgängig-Warteschlange rückgängig werden. Um einen Vorgang zu wiederholen, senden Sie die [**\_ EM-REDO-Nachricht.**](em-redo.md)
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -73,7 +73,7 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-[**EM \_ CanUndo**](em-canundo.md)
+[**EM \_ CANUNDO**](em-canundo.md)
 </dt> </dl>
 
  

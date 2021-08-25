@@ -1,23 +1,23 @@
 ---
-title: Informationen zu fensterlosen Bearbeitungs Steuerelementen
-description: Ein fensterloses Rich Edit-Steuerelement, das auch als Text Dienste-Objekt bezeichnet wird, ist ein Objekt, das die Funktionalität eines Rich-Edit-Steuer Elements bereitstellt, ohne das Fenster bereitzustellen.
+title: Informationen zu fensterlosen Rich Edit-Steuerelementen
+description: Ein fensterloses Rich Edit-Steuerelement, auch als Textdienstobjekt bezeichnet, ist ein Objekt, das die Funktionalität eines rich-Bearbeitungssteuerfelds ohne Angabe des Fensters bietet.
 ms.assetid: 880a704d-776a-49d3-be31-0328af408e3b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fc1c8bc685dff5f8ddb041011089a84eb2e12008
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 96b68a2bc0317a884f0516b73b3674d104c4fa6c12f16bdc24960d7ea0ef8bbf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922180"
 ---
-# <a name="about-windowless-rich-edit-controls"></a>Informationen zu fensterlosen Bearbeitungs Steuerelementen
+# <a name="about-windowless-rich-edit-controls"></a>Informationen zu fensterlosen Rich Edit-Steuerelementen
 
-Ein fensterloses Rich Edit-Steuerelement, das auch als Text Dienste-Objekt bezeichnet wird, ist ein Objekt, das die Funktionalität eines [Rich-Edit-Steuer](rich-edit-controls.md) Elements bereitstellt, ohne das Fenster bereitzustellen. Um die Funktionalität eines Fensters bereitzustellen, z. b. die Fähigkeit, Nachrichten zu empfangen, und einen Gerätekontext, in dem Sie gezeichnet werden kann, verwenden fensterlose Rich Edit-Steuerelemente ein Schnittstellen Paar: [**itextservices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) und [**itexthost**](/windows/desktop/api/Textserv/nl-textserv-itexthost).
+Ein fensterloses Rich Edit-Steuerelement, auch als Textdienstobjekt bezeichnet, ist [](rich-edit-controls.md) ein Objekt, das die Funktionalität eines rich-Bearbeitungssteuerfelds ohne Angabe des Fensters bietet. Zum Bereitstellen der Funktionalität eines Fensters, z. B. der Möglichkeit zum Empfangen von Nachrichten und eines Gerätekontexts, in den es zeichnen kann, verwenden fensterlose rich edit-Steuerelemente ein Paar von Schnittstellen: [**ITextServices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) und [**ITextHost**](/windows/desktop/api/Textserv/nl-textserv-itexthost).
 
-Um ein fensterloses Bearbeitungs Steuerelement zu erstellen, rufen Sie [**die Funktion "**](/windows/desktop/api/Textserv/nf-textserv-createtextservices) -Funktion" mit einem Zeiger auf die Implementierung der [**itexthost**](/windows/desktop/api/Textserv/nl-textserv-itexthost) -Schnittstelle auf. " **Kreatetextservices** " gibt einen [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Zeiger zurück, den Sie Abfragen können, um einen Zeiger auf die [**itextservices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) -Implementierung des fensterlosen Steuer Elements abzurufen.
+Um ein fensterloses Rich Edit-Steuerelement zu erstellen, rufen Sie die [**CreateTextServices-Funktion**](/windows/desktop/api/Textserv/nf-textserv-createtextservices) mit einem Zeiger auf Ihre Implementierung der [**ITextHost-Schnittstelle**](/windows/desktop/api/Textserv/nl-textserv-itexthost) auf. **CreateTextServices gibt** einen [**IUnknown-Zeiger**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) zurück, den Sie abfragen können, um einen Zeiger auf die [**ITextServices-Implementierung**](/windows/desktop/api/Textserv/nl-textserv-itextservices) des fensterlosen Steuerelements abzurufen.
 
-Msftedit.dll exportiert eine Schnittstellen-ID (IID) namens **IID \_ itextservices** , die Sie verwenden können, um den [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Zeiger für die [**itextservices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) -Schnittstelle abzufragen. Im folgenden Beispiel wird gezeigt, wie **IID \_ itextservices** abgerufen und zum Abrufen der **itextservices** -Schnittstelle verwendet wird.
+Msftedit.dll exportiert einen Schnittstellenbezeichner **(IID) namens IID \_ ITextServices,** den Sie zum Abfragen des [**IUnknown-Zeigers**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) für die [**ITextServices-Schnittstelle verwenden**](/windows/desktop/api/Textserv/nl-textserv-itextservices) können. Das folgende Beispiel zeigt, wie **IID \_ ITextServices abgerufen** und zum Abrufen der **ITextServices-Schnittstelle verwendet** wird.
 
 
 ```
@@ -58,14 +58,14 @@ Msftedit.dll exportiert eine Schnittstellen-ID (IID) namens **IID \_ itextservic
 
 
 
-Msftedit.dll exportiert außerdem eine Schnittstellen-ID (IID) namens **IID \_ itexthost** , die auf ähnliche Weise verwendet werden kann, um die [**itexthost**](/windows/desktop/api/Textserv/nl-textserv-itexthost) -Schnittstelle abzufragen.
+Msftedit.dll exportiert auch einen Schnittstellenbezeichner (IID) namens **IID \_ ITextHost,** der auf ähnliche Weise verwendet werden kann, um die [**ITextHost-Schnittstelle abfragen zu**](/windows/desktop/api/Textserv/nl-textserv-itexthost) können.
 
-Die [**itexthost**](/windows/desktop/api/Textserv/nl-textserv-itexthost) -Schnittstelle verfügt über Methoden, die vom fensterlosen Steuerelement aufgerufen werden, um Informationen zu Ihrem Fenster abzurufen. Beispielsweise ruft das Text Services-Objekt die [**txgetdc**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txgetdc) -Methode auf, um einen Gerätekontext abzurufen, in den er gezeichnet werden kann. Das fensterlose Steuerelement ruft die [**txnotify**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txnotify) -Methode auf, um Benachrichtigungen (z. b. die Rich-Edit-Benachrichtigungs Meldungen) an den texthost zu senden. Das Text Services-Objekt ruft andere **itexthost** -Methoden auf, um den texthost zum Ausführen anderer Fenster bezogener Dienste aufzufordern. Beispielsweise fordert die [**txinvalidatup**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txinvalidaterect) -Methode den texthost zum Hinzufügen eines Rechtecks zum Aktualisierungs Bereich des Fensters auf.
+Die [**ITextHost-Schnittstelle**](/windows/desktop/api/Textserv/nl-textserv-itexthost) verfügt über Methoden, die das fensterlose Steuerelement aufruft, um Informationen zu Ihrem Fenster abzurufen. Beispielsweise ruft das Textdienstobjekt die [**TxGetDC-Methode**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txgetdc) auf, um einen Gerätekontext abzurufen, in den es zeichnen kann. Das fensterlose Steuerelement ruft die [**TxNotify-Methode**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txnotify) auf, um Benachrichtigungen wie die Rich Edit-Benachrichtigungsmeldungen an den Texthost zu senden. Das Textdienstobjekt ruft andere **ITextHost-Methoden** auf, um den Texthost anweisen, andere fensterbezogene Dienste durchzuführen. Beispielsweise fordert die [**TxInvalidateRect-Methode**](/windows/desktop/api/Textserv/nf-textserv-itexthost-txinvalidaterect) den Texthost auf, dem Updatebereich des Fensters ein Rechteck hinzuzufügen.
 
-Ein Standardmäßiges Bearbeitungs Steuerelement verfügt über eine Fenster Prozedur, mit der Systemmeldungen und Nachrichten von der Anwendung verarbeitet werden. Sie können das Fenster Handle des Steuer Elements verwenden, um IT-Nachrichten zum Durchführen von Textbearbeitung und anderen Vorgängen zu senden. Ein fensterloses Steuerelement für die Bearbeitung von Fenstern hat jedoch keine Fenster Prozedur zum empfangen und Verarbeiten von Nachrichten. Stattdessen wird eine [**itextservices**](/windows/desktop/api/Textserv/nl-textserv-itextservices) -Schnittstelle bereitstellt. Zum Senden von Nachrichten an ein fensterloses Rich-Edit-Steuerelement wird die [**txsendmessage**](/windows/desktop/api/Textserv/nf-textserv-itextservices-txsendmessage) -Methode aufgerufen. Mit dieser Methode können Sie jede der Rich Edit-Nachrichten senden oder andere Nachrichten übergeben, die sich auf das Steuerelement auswirken, z. b. Systemmeldungen für Maus-oder Tastatureingaben.
+Ein standardmäßiges Rich-Edit-Steuerelement verfügt über eine Fensterprozedur, die Systemmeldungen und Nachrichten aus Ihrer Anwendung verarbeitet. Sie können das Fensterhand handle des Steuerelements verwenden, um ihm Nachrichten zum Ausführen von Textbearbeitung und anderen Vorgängen zu senden. Ein fensterloses Rich-Edit-Steuerelement verfügt jedoch über keine Fensterprozedur zum Empfangen und Verarbeiten von Nachrichten. Stattdessen stellt sie eine [**ITextServices-Schnittstelle**](/windows/desktop/api/Textserv/nl-textserv-itextservices) bereit. Um Nachrichten an ein fensterloses Rich Edit-Steuerelement zu senden, rufen Sie die [**TxSendMessage-Methode**](/windows/desktop/api/Textserv/nf-textserv-itextservices-txsendmessage) auf. Sie können diese Methode verwenden, um umfangreiche Bearbeitungsnachrichten zu senden oder andere Nachrichten zu übergeben, die sich auf das Steuerelement auswirken, z. B. Systemmeldungen für Maus- oder Tastatureingaben.
 
-Sie können das Objekt "Text Dienste" auch als Teil eines [com-aggregierten Objekts](/windows/desktop/com/aggregation)erstellen. Dies vereinfacht das Aggregieren des Text Services-Objekts mit einem COM-Objekt (Windows less Component Object Model).
+Sie können das Textdienstobjekt auch als Teil eines [COM-aggregierten Objekts erstellen.](/windows/desktop/com/aggregation) Dies erleichtert das Aggregieren des Textdienstobjekts mit einem fensterlosen Component Object Model (COM)-Objekt.
 
- 
+ 
 
- 
+ 

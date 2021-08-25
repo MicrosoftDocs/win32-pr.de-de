@@ -1,7 +1,7 @@
 ---
 description: Gibt das Punktprodukt von zwei Quaternionen zurück.
 ms.assetid: 2ed9aca9-0526-4b92-bd66-b09dcf4f474a
-title: D3DXQuaternionDot-Funktion (D3dx9math. h)
+title: D3DXQuaternionDot-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e893ed9260c0d843e8454d96ab5b634741ee60d4
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7f4e1c2759b5d8a80615fb02dc8636f848938bd480fe3feebc158abd4b70efc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986450"
 ---
 # <a name="d3dxquaterniondot-function"></a>D3DXQuaternionDot-Funktion
 
@@ -41,33 +41,33 @@ FLOAT D3DXQuaternionDot(
 
 <dl> <dt>
 
-*pQ1* \[ in\]
+*pQ1* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> <dt>
 
-*pQ2* \[ in\]
+*pQ2* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Zeiger auf eine Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf eine [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 Das Punktprodukt von zwei Quaternionen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für ein
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

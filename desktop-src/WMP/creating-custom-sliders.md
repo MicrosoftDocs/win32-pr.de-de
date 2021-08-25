@@ -3,22 +3,22 @@ title: Erstellen benutzerdefinierter Schieberegler
 description: Erstellen benutzerdefinierter Schieberegler
 ms.assetid: eb26ba44-a891-4cb6-be74-5acf881e896f
 keywords:
-- Erstellen von Skins, Schieberegler
+- Erstellen von Skins, Schiebereglern
 - Windows Media Player Skins, Schieberegler
 - Skins, Schieberegler
 - Schieberegler in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0f205d46af003589fcc2c3b741a253ea08fae12
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d85a789bbd90003b59e1a9b9dcf8fffcf4a126c38138f7a051c24125780f8c83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902330"
 ---
 # <a name="creating-custom-sliders"></a>Erstellen benutzerdefinierter Schieberegler
 
-Sie können benutzerdefinierte Schieberegler in jeder beliebigen Form erstellen. In diesem Beispiel wird ein einfacher Strip ausgewählt, aber die tatsächliche Form kann etwas sein. Dies ist der Code für das **customslider** -Element:
+Sie können benutzerdefinierte Schieberegler in beliebiger Form erstellen. In diesem Beispiel wird ein einfacher Strip ausgewählt, aber die tatsächliche Form kann eine andere sein. Im Folgenden finden Sie den Code für das ELEMENT 1000111111111111111111111 
 
 
 ```C++
@@ -38,22 +38,22 @@ Sie können benutzerdefinierte Schieberegler in jeder beliebigen Form erstellen.
 
 
 
-Dadurch wird ein Anfangswert für den Schieberegler festgelegt. Es werden zwei neue Bitmaps eingeführt. Eine ist die Graustufen Bitmap (slider.bmp), die definiert, welche Werte verwendet werden, wenn darauf geklickt wird, und die andere (slider.bmp), die bestimmt, welches Bild angezeigt wird, wenn auf einen bestimmten Teil der grau Skala geklickt wird.
+Dadurch wird ein Anfangswert für den Schieberegler eingerichtet. Zwei neue Bitmaps werden eingeführt. Eine ist die Graustufenbitmap (slider.bmp), die definiert, welche Werte beim Klicken auf verwendet werden, und die andere (slider.bmp), die bestimmt, welches Bild angezeigt wird, wenn auf einen bestimmten Teil der Graustufen geklickt wird.
 
-Der Anfangswert wird durch lauschen auf dem Volume mit wmpprop festgelegt, und das Volume kann geändert werden, wenn der Benutzer auf einen Teil des Schiebereglers klickt, der eine Änderung des Werts auslöst.
+Der Anfangswert wird durch Lauschen auf das Volume mit wmpprop bestimmt. Anschließend kann das Volume geändert werden, wenn der Benutzer auf einen Teil des Schiebereglers klickt, der eine Änderung des Werts auslöst.
 
-Sie können im Abschnitt "Sample" des SDK einen ähnlichen Schieberegler für den Schieberegler sehen.
+Eine ähnliche Arbeitsschieberegler-Skin finden Sie im Beispielabschnitt des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Leitfaden zum Erstellen von Skin**](skin-creation-guide.md)
+[**Handbuch zur Erstellung von Skins**](skin-creation-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

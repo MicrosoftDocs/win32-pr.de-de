@@ -1,7 +1,7 @@
 ---
-description: Aktualisiert das übergeordnete Element für das angegebene Blatt und die untergeordneten virtuellen Festplatten Dateien.
+description: Aktualisiert das übergeordnete Element für die angegebenen untergeordneten und untergeordneten virtuellen Festplattendateien.
 ms.assetid: 5ad41218-bcfd-449a-a66e-2096a1d96bf5
-title: Setparameentvirtualharddisk-Methode der Msvm_ImageManagementService-Klasse
+title: SetParentVirtualHardDisk-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f1d14d3b2ee19a9768e1ee9ed9333a452153cc9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47be9f3f383da237a3679633ac1d663bbc81ef078a7529662b8f21d10246761f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050540"
 ---
-# <a name="setparentvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>Setparameentvirtualharddisk-Methode der MSVM \_ imagemanagementservice-Klasse
+# <a name="setparentvirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>SetParentVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Aktualisiert das übergeordnete Element für das angegebene Blatt und die untergeordneten virtuellen Festplatten Dateien. Weitere Informationen zu Nutzungseinschränkungen für diese Methode finden Sie unter Hinweise.
+Aktualisiert das übergeordnete Element für die angegebenen untergeordneten und untergeordneten virtuellen Festplattendateien. Informationen zu Verwendungseinschränkungen für diese Methode finden Sie unter Hinweise.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ uint32 SetParentVirtualHardDisk(
 
 <dl> <dt>
 
-*Childpath* \[ in\]
+*ChildPath* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort der untergeordneten virtuellen Festplatten Datei angibt.
+Ein vollqualifizierten Pfad, der den Speicherort der untergeordneten virtuellen Festplattendatei angibt.
 
 </dd> <dt>
 
-Element *Pfad* \[ in\]
+*ParentPath* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort der übergeordneten virtuellen Festplatten Datei angibt.
+Ein vollqualifizierten Pfad, der den Speicherort der übergeordneten virtuellen Festplattendatei angibt.
 
 </dd> <dt>
 
-*Blattpfad* \[ in\]
+*LeafPath* \[ In\]
 </dt> <dd>
 
-Ein voll qualifizierter Pfad, der den Speicherort der virtuellen Festplatten Datei für das Blatt angibt. Der-Parameter kann **null** sein, wenn die virtuelle Festplatte offline ist, muss jedoch angegeben werden, wenn die virtuelle Festplatte verwendet wird.
+Ein vollqualifizierten Pfad, der den Speicherort der virtuellen Blattfestplattedatei angibt. Der Parameter kann **NULL** sein, wenn die virtuelle Festplatte offline ist, aber angegeben werden muss, wenn die virtuelle Festplatte verwendet wird.
 
 </dd> <dt>
 
-*Ignoreidmismatch* \[ in\]
+*IgnoreIDMismatch* \[ In\]
 </dt> <dd>
 
-Gibt an, ob das übergeordnete Element zwangsweise festgelegt werden soll, wenn die IDs der virtuellen Datenträger nicht stimmen. Dieser Parameter muss mit Bedacht verwendet werden, denn wenn die neue übergeordnete virtuelle Festplatte nicht mit der ursprünglichen übergeordneten Festplatte identisch ist, können Daten beschädigt werden.
+Gibt an, ob das übergeordnete Element festgelegt werden soll, wenn die Bezeichner des virtuellen Datenträgers nicht übereinstimmen. Dieser Parameter muss mit Vorsicht verwendet werden, da datenbeschädigungen auftreten können, wenn die neue übergeordnete virtuelle Festplatte nicht mit der ursprünglichen übergeordneten Festplatte identisch ist.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -87,10 +87,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -99,7 +99,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -111,29 +111,29 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode können nur die folgenden Typen von virtuellen Festplatten verwendet werden:
+Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden:
 
 -   Differenzierende VHD
--   Differenzierende vhdx
+-   Differenzierende VHDX
 
-Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -141,10 +141,10 @@ Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementser
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -153,7 +153,7 @@ Der Zugriff auf die [**MSVM \_ imagemanagementservice**](msvm-imagemanagementser
 
 <dl> <dt>
 
-[**MSVM \_ imagemanagementservice**](msvm-imagemanagementservice.md)
+[**Msvm \_ ImageManagementService**](msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

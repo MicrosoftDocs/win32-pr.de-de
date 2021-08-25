@@ -1,9 +1,9 @@
 ---
-title: EM_SETMARGINS Meldung (Winuser. h)
-description: Legt die Breite des linken und rechten Rands für ein Bearbeitungs Steuerelement fest. Die Meldung zeichnet das Steuerelement neu, um die neuen Ränder widerzuspiegeln. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_SETMARGINS Meldung (Winuser.h)
+description: Legt die Breite des linken und rechten Rands für ein Bearbeitungssteuerelement fest. In der Meldung wird das Steuerelement neu gezeichnet, um die neuen Ränder widerzuspiegeln. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 ms.assetid: 23eb6c9e-3cf9-4c90-b33e-8da84034b49b
 keywords:
-- Windows-Steuerelemente für EM_SETMARGINS Meldung
+- EM_SETMARGINS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c68f3394234a6f86b3c5ff69622b86e61afc556
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 396bba6dda0f6dbd132b9f67fa5a1ef012758bbf7cf8fa9517b656dcf164c94c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048360"
 ---
-# <a name="em_setmargins-message"></a>EM- \_ setMargin-Meldung
+# <a name="em_setmargins-message"></a>EM \_ SETMARGINS-Nachricht
 
-Legt die Breite des linken und rechten Rands für ein Bearbeitungs Steuerelement fest. Die Meldung zeichnet das Steuerelement neu, um die neuen Ränder widerzuspiegeln. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Legt die Breite des linken und rechten Rands für ein Bearbeitungssteuerelement fest. In der Meldung wird das Steuerelement neu gezeichnet, um die neuen Ränder widerzuspiegeln. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,15 +32,15 @@ Legt die Breite des linken und rechten Rands für ein Bearbeitungs Steuerelement
 *wParam* 
 </dt> <dd>
 
-Die festzulegenden Ränder. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Die festzulegende Ränder. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                            | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                              |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="EC_LEFTMARGIN"></span><span id="ec_leftmargin"></span><dl> <dt>**EC- \_ LeftMargin**</dt> </dl>    | Legt den linken Rand fest.<br/>                                                                                                                                                                                                                                                                                                                                                                                     |
-| <span id="EC_RIGHTMARGIN"></span><span id="ec_rightmargin"></span><dl> <dt>**EC- \_ RightMargin**</dt> </dl> | Legt den rechten Rand fest.<br/>                                                                                                                                                                                                                                                                                                                                                                                    |
-| <span id="EC_USEFONTINFO"></span><span id="ec_usefontinfo"></span><dl> <dt>**EC \_ usefontinfo**</dt> </dl> | **Rich Edit-Steuerelemente:** Legt den linken und rechten Rand auf eine schmale Breite fest, die mithilfe der Textmetrik der aktuellen Schriftart des Steuer Elements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, werden die Ränder auf 0 (null) festgelegt. Der *LPARAM* -Parameter wird ignoriert. <br/> Steuer **Elemente bearbeiten:** Der Wert " **EC \_ usefontinfo** " kann nicht im *wParam* -Parameter verwendet werden. Sie kann nur im *LPARAM* -Parameter verwendet werden.<br/> |
+| <span id="EC_LEFTMARGIN"></span><span id="ec_leftmargin"></span><dl> <dt>**EC \_ LEFTMARGIN**</dt> </dl>    | Legt den linken Rand fest.<br/>                                                                                                                                                                                                                                                                                                                                                                                     |
+| <span id="EC_RIGHTMARGIN"></span><span id="ec_rightmargin"></span><dl> <dt>**EC \_ RIGHTMARGIN**</dt> </dl> | Legt den rechten Rand fest.<br/>                                                                                                                                                                                                                                                                                                                                                                                    |
+| <span id="EC_USEFONTINFO"></span><span id="ec_usefontinfo"></span><dl> <dt>**EC \_ USEFONTINFO**</dt> </dl> | **Rich Edit-Steuerelemente:** Legt den linken und rechten Rand auf eine schmale Breite fest, die mithilfe der Textmetriken der aktuellen Schriftart des Steuerelements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, werden die Ränder auf 0 (null) festgelegt. Der *lParam-Parameter* wird ignoriert. <br/> **Bearbeiten von Steuerelementen:** Der **EC \_ USEFONTINFO-Wert** kann nicht im *wParam-Parameter* verwendet werden. Sie kann nur im *lParam-Parameter* verwendet werden.<br/> |
 
 
 
@@ -51,13 +51,13 @@ Die festzulegenden Ränder. Dieser Parameter kann einen oder mehrere der folgend
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die neue Breite des linken Rands in Pixel an. Dieser Wert wird ignoriert, wenn der **EC- \_ LeftMargin** von *wParam* nicht eingeschlossen wird.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die neue Breite des linken Rands in Pixel an. Dieser Wert wird ignoriert, wenn *wParam* EC **\_ LEFTMARGIN** nicht enthält.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 3,0 und höher:** Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) kann den Wert des **EC- \_ usefontinfo** angeben, um den linken Rand auf eine schmale Breite festzulegen, die mithilfe der Textmetrik der aktuellen Schriftart des Steuer Elements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, wird der Rand auf 0 (null) festgelegt.
+**Bearbeiten von Steuerelementen und Rich Edit 3.0 und höher:** [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) kann den **EC \_ USEFONTINFO-Wert** angeben, um den linken Rand auf eine schmale Breite festzulegen, die mithilfe der Textmetriken der aktuellen Schriftart des Steuerelements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, wird der Rand auf 0 (null) festgelegt.
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die neue Breite des rechten Rands in Pixel an. Dieser Wert wird ignoriert, wenn *wParam* den **EC- \_ RightMargin** nicht einschließt.
+[**HiWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die neue Breite des rechten Rands in Pixel an. Dieser Wert wird ignoriert, wenn *wParam* EC **\_ RIGHTMARGIN** nicht enthält.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 3,0 und höher:** Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) kann den Wert des **EC- \_ usefontinfo** angeben, um den rechten Rand auf eine schmale Breite festzulegen, die mithilfe der Textmetrik der aktuellen Schriftart des Steuer Elements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, wird der Rand auf 0 (null) festgelegt.
+**Bearbeiten von Steuerelementen und Rich Edit 3.0 und höher:** [**HiWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) kann den **EC \_ USEFONTINFO-Wert** angeben, um den rechten Rand auf eine schmale Breite festzulegen, die mithilfe der Textmetriken der aktuellen Schriftart des Steuerelements berechnet wird. Wenn für das Steuerelement keine Schriftart festgelegt wurde, wird der Rand auf 0 (null) festgelegt.
 
 </dd> </dl>
 
@@ -65,11 +65,11 @@ Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gi
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Steuer **Elemente bearbeiten:** Sie können " **EC \_ usefontinfo** " nicht im *wParam* -Parameter verwenden, aber Sie können es im *LPARAM* -Parameter verwenden.
+**Bearbeiten von Steuerelementen:** Sie können **EC \_ USEFONTINFO** nicht im *wParam-Parameter* verwenden, aber sie können sie im *lParam-Parameter* verwenden.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Alle Rich Edit-Versionen unterstützen die Verwendung von " **EC \_ usefontinfo** " im *wParam* -Parameter. Allerdings unterstützt nur Microsoft Rich Edit 3,0 und höher die Verwendung von " **EC \_ usefontinfo** " im *LPARAM* -Parameter. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Alle Rich Edit-Versionen unterstützen die Verwendung von **EC \_ USEFONTINFO** im *wParam-Parameter.* Allerdings unterstützen nur Microsoft Rich Edit 3.0 und höher die Verwendung von **EC \_ USEFONTINFO** im *lParam-Parameter.* Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-[**EM- \_ getMargin**](em-getmargins.md)
+[**EM \_ GETMARGINS**](em-getmargins.md)
 </dt> </dl>
 
  

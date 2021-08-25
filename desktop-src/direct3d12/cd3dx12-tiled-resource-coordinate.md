@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_TILED_RESOURCE_COORDINATE-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12- \_ Kachel \_ Ressourcen \_ Koordinaten Struktur zu ermöglichen.
+title: CD3DX12_TILED_RESOURCE_COORDINATE -Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ TILED \_ RESOURCE \_ COORDINATE-Struktur zu ermöglichen.
 ms.assetid: B337ED04-E2C6-4B89-80F1-92C0854A6AF2
 keywords:
-- CD3DX12_TILED_RESOURCE_COORDINATE Struktur
+- CD3DX12_TILED_RESOURCE_COORDINATE-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 281afeab8d1172e9cae749512612129dd001161b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 784955545fe8e71227ffae6c5eec54acfd65b4a0ab0867f5c7de99a148976861
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119987850"
 ---
-# <a name="cd3dx12_tiled_resource_coordinate-structure"></a>CD3DX12 \_ Kacheln der \_ Ressourcen \_ Koordinaten Struktur
+# <a name="cd3dx12_tiled_resource_coordinate-structure"></a>CD3DX12 \_ TILED \_ RESOURCE \_ COORDINATE-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12- \_ Kachel \_ Ressourcen \_ Koordinaten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate) Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ TILED \_ RESOURCE \_ COORDINATE-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate) ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ struct CD3DX12_TILED_RESOURCE_COORDINATE  : public D3D12_TILED_RESOURCE_COORDINA
 
 <dl> <dt>
 
-**CD3DX12 \_ gekachelte \_ Ressourcen \_ Koordinate ()**
+**CD3DX12 \_ TILED \_ RESOURCE \_ COORDINATE()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12- \_ Kachel \_ Ressourcen \_ Koordinate.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ TILED \_ RESOURCE \_ COORDINATE.
 
 </dd> <dt>
 
-**explizite CD3DX12 \_ gekachelte \_ Ressourcen \_ Koordinate (konstant D3D12 \_ gekachelte \_ Ressourcen \_ Koordinate &o)**
+**explicit CD3DX12 \_ TILED \_ RESOURCE \_ COORDINATE(const D3D12 \_ TILED \_ RESOURCE COORDINATE \_ &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer \_ gekachelten \_ Ressourcen \_ Koordinate (CD3DX12), die mit dem Inhalt einer anderen [**D3D12- \_ Kachel \_ Ressourcen \_ Koordinaten**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate) Struktur initialisiert wird.
+Erstellt eine neue Instanz einer CD3DX12 TILED RESOURCE COORDINATE, initialisiert mit dem Inhalt einer anderen \_ \_ \_ [**D3D12 \_ TILED \_ RESOURCE \_ COORDINATE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate)
 
 </dd> <dt>
 
-**CD3DX12 \_ gekachelte \_ Ressourcen \_ Koordinate (uint x, uint y, uint z, uint subresource)**
+**CD3DX12 \_ TILED \_ RESOURCE \_ COORDINATE(UINT x, UINT y, UINT z, UINT subresource)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12 \_ gekachelten \_ Ressourcen \_ Koordinate und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz einer CD3DX12 \_ TILED \_ RESOURCE COORDINATE und \_ initialisiert die folgenden Parameter:
 
-Uint x
+UINT x
 
-Uint y
+UINT y
 
-Uint z
+UINT z
 
-Uint-unter Quelle
+UINT-Unterressource
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ \_ \_& () Konstanten**
+**operator const D3D12 \_ TILED \_ RESOURCE COORDINATE \_&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -86,15 +86,15 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12 \_ gekachelte \_ Ressourcen \_ Koordinate**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate)
+[**D3D12 \_ TILED \_ RESOURCE \_ COORDINATE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ settingcontext-Klasse ordnet Konfigurationsobjekte Einstellungs Objekten zu.
+description: Die CIM \_ SettingContext-Klasse ordnet Konfigurationsobjekte Einstellungsobjekten zu.
 ms.assetid: 8ed7e150-b4e6-4fd4-809b-32e870b559c4
 ms.tgt_platform: multiple
 title: CIM_SettingContext-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 867be99e1630f02c0163516ad7a86cf84c2fac13
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: df59bff8be90d3db3ac6dfde638120779850f2691bd3e93826c57f829d034a4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919510"
 ---
-# <a name="cim_settingcontext-class"></a>CIM \_ settingcontext-Klasse
+# <a name="cim_settingcontext-class"></a>CIM \_ SettingContext-Klasse
 
-Die **CIM \_ settingcontext** -Klasse ordnet Konfigurationsobjekte Einstellungs Objekten zu. Beispielsweise können sich die Einstellungen eines Netzwerkadapters je nach Standort oder Netzwerk ändern, an das das Host Computersystem angefügt ist. In diesem Fall würde das Computersystem zwei verschiedene Konfigurationsobjekte aufweisen, die den Unterschieden in der Netzwerkkonfiguration für die beiden Netzwerksegmente entsprechen. Eine Konfiguration würde ein Einstellungs Objekt für den Netzwerkadapter bei der Arbeit in einem Segment aggregieren. während die andere Konfiguration ein anderes Netzwerkadapter-Einstellungs Objekt aggregiert, das für ein anderes Segment spezifisch ist. Beachten Sie, dass viele Computereinstellungen unabhängig von der Netzwerkkonfiguration sind. Beispielsweise würden beide Konfigurationen das gleiche Einstellungs Objekt für die Monitor Auflösung des Computer Systems aggregieren.
+Die **CIM \_ SettingContext-Klasse** ordnet Konfigurationsobjekte Einstellungsobjekten zu. Beispielsweise können sich die Einstellungen eines Netzwerkadapters basierend auf dem Standort oder Netzwerk ändern, an den bzw. das das Hostcomputersystem angefügt ist. In diesem Fall hat das Computersystem zwei verschiedene Konfigurationsobjekte, die den Unterschieden in der Netzwerkkonfiguration für die beiden Netzwerksegmente entsprechend sind. Eine Konfiguration würde ein Einstellungsobjekt für den Netzwerkadapter aggregieren, wenn es in einem Segment ausgeführt wird. Während die andere Konfiguration ein anderes Netzwerkadaptereinstellungsobjekt aggregieren würde, das für ein anderes Segment spezifisch ist. Beachten Sie, dass viele Computereinstellungen unabhängig von der Netzwerkkonfiguration sind. Beispielsweise würden beide Konfigurationen das gleiche Einstellungsobjekt für die Monitorauflösung des Computersystems aggregieren.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,26 +47,26 @@ class CIM_SettingContext
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ settingcontext** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SettingContext-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ settingcontext** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SettingContext-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Context**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Konfiguration**
+Datentyp: **\_ CIM-Konfiguration**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Aggregieren**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Verweis auf das Konfigurationsobjekt, das die Einstellung aggregiert.
@@ -76,7 +76,7 @@ Verweis auf das Konfigurationsobjekt, das die Einstellung aggregiert.
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Einstellung**
+Datentyp: **\_ CIM-Einstellung**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -86,11 +86,11 @@ Verweis auf eine aggregierte Einstellung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,8 +100,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

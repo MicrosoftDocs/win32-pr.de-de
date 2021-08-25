@@ -1,9 +1,9 @@
 ---
 title: RBN_AUTOSIZE Benachrichtigungscode (Commctrl.h)
-description: Wird von einem Rebar-Steuerelement gesendet, das mit dem RBS AUTOIZE-Stil erstellt wurde, wenn die Größe der Leiste automatisch \_ selbst geändert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Wird von einem Neuleistensteuerelement gesendet, das mit dem RBS \_ AUTOIZE-Format erstellt wurde, wenn die Größe der Neuleiste automatisch selbst geändert wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: d174fe99-13cc-404c-9dc5-d5a93e9807a2
 keywords:
-- RBN_AUTOSIZE Benachrichtigungscode Windows Steuerelementen
+- RBN_AUTOSIZE Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119985370"
 ---
 # <a name="rbn_autosize-notification-code"></a>RBN \_ AUTOIZE-Benachrichtigungscode
 
-Wird von einem Rebar-Steuerelement gesendet, das mit dem [**RBS \_ AUTOIZE-Stil**](rebar-control-styles.md) erstellt wurde, wenn die Größe der Leiste automatisch selbst geändert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird von einem Neuleistensteuerelement gesendet, das mit dem [**RBS \_ AUTOIZE-Format**](rebar-control-styles.md) erstellt wurde, wenn die Größe der Neuleiste automatisch selbst geändert wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ RBN_AUTOSIZE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMRBAUTOSIZE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrbautosize) die Informationen zum Größenvergrößerungsvorgang enthält.
+Zeiger auf eine [**NMRBAUTOSIZE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrbautosize) die Informationen zum Größenänderungsvorgang enthält.
 
 </dd> </dl>
 
@@ -55,7 +55,7 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

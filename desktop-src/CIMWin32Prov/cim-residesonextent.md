@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ residesonblock-Klasse stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherblock dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
+description: Die CIM \_ ResidesOnExtent-Klasse stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherumfang dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
 ms.assetid: 911a81e9-3032-41ff-a337-044c06d02307
 ms.tgt_platform: multiple
 title: CIM_ResidesOnExtent-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 526023fbcc1c961ecaca068be8b0d4ce3e2f84f8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b7149de4ab84b13ef4e0f6b2c3aed908f8ef933ad09541c885f53edd3caec9d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920350"
 ---
-# <a name="cim_residesonextent-class"></a>CIM \_ residesonblock-Klasse
+# <a name="cim_residesonextent-class"></a>CIM \_ ResidesOnExtent-Klasse
 
-Die **CIM \_ residesonblock** -Klasse stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherblock dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
+Die **CIM \_ ResidesOnExtent-Klasse** stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherumfang dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_ResidesOnExtent : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ residesonblock** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ResidesOnExtent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ residesonblock** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ResidesOnExtent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ storageblock**](cim-storageextent.md) , der den Speicherblock beschreibt.
+Cim [**\_ StorageExtent,**](cim-storageextent.md) der den Speicherumfang beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ File System**
+Datentyp: **CIM \_ FileSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ Datei**](cim-filesystem.md) System, das das Dateisystem im Speicherblock beschreibt.
+Ein [**\_ CIM-Dateisystem,**](cim-filesystem.md) das das Dateisystem beschreibt, das sich im Speicherumfang befindet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ residesonblock** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ ResidesOnExtent-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

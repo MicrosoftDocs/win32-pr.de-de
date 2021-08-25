@@ -1,77 +1,77 @@
 ---
-title: Fehler Semantik für Kontext Handles
-description: In diesem Thema wird die Fehler Semantik für Kontext Handles erläutert.
+title: Fehlersemantik für Kontexthandles
+description: In diesem Thema wird die Fehlersemantik für Kontexthandles erläutert.
 ms.assetid: fcf28519-39ad-4823-bc27-f3502e4d540c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4528b3f5160b92a4e6f10dbcf877e9fec59f81b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9549a659c56c4761de8df4f43c54b823d32f74786af928821ba82b6effc3bba7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021270"
 ---
-# <a name="failure-semantics-for-context-handles"></a>Fehler Semantik für Kontext Handles
+# <a name="failure-semantics-for-context-handles"></a>Fehlersemantik für Kontexthandles
 
-In diesem Thema wird die Fehler Semantik für Kontext Handles erläutert.
+In diesem Thema wird die Fehlersemantik für Kontexthandles erläutert.
 
-## <a name="failure-semantics-when-closing-the-context-handle-fails"></a>Fehler Semantik beim Schließen des Kontext Handles schlägt fehl
+## <a name="failure-semantics-when-closing-the-context-handle-fails"></a>Fehlersemantik beim Schließen des Kontexthandle schlägt fehl
 
-Stellen Sie sich vor, eine Client Anwendung versucht, ein auf dem Server geöffnetes Kontext Handle zu schließen, ohne den Client Prozess zu schließen. Gehen Sie außerdem davon aus, dass beim Server zum Schließen des Kontext Handles ein Fehler auftritt (z. b. wenn der Client nicht über genügend Arbeitsspeicher verfügt). Die richtige Vorgehensweise zum Behandeln dieser Situation besteht darin, die [**rpcssdestroyclientcontext**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext) -Funktion aufzurufen. In einem solchen Fall bereinigt der Client seine Seite des Kontext Handles und schließt die Verbindung mit dem Server abgebrochen. Da es sich bei der Verbindung tatsächlich um einen Verbindungspool handelt (siehe [RPC und das Netzwerk](rpc-and-the-network.md)), bei dem es sich um eine Verweis Zählung mit einem Verweis für jede geöffnete Bindung oder ein geöffnetes Kontext Handle handelt, wird die Verbindung durch den Aufruf der **rpcssdestroyclientcontext** -Funktion nicht zerstört. Stattdessen wird der Verweis Zähler für den Verbindungspool verringert. Damit Verbindungen im Pool geschlossen werden können, muss der Client alle Bindungs Handles und Kontext Handles für diesen Server aus dem Client Prozess schließen. Anschließend werden alle Verbindungen im Pool geschlossen, und der Server-Lauf zeitmechanismus wird initiiert und bereinigt.
+Imagine versucht eine Clientanwendung, ein Kontexthandle zu schließen, das sie auf dem Server geöffnet hat, ohne den Clientprozess herunterzufahren. Gehen Sie außerdem davon aus, dass der Aufruf des Servers zum Schließen des Kontexthandle fehlschlägt (z. B. ist der Client nicht genügend Arbeitsspeicher). Die richtige Methode zum Behandeln dieser Situation besteht darin, die [**RpcSsDestroyClientContext-Funktion**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdestroyclientcontext) aufzurufen. In diesem Fall bereinigt der Client seine Seite des Kontexthandle und schließt die Verbindung mit dem Server abgebrochen. Da es sich bei der Verbindung tatsächlich um einen Verbindungspool handelt (siehe [RPC und das Netzwerk](rpc-and-the-network.md)), der mit einem Verweis für jede geöffnete Bindung oder jedes geöffnete Kontexthandle gezählt wird, zerstört das Zerstören des Kontexthandle durch Aufrufen der **RpcSsDestroyClientContext-Funktion** die Verbindung nicht tatsächlich. Stattdessen wird der Verweiszähler für den Verbindungspool dekrementt. Damit Verbindungen im Pool geschlossen werden, muss der Client alle Bindungshandles und Kontexthandles für diesen Server aus dem Clientprozess schließen. Anschließend werden alle Verbindungen im Pool geschlossen, und der Server-Run-Down-Mechanismus wird initiiert und bereinigt.
 
-## <a name="failure-semantics-during-change-of-state-of-the-context-handle"></a>Fehler Semantik beim Ändern des Zustands des Kontext Handles
+## <a name="failure-semantics-during-change-of-state-of-the-context-handle"></a>Fehlersemantik während der Zustandsänderung des Kontexthandle
 
-Die Informationen in diesem Abschnitt beziehen sich auf Windows XP-und spätere Plattformen.
+Die Informationen in diesem Abschnitt beziehen sich auf Windows XP und höhere Plattformen.
 
-Kontext Handles sind einfach Parameter für eine Funktion. Alle Änderungen im Zustand eines Kontext Handles treten auf, wenn Parameter gemarshallt oder nicht gemarshallt werden. Wenn ein Client z. b. ein Kontext Handle öffnet (von **null** in einen nicht-**null**-Wert geändert wird), öffnet die RPC-Laufzeit den RPC-Teil des Handles nicht, bis die Argumente für das Senden an den Client gemarshallt werden. Während der Zwischenzeit können Fehler auftreten. Aufgrund einer Vielzahl möglicher Netzwerk-oder geringer Ressourcen Bedingungen kann die Übertragung des Pakets an den Client fehlschlagen. Oder die Server Routine löst eine Ausnahme aus, wenn versucht wird, ein Kontext Handle zu ändern. In diesen oder anderen Fehlersituationen erhalten der Client und der Server möglicherweise inkonsistente Sichten des Kontext Handles. In diesem Abschnitt wird die Regel für den Status des Kontext Handles und die Verantwortung des Client-und Server Codes bei verschiedenen Fehlerbedingungen erläutert.
+Kontexthandles sind einfach Parameter für eine Funktion. Alle Änderungen im Zustand eines Kontexthandle erfolgen, wenn Parameter gemarshallt oder nicht gemarshallt werden. Wenn ein Client beispielsweise ein Kontexthandle öffnet (ändert es von **NULL** in nicht **NULL),** öffnet die RPC-Laufzeit den RPC-Teil des Handles erst, wenn die Argumente zum Senden an den Client gemarshallt werden. Fehler können während der Zwischenzeit auftreten. Aufgrund einer Vielzahl möglicher Netzwerk- oder ressourcenschwacher Bedingungen kann die Übertragung des Pakets an den Client fehlschlagen. Oder die Serverroutine löst beim Versuch, ein Kontexthandle zu ändern, eine Ausnahme aus. In diesen oder anderen Fehlersituationen erhalten Client und Server möglicherweise inkonsistente Ansichten des Kontexthandle. In diesem Abschnitt werden die Regel für den Zustand des Kontexthandle und die Verantwortung des Client- und Servercodes bei verschiedenen Fehlerbedingungen erläutert.
 
--   Ein **null** -Kontext Handle kommt an, aber die Server Routine stößt auf einen Fehler und löst eine Ausnahme aus.
+-   Ein **NULL-Kontexthandle** kommt an, aber die Serverroutine erkennt einen Fehler und löst eine Ausnahme aus.
 
-    Es liegt in der Verantwortung der Server Routine, alle Kontext Handles – den Zustand, den Sie möglicherweise erstellt hat, zu bereinigen. Der Status der RPC-Laufzeit wird bereinigt.
+    Es liegt in der Verantwortung der Serverroutine, alle kontextbezogenen Zustände zu bereinigen, die möglicherweise erstellt wurden. Die RPC-Laufzeit bereinigt ihren Zustand.
 
--   Nicht-**null** -Kontext Handles werden empfangen, aber die Server Routine stößt auf einen Fehler und löst eine Ausnahme aus.
+-   Ein **Nicht-NULL-Kontexthandles** kommt an, aber die Serverroutine erkennt einen Fehler und löst eine Ausnahme aus.
 
-    Wenn die Server Routine das Kontext Handle geschlossen hat, weiß der Client es nicht, da der-Vorgang nicht erfolgreich ist. die weitere Verwendung des Kontext Handles führt zu einem RPC- \_ X- \_ SS-Kontext Konflikt \_ \_ Fehler auf dem Client. Wenn die Server Routine das Kontext Handle nicht ändert, kann Sie vom Client weiterhin verwendet werden. Wenn die Server Routine die im Server Kontext gespeicherten Informationen ändert, werden diese Informationen von neuen Aufrufen des Clients verwendet.
+    Wenn die Serverroutine das Kontexthandle geschlossen hat, weiß der Client nicht, da der Aufruf nicht erfolgreich ist. Die weitere Verwendung des Kontexthandle führt zu einem RPC \_ X \_ SS \_ CONTEXT \_ MISMATCH-Fehler auf dem Client. Wenn die Serverroutine das Kontexthandle nicht ändert, kann sie vom Client weiterhin verwendet werden. Wenn die Serverroutine die im Serverkontext gespeicherten Informationen ändert, verwenden neue Aufrufe vom Client diese Informationen.
 
--   Ein Kontext Handle, das nicht **null** ist, wird erreicht, und die Server Routine schließt den Handle, aber entweder nach dem Marshalling des Kontext Handles oder bei der Verarbeitung nach dem Mars Hallen ist ein Fehler aufgetreten.
+-   Ein Nicht-NULL-Kontexthandle kommt an, und die Serverroutine schließt das Handle, aber entweder wird gemarshallt, nachdem das Kontexthandle gemarshallt wurde, oder die Verarbeitung nach dem Marshalling fehlgeschlagen.
 
-    Das Kontext Handle ist geschlossen, und weitere Aufrufe dieses Clients mit diesem Kontext Handle führen zu einem Fehler im RPC \_ X \_ SS-Kontext Konflikt \_ \_ auf dem Client.
+    Das Kontexthandle wird geschlossen, und weitere Aufrufe dieses Clients, die dieses Kontexthandle verwenden, führen zu einem RPC \_ X \_ SS \_ CONTEXT \_ MISMATCH-Fehler auf dem Client.
 
--   Ein **null** -Kontext Handle wird erreicht, und der Server erstellt seinen Kontext für dieses Handle, aber entweder nach dem Marshalling des Kontext Handles oder nach dem Fehler bei der Verarbeitung nach dem Mars Hallen.
+-   Ein **NULL-Kontexthandle** trifft ein, und der Server erstellt seinen Kontext für dieses Handle, aber entweder wird gemarshallt, nachdem das Kontexthandle gemarshallt wurde, oder die Verarbeitung nach dem Marshallingfehler.
 
-    In diesem Fall ruft die RPC-Laufzeit den Testlauf für dieses Kontext Handle auf und bereinigt den RPC-Status für dieses Kontext handle. Das Kontext Handle wird nicht auf der Clientseite erstellt.
+    In diesem Fall ruft die RPC-Laufzeit das Run down für dieses Kontexthandle auf und bereinigt den RPC-Status für dieses Kontexthandle. Das Kontexthandle wird auf clientseitiger Seite nicht erstellt.
 
--   Ein Kontext Handle, das nicht **null** ist, wird erreicht, und der Server ändert weder das Kontext Handle noch die im Server Kontext gespeicherten Informationen, und das Marshalling schlägt fehl, nachdem das Kontext Handle gemarshallt wurde.
+-   Ein **Nicht-NULL-Kontexthandle** kommt an, und der Server ändert entweder nicht das Kontexthandle, oder er ändert die im Serverkontext gespeicherten Informationen, und das Marshalling schlägt fehl, nachdem das Kontexthandle gemarshallt wurde.
 
-    Neue Aufrufe vom Client verwenden das Kontext Handle, das der Server hat.
+    Neue Aufrufe vom Client verwenden das Kontexthandle, über das der Server verfügt.
 
--   Ein **null** -Kontext Handle wird erreicht, und der Server legt ihn nicht auf einen anderen Wert als **null** fest, aber der-Rückruf schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein **NULL-Kontexthandle** kommt an, und der Server legt es nicht auf einen anderen Wert als **NULL** fest, aber der Aufruf schlägt fehl, bevor das Kontexthandle gemarshallt wird.
 
-    In diesem Fall wird kein Kontext Handle auf dem Client erstellt.
+    In diesem Fall wird kein Kontexthandle auf dem Client erstellt.
 
--   Ein Kontext Handle, das nicht **null** ist, wird erreicht, und der Server legt den Wert auf **null** fest, aber das Marshalling schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein Nicht-NULL-Kontexthandle kommt an, und der Server legt es auf **NULL** fest. Das Marshalling schlägt jedoch fehl, bevor das Kontexthandle gemarshallt wird.
 
-    In diesem Fall bleibt das Kontext Handle auf dem Server geschlossen, und der Client erhält \_ \_ \_ \_ beim Versuch, das Kontext Handle zu verwenden, nicht übereinstimmende RPC X SS-Kontext Fehler.
+    In diesem Fall bleibt das Kontexthandle auf dem Server geschlossen, und der Client erhält RPC \_ X \_ SS \_ CONTEXT \_ MISMATCH-Fehler, wenn versucht wird, das Kontexthandle zu verwenden.
 
--   Ein **null** -Kontext Handle kommt auf dem Server an, und der Server legt ihn auf einen nicht-**null**-Wert fest, aber das Marshalling schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein **NULL-Kontexthandle** trifft auf dem Server ein, und der Server legt es auf ungleich **NULL** fest. Das Marshalling schlägt jedoch fehl, bevor das Kontexthandle gemarshallt wird.
 
-    Das Kontext Handle wird aufgerufen, sodass der Server bereinigt werden kann, und auf dem Client wird kein Kontext Handle erstellt.
+    Das ausgeführte Kontexthandle muss aufgerufen werden, damit der Server bereinigt werden kann, und auf dem Client wird kein Kontexthandle erstellt.
 
--   Ein Kontext Handle, das nicht **null** ist, wird erreicht, und der Server ändert weder das Kontext Handle noch die im Server Kontext gespeicherten Informationen, und das Marshalling schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein **Nicht-NULL-Kontexthandle** kommt an, und der Server ändert entweder nicht das Kontexthandle, oder er ändert die im Serverkontext gespeicherten Informationen, und das Marshalling schlägt fehl, bevor das Kontexthandle gemarshallt wird.
 
-    Neue Aufrufe vom Client verwenden den Status auf dem Server.
+    Neue Aufrufe vom Client verwenden den Zustand auf dem Server.
 
--   Ein Kontext Handle wird als Rückgabewert deklariert, und die Server Routine gibt für das Kontext Handle **null** zurück, und das Marshalling schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein Kontexthandle wird als Rückgabewert deklariert, und die Serverroutine gibt **NULL** für das Kontexthandle zurück, und das Marshalling schlägt fehl, bevor das Kontexthandle gemarshallt wird.
 
     In diesem Fall wird kein neuer Kontext auf dem Client erstellt.
 
--   Ein Kontext Handle wird als Rückgabewert deklariert, und die Server Routine gibt für das Kontext Handle einen Wert zurück, der nicht **null** ist, und das Marshalling schlägt fehl, bevor das Kontext Handle gemarshallt wird.
+-   Ein Kontexthandle wird als Rückgabewert deklariert, und die Serverroutine gibt nicht **NULL** für das Kontexthandle zurück, und das Marshalling schlägt fehl, bevor das Kontexthandle gemarshallt wird.
 
-    Die RPC-Laufzeit ruft die-Kontext Handle-Lauf Zeit Routine auf, um eine Bereinigung zu erhalten, und auf dem Client wird kein neuer Kontext erstellt.
+    Die RPC-Laufzeit ruft die Run-Down-Routine des Kontexthandle auf, um eine Bereinigung zu ermöglichen, und es wird kein neuer Kontext auf dem Client erstellt.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-add_ConnectionStatusChanged-Methode
-description: Registriert einen Ereignishandler für das connectionstatuschangi-Ereignis. | Ibasicdevice-add_ConnectionStatusChanged-Methode
+title: IBasicDevice add_ConnectionStatusChanged-Methode
+description: Registriert einen Ereignishandler für das ConnectionStatusChanged-Ereignis. | IBasicDevice add_ConnectionStatusChanged-Methode
 ms.assetid: 1A4CCEFE-B6B6-4AFD-9296-EE923B9EF399
 keywords:
-- Medien Streaming-API für add_ConnectionStatusChanged-Methode
-- add_ConnectionStatusChanged-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, add_ConnectionStatusChanged-Methode
+- add_ConnectionStatusChanged Medienstreaming-API
+- add_ConnectionStatusChanged Media Streaming-API, IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , add_ConnectionStatusChanged-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0028e6f3dad1670974178b0f07a59f74dffdc06f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 55e90ea1f90ccd5b1e141b0e4071213abfe6f4a05a85d3c0d4ced505e1b0f164
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106366602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952660"
 ---
-# <a name="ibasicdeviceadd_connectionstatuschanged-method"></a>Ibasicdevice:: Add \_ connectionstatuschangi-Methode
+# <a name="ibasicdeviceadd_connectionstatuschanged-method"></a>IBasicDevice::add \_ ConnectionStatusChanged-Methode
 
-Registriert einen Ereignishandler für das [**connectionstatuschangi-Ereignis**](connectionstatuschanged.md) .
+Registriert einen Ereignishandler für das [**ConnectionStatusChanged-Ereignis.**](connectionstatuschanged.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT add_ConnectionStatusChanged(
 
 <dl> <dt>
 
-*Handler* \[ in\]
+*Handler* \[ In\]
 </dt> <dd>
 
-Eine [**connectionstatushandler-Ereignishandlerfunktion**](/previous-versions/windows/desktop/legacy/hh828836(v=vs.85)) .
+Eine [](/previous-versions/windows/desktop/legacy/hh828836(v=vs.85)) ConnectionStatusHandler-Ereignishandlerfunktion.
 
 </dd> <dt>
 
-*Token* \[ Out, retval\]
+*Token* \[ out, retval\]
 </dt> <dd>
 
-Verweis auf ein Token, das verwendet werden kann, um die Registrierung des Ereignis Handlers aufzuheben.
+Verweis auf ein Token, mit dem die Registrierung des Ereignishandlers aufgehoben werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -70,15 +70,15 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Registrierung des Ereignis Handlers aufzuheben, der durch diese Methode registriert wurde, übergeben Sie den *Tokenwert* an die [**Remove \_ connectionstatuschangi-**](ibasicdevice-remove-connectionstatuschanged.md) Methode.
+Um die Registrierung des Von dieser Methode registrierten Ereignishandlers aufzuheben, übergeben Sie den *Tokenwert* an die [**\_ remove ConnectionStatusChanged-Methode.**](ibasicdevice-remove-connectionstatuschanged.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

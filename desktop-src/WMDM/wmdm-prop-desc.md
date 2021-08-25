@@ -1,9 +1,9 @@
 ---
-title: WMDM_PROP_DESC Struktur
-description: Die WMDM- \_ Prop- \_ DESC-Struktur beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaften Konfiguration.
+title: WMDM_PROP_DESC-Struktur
+description: Die WMDM \_ PROP \_ DESC-Struktur beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.
 ms.assetid: e4766e1e-6c1b-4a2d-ad2e-c07035ca2be2
 keywords:
-- WMDM_PROP_DESC Struktur von Windows-Medien Device Manager
+- WMDM_PROP_DESC struktur windows media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98f6ea406a3d48d0ed65098d66721fcadbb98411
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cad250745d51f00d3bb0492b6da8d3f9802bf87b78d65f4640324a68caa9ddf3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119903940"
 ---
-# <a name="wmdm_prop_desc-structure"></a>WMDM- \_ Prop- \_ Struktur
+# <a name="wmdm_prop_desc-structure"></a>WMDM \_ PROP \_ DESC-Struktur
 
-Die **WMDM- \_ Prop- \_ DESC** -Struktur beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaften Konfiguration.
+Die **WMDM \_ PROP \_ DESC-Struktur** beschreibt gültige Werte einer Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,46 +45,46 @@ typedef struct _WMDM_PROP_DESC {
 
 <dl> <dt>
 
-**pwszpropname**
+**pwszPropName**
 </dt> <dd>
 
-Der Name der Eigenschaft. Die Anwendung muss diesen Arbeitsspeicher freigeben, wenn Sie verwendet wird.
+Der Name der Eigenschaft. Die Anwendung muss diesen Arbeitsspeicher frei geben, wenn sie ihn nicht mehr verwendet.
 
 </dd> <dt>
 
-**Validvaluesform**
+**ValidValuesForm**
 </dt> <dd>
 
-Ein WMDM-Enumerationswert [**\_ \_ \_ gültige \_ Werte \_ Formular**](wmdm-enum-prop-valid-values-form.md) Enumerationswert, der den Typ der Werte beschreibt, z. b. einen Bereich oder eine Liste. Der Wert dieser Enumeration bestimmt, welche Member-Variable verwendet wird.
+Ein [**WMDM \_ ENUM \_ PROP VALID VALUES \_ \_ \_ FORM-Enumerationswert,**](wmdm-enum-prop-valid-values-form.md) der den Typ von Werten beschreibt, z. B. einen Bereich oder eine Liste. Der Wert dieser Enumeration bestimmt, welche Membervariable verwendet wird.
 
 </dd> <dt>
 
 **ValidValues**
 </dt> <dd>
 
-Enthält die gültigen Werte der-Eigenschaft in einer bestimmten Eigenschaften Konfiguration. Dieser Member enthält eines von drei Elementen: den Enumerationswert WMDM- \_ \_ \_ \_ \_ enumerationsprop gültige Werte any, den Member **validvaluesrange** oder den **enumeratedvalidvalues**-Member. Der Wert oder Member wird durch **validvaluesform** angegeben.
+Enthält die gültigen Werte der Eigenschaft in einer bestimmten Eigenschaftenkonfiguration. Dieser Member enthält eines von drei Elementen: den Enumerationswert WMDM ENUM PROP VALID VALUES ANY, den Member \_ \_ \_ \_ \_ **ValidValuesRange** oder den **Member EnumeratedValidValues**. Der Wert oder Member wird durch **ValidValuesForm angegeben.**
 
 <dl> <dt>
 
-**Validvaluesrange**
+**ValidValuesRange**
 </dt> <dd>
 
-Eine [**WMDM \_ - \_ Werte \_ Bereichs**](wmdm-prop-values-range.md) Struktur, die einen Bereich gültiger Werte enthält. Diese ist nur vorhanden, wenn **validvaluesform** auf den \_ \_ \_ gültigen \_ Werte \_ Bereich der WMDM-Enumeration festgelegt ist. Siehe Hinweise.
+Eine [**WMDM \_ PROP VALUES \_ \_ RANGE-Struktur,**](wmdm-prop-values-range.md) die einen Bereich gültiger Werte enthält. Dies ist nur vorhanden, **wenn ValidValuesForm** auf WMDM \_ ENUM \_ PROP VALID VALUES RANGE festgelegt \_ \_ \_ ist. Siehe Hinweise.
 
 </dd> <dt>
 
-**Enumeratedvalidvalues**
+**EnumeratedValidValues**
 </dt> <dd>
 
-Eine enumerationsstruktur mit [**WMDM- \_ Prop- \_ Werten \_**](wmdm-prop-values-enum.md) , die einen aufgelisteten Satz gültiger Werte enthält. Diese ist nur vorhanden, wenn für **validvaluesform** die Enumeration \_ \_ \_ gültige \_ Values-Enumeration festgelegt ist \_ . Siehe Hinweise.
+Eine [**WMDM \_ PROP \_ \_ VALUES-ENUM-Struktur,**](wmdm-prop-values-enum.md) die einen aufzählten Satz gültiger Werte enthält. Dies ist nur vorhanden, **wenn ValidValuesForm** auf WMDM \_ ENUM \_ PROP VALID VALUES \_ \_ \_ ENUM festgelegt ist. Siehe Hinweise.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **WMDM- \_ Prop- \_ DESC** -Struktur enthält eine Eigenschafts Beschreibung, die aus einem Eigenschaftsnamen und den gültigen Werten in einer bestimmten Konfiguration besteht.
+Die **WMDM \_ PROP \_ DESC-Struktur** enthält eine Eigenschaftenbeschreibung, die aus einem Eigenschaftennamen und den gültigen Werten in einer bestimmten Konfiguration besteht.
 
-Der Aufrufer muss den von **validvaluesrange** oder **enumeratedvalues** genutzten Arbeitsspeicher freigeben. Ein Beispiel hierfür finden Sie unter [**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md).
+Der Aufrufer ist erforderlich, um den von **ValidValuesRange oder** **EnumeratedValues** verwendeten Arbeitsspeicher frei zu geben. Ein Beispiel hierfür finden Sie unter [**WMDM \_ FORMAT \_ CAPABILITY**](wmdm-format-capability.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,7 +92,7 @@ Der Aufrufer muss den von **validvaluesrange** oder **enumeratedvalues** genutzt
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
@@ -100,22 +100,22 @@ Der Aufrufer muss den von **validvaluesrange** oder **enumeratedvalues** genutzt
 
 <dl> <dt>
 
-[**IWMDMDevice3:: getformatcapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
+[**IWMDMDevice3::GetFormatCapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
 </dt> <dt>
 
-[**\_ \_ \_ Formular für gültige \_ Werte \_ für WMDM-Enumeration**](wmdm-enum-prop-valid-values-form.md)
+[**WMDM \_ ENUM \_ PROP \_ VALID \_ VALUES \_ FORM**](wmdm-enum-prop-valid-values-form.md)
 </dt> <dt>
 
-[**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md)
+[**\_WMDM-FORMATFUNKTION \_**](wmdm-format-capability.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop- \_ Konfiguration**](wmdm-prop-config.md)
+[**WMDM \_ PROP \_ CONFIG**](wmdm-prop-config.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop \_ Values- \_ Enumeration**](wmdm-prop-values-enum.md)
+[**WMDM \_ PROP \_ VALUES \_ ENUM**](wmdm-prop-values-enum.md)
 </dt> <dt>
 
-[**Bereich der WMDM- \_ Prop- \_ Werte \_**](wmdm-prop-values-range.md)
+[**WMDM \_ PROP \_ VALUES \_ RANGE**](wmdm-prop-values-range.md)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

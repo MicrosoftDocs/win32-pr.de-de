@@ -1,7 +1,7 @@
 ---
-description: Transformiert die boundingorientedbox.
+description: Transformiert das BoundingOrientedBox-Feld.
 ms.assetid: 8602a236-72db-4c1c-8813-03d2f55ac08e
-title: Boundingorientedbox. Transform-Methoden
+title: BoundingOrientedBox.Transform-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3a98a17415ea8af92c5614e07e72d6bafa9a79a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d049369e7653159bcc18b9a54fa7412bc41812b5bc7b0888ecb5b6babec9b25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022110"
 ---
-# <a name="boundingorientedboxtransform-methods"></a>Boundingorientedbox. Transform-Methoden
+# <a name="boundingorientedboxtransform-methods"></a>BoundingOrientedBox.Transform-Methoden
 
-Transformiert die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox).
+Transformiert [**boundingOrientedBox.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -28,8 +28,8 @@ Transformiert die [**boundingorientedbox**](/windows/win32/api/directxcollision/
 
 | Methode                                                                                                                   | BESCHREIBUNG                                                                   |
 |:-------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Boundingorientedbox:: Transform (boundingorientedbox-&, xmmatrix)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-transform(boundingorientedbox__float_fxmvector_fxmvector))                | Transformiert die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox).<br/> |
-| [**Boundingorientedbox:: Transform (boundingorientedbox-&, float, xmvector, xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-transform(boundingorientedbox__float_fxmvector_fxmvector)) | Transformiert die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox).<br/> |
+| [**BoundingOrientedBox::Transform (BoundingOrientedBox&,XMMATRIX)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-transform(boundingorientedbox__float_fxmvector_fxmvector))                | Transformiert [**boundingOrientedBox.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)<br/> |
+| [**BoundingOrientedBox::Transform (BoundingOrientedBox&,float,XMVECTOR,XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-transform(boundingorientedbox__float_fxmvector_fxmvector)) | Transformiert [**boundingOrientedBox.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)<br/> |
 
 
 
@@ -40,10 +40,10 @@ Transformiert die [**boundingorientedbox**](/windows/win32/api/directxcollision/
 [Methoden](boundingorientedbox-methods.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
+[**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
 </dt> </dl>
 
  

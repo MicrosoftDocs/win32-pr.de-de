@@ -1,10 +1,10 @@
 ---
-title: MSMQ-Peek-Computer Journal erweitert rechts
-description: Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
+title: msmq-Peek-computer-Journal erweitert rechts
+description: Ermöglicht das Einsehen von Nachrichten in der Computerjournalwarteschlange.
 ms.assetid: 76b5eeb2-01a9-45c1-aa8c-4092a7bf8d05
 ms.tgt_platform: multiple
 keywords:
-- MSMQ-Peek-Computer Journal Schema für erweiterte Rechte AD-Schema
+- msmq-Peek-computer-Journal erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b24787d48a3bf6d3ee8cbebdd369a2f2d530e8e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 013b2752d3da12282527e90d9a211ab36651f05930d8470e1aaff1dfe3f8b946
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922200"
 ---
-# <a name="msmq-peek-computer-journal-extended-right"></a>MSMQ-Peek-Computer Journal erweitert rechts
+# <a name="msmq-peek-computer-journal-extended-right"></a>msmq-Peek-computer-Journal erweitert rechts
 
-Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
+Ermöglicht das Einsehen von Nachrichten in der Computerjournalwarteschlange.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MSMQ-Peek-Computer Journal           |
-| Anzeigename | Computer Journal einsehen                |
+| CN           | msmq-Peek-computer-Journal           |
+| Anzeigename | Einsehen des Computerjournals                |
 | Rights-GUID  | 4b6e08c3-df3c-11d1-9c86-006008764d0e |
 
 
@@ -37,7 +37,7 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 
@@ -72,7 +72,7 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 
@@ -83,7 +83,7 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 
@@ -94,7 +94,7 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 
@@ -105,7 +105,7 @@ Ermöglicht das Einsehen von Nachrichten in der Computer Journal Warteschlange.
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 41                                                           |
+| Lokalisierungsanzeige-ID | 41                                                           |
 
 
 

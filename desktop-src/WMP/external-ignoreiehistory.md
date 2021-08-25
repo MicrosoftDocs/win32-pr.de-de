@@ -1,9 +1,9 @@
 ---
-title: Extern. ignoreiehistory
-description: In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. | Extern. ignoreiehistory
+title: External.ignoreIEHistory
+description: Hinweis In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. | External.ignoreIEHistory
 ms.assetid: ad0ad31e-61b7-45b4-8836-375df859c739
 keywords:
-- Extern. ignoreiehistory-Fenster Media Player
+- External.ignoreIEHistory Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 436dd774d247e150729d1921dc842bf0ecd3c26d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 39e874c6920c794f015c51bc1f1084ff545eb710e297f5e43b7c44e49ca39396
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901940"
 ---
-# <a name="externalignoreiehistory"></a>Extern. ignoreiehistory
+# <a name="externalignoreiehistory"></a>External.ignoreIEHistory
 
 > [!Note]  
-> In diesem Thema werden die Funktionen beschrieben, die für die Verwendung durch Online-Speicher Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Thema werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **ignoreiehistory** -Eigenschaft gibt an, ob der Internet Explorer-Verlauf von Windows Media Player ignoriert werden soll.
+Die **ignoreIEHistory-Eigenschaft** gibt an, ob Windows Media Player Internet Explorer Verlauf ignorieren soll.
 
 ``` syntax
 window.external.ignoreIEHistory
@@ -37,7 +37,7 @@ window.external.ignoreIEHistory
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert. **True** gibt an, dass die Windows-Media Player den Verlauf ignorieren soll.
+Diese Eigenschaft ist ein **boolescher Schreibzugriff.** **TRUE** gibt an, dass Windows Media Player den Verlauf ignorieren sollten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,7 +54,7 @@ Diese Eigenschaft ist ein Schreib geschützter **boolescher** Wert. **True** gib
 
 <dl> <dt>
 
-[**Externes Objekt für den Typ 1-Online Speicher**](external-object-for-type-1-online-stores.md)
+[**Externes Objekt für Onlineshops vom Typ 1**](external-object-for-type-1-online-stores.md)
 </dt> </dl>
 
  

@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 3f1317b1b8887b9ff306fcaed2cb6da2d077010f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 88e6d129e123b043c5223a5a129ceb08ce7bb497bf5798cf48920dad8f86c9c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989640"
 ---
 # <a name="d3dxvec3normalize-function-d3dx10mathh"></a>D3DXVec3Normalize-Funktion (D3DX10Math.h)
 
@@ -64,7 +64,7 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur, die die normalisierte Version des angegebenen Vektors ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXVec3Normalize-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -72,7 +72,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 

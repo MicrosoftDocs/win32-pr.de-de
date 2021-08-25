@@ -1,31 +1,31 @@
 ---
-description: Volumetexturen sind dreidimensionale Auflistungen von Pixeln (texeln), mit denen ein zweidimensionales primitiv gezeichnet werden kann, z. b. ein Dreieck oder eine Linie.
+description: Volumentexturen sind dreidimensionale Sammlungen von Pixeln (Texel), die verwendet werden können, um ein zweidimensionales Primitiv wie ein Dreieck oder eine Linie zu zeichnen.
 ms.assetid: 1d692501-a524-4ad4-8779-d71f1bda7bc9
-title: Volumetextur-Ressourcen (Direct3D 9)
+title: Volumetexturressourcen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67c66ff97d04e3c7c6c0a032f9a230dfd511b38c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 17e72448fd1fd4856cf81a344f5c176fdb6272546468126975edbff8b20218d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104557716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984355"
 ---
-# <a name="volume-texture-resources-direct3d-9"></a>Volumetextur-Ressourcen (Direct3D 9)
+# <a name="volume-texture-resources-direct3d-9"></a>Volumetexturressourcen (Direct3D 9)
 
-Volumetexturen sind dreidimensionale Auflistungen von Pixeln (texeln), mit denen ein zweidimensionales primitiv gezeichnet werden kann, z. b. ein Dreieck oder eine Linie. Für jeden Scheitelpunkt eines primitiven, der mit einem Volume strukturiert werden soll, sind drei-Element-Texturkoordinaten erforderlich. Wenn das primitive gezeichnet wird, wird jedes enthaltene Pixel mit dem Farbwert von einem Pixel innerhalb des Volumes gefüllt, und zwar entsprechend den Regeln der zweidimensionalen Textur. Volumes werden nicht direkt gerendert, da keine dreidimensionalen primitiven vorhanden sind, die mit Ihnen gezeichnet werden können.
+Volumentexturen sind dreidimensionale Sammlungen von Pixeln (Texel), die verwendet werden können, um ein zweidimensionales Primitiv wie ein Dreieck oder eine Linie zu zeichnen. Für jeden Scheitelpunkt eines Primitiven, der mit einem Volume texturiert werden soll, sind Texturkoordinaten mit drei Elementen erforderlich. Beim Zeichnen des Primitivs wird jedes enthaltene Pixel mit dem Farbwert von einem Pixel innerhalb des Volumes gefüllt, entsprechend den Regeln, die dem zweidimensionalen Texturfall entsprechen. Volumes werden nicht direkt gerendert, da es keine dreidimensionalen Primitive gibt, die mit ihnen gezeichnet werden können.
 
-Volumetexturen können für besondere Effekte verwendet werden, z. b. für den Nebel, die Explosionen usw.
+Sie können Volumentexturen für sonderliche Effekte wie patchige Oberflächen, Explosionen usw. verwenden.
 
-Volumes sind in Slices angeordnet und können als Breite x Höhe 2D-Oberflächen gestapelt werden, um eine Breite x-Tiefe von Höhen zu bilden. Jeder Slice ist eine einzelne Zeile. Volumes können nachfolgende Ebenen aufweisen, bei denen die Dimensionen der einzelnen Ebenen auf die Hälfte der Dimensionen der vorherigen Ebene gekürzt werden. Das folgende Diagramm zeigt, wie eine volumetextur mit mehreren Ebenen aussieht.
+Volumes sind in Slices organisiert und können als Breite x Höhe 2D-Oberflächen gestapelt angesehen werden, um eine Breite x Höhe x Tiefenvolumen zu erstellen. Jeder Slice ist eine einzelne Zeile. Volumes können nachfolgende Ebenen aufweisen, in denen die Dimensionen der einzelnen Ebenen auf die Hälfte der Dimensionen der vorherigen Ebene abgeschnitten werden. Das folgende Diagramm zeigt, wie eine Volumentextur mit mehreren Ebenen aussieht.
 
-![Diagramm einer volumetextur mit 8x2x4, 4x1x2 und 2x1x1-cubedarstellungen](images/level123.png)
+![Diagramm einer Volumetextur mit 8x2x4-, 4x1x2- und 2x1x1-Cubedarstellungen](images/level123.png)
 
-## <a name="creating-a-volume-texture"></a>Erstellen einer volumetextur
+## <a name="creating-a-volume-texture"></a>Erstellen einer Volumetextur
 
-Die folgenden Codebeispiele zeigen die Schritte, die für die Verwendung einer Volumestruktur erforderlich sind.
+Die folgenden Codebeispiele zeigen die Schritte, die für die Verwendung einer Volumentextur erforderlich sind.
 
-Geben Sie zunächst einen benutzerdefinierten Scheitelpunkt mit drei Texturkoordinaten für jeden Scheitelpunkt an, wie in diesem Codebeispiel dargestellt.
+Geben Sie zunächst einen benutzerdefinierten Scheitelpunkttyp an, der über drei Texturkoordinaten für jeden Scheitelpunkt verfügt, wie in diesem Codebeispiel gezeigt.
 
 
 ```
@@ -42,7 +42,7 @@ struct VOLUMEVERTEX
 
 
 
-Füllen Sie als nächstes die Scheitel Punkte mit Daten.
+Füllen Sie als Nächstes die Scheitelpunkte mit Daten aus.
 
 
 ```
@@ -57,9 +57,9 @@ VOLUMEVERTEX g_vVertices[4] =
 
 
 
-Erstellen Sie nun einen Scheitelpunkt Puffer, und füllen Sie ihn mit Daten aus den Scheitel Punkten aus.
+Erstellen Sie nun einen Scheitelpunktpuffer, und füllen Sie ihn mit Daten aus den Scheitelpunkten aus.
 
-Der nächste Schritt besteht in der Verwendung der [**IDirect3DDevice9:: kreatevolumetexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createvolumetexture) -Methode zum Erstellen einer Volumestruktur, wie in diesem Codebeispiel gezeigt.
+Der nächste Schritt besteht darin, die [**IDirect3DDevice9::CreateVolumeTexture-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createvolumetexture) zu verwenden, um eine Volumetextur zu erstellen, wie in diesem Codebeispiel gezeigt.
 
 
 ```
@@ -70,7 +70,7 @@ d3dDevice->CreateVolumeTexture( 8, 4, 4, 1, 0, D3DFMT_R8G8B8,D3DPOOL_MANAGED,
 
 
 
-Legen Sie vor dem Rendern des primitiven die aktuelle Textur auf die oben erstellte volumetextur fest. Das folgende Codebeispiel zeigt den gesamten Renderingprozess für einen Dreiecke.
+Legen Sie vor dem Rendern des Primitiven die aktuelle Textur auf die oben erstellte Volumetextur fest. Das folgende Codebeispiel zeigt den gesamten Renderingprozess für einen Dreiecksstreifen.
 
 
 ```

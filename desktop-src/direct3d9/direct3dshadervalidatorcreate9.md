@@ -12,12 +12,12 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 45b99a3077b49eac8689d8e634c1b12ac7cd3dc6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2dedcb63a1287cf27a3ac2d0476458e16079f58f974409d7f688d7be3336e01c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986110"
 ---
 # <a name="direct3dshadervalidatorcreate9-function"></a>Direct3DShaderValidatorCreate9-Funktion
 
@@ -43,7 +43,7 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

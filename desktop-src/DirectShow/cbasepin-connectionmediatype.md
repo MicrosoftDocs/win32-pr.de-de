@@ -1,7 +1,7 @@
 ---
-description: 'Die connectionmediatype-Methode ruft ggf. den Medientyp für die aktuelle PIN-Verbindung ab. Diese Methode implementiert die IPin:: connectionmediatype-Methode.'
+description: Die ConnectionMediaType-Methode ruft den Medientyp für die aktuelle Stecknadelverbindung ab, falls dies der Fall ist. Diese Methode implementiert die IPin::ConnectionMediaType-Methode.
 ms.assetid: 57d100ba-4171-4caa-ab98-66a0a327a53b
-title: Cbasepin. connectionmediatype-Methode (amfilter. h)
+title: CBasePin.ConnectionMediaType-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 62bd211b6c93e44c571d822ccc86104a5a6fdcab
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cdeed52a212a659ca280163ea9513f0cb4f373ea2686bfde00078ebccb183daa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916750"
 ---
-# <a name="cbasepinconnectionmediatype-method"></a>Cbasepin. connectionmediatype-Methode
+# <a name="cbasepinconnectionmediatype-method"></a>CBasePin.ConnectionMediaType-Methode
 
-Die **connectionmediatype** -Methode ruft ggf. den Medientyp für die aktuelle PIN-Verbindung ab. Diese Methode implementiert die [**IPin:: connectionmediatype**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectionmediatype) -Methode.
+Die **ConnectionMediaType-Methode** ruft den Medientyp für die aktuelle Stecknadelverbindung ab, falls dies der Fall ist. Diese Methode implementiert die [**IPin::ConnectionMediaType-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectionmediatype)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ HRESULT ConnectionMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf eine [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, die den Medientyp empfängt.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die den Medientyp empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                           |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/> |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die PIN ist nicht verbunden.<br/>      |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>             |  NULL-Zeigerargument.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Die Stecknadel ist nicht verbunden.<br/>      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die PIN verbunden ist, kopiert diese Methode den Medientyp in die von *PMT* angegebene [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur. Der Aufrufer muss den Format Block des Medientyps freigeben. Sie können die [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) -Funktion oder die [**freemediatype**](freemediatype.md) -Hilfsfunktion verwenden.
+Wenn die Stecknadel verbunden ist, kopiert diese Methode den Medientyp in die [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die von *pmt angegeben wird.* Der Aufrufer muss den Formatblock des Medientyps frei geben. Sie können die [**CoTaskMemFree-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) oder die [**FreeMediaType-Hilfsfunktion**](freemediatype.md) verwenden.
 
-Wenn die PIN nicht verbunden ist, wird von dieser Methode der durch *PMT* angegebene Speicherblock Nullen und ein Fehlercode zurückgegeben.
+Wenn die Stecknadel nicht verbunden ist, 0 (null) diese Methode den von *pmt* angegebenen Speicherblock und gibt einen Fehlercode zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Wenn die PIN nicht verbunden ist, wird von dieser Methode der durch *PMT* angege
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ Wenn die PIN nicht verbunden ist, wird von dieser Methode der durch *PMT* angege
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

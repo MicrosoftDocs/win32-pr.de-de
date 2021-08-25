@@ -1,118 +1,118 @@
 ---
-description: Die SNMP-Ereignis Anbieter unterstützen SNMPv1 Traps und SNMPv2-Benachrichtigungen.
+description: Die SNMP-Ereignisanbieter unterstützen SNMPv1-Traps und SNMPv2-Benachrichtigungen.
 ms.assetid: 715b2925-b01d-4631-86e3-a6239ff1dba7
 ms.tgt_platform: multiple
 title: Empfangen von SNMP-Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4f718d2bcea85d0ee942050108f337f8ecb78e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf09e32ec05d42adcc60891cd369cde1f3f078541416ce1a492484de024744bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996020"
 ---
 # <a name="receiving-snmp-events"></a>Empfangen von SNMP-Ereignissen
 
-Die SNMP-Ereignis Anbieter unterstützen SNMPv1 Traps und SNMPv2-Benachrichtigungen.
+Die SNMP-Ereignisanbieter unterstützen SNMPv1-Traps und SNMPv2-Benachrichtigungen.
 
-Die folgenden drei Arten von SNMPv1 Traps und SNMPv2-Benachrichtigungen werden unterstützt:
+Die folgenden drei Typen von SNMPv1-Traps und SNMPv2-Benachrichtigungen werden unterstützt:
 
 -   Allgemein
 
-    Generische Traps und Benachrichtigungen entsprechen benannten Ereignissen wie z. b. Link Up und Kaltstart. Generische Traps und Benachrichtigungen werden durch Klassen dargestellt, wie z. b. **snmplinkupnotification** und **snmpwarmstartextendednotification**, die den Namen des Traps im Klassennamen enthalten. Diese Klassen sind Unterklassen von [SnmpNotification](snmpnotification.md) und [snmpextendednotification](snmpextendednotification.md).
+    Generische Traps und Benachrichtigungen entsprechen benannten Ereignissen wie Linkup und Kaltstart. Generische Traps und Benachrichtigungen werden durch Klassen wie **SnmpLinkUpNotification** und **SnmpWarmStartExtendedNotification** dargestellt, die den Namen des Traps im Klassennamen enthalten. Diese Klassen sind Unterklassen von [SnmpNotification](snmpnotification.md) und [SnmpExtendedNotification.](snmpextendednotification.md)
 
--   Unternehmensspezifisch
+-   Enterprise spezifisch
 
-    Unternehmensspezifische Traps und Benachrichtigungen entsprechen Ereignissen, die durch eine WMI-Klasse dargestellt werden, die keine Unterklasse von " [SnmpNotification](snmpnotification.md) " und " [snmpextendednotification](snmpextendednotification.md)" ist. Zur Unterstützung von unternehmensspezifischen Traps und Benachrichtigungen muss ein Consumer Klassen definieren, indem MIB-Definitionen mithilfe des SNMP-MIB-Compilers kompiliert werden.
+    Enterprise bestimmten Traps und Benachrichtigungen entsprechen Ereignissen, die durch eine WMI-Klasse dargestellt werden, die keine Unterklasse von [SnmpNotification](snmpnotification.md) und [SnmpExtendedNotification](snmpextendednotification.md)ist. Um unternehmensspezifische Traps und Benachrichtigungen zu unterstützen, muss ein Consumer Klassen durch Kompilieren von MIB-Definitionen mit dem SNMP MIB-Compiler definieren.
 
--   Enterprise-nonspecific
+-   Enterprise nicht spezifisch
 
-    Nicht Enterprise-spezifische Traps und Benachrichtigungen entsprechen keinem der generischen Ereignis Typen oder unternehmensspezifischen Ereignis Typen. Bei nicht unternehmensspezifischen Traps und Benachrichtigungen wurden ihre MIB-Definitionen nicht in SMIR kompiliert. Sie werden durch die Klassen [SnmpNotification](snmpnotification.md), **SnmpV2Notification**, **SnmpV1ExtendedNotification** und **SnmpV2ExtendedNotification** dargestellt, die von SnmpNotification und [snmpextendednotification](snmpextendednotification.md)abgeleitet werden.
+    Nicht unternehmensspezifische Traps und Benachrichtigungen entsprechen keinem der generischen Ereignistypen oder unternehmensspezifischen Ereignistypen. Für nicht unternehmensspezifische Traps und Benachrichtigungen wurden die MIB-Definitionen nicht im SMIR kompiliert. Sie werden durch die Klassen [SnmpNotification,](snmpnotification.md) **SnmpV2Notification,** **SnmpV1ExtendedNotification** und **SnmpV2ExtendedNotification** dargestellt, die von SnmpNotification und [SnmpExtendedNotification](snmpextendednotification.md)abgeleitet werden.
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
--   [Empfangen von generischen SNMP-Ereignissen](#receiving-generic-snmp-events)
+-   [Empfangen generischer SNMP-Ereignisse](#receiving-generic-snmp-events)
 -   [Empfangen von Enterprise-Specific Ereignissen](#receiving-enterprise-specific-events)
 -   [Empfangen von Enterprise-Nonspecific Ereignissen](#receiving-enterprise-nonspecific-events)
 
-## <a name="receiving-generic-snmp-events"></a>Empfangen von generischen SNMP-Ereignissen
+## <a name="receiving-generic-snmp-events"></a>Empfangen generischer SNMP-Ereignisse
 
-Die Datentypen "abkep" und "SREP" unterstützen alle Typen allgemeiner SNMPv1 Traps und SNMPv2-Benachrichtigungen Generische SNMP-Ereignisse werden durch Unterklassen der Klassen " [SnmpNotification](snmpnotification.md) " und " [snmpextendednotification](snmpextendednotification.md) " dargestellt.
+SEEP und SREP unterstützen alle Typen generischer SNMPv1-Traps und SNMPv2-Benachrichtigungen. Generische SNMP-Ereignisse werden durch Unterklassen der Klassen [SnmpNotification](snmpnotification.md) und [SnmpExtendedNotification](snmpextendednotification.md) dargestellt.
 
-Jeder Ereignistyp wird durch eine Klasse "-Klasse" und eine SREP-Klasse dargestellt. Die abgeleiteten Klassen werden von [SnmpNotification](snmpnotification.md)abgeleitet. die SREP-Klassen werden von [snmpextendednotification](snmpextendednotification.md)abgeleitet. Die Ereignis Anbieter benötigen unterschiedliche Klassen, da Sie unterschiedliche Mechanismen in der Darstellung der SNMP-Ereignisdaten verwenden.
+Jeder Ereignistyp wird durch eine SEEP-Klasse und eine SREP-Klasse dargestellt. Die SEEP-Klassen werden von [SnmpNotification](snmpnotification.md)abgeleitet. Die SREP-Klassen werden von [SnmpExtendedNotification](snmpextendednotification.md)abgeleitet. Die Ereignisanbieter erfordern unterschiedliche Klassen, da sie bei der Darstellung der SNMP-Ereignisdaten unterschiedliche Mechanismen verwenden.
 
-Das DataSet konvertiert die SNMP-Ereignisdaten direkt in WMI-Klasseneigenschaften, wohingegen die SREP nicht. Der SREP fügt der Interpretation, die für die Verwendung der WMI-Eigenschaften erforderlich ist, eine Dereferenzierungsebene hinzu. Die Eigenschaften der SREP- [snmpextendednotification](snmpextendednotification.md) -Unterklassen sind Instanzen von SNMP-Klassen. die Eigenschaften der Seep- [SnmpNotification](snmpnotification.md) -Unterklassen sind ganze Zahlen und Zeichen folgen.
+SeeP konvertiert die SNMP-Ereignisdaten direkt in WMI-Klasseneigenschaften, während dies bei SREP nicht der Fall ist. SREP fügt der Interpretation, die für die Verwendung der WMI-Eigenschaften erforderlich ist, eine Dekonstruktionsebene hinzu. Die Eigenschaften der [SNMPExtendedNotification-Unterklassen](snmpextendednotification.md) sind Instanzen von SNMP-Klassen. Die Eigenschaften der SEEP [SnmpNotification-Unterklassen](snmpnotification.md) sind ganze Zahlen und Zeichenfolgen.
 
-In der folgenden Tabelle sind die Typen von generischen SNMP-Ereignissen und die zugehörigen Ereignis Klassen aufgeführt.
+In der folgenden Tabelle sind die Typen generischer SNMP-Ereignisse und die zugeordneten Ereignisklassen aufgeführt.
 
 
 
-| SNMP-Ereignis                                    | Klasse "Klasse"                                | SREP-Klasse                                        |
+| SNMP-Ereignis                                    | SEEP-Klasse                                | SREP-Klasse                                        |
 |-----------------------------------------------|-------------------------------------------|---------------------------------------------------|
-| Authentifizierungsfehler                        | **Snmpauthenticationfailurenotifizierung** | **Snmpauthenticationfailureextendednotification** |
-| EGP-Nachbar Verlust (outside Gateway Protocol) | **Snmpegpnachbarlossnotification**       | **Snmpegpnachbarlossextendednotification**       |
-| Kaltstart                                    | **Snmpcoldstartnotification**             | **Snmpcoldstartextendednotification**             |
-| Warmstart                                    | **Snmpwarmstartnotification**             | **Snmpwarmstartextendednotification**             |
-| Verknüpfung einrichten                                       | **Snmplinkupnotification**                | **Snmplinkupextendednotification**                |
-| Link nach unten                                     | **Snmplinkdownnotification**              | **Snmplinkdownextendednotification**              |
+| Authentifizierungsfehler                        | **SnmpAuthenticationFailureNotification** | **SnmpAuthenticationFailureExtendedNotification** |
+| Nachbarverlust des äußeren Gatewayprotokolls (EGP) | **SnmpEGPNeighborLossNotification**       | **SnmpEGPNeighborLossExtendedNotification**       |
+| Kaltstart                                    | **SnmpColdStartNotification**             | **SnmpColdStartExtendedNotification**             |
+| Warmer Start                                    | **SnmpWarmStartNotification**             | **SnmpWarmStartExtendedNotification**             |
+| Verknüpfen                                       | **SnmpLinkUpNotification**                | **SnmpLinkUpExtendedNotification**                |
+| Link nach unten                                     | **SnmpLinkDownNotification**              | **SnmpLinkDownExtendedNotification**              |
 
 
 
  
 
-Die Klassen **snmplinkupnotification** und **snmplinkupextendednotification** beschreiben z. b. das Verknüpfungs Ereignis. Beide Klassen enthalten die Eigenschaften " **ifindex**", " **ifadminstatus**" und " **ifOperStatus** ", aber Sie verfügen über sehr unterschiedliche Typen. Die Eigenschaften in der **snmplinkupnotification** -Klasse sind vom Typ SINT32 und String. Die Eigenschaften in der **snmplinkupextendednotification** -Klasse sind der eingebettete Objekttyp IETF \_ SNMP \_ RFC1213 \_ MIB \_ iftable.
+Beispielsweise beschreiben die Klassen **SnmpLinkUpNotification** und **SnmpLinkUpExtendedNotification** das Linkupereignis. Beide Klassen enthalten die Eigenschaften **ifIndex**, **ifAdminStatus** und **ifOperStatus,** weisen jedoch sehr unterschiedliche Typen auf. Die Eigenschaften in der **SnmpLinkUpNotification-Klasse** sind vom Typ SINT32 und STRING. Die Eigenschaften in der **SnmpLinkUpExtendedNotification-Klasse** sind der eingebettete Objekttyp IETF \_ SNMP \_ RFC1213 \_ MIB \_ ifTable.
 
 ## <a name="receiving-enterprise-specific-events"></a>Empfangen von Enterprise-Specific Ereignissen
 
-Seep und SREP unterstützen alle unternehmensspezifischen Traps und Benachrichtigungen, die Sie in SMIR kompiliert haben.
+SEEP und SREP unterstützen alle unternehmensspezifischen Traps und Benachrichtigungen, die Sie im SMIR kompiliert haben.
 
-Im folgenden Verfahren wird beschrieben, wie Sie unternehmensspezifische Ereignisse empfangen.
+Im folgenden Verfahren wird beschrieben, wie unternehmensspezifische Ereignisse empfangen werden.
 
 **So empfangen Sie unternehmensspezifische Ereignisse**
 
-1.  Kompilieren Sie die MIB-Definitionen von dem Gerät, das für das Erstellen des Ereignisses verantwortlich ist.
+1.  Kompilieren Sie die MIB-Definitionen vom Gerät, das für die Generierung des Ereignisses verantwortlich ist.
 
-    Die MIB-Definitionen können mithilfe des SNMP-MIB-Compilers kompiliert werden. Weitere Informationen finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+    Sie können die MIB-Definitionen mit dem SNMP MIB-Compiler kompilieren. Weitere Informationen finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
-2.  Bestimmen Sie, welche Typen von Klassen Sie den Ereignissen zuordnen möchten.
+2.  Bestimmen Sie, welche Klassentypen den Ereignissen zugeordnet werden sollen.
 
     Wenn Sie die MIB-Definition für ein unternehmensspezifisches Ereignis kompilieren, können Sie bestimmen, welche Art von Klasse der Compiler generiert. Insbesondere können Sie den Compiler anweisen, eine der folgenden Optionen zu erstellen:
 
-    -   [SnmpNotification](snmpnotification.md) -Unterklassen aus den Definitionen.
-    -   [Snmpextendednotification](snmpextendednotification.md) -Unterklassen aus den-Definitionen.
-    -   Die Unterklassen " [SnmpNotification](snmpnotification.md) " und " [snmpextendednotification](snmpextendednotification.md) " aus den Definitionen.
+    -   [SnmpNotification-Unterklassen](snmpnotification.md) aus den Definitionen.
+    -   [SnmpExtendedNotification-Unterklassen](snmpextendednotification.md) aus den Definitionen.
+    -   [SnmpNotification-](snmpnotification.md) und [SnmpExtendedNotification-Unterklassen](snmpextendednotification.md) aus den Definitionen.
 
-    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien](compiling-mof-files.md).
+    Weitere Informationen finden Sie unter [Kompilieren von MOF-Dateien.](compiling-mof-files.md)
 
-Wenn die SNMP-Ereignis Anbieter einen bestimmten Trap oder eine Benachrichtigung erhalten, für die keine Klasse vorhanden ist, generieren die Anbieter ein nicht unternehmensspezifisches Ereignis. Weitere Informationen finden Sie [unter empfangen von nicht spezifischen Enterprise-Ereignissen](#receiving-enterprise-nonspecific-events).
+Wenn die SNMP-Ereignisanbieter einen bestimmten Trap oder eine bestimmte Benachrichtigung empfangen, für die keine Klasse vorhanden ist, generieren die Anbieter ein nicht unternehmensspezifisches Ereignis. Weitere Informationen finden Sie unter [Empfangen von Enterprise nicht spezifischen Ereignissen.](#receiving-enterprise-nonspecific-events)
 
 ## <a name="receiving-enterprise-nonspecific-events"></a>Empfangen von Enterprise-Nonspecific Ereignissen
 
-Ein nicht bestimmtes Enterprise-Ereignis ist ein Ereignis, das nicht von einer SNMPv1 Trap-oder SNMPv2-Benachrichtigung zu einer der Unterklassen von [SnmpNotification](snmpnotification.md) oder [snmpextendednotification](snmpextendednotification.md) oder einer Klasse, die ein Enterprise-Ereignis darstellt, zugeordnet wird.
+Ein unternehmensfremdes Ereignis ist ein Ereignis, das keiner der Unterklassen von [SnmpNotification](snmpnotification.md) oder [SnmpExtendedNotification](snmpextendednotification.md) oder einer Klasse zugeordnet wird, die ein Unternehmensereignis darstellt.
 
-Die Klassen " **SNMPV1Notification** " und " **SNMPV2Notification** " werden für nicht spezifische Ereignisse verwendet, wohingegen "SREP" die Klassen **SNMPv1ExtendedNotification** und **SNMPV2ExtendedNotification** verwendet.
+SEEP verwendet die Klassen **SNMPV1Notification** oder **SNMPV2Notification** für nicht spezifische Ereignisse, während SREP die Klassen **SNMPv1ExtendedNotification** und **SNMPV2ExtendedNotification** verwendet.
 
-Alle vier Enterprise-nicht spezifischen Klassen werden entweder von der [SnmpNotification](snmpnotification.md) -Klasse oder von der [snmpextendednotification](snmpextendednotification.md) -Klasse abgeleitet und weisen das gleiche Format auf. Beide Klassen verfügen über die einzelne **varbindlist**-Eigenschaft. **Varbindlist** ist ein Array von Instanzen der **snmpvarbind** -Klasse. **Snmpvarbind** ist eine Basisklasse, die von den SNMP-Ereignis Anbietern unterstützt wird, um eine Instanz einer SNMP-Variablen Bindung darzustellen. In der folgenden Tabelle sind die Eigenschaften von **snmpvarbind** aufgeführt.
+Alle vier unternehmensfremden Klassen werden entweder von den Klassen [SnmpNotification](snmpnotification.md) oder [SnmpExtendedNotification](snmpextendednotification.md) abgeleitet und weisen das gleiche Format auf. Beide Klassen verfügen über die einzelne Eigenschaft **VarBindList**. **VarBindList** ist ein Array von Instanzen der **SnmpVarBind-Klasse.** **SnmpVarBind** ist eine Basisklasse, die von den SNMP-Ereignisanbietern unterstützt wird, um eine Instanz einer SNMP-Variablenbindung darzustellen. In der folgenden Tabelle sind die Eigenschaften von **SnmpVarBind** aufgeführt.
 
 
 
 | Eigenschaft         | BESCHREIBUNG                                                                                                    |
 |------------------|----------------------------------------------------------------------------------------------------------------|
-| Codierung         | Eine Zeichenfolge, die den Typ der abstrakten Syntax Notation One (ASN. 1) der Variablen in der **value** -Eigenschaft angibt. |
-| ObjectIdentifier | Eine Zeichenfolge, die die Variable in der **value** -Eigenschaft identifiziert.                                                 |
-| Wert            | Rohdaten in Oktette.                                                                                            |
+| Codierung         | Zeichenfolge, die den ASN.1-Typ (Abstract Syntax Notation One) der Variablen in der **Value-Eigenschaft** angibt. |
+| ObjectIdentifier | Zeichenfolge, die die Variable in der **Value-Eigenschaft** identifiziert.                                                 |
+| Wert            | Rohdaten in Oktetten.                                                                                            |
 
 
 
  
 
-In den **SnmpV1Notification** -und **SnmpV2Notification** -Klassen wurde die Variablen Bindungs Reihenfolge des SNMP-Ereignisses mit Ausnahme der ersten beiden Variablen Bindungen (Timestamp und snmptrapoid) beibehalten. Diese Bindungen wurden entfernt und in den **timestamp** -und **Identifizierungs** Eigenschaften der übergeordneten [SnmpNotification](snmpnotification.md) -oder [snmpextendednotification](snmpextendednotification.md) -Klasse gespeichert.
+In den Klassen **SnmpV1Notification** und **SnmpV2Notification** wurde die Reihenfolge der Variablenbindung aus dem SNMP-Ereignis beibehalten, mit Ausnahme der ersten beiden Variablenbindungen TimeStamp und SnmpTrapOID. Diese Bindungen wurden entfernt und in den **Eigenschaften TimeStamp** und **Identification** der [übergeordneten Klasse SnmpNotification](snmpnotification.md) oder [SnmpExtendedNotification](snmpextendednotification.md) gespeichert.
 
  
 

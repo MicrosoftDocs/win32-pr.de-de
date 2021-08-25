@@ -1,49 +1,49 @@
 ---
-description: Bevor eine Anwendung die verteilte Routing Tabelle (DRT) durchsuchen kann, muss eine Suchabfrage erstellt werden.
+description: Bevor eine Anwendung die Verteilte Routingtabelle (Distributed Routing Table, DRT) durchsuchen kann, muss eine Suchabfrage erstellt werden.
 ms.assetid: b3403a64-128c-461e-9384-8e62c03322e1
-title: Durchsuchen einer verteilten Routing Tabelle
+title: Durchsuchen einer verteilten Routingtabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c9977ca395393cef09198182fb8790738d2b00c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9016c351412d80b7adb97bc4325dae546e24db68e5737badc311e7c068f1a22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034240"
 ---
-# <a name="searching-a-distributed-routing-table"></a>Durchsuchen einer verteilten Routing Tabelle
+# <a name="searching-a-distributed-routing-table"></a>Durchsuchen einer verteilten Routingtabelle
 
-Bevor eine Anwendung die verteilte Routing Tabelle (DRT) durchsuchen kann, muss eine Suchabfrage erstellt werden. Der gewünschte Schlüsselwert wird von der Anwendung angegeben, wenn die [**drtstartsearch**](/windows/desktop/api/drt/nf-drt-drtstartsearch) -Funktion aufgerufen wird. Das Verhalten der Suche wird anhand der Informationen bestimmt, die von der Anwendung in der [**DRT- \_ Such \_**](/windows/desktop/api/drt/ns-drt-drt_search_info) Informationsstruktur angegeben werden.
+Bevor eine Anwendung die Verteilte Routingtabelle (Distributed Routing Table, DRT) durchsuchen kann, muss eine Suchabfrage erstellt werden. Der gewünschte Schlüsselwert wird von der Anwendung angegeben, wenn die [**DrtStartSearch-Funktion**](/windows/desktop/api/drt/nf-drt-drtstartsearch) aufgerufen wird. Das Verhalten der Suche wird durch Informationen bestimmt, die von der Anwendung in der [**DRT \_ SEARCH \_ INFO-Struktur**](/windows/desktop/api/drt/ns-drt-drt_search_info) angegeben werden.
 
-In der Regel wird ein Anwendungs Ereignis signalisiert, wenn die Suche Ergebnisse erkennt und eine andere am Ende der Suche. Wenn jedoch in der [**DRT- \_ Such \_ Info**](/windows/desktop/api/drt/ns-drt-drt_search_info)der Wert für " **fterative** " festgelegt ist, kann ein Anwendungs Ereignis signalisiert werden, wenn der Kontakt mit jedem Knoten auf die gleiche Weise hergestellt wird.
+In der Regel wird ein Anwendungsereignis signalisiert, wenn die Suche Ergebnisse und ein anderes am Ende der Suche ermittelt. Wenn **fIterative** jedoch in [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info)festgelegt ist, kann ein Anwendungsereignis signalisiert werden, wenn ein Kontakt mit jedem Knoten hergestellt wird.
 
-Nachdem ein Ereignis signalisiert wurde, ruft die Anwendung die [**drtgetsearchresult**](/windows/desktop/api/drt/nf-drt-drtgetsearchresult) -Funktion für die Ergebnisse auf. Wenn der zurückgegebene Code **S \_ OK** ist, wird auf die Ergebnisse in der [**DRT- \_ Such \_ Ergebnis**](/windows/desktop/api/drt/ns-drt-drt_search_result) Struktur verwiesen, die von der API zurückgegeben wird. Die zurückgegebenen Ergebnisse fallen in den Wertebereich, der in [**DRT- \_ Such \_ Informationen**](/windows/desktop/api/drt/ns-drt-drt_search_info)angegeben ist. Wenn bei der Suche keine Übereinstimmungen gefunden werden, wird nur der DRT E-Wert zurückgegeben, der beim Abschluss der Ergebnis Rückgabe **\_ \_ nicht \_ mehr** verwendet wird.
+Nachdem ein Ereignis signalisiert wurde, ruft die Anwendung dann die [**DrtGetSearchResult-Funktion**](/windows/desktop/api/drt/nf-drt-drtgetsearchresult) für die Ergebnisse auf. Wenn der zurückgegebene Code **S \_ OK** ist, werden die Ergebnisse in der von der API zurückgegebenen [**DRT \_ SEARCH \_ RESULT-Struktur**](/windows/desktop/api/drt/ns-drt-drt_search_result) angezeigt. Die zurückgegebenen Ergebnisse fallen in den In [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info)angegebenen Wertebereich. Wenn die Suche keine Übereinstimmungen findet, wird nur der **WERT DRT \_ E NO \_ \_ MORE** am Ende der Ergebnisrücksendung zurückgegeben.
 
-Die folgenden Informationen geben Aufschluss darüber, wie die in [**DRT- \_ Such \_ Informationen**](/windows/desktop/api/drt/ns-drt-drt_search_info) enthaltenen Elemente es einer Anwendung ermöglichen, das Suchverhalten der DRT-Infrastruktur genau zu bestimmen:
+In den folgenden Informationen wird erläutert, wie die in [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info) enthaltenen Elemente einer Anwendung ermöglichen, das Suchverhalten der DRT-Infrastruktur explizit vorzuschreiben:
 
-## <a name="fallowcurrentinstancematch"></a>"f" currentinstancematch
+## <a name="fallowcurrentinstancematch"></a>fAllowCurrentInstanceMatch
 
-Standardmäßig enthalten die DRT-Suchergebnisse nur Übereinstimmungen, die außerhalb des lokalen Knotens gefunden wurden. Durch Festlegen von " **sallowcurrentinstancematch** " wird angegeben, dass die Suchergebnisse auch Übereinstimmungen in der lokalen DRT-Instanz enthalten.
+Standardmäßig enthalten DRT-Suchergebnisse nur Übereinstimmungen, die außerhalb des lokalen Knotens gefunden wurden. Durch festlegen von **fAllowCurrentInstanceMatch** wird angegeben, dass die Suchergebnisse auch Übereinstimmungen enthalten, die in der lokalen DRT-Instanz gefunden wurden.
 
-## <a name="cmaxendpoints"></a>cmaxendpoints
+## <a name="cmaxendpoints"></a>cMaxEndpoints
 
-Die Menge und der Bereich der Ergebnisse, die von der Suche zurückgegeben werden, werden von der Anwendung mit den Werten **cmaxendpoints** (Menge) und **pminimumkey** und **pmaximumkey** (Range) angegeben, und es wird von der [**DRT- \_ Such \_ Information**](/windows/desktop/api/drt/ns-drt-drt_search_info)darauf verwiesen.
+Die Menge und der Bereich der von der Suche zurückgegebenen Ergebnisse werden von der Anwendung mit den Werten **cMaxEndpoints** (quantity) und **pMinimumKey** und **pMaximumKey** (Bereich) angegeben und von [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info)referenziert.
 
-Wenn **cmaxendpoints = 1**, sucht die DRT-Infrastruktur nach einem Schlüssel und gibt eine Entsprechung innerhalb des Bereichs zurück, der durch die Werte **pminimumkey** und **pmaximumkey** in [**DRT- \_ Such \_ Informationen**](/windows/desktop/api/drt/ns-drt-drt_search_info)angegeben wird. Diese Entsprechung kann entweder eine genaue Entsprechung oder die nächstgelegene Entsprechung im Bereich sein. Wenn keine Entsprechung gefunden wird, wird **DRT \_ E \_ nicht \_ mehr** zurückgegeben.
+Wenn **cMaxEndpoints = 1** ist, sucht die DRT-Infrastruktur nach einem Schlüssel und gibt eine Übereinstimmung innerhalb des Bereichs zurück, der durch die Werte **pMinimumKey** und **pMaximumKey** in [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info)angegeben wird. Diese Übereinstimmung kann entweder eine genaue Übereinstimmung oder die nächste Übereinstimmung innerhalb des Bereichs sein. Wenn keine Übereinstimmung gefunden wird, wird **DRT \_ E NO \_ \_ MORE** zurückgegeben.
 
-Wenn **cmaxendpoints > 1**, gibt die DRT-Infrastruktur Übereinstimmungen innerhalb des Bereichs bis zum Wert von **cmaxendpoints** zurück. Die zurückgegebenen Übereinstimmungen können eine genaue Übereinstimmung oder die nächsten übereinstimmenden Ergebnisse innerhalb des Bereichs enthalten. Wenn **pminimumkey** und **pmaximumkey** auf denselben Wert festgelegt sind, wird außerdem eine Suche nur für diesen Wert durchgeführt, wobei **DRT \_ E \_ nicht \_ mehr** zurückgegeben wird, wenn er nicht gefunden wurde.
+Wenn **cMaxEndpoints > 1** ist, gibt die DRT-Infrastruktur Übereinstimmungen innerhalb des Bereichs bis zum Wert von **cMaxEndpoints** zurück. Die zurückgegebenen Übereinstimmungen können eine genaue Übereinstimmung oder die nächsten Übereinstimmungsergebnisse innerhalb des Bereichs enthalten. Wenn **pMinimumKey** und **pMaximumKey** auf denselben Wert festgelegt sind, wird eine Suche nur für diesen Wert durchgeführt, und es wird **DRT \_ E NO \_ \_ MORE** zurückgegeben, wenn er nicht gefunden wird.
 
-## <a name="fanymatchinrange"></a>fanymatchinrange
+## <a name="fanymatchinrange"></a>fAnyMatchInRange
 
-Das **fanymatchinrange** -Element gibt an, ob die Suche angehalten wird, nachdem sich die erste Entsprechung innerhalb des angegebenen Bereichs befindet, oder ob die Suche für die nächstgelegene Entsprechung mit dem in der [**drtstartsearch**](/windows/desktop/api/drt/nf-drt-drtstartsearch) -API angegebenen Schlüssel fortgesetzt wird. Wenn **fanymatchinrange** festgelegt ist, wird die Suche mit **cmaxendpoints = 1** ausgeführt, unabhängig vom angegebenen Wert von **cmaxendpoints** in [**DRT- \_ Such \_ Informationen**](/windows/desktop/api/drt/ns-drt-drt_search_info).
+Das **fAnyMatchInRange-Element** gibt an, ob die Suche beendet wird, nachdem die erste Übereinstimmung innerhalb des angegebenen Bereichs gefunden wurde, oder ob die Suche nach der nächsten Übereinstimmung mit dem in der [**DrtStartSearch-API**](/windows/desktop/api/drt/nf-drt-drtstartsearch) angegebenen Schlüssel fortgesetzt wird. Wenn **fAnyMatchInRange** festgelegt ist, wird die Suche mit **cMaxEndpoints = 1** ausgeführt, unabhängig vom angegebenen Wert von **cMaxEndpoints** in [**DRT \_ SEARCH \_ INFO**](/windows/desktop/api/drt/ns-drt-drt_search_info).
 
-## <a name="fiterative"></a>"fterativ"
+## <a name="fiterative"></a>fIterative
 
-Der **Member "** Member" gibt an, ob jeder Knoten, der von der DRT-Infrastruktur während der Suche kontaktiert wird, über die Schlüssel-/Endpunktdaten verfügt, die der Anwendung über das [**DRT- \_ Such \_ Ergebnis**](/windows/desktop/api/drt/ns-drt-drt_search_result)zur Verfügung gestellt werden. Wenn Sie "" auf " **true**" **festlegen, wird** der Wert von " **cmaxendpoints = 1** " erzwungen. Wenn " **fterative** " in einer Suchabfrage für das DRT auf " **true** " festgelegt ist, wird die Anwendung nach Kontakt mit jedem Knoten oder "Hop" zurückgerufen. Jedes Hop-Ergebnis enthält einen Schlüssel, der angibt, welcher Knoten von der DRT als nächstes durchsucht wird. Ein Hop-Ergebnis wird über [**drtgetsearchresult**](/windows/desktop/api/drt/nf-drt-drtgetsearchresult) als ein DRT-Übereinstimmungs **\_ \_ zwischen** Ergebnis zurückgegeben.
+Der **fIterative-Member** gibt an, ob jedem Knoten, der während der Suche von der DRT-Infrastruktur kontaktiert wird, die Schlüssel-/Endpunktdaten zugeordnet sind, die der Anwendung über [**DRT \_ SEARCH \_ RESULT**](/windows/desktop/api/drt/ns-drt-drt_search_result)zur Verfügung gestellt werden. Durch Festlegen von **fIterative** auf **TRUE** wird der Wert von **cMaxEndpoints = 1** erzwungen. Wenn **fIterative** in einer Suchabfrage für das DRT auf **TRUE** festgelegt ist, wird die Anwendung nach dem Kontakt mit jedem Knoten oder "Hop" zurückgerufen. Jedes Hopergebnis enthält einen Schlüssel, der angibt, welcher Knoten vom DRT als Nächstes durchsucht wird. Ein Hopergebnis wird über [**DrtGetSearchResult**](/windows/desktop/api/drt/nf-drt-drtgetsearchresult) als **DRT \_ MATCH \_ INTERMEDIATE-Ergebnis** zurückgegeben.
 
-## <a name="pminimumkey-and-pmaximumkey"></a>pminimumkey und pmaximumkey
+## <a name="pminimumkey-and-pmaximumkey"></a>pMinimumKey und pMaximumKey
 
-Die Member **pminimumkey** und **pmaximumkey** können verwendet werden, um nach Schlüsseln zu suchen, die in einem Bereich liegen. Wenn das **fanymatchinrange** -Element auf **false** festgelegt ist, gibt der DRT die nächstgelegenen Schlüssel an das Such Ziel zurück (angegeben mithilfe des pkey-Arguments, das in der [**drtstartsearch**](/windows/desktop/api/drt/nf-drt-drtstartsearch) -Funktion übergeben wird), das innerhalb des Bereichs liegt. Beachten Sie, dass das an **drtstartsearch** weiter gegebene *pkey* -Argument in den von **pminimumkey** und **pmaximumkey** definierten Bereich liegen muss. Um nach einem präzisen Schlüssel zu suchen, legen Sie **pminimumkey**, **pmaximumkey** und *pkey* auf denselben Wert fest.
+Die Member **pMinimumKey** und **pMaximumKey** können verwendet werden, um nach Schlüsseln zu suchen, die innerhalb eines Bereichs liegen. Wenn der **fAnyMatchInRange-Member** auf **FALSE** festgelegt ist, gibt das DRT die nächstgelegenen Schlüssel an das Suchziel zurück (angegeben mithilfe des pKey-Arguments, das in der [**DrtStartSearch-Funktion**](/windows/desktop/api/drt/nf-drt-drtstartsearch) übergeben wird), die innerhalb des Bereichs liegen. Beachten Sie, dass das an **DrtStartSearch** übergebene *pKey-Argument* innerhalb des durch **pMinimumKey** und **pMaximumKey** definierten Bereichs liegen muss. Um nach einem präzisen Schlüssel zu suchen, legen Sie **pMinimumKey,** **pMaximumKey** und *pKey* auf den gleichen Wert fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,10 +52,10 @@ Die Member **pminimumkey** und **pmaximumkey** können verwendet werden, um nach
 [Registrieren und Aufheben der Registrierung von Schlüsseln](registering-and-deregistering-keys.md)
 </dt> <dt>
 
-[Informationen zu verteilten Routing Tabellen](about-distributed-routing-tables.md)
+[Informationen zu verteilten Routingtabellen](about-distributed-routing-tables.md)
 </dt> <dt>
 
-[Tabellen-API Referenz zu verteiltem Routing](distributed-routing-table-api-reference.md)
+[Tabellen-API-Referenz für verteiltes Routing](distributed-routing-table-api-reference.md)
 </dt> </dl>
 
  

@@ -1,95 +1,95 @@
 ---
-title: Verwenden von Direct2D zum Server-Side Rendering
+title: Verwenden von Direct2D für Server-Side Rendering
 description: Beschreibt die Verwendung von Direct2D für serverseitiges Rendering.
 ms.assetid: 12bf4f14-d86f-40ff-b3d3-15ffb3bd7300
 keywords:
 - Direct2D, serverseitiges Rendering
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a35c9df619ee43d11c90c171598c87b6e447dd5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 65991d2437939ce7f1d218022e0c3c57649405a18e2c1b9d073635b5b37d1a2c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917217"
 ---
-# <a name="using-direct2d-for-server-side-rendering"></a>Verwenden von Direct2D zum Server-Side Rendering
+# <a name="using-direct2d-for-server-side-rendering"></a>Verwenden von Direct2D für Server-Side Rendering
 
-Direct2D eignet sich gut für Grafikanwendungen, die serverseitiges Rendering auf Windows Server erfordern. In dieser Übersicht werden die Grundlagen der Verwendung von Direct2D für serverseitiges Rendering beschrieben. Sie enthält die folgenden Abschnitte:
+Direct2D eignet sich gut für Grafikanwendungen, die serverseitiges Rendering auf dem Windows erfordern. In dieser Übersicht werden die Grundlagen der Verwendung von Direct2D für serverseitiges Rendering beschrieben. Sie enthält die folgenden Abschnitte:
 
 -   [Anforderungen für Server-Side Rendering](#requirements-for-server-side-rendering)
 -   [Optionen für verfügbare APIs](#options-for-available-apis)
-    -   [GDI](#gdi)
+    -   [Gdi](#gdi)
     -   [GDI+](#gdi)
     -   [Direct2D](#using-direct2d-for-server-side-rendering)
--   [Verwenden von Direct2D zum Server-Side Rendering](#how-to-use-direct2d-for-server-side-rendering)
-    -   [Software Rendering](#software-rendering)
+-   [Verwenden von Direct2D für Server-Side Rendering](#how-to-use-direct2d-for-server-side-rendering)
+    -   [Softwarerendering](#software-rendering)
     -   [Multithreading](#multithreading)
-    -   [Erstellen einer Bitmapdatei](#generating-a-bitmap-file)
+    -   [Generieren einer Bitmapdatei](#generating-a-bitmap-file)
 -   [Zusammenfassung](#conclusion)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="requirements-for-server-side-rendering"></a>Anforderungen für Server-Side Rendering
 
-Im folgenden finden Sie ein typisches Szenario für einen Diagramm Server: Diagramme und Grafiken werden auf einem Server gerendert und als Bitmaps in Reaktion auf Webanforderungen übermittelt. Der Server ist möglicherweise mit einer Low-End-Grafikkarte oder einer Grafikkarte ausgestattet.
+Das folgende Szenario ist ein typisches Szenario für einen Diagrammserver: Diagramme und Grafiken werden auf einem Server gerendert und als Bitmaps als Reaktion auf Webanforderungen bereitgestellt. Der Server kann mit einer Low-End-Grafikkarte oder gar keiner Grafikkarte ausgestattet sein.
 
-In diesem Szenario werden drei Anwendungsanforderungen aufgeführt. Zuerst muss die Anwendung mehrere gleichzeitige Anforderungen effizient verarbeiten, insbesondere auf multikernservern. Zweitens muss die Anwendung das Software Rendering bei der Ausführung auf Servern mit einer Low-End-Grafikkarte oder einer Grafikkarte verwenden. Schließlich muss die Anwendung als Dienst in Sitzung 0 ausgeführt werden, damit kein Benutzer angemeldet werden muss. Weitere Informationen zu Sitzung 0 finden Sie unter [Auswirkung der Sitzung 0-Isolation auf Dienste und Treiber in Windows](https://www.microsoft.com/whdc/system/sysinternals/Session0Changes.mspx).
+Dieses Szenario zeigt drei Anwendungsanforderungen. Erstens muss die Anwendung mehrere gleichzeitige Anforderungen effizient verarbeiten, insbesondere auf Servern mit mehreren Kernen. Zweitens muss die Anwendung Softwarerendering verwenden, wenn sie auf Servern mit einer Low-End-Grafikkarte oder ohne Grafikkarte ausgeführt wird. Schließlich muss die Anwendung als Dienst in Sitzung 0 ausgeführt werden, damit kein Benutzer angemeldet sein muss. Weitere Informationen zu Sitzung 0 finden Sie unter Auswirkung der Isolation von Sitzung 0 auf Dienste und Treiber [in Windows.](https://www.microsoft.com/whdc/system/sysinternals/Session0Changes.mspx)
 
 ## <a name="options-for-available-apis"></a>Optionen für verfügbare APIs
 
-Es gibt drei Optionen für serverseitiges Rendering: GDI, GDI+ und Direct2D. Wie GDI und GDI+ ist Direct2D eine native 2D-Rendering-API, mit der Anwendungen mehr Kontrolle über die Verwendung von Grafik Geräten erhalten. Außerdem unterstützt Direct2D eindeutig einen Single Thread und eine Multithread-Factory. In den folgenden Abschnitten wird jede API in Bezug auf Zeichnungs Qualitäten und serverseitiges Multithread-Rendering verglichen.
+Es gibt drei Optionen für serverseitiges Rendering: GDI, GDI+ und Direct2D. Wie GDI und GDI+ ist Direct2D eine native 2D-Rendering-API, die Anwendungen mehr Kontrolle über die Verwendung von Grafikgeräten bietet. Darüber hinaus unterstützt Direct2D eindeutig eine Singlethread-Factory und eine Multithread-Factory. In den folgenden Abschnitten wird jede API in Bezug auf Zeichnungsqualitäten und serverseitiges Multithreadrendering verglichen.
 
 ### <a name="gdi"></a>GDI
 
-Im Gegensatz zu Direct2D und GDI+ unterstützt GDI keine hochwertigen Zeichnungs Features. Beispielsweise unterstützt GDI keine Antialiasing zum Erstellen von Smooth Lines und bietet nur eingeschränkte Unterstützung für Transparenz. Basierend auf den Ergebnissen der Grafik Leistungstests unter Windows 7 und Windows Server 2008 R2 skaliert Direct2D effizienter als GDI, trotz der Umgestaltung der Sperren in GDI. Weitere Informationen zu diesen Testergebnissen finden Sie unter [Engineering Windows 7 graphics Performance](/archive/blogs/e7/engineering-windows-7-graphics-performance).
+Im Gegensatz zu Direct2D und GDI+ unterstützt GDI keine hochwertigen Zeichnungsfeatures. GDI unterstützt z. B. keine Antialiasing für die Erstellung reibungsloser Linien und bietet nur eingeschränkte Unterstützung für Transparenz. Basierend auf den Grafikleistungstestergebnissen auf Windows 7 und Windows Server 2008 R2 wird Direct2D effizienter skaliert als GDI, trotz der Neugestaltung von Sperren in GDI. Weitere Informationen zu diesen Testergebnissen finden Sie unter [Engineering Windows 7 Graphics Performance](/archive/blogs/e7/engineering-windows-7-graphics-performance).
 
-Außerdem sind Anwendungen, die GDI verwenden, auf 10240 GDI-Handles pro Prozess und 65536 GDI-Handles pro Sitzung beschränkt. Der Grund hierfür ist, dass intern in Windows ein 16-Bit-Wort verwendet wird, um den Index von Handles für jede Sitzung zu speichern.
+Darüber hinaus sind Anwendungen, die GDI verwenden, auf 10240 GDI-Handles pro Prozess und 65536 GDI-Handles pro Sitzung beschränkt. Der Grund dafür ist, dass Windows intern ein 16-Bit-WORD verwendet, um den Index der Handles für jede Sitzung zu speichern.
 
 ### <a name="gdi"></a>GDI+
 
-Obwohl GDI+ Antialiasing und Alpha Blending für qualitativ hochwertige Zeichnungen unterstützt, besteht das Hauptproblem mit GDI+ für Server Szenarien darin, dass die Ausführung in Sitzung 0 nicht unterstützt wird. Da Sitzung 0 nur nicht interaktive Funktionen unterstützt, erhalten Funktionen, die direkt oder indirekt mit Anzeigegeräten interagieren, Fehler. Bestimmte Beispiele für Funktionen umfassen nicht nur diejenigen, die mit Anzeigegeräten arbeiten, sondern auch diejenigen, die indirekt mit Gerätetreibern arbeiten.
+Obwohl GDI+ Antialiasing und Alphablending für hochwertiges Zeichnen unterstützt, besteht das Hauptproblem von GDI+ für Serverszenarien in der Nichtunterstützung der Ausführung in Sitzung 0. Da Sitzung 0 nur nicht interaktive Funktionen unterstützt, erhalten Funktionen, die direkt oder indirekt mit Anzeigegeräten interagieren, Fehler. Zu den spezifischen Beispielen für Funktionen gehören nicht nur solche, die mit Anzeigegeräten zu tun haben, sondern auch solche, die indirekt mit Gerätetreibern zu tun haben.
 
-Ähnlich wie bei GDI ist GDI+ durch seinen Sperrmechanismus eingeschränkt. Die Sperrmechanismen in GDI+ sind in Windows 7 und Windows Server 2008 R2 identisch, wie in früheren Versionen.
+Ähnlich wie GDI wird GDI+ durch seinen Sperrmechanismus eingeschränkt. Die Sperrmechanismen in GDI+ sind in Windows 7 und Windows Server 2008 R2 identisch wie in früheren Versionen.
 
 ### <a name="direct2d"></a>Direct2D
 
-Bei Direct2D handelt es sich um eine hardwarebeschleunigte, 2D-Grafik-API, die leistungsstarke und qualitativ hochwertige Rendering bietet. Er bietet eine Single Thread-und Multithread Factory sowie die Lineare Skalierung des Kurs orientierten Software Rendering.
+Direct2D ist eine hardwarebeschleunigte 2D-Grafik-API im Unmittelbarmodus mit Hardwarebeschleunung, die leistungsstarkes und hochwertiges Rendering ermöglicht. Sie bietet eine Singlethread- und Multithread-Factory sowie die lineare Skalierung des kursorientierten Softwarerenderings.
 
-Zu diesem Zweck definiert Direct2D eine root Factory-Schnittstelle. Als Regel kann ein Objekt, das auf einer Factory erstellt wird, nur mit anderen Objekten verwendet werden, die aus derselben Factory erstellt wurden. Der Aufrufer kann bei der Erstellung entweder eine Single Thread-oder eine Multithread-Factory anfordern. Wenn eine Single Thread Factory angefordert wird, wird kein Sperren von Threads ausgeführt. Wenn der Aufrufer eine multithreadfactory anfordert, wird immer dann eine Werks weite Thread Sperre eingerichtet, wenn ein Aufruf in Direct2D erfolgt.
+Zu diesem Grund definiert Direct2D eine Stamm-Factoryschnittstelle. In der Regel kann ein in einer Factory erstelltes Objekt nur mit anderen Objekten verwendet werden, die aus derselben Factory erstellt wurden. Der Aufrufer kann beim Erstellen entweder eine Singlethread-Factory oder eine Multithread-Factory anfordern. Wenn eine Singlethread-Factory angefordert wird, erfolgt keine Sperrung von Threads. Wenn der Aufrufer eine Multithread-Factory an fordert, wird immer dann eine factoryweite Threadsperre verwendet, wenn ein Aufruf in Direct2D erfolgt.
 
-Außerdem ist das Sperren von Threads in Direct2D präziser als in GDI und GDI+, sodass sich die Anzahl der Threads nur minimal auf die Leistung auswirkt.
+Darüber hinaus ist die Sperrung von Threads in Direct2D präziser als in GDI und GDI+, sodass die Erhöhung der Anzahl von Threads nur minimale Auswirkungen auf die Leistung hat.
 
-## <a name="how-to-use-direct2d-for-server-side-rendering"></a>Verwenden von Direct2D zum Server-Side Rendering
+## <a name="how-to-use-direct2d-for-server-side-rendering"></a>Verwenden von Direct2D für Server-Side Rendering
 
-In den folgenden Abschnitten wird beschrieben, wie Sie das Software Rendering verwenden, eine Single Thread-und eine Multithread-Factory optimal verwenden und eine komplexe Zeichnung in einer Datei zeichnen und speichern.
+In den folgenden Abschnitten wird beschrieben, wie Sie Softwarerendering verwenden, wie Sie eine Singlethread- und Multithread-Factory optimal verwenden und eine komplexe Zeichnung in einer Datei zeichnen und speichern.
 
-### <a name="software-rendering"></a>Software Rendering
+### <a name="software-rendering"></a>Softwarerendering
 
-Server seitige Anwendungen verwenden das Software Rendering durch Erstellen des [IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) -Renderziels, wobei der renderzieltyp entweder auf D2D1 \_ Rendering \_ Target \_ Type \_ Software oder D2D1 \_ renderzieltyp \_ \_ \_ Default festgelegt ist. Weitere Informationen zu [IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) -renderzielen finden Sie unter der [**ID2D1Factory:: samatewicbitmaprendertarget**](id2d1factory-createwicbitmaprendertarget.md) -Methode. Weitere Informationen zu den renderzieltypen finden Sie unter [**D2D1 \_ Rendering \_ Target \_ Type**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type).
+Serverseitige Anwendungen verwenden Softwarerendering, indem [sie das RENDERziel IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) erstellen, bei dem der Renderzieltyp entweder auf D2D1 RENDER TARGET TYPE SOFTWARE oder \_ \_ \_ \_ D2D1 RENDER TARGET TYPE DEFAULT festgelegt \_ \_ \_ \_ ist. Weitere Informationen zu [IWICBitmap-Renderzielen](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) finden Sie unter der [**ID2D1Factory::CreateWicBitmapRenderTarget-Methode.**](id2d1factory-createwicbitmaprendertarget.md) Weitere Informationen zu den Renderzieltypen finden Sie unter [**D2D1 \_ RENDER \_ TARGET \_ TYPE**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type).
 
 ### <a name="multithreading"></a>Multithreading
 
-Wenn Sie wissen, wie Factorys erstellt und freigegeben werden, kann die Leistung einer Anwendung erheblich beeinträchtigt werden. Die folgenden drei Abbildungen zeigen drei verschiedene Ansätze. Der optimale Ansatz ist in Abbildung 3 dargestellt.
+Wenn Sie wissen, wie Factorys erstellt und gemeinsam verwendet werden und Ziele threadübergreifend gerendert werden, kann dies die Leistung einer Anwendung erheblich beeinträchtigen. Die folgenden drei Abbildungen zeigen drei verschiedene Ansätze. Der optimale Ansatz ist in Abbildung 3 dargestellt.
 
-![Direct2D Multithreading-Diagramm mit einem einzelnen Renderziel.](images/server-side-rendering-1.png)
+![Direct2d-Multithreadingdiagramm mit einem einzelnen Renderziel.](images/server-side-rendering-1.png)
 
-In Abbildung 1 verwenden verschiedene Threads dieselbe Factory und dasselbe Renderziel. Diese Vorgehensweise kann zu unvorhersehbaren Ergebnissen in Fällen führen, in denen mehrere Threads gleichzeitig den Status des freigegebenen Renderziels ändern, z. b. das gleichzeitige Festlegen der Transformationsmatrix. Da bei der internen Sperrung in Direct2D keine freigegebene Ressource wie Renderziele synchronisiert wird, kann dieser Ansatz dazu führen, dass der [**beginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) -Befehl in Thread 1 fehlschlägt, da der **beginDraw** -Befehl in Thread 2 bereits das freigegebene Renderziel verwendet.
+In Abbildung 1 verwenden verschiedene Threads dieselbe Factory und dasselbe Renderziel. Dieser Ansatz kann zu unvorhersehbaren Ergebnissen führen, wenn mehrere Threads gleichzeitig den Zustand des freigegebenen Renderziels ändern, z. B. das gleichzeitige Festlegen der Transformationsmatrix. Da die interne Sperre in Direct2D keine freigegebene Ressource synchronisiert, z. B. Renderziele, kann dieser Ansatz dazu führen, dass der [**BeginDraw-Aufruf**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) in Thread 1 fehlschlägt, da der **BeginDraw-Aufruf** in Thread 2 bereits das freigegebene Renderziel verwendet.
 
-![Direct2D Multithreading-Diagramm mit mehreren renderzielen.](images/server-side-rendering-2.png)
+![Direct2d-Multithreadingdiagramm mit mehreren Renderzielen.](images/server-side-rendering-2.png)
 
-Um die in Abbildung 1 gefundenen unvorhersehbaren Ergebnisse zu vermeiden, zeigt Abbildung 2 eine multithreadfactory, bei der jeder Thread über ein eigenes Renderziel verfügt. Diese Vorgehensweise funktioniert, aber Sie fungiert effektiv als Single Thread-Anwendung. Der Grund hierfür ist, dass die Sperre für die Werks weite nur für die Zeichnungs Vorgangs Ebene gilt und dass alle Zeichnungs Aufrufe in derselben Factory serialisiert werden. Infolgedessen wird Thread 1 blockiert, wenn versucht wird, einen Zeichnungs Befehl einzugeben, während Thread 2 in der Mitte der Ausführung eines weiteren Zeichnungs Aufrufes ist.
+Um die unvorhersehbaren Ergebnisse in Abbildung 1 zu vermeiden, zeigt Abbildung 2 eine Multithread-Factory mit jedem Thread mit einem eigenen Renderziel. Dieser Ansatz funktioniert, funktioniert aber effektiv als Singlethreadanwendung. Der Grund dafür ist, dass die factoryweite Sperre nur auf die Zeichnungsvorgangsebene angewendet wird und daher alle Zeichnungsaufrufe in derselben Factory serialisiert werden. Daher wird Thread 1 blockiert, wenn versucht wird, einen Zeichnungsaufruf zu erhalten, während Thread 2 gerade einen weiteren Zeichnungsaufruf ausgeführt.
 
-![Direct2D Multithreading-Diagramm mit mehreren Factorys und mehreren Renderingzielen.](images/server-side-rendering-3.png)
+![Direct2d-Multithreadingdiagramm mit mehreren Factorys und mehreren Renderzielen.](images/server-side-rendering-3.png)
 
-Abbildung 3 zeigt den optimalen Ansatz, bei dem eine Single Thread Factory und ein Single Thread-Renderziel verwendet werden. Da bei der Verwendung einer Single Thread Factory keine Sperre ausgeführt wird, können Zeichnungsvorgänge in jedem Thread gleichzeitig ausgeführt werden, um eine optimale Leistung zu erzielen.
+Abbildung 3 zeigt den optimalen Ansatz, bei dem eine Singlethread-Factory und ein Singlethread-Renderziel verwendet werden. Da bei Verwendung einer Singlethread-Factory keine Sperren ausgeführt werden, können Zeichnungsvorgänge in jedem Thread gleichzeitig ausgeführt werden, um eine optimale Leistung zu erzielen.
 
-### <a name="generating-a-bitmap-file"></a>Erstellen einer Bitmapdatei
+### <a name="generating-a-bitmap-file"></a>Generieren einer Bitmapdatei
 
-Verwenden Sie zum Generieren einer Bitmapdatei mit dem Software Rendering ein [IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) -Renderziel. Verwenden Sie einen [IWICStream](/windows/win32/api/wincodec/nn-wincodec-iwicstream) , um die Bitmap in eine Datei zu schreiben. Verwenden Sie [IWICBitmapFrameEncode](/windows/win32/api/wincodec/nn-wincodec-iwicbitmapframeencode) , um die Bitmap in ein bestimmtes Bildformat zu codieren. Im folgenden Codebeispiel wird gezeigt, wie das folgende Bild gezeichnet und in einer Datei gespeichert wird.
+Um eine Bitmapdatei mithilfe von Softwarerendering zu generieren, verwenden Sie ein [IWICBitmap-Renderziel.](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) Verwenden Sie [einen IWICStream,](/windows/win32/api/wincodec/nn-wincodec-iwicstream) um die Bitmap in eine Datei zu schreiben. Verwenden [Sie IWICBitmapFrameEncode,](/windows/win32/api/wincodec/nn-wincodec-iwicbitmapframeencode) um die Bitmap in ein angegebenes Bildformat zu codieren. Das folgende Codebeispiel zeigt, wie Sie das folgende Bild zeichnen und in einer Datei speichern.
 
-![Beispiel eines Ausgabe Bilds.](images/saveasimagefile-sample.png)
+![Beispielausgabebild.](images/saveasimagefile-sample.png)
 
-Dieses Codebeispiel erstellt zuerst eine [IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) und ein [IWICBitmap](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) -Renderziel. Anschließend wird eine Zeichnung mit Text, einer Pfad Geometrie, die ein Stundenglas darstellt, und einem transformierten Stundenglas in eine WIC-Bitmap gerendert. Anschließend wird [IWICStream:: initializefromfilename](/windows/win32/api/wincodec/nf-wincodec-iwicstream-initializefromfilename) verwendet, um die Bitmap in einer Datei zu speichern. Wenn die Anwendung die Bitmap im Arbeitsspeicher speichern muss, verwenden Sie stattdessen [IWICStream:: InitializeFromMemory](/windows/win32/api/wincodec/nf-wincodec-iwicstream-initializefrommemory) . Schließlich wird [IWICBitmapFrameEncode](/windows/win32/api/wincodec/nn-wincodec-iwicbitmapframeencode) verwendet, um die Bitmap zu codieren.
+In diesem Codebeispiel werden zunächst eine [IWICBitmap und](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) ein [IWICBitmap-Renderziel](/windows/win32/api/wincodec/nn-wincodec-iwicbitmap) erstellt. Anschließend wird eine Zeichnung mit Text, eine Pfadgeometrie, die ein Stundenglas darstellt, und ein transformiertes Stundenglas in eine WIC-Bitmap gerendert. Anschließend wird [IWICStream::InitializeFromFilename](/windows/win32/api/wincodec/nf-wincodec-iwicstream-initializefromfilename) verwendet, um die Bitmap in einer Datei zu speichern. Wenn Ihre Anwendung die Bitmap im Arbeitsspeicher speichern muss, verwenden Sie [stattdessen IWICStream::InitializeFromMemory.](/windows/win32/api/wincodec/nf-wincodec-iwicstream-initializefrommemory) Schließlich wird [IWICBitmapFrameEncode verwendet,](/windows/win32/api/wincodec/nn-wincodec-iwicbitmapframeencode) um die Bitmap zu codieren.
 
 
 ```C++
@@ -298,7 +298,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="conclusion"></a>Zusammenfassung
 
-Wie oben gezeigt, ist die Verwendung von Direct2D für serverseitiges Rendering einfach und unkompliziert. Außerdem bietet Sie ein hochwertiges und hochgradig parallelisierbares Rendering, das in Umgebungen mit geringen Rechten auf dem Server ausgeführt werden kann.
+Wie oben zu sehen, ist die Verwendung von Direct2D für serverseitiges Rendering einfach und unkompliziert. Darüber hinaus bietet es qualitativ hochwertiges und hochgradig parallelisierbares Rendering, das in Umgebungen mit geringen Berechtigungen des Servers ausgeführt werden kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -307,6 +307,6 @@ Wie oben gezeigt, ist die Verwendung von Direct2D für serverseitiges Rendering 
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

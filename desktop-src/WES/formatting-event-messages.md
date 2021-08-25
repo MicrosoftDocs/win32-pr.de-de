@@ -13,20 +13,20 @@ ms.locfileid: "120005290"
 ---
 # <a name="formatting-event-messages"></a>Formatieren von Ereignismeldungen
 
-Ein Ereignis kann lokalisierte Meldungszeichenfolgen enthalten, die Sie für die Anzeige formatieren können. Um eine Meldungszeichenfolge aus dem Ereignis zu erhalten, rufen Sie die [**EvtFormatMessage-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auf. Ein Ereignis kann die folgenden Meldungszeichenfolgen enthalten:
+Ein Ereignis kann lokalisierte Meldungszeichenfolgen enthalten, die Sie für die Anzeige formatieren können. Um eine Nachrichtenzeichenfolge aus dem Ereignis abzurufen, rufen Sie die [**EvtFormatMessage-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auf. Ein Ereignis kann die folgenden Meldungszeichenfolgen enthalten:
 
 -   Eine Meldungszeichenfolge für das Ereignis selbst.
--   Eine Meldungszeichenfolge, die den dem Ereignis zugewiesenen Ebeneswert beschreibt.
+-   Eine Meldungszeichenfolge, die den dem Ereignis zugewiesenen Ebenenwert beschreibt.
 -   Eine Meldungszeichenfolge, die den task-Wert beschreibt, der dem Ereignis zugewiesen ist.
 -   Eine Meldungszeichenfolge, die den opcode-Wert beschreibt, der dem Ereignis zugewiesen ist.
--   Eine Meldungszeichenfolge, die die Schlüsselwortwerte beschreibt, die dem Ereignis zugewiesen sind.
+-   Eine Meldungszeichenfolge, die die dem Ereignis zugewiesenen Schlüsselwortwerte beschreibt.
 -   Eine Meldungszeichenfolge, die den dem Ereignis zugewiesenen Kanalwert beschreibt.
 
-Sie können [**evtFormatMessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auch verwenden, um die Nachrichtenzeichenfolge für den Anbieter oder eine XML-Zeichenfolge zu erhalten, die das Ereignis und alle Nachrichtenzeichenfolgen enthält.
+Sie können auch [**EvtFormatMessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) verwenden, um die Nachrichtenzeichenfolge für den Anbieter oder eine XML-Zeichenfolge abzurufen, die das Ereignis und alle Nachrichtenzeichenfolgen enthält.
 
-Zusätzlich zum Abrufen der Meldungszeichenfolgen aus den von Ihnen abfragen Ereignissen können Sie auch die Meldungszeichenfolgen aus den Metadaten des Anbieters abrufen. Weitere Informationen zum Formatieren einer Nachricht basierend auf einem Nachrichtenbezeichner, den Sie aus den Metadaten des Anbieters erhalten, finden Sie unter Abrufen der Metadaten [eines Anbieters.](getting-a-provider-s-metadata-.md)
+Zusätzlich zum Abrufen der Nachrichtenzeichenfolgen aus den von Ihnen abgefragten Ereignissen können Sie auch die Nachrichtenzeichenfolgen aus den Metadaten des Anbieters abrufen. Ausführliche Informationen zum Formatieren einer Nachricht basierend auf einem Nachrichtenbezeichner, den Sie aus den Metadaten des Anbieters erhalten, finden Sie unter Abrufen der [Metadaten eines Anbieters.](getting-a-provider-s-metadata-.md)
 
-Das folgende Beispiel zeigt, wie die Meldungszeichenfolgen aus einem Ereignis erhalten werden.
+Im folgenden Beispiel wird gezeigt, wie die Meldungszeichenfolgen aus einem Ereignis abzurufen sind.
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Legt den Energiezustand des Geräts fest. Die Verwendung dieser Methode ist veraltet. Verwenden Sie stattdessen die SetPowerState-Methode in der zugehörigen powermanagementservice-Klasse.
+description: Legt den Energiezustand des Geräts fest. Die Verwendung dieser Methode ist veraltet. Verwenden Sie stattdessen die SetPowerState-Methode in der zugeordneten PowerManagementService-Klasse.
 ms.assetid: 2f53a8bd-18a8-45aa-92ad-68a33b6a42ab
-title: SetPowerState-Methode der CIM_LogicalDevice-Klasse (Hyper-V-Verwaltung)
+title: SetPowerState-Methode der CIM_LogicalDevice -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a29f71806747e6d63f53618acd09d472ac8bdea5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 149145a3433b55cb8c71dc4affdea9a00b4cbd6696d77b91cfe6258b2f6e010e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900270"
 ---
-# <a name="setpowerstate-method-of-the-cim_logicaldevice-class-hyper-v-management"></a>SetPowerState-Methode der CIM_LogicalDevice-Klasse (Hyper-V-Verwaltung)
+# <a name="setpowerstate-method-of-the-cim_logicaldevice-class-hyper-v-management"></a>SetPowerState-Methode der CIM_LogicalDevice -Klasse (Hyper-V-Verwaltung)
 
-Legt den Energiezustand des Geräts fest. Die Verwendung dieser Methode ist veraltet. Verwenden Sie stattdessen die **SetPowerState** -Methode in der zugehörigen **powermanagementservice** -Klasse.
+Legt den Energiezustand des Geräts fest. Die Verwendung dieser Methode ist veraltet. Verwenden Sie stattdessen die **SetPowerState-Methode** in der zugeordneten **PowerManagementService-Klasse.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,44 +40,44 @@ uint32 SetPowerState(
 
 <dl> <dt>
 
-*PowerState* \[ in\]
+*PowerState* \[ In\]
 </dt> <dd>
 
-Der festzulegende Energiezustand.
+Der Energiezustand, der festgelegt werden soll.
 
 <dt>
 
 <span id="Full_Power"></span><span id="full_power"></span><span id="FULL_POWER"></span>
 
-**Vollstrom** (1)
+**Vollleistung** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>
 
-**Energiesparmodus-niedriger Energie Modus** (2)
+**Stromsparen – Niedriger Energiemodus** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>
 
-**Energiesparmodus-Standby** (3)
+**Energiesparen – Standby** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Other"></span><span id="power_save_-_other"></span><span id="POWER_SAVE_-_OTHER"></span>
 
-**Energiespar Speicher-andere** (4)
+**Energiesparen – Sonstige** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>
 
-**Energie Zyklen** (5)
+**Energiezyklus** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -89,18 +89,18 @@ Der festzulegende Energiezustand.
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Uhrzeit* \[ in\]
+*Zeit* \[ In\]
 </dt> <dd>
 
-Time gibt an, wann der Energiezustand festgelegt werden soll, entweder als regulärer Datums-/Uhrzeitwert oder als Intervall Wert (wobei das Intervall beginnt, wenn der Methodenaufruf empfangen wird).
+Die Zeit gibt an, wann der Energiezustand festgelegt werden soll, entweder als regulärer Datums-/Uhrzeitwert oder als Intervallwert (wobei das Intervall beginnt, wenn der Methodenaufruf empfangen wird).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -109,7 +109,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

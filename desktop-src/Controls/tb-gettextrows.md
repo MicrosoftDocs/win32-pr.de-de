@@ -1,9 +1,9 @@
 ---
-title: TB_GETTEXTROWS Meldung (kommstrg. h)
-description: Ruft die maximale Anzahl von Textzeilen ab, die auf einer Symbolleisten Schaltfläche angezeigt werden können.
+title: TB_GETTEXTROWS Meldung (Commctrl.h)
+description: Ruft die maximale Anzahl von Textzeilen ab, die auf einer Symbolleistenschaltfläche angezeigt werden können.
 ms.assetid: a7950e5f-c80a-4af2-9ccd-d8e3df5552d2
 keywords:
-- Windows-Steuerelemente für TB_GETTEXTROWS Meldung
+- TB_GETTEXTROWS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69a871d1a13091b6dd70fa6d9f309735115e85ee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a2dc6867530eac1c178c4f6e58ab8b42740af558d32b9edfcfd1f1431b253cd9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918486"
 ---
-# <a name="tb_gettextrows-message"></a>TB \_ gettextrows-Nachricht
+# <a name="tb_gettextrows-message"></a>TB \_ GETTEXTROWS-Nachricht
 
-Ruft die maximale Anzahl von Textzeilen ab, die auf einer Symbolleisten Schaltfläche angezeigt werden können.
+Ruft die maximale Anzahl von Textzeilen ab, die auf einer Symbolleistenschaltfläche angezeigt werden können.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die maximale Anzahl von Textzeilen ab, die auf einer Symbolleisten Schaltfl
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen int-Wert zurück, der die maximale Anzahl von Textzeilen darstellt, die vom-Steuerelement für eine Schaltfläche angezeigt werden.
+Gibt einen INT-Wert zurück, der die maximale Anzahl von Textzeilen darstellt, die das Steuerelement für eine Schaltfläche anzeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt einen int-Wert zurück, der die maximale Anzahl von Textzeilen darstellt, d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TB \_ setmaxtextrows**](tb-setmaxtextrows.md)
+[**TB \_ SETMAXTEXTROWS**](tb-setmaxtextrows.md)
 </dt> </dl>
 
  

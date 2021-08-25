@@ -1,34 +1,34 @@
 ---
-description: Konsistente und done-Flags
+description: Konsistente und fertige Flags
 ms.assetid: a641fa95-5587-4362-9869-e5c27c6dd2ce
-title: Konsistente und done-Flags
+title: Konsistente und fertige Flags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56a61d1f715d06e6bfb6632b9bbb59276074c4d7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 568b0c614c745f46d8bbcc816b65f501e02de1e0455f0b64216662ec52308213
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524371"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954360"
 ---
-# <a name="consistent-and-done-flags"></a>Konsistente und done-Flags
+# <a name="consistent-and-done-flags"></a>Konsistente und fertige Flags
 
-Com+ erstellt vor dem Aktivieren eines transaktionalen Objekts immer ein Kontext Objekt. Das Kontext Objekt enthält objektbezogene Informationen, z. b. den Ersteller und den zugehörigen Transaktions Bezeichner. Jedes Kontext Objekt enthält auch ein *konsistentes Flag* und ein *done-Flag*. Diese Flags bestimmen den Status des Transaktions Objekts.
+COM+ erstellt immer ein Kontextobjekt, bevor ein Transaktionsobjekt aktiviert wird. Das Kontextobjekt enthält objektbezogene Informationen, z. B. seinen Ersteller und seinen Transaktionsbezeichner. Jedes Kontextobjekt enthält auch ein *konsistentes Flag und* ein *done-Flag.* Zusammen bestimmen diese Flags den Status des Transaktionsobjekts.
 
-Das konsistente Flag gibt an, dass das Transaktions Objekt entweder konsistent oder inkonsistent ist. Die Details, die den Zustand eines Objekts konsistent machen, sind der Programmierer. Wenn ein Methoden Aufrufflag dieses Flag auf true festlegt, ist das Objekt konsistent. False gibt an, dass das Objekt inkonsistent ist. Com+ legt das-Flag auf "true" fest, wenn eine Objektinstanz erstellt wird. Ein konsistentes Objekt ist bereit, mit der Transaktion fortzufahren. Während ein Objekt aktiv bleibt, können nachfolgende Methodenaufrufe das konsistente Flag wiederholt von true auf false und umgekehrt wechseln.
+Das Konsistente Flag gibt an, dass das Transaktionsobjekt entweder konsistent oder inkonsistent ist. Die spezifischen Details dazu, was den Zustand eines Objekts konsistent macht, sind aufgabe des Programmierers. Wenn ein Methodenaufruf dieses Flag auf True setzt, ist das Objekt konsistent. False gibt an, dass das Objekt inkonsistent ist. COM+ legt das Flag auf True fest, wenn eine Objektinstanz erstellt wird. Ein konsistentes Objekt ist bereit, mit der Transaktion fortzufahren. Während ein Objekt aktiv bleibt, können nachfolgende Methodenaufrufe das konsistente Flag wiederholt von True in False ändern und umgekehrt.
 
-Das done-Flag bestimmt die Dauer einer Transaktion. Wenn ein Methoden Rückruf zurückgegeben wird, prüft com+ das done-Flag. Wenn die Methode dieses Flag auf true festlegt, deaktiviert com+ das-Objekt und notiert das konsistente-Flag. Wenn das done-Flag false ist, deaktiviert com+ das Objekt weder und bemerkt auch das konsistente Flag. Com+ legt das done-Flag auf "false" fest, wenn eine Objektinstanz erstellt wird.
+Das Done-Flag bestimmt die Dauer einer Transaktion. Wenn ein Methodenaufruf zurückgegeben wird, überprüft COM+ das Flag done. Wenn die -Methode dieses Flag auf True setzt, deaktiviert COM+ das -Objekt und notiert das konsistente Flag. Wenn das flag done auf False festgelegt ist, deaktiviert COM+ weder das Objekt noch notiert das konsistente Flag. COM+ legt das Done-Flag auf False fest, wenn eine Objektinstanz erstellt wird.
 
-Das konsistente Flag wandelt eine Stimme ein, um das Commit auszuführen oder die Transaktion abzubrechen, in der es ausgeführt wird, und das done-Flag schließt die Stimme ab. Com+ prüft das konsistente Flag, wenn das done-Flag bei einem Methoden Rückruf auf true festgelegt ist oder wenn das Objekt deaktiviert wird. Obwohl sich das konsistente Flag eines Objekts innerhalb der einzelnen Methodenaufrufe wiederholt ändern kann, wird nur die letzte Änderung gezählt.
+Das flag consistent gibt eine Stimme zum Ausführen oder Abbrechen der Transaktion um, in der es ausgeführt wird, und das Flag done finalisiert die Abstimmung. COM+ überprüft das konsistente Flag, wenn das Flag done bei einer Methodenaufruf-Rückgabe auf TRUE festgelegt ist oder wenn das Objekt deaktiviert wird. Obwohl das konsistente Flag eines Objekts innerhalb jedes Methodenaufrufs wiederholt geändert werden kann, zählt nur die letzte Änderung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwalten von automatischen Transaktionen in com+](managing-automatic-transactions-in-com-.md)
+[Verwalten automatischer Transaktionen in COM+](managing-automatic-transactions-in-com-.md)
 </dt> <dt>
 
-[Festlegen der konsistenten und done-Flags](setting-the-consistent-and-done-flags.md)
+[Festlegen der Flags "Konsistent" und "Fertig"](setting-the-consistent-and-done-flags.md)
 </dt> </dl>
 
  

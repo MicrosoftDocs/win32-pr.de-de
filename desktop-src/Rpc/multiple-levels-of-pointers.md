@@ -1,21 +1,21 @@
 ---
-title: Mehrere Ebenen von Zeigern
-description: Verwenden mehrerer Zeiger Ebenen in Remote Prozedur Aufruf (RPC).
+title: Mehrere Zeigerebenen
+description: Verwenden mehrerer Zeigerebenen im Remoteprozeduraufruf (REMOTE Procedure Call, RPC).
 ms.assetid: d45b9b20-3b21-4d46-9097-8aacb4e4e921
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a61a917ee29c982505c601d7b0dd0721e94e4678
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 866c4424679f69daf3a5d88f137d55bd485824ef08498266882d84931a6d03f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019640"
 ---
-# <a name="multiple-levels-of-pointers"></a>Mehrere Ebenen von Zeigern
+# <a name="multiple-levels-of-pointers"></a>Mehrere Zeigerebenen
 
-Wenn mehrere Zeiger Ebenen vorhanden sind, werden die Attribute mit dem Zeiger verknüpft, der dem Variablennamen am nächsten liegt. Der Client ist nach wie vor für die Zuordnung von Arbeitsspeicher verantwortlich, der der Antwort zugeordnet ist.
+Wenn es mehrere Ebenen von Zeigern gibt, werden die Attribute dem Zeiger zugeordnet, der dem Variablennamen am nächsten ist. Der Client ist weiterhin für die Zuweisung von Speicher verantwortlich, der der Antwort zugeordnet ist.
 
-Im folgenden Beispiel kann der Stub den Server anrufen, ohne im Voraus zu wissen, wie viele Daten zurückgegeben werden:
+Im folgenden Beispiel kann der Stub den Server aufrufen, ohne im Voraus zu wissen, wie viele Daten zurückgegeben werden:
 
 ``` syntax
 [
@@ -30,17 +30,17 @@ interface AnInterface
 }
 ```
 
-In diesem Beispiel übergibt der Stub dem Server einen eindeutigen Zeiger, der vom Server mit **null** initialisiert wird. Der Server ordnet dann einen Block von Balken zu, legt den Zeiger fest, legt das Größen Argument fest und gibt zurück. Beachten Sie, dass Sie einen Verweis \[ \] Zeiger an einen \[ [**eindeutigen**](/windows/desktop/Midl/unique) \] Zeiger auf Ihre Daten übergeben müssen, damit der Server Auswirkungen auf den Aufrufer hat. Beachten Sie auch, dass das Komma in \[ [**size (, \_**](/windows/desktop/Midl/size-is) \* Psize) ist \] , das angibt, dass der Zeiger der obersten Ebene kein Größen Zeiger ist, aber dass der Zeiger auf der unteren Ebene ist.
+In diesem Beispiel übergibt der Stub dem Server einen eindeutigen Zeiger, den der Server mit **NULL initialisiert.** Der Server ordnet dann einen Block von BARs zu, legt den Zeiger fest, legt das Größenargument fest und gibt zurück. Beachten Sie, dass Sie einen Verweiszeiger an einen eindeutigen Zeiger auf Ihre Daten übergeben müssen, damit der Server auswirkungen auf \[ \] den \[ [](/windows/desktop/Midl/unique) \] Aufrufer hat. Beachten Sie auch, dass das Komma in der Größe ( \[ [**\_**](/windows/desktop/Midl/size-is), pSize ) ist, was angibt, dass der Zeiger der obersten Ebene kein Zeiger der Größe ist, sondern dass der Zeiger auf niedrigerer Ebene \* \] ist.
 
-Auf der Clientseite legt der Stub \* ppbar auf **null** fest, bevor die Remote Prozedur aufgerufen wird. Der Stub ordnet dann die Arrays von Bar-Objekten zu und löscht diese. Das size-Argument gibt die Größe des Blocks an (und die Anzahl der nicht gemarshallten Balken). Der Client muss das zurückgegebene Array von Balken Objekten freigeben, wenn es nicht mehr benötigt wird.
+Auf Clientseite legt der Stub ppBar auf \* **NULL fest,** bevor die Remoteprozedur aufruft. Der Stub ordnet dann den Arry von BAR-Objekten zu und entmarshaliert diesen. Das size-Argument gibt die Größe des Blocks (und die Anzahl der nichtmarshalierten BARs) an. Der Client muss das zurückgegebene Array von BAR-Objekten frei geben, wenn es nicht mehr benötigt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Größe \_ :**](/windows/desktop/Midl/size-is)
+[**size \_ ist**](/windows/desktop/Midl/size-is)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

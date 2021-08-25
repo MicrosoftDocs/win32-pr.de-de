@@ -1,35 +1,35 @@
 ---
-description: Auf einem NTFS-Dateisystem Volume weist jede Datei und jedes Verzeichnis ein Komprimierungs Attribut auf.
+description: Auf einem NTFS-Dateisystemvolume verfügt jede Datei und jedes Verzeichnis über ein Komprimierungsattribut.
 ms.assetid: 8aca120c-22a7-4dc8-a921-dfcec1277452
-title: Komprimierungs Attribut
+title: Komprimierungsattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2e8e86eebe919476851f35f77cf10d6a07035d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99fb42aaa30fc3e5d2ef36da85bae194950c587d024510b18233f3c83504ab88
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982150"
 ---
-# <a name="compression-attribute"></a>Komprimierungs Attribut
+# <a name="compression-attribute"></a>Komprimierungsattribut
 
-Auf einem NTFS-Dateisystem Volume weist jede Datei und jedes Verzeichnis ein *Komprimierungs Attribut* auf. Andere Dateisysteme können auch ein Komprimierungs Attribut für einzelne Dateien und Verzeichnisse implementieren.
+Auf einem NTFS-Dateisystemvolume verfügt jede Datei und jedes Verzeichnis über das *Komprimierungsattribut*. Andere Dateisysteme können auch ein Komprimierungsattribut für einzelne Dateien und Verzeichnisse implementieren.
 
-Sie können bestimmen, ob ein Dateisystem ein Komprimierungs Attribut für Dateien und Verzeichnisse unterstützt, indem Sie die [**GetVolumeInformation**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumeinformationa) -Funktion aufrufen und das Bitflag für die **\_ \_ Komprimierung der Datei Datei** untersuchen.
+Sie können ermitteln, ob ein Dateisystem ein Komprimierungsattribut für Dateien und Verzeichnisse unterstützt, indem Sie die [**GetVolumeInformation-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumeinformationa) aufrufen und das **FILE FILE \_ COMPRESSION-Bitflag \_** untersuchen.
 
-Verwenden Sie die Funktion [**getfileattribute**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) oder [**getfileattributesex**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesexa) , um das Komprimierungs Attribut einer Datei oder eines Verzeichnisses zu bestimmen.
+Verwenden Sie die [**Funktion GetFileAttributes**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesa) oder [**GetFileAttributesEx,**](/windows/desktop/api/FileAPI/nf-fileapi-getfileattributesexa) um das Komprimierungsattribut einer Datei oder eines Verzeichnisses zu bestimmen.
 
-Wenn das Komprimierungs Attribut einer Datei festgelegt ist (**file- \_ Attribut \_ komprimiert**), werden alle Daten in der Datei komprimiert. Wenn das Attribut eindeutig ist, wird keine der Daten in der Datei komprimiert. Es gibt keinen teilweise komprimierten Zustand aus einer Programmier Perspektive im Benutzermodus. Das Komprimierungs Attribut ist ein einfacher boolescher Indikator für den Komprimierungs Status.
+Wenn das Komprimierungsattribut einer Datei festgelegt ist **(FILE \_ ATTRIBUTE \_ COMPRESSED**), werden alle Daten in der Datei komprimiert. Wenn das Attribut eindeutig ist, wird keine der Daten in der Datei komprimiert. Aus Der Programmierperspektive des Benutzermodus gibt es keinen teilweise komprimierten Zustand. Das Komprimierungsattribut ist ein einfacher boolescher Indikator für den Komprimierungszustand.
 
-Das Komprimierungs Attribut eines Verzeichnisses stellt ein Standard Komprimierungs Attribut für neu erstellte Dateien und Unterverzeichnisse bereit. Wenn Sie zum Erstellen einer neuen Datei oder eines neuen Verzeichnisses " [**kreatefile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) " oder " [**kreatedirectory**](/windows/desktop/api/FileAPI/nf-fileapi-createdirectorya) " aufrufen, erbt die neue Datei bzw. das zugehörige Verzeichnis das Komprimierungs Attribut des übergeordneten Verzeichnisses.
+Das Komprimierungsattribut eines Verzeichnisses stellt ein Standardkomprimierungsattribut für neu erstellte Dateien und Unterverzeichnisse bereit. Wenn Sie [**CreateFile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea) oder [**CreateDirectory**](/windows/desktop/api/FileAPI/nf-fileapi-createdirectorya) aufrufen, um eine neue Datei oder ein neues Verzeichnis zu erstellen, erbt die neue Datei oder das neue Verzeichnis das Komprimierungsattribut des übergeordneten Verzeichnisses.
 
-Um das **\_ \_ komprimierte Attribut file Attribute** für eine Datei oder ein Verzeichnis zu ändern, müssen Sie die [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) -Funktion mit dem Code für die [**\_ \_ Komprimierung des FSCTL-Satzes**](/windows/win32/api/winioctl/ni-winioctl-fsctl_set_compression) verwenden.
+Um das **ATTRIBUT FILE ATTRIBUTE \_ \_ COMPRESSED** für eine Datei oder ein Verzeichnis zu ändern, müssen Sie die [**DeviceIoControl-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol) mit dem [**FSCTL SET \_ \_ COMPRESSION-Steuerungscode**](/windows/win32/api/winioctl/ni-winioctl-fsctl_set_compression) verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Datei Attribut Konstanten**](file-attribute-constants.md)
+[**Dateiattributkonstanten**](file-attribute-constants.md)
 </dt> </dl>
 
  

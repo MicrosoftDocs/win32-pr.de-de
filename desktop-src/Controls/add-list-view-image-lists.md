@@ -1,39 +1,39 @@
 ---
-title: Vorgehensweise beim Hinzufügen von List-View Bildlisten
-description: In diesem Thema wird veranschaulicht, wie Sie einem Listenansicht-Steuerelement Bildlisten hinzufügen.
+title: Hinzufügen von List-View Bildlisten
+description: In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Bildlisten hinzugefügt werden.
 ms.assetid: 3C282FBC-5E37-4D8E-A2C4-B2876874E9A7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c2f6f5b483ea80b412ab7638c9aceafcac4c5e6
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 8875573634cd47fb5ccb271c3dabfca99daf9061469e31c1178b3e4ed938347e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104316784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922056"
 ---
-# <a name="how-to-add-list-view-image-lists"></a>Vorgehensweise beim Hinzufügen von List-View Bildlisten
+# <a name="how-to-add-list-view-image-lists"></a>Hinzufügen von List-View Bildlisten
 
-In diesem Thema wird veranschaulicht, wie Sie einem Listenansicht-Steuerelement Bildlisten hinzufügen.
+In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Bildlisten hinzugefügt werden.
 
-Sie erstellen nur die Bildlisten, die vom Steuerelement verwendet werden. Wenn die Anwendung z. b. nicht zulässt, dass der Benutzer zur Symbol Ansicht wechselt, müssen Sie keine große Symbolliste erstellen und zuweisen. Wenn Sie sowohl große als auch kleine Bildlisten erstellen, müssen Sie dieselben Bilder in derselben Reihenfolge enthalten, da ein einzelner Wert verwendet wird, um das Symbol eines Listen Ansichts Elements in beiden Bildlisten zu identifizieren.
+Sie erstellen nur die Bildlisten, die das Steuerelement verwendet. Wenn Ihre Anwendung dem Benutzer z. B. nicht erlaubt, zur Symbolansicht zu wechseln, müssen Sie keine große Symbolliste erstellen und zuweisen. Wenn Sie sowohl große als auch kleine Bildlisten erstellen, müssen diese die gleichen Bilder in der gleichen Reihenfolge enthalten, da ein einzelner Wert verwendet wird, um das Symbol eines Listenansichtselements in beiden Bildlisten zu identifizieren.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Zum Anzeigen von Element Bildern müssen Sie dem Listenansicht-Steuerelement eine Bildliste zuweisen. Verwenden Sie hierzu die LVM- [**\_ SetImageList**](lvm-setimagelist.md) -Nachricht oder das entsprechende Makro [**ListView \_ SetImageList**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setimagelist), und geben Sie an, ob die Bildliste Symbole in voller Größe, kleine Symbole oder Zustands Bilder enthält. Um das Handle für eine Bildliste abzurufen, die derzeit einem Listenansicht-Steuerelement zugewiesen ist, verwenden Sie die [**LVM \_ GetImageList**](lvm-getimagelist.md) -Nachricht. Sie können die [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion verwenden, um geeignete Dimensionen für die Symbole in voller und kleiner Größe zu bestimmen.
+Zum Anzeigen von Elementbildern müssen Sie dem Listenansicht-Steuerelement eine Bildliste zuweisen. Verwenden Sie hierzu die [**LVM \_ SETIMAGELIST-Nachricht**](lvm-setimagelist.md) oder das entsprechende [**Makro ListView \_ SetImageList,**](/windows/desktop/api/Commctrl/nf-commctrl-listview_setimagelist)um anzugeben, ob die Bildliste Symbole in voller Größe, kleine Symbole oder Zustandsbilder enthält. Verwenden Sie die [**LVM \_ GETIMAGELIST-Nachricht,**](lvm-getimagelist.md) um das Handle für eine Bildliste abzurufen, die derzeit einem Listenansicht-Steuerelement zugewiesen ist. Sie können die [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) verwenden, um geeignete Dimensionen für die Symbole in voller Größe und für kleine Symbole zu bestimmen.
 
-Im folgenden C++-Codebeispiel erstellt die Anwendungs definierte Funktion zuerst Bildlisten und weist Sie dann einem Listenansicht-Steuerelement zu.
+Im folgenden C++-Codebeispiel erstellt die anwendungsdefinierte Funktion zunächst Bildlisten und weist sie dann einem Listenansicht-Steuerelement zu.
 
 
 ```C++
@@ -101,13 +101,13 @@ BOOL InitListViewImageLists(HWND hWndListView)
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[List-View-Steuerelementreferenz](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen List-View Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden List-View-Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

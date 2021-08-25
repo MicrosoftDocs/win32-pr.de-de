@@ -1,27 +1,27 @@
 ---
-description: Com+-Ressourcen Verteiler Schnittstellen
+description: COM+-Ressourcenausgabeschnittstellen
 ms.assetid: 66ee4dd6-15d2-49e8-89a3-6fbb5770cabf
-title: Com+-Ressourcen Verteiler Schnittstellen
+title: COM+-Ressourcenausgabeschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17a6ea5c5c09f67f86b42ebf5b881f1d19ad1501
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ac7fa011681defaddc160e835c7caeb6719054f5e4397903a1716ae76f81c7c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991520"
 ---
-# <a name="com-resource-dispenser-interfaces"></a>Com+-Ressourcen Verteiler Schnittstellen
+# <a name="com-resource-dispenser-interfaces"></a>COM+-Ressourcenausgabeschnittstellen
 
-Anwendungskomponenten verwenden Ressourcen Spender, um auf freigegebene Informationen zuzugreifen. Die in der folgenden Tabelle beschriebenen Schnittstellen enthalten ausführliche Referenzinformationen für Entwickler von Ressourcen Spendern.
+Anwendungskomponenten verwenden Ressourcenspender für den Zugriff auf freigegebene Informationen. Die in der folgenden Tabelle beschriebenen Schnittstellen enthalten ausführliche Referenzinformationen für Entwickler von Ressourcensendern.
 
 
 
-| Schnittstellen                                                | BESCHREIBUNG                                                                                                               |
+| Schnittstellen                                                | Beschreibung                                                                                                               |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| [**Idispenser-Treiber**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver)<br/>   | Diese Schnittstelle wird vom Ressourcen Verteiler-Inhaber aufgerufen, um eine Ressource zu erstellen, aufzulisten, auszuwerten und zu zerstören.<br/> |
-| [**Idispenser Server-Manager**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispensermanager)<br/> | Ressourcen Spender verwenden diese Schnittstelle, um eine Verbindung mit dem Dispenser-Manager herzustellen.<br/>                                    |
-| [**Ihälter**](/windows/desktop/api/ComSvcs/nn-comsvcs-iholder)<br/>                     | Diese Schnittstelle wird verwendet, um Ressourcen vorzubereiten und zu verarbeiten.<br/>                                                        |
+| [**IDispenserDriver**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispenserdriver)<br/>   | Diese Schnittstelle wird vom Besitzer des Ressourcensenders aufgerufen, um eine Ressource zu erstellen, zu eintragungen, zu bewerten und zu zerstören.<br/> |
+| [**IDispenserManager**](/windows/desktop/api/ComSvcs/nn-comsvcs-idispensermanager)<br/> | Ressourcenspender verwenden diese Schnittstelle, um eine Verbindung mit dem Versender-Manager herzustellen.<br/>                                    |
+| [**IHolder**](/windows/desktop/api/ComSvcs/nn-comsvcs-iholder)<br/>                     | Diese Schnittstelle wird verwendet, um Ressourcen vorzubereiten und zu verarbeiten.<br/>                                                        |
 
 
 
@@ -31,10 +31,10 @@ Anwendungskomponenten verwenden Ressourcen Spender, um auf freigegebene Informat
 
 <dl> <dt>
 
-[Konzepte des com+-Ressourcen Verteilers](com--resource-dispenser-concepts.md)
+[KONZEPTE DES COM+-Ressourcensenders](com--resource-dispenser-concepts.md)
 </dt> <dt>
 
-[In com+-ressourcendispenser-Schnittstellen verwendete Typen](types-used-in-com--resource-dispenser-interfaces.md)
+[In COM+-Ressourcenspenderschnittstellen verwendete Typen](types-used-in-com--resource-dispenser-interfaces.md)
 </dt> </dl>
 
  

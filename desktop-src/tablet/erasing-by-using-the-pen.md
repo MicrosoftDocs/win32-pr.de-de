@@ -1,48 +1,48 @@
 ---
-description: Wenn Sie sich entscheiden, das Löschen in Ihrer Anwendung außer mithilfe des InkOverlay-Objekts zu implementieren, können Sie dazu eine der beiden folgenden Methoden verwenden.
+description: Wenn Sie das Löschen in Ihrer Anwendung implementieren möchten, anstatt das InkOverlay-Objekt zu verwenden, können Sie dazu eine der beiden folgenden Methoden verwenden.
 ms.assetid: c05c7dbf-c3e0-42a7-a97e-bb9d9764209d
 title: Löschen mithilfe des Stifts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c9e71828e826f2d57dd21e57934e12c8de0be03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f96d7d281f4e94a4a53f7e99e83c38192ceb7d31fbf9ee643653a20b4836a7cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393521"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119936570"
 ---
 # <a name="erasing-by-using-the-pen"></a>Löschen mithilfe des Stifts
 
-Wenn Sie sich entscheiden, das Löschen in Ihrer Anwendung außer mithilfe des [**InkOverlay**](inkoverlay-class.md) -Objekts zu implementieren, können Sie dazu eine der beiden folgenden Methoden verwenden.
+Wenn Sie das Löschen in Ihrer Anwendung implementieren möchten, anstatt das [**InkOverlay-Objekt**](inkoverlay-class.md) zu verwenden, können Sie dazu eine der beiden folgenden Methoden verwenden.
 
-## <a name="using-the-tip-of-the-pen"></a>Verwenden der Spitze des Stifts
+## <a name="using-the-tip-of-the-pen"></a>Verwenden des Stifttipps
 
-Die Spitze des Tablettstifts wird im Allgemeinen für Handschrift und Zeichen verwendet. der Tipp kann jedoch auch zum Löschen von frei Hand Eingaben verwendet werden. Zu diesem Zweck muss die Anwendung über einen Lösch Modus verfügen, den Benutzer verwenden können. Verwenden Sie in diesem Modus Treffer Tests, um zu bestimmen, über welche Hand Eingaben der Cursor bewegt wird. Sie können den Lösch Modus so festlegen, dass nur die frei Hand Eingaben, die der Cursor übergibt, oder ganze Striche, die den Cursor Cursor überschneiden, abhängig von Entwurfs-oder Funktions Überlegungen gelöscht werden.
+Die Spitze des Tablettstifts wird in der Regel für Handschrift und Zeichnung verwendet. der Tipp kann jedoch auch zum Löschen von Ink verwendet werden. Dazu muss die Anwendung über einen Löschmodus verfügen, den Benutzer verwenden können. Verwenden Sie in diesem Modus Treffertests, um zu bestimmen, welche Ink-Daten der Cursor bewegt. Sie können den Löschmodus so festlegen, dass nur die Vom Cursor übergibte Ink-Funktion oder ganze Striche, die den Pfad des Cursors überschneiden, je nach Entwurf oder funktionalen Überlegungen gelöscht werden.
 
-Ein Beispiel für die Verwendung eines Lösch Modus zum Löschen von frei Hand Eingaben finden Sie [im Beispiel zur](ink-erasing-sample.md)frei Hand Löschung.
+Ein Beispiel für die Verwendung eines Löschmodus zum Löschen von Ink finden Sie unter [Ink Erasing Sample](ink-erasing-sample.md).
 
-## <a name="using-the-top-of-the-pen"></a>Verwenden des oberen Rands des Stifts
+## <a name="using-the-top-of-the-pen"></a>Verwenden des oberen Stifts
 
-Um das Löschen am oberen Rand des Tablettstifts zu implementieren, muss Ihre Anwendung nach einer Änderung im Cursor suchen. Um nach dem umgekehrten Cursor zu suchen, lauschen Sie auf das [**CursorInRange**](inkoverlay-cursorinrange.md) -Ereignis, um zu bestimmen, wann sich der Cursor innerhalb des Kontexts der Anwendung befindet. Wenn sich der Cursor in einem Bereich befindet, suchen Sie im [**Cursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) Objekt nach der [**invertierten**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcursor-get_inverted) Eigenschaft. Wenn die **invertierte** Eigenschaft auf **true** festgelegt ist, führen Sie einen Treffer Test durch Löschen Sie die frei Hand Eingaben oder Striche, die den Cursor Cursor überschneiden, je nach Entwurfs-oder Funktions Überlegungen.
+Um das Löschen mit dem oberen Bereich des Tablettstifts zu implementieren, muss Ihre Anwendung nach einer Änderung im Cursor suchen. Um nach dem invertierten Cursor zu suchen, lauschen Sie auf das [**CursorInRange-Ereignis,**](inkoverlay-cursorinrange.md) um zu bestimmen, wann sich der Cursor im Kontext Ihrer Anwendung befindet. Wenn sich der Cursor im Bereich befindet, suchen Sie im Cursorobjekt nach [**der Inverted-Eigenschaft.**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcursor-get_inverted) [](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) Wenn die **Inverted-Eigenschaft** **true ist,** führen Sie Treffertests durch, um zu bestimmen, welche Ink-Eigenschaft der Cursor bewegt. Löschen Sie je nach Entwurf oder funktionalen Überlegungen entweder die Ink- oder die Striche, die den Pfad des Cursors überschneiden.
 
-Ein Beispiel für die Verwendung des oberen Rands zum Löschen von frei Hand Eingaben finden Sie im [Beispiel zur frei Hand Löschung.](ink-erasing-sample.md)
+Ein Beispiel für die Verwendung des oberen Stifts zum Löschen von Ink finden Sie unter [Ink Erasing Sample](ink-erasing-sample.md).
 
-### <a name="determining-if-erasing-with-the-top-of-the-pen-is-enabled"></a>Es wird ermittelt, ob das Löschen mit dem oberen Rand des Stifts aktiviert ist.
+### <a name="determining-if-erasing-with-the-top-of-the-pen-is-enabled"></a>Bestimmen, ob das Löschen mit dem oberen Stift aktiviert ist
 
-Benutzer können den oberen Rand des Stifts zum Löschen von frei Hand Eingaben in Anwendungen verwenden, die für Tablet PC entwickelt wurden, wenn die jeweilige Hardware dies zulässt. Der Zugriff auf diese Funktionalität erfolgt über ein Kontrollkästchen im Gruppenfeld Stift Schaltflächen auf der Registerkarte Stift Optionen im Dialogfeld "Einstellungen" der Tablet-und Stift-Einstellungen. Überprüfen Sie den folgenden Registrierungs Unterschlüssel, um zu ermitteln, ob der Benutzer das Löschen für den oberen Rand des Stifts aktiviert hat:
+Benutzer können die Oberseite des Stifts verwenden, um Ink in Anwendungen zu löschen, die für Tablet PC entwickelt wurden, wenn ihre spezielle Hardware dies zulässt. Auf diese Funktionalität wird über ein Kontrollkästchen im Gruppenfeld Stiftschaltflächen auf der Registerkarte Stiftoptionen des Dialogfelds Tablet und Stift Einstellungen Systemsteuerung zugegriffen. Um zu ermitteln, ob der Benutzer das Löschen für den oberen Teil des Stifts aktiviert hat, überprüfen Sie den folgenden Registrierungsunterschlüssel:
 
 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\WISP\PEN\SysEventParameters`
 
-Der `EraseEnable` Eintrag dieses unter Schlüssels ist vom Typ " **reg \_ DWORD**". Der Wert dieses Eintrags ist 1 für aktiviert oder 0 für deaktiviert. Andere Werte sind für die zukünftige Verwendung reserviert.
+Der `EraseEnable` Eintrag dieses Unterschlüssels ist vom Typ **REG \_ DWORD.** Der Wert dieses Eintrags ist 1 für aktiviert oder 0 für deaktiviert. Andere Werte sind für die zukünftige Verwendung reserviert.
 
-Wenn die Anwendung den oberen Rand des Stifts zum Löschen verwendet, sollten Sie den Wert des eraseenable-Eintrags überprüfen und Zwischenspeichern, wenn Folgendes gilt:
+Wenn Ihre Anwendung zulässt, dass der obere Teil des Stifts zum Löschen verwendet wird, sollten Sie den Wert des Eintrags EraseEnable in folgenden Zeiten überprüfen und zwischenspeichern:
 
 -   Ihre Anwendung wird gestartet.
--   Jedes Mal, wenn die Anwendung den Fokus erhält, nachdem der Fokus verloren ist
+-   Jedes Mal, wenn Ihre Anwendung den Fokus erhält, nachdem sie den Fokus verloren hat.
 
-Verwenden Sie diesen zwischengespeicherten Wert, um das Verhalten der Anwendung entsprechend zu ändern.
+Verwenden Sie diesen zwischengespeicherten Wert, um das Verhalten Ihrer Anwendung entsprechend zu ändern.
 
-Im folgenden C- \# Beispiel wird eine- `GetEraseEnabled` Methode definiert, die den Wert des `EraseEnable` Eintrags des `SysEventParameters` unter Schlüssels überprüft. Die- `GetEraseEnabled` Methode gibt **true** zurück, wenn der Wert des Eintrags 1 ist. gibt **false** zurück, wenn der Wert des Eintrags 0 ist, oder löst eine [InvalidOperationException](/dotnet/api/system.invalidoperationexception) -Ausnahme aus, wenn der Wert des Eintrags nicht 1 oder 0 ist. Die `GetEraseEnabled` Methode gibt den erwarteten Wert " **true** " zurück, wenn der Unterschlüssel oder der Eintrag nicht vorhanden ist.
+Im folgenden \# C-Beispiel wird eine `GetEraseEnabled` Methode definiert, die den Wert des `EraseEnable` Eintrags des Unterschlüssels `SysEventParameters` überprüft. Die Methode gibt TRUE zurück, wenn der Wert des Eintrags 1 ist; gibt FALSE zurück, wenn der Wert des Eintrags 0 ist, oder löst eine `GetEraseEnabled`  [InvalidOperationException-Ausnahme](/dotnet/api/system.invalidoperationexception) aus, wenn der Wert des Eintrags nicht 1 oder 0 ist.  Die `GetEraseEnabled` -Methode gibt den erwarteten Wert **von TRUE zurück,** wenn entweder der Unterschlüssel oder der Eintrag nicht vorhanden ist.
 
 
 ```C++

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. retrievecolaufnasguid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)'
-title: API. retrievecolaufnasguid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+description: Weitere Informationen finden Sie unter Api.RetrieveColumnAsGuid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+title: Api.RetrieveColumnAsGuid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
 TOCTitle: RetrieveColumnAsGuid method (JET_SESID, JET_TABLEID, JET_COLUMNID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.RetrieveColumnAsGuid(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.retrievecolumnasguid(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a496d5f0ce45a1f2f8d43072ac5d311e7e7a9c29
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 078236d930b262be5e56dc7511c3fe5a8c87eff375ed7c10a4d4c0a6d8cbf963
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977390"
 ---
-# <a name="apiretrievecolumnasguid-method-jet_sesid-jet_tableid-jet_columnid"></a>API. retrievecolaufnasguid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
+# <a name="apiretrievecolumnasguid-method-jet_sesid-jet_tableid-jet_columnid"></a>Api.RetrieveColumnAsGuid-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID)
 
-Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist.
+Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,38 +63,38 @@ public static Nullable<Guid> RetrieveColumnAsGuid(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem die Spalte abgerufen werden soll.
+    Der Cursor, aus dem die Spalte abgerufen werden soll.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das abzurufende ColumnID.
+    Die abzurufende columnid.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Nullable](/dotnet/api/system.nullable-1)\<[Guid](/dotnet/api/system.guid)\>  
-Die aus der Spalte abgerufenen Daten als GUID. NULL, wenn die Spalte NULL ist.  
+Typ: [System.Nullable](/dotnet/api/system.nullable-1)\<[Guid](/dotnet/api/system.guid)\>  
+Die aus der Spalte als GUID abgerufenen Daten. NULL, wenn die Spalte NULL ist.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Retrievecolübernasguid-Überladung](./api.retrievecolumnasguid-method.md)
+[RetrieveColumnAsGuid-Überladung](./api.retrievecolumnasguid-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

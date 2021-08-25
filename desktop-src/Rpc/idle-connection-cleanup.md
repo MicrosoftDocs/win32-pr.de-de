@@ -1,25 +1,25 @@
 ---
-title: Cleanup für Leerlaufverbindung
-description: Standardmäßig werden Verbindungen im Thread Pool erst geschlossen, wenn die gesamte Zuordnung heruntergefahren wird.
+title: Leerlaufverbindungsbereinigung
+description: Verbindungen im Threadpool werden standardmäßig erst geschlossen, wenn die gesamte Zuordnung beendet wurde.
 ms.assetid: e3d6c89b-0ec5-429d-96d9-1396cce10750
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75587781991c2aae86968d90c9da51331d7a29e9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ddc7a7d4cefcead53e9b92678867cd76ceb6fab7f1ab5f1a573cf75378cf2a5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020800"
 ---
-# <a name="idle-connection-cleanup"></a>Cleanup für Leerlaufverbindung
+# <a name="idle-connection-cleanup"></a>Leerlaufverbindungsbereinigung
 
-Standardmäßig werden Verbindungen im Thread Pool erst geschlossen, wenn die gesamte Zuordnung heruntergefahren wird. Diese Richtlinie ermöglicht es Clients mit einer großen Anzahl von Threads oder Sicherheits Identitäten, RPC-Aufrufe an den Server auf effiziente Weise durchführen zu lassen. Der Nachteil ist, dass eine unordinalmenge von Ressourcen für die Verwaltung dieser Verbindungen zugesichert werden kann. Um den Prozess zu verwalten, stellt RPC die [**RpcMgmtEnableIdleCleanup**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtenableidlecleanup) -Funktion bereit. Diese Funktion ermöglicht das Cleanup für Leerlaufverbindungen. der Client scannt den Verbindungspool in regelmäßigen Abständen und schließt Verbindungen, die noch nicht verwendet wurden. Wenn die Zuordnung über Kontext Handles verfügt, werden bei der Bereinigung der Leerlaufverbindung alle Verbindungen im Leerlauf geschlossen. es wird jedoch sichergestellt, dass mindestens eine Verbindung offen bleibt, auch wenn sich die Verbindung im Leerlauf befindet (andernfalls erhält der Server die Durchführung von Kontext Handles). Wenn die Zuordnung keine Kontext Handles beibehalten hat, werden bei der Bereinigung der Leerlaufverbindung alle Verbindungen im Leerlauf geschlossen, auch wenn keine Verbindungen im Pool bestehen.
+Verbindungen im Threadpool werden standardmäßig erst geschlossen, wenn die gesamte Zuordnung beendet wurde. Diese Richtlinie ermöglicht Clients mit einer großen Anzahl von Threads oder Sicherheitsidentitäten, RPC-Aufrufe an den Server effizient durchzuführen. Der Nachteil besteht darin, dass für eine übermäßige Menge von Ressourcen ein Commit ausgeführt werden kann, um diese Verbindungen aufrechtzuerhalten. Zum Verwalten des Prozesses stellt RPC die [**RpcMgmtEnableIdleCleanup-Funktion**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtenableidlecleanup) bereit. Diese Funktion ermöglicht die Bereinigung von Verbindungen im Leerlauf. Der Client scannt den Verbindungspool regelmäßig und schließt Verbindungen, die nicht kürzlich verwendet wurden. Wenn die Zuordnung Kontexthandles beibehalten hat, schließt die Verbindungsbereinigung im Leerlauf alle Verbindungen im Leerlauf, stellt aber sicher, dass mindestens eine Verbindung geöffnet bleibt, auch wenn sich die Verbindung im Leerlauf befindet (andernfalls wird das Kontexthandle heruntergefahren). Wenn die Zuordnung keine Kontexthandles beibehalten hat, schließt die Leerlauf-Verbindungsbereinigung alle Verbindungen im Leerlauf, auch wenn dadurch keine Verbindungen im Pool bestehen bleiben.
 
-Unter Windows XP wird die Anzahl der geöffneten Verbindungen in einer Zuordnung von der RPC-Laufzeit nachverfolgt. wenn die Anzahl der Verbindungen in einer Zuordnung einen bestimmten Schwellenwert überschreitet, wird automatisch die Verbindungs Bereinigung im Leerlauf übernommen.
+Auf Windows XP verfolgt die RPC-Laufzeit die Anzahl der geöffneten Verbindungen in einer Zuordnung nach und aktiviert automatisch die Bereinigung von Verbindungen im Leerlauf, wenn die Anzahl der Verbindungen in einer Zuordnung einen bestimmten Schwellenwert überschreitet.
 
- 
+ 
 
- 
+ 
 
 
 

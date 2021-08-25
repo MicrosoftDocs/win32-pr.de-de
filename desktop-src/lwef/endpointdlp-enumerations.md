@@ -1,16 +1,16 @@
 ---
-title: Endpunkt-Datenverlustverhütungsenumerationen
+title: Enumerationen zur Verhinderung von Endpunktdatenverlust
 description: Enumerationen, die von der Funktion zur Verhinderung von Datenverlust des Endpunkts verwendet werden.
 ms.topic: article
 ms.date: 03/18/2021
-ms.openlocfilehash: 53e89c2809a05dec4e634ccd9d17c68815c48da7
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: 890704990b7456a5c45e56d17184c60f07b5f0c743946aeff61ee2e80c244c35
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888570"
 ---
-# <a name="endpoint-data-loss-prevention-enumerations"></a>Endpunkt-Datenverlustverhütungsenumerationen
+# <a name="endpoint-data-loss-prevention-enumerations"></a>Enumerationen zur Verhinderung von Endpunktdatenverlust
 
 Enumerationen, die von der Funktion zur Verhinderung von Datenverlust des Endpunkts verwendet werden.
 
@@ -18,7 +18,7 @@ Enumerationen, die von der Funktion zur Verhinderung von Datenverlust des Endpun
 
 | Enumeration                                                       | Beschreibung                                                           |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [DlpActionType](endpointdlp-dlpactiontype.md)                       | Gibt den Aktionstyp eines DLP-Vorgangs (Data Loss Prevention) eines Endpunkts an.                                  |
+| [DlpActionType](endpointdlp-dlpactiontype.md)                       | Gibt den Aktionstyp eines Endpunktvorgangs zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) an.                                  |
 | [DlpAppEnforceLevel](endpointdlp-dlpappenforcelevel.md)                       | Gibt die Erzwingungsebene eines DLP-Vorgangs (Data Loss Prevention) eines Endpunkts an.                                  |
 
  

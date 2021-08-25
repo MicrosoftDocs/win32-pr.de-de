@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Liste von Wörtern dar, die verwendet werden können, um das Erkennungs Ergebnis zu verbessern.
+description: Stellt eine Liste von Wörtern dar, die verwendet werden können, um das Erkennungsergebnis zu verbessern.
 ms.assetid: d189fd13-ec69-45dc-8be4-fea48f337636
-title: Inkwordlist-Klasse (msink AUT. h)
+title: InkWordList-Klasse (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,31 +15,31 @@ api_type:
 api_location:
 - InkObj.dll
 - InkObj.dll.dll
-ms.openlocfilehash: 7f3bbf077758bfd0449f5bca1ba3739342fa3658
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe46cf8f1befaf2717cfcf0a8e131113ed4552843bd3b6572364c27f3418ab34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359522"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938670"
 ---
-# <a name="inkwordlist-class"></a>Inkwordlist-Klasse
+# <a name="inkwordlist-class"></a>InkWordList-Klasse
 
-Stellt eine Liste von Wörtern dar, die verwendet werden können, um das Erkennungs Ergebnis zu verbessern.
+Stellt eine Liste von Wörtern dar, die verwendet werden können, um das Erkennungsergebnis zu verbessern.
 
-**Inkwordlist** enthält diese Typen von Membern:
+**InkWordList** verfügt über die folgenden Membertypen:
 
 -   [Schnittstellen](#interfaces)
 -   [Methoden](#methods)
 
 ### <a name="interfaces"></a>Schnittstellen
 
-Diese Schnittstellen werden von der **inkwordlist** -Klasse definiert.
+Die **InkWordList-Klasse** definiert diese Schnittstellen.
 
 
 
 | Schnittstelle        | BESCHREIBUNG                                                           |
 |:-----------------|:----------------------------------------------------------------------|
-| **Iinkwordlist** | Dieses Objekt implementiert die **iinkwordlist** -com-Schnittstelle.<br/> |
+| **IInkWordList** | Dieses Objekt implementiert die **IInkWordList-COM-Schnittstelle.**<br/> |
 
 
 
@@ -47,23 +47,23 @@ Diese Schnittstellen werden von der **inkwordlist** -Klasse definiert.
 
 ### <a name="methods"></a>Methoden
 
-Die **inkwordlist** -Klasse verfügt über diese Methoden.
+Die **InkWordList-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                       | BESCHREIBUNG                                                             |
 |:---------------------------------------------|:------------------------------------------------------------------------|
-| [**AddWord**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-addword)       | Fügt der **inkwordlist** ein einzelnes Wort hinzu.<br/>                   |
-| [**Merge**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-merge)           | Führt eine weitere **inkwordlist** mit in diese **inkwordlist** zusammen.<br/> |
-| [**Removeword**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-removeword) | Entfernt ein einzelnes Wort aus einer " **inkwordlist**".<br/>                |
+| [**AddWord**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-addword)       | Fügt der **InkWordList ein einzelnes Wort hinzu.**<br/>                   |
+| [**Zusammenführen**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-merge)           | Führt eine weitere **InkWordList mit** dieser **InkWordList zusammen.**<br/> |
+| [**RemoveWord**](/windows/win32/api/msinkaut/nf-msinkaut-iinkwordlist-removeword) | Entfernt ein einzelnes Wort aus einem **InkWordList-.**<br/>                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt kann durch Aufrufen der [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Methode in C++ instanziiert werden.
+Dieses Objekt kann durch Aufrufen der [**CoCreateInstance-Methode**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) in C++ instanziiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,9 +71,9 @@ Dieses Objekt kann durch Aufrufen der [**CoCreateInstance**](/windows/desktop/ap
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -85,10 +85,10 @@ Dieses Objekt kann durch Aufrufen der [**CoCreateInstance**](/windows/desktop/ap
 [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist)
 </dt> <dt>
 
-[Faktoid-Konstanten](factoid-constants.md)
+[Factoid-Konstanten](factoid-constants.md)
 </dt> <dt>
 
-[**Inkrecognizercontext-Klasse**](inkrecognizercontext-class.md)
+[**InkRecognizerContext-Klasse**](inkrecognizercontext-class.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TB_GETBUTTON Meldung (kommstrg. h)
+title: TB_GETBUTTON-Nachricht (Commctrl.h)
 description: Ruft Informationen über die angegebene Schaltfläche in einer Symbolleiste ab.
 ms.assetid: d90d053c-0daf-4a5a-b7ca-b9b4472c65a3
 keywords:
-- Windows-Steuerelemente für TB_GETBUTTON Meldung
+- TB_GETBUTTON Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb2080a6c984bb2384f68a1388bd46fe598f5087
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9e36d8cd4e382570884b0cb30f7c95615e2342544cab0970e9864e9fde7882f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919030"
 ---
-# <a name="tb_getbutton-message"></a>TB \_ getbutton-Meldung
+# <a name="tb_getbutton-message"></a>TB \_ GETBUTTON-Nachricht
 
 Ruft Informationen über die angegebene Schaltfläche in einer Symbolleiste ab.
 
@@ -32,20 +32,20 @@ Ruft Informationen über die angegebene Schaltfläche in einer Symbolleiste ab.
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index der Schaltfläche, für die Informationen abgerufen werden sollen.
+Nullbasierter Index der Schaltfläche, für die Informationen abgerufen werden sollen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Struktur, die die Schaltflächen Informationen empfängt.
+Zeiger auf die [**TBBUTTON-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) die die Schaltflächeninformationen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
