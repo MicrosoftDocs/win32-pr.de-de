@@ -1,7 +1,7 @@
 ---
-description: Die Funktion zum Aufheben der Aufhebung der Funktion gibt die Ressourcen frei, die zum Erstellen der Protokoll Eigenschaften Datenbank verwendet werden. Die Parser-DLL muss die deregipperimplementierung implementieren.
+description: Die Exportfunktion "Registrierung aufheben" gibt die Ressourcen frei, die zum Erstellen der Protokolleigenschaftsdatenbank verwendet werden. Die Parser-DLL muss Deregister implementieren.
 ms.assetid: 80852aed-07aa-440f-a537-f6cce461292e
-title: Deregiester-Rückruffunktion (Netmon. h)
+title: Rückruffunktion aufheben (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Netmon.h
-ms.openlocfilehash: 9458ff74f29cd8eb7a75da0a3628a2dd1519ba43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb06ab6e08a674a186bcdb260140915c378db9affc13b17db33d9132109cec78
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911220"
 ---
-# <a name="deregister-callback-function"></a>Deregiester-Rückruffunktion
+# <a name="deregister-callback-function"></a>Rückruffunktion "Registrierung aufheben"
 
-Die **Funktion zum Aufheben** der Aufhebung der Funktion gibt die Ressourcen frei, die zum Erstellen der Protokoll [*Eigenschaften Datenbank*](p.md)verwendet werden. Die Parser-DLL muss die **deregipperimplementierung** implementieren.
+Die Exportfunktion **"Registrierung** aufheben" gibt die Ressourcen frei, die zum Erstellen der [*Protokolleigenschaftsdatenbank*](p.md)verwendet werden. Die Parser-DLL muss **deregister** implementieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ VOID Deregister(
 
 <dl> <dt>
 
-*hprotocol* \[ in\]
+*hProtocol* \[ In\]
 </dt> <dd>
 
 Handle des Protokolls für eine bestimmte Datenbank.
@@ -50,19 +50,19 @@ Handle des Protokolls für eine bestimmte Datenbank.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Netzwerkmonitor Ruft die **deregitenregistrierung** auf, nachdem alle Aufzeichnungs Informationen an die Parser-DLL übergeben wurden. Die Parser-DLL muss eine **deregiester** -Funktion für jedes Protokoll implementieren, das der Parser unterstützt.
+Netzwerkmonitor ruft **die Registrierung auf,** nachdem alle Erfassungsinformationen an die Parser-DLL übergeben wurden. Die Parser-DLL muss eine **Deregister-Funktion** für jedes Protokoll implementieren, das der Parser unterstützt.
 
-Beim Implementieren von **deregistern** muss die Parser-DLL die Funktion " [destroypropertydatabase](destroypropertydatabase.md) " aufrufen, um die [*Eigenschaften Daten Bank*](p.md) Ressourcen freizugeben.
+Beim Implementieren von **Deregister** muss die Parser-DLL die [DestroyPropertyDatabase-Funktion](destroypropertydatabase.md) aufrufen, um die [*Eigenschaftendatenbankressourcen*](p.md) freizugeben.
 
 
 
 | Für Informationen zu                                        | Siehe                                                    |
 |-----------------------------------------------------------|--------------------------------------------------------|
-| Welche Parser sind und wie Sie mit Netzwerkmonitor funktionieren. | [Parser](parsers.md)                                 |
-| Welche Einstiegspunkte in der Parser-DLL enthalten sind.        | [Architektur der Parser-DLL](parser-dll-architecture.md) |
-| Zum Implementieren der **deregiester**  gehört ein Beispiel.     | [Implementieren von deregistern](implementing-deregister.md) |
+| Was Parser sind und wie sie mit Netzwerkmonitor arbeiten. | [Parser](parsers.md)                                 |
+| Welche Einstiegspunkte in der Parser-DLL enthalten sind.        | [Parser-DLL-Architektur](parser-dll-architecture.md) |
+| Das Implementieren von **"Deregister"**  enthält ein Beispiel.     | [Implementieren der Registrierung](implementing-deregister.md) |
 
 
 
@@ -76,15 +76,15 @@ Beim Implementieren von **deregistern** muss die Parser-DLL die Funktion " [dest
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Destroypropertydatabase](destroypropertydatabase.md)
+[DestroyPropertyDatabase](destroypropertydatabase.md)
 </dt> </dl>
 
  

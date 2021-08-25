@@ -1,7 +1,7 @@
 ---
-description: Wendet die-Guster auf ein IDirect3DTexture9-Textur Objekt an.
+description: Wendet Gutter auf ein IDirect3DTexture9-Texturobjekt an.
 ms.assetid: e8f4a4cf-4d3b-419b-9486-08aa3bd3d8a4
-title: 'ID3DXTextureGutterHelper:: applygutterstex-Methode (D3DX9Mesh. h)'
+title: ID3DXTextureGutterHelper::ApplyGuttersTex-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c15bbc981bad3a670923e24e7d0745e91d0d9fcf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a289eede9b55a3560408caf71a20aaf1811bb82780488b886cade8aaa5e96d75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893240"
 ---
-# <a name="id3dxtexturegutterhelperapplygutterstex-method"></a>ID3DXTextureGutterHelper:: applygutterstex-Methode
+# <a name="id3dxtexturegutterhelperapplygutterstex-method"></a>ID3DXTextureGutterHelper::ApplyGuttersTex-Methode
 
-Wendet die-Guster auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Textur Objekt an.
+Wendet Gutter auf ein [**IDirect3DTexture9-Texturobjekt**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT ApplyGuttersTex(
 
 <dl> <dt>
 
-*ptexture* \[ in\]
+*pTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DTEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)**
 
-Zeiger auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9) -Textur Objekt.
+Zeiger auf ein [**IDirect3DTexture9-Texturobjekt.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dtexture9)
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Zeiger auf ein [**IDirect3DTexture9**](/windows/win32/api/d3d9helper/nn-d3d9help
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcallable, D3DERR \_ NotAvailable, D3DERR \_ oudefvideomemory, D3DERR \_ wasstilldrawing, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, D3DERR \_ WASDRAWING, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Class 2 texeln**](id3dxtexturegutterhelper.md) werden durch das erneute Sampling von Class 1 und 4 texeln generiert.
+[**Texel**](id3dxtexturegutterhelper.md) der Klasse 2 werden durch Resampling der Klassen 1 und 4 generiert.
 
-Breite und Höhe der Textur müssen mit den von [**ID3DXTextureGutterHelper:: getWidth**](id3dxtexturegutterhelper--getwidth.md) und [**ID3DXTextureGutterHelper:: GetHeight**](id3dxtexturegutterhelper--getheight.md)zurückgegebenen Zeichen identisch sein.
+Breite und Höhe der Textur müssen mit denen identisch sein, die von [**ID3DXTextureGutterHelper::GetWidth**](id3dxtexturegutterhelper--getwidth.md) und [**ID3DXTextureGutterHelper::GetHeight**](id3dxtexturegutterhelper--getheight.md)zurückgegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Breite und Höhe der Textur müssen mit den von [**ID3DXTextureGutterHelper:: ge
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

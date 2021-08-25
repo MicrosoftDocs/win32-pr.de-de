@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdiskfullexception-Klasse'
-title: Esentdiskfullexception-Klasse
+description: 'Weitere Informationen zu: EsentDiskFullException-Klasse'
+title: EsentDiskFullException-Klasse
 TOCTitle: EsentDiskFullException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDiskFullException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdiskfullexception(v=EXCHG.10)
@@ -24,30 +24,30 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 28c3fb4fa06a6526cf06d0f4822ce3dcb835bad6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9812f5cb39d7bc2d5962e6b8834599a33a99d9b3ba093ad1b6ff377470e0292
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973910"
 ---
-# <a name="esentdiskfullexception-class"></a>Esentdiskfullexception-Klasse
+# <a name="esentdiskfullexception-class"></a>EsentDiskFullException-Klasse
 
-Basisklasse für JET_err. Diskfull-Ausnahmen.
+Basisklasse für JET_err. DiskFull-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdiskexception](./esentdiskexception-class.md)  
-              Microsoft. ISAM. ESENT. Interop. esentdiskfullexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentResourceException](./esentresourceexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDiskException](./esentdiskexception-class.md)  
+              Microsoft.Isam.Esent.Interop.EsentDiskFullException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,10 +69,10 @@ public sealed class EsentDiskFullException : EsentDiskException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdiskfullexception-Elemente](./esentdiskfullexception-members.md)
+[EsentDiskFullException-Member](./esentdiskfullexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

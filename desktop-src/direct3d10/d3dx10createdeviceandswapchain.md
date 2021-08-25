@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie das beste Direct3D-Gerät und eine SwapChain.
+description: Erstellen Sie das beste Direct3D-Gerät und eine Austauschkette.
 ms.assetid: c320a6c4-fa68-47fc-b2cb-0dc53c2767e7
-title: D3DX10CreateDeviceAndSwapChain-Funktion (D3DX10Core. h)
+title: D3DX10CreateDeviceAndSwapChain-Funktion (D3DX10Core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Core.h
-ms.openlocfilehash: fe71aeae91f8c43966e0fda2d2f430c7908f2855
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: aa92b0fd7efb9c6f457fd035fad28992d965a4cf2f6fdad39936292f7a70a996
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852370"
 ---
 # <a name="d3dx10createdeviceandswapchain-function"></a>D3DX10CreateDeviceAndSwapChain-Funktion
 
-Erstellen Sie das beste Direct3D-Gerät und eine SwapChain.
+Erstellen Sie das beste Direct3D-Gerät und eine Austauschkette.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,66 +45,66 @@ HRESULT D3DX10CreateDeviceAndSwapChain(
 
 <dl> <dt>
 
-*padapter* \[ in\]
+*pAdapter* \[ In\]
 </dt> <dd>
 
-Typ: **[ **idxgiadapter**](/windows/win32/api/dxgi/nn-dxgi-idxgiadapter)\***
+Typ: **[ **IDXGIAdapter**](/windows/win32/api/dxgi/nn-dxgi-idxgiadapter)\***
 
-Zeiger auf einen [**idxgiadapter**](/windows/win32/api/dxgi/nn-dxgi-idxgiadapter).
+Zeiger auf einen [**IDXGIAdapter**](/windows/win32/api/dxgi/nn-dxgi-idxgiadapter).
 
 </dd> <dt>
 
-*DriverType* \[ in\]
+*DriverType* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3d10 \_ Driver \_ Type**](/windows/desktop/api/D3D10misc/ne-d3d10misc-d3d10_driver_type)**
+Typ: **[ **D3D10 \_ DRIVER \_ TYPE**](/windows/desktop/api/D3D10misc/ne-d3d10misc-d3d10_driver_type)**
 
-Der Typ des Treibers für das Gerät. Siehe [**d3d10 \_ Driver \_ Type**](/windows/desktop/api/D3D10misc/ne-d3d10misc-d3d10_driver_type).
+Der Typ des Treibers für das Gerät. Siehe [**D3D10 DRIVER TYPE (D3D10-TREIBERTYP). \_ \_**](/windows/desktop/api/D3D10misc/ne-d3d10misc-d3d10_driver_type)
 
 </dd> <dt>
 
-*Software* \[ in\]
+*Software* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
-Ein Handle für die dll, die einen Software-Rasterizer implementiert. Muss **null** sein, wenn der DriverType nicht-Software ist. Das HMODULE einer DLL kann mit [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa)oder [GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
+Ein Handle für die DLL, die einen Softwareraster implementiert. Muss **NULL** sein, wenn DriverType nicht Software ist. Das HMODULE einer DLL kann mit [LoadLibrary,](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa)oder [GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Dies ist optional. Geräteerstellungsflags (siehe [**d3d10 \_ Create \_ Device \_ Flag**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_create_device_flag)), die [API-Ebenen](d3d10-graphics-programming-guide-api-features-layers.md)aktivieren. Diese Flags können bitweise oder gleich sein.
+Optional. Geräteerstellungsflags (siehe [**D3D10 \_ CREATE \_ DEVICE \_ FLAG),**](/windows/desktop/api/D3D10/ne-d3d10-d3d10_create_device_flag)die [API-Ebenen](d3d10-graphics-programming-guide-api-features-layers.md)aktivieren. Diese Flags können bitweise OR'd sein.
 
 </dd> <dt>
 
-*ptauapchaindesc* \[ in\]
+*pSwapChainDesc* \[ In\]
 </dt> <dd>
 
-Typ: **[ **DXGI- \_ Austausch \_ Kette \_ DESC**](/windows/win32/api/dxgi/ns-dxgi-dxgi_swap_chain_desc)\***
+Typ: **[ **DXGI \_ SWAP \_ CHAIN \_ DESC**](/windows/win32/api/dxgi/ns-dxgi-dxgi_swap_chain_desc)\***
 
-Die Beschreibung der Austausch Kette. Weitere Informationen finden Sie unter [**DXGI \_ Swap \_ Chain \_**](/windows/win32/api/dxgi/ns-dxgi-dxgi_swap_chain_desc)Debug.
+Beschreibung der Swapkette. Weitere Informationen finden Sie unter [**DXGI \_ SWAP CHAIN \_ \_ DESC**](/windows/win32/api/dxgi/ns-dxgi-dxgi_swap_chain_desc).
 
 </dd> <dt>
 
-*ppswapchain* \[ vorgenommen\]
+*ppSwapChain* \[ out\]
 </dt> <dd>
 
-Typ: **[ **idxgiswapchain**](/windows/win32/api/dxgi/nn-dxgi-idxgiswapchain)\*\***
+Typ: **[ **IDXGISwapChain**](/windows/win32/api/dxgi/nn-dxgi-idxgiswapchain)\*\***
 
-Adresse eines Zeigers auf eine [**idxgiswapchain**](/windows/win32/api/dxgi/nn-dxgi-idxgiswapchain).
+Adresse eines Zeigers auf eine [**IDXGISwapChain**](/windows/win32/api/dxgi/nn-dxgi-idxgiswapchain).
 
 </dd> <dt>
 
-*ppdevice* \[ vorgenommen\]
+*ppDevice* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Device**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)\*\***
 
-Adresse eines Zeigers auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device) , die das neu erstellte Gerät empfängt.
+Adresse eines Zeigers auf eine [**ID3D10Device-Schnittstelle,**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device) die das neu erstellte Gerät empfängt.
 
 </dd> </dl>
 
@@ -112,16 +112,16 @@ Adresse eines Zeigers auf eine [**ID3D10Device-Schnittstelle**](/windows/desktop
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Diese Methode gibt einen der folgenden [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)zurück.
+Diese Methode gibt einen der folgenden [Direct3D 10-Rückgabecodes zurück.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um das beste Gerät zu erstellen, implementiert diese Methode mehr als eine Geräte Erstellungs Option. Zuerst versucht die-Methode, ein 10,1-Gerät (und eine SwapChain) zu erstellen. Wenn dies fehlschlägt, versucht die Methode, ein 10,0-Gerät zu erstellen. Wenn dies fehlschlägt, schlägt die Methode fehl. Wenn Ihre Anwendung nur ein 10,1-Gerät oder nur ein 10,0-Gerät erstellen muss, verwenden Sie stattdessen diese APIs:
+Um das beste Gerät zu erstellen, implementiert diese Methode mehr als eine Geräteerstellungsoption. Zuerst versucht die -Methode, ein 10.1-Gerät (und eine Austauschkette) zu erstellen. Wenn dies fehlschlägt, versucht die -Methode, ein 10.0-Gerät zu erstellen. Wenn dies fehlschlägt, schlägt die Methode fehl. Wenn Ihre Anwendung nur ein 10.1-Gerät oder nur ein 10.0-Gerät erstellen muss, verwenden Sie stattdessen diese APIs:
 
--   Verwenden Sie [**D3D10CreateDeviceAndSwapChain**](/windows/desktop/api/D3D10Misc/nf-d3d10misc-d3d10createdeviceandswapchain) , um ein Gerät vom Typ Direct3D 10,0 (nur) und eine Austausch Kette zu erstellen.
--   Verwenden Sie [**D3D10CreateDeviceAndSwapChain1**](/windows/desktop/api/D3D10_1/nf-d3d10_1-d3d10createdeviceandswapchain1) , um ein Gerät vom Typ Direct3D 10,1 (nur) und eine Austausch Kette zu erstellen.
+-   Verwenden Sie [**D3D10CreateDeviceAndSwapChain,**](/windows/desktop/api/D3D10Misc/nf-d3d10misc-d3d10createdeviceandswapchain) um ein Direct3D 10.0-Gerät (nur) und eine Austauschkette zu erstellen.
+-   Verwenden Sie [**D3D10CreateDeviceAndSwapChain1,**](/windows/desktop/api/D3D10_1/nf-d3d10_1-d3d10createdeviceandswapchain1) um ein Direct3D 10.1-Gerät und eine Austauschkette (nur) zu erstellen.
 
-Diese Methode erfordert Windows Vista Service Pack 1.
+Für diese Methode ist Windows Vista Service Pack 1 erforderlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -129,7 +129,7 @@ Diese Methode erfordert Windows Vista Service Pack 1.
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Core. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Core.h</dt> </dl> |
 
 
 
@@ -137,7 +137,7 @@ Diese Methode erfordert Windows Vista Service Pack 1.
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

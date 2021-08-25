@@ -1,7 +1,7 @@
 ---
-description: Die makeidentitypalette-Methode versucht, eine &\# 0034;-Identitäts Palette zu erstellen &\# 0034; definiert als eine, die direkt der im Anzeigegerät ausgewählten Palette zugeordnet ist.
+description: Die MakeIdentityPalette-Methode versucht, eine &\# 0034;Identitätspalette,&\# 0034; zu erstellen, die direkt der im Anzeigegerät ausgewählten Palette zugeordnet ist.
 ms.assetid: 08a0cf67-f43f-44c0-bfb3-6527fd434ea4
-title: Cimagepalette. makeidentitypalette-Methode (winutil. h)
+title: CImagePalette.MakeIdentityPalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8e105652108e74907375408f0bd8946c69194202
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb6e9a4e2c6adc411b7b043e35dc6dacf45dbb6a6ee4cf326a1c1953c559c16f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916130"
 ---
-# <a name="cimagepalettemakeidentitypalette-method"></a>Cimagepalette. makeidentitypalette-Methode
+# <a name="cimagepalettemakeidentitypalette-method"></a>CImagePalette.MakeIdentityPalette-Methode
 
-Die `MakeIdentityPalette` Methode versucht, eine "Identitäts Palette" als eine zu definieren, die direkt der im Anzeigegerät ausgewählten Palette zugeordnet ist.
+Die `MakeIdentityPalette` -Methode versucht, eine "Identitätspalette" zu erstellen, die als eine definiert ist, die direkt der im Anzeigegerät ausgewählten Palette zugeordnet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,36 +44,36 @@ HRESULT MakeIdentityPalette(
 
 <dl> <dt>
 
-*Pentry* 
+*pEntry* 
 </dt> <dd>
 
-Zeiger auf ein Array von paletteneinträgen.
+Zeiger auf ein Array von Paletteneinträgen.
 
 </dd> <dt>
 
-*icolours* 
+*iColours* 
 </dt> <dd>
 
-Anzahl der Paletteneinträge in *Pentry*.
+Anzahl der Paletteneinträge in *pEntry*.
 
 </dd> <dt>
 
-*szdevice* 
+*szDevice* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Anzeige Geräts enthält, wie von der GDI-Funktion " **EnumDisplayDevices** " zurückgegeben. Legen Sie diesen Parameter auf **null** fest, um das Haupt Anzeigegerät zu verwenden.
+Zeiger auf eine Zeichenfolge, die den Namen des Anzeigegeräts enthält, wie von der **GDI-Funktion EnumDisplayDevices** zurückgegeben. Um das Hauptanzeigegerät zu verwenden, legen Sie diesen Parameter auf **NULL** fest.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg s OK oder \_ false zurück.
+Gibt bei Erfolg S \_ OK oder bei Erfolg S FALSE \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode vergleicht die reservierten Einträge in der Systempalette mit den entsprechenden Einträgen im *Pentry* -Array. Wenn Sie genau übereinstimmen, legt die-Methode das PC- \_ nocollapse-Flag in den restlichen (nicht reservierten) paletteneinträgen in *Pentry* fest. Mit diesem Flag wird verhindert, dass der GDI logische Paletteneinträge zu System paletteneinträgen zuordnet.
+Diese Methode vergleicht die reservierten Einträge in der Systempalette mit den entsprechenden Einträgen im *pEntry-Array.* Wenn sie genau übereinstimmen, legt die -Methode das \_ PC-NOCOLLAPSE-Flag in den verbleibenden (nicht reservierten) Paletteneinträgen in *pEntry fest.* Dieses Flag verhindert, dass GDI versucht, Einträge der logischen Palette zu Systempaletteneinträgen zuzuordnen.
 
-Die [**cimagepalette:: makepalette**](cimagepalette-makepalette.md) -Methode ruft diese Methode auf.
+Die [**CImagePalette::MakePalette-Methode**](cimagepalette-makepalette.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Die [**cimagepalette:: makepalette**](cimagepalette-makepalette.md) -Methode ruf
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ Die [**cimagepalette:: makepalette**](cimagepalette-makepalette.md) -Methode ruf
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

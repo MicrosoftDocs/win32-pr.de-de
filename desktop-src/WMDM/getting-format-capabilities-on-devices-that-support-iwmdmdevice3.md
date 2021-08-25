@@ -1,47 +1,47 @@
 ---
-title: Erhalten von Formatfunktionen über IWMDMDevice3
-description: Erhalten von Format Funktionen auf Geräten, die IWMDMDevice3 unterstützen
+title: Abrufen von Formatfunktionen über IWMDMDevice3
+description: Abrufen von Formatfunktionen auf Geräten, die IWMDMDevice3 unterstützen
 ms.assetid: a431c3cb-e722-4d68-a82d-385fff067ea6
 keywords:
-- Windows Media Device Manager, Gerätefunktionen
-- Device Manager, Gerätefunktionen
-- Programmier Handbuch, Gerätefunktionen
-- Desktop Anwendungen, Gerätefunktionen
-- Erstellen von Windows Media Device Manager-Anwendungen, Gerätefunktionen
+- Windows Medien Geräte-Manager, Gerätefunktionen
+- Geräte-Manager,Gerätefunktionen
+- Programmierhandbuch, Gerätefunktionen
+- Desktopanwendungen, Gerätefunktionen
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, Gerätefunktionen
 - Schreiben von Dateien auf Geräte, Gerätefunktionen
 - IWMDMDevice3-Methode
-- Windows Media Device Manager, IWMDMDevice3-Methode
-- Device Manager, IWMDMDevice3-Methode
-- Programmier Handbuch, IWMDMDevice3-Methode
-- Desktop Anwendungen, IWMDMDevice3-Methode
-- Erstellen von Windows Media Device Manager-Anwendungen, IWMDMDevice3-Methode
+- Windows Media Geräte-Manager,IWMDMDevice3-Methode
+- Geräte-Manager,IWMDMDevice3-Methode
+- Programmierhandbuch,IWMDMDevice3-Methode
+- Desktopanwendungen, IWMDMDevice3-Methode
+- Erstellen Windows Media Geräte-Manager-Anwendungen, IWMDMDevice3-Methode
 - Schreiben von Dateien auf Geräte, IWMDMDevice3-Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 734f674a5fc54aaec0df10d4db613fa067f9b505
-ms.sourcegitcommit: b95a94ffffda33f9ebbdd41787c01866444b4cf4
+ms.openlocfilehash: 1eadde80f957573563468375ea06cd64b95cf83815491a3f21775fb1ebcefc7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "104038406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957525"
 ---
-# <a name="getting-format-capabilities-through-iwmdmdevice3"></a>Erhalten von Formatfunktionen über IWMDMDevice3
+# <a name="getting-format-capabilities-through-iwmdmdevice3"></a>Abrufen von Formatfunktionen über IWMDMDevice3
 
-[**IWMDMDevice3:: getformatcapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability) ist die bevorzugte Methode, um ein Gerät zu Fragen, welche Formate unterstützt werden. Die folgenden Schritte zeigen, wie Sie mit dieser Methode ein Gerät für seine Formatfunktionen Abfragen können:
+[**IWMDMDevice3::GetFormatCapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability) ist die bevorzugte Methode, um ein Gerät zu fragen, welche Formate es unterstützt. Die folgenden Schritte zeigen, wie Sie diese Methode verwenden, um ein Gerät nach seinen Formatfunktionen abzufragen:
 
-1.  Die Anwendung muss bestimmen, welche Formate von einem Gerät unterstützt werden und welche von Interesse sind. Zu diesem Zweck kann die Anwendung durch Aufrufen von [**IWMDMDevice3:: GetProperty**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getproperty)eine Liste der vom Gerät unterstützten Formate anfordern.
-2.  Die Anwendung durchläuft alle unterstützten Formate und fordert die Formatierungsfunktionen eines Geräts für ein bestimmtes Format (z. b. WMA oder WMV) an, indem **IWMDMDevice3:: getformatcapability** aufgerufen und ein Format mithilfe der [**WMDM- \_ Formatcode**](wmdm-formatcode.md) -Enumeration angegeben wird. Diese Methode ruft eine Funktionsstruktur für das [**WMDM- \_ Format \_**](wmdm-format-capability.md) ab.
-3.  Durchlaufen Sie alle [**WMDM- \_ Prop- \_ Konfigurations**](wmdm-prop-config.md) Strukturen in der abgerufenen **WMDM- \_ formatfunktionsstruktur \_** . Jede **\_ \_ Konfigurations Struktur von WMDM-Prop** enthält eine Gruppe von Eigenschaften mit unterstützten Werten, die eine Konfiguration für dieses Format darstellen. Jede Konfiguration verfügt über eine bevorzugte Zahl, bei der eine niedrigere Zahl eine höhere Einstellung für das Gerät angibt.
-4.  Durchlaufen aller [**WMDM- \_ Prop- \_ MASC**](wmdm-prop-desc.md) -Strukturen in der abgerufenen **WMDM- \_ Prop- \_ Konfiguration**. Jede **WMDM- \_ Prop- \_ Abteilung** enthält eine Liste der unterstützten Eigenschaft/Wert-Paare.
-5.  Rufen Sie die Eigenschaftsnamen und-Werte aus der **WMDM- \_ Prop \_** -Debug-Struktur ab. Zu den Eigenschaften zählen Bitrate, Codec und Frame Größe. Eigenschaftsnamen werden in der Header Datei "mswap. h" definiert. eine Liste der meisten dieser Konstanten wird in den [metadatenkonstanten](metadata-constants.md)angegeben. Drei Typen von Eigenschafts Werten sind möglich:
-    -   Ein einzelner Wert, WMDM-Enumeration, \_ \_ \_ gültige \_ Werte, die die \_ Unterstützung für alle Werte für diese Eigenschaft angeben.
-    -   Ein Wertebereich, der durch einen maximalen Wert, einen minimalen Wert und ein Intervall definiert wird.
-    -   Eine Liste von diskreten Werten.
-6.  Löschen Sie die gespeicherten Werte. Der Arbeitsspeicher für diese Werte wird von Windows Media Device Manager zugeordnet. Ihr Gerät ist für die Freigabe des Arbeitsspeichers verantwortlich. Diese Vorgehensweise wird am Ende dieses Themas beschrieben.
+1.  Die Anwendung muss bestimmen, welche Formate ein Gerät unterstützt und welche von Interesse sind. Hierzu kann die Anwendung eine Liste der vom Gerät unterstützten Formate anfordern, indem [**sie IWMDMDevice3::GetProperty aufruft.**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getproperty)
+2.  Die Anwendung durchläuft alle unterstützten Formate und fordert die Formatfunktionen eines Geräts für ein bestimmtes Format (z. B. WMA oder WMV) an, indem **sie IWMDMDevice3::GetFormatCapability** aufruft und ein Format mithilfe der [**WMDM \_ FORMATCODE-Enumeration**](wmdm-formatcode.md) angibt. Diese Methode ruft eine [**WMDM \_ FORMAT \_ CAPABILITY-Struktur**](wmdm-format-capability.md) ab.
+3.  Durchlaufen Sie alle [**WMDM \_ PROP \_ CONFIG-Strukturen**](wmdm-prop-config.md) in der abgerufenen **WMDM \_ FORMAT \_ CAPABILITY-Struktur.** Jede **WMDM \_ PROP \_ CONFIG-Struktur** enthält eine Gruppe von Eigenschaften mit unterstützten Werten, die eine Konfiguration für dieses Format darstellen. Jede Konfiguration verfügt über eine Einstellungsnummer, wobei eine niedrigere Zahl eine höhere Einstellung durch das Gerät angibt.
+4.  Durchlaufen Sie alle [**WMDM \_ PROP \_ DESC-Strukturen**](wmdm-prop-desc.md) in der abgerufenen **WMDM \_ PROP \_ CONFIG**. Jedes **WMDM \_ PROP \_ DESC** enthält eine Liste der unterstützten Eigenschaften-Wert-Paare.
+5.  Rufen Sie die Eigenschaftennamen und -werte aus der **WMDM \_ PROP \_ DESC-Struktur** ab. Zu den Eigenschaften gehören Bitrate, Codec und Framegröße. Eigenschaftennamen werden in der Headerdatei mswmdm.h definiert. Eine Liste der meisten dieser Konstanten wird in [Metadatenkonstanten](metadata-constants.md)angegeben. Drei Typen von Eigenschaftswerten sind möglich:
+    -   Ein einzelner Wert, WMDM \_ ENUM \_ PROP VALID VALUES \_ \_ \_ ANY, der die Unterstützung für alle Werte für diese Eigenschaft angibt.
+    -   Ein Wertebereich, der durch einen Höchstwert, einen Mindestwert und ein Intervall definiert wird.
+    -   Eine Liste diskreter Werte.
+6.  Löschen Sie die gespeicherten Werte. Arbeitsspeicher für diese Werte wird von Windows Media Geräte-Manager zugeordnet. Ihr Gerät ist für das Freigeben des Arbeitsspeichers verantwortlich. Die Vorgehensweise wird am Ende dieses Themas beschrieben.
 
-Bei der Reaktion auf **getformatcapability** können von einem Gerät WMDM-Enumerationswerte \_ \_ \_ \_ für gültige Werte für die \_ **WMDM- \_ Format \_ Funktion gemeldet werden. WMDM- \_ Prop- \_ Konfiguration. WMDM- \_ Prop- \_ Abteilung. Validvaluesform** , um die Unterstützung für alle Werte für Bitrate, Kanäle usw. zu beanspruchen. Sie sollten diesen Anspruch jedoch mit Vorsicht behandeln, da Geräte manchmal Unterstützung für beliebige Werte melden können, wenn Sie nicht alle Bitraten oder Bildgrößen unterstützen. Sie sollten in Erwägung gezogen werden, dass Ihre Anwendung extrem große Dateien oder High-Bit-Rate-Dateien in kleinere Versionen oder weniger speicherintensive und CPU-intensive Versionen umwandelt, wenn Sie Sie an Geräte senden, die diese Dateien wiedergeben sollen.
+Wenn auf **GetFormatCapability** reagiert, kann ein Gerät WMDM \_ ENUM \_ PROP VALID VALUES ANY for \_ \_ \_ **WMDM \_ FORMAT \_ CAPABILITY melden. WMDM \_ PROP \_ CONFIG. WMDM \_ PROP \_ DESC. ValidValuesForm,** um Unterstützung für alle Werte für Bitrate, Kanäle usw. in Anspruch zu nehmen. Sie sollten diesen Anspruch jedoch mit Vorsicht behandeln, da Geräte manchmal Unterstützung für beliebige Werte melden können, wenn sie tatsächlich nicht alle Bitraten oder Bildgrößen unterstützen. Sie können erwägen, dass Ihre Anwendung extrem große oder Dateien mit hoher Bitrate in kleinere Versionen oder weniger speicher- und CPU-intensive Versionen transcodiert, wenn sie an Geräte gesendet werden, die diese Dateien wiedergeben sollen.
 
-Die folgende C++-Funktion zeigt, wie Sie die Unterstützung von Geräte Formaten für ein bestimmtes Format anfordern.
+Die folgende C++-Funktion zeigt, wie Geräteformatunterstützung für ein bestimmtes Format angefordert wird.
 
 
 ```C++
@@ -114,11 +114,11 @@ HRESULT GetFormatCaps(WMDM_FORMATCODE formatCode, IWMDMDevice3* pDevice)
 
 
 
-**Löschen von zugewiesener Speicher**
+**Löschen des belegten Arbeitsspeichers**
 
-Nachdem Sie die Formatierungsfunktionen von einem Gerät abgerufen haben, muss die Anwendung den Arbeitsspeicher freigeben, der der Beschreibung zugeordnet ist. [**Getformatsupport**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-getformatsupport) und [**GetFormatSupport2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice2-getformatsupport2) verfügen über Arrays von einfachen Strukturen, die durch einfaches Aufrufen von **CoTaskMemFree** mit dem Array gelöscht werden können. Allerdings verfügt **getformatcapability** über eine komplexere Datenstruktur mit dynamisch zugewiesener Arbeitsspeicher, die durch Schleifen durch alle Elemente gelöscht und einzeln freigegeben werden muss.
+Nach dem Abrufen von Formatfunktionen von einem Gerät muss die Anwendung den zugeordneten Arbeitsspeicher freigeben, um die Beschreibung zu speichern. [**GetFormatSupport**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice-getformatsupport) und [**GetFormatSupport2**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice2-getformatsupport2) verfügen über Arrays einfacher Strukturen, die durch einfaches Aufrufen von **CoTaskMemFree** mit dem Array gelöscht werden können. **GetFormatCapability** verfügt jedoch über eine komplexere Datenstruktur mit dynamisch zugeordneten Arbeitsspeicher, die gelöscht werden muss, indem alle Elemente durchlaufen und einzeln freigegeben werden.
 
-Der folgende C++-Code zeigt, wie eine Anwendung den für eine **WMDM- \_ Format \_** Funktionsstruktur zugeordneten Arbeitsspeicher freigeben kann.
+Der folgende C++-Code zeigt, wie eine Anwendung den Arbeitsspeicher freigeben kann, der einer **WMDM \_ FORMAT \_ CAPABILITY-Struktur** zugeordnet ist.
 
 
 ```C++
@@ -166,18 +166,18 @@ void CWMDMController::FreeFormatCapability(WMDM_FORMAT_CAPABILITY formatCap)
 
 
 
-**Abfragen für alle unterstützten Formate**
+**Abfragen aller unterstützten Formate**
 
-In der Regel fragt eine Anwendung ein Gerät nach einem bestimmten Format ab, da es daran interessiert ist, eine bestimmte Datei an das Gerät zu senden. Wenn Sie jedoch eine Anwendung für alle unterstützten Formate Abfragen möchten, können Sie [**IWMDMDevice3:: GetProperty**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getproperty) aufrufen und g \_ wszwmdmformatssupported übergeben, um eine vollständige Liste abzurufen.
+In der Regel fragt eine Anwendung ein Gerät nach einem bestimmten Format ab, da es daran interessiert ist, eine bestimmte Datei an das Gerät zu senden. Wenn Sie jedoch eine Anwendung nach allen unterstützten Formaten abfragen möchten, können Sie [**IWMDMDevice3::GetProperty**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getproperty) aufrufen und g \_ wszWMDMFormatsSupported übergeben, um eine vollständige Liste abzurufen.
 
-Wenn ein Gerät nur ein Element zurückgibt, WMDM- \_ Formatcode \_ nicht definiert ist, bedeutet dies in der Regel, dass das Gerät keine Formatcodes unterstützt. Wenn **getformatcapability** mit nicht definiertem WMDM- \_ Format Code aufgerufen wird \_ , werden möglicherweise Funktionen abgerufen. diese Eigenschaften sind jedoch möglicherweise recht generisch (z. b. Name, Dateigröße, Datum der letzten Änderung usw.).
+Wenn ein Gerät nur ein Element (WMDM \_ FORMATCODE \_ UNDEFINED) zurückgibt, bedeutet dies in der Regel, dass das Gerät keine Formatcodes unterstützt. Das Aufrufen von **GetFormatCapability** mit WMDM \_ FORMATCODE \_ UNDEFINED kann Funktionen abrufen, aber diese Eigenschaften können relativ generisch sein (z. B. Name, Dateigröße, Datum der letzten Änderung usw.).
 
-Die folgenden Schritte zeigen, wie Sie eine Liste aller unterstützten Formate Abfragen:
+Die folgenden Schritte zeigen, wie Sie eine Liste aller unterstützten Formate abfragen:
 
-1.  Fordern Sie eine Liste aller durch den Aufruf von **IWMDMDevice3:: GetProperty** unterstützten Formatcodes an, und übergeben Sie g \_ wszwmdmformatssupported. Dadurch wird eine **PROPVARIANT** zurückgegeben, die ein **SAFEARRAY** unterstützter Formate enthält.
-2.  Durchlaufen Sie die Elemente durch den Aufruf von **safearraygetelements**. Jedes Element ist eine **WMDM- \_ Formatcode** -Enumeration.
-3.  Fordern Sie die Funktionen für jedes Format an, und machen Sie den Arbeitsspeicher für jedes der **WMDM- \_ Formatierungs \_** Elemente frei
-4.  Löschen Sie die in Schritt 1 abgerufene **PROPVARIANT** durch Aufrufen von **propvariantclear**.
+1.  Fordern Sie eine Liste aller Formatcodes an, die durch Aufrufen von **IWMDMDevice3::GetProperty** unterstützt werden, und übergeben Sie g \_ wszWMDMFormatsSupported. Dadurch wird ein **PROPVARIANT-Wert zurückgegeben,** der ein **SAFEARRAY-Format** mit unterstützten Formaten enthält.
+2.  Durchlaufen Sie die Elemente, indem Sie **SafeArrayGetElement** aufrufen. Jedes Element ist eine **WMDM \_ FORMATCODE-Enumeration.**
+3.  Fordern Sie die Funktionen für jedes Format an, und freigeben Sie anschließend den Arbeitsspeicher für jedes **WMDM \_ FORMAT \_ CAPABILITY-Element.**
+4.  Löschen Sie das in Schritt 1 abgerufene **PROPVARIANT,** indem Sie **PropVariantClear** aufrufen.
 
 Der folgende C++-Beispielcode ruft eine Liste der unterstützten Formate für ein Gerät ab.
 
@@ -221,12 +221,12 @@ e_Exit:
 
 <dl> <dt>
 
-[**Ermitteln der Funktionen des Geräte Formats**](discovering-device-format-capabilities.md)
+[**Ermitteln von Geräteformatfunktionen**](discovering-device-format-capabilities.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

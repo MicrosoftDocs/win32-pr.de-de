@@ -1,9 +1,9 @@
 ---
-title: DTM_GETIDEALSIZE Meldung (kommstrg. h)
-description: Ruft die Größe ab, die zum Anzeigen des Steuer Elements ohne Clipping benötigt wird. Senden Sie diese Nachricht explizit oder mithilfe des "DateTime \_ getidealsize"-Makros.
+title: DTM_GETIDEALSIZE (Commctrl.h)
+description: Ruft die Größe ab, die zum Anzeigen des Steuerelements ohne Clipping erforderlich ist. Senden Sie diese Nachricht explizit oder mithilfe des DateTime \_ GetIdealSize-Makros.
 ms.assetid: 15ec26a1-645b-4a96-af66-1031e1a46c6c
 keywords:
-- Windows-Steuerelemente für DTM_GETIDEALSIZE Meldung
+- DTM_GETIDEALSIZE message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a979883f431fea4627f52fe19c3716341e3f2328
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 639fbbb25fbf61695f83b54f106f45ff3dd421f528807120be52edd7031e4f66
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878230"
 ---
-# <a name="dtm_getidealsize-message"></a>DTM- \_ getidealsize-Nachricht
+# <a name="dtm_getidealsize-message"></a>SMS \_ GETIDEALSIZE-Nachricht
 
-Ruft die Größe ab, die zum Anzeigen des Steuer Elements ohne Clipping benötigt wird. Senden Sie diese Nachricht explizit oder mithilfe des " [**DateTime \_ getidealsize**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getidealsize) "-Makros.
+Ruft die Größe ab, die zum Anzeigen des Steuerelements ohne Clipping erforderlich ist. Senden Sie diese Nachricht explizit oder mithilfe des [**DateTime \_ GetIdealSize-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getidealsize)
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Ruft die Größe ab, die zum Anzeigen des Steuer Elements ohne Clipping benötig
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet. Muss Null sein.
+Wird nicht verwendet. Muss Null sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Größen**](/previous-versions//dd145106(v=vs.85)) Struktur, die die ideale Größe erhält. Die aufrufenden Anwendung ist für die Zuordnung dieser Struktur verantwortlich.
+Ein Zeiger auf eine [**SIZE-Struktur,**](/previous-versions//dd145106(v=vs.85)) um die ideale Größe zu erhalten. Die aufrufende Anwendung ist für die Zuordnung dieser Struktur verantwortlich.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,32 +1,32 @@
 ---
-title: Lizenz Sperrung (Windows Media-Format-SDK)
-description: Lizenz Sperrung
+title: Lizenzsperrung (Windows Media Format SDK)
+description: Lizenzsperrung
 ms.assetid: 15917bce-d89e-41eb-904d-7ee290ba545e
 keywords:
-- Windows Media-Format-SDK, Lizenz Sperrung
-- Digital Rights Management (DRM), Lizenz Sperrung
-- DRM (Digital Rights Management), Lizenz Sperrung
-- Windows Media-Format-SDK, Aufheben von Inhalts Lizenzen
-- Digital Rights Management (DRM), Aufheben von Inhalts Lizenzen
-- DRM (Digital Rights Management), Aufheben von Inhalts Lizenzen
-- Lizenz Sperrung, Informationen zu
-- Aufheben von Inhalts Lizenzen
+- Windows Medienformat-SDK,Lizenzsperrung
+- Digital Rights Management (DRM), Lizenzsperrung
+- DRM (Digital Rights Management), Lizenzsperrung
+- Windows Medienformat-SDK, Aufheben von Inhaltslizenzen
+- Digital Rights Management (DRM), Widerrufen von Inhaltslizenzen
+- DRM (Verwaltung digitaler Rechte),Widerrufen von Inhaltslizenzen
+- Lizenzsperrung,Informationen
+- Widerrufen von Inhaltslizenzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 47f2794401f1bc136d2f2cd828839bf1e82b663a
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 7a5acac14eaaf95996b7768b81d449847eeb7469c063d604317438fa26090939
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104039966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808280"
 ---
-# <a name="license-revocation-windows-media-format-sdk"></a>Lizenz Sperrung (Windows Media-Format-SDK)
+# <a name="license-revocation-windows-media-format-sdk"></a>Lizenzsperrung (Windows Media Format SDK)
 
-Das Windows Media-Format SDK bietet Methoden, mit denen eine Anwendung mit der Website eines Lizenz Ausstellers interagieren kann, um eine Inhalts Lizenz zu widerrufen.
+Das Windows Media Format SDK bietet Methoden, mit denen eine Anwendung mit der Website eines Lizenzausstellers interagieren kann, um eine Inhaltslizenz zu widerrufen.
 
-Ein typisches Szenario für die Lizenz Sperrung ist, wenn ein Benutzer einen alten Computer an eine andere Person übergibt. In diesem Fall kann der ursprüngliche Benutzer viele Lizenzen für geschützte Inhalte haben, die auf dem Computer gespeichert sind, auch wenn dieser Benutzer den Computer nicht mehr verwendet. Der Lizenz Widerruf ermöglicht es dem ursprünglichen Benutzer, die Lizenzen vom Computer zu entfernen.
+Ein typisches Szenario für die Lizenzsperrung ist, wenn ein Benutzer einem anderen Benutzer einen alten Computer übergibt. In diesem Fall verfügt der ursprüngliche Benutzer möglicherweise über viele Lizenzen für geschützte Inhalte, die auf dem Computer gespeichert sind, obwohl dieser Benutzer den Computer nicht mehr verwendet. Durch die Lizenzsperrung kann der ursprüngliche Benutzer die Lizenzen vom Computer entfernen.
 
-Der Lizenz Sperrprozess umfasst Nachrichten, die zwischen der Client Anwendung und einer webbasierten Anwendung, die vom Lizenz Aussteller erstellt wurde, hin-und hergeleitet werden.
+Der Lizenzsperrprozess umfasst nachrichten, die zwischen der Clientanwendung und einer webbasierten Anwendung, die vom Lizenzaussteller erstellt wurde, hin und her übergeben werden.
 
 **Hinweis** DRM wird von der x64-basierten Version dieses SDK nicht unterstützt.
 
@@ -34,10 +34,10 @@ Der Lizenz Sperrprozess umfasst Nachrichten, die zwischen der Client Anwendung u
 
 <dl> <dt>
 
-[**Features digitaler Rights Management**](digital-rights-management-features.md)
+[**Digital Rights Management Features**](digital-rights-management-features.md)
 </dt> <dt>
 
-[**Implementieren der Lizenz Sperrung**](implementing-license-revocation.md)
+[**Implementieren der Lizenzsperrung**](implementing-license-revocation.md)
 </dt> </dl>
 
  

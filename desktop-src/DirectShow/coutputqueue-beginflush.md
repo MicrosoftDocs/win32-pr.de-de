@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e7c6168daf766ec11e18e86673d9d25542b50462
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e7b002c03ee0bfb95733ac9af0f6e88444cc6a42bec2af7d9a40a307d83d2fee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909650"
 ---
 # <a name="coutputqueuebeginflush-method"></a>COutputQueue.BeginFlush-Methode
 
@@ -44,7 +44,7 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode legt die [**COutputQueue::m \_ bFlushing-Membervariable**](coutputqueue-m-bflushing.md) auf **TRUE fest.** Wenn das Objekt einen Thread verwendet, ruft der Thread die [**COutputQueue::FreeSamples-Methode**](coutputqueue-freesamples.md) auf, um ausstehende Stichproben frei zu geben. Andernfalls ruft das -Objekt **FreeSamples während** der [**COutputQueue::EndFlush-Methode**](coutputqueue-endflush.md) auf. Diese Methode legt auch die [**COutputQueue::m hr-Membervariable \_**](coutputqueue-m-hr.md) auf S FALSE fest, wodurch das Objekt alle \_ neuen Stichproben verwirft.
 
@@ -54,14 +54,14 @@ Das -Objekt übergibt die Leerungsbenachrichtigung downstream, indem es die [**I
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

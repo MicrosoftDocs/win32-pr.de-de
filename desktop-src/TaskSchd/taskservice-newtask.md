@@ -1,11 +1,11 @@
 ---
-title: TaskService. newtask-Methode
-description: Gibt für die Skripterstellung ein leeres Aufgaben Definitions Objekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der Task Folder. RegisterTaskDefinition-Methode registriert werden soll.
+title: TaskService.NewTask-Methode
+description: Für die Skripterstellung gibt ein leeres Aufgabendefinitionsobjekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der TaskFolder.RegisterTaskDefinition-Methode registriert werden soll.
 ms.assetid: 696d57fc-100a-43e6-a8d9-9ec89be40367
 keywords:
-- Newtask-Methode Taskplaner
-- Newtask-Methode Taskplaner, Task Service-Objekt
-- Task Service-Objekt Taskplaner, newtask-Methode
+- NewTask-Taskplaner
+- NewTask-Methode Taskplaner , TaskService-Objekt
+- TaskService-Taskplaner , NewTask-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f5f10ce90861c76d0a751c54e8282269b7a8986
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e22da6f62f59bf24ded0eed9dea21e3a1a9d1c3e7ecc36fb6f425f58124aee71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990930"
 ---
-# <a name="taskservicenewtask-method"></a>TaskService. newtask-Methode
+# <a name="taskservicenewtask-method"></a>TaskService.NewTask-Methode
 
-Gibt für die Skripterstellung ein leeres Aufgaben Definitions Objekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode registriert werden soll.
+Für die Skripterstellung gibt ein leeres Aufgabendefinitionsobjekt zurück, das mit Einstellungen und Eigenschaften ausgefüllt und dann mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode registriert werden**](taskfolder-registertaskdefinition.md) soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ TaskService.NewTask( _
 
 <dl> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 (null) festgelegt werden.
+Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Aufgabendefinition, die alle zum Erstellen einer neuen Aufgabe erforderlichen Informationen angibt.
+Die Aufgabendefinition, die alle Informationen angibt, die zum Erstellen einer neuen Aufgabe erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die Aufgabendefinition, die alle zum Erstellen einer neuen Aufgabe erforderliche
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

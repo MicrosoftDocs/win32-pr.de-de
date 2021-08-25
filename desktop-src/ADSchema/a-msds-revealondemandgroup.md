@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Reveal-OnDemand-Group-Attribut
-description: Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppen ihre Kenn Wörter auf einem RODC zwischenspeichern dürfen.
+description: Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppen ihre Kennwörter auf einem RODC zwischenspeichern dürfen.
 ms.assetid: ee31957c-66a2-49d8-865c-7f599754dcdd
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Reveal-OnDemand-Group-Attribut
-- adschema des msDS-RevealOnDemandGroup-Attributs
+- ms-DS-Reveal-OnDemand-Group-Attribut AD-Schema
+- MSDS-RevealOnDemandGroup-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc89e0aabf1d82a9b7171530c5d297c668dbcb99
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 385cbaaf35256f05c09469ac187b395fa42d4f1275c72358a9f22350998c6878
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925420"
 ---
 # <a name="ms-ds-reveal-ondemand-group-attribute"></a>ms-DS-Reveal-OnDemand-Group-Attribut
 
-Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppen ihre Kenn Wörter auf einem RODC zwischenspeichern dürfen.
+Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppen ihre Kennwörter auf einem RODC zwischenspeichern dürfen.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-Reveal-OnDemand-Gruppe             |
-| LDAP-Display-Name | MSDS-RevealOnDemandGroup                |
+| CN                | ms-DS-Reveal-OnDemand-Group             |
+| Ldap-Anzeigename | msDS-RevealOnDemandGroup                |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1928                 |
-| System-ID-GUID    | 303d9b4a-1DD6-4b38-8fc5-33afe8c988ad    |
+| System-ID-GUID    | 303d9f4a-1dd6-4b38-8fc5-33afe8c988ad    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,11 +54,11 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2110                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | False                                                                              |
-| Ist-einwertig       | False                                                                              |
-| Ist indiziert             | False                                                                              |
-| Im globalen Katalog      | False                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                       |
+| System-Only            | Falsch                                                                              |
+| Ist einwertig       | Falsch                                                                              |
+| Ist indiziert             | Falsch                                                                              |
+| Im globalen Katalog      | Falsch                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |
 | Search-Flags           | 0x00000000                                                                         |
@@ -75,11 +75,11 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2110                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | False                                                                              |
-| Ist-einwertig       | False                                                                              |
-| Ist indiziert             | False                                                                              |
-| Im globalen Katalog      | False                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                       |
+| System-Only            | Falsch                                                                              |
+| Ist einwertig       | Falsch                                                                              |
+| Ist indiziert             | Falsch                                                                              |
+| Im globalen Katalog      | Falsch                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |
 | Search-Flags           | 0x00000000                                                                         |
@@ -96,11 +96,11 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2110                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | False                                                                              |
-| Ist-einwertig       | False                                                                              |
-| Ist indiziert             | False                                                                              |
-| Im globalen Katalog      | False                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                       |
+| System-Only            | Falsch                                                                              |
+| Ist einwertig       | Falsch                                                                              |
+| Ist indiziert             | Falsch                                                                              |
+| Im globalen Katalog      | Falsch                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |
 | Search-Flags           | 0x00000000                                                                         |

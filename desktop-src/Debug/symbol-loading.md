@@ -1,31 +1,31 @@
 ---
-description: Der Symbol Handler lädt Symbole, wenn Sie die Funktion "syminitialize" aufrufen, wobei der finvadeprocess-Parameter auf "true" festgelegt ist, oder wenn Sie die symloadmoduleex-Funktion aufrufen, um ein Modul anzugeben.
+description: Der Symbolhandler wird Symbole laden, wenn Sie die SymInitialize-Funktion aufrufen, bei der der Parameter fInvadeProcess auf TRUE festgelegt ist, oder wenn Sie die SymLoadModuleEx-Funktion aufrufen, um ein Modul anzugeben.
 ms.assetid: fae1895e-9fed-45e3-8ecf-4c6cc67a6094
 title: Seite zum Laden von Symbolen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 705a7af3525c784b2bbcd512b267309a466a11c1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1459f0fd05b490730739852b77edd29df38c04cbe246699552a53b7e30decf11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104392954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912360"
 ---
 # <a name="symbol-loading"></a>Seite zum Laden von Symbolen
 
-Der Symbol Handler lädt Symbole, wenn Sie die Funktion " [**syminitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) " aufrufen, wobei der *finvadeprocess* -Parameter auf " **true** " festgelegt ist, oder wenn Sie die [**symloadmoduleex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) -Funktion aufrufen, um ein Modul anzugeben. In beiden Fällen lädt der Symbol Handler entweder die Symbole oder setzt das Symbol zum Laden von Symbolen, bis Symbole angefordert werden, abhängig von den Optionen, die von der [**symsetoptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) -Funktion festgelegt werden.
+Der Symbolhandler wird Symbole laden, wenn Sie die [**SymInitialize-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) aufrufen, bei der der *Parameter fInvadeProcess* auf **TRUE** festgelegt ist, oder wenn Sie die [**SymLoadModuleEx-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) aufrufen, um ein Modul anzugeben. In beiden Fällen lädt der Symbolhandler entweder die Symbole oder setzt das Laden von Symbolen zurück, bis Symbole angefordert werden. Dies hängt von den Optionen ab, die von der [**SymSetOptions-Funktion festgelegt**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) werden.
 
-Der Symbol Handler kann zum Abrufen von symbolischen Informationen für ein beliebiges Modul verwendet werden. Er muss nicht mit einem im [**syminitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) -Befehl angegebenen Prozess verknüpft werden. Wenn Sie ein beliebiges Modul verwenden möchten, geben Sie den vollständigen Pfad zum Modul Image im *ImageName* -Parameter an. Sie können einen Pfad zu allen ausführbaren Modulen verwenden, die Debuginformationen haben (. exe,. dll,. drv,. sys,. scr,. cpl oder. com). Verwenden Sie den *baseofdll* -Parameter, um eine beliebige Lade Adresse anzugeben, und Symbol Adressen werden von dieser Adresse ausgehend.
+Der Symbolhandler kann verwendet werden, um symbolische Informationen für jedes Modul abzurufen. er muss nicht einem Prozess zugeordnet werden, der im [**SymInitialize-Aufruf angegeben**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) ist. Um ein beliebiges Modul zu verwenden, geben Sie den vollständigen Pfad zum Modulimage im *ImageName-Parameter* an. Sie können einen Pfad zu jedem ausführbaren Modul verwenden, das Debuginformationen enthält (.exe, .dll, .drv, .sys, .scr, .cpl oder .com). Verwenden Sie *den BaseOfDll-Parameter,* um eine beliebige Ladeadresse anzugeben. Symboladressen basieren dann auf dieser Adresse.
 
-Es ist möglicherweise nicht erforderlich, ein Symbol Modul durch die Dauer einer Anwendung zu laden. Verwenden Sie die [**SymUnloadModule64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symunloadmodule) -Funktion, um das Symbol Modul aus der Liste der Module des Symbol Handlers freizugeben. Diese Funktion gibt den für das Symbol Modul zugeordneten Arbeitsspeicher frei. Um Symbole für dieses Modul erneut zu verwenden, müssen Sie die [**symloadmoduleex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) -Funktion aufrufen, auch wenn die Option Symbol für verzögertes Laden festgelegt ist.
+Es ist möglicherweise nicht erforderlich, ein Symbolmodul während der Dauer einer Anwendung zu laden. Verwenden Sie die [**SymUnloadModule64-Funktion,**](/windows/desktop/api/Dbghelp/nf-dbghelp-symunloadmodule) um das Symbolmodul aus der Liste der Module des Symbolhandlers frei zu geben. Diese Funktion gibt den für das Symbolmodul zugeordneten Arbeitsspeicher frei. Um Symbole für dieses Modul erneut zu verwenden, müssen Sie die [**SymLoadModuleEx-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) aufrufen, auch wenn die Option für verzögertes Laden von Symbolen festgelegt ist.
 
 ## <a name="diagnosing-symbol-load-problems"></a>Diagnostizieren von Problemen beim Laden von Symbolen
 
-Um alle Versuche zum Laden von Symbolen anzuzeigen, nennen Sie [**SYM-toptions**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) mit symopt \_ Debug. Dies bewirkt, dass dbghelp die [**OutputDebugString**](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringa) -Funktion mit detaillierten Informationen zu Symbol suchen aufruft, wie z. b. die gesuchten Verzeichnisse und und Fehlermeldungen. Wenn Ihr Code [**SymRegisterCallback64**](/windows/desktop/api/Dbghelp/nf-dbghelp-symregistercallback)verwendet, ruft dbghelp ihre Rückruffunktion auf, anstatt **OutputDebugString** aufzurufen. Der *Action Code* -Parameter ist auf CBA \_ -Debuginformationen festgelegt, \_ und der *callBackData* -Parameter ist eine Zeichenfolge, die angezeigt werden kann.
+Um alle Versuche zum Laden von Symbolen anzeigen zu können, rufen [**Sie SymSetOptions mit**](/windows/desktop/api/Dbghelp/nf-dbghelp-symsetoptions) SYMOPT \_ DEBUG auf. Dies führt dazu, dass DbgHelp die [**OutputDebugString-Funktion**](/windows/win32/api/debugapi/nf-debugapi-outputdebugstringa) mit detaillierten Informationen zu Symbolsuchen aufruft, z. B. den Verzeichnissen, die gesucht werden, und Fehlermeldungen. Wenn Ihr Code [**SymRegisterCallback64 verwendet,**](/windows/desktop/api/Dbghelp/nf-dbghelp-symregistercallback)ruft DbgHelp Ihre Rückruffunktion auf, anstatt **OutputDebugString auf aufruft.** Der *ActionCode-Parameter* ist auf CBA DEBUG INFO festgelegt, und der \_ \_ *CallbackData-Parameter* ist eine Zeichenfolge, die angezeigt werden kann.
 
-Damit diese Debugausgabe in der Konsole angezeigt werden kann, ohne den Quellcode zu ändern, legen Sie die \_ dbgout-Umgebungsvariable von dbghelp auf einen Wert ungleich **null** fest, bevor Sie die [**syminitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) -Funktion aufrufen. Um die Informationen in einer Datei zu protokollieren, legen Sie die Protokoll Umgebungsvariable dbghelp \_ auf den Namen der zu verwendenden Protokolldatei fest.
+Damit diese Debugausgabe in der Konsole angezeigt werden kann, ohne den Quellcode zu ändern, legen Sie die DBGHELP DBGOUT-Umgebungsvariable auf einen Wert fest, der nicht NULL ist, bevor Sie die \_ [**SymInitialize-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) aufrufen. Um die Informationen in einer Datei zu protokollieren, legen Sie die DBGHELP LOG-Umgebungsvariable auf den Namen der \_ zu verwendenden Protokolldatei fest.
 
-Beachten Sie, dass diese Funktionen nur bei Bedarf verwendet werden sollten. Sie können das Symbol Laden von Modulen, die viele Symbole enthalten, verlangsamen.
+Beachten Sie, dass diese Features nur bei Bedarf verwendet werden sollten. Sie können das Laden von Symbolen von Modulen verlangsamen, die viele Symbole enthalten.
 
  
 

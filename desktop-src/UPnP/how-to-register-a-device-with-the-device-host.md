@@ -1,50 +1,50 @@
 ---
-title: Registrieren eines Geräts beim Geräte Host
-description: Sie können entweder ein Betriebs Endes Gerät oder ein Gerät registrieren, das nicht ausgeführt wird.
+title: Registrieren eines Geräts beim Gerätehost
+description: Sie können entweder ein ausgeführtes gerät oder ein nicht ausgeführtes Gerät registrieren.
 ms.assetid: 40e30881-d5fb-4cf9-8dd7-0d50d2621d5c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3be1561d82741ce33e7eb05e63b015d5cb38f52
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8425578dbd5ccc76685c2a142bee8d2167c4058341c32e4b03bcedca15041579
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867580"
 ---
-# <a name="how-to-register-a-device-with-the-device-host"></a>Registrieren eines Geräts beim Geräte Host
+# <a name="how-to-register-a-device-with-the-device-host"></a>Registrieren eines Geräts beim Gerätehost
 
-Sie können entweder ein Betriebs Endes Gerät oder ein Gerät registrieren, das nicht ausgeführt wird.
+Sie können entweder ein ausgeführtes gerät oder ein nicht ausgeführtes Gerät registrieren.
 
-## <a name="registering-a-running-device"></a>Registrieren eines laufenden Geräts
+## <a name="registering-a-running-device"></a>Registrieren eines ausgeführten Geräts
 
-Geräte werden mithilfe der [**iupnpregistrinar**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) -Schnittstelle registriert. Nur Administratoren sind berechtigt, die Ausführung von Geräten zu registrieren. Um ein Gerät zu registrieren, das ein Geräte Steuerungsobjekt enthält, muss eine Anwendung [**iupnpregistranar:: registerrunningdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)aufrufen und dabei Folgendes übergeben:
+Geräte werden über die [**IUPnPRegistrar-Schnittstelle**](/windows/desktop/api/Upnphost/nn-upnphost-iupnpregistrar) registriert. Nur Administratoren dürfen ausgeführte Geräte registrieren. Um ein Gerät zu registrieren, das über ein ausgeführtes Gerätesteuerungsobjekt verfügt, muss eine Anwendung [**IUPnPRegistrar::RegisterRunningDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerrunningdevice)aufrufen und Folgendes übergeben:
 
--   Der Text der Beschreibung des Geräts.
--   Ein **IUnknown** -Zeiger auf das Geräte Steuerungsobjekt.
--   Eine Initialisierungs Zeichenfolge, die an die [**iupnpdevicecontrol:: Initialize**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) -Methode des Geräte Steuerungs Objekts übergeben wird.
--   Der Speicherort des Ressourcen Verzeichnisses.
+-   Der Text der Gerätebeschreibung.
+-   Ein **IUnknown-Zeiger** auf das Gerätesteuerungsobjekt.
+-   Eine Initialisierungszeichenfolge, die an die [**IUPnPDeviceControl::Initialize-Methode**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) des Gerätesteuerelementobjekts übergeben wird.
+-   Der Speicherort des Ressourcenverzeichnisses.
 -   Die Lebensdauer des Geräts.
--   Der Geräte-ID-Parameter (ein out-Parameter), der der Rückgabewert dieses Aufrufes ist. Ein Zeiger auf die Geräte-ID wird in C++ zurückgegeben.
+-   Der Device ID-Parameter (ein OUT-Parameter), der der Rückgabewert dieses Aufrufs ist. Ein Zeiger auf die Geräte-ID wird in C++ zurückgegeben.
 
-## <a name="registering-a-non-running-device"></a>Registrieren eines Geräts, das nicht ausgeführt wird
+## <a name="registering-a-non-running-device"></a>Registrieren eines nicht ausgeführten Geräts
 
-Standardmäßig sind nur Administratoren und interaktive Benutzer berechtigt, nicht laufende Geräte zu registrieren. Zum Registrieren eines Geräts bei einem Geräte Steuerungsobjekt, das nicht ausgeführt wird, verwendet die Anwendung die [**iupnpregistrinster:: registerdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) -Methode.
+Standardmäßig dürfen nur Administratoren und interaktive Benutzer nicht ausgeführte Geräte registrieren. Um ein Gerät bei einem Gerätesteuerungsobjekt zu registrieren, das nicht ausgeführt wird, verwendet die Anwendung die [**IUPnPRegistrar::RegisterDevice-Methode.**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice)
 
-Zum programmgesteuerten Registrieren eines Geräts bei einem Geräte Steuerungsobjekt, das nicht ausgeführt wird, muss die Anwendung [**iupnpregistranar:: registerdevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) aufrufen und die folgenden Parameter übergeben:
+Um ein Gerät programmgesteuert bei einem nicht ausgeführten Gerätesteuerungsobjekt zu registrieren, muss die Anwendung [**IUPnPRegistrar::RegisterDevice**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpregistrar-registerdevice) aufrufen und die folgenden Parameter übergeben:
 
--   Der Text der Beschreibung des Geräts.
--   Die ProgID des Geräte Steuerungs Objekts.
--   Eine Initialisierungs Zeichenfolge, die an die [**iupnpdevicecontrol:: Initialize**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) -Methode des Geräte Steuerungs Objekts übergeben wird.
+-   Der Text der Gerätebeschreibung.
+-   Die ProgID des Gerätesteuerungsobjekts.
+-   Eine Initialisierungszeichenfolge, die an die [**IUPnPDeviceControl::Initialize-Methode**](/windows/desktop/api/Upnphost/nf-upnphost-iupnpdevicecontrol-initialize) des Gerätesteuerelementobjekts übergeben wird.
 -   Eine Container-ID.
--   Der Speicherort des Ressourcen Verzeichnisses.
+-   Der Speicherort des Ressourcenverzeichnisses.
 -   Die Lebensdauer des Geräts.
--   Der Geräte-ID-Parameter (ein out-Parameter), der der Rückgabewert dieses Aufrufes ist. Ein Zeiger auf die Geräte-ID wird in C++ zurückgegeben.
+-   Der Device ID-Parameter (ein OUT-Parameter), der der Rückgabewert dieses Aufrufs ist. Ein Zeiger auf die Geräte-ID wird in C++ zurückgegeben.
 
-Die Registrierungen nicht laufender Geräte können so konfiguriert werden, dass Sie über Systemstarts hinweg beibehalten werden (die Geräte werden während der Herunterfahr Phase nicht veröffentlicht). Wenn Sie auf diese Weise konfiguriert werden, werden Geräte bei jedem Neustart des Computers veröffentlicht und angekündigt.
+Die Registrierungen nicht ausgeführter Geräte können so konfiguriert werden, dass sie über Systemstarts hinweg beibehalten werden (die Geräte werden während der Herunterfahrensphase nicht veröffentlicht). Wenn sie auf diese Weise konfiguriert sind, werden Geräte daher bei jedem Start des Computers veröffentlicht und angekündigt.
 
- 
+ 
 
- 
+ 
 
 
 

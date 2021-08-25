@@ -1,9 +1,9 @@
 ---
-title: Monate (monthlydayosweekscheduletype)-Element
+title: Months (monthlyDayOfWeekScheduleType)-Element
 description: Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Wochentag ausgeführt wird.
 ms.assetid: 420fa7f4-7106-483e-9b3b-d1ba51f25222
 keywords:
-- Monate-Element Taskplaner
+- Months-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 76f13a5823e0154519dbdb093dd03ea36bbe77b5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a963032a2d33f13158af249f2b867037cf50082be005efa579148031c8e30585
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959600"
 ---
-# <a name="months-monthlydayofweekscheduletype-element"></a>Monate (monthlydayosweekscheduletype)-Element
+# <a name="months-monthlydayofweekscheduletype-element"></a>Months (monthlyDayOfWeekScheduleType)-Element
 
 Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Wochentag ausgeführt wird.
 
@@ -30,15 +30,15 @@ Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Wochenta
  />
 ```
 
-Das **Monats** Element wird durch den komplexen Typ [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
+Das **Months-Element** wird vom komplexen [**MonthlyDayOfWeekScheduleType-Typ**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                                            | Abgeleitet von                                                                                         | BESCHREIBUNG                                                                          |
+| Element                                                                                                                            | Abgeleitet von                                                                                         | Beschreibung                                                                          |
 |------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [**Schedulebymonthdayoatweek (calendartriggertype)**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlydayosweekscheduletype**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen-Vorgang an, der einen Auftrag für einen monatlichen Wochentag startet.<br/> |
+| [**ScheduleByMonthDayOfWeek (calendarTriggerType)**](taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) | [**monthlyDayOfWeekScheduleType**](taskschedulerschema-monthlydayofweekscheduletype-complextype.md) | Gibt einen Trigger an, der einen Auftrag für einen monatlichen Wochentag startet.<br/> |
 
 
 
@@ -46,9 +46,9 @@ Das **Monats** Element wird durch den komplexen Typ [**monthlydayosweekschedulet
 
 
 
-| Element                                                               | type | BESCHREIBUNG                                           |
+| Element                                                               | type | Beschreibung                                           |
 |-----------------------------------------------------------------------|------|-------------------------------------------------------|
-| [**Am**](taskschedulerschema-april-monthstype-element.md)         |      | Gibt an, dass der Task im April ausgeführt wird.<br/>     |
+| [**April**](taskschedulerschema-april-monthstype-element.md)         |      | Gibt an, dass der Task im April ausgeführt wird.<br/>     |
 | [**August**](taskschedulerschema-august-monthstype-element.md)       |      | Gibt an, dass der Task im August ausgeführt wird.<br/>    |
 | [**Dezember**](taskschedulerschema-december-monthstype-element.md)   |      | Gibt an, dass der Task im Dezember ausgeführt wird.<br/>  |
 | [**Februar**](taskschedulerschema-february-monthstype-element.md)   |      | Gibt an, dass der Task im Februar ausgeführt wird.<br/>  |
@@ -58,22 +58,22 @@ Das **Monats** Element wird durch den komplexen Typ [**monthlydayosweekschedulet
 | [**März**](taskschedulerschema-march-monthstype-element.md)         |      | Gibt an, dass der Task im März ausgeführt wird.<br/>     |
 | [**May**](taskschedulerschema-may-monthstype-element.md)             |      | Gibt an, dass der Task im Mai ausgeführt wird.<br/>       |
 | [**November**](taskschedulerschema-november-monthstype-element.md)   |      | Gibt an, dass der Task im November ausgeführt wird.<br/>  |
-| [**Vom**](taskschedulerschema-october-monthstype-element.md)     |      | Gibt an, dass der Task im Oktober ausgeführt wird.<br/>   |
+| [**Oktober**](taskschedulerschema-october-monthstype-element.md)     |      | Gibt an, dass der Task im Oktober ausgeführt wird.<br/>   |
 | [**September**](taskschedulerschema-september-monthstype-element.md) |      | Gibt an, dass der Task im September ausgeführt wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Entwicklung von Skripts werden die Monate eines Jahres für einen monatlichen Wochentag mithilfe der Eigenschaft [**monthlydowauslöst. MONTHSOFYEAR**](monthlydowtrigger-monthsofyear.md) angegeben.
+Für die Skriptentwicklung werden die Monate eines Jahres für einen monatlichen Wochentagszeitplan mithilfe der [**MonthlyDOWTrigger.MonthsOfYear-Eigenschaft**](monthlydowtrigger-monthsofyear.md) angegeben.
 
-Bei der C++-Entwicklung werden die Monate eines Jahres für einen monatlichen Wochentag mithilfe der [**imonthlydowauslöst:: MONTHSOFYEAR**](/windows/desktop/api/taskschd/nf-taskschd-imonthlydowtrigger-get_monthsofyear) -Eigenschaft angegeben.
+Für die C++-Entwicklung werden die Monate eines Jahres für einen monatlichen Wochentagszeitplan mithilfe der [**IMonthlyDOWTrigger::MonthsOfYear-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-imonthlydowtrigger-get_monthsofyear) angegeben.
 
-Die oben aufgeführten untergeordneten Elemente werden durch den komplexen [**monthstype**](taskschedulerschema-monthstype-complextype.md) -Typ definiert.
+Die oben aufgeführten untergeordneten Elemente werden durch den komplexen Typ [**monthsType**](taskschedulerschema-monthstype-complextype.md) definiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein monatlicher Wochentag definiert, der die Aufgabe am Montag der ersten Woche für jeden Monat des Jahres startet.
+Der folgende XML-Code definiert einen monatlichen Kalender für den Wochentag, der die Aufgabe am Montag der ersten Woche für jeden Monat des Jahres startet.
 
 
 ```XML
@@ -109,16 +109,16 @@ Im folgenden XML-Code wird ein monatlicher Wochentag definiert, der die Aufgabe 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

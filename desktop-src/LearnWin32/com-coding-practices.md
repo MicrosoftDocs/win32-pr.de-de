@@ -1,32 +1,32 @@
 ---
-title: COM-Codierungs Methoden
-description: In diesem Thema wird beschrieben, wie Sie Ihren com-Code effektiver und robuster gestalten können.
+title: COM-Codierungsmethoden
+description: In diesem Thema werden Möglichkeiten beschrieben, ihren COM-Code effektiver und stabiler zu gestalten.
 ms.assetid: 76aca556-b4d6-4e67-a2a3-4439900f0c39
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a26143e5049c3db7efcbcc9353e74890fe0009c
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: 93febc4ee3dfd4f05f20fae8078bc2a5ebb7f9623a860f49ec9cd6ce4e69b95a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104102478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913889"
 ---
-# <a name="com-coding-practices"></a>COM-Codierungs Methoden
+# <a name="com-coding-practices"></a>COM-Codierungsmethoden
 
-In diesem Thema wird beschrieben, wie Sie Ihren com-Code effektiver und robuster gestalten können.
+In diesem Thema werden Möglichkeiten beschrieben, ihren COM-Code effektiver und stabiler zu gestalten.
 
 -   [Der \_ \_ uuidof-Operator](/windows)
--   [Das IID \_ PPV \_ args-Makro](/windows)
--   [Das saferelease-Muster](#the-saferelease-pattern)
--   [Intelligente com-Zeiger](#com-smart-pointers)
+-   [Das IID \_ PPV \_ ARGS-Makro](/windows)
+-   [SafeRelease-Muster](#the-saferelease-pattern)
+-   [Intelligente COM-Zeiger](#com-smart-pointers)
 
 ## <a name="the-__uuidof-operator"></a>Der \_ \_ uuidof-Operator
 
-Wenn Sie das Programm erstellen, erhalten Sie möglicherweise Linker-Fehler ähnlich den folgenden:
+Wenn Sie Ihr Programm erstellen, erhalten Sie möglicherweise Linkerfehler wie die folgenden:
 
 `unresolved external symbol "struct _GUID const IID_IDrawable"`
 
-Dieser Fehler bedeutet, dass eine GUID-Konstante mit externer Verknüpfung (**extern**) deklariert wurde und der Linker die Definition der Konstante nicht finden konnte. Der Wert einer GUID-Konstante wird in der Regel aus einer statischen Bibliotheksdatei exportiert. Wenn Sie Microsoft Visual C++ verwenden, können Sie vermeiden, dass eine statische Bibliothek mit dem **\_ \_ uuidof** -Operator verknüpft werden muss. Dieser Operator ist eine Microsoft-Spracherweiterung. Er gibt einen GUID-Wert aus einem Ausdruck zurück. Der Ausdruck kann ein Schnittstellentyp Name, ein Klassenname oder ein Schnittstellen Zeiger sein. Mithilfe von **\_ \_ uuidof** können Sie das gemeinsame Element Dialog Objekt wie folgt erstellen:
+Dieser Fehler bedeutet, dass eine GUID-Konstante mit externer Verknüpfung **(extern)** deklariert wurde und der Linker die Definition der Konstante nicht finden konnte. Der Wert einer GUID-Konstante wird normalerweise aus einer statischen Bibliotheksdatei exportiert. Wenn Sie Microsoft Visual C++ verwenden, können Sie vermeiden, dass eine statische Bibliothek mithilfe des **\_ \_ uuidof-Operators verlinkt werden** muss. Dieser Operator ist eine Microsoft-Spracherweiterung. Sie gibt einen GUID-Wert aus einem Ausdruck zurück. Der Ausdruck kann ein Schnittstellentypname, ein Klassenname oder ein Schnittstellenzeiger sein. Mit **\_ \_ uuidof** können Sie das Common Item Dialog-Objekt wie folgt erstellen:
 
 
 ```C++
@@ -37,16 +37,16 @@ hr = CoCreateInstance(__uuidof(FileOpenDialog), NULL, CLSCTX_ALL,
 
 
 
-Der Compiler extrahiert den GUID-Wert aus dem Header, sodass kein Bibliotheks Export notwendig ist.
+Der Compiler extrahiert den GUID-Wert aus dem Header, sodass kein Bibliotheksexport erforderlich ist.
 
 > [!Note]  
-> Der GUID-Wert wird durch Deklarieren im-Header dem Typnamen zugeordnet `__declspec(uuid( ... ))` . Weitere Informationen finden Sie in der Dokumentation zu **\_ \_ declspec** in der Visual C++-Dokumentation.
+> Der GUID-Wert wird dem Typnamen durch Deklarieren `__declspec(uuid( ... ))` im Header zugeordnet. Weitere Informationen finden Sie in der Dokumentation zu **\_ \_ declspec** in der Visual C++ Dokumentation.
 
- 
+ 
 
-## <a name="the-iid_ppv_args-macro"></a>Das IID \_ PPV \_ args-Makro
+## <a name="the-iid_ppv_args-macro"></a>Das IID \_ PPV \_ ARGS-Makro
 
-Wir haben gesehen, dass sowohl [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) als auch [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) das Umwandeln des letzten Parameters in einen **void \* \*** -Typ erfordern. Dadurch wird das Potenzial eines Typen Konflikts erstellt. Betrachten Sie das folgende Codefragment:
+Wir haben gesehen, dass [**sowohl CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) als auch [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) das Umleiten des letzten Parameters in einen **void-Typ \* \*** erfordern. Dadurch entsteht das Potenzial für einen Typkonflikt. Betrachten Sie das folgende Codefragment:
 
 
 ```C++
@@ -65,14 +65,14 @@ hr = CoCreateInstance(
 
 
 
-Dieser Code fordert die [**IFileDialogCustomize**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) -Schnittstelle an, übergibt aber einen [**IFileOpenDialog**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) -Zeiger. Der **reinterpretierungscast \_** -Ausdruck umgeht das C++-Typsystem, sodass der Compiler diesen Fehler nicht abfängt. Im besten Fall, wenn das Objekt die angeforderte Schnittstelle nicht implementiert, schlägt der-Befehl einfach fehl. Im schlimmsten Fall ist die Funktion erfolgreich, und Sie verfügen über einen nicht übereinstimmenden Zeiger. Anders ausgedrückt: der Zeigertyp stimmt nicht mit der tatsächlichen Vtable im Arbeitsspeicher. Wie Sie sich vorstellen können, kann an dieser Stelle nichts gutes vorkommen.
+Dieser Code fragt nach der [**IFileDialogCustomize-Schnittstelle,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) übergibt jedoch einen [**IFileOpenDialog-Zeiger.**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) Der **neu interpretierte \_ Cast-Ausdruck** umgeht das C++-Typsystem, sodass der Compiler diesen Fehler nicht abfing. Wenn das Objekt die angeforderte Schnittstelle nicht implementiert, schlägt der Aufruf im besten Fall einfach fehl. Im schlimmsten Fall ist die Funktion erfolgreich, und Sie verfügen über einen nicht übereinstimmenden Zeiger. Anders ausgedrückt: Der Zeigertyp ist nicht mit der tatsächlichen vtable im Arbeitsspeicher übereinstimmen. Wie Sie sich vorstellen können, kann an diesem Punkt nichts Gutes passieren.
 
 > [!Note]  
-> Eine *vtable* (Virtual Method Table) ist eine Tabelle mit Funktions Zeigern. Die Vtable-Methode gibt an, wie com einen Methodenaufruf an seine Implementierung zur Laufzeit bindet. Nicht zufällig stellen vtables dar, wie die meisten C++-Compiler virtuelle Methoden implementieren.
+> Eine *vtable* (virtuelle Methodentabelle) ist eine Tabelle mit Funktionsze0ern. Die vtable ist die Art und Weise, in der COM einen Methodenaufruf zur Laufzeit an seine Implementierung bindet. VTables sind nicht zufällig, wie die meisten C++-Compiler virtuelle Methoden implementieren.
 
- 
+ 
 
-Das [**IID \_ PPV \_ args**](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) -Makro hilft, diese Fehler Klasse zu vermeiden. Um dieses Makro zu verwenden, ersetzen Sie den folgenden Code:
+Das [**IID \_ PPV \_ ARGS-Makro**](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) hilft, diese Fehlerklasse zu vermeiden. Ersetzen Sie den folgenden Code, um dieses Makro zu verwenden:
 
 
 ```C++
@@ -90,7 +90,7 @@ IID_PPV_ARGS(&pFileOpen)
 
 
 
-Das Makro fügt automatisch `__uuidof(IFileOpenDialog)` für den Schnittstellen Bezeichner ein, sodass es sicher ist, dass es mit dem Zeigertyp identisch ist. Dies ist der geänderte (und korrekte) Code:
+Das Makro fügt automatisch für den Schnittstellenbezeichner ein, sodass es garantiert `__uuidof(IFileOpenDialog)` mit dem Zeigertyp übereinstimmen kann. Hier ist der geänderte (und richtige) Code:
 
 
 ```C++
@@ -102,7 +102,7 @@ hr = CoCreateInstance(__uuidof(FileOpenDialog), NULL, CLSCTX_ALL,
 
 
 
-Sie können dasselbe Makro mit [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q))verwenden:
+Sie können das gleiche Makro mit [**QueryInterface verwenden:**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q))
 
 
 ```C++
@@ -112,15 +112,15 @@ hr = pFileOpen->QueryInterface(IID_PPV_ARGS(&pCustom));
 
 
 
-## <a name="the-saferelease-pattern"></a>Das saferelease-Muster
+## <a name="the-saferelease-pattern"></a>SafeRelease-Muster
 
-Die Verweis Zählung ist eine der Dinge in der Programmierung, die im Grunde einfach ist, aber auch mühsam ist, sodass es leicht schief geht. Typische Fehler sind:
+Die Verweiszählung ist eine der Dinge in der Programmierung, die im Grunde einfach, aber auch mühsam ist, was es einfach macht, falsch zu werden. Typische Fehler sind:
 
--   Ein Schnittstellen Zeiger kann nicht freigegeben werden, wenn Sie ihn nicht mehr verwenden. Diese Fehler Klasse bewirkt, dass Ihr Programmspeicher und andere Ressourcen nicht mehr unternimmt, da Objekte nicht zerstört werden.
--   [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) mit einem ungültigen Zeiger wird aufgerufen. Dieser Fehler kann z. b. auftreten, wenn das Objekt nie erstellt wurde. Diese Fehler Kategorie führt wahrscheinlich zu einem Absturz Ihres Programms.
--   Dereferenzierung eines Schnittstellen Zeigers nach dem Aufrufen des [**Releases**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) . Dieser Fehler kann zum Absturz des Programms führen. Schlimmer noch: das Programm kann zu einem zufälligen späteren Zeitpunkt abstürzen, sodass es schwierig ist, den ursprünglichen Fehler zu finden.
+-   Fehler beim Veröffentlichen eines Schnittstellenzeigers, wenn Sie ihn nicht mehr verwenden. Diese Fehlerklasse verursacht, dass ihr Programm Arbeitsspeicher und andere Ressourcen aussicd, da Objekte nicht zerstört werden.
+-   Aufrufen [**von Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) mit einem ungültigen Zeiger. Dieser Fehler kann beispielsweise vorkommen, wenn das Objekt nie erstellt wurde. Diese Fehlerkategorie wird wahrscheinlich dazu führen, dass Ihr Programm abstürzt.
+-   Deeferencing an interface pointer after [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) is called. Dieser Fehler kann dazu führen, dass Ihr Programm abstürzt. Noch schlechter ist, dass ihr Programm zu einem späteren Zeitpunkt nach dem Zufallsprinzip abstürzt, wodurch es schwierig ist, den ursprünglichen Fehler zu finden.
 
-Eine Möglichkeit, diese Fehler zu vermeiden, besteht darin, die [**Freigabe**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) über eine Funktion aufzurufen, die den Zeiger sicher freigibt. Der folgende Code zeigt eine Funktion, die Folgendes bewirkt:
+Eine Möglichkeit, diese Fehler zu vermeiden, besteht im Aufrufen von [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) über eine Funktion, die den Zeiger sicher frei gibt. Der folgende Code zeigt eine Funktion, die dies tut:
 
 
 ```C++
@@ -136,13 +136,13 @@ template <class T> void SafeRelease(T **ppT)
 
 
 
-Diese Funktion verwendet einen COM-Schnittstellen Zeiger als Parameter und führt folgende Aktionen aus:
+Diese Funktion verwendet einen COM-Schnittstellenzeiger als Parameter und führt Folgendes aus:
 
-1.  Überprüft, ob der Zeiger **null** ist.
-2.  Ruft [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf, wenn der Zeiger nicht **null** ist.
-3.  Legt den Zeiger auf **null** fest.
+1.  Überprüft, ob der Zeiger NULL **ist.**
+2.  Ruft [**Release auf,**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) wenn der Zeiger nicht **NULL ist.**
+3.  Legt den Zeiger auf **NULL fest.**
 
-Im folgenden finden Sie ein Beispiel für die Verwendung von `SafeRelease` :
+Hier ist ein Beispiel für die Verwendung von `SafeRelease` :
 
 
 ```C++
@@ -162,9 +162,9 @@ void UseSafeRelease()
 
 
 
-Wenn [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erfolgreich ist, gibt der-Befehl `SafeRelease` den-Zeiger frei. Wenn **cokreateingestance** fehlschlägt, bleibt *pfileopen* gleich **null**. Die `SafeRelease` Funktion prüft dies und überspringt den [**Freigabe Freigabe**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)Vorgang.
+Wenn [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erfolgreich ist, gibt der Aufruf von `SafeRelease` den Zeiger frei. Wenn **CoCreateInstance fehlschlägt,** *bleibt pFileOpen* **NULL.** Die `SafeRelease` Funktion überprüft dies und überspringt den Aufruf von [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release).
 
-Es ist auch sicher, mehrmals `SafeRelease` auf demselben Zeiger aufzurufen, wie hier gezeigt:
+Es ist auch sicher, mehrere Aufrufe für denselben Zeiger zu `SafeRelease` führen, wie hier gezeigt:
 
 
 ```C++
@@ -175,14 +175,14 @@ SafeRelease(&pFileOpen);
 
 
 
-## <a name="com-smart-pointers"></a>Intelligente com-Zeiger
+## <a name="com-smart-pointers"></a>Intelligente COM-Zeiger
 
-Die- `SafeRelease` Funktion ist nützlich, erfordert jedoch zwei Dinge:
+Die `SafeRelease` Funktion ist nützlich, aber Sie müssen sich zwei Dinge merken:
 
--   Initialisieren Sie jeden Schnittstellen Zeiger auf **null**.
--   Wird aufgerufen `SafeRelease` , bevor jeder Zeiger den Gültigkeitsbereich verlässt.
+-   Initialisieren Sie jeden Schnittstellenzeiger auf **NULL.**
+-   Rufen `SafeRelease` Sie auf, bevor jeder Zeiger den Gültigkeitsbereich übergeht.
 
-Als C++-Programmierer denken Sie wahrscheinlich daran, dass Sie sich keine dieser Dinge merken müssen. Das ist der Grund, warum C++ über Konstruktoren und Dekonstruktoren verfügt. Es wäre schön, eine Klasse zu haben, die den zugrunde liegenden Schnittstellen Zeiger umschließt und den Zeiger automatisch initialisiert und freigibt. Anders ausgedrückt, wir möchten etwa Folgendes:
+Als C++-Programmierer denken Sie wahrscheinlich, dass Sie sich keines dieser Dinge merken sollten. Das ist schließlich der Grund, warum C++ Konstruktoren und Destruktoren hat. Es wäre gut, eine Klasse zu verwenden, die den zugrunde liegenden Schnittstellenzeiger umschließt und den Zeiger automatisch initialisiert und freilässt. Anders ausgedrückt: Wir möchten etwas wie das:
 
 
 ```C++
@@ -204,9 +204,9 @@ class SmartPointer
 
 
 
-Die hier gezeigte Klassendefinition ist unvollständig und kann nicht wie dargestellt verwendet werden. Sie müssen mindestens einen Kopierkonstruktor, einen Zuweisungs Operator und eine Möglichkeit für den Zugriff auf den zugrunde liegenden COM-Zeiger definieren. Glücklicherweise müssen Sie keine dieser Aufgaben erledigen, da Microsoft Visual Studio bereits eine intelligente Zeiger Klasse als Teil der Active Template Library (ATL) bereitstellt.
+Die hier gezeigte Klassendefinition ist unvollständig und kann nicht wie gezeigt verwendet werden. Sie müssen mindestens einen Kopierkonstruktor, einen Zuweisungsoperator und eine Möglichkeit für den Zugriff auf den zugrunde liegenden COM-Zeiger definieren. Glücklicherweise müssen Sie diese Arbeit nicht tun, da Microsoft Visual Studio bereits eine intelligente Zeigerklasse als Teil des Active Template Library (ATL) bietet.
 
-Die intelligente ATL-Zeiger Klasse hat den Namen " **CComPtr**". (Es gibt auch eine **CComQIPtr** -Klasse, die hier nicht erläutert wird.) Hier sehen Sie das [Dialog Feld Öffnen](example--the-open-dialog-box.md) , das für die Verwendung von **CComPtr** umgeschrieben wird.
+Die intelligente ATL-Zeigerklasse heißt **CComPtr.** (Es gibt auch eine **CComQIPtr-Klasse,** die hier nicht erläutert wird.) Im folgenden Beispiel wird [dialogfeld öffnen umgeschrieben,](example--the-open-dialog-box.md) um **CComPtr zu verwenden.**
 
 
 ```C++
@@ -260,9 +260,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
 
 
 
-Der Hauptunterschied zwischen diesem Code und dem ursprünglichen Beispiel besteht darin, dass diese Version [**Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)nicht explizit aufruft. Wenn die **CComPtr** -Instanz den Gültigkeitsbereich verlässt, ruft der Dekonstruktor **Release** auf dem zugrunde liegenden Zeiger auf.
+Der Hauptunterschied zwischen diesem Code und dem ursprünglichen Beispiel ist, dass diese Version release nicht explizit [**aufruft.**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Wenn die **CComPtr-Instanz** den Gültigkeitsbereich übergeht, ruft der Destruktor **Release** für den zugrunde liegenden Zeiger auf.
 
-**CComPtr** ist eine Klassen Vorlage. Das Vorlagen Argument ist der com-Schnittstellentyp. Intern enthält **CComPtr** einen Zeiger dieses Typs. **CComPtr** überschreibt **Operator-> ()** und **Operator& ()** , sodass die Klasse wie der zugrunde liegende Zeiger fungiert. Beispielsweise entspricht der folgende Code dem direkten Aufrufen der **IFileOpenDialog:: Show** -Methode:
+**CComPtr ist** eine Klassenvorlage. Das Vorlagenargument ist der COM-Schnittstellentyp. Intern enthält **CComPtr** einen Zeiger dieses Typs. **CComPtr** überschreibt **operator->()** und **operator&(), sodass** die Klasse wie der zugrunde liegende Zeiger fungiert. Der folgende Code entspricht beispielsweise dem direkten Aufrufen der **IFileOpenDialog::Show-Methode:**
 
 
 ```C++
@@ -271,7 +271,7 @@ hr = pFileOpen->Show(NULL);
 
 
 
-**CComPtr** definiert auch eine **CComPtr:: cokreatan Stance** -Methode, die die com- [**cokreateinzustance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion mit einigen Standardparameterwerten aufruft. Der einzige erforderliche Parameter ist der Klassen Bezeichner, wie im folgenden Beispiel gezeigt:
+**CComPtr definiert** auch eine **CComPtr::CoCreateInstance-Methode,** die die COM [**CoCreateInstance-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) mit einigen Standardparameterwerten aufruft. Der einzige erforderliche Parameter ist der Klassenbezeichner, wie im nächsten Beispiel gezeigt:
 
 
 ```C++
@@ -280,12 +280,12 @@ hr = pFileOpen.CoCreateInstance(__uuidof(FileOpenDialog));
 
 
 
-Die **CComPtr:: cokreateinzustance** -Methode wird ausschließlich als praktische bereitgestellt. Wenn Sie möchten, können Sie weiterhin die com- [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion aufrufen.
+Die **CComPtr::CoCreateInstance-Methode** wird ausschließlich zur Vereinfachung bereitgestellt. Sie können weiterhin die [**COM-Funktion CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) aufrufen, wenn Sie dies bevorzugen.
 
 ## <a name="next"></a>Nächste
 
-[Fehlerbehandlung in com](error-handling-in-com.md)
+[Fehlerbehandlung in COM](error-handling-in-com.md)
 
- 
+ 
 
- 
+ 

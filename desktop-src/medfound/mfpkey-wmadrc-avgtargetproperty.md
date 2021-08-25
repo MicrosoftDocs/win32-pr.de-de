@@ -1,23 +1,23 @@
 ---
-description: Gibt die gewünschte durchschnittliche Volumeebene der Ausgabe Audioinhalte an.
+description: Gibt die gewünschte durchschnittliche Lautstärke des Audioausgabeinhalts an.
 ms.assetid: 2e59537f-ee14-4186-b312-297225e91120
-title: MFPKEY_WMADRC_AVGTARGET-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMADRC_AVGTARGET-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a4503161ac6e392a50fd7535592b84ea92d6136
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c1cdd3143d7ca91be3856c9eaf3b7daecbfd80bff53fbd36c20c830dcb64e1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887610"
 ---
-# <a name="mfpkey_wmadrc_avgtarget-property"></a>Avgtarget-Eigenschaft für mfpkey \_ wmadrc \_
+# <a name="mfpkey_wmadrc_avgtarget-property"></a>MFPKEY \_ WMADRC \_ AVGTARGET-Eigenschaft
 
-Gibt die gewünschte durchschnittliche Volumeebene der Ausgabe Audioinhalte an.
+Gibt die gewünschte durchschnittliche Lautstärke des Audioausgabeinhalts an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmadrcaveragetarget
+g \_ wszWMADRCAverageTarget
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,18 +27,18 @@ VT \_ I4
 
 Siehe Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert für den Decoder für das dynamische Bereichs Steuerelement festlegen, aber er wirkt sich nur dann aus, wenn die Eigenschaft [mfpkey \_ wmadec \_ drcmode](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
+Sie können diesen Wert für den Decoder zum Zweck der dynamischen Bereichssteuerung festlegen. Er hat jedoch nur dann Auswirkungen, wenn die [ \_ MFPKEY WFPC \_ DRCMODE-Eigenschaft](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
 
 > [!Note]  
-> Es wird nicht empfohlen, den durchschnittlichen Zielwert festzulegen. Die Anpassung des durchschnittlichen Werts wirkt sich nicht auf den Unterschied zwischen lautstarkem und weichem Sound aus. Stattdessen wird das gesamte durchschnittliche Volume, das während der Wiedergabe unerwünschte Verzerrung verursachen kann, reduziert oder erhöht.
+> Das Festlegen des durchschnittlichen Zielwerts wird nicht empfohlen. Das Anpassen des Durchschnittswerts wirkt sich nicht auf den Unterschied zwischen lautem und weichem Sound aus. Stattdessen wird das durchschnittliche Gesamtvolumen reduziert oder verstärkt, was zu unerwünschten Verzerrungen während der Wiedergabe führen kann.
 
  
 
-Wenn Sie das dynamische Bereichs Steuerelement vom Decoder anfordern, wenn diese Eigenschaft nicht festgelegt ist, berechnet der Codec einen Standardwert.
+Wenn Sie eine dynamische Bereichssteuerung vom Decoder anfordern, wenn diese Eigenschaft nicht festgelegt ist, berechnet der Codec einen Standardwert.
 
-Verwenden Sie die Eigenschaften [mfpkey \_ wmadrc \_ avgref](mfpkey-wmadrc-avgrefproperty.md) und [mfpkey \_ wmadrc \_ ](mfpkey-wmadrc-peakrefproperty.md) -Eigenschaft, um die entsprechenden Werte für diese Eigenschaft zu berechnen.
+Verwenden Sie [die Eigenschaften MFPKEY \_ WMADRC \_ AVGREF](mfpkey-wmadrc-avgrefproperty.md) und [MFPKEY \_ WMADRC \_ PEAKREF,](mfpkey-wmadrc-peakrefproperty.md) um die entsprechenden Werte für diese Eigenschaft zu berechnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,9 +46,9 @@ Verwenden Sie die Eigenschaften [mfpkey \_ wmadrc \_ avgref](mfpkey-wmadrc-avgre
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -56,7 +56,7 @@ Verwenden Sie die Eigenschaften [mfpkey \_ wmadrc \_ avgref](mfpkey-wmadrc-avgre
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

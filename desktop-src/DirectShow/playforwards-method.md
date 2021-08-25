@@ -1,24 +1,24 @@
 ---
-description: Die playforward-Methode startet die Wiedergabe von der aktuellen Position mit der angegebenen Geschwindigkeit.
+description: Die PlayForwards-Methode startet die Wiedergabe von der aktuellen Position mit der angegebenen Geschwindigkeit.
 ms.assetid: 4f1a3e74-b343-413d-8df7-6c4bea39c62d
-title: Playforward-Methode
+title: PlayForwards-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10d49d8d6d80613c4dd5b2b8a374002b37d9baa4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 81e607779147ba057b9cfd747ebfe827a25e294e2b04cdfa7e61a0691ecf293c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119830630"
 ---
-# <a name="playforwards-method"></a>Playforward-Methode
+# <a name="playforwards-method"></a>PlayForwards-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Mit der-Methode wird die `PlayForwards` Wiedergabe von der aktuellen Position mit der angegebenen Geschwindigkeit gestartet.
+Die `PlayForwards` -Methode startet die Wiedergabe von der aktuellen Position mit der angegebenen Geschwindigkeit.
 
 ``` syntax
 MSWebDVD.PlayForwards(nSpeed)
@@ -28,10 +28,10 @@ MSWebDVD.PlayForwards(nSpeed)
 
 <dl> <dt>
 
-<span id="nSpeed"></span><span id="nspeed"></span><span id="NSPEED"></span>*ngeschwindigkeit*
+<span id="nSpeed"></span><span id="nspeed"></span><span id="NSPEED"></span>*nSpeed*
 </dt> <dd>
 
-Gibt die Geschwindigkeit an, mit der als ganzzahliger Wert abgespielt werden soll. Dieser Wert ist ein Multiplikator – 1.0 ist eine normale Wiedergabegeschwindigkeit. 2,0 ist eine doppelte Geschwindigkeit, 0,5 ist halb Geschwindigkeit usw. Wenn "**nspeed**" nicht gleich 1,0 ist, wird das audiobild stumm geschaltet, und das Teilbild ist deaktiviert.
+Gibt die Geschwindigkeit an, mit der als Ganzzahlwert wiedergegeben werden soll. Dieser Wert ist ein Multiplikator– 1,0 ist die normale Wiedergabegeschwindigkeit. 2,0 ist die doppelte Geschwindigkeit, 0,5 ist halb schnell usw. Wenn **nSpeed** ungleich 1,0 ist, wird die Audiodatei stummgeschaltet, und die Bildunterdrückung wird deaktiviert.
 
 </dd> </dl>
 
@@ -43,7 +43,7 @@ Kein Rückgabewert.
 
 <dl> <dt>
 
-[**Playrückwärts**](playbackwards-method.md)
+[**PlayBackwards**](playbackwards-method.md)
 </dt> </dl>
 
  

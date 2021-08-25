@@ -1,30 +1,30 @@
 ---
-description: Gelegentlich tritt eine Situation auf, in der eine Nachricht nicht erfolgreich an das beabsichtigte Ziel übermittelt werden kann. Dies ist normalerweise auf ein Problem mit dem System oder der Konfiguration zurückzuführen.
+description: Gelegentlich tritt eine Situation auf, in der eine Nachricht nicht erfolgreich an das beabsichtigte Ziel übermittelt werden kann, in der Regel aufgrund eines Problems mit dem System oder der Konfiguration.
 ms.assetid: 8015682c-d84d-44e2-995d-dca68053c4fa
-title: Behandeln von Fehlern in in der Warteschlange befindlichen Komponenten
+title: Behandeln von Fehlern in Komponenten in der Warteschlange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95752adf82d74e39a9c93f1ae54584e72007f1ce
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 314ff367e656043746bb34bcb28b6c5a3dc8db9b86b58a482af45f684fb658c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991080"
 ---
-# <a name="handling-errors-in-queued-components"></a>Behandeln von Fehlern in in der Warteschlange befindlichen Komponenten
+# <a name="handling-errors-in-queued-components"></a>Behandeln von Fehlern in Komponenten in der Warteschlange
 
-Gelegentlich tritt eine Situation auf, in der eine Nachricht nicht erfolgreich an das beabsichtigte Ziel übermittelt werden kann. Dies ist normalerweise auf ein Problem mit dem System oder der Konfiguration zurückzuführen. Beispielsweise kann die Nachricht an eine Warteschlange weitergeleitet werden, die nicht vorhanden ist, oder die Ziel Warteschlange befindet sich möglicherweise nicht in einem Zustand, der empfangen werden kann. Der Nachrichten Verschiebungsvorgang ist ein Tool, das alle fehlgeschlagenen [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) Nachrichten von einer Warteschlange in eine andere verschiebt, damit Sie wiederholt werden können. Das Hilfsprogramm für den Nachrichten Verschiebungsvorgang ist ein Automatisierungs Objekt, das mit einem VBScript aufgerufen werden kann.
+Gelegentlich tritt eine Situation auf, in der eine Nachricht nicht erfolgreich an das beabsichtigte Ziel übermittelt werden kann, in der Regel aufgrund eines Problems mit dem System oder der Konfiguration. Beispielsweise kann die Nachricht an eine Warteschlange geleitet werden, die nicht vorhanden ist, oder die Zielwarteschlange ist möglicherweise nicht in einem zu empfangenden Zustand. Der Nachrichten-Mover ist ein Tool, das alle fehlerhaften nachrichten [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) aus einer Warteschlange in eine andere verschiebt, damit sie wiederholt werden können. Das Nachrichten-Mover-Hilfsprogramm ist ein Automation-Objekt, das mit einem VBScript aufgerufen werden kann.
 
-## <a name="components-services-administrative-tool"></a>Komponenten Dienste-Verwaltungs Tool
+## <a name="components-services-administrative-tool"></a>Components Services-Verwaltungstool
 
 Nicht anwendbar.
 
 ## <a name="visual-basic"></a>Visual Basic
 
-Der folgende Beispielcode zeigt, wie ein messagemover-Objekt erstellt, die erforderlichen Eigenschaften festgelegt und die Übertragung initiiert wird. Um es aus Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-Diensttyp Bibliothek hinzu.
+Der folgende Beispielcode zeigt, wie Sie ein MessageMover-Objekt erstellen, die erforderlichen Eigenschaften festlegen und die Übertragung initiieren. Fügen Sie einen Verweis auf Visual Basic COM+-Diensttypbibliothek hinzu, um ihn aus dem Dienst zu verwenden.
 
 > [!Note]  
-> Um das messagemover-Objekt verwenden zu können, müssen Message Queuing auf dem Computer installiert sein, und für die in appname angegebene Anwendung muss die Warteschlange aktiviert sein. Weitere Informationen zum Installieren von Message Queuing finden Sie unter Hilfe und Support im **Startmenü** .
+> Um das MessageMover-Objekt verwenden zu können, muss Message Queuing auf Ihrem Computer installiert sein, und für die durch AppName angegebene Anwendung muss Warteschlangen aktiviert sein. Informationen zum Installieren von Message Queuing finden Sie unter Hilfe und Support im **Startmenü.**
 
  
 
@@ -63,7 +63,7 @@ End Function
 
 
 
-Der folgende Visual Basic Code zeigt, wie die mymessagemover-Funktion aufgerufen wird.
+Der folgende Visual Basic zeigt, wie sie die MyMessageMover-Funktion aufruft.
 
 
 ```VB
@@ -78,18 +78,18 @@ End Sub
 
 
 
-Der Quellpfad der Nachricht ist die letzte ruhende Warteschlange. Dabei handelt es sich um die Warteschlange für unzustellbare Nachrichten, bei der es sich um eine private Message Queuing Warteschlange handelt und \_ Nachrichten werden hier verschoben, wenn die Transaktion bei einem Versuch in der fünften Wiederholungs Warteschlange wiederholt abgebrochen wird. Mit dem Message Verschiebungs Tool können Sie die Nachricht zurück in die erste Warteschlange verschieben, die als appname bezeichnet wird. Weitere Informationen zu Wiederholungs Warteschlangen finden Sie unter [Server seitige Fehler](server-side-errors.md).
+Der Quellpfad der Nachricht ist die letzte ruheende Warteschlange. Dabei handelt es sich um die Warteschlange für in Message Queuing Warteschlange, die als AppName \_ deadqueue bezeichnet wird. Nachrichten werden hier verschoben, wenn die Transaktion wiederholt abgebrochen wird, wenn versucht wird, in der fünften Wiederholungswarteschlange zu versuchen. Mit dem Tool zum Verschieben von Nachrichten können Sie die Nachricht zurück in die erste Warteschlange verschieben, die als AppName bezeichnet wird. Weitere Informationen zu Wiederholungswarteschlangen finden Sie unter [Serverseitige Fehler.](server-side-errors.md)
 
-Wenn Queue-Attribute zulässig sind, verschiebt der Nachrichten Verschiebungs Vorgang die Nachrichten transitiv, sodass Nachrichten im Fall eines Fehlers während der Verschiebung nicht verloren gehen oder dupliziert werden. Das Tool behält alle Nachrichten Eigenschaften bei, die beibehalten werden können, wenn Nachrichten von einer Warteschlange in eine andere verschoben werden.
+Wenn Warteschlangenattribute dies zulassen, verschiebt der Nachrichten-Mover Nachrichten übergangsweise so, dass Nachrichten bei einem Fehler während der Verschiebe nicht verloren gehen oder dupliziert werden. Das Tool behält alle Nachrichteneigenschaften bei, die beim Verschieben von Nachrichten aus einer Warteschlange in eine andere beibehalten werden können.
 
-Wenn die Nachrichten von com+-in der Warteschlange befindlichen Komponenten aufgerufen werden, behält das Nachrichten verschiebungsprogramm die Sicherheits-ID des ursprünglichen Aufrufers bei, während Nachrichten zwischen Warteschlangen Wenn sowohl die Ziel-als auch die Quell Warteschlange transaktional sind, erfolgt der gesamte Vorgang transitiv. Wenn die Quell-oder Ziel Warteschlange nicht transaktional sind, wird der Vorgang nicht unter einer Transaktion ausgeführt. Ein unerwarteter Fehler (z. b. ein Absturz) und ein Neustart eines nicht transaktionalen Verschiebens können das Verschieben der Nachricht zum Zeitpunkt des Fehlers duplizieren.
+Wenn die Nachrichten durch COM+-Warteschlangenkomponentenaufrufe generiert werden, behält das Nachrichten-Mover-Hilfsprogramm die Sicherheits-ID des ursprünglichen Aufrufers beim Verschieben von Nachrichten zwischen Warteschlangen bei. Wenn sowohl die Ziel- als auch die Quellwarteschlange transaktional sind, wird der gesamte Vorgang übergangsweise ausgeführt. Wenn die Quell- oder Zielwarteschlangen nicht transaktional sind, wird der Vorgang nicht unter einer Transaktion ausgeführt. Ein unerwarteter Fehler (z. B. ein Absturz) und ein Neustart einer nicht transaktionalen Bewegung könnten die Nachricht duplizieren, die zum Zeitpunkt des Fehlers verschoben wird.
 
 ## <a name="cc"></a>C/C++
 
-Der folgende Beispielcode zeigt, wie ein messagemover-Objekt erstellt, die erforderlichen Eigenschaften festgelegt und die Übertragung initiiert wird. Die ErrorDescription-Methode wird unter [Interpretieren von Fehler Codes](interpreting-error-codes.md)beschrieben.
+Der folgende Beispielcode zeigt, wie Sie ein MessageMover-Objekt erstellen, die erforderlichen Eigenschaften festlegen und die Übertragung initiieren. Die ErrorDescription-Methode wird unter [Interpretieren von Fehlercodes beschrieben.](interpreting-error-codes.md)
 
 > [!Note]  
-> Um das messagemover-Objekt verwenden zu können, müssen Message Queuing auf dem Computer installiert sein, und für die in appname angegebene Anwendung muss die Warteschlange aktiviert sein. Weitere Informationen zum Installieren von Message Queuing finden Sie unter Hilfe und Support im **Startmenü** .
+> Um das MessageMover-Objekt verwenden zu können, muss Message Queuing auf Ihrem Computer installiert sein, und für die durch AppName angegebene Anwendung muss Warteschlangen aktiviert sein. Informationen zum Installieren von Message Queuing finden Sie unter Hilfe und Support im **Startmenü.**
 
  
 
@@ -172,7 +172,7 @@ catch(HRESULT hr) {  // Replace with specific error handling.
 
 
 
-Der folgende C++-Code zeigt, wie die mymessagemover-Funktion aufgerufen wird.
+Der folgende C++-Code zeigt, wie sie die MyMessageMover-Funktion aufruft.
 
 
 ```C++
@@ -197,21 +197,21 @@ void main()
 
 
 
-Der Quellpfad der Nachricht ist die letzte ruhende Warteschlange. Dabei handelt es sich um die Warteschlange für unzustellbare Nachrichten, bei der es sich um eine private Message Queuing Warteschlange handelt und \_ Nachrichten werden hier verschoben, wenn die Transaktion bei einem Versuch in der fünften Wiederholungs Warteschlange wiederholt abgebrochen wird. Mit dem Message Verschiebungs Tool können Sie die Nachricht zurück in die erste Warteschlange verschieben, die als appname bezeichnet wird. Weitere Informationen zu Wiederholungs Warteschlangen finden Sie unter [Server seitige Fehler](server-side-errors.md).
+Der Quellpfad der Nachricht ist die letzte ruheende Warteschlange. Dabei handelt es sich um die Warteschlange für in Message Queuing Warteschlange, die als AppName \_ deadqueue bezeichnet wird. Nachrichten werden hier verschoben, wenn die Transaktion wiederholt abgebrochen wird, wenn versucht wird, in der fünften Wiederholungswarteschlange zu versuchen. Mit dem Tool zum Verschieben von Nachrichten können Sie die Nachricht zurück in die erste Warteschlange verschieben, die als AppName bezeichnet wird. Weitere Informationen zu Wiederholungswarteschlangen finden Sie unter [Serverseitige Fehler.](server-side-errors.md)
 
-Wenn Queue-Attribute zulässig sind, verschiebt der Nachrichten Verschiebungs Vorgang die Nachrichten transitiv, sodass Nachrichten im Fall eines Fehlers während der Verschiebung nicht verloren gehen oder dupliziert werden. Das Tool behält alle Nachrichten Eigenschaften bei, die beibehalten werden können, wenn Nachrichten von einer Warteschlange in eine andere verschoben werden.
+Wenn Warteschlangenattribute dies zulassen, verschiebt der Nachrichten-Mover Nachrichten übergangsweise so, dass Nachrichten bei einem Fehler während der Verschiebe nicht verloren gehen oder dupliziert werden. Das Tool behält alle Nachrichteneigenschaften bei, die beim Verschieben von Nachrichten aus einer Warteschlange in eine andere beibehalten werden können.
 
-Wenn die Nachrichten von com+-in der Warteschlange befindlichen Komponenten aufgerufen werden, behält das Nachrichten verschiebungsprogramm die Sicherheits-ID des ursprünglichen Aufrufers bei, während Nachrichten zwischen Warteschlangen Wenn sowohl die Ziel-als auch die Quell Warteschlange transaktional sind, erfolgt der gesamte Vorgang transitiv. Wenn die Quell-oder Ziel Warteschlange nicht transaktional sind, wird der Vorgang nicht unter einer Transaktion ausgeführt. Ein unerwarteter Fehler (z. b. ein Absturz) und ein Neustart eines nicht transaktionalen Verschiebens können das Verschieben der Nachricht zum Zeitpunkt des Fehlers duplizieren.
+Wenn die Nachrichten durch COM+-Warteschlangenkomponentenaufrufe generiert werden, behält das Nachrichten-Mover-Hilfsprogramm die Sicherheits-ID des ursprünglichen Aufrufers beim Verschieben von Nachrichten zwischen Warteschlangen bei. Wenn sowohl die Ziel- als auch die Quellwarteschlange transaktional sind, wird der gesamte Vorgang übergangsweise ausgeführt. Wenn die Quell- oder Zielwarteschlangen nicht transaktional sind, wird der Vorgang nicht unter einer Transaktion ausgeführt. Ein unerwarteter Fehler (z. B. ein Absturz) und ein Neustart einer nicht transaktionalen Bewegung könnten die Nachricht duplizieren, die zum Zeitpunkt des Fehlers verschoben wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Com+ verarbeitet serverseitige (Player-) Abbrüche, indem die Nachricht, bei der ein Fehler auftritt, in eine andere "abschließende ruhende" Warteschlange verschoben wird, um Sie zu erhalten. Der Listener und der Player können eine Nachricht, die abgebrochen wird, nicht fortlaufend Schleifen. In vielen Fällen kann die abgebrochene Transaktion korrigiert werden, indem eine Aktion auf dem Server ausgeführt wird.
+COM+ behandelt serverseitige Abbruche (Player), indem die Nachricht, bei der ein Fehler ausgeführt wird, in eine andere Warteschlange für die endgültige Ruhezeit bewegt wird, um sie aus dem Weg zu bringen. Listener und Player können keine fortlaufende Schleife für eine Nachricht, die abgebrochen wird, schleifen. In vielen Fällen kann die abgebrochene Transaktion durch Ausführen von Aktionen auf dem Server behoben werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Komponenten Fehler in der Warteschlange](queued-components-errors.md)
+[Fehler bei Komponenten in der Warteschlange](queued-components-errors.md)
 </dt> </dl>
 
  

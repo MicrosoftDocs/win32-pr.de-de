@@ -4,16 +4,16 @@ ms.assetid: 81476f50-5ea0-4e02-9e38-2b1dfcc32c4f
 title: Hinzufügen einer Ressource zu einem Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 869b5cdcf172c4b8f27f7081bfce8e6f05073789
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34f95cd4b11182a8cc6bc3d249f2065744ba0f6d8efe1be204e47ad321429a88
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930240"
 ---
 # <a name="adding-a-resource-to-an-object"></a>Hinzufügen einer Ressource zu einem Objekt
 
-Zusätzlich zum Übertragen von Objekten an ein Gerät ist es auch möglich, Ressourcen zu Objekten hinzuzufügen. Beispielsweise könnte eine Anwendung vorhandenen Informationen für einen bestimmten Kontakt ein Foto hinzufügen.
+Zusätzlich zum Übertragen von Objekten auf ein Gerät ist es auch möglich, Objekten Ressourcen hinzuzufügen. Beispielsweise könnte eine Anwendung vorhandenen Informationen für einen bestimmten Kontakt ein Foto hinzufügen.
 
 Ressourcen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen hinzugefügt.
 
@@ -21,18 +21,18 @@ Ressourcen werden mithilfe der in der folgenden Tabelle beschriebenen Schnittste
 
 | Schnittstelle                                                              | BESCHREIBUNG                                                       |
 |------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)     | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.                  |
-| [**Iportabledeviceresources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) | Wird beim Schreiben der Ressourcen Eigenschaften und-Daten auf das Gerät verwendet. |
-| [**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)       | Wird zum Schreiben von Eigenschaften verwendet, die die Ressource beschreiben.              |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)     | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.                  |
+| [**IPortableDeviceResources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) | Wird verwendet, wenn die Ressourceneigenschaften und -daten auf das Gerät geschrieben werden. |
+| [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)       | Wird verwendet, um Eigenschaften zu schreiben, die die Ressource beschreiben.              |
 | IStream-Schnittstelle                                                      | Wird verwendet, um das Schreiben der Ressource auf das Gerät zu vereinfachen.              |
 
 
 
  
 
-Die Funktion "Funktion" in der Funktion "contenttransfer. cpp" der Beispielanwendung veranschaulicht, wie eine Anwendung einem Kontakt Objekt eine Foto Ressource hinzufügen kann. Diese Funktion fordert den Benutzer zur Eingabe des Objekt Bezeichners des Kontakts auf dem Gerät auf, dem die Foto Ressource hinzugefügt wird. Daraufhin wird das Dialogfeld FileOpen angezeigt, in dem der Benutzer das hinzu zufügende Bild auswählen kann. Nachdem diese Daten gesammelt wurden, schreibt die Anwendung die Ressource auf das Gerät.
+Die Funktion CreateContactPhotoResourceOnDevice im ContentTransfer.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung einem Kontaktobjekt eine Fotoressource hinzufügen kann. Diese Funktion fordert den Benutzer zur Eingabe des Objektbezeichners des Kontakts auf dem Gerät auf, dem die Fotoressource hinzugefügt wird. Anschließend wird ein Dialogfeld Datei Öffnen angezeigt, damit der Benutzer das bild auswählen kann, das hinzugefügt werden soll. Nachdem diese Daten gesammelt wurden, schreibt die Anwendung die Ressource auf das Gerät.
 
-Die erste Aufgabe, die von der Funktion "" mit der Funktion "" mit der Funktion "" erstellt wird, besteht darin, den Benutzer zur Eingabe eines Objekt Bezeichners für den Kontakt aufzufordern, dem das Foto hinzugefügt wird.
+Die erste Aufgabe, die von der CreateContactPhotoResourceOnDevice-Funktion ausgeführt wird, besteht darin, den Benutzer zur Eingabe eines Objektbezeichners für den Kontakt aufforderungen, dem das Foto hinzugefügt wird.
 
 
 ```C++
@@ -55,7 +55,7 @@ if (FAILED(hr))
 
 
 
-Der nächste Schritt ist das Abrufen eines [**iportabledevicecontent**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) -Objekts, das wiederum zum Abrufen eines [**iportabledeviceresources**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) -Objekts verwendet wird. (Die Anwendung verwendet dieses letztere Objekt, um die neue Ressource zu erstellen und zu schreiben.)
+Der nächste Schritt ist das Abrufen eines [**IPortableDeviceContent-Objekts,**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) das wiederum zum Abrufen eines [**IPortableDeviceResources-Objekts verwendet**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) wird. (Die Anwendung verwendet dieses zweite Objekt, um die neue Ressource zu erstellen und zu schreiben.)
 
 
 ```C++
@@ -93,7 +93,7 @@ if (SUCCEEDED(hr))
 
 
 
-Anschließend wird im Beispiel das Dialogfeld **FileOpen** angezeigt, das es dem Benutzer ermöglicht, den Namen der Bilddatei anzugeben, die das Foto enthält, das Sie den Kontaktinformationen hinzufügen möchten.
+Danach wird im Beispiel das Dialogfeld **Datei Öffnen** angezeigt, mit dem der Benutzer den Namen der Bilddatei angeben kann, die das Foto enthält, das er den Kontaktinformationen hinzufügen möchte.
 
 
 ```C++
@@ -129,10 +129,10 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn das Beispiel ein [**iportabledeviceresources**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) -Objekt und den Namen der Bilddatei enthält, werden die folgenden Schritte in Vorbereitung für die eigentliche Übertragung von Daten auf das Gerät durchführen.
+Sobald das Beispiel über ein [**IPortableDeviceResources-Objekt**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources) und den Namen der Bilddatei verfügt, wird folgendes als Vorbereitung für die übertragung von Daten an das Gerät verwendet.
 
-1.  Er öffnet ein IStream-Objekt für die ausgewählte Datei für Lesevorgänge.
-2.  Es wird ein [**iportabledevicevalues**](iportabledevicevalues.md) -Objekt erstellt, das Informationen wie die Bildgröße und das Bildformat enthält.
+1.  Es wird ein IStream-Objekt in der ausgewählten Datei für Lesevorgänge geöffnet.
+2.  Es erstellt ein [**IPortableDeviceValues-Objekt,**](iportabledevicevalues.md) das Informationen wie Bildgröße und -format enthält.
 
 
 ```C++
@@ -222,11 +222,11 @@ if (SUCCEEDED(hr))
 
 
 
-Nach der Vorbereitung der IStream-und [**iportabledevicevalues**](iportabledevicevalues.md) -Objekte für den Schreibvorgang überträgt das Beispiel das Image auf das Gerät. Im Beispiel wird die Übertragung in drei Schritten wie folgt abgeschlossen:
+Nachdem die IStream- und [**IPortableDeviceValues-Objekte**](iportabledevicevalues.md) für den Schreibvorgang vorbereitet wurden, überträgt das Beispiel das Bild auf das Gerät. Im Beispiel wird die Übertragung wie folgt in drei Schritten abgeschlossen:
 
-1.  Die Ressource wird auf dem Gerät erstellt, indem die [**iportabledeviceresources:: CreateResource**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-createresource) -Methode aufgerufen wird.
-2.  Er ruft eine streamcopy-Hilfsfunktion auf, um den Quelldaten Strom in den Zielstream zu kopieren.
-3.  Der Gerätetreiber wird informiert, dass die Übertragung durch Aufrufen der iportabledevicedatastream:: Commit-Methode beendet wurde.
+1.  Sie erstellt die Ressource auf dem Gerät durch Aufrufen der [**IPortableDeviceResources::CreateResource-Methode.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-createresource)
+2.  Sie ruft eine StreamCopy-Hilfsfunktion auf, um den Quellstream in den Zielstream zu kopieren.
+3.  Er informiert den Gerätetreiber, dass die Übertragung abgeschlossen ist, indem die IPortableDeviceDataStream::Commit-Methode aufruft.
 
 
 ```C++
@@ -287,16 +287,16 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledeviceresources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources)
+[**IPortableDeviceResources-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceresources)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

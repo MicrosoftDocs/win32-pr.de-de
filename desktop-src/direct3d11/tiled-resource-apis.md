@@ -1,71 +1,71 @@
 ---
-title: Ressourcen-APIs mit Kachel
-description: Die in diesem Abschnitt beschriebenen APIs funktionieren mit gekachelten Ressourcen und einem Kachel Pool.
+title: APIs für gekachelte Ressourcen
+description: Die in diesem Abschnitt beschriebenen APIs funktionieren mit gekachelten Ressourcen und Kachelpools.
 ms.assetid: 02DCF9BA-F9EA-4176-AD6F-AA620CE968BA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a0d97f5272f4f96db56e6e89b871951de035105
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3f433b6c70d475d4da511b85fdcc2b1c273de1efa8e1186215b25ce6b9b95d0a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894390"
 ---
-# <a name="tiled-resource-apis"></a>Ressourcen-APIs mit Kachel
+# <a name="tiled-resource-apis"></a>APIs für gekachelte Ressourcen
 
-Die in diesem Abschnitt beschriebenen APIs funktionieren mit gekachelten Ressourcen und einem Kachel Pool.
+Die in diesem Abschnitt beschriebenen APIs funktionieren mit gekachelten Ressourcen und Kachelpools.
 
--   [Zuweisen von Kacheln aus einem Kachel Pool zu einer Ressource](#assigning-tiles-from-a-tile-pool-to-a-resource)
--   [Abfragen von Ressourcen-und Support](#querying-resource-tiling-and-support)
--   [Kopieren von Kachel Daten](#copying-tiled-data)
--   [Ändern der Größe des Kachel Pools](#resizing-tile-pool)
--   [Gekachelte Ressourcen Barriere](#tiled-resource-barrier)
+-   [Zuweisen von Kacheln aus einem Kachelpool zu einer Ressource](#assigning-tiles-from-a-tile-pool-to-a-resource)
+-   [Abfragen von Ressourcenkacheln und -unterstützung](#querying-resource-tiling-and-support)
+-   [Kopieren von gekachelten Daten](#copying-tiled-data)
+-   [Ändern der Größe des Kachelpools](#resizing-tile-pool)
+-   [Gekachelte Ressourcenbarriere](#tiled-resource-barrier)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="assigning-tiles-from-a-tile-pool-to-a-resource"></a>Zuweisen von Kacheln aus einem Kachel Pool zu einer Ressource
+## <a name="assigning-tiles-from-a-tile-pool-to-a-resource"></a>Zuweisen von Kacheln aus einem Kachelpool zu einer Ressource
 
-Die [**ID3D11DeviceContext2:: updatetilemappings**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetilemappings) -und [**ID3D11DeviceContext2:: copytilemappings**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytilemappings) -APIs bearbeiten und Abfragen Kachel Zuordnungen. Update-Aufrufe wirken sich nur auf die im Aufruf identifizierten Kacheln aus, und andere bleiben wie zuvor definiert.
+Die [**APIs ID3D11DeviceContext2::UpdateTileMappings**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetilemappings) und [**ID3D11DeviceContext2::CopyTileMappings**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytilemappings) bearbeiten und fragen Kachelzuordnungen ab. Aktualisierungsaufrufe wirken sich nur auf die im Aufruf identifizierten Kacheln aus, und andere bleiben wie zuvor definiert erhalten.
 
-Eine beliebige Kachel aus einem Kachel Pool kann mehreren Speicherorten in einer Ressource und sogar mehreren Ressourcen zugeordnet werden. Diese Zuordnung umfasst Kacheln in einer Ressource, die über ein von der Implementierung ausgewähltes Layout ([MipMap-Verpackung](mipmap-packing.md)) verfügen, in dem mehrere Mipmaps in einer einzelnen Kachel verpackt werden. Der catch besteht darin, dass die Ergebnisse nicht definiert sind, wenn Daten über eine Zuordnung in die Kachel geschrieben werden, aber über eine anders konfigurierte Zuordnung gelesen werden. Die sorgfältige Verwendung dieser Flexibilität kann für eine Anwendung dennoch nützlich sein, wie z. b. das Freigeben einer Kachel zwischen Ressourcen, die nicht gleichzeitig verwendet werden, wobei der Inhalt der Kachel immer durch dieselbe Ressourcen Zuordnung initialisiert wird, wie Sie später aus dem gelesen werden. Ebenso funktioniert eine Kachel, die die gepackten Mipmaps mehrerer verschiedener Ressourcen mit denselben Oberflächen Dimensionen enthält, einwandfrei. die Daten werden in beiden Zuordnungen gleich angezeigt.
+Jede Kachel aus einem Kachelpool kann mehreren Speicherorten in einer Ressource und sogar mehreren Ressourcen zugeordnet werden. Diese Zuordnung umfasst Kacheln in einer Ressource, die über ein von der Implementierung ausgewähltes Layout (Mipmap-Packen ) verfügen, bei dem mehrere[Mipmaps](mipmap-packing.md)zu einer einzelnen Kachel gepackt werden. Der Catch ist, dass die Ergebnisse nicht definiert sind, wenn Daten über eine Zuordnung auf die Kachel geschrieben, aber über eine anders konfigurierte Zuordnung gelesen werden. Die sorgfältige Verwendung dieser Flexibilität kann jedoch für eine Anwendung dennoch nützlich sein, z. B. das Freigeben einer Kachel zwischen Ressourcen, die nicht gleichzeitig verwendet werden, wobei der Inhalt der Kachel immer über die gleiche Ressourcenzuordnung initialisiert wird, aus der sie anschließend gelesen werden. Auf ähnliche Weise funktioniert eine Kachel, die zugeordnet ist, um die gepackten Mipmaps mehrerer verschiedener Ressourcen mit den gleichen Oberflächendimensionen zu halten. Die Daten werden in beiden Zuordnungen gleich angezeigt.
 
-Änderungen an den Kachel Zuweisungen für eine Ressource können jederzeit in einem unmittelbaren oder verzögerten Kontext vorgenommen werden.
+Änderungen an Kachelzuweisungen für eine Ressource können jederzeit in einem unmittelbaren oder verzögerten Kontext vorgenommen werden.
 
-## <a name="querying-resource-tiling-and-support"></a>Abfragen von Ressourcen-und Support
+## <a name="querying-resource-tiling-and-support"></a>Abfragen von Ressourcenkacheln und -unterstützung
 
-Verwenden Sie [**ID3D11Device2:: getresourcetick**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11device2-getresourcetiling), um die Ressourcen-tiult abzufragen.
+Verwenden Sie zum Abfragen der Ressourcenkacheln [**ID3D11Device2::GetResourceTiling**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11device2-getresourcetiling).
 
-Verwenden Sie [**ID3D11Device2:: CheckMultisampleQualityLevels1**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1), um weitere Unterstützung für Ressourcen Unterstützung zu erhalten.
+Verwenden Sie für andere Ressourcenkachelunterstützung [**ID3D11Device2::CheckMultisampleQualityLevels1**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11device2-checkmultisamplequalitylevels1).
 
-## <a name="copying-tiled-data"></a>Kopieren von Kachel Daten
+## <a name="copying-tiled-data"></a>Kopieren von gekachelten Daten
 
-Alle Methoden in Direct3D zum Verschieben von Daten um die Arbeit mit gekachelten Ressourcen so, als wären Sie nicht gekachelt, mit der Ausnahme, dass Schreibvorgänge in nicht zugeordnete Bereiche gelöscht und Lesevorgänge aus nicht zugeordneten Bereichen 0 ergeben. Wenn bei einem Kopiervorgang mehrere Male an denselben Speicherort geschrieben werden müssen, weil mehrere Speicherorte in der Ziel Ressource demselben Kachel Speicher zugeordnet sind, sind die resultierenden Schreibvorgänge auf mehrfach zugeordnete Kacheln nicht deterministisch und nicht wiederholbar. Das heißt, dass Zugriffe in jeder Reihenfolge erfolgen, in der sich die Hardware für die Ausführung der Kopie verhält.
+Alle Methoden in Direct3D zum Verschieben von Daten arbeiten mit gekachelten Ressourcen so, als würden sie nicht gekachelt, mit der Ausnahme, dass Schreibvorgänge in nicht zugeordnete Bereiche gelöscht werden und Lesevorgänge aus nicht zugeordneten Bereichen 0 erzeugen. Wenn ein Kopiervorgang das mehrmalige Schreiben an denselben Speicherort umfasst, da mehrere Speicherorte in der Zielressource demselben Kachelspeicher zugeordnet sind, sind die resultierenden Schreibvorgänge in Kacheln mit mehreren Zuordnungen nicht deterministisch und nicht wiederholbar. Das bedeutet, dass Zugriffe in der Reihenfolge ausgeführt werden, in der die Hardware die Kopie ausgeführt.
 
-In Direct3D 11,2 werden Methoden für diese zusätzlichen Methoden zum Kopieren eingeführt:
+Direct3D 11.2 führt Methoden für diese zusätzlichen Möglichkeiten zum Kopieren ein:
 
--   Kopieren zwischen Kacheln in einer gekachelten Ressource (mit einer Kachel Genauigkeit von 64 KB) und (in/aus) einem Puffer im GPU-Speicher (Graphics Processing Unit) (oder in der stagingressource)- [ **ID3D11DeviceContext2:: copytiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles)
--   Von der Anwendung bereitgestellten Arbeitsspeicher auf Kacheln in einer gekachelten Ressource kopieren- [ **ID3D11DeviceContext2:: updatetiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetiles)
+-   Kopieren zwischen Kacheln in einer gekachelten Ressource (mit 64 KB Kachelgranularität) und (von/zu) einem Puffer im GPU-Arbeitsspeicher (Oder Stagingressource) – [ **ID3D11DeviceContext2::CopyTiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles)
+-   Kopieren aus dem von der Anwendung bereitgestellten Arbeitsspeicher in Kacheln in einer gekachelten Ressource – [ **ID3D11DeviceContext2::UpdateTiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetiles)
 
-Diese Methoden wischen bei Bedarf, und lassen das Flag "D3D11 \_ Tile \_ Copy No Überschreibung" zu, wenn der Aufrufer \_ \_ auf den Zielspeicher zuweist, dass GPU-Arbeit, die aktiv ist, nicht referenziert wird.
+Diese Methoden swizzle/deswizzle nach Bedarf und lassen ein D3D11 \_ TILE \_ COPY NO \_ OVERWRITE-Flag zu, wenn der Aufrufer verspricht, dass der Zielspeicher nicht von GPU-Arbeiten referenziert wird, die sich im Flugbetrieb \_ befindet.
 
-Die Kacheln, die an der Kopie beteiligt sind, dürfen keine Kacheln enthalten, die gepackte Mipmaps enthalten oder die nicht definierte Ergebnisse aufweisen. Zum Übertragen von Daten in/aus Mipmaps, die von den Hardware Paketen in eine Kachel kopiert werden, müssen Sie für die gesamte MIP-Kette die standardmäßigen (nicht Kachel spezifischen) Kopier-/Update-APIs oder [**Verknüpfung id3d11devicecontext aus:: generatemips**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips) verwenden.
+Die an der Kopie beteiligten Kacheln dürfen keine Kacheln enthalten, die gepackte Mipmaps enthalten oder nicht definierte Ergebnisse enthalten. Um Daten in bzw. aus Mipmaps zu übertragen, die die Hardware in eine Kachel packt, müssen Sie die standardmäßigen (nicht kachelspezifischen) Kopier-/Aktualisierungs-APIs oder [**ID3D11DeviceContext::GenerateMips**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips) für die gesamte MIP-Kette verwenden.
 
-**Hinweis bei [**generatemips**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips):** bei Verwendung von [**Verknüpfung id3d11devicecontext aus:: generatemips**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips) für eine Ressource mit teilweise zugeordneten Kacheln werden Ergebnisse erzeugt, die einfach den Regeln für das Lesen und Schreiben von **null** folgen, die auf den Algorithmus angewendet werden, der von Hardware und Anzeigetreiber für **generatemips** verwendet wird. Daher ist es für eine Anwendung nicht besonders nützlich, dies zu tun, es sei denn, die Bereiche mit **null** -Zuordnungen (und ihre Auswirkung auf andere MIPS während der Generierungs Phase) haben keine Auswirkungen auf die Teile der Oberfläche, die für die Anwendung wichtig sind.
+**Hinweis zu [**GenerateMips:**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips)** Die Verwendung von [**ID3D11DeviceContext::GenerateMips**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-generatemips) für eine Ressource mit teilweise zugeordneten Kacheln erzeugt Ergebnisse, die einfach den Regeln zum Lesen und Schreiben von **NULL** entsprechen, die auf den Algorithmus angewendet werden, den der Hardware- und Anzeigetreiber für **GenerateMips verwendet.** Daher ist es für eine Anwendung nicht besonders nützlich, dies  zu tun, es sei denn, in irgendeiner Weise haben die Bereiche mit NULL-Zuordnungen (und ihre Auswirkungen auf andere Mips während der Generierungsphase) keine Auswirkungen auf die Teile der Oberfläche, die für die Anwendung wichtig sind.
 
-Wenn Sie Kachel Daten aus einer stagingoberfläche oder aus dem Anwendungs Speicher kopieren, können Sie beispielsweise Kacheln hochladen, die möglicherweise von einem Datenträger gestreamt wurden. Eine Variation beim Streaming von einem Datenträger lädt eine Komprimierung von komprimierten Daten in den GPU-Speicher hoch und dann die Decodierung auf der GPU. Beim decodierungsziel kann es sich um eine Puffer Ressource im GPU-Speicher handeln, von der [**copytiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles) dann in die tatsächlich gekachelte Ressource kopiert werden. Dieser Kopier Schritt ermöglicht die GPU, wenn das Swizzle-Muster nicht bekannt ist. Das Schwenken ist nicht erforderlich, wenn die gekachelte Ressource selbst eine Puffer Ressource ist (z. b. im Gegensatz zu einer Textur).
+Das Kopieren von Kacheldaten von einer Stagingoberfläche oder aus dem Anwendungsspeicher wäre beispielsweise die Möglichkeit, Kacheln hochzuladen, die möglicherweise vom Datenträger gestreamt wurden. Eine Variation beim Streamen von Datenträgern ist das Hochladen von komprimierten Daten in den GPU-Arbeitsspeicher und das anschließende Decodieren auf der GPU. Das Decodierungsziel kann eine Pufferressource im GPU-Arbeitsspeicher sein, aus der [**CopyTiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles) dann in die tatsächliche gekachelte Ressource kopiert wird. Mit diesem Kopierschritt kann die GPU schwanken, wenn das Swizzle-Muster nicht bekannt ist. Swizzling ist nicht erforderlich, wenn die gekachelte Ressource selbst eine Pufferressource ist (z. B. im Gegensatz zu einer Textur).
 
-Das Speicher Layout der Kacheln auf der Ressourcenseite des nicht gekachelten Puffers der Kopie ist einfach linear im Arbeitsspeicher innerhalb von 64 KB-Kacheln, die der Hardware-und Anzeigetreiber bei der Übertragung in eine oder aus einer gekachelten Ressource nach Bedarf durchläuft. Bei Multisampling-Antialiasing (MSAA)-Oberflächen werden die Stichproben der einzelnen Pixel vor dem Wechsel zum nächsten Pixel in der Beispiel Index Reihenfolge durchlaufen. Bei Kacheln, die teilweise auf der rechten Seite aufgefüllt sind (für eine Oberfläche mit einer Breite, die kein Vielfaches der Kachel Breite in Pixel ist), ist die Menge bzw. der Schritt zum nach unten einer Zeile die vollständige Größe in Byte der Anzahl von Pixeln, die auf die Kachel passen, wenn die Kachel voll ist. Daher kann eine Lücke zwischen den einzelnen Zeilen der Pixel im Speicher bestehen. Aus Gründen der Einfachheit werden Mipmaps, die kleiner sind als eine Kachel, nicht im linearen Layout verpackt. Dies scheint eine Verschwendung von Speicherplatz zu sein, aber wie bereits erwähnt, dass die Hardware Pakete über [**copytiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles) oder [**updatetiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetiles)zusammen kopiert werden. Die Anwendung kann nur generische updatesubresource \* ()-oder copysubresource \* ()-APIs verwenden, um Small MIPS einzeln zu kopieren, jedoch im Fall von copysubresource \* (). Dies bedeutet, dass der lineare Speicher dieselbe Dimension wie die gekachelte Ressource sein muss. copysubresource \* () kann nicht aus einer Puffer Ressource in eine Texture2D-Instanz kopieren.
+Das Speicherlayout der Kacheln auf der Nichtkacheln-Pufferressourcenseite der Kopie ist einfach linear im Arbeitsspeicher innerhalb von 64-KB-Kacheln, die der Hardware- und Anzeigetreiber bei der Übertragung zu bzw. von einer gekachelten Ressource je nach Kachel überschnaufen/deswizzle. Bei MsAA-Oberflächen (Multisample Antialiasing) werden die Stichproben der einzelnen Pixel in der Reihenfolge des Stichprobenindexes durchlaufen, bevor sie zum nächsten Pixel bewegt werden. Für Kacheln, die teilweise auf der rechten Seite ausgefüllt sind (für eine Oberfläche, die eine Breite hat, die nicht das Vielfache der Kachelbreite in Pixeln ist), entspricht die Tonhöhe/Stride, um eine Zeile nach unten zu bewegen, die vollständige Größe in Byte der Anzahl von Pixeln, die über die Kachel passen würden, wenn die Kachel voll wäre. Es kann also eine Lücke zwischen jeder Zeile mit Pixeln im Arbeitsspeicher geben. Der Einfachheit halber werden Mipmaps, die kleiner als eine Kachel sind, nicht im linearen Layout gepackt. Dies scheint eine Verschwendung von Speicherplatz zu sein, aber wie bereits erwähnt, ist das Kopieren auf Mips, dass die Hardwarepakete zusammen nicht über [**CopyTiles**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-copytiles) oder [**UpdateTiles zulässig sind.**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-updatetiles) Die Anwendung kann einfach generische UpdateSubresource-APIs () oder CopySubresource () verwenden, um kleine Mips einzeln zu kopieren. Im Fall von CopySubresource () bedeutet dies jedoch, dass der lineare Speicher dieselbe Dimension wie die gekachelte Ressource sein muss. CopySubresource () kann z. B. nicht aus einer Pufferressource in \* \* eine \* \* Texture2D kopieren.
 
-Wenn ein Hardware Standard-swidwert definiert ist, können Flags hinzugefügt werden, um anzugeben, dass die Daten im Puffer in diesem Format interpretiert werden sollen (kein swilen erforderlich), obwohl alternative Vorgehensweisen zum Hochladen von Daten in diesem Fall sinnvoll sein können, z. b. Wenn Anwendungen den direkten Zugriff auf den Kachel Pool Speicher erlauben.
+Wenn ein Hardwarestandard swizzle definiert ist, können Flags hinzugefügt werden, um anzugeben, dass die Daten im Puffer in diesem Format interpretiert werden sollen (kein Swizzle bei der Übertragung erforderlich), obwohl alternative Ansätze zum Hochladen von Daten auch in diesem Fall sinnvoll sein können, z. B. das Zulassen des direkten Zugriffs von Anwendungen auf den Kachelpoolspeicher.
 
-Kopiervorgänge können in einem unmittelbaren oder verzögerten Kontext durchgeführt werden.
+Kopiervorgänge können in einem unmittelbaren oder verzögerten Kontext erfolgen.
 
-## <a name="resizing-tile-pool"></a>Ändern der Größe des Kachel Pools
+## <a name="resizing-tile-pool"></a>Ändern der Größe des Kachelpools
 
-Verwenden Sie [**ID3D11DeviceContext2:: resizetilepool**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-resizetilepool), um die Größe eines Kachel Pools zu ändern.
+Um die Größe eines Kachelpools zu ändern, verwenden Sie [**ID3D11DeviceContext2::ResizeTilePool**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-resizetilepool).
 
-## <a name="tiled-resource-barrier"></a>Gekachelte Ressourcen Barriere
+## <a name="tiled-resource-barrier"></a>Gekachelte Ressourcenbarriere
 
-Verwenden Sie [**ID3D11DeviceContext2:: tiledresourcebarrier**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-tiledresourcebarrier), um eine Einschränkung der Datenzugriffs Anordnung zwischen mehreren gekachelten Ressourcen anzugeben.
+Verwenden Sie [**ID3D11DeviceContext2::TiledResourceBarrier,**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-tiledresourcebarrier)um eine Einschränkung für die Datenzugriffsbestellung zwischen mehreren gekachelten Ressourcen anzugeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -74,9 +74,9 @@ Verwenden Sie [**ID3D11DeviceContext2:: tiledresourcebarrier**](/windows/desktop
 [Gekachelte Ressourcen](tiled-resources.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

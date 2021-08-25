@@ -1,54 +1,54 @@
 ---
-title: Verwenden von Maus Eingaben
-description: In diesem Abschnitt werden die mit der Maus Eingaben verknüpften Aufgaben behandelt.
+title: Verwenden der Mauseingabe
+description: In diesem Abschnitt werden Aufgaben behandelt, die der Mauseingabe zugeordnet sind.
 ms.assetid: b96d0046-a507-4733-bcf3-fcf757beec7f
 keywords:
 - Benutzereingabe, Mauseingabe
-- Erfassen von Benutzereingaben, Maus Eingaben
+- Erfassen von Benutzereingaben, Mauseingabe
 - Mauseingabe
-- Cursor, Maus Eingaben
+- Cursor, Mauseingabe
 - Mauszeiger
-- Doppelklicken Sie auf Nachrichtenverarbeitung.
+- Doppelklicken auf die Nachrichtenverarbeitung
 - Mausrad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50b34f180aad6aec6120bf4e3ffa997eba13e760
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bc38105da1fbbe3bee1be9ca280f1f5573dbb41ba4b7b6aa2013d9c600b8ad00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829970"
 ---
-# <a name="using-mouse-input"></a>Verwenden von Maus Eingaben
+# <a name="using-mouse-input"></a>Verwenden der Mauseingabe
 
-In diesem Abschnitt werden die mit der Maus Eingaben verknüpften Aufgaben behandelt.
+In diesem Abschnitt werden Aufgaben behandelt, die der Mauseingabe zugeordnet sind.
 
--   [Nachverfolgen des Maus Cursors](#tracking-the-mouse-cursor)
+-   [Nachverfolgen des Mauszeigers](#tracking-the-mouse-cursor)
 -   [Zeichnen von Linien mit der Maus](#drawing-lines-with-the-mouse)
--   [Verarbeiten einer Doppelklick Nachricht](#processing-a-double-click-message)
+-   [Verarbeiten einer Doppelklicknachricht](#processing-a-double-click-message)
 -   [Auswählen einer Textzeile](#selecting-a-line-of-text)
--   [Verwenden eines Mausrades in einem Dokument mit eingebetteten Objekten](#using-a-mouse-wheel-in-a-document-with-embedded-objects)
--   [Abrufen der Anzahl von Mausrad-scrolllinien](#retrieving-the-number-of-mouse-wheel-scroll-lines)
+-   [Verwenden eines Mausrads in einem Dokument mit eingebetteten Objekten](#using-a-mouse-wheel-in-a-document-with-embedded-objects)
+-   [Abrufen der Anzahl der Mausrad-Bildlauflinien](#retrieving-the-number-of-mouse-wheel-scroll-lines)
 
-## <a name="tracking-the-mouse-cursor"></a>Nachverfolgen des Maus Cursors
+## <a name="tracking-the-mouse-cursor"></a>Nachverfolgen des Mauszeigers
 
-Anwendungen führen häufig Aufgaben aus, die die Position des Mauszeigers überwachen. Die meisten Zeichnungs Anwendungen können z. b. die Position des Mauszeigers während Zeichnungs Vorgängen verfolgen, sodass der Benutzer den Client Bereich eines Fensters durchziehen der Maus zeichnen kann. Textverarbeitungsanwendungen verfolgen den Cursor auch nach, um dem Benutzer zu ermöglichen, ein Wort oder einen Textblock auszuwählen, indem Sie darauf klicken und die Maus ziehen.
+Anwendungen führen häufig Aufgaben aus, bei denen die Position des Mauscursors nachverfolgt wird. Die meisten Zeichnungsanwendungen verfolgen beispielsweise die Position des Mauscursors während Zeichnungsvorgängen nach, sodass der Benutzer durch Ziehen der Maus in den Clientbereich eines Fensters zeichnen kann. Textverarbeitungsanwendungen verfolgen auch den Cursor nach, sodass der Benutzer ein Wort oder einen Textblock durch Klicken und Ziehen der Maus auswählen kann.
 
-Die Nachverfolgung des Cursors umfasst in der Regel die Verarbeitung der Nachrichten [**WM \_ lbuttondown**](wm-lbuttondown.md), [**WM \_ mousetmove**](wm-mousemove.md)und [**WM \_ lbuttonup**](wm-lbuttonup.md) . Ein Fenster bestimmt, wann mit der Nachverfolgung des Cursors begonnen werden soll, indem die Cursorposition im *LPARAM* -Parameter der **WM- \_ lbuttondown** -Meldung überprüft wird. Beispielsweise beginnt eine Textverarbeitungsanwendung nur dann mit der Nachverfolgung des Cursors, wenn die **WM- \_ lbuttondown** -Nachricht aufgetreten ist, während sich der Cursor in einer Textzeile befand, aber nicht, wenn Sie sich hinter dem Ende des Dokuments befand.
+Die Nachverfolgung des Cursors umfasst in der Regel die Verarbeitung der [**\_ WM-Meldungen LBUTTONDOWN,**](wm-lbuttondown.md) [**WM \_ MOUSEMOVE**](wm-mousemove.md)und [**WM \_ LBUTTONUP.**](wm-lbuttonup.md) Ein Fenster bestimmt, wann mit der Nachverfolgung des Cursors begonnen werden soll, indem die Cursorposition überprüft wird, die im *lParam-Parameter* der **\_ WM-LBUTTONDOWN-Meldung angegeben** ist. Eine Textverarbeitungsanwendung würde z. B. nur dann mit der Nachverfolgung des Cursors beginnen, wenn die **\_ WM-LBUTTONDOWN-Meldung** aufgetreten ist, während sich der Cursor in einer Textzeile befindet, aber nicht, wenn er sich über das Ende des Dokuments hinaus befindet.
 
-Ein Fenster verfolgt die Position des Cursors, indem der Stream von [**WM- \_ MouseMove**](wm-mousemove.md) -Meldungen verarbeitet wird, die beim Bewegen der Maus an das Fenster gesendet werden. Die Verarbeitung der **WM- \_ mouseemove** -Nachricht umfasst in der Regel einen sich wiederholenden Zeichnungs-oder Zeichnungs Vorgang im Client Bereich. Beispielsweise kann eine Zeichnungsanwendung eine Zeile wiederholt neu zeichnen, wenn die Maus bewegt wird. Ein Fenster verwendet die [**WM- \_ lbuttonup**](wm-lbuttonup.md) -Meldung als Signal, um die Nachverfolgung des Cursors zu verhindern.
+Ein Fenster verfolgt die Position des Cursors, indem der Stream von [**WM \_ MOUSEMOVE-Nachrichten**](wm-mousemove.md) verarbeitet wird, die während der Mausbewegung im Fenster angezeigt werden. Die Verarbeitung **der WM \_ MOUSEMOVE-Nachricht** umfasst in der Regel einen sich wiederholenden Zeichnungs- oder Zeichnungsvorgang im Clientbereich. Beispielsweise könnte eine Zeichnungsanwendung eine Linie wiederholt neu zeichnen, wenn sich die Maus bewegt. Ein Fenster verwendet die [**\_ WM-LBUTTONUP-Nachricht**](wm-lbuttonup.md) als Signal, um die Nachverfolgung des Cursors zu beenden.
 
-Außerdem kann eine Anwendung die [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) -Funktion aufrufen, damit das System andere Meldungen sendet, die für die Nachverfolgung des Cursors nützlich sind. Das System sendet die [**WM- \_ MouseHover**](wm-mousehover.md) -Nachricht, wenn der Cursor für einen bestimmten Zeitraum über den Client Bereich bewegt wird. Sie sendet die [**WM- \_ MouseLeave**](wm-mouseleave.md) -Nachricht, wenn der Cursor den Client Bereich verlässt. Die Nachrichten " [**WM \_ ncmouanhover**](wm-ncmousehover.md) " und " [**WM \_ ncmouseleave**](wm-ncmouseleave.md) " sind die entsprechenden Nachrichten für die nicht-Client Bereiche.
+Darüber hinaus kann eine Anwendung die [**TrackMouseEvent-Funktion**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) aufrufen, damit das System andere Nachrichten sendet, die für die Nachverfolgung des Cursors nützlich sind. Das System übermittelt die [**WM \_ MOUSEHOVER-Nachricht,**](wm-mousehover.md) wenn der Cursor für einen bestimmten Zeitraum über den Clientbereich bewegt wird. Es wird die [**WM \_ MOUSELEAVE-Nachricht**](wm-mouseleave.md) gesendet, wenn der Cursor den Clientbereich verlässt. Die [**WM \_ NCMOUSEHOVER-**](wm-ncmousehover.md) und [**WM \_ NCMOUSELEAVE-Nachrichten**](wm-ncmouseleave.md) sind die entsprechenden Nachrichten für die Nicht-Clientbereiche.
 
 ## <a name="drawing-lines-with-the-mouse"></a>Zeichnen von Linien mit der Maus
 
-Das Beispiel in diesem Abschnitt veranschaulicht, wie der Mauszeiger nachverfolgt wird. Sie enthält Teile einer Fenster Prozedur, mit der der Benutzer durchziehen der Maus Zeilen im Client Bereich eines Fensters zeichnen kann.
+Im Beispiel in diesem Abschnitt wird veranschaulicht, wie der Mauszeiger nachverfolgt wird. Sie enthält Teile einer Fensterprozedur, mit denen der Benutzer Linien im Clientbereich eines Fensters zeichnen kann, indem er die Maus zieht.
 
-Wenn die Fenster Prozedur eine [**WM \_ lbuttondown**](wm-lbuttondown.md) -Nachricht empfängt, wird die Maus erfasst und die Koordinaten des Cursors gespeichert, wobei die Koordinaten als Ausgangspunkt der Linie verwendet werden. Außerdem wird die [**clipcursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) -Funktion verwendet, um den Cursor während des Zeilen Zeichnungs Vorgangs auf den Client Bereich einzuschränken.
+Wenn die Fensterprozedur eine [**\_ WM-LBUTTONDOWN-Nachricht**](wm-lbuttondown.md) empfängt, erfasst sie die Maus und speichert die Koordinaten des Cursors unter Verwendung der Koordinaten als Ausgangspunkt der Linie. Außerdem wird die [**ClipCursor-Funktion**](/windows/desktop/api/winuser/nf-winuser-clipcursor) verwendet, um den Cursor während des Strichzeichnungsvorgang auf den Clientbereich zu beschränken.
 
-Während der ersten [**WM- \_ mousetmove**](wm-mousemove.md) -Nachricht zeichnet die Fenster Prozedur eine Linie vom Startpunkt bis zur aktuellen Cursorposition. Während der nachfolgenden **WM- \_ MouseMove** -Nachrichten löscht die Fenster Prozedur die vorherige Zeile, indem Sie mit einer umgekehrten Stift Farbe gezeichnet wird. Anschließend wird eine neue Zeile vom Ausgangspunkt zur neuen Position des Cursors gezeichnet.
+Während der ersten [**WM \_ MOUSEMOVE-Meldung**](wm-mousemove.md) zeichnet die Fensterprozedur eine Linie vom Startpunkt bis zur aktuellen Position des Cursors. Bei **nachfolgenden WM \_ MOUSEMOVE-Meldungen** löscht die Fensterprozedur die vorherige Zeile, indem sie mit einer umgekehrten Stiftfarbe darüber gezeichnunget wird. Anschließend wird eine neue Zeile vom Anfangspunkt bis zur neuen Position des Cursors ge zeichnet.
 
-Die [**WM- \_ lbuttonup**](wm-lbuttonup.md) -Meldung signalisiert das Ende der Zeichnungs Operation. Die Fenster Prozedur gibt die Maus Aufzeichnung frei und gibt die Maus aus dem Client Bereich frei.
+Die [**\_ WM-LBUTTONUP-Meldung**](wm-lbuttonup.md) signalisiert das Ende des Zeichnungsvorgang. Die Fensterprozedur gibt die Mauserfassung und die Maus aus dem Clientbereich frei.
 
 
 ```
@@ -169,9 +169,9 @@ LRESULT APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lPa
 
 
 
-## <a name="processing-a-double-click-message"></a>Verarbeiten einer Doppelklick Nachricht
+## <a name="processing-a-double-click-message"></a>Verarbeiten einer Doppelklicknachricht
 
-Um Doppelklick Nachrichten zu empfangen, muss ein Fenster zu einer Fenster Klasse gehören, die über den Klassen Stil [**CS \_ dblclert**](/windows/desktop/winmsg/about-window-classes) verfügt. Sie legen diesen Stil fest, wenn Sie die Fenster Klasse registrieren, wie im folgenden Beispiel gezeigt.
+Um Doppelklicknachrichten zu empfangen, muss ein Fenster zu einer Fensterklasse gehören, die den [**CS \_ DBLCLKS-Klassenstil**](/windows/desktop/winmsg/about-window-classes) hat. Sie legen diesen Stil beim Registrieren der Fensterklasse fest, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -196,11 +196,11 @@ BOOL InitApplication(HINSTANCE hInstance)
 
 
 
-Einer Doppelklick Nachricht wird immer eine Schaltflächen-nach-unten-Meldung vorangestellt. Aus diesem Grund verwenden Anwendungen in der Regel eine Doppelklick Nachricht, um eine Aufgabe zu erweitern, die während einer Schaltflächen-nach-unten-Nachricht gestartet wurde.
+Einer Doppelklickmeldung wird immer eine Schaltflächen-nach-unten-Meldung vorangehende. Aus diesem Grund verwenden Anwendungen in der Regel eine Doppelklickmeldung, um eine Aufgabe zu erweitern, die während einer Schaltflächenabschaltfläche begonnen wurde.
 
 ## <a name="selecting-a-line-of-text"></a>Auswählen einer Textzeile
 
-Das Beispiel in diesem Abschnitt stammt aus einer einfachen Textverarbeitungsanwendung. Sie enthält Code, mit dem der Benutzer die Position der Einfügemarke festlegen kann, indem er auf eine Textzeile klickt und eine Textzeile durch Doppelklicken auf eine beliebige Stelle in der Zeile auswählen (markieren).
+Das Beispiel in diesem Abschnitt ist eine einfache Anwendung zur Verarbeitung von Wörtern. Sie enthält Code, mit dem der Benutzer die Position des Caretstrichs festlegen kann, indem er auf eine beliebige Stelle in einer Textzeile klickt und eine Textzeile durch Doppelklicken an eine beliebige Stelle in der Zeile auswählt (hervorhebt).
 
 
 ```
@@ -439,29 +439,29 @@ LRESULT APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lPa
 
 
 
-## <a name="using-a-mouse-wheel-in-a-document-with-embedded-objects"></a>Verwenden eines Mausrades in einem Dokument mit eingebetteten Objekten
+## <a name="using-a-mouse-wheel-in-a-document-with-embedded-objects"></a>Verwenden eines Mausrads in einem Dokument mit eingebetteten Objekten
 
-In diesem Beispiel wird ein Microsoft Word-Dokument mit verschiedenen eingebetteten Objekten angenommen:
+In diesem Beispiel wird von einem Microsoft Word mit verschiedenen eingebetteten Objekten ausgegangen:
 
--   Eine Microsoft Excel-Tabelle
+-   Ein Microsoft Excel Arbeitsblatt
 -   Ein eingebettetes Listenfeld-Steuerelement, das als Reaktion auf das Rad scrollt
--   Ein eingebettetes Textfeld-Steuerelement, das nicht auf das Rad reagiert.
+-   Ein eingebettetes Textfeld-Steuerelement, das nicht auf das Rad reagiert
 
-Die [msh \_ mouswheel](about-mouse-input.md) -Meldung wird immer an das Hauptfenster in Microsoft Word gesendet. Dies gilt auch, wenn die eingebettete Kalkulations Tabelle aktiv ist. In der folgenden Tabelle wird erläutert, wie die msh \_ mouelwheel-Nachricht entsprechend dem Fokus verarbeitet wird.
+Die [MSH \_ MOUSEWHEEL-Meldung](about-mouse-input.md) wird immer an das Hauptfenster in der Microsoft Word. Dies gilt auch, wenn das eingebettete Arbeitsblatt aktiv ist. In der folgenden Tabelle wird erläutert, wie die MSH \_ MOUSEWHEEL-Nachricht entsprechend dem Fokus behandelt wird.
 
 
 
-| Fokus ist on                | Die Verarbeitung erfolgt wie folgt:                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Fokus liegt auf                | Die Behandlung ist wie folgt:                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Word-Dokument              | Word scrollt das Dokument Fenster.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Eingebettete Excel-Tabelle | Word sendet die Nachricht an Excel. Sie müssen entscheiden, ob die eingebettete Anwendung auf die Nachricht reagieren soll oder nicht.                                                                                                                                                                                                                                                                                                                                                            |
-| Eingebettetes Steuerelement           | Die Anwendung kann die Nachricht an ein eingebettetes Steuerelement senden, das den Fokus besitzt, und den Rückgabecode überprüfen, um festzustellen, ob das Steuerelement es behandelt hat. Wenn das Steuerelement es nicht behandelt hat, sollte die Anwendung im Dokument Fenster einen Bildlauf durchführen. Wenn der Benutzer z. b. auf ein Listenfeld geklickt hat und dann das Mausrad aufführt, würde dieses Steuerelement als Reaktion auf eine Rad Drehung scrollen. Wenn der Benutzer auf ein Textfeld geklickt und dann das Rad gedreht hat, würde das gesamte Dokument einen Bildlauf durchführen. |
+| Word-Dokument              | Word führt einen Bildlauf im Dokumentfenster durch.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Eingebettete Excel Tabelle | Word veröffentlicht die Nachricht an Excel. Sie müssen entscheiden, ob die eingebettete Anwendung auf die Nachricht reagieren soll oder nicht.                                                                                                                                                                                                                                                                                                                                                            |
+| Eingebettetes Steuerelement           | Es liegt in der Hand der Anwendung, die Nachricht an ein eingebettetes Steuerelement zu senden, das den Fokus besitzt, und den Rückgabecode zu überprüfen, um zu überprüfen, ob es vom Steuerelement behandelt wurde. Wenn das Steuerelement dies nicht verarbeitet hat, sollte die Anwendung im Dokumentfenster scrollen. Wenn der Benutzer beispielsweise auf ein Listenfeld klickt und dann das Rad rollt, würde dieses Steuerelement als Reaktion auf eine Radrotation scrollen. Wenn der Benutzer auf ein Textfeld klickt und dann das Rad drehen würde, würde das gesamte Dokument scrollen. |
 
 
 
- 
+ 
 
-Im folgenden Beispiel wird gezeigt, wie eine Anwendung die zwei radnachrichten verarbeiten kann.
+Das folgende Beispiel zeigt, wie eine Anwendung die zwei Radmeldungen behandeln kann.
 
 
 ```
@@ -589,9 +589,9 @@ LONG APIENTRY MainWndProc(
 
 
 
-## <a name="retrieving-the-number-of-mouse-wheel-scroll-lines"></a>Abrufen der Anzahl von Mausrad-scrolllinien
+## <a name="retrieving-the-number-of-mouse-wheel-scroll-lines"></a>Abrufen der Anzahl der Mausrad-Bildlauflinien
 
-Der folgende Code ermöglicht es einer Anwendung, die Anzahl der scrollzeilen mithilfe der [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion abzurufen.
+Mit dem folgenden Code kann eine Anwendung die Anzahl von Bildlauflinien mithilfe der [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) abrufen.
 
 
 ```
@@ -652,6 +652,6 @@ UINT GetNumScrollLines(void)
 
 
 
- 
+ 
 
- 
+ 

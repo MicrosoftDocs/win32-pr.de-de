@@ -1,23 +1,23 @@
 ---
-description: Smooth Schattierung ist eine Methode zum Schattieren einer Region mit einem Farbverlauf.
+description: Smooth Shading ist eine Methode zum Schattieren eines Bereichs mit einem Farbverlauf.
 ms.assetid: 94f26d15-fb76-47ec-b805-f04975d41b43
-title: Smooth-Schattierung
+title: Smooth Shading
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5b73738c03147083099a5070e61fe21ca5cac76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd5bfa54fef8d0a6810a3230e88e4e3144f7ecf4b62f7313f5daf4213e948c00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965200"
 ---
-# <a name="smooth-shading"></a>Smooth-Schattierung
+# <a name="smooth-shading"></a>Smooth Shading
 
-*Smooth Schattierung* ist eine Methode zum Schattieren einer Region mit einem Farbverlauf. Durch Einschließen von Farbinformationen, zusammen mit den Begrenzungen des Zeichnungs primitiven, wird der Farbverlauf angegeben. GDI linear interpoliert die Farbe des Inneren des primitiven, das an die Farb Endpunkte weitergegeben wurde. Farb-und Vertex-Informationen sind in der-Struktur der [**dreiseitigen**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex) Position in Positionsinformationen enthalten.
+*Smooth Shading* ist eine Methode zum Schattieren eines Bereichs mit einem Farbverlauf. Das Einschließen von Farbinformationen zusammen mit den Begrenzungen des Zeichnen-Primitivs gibt den Farbverlauf an. GDI interpoliert linear die Farbe des innerhalb des Primitiven, der an die Farbendpunkte übergeben wird. Farb- und Scheitelpunktinformationen sind in position-Informationen in der [**TRIVERTEX-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex) enthalten.
 
-Verwenden Sie die [**GradientFill**](/windows/desktop/api/WinGdi/nf-wingdi-gradientfill) -Funktion, um ein Dreieck oder eine Rechteck Struktur auszufüllen. Zum Auffüllen eines Dreiecks mit Smooth Schattierung aufrufen Sie **GradientFill** mit den drei Dreieck Endpunkten. Zum Auffüllen eines Rechtecks mit Smooth Schattierung aufrufen Sie **GradientFill** mit den linken oberen und unteren rechten Rechteck Koordinaten. **GradientFill** verweist auf die [**trivertex**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex)-, [**\_ gradientenrect**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_rect)-und [**Gradient- \_ Dreiecks**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle) Strukturen.
+Verwenden Sie die [**GradientFill-Funktion,**](/windows/desktop/api/WinGdi/nf-wingdi-gradientfill) um ein Dreieck oder eine Rechteckstruktur zu füllen. Um ein Dreieck mit smooth shading zu füllen, rufen Sie **GradientFill** mit den drei Dreiecksendpunkten auf. Um ein Rechteck mit smooth shading zu füllen, rufen Sie **GradientFill** mit den Oberen linken und unteren rechten Rechteckkoordinaten auf. **GradientFill** verweist auf die [**STRUKTUREN TRIVERTEX,**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex) [**GRADIENT \_ RECT**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_rect)und [**GRADIENT \_ TRIANGLE.**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle)
 
-Ein Beispiel finden Sie unter [Zeichnen eines schattierten Dreiecks](drawing-a-shaded-triangle.md).
+Ein Beispiel finden Sie unter [Zeichnen eines schattierten Dreiecks.](drawing-a-shaded-triangle.md)
 
  
 

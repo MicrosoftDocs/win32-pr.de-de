@@ -1,6 +1,6 @@
 ---
-description: Wird von der Standard Implementierung des Kontextmenüs gesendet, um lpfndfmcallback zum Aufrufen eines erweiterten Menübefehls anzufordern.
-title: DFM_INVOKECOMMANDEX Meldung (shlobj. h)
+description: Wird von der Standardimplementierung des Kontextmenüs gesendet, um LPFNDFMCALLBACK zum Aufrufen eines erweiterten Menübefehls anfordern.
+title: DFM_INVOKECOMMANDEX (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 6ef885e5-2ddd-4a1b-9f8e-016a74e292b1
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: dc96e9d0e4c27be8dee3ed7742874de4a3fb97e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b8a7fd63aa4269ee265a4ae147c99fe394e8aad725f7134f8d62daf8ee9984b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943170"
 ---
-# <a name="dfm_invokecommandex-message"></a>DFM \_ invokecommandex-Meldung
+# <a name="dfm_invokecommandex-message"></a>DFM \_ INVOKECOMMANDEX-Nachricht
 
-Wird von der Standard Implementierung des Kontextmenüs gesendet, um [**lpfndfmcallback**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback) zum Aufrufen eines erweiterten Menübefehls anzufordern.
+Wird von der Standardimplementierung des Kontextmenüs gesendet, um [**LPFNDFMCALLBACK zum**](/windows/win32/api/shlobj_core/nc-shlobj_core-lpfndfmcallback) Aufrufen eines erweiterten Menübefehls anfordern.
 
 
 ```C++
@@ -38,7 +38,7 @@ Wird von der Standard Implementierung des Kontextmenüs gesendet, um [**lpfndfmc
 
 <dl> <dt>
 
-*idcmd* \[ in\]
+*idCmd* \[ in\]
 </dt> <dd>
 
 Die Befehls-ID des ausgewählten Menübefehls. Die folgenden Flags werden erkannt.
@@ -47,125 +47,125 @@ Die Befehls-ID des ausgewählten Menübefehls. Die folgenden Flags werden erkann
 
 <span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>
 
-<span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>**DFM- \_ cmd \_ Löschen**
+<span id="DFM_CMD_DELETE"></span><span id="dfm_cmd_delete"></span>**DFM \_ CMD \_ DELETE**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>
 
-<span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>**DFM- \_ cmd- \_ Verschiebung**
+<span id="DFM_CMD_MOVE"></span><span id="dfm_cmd_move"></span>**DFM \_ CMD \_ MOVE**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>
 
-<span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>**DFM- \_ cmd- \_ Kopie**
+<span id="DFM_CMD_COPY"></span><span id="dfm_cmd_copy"></span>**DFM \_ CMD \_ COPY**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>
 
-<span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>**DFM- \_ cmd- \_ Link**
+<span id="DFM_CMD_LINK"></span><span id="dfm_cmd_link"></span>**DFM \_ CMD \_ LINK**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>
 
-<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**DFM- \_ cmd- \_ Eigenschaften**
+<span id="DFM_CMD_PROPERTIES"></span><span id="dfm_cmd_properties"></span>**\_DFM-CMD-EIGENSCHAFTEN \_**
 
 
 </dt> <dd>
 
-Zeigt die **Eigenschaften** Benutzeroberfläche für das Element an, für das das Menü aufgerufen wurde.
+Zeigen Sie **die Eigenschaftenbenutzeroberfläche** für das Element an, für das das Menü aufgerufen wurde.
 
 </dd> <dt>
 
 <span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>
 
-<span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>**DFM- \_ cmd \_ NewFolder**
+<span id="DFM_CMD_NEWFOLDER"></span><span id="dfm_cmd_newfolder"></span>**DFM \_ CMD \_ NEWFOLDER**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>
 
-<span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>**DFM- \_ cmd \_ Einfügen**
+<span id="DFM_CMD_PASTE"></span><span id="dfm_cmd_paste"></span>**DFM \_ CMD \_ PASTE**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>
 
-<span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>**DFM- \_ cmd- \_ viewlist**
+<span id="DFM_CMD_VIEWLIST"></span><span id="dfm_cmd_viewlist"></span>**DFM \_ CMD \_ VIEWLIST**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>
 
-<span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>**DFM- \_ cmd- \_ ViewDetails**
+<span id="DFM_CMD_VIEWDETAILS"></span><span id="dfm_cmd_viewdetails"></span>**DFM \_ CMD \_ VIEWDETAILS**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>
 
-<span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>**DFM- \_ cmd- \_ pstelink**
+<span id="DFM_CMD_PASTELINK"></span><span id="dfm_cmd_pastelink"></span>**DFM \_ CMD \_ PASTELINK**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>
 
-<span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>**DFM \_ cmd \_ PasteSpecial**
+<span id="DFM_CMD_PASTESPECIAL"></span><span id="dfm_cmd_pastespecial"></span>**DFM \_ CMD \_ PASTESPECIAL**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>
 
-<span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>**DFM- \_ cmd \_ modalprop**
+<span id="DFM_CMD_MODALPROP"></span><span id="dfm_cmd_modalprop"></span>**DFM \_ CMD \_ MODALPROP**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>
 
-<span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>**Umbenennen von DFM- \_ cmd \_**
+<span id="DFM_CMD_RENAME"></span><span id="dfm_cmd_rename"></span>**\_ \_ DFM-CMD-UMBENENNUNG**
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Pdfmics* \[ in\]
+*PDFMICS* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**dfmics**](/windows/desktop/api/shlobj_core/ns-shlobj_core-dfmics) -Struktur, die zusätzliche Argumente für den ausgewählten Menübefehl enthält. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf eine [**DFMICS-Struktur,**](/windows/desktop/api/shlobj_core/ns-shlobj_core-dfmics) die zusätzliche Argumente für den ausgewählten Menübefehl enthält. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Empfang dieser Nachricht sollte die Funktion "S false" zurückgeben, \_ Wenn die Standard Implementierung den Standard Handler für den Befehl aufrufen soll. Gibt "S OK" zurück, \_ Wenn die Meldung behandelt wurde. Andernfalls wird ein Standard-HRESULT-Fehlercode zurückgegeben.
+Nach Erhalt dieser Meldung sollte Ihre Funktion S FALSE zurückgeben, wenn die Standardimplementierung den Standardhandler für \_ den Befehl aufrufen soll. Gibt S \_ OK zurück, wenn die Nachricht behandelt wurde. Andernfalls wird ein HRESULT-Standardfehlercode zurückgegeben.
 
-Diese Meldung wird abhängig von der Implementierung des Rückrufs entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet. Es gibt zwei APIs für die Rückruf Erstellung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2) , die einen Zeiger auf eine Rückruffunktion annimmt, oder [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu) , das ein Rückruf Objekt verwendet, das [**icontextmenucb**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb)unterstützt.
+Diese Nachricht wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie der Rückruf implementiert wird. Es gibt zwei APIs für die Rückrufkonstruktion: [**CDefFolderMenu \_ Create2,**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2) die einen Zeiger auf eine Rückruffunktion verwenden, oder [**SHCreateDefaultContextMenu,**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu) das ein Rückrufobjekt verwendet, das [**IContextMenuCB unterstützt.**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-icontextmenucb)
 
-Die Elemente, für die der Befehl aufgerufen wird, werden in einem Datenobjekt bereitgestellt, das an die Rückruffunktion oder an die [**icontextmenucb:: callback**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenucb-callback) -Methode weitergegeben wird. Dieses Datenobjekt wird von der Datenquelle bereitgestellt, die den Rückruf implementiert. Um die Elemente aus dem Datenobjekt zu extrahieren, verwenden Sie [**shkreateshellitemarrayfromdataobject**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreateshellitemarrayfromdataobject).
+Die Elemente, für die der Befehl aufgerufen wird, werden in einem Datenobjekt bereitgestellt, das an die Rückruffunktion oder die [**IContextMenuCB::CallBack-Methode übergeben**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-icontextmenucb-callback) wird. Dieses Datenobjekt wird von der Datenquelle bereitgestellt, die den Rückruf implementiert. Um die Elemente aus dem Datenobjekt zu extrahieren, verwenden Sie [**SHCreateShellItemArrayFromDataObject.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-shcreateshellitemarrayfromdataobject)
 
-[**DFM \_ InvokeCommand**](dfm-invokecommand.md) ist eine einfachere Version dieser Nachricht, die dem Rückruf nicht so viele Informationen bereitstellt. Verwenden Sie **DFM \_ InvokeCommand** , wenn die zusätzlichen Informationen von **DFM \_ invokecommandex** in ihrer Implementierung nicht benötigt werden.
+[**DFM \_ INVOKECOMMAND ist**](dfm-invokecommand.md) eine einfachere Version dieser Nachricht, die dem Rückruf nicht so viele Informationen zur Verfügung stellt. Verwenden **Sie DFM \_ INVOKECOMMAND,** wenn die zusätzlichen Informationen, die von **DFM \_ INVOKECOMMANDEX** bereitgestellt werden, in Ihrer Implementierung nicht benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

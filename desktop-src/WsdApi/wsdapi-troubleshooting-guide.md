@@ -1,27 +1,27 @@
 ---
-description: Der Zweck dieses Handbuchs besteht darin, Benutzern zu helfen, Probleme zu beheben, die bei der Verwendung von WSDAPI-Ermittlungs-APIs auftreten, beim Erstellen eines WSDAPI-Hosts oder-Geräte Proxys oder bei Verwendung von Betriebssystemfunktionen (z. b. der Funktions Ermittlung oder des Netzwerk-Explorers), die WSDAPI
+description: Dieser Leitfaden soll Benutzern helfen, Fehler zu beheben, die bei der Verwendung von WSDAPI-Ermittlungs-APIs, beim Erstellen eines WSDAPI-Hosts oder -Geräteproxys oder bei der Verwendung von Betriebssystemfunktionen (z. B. Funktionsermittlung oder Netzwerk-Explorer), die auf WSDAPI basieren, auftreten.
 ms.assetid: fc01fc66-627a-497f-98dd-613f5d85f6cb
-title: WSDAPI-Handbuch zur Problembehandlung
+title: WSDAPI – Leitfaden zur Problembehandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c28e9a1fe4cc5b24b386cfb88e39276edc14cb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb4a904b2bf4072721e6c0e9c01191aa1b3d5f55224b096434062b7aa8535fa5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860031"
 ---
-# <a name="wsdapi-troubleshooting-guide"></a>WSDAPI-Handbuch zur Problembehandlung
+# <a name="wsdapi-troubleshooting-guide"></a>WSDAPI – Leitfaden zur Problembehandlung
 
-Der Zweck dieses Handbuchs besteht darin, Benutzern zu helfen, Probleme zu beheben, die bei der Verwendung von WSDAPI-Ermittlungs-APIs auftreten, beim Erstellen eines WSDAPI-Hosts oder-Geräte Proxys oder bei Verwendung von Betriebssystemfunktionen (z. b. der [Funktions](/previous-versions/windows/desktop/fundisc/fd-portal) Ermittlung oder des Netzwerk-Explorers), die WSDAPI Das Hauptziel besteht darin, Probleme zu beheben, wenn ein Client und Host sich nicht gegenseitig im Netzwerk befinden.
+Dieser Leitfaden soll Benutzern helfen, Fehler zu beheben, die bei der Verwendung von WSDAPI-Ermittlungs-APIs, beim Erstellen eines WSDAPI-Hosts oder -Geräteproxys oder bei der Verwendung von Betriebssystemfunktionen (z. B. [Funktionsermittlung](/previous-versions/windows/desktop/fundisc/fd-portal) oder Netzwerk-Explorer), die auf WSDAPI basieren, auftreten. Das Hauptziel besteht darin, bei der Problembehandlung zu helfen, wenn sich client und host im Netzwerk nicht gegenseitig sehen können.
 
-Für WSDAPI-Benutzer enthält dieses Handbuch Informationen, die Ihnen bei der erfolgreichen Problembehandlung eines Geräte Proxys (mit [**wsdkreatedeviceproxy**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy)), einem Ermittlungs Anbieter (mit [**wsdkreatediscoveryprovider**](/windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoveryprovider)) oder einem Discovery Publisher (mit [**wsdkreatediscoverypublisher**](/windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoverypublisher)) helfen.
+Für WSDAPI-Benutzer enthält dieses Handbuch Informationen, die Ihnen bei der erfolgreichen Problembehandlung eines Geräteproxys (mit [**WSDCreateDeviceProxy),**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy)eines Ermittlungsanbieters (mit [**WSDCreateDiscoveryProvider)**](/windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoveryprovider)oder eines Ermittlungsherausgebers (mit [**WSDCreateDiscoveryPublisher)**](/windows/desktop/api/WsdDisco/nf-wsddisco-wsdcreatediscoverypublisher)helfen.
 
-In dieser Anleitung wird davon ausgegangen, dass sowohl der Client als auch der Host in einer kontrollierten Umgebung ordnungsgemäß mit WSDAPI interagieren können. Dementsprechend soll dieses Handbuch nicht zur Problembehandlung bei DPWS-Stapeln dienen, die möglicherweise falsche WS-Nachrichten erzeugen. Informationen zum Testen der Interoperabilität mit WSDAPI finden Sie unter [WSDAPI Basic Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) im Windows-Treiberkit (WDK).
+In diesem Leitfaden wird davon ausgegangen, dass sowohl der Client als auch der Host ordnungsgemäß mit WSDAPI in einer kontrollierten Umgebung zusammenarbeiten können. Entsprechend ist dieser Leitfaden nicht als Hilfe bei der Problembehandlung von DPWS-Stapeln gedacht, die möglicherweise falsche WS-Nachrichten generieren. Informationen zum Testen der Interoperabilität mit WSDAPI finden Sie im [WSDAPI Basic Interoperability Tool (WSDBIT)](https://msdn.microsoft.com/library/cc264250.aspx) im Windows Driver Kit (WDK).
 
-Bevor Sie mit der Problembehandlung der Anwendung beginnen, sollten Sie sich mit den Nachrichten Mustern für die Ermittlung [und den Metadatenaustausch](discovery-and-metadata-exchange-message-patterns.md)vertraut machen
+Bevor Sie mit der Problembehandlung Ihrer Anwendung beginnen, sollten Sie sich mit [Ermittlung und Metadaten Exchange Nachrichtenmustern](discovery-and-metadata-exchange-message-patterns.md)vertraut machen.
 
 Dieses Handbuch enthält die folgenden Abschnitte:
 
--   [Ersten Schritte mit der WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
--   [WSDAPI-Diagnose Prozeduren](wsdapi-diagnostic-procedures.md)
+-   [Erste Schritte mit WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+-   [WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)

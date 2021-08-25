@@ -1,9 +1,9 @@
 ---
-title: komplexer logontriggertype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das Logon-Auslöserelement.
+title: LogonTriggerType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das LogonTrigger-Element.
 ms.assetid: ddb1d01b-89d1-4d52-872c-4fbd90f32f4b
 keywords:
-- komplexer logontriggertype-Typ Taskplaner
+- Komplexer LogonTriggerType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 81a3f42eb94d14506d96348b803c8b1bc41737d1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85cbbeaa5d911b1ef9677c79980167a66cdf410c7aa63597b02b007795dfbd81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991211"
 ---
-# <a name="logontriggertype-complex-type"></a>komplexer logontriggertype-Typ
+# <a name="logontriggertype-complex-type"></a>LogonTriggerType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das [**Logon-Auslöserelement**](taskschedulerschema-logontrigger-triggergroup-element.md) .
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das [**LogonTrigger-Element.**](taskschedulerschema-logontrigger-triggergroup-element.md)
 
 ``` syntax
 <xs:complexType name="logonTriggerType">
@@ -50,16 +50,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 
 
-| Element                                                               | type                                                                    | BESCHREIBUNG                                                                                   |
+| Element                                                               | type                                                                    | Beschreibung                                                                                   |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-logontriggertype-element.md)   | duration                                                                | Zeitraum zwischen dem Zeitpunkt, an dem sich der Benutzer anmeldet, und dem Start der Aufgabe.<br/>         |
-| [**UserID**](taskschedulerschema-userid-logontriggertype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Der Bezeichner des Benutzers. Der Task wird gestartet, wenn sich dieser Benutzer auf dem Computer anmeldet.<br/> |
+| [**Verzögern**](taskschedulerschema-delay-logontriggertype-element.md)   | duration                                                                | Die Zeit zwischen dem Zeitpunkt, in dem sich der Benutzer anmeldet, und dem Start der Aufgabe.<br/>         |
+| [**Userid**](taskschedulerschema-userid-logontriggertype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Bezeichner des Benutzers. Die Aufgabe wird gestartet, wenn sich dieser Benutzer beim Computer anmeldet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**logontrigger**](taskschedulerschema-logontrigger-triggergroup-element.md) -Element auch untergeordnete Elemente, die durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definiert werden.
+Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**LogonTrigger-Element**](taskschedulerschema-logontrigger-triggergroup-element.md) auch untergeordnete Elemente, die durch den [**komplexen TriggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Zusätzlich zu den hier definierten untergeordneten Elementen verwendet das [**l
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

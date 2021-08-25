@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentDatabaseIdInUseException-Klasse'
+description: 'Weitere Informationen zu: EsentDatabaseIdInUseException-Klasse'
 title: EsentDatabaseIdInUseException-Klasse
 TOCTitle: EsentDatabaseIdInUseException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDatabaseIdInUseException
@@ -68,7 +68,7 @@ public sealed class EsentDatabaseIdInUseException : EsentObsoleteException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

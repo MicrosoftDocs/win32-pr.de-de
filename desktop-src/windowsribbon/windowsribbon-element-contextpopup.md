@@ -1,9 +1,9 @@
 ---
 title: ContextPopup-Element
-description: Stellt das Kontextpopup-Steuerelement in der ContextPopup-Ansicht dar.
+description: Stellt das Kontext-Popup-Steuerelement in der ContextPopup-Ansicht dar.
 ms.assetid: b955be16-803e-47b5-a72d-f993180fbf14
 keywords:
-- ContextPopup-Element im Windows-Menüband
+- ContextPopup-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f779b0196d14fb42246c2a10d476352d835b6cf8
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 8fddda30a765eb314c7a29934c9fcdd12404647de9f1e480275f8fa685b50827
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840790"
 ---
 # <a name="contextpopup-element"></a>ContextPopup-Element
 
-Stellt das [Kontextpopup-Steuerelement](windowsribbon-controls-contextpopup.md) in der ContextPopup-Ansicht dar.
+Stellt das [Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md) in der ContextPopup-Ansicht dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ContextPopup>
@@ -40,11 +40,11 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                                         | BESCHREIBUNG                                   |
+| Element                                                                                         | Beschreibung                                   |
 |-------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [**ContextPopup.ContextMaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/>   | Kann nur einmal auftreten.<br/> <br/> |
-| [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
-| [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
+| [**ContextPopup.ContextMaps**](windowsribbon-element-contextpopup-contextmaps.md)<br/>   | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -60,9 +60,9 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann für jede [**Application.Views--Anwendung mindestens einmal auftreten.**](windowsribbon-element-application-views.md)
+Kann höchstens einmal für jede [**Application.Views-Datei**](windowsribbon-element-application-views.md)auftreten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -160,7 +160,7 @@ Im folgenden Beispiel wird das grundlegende Markup für eine **ContextPopup-Ansi
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

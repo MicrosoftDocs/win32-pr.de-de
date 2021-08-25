@@ -1,7 +1,7 @@
 ---
-description: Kritisches Abschnitts Objekt, das den Filter Zustand schützt. Die Hilfsmethode CSource::p-Methode gibt einen Zeiger auf diese Member-Variable zurück.
+description: Kritisches Abschnittsobjekt, das den Filterzustand schützt. Die CSource::p StateLock-Hilfsmethode gibt einen Zeiger auf diese Membervariable zurück.
 ms.assetid: faaf5fea-54bc-4856-9bca-3ed420c491e4
-title: 'CSource:: m_cStateLock Member (Quelle. h)'
+title: CSource::m_cStateLock-Member (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 85ff046b7e1f7a0ccfcc41f630785a3e8404e256
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5de77935fd71f0b82f3cfe1f70dae3879c97bd86b4ca6b802efd46dd42730288
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915310"
 ---
-# <a name="csourcem_cstatelock-member"></a>CSource:: m \_ cstatus-Member
+# <a name="csourcem_cstatelock-member"></a>CSource::m \_ cStateLock-Member
 
-Kritisches Abschnitts Objekt, das den Filter Zustand schützt. Die Hilfsmethode [**CSource::p**](csource--pstatelock.md) -Methode gibt einen Zeiger auf diese Member-Variable zurück.
+Kritisches Abschnittsobjekt, das den Filterzustand schützt. Die [**CSource::p StateLock-Hilfsmethode**](csource--pstatelock.md) gibt einen Zeiger auf diese Membervariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CCritSec m_cStateLock;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

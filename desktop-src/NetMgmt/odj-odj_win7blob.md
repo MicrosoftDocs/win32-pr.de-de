@@ -5,16 +5,16 @@ ms.assetid: 5802e00c-b943-45d8-8298-5c2b4b996b85
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: 2083648636bd58c64314ba22852839f89ed4461d
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: ab6f6582b23d6e65866ba1380b696fab6d8313578fab47ad5dda999b09a1caa7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "104316706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911594"
 ---
-# <a name="odj_win7blob-structure"></a>ODJ_WIN7BLOB Struktur
+# <a name="odj_win7blob-structure"></a>ODJ_WIN7BLOB-Struktur
 
-Enthält die grundlegenden Informationen, die erforderlich sind, um einen Client einer Domäne hinzuzufügen.
+Enthält die grundlegenden Informationen, die zum Hinzufügen eines Clients zu einer Domäne erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,35 +32,35 @@ typedef struct _ODJ_WIN7BLOB
 
 ## <a name="members"></a>Member
 
-### <a name="lpdomain"></a>lpdomain
+### <a name="lpdomain"></a>lpDomain
 
-Muss auf den Domänen Namen festgelegt werden.
+Muss auf den Domänennamen festgelegt werden.
 
-### <a name="lpmachinename"></a>lpmachinename
+### <a name="lpmachinename"></a>lpMachineName
 
 Muss auf den Computernamen festgelegt werden.
 
-### <a name="lpmachinepassword"></a>lpmachinepassword
+### <a name="lpmachinepassword"></a>lpMachinePassword
 
-Muss auf ein Klartext-Kennwort für das Computer Konto festgelegt werden, das von lpmachinename identifiziert wird.
+Muss auf ein Klartextkennwort für das computerkonto festgelegt werden, das durch lpMachineName identifiziert wird.
 
-### <a name="dnsdomaininfo"></a>Dnsdomaininfo
+### <a name="dnsdomaininfo"></a>DnsDomainInfo
 
 Enthält Informationen über die Domäne, die verknüpft wird.
 
-### <a name="dcinfo"></a>Dcinfo
+### <a name="dcinfo"></a>DcInfo
 
-Enthält Benennungs-und Adressierungs Informationen über den Domänen Controller, der zum Erstellen des Computer Kontos Active Directory verwendet wurde.
+Enthält Benennungs- und Adressierungsinformationen zum Domänencontroller, der zum Erstellen des Computerkontos Active Directory verwendet wurde.
 
 ### <a name="options"></a>Optionen
 
 Muss auf 0 (null) festgelegt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für Den Offlinedomänen join**](odj-idl.md)
 
-[**ODJ- \_ Richtlinie \_ DNS- \_ Domänen \_ Informationen**](odj-odj_policy_dns_domain_info.md)
+[**\_ \_ DNS-DOMÄNENINFORMATIONEN DER ODJ-RICHTLINIE \_ \_**](odj-odj_policy_dns_domain_info.md)
 
 [**DOMAIN_CONTROLLER_INFOW**](/windows/win32/api/dsgetdc/ns-dsgetdc-domain_controller_infow)
 

@@ -1,7 +1,7 @@
 ---
-description: Legt den Replikations Autorisierungs Eintrag für einen virtuellen Computer fest.
+description: Legt den Replikationsautorisierungseintrag für einen virtuellen Computer fest.
 ms.assetid: 39b6b0c4-5515-4863-9038-4c37421abe65
-title: Setauthorizationentry-Methode der Msvm_ReplicationService-Klasse
+title: SetAuthorizationEntry-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 03b2c2c37a38e957a1b560e2314845abf204ee01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ce51997399a7ea028f39156e31a67144f415f37d4d028694d674f8aff8fe522
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913930"
 ---
-# <a name="setauthorizationentry-method-of-the-msvm_replicationservice-class"></a>Setauthorizationentry-Methode der MSVM- \_ replicationservice-Klasse
+# <a name="setauthorizationentry-method-of-the-msvm_replicationservice-class"></a>SetAuthorizationEntry-Methode der Msvm \_ ReplicationService-Klasse
 
-Legt den Replikations Autorisierungs Eintrag für einen virtuellen Computer fest.
+Legt den Replikationsautorisierungseintrag für einen virtuellen Computer fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 SetAuthorizationEntry(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer darstellt, für den der Autorisierungs Eintrag festgelegt werden soll.
+Ein Verweis auf eine [**CIM \_ ComputerSystem-Instanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den der Autorisierungseintrag festgelegt werden soll.
 
 </dd> <dt>
 
-*Authorizationentry* \[ in\]
+*AuthorizationEntry* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung einer Instanz der [**MSVM \_ replicationauthorizationsettingdata**](msvm-replicationauthorizationsettingdata.md) -Klasse, die den Autorisierungs Eintrag definiert, der für den virtuellen Computer verwendet werden soll.
+Eine Zeichenfolgendarstellung einer Instanz der [**Msvm \_ ReplicationAuthorizationSettingData-Klasse,**](msvm-replicationauthorizationsettingdata.md) die den Autorisierungseintrag definiert, der für den virtuellen Computer verwendet werden soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,7 +83,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -92,22 +92,22 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,10 +116,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,16 +128,16 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**Addauthorizationentry**](addauthorizationentry-msvm-replicationservice.md)
+[**AddAuthorizationEntry**](addauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Modifyauthorizationentry**](modifyauthorizationentry-msvm-replicationservice.md)
+[**ModifyAuthorizationEntry**](modifyauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**Removeauthorizationentry**](removeauthorizationentry-msvm-replicationservice.md)
+[**RemoveAuthorizationEntry**](removeauthorizationentry-msvm-replicationservice.md)
 </dt> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

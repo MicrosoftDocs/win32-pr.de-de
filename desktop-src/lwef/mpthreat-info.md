@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_INFO Struktur (mpclient. h)
+title: MPTHREAT_INFO -Struktur (MpClient.h)
 description: Enthält Informationen zu einer Bedrohung.
 ms.assetid: ED2A0BDB-0E7C-479D-ADA1-95B9A259F57E
 keywords:
-- MPTHREAT_INFO Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_INFO Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_INFO struktur Legacy Windows Umgebungsfeatures
+- PMPTHREAT_INFO strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfa850a4293006a2f4b107a3f2579fdc14c1ea6e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b7be9b1f38a2771d7c6e4831e7716552de34492b30429084f3e087e0a3b49602
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943920"
 ---
-# <a name="mpthreat_info-structure"></a>Mpthreat- \_ Informationsstruktur
+# <a name="mpthreat_info-structure"></a>MPTHREAT \_ INFO-Struktur
 
 Enthält Informationen zu einer Bedrohung.
 
@@ -85,18 +85,18 @@ typedef struct tagMPTHREAT_INFO {
 
 <dl> <dt>
 
-**Threatid**
+**ThreatID**
 </dt> <dd>
 
-Typ: **mpthreat- \_ ID**
+Typ: **MPTHREAT-ID \_**
 
 </dd> <dd>
 
-Bedrohungs Bezeichner. Das obere Bit ist festgelegt, um antivirenbezogene Bedrohungen zu identifizieren.
+Bedrohungsbezeichner. Oberes Bit wird festgelegt, um Bedrohungen im Zusammenhang mit Antivirensoftware zu identifizieren.
 
 </dd> <dt>
 
-**Detectionid**
+**DetectionID**
 </dt> <dd>
 
 Typ: **GUID**
@@ -110,99 +110,99 @@ Erkennungs-ID.
 **Name**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Bedrohungs Name.
+Bedrohungsname.
 
 </dd> <dt>
 
-**Typ**
+**ThreatType**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Typ**](mpthreat-type.md)**
+Typ: **[ **MPTHREAT \_ TYPE**](mpthreat-type.md)**
 
 </dd> <dd>
 
-Bedrohungstyp. Wird zur Unterscheidung zwischen unterschiedlichen Bedrohungs Typen verwendet, wie z. b. bekanntermaßen "schlecht", "unbekannt" Siehe [**mpthreat- \_ Typ**](mpthreat-type.md).
+Bedrohungstyp. Wird verwendet, um zwischen verschiedenen Bedrohungstypen zu unterscheiden, z. B. als "schlecht", "unbekannt" oder "bekannt gut". Siehe [**MPTHREAT \_ TYPE**](mpthreat-type.md).
 
 </dd> <dt>
 
-**Gefährlichkeit**
+**ThreatCriticality**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Schweregrad**](mpthreat-severity.md)**
+Typ: **[ **MPTHREAT \_ SEVERITY**](mpthreat-severity.md)**
 
 </dd> <dd>
 
-Bedrohungs Gefahr. Siehe [**mpthreat- \_ Schweregrad**](mpthreat-severity.md).
+Bedrohungskritischität. Weitere Informationen [**finden Sie unter MPTHREAT \_ SEVERITY (MPTHREAT-SCHWEREGRAD).**](mpthreat-severity.md)
 
 </dd> <dt>
 
 **ThreatCategory**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Kategorie**](mpthreat-category.md)**
+Typ: **[ **MPTHREAT \_ CATEGORY**](mpthreat-category.md)**
 
 </dd> <dd>
 
-Bedrohungs Kategorie, z. b. ein Trojaner oder eine Keylogger. Siehe [**mpthreat- \_ Kategorie**](mpthreat-category.md).
+Bedrohungskategorie, z. B. ein Trojaner oder ein Keylogger. Siehe [**MPTHREAT \_ CATEGORY**](mpthreat-category.md).
 
 </dd> <dt>
 
-**"Bedrohlich shortdescriptionid"**
+**ThreatShortDescriptionID**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-ID der Bedrohungs Kurzbeschreibung.
+Kurzbeschreibungs-ID der Bedrohung.
 
 </dd> <dt>
 
-**"Bedrohlich advimendescriptionid"**
+**ThreatAdviseDescriptionID**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-ID der Bedrohungs Empfehlung.
+Beschreibungs-ID der Bedrohungsbeschreibung.
 
 </dd> <dt>
 
 **ThreatStatus**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Status**](mpthreat-status.md)**
+Typ: **[ **MPTHREAT \_ STATUS**](mpthreat-status.md)**
 
 </dd> <dd>
 
-Bedrohungs Status, z. b. erkannt, bereinigt oder unter Quarantäne. Siehe [**mpthreat- \_ Status**](mpthreat-status.md).
+Bedrohungsstatus, z. B. erkannt, bereinigt oder unter Quarantäne gestellt. Weitere Informationen [**finden Sie unter MPTHREAT \_ STATUS**](mpthreat-status.md).
 
 </dd> <dt>
 
-**Vorschlags stedactioncount**
+**SuggestedActionCount**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Anzahl der vorgeschlagenen Aktionen in "Vorschlags **stedactionarray**".
+Anzahl der vorgeschlagenen Aktionen in **SuggestedActionArray**.
 
 </dd> <dt>
 
-**Vorschlag**
+**SuggestedActionArray**
 </dt> <dd>
 
-Typ: **[**mpthreat \_ Action**](mpthreat-action.md) \[ MP \_ Maximale \_ Vorschläge\]**
+Typ: **[**MPTHREAT \_ ACTION MP**](mpthreat-action.md) \[ MAX \_ \_ SUGGESTIONS\]**
 
 </dd> <dd>
 
-Array von vorgeschlagenen Aktionen. Siehe [**mpthreat- \_ Aktion**](mpthreat-action.md).
+Array von vorgeschlagenen Aktionen. Siehe [**MPTHREAT \_ ACTION**](mpthreat-action.md).
 
 </dd> <dt>
 
@@ -213,55 +213,55 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Anzahl der Ressourcen in **resourceList**.
+Anzahl der Ressourcen in **ResourceList**.
 
 </dd> <dt>
 
 **ResourceList**
 </dt> <dd>
 
-Typ: **pmpresource \_ Info \** _
+Typ: **PMPRESOURCE \_ INFO \***
 
 </dd> <dd>
 
-Liste der mit der Bedrohung identifizierten Ressourcen. Weitere Informationen finden Sie unter [_ *mpresource- \_ Informationen* *](mpresource-info.md).
+Liste der Ressourcen, die mit der Bedrohung identifiziert wurden. Weitere Informationen [**finden Sie unter MPRESOURCE \_ INFO**](mpresource-info.md).
 
 </dd> <dt>
 
-**Bedrohung**
+**ThreatStatusTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Zeitpunkt, zu dem der Bedrohungs Status zuletzt geändert wurde.
+Zeitpunkt der letzten Änderung des Bedrohungsstatus.
 
 </dd> <dt>
 
-**"Bedrohlich Statuscode"**
+**ThreatStatusCode**
 </dt> <dd>
 
 Typ: **HRESULT**
 
 </dd> <dd>
 
-Statuscode, der mit dem Bedrohungs Status verknüpft ist.
+Statuscode, der dem Bedrohungsstatus zugeordnet ist.
 
 </dd> <dt>
 
-**Erkennung**
+**ThreatDetection**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Erkennung**](mpthreat-detection.md)**
+Typ: **[ **MPTHREAT \_ DETECTION**](mpthreat-detection.md)**
 
 </dd> <dd>
 
-Bedrohungs Erkennungs Typen, z. b. konkret, verdächtig oder generisch. Siehe [**mpthreat- \_ Erkennung**](mpthreat-detection.md).
+Bedrohungserkennungstyp, z. B. konkrete, verdächtige oder generische Bedrohungen. Weitere Informationen [**finden Sie unter MPTHREAT DETECTION ( MPTHREAT-ERKENNUNG). \_**](mpthreat-detection.md)
 
 </dd> <dt>
 
-**Quarantäne-GUID**
+**QuarantineGuid**
 </dt> <dd>
 
 Typ: **GUID**
@@ -275,132 +275,132 @@ Quarantäne-GUID.
 **ExecutionStatus**
 </dt> <dd>
 
-Typ: **[ **mpexecution- \_ Status**](mpexecution-status.md)**
+Typ: **[ **MPEXECUTION \_ STATUS**](mpexecution-status.md)**
 
 </dd> <dd>
 
-Ausführungs Status der Bedrohung, z. b. nicht bekannt, blockiert oder aktiv. Siehe [**mpexecution- \_ Status**](mpexecution-status.md).
+Ausführungsstatus der Bedrohung, z. B. nicht bekannt, blockiert oder aktiv. Weitere Informationen [**finden Sie unter MPEXECUTION \_ STATUS**](mpexecution-status.md).
 
 </dd> <dt>
 
 **Daten**
 </dt> <dd>
 
-Weitere Informationen. Der Zeiger auf die entsprechende-Struktur hängt vom Wert von "- **Typ**" ab.
+Zusätzliche Informationen. Der Zeiger auf die entsprechende Struktur hängt vom Wert von **ThreatType ab.**
 
 <dl> <dt>
 
-**pknownbad**
+**pKnownBad**
 </dt> <dd>
 
-Typ: **pmpthreat \_ INFOEX nicht \_ verwendet**
+Typ: **PMPTHREAT \_ INFOEX \_ NICHT VERWENDET**
 
 </dd> <dd>
 
-Wenn der **Typ**  ==  **mpthreat den \_ Typ \_ knownbad** hat. Weitere Informationen finden Sie unter [**mpthreat \_ INFOEX nicht \_ verwendet**](mpthreat-infoex-unused.md).
+Wenn **ThreatType**  ==  **MPTHREAT \_ TYPE \_ KNOWNBAD**. Weitere Informationen [**finden Sie unter MPTHREAT \_ INFOEX \_ UNUSED**](mpthreat-infoex-unused.md).
 
 </dd> <dt>
 
-**pbehavior**
+**pBehavior**
 </dt> <dd>
 
-Typ: **pmpthreat \_ INFOEX- \_ Verhalten**
+Typ: **PMPTHREAT \_ INFOEX \_ BEHAVIOR**
 
 </dd> <dd>
 
-Wenn der **Typ**  ==  **mpthreat \_ Type \_ Verhalten** hat. Siehe [**mpthreat \_ INFOEX- \_ Verhalten**](mpthreat-infoex-behavior.md).
+Wenn **ThreatType**  ==  **MPTHREAT \_ TYPE BEHAVIOR \_ .** Siehe [**MPTHREAT INFOEX BEHAVIOR (MPTHREAT \_ \_ INFOEX-VERHALTEN).**](mpthreat-infoex-behavior.md)
 
 </dd> <dt>
 
 **pUnknown**
 </dt> <dd>
 
-Typ: **pmpthreat \_ INFOEX nicht \_ verwendet**
+Typ: **PMPTHREAT \_ INFOEX \_ NICHT VERWENDET**
 
 </dd> <dd>
 
-Wenn **der Typ**  ==  **mpthreat \_ Type \_ unbekannt** ist. Weitere Informationen finden Sie unter [**mpthreat \_ INFOEX nicht \_ verwendet**](mpthreat-infoex-unused.md).
+Wenn **ThreatType**  ==  **MPTHREAT \_ TYPE UNKNOWN \_ ist.** Weitere Informationen [**finden Sie unter MPTHREAT \_ INFOEX \_ UNUSED**](mpthreat-infoex-unused.md).
 
 </dd> <dt>
 
-**pknowngood**
+**pKnownGood**
 </dt> <dd>
 
-Typ: **pmpthreat \_ INFOEX nicht \_ verwendet**
+Typ: **PMPTHREAT \_ INFOEX \_ NICHT VERWENDET**
 
 </dd> <dd>
 
-Wenn **gefährtype** = = mpthreat \_ Type \_ knowngood ist. Weitere Informationen finden Sie unter [**mpthreat \_ INFOEX nicht \_ verwendet**](mpthreat-infoex-unused.md).
+When **ThreatType** == MPTHREAT \_ TYPE \_ KNOWNGOOD. Weitere Informationen [**finden Sie unter MPTHREAT \_ INFOEX \_ UNUSED**](mpthreat-infoex-unused.md).
 
 </dd> <dt>
 
-**pnis**
+**pNis**
 </dt> <dd>
 
-Typ: **pmpthreat \_ INFOEX \_ NIS**
+Typ: **PMPTHREAT \_ INFOEX \_ NIS**
 
 </dd> <dd>
 
-Wenn der **Typ**  ==  **mpthreat \_ Type \_ NIS** ist. Weitere Informationen finden Sie unter [**mpthreat \_ INFOEX \_ NIS**](mpthreat-infoex-nis.md).
+Wenn **ThreatType**  ==  **MPTHREAT \_ TYPE \_ NIS.** Weitere Informationen [**finden Sie unter MPTHREAT \_ INFOEX \_ NIS**](mpthreat-infoex-nis.md).
 
 </dd> </dl> </dd> <dt>
 
 **State**
 </dt> <dd>
 
-Typ: **[ **mperkennungs- \_ Status**](mpdetection-state.md)**
+Typ: **[ **MPDETECTION \_ STATE**](mpdetection-state.md)**
 
 </dd> <dd>
 
-Der aktuelle Zustand der Erkennung. Siehe [**mperkennungs- \_ Status**](mpdetection-state.md).
+Der aktuelle Status der Erkennung. Weitere Informationen [**finden Sie unter MPDETECTION \_ STATE**](mpdetection-state.md).
 
 </dd> <dt>
 
-**Erkenctionuser**
+**DetectionUser**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Der Benutzer, der der Erkennung zugeordnet ist, im Format "Domäne/Benutzer".
+Der der Erkennung zugeordnete Benutzer im Format "Domäne/Benutzer".
 
 </dd> <dt>
 
-**Detectionsource**
+**DetectionSource**
 </dt> <dd>
 
-Typ: **[ **mpsource**](mpsource.md)**
+Typ: **[ **MPSOURCE**](mpsource.md)**
 
 </dd> <dd>
 
-Die Quelle der Erkennung. Siehe [**mpsource**](mpsource.md).
+Die Quelle der Erkennung. Siehe [**MPSOURCE**](mpsource.md).
 
 </dd> <dt>
 
 **ProcessName**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Der Prozess Name, der der Erkennung zugeordnet ist.
+Prozessname, der der Erkennung zugeordnet ist.
 
 </dd> <dt>
 
-**Detectionorigin**
+**DetectionOrigin**
 </dt> <dd>
 
-Typ: **[ **mperkennungs- \_ Ursprung**](mpdetection-origin.md)**
+Typ: **[ **MPDETECTION \_ ORIGIN**](mpdetection-origin.md)**
 
 </dd> <dd>
 
-Der Ursprung der Erkennung, z. b. local oder Network. Siehe [**mperkennungs- \_ Ursprung**](mpdetection-origin.md).
+Der Ursprung der Erkennung, z. B. lokal oder netzwerk. Siehe [**MPDETECTION \_ ORIGIN**](mpdetection-origin.md).
 
 </dd> <dt>
 
-**"reserved1"**
+**reserviert1**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -411,10 +411,10 @@ Reservierte Metadaten zur Erkennung.
 
 </dd> <dt>
 
-**Erkenctiontime**
+**DetectionTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
@@ -422,117 +422,117 @@ Der Zeitpunkt der ersten Erkennung.
 
 </dd> <dt>
 
-**Preexecutionstatus**
+**PreExecutionStatus**
 </dt> <dd>
 
-Typ: **[ **mpexecution- \_ Status**](mpexecution-status.md)**
+Typ: **[ **MPEXECUTION \_ STATUS**](mpexecution-status.md)**
 
 </dd> <dd>
 
-Ausführungs Status direkt vor der Wiederherstellung. Siehe [**mpexecution- \_ Status**](mpexecution-status.md).
+Ausführungsstatus direkt vor der Wiederherstellung. Siehe [**MPEXECUTION \_ STATUS**](mpexecution-status.md).
 
 </dd> <dt>
 
-**Wiederbehebe Zeit**
+**RemediationTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Die Zeit für die Wiederherstellung.
+Die Zeit, zu der die Wiederherstellung aufgetreten ist.
 
 </dd> <dt>
 
-**Postexecutionstatus**
+**PostExecutionStatus**
 </dt> <dd>
 
-Typ: **[ **mpexecution- \_ Status**](mpexecution-status.md)**
+Typ: **[ **MPEXECUTION \_ STATUS**](mpexecution-status.md)**
 
 </dd> <dd>
 
-Ausführungs Status nach der Wiederherstellung. Siehe [**mpexecution- \_ Status**](mpexecution-status.md).
+Ausführungsstatus nach der Wiederherstellung. Siehe [**MPEXECUTION \_ STATUS**](mpexecution-status.md).
 
 </dd> <dt>
 
 **CriticalFailure**
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
 </dd> <dd>
 
-True, wenn der Wiederherstellungs Fehler kritisch war.
+True, wenn der Wiederherstellungsfehler kritisch war.
 
 </dd> <dt>
 
-**Nicht criticalreason**
+**NonCriticalReason**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Grund für den Fehler bei der Wiederherstellung ist nicht wichtig. Dies wird in Zukunft nicht garantiert unterstützt.
+Der Grund für den Fehler bei der Wiederherstellung ist nicht kritisch. Dies wird in Zukunft nicht garantiert.
 
 </dd> <dt>
 
-**Wiederbeheationuser**
+**RemediationUser**
 </dt> <dd>
 
-Typ: **MP- \_ Mittell- \_ Zeichenfolge LPWSTR**
+Typ: **MP \_ MIDL STRING \_ LPWSTR**
 
 </dd> <dd>
 
-Der Benutzer, der die Wiederherstellung angefordert hat, im Format Domäne/Benutzer.
+Benutzer, der die Wiederherstellung angefordert hat, im Format "Domäne/Benutzer".
 
 </dd> <dt>
 
-**Wiederbeheationresourcecount**
+**RemediationResourceCount**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Anzahl der Ressourcen in der **wiederbehebe**-Ressourcen Liste.
+Anzahl der Ressourcen in **RemediationResourceList**.
 
 </dd> <dt>
 
-**Wiederherstellung von wiedersourcelist**
+**RemediationResourceList**
 </dt> <dd>
 
-Typ: **pmpresource \_ Info \[ wiederbeheationresourcecount \]**
+Typ: **PMPRESOURCE \_ INFO \[ RemediationResourceCount \]**
 
 </dd> <dd>
 
-Liste der Ressourcen, die während der Wiederherstellung nicht erfolgreich waren Informationen finden Sie unter [**mpresource- \_ Informationen**](mpresource-info.md).
+Liste der Ressourcen, bei denen während der Wiederherstellung ein Fehler aufgetreten ist. Weitere Informationen finden Sie unter [**MPRESOURCE \_ INFO**](mpresource-info.md).
 
 </dd> <dt>
 
-**Failureresolved**
+**Fehler Behoben**
 </dt> <dd>
 
-Typ: **bool**
+Typ: **BOOL**
 
 </dd> <dd>
 
-True, wenn der Wiederherstellungs Fehler behoben wurde. Dadurch wird der Bucket entweder auf Complete oder eine zusätzliche Aktion verschoben.
+True, wenn ein Wiederherstellungsfehler behoben wurde. Dadurch wird der Bucket entweder in "Abgeschlossen" oder in eine zusätzliche Aktion verschoben.
 
 </dd> <dt>
 
-**Resolvedreason**
+**ResolvedReason**
 </dt> <dd>
 
-Typ: **[ **mpregelöste \_ Ursache**](mpresolved-reason.md)**
+Typ: **[ **MPRESOLVED \_ REASON**](mpresolved-reason.md)**
 
 </dd> <dd>
 
-Der Grund für die Behebung des Fehlers bei der Wiederherstellung. Dies ist der Grund, warum die Erkennung von nicht zu weiteren Aktionen verschoben wurde oder abgeschlossen wurde. Weitere Informationen finden Sie unter [**mpregelöste \_ reason**](mpresolved-reason.md).
+Ursache für behebungsfehler. Dies ist der Grund, warum die Erkennung von "Failed" in "Additional Action" verschoben oder abgeschlossen wurde. Weitere Informationen finden Sie unter [**MPRESOLVED \_ REASON**](mpresolved-reason.md).
 
 </dd> <dt>
 
-**Additionalactions**
+**AdditionalActions**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -543,25 +543,25 @@ Sind zusätzliche Aktionen erforderlich.
 
 </dd> <dt>
 
-**Resolvedactions**
+**ResolvedActions**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Alle weiteren Aktionen, die ausgeführt wurden.
+Alle zusätzlichen Aktionen, die ausgeführt wurden.
 
 </dd> <dt>
 
-**dwbilistatusflag**
+**dwThreatStatusFlag**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Zusätzliche Informationen zur Bedrohungserkennung.
+Fügen Sie zusätzliche Informationen zur Bedrohungserkennung hinzu.
 
 </dd> </dl>
 
@@ -571,9 +571,9 @@ Zusätzliche Informationen zur Bedrohungserkennung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
@@ -581,58 +581,58 @@ Zusätzliche Informationen zur Bedrohungserkennung.
 
 <dl> <dt>
 
-[**Mpfrememory**](mpfreememory.md)
+[**MpFreeMemory**](mpfreememory.md)
 </dt> <dt>
 
-[**Mpzerenumerate**](mpthreatenumerate.md)
+[**MpThreatEnumerate**](mpthreatenumerate.md)
 </dt> <dt>
 
-[**Mpbedrohlich Query**](mpthreatquery.md)
+[**MpThreatQuery**](mpthreatquery.md)
 </dt> <dt>
 
-[**mperkennungs- \_ Ursprung**](mpdetection-origin.md)
+[**MPDETECTION \_ ORIGIN**](mpdetection-origin.md)
 </dt> <dt>
 
-[**mperkennungs- \_ Status**](mpdetection-state.md)
+[**\_MPDETECTION-ZUSTAND**](mpdetection-state.md)
 </dt> <dt>
 
-[**mpexecution- \_ Status**](mpexecution-status.md)
+[**MPEXECUTION-STATUS \_**](mpexecution-status.md)
 </dt> <dt>
 
-[**mpregelösten \_ Grund**](mpresolved-reason.md)
+[**MPRESOLVED \_ REASON**](mpresolved-reason.md)
 </dt> <dt>
 
-[**mpresource- \_ Informationen**](mpresource-info.md)
+[**\_MPRESOURCE-INFORMATIONEN**](mpresource-info.md)
 </dt> <dt>
 
-[**Mpsource**](mpsource.md)
+[**MPSOURCE**](mpsource.md)
 </dt> <dt>
 
-[**mpthreat- \_ Aktion**](mpthreat-action.md)
+[**\_MPTHREAT-AKTION**](mpthreat-action.md)
 </dt> <dt>
 
-[**mpthreat- \_ Kategorie**](mpthreat-category.md)
+[**MPTHREAT \_ CATEGORY**](mpthreat-category.md)
 </dt> <dt>
 
-[**mpthreat- \_ Erkennung**](mpthreat-detection.md)
+[**\_MPTHREAT-ERKENNUNG**](mpthreat-detection.md)
 </dt> <dt>
 
-[**mpthreat- \_ INFOEX- \_ Verhalten**](mpthreat-infoex-behavior.md)
+[**MPTHREAT \_ \_ INFOEX-VERHALTEN**](mpthreat-infoex-behavior.md)
 </dt> <dt>
 
-[**mpthreat \_ INFOEX \_ NIS**](mpthreat-infoex-nis.md)
+[**MPTHREAT \_ INFOEX \_ NIS**](mpthreat-infoex-nis.md)
 </dt> <dt>
 
-[**mpthreat \_ INFOEX nicht \_ verwendet**](mpthreat-infoex-unused.md)
+[**MPTHREAT \_ INFOEX \_ UNUSED**](mpthreat-infoex-unused.md)
 </dt> <dt>
 
-[**mpthreat- \_ Schweregrad**](mpthreat-severity.md)
+[**\_MPTHREAT-SCHWEREGRAD**](mpthreat-severity.md)
 </dt> <dt>
 
-[**mpthreat- \_ Status**](mpthreat-status.md)
+[**\_MPTHREAT-STATUS**](mpthreat-status.md)
 </dt> <dt>
 
-[**mpthreat- \_ Typ**](mpthreat-type.md)
+[**\_MPTHREAT-TYP**](mpthreat-type.md)
 </dt> </dl>
 
  

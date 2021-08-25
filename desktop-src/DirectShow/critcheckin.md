@@ -1,7 +1,7 @@
 ---
-description: Gibt true zurück, wenn der aktuelle Thread der Besitzer des angegebenen kritischen Abschnitts ist.
+description: Gibt TRUE zurück, wenn der aktuelle Thread der Besitzer des angegebenen kritischen Abschnitts ist.
 ms.assetid: 96158f08-07a0-42a9-b173-0a05456a5f3a
-title: Critcheckin-Funktion (wxutil. h)
+title: CritCheckIn-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ff31707dc409db1e72c36866150c5a0b24c53f9a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f4e9ff0078f6efe8dee9b060e61858c24aea0a64e7e35b9fb867125b8612ed3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908080"
 ---
-# <a name="critcheckin-function"></a>Critcheckin-Funktion
+# <a name="critcheckin-function"></a>CritCheckIn-Funktion
 
-Gibt **true** zurück, wenn der aktuelle Thread der Besitzer des angegebenen kritischen Abschnitts ist.
+Gibt **TRUE zurück,** wenn der aktuelle Thread der Besitzer des angegebenen kritischen Abschnitts ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ BOOL WINAPI CritCheckIn(
 
 <dl> <dt>
 
-*pccrit* 
+*pcCrit* 
 </dt> <dd>
 
-Zeiger auf einen kritischen [**ccritsec**](ccritsec.md) -Abschnitt.
+Zeiger auf einen [**kritischen CCritSec-Abschnitt.**](ccritsec.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-In Debugbuilds gibt **true** zurück, wenn der aktuelle Thread der Besitzer dieses kritischen Abschnitts ist, andernfalls **false** . In Einzelhandels Builds gibt immer **true** zurück.
+In Debugbuilds gibt **TRUE zurück,** wenn der aktuelle Thread der Besitzer dieses kritischen Abschnitts ist, andernfalls **FALSE.** In Einzelhandels-Builds gibt immer **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist im [**Assert**](assert.md) -Makro besonders nützlich, um zu testen, ob ein Thread eine bestimmte Sperre besitzt.
+Diese Funktion ist besonders [](assert.md) nützlich innerhalb des ASSERT-Makros, um zu testen, ob ein Thread eine bestimmte Sperre besitzt.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt die Verwendung dieser Funktion:
+Im folgenden Codebeispiel wird die Verwendung dieser Funktion veranschaulicht:
 
 
 ```
@@ -84,8 +84,8 @@ Das folgende Codebeispiel zeigt die Verwendung dieser Funktion:
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Das folgende Codebeispiel zeigt die Verwendung dieser Funktion:
 
 <dl> <dt>
 
-[Kritische Abschnitts Debuggingfunktionen](critical-section-debugging-functions.md)
+[Wichtige Funktionen für das Debuggen von Abschnitten](critical-section-debugging-functions.md)
 </dt> </dl>
 
  

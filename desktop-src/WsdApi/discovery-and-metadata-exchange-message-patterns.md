@@ -1,37 +1,37 @@
 ---
-description: Geräte Profile für Web Services (DPWS)-Hosts und-Clients kommunizieren über das Netzwerk, indem eine Reihe von SOAP-Nachrichten über UDP und HTTP verwendet wird.
+description: DpWS-Hosts (Device Profile for Web Services) kommunizieren über das Netzwerk mithilfe einer Reihe von SOAP-Nachrichten über UDP und HTTP.
 ms.assetid: 52282990-d993-4034-a791-2ee7c9c1663d
-title: Ermittlungs-und Metadatenaustausch-Nachrichten Muster
+title: Ermittlung und Metadaten Exchange Nachrichtenmustern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e9a08852c5f25572daf9932afd2ce4b7e03858a
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: f1b41267e86358a9d6e263f4bc8971632f1061eb1c94d1e64cc76d65020ce255
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "104218952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856794"
 ---
-# <a name="discovery-and-metadata-exchange-message-patterns"></a>Ermittlungs-und Metadatenaustausch-Nachrichten Muster
+# <a name="discovery-and-metadata-exchange-message-patterns"></a>Ermittlung und Metadaten Exchange Nachrichtenmustern
 
-Geräte Profile für Web Services (DPWS)-Hosts und-Clients kommunizieren über das Netzwerk, indem eine Reihe von SOAP-Nachrichten über UDP und HTTP verwendet wird.
+DpWS-Hosts (Device Profile for Web Services) kommunizieren über das Netzwerk mithilfe einer Reihe von SOAP-Nachrichten über UDP und HTTP.
 
-Das folgende Diagramm zeigt eine Übersicht über den erwarteten UDP-und HTTP-Datenverkehr zwischen einem DPWS-Host und-Client.
+Das folgende Diagramm zeigt eine Übersicht über den erwarteten UDP- und HTTP-Datenverkehr zwischen einem DPWS-Host und -Client.
 
-![Das Diagramm zeigt UDP-und HTTP-Datenverkehr zwischen einem DPWS-Host und-Client.](images/ws-discovery-and-metadata-exchange-message-patterns.png)
+![Diagramm: UDP- und HTTP-Datenverkehr zwischen einem DPWS-Host und -Client](images/ws-discovery-and-metadata-exchange-message-patterns.png)
 
-[Hello](hello-message.md)- [](bye-message.md), bye [-, Test-,](probe-message.md) [Resolve](resolve-message.md)-und [Get](get--metadata-exchange--http-request-and-message.md) -Nachrichten werden ohne Netzwerkanfrage generiert. Diese Nachrichten werden verwendet, um den Gerätestatus anzukündigen oder eine Such Anforderung auszugeben. [Probe Matches](probematches-message.md), [resolvematches](resolvematches-message.md)und [GetResponse](getresponse--metadata-exchange--message.md) -Nachrichten werden als Antwort auf die Nachrichten "Probe", "auflösen" und "Get" generiert.
+[Hello-,](hello-message.md) [Bye-,](bye-message.md) [Probe-, Resolve-](resolve-message.md)und [Get-Nachrichten](get--metadata-exchange--http-request-and-message.md) werden alle ohne Netzwerkankündigung generiert. [](probe-message.md) diese Nachrichten werden verwendet, um den Gerätestatus ankündigen oder eine Suchanforderung aus zu stellen. [ProbeMatches-,](probematches-message.md) [ResolveMatches-](resolvematches-message.md)und [GetResponse-Meldungen](getresponse--metadata-exchange--message.md) werden als Reaktion auf Probe-, Resolve- und Get-Meldungen generiert.
 
-Die Nachrichten [Hello](hello-message.md), [Bye](bye-message.md), [Resolve](resolve-message.md)und [resolvematches](resolvematches-message.md) werden immer über UDP ausgeführt. Ebenso erfolgen [Get](get--metadata-exchange--http-request-and-message.md) -und [GetResponse](getresponse--metadata-exchange--message.md) -metadatennachrichten immer über HTTP oder HTTPS. Test [-und](probe-message.md) [Probe Matches](probematches-message.md) -Nachrichten werden normalerweise über UDP übermittelt, aber über eine HTTP-oder HTTPS-Verbindung in einem gesteuerten Ermittlungs Szenario. Weitere Informationen zu gerichteten Ermittlungs Nachrichten Mustern finden Sie unter [Problembehandlung bei Anwendungen mithilfe der gesteuerten](troubleshooting-applications-using-directed-discovery.md)Ermittlung.
+[Hello-,](hello-message.md) [Bye-,](bye-message.md) [Resolve-](resolve-message.md)und [ResolveMatches-Meldungen](resolvematches-message.md) treten immer über UDP auf. Ebenso werden [Get-](get--metadata-exchange--http-request-and-message.md) und [GetResponse-Metadatenmeldungen](getresponse--metadata-exchange--message.md) immer über HTTP oder HTTPS gesendet. [Probe-](probe-message.md) [und ProbeMatches-Nachrichten](probematches-message.md) werden normalerweise über UDP übertragen, aber in einem szenariogesteuerten Ermittlung über eine HTTP- oder HTTPS-Verbindung. Weitere Informationen zu Mustern von gerichteten Ermittlungsnachrichten finden Sie unter [Problembehandlung bei Anwendungen mithilfe der gerichteten Ermittlung.](troubleshooting-applications-using-directed-discovery.md)
 
-In der folgenden Liste wird die typische Nachrichten Sequenz angezeigt. Nicht alle Nachrichten sind obligatorisch.
+In der folgenden Liste ist die typische Sequenz von Nachrichten im Netzwerk aufgeführt. Nicht alle Nachrichten sind obligatorisch.
 
-1.  [Hello](hello-message.md) (Hallo)
+1.  [Hello](hello-message.md)
 2.  [Test](probe-message.md)
-3.  [Probe Matches](probematches-message.md)
+3.  [ProbeMatches](probematches-message.md)
 4.  [Beheben](resolve-message.md)
-5.  [Resolvematches](resolvematches-message.md)
-6.  [Get](get--metadata-exchange--http-request-and-message.md) (metadatenaustauschanforderung)
-7.  [GetResponse](getresponse--metadata-exchange--message.md)
+5.  [ResolveMatches](resolvematches-message.md)
+6.  [Get](get--metadata-exchange--http-request-and-message.md) (Metadatenaustauschanforderung)
+7.  [Getresponse](getresponse--metadata-exchange--message.md)
 8.  [Auf Wiedersehen](bye-message.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen

@@ -1,9 +1,9 @@
 ---
-title: Provider (eventstype)-Element
-description: Definiert einen Anbieter und die Metadaten, die er verwendet, um seine Ereignisse zu definieren. | Provider (eventstype)-Element
+title: provider (EventsType)-Element
+description: Definiert einen Anbieter und die Metadaten, die zum Definieren seiner Ereignisse verwendet werden. | provider (EventsType)-Element
 ms.assetid: 607f077f-5ad4-4a32-b58a-23ba030bdbf7
 keywords:
-- Anbieter Element-Ereignisprotokoll
+- Provider-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 76d3271211128a62e2b43a909e50cd9bb91f31cb
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5793738c80ec6c7298b29d286f65719cc0ff30b9e82bf4364fdfe1450ea415ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958270"
 ---
-# <a name="provider-eventstype-element"></a>Provider (eventstype)-Element
+# <a name="provider-eventstype-element"></a>provider (EventsType)-Element
 
-Definiert einen Anbieter und die Metadaten, die er verwendet, um seine Ereignisse zu definieren.
+Definiert einen Anbieter und die Metadaten, die zum Definieren seiner Ereignisse verwendet werden.
 
 ``` syntax
 <xs:element name="provider"
@@ -30,7 +30,7 @@ Definiert einen Anbieter und die Metadaten, die er verwendet, um seine Ereigniss
  />
 ```
 
-Das **Provider** -Element wird durch den komplexen [**eventstype**](eventmanifestschema-eventstype-complextype.md) -Typ definiert.
+Das **Provider-Element** wird durch den komplexen [**Ereignistyp**](eventmanifestschema-eventstype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Provider** -Element wird durch den komplexen [**eventstype**](eventmanifes
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Provider** -Element wird durch den komplexen [**eventstype**](eventmanifes
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Ereignisse (Instrumentationstyp)**](eventmanifestschema-events-instrumentationtype-element.md)
+[**events (InstrumentationType)**](eventmanifestschema-events-instrumentationtype-element.md)
 </dt> </dl>
 
  

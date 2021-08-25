@@ -1,9 +1,9 @@
 ---
-title: UserID (principaltype)-Element
-description: Gibt die Benutzer-ID an, die erforderlich ist, um die dem Prinzipal zugeordneten Tasks auszuführen
+title: UserId (principalType)-Element
+description: Gibt den Benutzerbezeichner an, der zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 ms.assetid: 7f3c92bf-c982-4155-9391-862f674a3665
 keywords:
-- UserID-Element Taskplaner
+- UserId-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fe12f76c35238251e2ecc60f848e2f7eb4eaa681
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 955dcc93b826b4f86bffd3371ab9907e56dfe7f35649aee603cb18716868f535
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959530"
 ---
-# <a name="userid-principaltype-element"></a>UserID (principaltype)-Element
+# <a name="userid-principaltype-element"></a>UserId (principalType)-Element
 
-Gibt die Benutzer-ID an, die erforderlich ist, um die dem Prinzipal zugeordneten Tasks auszuführen
+Gibt den Benutzerbezeichner an, der zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 
 ``` syntax
 <xs:element name="UserId"
@@ -30,31 +30,31 @@ Gibt die Benutzer-ID an, die erforderlich ist, um die dem Prinzipal zugeordneten
  />
 ```
 
-Das **UserID** -Element wird durch den komplexen [**principaltype**](taskschedulerschema-principaltype-complextype.md) -Typ definiert.
+Das **UserId-Element** wird durch den komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                  | Abgeleitet von                                                           | BESCHREIBUNG                                                    |
+| Element                                                                  | Abgeleitet von                                                           | Beschreibung                                                    |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an.<br/> |
+| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **UserID** -Element und das [**logontype**](taskschedulerschema-logontype-principaltype-element.md) -Element werden verwendet, um den Benutzer zu definieren, der zum Ausführen dieser Aufgaben erforderlich ist, die diesen Prinzipal verwenden.
+Das **UserId-Element** und das [**LogonType-Element**](taskschedulerschema-logontype-principaltype-element.md) werden zusammen verwendet, um den Benutzer zu definieren, der zum Ausführen der Aufgaben erforderlich ist, die diesen Prinzipal verwenden.
 
-Sie können nicht gleichzeitig eine Benutzer-ID und einen Gruppen Bezeichner angeben. Geben Sie entweder das **UserID** -oder das [**GroupID**](taskschedulerschema-groupid-principaltype-element.md) -Element an, aber nicht beides.
+Sie können keinen Benutzerbezeichner und einen Gruppenbezeichner gleichzeitig angeben. Geben Sie entweder die **UserId** oder das [**GroupId-Element**](taskschedulerschema-groupid-principaltype-element.md) an, aber nicht beides.
 
-Bei der Skripterstellung wird die Benutzer-ID mithilfe der [**Principal. UserID**](principal-userid.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird der Benutzerbezeichner mithilfe der [**Principal.UserId-Eigenschaft**](principal-userid.md) angegeben.
 
-Bei der C++-Entwicklung wird der Benutzer Bezeichner mithilfe der [**IPrincipal:: UserID**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_userid) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird der Benutzerbezeichner mithilfe der [**IPrincipal::UserId-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_userid) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein Prinzip mithilfe eines Benutzer Bezeichners.
+Der folgende XML-Code definiert ein Prinzip mithilfe eines Benutzerbezeichners.
 
 
 ```XML
@@ -73,12 +73,12 @@ Der folgende XML-Code definiert ein Prinzip mithilfe eines Benutzer Bezeichners.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

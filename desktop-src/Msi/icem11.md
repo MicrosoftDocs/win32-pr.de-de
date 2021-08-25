@@ -1,29 +1,29 @@
 ---
-description: ICEM11 überprüft, ob ein konfigurierbares Mergemodul die ModuleConfiguration-Tabelle und die ModuleSubstitution-Tabelle in der moduleignoretable-Tabelle des Moduls auflistet.
+description: ICEM11 überprüft, ob ein konfigurierbares Mergemodul die ModuleConfiguration-Tabelle und die ModuleSubsators-Tabelle in der ModuleIgnoreTable-Tabelle des Moduls auflistet.
 ms.assetid: f0199137-0a40-40ca-b3cf-ff8eef4309cc
 title: ICEM11
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 403a36435ce2367fc356934740e6d022f5457698
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 157248d62f43a0b1a791220e2aeb917ba8273d31b93de69078f9876cddbd2748
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894430"
 ---
 # <a name="icem11"></a>ICEM11
 
-ICEM11 überprüft, ob ein konfigurierbares Mergemodul die [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) und die [ModuleSubstitution](modulesubstitution-table.md) -Tabelle in der [moduleignoretable-Tabelle](moduleignoretable-table.md) des Moduls auflistet. Dadurch wird sichergestellt, dass Merge-Tools, die konfigurierbare Mergemodule nicht erkennen (weniger als Version 2,0) diese Tabellen nicht in die Zieldatenbank kopieren.
+ICEM11 überprüft, ob ein konfigurierbares Mergemodul die [ModuleConfiguration-Tabelle](moduleconfiguration-table.md) und die [ModuleSubsators-Tabelle](modulesubstitution-table.md) in der [ModuleIgnoreTable-Tabelle](moduleignoretable-table.md) des Moduls auflistet. Dadurch wird sichergestellt, dass Mergetools, die konfigurierbare Mergemodule (weniger als Version 2.0) nicht erkennen, diese Tabellen nicht in die Zieldatenbank kopieren.
 
-Dieses ICEM ist in der Datei "Mergemod. Cub" verfügbar, die im SDK für Windows Installer 2,0 und höher bereitgestellt wird. Weitere Informationen finden Sie unter [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md).
+Dieses ICEM ist in der Datei Mergemod.cub verfügbar, die im Windows Installer 2.0 SDK und höher bereitgestellt wird. Weitere Informationen finden Sie [unter Windows SDK Components for Windows Installer Developers](platform-sdk-components-for-windows-installer-developers.md).
 
 ## <a name="result"></a>Ergebnis
 
-ICEM11 gibt einen Fehler aus, wenn das Modul eine ModuleConfiguration-oder ModuleSubstitution-Tabelle enthält, die nicht in der moduleignoretable-Tabelle aufgeführt ist.
+ICEM11 gibt einen Fehler aus, wenn das Modul eine ModuleConfiguration- oder ModuleSubsisierungstabelle enthält, die nicht in der Tabelle ModuleIgnoreTable aufgeführt ist.
 
 ## <a name="example"></a>Beispiel
 
-ICEM11 gibt die folgenden Fehlermeldungen für ein Modul mit den unten gezeigten Datenbankeinträgen aus.
+ICEM11 stellt die folgenden Fehlermeldungen für ein Modul mit den unten gezeigten Datenbankeinträgen zur Verfügung.
 
 ``` syntax
 Error The module contains a ModuleConfiguration or ModuleSubstitution 
@@ -42,7 +42,7 @@ table. These tables must be listed in the ModuleIgnoreTable table.
 
  
 
-[ModuleSubstitution](modulesubstitution-table.md)
+[ModuleSubsmodul](modulesubstitution-table.md)
 
 
 
@@ -54,7 +54,7 @@ table. These tables must be listed in the ModuleIgnoreTable table.
 
  
 
-[Moduleignoretable](moduleignoretable-table.md)
+[ModuleIgnoreTable](moduleignoretable-table.md)
 
 
 
@@ -66,21 +66,21 @@ table. These tables must be listed in the ModuleIgnoreTable table.
 
  
 
-Um diesen Fehler zu beheben, schließen Sie die Tabellen ModuleSubstitution und ModuleConfiguration in der Tabelle moduleignoretable ein.
+Um diesen Fehler zu beheben, schließen Sie die Tabellen ModuleSubs sowie ModuleConfiguration in die Tabelle ModuleIgnoreTable ein.
 
 ## <a name="table-used-during-execution"></a>Während der Ausführung verwendete Tabelle
 
-[ModuleSubstitution](modulesubstitution-table.md)
+[ModuleSubsmodul](modulesubstitution-table.md)
 
 [ModuleConfiguration](moduleconfiguration-table.md)
 
-[Moduleignoretable](moduleignoretable-table.md)
+[ModuleIgnoreTable](moduleignoretable-table.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Eisverweis für Mergemodul](merge-module-ice-reference.md)
+[Merge Module ICE Reference](merge-module-ice-reference.md)
 </dt> </dl>
 
  

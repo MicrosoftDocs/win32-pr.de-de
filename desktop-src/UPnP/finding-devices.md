@@ -1,41 +1,41 @@
 ---
-title: Suchen nach Geräten
-description: Die UPnP-Architektur ist eine dynamische Netzwerkarchitektur, mit der Geräte jederzeit beitreten und das Netzwerk verlassen können.
+title: Suchen von Geräten
+description: Die UPnP-Architektur ist eine dynamische Netzwerkarchitektur, mit der Geräte jederzeit eingebunden und das Netzwerk verlassen können.
 ms.assetid: b89d9ec3-ce1a-4162-bf82-b08a49207d7d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5b8feebd430252b118353681a90ce4cd683ee7b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ccf5626f7d941d9e3fa73b6d3d46ef9f51ef256ee8371e7594c312d225bba865
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867590"
 ---
-# <a name="finding-devices"></a>Suchen nach Geräten
+# <a name="finding-devices"></a>Suchen von Geräten
 
-Die UPnP-Architektur ist eine dynamische Netzwerkarchitektur, mit der Geräte jederzeit beitreten und das Netzwerk verlassen können. Aufgrund dieser dynamischen Architektur können Anwendungen nicht darauf basieren, dass bestimmte UPnP-basierte Geräte zu einem bestimmten Zeitpunkt verfügbar sind. Aus diesem Grund durchsuchen Anwendungen (oder Steuerungs Punkte) das Netzwerk, um Geräte zu finden, die den angegebenen Kriterien am ehesten entsprechen. Anwendungen warten auch auf Geräte Ankündigungs Meldungen, die darauf hinweisen, dass dem Netzwerk neue Geräte hinzugefügt wurden.
+Die UPnP-Architektur ist eine dynamische Netzwerkarchitektur, mit der Geräte jederzeit eingebunden und das Netzwerk verlassen können. Aufgrund dieser dynamischen Architektur können Sich Anwendungen nicht darauf verlassen, dass bestimmte UPnP-basierte Geräte zu einem bestimmten Zeitpunkt verfügbar sind. Aus diesem Grund durchsuchen Anwendungen (oder Kontrollpunkte) das Netzwerk, um Geräte zu finden, die den angegebenen Kriterien am besten entsprechen. Anwendungen warten auch auf Geräteankündigungsmeldungen, die darauf hinweisen, dass dem Netzwerk neue Geräte hinzugefügt wurden.
 
-Im folgenden finden Sie gültige Suchkriterien für UPnP-basierte Geräte:
+Es folgen gültige Suchkriterien für UPnP-basierte Geräte:
 
 -   Gerätetyp
 -   Dienstart
 -   Eindeutiger Gerätename (UDN)
--   Alle Stamm Geräte
+-   Alle Stammgeräte
 
-Der Gerätetyp und die Diensttyp Suche werden normalerweise verwendet, um eine Klasse von Geräten mit allgemeinen Merkmalen zu suchen. Die udn-Suche wird verwendet, um ein bestimmtes Gerät zu finden.
+Die Suche nach Gerätetyp und Diensttyp wird in der Regel verwendet, um eine Klasse von Geräten mit gemeinsamen Merkmalen zu finden. Die UDN-Suche wird verwendet, um ein bestimmtes Gerät zu finden.
 
-Um nach Geräten zu suchen, muss eine Anwendung zuerst das Device Finder-Objekt instanziieren. Dieses Objekt macht die [**IUPnPDeviceFinder**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) -Schnittstelle verfügbar. die zugehörigen Methoden führen die zuvor beschriebenen Suchvorgänge aus.
+Um nach Geräten zu suchen, muss eine Anwendung zuerst das Device Finder-Objekt instanziieren. Dieses Objekt macht die [**IUPnPDeviceExpo-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) verfügbar. die Methoden führen die zuvor beschriebenen Suchvorgänge aus.
 
-In den folgenden Abschnitten wird das Auffinden von Geräten beschrieben:
+In den folgenden Abschnitten wird beschrieben, wie Geräte gesucht werden:
 
--   [Erstellen des Geräte Suchgeräts](creating-the-device-finder.md)
+-   [Erstellen der Gerätesuche](creating-the-device-finder.md)
 -   [Asynchrone Suche](asynchronous-searching.md)
 -   [Synchrone Suche](synchronous-searching.md)
--   [Von synchronen suchen zurückgegebene Geräte Sammlungen](device-collections-returned-by-synchronous-searches.md)
+-   [Von synchronen Suchvorgängen zurückgegebene Gerätesammlungen](device-collections-returned-by-synchronous-searches.md)
 
- 
+ 
 
- 
+ 
 
 
 

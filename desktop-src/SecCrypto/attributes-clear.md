@@ -1,7 +1,7 @@
 ---
-description: Löscht alle Attribut Objekte aus der Auflistung.
+description: Entfernt alle Attribute-Objekte aus der Auflistung.
 ms.assetid: 98b022f8-15aa-44b4-aaff-de09081d80b6
-title: Attribute. Clear-Methode
+title: Attributes.Clear-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: eec570200234f455467c30a3eb12429226400c60
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 43c2e5aa0f99824d87b865a56fe336161b8963bb9ba1da338bb8603f722085cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879860"
 ---
-# <a name="attributesclear-method"></a>Attribute. Clear-Methode
+# <a name="attributesclear-method"></a>Attributes.Clear-Methode
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**cryptographitortributeobjectcollection-Klasse**](/dotnet/api/system.security.cryptography.cryptographicattributeobjectcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System. Security. Cryptography**](/previous-versions/windows/) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die [**CryptographicAttributeObjectCollection-Klasse**](/dotnet/api/system.security.cryptography.cryptographicattributeobjectcollection?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System.Security.Cryptography-Namespace.**](/previous-versions/windows/)\]
 
-Die **Clear** -Methode löscht alle [**Attribut**](attribute.md) Objekte aus der Auflistung.
+Die **Clear-Methode** entfernt alle [**Attribute-Objekte**](attribute.md) aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt keinen Wert zurück. Eine Anwendung, die diese Methode verwendet, muss Code enthalten, um eine Ausnahme zu behandeln, die von dieser Methode ausgelöst wird.
+Diese Methode gibt keinen Wert zurück. Eine Anwendung, die diese Methode verwendet, muss Code enthalten, um eine von dieser Methode ausgelöste Ausnahme zu behandeln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Diese Methode gibt keinen Wert zurück. Eine Anwendung, die diese Methode verwen
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

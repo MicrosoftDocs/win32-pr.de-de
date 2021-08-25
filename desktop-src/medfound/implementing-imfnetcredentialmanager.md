@@ -1,49 +1,49 @@
 ---
-description: Implementieren von IMF netkredentialmanager
+description: Implementieren von MANAGERSNetCredentialManager
 ms.assetid: 3eb2afec-195c-4d8d-8e08-7e6ec7c572f8
-title: Implementieren von IMF netkredentialmanager
+title: Implementieren von MANAGERSNetCredentialManager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55c026f2c12b2ff248032a56d9c48a0e0e1576c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9877a1782a9703a8f43ed385f21f572576858955253cea5e38fa2d3143383e24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827840"
 ---
-# <a name="implementing-imfnetcredentialmanager"></a>Implementieren von IMF netkredentialmanager
+# <a name="implementing-imfnetcredentialmanager"></a>Implementieren von MANAGERSNetCredentialManager
 
-Führen Sie in der [**IMF netkredentialmanager:: beginget-Anmelde**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) Informationen-Methode die folgenden Schritte aus.
+Gehen Sie in der [**METHODE SFCNetCredentialManager::BeginGetCredentials**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) wie folgt vor.
 
-1.  Wenn Sie nicht bereits über einen [**imfnetkredentialcache**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredentialcache) -Zeiger verfügen, rufen Sie [**mfkreatecredentialcache**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatecredentialcache) auf, um das Anmelde Informations Cache-Objekt zu erstellen. Speichern Sie diesen Zeiger.
-2.  [**Imfnetkredentialcache:: GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential)aufrufen. Legen Sie die Flags im *dwauthenticationflags* -Parameter wie folgt fest:
-    -   Wenn das **hrop** -Element der [**mfnetfordentialmanagergetparam**](/windows/desktop/api/mfidl/ns-mfidl-mfnetcredentialmanagergetparam) -Struktur gleich **NS \_ E \_ Proxy \_ AccessDenied** ist, legen Sie das **mfnet- \_ Authentifizierungsproxy \_** -Flag fest.
-    -   Wenn der Wert für " **f** " auf " **true**" festgelegt ist, legen Sie das Flag für die **MF- \_ Authentifizierung \_ \_**
-    -   Wenn für " **fiallowloggedonuser** " der Wert " **true**" festgelegt ist, legen Sie das Flag **\_ \_ \_ für \_ die MF-Authentifizierung**
-3.  Die [**GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) -Methode gibt einen [**IMF Network Credential**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) -Zeiger und möglicherweise das Flag "Prompt anfordern" zurück \_ . Speichern Sie den **IMF Network Credential** -Zeiger.
-4.  Wenn [**GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) das Flag zum Anfordern **der \_ Eingabeaufforderung** nicht zurückgibt, sind Sie damit abgeschlossen. Fahren Sie mit Schritt 9 fort.
-5.  Andernfalls müssen Sie den Benutzer zur Eingabe des Benutzernamens und des Kennworts auffordern, wenn [**GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) das Flag zum Anfordern der **\_ Eingabeaufforderung** zurückgibt.
-6.  Wenn **das** Feld " **false**" lautet, verschlüsseln Sie die Anmelde Informationen.
-7.  Rufen Sie [**imfnetcredential:: SETUSER**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredential-setuser) und [**imfnetcredential:: SetPassword**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredential-setpassword) auf, um den Namen und das Kennwort des Benutzers für das Anmelde Informationsobjekt festzulegen.
-8.  Rufen Sie optional [**imfnetkredentialcache:: setuseroptions**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-setuseroptions) auf, um das Anmelde Informations Cache-Objekt mit den Einstellungen des Benutzers zum Speichern und Senden von Anmelde Informationen zu aktualisieren.
-9.  Rufen Sie den [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Rückruf auf, indem Sie [**mfinvokecallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback)aufrufen.
+1.  Wenn Sie noch keinen [**POINTERNetCredentialCache-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredentialcache) haben, rufen Sie [**MFCreateCredentialCache**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatecredentialcache) auf, um das Credential Cache-Objekt zu erstellen. Store diesen Zeiger.
+2.  Rufen Sie [**ÜBERNETCredentialCache::GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential)auf. Legen Sie die Flags im *dwAuthenticationFlags-Parameter* wie folgt fest:
+    -   Wenn das **hrOp-Element** der [**MFNetCredentialManagerGetParam-Struktur**](/windows/desktop/api/mfidl/ns-mfidl-mfnetcredentialmanagergetparam) **gleich NS \_ E PROXY \_ \_ ACCESSDENIED** ist, legen Sie das **PROXYflag MFNET AUTHENTICATION \_ \_ fest.**
+    -   Wenn **fClearTextPackage** **TRUE** ist, legen Sie das **MFNET AUTHENTICATION \_ CLEAR \_ \_ TEXT-Flag** fest.
+    -   Wenn **fAllowLoggedOnUser** auf **TRUE** festgelegt ist, legen Sie das **FLAG MFNET AUTHENTICATION \_ \_ LOGGED ON \_ \_ USER** fest.
+3.  Die [**GetCredential-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) gibt einen [**POINTERNetCredential-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) und möglicherweise das REQUIRE \_ PROMPT-Flag zurück. Store dem **POINTERNetCredential-Zeiger.**
+4.  Wenn [**GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) das **REQUIRE \_ PROMPT-Flag** nicht zurückgibt, sind Sie fertig. Fahren Sie mit Schritt 9 fort.
+5.  Andernfalls müssen Sie den Benutzer zur Eingabe seines Benutzernamens und Kennworts auffordern, wenn [**GetCredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-getcredential) das **REQUIRE \_ PROMPT-Flag** zurückgibt.
+6.  Wenn **fClearTextPackage** **FALSE** ist, verschlüsseln Sie die Anmeldeinformationen.
+7.  Rufen Sie DEN NAMEN UND das Kennwort des Benutzers für das Credentials-Objekt auf, [**um**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredential-setpassword) [**DIE**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredential-setuser) NAMEN UND KENNWÖRTER DES Benutzers festzulegen.
+8.  Rufen Sie optional [**ÜBERNETCredentialCache::SetUserOptions**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-setuseroptions) auf, um das Cacheobjekt für Anmeldeinformationen mit den Einstellungen des Benutzers zum Speichern und Senden von Anmeldeinformationen zu aktualisieren.
+9.  Rufen Sie den [**RÜCKRUF FÜR ASYNCHRONCALLBACK**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) auf, indem Sie [**MFInvokeCallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback)aufrufen.
 
-Geben Sie in der [**IMF netkredentialmanager:: endgetcredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-endgetcredentials) -Methode den [**IMF netcredential**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) -Zeiger zurück, der in der [**begingetcreden-**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) Methode abgerufen wurde.
+Geben Sie in der [**SFCNetCredentialManager::EndGetCredentials-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-endgetcredentials) den in der [**BeginGetCredentials-Methode abgerufenen**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) [**POINTERNetCredential-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) zurück.
 
-Übergeben Sie in der [**imfnetkredentialmanager:: setgood**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-setgood) -Methode die Eingabeparameter direkt an die [**imfnetkredentialcache:: setgood**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-setgood) -Methode. Dadurch wird der Anmelde Informations Cache benachrichtigt, ob die Anmelde Informationen vom Server akzeptiert wurden.
+Übergeben Sie die Eingabeparameter in der [**METHODE VONNETCredentialManager::SetGood**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-setgood) direkt an die [**METHODE "LIXNetCredentialCache::SetGood".**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialcache-setgood) Dadurch wird der Anmeldeinformationscache benachrichtigt, ob die Anmeldeinformationen vom Server akzeptiert wurden.
 
-Wenn Sie den Benutzer auffordern müssen (Schritt 5) oder die Anmelde Informationen verschlüsseln (Schritt 6), sollten Sie dies in einem Arbeits Warteschlangen Thread tun, sodass Sie die Microsoft Media Foundation Pipeline nicht blockieren. Rufen Sie [**mfputworkitem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) auf, und führen Sie dann die restlichen Schritte innerhalb des Arbeits Warteschlangen Rückrufs aus.
+Wenn Sie den Benutzer auffordern (Schritt 5) oder die Anmeldeinformationen verschlüsseln müssen (Schritt 6), sollten Sie dies in einem Arbeitswarteschlangenthread tun, damit Sie die Microsoft Media Foundation Pipeline nicht blockieren. Rufen Sie [**MFPutWorkItem auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) und führen Sie dann die verbleibenden Schritte innerhalb des Work-Queue-Rückrufs aus.
 
 > [!Note]  
-> Beachten Sie, dass [**begingetanmeldeinformationen**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) möglicherweise aufgerufen werden, während die Netzwerkquelle erstellt wird. Wenn Sie daher die Netzwerkquelle durch Aufrufen der synchronen [**imfsourceresolver:: createobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) -Methode erstellen, kann der aufrufenden Thread blockieren, während die Anmelde Informationen abgerufen werden. Daher wird empfohlen, stattdessen die asynchrone [**imfsourceresolver:: beginkreateobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl) -Methode zu verwenden.
+> Beachten Sie, dass [**BeginGetCredentials**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) während der Erstellung der Netzwerkquelle aufgerufen werden kann. Wenn Sie daher die Netzwerkquelle durch Aufrufen der synchronen [**SYNCHRONENSOURCEResolver::CreateObjectFromURL-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl) erstellen, wird ihr aufrufender Thread möglicherweise blockiert, während die Anmeldeinformationen erfasst werden. Aus diesem Grund wird empfohlen, stattdessen die asynchrone [**ASYNCHRONOUSSOURCEResolver::BeginCreateObjectFromURL-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl) zu verwenden.
 
  
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt eine Art von Verhalten, das von einem Anmelde Informationen-Manager bereitgestellt werden kann.
+Dieses Beispiel zeigt eine Art von Verhalten, die ein Anmeldeinformations-Manager bereitstellen kann.
 
-Hier ist eine Deklaration der-Klasse, die [**IMF netkredentialmanager**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredentialmanager)implementiert.
+Im Folgenden finden Sie eine Deklaration der -Klasse, die [**DASNETCredentialManager**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredentialmanager)implementiert.
 
 
 ```C++
@@ -119,7 +119,7 @@ public:
 
 
 
-Zum Nachverfolgen des Status des [**begingetanmelde**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) -Vorgangs verwendet die-Klasse das folgende Hilfsobjekt:
+Um den Status des [**BeginGetCredentials-Vorgangs**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) nachzuverfolgen, verwendet die -Klasse das folgende Hilfsobjekt:
 
 
 ```C++
@@ -172,7 +172,7 @@ struct CredentialOp : public IUnknown
 
 
 
-Die [**begingetcredential**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) -Methode erstellt den Anmelde Informations Cache und Ruft einen [**IMF netcredential**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) -Zeiger ab. Wenn der Benutzer aufgefordert werden muss (angegeben durch das Flag zum Anfordern von **\_ Eingabeaufforderung** ), ruft die Methode [**mfputworkitem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) auf, um eine neue Arbeitsaufgabe in die Warteschlange zu stellen:
+Die [**BeginGetCredentials-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials) erstellt den Anmeldeinformationscache und ruft einen [**POINTERNetCredential-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) ab. Wenn der Benutzer aufgefordert werden muss (angegeben durch das **REQUIRE \_ PROMPT-Flag),** ruft die Methode [**MFPutWorkItem**](/windows/desktop/api/mfapi/nf-mfapi-mfputworkitem) auf, um ein neues Arbeitselement in die Warteschlange zu stellen:
 
 
 ```C++
@@ -287,7 +287,7 @@ done:
 
 
 
-Der Arbeits Warteschlangen Thread ruft " [**aufrufen**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke)" auf, der den Benutzer auffordert und dann " [**mfinvokecallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) " aufruft, um den Rückruf Zeiger aufzurufen, der in [**begingetanmeldeinformationen**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials)bereitgestellt wurde.
+Der Arbeitswarteschlangenthread ruft [**Invoke auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke)wodurch der Benutzer aufgefordert wird und dann [**MFInvokeCallback**](/windows/desktop/api/mfapi/nf-mfapi-mfinvokecallback) aufgerufen wird, um den Rückrufzeiger aufzurufen, der in [**BeginGetCredentials**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-begingetcredentials)bereitgestellt wurde.
 
 
 ```C++
@@ -343,7 +343,7 @@ STDMETHODIMP CCredentialManager::Invoke(IMFAsyncResult* pResult)
 
 
 
-Die [**endgetcredensmethode**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-endgetcredentials) schließt den Vorgang ab, indem der [**imfnetcredential**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) -Zeiger an den Aufrufer zurückgegeben wird.
+Die [**EndGetCredentials-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfnetcredentialmanager-endgetcredentials) schließt den Vorgang ab, indem der [**POINTERNetCredential-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetcredential) an den Aufrufer zurückgegeben wird.
 
 
 ```C++
@@ -393,7 +393,7 @@ done:
 
 <dl> <dt>
 
-[Netzwerk Quellen Authentifizierung](network-source-authentication.md)
+[Netzwerkquellauthentifizierung](network-source-authentication.md)
 </dt> </dl>
 
  

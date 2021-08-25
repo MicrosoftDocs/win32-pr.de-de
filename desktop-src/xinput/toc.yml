@@ -1,40 +1,40 @@
-- name: Xinput-Spiel Controller-APIs
+- name: XInput Game Controller-APIs
   href: xinput-game-controller-apis-portal.md
   items:
     - name: Programmierhandbuch
       href: programming-guide.md
       items:
-        - name: Einstieg in xinput
+        - name: Erste Schritte mit XInput
           href: getting-started-with-xinput.md
-        - name: Xinput-Versionen
+        - name: XInput-Versionen
           href: xinput-versions.md
         - name: XInput und DirectInput
           href: xinput-and-directinput.md
-        - name: DirectInput-und xusb-Geräte
+        - name: DirectInput- und XUSB-Geräte
           href: directinput-and-xusb-devices.md
-        - name: XInput-und Controller-Untertypen
+        - name: XINPUT- und Controlleruntertypen
           href: xinput-and-controller-subtypes.md
     - name: Programmierverzeichnis
       href: programming-reference.md
       items:
-        - name: Functions
+        - name: Funktionen
           href: functions.md
           items:
-            - name: Xinputenable
+            - name: XInputEnable
               href: /windows/desktop/api/XInput/nf-xinput-xinputenable
-            - name: Xinputgetaudiodeaktiviert
+            - name: XInputGetAudioDeviceIds
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetaudiodeviceids
-            - name: Xinputgetbatteryinformation
+            - name: XInputGetBatteryInformation
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetbatteryinformation
-            - name: Xinputgetfunktionalitäten
+            - name: XInputGetCapabilities
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetcapabilities
-            - name: Xinputgetdsoundaudiodeviceguids
+            - name: XInputGetDSoundAudioDeviceGuids
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetdsoundaudiodeviceguids
-            - name: Xinputgetkeystroke
+            - name: XInputGetKeystroke
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetkeystroke
-            - name: Xinputgetstate
+            - name: XInputGetState
               href: /windows/desktop/api/XInput/nf-xinput-xinputgetstate
-            - name: Xinputsetstate
+            - name: XInputSetState
               href: /windows/desktop/api/XInput/nf-xinput-xinputsetstate
         - name: Strukturen
           href: structures.md

@@ -1,37 +1,37 @@
 ---
-description: 'Signalisiert einen schwerwiegenden Fehler. Jede Media Foundation Komponente kann dieses Ereignis jederzeit senden. Wenn Sie imfmediaevent:: GetStatus aufrufen, erhalten Sie den Fehlercode des Vorgangs, bei dem ein Fehler aufgetreten ist.'
+description: Signalisiert einen schwerwiegenden Fehler. Jedes Media Foundation kann dieses Ereignis jederzeit senden. Rufen Sie DIEMEDIAEvent::GetStatus auf, um den Fehlercode des fehlgeschlagenen Vorgangs zu erhalten.
 ms.assetid: bff80041-77d8-43b1-a410-9cefaf45eb2c
-title: Meerror-Ereignis (mfobjects. h)
+title: MEError-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0eb557dffb2c73a63031a193c331edabe470db7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd012bf7fbb7f21f37201a67f5c203f5981be6aa16795e2a3c37d16ea268f67c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941470"
 ---
-# <a name="meerror-event"></a>Meerror-Ereignis
+# <a name="meerror-event"></a>MEError-Ereignis
 
-Signalisiert einen schwerwiegenden Fehler. Jede Media Foundation Komponente kann dieses Ereignis jederzeit senden. [**Wenn Sie imfmediaevent:: GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) aufrufen, erhalten Sie den Fehlercode des Vorgangs, bei dem ein Fehler aufgetreten ist.
+Signalisiert einen schwerwiegenden Fehler. Jedes Media Foundation kann dieses Ereignis jederzeit senden. Rufen [**Sie DIEMEDIAEvent::GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) auf, um den Fehlercode des fehlgeschlagenen Vorgangs zu erhalten.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis sollte nur für unerwartete Fehler verwendet werden. Senden Sie dieses Ereignis nicht, um zu signalisieren, dass eine asynchrone Methode fehlgeschlagen ist. Wenn eine asynchrone Methode fehlschlägt, wird der Fehlercode im normalen Ereignis für diese Methode zurückgegeben.
+Dieses Ereignis sollte nur für unerwartete Fehler verwendet werden. Senden Sie dieses Ereignis nicht, um zu signalisieren, dass eine asynchrone Methode fehlgeschlagen ist. Wenn bei einer asynchronen Methode ein Fehler auftritt, wird der Fehlercode im normalen Ereignis für diese Methode zurückgegeben.
 
-Wenn beim Streaming ein BEHEB barer Fehler auftritt, senden Sie das [menonfatalerror](menonfatalerror.md) -Ereignis.
+Wenn während des Streamings ein behebbarer Fehler auftritt, senden Sie das [MENonFatalError-Ereignis.](menonfatalerror.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Wenn beim Streaming ein BEHEB barer Fehler auftritt, senden Sie das [menonfatale
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Wenn beim Streaming ein BEHEB barer Fehler auftritt, senden Sie das [menonfatale
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

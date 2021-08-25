@@ -1,7 +1,7 @@
 ---
-description: Enthält das Ziel des Link Objekts.
+description: Enthält das Ziel des Linkobjekts.
 ms.assetid: 26da562b-a1d6-4150-9d9a-05b11e3972d9
-title: IShellLinkDual2. Target-Eigenschaft (Shldisp. h)
+title: IShellLinkDual2.Target-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 8e5f29623cf94ef5f17f06e52337928c0c345e42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3319e84abc32887d7cf7a9126ea9ae0f57b9607f937256b8377030fdd9dd75cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119884320"
 ---
-# <a name="ishelllinkdual2target-property"></a>IShellLinkDual2. Target-Eigenschaft
+# <a name="ishelllinkdual2target-property"></a>IShellLinkDual2.Target-Eigenschaft
 
-Enthält das Ziel des Link Objekts.
+Enthält das Ziel des Linkobjekts.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ Target = IShellLinkDual2.Target
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Objekt Ausdruck, der das [**folderItem**](folderitem.md) -Objekt des Ziels ergibt.
+Ein Objektausdruck, der zum [**FolderItem-Objekt**](folderitem.md) des Ziels ausgewertet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das **Ziel verwendet, um das Ziel einer** Verknüpfung zu Internet Explorer abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Target** verwendet, um das Ziel einer Verknüpfung zum Internet Explorer abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -83,7 +83,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -168,28 +168,28 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**IShellLinkDual2**](ishelllinkdual2-object.md)
 </dt> <dt>
 
-[**Shelllinkobject**](shelllinkobject-object.md)
+[**ShellLinkObject**](shelllinkobject-object.md)
 </dt> </dl>
 
  

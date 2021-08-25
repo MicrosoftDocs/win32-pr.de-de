@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen zur API. jetgetcurrsorinfo-Methode
-title: API. jetgetcurrsorinfo-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetCursorInfo-Methode'
+title: Api.JetGetCursorInfo-Methode
 TOCTitle: 'JetGetCursorInfo method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetCursorInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetcursorinfo(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7144283a062b0097d6866e74d1c263bb130c5e19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8203d541db2596f4d691c055aba83e3b6b76163f7b5949e3b62d6e46256d8b28
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841040"
 ---
-# <a name="apijetgetcursorinfo-method"></a>API. jetgetcurrsorinfo-Methode
+# <a name="apijetgetcursorinfo-method"></a>Api.JetGetCursorInfo-Methode
 
-Bestimmen, ob ein Update des aktuellen Datensatzes eines Cursors zu einem Schreib Konflikt führt, basierend auf dem aktuellen Update Status des Datensatzes. Es ist möglich, dass ein Schreib Konflikt letztendlich zurückgegeben wird, auch wenn jetgetcurrsorinfo erfolgreich zurückgegeben wurde. Da eine andere Sitzung den Datensatz aktualisieren kann, bevor die aktuelle Sitzung denselben Datensatz aktualisieren kann.
+Bestimmen Sie, ob eine Aktualisierung des aktuellen Datensatzes eines Cursors basierend auf dem aktuellen Updatestatus des Datensatzes zu einem Schreibkonflikt führt. Es ist möglich, dass letztendlich ein Schreibkonflikt zurückgegeben wird, auch wenn JetGetCursorInfo erfolgreich zurückgegeben wird. weil der Datensatz von einer anderen Sitzung aktualisiert werden kann, bevor die aktuelle Sitzung denselben Datensatz aktualisieren kann.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,24 +60,24 @@ public static void JetGetCursorInfo(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der zu Überprüfung Ende Cursor.
+    Der zu überprüfende Cursor.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

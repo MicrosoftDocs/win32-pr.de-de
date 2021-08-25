@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmsecurity getrevocationdata-Methode (wmdrmsdk. h)
-description: Die getrevocationdata-Methode ruft eine Zertifikat Sperr Liste aus dem lokalen Speicher ab.
+title: IWMDRMSecurity GetRevocationData-Methode (Wmdrmsdk.h)
+description: Die GetRevocationData-Methode ruft eine Zertifikatsperrliste aus dem lokalen Speicher ab.
 ms.assetid: 218f4f3a-02bc-4b1d-9320-e35ed8cc3b11
 keywords:
-- Getrevocationdata-Methode, Windows Media-Format
-- Getrevocationdata-Methode, Windows Media-Format, iwmdrmsecurity-Schnittstelle
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format, getrevocationdata-Methode
+- GetRevocationData-Methode windows Media Format
+- GetRevocationData-Methode windows Media Format , IWMDRMSecurity-Schnittstelle
+- IWMDRMSecurity-Schnittstelle windows Media Format , GetRevocationData-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c38e9e0b428a3922f84141ef855d8468b79b3bb2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c5035bc94051c61baaef7bcf474b4d6ebb4413b549dfff038bae7105f32d087b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808480"
 ---
-# <a name="iwmdrmsecuritygetrevocationdata-method"></a>Iwmdrmsecurity:: getrevocationdata-Methode
+# <a name="iwmdrmsecuritygetrevocationdata-method"></a>IWMDRMSecurity::GetRevocationData-Methode
 
-Die **getrevocationdata** -Methode ruft eine Zertifikat Sperr Liste aus dem lokalen Speicher ab.
+Die **GetRevocationData-Methode** ruft eine Zertifikatsperrliste aus dem lokalen Speicher ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,18 +45,18 @@ HRESULT GetRevocationData(
 
 <dl> <dt>
 
-*f \_ guidrevocationtype* \[ in\]
+*f \_ guidRevocationType* \[ in\]
 </dt> <dd>
 
-GUID, die den Typ der abzurufenden Sperr Liste identifiziert. Verwenden Sie eine der-Konstanten in der folgenden Tabelle.
+GUID, die den Typ der abzurufenden Sperrliste identifiziert. Verwenden Sie eine der Konstanten in der folgenden Tabelle.
 
 
 
-| GUID-Konstante                 | BESCHREIBUNG                                                                      |
+| GUID-Konstante                 | Beschreibung                                                                      |
 |-------------------------------|----------------------------------------------------------------------------------|
-| WMDRM- \_ revocationtype- \_ App    | Gibt die Sperr Liste für das Anwendungs Zertifikat an.                           |
-| WMDRM- \_ revocationtype- \_ Gerät | Gibt die Zertifikat Sperr Liste für das Gerät an.                                |
-| WMDRM \_ revocationtype \_ Cardea | Gibt die Zertifikat Sperr Liste für Windows Media DRM für Netzwerkgeräte an. |
+| WMDRM \_ \_ REVOCATIONTYPE-APP    | Gibt die Sperrliste des Anwendungszertifikats an.                           |
+| WMDRM \_ REVOCATIONTYPE \_ DEVICE | Gibt die Sperrliste des Gerätezertifikats an.                                |
+| WMDRM \_ REVOCATIONTYPE \_ CARDEA | Gibt die Zertifikatsperrliste Windows Medien-DRM für Netzwerkgeräte an. |
 
 
 
@@ -64,23 +64,23 @@ GUID, die den Typ der abzurufenden Sperr Liste identifiziert. Verwenden Sie eine
 
 </dd> <dt>
 
-*f \_ pbcrl* \[ out\]
+*f \_ pbCRL* \[ out\]
 </dt> <dd>
 
-Puffer, der die Sperr Liste empfängt. Auf **null** festgelegt, um die erforderliche Puffergröße zu erhalten.
+Puffer, der die Sperrliste empfängt. Legen Sie auf **NULL** fest, um die erforderliche Puffergröße abzurufen.
 
 </dd> <dt>
 
-*f \_ pcbcrl* \[ in, out\]
+*f \_ lpCRL* \[ in, out\]
 </dt> <dd>
 
-Größe des Puffers in Byte. Wenn *f \_ pbcrl* **null** ist, wird dieser Wert auf die erforderliche Puffergröße bei der Ausgabe festgelegt.
+Größe des Puffers in Byte. Wenn *f \_ pbCRL* **NULL** ist, wird dieser Wert bei der Ausgabe auf die erforderliche Puffergröße festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -98,8 +98,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -107,16 +107,16 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Automatisierte Sperrung und Erneuerung von Komponenten**](automated-component-revocation-and-renewal.md)
+[**Automatisierte Komponentensperrung und -verlängerung**](automated-component-revocation-and-renewal.md)
 </dt> <dt>
 
-[**Getrevocationdataversion**](iwmdrmsecurity-getrevocationdataversion.md)
+[**GetRevocationDataVersion**](iwmdrmsecurity-getrevocationdataversion.md)
 </dt> <dt>
 
-[**Iwmdrmsecurity-Schnittstelle**](iwmdrmsecurity.md)
+[**IWMDRMSecurity-Schnittstelle**](iwmdrmsecurity.md)
 </dt> <dt>
 
-[**"Abtrevocationdata"**](iwmdrmsecurity-setrevocationdata.md)
+[**SetRevocationData**](iwmdrmsecurity-setrevocationdata.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Runlevel (runleveltype)-Element
-description: Enthält einen Wert, der die Sicherheitskontext Ebene zum Ausführen des Tasks angibt.
+title: RunLevel(runLevelType)-Element
+description: Enthält einen -Wert, der die Sicherheitskontextebene für die Ausführung der Aufgabe angibt.
 ms.assetid: dc113ffa-8ac9-4dcd-a106-45295da42f46
 keywords:
-- Runlevel-Element Taskplaner
+- RunLevel-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9d374f5b9ad388f3ad0a626e1b99ecae96eeef1a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 143db96de30e647c67abadc2a9fb4384ae9784604b9c679efd9de5fd2157f923
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991090"
 ---
-# <a name="runlevel-runleveltype-element"></a>Runlevel (runleveltype)-Element
+# <a name="runlevel-runleveltype-element"></a>RunLevel(runLevelType)-Element
 
-Enthält einen Wert, der die Sicherheitskontext Ebene zum Ausführen des Tasks angibt. Sie können angeben, dass eine Aufgabe mit den geringsten Rechten oder erhöhten Rechten ausgeführt werden soll. Der Wert 0 gibt an, dass der Task mit den niedrigsten Berechtigungen ausgeführt wird, und der Wert 1 gibt an, dass der Task mit erhöhten Rechten ausgeführt wird.
+Enthält einen -Wert, der die Sicherheitskontextebene für die Ausführung der Aufgabe angibt. Sie können angeben, dass eine Aufgabe mit den geringsten Rechten oder erhöhten Rechten ausgeführt werden soll. Der Wert 0 gibt an, dass die Aufgabe mit den niedrigsten Berechtigungen ausgeführt werden soll, und der Wert 1 gibt an, dass die Aufgabe mit erhöhten Rechten ausgeführt werden soll.
 
 ``` syntax
 <xs:element name="RunLevel"
@@ -30,27 +30,27 @@ Enthält einen Wert, der die Sicherheitskontext Ebene zum Ausführen des Tasks a
  />
 ```
 
-Das **Runlevel** -Element wird durch den einfachen [**runleveltype**](taskschedulerschema-runleveltype-simpletype.md) -Typ definiert.
+Das **RunLevel-Element** wird durch den einfachen [**RunLevelType-Typ**](taskschedulerschema-runleveltype-simpletype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                  | Abgeleitet von                                                           | BESCHREIBUNG                                                                                                                           |
+| Element                                                                                  | Abgeleitet von                                                           | Beschreibung                                                                                                                           |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Prinzipal (principaltype)**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an. Mit diesen Anmelde Informationen wird der Sicherheitskontext definiert, unter dem eine Aufgabe ausgeführt wird. <br/> |
+| [**Principal (principalType)**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an. Diese Anmeldeinformationen definieren den Sicherheitskontext, unter dem ein Task ausgeführt wird. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Runlevel-Eigenschaft von IPrincipal**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_runlevel).
+Informationen zur C++-Entwicklung finden Sie unter [**RunLevel-Eigenschaft von IPrincipal**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_runlevel).
 
-Informationen zur Skript Entwicklung finden Sie unter [**Principal. Runlevel**](principal-runlevel.md).
+Informationen zur Skriptentwicklung finden Sie unter [**Principal.RunLevel**](principal-runlevel.md).
 
-Wenn eine Aufgabe mit dem integrierten **\\ Administrator** Konto oder den Konten " [LocalSystem](/windows/desktop/Services/localsystem-account) " oder " [LocalService](/windows/desktop/Services/localservice-account) " registriert wird, wird die [**Runlevel**](principal-runlevel.md) -Eigenschaft ignoriert. Der Attribut Wert wird auch ignoriert, wenn die [Benutzerkontensteuerung (User Account Control](/windows/desktop/SecAuthZ/user-account-control) , UAC) ausgeschaltet ist.
+Wenn eine Aufgabe mithilfe des **integrierten \\ Administratorkontos** oder des [LocalSystem-](/windows/desktop/Services/localsystem-account) oder [LocalService-Kontos](/windows/desktop/Services/localservice-account) registriert wird, wird die [**RunLevel-Eigenschaft**](principal-runlevel.md) ignoriert. Der Attributwert wird auch ignoriert, wenn die Benutzerkontensteuerung (User [Account Control,](/windows/desktop/SecAuthZ/user-account-control) UAC) deaktiviert ist.
 
-Wenn eine Aufgabe mithilfe der Gruppe " **Administratoren** " für den Sicherheitskontext der Aufgabe registriert wird, müssen Sie die [**Runlevel**](principal-runlevel.md) -Eigenschaft auch auf "highestAvailable" festlegen, um die Aufgabe auszuführen. Weitere Informationen finden Sie unter [Sicherheits Kontexte für Aufgaben](security-contexts-for-running-tasks.md).
+Wenn eine Aufgabe mithilfe der Gruppe Administratoren für den Sicherheitskontext der Aufgabe registriert wird, müssen Sie auch die [**RunLevel-Eigenschaft**](principal-runlevel.md) auf "HighestAvailable" festlegen, um die Aufgabe auszuführen.  Weitere Informationen finden Sie unter [Sicherheitskontexte für Tasks.](security-contexts-for-running-tasks.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,8 +58,8 @@ Wenn eine Aufgabe mithilfe der Gruppe " **Administratoren** " für den Sicherhei
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

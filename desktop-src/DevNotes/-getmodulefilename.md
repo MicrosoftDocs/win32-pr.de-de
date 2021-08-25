@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Msmdun80.dll
 - Sqlunirl.dll
-ms.openlocfilehash: 5bf18e8baac62de6474f4ce1e48a0ae115ced778
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a10ff54d7f118dc71e12cdb5b29e28d3b3dd6e60c7b51c263af8c62c1264968c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911920"
 ---
 # <a name="_getmodulefilename-function"></a>\_GetModuleFileName-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **GetModuleFileName** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetModuleFileName** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **GetModuleFileName-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetModuleFileName** direkt aufrufen.\]
 
-Ruft den Modulpfad ab. Siehe [**GetModuleFileName**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea).
+Ruft den Modulpfad ab. Weitere Informationen finden Sie unter [**GetModuleFileName**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea).
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,11 +55,11 @@ DWORD _GetModuleFileName(
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Fehler bei GetModuleFileName**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)
+[**GetModuleFileName**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)
 </dt> </dl>
 
  

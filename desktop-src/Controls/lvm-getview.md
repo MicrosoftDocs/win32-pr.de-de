@@ -1,9 +1,9 @@
 ---
-title: LVM_GETVIEW Meldung (kommstrg. h)
-description: Ruft die aktuelle Ansicht eines Listenansicht-Steuer Elements ab.
+title: LVM_GETVIEW (Commctrl.h)
+description: Ruft die aktuelle Ansicht eines Listenansicht-Steuerelements ab.
 ms.assetid: dd63e726-3a7f-40e7-8d46-4680816c02a3
 keywords:
-- Windows-Steuerelemente für LVM_GETVIEW Meldung
+- LVM_GETVIEW meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2da295fa5a5b335de60169ce06b777d9e355121
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 431b0a7b3fba9a45370c372347285489a56082c4a04396c273a45c4da41b05b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915510"
 ---
-# <a name="lvm_getview-message"></a>LVM \_ GetView-Nachricht
+# <a name="lvm_getview-message"></a>LVM \_ GETVIEW-Nachricht
 
-Ruft die aktuelle Ansicht eines Listenansicht-Steuer Elements ab.
+Ruft die aktuelle Ansicht eines Listenansicht-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,20 +37,20 @@ Ruft die aktuelle Ansicht eines Listenansicht-Steuer Elements ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **DWORD** zurück, das die aktuelle Ansicht angibt.
+Gibt ein **DWORD zurück,** das die aktuelle Ansicht angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden werden die Werte für Sichten angezeigt.
+Im Folgenden finden Sie die Werte für Sichten.
 
--   Details der LV- \_ Ansicht \_
--   Symbol für LV- \_ Ansicht \_
--   LV- \_ Ansichts \_ Liste
--   LV- \_ Ansicht \_ SmallIcon
--   LV- \_ Ansichts \_ Kachel
+-   \_ \_ LV-ANSICHTSDETAILS
+-   SYMBOL \_ FÜR \_ LV-ANSICHT
+-   LV \_ VIEW \_ LIST
+-   LV \_ VIEW \_ SMALLICON
+-   KACHEL "LV \_ \_ VIEW"
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -60,9 +60,9 @@ Im folgenden werden die Werte für Sichten angezeigt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

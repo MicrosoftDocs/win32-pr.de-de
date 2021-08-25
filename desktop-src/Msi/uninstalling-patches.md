@@ -1,46 +1,46 @@
 ---
-description: Ab Windows Installer 3,0 ist es möglich, einige Patches von Anwendungen zu deinstallieren.
+description: Ab Windows Installer 3.0 ist es möglich, einige Patches aus Anwendungen zu deinstallieren.
 ms.assetid: 11e995b7-30c7-4992-b436-3af289ac3966
-title: Patches werden deinstalliert.
+title: Deinstallieren von Patches
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff9418704bdeeb5ccc57839cbe2416faa5692265
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b10024d82bde0e902fb7f49f9af3bcfa041ca46efb1e6e19466c4acd09c805fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893360"
 ---
-# <a name="uninstalling-patches"></a>Patches werden deinstalliert.
+# <a name="uninstalling-patches"></a>Deinstallieren von Patches
 
-Ab Windows Installer 3,0 ist es möglich, einige Patches von Anwendungen zu deinstallieren. Der Patch muss ein Patch sein, der [nicht installiert werden kann](uninstallable-patches.md). Wenn Sie eine Windows Installer Version verwenden, die kleiner als Version 3,0 ist, muss das Patchen von [Patches](removing-patches.md) deinstalliert und das Produkt neu installiert werden, ohne dass der Patch angewendet werden muss.
+Ab Windows Installer 3.0 ist es möglich, einige Patches aus Anwendungen zu deinstallieren. Der Patch muss ein [deinstallationsfähiger Patch](uninstallable-patches.md)sein. Wenn Sie eine Windows Installer-Version kleiner als Version 3.0 verwenden, müssen Sie zum Entfernen von [Patches](removing-patches.md) das Patchprodukt deinstallieren und das Produkt neu installieren, ohne den Patch anzuwenden.
 
-**Windows Installer 2,0:** Nicht unterstützt. Patches, die mit einer früheren Version von Windows Installer als Windows Installer 3,0 angewendet wurden, können nicht installiert werden.
+**Windows Installer 2.0:** Wird nicht unterstützt. Patches, die mit einer Version von Windows Installer angewendet werden, die älter als Windows Installer 3.0 ist, können nicht deinstalliert werden.
 
-Wenn Sie eine Neuinstallation eines Patches mit einer der folgenden Methoden aufrufen, versucht das Installationsprogramm, den Patch vom ersten Produkt zu entfernen, das für die Anwendung oder den Benutzer sichtbar ist, die die Installation anfordert. Das Installationsprogramm sucht in der folgenden Reihenfolge nach gepatchten Produkten: pro Benutzer verwaltet, nicht verwaltete Benutzer pro Computer.
+Wenn Sie eine Deinstallation eines Patches mit einer der folgenden Methoden aufrufen, versucht das Installationsprogramm, den Patch aus dem ersten Produkt zu entfernen, das für die Anwendung oder den Benutzer sichtbar ist, der die Deinstallation anfordert. Das Installationsprogramm sucht in der folgenden Reihenfolge nach gepatchten Produkten: benutzerverwaltet, pro Benutzer nicht verwaltet, pro Computer.
 
-## <a name="uninstalling-a-patch-using-msipatchremove-on-a-command-line"></a>Deinstallieren eines Patches mithilfe von "msipatchremove" in einer Befehlszeile
+## <a name="uninstalling-a-patch-using-msipatchremove-on-a-command-line"></a>Deinstallieren eines Patches mit MSIPATCHREMOVE in einer Befehlszeile
 
-Sie können Patches über einen Befehl deinstallieren, indem Sie msiexec.exe und die [Befehlszeilenoptionen](command-line-options.md)verwenden. Die folgende Beispiel Befehlszeile entfernt einen [nicht installierbaren Patch](uninstallable-patches.md), example. msp, aus einer Anwendung, example.msi mithilfe der [**msipatchremove**](msipatchremove.md) -Eigenschaft und der/i-Befehlszeilenoption. Wenn Sie/i verwenden, kann die gepatchte Anwendung durch den Pfad zum Paket der Anwendung (MSI-Datei) oder den [Produktcode](product-codes.md)der Anwendung identifiziert werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter " \\ \\ Server \\ share \\ Products \\ example \\example.msi" und die [**ProductCode**](productcode.md) -Eigenschaft der Anwendung ist "{0C9840E7-7s0b-C648-10F 0-4641926FE463}". Das Patchpaket befindet sich unter " \\ \\ Beispiele für Server \\ Freigabe \\ Produkte \\ example \\ Patches \\ example. msp" und die Patchcode-GUID "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
+Sie können Patches über einen Befehl deinstallieren, indem Sie msiexec.exe und die [Befehlszeilenoptionen verwenden.](command-line-options.md) Die folgende Beispielbefehlszeile entfernt einen [deinstallationsfähigen Patch](uninstallable-patches.md), example.msp, aus einer Anwendung example.msi mithilfe der [**MSIPATCHREMOVE-Eigenschaft**](msipatchremove.md) und der Befehlszeilenoption /i. Bei Verwendung von /i kann die gepatchte Anwendung anhand des Pfads zum Anwendungspaket (.msi-Datei) oder zum [Produktcode](product-codes.md)der Anwendung identifiziert werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter "Beispiel für \\ \\ \\ \\ Serverfreigabeprodukte \\ \\example.msi", und die [**ProductCode-Eigenschaft**](productcode.md) der Anwendung lautet "{0C9840E7-7F0B-C648-10F0-4641926FE463}". Das Patchpaket befindet sich unter \\ \\ \\ \\ "Beispielpatches für Serverfreigabeprodukte \\ \\ \\ example.msp", und die Patchcode-GUID lautet "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
 
-**Msiexec/I {0C9840E7-7fi0b-C648-10F 0-4641926FE463} msipatchremove = {EB8C947C-78B2-85A0-644D-86CEEF8E07C0}/QB**
+**Msiexec /I {0C9840E7-7F0B-C648-10F0-4641926FE463} MSIPATCHREMOVE={EB8C947C-78B2-85A0-644D-86CEEF8E07C0} /qb**
 
-## <a name="uninstalling-a-patch-using-the-standard-command-line-options"></a>Deinstallieren eines Patches mithilfe der Standard Befehlszeilenoptionen
+## <a name="uninstalling-a-patch-using-the-standard-command-line-options"></a>Deinstallieren eines Patches mithilfe der Standardbefehlszeilenoptionen
 
-Ab Windows Installer Version 3,0 können Sie die [Standard Befehlszeilenoptionen](standard-installer-command-line-options.md) verwenden, die von Microsoft Windows-Betriebs System Updates (update.exe) verwendet werden, um Windows Installer Patches über eine Befehlszeile zu deinstallieren.
+Ab Windows Installer Version 3.0 können Sie die [Standardbefehlszeilenoptionen](standard-installer-command-line-options.md) verwenden, die von Microsoft Windows Betriebssystemupdates (update.exe) verwendet werden, um Windows Installer-Patches über eine Befehlszeile zu deinstallieren.
 
-Die folgende Befehlszeile ist die Standard Befehlszeile der Windows Installer Befehlszeile, die zum Deinstallieren eines Patches mithilfe der [**msipatchremove**](msipatchremove.md) -Eigenschaft verwendet wird. Die Option/uninstall, die mit der Option/Package verwendet wird, kennzeichnet die Installation eines Patches. Der Patch kann durch den vollständigen Pfad zum Patch oder durch die Patchcode-GUID referenziert werden.
+Die folgende Befehlszeile entspricht der Standardbefehlszeile der Windows Installer-Befehlszeile, die zum Deinstallieren eines Patches mithilfe der [**MSIPATCHREMOVE-Eigenschaft**](msipatchremove.md) verwendet wird. Die /uninstall-Option, die mit der Option /package verwendet wird, gibt die Deinstallation eines Patches an. Auf den Patch kann über den vollständigen Pfad zum Patch oder über die Patchcode-GUID verwiesen werden.
 
-**Msiexec/Package {0C9840E7-7F 0B-C648-10fi0-4641926FE463}/Uninstall {EB8C947C-78B2-85A0-644D-86CEEF8E07C0}/passive**
+**Msiexec /package {0C9840E7-7F0B-C648-10F0-4641926FE463} /uninstall {EB8C947C-78B2-85A0-644D-86CEEF8E07C0} /passive**
 
 > [!Note]  
-> Die Option/passive Standard ist keine genaue Entsprechung der Option Windows Installer/qb.
+> Die Standardoption /passive entspricht nicht exakt der Option Windows Installer /qb.
 
  
 
-## <a name="uninstalling-a-patch-using-the-removepatches-method"></a>Deinstallieren eines Patches mithilfe der removepatches-Methode
+## <a name="uninstalling-a-patch-using-the-removepatches-method"></a>Deinstallieren eines Patches mithilfe der RemovePatches-Methode
 
-Sie können Patches mithilfe der Windows Installer [Automation-Schnittstelle](automation-interface.md)aus einem Skript deinstallieren. Im folgenden Beispielskript wird ein [nicht installier barer Patch](uninstallable-patches.md), example. msp, aus einer Anwendung, example.msi, mithilfe der [**removepatches**](installer-removepatches.md) -Methode des [Installer](installer-object.md) -Objekts entfernt. Jeder Patch, der deinstalliert wird, kann entweder durch den vollständigen Pfad zum Patchpaket oder die Patchcode-GUID dargestellt werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter " \\ \\ Server \\ share \\ Products \\ example \\example.msi" und die [**ProductCode**](productcode.md) -Eigenschaft der Anwendung ist "{0C9840E7-7s0b-C648-10F 0-4641926FE463}". Das Patchpaket befindet sich unter " \\ \\ Beispiele für Server \\ Freigabe \\ Produkte \\ example \\ Patches \\ example. msp" und die Patchcode-GUID "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
+Sie können Patches über das Skript deinstallieren, indem Sie die Windows [Installer Automation Interface verwenden.](automation-interface.md) Im folgenden Skriptbeispiel wird ein [deinstallationsfähiger Patch](uninstallable-patches.md), example.msp, mithilfe der [**RemovePatches-Methode**](installer-removepatches.md) des [Installer-Objekts](installer-object.md) aus einer Anwendung example.msi entfernt. Jeder zu deinstallierende Patch kann entweder durch den vollständigen Pfad zum Patchpaket oder die Patchcode-GUID dargestellt werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter "Beispiel für \\ \\ \\ \\ Serverfreigabeprodukte \\ \\example.msi", und die [**ProductCode-Eigenschaft**](productcode.md) der Anwendung lautet "{0C9840E7-7F0B-C648-10F0-4641926FE463}". Das Patchpaket befindet sich unter \\ \\ \\ \\ "Beispielpatches für Serverfreigabeprodukte \\ \\ \\ example.msp", und die Patchcode-GUID lautet "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
 
 
 ```VB
@@ -56,13 +56,13 @@ installer.RemovePatches(PatchList, Product, msiInstallTypeSingleInstance, "")
 
 
 
-## <a name="uninstalling-a-patch-using-addremove-programs"></a>Deinstallieren eines Patches mit "Software"
+## <a name="uninstalling-a-patch-using-addremove-programs"></a>Deinstallieren eines Patches mithilfe von "Programme hinzufügen/entfernen"
 
-Mit Windows XP können Sie Patches mithilfe der Option "Software" deinstallieren.
+Mit Windows XP können Sie Patches mithilfe von Programmen zum Hinzufügen/Entfernen deinstallieren.
 
-## <a name="uninstalling-a-patch-using-the-msiremovepatches-function"></a>Deinstallieren eines Patches mithilfe der Funktion "msiremovepatches"
+## <a name="uninstalling-a-patch-using-the-msiremovepatches-function"></a>Deinstallieren eines Patches mithilfe der MsiRemovePatches-Funktion
 
-Ihre Anwendungen können Patches aus anderen Anwendungen deinstallieren, indem Sie die [Windows Installer Funktionen](installer-functions.md)verwenden. Im folgenden Codebeispiel wird ein [nicht installier barer Patch](uninstallable-patches.md), example. msp, aus einer Anwendung, example.msi, mithilfe der [**msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa) -Funktion entfernt. Auf einen Patch kann durch den vollständigen Pfad zum Patchpaket oder die Patchcode-GUID verwiesen werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter " \\ \\ Server \\ share \\ Products \\ example \\example.msi" und die [**ProductCode**](productcode.md) -Eigenschaft der Anwendung ist "{0C9840E7-7s0b-C648-10F 0-4641926FE463}". Das Patchpaket befindet sich unter " \\ \\ Beispiele für Server \\ Freigabe \\ Produkte \\ example \\ Patches \\ example. msp" und die Patchcode-GUID "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
+Ihre Anwendungen können Patches aus anderen Anwendungen deinstallieren, indem sie die [Windows Installer-Funktionen verwenden.](installer-functions.md) Im folgenden Codebeispiel wird ein [deinstallationsfähiger Patch](uninstallable-patches.md), example.msp, mithilfe der [**MsiRemovePatches-Funktion**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa) aus einer Anwendung example.msi entfernt. Auf einen Patch kann über den vollständigen Pfad zum Patchpaket oder zur Patchcode-GUID verwiesen werden. In diesem Beispiel befindet sich das Installationspaket der Anwendung unter "Beispiel für \\ \\ \\ \\ Serverfreigabeprodukte \\ \\example.msi", und die [**ProductCode-Eigenschaft**](productcode.md) der Anwendung lautet "{0C9840E7-7F0B-C648-10F0-4641926FE463}". Das Patchpaket befindet sich unter \\ \\ \\ \\ "Beispielpatches für Serverfreigabeprodukte \\ \\ \\ example.msp", und die Patchcode-GUID lautet "{EB8C947C-78B2-85A0-644D-86CEEF8E07C0}".
 
 
 ```C++
@@ -75,11 +75,11 @@ Ihre Anwendungen können Patches aus anderen Anwendungen deinstallieren, indem S
 
 
 
-## <a name="uninstalling-a-patch-from-all-applications-using-msiremovepatches-function"></a>Deinstallieren eines Patches von allen Anwendungen mithilfe der msiremovepatches-Funktion
+## <a name="uninstalling-a-patch-from-all-applications-using-msiremovepatches-function"></a>Deinstallieren eines Patches aus allen Anwendungen mithilfe der MsiRemovePatches-Funktion
 
-Mit einem einzelnen Patch können mehr als ein Produkt auf dem Computer aktualisiert werden. Eine Anwendung kann [**msienumproductsex**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa) verwenden, um alle Produkte auf dem Computer aufzulisten und zu bestimmen, ob ein Patch auf eine bestimmte Instanz des Produkts angewendet wurde. Die Anwendung kann dann den Patch mithilfe von [**msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)deinstallieren. Beispielsweise kann ein einzelner Patch mehrere Produkte aktualisieren, wenn der Patch eine Datei in einer Komponente aktualisiert, die von mehreren Produkten gemeinsam genutzt wird, und der Patch zur Aktualisierung beider Produkte verteilt wird.
+Ein einzelner Patch kann mehrere Produkte auf dem Computer aktualisieren. Eine Anwendung kann [**MsiEnumProductsEx**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa) verwenden, um alle Produkte auf dem Computer aufzuzählen und zu bestimmen, ob ein Patch auf eine bestimmte Instanz des Produkts angewendet wurde. Die Anwendung kann dann den Patch mit [**msiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)deinstallieren. Beispielsweise kann ein einzelner Patch mehrere Produkte aktualisieren, wenn der Patch eine Datei in einer Komponente aktualisiert, die von mehreren Produkten gemeinsam genutzt wird, und der Patch verteilt wird, um beide Produkte zu aktualisieren.
 
-Im folgenden Beispiel wird veranschaulicht, wie eine Anwendung die Windows Installer verwenden kann, um einen Patch aus allen Anwendungen zu entfernen, die für den Benutzer verfügbar sind. Der Patch aus Anwendungen, die pro Benutzer für einen anderen Benutzer installiert wurden, wird nicht entfernt.
+Im folgenden Beispiel wird veranschaulicht, wie eine Anwendung den Windows Installer verwenden kann, um einen Patch aus allen Anwendungen zu entfernen, die für den Benutzer verfügbar sind. Der Patch wird nicht aus Anwendungen entfernt, die pro Benutzer für einen anderen Benutzer installiert sind.
 
 
 ```C++
@@ -198,22 +198,22 @@ UINT RemovePatchFromAllVisibleapplications(LPCWSTR wszPatchToRemove)
 [Entfernen von Patches](removing-patches.md)
 </dt> <dt>
 
-[Nicht installierbare Patches](uninstallable-patches.md)
+[Deinstallationsfähige Patches](uninstallable-patches.md)
 </dt> <dt>
 
-[Patch zum Deinstallieren benutzerdefinierter Aktionen](patch-uninstall-custom-actions.md)
+[Benutzerdefinierte Aktionen zum Deinstallieren von Patches](patch-uninstall-custom-actions.md)
 </dt> <dt>
 
-[**Msipatchremove**](msipatchremove.md)
+[**MSIPATCHREMOVE**](msipatchremove.md)
 </dt> <dt>
 
-[**Msienumapplicationsex**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)
+[**MsiEnumapplicationsEx**](/windows/desktop/api/Msi/nf-msi-msienumproductsexa)
 </dt> <dt>
 
-[**Msigetpatchinfoex**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)
+[**MsiGetPatchInfoEx**](/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa)
 </dt> <dt>
 
-[**Msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
+[**MsiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
 </dt> </dl>
 
  

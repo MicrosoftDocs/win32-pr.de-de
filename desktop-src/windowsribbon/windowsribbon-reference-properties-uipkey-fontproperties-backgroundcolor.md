@@ -1,33 +1,33 @@
 ---
 title: UI_PKEY_FontProperties_BackgroundColor
-description: Bezeichnet die \_ \_ Eigenschaft "BackgroundColor" der UI pkey fontproperties \_ .
+description: Identifiziert die \_ PKEY \_ FontProperties \_ BackgroundColor-Eigenschaft der Benutzeroberfläche.
 ms.assetid: e4c9b614-db31-488d-8f05-0e6f41be39f6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bddc96dd9bfc80e0af19da4791820b8df1de0c1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 382bf9a9784954527019f608cb569f41a8903e76cd738eed889eab26a1f79deb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932500"
 ---
-# <a name="ui_pkey_fontproperties_backgroundcolor"></a>UI \_ pkey \_ fontproperties \_ BackgroundColor
+# <a name="ui_pkey_fontproperties_backgroundcolor"></a>UI \_ PKEY \_ FontProperties \_ BackgroundColor
 
-Bezeichnet die \_ \_ Eigenschaft "BackgroundColor" der UI pkey fontproperties \_ .
+Identifiziert die \_ PKEY \_ FontProperties \_ BackgroundColor-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_FontProperties_BackgroundColor
-   shellPKey = UI_PKEY_FontProperties_BackgroundColor
-   formatID = 00000309-7363-696e-8441798acf5aebb7
-   propID = 309
-   typeInfo
-      type = COLORREF
+   name = UI_PKEY_FontProperties_BackgroundColor
+   shellPKey = UI_PKEY_FontProperties_BackgroundColor
+   formatID = 00000309-7363-696e-8441798acf5aebb7
+   propID = 309
+   typeInfo
+      type = COLORREF
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-UI \_ pkey \_ fontproperties \_ BackgroundColor wird von einer Anwendung, in Verbindung mit [UI \_ pkey \_ fontproperties \_ backgroundcolortype](windowsribbon-reference-properties-uipkey-fontproperties-backgroundcolortype.md), zum Abfragen von **Text** Hervorhebungs Farb Galerie Einstellungen verwendet.
+Ui PKEY FontProperties BackgroundColor wird von einer Anwendung in Verbindung mit \_ \_ UI \_ [ \_ PKEY \_ FontProperties \_ BackgroundColorType](windowsribbon-reference-properties-uipkey-fontproperties-backgroundcolortype.md)verwendet, um Die Einstellungen des **Text Highlight-Farbkatalogs** zu abfragen.
 
 Der Standardwert ist `0x00000000`.
 
@@ -35,7 +35,7 @@ Der Standardwert ist `0x00000000`.
 
 <dl> <dt>
 
-[Schriftart Steuerelement-Eigenschaften](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [COLORREF](../gdi/colorref.md)
@@ -44,6 +44,6 @@ Der Standardwert ist `0x00000000`.
 [Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

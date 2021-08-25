@@ -1,40 +1,40 @@
 ---
-description: DirectX-Oberflächen Puffer
+description: DirectX-Oberflächenpuffer
 ms.assetid: 2c82c023-4436-4f8a-b896-7f4765f989b3
-title: DirectX-Oberflächen Puffer
+title: DirectX-Oberflächenpuffer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02211d268e23bd7185cd480bee4e4dff297293b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 746cff1489a644fd5c4144c8c0d923f11e5ca4555886e8defbce3b9b26a16a35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828270"
 ---
-# <a name="directx-surface-buffer"></a>DirectX-Oberflächen Puffer
+# <a name="directx-surface-buffer"></a>DirectX-Oberflächenpuffer
 
-Das DirectX-Oberflächen Puffer Objekt ist ein Medien Puffer, der eine Direct3D-Oberfläche verwaltet. Um eine Instanz dieses Objekts zu erstellen, rufen Sie [**mfkreatedxsurfacebuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatedxsurfacebuffer) auf und übergeben einen Zeiger auf die DirectX-Oberfläche. Der DirectX-Oberflächen Puffer macht die folgenden Schnittstellen verfügbar:
+Das DirectX-Oberflächenpufferobjekt ist ein Medienpuffer, der eine Direct3D-Oberfläche verwaltet. Um eine Instanz dieses Objekts zu erstellen, rufen [**Sie MFCreateDXSurfaceBuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatedxsurfacebuffer) auf, und übergeben Sie einen Zeiger auf die DirectX-Oberfläche. Der DirectX-Oberflächenpuffer macht die folgenden Schnittstellen verfügbar:
 
--   [**Imfmediabuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer)
--   [**IMF2DBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer)
--   [**IMF-Dienst**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
+-   [**BUFFERMediaBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediabuffer)
+-   [**2DBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer)
+-   [**VERZRGETService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
 
-Es gibt mehrere Möglichkeiten, auf den Surface-Speicher aus dem Puffer Objekt zuzugreifen:
+Es gibt mehrere Möglichkeiten, über das Pufferobjekt auf den Oberflächenspeicher zuzugreifen:
 
--   Empfohlen: [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) wird für den Puffer aufgerufen. Verwenden Sie den Dienst Bezeichner **Mr- \_ Puffer \_ Dienst**. Die-Methode gibt einen Zeiger auf die zugrunde liegende Direct3D-Oberfläche zurück.
--   [**IMF2DBuffer:: Lock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d)aufgerufen wird. Diese Methode ruft **IDirect3DSurface9:: lockrect** direkt auf der-Oberfläche auf. Die [**IMF2DBuffer:: Unlock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-unlock2d) -Methode ruft **unlockrect** auf der-Oberfläche auf.
--   Rückrufe [**imfmediabuffer:: Lock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock). Dies wird im Allgemeinen nicht empfohlen, da das-Objekt zwingt, Arbeitsspeicher von der Direct3D-Oberfläche und dann wieder zurück zu kopieren. Die [**Lock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) -Methode ist effizienter.
+-   Empfohlen: Rufen Sie IM Puffer DIE DATEI [**"CSVGetService::GetService"**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) auf. Verwenden Sie den Dienstbezeichner **MR \_ BUFFER \_ SERVICE**. Die -Methode gibt einen Zeiger auf die zugrunde liegende Direct3D-Oberfläche zurück.
+-   Rufen Sie [**DIE DATEI 2DBuffer::Lock2D auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) Diese Methode ruft **IDirect3DSurface9::LockRect** direkt auf der Oberfläche auf. Die [**UNLOCK2DBuffer::Unlock2D-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-unlock2d) ruft **UnlockRect** auf der Oberfläche auf.
+-   Rufen Sie [**DEN AUFRUF VONMEDIABUFFER::Lock auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) Im Allgemeinen wird dies nicht empfohlen, da das Objekt gezwungen wird, Speicher von der Direct3D-Oberfläche zu kopieren und dann wieder zurückzukehren. Die [**Lock2D-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) ist effizienter.
 
-Sowohl [**Lock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) als auch [**Lock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) können fehlschlagen, wenn die zugrunde liegende Oberfläche nicht Sperr fähig ist. Der DirectX-Oberflächen Puffer implementiert diese beiden Methoden primär für Komponenten, die nicht für die Verwendung mit Direct3D-Oberflächen entwickelt wurden.
+Sowohl [**Lock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) als auch [**Lock2D**](/windows/desktop/api/mfobjects/nf-mfobjects-imf2dbuffer-lock2d) können fehlschlagen, wenn die zugrunde liegende Oberfläche nicht gesperrt werden kann. Der DirectX-Oberflächenpuffer implementiert diese beiden Methoden hauptsächlich für Komponenten, die nicht für die Arbeit mit Direct3D-Oberflächen konzipiert sind.
 
-Der Enhanced Video Renderer (EVR) erstellt DirectX-Oberflächen Puffer, wenn der Decoder nicht für die DirectX-Videobeschleunigung (DXVA) konfiguriert ist. Weitere Informationen finden Sie unter [**IMF videosamplezuordcator**](/windows/desktop/api/mfidl/nn-mfidl-imfvideosampleallocator).
+Der erweiterte Videorenderer (Enhanced Video Renderer, EVR) erstellt DirectX-Oberflächenpuffer, wenn der Decoder nicht für DirectX Video Acceleration (DXVA) konfiguriert ist. Weitere Informationen finden Sie unter [**DEM THEMAVIDEOSampleAllocator.**](/windows/desktop/api/mfidl/nn-mfidl-imfvideosampleallocator)
 
 ### <a name="obtaining-the-direct3d-surface"></a>Abrufen der Direct3D-Oberfläche
 
-Gehen Sie folgendermaßen vor, um eine Direct3D-Oberfläche aus einem Video Beispiel zu erhalten:
+Gehen Sie wie folgt vor, um eine Direct3D-Oberfläche aus einem Videobeispiel abzurufen:
 
-1.  Aufrufen von [**imfsample:: getbufferbyindex**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-getbufferbyindex) mit einem Indexwert von 0 (null).
-2.  Aufrufen von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) und angeben des Dienst Bezeichners für den **Mr- \_ Puffer \_ Dienst** .
+1.  Rufen Sie [**DEN NOTSAMPLE::GetBufferByIndex**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-getbufferbyindex) mit dem Indexwert 0 (null) auf.
+2.  Rufen Sie [**MFGetService**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) auf, und geben Sie den DIENSTbezeichner **MR BUFFER \_ \_ SERVICE** an.
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -63,10 +63,10 @@ HRESULT GetD3DSurfaceFromSample(IMFSample *pSample, IDirect3DSurface9 **ppSurfac
 
 <dl> <dt>
 
-[Medien Puffer](media-buffers.md)
+[Medienpuffer](media-buffers.md)
 </dt> <dt>
 
-[Video Beispiele](video-samples.md)
+[Videobeispiele](video-samples.md)
 </dt> </dl>
 
  

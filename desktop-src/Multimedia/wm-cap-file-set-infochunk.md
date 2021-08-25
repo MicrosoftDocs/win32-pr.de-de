@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_FILE_SET_INFOCHUNK Meldung (VFW. h)
-description: Die WM \_ \_ -Cap \_ -Datei Satz \_ -Infoblock-Nachricht legt Informationsblöcke fest und löscht diese.
+title: WM_CAP_FILE_SET_INFOCHUNK-Nachricht (Vfw.h)
+description: Die WM \_ CAP \_ FILE SET \_ \_ INFOCHUNK-Meldung legt Informationsblöcke fest und löscht sie.
 ms.assetid: 67d11a05-a2b4-45d2-ba66-83a198745303
 keywords:
-- WM_CAP_FILE_SET_INFOCHUNK-Nachricht (Multimedia)
+- WM_CAP_FILE_SET_INFOCHUNK Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 067ba00563a5ca511f13b23615fc4542090ba397
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 06d64f88a87af63e5afc513e0e2cf2df53d64570bec099a2f8f2846d781fc0b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892070"
 ---
-# <a name="wm_cap_file_set_infochunk-message"></a>WM- \_ Abdeckungs \_ Datei \_ Satz- \_ infochunk-Nachricht
+# <a name="wm_cap_file_set_infochunk-message"></a>WM \_ CAP FILE SET \_ \_ \_ INFOCHUNK-Meldung
 
-Die **WM- \_ Cap- \_ Datei Satz- \_ \_ Infoblock** -Nachricht legt Informationsblöcke fest und löscht diese. Informationsblöcke können während der Erfassung in eine AVI-Datei eingefügt werden, um Text Zeichenfolgen oder benutzerdefinierte Daten einzubetten. Sie können diese Nachricht explizit oder mithilfe des [**capflesetinfochunk**](/windows/desktop/api/Vfw/nf-vfw-capfilesetinfochunk) -Makros senden.
+Die **WM CAP FILE SET \_ \_ \_ \_ INFOCHUNK-Meldung** legt Informationsblöcke fest und löscht sie. Informationsblöcke können während der Erfassung in eine AVI-Datei eingefügt werden, um Textzeichenfolgen oder benutzerdefinierte Daten einzubetten. Sie können diese Nachricht explizit oder mithilfe des [**Makros capFileSetInfoChunk**](/windows/desktop/api/Vfw/nf-vfw-capfilesetinfochunk) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = (LPARAM) (LPCAPINFOCHUNK) (lpInfoChunk);
 
 <dl> <dt>
 
-<span id="lpInfoChunk"></span><span id="lpinfochunk"></span><span id="LPINFOCHUNK"></span>*lpinfochunk*
+<span id="lpInfoChunk"></span><span id="lpinfochunk"></span><span id="LPINFOCHUNK"></span>*lpInfoChunk*
 </dt> <dd>
 
-Ein Zeiger auf eine [**capinfochunk**](/windows/win32/api/vfw/ns-vfw-capinfochunk) -Struktur, die den zu erstellenden oder zu löschenden Informationsblock definiert.
+Zeiger auf eine [**CAPINFOCHUNK-Struktur,**](/windows/win32/api/vfw/ns-vfw-capinfochunk) die den zu erstellenden oder zu löschenden Informationsabschnitt definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-Wenn ein Fehler auftritt und eine Fehler Rückruffunktion mithilfe der WM- [**\_ Cap- \_ \_ Rückruf \_ Fehlermeldung**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehler Rückruffunktion aufgerufen.
+Wenn ein Fehler auftritt und eine Fehlerrückruffunktion mithilfe der [**WM \_ CAP SET \_ \_ CALLBACK \_ ERROR-Meldung**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehlerrückruffunktion aufgerufen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einer AVI-Datei können mehrere registrierte Informations Segmente hinzugefügt werden. Nachdem ein Informationsblock festgelegt wurde, wird er weiterhin zu nachfolgenden Erfassungs Dateien hinzugefügt, bis entweder der Eintrag gelöscht oder alle Informationsblock Einträge gelöscht werden. Um einen einzelnen Eintrag zu löschen, geben Sie die Informationen im Member **fccinfoid** und **null** im **lpdata** -Member der [**capinfochunk**](/windows/win32/api/vfw/ns-vfw-capinfochunk) -Struktur an. Wenn Sie alle Einträge löschen möchten, geben Sie **null** in **fccinfoid** an.
+Einer AVI-Datei können mehrere registrierte Informationsblöcke hinzugefügt werden. Nachdem ein Informationsblöcke festgelegt wurde, wird er den nachfolgenden Aufzeichnungsdateien hinzugefügt, bis entweder der Eintrag gelöscht oder alle Einträge für Informationsblöcke gelöscht wurden. Um einen einzelnen Eintrag zu löschen, geben Sie den Informationsabschnitt im **fccInfoID-Member** und **NULL** im **lpData-Member** der [**CAPINFOCHUNK-Struktur**](/windows/win32/api/vfw/ns-vfw-capinfochunk) an. Um alle Einträge zu löschen, geben Sie **NULL** in **fccInfoID an.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Einer AVI-Datei können mehrere registrierte Informations Segmente hinzugefügt 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -71,10 +71,10 @@ Einer AVI-Datei können mehrere registrierte Informations Segmente hinzugefügt 
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

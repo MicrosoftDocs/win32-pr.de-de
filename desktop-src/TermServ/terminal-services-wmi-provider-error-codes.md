@@ -1,6 +1,6 @@
 ---
-title: Remotedesktopdienste Fehlercodes des WMI-Anbieters (wbemcli. h)
-description: Fehler, die vom Remotedesktopdienste WMI-Anbieter zurückgegeben werden. Eine Liste mit anderen WMI-Fehlern finden Sie unter WMI-Fehler Konstanten.
+title: Remotedesktopdienste WMI-Anbieterfehlercodes (Wbemcli.h)
+description: Vom Remotedesktopdienste WMI-Anbieter zurückgegebene Fehler. Eine Liste anderer WMI-Fehler finden Sie unter WMI-Fehlerkonstanten.
 ms.assetid: 1e68c41d-f321-4bc5-ba30-b69f5ba741eb
 ms.tgt_platform: multiple
 topic_type:
@@ -35,20 +35,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 252015a5d80a1487033ad285ce3080f4d666f0c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f02b2c1cc07bbe9431f2d0e64252258d76de9e6f06c0d7b756b3a5af4e42bff2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869670"
 ---
-# <a name="remote-desktop-services-wmi-provider-error-codes"></a>Fehlercodes für den WMI-Anbieter Remotedesktopdienste
+# <a name="remote-desktop-services-wmi-provider-error-codes"></a>fehlercodes für Remotedesktopdienste WMI-Anbieter
 
-In der folgenden Liste werden die WMI-Fehler aufgeführt, die vom Remotedesktopdienste WMI-Anbieter zurückgegeben werden. Eine Liste mit anderen WMI-Fehlern finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants).
+In der folgenden Liste sind die vom Remotedesktopdienste WMI-Anbieter zurückgegebenen WMI-Fehler aufgeführt. Eine Liste anderer WMI-Fehler finden Sie unter [**WMI-Fehlerkonstanten.**](/windows/desktop/WmiSdk/wmi-error-constants)
 
 <dl> <dt>
 
-<span id="WBEM_E_FAILED"></span><span id="wbem_e_failed"></span>**WBEM \_ E \_ fehlgeschlagen**
+<span id="WBEM_E_FAILED"></span><span id="wbem_e_failed"></span>**Fehler bei WBEM \_ E \_**
 </dt> <dd> <dl> <dt>
 
 2147749889 (0x80041001)
@@ -56,15 +56,15 @@ In der folgenden Liste werden die WMI-Fehler aufgeführt, die vom Remotedesktopd
 
 
 
-Der Methodenaufrufe ist fehlgeschlagen.
+Fehler beim Methodenaufruf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_FOUND"></span><span id="wbem_e_not_found"></span>**WBEM \_ E \_ nicht \_ gefunden**
+<span id="WBEM_E_NOT_FOUND"></span><span id="wbem_e_not_found"></span>**WBEM \_ E \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
-2147749890 (0x80041002 angezeigt)
+2147749890 (0x80041002)
 </dt> <dt>
 
 
@@ -74,7 +74,7 @@ Das Objekt konnte nicht gefunden werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_FAILURE"></span><span id="wbem_e_provider_failure"></span>**Fehler beim WBEM \_ E- \_ Anbieter. \_**
+<span id="WBEM_E_PROVIDER_FAILURE"></span><span id="wbem_e_provider_failure"></span>**\_FEHLER BEIM WBEM-E-ANBIETER \_ \_**
 </dt> <dd> <dl> <dt>
 
 2147749892 (0x80041004)
@@ -87,7 +87,7 @@ Der Anbieter ist zu einem anderen Zeitpunkt als während der Initialisierung feh
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_TYPE_MISMATCH"></span><span id="wbem_e_type_mismatch"></span>**WBEM \_ E- \_ Typen Konflikt \_**
+<span id="WBEM_E_TYPE_MISMATCH"></span><span id="wbem_e_type_mismatch"></span>**WBEM \_ E \_ TYPE \_ MISMATCH**
 </dt> <dd> <dl> <dt>
 
 2147749893 (0x80041005)
@@ -95,12 +95,12 @@ Der Anbieter ist zu einem anderen Zeitpunkt als während der Initialisierung feh
 
 
 
-Es ist ein Typen Konflikt aufgetreten.
+Ein Typkonflikt ist aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_OUT_OF_MEMORY"></span><span id="wbem_e_out_of_memory"></span>**nicht genügend \_ Arbeits \_ \_ Speicher für \_ WBEM E**
+<span id="WBEM_E_OUT_OF_MEMORY"></span><span id="wbem_e_out_of_memory"></span>**WBEM \_ E NICHT GENÜGEND \_ \_ \_ ARBEITSSPEICHER**
 </dt> <dd> <dl> <dt>
 
 2147749894 (0x80041006)
@@ -113,7 +113,7 @@ Für die Operation war nicht genügend Arbeitsspeicher verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_PARAMETER"></span><span id="wbem_e_invalid_parameter"></span>**\_Ungültiger WBEM E- \_ \_ Parameter**
+<span id="WBEM_E_INVALID_PARAMETER"></span><span id="wbem_e_invalid_parameter"></span>**WBEM \_ E \_ INVALID \_ PARAMETER**
 </dt> <dd> <dl> <dt>
 
 2147749896 (0x80041008)
@@ -126,7 +126,7 @@ Einer der Parameter für den Aufruf ist nicht korrekt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_AVAILABLE"></span><span id="wbem_e_not_available"></span>**WBEM \_ E \_ nicht \_ verfügbar**
+<span id="WBEM_E_NOT_AVAILABLE"></span><span id="wbem_e_not_available"></span>**WBEM \_ E \_ NICHT \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 2147749897 (0x80041009)
@@ -139,10 +139,10 @@ Die Ressource, i. d. R. ein Remoteserver, ist momentan nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_NOT_SUPPORTED"></span><span id="wbem_e_not_supported"></span>**WBEM \_ E \_ \_ wird nicht unterstützt.**
+<span id="WBEM_E_NOT_SUPPORTED"></span><span id="wbem_e_not_supported"></span>**WBEM \_ E WIRD NICHT \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
-2147749900 (0x8004100c)
+2147749900 (0x8004100C)
 </dt> <dt>
 
 
@@ -152,10 +152,10 @@ Das Feature bzw. die Operation wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_NAMESPACE"></span><span id="wbem_e_invalid_namespace"></span>**WBEM \_ E ( \_ ungültiger \_ Namespace)**
+<span id="WBEM_E_INVALID_NAMESPACE"></span><span id="wbem_e_invalid_namespace"></span>**WBEM \_ E \_ UNGÜLTIGER \_ NAMESPACE**
 </dt> <dd> <dl> <dt>
 
-2147749902 (0x8004100e)
+2147749902 (0x8004100E)
 </dt> <dt>
 
 
@@ -165,10 +165,10 @@ Der angegebene Namespace konnte nicht gefunden werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OBJECT"></span><span id="wbem_e_invalid_object"></span>**ungültiges WBEM- \_ \_ \_ Objekt**
+<span id="WBEM_E_INVALID_OBJECT"></span><span id="wbem_e_invalid_object"></span>**WBEM \_ E \_ UNGÜLTIGES \_ OBJEKT**
 </dt> <dd> <dl> <dt>
 
-2147749903 (0x8004100f)
+2147749903 (0x8004100F)
 </dt> <dt>
 
 
@@ -178,7 +178,7 @@ Die angegebene Instanz ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INITIALIZATION_FAILURE"></span><span id="wbem_e_initialization_failure"></span>**WBEM \_ E- \_ Initialisierungs \_ Fehler**
+<span id="WBEM_E_INITIALIZATION_FAILURE"></span><span id="wbem_e_initialization_failure"></span>**FEHLER BEI DER WBEM \_ \_ E-INITIALISIERUNG \_**
 </dt> <dd> <dl> <dt>
 
 2147749908 (0x80041014)
@@ -186,12 +186,12 @@ Die angegebene Instanz ist ungültig.
 
 
 
-Ein Modul, z. b. ein Anbieter, konnte aus internen Gründen nicht initialisiert werden.
+Ein Modul, z. B. ein Anbieter, konnte aus internen Gründen nicht initialisiert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OPERATION"></span><span id="wbem_e_invalid_operation"></span>**\_Ungültiger WBEM E- \_ \_ Vorgang**
+<span id="WBEM_E_INVALID_OPERATION"></span><span id="wbem_e_invalid_operation"></span>**WBEM \_ E \_ UNGÜLTIGER \_ VORGANG**
 </dt> <dd> <dl> <dt>
 
 2147749910 (0x80041016)
@@ -199,12 +199,12 @@ Ein Modul, z. b. ein Anbieter, konnte aus internen Gründen nicht initialisiert 
 
 
 
-Die angeforderte Operation ist ungültig. Dieser Fehler betrifft i. A. ungültige Versuche, Klassen oder Eigenschaften zu löschen. Dieser Fehler wird bei dem Versuch zurückgegeben, eine Server Überschreibungs Eigenschaft durch die Gruppenrichtlinien Steuerung zu ändern.
+Die angeforderte Operation ist ungültig. Dieser Fehler betrifft i. A. ungültige Versuche, Klassen oder Eigenschaften zu löschen. Dieser Fehler wird zurückgegeben, wenn versucht wird, eine Serverüberschreibungseigenschaft über die Gruppenrichtliniensteuerung zu ändern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUERY"></span><span id="wbem_e_invalid_query"></span>**\_ungültige WBEM E- \_ \_ Abfrage**
+<span id="WBEM_E_INVALID_QUERY"></span><span id="wbem_e_invalid_query"></span>**WBEM \_ E \_ INVALID \_ QUERY**
 </dt> <dd> <dl> <dt>
 
 2147749911 (0x80041017)
@@ -217,7 +217,7 @@ Die Abfrage war syntaktisch ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_QUERY_TYPE"></span><span id="wbem_e_invalid_query_type"></span>**\_Ungültiger WBEM E- \_ \_ Abfragetyp \_**
+<span id="WBEM_E_INVALID_QUERY_TYPE"></span><span id="wbem_e_invalid_query_type"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ ABFRAGETYP**
 </dt> <dd> <dl> <dt>
 
 2147749912 (0x80041018)
@@ -230,7 +230,7 @@ Die angeforderte Abfragesprache wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ALREADY_EXISTS"></span><span id="wbem_e_already_exists"></span>**WBEM \_ E ist \_ bereits \_ vorhanden.**
+<span id="WBEM_E_ALREADY_EXISTS"></span><span id="wbem_e_already_exists"></span>**WBEM \_ E IST BEREITS \_ \_ VORHANDEN**
 </dt> <dd> <dl> <dt>
 
 2147749913 (0x80041019)
@@ -238,12 +238,12 @@ Die angeforderte Abfragesprache wird nicht unterstützt.
 
 
 
-In einem Put-Vorgang wurde das Flag " **wbemchangeflagkreateonly** " angegeben, aber die Instanz ist bereits vorhanden.
+In einem Put-Vorgang wurde das **Flag wbemChangeFlagCreateOnly** angegeben, aber die Instanz ist bereits vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_SYNTAX"></span><span id="wbem_e_invalid_syntax"></span>**\_ungültige WBEM E- \_ \_ Syntax**
+<span id="WBEM_E_INVALID_SYNTAX"></span><span id="wbem_e_invalid_syntax"></span>**WBEM \_ E \_ UNGÜLTIGE \_ SYNTAX**
 </dt> <dd> <dl> <dt>
 
 2147749921 (0x80041021)
@@ -256,7 +256,7 @@ Die Abfrage ist nicht syntaktisch gültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_READ_ONLY"></span><span id="wbem_e_read_only"></span>**WBEM \_ E schreibgeschützt \_ \_**
+<span id="WBEM_E_READ_ONLY"></span><span id="wbem_e_read_only"></span>**WBEM \_ E \_ READ \_ ONLY**
 </dt> <dd> <dl> <dt>
 
 2147749923 (0x80041023)
@@ -269,7 +269,7 @@ Die Eigenschaft, die Sie ändern möchten, ist schreibgeschützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_PROVIDER_NOT_CAPABLE"></span><span id="wbem_e_provider_not_capable"></span>**WBEM \_ E \_ - \_ Anbieter \_ ist nicht fähig**
+<span id="WBEM_E_PROVIDER_NOT_CAPABLE"></span><span id="wbem_e_provider_not_capable"></span>**WBEM \_ E PROVIDER NOT CAPABLE (WBEM-E-ANBIETER \_ NICHT IN DER \_ \_ LAGE)**
 </dt> <dd> <dl> <dt>
 
 2147749924 (0x80041024)
@@ -277,12 +277,12 @@ Die Eigenschaft, die Sie ändern möchten, ist schreibgeschützt.
 
 
 
-Der Anbieter kann den angeforderten Vorgang nicht ausführen. Der Vorgang kann eine Abfrage enthalten, die zu komplex ist, eine Instanz abruft, eine Klasse erstellt, eine Klasse aktualisiert, eine Klasse löscht oder eine Klasse auflistet.
+Der Anbieter kann den angeforderten Vorgang nicht ausführen. Der Vorgang kann eine zu komplexe Abfrage, das Abrufen einer Instanz, das Erstellen einer Klasse, das Aktualisieren einer Klasse, das Löschen einer Klasse oder das Aufzählen einer Klasse umfassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_ILLEGAL_NULL"></span><span id="wbem_e_illegal_null"></span>**WBEM \_ E \_ unzulässig \_ null**
+<span id="WBEM_E_ILLEGAL_NULL"></span><span id="wbem_e_illegal_null"></span>**WBEM \_ E \_ ILLEGAL \_ NULL**
 </dt> <dd> <dl> <dt>
 
 2147749928 (0x80041028)
@@ -290,15 +290,15 @@ Der Anbieter kann den angeforderten Vorgang nicht ausführen. Der Vorgang kann e
 
 
 
- / Für eine Eigenschaft, die nicht NULL sein darf, wurde der Wert Nothing **null** angegeben / , z. b. eine, die durch einen [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), einen [**indizierten**](/windows/desktop/WmiSdk/optional-qualifiers)oder einen [**nicht- \_ null**](/windows/desktop/WmiSdk/optional-qualifiers) -Qualifizierer gekennzeichnet ist.
+Der Wert **Nothing** / **NULL** wurde für eine Eigenschaft angegeben, die nicht **Nothing** NULL sein darf, z. B. / eine Eigenschaft, die durch einen [**Schlüssel-,**](/windows/desktop/WmiSdk/key-qualifier) [**Indizierten-**](/windows/desktop/WmiSdk/optional-qualifiers)oder [**Not \_ NULL-Qualifizierer**](/windows/desktop/WmiSdk/optional-qualifiers) gekennzeichnet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_VALUE_OUT_OF_RANGE"></span><span id="wbem_e_value_out_of_range"></span>**\_der Wert von WBEM E liegt \_ \_ außerhalb \_ des zulässigen \_ Bereichs.**
+<span id="WBEM_E_VALUE_OUT_OF_RANGE"></span><span id="wbem_e_value_out_of_range"></span>**WBEM \_ \_ E-WERT \_ AUßERHALB \_ DES \_ BEREICHS**
 </dt> <dd> <dl> <dt>
 
-2147749931 (0x8004102b)
+2147749931 (0x8004102B)
 </dt> <dt>
 
 
@@ -308,10 +308,10 @@ Die Anforderung wurde mit einem Wert außerhalb des gültigen Bereichs vorgenomm
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_METHOD"></span><span id="wbem_e_invalid_method"></span>**\_ungültige WBEM E- \_ \_ Methode**
+<span id="WBEM_E_INVALID_METHOD"></span><span id="wbem_e_invalid_method"></span>**WBEM \_ E \_ UNGÜLTIGE \_ METHODE**
 </dt> <dd> <dl> <dt>
 
-2147749934 (0x8004102e)
+2147749934 (0x8004102E)
 </dt> <dt>
 
 
@@ -321,10 +321,10 @@ Der angeforderte Methode ist nicht verfügbar.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_METHOD_PARAMETERS"></span><span id="wbem_e_invalid_method_parameters"></span>**\_ \_ ungültige \_ Methoden \_ Parameter für WBEM E**
+<span id="WBEM_E_INVALID_METHOD_PARAMETERS"></span><span id="wbem_e_invalid_method_parameters"></span>**WBEM \_ E \_ UNGÜLTIGE \_ \_ METHODENPARAMETER**
 </dt> <dd> <dl> <dt>
 
-2147749935 (0x8004102f)
+2147749935 (0x8004102F)
 </dt> <dt>
 
 
@@ -334,15 +334,15 @@ Die für die Methode bereitgestellten Parameter sind ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="WBEM_E_INVALID_OBJECT_PATH"></span><span id="wbem_e_invalid_object_path"></span>**WBEM \_ E ( \_ ungültiger \_ Objekt \_ Pfad)**
+<span id="WBEM_E_INVALID_OBJECT_PATH"></span><span id="wbem_e_invalid_object_path"></span>**WBEM \_ E \_ UNGÜLTIGER \_ \_ OBJEKTPFAD**
 </dt> <dd> <dl> <dt>
 
-2147749946 (0x8004103a)
+2147749946 (0x8004103A)
 </dt> <dt>
 
 
 
-Der angegebene Objekt Pfad war ungültig.
+Der angegebene Objektpfad war ungültig.
 
 
 </dt> </dl> </dd> </dl>
@@ -355,7 +355,7 @@ Der angegebene Objekt Pfad war ungültig.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Wbemcli. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemcli.h</dt> </dl> |
 
 
 

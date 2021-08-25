@@ -1,9 +1,9 @@
 ---
-title: "\"ChapterNum\"-Attribut"
-description: Das Attribut "ChapterNum" ist die DVD-Kapitel Nummer.
+title: chapterNum-Attribut
+description: Das chapterNum-Attribut ist die DVD-Kapitelnummer.
 ms.assetid: 0938a553-a368-4155-963d-174d8ef1d1cd
 keywords:
-- Media Player des "ChapterNum"-Attributs
+- chapterNum Attribute Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf1b3103b2f4baf3def6eb111111b443022949cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb017fb17024f5877e158653c93f260add7be114cc0c655497a633b1e21f8cde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863900"
 ---
-# <a name="chapternum-attribute"></a>"ChapterNum"-Attribut
+# <a name="chapternum-attribute"></a>chapterNum-Attribut
 
-Das Attribut " **ChapterNum** " ist die DVD-Kapitel Nummer.
+Das **chapterNum-Attribut** ist die DVD-Kapitelnummer.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [DVDs](dvd-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

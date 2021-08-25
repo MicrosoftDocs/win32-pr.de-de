@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ENUMCOLUMNID Member'
-title: Mitglieder JET_ENUMCOLUMNID
+description: 'Erfahren Sie mehr über: JET_ENUMCOLUMNID Mitglieder'
+title: JET_ENUMCOLUMNID Member
 TOCTitle: JET_ENUMCOLUMNID members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMNID
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_enumcolumnid_members(v=EXCHG.10)
 ms:contentKeyID: 55103504
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: f852541d8e16a1a9edfd87afe59a0a8a4c4c4af2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6aa360dce8b406e217496ad848be54992a71eaae04d375b2546ca08b75b1e751
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891310"
 ---
-# <a name="jet_enumcolumnid-members"></a>Mitglieder JET_ENUMCOLUMNID
+# <a name="jet_enumcolumnid-members"></a>JET_ENUMCOLUMNID Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Listet einen bestimmten Satz von Spalten und optional einen bestimmten Satz von mehreren Werten für diese Spalten auf, wenn die jetenumeratecolumns-Funktion verwendet wird. Jetenumschlag-atecolrens nimmt optional ein Array von JET_ENUMCOLUMNID Strukturen an.
+Aufzählt einen bestimmten Satz von Spalten und optional einen bestimmten Satz von mehreren Werten für diese Spalten, wenn die JetEnumerateColumns-Funktion verwendet wird. JetEnumerateColumns verwendet optional ein Array JET_ENUMCOLUMNID Strukturen.
 
-Der [JET_ENUMCOLUMNID](./jet-enumcolumnid-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_ENUMCOLUMNID](./jet-enumcolumnid-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="constructors"></a>Konstruktoren
 
@@ -58,18 +58,18 @@ Oben
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335141(v=exchg.10).md">ColumnID</a></td>
-<td>Ruft die aufzuzählenden Spalten-ID ab oder legt Sie fest.</td>
+<td><a href="dn335141(v=exchg.10).md">Columnid</a></td>
+<td>Ruft die columnid-ID ab, die aufzählt werden soll, oder legt sie fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335092(v=exchg.10).md">ctagsequence</a></td>
-<td>Ruft die Anzahl der Spaltenwerte (durch einen einbasierten Index) ab, die für die angegebene Spalten-ID aufgelistet werden sollen, oder legt Sie fest. Wenn ctagsequence gleich 0 (null) ist, wird rgtagsequence ignoriert, und alle Spaltenwerte für die angegebene Spalten-ID werden aufgelistet.</td>
+<td><a href="dn335092(v=exchg.10).md">ctagSequence</a></td>
+<td>Ruft die Anzahl der Spaltenwerte (nach einem basierenden Index) ab, die für die angegebene Spalten-ID aufgezählt werden, oder legt diese fest. Wenn ctagSequence 0 (null) ist, wird rgtagSequence ignoriert, und alle Spaltenwerte für die angegebene Spalten-ID werden aufzählt.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335093(v=exchg.10).md">rgtagsequence</a></td>
-<td>Ruft das Array von einbasierten Indizes in das Array von Spaltenwerten für eine angegebene Spalte ab oder legt dieses fest. Bei einem einzelnen Element handelt es sich um eine in JET_RETRIEVECOLUMN definierte itagsequence. Eine itagsequence-Wert von 0 (null) bedeutet &quot; Skip &quot; . Eine itagsequence von 1 bedeutet, dass der erste Spaltenwert der Spalte zurückgegeben wird, der Wert 2 für den zweiten Wert usw.</td>
+<td><a href="dn335093(v=exchg.10).md">rgtagSequence</a></td>
+<td>Ruft das Array von einsbasierten Indizes im Array von Spaltenwerten für eine bestimmte Spalte ab oder legt dieses fest. Ein einzelnes Element ist eine itagSequence, die in der JET_RETRIEVECOLUMN. Eine itagSequence von 0 (null) bedeutet &quot; &quot; überspringen. Eine itagSequence von 1 bedeutet, dass der erste Spaltenwert der Spalte, 2 die zweite Spalte und so weiter zurückgeben.</td>
 </tr>
 </tbody>
 </table>
@@ -91,32 +91,32 @@ Oben
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Ist gleich</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn335091(v=exchg.10).md">ToString</a></td>
-<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die den aktuellen <a href="dn335139(v=exchg.10).md">JET_ENUMCOLUMNID</a>darstellt. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.-Zeichenfolge ()</a>.)</td>
+<td>Gibt eine <a href="/dotnet/api/system.string">Zeichenfolge</a> zurück, die die <a href="dn335139(v=exchg.10).md">aktuelle</a>JET_ENUMCOLUMNID. (Überschreibt <a href="/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -126,8 +126,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ENUMCOLUMNID-Klasse](./jet-enumcolumnid-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

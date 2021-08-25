@@ -1,31 +1,31 @@
 ---
-description: Bei einem Installationspaket enthält die Zusammenfassungs Eigenschaft Revisionsnummer den Paket Code für das Installer-Paket.
+description: Für ein Installationspaket enthält die Revision Number Summary -Eigenschaft den Paketcode für das Installationspaket.
 ms.assetid: 79702b44-846a-4672-8e22-9b6e3f4b4678
-title: Zusammenfassungs Eigenschaft der Revisionsnummer
+title: Revision Number Summary -Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e97df1eafec2d543be0f975b9f5daca7728267b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b11371c4a431322fd7ceca7fd645fc8eb8bea47688b740340e973507271f6a25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869060"
 ---
-# <a name="revision-number-summary-property"></a>Zusammenfassungs Eigenschaft der Revisionsnummer
+# <a name="revision-number-summary-property"></a>Revision Number Summary -Eigenschaft
 
-Bei einem Installationspaket enthält die **Zusammenfassungs Eigenschaft Revisionsnummer** den [*Paket Code*](p-gly.md) für das Installer-Paket. Weitere Informationen zu Paket Codes finden Sie unter [Paket Codes](package-codes.md).
+Für ein Installationspaket enthält die Revision **Number Summary** -Eigenschaft den [*Paketcode*](p-gly.md) für das Installationspaket. Weitere Informationen zu Paketcodes finden Sie unter [Paketcodes.](package-codes.md)
 
-Bei einer Transformation werden in der **Zusammenfassungs Eigenschaft Revisionsnummer** die Produktcode-GUIDs und die Version der neuen und ursprünglichen Produkte sowie die UpgradeCode-GUID aufgelistet. Die Liste wird wie folgt durch Semikolons getrennt.
+Für eine Transformation listet die Revision **Number Summary** -Eigenschaft die Produktcode-GUIDs und die Version der neuen und ursprünglichen Produkte sowie die Upgradecode-GUID auf. Die Liste ist wie folgt durch Semikolons getrennt.
 
-"Original-Product-Code Original-Product-Version; New-Product Code New-Product-Version; UpgradeCode "
+"Original-Product-Code Original-Product-Version ; New-Product Code New-Product-Version; Upgrade-Code"
 
-Bei einem Patchpaket gibt die **Zusammenfassungs Eigenschaft der Revisionsnummer** den GUID-Patchcode für den Patch an. Auf diese Weise kann eine Liste von Patchcode-GUIDs für veraltete Patches folgen, die entfernt werden sollen, wenn dieser Patch angewendet wird. Die Patchcodes werden ohne Trennzeichen verkettet, in denen GUIDs in der Liste getrennt sind.
+Für ein Patchpaket gibt die **Revision Number Summary** -Eigenschaft den GUID-Patchcode für den Patch an. Darauf kann eine Liste der Patchcode-GUIDs für veraltete Patches folgen, die entfernt werden sollen, wenn dieser Patch angewendet wird. Die Patchcodes werden ohne Trennzeichen verkettet, die GUIDs in der Liste trennen.
 
-* * Windows Installer 3,0: * * Wenn in der [msipatchsequence-Tabelle](msipatchsequence-table.md)Sequenzierungs Informationen vorhanden sind, verwendet Windows Installer 3,0 die Sequenzierungs Informationen in der Tabelle und ignoriert die Liste veralteter Patches, die in der **Revisionsnummer-Zusammenfassungs** Eigenschaft enthalten sind. In Windows Installer 3,0 können weiterhin die veralteten Patchinformationen in der **Revisionsnummer-Zusammenfassungs** Eigenschaft verwendet werden, wenn das Paket keine msipatchsequence-Tabelle enthält.
+**Windows Installer 3.0: ** Wenn sequenzierungsinformationen in der [MsiPatchSequence-Tabelle](msipatchsequence-table.md)vorhanden sind, verwendet Windows Installer 3.0 die Sequenzierungsinformationen in der Tabelle und ignoriert die Liste veralteter Patches, die in der Revision **Number Summary** -Eigenschaft enthalten sind. Windows Installer 3.0 kann weiterhin die veralteten Patchinformationen in der **Revision Number Summary** -Eigenschaft verwenden, wenn das Paket keine MsiPatchSequence-Tabelle enthält.
 
-* * Windows Installer 2,0: * * die [msipatchsequence-Tabelle](msipatchsequence-table.md) wird nicht unterstützt. In Windows Installer 2,0 können weiterhin die veralteten Patchinformationen in der **Revisionsnummer-Zusammenfassungs** Eigenschaft verwendet werden, wenn das Paket keine msipatchsequence-Tabelle enthält.
+**Windows Installer 2.0: ** Die [Tabelle MsiPatchSequence](msipatchsequence-table.md) wird nicht unterstützt. Windows Installer 2.0 kann weiterhin die veralteten Patchinformationen in der **Revision Number Summary** -Eigenschaft verwenden, wenn das Paket keine MsiPatchSequence-Tabelle enthält.
 
-Diese Zusammenfassungs Eigenschaft ist erforderlich.
+Diese Zusammenfassungseigenschaft ist erforderlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,7 +33,7 @@ Diese Zusammenfassungs Eigenschaft ist erforderlich.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -41,7 +41,7 @@ Diese Zusammenfassungs Eigenschaft ist erforderlich.
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

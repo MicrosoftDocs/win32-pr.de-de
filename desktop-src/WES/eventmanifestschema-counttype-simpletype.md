@@ -1,9 +1,9 @@
 ---
-title: Einfacher Typ von zählype
-description: Definiert einen Zähltyp, der verwendet wird, um die Anzahl von Elementen in einem Array anzugeben.
+title: Einfacher CountType-Typ
+description: Definiert einen Count-Typ, der verwendet wird, um die Anzahl der Elemente in einem Array anzugeben.
 ms.assetid: 84f819d7-5c42-475b-9144-aaa5e2d215c8
 keywords:
-- Event Log für den einfachen Typ von "zählype"
+- CountType simple type EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8f91b19df4182f5cff305de0429a308d0c5db234
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63476d70a9bb5b336449a65707664c05c56a20b4c2c9fa4888c0c3125f129d90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863620"
 ---
-# <a name="counttype-simple-type"></a>Einfacher Typ von zählype
+# <a name="counttype-simple-type"></a>Einfacher CountType-Typ
 
-Definiert einen Zähltyp, der verwendet wird, um die Anzahl von Elementen in einem Array anzugeben. Der Wert kann als xs: unsignedshort-Wert oder als Zeichenfolge angegeben werden, die auf den Namen des Datenelement Knotens verweist, der den unbestimmten Kurzwert enthält.
+Definiert einen Count-Typ, der verwendet wird, um die Anzahl der Elemente in einem Array anzugeben. Der Wert kann als xs:unsignedShort-Wert oder als Zeichenfolge angegeben werden, die auf den Namen des Datenelementknotens verweist, der den nicht definierten Short-Wert enthält.
 
 ``` syntax
 <xs:simpleType name="CountType">
@@ -38,8 +38,8 @@ Definiert einen Zähltyp, der verwendet wird, um die Anzahl von Elementen in ein
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

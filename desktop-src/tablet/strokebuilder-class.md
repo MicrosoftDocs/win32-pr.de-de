@@ -1,7 +1,7 @@
 ---
-description: Implementiert die istrokebuilder-Schnittstelle.
+description: Implementiert die IStrokeBuilder-Schnittstelle.
 ms.assetid: 0d699089-b913-4020-9284-a955f61fd861
-title: Strokebuilder-Klasse (rzcom. h)
+title: StrokeBuilder-Klasse (RTSCom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,22 +13,22 @@ api_type:
 - COM
 api_location:
 - RTSCom.dll
-ms.openlocfilehash: b977bbda4ff378b967142b89b4ec8bc1972ed25b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d51a9a3b55060d4202a4158f291029cfca511f287feeae4c809bf0e830f8bbf7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934300"
 ---
-# <a name="strokebuilder-class"></a>Strokebuilder-Klasse
+# <a name="strokebuilder-class"></a>StrokeBuilder-Klasse
 
-Implementiert die [**istrokebuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder).
+Implementiert die [**IStrokeBuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder).
 
 ## <a name="com-implementation"></a>COM-Implementierung
 
-Diese Klasse implementiert die [**istrokebuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder).
+Diese Klasse implementiert die [**IStrokeBuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder).
 
-Diese Klasse kann durch Aufrufen der [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Methode in C++ instanziiert werden.
+Diese Klasse kann instanziiert werden, indem die [**CoCreateInstance-Methode**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) in C++ aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,9 +36,9 @@ Diese Klasse kann durch Aufrufen der [**CoCreateInstance**](/windows/win32/api/c
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                       |
-| Header<br/>                   | <dl> <dt>Rzcom. h (erfordert auch rzcom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>RTSCom.h (erfordert auch RTSCom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RTSCom.dll</dt> </dl>                           |
 
 
@@ -53,10 +53,10 @@ Diese Klasse kann durch Aufrufen der [**CoCreateInstance**](/windows/win32/api/c
 [**RealTimeStylus-Klasse**](realtimestylus-class.md)
 </dt> <dt>
 
-[**Istrokebuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder)
+[**IStrokeBuilder-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istrokebuilder)
 </dt> <dt>
 
-[RealTimeStylus-Klassen und-Schnittstellen](realtimestylus-classes-and-interfaces.md)
+[RealTimeStylus-Klassen und -Schnittstellen](realtimestylus-classes-and-interfaces.md)
 </dt> </dl>
 
  

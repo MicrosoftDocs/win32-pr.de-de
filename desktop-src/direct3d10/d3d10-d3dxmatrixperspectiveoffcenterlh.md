@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1116e24b48c9090739511894d28031ca921ed6ed
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 99dc5c5b0806f119f3728facbb0d67c88884bb537e909daf0c7687392e20784a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858750"
 ---
 # <a name="d3dxmatrixperspectiveoffcenterlh-function-d3dx10mathh"></a>D3DXMatrixPerspectiveOffCenterLH-Funktion (D3DX10Math.h)
 
@@ -96,16 +96,16 @@ Maximaler y-Wert des Ansichtsvolumens.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimaler Z-Wert des Ansichtsvolumes.
+Minimaler Z-Wert des Ansichtsvolumens.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*( )* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Maximaler Z-Wert des Ansichtsvolumes.
+Maximaler Z-Wert des Ansichtsvolumens.
 
 </dd> </dl>
 
@@ -113,11 +113,11 @@ Maximaler Z-Wert des Ansichtsvolumes.
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die eine angepasste, linkshändige Projektionsmatrix für die Perspektive ist.
+Zeiger auf eine D3DXMATRIX-Struktur, bei der es sich um eine benutzerdefinierte, linkshändige Perspektivprojektionsmatrix handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter der D3DXMatrixPerspectiveOffCenterLH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
+Alle Parameter der D3DXMatrixPerspectiveOffCenterLH-Funktion sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixPerspectiveOffCenterLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -137,14 +137,14 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
