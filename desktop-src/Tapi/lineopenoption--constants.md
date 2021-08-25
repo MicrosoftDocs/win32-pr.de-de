@@ -1,45 +1,45 @@
 ---
-description: Die lineopenoption- \_ Konstanten listet die verfügbaren Optionen zum Öffnen einer Zeile auf.
+description: Die LINEOPENOPTION-Konstanten \_ listen die verfügbaren Optionen zum Öffnen einer Zeile auf.
 ms.assetid: 361ae90c-a2cf-4107-a2da-80f561a82c56
-title: LINEOPENOPTION_ Konstanten (TAPI. h)
+title: LINEOPENOPTION_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dee9182ff7a28627eebd695ce5d9c0877460b15e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0dc6a4780b366b2dce08110ecce40c7140ab1d0956d788dce5a67d5d0501b6d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739250"
 ---
-# <a name="lineopenoption_-constants"></a>Lineopenoption- \_ Konstanten
+# <a name="lineopenoption_-constants"></a>LINEOPENOPTION-Konstanten \_
 
-Die **lineopenoption- \_ Konstanten** listet die verfügbaren Optionen zum Öffnen einer Zeile auf.
+Die **LINEOPENOPTION-Konstanten \_** listen die verfügbaren Optionen zum Öffnen einer Zeile auf.
 
 <dl> <dt>
 
-<span id="LINEOPENOPTION_PROXY"></span><span id="lineopenoption_proxy"></span>**lineopenoption- \_ Proxy**
+<span id="LINEOPENOPTION_PROXY"></span><span id="lineopenoption_proxy"></span>**\_LINEOPENOPTION-PROXY**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Anwendung ist bereit, Anforderungen von anderen Anwendungen zu verarbeiten, für die die Zeile geöffnet ist.
+Die Anwendung ist bereit, Anforderungen von anderen Anwendungen zu verarbeiten, bei denen die Zeile geöffnet ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEOPENOPTION_SINGLEADDRESS"></span><span id="lineopenoption_singleaddress"></span>**lineopenoption- \_ singleaddress**
+<span id="LINEOPENOPTION_SINGLEADDRESS"></span><span id="lineopenoption_singleaddress"></span>**LINEOPENOPTION \_ SINGLEADDRESS**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Anwendung sollte nur über neue Aufrufe informiert werden, die auf dem Zeilen Gerät erstellt wurden, wenn diese Aufrufe für die Adresse angezeigt werden, die im Element " **dwadressssid** " in der [**linecallpara**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) -Struktur angegeben ist, auf die durch den *lpcallparameame-* Parameter verwiesen wird.
+Die Anwendung sollte nur dann über neue Aufrufe informiert werden, die auf dem Zeilengerät erstellt wurden, wenn diese Aufrufe unter der Adresse angezeigt werden, die im **dwAddressID-Member** in der [**LINECALLPARAMS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) angegeben ist, auf die der *lpCallParams-Parameter* zeigt.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Betrieb dieser Optionen finden Sie unter [**lineOpen**](/windows/desktop/api/Tapi/nf-tapi-lineopen) .
+Weitere Informationen zum Betrieb dieser Optionen finden Sie unter [**lineOpen.**](/windows/desktop/api/Tapi/nf-tapi-lineopen)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,8 +47,8 @@ Weitere Informationen zum Betrieb dieser Optionen finden Sie unter [**lineOpen**
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

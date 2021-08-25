@@ -1,11 +1,11 @@
 ---
-title: IConfigAsfWriter2 resetmultipassstate-Methode
-description: Die resetmultipassstate-Methode setzt den Filter zurück, wenn ein Vorverarbeitungs-Codierungs Durchlauf abgebrochen wird, bevor er abgeschlossen wird.
+title: IConfigAsfWriter2 ResetMultiPassState-Methode
+description: Die ResetMultiPassState-Methode setzt den Filter zurück, wenn ein Vorverarbeitungscodierungspass abgebrochen wird, bevor er abgeschlossen wird.
 ms.assetid: b6687af7-f3cd-4e92-9c76-dddff9063fa0
 keywords:
-- Resetmultipassstate-Methode, Windows Media-Format
-- Resetmultipassstate-Methode, Windows Media-Format, IConfigAsfWriter2-Schnittstelle
-- IConfigAsfWriter2-Schnittstelle Windows Media-Format, resetmultipassstate-Methode
+- ResetMultiPassState-Methode windows Media Format
+- ResetMultiPassState-Methode windows Media Format, IConfigAsfWriter2-Schnittstelle
+- IConfigAsfWriter2-Schnittstelle windows Media Format , ResetMultiPassState-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ed61e4f0517822a602f2bb88c944bba82fa1f943
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1f10563ed716b6b33258fe57ff8129bff78b401170db1512566015d0b05d54dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839870"
 ---
-# <a name="iconfigasfwriter2resetmultipassstate-method"></a>IConfigAsfWriter2:: resetmultipassstate-Methode
+# <a name="iconfigasfwriter2resetmultipassstate-method"></a>IConfigAsfWriter2::ResetMultiPassState-Methode
 
-Die **resetmultipassstate** -Methode setzt den Filter zurück, wenn ein Vorverarbeitungs-Codierungs Durchlauf abgebrochen wird, bevor er abgeschlossen wird.
+Die **ResetMultiPassState-Methode** setzt den Filter zurück, wenn ein Vorverarbeitungscodierungspass abgebrochen wird, bevor er abgeschlossen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                       |
 |-----------------------------------------------------------------------------------------------------|---------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Die Methode wurde erfolgreich ausgeführt.<br/>                  |
-| <dl> <dt>**VFW \_ E \_ nicht \_ angehalten**</dt> </dl> | Der Filter befand sich nicht im beendeten Zustand.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ BEENDET**</dt> </dl> | Der Filter wurde nicht beendet.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss aufgerufen werden, um den internen Zustand des Filters zurückzusetzen, wenn ein Vorverarbeitungs-Codierungs Durchlauf abgebrochen wird, bevor der Filter ein Ereignis zum **abschließen des Vorgangs "EC \_ Preprocess \_** " empfangen hat. Es ist nicht erforderlich, diese Methode aufzurufen, wenn der Vorverarbeitungs-Codierungs Durchlauf ohne Fehler abgeschlossen wird.
+Diese Methode muss aufgerufen werden, um den internen Zustand des Filters zurückzusetzen, wenn ein Vorverarbeitungscodierungspass abgebrochen wird, bevor der Filter ein **EC \_ PREPROCESS \_ COMPLETE-Ereignis empfangen** hat. Es ist nicht erforderlich, diese Methode auf aufruft, wenn der Vorverarbeitungscodierungspass ohne Fehler abgeschlossen wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

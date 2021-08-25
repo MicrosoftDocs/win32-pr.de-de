@@ -1,9 +1,9 @@
 ---
-title: TDN_DESTROYED Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Aufgaben Dialogfeld gesendet, wenn es zerstört wird und sein Fenster Handle nicht mehr gültig ist. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_DESTROYED Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Aufgabendialogfeld gesendet, wenn es zerstört wird und sein Fensterhandle nicht mehr gültig ist. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: bbebb77f-e078-46bf-a42d-65dab4f8a972
 keywords:
-- Windows-Steuerelemente für TDN_DESTROYED Benachrichtigungs
+- TDN_DESTROYED Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d3da93435371e696de3d4dce8deeea43926b73b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cad0bb08d8d3693f7e9168454526306b3d1d8643431ba16d851e9c259cfd0580
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875800"
 ---
-# <a name="tdn_destroyed-notification-code"></a>Von TDN \_ zerstörter Benachrichtigungs Code
+# <a name="tdn_destroyed-notification-code"></a>TDN \_ DESTROYED-Benachrichtigungscode
 
-Wird von einem Aufgaben Dialogfeld gesendet, wenn es zerstört wird und sein Fenster Handle nicht mehr gültig ist. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird von einem Aufgabendialogfeld gesendet, wenn es zerstört wird und sein Fensterhandle nicht mehr gültig ist. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) registriert werden kann.
 
 
 ```C++
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

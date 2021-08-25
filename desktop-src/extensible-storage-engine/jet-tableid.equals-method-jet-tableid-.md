@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLEID. Gleichheits Methode (JET_TABLEID)'
-title: JET_TABLEID. Gleichheits Methode (JET_TABLEID)
+description: 'Weitere Informationen finden Sie unter: JET_TABLEID. Equals-Methode (JET_TABLEID)'
+title: JET_TABLEID. Equals-Methode (JET_TABLEID)
 TOCTitle: Equals method (JET_TABLEID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_TABLEID.Equals(Microsoft.Isam.Esent.Interop.JET_TABLEID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tableid.equals(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2eab8bae322c7b19b5aada08801f752ad6bfaa93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4c794e07efd291ddbf75ce5ab697d61f9ebed0db5a3e5ce66aef561fe91fc26
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890000"
 ---
-# <a name="jet_tableidequals-method-jet_tableid"></a>JET_TABLEID. Gleichheits Methode (JET_TABLEID)
+# <a name="jet_tableidequals-method-jet_tableid"></a>JET_TABLEID. Equals-Methode (JET_TABLEID)
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,28 +57,28 @@ public bool Equals(
 
 #### <a name="parameters"></a>Parameter
 
-  - andere  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - Sonstige  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Eine-Instanz, die mit dieser Instanz verglichen werden soll.
+    Eine -Instanz, die mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 #### <a name="implements"></a>Implementiert
 
-[IEquatable \<T\> . Ist gleich(T)](/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_)  
+[IEquatable \<T\> . Equals(T)](/dotnet/api/system.iequatable-1.equals#System_IEquatable_1_Equals__0_)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_TABLEID Struktur](./jet-tableid-structure.md)
+[JET_TABLEID-Struktur](./jet-tableid-structure.md)
 
-[Mitglieder JET_TABLEID](./jet-tableid-members.md)
+[JET_TABLEID Mitglieder](./jet-tableid-members.md)
 
-[Gleichheits Überladung](./jet-tableid.equals-method.md)
+[Equals-Überladung](./jet-tableid.equals-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

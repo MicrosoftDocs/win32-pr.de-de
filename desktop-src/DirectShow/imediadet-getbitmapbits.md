@@ -1,7 +1,7 @@
 ---
-description: Die getbitmapbits-Methode ruft einen Videoframe zum angegebenen Zeitpunkt der Medien ab. Der zurückgegebene Frame weist immer das 24-Bit-RGB-Format auf.
+description: Die GetBitmapBits-Methode ruft einen Videoframe zur angegebenen Medienzeit ab. Der zurückgegebene Frame hat immer das 24-Bit-RGB-Format.
 ms.assetid: b51df9d1-9c54-41bd-b0f8-ec290525deca
-title: 'Imediadet:: getbitmapbits-Methode (qedit. h)'
+title: IMediaDet::GetBitmapBits-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 95aea5281f77b32868e0f0856bc63063e4f08639
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c4a7332580d4e9a9fece5a66d390753566fbf54c615699663256c463cb401b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792000"
 ---
-# <a name="imediadetgetbitmapbits-method"></a>Imediadet:: getbitmapbits-Methode
+# <a name="imediadetgetbitmapbits-method"></a>IMediaDet::GetBitmapBits-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetBitmapBits` Methode ruft einen Videoframe zum angegebenen Zeitpunkt der Medien ab. Der zurückgegebene Frame weist immer das 24-Bit-RGB-Format auf.
+Die `GetBitmapBits` -Methode ruft einen Videoframe zur angegebenen Medienzeit ab. Der zurückgegebene Frame hat immer das 24-Bit-RGB-Format.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,75 +49,75 @@ HRESULT GetBitmapBits(
 
 <dl> <dt>
 
-*Streamtime* 
+*StreamTime* 
 </dt> <dd>
 
-Der Zeitpunkt, zu dem der Videoframe abgerufen werden soll (in Sekunden).
+Zeit, zu der der Videoframe abgerufen werden soll (in Sekunden).
 
 </dd> <dt>
 
-*pbuffersize* 
+*pBufferSize* 
 </dt> <dd>
 
-Empfängt die erforderliche Puffergröße. Wenn *pbuffer* den Wert **null** hat, erhält die Variable die Größe des Puffers, der zum Abrufen des Frames benötigt wird. Wenn *pbuffer* nicht **null** ist, wird dieser Parameter ignoriert.
+Empfängt die erforderliche Puffergröße. Wenn *pBuffer* **NULL** ist, empfängt die Variable die Größe des Puffers, der zum Abrufen des Frames erforderlich ist. Wenn *pBuffer* nicht **NULL** ist, wird dieser Parameter ignoriert.
 
 </dd> <dt>
 
 *pBuffer* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur gefolgt von den DIB-Bits empfängt.
+Zeiger auf einen Puffer, der eine [**BITMAPINFOHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) gefolgt von den DIB-Bits empfängt.
 
 </dd> <dt>
 
 *Width* 
 </dt> <dd>
 
-Breite des Video Bilds in Pixel.
+Breite des Videobilds in Pixel.
 
 </dd> <dt>
 
 *Height* 
 </dt> <dd>
 
-Höhe des Video Bilds in Pixel.
+Höhe des Videobilds in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                                                       |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                                                                               |
-| <dl> <dt>**E \_ nointerface**</dt> </dl>           | Der [**Sample Grabber**](sample-grabber-filter.md) -Filter konnte dem Diagramm nicht hinzugefügt werden.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>           | Nicht genügend Arbeitsspeicher.<br/>                                                                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>               | **Null** -Zeiger Fehler.<br/>                                                                |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>            | Unerwarteter Fehler.<br/>                                                                      |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl> | Ungültiger Medientyp.<br/>                                                                    |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl>           | Der Sample [**Grabber-Filter**](sample-grabber-filter.md) konnte dem Diagramm nicht hinzugefügt werden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>           | Nicht genügend Arbeitsspeicher.<br/>                                                                   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>               | **NULL-Zeigerfehler.**<br/>                                                                |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>            | Unerwarteter Fehler.<br/>                                                                      |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl> | Ungültiger Medientyp.<br/>                                                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und den Stream fest, indem [**Sie IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream**](imediadet-put-currentstream.md)aufrufen.
 
-Um die Größe des erforderlichen Puffers zu bestimmen, müssen Sie diese Methode mit *pbuffer* gleich **null** aufzurufen. Die Größe wird in der Variablen zurückgegeben, auf die von *pbuffersize* verwiesen wird. Erstellen Sie dann den Puffer, und rufen Sie die Methode erneut auf, wobei *pbuffer* gleich der Adresse des Puffers ist. Wenn die Methode zurückgegeben wird, enthält der Puffer eine **BITMAPINFOHEADER** -Struktur gefolgt von der Bitmap. Die Bitmap wird auf die Dimensionen skaliert, die in den Parametern *Width* und *height* angegeben sind.
+Um die Erforderliche Puffergröße zu bestimmen, rufen Sie diese Methode mit *pBuffer* gleich **NULL** auf. Die Größe wird in der Variablen zurückgegeben, auf die *pBufferSize* zeigt. Erstellen Sie dann den Puffer, und rufen Sie die -Methode erneut auf, wobei *pBuffer* der Adresse des Puffers entspricht. Wenn die Methode zurückgegeben wird, enthält der Puffer eine **BITMAPINFOHEADER-Struktur** gefolgt von der Bitmap. Die Bitmap wird auf die Dimensionen skaliert, die in den Parametern *Width* und *Height* angegeben sind.
 
-Mit dieser Methode wird der Medien Detektor in den bitmapingmodus versetzt. Nachdem diese Methode aufgerufen wurde, funktionieren die verschiedenen Datenstrom Informationsmethoden in **imediadet** nicht, es sei denn, Sie erstellen eine neue Instanz des Medien Detektors.
+Diese Methode versetzt die Medienerkennung in den Bitmapgrabbermodus. Nachdem diese Methode aufgerufen wurde, funktionieren die verschiedenen Streaminformationsmethoden in **IMediaDet** nicht mehr, es sei denn, Sie erstellen eine neue Instanz der Medienerkennung.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -172,8 +172,8 @@ if (SUCCEEDED(hr))
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -181,10 +181,10 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

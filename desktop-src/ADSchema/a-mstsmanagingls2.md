@@ -1,11 +1,11 @@
 ---
 title: MS-TS-ManagingLS2-Attribut
-description: Der Aussteller Name des zweiten Terminal Servers pro Benutzer-CAL.
+description: Ausstellername des zweiten Terminalservers pro Benutzer-CAL.
 ms.assetid: 7a44cb39-c5a3-415d-8990-3e0368730a23
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-ManagingLS2-Attribut
-- msTSManagingLS2-Attribut AD-Schema
+- AD-Schema des MS-TS-ManagingLS2-Attributs
+- msTSManagingLS2-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31122c8ed57173c645ff63583f6d5615f84812b5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d4c181161e426188de204a04f7aab063a706d28ef6a4dec71f5232a186b6280d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924340"
 ---
 # <a name="ms-ts-managingls2-attribute"></a>MS-TS-ManagingLS2-Attribut
 
-Der Aussteller Name des zweiten Terminal Servers pro Benutzer-CAL.
+Ausstellername des zweiten Terminalservers pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-TS-ManagingLS2                           |
-| LDAP-Display-Name | msTSManagingLS2                             |
+| Ldap-Anzeigename | msTSManagingLS2                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2002                     |
-| System-ID-GUID    | 349f 0757-51bd-4FC8-9d66-3eceea8a25be        |
+| System-ID-GUID    | 349f0757-51bd-4fc8-9d66-3eceea8a25be        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,11 +54,11 @@ Der Aussteller Name des zweiten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -75,11 +75,11 @@ Der Aussteller Name des zweiten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -96,11 +96,11 @@ Der Aussteller Name des zweiten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |

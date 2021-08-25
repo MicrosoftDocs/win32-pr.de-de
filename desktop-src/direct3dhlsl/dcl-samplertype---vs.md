@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2fbcb934ad591274d743f09c810de2db42278261
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 048246f8a48430dca26a763e9266f00edd61215e769f4ff5385036054aebc34b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726570"
 ---
 # <a name="dcl_samplertype-sm3---vs-asm"></a>dcl \_ samplerType (sm3 – vs asm)
 
@@ -30,13 +30,13 @@ dcl \_ samplerType s\#
 
 Dabei gilt:
 
--   \_samplerType definiert den Samplerdatentyp. Dadurch wird bestimmt, wie viele Koordinaten für jede Texturkoordinate beim Sampling erforderlich sind. Die folgenden Texturkoordinatendimensionen sind definiert.
+-   \_samplerType definiert den Samplerdatentyp. Dadurch wird bestimmt, wie viele Koordinaten von jeder Texturkoordinate beim Sampling benötigt werden. Die folgenden Texturkoordinatendimensionen sind definiert.
     -   \_2d
     -   \_Cube
     -   \_Volumen
--   s \# identifiziert einen Sampler, wobei s eine Abkürzung für den \# Sampler und die Samplernummer ist. [Sampler (Direct3D 9 asm-vs)](dx9-graphics-reference-asm-vs-registers-sampler.md)sind Pseudoregister, da sie nicht direkt gelesen oder geschrieben werden können.
+-   s \# identifiziert einen Sampler, wobei s eine Abkürzung für den Sampler und \# die Samplernummer ist. [Sampler (Direct3D 9 asm-vs)](dx9-graphics-reference-asm-vs-registers-sampler.md)sind Pseudoregister, da sie nicht direkt gelesen oder geschrieben werden können.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

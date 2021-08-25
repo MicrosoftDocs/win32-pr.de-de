@@ -1,7 +1,7 @@
 ---
-description: Die iwiatransfer-Schnittstelle stellt Datenstrom basierte Übertragung von Daten bereit.
+description: Die IWiaTransfer-Schnittstelle ermöglicht die streambasierte Übertragung von Daten.
 ms.assetid: 7bc6d3b8-9bf0-4b77-aa2b-b7c64c5730c0
-title: Iwiatransfer-Schnittstelle (WIA. h)
+title: IWiaTransfer-Schnittstelle (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,67 +14,67 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 623cc21591289f4c1fff33cabe1d504b3682708c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff19619b1f0ab46658d0876792248befd6940c525d5c7da1b3331f6ca1a8c12e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119813900"
 ---
-# <a name="iwiatransfer-interface"></a>Iwiatransfer-Schnittstelle
+# <a name="iwiatransfer-interface"></a>IWiaTransfer-Schnittstelle
 
-Die **iwiatransfer** -Schnittstelle stellt Datenstrom basierte Übertragung von Daten bereit.
+Die **IWiaTransfer-Schnittstelle** ermöglicht die streambasierte Übertragung von Daten.
 
 ## <a name="members"></a>Member
 
-Die **iwiatransfer** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwiatransfer** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaTransfer-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaTransfer** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwiatransfer** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaTransfer-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                 | BESCHREIBUNG                                                                                 |
 |:-----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|
 | [**Abbrechen**](-wia-iwiatransfer-cancel.md)                             | Bricht den aktuellen Übertragungsvorgang ab. <br/>                                         |
-| [**Herunterladen**](-wia-iwiatransfer-download.md)                         | Initiiert einen Daten Download für den Aufrufer. <br/>                                        |
-| [**Enumwia- \_ Format \_ Informationen**](-wia-iwiatransfer-enumwia-format-info.md) | Erstellt einen Enumerator für die Übertragungs Formate, die das WIA 2,0-Gerät unterstützt.<br/> |
-| [**Upload**](-wia-iwiatransfer-upload.md)                             | Initiiert einen Daten Upload eines einzelnen Elements vom Aufrufer. <br/>                       |
+| [**Herunterladen**](-wia-iwiatransfer-download.md)                         | Initiiert einen Datendownload an den Aufrufer. <br/>                                        |
+| [**EnumWIA \_ FORMAT \_ INFO**](-wia-iwiatransfer-enumwia-format-info.md) | Erstellt einen Enumerator für die Übertragungsformate, die das WIA 2.0-Gerät unterstützt.<br/> |
+| [**Upload**](-wia-iwiatransfer-upload.md)                             | Initiiert einen Datenupload eines einzelnen Elements vom Aufrufer. <br/>                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **iwiatransfer** -Schnittstelle erbt wie alle Component Object Model-Schnittstellen (com) die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstellen Methoden.
+Die **IWiaTransfer-Schnittstelle** erbt wie alle Component Object Model -Schnittstellen (COM) die [IUnknown-Schnittstellenmethoden.](/windows/win32/api/unknwn/nn-unknwn-iunknown)
 
 
 
 | IUnknown-Methoden                                        | BESCHREIBUNG                               |
 |---------------------------------------------------------|-------------------------------------------|
-| [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
-| [IUnknown:: adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
-| [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
+| [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
+| [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
+| [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

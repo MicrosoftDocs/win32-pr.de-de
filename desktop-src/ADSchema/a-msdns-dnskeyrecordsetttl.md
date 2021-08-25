@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-DNSKEY-Record-Set-TTL-Attribut
-description: Ein Attribut, das den Wert für die Gültigkeitsdauer (TTL) definiert, der DNSKEY-Datensätzen beim Signieren der DNS-Zone zugewiesen wird.
+title: ms-DNS-DNSKEY-Record-Set-TTL-Attribut
+description: Ein Attribut, das den Wert für die Gültigkeitsdauer (Time-to-Live, TTL) definiert, der DNSKEY-Einträgen beim Signieren der DNS-Zone zugewiesen wird.
 ms.assetid: 90f08d20-2e57-4751-ada1-0888b4be4533
 ms.tgt_platform: multiple
 keywords:
-- MS-DNS-DNSKEY-Datensatz-Set-TTL-Attribut AD-Schema
-- MSDNs-dnskeyrecordsetttl-Attribut AD-Schema
+- MS-DNS-DNSKEY-Record-Set-TTL-Attribut AD-Schema
+- MSDNS-DNSKEYRecordSetTTL-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02ff8fb91ad0c213658a52fb6730606a42582128
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b9ff62a3d4778610d654884f2b9a909f08810821eea8a1d2fbdd4795b88438f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924500"
 ---
-# <a name="ms-dns-dnskey-record-set-ttl-attribute"></a>MS-DNS-DNSKEY-Record-Set-TTL-Attribut
+# <a name="ms-dns-dnskey-record-set-ttl-attribute"></a>ms-DNS-DNSKEY-Record-Set-TTL-Attribut
 
-Ein Attribut, das den Wert für die Gültigkeitsdauer (TTL) definiert, der DNSKEY-Datensätzen beim Signieren der DNS-Zone zugewiesen wird.
+Ein Attribut, das den Wert für die Gültigkeitsdauer (Time-to-Live, TTL) definiert, der DNSKEY-Einträgen beim Signieren der DNS-Zone zugewiesen wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-DNSKEY-Datensatz-Set-TTL         |
-| LDAP-Display-Name | MSDNs-dnskeyrecordsetttl             |
+| CN                | ms-DNS-DNSKEY-Record-Set-TTL         |
+| Ldap-Anzeigename | msDNS-DNSKEYRecordSetTTL             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2139              |
-| System-ID-GUID    | 8f 4e317b-28d7-442c-a6df-1F 491 |
+| System-ID-GUID    | 8f4e317f-28d7-442c-a6df-1f491f97b326 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -52,16 +52,16 @@ Ein Attribut, das den Wert für die Gültigkeitsdauer (TTL) definiert, der DNSKE
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | 0                                        |
 | Range-Upper            | 2592000                                  |
 | Search-Flags           | 0x00000008                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

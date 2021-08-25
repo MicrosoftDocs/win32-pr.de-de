@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_EDIT_COPY Meldung (VFW. h)
-description: Die " \_ WM \_ \_ -Cap-Kopier Nachricht bearbeiten" kopiert den Inhalt des Video Frame Puffers und der zugehörigen Palette in die Zwischenablage. Sie können diese Nachricht explizit oder mithilfe des capeditcopy-Makros senden.
+title: WM_CAP_EDIT_COPY-Nachricht (Vfw.h)
+description: Die \_ WM CAP \_ EDIT \_ COPY-Nachricht kopiert den Inhalt des Videoframepuffers und der zugeordneten Palette in die Zwischenablage. Sie können diese Nachricht explizit oder mithilfe des CapEditCopy-Makros senden.
 ms.assetid: 16f1dd7d-af4d-4096-add8-eec5f0a0607f
 keywords:
-- WM_CAP_EDIT_COPY-Nachricht (Multimedia)
+- WM_CAP_EDIT_COPY nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb81c21fc10846adaa113c02b6250bbb35cfff50
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e944273ff8519aefa52803b2072199760a480e0fcb2a76dd314b578dcbcfdf4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892080"
 ---
-# <a name="wm_cap_edit_copy-message"></a>\_Meldung zum \_ Bearbeiten der WM-Abdeckung \_
+# <a name="wm_cap_edit_copy-message"></a>WM \_ CAP \_ EDIT \_ COPY-Nachricht
 
-Die " **WM-Cap- \_ \_ \_ Kopier Nachricht bearbeiten** " kopiert den Inhalt des Video Frame Puffers und der zugehörigen Palette in die Zwischenablage. Sie können diese Nachricht explizit oder mithilfe des [**capeditcopy**](/windows/desktop/api/Vfw/nf-vfw-capeditcopy) -Makros senden.
+Die **WM CAP EDIT \_ \_ \_ COPY-Nachricht** kopiert den Inhalt des Videoframepuffers und der zugeordneten Palette in die Zwischenablage. Sie können diese Nachricht explizit oder mithilfe des [**CapEditCopy-Makros**](/windows/desktop/api/Vfw/nf-vfw-capeditcopy) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,10 +54,10 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

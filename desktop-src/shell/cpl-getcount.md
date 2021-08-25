@@ -1,6 +1,6 @@
 ---
-description: Wird an die CPlApplet-Funktion einer System Steuerungsanwendung gesendet, um die von der Anwendung unterstützte Anzahl von Dialogfeldern abzurufen.
-title: CPL_GETCOUNT Meldung (cpl. h)
+description: Wird an die CPlApplet-Funktion einer Systemsteuerung Anwendung gesendet, um die Anzahl der von der Anwendung unterstützten Dialogfelder abzurufen.
+title: CPL_GETCOUNT-Nachricht (Cpl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 6b88b56c-aad7-4144-ab95-15d7eef21861
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 3bf8980fa29841d3c5341daeeccf26cea05db80c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58f95a62d17ccafd308666a5632a1f7a42ebfda6ca0a54dfb6dfa9d9eda9b684
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715480"
 ---
-# <a name="cpl_getcount-message"></a>CPL- \_ GetCount-Nachricht
+# <a name="cpl_getcount-message"></a>CPL \_ GETCOUNT-Nachricht
 
-Wird an die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion einer System Steuerungsanwendung gesendet, um die von der Anwendung unterstützte Anzahl von Dialogfeldern abzurufen.
+Wird an die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) einer Systemsteuerung Anwendung gesendet, um die Anzahl der von der Anwendung unterstützten Dialogfelder abzurufen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,21 +36,21 @@ Wird an die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion gibt die Anzahl der Dialogfelder zurück, die von der System Steuerungsanwendung unterstützt werden.
+Die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) gibt die Anzahl der Dialogfelder zurück, die die Systemsteuerung Anwendung unterstützt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht wird unmittelbar nach der [**cpl- \_ Init**](cpl-init.md) -Nachricht gesendet.
+Diese Nachricht wird unmittelbar nach der [**\_ CPL-INIT-Nachricht**](cpl-init.md) gesendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>CPL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Cpl.h</dt> </dl> |
 
 
 

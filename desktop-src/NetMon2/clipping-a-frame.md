@@ -1,22 +1,22 @@
 ---
-description: Sie können angeben, dass der Treiber die Frames Ausschneiden soll.
+description: Sie können angeben, dass der Treiber die Frames ausschneiden soll.
 ms.assetid: a4f53568-684b-48cf-835b-915cefb45a5d
-title: Clipping eines Frames
+title: Clipping a Frame
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1507b82ffedeb26939d5d954f116bb009ed0ab41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9251fc6f8a1c9612a9fa7301ea8948956291ad0d074f90ff2ccbbf3f799bd2b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911260"
 ---
-# <a name="clipping-a-frame"></a>Clipping eines Frames
+# <a name="clipping-a-frame"></a>Clipping a Frame
 
-Sie können angeben, dass der Treiber die Frames Ausschneiden soll. (Wenn die anderen Erfassungs Filter Abschnitte ausgelassen werden, ist dies möglicherweise die einzige Funktion Ihres Erfassungs Filters). Wenn das Feld **nframebytestocopy** nicht NULL (0) ist, gibt sein Wert an, wie viele Bytes jedes Frame erhalten bleiben. Wenn das Feld 0 (null) ist, wird der gesamte Frame beibehalten.
+Sie können angeben, dass der Treiber die Frames ausschneiden soll. (Wenn die anderen Erfassungsfilterabschnitte weggelassen werden, ist dies möglicherweise die einzige Funktion Ihres Erfassungsfilters.) Wenn das **nFrameBytesToCopy-Feld** nicht 0 (null) ist, gibt der Wert an, wie viele Bytes jedes empfangenen Frames beibehalten werden. Wenn das Feld 0 (null) ist, wird der gesamte Frame beibehalten.
 
 > [!Note]  
-> Sie können einen beliebigen Frame Ausschneiden, der die anderen Teile Ihres Erfassungs Filters durch Festlegen von **nframebytestocopy** übergibt.
+> Sie können jeden Frame beschneiden, der die anderen Teile des Erfassungsfilters übergibt, indem Sie **nFrameBytesToCopy festlegen.**
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Bezeichner des Diensts ab, der mit dem Endpunkt Token authentifiziert werden soll.
+description: Ruft den Bezeichner des Diensts ab, der mit dem Endpunkttoken authentifiziert werden soll.
 ms.assetid: FE110B8E-F8FB-4CC8-BDD8-6427BA8B7920
-title: 'Iupdateendpointauthtoken:: serviceid-Methode (updateendpointauth. h)'
+title: IUpdateEndpointAuthToken::ServiceID-Methode (UpdateEndpointAuth.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - UpdateEndpointAuth.dll
-ms.openlocfilehash: 8384baa0a4f8bb48e603e0f2f8bed417e783b7f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd7e15059db01062fae290d9c4da46a9ef07683acae9f2e58afe29830817c787
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855790"
 ---
-# <a name="iupdateendpointauthtokenserviceid-method"></a>Iupdateendpointauthtoken:: serviceid-Methode
+# <a name="iupdateendpointauthtokenserviceid-method"></a>IUpdateEndpointAuthToken::ServiceID-Methode
 
-Ruft den Bezeichner des Diensts ab, der mit dem Endpunkt Token authentifiziert werden soll.
+Ruft den Bezeichner des Diensts ab, der mit dem Endpunkttoken authentifiziert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT ServiceID(
 
 <dl> <dt>
 
-*pserviceid* \[ vorgenommen\]
+*pServiceID* \[ out\]
 </dt> <dd>
 
-Der Bezeichner des Dienstanbieter.
+Der Bezeichner des Diensts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg **S \_ OK** zurück. Andernfalls wird ein com-oder Windows-Fehlercode zurückgegeben.
+Gibt bei Erfolg **S \_ OK** zurück. Andernfalls wird ein COM- oder Windows Fehlercode zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,20 +56,20 @@ Gibt bei Erfolg **S \_ OK** zurück. Andernfalls wird ein com-oder Windows-Fehle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                   |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>                |
-| Header<br/>                   | <dl> <dt>Updateendpointauth. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Updateendpointauth. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Updateendpointauth. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>                |
+| Header<br/>                   | <dl> <dt>UpdateEndpointAuth.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>UpdateEndpointAuth.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>UpdateEndpointAuth.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>UpdateEndpointAuth.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iupdateendpointauthtoken**](iupdateendpointauthtoken.md)
+[**IUpdateEndpointAuthToken**](iupdateendpointauthtoken.md)
 </dt> </dl>
 
  

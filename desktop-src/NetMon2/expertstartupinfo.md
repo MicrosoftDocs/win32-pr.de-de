@@ -1,7 +1,7 @@
 ---
-description: Enthält Daten, die einen Experten beschreiben, wenn er gestartet wird.
+description: Enthält Daten, die einen Experten beim Start beschreiben.
 ms.assetid: 9ecd5395-d10c-411b-a6bd-fbac724d8603
-title: Expertstartupinfo-Struktur (Netmon. h)
+title: EXPERTSTARTUPINFO-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 627d47cec09a683f80c16374561899ab008d0596
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f49fcf3c87795dbd7c9e65745e1b5560331c96c471d8ff7b2c8a24560b143cb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911050"
 ---
-# <a name="expertstartupinfo-structure"></a>Expertstartupinfo-Struktur
+# <a name="expertstartupinfo-structure"></a>EXPERTSTARTUPINFO-Struktur
 
-Die Struktur " **expertstartupinfo** " enthält Daten, die einen Experten beschreiben, wenn er gestartet wird.
+Die **EXPERTSTARTUPINFO-Struktur** enthält Daten, die einen Experten beim Start beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,55 +55,55 @@ Flags, die den Experten beschreiben.
 
 </dd> <dt>
 
-**hcapture**
+**hCapture**
 </dt> <dd>
 
 Handle für eine Erfassung.
 
 </dd> <dt>
 
-**szcapturefile**
+**szCaptureFile**
 </dt> <dd>
 
-Der Name der Erfassungs Datei.
+Name der Erfassungsdatei.
 
 </dd> <dt>
 
-**dwframennummer**
+**dwFrameNumber**
 </dt> <dd>
 
-Frame Nummer.
+Framenummer.
 
 </dd> <dt>
 
-**hprotocol**
+**hProtocol**
 </dt> <dd>
 
 Handle für das Protokoll.
 
 </dd> <dt>
 
-**lppropertyinst**
+**lpPropertyInst**
 </dt> <dd>
 
-Zeiger auf eine [**propertyinst**](propertyinst.md) -Struktur.
+Zeiger auf eine [**PROPERTYINST-Struktur.**](propertyinst.md)
 
 </dd> <dt>
 
-**sbitfield**
+**sBitfield**
 </dt> <dd> <dl> <dt>
 
-**Bitzahl**
+**BitNumber**
 </dt> <dd>
 
-Wird nur verwendet, wenn der **dataqualifizierermember** der [**propertyinst**](propertyinst.md) -Struktur auf Prop Qual Flags festgelegt ist \_ \_ .
+Wird nur verwendet, wenn **der DataQualifier-Member** der [**PROPERTYINST-Struktur**](propertyinst.md) auf PROP \_ QUAL \_ FLAGS festgelegt ist.
 
 </dd> <dt>
 
-**Böller**
+**Bon**
 </dt> <dd>
 
-Wird nur verwendet, wenn der **dataqualifizierermember** der [**propertyinst**](propertyinst.md) -Struktur auf Prop Qual Flags festgelegt ist \_ \_ .
+Wird nur verwendet, wenn **der DataQualifier-Member** der [**PROPERTYINST-Struktur**](propertyinst.md) auf PROP \_ QUAL \_ FLAGS festgelegt ist.
 
 </dd> </dl> </dd> </dl>
 
@@ -115,7 +115,7 @@ Wird nur verwendet, wenn der **dataqualifizierermember** der [**propertyinst**](
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

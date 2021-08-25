@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ Aktion "aktionequenz" definiert eine Reihe von Vorgängen, die das Softwareelement (auf das durch die CIM- \_ softwareelementactions-Zuordnung verwiesen wird) in den nächsten Zustand übergehen oder das Softwareelement aus seinem aktuellen Zustand entfernt.
+description: Die CIM \_ ActionSequence-Zuordnung definiert eine Reihe von Vorgängen, die das Softwareelement (auf das von der CIM \_ SoftwareElementActions-Zuordnung verwiesen wird) in den nächsten Zustand übergehen oder das Softwareelement aus seinem aktuellen Zustand entfernt.
 ms.assetid: b539c424-bc2a-414b-b56c-72550004720f
 ms.tgt_platform: multiple
 title: CIM_ActionSequence-Klasse
@@ -16,31 +16,31 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 71150d1ad9785d81579d8f305fe46bc6b7e57d00
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a199671dd9f88cd81be50af537e156892e8cab653c70677de27c6e5df02f1d3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119801080"
 ---
-# <a name="cim_actionsequence-class"></a>CIM- \_ Aktions Sequenz Klasse
+# <a name="cim_actionsequence-class"></a>CIM \_ ActionSequence-Klasse
 
-Die CIM-Aktion " **\_ aktionequenz** " definiert eine Reihe von Vorgängen, die das Softwareelement (auf das durch die [**CIM- \_ softwareelementactions**](cim-softwareelementactions.md) -Zuordnung verwiesen wird) in den nächsten Zustand übergehen oder das Softwareelement aus seinem aktuellen Zustand entfernt.
+Die **CIM \_ ActionSequence-Zuordnung** definiert eine Reihe von Vorgängen, die das Softwareelement (auf das von der [**CIM \_ SoftwareElementActions-Zuordnung**](cim-softwareelementactions.md) verwiesen wird) in den nächsten Zustand übergehen oder das Softwareelement aus seinem aktuellen Zustand entfernt.
 
-Die Aktionen des nächsten Zustands und die Deinstallations Aktionen, die einem bestimmten Softwareelement zugeordnet sind, müssen eine fortlaufende Sequenz sein. Da **CIM \_ Action Sequence** eine Zuordnung ist, bilden die Schleifen für die [**CIM- \_ Aktions**](cim-action.md) Klasse mit Rollen für die Aktion "vorheriger" und "Next" eine Sequenz.
+Die aktionen des nächsten Zustands und deinstallationsaktionen, die einem bestimmten Softwareelement zugeordnet sind, müssen eine fortlaufende Sequenz sein. Da **CIM \_ ActionSequence** eine Zuordnung ist, bilden die Schleifen in der [**CIM \_ Action-Klasse**](cim-action.md) mit Rollen für die "vorherige" aktion und die "next"-Aktion eine Sequenz.
 
-Die Notwendigkeit einer kontinuierlichen Sequenz impliziert Folgendes:
+Die Notwendigkeit einer fortlaufenden Sequenz impliziert Folgendes:
 
--   Innerhalb des Satzes von Aktionen des nächsten Zustands oder der Deinstallation gibt es nur eine Aktion, die nicht über eine Instanz der CIM-Aktion " **\_ Action Sequence** " verfügt, die in der Rolle "Next" darauf verweist. Dies ist die erste Aktion in der Sequenz.
--   Innerhalb des Satzes von Aktionen des nächsten Zustands oder der Deinstallation gibt es nur eine Aktion, die nicht über eine Instanz der CIM-Aktion " **\_ Action Sequence** " verfügt, die in der Rolle "vorheriger" darauf verweist. Dies ist die letzte Aktion in der Sequenz.
--   Alle anderen Aktionen innerhalb des Satzes von Aktionen vom Typ "Nächster Zustand" und "deinstallieren" müssen an zwei Instanzen der CIM-Aktion " **\_ aktionequenz** " teilnehmen, eine in der Rolle "vorheriger" und eine in der Rolle "Next".
+-   Innerhalb des Satzes der nächsten Status- oder Deinstallationsaktionen gibt es nur eine Aktion, die keine Instanz der **\_ CIM-AktionSequence-Zuordnung** aufweist, die in der Rolle "Next" darauf verweist. Dies ist die erste Aktion in der Sequenz.
+-   Innerhalb des Satzes der Nächsten-Zustands- oder Deinstallationsaktionen gibt es nur eine Aktion, die nicht über eine Instanz der **CIM \_ ActionSequence-Zuordnung** verfügt, auf die in der Rolle "prior" verwiesen wird. Dies ist die letzte Aktion in der Sequenz.
+-   Alle anderen Aktionen innerhalb der Nächsten-Zustands- und Deinstallationsaktionen müssen an zwei Instanzen der **CIM \_ ActionSequence-Zuordnung** beteiligt sein, eine in einer "vorherigen" Rolle und eine in der Rolle "next".
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,26 +55,26 @@ class CIM_ActionSequence
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Aktions Sequenz** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ActionSequence-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Aktions Sequenz** Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ActionSequence-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Nächste**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Aktion**
+Datentyp: **\_ CIM-Aktion**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
 Verweis auf die nächste Aktion.
@@ -84,26 +84,26 @@ Verweis auf die nächste Aktion.
 **Vor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Aktion**
+Datentyp: **\_ CIM-Aktion**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (0)
 </dt> </dl>
 
 Verweis auf die vorherige Aktion.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**CIM- \_ Aktions**](cim-action.md) Klassen, die an dieser Zuordnung beteiligt sind, müssen über denselben Wert für die **Direction** -Eigenschaft verfügen.
+Die [**CIM \_ Action-Klassen,**](cim-action.md) die an dieser Zuordnung teilnehmen, müssen den gleichen Wert für die **Direction-Eigenschaft** aufweisen.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,8 +113,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

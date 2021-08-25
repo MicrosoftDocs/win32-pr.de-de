@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob ein Quell Rechteck gültig ist.
+description: Bestimmt, ob ein Quellrechteck gültig ist.
 ms.assetid: 3fef107b-6f4c-4fab-91d3-6ab72dcc32be
-title: Cbasecontrolvideo. checksourcerect-Methode (ctlutil. h)
+title: CBaseControlVideo.CheckSourceRect-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fa219687dabcf9124662e3269d157fb0a163a6a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf7ac41d626eceee048afc4671a5e171e7164adfbd9a941b1b70bc85ea988c3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873010"
 ---
-# <a name="cbasecontrolvideochecksourcerect-method"></a>Cbasecontrolvideo. checksourcerect-Methode
+# <a name="cbasecontrolvideochecksourcerect-method"></a>CBaseControlVideo.CheckSourceRect-Methode
 
-Bestimmt, ob ein Quell Rechteck gültig ist.
+Bestimmt, ob ein Quellrechteck gültig ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ virtual HRESULT CheckSourceRect(
 
 <dl> <dt>
 
-*psourcerect* 
+*pSourceRect* 
 </dt> <dd>
 
-Zeiger auf das zu Überprüfung des Quell Rechtecks.
+Zeiger auf das zu überprüfende Quellrechteck.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E \_ invalidArg" zurück, wenn es ungültig ist; andernfalls wird "noError (S OK)" zurückgegeben \_ .
+Gibt E \_ INVALIDARG zurück, wenn ungültig; andernfalls gibt NOERROR (S \_ OK) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion überprüft, ob das angeforderte Quell Rechteck das verfügbare Quellvideo nicht überschreitet. Die linke und die obere Koordinate dürfen nicht negativ sein, und die Breite und die Höhe dürfen nicht den rechten und unteren Rand des Videos überschreiten.
+Diese Memberfunktion überprüft, ob das angeforderte Quellrechteck das verfügbare Quellvideo nicht überschreitet. Die linke und die obere Koordinate dürfen nicht negativ sein, und breite und höhe dürfen den rechten und unteren Rand des Videos nicht überschreiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion überprüft, ob das angeforderte Quell Rechteck das verfü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion überprüft, ob das angeforderte Quell Rechteck das verfü
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

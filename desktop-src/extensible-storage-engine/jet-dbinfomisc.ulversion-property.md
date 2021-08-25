@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: JET_DBINFOMISC. ulversion-Eigenschaft'
-title: JET_DBINFOMISC. ulversion (Eigenschaft)
+description: 'Weitere Informationen zu: JET_DBINFOMISC.ulVersion-Eigenschaft'
+title: JET_DBINFOMISC.ulVersion-Eigenschaft
 TOCTitle: 'ulVersion property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.ulVersion
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.ulversion(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2398faf9058ef20657cf20915c4b7c5f80728d2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b794c4603fc139f6878ab142f28e3677bdfccf9d2aa15f48120eb13ec1b10c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890873"
 ---
-# <a name="jet_dbinfomisculversion-property"></a>JET_DBINFOMISC. ulversion (Eigenschaft)
+# <a name="jet_dbinfomisculversion-property"></a>JET_DBINFOMISC.ulVersion-Eigenschaft
 
-Ruft die Version von ESENT ab, von der die Datenbank erstellt wurde.
+Ruft die Version von Esent ab, die die Datenbank erstellt hat.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int ulVersion { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Die DisplayType-Funktion sendet Informationen über einen Medientyp an den debugausgabespeicherort. Wird in Einzelhandels Builds ignoriert.
+description: Die DisplayType-Funktion sendet Informationen zu einem Medientyp an den Debugausgabespeicherort. Wird in Einzelhandels-Builds ignoriert.
 ms.assetid: 63a88508-dff8-4869-97e5-0f75f4a9dca0
-title: DisplayType-Funktion (wxdebug. h)
+title: DisplayType-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4f3d83bbe7a24463fc4cfaed4ace3adec9d6fcf7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a48bc5f4afbfabc9bdc37ff2cfe8c5890629f3fcaacf135979b82523981ed66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906500"
 ---
 # <a name="displaytype-function"></a>DisplayType-Funktion
 
-Die- `DisplayType` Funktion sendet Informationen über einen Medientyp an den debugausgabespeicherort. Wird in Einzelhandels Builds ignoriert.
+Die `DisplayType` Funktion sendet Informationen zu einem Medientyp an den Debugausgabespeicherort. Wird in Einzelhandels-Builds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ void DisplayType(
 *label* 
 </dt> <dd>
 
-Eine Zeichenfolge, die eine Meldung enthält, die mit den Medientyp Informationen angezeigt werden soll.
+Eine Zeichenfolge, die eine Meldung enthält, die mit den Medientypinformationen angezeigt werden soll.
 
 </dd> <dt>
 
-*pmtin* 
+*pmtIn* 
 </dt> <dd>
 
-unterliegt [**der Medientyp Struktur, die \_ \_**](/windows/win32/api/strmif/ns-strmif-am_media_type) den Medientyp enthält.
+Mit der [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die den Medientyp enthält, geintert.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ unterliegt [**der Medientyp Struktur, die \_ \_**](/windows/win32/api/strmif/ns-
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion generiert mehrere Protokoll-Ablauf \_ Verfolgungs Meldungen. Bei der Protokollierung 2 oder höher zeigt die Funktion den Haupttyp, den Untertyp und den Formattyp sowie die Daten aus dem Format Block an. Bei der Protokollierung 5 oder höher zeigt die Funktion zusätzliche Informationen an, z. b. die Quell-und Ziel Rechtecke für Video Typen.
+Diese Funktion generiert mehrere LOG \_ TRACE-Meldungen. Auf Protokollierungsebene 2 oder höher zeigt die Funktion den Haupttyp, Untertyp und Formattyp sowie Daten aus dem Formatblock an. Bei Protokollierungsebene 5 oder höher zeigt die Funktion zusätzliche Informationen an, z. B. die Quell- und Zielrechtecke für Videotypen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Funktion generiert mehrere Protokoll-Ablauf \_ Verfolgungs Meldungen. Bei 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Diese Funktion generiert mehrere Protokoll-Ablauf \_ Verfolgungs Meldungen. Bei 
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debugausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

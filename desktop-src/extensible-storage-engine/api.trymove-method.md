@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. trymove-Methode.
-title: API. trymove-Methode
+description: 'Weitere Informationen finden Sie unter: Api.TryMove-Methode'
+title: Api.TryMove-Methode
 TOCTitle: 'TryMove method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.TryMove(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_Move,Microsoft.Isam.Esent.Interop.MoveGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.trymove(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6d4b3aa596bb5e813d87dcc6f278112fe1e4cbdb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 973188fb145c1d6c8fc82e2d2566643e98011857a36b1c94399cabda9659ed67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738550"
 ---
-# <a name="apitrymove-method"></a>API. trymove-Methode
+# <a name="apitrymove-method"></a>Api.TryMove-Methode
 
-Versuchen Sie, durch einen Index zu navigieren. Wenn die Navigation erfolgreich ist, gibt diese Methode true zurück. Wenn kein Datensatz vorhanden ist, um zu dieser Methode zu navigieren, wird false zurückgegeben. für andere Fehler wird eine Ausnahme ausgelöst.
+Versuchen Sie, durch einen Index zu navigieren. Wenn die Navigation erfolgreich ist, gibt diese Methode TRUE zurück. Wenn kein Datensatz für die Navigation zu dieser Methode vorkommt, wird false zurückgegeben. Für andere Fehler wird eine Ausnahme ausgelöst.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,43 +70,43 @@ public static bool TryMove(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der Cursor, der positioniert werden soll.
 
 <!-- end list -->
 
   - Verschieben  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_Move](./jet-move-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_Move](./jet-move-enumeration.md)  
     
-    Die Richtung, in die verschoben werden soll.
+    Die Richtung, in die bewegt werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. muvegrbit](./movegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.MoveGrbit](./movegrbit-enumeration.md)  
     
-    Verschieben von Optionen.
+    Optionen zum Verschieben.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die Verschiebung erfolgreich war.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+True, wenn die Bewegung erfolgreich war.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
-title: Eingabe von Feedback-Konfigurations Konstanten
-description: Dieser Abschnitt enthält die Referenz Spezifikationen für Eingabe-Feedback-Konfigurations Konstanten.
+title: Konfiguration von Eingabefeedbackkonst konstanten
+description: Dieser Abschnitt enthält die Referenzspezifikationen für Input Feedback Configuration-Konstanten.
 ms.assetid: 1B0EA599-6618-4DF2-B8C7-91A534BD85C0
 topic_type:
 - apiref
@@ -12,20 +12,20 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: d235818130815c14cabf9a4f2ba51c0aa7d07f27
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: ee732a3cf67287790fd691cbf8b2b1592de31106abf08deb713bd6402afb971f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726701"
 ---
-# <a name="input-feedback-configuration-constants"></a>Eingabe von Feedback-Konfigurations Konstanten
+# <a name="input-feedback-configuration-constants"></a>Konfiguration von Eingabefeedbackkonst konstanten
 
-Dieser Abschnitt enthält die Referenz Spezifikationen für [Eingabe-Feedback-Konfigurations](input-feedback-configuration-portal.md) Konstanten.
+Dieser Abschnitt enthält die Referenzspezifikationen für [Input Feedback Configuration-Konstanten.](input-feedback-configuration-portal.md)
 
 <dl> <dt>
 
-<span id="GWFS_INCLUDE_ANCESTORS"></span><span id="gwfs_include_ancestors"></span>**gwfs \_ include-Vorgänger \_**
+<span id="GWFS_INCLUDE_ANCESTORS"></span><span id="gwfs_include_ancestors"></span>**GWFS \_ INCLUDE \_ ANCESTORS**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -33,7 +33,7 @@ Dieser Abschnitt enthält die Referenz Spezifikationen für [Eingabe-Feedback-Ko
 
 
 
-Gibt an, dass die übergeordnete Fenster Kette geprüft werden soll.
+Gibt an, dass die übergeordnete Fensterkette überprüft werden soll.
 
 
 </dt> </dl> </dd> </dl>
@@ -44,17 +44,17 @@ Gibt an, dass die übergeordnete Fenster Kette geprüft werden soll.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Referenz zur Eingabe von Feedback Konfigurationen](input-feedback-configuration-reference.md)
+[Konfigurationsreferenz für Eingabefeedback](input-feedback-configuration-reference.md)
 </dt> </dl>
 
  

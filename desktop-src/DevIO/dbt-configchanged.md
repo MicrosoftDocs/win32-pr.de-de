@@ -1,21 +1,21 @@
 ---
-description: Das System überträgt das DBT \_ ConfigChanged-Geräte Ereignis, um anzugeben, dass sich die aktuelle Konfiguration aufgrund eines Andocken oder abdostems geändert hat. Eine Anwendung oder ein Treiber, die Daten in der Registrierung unter dem aktuellen Konfigurationsschlüssel HKEY speichert, \_ \_ sollte die Daten aktualisieren.
+description: Das System überträgt das DBT \_ CONFIGCHANGED-Geräteereignis, um anzugeben, dass sich die aktuelle Konfiguration aufgrund eines Andockens oder Abdockens geändert hat. Eine Anwendung oder ein Treiber, die Daten in der Registrierung unter dem Schlüssel HKEY CURRENT CONFIG speichert, \_ \_ sollte die Daten aktualisieren.
 ms.assetid: e5e33970-b17e-4723-98aa-e242f90fe4e7
-title: DBT_CONFIGCHANGED-Ereignis (DBT. h)
+title: DBT_CONFIGCHANGED -Ereignis (Dbt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d242832378ba9ca3d3006965719942aa41ecff93
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ba7e0d93b2a89793bb572a5c7563e54fa3114101443b43b8d6beac7955bdd6ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874515"
 ---
-# <a name="dbt_configchanged-event"></a>DBT \_ ConfigChanged-Ereignis
+# <a name="dbt_configchanged-event"></a>DBT \_ CONFIGCHANGED-Ereignis
 
-Das System überträgt das DBT \_ ConfigChanged-Geräte Ereignis, um anzugeben, dass sich die aktuelle Konfiguration aufgrund eines Andocken oder abdostems geändert hat. Eine Anwendung oder ein Treiber, die Daten in der Registrierung unter dem aktuellen Konfigurationsschlüssel HKEY speichert, \_ \_ sollte die Daten aktualisieren.
+Das System überträgt das DBT \_ CONFIGCHANGED-Geräteereignis, um anzugeben, dass sich die aktuelle Konfiguration aufgrund eines Andockens oder Abdockens geändert hat. Eine Anwendung oder ein Treiber, die Daten in der Registrierung unter dem Schlüssel HKEY CURRENT CONFIG speichert, \_ \_ sollte die Daten aktualisieren.
 
-Zum übertragen dieses Geräte Ereignisses verwendet das System die [**WM \_ devicechange**](wm-devicechange.md) -Nachricht, wobei *wParam* auf DBT \_ ConfigChanged und *LPARAM* auf NULL festgelegt ist.
+Zum Übertragen dieses Geräteereignisses verwendet das System die [**WM \_ DEVICECHANGE-Nachricht,**](wm-devicechange.md) wobei *wParam* auf DBT \_ CONFIGCHANGED und *lParam* auf 0 (null) festgelegt ist.
 
 
 ```C++
@@ -33,24 +33,24 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Das Fensterhandle
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der [**WM- \_ devicechange**](wm-devicechange.md) -Nachrichten Bezeichner.
+Der [**WM \_ DEVICECHANGE-Nachrichtenbezeichner.**](wm-devicechange.md)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Auf DBT \_ ConfigChanged festgelegt.
+Legen Sie dbt \_ CONFIGCHANGED fest.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Auf NULL festlegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Gibt **true** zurück.
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>DBT. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Dbt.h</dt> </dl> |
 
 
 
@@ -81,13 +81,13 @@ Gibt **true** zurück.
 
 <dl> <dt>
 
-[Geräte Ereignisse](device-events.md)
+[Geräteereignisse](device-events.md)
 </dt> <dt>
 
-[Geräte Verwaltungs Ereignisse](device-management-events.md)
+[Geräteverwaltung-Ereignisse](device-management-events.md)
 </dt> <dt>
 
-[**WM- \_ devicechange**](wm-devicechange.md)
+[**WM \_ DEVICECHANGE**](wm-devicechange.md)
 </dt> </dl>
 
  

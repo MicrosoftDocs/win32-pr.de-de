@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Linie im oberen Bereich der Ereignisanzeige bereit, die als Container für alle möglichen Daten dient, die in eine Spalte eingefügt werden.
+description: Stellt eine Zeile im oberen Bereich des Ereignisanzeige bereit, die als Container für alle möglichen Daten dient, die in eine Spalte eingefügt werden.
 ms.assetid: 2ad32c23-5dbe-46be-b0cc-ccf7a6fe8ec3
-title: Nmcolumnvariant-Struktur (Netmon. h)
+title: NMCOLUMNVARIANT-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: e9f70d2d1a0caf63411fcd2b44d5ed8bdcbecd00
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 814b419909591e45c07b3ed499072ec4871cdeb1f4c5a355277a03d0623d264c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890021"
 ---
-# <a name="nmcolumnvariant-structure"></a>Nmcolumnvariant-Struktur
+# <a name="nmcolumnvariant-structure"></a>NMCOLUMNVARIANT-Struktur
 
-Die **nmcolumnvariant** -Struktur stellt eine Linie im oberen Bereich der Ereignisanzeige bereit, die als Container für alle möglichen Daten dient, die in eine Spalte eingefügt werden.
+Die **NMCOLUMNVARIANT-Struktur** stellt eine Zeile im oberen Bereich des Ereignisanzeige bereit, die als Container für alle möglichen Daten dient, die in eine Spalte eingefügt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,10 +57,10 @@ typedef struct {
 
 <dl> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Ein Wert aus dem [**nmcolumntype**](nmcolumntype.md) -Enumerationstyp.
+Ein Wert aus dem [**NMCOLUMNTYPE-Enumerationstyp.**](nmcolumntype.md)
 
 </dd> <dt>
 
@@ -70,109 +70,109 @@ Ein Wert aus dem [**nmcolumntype**](nmcolumntype.md) -Enumerationstyp.
 **Uint8Val**
 </dt> <dd>
 
-ganzzahliger 8-Bit-Wert ohne Vorzeichen.
+8-Bit-Ganzzahlwert ohne Vorzeichen.
 
 </dd> <dt>
 
 **Sint8Val**
 </dt> <dd>
 
-ganzzahliger 8-Bit-Wert mit Vorzeichen.
+8-Bit-Ganzzahlwert mit Vorzeichen.
 
 </dd> <dt>
 
 **Uint16Val**
 </dt> <dd>
 
-ganzzahliger 16-Bit-Wert ohne Vorzeichen.
+16-Bit-Ganzzahlwert ohne Vorzeichen.
 
 </dd> <dt>
 
 **Sint16Val**
 </dt> <dd>
 
-ganzzahliger 16-Bit-Wert mit Vorzeichen.
+16-Bit-Ganzzahlwert mit Vorzeichen.
 
 </dd> <dt>
 
 **Uint32Val**
 </dt> <dd>
 
-32-Bit-Ganzzahl ohne Vorzeichen.
+32-Bit-Ganzzahlwert ohne Vorzeichen.
 
 </dd> <dt>
 
 **Sint32Val**
 </dt> <dd>
 
-32-Bit-Ganzzahl mit Vorzeichen.
+32-Bit-Ganzzahlwert mit Vorzeichen.
 
 </dd> <dt>
 
 **Float64Val**
 </dt> <dd>
 
-64-Bit-Float-Wert.
+64-Bit-Gleitkommawert.
 
 </dd> <dt>
 
-**Frameval**
+**FrameVal**
 </dt> <dd>
 
-Frame Nummer.
+Framenummer.
 
 </dd> <dt>
 
-**Yesnoval**
+**YesNoVal**
 </dt> <dd>
 
-Zeigt ja oder Nein an.
+Zeigt Ja oder Nein an.
 
 </dd> <dt>
 
-**Onoffval**
+**OnOffVal**
 </dt> <dd>
 
-Wird ein-oder ausgeschaltet angezeigt.
+Zeigt Ein oder Aus an.
 
 </dd> <dt>
 
-**Truefalsee Val**
+**TrueFalseVal**
 </dt> <dd>
 
-Zeigt True oder false an.
+Zeigt True oder False an.
 
 </dd> <dt>
 
-**Macaddrval**
+**MACAddrVal**
 </dt> <dd>
 
 MAC-Adresse
 
 </dd> <dt>
 
-**Ipxaddrval**
+**IPXAddrVal**
 </dt> <dd>
 
-IPX-Adresse
+IPX-Adresse.
 
 </dd> <dt>
 
-**Ipaddrval**
+**IPAddrVal**
 </dt> <dd>
 
 IP-Adresse.
 
 </dd> <dt>
 
-**Vartimeval**
+**VarTimeVal**
 </dt> <dd>
 
-Variant-Zeit. Verwenden Sie **varianttimeumsystemtime** , um in die Systemzeit zu konvertieren.
+Variant-Zeit. Verwenden Sie **VariantTimetoSystemTime,** um die Systemzeit zu konvertieren.
 
 </dd> <dt>
 
-**pstringval**
+**pStringVal**
 </dt> <dd>
 
 Zeiger auf eine Zeichenfolge.
@@ -187,7 +187,7 @@ Zeiger auf eine Zeichenfolge.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -195,7 +195,7 @@ Zeiger auf eine Zeichenfolge.
 
 <dl> <dt>
 
-[**Nmcolumntype**](nmcolumntype.md)
+[**NMCOLUMNTYPE**](nmcolumntype.md)
 </dt> </dl>
 
  

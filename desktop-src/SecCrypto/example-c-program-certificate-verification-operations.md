@@ -1,30 +1,30 @@
 ---
 description: Erläutert die Verwendung von CryptoAPI zum Verwalten und Überprüfen von Zertifikaten.
 ms.assetid: 1c26509d-5bb6-42dc-aeb0-525d7eaecf7d
-title: 'Beispiel-C-Programm: Zertifikat Überprüfungs Vorgänge'
+title: 'Beispiel C-Programm: Zertifikatüberprüfungsvorgänge'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1efdbaaea172b24448ad2b15b03ee19c6dc7a445
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19a50b8e9f89d761498eba87964dfb6e38f3d27c09d940c9cddda35682a944c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873970"
 ---
-# <a name="example-c-program-certificate-verification-operations"></a>Beispiel-C-Programm: Zertifikat Überprüfungs Vorgänge
+# <a name="example-c-program-certificate-verification-operations"></a>Beispiel C-Programm: Zertifikatüberprüfungsvorgänge
 
-Im folgenden Beispiel werden diese Aufgaben und kryptoapi-Funktionen veranschaulicht:
+Im folgenden Beispiel werden diese Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
--   Öffnen und Schließen des System Stores.
--   Suchen nach einem Zertifikat anhand des Antragsteller namens.
--   Verwenden der [**certverifytimegültigkeit**](/windows/desktop/api/Wincrypt/nf-wincrypt-certverifytimevalidity) -Funktion, um die Gültigkeitsdauer des Zertifikats zu überprüfen.
--   [**CertOpenStore übergebene**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
--   [**Certfindcertifi. Store**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
--   [**Certverifytimegültigkeit**](/windows/desktop/api/Wincrypt/nf-wincrypt-certverifytimevalidity)
--   [**Certfreecertififeecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
--   [**Certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   Öffnen und Schließen des Systemspeichers.
+-   Suchen eines Zertifikats nach Dem Namen des Betreffs.
+-   Verwenden der [**CertVerifyTimeValidity-Funktion,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certverifytimevalidity) um die Gültigkeit des Zertifikats zu überprüfen.
+-   [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
+-   [**CertVerifyTimeValidity**](/windows/desktop/api/Wincrypt/nf-wincrypt-certverifytimevalidity)
+-   [**CertFreeCertificateContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
+-   [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

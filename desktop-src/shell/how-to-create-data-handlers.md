@@ -1,42 +1,42 @@
 ---
-description: Erweitern der Zwischenablage mit benutzerdefinierten Datenformat Handlern.
-title: Erstellen von Daten Handlern
+description: Erweitern der Zwischenablage mit benutzerdefinierten Datenformathandlern.
+title: Erstellen von Datenhandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33ecc08769068d975c1fa16ef1385f362c67e43c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0a3761b4dc8ce3e7d50d967d2267971537d3609e7a7cf76785623734558adac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715050"
 ---
-# <a name="how-to-create-data-handlers"></a>Erstellen von Daten Handlern
+# <a name="how-to-create-data-handlers"></a>Erstellen von Datenhandlern
 
-Wenn eine Datei in die Zwischenablage kopiert oder gezogen und abgelegt wird, erstellt die Shell ein Datenobjekt, das eine Vielzahl von standardmäßigen [Zwischenablage Formaten](dragdrop.md)unterstützt. Für Dateien, die einen bestimmten Dateityp haben, können Sie die verfügbaren Zwischenablage Formate durch Implementieren und Registrieren eines *Daten Handlers* erweitern. Wenn eine Datei des Dateityps übertragen wird, delegiert die Shell Aufrufe an die [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Schnittstelle des Datenobjekts an den Daten Handler, wenn eines der benutzerdefinierten Formate verwendet wird.
+Wenn eine Datei in die Zwischenablage kopiert oder gezogen und abgelegt wird, erstellt die Shell ein Datenobjekt, das eine Vielzahl von [Standardformaten für die Zwischenablage](dragdrop.md)unterstützt. Für Dateien mit einem bestimmten Dateityp können Sie die verfügbaren Zwischenablageformate erweitern, indem Sie einen *Datenhandler* implementieren und registrieren. Wenn eine Datei des Dateityps übertragen wird, delegiert die Shell Aufrufe an die [**IDataObject-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-idataobject) des Datenobjekts an den Datenhandler, wenn eines der benutzerdefinierten Formate verwendet wird.
 
-Die allgemeinen Verfahren zum Implementieren und Registrieren eines Shellerweiterungs Handlers werden unter [Erstellen von Shellerweiterungs Handlern](handlers.md)erläutert. Dieses Dokument konzentriert sich auf die Aspekte der Implementierung, die für Daten Handler spezifisch sind.
+Die allgemeinen Verfahren zum Implementieren und Registrieren eines Shellerweiterungshandlers werden unter [Erstellen von Shellerweiterungshandlern](handlers.md)erläutert. Dieses Dokument konzentriert sich auf die Aspekte der Implementierung, die spezifisch für Datenhandler sind.
 
--   [Implementieren von Daten Handlern](#step-1-implementing-data-handlers)
--   [Registrieren von Daten Handlern](#step-2-registering-data-handlers)
+-   [Implementieren von Datenhandlern](#step-1-implementing-data-handlers)
+-   [Registrieren von Datenhandlern](#step-2-registering-data-handlers)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-implementing-data-handlers"></a>Schritt 1: Implementieren von Daten Handlern
+### <a name="step-1-implementing-data-handlers"></a>Schritt 1: Implementieren von Datenhandlern
 
-Wie bei allen Shellerweiterungs Handlern sind Daten Handler in-Process-Component Object Model (com)-Objekten, die als DLLs implementiert werden. Zusätzlich zu [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)werden zwei Schnittstellen exportiert: [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) und [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject).
+Wie alle Shell-Erweiterungshandler handelt es sich bei Datenhandlern um IN-Process-Component Object Model (COM)-Objekte, die als DLLs implementiert werden. Sie exportieren zwei Schnittstellen zusätzlich zu [**IUnknown:**](/windows/win32/api/unknwn/nn-unknwn-iunknown) [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) und [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject).
 
-Die Shell initialisiert den Handler über seine [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle. Diese Schnittstelle wird verwendet, um den Klassen Bezeichner (CLSID) des Handlers anzufordern und den Dateinamen bereitzustellen. Eine allgemeine Erörterung der Implementierung von Shellerweiterungs Handlern, einschließlich der **IPersistFile** -Schnittstelle, finden Sie unter [Erstellen von Shellerweiterungs Handlern](handlers.md).
+Die Shell initialisiert den Handler über die [**IPersistFile-Schnittstelle.**](/windows/win32/api/objidl/nn-objidl-ipersistfile) Diese Schnittstelle wird verwendet, um den Klassenbezeichner des Handlers (CLSID) anzufordern, und stellt ihn mit dem Namen der Datei bereit. Eine allgemeine Erläuterung der Implementierung von Shell-Erweiterungshandlern, einschließlich der **IPersistFile-Schnittstelle,** finden Sie unter [Erstellen von Shellerweiterungshandlern.](handlers.md)
 
-Nachdem der Daten Handler initialisiert wurde, delegiert die Shell Aufrufe aus dem Datenobjekt an die [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Schnittstelle des Handlers, wenn eines der benutzerdefinierten Formate verwendet wird.
+Sobald der Datenhandler initialisiert wurde, delegiert die Shell Aufrufe vom Datenobjekt an die [**IDataObject-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-idataobject) des Handlers, wenn eines der benutzerdefinierten Formate verwendet wird.
 
-### <a name="step-2-registering-data-handlers"></a>Schritt 2: Registrieren von Daten Handlern
+### <a name="step-2-registering-data-handlers"></a>Schritt 2: Registrieren von Datenhandlern
 
-Daten Handler werden unter dem *ProgID* -Unterschlüssel des Dateityps registriert, wie hier gezeigt: **HKEY \_ Classes \_ root** \\ *ProgID* \\ **shellex** \\ **DataHandler**
+Datenhandler werden wie hier gezeigt unter dem *ProgID-Unterschlüssel* des Dateityps registriert: **HKEY \_ CLASSES \_ ROOT** \\ *ProgID* \\ **shellex** \\ **DataHandler**
 
-Erstellen Sie einen Unterschlüssel mit dem Namen für den Handler unter **DataHandler** , und legen Sie den Standardwert des unter Schlüssels dieses Handlers auf die Zeichen folgen Form der CLSID-GUID des Handlers fest. Eine allgemeine Erläuterung zum Registrieren von Shellerweiterungs Handlern finden Sie unter [Erstellen von Shellerweiterungs Handlern](handlers.md).
+Erstellen Sie unter **DataHandler** einen Unterschlüssel namens für den Handler, und legen Sie den Standardwert des Unterschlüssels dieses Handlers auf die Zeichenfolgenform der CLSID-GUID des Handlers fest. Eine allgemeine Erläuterung zum Registrieren von Shellerweiterungshandlern finden Sie unter [Erstellen von Shellerweiterungshandlern.](handlers.md)
 
-Das folgende Beispiel veranschaulicht Registrierungseinträge, die einen Daten Handler für einen example. MYP-Dateityp aktivieren.
+Das folgende Beispiel veranschaulicht Registrierungseinträge, die einen Datenhandler für einen MyP-Beispieldateityp aktivieren.
 
 ```
 HKEY_CLASSES_ROOT
@@ -61,10 +61,10 @@ HKEY_CLASSES_ROOT
 [Erstellen von Shellerweiterungshandlern](handlers.md)
 </dt> <dt>
 
-[**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile)
+[**Ipersistfile**](/windows/win32/api/objidl/nn-objidl-ipersistfile)
 </dt> <dt>
 
-[**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject)
+[**Idataobject**](/windows/win32/api/objidl/nn-objidl-idataobject)
 </dt> </dl>
 
  

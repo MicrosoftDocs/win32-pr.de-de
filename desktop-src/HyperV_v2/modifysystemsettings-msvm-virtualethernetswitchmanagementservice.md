@@ -1,7 +1,7 @@
 ---
 description: Ändert Einstellungen für virtuelle Switches.
 ms.assetid: 8d323578-990f-483c-8515-8a21479767b1
-title: Modifysystemsettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: ModifySystemSettings-Methode der Msvm_VirtualEthernetSwitchManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3512debfd6d49e3c09cb8a508a7f0d748ab128e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcce0c85a8a486968b4f079ab78db99df3384c62c8ce9ec7963b0c36894e305c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119693770"
 ---
-# <a name="modifysystemsettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Modifysystemsettings-Methode der MSVM \_ virtualethernetzwitchmanagementservice-Klasse
+# <a name="modifysystemsettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>ModifySystemSettings-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
 Ändert Einstellungen für virtuelle Switches.
 
@@ -40,17 +40,17 @@ uint32 ModifySystemSettings(
 
 <dl> <dt>
 
-*SystemSettings* \[ in\]
+*SystemSettings* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ virtualethernetzwitchsettingdata**](msvm-virtualethernetswitchsettingdata.md) -Klasse, die die geänderten Aspekte des virtuellen Switches enthält. Die **InstanceId-** Eigenschaft identifiziert die zu ändernde Einstellung für den virtuellen Switch.
+Eine eingebettete Instanz der [**Msvm \_ VirtualEthernetSwitchSettingData-Klasse,**](msvm-virtualethernetswitchsettingdata.md) die die geänderten Aspekte des virtuellen Switches enthält. Die **InstanceID-Eigenschaft** identifiziert die einstellung des virtuellen Switches, die geändert werden soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -75,22 +75,22 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-Nicht **kompatible Parameter** (6)
+**Inkompatible** Parameter (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -99,10 +99,10 @@ Nicht **kompatible Parameter** (6)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -111,7 +111,7 @@ Nicht **kompatible Parameter** (6)
 
 <dl> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Fragt den von der Hardware Abstraktionsschicht (HAL) für die private Verwendung zugewiesenen Speicherplatz ab.
+description: Abfragen der Menge an Scratchspeicher, die die Hardwareabstraktionsschicht (Hardware Abstraction Layer, HALOGEN) für ihre private Verwendung zuteilen wird.
 ms.assetid: 20e3dbef-daf5-487a-8d50-e2ebdb712cc0
-title: 'IDirect3DVideoDevice9:: getdxvainternalinfo-Methode (DXVA. h)'
+title: IDirect3DVideoDevice9::GetDXVAInternalInfo-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: aa512130b622d192acc37d8c309f462f8ecc87e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd15dfdbd35db56262487482e811210970852dcee4e791d710e0551b84e9e620
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777210"
 ---
-# <a name="idirect3dvideodevice9getdxvainternalinfo-method"></a>IDirect3DVideoDevice9:: getdxvainternalinfo-Methode
+# <a name="idirect3dvideodevice9getdxvainternalinfo-method"></a>IDirect3DVideoDevice9::GetDXVAInternalInfo-Methode
 
-Fragt den von der Hardware Abstraktionsschicht (HAL) für die private Verwendung zugewiesenen Speicherplatz ab.
+Abfragen der Menge an Scratchspeicher, die die Hardwareabstraktionsschicht (Hardware Abstraction Layer, HALOGEN) für ihre private Verwendung zuteilen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT GetDXVAInternalInfo(
 
 <dl> <dt>
 
-*pguid* 
+*pGuid* 
 </dt> <dd>
 
-Zeiger auf eine GUID, die das DXVA-Profil angibt. Um eine Liste der unterstützten Profile abzurufen, nennen Sie [**IDirect3DVideoDevice9:: getdxvage IDs**](idirect3dvideodevice9-getdxvaguids.md).
+Zeiger auf eine GUID, die das DXVA-Profil angibt. Um eine Liste der unterstützten Profile zu erhalten, rufen [**Sie IDirect3DVideoDevice9::GetDXVAGuids auf.**](idirect3dvideodevice9-getdxvaguids.md)
 
 </dd> <dt>
 
-*puncompdata* 
+*pUncompData* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**dxvauncompdatainfo**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvauncompdatainfo) -Struktur, die die Größe und das Pixel Format der nicht komprimierten Daten angibt.
+Zeiger auf eine [**DXVAUncompDataInfo-Struktur,**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvauncompdatainfo) die die Größe und das Pixelformat der unkomprimierten Daten angibt.
 
 </dd> <dt>
 
-*pmemoryused* 
+*pMemoryUsed* 
 </dt> <dd>
 
-Empfängt die Größe des von der HAL zugewiesenen temporären Speichers in Byte.
+Empfängt die Menge des scratch-Arbeitsspeichers in Byte, die vom HALOGEN-Speicher reserviert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,13 +72,13 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

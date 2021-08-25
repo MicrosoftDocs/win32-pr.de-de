@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 600cc2cd333aaea08b38c252c206c1a74c1ca059
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f0de2e2cda9724a5bfa12d13171276694bcd8fbcbbd5dffbb81ae185ebbda381
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119853410"
 ---
 # <a name="d3dxfloat32to16array-function-d3dx10mathh"></a>D3DXFloat32To16Array-Funktion (D3DX10Math.h)
 
@@ -79,7 +79,7 @@ Zeiger auf ein Array von 16-Bit-Gleitkommaen.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

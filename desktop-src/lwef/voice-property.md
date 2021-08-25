@@ -1,19 +1,19 @@
 ---
 title: Voice-Eigenschaft (Commands-Objekt)
-description: Erfahren Sie mehr über die Voice-Eigenschaft des Commands-Objekts, das den Text zurückgibt oder legt, der an die Sprach-Engine-Grammatik (zur Erkennung) übergeben wird.
+description: Erfahren Sie mehr über die Voice-Eigenschaft des Commands-Objekts, die den Text zurückgibt oder legt, der an die Sprach-Engine-Grammatik (zur Erkennung) übergeben wird.
 ms.assetid: 1feb5597-7971-4778-8221-2eb3a6e5e1ee
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7403075d8ec0b2d16c66130fc9534edf4fc391df
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 5af651532894537f58d35f860b781d3be42bfacf89b9be01d7caa26aa40102ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119715810"
 ---
 # <a name="voice-property-commands-object"></a>Voice-Eigenschaft (Commands-Objekt)
 
-\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -41,11 +41,11 @@ Gibt den Text zurück, der an die Sprach-Engine-Grammatik (zur Erkennung) überg
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie diesen Parameter nicht angeben, wird [**die VoiceCaption**](voicecaption-property.md) für Ihr [**Commands-Objekt**](/windows/desktop/lwef/the-commands-collection-object) nicht im Fenster Sprachbefehle angezeigt.
 
-Der von Ihnen angegebenen Zeichenfolgenausdruck kann eckige Klammern () enthalten, um optionale Wörter und vertikale Balkenzeichen ( ) anzugeben, \[ \] um alternative \| Zeichenfolgen anzugeben. Alternative müssen in Klammern eingeschlossen werden. Beispielsweise weist "(hello there hi)" die Sprach-Engine \[ \] \| an, "hello", "hello there" oder "hi" für den Befehl zu akzeptieren. Denken Sie daran, die entsprechenden Leerzeichen zwischen dem Text in Klammern oder Klammern und dem Text, der nicht in Klammern oder Klammern enthalten ist, ein- und zu schließen. Sie können den Sternoperator ( ) verwenden, um null oder mehr Instanzen der in der Gruppe enthaltenen Wörter anzugeben, oder den Plusoperator (+), um eine oder mehrere Instanzen \* anzugeben. Das folgende Beispiel führt zu einer Grammatik, die "try this", "please try this", "please try this" und "please try this" mit unbegrenzten Iterationen von "please" unterstützt:
+Der von Ihnen angegebenen Zeichenfolgenausdruck kann eckige Klammern () enthalten, um optionale Wörter und vertikale Balkenzeichen ( ) anzugeben, \[ \] um alternative \| Zeichenfolgen anzugeben. Alternative müssen in Klammern eingeschlossen werden. Beispielsweise weist "(hello there hi)" die Sprach-Engine \[ \] \| an, "hello", "hello there" oder "hi" für den Befehl zu akzeptieren. Denken Sie daran, geeignete Leerzeichen zwischen dem Text in Klammern oder Klammern und dem Text, der nicht in Klammern oder Klammern enthalten ist, ein- und aus. Sie können den Sternoperator ( ) verwenden, um null oder mehr Instanzen der in der Gruppe enthaltenen Wörter anzugeben, oder den Plusoperator (+), um eine oder \* mehrere -Instanzen anzugeben. Das folgende Beispiel führt zu einer Grammatik, die "try this", "please try this", "please try this" und "please try this" mit unbegrenzten Iterationen von "please" unterstützt:
 
 
 ```
@@ -93,17 +93,17 @@ Wiederholungsoperatoren sind nützlich, wenn Sie eine Grammatik erstellen möcht
 
 Obwohl die Operatoren auch mit dem optionalen Gruppierungszeichen in eckigen Klammern verwendet werden können, kann dies die Effizienz der Grammatikverarbeitung durch den -Agent verringern.
 
-Sie können auch auslassungszeichen (...) verwenden, um die Worterkennung zu unterstützen, d. h., die Spracherkennungs-Engine soll Wörter ignorieren, die an dieser Position im Ausdruck (manchmal auch als Garbage *Words* bezeichnet) gesprochen werden. Daher erkennt die Sprach-Engine nur bestimmte Wörter in der Zeichenfolge, unabhängig davon, ob sie mit angrenzenden Wörtern oder Ausdrücken gesprochen wird. Wenn Sie diese Eigenschaft z. B. auf " \[ ... \] check mail \[ ... ", die Spracherkennungs-Engine gleicht Ausdrücke wie \] "Please check mail" oder "check mail please" mit diesem Befehl ab. Ellipsen können überall innerhalb einer Zeichenfolge verwendet werden. Seien Sie jedoch vorsichtig, wenn Sie diese Technik verwenden, da sie das Potenzial unerwünschter Übereinstimmungen erhöhen kann.
+Sie können auch eine Auslassungszeichen (...) verwenden, um die Worterkennung zu unterstützen, d. h., die Spracherkennungs-Engine soll Wörter ignorieren, die an dieser Position im Ausdruck gesprochen werden (manchmal auch als Garbage *Words* bezeichnet).  Daher erkennt die Sprach-Engine nur bestimmte Wörter in der Zeichenfolge, unabhängig davon, ob sie mit angrenzenden Wörtern oder Ausdrücken gesprochen wird. Wenn Sie diese Eigenschaft z. B. auf " \[ ... \] check mail \[ ... ", die Spracherkennungs-Engine gleicht Ausdrücke wie \] "Please check mail" oder "check mail please" mit diesem Befehl ab. Ellipsen können überall innerhalb einer Zeichenfolge verwendet werden. Seien Sie jedoch vorsichtig, wenn Sie dieses Verfahren verwenden, da dies das Potenzial unerwünschter Übereinstimmungen erhöhen kann.
 
 Wenn Sie die Wortgrammatik für Ihren Befehl definieren, schließen Sie mindestens ein Wort ein, das erforderlich ist. das heißt, geben Sie keine optionalen Wörter an. Stellen Sie außerdem sicher, dass das Wort nur aussetzbare Wörter und Buchstaben enthält. Bei Zahlen ist es besser, das Wort zu sagen, anstatt eine mehrdeutige Darstellung zu verwenden. Beispielsweise ist "345" keine gute Grammatikform. Verwenden Sie auf ähnliche Weise anstelle von "IEEE" "I triple E". Sie sollten auch keine Interpunktion oder Symbole weglassen. Verwenden Sie z. B. anstelle von \# "1 $10 Pizza!" "the number one ten dollar pizza". Das Verwenden nicht aussprechbarer Zeichen oder Symbole für einen Befehl kann dazu führen, dass die Sprach-Engine die Grammatik für alle Befehle nicht kompiliert. Machen Sie schließlich Ihren Voice-Parameter so eindeutig wie möglich von anderen Sprachbefehlen, die Sie definieren. Je größer die Ähnlichkeit zwischen der Sprachgrammatik für Befehle ist, desto wahrscheinlicher wird die Sprach-Engine einen Erkennungsfehler machen. Sie können auch die Konfidenzergebnisse verwenden, um besser zwischen zwei Befehlen zu unterscheiden, die eine ähnliche oder ähnlich klingende Sprachgrammatik haben können.
 
 Sie können ihre Grammatikwörter in Form von " Text  aussprache " enthalten,  wobei Text der angezeigte Text und Aussprache Text ist, der die Aussprache verdeutlicht.*\\* Beispielsweise würde die Grammatik "1st first" erkannt, wenn der Benutzer "first" sagt, aber das Command-Ereignis gibt den Text \\ "1st [](command-event.md) \\ first" zurück. Sie können auch IPA (International Phonetic Alphabet) verwenden, um eine Aussprache anzugeben, indem Sie die Aussprache mit einem Pfundzeichen ("") beginnen und dann den Text enthalten, der die \# IPA-Aussprache darstellt.
 
-Für japanische Spracherkennungs-Engines können Sie grammatikalisch in der Form "*kana \\ kanji*" definieren, um die alternative Aussprache zu reduzieren und die Genauigkeit zu erhöhen. (Die Reihenfolge wird aus Gründen der Abwärtskompatibilität umgekehrt.) Dies ist besonders wichtig für die Aussprache von Eigennamen in Kanji. Sie können jedoch nur Kanji ohne Kana übergeben. In diesem Fall sollte die Engine auf alle akzeptablen Aussprachen für das Kanji lauschen. Sie können auch nur Kana übergeben.
+Für japanische Spracherkennungs-Engines können Sie grammatikalisch in der Form "*kana \\ kanji*" definieren, um die alternative Aussprache zu reduzieren und die Genauigkeit zu erhöhen. (Die Reihenfolge wird aus Gründen der Abwärtskompatibilität umgekehrt.) Dies ist besonders wichtig für die Aussprache der richtigen Namen in Kanji. Sie können jedoch nur Kanji ohne Kana übergeben. In diesem Fall sollte die Engine auf alle akzeptablen Aussprachen für das Kanji lauschen. Sie können auch nur Kana übergeben.
 
-Beachten Sie außerdem, dass Sie für Sprachen wie Japanisch, Chinesisch und Thailändisch, die keine Leerzeichen verwenden, um Wortumbrüche anzugeben, ein Unicode-Leerzeichen mit einer Breite von null (0x200B) einfügen, um logische Wortumbrüche anzugeben.
+Beachten Sie auch, dass Sie für Sprachen wie Japanisch, Chinesisch und Thailändisch, die keine Leerzeichen verwenden, um Wortumbrüche anzugeben, ein Unicode-Leerzeichen mit einer Breite von null (0x200B) einfügen, um logische Wortumbrüche anzugeben.
 
-Mit Ausnahme von Fehlern, die die Gruppierungs- oder Wiederholungsformatierungszeichen verwenden, meldet der -Agent keine Fehler in der Grammatik, es sei denn, die Engine selbst meldet den Fehler. Wenn Sie Text in Der Grammatik übergeben, dass die Engine nicht kompiliert werden kann, die Engine jedoch nicht behandelt und als Fehler zurücksaget, kann der -Agent den Fehler nicht melden. Daher muss die Clientanwendung die Grammatik für die **Voice-Eigenschaft sorgfältig** definieren.
+Mit Ausnahme von Fehlern, die die Gruppierungs- oder Wiederholungsformatierungszeichen verwenden, meldet der -Agent keine Fehler in der Grammatik, es sei denn, die Engine selbst meldet den Fehler. Wenn Sie Text in der Grammatik übergeben, dass die Engine nicht kompiliert werden kann, die Engine jedoch nicht behandelt und als Fehler zurücksaget, kann der -Agent den Fehler nicht melden. Daher muss die Clientanwendung die Grammatik für die **Voice-Eigenschaft sorgfältig** definieren.
 
 > [!Note]  
 > Die verfügbaren Grammatikfeatures hängen möglicherweise von der Spracherkennungs-Engine ab. Sie sollten sich an den Hersteller der Engine wenden, um zu ermitteln, welche Grammatikoptionen unterstützt werden. Verwenden Sie [**die SRModeID,**](srmodeid-property.md) um eine bestimmte Engine zu verwenden.

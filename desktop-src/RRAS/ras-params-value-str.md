@@ -1,9 +1,9 @@
 ---
-title: RAS_PARAMS_VALUE Union (rassapi. h)
-description: Die RAS- \_ \_ Parameterwert-Union wird in der Struktur der RAS- \_ Parameter verwendet, um die Daten zu speichern, die mit einem medienspezifischen Parameter verknüpft sind.
+title: RAS_PARAMS_VALUE Union (Rassapi.h)
+description: Die RAS \_ PARAMS VALUE-Union wird in der RAS PARAMETERS-Struktur verwendet, um die Daten zu speichern, \_ \_ die einem medienspezifischen Parameter zugeordnet sind.
 ms.assetid: 43284ee4-9bd4-4019-860f-0fb7ff3f38ee
 keywords:
-- RAS_PARAMS_VALUE Union RAS
+- RAS_PARAMS_VALUE union RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6f8cc6d693b32b1bbe6f05e8d32ca31a48cfb29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 07453b707012c966fc298cc61973cb056b42d741d861a22204c17eec5265317f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909600"
 ---
-# <a name="ras_params_value-union"></a>RAS-Parameter \_ \_ Wert Union
+# <a name="ras_params_value-union"></a>RAS \_ PARAMS \_ VALUE union
 
-\[Die **RAS- \_ parametriams- \_ Wert** Union wird ab Windows Vista nicht unterstützt.\]
+\[Die **RAS \_ PARAMS \_ VALUE-Union** wird ab Windows Vista nicht mehr unterstützt.\]
 
-Die **RAS- \_ \_ Parameterwert** -Union wird in der Struktur der [**RAS- \_ Parameter**](ras-parameters-str.md) verwendet, um die Daten zu speichern, die mit einem medienspezifischen Parameter verknüpft sind. Der P-Typmember der **RAS \_ -Parameter** Struktur verwendet einen Wert aus der RAS- **\_ parameterformatenumeration** , um den Typ des Werts anzugeben, der derzeit in einem RAS-Parameter **\_ \_ Wert** gespeichert wird. [**\_ \_**](ras-params-format-str.md)
+Die **RAS \_ PARAMS \_ VALUE-Union** wird in der [**RAS \_ PARAMETERS-Struktur**](ras-parameters-str.md) verwendet, um die Daten zu speichern, die einem medienspezifischen Parameter zugeordnet sind. Der **\_ P-Typmember** der **RAS \_ PARAMETERS-Struktur** verwendet einen Wert aus der [**RAS \_ PARAMS \_ FORMAT-Enumeration,**](ras-params-format-str.md) um den Typ des Werts anzugeben, der derzeit in RAS **\_ PARAMS VALUE gespeichert \_ ist.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,30 +49,30 @@ typedef union RAS_PARAMS_VALUE {
 **Number**
 </dt> <dd>
 
-Wenn der **P- \_ Typmember** der [**RAS- \_ Parameter**](ras-parameters-str.md) Struktur paramnumber ist, enthält der **Number** -Member den Wert des medienspezifischen Parameters. Beispielsweise ist der maxconnectbps-Parameter vom Typ paramnumber, und der Wert kann 19200 lauten.
+Wenn das **P \_ Type-Member** der [**RAS \_ PARAMETERS-Struktur**](ras-parameters-str.md) ParamNumber ist, enthält das **Number-Member** den Wert des medienspezifischen Parameters. Beispielsweise ist der MAXCONNECTBPS-Parameter vom Typ ParamNumber, und der Wert kann 19200 sein.
 
-Wenn der **P- \_ Typmember** der [**RAS- \_ Parameter**](ras-parameters-str.md) Struktur paramnumber ist, enthält der **Number** -Member den Wert des medienspezifischen Parameters. Beispielsweise ist der maxconnectbps-Parameter vom Typ paramnumber, und der Wert kann 19200 lauten.
+Wenn das **P \_ Type-Member** der [**RAS \_ PARAMETERS-Struktur**](ras-parameters-str.md) ParamNumber ist, enthält das **Number-Member** den Wert des medienspezifischen Parameters. Beispielsweise ist der MAXCONNECTBPS-Parameter vom Typ ParamNumber, und der Wert kann 19200 sein.
 
 </dd> <dt>
 
 **String**
 </dt> <dd>
 
-Wenn der **P- \_ Typmember** der [**RAS- \_ Parameter**](ras-parameters-str.md) Struktur paramString ist, enthält der **Zeichen** folgen Member den Wert des medienspezifischen Parameters.
+Wenn der **P \_ Type-Member** der [**RAS \_ PARAMETERS-Struktur**](ras-parameters-str.md) ParamString ist, enthält das **String-Member** den Wert des medienspezifischen Parameters.
 
 <dl> <dt>
 
 **Länge**
 </dt> <dd>
 
-Gibt die Länge der Zeichenfolge, auf die vom **Datenmember** verwiesen wird, in Zeichen an.
+Gibt die Länge der Zeichenfolge in Zeichen an, auf die das **Data-Element** zeigt.
 
 </dd> <dt>
 
 **Daten**
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Zeichen folgen Wert eines medienspezifischen Parameters enthält.
+Zeiger auf einen Puffer, der den Zeichenfolgenwert eines medienspezifischen Parameters enthält.
 
 </dd> </dl> </dd> </dl>
 
@@ -85,8 +85,8 @@ Ein Zeiger auf einen Puffer, der den Zeichen folgen Wert eines medienspezifische
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
@@ -94,16 +94,16 @@ Ein Zeiger auf einen Puffer, der den Zeichen folgen Wert eines medienspezifische
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server Verwaltung (Union)](ras-server-administration-union.md)
+[RAS Server Administration Union](ras-server-administration-union.md)
 </dt> <dt>
 
-[**RAS- \_ Parameter**](ras-parameters-str.md)
+[**\_RAS-PARAMETER**](ras-parameters-str.md)
 </dt> <dt>
 
-[**Format des RAS- \_ Parametern \_**](ras-params-format-str.md)
+[**\_ \_ RAS-PARAMS-FORMAT**](ras-params-format-str.md)
 </dt> </dl>
 
  

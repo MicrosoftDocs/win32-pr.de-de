@@ -1,27 +1,27 @@
 ---
-description: Einführung in topoedit
+description: Einführung in TopoEdit
 ms.assetid: 9223309c-5ee0-4059-9480-4f54252fdd39
-title: Einführung in topoedit
+title: Einführung in TopoEdit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c244705446568ccfac439e636ebcbb3d2763ae9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 799c6ab3fe30c0c51d7246939be7436d025220e690a380db91dad41d4c2b216a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827560"
 ---
-# <a name="introduction-to-topoedit"></a>Einführung in topoedit
+# <a name="introduction-to-topoedit"></a>Einführung in TopoEdit
 
-In Media Foundation werden Mediendaten über die Pipeline Schicht verarbeitet, und die Medien Sitzung steuert den Datenfluss und stellt Wiedergabe Steuerelemente bereit. Daten in jeder Pipeline Komponente – Quelle, Transformation und Senke – werden als *topologieknoten* dargestellt. Das *Topologieobjekt* ist eine Sammlung von topologieknoten und stellt den gesamten Pfad des Datenflusses über die Medien Sitzungs Pipeline dar.
+In Media Foundation werden Mediendaten über die Pipelineebene verarbeitet, und die Mediensitzung steuert den Datenfluss und stellt Wiedergabesteuerelemente bereit. Daten in jeder Pipelinekomponente – Quelle, Transformation und Senke – werden als *Topologieknoten* dargestellt. Das *Topologieobjekt* ist eine Sammlung von Topologieknoten und stellt den gesamten Datenflusspfad durch die Mediensitzungspipeline dar.
 
-Weitere Informationen zu Topologien finden Sie unter Informationen [zu Topologien](about-topologies.md).
+Informationen zu Topologien finden Sie unter [Informationen zu Topologien.](about-topologies.md)
 
-Topoedit ist ein visuelles Tool zum entwickeln und Testen von Topologien. Mit topoedit können Sie die folgenden Aufgaben ausführen:
+TopoEdit ist ein visuelles Tool zum Erstellen und Testen von Topologien. Mit TopoEdit können Sie die folgenden Aufgaben ausführen:
 
--   Erstellen Sie eine Topologie, indem Sie verschiedene topologieknoten wie Quell-, Transformations-und Ausgabe Knoten hinzufügen.
+-   Erstellen Sie eine Topologie, indem Sie verschiedene Topologieknoten wie Quell-, Transformations- und Ausgabeknoten hinzufügen.
 
--   Verbinden und Auflösen der Topologie.
+-   Verbinden die Topologie auf, und lösen Sie sie auf.
 
 -   Testen Sie die Funktionalität der Topologie durch Wiedergabe.
 
@@ -29,12 +29,12 @@ Dieser Abschnitt enthält die folgenden Themen:
 
 
 
-| Thema                                            | BESCHREIBUNG                                                                                          |
+| Thema                                            | Beschreibung                                                                                          |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [Topoedit-Module](topoedit-modules.md)         | Enthält Informationen über die ausführbare Datei "topoedit" und die zusätzlichen DLLs, die zum Ausführen des Tools erforderlich sind. |
-| [Topoedit-Hauptfenster](topoedit-main-window.md) | Beschreibt die Elemente im Hauptfenster der Anwendung.                                             |
-| [Topoedit-Menüs](topoedit-menus.md)             | Beschreibt die Funktionalität verschiedener Menüs-Elemente.                                                  |
-| [Topoedit-Symbolleiste](topoedit-toolbar.md)         | Beschreibt die Funktionalität verschiedener Symbolleisten Elemente.                                                |
+| [TopoEdit-Module](topoedit-modules.md)         | Stellt Informationen zur ausführbaren TopoEdit-Datei und zu den zusätzlichen DLLs bereit, die zum Ausführen des Tools erforderlich sind. |
+| [TopoEdit-Hauptfenster](topoedit-main-window.md) | Beschreibt die Elemente im Hauptfenster der Anwendung.                                             |
+| [TopoEdit-Menüs](topoedit-menus.md)             | Beschreibt die Funktionalität verschiedener Menüelemente.                                                  |
+| [TopoEdit-Symbolleiste](topoedit-toolbar.md)         | Beschreibt die Funktionalität verschiedener Symbolleistenelemente.                                                |
 
 
 
@@ -44,7 +44,7 @@ Dieser Abschnitt enthält die folgenden Themen:
 
 <dl> <dt>
 
-[Topoedit](topoedit.md)
+[TopoEdit](topoedit.md)
 </dt> </dl>
 
  

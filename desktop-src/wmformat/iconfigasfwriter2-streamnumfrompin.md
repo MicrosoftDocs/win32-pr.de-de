@@ -1,11 +1,11 @@
 ---
-title: IConfigAsfWriter2 streamnumfrompin-Methode
-description: Die streamnumfrompin-Methode ruft die Datenstrom Nummer ab, die der angegebenen Eingabe-PIN zugeordnet ist.
+title: IConfigAsfWriter2-StreamNumFromPin-Methode
+description: Die StreamNumFromPin-Methode ruft die Streamnummer ab, die dem angegebenen Eingabepin zugeordnet ist.
 ms.assetid: f645a742-e6dc-4041-8a56-3bbb5188a9a9
 keywords:
-- Streamnumfrompin-Methode Windows Media-Format
-- Streamnumfrompin-Methode, Windows Media-Format, IConfigAsfWriter2-Schnittstelle
-- IConfigAsfWriter2-Schnittstelle Windows Media-Format, streamnumfrompin-Methode
+- 'StreamNumFromPin-Methode : Windows Media Format'
+- StreamNumFromPin-Methode windows Media Format , IConfigAsfWriter2-Schnittstelle
+- IConfigAsfWriter2-Schnittstelle windows Media Format , StreamNumFromPin-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,24 +15,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c63a31d515e70b0ee0ac5be617ee52fe23bd5416
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9124d3acaea81e36b212f3dec001374cc035efca449f35af5e43fa18ce50d6dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839821"
 ---
-# <a name="iconfigasfwriter2streamnumfrompin-method"></a>IConfigAsfWriter2:: streamnumfrompin-Methode
+# <a name="iconfigasfwriter2streamnumfrompin-method"></a>IConfigAsfWriter2::StreamNumFromPin-Methode
 
-Die **streamnumfrompin** -Methode ruft die Datenstrom Nummer ab, die der angegebenen Eingabe-PIN zugeordnet ist.
+Die **StreamNumFromPin-Methode** ruft die Streamnummer ab, die dem angegebenen Eingabepin zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT StreamNumFromPin(
-  [in]  IPin *pPin,
-  [out] WORD *pwStreamNum
+  [in]  IPin *pPin,
+  [out] WORD *pwStreamNum
 );
 ```
 
@@ -42,27 +42,27 @@ HRESULT StreamNumFromPin(
 
 <dl> <dt>
 
-*ppin* \[ in\]
+*pPin* \[ In\]
 </dt> <dd>
 
-Zeiger auf die **IPin** -Schnittstelle für die Eingabe-PIN.
+Zeiger auf die **IPin-Schnittstelle** auf dem Eingabepin.
 
 </dd> <dt>
 
-*pwstreamnum* \[ vorgenommen\]
+*pwStreamNum* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der die streamnummer empfängt.
+Zeiger, der die Streamnummer empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler auftritt, wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Manchmal müssen Sie die SDK-Schnittstellen des Windows Media-Formats direkt verwenden, um einen Stream vor dem Ausführen eines Filter Diagramms zu bearbeiten. Da Sie nicht davon ausgehen können, dass eine ASF-Datenstrom Nummer mit der Nummer der DirectShow-Pin übereinstimmt, wird diese Methode bereitgestellt.
+Manchmal müssen Sie möglicherweise die Windows Media Format SDK-Schnittstellen direkt verwenden, um einen Stream vor dem Ausführen eines Filterdiagramms zu bearbeiten. Da Sie nicht davon ausgehen können, dass eine ASF-Streamnummer mit der Pinnummer von DirectShow identisch ist, wird diese Methode bereitgestellt.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -71,6 +71,6 @@ Manchmal müssen Sie die SDK-Schnittstellen des Windows Media-Formats direkt ver
 [**IConfigAsfWriter2-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743206(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

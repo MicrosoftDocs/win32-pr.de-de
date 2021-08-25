@@ -1,30 +1,30 @@
 ---
-description: In diesem Abschnitt werden die von NPP-Methoden verwendeten NPP-Strukturen beschrieben.
+description: In diesem Abschnitt werden die NPP-Strukturen beschrieben, die von NPP-Methoden verwendet werden.
 ms.assetid: f0729dc5-6b5f-4f24-85d6-47c45f1bf9be
 title: NPP-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b514bded37450f6a7c33a016b231bb38f0c1812
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79f80532e3e95743ee08f93d44961018e2154bcdc4bce292789ae0968c3d9200
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778700"
 ---
 # <a name="npp-structures"></a>NPP-Strukturen
 
-In diesem Abschnitt werden die von NPP-Methoden verwendeten NPP-Strukturen beschrieben. Diese Strukturen werden verwendet, um Statistiken abzurufen, Systemstatus und statistische Informationen bereitzustellen und anzugeben, welche Computer Netzwerkmonitor ausgeführt werden. Diese Strukturen werden in den folgenden Tabellen beschrieben.
+In diesem Abschnitt werden die NPP-Strukturen beschrieben, die von NPP-Methoden verwendet werden. Diese Strukturen werden verwendet, um Statistiken abzurufen, Den Systemstatus und statistische Informationen anzugeben und anzugeben, auf welchen Computern Netzwerkmonitor. In den folgenden Tabellen werden diese Strukturen beschrieben.
 
 
 
-| NPP-Strukturen                     | BESCHREIBUNG                                                                                                                      |
+| NPP-Strukturen                     | Beschreibung                                                                                                                      |
 |------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [Sessionstats](sessionstats.md)   | Stellt Sitzungsinformationen bereit, wenn eine Konversations Statistik abgerufen wird.                                                         |
-| [Stationstats](stationstats.md)   | Stellt Statistiken zu einer bestimmten [*Station*](s.md)bereit.                                                     |
-| [Kam](statistics.md)       | Stellt Netzwerk Statistiken bereit, wenn die Gesamtstatistik abgerufen wird und die aktuelle Erfassung angehalten oder beendet wurde.              |
-| [QueryTable](querytable.md)       | Gibt an, welche Computer Netzwerkmonitor verwenden.                                                                             |
-| [Stationquery](stationquery.md)   | Enthält Informationen zu einem Computer, der Netzwerkmonitor verwendet. Diese Struktur wird von der NPP- **QueryTable** -Struktur verwendet. |
-| [Vornehmen](networkstatus.md) | Stellt den aktuellen Netzwerkstatus im Hinblick auf den Systemstatus bereit.                                                                        |
+| [SESSIONSTATS](sessionstats.md)   | Stellt Sitzungsinformationen beim Abrufen von Konversationsstatistiken zur Verfügung.                                                         |
+| [STATIONSTATS](stationstats.md)   | Stellt Statistiken zu einer bestimmten [*Station zurEntspricht.*](s.md)                                                     |
+| [Statistiken](statistics.md)       | Stellt Netzwerkstatistiken zum Abrufen der Gesamtstatistik und zum Anhalten oder Anhalten der aktuellen Erfassung zur              |
+| [Querytable](querytable.md)       | Gibt an, welche Computer Netzwerkmonitor.                                                                             |
+| [STATIONQUERY](stationquery.md)   | Stellt Informationen zu einem Computer zur Verfügung, der Netzwerkmonitor. Diese Struktur wird von der NPP **QUERYTABLE-Struktur** verwendet. |
+| [Networkstatus](networkstatus.md) | Stellt den aktuellen Netzwerkstatus im Hinblick auf den Systemstatus zur Lage.                                                                        |
 
 
 

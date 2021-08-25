@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Sequenz von Audiodateien/Videodateien mit mfplay wiedergegeben wird.
+description: In diesem Thema wird beschrieben, wie Eine Sequenz von Audio-/Videodateien mithilfe von MFPlay wiedergegeben wird.
 ms.assetid: ee16eaa3-0506-4444-b139-f8a8498d6597
-title: Wiedergabe einer Sequenz von Dateien
+title: Wiederspielen einer Sequenz von Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58dc4d1523be4cc6cc09416096af260c9eae736c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1ddf9cfc6fe48caf5eb185a19ec98ac119fcfbbb78d5e2363bd2db9607a4875
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828160"
 ---
-# <a name="how-to-play-a-sequence-of-files"></a>Wiedergabe einer Sequenz von Dateien
+# <a name="how-to-play-a-sequence-of-files"></a>Wiederspielen einer Sequenz von Dateien
 
-\[MF Play ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
+\[MFPlay steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
 
-In diesem Thema wird beschrieben, wie eine Sequenz von Audiodateien/Videodateien mit mfplay wiedergegeben wird.
+In diesem Thema wird beschrieben, wie Eine Sequenz von Audio-/Videodateien mithilfe von MFPlay wiedergegeben wird.
 
 
-Das Thema " [Getting Started with mfplay](getting-started-with-mfplay.md) " zeigt, wie Sie eine einzelne Mediendatei abspielen können. Sie können auch mfplay verwenden, um eine Sequenz von Dateien wiederzugeben.
+Das Thema [Erste Schritte mit MFPlay](getting-started-with-mfplay.md) zeigt, wie eine einzelne Mediendatei wiedergegeben wird. Sie können MFPlay auch verwenden, um eine Sequenz von Dateien wiederzuspielen.
 
 ### <a name="synchronous-blocking-method"></a>Synchrone (blockierende) Methode
 
-1.  Aufrufen der [**imfpmediaplayer:: foratemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) -Methode. Mit der-Methode wird ein Medien Element erstellt.
-2.  [**Imfpmediaplayer:: setmediaitem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) aufrufen, um das Medien Element für die Wiedergabe in die Warteschlange zu stellen.
-3.  [**Imfpmediaplayer aufzurufen::P Lay**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) , um die Wiedergabe zu starten.
+1.  Rufen Sie [**die IMFPMediaPlayer::CreateMediaItemFromURL-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) auf. Die -Methode erstellt ein Medienelement.
+2.  Rufen [**Sie IMFPMediaPlayer::SetMediaItem auf,**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) um das Medienelement für die Wiedergabe in die Warteschlange zu stellen.
+3.  Rufen [**Sie IMFPMediaPlayer::P lay auf,**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-play) um die Wiedergabe zu starten.
 
 Diese Schritte werden im folgenden Code gezeigt.
 
@@ -63,16 +63,16 @@ HRESULT OpenMediaFile(IMFPMediaPlayer *pPlayer, PCWSTR pwszURL)
 
 
 
-Die Methode " [**kreatemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) " übernimmt die folgenden Parameter:
+Die [**CreateMediaItemFromURL-Methode**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) verwendet die folgenden Parameter:
 
 -   Der erste Parameter ist die URL der Datei.
--   Der zweite Parameter gibt an, ob die-Methode blockiert. Das Angeben des Werts **true**, wie hier gezeigt, bewirkt, dass die-Methode blockiert wird, bis das Medien Element erstellt wird.
--   Der dritte Parameter ordnet dem Medien Element einen beliebigen **DWORD- \_ ptr** -Wert zu. Sie können diesen Wert später abrufen, indem Sie [**imfpmediaitem:: getuserdata**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-getuserdata)aufrufen.
--   Der vierte Parameter erhält einen Zeiger auf die [**imfpmediaitem**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) -Schnittstelle des Medien Elements.
+-   Der zweite Parameter gibt an, ob die Methode blockiert. Wenn Sie den Wert **TRUE** angeben, wie hier gezeigt, wird die -Methode blockiert, bis das Medienelement erstellt wird.
+-   Der dritte Parameter ordnet dem Medienelement einen beliebigen **\_ DWORD-PTR-Wert** zu. Sie können diesen Wert später durch Aufrufen von [**IMFPMediaItem::GetUserData erhalten.**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaitem-getuserdata)
+-   Der vierte Parameter empfängt einen Zeiger auf die [**IMFPMediaItem-Schnittstelle**](/windows/desktop/api/mfplay/nn-mfplay-imfpmediaitem) des Medienelements.
 
 ### <a name="asynchronous-non-blocking-method"></a>Asynchrone (nicht blockierende) Methode
 
-Vermeiden Sie die Blockierungs Option, wenn Sie " [**foratemediaitemfromurl**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) " aus dem UI-Thread aufrufen, da es eine spürbare Zeit für den Abschluss des Vorgangs dauern kann. Die-Methode öffnet in der Regel eine Datei-oder Netzwerkverbindung und liest genügend Daten, um die Dateiheader zu analysieren, die alle eine Weile dauern können. Daher ist es in der Regel besser, den zweiten Parameter auf **false** festzulegen. Diese Option bewirkt, dass die-Methode asynchron ausführt. Wenn die asynchrone Option verwendet wird, muss der letzte Parameter **null** sein:
+Vermeiden Sie die Blockierungsoption, wenn Sie [**CreateMediaItemFromURL**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-createmediaitemfromurl) über Ihren UI-Thread aufrufen, da dies eine spürbare Zeit dauern kann. Die -Methode öffnet in der Regel eine Datei- oder Netzwerkverbindung und liest genügend Daten, um die Dateiheader zu analysieren. Dies kann einige Zeit dauern. Daher ist es im Allgemeinen besser, den zweiten Parameter auf **FALSE zu setzen.** Diese Option bewirkt, dass die -Methode asynchron ausgeführt wird. Wenn die asynchrone Option verwendet wird, muss der letzte Parameter **NULL sein:**
 
 
 ```C++
@@ -86,7 +86,7 @@ Vermeiden Sie die Blockierungs Option, wenn Sie " [**foratemediaitemfromurl**](/
 
 
 
-Wenn das Medien Element erstellt wird, empfängt Ihre Anwendung einen Ereignis **vom Typ "MFP- \_ \_ Ereignistyp \_ mediaitem \_ erstellt** ". Die Datenstruktur für dieses Ereignis enthält einen Zeiger auf das Medien Element. Übergeben Sie diesen Zeiger an die [**setmediaitem**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) -Methode, um das Element in die Warteschlange zu stellen.
+Wenn das Medienelement erstellt wird, empfängt Ihre Anwendung ein **MFP \_ EVENT TYPE \_ \_ MEDIAITEM \_ CREATED-Ereignis.** Die Datenstruktur für dieses Ereignis enthält einen Zeiger auf das Medienelement. Übergeben Sie diesen Zeiger auf die [**SetMediaItem-Methode,**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmediaitem) um das Element für die Wiedergabe in die Warteschlange zu stellen.
 
 
 ```C++
@@ -108,13 +108,13 @@ void OnMediaItemCreated(MFP_MEDIAITEM_CREATED_EVENT *pEvent)
 
 ## <a name="requirements"></a>Anforderungen
 
-MF Play erfordert Windows 7.
+MFPlay erfordert Windows 7.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von MF Play für die Audiowiedergabe und Video Wiedergabe](using-mfplay-for-audio-video-playback.md)
+[Verwenden von MFPlay für die Audio-/Videowiedergabe](using-mfplay-for-audio-video-playback.md)
 </dt> </dl>
 
  

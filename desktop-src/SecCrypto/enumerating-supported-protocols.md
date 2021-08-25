@@ -1,23 +1,23 @@
 ---
-description: Unterstützte Protokolle und Verschlüsselungs Sammlungen können mithilfe von Aufrufen von CryptGetProvParam mit PP \_ enumalgs oder PP \_ enumalgs Ex aufgelistet werden \_ .
+description: Unterstützte Protokolle und Verschlüsselungssammlungen können durch Aufrufe von CryptGetProvParam mit PP \_ ENUMALGS oder PP \_ ENUMALGS EX aufgelistet \_ werden.
 ms.assetid: 8f0c2129-6841-4793-a404-bb6ee8f41683
 title: Auflisten unterstützter Protokolle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c76976da7e3ab59e299d6ef0a8e9bcabce601c0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54d7236fe20901e9feb48e844deceea47e8f5936b9685580a653f1480b3b667c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874430"
 ---
 # <a name="enumerating-supported-protocols"></a>Auflisten unterstützter Protokolle
 
-Unterstützte Protokolle und Verschlüsselungs Sammlungen können mithilfe von Aufrufen von [**CryptGetProvParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetprovparam) mit PP \_ enumalgs oder PP \_ enumalgs Ex aufgelistet werden \_ . Der Wert "PP \_ enumalgs \_ Ex" funktioniert wie PP- \_ enumalgs, gibt jedoch eine [**Prov \_ enumalgs \_ Ex**](/windows/desktop/api/Wincrypt/ns-wincrypt-prov_enumalgs_ex) -Struktur zurück, die ausführlichere Informationen zu den vom Anbieter unterstützten Algorithmen enthält.
+Unterstützte Protokolle und Verschlüsselungssammlungen können durch Aufrufe von [**CryptGetProvParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetprovparam) mit PP \_ ENUMALGS oder PP \_ ENUMALGS EX aufgelistet \_ werden. Der PP \_ ENUMALGS \_ EX-Wert funktioniert wie PP \_ ENUMALGS, gibt jedoch eine [**PROV \_ ENUMALGS \_ EX-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-prov_enumalgs_ex) zurück, die umfangreichere Informationen zu den vom Anbieter unterstützten Algorithmen enthält.
 
-Weitere Informationen zu definierten protokollflags und deren Werten finden Sie unter [protokollflags](protocol-flags.md).
+Weitere Informationen zu definierten Protokollflags und ihren Werten finden Sie unter [Protokollflags.](protocol-flags.md)
 
-Da das **hcryptprov** -Element das [*handle*](../secgloss/h-gly.md) eines offenen Kryptografiekontexts ist, der mithilfe von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) abgerufen wurde, dessen *dwprovtype* -Parameter auf Prov RSA SChannel festgelegt ist [](../secgloss/c-gly.md) \_ \_ , werden im folgenden Beispiel die Namen aller im CSP verfügbaren Algorithmen aufgelistet.
+Da das **hCryptProv-Element** das [*Handle*](../secgloss/h-gly.md) eines offenen kryptografischen [*Kontexts*](../secgloss/c-gly.md) ist, der mithilfe von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) abgerufen wurde und dessen *dwProvType-Parameter* auf PROV RSA SCHANNEL festgelegt \_ \_ ist, werden im folgenden Beispiel die Namen aller im CSP verfügbaren Algorithmen aufgelistet.
 
 
 ```C++
@@ -46,23 +46,23 @@ while( CryptGetProvParam(
 
 
 
-In der folgenden Tabelle werden einige Algorithmen aufgelistet, die von einem typischen in der Standard- \_ RSA \_ SChannel-CSP zurückgegebenen Algorithmus Beachten Sie, dass in diesem Beispiel weder SSL2 verwendet SHA Macs noch SSL2 verwendet der-Verschlüsselung vom CSP unterstützt wird.
+In der folgenden Tabelle sind einige Algorithmen aufgeführt, die von einem typischen nationalen PROV \_ RSA \_ SCHANNEL CSP zurückgegeben werden. Beachten Sie, dass weder SSL2-SHA-MACs noch SSL2-DES-Verschlüsselung vom CSP in diesem Beispiel unterstützt werden.
 
 
 
 | Algorithmusbezeichner                                                                        | Minimale Schlüssellänge | Maximale Schlüssellänge | Protokolle | Algorithmusname |
 |---------------------------------------------------------------------------------------------|--------------------|--------------------|-----------|----------------|
-| [*calg \_ RSA \_ Keyx*](../secgloss/c-gly.md) | 512                | 2048               | 0x0007    | "RSA \_ Keyx"    |
-| [*Calg \_ MD5*](../secgloss/c-gly.md)                 | 128                | 128                | 0x0007    | Benutzen          |
-| [*calg \_ SHA*](../secgloss/c-gly.md)                 | 160                | 160                | 0x0005    | SHA          |
-| [*Calg \_ RC4*](../secgloss/c-gly.md)                 | 40                 | 128                | 0x0007    | RC4          |
-| " \_ calg"                                                                                   | 56                 | 56                 | 0x0005    | DES          |
+| [*CALG \_ RSA \_ KEYX*](../secgloss/c-gly.md) | 512                | 2048               | 0x0007    | "RSA \_ KEYX"    |
+| [*CALG \_ MD5*](../secgloss/c-gly.md)                 | 128                | 128                | 0x0007    | "MD5"          |
+| [*CALG \_ SHA*](../secgloss/c-gly.md)                 | 160                | 160                | 0x0005    | "SHA"          |
+| [*CALG \_ RC4*](../secgloss/c-gly.md)                 | 40                 | 128                | 0x0007    | "RC4"          |
+| CALG \_ DES                                                                                   | 56                 | 56                 | 0x0005    | "DES"          |
 
 
 
  
 
-Um das Senden von ClientHello-oder serverhello-Nachrichten vorzubereiten, listet die [*SChannel*](../secgloss/s-gly.md) -Protokoll-Engine die vom CSP unterstützten Algorithmen und Schlüsselgrößen auf und erstellt intern eine Liste der unterstützten Verschlüsselungs Sammlungen.
+Um das Senden von ClientHello- oder [](../secgloss/s-gly.md) ServerHello-Nachrichten vorzubereiten, listet die Schannel-Protokoll-Engine die vom CSP unterstützten Algorithmen und Schlüsselgrößen auf und erstellt intern eine Liste der unterstützten Verschlüsselungssammlungen.
 
  
 

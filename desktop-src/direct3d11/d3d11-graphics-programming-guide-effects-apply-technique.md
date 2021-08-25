@@ -1,21 +1,21 @@
 ---
 title: Anwenden einer Technik (Direct3D 11)
-description: Erfahren Sie, wie Sie den Effektzustand auf dem Gerät für Direct3D 11 festlegen, nachdem die Konstanten, Texturen und Shaderstatus deklariert und initialisiert wurden.
+description: Erfahren Sie, wie Sie den Effektzustand auf dem Gerät für Direct3D 11 festlegen, nachdem die Konstanten, Texturen und der Shaderzustand deklariert und initialisiert wurden.
 ms.assetid: 16001913-7ae2-4629-a625-eb850e29fc77
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 136d03f92957eaf1b3d501c0acd54aafde7e16d8
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 6b53eb5f60c80baf69199885f8036a9e92ac1572fe8339bd6d4a96454adb0121
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119792040"
 ---
 # <a name="apply-a-technique-direct3d-11"></a>Anwenden einer Technik (Direct3D 11)
 
-Wenn die Konstanten, Texturen und der Shaderzustand deklariert und initialisiert sind, müssen Sie nur noch den Effektzustand auf dem Gerät festlegen.
+Wenn die Konstanten, Texturen und der Shaderzustand deklariert und initialisiert werden, müssen Sie nur noch den Effektzustand auf dem Gerät festlegen.
 
-## <a name="set-non-shader-state-in-the-device"></a>Festlegen des Zustands ohne Shader auf dem Gerät
+## <a name="set-non-shader-state-in-the-device"></a>Festlegen des Nicht-Shaderzustands auf dem Gerät
 
 Ein Pipelinezustand wird nicht durch einen Effekt festgelegt. Wenn Sie beispielsweise ein Renderziel löschen, wird das Renderziel auf Daten vorbereitet. Vor dem Festlegen des Effektzustands auf dem Gerät finden Sie hier ein Beispiel für das Löschen von Ausgabepuffern.
 
@@ -31,9 +31,9 @@ Ein Pipelinezustand wird nicht durch einen Effekt festgelegt. Wenn Sie beispiels
 
 
 
-## <a name="set-effect-state-in-the-device"></a>Festlegen des Effektzustands auf dem Gerät
+## <a name="set-effect-state-in-the-device"></a>Festlegen des Auswirkungszustands auf dem Gerät
 
-Das Festlegen des Effektzustands erfolgt durch Anwenden des Effektzustands innerhalb der Renderschleife. Dies erfolgt von außen in . Das heißt, wählen Sie eine Technik aus, und legen Sie dann den Zustand für jeden der Durchläufe fest (je nach gewünschtem Ergebnis).
+Das Festlegen des Effektzustands erfolgt durch Anwenden des Effektzustands innerhalb der Renderschleife. Dies erfolgt von außen nach außen. Wählen Sie also eine Technik aus, und legen Sie dann den Zustand für die einzelnen Durchläufe fest (je nach gewünschtem Ergebnis).
 
 
 ```
@@ -52,7 +52,7 @@ Das Festlegen des Effektzustands erfolgt durch Anwenden des Effektzustands inner
 
 
 
-Ein Effekt rendert nichts, sondern legt einfach den Effektzustand auf das Gerät fest. Der Renderingcode wird aufgerufen, nachdem der Auswirkungsstatus den Gerätezustand aktualisiert hat. In diesem Beispiel führt der DrawIndexed-Aufruf das Rendering aus.
+Ein Effekt rendert nichts, sondern legt einfach den Effektzustand auf das Gerät fest. Der Renderingcode wird aufgerufen, nachdem der Zustand des Effekts den Gerätezustand aktualisiert hat. In diesem Beispiel führt der DrawIndexed-Aufruf das Rendering aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

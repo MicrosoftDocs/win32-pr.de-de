@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 62681c468fa7e78e6fd08c458798d98b467b992e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b8fa483be72d29cc869b2bd468cff25033a80187bef69317af4894fc05b096dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856450"
 ---
 # <a name="id3dxmatrixstack-interface"></a>ID3DXMATRIXStack-Schnittstelle
 
@@ -39,12 +39,12 @@ Die **ID3DXMATRIXStack-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                                       | BESCHREIBUNG                                                                                                                                |
 |:-----------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetTop**](id3dxmatrixstack--gettop.md)                                   | Ruft die aktuelle Matrix am anfang des Stapels ab.<br/>                                                                           |
+| [**GetTop**](id3dxmatrixstack--gettop.md)                                   | Ruft die aktuelle Matrix am oberen Rand des Stapels ab.<br/>                                                                           |
 | [**LoadIdentity**](id3dxmatrixstack--loadidentity.md)                       | Lädt die Identität in der aktuellen Matrix.<br/>                                                                                           |
-| [**LoadMatrix**](id3dxmatrixstack--loadmatrix.md)                           | Lädt die gegebene Matrix in die aktuelle Matrix.<br/>                                                                                 |
+| [**LoadMatrix**](id3dxmatrixstack--loadmatrix.md)                           | Lädt die angegebene Matrix in die aktuelle Matrix.<br/>                                                                                 |
 | [**MultMatrix**](id3dxmatrixstack--multmatrix.md)                           | Bestimmt das Produkt der aktuellen Matrix und der angegebenen Matrix.<br/>                                                              |
 | [**MultMatrixLocal**](id3dxmatrixstack--multmatrixlocal.md)                 | Bestimmt das Produkt der angegebenen Matrix und der aktuellen Matrix.<br/>                                                              |
-| [**Pop**](id3dxmatrixstack--pop.md)                                         | Entfernt die aktuelle Matrix vom anfang des Stapels.<br/>                                                                           |
+| [**Pop**](id3dxmatrixstack--pop.md)                                         | Entfernt die aktuelle Matrix vom oberen Rand des Stapels.<br/>                                                                           |
 | [**Drücken**](id3dxmatrixstack--push.md)                                       | Fügt dem Stapel eine Matrix hinzu.<br/>                                                                                                     |
 | [**RotateAxis**](id3dxmatrixstack--rotateaxis.md)                           | Rotiert (relativ zum Weltkoordinatenraum) um eine beliebige Achse.<br/>                                                          |
 | [**RotateAxisLocal**](id3dxmatrixstack--rotateaxislocal.md)                 | Rotiert (relativ zum lokalen Koordinatenraum des Objekts) um eine beliebige Achse.<br/>                                             |
@@ -59,7 +59,7 @@ Die **ID3DXMATRIXStack-Schnittstelle** verfügt über diese Methoden.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **ID3DXMATRIXStack-Schnittstelle** wird durch Aufrufen der [**D3DXCreateMatrixStack-Funktion**](d3dxcreatematrixstack.md) abgerufen.
 
@@ -77,14 +77,14 @@ typedef interface ID3DXMATRIXStack *LPD3DXMATRIXSTACK;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -6,16 +6,16 @@ keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 711fb56164a9dc440240f12c16b9adff1210db71
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bebc7d30d8eaef21bfe869e6cebbae7708758c9c26100562981be5b587aa2834
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805490"
 ---
 # <a name="retrieving-information-about-a-movie"></a>Abrufen von Informationen zu einem Film
 
-Im folgenden Beispiel wird das Zeitformat auf Frames festgelegt, und die aktuelle Position wird abgerufen, wenn das Gerät mit der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion wiedergegeben wird.
+Im folgenden Beispiel wird das Zeitformat auf Frames festgelegt und die aktuelle Position ermittelt, wenn das Gerät mithilfe der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) wiedergegeben wird.
 
 
 ```C++
@@ -46,6 +46,6 @@ if (mciStatus.dwReturn == MCI_MODE_PLAY)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die Windows-Abbild Beschaffung (WIA) stellt Automatisierungs Objekte zur Verwendung in Skriptsprachen bereit, wie z. b. Microsoft JScript und Microsoft Visual Basic Scripting Edition (VBScript)-Entwicklungssoftware, und Programmiersprachen auf allgemeiner Ebene, wie z. b. Microsoft Visual Basic Entwicklungssystem.
+description: Windows Image Acquisition (WIA) stellt Automatisierungsobjekte für die Verwendung in Skriptsprachen wie Microsoft JScript- und Microsoft Visual Basic Scripting Edition(VBScript)-Entwicklungssoftware sowie high-level-Programmiersprachen wie microsoft Visual Basic-Entwicklungssystem zur Verfügung.
 ms.assetid: 3d294db3-3349-4b26-aae1-1e3f588a0f0e
-title: WIA-Skript Modell
+title: WIA-Skriptmodell
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,41 +9,41 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e70863e60e0d7aa6172bd9c93240f38cac27c6be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b558e84dd4095fd0d5dc3f1f14a7de76d9108c488cf3fc3613e3a09bc4830714
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812850"
 ---
-# <a name="wia-scripting-model"></a>WIA-Skript Modell
+# <a name="wia-scripting-model"></a>WIA-Skriptmodell
 
-Die Windows-Abbild Beschaffung (WIA) stellt Automatisierungs Objekte zur Verwendung in Skriptsprachen bereit, wie z. b. Microsoft JScript und Microsoft Visual Basic Scripting Edition (VBScript)-Entwicklungssoftware, und Programmiersprachen auf allgemeiner Ebene, wie z. b. Microsoft Visual Basic Entwicklungssystem.
+Windows Image Acquisition (WIA) stellt Automatisierungsobjekte für die Verwendung in Skriptsprachen wie Microsoft JScript- und Microsoft Visual Basic Scripting Edition(VBScript)-Entwicklungssoftware sowie high-level-Programmiersprachen wie microsoft Visual Basic-Entwicklungssystem zur Verfügung.
 
 > [!Note]  
-> Dieses Skript System wurde durch die Windows-Abbild Erwerbs-Automatisierungs Schicht (WIA) ersetzt. Weitere Informationen finden Sie unter [Automatisierungs Schicht für Windows-Abbild](/previous-versions/windows/desktop/wiaaut/-wiaaut-startpage)
+> Dieses Skriptsystem wurde durch die wia Windows Automation Layer (Image Acquisition) ersetzt. Siehe [Windows Image Acquisition Automation Layer](/previous-versions/windows/desktop/wiaaut/-wiaaut-startpage).
 
  
 
-In der folgenden Tabelle werden WIA-Skript Erstellungs Objekte und deren Verwendung beschrieben. 
+In der folgenden Tabelle werden WIA-Skriptobjekte und deren Verwendung beschrieben. 
 
 | Object                                | BESCHREIBUNG                                                                                                                                                                                  |
 |---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WIA**](-wia-wia.md)               | Das WIA-Skript Objekt der obersten Ebene. Verwenden Sie das [**WIA**](-wia-wia.md) -Objekt, um Geräte aufzulisten und zu verbinden und um Hardware Geräte Ereignisse zu verarbeiten.                                        |
-| [**DeviceInfo**](-wia-deviceinfo.md) | Das [**deviceInfo**](-wia-deviceinfo.md) -Objekt bietet Zugriff auf Informationen zu den Geräteeigenschaften.                                                                                     |
-| [**Element**](-wia-item.md)             | Dieses Objekt stellt WIA-Geräte-, Datei-und Ordner Elemente dar. Ein WIA-Hardware Gerät und seine Images oder scannerbetten werden als hierarchische Struktur von [**Item**](-wia-item.md) -Objekten dargestellt. |
+| [**Wia**](-wia-wia.md)               | Das WIA-Skriptobjekt der obersten Ebene. Verwenden Sie [**das Wia-Objekt**](-wia-wia.md) zum Aufzählen und Herstellen einer Verbindung mit Geräten sowie zum Behandeln von Hardwaregeräteereignissen.                                        |
+| [**DeviceInfo**](-wia-deviceinfo.md) | Das [**DeviceInfo-Objekt**](-wia-deviceinfo.md) bietet Zugriff auf Informationen zu Geräteeigenschaften.                                                                                     |
+| [**Element**](-wia-item.md)             | Dieses Objekt stellt WIA-Geräte-, Datei- und Ordnerelemente dar. Ein WIA-Hardwaregerät und seine Bilder oder Scanbilder werden als hierarchische Struktur von [**Elementobjekten**](-wia-item.md) dargestellt. |
 
 
 
  
 
-Das Objekt " [**de viceinfo**](-wia-deviceinfo.md) " und das [**Item**](-wia-item.md) -Objekt werden Auflistungs Objekten zugeordnet. Weitere Informationen zum Verwenden von Sammlungsobjekten finden Sie unter Verwenden von WIA-Auflistungs Objekten.
+Sowohl das [**DeviceInfo-Objekt**](-wia-deviceinfo.md) als auch das [**Item-Objekt**](-wia-item.md) sind Sammlungsobjekten zugeordnet. Informationen zur Verwendung von Auflistungsobjekten finden Sie unter Verwenden von WIA-Auflistungsobjekten.
 
-In den folgenden Themen werden allgemeine Informationen zur Verwendung des WIA-Skript Modells behandelt:
+In den folgenden Themen werden allgemeine Informationen zur Verwendung des WIA-Skriptmodells behandelt:
 
 -   [Syntaxkonventionen](-wia-syntax-conventions.md)
--   [Verwenden von WIA-Sammlungsobjekten](-wia-using-wia-collection-objects.md)
--   [Eigenschafts Konstante Definitionen von WIA](-wia-wia-property-constant-definitions.md)
+-   [Verwenden von WIA-Auflistungsobjekten](-wia-using-wia-collection-objects.md)
+-   [Definitionen von WIA-Eigenschaftskonst konstanten](-wia-wia-property-constant-definitions.md)
 
  
 
