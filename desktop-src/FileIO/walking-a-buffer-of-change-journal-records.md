@@ -1,43 +1,43 @@
 ---
-description: Zurückgeben von Änderungs Journal Datensätzen, die bestimmte Kriterien erfüllen.
+description: Zurückgeben von Änderungsjournaldatensätzen, die die angegebenen Kriterien erfüllen.
 ms.assetid: 8946adb5-da47-4711-8800-86f323081c4c
-title: Durchlaufen eines Puffers von Änderungs Journal Datensätzen
+title: Durchgehen eines Puffers von Änderungsjournaldatensätzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9384316e38c23951849006efc259268a7bdf33df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9242d671cedfb5c9ef2b5fa836e29c455d09a9e1287b1ed035712f49c6c7d627
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119830150"
 ---
-# <a name="walking-a-buffer-of-change-journal-records"></a>Durchlaufen eines Puffers von Änderungs Journal Datensätzen
+# <a name="walking-a-buffer-of-change-journal-records"></a>Durchgehen eines Puffers von Änderungsjournaldatensätzen
 
-Die Steuerungs Codes, die die Änderungs Journal Datensätze der Update Sequenznummer (Update Sequence Number, US-Journal), das [**esctl- \_ Lese \_ \_**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) -und das esctl-enumerationsdataset zurückgeben, geben ähnliche Daten im Ausgabepuffer zurück. [**\_ \_ \_**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data) Beide geben eine "US-v", gefolgt von keinem oder mehreren Änderungs Journal Datensätzen zurück [**\_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) [**\_ \_**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3)
+Die Steuerungscodes, die Änderungsjournaldatensätze der Updatesequenznummer (USN), [**FSCTL \_ READ \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) und [**FSCTL \_ ENUM \_ USN \_ DATA**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data)zurückgeben, geben ähnliche Daten im Ausgabepuffer zurück. Beide geben eine USN gefolgt von null oder mehr Änderungsjournaldatensätzen zurück, die jeweils in einer [**USN \_ RECORD \_ V2-**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) oder [**USN \_ RECORD \_ V3-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) enthalten sind.
 
-Das Ziel Volume für die Vorgänge der betriebsbereit Stellung muss Refs oder NTFS 3,0 oder höher sein. Wenn Sie die NTFS-Version eines Volumes abrufen möchten, öffnen Sie eine Eingabeaufforderung mit Administrator Rechten, und führen Sie den folgenden Befehl aus:
+Das Zielvolume für USN-Vorgänge muss ReFS oder NTFS 3.0 oder höher sein. Um die NTFS-Version eines Volumes abzurufen, öffnen Sie eine Eingabeaufforderung mit Administratorzugriffsrechten, und führen Sie den folgenden Befehl aus:
 
-FSUtil.exe "f": " **NTF-FO** *X * * *:**
+**FSUtil.exe FSInfo NTFSInfo** *X::**
 
-Dabei ist *X* der Laufwerk Buchstabe des Volumes.
+wobei *X* der Laufwerkbuchstabe des Volumes ist.
 
-In der folgenden Liste finden Sie Informationen zum Aufrufen von Änderungs Journal Datensätzen:
+In der folgenden Liste werden Möglichkeiten zum Abrufen von Änderungsjournaldatensätzen aufgeführt:
 
--   Verwenden Sie [**FSCTL \_ Enum- \_ Daten- \_ Daten**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data) Sätze, um eine Auflistung (Enumeration) aller Datensätze von Änderungs Journal zwischen zwei-US-Dateien zu erhalten.
--   Verwenden [**Sie das FSCTL- \_ gelesene Daten \_ \_ Journal**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) , um selektiver zu sein, z. b. die Auswahl bestimmter Gründe für Änderungen oder die Rückgabe beim Schließen einer Datei.
+-   Verwenden Sie [**FSCTL \_ ENUM \_ USN \_ DATA,**](/windows/win32/api/winioctl/ni-winioctl-fsctl_enum_usn_data) um eine Auflistung (Enumeration) aller Änderungsjournaldatensätze zwischen zwei USNs abzurufen.
+-   Verwenden Sie [**FSCTL \_ READ \_ USN \_ JOURNAL,**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) um selektiver zu sein, z. B. das Auswählen bestimmter Gründe für Änderungen oder das Zurückgeben, wenn eine Datei geschlossen wird.
 
 > [!Note]  
-> Bei beiden Vorgängen wird nur die Teilmenge der Änderungs Journal Datensätze zurückgegeben, die die angegebenen Kriterien erfüllen.
+> Beide Vorgänge geben nur die Teilmenge der Änderungsjournaldatensätze zurück, die die angegebenen Kriterien erfüllen.
 
  
 
-Die USN, die als erstes Element im Ausgabepuffer zurückgegeben wird, ist die USN der nächsten Datensatznummer, die abgerufen werden soll. Verwenden Sie diesen Wert, um das Lesen von Datensätzen aus der End-Grenze fortzusetzen.
+Die als erstes Element im Ausgabepuffer zurückgegebene USN ist die USN der nächsten abzurufenden Datensatznummer. Verwenden Sie diesen Wert, um datensätze von der Endgrenze weiterzulesen.
 
-Das **Dateiname** -Element von " [**US- \_ Datensatz \_ v2**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) " oder " [**US- \_ Datensatz \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) " enthält den Namen der Datei, für die der betreffende Datensatz gilt. Der Dateiname variiert in der Länge, d. & # amp; a **\_ \_** **\_ \_** Der erste Member, **RecordLength**, ist die Länge der Struktur (einschließlich des Datei namens) in Bytes.
+Das **FileName-Element** von [**USN \_ RECORD \_ V2**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) oder [**USN RECORD \_ \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) enthält den Namen der Datei, für die der betreffende Datensatz gilt. Der Dateiname variiert je nach Länge, sodass **USN \_ RECORD \_ V2** und **USN \_ RECORD \_ V3** Strukturen variabler Länge sind. Ihr erster Member, **RecordLength,** ist die Länge der Struktur (einschließlich des Dateinamens) in Bytes.
 
-Wenn Sie mit dem **filename** -Element von " [**RN \_ Record \_ v2**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) " und " [**RN \_ Record \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) -Strukturen" arbeiten, gehen Sie nicht davon aus, dass der Dateiname ein nach gestelltes Trennzeichen " \\ 0" enthält. Verwenden Sie zum Bestimmen der Länge des Datei namens das dateinameitth-Member. 
+Wenn Sie mit dem **FileName-Member** der [**USN \_ RECORD \_ V2-**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) und [**USN \_ RECORD \_ V3-Strukturen**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) arbeiten, gehen Sie nicht davon aus, dass der Dateiname ein nachgestelltes \\ '0'-Trennzeichen enthält. Um die Länge des Dateinamens zu bestimmen, verwenden Sie den **FileNameLength-Member.**
 
-Im folgenden Beispiel wird ein [**Lese- \_ /Lese-Journal \_ \_**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) von "f" aufgerufen, und der Puffer der Änderungs Journal Datensätze, die vom Vorgang zurückgegeben werden
+Das folgende Beispiel ruft [**FSCTL \_ READ \_ USN \_ JOURNAL**](/windows/win32/api/winioctl/ni-winioctl-fsctl_read_usn_journal) auf und durchläuft den Puffer der Änderungsjournaldatensätze, die der Vorgang zurückgibt.
 
 
 ```C++
@@ -143,11 +143,11 @@ void main()
 
 
 
-Die Größe eines beliebigen Datensatzes in Byte, der von einem [**compun- \_ Datensatz \_ v2**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) oder einer [**\_ Daten Satz- \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) -Struktur des US-Datensatzes angegeben wird, ist höchstens mit `((MaxComponentLength - 1) * Width) + Size` *maxcomponentlength* die maximale Länge in Zeichen für den Namen der Daten Satz Datei. Die Breite ist die Größe eines breit Zeichens, und die Größe *entspricht der* Größe der Struktur.
+Die Größe eines datensatzes, der durch eine [**USN \_ RECORD \_ V2-**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) oder [**USN \_ RECORD \_ V3-Struktur**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) angegeben wird, ist höchstens in `((MaxComponentLength - 1) * Width) + Size` Bytes, wobei *MaxComponentLength* die maximale Länge in Zeichen des Datensatzdateinamens ist. Die Breite ist die Größe eines Breitzeichens, und die *Größe* entspricht der Größe der -Struktur.
 
-Um die maximale Länge zu erhalten, rufen Sie die [**GetVolumeInformation**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumeinformationa) -Funktion auf, und überprüfen Sie den Wert, auf den der *lpmaximumcomponentlength* -Parameter verweist. Subtrahieren Sie einen von *maxcomponentlength* , um die Tatsache zu berücksichtigen, dass die Definition des Daten [**\_ Satzes**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) und des Daten [**\_ Satzes \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) ein Zeichen des Datei namens enthält.
+Rufen Sie zum Abrufen der maximalen Länge die [**GetVolumeInformation-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getvolumeinformationa) auf, und untersuchen Sie den Wert, auf den der *lpMaximumComponentLength-Parameter* zeigt. Subtrahieren Sie eine von *MaxComponentLength,* um die Tatsache zu berücksichtigen, dass die Definition von [**USN \_ RECORD**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v2) und [**USN \_ RECORD \_ V3**](/windows/desktop/api/WinIoCtl/ns-winioctl-usn_record_v3) ein Zeichen des Dateinamens enthält.
 
-In der Programmiersprache C ist die größtmögliche Daten Satz Größe wie folgt:
+In der Programmiersprache C ist die größtmögliche Datensatzgröße wie folgt:
 
 `(MaxComponentLength - 1) * sizeof(WCHAR) + sizeof(USN_RECORD)`
 

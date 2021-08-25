@@ -1,5 +1,5 @@
 ---
-description: Stellt eine metrikdefinition dar, die die Metadaten für ein CIM \_ metricinstance-Objekt enthält.
+description: Stellt eine Metrikdefinition dar, die die Metadaten für ein \_ CIM-MetricInstance-Objekt enthält.
 ms.assetid: 6abfb0dc-e80b-4ca6-89d9-2e43283d0abe
 title: CIM_BaseMetricDefinition-Klasse
 ms.topic: reference
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cac965ed1eae59f1c269d897a12e9aa116183eb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0614b14f3033da5cf97dfb293f0e9cc130025dbb534331f8ec3386513d8796c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829720"
 ---
-# <a name="cim_basemetricdefinition-class"></a>CIM \_ basemetricdefinition-Klasse
+# <a name="cim_basemetricdefinition-class"></a>CIM \_ BaseMetricDefinition-Klasse
 
-Stellt eine metrikdefinition dar, die die Metadaten für ein **CIM \_ metricinstance** -Objekt enthält.
+Stellt eine Metrikdefinition dar, die die Metadaten für ein **\_ CIM-MetricInstance-Objekt** enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,41 +57,41 @@ class CIM_BaseMetricDefinition : CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ basemetricdefinition** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ BaseMetricDefinition-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ basemetricdefinition** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ BaseMetricDefinition-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Breakdowndimensionen**
+**BreakdownDimensions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das freie Format Zeichenfolgen enthält, die verwendet werden können, um Abfragen von [**CIM \_ basemetricvalue**](cim-basemetricvalue.md) -Objekten an einer bestimmten Dimension zu unterbrechen. Die Zeichen folgen sollten für die Endbenutzer der Metrikdaten sinnvoll sein. Außerdem sollten die Zeichen folgen durch die zugrunde liegende Instrumentation angeben, welche aufbruchteil Dimensionen für die metrikdefinition unterstützt werden.
+Ein Array, das freie Formatzeichenfolgen enthält, die zum Aufbrechen von Abfragen von [**CIM \_ BaseMetricValue-Objekten**](cim-basemetricvalue.md) entlang einer bestimmten Dimension verwendet werden können. Die Zeichenfolgen sollten für die Endbenutzer der Metrikdaten aussagekräftig sein. Darüber hinaus sollten die Zeichenfolgen angeben, welche Aufbruchdimensionen von der zugrunde liegenden Instrumentierung für die Metrikdefinition unterstützt werden.
 
-Ein Beispiel hierfür ist ein Transaktions Name, der das Unterbrechen des Gesamtwerts für alle Transaktionen in eine Reihe von Werten zulässt, eine für jeden Transaktions Namen. Bei anderen Beispielen handelt es sich um ein Anwendungssystem oder einen Benutzergruppen Namen.
+Ein Beispiel ist ein Transaktionsname, mit dem der Gesamtwert für alle Transaktionen in einen Satz von Werten, einen für jeden Transaktionsnamen, unterbricht werden kann. Weitere Beispiele sind ein Anwendungssystem oder ein Benutzergruppenname.
 
 </dd> <dt>
 
-**Bares**
+**Kalkulierbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Merkmale der Metrik, die zum Durchführen von Berechnungen verwendet wird.
+Die Merkmale der Metrik, die zum Ausführen von Berechnungen verwendet wird.
 
 <dt>
 
@@ -102,29 +102,29 @@ Die Merkmale der Metrik, die zum Durchführen von Berechnungen verwendet wird.
 
 </dt> <dd>
 
-Eine Zeichenfolge. Arithmetik ist nicht sinnvoll.
+Eine Zeichenfolge. Arithmetische Daten sind nicht sinnvoll.
 
 </dd> <dt>
 
 <span id="Summable"></span><span id="summable"></span><span id="SUMMABLE"></span>
 
-<span id="Summable"></span><span id="summable"></span><span id="SUMMABLE"></span>**Sumable** (2)
+<span id="Summable"></span><span id="summable"></span><span id="SUMMABLE"></span>**Summierbar** (2)
 
 
 </dt> <dd>
 
-Es ist sinnvoll, diesen Wert über viele Instanzen von zu addieren, z. b. uni-fwork, wie z. b. die Anzahl der Dateien, die in einem Sicherungsauftrag verarbeitet werden. Wenn es sich bei jedem Sicherungsauftrag beispielsweise um einen Unito-work-Vorgang handelt und jeder Auftrag 27.000 Dateien im Durchschnitt sichert, ist es sinnvoll, zu sagen, dass 100 Sicherungsaufträge 2,7 Millionen Dateien verarbeitet haben.
+Es ist sinnvoll, diesen Wert über viele Instanzen von zu summieren, z. B. UnitOfWork, z. B. die Anzahl der in einem Sicherungsauftrag verarbeiteten Dateien. Wenn beispielsweise jeder Sicherungsauftrag ein UnitOfWork ist und jeder Auftrag durchschnittlich 27.000 Dateien gesichert, ist es sinnvoll zu sagen, dass 100 Sicherungsaufträge 2.700.000 Dateien verarbeitet haben.
 
 </dd> <dt>
 
 <span id="Non-summable"></span><span id="non-summable"></span><span id="NON-SUMMABLE"></span>
 
-<span id="Non-summable"></span><span id="non-summable"></span><span id="NON-SUMMABLE"></span>**Nicht summier Bar** (3)
+<span id="Non-summable"></span><span id="non-summable"></span><span id="NON-SUMMABLE"></span>**Nicht summierbar** (3)
 
 
 </dt> <dd>
 
-Es ist nicht sinnvoll, diesen Wert über viele Instanzen von Uni-fwork zu addieren. Ein Beispiel wäre eine Metrik, die die Länge der Warteschlange beim Eintreffen eines Auftrags auf einem Server misst. Wenn es sich bei jedem Auftrag um einen unitwork-Vorgang handelt und die durchschnittliche Warteschlangen Länge bei Eintreffen der einzelnen Aufträge 33 beträgt, ist es nicht sinnvoll, zu sagen, dass die Warteschlangen Länge für 100 Aufträge 3300 beträgt. Es ist sinnvoll, zu sagen, dass der Mittelwert 33 ist.
+Es ist nicht sinnvoll, diesen Wert über viele Instanzen von UnitOfWork zu summen. Ein Beispiel wäre eine Metrik, die die Länge der Warteschlange misst, wenn ein Auftrag auf einem Server eintrifft. Wenn jeder Auftrag ein UnitOfWork ist und die durchschnittliche Warteschlangenlänge beim Eintreffen jedes Auftrags 33 beträgt, ist es nicht sinnvoll zu sagen, dass die Warteschlangenlänge für 100 Aufträge 3300 beträgt. Es ist sinnvoll zu sagen, dass der Mittelwert 33 ist.
 
 </dd> </dl>
 
@@ -133,16 +133,16 @@ Es ist nicht sinnvoll, diesen Wert über viele Instanzen von Uni-fwork zu addier
 **ChangeType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ basemetricdefinition**".**Iscontinuous**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ BaseMetricDefinition**.**IsContinuous**")
 </dt> </dl>
 
-Gibt an, wie sich der Metrikwert mithilfe allgemeiner Attribute ändert, wie z. b. Richtungsänderung, Mindest-und Höchstwerte und Wrapping Semantik.
+Gibt an, wie sich der Metrikwert ändert, indem allgemeine Attribute verwendet werden, z. B. Richtungsänderung, Mindest- und Höchstwerte und Umbruchsemantik.
 
 <dt>
 
@@ -159,23 +159,23 @@ Der Metrik-Designer hat den ChangeType nicht qualifiziert.
 
 <span id="N_A"></span><span id="n_a"></span>
 
-<span id="N_A"></span><span id="n_a"></span>**N/v** (2)
+<span id="N_A"></span><span id="n_a"></span>**N/V** (2)
 
 
 </dt> <dd>
 
-Wenn die Eigenschaft "iscontinuous" den Wert "false" hat, ist ChangeType nicht sinnvoll und muss auf "N/v" festgelegt werden.
+Wenn die "IsContinuous"-Eigenschaft "false" ist, ist ChangeType nicht sinnvoll und MUSS auf "N/A" festgelegt werden.
 
 </dd> <dt>
 
 <span id="Counter"></span><span id="counter"></span><span id="COUNTER"></span>
 
-<span id="Counter"></span><span id="counter"></span><span id="COUNTER"></span>**Counter** (3)
+<span id="Counter"></span><span id="counter"></span><span id="COUNTER"></span>**Zähler** (3)
 
 
 </dt> <dd>
 
-Die Metrik ist eine gegen Metrik. Diese verfügen über nicht negative ganzzahlige Werte, die monoton ansteigen, bis die maximale darstellbare Zahl erreicht und dann umbrochen wird und die Zunahme von 0 beginnt. Solche Leistungsindikatoren, auch als Rollover-Indikatoren bezeichnet, können zum Beispiel zum zählen der Anzahl von Netzwerkfehlern oder der Anzahl der verarbeiteten Transaktionen verwendet werden. Die einzige Möglichkeit für eine Client Anwendung, Wrap-Problem Umgehungen nachzuverfolgen, besteht darin, den Wert des Zählers in angemessenen kurzen Intervallen abzurufen.
+Die Metrik ist eine Zählermetrik. Diese verfügen über nicht negative ganzzahlige Werte, die sich monoton erhöhen, bis die maximal darstellbare Zahl erreicht ist, und dann umschließen und beginnen, von 0 zu steigen. Solche Leistungsindikatoren, auch als Rolloverzähler bezeichnet, können beispielsweise verwendet werden, um die Anzahl der Netzwerkfehler oder die Anzahl der verarbeiteten Transaktionen zu zählen. Die einzige Möglichkeit, mit der eine Clientanwendung umschließen kann, besteht im Abrufen des Werts des Leistungsindikators in entsprechend kurzen Intervallen.
 
 </dd> <dt>
 
@@ -186,20 +186,20 @@ Die Metrik ist eine gegen Metrik. Diese verfügen über nicht negative ganzzahli
 
 </dt> <dd>
 
-Die Metrik ist eine Messgeräte Metrik. Diese verfügen über ganzzahlige oder Gleit Komma Werte, die beliebig vergrößert und verringert werden können. Ein Messgerät darf nicht bei Erreichen der minimalen oder maximalen darstellbaren Zahl eingeschlossen werden, sondern der Wert "Sticks" an dieser Zahl. Minimale oder maximale Werte innerhalb des darstellbaren Wertebereichs, bei dem der Metrikwert "Sticks" ist oder nicht definiert werden kann.
+Die Metrik ist eine Messgerätmetrik. Diese verfügen über Ganzzahl- oder Gleitkommawerte, die beliebig erhöht und verringert werden können. Ein Messgerät DARF NICHT umschließen, wenn die minimale oder maximale darstellbare Zahl erreicht wird. Stattdessen bleibt der Wert bei dieser Zahl "erhalten". Mindest- oder Höchstwerte innerhalb des darstellbaren Wertbereichs, in dem der Metrikwert "bleibt", definiert werden können oder nicht.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (5.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (5..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -209,7 +209,7 @@ Die Metrik ist eine Messgeräte Metrik. Diese verfügen über ganzzahlige oder G
 **DataType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -221,7 +221,7 @@ Der Datentyp der Metrik.
 
 <span id="boolean"></span><span id="BOOLEAN"></span>
 
-**boolescher** Wert (1)
+**boolean** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -235,7 +235,7 @@ Der Datentyp der Metrik.
 
 <span id="datetime"></span><span id="DATETIME"></span>
 
-**DateTime** (3)
+**datetime** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -284,51 +284,51 @@ Der Datentyp der Metrik.
 
 <span id="string"></span><span id="STRING"></span>
 
-**Zeichenfolge** (10)
+**string** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="uint16"></span><span id="UINT16"></span>
 
-**UInt16** (11)
+**uint16** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="uint32"></span><span id="UINT32"></span>
 
-**UInt32** (12)
+**uint32** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="uint64"></span><span id="UINT64"></span>
 
-**UInt64** (13)
+**uint64** (13)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="uint8"></span><span id="UINT8"></span>
 
-**Uint8** (14)
+**uint8** (14)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Gatheringtype**
+**GatheringType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie die Metrikwerte von der zugrunde liegenden Instrumentation erfasst werden.
+Gibt an, wie die Metrikwerte von der zugrunde liegenden Instrumentierung erfasst werden.
 
 <dt>
 
@@ -339,7 +339,7 @@ Gibt an, wie die Metrikwerte von der zugrunde liegenden Instrumentation erfasst 
 
 </dt> <dd>
 
-Gibt an, dass der gatheringtype nicht bekannt ist.
+Gibt an, dass der GatheringType nicht bekannt ist.
 
 </dd> <dt>
 
@@ -350,7 +350,7 @@ Gibt an, dass der gatheringtype nicht bekannt ist.
 
 </dt> <dd>
 
-Gibt an, dass die CIM-Metrikwerte sofort aktualisiert werden, wenn sich die Werte in der gemessenen Ressource ändern. Die Werte von OnChange-Metriken entsprechen wirklich der aktuellen Situation innerhalb der Ressource. Ein Beispiel hierfür ist die Anzahl der angemeldeten Benutzer, die sofort aktualisiert werden, wenn sich Benutzer anmelden und abmelden.
+Gibt an, dass die CIM-Metrikwerte sofort aktualisiert werden, wenn sich die Werte innerhalb der gemessenen Ressource ändern. Die Werte der OnChange-Metriken spiegeln die aktuelle Situation innerhalb der Ressource zu einem beliebigen Zeitpunkt wider. Ein Beispiel ist die Anzahl der angemeldeten Benutzer, die sofort aktualisiert werden, wenn sich Benutzer anmelden und abmelden.
 
 </dd> <dt>
 
@@ -361,7 +361,7 @@ Gibt an, dass die CIM-Metrikwerte sofort aktualisiert werden, wenn sich die Wert
 
 </dt> <dd>
 
-": Gibt an, dass die CIM-Metrikwerte regelmäßig aktualisiert werden. Beispielsweise wird für eine Client Anwendung ein Metrikwert, der auf die aktuelle Zeit angewendet wird, während jedes Sammlungs Intervalls konstant angezeigt und dann am Ende jedes Sammlungs Intervalls auf den neuen Wert überspringt.
+": Gibt an, dass die CIM-Metrikwerte regelmäßig aktualisiert werden. Beispielsweise wird für eine Clientanwendung ein Metrikwert, der auf die aktuelle Zeit anwendunget, während jedes Erfassungsintervalls konstant angezeigt und dann am Ende jedes Erfassungsintervalls zum neuen Wert springt.
 
 </dd> <dt>
 
@@ -372,20 +372,20 @@ Gibt an, dass die CIM-Metrikwerte sofort aktualisiert werden, wenn sich die Wert
 
 </dt> <dd>
 
-Gibt an, dass der CIM-Metrikwert bei jedem Lesen durch eine Client Anwendung bestimmt wird. Die Werte von OnRequest-Metriken geben tatsächlich die aktuelle Situation innerhalb der Ressource zurück, wenn jemand Sie anfordert. Allerdings werden Sie nicht als "nicht überwacht" geändert, weshalb das Abonnieren von Wertänderungen von OnRequest-Metriken nicht empfohlen wird.
+Gibt an, dass der CIM-Metrikwert jedes Mal bestimmt wird, wenn eine Clientanwendung ihn liest. Die Werte der OnRequest-Metriken geben tatsächlich die aktuelle Situation innerhalb der Ressource zurück, wenn jemand sie anfordert. Sie ändern jedoch nicht "nicht beobachtet", und daher wird das Abonnieren von Wertänderungen von OnRequest-Metriken NICHT EMPFOHLEN.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (5.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (5..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -404,59 +404,59 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die eindeutige ID der metrikdefinition. Die UUID/GUIDs von Open Software Foundation (OSF) werden empfohlen.
+Die eindeutige ID der Metrikdefinition. Open Software Foundation (OSF) UUID/GUIDs werden empfohlen.
 
 </dd> <dt>
 
 **IsContinuous**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True, wenn der Metrikwert kontinuierlich ist. andernfalls false.
+True, wenn der Metrikwert kontinuierlich ist; andernfalls FALSE.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Metrik. Dieser Name muss nicht eindeutig sein, sollte jedoch beschreibend sein und Leerzeichen enthalten.
+Der Name der Metrik. Dieser Name muss nicht eindeutig sein, sollte aber beschreibend sein und Leerzeichen enthalten.
 
 </dd> <dt>
 
-**Programmaticunits**
+**ProgrammaticUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die spezifischen Einheiten eines Werts. Der Wert dieser Eigenschaft muss ein gültiger Wert des Qualifizierers für programmgesteuerte Einheiten sein, wie in Anhang C. 1 von DSP0004 v 2.4 oder höher definiert.
+Die spezifischen Einheiten eines Werts. Der Wert dieser Eigenschaft sollte ein rechtlicher Wert des Qualifizierers "Programmgesteuerte Einheiten" sein, wie in Anhang C.1 von DSP0004 V2.4 oder höher definiert.
 
 </dd> <dt>
 
-**Timescope**
+**TimeScope**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ basemetricvalue**](cim-basemetricvalue.md)".**Zeitstempel**","**CIM \_ basemetricvalue**.**Dauer**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ BaseMetricValue**](cim-basemetricvalue.md).**TimeStamp**", "**CIM \_ BaseMetricValue**.**Dauer**")
 </dt> </dl>
 
 Der Zeitbereich, der für den Metrik-Designer gilt.
@@ -481,7 +481,7 @@ Gibt an, dass der Zeitbereich vom Metrik-Designer nicht qualifiziert wurde oder 
 
 </dt> <dd>
 
-Gibt an, dass die Metrik für einen bestimmten Zeitpunkt gilt. In den entsprechenden basemetricvalue-Instanzen gibt Timestamp den Zeitpunkt und die Dauer immer 0 an.
+Gibt an, dass die Metrik für einen Zeitpunkt gilt. In den entsprechenden BaseMetricValue-Instanzen gibt TimeStamp den Zeitpunkt an, und Duration ist immer 0.
 
 </dd> <dt>
 
@@ -492,31 +492,31 @@ Gibt an, dass die Metrik für einen bestimmten Zeitpunkt gilt. In den entspreche
 
 </dt> <dd>
 
-Gibt an, dass die Metrik für ein Zeitintervall gilt. In den entsprechenden basemetricvalue-Instanzen gibt Timestamp das Ende des Zeitintervalls an, und die Dauer gibt deren Dauer an.
+Gibt an, dass die Metrik für ein Zeitintervall gilt. Für die entsprechenden BaseMetricValue-Instanzen gibt TimeStamp das Ende des Zeitintervalls und Duration die Dauer an.
 
 </dd> <dt>
 
 <span id="StartupInterval"></span><span id="startupinterval"></span><span id="STARTUPINTERVAL"></span>
 
-<span id="StartupInterval"></span><span id="startupinterval"></span><span id="STARTUPINTERVAL"></span>**Startupinterval** (4)
+<span id="StartupInterval"></span><span id="startupinterval"></span><span id="STARTUPINTERVAL"></span>**StartupInterval** (4)
 
 
 </dt> <dd>
 
-Gibt an, dass die Metrik für ein Zeitintervall gilt, das beim Start der gemessenen Ressource begonnen hat (d. h. das von metricdefforme zugeordnete managedelta). In den entsprechenden basemetricvalue-Instanzen gibt Timestamp das Ende des Zeitintervalls an. Wenn Duration gleich 0 ist, gibt dies an, dass die Startzeit der gemessenen Ressource unbekannt ist. Andernfalls gibt Duration die Dauer zwischen dem Start der Ressource und dem Zeitstempel an.
+Gibt an, dass die Metrik für ein Zeitintervall gilt, das beim Start der gemessenen Ressource begonnen hat (d. h. das von MetricDefForMe zugeordnete ManagedElement). Für die entsprechenden BaseMetricValue-Instanzen gibt TimeStamp das Ende des Zeitintervalls an. Wenn Duration gleich 0 ist, gibt dies an, dass die Startzeit der gemessenen Ressource unbekannt ist. Andernfalls gibt Duration die Dauer zwischen dem Start der Ressource und TimeStamp an.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (5.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserviert** (5..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -526,13 +526,13 @@ Gibt an, dass die Metrik für ein Zeitintervall gilt, das beim Start der gemesse
 **Einheiten**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Einheiten der Metrik. Beispiele hierfür sind bytes, Pakete, Aufträge, Dateien, Millisekunden und Amps.
+Die Einheiten der Metrik. Beispiele hierfür sind Bytes, Pakete, Aufträge, Dateien, Millisekunden und Amps.
 
 </dd> </dl>
 
@@ -544,17 +544,17 @@ Die Einheiten der Metrik. Beispiele hierfür sind bytes, Pakete, Aufträge, Date
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ managedelta**](cim-managedelement.md)
+[**CIM \_ ManagedElement**](cim-managedelement.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-title: Quelle für das sekundäre Image
-description: Quelle für das sekundäre Image
+title: Pushed Secondary Image Source
+description: Pushed Secondary Image Source
 ms.assetid: f2a2380d-c876-456b-837b-01b3997d81f2
 keywords:
-- Windows Media Player Mobile Skins, Schaltflächen Bildquelle
-- Skins, Schaltflächen Bildquelle
-- Verweis für Skins, Schaltflächen
+- Windows Media Player Mobile Skins, Schaltflächenbildquelle
+- Skins, Schaltflächenbildquelle
+- Referenz für Skins, Schaltflächen
 - Schaltflächen in Skins, Bildquelle
 - Bildquelle für Skins, Schaltflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6de50f72c8af34fa4f3e44507e172cae6890dc47
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 37045da71b8417856ec72ac7e57a6a787426ba486993b9fef03910b4d32e663d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861830"
 ---
-# <a name="pushed-secondary-image-source"></a>Quelle für das sekundäre Image
+# <a name="pushed-secondary-image-source"></a>Pushed Secondary Image Source
 
-Abhängig von der Schaltflächen Funktion müssen Sie möglicherweise den Speicherort des gedrückten Bilds für den sekundären Zustand der Schaltfläche definieren. Dies ist das Bild, das Benutzern angezeigt wird, wenn Sie eine PLAYPAUSE-Funktions Schaltfläche beim zweiten Mal pushen.
+Abhängig von der Schaltflächenfunktion müssen Sie möglicherweise den Speicherort des pushierten Bilds für den sekundären Zustand der Schaltfläche definieren. Dies ist das Bild, das Benutzern angezeigt wird, wenn sie beim zweiten Mal eine PlayPause-Funktionsschaltfläche drücken.
 
-Um dieses Bild zu definieren, müssen Sie den Bildtyp gefolgt von einem Leerzeichen und dem @-Symbol und einem weiteren Leerzeichen eingeben. Sie müssen dann zwei positive ganze Zahlen eingeben, die die oberen linken Koordinaten (in Pixel) des Bilds definieren, aus dem Sie zeichnen möchten.
+Um dieses Bild zu definieren, müssen Sie den Bildtyp gefolgt von einem Leerzeichen, dem @-Symbol und einem anderen Leerzeichen eingeben. Anschließend müssen Sie zwei positive ganze Zahlen eingeben, die die oberen linken Koordinaten (in Pixel) des Bilds definieren, das Sie innerhalb des Bildtyps verwenden möchten, aus dem Sie zeichnen.
 
-Wenn Sie z. b. das pushbild für eine sekundäre Bildquelle definieren möchten, geben Sie Folgendes ein, wenn sich das Bild in der über drückten Bitmap befindet:
+Geben Sie z. B. Folgendes ein, um das pushed-Bild für eine sekundäre Bildquelle zu definieren, wenn sich Das Bild in der Bitmap "Pushed" befindet:
 
 
 ```C++
@@ -33,7 +33,7 @@ Pushed @ 248,0
 
 
 
-Sekundäre Zustände können nicht über ein deaktiviertes Image verfügen. Bei sekundären Images wird davon ausgegangen, dass Sie dieselbe Breite und Höhe aufweisen wie das primäre Image.
+Sekundäre Zustände dürfen kein Deaktiviert-Image haben. Es wird davon ausgegangen, dass sekundäre Bilder die gleiche Breite und Höhe wie das primäre Bild haben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Sekundäre Zustände können nicht über ein deaktiviertes Image verfügen. Bei 
 [**Schaltflächen**](buttons.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

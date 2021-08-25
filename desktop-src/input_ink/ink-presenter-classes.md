@@ -1,26 +1,26 @@
 ---
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Ink Presenter-Klassen.
+description: Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für Ink-Presenterklassen.
 ms.assetid: 639BC980-18DF-4496-9753-3074D3148851
-title: Ink Presenter-Klassen
+title: Klassen für die Ink-Präsentation
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: efd7a32fff7fefc3081e3bbccf889fbd5d3278e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8fc9b6f10ab436c464a99e9633a65be2093cec578d3e304ce9e4c8622fa00a31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119830350"
 ---
-# <a name="ink-presenter-classes"></a>Ink Presenter-Klassen
+# <a name="ink-presenter-classes"></a>Klassen für die Ink-Präsentation
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Ink Presenter](ink-presenter.md) -Klassen.
+Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für [Ink-Presenterklassen.](ink-presenter.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema                                               | BESCHREIBUNG                                                                                     |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [**Inkdesktophost**](inkdesktophost.md)<br/> | Implementiert die [**iinkdesktophost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost) -Schnittstelle.<br/> |
+| [**InkDesktopHost**](inkdesktophost.md)<br/> | Implementiert die [**IInkDesktopHost-Schnittstelle.**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost)<br/> |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Ink Presenter](ink-presenter.md), [Stift-und tablettstiftinteraktionen](/windows/uwp/design/input/pen-and-stylus-interactions), Handschrift [Analyse Beispiel](/samples/microsoft/windows-universal-samples/inkanalysis/), [einfaches Beispiel zum Einfügen](/samples/microsoft/windows-universal-samples/simpleink/), Beispiel für [komplexe](/samples/microsoft/windows-universal-samples/complexink/) Erfassung
+[Ink-Presenter,](ink-presenter.md) [Stift- und Stiftinteraktionen,](/windows/uwp/design/input/pen-and-stylus-interactions) [Ink-Analysebeispiel,](/samples/microsoft/windows-universal-samples/inkanalysis/) [Einfaches Beispiel für Dasken,](/samples/microsoft/windows-universal-samples/simpleink/) [Komplexes Beispiel für Dasinken](/samples/microsoft/windows-universal-samples/complexink/)

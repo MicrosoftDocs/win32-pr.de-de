@@ -1,11 +1,11 @@
 ---
-title: Iwmpcontrols currentpositionstring (Eigenschaft)
-description: Die currentpositionstring-Eigenschaft ruft die aktuelle Position im Medien Element als Zeichenfolge ab, die als hh mm SS (Stunden, Minuten und Sekunden) formatiert ist.
+title: IWMPControls currentPositionString (Eigenschaft)
+description: Die currentPositionString-Eigenschaft ruft die aktuelle Position im Medienelement als als HH MM SS formatierte Zeichenfolge ab (Stunden, Minuten und Sekunden).
 ms.assetid: cd28dafa-b6a4-4bed-aa5d-7e7be6af1426
 keywords:
-- currentpositionstring-Eigenschaft, Windows-Media Player
-- currentpositionstring-Eigenschaft, Windows Media Player, iwmpcontrols-Schnittstelle
-- Iwmpcontrols Interface, Windows Media Player, currentpositionstring (Eigenschaft)
+- currentPositionString-Windows Media Player
+- currentPositionString-Eigenschaft Windows Media Player , IWMPControls-Schnittstelle
+- IWMPControls-Schnittstelle Windows Media Player , currentPositionString-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85e941fceb61e4f00393b05f96489ec7ac8e950f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 61e3c98937a12c145742895979ccccb8118f8349f82b2840c902dfe625ad0472
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861910"
 ---
-# <a name="iwmpcontrolscurrentpositionstring-property"></a>Iwmpcontrols:: currentpositionstring (Eigenschaft)
+# <a name="iwmpcontrolscurrentpositionstring-property"></a>IWMPControls::currentPositionString (Eigenschaft)
 
-Die **currentpositionstring** -Eigenschaft ruft die aktuelle Position im Medien Element als Zeichenfolge ab, die als hh: mm: SS (Stunden, Minuten und Sekunden) formatiert ist.
+Die **currentPositionString-Eigenschaft** ruft die aktuelle Position im Medienelement als als HH:MM:SS formatierte Zeichenfolge ab (Stunden, Minuten und Sekunden).
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,15 +49,15 @@ Public ReadOnly Property currentPositionString As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein formatiertes **System. String** -Wert, der die aktuelle Position ist.
+Ein **formatiertes System.String,** das die aktuelle Position ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Medien Element weniger als eine Stunde lang ist, wird die aktuelle Position als mm: SS (Minuten und Sekunden) formatiert.
+Wenn das Medienelement weniger als eine Stunde lang ist, wird die aktuelle Position als MM:SS (Minuten und Sekunden) formatiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Timer gestartet, der ein Ereignis in Intervallen von einer Sekunde auslöst. Im Timer-Ereignishandler wird eine Bezeichnung mit **currentpositionstring** aktualisiert. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird ein Timer gestartet, der ein Ereignis in Intervallen von einer Sekunde auslöst. Im Timerereignishandler wird eine Bezeichnung mit **currentPositionString aktualisiert.** Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -113,10 +113,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. CurrentPosition (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-currentposition--vb-and-c.md)
+[**IWMPControls.currentPosition (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-currentposition--vb-and-c.md)
 </dt> </dl>
 
  
