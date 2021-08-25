@@ -1,19 +1,19 @@
 ---
-description: Legt die Videoauswahl Ebene für einen Video Encoder fest.
+description: Legt die Videoauswahlebene für einen Videoencoder fest.
 ms.assetid: 2CB83D5B-93BB-43F0-B231-5B773BDB4D5F
-title: CODECAPI_AVEncVideoSelectLayer-Eigenschaft (codecapi. h)
+title: CODECAPI_AVEncVideoSelectLayer (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0795a7e22f6dde31db52b5a59d719075001002f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1ffabf6de2e25d2dde1b8509747659ff7809e38e6777cef40d63bd5bce77d35e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959050"
 ---
-# <a name="codecapi_avencvideoselectlayer-property"></a>Codecapi \_ avencvideoselectlayer (Eigenschaft)
+# <a name="codecapi_avencvideoselectlayer-property"></a>CODECAPI \_ AVEncVideoSelectLayer (Eigenschaft)
 
-Legt die Videoauswahl Ebene für einen Video Encoder fest.
+Legt die Videoauswahlebene für einen Videoencoder fest.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,11 +21,11 @@ Legt die Videoauswahl Ebene für einen Video Encoder fest.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideoselectlayer**
+**CODECAPI \_ AVEncVideoSelectLayer**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h264-uvc-1-5.md)verwendet.
+Diese Eigenschaft wird auch mit [H.264 UVC 1.5-Kameraencodern verwendet.](camera-encoder-h264-uvc-1-5.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,9 +33,9 @@ Diese Eigenschaft wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ Diese Eigenschaft wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

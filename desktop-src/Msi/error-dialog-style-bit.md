@@ -1,21 +1,21 @@
 ---
-description: Wenn dieses Bit festgelegt ist, ist das Dialogfeld ein Fehler Dialogfeld.
+description: Wenn dieses Bit festgelegt ist, ist das Dialogfeld ein Fehlerdialogfeld.
 ms.assetid: a8a95f6a-6465-433b-98a4-95281cddedd3
-title: Fehler Dialogfeld-Stilbit
+title: Error Dialog Style Bit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0ff3e4868cf1941f80be4f7b2d70068ec949a4f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 912f9c244e0f7905b72faf53306a7556ac8f9bb718c48666630751a5c0b20762
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913490"
 ---
-# <a name="error-dialog-style-bit"></a>Fehler Dialogfeld-Stilbit
+# <a name="error-dialog-style-bit"></a>Error Dialog Style Bit
 
-Wenn dieses Bit festgelegt ist, ist das Dialogfeld ein Fehler Dialogfeld.
+Wenn dieses Bit festgelegt ist, ist das Dialogfeld ein Fehlerdialogfeld.
 
-Es können mehrere Dialogfelder mit diesem Stil vorhanden sein. Die **ErrorDialog** -Eigenschaft bestimmt, welches Dialogfeld als Fehler Dialogfeld verwendet wird. Bei dem ausgewählten Dialogfeld kann es sich nur um einen Benutzer handeln, für den dieses Stilbit festgelegt ist. Das Fehler Dialogfeld muss über ein statisches Text Steuerelement namens ErrorText verfügen. Dieses Steuerelement empfängt den Text der Fehlermeldung. Das Dialogfeld sollte auch über die sieben pushschaltflächen verfügen, die den möglichen Rückgabe Werten entsprechen. Die Fehlermeldung bestimmt, welche dieser Schaltflächen tatsächlich angezeigt werden. Die angezeigten Schaltflächen werden neu angeordnet, sodass Sie im Dialogfeld gleichmäßig verteilt werden. Diese Neuanordnung ändert die X-Koordinate der Schaltflächen, jedoch nicht die anderen drei Koordinaten. Daher ist es ratsam, dass kein anderes Steuerelement im selben horizontalen Bereich des Dialog Felds wie die Schaltflächen erstellt wird. Wenn in der Fehlermeldung keine Schaltfläche angegeben ist, wird die Schaltfläche **OK** angezeigt. Die **Standard** Schaltfläche, die ersten aktiven Steuerelemente und Schaltflächen Werte **Abbrechen** werden bei einem Fehler Dialogfeld ignoriert. Die in der Fehlermeldung definierte **Standard** Schaltfläche wird allen drei Werten zugewiesen. Der Effekt, dass diese Schaltflächen gedrückt werden, muss in der [ControlEvent-Tabelle](controlevent-table.md) genau wie für alle anderen Schaltflächen definiert werden. Der Titel des Dialog Felds wird auf eine Weise erstellt, die anderen Dialogfeldern ähnelt. Sie kann von der Fehlermeldung überschrieben werden, wenn Sie einen Header Text nach der Schaltflächen Liste angibt.
+Es kann mehrere Dialoge mit diesem Stil geben. Die **ErrorDialog-Eigenschaft** bestimmt, welcher Dialog als Fehlerdialog verwendet wird. Das ausgewählte Dialogfeld kann nur eines der Dialogfelder sein, für die dieses Stilbit festgelegt ist. Das Fehlerdialogfeld muss über ein statisches Textsteuerelement mit dem Namen ErrorText verfügen. Dieses Steuerelement empfängt den Text der Fehlermeldung. Das Dialogfeld sollte auch über die sieben Schaltflächen verfügen, die den möglichen Rückgabewerten entsprechen. Die Fehlermeldung bestimmt, welche dieser Schaltflächen tatsächlich angezeigt werden. Die angezeigten Schaltflächen werden neu angeordnet, sodass sie gleichmäßig im Dialogfeld verteilt werden. Diese Neuordnung ändert die X-Koordinate der Schaltflächen, jedoch nicht die anderen drei Koordinaten. Daher ist es ratsam, kein anderes Steuerelement im selben horizontalen Bereich des Dialogs wie die Schaltflächen zu erstellen. Wenn in der Fehlermeldung keine Schaltfläche angegeben wird, wird die Schaltfläche **OK** angezeigt. Die Werte **für die Schaltflächen Standard,** Erstes aktives Steuerelement und **Schaltfläche abbrechen** werden für ein Fehlerdialogfeld ignoriert. Die in der Fehlermeldung definierte Schaltfläche **Standard** wird allen drei Werten zugewiesen. Die Auswirkung des Pushens dieser Schaltflächen muss in der [ControlEvent-Tabelle](controlevent-table.md) genau wie bei allen anderen Schaltflächen definiert werden. Der Titel des Dialogs wird ähnlich wie bei anderen Dialogen erstellt. Sie kann durch die Fehlermeldung überschrieben werden, wenn sie einen Headertext nach der Schaltflächenliste angibt.
 
 ## <a name="value"></a>Wert
 
@@ -23,7 +23,7 @@ Es können mehrere Dialogfelder mit diesem Stil vorhanden sein. Die **ErrorDialo
 
 | Decimal | Hexadezimal | Konstante                       |
 |---------|-------------|--------------------------------|
-| 65536   | 0x00010000  | **msidbdialogattributeserror** |
+| 65536   | 0x00010000  | **msidbDialogAttributesError** |
 
 
 

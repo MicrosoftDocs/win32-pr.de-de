@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ computersystempackage-Klasse stellt eine Zuordnung dar, die explizit die Beziehung zwischen einheitlichen Computersystemen und einem oder mehreren physischen Paketen definiert.
+description: Die CIM \_ ComputerSystemPackage-Klasse stellt eine Zuordnung dar, die explizit die Beziehung zwischen unitären Computersystemen und einem oder mehreren physischen Paketen definiert.
 ms.assetid: a91bf09d-0768-4d2a-a0e5-16237b2e6ddc
 ms.tgt_platform: multiple
 title: CIM_ComputerSystemPackage-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a5a2f166c4494b6120bfc5e2aaedeaba4721b155
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a5901b77fd3ea3305f7973fc194aefc2263efeec3181ea1f76e3bebfde87bf73
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924950"
 ---
-# <a name="cim_computersystempackage-class"></a>CIM \_ computersystempackage-Klasse
+# <a name="cim_computersystempackage-class"></a>CIM \_ ComputerSystemPackage-Klasse
 
-Die **CIM \_ computersystempackage** -Klasse stellt eine Zuordnung dar, die explizit die Beziehung zwischen einheitlichen Computersystemen und einem oder mehreren physischen Paketen definiert. Die Zuordnung ähnelt der Art und Weise, in der logische Geräte durch physische Elemente realisiert werden.
+Die **CIM \_ ComputerSystemPackage-Klasse** stellt eine Zuordnung dar, die explizit die Beziehung zwischen unitären Computersystemen und einem oder mehreren physischen Paketen definiert. Die Zuordnung ähnelt der Art und Weise, wie logische Geräte durch physische Elemente realisiert werden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_ComputerSystemPackage : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ computersystempackage** -Klasse verfügt über die folgenden Typen von Membern:
+Die **CIM \_ ComputerSystemPackage-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ computersystempackage** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ComputerSystemPackage-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ physicalpackage**
+Datentyp: **CIM \_ PhysicalPackage**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ physicalpackage**](cim-physicalpackage.md) , das die physischen Pakete beschreibt, die ein einheitliches Computersystem realisieren.
+Ein [**CIM \_ PhysicalPackage,**](cim-physicalpackage.md) das die physischen Pakete beschreibt, die ein unitäres Computersystem realisieren.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ unitarycomputersystem**
+Datentyp: **CIM \_ UnitaryComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md) , das das einheitliche Computersystem beschreibt.
+Ein [**CIM \_ UnitaryComputerSystem, das**](cim-unitarycomputersystem.md) das unitäre Computersystem beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ computersystempackage** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ ComputerSystemPackage-Klasse** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

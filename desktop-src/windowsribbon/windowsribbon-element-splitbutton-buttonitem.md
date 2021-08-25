@@ -1,9 +1,9 @@
 ---
-title: SplitButton. buttonitem (Eigenschaft)
-description: Stellt einen Container für eine Schaltfläche oder UMSCHALT Fläche dar, die den Standardbefehl einer unterteilten Schaltfläche verfügbar macht.
+title: SplitButton.ButtonItem-Eigenschaft
+description: Stellt einen Container für eine Schaltfläche oder umschaltfläche dar, der den Standardbefehl einer unterteilten Schaltfläche verfügbar macht.
 ms.assetid: 3d46d606-238d-46d4-b92e-dfd759951770
 keywords:
-- Fenster "SplitButton. buttonitem"-Eigenschaft (Fenster)
+- SplitButton.ButtonItem-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bf1e1cb908ce9a86f23f75d17bf2e76797997db
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f49f316f7c740b434f761bbe4c00906c8f76b5027af9fcc87317af2a51960dab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840690"
 ---
-# <a name="splitbuttonbuttonitem-property"></a>SplitButton. buttonitem (Eigenschaft)
+# <a name="splitbuttonbuttonitem-property"></a>SplitButton.ButtonItem-Eigenschaft
 
-Stellt einen Container für eine [Schalt](windowsribbon-controls-button.md) Fläche oder [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md) dar, die den Standardbefehl einer unter [teilten Schaltfläche](windowsribbon-controls-splitbutton.md)verfügbar macht.
+Stellt einen Container für eine [Schaltfläche](windowsribbon-controls-button.md) oder [umschaltfläche](windowsribbon-controls-togglebutton.md) dar, der den Standardbefehl einer [geteilten Schaltfläche](windowsribbon-controls-splitbutton.md)verfügbar macht.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,8 +41,8 @@ Es gibt keine Attribute.
 
 | Element                                                               | BESCHREIBUNG                                   |
 |-----------------------------------------------------------------------|-----------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>             | Kann höchstens einmal vorkommen<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>             | Kann höchstens einmal auftreten.<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -56,19 +56,19 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**SplitButton-Objekt**](windowsribbon-element-splitbutton.md)auftreten.
+Kann höchstens einmal für jede [**SplitButton-Datei**](windowsribbon-element-splitbutton.md)auftreten.
 
-Jedes **SplitButton. buttonitem** -Element darf nur ein untergeordnetes [**Schalt**](windowsribbon-element-button.md) Flächen [**-oder-**](windowsribbon-element-togglebutton.md) Element enthalten.
+Jedes **SplitButton.ButtonItem-Element** kann nur ein [**untergeordnetes Button-**](windowsribbon-element-button.md) oder [**ToggleButton-Element**](windowsribbon-element-togglebutton.md) enthalten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die [Trenn Schaltfläche](windowsribbon-controls-splitbutton.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für die [Geteilte Schaltfläche](windowsribbon-controls-splitbutton.md)veranschaulicht.
 
-Dieser Code Abschnitt zeigt die Befehls Deklarationen [**SplitButton**](windowsribbon-element-splitbutton.md) und **SplitButton. buttonitem** mit einer zugeordneten [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **SplitButton** -Element fungiert.
+Dieser Codeabschnitt zeigt die Befehlsdeklarationen [**SplitButton**](windowsribbon-element-splitbutton.md) und **SplitButton.ButtonItem** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **SplitButton-Element** fungiert.
 
 
 ```XML
@@ -112,7 +112,7 @@ Dieser Code Abschnitt zeigt die Befehls Deklarationen [**SplitButton**](windowsr
 
 
 
-In diesem Code Abschnitt werden die Deklarationen [**SplitButton**](windowsribbon-element-splitbutton.md) und **SplitButton. buttonitem** -Steuerelement gezeigt.
+Dieser Codeabschnitt zeigt die [**Steuerelementdeklarationen SplitButton**](windowsribbon-element-splitbutton.md) und **SplitButton.ButtonItem.**
 
 
 ```XML
@@ -149,8 +149,8 @@ In diesem Code Abschnitt werden die Deklarationen [**SplitButton**](windowsribbo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -158,7 +158,7 @@ In diesem Code Abschnitt werden die Deklarationen [**SplitButton**](windowsribbo
 
 <dl> <dt>
 
-[Steuerelement "Split Button](windowsribbon-controls-splitbutton.md)
+[Steuerelement "Schaltfläche teilen"](windowsribbon-controls-splitbutton.md)
 </dt> </dl>
 
  

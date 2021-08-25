@@ -1,33 +1,33 @@
 ---
-description: Während einer gleichzeitigen Installation legt das Installationsprogramm die Eigenschaft "paramealdatabase" in der Sitzung der gleichzeitigen Installation auf denselben Wert wie die Eigenschaft "originaldatabase" in der übergeordneten Installationssitzung fest.
+description: Während einer gleichzeitigen Installation legt das Installationsprogramm die ParentOriginalDatabase-Eigenschaft in der Sitzung der gleichzeitigen Installation auf den gleichen Wert wie die OriginalDatabase-Eigenschaft in der Sitzung der übergeordneten Installation fest.
 ms.assetid: 8af1c7e5-313c-47b7-be0f-0e31ef21f6a6
-title: Eigenschaft ' genoriginaldatabase '
+title: ParentOriginalDatabase-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab69dff7058336a5b68fd3373100f4789059ed7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f31d022aa4ec7274d464943d8b3ec059ce11142f06e0e09c22bbb42ec40a2e5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913270"
 ---
-# <a name="parentoriginaldatabase-property"></a>Eigenschaft ' genoriginaldatabase '
+# <a name="parentoriginaldatabase-property"></a>ParentOriginalDatabase-Eigenschaft
 
-Während einer gleichzeitigen Installation legt das Installationsprogramm die Eigenschaft " **paramealdatabase** " in der Sitzung der gleichzeitigen Installation auf denselben Wert wie die Eigenschaft " [**originaldatabase**](originaldatabase.md) " in der übergeordneten Installationssitzung fest. Bei übergeordneten Installationen werden die parallelen Installations Aktionen verwendet, um eine gleichzeitige Installation auszuführen. Mithilfe eines Installationspakets kann festgestellt werden, ob es durch eine parallele Installations Aktion installiert wird, indem der Wert dieser Eigenschaft überprüft wird.
+Während einer gleichzeitigen Installation legt das Installationsprogramm die **ParentOriginalDatabase-Eigenschaft** in der Sitzung der gleichzeitigen Installation auf den gleichen Wert wie die [**OriginalDatabase-Eigenschaft**](originaldatabase.md) in der Sitzung der übergeordneten Installation fest. Übergeordnete Installationen verwenden die gleichzeitigen Installationsaktionen, um eine gleichzeitige Installation durchzuführen. Ein Installationspaket kann ermitteln, ob es von einer gleichzeitigen Installationsaktion installiert wird, indem der Wert dieser Eigenschaft überprüft wird.
 
 > [!Note]  
-> Parallele Installationen werden nicht für die Installation von Anwendungen empfohlen, die für die öffentliche Veröffentlichung vorgesehen sind. Weitere Informationen zu gleichzeitigen Installationen finden Sie unter [parallele Installationen](concurrent-installations.md).
+> Gleichzeitige Installationen werden für die Installation von Anwendungen, die für die Veröffentlichung in der Öffentlichkeit vorgesehen sind, nicht empfohlen. Informationen zu gleichzeitigen Installationen finden Sie unter [Gleichzeitige Installationen.](concurrent-installations.md)
 
  
 
 > [!Note]  
-> Diese Eigenschaft ist nicht festgelegt, wenn die parallele Installation von der Aktion " [RemoveExistingProducts](removeexistingproducts-action.md) " ausgeführt wird.
+> Diese Eigenschaft wird nicht festgelegt, wenn die gleichzeitige Installation von der [RemoveExistingProducts-Aktion](removeexistingproducts-action.md) ausgeführt wird.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der folgenden Bedingungs Anweisungen hinzu, um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird. Dadurch wird verhindert, dass das Paket jemals durch eine parallele Installations Aktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket von der Aktion " [RemoveExistingProducts](removeexistingproducts-action.md) " installiert wird.
+Um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird, fügen Sie der [LaunchCondition-Tabelle](launchcondition-table.md) eine der folgenden bedingten Anweisungen hinzu. Dadurch wird verhindert, dass das Paket jemals von einer gleichzeitigen Installationsaktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket von der [RemoveExistingProducts-Aktion](removeexistingproducts-action.md) installiert wird.
 
 ``` syntax
 "Not ParentProductCode"
@@ -43,7 +43,7 @@ Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der fol
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindest erforderlichen Windows Service Packs für eine Windows Installer-Version.<br/> |
 
 
 
@@ -54,7 +54,7 @@ Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der fol
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[**"Parametriproductcode"**](parentproductcode.md)
+[**ParentProductCode**](parentproductcode.md)
 </dt> </dl>
 
  

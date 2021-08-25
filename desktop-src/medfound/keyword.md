@@ -1,21 +1,21 @@
 ---
 description: Gibt ein Schlüsselwort für einen MFTrace-Anbieter an.
 ms.assetid: 1ce4a5ee-c053-4d31-a984-dc11acebbf2a
-title: Schlüsselwortelement
+title: keyword-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ba871fea760ed3b604048ade2722afc0323e03b
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 9df1f7a648e7861dc8d248141f051e9911c9cb93257f47fee5f2b4d2fd9d5469
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119375"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827550"
 ---
-# <a name="keyword-element"></a>Schlüsselwortelement
+# <a name="keyword-element"></a>keyword-Element
 
 Gibt ein Schlüsselwort für einen [MFTrace-Anbieter](mftrace.md) an.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <keyword
@@ -26,9 +26,9 @@ Gibt ein Schlüsselwort für einen [MFTrace-Anbieter](mftrace.md) an.
 
 
 
-| attribute         | Typ             | Erforderlich       | BESCHREIBUNG                                             |
+| attribute         | type             | Erforderlich       | BESCHREIBUNG                                             |
 |-------------------|------------------|----------------|---------------------------------------------------------|
-| **ID**<br/> | CDATA<br/> | Ja<br/> | Name oder Maske des Schlüsselworts<br/> <br/> |
+| **ID**<br/> | CDATA<br/> | Ja<br/> | Der Name oder die Maske des Schlüsselworts<br/> <br/> |
 
 
 
@@ -45,11 +45,11 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für das [**mfdetours-Element**](mfdetours.md) sind die gültigen Schlüsselwörter im Thema [MFTrace Keywords](mftrace-keywords.md)aufgeführt.
+Für das [**mfdetours-Element**](mfdetours.md) sind die gültigen Schlüsselwörter im Thema [MFTrace-Schlüsselwörter aufgeführt.](mftrace-keywords.md)
 
-Für das [**Anbieterelement**](provider.md) hängen die Schlüsselwörter vom Ereignisanbieter ab. Sie können das hilfsprogramm Wevtutil.exe verwenden, um die Schlüsselwörter für einen bestimmten Anbieter aufzulisten.
+Für das [**Anbieterelement**](provider.md) hängen die Schlüsselwörter vom Ereignisanbieter ab. Sie können das Hilfsprogramm Wevtutil.exe verwenden, um die Schlüsselwörter für einen bestimmten Anbieter auflisten.
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -62,7 +62,7 @@ Für das [**Anbieterelement**](provider.md) hängen die Schlüsselwörter vom Er
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

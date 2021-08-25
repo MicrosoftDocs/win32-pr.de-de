@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ directorykontainsfile-Klasse stellt eine Zuordnung zwischen einem Verzeichnis und den Dateien dar, die in diesem Verzeichnis enthalten sind.
+description: Die CIM \_ DirectoryContainsFile-Klasse stellt eine Zuordnung zwischen einem Verzeichnis und dateien dar, die in diesem Verzeichnis enthalten sind.
 ms.assetid: e05ec86e-c3cf-4589-9815-83850e0c84ed
 ms.tgt_platform: multiple
 title: CIM_DirectoryContainsFile-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8bd1913352d19a1ed5889413eed5e7fc4640ac53
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 01707dfe4c0257803b864ce50ac05e792eabf8f30b7d944f5c2232526c8c65b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861403"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924260"
 ---
-# <a name="cim_directorycontainsfile-class"></a>CIM- \_ directorykontainsfile-Klasse
+# <a name="cim_directorycontainsfile-class"></a>CIM \_ DirectoryContainsFile-Klasse
 
-Die **CIM \_ directorykontainsfile** -Klasse stellt eine Zuordnung zwischen einem Verzeichnis und den Dateien dar, die in diesem Verzeichnis enthalten sind.
+Die **CIM \_ DirectoryContainsFile-Klasse** stellt eine Zuordnung zwischen einem Verzeichnis und dateien dar, die in diesem Verzeichnis enthalten sind.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,29 +47,29 @@ class CIM_DirectoryContainsFile : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ directorykontainsfile** " verfügt über diese Typen von Membern:
+Die **CIM \_ DirectoryContainsFile-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ directorykontainsfile** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ DirectoryContainsFile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Verzeichnis**
+Datentyp: **\_ CIM-Verzeichnis**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM- \_ Verzeichnis**](cim-directory.md) , in dem das Verzeichnis beschrieben wird.
+Ein [**\_ CIM-Verzeichnis,**](cim-directory.md) das das Verzeichnis beschreibt.
 
 </dd> <dt>
 
@@ -82,18 +82,18 @@ Datentyp: **CIM \_ DataFile**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Eine [**CIM- \_ Datendatei**](cim-datafile.md) , die die im Verzeichnis enthaltene LogicalFile beschreibt.
+Eine [**\_ CIM-DataFile,**](cim-datafile.md) die die logicalFile beschreibt, die im Verzeichnis enthalten ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-WMI implementiert die **CIM-Klasse \_ directorykontainsfile** , bei der es sich um eine dynamische Klasse handelt.
+WMI implementiert die **CIM \_ DirectoryContainsFile-Klasse,** bei der es sich um eine dynamische Klasse handelt.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,8 +103,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -113,7 +113,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

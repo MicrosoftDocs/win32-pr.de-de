@@ -1,22 +1,22 @@
 ---
-description: Islongstandingadditionalpdpcontextprofile
+description: IsLongStandingAdditionalPdpContextProfile
 MS-HAID: WWAN\_profile\_v4.element\_IsLongStandingAdditionalPdpContextProfile
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Islongstandingadditionalpdpcontextprofile
+title: IsLongStandingAdditionalPdpContextProfile
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a6ab30af9e71b8e9bde8284137c6bff86355f67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9aea8fce72294ad55442af2b31dc11d89372faba05195ce162de18b3e58b4db4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960210"
 ---
-# <a name="span-idwwan_profile_v4element_islongstandingadditionalpdpcontextprofilespanislongstandingadditionalpdpcontextprofile"></a><span id="WWAN_profile_v4.element_IsLongStandingAdditionalPdpContextProfile"></span>Islongstandingadditionalpdpcontextprofile
+# <a name="span-idwwan_profile_v4element_islongstandingadditionalpdpcontextprofilespanislongstandingadditionalpdpcontextprofile"></a><span id="WWAN_profile_v4.element_IsLongStandingAdditionalPdpContextProfile"></span>IsLongStandingAdditionalPdpContextProfile
 
-Gibt an, dass dieses Profil ein langjähriges zusätzliches PDP-Kontext Profil ist. Wenn der Wert dieses Elements " **true**" ist, muss [**isadditionalpdpcontextprofile**](/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)) ebenfalls auf " **true**" festgelegt werden. Dies ist ein neues Element für v4.
+Gibt an, dass dieses Profil ein seit langem bestehendes zusätzliches PDP-Kontextprofil ist. Wenn der Wert dieses Elements **true** ist, muss [**IsAdditionalPdpContextProfile**](/previous-versions/windows/desktop/legacy/mt156987(v=vs.85)) ebenfalls auf **true** festgelegt werden. Dies ist ein neues Element für v4.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -59,8 +59,8 @@ Keine.
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein mobiles Breitbandprofil mit einem umfangreicheren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Ein Profil kann mehrere MbnProfileExt-Elemente enthalten, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 </tbody>
 </table>

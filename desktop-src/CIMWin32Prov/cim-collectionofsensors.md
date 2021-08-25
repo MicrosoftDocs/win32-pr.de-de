@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ collectionofsensors-Zuordnung stellt die binären Sensoren dar, die den Multistate-Sensor bilden.
+description: Die \_ CIM CollectionOfSensors-Zuordnung stellt die binären Sensoren dar, aus denen der Sensor mit mehreren States zusammenfällt.
 ms.assetid: d9494716-bb4e-4aa2-9e3b-e865360c740f
 ms.tgt_platform: multiple
 title: CIM_CollectionOfSensors-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 06f33d3b55c2c35526495d492b0f063fee9c1a0c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6ba5e6a3dd95fb4db74435f0bc38c03563117bfebe4fb8b1ef6a6e247dc24106
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925030"
 ---
-# <a name="cim_collectionofsensors-class"></a>CIM \_ collectionofsensors-Klasse
+# <a name="cim_collectionofsensors-class"></a>CIM \_ CollectionOfSensors-Klasse
 
-Die **CIM \_ collectionofsensors** -Zuordnung stellt die binären Sensoren dar, die den Multistate-Sensor bilden.
+Die **CIM \_ CollectionOfSensors-Zuordnung** stellt die binären Sensoren dar, aus denen sich der Sensor mit mehreren States zusammen setzt.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,29 +47,29 @@ class CIM_CollectionOfSensors : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ collectionofsensors** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ CollectionOfSensors-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ collectionofsensors** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ CollectionOfSensors-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ multistaatensor**
+Datentyp: **CIM \_ MultiStateSensor**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ multistaatensor**](cim-multistatesensor.md) , der den Multi-State-Sensor beschreibt.
+Ein [**CIM \_ MultiStateSensor,**](cim-multistatesensor.md) der den Sensor mit mehreren Zuständen beschreibt.
 
 </dd> <dt>
 
@@ -82,18 +82,18 @@ Datentyp: **CIM \_ BinarySensor**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (2), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (2), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ BinarySensor**](cim-binarysensor.md) , der einen binären Sensor beschreibt, der Teil des Multi-State-Sensors ist.
+Ein [**CIM \_ BinarySensor,**](cim-binarysensor.md) der einen binären Sensor beschreibt, der Teil des Multizustandssensors ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,8 +103,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -113,7 +113,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

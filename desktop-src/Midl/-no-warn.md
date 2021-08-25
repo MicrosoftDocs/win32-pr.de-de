@@ -1,9 +1,9 @@
 ---
 title: /no_warn Schalter
-description: Der \_ Schalter/No Warn weist den Mittel l-Compiler an, Warnmeldungen zu unterdrücken.
+description: Der Schalter /no \_ warn leitet den MIDL-Compiler an, Warnmeldungen zu unterdrücken.
 ms.assetid: 260b9430-2daf-454e-92ba-e30ca57b35e1
 keywords:
-- /no_warn-Schalter-Mittel l
+- /no_warn MIDL-Switch
 topic_type:
 - apiref
 api_name:
@@ -12,40 +12,40 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 535c68ab2b64835b9e93224343d140f47eaa24aa
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 273f9f00d160d2284f4f87693cd2c391da1fcb82d66f2a49defada85c1af0698
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896094"
 ---
-# <a name="no_warn-switch"></a>/No \_ warnen (Schalter)
+# <a name="no_warn-switch"></a>/no \_ warn switch
 
-Der Schalter **/No \_ Warn** weist den Mittel l-Compiler an, Warnmeldungen zu unterdrücken.
+Der **Schalter /no \_ warn** leitet den MIDL-Compiler an, Warnmeldungen zu unterdrücken.
 
 ``` syntax
 midl /no_warn
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Verwendung des Schalters **/No \_ Warn** entspricht **/W0**.
+Die Verwendung des **Schalters /no \_ warn** entspricht **/W0**.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/No \_ Warn Datei Dateiname. idl**
+**midl /no \_ warn filename.idl**
 
-**Mittel l/W0 Dateiname. idl**
+**midl /W0 filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/W**](-w.md)
@@ -54,9 +54,9 @@ Die Verwendung des Schalters **/No \_ Warn** entspricht **/W0**.
 [**/WX**](-wx.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

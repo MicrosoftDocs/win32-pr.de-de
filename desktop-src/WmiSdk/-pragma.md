@@ -1,20 +1,20 @@
 ---
-description: Ähnelt einem Befehls Zeilenschalter. Sie müssen jedoch nicht \# jedes Mal, wenn Sie eine MOF-Datei kompilieren, einen pragma-Befehl erneut eingeben.
+description: Ähnelt einem Befehlszeilenschalter. Sie müssen jedoch nicht jedes Mal, wenn Sie eine MOF-Datei kompilieren, einen \# Pragmabefehl erneut ausführen.
 ms.assetid: 3cf22686-dd56-43a3-9584-3d707a20a3a0
 ms.tgt_platform: multiple
 title: '#pragma'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62ae13d5f960e0b415f34dce97a40cff6cba8056
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3cb9541ceef51119ce521244282920ca88397afe13290e99bdc14ce7d98ab55
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860560"
 ---
-# <a name="pragma"></a>\#pragma
+# <a name="pragma"></a>\#Pragma
 
-Der **\# pragma** -Präprozessorbefehl ähnelt einem Befehls Zeilenschalter. Sie müssen jedoch nicht jedes Mal, wenn Sie eine MOF-Datei kompilieren, einen **\# pragma** -Befehl erneut eingeben. Im folgenden Beispiel wird die **\# pragma** -Befehlssyntax veranschaulicht:
+Der **\# Pragma-Präprozessorbefehl** ähnelt einem Befehlszeilenschalter. Sie müssen jedoch nicht jedes Mal, wenn Sie eine MOF-Datei kompilieren, einen **\# Pragmabefehl** erneut ausführen. Das folgende Beispiel veranschaulicht die **Pragmabefehlssyntax: \#**
 
 
 ```mof
@@ -23,7 +23,7 @@ Der **\# pragma** -Präprozessorbefehl ähnelt einem Befehls Zeilenschalter. Sie
 
 
 
-Normalerweise platzieren Sie einen **\# pragma** -Befehl am Anfang einer MOF-Datei. Sie können jedoch einige Befehle, z. b. den **\# pragma** -Befehl, im Text Ihres MOF-Codes platzieren. Das folgende Beispiel zeigt **\# pragma** -Befehle, die dem MOF-Compiler zeigen, dass Sie Klassen und Instanzen im root \\ CIMV2-Namespace platzieren und die Datei kompilieren müssen, in der die Befehle bei der Wiederherstellung des Repository enthalten sind:
+In der Regel platzieren Sie **\# einen Pragmabefehl** am Anfang einer MOF-Datei. Sie können jedoch einige Befehle, z. B. **\# den Pragmabefehl,** im Text des MOF-Codes platzieren. Das folgende Beispiel zeigt **\# Pragmabefehle,** die dem MOF-Compiler zeigen, dass Klassen und Instanzen im Cimv2-Stammnamespace gespeichert und die Datei kompiliert werden muss, in der die Befehle während der Repositorywiederherstellung enthalten \\ sind:
 
 
 ```mof
@@ -33,19 +33,19 @@ Normalerweise platzieren Sie einen **\# pragma** -Befehl am Anfang einer MOF-Dat
 
 
 
-Im folgenden werden die verfügbaren **\# pragma** -Befehle aufgeführt.
+Im Folgenden werden die verfügbaren **\# Pragmabefehle** aufgeführt.
 
 
 
-| Get-Help                                         | BESCHREIBUNG                                                                                           |
+| Befehl                                         | BESCHREIBUNG                                                                                           |
 |-------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| [**trag**](pragma-amendment.md)           | Weist den MOF-Compiler an, eine MOF-Datei in sprachneutrale und sprachspezifische Versionen aufzuteilen. |
-| [**Auto Wiederherstellen**](pragma-autorecover.md)       | Fügt eine MOF-Datei zur Liste der Dateien hinzu, die während der Wiederherstellung des Repository kompiliert wurden.                             |
-| [**classflags**](pragma-classflags.md)         | Steuert die Art und Weise, wie Klassen abhängig von den angegebenen Flags erstellt oder aktualisiert werden.                     |
-| [**deleteclass**](pragma-deleteclass.md)       | Löscht eine vorhandene Klasse und deren Instanzen aus dem Repository.                                      |
-| [**DeleteInstance**](pragma-deleteinstance.md) | Löscht eine vorhandene Instanz einer Klasse aus dem Repository.                                          |
-| [**instanceflags**](pragma-instanceflags.md)   | Steuert die Art und Weise, in der Instanzen abhängig von den angegebenen Flags erstellt oder aktualisiert werden.                   |
-| [**namespace**](pragma-namespace.md)           | Fordert an, dass der Compiler die MOF-Datei in den Namespace lädt, der als *Wert von NamespacePath* angegeben ist.         |
+| [**Änderung**](pragma-amendment.md)           | Leitet den MOF-Compiler an, eine MOF-Datei in sprachneutrale und sprachspezifische Versionen zu trennen. |
+| [**Autowiederherstellen**](pragma-autorecover.md)       | Fügt der Liste der Dateien, die während der Repositorywiederherstellung kompiliert wurden, eine MOF-Datei hinzu.                             |
+| [**classflags**](pragma-classflags.md)         | Steuert, wie Klassen in Abhängigkeit von den angegebenen Flags erstellt oder aktualisiert werden.                     |
+| [**deleteclass**](pragma-deleteclass.md)       | Löscht eine vorhandene Klasse und ihre Instanzen aus dem Repository.                                      |
+| [**deleteinstance**](pragma-deleteinstance.md) | Löscht eine vorhandene Instanz einer Klasse aus dem Repository.                                          |
+| [**instanceflags**](pragma-instanceflags.md)   | Steuert die Art und Weise, wie Instanzen erstellt oder aktualisiert werden, abhängig von den angegebenen Flags.                   |
+| [**Namespace**](pragma-namespace.md)           | Fordert an, dass der Compiler die MOF-Datei in den als *namespacepath angegebenen Namespace laden soll.*         |
 
 
 

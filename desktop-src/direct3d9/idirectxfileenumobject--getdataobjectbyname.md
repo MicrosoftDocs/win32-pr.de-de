@@ -1,7 +1,7 @@
 ---
 description: Ruft das Datenobjekt ab, das über den angegebenen Namen verfügt. Veraltet.
 ms.assetid: d04d5a45-72d9-4256-8700-378e8139ed36
-title: 'Idirectxfileenumubject:: getdataobjectbyname-Methode (dxfile. h)'
+title: IDirectXFileEnumObject::GetDataObjectByName-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 858097139702770d148765c4c9a57f6522d9633b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0b5498833096a673226af60188397fb518f483b26d6b470021c590e16d190342
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106369327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893200"
 ---
-# <a name="idirectxfileenumobjectgetdataobjectbyname-method"></a>Idirectxfileenumubject:: getdataobjectbyname-Methode
+# <a name="idirectxfileenumobjectgetdataobjectbyname-method"></a>IDirectXFileEnumObject::GetDataObjectByName-Methode
 
 Ruft das Datenobjekt ab, das über den angegebenen Namen verfügt. Veraltet.
 
@@ -41,7 +41,7 @@ HRESULT GetDataObjectByName(
 
 <dl> <dt>
 
-*szName* \[ in\]
+*szName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
@@ -50,12 +50,12 @@ Zeiger auf den angeforderten Namen.
 
 </dd> <dt>
 
-*ppdataobj* \[ vorgenommen\]
+*ppDataObj* \[ out\]
 </dt> <dd>
 
-Typ: **[ **lpdirectxfiledata**](idirectxfiledata.md)\***
+Typ: **[ **LPDIRECTXFILEDATA**](idirectxfiledata.md)\***
 
-Adresse eines Zeigers auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle, die das zurückgegebene Datei Datenobjekt darstellt.
+Adresse eines Zeigers auf eine [**IDirectXFileData-Schnittstelle,**](idirectxfiledata.md) die das zurückgegebene Dateidatenobjekt darstellt.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Adresse eines Zeigers auf eine [**idirectxfiledata**](idirectxfiledata.md) -Schn
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: dxfileerr \_ badvalue, dxfileerr \_ NotFound.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADVALUE, DXFILEERR \_ NOTFOUND.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 <dl> <dt>
 
-[Idirectxfile-umubject](idirectxfileenumobject.md)
+[IDirectXFileEnumObject](idirectxfileenumobject.md)
 </dt> </dl>
 
  

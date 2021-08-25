@@ -1,7 +1,7 @@
 ---
 description: Ruft die Anzahl der Bytes pro Scheitelpunkt ab.
 ms.assetid: a5028af0-16a4-494b-8fe2-5f607fc07d14
-title: 'ID3DXBaseMesh:: getnumbytespervertex-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetNumBytesPerVertex-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e97b2220265f149d7120634ca542e38894005f11
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d4dd71eceda00b5d736119234e441b5b3f1a25f0ef0fb85cb1622ee23625eccb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848330"
 ---
-# <a name="id3dxbasemeshgetnumbytespervertex-method"></a>ID3DXBaseMesh:: getnumbytespervertex-Methode
+# <a name="id3dxbasemeshgetnumbytespervertex-method"></a>ID3DXBaseMesh::GetNumBytesPerVertex-Methode
 
 Ruft die Anzahl der Bytes pro Scheitelpunkt ab.
 
@@ -50,12 +50,12 @@ Gibt die Anzahl der Bytes pro Scheitelpunkt zurück.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

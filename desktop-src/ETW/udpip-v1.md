@@ -1,5 +1,5 @@
 ---
-description: 'UdpIp_V1 Klasse: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'UdpIp_V1-Klasse: Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 31672a5a-05b2-4382-b793-7a793d985951
 title: UdpIp_V1-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 5035cd764c1b3a7eb0943622897d97684ec8bd61
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f7eca611161e049b3704a37cec5b9324df6348e30fb457d0053c4cbb4085ca3e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914330"
 ---
 # <a name="udpip_v1-class"></a>UdpIp \_ V1-Klasse
 
 Diese Klasse ist die übergeordnete Klasse für UDP/IP-Ereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ class UdpIp_V1 : MSNT_SystemTrace
 
 Die **UdpIp \_ V1-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **Windows Server 2003:** Enthält den EventVersion(1)-Klassenqualifizierer.
 
@@ -46,14 +46,14 @@ Die **UdpIp \_ V1-Klasse** definiert keine Member.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

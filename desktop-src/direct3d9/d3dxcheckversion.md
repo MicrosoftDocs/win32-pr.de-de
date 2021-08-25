@@ -1,5 +1,5 @@
 ---
-description: 'D3DXCheckVersion-Funktion: Vergewissern Sie sich, dass die Version von D3DX, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.'
+description: 'D3DXCheckVersion-Funktion: Stellen Sie sicher, dass die D3DX-Version, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.'
 ms.assetid: a4e745dd-d573-4e8f-9516-f6a7475f5cc5
 title: D3DXCheckVersion-Funktion (D3dx9core.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 077d64a67a46080a0f7ac9194c684f6fe8470453
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 26831f3a1a5f08494a7382cd412c30dcd24c1482c01dca684962a580068d380d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894120"
 ---
 # <a name="d3dxcheckversion-function"></a>D3DXCheckVersion-Funktion
 
-Vergewissern Sie sich, dass die Version von D3DX, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.
+Stellen Sie sicher, dass die Version von D3DX, mit der Sie kompiliert haben, die Version ist, die Sie ausführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Verwenden Sie die D3D \_ \_ SDK-VERSION. Siehe Bemerkungen.
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Verwenden Sie die Version des D3DX \_ \_ SDK. Siehe Bemerkungen.
+Verwenden Sie die D3DX \_ \_ SDK-VERSION. Siehe Bemerkungen.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Verwenden Sie die Version des D3DX \_ \_ SDK. Siehe Bemerkungen.
 
 Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt **TRUE** zurück, wenn die Version von D3DX, für die Sie kompiliert haben, die Version ist, mit der Sie ausgeführt werden. andernfalls wird **FALSE** zurückgegeben.
+Gibt **TRUE zurück,** wenn die Version von D3DX, für die Sie kompiliert haben, die Version ist, mit der Sie ausführen. Andernfalls **wird FALSE** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion während der Initialisierung Ihrer Anwendung wie folgt:
+Verwenden Sie diese Funktion während der Initialisierung Ihrer Anwendung wie die folgenden:
 
 
 ```
@@ -85,20 +85,20 @@ HRESULT CD3DXMyApplication::Initialize(HINSTANCE hInstance,
 
 
 
-Verwenden Sie [**Direct3DCreate9,**](/windows/win32/api/d3d9/nf-d3d9-direct3dcreate9) um zu überprüfen, ob die richtige Runtime installiert ist.
+Verwenden [**Sie Direct3DCreate9,**](/windows/win32/api/d3d9/nf-d3d9-direct3dcreate9) um zu überprüfen, ob die richtige Runtime installiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

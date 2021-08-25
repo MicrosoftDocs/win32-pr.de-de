@@ -1,10 +1,10 @@
 ---
-title: Ivmtaskcollection-Schnittstelle (vpccominterfaces. h)
-description: Definiert die Auflistung von Task-Objekten. Zum Abrufen eines ivmtaskcollection-Objekts verwenden Sie die ivmvirtualpc Tasks-Eigenschaft.
+title: IVMTaskCollection-Schnittstelle (VPCCOMInterfaces.h)
+description: Definiert die Auflistung von Taskobjekten. Um ein IVMTaskCollection-Objekt abzurufen, verwenden Sie die IVMVirtualPC Tasks-Eigenschaft.
 ms.assetid: 5cfc543c-81a1-49d2-93a9-9b1db1cb5070
 keywords:
-- Ivmtaskcollection-Schnittstelle virtueller PC
-- Virtueller Computer der ivmtaskcollection-Schnittstelle, beschrieben
+- IVMTaskCollection-Schnittstelle Virtueller PC
+- IVMTaskCollection-Schnittstelle Virtueller PC , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,36 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43ff7a4b12b936f2b5c72a73818eca0f927eef12
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 150f5079258e551360f574cfd9fa0a8895d3673f5d6b38ea6a5e1c866cfbf1ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958800"
 ---
-# <a name="ivmtaskcollection-interface"></a>Ivmtaskcollection-Schnittstelle
+# <a name="ivmtaskcollection-interface"></a>IVMTaskCollection-Schnittstelle
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Definiert die Auflistung von Task-Objekten. Verwenden Sie zum Abrufen eines **ivmtaskcollection** -Objekts die [**ivmvirtualpc:: Tasks**](ivmvirtualpc-tasks.md) -Eigenschaft.
+Definiert die Auflistung von Taskobjekten. Um ein **IVMTaskCollection-Objekt** abzurufen, verwenden Sie die [**IVMVirtualPC::Tasks-Eigenschaft.**](ivmvirtualpc-tasks.md)
 
 ## <a name="members"></a>Member
 
-Die **ivmtaskcollection** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ivmtaskcollection** verfügt auch über die folgenden Typen von Membern:
+Die **IVMTaskCollection-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IVMTaskCollection** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ivmtaskcollection** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IVMTaskCollection-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                   | Zugriffstyp          | BESCHREIBUNG                                                         |
+| Eigenschaft                                                   | Zugriffstyp          | Beschreibung                                                         |
 |:-----------------------------------------------------------|:---------------------|:--------------------------------------------------------------------|
-| [**\_"Netwenum"**](ivmtaskcollection--newenum.md)<br/> | Schreibgeschützt<br/> | Ein Enumerator für die Auflistung.<br/>                        |
-| [**Countdown**](ivmtaskcollection-count.md)<br/>        | Schreibgeschützt<br/> | Die Anzahl der Tasks in dieser Auflistung.<br/>                  |
-| [**Element**](ivmtaskcollection-item.md)<br/>          | Schreibgeschützt<br/> | Das Task-Objekt, das dem angegebenen Index entspricht.<br/> |
+| [**\_NewEnum**](ivmtaskcollection--newenum.md)<br/> | Schreibgeschützt<br/> | Ein Enumerator für die Auflistung.<br/>                        |
+| [**Count**](ivmtaskcollection-count.md)<br/>        | Schreibgeschützt<br/> | Die Anzahl der Aufgaben in dieser Auflistung.<br/>                  |
+| [**Element**](ivmtaskcollection-item.md)<br/>          | Schreibgeschützt<br/> | Das Aufgabenobjekt, das dem angegebenen Index entspricht.<br/> |
 
 
 
@@ -56,12 +56,12 @@ Die **ivmtaskcollection** -Schnittstelle verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmtaskcollection ist definiert als 5c4387c8-0e8b-4b97-8058-84679adf 4c40<br/>          |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMTaskCollection ist als 5c4387c8-0e8b-4b97-8058-84679adf4c40 definiert.<br/>          |
 
 
 
@@ -69,10 +69,10 @@ Die **ivmtaskcollection** -Schnittstelle verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[**Ivmtask**](ivmtask.md)
+[**IVMTask**](ivmtask.md)
 </dt> <dt>
 
-[**Ivmvirtualpc:: Tasks**](ivmvirtualpc-tasks.md)
+[**IVMVirtualPC::Tasks**](ivmvirtualpc-tasks.md)
 </dt> </dl>
 
  

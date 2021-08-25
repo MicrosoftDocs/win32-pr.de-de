@@ -1,11 +1,11 @@
 ---
-title: Ivmusbdevice hubid-Eigenschaft (vpccominterfaces. h)
+title: IVMUSBDevice HubID-Eigenschaft (VPCCOMInterfaces.h)
 description: Ruft den Bezeichner des Hubs ab, mit dem das Gerät verbunden ist.
 ms.assetid: 22e1d8fb-33f4-43a3-883f-174ddafa17c2
 keywords:
-- Hubid-Eigenschaft virtueller PC
-- Hubid-Eigenschaft Virtual PC, ivmusbdevice-Schnittstelle
-- Ivmusbdevice Interface Virtual PC, hubid (Eigenschaft)
+- HubID-Eigenschaft Virtueller PC
+- HubID-Eigenschaft Virtual PC, IVMUSBDevice-Schnittstelle
+- IVMUSBDevice-Schnittstelle Virtueller PC, HubID-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53faa79ee999022f993070767846ee4e4723c3a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54d36047722206c2dfd52f4fc14c8e98270db4cab2d62f0694ea3f44bac10449
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958709"
 ---
-# <a name="ivmusbdevicehubid-property"></a>Ivmusbdevice:: hubid-Eigenschaft
+# <a name="ivmusbdevicehubid-property"></a>IVMUSBDevice::HubID (Eigenschaft)
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Bezeichner des Hubs ab, mit dem das Gerät verbunden ist.
 
@@ -45,7 +45,7 @@ HRESULT get_HubID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Hub-Bezeichner. Dieser Wert wird vom USB-Connector-Treiber zugewiesen.
+Der Hubbezeichner. Dieser Wert wird vom USB-Connectortreiber zugewiesen.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,7 +54,7 @@ Der Hub-Bezeichner. Dieser Wert wird vom USB-Connector-Treiber zugewiesen.
 | Name/Wert                                                                                                                                            | Bedeutung                                       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>               | Die Methode wurde erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl> | Der-Parameter ist **null**.<br/>         |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl> | Der Parameter ist **NULL.**<br/>         |
 
 
 
@@ -64,12 +64,12 @@ Der Hub-Bezeichner. Dieser Wert wird vom USB-Connector-Treiber zugewiesen.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmusbdevice ist als 63c1258c-5721-4070-B86B-A6CE2AFEC0B3 definiert.<br/>               |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMUSBDevice ist als 63C1258C-5721-4070-B86B-A6CE2AFEC0B3 definiert.<br/>               |
 
 
 
@@ -77,7 +77,7 @@ Der Hub-Bezeichner. Dieser Wert wird vom USB-Connector-Treiber zugewiesen.
 
 <dl> <dt>
 
-[**Ivmusbdevice**](ivmusbdevice.md)
+[**IVMUSBDevice**](ivmusbdevice.md)
 </dt> </dl>
 
  

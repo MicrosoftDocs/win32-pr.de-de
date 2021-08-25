@@ -1,36 +1,36 @@
 ---
-description: 'Wird ausgelöst, nachdem die imfmediasession:: settopology-Methode asynchron abgeschlossen wurde. Die Medien Sitzung löst dieses Ereignis aus, nachdem die Topologie in eine vollständige Topologie aufgelöst und die Topologie zur Wiedergabe in die Warteschlange eingereiht wurde.'
+description: Wird ausgelöst, nachdem die ASYNCHRONOUSMediaSession::SetTopology-Methode asynchron abgeschlossen wurde. Die Mediensitzung löst dieses Ereignis aus, nachdem die Topologie in eine vollständige Topologie aufgelöst und die Topologie für die Wiedergabe in die Warteschlange eingereiht wurde.
 ms.assetid: 22a298b7-d32b-44ed-b0a1-4e0398ecfe04
-title: Mesessiontopologyset-Ereignis (mfobjects. h)
+title: MESessionTopologySet-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 338668b0ec9b4dd81140edfb55a823a5a595459b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba2b5454309855ff472c633388cddabe0c12fab09e2ae462aacd2de49c3c9bba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957400"
 ---
-# <a name="mesessiontopologyset-event"></a>Mesessiontopologyset-Ereignis
+# <a name="mesessiontopologyset-event"></a>MESessionTopologySet-Ereignis
 
-Wird ausgelöst, nachdem die [**imfmediasession:: settopology**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) -Methode asynchron abgeschlossen wurde. Die Medien Sitzung löst dieses Ereignis aus, nachdem die Topologie in eine vollständige Topologie aufgelöst und die Topologie zur Wiedergabe in die Warteschlange eingereiht wurde.
+Wird ausgelöst, nachdem die [**ASYNCHRONOUSMediaSession::SetTopology-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-settopology) asynchron abgeschlossen wurde. Die Mediensitzung löst dieses Ereignis aus, nachdem die Topologie in eine vollständige Topologie aufgelöst und die Topologie für die Wiedergabe in die Warteschlange eingereiht wurde.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE                | BESCHREIBUNG                                                                                              |
 |------------------------|----------------------------------------------------------------------------------------------------------|
-| VT \_ leer<br/>   | Keine Ereignisdaten.<br/> <br/>                                                                    |
-| VT \_ unbekannt<br/> | Ein Zeiger auf die [**imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) -Schnittstelle der vollständigen Topologie.<br/> <br/> |
+| VT \_ EMPTY<br/>   | Keine Ereignisdaten.<br/> <br/>                                                                    |
+| VT \_ UNKNOWN<br/> | Zeiger auf die [**INTERFACESTopology-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) der vollständigen Topologie.<br/> <br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird der [**imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) -Zeiger von einem mesessiontopologyset-Ereignis abgerufen.
+Im folgenden Beispiel wird der [**POINTERTopology-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imftopology) aus einem MESessionTopologySet-Ereignis abgerufen.
 
 
 ```
@@ -65,9 +65,9 @@ HRESULT GetTopologyFromEvent(IMFMediaEvent *pEvent, IMFTopology **ppTopology)
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ HRESULT GetTopologyFromEvent(IMFMediaEvent *pEvent, IMFTopology **ppTopology)
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

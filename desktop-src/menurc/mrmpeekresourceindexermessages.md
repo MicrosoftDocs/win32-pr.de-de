@@ -1,9 +1,9 @@
 ---
-title: Mrmpeekresourceingedexermessages-Funktion (mrmresourceingedexer. h)
-description: Anzeigen von Nachrichten, die von einem ressourcenindexer generiert wurden. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmPeekResourceIndexerMessages-Funktion (MrmResourceIndexer.h)
+description: Zeigt alle von einem Ressourcenindexer generierten Nachrichten an. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: 87D093AE-7444-4778-8B9E-1D0D972C90E1
 keywords:
-- Mrmpeekresourcindexermessages-Funktions Menüs und andere Ressourcen
+- MrmPeekResourceIndexerMessages-Funktionsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45599865633afa413594be7e82b0c7ace853434b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f72325ab147656873af2bbf13d7ce1cfa47802c816dc9f14f0c6ee4f3c821683
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847330"
 ---
-# <a name="mrmpeekresourceindexermessages-function"></a>Mrmpeekresourceingedexermessages-Funktion
+# <a name="mrmpeekresourceindexermessages-function"></a>MrmPeekResourceIndexerMessages-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Anzeigen von Nachrichten, die von einem ressourcenindexer generiert wurden. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Zeigt alle von einem Ressourcenindexer generierten Nachrichten an. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ HRESULT HRESULT MrmPeekResourceIndexerMessages(
 
 <dl> <dt>
 
-*Indexer* \[ in\]
+*Indexer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmresourceindexerhandle**](mrmresourceindexerhandle.md)**
+Typ: **[ **MrmResourceIndexerHandle**](mrmresourceindexerhandle.md)**
 
-Ein Handle, das den ressourcenindexer identifiziert, der Nachrichten, die Sie anzeigen möchten.
+Ein Handle, das den Ressourcenindexer identifiziert, der Meldungen anzeigen möchte.
 
 </dd> <dt>
 
-*Nachrichten* \[ vorgenommen\]
+*Messages* \[ out\]
 </dt> <dd>
 
-Typ: **[ **mrmresourceindexermessage**](mrmresourceindexermessage.md)\*\***
+Typ: **[ **MrmResourceIndexerMessage**](mrmresourceindexermessage.md)\*\***
 
-Ein Zeiger auf einen Zeiger auf eine [**mrmresourceindexermessage**](mrmresourceindexermessage.md). Die Funktion weist ein Array von **mrmresourceindexermessage** zu und gibt einen Zeiger auf diesen Speicher in *Nachrichten* zurück. Geben Sie den Zeiger, dessen Adresse Sie an *Nachrichten* übergeben, nicht frei.
+Ein Zeiger auf einen Zeiger auf eine [**MrmResourceIndexerMessage.**](mrmresourceindexermessage.md) Die Funktion ordnet ein Array von **MrmResourceIndexerMessage** zu und gibt einen Zeiger auf diesen Arbeitsspeicher in Nachrichten *zurück.* Geben Sie nicht den Zeiger frei, dessen Adresse Sie an nachrichten *übergeben.*
 
 </dd> <dt>
 
-*nummsgs* \[ vorgenommen\]
+*numMsgs* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
-Die Anzahl der Nachrichten, die in _messages * zurückgegeben werden.
+Die Anzahl von Nachrichten, die in Nachrichten *zurückgegeben werden.*
 
 </dd> </dl>
 
@@ -75,11 +75,11 @@ Die Anzahl der Nachrichten, die in _messages * zurückgegeben werden.
 
 Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um den Erfolg oder Fehler zu bestimmen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ihre APP ist nicht in der Besitz des Speichers, der in *Nachrichten* zugeordnet und zurückgegeben wird.
+Ihre App besitzt nicht den zugeordneten und *in* Nachrichten zurückgegebenen Arbeitsspeicher. Geben Sie ihn daher nicht frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,15 +87,15 @@ Ihre APP ist nicht in der Besitz des Speichers, der in *Nachrichten* zugeordnet 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1803 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

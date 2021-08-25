@@ -3,30 +3,30 @@ title: Ändern von Voreinstellungen
 description: Ändern von Voreinstellungen
 ms.assetid: f8a5565d-676b-4679-a4cb-4bd7551cf41c
 keywords:
-- Visualisierungen, Glüh Beispiel
-- benutzerdefinierte Visualisierungen, Glüh Beispiel
-- Programmier Handbuch, Visualisierungen
-- Beispiele, Glanz Visualisierung
-- Beispiel für Glanz Visualisierung
-- Visualisierungen, Voreinstellungen
-- benutzerdefinierte Visualisierungen, Voreinstellungen
-- Voreinstellungen in Visualisierungen, Glüh Beispiel
+- Visualisierungen,Leuchtbeispiel
+- Benutzerdefinierte Visualisierungen, Beispiel "Leucht"
+- Programmierhandbuch,Visualisierungen
+- Beispiele,Leuchtvisualisierung
+- Beispiel für die Visualisierung von Leuchtern
+- Visualisierungen,Voreinstellungen
+- Benutzerdefinierte Visualisierungen,Voreinstellungen
+- Voreinstellungen in Visualisierungen,Leuchtbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95d24841c95c3fc1029aa0c405e90b329799fdbe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03828614093836c5f9a3b422167b62f11b8f2489eb30556d42a2d80495935ec5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863910"
 ---
 # <a name="changing-presets"></a>Ändern von Voreinstellungen
 
-Die folgenden vordefinierten Code Abschnitte wurden so geändert, dass Sie drei Voreinstellungen zulassen:
+Die folgenden voreingestellten Codeabschnitte wurden geändert, um drei Voreinstellungen zu ermöglichen:
 
-## <a name="getpresettitle"></a>Getpresettitle
+## <a name="getpresettitle"></a>GetPresetTitle
 
-Dieser Code wurde anstelle des generierten voreingestellten Codes eingefügt:
+Dieser Code wurde statt des generierten Voreinstellungscodes eingefügt:
 
 
 ```C++
@@ -51,7 +51,7 @@ Dieser Code wurde anstelle des generierten voreingestellten Codes eingefügt:
 
 ## <a name="enumerations"></a>Enumerationen
 
-Die folgende Enumeration in "Glow. h" wurde so geändert, dass drei Voreinstellungen zulässig sind:
+Die folgende Enumeration in "Glow.h" wurde geändert, um drei Voreinstellungen zu ermöglichen:
 
 
 ```C++
@@ -66,9 +66,9 @@ enum {
 
 
 
-## <a name="resource-header"></a>Ressourcen Header
+## <a name="resource-header"></a>Ressourcenheader
 
-Die folgenden Ressourcen wurden in "Resource. h" definiert, um drei Voreinstellungen zuzulassen:
+Die folgenden Ressourcen wurden in Resource.h definiert, um drei Voreinstellungen zu ermöglichen:
 
 
 ```C++
@@ -80,11 +80,11 @@ Die folgenden Ressourcen wurden in "Resource. h" definiert, um drei Voreinstellu
 
 
 
-Beachten Sie, dass Sie auch die Ressourcen Anzahl von **\_ APS \_ Next \_ symed \_ value** in 106 ändern müssen.
+Beachten Sie, dass Sie auch die Ressourcennummer von APS **\_ \_ NEXT \_ SYMED \_ VALUE** in 106 ändern müssen.
 
 ## <a name="resource-file"></a>Ressourcendatei
 
-Die folgenden Zeichen folgen müssen in der Datei "glowdll. RC" geändert werden, um drei Voreinstellungen zuzulassen und Ihnen Namen zu geben:
+Die folgenden Zeichenfolgen müssen in der Datei "Glowdll.rc" geändert werden, um drei Voreinstellungen zu ermöglichen und ihnen Namen zu geben:
 
 
 ```C++
@@ -100,12 +100,12 @@ Die folgenden Zeichen folgen müssen in der Datei "glowdll. RC" geändert werden
 
 <dl> <dt>
 
-[**Das Glüh Beispiel**](the-glow-sample.md)
+[**The Glow Sample**](the-glow-sample.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

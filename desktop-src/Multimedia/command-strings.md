@@ -18,23 +18,23 @@ ms.locfileid: "119807830"
 
 Um einen Zeichenfolgenbefehl an ein MCI-Gerät zu senden, verwenden Sie die [**mciSendString-Funktion,**](/previous-versions//dd757161(v=vs.85)) die Parameter für den Zeichenfolgenbefehl und einen Puffer für alle zurückgegebenen Informationen enthält.
 
-Die **mciSendString-Funktion gibt** bei Erfolg 0 (null) zurück. Wenn die Funktion fehlschlägt, enthält das niedrige Wort des Rückgabewerts einen Fehlercode. Sie können diesen Fehlercode an die [**mciGetErrorString-Funktion**](/previous-versions//dd757158(v=vs.85)) übergeben, um eine Textbeschreibung des Fehlers zu erhalten.
+Die **mciSendString-Funktion** gibt bei Erfolg 0 (null) zurück. Wenn die Funktion fehlschlägt, enthält das Wort mit niedriger Reihenfolge des Rückgabewerts einen Fehlercode. Sie können diesen Fehlercode an die [**mciGetErrorString-Funktion**](/previous-versions//dd757158(v=vs.85)) übergeben, um eine Textbeschreibung des Fehlers abzurufen.
 
 ## <a name="syntax-of-command-strings"></a>Syntax von Befehlszeichenfolgen
 
-MCI-Befehlszeichenfolgen verwenden eine konsistente Syntax für verb-object-modifier. Jede Befehlszeichenfolge enthält einen Befehl, eine Geräte-ID und Befehlsargumente. Argumente sind für einige Befehle optional und für andere erforderlich.
+MCI-Befehlszeichenfolgen verwenden eine konsistente Verbobjektmodifizierersyntax. Jede Befehlszeichenfolge enthält einen Befehl, einen Gerätebezeichner und Befehlsargumente. Argumente sind für einige Befehle optional und für andere erforderlich.
 
-Eine Befehlszeichenfolge hat das folgende Formular:
+Eine Befehlszeichenfolge hat das folgende Format:
 
-*\_Befehlsgeräte-ID-Argumente*
+*Geräte-ID-Argumente des Befehls \_*
 
 Diese Komponenten enthalten die folgenden Informationen:
 
--   Der *Befehl* gibt einen MCI-Befehl an, z. B. [**öffnen,**](open.md) [**schließen**](close.md)oder [**wiedergibt.**](play.md)
+-   Der *Befehl* gibt einen MCI-Befehl an, z. B. [**öffnen,**](open.md) [**schließen**](close.md)oder [**wiedergeben.**](play.md)
 -   Die *\_ Geräte-ID* identifiziert eine Instanz eines MCI-Treibers. Die *\_ Geräte-ID* wird erstellt, wenn das Gerät geöffnet wird.
--   Die *Argumente* geben die Flags und Variablen an, die vom Befehl verwendet werden. Flags sind Schlüsselwörter, die mit dem MCI-Befehl erkannt werden. Variablen sind Zahlen oder Zeichenfolgen, die für den MCI-Befehl oder das MCI-Flag gelten.
+-   Die *Argumente* geben die vom Befehl verwendeten Flags und Variablen an. Flags sind Schlüsselwörter, die mit dem MCI-Befehl erkannt werden. Variablen sind Zahlen oder Zeichenfolgen, die für den MCI-Befehl oder das MCI-Flag gelten.
 
-    Beispielsweise verwendet der **Play-Befehl** die Argumente "from *position"* und "to *position",* um die Positionen anzugeben, an denen die Wiedergabe gestartet und beendet werden soll. Sie können die mit einem Befehl verwendeten Flags in beliebiger Reihenfolge auflisten. Wenn Sie ein Flag verwenden, dem eine Variable zugeordnet ist, müssen Sie einen Wert für die Variable geben.
+    Beispielsweise verwendet der **Wiedergabebefehl** die Argumente "from *position* " und "to *position",* um die Positionen anzugeben, an denen die Wiedergabe gestartet und beendet werden soll. Sie können die mit einem Befehl verwendeten Flags in beliebiger Reihenfolge auflisten. Wenn Sie ein Flag verwenden, dem eine Variable zugeordnet ist, müssen Sie einen Wert für die Variable angeben.
 
     Nicht angegebene (und optionale) Befehlsargumente setzen einen Standardwert voraus.
 
@@ -80,9 +80,9 @@ Sie können die folgenden Datentypen für die Variablen in einer Befehlszeichenf
 
 | **Datentyp**        | **Beschreibung**                                                                                                                                                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Zeichenfolgen              | Zeichenfolgendatentypen werden durch führende und nachstellende Leerzeichen und Anführungszeichen getrennt. MCI entfernt einfache Anführungszeichen aus einer Zeichenfolge. Um ein Anführungszeichen in eine Zeichenfolge zu setzen, verwenden Sie einen Satz von zwei Anführungszeichen, in die Sie Das Anführungszeichen einbetten möchten. Um eine leere Zeichenfolge zu verwenden, verwenden Sie zwei Anführungszeichen, die durch führende und nachstehende Leerzeichen getrennt sind. |
-| Lange ganze Zahlen mit Vorzeichen | Datentypen mit langen ganzen Zahlen mit Vorzeichen werden durch führende und nachstellende Leerzeichen getrennt. Sofern nicht anders angegeben, können ganze Zahlen positiv oder negativ sein. Wenn Sie negative ganze Zahlen verwenden, sollten Sie das Minuszeichen und die erste Ziffer nicht durch ein Leerzeichen trennen.                                                                                                    |
-| Rechtecke           | Rechteckdatentypen sind eine geordnete Liste mit vier kurz signierten Werten. Leerraum begrenzt diesen Datentyp und trennt jede ganze Zahl in der Liste.                                                                                                                                                                                                              |
+| Zeichenfolgen              | Zeichenfolgendatentypen werden durch führende und nachfolgende Leerzeichen und Anführungszeichen getrennt. MCI entfernt einfache Anführungszeichen aus einer Zeichenfolge. Um ein Anführungszeichen in eine Zeichenfolge zu setzen, verwenden Sie einen Satz von zwei Anführungszeichen, in die Sie das Anführungszeichen einbetten möchten. Um eine leere Zeichenfolge zu verwenden, verwenden Sie zwei Anführungszeichen, die durch führende und nachfolgende Leerzeichen getrennt sind. |
+| Lange ganze Zahlen mit Vorzeichen | Datentypen mit langen ganzen Zahlen mit Vorzeichen werden durch führende und nachfolgende Leerzeichen getrennt. Sofern nicht anders angegeben, können ganze Zahlen positiv oder negativ sein. Wenn Sie negative ganze Zahlen verwenden, sollten Sie das Minuszeichen und die erste Ziffer nicht durch ein Leerzeichen trennen.                                                                                                    |
+| Rechtecke           | Rechteckdatentypen sind eine geordnete Liste mit vier Kurzwerten mit Vorzeichen. Leerraum begrenzt diesen Datentyp und trennt jede ganze Zahl in der Liste.                                                                                                                                                                                                              |
 
 
 

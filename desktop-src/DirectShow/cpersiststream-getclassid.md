@@ -1,7 +1,7 @@
 ---
-description: Ruft den Klassen Bezeichner für diesen Filter ab.
+description: Ruft den Klassenbezeichner für diesen Filter ab.
 ms.assetid: f0559437-5d0d-4522-a3dc-947e3494b576
-title: Cpersiststream. GetClassID-Methode (pStream. h)
+title: CPersistStream.GetClassID-Methode (Pstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7603541eae4f431327a91777488a740afb7f628b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e500b91453bd7c9d76f243939a98b0779f1873ed7b5f79128e639173710e62de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915560"
 ---
-# <a name="cpersiststreamgetclassid-method"></a>Cpersiststream. GetClassID-Methode
+# <a name="cpersiststreamgetclassid-method"></a>CPersistStream.GetClassID-Methode
 
-Ruft den Klassen Bezeichner für diesen Filter ab.
+Ruft den Klassenbezeichner für diesen Filter ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetClassID(
 
 <dl> <dt>
 
-*pclsid* 
+*pClsID* 
 </dt> <dd>
 
-Zeiger auf eine CLSID-Struktur. Kopieren Sie die Klassen-ID hier.
+Zeiger auf eine CLSID-Struktur. Kopieren Sie Ihre Klassen-ID hier nach .
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>PStream. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pstream.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Cpersiststream-Klasse**](cpersiststream.md)
+[**CPersistStream-Klasse**](cpersiststream.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Getsecondaryconnectionstring-Methode der Win32_RDMSDeploymentSettings-Klasse
-description: Ruft die sekundäre Daten bankverbindungs Zeichenfolge auf Bereitstellungs Ebene ab, die zur Unterstützung des Kenn Wort Ablaufs verwendet werden kann.
+title: GetSecondaryConnectionString-Methode der Win32_RDMSDeploymentSettings-Klasse
+description: Ruft die sekundäre Verbindungszeichenfolge der Datenbank auf Bereitstellungsebene ab, die zur Unterstützung des Kennwortablaufs verwendet werden kann.
 ms.assetid: 0de02752-6cbf-4c21-b752-a57ed58aeef1
 ms.tgt_platform: multiple
 keywords:
-- Getsecondaryconnectionstring-Methode Remotedesktopdienste
-- Getsecondaryconnectionstring-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, getsecondaryconnectionstring-Methode
+- GetSecondaryConnectionString-Methode Remotedesktopdienste
+- GetSecondaryConnectionString-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings klasse Remotedesktopdienste , GetSecondaryConnectionString-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2c09f4fcacabbe928fcda00447e252077bd8a51
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ac54d0d5ce9207070d03028ba53175d964e93d77a93d51b28345089fcea99dcd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868310"
 ---
-# <a name="getsecondaryconnectionstring-method-of-the-win32_rdmsdeploymentsettings-class"></a>Getsecondaryconnectionstring-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="getsecondaryconnectionstring-method-of-the-win32_rdmsdeploymentsettings-class"></a>GetSecondaryConnectionString-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
-Ruft die sekundäre Daten bankverbindungs Zeichenfolge auf Bereitstellungs Ebene ab, die zur Unterstützung des Kenn Wort Ablaufs verwendet werden kann.
+Ruft die sekundäre Verbindungszeichenfolge der Datenbank auf Bereitstellungsebene ab, die zur Unterstützung des Kennwortablaufs verwendet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 GetSecondaryConnectionString(
 
 <dl> <dt>
 
-*Secondaryconnectionstring* \[ vorgenommen\]
+*SecondaryConnectionString* \[ out\]
 </dt> <dd>
 
-Abzurufende Verbindungs Zeichenfolge
+Die abzurufende Verbindungszeichenfolge
 
 </dd> </dl>
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

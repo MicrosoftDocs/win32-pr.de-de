@@ -1,9 +1,9 @@
 ---
-title: PSM_SETCURSELID Meldung (prsht. h)
-description: Aktiviert die angegebene Seite in einem Eigenschaften Blatt basierend auf dem Ressourcen Bezeichner der Seite. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ Makros setcurrselbyid senden.
+title: PSM_SETCURSELID-Nachricht (Prsht.h)
+description: Aktiviert die angegebene Seite in einem Eigenschaftenblatt basierend auf dem Ressourcenbezeichner der Seite. Sie können diese Nachricht explizit oder mithilfe des \_ PropSheet-Makros SetCurSelByID senden.
 ms.assetid: 6db5f6ab-77ce-4a80-a84d-cb66eb1cdeaa
 keywords:
-- Windows-Steuerelemente für PSM_SETCURSELID Meldung
+- PSM_SETCURSELID Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9da6ec827bbf3b9bade0af649f124d25c420d299
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7be1d21b5153d480e409c6e9e7f4204746b5509b058bc292509e24ad9e03b538
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877020"
 ---
-# <a name="psm_setcurselid-message"></a>PSM- \_ setcurrselid-Nachricht
+# <a name="psm_setcurselid-message"></a>PSM \_ SETCURSELID-Nachricht
 
-Aktiviert die angegebene Seite in einem Eigenschaften Blatt basierend auf dem Ressourcen Bezeichner der Seite. Sie können diese Nachricht explizit oder mithilfe des [**propsheet-Makros \_ setcurrselbyid**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setcurselbyid) senden.
+Aktiviert die angegebene Seite in einem Eigenschaftenblatt basierend auf dem Ressourcenbezeichner der Seite. Sie können diese Nachricht explizit oder mithilfe des [**\_ PropSheet-Makros SetCurSelByID**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setcurselbyid) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,17 +39,17 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Der Ressourcen Bezeichner der zu aktivierenden Seite.
+Ressourcenbezeichner der zu aktivierenden Seite.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Fenster, das die Aktivierung verliert, empfängt den [PSN- \_ killactive](psn-killactive.md) -Benachrichtigungs Code, und das Fenster, das die Aktivierung erlangt, empfängt den [PSN- \_ SETACTIVE](psn-setactive.md) -Benachrichtigungs Code.
+Das Fenster, in dem die Aktivierung verloren geht, empfängt den [PSN KILLACTIVE-Benachrichtigungscode, \_ ](psn-killactive.md) und das Fenster, in dem die Aktivierung erfolgt, empfängt den [PSN \_ SETACTIVE-Benachrichtigungscode.](psn-setactive.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Das Fenster, das die Aktivierung verliert, empfängt den [PSN- \_ killactive](ps
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Cdromburnerror-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das cdromburnerror-Ereignis tritt auf, wenn während eines CD-Brennvorgangs ein generischer Fehler auftritt.
+title: C cyberError-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das Cerror-Ereignis tritt auf, wenn während eines CD-Vorgangs ein generischer Fehler auftritt.
 ms.assetid: 512a3417-c8f3-42c7-ab2e-bea35cadbd4e
 keywords:
-- Cdromburnerror-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CerrorError-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c27969ea83089b225ba92eb93854fc1dcde9bde
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37ea2ca4c510685e8a9d23a3fdc507e055f30c8916c7bf8bbbfbb30a5c4591b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864740"
 ---
-# <a name="cdromburnerror-event-of-the-axwindowsmediaplayer-object"></a>Cdromburnerror-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="cdromburnerror-event-of-the-axwindowsmediaplayer-object"></a>C cyberError-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das cdromburnerror-Ereignis tritt auf, wenn während eines CD-Brennvorgangs ein generischer Fehler auftritt.
+Das Cerror-Ereignis tritt auf, wenn während eines CD-Vorgangs ein generischer Fehler auftritt.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_CdromBurnError(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnerroreventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnerrorevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CerrorErrorEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CerrorErrorEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft   | BESCHREIBUNG                                                                                               |
 |------------|-----------------------------------------------------------------------------------------------------------|
-| hrError    | **System. Int32** Der Fehler, der das Ereignis ausgelöst hat.<br/>                                               |
-| pcdromburn | WMPLib. iwmpcdromburndie-Schnittstelle, die den Brennvorgang darstellt, der den Fehler ausgelöst hat.<br/> |
+| hrError    | **System.Int32** Der Fehler, der das Ereignis ausgelöst hat.<br/>                                               |
+| pC wies | WMPLib.IWMPC wie Die Schnittstelle, die den Vorgang darstellt, der den Fehler ausgelöst hat.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um medienspezifische Fehler zu erfassen, behandeln Sie AxWMPLib. \_ Wmpocxevents \_ cdromburnmediaerror-Ereignis.
+Behandeln Sie AxWMPLib, um medienspezifische Fehler zu erfassen. \_ \_WMPOCXEvents-CmediaMediaError-Ereignis.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,13 +74,13 @@ Um medienspezifische Fehler zu erfassen, behandeln Sie AxWMPLib. \_ Wmpocxevents
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. cdromburnmediaerror-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-cdromburnmediaerror.md)
+[**AxWindowsMediaPlayer.CmediaMediaError-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-cdromburnmediaerror.md)
 </dt> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> </dl>
 
  

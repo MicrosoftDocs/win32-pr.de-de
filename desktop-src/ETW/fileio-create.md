@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für das file Create-Ereignis. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für das Dateierstellungsereignis. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 83465072-3dae-4a39-8a36-1512025b79df
 title: FileIo_Create-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2f8a42e9dee1c49817d578ab73a221c013f69aef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e0c4085225fe523dcabca87a15bced8bd1f093f0b3da89fa0582b5675cdfbbc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829950"
 ---
-# <a name="fileio_create-class"></a>\_Klasse "Klasse erstellen"
+# <a name="fileio_create-class"></a>FileIo \_ Create-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für das file Create-Ereignis.
+Diese Klasse ist die Ereignistypklasse für das Dateierstellungsereignis.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,90 +50,90 @@ class FileIo_Create : FileIo
 
 ## <a name="members"></a>Member
 
-Die Klasse "Klasse **\_ Erstellen** " verfügt über diese Typen von Membern:
+Die **FileIo \_ Create-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse "Klasse **\_ Erstellen** " verfügt über diese Eigenschaften.
+Die **FileIo \_ Create-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Kreateoptions"**
+**Createoptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Werte, die in den Parametern "up *options* " und " *deedispositionen* " an die Funktion " [**ntkreatefile**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) " übergeben werden.
+Werte, die in den *Parametern CreateOptions* und *CreateDispositions* an die [**NtCreateFile-Funktion**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) übergeben werden.
 
 </dd> <dt>
 
 **FileAttributes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-Der Wert, der im *FileAttribute* -Parameter an die [**ntkreatefile**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) -Funktion übergeben wird.
+Wert, der im *FileAttributes-Parameter* an die [**NtCreateFile-Funktion**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) übergeben wird.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Ein Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Datei Objektinstanz zwischen Ereignissen zum Erstellen und Schließen von Dateien verwendet werden kann.
+Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Dateiobjektinstanz zwischen Dateierstellungs- und Schließereignissen verwendet werden kann.
 
 </dd> <dt>
 
-**Unpptr**
+**IrpPtr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität.
+E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität.
 
 </dd> <dt>
 
 **OpenPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(7), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 Pfad zur Datei.
@@ -143,47 +143,47 @@ Pfad zur Datei.
 **ShareAccess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Der Wert, der im *share Access* -Parameter an die [**ntkreatefile**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) -Funktion übergeben wird.
+Wert, der im *ShareAccess-Parameter* an die [**NtCreateFile-Funktion**](/windows/win32/api/winternl/nf-winternl-ntcreatefile) übergeben wird.
 
 </dd> <dt>
 
-**TTiD**
+**TTID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Thread Bezeichner des Threads, der die Datei erstellt.
+Threadbezeichner des Threads, der die Datei erstellt.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

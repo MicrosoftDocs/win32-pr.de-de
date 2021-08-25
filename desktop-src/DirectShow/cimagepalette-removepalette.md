@@ -1,7 +1,7 @@
 ---
-description: 'Die RemovePalette-Methode löscht die vorhandene logische Palette und ruft cbasewindow:: unsetpalette für das cbasewindow-Objekt auf.'
+description: Die RemovePalette-Methode löscht die vorhandene logische Palette und ruft CBaseWindow::UnsetPalette für das CBaseWindow-Objekt auf.
 ms.assetid: fab531b8-8630-43f8-bf08-cd8f24659bef
-title: Cimagepalette. RemovePalette-Methode (winutil. h)
+title: CImagePalette.RemovePalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c0410772203a22655968fba393c707bda790a5a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0b87c8f028da17e6af305900f203c5cf1143132806ca1b2ce9b0edaddebd0eac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916009"
 ---
-# <a name="cimagepaletteremovepalette-method"></a>Cimagepalette. RemovePalette-Methode
+# <a name="cimagepaletteremovepalette-method"></a>CImagePalette.RemovePalette-Methode
 
-Die `RemovePalette` -Methode löscht die vorhandene logische Palette und ruft [**cbasewindow:: unsetpalette**](cbasewindow-unsetpalette.md) für das **cbasewindow** -Objekt auf.
+Die `RemovePalette` -Methode löscht die vorhandene logische Palette und ruft [**CBaseWindow::UnsetPalette**](cbasewindow-unsetpalette.md) für das **CBaseWindow-Objekt** auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt S \_ OK zurück.
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

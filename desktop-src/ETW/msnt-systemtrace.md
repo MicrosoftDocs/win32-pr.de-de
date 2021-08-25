@@ -1,5 +1,5 @@
 ---
-description: Die übergeordnete Klasse, von der alle System Ereignis-Ablauf Verfolgungs Klassen abgeleitet werden. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die übergeordnete Klasse, von der alle Systemereignis-Ablaufverfolgungsklassen abgeleitet werden. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 27979d9c-eca7-426f-8f8e-99443e5a0188
 title: MSNT_SystemTrace-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2eb0044029761a93a353a08a955d39d76c267f9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c083f7a2336a374e8009af2ba8094d57d9826197e16b7577aaf3b00a4c035173
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829620"
 ---
-# <a name="msnt_systemtrace-class"></a>MSNT \_ systemtrace-Klasse
+# <a name="msnt_systemtrace-class"></a>MSNT \_ SystemTrace-Klasse
 
-Die übergeordnete Klasse, von der alle System Ereignis-Ablauf Verfolgungs Klassen abgeleitet werden.
+Die übergeordnete Klasse, von der alle Systemereignis-Ablaufverfolgungsklassen abgeleitet werden.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,33 +38,33 @@ class MSNT_SystemTrace : EventTrace
 
 ## <a name="members"></a>Member
 
-Die **MSNT \_ systemtrace** -Klasse verfügt über diese Typen von Membern:
+Die **MSNT \_ SystemTrace-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSNT \_ systemtrace** -Klasse verfügt über diese Eigenschaften.
+Die **MSNT \_ SystemTrace-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Flags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **definevalues {"ereignisablaufverfolgungsflag \_ \_ \_ verarbeiten", "ereignisablaufverfolgungsflag-Thread", "ereignisablaufverfolgungsflag zum Laden von Ereignissen", "Ereignis Ablauf Verfolgungs Kennzeichen- \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ Prozess \_ Zähler" Ereignis Ablaufverfolgungsflag für Datenträger-e/a \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ "," Ereignis Ablauf \_ Verfolgung Flag Datenträger Datei-e/a " \_ \_ \_ \_ ," Ereignis Ablaufverfolgungsflag für Datenträger-e/a-Vorgänge \_ \_ \_ \_ \_ "," \_ \_ \_ ereignisablaufverfolgungsflag-Verteiler "," Ereignis Ablauf Verfolgung \_ Flag Arbeits \_ \_ Speicher \_ Seiten \_ Fehler "ereignisablaufverfolgungsflag- \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ \_ Registrierung", "ereignisablaufverfolgungsflag \_ \_ \_ ALPC", "Ereignis Ablaufverfolgungsflag \_ \_ \_ Split IO", "ereignisablaufverfolgungsflag-Treiber", "ereignisablaufverfolgungsflag- \_ \_ \_ \_ \_ \_ \_ Profil", "ereignisablaufverfolgungsflag für \_ \_ \_ Datei \_ \_ \_ \_ \_ \_** **map {" 0x00000001 "," 0x00000002 "," 0x00000004 "," 0x00000008 "," 0x00000010 "," 0x00000020 "," 0x00000040 "," 0x00000080 "," 0x00000100 " , "0x00000200", "0x00000400", "0x00000800", "0x00001000", "0x00002000", "0x00004000", "0x00010000 bis", "0x00020000", "0x00100000", "0x00200000", "0x00800000", "0x01000000", "0x02000000", "0x04000000"}**
+Qualifizierer: **DefineValues{"EVENT \_ TRACE \_ FLAG \_ PROCESS", "EVENT \_ TRACE FLAG \_ \_ THREAD", \_ \_ \_ "EVENT TRACE FLAG IMAGE \_ LOAD", "EVENT \_ TRACE FLAG PROCESS \_ \_ \_ COUNTERS", "EVENT \_ TRACE FLAG \_ \_ CSWITCH", "EVENT \_ TRACE FLAG \_ DPC", "EVENT TRACE FLAG \_ \_ \_ \_ INTERRUPT", "EVENT TRACE FLAG \_ \_ \_ SYSTEMCALL", "EVENT \_ TRACE FLAG DISK \_ \_ \_ IO", "EVENT \_ TRACE FLAG DISK FILE \_ \_ \_ \_ IO", "EVENT \_ TRACE FLAG DISK IO \_ \_ \_ \_ INIT", "EVENT \_ TRACE FLAG \_ \_ DISPATCHER", "EVENT TRACE FLAG MEMORY PAGE \_ \_ \_ \_ \_ FAULTS", "EVENT TRACE FLAG MEMORY HARD \_ \_ \_ \_ \_ FAULTS", "EVENT TRACE \_ FLAG VIRTUAL \_ \_ \_ ALLOC", "EVENT \_ TRACE FLAG NETWORK \_ \_ \_ TCPIP", "EVENT \_ TRACE FLAG \_ \_ REGISTRY", "EVENT \_ TRACE FLAG \_ \_ ALPC", " EVENT TRACE FLAG \_ \_ SPLIT \_ \_ IO", "EVENT \_ TRACE FLAG \_ \_ DRIVER", "EVENT \_ TRACE FLAG \_ \_ PROFILE", "EVENT \_ TRACE FLAG FILE \_ \_ \_ IO", "EVENT \_ TRACE FLAG FILE IO \_ \_ \_ \_ INIT"}**, **ValueMap{"0x00000001", "0x00000002", "0x00000004", "0x00000008", "0x00000010", "0x00000020", "0x00000040", "0x00000080", "0x00000100", "0x00000200", "0x00000400", "0x00000800", "0x00001000", "0x00002000", "0x00004000", "0x00010000", "0x00020000", "0x00100000", "0x00200000", "0x00800000", "0x01000000", "0x02000000", "0x04000000"}**
 </dt> </dl>
 
-Aktivieren Sie das Flag, das die aktivierten Kernel Anbieter angibt.
+Aktivieren Sie das Flag, das die aktivierten Kernelanbieter angibt.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

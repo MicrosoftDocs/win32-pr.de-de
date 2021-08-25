@@ -1,5 +1,5 @@
 ---
-description: Aktiviert dieses Plug & Play Gerät.
+description: Aktiviert dieses Plug & Play Geräts.
 ms.assetid: 8f2096c4-03b4-4005-9b97-0086f2b41080
 ms.tgt_platform: multiple
 title: Enable-Methode der Win32_PnPEntity-Klasse
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8f64c833a29f4df3b353a7e9782ffea39396cece
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4a5c0db362431a2dac479077861a33a46f296b71f4b570a43a963292ac8446b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879100"
 ---
-# <a name="enable-method-of-the-win32_pnpentity-class"></a>Enable-Methode der Win32- \_ pnptity-Klasse
+# <a name="enable-method-of-the-win32_pnpentity-class"></a>Enable-Methode der \_ Win32-PnPEntity-Klasse
 
-Aktiviert dieses Plug & Play Gerät.
+Aktiviert dieses Plug & Play Geräts.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Uint32 Enable(
 
 <dl> <dt>
 
-*neubootbedarf* \[ vorgenommen\]
+*rebootNeeded* \[ out\]
 </dt> <dd>
 
 Gibt an, ob ein Neustart erforderlich ist.
@@ -53,10 +53,10 @@ Gibt an, ob ein Neustart erforderlich ist.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -65,7 +65,7 @@ Gibt an, ob ein Neustart erforderlich ist.
 
 <dl> <dt>
 
-[**Win32- \_ pnptity**](win32-pnpentity.md)
+[**Win32 \_ PnPEntity**](win32-pnpentity.md)
 </dt> </dl>
 
  

@@ -1,40 +1,40 @@
 ---
-title: Erstellen eines List-View-Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein Listenansicht-Steuerelement erstellt wird. Um ein Listenansicht-Steuerelement zu erstellen, verwenden Sie die Funktion "up-Window" oder "deatewindowex" und geben die WC- \_ ListView-Fenster Klasse an.
+title: Erstellen eines List-View-Steuerelements
+description: In diesem Thema wird veranschaulicht, wie Ein Listenansicht-Steuerelement erstellt wird. Um ein Listenansichtssteuerelement zu erstellen, verwenden Sie die CreateWindow- oder CreateWindowEx-Funktion und geben die WC \_ LISTVIEW-Fensterklasse an.
 ms.assetid: FEAA0ACA-A086-46DF-9DD2-A3E32F2CCDA3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3050498b87aaf701249a06cfe2c3ad18afdc1d84
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: d71eddfb60a2ea035a5afe62423289da40a47b61841d3ba58c4cafa2824a65b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104474673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826610"
 ---
-# <a name="how-to-create-a-list-view-control"></a>Erstellen eines List-View-Steuer Elements
+# <a name="how-to-create-a-list-view-control"></a>Erstellen eines List-View-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie ein Listenansicht-Steuerelement erstellt wird. Um ein Listenansicht-Steuerelement zu erstellen, verwenden Sie die Funktion "up- [**Window**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " oder " [**deatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " und geben die [**WC- \_ ListView**](common-control-window-classes.md) -Fenster Klasse an.
+In diesem Thema wird veranschaulicht, wie Ein Listenansicht-Steuerelement erstellt wird. Um ein Listenansichtssteuerelement zu erstellen, verwenden Sie die [**CreateWindow-**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) und geben die [**WC \_ LISTVIEW-Fensterklasse**](common-control-window-classes.md) an.
 
-Ein Listenansicht-Steuerelement kann auch als Teil einer Dialogfeld Vorlage erstellt werden. Sie müssen " [**WC \_ ListView**](common-control-window-classes.md) " als Klassennamen angeben. Wenn Sie ein Listenansicht-Steuerelement als Teil einer Dialogfeld Vorlage verwenden möchten, müssen Sie [**InitCommonControls**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols) oder [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufzurufen, bevor Sie eine Instanz des Dialog Felds erstellen.
+Ein Listenansichtssteuerelement kann auch als Teil einer Dialogfeldvorlage erstellt werden. Sie müssen [**WC \_ LISTVIEW**](common-control-window-classes.md) als Klassennamen angeben. Um ein Listenansichtssteuerelement als Teil einer Dialogfeldvorlage zu verwenden, müssen Sie [**InitCommonControls**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols) oder [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen, bevor Sie eine Instanz des Dialogfelds erstellen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Registrieren Sie zuerst die Fenster Klasse, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen und die Klassen des Verzeichnisses [**\_ ListView- \_ Klassen**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) in der zugehörigen **InitCommonControlsEx** -Struktur angeben. Dadurch wird sichergestellt, dass die DLL für allgemeine Steuerelemente geladen wird. Verwenden Sie als nächstes die Funktion "up [**Window**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " oder " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ", und geben Sie die [**WC- \_ ListView**](common-control-window-classes.md) -Fenster Klasse an.
+Registrieren Sie zunächst die Window-Klasse, indem Sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen und das [**BIT VON \_ LISTVIEW \_ CLASSES**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) in der zugehörigen **INITCOMMONCONTROLSEX-Struktur** angeben. Dadurch wird sichergestellt, dass die DLL für allgemeine Steuerelemente geladen wird. Verwenden Sie als Nächstes die Funktion [**CreateWindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa) oder [**CreateWindowEx,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) und geben Sie die [**WC \_ LISTVIEW-Fensterklasse**](common-control-window-classes.md) an.
 
 > [!Note]  
-> Standardmäßig verwendet ein Listenansicht-Steuerelement die Schriftart des Symbol Titels. Sie können jedoch eine WM- [**\_ setFont**](/windows/desktop/winmsg/wm-setfont) -Nachricht verwenden, um die Schriftart anzugeben, die für den Text verwendet werden soll. Sie sollten diese Nachricht vor dem Einfügen von Elementen senden. Das-Steuerelement verwendet die Dimensionen der Schriftart, die von der **WM- \_ setFont** -Nachricht angegeben wird, um den Abstand und das Layout zu bestimmen. Sie können auch die Schriftart für jedes Element anpassen. Weitere Informationen finden Sie unter [benutzerdefiniertes Zeichnen](custom-draw.md).
+> Standardmäßig verwendet ein Listenansichts-Steuerelement die Symboltitelschriftart. Sie können jedoch eine [**WM \_ SETFONT-Nachricht**](/windows/desktop/winmsg/wm-setfont) verwenden, um die Schriftart anzugeben, die für den Text verwendet werden soll. Sie sollten diese Nachricht senden, bevor Sie Elemente einfügen. Das Steuerelement verwendet die Abmessungen der Schriftart, die von der **WM \_ SETFONT-Meldung** angegeben wird, um Abstand und Layout zu bestimmen. Sie können auch die Schriftart für jedes Element anpassen. Weitere Informationen finden Sie unter [Custom Draw](custom-draw.md).
 
  
 
@@ -80,9 +80,9 @@ HWND CreateListView (HWND hwndParent)
 
 
 
-In der Regel ermöglichen Listen Ansichts Anwendungen dem Benutzer das Wechseln von einer Ansicht zu einem anderen.
+In der Regel ermöglichen Listenansichtsanwendungen dem Benutzer, von einer Ansicht in eine andere zu wechseln.
 
-Im folgenden C++-Codebeispiel wird der Fenster Stil der Listenansicht geändert, der wiederum die Ansicht ändert.
+Im folgenden C++-Codebeispiel wird der Fensterstil der Listenansicht geändert, wodurch wiederum die Ansicht geändert wird.
 
 
 ```C++
@@ -113,13 +113,13 @@ VOID SetView(HWND hWndListView, DWORD dwView)
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[Referenz zum Listenansicht-Steuerelement](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen zu List-View-Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden von List-View-Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Setsecondaryconnectionstring-Methode der Win32_RDMSDeploymentSettings-Klasse
-description: Legt die sekundäre Verbindungs Zeichenfolge für die Bereitstellungs Ebene fest.
+title: SetSecondaryConnectionString-Methode der Win32_RDMSDeploymentSettings Klasse
+description: Legt die sekundäre Verbindungszeichenfolge der Datenbank auf Bereitstellungsebene fest.
 ms.assetid: 154c495e-564e-4d90-a4ff-de683d41aa73
 ms.tgt_platform: multiple
 keywords:
-- Setsecondaryconnectionstring-Methode Remotedesktopdienste
-- Setsecondaryconnectionstring-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, setsecondaryconnectionstring-Methode
+- SetSecondaryConnectionString-Remotedesktopdienste
+- SetSecondaryConnectionString-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings der Remotedesktopdienste , SetSecondaryConnectionString-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f8060a6f2676b5599bf44672e79ebf48e64e354
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aeb43f0317f4a31733cf0c0f7b5b578234e14b50dc8976df096e5b9b0b3426d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868250"
 ---
-# <a name="setsecondaryconnectionstring-method-of-the-win32_rdmsdeploymentsettings-class"></a>Setsecondaryconnectionstring-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="setsecondaryconnectionstring-method-of-the-win32_rdmsdeploymentsettings-class"></a>SetSecondaryConnectionString-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
-Legt die sekundäre Verbindungs Zeichenfolge für die Bereitstellungs Ebene fest.
+Legt die sekundäre Verbindungszeichenfolge der Datenbank auf Bereitstellungsebene fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 SetSecondaryConnectionString(
 
 <dl> <dt>
 
-*Secondaryconnectionstring* \[ in\]
+*SecondaryConnectionString* \[ In\]
 </dt> <dd>
 
-Die festzulegende Verbindungs Zeichenfolge
+Die verbindungszeichenfolge, die festgelegt werden soll
 
 </dd> </dl>
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

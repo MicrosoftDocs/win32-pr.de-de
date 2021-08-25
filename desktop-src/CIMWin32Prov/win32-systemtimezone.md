@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 systemtimezone Association" bezieht sich auf ein Computersystem und eine Zeitzone.
+description: Die \_ WMI-Klasse für die Win32-SystemTimeZone-Zuordnung bezieht sich auf ein Computersystem und eine Zeitzone.
 ms.assetid: 53c74a61-c91d-4daa-933e-4cc7b9583d98
 ms.tgt_platform: multiple
 title: Win32_SystemTimeZone-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9ec294600fdc81f085bf29f5e664bcbec961417c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b94f6c6ff61acb526e972da54c55798524b39b1663dec1239e9e2dbae0110e6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827750"
 ---
-# <a name="win32_systemtimezone-class"></a>Win32 \_ systemtimezone-Klasse
+# <a name="win32_systemtimezone-class"></a>Win32 \_ SystemTimeZone-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ systemtimezone** Association" bezieht sich auf ein Computersystem und eine Zeitzone.
+Die **WMI-Klasse \_ für die Win32-SystemTimeZone-Zuordnung** bezieht sich auf ein Computersystem und eine Zeitzone. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_SystemTimeZone : Win32_SystemSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ systemtimezone** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SystemTimeZone-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ systemtimezone** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SystemTimeZone-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ Computersystem**
+Datentyp: **Win32 \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Computersystem")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ ComputerSystem")
 </dt> </dl>
 
-Verweis auf die-Instanz, die das Computersystem darstellt, das die Zeitzone des Systems nachverfolgt.
+Verweis auf die -Instanz, die das Computersystem darstellt, das die Systemzeitzone nachverfolgt.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Zeitzone**
+Datentyp: **Win32 \_ TimeZone**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ TimeZone")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) [**("Einstellung"), MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ TimeZone")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die vom Computersystem nach verfolgten Zeit Zonen Eigenschaften darstellt.
+Verweis auf die -Instanz, die die vom Computersystem nachverfolgten Zeitzoneneigenschaften darstellt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ systemtimezone** -Klasse wird von [**Win32 \_ systemsetting**](win32-systemsetting.md)abgeleitet.
+Die **Win32 \_ SystemTimeZone-Klasse** wird von [**Win32 \_ SystemSetting abgeleitet.**](win32-systemsetting.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die **Win32- \_ systemtimezone** -Klasse wird von [**Win32 \_ systemsetting**](w
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -106,7 +106,7 @@ Die **Win32- \_ systemtimezone** -Klasse wird von [**Win32 \_ systemsetting**](w
 
 <dl> <dt>
 
-[**Win32- \_ systemsetting**](win32-systemsetting.md)
+[**Win32 \_ SystemSetting**](win32-systemsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

@@ -1,11 +1,11 @@
 ---
 title: Creation-Time-Attribut
-description: Das Datum und die Uhrzeit der Erstellung des Objekts.
+description: Das Datum und die Uhrzeit, zu der das Objekt erstellt wurde.
 ms.assetid: eab276f8-2956-4a83-beb4-a3b8ed11ccca
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Creation-Time-Attribut
-- AD-Schema für das Attribut "Attribut"
+- Creation-Time AD-Schema
+- creationTime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4a695495d33e47a3597db9954f3b563245eab05
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 64f5dc7c772ab71ef062077c2ab7de7f6039c6fcb18d238e90f82d54c7a58fdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926090"
 ---
 # <a name="creation-time-attribute"></a>Creation-Time-Attribut
 
-Das Datum und die Uhrzeit der Erstellung des Objekts.
+Das Datum und die Uhrzeit, zu der das Objekt erstellt wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Creation-Time                        |
-| LDAP-Display-Name | creationTime                         |
+| Ldap-Anzeigename | creationTime                         |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.     |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.     |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.26                |
-| System-ID-GUID    | bf967946-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf967946-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das Datum und die Uhrzeit der Erstellung des Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
-| System-Only            | False                                                                                              |
-| Ist-einwertig       | Richtig                                                                                               |
-| Ist indiziert             | False                                                                                              |
-| Im globalen Katalog      | False                                                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                       |
+| System-Only            | Falsch                                                                                              |
+| Is-Single-Valued       | Richtig                                                                                               |
+| Ist indiziert             | Falsch                                                                                              |
+| Im globalen Katalog      | Falsch                                                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
 | Range-Lower            | \-                                                                                                 |
 | Range-Upper            | \-                                                                                                 |
 | Search-Flags           | 0x00000000                                                                                         |
 | System-Flags           | 0x00000010                                                                                         |
-| In verwendete Klassen        | [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

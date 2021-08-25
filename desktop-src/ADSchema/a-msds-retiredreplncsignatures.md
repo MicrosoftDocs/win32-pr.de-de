@@ -1,11 +1,11 @@
 ---
-title: ms-DS-zurückgezogen-repl-NC-Signaturen-Attribut
-description: Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbewahrt werden.
+title: ms-DS-Retired-Repl-NC-Signatures-Attribut
+description: Informationen zu Benennungskontexten, die nicht mehr auf diesem Computer gespeichert sind.
 ms.assetid: bb4f0941-1a20-422d-aa50-af03eeb95f6c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-zurückgezogen-repl-NC-Signaturen
-- AD-Schema des msDS-retiredreplncsignature-Attributs
+- AD-Schema des ms-DS-Retired-Repl-NC-Signatures-Attributs
+- AD-Schema des msDS-RetiredReplNCSignatures-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a15544650069ce9e10668bb7ce3d5e0d75299528
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5b71d442759e75cc7ce6139ecb099e80c428c2d1f37023b439e28668ef01384b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925600"
 ---
-# <a name="ms-ds-retired-repl-nc-signatures-attribute"></a>ms-DS-zurückgezogen-repl-NC-Signaturen-Attribut
+# <a name="ms-ds-retired-repl-nc-signatures-attribute"></a>ms-DS-Retired-Repl-NC-Signatures-Attribut
 
-Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbewahrt werden.
+Informationen zu Benennungskontexten, die nicht mehr auf diesem Computer gespeichert sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-abgekoppelt-repl-NC-Signaturen                      |
-| LDAP-Display-Name | MSDS-retiredreplncsignaturen                          |
+| CN                | ms-DS-Retired-Repl-NC-Signatures                      |
+| Ldap-Anzeigename | msDS-RetiredReplNCSignatures                          |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.1826                               |
-| System-ID-GUID    | d5b35506-19d6-4d26-9afb-11357ac99b5e                  |
+| System-Id-Guid    | d5b35506-19d6-4d26-9afb-11357ac99b5e                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -58,10 +58,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -79,10 +79,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -100,10 +100,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -121,10 +121,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -142,10 +142,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -163,10 +163,10 @@ Informationen zu Benennungs Kontexten, die auf diesem Computer nicht mehr aufbew
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |

@@ -1,7 +1,7 @@
 ---
-description: Gibt den Typ des e/a-Busses an, der vom Grafikadapter verwendet wird.
+description: Gibt den Typ des E/A-Bus an, der vom Grafikadapter verwendet wird.
 ms.assetid: 11bb7e0e-8d49-45f2-89aa-7583dd925edf
-title: D3DBUSTYPE-Enumeration (D3d9types. h)
+title: D3DBUSTYPE-Enumeration (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 807e5a57c4abbf57c241643a3e7fea47606fbf75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cece215946406bedcca2cbfdd2b64bfdb5df00208b2d84cf2aa90fdb89b516bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828380"
 ---
 # <a name="d3dbustype-enumeration"></a>D3DBUSTYPE-Enumeration
 
-Gibt den Typ des e/a-Busses an, der vom Grafikadapter verwendet wird.
+Gibt den Typ des E/A-Bus an, der vom Grafikadapter verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,10 +49,10 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="D3DBUSTYPE_OTHER"></span><span id="d3dbustype_other"></span>**D3DBUSTYPE \_ andere**
+<span id="D3DBUSTYPE_OTHER"></span><span id="d3dbustype_other"></span>**D3DBUSTYPE \_ OTHER**
 </dt> <dd>
 
-Gibt einen Typ von einem anderen Bus als den hier aufgeführten Typen an.
+Gibt einen anderen Bustyp als die hier aufgeführten Typen an.
 
 </dd> <dt>
 
@@ -63,72 +63,72 @@ PCI-Bus.
 
 </dd> <dt>
 
-<span id="D3DBUSTYPE_PCIX"></span><span id="d3dbustype_pcix"></span>**D3DBUSTYPE \_ PCIx**
+<span id="D3DBUSTYPE_PCIX"></span><span id="d3dbustype_pcix"></span>**D3DBUSTYPE \_ PCIX**
 </dt> <dd>
 
 PCI-X-Bus.
 
 </dd> <dt>
 
-<span id="D3DBUSTYPE_PCIEXPRESS"></span><span id="d3dbustype_pciexpress"></span>**D3DBUSTYPE \_ PCIExpress**
+<span id="D3DBUSTYPE_PCIEXPRESS"></span><span id="d3dbustype_pciexpress"></span>**D3DBUSTYPE \_ PCIEXPRESS**
 </dt> <dd>
 
-PCI-Express-Bus.
+PCI Express Bus.
 
 </dd> <dt>
 
-<span id="D3DBUSTYPE_AGP"></span><span id="d3dbustype_agp"></span>**D3DBUSTYPE- \_ AGP**
+<span id="D3DBUSTYPE_AGP"></span><span id="d3dbustype_agp"></span>**D3DBUSTYPE \_ AGP**
 </dt> <dd>
 
-AGP-Bus (Accelerated Graphics Port).
+Accelerated Graphics Port (AGP)-Bus.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_INSIDE_OF_CHIPSET"></span><span id="d3dbusimpl_modifier_inside_of_chipset"></span>**D3DBUSIMPL- \_ Modifizierer \_ innerhalb \_ des \_ Chipsets**
+<span id="D3DBUSIMPL_MODIFIER_INSIDE_OF_CHIPSET"></span><span id="d3dbusimpl_modifier_inside_of_chipset"></span>**\_D3DBUSIMPL-MODIFIZIERER \_ INNERHALB \_ VON \_ CHIPS**
 </dt> <dd>
 
-Die Implementierung für den Grafikadapter befindet sich in der North Bridge eines Motherboard-Chipsatzes. Dieses Flag impliziert, dass Daten nie über einen Erweiterungsbus (z. b. PCI oder AGP) übertragen werden, wenn Sie vom Hauptspeicher zum Grafikadapter übertragen werden.
+Die Implementierung für den Grafikadapter befindet sich in der Nord-Brücke eines Hauptplatinen-Gerüsts. Dieses Flag impliziert, dass Daten nie über einen Erweiterungsbus (z. B. PCI oder AGP) übertragen werden, wenn sie aus dem Hauptspeicher an den Grafikadapter übertragen werden.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP"></span><span id="d3dbusimpl_modifier_tracks_on_mother_board_to_chip"></span>**D3DBUSIMPL- \_ \_ modifizierertitel \_ auf der \_ Mutter \_ Platine \_ in den \_ Chip**
+<span id="D3DBUSIMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP"></span><span id="d3dbusimpl_modifier_tracks_on_mother_board_to_chip"></span>**\_D3DBUSIMPL-MODIFIZIERER \_ VERFOLGT AUF \_ DER \_ \_ PLATINE NACH \_ \_ CHIP**
 </dt> <dd>
 
-Gibt an, dass der Grafikadapter mithilfe der Nachverfolgung auf der Hauptplatine mit der Nordbrücke eines Motherboard-Chipsatzes verbunden ist und alle Chips des Grafikadapters an die Platine soltet werden. Dieses Flag impliziert, dass Daten nie über einen Erweiterungsbus (z. b. PCI oder AGP) übertragen werden, wenn Sie vom Hauptspeicher zum Grafikadapter übertragen werden.
+Gibt an, dass der Grafikkarte über Spuren auf der Hauptplatine mit der Nord-Bridge eines Hauptplatinen-Adapters verbunden ist und alle Chips des Grafikadapters an die Hauptplatine gelöt werden. Dieses Flag impliziert, dass Daten nie über einen Erweiterungsbus (z. B. PCI oder AGP) übertragen werden, wenn sie aus dem Hauptspeicher an den Grafikadapter übertragen werden.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET"></span><span id="d3dbusimpl_modifier_tracks_on_mother_board_to_socket"></span>**D3DBUSIMPL- \_ \_ modifizierertitel \_ auf \_ \_ dem Mutter Board \_ in \_ Socket**
+<span id="D3DBUSIMPL_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET"></span><span id="d3dbusimpl_modifier_tracks_on_mother_board_to_socket"></span>**\_D3DBUSIMPL-MODIFIZIERER \_ VERFOLGT DIE SPUREN AUF DEM BOARDS AN \_ \_ \_ \_ \_ SOCKET**
 </dt> <dd>
 
-Der Grafikadapter ist mit der Nordbrücke eines Motherboard-Chipsatzes durch Nachverfolgung auf der Hauptplatine verbunden, und alle Chips des Grafikadapters sind über Sockets mit dem Motherboard verbunden.
+Der Grafikkarte ist über Spuren auf der Hauptplatine mit der Nord-Bridge eines Hauptplatinen-Adapters verbunden, und alle Chips des Grafikadapters werden über Sockets mit der Hauptplatine verbunden.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR"></span><span id="d3dbusimpl_modifier_daughter_board_connector"></span>**D3DBUSIMPL- \_ modifiziererboard- \_ \_ \_ Connector**
+<span id="D3DBUSIMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR"></span><span id="d3dbusimpl_modifier_daughter_board_connector"></span>**\_D3DBUSIMPL-MODIFIZIERER- \_ UND \_ -PLATINENCONNECTOR \_**
 </dt> <dd>
 
-Der Grafikadapter ist über einen Daughterboard-Connector mit dem Motherboard verbunden.
+Der Grafikadapter ist über einen Platinenconnector mit der Hauptplatine verbunden.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE"></span><span id="d3dbusimpl_modifier_daughter_board_connector_inside_of_nuae"></span>**D3DBUSIMPL- \_ modifiziererboard- \_ \_ \_ Connector \_ innerhalb \_ von \_ nuae**
+<span id="D3DBUSIMPL_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE"></span><span id="d3dbusimpl_modifier_daughter_board_connector_inside_of_nuae"></span>**\_D3DBUSIMPL-MODIFIZIERER- \_ UND \_ VERBINDEBOARDCONNECTOR \_ IN \_ \_ \_ NUAE**
 </dt> <dd>
 
-Der Grafikadapter ist über einen Daughterboard-Connector mit dem Motherboard verbunden, und der Grafikadapter befindet sich in einem Gehäuse, das nicht vom Benutzer zugänglich ist.
+Der Grafikadapter ist über einen Platinenconnector mit der Hauptplatine verbunden, und der Grafikadapter befindet sich in einem Gehäuse, auf das der Benutzer nicht zugreifen kann.
 
 </dd> <dt>
 
-<span id="D3DBUSIMPL_MODIFIER_NON_STANDARD"></span><span id="d3dbusimpl_modifier_non_standard"></span>**D3DBUSIMPL- \_ Modifizierer \_ nicht \_ Standard**
+<span id="D3DBUSIMPL_MODIFIER_NON_STANDARD"></span><span id="d3dbusimpl_modifier_non_standard"></span>**\_D3DBUSIMPL-MODIFIZIERER \_ UNGLEICH \_ STANDARD**
 </dt> <dd>
 
-Einer der D3DBUSIMPL-Modifizierer \_ \_ \_ xxx-Flags ist festgelegt.
+Eines der \_ \_ Xxx-Flags des MODIFIZIERERMODIFIZIERER D3DBUSIMPL \_ ist festgelegt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es können bis zu drei Flags festgelegt werden. Flags im Bereich von 0x00 bis 0x04 (**D3DBUSTYPE \_ xxx**) stellen den grundlegenden Bustyp bereit. Flags im Bereich von 0x10000 bis 0x50000 (**D3DBUSIMPL \_ Modifier \_ xxx**) ändern die grundlegende Beschreibung. Der Treiber legt ein Flag für einen Bustyp fest und kann NULL oder ein modifiziererflag festlegen. Wenn der Treiber ein modifiziererflag festlegt, wird auch das Flag " **D3DBUSIMPL \_ Modifizierer \_ Non \_ Standard** " festgelegt. Flags werden mit einem bitweisen **or** kombiniert.
+Es können bis zu drei Flags festgelegt werden. Flags im Bereich 0x00 bis 0x04 (**D3DBUSTYPE \_ Xxx**) stellen den grundlegenden Bustyp bereit. Flags im Bereich 0x10000 bis 0x50000 (**D3DBUSIMPL \_ MODIFIER \_ Xxx**) ändern die grundlegende Beschreibung. Der Treiber legt ein Bustypflag fest und kann null oder ein Modifiziererflag festlegen. Wenn der Treiber ein Modifiziererflag festlegt, legt er auch das **D3DBUSIMPL \_ MODIFIER \_ NON \_ STANDARD-Flag** fest. Flags werden mit einem bitweisen **OR** kombiniert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -136,17 +136,17 @@ Es können bis zu drei Flags festgelegt werden. Flags im Bereich von 0x00 bis 0x
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>D3d9types. h (Include d3d9. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>D3d9types.h (einschließlich D3d9.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Direct3D-videoenumerationen](direct3d-video-enumerations.md)
+[Direct3D-Videoenumerationen](direct3d-video-enumerations.md)
 </dt> </dl>
 
  

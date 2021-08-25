@@ -1,19 +1,19 @@
 ---
-description: Das boolesche <supportsAdvancedQuerySyntax> Element gibt an, ob der Suchanbieter die Erweiterte Abfrage Syntax unterstützt. Die Standardeinstellung ist „false“. Dieses Element ist optional und verfügt über keine untergeordneten Elemente und keine Attribute.
+description: Das boolesche <supportsAdvancedQuerySyntax> Element gibt an, ob der Suchanbieter die erweiterte Abfragesyntax unterstützt. Der Standardwert ist false. Dieses Element ist optional und hat keine untergeordneten Elemente und keine Attribute.
 ms.assetid: d4aef1f1-63c8-4e9a-9e22-5efbb8c523b2
-title: supportsadvancedquerysyntax-Element (Suchconnector-Schema)
+title: supportsAdvancedQuerySyntax-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 39d31eb96615c952f703729fd9d22f2e5d27f38b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8235c1021ae04cbbce65500ebf008f645ef74c1f2bb6ea7f3a9edfe4253e035
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844510"
 ---
-# <a name="supportsadvancedquerysyntax-element-search-connector-schema"></a>supportsadvancedquerysyntax-Element (Suchconnector-Schema)
+# <a name="supportsadvancedquerysyntax-element-search-connector-schema"></a>supportsAdvancedQuerySyntax-Element (Search Connector Schema)
 
-Das boolesche <supportsAdvancedQuerySyntax> Element gibt an, ob der Suchanbieter die [Erweiterte Abfrage Syntax](-search-3x-advancedquerysyntax.md)unterstützt. Die Standardeinstellung ist „false“. Dieses Element ist optional und verfügt über keine untergeordneten Elemente und keine Attribute.
+Das boolesche <supportsAdvancedQuerySyntax> Element gibt an, ob der Suchanbieter die [erweiterte Abfragesyntax](-search-3x-advancedquerysyntax.md)unterstützt. Der Standardwert ist false. Dieses Element ist optional und hat keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ Das boolesche <supportsAdvancedQuerySyntax> Element gibt an, ob der Suchanbieter
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert `true` gibt an, dass der Suchanbieter Erweiterte Abfrage Syntax unterstützt, die in Such Abfragen gesendet wird.
+Der Wert `true` gibt an, dass der Suchanbieter erweiterte Abfragesyntax unterstützt, die in Suchabfragen gesendet wird.
 
 ## <a name="example"></a>Beispiel
 

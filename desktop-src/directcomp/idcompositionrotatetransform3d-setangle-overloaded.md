@@ -1,9 +1,9 @@
 ---
-title: IDCompositionRotateTransform3D-Methoden zum Festlegen von Methoden (Dcomp. h)
-description: Ändert oder animiert den Wert der Angle-Eigenschaft einer 3D-Drehungs Transformation. Die Angle-Eigenschaft gibt den Drehungs Winkel in Grad an. Der Standardwert ist 0 (null).
+title: IDCompositionRotateTransform3D SetAngle-Methoden (Dcomp.h)
+description: Ändert oder animiert den Wert der Angle-Eigenschaft einer 3D-Drehungstransformation. Die Angle-Eigenschaft gibt den Drehwinkel in Grad an. Der Standardwert ist 0 (null).
 ms.assetid: 12BEE73C-195A-42B5-A1BC-B5235440AC43
 keywords:
-- Dritangle-Methoden directcomposition
+- SetAngle-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 766c9d1bda678a494ddeb2e20feb61016cce19a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9780c1ab851200061b2ae380254c4c06d82ee60c3d6bc932e9b6f31302a55557
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891970"
 ---
-# <a name="idcompositionrotatetransform3dsetangle-methods"></a>IDCompositionRotateTransform3D:: *-Methoden
+# <a name="idcompositionrotatetransform3dsetangle-methods"></a>IDCompositionRotateTransform3D::SetAngle-Methoden
 
-Ändert oder animiert den Wert der Angle-Eigenschaft einer 3D-Drehungs Transformation. Die Angle-Eigenschaft gibt den Drehungs Winkel in Grad an. Der Standardwert ist 0 (null).
+Ändert oder animiert den Wert der Angle-Eigenschaft einer 3D-Drehungstransformation. Die Angle-Eigenschaft gibt den Drehwinkel in Grad an. Der Standardwert ist 0 (null).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ ms.locfileid: "104477010"
 
 | Methode                                                                                                       | BESCHREIBUNG                                          |
 |:-------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------|
-| [**(Float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setangle(float))                                     | Ändert den Wert der Angle-Eigenschaft.<br/>  |
-| [**"Eintangle" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setangle(idcompositionanimation)) | Animiert den Wert der Angle-Eigenschaft.<br/> |
+| [**SetAngle(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setangle(float))                                     | Ändert den Wert der Angle-Eigenschaft.<br/>  |
+| [**SetAngle(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setangle(idcompositionanimation)) | Animiert den Wert der Angle-Eigenschaft.<br/> |
 
 
 
@@ -40,10 +40,10 @@ ms.locfileid: "104477010"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 

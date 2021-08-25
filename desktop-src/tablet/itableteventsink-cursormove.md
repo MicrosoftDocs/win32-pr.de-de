@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, wenn der Cursor über den Tablet-Digitalisierer bewegt wird.
+description: Tritt ein, wenn der Cursor über den Tablettdiger bewegt wird.
 ms.assetid: cd2863af-59a9-4dd0-a679-84861a70ef53
-title: 'Itableteventsink:: Cursor move-Methode'
+title: ITabletEventSink::CursorMove-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: f6950e0b30c1b8fc8ccf3e60a8aaa05b9eeb3215
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 030fa5ba4adc725288d5135ccd24409d4fc02cddbc16da52aa375a275a73be5a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119843490"
 ---
-# <a name="itableteventsinkcursormove-method"></a>Itableteventsink:: Cursor move-Methode
+# <a name="itableteventsinkcursormove-method"></a>ITabletEventSink::CursorMove-Methode
 
-Tritt auf, wenn der Cursor über den Tablet-Digitalisierer bewegt wird.
+Tritt ein, wenn der Cursor über den Tablettdiger bewegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT CursorMove(
 
 <dl> <dt>
 
-*TCID* 
+*tcid* 
 </dt> <dd>
 
-Eindeutiger dentifier des Tablet-Digitalisierungsprogramms.
+Eindeutiger Dentifizierer des Tablett digitalisierers.
 
 </dd> <dt>
 
-*zid* 
+*Cid* 
 </dt> <dd>
 
 Eindeutiger Bezeichner des Tablettstifts.
@@ -61,21 +61,21 @@ Eindeutiger Bezeichner des Tablettstifts.
 *hWnd* 
 </dt> <dd>
 
-Das Fenster, in dem der Cursor verschoben wurde.
+Das Fenster, über das sich der Cursor bewegt hat.
 
 </dd> <dt>
 
-*XPos* 
+*xPos* 
 </dt> <dd>
 
-Die X-Position des Tablettstifts.
+Die X-Position des Stifts.
 
 </dd> <dt>
 
-*YPos* 
+*yPos* 
 </dt> <dd>
 
-Die Y-Position des Tablettstifts.
+Die Y-Position des Stifts.
 
 </dd> </dl>
 
@@ -88,7 +88,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -100,7 +100,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -110,7 +110,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itableteventsink-Schnittstelle**](itableteventsink.md)
+[**ITabletEventSink-Schnittstelle**](itableteventsink.md)
 </dt> </dl>
 
  

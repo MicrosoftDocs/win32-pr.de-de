@@ -1,32 +1,32 @@
 ---
-description: Die folgenden Rückgabewerte werden von Kryptografiefunktionen verwendet und in Wincrypt. h definiert. Kryptografierückgabe Werte werden gemäß der Verwendung wie folgt kategorisiert.
+description: Die folgenden Rückgabewerte werden von Kryptografiefunktionen verwendet und in Wincrypt.h definiert. Kryptografierückgabewerte werden wie folgt nach Verwendung kategorisiert.
 ms.assetid: 0468cece-6449-4772-82c9-e3f410c34e46
-title: Kryptografierückgabetwerte
+title: Kryptografierückgabewerte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e45b726785adae8a88ab98753cb3f46aa622660
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99dc7a08219c6387a6cd33641b91e2170577a3cb66e99470b73970f20268165a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875970"
 ---
-# <a name="cryptography-return-values"></a>Kryptografierückgabetwerte
+# <a name="cryptography-return-values"></a>Kryptografierückgabewerte
 
-Die folgenden Rückgabewerte werden von Kryptografiefunktionen verwendet und in Wincrypt. h definiert. Kryptografierückgabe Werte werden gemäß der Verwendung wie folgt kategorisiert.
+Die folgenden Rückgabewerte werden von Kryptografiefunktionen verwendet und in Wincrypt.h definiert. Kryptografierückgabewerte werden wie folgt nach Verwendung kategorisiert.
 
 
 
 | Rückgabewert                                                                       | BESCHREIBUNG                                                                                                |
 |------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [ASN. 1-Codieren/Decodieren von Rückgabe Werten](asn-1-encoding-decoding-return-values.md) | Vordefinierte Konstanten, die von Funktionen zurückgegeben werden, die ASN. 1-Codierung oder-Decodierung ausführen.                    |
-| [Rückgabewerte für Zertifikate und Vertrauens Stellungen](certificate-and-trust-return-values.md)     | Vordefinierte Konstanten, die zurückgegeben werden, wenn der Gültigkeits-und Vertrauensstellungs Status eines Zertifikats bestimmt wird. |
+| [ASN.1 Codieren/Decodieren von Rückgabewerten](asn-1-encoding-decoding-return-values.md) | Vordefinierte Konstanten, die von Funktionen zurückgegeben werden, die ASN.1-Codierung oder -Decodierung durchführen.                    |
+| [Rückgabewerte für Zertifikate und Vertrauensstellungen](certificate-and-trust-return-values.md)     | Vordefinierte Konstanten, die zurückgegeben werden, wenn die Gültigkeit und der Vertrauensstellungsstatus eines Zertifikats bestimmt werden. |
 
 
 
  
 
-Eine Liste der CAPICOM-Rückgabewerte finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md).
+Eine Liste der CAPICOM-Rückgabewerte finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md).
 
  
 

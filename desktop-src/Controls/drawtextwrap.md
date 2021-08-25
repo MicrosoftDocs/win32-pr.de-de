@@ -1,9 +1,9 @@
 ---
-title: Drawtextwrap-Funktion
-description: Zeichnet formatierten Text im angegebenen Rechteck. Er formatiert den Text gemäß der angegebenen Methode (erweitert Registerkarten, rechtfertigt Zeichen, Zeilenumbruch usw.). Diese Funktion umschließt einen aufzurufenden DrawText-Befehl.
+title: DrawTextWrap-Funktion
+description: Zeichnet formatierten Text im angegebenen Rechteck. Der Text wird gemäß der angegebenen Methode formatiert (Erweitern von Registerkarten, Rechtfertigen von Zeichen, Zeilenbruch usw.). Diese Funktion umschließt einen Aufruf von DrawText.
 ms.assetid: 28ab4c5e-3b8f-49e8-b072-500ba1916caf
 keywords:
-- Windows-Steuerelemente der drawtextwrap-Funktion
+- DrawTextWrap-Funktion Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfc5eb707b4016a592ad339223e0f32ab21d4a29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dcbd504955b6ae772ffb3db7bc4cc0223215d6d9ecf880fe7d7e3aa359c992ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878290"
 ---
-# <a name="drawtextwrap-function"></a>Drawtextwrap-Funktion
+# <a name="drawtextwrap-function"></a>DrawTextWrap-Funktion
 
-\[**Drawtextwrap** ist über Windows XP mit Service Pack 2 (SP2) verfügbar. Sie wird möglicherweise in nachfolgenden Versionen geändert oder ist nicht verfügbar. Es wird empfohlen, stattdessen [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext) direkt zu verwenden.\]
+\[**DrawTextWrap** ist über Windows XP mit Service Pack 2 (SP2) verfügbar. Er kann in nachfolgenden Versionen geändert oder nicht verfügbar sein. Stattdessen wird empfohlen, [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext) direkt zu verwenden.\]
 
-Zeichnet formatierten Text im angegebenen Rechteck. Er formatiert den Text gemäß der angegebenen Methode (erweitert Registerkarten, rechtfertigt Zeichen, Zeilenumbruch usw.). Diese Funktion umschließt einen aufzurufenden [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext)-Befehl.
+Zeichnet formatierten Text im angegebenen Rechteck. Der Text wird gemäß der angegebenen Methode formatiert (Erweitern von Registerkarten, Rechtfertigen von Zeichen, Zeilenbruch usw.). Diese Funktion umschließt einen Aufruf von [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext).
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ int WINAPI DrawTextWrap(
 
 <dl> <dt>
 
-*hdc* \[ in\]
+*hdc* \[ In\]
 </dt> <dd>
 
-Typ: **[ **hdc**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **HDC**](/windows/desktop/WinProg/windows-data-types)**
 
 Ein Handle für den Gerätekontext.
 
@@ -61,45 +61,45 @@ Ein Handle für den Gerätekontext.
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein Zeiger auf einen Puffer, der den zu zeichnenden Text enthält. Wenn der *nCount* -Parameter-1 ist, muss die Zeichenfolge mit Null beendet werden.
+Ein Zeiger auf einen Puffer, der den zu zeichnende Text enthält. Wenn der *nCount-Parameter* -1 ist, muss die Zeichenfolge NULL-terminiert sein.
 
-Wenn " *Uformat* " dt \_ modifystring enthält, kann die Funktion dieser Zeichenfolge bis zu vier zusätzliche Zeichen hinzufügen. Der Puffer, der die Zeichenfolge enthält, sollte groß genug sein, um diese zusätzlichen Zeichen aufnehmen zu können.
+Wenn *uFormat* DT \_ MODIFYSTRING enthält, kann die Funktion dieser Zeichenfolge bis zu vier zusätzliche Zeichen hinzufügen. Der Puffer, der die Zeichenfolge enthält, sollte groß genug sein, um diese zusätzlichen Zeichen aufzunehmen.
 
 </dd> <dt>
 
-*nCount* \[ in\]
+*nCount* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Die Länge der Zeichenfolge, auf die von *lpString* verwiesen wird. Wenn *nCount* den Wert-1 hat, wird angenommen, dass der *lpString* -Parameter ein Zeiger auf eine auf NULL endende Zeichenfolge ist, und [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext) berechnet automatisch die Zeichen Anzahl.
+Die Länge der Zeichenfolge, auf die *lpString* zeigt. Wenn *nCount* -1 ist, wird davon ausgegangen, dass der *lpString-Parameter* ein Zeiger auf eine auf NULL endende Zeichenfolge ist, und [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext) berechnet die Zeichenanzahl automatisch.
 
 </dd> <dt>
 
-*lprect* \[ in, out\]
+*lpRect* \[ in, out\]
 </dt> <dd>
 
-Typ: **lprect**
+Typ: **LPRECT**
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die das Rechteck in logischen Koordinaten enthält, in dem der Text formatiert werden soll.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die das Rechteck in logischen Koordinaten enthält, in dem der Text formatiert werden soll.
 
 </dd> <dt>
 
-*Uformat* \[ in\]
+*uFormat* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Formatierungsoptionen. Eine vollständige Liste der Optionen finden Sie in der Dokumentation zu [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext) .
+Die Formatierungsoptionen. Eine vollständige Liste der Optionen finden Sie in der Dokumentation zu [**DrawText.**](/windows/desktop/api/winuser/nf-winuser-drawtext)
 
 </dd> <dt>
 
-*lpdtparametriams* \[ in\]
+*lpDTParams* \[ In\]
 </dt> <dd>
 
-Typ: **lpdrawtextparametriams**
+Typ: **LPDRAWTEXTPARAMS**
 
-Ein Zeiger auf eine [**drawtextparameams**](/windows/win32/api/winuser/ns-winuser-drawtextparams) -Struktur, die zusätzliche Formatierungsoptionen angibt. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf eine [**DRAWTEXTPARAMS-Struktur,**](/windows/win32/api/winuser/ns-winuser-drawtextparams) die zusätzliche Formatierungsoptionen angibt. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
@@ -107,7 +107,7 @@ Ein Zeiger auf eine [**drawtextparameams**](/windows/win32/api/winuser/ns-winuse
 
 Typ: **int**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert die Texthöhe in logischen Einheiten. Wenn **dt \_ vCenter** oder **dt \_ Bottom** angegeben ist, ist der Rückgabewert der Offset vom **obersten** Member von *LPRC* bis zum unteren Rand des gezeichneten Texts, wenn die Funktion fehlschlägt, der Rückgabewert 0 (null) ist.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert die Texthöhe in logischen Einheiten. Wenn **DT \_ VCENTER** oder **DT \_ BOTTOM** angegeben wird, ist der Rückgabewert der Offset vom **obersten** Member von *lprc* bis zum unteren Rand des gezeichneten Texts. Wenn die Funktion fehlschlägt, ist der Rückgabewert 0 (null).
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
@@ -115,7 +115,7 @@ Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/win
 
 ## <a name="remarks"></a>Bemerkungen
 
-**Drawtextwrap** wird nicht nach Name exportiert oder in einem öffentlichen Header deklariert. Um es zu verwenden, müssen Sie [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) und Request Ordnungszahl 415 aus ComCtl32.dll verwenden, um einen Funktionszeiger zu erhalten.
+**DrawTextWrap** wird nicht anhand des Namens exportiert oder in einem öffentlichen Header deklariert. Um es zu verwenden, müssen Sie [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden und Ordnungszahl 415 von ComCtl32.dll anfordern, um einen Funktionszeiger abzurufen.
 
 Weitere Hinweise finden Sie unter [**DrawText**](/windows/desktop/api/winuser/nf-winuser-drawtext).
 
@@ -125,9 +125,9 @@ Weitere Hinweise finden Sie unter [**DrawText**](/windows/desktop/api/winuser/nf
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                           |
-| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 6,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                           |
+| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 6.0 oder höher)</dt> </dl> |
 
 
 

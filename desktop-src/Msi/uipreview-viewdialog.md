@@ -1,7 +1,7 @@
 ---
-description: Die viewdialog-Methode des uipreview-Objekts zeigt ein in der aktuellen Datenbank gespeichertes Dialogfeld "Benutzeroberfläche" an.
+description: Die ViewDialog-Methode des UIPreview-Objekts zeigt ein in der aktuellen Datenbank gespeichertes Dialogfeld für die benutzeroberfläche an.
 ms.assetid: 5bc935ac-38ca-4a51-a1dc-6879dee97b05
-title: Uipreview. viewdialog-Methode
+title: UIPreview.ViewDialog-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: d9ad3772ced2dba952a3d3b068aaa307d1c06398
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 40797da833576c0a829234d6036cb1d583464dea96dbe4e625dcd63c1c1bd4c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893400"
 ---
-# <a name="uipreviewviewdialog-method"></a>Uipreview. viewdialog-Methode
+# <a name="uipreviewviewdialog-method"></a>UIPreview.ViewDialog-Methode
 
-Die **viewdialog** -Methode des [**uipreview**](uipreview-object.md) -Objekts zeigt ein in der aktuellen Datenbank gespeichertes Dialogfeld "Benutzeroberfläche" an.
+Die **ViewDialog-Methode** des [**UIPreview-Objekts**](uipreview-object.md) zeigt ein in der aktuellen Datenbank gespeichertes Dialogfeld für die benutzeroberfläche an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ UIPreview.ViewDialog(
 *Dialog* 
 </dt> <dd>
 
-Der erforderliche Name des Dialog Felds, Unterscheidung nach Groß-/Kleinschreibung und der Primärschlüssel der Dialogfeld Datenbanktabelle.
+Erforderlicher Name des Dialogfelds, bei dem die Schreibung beachtet wird, und der Primärschlüssel der Dialogdatenbanktabelle.
 
 </dd> </dl>
 
@@ -56,9 +56,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iuipreview ist definiert als 000c109a-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IUIPreview ist als 000C109A-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 

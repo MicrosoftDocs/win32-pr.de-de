@@ -1,9 +1,9 @@
 ---
-title: LVM_GETGROUPINFOBYINDEX Meldung (kommstrg. h)
-description: Ruft Informationen zu einer angegebenen Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ getgroupinfobyindex-Makros.
+title: LVM_GETGROUPINFOBYINDEX (Commctrl.h)
+description: Ruft Informationen zu einer angegebenen Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des \_ ListView-Makros GetGroupInfoByIndex.
 ms.assetid: vs|controls|~\controls\listview\messages\lvm_getgroupinfobyindex.htm
 keywords:
-- Windows-Steuerelemente für LVM_GETGROUPINFOBYINDEX Meldung
+- LVM_GETGROUPINFOBYINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,40 +14,40 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cff801eae55ab4b4194ef23e624ff6eff75fbc25
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 482683e9d1026c1deed17bf1f05310d63ac2127a6a2a6f32b5b5d95a0fbbea3e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877400"
 ---
-# <a name="lvm_getgroupinfobyindex-message"></a>LVM \_ getgroupinfobyindex-Meldung
+# <a name="lvm_getgroupinfobyindex-message"></a>LVM \_ GETGROUPINFOBYINDEX-Nachricht
 
-Ruft Informationen zu einer angegebenen Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ getgroupinfobyindex**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgroupinfobyindex) -Makros.
+Ruft Informationen zu einer angegebenen Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ ListView-Makros GetGroupInfoByIndex.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgroupinfobyindex)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
 Der Index der Gruppe.
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
+*lParam* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**orgroup**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) -Struktur, die Informationen über die von *wParam* angegebene Gruppe empfangen soll. Der aufrufende Prozess ist für die Zuordnung von Arbeitsspeicher für die Struktur und alle Puffer in der Struktur verantwortlich, wie z. b. den, auf den das **pszheader** -Element zeigt. Legen Sie alle Kontingenten Elemente der Struktur fest, z. b. **cchheader** die Größe des Puffers, auf den **pszheader** in **WCHARs** zeigt, einschließlich des abschließenden **null**-Zeichens. Legen Sie **CBSIZE** auf sizeof (LVGROUP) fest.
+Ein Zeiger auf eine [**LVGROUP-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) um Informationen zu der durch *wParam* angegebenen Gruppe zu empfangen. Der aufrufende Prozess ist für die Zuweisung von Arbeitsspeicher für die Struktur und alle Puffer in der Struktur verantwortlich, z. B. den Puffer, auf den der **pszHeader-Member zeigt.** Legen Sie alle abhängigen Member der -Struktur fest, z. B. **cchHeader** die Größe des Puffers, auf den **pszHeader** in **WCHARs** zeigt, einschließlich des beendenden **NULL-Werts.** Legen **Sie cbSize** auf sizeof(LVGROUP) fest.
 
-Der Nachrichtenempfänger ist dafür verantwortlich, die Strukturmember mit Informationen für die von *wParam* angegebene Gruppe festzulegen.
+Der Nachrichtenempfänger ist dafür verantwortlich, die Strukturmitglieder mit Informationen für die durch *wParam* angegebene Gruppe festzulegen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

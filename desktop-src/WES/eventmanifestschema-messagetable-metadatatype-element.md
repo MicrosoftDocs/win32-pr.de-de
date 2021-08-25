@@ -1,9 +1,9 @@
 ---
-title: messagetable (metadataType)-Element
-description: Enthält Verweise auf Zeichen folgen, die im Abschnitt mit den Metadaten des Ereignis Instrumentations Manifests verwendet werden. Die Zeichen folgen werden in einer Gruppe von Nachrichten Elementen und IDs zusammengefasst.
+title: messageTable -Element (MetadataType)
+description: Enthält Verweise auf Zeichenfolgen, die im Metadatenabschnitt des Ereignisinstrumentierungsmanifests verwendet werden. Die Zeichenfolgen werden in einer Gruppe von Nachrichtenelementen und IDs gespeichert, die miteinander gekoppelt sind.
 ms.assetid: 868af191-0f9c-435b-878f-ef0584e097d1
 keywords:
-- messagetable-Element EventLog
+- messageTable-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: eb5efc261a2c055a95f71ba556c9acbc0ad45373
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f7c614210a22bc6c6d160a7c161c5b5a89aab85116285822465b43ba75e63095
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865660"
 ---
-# <a name="messagetable-metadatatype-element"></a>messagetable (metadataType)-Element
+# <a name="messagetable-metadatatype-element"></a>messageTable -Element (MetadataType)
 
-Enthält Verweise auf Zeichen folgen, die im Abschnitt mit den Metadaten des Ereignis Instrumentations Manifests verwendet werden. Die Zeichen folgen werden in einer Gruppe von [**Nachrichten**](eventmanifestschema-message-messagetable-element.md) Elementen und IDs zusammengefasst.
+Enthält Verweise auf Zeichenfolgen, die im Metadatenabschnitt des Ereignisinstrumentierungsmanifests verwendet werden. Die Zeichenfolgen werden in einer Gruppe von [**Nachrichtenelementen**](eventmanifestschema-message-messagetable-element.md) und miteinander gekoppelten IDs gespeichert.
 
 ``` syntax
 <xs:element name="messageTable">
@@ -56,7 +56,7 @@ Enthält Verweise auf Zeichen folgen, die im Abschnitt mit den Metadaten des Ere
 </xs:element>
 ```
 
-Das **messagetable** -Element wird durch den komplexen [**metadataType**](eventmanifestschema-metadatatype-complextype.md) -Typ definiert.
+Das **messageTable-Element** wird vom komplexen [**MetadataType-Typ**](eventmanifestschema-metadatatype-complextype.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -64,7 +64,7 @@ Das **messagetable** -Element wird durch den komplexen [**metadataType**](eventm
 
 | Element                                                             | type | BESCHREIBUNG                                                                               |
 |---------------------------------------------------------------------|------|-------------------------------------------------------------------------------------------|
-| [**Nachricht**](eventmanifestschema-message-messagetable-element.md) |      | Gibt einen Verweis auf eine Zeichenfolge im Lokalisierungs Abschnitt des Manifests an.<br/> |
+| [**Nachricht**](eventmanifestschema-message-messagetable-element.md) |      | Gibt einen Verweis auf eine Zeichenfolge im Lokalisierungsabschnitt des Manifests an.<br/> |
 
 
 
@@ -74,10 +74,10 @@ Das **messagetable** -Element wird durch den komplexen [**metadataType**](eventm
 
 | Name    | type   | BESCHREIBUNG                                                              |
 |---------|--------|--------------------------------------------------------------------------|
-| message | Zeichenfolge | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichen folgen Tabelle.<br/>      |
-| mId     | Zeichenfolge | Nicht verwendet.<br/>                                                     |
-| Symbol  | Zeichenfolge | Das Symbol, mit dem auf die Meldung verwiesen wird.<br/>                     |
-| value   | Zeichenfolge | Die Zahl, die als Nachrichten-ID für diese Nachricht verwendet werden soll.<br/> |
+| message | Zeichenfolge | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichenfolgentabelle.<br/>      |
+| mId     | Zeichenfolge | Wird nicht verwendet.<br/>                                                     |
+| Symbol  | Zeichenfolge | Das Symbol, das verwendet wird, um auf die Nachricht zu verweisen.<br/>                     |
+| value   | Zeichenfolge | Die Zahl, die als Nachrichtenbezeichner für diese Nachricht verwendet werden soll.<br/> |
 
 
 
@@ -87,8 +87,8 @@ Das **messagetable** -Element wird durch den komplexen [**metadataType**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -96,16 +96,16 @@ Das **messagetable** -Element wird durch den komplexen [**metadataType**](eventm
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**MetadataType**](eventmanifestschema-metadatatype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Metadaten (instrumentationmanifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
+[**metadata (instrumentationManifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Signalisiert, dass die Video Erfassung durch den Treiber blockiert wird.
+description: Signalisiert, dass die Videoaufnahme vom Treiber blockiert wird.
 ms.assetid: D0EF3879-A775-4A79-9DB0-486B5086CE2A
-title: MF_CAPTURE_ENGINE_CAMERA_STREAM_BLOCKED-Attribut (MF. Engine. h)
+title: MF_CAPTURE_ENGINE_CAMERA_STREAM_BLOCKED -Attribut (Mfcaptureengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d98097a01c81db7b4c890d10b00d61e927b8512
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 596515e667b18b8823a07c0bf4da01c98dd0b942dd64e7c92db023402e58d4e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957010"
 ---
-# <a name="mf_capture_engine_camera_stream_blocked-attribute"></a>\_ \_ \_ \_ \_ Blockierte Attribute des MF-Erfassungs Moduls
+# <a name="mf_capture_engine_camera_stream_blocked-attribute"></a>MF \_ CAPTURE ENGINE CAMERA STREAM \_ \_ \_ \_ BLOCKED-Attribut
 
-Signalisiert, dass die Video Erfassung durch den Treiber blockiert wird.
+Signalisiert, dass die Videoaufnahme vom Treiber blockiert wird.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -23,7 +23,7 @@ Signalisiert, dass die Video Erfassung durch den Treiber blockiert wird.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"MF"-Engine. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfcaptureengine.h</dt> </dl> |
 
 
 
@@ -31,7 +31,7 @@ Signalisiert, dass die Video Erfassung durch den Treiber blockiert wird.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

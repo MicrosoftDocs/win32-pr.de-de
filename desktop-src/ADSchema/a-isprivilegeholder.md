@@ -1,11 +1,11 @@
 ---
 title: Is-Privilege-Holder-Attribut
-description: Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal innehat.
+description: Abwärtslink zu Berechtigungen, die von einem bestimmten Prinzipal gehalten werden.
 ms.assetid: 94355fbc-f7d8-460b-a516-1576629ca63e
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das is-Privilege-Holder-Attribut
-- AD-Schema des isprivilegeholder-Attributs
+- IS-Privilege-Holder-Attribut AD-Schema
+- isPrivilegeHolder-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 895a0202f6ca51ffe7982f33c1fc9f02d021d2a9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d78c64075425e631ca6e3ad5bd78079f0f2682ad047ef49465f579b9e2b17360
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924800"
 ---
 # <a name="is-privilege-holder-attribute"></a>Is-Privilege-Holder-Attribut
 
-Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal innehat.
+Abwärtslink zu Berechtigungen, die von einem bestimmten Prinzipal gehalten werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | Is-Privilege-Inhaber                     |
-| LDAP-Display-Name | isprivilegeholder                       |
+| CN                | Is-Privilege-Holder                     |
+| Ldap-Anzeigename | isPrivilegeHolder                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.638                  |
-| System-ID-GUID    | 19405b9c-3cfa-11d1-a9c0-0000f 80367c1    |
+| System-Id-Guid    | 19405b9c-3cfa-11d1-a9c0-0000f80367c1    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -70,7 +70,7 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,10 +100,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,10 +121,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,10 +142,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,10 +163,10 @@ Rückwärts Verknüpfung zu den Berechtigungen, die ein bestimmter Prinzipal inn
 | Link-ID                | 71                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

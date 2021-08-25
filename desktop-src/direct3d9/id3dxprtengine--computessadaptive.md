@@ -1,7 +1,7 @@
 ---
-description: 'Berechnet einen Übertragungs Vektor, der die Quell Strahlung zum Beenden von Strahlen zuordnet, die sich aus der unter Surface-Aufteilung ergeben, wobei Adaptive Stichprobenentnahme und Materialeigenschaften verwendet werden, die von ID3DXPRTEngine:: setmeschmaterials'
+description: Berechnet einen Übertragungsvektor, der die Quellfläche zuordnt, um die Ausmusterung zu beenden, die sich aus der Subsurface-Punktung ergibt. Dabei werden adaptive Stichproben und Materialeigenschaften verwendet, die von ID3DXPRTEngine::SetMeshMaterials festgelegt werden.
 ms.assetid: 34e42271-703b-4b67-8153-2eca3f8dde92
-title: 'ID3DXPRTEngine:: computess Adaptive-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeSSAdaptive-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 198a597020a0bfcbc789cc741e42048bd89eb95f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a602566c4d0e5b3cb5c68b2f983b6c56a9d9f596ee673db97a72e6054837759b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847380"
 ---
-# <a name="id3dxprtenginecomputessadaptive-method"></a>ID3DXPRTEngine:: computess Adaptive-Methode
+# <a name="id3dxprtenginecomputessadaptive-method"></a>ID3DXPRTEngine::ComputeSSAdaptive-Methode
 
-Berechnet einen Übertragungs Vektor, der die Quell Strahlung zum Beenden von Strahlen zuordnet, die sich aus der unter Surface-Aufteilung ergeben, wobei Adaptive Stichprobenentnahme und Materialeigenschaften verwendet werden, die von [**ID3DXPRTEngine:: setmeschmaterials**](id3dxprtengine--setmeshmaterials.md) Die-Methode generiert neue Scheitel Punkte und Gesichter im Mesh, um das PRT-Signal (precompuradiance-Übertragung) genauer zu berechnen. Diese Methode kann nur für Materialien verwendet werden, die pro-Vertex in einem Mesh-Objekt definiert sind.
+Berechnet einen Übertragungsvektor, der die Quellfläche zu einer Ausgangsfläche zuordnt, die sich aus der Subsurface-Punktung ergibt. Dabei werden die adaptive Stichprobenentnahme und die von [**ID3DXPRTEngine::SetMeshMaterials**](id3dxprtengine--setmeshmaterials.md)festgelegten Materialeigenschaften verwendet. Die -Methode generiert neue Scheitelzeichen und Gesichter im Gitternetz, um das PRT-Signal (Precomputed Radiance Transfer) genauer zu ungefähren. Diese Methode kann nur für Materialien verwendet werden, die pro Scheitelpunkt in einem Gittermodellobjekt definiert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT ComputeSSAdaptive(
 
 <dl> <dt>
 
-*pdatain* \[ in\]
+*pDataIn* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Eingabe Objekt, das das 3D-Objekt aus dem vorherigen Licht Sprung darstellt. Dieser Eingabepuffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**EINGABE-ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das das 3D-Objekt aus dem vorherigen Lichtsprung darstellt. Für diesen Eingabepuffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> <dt>
 
-*Adaptivethresh* \[ in\]
+*AdaptiveThresh* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Schwellenwert für den PRT-Vektor, der für die Unterteilung von Mesh-Scheitel Punkten und Flächen verwendet wird Wenn kleiner als 1E-6f ist, wird ein Standardwert von 1E-6f angegeben.
+Schwellenwert für den PRT-Vektor, der für die Unterteilung von Gitternetzvertices und Gesichtern verwendet werden soll. Wenn kleiner als 1e-6f, wird der Standardwert 1e-6f angegeben.
 
 </dd> <dt>
 
-*Minedgelength* \[ in\]
+*MinEdgeLength* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Minimale Vorderseiten Länge, die bei der adaptiven Stichproben Erstellung generiert wird. Wenn die Methode ermittelt, dass der Wert zu klein ist, wird ein Modell abhängiger Wert angegeben.
+Minimale Länge des Gesichtsrands, die bei adaptiver Stichprobenentnahme generiert wird. Wenn die -Methode feststellt, dass der Wert zu klein ist, wird ein modellabhängiger Wert angegeben.
 
 </dd> <dt>
 
-*Maxsubdiv* \[ in\]
+*MaxSubdiv* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Ebene der Unterteilung einer Fläche, die bei der adaptiven Stichprobenentnahme verwendet wird. Wenn der Wert NULL ist, wird der Standardwert 4 angegeben.
-
-</dd> <dt>
-
-*pdataout* \[ in, out\]
-</dt> <dd>
-
-Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
-
-Ein Zeiger auf ein Output [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, das einen einzelnen Sprung der unter Oberfläche durch verstreut-Licht modelliert. Dieser Ausgabepuffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Maximale Unterteilung eines Gesichts, das bei der adaptiven Stichprobenentnahme verwendet wird. Wenn 0 (null) ist, wird der Standardwert 4 angegeben.
 
 </dd> <dt>
 
-*pdatatotal* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei dem es sich um die laufende Summe aller vorherigen pdataout-Ausgaben handelt. Kann **null** sein.
+Zeiger auf ein [**AUSGABE-ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das einen einzelnen Bounce des im Unteroberflächen-Punktdiagramm angezeigten Lichts modelliert. Für diesen Ausgabepuffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
+
+</dd> <dt>
+
+*pDataTotal* \[ in, out\]
+</dt> <dd>
+
+Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
+
+Zeiger auf ein optionales [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) das die laufende Summe aller vorherigen pDataOut-Ausgaben ist. Kann NULL **sein.**
 
 </dd> </dl>
 
@@ -103,15 +103,15 @@ Zeiger auf ein optionales [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, bei d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die unter Surface-Zerstreuung zu modellieren, wird diese Methode für jeden Licht Sprung aufgerufen, nachdem eine [**ID3DXPRTEngine:: computedirectlightingshadaptive**](id3dxprtengine--computedirectlightingshadaptive.md) -Methode aufgerufen wurde.
+Rufen Sie diese Methode für jeden lichten Bounce auf, nachdem eine [**ID3DXPRTEngine::ComputeDirectLightingSHAdaptive-Methode**](id3dxprtengine--computedirectlightingshadaptive.md) aufgerufen wurde, um die Subsurface-Punktung zu modellieren.
 
-Die Ausgabe dieser Methode enthält nicht "Albedo", und nur das eingehende Licht ist in den Simulator integriert. Indem Sie Albedo nicht multiplizieren, können Sie Albedo-Variation in einer präziseren Skalierung als die Quell Strahlung modellieren und dadurch genauere Ergebnisse aus der Komprimierung erzielen.
+Die Ausgabe dieser Methode enthält kein Albedo, und nur eingehendes Licht ist in den Simulator integriert. Wenn Sie den Albedo nicht multiplizieren, können Sie albedo-Variationen in einer feineren Skala als die Quellleistung modellieren und so genauere Ergebnisse aus der Komprimierung erzielen.
 
-[**ID3DXPRTEngine:: multiplyalbedo**](id3dxprtengine--multiplyalbedo.md) aufzurufen, um jeden PRT-Vektor von Albedo zu multiplizieren.
+Rufen [**Sie ID3DXPRTEngine::MultiplyAlbedo**](id3dxprtengine--multiplyalbedo.md) auf, um jeden PRT-Vektor mit dem Albedo zu multiplizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,22 +119,22 @@ Die Ausgabe dieser Methode enthält nicht "Albedo", und nur das eingehende Licht
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computebounce**](id3dxprtengine--computebounce.md)
+[**ID3DXPRTEngine::ComputeBounce**](id3dxprtengine--computebounce.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: computess**](id3dxprtengine--computess.md)
+[**ID3DXPRTEngine::ComputeSS**](id3dxprtengine--computess.md)
 </dt> </dl>
 
  

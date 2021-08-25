@@ -1,19 +1,19 @@
 ---
-title: C/C++-Code Beispiel Erstellen eines Aufgaben Auslösers
-description: In diesem Beispiel wird ein neuer-Vorgang für eine vorhandene Aufgabe mit dem Namen Test Aufgabe erstellt.
+title: C/C++-Codebeispiel zum Erstellen eines Aufgabentriggers
+description: In diesem Beispiel wird ein neuer Trigger für eine vorhandene Aufgabe namens Testaufgabe erstellt.
 ms.assetid: 94755ec0-4b65-4adb-8074-9a0990e26e3c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00f7f846992d9d5a149230414a9b954198c06b2e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9fb9fd30dba24ea101c968f1b84e18d7fad584e61c6087a08ac1150c93fdc351
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959640"
 ---
-# <a name="cc-code-example-creating-a-task-trigger"></a>C/C++-Code Beispiel: Erstellen eines Aufgaben Auslösers
+# <a name="cc-code-example-creating-a-task-trigger"></a>C/C++-Codebeispiel: Erstellen eines Aufgabentriggers
 
-In diesem Beispiel wird ein neuer-Vorgang für eine vorhandene Aufgabe mit dem Namen Test Aufgabe erstellt.
+In diesem Beispiel wird ein neuer Trigger für eine vorhandene Aufgabe namens Testaufgabe erstellt.
 
 
 ```C++
@@ -174,12 +174,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

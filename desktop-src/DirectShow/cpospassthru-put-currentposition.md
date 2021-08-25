@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ CurrentPosition-Methode legt die aktuelle Position relativ zur Gesamtdauer des Streams fest. Diese Methode implementiert die imediaposition::p UT \_ CurrentPosition-Methode.
+description: Die put \_ CurrentPosition-Methode legt die aktuelle Position relativ zur Gesamtdauer des Streams fest. Diese Methode implementiert die IMediaPosition::p \_ currentPosition-Methode.
 ms.assetid: 22d7e9e4-47da-45b5-9be0-3c5128f90353
-title: CPosPassThru.put_CurrentPosition-Methode (ctlutil. h)
+title: CPosPassThru.put_CurrentPosition -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 85426636a34d0e197b36496d5a38a847c61b9501
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ab6a8323023e9a2cd20f9453dc00e0c56a688086f10772b72b59b3c012a24702
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909220"
 ---
-# <a name="cpospassthruput_currentposition-method"></a>Cpospassthru. Put \_ CurrentPosition-Methode
+# <a name="cpospassthruput_currentposition-method"></a>CPosPassThru.put \_ CurrentPosition-Methode
 
-Die- `put_CurrentPosition` Methode legt die aktuelle Position relativ zur Gesamtdauer des Streams fest. Diese Methode implementiert die [**imediaposition::p UT \_ CurrentPosition**](/windows/desktop/api/Control/nf-control-imediaposition-put_currentposition) -Methode.
+Die `put_CurrentPosition` -Methode legt die aktuelle Position relativ zur Gesamtdauer des Streams fest. Diese Methode implementiert die [**IMediaPosition::p \_ currentPosition-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-put_currentposition)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT put_CurrentPosition(
 
 <dl> <dt>
 
-*lltime* 
+*llTime* 
 </dt> <dd>
 
 Neue Position in Sekunden.
@@ -51,7 +51,7 @@ Neue Position in Sekunden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

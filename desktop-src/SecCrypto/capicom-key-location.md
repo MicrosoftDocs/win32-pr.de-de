@@ -1,7 +1,7 @@
 ---
-description: Die CAPICOM \_ Key \_ Location-Enumeration definiert Schlüssel Speicherort Typen.
+description: Die CAPICOM \_ KEY \_ LOCATION-Enumeration definiert Schlüsselspeicherorttypen.
 ms.assetid: d6261906-66aa-4c18-8305-b7998bbe53d5
-title: CAPICOM_KEY_LOCATION-Enumeration (CAPICOM. h)
+title: CAPICOM_KEY_LOCATION -Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: d2e5af31c48f6130f99acc2ac7eaf6e582407b6f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fe51754d798ee1d6970c3be8d9e12c12cffb1aaf174ecb94dc663af3bad89fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879130"
 ---
-# <a name="capicom_key_location-enumeration"></a>CAPICOM \_ Key \_ Location-Enumeration
+# <a name="capicom_key_location-enumeration"></a>CAPICOM \_ KEY \_ LOCATION-Enumeration
 
-Die **CAPICOM \_ Key \_ Location** -Enumeration definiert Schlüssel Speicherort Typen.
+Die **CAPICOM \_ KEY \_ LOCATION-Enumeration** definiert Schlüsselspeicherorttypen.
 
 ## <a name="members"></a>Member
 
@@ -30,16 +30,16 @@ Die **CAPICOM \_ Key \_ Location** -Enumeration definiert Schlüssel Speicherort
 
 | Member                           | BESCHREIBUNG                          | Wert |
 |----------------------------------|--------------------------------------|-------|
-| **Schlüssel für aktuellen CAPICOM- \_ \_ Benutzer \_**  | Der Schlüssel ist ein Benutzerschlüssel.<br/>    | 0     |
-| **lokaler CAPICOM- \_ \_ Computer \_ Schlüssel** | Der Schlüssel ist ein Computer Schlüssel.<br/> | 1     |
+| **AKTUELLER \_ \_ CAPICOM-BENUTZERSCHLÜSSEL \_**  | Der Schlüssel ist ein Benutzerschlüssel.<br/>    | 0     |
+| **\_CAPICOM-SCHLÜSSEL FÜR DEN LOKALEN \_ \_ COMPUTER** | Der Schlüssel ist ein Computerschlüssel.<br/> | 1     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Enumeration wird von der folgenden Methode verwendet:
 
--   [**Zertifikat. Laden**](certificate-load.md)
+-   [**Certificate.Load**](certificate-load.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,8 +47,8 @@ Diese Enumeration wird von der folgenden Methode verwendet:
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 

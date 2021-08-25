@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentobjectnotfoundexception-Konstruktor'
-title: Esentobjectnotfoundexception-Konstruktor
+description: 'Weitere Informationen zu: EsentObjectNotFoundException-Konstruktor'
+title: EsentObjectNotFoundException-Konstruktor
 TOCTitle: 'EsentObjectNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentObjectNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentobjectnotfoundexception.esentobjectnotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bb644bec98944cb535fb1c9b7f3d9669ade64396
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6266026525b7a6c9ef3465b1d70634da3f287dc076ee084adbbb559a5a876786
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851880"
 ---
-# <a name="esentobjectnotfoundexception-constructor"></a>Esentobjectnotfoundexception-Konstruktor
+# <a name="esentobjectnotfoundexception-constructor"></a>EsentObjectNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esentobjectnotfoundexception-Klasse.
+Initialisiert eine neue Instanz der EsentObjectNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentObjectNotFoundException()
 public EsentObjectNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentobjectnotfoundexception-Klasse](./esentobjectnotfoundexception-class.md)
+[EsentObjectNotFoundException-Klasse](./esentobjectnotfoundexception-class.md)
 
-[Esentobjectnotfoundexception-Elemente](./esentobjectnotfoundexception-members.md)
+[EsentObjectNotFoundException-Member](./esentobjectnotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

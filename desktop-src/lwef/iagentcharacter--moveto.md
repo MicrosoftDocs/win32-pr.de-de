@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter-muveto
-description: Iagentcharacter-muveto
+title: IAgentCharacter MoveTo
+description: IAgentCharacter MoveTo
 ms.assetid: 4e24d2f8-1df2-47ca-a1e9-b9d29708207d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86d1ba423dc637895216ff03e2adec2862bbf27d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 00ea5a0e288e4b7d9782f1b463fdbcccf01b0da9314894be1a60c556392e25e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848540"
 ---
-# <a name="iagentcharactermoveto"></a>Iagentcharacter:: muveto
+# <a name="iagentcharactermoveto"></a>IAgentCharacter::MoveTo
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT MoveTo(
@@ -24,47 +24,47 @@ HRESULT MoveTo(
 );
 ```
 
-Gibt die zugehörige **Bewegungs** Zustands Animation wieder und verschiebt den Zeichen Rahmen an die angegebene Position.
+Gibt die zugeordnete Animation **zum Bewegen** des Zustands wieder und verschiebt den Zeichenrahmen an die angegebene Position.
 
--   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgibt, enthält diese Variable die ID der Anforderung.
+-   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war. Wenn die Funktion zurückgegeben wird, enthält diese Variable die ID der Anforderung.
 
 <dl> <dt>
 
-<span id="x"></span><span id="X"></span>*Stuben*
+<span id="x"></span><span id="X"></span>*X*
 </dt> <dd>
 
-Die x-Koordinate der neuen Position in Pixel relativ zum Bildschirm Ursprung (oben links). Der Speicherort eines Zeichens basiert auf der linken oberen Ecke des Animations Rahmens.
+Die x-Koordinate der neuen Position in Pixel relativ zum Bildschirmursprung (oben links). Die Position eines Zeichens basiert auf der oberen linken Ecke des Animationsrahmens.
 
 </dd> <dt>
 
-<span id="y"></span><span id="Y"></span>*Teenie*
+<span id="y"></span><span id="Y"></span>*Y*
 </dt> <dd>
 
-Die y-Koordinate der neuen Position in Pixel relativ zum Bildschirm Ursprung (oben links). Der Speicherort eines Zeichens basiert auf der linken oberen Ecke des Animations Rahmens.
+Die y-Koordinate der neuen Position in Pixel relativ zum Bildschirmursprung (oben links). Die Position eines Zeichens basiert auf der oberen linken Ecke des Animationsrahmens.
 
 </dd> <dt>
 
-<span id="lSpeed"></span><span id="lspeed"></span><span id="LSPEED"></span>*lspeed*
+<span id="lSpeed"></span><span id="lspeed"></span><span id="LSPEED"></span>*lSpeed*
 </dt> <dd>
 
-Ein Parameter, der in Millisekunden angibt, wie schnell der Rahmen des Zeichens bewegt wird. Der empfohlene Wert ist 1000. Durch die Angabe von NULL (0) wird der Frame verschoben, ohne eine Animation zu spielen.
+Ein Parameter, der in Millisekunden angibt, wie schnell sich der Rahmen des Zeichens bewegt. Der empfohlene Wert ist 1000. Wenn Null (0) angegeben wird, wird der Frame ohne Wiedergabe einer Animation verschoben.
 
 </dd> <dt>
 
-<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwreqid*
+<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwReqID*
 </dt> <dd>
 
-Adresse einer Variablen, [**die die Anforderung**](https://www.bing.com/search?q=**MoveTo**) -ID für das anforderungspaar empfängt.
+Adresse einer Variablen, die die MoveTo-Anforderungs-ID empfängt. [](https://www.bing.com/search?q=**MoveTo**)
 
 </dd> </dl>
 
-Wenn Sie das HTTP-Protokoll für den Zugriff auf Zeichen-und Animationsdaten verwenden, verwenden Sie die [**Prepare**](/windows/desktop/lwef/iagentcharacter--prepare) -Methode, um die Verfügbarkeit der **Bewegungs** Zustands Animationen vor dem Aufrufen dieser Methode sicherzustellen. Auch wenn die Animation nicht geladen ist, verschiebt der Server den Frame noch immer.
+Wenn Sie das HTTP-Protokoll verwenden, um auf Zeichen- und Animationsdaten zuzugreifen, verwenden Sie die [**Prepare-Methode,**](/windows/desktop/lwef/iagentcharacter--prepare) um die Verfügbarkeit der **Moving** State-Animationen sicherzustellen, bevor Sie diese Methode aufrufen. Auch wenn die Animation nicht geladen ist, verschiebt der Server den Frame trotzdem.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: SetPosition**](iagentcharacter--setposition.md)
+[**IAgentCharacter::SetPosition**](iagentcharacter--setposition.md)
 
 
- 
+ 
 
- 
+ 

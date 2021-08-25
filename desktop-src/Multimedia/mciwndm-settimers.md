@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_SETTIMERS-Nachricht (Vfw.h)
-description: Die MCIWNDM \_ SETTIMERS-Meldung legt die Aktualisierungszeiträume fest, die MCIWnd verwendet, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu senden.
+title: MCIWNDM_SETTIMERS (Vfw.h)
+description: Die MCIWNDM SETTIMERS-Meldung legt die Aktualisierungszeiträume fest, die von MCIWnd verwendet werden, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu \_ senden.
 ms.assetid: 06407c67-b620-4f80-9fe9-456cdf3d0666
 keywords:
-- MCIWNDM_SETTIMERS nachricht Windows Multimedia
+- MCIWNDM_SETTIMERS von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119807555"
 ---
-# <a name="mciwndm_settimers-message"></a>MCIWNDM \_ SETTIMERS-Nachricht
+# <a name="mciwndm_settimers-message"></a>MCIWNDM \_ SETTIMERS-Meldung
 
-Die **MCIWNDM \_ SETTIMERS-Meldung** legt die Aktualisierungszeiträume fest, die MCIWnd verwendet, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu senden. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndSetTimers-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers) senden.
+Die **MCIWNDM \_ SETTIMERS-Meldung** legt die Aktualisierungszeiträume fest, die von MCIWnd verwendet werden, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu senden. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndSetTimers-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers) senden.
 
 
 ```C++
@@ -68,7 +68,7 @@ Diese Meldung gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

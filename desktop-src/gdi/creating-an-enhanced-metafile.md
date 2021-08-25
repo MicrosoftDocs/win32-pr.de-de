@@ -1,27 +1,27 @@
 ---
-description: Dieser Abschnitt enthält ein Beispiel, das die Erstellung einer erweiterten Metadatei veranschaulicht, die auf einem Datenträger gespeichert ist. dabei wird der vom Benutzer angegebene Dateiname verwendet.
+description: Dieser Abschnitt enthält ein Beispiel, das die Erstellung einer erweiterten Metadatei veranschaulicht, die auf einem Datenträger gespeichert ist, indem ein vom Benutzer angegebener Dateiname verwendet wird.
 ms.assetid: 084b2737-eb55-4587-b8e8-3eb3fa3688c4
 title: Erstellen einer erweiterten Metadatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4877481ed0a68d6379e7eaabb00bbe37cef74c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4e53266ac0677da211308c7028f4d61869fc2890f27c06daeff9cfb6fea87e58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849230"
 ---
 # <a name="creating-an-enhanced-metafile"></a>Erstellen einer erweiterten Metadatei
 
-Dieser Abschnitt enthält ein Beispiel, das die Erstellung einer erweiterten Metadatei veranschaulicht, die auf einem Datenträger gespeichert ist. dabei wird der vom Benutzer angegebene Dateiname verwendet.
+Dieser Abschnitt enthält ein Beispiel, das die Erstellung einer erweiterten Metadatei veranschaulicht, die auf einem Datenträger gespeichert ist, indem ein vom Benutzer angegebener Dateiname verwendet wird.
 
-Das Beispiel verwendet einen Gerätekontext für das Anwendungsfenster als Verweis Gerätekontext. (Das System speichert die Auflösungs Daten für dieses Gerät im Header der erweiterten Metadatei.) Die Anwendung ruft ein Handle ab, das diesen Gerätekontext durch Aufrufen der [**GetDC**](/windows/desktop/api/Winuser/nf-winuser-getdc) -Funktion identifiziert.
+Im Beispiel wird ein Gerätekontext für das Anwendungsfenster als Referenzgerätekontext verwendet. (Das System speichert die Auflösungsdaten für dieses Gerät im Header der erweiterten Metadatei.) Die Anwendung ruft ein Handle ab, das diesen Gerätekontext identifiziert, indem die [**GetDC-Funktion**](/windows/desktop/api/Winuser/nf-winuser-getdc) aufgerufen wird.
 
-Im Beispiel werden die Dimensionen des-Client Bereichs der Anwendung verwendet, um die Dimensionen des Bild Rahmens zu definieren. Mithilfe der von der [**GetClientRect**](/windows/win32/api/winuser/nf-winuser-getclientrect) -Funktion zurückgegebenen Rechteck Dimensionen konvertiert die Anwendung die Geräte Einheiten in 01-Millimeter-Einheiten und übergibt die konvertierten Werte an [**die Funktion "**](/windows/desktop/api/Wingdi/nf-wingdi-createenhmetafilea) -Funktion".
+Im Beispiel werden die Dimensionen des Clientbereichs der Anwendung verwendet, um die Dimensionen des Bildrahmens zu definieren. Mithilfe der rechteckigen Dimensionen, die von der [**GetClientRect-Funktion**](/windows/win32/api/winuser/nf-winuser-getclientrect) zurückgegeben werden, konvertiert die Anwendung die Geräteeinheiten in Einheiten mit 0,01 Mm und übergibt die konvertierten Werte an die [**CreateEnhMetaFile-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-createenhmetafilea)
 
-Das Beispiel zeigt das Dialogfeld **als allgemein speichern** an, in dem der Benutzer den Dateinamen der neuen erweiterten Metadatei angeben kann. Das System fügt die Erweiterung mit drei Zeichen. EMF an diesen Dateinamen an und [**übergibt den Namen an die Funktion "**](/windows/desktop/api/Wingdi/nf-wingdi-createenhmetafilea) -Funktion".
+Im Beispiel wird ein allgemeines Dialogfeld **Speichern unter** angezeigt, in dem der Benutzer den Dateinamen der neuen erweiterten Metadatei angeben kann. Das System fügt die emf-Erweiterung mit drei Zeichen an diesen Dateinamen an und übergibt den Namen an die [**CreateEnhMetaFile-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-createenhmetafilea)
 
-Das Beispiel bettet außerdem eine Textbeschreibung des Bilds in den Enhanced-Metafile-Header ein. Diese Beschreibung wird als Ressource in der Zeichen folgen Tabelle der Ressourcen Datei der Anwendung angegeben. In einer funktionierenden Anwendung würde diese Zeichenfolge jedoch aus einem benutzerdefinierten Steuerelement in einem gemeinsamen Dialogfeld oder in einem separaten Dialogfeld, das ausschließlich für diesen Zweck angezeigt wird, abgerufen werden.
+Im Beispiel wird auch eine Textbeschreibung des Bilds in den Enhanced-Metafile-Header eingebettet. Diese Beschreibung wird als Ressource in der Zeichenfolgentabelle der Ressourcendatei der Anwendung angegeben. In einer funktionierenden Anwendung wird diese Zeichenfolge jedoch aus einem benutzerdefinierten Steuerelement in einem allgemeinen Dialogfeld oder aus einem separaten Dialogfeld abgerufen, das ausschließlich zu diesem Zweck angezeigt wird.
 
 
 ```C++
