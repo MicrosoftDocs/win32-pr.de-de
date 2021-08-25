@@ -1,11 +1,11 @@
 ---
 title: LDAP-Display-Name-Attribut
-description: Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schreiben des Attributs mithilfe des LDAP-Protokolls verwendet wird.
+description: Der Name, der von LDAP-Clients wie dem ADSI LDAP-Anbieter zum Lesen und Schreiben des Attributs mithilfe des LDAP-Protokolls verwendet wird.
 ms.assetid: 9cb0b2f0-16cf-4fc6-85b2-d21ff71bc477
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für LDAP-Display-Name-Attribut
-- ldapDisplayName-Attribut AD-Schema
+- LDAP-Display-Name-Attribut AD-Schema
+- AD-Schema des lDAPDisplayName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7ffa25777ec4b5139a41ba9e56d8d5f0a9a3d92
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fd089ab917cc8f96e04171bc868acd012726ac4431c756e4dd055354b276953d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104213761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804260"
 ---
 # <a name="ldap-display-name-attribute"></a>LDAP-Display-Name-Attribut
 
-Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schreiben des Attributs mithilfe des LDAP-Protokolls verwendet wird.
+Der Name, der von LDAP-Clients wie dem ADSI LDAP-Anbieter zum Lesen und Schreiben des Attributs mithilfe des LDAP-Protokolls verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | LDAP-Display-Name                           |
-| LDAP-Display-Name | lDAPDisplayName                             |
+| CN                | LDAP-Anzeigename                           |
+| Ldap-Anzeigename | lDAPDisplayName                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Schema Administrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.2.460                      |
 | System-ID-GUID    | bf96799a-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Ist einwertig       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Der Name, der von LDAP-Clients, z. b. dem ADSI LDAP-Anbieter, zum Lesen und Schr
 | Link-ID                | \-                                                                                                        |
 | MAPI-Id                | 0x8171                                                                                                    |
 | System-Only            | False                                                                                                     |
-| Ist-einwertig       | Richtig                                                                                                      |
-| Ist indiziert             | Richtig                                                                                                      |
-| Im globalen Katalog      | Richtig                                                                                                      |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                              |
+| Is-Single-Valued       | True                                                                                                      |
+| Ist indiziert             | True                                                                                                      |
+| Im globalen Katalog      | True                                                                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                              |
 | Range-Lower            | 1                                                                                                         |
 | Range-Upper            | 256                                                                                                       |
 | Search-Flags           | 0x00000009                                                                                                |
 | System-Flags           | 0x00000010                                                                                                |
-| In verwendete Klassen        | [**Attribut-Schema**](c-attributeschema.md)<br/> [**Class-Schema**](c-classschema.md)<br/> |
+| In verwendete Klassen        | [**Attributschema**](c-attributeschema.md)<br/> [**Klassenschema**](c-classschema.md)<br/> |
 
 
 

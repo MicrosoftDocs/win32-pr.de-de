@@ -1,31 +1,31 @@
 ---
-description: Der Interpolations Modus eines Grafik Objekts wirkt sich auf die Art und Weise aus, wie Bilder von Windows GDI+ skaliert (gestreckt und verkleinert) werden.
+description: Der Interpolationsmodus eines Grafikobjekts beeinflusst die Art und Weise, wie bilder Windows GDI+ skaliert (gestreckt und verkleinert) werden.
 ms.assetid: 3aeead47-78da-4ab3-9126-2fbe9e341e48
-title: Verwenden des Interpolations Modus zum Steuern der Bildqualität während der Skalierung
+title: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d34a829f2edf2f341f50bee771d909f7c4eef98e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92fefe314ef680a54f9d885bb185c77b3349e84cbe5f7bcf347cf9ff3fa0a4ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943700"
 ---
-# <a name="using-interpolation-mode-to-control-image-quality-during-scaling"></a>Verwenden des Interpolations Modus zum Steuern der Bildqualität während der Skalierung
+# <a name="using-interpolation-mode-to-control-image-quality-during-scaling"></a>Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung
 
-Der Interpolations Modus eines [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts wirkt sich auf die Art und Weise aus, wie Bilder von Windows GDI+ skaliert (gestreckt und verkleinert) werden. Die [**InterpolationMode**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-interpolationmode) -Enumeration in "gdiplusenums. h" definiert mehrere Interpolations Modi, von denen einige in der folgenden Liste aufgeführt sind:
+Der Interpolationsmodus eines [**Grafikobjekts**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) beeinflusst die Art und Weise, wie Windows GDI+ Bilder skaliert (gestreckt und verkleinert). Die [**InterpolationMode-Enumeration**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-interpolationmode) in Gdiplusenums.h definiert mehrere Interpolationsmodi, von denen einige in der folgenden Liste angezeigt werden:
 
--   Interpolationmudenearestneighbor
--   Interpolationmodebilinear
--   Interpolationmodehighqualitybilinear
--   Interpolationmodebikubisch
--   Interpolationmodehighqualitybikubisch
+-   InterpolationModeModeRestNeighbor
+-   InterpolationModeBilinear
+-   InterpolationModeHighQualityBilinear
+-   InterpolationModeBicubic
+-   InterpolationModeHighQualityBicubic
 
-Zum Strecken eines Bilds muss jedes Pixel im ursprünglichen Bild einer Gruppe von Pixeln im größeren Bild zugeordnet werden. Zum Verkleinern eines Bilds müssen Gruppen von Pixeln im ursprünglichen Bild einem einzelnen Pixel im kleineren Bild zugeordnet werden. Die Effektivität der Algorithmen, die diese Zuordnungen durchführen, bestimmt die Qualität eines skalierten Bilds. Algorithmen, die skalierbare Images höherer Qualität liefern, erfordern tendenziell mehr Verarbeitungszeit. In der vorangehenden Liste ist interpolationmudenearestneighbor der Modus mit der niedrigsten Qualität und interpolationmodehighqualitybikubisch der Modus mit der höchsten Qualität.
+Um ein Bild zu strecken, muss jedes Pixel im ursprünglichen Bild einer Gruppe von Pixeln im größeren Bild zugeordnet werden. Um ein Bild zu verkleinern, müssen Gruppen von Pixeln im ursprünglichen Bild einzelnen Pixeln im kleineren Bild zugeordnet werden. Die Effektivität der Algorithmen, die diese Zuordnungen durchführen, bestimmt die Qualität eines skalierten Bilds. Algorithmen, die qualitativ hochwertigere skalierte Bilder erzeugen, erfordern in der Regel mehr Verarbeitungszeit. In der obigen Liste ist InterpolationModeRestNeighbor der Modus mit der niedrigsten Qualität und InterpolationModeHighQualityBicubic der Modus mit der höchsten Qualität.
 
-Um den Interpolations Modus festzulegen, übergeben Sie einen der Member der [**InterpolationMode**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-interpolationmode) -Enumeration an die **setinterpolationmode** -Methode eines [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts.
+Um den Interpolationsmodus festzulegen, übergeben Sie einen der Member der [**InterpolationMode-Enumeration**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-interpolationmode) an die **SetInterpolationMode-Methode** eines [**Graphics-Objekts.**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)
 
-Im folgenden Beispiel wird ein Bild gezeichnet und dann mit drei verschiedenen Interpolations Modi verkleinert:
+Im folgenden Beispiel wird ein Bild zeichnet und dann mit drei verschiedenen Interpolationsmodi verkleinert:
 
 
 ```
@@ -73,7 +73,7 @@ graphics.DrawImage(
 
 Die folgende Abbildung zeigt das ursprüngliche Bild und die drei kleineren Bilder.
 
-![Abbildung zeigt ein großes ursprüngliches Bild und die drei kleineren Bilder mit unterschiedlicher Qualität](images/grapes1.png)
+![Abbildung eines großen Originalbilds und der drei kleineren Bilder mit unterschiedlicher Qualität](images/grapes1.png)
 
  
 

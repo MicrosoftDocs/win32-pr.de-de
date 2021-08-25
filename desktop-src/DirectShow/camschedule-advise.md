@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Request" verteilt alle Anforderungen, die für eine angegebene Zeit oder eine frühere Zeit geplant sind.
+description: Die Advise-Methode versendet alle Anforderungen, die für einen bestimmten Zeitpunkt oder früher geplant sind.
 ms.assetid: 09ea84b7-517a-4ea6-9e03-0d9cd8f72e1f
-title: Camschedule. Empfehlung-Methode (dsschedule. h)
+title: CAMSchedule.Advise-Methode (Dsschedule.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 70880243cef294ebe747463cd11737027faf9277
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a0943479aaa7fe2e6d699bba147977a73f48fc31186fb64ea26a211e2ea31d8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757790"
 ---
-# <a name="camscheduleadvise-method"></a>Camschedule. Empfehlung-Methode
+# <a name="camscheduleadvise-method"></a>CAMSchedule.Advise-Methode
 
-Die- `Advise` Methode sendet alle Anforderungen, die für eine angegebene Zeit oder früher geplant sind.
+Die `Advise` -Methode gibt alle Anforderungen weiter, die für einen bestimmten Zeitpunkt oder früher geplant sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ REFERENCE_TIME Advise(
 
 <dl> <dt>
 
-*rttime* \[ atur\]
+*rtTime* \[ Ref\]
 </dt> <dd>
 
-Der-Wert, der die aktuelle Verweis Zeit angibt.
+Ein -Wert, der die aktuelle Verweiszeit angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Verweis Zeitpunkt der nächsten geplanten anforderungsanforderung oder die maximale Zeit zurück, \_ Wenn keine Links vorhanden sind.
+Gibt die Bezugszeit der nächsten geplanten Advise-Anforderung zurück, oder MAX \_ TIME, wenn keine noch verfügbar sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode von der Uhr aufgerufen wird, wird die aktuelle Verweis Zeit angegeben. Der Planer bestimmt, welche Anforderungs Anforderungen ggf. abgelaufen sind, und sendet Sie. Wenn eine One-Shot-Anforderung abläuft, wird Sie vom Scheduler gelöscht. Wenn eine regelmäßige Anforderung abläuft, plant der Scheduler diese für den nächsten Zeitpunkt der Empfehlung erneut. Die-Methode gibt die Zeit der nächsten ausstehenden Anforderung zurück.
+Wenn die Uhr diese Methode aufruft, gibt sie die aktuelle Verweiszeit an. Der Planer bestimmt, welche Advise-Anforderungen abgelaufen sind (falls möglich) und versendet sie. Wenn eine einmalige Anforderung abläuft, löscht der Planer sie. Wenn eine regelmäßige Anforderung abläuft, wird sie vom Planer für den nächsten Zeitpunkt der Beratung neu geplant. Die -Methode gibt die Zeit der nächsten ausstehenden Anforderung zurück.
 
-Zum Senden einer Benachrichtigungs Anforderung signalisiert der Planer das Ereignis oder die Semaphor, die im *hnotify* -Parameter der Methode " [**camschedule:: addadvisepacket**](camschedule-addadvisepacket.md) " angegeben sind.
+Um eine Advise-Anforderung zu senden, signalisiert der Planer das Ereignis oder Semaphor, das bzw. das im *hNotify-Parameter* der [**METHODE WEBCAMSchedule::AddAdvisePacket**](camschedule-addadvisepacket.md) angegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Zum Senden einer Benachrichtigungs Anforderung signalisiert der Planer das Ereig
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dsschedule. h (Include Streams. h)</dt> </dl>                                                                                |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Dsschedule.h (include Streams.h)</dt> </dl>                                                                                |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Camschedule-Klasse**](camschedule.md)
+[**CAMSchedule-Klasse**](camschedule.md)
 </dt> </dl>
 
  

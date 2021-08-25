@@ -1,25 +1,25 @@
 ---
-description: System Gesten werden herkömmlichen Maus Nachrichten zugeordnet.
+description: Systemgesten werden herkömmlichen Mausnachrichten zugeordnet.
 ms.assetid: 2ae217ba-6cc7-4057-bb52-880da7ff8fd0
-title: System Gesten
+title: Systemgesten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aeec3ba7b8fe93b48cdc67116f82c23041a1defd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01ef0b1b82dda43c08e4f060934f5dda6c563a564023ce614d6038d346a27937
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351130"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119843330"
 ---
-# <a name="system-gestures"></a>System Gesten
+# <a name="system-gestures"></a>Systemgesten
 
-System Gesten werden herkömmlichen Maus Nachrichten zugeordnet. Tablet PCs unterstützen Stift System Eingabe Gesten mit Linksklick-, Doppelklick-, Rechtsklick-, Drag-Drag-, rechter Drag-und Hover-Maus Meldungen. Anwendungen, die für einen Tablet PC entwickelt wurden, müssen diese Gesten auf die gleiche Weise unterstützen, wie Sie Mausaktionen unterstützen. Bei herkömmlichen Anwendungen werden viele der von Gesten ausgelösten Ereignisse als herkömmliche Maus Meldungen interpretiert.
+Systemgesten werden herkömmlichen Mausnachrichten zugeordnet. Tablet-PCs unterstützen Stiftsystemeingabegesten von Linksklick-, Doppelklick-, Rechtsklick-, Linkszieh-, Rechtszieh- und Mauszeigermeldungen. Anwendungen, die für einen Tablet-PC entwickelt wurden, müssen diese Gesten auf die gleiche Weise unterstützen wie Mausaktionen. Bei herkömmlichen Anwendungen werden viele der ereignisse, die durch Gesten ausgelöst werden, als herkömmliche Mausnachrichten interpretiert.
 
-In den folgenden Abschnitten werden Pen-und Systemereignisse erläutert.
+In den folgenden Abschnitten werden Stift- und Systemereignisse erläutert.
 
--   [System Ereignisse und Maus Meldungen](system-events-and-mouse-messages.md)
--   [Lauschen auf System Ereignisse](listening-to-system-events.md)
--   [Zeitachse von Maus Meldungen und System Ereignissen](timeline-of-mouse-messages-and-system-events.md)
+-   [Systemereignisse und Mausmeldungen](system-events-and-mouse-messages.md)
+-   [Lauschen auf Systemereignisse](listening-to-system-events.md)
+-   [Zeitachse von Mausmeldungen und Systemereignissen](timeline-of-mouse-messages-and-system-events.md)
 -   [Mehrere Funktionen mit einem Stift](multiple-functionality-with-one-pen.md)
 
  

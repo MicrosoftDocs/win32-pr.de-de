@@ -1,9 +1,9 @@
 ---
-title: Slider. disabledImage
-description: Das disabledImage-Attribut gibt das Bild des Schiebereglers an oder ruft es ab, das verwendet wird, wenn das Schieberegler-Steuerelement deaktiviert ist.
+title: SLIDER.disabledImage
+description: Das attribut disabledImage gibt das Bild des Schiebereglers an, der beim Deaktivieren des Schieberegler-Steuerelements verwendet wird, oder ruft es ab.
 ms.assetid: b6c4237d-8eb0-44ce-a23f-9bdc5c21aca8
 keywords:
-- Slider. disabledImage Windows Media Player
+- SLIDER.disabledImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf1b90dcbd551ca0f8bb332f858eac0b69c46733
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 596afbed41fa1a864d8ed4e5fd217cb4856a716623ad2a60db080b3e965ab48d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123070"
 ---
-# <a name="sliderdisabledimage"></a>Slider. disabledImage
+# <a name="sliderdisabledimage"></a>SLIDER.disabledImage
 
-Das **disabledImage** -Attribut gibt das Bild des Schiebereglers an oder ruft es ab, das verwendet wird, wenn das Schieberegler-Steuerelement deaktiviert ist.
+Das **attribut disabledImage** gibt das Bild des Schiebereglers an, der beim Deaktivieren des Schieberegler-Steuerelements verwendet wird, oder ruft es ab.
 
 ``` syntax
         elementID.disabledImage
@@ -29,13 +29,13 @@ Das **disabledImage** -Attribut gibt das Bild des Schiebereglers an oder ruft es
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen einer Bilddatei enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die den Namen einer Bilddatei enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-" **DisabledImage** " ist optional. Wenn Sie nicht bereitgestellt wird, wird **BackgroundImage** für alle deaktivierten Zustände verwendet. Wenn ein Schieberegler-Steuerelement deaktiviert ist, wird kein Vordergrundbild angezeigt.
+**DisabledImage** ist optional. Wenn es nicht angegeben wird, wird **backgroundImage** für alle deaktivierten Zustände verwendet. Wenn ein Schieberegler-Steuerelement deaktiviert ist, ist kein Vordergrundbild sichtbar.
 
-Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
+Die unterstützten Formate sind BMP, JPG, PNG und GIF (ohne animierte GIFs).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -51,10 +51,10 @@ Die unterstützten Formate sind BMP, JPG, PNG und GIF (keine animierten GIFs).
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. BackgroundImage**](slider-backgroundimage.md)
+[**SLIDER.backgroundImage**](slider-backgroundimage.md)
 </dt> </dl>
 
  

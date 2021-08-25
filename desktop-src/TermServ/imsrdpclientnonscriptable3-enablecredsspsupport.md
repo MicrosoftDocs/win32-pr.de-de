@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 enablekredsspsupport (Eigenschaft)
-description: Gibt an oder Ruft ab, ob der Credential Security Service Provider (kredssp) für diese Verbindung aktiviert ist.
+title: IMsRdpClientNonScriptable3 EnableCredSspSupport-Eigenschaft
+description: Gibt an oder ruft ab, ob der Credential Security Service Provider (CredSSP) für diese Verbindung aktiviert ist.
 ms.assetid: 770da50b-2a93-4274-9b6f-c24c13f08549
 ms.tgt_platform: multiple
 keywords:
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, enablekredsspsupport-Eigenschaft
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, enablekredsspsupport-Eigenschaft
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, enablekredsspsupport-Eigenschaft
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, enablekredsspsupport-Eigenschaft
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, enablekredsspsupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , EnableCredSspSupport-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2330b800d15f95a7b59a01735de971dd4b212d6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2f682fe85de22bcffad42d5da80c2f565f4690373629a804c7bbb4fefafa23b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125690"
 ---
-# <a name="imsrdpclientnonscriptable3enablecredsspsupport-property"></a>IMsRdpClientNonScriptable3:: enablekredsspsupport (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3enablecredsspsupport-property"></a>IMsRdpClientNonScriptable3::EnableCredSspSupport-Eigenschaft
 
-Gibt an oder Ruft ab, ob der Credential Security Service Provider (kredssp) für diese Verbindung aktiviert ist.
+Gibt an oder ruft ab, ob der Credential Security Service Provider (CredSSP) für diese Verbindung aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,7 +74,7 @@ HRESULT get_EnableCredSspSupport(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob "kredssp" für diese Verbindung aktiviert ist.
+Gibt an, ob CredSSP für diese Verbindung aktiviert ist.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -2,7 +2,7 @@
 description: 'StartService-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter): Versucht, den Referenzdienst in seinen Startzustand zu stellen.'
 ms.assetid: b7a815a2-7bf6-436f-b3b4-de55eeb2de0e
 ms.tgt_platform: multiple
-title: StartService-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter)
+title: StartService-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a630b9d926ff5377312f1c67630a20816ab38b6c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c88588ec506d24726b99eaa7a1c3f8316bee8e44d6270efb0c51b165ac01a14f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752390"
 ---
-# <a name="startservice-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>StartService-Methode der Win32_Service -Klasse (CIMWin32 WMI-Anbieter)
+# <a name="startservice-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>StartService-Methode der Win32_Service -Klasse (CIMWin32-WMI-Anbieter)
 
 Die **StartService-Methode** versucht, den Dienst, auf den verwiesen wird, in seinen Startzustand zu platzieren.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -221,24 +221,24 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es scheint zwar keinen praktischen Unterschied zwischen einem beendeten Dienst und einem angehaltenen Dienst zu geben, aber die beiden Zustände unterscheiden sich vom SCM. Ein beendeter Dienst ist ein Dienst, der nicht ausgeführt wird und die gesamte Dienststartprozedur durchlaufen muss. Ein angehaltener Dienst wird jedoch weiterhin ausgeführt, aber seine Funktion wurde angehalten. Aus diesem Grund muss ein angehaltener Dienst nicht die gesamte Dienststartprozedur durchlaufen, sondern eine andere Prozedur, um die Funktionsweise fortzusetzen.
+Obwohl es möglicherweise keinen praktischen Unterschied zwischen einem beendeten und einem angehaltenen Dienst zu geben scheint, werden die beiden Zustände im SCM anders angezeigt. Ein beendeter Dienst ist ein Dienst, der nicht ausgeführt wird und die gesamte Dienststartprozedur durchgehen muss. Ein angehaltener Dienst wird jedoch noch ausgeführt, hat aber seine Funktion angehalten. Aus diesem Grund muss ein angehaltener Dienst nicht die gesamte Dienststartprozedur durchgehen, sondern benötigt ein anderes Verfahren, um wieder funktionsfähig zu sein.
 
-Sie müssen die richtige Methode verwenden, um einen angehaltenen Dienst zu starten oder einen angehaltenen Dienst fortzusetzen. Die [**Win32-Dienstmethoden \_**](win32-service.md) **StartService** und [**ResumeService**](resumeservice-method-in-class-win32-service.md) sollten in den folgenden Situationen verwendet werden:
+Sie müssen die richtige Methode verwenden, um einen beendeten Dienst zu starten oder einen angehaltenen Dienst wieder aufzunehmen. Die [**Win32-Dienstmethoden \_**](win32-service.md) **StartService** und [**ResumeService**](resumeservice-method-in-class-win32-service.md) sollten in den folgenden Situationen verwendet werden:
 
--   Wenn ein Dienst derzeit beendet wird, müssen Sie ihn mithilfe der **StartService-Methode** neu starten. [**ResumeService**](resumeservice-method-in-class-win32-service.md) kann einen Dienst, der derzeit beendet ist, nicht starten.
--   Wenn ein Dienst angehalten wird, müssen Sie [**ResumeService**](resumeservice-method-in-class-win32-service.md)verwenden. Wenn Sie die **StartService-Methode** für einen angehaltenen Dienst verwenden, erhalten Sie die Meldung "Der Dienst wird bereits ausgeführt." Der Dienst bleibt jedoch angehalten, bis der Dienststeuerungscode zum Fortsetzen an ihn gesendet wird.
+-   Wenn ein Dienst derzeit beendet wird, müssen Sie ihn mithilfe der **StartService-Methode** neu starten. [**ResumeService**](resumeservice-method-in-class-win32-service.md) kann keinen Dienst starten, der derzeit beendet ist.
+-   Wenn ein Dienst angehalten wird, müssen Sie [**ResumeService verwenden.**](resumeservice-method-in-class-win32-service.md) Wenn Sie die **StartService-Methode** für einen angehaltenen Dienst verwenden, erhalten Sie die Meldung "Der Dienst wird bereits ausgeführt." Der Dienst bleibt jedoch angehalten, bis der Code zum Fortsetzen der Dienststeuerung an ihn gesendet wird.
 
-Wenn Sie einen beendeten Dienst starten, der von einem anderen Dienst abhängig ist, werden beide Dienste gestartet. Wenn ein Dienst mit dieser Methode gestartet wird, werden alle abhängigen Dienste nicht automatisch gestartet. Sie müssen die Zuordnungsklasse [**Win32 \_ DependentService**](win32-dependentservice.md) und die [Associators Of-Abfrage](/windows/desktop/WmiSdk/associators-of-statement) verwenden, um die Abhängigen zu suchen und separat zu starten.
+Wenn Sie einen beendeten Dienst starten, der von einem anderen Dienst abhängt, werden beide Dienste gestartet. Wenn ein Dienst mit dieser Methode gestartet wird, werden alle abhängigen Dienste nicht automatisch gestartet. Sie müssen die Zuordnungsklasse [**Win32 \_ DependentService**](win32-dependentservice.md) und die [Associators Of-Abfrage](/windows/desktop/WmiSdk/associators-of-statement) verwenden, um die abhängigen Daten zu suchen und separat zu starten.
 
 ## <a name="examples"></a>Beispiele
 
-Das [Remotely Enable RDP](https://Gallery.TechNet.Microsoft.Com/Remotely-Enable-RDP-855c3842) PowerShell-Beispiel aktiviert remote den Remotedesktop Dienst.
+Im [PowerShell-Beispiel Remote aktivieren](https://Gallery.TechNet.Microsoft.Com/Remotely-Enable-RDP-855c3842) wird der Remotedesktop aktiviert.
 
-Das PowerShell-Beispiel ["Dienst beenden", "Starten", "Aktivieren" oder "Deaktivieren"](https://Gallery.TechNet.Microsoft.Com/212e68f0-5279-4499-8e9e-6aa1807719c0) startet, beendet, aktiviert oder deaktiviert einen Dienst.
+Das [PowerShell-Beispiel Zum Beenden, Starten, Aktivieren](https://Gallery.TechNet.Microsoft.Com/212e68f0-5279-4499-8e9e-6aa1807719c0) oder Deaktivieren von Diensten wird ein Dienst gestartet, beendet, aktiviert oder deaktiviert.
 
-Im folgenden VBSScript-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**Win32-Diensts gestartet \_ wird.**](win32-service.md)
+Im folgenden VBSScript-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst über Instanzen des [**Win32-Diensts gestartet \_ wird.**](win32-service.md)
 
 
 ```VB
@@ -253,7 +253,7 @@ next
 
 
 
-Im folgenden Perl-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst von Instanzen des [**Win32-Diensts gestartet \_ wird.**](win32-service.md)
+Im folgenden Perl-Codebeispiel wird veranschaulicht, wie ein bestimmter Dienst über Instanzen des [**Win32-Diensts gestartet \_ wird.**](win32-service.md)
 
 
 ```
@@ -327,7 +327,7 @@ WScript.Echo "Dependent NetDDE service is " & objNetDDEService.State
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

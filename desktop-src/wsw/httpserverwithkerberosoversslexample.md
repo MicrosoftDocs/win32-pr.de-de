@@ -1,29 +1,29 @@
 ---
-title: Httpserverwithkerberosoversslexample
-description: Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und mit Kerberos über SSL-Sicherheit im gemischten Modus antwortet.
+title: HttpServerWithKerberosOverSslExample
+description: Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und antwortet, mit Kerberos über SSL-Sicherheit im gemischten Modus.
 ms.assetid: 2910f594-2f38-4c1e-bb47-89258b752572
 keywords:
-- Httpserverwithkerberosoversslexample Native Webdienste
-- Wwsapi
+- HttpServerWithKerberosOverSslExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f9bcd3f0d0dbfe9805a39cac6577037f6a5385c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8ef005a49ba184f983f826f6232a7a63baf3886b2fb371e80aa0cf47195f92ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927286"
 ---
-# <a name="httpserverwithkerberosoversslexample"></a>Httpserverwithkerberosoversslexample
+# <a name="httpserverwithkerberosoversslexample"></a>HttpServerWithKerberosOverSslExample
 
-Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und mit Kerberos über SSL-Sicherheit im gemischten Modus antwortet. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Kerberos apreq-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und Nachrichten empfängt und antwortet, mit Kerberos über SSL-Sicherheit im gemischten Modus. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Kerberos-APREQ-Ticket in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Httpserverwithkerberosoverssl. cpp](#httpserverwithkerberosoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [HttpServerWithKerberosOverSsl.cpp](#httpserverwithkerberosoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpserverwithkerberosoversslcpp"></a>Httpserverwithkerberosoverssl. cpp
+## <a name="httpserverwithkerberosoversslcpp"></a>HttpServerWithKerberosOverSsl.cpp
 
 
 ```C++
@@ -488,7 +488,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -627,9 +627,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

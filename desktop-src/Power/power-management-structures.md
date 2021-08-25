@@ -1,52 +1,52 @@
 ---
-description: 'Die folgenden Strukturen werden bei der Energie Verwaltung verwendet:'
+description: 'Die folgenden Strukturen werden bei der Energieverwaltung verwendet:'
 ms.assetid: 706e605e-d522-473d-8797-d6397cdc719a
-title: Energie Verwaltungsstrukturen
+title: Energieverwaltungsstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 755a66227f09f3aa1187a0f31d0c9922c3e57458
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 710ca20b4aeb22007f94431b0c7d6094e9be4def2c112d0cfa48e9002daaff27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128010"
 ---
-# <a name="power-management-structures"></a>Energie Verwaltungsstrukturen
+# <a name="power-management-structures"></a>Energieverwaltungsstrukturen
 
-Die folgenden Strukturen werden bei der Energie Verwaltung verwendet:
+Die folgenden Strukturen werden bei der Energieverwaltung verwendet:
 
 <dl>
 
-[**Administrator \_ Energie \_ Richtlinie**](/windows/desktop/api/WinNT/ns-winnt-administrator_power_policy)  
-[**Akku \_ Informationen**](battery-information-str.md)  
-[**Akku \_ Herstellungs \_ Datum**](battery-manufacture-date-str.md)  
-[**Akku \_ Abfrage \_ Informationen**](battery-query-information-str.md)  
-[**\_Skalierung von Akku Berichten \_**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale)  
-[**Informationen zum Akku \_ Satz \_**](battery-set-information-str.md)  
-[**Akku \_ Status**](battery-status-str.md)  
-[**Status der Akku \_ Wartezeit \_**](battery-wait-status-str.md)  
-[**\_Helligkeit anzeigen**](/previous-versions/windows/desktop/legacy/aa372686(v=vs.85))  
-[**\_Abonnieren von Benachrichtigungs \_ \_ Parametern für Geräte**](/windows/desktop/api/Powrprof/ns-powrprof-device_notify_subscribe_parameters)  
-[**\_ \_ Rückruf \_ Routine für Geräte Benachrichtigung**](/windows/desktop/api/Powrprof/nc-powrprof-device_notify_callback_routine)  
-[**Global \_ Machine \_ Power \_ Policy**](/windows/desktop/api/PowrProf/ns-powrprof-global_machine_power_policy)  
-[**globale \_ Energie \_ Richtlinie**](/windows/desktop/api/PowrProf/ns-powrprof-global_power_policy)  
-[**globale \_ Benutzer \_ Energie \_ Richtlinie**](/windows/desktop/api/PowrProf/ns-powrprof-global_user_power_policy)  
-[**Computer \_ Energie \_ Richtlinie**](/windows/desktop/api/PowrProf/ns-powrprof-machine_power_policy)  
-[**\_Energieversorgung des Computer Prozessors \_ \_**](/windows/desktop/api/PowrProf/ns-powrprof-machine_processor_power_policy)  
-[**Energie \_ Aktions \_ Richtlinie**](/windows/desktop/api/WinNT/ns-winnt-power_action_policy)  
-[**Energie \_ Richtlinie**](/windows/desktop/api/PowrProf/ns-powrprof-power_policy)  
-[**powerbroadcast- \_ Einstellung**](/windows/desktop/api/WinUser/ns-winuser-powerbroadcast_setting)  
-[**Informationen zur Prozessor \_ Leistung \_**](processor-power-information-str.md)  
-[**Prozessor \_ Energie \_ Richtlinie**](/windows/desktop/api/WinNT/ns-winnt-processor_power_policy)  
-[**Informationen zur Prozessor \_ Energie \_ Richtlinie \_**](/windows/desktop/api/WinNT/ns-winnt-processor_power_policy_info)  
-[**Grund \_ Kontext**](/windows/desktop/api/MinWinBase/ns-minwinbase-reason_context)  
-[**System \_ Akku \_ Zustand**](/windows/desktop/api/WinNT/ns-winnt-system_battery_state)  
-[**System \_ Energie \_ Funktionen**](/windows/desktop/api/WinNT/ns-winnt-system_power_capabilities)  
-[**System \_ Energie \_ Informationen**](system-power-information-str.md)  
-[**System \_ Energie \_ Pegel**](/windows/desktop/api/WinNT/ns-winnt-system_power_level)  
-[**System \_ Energie \_ Richtlinie**](/windows/desktop/api/WinNT/ns-winnt-system_power_policy)  
-[**System \_ Energie \_ Status**](/windows/desktop/api/Winbase/ns-winbase-system_power_status)  
-[**Benutzer \_ Energie \_ Richtlinie**](/windows/desktop/api/PowrProf/ns-powrprof-user_power_policy)  
+[**\_ADMINISTRATOR-POWER \_ POLICY**](/windows/desktop/api/WinNT/ns-winnt-administrator_power_policy)  
+[**\_AKKUINFORMATIONEN**](battery-information-str.md)  
+[**\_DATUM DER AKKUHERSTELLUNG \_**](battery-manufacture-date-str.md)  
+[**\_ \_ AKKUABFRAGEINFORMATIONEN**](battery-query-information-str.md)  
+[**\_ \_ AKKUBERICHTERSTELLUNGSSKALIERUNG**](/windows/desktop/api/WinNT/ns-winnt-battery_reporting_scale)  
+[**\_INFORMATIONEN ZUM AKKUSATZ \_**](battery-set-information-str.md)  
+[**\_AKKUSTATUS**](battery-status-str.md)  
+[**\_ \_ AKKUWARTESTATUS**](battery-wait-status-str.md)  
+[**\_DISPLAY-HELLIGKEIT**](/previous-versions/windows/desktop/legacy/aa372686(v=vs.85))  
+[**\_ \_ \_ SUBSCRIBE-PARAMETER FÜR GERÄTEBENACHRICHTIGUNGEN**](/windows/desktop/api/Powrprof/ns-powrprof-device_notify_subscribe_parameters)  
+[**RÜCKRUFROUTINE FÜR \_ \_ \_ GERÄTEBENACHRICHTIGUNGEN**](/windows/desktop/api/Powrprof/nc-powrprof-device_notify_callback_routine)  
+[**\_GLOBALE \_ COMPUTER-ENERGIERICHTLINIE \_**](/windows/desktop/api/PowrProf/ns-powrprof-global_machine_power_policy)  
+[**GLOBALE \_ \_ ENERGIERICHTLINIE**](/windows/desktop/api/PowrProf/ns-powrprof-global_power_policy)  
+[**GLOBALE \_ \_ \_ BENUTZER-POWER POLICY**](/windows/desktop/api/PowrProf/ns-powrprof-global_user_power_policy)  
+[**\_ \_ COMPUTER-ENERGIERICHTLINIE**](/windows/desktop/api/PowrProf/ns-powrprof-machine_power_policy)  
+[**\_ \_ \_ COMPUTERPROZESSOR-ENERGIERICHTLINIE**](/windows/desktop/api/PowrProf/ns-powrprof-machine_processor_power_policy)  
+[**POWER \_ \_ ACTION-RICHTLINIE**](/windows/desktop/api/WinNT/ns-winnt-power_action_policy)  
+[**POWER \_ POLICY**](/windows/desktop/api/PowrProf/ns-powrprof-power_policy)  
+[**\_POWERBROADCAST-EINSTELLUNG**](/windows/desktop/api/WinUser/ns-winuser-powerbroadcast_setting)  
+[**\_ \_ PROZESSORLEISTUNGSINFORMATIONEN**](processor-power-information-str.md)  
+[**\_ \_ PROZESSORSTROMRICHTLINIE**](/windows/desktop/api/WinNT/ns-winnt-processor_power_policy)  
+[**\_ \_ \_ PROZESSOR-ENERGIERICHTLINIENINFORMATIONEN**](/windows/desktop/api/WinNT/ns-winnt-processor_power_policy_info)  
+[**\_GRUNDKONTEXT**](/windows/desktop/api/MinWinBase/ns-minwinbase-reason_context)  
+[**\_ \_ SYSTEMAKKUZUSTAND**](/windows/desktop/api/WinNT/ns-winnt-system_battery_state)  
+[**\_ \_ SYSTEMLEISTUNGSFUNKTIONEN**](/windows/desktop/api/WinNT/ns-winnt-system_power_capabilities)  
+[**SYSTEM \_ POWER \_ INFORMATION**](system-power-information-str.md)  
+[**\_ \_ SYSTEMLEISTUNGSEBENE**](/windows/desktop/api/WinNT/ns-winnt-system_power_level)  
+[**SYSTEM \_ POWER \_ POLICY**](/windows/desktop/api/WinNT/ns-winnt-system_power_policy)  
+[**\_ \_ SYSTEMSTROMSTATUS**](/windows/desktop/api/Winbase/ns-winbase-system_power_status)  
+[**\_ \_ BENUTZER-ENERGIERICHTLINIE**](/windows/desktop/api/PowrProf/ns-powrprof-user_power_policy)  
 </dl>
 
  

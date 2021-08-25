@@ -1,7 +1,7 @@
 ---
-description: Gibt den Namen der Zertifikat Vorlage an.
+description: Gibt den Namen der Zertifikatvorlage an.
 ms.assetid: 15d22130-e614-4505-94e8-83c2efbf6d87
-title: 'Iscrdenr:: setcerttemplatename-Methode'
+title: ISCrdEnr::setCertTemplateName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: 53ba18626a7d2bb703ed4d11953fb4872cf9257c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f757ead06e5d1769e109bcbfc8e3510f4298f32145d60c4c0bc992a01f3ab36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993040"
 ---
-# <a name="iscrdenrsetcerttemplatename-method"></a>Iscrdenr:: setcerttemplatename-Methode
+# <a name="iscrdenrsetcerttemplatename-method"></a>ISCrdEnr::setCertTemplateName-Methode
 
-Die **setcerttemplatename** -Methode gibt den Namen der Zertifikat Vorlage an.
+Die **setCertTemplateName-Methode** gibt den Namen der Zertifikatvorlage an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,17 +52,17 @@ SCrdEnr.setCertTemplateName( _
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein Wert, der bestimmt, ob der echte Name oder der Anzeige Name der Zertifikat Vorlage festgelegt wird. Wenn *dwFlags* den \_ \_ \_ \_ anzeigen Amen "Name der Zertifikat Vorlage" aufweisen \_ , wird der Anzeige Name der Zertifikat Vorlage festgelegt. Andernfalls wird der echte Name der Zertifikat Vorlage festgelegt.
+Ein Wert, der bestimmt, ob der tatsächliche Name oder Anzeigename der Zertifikatvorlage festgelegt wird. Wenn *dwFlags über* den Wert SCARD ENROLL CERT TEMPLATE DISPLAY NAME verfügt, wird der Anzeigename der \_ \_ \_ \_ \_ Zertifikatvorlage festgelegt. Andernfalls wird der tatsächliche Name der Zertifikatvorlage festgelegt.
 
 </dd> <dt>
 
-*bstraucerttemplatename* \[ in\]
+*bstrCertTemplateName* \[ In\]
 </dt> <dd>
 
-Der Name der Zertifikat Vorlage, die in der Zertifikat Anforderung verwendet wird.
+Name der Zertifikatvorlage, die in der Zertifikatanforderung verwendet wird.
 
 </dd> </dl>
 
@@ -70,13 +70,13 @@ Der Name der Zertifikat Vorlage, die in der Zertifikat Anforderung verwendet wir
 
 ### <a name="vb"></a>VB
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Namen der Zertifikat Vorlage nicht durch Aufrufen von **iscrdenr:: setcerttemplatename** festlegen, wird der Name standardmäßig auf den Vornamen in der Liste der verfügbaren Zertifikat Vorlagen festgelegt.
+Wenn Sie den Namen der Zertifikatvorlage nicht durch Aufrufen von **ISCrdEnr::setCertTemplateName** festlegen, wird der Name standardmäßig auf den Vornamen in der Liste der verfügbaren Zertifikatvorlagen festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,20 +85,20 @@ Wenn Sie den Namen der Zertifikat Vorlage nicht durch Aufrufen von **iscrdenr:: 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: getcerttemplatename**](iscrdenr-getcerttemplatename.md)
+[**ISCrdEnr::getCertTemplateName**](iscrdenr-getcerttemplatename.md)
 </dt> </dl>
 
  

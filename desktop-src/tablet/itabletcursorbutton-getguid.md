@@ -1,7 +1,7 @@
 ---
-description: Ruft den eindeutigen Bezeichner der Tablettstiftschaltfläche ab.
+description: Ruft den eindeutigen Bezeichner der Stiftschaltfläche ab.
 ms.assetid: 06bd6a84-46cd-4c62-92d6-50caae359e43
-title: 'Itabletcurrsorbutton:: GetGuid-Methode'
+title: ITabletCursorButton::GetGuid-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 21d63ef0c934e96bc93b5384cab1e67f9dd452d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4492aa98630491730435080981172bc60a1eeccfe0c84ed76e3b4d504a79ad1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119844280"
 ---
-# <a name="itabletcursorbuttongetguid-method"></a>Itabletcurrsorbutton:: GetGuid-Methode
+# <a name="itabletcursorbuttongetguid-method"></a>ITabletCursorButton::GetGuid-Methode
 
-Ruft den eindeutigen Bezeichner der Tablettstiftschaltfläche ab.
+Ruft den eindeutigen Bezeichner der Stiftschaltfläche ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ HRESULT GetGuid(
 
 <dl> <dt>
 
-*pguidbtn* \[ vorgenommen\]
+*pguidBtn* \[ out\]
 </dt> <dd>
 
-Ein eindeutiger Wert, der die Tablettstiftschaltfläche identifiziert.
+Ein eindeutiger Wert, der die Stiftschaltfläche identifiziert.
 
 </dd> </dl>
 
@@ -56,7 +56,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -78,7 +78,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itabletcursor Button-Schnittstelle**](itabletcursorbutton.md)
+[**ITabletCursorButton-Schnittstelle**](itabletcursorbutton.md)
 </dt> </dl>
 
  

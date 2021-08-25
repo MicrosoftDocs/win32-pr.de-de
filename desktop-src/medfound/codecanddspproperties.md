@@ -1,80 +1,80 @@
 ---
-description: Codec-und DSP-IPropertyBag-Konstanten.
+description: Codec- und DSP-IPropertyBag-Konstanten.
 ms.assetid: 078b0eea-16dd-4427-b984-9e52a43de559
-title: Codec-und DSP-IPropertyBag-Konstanten
+title: Codec- und DSP-IPropertyBag-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88dcf85e22f55082bb9e2c49041490f4c7aceb2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50a6aa7d9b597b797cb242e3656d8f9f6b36a28ed1a3bec8648dea0674e33039
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959140"
 ---
-# <a name="codec-and-dsp-ipropertybag-constants"></a>Codec-und DSP-IPropertyBag-Konstanten
+# <a name="codec-and-dsp-ipropertybag-constants"></a>Codec- und DSP-IPropertyBag-Konstanten
 
-Es gibt zwei Methoden, um Eigenschaften für die Codec-und DSP-Objekte Programm gesteuert festzulegen, indem Sie entweder die **IPropertyBag** -Schnittstelle oder die **IPropertyStore** -Schnittstelle verwenden. Die gängigsten Eigenschaften sind über beide Schnittstellen verfügbar. Die Verwendung der **IPropertyStore** -Schnittstelle wird gegenüber **IPropertyBag** bevorzugt.
+Es gibt zwei Methoden zum programmgesteuerten Festlegen von Eigenschaften für die Codec- und DSP-Objekte mithilfe der **IPropertyBag-Schnittstelle** oder der **IPropertyStore-Schnittstelle.** Die gängigsten Eigenschaften sind über beide Schnittstellen verfügbar. Die Verwendung der **IPropertyStore-Schnittstelle** wird **IPropertyBag vorgezogen.**
 
 
 
-| IPropertyBag-Zeichen folgen Konstante          | IPropertyStore-Eigenschafts Schlüssel                                                                         |
+| IPropertyBag-Zeichenfolgenkonst constant          | IPropertyStore-Eigenschaftsschlüssel                                                                         |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------|
-| g \_ wszavgframerate                    | [mfpkey \_ asfoverheadperframe](mfpkey-asfoverheadperframeproperty.md)                               |
-| g \_ wszwmacavgbytespersecond           | [mfpkey \_ wmaaufc \_ avgbytespersec](mfpkey-wmaenc-avgbytespersecproperty.md)                          |
-| g \_ wszwmacdrcsetting                  | [mfpkey \_ wmadec \_ drcmode](mfpkey-wmadec-drcmodeproperty.md)                                        |
-| g \_ wszwmachiresoutput                 | [mfpkey \_ wmadec \_ hiresoutput](mfpkey-wmadec-hiresoutputproperty.md)                                |
-| g \_ wszwmacmusicredner classmode        | [Mfpkey \_ wmavoice \_ ENC \_ musicvoiceclassmode](mfpkey-wmavoice-enc-musicspeechclassmodeproperty.md) |
-| g \_ wszwmacoriginalwaveformat          | [mfpkey \_ wmaenc \_ origwaveformat](mfpkey-wmaenc-origwaveformatproperty.md)                          |
-| g \_ wszwmacspeakerconfig               | [mfpkey \_ wmadec \_ spkrcfg](mfpkey-wmadec-spkrcfgproperty.md)                                        |
-| g \_ wszwmacvoicebuffer                 | [Mfpkey \_ wmavoice \_ ENC \_ bufferwindow](mfpkey-wmavoice-enc-bufferwindowproperty.md)                 |
-| g \_ wszwmacvoicebuffer                 | [mfpkey \_ wmavoice- \_ UMC \_ EDL](mfpkey-wmavoice-enc-edlproperty.md)                                   |
-| g \_ wszwmadrcaveragereferenzierung          | [mfpkey \_ wmadrc \_ avgref](mfpkey-wmadrc-avgrefproperty.md)                                          |
-| g \_ wszwmadrcaveragetarget             | [mfpkey \_ wmademokratische \_ avgtarget](mfpkey-wmadrc-avgtargetproperty.md)                                    |
-| g \_ wszwmadrcpeer Reference             | [mfpkey \_ wmadrc- \_ Peer-Ref](mfpkey-wmadrc-peakrefproperty.md)                                        |
-| g \_ wszwmadrcpeer Target                | [mfpkey \_ wmadrc- \_ Peer Ziel](mfpkey-wmadrc-peaktargetproperty.md)                                  |
-| g \_ wszwmcpaudiovbrquality             | [mfpkey \_ vbrquality](mfpkey-vbrqualityproperty.md)                                                 |
-| g \_ wszwmcpaudiovbrsupported           | [mfpkey \_ vbrenabled](mfpkey-vbrenabledproperty.md)                                                 |
-| g \_ wszwmcpmaxpass                   | [mfpkey- \_ passesempfohlen](mfpkey-passesrecommendedproperty.md)                                   |
-| g \_ wszwmvcavgbitrate                  | [mfpkey \_ Ravg](mfpkey-ravgproperty.md)                                                             |
-| g \_ wszwmvcbavg                        | [mfpkey \_ bavg](mfpkey-bavgproperty.md)                                                             |
-| g \_ wszwmvcbdelta taqp                    | [mfpkey \_ bdelta taqp](mfpkey-bdeltaqpproperty.md)                                                     |
-| g \_ wszwmvcbmax                        | [mfpkey ( \_ bmax)](mfpkey-bmaxproperty.md)                                                             |
-| g \_ wszwmvcbufferfullnessinfirstbyte   | [mfpkey \_ bufferfullnessinfirstbyte](mfpkey-bufferfullnessinfirstbyteproperty.md)                   |
-| g \_ wszwmvccodedframes                 | [mfpkey- \_ codedframes](mfpkey-codedframesproperty.md)                                               |
-| g \_ wszwmvccomplexityex                | [\_complexityex für mfpkey](mfpkey-complexityexproperty.md)                                             |
-| g \_ wszwmvccomplexitymode              | [mfpkey- \_ Komplexität](mfpkey-complexityproperty.md)                                                 |
-| g \_ wszwmvccompressionoptimizationtype | [mfpkey \_ compressionoptimizationtype](mfpkey-compressionoptimizationtypeproperty.md)               |
-| g \_ wszwmvccrisp                       | [mfpkey \_ Crisp](mfpkey-crispproperty.md)                                                           |
-| g \_ wszwmvcdecodercomplexityprofile    | [mfpkey \_ decodercomplexityprofile](mfpkey-decodercomplexityprofileproperty.md)                     |
-| g \_ wszwmvcdecodercomplexityangefordert  | [mfpkey \_ decodercomplexityangefordert](mfpkey-decodercomplexityrequestedproperty.md)                 |
-| g \_ wszwmvcdecoderdeinterlacing        | [mfpkey- \_ Decoder \_ Deinterlacing](mfpkey-decoder-deinterlacingproperty.md)                          |
-| g \_ wszwmvcdenoise-Option               | [mfpkey \_ Denoise-Option](mfpkey-denoiseoptionproperty.md)                                           |
-| g \_ wszwmvcendofpass                   | [mfpkey \_ endofpass](mfpkey-endofpassproperty.md)                                                   |
-| g \_ wszwmvcforceframeheight            | [mfpkey \_ forceframeheight](mfpkey-forceframeheightproperty.md)                                     |
-| g \_ wszwmvcforceframewidth             | [mfpkey \_ forceframewidth](mfpkey-forceframewidthproperty.md)                                       |
-| g \_ wszwmvcforcemediansetting          | [mfpkey \_ forcemediansetting](mfpkey-forcemediansettingproperty.md)                                 |
-| g \_ wszwmvcfourcc                      | [mfpkey \_ FourCC](mfpkey-fourccproperty.md)                                                         |
-| g \_ wszwmvcinterlacedcodingenabled     | [mfpkey \_ interlacedcodingenabled](mfpkey-interlacedcodingenabledproperty.md)                       |
-| g \_ wszwmvclookahead                   | [mfpkey- \_ Lookahead](mfpkey-lookaheadproperty.md)                                                   |
-| g \_ wszwmvcloopfilter                  | [mfpkey- \_ loopfilter](mfpkey-loopfilterproperty.md)                                                 |
-| g \_ wszwmvcmacroblockmodecostmethod    | [mfpkey \_ makroblockmodecostmethod](mfpkey-macroblockmodecostmethodproperty.md)                     |
-| g \_ wszwmvcmaxbitrate                  | [mfpkey- \_ Rmax](mfpkey-rmaxproperty.md)                                                             |
-| g \_ wszwmvcmutionmatchmethod           | [mfpkey- \_ Methode "mutionmatchmethod"](mfpkey-motionmatchmethodproperty.md)                                   |
-| g \_ wszwmvcmutionsearchlevel           | [mfpkey- \_ mutesearchlevel](mfpkey-motionsearchlevelproperty.md)                                   |
-| g \_ wszwmvcmutionsearchrange           | [mfpkey-" \_ mutionsearchrange"](mfpkey-motionsearchrangeproperty.md)                                   |
-| g \_ wszwmvcnoiseedgeremuval            | [mfpkey \_ noiseedgeremuval](mfpkey-noiseedgeremovalproperty.md)                                     |
-| g \_ wszwmvcnumthreads                  | [mfpkey- \_ numThreads](mfpkey-numthreadsproperty.md)                                                 |
-| g \_ wszwmvcpassesempfohlen           | [mfpkey- \_ passesempfohlen](mfpkey-passesrecommendedproperty.md)                                   |
-| g \_ wszwmvcpassesused                  | [mfpkey- \_ passesused](mfpkey-passesusedproperty.md)                                                 |
-| g \_ wszwmvcperperaloptlevel          | [mfpkey- \_ peraloptlevel](mfpkey-perceptualoptlevelproperty.md)                                 |
-| g \_ wszwmvcproducedummyframes          | [mfpkey \_ producedummyframes](mfpkey-producedummyframesproperty.md)                                 |
-| g \_ wszwmvcrangeredux                  | [mfpkey \_ rangeredux](mfpkey-rangereduxproperty.md)                                                 |
-| g \_ wszwmvctotalframes                 | [mfpkey- \_ totalFrames](mfpkey-totalframesproperty.md)                                               |
-| g \_ wszwmvcvbrenabled                  | [mfpkey \_ vbrenabled](mfpkey-vbrenabledproperty.md)                                                 |
-| g \_ wszwmvcvbrquality                  | [mfpkey \_ vbrquality](mfpkey-vbrqualityproperty.md)                                                 |
-| g \_ wszwmvcvideosc.                | [mfpkey- \_ videoup](mfpkey-videoscalingproperty.md)                                             |
-| g \_ wszwmvcvtype                       | [mfpkey- \_ VType](mfpkey-vtypeproperty.md)                                                           |
-| g \_ wszwmvczerobyteframes              | [mfpkey- \_ zerobyteframes](mfpkey-zerobyteframesproperty.md)                                         |
+| g \_ wszAvgFrameRate                    | [MFPKEY \_ ASFOVERHEADPERFRAME](mfpkey-asfoverheadperframeproperty.md)                               |
+| g \_ wszWMACAvgBytesPerSecond           | [MFPKEY \_ WMAENC \_ AVGBYTESPERSEC](mfpkey-wmaenc-avgbytespersecproperty.md)                          |
+| g \_ wszWMACDRCSetting                  | [MFPKEY \_ WFPC \_ DRCMODE](mfpkey-wmadec-drcmodeproperty.md)                                        |
+| g \_ wszWMACHiResOutput                 | [MFPKEY \_ WKYC \_ HIRESOUTPUT](mfpkey-wmadec-hiresoutputproperty.md)                                |
+| g \_ wszWMACMacSpeechClassMode        | [MFPKEY \_ WMAVOICE \_ ENC \_ MusicSpeechClassMode](mfpkey-wmavoice-enc-musicspeechclassmodeproperty.md) |
+| g \_ wszWMACOriginalWaveFormat          | [MFPKEY \_ WMAENC \_ ORIGWAVEFORMAT](mfpkey-wmaenc-origwaveformatproperty.md)                          |
+| g \_ wszWMACSpeakerConfig               | [MFPKEY \_ WFPC \_ SPKRCFG](mfpkey-wmadec-spkrcfgproperty.md)                                        |
+| g \_ wszWMACVoiceBuffer                 | [MFPKEY \_ WMAVOICE \_ ENC \_ BufferWindow](mfpkey-wmavoice-enc-bufferwindowproperty.md)                 |
+| g \_ wszWMACVoiceBuffer                 | [MFPKEY \_ WMAVOICE \_ ENC \_ EDL](mfpkey-wmavoice-enc-edlproperty.md)                                   |
+| g \_ wszWMADRCAverageReference          | [MFPKEY \_ WMADRC \_ AVGREF](mfpkey-wmadrc-avgrefproperty.md)                                          |
+| g \_ wszWMADRCAverageTarget             | [MFPKEY \_ WMADRC \_ AVGTARGET](mfpkey-wmadrc-avgtargetproperty.md)                                    |
+| g \_ wszWMADRCPeakReference             | [MFPKEY \_ WMADRC \_ PEAKREF](mfpkey-wmadrc-peakrefproperty.md)                                        |
+| g \_ wszWMADRCPeakTarget                | [MFPKEY \_ WMADRC \_ PEAKTARGET](mfpkey-wmadrc-peaktargetproperty.md)                                  |
+| g \_ wszWMCPAudioVBRQuality             | [MFPKEY \_ VBRQUALITY](mfpkey-vbrqualityproperty.md)                                                 |
+| g \_ wszWMCPAudioVBRSupported           | [MFPKEY \_ VBRENABLED](mfpkey-vbrenabledproperty.md)                                                 |
+| g \_ wszWMCPMaxPasses                   | [\_MFPKEY-ÜBERLÄUFERECOMMENDED](mfpkey-passesrecommendedproperty.md)                                   |
+| g \_ wszWMVCAvgBitrate                  | [MFPKEY \_ RAVG](mfpkey-ravgproperty.md)                                                             |
+| g \_ wszWMVCBAvg                        | [MFPKEY \_ BAVG](mfpkey-bavgproperty.md)                                                             |
+| g \_ wszWMVCBDeltaQP                    | [MFPKEY \_ BDELTAQP](mfpkey-bdeltaqpproperty.md)                                                     |
+| g \_ wszWMVCBMax                        | [MFPKEY \_ BMAX](mfpkey-bmaxproperty.md)                                                             |
+| g \_ wszWMVCBufferFullnessInFirstByte   | [MFPKEY \_ BUFFERFULLNESSINFIRSTBYTE](mfpkey-bufferfullnessinfirstbyteproperty.md)                   |
+| g \_ wszWMVCCodedFrames                 | [\_MFPKEY-CODEDFRAMES](mfpkey-codedframesproperty.md)                                               |
+| g \_ wszWMVCComplexityEx                | [MFPKEY \_ COMPLEXITYEX](mfpkey-complexityexproperty.md)                                             |
+| g \_ wszWMVCComplexityMode              | [MFPKEY-KOMPLEXITÄT \_](mfpkey-complexityproperty.md)                                                 |
+| g \_ wszWMVCCompressionOptimizationType | [MFPKEY \_ COMPRESSIONOPTIMIZATIONTYPE](mfpkey-compressionoptimizationtypeproperty.md)               |
+| g \_ wszWMVCCrisp                       | [\_MFPKEY-AKE](mfpkey-crispproperty.md)                                                           |
+| g \_ wszWMVCDecoderComplexityProfile    | [\_MFPKEY-DECODERCOMPLEXITYPROFILE](mfpkey-decodercomplexityprofileproperty.md)                     |
+| g \_ wszWMVCDecoderComplexityRequested  | [\_MFPKEY-DECODERCOMPLEXITYREQUESTED](mfpkey-decodercomplexityrequestedproperty.md)                 |
+| g \_ wszWMVCDecoderDeinterlacing        | [DEINTERLACING DES \_ MFPKEY-DECODERS \_](mfpkey-decoder-deinterlacingproperty.md)                          |
+| g \_ wszWMVCDenoiseOption               | [MFPKEY \_ DENOISEOPTION](mfpkey-denoiseoptionproperty.md)                                           |
+| g \_ wszWMVCEndOfPass                   | [MFPKEY \_ ENDOFPASS](mfpkey-endofpassproperty.md)                                                   |
+| g \_ wszWMVCForceFrameHeight            | [MFPKEY \_ FORCEFRAMEHEIGHT](mfpkey-forceframeheightproperty.md)                                     |
+| g \_ wszWMVCForceFrameWidth             | [MFPKEY \_ FORCEFRAMEWIDTH](mfpkey-forceframewidthproperty.md)                                       |
+| g \_ wszWMVCForceMedianSetting          | [MFPKEY \_ FORCEMEDIANSETTING](mfpkey-forcemediansettingproperty.md)                                 |
+| g \_ wszWMVCFOURCC                      | [MFPKEY \_ FOURCC](mfpkey-fourccproperty.md)                                                         |
+| g \_ wszWMVCInterlacedCodingEnabled     | [MFPKEY \_ INTERLACEDCODINGENABLED](mfpkey-interlacedcodingenabledproperty.md)                       |
+| g \_ wszWMVCLookAhead                   | [MFPKEY \_ LOOKAHEAD](mfpkey-lookaheadproperty.md)                                                   |
+| g \_ wszWMVCLoopFilter                  | [MFPKEY \_ LOOPFILTER](mfpkey-loopfilterproperty.md)                                                 |
+| g \_ wszWMVCMacroblockModeCostMethod    | [MFPKEY \_ MACROBLOCKMODECOSTMETHOD](mfpkey-macroblockmodecostmethodproperty.md)                     |
+| g \_ wszWMVCMaxBitrate                  | [MFPKEY \_ RMAX](mfpkey-rmaxproperty.md)                                                             |
+| g \_ wszWMVCMotionMatchMethod           | [MFPKEY \_ MOTIONMATCHMETHOD](mfpkey-motionmatchmethodproperty.md)                                   |
+| g \_ wszWMVCMotionSearchLevel           | [MFPKEY \_ MOTIONSEARCHLEVEL](mfpkey-motionsearchlevelproperty.md)                                   |
+| g \_ wszWMVCMotionSearchRange           | [MFPKEY \_ MOTIONSEARCHRANGE](mfpkey-motionsearchrangeproperty.md)                                   |
+| g \_ wszWMVCNoiseEdgeRemoval            | [MFPKEY \_ NOISEEDGEREMOVAL](mfpkey-noiseedgeremovalproperty.md)                                     |
+| g \_ wszWMVCNumThreads                  | [MFPKEY \_ NUMTHREADS](mfpkey-numthreadsproperty.md)                                                 |
+| g \_ wszWMVCPassesRecommended           | [\_MFPKEY-ÜBERLÄUFERECOMMENDED](mfpkey-passesrecommendedproperty.md)                                   |
+| g \_ wszWMVCPassesUsed                  | [MFPKEY \_ PASSESUSED](mfpkey-passesusedproperty.md)                                                 |
+| g \_ wszWMVCPerceptualOptLevel          | [MFPKEY \_ PERCEPTUALOPTLEVEL](mfpkey-perceptualoptlevelproperty.md)                                 |
+| g \_ wszWMVCProduceDummyFrames          | [MFPKEY \_ PRODUCEDUMMYFRAMES](mfpkey-producedummyframesproperty.md)                                 |
+| g \_ wszWMVCRangeRedux                  | [MFPKEY \_ RANGEREDUX](mfpkey-rangereduxproperty.md)                                                 |
+| g \_ wszWMVCTotalFrames                 | [MFPKEY \_ TOTALFRAMES](mfpkey-totalframesproperty.md)                                               |
+| g \_ wszWMVCVBREnabled                  | [MFPKEY \_ VBRENABLED](mfpkey-vbrenabledproperty.md)                                                 |
+| g \_ wszWMVCVBRQuality                  | [MFPKEY \_ VBRQUALITY](mfpkey-vbrqualityproperty.md)                                                 |
+| g \_ wszWMVCVideoScaling                | [MFPKEY \_ VIDEOSCALING](mfpkey-videoscalingproperty.md)                                             |
+| g \_ wszWMVCVType                       | [MFPKEY \_ VTYPE](mfpkey-vtypeproperty.md)                                                           |
+| g \_ wszWMVCZeroByteFrames              | [MFPKEY \_ ZEROBYTEFRAMES](mfpkey-zerobyteframesproperty.md)                                         |
 
 
 

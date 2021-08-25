@@ -1,29 +1,29 @@
 ---
-title: Video Format
-description: Video Format
+title: Videoformat
+description: Videoformat
 ms.assetid: d008bf48-302d-4533-8112-37961ecd40e1
 keywords:
-- WM_CAP_GET_VIDEOFORMAT Meldung
-- capgetvideoformat-Makro
-- capgetvideoformatsize-Makro
-- WM_CAP_SET_VIDEOFORMAT Meldung
-- capsetvideoformat-Makro
+- WM_CAP_GET_VIDEOFORMAT-Nachricht
+- capGetVideoFormat-Makro
+- capGetVideoFormatSize-Makro
+- WM_CAP_SET_VIDEOFORMAT Nachricht
+- capSetVideoFormat-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5efe3c517a45ea44e9f8ab9ebd8fbae6dd95194
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 30ef2a135c8b557889d433e6495ac6a3e980326b4cfb0843d8c856fedfed4b50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804120"
 ---
-# <a name="video-format"></a>Video Format
+# <a name="video-format"></a>Videoformat
 
-Sie können die-Struktur, die das Videoformat oder die Größe der Struktur angibt, abrufen, indem Sie die WM-Abdeckung [**\_ \_ get \_ Videoformat**](wm-cap-get-videoformat.md) -Nachricht (oder die Makros [**capgetvideoformat**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformat) und [**capgetvideoformatsize**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformatsize) ) an ein Aufzeichnungs Fenster senden. Sie können das Format der aufgezeichneten Videodaten festlegen, indem Sie die WM-Cap-Nachricht [**\_ \_ Set \_ Videoformat**](wm-cap-set-videoformat.md) (oder das Makro [**capsetvideoformat**](/windows/desktop/api/Vfw/nf-vfw-capsetvideoformat) ) an ein Aufzeichnungs Fenster senden.
+Sie können die -Struktur abrufen, die das Videoformat oder die Größe dieser Struktur angibt, indem Sie die [**WM \_ CAP GET \_ \_ VIDEOFORMAT-Nachricht**](wm-cap-get-videoformat.md) (oder die Makros [**capGetVideoFormat**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformat) und [**capGetVideoFormatSize)**](/windows/desktop/api/Vfw/nf-vfw-capgetvideoformatsize) an ein Erfassungsfenster senden. Sie können das Format der erfassten Videodaten festlegen, indem Sie die [**WM \_ CAP SET \_ \_ VIDEOFORMAT-Nachricht**](wm-cap-set-videoformat.md) (oder das [**Makro capSetVideoFormat)**](/windows/desktop/api/Vfw/nf-vfw-capsetvideoformat) an ein Erfassungsfenster senden.
 
- 
+ 
 
- 
+ 
 
 
 

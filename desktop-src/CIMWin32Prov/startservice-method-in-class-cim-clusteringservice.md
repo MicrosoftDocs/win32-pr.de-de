@@ -2,7 +2,7 @@
 description: 'StartService-Methode der CIM_ClusteringService Klasse: Die StartService-Methode versetzt den Dienst in einen gestarteten Zustand.'
 ms.assetid: 2efd2a06-a03c-4f4c-b2fa-889f84faac0f
 ms.tgt_platform: multiple
-title: StartService-Methode der CIM_ClusteringService Klasse
+title: StartService-Methode der CIM_ClusteringService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: dcd18af37da9302256776cfee844fd83f989c9b7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 32782b8716496335c341ced96fbc36012410d13e1cc658d9584c5506d1c6c8ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752430"
 ---
 # <a name="startservice-method-of-the-cim_clusteringservice-class"></a>StartService-Methode der CIM \_ ClusteringService-Klasse
 
@@ -30,7 +30,7 @@ Die **StartService-Methode** versetzt den Dienst in einen gestarteten Zustand. I
 
  
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Diese Methode hat keine Parameter.
 
 Gibt den Wert 0 (null) zurück, wenn der Dienst erfolgreich gestartet wurde, 1 (eins), wenn die Anforderung nicht unterstützt wird, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
@@ -59,7 +59,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -69,7 +69,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_DomainResourceRecordContainment-Klasse
-description: Die MicrosoftDNS- \_ domainresourcerecordcontainment-Klasse wird für die RR-Kapselung verwendet; jede Instanz der MicrosoftDNS- \_ Domäne kann mehrere Instanzen der MicrosoftDNS \_ resourcerecord-Klasse enthalten.
+description: Die MicrosoftDNS DomainResourceRecordContainment-Klasse wird für die RR-Aufzeichnung verwendet. Jede Instanz der MicrosoftDNS-Domäne kann mehrere Instanzen der \_ \_ MicrosoftDNS \_ ResourceRecord-Klasse enthalten.
 ms.assetid: 556c5e8d-58a1-4cb4-b4e9-eebdd86ed6a0
 keywords:
-- DNS-MicrosoftDNS_DomainResourceRecordContainment Klasse
-- DNS-MicrosoftDNS_DomainResourceRecordContainment Klasse, beschrieben
+- MicrosoftDNS_DomainResourceRecordContainment DNS-Klasse
+- MicrosoftDNS_DomainResourceRecordContainment DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fddf172c3e320fd5c3a3b04d85d766a0252abd97
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 498d9b953895ebece94dc77edb587045d1cfdd45c29f04c202756bd1080dc9f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795610"
 ---
-# <a name="microsoftdns_domainresourcerecordcontainment-class"></a>MicrosoftDNS- \_ domainresourcerecordcontainment-Klasse
+# <a name="microsoftdns_domainresourcerecordcontainment-class"></a>MicrosoftDNS \_ DomainResourceRecordContainment-Klasse
 
-Die **MicrosoftDNS- \_ domainresourcerecordcontainment** -Klasse wird für die RR-Kapselung verwendet; jede Instanz der [**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md) kann mehrere Instanzen der [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) -Klasse enthalten. Jede Instanz der **MicrosoftDNS \_ resourcerecord** -Klasse gehört zu einer einzelnen Instanz der **MicrosoftDNS- \_ Domänen** Klasse und ist so definiert, dass Sie für diese Instanz schwach ist.
+Die **MicrosoftDNS \_ DomainResourceRecordContainment-Klasse** wird für die RR-Aufzeichnung verwendet. Jede Instanz der [**MicrosoftDNS-Domäne \_**](microsoftdns-domain.md) kann mehrere Instanzen der [**MicrosoftDNS \_ ResourceRecord-Klasse**](microsoftdns-resourcerecord.md) enthalten. Jede Instanz der **MicrosoftDNS \_ ResourceRecord-Klasse** gehört zu einer einzelnen Instanz der **MicrosoftDNS \_ Domain-Klasse** und ist für diese Instanz als schwach definiert.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,47 +42,47 @@ class MicrosoftDNS_DomainResourceRecordContainment : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ domainresourcerecordcontainment** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ DomainResourceRecordContainment-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ domainresourcerecordcontainment** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ DomainResourceRecordContainment-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS \_ Domain**
+Datentyp: **MicrosoftDNS-Domäne \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, override ("GroupComponent")
+Qualifizierer: Key, Override("GroupComponent")
 
-Beschreibung: Zone, Cache, roothints oder Domäne, die direkt den Ressourcen Daten Satz enthält.
+Beschreibung: Zone, Cache, RootHints oder Domäne, die den Ressourcendatensatz direkt enthält.
 
-Von CIM- \_ Komponente geerbt
+Geerbt von \_ CIM-Komponente
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS \_ resourcerecord**
+Datentyp: **MicrosoftDNS \_ ResourceRecord**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, override ("PartComponent")
+Qualifizierer: Key, Override("PartComponent")
 
-Beschreibung: der Ressourcen Daten Satz in Domäne, Zone, Cache oder roothints.
+Beschreibung: Der Ressourcendatensatz, der in einer Domäne, Zone, einem Cache oder rootHints enthalten ist.
 
-Geerbt von CIM- \_ Komponente.
+Geerbt von \_ CIM-Komponente.
 
 </dd> </dl>
 
@@ -95,7 +95,7 @@ Geerbt von CIM- \_ Komponente.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -103,13 +103,13 @@ Geerbt von CIM- \_ Komponente.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ serverdomaincontainment**](microsoftdns-serverdomaincontainment.md)
+[**MicrosoftDNS \_ ServerDomainContainment**](microsoftdns-serverdomaincontainment.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ domaindomaincontainment**](microsoftdns-domaindomaincontainment.md)
+[**MicrosoftDNS \_ DomainDomainContainment**](microsoftdns-domaindomaincontainment.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

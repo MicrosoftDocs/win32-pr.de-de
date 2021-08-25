@@ -1,9 +1,9 @@
 ---
-title: Level (channelpublishingtype)-Element
-description: Der Schweregrad der Ereignisse, die in den Kanal geschrieben werden sollen.
+title: level (ChannelPublishingType) -Element
+description: Der Schweregrad der Ereignisse, die in den Kanal geschrieben werden.
 ms.assetid: 1d5e9a35-5e6a-45ee-aa2c-0bbeee18db36
 keywords:
-- Ereignisprotokoll für Ebene-Element
+- level-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 15ec49b6d8b65636b40991cd9949d2770adea71e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a6cd7d7994210e45e655815e1a8fcf43977bee7e2c8f66b0d23e551d051e768e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124330"
 ---
-# <a name="level-channelpublishingtype-element"></a>Level (channelpublishingtype)-Element
+# <a name="level-channelpublishingtype-element"></a>level (ChannelPublishingType) -Element
 
-Der Schweregrad der Ereignisse, die in den Kanal geschrieben werden sollen.
+Der Schweregrad der Ereignisse, die in den Kanal geschrieben werden.
 
 ``` syntax
 <xs:element name="level"
@@ -30,7 +30,7 @@ Der Schweregrad der Ereignisse, die in den Kanal geschrieben werden sollen.
  />
 ```
 
-Das **Level** -Element wird durch den komplexen Typ [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
+Das **level-Element** wird durch den komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Level** -Element wird durch den komplexen Typ [**channelpublishingtype**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Level** -Element wird durch den komplexen Typ [**channelpublishingtype**](
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

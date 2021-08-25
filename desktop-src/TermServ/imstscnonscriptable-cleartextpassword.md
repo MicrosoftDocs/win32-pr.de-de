@@ -1,30 +1,30 @@
 ---
-title: Imstscnonscriptable cleartextpassword (Eigenschaft)
-description: Legt das Remotedesktop ActiveX-Steuerelement Kennwort im nur-Text-Format fest.
+title: Eigenschaft "IMsTscNonScriptable ClearTextPassword"
+description: Legt das Remotedesktop ActiveX-Steuerelementkennwort im Klartextformat fest.
 ms.assetid: 93d35b10-5c92-4ab7-a32a-328ba6fcf16b
 ms.tgt_platform: multiple
 keywords:
-- Cleartextpassword-Eigenschaft Remotedesktopdienste
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, imstscnonscriptable-Schnittstelle
-- Imstscnonscriptable-Schnittstelle Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, imsrdpclientnonscriptable-Schnittstelle
-- Imsrdpclientnonscriptable-Schnittstelle Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2 Interface Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, cleartextpassword (Eigenschaft)
-- Cleartextpassword-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, cleartextpassword (Eigenschaft)
+- ClearTextPassword-Remotedesktopdienste
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsTscNonScriptable-Schnittstelle
+- IMsTscNonScriptable-Schnittstelle Remotedesktopdienste, ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable-Schnittstelle
+- IMsRdpClientNonScriptable-Schnittstelle Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , ClearTextPassword-Eigenschaft
+- ClearTextPassword-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , ClearTextPassword-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -50,16 +50,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1aad33d7d85c6a5c331efe8383815e079150fb65
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0519e7379eab529cc5275c85a11116764417d524a03dff2e1eab74a914b6560b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125050"
 ---
-# <a name="imstscnonscriptablecleartextpassword-property"></a>Imstscnonscriptable:: cleartextpassword-Eigenschaft
+# <a name="imstscnonscriptablecleartextpassword-property"></a>IMsTscNonScriptable::ClearTextPassword (Eigenschaft)
 
-Legt das Remotedesktop ActiveX-Steuerelement Kennwort im nur-Text-Format fest.
+Legt das Remotedesktop ActiveX-Steuerelementkennwort im Klartextformat fest.
 
 Diese Eigenschaft ist lesegeschützt.
 
@@ -76,31 +76,31 @@ HRESULT put_ClearTextPassword(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das Kennwort, das zum Herstellen der Verbindung verwendet werden soll, angegeben im nur-Text-Format.
+Das Kennwort, das zum Herstellen einer Verbindung verwendet werden soll, angegeben im Klartextformat.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Kennwort wird im sicheren verschlüsselten RDP-Kommunikationskanal an den Server übermittelt. Nachdem ein Klartext-Kennwort festgelegt wurde, kann es nicht im nur-Text-Format abgerufen werden.
+Das Kennwort wird im sicher verschlüsselten RDP-Kommunikationskanal an den Server übergeben. Nachdem ein Klartextkennwort festgelegt wurde, kann es nicht mehr im Klartextformat abgerufen werden.
 
-Die **cleartextpassword** -Eigenschaft kann nur festgelegt werden, wenn sich das Remotedesktop ActiveX-Steuerelement nicht im verbundenen Zustand befindet. Das Festlegen dieser Eigenschaft schlägt fehl, wenn das Steuerelement verbunden ist. Zum Überprüfen des verbundenen Zustands rufen Sie die [**imstscax:: Connected**](imstscax-connected.md) -Eigenschaft ab.
+Die **ClearTextPassword-Eigenschaft** kann nur festgelegt werden, wenn sich Remotedesktop ActiveX Steuerelement nicht im verbundenen Zustand befindet. Das Festlegen dieser Eigenschaft schlägt fehl, wenn das Steuerelement verbunden ist. Um den verbundenen Zustand zu überprüfen, rufen Sie die [**IMsTscAx::Connected-Eigenschaft**](imstscax-connected.md) ab.
 
-Sie können diese Methode auch aufrufen, um ein nur-Text-Kennwort festzulegen, bevor Sie es in ein portables codiertes Kennwort oder ein binäres (nicht Portables) codiertes Kennwort umwandelt. Beachten Sie jedoch, dass codierte Kenn Wörter nicht als sicher verschlüsselt angesehen werden sollten.
+Sie können diese Methode auch aufrufen, um ein Klartextkennwort festzusetzen, bevor Sie es entweder in ein portierbares codiertes Kennwort oder in ein binäres (nicht portierbares) codiertes Kennwort konvertieren. Beachten Sie jedoch, dass codierte Kennwörter nicht als sicher verschlüsselt betrachtet werden sollten.
 
-Wenn Sie diese Methode zum ersten Mal aufrufen, um ein Kennwort im nur-Text-Format festzulegen, können Sie das Kennwort in ein codiertes Format konvertieren.
+Wenn Sie diese Methode zuerst aufrufen, um ein Kennwort im Klartextformat festlegen, können Sie das Kennwort in ein codiertes Format konvertieren.
 
-**So konvertieren Sie ein Klartext-Kennwort in ein codiertes Format**
+**So konvertieren Sie ein Klartextkennwort in ein codiertes Format**
 
-1.  Legen Sie das Kennwort im Klartext-Format in der **cleartextpassword** -Eigenschaft fest.
-2.  Rufen Sie die Eigenschaft [**binarypassword**](imstscnonscriptable-binarypassword.md) und die Eigenschaften [**binarysalt**](imstscnonscriptable-binarysalt.md) ab, um das Kennwort im Binärformat (nicht portabel) abzurufen. Sowohl das codierte Kennwort als auch der Salt-Teil sind erforderlich, um ein Kennwort im Binärformat festzulegen.
-3.  Rufen Sie die [**portablepassword**](imstscnonscriptable-portablepassword.md) -Methode und die [**portablesalt**](imstscnonscriptable-portablesalt.md) -Eigenschaften ab, um das Kennwort im portablen codierten Format abzurufen. Beide Teile sind erforderlich, um ein Kennwort im portablen codierten Format festzulegen.
+1.  Legen Sie das Kennwort in der **ClearTextPassword-Eigenschaft im Klartextformat** fest.
+2.  Um das Kennwort im binären (nicht portierbaren) codierten Format abzurufen, rufen Sie die [**BinaryPassword-Eigenschaft**](imstscnonscriptable-binarypassword.md) und die [**BinarySalt-Eigenschaften**](imstscnonscriptable-binarysalt.md) ab. Sowohl der codierte Kennwortteil als auch der Salt-Teil sind erforderlich, um ein Kennwort im binär codierten Format festlegen zu können.
+3.  Rufen Sie zum Abrufen des Kennworts im portierbaren codierten Format die [**PortablePassword-Methode**](imstscnonscriptable-portablepassword.md) und die [**PortableSalt-Eigenschaften**](imstscnonscriptable-portablesalt.md) ab. Beide Teile sind erforderlich, um ein Kennwort im portierbaren codierten Format festlegen zu können.
 
-Nachdem Sie die vorangegangenen drei Schritte ausgeführt haben, können Sie das Kennwort im codierten Format festlegen, indem Sie die Eigenschaften [**binarypassword**](imstscnonscriptable-binarypassword.md) und [**binarysalt**](imstscnonscriptable-binarysalt.md) oder [**portablepassword**](imstscnonscriptable-portablepassword.md) und [**portablesalt**](imstscnonscriptable-portablesalt.md) festlegen. Beide Teile sind erforderlich.
+Nach dem Ausführen der vorherigen drei Schritte können Sie das Kennwort im codierten Format festlegen, indem Sie die [**Eigenschaften BinaryPassword**](imstscnonscriptable-binarypassword.md) und [**BinarySalt**](imstscnonscriptable-binarysalt.md) oder [**PortablePassword**](imstscnonscriptable-portablepassword.md) und [**PortableSalt**](imstscnonscriptable-portablesalt.md) festlegen. Beide Teile sind erforderlich.
 
-Um die automatische Anmeldung zu aktivieren, müssen Sie auch den [**Benutzernamen**](imstscax-username.md) und die [**Domänen**](imstscax-domain.md) Eigenschaften festlegen. Wenn das Kennwort den Benutzer nicht authentifizieren kann, wird das Dialogfeld Windows-Anmeldung auf dem Server angezeigt, um den Benutzer zur Eingabe des Kennworts aufzufordern.
+Um die automatische Anmeldung zu aktivieren, müssen Sie auch die [**Eigenschaften UserName und**](imstscax-username.md) [**Domain**](imstscax-domain.md) festlegen. Wenn das Kennwort den Benutzer nicht authentifizieren kann, wird das Dialogfeld Windows Anmeldung auf dem Server angezeigt, um den Benutzer zur Eingabe des Kennworts aufzugeben.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -114,7 +114,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscnonscriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
+| IID<br/>                      | IID \_ IMsTscNonScriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
 
 
 
@@ -122,7 +122,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)
@@ -137,7 +137,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Imstscnonscriptable**](imstscnonscriptable-interface.md)
+[**IMsTscNonScriptable**](imstscnonscriptable-interface.md)
 </dt> </dl>
 
  

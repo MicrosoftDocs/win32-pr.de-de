@@ -1,9 +1,9 @@
 ---
-title: LB_GETANCHORINDEX Meldung (Winuser. h)
-description: Ruft den Index des Anker Elements \ 8212 ab, d. h. das Element, aus dem eine Mehrfachauswahl beginnt. Eine Mehrfachauswahl umfasst alle Elemente vom Anker Element bis zum Caretzeichen.
+title: LB_GETANCHORINDEX (Winuser.h)
+description: Ruft den Index des Ankerelements \8212 ab, d.> das Element, ab dem eine Mehrfachauswahl beginnt. Eine Mehrfachauswahl umfasst alle Elemente vom Ankerelement bis zum Caretelement.
 ms.assetid: vs|controls|~\controls\listboxes\listboxreference\listboxmessages\lb_getanchorindex.htm
 keywords:
-- Windows-Steuerelemente für LB_GETANCHORINDEX Meldung
+- LB_GETANCHORINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5502a234424b818bb46e9c4326839b5aff2f83d0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df33244a755ddd99a5af0c849e7753e478a91b94cd5cbd717505ca4ab37b0f9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799580"
 ---
-# <a name="lb_getanchorindex-message"></a>LB- \_ getanchorindex-Meldung
+# <a name="lb_getanchorindex-message"></a>LB \_ GETANCHORINDEX-Nachricht
 
-Ruft den Index des Anker Elements ab, das das Element ist, aus dem eine Mehrfachauswahl beginnt. Eine Mehrfachauswahl umfasst alle Elemente vom Anker Element bis zum Caretzeichen.
+Ruft den Index des Ankerelements ab, das heißt, das Element, ab dem eine Mehrfachauswahl beginnt. Eine Mehrfachauswahl umfasst alle Elemente vom Ankerelement bis zum Caretelement.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der Index des Anker Elements.
+Der Rückgabewert ist der Index des Ankerelements.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Der Rückgabewert ist der Index des Anker Elements.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Der Rückgabewert ist der Index des Anker Elements.
 
 <dl> <dt>
 
-[**LB- \_ Zielindex**](lb-setanchorindex.md)
+[**LB \_ SETANCHORINDEX**](lb-setanchorindex.md)
 </dt> </dl>
 
  

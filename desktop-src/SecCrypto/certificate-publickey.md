@@ -1,7 +1,7 @@
 ---
-description: Die PublicKey-Methode gibt das Objekt des öffentlichen Schlüssels für ein Zertifikat Objekt zurück.
+description: Die PublicKey-Methode gibt das öffentliche Schlüsselobjekt für ein Certificate-Objekt zurück.
 ms.assetid: 9a7ea6d5-365e-4360-ab50-2bafcfaecaa0
-title: Certificate. PublicKey-Methode
+title: Certificate.PublicKey-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 472acee68aa653cc72787a5ac5ce2c2ace4ec70f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 47bf713038f048048613a0be17c8a0523e33c603fbc761b57c3a76ee163534be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126930"
 ---
-# <a name="certificatepublickey-method"></a>Certificate. PublicKey-Methode
+# <a name="certificatepublickey-method"></a>Certificate.PublicKey-Methode
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **PublicKey** -Methode gibt das Objekt des öffentlichen Schlüssels für ein [**Zertifikat**](certificate.md) Objekt zurück.
+Die **PublicKey-Methode** gibt das öffentliche Schlüsselobjekt für ein [**Certificate-Objekt**](certificate.md) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Diese Methode hat keine Parameter.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
@@ -56,7 +56,7 @@ Diese Methode hat keine Parameter.
 
 <dl> <dt>
 
-[**Stellt**](certificate.md)
+[**Zertifikat**](certificate.md)
 </dt> </dl>
 
  

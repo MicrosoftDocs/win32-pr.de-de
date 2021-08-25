@@ -1,11 +1,11 @@
 ---
 title: Abrufen eines Zeigers auf das Readerobjekt (Windows Media Format 11 SDK)
-description: Erfahren Sie mehr über das Abrufen eines Zeigers auf das Readerobjekt des Windows Media Format SDK mithilfe der IWMReaderAdvanced2-Schnittstelle.
+description: Erfahren Sie mehr über das Abrufen eines Zeigers auf das Reader-Objekt des Windows Media Format SDK mithilfe der IWMReaderAdvanced2-Schnittstelle.
 ms.assetid: 70696ffc-2612-460d-b445-f200ba85d3c7
 keywords:
-- Windows Media Format SDK, DirectShow
-- Windows Media Format SDK, Readerobjekte
-- Windows Media Format SDK,IWMReaderAdvanced2-Schnittstelle
+- Windows Medienformat-SDK, DirectShow
+- Windows Medienformat-SDK, Readerobjekte
+- Windows Medienformat-SDK, IWMReaderAdvanced2-Schnittstelle
 - Advanced Systems Format (ASF), DirectShow
 - ASF (Advanced Systems Format), DirectShow
 - Advanced Systems Format (ASF), Readerobjekte
@@ -21,12 +21,12 @@ keywords:
 - IWMReaderAdvanced2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6dd31bd868365b87b38eefd0c0c81e8beafef51c
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: 5e4b2829e56d08825234dcefdc4fb1012f48c894419e7c328f10afeb76cb6c4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808050"
 ---
 # <a name="obtaining-a-pointer-to-the-reader-object-windows-media-format-11-sdk"></a>Abrufen eines Zeigers auf das Readerobjekt (Windows Media Format 11 SDK)
 

@@ -1,19 +1,19 @@
 ---
-description: Das optionale <scope> -Element gibt eine Auflistung von- <scopeItem> Elementen an, die die Inklusions-und Ausschlüsse für diesen bestimmten Suchconnector definieren.
+description: Das optionale <scope> -Element gibt eine Auflistung von <scopeItem> Elementen an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren.
 ms.assetid: 9e92e3db-3d5e-4f86-8d67-90eb5469b04b
-title: Scope-Element (Suchconnector-Schema)
+title: scope-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f49041170db80de48d312596249d5c4dca835e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18d5fcdb3908f495d07199c61a2005a4f97ba5a01c641fb4e854961489e7abe0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119944300"
 ---
-# <a name="scope-element-search-connector-schema"></a>Scope-Element (Suchconnector-Schema)
+# <a name="scope-element-search-connector-schema"></a>scope-Element (Search Connector Schema)
 
-Das optionale <scope> -Element gibt eine Auflistung von- <scopeItem> Elementen an, die die Inklusions-und Ausschlüsse für diesen bestimmten Suchconnector definieren. Wenn <scope> vorhanden ist, muss Sie mindestens ein Element enthalten <scopeItem> . Dieses Element weist keine Attribute auf.
+Das optionale <scope> -Element gibt eine Auflistung von <scopeItem> Elementen an, die die Bereichseinschlüsse und -ausschlüsse für diesen bestimmten Suchconnector definieren. Wenn <scope> vorhanden ist, MUSS es mindestens ein <scopeItem> Element enthalten. Dieses Element weist keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,19 +47,19 @@ Das optionale <scope> -Element gibt eine Auflistung von- <scopeItem> Elementen a
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente                                                                    |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) | [scopeitem-Element (Suchconnector-Schema)](search-schema-sconn-scopeitem.md). |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) | [scopeItem-Element (Search Connector Schema)](search-schema-sconn-scopeitem.md). |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden <scope> Sie das-Element und das- <scopeItem> Element, um zu ermitteln, welche Orte gesucht werden sollen und welche Standorte von der Suche ausgeschlossen werden sollen
+Verwenden Sie die <scope> Elemente und , um zu <scopeItem> ermitteln, welche Standorte durchsucht werden sollen und welche Standorte von der Suche ausgeschlossen werden sollen.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt einen Suchbereich, der c: \\ examplefolder und alle seine untergeordneten Ordner mit Ausnahme von c: \\ examplefolder \\ excludebug enthält.
+Das folgende Beispiel zeigt einen Suchbereich, der C: \\ ExampleFolder und alle seine untergeordneten Ordner mit Ausnahme von C: \\ ExampleFolder \\ ExcludeMe enthält.
 
 
 ```

@@ -1,29 +1,29 @@
 ---
-title: Strukturen (Windows-Eingabe Eingabe)
-description: Dieser Abschnitt enthält Strukturen für die Eingabe von Windows-Eingaben.
+title: Strukturen (Windows Toucheingabe)
+description: Dieser Abschnitt enthält Strukturen für Windows Toucheingabe.
 ms.assetid: 591c7218-bd4f-40c2-98e1-6442ede28600
 keywords:
-- Windows-Fingereingabe, Strukturen
+- Windows Toucheingabe, Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62595e9600474b3b3f1aca71dece1d81514daa91
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: ce7d2178673fbf2d75b181875de14f0ad0087e80a6d424a497abcd39375235fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391470"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007370"
 ---
-# <a name="structures-windows-touch-input"></a>Strukturen (Windows-Eingabe Eingabe)
+# <a name="structures-windows-touch-input"></a>Strukturen (Windows Toucheingabe)
 
-Dieser Abschnitt enthält Strukturen für die Eingabe von Windows-Eingaben.
+Dieser Abschnitt enthält Strukturen für Windows Toucheingabe.
 
-Die folgenden Strukturen werden für die Eingabe von Windows-Eingaben verwendet.
+Die folgenden Strukturen werden für Windows Toucheingabe verwendet.
 
 
 
-| Struktur                        | BESCHREIBUNG                        |
+| Struktur                        | Beschreibung                        |
 |----------------------------------|------------------------------------|
-| [**TOUCHINPUT**](/windows/win32/api/winuser/ns-winuser-touchinput) | Kapselt Daten für Berührungs Eingaben. |
+| [**TOUCHINPUT**](/windows/win32/api/winuser/ns-winuser-touchinput) | Kapselt Daten für Toucheingaben. |
 
 
 
@@ -33,10 +33,10 @@ Die folgenden Strukturen werden für die Eingabe von Windows-Eingaben verwendet.
 
 <dl> <dt>
 
-[Windows-Eingabe Eingabe](multi-touch-input.md)
+[Windows Toucheingabe](multi-touch-input.md)
 </dt> <dt>
 
-[Leitfaden zur Eingabe der Windows-Eingabe Eingabe](guide-multi-touch-input.md)
+[Windows Programmierhandbuch für Toucheingaben](guide-multi-touch-input.md)
 </dt> </dl>
 
  

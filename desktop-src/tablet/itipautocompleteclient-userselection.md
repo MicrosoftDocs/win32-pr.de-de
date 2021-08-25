@@ -1,7 +1,7 @@
 ---
-description: Benachrichtigt den Eingabebereich, dass der Benutzer etwas in der Liste Auto vervollständigen ausgewählt und den verbleibenden Text verworfen hat, der noch nicht eingefügt wurde.
+description: Benachrichtigt den Eingabebereich, dass der Benutzer etwas in der AutoVervollständigen-Liste ausgewählt hat und den gesamten verbleibenden Text verwirft, der noch nicht eingefügt wurde.
 ms.assetid: 2e6fabe1-7984-4908-bf90-0603d0dad268
-title: 'Itipaudecompleteclient:: userselection-Methode (tipaudecomplete. h)'
+title: ITipAutocompleteClient::UserSelection-Methode (TipAutoComplete.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - tiptsf.dll
-ms.openlocfilehash: 1894db9da3b8e3a36e59eb45150b27facfe0291f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2dac765c3f1c3e709bb7066a1645c2d77783ea555bccd81f9d5809da802d7043
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119843480"
 ---
-# <a name="itipautocompleteclientuserselection-method"></a>Itipaudecompleteclient:: userselection-Methode
+# <a name="itipautocompleteclientuserselection-method"></a>ITipAutocompleteClient::UserSelection-Methode
 
-Benachrichtigt den Eingabebereich, dass der Benutzer etwas in der Liste Auto vervollständigen ausgewählt und den verbleibenden Text verworfen hat, der noch nicht eingefügt wurde.
+Benachrichtigt den Eingabebereich, dass der Benutzer etwas in der AutoVervollständigen-Liste ausgewählt hat und den gesamten verbleibenden Text verwirft, der noch nicht eingefügt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird vom Anbieter aufgerufen, um den Client zu benachrichtigen, dass der Benutzer eine Auswahl getroffen hat.
+Diese Methode wird vom Anbieter aufgerufen, um den Client darüber zu informieren, dass vom Benutzer eine Auswahl getroffen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Diese Methode wird vom Anbieter aufgerufen, um den Client zu benachrichtigen, da
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                       |
-| Header<br/>                   | <dl> <dt>Tipautocomplete. h (erfordert auch "pinputpanel \_ i. c")</dt> </dl> |
+| Header<br/>                   | <dl> <dt>TipAutoComplete.h (erfordert auch Peninputpanel \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Tiptsf.dll</dt> </dl>                                           |
 
 
@@ -73,10 +73,10 @@ Diese Methode wird vom Anbieter aufgerufen, um den Client zu benachrichtigen, da
 
 <dl> <dt>
 
-[**Itipauwebcompleteclient-Schnittstelle**](itipautocompleteclient.md)
+[**ITipAutocompleteClient-Schnittstelle**](itipautocompleteclient.md)
 </dt> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> </dl>
 
  

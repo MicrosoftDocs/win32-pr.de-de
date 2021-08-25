@@ -1,9 +1,9 @@
 ---
-title: RB_MOVEBAND Meldung (kommstrg. h)
-description: Verschiebt ein Band von einem Index zu einem anderen.
+title: RB_MOVEBAND (Commctrl.h)
+description: Verschiebt ein Band von einem Index in einen anderen.
 ms.assetid: bb5b45de-957e-46fb-b59a-18b55b69c395
 keywords:
-- Windows-Steuerelemente für RB_MOVEBAND Meldung
+- RB_MOVEBAND meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 146103c4c3d70fc0514729a00eac152c4847b85c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ab45f63b46b8bb883ef9f1fd8708f915dba2a6860ef2f6fabb09e2b00bd8fe6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119798540"
 ---
-# <a name="rb_moveband-message"></a>RB- \_ Message-Nachricht
+# <a name="rb_moveband-message"></a>RB \_ MOVEBAND-Nachricht
 
-Verschiebt ein Band von einem Index zu einem anderen.
+Verschiebt ein Band von einem Index in einen anderen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,26 +32,26 @@ Verschiebt ein Band von einem Index zu einem anderen.
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des zu bewegenden Bands.
+Nullbasierter Index des zu verschobenen Bandes.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-NULL basierter Index der neuen Bandposition.
+Nullbasierter Index der neuen Bandposition.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung ändert höchstwahrscheinlich den Index anderer Bänder im Grund leisten-Steuerelement. Wenn ein Band von Index 6 in Index 0 verschoben wird, wird der Index aller Bänder dazwischen um 1 erhöht.
+Diese Meldung ändert wahrscheinlich den Index anderer Bänder im Rebar-Steuerelement. Wenn ein Band von Index 6 in Index 0 verschoben wird, wird der Index aller Bänder dazwischen um eins erhöht.
 
-*LPARAM* darf nie größer als die Anzahl der Bänder minus 1 sein. Die Anzahl der Bänder kann mit der [**RB \_ GetBandCount**](rb-getbandcount.md) -Nachricht abgerufen werden.
+*lParam* darf nie größer als die Anzahl der Bänder minus eins sein. Die Anzahl der Bänder kann mit der [**RB \_ GETBANDCOUNT-Nachricht ermittelt**](rb-getbandcount.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Diese Meldung ändert höchstwahrscheinlich den Index anderer Bänder im Grund l
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

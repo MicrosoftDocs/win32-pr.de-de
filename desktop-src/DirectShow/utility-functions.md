@@ -4,23 +4,23 @@ ms.assetid: 632cecc6-6e34-43e5-992d-5fb3b066c8c7
 title: Hilfsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51ab7599eee3984db53dc0c7f8874435639aac3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eff7764d69139a108330e5d46fb78f227d639ba496695aa004037ed0c28a95cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755850"
 ---
 # <a name="utility-functions"></a>Hilfsfunktionen
 
-Dieser Abschnitt enthält Referenz Einträge für die Microsoft® DirectShow-® Utility-Funktionen und-Makros. Um diese Funktionen zu verwenden, müssen Sie die DirectShow-Basisklassen Bibliothek erstellen.
+Dieser Abschnitt enthält Referenzeinträge für die Microsoft® DirectShow®-Hilfsfunktionen und -Makros. Um diese Funktionen verwenden zu können, müssen Sie die DirectShow-Basisklassenbibliothek erstellen.
 
 -   [**COM-Hilfsfunktionen**](com-helper-functions.md)
--   [**DLL-Setup Funktionen**](dll-setup-functions.md)
--   [**Medientyp Funktionen**](media-type-functions.md)
--   [Diverse Hilfsfunktionen](miscellaneous-helper-functions.md)
--   [Hilfsfunktionen für Eigenschaften Seiten](property-page-helper-functions.md)
--   [Video-und Bildfunktionen](video-and-image-functions.md)
+-   [**DLL-Setupfunktionen**](dll-setup-functions.md)
+-   [**Medientypfunktionen**](media-type-functions.md)
+-   [Verschiedene Hilfsfunktionen](miscellaneous-helper-functions.md)
+-   [Hilfsfunktionen für Eigenschaftenseiten](property-page-helper-functions.md)
+-   [Video- und Bildfunktionen](video-and-image-functions.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

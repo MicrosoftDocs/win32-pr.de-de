@@ -1,9 +1,9 @@
 ---
-title: ErrorItem. ErrorDescription
-description: Die ErrorDescription-Eigenschaft ruft eine Beschreibung des Fehlers ab.
+title: ErrorItem.errorDescription
+description: Die errorDescription-Eigenschaft ruft eine Beschreibung des Fehlers ab.
 ms.assetid: 7fd16c3d-1460-41b5-81ca-2636d7a1d0d1
 keywords:
-- ErrorItem. ErrorDescription-Windows-Media Player
+- ErrorItem.errorDescription Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0de19bb67a5846a82e87d091f95a18cd12c5c2b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c5740adcef0b6eb86290ea392d0659abb0ccc3d51b0b0b1b3203105de67fb692
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862790"
 ---
-# <a name="erroritemerrordescription"></a>ErrorItem. ErrorDescription
+# <a name="erroritemerrordescription"></a>ErrorItem.errorDescription
 
-Die **ErrorDescription** -Eigenschaft ruft eine Beschreibung des Fehlers ab.
+Die **errorDescription-Eigenschaft** ruft eine Beschreibung des Fehlers ab.
 
 ``` syntax
 player.error.item(
@@ -33,15 +33,15 @@ player.error.item(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge**.
+Diese Eigenschaft ist eine schreibgeschützte **Zeichenfolge.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie sollten *Einstellungen* festlegen. **enableerrordialogs** auf false, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten *Einstellungen* festlegen. **enableErrorDialogs** wird auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *ErrorItem* verwendet. **ErrorDescription** in einem Ereignishandler, um dem Benutzer die Fehlermeldung anzuzeigen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *ErrorItem* verwendet. **errorDescription** in einem Ereignishandler, um dem Benutzer die Fehlermeldung anzuzeigen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -69,7 +69,7 @@ document.write(message);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/>                               |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/>                               |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 

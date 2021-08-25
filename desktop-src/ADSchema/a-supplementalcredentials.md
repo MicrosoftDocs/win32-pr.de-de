@@ -1,11 +1,11 @@
 ---
 title: Supplemental-Credentials-Attribut
-description: Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung. Die verschlüsselte Version des Benutzer Kennworts. Dieses Attribut ist weder lesbar noch beschreibbar.
+description: Gespeicherte Anmeldeinformationen für die Authentifizierung. Die verschlüsselte Version des Kennworts des Benutzers. Dieses Attribut ist weder lesbar noch beschreibbar.
 ms.assetid: 642aa699-094e-40ed-a2f8-ec7219c85de2
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Supplemental-Credentials-Attribut
-- ergänzenden Anmelde Informationen-Attribut AD-Schema
+- Supplemental-Credentials AD-Schema
+- AD-Schema des supplementalCredentials-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e19a73b3ae3cf19745fc995a59c336b72d264e78
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c677e3f8f7c290dddc00b1754c611f68d778e6539086f3c5c6a0f2a0e9af8775
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836080"
 ---
 # <a name="supplemental-credentials-attribute"></a>Supplemental-Credentials-Attribut
 
-Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung. Die verschlüsselte Version des Benutzer Kennworts. Dieses Attribut ist weder lesbar noch beschreibbar.
+Gespeicherte Anmeldeinformationen für die Authentifizierung. Die verschlüsselte Version des Kennworts des Benutzers. Dieses Attribut ist weder lesbar noch beschreibbar.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
 | CN                | Supplemental-Credentials                              |
-| LDAP-Display-Name | ergänzende Anmelde Informationen                               |
+| Ldap-Anzeigename | supplementalCredentials                               |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                      |
-| Aktualisierungshäufigkeit  | Wenn das Kennwort des Benutzers geändert wird.                     |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                      |
+| Updatehäufigkeit  | Wenn sich das Kennwort des Benutzers ändert.                     |
 | Attribute-Id      | 1.2.840.113556.1.4.125                                |
-| System-ID-GUID    | bf967a3f-0de6-11d0-a285-00aa003049e2                  |
+| System-Id-Guid    | bf967a3f-0de6-11d0-a285-00aa003049e2                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,20 +58,20 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,16 +79,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -100,16 +100,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -121,16 +121,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -142,16 +142,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -163,16 +163,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 
@@ -184,16 +184,16 @@ Gespeicherte Anmelde Informationen für die Verwendung bei der Authentifizierung
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | False                                                        |
-| Ist indiziert             | False                                                        |
-| Im globalen Katalog      | False                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Falsch                                                        |
+| Ist indiziert             | Falsch                                                        |
+| Im globalen Katalog      | Falsch                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**Sicherheits Prinzipal**](c-securityprincipal.md)<br/> |
+| In verwendete Klassen        | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> |
 
 
 

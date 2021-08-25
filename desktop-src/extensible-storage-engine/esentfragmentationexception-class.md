@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfragmentationexception-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentFragmentationException-Klasse'
 title: EsentFragmentationException-Klasse
 TOCTitle: EsentFragmentationException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentFragmentationException
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 081198a696be9982e1fd8a7e4f1468e6d63d1c97
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 2db8934cfdbfb58b44d3de14c13c72bc7d5ce5afa4f5b2bdfaec0a05926469af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106355091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119838720"
 ---
 # <a name="esentfragmentationexception-class"></a>EsentFragmentationException-Klasse
 
-Basisklasse für Fragmentierungs Ausnahmen.
+Basisklasse für Fragmentierungsausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentfragmentationexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentFragmentationException  
             
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,25 +70,25 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfragmentationexception-Member](./esentfragmentationexception-members.md)
+[EsentFragmentationException-Member](./esentfragmentationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
 ## <a name="derived-types"></a>Abgeleitete Typen
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentfragmentationexception  
-            [Microsoft. ISAM. ESENT. Interop. esentlogsector sizemismatchexception](./esentlogsectorsizemismatchexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. EsentLogSequenceEndDatabasesConsistentException](./esentlogsequenceenddatabasesconsistentexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogsequenceendexception](./esentlogsequenceendexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentouesf autoincrementvaluesexception](./esentoutofautoincrementvaluesexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentouesf dbtimevaluesexception](./esentoutofdbtimevaluesexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentouesflongvalueidsexception](./esentoutoflongvalueidsexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentouesfobjectidsexception](./esentoutofobjectidsexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentouesf sequentialindexvaluesexception](./esentoutofsequentialindexvaluesexception-class.md)
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentFragmentationException  
+            [Microsoft.Isam.Esent.Interop.EsentLogSectorSizeMismatchException](./esentlogsectorsizemismatchexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogSequenceEndDatabasesConsistentException](./esentlogsequenceenddatabasesconsistentexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogSequenceEndException](./esentlogsequenceendexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentOutOfAutoincrementValuesException](./esentoutofautoincrementvaluesexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentOutOfDbtimeValuesException](./esentoutofdbtimevaluesexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentOutOfLongValueIDsException](./esentoutoflongvalueidsexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentOutOfObjectIDsException](./esentoutofobjectidsexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentOutOfSequentialIndexValuesException](./esentoutofsequentialindexvaluesexception-class.md)

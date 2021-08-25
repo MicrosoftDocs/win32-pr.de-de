@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. launchurl-Methode
-description: Die launchurl-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. | AxWindowsMediaPlayer. launchurl-Methode
+title: AxWindowsMediaPlayer.launchURL-Methode
+description: Die launchURL-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. | AxWindowsMediaPlayer.launchURL-Methode
 ms.assetid: 3e8dfdbb-b5ad-44ea-97a6-e860386b7fb4
 keywords:
-- launchurl-Methode, Windows Media Player
-- launchurl-Methode, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, launchurl-Methode
+- launchURL-Windows Media Player
+- launchURL-Methode Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , launchURL-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27fe8e544bb14b119785b26b9cb5be5cdad48015
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b4f3ad10a6defe4e7db252a1703888550ff5a89fe2a0d0618dd9886fc5f74bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123990"
 ---
-# <a name="axwindowsmediaplayerlaunchurl-method"></a>AxWindowsMediaPlayer. launchurl-Methode
+# <a name="axwindowsmediaplayerlaunchurl-method"></a>AxWindowsMediaPlayer.launchURL-Methode
 
-Die launchurl-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll.
+Die launchURL-Methode sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Public Sub launchURL( _
 *bstrURL* 
 </dt> <dd>
 
-Die **System. String** -URL, die die zu startende URL ist.
+Die **System.String,** die die zu startde URL ist.
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ Die **System. String** -URL, die die zu startende URL ist.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode öffnet nur Webseiten mithilfe der http-oder HTTPS-Protokolle.
+Diese Methode öffnet nur Webseiten mithilfe des HTTP- oder HTTPS-Protokolls.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Schaltfläche erstellt, bei der die Microsoft-Website in einem neuen Browserfenster angezeigt wird, wenn darauf geklickt wird. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird eine Schaltfläche erstellt, mit der die Microsoft-Website in einem neuen Browserfenster angezeigt wird, wenn darauf geklickt wird. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -111,7 +111,7 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

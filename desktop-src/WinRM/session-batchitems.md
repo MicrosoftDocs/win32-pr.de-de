@@ -1,12 +1,12 @@
 ---
-title: Session.Batchitems-Eigenschaft (WSManDisp. h)
-description: Legt die Anzahl der Elemente in jedem enumerationsbatch fest und ruft Sie ab.
+title: Session.BatchItems-Eigenschaft (WSManDisp.h)
+description: Legt die Anzahl der Elemente in jedem Enumerationsbatch fest und ruft sie ab.
 ms.assetid: 1675ba12-a0c7-4e59-a013-2109780e8afe
 ms.tgt_platform: multiple
 keywords:
-- Batchitems-Eigenschaft Windows-Remoteverwaltung
-- Batchitems-Eigenschaft Windows-Remoteverwaltung, Session-Objekt
-- Sitzungs Objekt Windows-Remoteverwaltung, batchitems (Eigenschaft)
+- BatchItems-Eigenschaft Windows Remoteverwaltung
+- BatchItems-Eigenschaft Windows Remoteverwaltung, Sitzungsobjekt
+- Sitzungsobjekt Windows Remoteverwaltung, BatchItems-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb668b80a2fea8ec5c8683a7a85a20cfbb217a7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 59e395eb27be2b922cf9d53e40f1d8cea0fc13a5dcf7b62b95ac606ec8f3f96f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795340"
 ---
-# <a name="sessionbatchitems-property"></a>Session.Batchitems (Eigenschaft)
+# <a name="sessionbatchitems-property"></a>Session.BatchItems-Eigenschaft
 
-Legt die Anzahl der Elemente in jedem enumerationsbatch fest und ruft Sie ab. Dieser Wert kann während einer Enumeration nicht geändert werden. Der Ressourcenanbieter kann ein Limit festlegen.
+Legt die Anzahl der Elemente in jedem Enumerationsbatch fest und ruft sie ab. Dieser Wert kann während einer Enumeration nicht geändert werden. Der Ressourcenanbieter kann einen Grenzwert festlegen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -41,11 +41,11 @@ Session.BatchItems As long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt die maximale Anzahl von Elementen an, die für die einzelnen zugrunde liegenden Netzwerk Aufrufe an den Dienst zurückgegeben werden. Der Standardwert ist 20.
+Gibt die maximale Anzahl von Elementen an, die für jeden zugrunde liegenden Netzwerkaufruf an den Dienst zurückgegeben werden. Der Standardwert ist 20.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein Optimierungs Feature, das steuert, wie oft Netzwerk Aufrufe zwischen dem Client und dem Server durchgeführt werden. Derzeit wird Sie nur für Enumerationen verwendet. Weitere Informationen zum Auflisten von Ressourcen finden Sie unter [**Enumerate**](session-enumerate.md).
+Dies ist ein Optimierungsfeature, das steuert, wie oft Netzwerkaufrufe zwischen dem Client und dem Server ausgeführt werden. Derzeit wird es nur für Enumerationen verwendet. Weitere Informationen zum Aufzählen von Ressourcen finden Sie unter [**Aufzählen von**](session-enumerate.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,24 +55,24 @@ Dies ist ein Optimierungs Feature, das steuert, wie oft Netzwerk Aufrufe zwische
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sitzung**](session.md)
+[**Sitzungskonsistenz**](session.md)
 </dt> <dt>
 
 [**Aufzählen**](session-enumerate.md)
 </dt> <dt>
 
-[**Enumerator. ReadItem**](enumerator-readitem.md)
+[**Enumerator.ReadItem**](enumerator-readitem.md)
 </dt> </dl>
 
  

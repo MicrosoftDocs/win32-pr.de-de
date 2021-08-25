@@ -1,19 +1,19 @@
 ---
-description: Erzwingt, dass der erweiterte Videorenderer (EVR) Bob Deinterlacing verwendet.
+description: Erzwingt die Verwendung des Bob-Deinterlacings durch den Enhanced Video Renderer (EVR).
 ms.assetid: 56f808b3-c2eb-46e4-84a1-c478a5db78e7
-title: EVRConfig_ForceBob-Attribut (UUIDs. h)
+title: EVRConfig_ForceBob-Attribut (Uuids.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afeeb1e7fb57f956d378e71ac4452ea2e4f168be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41248eb48f089cf88ecd66dcf823cc83c243b3a2f637aef7633d13ac755c9584
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958349"
 ---
-# <a name="evrconfig_forcebob-attribute"></a>Evrconfig \_ forcebob-Attribut
+# <a name="evrconfig_forcebob-attribute"></a>EVRConfig \_ ForceBob-Attribut
 
-Erzwingt, dass der erweiterte Videorenderer (EVR) Bob Deinterlacing verwendet.
+Erzwingt die Verwendung des Bob-Deinterlacings durch den Enhanced Video Renderer (EVR).
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,17 +21,17 @@ Erzwingt, dass der erweiterte Videorenderer (EVR) Bob Deinterlacing verwendet.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann in der EVR-Medien Senke festgelegt werden. Zum Festlegen des-Attributs verwenden Sie **QueryInterface** , um die EVR-Medien Senke für die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle abzufragen.
+Dieses Attribut kann für die EVR-Mediensenke festgelegt werden. Um das Attribut festzulegen, verwenden Sie **QueryInterface,** um die EVR-Mediensenke für die [**SCHNITTSTELLE "ATTRIBUTESAttributes"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) abzufragen.
 
-Das Festlegen dieses Attributs hat denselben Effekt wie das Festlegen des **MF videomixprefs \_ forcebob** -Flags für den EVR. Eine Beschreibung dieses Flags finden Sie unter [**MF videomixprefs**](/windows/desktop/api/evr/ne-evr-mfvideomixprefs) .
+Das Festlegen dieses Attributs hat die gleiche Auswirkung wie das Festlegen des **MFVideoMixPrefs \_ ForceBob-Flags** auf der EVR. Eine Beschreibung dieses Flags finden Sie unter [**MFVideoMixPrefs.**](/windows/desktop/api/evr/ne-evr-mfvideomixprefs)
 
-Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus strmiids.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>UUIDs. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Uuids.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Die GUID-Konstante für dieses Attribut wird aus "straumiids. lib" exportiert.
 [EVR-Attribute](enhanced-video-renderer-attributes.md)
 </dt> <dt>
 
-[Video Qualitäts Verwaltung](video-quality-management.md)
+[Videoqualitätsverwaltung](video-quality-management.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Das- <templateInfo> Element ist ein Container für das foldertype-Element, das einen Ordnertyp zum Anzeigen der Ergebnisse einer Abfrage über diese Bibliothek angibt. Dieses Element ist optional und besitzt keine Attribute.
+description: Das <templateInfo> -Element ist ein Container für das folderType-Element, der einen Ordnertyp zum Anzeigen der Ergebnisse einer Abfrage über diese Bibliothek angibt. Dieses Element ist optional und verfügt über keine Attribute.
 ms.assetid: C555097A-E7B8-45ef-8CFA-19CFBC5E9D5A
-title: templateingefo-Element (Bibliotheks Schema)
+title: templateInfo-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dae06a57a1b30407e2513e03f30ae6a4da13e849
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eda0c42e71db2e47335371b51d9dc819620e6b28dfac63ee9c0e2a640ccab0b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942090"
 ---
-# <a name="templateinfo-element-library-schema"></a>templateingefo-Element (Bibliotheks Schema)
+# <a name="templateinfo-element-library-schema"></a>templateInfo-Element (Bibliotheksschema)
 
-Das- <templateInfo> Element ist ein Container für das [foldertype](schema-library-foldertype.md) -Element, das einen Ordnertyp zum Anzeigen der Ergebnisse einer Abfrage über diese Bibliothek angibt. Dieses Element ist optional und besitzt keine Attribute.
+Das <templateInfo> -Element ist ein Container für das [folderType-Element,](schema-library-foldertype.md) der einen Ordnertyp zum Anzeigen der Ergebnisse einer Abfrage über diese Bibliothek angibt. Dieses Element ist optional und verfügt über keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,8 +34,8 @@ Das- <templateInfo> Element ist ein Container für das [foldertype](schema-libra
 
 | Übergeordnetes Element                                                               | Untergeordnete Elemente                                                             |
 |------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md) | [foldertype-Element (Bibliotheks Schema)](schema-library-foldertype.md)       |
-|                                                                              | [PropertyStore-Element (Bibliotheks Schema)](schema-library-propertystore.md) |
+| [libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md) | [folderType-Element (Bibliotheksschema)](schema-library-foldertype.md)       |
+|                                                                              | [propertyStore-Element (Bibliotheksschema)](schema-library-propertystore.md) |
 
 
 
@@ -45,10 +45,10 @@ Das- <templateInfo> Element ist ein Container für das [foldertype](schema-libra
 
 <dl> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Schema der Bibliotheksbeschreibung](library-schema-entry.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](/previous-versions//dd743009(v=vs.85))
+[Suchconnectorbeschreibungsschema](/previous-versions//dd743009(v=vs.85))
 </dt> </dl>
 
  

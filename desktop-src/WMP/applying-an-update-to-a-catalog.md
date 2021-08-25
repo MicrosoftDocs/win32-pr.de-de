@@ -3,35 +3,35 @@ title: Anwenden eines Updates auf einen Katalog
 description: Anwenden eines Updates auf einen Katalog
 ms.assetid: 4aedb0d6-36c7-425c-b6d3-e16161cf6828
 keywords:
-- Windows Media Player Online Stores, Anwenden von Updates auf Kataloge
-- Online Stores, Anwenden von Updates auf Kataloge
-- Typ 1 Online Stores, Anwenden von Updates auf Kataloge
-- Windows Media Player Online Stores, Aktualisieren von Katalogen
-- Online Stores, Kataloge aktualisieren
-- Typ 1 Online Stores, Kataloge aktualisieren
-- Windows Media Player Online Stores, Katalog Updates
-- Online Stores, Katalog Updates
-- Typ 1 Online Stores, Katalog Updates
-- Katalog Updates
+- Windows Media Player Onlineshops,Anwenden von Updates auf Kataloge
+- Onlineshops,Anwenden von Updates auf Kataloge
+- Geben Sie 1 Onlineshops ein, und wenden Sie Updates auf Kataloge an.
+- Windows Media Player Onlineshops, Aktualisieren von Katalogen
+- Onlineshops,Aktualisieren von Katalogen
+- Geben Sie 1 Onlineshops ein, und aktualisieren Sie Kataloge.
+- Windows Media Player Onlineshops, Katalogupdates
+- Onlineshops, Katalogupdates
+- Geben Sie 1 Onlineshops ein, Katalogupdates
+- Katalogupdates
 - Aktualisieren von Katalogen
 - Anwenden von Updates auf Kataloge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d468edb7d09b8804fa924f7c31fc1be45d27c8fe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 114b5b341df1101b221a3d8227bf0526bfa32af744f1dca7b0a53ca2d7793c46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124030"
 ---
 # <a name="applying-an-update-to-a-catalog"></a>Anwenden eines Updates auf einen Katalog
 
 > [!Note]  
-> Dies erfolgt in der Regel nicht mit Ausnahme von Diagnose Zwecken – beispielsweise, um zu überprüfen, ob eine Differenz Datei gültig ist. Der auf diese Weise generierte Katalog befindet sich nicht in komprimierter Form und sollte nicht an Windows Media Player übermittelt werden.
+> Dies erfolgt normalerweise nur zu Diagnosezwecken, z. B. um zu überprüfen, ob eine Differenzdatei gültig ist. Der auf diese Weise generierte Katalog ist nicht komprimiert und sollte nicht an Windows Media Player übergeben werden.
 
- 
+ 
 
-Eine neue Katalog Datei kann mithilfe der unten stehenden Syntax erstellt werden, wobei *Input Catalog* der Speicherort des ursprünglichen Katalogs und *inputdiff* der Speicherort der anzuwendenden Differenz Datei ist. Die Katalogdateien müssen in unkomprimierter Form vorliegen.
+Eine neue Katalogdatei kann mithilfe der folgenden Syntax erstellt werden, wobei *inputcatalog* der Speicherort des ursprünglichen Katalogs und *inputdiff* der Speicherort der zu übernehmenden Differenzdatei ist. Die Katalogdateien müssen unkomprimiert sein.
 
 
 ```C++
@@ -40,7 +40,7 @@ catcomp applydiff <inputcatalog> <inputdiff>
 
 
 
-Der folgende Code erstellt z. b. einen neuen Katalog aus C: \\ Catalog210 \\ catalog. wmdb und c: \\ Catalog210 \\ catalog. diff.
+Im Folgenden wird beispielsweise ein neuer Katalog aus C erstellt: \\ Catalog210 \\ catalog.wmdb und C: \\ Catalog210 \\ catalog.diff.
 
 
 ```C++
@@ -55,15 +55,15 @@ Wenn die Kompilierung erfolgreich ist, erstellt catcomp.exe die folgenden Ausgab
 
 | Dateiname        | BESCHREIBUNG       |
 |------------------|-------------------|
-| Catalog. wmdb. New | Neue Katalog Datei. |
+| catalog.wmdb.new | Neue Katalogdatei. |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

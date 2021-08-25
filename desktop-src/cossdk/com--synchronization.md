@@ -1,28 +1,28 @@
 ---
-description: Com+-Synchronisierung
+description: COM+-Synchronisierung
 ms.assetid: a348959a-fa23-495c-ba1c-85bc3ae92396
-title: Com+-Synchronisierung
+title: COM+-Synchronisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 134305ef97e4bfafa0808fc19e96f578c5016127
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 187e116d1182a94947157f7187bc930bf91d5386226f6049e9dd27234548ff48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991288"
 ---
-# <a name="com-synchronization"></a>Com+-Synchronisierung
+# <a name="com-synchronization"></a>COM+-Synchronisierung
 
-Der com+-Synchronisierungs Dienst ermöglicht die Synchronisierung von Komponente zu Komponente und verhindert, dass mehrere Aufrufer zu einem bestimmten Zeitpunkt in die Komponente eintreten. Die Synchronisierung bestimmt, wann Threads Aufrufe an ein-Objekt senden können.
+Der COM+-Synchronisierungsdienst bietet eine Synchronisierung, die von komponente zu Komponente fließt und verhindert, dass mehr als ein Aufrufer zu einem bestimmten Zeitpunkt in die Komponente eintritt. Die Synchronisierung bestimmt, wann Threads Aufrufe an ein Objekt versenden können.
 
-Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrundinformationen und Aufgabeninformationen zum com+-Synchronisierungs Dienst.
+Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrund- und Aufgabeninformationen zum COM+-Synchronisierungsdienst.
 
 
 
 | Thema                                                                         | BESCHREIBUNG                                                                      |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| [Com+-Synchronisierungs Konzepte](com--synchronization-concepts.md)<br/> | Bietet eine Übersicht über den com+-Synchronisierungs Dienst.<br/>             |
-| [Com+-Synchronisierungs Tasks](com--synchronization-tasks.md)<br/>       | Enthält Anweisungen zum Festlegen des com+-Synchronisierungs Attributs.<br/> |
+| [COM+-Synchronisierungskonzepte](com--synchronization-concepts.md)<br/> | Bietet eine Übersicht über den COM+-Synchronisierungsdienst.<br/>             |
+| [COM+-Synchronisierungsaufgaben](com--synchronization-tasks.md)<br/>       | Enthält Anweisungen zum Festlegen des COM+-Synchronisierungsattributs.<br/> |
 
 
 

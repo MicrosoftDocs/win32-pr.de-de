@@ -1,70 +1,70 @@
 ---
-description: Einschränkungen bei der Verwendung des Felds
+description: Nutzungseinschränkungen
 ms.assetid: 36f28e4c-2baf-4618-9935-5d4615f6bc77
-title: Einschränkungen bei der Verwendung des Felds
+title: Nutzungseinschränkungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b16f57de7642fa789a08c886a32bf906faffb72b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ccfb5b7c0923bdea117371a3b6af2669bf903fb3af996f754be43d5665c1ee1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942670"
 ---
-# <a name="field-of-use-restrictions"></a>Einschränkungen bei der Verwendung des Felds
+# <a name="field-of-use-restrictions"></a>Nutzungseinschränkungen
 
 > [!Note]  
 > Dieses Thema gilt für Windows 7 oder höher.
 
  
 
-Eine *Einschränkungs Einschränkung ist eine bereit* Stellung, die einschränkt, wie eine Lizenz für eine bestimmte Technologie verwendet werden kann.
+Eine *Verwendungseinschränkung ist eine* Bereitstellung, die die Verwendung einer Lizenz für eine bestimmte Technologie einschränkt.
 
-Media Foundation bietet einen Mechanismus zum Erzwingen von Feld-in-use-Einschränkungen für Media Foundation Transformationen (MFTs), insbesondere bei Codecs. Dieser Mechanismus erfordert, dass der MFT seine eigene Verwendung durch Anwendungen blockiert, bis die Anwendung einen Handshake mit dem MFT ausgeführt hat. Media Foundation definiert nicht den Handshake – in der Regel würde es sich um eine Art kryptografieaustausch handeln.
+Media Foundation bietet einen Mechanismus zum Erzwingen von Nutzungseinschränkungen für Media Foundation Transformationen (MFTs), insbesondere Codecs. Dieser Mechanismus erfordert, dass MFT seine eigene Verwendung durch Anwendungen blockiert, bis die Anwendung einen Handshake mit dem MFT ausgeführt hat. Media Foundation den Handshake nicht definiert– in der Regel würde dies einen kryptografischen Austausch beinhalten.
 
 ### <a name="registration-and-enumeration"></a>Registrierung und Enumeration
 
-Wenn eine MFT Einschränkungen für das Feld aufweist, legen Sie beim Registrieren des MFT das Flag " **\_ \_ \_ fieldofuse" für das MFT-Enum-Flag** fest. Dieses Flag gilt für die folgenden MFT-Registrierungs-APIs:
+Wenn für ein MFT Nutzungseinschränkungen gelten, legen Sie das **Flag MFT \_ ENUM \_ FLAG \_ FIELDOFUSE** fest, wenn Sie MFT registrieren. Dieses Flag gilt für die folgenden MFT-Registrierungs-APIs:
 
--   [**MF-tregiester**](/windows/desktop/api/mfapi/nf-mfapi-mftregister)
--   [**MF-gisterlocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal)
--   [**MF tregisterlocalbyclsid**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocalbyclsid)
--   [**Imflocalmf tregistration:: registermfts**](/windows/desktop/api/mfidl/nf-mfidl-imflocalmftregistration-registermfts)
+-   [**MFTRegister**](/windows/desktop/api/mfapi/nf-mfapi-mftregister)
+-   [**MFTRegisterLocal**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocal)
+-   [**MFTRegisterLocalByCLSID**](/windows/desktop/api/mfapi/nf-mfapi-mftregisterlocalbyclsid)
+-   [**BLOCKSLocalMFTRegistration::RegisterMFTs**](/windows/desktop/api/mfidl/nf-mfidl-imflocalmftregistration-registermfts)
 
-Standardmäßig werden mit diesem Flag registrierte MFTs von enumerationsergebnissen ausgeschlossen. Um MFTs mit Einschränkungen für das Feld zu auflisten, nennen Sie [**mftenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) , und geben Sie im *Flags* -Parameter das Flag **\_ \_ \_ fidofuse für das MFT-Enum-Flag** an. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
+Standardmäßig werden MFTs, die mit diesem Flag registriert sind, aus den Enumerationsergebnissen ausgeschlossen. Rufen Sie [**MFTEnumEx**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) auf, und geben Sie im Flags-Parameter das **Flag MFT \_ ENUM \_ FLAG \_ FIELDOFUSE** an, um MFTs mit *Verwendungseinschränkungen aufzählen* zu können. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
 
-![Diagramm, das anzeigt, wie MFT und eine Anwendung Daten an die Registrierung senden](images/mft-fou01.gif)
+![Diagramm, das mft und eine Anwendung zeigt, die Daten an die Registrierung sendet](images/mft-fou01.gif)
 
-Die [**MF**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) -Funktion schließt immer alle MFTs aus, die Einschränkungen für das Feld verwenden.
+Die [**MFTEnum-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mftenum) schließt immer alle MFTs mit Nutzungseinschränkungen aus.
 
 ### <a name="unlocking-the-mft"></a>Entsperren des MFT
 
-Führen Sie die folgenden Schritte aus, um ein MFT mit Einschränkungen für das Feld zu verwenden:
+Führen Sie die folgenden Schritte aus, um MFT mit Nutzungseinschränkungen zu verwenden:
 
-1.  Die Anwendung implementiert die [**imffieldofusemftunlock**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) -Schnittstelle.
-2.  Die [**imffieldofusemftunlock:: Unlock**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) -Methode nimmt einen Zeiger auf die **IUnknown** -Schnittstelle der MFT auf.
-3.  In der [**Unlock**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) -Methode führt die Anwendung den erforderlichen Handshake aus, wobei der von der MFT definierte Mechanismus verwendet wird. Dieser Schritt wird nicht durch Media Foundation-API definiert.
-4.  Wenn die [**Unlock**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) -Methode erfolgreich ist, entsperrt sich die MFT selbst.
+1.  Die Anwendung implementiert die [**BERFTF-Schnittstelle .B.**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock)
+2.  Die METHODE 100000011100007 verwendet einen Zeiger auf die **IUnknown-Schnittstelle** von MFT. [](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock)
+3.  In der [**Unlock-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) führt die Anwendung den erforderlichen Handshake mithilfe des vom MFT definierten Mechanismus aus. Dieser Schritt wird nicht von der Media Foundation DEFINIERT.
+4.  Wenn die [**Unlock-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) erfolgreich ist, entsperrt sich MFT selbst.
 
-Die Anwendung gibt den [**imffieldofusemftunlock**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) -Zeiger durch Festlegen des [MFT \_ fieldofuse \_ Unlock \_ Attribute](mft-fieldofuse-unlock-attribute.md) -Attributs an. Es gibt verschiedene Möglichkeiten, dieses Attribut festzulegen, je nachdem, wie die Anwendung den Decoder oder die Codierungs Pipeline erstellt:
+Die Anwendung gibt den [**ZEIGER AUF DAS FELDOFUSE UNLOCK-Attribut**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) [(MFT \_ FIELDOFUSE \_ UNLOCK \_ Attribute)](mft-fieldofuse-unlock-attribute.md) an. Je nachdem, wie Ihre Anwendung den Decoder oder die Codierungspipeline erstellt, gibt es verschiedene Möglichkeiten, dieses Attribut zu festlegen:
 
 
 
-| API                   | Entsperren des verwendeten Felds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| API                   | Entsperren des Verwendungsfelds                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Quell Leser         | Wenn Ihre Anwendung den [Quell Leser](source-reader.md) verwendet, um eine Mediendatei zu decodieren, legen Sie das Attribut Attribut [ \_ \_ Unlock \_ Attribut](mft-fieldofuse-unlock-attribute.md) in den Konfigurationsparametern fest. Siehe [Attribute des Quell Readers](source-reader-attributes.md).                                                                                                                                                                                                                                                                         |
-| Senke-Writer           | Wenn Ihre Anwendung den senkenwriter verwendet, um eine Mediendatei zu codieren, legen Sie das Attribut Attribut [ \_ \_ Unlock \_ Attribut](mft-fieldofuse-unlock-attribute.md) in den Konfigurationsparametern fest. Siehe [senkenschreibattribute](sink-writer-attributes.md).                                                                                                                                                                                                                                                                                                    |
-| Schnelles transcode        | Wenn Ihre Anwendung die Funktion "schnelles transcode" verwendet, um eine Codierungs Topologie zu erstellen, legen Sie das Attribut "Unlock" in [MFT \_ fieldofuse \_ \_](mft-fieldofuse-unlock-attribute.md) fest, wenn Sie [**imftranscodeprofile:: setcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes)aufrufen. Weitere Informationen zur Funktion "schnelles transcode" finden Sie unter [transcode-API](transcode-api.md).                                                                                                                                                                      |
-| Topologie              | Wenn Sie eine Topologie direkt erstellen, legen Sie das Attribut "Unlock" von [MFT \_ fieldofuse \_ \_ ](mft-fieldofuse-unlock-attribute.md) als Attribut in der Topologie fest. Siehe [topologieattribute](topology-attributes.md).                                                                                                                                                                                                                                                                                                                                                  |
-| MFT-Aktivierungs Objekt | Wenn Ihre Anwendung die Decoder oder Encoder direkt auflistet, die Sie verwenden werden, legen Sie das [Attribut "Unlock" von MFT \_ \_ \_ fieldofuse](mft-fieldofuse-unlock-attribute.md) auf die [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeiger fest, die von der Funktion " [**mftenumex**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) " zurückgegeben werden. <br/> Legen Sie das-Attribut vor dem Aufrufen von [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) zum Erstellen des MFT fest. Das Aktivierungs Objekt ruft [**imffieldofusemftunlock:: Unlock**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) auf, wenn die MFT erstellt wird.<br/> |
+| Quellleser         | Wenn Ihre Anwendung [](source-reader.md) den Quellleser zum Decodieren einer Mediendatei verwendet, legen Sie das [Attribut MFT \_ FIELDOFUSE \_ UNLOCK \_ Attribute](mft-fieldofuse-unlock-attribute.md) in den Konfigurationsparametern fest. Weitere Informationen [finden Sie unter Quellleseattribute.](source-reader-attributes.md)                                                                                                                                                                                                                                                                         |
+| Sink Writer           | Wenn Ihre Anwendung den Senkenwriter zum Codieren einer Mediendatei verwendet, legen Sie das [Attribut MFT \_ FIELDOFUSE \_ UNLOCK \_ Attribute](mft-fieldofuse-unlock-attribute.md) in den Konfigurationsparametern fest. Weitere Informationen [finden Sie unter Sink Writer-Attribute.](sink-writer-attributes.md)                                                                                                                                                                                                                                                                                                    |
+| Schnelle Transcodierung        | Wenn Ihre Anwendung das Feature "Fast Transcode" verwendet, um eine Codierungstopologie zu erstellen, legen Sie das [MFT \_ FIELDOFUSE \_ \_ UNLOCK-Attribut](mft-fieldofuse-unlock-attribute.md) fest, wenn Sie [**DIEDTRANSCODEProfile::SetContainerAttributes aufrufen.**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes) Weitere Informationen zum Feature "Schnelle Transcodierung" finden Sie unter [Transcodierungs-API](transcode-api.md).                                                                                                                                                                      |
+| Topologie              | Wenn Sie eine Topologie direkt erstellen, legen Sie das [MFT \_ FIELDOFUSE \_ \_ UNLOCK-Attribut](mft-fieldofuse-unlock-attribute.md) als Attribut für die Topologie fest. Weitere Informationen [finden Sie unter Topologieattribute.](topology-attributes.md)                                                                                                                                                                                                                                                                                                                                                  |
+| MFT-Aktivierungsobjekt | Wenn Ihre Anwendung die zu verwendenden Decoder oder Encoder direkt aufzählt, legen Sie das [MFT \_ FIELDOFUSE \_ \_ UNLOCK-Attribut](mft-fieldofuse-unlock-attribute.md) für die VON der [**MFTEnumEx-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mftenumex) zurückgegebenen [**UNLOCKActivate-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) fest. <br/> Legen Sie das -Attribut fest, bevor Sie ZUM ERSTELLEN des [**MFT-Objekts DIEACTIVate::ActivateObject-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) aufrufen. Das Aktivierungsobjekt ruft [**BEIM Erstellen des MFT-Objekts DEN Aufruf VON DURCHEFIELDOfUseMFTUnlock::Unlock**](/windows/desktop/api/mfidl/nf-mfidl-imffieldofusemftunlock-unlock) auf.<br/> |
 
 
 
  
 
-Das folgende Diagramm zeigt die Beziehung zwischen den MFT-Aktivierungs Objekten und der [**imffieldofusemftunlock**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) -Schnittstelle.
+Das folgende Diagramm zeigt die Beziehung zwischen MFT-Aktivierungsobjekten und [**der BENUTZEROBERFLÄCHEFieldOfUseMFTUnlock-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock)
 
-![das Diagramm zeigt eine Anwendung, ein Aktivierungs Objekt und eine MFT mit Pfeilen zu einem Foundation-Objekt, das einen Pfeil zurück zu MFT hat.](images/mft-fou02.gif)
+![Diagramm, das eine Anwendung, ein Aktivierungsobjekt und Mft mit Pfeilen zu einem FOU-Objekt zeigt, das über einen Pfeil zurück zu Mft verfügt](images/mft-fou02.gif)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

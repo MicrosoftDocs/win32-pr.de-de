@@ -1,24 +1,24 @@
 ---
-title: ID-Attribut (Fill) (VML)
-description: ID-Attribut (Fill) (VML)
+title: ID-Attribut (Fill)(VML)
+description: ID-Attribut (Fill)(VML)
 ms.assetid: 56865772-51bd-4729-8e56-6b00e3c6bed0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4820c4f7a23cf940c199f27243d8ad5601390a84
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 22f317cef4d588444f5c01770dafd5b56af0d2bca48ee228ff789a11b46348bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007870"
 ---
-# <a name="id-attribute-fillvml"></a>ID-Attribut (Fill) (VML)
+# <a name="id-attribute-fillvml"></a>ID-Attribut (Fill)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Ein Name, der einen eindeutigen Bezeichner für eine Füllung bereitstellt. Lese-/Schreibzugriff. **Zeichenfolge**.
 
@@ -28,23 +28,23 @@ Ein Name, der einen eindeutigen Bezeichner für eine Füllung bereitstellt. Lese
 
 **Tagsyntax**
 
-<v: *Element* -ID = " *Ausdruck* " >
+<v: *element* id=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . ID = "*Ausdruck*"
+*element* .id="*expression*"
 
-*Ausdruck* = *Element*. ID
+*expression* = *.id-Element*
 
 **Anmerkungen**
 
-Verwenden Sie **ID** , um auf eine bestimmte Füllung zu verweisen. Nachdem Sie eine Füllung erstellt und eine ID angegeben haben, können Sie den ID-Namen verwenden, wenn Sie die Füllung bearbeiten möchten.
+Verwenden Sie **ID,** um auf eine bestimmte Füllung zu verweisen. Nachdem Sie eine Füllung erstellt und ihr eine ID gegeben haben, können Sie den ID-Namen verwenden, wenn Sie die Füllung bearbeiten möchten.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Form hat eine Fill-ID mit dem Namen "myfill".
+Die Form hat eine Füll-ID namens "myfill".
 
 
 ```HTML
@@ -59,6 +59,6 @@ Die Form hat eine Fill-ID mit dem Namen "myfill".
 
 
 
- 
+ 
 
- 
+ 

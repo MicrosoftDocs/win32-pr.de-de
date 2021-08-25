@@ -1,9 +1,9 @@
 ---
-title: Rtmkreateenumerationhandle-Funktion (RTM. h)
-description: Die rtmkreateenumerationhandle-Funktion gibt ein Handle zurück, das mit rtmenumerategetnextroute verwendet werden kann, um alle Routen oder eine Teilmenge der Routen zu durchsuchen, die dem Routing Tabellen-Manager bekannt sind.
+title: RtmCreateEnumerationHandle-Funktion (Rtm.h)
+description: Die RtmCreateEnumerationHandle-Funktion gibt ein Handle zurück, das mit RtmEnumerateGetNextRoute verwendet werden soll, um alle Routen oder eine Teilmenge von Routen zu überprüfen, die dem Routingtabellen-Manager bekannt sind.
 ms.assetid: 73e3ac7d-498a-4d89-a6b5-17aaf4b17ec2
 keywords:
-- Rtmkreateenumerationhandle-Funktion (RAS)
+- RtmCreateEnumerationHandle-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14086639db299038139e0e7d02eb12bb892042bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 635bc169b1f68e2ef29e85e9e7ef800868453dd7221d08eda7953eda277ae423
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035910"
 ---
-# <a name="rtmcreateenumerationhandle-function"></a>Rtmkreateenumerationhandle-Funktion
+# <a name="rtmcreateenumerationhandle-function"></a>RtmCreateEnumerationHandle-Funktion
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die **rtmkreateenumerationhandle** -Funktion gibt ein Handle zurück, das mit [**rtmenumerategetnextroute**](rtmenumerategetnextroute.md) verwendet werden kann, um alle Routen oder eine Teilmenge der Routen zu durchsuchen, die dem Routing Tabellen-Manager bekannt sind.
+Die **RtmCreateEnumerationHandle-Funktion** gibt ein Handle zurück, das mit [**RtmEnumerateGetNextRoute**](rtmenumerategetnextroute.md) verwendet werden soll, um alle Routen oder eine Teilmenge von Routen zu überprüfen, die dem Routingtabellen-Manager bekannt sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,26 +44,26 @@ HANDLE RtmCreateEnumerationHandle(
 
 <dl> <dt>
 
-*ProtocolFamily* \[ in\]
+*ProtocolFamily* \[ In\]
 </dt> <dd>
 
-Gibt die Protokollfamilie der aufzuzählenden Routen an.
+Gibt die Protokollfamilie der zu aufzählenden Routen an.
 
 </dd> <dt>
 
-*Enumerationflags* \[ in\]
+*EnumerationFlags* \[ In\]
 </dt> <dd>
 
-Gibt an, welche Routen aufgelistet werden sollen. Mit diesem Parameter wird der von der enumerationsapi zurückgegebene Satz von Routen auf eine Teilmenge beschränkt, die durch die folgenden Flags definiert ist, sowie auf die Werte in den entsprechenden Membern der Struktur, auf die durch den *Kriterium* -Parameter verwiesen wird. Dieser Parameter kann einen der folgenden Werte annehmen.
+Gibt an, welche Routen aufzählt werden sollen. Dieser Parameter beschränkt den Satz von Routen, die von der Enumerations-API zurückgegeben werden, auf eine Teilmenge, die durch die folgenden Flags definiert wird, und auf die Werte in den entsprechenden Membern der -Struktur, auf die der *CriteriaRoute-Parameter* zeigt. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
-| Enumerationflags                                                                                                                                                                              | Bedeutung                                                                                                                                                                 |
+| EnumerationFlags                                                                                                                                                                              | Bedeutung                                                                                                                                                                 |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RTM_ONLY_THIS_NETWORK"></span><span id="rtm_only_this_network"></span><dl> <dt>**\_nur \_ dieses \_ Netzwerk RTM**</dt> </dl>       | Listet nur die Routen auf, die die gleiche Netzwerk Nummer wie das RR- \_ netzwerkmember der Struktur aufweisen, auf die von Criteria verwiesen wird.<br/>                        |
-| <span id="RTM_ONLY_THIS_INTERFACE"></span><span id="rtm_only_this_interface"></span><dl> <dt>**\_nur \_ diese \_ Schnittstelle für RTM**</dt> </dl> | Listet nur die Routen auf, die durch die Schnittstelle abgerufen wurden, die durch das RR- \_ interfakeid-Feld der Struktur abgerufen wurde, auf die von Criteria verwiesen wird.<br/>    |
-| <span id="RTM_ONLY_THIS_PROTOCOL"></span><span id="rtm_only_this_protocol"></span><dl> <dt>**\_nur \_ dieses \_ Protokoll für RTM**</dt> </dl>    | Enumerieren Sie nur die Routen, die durch das Routing Protokoll hinzugefügt wurden, das durch das \_ Feld RR routingprotocol der Struktur, auf die durch Kriterienwerte verwiesen wird, angegeben wurden.<br/> |
-| <span id="RTM_ONLY_BEST_ROUTES"></span><span id="rtm_only_best_routes"></span><dl> <dt>**RTM hat \_ nur die \_ besten \_ Routen**</dt> </dl>          | Listet nur die optimalen Routen zu den einzelnen Netzwerken in der Gruppe auf.<br/>                                                                                           |
+| <span id="RTM_ONLY_THIS_NETWORK"></span><span id="rtm_only_this_network"></span><dl> <dt>**NUR \_ DIESES \_ NETZWERK RTM \_**</dt> </dl>       | Enumerieren Sie nur die Routen, die dieselbe Netzwerknummer wie das RR-Netzwerkmitglied der Struktur haben, auf die \_ von CriteriaRoute verwiesen wird.<br/>                        |
+| <span id="RTM_ONLY_THIS_INTERFACE"></span><span id="rtm_only_this_interface"></span><dl> <dt>**NUR RTM \_ \_ DIESE \_ SCHNITTSTELLE**</dt> </dl> | Enumerieren Sie nur die Routen, die über die schnittstelle ermittelt wurden, die durch das Feld RR InterfaceID der Struktur angegeben wird, auf die \_ von CriteriaRoute verwiesen wird.<br/>    |
+| <span id="RTM_ONLY_THIS_PROTOCOL"></span><span id="rtm_only_this_protocol"></span><dl> <dt>**NUR \_ RTM \_ DIESES \_ PROTOKOLL**</dt> </dl>    | Enumerieren Sie nur die Routen, die durch das Routingprotokoll hinzugefügt wurden, das durch das RR RoutingProtocol-Feld der Struktur angegeben wird, auf die \_ von CriteriaRoute verwiesen wird.<br/> |
+| <span id="RTM_ONLY_BEST_ROUTES"></span><span id="rtm_only_best_routes"></span><dl> <dt>**NUR RTM \_ \_ – BESTE \_ ROUTEN**</dt> </dl>          | Enumerieren Sie nur die besten Routen zu jedem der Netzwerke in der Gruppe.<br/>                                                                                           |
 
 
 
@@ -71,27 +71,27 @@ Gibt an, welche Routen aufgelistet werden sollen. Mit diesem Parameter wird der 
 
 </dd> <dt>
 
-*Kriterien* \[ in\]
+*CriteriaRoute* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine Protokoll familienspezifische Routen Struktur ([**RTM \_ -IP- \_ Route**](rtm-ip-route.md) oder [**RTM \_ IPX- \_ Route**](rtm-ipx-route.md)). Die Element Werte in dieser Struktur entsprechen den Flags, die durch den *enumerationflags* -Parameter angegeben werden.
+Zeiger auf eine protokollfamilienspezifische Routenstruktur ([**RTM \_ IP \_ ROUTE**](rtm-ip-route.md) oder [**RTM \_ IPX \_ ROUTE**](rtm-ipx-route.md)). Die Memberwerte in dieser Struktur entsprechen den Flags, die durch den *EnumerationFlags-Parameter angegeben* werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein **handle** , das bei nachfolgenden enumerationsaufrufen verwendet werden soll.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein **HANDLE,** das bei nachfolgenden Enumerationsaufrufen verwendet werden soll.
 
-Wenn die Funktion fehlschlägt oder keine Routen mit den angegebenen Kriterien vorhanden sind, ist der Rückgabewert **null**. Rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf, um weitere Informationen zu erhalten.
+Wenn die Funktion fehlschlägt oder keine Routen mit den angegebenen Kriterien vorhanden sind, ist der Rückgabewert **NULL.** Rufen [**Sie GetLastError auf,**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) um weitere Informationen zu erhalten.
 
 
 
 | Wert                                                                                                       | BESCHREIBUNG                                                                                                                  |
 |-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Fehler \_ ohne \_ Routen**</dt> </dl>            | Es sind keine Routen vorhanden, die die angegebenen Kriterien aufweisen.<br/>                                                             |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>    | Mindestens ein Eingabeparameter ist ungültig (z. b. unbekannte Protokollfamilie, ungültige Enumerationsflags).<br/> |
-| <dl> <dt>**Fehler \_ keine \_ System \_ Ressourcen**</dt> </dl> | Es sind nicht genügend Ressourcen vorhanden, um den Vorgang auszuführen.<br/>                                                      |
-| <dl> <dt>**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**</dt> </dl>   | Es ist nicht genügend Arbeitsspeicher vorhanden, um das Handle zuzuordnen.<br/>                                                              |
+| <dl> <dt>**FEHLER: \_ KEINE \_ ROUTEN**</dt> </dl>            | Es gibt keine Routen mit den angegebenen Kriterien.<br/>                                                             |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>    | Mindestens einer der Eingabeparameter ist ungültig (z. B. unbekannte Protokollfamilie, ungültige Enumerationsflags).<br/> |
+| <dl> <dt>**FEHLER: \_ \_ KEINE \_ SYSTEMRESSOURCEN**</dt> </dl> | Es sind nicht genügend Ressourcen zum Durchführen des Vorgangs verfügbar.<br/>                                                      |
+| <dl> <dt>**FEHLER: \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>   | Es ist nicht genügend Arbeitsspeicher zum Zuordnen des Handles verfügbar.<br/>                                                              |
 
 
 
@@ -105,9 +105,9 @@ Wenn die Funktion fehlschlägt oder keine Routen mit den angegebenen Kriterien v
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>RTM. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Rtm.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Rtm.dll</dt> </dl> |
 
 
@@ -116,25 +116,25 @@ Wenn die Funktion fehlschlägt oder keine Routen mit den angegebenen Kriterien v
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Routing Table Manager Version 1 Reference](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Funktionen der Routing-Tabellen-Manager-Version 1](routing-table-manager-version-1-functions.md)
+[Routingtabellen-Manager- Version 1-Funktionen](routing-table-manager-version-1-functions.md)
 </dt> <dt>
 
-[**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)
+[**Getlasterror**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 </dt> <dt>
 
-[**RTM \_ -IP- \_ Route**](rtm-ip-route.md)
+[**\_RTM-IP-ROUTE \_**](rtm-ip-route.md)
 </dt> <dt>
 
-[**RTM- \_ IPX- \_ Route**](rtm-ipx-route.md)
+[**\_RTM-IPX-ROUTE \_**](rtm-ipx-route.md)
 </dt> <dt>
 
-[**Rtmcloseenumerationhandle**](rtmcloseenumerationhandle.md)
+[**RtmCloseEnumerationHandle**](rtmcloseenumerationhandle.md)
 </dt> <dt>
 
-[**Rtmenumschlag-ategetnextroute**](rtmenumerategetnextroute.md)
+[**RtmEnumerateGetNextRoute**](rtmenumerategetnextroute.md)
 </dt> </dl>
 
  

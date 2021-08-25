@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinvalidcodepageexception-Konstruktor'
-title: Esentinvalidcodepageexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidCodePageException-Konstruktor'
+title: EsentInvalidCodePageException-Konstruktor
 TOCTitle: 'EsentInvalidCodePageException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidCodePageException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidcodepageexception.esentinvalidcodepageexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6f673e9c01a2d2442558aea80c7721a71af1205b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe47c38c61077cca759b86a735a65e5c5362ebf5f8496c8ecf38e7154c0ab8d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837531"
 ---
-# <a name="esentinvalidcodepageexception-constructor"></a>Esentinvalidcodepageexception-Konstruktor
+# <a name="esentinvalidcodepageexception-constructor"></a>EsentInvalidCodePageException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidcodepageexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidCodePageException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidCodePageException()
 public EsentInvalidCodePageException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidcodepageexception-Klasse](./esentinvalidcodepageexception-class.md)
+[EsentInvalidCodePageException-Klasse](./esentinvalidcodepageexception-class.md)
 
-[Esentinvalidcodepageexception-Member](./esentinvalidcodepageexception-members.md)
+[EsentInvalidCodePageException-Member](./esentinvalidcodepageexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

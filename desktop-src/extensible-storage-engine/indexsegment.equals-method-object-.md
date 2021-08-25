@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Indexsegment. Gleichheits Methode (Objekt)'
-title: Indexsegment. Gleichheits Methode (Objekt)
+description: 'Weitere Informationen finden Sie unter: IndexSegment.Equals-Methode (Object)'
+title: IndexSegment.Equals-Methode (Object)
 TOCTitle: Equals method (Object)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.IndexSegment.Equals(System.Object)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexsegment.equals(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 101b72a6f5dae79cc481be02345ee9cd2e0973f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d01af10b308cff4074f3a2b6730d1e6b0481c209033b0e57dbbb47fa4759e8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017760"
 ---
-# <a name="indexsegmentequals-method-object"></a>Indexsegment. Gleichheits Methode (Objekt)
+# <a name="indexsegmentequals-method-object"></a>IndexSegment.Equals-Methode (Object)
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,23 +58,23 @@ public override bool Equals(
 #### <a name="parameters"></a>Parameter
 
   - obj  
-    Type: [System. Object](/dotnet/api/system.object)  
+    Typ: [System.Object](/dotnet/api/system.object)  
     
     Ein Objekt, das mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Indexsegment-Klasse](./indexsegment-class.md)
+[IndexSegment-Klasse](./indexsegment-class.md)
 
-[Indexsegment-Member](./indexsegment-members.md)
+[IndexSegment-Member](./indexsegment-members.md)
 
-[Gleichheits Überladung](./indexsegment.equals-method.md)
+[Equals-Überladung](./indexsegment.equals-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

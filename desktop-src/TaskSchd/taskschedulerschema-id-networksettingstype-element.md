@@ -1,9 +1,9 @@
 ---
-title: ID-Element (networksettingstype)
-description: Enthält einen GUID-Wert, der ein Netzwerk Profil identifiziert.
+title: Id-Element (networkSettingsType)
+description: Enthält einen GUID-Wert, der ein Netzwerkprofil identifiziert.
 ms.assetid: 527912ab-9a81-4570-91c5-8f5943e79a28
 keywords:
-- ID-Element Taskplaner
+- Id-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3d14865d50e9c3418e3ef65cdbeaea747a98a4ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 06196710b9db9d39d45a24b78bccabf479ef210a97f3cea1fd19286b76f2fc42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125840"
 ---
-# <a name="id-networksettingstype-element"></a>ID-Element (networksettingstype)
+# <a name="id-networksettingstype-element"></a>Id-Element (networkSettingsType)
 
-Enthält einen GUID-Wert, der ein Netzwerk Profil identifiziert.
+Enthält einen GUID-Wert, der ein Netzwerkprofil identifiziert.
 
 ``` syntax
 <xs:element name="Id"
@@ -31,23 +31,23 @@ Enthält einen GUID-Wert, der ein Netzwerk Profil identifiziert.
  />
 ```
 
-Das **ID** -Element wird durch den komplexen Typ [**networksettingstype**](taskschedulerschema-networksettingstype-complextype.md) definiert.
+Das **Id-Element** wird durch den [**komplexen NetworkSettingsType-Typ**](taskschedulerschema-networksettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                            | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                        |
+| Element                                                                                            | Abgeleitet von                                                                       | Beschreibung                                                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Network Settings (settingstype)**](taskschedulerschema-networksettings-settingstype-element.md) | [**Network settingstype**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die vom Taskplaner-Dienst zum Abrufen eines Netzwerk Profils verwendet werden. Der Taskplaner Dienst prüft die Verfügbarkeit dieses Netzwerks, wenn das [**runonlyifnetworkavailable**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) -Element auf " **true**" festgelegt ist.<br/> |
+| [**NetworkSettings (settingsType)**](taskschedulerschema-networksettings-settingstype-element.md) | [**networkSettingsType**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten. Der Taskplaner überprüft die Verfügbarkeit dieses Netzwerks, wenn das [**RunOnlyIfNetworkAvailable-Element**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) auf **True festgelegt ist.**<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**ID-Eigenschaft von inetworksettings**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_id).
+Informationen zur C++-Entwicklung finden Sie unter [**Id-Eigenschaft von INetworkSettings**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_id).
 
-Informationen zur Skript Entwicklung finden Sie unter [**NetworkSettings.ID**](networksettings-id.md).
+Informationen zur Skriptentwicklung finden Sie [**unter NetworkSettings.Id**](networksettings-id.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,8 +55,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**NetworkSettings.ID**](n
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

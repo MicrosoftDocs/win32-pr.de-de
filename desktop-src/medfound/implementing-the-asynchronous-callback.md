@@ -4,16 +4,16 @@ ms.assetid: c2c9d0f7-038b-4f23-985c-b812908d71a7
 title: Implementieren des asynchronen Rückrufs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24088aea4e74b39ae08625c6917a5ca56f554158
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f064c9a3d16ebf54342065439415557ea4621c72a57a0a52e4f4c9ed65721e7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941890"
 ---
 # <a name="implementing-the-asynchronous-callback"></a>Implementieren des asynchronen Rückrufs
 
-Der folgende Code zeigt das grundlegende Framework, das zum Implementieren der [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle erforderlich ist. In diesem Beispiel wird die [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode als reine virtuelle Methode deklariert. Die Implementierung dieser Methode hängt von der asynchronen Methode ab, die Sie aufrufen. Weitere Informationen finden Sie unter [Aufrufen von asynchronen Methoden](calling-asynchronous-methods.md).
+Der folgende Code zeigt das grundlegende Framework, das zum Implementieren der [**SCHNITTSTELLE "AWAITAsyncCallback"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) erforderlich ist. In diesem Beispiel wird die [**Invoke-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) als reine virtuelle Methode deklariert. Die Implementierung dieser Methode hängt davon ab, welche asynchrone Methode Sie aufrufen. Weitere Informationen finden Sie unter [Aufrufen asynchroner Methoden.](calling-asynchronous-methods.md)
 
 
 ```C++
@@ -68,7 +68,7 @@ private:
 
 
 
-Der folgende Code zeigt eine Beispiel Implementierung einer Klasse, die von abgeleitet wird `CAsyncCallback` :
+Der folgende Code zeigt eine Beispielimplementierungen einer Klasse, die von abgeleitet `CAsyncCallback` ist:
 
 
 ```C++
@@ -135,13 +135,13 @@ public:
 
 
 
-In diesem Beispiel wird ein Ereignis innerhalb der [**Aufruf**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Methode signalisiert. Eine Erläuterung der verschiedenen Optionen finden Sie unter [Aufrufen von asynchronen Methoden](calling-asynchronous-methods.md).
+In diesem Beispiel wird ein Ereignis innerhalb der [**Invoke-Methode signalisiert.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfasynccallback-invoke) Eine Erläuterung der verschiedenen Optionen finden Sie unter [Aufrufen asynchroner Methoden.](calling-asynchronous-methods.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Asynchrone Rückruf Methoden](asynchronous-callback-methods.md)
+[Asynchrone Rückrufmethoden](asynchronous-callback-methods.md)
 </dt> </dl>
 
  

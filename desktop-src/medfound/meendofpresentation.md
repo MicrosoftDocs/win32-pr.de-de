@@ -1,29 +1,29 @@
 ---
-description: Wird von einer Medienquelle ausgelöst, wenn eine Präsentation endet. Dieses Ereignis signalisiert, dass alle Datenströme in der Präsentation vollständig sind. Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+description: Wird von einer Medienquelle ausgelöst, wenn eine Präsentation endet. Dieses Ereignis signalisiert, dass alle Streams in der Präsentation vollständig sind. Die Mediensitzung gibt dieses Ereignis an die Anwendung weiter.
 ms.assetid: 259b00ae-a91b-461b-a12f-f7291ecc04ff
-title: Meendofpresentation-Ereignis (mfobjects. h)
+title: MEEndOfPresentation-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5e3a904725908d83afd54bbd64012420075037a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e97a2689b8d0e2ae156daa84f27f0e10fb31b828ffedf027a7be47a6c330b7b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941459"
 ---
-# <a name="meendofpresentation-event"></a>Meendof Presentation-Ereignis
+# <a name="meendofpresentation-event"></a>MEEndOfPresentation-Ereignis
 
-Wird von einer Medienquelle ausgelöst, wenn eine Präsentation endet. Dieses Ereignis signalisiert, dass alle Datenströme in der Präsentation vollständig sind. Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Wird von einer Medienquelle ausgelöst, wenn eine Präsentation endet. Dieses Ereignis signalisiert, dass alle Streams in der Präsentation vollständig sind. Die Mediensitzung gibt dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,9 +33,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                                               | BESCHREIBUNG                                                                               |
+| attribute                                                                                               | BESCHREIBUNG                                                                               |
 |---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**die MF- \_ Ereignis \_ Quell \_ Topologie wurde \_ abgebrochen**](mf-event-source-topology-canceled-attribute.md)<br/> | Gibt an, ob die Sequencer-Quelle diese Präsentation abgebrochen hat.<br/> <br/> |
+| [**DIE \_ \_ MF-EREIGNISQUELLENTOPOLOGIE \_ \_ WURDE ABGEBROCHEN.**](mf-event-source-topology-canceled-attribute.md)<br/> | Gibt an, ob die Sequencerquelle diese Präsentation abgebrochen hat.<br/> <br/> |
 
 
 
@@ -45,9 +45,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

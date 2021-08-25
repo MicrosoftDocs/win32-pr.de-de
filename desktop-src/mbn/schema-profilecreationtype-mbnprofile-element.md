@@ -1,7 +1,7 @@
 ---
-description: Enthält Informationen über den Ersteller des Profils.
+description: Enthält Informationen zum Ersteller des Profils.
 ms.assetid: a3adb323-d1de-4026-976e-a106007f4cc2
-title: Profilekreationtype (mbnprofile)-Element
+title: ProfileCreationType (MBNProfile)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,27 +11,27 @@ api_name:
 - ProfileCreationType
 api_type:
 - Schema
-ms.openlocfilehash: 661306cf53b1ae4c7c9cd49a295afe5b84dabd67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ddf3e70607cedbaed45da19651ec73736a54bfafab197e95d2cd634d8e3833f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959840"
 ---
-# <a name="profilecreationtype-mbnprofile-element"></a>Profilekreationtype (mbnprofile)-Element
+# <a name="profilecreationtype-mbnprofile-element"></a>ProfileCreationType (MBNProfile)-Element
 
-Das **profilekreationtype (mbnprofile)** -Element enthält Informationen zum Ersteller des Profils.
+Das **Element ProfileCreationType (MBNProfile)** enthält Informationen zum Ersteller des Profils.
 
-Dieses Element kann einen der folgenden Werte aufweisen.
+Dieses Element kann einen der folgenden Werte haben.
 
 
 
 | Wert                 | Bedeutung                                                                                                                    |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| "Userprovisioned"     | Dieses Profil wird von Informationen erstellt, die vom Benutzer des Geräts bereitgestellt werden.                                                     |
-| "Adminprovisioned"    | Dieses Profil wird von IT-Administratoren erstellt und an Benutzer verteilt.                                                     |
-| "Operatorprovisioned" | Dieses Profil wird von einem Netzwerk Operator erstellt und an Benutzer verteilt.                                                    |
-| "Deviceprovisioned"   | Dieses Profil wird vom mobilen Breitbanddienst erstellt, indem die Informationen verwendet werden, die im bereitgestellten Gerätekontext gespeichert wurden. |
+| "UserProvisioned"     | Dieses Profil wird durch Informationen erstellt, die vom Benutzer des Geräts bereitgestellt werden.                                                     |
+| "AdminProvisioned"    | Dieses Profil wird von IT-Administratoren erstellt und an Benutzer verteilt.                                                     |
+| "OperatorProvisioned" | Dieses Profil wird von einem Netzbetreiber erstellt und an Benutzer verteilt.                                                    |
+| "DeviceProvisioned"   | Dieses Profil wird vom Mobile Broadband-Dienst mithilfe der im gerätebereitstellungskontext gespeicherten Informationen erstellt. |
 
 
 
@@ -62,7 +62,7 @@ Dies ist ein optionales Element.
 </xs:element>
 ```
 
-Das **profilekreationtype** -Element wird durch das [**mbnprofile**](schema-mbnprofile-element.md) -Element definiert.
+Das **ProfileCreationType-Element** wird durch das [**MBNProfile-Element**](schema-mbnprofile-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Das **profilekreationtype** -Element wird durch das [**mbnprofile**](schema-mbnp
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
@@ -79,16 +79,16 @@ Das **profilekreationtype** -Element wird durch das [**mbnprofile**](schema-mbnp
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Beispiel für Zeit Auslösung (XML)
-description: Der XML-Code in diesem Beispiel definiert einen Task, der den Editor zu einem bestimmten Zeitpunkt startet.
+title: Beispiel für Zeittrigger (XML)
+description: Der XML-Code in diesem Beispiel definiert einen Task, Editor zu einem bestimmten Zeitpunkt gestartet wird.
 ms.assetid: dde3627b-e268-45ef-9c26-08877bfe484f
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6c683c831aa3a07eeb3a41db9cd2768caeb6307a
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: 25c4cffb3764f96a191b1c5ad0d2999664d536f2df9be9862fa98f0335f3fe23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "104314051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990810"
 ---
-# <a name="time-trigger-example-xml"></a>Beispiel für Zeit Auslösung (XML)
+# <a name="time-trigger-example-xml"></a>Beispiel für Zeittrigger (XML)
 
-Der XML-Code in diesem Beispiel definiert einen Task, der den Editor zu einem bestimmten Zeitpunkt startet.
+Der XML-Code in diesem Beispiel definiert einen Task, Editor zu einem bestimmten Zeitpunkt gestartet wird.
 
-Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Funktion ([**taskfolder. RegisterTask**](taskfolder-registertask.md) für die Skripterstellung) oder das Befehlszeilen Tool Schtasks.exe verwenden. Wenn Sie das Schtasks.exe Tool (das sich im Verzeichnis "C: \\ Windows System32" befindet \\ ) verwenden, können Sie den folgenden Befehl verwenden, um den Task zu registrieren: **Schtasks/CREATE/XML** *<path to the XML file containing the task definition>* **/TN** *<task name>* .
+Zum Registrieren einer aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder::RegisterTask-Funktion**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) ([**TaskFolder.RegisterTask**](taskfolder-registertask.md) für Skripterstellung) oder das Schtasks.exe-Befehlszeilentool verwenden. Wenn Sie das Schtasks.exe-Tool (im Verzeichnis C: Windows System32) verwenden, können Sie den folgenden Befehl verwenden, um die Aufgabe zu \\ \\ registrieren: **schtasks /create /XML** *<path to the XML file containing the task definition>* **/tn** *<task name>* .
 
-## <a name="to-define-a-task-to-start-notepad-at-a-specific-time"></a>So definieren Sie einen Task zum Starten von Notepad zu einem bestimmten Zeitpunkt
+## <a name="to-define-a-task-to-start-notepad-at-a-specific-time"></a>So definieren Sie eine Aufgabe, die Editor zu einem bestimmten Zeitpunkt gestartet werden soll
 
-Im folgenden XML-Beispiel wird gezeigt, wie eine Aufgabe mit einer einzelnen Ausführungs Aktion (Starten von Editor), einem einmaligen Triggertyp, der die Aufgabe zu einem bestimmten Zeitpunkt startet, und mehreren anderen Aufgaben Einstellungen definiert wird, die sich auf die Behandlung der Aufgabe durch die Taskplaner auswirken.
+Das folgende XML-Beispiel zeigt, wie sie einen Task mit einer einzelnen Ausführungsaktion (ab Editor), einem einmaligen Trigger, der den Task zu einem bestimmten Zeitpunkt startet, und mehreren anderen Aufgabeneinstellungen definieren, die sich darauf auswirken, wie der Task vom -Taskplaner.
 
 
 ```XML
@@ -68,27 +68,27 @@ This sample schedules a task to start notepad.exe at a specific time.
 
 
 
-## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schema Elemente
+## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schemaelemente
 
-Im folgenden finden Sie einige wichtige Punkte, die Sie berücksichtigen sollten, wenn Sie dieses Beispiel verwenden:
+Im Folgenden finden Sie einige wichtige Elemente, die Sie bei der Verwendung dieses Beispiels beachten sollten:
 
--   [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md): enthält Registrierungsinformationen zum Task.
--   [**Trigger**](taskschedulerschema-triggers-tasktype-element.md): definiert den Trigger, der den Task startet.
--   [**Timetimeout**](taskschedulerschema-timetrigger-triggergroup-element.md): definiert den Zeit--Auslösers. In diesem Fall werden drei untergeordnete Elemente verwendet: die Start-und endgrenzen, die angeben, wann der-Triggervorgang aktiviert und deaktiviert wird, und das Ausführungszeit Limit, das die maximale Zeitspanne angibt, in der die Aufgabe vom-Triggern gestartet werden kann. Das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element ist ein erforderliches Element für Zeit Trigger.
--   [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md): definiert den Sicherheitskontext, unter dem eine Aufgabe ausgeführt wird.
--   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): definiert die Aufgaben Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.
--   [**Aktionen**](taskschedulerschema-actions-tasktype-element.md): definiert die Aktionen, die der Task ausführt (in diesem Fall das Ausführen von Notepad).
+-   [**RegistrationInfo:**](taskschedulerschema-registrationinfo-tasktype-element.md)Enthält Registrierungsinformationen zum Task.
+-   [**Trigger:**](taskschedulerschema-triggers-tasktype-element.md)Definiert den Trigger, der die Aufgabe startet.
+-   [**TimeTrigger:**](taskschedulerschema-timetrigger-triggergroup-element.md)Definiert den Zeittrigger. In diesem Fall werden drei untergeordnete Elemente verwendet: die Start- und Endgrenzen, die angeben, wann der Trigger aktiviert und deaktiviert wird, und das Ausführungszeitlimit, das die maximale Zeitdauer angibt, in der der Task vom Trigger gestartet werden kann. Das [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) ist ein erforderliches Element für Zeittrigger.
+-   [**Prinzipal:**](taskschedulerschema-principal-principaltype-element.md)Definiert den Sicherheitskontext, unter dem ein Task ausgeführt wird.
+-   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): Definiert die Aufgabeneinstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.
+-   [**Aktionen:**](taskschedulerschema-actions-tasktype-element.md)Definiert die Aktionen, die der Task ausführt (in diesem Fall die Ausführung Editor).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

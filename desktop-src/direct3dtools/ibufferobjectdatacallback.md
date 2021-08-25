@@ -1,10 +1,10 @@
 ---
-description: Rückruf, der den Inhalt eines Objekts in einem Puffer Formular für diejenigen zurückgibt, die es unterstützen (Puffer, Texturen).
+description: Rückruf, um den Inhalt eines Objekts in Pufferform für diejenigen zurückzugeben, die es unterstützen (Puffer, Texturen).
 MS-HAID: vspixengine.IBufferObjectDataCallback
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Ibufferobjectdatacallback-Schnittstelle
+title: IBufferObjectDataCallback-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: AAE4CE9A-B8EB-4ED6-9F48-D00C19B27A2E
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 6e5fb7deebd7d1b16d333ae59edab9372b54ad8c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 24e0bbce1b42dfb5e23e3fdbbf43cb72cf3a5e75
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124166"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786506"
 ---
-# <a name="span-idvspixengineibufferobjectdatacallbackspanibufferobjectdatacallback-interface"></a><span id="vspixengine.ibufferobjectdatacallback"></span>Ibufferobjectdatacallback-Schnittstelle
+# <a name="span-idvspixengineibufferobjectdatacallbackspanibufferobjectdatacallback-interface"></a><span id="vspixengine.ibufferobjectdatacallback"></span>IBufferObjectDataCallback-Schnittstelle
 
-Rückruf, der den Inhalt eines Objekts in einem Puffer Formular für diejenigen zurückgibt, die es unterstützen (Puffer, Texturen).
+Rückruf, um den Inhalt eines Objekts in Pufferform für diejenigen zurückzugeben, die es unterstützen (Puffer, Texturen).
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **ibufferobjectdatacallback** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ibufferobjectdatacallback** verfügt auch über die folgenden Typen von Membern:
+Die **IBufferObjectDataCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IBufferObjectDataCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **ibufferobjectdatacallback** -Schnittstelle verfügt über diese Methoden.
+Die **IBufferObjectDataCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ibufferobjectdatacallback-resultcallback-bstr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über Puffer Informationen benachrichtigt, die von der assocaas-Anforderung in eine Datei geschrieben wurden.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ibufferobjectdatacallback-resultcallback-bstr"><strong>ResultCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Pufferinformationen benachrichtigt, die von der assocaited-Anforderung in eine Datei geschrieben wurden.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

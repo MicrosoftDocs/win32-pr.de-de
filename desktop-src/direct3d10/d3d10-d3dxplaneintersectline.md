@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1d32bb312c97b793f492f7a29bebe11529b79cf9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9d70f588c9f4ec54fd5889f8effb503c62235441fe425d38ea9dbed620fd3e8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754160"
 ---
 # <a name="d3dxplaneintersectline-function-d3dx10mathh"></a>D3DXPlaneIntersectLine-Funktion (D3DX10Math.h)
 
@@ -48,7 +48,7 @@ D3DXVECTOR3* D3DXPlaneIntersectLine(
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf einen [**D3DXVECTOR3,**](d3d10-d3dxvector3.md)der die Schnittmenge zwischen der angegebenen Ebene und Linie identifiziert.
+Zeiger auf einen [**D3DXVECTOR3,**](d3d10-d3dxvector3.md)der die Schnittmenge zwischen der angegebenen Ebene und linie identifiziert.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf einen [**D3DXVECTOR3,**](d3d10-d3dxvector3.md)der die Schnittmenge zw
 
 Typ: **const [**D3DXPLANE**](../direct3d9/d3dxplane.md) \***
 
-Zeiger auf die [**D3DXPLANE-Quelldatei.**](d3d10-d3dxplane.md)
+Zeiger auf die [**D3DXPLANE-Quelle.**](d3d10-d3dxplane.md)
 
 </dd> <dt>
 
@@ -83,11 +83,11 @@ Zeiger auf eine D3DXVECTOR3-Quellstruktur, die einen Zeilenendpunkt definiert.
 
 Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
-Zeiger auf eine D3DXVECTOR3-Struktur, die die Schnittmenge zwischen der angegebenen Ebene und Linie ist.
+Zeiger auf eine D3DXVECTOR3-Struktur, die die Schnittmenge zwischen der angegebenen Ebene und der Linie ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Linie parallel zur Ebene ist, wird **NULL** zurückgegeben.
+Wenn die Linie parallel zur Ebene ist, **wird NULL** zurückgegeben.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXPlaneIntersectLine-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -95,7 +95,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

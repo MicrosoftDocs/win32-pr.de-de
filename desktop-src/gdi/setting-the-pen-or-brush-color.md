@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel zeigt, wie eine Anwendung die Stift Farbe des Domänen Controllers mithilfe der GetStockObject-Funktion oder der Funktionen setdcpencolor und setdcbrushcolor ändern kann.
+description: Das folgende Beispiel zeigt, wie eine Anwendung die DC-Stiftfarbe ändern kann, indem die GetStockObject-Funktion oder SetDCPenColor und die SetDCBrushColor-Funktionen verwendet werden.
 ms.assetid: d1be1db8-e6b6-4d60-8a4a-ce218f8d52fc
-title: Festlegen der Stift-oder Pinsel Farbe
+title: Festlegen des Stifts oder der Pinselfarbe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 087d4ca2bcd19457c66dddb8471c9ee2cda99294
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b5d095a41dc01bcf2023ddb431679cce01f7c60a2110ef3faf078411334aaf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965230"
 ---
-# <a name="setting-the-pen-or-brush-color"></a>Festlegen der Stift-oder Pinsel Farbe
+# <a name="setting-the-pen-or-brush-color"></a>Festlegen des Stifts oder der Pinselfarbe
 
-Das folgende Beispiel zeigt, wie eine Anwendung die Stift Farbe des Domänen Controllers mithilfe der [**GetStockObject**](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) -Funktion oder der Funktionen [**setdcpencolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor) und [**setdcbrushcolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor) ändern kann.
+Das folgende Beispiel zeigt, wie eine Anwendung die DC-Stiftfarbe ändern kann, indem die [**GetStockObject-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-getstockobject) oder [**SetDCPenColor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor) und [**die SetDCBrushColor-Funktionen verwendet**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor) werden.
 
 
 ```C++

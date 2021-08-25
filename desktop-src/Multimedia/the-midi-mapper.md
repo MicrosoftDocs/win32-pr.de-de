@@ -1,45 +1,45 @@
 ---
-title: Der MIDI-Mapper
-description: Der MIDI-Mapper
+title: DER MAPPER
+description: DER MAPPER
 ms.assetid: 92cffc67-b4a4-4807-94d2-02fbbdba5abf
 keywords:
-- Windows Multimedia, MIDI-Mapper
-- Multimedia, MIDI-Mapper
-- Multimedia-Audiodatei, MIDI-Mapper
-- Audiodatei, MIDI-Mapper
-- Digital Instrumentation Digital Interface (MIDI), MIDI-Mapper
-- MIDI (Digital Instrumentation Digital Interface), MIDI-Mapper
-- MIDI-Mapper, Informationen
-- MIDI-Mapper, Quelle
-- MIDI-Mapper, Ziel
+- Windows Multimedia, MAPPER
+- Multimedia, MULTIMEDIA-Mapper
+- Multimediaaudio, MAPPER
+- Audio, MAPPER
+- Instruments Instrument Digital Interface (INSTRUMENTS), MAPPer
+- INSTRUMENTS (Digitale Schnittstelle des Instrumentierers), MAPPER
+- MAPPer, About
+- MAPPer, Source
+- MAPPer, Destination
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3b360148c994c0ee6434fdf097ca5f393b23d49
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8a5becc117668964a584f29c311c3e3ac477f672085e837e28d7eecc595658d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805100"
 ---
-# <a name="the-midi-mapper"></a>Der MIDI-Mapper
+# <a name="the-midi-mapper"></a>DER MAPPER
 
-Die Standard-patchdienste des MIDI-Mappers stellen eine geräteunabhängige Wiedergabe von MIDI-Dateien für-Anwendungen bereit. Der MIDI-Mapper kann mit dem MCI-System-und-System-oder-Ausgabe Dienst auf niedriger Ebene verwendet werden.
+Die Standardpatchdienste des MAPPER-Mappers bieten geräteunabhängige WIEDERGABE von DATEIEN für Anwendungen. Die MAPPER-Datei KANN mit dem MCI-SEQUENCER oder mit low-level-OUTPUT-Diensten verwendet werden.
 
-Sofern nicht anders angegeben, verwenden alle Verweise auf die-Nummer des-MIDI-Kanals die logischen Kanalzahlen 1 bis 16. Diese logischen channelnummern entsprechen den physischen Kanalzahlen 0 bis 15, die tatsächlich Teil der MIDI-Nachricht sind. Alle Verweise auf die Werte von "MIDI-Programm-ändern" und "Schlüssel" verwenden die physischen Werte 0 bis 127. Alle Zahlen sind Decimal, es sei denn, es ist ein Präfix "0x" vorangestellt. in diesem Fall sind Sie Hexadezimal
+Sofern nicht anders angegeben, verwenden alle Verweise auf DIE CHANNEL-Nummern die logischen Kanalnummern 1 bis 16. Diese logischen Kanalnummern entsprechen den physischen Kanalnummern 0 bis 15, die tatsächlich Teil der SMS-Nachricht sind. Alle Verweise auf DIE PROGRAMMÄNDERUNG und Schlüsselwerte verwenden die physischen Werte 0 bis 127. Alle Zahlen sind dezimal, sofern nicht das Präfix "0x" vorangestellt ist. In diesem Fall sind sie hexadezimal.
 
-In der Erörterung der MIDI-Mapper bezieht sich der Begriff *Quelle* auf die Eingabe Seite des MIDI-Mappers. Der Begriff *Ziel* verweist auf die Ausgabe Seite des MIDI-Mappers. Ein quellchannel ist beispielsweise der MIDI-Kanal einer Nachricht, die an den MIDI-Mapper gesendet wird, und ein Zielchannel ist der MIDI-Kanal einer Nachricht, die von der MIDI-Mapper an ein Ausgabegerät gesendet wird.
+In der Erläuterung des MAPPer-Ausdrucks verweist der Begriff *source* auf die Eingabeseite des MAPPer-Mappers. Der Begriff *Ziel* bezieht sich auf die Ausgabeseite des MAPPER-Mappers. Ein Quellkanal ist z. B. der CHANNELS-Kanal einer Nachricht, die an den CSV-Mapper gesendet wird, und ein Zielkanal der CHANNELS-Kanal einer Nachricht, die von der MAPPer-Datei an ein Ausgabegerät gesendet wird.
 
--   [Der MIDI-Mapper und Windows](the-midi-mapper-and-windows.md)
--   [Die Architektur der MIDI-Mapper](the-midi-mapper-architecture.md)
--   [Die Kanal Zuordnung](the-channel-map.md)
--   [Patchzuordnungen](patch-maps.md)
--   [Volumeskalar](the-volume-scalar.md)
--   [Schlüssel Zuordnungen](key-maps.md)
--   [Zusammenfassung der Maps-und MIDI-Meldungen](summary-of-maps-and-midi-messages.md)
+-   [MAPPer und Windows](the-midi-mapper-and-windows.md)
+-   [DIE MAPPER-Architektur](the-midi-mapper-architecture.md)
+-   [Die Kanalzuordnung](the-channel-map.md)
+-   [Patch Karten](patch-maps.md)
+-   [Der Volumeskalar](the-volume-scalar.md)
+-   [Key Karten](key-maps.md)
+-   [Zusammenfassung der Karten und MELDUNGEN](summary-of-maps-and-midi-messages.md)
 
- 
+ 
 
- 
+ 
 
 
 
