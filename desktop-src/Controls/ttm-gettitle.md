@@ -1,9 +1,9 @@
 ---
-title: TTM_GETTITLE Meldung (kommstrg. h)
-description: Ruft Informationen über den Titel eines QuickInfo-Steuer Elements ab.
+title: TTM_GETTITLE Meldung (Commctrl.h)
+description: Ruft Informationen zum Titel eines QuickInfo-Steuerelements ab.
 ms.assetid: d8992dd1-1610-44e8-8c0f-8ae1ac4b5898
 keywords:
-- Windows-Steuerelemente für TTM_GETTITLE Meldung
+- TTM_GETTITLE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0048925ed3dc267ac07b10b85e2ea1ca1449996c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 242e20f3360caac03874524df38267fc0b103ec8f1c04d8d30df106fc9c65ac4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797440"
 ---
-# <a name="ttm_gettitle-message"></a>TTM \_ getTitle-Nachricht
+# <a name="ttm_gettitle-message"></a>TTM \_ GETTITLE-Nachricht
 
-Ruft Informationen über den Titel eines QuickInfo-Steuer Elements ab.
+Ruft Informationen zum Titel eines QuickInfo-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Ruft Informationen über den Titel eines QuickInfo-Steuer Elements ab.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**ttgettitle**](/windows/desktop/api/Commctrl/ns-commctrl-ttgettitle) -Struktur, die Informationen über einen QuickInfo-Titel enthält.
+Zeiger auf eine [**TTGZWEIGTLE-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-ttgettitle) die Informationen zu einem QuickInfo-Titel enthält.
 
 </dd> </dl>
 
@@ -43,10 +43,10 @@ Ein Zeiger auf eine [**ttgettitle**](/windows/desktop/api/Commctrl/ns-commctrl-t
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

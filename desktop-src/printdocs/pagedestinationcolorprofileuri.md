@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über den PageDestinationColorProfileURI-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification(Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über den PageDestinationColorProfileURI-Parameter. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: b2a4a4d2-a8bc-48dc-ad56-20380f5f91c9
 title: PageDestinationColorProfileURI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c3cf719a97f8f8086e88425c1667199815efbbb
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: d861d7e7f1493c481f19c775895b367c3a94007f97c2ad40dc61663ccd510d40
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112396675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776510"
 ---
 # <a name="pagedestinationcolorprofileuri"></a>PageDestinationColorProfileURI
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes XPS-Profil an. Die Verarbeitung dieser Option hängt von der Einstellung des PageDeviceColorSpaceUsage-Features ab. Bei allen Elementen, die dieses Profil verwenden, wird davon ausgegangen, dass sie sich bereits im entsprechenden Gerätefarbraum befinden und im Treiber oder Gerät nicht farblich verwaltet werden.
+Gibt einen relativen URI-Verweis auf ein INTS-Profil an, das in einem XPS-Dokument enthalten ist. Die Verarbeitung dieser Option hängt von der Einstellung des Features PageDeviceColorSpaceUsage ab. Es wird davon ausgegangen, dass sich alle Elemente, die dieses Profil verwenden, bereits im entsprechenden Gerätefarbraum befinden und nicht im Treiber oder Gerät farblich verwaltet werden.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)
@@ -28,7 +28,7 @@ Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes XPS-P
 |----------------------------|----------------------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                                  |
 | Bereichspräfix <br/> | Seite<br/>                                          |
-| Hinweise <br/>          | Verknüpft mit dem PageDestinationColorProfile-Element<br/> |
+| Hinweise <br/>          | Mit PageDestinationColorProfile-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt einen relativen URI-Verweis auf ein in einem XPS-Dokument enthaltenes XPS-P
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageDestinationColorProfileURI">
@@ -64,7 +64,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

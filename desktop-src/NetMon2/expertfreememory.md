@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "expertfrememory" gibt Speicher frei, der durch Aufrufe der Funktionen "ExpertAllocMemory" und "expertrebelegcmemory" abgerufen wurde.
+description: Die ExpertFreeMemory-Funktion gibt Arbeitsspeicher frei, der durch Aufrufe der Funktionen ExpertAllocMemory und ExpertReallocMemory erworben wurde.
 ms.assetid: 0e7cc791-98dd-4522-afab-76ac9e74c715
-title: Funktion "expertfrememory" (Netmon. h)
+title: ExpertFreeMemory-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: cc26056a3ec3e8820c363d97f92c7eb382cd0622
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edc4d1a9e33139372d0f397053d233a28c9e2445ba270a47e7dbfe97090eb6a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890829"
 ---
-# <a name="expertfreememory-function"></a>Funktion "expertfrememory"
+# <a name="expertfreememory-function"></a>ExpertFreeMemory-Funktion
 
-Die Funktion " **expertfrememory** " gibt Speicher frei, der durch Aufrufe der Funktionen " [**ExpertAllocMemory**](expertallocmemory.md) " und " [**expertrebelegcmemory**](expertreallocmemory.md) " abgerufen wurde.
+Die **ExpertFreeMemory-Funktion** gibt Arbeitsspeicher frei, der durch Aufrufe der [**Funktionen ExpertAllocMemory**](expertallocmemory.md) und [**ExpertReallocMemory erworben wurde.**](expertreallocmemory.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ SIZE_T WINAPI ExpertFreeMemory(
 
 <dl> <dt>
 
-*hexpertkey* 
+*hExpertKey* 
 </dt> <dd>
 
-Eindeutige expertenkennung. Netzwerkmonitor übergibt *hexpertkey* an den Experten, wenn die Funktion [Run](run.md) aufgerufen wird.
+Eindeutiger Expertenbezeichner. Netzwerkmonitor *hExpertKey* an den Experten übergeben, wenn er die [Run-Funktion](run.md) aufruft.
 
 </dd> <dt>
 
-*pmemory* \[ in\]
+*pMemory* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Arbeitsspeicher, der von Netzwerkmonitor zugeordnet wird. Der *pmemory* -Zeiger kann von einem vorherigen-Befehl von " [**expertenlocmemory**](expertallocmemory.md) " oder " [**expertenspeicher**](expertreallocmemory.md)" zurückgegeben werden.
+Zeiger auf den Arbeitsspeicher, der von Netzwerkmonitor wird. Der *pMemory-Zeiger* kann durch einen vorherigen Aufruf von [**ExpertAllocMemory**](expertallocmemory.md) oder [**ExpertReallocMemory zurückgegeben werden.**](expertreallocmemory.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-, Wenn die Funktion erfolgreich ausgeführt wurde. der Rückgabewert ist "nmerr \_ Success".
+Wenn die Funktion erfolgreich ist. Der Rückgabewert ist NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, gibt der Rückgabewert den Grund für den Fehler an. Wenn der Rückgabewert nmerr- \_ Experte \_ beendet ist, bereinigt der Experte sofort und gibt ihn zurück.
+Wenn die Funktion nicht erfolgreich ist, gibt der Rückgabewert den Grund für den Fehler an. Wenn der Rückgabewert NMERR EXPERT TERMINATE ist, bereinigt der Experte \_ \_ sofort und gibt zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegungs Funktionen für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit einen Fehler verursacht, ermöglicht die Verwendung dieser Funktionen Netzwerkmonitor, den zugeordneten Arbeitsspeicher freizugeben.
+Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit ausfällt, ermöglicht die Verwendung dieser Funktionen Netzwerkmonitor, den zugewiesenen Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

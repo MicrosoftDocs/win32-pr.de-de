@@ -1,7 +1,7 @@
 ---
-description: Signalisiert das Ende eines beliebigen noch (PGC, Cell oder vobu).
+description: Signalisiert das Ende aller noch (PGC, Cell oder VOBU).
 ms.assetid: 459464b1-3085-4ad7-8eb3-960cee89d395
-title: EC_DVD_STILL_OFF (dvdevcode. h)
+title: EC_DVD_STILL_OFF (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 811bc85deafb40676041280daa0a1cdd8f8b3dda
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 406f51ebe380490affd618c3af0a3d2a0e428f8ffbeb0685eb0e0693a6f01132
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906020"
 ---
-# <a name="ec_dvd_still_off"></a>EC- \_ DVD ist \_ noch deaktiviert. \_
+# <a name="ec_dvd_still_off"></a>EC \_ DVD \_ STILL \_ OFF
 
-Signalisiert das Ende eines beliebigen noch (PGC, Cell oder vobu).
+Signalisiert das Ende aller noch (PGC, Cell oder VOBU).
 
 ## <a name="parameters"></a>Parameter
 
@@ -42,9 +42,9 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis gibt an, dass alle gegenwärtig aktiven weiterhin freigegeben wurden.
+Dieses Ereignis gibt an, dass alle derzeit aktiven noch freigegeben wurden.
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -54,7 +54,7 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
@@ -65,10 +65,10 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

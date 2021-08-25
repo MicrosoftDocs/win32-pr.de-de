@@ -1,6 +1,6 @@
 ---
-title: Intrinsische Funktionen von Shader Model 5
-description: Shadermodell 5 implementiert die intrinsischen Funktionen aus Shader Model 4 und niedriger (Weitere Informationen finden Sie unter intrinsische Funktionen (DirectX HLSL), eine umfassende Liste der unterstützten Funktionen) sowie die folgenden neuen Funktionen.
+title: Intrinsische Funktionen des Shadermodells 5
+description: Shadermodell 5 implementiert die systeminternen Funktionen aus Shadermodell 4 und darunter (eine vollständige Liste der unterstützten Funktionen finden Sie unter Intrinsische Funktionen (DirectX HLSL) ) sowie die folgenden neuen Funktionen.
 ms.assetid: 6f91fb40-d6d0-459f-adf7-cff263d7d346
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,68 +9,68 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0cd5976526f75b676a853ef7480d4e81e0e00a91
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3e68d3abc645617eb72f2bc892df2ff93bd7dde6d4ced4b375ab4faf5daedf04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119855660"
 ---
-# <a name="shader-model-5-intrinsic-functions"></a>Intrinsische Funktionen von Shader Model 5
+# <a name="shader-model-5-intrinsic-functions"></a>Intrinsische Funktionen des Shadermodells 5
 
-Shader Model 5 implementiert die intrinsischen Funktionen aus Shader Model 4 und niedriger (Weitere Informationen finden Sie unter [**intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md) , eine umfassende Liste der unterstützten Funktionen) sowie die folgenden neuen Funktionen:
+Shadermodell 5 implementiert die systeminternen Funktionen aus Shadermodell 4 und darunter (eine vollständige Liste der unterstützten Funktionen finden Sie unter [**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md) sowie die folgenden neuen Funktionen:
 
--   [**Allmemorybarrier**](allmemorybarrier.md)
--   [**Allmemorybarrierwithgroupsync**](allmemorybarrierwithgroupsync.md)
--   [**AsDouble**](asdouble.md)
+-   [**AllMemoryBarrier**](allmemorybarrier.md)
+-   [**AllMemoryBarrierWithGroupSync**](allmemorybarrierwithgroupsync.md)
+-   [**asdouble**](asdouble.md)
 -   [**asuint**](asuint.md)
 -   [**countbits**](countbits.md)
--   [**DDX \_ grob**](ddx-coarse.md)
--   [**\_grobe grobe**](ddy-coarse.md)
--   [**Devicememorybarrier**](devicememorybarrier.md)
--   [**Devicememorybarrierwithgroupsync**](devicememorybarrierwithgroupsync.md)
--   [**Evaluateattributeatcentroid**](evaluateattributeatcentroid.md)
--   [**Evaluateattributeatsample**](evaluateattributeatsample.md)
+-   [**ddx \_ coarse**](ddx-coarse.md)
+-   [**ddy \_ coarse**](ddy-coarse.md)
+-   [**DeviceMemoryBarrier**](devicememorybarrier.md)
+-   [**DeviceMemoryBarrierWithGroupSync**](devicememorybarrierwithgroupsync.md)
+-   [**EvaluateAttributeAtCentroid**](evaluateattributeatcentroid.md)
+-   [**EvaluateAttributeAtSample**](evaluateattributeatsample.md)
 -   [**f16tof32**](f16tof32.md)
 -   [**f32tof16**](f32tof16.md)
 -   [**firstbithigh**](firstbithigh.md)
 -   [**firstbitlow**](firstbitlow.md)
--   [**FMA**](dx-graphics-hlsl-fma.md)
--   [**Groupmemorybarrier**](groupmemorybarrier.md)
--   [**Groupmemorybarrierwithgroupsync**](groupmemorybarrierwithgroupsync.md)
--   [**Interlockedadd**](interlockedadd.md)
--   [**Interlockedand**](interlockedand.md)
+-   [**Fma**](dx-graphics-hlsl-fma.md)
+-   [**GroupMemoryBarrier**](groupmemorybarrier.md)
+-   [**GroupMemoryBarrierWithGroupSync**](groupmemorybarrierwithgroupsync.md)
+-   [**InterlockedAdd**](interlockedadd.md)
+-   [**InterlockedAnd**](interlockedand.md)
 -   [**InterlockedCompareExchange**](interlockedcompareexchange.md)
--   [**Interlockedcomparestore**](interlockedcomparestore.md)
+-   [**InterlockedCompareStore**](interlockedcomparestore.md)
 -   [**InterlockedExchange**](interlockedexchange.md)
--   [**Interlockedmax**](interlockedmax.md)
--   [**Interlockedmin**](interlockedmin.md)
--   [**Interlockedor**](interlockedor.md)
--   [**Interlockedxor**](interlockedxor.md)
+-   [**InterlockedMax**](interlockedmax.md)
+-   [**InterlockedMin**](interlockedmin.md)
+-   [**InterlockedOr**](interlockedor.md)
+-   [**InterlockedXor**](interlockedxor.md)
 -   [**msad4**](dx-graphics-hlsl-msad4.md)
 -   [**Process2DQuadTessFactorsAvg**](process2dquadtessfactorsavg.md)
 -   [**Process2DQuadTessFactorsMax**](process2dquadtessfactorsmax.md)
 -   [**Process2DQuadTessFactorsMin**](process2dquadtessfactorsmin.md)
--   [**Processisolinetess Factors**](processisolinetessfactors.md)
--   [**Processquadtess Factor-savg**](processquadtessfactorsavg.md)
--   [**Processquadtfaktorialsmax**](processquadtessfactorsmax.md)
--   [**Processquadtess Factor Smin**](processquadtessfactorsmin.md)
--   [**Processtritesfactor**](processtritessfactorsavg.md)
--   [**Processtritesfactorismax**](processtritessfactorsmax.md)
--   [**Processtritesfactor Smin**](processtritessfactorsmin.md)
+-   [**ProcessIsolineTessFactors**](processisolinetessfactors.md)
+-   [**ProcessQuadTessFactorsAvg**](processquadtessfactorsavg.md)
+-   [**ProcessQuadTessFactorsMax**](processquadtessfactorsmax.md)
+-   [**ProcessQuadTessFactorsMin**](processquadtessfactorsmin.md)
+-   [**ProcessTriTessFactorsAvg**](processtritessfactorsavg.md)
+-   [**ProcessTriTessFactorsMax**](processtritessfactorsmax.md)
+-   [**ProcessTriTessFactorsMin**](processtritessfactorsmin.md)
 -   [**rcp**](rcp.md)
--   [**reversebits**](reversebits.md)
+-   [**Reversebits**](reversebits.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

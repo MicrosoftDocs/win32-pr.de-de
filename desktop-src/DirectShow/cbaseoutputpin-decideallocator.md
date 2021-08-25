@@ -59,16 +59,16 @@ Adresse einer Variablen, die einen Zeiger auf die [**IMemAllocator-Schnittstelle
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Methode wird am Ende des Pinverbindungsprozesses aufgerufen. Sie führt die folgenden Schritte aus:
 
-1.  Ruft die [**IMemInputPin::GetAllocatorRequirements-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocatorrequirements) auf, um ggf. die Pufferanforderungen des Eingabepins abzurufen.
-2.  Ruft die [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) auf, um eine Zuweisung vom Eingabepin anzufordern. Wenn der Eingabepin keine Zuweisung bereitstellt, erstellt der Ausgabepin einen durch Aufrufen der [**CBaseOutputPin::InitAllocator-Klassenmethode.**](cbaseoutputpin-initallocator.md)
-3.  Ruft die [**CBaseOutputPin::D ecideBufferSize-Klassenmethode**](cbaseoutputpin-decidebuffersize.md) auf, die die Zuweisungseigenschaften festlegt. Dies ist eine reine virtuelle Methode. die abgeleitete Klasse muss sie implementieren.
-4.  Ruft die [**IMemInputPin::NotifyAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) auf, die den Eingabepin über die verwendete Zuweisung benachrichtigt.
+1.  Ruft die [**IMemInputPin::GetAllocatorRequirements-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocatorrequirements) auf, um die Pufferanforderungen des Eingabepins abzurufen, sofern dies der Fall ist.
+2.  Ruft die [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) auf, um eine Zuweisung vom Eingabepin an fordern. Wenn der Eingabepin keinen Zuweiser bietet, erstellt der Ausgabepin einen, indem er die [**CBaseOutputPin::InitAllocator-Klassenmethode**](cbaseoutputpin-initallocator.md) aufruft.
+3.  Ruft die [**CBaseOutputPin::D ecideBufferSize-Klassenmethode**](cbaseoutputpin-decidebuffersize.md) auf, die die Zuweisungseigenschaften fest legt. Dies ist eine rein virtuelle Methode. die abgeleitete Klasse muss sie implementieren.
+4.  Ruft die [**IMemInputPin::NotifyAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) auf, die den Eingabepin der verwendeten Zuweisung benachrichtigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,11 +77,11 @@ Diese Methode wird am Ende des Pinverbindungsprozesses aufgerufen. Sie führt di
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

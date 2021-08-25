@@ -1,9 +1,9 @@
 ---
-title: "\"Zuweisung\"-Funktion (\"naputil. h\")"
-description: Weist Arbeitsspeicher für eine fixupinfo-Struktur der angegebenen Größe zu.
+title: AllocFixupInfo-Funktion (NapUtil.h)
+description: Belegt Arbeitsspeicher für eine FixupInfo-Struktur der angegebenen Größe.
 ms.assetid: e0b66a08-9714-4451-a22d-3822153c6a36
 keywords:
-- "' Zuweisung ' der Funktion ' ' der Funktion ' NAP '"
+- Nap-Funktion "AllocFixupInfo"
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0dffda7e5e44302173ac06e460414455eb19c6c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 95ce329a433439716700b6ffc990d446c5d22faab91fa256f6abc0c73734327d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803490"
 ---
-# <a name="allocfixupinfo-function"></a>' Zuweisung '-Funktion
+# <a name="allocfixupinfo-function"></a>AllocFixupInfo-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die Funktion " **belegcfixupinfo** " weist Speicher für eine [**fixupinfo**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) -Struktur der angegebenen Größe zu.
+Die **AllocFixupInfo-Funktion** belegt Arbeitsspeicher für eine [**FixupInfo-Struktur**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) der angegebenen Größe.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ NAPAPI HRESULT WINAPI AllocFixupInfo(
 
 <dl> <dt>
 
-*fixupinfo* \[ in, out\]
+*fixupInfo* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf die Adresse einer neu zugewiesenen [**fixupinfo**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) -Struktur.
+Ein Zeiger auf die Adresse einer neu zugeordneten [**FixupInfo-Struktur.**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo)
 
 </dd> <dt>
 
-*countrytresultcodes* \[ in\]
+*countResultCodes* \[ In\]
 </dt> <dd>
 
-Die Anzahl der der *fixupinfo* zuzuordnenden Ergebnis Codes.
+Die Anzahl der Ergebniscodes, die *fixupInfo* zugeordnet werden sollen.
 
 </dd> </dl>
 
@@ -67,22 +67,22 @@ Die Anzahl der der *fixupinfo* zuzuordnenden Ergebnis Codes.
 | Rückgabecode                                                                                   | Beschreibung                                                                |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Der Vorgang wurde erfolgreich abgeschlossen.<br/>                       |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ein ungültiges Argument wurde übergeben.<br/>                                 |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Das System verfügt nicht über den virtuellen Arbeitsspeicher. Bei diesem Vorgang ist ein Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ein ungültiges Argument wurde übergeben.<br/>                                 |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Das System verfügt nicht über genügend virtuellen Arbeitsspeicher. Dieser Vorgang ist fehlgeschlagen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle com-Schnittstellen, die vom NAP-System unterstützt werden, verwenden COM-Standardspeicherverwaltungsregeln und die COM-Speicherbezuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und freigegeben.
+-   **Out-Parameter** werden vom Aufgerufenen zugeordnet und vom Aufrufer mit **coTaskMem** freigegeben.
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufgerufenen freigegeben und neu zugeordnet und schließlich vom Aufrufer freigegeben, indem **CoTaskMem** verwendet wird.
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freigeben von Arbeitsspeicher gibt auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,9 +90,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 
@@ -101,7 +101,7 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 <dl> <dt>
 
-[**"Freifixupinfo"**](freefixupinfo-func.md)
+[**FreeFixupInfo**](freefixupinfo-func.md)
 </dt> </dl>
 
  

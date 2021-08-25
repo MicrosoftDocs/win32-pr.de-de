@@ -3,47 +3,47 @@ title: Switches
 description: Switches
 ms.assetid: ab92d30d-97ab-4229-aed8-1080b6e6dc88
 keywords:
-- Audiomischungen, Steuerelemente
+- Audiomixer, Steuerelemente
 - Audiomixer, Switches
-- Mischungen, Steuerelemente
+- Mixer, Steuerelemente
 - Mixer, Switches
 - Switch-Steuerelemente
-- MIXERCONTROLDETAILS_BOOLEAN Struktur
+- MIXERCONTROLDETAILS_BOOLEAN-Struktur
 - Boolesches Steuerelement
-- Button-Steuerelement
-- ein/aus-Steuerelement
+- Schaltflächen-Steuerelement
+- Ein-/Aus-Steuerelement
 - Mono-Steuerelement
-- Lautheit-Steuerelement
-- Verbessertes Stereo Steuerelement
+- Lautstärkesteuerung
+- Erweiterte Stereo-Steuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1d65bb2a14a0e7dc527fab0e628035839855934
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 336d2e23c5e6438fbc19208e3366283147462c2451a12e3ccdcae6c13fcd93d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805080"
 ---
 # <a name="switches"></a>Switches
 
-Die Switch-Steuerelemente sind Switches mit zwei Zuständen. Diese Steuerelemente verwenden die [**\_ boolesche "mixercontroldetails**](/previous-versions//dd757295(v=vs.85)) "-Struktur zum Abrufen und Festlegen von Steuerelement Eigenschaften. In der folgenden Tabelle werden die Typen von Switches beschrieben.
+Die Schaltersteuerelemente sind Schalter mit zwei Zuständen. Diese Steuerelemente verwenden die [**\_ MIXERCONTROLDETAILS BOOLEAN-Struktur,**](/previous-versions//dd757295(v=vs.85)) um Steuerelementeigenschaften abzurufen und festzulegen. In der folgenden Tabelle werden die Typen von Schaltern beschrieben.
 
 
 
 | Control         | Beschreibung                                                                                                                                                                                                                           |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Boolesch         | Der generische Switch. Sie kann auf " **true** " oder " **false**" festgelegt werden.                                                                                                                                                                           |
-| Schaltfläche          | Legen Sie für alle Schaltflächen, die vom Treiber behandelt werden sollen, den Wert " **true** " fest. Wenn der Wert **false** ist, wird keine Aktion ausgeführt.                                                                                         |
-| Ein/Aus          | Ein alternativer Switch, der durch eine andere Grafik als die für den booleschen Switch verwendet wird. Sie kann auf ein oder aus festgelegt werden.                                                                                                    |
-| Mute            | Gibt eine Audiolinie an (unterdrückt den Datenfluss der Zeile) oder ermöglicht die Wiedergabe der Audiodaten. Dieser Schalter wird häufig verwendet, um die Zeilen zu steuern, die in den Mixer eingespeist werden.                                                        |
-| Mono            | Schaltet zwischen Mono-und Stereoausgabe für eine Stereo Audiolinie um. Legen Sie diese Einstellung auf OFF fest, um Stereodaten als separate Kanäle wiederzugeben Legen Sie auf ein fest, um Daten aus beiden Kanälen in eine Mono-Audiolinie zu kombinieren.                                            |
-| Lautstärke        | Steigert den Bass von niedrigem Volume für eine Audiolinie. Legen Sie auf ein fest, um den Bass von niedrigem Volume zu erhöhen. Legen Sie diese Einstellung auf OFF fest, um die volumeebenen auf normal Der Umfang der Verstärkung ist Hardware spezifisch. Weitere Informationen finden Sie in der Dokumentation für Ihr Mischgerät. |
-| Stereo-erweitert | Vergrößert die Stereo Trennung. Legen Sie auf ein fest, um die Trennung von Stereo Auf OFF festgelegt, um keine Erweiterung zu haben.                                                                                                                                  |
+| Boolesch         | Der generische Schalter. Sie kann auf **TRUE** oder **FALSE** festgelegt werden.                                                                                                                                                                           |
+| Schaltfläche          | Legen Sie für alle Schaltflächen, die der Treiber behandeln soll, auf **TRUE** fest, als ob sie gedrückt worden wären. Wenn der Wert **FALSE** ist, wird keine Aktion ausgeführt.                                                                                         |
+| Ein/Aus          | Ein alternativer Schalter, der durch eine andere Grafik als die für den booleschen Schalter dargestellt wird. Sie kann auf ON oder OFF festgelegt werden.                                                                                                    |
+| Mute            | Stummschaltt eine Audiozeile (unterdrückt den Datenfluss der Zeile) oder lässt die Wiedergabe der Audiodaten zu. Dieser Schalter wird häufig verwendet, um die Linien zu steuern, die in den Mixer eingespeist werden.                                                        |
+| Mono            | Wechselt zwischen Mono- und Stereoausgabe für eine Stereoaudiolinie. Legen Sie diese Einstellung auf OFF fest, um Stereodaten als separate Kanäle wiederzuspielen. Legen Sie diese Einstellung auf ON fest, um Daten aus beiden Kanälen in einer Mono-Audiolinie zu kombinieren.                                            |
+| Lautstärke        | Verstärkt low-volume-Sound für eine Audiozeile. Legen Sie diese Einstellung auf ON fest, um die Lautstärke zu erhöhen. Legen Sie diese Einstellung auf OFF fest, um die Lautstärke auf normal festzulegen. Der Umfang der Verstärkung ist hardwarespezifisch. Weitere Informationen finden Sie in der Dokumentation für Ihr Mixergerät. |
+| Stereo Enhanced | Erhöht die Stereotrennung. Legen Sie diese Einstellung auf ON fest, um die Stereotrennung zu erhöhen. Legen Sie diese Einstellung ohne Erweiterung auf OFF fest.                                                                                                                                  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-title: Paintwin-Methode
-description: Paintwin-Methode
+title: PaintWin-Methode
+description: PaintWin-Methode
 ms.assetid: e89794e6-c059-4531-a1e3-3a4972e0218d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b30e7a52640255934762943f910e367d76088d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40708700ba4f0175713c59f6e3f1ff1395accadb0dcae3b31ca2e85862a998ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906030"
 ---
-# <a name="paintwin-method"></a>Paintwin-Methode
+# <a name="paintwin-method"></a>PaintWin-Methode
 
-Im folgenden finden Sie die **maltwin** -Methode von cguipaper aus dem guipaper. CPP.
+Im Folgenden finden Sie die **PaintWin-Methode** von CGuiPaper aus GUIPAPER. Cpp.
 
 
 ```C++
@@ -42,11 +42,11 @@ HRESULT CGuiPaper::PaintWin(void)
 
 
 
-**Paintwin** ruft im Wesentlichen die **Redraw** -Methode von copaper auf. Im [stoservice](structured-storage-server-sample--stoserve-.md) -Beispiel wurde gezeigt, dass die **Redraw** -Methode das gesamte frei Hand Daten Array von copaper an alle verbundenen senken überträgt. **Paintwin** Ruft ein Objekt auf der Serverseite auf, um die Zeichnungsdaten an den Client zurückzusenden.
+**PaintWin** ruft im Wesentlichen die **Redraw-Methode** von COPaper auf. Im [StoServe-Beispiel](structured-storage-server-sample--stoserve-.md) wurde die **Redraw-Methode** gezeigt, um das gesamte Ink-Datenarray von COPaper an alle verbundenen Senken zu übertragen. **PaintWin** ruft ein Objekt auf serverseitiger Seite auf, um die Zeichnungsdaten an den Client zurück zu senden.
 
- 
+ 
 
- 
+ 
 
 
 

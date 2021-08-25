@@ -1,76 +1,76 @@
 ---
-description: Der Aufzeichnungsprozess ist für jede der vier NPP-Schnittstellen identisch.
+description: Der Erfassungsprozess ist für jede der vier NPP-Schnittstellen identisch.
 ms.assetid: f778aba5-8f66-4fc9-830b-f830c364da56
 title: Der Erfassungsprozess
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e0ca1987266b7e042713f1d1c292cf63d5e3ccf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51a6d82d721f0f85c6b1ab279d556aaad866f70fde7c8e422995cba5be513d8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104552348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889588"
 ---
 # <a name="the-capture-process"></a>Der Erfassungsprozess
 
-Der Aufzeichnungsprozess ist für jede der vier NPP-Schnittstellen identisch. In jedem Fall umfasst der Prozess Folgendes:
+Der Erfassungsprozess ist für jede der vier NPP-Schnittstellen identisch. In jedem Fall umfasst der Prozess Folgendes:
 
--   Abrufen des zu verwendenden NPP-Schnittstellen Objekts
+-   Abrufen des zu verwendende NPP-Schnittstellenobjekts
 -   Herstellen einer Verbindung mit dem Netzwerk
 -   Starten und anschließendes Beenden der [ *Erfassung*](c.md)
 -   Trennen der Verbindung mit dem Netzwerk
 
 > [!Note]  
-> Wenn Sie das gewünschte Schnittstellen Objekt erhalten, stellen Sie sicher, dass Sie nur die in dieser Schnittstelle enthaltenen Methoden aufzurufen. Die folgende Abbildung zeigt, dass jede Schnittstelle ähnliche Methoden zum Erfassen von Netzwerkdaten bereitstellt. Ein Fehler wird zurückgegeben, wenn Sie mit einer Schnittstelle eine Verbindung mit dem Netzwerk herstellen und dann versuchen, eine Erfassung mithilfe der Methoden einer anderen Schnittstelle auszuführen.
+> Wenn Sie das gewünschte Schnittstellenobjekt abrufen, stellen Sie sicher, dass Sie nur die Methoden aufrufen, die in dieser Schnittstelle enthalten sind. Die folgende Abbildung zeigt, dass jede Schnittstelle ähnliche Methoden zum Erfassen von Netzwerkdaten bereitstellt. Ein Fehler wird zurückgegeben, wenn Sie eine Verbindung mit dem Netzwerk über eine Schnittstelle herstellen und dann versuchen, eine Erfassung mithilfe der Methoden einer anderen Schnittstelle auszuführen.
 
  
 
-Die folgenden Abbildungen zeigen zwei verschiedene Möglichkeiten, wie Sie eine Erfassung durchführen können. In der ersten Abbildung wird gezeigt, wie Sie eine oder mehrere sequenzielle Erfassungen ausführen, sodass Sie eine beliebige Anzahl von unabhängigen Erfassungen erstellen können.
+Die folgenden Abbildungen zeigen zwei verschiedene Möglichkeiten zum Ausführen einer Erfassung. Die erste Abbildung zeigt, wie Sie eine oder mehrere sequenzielle Erfassungen ausführen, sodass Sie eine beliebige Anzahl unabhängiger Erfassungen erstellen können.
 
-![sequenzielle Erfassung](images/capt1.png)
+![Sequenzielle Erfassung](images/capt1.png)
 
-Wie oben gezeigt, können Sie nach dem Herstellen einer Verbindung mit dem Netzwerk eine Erfassung beliebig oft starten und Abbrechen, eine neue Erfassung starten und jedes Mal neue Statistiken erstellen, wenn Sie die Erfassung neu starten. Bei einer verzögerten Erfassung mit der [**idelta-DC**](idelaydc.md) -Schnittstelle wird z. b. jedes Mal eine neue [*Erfassungs Datei*](c.md) erstellt, wenn Sie die Erfassung neu starten.
+Wie oben gezeigt, können Sie nach dem Herstellen einer Verbindung mit dem Netzwerk eine Erfassung beliebig oft starten und beenden, eine neue Erfassung starten und bei jedem Neustart der Erfassung neue Statistiken generieren. Für eine verzögerte Erfassung mithilfe der [**IDelaydC-Schnittstelle**](idelaydc.md) wird beispielsweise bei jedem Neustart der Erfassung eine neue [*Erfassungsdatei*](c.md) erstellt.
 
-Beachten Sie jedoch, dass Sie jedes Mal, wenn Sie den Erfassungsprozess neu starten, die geeignete Configure-Methode zum Neukonfigurieren der Verbindung abrufen müssen. Für den ersten-Befehl zum Starten der Erfassung wird die Verbindung durch den-Befehl zum Herstellen einer Verbindung mit dem Netzwerk konfiguriert.
+Beachten Sie jedoch auch, dass Sie bei jedem Neustart des Erfassungsprozesses die entsprechende Konfigurationsmethode aufrufen müssen, um die Verbindung neu zu konfigurieren. Damit der erste Aufruf die Erfassung startet, wird die Verbindung durch den Aufruf konfiguriert, um eine Verbindung mit dem Netzwerk herzustellen.
 
-Die zweite Abbildung zeigt, wie Sie eine einzelne Erfassung ausführen können, indem Sie anhalten und neu starten.
+Die zweite Abbildung zeigt, wie Sie eine einzelne Erfassung durch Anhalten und Neustarten ausführen können.
 
-![einzelne Erfassung durch anhalten und Neustarten](images/capt2.png)
+![Einzelne Erfassung durch Anhalten und Neustarten](images/capt2.png)
 
-In diesem Fall können Sie eine Erfassung beliebig oft anhalten und neu starten. Bei diesem Ansatz können Sie eine Erfassung ausführen, deren Daten (und die zugehörigen Statistiken) als einzelne Erfassung aufgezeichnet werden. Um z. b. eine verzögerte Erfassung mithilfe der [**idelta-DC**](idelaydc.md) -Schnittstelle auszuführen, werden alle erfassten Netzwerkinformationen in einer einzigen [*Erfassungs Datei*](c.md)gespeichert.
+In diesem Fall können Sie eine Erfassung beliebig oft anhalten und neu starten. Mit diesem Ansatz können Sie eine Erfassung ausführen, deren Daten (und die zugehörigen Statistiken) als einzelne Erfassung aufgezeichnet werden. Wenn Sie beispielsweise eine verzögerte Erfassung mithilfe der [**IDelaydC-Schnittstelle**](idelaydc.md) durchführen möchten, werden alle erfassten Netzwerkinformationen in einer einzigen [*Erfassungsdatei*](c.md)gespeichert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**"Kreatenppinterface"**](createnppinterface.md)
+[**CreateNPPInterface**](createnppinterface.md)
 </dt> <dt>
 
-[**Idelta aydc:: Configure**](idelaydc-configure.md)
+[**IDelaydC::Configure**](idelaydc-configure.md)
 </dt> <dt>
 
-[**Idelta aydc:: Connect**](idelaydc-connect.md)
+[**IDelaydC::Verbinden**](idelaydc-connect.md)
 </dt> <dt>
 
-[**Idelta aydc::D isconnect**](idelaydc-disconnect.md)
+[**IDelaydC::D isconnect**](idelaydc-disconnect.md)
 </dt> <dt>
 
-[**Idelta aydc::P ause**](idelaydc-pause.md)
+[**IDelaydC::P ause**](idelaydc-pause.md)
 </dt> <dt>
 
-[**Idelta aydc:: Resume**](idelaydc-resume.md)
+[**IDelaydC::Resume**](idelaydc-resume.md)
 </dt> <dt>
 
-[**Idelta aydc:: Start**](idelaydc-start.md)
+[**IDelaydC::Start**](idelaydc-start.md)
 </dt> <dt>
 
-[**Idelta aydc:: Beendigung**](idelaydc-stop.md)
+[**IDelaydC::Stop**](idelaydc-stop.md)
 </dt> <dt>
 
-[**IESP:: Configure**](iesp-configure.md)
+[**IESP::Configure**](iesp-configure.md)
 </dt> <dt>
 
-[**IESP:: Connect**](iesp-connect.md)
+[**IESP::Verbinden**](iesp-connect.md)
 </dt> <dt>
 
 [**IESP::D isconnect**](iesp-disconnect.md)
@@ -79,40 +79,40 @@ In diesem Fall können Sie eine Erfassung beliebig oft anhalten und neu starten.
 [**IESP::P ause**](iesp-pause.md)
 </dt> <dt>
 
-[**IESP:: Resume**](iesp-resume.md)
+[**IESP::Resume**](iesp-resume.md)
 </dt> <dt>
 
-[**IESP:: Start**](iesp-start.md)
+[**IESP::Start**](iesp-start.md)
 </dt> <dt>
 
-[**IESP:: Beendigung**](iesp-stop.md)
+[**IESP::Stop**](iesp-stop.md)
 </dt> <dt>
 
-[**"Iran:: Configure"**](irtc-configure.md)
+[**IRTC::Configure**](irtc-configure.md)
 </dt> <dt>
 
-[**Iran:: Connect**](irtc-connect.md)
+[**IRTC::Verbinden**](irtc-connect.md)
 </dt> <dt>
 
-[**:D isconnect**](irtc-disconnect.md)
+[**IRTC::D isconnect**](irtc-disconnect.md)
 </dt> <dt>
 
-[**Iran::P ause**](irtc-pause.md)
+[**IRTC::P ause**](irtc-pause.md)
 </dt> <dt>
 
-[**Iran:: Resume**](irtc-resume.md)
+[**IRTC::Resume**](irtc-resume.md)
 </dt> <dt>
 
-[**"Iran:: Start"**](irtc-start.md)
+[**IRTC::Start**](irtc-start.md)
 </dt> <dt>
 
-[**Iran:: Beendigung**](irtc-stop.md)
+[**IRTC::Stop**](irtc-stop.md)
 </dt> <dt>
 
-[**IStats:: Configure**](istats-configure.md)
+[**IStats::Configure**](istats-configure.md)
 </dt> <dt>
 
-[**IStats:: Connect**](istats-connect.md)
+[**IStats::Verbinden**](istats-connect.md)
 </dt> <dt>
 
 [**IStats::D isconnect**](istats-disconnect.md)
@@ -121,13 +121,13 @@ In diesem Fall können Sie eine Erfassung beliebig oft anhalten und neu starten.
 [**IStats::P ause**](istats-pause.md)
 </dt> <dt>
 
-[**IStats:: Resume**](istats-resume.md)
+[**IStats::Resume**](istats-resume.md)
 </dt> <dt>
 
-[**IStats:: Start**](istats-start.md)
+[**IStats::Start**](istats-start.md)
 </dt> <dt>
 
-[**IStats:: Beendigung**](istats-stop.md)
+[**IStats::Stop**](istats-stop.md)
 </dt> </dl>
 
  

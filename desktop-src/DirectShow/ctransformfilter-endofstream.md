@@ -1,7 +1,7 @@
 ---
-description: Die EndOf Stream-Methode benachrichtigt den Filter, dass keine weiteren Daten von der Eingabe-PIN erwartet werden.
+description: Die EndOfStream-Methode benachrichtigt den Filter, dass keine zusätzlichen Daten vom Eingabepin erwartet werden.
 ms.assetid: b8fc3976-e3d4-4f16-82b0-3900ad6a740c
-title: Ctransformfilter. EndOf Stream-Methode (Transfrm. h)
+title: CTransformFilter.EndOfStream-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5dea676a42f6df46d0035fdbb6e812b1df15fbb2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ade419666b1df36e851d5d945e14d9035c1377145cecd472244c9178758f45f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907630"
 ---
-# <a name="ctransformfilterendofstream-method"></a>Ctransformfilter. EndOf Stream-Methode
+# <a name="ctransformfilterendofstream-method"></a>CTransformFilter.EndOfStream-Methode
 
-Die- `EndOfStream` Methode benachrichtigt den Filter, dass keine zusätzlichen Daten von der eingabepin erwartet werden.
+Die `EndOfStream` -Methode benachrichtigt den Filter, dass keine zusätzlichen Daten vom Eingabepin erwartet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**ctransforminputpin:: endovstream**](ctransforminputpin-endofstream.md) -Methode der Eingabe-PIN ruft diese Methode auf. Diese Methode übermittelt die downstreambenachrichtigung. Wenn die abgeleitete Klasse einen Arbeits Thread zum Übermitteln von Medien Beispielen verwendet, sollte diese Methode überschrieben werden, und das Ende der Stream-Benachrichtigung wird in die Warteschlange eingereiht.
+Die [**CTransformInputPin::EndOfStream-Methode**](ctransforminputpin-endofstream.md) des Eingabepins ruft diese Methode auf. Diese Methode stellt die End-of-Stream-Benachrichtigung nachgeschaltet zur Verfügung. Wenn die abgeleitete Klasse einen Arbeitsthread zum Senden von Medienbeispielen verwendet, sollte sie diese Methode überschreiben und die Benachrichtigung zum Streamende in die Warteschlange stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die [**ctransforminputpin:: endovstream**](ctransforminputpin-endofstream.md) -M
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die [**ctransforminputpin:: endovstream**](ctransforminputpin-endofstream.md) -M
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

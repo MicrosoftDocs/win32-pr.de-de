@@ -1,7 +1,7 @@
 ---
-description: Aktiviert die Aufgaben Vervollständigung.
+description: Aktiviert die Aufgabenerledigung.
 ms.assetid: 323343D6-FC4A-4A5F-B065-DD72B6077F99
-title: Taskcompletionclient-Schnittstelle
+title: TaskCompletionClient-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,52 +13,52 @@ api_type:
 - COM
 api_location:
 - ExecModelClient.dll
-ms.openlocfilehash: a823dc528ea189c70f44689ab69795eb3a430e67
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d03e52a15e6689b7f1ea98a2f1021874cab6a8967dd148b7eaf685ff3984e8cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119773650"
 ---
-# <a name="taskcompletionclient-interface"></a>Taskcompletionclient-Schnittstelle
+# <a name="taskcompletionclient-interface"></a>TaskCompletionClient-Schnittstelle
 
-Aktiviert die Aufgaben Vervollständigung.
+Aktiviert die Aufgabenerledigung.
 
 ## <a name="members"></a>Member
 
-Die **taskcompletionclient** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Taskcompletionclient** verfügt auch über die folgenden Typen von Membern:
+Die **TaskCompletionClient-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **TaskCompletionClient** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **taskcompletionclient** -Schnittstelle verfügt über diese Methoden.
+Die **TaskCompletionClient-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                    | BESCHREIBUNG                            |
+| Methode                                                                    | Beschreibung                            |
 |:--------------------------------------------------------------------------|:---------------------------------------|
-| [**Applytaskcompletion**](taskcompletionclient-applytaskcompletion.md)   | Startet den Abschluss der Aufgabe.<br/> |
-| [**Revoketaskcompletion**](taskcompletionclient-revoketaskcompletion.md) | Beendet den Abschluss der Aufgabe.<br/>   |
+| [**ApplyTaskCompletion**](taskcompletionclient-applytaskcompletion.md)   | Beginnt den Abschluss der Aufgabe.<br/> |
+| [**RevokeTaskCompletion**](taskcompletionclient-revoketaskcompletion.md) | Beendet den Abschluss der Aufgabe.<br/>   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die GUID für diese Schnittstelle lautet "E97D552D-9ae9-46aa-9151-D2DA4BBB5E96".
+Die GUID für diese Schnittstelle ist "E97D552D-9AE9-46AA-9151-D2DA4BBB5E96".
 
-Diese API ist veraltet und wird in zukünftigen Versionen von Windows möglicherweise nicht mehr verfügbar sein. Apps sollten stattdessen die APIs im [**Windows. applicationmodel. extendedexecution**](/uwp/api/Windows.ApplicationModel.ExtendedExecution?view=winrt-19041) -Namespace verwenden.
+Diese API ist veraltet und möglicherweise in zukünftigen Versionen von nicht mehr Windows. Apps sollten die APIs im [**Windows. Stattdessen wird der ApplicationModel.ExtendedExecution-Namespace**](/uwp/api/Windows.ApplicationModel.ExtendedExecution?view=winrt-19041) verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                           |
 | DLL<br/>                      | <dl> <dt>ExecModelClient.dll</dt> </dl> |
 
 

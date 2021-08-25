@@ -1,19 +1,19 @@
 ---
-description: Diese Eigenschaft stellt den \[ Speicher Anbieter-ID- \] Teil der voll qualifizierten Anbieter-ID&\# 0034; \[ Speicher Anbieter-ID \] ! \[ Windows-SID \] ! \[ Konto-ID \] & \# 0034;.
+description: Diese Eigenschaft stellt den Storage \[ \] Anbieter-ID-Teil des vollqualifizierten Anbieterbezeichners&\# 0034 dar. \[ Storage Anbieter-ID \] ! \[ Windows SID \] ! \[ Konto-ID \] & \# 0034;.
 ms.assetid: 361c5c25-2c8d-485b-83fd-55d94f6420a9
-title: System. storageproviderid
+title: System.StorageProviderId
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17d633d49bb42badbd80492871e9977796112a0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f21a42c1ef4168667d02213e27fc04e79811ef27abf97156ca9d32e84f3f40bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774430"
 ---
-# <a name="systemstorageproviderid"></a>System. storageproviderid
+# <a name="systemstorageproviderid"></a>System.StorageProviderId
 
-Diese Eigenschaft stellt die \[ Speicher Anbieter-ID \] Teil des voll qualifizierten Anbieter Bezeichners " \[ Speicher Anbieter-ID \] ! \[ Windows-SID \] ! \[ Konto-ID \] ".
+Diese Eigenschaft stellt die \[ Storage \] Anbieter-ID des vollqualifizierten Anbieterbezeichners dar Storage \[ Anbieter-ID! \] \[ Windows SID \] ! \[ Konto-ID \] ".
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

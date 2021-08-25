@@ -1,7 +1,7 @@
 ---
-description: Die deliverendofstream-Methode übergibt eine streamingbenachrichtigung an die verbundene Eingabe-PIN.
+description: Die DeliverEndOfStream-Methode übermittelt eine End-of-Stream-Benachrichtigung an den verbundenen Eingabepin.
 ms.assetid: 5b564675-a1e0-4010-b35d-28315c262bcc
-title: Cbaseoutputpin. deliverendof-Methode (amfilter. h)
+title: CBaseOutputPin.DeliverEndOfStream-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 334101c9b61631a35c5da91bd398cb7742d39235
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c13463ae4effb9fee31ad7c9201ad5af6fd406099c5259c2e6fdff9dcbb62798
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814190"
 ---
-# <a name="cbaseoutputpindeliverendofstream-method"></a>Cbaseoutputpin. deliverendosstream-Methode
+# <a name="cbaseoutputpindeliverendofstream-method"></a>CBaseOutputPin.DeliverEndOfStream-Methode
 
-Die- `DeliverEndOfStream` Methode übermittelt eine Streamende-Benachrichtigung an die verbundene Eingabe-PIN.
+Die `DeliverEndOfStream` -Methode übermittelt eine End-of-Stream-Benachrichtigung an den verbundenen Eingabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>              |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Die PIN ist nicht verbunden.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Pin ist nicht verbunden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) -Methode für die Eingabe-PIN auf.
+Diese Methode ruft die [**IPin::EndOfStream-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) auf dem Eingabepin auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Diese Methode ruft die [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Diese Methode ruft die [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

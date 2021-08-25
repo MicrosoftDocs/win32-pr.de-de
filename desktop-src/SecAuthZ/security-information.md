@@ -1,24 +1,24 @@
 ---
 description: Identifiziert die objektbezogenen Sicherheitsinformationen, die festgelegt oder abgefragt werden.
 ms.assetid: e3e8b35d-9d18-4611-a898-72ca13e40d33
-title: SECURITY_INFORMATION (WinNT. h)
+title: SECURITY_INFORMATION (Winnt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aaad4b9f61a20b26397081433b88782dcbc33f8d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35eda92db81cc2325dcc2eb084c06aa5ac7ca92475cca92d8221e394af9704c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907200"
 ---
-# <a name="security_information"></a>Sicherheits \_ Informationen
+# <a name="security_information"></a>\_SICHERHEITSINFORMATIONEN
 
-Der Datentyp **Sicherheits \_ Informationen** identifiziert die objektbezogenen Sicherheitsinformationen, die festgelegt oder abgefragt werden. Diese Sicherheitsinformationen umfassen Folgendes:
+Der **SECURITY \_ INFORMATION-Datentyp** identifiziert die objektbezogenen Sicherheitsinformationen, die festgelegt oder abgefragt werden. Diese Sicherheitsinformationen umfassen Folgendes:
 
--   Der Besitzer eines Objekts.
--   Die primäre Gruppe eines Objekts.
--   Die freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) eines Objekts.
--   Die [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL) eines Objekts
+-   Der Besitzer eines Objekts
+-   Die primäre Gruppe eines Objekts
+-   Die [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) eines Objekts
+-   Die [*Systemzugriffssteuerungsliste*](/windows/desktop/SecGloss/s-gly) (SACL) eines Objekts
 
 
 ```C++
@@ -27,28 +27,28 @@ typedef DWORD SECURITY_INFORMATION, *PSECURITY_INFORMATION;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einige Mitglieder von **Sicherheits \_ Informationen** arbeiten nur mit der Funktion [**SetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) . Diese Member werden in der Struktur, die von anderen Sicherheitsfunktionen wie [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) oder [**convertstringsecuritydescriptortosecuritydescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)zurückgegeben wird, nicht zurückgegeben.
+Einige **SECURITY \_ INFORMATION-Member** funktionieren nur mit der [**SetNamedSecurityInfo-Funktion.**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) Diese Member werden nicht in der -Struktur zurückgegeben, die von anderen Sicherheitsfunktionen wie [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) oder [**ConvertStringSecurityDescriptorToSecurityDescriptor zurückgegeben wird.**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)
 
-Jedes Element von Sicherheitsinformationen wird durch ein Bitflag angegeben. Jedes Bitflag kann einen der folgenden Werte aufweisen. Weitere Informationen finden Sie unter den Funktionen [**setsecurityaccessmask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-setsecurityaccessmask) und [**querysecurityaccessmask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-querysecurityaccessmask) .
+Jedes Element von Sicherheitsinformationen wird durch ein Bitflag festgelegt. Jedes Bitflag kann einer der folgenden Werte sein. Weitere Informationen finden Sie unter den [**Funktionen SetSecurityAccessMask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-setsecurityaccessmask) und [**QuerySecurityAccessMask.**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-querysecurityaccessmask)
 
 
 
-| Zum Abfragen/festlegen Erforderlicher Wert/Rechte                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                                                                                                                                       |
+| Für abfragen/festlegen erforderliche Werte/Rechte                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Attribut \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen erforderliches Recht **: \_ DAC schreiben**<br/>                                                                                     | Die Ressourcen Eigenschaften des Objekts, auf das verwiesen wird. Die Ressourcen Eigenschaften werden im System \_ Ressourcen \_ Attribut- \_ ACE-Typ in der SACL der Sicherheits Beschreibung gespeichert.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieses Bitflag ist nicht verfügbar.<br/> <br/>                 |
-| \_Sicherheits \_ Informationen zur Sicherung<br/> Zum Abfragen erforderliches Recht **: \_ Lese** -und **Zugriffs \_ System \_ Sicherheit**<br/> Zum Festlegen der Rechte erforderlich: **Schreiben von \_ DAC** und **Schreiben von \_ Besitzer** -und **Zugriffs \_ System \_ Sicherheit**<br/> | Alle Teile der Sicherheits Beschreibung. Dies ist nützlich für Sicherungs-und Wiederherstellungssoftware, die die gesamte Sicherheits Beschreibung beibehalten muss.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieses Bitflag ist nicht verfügbar.<br/> <br/>                                                  |
-| DACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen erforderliches Recht **: \_ DAC schreiben**<br/>                                                                                          | Auf die DACL des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                                        |
-| Gruppen \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen von rechten erforderlich: **Schreib \_ Besitzer** <br/>                                                                                      | Auf den primären Gruppen Bezeichner des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                    |
-| \_Sicherheits \_ Informationen zur Bezeichnung<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen von rechten erforderlich: **Schreib \_ Besitzer** <br/>                                                                                      | Es wird auf die obligatorische Integritäts Bezeichnung verwiesen.<br/> Die obligatorische Integritäts Bezeichnung ist ein ACE in der SACL des Objekts.<br/> **Windows Server 2003 und Windows XP:** Dieses Bitflag ist nicht verfügbar.<br/> <br/>                                                                                                                                    |
-| \_Sicherheits \_ Informationen für den Besitzer<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen von rechten erforderlich: **Schreib \_ Besitzer** <br/>                                                                                      | Auf den Besitzer Bezeichner des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                            |
-| geschützte \_ DACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: nicht verfügbar<br/> Zum Festlegen erforderliches Recht **: \_ DAC schreiben**<br/>                                                                                   | Die DACL kann keine [*Zugriffs Steuerungs Einträge*](/windows/desktop/SecGloss/a-gly) (ACEs) erben.<br/>                                                                                                                                                                                                                   |
-| geschützte \_ SACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: nicht verfügbar<br/> Zum Festlegen des Zugriffs auf **\_ System \_ Sicherheit** erforderlich.<br/>                                                                     | Die SACL kann keine ACEs erben.<br/>                                                                                                                                                                                                                                                                                                                                      |
-| SACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: Zugriff auf die **\_ System \_ Sicherheit**<br/> Zum Festlegen des Zugriffs auf **\_ System \_ Sicherheit** erforderlich.<br/>                                                                 | Auf die SACL des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                                        |
-| Informationen zur Bereichs \_ Sicherheit \_<br/> Zum Abfragen erforderliches Recht: **Read- \_ Steuer** Element<br/> Zum Festlegen des Zugriffs auf **\_ System \_ Sicherheit** erforderlich.<br/>                                                                           | Der Bezeichner für die zentrale Zugriffs Richtlinie (Cap), der auf das Objekt anwendbar ist, auf das verwiesen wird. Jeder Cap-Bezeichner wird in einem \_ Richtlinien-ID-ACE-Typ der System weiten \_ Richtlinie \_ \_ in der SACL der SD gespeichert.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP:** Dieses Bitflag ist nicht verfügbar.<br/> <br/> |
-| ungeschützte \_ DACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: nicht verfügbar<br/> Zum Festlegen erforderliches Recht **: \_ DAC schreiben**<br/>                                                                                 | Die DACL erbt ACEs von dem übergeordneten Objekt.<br/>                                                                                                                                                                                                                                                                                                                     |
-| ungeschützte \_ SACL- \_ Sicherheits \_ Informationen<br/> Zum Abfragen erforderliches Recht: nicht verfügbar<br/> Zum Festlegen des Zugriffs auf **\_ System \_ Sicherheit** erforderlich.<br/>                                                                   | Die SACL erbt ACEs von dem übergeordneten Objekt.<br/>                                                                                                                                                                                                                                                                                                                     |
+| \_ \_ ATTRIBUTSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Recht zum Festlegen erforderlich: **WRITE \_ DAC**<br/>                                                                                     | Die Ressourceneigenschaften des Objekts, auf das verwiesen wird. Die Ressourceneigenschaften werden in DEN ACE-Typen von SYSTEM \_ RESOURCE ATTRIBUTE in der \_ \_ SACL des Sicherheitsdeskriptors gespeichert.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieses Bitflag ist nicht verfügbar.<br/> <br/>                 |
+| \_ \_ SICHERUNGSSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL** und **ACCESS SYSTEM \_ \_ SECURITY**<br/> Erforderliches Recht zum Festlegen: **WRITE \_ DAC** und **WRITE \_ OWNER** und **ACCESS SYSTEM \_ \_ SECURITY**<br/> | Alle Teile der Sicherheitsbeschreibung. Dies ist nützlich für die Sicherung und Wiederherstellung von Software, die die gesamte Sicherheitsbeschreibung beibehalten muss.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieses Bitflag ist nicht verfügbar.<br/> <br/>                                                  |
+| \_DACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Recht zum Festlegen erforderlich: **WRITE \_ DAC**<br/>                                                                                          | Auf die DACL des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                                        |
+| \_ \_ GRUPPENSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Recht zum Festlegen erforderlich: **WRITE \_ OWNER** <br/>                                                                                      | Auf den primären Gruppenbezeichner des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                    |
+| \_ \_ BEZEICHNUNGSSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Recht zum Festlegen erforderlich: **WRITE \_ OWNER** <br/>                                                                                      | Auf die obligatorische Integritätsbezeichnung wird verwiesen.<br/> Die obligatorische Integritätsbezeichnung ist ein ACE in der SACL des Objekts.<br/> **Windows Server 2003 und Windows XP:** Dieses Bitflag ist nicht verfügbar.<br/> <br/>                                                                                                                                    |
+| \_ \_ BESITZERSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Recht zum Festlegen erforderlich: **WRITE \_ OWNER** <br/>                                                                                      | Auf den Besitzerbezeichner des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                            |
+| GESCHÜTZTE \_ \_ DACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: Nicht verfügbar<br/> Recht zum Festlegen erforderlich: **WRITE \_ DAC**<br/>                                                                                   | Die DACL kann keine [*Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (ACEs) erben.<br/>                                                                                                                                                                                                                   |
+| GESCHÜTZTE \_ \_ SACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: Nicht verfügbar<br/> Erforderliches Recht zum Festlegen: **ACCESS \_ SYSTEM \_ SECURITY**<br/>                                                                     | Die SACL kann keine ACEs erben.<br/>                                                                                                                                                                                                                                                                                                                                      |
+| \_SACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: **ACCESS \_ SYSTEM \_ SECURITY**<br/> Erforderliches Recht zum Festlegen: **ACCESS \_ SYSTEM \_ SECURITY**<br/>                                                                 | Auf die SACL des Objekts wird verwiesen.<br/>                                                                                                                                                                                                                                                                                                                        |
+| \_ \_ BEREICHSSICHERHEITSINFORMATIONEN<br/> Recht zum Abfragen erforderlich: **READ \_ CONTROL**<br/> Erforderliches Recht zum Festlegen: **ACCESS \_ SYSTEM \_ SECURITY**<br/>                                                                           | Der Bezeichner der zentralen Zugriffsrichtlinie (CENTRAL ACCESS Policy, CAP), der für das Objekt gilt, auf das verwiesen wird. Jeder CAP-Bezeichner wird in einem ACE-Typ der SYSTEM \_ SCOPED \_ POLICY ID in \_ der \_ SACL der SD gespeichert.<br/> **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003** und Windows XP: Dieses Bitflag ist nicht verfügbar.<br/> <br/> |
+| UNGESCHÜTZTE \_ \_ DACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: Nicht verfügbar<br/> Recht zum Festlegen erforderlich: **WRITE \_ DAC**<br/>                                                                                 | Die DACL erbt ACEs vom übergeordneten Objekt.<br/>                                                                                                                                                                                                                                                                                                                     |
+| UNGESCHÜTZTE \_ \_ SACL-SICHERHEITSINFORMATIONEN \_<br/> Recht zum Abfragen erforderlich: Nicht verfügbar<br/> Erforderliches Recht zum Festlegen: **ACCESS \_ SYSTEM \_ SECURITY**<br/>                                                                   | Die SACL erbt ACEs vom übergeordneten Objekt.<br/>                                                                                                                                                                                                                                                                                                                     |
 
 
 
@@ -60,9 +60,9 @@ Jedes Element von Sicherheitsinformationen wird durch ein Bitflag angegeben. Jed
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>WinNT. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Winnt.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,16 +76,16 @@ Jedes Element von Sicherheitsinformationen wird durch ein Bitflag angegeben. Jed
 [Grundlegende Access Control Strukturen](authorization-structures.md)
 </dt> <dt>
 
-[**Convertsecuritydescriptortostringsecuritydescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora)
+[**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora)
 </dt> <dt>
 
-[**Wurde von convertstringsecuritydescriptortosecuritydescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)
+[**ConvertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)
 </dt> <dt>
 
-[**Getfilesecurity**](/windows/desktop/api/Winbase/nf-winbase-getfilesecuritya)
+[**GetFileSecurity**](/windows/desktop/api/Winbase/nf-winbase-getfilesecuritya)
 </dt> <dt>
 
-[**Getkernelobjectsecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getkernelobjectsecurity)
+[**GetKernelObjectSecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getkernelobjectsecurity)
 </dt> <dt>
 
 [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa)
@@ -97,37 +97,37 @@ Jedes Element von Sicherheitsinformationen wird durch ein Bitflag angegeben. Jed
 [**GetSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getsecurityinfo)
 </dt> <dt>
 
-[**Getuserobjectsecurity**](/windows/desktop/api/Winuser/nf-winuser-getuserobjectsecurity)
+[**GetUserObjectSecurity**](/windows/desktop/api/Winuser/nf-winuser-getuserobjectsecurity)
 </dt> <dt>
 
-[**Querysecurityaccessmask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-querysecurityaccessmask)
+[**QuerySecurityAccessMask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-querysecurityaccessmask)
 </dt> <dt>
 
-[**Setfilesecurity**](/windows/desktop/api/Winbase/nf-winbase-setfilesecuritya)
+[**SetFileSecurity**](/windows/desktop/api/Winbase/nf-winbase-setfilesecuritya)
 </dt> <dt>
 
-[**Setkernelobjectsecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setkernelobjectsecurity)
+[**SetKernelObjectSecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setkernelobjectsecurity)
 </dt> <dt>
 
 [**SetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa)
 </dt> <dt>
 
-[**Setprivateobjectsecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setprivateobjectsecurity)
+[**SetPrivateObjectSecurity**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setprivateobjectsecurity)
 </dt> <dt>
 
-[**Setsecurityaccessmask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-setsecurityaccessmask)
+[**SetSecurityAccessMask**](/windows/desktop/api/Securitybaseapi/nf-securitybaseapi-setsecurityaccessmask)
 </dt> <dt>
 
-[**Setsecurityinfo**](/windows/desktop/api/Aclapi/nf-aclapi-setsecurityinfo)
+[**SetSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setsecurityinfo)
 </dt> <dt>
 
-[**Setuserobjectsecurity**](/windows/desktop/api/Winuser/nf-winuser-setuserobjectsecurity)
+[**SetUserObjectSecurity**](/windows/desktop/api/Winuser/nf-winuser-setuserobjectsecurity)
 </dt> <dt>
 
-[**Treeresetnamedsecurityinfo**](/windows/desktop/api/Aclapi/nf-aclapi-treeresetnamedsecurityinfoa)
+[**TreeResetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-treeresetnamedsecurityinfoa)
 </dt> <dt>
 
-[**Treesetnamedsecurityinfo**](/windows/desktop/api/Aclapi/nf-aclapi-treesetnamedsecurityinfoa)
+[**TreeSetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-treesetnamedsecurityinfoa)
 </dt> </dl>
 
  

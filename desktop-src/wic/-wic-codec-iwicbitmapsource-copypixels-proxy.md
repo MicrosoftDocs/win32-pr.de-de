@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die CopyPixels-Methode.
+description: Proxyfunktion für die CopyPixels-Methode.
 ms.assetid: 020c11e9-0847-468e-b240-20529f6460cd
 title: IWICBitmapSource_CopyPixels_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 5c759bd1731e2f3cbc4da9c40cb590e0f39686de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e9c847680a93cb245b0e5d4247cb60b82629ea82eba12313dbcff7303dcce707
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772340"
 ---
-# <a name="iwicbitmapsource_copypixels_proxy-function"></a>IWICBitmapSource \_ CopyPixels- \_ Proxy Funktion
+# <a name="iwicbitmapsource_copypixels_proxy-function"></a>IWICBitmapSource \_ CopyPixels-Proxyfunktion \_
 
-Proxy Funktion für die [**CopyPixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-copypixels) -Methode.
+Proxyfunktion für die [**CopyPixels-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsource-copypixels)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ HRESULT IWICBitmapSource_CopyPixels_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Zeiger auf dieses [_ *IWICBitmapSource* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) -Objekt.
+Zeiger auf dieses [**IWICBitmapSource-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)
 
 </dd> <dt>
 
-*Volksrepublik China* \[ in\]
+*prc* \[ In\]
 </dt> <dd>
 
-Typ: * Konstante *[**WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) \** _
+Typ: **const [**WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) \***
 
-Das Rechteck, das kopiert werden soll. Ein NULL-Wert gibt die gesamte Bitmap an.
+Das zu kopierende Rechteck. Ein NULL-Wert gibt die gesamte Bitmap an.
 
 </dd> <dt>
 
-_cbStride * \[ in\]
+*cbStride* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Der Schritt der Bitmap.
+Der Schritt der Bitmap
 
 </dd> <dt>
 
-*cbBufferSize* \[ in\]
+*cbBufferSize* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 Die Größe des Puffers.
 
 </dd> <dt>
 
-*pbBuffer* \[ vorgenommen\]
+*pbBuffer* \[ out\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
 Ein Zeiger auf den Puffer.
 
@@ -91,9 +91,9 @@ Ein Zeiger auf den Puffer.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -103,9 +103,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

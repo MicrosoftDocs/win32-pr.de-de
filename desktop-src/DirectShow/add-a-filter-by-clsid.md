@@ -1,19 +1,19 @@
 ---
-description: Filter nach CLSID hinzufügen
+description: Hinzufügen eines Filters nach CLSID
 ms.assetid: b15cf324-5b9b-41da-a8cf-87071aaf3b60
-title: Filter nach CLSID hinzufügen
+title: Hinzufügen eines Filters nach CLSID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f880ab1cb3b88fbe6d889acdd192bba341ce2acf
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ed8306613e5a73ad863b3c16b04529e3e0def12b76fb4e27685db9cb442b6c80
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873430"
 ---
-# <a name="add-a-filter-by-clsid"></a>Filter nach CLSID hinzufügen
+# <a name="add-a-filter-by-clsid"></a>Hinzufügen eines Filters nach CLSID
 
-Mit der folgenden Funktion wird ein Filter mit einem angegebenen Klassen Bezeichner (CLSID) erstellt und dem Filter Diagramm hinzugefügt:
+Die folgende Funktion erstellt einen Filter mit einem angegebenen Klassenbezeichner (CLSID) und fügt ihn dem Filterdiagramm hinzu:
 
 
 ```C++
@@ -55,11 +55,11 @@ done:
 
 
 > [!Note]  
-> In diesem Beispiel wird die [saferelease](/windows/desktop/medfound/saferelease) -Funktion verwendet, um den [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion](/windows/desktop/medfound/saferelease) verwendet, um den [**IBaseFilter-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) frei zu geben.
 
  
 
-Die Funktion ruft [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um den Filter zu erstellen, und ruft dann [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) auf, um den Filter dem Diagramm hinzuzufügen. Im folgenden Codebeispiel wird diese Funktion verwendet, um dem Diagramm den [AVI MUX](avi-mux-filter.md) -Filter hinzuzufügen:
+Die Funktion ruft [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um den Filter zu erstellen, und ruft dann [**IFilterGraph::AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) auf, um den Filter zum Diagramm hinzuzufügen. Im folgenden Codebeispiel wird diese Funktion verwendet, um dem [Diagramm den FILTER AVI Mux](avi-mux-filter.md) hinzuzufügen:
 
 
 ```C++
@@ -74,7 +74,7 @@ if (SUCCEEDED(hr))
 
 
 
-Beachten Sie, dass einige Filter nicht mit [**cokreatanstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)erstellt werden können. Dies ist häufig der Fall bei Filtern, die andere Softwarekomponenten verwalten. Beispielsweise ist der [AVI-Kompressor](avi-compressor-filter.md) -Filter ein Wrapper für Video Codecs, und der [WDM-Video Erfassungs](wdm-video-capture-filter.md) Filter ist ein Wrapper für WDM-Erfassungs Treiber. Diese Filter müssen entweder mit dem [System Geräte-Enumerator](system-device-enumerator.md) oder dem [Filter Mapper](filter-mapper.md)erstellt werden. Weitere Informationen finden Sie unter Auflisten von [Geräten und Filtern](enumerating-devices-and-filters.md).
+Beachten Sie, dass einige Filter nicht mit [**CoCreateInstance erstellt werden können.**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) Dies ist häufig bei Filtern der Fall, die andere Softwarekomponenten verwalten. Beispielsweise ist der [FILTER AVI-11](avi-compressor-filter.md) ein Wrapper für Videocodecs, und der [WDM-Videoerfassungsfilter](wdm-video-capture-filter.md) ist ein Wrapper für WDM-Erfassungstreiber. Diese Filter müssen entweder mit dem [Systemgeräte-Enumerator](system-device-enumerator.md) oder dem [Filter-Mapper erstellt werden.](filter-mapper.md) Weitere Informationen finden Sie unter [Aufzählen von Geräten und Filtern.](enumerating-devices-and-filters.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

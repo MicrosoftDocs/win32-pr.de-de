@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Striche ab, die dem icontextnode-Objekt zugeordnet sind.
+description: Ruft die Anzahl der Striche ab, die dem IContextNode-Objekt zugeordnet sind.
 ms.assetid: bb3c1cb3-dcf6-4465-b1bc-5c613e9747da
-title: 'Icontextnode:: getstrokecount-Methode (iacom. h)'
+title: IContextNode::GetStrokeCount-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 2652168fa2846995aeb17ec23c194f908f22e5d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b3cecaa43c6bc42526a34ed4859c8365fbd0f1d10f90970a1b6940019da249f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119773810"
 ---
-# <a name="icontextnodegetstrokecount-method"></a>Icontextnode:: getstrokecount-Methode
+# <a name="icontextnodegetstrokecount-method"></a>IContextNode::GetStrokeCount-Methode
 
-Ruft die Anzahl der Striche ab, die dem [**icontextnode**](icontextnode.md) -Objekt zugeordnet sind.
+Ruft die Anzahl der Striche ab, die dem [**IContextNode-Objekt**](icontextnode.md) zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,29 +39,29 @@ HRESULT GetStrokeCount(
 
 <dl> <dt>
 
-*pulstrokecount* \[ vorgenommen\]
+*pulStrokeCount* \[ out\]
 </dt> <dd>
 
-Die Anzahl der Striche, die dem [**icontextnode**](icontextnode.md) -Objekt zugeordnet sind.
+Die Anzahl der Striche, die dem [**IContextNode-Objekt**](icontextnode.md) zugeordnet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur frei Hand Blatt Kontext Knoten verfügen über zugeordnete Strich Daten (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)).
+Nur Knoten des Freihandblattkontexts verfügen über zugeordnete Strichdaten (siehe [**IContextNode::GetType**](icontextnode-gettype.md)).
 
 ## <a name="examples"></a>Beispiele
 
-Dieses Beispiel zeigt eine Methode, `ExploreContextNode` , die einen [**icontextnode**](icontextnode.md)untersucht. Die-Methode führt Folgendes aus:
+Dieses Beispiel zeigt eine Methode, `ExploreContextNode` , die einen [**IContextNode**](icontextnode.md)untersucht. Die -Methode führt folgende Schritte aus:
 
--   Ruft den Typ des Kontext Knotens ab.
--   Überprüft bestimmte Eigenschaften des Knoten Typs durch Aufrufen einer Hilfsmethode, wenn es sich bei dem Kontext Knoten um einen nicht klassifizierten Ink-, Analyse-oder benutzerdefinierten Erkennungs Knoten handelt.
--   Prüft jeden unter Knoten durch Aufrufen von sich selbst, wenn der Knoten über untergeordnete Knoten verfügt.
--   Untersucht die Strich Daten für den Knoten durch Aufrufen einer Hilfsmethode, wenn der Knoten ein frei Hand Blattknoten ist.
+-   Ruft den Typ des Kontextknotens ab.
+-   Überprüft bestimmte Eigenschaften des Knotentyps, indem eine Hilfsmethode aufgerufen wird, wenn der Kontextknoten ein nicht klassifizierter Ink-, Analysehinweis- oder benutzerdefinierter Erkennungsknoten ist.
+-   Überprüft jeden Unterknoten, indem er sich selbst aufruft, wenn der Knoten über Unterknoten verfügt.
+-   Überprüft die Strichdaten für den Knoten, indem eine Hilfsmethode aufgerufen wird, wenn der Knoten ein Blattknoten mit Ink ist.
 
 
 ```C++
@@ -171,9 +171,9 @@ HRESULT CMyClass::ExploreContextNode(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -182,16 +182,16 @@ HRESULT CMyClass::ExploreContextNode(
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: GetStrokeIds**](icontextnode-getstrokeids.md)
+[**IContextNode::GetStrokeIds**](icontextnode-getstrokeids.md)
 </dt> <dt>
 
-[**Icontextnode:: getstrokeid**](icontextnode-getstrokeid.md)
+[**IContextNode::GetStrokeId**](icontextnode-getstrokeid.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

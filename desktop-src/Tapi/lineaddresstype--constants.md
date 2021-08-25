@@ -1,23 +1,23 @@
 ---
-description: Der Adresstyp identifiziert das Adressformat, z. b. die Standard Telefonnummer oder e-Mail-Adresse Nur Anwendungen, die TAPI-Version 3,0 oder höher aushandeln, können Adresstypen verwenden.
+description: Der Adresstyp identifiziert das Adressformat, z. B. die Standardtelefonnummer oder E-Mail-Adresse. Nur Anwendungen, die TAPI Version 3.0 oder höher aushandeln, können Adresstypen verwenden.
 ms.assetid: 2c32eda1-e510-40eb-ae75-fc7b9e9953cd
-title: LINEADDRESSTYPE_ Konstanten (TAPI. h)
+title: LINEADDRESSTYPE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6d0a46eff2a7a0c38fa17aed4b831ef8701c565
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f6555ff934ffb8c1b40b8f35d279a2071cad32b80b754af19672108f5e318a17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873332"
 ---
-# <a name="lineaddresstype_-constants"></a>Lineadresssstype- \_ Konstanten
+# <a name="lineaddresstype_-constants"></a>LINEADDRESSTYPE-Konstanten \_
 
-Der Adresstyp identifiziert das Adressformat, z. b. die Standard Telefonnummer oder e-Mail-Adresse Nur Anwendungen, die TAPI-Version 3,0 oder höher aushandeln, können Adresstypen verwenden.
+Der Adresstyp identifiziert das Adressformat, z. B. die Standardtelefonnummer oder E-Mail-Adresse. Nur Anwendungen, die TAPI Version 3.0 oder höher aushandeln, können Adresstypen verwenden.
 
 <dl> <dt>
 
-<span id="LINEADDRESSTYPE_PHONENUMBER"></span><span id="lineaddresstype_phonenumber"></span>**lineadresssstype \_ PhoneNumber**
+<span id="LINEADDRESSTYPE_PHONENUMBER"></span><span id="lineaddresstype_phonenumber"></span>**LINEADDRESSTYPE \_ PHONENUMBER**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -25,12 +25,12 @@ Der Adresstyp identifiziert das Adressformat, z. b. die Standard Telefonnummer o
 
 
 
-Address Type ist eine Standard Telefonnummer.
+Der Adresstyp ist eine Standardtelefonnummer.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSTYPE_SDP"></span><span id="lineaddresstype_sdp"></span>**lineadresssstype \_ SDP**
+<span id="LINEADDRESSTYPE_SDP"></span><span id="lineaddresstype_sdp"></span>**\_LINEADDRESSTYPE-SDP**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -38,12 +38,12 @@ Address Type ist eine Standard Telefonnummer.
 
 
 
-Der Adresstyp ist die Sitzungs Beschreibungs-Protokoll Konferenz (SDP).
+Adresstyp: Session Description Protocol (SDP)-Konferenz.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSTYPE_EMAILNAME"></span><span id="lineaddresstype_emailname"></span>**"lineadresstype \_ emailname"**
+<span id="LINEADDRESSTYPE_EMAILNAME"></span><span id="lineaddresstype_emailname"></span>**LINEADDRESSTYPE \_ EMAILNAME**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -51,12 +51,12 @@ Der Adresstyp ist die Sitzungs Beschreibungs-Protokoll Konferenz (SDP).
 
 
 
-Der Adresstyp ist ein e-Mail-Name.
+Der Adresstyp ist ein E-Mail-Name.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSTYPE_DOMAINNAME"></span><span id="lineaddresstype_domainname"></span>**Name der lineadresssstype- \_ Domäne**
+<span id="LINEADDRESSTYPE_DOMAINNAME"></span><span id="lineaddresstype_domainname"></span>**LINEADDRESSTYPE \_ DOMAINNAME**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -64,12 +64,12 @@ Der Adresstyp ist ein e-Mail-Name.
 
 
 
-Der Adresstyp ist ein Domänen Name.
+Der Adresstyp ist ein Domänenname.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEADDRESSTYPE_IPADDRESS"></span><span id="lineaddresstype_ipaddress"></span>**lineadresssstype- \_ IPAddress**
+<span id="LINEADDRESSTYPE_IPADDRESS"></span><span id="lineaddresstype_ipaddress"></span>**LINEADDRESSTYPE \_ IPADDRESS**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -77,7 +77,7 @@ Der Adresstyp ist ein Domänen Name.
 
 
 
-Address Type ist eine IP-Adresse.
+Der Adresstyp ist eine IP-Adresse.
 
 
 </dt> </dl> </dd> </dl>
@@ -88,8 +88,8 @@ Address Type ist eine IP-Adresse.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

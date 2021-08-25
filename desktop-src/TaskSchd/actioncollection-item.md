@@ -1,11 +1,11 @@
 ---
-title: Aktions Collection. Item-Eigenschaft
-description: Ruft bei der Skripterstellung eine angegebene Aktion aus der Auflistung ab.
+title: ActionCollection.Item-Eigenschaft
+description: Für die Skripterstellung ruft eine angegebene Aktion aus der Auflistung ab.
 ms.assetid: a5567c82-2d56-4c3e-894c-ca6d432a3358
 keywords:
-- Element Eigenschaft Taskplaner
-- Item-Eigenschaft Taskplaner, Aktions Sammlungsobjekt
-- Aktions Sammlungsobjekt Taskplaner, Element Eigenschaft
+- Elementeigenschafts-Taskplaner
+- Elementeigenschaft Taskplaner , ActionCollection-Objekt
+- ActionCollection-Objekt Taskplaner , Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4853009c547f3bdfbb269e512ce5d39273726095
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fff95b707a4a99ce54cba4d175ce9fd094f7a6bd400147d7942a42a39d65bb7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796640"
 ---
-# <a name="actioncollectionitem-property"></a>Aktions Collection. Item-Eigenschaft
+# <a name="actioncollectionitem-property"></a>ActionCollection.Item-Eigenschaft
 
-Ruft bei der Skripterstellung eine angegebene Aktion aus der Auflistung ab.
+Für die Skripterstellung ruft eine angegebene Aktion aus der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +40,11 @@ ActionCollection.Item( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**Aktions**](action.md) Objekt, das die angeforderte Aktion darstellt.
+Ein [**Action-Objekt,**](action.md) das die angeforderte Aktion darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sammlungen sind 1-basiert. Anders ausgedrückt: der Index für das erste Element in der Auflistung ist 1.
+Sammlungen sind 1-basiert. Anders ausgedrückt: Der Index für das erste Element in der Auflistung ist 1.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Sammlungen sind 1-basiert. Anders ausgedrückt: der Index für das erste Element
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

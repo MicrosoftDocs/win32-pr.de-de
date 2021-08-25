@@ -1,52 +1,52 @@
 ---
-title: VML-Text-Decoration Attribut
-description: VML-Text-Decoration Attribut
+title: VML Text-Decoration-Attribut
+description: VML Text-Decoration-Attribut
 ms.assetid: a64985bd-d025-4e9c-bb4b-bf0450d5143a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24ee85007db2dbca04221604cafd79c5d7052c91
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 474d76b9e37cb363a8b2a28b84c30be77f857159767cc4db221fd7a684b4951e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796030"
 ---
-# <a name="vml-text-decoration-attribute"></a>VML-Text-Decoration Attribut
+# <a name="vml-text-decoration-attribute"></a>VML Text-Decoration-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Stil der Text Dekoration. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Stil der Textdekoration. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "Text-Decoration: *Expression* " >
+<v: *element* style="text-decoration: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. TextDecoration = "*Ausdruck*"
+*element* .style.textdecoration="*expression*"
 
-*Ausdruck* = *Element*. Style. TextDecoration
+*expression* = *Element*.style.textdecoration
 
 **Anmerkungen**
 
 Mögliche Werte:
 
--   keine (Standard)
+-   none (Standard)
 -   Unterstrichen
 -   Überstrich
--   zeilenweise
+-   Line-Through
 -   blink
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -64,6 +64,6 @@ Der Text wird unterstrichen.
 
 
 
- 
+ 
 
- 
+ 

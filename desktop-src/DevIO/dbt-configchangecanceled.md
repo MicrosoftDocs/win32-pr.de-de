@@ -1,21 +1,21 @@
 ---
-description: Das System überträgt das DBT \_ configchangeabgeb Rochen-Geräte Ereignis, wenn eine Anforderung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) abgebrochen wurde.
+description: Das System überträgt das DBT-Geräteereignis CONFIGCHANGECANCELED, wenn eine Anforderung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) \_ abgebrochen wurde.
 ms.assetid: b4b1455c-9a04-4fa0-a3fa-ed991f278c0c
-title: DBT_CONFIGCHANGECANCELED-Ereignis (DBT. h)
+title: DBT_CONFIGCHANGECANCELED -Ereignis (Dbt.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 97944daa698808c55f88bc377c9bf1c59c1217fb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 624144ccd5a87d983d453c8d6a3c0667376c2a1b9340bba83f229a29882bffe4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874540"
 ---
-# <a name="dbt_configchangecanceled-event"></a>DBT \_ configchangeabgeb Rochen-Ereignis
+# <a name="dbt_configchangecanceled-event"></a>DBT \_ CONFIGCHANGECANCELED-Ereignis
 
-Das System überträgt das DBT \_ configchangeabgeb Rochen-Geräte Ereignis, wenn eine Anforderung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) abgebrochen wurde.
+Das System überträgt das DBT-Geräteereignis CONFIGCHANGECANCELED, wenn eine Anforderung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) \_ abgebrochen wurde.
 
-Zum übertragen dieses Geräte Ereignisses verwendet das System die [**WM \_ devicechange**](wm-devicechange.md) -Nachricht, wobei *wParam* auf DBT \_ configchangeabgeb Rochen und *LPARAM* auf NULL festgelegt ist.
+Um dieses Geräteereignis zu übertragen, verwendet das System die [**WM \_ DEVICECHANGE-Nachricht,**](wm-devicechange.md) bei der *wParam* auf DBT \_ CONFIGCHANGECANCELED und *lParam* auf 0 (null) festgelegt ist.
 
 
 ```C++
@@ -33,24 +33,24 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Das Fensterhandle
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Der [**WM- \_ devicechange**](wm-devicechange.md) -Nachrichten Bezeichner.
+Der [**WM \_ DEVICECHANGE-Nachrichtenbezeichner.**](wm-devicechange.md)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Legen Sie DBT \_ configchangeabgeb Rochen fest.
+Legen Sie auf DBT \_ CONFIGCHANGECANCELED fest.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Auf NULL festlegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Gibt **true** zurück.
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>DBT. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Dbt.h</dt> </dl> |
 
 
 
@@ -81,13 +81,13 @@ Gibt **true** zurück.
 
 <dl> <dt>
 
-[Geräte Ereignisse](device-events.md)
+[Geräteereignisse](device-events.md)
 </dt> <dt>
 
-[Geräte Verwaltungs Ereignisse](device-management-events.md)
+[Geräteverwaltung Ereignisse](device-management-events.md)
 </dt> <dt>
 
-[**WM- \_ devicechange**](wm-devicechange.md)
+[**WM \_ DEVICECHANGE**](wm-devicechange.md)
 </dt> </dl>
 
  

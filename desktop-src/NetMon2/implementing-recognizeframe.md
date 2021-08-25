@@ -1,56 +1,56 @@
 ---
-description: Netzwerk Monitore rufen die erkenzeframe-Funktion eines Parsers auf, um zu bestimmen, ob der Parser die nicht beanspruchten Daten eines Frames erkennt.
+description: Netzwerkmonitore rufen die RecognizeFrame-Funktion eines Parsers auf, um zu bestimmen, ob der Parser die nicht beanspruchten Daten eines Frames erkennt.
 ms.assetid: 6d0574da-f0ec-4ed9-bfb0-023dff2ac6fe
-title: Implementieren von "erkenzeframe"
+title: Implementieren von RecognizeFrame
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d970eee80a04168b3fa06b117c2c219c506da7ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39d3f9a79325c0c75a7a83cfb99a34ff3de1f073573dee13d39a846b575f6285
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890495"
 ---
-# <a name="implementing-recognizeframe"></a>Implementieren von "erkenzeframe"
+# <a name="implementing-recognizeframe"></a>Implementieren von RecognizeFrame
 
-Netzwerk Monitore rufen die [**erkenzeframe**](recognizeframe.md) -Funktion eines Parsers auf, um zu bestimmen, ob der Parser die nicht beanspruchten Daten eines Frames erkennt. Die nicht beanspruchten Daten können sich am Anfang eines Frames befinden, aber in der Regel befinden sich nicht beanspruchte Daten in der Mitte eines Frames. Die folgende Abbildung zeigt nicht beanspruchte Daten, die sich in der Mitte eines Frames befinden.
+Netzwerkmonitore rufen die [**RecognizeFrame-Funktion**](recognizeframe.md) eines Parsers auf, um zu bestimmen, ob der Parser die nicht beanspruchten Daten eines Frames erkennt. Die nicht beanspruchten Daten können sich am Anfang eines Frames befinden, aber in der Regel befinden sich nicht beanspruchte Daten in der Mitte eines Frames. Die folgende Abbildung zeigt nicht beanspruchte Daten, die sich in der Mitte eines Frames befinden.
 
-![nicht beanspruchte Daten, die sich in der Mitte eines Frames befinden](images/recognizeframe1.png)
+![Nicht beanspruchte Daten, die sich in der Mitte eines Frames befinden](images/recognizeframe1.png)
 
-Netzwerkmonitor stellt beim Aufrufen der Funktion " [**erkenzeframe**](recognizeframe.md) " die folgenden Informationen bereit:
+Netzwerkmonitor stellt beim Aufrufen der [**RecognizeFrame-Funktion**](recognizeframe.md) die folgenden Informationen bereit:
 
 -   Ein Handle für den Frame.
 -   Ein Zeiger auf den Anfang des Frames.
 -   Ein Zeiger auf den Anfang der nicht beanspruchten Daten.
--   Der Mac-Wert des ersten Protokolls im Frame.
--   Die Anzahl der Bytes in den nicht beanspruchten Daten; Das heißt, die Bytes verbleiben im Frame.
+-   Der MAC-Wert des ersten Protokolls im Frame.
+-   Die Anzahl der Bytes in den nicht beanspruchten Daten. Das heißt, die im Frame verbleibenden Bytes.
 -   Ein Handle für das vorherige Protokoll.
 -   Der Offset des vorherigen Protokolls.
 
-Wenn die Parser-DLL ermittelt, dass nicht beanspruchte Daten mit dem parserprotokoll beginnen, bestimmt die Parser-DLL, wo das nächste Protokoll beginnt und welches Protokoll folgt. Die Parser-DLL funktioniert wie folgt:
+Wenn die Parser-DLL ermittelt, dass nicht beanspruchte Daten mit dem Parserprotokoll beginnen, bestimmt die Parser-DLL, wo das nächste Protokoll beginnt und welches Protokoll folgt. Die Parser-DLL funktioniert auf folgende bedingte Weise:
 
--   Wenn die Parser-DLL nicht beanspruchte Daten erkennt, legt die Parser-DLL den *pprotocolstatus* -Parameter fest und gibt einen Zeiger auf das nächste Protokoll im Frame oder auf **null** zurück. **Null** wird zurückgegeben, wenn das aktuelle Protokoll das letzte Protokoll im Frame ist.
--   Wenn die Parser-DLL nicht beanspruchte Daten erkennt und das folgende Protokoll identifiziert (aus den im Protokoll bereitgestellten Informationen), gibt die Parser-DLL einen Zeiger auf das Handle des nächsten Protokolls im Parameter *phnextprotocol* der Funktion zurück.
--   Wenn die Parser-DLL keine nicht beanspruchten Daten erkennt, gibt die Parser-DLL den Zeiger auf den Anfang der nicht beanspruchten Daten zurück, und Netzwerkmonitor versucht weiterhin, die nicht beanspruchten Daten zu analysieren.
+-   Wenn die Parser-DLL nicht beanspruchte Daten erkennt, legt die Parser-DLL den *pProtocolStatus-Parameter* fest und gibt einen Zeiger auf das nächste Protokoll im Frame oder **NULL** zurück. **NULL** wird zurückgegeben, wenn das aktuelle Protokoll das letzte Protokoll im Frame ist.
+-   Wenn die Parser-DLL nicht beanspruchte Daten erkennt und das folgende Protokoll identifiziert (anhand der im Protokoll bereitgestellten Informationen), gibt die Parser-DLL einen Zeiger auf das Handle des nächsten Protokolls im *phNextProtocol-Parameter* der Funktion zurück.
+-   Wenn die Parser-DLL nicht beanspruchte Daten nicht erkennt, gibt die Parser-DLL den Zeiger auf den Anfang der nicht beanspruchten Daten zurück, und Netzwerkmonitor versucht weiterhin, die nicht beanspruchten Daten zu analysieren.
 
-**So implementieren Sie "erkenzeframe"**
+**So implementieren Sie RecognizeFrame**
 
-1.  Testen Sie, um zu ermitteln, dass Sie das Protokoll erkennen.
-2.  Wenn Sie nicht beanspruchte Daten erkennen und wissen, welches Protokoll befolgt wird, legen Sie *pprotocolstatus* auf Protokoll \_ Status \_ Next \_ Protocol fest, legen Sie *phnextprotocol* auf einen Zeiger fest, der auf das Handle für das nächste Protokoll verweist, und geben Sie dann einen Zeiger auf das nächste Protokoll zurück.
-
-    – oder –
-
-    Wenn Sie nicht beanspruchte Daten erkennen und nicht wissen, welches Protokoll befolgt wird, legen Sie *pprotocolstatus* auf Protokoll \_ Status erkannt fest \_ , und geben Sie dann einen Zeiger auf das nächste Protokoll zurück.
+1.  Testen Sie, um zu ermitteln, ob Sie das Protokoll erkennen.
+2.  Wenn Sie nicht beanspruchte Daten erkennen und wissen, welches Protokoll folgt, legen Sie *pProtocolStatus* auf PROTOCOL \_ STATUS NEXT PROTOCOL \_ \_ fest, legen Sie *phNextProtocol* auf einen Zeiger fest, der auf das Handle für das nächste Protokoll zeigt, und geben Sie dann einen Zeiger auf das nächste Protokoll zurück.
 
     – oder –
 
-    Wenn Sie nicht beanspruchte Daten erkennen und Ihr Protokoll das letzte Protokoll in einem Frame ist, legen Sie *pprotocolstatus* auf "Protokoll \_ Status beansprucht" fest \_ , und geben Sie dann **null** zurück.
+    Wenn Sie nicht beanspruchte Daten erkennen und nicht wissen, welches Protokoll folgt, legen Sie *pProtocolStatus* auf PROTOCOL STATUS RECOGNIZED fest, und geben Sie \_ dann einen Zeiger auf das nächste Protokoll \_ zurück.
 
     – oder –
 
-    Wenn Sie keine nicht beanspruchten Daten erkennen, legen Sie *pprotocolstatus* auf "Protokoll \_ Status \_ nicht erkannt" fest \_ , und geben Sie dann den Zeiger zurück, der in " *pprotocol*" an Sie übergeben wird.
+    Wenn Sie nicht beanspruchte Daten erkennen und Ihr Protokoll das letzte Protokoll in einem Frame ist, legen Sie *pProtocolStatus* auf PROTOCOL STATUS CLAIMED fest, und geben Sie \_ dann \_ **NULL** zurück.
 
-Im folgenden finden Sie eine grundlegende Implementierung von [**erkenzeframe**](recognizeframe.md).
+    – oder –
+
+    Wenn Sie nicht beanspruchte Daten nicht erkennen, legen Sie *pProtocolStatus* auf PROTOCOL \_ STATUS NOT RECOGNIZED \_ \_ fest, und geben Sie dann den Zeiger zurück, der in *pProtocol* an Sie übergeben wird.
+
+Im Folgenden sehen Sie eine grundlegende Implementierung von [**RecognizeFrame**](recognizeframe.md).
 
 ``` syntax
 #include <windows.h>

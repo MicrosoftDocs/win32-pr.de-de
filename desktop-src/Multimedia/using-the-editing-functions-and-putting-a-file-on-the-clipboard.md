@@ -1,23 +1,23 @@
 ---
-title: Verwenden der Bearbeitungsfunktionen und Ablegen einer Datei in die Zwischenablage
-description: Verwenden der Bearbeitungsfunktionen und Ablegen einer Datei in die Zwischenablage
+title: Verwenden der Bearbeitungsfunktionen und Speichern einer Datei in der Zwischenablage
+description: Verwenden der Bearbeitungsfunktionen und Speichern einer Datei in der Zwischenablage
 ms.assetid: 2c69e44a-5f45-45e7-bbad-c593359943a0
 keywords:
-- Editstreamclone-Funktion
-- Editstreamcopy-Funktion
-- Editstreamcut-Funktion
+- EditStreamClone-Funktion
+- EditStreamCopy-Funktion
+- EditStreamCut-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 533f2165afdb3173ea0f8c603764f25d0fa625fe
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a2f3ad09b882d9df6d9b7603e6f5596789ba32157f6050916ae9212f52395a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804530"
 ---
-# <a name="using-the-editing-functions-and-putting-a-file-on-the-clipboard"></a>Verwenden der Bearbeitungsfunktionen und Ablegen einer Datei in die Zwischenablage
+# <a name="using-the-editing-functions-and-putting-a-file-on-the-clipboard"></a>Verwenden der Bearbeitungsfunktionen und Speichern einer Datei in der Zwischenablage
 
-Im folgenden Beispiel werden Segmente aus einem Array von Streams gekürzt, kopiert oder gelöscht. Die ausgeschnittenen und kopierten Streams werden in einer neuen Datei zusammengeführt und in der Zwischenablage abgelegt. Zu den verwendeten Funktionen gehören [**editstreamclone**](/windows/desktop/api/Vfw/nf-vfw-editstreamclone), [**editstreamcopy**](/windows/desktop/api/Vfw/nf-vfw-editstreamcopy)und [**editstreamcut**](/windows/desktop/api/Vfw/nf-vfw-editstreamcut).
+Im folgenden Beispiel werden Segmente aus einem Array von Streams schneidet, kopiert oder gelöscht. Die ausgeschnittenen und kopierten Datenströme werden in einer neuen Datei zusammengeführt und in der Zwischenablage platziert. Zu den verwendeten Funktionen [**zählen EditStreamClone,**](/windows/desktop/api/Vfw/nf-vfw-editstreamclone) [**EditStreamCopy**](/windows/desktop/api/Vfw/nf-vfw-editstreamcopy)und [**EditStreamCut.**](/windows/desktop/api/Vfw/nf-vfw-editstreamcut)
 
 
 ```C++
@@ -94,9 +94,9 @@ case MENU_DELETE:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Führt ein adaptives Mosaik basierend auf dem z-basierten adaptiven Mosaik Kriterium aus.
+description: Führt ein adaptives Mosaik basierend auf dem z-basierten Adaptiven Mosaikkriterium aus.
 ms.assetid: 9f8f5c18-e866-4893-ba07-2a3c0d26c028
-title: 'ID3DXPatchMesh:: tttellateadaptive-Methode (D3DX9Mesh. h)'
+title: ID3DXPatchMesh::TessellateAdaptive-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e4cc6c6b7ff7b0cdb99e56386df49529f26c9166
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d6365cfcf50debfeeb28fd493b76ac60943ee14f27a2dadec168b3dd4d31ace1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119856290"
 ---
-# <a name="id3dxpatchmeshtessellateadaptive-method"></a>ID3DXPatchMesh:: Tess. Adaptive-Methode
+# <a name="id3dxpatchmeshtessellateadaptive-method"></a>ID3DXPatchMesh::TessellateAdaptive-Methode
 
-Führt ein adaptives Mosaik basierend auf dem z-basierten adaptiven Mosaik Kriterium aus.
+Führt ein adaptives Mosaik basierend auf dem z-basierten Adaptiven Mosaikkriterium aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT TessellateAdaptive(
 
 <dl> <dt>
 
-*ptrans* \[ in\]
+*pTrans* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR4**](d3dxvector4.md) \***
+Typ: **const [**D3DXVECTOR4**](d3dxvector4.md) \***
 
-Gibt einen 4D-Vektor an, der mit den Scheitel Punkten dargestellt wird, um die pro-vertexadaptive Mosaik Menge zu erhalten. Jeder Rand wird auf den Durchschnittswert der Mosaik Ebenen für die beiden Scheitel Punkte, die er verbindet, festgesetzt.
+Gibt einen 4D-Vektor an, der mit den Scheitelpunkten gepunktet ist, um die Menge des adaptiven Mosaiks pro Scheitelpunkt abzurufen. Jeder Rand wird mit dem Durchschnittswert der Mosaikebenen für die beiden Scheitelpunkte verknüpft, die er verbindet.
 
 </dd> <dt>
 
-*dwmaxtess Level* \[ in\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
-
-Maximale Beschränkung für das adaptive Mosaik. Dies ist die Anzahl der Scheitel Punkte, die zwischen vorhandenen Vertices eingeführt wurden. Dieser ganzzahlige Wert kann zwischen 1 und 32 (einschließlich) liegen.
-
-</dd> <dt>
-
-*dwmintess Level* \[ in\]
+*dwMaxTessLevel* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Mindestgrenzwert für das adaptive Mosaik. Dies ist die Anzahl der Scheitel Punkte, die zwischen vorhandenen Vertices eingeführt wurden. Dieser ganzzahlige Wert kann zwischen 1 und 32 (einschließlich) liegen.
+Maximales Limit für adaptive Mosaik. Dies ist die Anzahl von Scheitelpunkten, die zwischen vorhandenen Scheitelpunkten eingeführt werden. Dieser ganzzahlige Wert kann zwischen 1 und einschließlich 32 liegen.
 
 </dd> <dt>
 
-*pmesh* \[ in\]
+*dwMinTessLevel* \[ In\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
+
+Mindestlimit für adaptive Mosaik. Dies ist die Anzahl von Scheitelpunkten, die zwischen vorhandenen Scheitelpunkten eingeführt werden. Dieser ganzzahlige Wert kann zwischen 1 und einschließlich 32 liegen.
+
+</dd> <dt>
+
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Resultierende Mosaik Gitter. Siehe [**ID3DXMesh**](id3dxmesh.md).
+Resultierendes Mosaikgitternetz. Siehe [**ID3DXMesh.**](id3dxmesh.md)
 
 </dd> </dl>
 
@@ -83,11 +83,11 @@ Resultierende Mosaik Gitter. Siehe [**ID3DXMesh**](id3dxmesh.md).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird effizienter durchgeführt, wenn das patchmesh mit [**ID3DXPatchMesh:: optimiert**](id3dxpatchmesh--optimize.md)optimiert wurde.
+Diese Funktion wird effizienter ausgeführt, wenn das Patchmesh mit [**ID3DXPatchMesh::Optimize**](id3dxpatchmesh--optimize.md)optimiert wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,12 +95,12 @@ Diese Funktion wird effizienter durchgeführt, wenn das patchmesh mit [**ID3DXPa
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

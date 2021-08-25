@@ -1,25 +1,25 @@
 ---
-title: Erstellen einer Verbindungs Anforderungs Richtlinie
-description: Erstellen einer Verbindungs Anforderungs Richtlinie
+title: Erstellen einer Verbindungsanforderungenrichtlinie
+description: Erstellen einer Verbindungsanforderungenrichtlinie
 ms.assetid: 659e7d1e-d985-4cb1-95ad-355c5b44d55a
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78f2ff388cf3448a4482d304fabf90fdbaa83d5d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 69c12a8969e4e16495881a08a67550cb2052862126baecf5cc07c2ad6b129c23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889330"
 ---
-# <a name="creating-a-connection-request-policy"></a>Erstellen einer Verbindungs Anforderungs Richtlinie
+# <a name="creating-a-connection-request-policy"></a>Erstellen einer Verbindungsanforderungenrichtlinie
 
-Mit dem folgenden Visual Basic Code wird eine Verbindungs Anforderungs Richtlinie erstellt. Es fügt der Richtlinie eine Bedingung hinzu, die mit dem Namen des Benutzers übereinstimmt, der den Zugriff anfordert. Die Richtlinie wird mit einem Profil verknüpft. Dieses Profil wird so konfiguriert, dass RADIUS sowohl für die Authentifizierung als auch für die Buchhaltung verwendet wird, und gibt die Server Gruppen an, die das Profil für die Authentifizierung und Kontoführung verwenden soll
+Mit dem folgenden Visual Basic Code wird eine Verbindungsanforderungenrichtlinie erstellt. Der Richtlinie wird eine Bedingung hinzugefügt, die mit dem Namen des Benutzers übereinstimmt, der Zugriff anfordert. Die Richtlinie wird mit einem Profil verknüpft. Dieses Profil wird so konfiguriert, dass radius sowohl für die Authentifizierung als auch für die Buchhaltung verwendet wird, und gibt die Servergruppen an, die das Profil für die Authentifizierung und Buchhaltung verwenden soll.
 
 > [!Note]  
-> Dieses Inline Codebeispiel wurde auf verwalteten Visual Basic erstellt.
+> Dieses Inlinecodebeispiel basiert auf verwalteten Visual Basic.
 
- 
+ 
 
 
 ```VB
@@ -336,30 +336,30 @@ End Module
 
 <dl> <dt>
 
-[Reihenfolge der Verwendung der SDO-API](/windows/desktop/Nps/sdo-order-in-which-to-use-the-sdo-api)
+[Reihenfolge, in der die SDO-API verwendet werden soll](/windows/desktop/Nps/sdo-order-in-which-to-use-the-sdo-api)
 </dt> <dt>
 
-[Unterstützte SDO-Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
+[Von SDO unterstützte Attribute](/windows/desktop/Nps/sdo-sdo-supported-attributes)
 </dt> <dt>
 
-[**Isdo**](/windows/desktop/api/sdoias/nn-sdoias-isdo)
+[**ISdo**](/windows/desktop/api/sdoias/nn-sdoias-isdo)
 </dt> <dt>
 
-[**Isdocollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
+[**ISdoCollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection)
 </dt> <dt>
 
-[**Isdodiktattionaryold**](/windows/desktop/api/sdoias/nn-sdoias-isdodictionaryold)
+[**ISdoDictionaryOld**](/windows/desktop/api/sdoias/nn-sdoias-isdodictionaryold)
 </dt> <dt>
 
-[**Iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
+[**IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
 </dt> <dt>
 
-[**Policyproperties**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties)
+[**POLICYPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties)
 </dt> <dt>
 
-[**Profileproperties**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties)
+[**PROFILEPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

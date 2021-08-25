@@ -1,11 +1,11 @@
 ---
 title: Telex-Primary-Attribut
-description: Die primäre Telex-Nummer.
+description: Die primäre Telexnummer.
 ms.assetid: 4a7b3098-39f7-464a-b5de-39b748b19ecd
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Telex-Primary-Attribut
-- primarytelexnumber-Attribut, AD-Schema
+- Telex-Primary AD-Attributschema
+- primaryTelexNumber-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea9a40c7c3b4d4ae9df3dcf83c0166cb19dbc347
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d9783936e59bbc833e5a22e8f59d944822fa8541da350a8a4ac4334d43dbac77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119838160"
 ---
 # <a name="telex-primary-attribute"></a>Telex-Primary-Attribut
 
-Die primäre Telex-Nummer.
+Die primäre Telexnummer.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
 | CN                | Telex-Primary                                                                    |
-| LDAP-Display-Name | primarytelexnumber                                                               |
+| Ldap-Anzeigename | primaryTelexNumber                                                               |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Jeder kann dieses Objekt basierend auf der Sicherheit des Objekts, das erstellt wird, aktualisieren. |
-| Aktualisierungshäufigkeit  | \-                                                                               |
+| Aktualisieren von Berechtigungen  | Jeder kann dieses Objekt basierend auf der Sicherheit des erstellten Objekts aktualisieren. |
+| Updatehäufigkeit  | \-                                                                               |
 | Attribute-Id      | 1.2.840.113556.1.4.648                                                           |
-| System-ID-GUID    | 0296c121-40DA-11d1-a9c0-0000b80367c1                                             |
+| System-ID-GUID    | 0296c121-40da-11d1-a9c0-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Die primäre Telex-Nummer.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,7 +70,7 @@ Die primäre Telex-Nummer.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -99,11 +99,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Ist einwertig       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -120,11 +120,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -141,11 +141,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -162,11 +162,11 @@ Die primäre Telex-Nummer.
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
-| System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | False                                                              |
-| Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| System-Only            | Falsch                                                              |
+| Is-Single-Valued       | Richtig                                                               |
+| Ist indiziert             | Falsch                                                              |
+| Im globalen Katalog      | Falsch                                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

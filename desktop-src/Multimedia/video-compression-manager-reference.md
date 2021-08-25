@@ -1,127 +1,127 @@
 ---
-title: Referenz zum Video Komprimierungs-Manager
-description: Referenz zum Video Komprimierungs-Manager
+title: Referenz zum Videokomprimierungs-Manager
+description: Referenz zum Videokomprimierungs-Manager
 ms.assetid: dd678b24-62af-495f-bdd6-3082c1a753dd
 keywords:
-- Video für Windows (Vfw), Video Komprimierungs-Manager (VCM)
-- VFW (Video für Windows), Video Komprimierungs-Manager (VCM)
+- Video für Windows (VFW), Videokomprimierungs-Manager (VCM)
+- VFW (Video für Windows),Videokomprimierungs-Manager (VCM)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c801df7ecdf0f6468762c2742235d4ef627f5aee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: adffe57bd731736ed434dfdfa3c4ded4e643c66a0b5f9ea1c6085a71285e45c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804270"
 ---
-# <a name="video-compression-manager-reference"></a>Referenz zum Video Komprimierungs-Manager
+# <a name="video-compression-manager-reference"></a>Referenz zum Videokomprimierungs-Manager
 
-In diesem Abschnitt werden die Funktionen, Strukturen, Meldungen und Makros beschrieben, die mit VCM verknüpft sind. Diese Elemente werden wie folgt gruppiert.
+In diesem Abschnitt werden die Funktionen, Strukturen, Meldungen und Makros beschrieben, die VCM zugeordnet sind. Diese Elemente sind wie folgt gruppiert.
 
-## <a name="compressor-installation-and-removal"></a>Installation und Entfernung von Kompressors
+## <a name="compressor-installation-and-removal"></a>Installations- und Entfernungsschritte
 
--   [**Icinstall**](/windows/desktop/api/Vfw/nf-vfw-icinstall)
--   [**Iclocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate)
--   [**Icopen**](/windows/desktop/api/Vfw/ns-vfw-icopen)
--   [**Icclose**](/windows/desktop/api/Vfw/nf-vfw-icclose)
--   [**Ikremove**](/windows/desktop/api/Vfw/nf-vfw-icremove)
--   [**Icopenfunction**](/windows/desktop/api/Vfw/nf-vfw-icopenfunction)
+-   [**ICInstall**](/windows/desktop/api/Vfw/nf-vfw-icinstall)
+-   [**ICLocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate)
+-   [**ICOPEN**](/windows/desktop/api/Vfw/ns-vfw-icopen)
+-   [**ICClose**](/windows/desktop/api/Vfw/nf-vfw-icclose)
+-   [**ICRemove**](/windows/desktop/api/Vfw/nf-vfw-icremove)
+-   [**ICOpenFunction**](/windows/desktop/api/Vfw/nf-vfw-icopenfunction)
 
-## <a name="locating-and-opening-a-compressor"></a>Suchen und Öffnen eines Kompressors
+## <a name="locating-and-opening-a-compressor"></a>Suchen und Öffnen eines 19-
 
--   [**Iclocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate)
--   [**Icopen**](/windows/desktop/api/Vfw/ns-vfw-icopen)
--   [**Icdebug**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen)
--   [**Icdrawopen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
--   [**Icinfo**](/windows/desktop/api/Vfw/ns-vfw-icinfo)
--   [**Icclose**](/windows/desktop/api/Vfw/nf-vfw-icclose)
+-   [**ICLocate**](/windows/desktop/api/Vfw/nf-vfw-iclocate)
+-   [**ICOPEN**](/windows/desktop/api/Vfw/ns-vfw-icopen)
+-   [**ICDecompressOpen**](/windows/desktop/api/Vfw/nf-vfw-icdecompressopen)
+-   [**ICDrawOpen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
+-   [**ICINFO**](/windows/desktop/api/Vfw/ns-vfw-icinfo)
+-   [**ICClose**](/windows/desktop/api/Vfw/nf-vfw-icclose)
 
-## <a name="selecting-compressors"></a>Auswählen von Kompressoren
+## <a name="selecting-compressors"></a>Auswählen von "Aussteller"
 
--   [**Iccompressorchoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose)
--   [**Iccompressorfree**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree)
--   [**Compvaren**](/windows/desktop/api/Vfw/ns-vfw-compvars)
+-   [**ICCompressorChoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose)
+-   [**ICCompressorFree**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree)
+-   [**COMPVARS**](/windows/desktop/api/Vfw/ns-vfw-compvars)
 
-## <a name="configuring-compressors"></a>Konfigurieren von Kompressoren
+## <a name="configuring-compressors"></a>Konfigurieren von Ausstellern
 
--   [**ICM- \_ Konfiguration**](icm-configure.md)
--   [**ICM \_ GetState**](icm-getstate.md)
--   [**ICM \_ SetState**](icm-setstate.md)
--   [**Icsendmessage**](/windows/desktop/api/Vfw/nf-vfw-icsendmessage)
+-   [**\_ICM Konfigurieren**](icm-configure.md)
+-   [**\_ICM GETSTATE**](icm-getstate.md)
+-   [**\_ICM Setstate**](icm-setstate.md)
+-   [**ICSendMessage**](/windows/desktop/api/Vfw/nf-vfw-icsendmessage)
 
-## <a name="compressor-information"></a>Informationen zum Kompressor
+## <a name="compressor-information"></a>Informationen zum Rauschen
 
--   [**Icgetinfo**](/windows/desktop/api/Vfw/nf-vfw-icgetinfo)
--   [**Icinfo**](/windows/desktop/api/Vfw/ns-vfw-icinfo)
--   [**ICM \_ getdefaultkeyframerate**](icm-getdefaultkeyframerate.md)
--   [**Icgetdisplayformat**](/windows/desktop/api/Vfw/nf-vfw-icgetdisplayformat)
--   [**ICM \_ getdefaultquality**](icm-getdefaultquality.md)
--   [**ICM \_ Info**](icm-about.md)
+-   [**ICGetInfo**](/windows/desktop/api/Vfw/nf-vfw-icgetinfo)
+-   [**ICINFO**](/windows/desktop/api/Vfw/ns-vfw-icinfo)
+-   [**\_ICM GETDEFAULTKEYFRAMERATE**](icm-getdefaultkeyframerate.md)
+-   [**ICGetDisplayFormat**](/windows/desktop/api/Vfw/nf-vfw-icgetdisplayformat)
+-   [**\_ICM GETDEFAULTQUALITY**](icm-getdefaultquality.md)
+-   [**\_ICM Über**](icm-about.md)
 
-## <a name="single-image-compression"></a>Komprimierung mit einem Bild
+## <a name="single-image-compression"></a>Komprimierung einzelner Images
 
--   [**Icimagecompress**](/windows/desktop/api/Vfw/nf-vfw-icimagecompress)
+-   [**ICImageCompress**](/windows/desktop/api/Vfw/nf-vfw-icimagecompress)
 
-## <a name="sequence-compression"></a>Sequenz Komprimierung
+## <a name="sequence-compression"></a>Sequenzkomprimierung
 
--   [**Icabqcompressframe**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframe)
--   [**Icabqcompressframestart**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframestart)
--   [**Icabqcompressframeend**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframeend)
+-   [**ICSeqCompressFrame**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframe)
+-   [**ICSeqCompressFrameStart**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframestart)
+-   [**ICSeqCompressFrameEnd**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframeend)
 
-## <a name="compvars"></a>Compvaren
+## <a name="compvars"></a>COMPVARS
 
--   [**Iccompressorchoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose)
+-   [**ICCompressorChoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose)
 
-## <a name="image-data-compression"></a>Bild Datenkomprimierung
+## <a name="image-data-compression"></a>Bilddatenkomprimierung
 
--   [**Iccompress**](/windows/desktop/api/Vfw/ns-vfw-iccompress)
--   [**ICM \_ - \_ komprimierungsget- \_ Format**](icm-compress-get-format.md)
--   [**ICM- \_ Komprimierungs \_ Abfrage**](icm-compress-query.md)
--   [**ICM- \_ Komprimierung \_ get \_ size**](icm-compress-get-size.md)
--   [**ICM- \_ Komprimierung \_ starten**](icm-compress-begin.md)
--   [**ICM- \_ Komprimierung \_ Beenden**](icm-compress-end.md)
+-   [**ICCOMPRESS**](/windows/desktop/api/Vfw/ns-vfw-iccompress)
+-   [**\_ICM KOMPRIMIEREN \_ DES \_ GET-FORMATS**](icm-compress-get-format.md)
+-   [**\_ICM COMPRESS \_ QUERY**](icm-compress-query.md)
+-   [**\_ICM KOMPRIMIEREN DER \_ \_ GET-GRÖßE**](icm-compress-get-size.md)
+-   [**\_ICM COMPRESS \_ BEGIN**](icm-compress-begin.md)
+-   [**\_ICM COMPRESS \_ END**](icm-compress-end.md)
 
-## <a name="compressor-monitoring"></a>Überwachung des Kompressors
+## <a name="compressor-monitoring"></a>Überwachung der Überwachungsdaten
 
--   [**Icsetstatusproc**](/windows/desktop/api/Vfw/ns-vfw-icsetstatusproc)
+-   [**ICSETSTATUSPROC**](/windows/desktop/api/Vfw/ns-vfw-icsetstatusproc)
 
-## <a name="decompressing-single-images"></a>Komprimieren von einzelnen Bildern
+## <a name="decompressing-single-images"></a>Dekomprimieren einzelner Images
 
--   [**Icimagedebug**](/windows/desktop/api/Vfw/nf-vfw-icimagedecompress)
+-   [**ICImageDecompress**](/windows/desktop/api/Vfw/nf-vfw-icimagedecompress)
 
-## <a name="decompressing-image-data"></a>Abbild Daten werden komprimiert.
+## <a name="decompressing-image-data"></a>Dekomprimieren von Bilddaten
 
--   [**ICDE CompressEx**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex)
--   [**ICDE compressexbegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexbegin)
--   [**ICM- \_ \_ decoderende**](icm-decompressex-end.md)
--   [**ICM \_ Decompress \_ get- \_ Format**](icm-decompress-get-format.md)
--   [**ICM- \_ aufgeschbe \_ get- \_ Palette**](icm-decompress-get-palette.md)
--   [**Icabcompressexquery**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexquery)
--   [**Icdebug**](/windows/desktop/api/Vfw/ns-vfw-icdecompress)
--   [**ICM-Start \_ \_ Anfang**](icm-decompress-begin.md)
--   [**ICM-Debug- \_ \_ Ende**](icm-decompress-end.md)
--   [**ICM-Abfrage "Debug" \_ \_**](icm-decompress-query.md)
+-   [**ICDECOMPRESSEX**](/windows/desktop/api/Vfw/ns-vfw-icdecompressex)
+-   [**ICDecompressExBegin**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexbegin)
+-   [**\_ICM DECOMPRESSEX \_ END**](icm-decompressex-end.md)
+-   [**\_ICM DECOMPRESS \_ GET \_ FORMAT**](icm-decompress-get-format.md)
+-   [**\_ICM DECOMPRESS \_ GET \_ PALETTE**](icm-decompress-get-palette.md)
+-   [**ICDecompressExQuery**](/windows/desktop/api/Vfw/nf-vfw-icdecompressexquery)
+-   [**ICDECOMPRESS**](/windows/desktop/api/Vfw/ns-vfw-icdecompress)
+-   [**\_ICM DECOMPRESS \_ BEGIN**](icm-decompress-begin.md)
+-   [**\_ICM DECOMPRESS \_ END**](icm-decompress-end.md)
+-   [**\_ICM DECOMPRESS \_ QUERY**](icm-decompress-query.md)
 
 ## <a name="using-hardware-drawing-capabilities"></a>Verwenden von Hardware-Drawing Funktionen
 
--   [**Icgetinfo**](/windows/desktop/api/Vfw/nf-vfw-icgetinfo)
--   [**Icdrawbegin**](/windows/desktop/api/Vfw/ns-vfw-icdrawbegin)
--   [**ICM- \_ Zeichnungs \_ Ende**](icm-draw-end.md)
--   [**ICM-Zeichnungs Leerung \_ \_**](icm-draw-flush.md)
--   [**ICM- \_ Draw- \_ Abfrage**](icm-draw-query.md)
--   [**Icdrawvorschlags Format**](/windows/desktop/api/Vfw/nf-vfw-icdrawsuggestformat)
--   [**ICM- \_ Zeichnen \_ starten**](icm-draw-start.md)
--   [**ICM- \_ Zeichnungs \_ Ende**](icm-draw-stop.md)
--   [**ICM \_ getbufferswanted**](icm-getbufferswanted.md)
--   [**ICM- \_ Zeichnen \_**](icm-draw-realize.md)
--   [**Icdrawopen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
--   [**Icdraw**](/windows/desktop/api/Vfw/ns-vfw-icdraw)
--   [**ICM \_ Zeichnen \_ GetTime**](icm-draw-gettime.md)
--   [**ICM \_ Draw \_ setTime**](icm-draw-settime.md)
--   [**ICM- \_ Zeichnungs \_ Fenster**](icm-draw-window.md)
--   [**ICM- \_ Zeichnen \_**](icm-draw-realize.md)
--   [**ICM \_ Zeichnen von \_ changepalette**](icm-draw-changepalette.md)
--   [**ICM \_ Draw \_ renderbuffer**](icm-draw-renderbuffer.md)
+-   [**ICGetInfo**](/windows/desktop/api/Vfw/nf-vfw-icgetinfo)
+-   [**ICDRAWBEGIN**](/windows/desktop/api/Vfw/ns-vfw-icdrawbegin)
+-   [**\_ICM DRAW \_ END**](icm-draw-end.md)
+-   [**\_ICM DRAW \_ FLUSH**](icm-draw-flush.md)
+-   [**\_ICM DRAW \_ QUERY**](icm-draw-query.md)
+-   [**ICDrawSuggestFormat**](/windows/desktop/api/Vfw/nf-vfw-icdrawsuggestformat)
+-   [**\_ICM DRAW \_ START**](icm-draw-start.md)
+-   [**\_ICM DRAW \_ STOP**](icm-draw-stop.md)
+-   [**\_ICM GETBUFFERSWANTED**](icm-getbufferswanted.md)
+-   [**\_ICM DRAW \_ REALIZE**](icm-draw-realize.md)
+-   [**ICDrawOpen**](/windows/desktop/api/Vfw/nf-vfw-icdrawopen)
+-   [**ICDRAW**](/windows/desktop/api/Vfw/ns-vfw-icdraw)
+-   [**\_ICM DRAW \_ GETTIME**](icm-draw-gettime.md)
+-   [**\_ICM DRAW \_ SETTIME**](icm-draw-settime.md)
+-   [**\_ICM ZEICHNEN \_ DES FENSTERS**](icm-draw-window.md)
+-   [**\_ICM DRAW \_ REALIZE**](icm-draw-realize.md)
+-   [**\_ICM DRAW \_ CHANGEPALETTE**](icm-draw-changepalette.md)
+-   [**\_ICM DRAW \_ RENDERBUFFER**](icm-draw-renderbuffer.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -130,9 +130,9 @@ In diesem Abschnitt werden die Funktionen, Strukturen, Meldungen und Makros besc
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

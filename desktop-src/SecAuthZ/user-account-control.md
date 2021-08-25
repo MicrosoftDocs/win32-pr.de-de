@@ -1,43 +1,43 @@
 ---
-description: Ermöglicht Benutzern das Ausführen allgemeiner Aufgaben als nicht-Administratoren, die als Standardbenutzer bezeichnet werden, und als Administratoren, ohne dass Benutzer gewechselt, sich abmelden oder Ausführen als verwendet werden müssen.
+description: Ermöglicht Es Benutzern, allgemeine Aufgaben als Nichtadministratoren, als Standardbenutzer bezeichnet, und als Administratoren auszuführen, ohne Benutzer wechseln, sich abmelden oder Ausführen als verwenden zu müssen.
 ms.assetid: 8a7ba726-c2a6-4b7b-b664-3c6fcfbfb221
 title: Benutzerkontensteuerung (Autorisierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be7f3cd8f31dda8f1b15145bc4003fc9ede8782c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da0092ed5d8de1c141ba4ee2ea31a498bd6954ba8401aafeb08e6a69b8d130f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960470"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906830"
 ---
 # <a name="user-account-control-authorization"></a>Benutzerkontensteuerung (Autorisierung)
 
-Mithilfe der Benutzerkontensteuerung (User Account Control, UAC) können Benutzer häufig verwendete Aufgaben als nicht Administratoren, als Standardbenutzer bezeichnet, und als Administratoren ausführen, ohne dass Benutzer gewechselt, sich abmelden oder **Ausführen als** verwendet werden müssen. Durch das Verhalten der Benutzerkontensteuerung für die Einstellung "nie Benachrichtigen" wird die UAC nicht mehr deaktiviert. Die Einstellung "nie Benachrichtigen" gibt Ihnen ein geteiltes Token und erhöht immer automatisch die erforderlichen Berechtigungen. Diese Feinheit kann dazu führen, dass Ihre APP Kompatibilitätsprobleme hat. Sie können die Benutzerkontensteuerung weiterhin mithilfe von Gruppenrichtlinien oder manuell durch Festlegen des Registrierungsschlüssels deaktivieren.
+Mit der Benutzerkontensteuerung (User Account Control, UAC) können Benutzer allgemeine Aufgaben als Nichtadministratoren, als Standardbenutzer und als Administratoren ausführen, ohne benutzerwechseln, abmelden oder ausführen als verwenden **zu müssen.** Das Verhalten der UAC für die Einstellung "Nie benachrichtigen" deaktiviert die UAC nicht mehr. Mit der Einstellung "Nie benachrichtigen" erhalten Sie ein geteiltes Token und erhöhen immer automatisch die erforderlichen Berechtigungen. Diese Feinheiten können dazu führen, dass Ihre App Kompatibilitätsprobleme hat. Sie können die UAC weiterhin deaktivieren, indem Sie Gruppenrichtlinien verwenden oder den Registrierungsschlüssel manuell festlegen.
 
-**Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Durch die Einstellung "nie Benachrichtigen" wird die UAC deaktiviert.
+**Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Die Einstellung "Nie benachrichtigen" deaktiviert die UAC.
 
-Wenn Sie z. b. die folgenden Schritte ausführen, um die Einstellung "nie Benachrichtigen" zu ändern, erhalten Sie unterschiedliche Ergebnisse, wenn Sie versuchen, eine Datei in einem Ordner zu erstellen, für den erhöhte Rechte erforderlich sind. Das Verhalten von Windows 8 besteht darin, den Zugriff zu verweigern. Mit dem Windows 7-Verhalten können Sie die File.txt Datei erstellen.
+Wenn Sie beispielsweise die folgenden Schritte ausführen, um die Einstellung "Nie benachrichtigen" zu ändern, erhalten Sie unterschiedliche Ergebnisse, wenn Sie versuchen, eine Datei in einem Ordner zu erstellen, der erhöhte Rechte erfordert. Das Windows 8 besteht im Verweigern des Zugriffs. Mit Windows 7-Verhalten können Sie die File.txt erstellen.
 
-1.  Klicken oder tippen Sie auf **Start**. Geben Sie im Suchfeld "Benutzerkonten Steuerungseinstellungen ändern" ein.
-2.  Klicken oder tippen Sie auf **Einstellungen der Benutzerkontensteuerung ändern** , um Sie zu öffnen.
-3.  Verschieben Sie den Schieberegler auf **nie Benachrichtigen**.
-4.  Klicken oder tippen Sie auf **OK**.
+1.  Klicken oder tippen Sie **auf Starten.** Geben Sie im Suchfeld "Einstellungen der Benutzerkontensteuerung ändern" ein.
+2.  Klicken oder tippen **Sie auf Einstellungen der Benutzerkontensteuerung ändern,** um sie zu öffnen.
+3.  Verschieben Sie den Schieberegler auf **Nie benachrichtigen.**
+4.  Klicken oder tippen Sie **auf OK.**
 5.  Starten Sie den Computer neu.
-6.  Klicken oder tippen Sie auf **Start** und dann auf **Ausführen**. Geben Sie im Feld **Öffnen** den Namen "Cmd.exe" ein. Beachten Sie, dass der Titel des Fensters nicht die Zeichenfolge "Administrator" enthält.
-7.  Geben Sie "Echo >% windir% \\ system32 \\File.txt" ein.
+6.  Klicken oder tippen **Sie auf Starten** und dann auf **Ausführen.** Geben Sie **im** Feld Öffnen den Text "Cmd.exe" ein. Beachten Sie, dass der Titel des Fensters nicht die Zeichenfolge "Administrator" enthält.
+7.  Geben Sie "echo > %windir% \\ system32 \\File.txt" ein.
 
-UAC wurde in Windows Server 2008 und Windows Vista hinzugefügt. Ein Standardbenutzer Konto ist mit einem Benutzerkonto in Windows XP Synonym. Benutzerkonten, die Mitglieder der lokalen Administrator Gruppe sind, führen die meisten Anwendungen als Standardbenutzer aus.
+UAC wurde in Windows Server 2008 und Windows Vista hinzugefügt. Ein Standardbenutzerkonto ist synonym mit einem Benutzerkonto in Windows XP. Benutzerkonten, die Mitglieder der lokalen Administratorgruppe sind, führen die meisten Anwendungen als Standardbenutzer aus.
 
-Weitere Informationen zu UAC finden Sie in den folgenden Themen.
+Informationen zur UAC finden Sie in den folgenden Themen.
 
 
 
 | Thema                                                                                                                                        | BESCHREIBUNG                                                                                                                                   |
 |----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [Richtlinien für die Benutzerkontensteuerung in der Benutzeroberflächen Entwicklung](https://msdn.microsoft.com/library/aa511445(l=en-us,v=MSDN.10).aspx)<br/> | Allgemeine Informationen zu UAC.<br/>                                                                                                     |
-| [Entwickeln von Anwendungen, für die Administrator Rechte erforderlich sind](developing-applications-that-require-administrator-privilege.md)<br/>  | Modelle zum Entwickeln von Anwendungen, die Vorgänge ausführen, für die Administrator Berechtigungen erforderlich sind, die jedoch als Standardbenutzer ausgeführt werden.<br/> |
-| [Autorisierungs Verweis](authorization-reference.md)<br/>                                                                            | Ausführliche Informationen zu Autorisierungs Funktionen, Schnittstellen, Strukturen und anderen Programmier Elementen.<br/>                        |
+| [Richtlinien für die Benutzerkontensteuerung in der Benutzeroberflächenentwicklung](https://msdn.microsoft.com/library/aa511445(l=en-us,v=MSDN.10).aspx)<br/> | Allgemeine Informationen zur UAC.<br/>                                                                                                     |
+| [Entwickeln von Anwendungen, die Administratorrechte erfordern](developing-applications-that-require-administrator-privilege.md)<br/>  | Modelle für die Entwicklung von Anwendungen, die Vorgänge ausführen, die Administratorrechte erfordern, aber als Standardbenutzer ausgeführt werden.<br/> |
+| [Autorisierungsreferenz](authorization-reference.md)<br/>                                                                            | Ausführliche Informationen zu Autorisierungsfunktionen, Schnittstellen, Strukturen und anderen Programmierelementen.<br/>                        |
 
 
 

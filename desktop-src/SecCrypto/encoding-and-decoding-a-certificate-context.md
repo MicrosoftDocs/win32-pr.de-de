@@ -1,41 +1,41 @@
 ---
-description: Codieren und Decodieren eines Zertifikat Kontexts mithilfe von CryptoAPI.
+description: Codieren und Decodieren eines Zertifikatkontexts mit cryptoAPI.
 ms.assetid: 149d1097-5f50-40ba-84f1-b815f54ba33d
-title: Codieren und Decodieren eines Zertifikat Kontexts
+title: Codieren und Decodieren eines Zertifikatkontexts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4168d15ad8db5d4711a18f2042106e7d6d46010
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82f640e12034ebf4ec84e0e71013197f043453b62e1102018dcfe9ea887d6ada
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214946"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874888"
 ---
-# <a name="encoding-and-decoding-a-certificate-context"></a>Codieren und Decodieren eines Zertifikat Kontexts
+# <a name="encoding-and-decoding-a-certificate-context"></a>Codieren und Decodieren eines Zertifikatkontexts
 
-[*CryptoAPI*](../secgloss/c-gly.md) unterstützt das Codieren und Decodieren von [*Zertifikaten*](../secgloss/c-gly.md). CryptoAPI bietet ein umfangreiches, flexibles System von Funktionen und C-Strukturen, die die Codierung und Decodierung auf verschiedene Weise ermöglichen. CryptoAPI unterstützt die standardmäßige [*X. 509*](../secgloss/x-gly.md) -Zertifikat Struktur und die standardmäßige [*abstrakte Syntax Notation One*](../secgloss/a-gly.md) (ASN. 1) Encoding, um die Interoperabilität mit anderen Systemen zu ermöglichen.
+[*CryptoAPI*](../secgloss/c-gly.md) unterstützt die Codierung und Decodierung von [*Zertifikaten.*](../secgloss/c-gly.md) CryptoAPI umfasst ein umfassendes, flexibles System von Funktionen und C-Strukturen, die die Codierung und Decodierung auf verschiedene Weise ermöglichen. CryptoAPI unterstützt die standardmäßige [*X.509-Zertifikatstruktur*](../secgloss/x-gly.md) und die standardmäßige ASN.1-Codierung [*(Abstract Syntax Notation One),*](../secgloss/a-gly.md) um Interoperabilität mit anderen Systemen bereitzustellen.
 
-Eine Übersicht über codierte Daten finden Sie unter [codierte und decodierte Daten](encoded-and-decoded-data.md).
+Eine Übersicht über codierte Daten finden Sie unter [Codierte und decodierte Daten.](encoded-and-decoded-data.md)
 
-## <a name="certificate-contexts"></a>Zertifikat Kontexte
+## <a name="certificate-contexts"></a>Zertifikatkontexte
 
-Ein [*Zertifikat Kontext*](../secgloss/c-gly.md), [**CERT \_ context**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context), ist eine C-Struktur, die ein codiertes Element, ein Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md), einen Zeiger auf das ursprünglich codierte [*zertifikatblob*](../secgloss/c-gly.md)und einen Zeiger auf eine [**CERT \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) C-Struktur enthält.
+Ein [*Zertifikatkontext*](../secgloss/c-gly.md), [**CERT \_ CONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context), ist eine C-Struktur, die einen codierten Member, ein Handle für einen [*Zertifikatspeicher,*](../secgloss/c-gly.md)einen Zeiger auf das ursprüngliche codierte Zertifikat-BLOB und einen Zeiger auf eine [**CERT \_ INFO**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) [*C-Struktur*](../secgloss/c-gly.md)enthält.
 
-Die [**CERT \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) -Struktur ist das Herzstück des Zertifikats. Sie enthält in direkter Form und in verschlüsselter Form alle grundlegenden Informationen im Zertifikat. Die folgende Abbildung zeigt die **CERT \_ Info** -Struktur, deren codierte Member als schattiert angezeigt werden.
+Die [**CERT \_ INFO-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) ist das Kernstück des Zertifikats. Sie enthält alle grundlegenden Informationen im Zertifikat in direkter Form und in codierter Form. Die folgende Abbildung zeigt die **CERT \_ INFO-Struktur** mit allen codierten Membern, die als schattiert angezeigt werden.
 
-![CERT \- Info-Struktur](images/certinf2.png)
+![Struktur der \- Zertifikatinformationen](images/certinf2.png)
 
-Die Elemente **IssuerUniqueID** und **subjetuniqueid** sind Teil der [*X. 509*](../secgloss/x-gly.md) Version 2-Zertifikat Implementierung, werden jedoch selten verwendet. Zertifikat Erweiterungen in Version 3 ersetzen die Funktionalität dieser Member.
+Die Member **IssuerUniqueID** und **SubjectUniqueID** sind Teil der [*X.509*](../secgloss/x-gly.md) Version 2-Zertifikatimplementierungen, werden aber selten verwendet. Zertifikaterweiterungen in Version 3 ersetzen die Funktionalität dieser Member.
 
-Wenn die Informationen, die im codierten (schattierten) Element **Aussteller** und Antragsteller enthalten sind, **erforderlich sind,** müssen diese Member decodiert werden. Verwenden Sie [**cryptdecodeobject**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecodeobject) , um diese Member zu decodieren. Die folgende Abbildung zeigt den Prozess der Decodierung eines dieser Member.
+Wenn die in den codierten (schattierten) Membern **Issuer** und **Subject** enthaltenen Informationen benötigt werden, müssen diese Member decodiert werden. Verwenden Sie [**CryptDecodeObject,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecodeobject) um diese Member zu decodieren. Die folgende Abbildung zeigt den Prozess der Decodierung eines dieser Member.
 
 ![Decodieren mit cryptdecodeobject](images/infoflow.png)
 
-Im veranschaulichten Fall erstellt die [**cryptdecodeobject**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecodeobject) -Funktion eine [**CERT \_ Name \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_name_info) -Struktur, ein Array von [**CERT \_ RDN**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_rdn) -Strukturen, ein entsprechendes Array von [**\_ RDN-CERT \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_rdn_attr) -Strukturen und eine Zeichenfolge, die den Namen enthält. Die Inhalte der Zeichenfolge werden von Mitgliedern der " **CERT \_ RDN \_ attr** "-Struktur bestimmt. Wenn der **pszobjid** -Member z. b. 2.5.4.3 ist, enthält die Zeichenfolge einen allgemeinen Namen. Wenn es 2.5.4.10 ist, würde die Zeichenfolge einen Organisationsnamen enthalten. Eine Liste der [*Objekt*](../secgloss/o-gly.md) -IDs (OIDs) finden Sie unter **CERT \_ RDN \_ attr**.
+Im dargestellten Fall erstellt die [**CryptDecodeObject-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecodeobject) eine [**CERT \_ NAME \_ INFO-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_name_info) ein Array von [**CERT \_ RDN-Strukturen,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_rdn) ein entsprechendes Array von [**CERT \_ RDN \_ ATTR-Strukturen**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_rdn_attr) und eine Zeichenfolge, die den Namen enthält. Member der **CERT \_ RDN \_ ATTR-Struktur** bestimmen den Inhalt der Zeichenfolge. Wenn der **pszObjId-Member** beispielsweise 2.5.4.3 ist, enthält die Zeichenfolge einen allgemeinen Namen. Wenn es 2.5.4.10 ist, enthält die Zeichenfolge einen Organisationsnamen. Eine Liste dieser [*Objektbezeichner*](../secgloss/o-gly.md) (OIDs) finden Sie unter **CERT \_ RDN \_ ATTR**.
 
-Der **dwvaluetype** -Member enthält Informationen zum Typ der Zeichenfolge. Wenn es sich um \_ eine druckbare "CERT RDN"-Zeichen \_ \_ Folge handelt, enthält das Wertmember eine Zeichenfolge mit Byte Breite und null terminierten Zeichen Wenn es sich um \_ eine Unicode-RDN-Unicode-Zeichenfolge handelt \_ \_ , ist die Zeichenfolge eine Zeichenfolge mit doppelter Breite (Wort Breite).
+Der **dwValueType-Member** enthält Informationen zum Typ der Zeichenfolge. Wenn es sich um CERT \_ RDN \_ PRINTABLE \_ STRING handelt, enthält der Wertmember eine Zeichenfolge mit Bytebreite und 0 (null). Wenn es sich um CERT \_ RDN UNICODE STRING handelt, ist die Zeichenfolge eine Zeichenfolge mit \_ \_ doppelter Breite (Wortgröße).
 
-Einen ausführlichen Prozess zum Codieren und Decodieren von Zertifikaten finden Sie unter [Codieren einer Zertifikat \_ Informationsstruktur und decodieren](encoding-a-cert-info-structure.md) [einer Zertifikat \_ Informationsstruktur](decoding-a-cert-info-structure.md).
+Einen ausführlichen Prozess zum Codieren und Decodieren von Zertifikaten finden Sie unter [Codieren einer CERT \_ INFO-Struktur](encoding-a-cert-info-structure.md) und [Decodieren einer CERT \_ INFO-Struktur.](decoding-a-cert-info-structure.md)
 
  
 

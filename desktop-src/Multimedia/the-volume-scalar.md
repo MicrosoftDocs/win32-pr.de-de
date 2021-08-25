@@ -1,34 +1,34 @@
 ---
-title: Volumeskalar
-description: Volumeskalar
+title: Der Volumeskalar
+description: Der Volumeskalar
 ms.assetid: a9fe2c35-9109-4697-9ffa-a31debbe72c8
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Volume skalare
-- MIDI (Digital Instrumentation Digital Interface), volumeskalar
-- MIDI-Mapper, volumeskalar
-- volumeskalar
-- MIDI-Mapper, Anpassen von Ausgabe Ebenen
-- Anpassen von Ausgabe Ebenen
+- Instrument Digital Interface (KEYBOARD), Volumenskalar
+- KEYBOARD (Keyboard Instrument Digital Interface), Volumenskalar
+- MAPPer, Volumeskalar
+- Volumeskalar
+- MAPPer, Anpassen von Ausgabeebenen
+- Anpassen von Ausgabeebenen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d39566a10ca909030b60ff197f009b6afe05ce51
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a7710e8e3ceb8079f04ac97bfcce8c91c6c74aa60452c220166e358a87939848
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804945"
 ---
-# <a name="the-volume-scalar"></a>Volumeskalar
+# <a name="the-volume-scalar"></a>Der Volumeskalar
 
-Der Skalarwert des Volumes besteht darin, Anpassungen zwischen den relativen Ausgabe Ebenen verschiedener Patches in einem Synthesizer zuzulassen. Wenn z. b. der Bass-Patch in einem Synthesizer im Vergleich zum Klavier Patch zu hoch ist, können Sie die Setup Zuordnung ändern, um das Bass Volume nach unten oder das Klavier Volume zu skalieren.
+Der Zweck des Volumeskalars besteht im Zulassen von Anpassungen zwischen den relativen Ausgabeebenen verschiedener Patches auf einem Synthesizer. Wenn das Patchen eines Synthetizers beispielsweise im Vergleich zu seinem Patch zu laut ist, können Sie die Setupzuordnung ändern, um das Volume der Skala herunter- oder hochskalieren zu können.
 
-Der volumeskalar gibt einen Prozentwert an, mit dem alle Nachrichten des MIDI-Haupt volumecontrollers geändert werden, die einer zugeordneten Programm Änderungs Nachricht folgen. Wenn der skalare volumewert beispielsweise 50% beträgt, ändert der MIDI-Mapper die Nachrichten des MIDI-Haupt volumecontrollers, wie in der folgenden Abbildung dargestellt.
+Der Volumeskalar gibt einen Prozentwert für das Ändern aller NACHRICHTEN des HAUPT-Volumecontrollers an, die auf eine zugeordnete Programmänderungsmeldung folgen. Wenn der Volumeskalarwert z. B. 50 % beträgt, ändert der MAPPer DEST-Mappers DIE Haupt-Volumecontroller-Nachrichten, wie in der folgenden Abbildung dargestellt.
 
-![Bild von MIDI-Mapper](images/mmap-a04.gif)
+![Abbildung des Mappers "mapper"](images/mmap-a04.gif)
 
- 
+ 
 
- 
+ 
 
 
 

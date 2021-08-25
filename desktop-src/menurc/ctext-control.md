@@ -1,9 +1,9 @@
 ---
 title: CTEXT-Steuerelement
-description: Definiert ein zentriertes Text Steuerelement.
+description: Definiert ein zentriertes Textsteuerfeld.
 ms.assetid: 11f42d25-8fe1-4a8b-a5c5-c8cb47cc8c73
 keywords:
-- CTEXT-Steuerelement Menüs und andere Ressourcen
+- CTEXT-Steuerelementmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41c12b6c1da5d5bd5c8ce59a01e21b05baf77503
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a6b220448fcaa6cbbbb6b01c605a9b5fd6e03f8dc6a60a0e409f6f275d9b74b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826000"
 ---
 # <a name="ctext-control"></a>CTEXT-Steuerelement
 
-Definiert ein zentriertes Text Steuerelement. Das-Steuerelement ist ein einfaches Rechteck, das den angegebenen Text anzeigt, der im Rechteck zentriert ist. Der Text wird formatiert, bevor er angezeigt wird. Wörter, die über das Ende einer Linie hinaus erweitert werden, werden automatisch an den Anfang der nächsten Zeile umschließt. Wörter, die länger als die Breite des Steuer Elements sind, werden abgeschnitten.
+Definiert ein zentriertes Textsteuerfeld. Das -Steuerelement ist ein einfaches Rechteck, das den angegebenen Text im Rechteck zentriert darstellt. Der Text wird formatiert, bevor er angezeigt wird. Wörter, die sich über das Ende einer Zeile erstrecken würden, werden automatisch bis zum Anfang der nächsten Zeile umschlossen. Wörter, die länger als die Breite des Steuerelements sind, werden abgeschnitten.
 
-Die [**LTEXT**](ltext-control.md) -Anweisung, die nur in einer Rep-Anweisung verwendet werden kann, definiert den Text, den Bezeichner, die Dimensionen und die Attribute des Steuer Elements.
+Die [**LTEXT-Anweisung,**](ltext-control.md) die nur in einer rep-Anweisung verwendet werden kann, definiert den Text, bezeichner, Dimensionen und Attribute des Steuerelements.
 
 ``` syntax
 CTEXT text, id, x, y, width, height [, style [, extended-style]]
@@ -34,45 +34,45 @@ CTEXT text, id, x, y, width, height [, style [, extended-style]]
 <span id="text"></span><span id="TEXT"></span>*Text*
 </dt> <dd>
 
-Text, der im rechteckigen Bereich des-Steuer Elements zentriert werden soll.
+Text, der im rechteckigen Bereich des Steuerelements zentriert werden soll.
 
 </dd> <dt>
 
-<span id="style"></span><span id="STYLE"></span>*Vorbild*
+<span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelement Stile. Bei diesem Wert kann es sich um eine beliebige Kombination der folgenden Stile handeln: **SS \_ Center**, **WS \_ Tabstopps** und **WS \_ Group**.
+Steuerelementstile. Dieser Wert kann eine beliebige Kombination der folgenden Stile sein: **SS \_ CENTER,** **WS \_ TABSTOP** und **WS \_ GROUP**.
 
 Wenn Sie keinen Stil angeben, ist der Standardstil `SS_CENTER | WS_GROUP` .
 
 </dd> </dl>
 
-Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter allgemeine [Steuerelement Parameter](common-control-parameters.md).
+Weitere Informationen zur allgemeinen Syntax einer Steuerelement-Anweisung finden Sie unter [Allgemeine Steuerelementparameter](common-control-parameters.md).
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird ein zentriert-Text-Steuerelement mit der Bezeichnung "filename" definiert:
+In diesem Beispiel wird ein zentriertes Text-Steuerelement mit der Bezeichnung Dateiname definiert:
 
 ``` syntax
 CTEXT "Filename", 101, 10, 10, 100, 100 
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Steuerelement**](control-control.md)
+[**Steuerung**](control-control.md)
 </dt> <dt>
 
-[Steuerelemente bearbeiten](../controls/about-edit-controls.md)
+[Bearbeiten von Steuerelementen](../controls/about-edit-controls.md)
 </dt> <dt>
 
-[**LTEXT**](ltext-control.md)
+[**Ltext**](ltext-control.md)
 </dt> <dt>
 
 [**Rtext**](rtext-control.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

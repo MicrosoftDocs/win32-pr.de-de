@@ -1,11 +1,11 @@
 ---
-title: Kostenlose Methode für imemoryzucator
-description: Die Free-Methode gibt den von der Zuordnungs Methode belegten Arbeitsspeicher frei.
+title: IMemoryAllocator Free-Methode
+description: Die Free-Methode gibt den von der Allocate-Methode belegten Arbeitsspeicher frei.
 ms.assetid: 41f81cba-4431-4ff7-ac84-8ff5bea71b65
 keywords:
-- Strukturierter Speicher für die kostenlose Methode
-- Kostenlose strukturierte Speichermethode, imemoryzuordnerschnittstelle
-- Strukturierte Speicherung der imemoryzuordcator-Schnittstelle, kostenlose Methode
+- Kostenlose strukturierte Storage
+- Free-Methode Structured Storage , IMemoryAllocator-Schnittstelle
+- IMemoryAllocator-Schnittstelle Structured Storage , Free-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c07731f60aba7d847c79467b2b2c166b363d807
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f78690a37b5500f5e540cf4c2ef516b7c3ea89c219ba475dc5e5ac030f775d81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906170"
 ---
-# <a name="imemoryallocatorfree-method"></a>Imemoryzuweisung:: Free-Methode
+# <a name="imemoryallocatorfree-method"></a>IMemoryAllocator::Free-Methode
 
-Die **Free** [**-Methode gibt**](imemoryallocator-allocate.md) den von der Zuordnungs Methode belegten Arbeitsspeicher frei.
+Die **Free-Methode** gibt den von der [**Allocate-Methode**](imemoryallocator-allocate.md) belegten Arbeitsspeicher frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ virtual void Free(
 
 <dl> <dt>
 
-*teuren* 
+*Pv* 
 </dt> <dd>
 
-Zeiger auf den frei zufügenden Arbeitsspeicher.
+Zeiger auf den freizugebenden Arbeitsspeicher.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Zeiger auf den frei zufügenden Arbeitsspeicher.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Bibliothek<br/>                  | <dl> <dt>Ole32. lib</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Ole32.lib</dt> </dl> |
 
 
 

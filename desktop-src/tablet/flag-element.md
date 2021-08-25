@@ -4,12 +4,12 @@ ms.assetid: 612f8814-ab3c-4a3e-9791-525788d4cc72
 title: Flag-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 46508f9821379fbedb3291ba45d16dbdd0fb316f
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: df40874178ba998ae9c864036b7befbf85179680de92cb68595f394e370e4404
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119774080"
 ---
 # <a name="flag-element"></a>Flag-Element
 
@@ -35,10 +35,10 @@ Keine
 
 
 
-| attribute  | Typ                      | Erforderlich | BESCHREIBUNG                                                                             | Mögliche Werte           |
+| attribute  | Typ                      | Erforderlich | Beschreibung                                                                             | Mögliche Werte           |
 |------------|---------------------------|----------|-----------------------------------------------------------------------------------------|---------------------------|
 | **Left**   | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum äußersten linken Punkt im Begrenzungsfeld für das Element. | Eine beliebige ganze Zahl.              |
-| **Top**    | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum obersten Punkt im begrenzungsfeld für das Element.  | Eine beliebige ganze Zahl.              |
+| **Top**    | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum obersten Punkt im Begrenzungsfeld für das Element.  | Eine beliebige ganze Zahl.              |
 | **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.                                          | Eine beliebige nicht negative ganze Zahl. |
 | **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.                                         | Eine beliebige nicht negative ganze Zahl. |
 

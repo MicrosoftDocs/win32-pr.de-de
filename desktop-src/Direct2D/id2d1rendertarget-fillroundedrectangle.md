@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget fillroundedrechteck-Methoden (D2d1. h)
+title: ID2D1RenderTarget FillRoundedRectangle-Methoden (D2d1.h)
 description: Zeichnet das Innere des angegebenen abgerundeten Rechtecks.
 ms.assetid: 9c4765b0-858f-4a20-b044-0acf87a1f131
 keywords:
-- Fillroundedrechteck-Methoden Direct2D
+- FillRoundedRectangle-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 2abc39ed364de0653813aab14ee5777ccf3c4e08
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8da1a154e7ca0b0b91b23cf067b529281ffa2b96f08f1315c9e8513cb43cb2e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874095"
 ---
-# <a name="id2d1rendertargetfillroundedrectangle-methods"></a>ID2D1RenderTarget:: fillroundedrechteck-Methoden
+# <a name="id2d1rendertargetfillroundedrectangle-methods"></a>ID2D1RenderTarget::FillRoundedRectangle-Methoden
 
 Zeichnet das Innere des angegebenen abgerundeten Rechtecks.
 
@@ -29,20 +29,20 @@ Zeichnet das Innere des angegebenen abgerundeten Rechtecks.
 
 | Methode                                                                                                                                          | BESCHREIBUNG                                                         |
 |:------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------|
-| [**Fillroundecodrechteck (D2D1 \_ gerundetes \_ Rect-&, ID2D1Brush \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillroundedrectangle(constd2d1_rounded_rect__id2d1brush))  | Zeichnet das Innere des angegebenen abgerundeten Rechtecks. <br/> |
-| [**Fillroundecodrechteck (D2D1 \_ gerundetes \_ Rect \* , ID2D1Brush \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillroundedrectangle(constd2d1_rounded_rect__id2d1brush)) | Zeichnet das Innere des angegebenen abgerundeten Rechtecks.<br/>  |
+| [**FillRoundedRectangle(D2D1 \_ ROUNDED \_ RECT&,ID2D1Brush \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillroundedrectangle(constd2d1_rounded_rect__id2d1brush))  | Zeichnet das Innere des angegebenen abgerundeten Rechtecks. <br/> |
+| [**FillRoundedRectangle(D2D1 \_ ROUNDED \_ RECT , \* ID2D1Brush \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillroundedrectangle(constd2d1_rounded_rect__id2d1brush)) | Zeichnet das Innere des angegebenen abgerundeten Rechtecks.<br/>  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt keinen Fehlercode zurück, wenn ein Fehler auftritt. Um zu ermitteln, ob ein Zeichnungs Vorgang (z. b. **fillroundedrechteck**) fehlgeschlagen ist, überprüfen Sie das von den Methoden [**ID2D1RenderTarget:: EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget:: Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegebene Ergebnis.
+Diese Methode gibt bei einem Fehler keinen Fehlercode zurück. Überprüfen Sie das ergebnis, das von den Methoden [**ID2D1RenderTarget::EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget::EndDraw oder ID2D1RenderTarget::Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegeben wird, um zu bestimmen, ob bei einem Zeichnungsvorgang (z. B. **FillRoundedRectangle)** ein Fehler aufgetreten ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden die Methoden [**drawroundedrechteck**](id2d1rendertarget-drawroundedrectangle.md) und **fillroundedrechteck** verwendet, um ein abgerundetes Rechteck zu gliedern und auszufüllen. In diesem Beispiel wird die in der folgenden Abbildung gezeigte Ausgabe erzeugt.
+Im folgenden Beispiel werden die [**Methoden DrawRoundedRectangle**](id2d1rendertarget-drawroundedrectangle.md) und **FillRoundedRectangle** verwendet, um ein abgerundetes Rechteck zu umranden und zu füllen. In diesem Beispiel wird die in der folgenden Abbildung gezeigte Ausgabe erzeugt.
 
-![Abbildung von vier gerundeten Rechtecke mit unterschiedlichen Strich Formaten und Füllungen](images/drawroundedrectangle-scr.png)
+![Abbildung von vier abgerundeten Rechtecke mit unterschiedlichen Strichstilen und Füllungen](images/drawroundedrectangle-scr.png)
 
 
 ```C++
@@ -122,8 +122,8 @@ HRESULT DrawAndFillRoundedRectangleExample::OnRender()
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
@@ -135,10 +135,10 @@ HRESULT DrawAndFillRoundedRectangleExample::OnRender()
 [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)
 </dt> <dt>
 
-[Zeichnen und Ausfüllen einer einfachen Form](how-to-draw-an-ellipse.md)
+[Zeichnen und Füllen einer einfachen Form](how-to-draw-an-ellipse.md)
 </dt> <dt>
 
-[**D2D1:: roundecodrect**](/windows/win32/api/d2d1/nf-d2d1-id2d1roundedrectanglegeometry-getroundedrect)
+[**D2D1::RoundedRect**](/windows/win32/api/d2d1/nf-d2d1-id2d1roundedrectanglegeometry-getroundedrect)
 </dt> </dl>
 
 �

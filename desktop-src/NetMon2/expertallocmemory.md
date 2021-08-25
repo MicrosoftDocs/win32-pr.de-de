@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "ExpertAllocMemory" ordnet dem Experten Arbeitsspeicher zu.
+description: Die ExpertAllocMemory-Funktion weist dem Experten Arbeitsspeicher zu.
 ms.assetid: 9ada5d3f-5f1d-4d3a-b79a-d51e021240f6
-title: Funktion "ExpertAllocMemory" (Netmon. h)
+title: ExpertAllocMemory-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: b30aba5e2b448df141d0c82e6ec5a2b0d9b3303f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd932a5330baf687d5578bac4e4bfac77ad4f5bad0560263ab7f1e8832e61fe6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119890850"
 ---
-# <a name="expertallocmemory-function"></a>Funktion "ExpertAllocMemory"
+# <a name="expertallocmemory-function"></a>ExpertAllocMemory-Funktion
 
-Die Funktion " **ExpertAllocMemory** " ordnet dem Experten Arbeitsspeicher zu.
+Die **ExpertAllocMemory-Funktion** weist dem Experten Arbeitsspeicher zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ LPVOID WINAPI ExpertAllocMemory(
 
 <dl> <dt>
 
-*hexpertkey* 
+*hExpertKey* 
 </dt> <dd>
 
-Eindeutige expertenkennung. Netzwerkmonitor übergibt *hexpertkey* an den Experten, wenn die Funktion [Run](run.md) aufgerufen wird.
+Eindeutiger Expertenbezeichner. Netzwerkmonitor übergibt *hExpertKey* an den Experten, wenn er die [Run-Funktion](run.md) aufruft.
 
 </dd> <dt>
 
-*nbytes* \[ in\]
+*nBytes* \[ In\]
 </dt> <dd>
 
-Zugewiesener Arbeitsspeicher (gemessen in Bytes).
+Zugeordneter Arbeitsspeicher, gemessen in Bytes.
 
 </dd> <dt>
 
-*perror* \[ vorgenommen\]
+*pError* \[ out\]
 </dt> <dd>
 
-Fehler Indikator. Wenn die Funktion fehlschlägt, enthält der *nbytes* -Parameter den Fehlercode. Wenn der Fehlercode nmerr \_ -Experte \_ beendet ist, muss der Experte eine Bereinigung durchsetzen und sofort zurückkehren.
+Fehlerindikator. Wenn die Funktion fehlschlägt, enthält der *nBytes-Parameter* den Fehlercode. Wenn der Fehlercode NMERR \_ EXPERT \_ TERMINATE lautet, muss der Experte bereinigen und sofort zurückkehren.
 
 </dd> </dl>
 
@@ -66,11 +66,11 @@ Fehler Indikator. Wenn die Funktion fehlschlägt, enthält der *nbytes* -Paramet
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den zugeordneten Arbeitsspeicher.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**, und *perror* bietet einen Fehlercode, der den Grund für den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL,** und *pError* stellt einen Fehlercode bereit, der den Grund für den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegungs Funktionen (einschließlich " [expertenspeicher](expertreallocmemory.md)") für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit einen Fehler verursacht, ermöglicht die Verwendung dieser Funktionen Netzwerkmonitor, den zugeordneten Arbeitsspeicher freizugeben.
+Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicherbelegungsfunktionen (einschließlich [ExpertReallocMemory)](expertreallocmemory.md)für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit ausfällt, können Netzwerkmonitor mithilfe dieser Funktionen den zugewiesenen Arbeitsspeicher freigeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,8 +80,8 @@ Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

@@ -1,51 +1,51 @@
 ---
 description: Die folgenden Strukturen werden mit Schriftarten und Text verwendet.
 ms.assetid: 93726d5c-d4ed-4681-bf45-cb899f195b5d
-title: Schriftart und Text Strukturen
+title: Schriftart- und Textstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4ad9454f40471b9483c4e29dc12c9905f552da6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e512b13eefab160f51f4e3844681580dd44d79ddd548bdca38a98bd4ce60ab2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994054"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889250"
 ---
-# <a name="font-and-text-structures"></a>Schriftart und Text Strukturen
+# <a name="font-and-text-structures"></a>Schriftart- und Textstrukturen
 
 Die folgenden Strukturen werden mit Schriftarten und Text verwendet.
 
 <dl>
 
-[**Sender**](/windows/desktop/api/Wingdi/ns-wingdi-abc)  
+[**ABC**](/windows/desktop/api/Wingdi/ns-wingdi-abc)  
 [**ABCFLOAT**](/windows/desktop/api/Wingdi/ns-wingdi-abcfloat)  
-[**Axeslist**](/windows/win32/api/wingdi/ns-wingdi-axeslista)  
+[**AXESLIST**](/windows/win32/api/wingdi/ns-wingdi-axeslista)  
 [**AXISINFO**](/windows/win32/api/wingdi/ns-wingdi-axisinfoa)  
-[**Design Vector**](/windows/win32/api/wingdi/ns-wingdi-designvector)  
-[**Drawtextparametriams**](/windows/win32/api/winuser/ns-winuser-drawtextparams)  
-[**Enumlogfont**](/windows/win32/api/wingdi/ns-wingdi-enumlogfonta)  
-[**Enumlogfontex**](/windows/win32/api/wingdi/ns-wingdi-enumlogfontexa)  
-[**Enumlogfontexdv**](/windows/win32/api/wingdi/ns-wingdi-enumlogfontexdva)  
-[**Enumtextmetrik**](/windows/win32/api/wingdi/ns-wingdi-enumtextmetrica)  
-[**Extlogfont**](/windows/win32/api/wingdi/ns-wingdi-extlogfonta)  
-[**Festen**](/windows/desktop/api/Wingdi/ns-wingdi-fixed)  
-[**GCP- \_ Ergebnisse**](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsa)  
-[**GlyphMetrics**](/windows/desktop/api/Wingdi/ns-wingdi-glyphmetrics)  
-[**Glyphset**](/windows/win32/api/wingdi/ns-wingdi-glyphset)  
-[**Kerningpair**](/windows/win32/api/wingdi/ns-wingdi-kerningpair)  
-[**"LogFont"**](/windows/win32/api/wingdi/ns-wingdi-logfonta)  
+[**DESIGNVECTOR**](/windows/win32/api/wingdi/ns-wingdi-designvector)  
+[**DRAWTEXTPARAMS**](/windows/win32/api/winuser/ns-winuser-drawtextparams)  
+[**ENUMLOGFONT**](/windows/win32/api/wingdi/ns-wingdi-enumlogfonta)  
+[**ENUMLOGFONTEX**](/windows/win32/api/wingdi/ns-wingdi-enumlogfontexa)  
+[**ENUMLOGFONTEXDV**](/windows/win32/api/wingdi/ns-wingdi-enumlogfontexdva)  
+[**ENUMTEXTMETRIC**](/windows/win32/api/wingdi/ns-wingdi-enumtextmetrica)  
+[**EXTLOGFONT**](/windows/win32/api/wingdi/ns-wingdi-extlogfonta)  
+[**Fest**](/windows/desktop/api/Wingdi/ns-wingdi-fixed)  
+[**\_GCP-ERGEBNISSE**](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsa)  
+[**GLYPHMETRICS**](/windows/desktop/api/Wingdi/ns-wingdi-glyphmetrics)  
+[**GLYPHSET**](/windows/win32/api/wingdi/ns-wingdi-glyphset)  
+[**KERNINGPAIR**](/windows/win32/api/wingdi/ns-wingdi-kerningpair)  
+[**Logfont**](/windows/win32/api/wingdi/ns-wingdi-logfonta)  
 [**MAT2**](/windows/desktop/api/Wingdi/ns-wingdi-mat2)  
-[**Newtextmetric**](/windows/win32/api/wingdi/ns-wingdi-newtextmetrica)  
-[**Newtextmetricex**](/windows/win32/api/wingdi/ns-wingdi-newtextmetricexa)  
-[**Outlinetextmetric**](/windows/desktop/api/Wingdi/ns-wingdi-outlinetextmetrica)  
+[**NEWTEXTMETRIC**](/windows/win32/api/wingdi/ns-wingdi-newtextmetrica)  
+[**NEWTEXTMETRICEX**](/windows/win32/api/wingdi/ns-wingdi-newtextmetricexa)  
+[**OUTLINETEXTMETRIC**](/windows/desktop/api/Wingdi/ns-wingdi-outlinetextmetrica)  
 [**Panose**](/windows/win32/api/wingdi/ns-wingdi-panose)  
-[**Pointfx**](/windows/win32/api/wingdi/ns-wingdi-pointfx)  
-[**Polytext**](/windows/win32/api/wingdi/ns-wingdi-polytexta)  
-[**Status des Rasterizers \_**](/windows/desktop/api/Wingdi/ns-wingdi-rasterizer_status)  
+[**POINTFX**](/windows/win32/api/wingdi/ns-wingdi-pointfx)  
+[**POLYTEXT**](/windows/win32/api/wingdi/ns-wingdi-polytexta)  
+[**\_RASTERIZERSTATUS**](/windows/desktop/api/Wingdi/ns-wingdi-rasterizer_status)  
 [**Größe**](/previous-versions//dd145106(v=vs.85))  
-[**Textmetrik**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)  
-[**Ttpolycurve**](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve)  
-[**Ttpolygonheader**](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)  
+[**TEXTMETRIC**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)  
+[**TTPOLYCURVE**](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve)  
+[**TTPOLYGONHEADER**](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)  
 [**WCRANGE**](/windows/win32/api/wingdi/ns-wingdi-wcrange)  
 </dl>
 

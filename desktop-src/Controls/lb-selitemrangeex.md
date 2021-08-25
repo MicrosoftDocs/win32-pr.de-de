@@ -1,9 +1,9 @@
 ---
-title: LB_SELITEMRANGEEX Meldung (Winuser. h)
-description: Wählt ein oder mehrere aufeinander folgende Elemente in einem Listenfeld mit Mehrfachauswahl aus.
+title: LB_SELITEMRANGEEX Meldung (Winuser.h)
+description: Wählt mindestens ein aufeinander folgendes Element in einem Listenfeld mit mehrfacher Auswahl aus.
 ms.assetid: aac85d72-43e2-4ab0-b9ee-c7a87e21d7a1
 keywords:
-- Windows-Steuerelemente für LB_SELITEMRANGEEX Meldung
+- LB_SELITEMRANGEEX Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4aa3ca1335372b7a61c4dfcbc379c36e89ff933e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 16e3112e36a7b212c1d0968ca738472000fabbf3d26d4d94e36ea9f21d80fe57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119799440"
 ---
-# <a name="lb_selitemrangeex-message"></a>LB- \_ selitemrangeex-Nachricht
+# <a name="lb_selitemrangeex-message"></a>LB \_ SELITEMRANGEEX-Nachricht
 
-Wählt ein oder mehrere aufeinander folgende Elemente in einem Listenfeld mit Mehrfachauswahl aus.
+Wählt mindestens ein aufeinander folgendes Element in einem Listenfeld mit mehrfacher Auswahl aus.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,30 +32,30 @@ Wählt ein oder mehrere aufeinander folgende Elemente in einem Listenfeld mit Me
 *wParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index des ersten Elements an, das ausgewählt werden soll.
+Gibt den nullbasierten Index des ersten auszuwählenden Elements an.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/Windows 98/Windows Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt. Das bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld in Byte nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index des letzten Elements an, das ausgewählt werden soll.
+Gibt den nullbasierten Index des letzten auszuwählenden Elements an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein Fehler auftritt, ist der Rückgabewert lb \_ Err.
+Wenn ein Fehler auftritt, lautet der Rückgabewert LB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der *wParam* -Parameter kleiner als der *LPARAM* -Parameter ist, wird der angegebene Bereich von Elementen ausgewählt. Wenn *wParam* größer oder gleich *LPARAM* ist, wird der Bereich aus dem angegebenen Bereich von Elementen entfernt. Um nur ein Element auszuwählen, wählen Sie zwei Elemente aus, und deaktivieren Sie dann das unerwünschte Element.
+Wenn der *wParam-Parameter* kleiner als der *lParam-Parameter* ist, wird der angegebene Elementbereich ausgewählt. Wenn *wParam* größer oder gleich *lParam* ist, wird der Bereich aus dem angegebenen Elementbereich entfernt. Um nur ein Element auszuwählen, wählen Sie zwei Elemente aus, und deaktivieren Sie dann das unerwünschte Element.
 
-Verwenden Sie diese Meldung nur für Listenfelder mit Mehrfachauswahl.
+Verwenden Sie diese Meldung nur mit Listenfeldern mit mehrfacher Auswahl.
 
-Diese Meldung kann einen Bereich nur innerhalb der ersten 65.536 Elemente auswählen.
+Diese Nachricht kann einen Bereich nur innerhalb der ersten 65.536 Elemente auswählen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,23 +63,23 @@ Diese Meldung kann einen Bereich nur innerhalb der ersten 65.536 Elemente auswä
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ selitemrange**](lb-selitemrange.md)
+[**LB \_ SELITEMRANGE**](lb-selitemrange.md)
 </dt> <dt>
 
-[**LB- \_ Sekunden**](lb-setsel.md)
+[**LB \_ SETSEL**](lb-setsel.md)
 </dt> </dl>
 
  

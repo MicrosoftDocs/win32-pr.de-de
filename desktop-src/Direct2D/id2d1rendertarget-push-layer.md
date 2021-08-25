@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget pushlayer-Methoden (D2d1 \_ 1. h)
-description: Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis poplayer aufgerufen wird.
+title: ID2D1RenderTarget PushLayer-Methoden (D2d1 \_ 1.h)
+description: Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis PopLayer aufgerufen wird.
 ms.assetid: 9336662c-e94e-40ba-adbe-066d704958bc
 keywords:
-- Pushlayer-Methoden Direct2D
+- PushLayer-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 6a5609192162ae0b0c0e2af8f1b84429d8710509
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e1f4f5ddeace0144f6314ee7eae8a640e489d99c43f4e21f6e6c260fd003dd0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874030"
 ---
-# <a name="id2d1rendertargetpushlayer-methods"></a>ID2D1RenderTarget::P ushlayer-Methoden
+# <a name="id2d1rendertargetpushlayer-methods"></a>ID2D1RenderTarget::P ushLayer-Methoden
 
-Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird.
+Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,26 +29,26 @@ Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeich
 
 | Methode                                                                                                                            | BESCHREIBUNG                                                                                                                                                                     |
 |:----------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Pushlayer (D2D1 \_ Layer \_ Parameters&, ID2D1Layer \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer))  | Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird. <br/> |
-| [**Pushlayer (D2D1 \_ Layer \_ Parameters \* , ID2D1Layer \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters_id2d1layer)) | Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird. <br/> |
+| [**PushLayer(D2D1 \_ LAYER \_ PARAMETERS&,ID2D1Layer \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer))  | Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird. <br/> |
+| [**PushLayer(D2D1 \_ LAYER PARAMETERS , \_ \* ID2D1Layer \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters_id2d1layer)) | Fügt dem Renderziel die angegebene Ebene hinzu, sodass alle nachfolgenden Zeichnungsvorgänge empfangen werden, bis [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) aufgerufen wird. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mithilfe der [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) -Methode kann ein Aufrufer mit dem Umleiten des Rendering zu einer Ebene beginnen. Alle Renderingvorgänge sind in einer Ebene gültig. Der Speicherort der Ebene wird von der Welt Transformation beeinflusst, die auf dem Renderziel festgelegt ist.
+Die [**PushLayer-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) ermöglicht einem Aufrufer, mit dem Umleiten des Renderings auf eine Ebene zu beginnen. Alle Renderingvorgänge sind in einer Ebene gültig. Die Position der Ebene wird durch den weltweiten Transformationssatz auf dem Renderziel beeinflusst.
 
-Jede **pushschicht** muss über einen passenden [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) -Befehl verfügen. Wenn mehr **poplayer** -Aufrufe als **pushlayer** -Aufrufe vorhanden sind, wird das Renderziel in einen Fehlerzustand versetzt. Wenn [**Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) vor allen ausstehenden Ebenen aufgerufen wird, wird das Renderziel in einen Fehlerzustand versetzt, und es wird ein Fehler zurückgegeben. Der Fehlerzustand kann durch einen Aufrufen von [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)gelöscht werden.
+Jeder **PushLayer** muss über einen entsprechenden [**PopLayer-Aufruf**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) verfügen. Wenn mehr **PopLayer-Aufrufe** als **PushLayer-Aufrufe** vorhanden sind, wird das Renderziel in einen Fehlerzustand versetzt. Wenn [**Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) aufgerufen wird, bevor alle ausstehenden Ebenen abgelegt werden, wird das Renderziel in einen Fehlerzustand versetzt, und es wird ein Fehler zurückgegeben. Der Fehlerzustand kann durch einen Aufruf von [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)gelöscht werden.
 
-Eine bestimmte [**ID2D1Layer**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) -Ressource kann nur zu einem bestimmten Zeitpunkt aktiv sein. Anders ausgedrückt: Sie können keine [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) -Methode aufzurufen und dann sofort mit einer anderen **pushlayer** -Methode mit derselben ebenenressource folgen. Stattdessen müssen Sie die zweite **pushlayer** -Methode mit unterschiedlichen ebenenressourcen abrufen.
+Eine bestimmte [**ID2D1Layer-Ressource**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) kann nur gleichzeitig aktiv sein. Anders ausgedrückt: Sie können keine [**PushLayer-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) aufrufen und dann sofort mit einer anderen **PushLayer-Methode** mit derselben Ebenenressource folgen. Stattdessen müssen Sie die zweite **PushLayer-Methode** mit unterschiedlichen Ebenenressourcen aufrufen.
 
-Ein Beispiel finden Sie unter Gewusst [wie: Abschneiden eines Bereichs mit Ebenen](how-to-clip-with-layers.md).
+Ein Beispiel finden Sie unter [Beschneiden eines Bereichs mit Ebenen.](how-to-clip-with-layers.md)
 
-Diese Methode gibt keinen Fehlercode zurück, wenn ein Fehler auftritt. Um zu ermitteln, ob ein Zeichnungs Vorgang (z. b. **pushlayer**) fehlgeschlagen ist, überprüfen Sie das von den Methoden [**ID2D1RenderTarget:: EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget:: Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegebene Ergebnis.
+Diese Methode gibt bei einem Fehler keinen Fehlercode zurück. Überprüfen Sie das ergebnis, das von den Methoden [**ID2D1RenderTarget::EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget::Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegeben wird, um zu ermitteln, ob bei einem Zeichnungsvorgang (z. B. **PushLayer)** ein Fehler aufgetreten ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine-Ebene verwendet, um eine Bitmap an eine geometrische Maske auszuschneiden. Das komplette Beispiel finden Sie unter Gewusst [wie: Abschneiden einer geometrischen Maske](how-to-clip-with-layers.md).
+Im folgenden Beispiel wird eine Ebene verwendet, um eine Bitmap auf eine geometrische Maske zu beschneiden. Das vollständige Beispiel finden Sie unter [How to Clip to a Geometric Mask](how-to-clip-with-layers.md).
 
 
 ```C++
@@ -97,8 +97,8 @@ HRESULT DemoApp::RenderWithLayer(ID2D1RenderTarget *pRT)
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1 \_ 1. h (Include D2d1. h)</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl>                   |
+| Header<br/>  | <dl> <dt>D2d1 \_ 1.h (einschließlich D2d1.h)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl>                   |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl>                   |
 
 
@@ -110,7 +110,7 @@ HRESULT DemoApp::RenderWithLayer(ID2D1RenderTarget *pRT)
 [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)
 </dt> <dt>
 
-[Übersicht über Schichten](direct2d-layers-overview.md)
+[Übersicht über Ebenen](direct2d-layers-overview.md)
 </dt> </dl>
 
 �

@@ -1,27 +1,27 @@
 ---
-description: Ausgeben des getdevicepropvalue-Befehls
+description: Ausgeben des GetDevicePropValue-Befehls
 ms.assetid: 60294ac6-06e0-4546-bbe9-da48d250e31e
-title: Ausgeben des getdevicepropvalue-Befehls
+title: Ausgeben des GetDevicePropValue-Befehls
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5d2e5e99e2b1d51b9147fc4da2d86b4fa955907
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da87366361bbcccba182b72cfb49124692f86dc88c5a87ebbeb4d5f667451a97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839280"
 ---
-# <a name="issuing-the-getdevicepropvalue-command"></a>Ausgeben des getdevicepropvalue-Befehls
+# <a name="issuing-the-getdevicepropvalue-command"></a>Ausgeben des GetDevicePropValue-Befehls
 
-Im Beispiel in diesem Abschnitt wird der **getdevicepropvalue** -MTP-Befehl aufgerufen, um die Geräte Eigenschaft " **Akku Level** " abzurufen. (Eine ausführliche Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation](https://www.usb.org/sites/default/files/MTPv1_1.zip).)
+Im Beispiel in diesem Abschnitt wird der MTP-Befehl **GetDevicePropValue** aufgerufen, um die **BatteryLevel-Geräteeigenschaft** abzurufen. (Eine vollständige Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation.)](https://www.usb.org/sites/default/files/MTPv1_1.zip)
 
-Im Fall von **getdevicepropvalue** verwendet der Beispielcode die folgende Sequenz:
+Im Fall von **GetDevicePropValue** verwendet der Beispielcode die folgende Sequenz:
 
-1.  WPD- \_ Befehl \_ MTP \_ ext Execute- \_ \_ Befehl \_ mit \_ \_ zu \_ lesenden Daten
-2.  WPD- \_ Befehl \_ MTP \_ Ext \_ \_ Daten lesen
-3.  WPD- \_ Befehl \_ MTP \_ Ext \_ Ende \_ Daten \_ Übertragung
+1.  \_WPD-BEFEHL \_ MTP \_ EXT \_ \_ EXECUTE-BEFEHL \_ MIT ZU \_ \_ \_ LESENDE DATEN
+2.  \_WPD-BEFEHL \_ MTP \_ EXT READ \_ \_ DATA
+3.  \_WPD-BEFEHL \_ MTP \_ EXT \_ \_ \_ END-DATENÜBERTRAGUNG
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die Anwendung die Befehlssequenz initiert.
+Das folgende Codebeispiel zeigt, wie die Anwendung die Befehlssequenz initiert.
 
 
 ```
@@ -144,7 +144,7 @@ HRESULT GetBatteryLevel(IPortableDevice* pDevice, BYTE& bBatteryLevel)
 
 
 
-Das folgende Codebeispiel zeigt, wie die Anwendung die Eigenschaften Daten abruft.
+Das folgende Codebeispiel zeigt, wie die Anwendung die Eigenschaftsdaten abruft.
 
 
 ```
@@ -240,7 +240,7 @@ Das folgende Codebeispiel zeigt, wie die Anwendung die Eigenschaften Daten abruf
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie die Anwendung die Geräte Antwort an den Befehl abruft.
+Das folgende Codebeispiel zeigt, wie die Anwendung die Geräteantwort auf den Befehl abruft.
 
 
 ```

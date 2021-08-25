@@ -1,32 +1,32 @@
 ---
-description: DV in Datei erfassen
+description: Erfassen von DV in einer Datei
 ms.assetid: f7a8bcbb-a744-43c4-a226-354ae2d94df8
-title: DV in Datei erfassen
+title: Erfassen von DV in einer Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 713e49eba3016b353362c541ba31ffd6a1ae5de7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d886b964502d705f5902c17de8e6e008a11a31699de40b3089033867873fa021
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341918"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814340"
 ---
-# <a name="capture-dv-to-file"></a>DV in Datei erfassen
+# <a name="capture-dv-to-file"></a>Erfassen von DV in einer Datei
 
-In diesem Abschnitt wird beschrieben, wie Sie ein digitales Video (DV) von einer DV-Kamera oder einem VTR-Band erfassen.
+In diesem Abschnitt wird beschrieben, wie Digitales Video (DV) von einer DV-Kamera oder einem VTR-Band erfasst wird.
 
-1.  Erstellen Sie eine Instanz des [msdv-Treiber](msdv-driver.md) Filters. Weitere Informationen finden Sie unter [Auswählen eines Erfassungs Geräts](selecting-a-capture-device.md).
-2.  Initialisieren Sie den Erfassungs Diagramm-Generator, wie unter [Informationen zum Erfassungs Diagramm](about-the-capture-graph-builder.md)-Generator beschrieben.
-3.  Erstellen Sie das Erfassungs Diagramm, abhängig vom Ziel Dateityp:
-    -   [Erfassen einer DV-Datei vom Typ "1"](capture-a-type-1-dv-file.md)
-    -   [Erfassung einer Type-2-DV-Datei](capture-a-type-2-dv-file.md)
-    -   [DV in nicht komprimiertem RGB erfassen](capture-dv-to-uncompressed-rgb.md)
+1.  Erstellen Sie eine Instanz des [MSDV-Treiberfilters.](msdv-driver.md) Weitere Informationen finden Sie unter [Auswählen eines Erfassungsgeräts.](selecting-a-capture-device.md)
+2.  Initialisieren Sie den Capture Graph Builder, wie unter [Informationen zum Capture Graph Builder beschrieben.](about-the-capture-graph-builder.md)
+3.  Erstellen Sie das Erfassungsdiagramm abhängig vom Zieldateityp:
+    -   [Erfassen einer Typ-1-DV-Datei](capture-a-type-1-dv-file.md)
+    -   [Erfassen einer Typ-2-DV-Datei](capture-a-type-2-dv-file.md)
+    -   [Erfassen von DV in unkomprimiertem RGB](capture-dv-to-uncompressed-rgb.md)
 4.  Führen Sie das Diagramm aus.
 
-Die Erfassung von einem VTR-Band funktioniert genauso wie das Aufzeichnen von Livevideos von der Kamera, mit dem Unterschied, dass Sie das Band wie unter [Steuern eines DV-Camcorder](controlling-a-dv-camcorder.md)beschrieben abspielen müssen. Um den Verlust von Frames zu vermeiden, führen Sie zuerst das Diagramm aus, und geben Sie dann das Band wieder. Wenn Sie die Übertragung abgeschlossen haben, beenden Sie das Band zuerst, und beenden Sie dann das Diagramm.
+Das Aufzeichnen von einem VTR-Band funktioniert genauso wie das Erfassen von Livevideos von der Kamera, mit der Ausnahme, dass Sie das Band wiederspielen müssen, wie unter [Steuern eines DV-Dvd beschrieben.](controlling-a-dv-camcorder.md) Um den Verlust von Frames zu vermeiden, führen Sie zuerst den Graphen aus, und geben Sie dann das Band wieder. Wenn Sie mit der Übertragung fertig sind, beenden Sie zuerst das Band, und beenden Sie dann das Diagramm.
 
 > [!Note]  
-> Der Camcorder muss sich im VTR-Modus befinden. Siehe [Geräte Modus](device-mode.md).
+> Der Kernel muss sich im VTR-Modus befinden. Weitere Informationen [finden Sie unter Gerätemodus](device-mode.md).
 
  
 
@@ -40,7 +40,7 @@ Die Erfassung von einem VTR-Band funktioniert genauso wie das Aufzeichnen von Li
 [Type-1 im Vergleich zu Type-2 DV AVI-Dateien](type-1-vs--type-2-dv-avi-files.md)
 </dt> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

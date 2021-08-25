@@ -1,7 +1,7 @@
 ---
-description: Die iportabledevicekeycollection-Schnittstelle enthält eine Auflistung von PropertyKey-Werten. Diese Schnittstelle kann aus einer-Methode abgerufen werden. Wenn ein neues-Objekt erforderlich ist, rufen Sie CoCreate mit der CLSID \_ portabledevicekeycollection auf.
+description: Die IPortableDeviceKeyCollection-Schnittstelle enthält eine Auflistung von PROPERTYKEY-Werten. Diese Schnittstelle kann von einer Methode abgerufen werden, oder wenn ein neues Objekt erforderlich ist, rufen Sie CoCreate mit CLSID \_ PortableDeviceKeyCollection auf.
 ms.assetid: 2460f5bc-6b1c-4e3b-bdb9-faaa6d6c87fd
-title: Iportabledevicekeycollection-Schnittstelle (portableabvicetypes. h)
+title: IPortableDeviceKeyCollection-Schnittstelle (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,36 +14,36 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: c246fabe7ced72a5aad6d30101df8035a159a923
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0f648020ddb82db2a619f75bb125e94c7679f8dd3061ac282fcc0f911a498a77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839390"
 ---
-# <a name="iportabledevicekeycollection-interface"></a>Iportabledevicekeycollection-Schnittstelle
+# <a name="iportabledevicekeycollection-interface"></a>IPortableDeviceKeyCollection-Schnittstelle
 
-Die **iportabledevicekeycollection** -Schnittstelle enthält eine Auflistung von **PropertyKey** -Werten. Diese Schnittstelle kann aus einer-Methode abgerufen werden. Wenn ein neues-Objekt erforderlich ist, rufen Sie **CoCreate** mit der **CLSID \_ portabledevicekeycollection** auf.
+Die **IPortableDeviceKeyCollection-Schnittstelle** enthält eine Auflistung von **PROPERTYKEY-Werten.** Diese Schnittstelle kann von einer Methode abgerufen werden. Wenn ein neues Objekt erforderlich ist, rufen Sie **CoCreate** mit **CLSID \_ PortableDeviceKeyCollection auf.**
 
 ## <a name="members"></a>Member
 
-Die **iportabledevicekeycollection** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iportabledevicekeycollection** verfügt auch über die folgenden Typen von Membern:
+Die **IPortableDeviceKeyCollection-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPortableDeviceKeyCollection** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iportabledevicekeycollection** -Schnittstelle verfügt über diese Methoden.
+Die **IPortableDeviceKeyCollection-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                    | BESCHREIBUNG                                                                         |
+| Methode                                                    | Beschreibung                                                                         |
 |:----------------------------------------------------------|:------------------------------------------------------------------------------------|
-| [**Eren**](iportabledevicekeycollection-add.md)           | Fügt der Auflistung einen Eigenschafts Schlüssel hinzu.<br/>                                   |
-| [**Klartext**](iportabledevicekeycollection-clear.md)       | Löscht alle Elemente aus der Auflistung.<br/>                                   |
-| [**GetAt**](iportabledevicekeycollection-getat.md)       | Ruft einen **PropertyKey** aus der Auflistung nach Index ab.<br/>                |
+| [**Hinzufügen**](iportabledevicekeycollection-add.md)           | Fügt der Auflistung einen Eigenschaftsschlüssel hinzu.<br/>                                   |
+| [**Klar**](iportabledevicekeycollection-clear.md)       | Löscht alle Elemente aus der Auflistung.<br/>                                   |
+| [**GetAt**](iportabledevicekeycollection-getat.md)       | Ruft einen **PROPERTYKEY nach Index** aus der Auflistung ab.<br/>                |
 | [**GetCount**](iportabledevicekeycollection-getcount.md) | Ruft die Anzahl der Schlüssel in dieser Auflistung ab.<br/>                         |
-| [**RemoveAt**](iportabledevicekeycollection-removeat.md) | Entfernt das Element, das an der durch den angegebenen Index angegebenen Position gespeichert ist.<br/> |
+| [**RemoveAt**](iportabledevicekeycollection-removeat.md) | Entfernt das Element, das an der vom angegebenen Index angegebenen Position gespeichert ist.<br/> |
 
 
 
@@ -55,16 +55,16 @@ Die **iportabledevicekeycollection** -Schnittstelle verfügt über diese Methode
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sammlungs Schnittstellen**](collection-interfaces.md)
+[**Sammlungsschnittstellen**](collection-interfaces.md)
 </dt> </dl>
 
  

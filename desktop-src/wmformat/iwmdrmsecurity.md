@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmsecurity-Schnittstelle
-description: Die iwmdrmsecurity-Schnittstelle verwaltet eine Reihe von sicherheitsbezogenen Informationen für das Client Computer-und Digital Rights Management-Subsystem (DRM). Um eine Instanz dieser Schnittstelle zu erhalten, rufen Sie iwmdrmprovider-Erstellungsobjekt auf.
+title: IWMDRMSecurity-Schnittstelle
+description: Die IWMDRMSecurity-Schnittstelle verwaltet eine Vielzahl von sicherheitsbezogenen Informationen für den Clientcomputer und das DRM-Subsystem (Digital Rights Management). Um eine Instanz dieser Schnittstelle zu erhalten, rufen Sie IWMDRMProvider CreateObject auf.
 ms.assetid: 9439aedc-359d-4b2c-a88c-7b0e8eacb5a0
 keywords:
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format, beschrieben
+- IWMDRMSicherheitsschnittstelle – Windows-Medienformat
+- IWMDRMSecurity interface windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,58 +14,58 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d8b18e56c24fd0f3d3f86f217f547d626b74ded0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 31593dda35e7fa33540faa3c954f1901e1afa227372b25326c0f36154d443153
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839732"
 ---
-# <a name="iwmdrmsecurity-interface"></a>Iwmdrmsecurity-Schnittstelle
+# <a name="iwmdrmsecurity-interface"></a>IWMDRMSecurity-Schnittstelle
 
-Die **iwmdrmsecurity** -Schnittstelle verwaltet eine Reihe von sicherheitsbezogenen Informationen für das Client Computer-und Digital Rights Management-Subsystem (DRM).
+Die **IWMDRMSecurity-Schnittstelle** verwaltet eine Vielzahl von sicherheitsbezogenen Informationen für den Clientcomputer und das DRM-Subsystem (Digital Rights Management).
 
-Um eine Instanz dieser Schnittstelle abzurufen, rufen Sie [**iwmdrmprovider:: builateobject**](iwmdrmprovider-createobject.md)auf. Übergeben Sie **IID \_ iwmdrmsecurity** als *riid* -Parameter.
+Um eine Instanz dieser Schnittstelle zu erhalten, rufen [**Sie IWMDRMProvider::CreateObject auf.**](iwmdrmprovider-createobject.md) Übergeben **Sie IID \_ IWMDRMSecurity** als *riid-Parameter.*
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmsecurity** -Schnittstelle erbt von [**iwmdrmeventgenerator**](iwmdrmeventgenerator.md). **Iwmdrmsecurity** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMSecurity-Schnittstelle** erbt von [**IWMDRMEventGenerator**](iwmdrmeventgenerator.md). **IWMDRMSecurity** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmsecurity** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMSecurity-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                      | BESCHREIBUNG                                                                                                      |
+| Methode                                                                                      | Beschreibung                                                                                                      |
 |:--------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
-| [**Checkcertforwiderruf**](iwmdrmsecurity-checkcertforrevocation.md)                     | Bestimmt, ob ein Zertifikat widerrufen wurde.<br/>                                                    |
-| [**Getcontentenablersforrevocations**](iwmdrmsecurity-getcontentenablersforrevocations.md) | Ruft inhaltsenabler-Schnittstellen ab, die das Erneuern von Komponenten basierend auf gesperrten Zertifikaten ermöglichen.<br/> |
-| [**Getcontentenablersfromhashes**](iwmdrmsecurity-getcontentenablersfromhashes.md)         | Ruft inhaltsenabler-Schnittstellen ab, die das Erneuern von Komponenten auf der Grundlage von Hash Zertifikaten ermöglichen.<br/>  |
-| [**Getmachinecertificate**](iwmdrmsecurity-getmachinecertificate.md)                       | Ruft das Computer Zertifikat des DRM-Subsystems auf dem Client Computer ab.<br/>                        |
-| [**Getrevocationdata**](iwmdrmsecurity-getrevocationdata.md)                               | Ruft eine Zertifikat Sperr Liste aus dem lokalen Speicher ab.<br/>                                         |
-| [**Getrevocationdataversion**](iwmdrmsecurity-getrevocationdataversion.md)                 | Ruft die Versionsnummer einer Zertifikat Sperr Liste im lokalen Speicher ab.<br/>                     |
-| [**Getsecurityversion**](iwmdrmsecurity-getsecurityversion.md)                             | Ruft die Version des DRM-Subsystems auf dem Client Computer ab.<br/>                                    |
-| [**Performsecurityupdate**](iwmdrmsecurity-performsecurityupdate.md)                       | Initiiert ein Sicherheitsupdate des DRM-Subsystems auf dem Client Computer.<br/>                              |
-| [**"Abtrevocationdata"**](iwmdrmsecurity-setrevocationdata.md)                               | Legt eine Zertifikat Sperr Liste im lokalen Speicher fest.<br/>                                                |
+| [**CheckCertForRevocation**](iwmdrmsecurity-checkcertforrevocation.md)                     | Bestimmt, ob ein Zertifikat widerrufen wurde.<br/>                                                    |
+| [**GetContentEnablersForRevocations**](iwmdrmsecurity-getcontentenablersforrevocations.md) | Ruft Schnittstellen für die Inhaltsermöglichung ab, die die Erneuerung von Komponenten basierend auf widerrufenen Zertifikaten ermöglichen.<br/> |
+| [**GetContentEnablersFromHashes**](iwmdrmsecurity-getcontentenablersfromhashes.md)         | Ruft Schnittstellen für die Inhaltsermöglichung ab, die die Erneuerung von Komponenten basierend auf Hashzertifikaten ermöglichen.<br/>  |
+| [**GetMachineCertificate**](iwmdrmsecurity-getmachinecertificate.md)                       | Ruft das Computerzertifikat des DRM-Subsystems auf dem Clientcomputer ab.<br/>                        |
+| [**GetRevocationData**](iwmdrmsecurity-getrevocationdata.md)                               | Ruft eine Zertifikatsperrliste aus dem lokalen Speicher ab.<br/>                                         |
+| [**GetRevocationDataVersion**](iwmdrmsecurity-getrevocationdataversion.md)                 | Ruft die Versionsnummer einer Zertifikatsperrliste im lokalen Speicher ab.<br/>                     |
+| [**GetSecurityVersion**](iwmdrmsecurity-getsecurityversion.md)                             | Ruft die Version des DRM-Subsystems auf dem Clientcomputer ab.<br/>                                    |
+| [**PerformSecurityUpdate**](iwmdrmsecurity-performsecurityupdate.md)                       | Initiiert ein Sicherheitsupdate für das DRM-Subsystem auf dem Clientcomputer.<br/>                              |
+| [**SetRevocationData**](iwmdrmsecurity-setrevocationdata.md)                               | Legt eine Zertifikatsperrliste im lokalen Speicher fest.<br/>                                                |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Beispiel für DRM-Individualisierung**](drm-individualization-example.md)
+[**DRM-Individualisierungsbeispiel**](drm-individualization-example.md)
 </dt> <dt>
 
 [**Schnittstellen**](drm-interfaces.md)
 </dt> <dt>
 
-[**Iwmdrmeventgenerator**](iwmdrmeventgenerator.md)
+[**IWMDRMEventGenerator**](iwmdrmeventgenerator.md)
 </dt> </dl>
 
  

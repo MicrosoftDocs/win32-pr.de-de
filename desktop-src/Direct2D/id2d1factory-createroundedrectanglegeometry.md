@@ -12,12 +12,12 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 1d8b15d4f0cc4af852ad49665d0266e3235eb4e6
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 373a0059a390af3e5038e602672635e76bdb142b23bbf2dbd52461207324c4aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874380"
 ---
 # <a name="id2d1factorycreateroundedrectanglegeometry-methods"></a>ID2D1Factory::CreateRoundedRectangleGeometry-Methoden
 
@@ -27,7 +27,7 @@ Erstellt eine [**ID2D1RoundedRectangleGeometry**](/previous-versions/windows/des
 
 
 
-| Methode                                                                                                                                                                                                     | Beschreibung                                                                                    |
+| Methode                                                                                                                                                                                                     | BESCHREIBUNG                                                                                    |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
 | [**CreateRoundedRectangleGeometry(D2D1 \_ ROUNDED \_ RECT&,ID2D1RoundedRectangleGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371292(v=vs.85))  | Erstellt eine [**ID2D1RoundedRectangleGeometry**](/previous-versions/windows/desktop/legacy/dd371292(v=vs.85)). <br/> |
 | [**CreateRoundedRectangleGeometry(D2D1 \_ ROUNDED \_ RECT \* ,ID2D1RoundedRectangleGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371292(v=vs.85)) | Erstellt eine [**ID2D1RoundedRectangleGeometry**](/previous-versions/windows/desktop/legacy/dd371292(v=vs.85)). <br/> |

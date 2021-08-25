@@ -1,9 +1,9 @@
 ---
-title: komplexer exectype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen des exec (aktiongroup)-Elements.
+title: execType Complex Type
+description: Definiert die untergeordneten Elemente und Sequenzierungsinformationen des Exec -Elements (actionGroup).
 ms.assetid: ab23801a-453d-4fab-8584-30c5c9d57dff
 keywords:
-- komplexer exectype-Typ Taskplaner
+- execType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8f6186c15e8bbe059abaa6cc33580fca45286cda
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e0726930f902ec0458f42fff9cdce39026cf63ddab92982bc30da33ca671712
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796630"
 ---
-# <a name="exectype-complex-type"></a>komplexer exectype-Typ
+# <a name="exectype-complex-type"></a>execType Complex Type
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen des [**exec (aktiongroup)**](taskschedulerschema-exec-actiongroup-element.md) -Elements.
+Definiert die untergeordneten Elemente und Sequenzierungsinformationen des [**Exec -Elements (actionGroup).**](taskschedulerschema-exec-actiongroup-element.md)
 
 ``` syntax
 <xs:complexType name="execType">
@@ -52,11 +52,11 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen des [**e
 
 
 
-| Element                                                                           | type                                                        | BESCHREIBUNG                                                                                                  |
+| Element                                                                           | type                                                        | Beschreibung                                                                                                  |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [**Argumente**](taskschedulerschema-arguments-exectype-element.md)               | **string**                                                  | Gibt die Argumente an, die dem Befehlszeilen Vorgang zugeordnet sind. <br/>                              |
-| [**Get-Help**](taskschedulerschema-command-exectype-element.md)                   | [**PathType**](taskschedulerschema-pathtype-simpletype.md) | Gibt die ausführbare Datei oder das Dokument an, das ausgeführt werden soll.<br/>                                              |
-| [**WorkingDirectory**](taskschedulerschema-workingdirectory-exectype-element.md) | [**PathType**](taskschedulerschema-pathtype-simpletype.md) | Gibt das Verzeichnis an, in dem die ausführbare Datei oder die von der ausführbaren Datei verwendeten Dateien vorhanden sind.<br/> |
+| [**Argumente**](taskschedulerschema-arguments-exectype-element.md)               | **string**                                                  | Gibt die Argumente an, die dem Befehlszeilenvorgang zugeordnet sind. <br/>                              |
+| [**Befehl**](taskschedulerschema-command-exectype-element.md)                   | [**Pathtype**](taskschedulerschema-pathtype-simpletype.md) | Gibt die ausführbare Datei oder das Dokument an, die bzw. das ausgeführt werden soll.<br/>                                              |
+| [**WorkingDirectory**](taskschedulerschema-workingdirectory-exectype-element.md) | [**Pathtype**](taskschedulerschema-pathtype-simpletype.md) | Gibt das Verzeichnis an, in dem die ausführbare Datei oder die von der ausführbaren Datei verwendeten Dateien vorhanden sind.<br/> |
 
 
 
@@ -66,16 +66,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen des [**e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Schematypen Taskplaner](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,10 +1,10 @@
 ---
-title: Mrmresourcumdexerhandle-Struktur (mrmresourceingedexer. h)
-description: Stellt ein undurchsichtiges Handle für ein ressourcenindexer-Objekt dar. Das Handle wird vom Betriebssystem verwaltet. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmResourceIndexerHandle-Struktur (MrmResourceIndexer.h)
+description: Stellt ein nicht transparentes Handle für ein Ressourcenindexerobjekt dar. Das Handle wird vom Betriebssystem verwaltet. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: E3ED8AB8-39B8-419C-9570-1CC6B2CFE8D0
 keywords:
-- Mrmresourcindexerhandle-Struktur Menüs und weitere Ressourcen
-- Pmrmresourcindexerhandle-Struktur Zeiger Menüs und andere Ressourcen
+- MrmResourceIndexerHandle-Strukturmenüs und andere Ressourcen
+- PMrmResourceIndexerHandle-Strukturzeigermenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5786585597b5d23a6f6c0cd6842b655727c3ffe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c5c9cd18d6c828d5f9b5187f866d8ab637dfd4d58c3da0a8569bd8c910c7e872
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119825690"
 ---
-# <a name="mrmresourceindexerhandle-structure"></a>Mrmresourcumdexerhandle-Struktur
+# <a name="mrmresourceindexerhandle-structure"></a>MrmResourceIndexerHandle-Struktur
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Stellt ein undurchsichtiges Handle für ein ressourcenindexer-Objekt dar. Das Handle wird vom Betriebssystem verwaltet. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Stellt ein nicht transparentes Handle für ein Ressourcenindexerobjekt dar. Das Handle wird vom Betriebssystem verwaltet. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ typedef struct _MrmResourceIndexerHandle {
 
 <dl> <dt>
 
-**bewältigen**
+**Handlebezeichner**
 </dt> <dd>
 
-Typ: **pVoid**
+Typ: **PVOID**
 
 </dd> <dd>
 
-Ein undurchsichtiges Handle für ein ressourcenindexer-Objekt.
+Ein nicht transparentes Handle für ein Ressourcenindexerobjekt.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Ein undurchsichtiges Handle für ein ressourcenindexer-Objekt.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
 
 
 

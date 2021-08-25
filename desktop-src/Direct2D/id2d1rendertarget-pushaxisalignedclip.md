@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget pushaxisalignedclip-Methoden (D2d1 \_ 1. h)
-description: Gibt ein Rechteck an, auf das alle nachfolgenden Zeichnungsvorgänge zugeschnitten werden.
+title: ID2D1RenderTarget PushAxisAlignedClip-Methoden (D2d1 \_ 1.h)
+description: Gibt ein Rechteck an, an das alle nachfolgenden Zeichnungsvorgänge abgeschnitten werden.
 ms.assetid: 8b777425-07b1-4494-889a-0c947fb61315
 keywords:
-- Pushaxisalignedclip-Methoden Direct2D
+- PushAxisAlignedClip-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,37 +12,37 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d7e6d59f1c4cbffcde74ecb7b5adb5b12eff06bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ce76db0608ccd79ecd8ea1be716f8cbdf4313f95bfdda9cfac7b63474e3f412
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873990"
 ---
-# <a name="id2d1rendertargetpushaxisalignedclip-methods"></a>ID2D1RenderTarget::P ushaxisalignedclip-Methoden
+# <a name="id2d1rendertargetpushaxisalignedclip-methods"></a>ID2D1RenderTarget::P ushAxisAlignedClip-Methoden
 
-Gibt ein Rechteck an, auf das alle nachfolgenden Zeichnungsvorgänge zugeschnitten werden.
+Gibt ein Rechteck an, an das alle nachfolgenden Zeichnungsvorgänge abgeschnitten werden.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                                                         | BESCHREIBUNG                                                                               |
+| Methode                                                                                                                                         | Beschreibung                                                                               |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
-| [**Pushaxisalignedclip (D2D1 \_ Rect \_ F&, D2D1 \_ Antialias \_ Mode)**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode))  | Gibt ein Rechteck an, auf das alle nachfolgenden Zeichnungsvorgänge zugeschnitten werden. <br/> |
-| [**Pushaxisalignedclip (D2D1 \_ Rect \_ F \* , D2D1 \_ Antialias \_ Mode)**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) | Gibt ein Rechteck an, auf das alle nachfolgenden Zeichnungsvorgänge zugeschnitten werden. <br/> |
+| [**PushAxisAlignedClip(D2D1 \_ RECT \_ F&,D2D1 \_ ANTIALIAS \_ MODE)**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode))  | Gibt ein Rechteck an, an das alle nachfolgenden Zeichnungsvorgänge abgeschnitten werden. <br/> |
+| [**PushAxisAlignedClip(D2D1 \_ RECT \_ F \* ,D2D1 \_ ANTIALIAS \_ MODE)**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) | Gibt ein Rechteck an, an das alle nachfolgenden Zeichnungsvorgänge abgeschnitten werden. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein [**pushaxisalignedclip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) -und [**popaxisalignedclip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-popaxisalignedclip) -Paar kann um oder innerhalb einer [**pushschicht**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**poplayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer)auftreten, sich aber nicht überlappen. Beispielsweise ist die Sequenz von **pushaxisalignedclip**, [**pushlayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)), **poplayer** und **popaxisalignedclip** gültig, aber die Sequenz von **pushaxisalignedclip**, **pushlayer**, **popaxisalignedclip** und **poplayer** ist ungültig.
+Ein [**PushAxisAlignedClip-**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f__d2d1_antialias_mode)) und [**PopAxisAlignedClip-Paar**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-popaxisalignedclip) kann um oder innerhalb von [**PushLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer)auftreten, darf sich jedoch nicht überlappen. Beispielsweise ist die Sequenz von **PushAxisAlignedClip,** [**PushLayer,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) **PopLayer,** **PopAxisAlignedClip** gültig, aber die Sequenz von **PushAxisAlignedClip,** **PushLayer,** **PopAxisAlignedClip** und **PopLayer** ist ungültig.
 
-Diese Methode gibt keinen Fehlercode zurück, wenn ein Fehler auftritt. Um zu ermitteln, ob ein Zeichnungs Vorgang (z. b. **pushaxisalignedclip**) fehlgeschlagen ist, überprüfen Sie das von den Methoden [**ID2D1RenderTarget:: EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget:: Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegebene Ergebnis.
+Diese Methode gibt keinen Fehlercode zurück, wenn ein Fehler auftritt. Überprüfen Sie das von den Methoden [**ID2D1RenderTarget::EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) oder [**ID2D1RenderTarget::Flush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-flush) zurückgegebene Ergebnis, um zu ermitteln, ob bei einem Zeichnungsvorgang (z. B. **PushAxisAlignedClip)** ein Fehler auftrat.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel finden [Sie unter How to Clip with an Axis-Aligned Clip Rechteck](how-to-clip-with-axis-aligned-rects.md).
+Ein Beispiel finden Sie unter [How to Clip with an Axis-Aligned Clip Rectangle](how-to-clip-with-axis-aligned-rects.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,13 +50,13 @@ Ein Beispiel finden [Sie unter How to Clip with an Axis-Aligned Clip Rechteck](h
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1 \_ 1. h (Include D2d1. h)</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl>                   |
+| Header<br/>  | <dl> <dt>D2d1 \_ 1.h (einschließlich D2d1.h)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl>                   |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl>                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

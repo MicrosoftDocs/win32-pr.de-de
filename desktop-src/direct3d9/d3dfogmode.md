@@ -1,7 +1,7 @@
 ---
-description: Definiert Konstanten, die den Nebel Modus beschreiben.
+description: Definiert Konstanten, die den Modus "Mode" beschreiben.
 ms.assetid: cd83c914-bc1d-4f66-b5a6-7984b7ec52cd
-title: D3DFOGMODE-Enumeration (D3D9Types. h)
+title: D3DFOGMODE-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 8436a52edbb9460c6945c1526513629939ec444b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b94992d94779932301c271ca46dc7466344b40b68c62855d4c57bfe8b780a94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791973"
 ---
 # <a name="d3dfogmode-enumeration"></a>D3DFOGMODE-Enumeration
 
-Definiert Konstanten, die den Nebel Modus beschreiben.
+Definiert Konstanten, die den Modus "Mode" beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,54 +43,54 @@ typedef enum D3DFOGMODE {
 
 <dl> <dt>
 
-<span id="D3DFOG_NONE"></span><span id="d3dfog_none"></span>**D3DFOG \_ None**
+<span id="D3DFOG_NONE"></span><span id="d3dfog_none"></span>**D3DFOG \_ NONE**
 </dt> <dd>
 
-Kein Nebeleffekt.
+Kein Effekt.
 
 </dd> <dt>
 
-<span id="D3DFOG_EXP"></span><span id="d3dfog_exp"></span>**D3DFOG- \_ Exp**
+<span id="D3DFOG_EXP"></span><span id="d3dfog_exp"></span>**D3DFOG \_ EXP**
 </dt> <dd>
 
-Der Nebeleffekt wird entsprechend der folgenden Formel exponentiell verstärkt.
+Der Effekt "Effect" wird exponentiell gemäß der folgenden Formel potenziert.
 
-![Formel der Nebeleffekt Intensität](images/fogexp.png)
+![Formel der Intensität des Effekts "1"](images/fogexp.png)
 
 </dd> <dt>
 
-<span id="D3DFOG_EXP2"></span><span id="d3dfog_exp2"></span>**D3DFOG \_ exp2**
+<span id="D3DFOG_EXP2"></span><span id="d3dfog_exp2"></span>**D3DFOG \_ EXP2**
 </dt> <dd>
 
-Der Nebeleffekt wird exponentiell mit dem Quadrat der Entfernung entsprechend der folgenden Formel verstärkt.
+Der Effekt "Effect Effect" wird exponentiell mit dem Quadrat der Entfernung gemäß der folgenden Formel potenziert.
 
-![Formel der Nebel Wirkungs Intensität basierend auf dem Quadrat der Entfernung](images/fogexp2.png)
+![Formel der Intensität des Effekts", die auf dem Quadrat der Entfernung basiert](images/fogexp2.png)
 
 </dd> <dt>
 
-<span id="D3DFOG_LINEAR"></span><span id="d3dfog_linear"></span>**D3DFOG \_ linear**
+<span id="D3DFOG_LINEAR"></span><span id="d3dfog_linear"></span>**D3DFOG \_ LINEAR**
 </dt> <dd>
 
-Der Nebeleffekt wird linear zwischen dem Start-und dem Endpunkt entsprechend der folgenden Formel verstärkt.
+Der Effekt "Lichteffekt" wird gemäß der folgenden Formel linear zwischen dem Start- und dem Endpunkte geschwennt.
 
-![Formel der Nebel Wirkungs Intensität basierend auf Start-und Endpunkten](images/fogliner.png)
+![Formel der Intensität von Effekten auf der Grundlage von Start- und Endpunkten](images/fogliner.png)
 
-Dies ist der einzige derzeit unterstützte Nebelmodus.
+Dies ist der einzige derzeit unterstützte Modus.
 
 </dd> <dt>
 
-<span id="D3DFOG_FORCE_DWORD"></span><span id="d3dfog_force_dword"></span>**D3DFOG \_ Erzwingen von \_ DWORD**
+<span id="D3DFOG_FORCE_DWORD"></span><span id="d3dfog_force_dword"></span>**D3DFOG \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Werte in diesem enumerierten Typ werden von den \_ renderzuständen D3DRS fogtablemode und D3DRS \_ fogvertexmode verwendet.
+Die Werte in diesem Enumerationstyp werden von den Renderzuständen D3DRSTABLEMODE und \_ D3DRSRSVERTEXMODE \_ verwendet.
 
-Nebel kann als Maß der Sichtbarkeit betrachtet werden: je niedriger der von einer Nebel Gleichung erzeugte Nebelwert ist, desto weniger sichtbar ist ein Objekt.
+Die Sichtbarkeit kann als Maß für die Sichtbarkeit angesehen werden: Wenn der durch eine Gleichung erzeugte Maßwert niedriger ist, desto weniger sichtbar ist ein Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,7 +98,7 @@ Nebel kann als Maß der Sichtbarkeit betrachtet werden: je niedriger der von ein
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 

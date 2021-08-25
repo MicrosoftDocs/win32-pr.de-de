@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8e76cafce2ca5a9881b87d9248c144dc584971c0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 32f9ccdd2b7d787faa6f1081c51bf107b979d26d952552651542afcb34f985ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823920"
 ---
 # <a name="ctransformfiltergetpin-method"></a>CTransformFilter.GetPin-Methode
 
@@ -53,11 +53,11 @@ Die Nummer des angegebenen Pins, indiziert von 0 (null). Bei diesem Filter ist P
 
 Gibt einen Zeiger auf das [**CBasePin-Objekt**](cbasepin.md) zurück, das den Pin implementiert, oder **NULL,** wenn die Methode fehlschlägt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode implementiert die rein virtuelle [**CBaseFilter::GetPin-Methode.**](cbasefilter-getpin.md) Wenn die -Methode zum ersten Mal aufgerufen wird, werden beide Pins erstellt.
 
-Diese Methode erhöht den Verweiszähler für den zurückgegebenen Pin nicht, sodass der zurückgegebene Pin keinen ausstehenden Verweiszähler hat. Wenn der Aufrufer einen Verweis auf der Stecknadel behalten muss, sollte er die **IUnknown::AddRef-Methode** auf dem Pin aufrufen.
+Diese Methode erhöht den Verweiszähler für den zurückgegebenen Pin nicht, sodass der zurückgegebene Pin keinen ausstehenden Verweiszähler hat. Wenn der Aufrufer einen Verweis auf die Stecknadel behalten muss, sollte er die **IUnknown::AddRef-Methode** auf dem Pin aufrufen.
 
 Wenn der Filter die Standardpins [**CTransformInputPin**](ctransforminputpin.md) und [**CTransformOutputPin**](ctransformoutputpin.md) verwendet, müssen Sie diese Methode wahrscheinlich nicht überschreiben. Wenn der Filter jedoch Pins verwendet, die diese Klassen erweitern, müssen Sie diese Methode überschreiben, um Pins dieses Typs zu erstellen.
 
@@ -65,9 +65,9 @@ Wenn der Filter die Standardpins [**CTransformInputPin**](ctransforminputpin.md)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

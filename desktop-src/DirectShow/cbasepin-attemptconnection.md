@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Methode" stellt mithilfe eines angegebenen Medientyps eine Verbindung mit einer anderen Pin her.
+description: Die AttemptConnection-Methode stellt mithilfe eines angegebenen Medientyps eine Verbindung mit einem anderen Pin her.
 ms.assetid: b80cf2c0-7266-4dac-8633-d30a871c57d9
-title: Cbasepin. ditconnection-Methode (amfilter. h)
+title: CBasePin.AttemptConnection-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 72f80d81b5f105f528292a23f8b58257066b425e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e70683d5307b81db14d23fec2c163b085cccaf64b7926eb41efdb5dfe9ac7611
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872395"
 ---
-# <a name="cbasepinattemptconnection-method"></a>Cbasepin.. der Connection-Methode
+# <a name="cbasepinattemptconnection-method"></a>CBasePin.AttemptConnection-Methode
 
-Die- `AttemptConnection` Methode stellt mithilfe eines angegebenen Medientyps eine Verbindung mit einer anderen Pin her.
+Die `AttemptConnection` -Methode stellt mithilfe eines angegebenen Medientyps eine Verbindung mit einem anderen Pin her.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,40 +43,40 @@ virtual HRESULT AttemptConnection(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der empfangenden PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des empfangenden Pins.
 
 </dd> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                  |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                          |
-| <dl> <dt>**VFW \_ E- \_ Typ \_ nicht \_ akzeptiert**</dt> </dl> | Der Medientyp ist nicht zulässig.<br/> |
+| <dl> <dt>**VFW \_ \_ E-TYP \_ NICHT \_ AKZEPTIERT**</dt> </dl> | Der Medientyp ist nicht akzeptabel.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode versucht, die beiden Pins mit einem bestimmten Medientyp zu verbinden. Wenn der Typ nicht zulässig ist, schlägt die Methode fehl, ohne andere Medientypen auszuprobieren.
+Diese Methode versucht, die beiden Pins mit einem bestimmten Medientyp zu verbinden. Wenn der Typ nicht akzeptabel ist, schlägt die Methode fehl, ohne andere Medientypen auszuprobieren.
 
-Wenn der Medientyp zulässig ist, ruft diese Methode die [**IPin:: receiveconnection**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) -Methode der empfangenden PIN auf. Anschließend wird die [**cbasepin:: completeconnect**](cbasepin-completeconnect.md) -Methode aufgerufen, um die Verbindung abzuschließen.
+Wenn der Medientyp akzeptabel ist, ruft diese Methode die [**IPin::ReceiveConnection-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-receiveconnection) des empfangenden Pins auf. Anschließend wird die [**CBasePin::CompleteConnect-Methode**](cbasepin-completeconnect.md) zum Abschließen der Verbindung aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,16 +84,16 @@ Wenn der Medientyp zulässig ist, ruft diese Methode die [**IPin:: receiveconnec
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

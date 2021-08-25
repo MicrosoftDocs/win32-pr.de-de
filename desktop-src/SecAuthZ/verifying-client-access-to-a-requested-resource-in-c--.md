@@ -1,25 +1,25 @@
 ---
-description: Ruft die Access Check-Methode der IAzClientContext-Schnittstelle auf, um zu überprüfen, ob der Client Zugriff auf einen oder mehrere Vorgänge hat.
+description: Rufen Sie die AccessCheck-Methode der IAzClientContext-Schnittstelle auf, um zu überprüfen, ob der Client Zugriff auf einen oder mehrere Vorgänge hat.
 ms.assetid: 7c8a63c5-2eab-4414-9a3d-c99a92b67a62
-title: Überprüfen des Client Zugriffs auf eine angeforderte Ressource in C++
+title: Überprüfen des Clientzugriffs auf eine angeforderte Ressource in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eeffe9cb3312e33a283c1701b58356cdf5ea9b3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 363490e3636f5ad5229dd4234eba3bf38b9dfc54a4564bda775b143a249fe640
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906730"
 ---
-# <a name="verifying-client-access-to-a-requested-resource-in-c"></a>Überprüfen des Client Zugriffs auf eine angeforderte Ressource in C++
+# <a name="verifying-client-access-to-a-requested-resource-in-c"></a>Überprüfen des Clientzugriffs auf eine angeforderte Ressource in C++
 
-Ruft die [**Access Check**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-accesscheck) -Methode der [**IAzClientContext**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) -Schnittstelle auf, um zu überprüfen, ob der Client Zugriff auf einen oder mehrere Vorgänge hat. Ein Client kann möglicherweise Mitglied mehrerer Rollen sein, und ein Vorgang kann mehr als einer Aufgabe zugewiesen werden, sodass der Autorisierungs-Manager alle Rollen und Tasks prüft. Wenn eine Rolle, zu der der Client gehört, einen Task enthält, der einen Vorgang enthält, wird der Zugriff auf diesen Vorgang gewährt.
+Rufen Sie die [**AccessCheck-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-accesscheck) der [**IAzClientContext-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) auf, um zu überprüfen, ob der Client Zugriff auf einen oder mehrere Vorgänge hat. Ein Client kann mitglied in mehr als einer Rolle sein, und ein Vorgang kann mehreren Aufgaben zugewiesen sein, sodass der Autorisierungs-Manager alle Rollen und Aufgaben überprüft. Wenn eine Rolle, zu der der Client gehört, eine Aufgabe enthält, die einen Vorgang enthält, wird der Zugriff auf diesen Vorgang gewährt.
 
-Um den Zugriff nur für eine einzige Rolle zu überprüfen, zu der der Client gehört, legen Sie die [**roleforaccesscheck**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-get_roleforaccesscheck) -Eigenschaft der [**IAzClientContext**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) -Schnittstelle fest.
+Um den Zugriff nur auf eine einzelne Rolle zu überprüfen, zu der der Client gehört, legen Sie die [**RoleForAccessCheck-Eigenschaft**](/windows/desktop/api/Azroles/nf-azroles-iazclientcontext-get_roleforaccesscheck) der [**IAzClientContext-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazclientcontext) fest.
 
-Wenn Sie den Autorisierungs Richtlinien Speicher für die Zugriffs Überprüfung initialisieren, müssen Sie NULL als Wert für den *lFlags* -Parameter der [**IAzAuthorizationStore:: Initialize**](/windows/desktop/api/Azroles/nf-azroles-iazauthorizationstore-initialize) -Methode übergeben.
+Beim Initialisieren des Autorisierungsrichtlinienspeichers für die Zugriffsüberprüfung müssen Sie 0 (null) als Wert des *lFlags-Parameters* der [**IAzAuthorizationStore::Initialize-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazauthorizationstore-initialize) übergeben.
 
-Im folgenden Beispiel wird gezeigt, wie der Zugriff eines Clients auf einen Vorgang überprüft wird. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis von Laufwerk C vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen "Aufwendungen" und einen Vorgang mit dem Namen "useformcontrol" enthält und dass die Variable "hToken" ein gültiges Client Token enthält.
+Das folgende Beispiel zeigt, wie der Zugriff eines Clients auf einen Vorgang überprüft wird. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein vorhandener XML-Richtlinienspeicher mit dem Namen MyStore.xml vorhanden ist, dass dieser Speicher eine Anwendung mit dem Namen Expense und einen Vorgang namens UseFormControl enthält und dass die Variable hToken ein gültiges Clienttoken enthält.
 
 
 ```C++

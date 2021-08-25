@@ -1,33 +1,33 @@
 ---
-description: In diesem Abschnitt werden die einzelnen Eigenschafts Beispiele beschrieben, die im Windows Software Development Kit (SDK) enthalten sind und in den meisten Fällen aus der MSDN Code Gallery heruntergeladen werden können.
+description: In diesem Abschnitt werden die einzelnen Eigenschaftsbeispiele beschrieben, die im Windows Software Development Kit (SDK) enthalten sind und in den meisten Fällen aus dem MSDN Code Gallery heruntergeladen werden können.
 ms.assetid: 990fdc04-3712-4fbe-9531-839faedb9316
 title: Eigenschaftensystem-Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bb3bf9d919a4e647414c6bd5bbc021428f69195
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc5a7a4cac92abd7f3cda264fd86666e687537e87de65076767a61fd47cdaa82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823550"
 ---
 # <a name="property-system-code-samples"></a>Eigenschaftensystem-Codebeispiele
 
-Die folgenden Codebeispiele veranschaulichen die Verwendung des Windows-Eigenschaften Systems.
+Die folgenden Codebeispiele veranschaulichen die Verwendung des Windows-Eigenschaftensystems.
 
 | Thema            | Inhalte                     |
 |-------------------|---------------------------------------------------|
-| [Beispiel für einen idealen Eigenschafts Handler](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/IdealPropertyHandler)         | Veranschaulicht die Implementierung eines idealen Eigenschaften Handlers für ein oledoc-Dateiformat (. DOCFILE-MS) oder eines fiktiven openmetadata-Formats (openmetadata-MS), das Lese-und Schreib Eigenschaften und benutzerdefiniertes Schema unterstützt. |
-| [Beispiel für Wiedergabelisten-Eigenschaften Handler](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/PlaylistPropertyHandler)   | Veranschaulicht die Implementierung eines Eigenschafts Handlers für die Wiedergabe Dateiformate. wpl und. ZPL.                                                                                                                          |
-| [Beispiel für eine Eigenschaften Bearbeitung](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/PropertyEdit)                          | Veranschaulicht, wie die Windows-Eigenschaften System-APIs zum Lesen und Schreiben von Datei Eigenschafts Werten verwendet werden.                                                                                                                            |
-| [Eigenschafts Schema Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/propertyschemas)                      | Veranschaulicht das registrieren und Aufheben der Registrierung von benutzerdefinierten Eigenschaften und das erhalten detaillierter Informationen über benutzerdefinierte Eigenschafts Schemas, die bereits beim System registriert sind.                                               |
-| [Beispiel für Rezept Eigenschaften Handler](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/RecipePropertyHandler) | Veranschaulicht die Implementierung eines Eigenschaften Handlers für benutzerdefinierte Format Rezept Dateien (. Rezept).                                                                                                                             |
+| [Beispiel für idealen Eigenschaftenhandler](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/IdealPropertyHandler)         | Veranschaulicht die Implementierung eines idealen Eigenschaftenhandlers für ein OleDoc-Dateiformat (.docfile-ms) oder ein fiktives OpenMetadata-Format (.openmetadata-ms), das das Lesen und Schreiben von Eigenschaften und benutzerdefinierten Schemas unterstützt. |
+| [Playlist-Eigenschaftenhandlerbeispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/PlaylistPropertyHandler)   | Veranschaulicht die Implementierung eines Eigenschaftenhandlers für die Wiedergabelisten-Dateiformate .wpl und .zpl.                                                                                                                          |
+| [Beispiel zum Bearbeiten von Eigenschaften](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/PropertyEdit)                          | Veranschaulicht die Verwendung der Windows Property System-APIs zum Lesen und Schreiben von Dateieigenschaftswerten.                                                                                                                            |
+| [Beispiel für ein Eigenschaftenschema](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/propertyschemas)                      | Veranschaulicht das Registrieren und Aufheben der Registrierung, benutzerdefinierte Eigenschaften und das Abrufen ausführlicher Informationen zu benutzerdefinierten Eigenschaftenschemas, die bereits beim System registriert sind.                                               |
+| [Beispiel für einen Rezepteigenschaftenhandler](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/RecipePropertyHandler) | Veranschaulicht die Implementierung eines Eigenschaftenhandlers für benutzerdefinierte Formatanleitungsdateien (.recipe).                                                                                                                             |
 
-Weitere verwandte Beispiele finden Sie unter:
+Weitere verwandte Beispiele finden Sie in den folgenden Themen:
 
--   [Windows Shell-Anwendungsbeispiele](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform)
--   [Beispiele für die Windows Shell-Erweiterbarkeit](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/shellextensibility)
--   [Beispiele für die Windows-Shellintegration](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration)
+-   [Windows Shellanwendungsbeispiele](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform)
+-   [Windows Beispiele zur Shellerweiterbarkeit](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/shellextensibility)
+-   [Windows Beispiele für die Shellintegration](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration)
 
  
 
@@ -38,10 +38,10 @@ Weitere verwandte Beispiele finden Sie unter:
 [Übersicht über das Eigenschaftensystem](property-system-overview.md)
 </dt> <dt>
 
-[Entwicklerhandbuch für Windows-Eigenschaften System](property-system-developer-s-guide.md)
+[Windows Entwicklerhandbuch für Das Eigenschaftensystem](property-system-developer-s-guide.md)
 </dt> <dt>
 
-[Eigenschaften System Referenz](property-system-reference.md)
+[Referenz zum Eigenschaftensystem](property-system-reference.md)
 </dt> </dl>
 
  

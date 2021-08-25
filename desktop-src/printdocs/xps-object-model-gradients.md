@@ -1,23 +1,23 @@
 ---
-description: Dieses Thema enthält ein Beispiel für die Verwendung von Farbverläufen in einem XPS-om.
+description: Dieses Thema enthält ein Beispiel für die Verwendung von Farbverläufen in einem XPS OM.
 ms.assetid: c58c9e5a-c871-4b44-a1be-0aceafa2f805
-title: XPS-OM-Farbverläufe
+title: XPS OM Gradients
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5aac5fcce4ebd662d834705d1e8d84140f09000
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 267d053ef0e9b98408119870cb723ceb1170d4905aab81b0dc3db7969c356c32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823610"
 ---
-# <a name="xps-om-gradients"></a>XPS-OM-Farbverläufe
+# <a name="xps-om-gradients"></a>XPS OM Gradients
 
-Dieses Thema enthält ein Beispiel für die Verwendung von Farbverläufen in einem XPS-om.
+Dieses Thema enthält ein Beispiel für die Verwendung von Farbverläufen in einem XPS OM.
 
 ## <a name="add-a-new-stop-to-an-existing-gradient"></a>Hinzufügen eines neuen Stopps zu einem vorhandenen Farbverlauf
 
-Im folgenden Codebeispiel wird ein neuer halte Vorgang zum Farbverlauf eines Pinsel mit linearem Farbverlauf hinzugefügt.
+Im folgenden Codebeispiel wird dem Farbverlauf eines Pinsels mit linearem Farbverlauf ein neuer Stopp hinzufügt.
 
 
 ```C++
@@ -113,10 +113,10 @@ Im folgenden Codebeispiel wird ein neuer halte Vorgang zum Farbverlauf eines Pin
 
 <dl> <dt>
 
-[**Ixpsomgradientinterface-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstop)
+[**IXpsOMGradientStop-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstop)
 </dt> <dt>
 
-[**Ixpsomgradientstopcollection-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstopcollection)
+[**IXpsOMGradientStopCollection-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientstopcollection)
 </dt> </dl>
 
  
