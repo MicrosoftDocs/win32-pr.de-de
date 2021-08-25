@@ -1,58 +1,58 @@
 ---
 title: Verwenden von Versionsinformationen
-description: In diesem Thema wird erläutert, wie die Versions Informationsfunktionen verwendet werden.
+description: In diesem Thema wird erläutert, wie die Versionsinformationsfunktionen verwendet werden.
 ms.assetid: 447b57c9-9e94-4a28-897e-f7b87d9cb25a
 keywords:
-- Ressourcen, Versionsinformationen
+- Ressourcen,Versionsinformationen
 - Versionsinformationen
-- Informationen zur Installationsdatei
+- Installationsdateiinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a8785275f5aac69218989250d1c0f83e0a1ff9f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 0447bc1dfc3b2d5d5006bb5ff9ca3e9fa8f3d488e9b5621acb932c843fc3630f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846990"
 ---
 # <a name="using-version-information"></a>Verwenden von Versionsinformationen
 
-Ein Installationsprogramm umfasst in der Regel die folgenden Ziele:
+Ein Installationsprogramm hat in der Regel die folgenden Ziele:
 
--   , Um Dateien am richtigen Speicherort zu platzieren.
--   , Um den Benutzer zu benachrichtigen, wenn das Installationsprogramm eine vorhandene Datei durch eine Version ersetzt, die sich erheblich unterscheidet – beispielsweise, wenn Sie eine deutschsprachige Datei durch eine englischsprachige Datei ersetzen oder eine neuere Datei durch eine ältere Datei ersetzen.
+-   So platzieren Sie Dateien am richtigen Speicherort.
+-   Um den Benutzer zu benachrichtigen, wenn das Installationsprogramm eine vorhandene Datei durch eine deutlich andere Version ersetzt, z. B. durch Ersetzen einer Datei in deutscher Sprache durch eine englischsprachige Datei oder ersetzen Sie eine neuere Datei durch eine ältere Datei.
 
-Wenn Sie das Installationsprogramm schreiben, müssen Sie für jede Datei über die folgenden Informationen verfügen:
+Beim Schreiben des Installationsprogramms müssen Sie über die folgenden Informationen für jede Datei verfügen:
 
--   Der Name und Speicherort der Datei (als Quelldatei bezeichnet).
--   Der Name der entsprechenden Datei auf der Festplatte des Benutzers (als Zieldatei bezeichnet). Dieser Name ist in der Regel identisch mit dem Dateinamen auf dem Installations Datenträger.
--   Der Freigabe Status der Datei – d. h. ob die Datei für die zu installierende Anwendung privat ist oder von mehreren Anwendungen gemeinsam genutzt werden kann.
+-   Name und Speicherort der Datei (als Quelldatei bezeichnet).
+-   Der Name der entsprechenden Datei auf der Festplatte des Benutzers (als Zieldatei bezeichnet). Dieser Name ist in der Regel mit dem Dateinamen auf dem Installationsdatenträger identisch.
+-   Der Freigabestatus der Datei, d. &a. ob die Datei für die installierte Anwendung privat ist oder von mehreren Anwendungen gemeinsam genutzt werden kann.
 
-Das Installationsprogramm kann die [**verfindfile**](/windows/desktop/api/Winver/nf-winver-verfindfilea) -Funktion verwenden, um zu bestimmen, wo die Datei auf den Datenträger kopiert werden soll. Diese Funktion kann auch verwendet werden, um anzugeben, ob die Datei für die Anwendung privat ist oder freigegeben werden kann. Wenn beim Auffinden der Datei ein Problem auftritt, gibt **verfindfile** einen Fehlerwert zurück. Wenn das System z. b. die Zieldatei verwendet, gibt **verfindfile** **VFF \_ FileInUse** zurück. Das Installationsprogramm muss den Benutzer über das Problem benachrichtigen und darauf reagieren, dass die Benutzer die Installation fortsetzen oder beenden können.
+Das Installationsprogramm kann die [**VerFindFile-Funktion**](/windows/desktop/api/Winver/nf-winver-verfindfilea) verwenden, um zu bestimmen, wo die Datei auf den Datenträger kopiert werden soll. Diese Funktion kann auch verwendet werden, um anzugeben, ob die Datei für die Anwendung privat ist oder freigegeben werden kann. Wenn beim Suchen der Datei ein Problem auftritt, gibt **VerFindFile** einen Fehlerwert zurück. Wenn das System beispielsweise die Zieldatei verwendet, gibt **VerFindFile** **VFF \_ FILEINUSE zurück.** Das Installationsprogramm muss den Benutzer über das Problem benachrichtigen und auf die Entscheidung des Benutzers reagieren, die Installation fortzufahren oder zu beenden.
 
-Die [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) -Funktion kopiert die Quelldatei in eine temporäre Datei in dem Verzeichnis, das von [**verfindfile**](/windows/desktop/api/Winver/nf-winver-verfindfilea)angegeben wird. Falls erforderlich, erweitert **verinstallfile** die Datei mithilfe der Funktionen in der datendekomprimierungbibliothek.
+Die [**VerInstallFile-Funktion**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) kopiert die Quelldatei in eine temporäre Datei in dem von [**VerFindFile angegebenen Verzeichnis.**](/windows/desktop/api/Winver/nf-winver-verfindfilea) Bei Bedarf erweitert **VerInstallFile** die Datei mithilfe der Funktionen in der Datendekomprimierungsbibliothek.
 
-[**Verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) vergleicht die Versionsinformationen der temporären Datei mit der der Zieldatei. Wenn sich die beiden unterscheiden, gibt **verinstallfile** mindestens einen Fehlerwert zurück. Beispielsweise wird **Vif \_ srcold** zurückgegeben, wenn die temporäre Datei älter als die Zieldatei ist, und **Vif \_ difflang** , wenn die Dateien unterschiedliche Sprach-IDs oder Code Page Werte aufweisen. Das Installationsprogramm muss den Benutzer über das Problem benachrichtigen und darauf reagieren, dass die Benutzer die Installation fortsetzen oder beenden können.
+[**VerInstallFile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) vergleicht die Versionsinformationen der temporären Datei mit denen der Zieldatei. Wenn sich die beiden Unterscheiden, **gibt VerInstallFile** einen oder mehrere Fehlerwerte zurück. Beispielsweise wird **VIF \_ SRCOLD** zurückgegeben, wenn die temporäre Datei älter als die Zieldatei ist, und **VIF \_ DIFFLANG,** wenn die Dateien unterschiedliche Sprachbezeichner oder Codepagewerte haben. Das Installationsprogramm muss den Benutzer über das Problem benachrichtigen und auf die Entscheidung des Benutzers reagieren, die Installation fortzufahren oder zu beenden.
 
-Einige [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) -Fehler sind wiederherstellbar. Das heißt, dass das Installationsprogramm " **verinstallfile** " erneut aufruft und die VIFF-Option " **\_ forceinstall** " angibt, um die Datei unabhängig vom Versions Konflikt zu installieren. Wenn **verinstallfile** " **Vif \_ tempfile** " zurückgibt und der Benutzer entscheidet, die Installation nicht zu erzwingen, sollte das Installationsprogramm die temporäre Datei löschen.
+Einige [**VerInstallFile-Fehler**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) können wiederhergestellt werden. Das heißt, das Installationsprogramm kann **VerInstallFile unter** Angabe der **Option VIFF \_ FORCEINSTALL** erneut aufrufen, um die Datei unabhängig vom Versionskonflikt zu installieren. Wenn **VerInstallFile** **VIF \_ TEMPFILE** zurückgibt und der Benutzer die Installation nicht erzwingen möchte, sollte das Installationsprogramm die temporäre Datei löschen.
 
-Bei [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) kann ein nicht BEHEB barer Fehler auftreten, wenn versucht wird, die Installation zu erzwingen, obwohl der Fehler zuvor noch nicht vorhanden war. Beispielsweise könnte die Datei von einem anderen Benutzer gesperrt werden, bevor das Installationsprogramm versucht, die Installation zu erzwingen. Wenn ein Installationsprogramm versucht, die Installation nach einem nicht BEHEB baren Fehler zu erzwingen, schlägt **verinstallfile** fehl. Das Installationsprogramm muss Routinen enthalten, um diese Art von Fehler zu beheben.
+[**Bei VerInstallFile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) kann beim Versuch, die Installation zu erzwingen, ein nicht behebbarer Fehler auftreten, obwohl der Fehler zuvor nicht vorhanden war. Beispielsweise könnte die Datei von einem anderen Benutzer gesperrt werden, bevor das Installationsprogramm versucht hat, die Installation zu erzwingen. Wenn ein Installationsprogramm versucht, die Installation nach einem nicht wiederherstellbaren Fehler zu erzwingen, **schlägt VerInstallFile** fehl. Das Installationsprogramm muss Routinen für die Wiederherstellung nach dieser Art von Fehler enthalten.
 
-Die empfohlene Lösung besteht darin, ein Dialogfeld mit den Schaltflächen **install**, **Skip** und **install all** anzuzeigen. (Eine andere Lösung ist ein Dialogfeld mit den Schaltflächen **Ja**, **Ja, über** **springen** und **Abbrechen**.) Mithilfe der Schaltfläche **alle installieren** sollte verhindert werden, dass das Installationsprogramm den Benutzer zu ähnlichen Fehlern auffordert, indem er die **VIFF \_ forceinstall** -Option in alle nachfolgenden Verwendungen von [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea)einschließt. Bei nicht BEHEB baren Fehlern sollten die Schaltflächen **Installieren** und **installieren alle** deaktiviert werden.
+Die empfohlene Lösung besteht in der Anzeige eines Dialogfelds mit den Schaltflächen **Installieren,** **Überspringen** und **Alle installieren.** (Eine andere Lösung ist ein Dialogfeld mit den Schaltflächen **Ja,** **Ja zu Allen,** **Überspringen** und **Abbrechen.)** Die **Schaltfläche Alle installieren** sollte verhindern, dass das Installationsprogramm den Benutzer zu ähnlichen Fehlern auffordern kann, indem die Option **VIFF \_ FORCEINSTALL** in alle nachfolgenden Verwendungen von [**VerInstallFile einfing.**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) Bei nicht behebbaren Fehlern sollten die **Schaltflächen Alle** **installieren** und installieren deaktiviert werden.
 
-Zum Anzeigen einer nützlichen Fehlermeldung für den Benutzer muss das Installationsprogramm normalerweise Informationen aus den Versions Ressourcen der in Konflikt stehenden Dateien abrufen. Es gibt vier Funktionen, die das Installationsprogramm zu diesem Zweck verwenden kann:
+Um dem Benutzer eine nützliche Fehlermeldung anzuzeigen, muss das Installationsprogramm in der Regel Informationen aus den Versionsressourcen der in Konflikt stehenden Dateien abrufen. Es gibt vier Funktionen, die das Installationsprogramm für diesen Zweck verwenden kann:
 
--   [**Fehler bei GetFileVersionInfoSize**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea)
+-   [**GetFileVersionInfoSize**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea)
 -   [**GetFileVersionInfo**](/windows/desktop/api/Winver/nf-winver-getfileversioninfoa)
 -   [**VerQueryValue**](/windows/desktop/api/Winver/nf-winver-verqueryvaluea)
--   [**Verlanguagename**](/windows/desktop/api/Winver/nf-winver-verlanguagenamea)
+-   [**VerLanguageName**](/windows/desktop/api/Winver/nf-winver-verlanguagenamea)
 
-[**GetFileVersionInfoSize**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea) gibt die Größe der Versionsinformationen zurück. [**GetFileVersionInfo**](/windows/desktop/api/Winver/nf-winver-getfileversioninfoa) verwendet Informationen, die von **GetFileVersionInfoSize** abgerufen werden, um eine Struktur abzurufen, die die Versionsinformationen enthält. [**VerQueryValue**](/windows/desktop/api/Winver/nf-winver-verqueryvaluea) Ruft ein bestimmtes Element aus dieser Struktur ab.
+[**GetFileVersionInfoSize gibt**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea) die Größe der Versionsinformationen zurück. [**GetFileVersionInfo verwendet**](/windows/desktop/api/Winver/nf-winver-getfileversioninfoa) von **GetFileVersionInfoSize** abgerufene Informationen, um eine Struktur abzurufen, die die Versionsinformationen enthält. [**VerQueryValue**](/windows/desktop/api/Winver/nf-winver-verqueryvaluea) ruft einen bestimmten Member aus dieser Struktur ab.
 
-Wenn [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) beispielsweise den **Vif- \_ difftype** -Fehler zurückgibt, sollte das Installationsprogramm die Funktionen [**GetFileVersionInfoSize**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea), [**GetFileVersionInfo**](/windows/desktop/api/Winver/nf-winver-getfileversioninfoa)und [**VerQueryValue**](/windows/desktop/api/Winver/nf-winver-verqueryvaluea) in den temporären Dateien und Zieldateien verwenden, um den allgemeinen Typ der einzelnen Dateien abzurufen. Wenn die Sprachen der Dateien in Konflikt stehen, sollte das Installationsprogramm auch [**verlanguagename**](/windows/desktop/api/Winver/nf-winver-verlanguagenamea) verwenden, um den binären sprach Bezeichner in eine Textdarstellung der Sprache zu übersetzen. (Beispielsweise übersetzt 0x040c in die Zeichenfolge "Französisch".)
+Wenn [**VerInstallFile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) beispielsweise den **VIF \_ DIFFTYPE-Fehler** zurückgibt, sollte das Installationsprogramm die [**Funktionen GetFileVersionInfoSize,**](/windows/desktop/api/Winver/nf-winver-getfileversioninfosizea) [**GetFileVersionInfo**](/windows/desktop/api/Winver/nf-winver-getfileversioninfoa)und [**VerQueryValue**](/windows/desktop/api/Winver/nf-winver-verqueryvaluea) für die temporären und Zieldateien verwenden, um den allgemeinen Typ jeder Datei zu erhalten. Wenn die Sprachen der Dateien in Konflikt stehen, sollte das Installationsprogramm auch [**VerLanguageName**](/windows/desktop/api/Winver/nf-winver-verlanguagenamea) verwenden, um den Bezeichner der binären Sprache in eine Textdarstellung der Sprache zu übersetzen. (Beispielsweise wird 0x040C in die Zeichenfolge "Französisch" übersetzt.)
 
-Wenn [**verinstallfile**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) einen Datei Fehler zurückgibt, wie z. **b. Vif \_ accessverletzungs**, sollte das Installationsprogramm die [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion verwenden, um den letzten Fehlerwert abzurufen. Das Programm sollte diesen Wert in eine informative Meldung übersetzen, die dem Benutzer angezeigt wird. Das Programm darf keine Kontrolle zwischen den Aufrufen von " **verinstallfile** " und " **GetLastError**" erhalten.
+Wenn [**VerInstallFile einen**](/windows/desktop/api/Winver/nf-winver-verinstallfilea) Dateifehler zurückgibt, z. B. **VIF \_ ACCESSVIOLATION,** sollte das Installationsprogramm die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) verwenden, um den letzten Fehlerwert abzurufen. Das Programm sollte diesen Wert in eine informative Meldung übersetzen, die dem Benutzer angezeigt wird. Das Programm darf keine Kontrolle zwischen den Aufrufen von **VerInstallFile und** **GetLastError ergeben.**
 
- 
+ 
 
- 
+ 

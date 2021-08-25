@@ -1,9 +1,9 @@
 ---
-title: ID2D1Geometry computelength-Methoden
-description: Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden.
+title: ID2D1Geometry ComputeLength-Methoden
+description: Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre.
 ms.assetid: 4659d880-0aa3-485d-ac71-044d9ace6759
 keywords:
-- Computelength-Methoden Direct2D
+- ComputeLength-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
-ms.openlocfilehash: b49b1beb0525d95967ad903b0f0fb3c464edf4d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3181803698dfa439127cbb8121e670e907c08421f725a935833b7ad58bbb206f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874390"
 ---
-# <a name="id2d1geometrycomputelength-methods"></a>ID2D1Geometry:: computelength-Methoden
+# <a name="id2d1geometrycomputelength-methods"></a>ID2D1Geometry::ComputeLength-Methoden
 
-Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden.
+Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -30,16 +30,16 @@ Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrol
 
 | Methode                                                                                                                          | BESCHREIBUNG                                                                                         |
 |:--------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
-| [**Computelength (D2D1 \_ Matrix \_ 3x2 \_ F&, float \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float))              | Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden.<br/>  |
-| [**Computelength (D2D1 \_ Matrix \_ 3x2 \_ F \* , float \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float))             | Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden.<br/>  |
-| [**Computelength (D2D1 \_ Matrix \_ 3x2 \_ F&, float, float \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f__float_float))  | Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden.<br/>  |
-| [**Computelength (D2D1 \_ Matrix \_ 3x2 \_ F \* , float, float \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float)) | Berechnet die Länge der Geometrie, als wäre jedes Segment in eine Zeile entrollt worden. <br/> |
+| [**ComputeLength(D2D1 \_ MATRIX \_ 3X2 \_ F&,FLOAT \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float))              | Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre.<br/>  |
+| [**ComputeLength(D2D1 \_ MATRIX \_ 3X2 \_ F , FLOAT \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float))             | Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre.<br/>  |
+| [**ComputeLength(D2D1 \_ MATRIX \_ 3X2 \_ F&,FLOAT,FLOAT \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f__float_float))  | Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre.<br/>  |
+| [**ComputeLength(D2D1 \_ MATRIX \_ 3X2 \_ F , \* FLOAT, FLOAT \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-computelength(constd2d1_matrix_3x2_f_float)) | Berechnet die Länge der Geometrie so, als ob jedes Segment in eine Linie entrollt worden wäre. <br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Code zeigt, wie Sie mit **computelength** die Länge einer angegebenen Pfad Geometrie berechnen können.
+Der folgende Code zeigt, wie **Sie ComputeLength** verwenden, um die Länge einer angegebenen Pfadgeometrie zu berechnen.
 
 
 ```C++
@@ -82,7 +82,7 @@ if (SUCCEEDED(hr))
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 

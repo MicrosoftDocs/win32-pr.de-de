@@ -1,9 +1,9 @@
 ---
-title: Handle-Attribut
-description: Das \ handle \-Attribut gibt eine benutzerdefinierte oder \ 0034; angepasste \ 0034; an. behandlertyp.
+title: handle-Attribut
+description: Das \handle\-Attribut gibt ein benutzerdefiniertes oder \0034;angepasstes \ 0034; an. handle-Typ.
 ms.assetid: db5c6ea6-6081-4cea-9265-5e2f67fd8c14
 keywords:
-- Handle-Attribut-Mittel l
+- Handleattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d4560de53bf3f24238e9ff96e01c74716729749
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: aacdb3611a12873a6e828c33606bb9c970747555c285f8612be2b43bc3f51adf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895290"
 ---
-# <a name="handle-attribute"></a>Handle-Attribut
+# <a name="handle-attribute"></a>handle-Attribut
 
-Das \[ **handle** - \] Attribut gibt einen benutzerdefinierten oder "angepassten" Handlertyp an.
+Das \[  \] Handleattribut gibt einen benutzerdefinierten oder "angepassten" Handletyp an.
 
 ``` syntax
 typedef [handle] typename;  
@@ -33,26 +33,26 @@ void __RPC_USER typename_unbind (typename, handle_t);
 
 <dl> <dt>
 
-*typeName* 
+*Typename* 
 </dt> <dd>
 
-Gibt den Namen des benutzerdefinierten Bindungs Handle Typs an.
+Gibt den Namen des benutzerdefinierten Bindungshandletyps an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzerdefinierte Handles ermöglichen Entwicklern das Entwerfen von Handles, die für die Anwendung von Bedeutung sind. Ein benutzerdefiniertes Handle kann nur in einer Typdeklaration definiert werden, nicht in einem funktionsdeklarator.
+Benutzerdefinierte Handles ermöglichen Entwicklern das Entwerfen von Handles, die für die Anwendung von Bedeutung sind. Ein benutzerdefiniertes Handle kann nur in einer Typdeklaration definiert werden, nicht in einem Funktionsdeklarator.
 
-Ein Parameter eines Typs, der durch das \[ **handle** \] -Attribut definiert wird, wird verwendet, um die Bindung für den Aufruf zu bestimmen und wird an die aufgerufene Prozedur übertragen.
+Ein Parameter eines vom Handleattribut definierten Typs \[  \] wird verwendet, um die Bindung für den Aufruf zu bestimmen, und wird an die aufgerufene Prozedur übertragen.
 
-Der Benutzer muss Bindungs-und unbindungs Routinen bereitstellen, um zwischen primitiven und benutzerdefinierten handle-Typen zu konvertieren. Wenn ein benutzerdefiniertes Handle des Typs *Typname* angegeben ist, muss der Benutzer die Routinen *tykame* \_ **Bind** und *tykame* \_ **Bindung** angeben. Wenn z. b. der benutzerdefinierte Handlertyp myhandle lautet, werden die Routinen mit myhandle \_ **Bind** und myhandle \_ **Bindung** benannt.
+Der Benutzer muss Bindungs- und Bindungsroutinen bereitstellen, um zwischen primitiven und benutzerdefinierten Handletypen zu konvertieren. Bei einem benutzerdefinierten Handle vom Typ *typname* muss der Benutzer die Routinen *typename* \_ **bind** und *typename* \_ **unbind** bereitstellen. Wenn der benutzerdefinierte Handletyp z. B. MYHANDLE heißt, heißen die Routinen MYHANDLE \_ **bind** und MYHANDLE \_ **unbind**.
 
-Wenn der Vorgang erfolgreich ist, sollte die Bindungs Routine *Typname* \_  ein gültiges Primitives Bindungs Handle zurückgeben. Wenn nicht erfolgreich, sollte die Routine einen **null**-Wert zurückgeben. Wenn die Routine **null** zurückgibt, wird die Bindung-Routine von *typame* \_  nicht aufgerufen. Wenn die Bindungs Routine ein ungültiges Bindungs handle zurückgibt, das nicht **null** ist, ist das stubverhalten nicht definiert.
+Bei Erfolg sollte die *Bindungsroutine typename* \_  ein gültiges primitives Bindungshandle zurückgeben. Wenn dies nicht erfolgreich ist, sollte die Routine einen **NULL-Wert** zurückgeben. Wenn die Routine **NULL** zurückgibt, wird die  \_ **Unbind-Routine** typename nicht aufgerufen. Wenn die Bindungsroutine ein ungültiges Bindungshandle zurückgibt, das sich von **NULL** unterscheidet, ist das Stubverhalten nicht definiert.
 
-Wenn die Remote Prozedur ein benutzerdefiniertes Handle als Parameter oder als implizites handle aufweist, rufen die Client-stubdie Bindungs Routine auf, bevor Sie die Remote Prozedur aufrufen. Die Client-stubzeichen nennen die aufheben-Routine nach dem Remote-Befehl.
+Wenn die Remoteprozedur über ein benutzerdefiniertes Handle als Parameter oder als implizites Handle verfügt, rufen die Clientstubs die Bindungsroutine auf, bevor sie die Remoteprozedur aufrufen. Die Clientstubs rufen die Bindungsroutine nach dem Remoteaufruf auf.
 
-In DCE IDL muss ein Parameter mit dem \[ **handle** - \] Attribut als erster Parameter in der Liste der Remote Prozedur Argumente angezeigt werden. Nachfolgende Parameter, einschließlich anderer \[ **handle** - \] Attribute, werden als normale Parameter behandelt. Microsoft unterstützt eine Erweiterung der DCE-IDL, die es ermöglicht, dass der benutzerdefinierte \[ **handle** - \] Parameter in anderen Positionen als dem ersten Parameter angezeigt wird.
+In DCE IDL muss ein Parameter mit dem \[ **handle-Attribut** \] als erster Parameter in der Argumentliste der Remoteprozedur angezeigt werden. Nachfolgende Parameter, einschließlich anderer \[  \] Handleattribute, werden als normale Parameter behandelt. Microsoft unterstützt eine Erweiterung für DCE IDL, mit der der benutzerdefinierte \[ **Handleparameter** \] an anderen Positionen als dem ersten Parameter angezeigt werden kann.
 
 ## <a name="examples"></a>Beispiele
 
@@ -74,15 +74,15 @@ void __RPC_USER h_service_unbind(h_service, handle_t);
 [Bindung und Handles](/windows/desktop/Rpc/binding-and-handles)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**implizites \_ handle**](implicit-handle.md)
+[**Implizites \_ Handle**](implicit-handle.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

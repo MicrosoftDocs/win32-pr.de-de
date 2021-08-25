@@ -1,44 +1,44 @@
 ---
-description: Eine Anwendung, die als Standardbenutzer ausgeführt wird, kommuniziert mithilfe eines Remote Prozedur Aufrufs (RPC) mit einem Dienst, der als System ausgeführt wird.
+description: Eine Anwendung, die als Standardbenutzer ausgeführt wird, kommuniziert mit einem Dienst, der als SYSTEM ausgeführt wird, mithilfe des Remoteprozeduraufrufs (Remote Procedure Call, RPC).
 ms.assetid: c0bcebe3-f7eb-471f-a21d-5840d2e26729
-title: Betriebs System-Dienstmodell
+title: Betriebssystemdienstmodell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ce545c60da8e480247c8fc8b02cfc01e4487340
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af797a7baad8390b1b4bc79fd7723a518c587ed58cc2dab27ab2898845335ca3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907800"
 ---
-# <a name="operating-system-service-model"></a>Betriebs System-Dienstmodell
+# <a name="operating-system-service-model"></a>Betriebssystemdienstmodell
 
-Im Betriebssystem-Dienstmodell kommuniziert eine Anwendung, die als Standardbenutzer ausgeführt wird, mit einem Dienst, der als **System** ausgeführt wird, mithilfe des [Remote Prozedur Aufrufs](/windows/desktop/Rpc/rpc-start-page) (RPC).
+Im Betriebssystemdienstmodell kommuniziert eine Anwendung, die als Standardbenutzer ausgeführt wird, mit einem Dienst, der als **SYSTEM** ausgeführt wird, mithilfe des [Remoteprozeduraufrufs](/windows/desktop/Rpc/rpc-start-page) (Remote Procedure Call, RPC).
 
-Die Standardbenutzer Anwendung wird im Anwendungs Manifest mit dem **requestedExecutionLevel-Wert** " **asInvoker**" gekennzeichnet. Um einen Vorgang auszuführen, für den Administratorrechte erforderlich sind, stellt die Standardbenutzer Anwendung eine Anforderung an den Dienst.
+Die Standardbenutzeranwendung ist im Anwendungsmanifest mit **dem requestedExecutionLevel** von **asInvoker gekennzeichnet.** Um einen Vorgang durchzuführen, der Administratorrechte erfordert, stellt die Standardbenutzeranwendung eine Anforderung an den Dienst.
 
-Eine Verwendung für das Dienstmodell des Betriebssystems besteht darin, Anwendungen zu verwalten, die sich auf das System auswirken können, z. b. Antivirensoftware oder andere unerwünschte Software und Spyware. Mit der Standardbenutzer Anwendung kann der angemeldete Benutzer einige Aspekte des dienstanwendungs-Dienstanbieter steuern. Der Dienst ist verantwortlich für die Bestimmung der Vorgänge, die er für eine Standardbenutzer Anwendung ausführt. Beispielsweise kann ein Antivirendienst einem Standardbenutzer ermöglichen, eine Überprüfung des Systems zu starten, aber es ist nicht möglich, dass ein Standardbenutzer die Echt Zeit Viren Überprüfung deaktiviert.
+Eine Verwendung für das Betriebssystemdienstmodell besteht in der Verwaltung von Anwendungen, die sich auf das System auswirken können, z. B. Antivirensoftware oder andere unerwünschte Software und Spyware. Mit der Standardbenutzeranwendung kann der angemeldete Benutzer einige Aspekte des Diensts steuern. Der Dienst ist dafür verantwortlich, zu bestimmen, welche Vorgänge er für eine Standardbenutzeranwendung ausführt. Beispielsweise kann ein Antivirendienst es einem Standardbenutzer ermöglichen, eine Überprüfung des Systems zu starten, aber er lässt möglicherweise nicht zu, dass ein Standardbenutzer die Virenüberprüfung in Echtzeit deaktiviert.
 
-Ein wesentlicher Vorteil der Verwendung des Betriebssystem-Dienst Modells ist, dass keine Eingabeaufforderung zur Rechte Erweiterung erforderlich ist.
+Ein hauptvorteil der Verwendung des Betriebssystemdienstmodells ist, dass keine Eingabeaufforderung für rechte Rechte erforderlich ist.
 
-Ein Nachteil bei der Verwendung des Betriebssystem-Dienst Modells besteht darin, dass ein auf dem System ausgeführt Dienst mehr Ressourcen als eine Aufgabe verwendet und ein Dienst nicht von einem Standardbenutzer angehalten werden kann. Verwenden Sie ggf. das [Modell mit erhöhten](elevated-task-model.md) rechten.
+Ein Nachteil der Verwendung des Betriebssystemdienstmodells ist, dass ein auf dem System ausgeführter Dienst mehr Ressourcen als eine Aufgabe verwendet und ein Dienst nicht von einem Standardbenutzer beendet werden kann. Erwägen Sie die [Verwendung des Aufgabenmodells mit erhöhten Rechten,](elevated-task-model.md) wenn es ausreicht.
 
-Um das Betriebssystem-Dienstmodell zu implementieren, erstellen Sie eine Standardbenutzer-Client Anwendung und einen Betriebssystem Dienst. Installieren Sie den Dienst während der Installation des Produkts im Betriebssystem.
+Um das Betriebssystemdienstmodell zu implementieren, erstellen Sie eine Standardbenutzerclientanwendung und einen Betriebssystemdienst. Installieren Sie den Dienst während der Produktinstallation im Betriebssystem.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Entwickeln von Anwendungen, für die Administrator Rechte erforderlich sind](developing-applications-that-require-administrator-privilege.md)
+[Entwickeln von Anwendungen, die Administratorrechte erfordern](developing-applications-that-require-administrator-privilege.md)
 </dt> <dt>
 
-[Administrator Broker Modell](administrator-broker-model.md)
+[Administratorbrokermodell](administrator-broker-model.md)
 </dt> <dt>
 
-[COM-Objektmodell für Administratoren](administrator-com-object-model.md)
+[COM-Objektmodell des Administrators](administrator-com-object-model.md)
 </dt> <dt>
 
-[Modell mit erhöhten Rechten](elevated-task-model.md)
+[Aufgabenmodell mit erhöhten Rechten](elevated-task-model.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
 title: Attribut "Privilege-Display-Name"
-description: Anzeige Name für ein Windows NT-Privileg.
+description: Anzeigename für eine Windows NT-Berechtigung.
 ms.assetid: 9509b342-c7ff-48c8-adfc-351abf9beaf2
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für "Privilege-Display Name"-Attribut
-- privilegedisplayname-Attribut AD-Schema
+- AD-Schema des Attributs "Privilege-Display-Name"
+- privilegeDisplayName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e41666264a0b0900765531c8afb38f16e2ffacb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b1f9fe2e87001621f962078cb33c4990dd4619791323552e66f84a404f3dac17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923300"
 ---
 # <a name="privilege-display-name-attribute"></a>Attribut "Privilege-Display-Name"
 
-Anzeige Name für ein Windows NT-Privileg.
+Anzeigename für eine Windows NT-Berechtigung.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Berechtigungs Anzeige Name                      |
-| LDAP-Display-Name | privilegedisplayname                        |
+| CN                | Privilege-Display-Name                      |
+| Ldap-Anzeigename | privilegeDisplayName                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.634                      |
-| System-ID-GUID    | 19405b98-3cfa-11d1-a9c0-0000f 80367c1        |
+| System-Id-Guid    | 19405b98-3cfa-11d1-a9c0-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Anzeige Name für ein Windows NT-Privileg.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -70,7 +70,7 @@ Anzeige Name für ein Windows NT-Privileg.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -100,10 +100,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Is-Single-Valued       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -121,10 +121,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -142,10 +142,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -163,10 +163,10 @@ Anzeige Name für ein Windows NT-Privileg.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| Ist einwertig       | True         |
 | Ist indiziert             | False        |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

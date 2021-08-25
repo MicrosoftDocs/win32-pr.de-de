@@ -1,7 +1,7 @@
 ---
-description: Die Methode "kreateinstance" erstellt eine Instanz des-Objekts. Diese Methode unterstützt die Erstellung des Objekts über eine Klassenfactory. Weitere Informationen finden Sie unter cfactoriytemplate.
+description: Die CreateInstance-Methode erstellt eine Instanz des -Objekts. Diese Methode unterstützt die Erstellung des Objekts über eine Klassenfactory. Weitere Informationen finden Sie unter CFactoryTemplate.
 ms.assetid: 88dfa933-6fa1-4b57-8b0d-579233fa960c
-title: Cseekingpassthru. kreateinzustance-Methode (seekpt. h)
+title: CSeekingPassThru.CreateInstance-Methode (Seekpt.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3640cbd6a0a3e582899e7f5cd349ca48498f3532
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5060e2e9842022d89c49e01b56967a92b71c5752e01239fd970c881ccb509cbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908060"
 ---
-# <a name="cseekingpassthrucreateinstance-method"></a>Cseekingpassthru. kreateinzustance-Methode
+# <a name="cseekingpassthrucreateinstance-method"></a>CSeekingPassThru.CreateInstance-Methode
 
-Die- `CreateInstance` Methode erstellt eine Instanz des-Objekts. Diese Methode unterstützt die Erstellung des Objekts über eine Klassenfactory. Weitere Informationen finden Sie unter [**cfactoriytemplate**](cfactorytemplate.md).
+Die `CreateInstance` -Methode erstellt eine Instanz des -Objekts. Diese Methode unterstützt die Erstellung des Objekts über eine Klassenfactory. Weitere Informationen finden Sie unter [**CFactoryTemplate**](cfactorytemplate.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ static CUnknown* CreateInstance(
 
 <dl> <dt>
 
-*Kro* 
+*Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle** des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT** -Wert. Ignoriert.
+Zeiger auf einen **HRESULT-Wert.** Ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf ein neues **cseekingpassthru** -Objekt zurück.
+Gibt einen Zeiger auf ein neues **CSeekingPassThru-Objekt zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Gibt einen Zeiger auf ein neues **cseekingpassthru** -Objekt zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Seekpt. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Seekpt.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Gibt einen Zeiger auf ein neues **cseekingpassthru** -Objekt zurück.
 
 <dl> <dt>
 
-[**Cseekingpassthru-Klasse**](cseekingpassthru.md)
+[**CSeekingPassThru-Klasse**](cseekingpassthru.md)
 </dt> </dl>
 
  

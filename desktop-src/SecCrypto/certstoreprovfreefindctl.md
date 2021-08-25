@@ -1,7 +1,7 @@
 ---
-description: Wird aufgerufen, wenn das vom certstoreprovfindctl-Rückruf zurückgegebene Zertifikat in einem nachfolgenden Aufruf von certstoreprovfindctl nicht verwendet und daher freigegeben wurde.
+description: Wird aufgerufen, wenn das vom CertStoreProvFindCTL-Rückruf zurückgegebene Zertifikat in einem nachfolgenden Aufruf von CertStoreProvFindCTL nicht verwendet und daher freigegeben wurde.
 ms.assetid: 04e62a4e-4542-4225-8750-fabbda5adf0d
-title: Certstoreprovfrefindctl-Rückruffunktion
+title: CertStoreProvFreeFindCTL-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: ff0c9c3b7be6b8a4cafd759c3411f5096ee8640b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f3f6d224ed19073408015b3b83b90a66e9402d9b838d50eb7a8381e312e0534
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877140"
 ---
-# <a name="certstoreprovfreefindctl-callback-function"></a>Certstoreprovfrefindctl-Rückruffunktion
+# <a name="certstoreprovfreefindctl-callback-function"></a>CertStoreProvFreeFindCTL-Rückruffunktion
 
-Die **certstoreprovfrefindctl** -Rückruffunktion wird aufgerufen, wenn das vom [**certstoreprovfindctl**](certstoreprovfindctl.md) -Rückruf zurückgegebene Zertifikat nicht verwendet und daher in einem nachfolgenden Aufruf von " **certstoreprovfindctl**" freigegeben wurde. Bevor der Close-Rückruf aufgerufen wird, müssen alle vom [**certstoreprovfindctl**](certstoreprovfindctl.md) -Rückruf zurückgegebenen Zertifikate vom Anbieter mithilfe von **certstoreprovfindctl** oder **certstoreprovfreifindctl** freigegeben werden.
+Die **Rückruffunktion CertStoreProvFreeFindCTL** wird aufgerufen, wenn das vom [**CertStoreProvFindCTL-Rückruf**](certstoreprovfindctl.md) zurückgegebene Zertifikat nicht verwendet und daher in einem nachfolgenden Aufruf von **CertStoreProvFindCTL** freigegeben wurde. Bevor der CLOSE-Rückruf aufgerufen wird, müssen alle vom [**CertStoreProvFindCTL-Rückruf**](certstoreprovfindctl.md) zurückgegebenen Zertifikate vom Anbieter mithilfe von **CertStoreProvFindCTL** oder **CertStoreProvFreeFindCTL** freigegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,37 +41,37 @@ BOOL CertStoreProvFreeFindCTL(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-**Hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+**HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pctlcontext* \[ in\]
+*pCtlContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) Struktur.
+Ein Zeiger auf eine [**CTL \_ CONTEXT-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
 
 </dd> <dt>
 
-*pvstoreprovfindinfo* \[ in\]
+*pvStoreProvFindInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der Informationen zu suchen enthält.
+Ein Zeiger auf einen Puffer, der Suchinformationen enthält.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn Sie fehlschlägt.
+Gibt **TRUE** zurück, wenn die Funktion erfolgreich ist, oder **FALSE,** wenn sie fehlschlägt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -88,10 +88,10 @@ Gibt **true** zurück, wenn die Funktion erfolgreich ist, oder **false** , wenn 
 
 <dl> <dt>
 
-[**Certstoreprovfindctl**](certstoreprovfindctl.md)
+[**CertStoreProvFindCTL**](certstoreprovfindctl.md)
 </dt> <dt>
 
-[**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
+[**\_CTL-KONTEXT**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Zugriffsflags ("AccCtrl. h")
-description: Diese Werte geben an, ob ein Eintrag in der Zugriffsliste Rechte beschreibt, die zugelassen oder verweigert werden.
+title: Zugriffsflags (AccCtrl.h)
+description: Diese Werte geben an, ob ein Eintrag in der Zugriffsliste zulässige oder verweigerte Rechte beschreibt.
 ms.assetid: 460d2c72-3315-4b4c-928e-4bb0640acbe5
 topic_type:
 - apiref
@@ -13,23 +13,23 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5972bf95efc675d6dd9c2e58c0b7d25c8c305371
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc1e25fe090661bda40e8063c1d4d711c5a040f343408507756889a64bf96990
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119859560"
 ---
 # <a name="access-flags"></a>Zugriffsflags
 
-Diese Werte geben an, ob ein Eintrag in der Zugriffsliste Rechte beschreibt, die zugelassen oder verweigert werden.
+Diese Werte geben an, ob ein Eintrag in der Zugriffsliste zulässige oder verweigerte Rechte beschreibt.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                      | BESCHREIBUNG                                   |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------|
-| <span id="ACTRL_ACCESS_ALLOWED"></span><span id="actrl_access_allowed"></span><dl> <dt>**Actrl \_ Zugriff \_ zulässig**</dt> <dt>0x00000000</dt> </dl> | Gibt einen Zugriffs zulässigen Eintrag an.<br/> |
-| <span id="ACTRL_ACCESS_DENIED"></span><span id="actrl_access_denied"></span><dl> <dt>**Actrl \_ Zugriff \_ verweigert**</dt> <dt>0x10000000</dt> </dl>    | Gibt den Eintrag "Zugriff verweigert" an.<br/>  |
+| <span id="ACTRL_ACCESS_ALLOWED"></span><span id="actrl_access_allowed"></span><dl> <dt>**ACTRL \_ ACCESS \_ ALLOWED**</dt> <dt>0x00000000</dt> </dl> | Gibt einen eintrag an, für den der Zugriff zulässig ist.<br/> |
+| <span id="ACTRL_ACCESS_DENIED"></span><span id="actrl_access_denied"></span><dl> <dt>**ACTRL \_ ZUGRIFF \_ VERWEIGERT**</dt> <dt>0X10000000</dt> </dl>    | Gibt einen Eintrag mit verweigerter Zugriffsberechtigung an.<br/>  |
 
 
 
@@ -41,7 +41,7 @@ Diese Werte geben an, ob ein Eintrag in der Zugriffsliste Rechte beschreibt, die
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>"AccCtrl. h"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>AccCtrl.h</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Diese Werte geben an, ob ein Eintrag in der Zugriffsliste Rechte beschreibt, die
 
 <dl> <dt>
 
-[**actrl- \_ Zugriffs \_ Eintrag**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entrya)
+[**\_ACTRL-ZUGRIFFSEINTRAG \_**](/windows/desktop/api/AccCtrl/ns-accctrl-actrl_access_entrya)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Result01_TextInput02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ TextInput02-Klasse stellt die verfügbaren Texteingabe Richtlinien dar.
+description: Die Klasse MDM \_ Policy \_ Result01 \_ TextInput02 stellt die verfügbaren Texteingaberichtlinien dar.
 ms.assetid: d0ab2d69-6d43-410e-936a-cb87a521d5f3
 keywords:
 - MDM_Policy_Result01_TextInput02-Klasse
-- MDM_Policy_Result01_TextInput02-Klasse, beschrieben
+- MDM_Policy_Result01_TextInput02-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a0c02c2afe70f3e7122de0c3d888c42ac179317
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 199f3e8cbe54f28554630dcb2f96c00722c6bb275ef213ebd70676ea1c6c9a1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875190"
 ---
-# <a name="mdm_policy_result01_textinput02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ TextInput02-Klasse
+# <a name="mdm_policy_result01_textinput02-class"></a>MDM \_ Policy \_ Result01 \_ TextInput02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ TextInput02** -Klasse stellt die verfügbaren Texteingabe Richtlinien dar.
+Die **Klasse MDM Policy \_ \_ Result01 \_ TextInput02** stellt die verfügbaren Texteingaberichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -57,17 +57,17 @@ class MDM_Policy_Result01_TextInput02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ TextInput02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ TextInput02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ TextInput02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ TextInput02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Zuordnung](/windows/client-management/mdm/policy-csp-textinput#textinput-allowimelogging)
+[AllowIMELogging](/windows/client-management/mdm/policy-csp-textinput#textinput-allowimelogging)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -188,7 +188,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Exclude japaneseimeexceptshiftjis](/windows/client-management/mdm/policy-csp-textinput#textinput-excludejapaneseimeexceptshiftjis)
+[ExcludeJapaneseIMEExceptShiftJIS](/windows/client-management/mdm/policy-csp-textinput#textinput-excludejapaneseimeexceptshiftjis)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -202,32 +202,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "TextInput".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "TextInput".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> </dl>
 
@@ -237,10 +237,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -249,7 +249,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Sfvm \_ queryfsnotify kann geändert oder nicht verfügbar sein.
+description: SFVM \_ QUERYFSNOTIFY kann geändert oder nicht verfügbar sein.
 ms.assetid: 5d777115-bae3-47c4-9edc-c99c40a4f926
-title: SFVM_QUERYFSNOTIFY Meldung (shlobj. h)
+title: SFVM_QUERYFSNOTIFY Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a4416bda249e3ec0f2a0c0f2d45ac353961e180
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 932650257ddb039e3841a583c3856316a86eca469db74a0e8ab6ebf33e9411f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941990"
 ---
-# <a name="sfvm_queryfsnotify-message"></a>Sfvm \_ queryfsnotify-Meldung
+# <a name="sfvm_queryfsnotify-message"></a>SFVM \_ QUERYFSNOTIFY-Nachricht
 
-\[**Sfvm \_ Queryfsnotify** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[**SFVM \_ QUERYFSNOTIFY** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Ermöglicht dem Rückruf Objekt das Registrieren eines Ordners, damit Änderungen an der Ansicht dieses Ordners Benachrichtigungen generieren. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht dem Rückrufobjekt das Registrieren eines Ordners, sodass Änderungen an der Ansicht dieses Ordners Benachrichtigungen generieren. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -33,21 +33,21 @@ SFVM_QUERYFSNOTIFY
 *shcne* \[ in, out\]
 </dt> <dd>
 
-Eine-Struktur, die die PIDL des Elements enthält, das auf Ereignisse überwacht werden soll, und ein Hinweis darauf, ob die Unterordner dieses Elements ebenfalls überwacht werden sollen.
+Eine -Struktur zum Speichern der PIDL des Elements, das auf Ereignisse überwacht werden soll, und ein Hinweis darauf, ob unterordner dieses Elements ebenfalls überwacht werden sollen.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP2<br/>                                                      |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

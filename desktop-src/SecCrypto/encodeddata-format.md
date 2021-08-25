@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Zeichen folgen Darstellung der codierten Daten zurück.
+description: Gibt eine Zeichenfolgendarstellung der codierten Daten zurück.
 ms.assetid: d1231e6d-57d7-4b5a-ab37-d4ee1b29cf25
-title: Encodeddata. Format-Methode
+title: EncodedData.Format-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 435d0fdcd6e2bbd8c446c38f97012d820dbe5c7b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b3d4316a2de24410a14d496b71e46746ea580109f8d6ede10c4c1a0f57fc22f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874870"
 ---
-# <a name="encodeddataformat-method"></a>Encodeddata. Format-Methode
+# <a name="encodeddataformat-method"></a>EncodedData.Format-Methode
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**AsnEncodedData-Klasse**](/dotnet/api/system.security.cryptography.asnencodeddata?view=netcore-3.1) im [**System. Security. Cryptography**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**AsnEncodedData-Klasse**](/dotnet/api/system.security.cryptography.asnencodeddata?view=netcore-3.1) im [**System.Security.Cryptography-Namespace.**](/dotnet/api/system.security.cryptography?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **Format** -Methode gibt eine Zeichen folgen Darstellung der codierten Daten zurück.
+Die **Format-Methode** gibt eine Zeichenfolgendarstellung der codierten Daten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ EncodedData.Format( _
 
 <dl> <dt>
 
-*bmultilines* \[ in, optional\]
+*bMultiLines* \[ in, optional\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die zurückgegebene Zeichenfolge mehrere Zeilen enthält. **True** gibt an, dass die zurückgegebene Zeichenfolge mehrere Zeilen enthalten kann, die durch **vbCrLf** getrennt sind. Der Standardwert ist **False**.
+Boolescher Wert, der angibt, ob die zurückgegebene Zeichenfolge mehrere Zeilen enthält. True **gibt an,** dass die zurückgegebene Zeichenfolge mehrere Zeilen enthalten kann, die durch **vbCrLf getrennt sind.** Der Standardwert ist **False**.
 
 </dd> </dl>
 
@@ -52,9 +52,9 @@ Boolescher Wert, der angibt, ob die zurückgegebene Zeichenfolge mehrere Zeilen 
 
 Eine lesbare Zeichenfolge, die die codierten Daten darstellt. Wenn CAPICOM die codierten Daten nicht versteht, wird eine hexadezimale Darstellung der Daten zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Format der zurückgegebenen Zeichenfolge kann sich zwischen verschiedenen Versionen von CAPICOM ändern. Verlassen Sie sich nicht auf ein bestimmtes Format in Ihrer Anwendung.
+Das Format der zurückgegebenen Zeichenfolge kann sich zwischen verschiedenen Versionen von CAPICOM ändern. Verlassen Sie sich in Ihrer Anwendung nicht auf ein bestimmtes Format.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Das Format der zurückgegebenen Zeichenfolge kann sich zwischen verschiedenen Ve
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
@@ -73,7 +73,7 @@ Das Format der zurückgegebenen Zeichenfolge kann sich zwischen verschiedenen Ve
 
 <dl> <dt>
 
-[**Encoddata**](encodeddata.md)
+[**Codierte Daten**](encodeddata.md)
 </dt> </dl>
 
  

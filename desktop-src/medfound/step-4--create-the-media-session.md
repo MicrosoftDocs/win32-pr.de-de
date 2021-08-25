@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist Schritt 4 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 4 des Tutorials Wiedergeben von Mediendateien mit Media Foundation.
 ms.assetid: fe5e852f-fe0c-439d-b0c5-d32593b587cb
-title: 'Schritt 4: Erstellen der Medien Sitzung'
+title: 'Schritt 4: Erstellen der Mediensitzung'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b4c6c9e36552247cb294a7d0d6996fcc0b8a6ec
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: ad9c31d4c5e07abe8f088aad38fec9f91046a7d4338905dbd917de9d414fd4f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847770"
 ---
-# <a name="step-4-create-the-media-session"></a>Schritt 4: Erstellen der Medien Sitzung
+# <a name="step-4-create-the-media-session"></a>Schritt 4: Erstellen der Mediensitzung
 
-Dieses Thema ist Schritt 4 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 4 des Tutorials Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Mediensitzung – Wiedergabebeispiel](media-session-playback-example.md)gezeigt.
 
-`CPlayer::CreateSession`Erstellt eine neue Instanz der Medien Sitzung.
+`CPlayer::CreateSession`Erstellt eine neue Instanz der Mediensitzung.
 
 
 ```C++
@@ -56,13 +56,13 @@ done:
 
 Diese Methode führt die folgenden Schritte aus:
 
-1.  Ruft `CPlayer::CloseSession` auf, um eine vorherige Instanz der Medien Sitzung zu schließen.
-2.  Ruft [**mfkreatemediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) auf, um eine neue Instanz der Medien Sitzung zu erstellen.
-3.  Ruft die [**imfmediaeventgenerator:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) -Methode auf, um das nächste Ereignis aus der Medien Sitzung anzufordern. Der erste Parameter für **begingetevent** ist ein Zeiger auf das **cplayer** -Objekt, das die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle einrichtet.
+1.  Ruft `CPlayer::CloseSession` auf, um eine vorherige Instanz der Mediensitzung zu schließen.
+2.  Ruft [**MFCreateMediaSession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) auf, um eine neue Instanz der Mediensitzung zu erstellen.
+3.  Ruft die [**METHODE VONMEDIAEventGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent) auf, um das nächste Ereignis von der Mediensitzung anzufordern. Der erste Parameter für **BeginGetEvent** ist ein Zeiger auf das **CPlayer-Objekt** selbst, das die [**INTERFACESAsyncCallback-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) implementiert.
 
-Die Ereignis Behandlung wird in Schritt 5 beschrieben.
+Die Ereignisbehandlung wird in Schritt 5 beschrieben.
 
-Weiter: [Schritt 5: Behandeln von Ereignissen für Medien Sitzungen](step-5--handle-media-session-events.md)
+Weiter: [Schritt 5: Behandeln von Mediensitzungsereignissen](step-5--handle-media-session-events.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

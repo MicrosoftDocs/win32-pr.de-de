@@ -1,35 +1,35 @@
 ---
-title: Benutzeroberflächen-Automatisierungs Konstanten
-description: Dieser Abschnitt enthält Informationen zu den Microsoft UI Automation-Konstanten.
+title: Benutzeroberflächenautomatisierung Konstanten
+description: Dieser Abschnitt enthält Informationen zu den Microsoft Benutzeroberflächenautomatisierung Konstanten.
 ms.assetid: 39206da8-e038-4a3b-833f-5902142911ac
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe1ff196d225e03c86a6b4f55fa6dca16f06908b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a8dbb24675a8fa82807a3c34ae9b33659cece3bc78a7a7e1f0443bb832330e99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119859680"
 ---
-# <a name="ui-automation-constants"></a>Benutzeroberflächen-Automatisierungs Konstanten
+# <a name="ui-automation-constants"></a>Benutzeroberflächenautomatisierung Konstanten
 
-Dieser Abschnitt enthält Informationen zu den Microsoft UI Automation-Konstanten.
+Dieser Abschnitt enthält Informationen zu den Microsoft Benutzeroberflächenautomatisierung Konstanten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Annotation-Typbezeichner**](uiauto-annotation-type-identifiers.md)
--   [**Ändern von Info bezeichgern**](change-info-identifiers.md)
--   [**Steuerelement Muster-IDs**](uiauto-controlpattern-ids.md)
--   [**Steuerelement-Typbezeichner**](uiauto-controltype-ids.md)
+-   [**Anmerkungstypbezeichner**](uiauto-annotation-type-identifiers.md)
+-   [**Ändern von Infobezeichnern**](change-info-identifiers.md)
+-   [**Steuerelementmusterbezeichner**](uiauto-controlpattern-ids.md)
+-   [**Steuerelementtypbezeichner**](uiauto-controltype-ids.md)
 -   [**Fehlercodes**](uiauto-error-codes.md)
--   [**Ereignis Bezeichner**](uiauto-event-ids.md)
--   [**Bezeichner der Überschriftenebene**](uiauto-heading-level-identifiers.md)
--   [**Bezeichner für den Bezeichner**](landmark-type-identifiers.md)
+-   [**Ereignisbezeichner**](uiauto-event-ids.md)
+-   [**Bezeichner auf Überschriftsebene**](uiauto-heading-level-identifiers.md)
+-   [**Landmark-Typbezeichner**](landmark-type-identifiers.md)
 -   [**Metadatenbezeichner**](uiauto-metadata-identifiers.md)
 -   [Eigenschaftsbezeichner](uiauto-entry-propids.md)
--   [**Stil Bezeichner**](uiauto-style-identifiers.md)
--   [**Text Attribut Bezeichner**](uiauto-textattribute-ids.md)
--   [Als veraltet markierte GUIDs](uiauto-guids.md)
+-   [**Formatbezeichner**](uiauto-style-identifiers.md)
+-   [**Textattributbezeichner**](uiauto-textattribute-ids.md)
+-   [Veraltete GUIDs](uiauto-guids.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,9 +38,9 @@ Dieser Abschnitt enthält Informationen zu den Microsoft UI Automation-Konstante
 [Referenz](entry-uiautocore-ref.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

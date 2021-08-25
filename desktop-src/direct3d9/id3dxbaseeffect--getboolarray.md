@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Array von booleschen Werten ab.
+description: Ruft ein Array von BOOL-Werten ab.
 ms.assetid: 4a5e2f48-fa82-47dc-a388-02a8679585d2
-title: 'ID3DXBaseEffect:: getboolarray-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetBoolArray-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: f714dfa91baba14524f12b6c3b2cb85211484cf5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 230970e1328737339f236776c1405b7a950ea97c07a04d60d9ce26d9226168e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848780"
 ---
-# <a name="id3dxbaseeffectgetboolarray-method"></a>ID3DXBaseEffect:: getboolarray-Methode
+# <a name="id3dxbaseeffectgetboolarray-method"></a>ID3DXBaseEffect::GetBoolArray-Methode
 
-Ruft ein Array von booleschen Werten ab.
+Ruft ein Array von BOOL-Werten ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT GetBoolArray(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 </dd> <dt>
 
-*PB* \[ vorgenommen\]
+*pB* \[ out\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)\***
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)\***
 
-Gibt ein Array von booleschen Werten zurück.
+Gibt ein Array boolescher Werte zurück.
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von booleschen Werten im Array.
+Anzahl der booleschen Werte im Array.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Anzahl von booleschen Werten im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,19 +81,19 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXBaseEffect](id3dxbaseeffect.md)
 </dt> <dt>
 
-[**Setboolarray**](id3dxbaseeffect--setboolarray.md)
+[**SetBoolArray**](id3dxbaseeffect--setboolarray.md)
 </dt> </dl>
 
  

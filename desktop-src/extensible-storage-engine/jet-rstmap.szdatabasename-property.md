@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RSTMAP. szdatabasename-Eigenschaft'
-title: JET_RSTMAP. szdatabasename-Eigenschaft
+description: 'Erfahren Sie mehr über: JET_RSTMAP.szDatabaseName-Eigenschaft'
+title: JET_RSTMAP.szDatabaseName-Eigenschaft
 TOCTitle: 'szDatabaseName property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RSTMAP.szDatabaseName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_rstmap.szdatabasename(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d8d08266b20600d5e5253fab929e9a6de5065aef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a66be5a854abee395a910596686dbc0a7f16b588fe4567e574da3efcae38d53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850050"
 ---
-# <a name="jet_rstmapszdatabasename-property"></a>JET_RSTMAP. szdatabasename-Eigenschaft
+# <a name="jet_rstmapszdatabasename-property"></a>JET_RSTMAP.szDatabaseName-Eigenschaft
 
-Ruft den alten Namen/Pfad der Datenbank ab oder legt ihn fest. Kann NULL sein, wenn Sie unverändert ist.
+Ruft den alten Namen/Pfad der Datenbank ab oder legt sie fest. Kann NULL sein, wenn er unverändert ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string szDatabaseName { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RSTMAP-Klasse](./jet-rstmap-class.md)
 
-[Mitglieder JET_RSTMAP](./jet-rstmap-members.md)
+[JET_RSTMAP-Member](./jet-rstmap-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

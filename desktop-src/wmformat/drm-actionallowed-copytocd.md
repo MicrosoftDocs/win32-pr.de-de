@@ -1,9 +1,9 @@
 ---
 title: DRM_ActionAllowed_CopyToCD
-description: Das vom DRM-Attribut ausführbare \_ \_ Attribut copyper CD gibt an, ob der Inhalt auf eine CD kopiert werden darf.
+description: Das DRM \_ ActionAllowed CopyToCD-Attribut gibt an, ob der Inhalt auf eine \_ CD kopiert werden darf.
 ms.assetid: c650bb2e-6cec-404a-8ece-7a5687cda99f
 keywords:
-- DRM_ActionAllowed_CopyToCD Windows Media-Format
+- DRM_ActionAllowed_CopyToCD Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ba214fb2f067ba523222f92211bf7a9412a1634
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 852d44a4c812aed0d2f188b5ab18e9b74a1813bd9605bf348ca23b96b72f7d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106340684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809410"
 ---
-# <a name="drm_actionallowed_copytocd"></a>DRM- \_ Aktions zulässige \_ CopyTo-CD
+# <a name="drm_actionallowed_copytocd"></a>DRM \_ ActionAllowed \_ CopyToCD
 
-Das vom DRM-Attribut ausführbare Attribut **\_ \_ copyper CD** gibt an, ob der Inhalt auf eine CD kopiert werden darf.
+Das **DRM \_ ActionAllowed \_ CopyToCD-Attribut** gibt an, ob der Inhalt auf eine CD kopiert werden darf.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm- \_ Aktions zulässige \_ copyper-CD
+g \_ wszWMDRM \_ ActionAllowed \_ CopyToCD
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows Media DRM 10-Lizenzen verwenden Sie die Kopier Aktion, um das Kopieren auf CD einzuschränken. Überprüfen Sie die Eigenschaft " [**DRM- \_ Aktions zulässige \_ Kopie**](drm-actionallowed-copy.md) ", um zu bestimmen, ob das Kopieren zulässig ist.
+Windows Media DRM 10-Lizenzen verwenden die Kopieraktion, um das Kopieren auf CD einzuschränken. Überprüfen Sie die [**EIGENSCHAFT DRM \_ ActionAllowed \_ Copy**](drm-actionallowed-copy.md) , um zu bestimmen, ob das Kopieren zulässig ist.
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
+Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**IWMDRMReader::GetDRMProperty abgerufen wird.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader::
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn burnstate (Eigenschaft)
-description: Die burnstate-Eigenschaft ruft einen Enumerationswert ab, der den aktuellen Brenn Zustand angibt.
+title: IWMPC wie burnState (Eigenschaft)
+description: Die burnState-Eigenschaft ruft einen Enumerationswert ab, der den aktuellen Burn-Zustand angibt.
 ms.assetid: 2bb543f9-9e4c-4425-99d6-ac89ef7f5807
 keywords:
-- burnstate-Eigenschaften Fenster Media Player
-- burnstate-Eigenschaft, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, burnstate (Eigenschaft)
+- burnState-Windows Media Player
+- burnState-Eigenschaft Windows Media Player , IWMPC wie die Schnittstelle
+- IWMPCwiederSchnittstellenschnittstelle Windows Media Player , burnState-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c6b1aa8ec39f032e8f130a75370131bd2894c64
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 871d0884c9e5bf60a666f299953cff77d9a458b5a56f505c0588fafdb740023b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862040"
 ---
-# <a name="iwmpcdromburnburnstate-property"></a>Iwmpcdromburn:: burnstate (Eigenschaft)
+# <a name="iwmpcdromburnburnstate-property"></a>IWMPCwiedrig::burnState-Eigenschaft
 
-Die **burnstate** -Eigenschaft ruft einen Enumerationswert ab, der den aktuellen Brenn Zustand angibt.
+Die **burnState-Eigenschaft** ruft einen Enumerationswert ab, der den aktuellen Burn-Zustand angibt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ Public ReadOnly Property burnState As WMPBurnState
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **WMPLib. wmpburnstate** , bei dem es sich um einen Wert aus der **wmpburnstate** -Enumeration handelt, der den aktuellen Zustand angibt.
+Ein **WMPLib.WMPMemberState,** der ein Wert aus der **WMP-Enumeration ist,** der den aktuellen Zustand angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,10 +67,10 @@ Ein **WMPLib. wmpburnstate** , bei dem es sich um einen Wert aus der **wmpburnst
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Wmpburnstate**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnstate)
+[**WMP-Zustand**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnstate)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
 description: Wird an eine Anwendung gesendet, wenn ein Fenster aktiviert wird. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
 ms.assetid: ba1e7877-1612-4f2f-aced-0dd982352ad6
-title: WM_IME_SETCONTEXT Meldung (Winuser. h)
+title: WM_IME_SETCONTEXT Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b36cb1e80127d1a451dabcc457dc364a27878ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5fb3e65b47b5d62b1d37ffaee4dfc5927d76485d0c3e5de02662da64215e43f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829250"
 ---
-# <a name="wm_ime_setcontext-message"></a>WM \_ IME- \_ SetContext-Meldung
+# <a name="wm_ime_setcontext-message"></a>WM \_ IME \_ SETCONTEXT-Nachricht
 
-Wird an eine Anwendung gesendet, wenn ein Fenster aktiviert wird. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird an eine Anwendung gesendet, wenn ein Fenster aktiviert wird. Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,17 +31,17 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für fenster.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-**True** , wenn das Fenster aktiv ist, andernfalls **false** .
+**TRUE,** wenn das Fenster aktiv ist, **andernfalls FALSE.**
 
 </dd> <dt>
 
@@ -54,13 +54,13 @@ Anzeigeoptionen Dieser Parameter kann einen oder mehrere der folgenden Werte auf
 
 | Wert                                                                                                                                                                                                   | Bedeutung                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| <span id="ISC_SHOWUICOMPOSITIONWINDOW"></span><span id="isc_showuicompositionwindow"></span><dl> <dt>**ISC \_ showuicompositionwindow**</dt> </dl> | Fenster "Komposition" nach Benutzeroberflächen Fenster anzeigen.<br/>          |
-| <span id="ISC_SHOWUIGUIDWINDOW"></span><span id="isc_showuiguidwindow"></span><dl> <dt>**ISC \_ showuiguidwindow**</dt> </dl>                      | Zeigen Sie das Fenster "Guide" nach Benutzeroberflächen Fenster an.<br/>                |
-| <span id="ISC_SHOWUISOFTKBD"></span><span id="isc_showuisoftkbd"></span><dl> <dt>**ISC \_ showuisoft kbd**</dt> </dl>                               | Zeigt das Fenster "weiche Tastatur nach Benutzeroberfläche" an.<br/>               |
-| <span id="ISC_SHOWUICANDIDATEWINDOW"></span><span id="isc_showuicandidatewindow"></span><dl> <dt>**ISC \_ showuicandidatewindow**</dt> </dl>       | Anzeigen des Kandidaten Fensters von Index 0 nach Fenster der Benutzeroberfläche.<br/> |
-| <dl> <dt>ISC \_ showuicandidatewindow << 1</dt> </dl>                                                                                        | Anzeigen des Kandidaten Fensters von Index 1 nach Benutzeroberflächen Fenster.<br/> |
-| <dl> <dt>ISC \_ showuicandidatewindow << 2</dt> </dl>                                                                                        | Anzeigen des Kandidaten Fensters von Index 2 nach Benutzeroberflächen Fenster.<br/> |
-| <dl> <dt>ISC \_ showuicandidatewindow << 3</dt> </dl>                                                                                        | Anzeigen des Kandidaten Fensters von Index 3 nach Benutzeroberflächen Fenster.<br/> |
+| <span id="ISC_SHOWUICOMPOSITIONWINDOW"></span><span id="isc_showuicompositionwindow"></span><dl> <dt>**ISC \_ SHOWUICOMPOSITIONWINDOW**</dt> </dl> | Zeigen Sie das Kompositionsfenster nach Fenster der Benutzeroberfläche an.<br/>          |
+| <span id="ISC_SHOWUIGUIDWINDOW"></span><span id="isc_showuiguidwindow"></span><dl> <dt>**ISC \_ SHOWUIGUIDWINDOW**</dt> </dl>                      | Zeigen Sie das Fenster "Leitfaden" nach Fenster der Benutzeroberfläche an.<br/>                |
+| <span id="ISC_SHOWUISOFTKBD"></span><span id="isc_showuisoftkbd"></span><dl> <dt>**ISC \_ SHOWUISOFTKBD**</dt> </dl>                               | Zeigen Sie die Softtastatur nach Benutzeroberflächenfenster an.<br/>               |
+| <span id="ISC_SHOWUICANDIDATEWINDOW"></span><span id="isc_showuicandidatewindow"></span><dl> <dt>**ISC \_ SHOWUICGABEDATEWINDOW**</dt> </dl>       | Zeigt das Kandidatenfenster von Index 0 nach Benutzeroberflächenfenster an.<br/> |
+| <dl> <dt>ISC \_ SHOWUICEIGENEDATEWINDOW << 1</dt> </dl>                                                                                        | Zeigt das Kandidatenfenster von Index 1 nach Fenster der Benutzeroberfläche an.<br/> |
+| <dl> <dt>ISC \_ SHOWUICEIGENEDATEWINDOW << 2</dt> </dl>                                                                                        | Zeigt das Kandidatenfenster von Index 2 nach Benutzeroberflächenfenster an.<br/> |
+| <dl> <dt>ISC \_ SHOWUICEIGENEDATEWINDOW << 3</dt> </dl>                                                                                        | Zeigt das Kandidatenfenster von Index 3 nach Benutzeroberflächenfenster an.<br/> |
 
 
 
@@ -70,13 +70,13 @@ Anzeigeoptionen Dieser Parameter kann einen oder mehrere der folgenden Werte auf
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den von [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) oder [**immisuimess**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)zurückgegebenen Wert zurück.
+Gibt den von [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) oder [**ImmIsUIMessage**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)zurückgegebenen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung ein IME-Fenster erstellt hat, sollte Sie " [**immisuimess Age**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)" aufgerufen werden. Andernfalls sollte diese Nachricht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben werden.
+Wenn die Anwendung ein IME-Fenster erstellt hat, sollte sie [**ImmIsUIMessage**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)aufrufen. Andernfalls sollte diese Meldung an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben werden.
 
-Wenn die Anwendung das Kompositionsfenster zeichnet, muss das Fenster für die Zusammensetzung des standardmäßigen IME-Fensters nicht angezeigt werden. In diesem Fall muss die Anwendung den Wert von **ISC \_ showuicompositionwindow** aus dem *LPARAM* -Parameter löschen, bevor Sie die Nachricht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) oder [**immisuimess**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)übergibt. Wenn Sie ein bestimmtes Fenster für die Benutzeroberfläche anzeigen möchten, sollte eine Anwendung den entsprechenden Wert entfernen, damit Sie vom IME nicht angezeigt wird.
+Wenn die Anwendung das Kompositionsfenster zeichnet, muss das Ime-Standardfenster sein Kompositionsfenster nicht anzeigen. In diesem Fall muss die Anwendung den **\_ ISC-Wert SHOWUICOMPOSITIONWINDOW** aus dem *lParam-Parameter* löschen, bevor die Nachricht an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) oder [**ImmIsUIMessage**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)übergeben wird. Um ein bestimmtes Benutzeroberflächenfenster anzuzeigen, sollte eine Anwendung den entsprechenden Wert entfernen, damit der IME ihn nicht anzeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,7 +86,7 @@ Wenn die Anwendung das Kompositionsfenster zeichnet, muss das Fenster für die Z
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen); </dt> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h);</dt> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -97,10 +97,10 @@ Wenn die Anwendung das Kompositionsfenster zeichnet, muss das Fenster für die Z
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Eingabemethoden-Manager-Nachrichten](input-method-manager-messages.md)
 </dt> <dt>
 
-[**Immisuimess Age**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)
+[**ImmIsUIMessage**](/windows/desktop/api/Imm/nf-imm-immisuimessagea)
 </dt> </dl>
 
  

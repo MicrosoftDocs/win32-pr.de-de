@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ Klasse "shostedbootsap" definiert das Hosting-einheitliche Computersystem für eine CIM- \_ bootsap-Klasse.
+description: Die CIM \_ HostedBootSAP-Klasse definiert das hostende unitäre Computersystem für eine CIM \_ BootSAP-Klasse.
 ms.assetid: 2113de13-e7af-4a1c-ba80-27e2c57af8a0
 ms.tgt_platform: multiple
 title: CIM_HostedBootSAP-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 12e801f420ca2c56cc8960175391cdd9a669a00d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a69bad7de1a680054f93a9cb63596fff30538b31c02019e08ac58f643a0d81c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923590"
 ---
-# <a name="cim_hostedbootsap-class"></a>CIM- \_ Klasse "hustedbootsap"
+# <a name="cim_hostedbootsap-class"></a>CIM \_ HostedBootSAP-Klasse
 
-Die CIM-Klasse " **\_ shostedbootsap** " definiert das Hosting-einheitliche Computersystem für eine [**CIM- \_ bootsap**](cim-bootsap.md) -Klasse. Da diese Beziehung von [**CIM \_ hostspoint**](cim-hostedaccesspoint.md)untergeordnet ist, erbt Sie das für [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)definierte Bereichs Schema/Benennungs Schema, bei dem ein Zugriffspunkt dem Hostingsystem entspricht. In diesem Fall muss **CIM \_ bootsap** auf seine hostende [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md) -Klasse zurückgreifen.
+Die **CIM \_ HostedBootSAP-Klasse** definiert das hostende unitäre Computersystem für eine [**CIM \_ BootSAP-Klasse.**](cim-bootsap.md) Da diese Beziehung von [**CIM \_ HostedAccessPoint**](cim-hostedaccesspoint.md)untergliedert ist, erbt sie das Bereichs-/Benennungsschema, das für [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)definiert ist, wobei ein Zugriffspunkt auf sein Hostingsystem zurückgreift. In diesem Fall muss **CIM \_ BootSAP** auf die hostende [**CIM \_ UnitaryComputerSystem-Klasse**](cim-unitarycomputersystem.md) zurückstellen.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_HostedBootSAP : CIM_HostedAccessPoint
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ hustedbootsap** " verfügt über diese Typen von Membern:
+Die **CIM \_ HostedBootSAP-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ hustedbootsap** " verfügt über diese Eigenschaften.
+Die **CIM \_ HostedBootSAP-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ unitarycomputersystem**
+Datentyp: **CIM \_ UnitaryComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md) , das das einheitliche Computersystem beschreibt.
+Ein [**CIM \_ UnitaryComputerSystem, das**](cim-unitarycomputersystem.md) das unitäre Computersystem beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ bootsap**
+Datentyp: **CIM \_ BootSAP**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ bootsap**](cim-bootsap.md) , der den auf dem einheitlichen Computersystem gehosteten Start-SAP beschreibt.
+Ein [**\_ CIM-BootSAP,**](cim-bootsap.md) der den auf dem unitären Computersystem gehosteten Start-SAP beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die CIM-Klasse " **\_ hustedbootsap** " wird von [**CIM " \_ hustedaccesspoint**](cim-hostedaccesspoint.md)" abgeleitet.
+Die **CIM \_ HostedBootSAP-Klasse** wird von [**CIM \_ HostedAccessPoint**](cim-hostedaccesspoint.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,17 +105,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ hubspoint**](cim-hostedaccesspoint.md)
+[**CIM \_ HostedAccessPoint**](cim-hostedaccesspoint.md)
 </dt> </dl>
 
  

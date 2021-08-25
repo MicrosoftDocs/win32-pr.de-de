@@ -3,7 +3,7 @@ title: ControlNameDefinition-Element
 description: Stellt einen Namen eines Steuerelements in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: 94b724bd-a4e3-40e0-9cf0-3cc6a71100d2
 keywords:
-- ControlNameDefinition-Element Im Windows-Menüband
+- ControlNameDefinition-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6b2dc1db251d4d657c3793d2a66a9add1d324c37
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 98dec89afb4a74d71271e3568935f9707a31cbb1db18be22cedb6f667e1010cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840750"
 ---
 # <a name="controlnamedefinition-element"></a>ControlNameDefinition-Element
 
 Stellt einen Namen eines Steuerelements in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ControlNameDefinition
@@ -37,9 +37,9 @@ Stellt einen Namen eines Steuerelements in einer benutzerdefinierten [**SizeDefi
 
 
 
-| attribute           | Typ                                       | Erforderlich      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                           |
+| attribute           | type                                       | Erforderlich      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                           |
 |---------------------|--------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs:positiveInteger oder xs:string<br/> | Nein<br/> | <dt> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl> |
+| **Name**<br/> | xs:positiveInteger oder xs:string<br/> | Nein<br/> | <dt> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl> |
 
 
 
@@ -65,13 +65,13 @@ Stellt einen Namen eines Steuerelements in einer benutzerdefinierten [**SizeDefi
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ControlNameMap-Element**](windowsribbon-element-controlnamemap.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen mit vier **ControlNameDefinition-Elementen** veranschaulicht.
+Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinierte [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier **ControlNameDefinition-Elementen** veranschaulicht.
 
 
 ```XML

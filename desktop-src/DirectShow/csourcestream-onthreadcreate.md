@@ -1,7 +1,7 @@
 ---
-description: Die onthreadcreate-Methode wird aufgerufen, wenn der streamingindthread initialisiert wird.
+description: Die OnThreadCreate-Methode wird aufgerufen, wenn der Streamingthread initialisiert wird.
 ms.assetid: eeaa0d12-3185-4c97-b481-fc420cfc0897
-title: Csourcestream. onthreadcreate-Methode (Source. h)
+title: CSourceStream.OnThreadCreate-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a5ae3c210ca81eafa1951fc51301eaf50491357f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e263f0ae72838504ab6d219c71d7841291a3edd2a7d6b719d112c74fb30c23b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907710"
 ---
-# <a name="csourcestreamonthreadcreate-method"></a>Csourcestream. onthreadcreate-Methode
+# <a name="csourcestreamonthreadcreate-method"></a>CSourceStream.OnThreadCreate-Methode
 
-Die- `OnThreadCreate` Methode wird aufgerufen, wenn der streamingthread initialisiert wird.
+Die `OnThreadCreate` -Methode wird aufgerufen, wenn der Streamingthread initialisiert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md)ruft diese Methode auf, wenn Sie zum ersten Mal eine [**csourcestream:: init**](csourcestream-init.md) -Anforderung empfängt. Die-Methode führt in der-Basisklasse keine Aktion aus. Die abgeleitete Klasse kann diese Methode überschreiben, um Thread Initialisierungen auszuführen. Wenn die abgeleitete Klasse einen Fehlercode zurückgibt, wird der Thread mit einem Fehler beendet.
+Die Threadprozedur [**CSourceStream::ThreadProc**](csourcestream-threadproc.md)ruft diese Methode auf, wenn sie zum ersten Mal eine [**CSourceStream::Init-Anforderung**](csourcestream-init.md) empfängt. Die -Methode führt in der Basisklasse nichts aus. Die abgeleitete Klasse kann diese Methode überschreiben, um Threadin initialisierungen durchzuführen. Wenn die abgeleitete Klasse einen Fehlercode zurückgibt, wird der Thread mit einem Fehler beendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Thread Prozedur [**csourcestream:: ThreadProc**](csourcestream-threadproc.md
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

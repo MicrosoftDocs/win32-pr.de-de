@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ directoryaction-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ DirectoryAction-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: DF0990C4-495D-4860-9DF3-C736579078B5
 ms.tgt_platform: multiple
-title: CIM_DirectoryAction Methoden
+title: CIM_DirectoryAction-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59f5e160db96139bcb5fdeeea9c046177d709f7a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2dcd59272b2ef086165e9c271609fd76359a61d77e56b6464513efb9dd39fd9f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924310"
 ---
-# <a name="cim_directoryaction-methods"></a>CIM- \_ directoryaction-Methoden
+# <a name="cim_directoryaction-methods"></a>CIM \_ DirectoryAction-Methoden
 
-Die [**CIM- \_ directoryaction**](cim-directoryaction.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ DirectoryAction-Klasse**](cim-directoryaction.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

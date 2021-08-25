@@ -1,11 +1,11 @@
 ---
 title: MS-TS-LicenseVersion3-Attribut
-description: Die Version des dritten Terminal Servers pro Benutzer-CAL.
+description: Version des dritten Terminalservers pro Benutzer-CAL.
 ms.assetid: 93af038f-0324-4b39-a083-1790fc998557
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-LicenseVersion3-Attribut
-- msTSLicenseVersion3-Attribut AD-Schema
+- AD-Schema des MS-TS-LicenseVersion3-Attributs
+- MSTSLicenseVersion3-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e17c72aad315d52fdbdd9cd93d931bd280c8e48c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4e1d6220de03d210d519bec644fa37d04df80e961b01b6f81d3d100e8e21804a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924370"
 ---
 # <a name="ms-ts-licenseversion3-attribute"></a>MS-TS-LicenseVersion3-Attribut
 
-Die Version des dritten Terminal Servers pro Benutzer-CAL.
+Version des dritten Terminalservers pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-TS-LicenseVersion3                       |
-| LDAP-Display-Name | msTSLicenseVersion3                         |
+| Ldap-Anzeigename | msTSLicenseVersion3                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2004                     |
-| System-ID-GUID    | f8ba8f81-4Cab-4973-a3c8-3a6da62a5e31        |
+| System-ID-GUID    | f8ba8f81-4cab-4973-a3c8-3a6da62a5e31        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,11 +54,11 @@ Die Version des dritten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -75,11 +75,11 @@ Die Version des dritten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -96,11 +96,11 @@ Die Version des dritten Terminal Servers pro Benutzer-CAL.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
 | Ist indiziert             | Richtig         |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |

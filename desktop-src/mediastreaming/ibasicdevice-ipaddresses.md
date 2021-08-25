@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-IPADRESSEN-Methode
+title: IBasicDevice IpAddresses-Methode
 description: Gibt einen Vektor von IP-Adressen zurück.
 ms.assetid: F48B91DC-3AE2-462F-835B-292BF86904B3
 keywords:
-- IPADRESSEN-Methode Medien Streaming-API
-- IPADRESSEN-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, IPADRESSEN-Methode
+- 'IpAddresses-Methode: Medienstreaming-API'
+- IpAddresses-Methode Media Streaming API , IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , IpAddresses-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0623b6e2e5d96cb0a400ab1e820424b7eecf46c9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: dc997abb24c007e9e3e4d5c8028762daaca20e434ca4e3ab22fb278f567f998c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847680"
 ---
-# <a name="ibasicdeviceipaddresses-method"></a>Ibasicdevice:: IPADRESSEN-Methode
+# <a name="ibasicdeviceipaddresses-method"></a>IBasicDevice::IpAddresses-Methode
 
 Gibt einen Vektor von IP-Adressen zurück.
 
@@ -41,16 +41,16 @@ HRESULT IpAddresses(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Empfängt eine Aufzähl Bare Auflistung von Zeigern auf IP-Adressen.
+Empfängt eine aufzählbare Auflistung von Zeigern auf IP-Adressen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

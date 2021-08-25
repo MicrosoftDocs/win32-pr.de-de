@@ -1,11 +1,11 @@
 ---
-title: SD-Rechte effektives Attribut
-description: Dieses konstruierte Attribut gibt einen einzelnen DWORD-Wert zurück, der bis zu drei Bits festgelegt werden kann Sicherheits \_ \_ Informationen Sicherheits \_ \_ informationsacl Sicherheits informationsacl \_ Sicherheits \_ Informationen wenn ein Bit festgelegt ist, dann verfügt der Benutzer über Schreibzugriff auf den entsprechenden Teil der Sicherheits Beschreibung. Owner bedeutet Besitzer und Gruppe.
+title: SD-Rights-Effective-Attribut
+description: 'Dieses konstruierte Attribut gibt einen einzelnen DWORD-Wert zurück, für den bis zu drei Bits festgelegt werden können: OWNER \_ SECURITY \_ INFORMATIONDACL \_ SECURITY \_ INFORMATIONSACL \_ SECURITY INFORMATION Wenn ein Bit festgelegt \_ ist, hat der Benutzer Schreibzugriff auf den entsprechenden Teil der Sicherheitsbeschreibung. Besitzer bedeutet sowohl Besitzer als auch Gruppe.'
 ms.assetid: 66d1aefb-49be-42fc-b144-3fb95c59dd0f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für SD-Rights-effektive Attribute
-- AD-Schema des sdrightseffective-Attributs
+- AD-Schema des SD-Rights-Effective-Attributs
+- sDRightsEffective-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac449cd18b3fb75a61f04fffc266c290b7763295
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d65591c935955133ca004c066249e9c6ec4a2effa102ad8b0e2650e6e5155749
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923220"
 ---
-# <a name="sd-rights-effective-attribute"></a>SD-Rechte effektives Attribut
+# <a name="sd-rights-effective-attribute"></a>SD-Rights-Effective-Attribut
 
-Dieses konstruierte Attribut gibt einen einzelnen **DWORD** -Wert zurück, für den bis zu drei Bits festgelegt werden können:
+Dieses konstruierte Attribut gibt einen einzelnen **DWORD-Wert** zurück, für den bis zu drei Bits festgelegt werden können:
 
--   \_Sicherheits \_ Informationen für den Besitzer
--   DACL- \_ Sicherheits \_ Informationen
--   SACL- \_ Sicherheits \_ Informationen
+-   \_ \_ BESITZERSICHERHEITSINFORMATIONEN
+-   \_DACL-SICHERHEITSINFORMATIONEN \_
+-   \_SACL-SICHERHEITSINFORMATIONEN \_
 
-Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechenden Teil der Sicherheits Beschreibung. Owner bedeutet Besitzer und Gruppe.
+Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechenden Teil der Sicherheitsbeschreibung. Besitzer bedeutet sowohl Besitzer als auch Gruppe.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | SD-Rechte                  |
-| LDAP-Display-Name | sdrightabffective                    |
+| CN                | SD-Rights-Effective                  |
+| Ldap-Anzeigename | sDRightsEffective                    |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1304              |
 | System-ID-GUID    | c3dbafa6-33df-11d2-98b2-0000f87a57d4 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -49,7 +49,7 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -65,10 +65,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -77,7 +77,7 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -86,10 +86,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -107,10 +107,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -128,10 +128,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -149,10 +149,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -170,10 +170,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -191,10 +191,10 @@ Wenn ein Bit festgelegt ist, hat der Benutzer Schreibzugriff auf den entsprechen
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

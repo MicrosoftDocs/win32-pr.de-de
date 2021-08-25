@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Config01_AttachmentManager02-Klasse
-description: Die MDM- \_ Richtlinie \_ User \_ Config01 \_ AttachmentManager02 Class stellt die verfügbaren Anlagen-Manager-Richtlinien dar.
+description: Die MDM \_ Policy \_ User \_ Config01 \_ AttachmentManager02-Klasse stellt die verfügbaren Anlagen-Manager-Richtlinien dar.
 ms.assetid: b20ec516-cdc9-4aeb-802d-97cd8423eceb
 keywords:
 - MDM_Policy_User_Config01_AttachmentManager02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d127fc3770f6ba605bd8e1efdd82314231ab27f0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b7f0d19642d3d1ca24dfca14ccedbdcdb32ec40343dfb11ea9437e4a233f2b27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875030"
 ---
-# <a name="mdm_policy_user_config01_attachmentmanager02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Config01 \_ AttachmentManager02-Klasse
+# <a name="mdm_policy_user_config01_attachmentmanager02-class"></a>MDM \_ Policy \_ User \_ Config01 \_ AttachmentManager02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ User \_ Config01 \_ AttachmentManager02 Class stellt die verfügbaren Anlagen-Manager-Richtlinien dar.
+Die MDM \_ Policy \_ User \_ Config01 \_ AttachmentManager02-Klasse stellt die verfügbaren Anlagen-Manager-Richtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,20 +48,20 @@ class MDM_Policy_User_Config01_AttachmentManager02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Config01 \_ AttachmentManager02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Config01 \_ AttachmentManager02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Config01 \_ AttachmentManager02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Config01 \_ AttachmentManager02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Donotpreservezoneinformation](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-donotpreservezoneinformation)
+[DoNotPreserveZoneInformation](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-donotpreservezoneinformation)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -69,10 +69,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Hidezoneinf-chanismus](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-hidezoneinfomechanism)
+[HideZoneInfoMe hinweg](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-hidezoneinfomechanism)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -83,21 +83,21 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Notigyantivirusprograms](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-notifyantivirusprograms)
+[NotifyAntivirusPrograms](/windows/client-management/mdm/policy-csp-attachmentmanager#attachmentmanager-notifyantivirusprograms)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -105,16 +105,16 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -125,10 +125,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

@@ -1,40 +1,40 @@
 ---
-description: Steuern von Präsentations Zuständen
+description: Steuern von Präsentationszuständen
 ms.assetid: 978373ef-b2a4-4035-b889-e28a037c0ab5
-title: Steuern von Präsentations Zuständen
+title: Steuern von Präsentationszuständen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7a82fe0363a27b9c6f5c054b73ca409835a3dff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa2148410527ecf966b10e605bbe4d6beb0ac3d515acd6895e4fc03e73564a72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942420"
 ---
-# <a name="how-to-control-presentation-states"></a>Steuern von Präsentations Zuständen
+# <a name="how-to-control-presentation-states"></a>Steuern von Präsentationszuständen
 
-Die Medien Sitzung bietet Transport Steuerelemente, z. b. das Ändern von Präsentations Zuständen (wiedergeben, anhalten und stoppen in einem Wiedergabe Szenario mit Wiedergabelisten). In diesem Thema werden die Methoden der Medien Sitzungen beschrieben, die eine Anwendung zum Ändern des Wiedergabe Zustands aufruft.
+Die Mediensitzung bietet Transportsteuerelement, z. B. das Ändern von Präsentationszuständen (Wiedergabe, Pause und Beenden in einem Wiedergabeszenario im Wiedergabestil der Wiedergabeliste). In diesem Thema werden Mediensitzungsmethoden beschrieben, die eine Anwendung aufrufen sollte, um den Wiedergabezustand zu ändern.
 
-In der folgenden Tabelle sind die gültigen Präsentations Zustandsübergänge aufgeführt.
+Die folgende Tabelle zeigt die gültigen Präsentationszustandsübergänge.
 
 
 
 | Zustandsübergang | BESCHREIBUNG                                                                                |
 |------------------|--------------------------------------------------------------------------------------------|
-| Wiedergabe > Pause | Die Präsentations Uhr friert.                                                            |
-| Wiedergabe > Beendigung  | Die Präsentations Uhr wird zurückgesetzt.                                                           |
-| Pause > Wiedergabe | Die Präsentations Uhr wird von der Zeit wieder aufgenommen, die während der Wiedergabe zum Anhalten des Übergangs gewechselt ist. |
-| Anhalten-> anhalten | Die Präsentations Uhr wird zurückgesetzt.                                                           |
-| Wiedergabe >  | Die Präsentations Uhr beginnt am Anfang der Präsentation.                      |
-| Anhalten-> anhalten | Nicht zulässig.                                                                               |
+| Play -> Pause | Die Präsentationsuhr friert ein.                                                            |
+| Play -> Stop  | Die Präsentationsuhr wird zurückgesetzt.                                                           |
+| Anhalten –> Wiedergeben | Die Präsentationsuhr wird ab dem Zeitpunkt fortgesetzt, zu dem sie während des Übergangs Wiedergabe bis Pause einfriert. |
+| Anhalten –> Beenden | Die Präsentationsuhr wird zurückgesetzt.                                                           |
+| Beenden von -> Play  | Die Präsentationsuhr beginnt am Anfang der Präsentation.                      |
+| Beenden –> Anhalten | Nicht zulässig.                                                                               |
 
 
 
  
 
-## <a name="to-change-presentation-states"></a>So ändern Sie Darstellungs Zustände
+## <a name="to-change-presentation-states"></a>So ändern Sie präsentationszustände
 
--   Wenden Sie die [**imfmediasession::P ause**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-pause) -Methode an, um die Wiedergabe anzuhalten.
+-   Rufen Sie die [**METHODE UNTERMEDIASESSION::P ause**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-pause) auf, um die Wiedergabe anzuhalten.
 
     ```C++
     hr = pMediaSession->Pause();
@@ -42,11 +42,11 @@ In der folgenden Tabelle sind die gültigen Präsentations Zustandsübergänge a
 
     
 
-    Vor dem Aufrufen dieser Methode muss die Anwendung die [**imfmediasession:: gezessionfunktionalitäten**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getsessioncapabilities) -Methode aufrufen, um zu ermitteln, ob die Medienquelle den anhaltezustand unterstützt. Wenn dies der Fall ist, gibt diese Methode " **mfsessioncap \_ Pause** " im *pdwcaps* -Parameter zurück.
+    Vor dem Aufrufen dieser Methode muss die Anwendung die [**METHODE VONMEDIASESSION::GetSessionCapabilities**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-getsessioncapabilities) aufrufen, um zu ermitteln, ob die Medienquelle den Pause-Zustand unterstützt. In diesem Falle gibt diese Methode **MFSESSIONCAP \_ PAUSE** im *pdwCaps-Parameter* zurück.
 
-    Anhalten beendet vorübergehend die Medien Sitzung, die Präsentations Uhr und die streamsenke für die aktuelle Präsentation. Nachdem der-Vorgang erfolgreich abgeschlossen wurde, empfängt die Anwendung ein [mesessionangeh Ed](mesessionpaused.md) -Ereignis.
+    Anhalten beendet vorübergehend die Mediensitzung, die Präsentationsuhr und die Streamsenke für die aktuelle Präsentation. Nachdem der Aufruf erfolgreich abgeschlossen wurde, empfängt die Anwendung ein [MESessionPaused-Ereignis.](mesessionpaused.md)
 
--   Wenden Sie die [**imfmediasession:: stopmethode**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-stop) an, um die Wiedergabe zu verhindern.
+-   Rufen Sie die [**METHODE ÜBERMEDIASESSION::Stop**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-stop) auf, um die Wiedergabe zu beenden.
 
     ```C++
     hr = pMediaSession->Stop();
@@ -54,9 +54,9 @@ In der folgenden Tabelle sind die gültigen Präsentations Zustandsübergänge a
 
     
 
-    Diese Methode beendet die Medien Sitzung durch Beenden der Medienquelle, der entsprechenden Uhren und der streamsenken. Wenn die Medien Sitzung die [Sequencer-Quelle](sequencer-source.md)steuert, werden die zugrunde liegenden systemeigenen Quellen von der Sequencer-Quelle beendet. Nachdem die Medien Sitzung beendet wurde, empfängt die Anwendung ein [mesessionbeendete](mesessionstopped.md) -Ereignis.
+    Diese Methode beendet die Mediensitzung, indem die Medienquelle, die entsprechenden Uhren und Die Streamsenken beendet werden. Wenn die Mediensitzung die [Sequencerquelle](sequencer-source.md)steuert, werden die zugrunde liegenden nativen Quellen von der Sequencerquelle beendet. Nachdem die Mediensitzung beendet wurde, empfängt die Anwendung ein [MESessionStopped-Ereignis.](mesessionstopped.md)
 
--   Wenden Sie die [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) -Methode an, um die Wiedergabe zu starten oder eine neue Position zu suchen.
+-   Rufen Sie die [**METHODE SEEKMediaSession::Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) auf, um die Wiedergabe zu starten oder eine neue Position zu suchen.
 
     ```C++
     hr = pMediaSession->Start(NULL, &var);
@@ -64,13 +64,13 @@ In der folgenden Tabelle sind die gültigen Präsentations Zustandsübergänge a
 
     
 
-    Diese Methode startet die Medien Sitzung über den Status anhalten und anhalten. Die Medien Sitzung ist für das Einrichten des Datenflusses in der Pipeline zuständig. Diese Methode weist die Medien Sitzung an, die Präsentations Uhr zu starten. Nach diesem-Befehl sendet die Medien Sitzung ein [mesessionstarted](mesessionstarted.md) -Ereignis an die Anwendung.
+    Diese Methode startet die Mediensitzung aus den Zuständen Anhalten und Beenden. Die Mediensitzung ist für die Einrichtung des Datenflusses in der Pipeline verantwortlich. Diese Methode weist die Mediensitzung an, die Präsentationsuhr zu starten. Nach diesem Aufruf sendet Media Session ein [MESessionStarted-Ereignis](mesessionstarted.md) an die Anwendung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> </dl>
 
  

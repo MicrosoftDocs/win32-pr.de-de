@@ -1,7 +1,7 @@
 ---
-description: Alle Fenster auf dem Desktop werden kaskadiert. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und kaskadierte Fenster auswählen.
+description: Kaskadiert alle Fenster auf dem Desktop. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen von Cascade Windows.
 ms.assetid: f73d2066-4626-455b-8ee6-f7004cc9e699
-title: Shell. cascadewindows-Methode (Shldisp. h)
+title: Shell.CascadeWindows-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 751182ec53e0495021f4a6e2fad355c2c700ad66
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fbff41f36d80a378202606b4c43cbf1b7b89dc3757ac821b88772312001ecb8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941800"
 ---
-# <a name="shellcascadewindows-method"></a>Shell. cascadewindows-Methode
+# <a name="shellcascadewindows-method"></a>Shell.CascadeWindows-Methode
 
-Alle Fenster auf dem Desktop werden kaskadiert. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und **kaskadierte Fenster** auswählen.
+Kaskadiert alle Fenster auf dem Desktop. Diese Methode hat die gleiche Wirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen **von Cascade Windows.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,9 +57,9 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden **caskadetten-Fenster** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **CascadeWindows** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -75,7 +75,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -107,17 +107,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

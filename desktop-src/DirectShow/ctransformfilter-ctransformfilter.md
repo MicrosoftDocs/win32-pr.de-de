@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fce67bbe22361bdbae0cd3e51768e0cf0743d97d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 44061a753ef61c784298fe23e70f21fe410a9f0ad5f360acc10cb1fd16dd5f80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907689"
 ---
 # <a name="ctransformfilterctransformfilter-constructor"></a>CTransformFilter.CTransformFilter-Konstruktor
 
@@ -47,7 +47,7 @@ CTransformFilter(
 *pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
+Zeichenfolge, die den Debugnamen des Filters enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
@@ -65,22 +65,22 @@ Klassenbezeichner des Filters.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Konstruktor erstellt keine Pins des Filters. Dies geschieht beim ersten Aufruf der [**GetPin-Methode.**](ctransformfilter-getpin.md) Der Konstruktor initialisiert die Membervariablen [**m \_ pInput**](ctransformfilter-m-pinput.md) und [**m \_ pOutput**](ctransformfilter-m-poutput.md) mit **NULL.**
+Der Konstruktor erstellt keine Stecknadeln des Filters. Dies geschieht beim ersten Aufruf der [**GetPin-Methode.**](ctransformfilter-getpin.md) Der Konstruktor initialisiert die Membervariablen [**m \_ pInput**](ctransformfilter-m-pinput.md) und [**m \_ pOutput**](ctransformfilter-m-poutput.md) mit **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

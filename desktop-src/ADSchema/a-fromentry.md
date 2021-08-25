@@ -1,11 +1,11 @@
 ---
 title: From-Entry-Attribut
-description: Dies ist ein konstruiertes Attribut, das true ist, wenn das Objekt beschreibbar ist, und false, wenn es schreibgeschützt ist, z. b. eine GC-Replikat Instanz.
+description: Dies ist ein konstruiertes Attribut, das TRUE ist, wenn das Objekt schreibbar ist, und FALSE, wenn es schreibgeschützt ist, z. B. eine GC-Replikatinstanz.
 ms.assetid: b43e979d-15f9-4425-8a58-c9ed71bab1e4
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für From-Entry-Attribut
-- Schema des fromentry-Attributs AD
+- From-Entry AD-Attributschema
+- fromEntry-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c5f5e45e2897b917ad442f1b1b5d77246fa079c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3e45fb85f8f44d769ad4f199d15f43ec05f25d37dec3080e2fb4a4a42a77b6b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925820"
 ---
 # <a name="from-entry-attribute"></a>From-Entry-Attribut
 
-Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreibbar ist, und **false** , wenn es schreibgeschützt ist, z. b. eine GC-Replikat Instanz.
+Dies ist ein konstruiertes Attribut, das **TRUE** ist, wenn das Objekt schreibbar ist, und **FALSE,** wenn es schreibgeschützt ist, z. B. eine GC-Replikatinstanz.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | From-Entry                           |
-| LDAP-Display-Name | fromentry                            |
+| Ldap-Anzeigename | fromEntry                            |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.910               |
 | System-ID-GUID    | 9a7ad949-ca53-11d1-bbd0-0080c76670c0 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Dies ist ein konstruiertes Attribut, das **true** ist, wenn das Objekt beschreib
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

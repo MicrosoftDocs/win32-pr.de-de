@@ -1,12 +1,12 @@
 ---
-title: Schedulepatch-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Plant einen Bereitstellungs Auftrag für Software Updates, mit dem Software Updates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.
+title: SchedulePatch-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+description: Plant einen Auftrag zur Bereitstellung von Softwareupdates, mit dem Softwareupdates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.
 ms.assetid: 780d5709-9e7d-41d9-a4d0-b5d021615655
 ms.tgt_platform: multiple
 keywords:
-- Schedulepatch-Methode Remotedesktopdienste
-- Schedulepatch-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, schedulepatch-Methode
+- SchedulePatch-Methode Remotedesktopdienste
+- SchedulePatch-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection Klasse Remotedesktopdienste , SchedulePatch-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d9585e3d13ea1f02115506741c153d62c33fcc8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fb29eb42f0f1d13ff1bf234c6fb41b8f414317a4b723af9a6d215cf25fa2ec95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865510"
 ---
-# <a name="schedulepatch-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Schedulepatch-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="schedulepatch-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>SchedulePatch-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Plant einen Bereitstellungs Auftrag für Software Updates, mit dem Software Updates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.
+Plant einen Auftrag zur Bereitstellung von Softwareupdates, mit dem Softwareupdates auf den virtuellen Computern in einer Sammlung virtueller Desktops installiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,11 +45,11 @@ uint32 SchedulePatch(
 
 <dl> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
 > [!Note]  
-> Das System meldet die Benutzer der virtuellen Computer erst dann ab, wenn die im *forcelogofftime* -Parameter angegebene Zeit verwendet wird.
+> Benutzer der virtuellen Computer werden vom System erst zu dem im *ForceLogOffTime-Parameter* angegebenen Zeitpunkt abgemeldet.
 
  
 
@@ -57,23 +57,23 @@ Das Datum und die Uhrzeit der Installation der Updates.
 
 </dd> <dt>
 
-*Forcelogofftime* \[ in\]
+*ForceLogOffTime* \[ In\]
 </dt> <dd>
 
-Das Datum und die Uhrzeit, zu denen das Systembenutzer der virtuellen Maschinen abmeldet.
+Das Datum und die Uhrzeit, zu der das System Benutzer der virtuellen Computer abmeldet.
 
 </dd> <dt>
 
-*Jobinputxml* \[ in\]
+*JobInputXml* \[ In\]
 </dt> <dd>
 
-Eine XML-formatierte Zeichenfolge, die die Informationen zum Software Update Auftrag enthält.
+Eine XML-formatierte Zeichenfolge, die die Informationen zum Softwareupdateauftrag enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -93,7 +93,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

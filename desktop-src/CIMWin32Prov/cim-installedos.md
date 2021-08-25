@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ installedos Association-Klasse stellt eine Verknüpfung zwischen dem Computersystem und dem installierten Betriebssystem dar.
+description: Die CIM \_ InstalledOS-Zuordnungsklasse stellt eine Verbindung zwischen dem Computersystem und dem installierten Betriebssystem dar.
 ms.assetid: 6db5b5a2-91b6-4540-83b8-bb9c86c7f94e
 ms.tgt_platform: multiple
 title: CIM_InstalledOS-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 53e01be6a87fa6e5ef91ad6e8a81dbbddff4a576
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a60bbd71993557eac238d6facd75d99b967b993a075cad726ccdef4625d6dce5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923410"
 ---
-# <a name="cim_installedos-class"></a>CIM \_ installedos-Klasse
+# <a name="cim_installedos-class"></a>CIM \_ InstalledOS-Klasse
 
-Die **CIM \_ installedos** Association-Klasse stellt eine Verknüpfung zwischen dem Computersystem und dem installierten Betriebssystem dar. Ein Betriebssystem wird installiert, wenn es sich im Speicherbereich eines Computer Systems befindet (z. b. auf ein Laufwerk kopiert oder in den Arbeitsspeicher heruntergeladen wird).
+Die **CIM \_ InstalledOS-Zuordnungsklasse** stellt eine Verbindung zwischen dem Computersystem und dem installierten Betriebssystem dar. Ein Betriebssystem wird installiert, wenn es sich im Speicherspeicher eines Computersystems befindet (z. B. auf ein Laufwerk kopiert oder in den Arbeitsspeicher heruntergeladen).
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,29 +49,29 @@ class CIM_InstalledOS : CIM_SystemComponent
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ installedos** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ InstalledOS-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ installedos** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ InstalledOS-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("GroupComponent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM- \_ Computersystem**](cim-computersystem.md) , das das Computersystem beschreibt.
+Ein [**\_ CIM-ComputerSystem,**](cim-computersystem.md) das das Computersystem beschreibt.
 
 </dd> <dt>
 
@@ -84,36 +84,36 @@ Datentyp: **CIM \_ OperatingSystem**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("PartComponent"), [**schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein [**CIM- \_ OperatingSystem**](cim-operatingsystem.md) , das das auf dem Computersystem installierte Betriebssystem beschreibt.
+Ein [**\_ CIM-Betriebssystem,**](cim-operatingsystem.md) das das auf dem Computersystem installierte Betriebssystem beschreibt.
 
 </dd> <dt>
 
-**Primaryos**
+**PrimaryOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Betriebs System \| 001,4 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Betriebssystem \| 001.4")
 </dt> </dl>
 
-**True** gibt an, dass das installierte Betriebssystem das Standardbetriebssystem für das Computersystem ist.
+True **gibt** an, dass das installierte Betriebssystem das Standardbetriebssystem für das Computersystem ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ installedos** -Klasse wird von [**CIM \_ SystemComponent**](cim-systemcomponent.md)abgeleitet.
+Die **CIM \_ InstalledOS-Klasse** wird von [**CIM \_ SystemComponent abgeleitet.**](cim-systemcomponent.md)
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu Klassen, die von **CIM \_ installedos** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md)
+WMI implementiert diese Klasse nicht. Informationen zu Klassen, die **von CIM \_ InstalledOS abgeleitet wurden,** finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -123,17 +123,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SystemComponent**](cim-systemcomponent.md)
+[**CIM \_ SystemComponent**](cim-systemcomponent.md)
 </dt> </dl>
 
  
