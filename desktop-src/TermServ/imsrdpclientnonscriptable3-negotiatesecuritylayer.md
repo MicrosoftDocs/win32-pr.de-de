@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 aushandatesecuritylayer (Eigenschaft)
-description: Gibt an oder Ruft ab, ob die Sicherheitsschicht für die Aushandlung für die Verbindung aktiviert ist.
+title: IMsRdpClientNonScriptable3 NegotiateSecurityLayer-Eigenschaft
+description: Gibt an oder ruft ab, ob die Aushandlungssicherheitsebene für die Verbindung aktiviert ist.
 ms.assetid: 7fc9e3c7-0723-48c4-8d29-5f68a24a522c
 ms.tgt_platform: multiple
 keywords:
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5 Object Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6 Object Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7 Object Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8 Object Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
-- Aushandatesecuritylayer-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9 Object Remotedesktopdienste, aushandatesecuritylayer (Eigenschaft)
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
+- NegotiateSecurityLayer-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , NegotiateSecurityLayer-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e64533615c780cd6e3703be85363684e537b784a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 13f87abb5323289e60e3d29fa93d5e858a9a755224e7161ba28970ef5ccb186f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771550"
 ---
-# <a name="imsrdpclientnonscriptable3negotiatesecuritylayer-property"></a>IMsRdpClientNonScriptable3:: aushandatesecuritylayer (Eigenschaft)
+# <a name="imsrdpclientnonscriptable3negotiatesecuritylayer-property"></a>IMsRdpClientNonScriptable3::NegotiateSecurityLayer-Eigenschaft
 
-Gibt an oder Ruft ab, ob die Sicherheitsschicht für die Aushandlung für die Verbindung aktiviert ist.
+Gibt an oder ruft ab, ob die Aushandlungssicherheitsebene für die Verbindung aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,14 +74,14 @@ HRESULT get_NegotiateSecurityLayer(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob die Aushandlung der Sicherheitsebene aktiviert werden soll.
+Gibt an, ob die Aushandlung der Sicherheitsschicht aktiviert werden soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Eigenschaft auf **Variant \_ false** festgelegt ist und Authentifizierung auf Netzwerkebene (NLA) auf dem Client Betriebssystem aktiviert ist, aushandelt der Client die Sicherheitsschicht nicht und verwendet stattdessen NLA, um die RDP-Verbindung zu sichern. Wenn diese Eigenschaft auf **Variant \_ true** festgelegt ist, verhandelt der Client zwischen NLA und grundlegender RDP-Sicherheit.
+Wenn diese Eigenschaft auf **VARIANT \_ FALSE** festgelegt ist und Authentifizierung auf Netzwerkebene (NLA) auf dem Clientbetriebssystem aktiviert ist, handelt der Client die Sicherheitsschicht nicht aus und verwendet stattdessen NLA, um die RDP-Verbindung zu schützen. Wenn diese Eigenschaft auf **VARIANT \_ TRUE** festgelegt ist, handelt der Client zwischen NLA und grundlegender RDP-Sicherheit aus.
 
 > [!Note]  
-> Die Deaktivierung der sicherheitsebenenaushandlung ist nur möglich, wenn eine Verbindung mit einem Remotedesktop-Sitzungshost Server (RD-Sitzungshost) hergestellt wird, auf dem Windows Vista oder höher ausgeführt wird. Wenn diese Eigenschaft aktiviert ist und der Client versucht, eine Verbindung mit einem RD-Sitzungshost Server herzustellen, auf dem ein älteres Betriebssystem ausgeführt wird, tritt bei der Verbindung ein Fehler auf.
+> Das Deaktivieren der Sicherheitsschichtaushandlung ist nur möglich, wenn eine Verbindung mit einem Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) hergestellt wird, auf dem Windows Vista oder höher ausgeführt wird. Wenn diese Eigenschaft aktiviert ist und der Client versucht, eine Verbindung mit einem RD-Sitzungshost Server herzustellen, auf dem ein früheres Betriebssystem ausgeführt wird, tritt bei der Verbindung ein Fehler auf.
 
  
 
@@ -99,7 +99,7 @@ Wenn diese Eigenschaft auf **Variant \_ false** festgelegt ist und Authentifizie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

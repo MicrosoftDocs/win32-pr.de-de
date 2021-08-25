@@ -1,7 +1,7 @@
 ---
-description: Gibt die Anzahl der Elemente in der Vertex-Deklaration zurück.
+description: Gibt die Anzahl der Elemente in der Scheitelpunktdeklaration zurück.
 ms.assetid: 3ce24e59-0ec3-4d53-8bc8-8a5a7cdf53b2
-title: D3DXGetDeclLength-Funktion (D3DX9Mesh. h)
+title: D3DXGetDeclLength-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5576b4b86d5238d4942e09d605f695c66136799a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cc6a44c73d9b7127bb382cfbf18587a84d8cc179feabf48da6e29b908204b1a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857039"
 ---
 # <a name="d3dxgetdecllength-function"></a>D3DXGetDeclLength-Funktion
 
-Gibt die Anzahl der Elemente in der Vertex-Deklaration zurück.
+Gibt die Anzahl der Elemente in der Scheitelpunktdeklaration zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ UINT D3DXGetDeclLength(
 
 <dl> <dt>
 
-*pdecl* \[ in\]
+*pDecl* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Ein Zeiger auf die Vertexdeklaration. Siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md).
+Ein Zeiger auf die Scheitelpunktdeklaration. Siehe [**D3DVERTEXELEMENT9.**](d3dvertexelement9.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der Elemente in der Vertex-Deklaration.
+Die Anzahl der Elemente in der Scheitelpunktdeklaration.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Die Anzahl der Elemente in der Vertex-Deklaration.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -70,7 +70,7 @@ Die Anzahl der Elemente in der Vertex-Deklaration.
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

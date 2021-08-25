@@ -1,24 +1,24 @@
 ---
-description: Die Methode "Accept-Parser-allevelchange" akzeptiert oder lehnt die neue temporäre Jugend Verwaltungsebene ab.
+description: Die AcceptParentalLevelChange-Methode akzeptiert oder lehnt die neue temporäre Verwaltungsebene der Eltern ab.
 ms.assetid: b3d58069-16dc-4598-90ea-6136c2f62ac7
-title: Akzeptparser-allevelchange-Methode
+title: AcceptParentalLevelChange-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8b2e81d1d82c4ede14580ed65d88566738dac1b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: aea4742622ce9a2c65cdce660a8bae7fab6f84171d6bd61cdf88475c2bcd788c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873590"
 ---
-# <a name="acceptparentallevelchange-method"></a>Akzeptparser-allevelchange-Methode
+# <a name="acceptparentallevelchange-method"></a>AcceptParentalLevelChange-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die Methode "Accept-Parser-allevelchange" akzeptiert oder lehnt die neue temporäre Jugend Verwaltungsebene ab.
+Die AcceptParentalLevelChange-Methode akzeptiert oder lehnt die neue temporäre Verwaltungsebene der Eltern ab.
 
 ``` syntax
         MSWebDVD.AcceptParentalLevelChange(bAccept)
@@ -28,17 +28,17 @@ Die Methode "Accept-Parser-allevelchange" akzeptiert oder lehnt die neue tempor�
 
 <dl> <dt>
 
-<span id="bAccept"></span><span id="baccept"></span><span id="BACCEPT"></span>*baccept*
+<span id="bAccept"></span><span id="baccept"></span><span id="BACCEPT"></span>*bAccept*
 </dt> <dd>
 
-Gibt die neue elternebene als booleschen Wert an.
+Gibt die neue Elternebene als booleschen Wert an.
 
 
 
 | Wert | BESCHREIBUNG                               |
 |-------|-------------------------------------------|
-| true  | Akzeptieren Sie die neue Jugend Verwaltungsebene. |
-| false | Lehnen Sie die neue Jugend Verwaltungsebene ab. |
+| true  | Akzeptieren Sie die neue Ebene der Elternverwaltung. |
+| false | Lehnen Sie die neue Ebene der Elternverwaltung ab. |
 
 
 
@@ -50,33 +50,33 @@ Gibt die neue elternebene als booleschen Wert an.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Geben Sie diese Methode als Reaktion auf eine Änderung des Änderungs Ereignisses für eine EC- \_ DVD an \_ \_ \_ , um anzugeben, ob der DVD-Navigator den Inhalt mit der neuen Jugendebene wiedergeben soll.
+Rufen Sie diese Methode als Reaktion auf eine EC \_ \_ DVD-Benachrichtigung über DIE BENACHRICHTIGUNG ÜBER DEN DVD-WERTÄNDERUNG auf, um anzugeben, ob der \_ DVD-Navigator den Inhalt mit der neuen Elternebene wiedergibt, oder ob der Branch angibt, ob die neue Ebene abgelehnt \_ wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Erzwingen von Eltern Verwaltungsebenen](enforcing-parental-management-levels.md)
+[Erzwingen von Jugendverwaltungsebenen](enforcing-parental-management-levels.md)
 </dt> <dt>
 
-[**Getplayerparameentalcountry**](getplayerparentalcountry-method.md)
+[**GetPlayerParentalCountry**](getplayerparentalcountry-method.md)
 </dt> <dt>
 
-[**Getplayerparser**](getplayerparentallevel-method.md)
+[**GetPlayerParentalLevel**](getplayerparentallevel-method.md)
 </dt> <dt>
 
-[**Gettitleparamevels**](gettitleparentallevels-method.md)
+[**GetTitleParentalLevels**](gettitleparentallevels-method.md)
 </dt> <dt>
 
-[**Notifyparametriallevelchange**](notifyparentallevelchange-method.md)
+[**NotifyParentalLevelChange**](notifyparentallevelchange-method.md)
 </dt> <dt>
 
-[**Selectpartalcountry**](selectparentalcountry-method.md)
+[**Wählen SieParentalCountry aus.**](selectparentalcountry-method.md)
 </dt> <dt>
 
-[**Selectparser-allevel**](selectparentallevel-method.md)
+[**Wählen SieParentalLevel aus.**](selectparentallevel-method.md)
 </dt> </dl>
 
  

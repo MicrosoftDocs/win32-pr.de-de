@@ -1,19 +1,19 @@
 ---
-description: Die icertpropertyautoenroll-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertPropertyAutoEnroll-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: D74C6A40-987F-4A01-97B7-509B79A3002A
-title: Icertpropertyautoenroll-Methode
+title: ICertPropertyAutoEnroll-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 617d6894516dc322c33552de3a16c3aa2d2146ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92b896c457b397f64dd2b212788c8118bc3c2d06c6123302d994a6773e382046
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119798150"
 ---
-# <a name="icertpropertyautoenroll-methods"></a>Icertpropertyautoenroll-Methode
+# <a name="icertpropertyautoenroll-methods"></a>ICertPropertyAutoEnroll-Methoden
 
-Die [**icertpropertyautoenroll**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyautoenroll) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertPropertyAutoEnroll-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyautoenroll) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

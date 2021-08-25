@@ -1,5 +1,5 @@
 ---
-description: Die Create-Methode des Wia-Objekts stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) her und gibt ein Item-Objekt zurück, das das Gerät darstellt.
+description: Die Create-Methode des Wia-Objekts stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) und gibt ein Item-Objekt zurück, das das Gerät darstellt.
 ms.assetid: c33c635a-159c-4ac3-8ad5-6f21a1986702
 title: Wia.Create-Methode
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: d22d45e473cec1d5186c300f97cbdb4661237ab9
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: a4056354992010d3d213ed619b7460e12c800630ca38fb17acb6d7677fe842a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814050"
 ---
 # <a name="wiacreate-method"></a>Wia.Create-Methode
 
-Die **Create-Methode** des [**Wia-Objekts**](-wia-wia.md) stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) her und gibt ein [**Item-Objekt**](-wia-item.md) zurück, das das Gerät darstellt.
+Die **Create-Methode** des [**Wia-Objekts**](-wia-wia.md) stellt eine Verbindung mit dem angegebenen WIA-Gerät (Windows Image Acquisition) und gibt ein [**Item-Objekt**](-wia-item.md) zurück, das das Gerät darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,13 +57,13 @@ Bei Erfolg gibt diese Methode ein [**Item-Objekt**](-wia-item.md) zurück, das e
 
 ## <a name="remarks"></a>Hinweise
 
-Der *Device-Parameter* gibt ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an, indem er das Objekt selbst, seinen Index aus einem Auflistungsobjekt oder den Wert seiner [**ID-Eigenschaft**](-wia-iwiadeviceinfo-id.md) übergibt. **Nichts** übergeben, um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
+Der *Device-Parameter* gibt ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an, indem er das Objekt selbst, seinen Index aus einem Sammlungsobjekt oder den Wert seiner [**ID-Eigenschaft**](-wia-iwiadeviceinfo-id.md) übergibt. Keine **übergeben,** um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden VBScript-Beispiele veranschaulichen die Verwendung der **Create-Methode.**
 
-Im ersten Beispiel wird ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an die **Create-Methode** übergeben. Beachten Sie, dass die Übergabe der [**ID-Eigenschaft**](-wia-iwiadeviceinfo-id.md) des Objekts genau das gleiche Verhalten verursacht.
+Im ersten Beispiel wird ein [**DeviceInfo-Objekt**](-wia-deviceinfo.md) an die **Create-Methode** übergibt. Beachten Sie, dass die Übergabe der [**ID-Eigenschaft des**](-wia-iwiadeviceinfo-id.md) Objekts genau das gleiche Verhalten verursacht.
 
 
 ```JScript
@@ -106,7 +106,7 @@ Next
 
 
 
-Im nächsten Beispiel wird **Nothing** an die **Create-Methode** übergeben, um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
+Im nächsten Beispiel wird **Nothing an die** **Create-Methode übergibt,** um ein Dialogfeld anzuzeigen, in dem ein Benutzer ein Gerät auswählen kann.
 
 
 ```JScript
@@ -127,7 +127,7 @@ Set objWia = objWia.Create(Nothing)
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 

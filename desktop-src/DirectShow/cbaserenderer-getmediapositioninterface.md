@@ -1,7 +1,7 @@
 ---
-description: Die getmediapositioninterface-Methode ruft die imediaposition-und imediaseeking-Schnittstellen Zeiger des Filters ab.
+description: Die GetMediaPositionInterface-Methode ruft die Schnittstellenzeiger IMediaPosition und IMediaSeeking des Filters ab.
 ms.assetid: aeca4484-cecc-4d07-aa77-56221ff75699
-title: Cbaserderderer. getmediapositioninterface-Methode (renbase. h)
+title: CBaseRenderer.GetMediaPositionInterface-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3d41d777b88f0e18ae1510c32b7e89024ea7bdd9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 12e15b297f78b3386ae9ad31e749858bad14b87e59e938ac02a3cf3a9ca002a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872330"
 ---
-# <a name="cbaserenderergetmediapositioninterface-method"></a>Cbaserderderer. getmediapositioninterface-Methode
+# <a name="cbaserenderergetmediapositioninterface-method"></a>CBaseRenderer.GetMediaPositionInterface-Methode
 
-Die `GetMediaPositionInterface` -Methode ruft die [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition) -und [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Schnittstellen Zeiger des Filters ab.
+Die `GetMediaPositionInterface` -Methode ruft die [**Schnittstellenzeiger IMediaPosition**](/windows/desktop/api/Control/nn-control-imediaposition) und [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) des Filters ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,38 +46,38 @@ virtual HRESULT GetMediaPositionInterface(
 *riid* 
 </dt> <dd>
 
-Verweis Bezeichner der Schnittstelle.
+Verweisbezeichner der Schnittstelle.
 
 </dd> <dt>
 
-*PPV* 
+*Ppv* 
 </dt> <dd>
 
-Adresse einer Variablen, die den Schnittstellen Zeiger empfängt.
+Adresse einer Variablen, die den Schnittstellenzeiger empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                         |
 |-----------------------------------------------------------------------------------------------|-------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                 |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>     |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | Schnittstelle wird nicht unterstützt.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>     |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | Die Schnittstelle wird nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter delegiert alle Suchbefehle an ein [**crendererpospassthru**](crendererpospassthru.md) -Objekt, das Sie per Upstream übergibt. Diese Methode erstellt das **crendererpospassthru** -Objekt, wenn es noch nicht vorhanden ist, und fragt es nach der angeforderten Schnittstelle ab.
+Der Filter delegiert alle Suchbefehle an ein [**CRendererPosPassThru-Objekt,**](crendererpospassthru.md) das sie upstreamübergibt. Diese Methode erstellt das **CRendererPosPassThru-Objekt,** sofern es noch nicht vorhanden ist, und fragt es nach der angeforderten Schnittstelle ab.
 
-Die Element Variable [**cbaserenderer:: m \_ pposition**](cbaserenderer-m-pposition.md) speichert einen Zeiger auf das **crendererpospassthru** -Objekt.
+Die [**CBaseRenderer::m \_ pPosition-Membervariable**](cbaserenderer-m-pposition.md) speichert einen Zeiger auf das **CRendererPosPassThru-Objekt.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Die Element Variable [**cbaserenderer:: m \_ pposition**](cbaserenderer-m-pposit
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -94,7 +94,7 @@ Die Element Variable [**cbaserenderer:: m \_ pposition**](cbaserenderer-m-pposit
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

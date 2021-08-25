@@ -1,7 +1,7 @@
 ---
-description: Gibt die beabsichtigte Verwendung von Vertex-Daten an.
+description: Identifiziert die beabsichtigte Verwendung von Scheitelpunktdaten.
 ms.assetid: ee9b46c2-b779-480c-9b5c-6d189d2af014
-title: D3DDECLUSAGE-Enumeration (D3D9Types. h)
+title: D3DDECLUSAGE-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: f3997aa38a7a97455b9f36d8afbee896ca9ae937
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 707a5b7b886ac9366733e1b17322ac61c7d9703cb6ef8ac1e095cf1300fd508d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857510"
 ---
 # <a name="d3ddeclusage-enumeration"></a>D3DDECLUSAGE-Enumeration
 
-Gibt die beabsichtigte Verwendung von Vertex-Daten an.
+Identifiziert die beabsichtigte Verwendung von Scheitelpunktdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,109 +52,109 @@ typedef enum D3DDECLUSAGE {
 
 <dl> <dt>
 
-<span id="D3DDECLUSAGE_POSITION"></span><span id="d3ddeclusage_position"></span>**D3DDECLUSAGE- \_ Position**
+<span id="D3DDECLUSAGE_POSITION"></span><span id="d3ddeclusage_position"></span>**D3DDECLUSAGE \_ POSITION**
 </dt> <dd>
 
-Positionieren von Daten im Bereich von (-1,-1) bis (1, 1). Verwenden \_ Sie die D3DDECLUSAGE-Position mit einem Nutzungs Index von 0, um eine nicht transformierte Position für die Vertex-Verarbeitung fester Funktionen und den n-Patch-Mosaik Wert anzugeben. Verwenden \_ Sie die D3DDECLUSAGE-Position mit einem Verwendungs Index von 1, um eine nicht transformierte Position im Scheitelpunkt des fixierten Funktionen für die vertextwiening anzugeben.
+Positionsdaten im Bereich von (-1,-1) bis (1,1). Verwenden Sie D3DDECLUSAGE POSITION mit einem Verwendungsindex von 0, um die nicht übersetzte Position für die Vertexverarbeitung fester Funktionen und den \_ n-Patch-Mosaik anzugeben. Verwenden Sie D3DDECLUSAGE POSITION mit dem Verwendungsindex 1, um die nicht übersetzte Position im Vertex-Shader der festen Funktion für die \_ Vertex-Optimierung anzugeben.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_BLENDWEIGHT"></span><span id="d3ddeclusage_blendweight"></span>**D3DDECLUSAGE \_ blendweight**
+<span id="D3DDECLUSAGE_BLENDWEIGHT"></span><span id="d3ddeclusage_blendweight"></span>**D3DDECLUSAGE \_ BLENDWEIGHT**
 </dt> <dd>
 
-Mischen von Gewichtungsdaten. Verwenden \_ Sie D3DDECLUSAGE blendweight mit einem Nutzungs Index von 0, um die Blend-Gewichtungen anzugeben, die für indizierte und nicht indizierte vertexblending verwendet werden.
+Mischen von Gewichtungsdaten. Verwenden Sie D3DDECLUSAGE BLENDWEIGHT mit einem Verwendungsindex von 0, um die Beimischungsgewichtungen anzugeben, die bei indizierten und nicht indizierten \_ Vertexmischungen verwendet werden.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_BLENDINDICES"></span><span id="d3ddeclusage_blendindices"></span>**D3DDECLUSAGE \_ blendindices**
+<span id="D3DDECLUSAGE_BLENDINDICES"></span><span id="d3ddeclusage_blendindices"></span>**D3DDECLUSAGE \_ BLENDINDICES**
 </dt> <dd>
 
-Kombination von Indizes-Daten. Verwenden \_ Sie D3DDECLUSAGE blendindices mit einem Nutzungs Index von 0, um Matrix Indizes für indizierte palettenskinning anzugeben.
+Mischen von Indizierungsdaten. Verwenden Sie D3DDECLUSAGE BLENDINDICES mit einem Nutzungsindex von 0, um Matrixindizes für indiziertes \_ Paletten-Skinning anzugeben.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_NORMAL"></span><span id="d3ddeclusage_normal"></span>**D3DDECLUSAGE \_ Normal**
+<span id="D3DDECLUSAGE_NORMAL"></span><span id="d3ddeclusage_normal"></span>**D3DDECLUSAGE \_ NORMAL**
 </dt> <dd>
 
-Vertex-normale Daten. Verwenden \_ Sie D3DDECLUSAGE normal mit einem Nutzungs Index von 0, um Vertex-Normale für die Vertex-Verarbeitung fester Funktionen und den n-Patch-Mosaik Wert anzugeben. Verwenden \_ Sie D3DDECLUSAGE normal mit einem Nutzungs Index von 1, um Vertex-Normale für die Vertex-Verarbeitung fester Funktionen für vertextwiening anzugeben.
+Normale Scheitelpunktdaten. Verwenden Sie D3DDECLUSAGE NORMAL mit einem Nutzungsindex von 0, um Scheitelpunktnormals für die Vertexverarbeitung fester Funktionen und den \_ n-Patch-Mosaik anzugeben. Verwenden Sie D3DDECLUSAGE NORMAL mit dem Verwendungsindex 1, um Scheitelpunktnormwerte für die Vertexverarbeitung fester Funktionen für \_ vertex tweening anzugeben.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_PSIZE"></span><span id="d3ddeclusage_psize"></span>**D3DDECLUSAGE \_ Psize**
+<span id="D3DDECLUSAGE_PSIZE"></span><span id="d3ddeclusage_psize"></span>**D3DDECLUSAGE \_ PSIZE**
 </dt> <dd>
 
-Daten zur Datenpunkt Größe. Verwenden \_ Sie D3DDECLUSAGE Psize mit einem Nutzungs Index von 0, um das Attribut für die Punktgröße anzugeben, das vom Setup Modul des Rasterizers verwendet wird, um einen Punkt für die Punkt Sprite-Funktionalität zu erweitern.
+Punktgrößendaten. Verwenden Sie D3DDECLUSAGE PSIZE mit einem Nutzungsindex von 0, um das Punktgrößenattribut anzugeben, das von der Setup-Engine des Rasterizers verwendet wird, um einen Punkt in ein Quader für die \_ Punkt-Sprite-Funktionalität zu erweitern.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_TEXCOORD"></span><span id="d3ddeclusage_texcoord"></span>**D3DDECLUSAGE \_ texcoord**
+<span id="D3DDECLUSAGE_TEXCOORD"></span><span id="d3ddeclusage_texcoord"></span>**D3DDECLUSAGE \_ TEXCOORD**
 </dt> <dd>
 
-Texturkoordinaten Daten. Verwenden \_ Sie D3DDECLUSAGE texcoord, n, um Texturkoordinaten in der Vertex-Verarbeitung fester Funktionen und in Pixel-Shader vor PS \_ 3 0 anzugeben \_ . Diese können verwendet werden, um benutzerdefinierte Daten zu übergeben.
+Texturkoordinatendaten. Verwenden Sie D3DDECLUSAGE TEXCOORD, n, um Texturkoordinaten in der Vertexverarbeitung fester Funktionen und in Pixel-Shadern vor \_ PS \_ 3 \_ 0 anzugeben. Diese können verwendet werden, um benutzerdefinierte Daten zu übergeben.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_TANGENT"></span><span id="d3ddeclusage_tangent"></span>**D3DDECLUSAGE \_ Tangens**
+<span id="D3DDECLUSAGE_TANGENT"></span><span id="d3ddeclusage_tangent"></span>**D3DDECLUSAGE \_ TANGENT**
 </dt> <dd>
 
-Vertextangens-Daten.
+Vertex tangent-Daten.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_BINORMAL"></span><span id="d3ddeclusage_binormal"></span>**D3DDECLUSAGE \_ Binormal**
+<span id="D3DDECLUSAGE_BINORMAL"></span><span id="d3ddeclusage_binormal"></span>**D3DDECLUSAGE \_ BINORMAL**
 </dt> <dd>
 
-Vertex-Binormale-Daten.
+Binormale Vertexdaten.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_TESSFACTOR"></span><span id="d3ddeclusage_tessfactor"></span>**D3DDECLUSAGE \_ Tess Factor**
+<span id="D3DDECLUSAGE_TESSFACTOR"></span><span id="d3ddeclusage_tessfactor"></span>**D3DDECLUSAGE \_ TESSFACTOR**
 </dt> <dd>
 
-Einzelner positiver Gleit Komma Wert. Verwenden \_ Sie D3DDECLUSAGE Tess Factor mit einem Nutzungs Index von 0, um einen Mosaik Faktor anzugeben, der in der Mosaik Einheit verwendet wird, um die Rate des Mosaik Prozesses zu steuern. Weitere Informationen zum-Datentyp finden Sie unter D3DDECLTYPE \_ FLOAT1.
+Einzelner positiver Gleitkommawert. Verwenden Sie D3DDECLUSAGE TESSFACTOR mit einem Nutzungsindex von 0, um einen Mosaikfaktor anzugeben, der in der Mosaikeinheit verwendet wird, um die Rate des Mosaiks zu \_ steuern. Weitere Informationen zum Datentyp finden Sie unter D3DDECLTYPE \_ FLOAT1.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_POSITIONT"></span><span id="d3ddeclusage_positiont"></span>**D3DDECLUSAGE \_ positiont**
+<span id="D3DDECLUSAGE_POSITIONT"></span><span id="d3ddeclusage_positiont"></span>**D3DDECLUSAGE \_ POSITIONT**
 </dt> <dd>
 
-Vertex-Daten enthalten transformierte Positionsdaten im Bereich von (0,0) bis (Viewportbreite, VIEWPORTHÖHE). Verwenden \_ Sie D3DDECLUSAGE positiont mit einem Nutzungs Index von 0, um die transformierte Position anzugeben. Wenn eine Deklaration, die diese enthält, festgelegt ist, führt die Pipeline keine Scheitelpunkt Verarbeitung aus.
+Vertexdaten enthalten transformierte Positionsdaten im Bereich von (0,0) bis (Viewportbreite, Viewporthöhe). Verwenden Sie D3DDECLUSAGE \_ POSITIONT mit einem Nutzungsindex von 0, um die transformierte Position anzugeben. Wenn eine Deklaration festgelegt wird, die diese enthält, führt die Pipeline keine Scheitelpunktverarbeitung durch.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_COLOR"></span><span id="d3ddeclusage_color"></span>**D3DDECLUSAGE- \_ Farbe**
+<span id="D3DDECLUSAGE_COLOR"></span><span id="d3ddeclusage_color"></span>**D3DDECLUSAGE \_ COLOR**
 </dt> <dd>
 
-Vertex-Daten enthalten diffuses oder Glanz Farben. Verwenden \_ Sie die D3DDECLUSAGE-Farbe mit einem Nutzungs Index von 0, um die diffuse Farbe in den Scheitel Punkten der Fixed-Funktion und die Pixel-Shader vor PS \_ 3 0 anzugeben \_ . Verwenden \_ Sie die D3DDECLUSAGE-Farbe mit einem Verwendungs Index von 1, um die Glanz Farbe im Scheitelpunkt des Scheitel Punkts und die Pixel-Shader vor PS \_ 3 0 anzugeben \_ .
+Scheitelpunktdaten enthalten diffuse oder speculare Farben. Verwenden Sie D3DDECLUSAGE COLOR mit einem Nutzungsindex von 0, um die diffuse Farbe im Vertex-Shader der festen Funktion und den Pixel-Shadern vor \_ PS \_ 3 \_ 0 anzugeben. Verwenden Sie D3DDECLUSAGE COLOR mit dem Nutzungsindex 1, um die Specularfarbe im Vertex-Shader der festen Funktion und pixel-Shader vor \_ PS \_ 3 \_ 0 anzugeben.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_FOG"></span><span id="d3ddeclusage_fog"></span>**D3DDECLUSAGE- \_ Nebel**
+<span id="D3DDECLUSAGE_FOG"></span><span id="d3ddeclusage_fog"></span>**D3DDECLUSAGE \_ ALLE**
 </dt> <dd>
 
-Vertex-Daten enthalten Nebel Daten. Verwenden \_ Sie D3DDECLUSAGE Fog mit einem Nutzungs Index von 0, um einen in der nach Abschluss der Pixel Schattierung verwendeten Wert für "Nebel Blend" anzugeben. Dies gilt für Pixel-Shader vor Version PS \_ 3 \_ 0.
+Scheitelpunktdaten enthalten Daten. Verwenden Sie D3DDECLUSAGEBLEND mit einem Nutzungsindex von 0, um einen Blendwert anzugeben, der nach Abschluss der Pixelschattierung \_ verwendet wird. Dies gilt für Pixel-Shader vor Version ps \_ 3 \_ 0.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_DEPTH"></span><span id="d3ddeclusage_depth"></span>**D3DDECLUSAGE \_ Tiefe**
+<span id="D3DDECLUSAGE_DEPTH"></span><span id="d3ddeclusage_depth"></span>**D3DDECLUSAGE \_ DEPTH**
 </dt> <dd>
 
-Vertex-Daten enthalten Tiefendaten.
+Scheitelpunktdaten enthalten Tiefendaten.
 
 </dd> <dt>
 
-<span id="D3DDECLUSAGE_SAMPLE"></span><span id="d3ddeclusage_sample"></span>**D3DDECLUSAGE- \_ Beispiel**
+<span id="D3DDECLUSAGE_SAMPLE"></span><span id="d3ddeclusage_sample"></span>**D3DDECLUSAGE-BEISPIEL \_**
 </dt> <dd>
 
-Vertex-Daten enthalten Samplingdaten. Verwenden \_ Sie D3DDECLUSAGE Sample mit einem Nutzungs Index von 0, um den zu über suchenden Verschiebungs Wert anzugeben. Sie kann nur mit D3DDECLUSAGE \_ lookuppresampling oder D3DDECLUSAGE \_ Lookup verwendet werden.
+Scheitelpunktdaten enthalten Samplerdaten. Verwenden Sie D3DDECLUSAGE SAMPLE mit einem Nutzungsindex von 0, um den Verschiebungswert anzugeben, \_ nach dem sie suchen möchten. Sie kann nur mit D3DDECLUSAGE \_ LOOKUPPRESAMPLED oder D3DDECLUSAGE \_ LOOKUP verwendet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vertex-Daten werden mit einem Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Strukturen deklariert. Jedes Element im Array enthält einen Verwendungstyp.
+Scheitelpunktdaten werden mit einem Array von [**D3DVERTEXELEMENT9-Strukturen**](d3dvertexelement9.md) deklariert. Jedes Element im Array enthält einen Verwendungstyp.
 
-Weitere Informationen zu Vertex-Deklarationen finden Sie unter [Vertex-Deklaration (Direct3D 9)](vertex-declaration.md).
+Weitere Informationen zu Scheitelpunktdeklarationen finden Sie unter [Vertexdeklaration (Direct3D 9).](vertex-declaration.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -162,18 +162,18 @@ Weitere Informationen zu Vertex-Deklarationen finden Sie unter [Vertex-Deklarati
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Enumerationen](dx9-graphics-reference-d3d-enums.md)
 </dt> <dt>
 
-[Vertex-Deklaration (Direct3D 9)](vertex-declaration.md)
+[Scheitelpunktdeklaration (Direct3D 9)](vertex-declaration.md)
 </dt> </dl>
 
  

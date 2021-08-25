@@ -1,8 +1,8 @@
 ---
 title: sh_socket-Schlüsselwort
-description: Das \ SH \_ Socket \-Schlüsselwort gibt an, dass das Systemobjekt ein Handle für einen Socket ist.
+description: Das Schlüsselwort \sh \_ socket\ gibt an, dass das Systemobjekt ein Handle für einen Socket ist.
 keywords:
-- sh_socket-Schlüsselwort-Mittel l
+- sh_socket MIDL-Schlüsselwort
 topic_type:
 - apiref
 api_name:
@@ -11,16 +11,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 02/05/2021
-ms.openlocfilehash: 5f5d2506f66f89cd47ecf3f011c8071b79e64177
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 542610d586af084f4238e70cd0e6c848099e4d2153d0feab8d617475a50476e9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "106363827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822100"
 ---
-# <a name="sh_socket-keyword"></a>SH \_ Socket-Schlüsselwort
+# <a name="sh_socket-keyword"></a>sh \_ socket-Schlüsselwort
 
-Das **SH \_ Socket** -Schlüsselwort gibt an, dass ein ein `system_handle` Handle für einen Socket enthält.
+Das **sh \_ socket-Schlüsselwort** gibt an, dass `system_handle` ein ein Handle für einen Socket enthält.
 
 ``` syntax
 [system_handle(sh_socket)]
@@ -32,11 +32,11 @@ Das **SH \_ Socket** -Schlüsselwort gibt an, dass ein ein `system_handle` Handl
 
 Dieses Schlüsselwort ist ein Parameter für [**system_handle**](system-handle.md).
 
-Die [**system_handle**](system-handle.md) Dokumentation enthält auch Details zur optionalen Verwendung des *Zugriffsrechte* Parameters. Das Standardverhalten entspricht den `DUPLICATE_SAME_ACCESS` Spezifikationen für [ **Duplikat-andle** -Funktionen](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) .
+Die [**system_handle**](system-handle.md) dokumentation enthält auch Details zur optionalen Verwendung des *Access Rights-Parameters.* Das Standardverhalten entspricht `DUPLICATE_SAME_ACCESS` den [ **Spezifikationen der DuplicateHandle-Funktion.**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Schlüsselwort mit dem-Attribut zu verwenden `system_handle` , `-target` muss das-Flag `NT100` beim Ausführen von midl.exe auf (oder höher) festgelegt werden.
+Um dieses Schlüsselwort mit dem -Attribut verwenden zu können, muss das Flag auf (oder höher) festgelegt werden, `system_handle` `-target` wenn sie `NT100` midl.exe.
 
 ## <a name="examples"></a>Beispiele
 
@@ -54,7 +54,7 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-title: Vorgehensweise beim Rendering mithilfe eines Direct2D-Geräte Kontexts
-description: In diesem Thema erfahren Sie mehr über das Erstellen von Direct2D \ 32; Gerätekontext in Windows 8.
+title: Rendern mithilfe eines Direct2D-Gerätekontexts
+description: In diesem Thema erfahren Sie mehr über das Erstellen von Direct2D \ 32;Gerätekontext in Windows 8.
 ms.assetid: D4563FEA-767E-4B16-8F3C-3D548A64B206
 keywords:
 - Direct2D-Gerät
@@ -8,58 +8,58 @@ keywords:
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 2858861956a40bf969309be474105052e4692cde
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 735ad81a5911b16c159ffb8c63173421a55295e20e34090eb483065e1a7d311c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104567545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832995"
 ---
-# <a name="how-to-render-by-using-a-direct2d-device-context"></a>Vorgehensweise beim Rendering mithilfe eines Direct2D-Geräte Kontexts
+# <a name="how-to-render-by-using-a-direct2d-device-context"></a>Rendern mithilfe eines Direct2D-Gerätekontexts
 
-In diesem Thema erfahren Sie mehr über das Erstellen des [Direct2D](./direct2d-portal.md) - [**Geräte Kontexts**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) in Windows 8. Diese Informationen gelten für Sie, wenn Sie Windows Store-Apps oder eine Desktop-App mithilfe von Direct2D entwickeln. In diesem Thema wird der Zweck von Direct2D-Gerätekontext Objekten, das Erstellen dieses Objekts und eine Schritt-für-Schritt-Anleitung zum Rendern und Anzeigen von Direct2D Primitives und Bildern beschrieben. Außerdem erfahren Sie mehr über das Wechseln von renderzielen und das Hinzufügen von Effekten zu Ihrer APP.
+In diesem Thema erfahren Sie mehr über das Erstellen des [**Direct2D-Gerätekontexts**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) in Windows 8. [](./direct2d-portal.md) Diese Informationen gelten für Sie, wenn Sie Windows Store-Apps oder eine Desktop-App mit Direct2D entwickeln. In diesem Thema werden der Zweck von Direct2D-Gerätekontextobjekten, das Erstellen dieses Objekts und eine Schritt-für-Schritt-Anleitung zum Rendern und Anzeigen von Direct2D-Primitiven und -Bildern beschrieben. Außerdem erfahren Sie mehr über das Wechseln von Renderzielen und das Hinzufügen von Effekten zu Ihrer App.
 
 -   [Was ist ein Direct2D-Gerät?](#what-is-a-direct2d-device)
 -   [Was ist ein Direct2D-Gerätekontext?](#what-is-a-direct2d-device-context)
--   [Rendering mit Direct2D unter Windows 8](#rendering-with-direct2d-on-windows-8)
--   [Gründe für die Verwendung eines Geräte Kontexts zum Rendering](#why-use-a-device-context-to-render)
--   [Erstellen eines Direct2D-Geräte Kontexts für das Rendering](#how-to-create-a-direct2d-device-context-for-rendering)
+-   [Rendern mit Direct2D auf Windows 8](#rendering-with-direct2d-on-windows-8)
+-   [Gründe für das Rendern eines Gerätekontexts](#why-use-a-device-context-to-render)
+-   [Erstellen eines Direct2D-Gerätekontexts für das Rendering](#how-to-create-a-direct2d-device-context-for-rendering)
 -   [Auswählen eines Ziels](#selecting-a-target)
--   [Rendering und Anzeige](#how-to-render-and-display)
+-   [Rendern und Anzeigen](#how-to-render-and-display)
 
 ## <a name="what-is-a-direct2d-device"></a>Was ist ein Direct2D-Gerät?
 
-Sie benötigen ein Direct2D-Gerät und ein Direct3D-Gerät, um einen Direct2D-Gerätekontext zu erstellen. Ein [**Direct2D-Gerät**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) (das einen **ID2D1Device** -Schnittstellen Zeiger verfügbar macht) stellt einen Anzeige Adapter dar. Ein Direct3D-Gerät (das einen [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) -Schnittstellen Zeiger verfügbar macht) ist einem Direct2D-Gerät zugeordnet. Jede APP muss über ein **Direct2D-Gerät** verfügen, kann aber über mehrere **Geräte** verfügen.
+Sie benötigen ein Direct2D-Gerät und ein Direct3D-Gerät, um einen Direct2D-Gerätekontext zu erstellen. Ein [**Direct2D-Gerät**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) (macht einen **ID2D1Device-Schnittstellenzeiger** verfügbar) stellt einen Anzeigeadapter dar. Ein Direct3D-Gerät (macht einen [**ID3D11Device-Schnittstellenzeiger**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) verfügbar) ist einem Direct2D-Gerät zugeordnet. Jede App muss über ein **Direct2D-Gerät** verfügen, kann aber über mehrere **Geräte verfügen.**
 
 ## <a name="what-is-a-direct2d-device-context"></a>Was ist ein Direct2D-Gerätekontext?
 
-Ein [Direct2D](./direct2d-portal.md) - [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) (macht einen **ID2D1DeviceContext** -Schnittstellen Zeiger verfügbar) stellt einen Satz von Status-und Befehls Puffern dar, die Sie verwenden, um ein Ziel zu rendieren. Sie können Methoden für den Gerätekontext aufzurufen, um den Pipeline Status festzulegen und renderingbefehle zu generieren, indem Sie die Ressourcen eines Geräts verwenden.
+Ein [Direct2D-Gerätekontext](./direct2d-portal.md) [](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) (macht einen **ID2D1DeviceContext-Schnittstellenzeiger** verfügbar) stellt einen Satz von Zustands- und Befehlspuffern dar, die Sie zum Rendern auf ein Ziel verwenden. Sie können Methoden im Gerätekontext aufrufen, um den Pipelinezustand festzulegen und Renderingbefehle zu generieren, indem Sie die Ressourcen verwenden, die sich im Besitz eines Geräts befinden.
 
-## <a name="rendering-with-direct2d-on-windows-8"></a>Rendering mit Direct2D unter Windows 8
+## <a name="rendering-with-direct2d-on-windows-8"></a>Rendern mit Direct2D auf Windows 8
 
-Unter Windows 7 und früher verwenden Sie eine [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) oder eine andere renderzielschnittstelle, um Sie in einem Fenster oder einer Oberfläche zu renderzielen. Ab Windows 8 empfiehlt es sich nicht, das Rendering mithilfe von Methoden durchzuführen, die auf Schnittstellen wie **ID2D1HwndRenderTarget** basieren, da Sie nicht mit Windows Store-Apps funktionieren. Sie können einen [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) verwenden, um ein HWND zu erzeugen, wenn Sie eine Desktop-App erstellen möchten, und die zusätzlichen Features des **Geräte Kontexts** weiterhin nutzen. Der **Gerätekontext** ist jedoch zum Rendering von Inhalten in Windows Store-Apps mit [Direct2D](./direct2d-portal.md)erforderlich.
+Auf Windows 7 und früher verwenden Sie ein [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) oder eine andere Renderzielschnittstelle, um in einem Fenster oder einer Oberfläche zu rendern. Ab Windows 8 wird das Rendering nicht empfohlen, indem Methoden verwendet werden, die auf Schnittstellen wie **ID2D1HwndRenderTarget** basieren, da sie nicht mit Windows Store-Apps funktionieren. Sie können einen [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) zum Rendern in einem Hwnd verwenden, wenn Sie eine Desktop-App erstellen und dennoch die zusätzlichen Features des **Gerätekontexts** nutzen möchten. Der **Gerätekontext** ist jedoch erforderlich, um Inhalte in einer Windows Store-Apps mit [Direct2D](./direct2d-portal.md)zu rendern.
 
-## <a name="why-use-a-device-context-to-render"></a>Gründe für die Verwendung eines Geräte Kontexts zum Rendering
+## <a name="why-use-a-device-context-to-render"></a>Gründe für das Rendern eines Gerätekontexts
 
--   Sie können für Windows Store-Apps Rendering.
--   Sie können das Renderziel jederzeit vor, während und nach dem Rendering ändern. Der Gerätekontext stellt sicher, dass die Aufrufe von Zeichnungs Methoden in der richtigen Reihenfolge ausgeführt werden, und wendet sie an, wenn Sie das Renderziel wechseln.
--   Sie können mehr als einen Fenstertyp mit einem Gerätekontext verwenden. Sie können einen [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) und eine [**DXGI-SwapChain**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) verwenden, um direkt in ein [**Windows:: UI:: Core:: corewindow**](/uwp/api/Windows.UI.Core.CoreWindow) oder ein [**Windows:: UI:: XAML:: swapchainbackgroundpanel**](/uwp/api/Windows.UI.Xaml.Controls.SwapChainBackgroundPanel)-Element gerenstet zu werden.
--   Sie können den [Direct2D](./direct2d-portal.md) - [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) zum Erstellen von [Direct2D-Effekten](effects-overview.md) und zum renderingrendering der Ausgabe eines Bild Effekts oder eines Effekt Diagramms in ein Renderziel verwenden.
--   Sie können über mehrere [**Geräte Kontexte**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext)verfügen. Dies kann hilfreich sein, um die Leistung in einer Thread-APP zu verbessern. Weitere Informationen finden Sie unter [Multithreaded Direct2D-apps](multi-threaded-direct2d-apps.md) .
--   Der [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) interagiert eng mit Direct3D und bietet Ihnen mehr Zugriff auf Direct3D-Optionen.
+-   Sie können für Windows Store-Apps rendern.
+-   Sie können das Renderziel jederzeit vor, während und nach dem Rendering ändern. Der Gerätekontext stellt sicher, dass die Aufrufe von Zeichnungsmethoden in der reihenfolge ausgeführt werden, und wendet sie an, wenn Sie das Renderziel wechseln.
+-   Sie können mehrere Fenstertypen mit einem Gerätekontext verwenden. Sie können einen [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) und eine [**DXGI-Swapkette**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) verwenden, um direkt in einem [**Windows::UI::Core::CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) oder einem [**Windows::UI::XAML::SwapChainBackgroundPanel zu rendern.**](/uwp/api/Windows.UI.Xaml.Controls.SwapChainBackgroundPanel)
+-   Sie können den [Direct2D-Gerätekontext](./direct2d-portal.md) [](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) verwenden, um [Direct2D-Effekte](effects-overview.md) zu erstellen und die Ausgabe eines Bildeffekts oder Effektdiagramms in einem Renderziel zu rendern.
+-   Sie können über mehrere [**Gerätekontexte**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext)verfügen. Dies kann hilfreich sein, um die Leistung in einer Thread-App zu verbessern. Weitere Informationen finden Sie unter [Multithread-Direct2D-Apps.](multi-threaded-direct2d-apps.md)
+-   Der [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) arbeitet eng mit Direct3D zusammen, sodass Sie mehr Zugriff auf Direct3D-Optionen haben.
 
-## <a name="how-to-create-a-direct2d-device-context-for-rendering"></a>Erstellen eines Direct2D-Geräte Kontexts für das Rendering
+## <a name="how-to-create-a-direct2d-device-context-for-rendering"></a>Erstellen eines Direct2D-Gerätekontexts für das Rendering
 
-Der folgende Code zeigt, wie Sie ein Direct3D11-Gerät erstellen, das zugehörige DXGI-Gerät erhalten, ein [**Direct2D-Gerät**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device)erstellen und schließlich den Direct2D- [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) für das Rendering erstellen.
+Der folgende Code zeigt Ihnen, wie Sie ein Direct3D11-Gerät erstellen, das zugehörige DXGI-Gerät abrufen, ein [**Direct2D-Gerät**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device)erstellen und schließlich den Direct2D-Gerätekontext für das Rendering erstellen. [](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext)
 
-Im folgenden finden Sie ein Diagramm der Methodenaufrufe und der von diesem Code verwendeten Schnittstellen.
+Hier sehen Sie ein Diagramm der Methodenaufrufe und der Schnittstellen, die dieser Code verwendet.
 
-![Diagramm der Direct2D-und Direct3D-Geräte und-Geräte Kontexte.](images/devicecontextdiagram.png)
+![Diagramm von direct2d- und direct3d-Geräten und Gerätekontexten.](images/devicecontextdiagram.png)
 
 > [!Note]  
-> Dieser Code setzt voraus, dass Sie bereits über ein [**ID2D1Factory1**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1factory1) -Objekt verfügen. Weitere Informationen finden Sie auf der [**ID2D1Factory-Referenzseite**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory).
+> In diesem Code wird davon ausgegangen, dass Sie bereits über ein [**ID2D1Factory1-Objekt**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1factory1) verfügen. Weitere Informationen finden Sie auf der [**Referenzseite id2D1Factory.**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory)
 
- 
+ 
 
 
 ```C++
@@ -123,26 +123,26 @@ Im folgenden finden Sie ein Diagramm der Methodenaufrufe und der von diesem Code
 
 
 
-Gehen wir die Schritte im vorangehenden Codebeispiel durch.
+Sehen wir uns die Schritte im vorherigen Codebeispiel an.
 
-1.  Rufen Sie einen ID3D11Device-Schnittstellen Zeiger ab, der zum Erstellen des Geräte Kontexts benötigt wird.
+1.  Abrufen eines ID3D11Device-Schnittstellenzeigers, den Sie benötigen, um den Gerätekontext zu erstellen.
 
-    -   Deklarieren Sie die Erstellungs Flags, um das [Direct3D](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) -Gerät für die BGRA-Unterstützung einzurichten. [Direct2D](./direct2d-portal.md) erfordert die BGRA-Farb Reihenfolge.
-    -   Deklarieren Sie ein Array von [**D3D- \_ Funktions \_**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level) Ebenen-Einträgen, die den Satz von featureebenen darstellen, die ihre App unterstützt.
+    -   Deklarieren Sie die Erstellungsflags, um das [Direct3D-Gerät](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) für die BGRA-Unterstützung einzurichten. [Direct2D](./direct2d-portal.md) erfordert die BGRA-Farbreihenfolge.
+    -   Deklarieren Sie ein Array von [**D3D \_ FEATURE LEVEL-Einträgen, \_**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_feature_level) die den Satz von Featureebenen darstellen, die Ihre App unterstützt.
         > [!Note]  
-        > [Direct3D](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) durchsucht die Liste, bis die von dem Host System unterstützte Funktionsebene gefunden wird.
+        > [Direct3D](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) durchsucht Ihre Liste, bis die vom Hostsystem unterstützte Funktionsebene gefunden wird.
 
-         
+         
 
-    -   Verwenden Sie die [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) -Funktion zum Erstellen eines [**ID3D11Device**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) -Objekts, die Funktion gibt auch ein [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) -Objekt zurück, aber dieses Objekt ist für dieses Beispiel nicht erforderlich.
+    -   Verwenden Sie die [**D3D11CreateDevice-Funktion,**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) um ein [**ID3D11Device-Objekt**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) zu erstellen. Die Funktion gibt auch ein [**ID3D11DeviceContext-Objekt**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) zurück, aber dieses Objekt wird für dieses Beispiel nicht benötigt.
 
-2.  Fragen Sie das [**Gerät Direct3D 11**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) nach seiner [**DXGI-Geräte**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) Schnittstelle ab.
-3.  Erstellen Sie ein [**ID2D1Device**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) -Objekt, indem Sie die [**ID2D1Factory:: createdevice**](/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) -Methode aufrufen und das [**idxgidevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) -Objekt übergeben.
-4.  Erstellen Sie mithilfe der Methode [**ID2D1Device:: | atedevicecontext**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1device-createdevicecontext) einen [**ID2D1DeviceContext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) -Zeiger.
+2.  Fragen Sie das [**Direct3D 11-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) nach seiner [**DXGI-Geräteschnittstelle**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) ab.
+3.  Erstellen Sie ein [**ID2D1Device-Objekt,**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) indem Sie die [**ID2D1Factory::CreateDevice-Methode**](/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) aufrufen und das [**IDXGIDevice-Objekt**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) übergeben.
+4.  Erstellen Sie einen [**ID2D1DeviceContext-Zeiger**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) mithilfe der [**ID2D1Device::CreateDeviceContext-Methode.**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1device-createdevicecontext)
 
 ## <a name="selecting-a-target"></a>Auswählen eines Ziels
 
-Der folgende Code zeigt, wie Sie die [**2 dimensionale Direct3D-Textur**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) für den Fenster Hintergrund Puffer erhalten und ein bitmapziel erstellen, das mit dieser Textur verknüpft ist, mit der der [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) gerendert wird.
+Der Code hier zeigt, wie Sie die [**zweidimensionale Direct3D-Textur**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) für den Fensterrückpuffer abrufen und ein Bitmapziel erstellen, das mit dieser Textur verknüpft ist, mit der der [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) gerendert wird.
 
 
 ```C++
@@ -226,33 +226,33 @@ Der folgende Code zeigt, wie Sie die [**2 dimensionale Direct3D-Textur**](/windo
 
 
 
-Gehen wir die Schritte im vorangehenden Codebeispiel durch.
+Sehen wir uns die Schritte im vorherigen Codebeispiel an.
 
-1.  Zuordnen einer [**DXGI \_ - \_ SwapChain \_ DESC1**](/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) -Struktur und Definieren der Einstellungen für die Swapkette. [](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain)
+1.  Ordnen Sie eine [**DXGI \_ SWAP CHAIN \_ \_ DESC1-Struktur**](/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) zu, und definieren Sie die Einstellungen für die [**Swapkette**](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain).
 
-    Diese Einstellungen zeigen ein Beispiel für das Erstellen einer Austausch Kette, die von einer Windows Store-App verwendet werden kann.
+    Diese Einstellungen zeigen ein Beispiel für das Erstellen einer Swapkette, die von einer Windows Store-App verwendet werden kann.
 
-2.  Holen Sie den Adapter, auf dem das [**Direct3D-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) und das [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) ausgeführt werden, und erhalten Sie das [**idxgifactory**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) -Objekt. Sie müssen diese **DXGI-Factory** verwenden, um sicherzustellen, dass die SwapChain auf dem gleichen Adapter erstellt wird. [](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain)
+2.  Abrufen des Adapters, auf dem das [**Direct3D-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) und das [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) ausgeführt werden, und Abrufen des [**idXGIFactory-Objekts,**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) das ihnen zugeordnet ist. Sie müssen diese **DXGI-Factory** verwenden, um sicherzustellen, dass die [**Swapkette**](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain) auf demselben Adapter erstellt wird.
 
-3.  Rufen Sie die [**IDXGIFactory2:: kreateswapchainforcorewindow**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow) -Methode auf, um die Swapkette zu erstellen. Verwenden Sie die [**Windows:: UI:: corewindow**](/uwp/api/Windows.UI.Core.CoreWindow) -Klasse für das Hauptfenster einer Windows Store-App.
+3.  Rufen Sie die [**IDXGIFactory2::CreateSwapChainForCoreWindow-Methode**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow) auf, um die Swapkette zu erstellen. Verwenden Sie die [**Windows::UI::CoreWindow-Klasse**](/uwp/api/Windows.UI.Core.CoreWindow) für das Hauptfenster einer Windows Store-App.
 
-    Stellen Sie sicher, dass die maximale Frame Latenz auf 1 festgelegt ist, um den Energieverbrauch zu minimieren
+    Stellen Sie sicher, dass Sie die maximale Framelatenz auf 1 festlegen, um den Energieverbrauch zu minimieren.
 
-    Wenn Sie Direct2D-Inhalt in einer Windows Store-App Rendering möchten, finden Sie weitere Informationen unter der Methode " [**kreateswapchainforcomposition**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition) ".
+    Wenn Sie Direct2D-Inhalte in einer Windows Store-App rendern möchten, lesen Sie die [**CreateSwapChainForComposition-Methode.**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition)
 
-4.  Den Hintergrund Puffer aus der [**Swapkette**](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain)erhalten. Der Hintergrund Puffer macht eine von der **austauschkette** zugeordnete [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) -Schnittstelle verfügbar.
+4.  Abrufen des Hintergrundpuffers aus der [**Swapkette.**](/windows/desktop/api/dxgi/nn-dxgi-idxgiswapchain) Der Hintergrundpuffer macht eine [**ID3D11Texture2D-Schnittstelle verfügbar,**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) die von der **Swapkette** zugeordnet wird.
 
-5.  Deklarieren Sie eine [**D2D1 \_ Bitmap \_ PROPERTIES1**](/windows/desktop/api/D2D1_1/ns-d2d1_1-d2d1_bitmap_properties1) -Struktur und legen Sie die Eigenschaftswerte fest. Legen Sie das Pixel Format auf BGRA fest, da dies das Format ist, das vom [**Direct3D-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) und vom [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) verwendet wird.
+5.  Deklarieren Sie eine [**D2D1 \_ BITMAP \_ PROPERTIES1-Struktur,**](/windows/desktop/api/D2D1_1/ns-d2d1_1-d2d1_bitmap_properties1) und legen Sie die Eigenschaftswerte fest. Legen Sie das Pixelformat auf BGRA fest, da dies das Format ist, das das [**Direct3D-Gerät**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) und das [**DXGI-Gerät**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) verwenden.
 
-6.  Gibt den Hintergrund Puffer als [**idxgisurface**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgisurface2) an, der an Direct2D übergeben werden soll. Direct2D akzeptiert [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) nicht direkt.
+6.  Abrufen des Hintergrundpuffers als [**IDXGISurface,**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgisurface2) das an Direct2D übergeben werden soll. Direct2D akzeptiert eine [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) nicht direkt.
 
-    Erstellen Sie ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Objekt aus dem Hintergrund Puffer mithilfe der [**ID2D1DeviceContext:: deatebitmapfromdxgisurface**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1_id2d1bitmap1)) -Methode.
+    Erstellen Sie ein [**ID2D1Bitmap-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) aus dem Hintergrundpuffer mithilfe der [**ID2D1DeviceContext::CreateBitmapFromDxgiSurface-Methode.**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1_id2d1bitmap1))
 
-7.  Nun ist die [**Direct2D-Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit dem Hintergrund Puffer verknüpft. Legen Sie das Ziel für den [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) auf die **Bitmap** fest.
+7.  Jetzt ist die [**Direct2D-Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) mit dem Hintergrundpuffer verknüpft. Legen Sie das Ziel für den [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) auf die **Bitmap** fest.
 
-## <a name="how-to-render-and-display"></a>Rendering und Anzeige
+## <a name="how-to-render-and-display"></a>Rendern und Anzeigen
 
-Nachdem Sie nun über eine Zielbitmap verfügen, können Sie mithilfe des [**Direct2D-Geräte Kontexts**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext)primitive, Bilder, Bildeffekte und Text zeichnen. Der folgende Code zeigt, wie Sie ein Rechteck zeichnen.
+Nachdem Sie nun über eine Zielbitmap verfügen, können Sie primitive Objekte, Bilder, Bildeffekte und Text mithilfe des [**Direct2D-Gerätekontexts**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext)zeichnen. Der Code hier zeigt, wie Sie ein Rechteck zeichnen.
 
 
 ```C++
@@ -285,16 +285,16 @@ DX::ThrowIfFailed(
 
 
 
-Gehen wir die Schritte im vorangehenden Codebeispiel durch.
+Sehen wir uns die Schritte im vorherigen Codebeispiel an.
 
-1.  Rufen Sie den Befehl " [**kreatesolidcolorbrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__id2d1solidcolorbrush)) " auf, um einen Pinsel zum Zeichnen des Rechtecks erstellen
-2.  Aufrufen der [**beginDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) -Methode vor dem Ausgeben von Zeichnungs Befehlen.
-3.  Ruft die [**drawrechteck**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle)) -Methode das Rechteck ab, das gezeichnet werden soll, und den Pinsel.
-4.  Aufrufen der [**EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode nach Abschluss der Ausgabe von Zeichnungs Befehlen.
-5.  Zeigen Sie das Ergebnis an, indem Sie die [**idxgiswapchain::P Resent**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) -Methode aufrufen.
+1.  Rufen [**Sie CreateSolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__id2d1solidcolorbrush)) auf, um einen Pinsel zum Zeichnen des Rechtecks zu erstellen.
+2.  Rufen Sie die [**BeginDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) auf, bevor Sie Zeichnungsbefehle ausgeben.
+3.  Rufen Sie die [**DrawRectangle-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f__id2d1brush_float_id2d1strokestyle)) auf, das zu zeichnende Rechteck und den Pinsel.
+4.  Rufen Sie die [**EndDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) auf, nachdem Sie mit dem Ausgeben von Zeichnungsbefehlen fertig sind.
+5.  Zeigen Sie das Ergebnis an, indem Sie die [**IDXGISwapChain::P resent-Methode**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-present) aufrufen.
 
-Nun können Sie den [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) zeichnen Primitives, Bilder, Bildeffekte und Text auf dem Bildschirm verwenden.
+Jetzt können Sie den [**Direct2D-Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) verwenden, um Primitive, Bilder, Bildeffekte und Text auf dem Bildschirm zu zeichnen.
 
- 
+ 
 
- 
+ 

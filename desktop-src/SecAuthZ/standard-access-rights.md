@@ -1,47 +1,47 @@
 ---
-description: Jeder Typ von Sicherungs fähigen Objekten verfügt über einen Satz von Zugriffsrechten, die den für diesen Objekttyp spezifischen Vorgängen entsprechen.
+description: Jeder Typ von sicherungsfähigem Objekt verfügt über einen Satz von Zugriffsrechten, die vorgängen entsprechen, die für diesen Objekttyp spezifisch sind.
 ms.assetid: f43bccce-0f8c-4732-b678-5fd3218a9f84
-title: Standard Zugriffsrechte
+title: Standardzugriffsrechte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf28fb1ac86a60df373a9f747510b4df624a17eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56067a4ed31f9506aee0b326e82a9bd5b4b49b02d12e6d401cc04f8262b19da0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119907110"
 ---
-# <a name="standard-access-rights"></a>Standard Zugriffsrechte
+# <a name="standard-access-rights"></a>Standardzugriffsrechte
 
-Jeder Typ von Sicherungs fähigen Objekten verfügt über einen Satz von Zugriffsrechten, die den für diesen Objekttyp spezifischen Vorgängen entsprechen. Zusätzlich zu diesen Objekt spezifischen Zugriffsrechten gibt es einen Satz von Standard Zugriffsrechten, die den meisten Typen von Sicherungs fähigen Objekten gemeinsam sind.
+Jeder Typ von sicherungsfähigem Objekt verfügt über einen Satz von Zugriffsrechten, die vorgängen entsprechen, die für diesen Objekttyp spezifisch sind. Zusätzlich zu diesen objektspezifischen Zugriffsrechten gibt es eine Reihe von Standardzugriffsrechten, die Vorgängen entsprechen, die den meisten Typen von sicherungsbaren Objekten gemeinsam sind.
 
-Das [Zugriffs Masken Format](access-mask-format.md) enthält einen Satz von Bits für die Standard Zugriffsrechte. Die folgenden Windows-Konstanten für Standard Zugriffsrechte werden in "Winnt. h" definiert.
+Das [Format der Zugriffsmaske](access-mask-format.md) enthält eine Reihe von Bits für die Standardzugriffsrechte. Die folgenden Windows Konstanten für Standardzugriffsrechte werden in Winnt.h definiert.
 
 
 
 | Konstante      | Bedeutung                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Delete        | Das Recht, das Objekt zu löschen.                                                                                                                                                                                                                                                                                                              |
-| Lese \_ Steuerelement | Das Recht, die Informationen in der [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly)des Objekts zu lesen, ohne die Informationen in der [*System-Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL) einzubeziehen. |
+| \_READ-STEUERELEMENT | Das Recht, die Informationen im [*Sicherheitsdeskriptor*](/windows/desktop/SecGloss/s-gly)des Objekts zu lesen, ohne die Informationen in der Systemzugriffssteuerungsliste (SACL). [](/windows/desktop/SecGloss/s-gly) |
 | SYNCHRONIZE   | Das Recht, das Objekt für die Synchronisierung zu verwenden. Dadurch kann ein Thread warten, bis sich das Objekt im signalisierten Zustand befindet. Einige Objekttypen unterstützen dieses Zugriffsrecht nicht.                                                                                                                                                                |
-| \_DAC schreiben    | Das Recht, die freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) in der Sicherheits Beschreibung des Objekts zu ändern.                                                                                                                    |
-| \_Besitzer schreiben  | Das Recht, in der Sicherheitsbeschreibung des Objekts den Besitzer zu ändern.                                                                                                                                                                                                                                                                           |
+| \_SCHREIB-DAC    | Das Recht, die DACL [*(Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) im Sicherheitsdeskriptor des Objekts zu ändern.                                                                                                                    |
+| WRITE \_ OWNER  | Das Recht, in der Sicherheitsbeschreibung des Objekts den Besitzer zu ändern.                                                                                                                                                                                                                                                                           |
 
 
 
  
 
-"Winnt. h" definiert auch die folgenden Kombinationen der standardmäßigen Zugriffsrechte Konstanten.
+Winnt.h definiert auch die folgenden Kombinationen der Standardkonst constants für Zugriffsrechte.
 
 
 
 | Konstante                   | Bedeutung                                                                           |
 |----------------------------|-----------------------------------------------------------------------------------|
-| \_alle Standard Rechte \_      | Kombiniert Lösch-, Lese- \_ und Schreib Steuerung, Schreiben von \_ DAC, Schreiben von \_ Besitzern und Synchronisieren des Zugriffs. |
-| Standard \_ Rechte \_ Ausführen  | Wird derzeit für das Read-Steuerelement definiert \_ .                                         |
-| Standard \_ Rechte \_ Lesen     | Wird derzeit für das Read-Steuerelement definiert \_ .                                         |
-| Standard \_ Rechte \_ erforderlich | Kombiniert Lösch-, Lese- \_ \_ und Schreibzugriff, DAC und Schreib \_ Zugriff.              |
-| Standard \_ Rechte \_ Schreibvorgänge    | Wird derzeit für das Read-Steuerelement definiert \_ .                                         |
+| STANDARD \_ RIGHTS \_ ALL      | Kombiniert DELETE-, READ \_ CONTROL-, WRITE \_ DAC-, WRITE \_ OWNER- und SYNCHRONIZE-Zugriff. |
+| STANDARD \_ RIGHTS \_ EXECUTE  | Derzeit als read \_ control definiert.                                         |
+| STANDARD \_ RIGHTS \_ READ     | Derzeit als read \_ control definiert.                                         |
+| STANDARDRECHTE \_ \_ ERFORDERLICH | Kombiniert DELETE-, READ \_ CONTROL-, WRITE \_ DAC- und WRITE \_ OWNER-Zugriff.              |
+| STANDARD \_ RIGHTS \_ WRITE    | Derzeit als read \_ control definiert.                                         |
 
 
 

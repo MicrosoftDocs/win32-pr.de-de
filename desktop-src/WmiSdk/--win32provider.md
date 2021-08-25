@@ -1,5 +1,5 @@
 ---
-description: Registriert Informationen über die physische Implementierung eines Anbieters in WMI. Anbieter, die die hostingmodel-Eigenschaft nicht festlegen, werden standardmäßig geladen, um Sie in einem Wmiprvse.exe Prozess als Network servicehostorselfhost auszuführen.
+description: Registriert Informationen zur physischen Implementierung eines Anbieters in WMI. Anbieter, die die HostingModel-Eigenschaft nicht festlegen, werden standardmäßig geladen, um in einem Wmiprvse.exe Prozess als NetworkServiceHostOrSelfHost ausgeführt zu werden.
 ms.assetid: 41e0d938-00c6-4f4c-8027-8b8512398dee
 ms.tgt_platform: multiple
 title: __Win32Provider-Klasse
@@ -10,18 +10,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0240c459ea2d09013379bfd7c3190ce691cf4cc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd7c848e9c792bcff3c0af58143d404bda744a982daeedbff01895242407a7aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857690"
 ---
 # <a name="__win32provider-class"></a>\_\_Win32Provider-Klasse
 
-Die **\_ \_ Win32Provider** -System Klasse registriert Informationen über die physische Implementierung eines Anbieters in WMI. Anbieter, die die **hostingmodel** -Eigenschaft nicht festlegen, werden standardmäßig geladen, um Sie in einem Wmiprvse.exe Prozess als **Network servicehostorselfhost** auszuführen.
+Die **\_ \_ Win32Provider-Systemklasse** registriert Informationen zur physischen Implementierung eines Anbieters in WMI. Anbieter, die die **HostingModel-Eigenschaft** nicht festlegen, werden standardmäßig geladen, um in einem Wmiprvse.exe Prozess als **NetworkServiceHostOrSelfHost** ausgeführt zu werden.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,45 +57,45 @@ class __Win32Provider : __Provider
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Win32Provider** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ Win32Provider-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Win32Provider** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ Win32Provider-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Clientloadableclsid**
+**ClientLoadableCLSID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Klassen Bezeichner, den WMI verwendet, um zu bestimmen, ob ein Hochleistungs Anbieter in den Client Prozess oder den WMI-Prozess geladen werden soll. Wenn sich sowohl der Anbieter als auch der Client auf demselben Computer befinden, lädt WMI den Anbieter Prozess Weise auf den Client, indem er **clientloadableclsid** als Klassen Bezeichner verwendet. Wenn sich der Anbieter und der Client auf unterschiedlichen Computern befinden, wird der Anbieter von WMI in-Process in den WMI-Prozess geladen. WMI verwendet auch **clientloadableclsid** , um Aktualisierungs Vorgänge zu unterstützen.
+Klassenbezeichner, mit dem WMI bestimmt, ob ein Hochleistungsanbieter in den Clientprozess oder den WMI-Prozess geladen werden soll. Wenn sich sowohl der Anbieter als auch der Client auf demselben Computer befinden, lädt WMI den prozessübergreifenden Anbieter mit **clientLoadableCLSID** als Klassenbezeichner auf den Client. Wenn sich der Anbieter und der Client auf verschiedenen Computern befinden, lädt WMI den anbieterin-process in WMI. WMI verwendet auch **ClientLoadableCLSID,** um Aktualisierungsvorgänge zu unterstützen.
 
-Weitere Informationen finden Sie unter [Registrieren eines High-Performance Anbieters.](registering-a-high-performance-provider.md)
+Weitere Informationen finden Sie unter [Registrieren eines High-Performance-Anbieters.](registering-a-high-performance-provider.md)
 
 </dd> <dt>
 
-**CLSID**
+**Clsid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**GUID** , die den Klassen Bezeichner (**CLSID**) des COM-Objekts des Anbieters darstellt. Dieses com-Objekt muss eine Implementierung der [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) -Schnittstelle enthalten.
+**GUID,** die den Klassenbezeichner **(CLSID)** des COM-Anbieterobjekts darstellt. Dieses COM-Objekt muss eine Implementierung der [**IWbemProviderInit-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) enthalten.
 
 </dd> <dt>
 
-**Parallelität**
+**Concurrency**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -104,46 +104,46 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Defaultmachinename**
+**DefaultMachineName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Identifiziert den Computer, auf dem der Anbieter gestartet werden soll. Wenn der Anbieter auf dem lokalen Computer ausgeführt wird, ist er **null**.
+Gibt den Computer an, auf dem der Anbieter gestartet werden soll. Wenn der Anbieter auf dem lokalen Computer ausgeführt wird, ist er **NULL.**
 
 </dd> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** gibt an, dass diese Instanz aktiviert ist und verwendet werden kann, um Client Anforderungen abzuschließen.
+**True** gibt an, dass diese Instanz aktiviert ist und zum Abschließen von Clientanforderungen verwendet werden kann.
 
 </dd> <dt>
 
-**Hostingmodel**
+**HostingModel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Diese Eigenschaft besteht aus Werten aus den Eigenschaften **hostinggroup** und **HostingSpecification** der [**MSFT- \_ Anbieter**](/previous-versions/windows/desktop/wmisystemprov/msft-providers) . Der Wert dieser Eigenschaft gibt an, wie WMI den Anbieter und das Sicherheits Konto lädt, unter dem er ausgeführt wird. Weitere Informationen zum Festlegen der **hostingmodel** -Eigenschaft finden Sie unter [Hosting und Sicherheit des Anbieters](provider-hosting-and-security.md) und [Registrieren eines Anbieters](registering-a-provider.md).
+Diese Eigenschaft besteht aus Werten aus den Eigenschaften [**MSFT \_ Providers**](/previous-versions/windows/desktop/wmisystemprov/msft-providers) **HostingGroup** und **HostingSpecification.** Der Wert dieser Eigenschaft gibt an, wie WMI den Anbieter und das Sicherheitskonto lädt, unter dem er ausgeführt wird. Weitere Informationen zum Festlegen der **HostingModel-Eigenschaft** finden Sie unter [Anbieterhosting und Sicherheit](provider-hosting-and-security.md) und [Registrieren eines Anbieters.](registering-a-provider.md)
 
 </dd> <dt>
 
@@ -160,7 +160,7 @@ Reserviert. Der Standardwert ist 0 (null).
 
 </dd> <dt>
 
-**Initializationreentrancy**
+**InitializationReentrancy**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -169,7 +169,7 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ein Satz von Flags, die Informationen über die Serialisierung bereitstellen. Der Standardwert ist 0 (null).
+Gruppe von Flags, die Informationen zur Serialisierung bereitstellen. Der Standardwert ist 0 (null).
 
 <dt>
 
@@ -190,29 +190,29 @@ Alle Initialisierungen dieses Anbieters im gleichen Namespace müssen serialisie
 2
 </dt> <dd>
 
-Es ist keine Initialisierungs Serialisierung erforderlich.
+Es ist keine Initialisierungsserialisierung erforderlich.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Initializationtimeoutinterval**
+**InitializationTimeoutInterval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Initializeasadminfirst**
+**InitializeAsAdminFirst**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -225,7 +225,7 @@ TBD
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -238,194 +238,194 @@ Der Anbietername.
 
 </dd> <dt>
 
-**Operationtimeoutinterval**
+**OperationTimeoutInterval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Perlocaleinitialization**
+**PerLocaleInitialization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** gibt an, dass der Anbieter für jedes Gebiets Schema initialisiert wird, wenn ein Benutzer mehr als einmal mit einem anderen Gebiets Schema eine Verbindung mit dem gleichen Namespace herstellt. Der Standardwert ist **FALSE**.
+True gibt an, dass der Anbieter für jedes Gebietsschema initialisiert wird, wenn ein Benutzer mehr als einmal mit unterschiedlichen Gebietsschemas eine Verbindung mit demselben Namespace herstellt. Der Standardwert ist **FALSE**.
 
 </dd> <dt>
 
-**Peruserinitialization**
+**PerUserInitialization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** gibt an, dass der Anbieter für jeden NTLM-Benutzer (NT LAN Manager), der Anforderungen an den Anbieter sendet, einmal initialisiert wird. Der Standardwert **false** gibt an, dass der Anbieter für alle Benutzer ein Mal initialisiert wird.
+True gibt an, dass der Anbieter einmal für jeden NTLM-Benutzer (NT LAN Manager) initialisiert wird, der Anforderungen an den Anbieter stellt. False  (Standard) gibt an, dass der Anbieter einmal für alle Benutzer initialisiert wird.
 
 </dd> <dt>
 
 **Pure**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** gibt an, dass der Anbieter die Entlade Vorbereitung durch Aufrufen von [**IUnknown:: Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) an allen ausstehenden Schnittstellen Punkten zustimmt, wenn WMI die **releasemethode** der primären Schnittstelle aufruft. Anbieter, die Clients von WMI beibehalten müssen, nachdem Sie nicht als Anbieter fungieren, sollten **Pure** auf **false** festlegen. Die Standardeinstellung ist **true**. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.
+True gibt an, dass der Anbieter bereit ist, das Entladen vorzubereiten, indem [**er IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für alle ausstehenden Schnittstellenpunkte aufruft, wenn WMI die **Release-Methode** seiner primären Schnittstelle aufruft. Anbieter, die WMI-Clients bleiben müssen, nachdem sie nicht als Anbieter fungieren, sollten **Pure** auf **FALSE** festlegen. Die Standardeinstellung ist **TRUE.** Weitere Informationen finden Sie im Abschnitt "Hinweise" dieses Themas.
 
 </dd> <dt>
 
 **SecurityDescriptor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Security Deskriptor (SD) in der Sicherheits beschreibungsdefinitions-Sprache (Security Deskriptor Definition Language, SDDL), die die Gruppe der Benutzer bestimmt, die [**iwbementkopppledregistrierungs: Register**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemdecoupledregistrar-register) für den entkoppelten Anbieter erfolgreich aufruft. Weitere Informationen finden Sie im Thema Security [Descriptor Definition Language](/windows/desktop/SecAuthZ/security-descriptor-definition-language) im Abschnitt Security des Windows SDK. Diese Sicherheits Beschreibung wird nur für entkoppelte Anbieter verwendet und wirkt sich nicht auf andere Anbieter aus. Weitere Informationen finden Sie unter [Einbinden eines Anbieters in eine Anwendung](incorporating-a-provider-in-an-application.md).
+Sicherheitsdeskriptor (SD) in der Sicherheitsdeskriptordefinitionssprache (Security Descriptor Definition Language, SDDL), die den Satz von Benutzern bestimmt, die [**IWbemDecoupledRegistrar:Register**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemdecoupledregistrar-register) für den entkoppelten Anbieter erfolgreich aufrufen können. Weitere Informationen finden Sie im Thema [Security Descriptor Definition Language](/windows/desktop/SecAuthZ/security-descriptor-definition-language) im Abschnitt Sicherheit des Windows SDK. Diese Sicherheitsbeschreibung wird nur für entkoppelte Anbieter verwendet und wirkt sich nicht auf andere Anbieter aus. Weitere Informationen finden Sie unter [Integrieren eines Anbieters in eine Anwendung.](incorporating-a-provider-in-an-application.md)
 
-WMI führt Zugriffs Überprüfungen für entkoppelte Anbieter aus, die die Schnittstellen [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) und [**iwbemubjectsink**](iwbemobjectsink.md) verwenden. Wenn die Sicherheits Beschreibung **null** ist, können nur Anwendungen oder Dienste, die unter dem Konto "LocalSystem", "NetworkService" und "LocalService" ausgeführt werden, einen entkoppelten Anbieter ausführen.
+WMI führt Zugriffsüberprüfungen für entkoppelte Anbieter durch, die die [**Schnittstellen IWbemProviderInit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) und [**IWbemObjectSink**](iwbemobjectsink.md) verwenden. Wenn die Sicherheitsbeschreibung **NULL** ist, können nur Anwendungen oder Dienste, die unter den Konten LocalSystem, NetworkService und LocalService ausgeführt werden, einen entkoppelten Anbieter ausführen.
 
-Die folgende Zeichenfolge zeigt einen entkoppelten Anbieter, der nur von integrierten Administratoren ausgeführt werden soll. " O:Bag: Bad: (A;; 0 x1;;; BA) "
+Die folgende Zeichenfolge zeigt einen entkoppelten Anbieter, der nur von integrierten Administratoren ausgeführt werden soll." O:BAG:BAD:(A;;0 x1;;; BA)"
 
-Weitere Informationen zum Festlegen der **securityDescriptor** -Eigenschaft finden Sie unter Verwalten der [WMI-Sicherheit](maintaining-wmi-security.md).
+Weitere Informationen zum Festlegen der **SecurityDescriptor-Eigenschaft** finden Sie unter [Maintaining WMI Security](maintaining-wmi-security.md).
 
 </dd> <dt>
 
-**Supportsexplicitshutdown**
+**SupportsExplicitShutdown**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Supportsextendedstatus**
+**SupportsExtendedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Supportsquotas**
+**SupportsQuotas**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Supportssendstatus**
+**SupportsSendStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Supportsshutdown**
+**SupportsShutdown**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Supportsdrosselung**
+**SupportsThrottling**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-**Unloadtimeout**
+**UnloadTimeout**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-[Datums-und Uhrzeit Format](date-and-time-format.md) , das angibt, wie lange der Anbieter von WMI im Leerlauf bleiben kann, bevor er entladen wird. In der Regel fordern Anbieter an, dass die WMI-Wartezeit nicht länger als fünf Minuten dauert.
+[Datums- und Uhrzeitformat,](date-and-time-format.md) das angibt, wie lange WMI dem Anbieter erlaubt, im Leerlauf zu bleiben, bevor er entladen wird. In der Regel fordern Anbieter an, dass WMI nicht länger als fünf Minuten wartet.
 
-Für die aktuelle Version von WMI wird der Wert dieser Eigenschaft ignoriert. WMI entlädt den Anbieter basierend auf dem Timeout Wert in einer internen Klasse im \\ Root-Namespace. Es wird empfohlen, dass Anbieter **unloadtimeout** festlegen. Weitere Informationen finden Sie unter [Entladen eines Anbieters](unloading-a-provider.md).
+Für die aktuelle Version von WMI wird der Wert dieser Eigenschaft ignoriert. WMI entlädt den Anbieter basierend auf dem Time out-Wert in einer internen Klasse im \\ Stammnamespace. Es wird empfohlen, dass Anbieter **UnloadTimeout festlegen.** Weitere Informationen finden Sie unter [Entladen eines Anbieters.](unloading-a-provider.md)
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Version des Anbieters. Die unterstützten Versionen sind 1 und 2. Version 2 stärkt die Gültigkeits Prüfungen für alle zugehörigen Eigenschaften Registrierungen, insbesondere die Eigenschaft "Identitäts [**ationlevel**](swbemsecurity-impersonationlevel.md) ".
+Version des Anbieters. Die unterstützten Versionen sind 1 und 2. Version 2 verstärkt Gültigkeitsprüfungen für alle zugeordneten Eigenschaftenregistrierungen, insbesondere die [**ImpersonationLevel-Eigenschaft.**](swbemsecurity-impersonationlevel.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ Win32Provider** -Klasse wird vom [**\_ \_ Anbieter**](--provider.md)abgeleitet.
+Die **\_ \_ Win32Provider-Klasse** wird vom Anbieter [**\_ \_ abgeleitet.**](--provider.md)
 
-Die meisten Anbieter können die Standardwerte für die **initializationreentrancy** -Eigenschaft akzeptieren. Wenn ein Anbieter jedoch die gleichzeitige Initialisierung für separate Benutzer unterstützen kann, kann diese Eigenschaft auf 1 (eins) festgelegt werden. Wenn eine serialisierte Initialisierung erforderlich ist, bleibt **initializationreentrancy** 0 (null). In beiden Fällen ist " **peruserinitialization** " auf " **true**" festgelegt.
+Die meisten Anbieter können die Standardwerte für die **InitializationReentrancy-Eigenschaft** akzeptieren. Wenn ein Anbieter jedoch die gleichzeitige Initialisierung für separate Benutzer unterstützen kann, kann diese Eigenschaft auf 1 (eins) festgelegt werden. Wenn eine serialisierte Initialisierung erforderlich ist, **bleibt InitializationReentrancy** 0 (null). In beiden Instanzen ist **PerUserInitialization** auf **TRUE festgelegt.**
 
-Ein reiner Anbieter oder Anbieter, der die **Pure** -Eigenschaft auf **true** festlegt, ist nur für Dienst Anforderungen von Anwendungen und WMI vorhanden. Die meisten Anbieter sind reine Anbieter. Ein nicht reiner Anbieter ist die Ausnahme. Nicht reine Anbieter wechseln nach dem Abschluss von Wartungsanforderungen zur Rolle des Clients.
+Ein reiner Anbieter oder ein Anbieter, der die **Pure-Eigenschaft** auf **TRUE** legt, ist nur für Dienstanforderungen von Anwendungen und WMI vorhanden. Die meisten Anbieter sind reine Anbieter. Ein Nicht-Pure-Anbieter ist die Ausnahme. Nicht-Anbieter werden in die Rolle des Clients überwechseln, nachdem sie Wartungsanforderungen abgeschlossen haben.
 
-Ein Beispiel für einen nicht reinen Anbieter ist ein Push-Anbieter, der mit der Ausgabe von Abfragen beginnt und nach Abschluss der Initialisierung Anforderungen an WMI sendet. Ein pushanbieter hat keine Zuständigkeiten, außer wenn das CIM-Repository mit Daten zum Zeitpunkt der Initialisierung aktualisiert wird. Nach dem Aktualisieren des Repository kann ein pushanbieter darauf warten, entladen zu werden, oder zur Client Rolle wechseln. Der Push-Anbieter, der darauf wartet, entladen zu werden, ist ein reiner Anbieter. Der Push-Anbieter, der an Client Aktivitäten teilnimmt, ist nicht rein.
+Ein Beispiel für einen nicht zu verwendenden Anbieter ist ein Pushanbieter, der mit der Ausgabe von Abfragen beginnt und WMI-Anforderungen nach Abschluss der Initialisierung stellt. Ein Pushanbieter ist nicht zuständig, außer das CIM-Repository zum Zeitpunkt der Initialisierung mit Daten zu aktualisieren. Nach dem Aktualisieren des Repositorys kann ein Pushanbieter warten, bis er entladen wurde, oder auf die Rolle des Clients umstiegen. Der Pushanbieter, der auf das Entladen wartet, ist ein reiner Anbieter. Der Pushanbieter, der an Clientaktivitäten beteiligt ist, ist nicht von Bezweck.
 
-WMI muss in der Lage sein, reine Anbieter von nicht reinen Anbietern zu unterscheiden, damit ermittelt werden kann, wann das Herunterfahren sicher ist. WMI muss darauf warten, dass alle Vorgänge, die nicht-reine Anbieter einschließen, vollständig beendet werden, bevor er sicher heruntergefahren werden kann.
+WMI muss in der Lage sein, reine Anbieter von nicht reinen Anbietern zu unterscheiden, damit sie bestimmen kann, wann das Herunterfahren sicher ist. WMI muss warten, bis alle Vorgänge mit nicht reinen Anbietern abgeschlossen sind, bevor es sicher heruntergefahren werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -446,7 +446,7 @@ WMI muss in der Lage sein, reine Anbieter von nicht reinen Anbietern zu untersch
 [**\_\_Anbieter**](/windows/desktop/WmiSdk/--provider)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
 [Registrieren eines Anbieters](registering-a-provider.md)

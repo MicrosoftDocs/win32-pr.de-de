@@ -1,7 +1,7 @@
 ---
-description: Gibt die Zeitdauer in Sekunden an, die gewartet werden soll, bevor eine EAPOL-Start gesendet wird.
+description: Gibt die Zeitdauer in Sekunden an, die gewartet werden soll, bevor ein EAPOL-Start gesendet wird.
 ms.assetid: 6163eeb9-23a8-4e34-ad3f-016946e241e2
-title: startperiod (Onex)-Element
+title: startPeriod-Element (OneX)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: a583403a354cbefe93387be2d5af06958bbf6b28
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d21381939348ce8c37a9b23abb2283ab209e766bbce452c3802b8c5defe0872
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800720"
 ---
-# <a name="startperiod-onex-element"></a>startperiod (Onex)-Element
+# <a name="startperiod-onex-element"></a>startPeriod-Element (OneX)
 
-Das startperiod-Element (Onex) gibt die Zeitspanne in Sekunden an, die gewartet werden soll, bevor eine EAPOL-Start gesendet wird. Eine EAPOL-Start Nachricht wird gesendet, um den 802.1 x-Authentifizierungsprozess zu starten.
+Das startPeriod -Element (OneX) gibt die Wartezeit in Sekunden an, die gewartet werden soll, bevor EAPOL-Start gesendet wird. Eine EAPOL-Start wird gesendet, um den 802.1X-Authentifizierungsprozess zu starten.
 
-Dieses Element ist optional. Wenn "startperiod" nicht in einem Profil angegeben ist, wird ein Wert von 5 Sekunden verwendet.
+Dieses Element ist optional. Wenn startPeriod nicht in einem Profil angegeben ist, wird ein Wert von 5 Sekunden verwendet.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
+**Windows XP mit SP3 und der Wlan-LAN-API für Windows XP mit SP2:** Dieses Element wird ignoriert, wenn es in einem Profil vorhanden ist.
 
 ``` syntax
 <xs:element name="startPeriod">
@@ -44,7 +44,7 @@ Dieses Element ist optional. Wenn "startperiod" nicht in einem Profil angegeben 
 </xs:element>
 ```
 
-Das **startperiod** -Element wird durch das [**Onex**](onexschema-onex-element.md) -Element definiert.
+Das **startPeriod-Element** wird durch das [**OneX-Element**](onexschema-onex-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,8 +52,8 @@ Das **startperiod** -Element wird durch das [**Onex**](onexschema-onex-element.m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -61,13 +61,13 @@ Das **startperiod** -Element wird durch das [**Onex**](onexschema-onex-element.m
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Onex**](onexschema-onex-element.md)

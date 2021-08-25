@@ -1,7 +1,7 @@
 ---
 description: Gibt die in den Metadaten des Volumes verfügbare Bezeichnerzeichenfolge zurück.
 ms.assetid: 0573cbcd-6fb1-4648-bb06-4433796f6bb5
-title: Getidentificationfield-Methode der Win32_EncryptableVolume-Klasse
+title: GetIdentificationField-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: bb70f76d9556df5bed70639471eb7a0f3afaaecc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0cbcedfe13b46698bd1067a2200369575a2fb9d7ceaa50f52174afc0e83e712
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119797130"
 ---
-# <a name="getidentificationfield-method-of-the-win32_encryptablevolume-class"></a>Getidentificationfield-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="getidentificationfield-method-of-the-win32_encryptablevolume-class"></a>GetIdentificationField-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **getidentificationfield** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " gibt die in den Metadaten des Volumes verfügbare Bezeichnerzeichenfolge zurück.
+Die **GetIdentificationField-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) gibt die in den Metadaten des Volumes verfügbare Bezeichnerzeichenfolge zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,28 +39,28 @@ uint32 GetIdentificationField(
 
 <dl> <dt>
 
-*Identificationfield* \[ vorgenommen\]
+*IdentificationField* \[ out\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine Zeichenfolge, die das Identifikations Feld angibt, das dem Volume zugewiesen wird.
+Eine Zeichenfolge, die das Identifikationsfeld angibt, das dem Volume zugewiesen ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
+Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn er fehlschlägt.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                                                                                                     |
+| Rückgabecode/-wert                                                                                                                                                                  | Beschreibung                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode war erfolgreich.<br/>                                                                           |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Dieses Laufwerk ist BitLocker-Laufwerkverschlüsselung gesperrt. Dieses Volume muss in der Systemsteuerung entsperrt werden. <br/> |
-| <dl> <dt>**F \_ E \_ nicht \_ aktiviert**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüssel Schutzvorrichtung zum Aktivieren von BitLocker hinzu. <br/>                    |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Dieses Laufwerk wird durch BitLocker-Laufwerkverschlüsselung gesperrt. Sie müssen dieses Volume aus Systemsteuerung entsperren. <br/> |
+| <dl> <dt>**FVE \_ E \_ NICHT \_ AKTIVIERT**</dt> <dt>2150694920 (0x80310008)</dt> </dl> | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüsselschutzvorrichtung hinzu, um BitLocker zu aktivieren. <br/>                    |
 
 
 
@@ -72,10 +72,10 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise, Windows 7 Ultimate \[ Desktop-Apps\]<br/>                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Enterprise, nur Windows 7 \[ Ultimate-Desktop-Apps\]<br/>                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\CIMV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

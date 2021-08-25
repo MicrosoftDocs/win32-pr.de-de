@@ -1,7 +1,7 @@
 ---
-description: Die regkreateblobkey-Funktion speichert ein BLOB mit dem angegebenen Registrierungsschlüssel.
+description: Die RegCreateBlobKey-Funktion speichert ein BLOB am angegebenen Registrierungsschlüssel.
 ms.assetid: 14f3763e-aa04-4d51-b388-81ebf0d3952c
-title: Regkreateblobkey-Funktion (Netmon. h)
+title: RegCreateBlobKey-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: fc46b38919b37dc004c1065b0cc8d5f80e65984c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3267fd0ba5e6fe56b99b5d465f69718fe5509a7ead58acf1d8dafb642397af5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889650"
 ---
-# <a name="regcreateblobkey-function"></a>Regkreateblobkey-Funktion
+# <a name="regcreateblobkey-function"></a>RegCreateBlobKey-Funktion
 
-Die **regkreateblobkey** -Funktion speichert ein BLOB mit dem angegebenen Registrierungsschlüssel.
+Die **RegCreateBlobKey-Funktion** speichert ein BLOB am angegebenen Registrierungsschlüssel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,32 +41,32 @@ DWORD RegCreateBlobKey(
 
 <dl> <dt>
 
-*HKEY* \[ vorgenommen\]
+*hkey* \[ out\]
 </dt> <dd>
 
 Handle für den Registrierungsschlüssel, in dem das BLOB gespeichert wird.
 
 </dd> <dt>
 
-*szblobname* \[ in\]
+*szBlobName* \[ In\]
 </dt> <dd>
 
-Name (Anwendung definiert), der das BLOB in der Registrierung darstellt.
+Name (anwendungsdefiniert), der das BLOB in der Registrierung darstellt.
 
 </dd> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das gespeichert wird.
+Handle für das blob, das gespeichert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 
 <dl> <dt>
 
-[Regopenblobkey](regopenblobkey.md)
+[RegOpenBlobKey](regopenblobkey.md)
 </dt> </dl>
 
  

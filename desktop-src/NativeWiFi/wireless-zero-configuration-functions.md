@@ -1,26 +1,26 @@
 ---
-description: Die folgenden Funktionen ermöglichen Softwareentwicklern die Verwendung der Funktionen, die vom Modul für die drahtlose Null-Konfiguration bereitgestellt werden.
+description: Mit den folgenden Funktionen können Softwareentwickler die Funktionen des Wireless Zero Configuration-Moduls verwenden.
 ms.assetid: 6e0a2d0f-556a-413d-a607-2e63aec5c790
-title: Konfigurationsfunktionen für drahtlose NULL
+title: Drahtlose Zero-Konfigurationsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2978d39530b7893ba5ca611215ddf3c208590f39
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d498f0315e7e382638b71a041172f5d4fa587374d0613018905c720b3463994
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119800315"
 ---
-# <a name="wireless-zero-configuration-functions"></a>Konfigurationsfunktionen für drahtlose NULL
+# <a name="wireless-zero-configuration-functions"></a>Drahtlose Zero-Konfigurationsfunktionen
 
-\[Die Programmierschnittstelle für die drahtlose Null-Konfiguration wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [native WiFi-API](native-wifi-reference.md), die eine ähnliche Funktionalität bietet. Weitere Informationen finden Sie unter Informationen zur [nativen WiFi-API](about-the-native-wifi-api.md).\]
+\[Die Programmierschnittstelle "Wireless Zero Configuration" wird ab Windows Vista und Windows Server 2008 nicht mehr unterstützt. Verwenden Sie stattdessen die [NATIVE WIFI-API,](native-wifi-reference.md)die ähnliche Funktionen bietet. Weitere Informationen finden Sie unter [Informationen zur nativen WLAN-API.](about-the-native-wifi-api.md)\]
 
-Die folgenden Funktionen ermöglichen Softwareentwicklern die Verwendung der Funktionen, die vom Modul für die drahtlose Null-Konfiguration bereitgestellt werden.
+Mit den folgenden Funktionen können Softwareentwickler die Funktionen des Wireless Zero Configuration-Moduls verwenden.
 
--   [**Wzceapolgetinterfaceparametriams**](wzceapolgetinterfaceparams.md)
--   [**Wzcenumschlag-Schnittstellen**](wzcenuminterfaces.md)
--   [**Wzcqueryinterface**](wzcqueryinterface.md)
--   [**Wzkrefreshinterface**](wzcrefreshinterface.md)
+-   [**WZCEapolGetInterfaceParams**](wzceapolgetinterfaceparams.md)
+-   [**WZCEnumInterfaces**](wzcenuminterfaces.md)
+-   [**WZCQueryInterface**](wzcqueryinterface.md)
+-   [**WZCRefreshInterface**](wzcrefreshinterface.md)
 
  
 

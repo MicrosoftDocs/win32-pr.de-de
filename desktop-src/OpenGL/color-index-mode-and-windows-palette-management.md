@@ -1,28 +1,28 @@
 ---
-title: Color-Index Modus und Windows-Palettenverwaltung
-description: Der Farb Index Modus gibt Farben in einer logischen Palette mit einem Index zu einem bestimmten logischen Paletteneintrag an.
+title: Color-Index Modus und Windows Palettenverwaltung
+description: Der Farbindexmodus gibt Farben in einer logischen Palette mit einem Index für einen bestimmten Eintrag der logischen Palette an.
 ms.assetid: 8cf07c3e-8a8b-4f28-a363-34d3c0d33890
 keywords:
-- OpenGL unter Windows, Palettenverwaltung
-- OpenGL unter Windows, Farb Index Modus
-- Farb Index Modus OpenGL
-- Palette Management OpenGL
+- OpenGL auf Windows,Palettenverwaltung
+- OpenGL im Windows,Farbindexmodus
+- Farbindexmodus OpenGL
+- Palettenverwaltung OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 873308c4ac64d496e344b1c71d440d4dc8321418
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72e4d7c9db02a80bdffdef93655e88cc5b2ca8197a58c5ffdb488c2b782f10d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119889260"
 ---
-# <a name="color-index-mode-and-windows-palette-management"></a>Color-Index Modus und Windows-Palettenverwaltung
+# <a name="color-index-mode-and-windows-palette-management"></a>Color-Index Modus und Windows Palettenverwaltung
 
-Der Farb Index Modus gibt Farben in einer logischen Palette mit einem Index zu einem bestimmten logischen Paletteneintrag an. Die meisten GDI-Programme verwenden Farb Index Paletten, aber der RGBA-Modus funktioniert für OpenGL besser, wenn es um verschiedene Effekte geht, z. b. Schattierung, Beleuchtung, Nebel und Textur Zuordnung. Wenn die unwahre Farbe für Ihre OpenGL-Anwendung nicht entscheidend ist, können Sie den Farb Index Modus verwenden (z. b. für eine Topographic-Karte, die "false Color" verwendet, um den uploververlauf hervorzuheben).
+Der Farbindexmodus gibt Farben in einer logischen Palette mit einem Index für einen bestimmten Eintrag der logischen Palette an. Die meisten GDI-Programme verwenden Farbindexpaletten, aber der RGBA-Modus funktioniert für OpenGL besser für verschiedene Effekte, z. B. Schattierung, Beleuchtung, Oberfläche und Texturzuordnung. Wenn es für Ihre OpenGL-Anwendung nicht wichtig ist, die wahrste Farbe zu haben, können Sie den Farbindexmodus verwenden (z. B. für eine topografische Karte, die "false color" verwendet, um den Farbverlauf der Erhöhung hervorzuheben).
 
-## <a name="color-index-mode-palette-sample"></a>Beispiel für Color-Index Modus-Palette
+## <a name="color-index-mode-palette-sample"></a>Palettenbeispiel für Color-Index Modus
 
-Der folgende Code richtet eine [**pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) -Struktur ein, die das-Flag des **ipixeltype** -Members auf den PFD- \_ Typ \_ ColorIndex festlegt. Dies gibt an, dass die Anwendung eine Farb Index Palette verwendet.
+Der folgende Code richtet eine [**PIXELFORMATDESCRIPTOR-Struktur**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) ein, die das Flag des **iPixelType-Members** auf PFD \_ TYPE \_ COLORINDEX festlegt. Dadurch wird angegeben, dass die Anwendung eine Farbindexpalette verwendet.
 
 
 ```C++
@@ -67,9 +67,9 @@ BOOL bSetupPixelFormat(HDC hdc)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

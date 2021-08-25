@@ -1,68 +1,68 @@
 ---
 title: Neuerungen in Version 1.0 von WCS
-description: Version 1,0 der Abbild Farbverwaltung (ICM) wurde in Microsoft \ 160 bereitgestellt. Windows \ 160; 95 und bietet grundlegende Farb Verwaltungsfunktionen innerhalb von Windows-Geräte Kontexten.
+description: Version 1.0 von Image Color Management (ICM) wurde in Microsoft \ 160 bereitgestellt. Windows \ 160;95 und bietet grundlegende Farbverwaltungsfunktionen in Windows Gerätekontexten.
 ms.assetid: edc5a6c2-ca7c-4cf4-a339-4f1875c60493
 keywords:
-- Windows Color System (WCS), neue Features
-- WCS (Windows Color System), neue Funktionen
-- Bild Farbverwaltung, neue Features
-- Farbverwaltung, neue Features
-- Farben, neue Features
-- Windows Color System (WCS), Neuigkeiten
-- WCS (Windows Color System), Neuigkeiten
-- Bildfarben Verwaltung, Neuerungen
-- Farbverwaltung, Neuerungen
-- Farben, Neuerungen
-- Windows Color System (WCS), Windows Vista
+- Windows Farbsystem (WCS), neue Features
+- WCS (Windows Color System), neue Features
+- Bildfarbverwaltung,neue Features
+- Farbverwaltung,neue Features
+- Farben,neue Features
+- Windows Farbsystem (WCS), Neues
+- WCS (Windows Color System), Neues
+- Bildfarbverwaltung,Neues
+- Farbverwaltung,Neues
+- colors,what es new
+- Windows Farbsystem (WCS), Windows Vista
 - WCS (Windows Color System), Windows Vista
-- Bildfarben Verwaltung, Windows Vista
-- Farbverwaltung, Windows Vista
-- Farben, Windows Vista
-- Windows Color System (WCS), Betriebssysteme
+- Bildfarbverwaltung,Windows Vista
+- Farbverwaltung,Windows Vista
+- Colors,Windows Vista
+- Windows Farbsystem (WCS), Betriebssysteme
 - WCS (Windows Color System), Betriebssysteme
-- Abbild Farben Verwaltung, Betriebssysteme
-- Farbverwaltung, Betriebssysteme
-- Farben, Betriebssysteme
+- Bildfarbverwaltung,Betriebssysteme
+- Farbverwaltung,Betriebssysteme
+- Farben,Betriebssysteme
 - Farbverwaltung (Image Color Management; ICM)
-- ICM (Bildfarben Verwaltung)
+- ICM (Bildfarbverwaltung)
 - Windows Vista-Farbverwaltung
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88efb4807eb7bd9244cd20277c44809cec2e96df
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 8bdf3bb59d71cc08ffa5ffacecea3df0b02f2c303b8aa3034de98f710e44cc23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106361100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814330"
 ---
 # <a name="whats-new-in-version-10-of-wcs"></a>Neuerungen in Version 1.0 von WCS
 
-Version 1,0 der Abbild Farbverwaltung (Image Color Management, ICM) wurde in Microsoft Windows 95 bereitgestellt und stellt grundlegende Farb Verwaltungsfunktionen innerhalb von Windows-Geräte Kontexten bereit.
+Version 1.0 der Bildfarbverwaltung (ICM) wurde in Microsoft Windows 95 bereitgestellt und bietet grundlegende Farbverwaltungsfunktionen in Windows Gerätekontexten.
 
-Die ICM-Version 2,0 ist in Windows 98, Windows Millennium Edition, Windows 2000 und Windows XP enthalten und umfasst eine Reihe von neuen Funktionen, die die Farbverwaltung außerhalb der Geräte Kontexte implementieren. Diese neuen Funktionen sind für anspruchsvollere Anforderungen an die Farbverwaltung geeignet, und Anwendungen erhalten eine bessere Kontrolle über den Farb Verwaltungsprozess.
+ICM Version 2.0 ist in Windows 98, Windows Edition, Windows 2000 und Windows XP enthalten und umfasst eine Vielzahl neuer Funktionen, die die Farbverwaltung außerhalb von Gerätekontexten implementieren. Diese neuen Funktionen eignen sich für anspruchsvollere Anforderungen an die Farbverwaltung und ermöglichen Anwendungen eine bessere Kontrolle über den Farbverwaltungsprozess.
 
-Weitere Funktionen sind in der Windows Vista-Version von Microsoft Windows enthalten.
+Zusätzliche Funktionen sind in der Version Windows Vista von Microsoft Windows.
 
--   Auswahl von statischem/monolithischem und dynamischem/modularen CMM/Profil-Workflow
-    -   static von heidelbergerdruck, in Win98 ICM2, bereitgestellt von "Canon Inc." mit der kyuanos-Technologie von Canon
-    -   baselinegerät, Farbdarstellung und Profil Profile für das Modell
-    -   Unterstützung für schwarze Generierung,
-    -   Unterstützung für schwarze Beibehaltung,
-    -   Hohe dynamische Bereichs Unterstützung,
-    -   Gleit Komma/mehr als 16 Bits pro Kanal Genauigkeit,
-    -   standardmäßige Unterstützung für das Arbeitsbereich-Arbeitsbereich,
-    -   Flexibilität bei der Steuerung von Zielen innerhalb von Geräten, getrennt von den Geräte übergreifenden Merkmalen,
-    -   Möglichkeit zum Steuern des Algorithmus für einen einzelnen Farbskala-Mapping zwischen zwei Geräten,
-    -   Unterstützung für das Mapping von Quell Geräte primären Replikaten in einem farblich verwalteten Workflow
--   Auswahl von Binär-und Textfarbe-Profil Formaten
-    -   Binär, das dem auf dem ICC-TIFF-Zeichen markierten Profil Format und Text mithilfe von XML-Schemas entspricht
--   Unterstützung der Version 4 von ICC,
--   Zentrale Farb Verwaltungs-Systemsteuerung,
--   Legacy Kompatibilität für Anwendungen und Geräte
--   Erweiterbarkeit über Drittanbieter-Plug-in-Gerätemodelle und gamingmapping-Modelle,
--   Unterstützung für die erweiterte Zuordnung von Geräten/Gamut durch Aktivieren der direkten Kommunikation zwischen DM-und GMM-Plug-ins
--   static (ICM2) CMM ist nun standardmäßig die relative farbige metrikabsicht anstelle der absoluten farbige metrikabsicht.
+-   Auswahl des statischen/monolithischen und dynamischen/modularen CMM-/Profilworkflows
+    -   static, bereitgestellt von DruckerDruckmaschinen in Win98 ICM2, dynamisch bereitgestellt von Canon Inc. mithilfe der Ky technology von Canon
+    -   Baselinegerät, Farberscheinungsbild und Gamut-Zuordnungsmodellprofile,
+    -   Unterstützung für die Blackgenerierung,
+    -   Unterstützung der Schwarzerbehaltung,
+    -   Unterstützung für hohen dynamischen Bereich,
+    -   Gleitkomma/größer als 16 Bits pro Kanalgenauigkeit,
+    -   Standardmäßige Unterstützung für allgemeine Arbeitsraumprofile,
+    -   Flexibilität bei der Steuerung von zielinternen, geräteinternen Merkmalen, die von geräteübergreifenden Merkmalen getrennt sind,
+    -   Möglichkeit, einen einzelnen Gamut-Zuordnungsalgorithmus zwischen zwei Geräten zu steuern,
+    -   Unterstützung für die Zuordnung primärer Quellgeräte zu Zielprimprimries in einem farb verwalteten Workflow,
+-   Auswahl von Formaten für Binär- und Textfarbprofile
+    -   Binäre Konformität mit DEM TIFF-basierten Profilformat und Text mitHILFE von XML-Schemas
+-   SUPPORT FÜR VERSION 4 von VERSION 4,
+-   zentrale Farbverwaltungssteuerung,
+-   Legacykompatibilität für Anwendungen und Geräte,
+-   Erweiterbarkeit über Plug-In-Gerätemodelle von Drittanbietern und Gamut-Zuordnungsmodelle,
+-   Unterstützung der erweiterten Geräte-/Gamutzuordnung durch Aktivieren der direkten Kommunikation zwischen DM- und GMM-Plug-Ins,
+-   Static (ICM2) CMM verwendet jetzt standardmäßig die Relative Colorimetric-Absicht anstelle der Absicht Absolute Colorimetric.
 
  
 

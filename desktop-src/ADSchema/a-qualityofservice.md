@@ -1,11 +1,11 @@
 ---
 title: Quality-of-Service-Attribut
-description: Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
+description: Lokale oder Domänenqualität von Dienstbits für Richtlinienobjekte.
 ms.assetid: 8db984d5-2aca-493b-8fa0-8156dd7c453b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Quality of Service-Attribut
-- AD-Schema des QualityOfService-Attributs
+- Quality-of-Service-Attribut-AD-Schema
+- qualityOfService-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2346a67b4434413a22495409b64638634880fd18
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 92f8adf204ac9bd926c3b964dd7bb09925b63628efc5b30fec6548cb54ec3336
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119837470"
 ---
 # <a name="quality-of-service-attribute"></a>Quality-of-Service-Attribut
 
-Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
+Lokale oder Domänenqualität von Dienstbits für Richtlinienobjekte.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Quality of Service                   |
-| LDAP-Display-Name | QualityOfService                     |
+| CN                | Quality-of-Service                   |
+| Ldap-Anzeigename | qualityOfService                     |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.458               |
-| System-ID-GUID    | 80a67e4e-9l22-11D0-AFDD-00c04f 930c9 |
+| System-ID-GUID    | 80a67e4e-9f22-11d0-afdd-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Lokale oder Domänen Qualität von Dienst Bits in Richtlinien Objekten.
 |------------------------|----------------------------------------------------|
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
-| System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
-| Ist indiziert             | False                                              |
-| Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| System-Only            | Falsch                                              |
+| Ist einwertig       | Richtig                                               |
+| Ist indiziert             | Falsch                                              |
+| Im globalen Katalog      | Falsch                                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 

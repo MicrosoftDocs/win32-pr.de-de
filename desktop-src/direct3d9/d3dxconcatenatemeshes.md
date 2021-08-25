@@ -1,7 +1,7 @@
 ---
-description: Verkettet eine Gruppe von Netzen zu einem gemeinsamen Mesh. Diese Methode kann optional eine Matrix Transformation auf jedes Eingabe Mesh und seine Texturkoordinaten anwenden.
+description: Verkettet eine Gruppe von Gitternetzen zu einem gemeinsamen Gitternetz. Diese Methode kann optional eine Matrixtransformation auf jedes Eingabegitternetz und seine Texturkoordinaten anwenden.
 ms.assetid: 0f2af63a-ece5-4c99-8cb8-045099eca3ea
-title: D3DXConcatenateMeshes-Funktion (D3DX9Mesh. h)
+title: D3DXConcatenateMeshes-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b96fe47a3d818c382b35a93708ac51b60e891841
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 21801c2f4b8ef8dd2a34c9788b402128da4ce4fed33c3c38a08e61c35a847e50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857390"
 ---
 # <a name="d3dxconcatenatemeshes-function"></a>D3DXConcatenateMeshes-Funktion
 
-Verkettet eine Gruppe von Netzen zu einem gemeinsamen Mesh. Diese Methode kann optional eine Matrix Transformation auf jedes Eingabe Mesh und seine Texturkoordinaten anwenden.
+Verkettet eine Gruppe von Gitternetzen zu einem gemeinsamen Gitternetz. Diese Methode kann optional eine Matrixtransformation auf jedes Eingabegitternetz und seine Texturkoordinaten anwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,75 +47,75 @@ HRESULT D3DXConcatenateMeshes(
 
 <dl> <dt>
 
-*ppmeshes* \[ in\]
+*ppMeshes* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Array von Eingabe Gitter Zeigern (siehe [**ID3DXMesh**](id3dxmesh.md)). Die Anzahl der Elemente im Array ist nummeshes.
+Array von Eingabegitternetzzeigern (siehe [**ID3DXMesh**](id3dxmesh.md)). Die Anzahl der Elemente im Array ist NumMeshes.
 
 </dd> <dt>
 
-*Nummeshes* \[ in\]
+*NumMeshes* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Eingabe-Netzen, die verkettet werden sollen.
+Anzahl der zu verkettenden Eingabegitternetze.
 
 </dd> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gitter Erstellungs Optionen; Dies ist eine Kombination aus einem oder mehreren [**D3DXMESH**](./d3dxmesh.md) -Flags. Die Gitter Erstellungs Optionen entsprechen dem Optionsparameter, der für [**D3DXCreateMesh**](d3dxcreatemesh.md)erforderlich ist.
+Optionen für die Mesherstellung; Dies ist eine Kombination aus einem oder mehreren [**D3DXMESH-Flags.**](./d3dxmesh.md) Die Optionen für die Mesherstellung entsprechen dem Optionsparameter, der von [**D3DXCreateMesh**](d3dxcreatemesh.md)benötigt wird.
 
 </dd> <dt>
 
-*pgeomxforms* \[ in\]
+*pGeomXForms* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Optionales Array von Geometrie Transformationen. Die Anzahl der Elemente im Array ist nummeshes. jedes Element ist eine Transformationsmatrix (siehe [**D3DXMATRIX**](d3dxmatrix.md)). Kann **null** sein.
+Optionales Array von Geometrietransformationen. Die Anzahl der Elemente im Array ist NumMeshes. jedes Element ist eine Transformationsmatrix (siehe [**D3DXMATRIX**](d3dxmatrix.md)). Kann **NULL** sein.
 
 </dd> <dt>
 
-*ptexturexforms* \[ in\]
+*pTextureXForms* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMATRIX**](d3dxmatrix.md) \***
+Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Optionales Array von Textur Transformationen. Die Anzahl der Elemente im Array ist nummeshes. jedes Element ist eine Transformationsmatrix (siehe [**D3DXMATRIX**](d3dxmatrix.md)). Dieser Parameter kann **null** sein.
+Optionales Array von Texturtransformationen. Die Anzahl der Elemente im Array ist NumMeshes. jedes Element ist eine Transformationsmatrix (siehe [**D3DXMATRIX**](d3dxmatrix.md)). Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*pdecl* \[ in\]
+*pDecl* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Optionaler Zeiger auf eine Scheitelpunkt Deklaration (siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md)). Dieser Parameter kann **null** sein.
+Optionaler Zeiger auf eine Scheitelpunktdeklaration (siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md)). Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*pD3DDevice* \[ in\]
+*pD3DDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf ein [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Gerät, das zum Erstellen des neuen Netzes verwendet wird.
+Zeiger auf ein [**IDirect3DDevice9-Gerät,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das zum Erstellen des neuen Gitternetzes verwendet wird.
 
 </dd> <dt>
 
-*ppmeshout* \[ vorgenommen\]
+*ppMeshOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf das erstellte Mesh (siehe [**ID3DXMesh**](id3dxmesh.md)).
+Adresse eines Zeigers auf das erstellte Gitternetz (siehe [**ID3DXMesh**](id3dxmesh.md)).
 
 </dd> </dl>
 
@@ -123,11 +123,11 @@ Adresse eines Zeigers auf das erstellte Mesh (siehe [**ID3DXMesh**](id3dxmesh.md
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert eines der folgenden Werte sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn keine [Scheitelpunkt Deklaration](vertex-declaration.md) als Teil des Optionen Gitter Erstellungs-Parameters angegeben wird, generiert die Methode eine Vereinigung aller Scheitelpunkt Deklarationen der Subnetze und fördert ggf. Kanäle und Typen. Die-Methode erstellt eine Attribut Tabelle aus Attribut Tabellen der Eingabe-Meshes. Um die Erstellung einer Attribut Tabelle sicherzustellen, führen Sie " [**optimieren**](id3dxmesh--optimize.md) " mit Flags aus, die auf D3DXMESHOPT \_ Compact und D3DXMESHOPT \_ attrsort festgelegt sind (siehe [**D3DXMESHOPT**](./d3dxmeshopt.md)).
+Wenn keine [Scheitelpunktdeklaration](vertex-declaration.md) als Teil des Options mesh creation-Parameters angegeben wird, generiert die Methode eine Vereinigung aller Scheitelpunktdeklarationen der Untermeshes, wobei bei Bedarf Kanäle und Typen heraufstreckt werden. Die -Methode erstellt eine Attributtabelle aus Attributtabellen der Eingabegitternetze. Um die Erstellung einer Attributtabelle sicherzustellen, rufen [**Sie Optimieren**](id3dxmesh--optimize.md) mit Flags auf, die auf D3DXMESHOPT \_ COMPACT und D3DXMESHOPT ATTRSORT festgelegt sind \_ (siehe [**D3DXMESHOPT**](./d3dxmeshopt.md)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -135,8 +135,8 @@ Wenn keine [Scheitelpunkt Deklaration](vertex-declaration.md) als Teil des Optio
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -144,7 +144,7 @@ Wenn keine [Scheitelpunkt Deklaration](vertex-declaration.md) als Teil des Optio
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

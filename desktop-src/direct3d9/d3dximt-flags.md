@@ -1,7 +1,7 @@
 ---
-description: Textur Wrapping Optionen für IMT-Berechnungs-APIs.
+description: Texturumbruchoptionen für IMT-Berechnungs-APIs.
 ms.assetid: ec364418-67c6-42c7-9c5d-b97aa7e17c24
-title: D3DXIMT Flags-Enumeration (D3dx9mesh. h)
+title: D3DXIMT FLAGS-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 97731d4720e67fce899bf96f457e55f6adbc05a7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3209021b73bc9d17f43386d7df85082887a76600540c44955c41228da3d17379
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857020"
 ---
-# <a name="d3dximt-flags-enumeration"></a>D3DXIMT Flags-Enumeration
+# <a name="d3dximt-flags-enumeration"></a>D3DXIMT FLAGS-Enumeration
 
-Textur Wrapping Optionen für IMT-Berechnungs-APIs.
+Texturumbruchoptionen für IMT-Berechnungs-APIs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ typedef enum D3DXIMT_FLAGS {
 
 <dl> <dt>
 
-<span id="D3DXIMT_WRAP_U"></span><span id="d3dximt_wrap_u"></span>**D3DXIMT \_ Wrap \_ U**
+<span id="D3DXIMT_WRAP_U"></span><span id="d3dximt_wrap_u"></span>**D3DXIMT \_ WRAP \_ U**
 </dt> <dd>
 
-Die Textur wird in die U-Richtung umschlossen.
+Die Textur wird in U-Richtung umschließen.
 
 </dd> <dt>
 
-<span id="D3DXIMT_WRAP_V"></span><span id="d3dximt_wrap_v"></span>**D3DXIMT \_ Wrap \_ V**
+<span id="D3DXIMT_WRAP_V"></span><span id="d3dximt_wrap_v"></span>**D3DXIMT \_ WRAP \_ V**
 </dt> <dd>
 
-Die Textur wird in die Richtung V umschlossen.
+Die Textur wird in V-Richtung umbrechen.
 
 </dd> <dt>
 
-<span id="D3DXIMT_WRAP_UV"></span><span id="d3dximt_wrap_uv"></span>**D3DXIMT \_ Wrap \_ -UV**
+<span id="D3DXIMT_WRAP_UV"></span><span id="d3dximt_wrap_uv"></span>**D3DXIMT \_ WRAP \_ UV**
 </dt> <dd>
 
-Die Textur umschließt sowohl die Richtung "Sie" als auch "V".
+Die Textur wird sowohl in Ihrer als auch in V-Richtung umschließen.
 
 </dd> </dl>
 
@@ -68,11 +68,11 @@ Die Textur umschließt sowohl die Richtung "Sie" als auch "V".
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

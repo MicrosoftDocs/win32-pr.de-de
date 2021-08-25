@@ -1,21 +1,21 @@
 ---
-title: API-Referenz für Windows-Biometrieframework
-description: Ausführliche Beschreibungen von Funktionen, Strukturen und Funktionen, die verwendet werden können, um Client Anwendungen und Plug-ins zu erstellen.
+title: Windows Biometrieframework-API-Referenz
+description: Ausführliche Beschreibungen von Funktionen, Strukturen und Funktionen, die zum Erstellen von Clientanwendungen und Plug-Ins verwendet werden können.
 ms.assetid: e495f3a5-64f5-4181-bf3a-c0c2bbe09016
 keywords:
-- Windows-Biometrieframework API-Windows-Biometrieframework-API, Referenz
+- Windows Biometrieframework-API Windows Biometrieframework-API , Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bec69f85b345be81fa3ca61bae15e6c57975f0c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 168d0d17a27f5af62178ecc88702da8687bc427d9a337510e20d6ed9c0ec7276
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119906680"
 ---
-# <a name="windows-biometric-framework-api-reference"></a>API-Referenz für Windows-Biometrieframework
+# <a name="windows-biometric-framework-api-reference"></a>Windows Biometrieframework-API-Referenz
 
-Windows-Biometrieframework API-Referenzseiten enthalten ausführliche Beschreibungen von Funktionen, Strukturen und Funktionen, die zum Erstellen von Client Anwendungen und Plug-ins verwendet werden können. Verweis Seiten sind in die folgenden Gruppen unterteilt:
+Windows Biometrieframework-API-Referenzseiten enthalten detaillierte Beschreibungen von Funktionen, Strukturen und Funktionen, die zum Erstellen von Clientanwendungen und Plug-Ins verwendet werden können. Verweisseiten sind in die folgenden Gruppen unterteilt:
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,8 +23,8 @@ Windows-Biometrieframework API-Referenzseiten enthalten ausführliche Beschreibu
 
 | Thema                                                                       | BESCHREIBUNG                                                                                                                                         |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Client Anwendungs Referenz](client-application-reference.md)<br/> | Funktionen, Strukturen und andere Typen, die Sie zum Erstellen von Client Anwendungen verwenden können, die mit dem Windows-Biometrieframework interagieren.<br/> |
-| [Plug-in-Referenz](plug-in-reference.md)<br/>                       | Adapter Funktionen, Wrapper Funktionen und Strukturen zum Erstellen von benutzerdefinierten Plug-in-Adaptern von drei Typen: Engine, Sensor und Storage.<br/>   |
+| [Clientanwendungsreferenz](client-application-reference.md)<br/> | Funktionen, Strukturen und andere Typen, mit denen Sie Clientanwendungen erstellen können, die mit dem Windows Biometric Framework interagieren.<br/> |
+| [Plug-In-Referenz](plug-in-reference.md)<br/>                       | Adapterfunktionen, Wrapperfunktionen und Strukturen zum Erstellen benutzerdefinierter Plug-In-Adapter von drei Typen: Engine, Sensor und Speicher.<br/>   |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht das Erstellen und Ändern von Indizes für die angegebene Datenbank.
+description: Aktiviert die Indexerstellung und -änderung für die angegebene Datenbank.
 ms.assetid: f780034e-6963-423c-8ffa-9fbe98dca7e1
-title: Sdbstartindex-Funktion
+title: SdbStartIndexing-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: e3324b4cb0d42ca33ee7c3234a1acc099adcb743
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3643936511755642cf9997709faa69d7bb3e902e5cf3e9dd2b0f56bda681b381
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119815270"
 ---
-# <a name="sdbstartindexing-function"></a>Sdbstartindex-Funktion
+# <a name="sdbstartindexing-function"></a>SdbStartIndexing-Funktion
 
-Ermöglicht das Erstellen und Ändern von Indizes für die angegebene Datenbank.
+Aktiviert die Indexerstellung und -änderung für die angegebene Datenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ BOOL WINAPI SdbStartIndexing(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*iiwhat* \[ in\]
+*iiWhich* \[ In\]
 </dt> <dd>
 
 Der Indexbezeichner
@@ -56,7 +56,7 @@ Der Indexbezeichner
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE bei** Erfolg oder **FALSE bei** Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -74,13 +74,13 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 <dl> <dt>
 
-[**Sdbcommitindexes**](sdbcommitindexes.md)
+[**SdbCommitIndexes**](sdbcommitindexes.md)
 </dt> <dt>
 
-[**Sdbdeclareingedex**](sdbdeclareindex.md)
+[**SdbDeclareIndex**](sdbdeclareindex.md)
 </dt> <dt>
 
-[**Sdbstopindizierung**](sdbstopindexing.md)
+[**SdbStopIndexing**](sdbstopindexing.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: PBM_SETSTEP Meldung (kommstrg. h)
-description: Gibt das Schritt Inkrement für eine Statusanzeige an. Der Schritt Inkrement ist der Betrag, um den die Statusanzeige bei jedem Empfang einer PBM-StepIt-Nachricht die aktuelle Position vergrößert \_ . Standardmäßig ist das Schritt Inkrement auf 10 festgelegt.
+title: PBM_SETSTEP Meldung (Commctrl.h)
+description: Gibt das Schrittinkrement für eine Statusanzeige an. Das Schrittinkrement ist der Betrag, um den die Statusanzeige ihre aktuelle Position erhöht, wenn sie eine PBM \_ STEPIT-Nachricht empfängt. Standardmäßig ist das Schrittinkrement auf 10 festgelegt.
 ms.assetid: 75c1085b-6c7a-4c44-9a12-f9bf21f7d945
 keywords:
-- Windows-Steuerelemente für PBM_SETSTEP Meldung
+- PBM_SETSTEP Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1240d09aeadcd7994187704d0b5a4630ab1b7afb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b88508654565cb3af05dd768ef7ef1e54e5ef0ee80e0797bc45631f6e3fe6912
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119798770"
 ---
-# <a name="pbm_setstep-message"></a>PBM- \_ SetStep-Nachricht
+# <a name="pbm_setstep-message"></a>PBM \_ SETSTEP-Meldung
 
-Gibt das Schritt Inkrement für eine Statusanzeige an. Der Schritt Inkrement ist der Betrag, um den die Statusanzeige bei jedem Empfang einer [**PBM- \_ StepIt**](pbm-stepit.md) -Nachricht die aktuelle Position vergrößert. Standardmäßig ist das Schritt Inkrement auf 10 festgelegt.
+Gibt das Schrittinkrement für eine Statusanzeige an. Das Schrittinkrement ist der Betrag, um den die Statusanzeige ihre aktuelle Position erhöht, wenn sie eine [**PBM \_ STEPIT-Nachricht**](pbm-stepit.md) empfängt. Standardmäßig ist das Schrittinkrement auf 10 festgelegt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Gibt das Schritt Inkrement für eine Statusanzeige an. Der Schritt Inkrement ist
 *wParam* 
 </dt> <dd>
 
-Neuer Schritt Inkrement.
+Neuer Schrittinkrement.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Neuer Schritt Inkrement.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das vorherige Schritt Inkrement zurück.
+Gibt das vorherige Schrittinkrement zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt das vorherige Schritt Inkrement zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

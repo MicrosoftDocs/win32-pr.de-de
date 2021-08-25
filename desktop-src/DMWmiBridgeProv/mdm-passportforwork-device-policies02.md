@@ -1,6 +1,6 @@
 ---
 title: MDM_PassportForWork_Device_Policies02-Klasse
-description: Die MDM \_ passportforwork- \_ Geräte \_ Policies02 Klasse definiert die Richtlinien Einstellungen für Windows Hello for Business.
+description: Die MDM \_ \_ PassportForWork-Geräterichtlinien02-Klasse \_ definiert die Windows Hello für Unternehmen-Richtlinieneinstellungen.
 ms.assetid: 7581ea7e-0360-4695-a4ad-566df24a8841
 keywords:
 - MDM_PassportForWork_Device_Policies02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c66d642fb796d3b7af009197580f1eda21ab0bdf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c545408e0e1f0a6058b9efea6033d9531084df0357fe612a34773baa04f8dd63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119796810"
 ---
-# <a name="mdm_passportforwork_device_policies02-class"></a>MDM \_ passportforwork- \_ Gerät \_ Policies02 Klasse
+# <a name="mdm_passportforwork_device_policies02-class"></a>MDM \_ PassportForWork \_ Device \_ Policies02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ passportforwork- \_ Geräte \_ Policies02** Klasse definiert die Richtlinien Einstellungen für Windows Hello for Business.
+Die **MDM \_ PassportForWork-Geräterichtlinien02-Klasse \_ \_** definiert die Windows Hello für Unternehmen-Richtlinieneinstellungen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,20 +46,20 @@ class MDM_PassportForWork_Device_Policies02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ passportforwork- \_ Geräte \_ Policies02** Klasse verfügt über folgende Typen von Membern:
+Die **MDM \_ PassportForWork \_ Device \_ Policies02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ passportforwork- \_ Geräte \_ Policies02** Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ PassportForWork \_ Device \_ Policies02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,14 +68,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Knoten für die Richtlinien Einstellungen für Windows Hello for Business.
+Knoten für die Windows Hello für Unternehmen-Richtlinieneinstellungen.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -84,14 +84,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Device/Vendor/MSFT/PassPortForWork/*tenantid*/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Device/Vendor/MSFT/PassPortForWork/*TenantID*/"
 
 </dd> <dt>
 
-[Usecertificateforonpremauth](/windows/client-management/mdm/passportforwork-csp)
+[UseCertificateForOnPremAuth](/windows/client-management/mdm/passportforwork-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -105,10 +105,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

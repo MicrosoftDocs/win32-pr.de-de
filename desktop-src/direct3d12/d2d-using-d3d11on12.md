@@ -1,34 +1,34 @@
 ---
 title: D2D mit D3D11on12
-description: Das D3D1211on12-Beispiel veranschaulicht das Rendering von D2D-Inhalt über D3D12-Inhalt, indem Ressourcen zwischen einem 11 basierten Gerät und einem 12-basierten Gerät gemeinsam genutzt werden.
+description: Im Beispiel D3D1211on12 wird veranschaulicht, wie D2D-Inhalt über D3D12-Inhalt gerendert wird, indem Ressourcen zwischen einem 11-basierten Gerät und einem 12-basierten Gerät gemeinsam verwendet werden.
 ms.assetid: FAEF1412-053C-4B5F-80FA-85396C2586B4
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d18399b85499787f74dab725d562b6a299878b35
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: a84f935ba49df4910aa729c39ae6ac0ce08f3810bf3b0cd75752bbe4c00e9ef1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104548763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119858015"
 ---
 # <a name="d2d-using-d3d11on12"></a>D2D mit D3D11on12
 
-Das **D3D1211on12** -Beispiel veranschaulicht das Rendering von D2D-Inhalt über D3D12-Inhalt, indem Ressourcen zwischen einem 11 basierten Gerät und einem 12-basierten Gerät gemeinsam genutzt werden.
+Im Beispiel **D3D1211on12** wird veranschaulicht, wie D2D-Inhalt über D3D12-Inhalt gerendert wird, indem Ressourcen zwischen einem 11-basierten Gerät und einem 12-basierten Gerät gemeinsam verwendet werden.
 
--   [Erstellen eines ID3D11On12Device](#create-an-id3d11on12device)
+-   [Erstellen einer ID3D11On12Device](#create-an-id3d11on12device)
 -   [Erstellen einer D2D-Factory](#create-a-d2d-factory)
 -   [Erstellen eines Renderziels für D2D](#create-a-render-target-for-d2d)
--   [Erstellen grundlegender D2D Text-Objekte](#create-basic-d2d-text-objects)
--   [Aktualisieren der Haupt-Renderschleife](#updating-the-main-render-loop)
+-   [Erstellen grundlegender D2D-Textobjekte](#create-basic-d2d-text-objects)
+-   [Aktualisieren der Hauptrenderschleife](#updating-the-main-render-loop)
 -   [Ausführen des Beispiels](#run-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="create-an-id3d11on12device"></a>Erstellen eines ID3D11On12Device
+## <a name="create-an-id3d11on12device"></a>Erstellen einer ID3D11On12Device
 
-Der erste Schritt besteht darin, ein [**ID3D11On12Device**](/windows/desktop/api/d3d11on12/nn-d3d11on12-id3d11on12device) zu erstellen, nachdem die [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device) erstellt wurde. dazu gehört das Erstellen eines [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) , das über die API [**D3D11On12CreateDevice**](/windows/desktop/api/d3d11on12/nf-d3d11on12-d3d11on12createdevice)in den **ID3D12Device** umschlossen ist. Diese API übernimmt neben anderen Parametern auch eine [**ID3D12CommandQueue**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue) , damit das 11on12-Gerät seine Befehle übermitteln kann. Nachdem das **ID3D11Device** erstellt wurde, können Sie die **ID3D11On12Device** -Schnittstelle von diesem Abfragen. Dies ist das primäre Geräte Objekt, das zum Einrichten von D2D verwendet wird.
+Der erste Schritt besteht darin, eine [**ID3D11On12Device**](/windows/desktop/api/d3d11on12/nn-d3d11on12-id3d11on12device) zu erstellen, nachdem [**id3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device) erstellt wurde. Dazu gehört das Erstellen einer [**ID3D11Device,**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) die über die API [**D3D11On12CreateDevice**](/windows/desktop/api/d3d11on12/nf-d3d11on12-d3d11on12createdevice)um die **ID3D12Device** umschlossen ist. Diese API übernimmt neben anderen Parametern auch eine [**ID3D12CommandQueue,**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue) sodass das 11On12-Gerät seine Befehle übermitteln kann. Nachdem **id3D11Device** erstellt wurde, können Sie die **ID3D11On12Device-Schnittstelle** daraus abfragen. Dies ist das primäre Geräteobjekt, das zum Einrichten von D2D verwendet wird.
 
-Richten Sie die Geräte in der **loadpipeline** -Methode ein.
+Richten Sie in der **LoadPipeline-Methode** die Geräte ein.
 
 ``` syntax
  // Create an 11 device wrapped around the 12 device and share
@@ -53,20 +53,20 @@ Richten Sie die Geräte in der **loadpipeline** -Methode ein.
 
 
 
-| Aufruffluss                                              | Parameter |
+| Aufrufflow                                              | Parameter |
 |--------------------------------------------------------|------------|
 | [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)            |            |
 | [**D3D11On12CreateDevice**](/windows/desktop/api/d3d11on12/nf-d3d11on12-d3d11on12createdevice) |            |
 
 
 
- 
+ 
 
 ## <a name="create-a-d2d-factory"></a>Erstellen einer D2D-Factory
 
-Nachdem wir nun über ein 11on12-Gerät verfügen, verwenden wir es, um eine D2D Factory und ein Gerät zu erstellen, wie es normalerweise mit D3D11 erfolgt.
+Nachdem wir nun über ein 11On12-Gerät verfügen, verwenden wir es, um eine D2D-Factory und ein D2D-Gerät zu erstellen, wie dies normalerweise mit D3D11 der Fall wäre.
 
-Fügen Sie der **loadassets** -Methode hinzu.
+Fügen Sie zur **LoadAssets-Methode** hinzu.
 
 ``` syntax
  // Create D2D/DWrite components.
@@ -83,22 +83,22 @@ Fügen Sie der **loadassets** -Methode hinzu.
 
 
 
-| Aufruffluss                                                                        | Parameter                                                   |
+| Aufrufflow                                                                        | Parameter                                                   |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**D2D1 \_ Geräte \_ Kontext \_ Optionen**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_device_context_options)     |                                                              |
-| [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory)                              | [**D2D1 \_ Factory- \_ Typ**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_factory_type)        |
-| [**Idxgidevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)                                      |                                                              |
-| [**ID2D1Factory3:: kreatedevice**](/windows/desktop/api/d2d1_3/nf-d2d1_3-id2d1factory3-createdevice)           |                                                              |
-| [**ID2D1Device:: anatedevicecontext**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1device-createdevicecontext) |                                                              |
-| [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory)                       | [**dwrite- \_ Factory- \_ Typ**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_factory_type) |
+| [**\_D2D1-GERÄTEKONTEXTOPTIONEN \_ \_**](/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_device_context_options)     |                                                              |
+| [**D2D1CreateFactory**](/windows/desktop/api/d2d1/nf-d2d1-d2d1createfactory)                              | [**D2D1 \_ \_ FACTORY-TYP**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_factory_type)        |
+| [**IDXGIDevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)                                      |                                                              |
+| [**ID2D1Factory3::CreateDevice**](/windows/desktop/api/d2d1_3/nf-d2d1_3-id2d1factory3-createdevice)           |                                                              |
+| [**ID2D1Device::CreateDeviceContext**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1device-createdevicecontext) |                                                              |
+| [**DWriteCreateFactory**](/windows/desktop/api/dwrite/nf-dwrite-dwritecreatefactory)                       | [**\_DWRITE-FACTORYTYP \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_factory_type) |
 
 
 
- 
+ 
 
 ## <a name="create-a-render-target-for-d2d"></a>Erstellen eines Renderziels für D2D
 
-D3D12 besitzt die Swapkette, wenn wir also mit unserem 11on12-Gerät (D2D-Inhalt) in den Hintergrund Puffer geresgt werden möchten, müssen wir umschließende Ressourcen vom Typ [**ID3D11Resource**](/windows/desktop/api/d3d11/nn-d3d11-id3d11resource) aus den backpuffern vom Typ [**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource)erstellen. Dadurch wird die **ID3D12Resource** mit einer D3D11 basierten Schnittstelle verknüpft, damit Sie mit dem 11on12-Gerät verwendet werden kann. Nachdem eine umschließende Ressource vorhanden ist, können wir eine renderzieloberfläche für D2D erstellen, die auch in der **loadassets** -Methode dargestellt wird.
+D3D12 besitzt die Swapkette. Wenn wir also mit unserem 11On12-Gerät (D2D-Inhalt) in den Hintergrundpuffer rendern möchten, müssen wir umschlossene Ressourcen vom Typ [**ID3D11Resource**](/windows/desktop/api/d3d11/nn-d3d11-id3d11resource) aus den Backpuffern des Typs [**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource)erstellen. Dadurch wird **ID3D12Resource** mit einer D3D11-basierten Schnittstelle verknüpft, sodass sie mit dem 11On12-Gerät verwendet werden kann. Nachdem wir über eine umschlossene Ressource verfügen, können wir eine Renderzieloberfläche erstellen, auf der D2D gerendert werden kann, auch in der **LoadAssets-Methode.**
 
 ``` syntax
  // Query the desktop's dpi settings, which will be used to create
@@ -159,34 +159,34 @@ D3D12 besitzt die Swapkette, wenn wir also mit unserem 11on12-Gerät (D2D-Inhalt
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-getdesktopdpi"><strong>ID2D1Factory:: getdesktopdpi</strong></a></td>
+<td><a href="/windows/desktop/api/d2d1/nf-d2d1-id2d1factory-getdesktopdpi"><strong>ID2D1Factory::GetDesktopDpi</strong></a></td>
 
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/d2d1_1/ns-d2d1_1-d2d1_bitmap_properties1"><strong>D2D1_BITMAP_PROPERTIES1</strong></a></td>
 <td><dl><a href="/windows/desktop/api/d2d1_1helper/nf-d2d1_1helper-bitmapproperties1"><strong>BitmapProperties1</strong></a><br />
-[<strong>D2D1_BITMAP_OPTIONS</strong>] (/Windows/Desktop/API/d2d1_1/ne-d2d1_1-d2d1_bitmap_options)<br />
-[<strong>Pixel Format</strong>] (/windows/desktop/api/d2d1helper/nf-d2d1helper-pixelformat)<br />
-[<strong>DXGI_FORMAT</strong>] (/Windows/Desktop/API/dxgiformat/ne-dxgiformat-dxgi_format)<br />
-[<strong>D2D1_ALPHA_MODE</strong>] (/Windows/Desktop/API/dcommon/ne-dcommon-d2d1_alpha_mode)<br />
+[<strong>D2D1_BITMAP_OPTIONS</strong>] (/windows/desktop/api/d2d1_1/ne-d2d1_1-d2d1_bitmap_options)<br />
+[<strong>PixelFormat</strong>] (/windows/desktop/api/d2d1helper/nf-d2d1helper-pixelformat)<br />
+[<strong>DXGI_FORMAT</strong>] (/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)<br />
+[<strong>D2D1_ALPHA_MODE</strong>] (/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)<br />
 </dl></td>
 </tr>
 <tr class="odd">
 <td><a href="cd3dx12-cpu-descriptor-handle.md"><strong>CD3DX12_CPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>Getcpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart"><strong>GetCPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-getbuffer"><strong>Idxgiswapchain:: GetBuffer</strong></a></td>
+<td><a href="/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-getbuffer"><strong>IDXGISwapChain::GetBuffer</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrendertargetview"><strong>"Kreaterendertargetview"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrendertargetview"><strong>CreateRenderTargetView</strong></a></td>
 
 </tr>
 <tr class="even">
@@ -194,19 +194,19 @@ D3D12 besitzt die Swapkette, wenn wir also mit unserem 11on12-Gerät (D2D-Inhalt
 <td><a href="/windows/desktop/api/d3d11/ne-d3d11-d3d11_bind_flag"><strong>D3D11_BIND_FLAG</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-createwrappedresource"><strong>"Kreatewrappeer dresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-createwrappedresource"><strong>CreateWrappedResource</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states"><strong>D3D12_RESOURCE_STATES</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/dxgi/nn-dxgi-idxgisurface"><strong>"Idxgisurface"</strong></a></td>
+<td><a href="/windows/desktop/api/dxgi/nn-dxgi-idxgisurface"><strong>IDXGISurface</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1__id2d1bitmap1)"><strong>ID2D1DeviceContext:: kreatebitmapfromdxgisurface</strong></a></td>
+<td><a href="/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-createbitmapfromdxgisurface(idxgisurface_constd2d1_bitmap_properties1__id2d1bitmap1)"><strong>ID2D1DeviceContext::CreateBitmapFromDxgiSurface</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandallocator"><strong>"Kreatecommandzucator"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommandallocator"><strong>CreateCommandAllocator</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_command_list_type"><strong>D3D12_COMMAND_LIST_TYPE</strong></a></td>
 </tr>
 </tbody>
@@ -214,11 +214,11 @@ D3D12 besitzt die Swapkette, wenn wir also mit unserem 11on12-Gerät (D2D-Inhalt
 
 
 
- 
+ 
 
-## <a name="create-basic-d2d-text-objects"></a>Erstellen grundlegender D2D Text-Objekte
+## <a name="create-basic-d2d-text-objects"></a>Erstellen grundlegender D2D-Textobjekte
 
-Nun verfügen wir über eine [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device) zum Rendering von 3D-Inhalten, ein [**ID2D1Device**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device) , das über ein [**ID3D11On12Device**](/windows/desktop/api/d3d11on12/nn-d3d11on12-id3d11on12device) mit dem 12-Gerät gemeinsam genutzt wird, das wir zum Rendering von 2D-Inhalten verwenden können. beide sind so konfiguriert, dass Sie in derselben Swapkette gerauscht werden. In diesem Beispiel wird einfach das D2D-Gerät zum Rendering von Text über die 3D-Szene verwendet, ähnlich der Art, wie Spiele Ihre Benutzeroberfläche Rendering. Dafür müssen wir einige grundlegende D2D-Objekte erstellen, die sich noch in der **loadassets** -Methode befinden.
+Nun verfügen wir über eine [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device) zum Rendern von 3D-Inhalten, eine [**ID2D1Device,**](/windows/desktop/api/d2d1_1/nn-d2d1_1-id2d1device) die für unser 12-Gerät über eine [**ID3D11On12Device**](/windows/desktop/api/d3d11on12/nn-d3d11on12-id3d11on12device) freigegeben wird, die wir zum Rendern von 2D-Inhalten verwenden können, und beide sind so konfiguriert, dass sie in derselben Swapkette gerendert werden. In diesem Beispiel wird einfach das D2D-Gerät verwendet, um Text über die 3D-Szene zu rendern, ähnlich wie Spiele ihre Benutzeroberfläche rendern. Dazu müssen wir einige grundlegende D2D-Objekte erstellen, die sich noch in der **LoadAssets-Methode befinden.**
 
 ``` syntax
  // Create D2D/DWrite objects for rendering text.
@@ -241,20 +241,20 @@ Nun verfügen wir über eine [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3
 
 
 
-| Aufruffluss                                                                                           | Parameter                                                                 |
+| Aufrufflow                                                                                           | Parameter                                                                 |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [**ID2D1RenderTarget:: kreatesolidcolorbrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__id2d1solidcolorbrush))    | [**Colorf**](/windows/desktop/api/d2d1helper/nl-d2d1helper-colorf)                                              |
-| [**Idschreitefactory:: kreatetextformat**](/windows/desktop/api/dwrite/nf-dwrite-idwritefactory-createtextformat)                 | [**Schrift Breite für dwrite \_ \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_font_weight)                 |
-| [**Idschreitetextformat:: SetTextAlignment**](/windows/desktop/api/dwrite/nf-dwrite-idwritetextformat-settextalignment)           | [**Ausrichtung von dwrite- \_ Text \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_text_alignment)           |
-| [**Idschreitetextformat:: setparagraphalignment**](/windows/desktop/api/dwrite/nf-dwrite-idwritetextformat-setparagraphalignment) | [**dwrite- \_ Absatz \_ Ausrichtung**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_paragraph_alignment) |
+| [**ID2D1RenderTarget::CreateSolidColorBrush**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsolidcolorbrush(constd2d1_color_f__id2d1solidcolorbrush))    | [**ColorF**](/windows/desktop/api/d2d1helper/nl-d2d1helper-colorf)                                              |
+| [**IDWriteFactory::CreateTextFormat**](/windows/desktop/api/dwrite/nf-dwrite-idwritefactory-createtextformat)                 | [**\_DWRITE-SCHRIFTBREITE \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_font_weight)                 |
+| [**IDWriteTextFormat::SetTextAlignment**](/windows/desktop/api/dwrite/nf-dwrite-idwritetextformat-settextalignment)           | [**\_DWRITE-TEXTAUSRICHTUNG \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_text_alignment)           |
+| [**IDWriteTextFormat::SetParagraphAlignment**](/windows/desktop/api/dwrite/nf-dwrite-idwritetextformat-setparagraphalignment) | [**\_DWRITE-ABSATZAUSRICHTUNG \_**](/windows/desktop/api/dwrite/ne-dwrite-dwrite_paragraph_alignment) |
 
 
 
- 
+ 
 
-## <a name="updating-the-main-render-loop"></a>Aktualisieren der Haupt-Renderschleife
+## <a name="updating-the-main-render-loop"></a>Aktualisieren der Hauptrenderschleife
 
-Nachdem die Initialisierung der Stichprobe fertiggestellt wurde, können wir nun zur Haupt-Renderschleife wechseln.
+Nachdem die Initialisierung des Beispiels abgeschlossen ist, können wir mit der Hauptrenderingschleife fortschreiten.
 
 ``` syntax
 // Render the scene.
@@ -278,19 +278,19 @@ void D3D1211on12::OnRender()
 
 
 
-| Aufruffluss                                                              | Parameter |
+| Aufrufflow                                                              | Parameter |
 |------------------------------------------------------------------------|------------|
 | [**ID3D12CommandList**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandlist)                         |            |
-| [**Executecommandlists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)  |            |
+| [**ExecuteCommandLists**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)  |            |
 | [**IDXGISwapChain1::Present1**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1) |            |
 
 
 
- 
+ 
 
-Das einzige neue in unserer **Renderschleife ist der renderui** -Befehl, der D2D verwendet, um die Benutzeroberfläche zu renderinschalten. Beachten Sie, dass alle unsere D3D12-Befehlslisten zuerst ausgeführt werden, um die 3D-Szene zu erzeugen, und dann wird die Benutzeroberfläche auf der Grundlage dieses Befehls angezeigt. Bevor wir uns mit **renderui** beschäftigen, müssen wir uns eine Änderung an " **populatecommandlists**" ansehen. In anderen Beispielen fügen wir eine Ressourcen Barriere in der Befehlsliste ein, bevor Sie geschlossen wird, um den Hintergrund Puffer vom renderzielzustand zum aktuellen Zustand zu wechseln. In diesem Beispiel entfernen wir jedoch diese Ressourcen Barriere, da wir immer noch mit D2D in die Back Puffer Rendering müssen. Beachten Sie, dass beim Erstellen der umschließenden Ressourcen des Hintergrund Puffers, den wir als Zustand des Renderziels angegeben haben, der Status "in" und der aktuelle Zustand als Zustand "ausgehend" angegeben wurde.
+Das Einzige, was für unsere Renderschleife neu ist, ist der **RenderUI-Aufruf,** der D2D zum Rendern der Benutzeroberfläche verwendet. Beachten Sie, dass wir zuerst alle D3D12-Befehlslisten ausführen, um unsere 3D-Szene zu rendern, und anschließend die Benutzeroberfläche darüber rendern. Bevor wir uns mit **RenderUI** befassen, müssen wir uns eine Änderung an **PopulateCommandLists** ansehen. In anderen Beispielen wird häufig eine Ressourcenbarriere in der Befehlsliste abgelegt, bevor sie geschlossen wird, um den Backpuffer vom Renderzielzustand in den aktuellen Zustand zu überführen. In diesem Beispiel entfernen wir diese Ressourcenbarriere jedoch, da wir weiterhin in den Hintergrundpuffern mit D2D rendern müssen. Beachten Sie, dass wir beim Erstellen unserer umschlossenen Ressourcen des Hintergrundpuffers den Renderzielzustand als "IN"-Status und den aktuellen Zustand als "OUT"-Zustand angegeben haben.
 
-**Renderui** ist in Bezug auf die D2D-Verwendung relativ unkompliziert. Wir legen unser Renderziel fest und renden Text. Vor der Verwendung von umschließenden Ressourcen auf einem 11on12-Gerät, wie z. b. unseren rückrenderzielen, müssen wir jedoch die [**acquirewrappeer dresources**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-acquirewrappedresources) -API auf dem 11on12-Gerät aufrufen. Nach dem Rendern wird die [**releasewrappeer dresources**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-releasewrappedresources) -API auf dem 11on12-Gerät aufgerufen. Durch den Aufruf von **releasewrapetdresources** wird eine Ressourcen Barriere hinter den Kulissen erhoben, die die angegebene Ressource in den Status "out" übertragen, der zum Zeitpunkt der Erstellung angegeben wurde. In unserem Fall ist dies der aktuelle Zustand. Um schließlich alle Befehle, die auf dem 11on12-Gerät ausgeführt werden, an das freigegebene [**ID3D12CommandQueue**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue)zu übermitteln, müssen wir " [**Flush**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-flush) " auf dem [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)-Gerät abrufen.
+**RenderUI** ist im Hinblick auf die D2D-Nutzung relativ unkompliziert. Wir legen unser Renderziel fest und rendern unseren Text. Bevor sie jedoch umschlossene Ressourcen auf einem 11On12-Gerät verwenden, z. B. unsere Backpufferrenderziele, müssen wir die [**AcquireWrappedResources-API**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-acquirewrappedresources) auf dem 11On12-Gerät aufrufen. Nach dem Rendern rufen wir die [**ReleaseWrappedResources-API**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-releasewrappedresources) auf dem 11On12-Gerät auf. Durch den Aufruf von **ReleaseWrappedResources** entsteht im Hintergrund eine Ressourcenbarriere, die die angegebene Ressource in den zum Zeitpunkt der Erstellung angegebenen OUT-Zustand übergibt. In unserem Fall ist dies der aktuelle Zustand. Um schließlich alle auf dem 11On12-Gerät ausgeführten Befehle an die freigegebene [**ID3D12CommandQueue**](/windows/desktop/api/d3d12/nn-d3d12-id3d12commandqueue)zu übermitteln, müssen wir [**Flush**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-flush) für [**id3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)aufrufen.
 
 ``` syntax
 // Render text over D3D12 using D2D via the 11On12 device.
@@ -328,32 +328,32 @@ void D3D1211on12::RenderUI()
 
 
 
-| Aufruffluss                                                                                                                                                                                 | Parameter                            |
+| Aufrufflow                                                                                                                                                                                 | Parameter                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [**D2D1 \_ size \_ F**](/windows/desktop/Direct2D/d2d1-size-f)                                                                                                                                                 |                                       |
-| [**D2D1 \_ Rect \_ F**](/windows/desktop/Direct2D/d2d1-rect-f)                                                                                                                                                 | [**RectF**](/windows/desktop/api/d2d1helper/nf-d2d1helper-rectf)           |
-| [**Acquirewrappeer dresources**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-acquirewrappedresources)                                                                                                               |                                       |
-| [**ID2D1DeviceContext:: SetTarget**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget)                                                                                                                |                                       |
-| [**ID2D1RenderTarget:: beginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw)                                                                                                                  |                                       |
-| [**ID2D1RenderTarget:: setTransform**](/windows/desktop/Direct2D/id2d1rendertarget-settransform)                                                                                                            | [**Matrix3x2F**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) |
-| [**ID2D1RenderTarget::D rawtextw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) |                                       |
-| [**ID2D1RenderTarget:: EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)                                                                                                                      |                                       |
-| [**Releasewrappeer-Quellen**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-releasewrappedresources)                                                                                                               |                                       |
-| [**Verknüpfung id3d11devicecontext aus:: Flush**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-flush)                                                                                                                    |                                       |
+| [**D2D1 \_ SIZE \_ F**](/windows/desktop/Direct2D/d2d1-size-f)                                                                                                                                                 |                                       |
+| [**D2D1 \_ RECT \_ F**](/windows/desktop/Direct2D/d2d1-rect-f)                                                                                                                                                 | [**RectF**](/windows/desktop/api/d2d1helper/nf-d2d1helper-rectf)           |
+| [**AcquireWrappedResources**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-acquirewrappedresources)                                                                                                               |                                       |
+| [**ID2D1DeviceContext::SetTarget**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget)                                                                                                                |                                       |
+| [**ID2D1RenderTarget::BeginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw)                                                                                                                  |                                       |
+| [**ID2D1RenderTarget::SetTransform**](/windows/desktop/Direct2D/id2d1rendertarget-settransform)                                                                                                            | [**Matrix3x2F**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) |
+| [**ID2D1RenderTarget::D rawTextW**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-drawtext(constwchar_uint32_idwritetextformat_constd2d1_rect_f__id2d1brush_d2d1_draw_text_options_dwrite_measuring_mode)) |                                       |
+| [**ID2D1RenderTarget::EndDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw)                                                                                                                      |                                       |
+| [**ReleaseWrappedResources**](/windows/desktop/api/d3d11on12/nf-d3d11on12-id3d11on12device-releasewrappedresources)                                                                                                               |                                       |
+| [**ID3D11DeviceContext::Flush**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-flush)                                                                                                                    |                                       |
 
 
 
- 
+ 
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-![die endgültige Ausgabe des Beispiels 11 on 12](images/11on12image.png)
+![die endgültige Ausgabe des Beispiels "11 on 12"](images/11on12image.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> <dt>
 
 [Direct3D 11 on 12](direct3d-11-on-12.md)
@@ -365,6 +365,6 @@ void D3D1211on12::RenderUI()
 [11on12-Referenz](direct3d-11on12-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

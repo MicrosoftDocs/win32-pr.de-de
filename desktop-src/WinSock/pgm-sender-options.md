@@ -1,40 +1,40 @@
 ---
-description: PGM-Sender werden mit bestimmten Standardeinstellungen bereitgestellt, die sich auf die Leistung der Datenübertragung auswirken, und darüber, wie lange Daten gepuffert werden, um Paketverluste und zugeordnete PGM-Client Neuübertragungs Anforderungen zu berücksichtigen.
+description: PGM-Absender werden mit bestimmten Standardeinstellungen bereitgestellt, die sich auf die Leistung der Datenübertragung auswirken, und wie lange Daten gepuffert werden, um Paketverluste und zugeordnete PGM-Client-Neuübertragungsanforderungen zu berücksichtigen.
 ms.assetid: 56b15eac-ea0d-4d18-b5f6-2f1a7b1bb25f
-title: PGM-Sender Optionen
+title: Optionen für PGM-Absender
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1c2e83ec7b098b9a82f74d4a3e0b6aa3ab03b63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04bce19e096f269207a22f8e3078643fefd9a7ced31482305c2caeb0ae8b7749
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857907"
 ---
-# <a name="pgm-sender-options"></a>PGM-Sender Optionen
+# <a name="pgm-sender-options"></a>Optionen für PGM-Absender
 
-PGM-Sender werden mit bestimmten Standardeinstellungen bereitgestellt, die sich auf die Leistung der Datenübertragung auswirken, und darüber, wie lange Daten gepuffert werden, um Paketverluste und zugeordnete PGM-Client Neuübertragungs Anforderungen zu berücksichtigen. In den folgenden Abschnitten werden diese Standardeinstellungen beschrieben.
+PGM-Absender werden mit bestimmten Standardeinstellungen bereitgestellt, die sich auf die Leistung der Datenübertragung auswirken, und wie lange Daten gepuffert werden, um Paketverluste und zugeordnete PGM-Client-Neuübertragungsanforderungen zu berücksichtigen. In den folgenden Absätzen werden diese Standardeinstellungen beschrieben.
 
-## <a name="window-size-and-transmission-rate"></a>Fenstergröße und Übertragungs Rate
+## <a name="window-size-and-transmission-rate"></a>Fenstergröße und Übertragungsrate
 
-Die Möglichkeit zum Festlegen der Fenstergröße und der Übertragungsrate ermöglicht es Anwendungen, die Menge der Daten zu steuern, die der Transport Puffer für die erneute Übertragung bietet, und die Rate, mit der der Bytestream übertragen wird.
+Die Funktion zum Festlegen von Fenstergröße und Übertragungsrate ermöglicht Es Anwendungen, die Datenmenge der Transportpuffer für die neu übertragene Übertragung und die Rate, mit der der Bytestream übertragen wird, zu steuern.
 
-Neuübertragungs Daten werden in einer Datei gespeichert, daher ist die maximale Fenstergröße durch den vom Transport nutzbaren Speicherplatz beschränkt. Die Standardfenster Größe beträgt 10 MB. Obwohl es möglich ist, dass eine Sende-oder Nachrichtengröße das Fenster oder die Puffergröße überschreitet, bleibt der Datenstrom ununterbrochen erhalten. der Sendevorgang wird durchgeführt, bis alle Daten gesendet wurden.
+Neuübertragungsdaten werden in einer Datei gespeichert. Daher wird die maximale Fenstergröße durch den Speicherplatz beschränkt, der vom Transport verwendet werden kann. Die Standardfenstergröße beträgt 10 MB. Obwohl es möglich ist, dass eine Sende- oder Nachrichtengröße das Fenster oder die Puffergröße überschreitet, bleibt der Datenstrom unterbrechungsfrei. wird so lange gesendet, bis alle Daten gesendet wurden.
 
 > [!Note]  
-> Der maximale Pufferspeicher wird durch die maximale Anzahl von Paketen beschränkt, die zu einem beliebigen Zeitpunkt im Fenster aufbewahrt werden können. Dies entspricht 2 ^ 31 – 1.
+> Der maximale Pufferspeicherplatz wird durch die maximale Anzahl von Paketen begrenzt, die zu einem beliebigen Zeitpunkt im Fenster gehalten werden können, was 2^31 – 1 entspricht.
 
  
 
-Bei der Übertragungsrate handelt es sich um den kombinierten Durchsatz von ursprünglichen Datenpaketen (odata), erneut übertragene Datenpakete (rdata) und Transport spezifische Buchhaltungs Pakete (SPMs), die pro Sekunde ausgedrückt werden. Wenn das Raten Limit standardmäßig auf 56 Kbit pro Sekunde festgelegt ist. Die Standardfenster Größe beträgt 10 Megabyte. der Standardwert ist 56 Kbit pro Sekunde. Aufgrund der Beziehung zwischen den drei Membern der [**RM- \_ Sende \_ Fenster**](/windows/desktop/api/Wsrm/ns-wsrm-rm_send_window) Struktur ist die Standardfenster Größe somit 1428 Sekunden. Weitere Informationen finden **Sie unter RM- \_ Sende \_ Fenster** .
+Die Übertragungsrate ist der kombinierte Abfluss von ursprünglichen Datenpaketen (ODATA), neu übertragenen Datenpaketen (RDATA) und transportspezifischen Buchhaltungspaketen (SPMs), ausgedrückt pro Sekunde. Wenn das Ratenlimit standardmäßig auf 56 Kilobits pro Sekunde festgelegt ist. Die Standardfenstergröße beträgt 10 Megabyte mit einer Standardrate von 56 Kilobits pro Sekunde. Aufgrund der Beziehung zwischen den drei Membern der [**RM \_ SEND \_ WINDOW-Struktur**](/windows/desktop/api/Wsrm/ns-wsrm-rm_send_window) beträgt die Standardfenstergröße daher 1428 Sekunden. Weitere Informationen finden Sie unter **RM \_ SEND \_ WINDOW.**
 
-## <a name="window-advance-rate"></a>Vorlauf Rate für Fenster
+## <a name="window-advance-rate"></a>Fenstervorlaufrate
 
-Die Vorlauf Rate des Fensters wird durch die Option " [RM- \_ Sender \_ Fenster \_ ADV \_ Rate](socket-options.md) Socket" festgelegt. Diese Option ermöglicht es Anwendungen, das Inkrement anzugeben, in dem das Fenster des PGM-Absenders erweitert wird, ausgedrückt als Prozentwert ungleich 0 (null) der Fenstergröße. Der Standardwert ist 15%, und die maximale Rate beträgt 50%. Wenn für den PGM-Absender ausstehende Reparatur Daten im Bereich des Inkrement-Fensters liegen, wird das Fenster teilweise erweitert, da jedes reparaturpaket im Fenster versendet wird.
+Die Vorabrate des Fensters wird durch die RM [ \_ SENDER WINDOW \_ \_ ADV \_ RATE-Socketoption](socket-options.md) festgelegt. Mit dieser Option können Anwendungen das Inkrement angeben, bei dem das Fenster des PGM-Absenders erweitert wird, ausgedrückt als Prozentwert ungleich 0 (null) der Fenstergröße. Der Standardwert ist 15 %, und die maximale Rate beträgt 50 %. Wenn für den PGM-Absender Reparaturdaten ausstehen, die in den Bereich des Inkrementfensters fallen, wird das Fenster teilweise erweitert, wenn jedes Reparaturpaket im Fenster gesendet wird.
 
-## <a name="forward-error-correction-fec"></a>Forward Error Korrektur (FEC)
+## <a name="forward-error-correction-fec"></a>Vorwärtsfehlerkorrektur (FORWARD Error Correction, FEC)
 
-Die Vorwärts Fehlerkorrektur wird durch die Verwendung der Option "RM \_ use \_ FEC Socket" festgelegt. Diese Socketoption ermöglicht dem PGM-Sender das Senden von Reparatur Paketen als Paritäts Pakete anstelle von regulären Datenpaketen. Dadurch wird die Anzahl der reparierenden Reparatur Pakete minimiert, um verschiedene Sequenzen zu reparieren, die von mehreren Empfängern innerhalb derselben Datengruppe verloren gehen. Das Aktivieren von FEC wird nur für den PGM-Absender festgelegt. PGM-Empfänger befolgen automatisch die vom Absender festgelegte Richtlinie. Eine ausführliche Erläuterung zu FEC finden Sie in der PGM-RFC auf der [IETF](https://www.ietf.org/) -Website.
+Die Korrektur von Vorwärtsfehlern wird mithilfe der RM \_ USE \_ FEC-Socketoption festgelegt. Diese Socketoption ermöglicht dem PGM-Absender das Senden von Reparaturpaketen als Paritätspakete anstelle von regulären Datenpaketen. Dadurch wird die Anzahl von Reparaturpaketen minimiert, die gesendet werden, um verschiedene Sequenzen zu reparieren, die von mehreren Empfängern innerhalb derselben Datengruppe verloren gegangen sind. Das Aktivieren von FEC ist nur für den PGM-Absender festgelegt. PGM-Empfänger folgen automatisch der vom Absender festgelegten Richtlinie. Eine ausführliche Erläuterung zu FEC finden Sie im PGM RFC auf der [IETF-Website.](https://www.ietf.org/)
 
  
 

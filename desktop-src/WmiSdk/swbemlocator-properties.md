@@ -1,24 +1,24 @@
 ---
-description: Das Objekt "Swap-Locator" macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemLocator-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 83A87887-96F6-4171-A075-A6054085A16B
 ms.tgt_platform: multiple
-title: Eigenschaften von "Swap-Locator"
+title: SWbemLocator-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e029e6784cf18dde29cb1b54a28a40f56ee45e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89bcdf0b3093f438362b4b1865f351ff3d210b3c498252847a46ab5fbdcaf032
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857540"
 ---
-# <a name="swbemlocator-properties"></a>Eigenschaften von "Swap-Locator"
+# <a name="swbemlocator-properties"></a>SWbemLocator-Eigenschaften
 
-Das Objekt " [**Swap-Locator**](swbemlocator.md) " macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemLocator-Objekt**](swbemlocator.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Security- \_ Eigenschaft**](swbemlocator-security-.md)
+-   [**\_Sicherheitseigenschaft**](swbemlocator-security-.md)
 
  
 

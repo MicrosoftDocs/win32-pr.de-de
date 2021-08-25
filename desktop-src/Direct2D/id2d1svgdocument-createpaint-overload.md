@@ -1,9 +1,9 @@
 ---
-title: ID2D1SvgDocument-Methoden für die Methode "" (D2d1svg. h)
-description: Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fill ' oder ' Stroke ' festzulegen.
+title: ID2D1SvgDocument CreatePaint-Methoden (D2d1svg.h)
+description: Erstellt ein Paint-Objekt, mit dem die Füll- oder Stricheigenschaften festgelegt werden können.
 ms.assetid: dba9be4a-1670-7ab9-e0a8-d9f2895011f4
 keywords:
-- Direct2D-Methoden
+- CreatePaint-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 4a9356bb81f8954b5ff1b1e8a711940d23408fce
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: acb147288651d7460938b7b5107be22306a3849dbc857432d3dd93e425eb68ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119873940"
 ---
-# <a name="id2d1svgdocumentcreatepaint-methods"></a>ID2D1SvgDocument:: kreatepaint-Methoden
+# <a name="id2d1svgdocumentcreatepaint-methods"></a>ID2D1SvgDocument::CreatePaint-Methoden
 
-Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fill ' oder ' Stroke ' festzulegen.
+Erstellt ein Paint-Objekt, mit dem die Füll- oder Stricheigenschaften festgelegt werden können.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fil
 
 | Methode                                                                                                                      | BESCHREIBUNG                                                                                   |
 |:----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
-| [**Kreatepaint (D2D1 \_ SVG \_ Paint \_ Type, D2D1 \_ Color \_ F \* , pcwstr, ID2D1SvgPaint \* \* )**](/windows/win32/api/d2d1svg/nf-d2d1svg-id2d1svgdocument-createpaint(d2d1_svg_paint_type_constd2d1_color_f_pcwstr_id2d1svgpaint))  | Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fill ' oder ' Stroke ' festzulegen.<br/> |
-| [**Kreatepaint (D2D1 \_ SVG \_ Paint \_ Type, D2D1 \_ Color \_ F &, pcwstr, ID2D1SvgPaint \* \* )**](/windows/win32/api/d2d1svg/nf-d2d1svg-id2d1svgdocument-createpaint(d2d1_svg_paint_type_constd2d1_color_f__pcwstr_id2d1svgpaint)) | Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fill ' oder ' Stroke ' festzulegen.<br/> |
+| [**CreatePaint(D2D1 \_ SVG \_ PAINT \_ TYPE, D2D1 \_ COLOR \_ \* F, PCWSTR, ID2D1SvgPaint \* \* )**](/windows/win32/api/d2d1svg/nf-d2d1svg-id2d1svgdocument-createpaint(d2d1_svg_paint_type_constd2d1_color_f_pcwstr_id2d1svgpaint))  | Erstellt ein Paint-Objekt, mit dem die Füll- oder Stricheigenschaften festgelegt werden können.<br/> |
+| [**CreatePaint(D2D1 \_ SVG \_ PAINT \_ TYPE, D2D1 \_ COLOR F \_ &, PCWSTR, ID2D1SvgPaint \* \* )**](/windows/win32/api/d2d1svg/nf-d2d1svg-id2d1svgdocument-createpaint(d2d1_svg_paint_type_constd2d1_color_f__pcwstr_id2d1svgpaint)) | Erstellt ein Paint-Objekt, mit dem die Füll- oder Stricheigenschaften festgelegt werden können.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Erstellt ein Paint-Objekt, das verwendet werden kann, um die Eigenschaften ' Fil
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1svg. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1svg.h</dt> </dl> |
 
 
 
