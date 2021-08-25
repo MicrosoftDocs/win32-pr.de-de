@@ -1,7 +1,7 @@
 ---
 description: Eine Hilfsstruktur, die Memberstrukturinformationen enthält.
 ms.assetid: 2fbe5e97-047e-48bf-9413-dd297632288a
-title: D3DXSHADER_STRUCTMEMBERINFO-Struktur (D3dx9shader.h)
+title: D3DXSHADER_STRUCTMEMBERINFO -Struktur (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118524213"
 ---
-# <a name="d3dxshader_structmemberinfo-structure"></a>D3DXSHADER \_ STRUCTMEMBERINFO-Struktur
+# <a name="d3dxshader_structmemberinfo-structure"></a>\_D3DXSHADER-STRUKTURTMEMBERINFO-Struktur
 
 Eine Hilfsstruktur, die Memberstrukturinformationen enthält.
 
@@ -47,7 +47,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset vom Anfang dieser Struktur in Bytes zu der Zeichenfolge, die den Namen des Strukturmembers enthält.
+Offset vom Anfang dieser Struktur in Bytes zur Zeichenfolge, die den Namen des Strukturmitglieds enthält.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset vom Anfang dieser Struktur in Bytes zu der Zeichenfolge, die die Typinformationen enthält. Weitere Informationen finden Sie unter [**D3DXSHADER \_ TYPEINFO.**](d3dxshader-typeinfo.md)
+Offset vom Anfang dieser Struktur in Bytes zur Zeichenfolge, die die Typinformationen enthält. Siehe [**D3DXSHADER \_ TYPEINFO**](d3dxshader-typeinfo.md).
 
 </dd> </dl>
 

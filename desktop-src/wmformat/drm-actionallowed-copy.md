@@ -1,9 +1,9 @@
 ---
 title: DRM_ActionAllowed_Copy
-description: Das DRM-Attribut für die \_ Aktions zulässige \_ Kopie gibt an, ob der Inhalt auf ein Gerät kopiert werden darf, z. b. ein tragbarer Player.
+description: Das DRM \_ ActionAllowed Copy-Attribut gibt an, ob der Inhalt auf ein Gerät kopiert werden darf, z. B. auf einen \_ portablen Player.
 ms.assetid: 3a391a14-ccbb-43c6-b362-0db53d93ab79
 keywords:
-- DRM_ActionAllowed_Copy Windows Media-Format
+- DRM_ActionAllowed_Copy windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,41 +12,41 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea4a890ae03d3adf3b28bb2dce03e2eac5578abe
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 437dba087a336322fe1574112dce0b6b5805d05778613924f577c16343d33604
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106338441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118704781"
 ---
-# <a name="drm_actionallowed_copy"></a>DRM- \_ Aktions zulässige \_ Kopie
+# <a name="drm_actionallowed_copy"></a>\_DRM-AktionAllowed \_ Copy
 
-Das DRM-Attribut für die **\_ Aktions zulässige \_ Kopie** gibt an, ob der Inhalt auf ein Gerät kopiert werden darf, z. b. ein tragbarer Player.
+Das **DRM \_ ActionAllowed \_ Copy-Attribut** gibt an, ob der Inhalt auf ein Gerät kopiert werden darf, z. B. auf einen portablen Player.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm- \_ Aktions zulässige \_ Kopie
+g \_ wszWMDRM \_ ActionAllowed \_ Copy
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Windows Media DRM 10 werden alle Kopiervorgänge mithilfe der Kopier Aktion eingeschränkt.
+In Windows Media DRM 10 werden alle Kopiervorgänge mithilfe der Kopieraktion eingeschränkt.
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
+Dies ist eine schreibgeschützte Eigenschaft, die mitHILFE von [**IWMDRMReader::GetDRMProperty abgerufen wird.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

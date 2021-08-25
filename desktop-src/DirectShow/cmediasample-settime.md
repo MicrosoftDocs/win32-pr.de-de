@@ -1,7 +1,7 @@
 ---
-description: 'Die setTime-Methode legt die streamzeiten fest, wenn dieses Beispiel beginnen und fertigstellen soll. Diese Methode implementiert die imediasample:: setTime-Methode.'
+description: Die SetTime-Methode legt die Streamzeiten fest, zu denen dieses Beispiel beginnen und abgeschlossen werden soll. Diese Methode implementiert die IMediaSample::SetTime-Methode.
 ms.assetid: cab4907f-eb6f-4444-9b41-1f95a6ecffed
-title: Cmediasample. setTime-Methode (amfilter. h)
+title: CMediaSample.SetTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 935c4f3aa565b291e459d36e067805944b4fd6b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: be9028db35cb6d74623bde77fac21e32793de436ea2f80d2f513687c15d1b64c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118156512"
 ---
-# <a name="cmediasamplesettime-method"></a>Cmediasample. setTime-Methode
+# <a name="cmediasamplesettime-method"></a>CMediaSample.SetTime-Methode
 
-Die- `SetTime` Methode legt die streamzeiten fest, wenn dieses Beispiel beginnen und fertigstellen soll. Diese Methode implementiert die [**imediasample:: setTime**](/windows/desktop/api/Strmif/nf-strmif-imediasample-settime) -Methode.
+Die `SetTime` -Methode legt die Streamzeiten fest, zu denen dieses Beispiel beginnen und beenden soll. Diese Methode implementiert die [**IMediaSample::SetTime-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample-settime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT SetTime(
 
 <dl> <dt>
 
-*ptimestart* 
+*pTimeStart* 
 </dt> <dd>
 
-Zeiger auf die streamzeit, zu der das Beispiel beginnt, in 100-Nanosecond-Einheiten oder **null**.
+Zeiger auf die Streamzeit, zu der das Beispiel beginnt, in Einheiten von 100 Nanosekunden oder **NULL.**
 
 </dd> <dt>
 
-*ptimeend* 
+*pTimeEnd* 
 </dt> <dd>
 
-Zeiger auf die streamzeit, zu der das Beispiel endet, in 100-Nanosecond-Einheiten oder **null**.
+Zeiger auf die Streamzeit, zu der das Beispiel endet, in Einheiten von 100 Nanosekunden oder **NULL.**
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Zeiger auf die streamzeit, zu der das Beispiel endet, in 100-Nanosecond-Einheite
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt die Endelement Variablen [**cmediasample:: m \_ Start**](cmediasample-m-start.md) und [**cmediasample \_ :: m**](cmediasample-m-end.md) fest, mit denen die Zeitstempel angegeben werden. Außerdem wird die Member-Variable [**cmediasample:: m \_ dwFlags**](cmediasample-m-dwflags.md) aktualisiert, die angibt, ob die Zeitstempel gültig sind.
+Diese Methode legt die Membervariablen [**CMediaSample::m \_ Start**](cmediasample-m-start.md) und [**CMediaSample::m \_ End**](cmediasample-m-end.md) fest, die die Zeitstempel angeben. Außerdem wird die [**Membervariable CMediaSample::m \_ dwFlags**](cmediasample-m-dwflags.md) aktualisiert, die angibt, ob die Zeitstempel gültig sind.
 
-Weitere Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md).
+Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in DirectShow.](time-and-clocks-in-directshow.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Weitere Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in Direct
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -82,7 +82,7 @@ Weitere Informationen zu Zeitstempeln finden Sie unter [Zeit und Uhren in Direct
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-description: Die Verzeichnisse in der Verzeichnis Tabelle geben das Layout einer-Installation an.
+description: Die Verzeichnisse in der Directory-Tabelle geben das Layout einer Installation an.
 ms.assetid: 59f6ae09-d013-46d7-a1a7-0543f31ac487
-title: Verwenden einer Verzeichnis Eigenschaft in einem Pfad
+title: Verwenden einer Verzeichniseigenschaft in einem Pfad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2789f6442072f3db6a96c0abb7db301038673f83
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa00bf3953be46484d74d3a432135763d1b06d4e7daf72bbc36f284e039613f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118141475"
 ---
-# <a name="using-a-directory-property-in-a-path"></a>Verwenden einer Verzeichnis Eigenschaft in einem Pfad
+# <a name="using-a-directory-property-in-a-path"></a>Verwenden einer Verzeichniseigenschaft in einem Pfad
 
-Die Verzeichnisse in der [Verzeichnis Tabelle](directory-table.md) geben das Layout einer-Installation an. Wenn das Windows Installer diese Verzeichnisse während der [costfinalize-Aktion](costfinalize-action.md)auflöst, werden die Schlüssel in der Verzeichnis Tabelle zu [Eigenschaften](properties.md) , die auf Verzeichnispfade festgelegt sind. Das Installationsprogramm legt auch immer eine Reihe von Standard [Systemordner-Eigenschaften](property-reference.md) auf Systemordner Pfade fest.
+Die Verzeichnisse in der [Directory-Tabelle geben](directory-table.md) das Layout einer Installation an. Wenn der Windows Installer diese Verzeichnisse während der [Aktion CostFinalize](costfinalize-action.md)auflöset, [](properties.md) werden die Schlüssel in der Directory-Tabelle zu Eigenschaften, die auf Verzeichnispfade festgelegt sind. Das Installationsprogramm legt auch immer eine Reihe von Standardeigenschaften für [Systemordner auf](property-reference.md) Systemordnerpfade fest.
 
-Es ist garantiert, dass die Werte der [Eigenschaften des System Ordners](property-reference.md) in einem Verzeichnis Trennzeichen enden. Die Werte aller anderen Eigenschaften, die in der [Verzeichnis Tabelle](directory-table.md) eingegeben werden, werden nur nach dem Ausführen der [Aktion "costfinalize](costfinalize-action.md)" in einem Verzeichnis Trennzeichen garantiert. Vor Abschluss der Kosten werden die in der Verzeichnis Tabelle eingegebenen Werte von Eigenschaften, die keine [System Ordnereigenschaften](property-reference.md) sind, möglicherweise nicht mit einem Verzeichnis Trennzeichen enden. Wenn bei der Installation Verzeichnis Eigenschaften mithilfe von [benutzerdefinierten Aktionen](custom-actions.md) im Paket festgelegt werden, enden die Verweis Werte möglicherweise nicht mit einem Verzeichnis Trennzeichen.
+Die Werte der [Systemordnereigenschaften](property-reference.md) enden garantiert in einem Verzeichnistrennzeichen. Die Werte aller anderen Eigenschaften, die in der [Directory-Tabelle](directory-table.md) eingegeben werden, enden garantiert nur in einem Verzeichnistrennzeichen, nachdem das Installationsprogramm die [Aktion CostFinalize ausgeführt hat.](costfinalize-action.md) Vor Abschluss der Kosten werden die Werte der in der Verzeichnistabelle eingegebenen Eigenschaften, die keine [Systemordnereigenschaften](property-reference.md) sind, möglicherweise nicht in einem Verzeichnistrennzeichen enden. Wenn ihre Installation Verzeichniseigenschaften [](custom-actions.md) mithilfe benutzerdefinierter Aktionen im Paket fest legt, enden die Werte für den Verweis daher möglicherweise nicht mit einem Verzeichnistrennzeichen.
 
-Verzeichnis Eigenschaften, die mit einem Verzeichnis Trennzeichen enden, können daher in einer Pfad Zeichenfolge ohne explizites einschließen des Verzeichnis Trennzeichens verwendet werden Wenn der Wert von Director Property beispielsweise mit einem Verzeichnis Trennzeichen endet, gibt die folgende Zeichenfolge ordnungsgemäß den Pfad zu der *Datei* im *Unterverzeichnis* an.
+Verzeichniseigenschaften, die mit einem Verzeichnistrennzeichen enden, können daher in einer Pfadzeichenfolge verwendet werden, ohne dass das Verzeichnistrennzeichen explizit enthalten ist. Wenn der Wert von DirectoryProperty beispielsweise mit einem Verzeichnistrennzeichen endet, gibt die folgende Zeichenfolge den Pfad zur Datei *im* *Unterverzeichnis richtig an.*
 
 ``` syntax
 [DirectoryProperty]subdirectory\file
 ```
 
-und die folgende Pfad Zeichenfolge ist falsch.
+und die folgende Pfadzeichenfolge ist falsch.
 
 ``` syntax
 [DirectoryProperty]\subdirectory\file

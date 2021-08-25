@@ -19,17 +19,17 @@ ms.locfileid: "118328082"
 **Server** – Windows Server 2008 R2  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Vor Windows 7 wurden von Windows-Fehlerberichterstattung (WER) Fehlerberichte gesammelt, die auf Probleme hindeuteten, die repariert werden müssen. Diese Fehlerberichte enthalten hilfreiche Informationen, die die allgemeine Natur eines Problems beschreiben, aber nicht genügend Informationen, um die Grundursache zu bestimmen. Dafür benötigen Entwickler ein Tool, um das Absturz-/Hängen-Szenario für das Debuggen zu reproduzieren.
+Vor Windows 7 sammelte Windows-Fehlerberichterstattung (WER) Fehlerberichte, die auf Probleme hindeuteten, die repariert werden mussten. Diese Fehlerberichte enthalten hilfreiche Informationen, die die allgemeine Natur eines Problems beschreiben, aber nicht genügend Informationen, um die Grundursache zu ermitteln. Dazu benötigen Entwickler ein Tool, um das Absturz-/Hängen-Szenario für das Debuggen zu reproduzieren.
 
-Eine neue Anwendung, Problemaufzeichnung (PSR.exe), wird für alle Builds von Windows 7 veröffentlicht. Dieses Feature ermöglicht das Sammeln der Aktionen, die von einem Benutzer bei einem Absturz ausgeführt werden, damit Tester und Entwickler die Situation für Analyse und Debuggen reproduzieren können.
+Eine neue Anwendung, Problemaufzeichnung (PSR.exe), wird in allen Builds von Windows 7 ausgeliefert. Dieses Feature ermöglicht die Sammlung der Aktionen, die von einem Benutzer ausgeführt werden, während ein Absturz auftritt, sodass Tester und Entwickler die Situation für Analyse und Debuggen reproduzieren können.
 
 ## <a name="usage"></a>Verbrauch
 
-Derzeit muss ein Windows-Fehlerberichterstattung-Dienstentwickler die PSR-Aktivierung für eine Anwendung anfordern. Microsoft-Supportorganisationen verwenden dieses Tool auch bei der Problembehandlung mit Endbenutzern. Es sind Pläne vorhanden, um PSR nach der Veröffentlichung von Windows 7 in Windows Quality Online Services (Winqual) Windows verfügbar zu machen.
+Derzeit muss ein Windows-Fehlerberichterstattung-Dienstentwickler die PSR-Aktivierung für eine Anwendung anfordern. Microsoft-Supportorganisationen verwenden dieses Tool auch bei der Problembehandlung bei Endbenutzern. Es gibt Pläne, PSR nach der Veröffentlichung von Windows 7 unter Windows Quality Online Services (Winqual) verfügbar zu machen.
 
-**Hinweis:** Wenn PSR für eine Anwendung aktiviert ist, kann es für die Anwendung zu Leistungseinbußen führen.
+**Hinweis:** Wenn PSR für eine Anwendung aktiviert ist, kann die Leistung der Anwendung beeinträchtigt werden.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 

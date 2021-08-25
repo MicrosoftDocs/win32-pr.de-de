@@ -6,7 +6,7 @@ ms.tgt_platform: multiple
 keywords:
 - DumpVmInfo-Methode Remotedesktopdienste
 - DumpVmInfo-Methode Remotedesktopdienste , Win32_TSVm-Klasse
-- Win32_TSVm-Klasse Remotedesktopdienste , DumpVmInfo-Methode
+- Win32_TSVm Klasse Remotedesktopdienste , DumpVmInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -43,7 +43,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser W
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

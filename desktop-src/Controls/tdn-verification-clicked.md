@@ -1,9 +1,9 @@
 ---
-title: TDN_VERIFICATION_CLICKED Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer auf das Kontrollkästchen Aufgaben Dialogfeld Überprüfung klickt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_VERIFICATION_CLICKED Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer auf das Kontrollkästchen Überprüfung des Aufgabendialogfelds klickt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: cd7bc07a-9a70-4361-abfa-986a5a2e13e0
 keywords:
-- Windows-Steuerelemente für TDN_VERIFICATION_CLICKED Benachrichtigungs
+- TDN_VERIFICATION_CLICKED Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7887a4d696f5294ebffc6fc6cc7183ff2c0aed8d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 642d247e95e77c797a5dbd8c2c5ecaf4c9b083261ea848479395f8bb22fa325d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118166643"
 ---
-# <a name="tdn_verification_clicked-notification-code"></a>TDN- \_ Verifizierungs- \_ Benachrichtigungs Code
+# <a name="tdn_verification_clicked-notification-code"></a>TDN \_ VERIFICATION CLICKED notification code (TDN-ÜBERPRÜFUNG: \_ Benachrichtigungscode, auf den geklickt wurde)
 
-Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer auf das Kontrollkästchen Aufgaben Dialogfeld Überprüfung klickt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer auf das Kontrollkästchen Überprüfung des Aufgabendialogfelds klickt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode registriert werden**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) kann.
 
 
 ```C++
@@ -42,7 +42,7 @@ TDN_VERIFICATION_CLICKED
 *wParam* 
 </dt> <dd>
 
-Ein **boolescher** Wert, der den Status des Kontrollkästchens angibt. Es ist **true** , wenn das Kontrollkästchen Überprüfung aktiviert ist, oder **false** , wenn es nicht aktiviert ist.
+Eine **BOOL,** die den Status des Überprüfungskontrollkästchens angibt. Er ist **TRUE,** wenn das Überprüfungskontrollkästchen aktiviert ist, oder **FALSE,** wenn es deaktiviert ist.
 
 </dd> <dt>
 
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Der Rückgabewert wird ignoriert.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[*Taskdialogcallbackproc*](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback)
+[*TaskDialogCallbackProc*](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback)
 </dt> </dl>
 
  

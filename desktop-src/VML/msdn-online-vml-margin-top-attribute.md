@@ -1,6 +1,6 @@
 ---
-title: VML-Margin-Top Attribut
-description: VML-Margin-Top Attribut
+title: VMLMargin-Top Attribut
+description: VMLMargin-Top Attribut
 ms.assetid: bce0c575-918a-45ea-a068-cfb6f4a16b1a
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118346396"
 ---
-# <a name="vml-margin-top-attribute"></a>VML-Margin-Top Attribut
+# <a name="vml-margin-top-attribute"></a>VMLMargin-Top Attribut
 
 In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 

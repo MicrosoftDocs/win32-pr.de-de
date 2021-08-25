@@ -1,9 +1,9 @@
 ---
-title: EM_SETBKGNDCOLOR Meldung (RichEdit. h)
-description: Die "em \_ setbkgndcolor"-Meldung legt die Hintergrundfarbe für ein Rich-Edit-Steuerelement fest.
+title: EM_SETBKGNDCOLOR (Richedit.h)
+description: Die EM \_ SETBKGNDCOLOR-Meldung legt die Hintergrundfarbe für ein umfangreiches Bearbeitungssteuer steuerelement fest.
 ms.assetid: 0ad191cd-6370-493e-bfe2-5aa8d81ed999
 keywords:
-- Windows-Steuerelemente für EM_SETBKGNDCOLOR Meldung
+- EM_SETBKGNDCOLOR meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 091f04909e2660498f1380628439c067b5438b6c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1173c2da9f3c04e49211224bd269d79c0634e1cb3f8ea959f6b58e354fdf0dda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118412654"
 ---
-# <a name="em_setbkgndcolor-message"></a>EM \_ setbkgndcolor-Meldung
+# <a name="em_setbkgndcolor-message"></a>EM \_ SETBKGNDCOLOR-Meldung
 
-Die " **EM \_ setbkgndcolor** "-Meldung legt die Hintergrundfarbe für ein Rich-Edit-Steuerelement fest.
+Die **EM \_ SETBKGNDCOLOR-Meldung** legt die Hintergrundfarbe für ein umfangreiches Bearbeitungssteuer steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Die " **EM \_ setbkgndcolor** "-Meldung legt die Hintergrundfarbe für ein Rich-
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob die System Farbe verwendet werden soll. Wenn dieser Parameter ein Wert ungleich 0 (null) ist, wird der Hintergrund auf die Hintergrundsystem Farbe des Fensters festgelegt. Andernfalls wird der Hintergrund auf die angegebene Farbe festgelegt.
+Gibt an, ob die Systemfarbe verwendet werden soll. Wenn dieser Parameter ein Wert ungleich 0 (null) ist, wird der Hintergrund auf die Hintergrundsystemfarbe des Fensters festgelegt. Andernfalls wird der Hintergrund auf die angegebene Farbe festgelegt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eine [**COLORREF**](/windows/desktop/gdi/colorref) -Struktur, die die Farbe angibt, wenn *wParam* NULL ist. Verwenden Sie zum Generieren eines **COLORREF** das [**RGB**](/windows/desktop/api/wingdi/nf-wingdi-rgb) -Makro.
+Eine [**COLORREF-Struktur,**](/windows/desktop/gdi/colorref) die die Farbe an gibt, *wenn wParam* 0 (null) ist. Verwenden Sie das **RGB-Makro,** um ein [**COLORREF-Element zu**](/windows/desktop/api/wingdi/nf-wingdi-rgb) generieren.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Diese Meldung gibt die ursprüngliche Hintergrundfarbe zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

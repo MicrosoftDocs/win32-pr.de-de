@@ -1,5 +1,5 @@
 ---
-description: Gibt die Anzahl der zu codierenden Audiobeispiele an.
+description: Gibt die Anzahl der zu codierten Audiobeispiele an.
 ms.assetid: 2ef2241b-5ec4-4694-a0c9-7db395321471
 title: AVEncAudioIntervalToEncode-Eigenschaft (Codecapi.h)
 ms.topic: reference
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118403986"
 ---
-# <a name="avencaudiointervaltoencode-property"></a>AVEncAudioIntervalToEncode-Eigenschaft
+# <a name="avencaudiointervaltoencode-property"></a>AVEncAudioIntervalToEncode (Eigenschaft)
 
-Gibt die Anzahl der zu codierenden Audiobeispiele an.
+Gibt die Anzahl der zu codierten Audiobeispiele an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 

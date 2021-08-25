@@ -54,18 +54,18 @@ Die Datei-ID-Zeichenfolge, die die herunterzuladende Datei eindeutig identifizie
 *remoteUrl* \[ In\]
 </dt> <dd>
 
-Die Datei-URL, die DO versucht, eine Verbindung herzustellen, um die Datei herunterzuladen.
+Die Datei-URL, die do versucht, eine Verbindung herzustellen, um die Datei herunterzuladen.
 
 </dd> <dt>
 
 *rangeCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Elemente, die in Bereichen *enthalten sind.* Ein Nullwert bedeutet, dass keine Bereiche für die Datei verwendet werden.
+Die Anzahl der elemente, die in Bereichen enthalten *sind.* Ein Nullwert bedeutet, dass keine Bereiche für die Datei verwendet werden.
 
 </dd> <dt>
 
-*Bereiche* \[ In\]
+*-Bereiche* \[ In\]
 </dt> <dd>
 
 Die optionale Bereichsliste. Jeder Bereich in der Liste ist eine [**BG_FILE_RANGE**](bg-file-range.md) Struktur.
@@ -75,7 +75,7 @@ Die optionale Bereichsliste. Jeder Bereich in der Liste ist eine [**BG_FILE_RANG
 *riid* \[ In\]
 </dt> <dd>
 
-Der Objekttyp, der im -Objekt enthalten ist. Dies muss vom Typ IID_IDeliveryOptimizationFile.
+Der Typ des im -Objekt enthaltenen Objekts. Dies muss vom Typ IID_IDeliveryOptimizationFile sein.
 
 </dd> <dt>
 
@@ -88,20 +88,20 @@ Das IDeliveryOptimizationFile-Objekt, das die Downloaddatei darstellt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt S_OK bei Erfolg oder einen der HRESULT-Standardwerte bei einem Fehler zurück.
+Diese Methode gibt S_OK bei Erfolg oder einen der HRESULT-Standardwerte bei Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |---------------------------|---------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)  | Windows 10 Desktop-Apps, Version 1803 \[\]                                  |
-| Unterstützte Mindestversion (Server)  | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]                              |
+| Unterstützte Mindestversion (Client)  | Windows 10, nur Desktop-Apps der Version 1803 \[\]                                  |
+| Unterstützte Mindestversion (Server)  | Windows Server, nur Desktop-Apps der Version 1709 \[\]                              |
 | Header                    | Deliveryoptimization.h                                                          |
 | Idl                       | DeliveryOptimization.idl                                                        |
 | Bibliothek                   | Dosvc.lib                                                                       |
 | DLL                       | Dosvc.dll                                                                       |
 | IID                       | IID_IDeliveryOptimizationJob ist als EE2584CF-A69C-4848-B633-2649962B3EF7 definiert. |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 [**IDeliveryOptimizationJob2**](ideliveryoptimizationjob2.md)

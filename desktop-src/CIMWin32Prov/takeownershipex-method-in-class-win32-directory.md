@@ -1,8 +1,8 @@
 ---
-description: Ruft den Besitz der im Objektpfad angegebenen logischen Verzeichniseintragsdatei ab. Diese Methode ist eine erweiterte Version der TakeOwnerShip-Methode.
+description: Erhält den Besitz der logischen Verzeichniseintragsdatei, die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der TakeOwnerShip-Methode.
 ms.assetid: 73726207-e885-4957-bff8-6903c4b99278
 ms.tgt_platform: multiple
-title: TakeOwnerShipEx-Methode der Win32_Directory-Klasse
+title: TakeOwnerShipEx-Methode der Win32_Directory Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,9 +23,9 @@ ms.locfileid: "118418513"
 ---
 # <a name="takeownershipex-method-of-the-win32_directory-class"></a>TakeOwnerShipEx-Methode der Win32 \_ Directory-Klasse
 
-Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShipEx** ruft den Besitz der im Objektpfad angegebenen logischen Verzeichniseintragsdatei ab. Diese Methode ist eine erweiterte Version der [**TakeOwnerShip-Methode.**](takeownership-method-in-class-win32-directory.md) Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält sich diese Methode rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **TakeOwnerShipEx** erhält den Besitz der logischen Verzeichniseintragsdatei, die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der [**TakeOwnerShip-Methode.**](takeownership-method-in-class-win32-directory.md) Wenn die logische Datei tatsächlich ein Verzeichnis ist, verhält sich diese Methode rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,26 +47,26 @@ uint32 TakeOwnerShipEx(
 *StopFileName* \[ out\]
 </dt> <dd>
 
-Name der Datei oder des Verzeichnisses, in der die **TakeOwnerShipEx-Methode** fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
+Name der Datei oder des Verzeichnisses, bei der bzw. dem die **TakeOwnerShipEx-Methode** fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
 *StartFileName* \[ in, optional\]
 </dt> <dd>
 
-Benennt die untergeordnete Datei oder das Verzeichnis, die bzw. das als Ausgangspunkt für **TakeOwnerShipEx** verwendet werden soll. Der *StartFileName-Parameter* ist in der Regel der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter **NULL** ist, wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das im [**ExecMethod-Aufruf**](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execmethod) angegeben ist.
+Benennt die untergeordnete Datei oder das untergeordnete Verzeichnis, die bzw. das als Ausgangspunkt für **TakeOwnerShipEx verwendet werden soll.** Der *StartFileName-Parameter* ist in der Regel der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter **NULL ist,** wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das [**im ExecMethod-Aufruf angegeben**](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execmethod) ist.
 
-Wenn *StartFileName* verwendet wird, muss *Recursive* auch auf TRUE festgelegt werden.
+Wenn *StartFileName* verwendet wird, *muss Recursive* auch auf TRUE festgelegt werden.
 
 </dd> <dt>
 
 *Rekursiv* \[ in, optional\]
 </dt> <dd>
 
-**True** gibt an, dass die Besitzänderung rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ LogicalFile-Instanz**](cim-logicalfile.md) angegeben wird.
+True **gibt an,** dass die Besitzänderung rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ LogicalFile-Instanz angegeben**](cim-logicalfile.md) wird.
 
 > [!Note]  
-> Bei Dateiinstanzen wird der *Rekursive* Eingabeparameter ignoriert.
+> Bei Dateiinstanzen wird der *Rekursive Eingabeparameter* ignoriert.
 
  
 
@@ -144,7 +144,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -171,7 +171,7 @@ Ein angegebener Parameter ist ungültig.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Visual Basic Skriptcode ruft die [**TakeOwnerShipEx-Methode**](takeownershipex-method-in-class-cim-directory.md) auf, um den Besitz des Ordners C: temp zu \\ übernehmen.
+Der folgende Visual Basic Skriptcode ruft die [**TakeOwnerShipEx-Methode**](takeownershipex-method-in-class-cim-directory.md) auf, um den Besitz des Ordners C: \\ temp zu übernehmen.
 
 
 ```VB
@@ -216,7 +216,7 @@ wscript.echo objOutParams.ReturnValue
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**\_Win32-Verzeichnis**](win32-directory.md)
+[**Win32-Verzeichnis \_**](win32-directory.md)
 </dt> </dl>
 
  

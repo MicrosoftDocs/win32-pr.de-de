@@ -4,12 +4,12 @@ description: In diesem Thema wird die Microsoft DirectComposition-Unterstützung
 ms.assetid: a0f41cc6-e848-4831-8063-609e17d9b4c6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 991e1205422864efdec82bbd4067b9c7662aaf29
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 6c8cc34975ab8304300a1523269808775107f4ce0554432da8c3c04a01f25881
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118504813"
 ---
 # <a name="transforms-directcomposition"></a>Transformationen (DirectComposition)
 
@@ -28,13 +28,13 @@ Dieses Thema enthält die folgenden Abschnitte:
 -   [Matrix-2D-Transformationen](#matrix-2d-transforms)
 -   [Transformieren von Gruppen](#transform-groups)
 -   [Transformationsanimation](#transform-animation)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="what-is-a-directcomposition-2d-transform"></a>Was ist eine DirectComposition 2D-Transformation?
 
-Mit einer 2D-Transformation können Sie die Position, Größe oder Art eines Visuals in zwei Dimensionen ändern, indem Sie das Visual an eine andere Position verschieben (Übersetzung), es vergrößern oder verkleinern (skalieren), es drehen (Drehung) oder seine Form verzerren (Verzerrung).
+Eine 2D-Transformation ermöglicht es Ihnen, die Position, Größe oder Art eines Visuals in zwei Dimensionen zu ändern, indem Sie das Visual an eine andere Position verschieben (Übersetzung), es vergrößern oder verkleinern (skalieren), es drehen (Drehung) oder seine Form verzerren (Skewing).
 
-Eine 2D-Transformation wird erreicht, indem die Punkte eines Visuals von einer Position zu einer anderen innerhalb desselben Koordinatenraums oder von einem Koordinatenraum zu einem anderen zuordnen. Diese Zuordnung wird durch eine Tabelle mit Werten beschrieben, die als Transformationsmatrix bezeichnet wird und als Auflistung von drei Zeilen mit drei Spalten mit Gleitkommawerten definiert ist, wie in der folgenden Tabelle gezeigt.
+Eine 2D-Transformation wird erreicht, indem die Punkte eines Visuals von einer Position zu einer anderen innerhalb desselben Koordinatenraums oder von einem Koordinatenraum zu einem anderen zuordnen. Diese Zuordnung wird durch eine Tabelle mit Werten beschrieben, die als Transformationsmatrix bezeichnet wird und als Auflistung von drei Zeilen mit drei Spalten mit Gleitkommawerten definiert ist, wie in der folgenden Tabelle dargestellt.
 
 :::row:::
     :::column:::
@@ -50,7 +50,7 @@ Eine 2D-Transformation wird erreicht, indem die Punkte eines Visuals von einer P
     :::column:::
         0.0<br/>
         0.0<br/>
-        1,0
+        1.0
     :::column-end:::
 :::row-end:::
 
@@ -84,7 +84,7 @@ Indem Sie Werte in einer 3 by 2-Transformationsmatrix bearbeiten, können Sie ei
 
 ## <a name="support-for-affine-2d-transforms"></a>Unterstützung für affine 2D-Transformationen
 
-Die folgende Tabelle beschreibt die Typen von affinen 2D-Transformationen, die von DirectComposition unterstützt werden, und listet die Schnittstellen auf, die Sie zum Ausführen der verschiedenen Arten von Transformationen verwenden können.
+Die folgende Tabelle beschreibt die Typen von affinen 2D-Transformationen, die von DirectComposition unterstützt werden, und listet die Schnittstellen auf, die Sie zum Ausführen der verschiedenen Transformationstypen verwenden können.
 
 
 
@@ -107,7 +107,7 @@ Mit [**der IDCompositionMatrixTransform-Schnittstelle**](/windows/win32/api/dcom
 
 Sie können Transformationsgruppen verwenden, um mehrere Transformationen zu einer Transformation zu kombinieren. Eine Transformationsgruppe definiert eine Auflistung von Transformationsobjekten, deren Matrizen in der Reihenfolge, in der sie in der Auflistung angegeben sind, multipliziert werden. Die resultierende Transformationsmatrix wird dann auf das Visual angewendet. Eine Transformationsgruppe erzeugt das gleiche Ergebnis wie das separat anwenden jeder Transformation.
 
-Beachten Sie, dass die Reihenfolge der Transformationsobjekte in einer Transformationsgruppe wichtig ist. Wenn z. B. ein Visual zuerst gedreht, dann skaliert und dann übersetzt wird, ist das Ergebnis anders als wenn das Visual zuerst übersetzt, dann gedreht und dann skaliert wird. DirectComposition wendet die Transformationen immer in der Reihenfolge auf ein Visual an, in der sie in der Auflistung angegeben sind.
+Beachten Sie, dass die Reihenfolge der Transformationsobjekte in einer Transformationsgruppe wichtig ist. Wenn beispielsweise ein Visual zuerst gedreht, dann skaliert und dann übersetzt wird, ist das Ergebnis anders als wenn das Visual zuerst übersetzt, dann gedreht und dann skaliert wird. DirectComposition wendet die Transformationen immer in der Reihenfolge auf ein Visual an, in der sie in der Auflistung angegeben sind.
 
 Um eine Transformationsgruppe zu erstellen, erstellen Sie zuerst die Transformationsobjekte, die Sie in die Gruppe enthalten möchten, und übergeben dann ein Array von Transformationsobjektzetern an die [**IDCompositionDevice::CreateTransformGroup-Methode.**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtransformgroup) Nachdem Sie eine Transformationsgruppe erstellt haben, können Sie keine Transformationsobjekte hinzufügen oder entfernen. Sie können jedoch die Eigenschaften der einzelnen Transformationsobjekte in der Auflistung ändern, und die Änderungen werden in der resultierenden Transformationsmatrix widergespiegelt.
 

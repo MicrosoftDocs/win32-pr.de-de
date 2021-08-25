@@ -1,7 +1,7 @@
 ---
-description: Die durchschnittliche Zeitspanne, die zum Decodieren eines Frames in den letzten 16 Beispielen benötigt wurde.
+description: Die durchschnittliche Dauer der Decodierung eines Frames in den letzten 16 Stichproben.
 ms.assetid: 7bda330f-1fee-4815-8a48-25a77d57eaf3
-title: 'Cvideotransformfilter:: m_itrAvgDecode Member (vtrans. h)'
+title: CVideoTransformFilter::m_itrAvgDecode-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7e147e0900d6fc653afe31972813ace69948e226
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf5a65203f8988693434c537c30cdf0845652c2512b5eb8ad6ec50837b3c7feb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155820"
 ---
-# <a name="cvideotransformfilterm_itravgdecode-member"></a>Cvideotransformfilter:: m \_ itravgdecode-Member
+# <a name="cvideotransformfilterm_itravgdecode-member"></a>CVideoTransformFilter::m \_ itrAvgDecode-Member
 
-Die durchschnittliche Zeitspanne, die zum Decodieren eines Frames in den letzten 16 Beispielen benötigt wurde.
+Die durchschnittliche Dauer der Decodierung eines Frames in den letzten 16 Stichproben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ int m_itrAvgDecode;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ int m_itrAvgDecode;
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

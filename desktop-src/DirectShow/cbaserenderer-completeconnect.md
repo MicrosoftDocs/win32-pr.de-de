@@ -1,7 +1,7 @@
 ---
-description: Die completeconnect-Methode schließt die Verbindung der Eingabe-PIN mit einer anderen Pin ab.
+description: Die CompleteConnect-Methode schließt die Verbindung des Eingabepins mit einem anderen Pin ab.
 ms.assetid: 8dfc1a50-bc73-436a-a471-d8d3218410d3
-title: Cbaserderderer. completeconnect-Methode (renbase. h)
+title: CBaseRenderer.CompleteConnect-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a9d2d35f99a3b3b8dc5b668b8ee9a9f94f0a53dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 833e19a6e7b100aac5322a54455c04c263569e33b3422d5957e5eeee15bbd283
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157841"
 ---
-# <a name="cbaserenderercompleteconnect-method"></a>Cbaserderderer. completeconnect-Methode
+# <a name="cbaserenderercompleteconnect-method"></a>CBaseRenderer.CompleteConnect-Methode
 
-Die `CompleteConnect` -Methode schließt die Verbindung der Eingabe-PIN mit einer anderen Pin ab.
+Die `CompleteConnect` -Methode schließt die Verbindung des Eingabepins mit einem anderen Pin ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual HRESULT CompleteConnect(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Ausgabe-PIN.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Ausgabepins.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schni
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN des Filters ruft diese Methode in der eigenen `CompleteConnect` Methode auf, die aufgerufen wird, um eine PIN-Verbindung abzuschließen. (Weitere Informationen finden Sie unter [**cbasepin:: completeconnect**](cbasepin-completeconnect.md).) Der Filter Ruft die [**cbaserdenderer:: settrepaintstatus**](cbaserenderer-setrepaintstatus.md) -Methode auf, um [**EC- \_ Repaint**](ec-repaint.md) -Ereignisse zu aktivieren.
+Der Eingabepin des Filters ruft diese Methode aus der eigenen Methode heraus `CompleteConnect` auf, die aufgerufen wird, um eine Pinverbindung abzuschließen. (Weitere Informationen finden Sie unter [**CBasePin::CompleteConnect**](cbasepin-completeconnect.md).) Der Filter ruft die [**CBaseRenderer::SetRepaintStatus-Methode**](cbaserenderer-setrepaintstatus.md) auf, um [**EC \_ REPAINT-Ereignisse**](ec-repaint.md) zu aktivieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Die Eingabe-PIN des Filters ruft diese Methode in der eigenen `CompleteConnect` 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Die Eingabe-PIN des Filters ruft diese Methode in der eigenen `CompleteConnect` 
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

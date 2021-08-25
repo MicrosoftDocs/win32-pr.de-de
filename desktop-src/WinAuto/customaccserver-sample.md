@@ -22,7 +22,7 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Ausführen des Beispiels](#running-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 In diesem Beispiel wird gezeigt, wie sie einen Microsoft Active Accessibility server für ein einfaches benutzerdefiniertes Steuerelement implementieren. Das barrierefreie Objekt für das Steuerelement besteht aus dem Stammelement (einem Listenfeld) und seinen unteren Elementen (den Listenelementen).
 
@@ -34,7 +34,7 @@ Das CustomAccServer-Beispiel wird als Teil des [Microsoft Windows Software Devel
 
 | Standort    | Pfad/URL                                                                           |
 |-------------|------------------------------------------------------------------------------------|
-| Windows SDK | %Programme% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ msaa |
+| Windows SDK | %Program Files% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ msaa |
 
 
 
@@ -72,7 +72,7 @@ So führen Sie das Beispiel aus:
 1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue ausführbare Windows enthält.
 2.  Geben AccServer.exe Befehlszeile ein, oder doppelklicken Sie auf das Symbol für AccServer.exe, um es über den Windows starten.
 
-Drücken Sie F5 Visual Studio debuggen starten, oder klicken Sie im Menü Debuggen auf **Debuggen starten,** um die Ausführung über Visual Studio ausführen. 
+Drücken Sie F5 Visual Studio debuggen starten, oder klicken Sie im Menü Debuggen auf **Debuggen** starten, um die Ausführung über Visual Studio ausführen. 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

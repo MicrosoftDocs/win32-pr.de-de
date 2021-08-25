@@ -1,9 +1,9 @@
 ---
-title: MCI_OVLY_WINDOW_PARMS-Struktur (mciapi. h)
-description: Die Struktur der Fenster "MCI \_ OVLY \_ Window" \_ enthält Fenster Anzeigeinformationen für den MCI- \_ Fenster Befehl für Video Überlagerungs Geräte.
+title: MCI_OVLY_WINDOW_PARMS -Struktur (Mciapi.h)
+description: Die MCI OVLY WINDOW PARMS-Struktur enthält Fensteranzeigeinformationen für den \_ \_ \_ MCI \_ WINDOW-Befehl für Videoüberlagerungsgeräte.
 ms.assetid: 1189f31e-6e54-4279-a23d-b4e21c6cd276
 keywords:
-- MCI_OVLY_WINDOW_PARMS Struktur Windows Multimedia
+- MCI_OVLY_WINDOW_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a554c9ed4e4869eab333b93736a0400ef93053cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bd19580dacdc819f35bc36ed8f0070a5fc1b9fc4b745c78711c4fc312611e3c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138284"
 ---
-# <a name="mci_ovly_window_parms-structure"></a>Struktur des MCI- \_ OVLY- \_ Fenster \_ Parametern
+# <a name="mci_ovly_window_parms-structure"></a>MCI \_ OVLY \_ WINDOW \_ PARMS-Struktur
 
-Die Struktur der Fenster " **MCI \_ OVLY \_ Window \_** " enthält Fenster Anzeigeinformationen für den [**MCI- \_ Fenster**](mci-window.md) Befehl für Video Überlagerungs Geräte.
+Die **MCI \_ OVLY \_ WINDOW \_ PARMS-Struktur** enthält Fensteranzeigeinformationen für den [**MCI \_ WINDOW-Befehl**](mci-window.md) für Videoüberlagerungsgeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
 **hWnd**
 </dt> <dd>
 
-Handle für Anzeige Fenster.
+Handle zum Anzeigen des Fensters.
 
 </dd> <dt>
 
 **nCmdShow**
 </dt> <dd>
 
-Fenster Anzeige Befehl.
+Befehl "Fensteranzeige".
 
 </dd> <dt>
 
-**lpstrautext**
+**lpstrText**
 </dt> <dd>
 
-Fenster Beschriftung.
+Fensterbeschriftung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -91,13 +91,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Fenster**](mci-window.md)
+[**\_MCI-FENSTER**](mci-window.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

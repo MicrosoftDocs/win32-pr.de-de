@@ -1,7 +1,7 @@
 ---
-description: Die get \_ AutoShow-Methode ruft das aktuelle Autoshow State-Flag ab.
+description: Die get \_ AutoShow-Methode ruft das aktuelle AutoShow-Statusflag ab.
 ms.assetid: b27651d1-3ac5-4a52-9549-b63bacda5dc8
-title: CBaseControlWindow.get_AutoShow-Methode (ctlutil. h)
+title: CBaseControlWindow.get_AutoShow-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f45679b9d036f1c5386cd2c1d18a31fa3d6bd64f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7a5c16e0b460d07255cae113194f672ca3dace6f46827ac613c9559370284beb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118158793"
 ---
-# <a name="cbasecontrolwindowget_autoshow-method"></a>Cbasecontrolwindow. get \_ AutoShow-Methode
+# <a name="cbasecontrolwindowget_autoshow-method"></a>CBaseControlWindow.get \_ AutoShow-Methode
 
-Die- `get_AutoShow` Methode ruft das aktuelle Autoshow State-Flag ab.
+Die `get_AutoShow` -Methode ruft das aktuelle AutoShow-Statusflag ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT get_AutoShow(
 
 <dl> <dt>
 
-*Automatisch anzeigen* 
+*Autoshow* 
 </dt> <dd>
 
-Zeiger auf ein boolesches Automatisierungs Flag (0 ist off, 1 ist on).
+Zeiger auf ein boolesches Automation-Flag (0 ist deaktiviert, 1 ist aktiviert).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**IVideoWindow:: get \_ AutoShow**](/windows/desktop/api/Control/nf-control-ivideowindow-get_autoshow) -Methode. Diese Eigenschaft vereinfacht den Fenster Anzeige Zugriff für-Anwendungen. Wenn dieser Wert auf 1 (on) festgelegt ist, wird das Fenster, das in der Regel nach der Verbindungs Herstellung ausgeblendet wird, automatisch angezeigt, wenn der Filter anhält oder ausgeführt wird. Das Fenster sollte jedoch nicht ausgeblendet werden, wenn der Filter angehalten wird. Wenn dieser Parameter auf 0 (Off) festgelegt ist, wird das Fenster nur angezeigt, wenn die Anwendung [**cbasecontrolwindow::p UT \_ Visible**](cbasecontrolwindow-put-visible.md) oder [**cbasecontrolwindow::p UT \_ WindowState**](cbasecontrolwindow-put-windowstate.md) mit den entsprechenden Parametern aufruft.
+Diese Memberfunktion implementiert die [**IVideoWindow::get \_ AutoShow-Methode.**](/windows/desktop/api/Control/nf-control-ivideowindow-get_autoshow) Diese Eigenschaft vereinfacht den Fensteranzeigezugriff für Anwendungen. Wenn dies auf 1 (ein) festgelegt ist, wird das Fenster, das normalerweise nach der Verbindung des Filters ausgeblendet wird, automatisch angezeigt, wenn der Filter angehalten oder ausgeführt wird. Das Fenster sollte jedoch nicht ausgeblendet werden, wenn der Filter beendet wird. Wenn dieser Parameter auf 0 (deaktiviert) festgelegt ist, wird das Fenster nur sichtbar gemacht, wenn die Anwendung [**CBaseControlWindow::p ut \_ Visible**](cbasecontrolwindow-put-visible.md) oder [**CBaseControlWindow::p ut \_ WindowState**](cbasecontrolwindow-put-windowstate.md) mit den entsprechenden Parametern aufruft.
 
-Diese Member-Funktion soll von externen Objekten über die [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle aufgerufen werden und sperrt daher den kritischen Abschnitt, um mit dem zugeordneten Filter synchronisiert zu werden. Rufen Sie die Member-Funktion [**cbasecontrolwindow:: isautoshowenabled**](cbasecontrolwindow-isautoshowenabled.md) auf, um diese Eigenschaft abzurufen, wenn Sie nicht von einem externen Objekt aufrufen.
+Diese Memberfunktion soll von externen Objekten über die [**IVideoWindow-Schnittstelle**](/windows/desktop/api/Control/nn-control-ivideowindow) aufgerufen werden und sperrt daher den kritischen Abschnitt für die Synchronisierung mit dem zugeordneten Filter. Rufen Sie die [**CBaseControlWindow::IsAutoShowEnabled-Memberfunktion**](cbasecontrolwindow-isautoshowenabled.md) auf, um diese Eigenschaft abzurufen, wenn Sie nicht aus einem externen Objekt aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Diese Member-Funktion soll von externen Objekten über die [**IVideoWindow**](/w
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Diese Member-Funktion soll von externen Objekten über die [**IVideoWindow**](/w
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

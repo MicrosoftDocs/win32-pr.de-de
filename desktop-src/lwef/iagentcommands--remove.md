@@ -1,19 +1,19 @@
 ---
-title: Iagentcommands entfernen
-description: Iagentcommands entfernen
+title: IAgentCommands Remove
+description: IAgentCommands Remove
 ms.assetid: 1f41aa2d-e50b-48a8-87fc-fda4730b035a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d0c3321de3d06b5e2ebea873a4bace91482d8c5
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5875d1377aecc7e28554bac6aae1ccb2b4f515f730a6ab1b0b3a83cec7573418
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104208947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118477193"
 ---
-# <a name="iagentcommandsremove"></a>Iagentcommands:: Remove
+# <a name="iagentcommandsremove"></a>IAgentCommands::Remove
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Remove(
@@ -21,7 +21,7 @@ HRESULT Remove(
 );
 ```
 
-Entfernt den angegebenen [**Befehl**](/windows/desktop/lwef/the-command-object) aus einer [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung.
+Entfernt den angegebenen [**Befehl**](/windows/desktop/lwef/the-command-object) aus einer [**Commands-Auflistung.**](/windows/desktop/lwef/the-commands-collection-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,17 +30,17 @@ Entfernt den angegebenen [**Befehl**](/windows/desktop/lwef/the-command-object) 
 <span id="dwID"></span><span id="dwid"></span><span id="DWID"></span>*dwID*
 </dt> <dd>
 
-Die ID eines [**Befehls**](/windows/desktop/lwef/the-command-object) , der aus der [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung entfernt werden soll.
+Die ID eines [**Befehls,**](/windows/desktop/lwef/the-command-object) der aus der [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) entfernt werden soll.
 
 </dd> </dl>
 
-Wenn Sie einen [**Befehl**](/windows/desktop/lwef/the-command-object) aus [**einer Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung entfernen, wird dieser auch aus dem Popupmenü und dem **Fenster "Sprachbefehle** " entfernt, wenn die Anwendung aktiv ist.
+Wenn Sie einen [**Befehl**](/windows/desktop/lwef/the-command-object) aus einer [**Commands-Sammlung**](/windows/desktop/lwef/the-commands-collection-object) entfernen, wird er auch aus dem Popupmenü und dem **Fenster "Sprachbefehle"** entfernt, wenn Ihre Anwendung eingabeaktiv ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md), [**iagentcommands:: RemoveAll**](iagentcommands--removeall.md)
+[**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md), [**IAgentCommands::RemoveAll**](iagentcommands--removeall.md)
 
 
- 
+ 
 
- 
+ 

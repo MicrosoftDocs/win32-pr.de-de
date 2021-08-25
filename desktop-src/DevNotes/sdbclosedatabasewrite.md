@@ -1,7 +1,7 @@
 ---
 description: Schließt die angegebene Datenbank.
 ms.assetid: 69546f03-9912-401a-9c1a-b7fdbe16dbf8
-title: Sdbclosedatabasewrite-Funktion
+title: SdbCloseDatabaseWrite-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 24df6f9ce2c4f0fae4dd1c1ef244e006ea00c047
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0ef1c02731f2875fbdfc910243ed80faa28b6ab029314ea43ef281355a08487a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118161581"
 ---
-# <a name="sdbclosedatabasewrite-function"></a>Sdbclosedatabasewrite-Funktion
+# <a name="sdbclosedatabasewrite-function"></a>SdbCloseDatabaseWrite-Funktion
 
 Schließt die angegebene Datenbank.
 
@@ -39,10 +39,10 @@ void WINAPI SdbCloseDatabaseWrite(
 
 <dl> <dt>
 
-*PDB* \[ in, out\]
+*pdb* \[ in, out\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> </dl>
 
@@ -50,9 +50,9 @@ Ein Handle für die Shimdatenbank.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ruft [**sdbclosedatabase**](sdbclosedatabase.md)auf. Daher sind diese beiden Funktionen Äquivalent.
+Diese Funktion ruft [**SdbCloseDatabase**](sdbclosedatabase.md)auf. daher sind diese beiden Funktionen gleichwertig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Diese Funktion ruft [**sdbclosedatabase**](sdbclosedatabase.md)auf. Daher sind d
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -70,13 +70,13 @@ Diese Funktion ruft [**sdbclosedatabase**](sdbclosedatabase.md)auf. Daher sind d
 
 <dl> <dt>
 
-[**Sdbbeginschreitelisttag**](sdbbeginwritelisttag.md)
+[**SdbBeginWriteListTag**](sdbbeginwritelisttag.md)
 </dt> <dt>
 
-[**Sdbclosedatabase**](sdbclosedatabase.md)
+[**SdbCloseDatabase**](sdbclosedatabase.md)
 </dt> <dt>
 
-[**Sdbendschreitelisttag**](sdbendwritelisttag.md)
+[**SdbEndWriteListTag**](sdbendwritelisttag.md)
 </dt> </dl>
 
  

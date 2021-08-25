@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für die Terminaldienste des virtuellen Computers auf einem Host dar.
+description: Stellt die Einstellungen für die Terminaldienste virtueller Computer auf einem Host dar.
 ms.assetid: 1f8d0718-09da-4231-95eb-cc63b6f324dd
 title: Msvm_TerminalServiceSettingData-Klasse
 ms.topic: reference
@@ -22,18 +22,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 27d98971c847eab5042823e8a1524051a15fd679
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ec87429a70236d1e35b593c959880fa0937c3fc44daf22e834290158e83aab9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118146699"
 ---
-# <a name="msvm_terminalservicesettingdata-class"></a>MSVM \_ terminalservicesettingdata-Klasse
+# <a name="msvm_terminalservicesettingdata-class"></a>Msvm \_ TerminalServiceSettingData-Klasse
 
-Stellt die Einstellungen für die Terminaldienste des virtuellen Computers auf einem Host dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**MSVM \_ Terminalservice. modifyservicesettings**](modifyservicesettings-msvm-terminalservice.md) -Methode abrufen, um diese Eigenschaften zu ändern.
+Stellt die Einstellungen für die Terminaldienste virtueller Computer auf einem Host dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**Msvm \_ TerminalService.ModifyServiceSettings-Methode**](modifyservicesettings-msvm-terminalservice.md) aufrufen, um eine dieser Eigenschaften zu ändern.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,100 +55,100 @@ class Msvm_TerminalServiceSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ terminalservicesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ TerminalServiceSettingData-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ terminalservicesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ TerminalServiceSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AllowedHashAlgorithms**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Liste der Hash Algorithmen, die zum Überprüfen der Signatur von Verbund Authentifizierungs Token akzeptiert werden.
+Die Liste der Hashalgorithmen, die zum Überprüfen der Signatur von Verbundauthentifizierungstoken akzeptiert werden.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
-**Authcertifialisiehash**
+**AuthCertificateHash**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Hash des Zertifikats, das für die Remote Authentifizierung verwendet werden soll.
+Der Hash des Zertifikats, das für die Remoteauthentifizierung verwendet werden soll.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Disableselfsignedcertificategeneration**
+**DisableSelfSignedCertificateGeneration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deaktiviert die Generierung eines selbst signierten Zertifikats.
+Deaktiviert die Generierung selbstsignierter Zertifikate.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -157,35 +157,35 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Eigenschaften**
+**ListenerPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Netzwerkport, auf dem die anfängliche Remote Sitzungs Verbindung hergestellt wird.
+Der Netzwerkport, über den die erste Remotesitzungsverbindung hergestellt wird.
 
 </dd> <dt>
 
 **TrustedIssuerCertificateHashes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Liste der vertrauenswürdigen Aussteller-zertifikathashes zum Überprüfen der Signatur von Verbund Authentifizierungs Token.
+Die Liste der Hashes für vertrauenswürdige Ausstellerzertifikate zum Überprüfen der Signatur von Verbundauthentifizierungstoken.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> </dl>
 
@@ -195,10 +195,10 @@ Die Liste der vertrauenswürdigen Aussteller-zertifikathashes zum Überprüfen d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

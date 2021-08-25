@@ -1,25 +1,25 @@
 ---
-description: 'Verwenden Sie die icertserverpolicy:: setcertificateproperty-Methode, um die betreffeigenschaften eines Zertifikats festzulegen.'
+description: Verwenden Sie die ICertServerPolicy::SetCertificateProperty-Methode, um die Betreffeigenschaften eines Zertifikats fest zu legen.
 ms.assetid: 93e4b05d-0230-4562-8052-4e118fd92057
-title: Festlegen von Zertifikat Eigenschaften
+title: Festlegen von Zertifikateigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f33534792e65c95e24125968a61cf6ac1ad27039
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dfe131190b10b431427162e628004d8b21053a099015a68184196b7218967222
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117974568"
 ---
-# <a name="setting-certificate-properties"></a>Festlegen von Zertifikat Eigenschaften
+# <a name="setting-certificate-properties"></a>Festlegen von Zertifikateigenschaften
 
-Verwenden Sie die [**icertserverpolicy:: setcertificateproperty**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) -Methode, um die betreffeigenschaften eines Zertifikats festzulegen. Betreffeigenschaften sind Eigenschaften, die mit dem Besitzer des Zertifikats oder der Person verknüpft sind, die das Zertifikat angefordert hat. Eine Liste der betreffeigenschaften finden Sie unter [Name Properties](name-properties.md).
+Verwenden Sie [**die ICertServerPolicy::SetCertificateProperty-Methode,**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) um die Betreffeigenschaften eines Zertifikats fest zu legen. Betreffeigenschaften sind Eigenschaften im Zusammenhang mit dem Besitzer des Zertifikats oder der Person, die das Zertifikat angefordert hat. Eine Liste der Betreffeigenschaften finden Sie unter [Namenseigenschaften.](name-properties.md)
 
-Sie können auch die [**setcertificateproperty**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) -Methode verwenden, um die Eigenschaften "NotBefore" und "NotAfter Certificate" festzulegen. Eine Beschreibung der Eigenschaften "NotBefore" und "NotAfter Certificate" finden Sie unter [Zertifikat Eigenschaften](certificate-properties.md).
+Sie können auch die [**SetCertificateProperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) verwenden, um die Zertifikateigenschaften NotBefore und NotAfter festlegen. Eine Beschreibung der NotBefore- und NotAfter-Zertifikateigenschaften finden Sie unter [Zertifikateigenschaften](certificate-properties.md).
 
-Verwenden Sie die [**icertserverpolicy:: setcertificateextension**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension) -Methode, um dem Zertifikat eine beliebige Anzahl von Erweiterungen hinzuzufügen. Sie können Erweiterungen verwenden, um zusätzliche Betreff-oder Nutzungsinformationen zum Zertifikat hinzuzufügen. Weitere Informationen finden Sie unter [Erweiterungs Handler](extension-handlers.md).
+Verwenden Sie [**die ICertServerPolicy::SetCertificateExtension-Methode,**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension) um dem Zertifikat eine beliebige Anzahl von Erweiterungen hinzuzufügen. Sie können Erweiterungen verwenden, um dem Zertifikat zusätzliche Betreff- oder Nutzungsinformationen hinzuzufügen. Weitere Informationen finden Sie unter [Erweiterungshandler.](extension-handlers.md)
 
-Im folgenden Beispiel werden eine Zertifikat Eigenschaft und eine Erweiterung für ein Zertifikat festgelegt. Sie aufrufen die Methoden [**setcertificateproperty**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) und [**setcertificateextension**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension) in Ihrer [**ICertPolicy2:: verifyrequest**](/windows/desktop/api/Certpol/nf-certpol-icertpolicy-verifyrequest) -Implementierung. Bei dem Beispiel handelt es sich nicht um eine komplette **verifyrequest** -Implementierung. Das Beispiel zeigt keine Überprüfungs Logik an.
+Im folgenden Beispiel werden eine Zertifikateigenschaft und eine Erweiterung für ein Zertifikat definiert. Sie rufen die [**Methoden SetCertificateProperty**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty) und [**SetCertificateExtension**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension) in Ihrer [**ICertPolicy2::VerifyRequest-Implementierung**](/windows/desktop/api/Certpol/nf-certpol-icertpolicy-verifyrequest) auf. Das Beispiel ist keine vollständige **VerifyRequest-Implementierung.** Im Beispiel wird die Überprüfungslogik nicht gezeigt.
 
 
 ```C++

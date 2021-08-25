@@ -3,7 +3,7 @@ title: URI -Element (registrationInfoType)
 description: Gibt den URI der Aufgabe an.
 ms.assetid: 5b438e00-ed8a-4ec8-854f-e8eda48d1cfc
 keywords:
-- URI-Taskplaner
+- URI-element Taskplaner
 topic_type:
 - apiref
 api_name:

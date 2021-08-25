@@ -1,7 +1,7 @@
 ---
 description: Ruft die Zieladresse eines Frames ab.
 ms.assetid: f19a6753-37d8-4ec7-a7d4-ced0292d453c
-title: Getframedebug-Funktion (Netmon. h)
+title: GetFrameDestAddress-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: afec32f0e0fc66ccd5a1d78cc9769b0e742f1e6f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7719392794027567521ce3e9c1bd1caf8ecbf76110f76ad0e54e0dd6549aae4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118366625"
 ---
-# <a name="getframedestaddress-function"></a>Getframedebug-Funktion
+# <a name="getframedestaddress-function"></a>GetFrameDestAddress-Funktion
 
-Die **getframedebug** -Funktion Ruft die Zieladresse eines Frames ab.
+Die **GetFrameDestAddress-Funktion** ruft die Zieladresse eines Frames ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ DWORD WINAPI GetFrameDestAddress(
 
 <dl> <dt>
 
-*hframe* 
+*hFrame* 
 </dt> <dd>
 
 Ein Handle des Frames, auf den ein Zeiger angezeigt werden soll.
@@ -52,28 +52,28 @@ Ein Handle des Frames, auf den ein Zeiger angezeigt werden soll.
 *lpAddress* 
 </dt> <dd>
 
-Ein Rückgabe Puffer, in dem die Frame Zieladresse gespeichert wird.
+Ein Rückgabepuffer, in dem die Zieladresse des Frames gespeichert wird.
 
 </dd> <dt>
 
 *Adresstyp* 
 </dt> <dd>
 
-Eine Art Adresse, z \_ . b. adrestyp \_ Ethernet oder \_ Adresstyp \_ -IP.
+Ein Adresstyp, z. B. ADDRESS \_ TYPE ETHERNET oder ADDRESS TYPE \_ \_ \_ IP.
 
 </dd> <dt>
 
 *Flags* 
 </dt> <dd>
 
-Die Flags, die zum Ändern der zurückgegebenen Ziel Adressdaten verwendet werden.
+Die Flags, die zum Ändern der zurückgegebenen Zieladressdaten verwendet werden.
 
 
 
 | Wert                                                                                                                                                                                                           | Bedeutung                                                          |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| <span id="ADDRESSTYPE_FLAGS_NORMALIZE"></span><span id="addresstype_flags_normalize"></span><dl> <dt>**adressstype- \_ Flags \_ normalisieren**</dt> </dl>        | Bricht die Routing-und Gruppen Bits ab.<br/>                   |
-| <span id="ADDRESSTYPE_FLAGS_BIT_REVERSE"></span><span id="addresstype_flags_bit_reverse"></span><dl> <dt>**adressstype- \_ Flags \_ Bit \_ umkehren**</dt> </dl> | Konvertiert die Netzwerkadressen des tokenrings wieder in den normalen Zustand.<br/> |
+| <span id="ADDRESSTYPE_FLAGS_NORMALIZE"></span><span id="addresstype_flags_normalize"></span><dl> <dt>**\_ADDRESSTYPE-FLAGS \_ NORMALISIEREN**</dt> </dl>        | Bricht die Routing- und Gruppen-BITs ab.<br/>                   |
+| <span id="ADDRESSTYPE_FLAGS_BIT_REVERSE"></span><span id="addresstype_flags_bit_reverse"></span><dl> <dt>**ADDRESSTYPE \_ FLAGS \_ BIT \_ REVERSE**</dt> </dl> | Konvertiert Tokenringnetzwerkadressen wieder in den normalen Modus.<br/> |
 
 
 
@@ -83,7 +83,7 @@ Die Flags, die zum Ändern der zurückgegebenen Ziel Adressdaten verwendet werde
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der *lpAddress* -Wert gültig, und der Rückgabewert ist bHerrn \_ Success.
+Wenn die Funktion erfolgreich ist, ist der *lpAddress-Wert* gültig, und der Rückgabewert ist BHERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
@@ -91,16 +91,16 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| <dl> <dt>**bHerr- \_ Protokoll \_ nicht \_ gefunden**</dt> </dl> | Das angegebene Protokoll im *Adresstype* -Parameter ist für den Frame ungültig.<br/> |
-| <dl> <dt>**bWer hat einen \_ ungültigen \_ hframe**</dt> </dl>      | Der *hframe* -Wert ist ungültig.<br/>                                                  |
+| <dl> <dt>**\_BHERR-PROTOKOLL \_ NICHT \_ GEFUNDEN**</dt> </dl> | Das angegebene Protokoll im *AddressType-Parameter* ist für den Frame ungültig.<br/> |
+| <dl> <dt>**BHERR \_ INVALID \_ HFRAME**</dt> </dl>      | Der *hFrame-Wert* ist ungültig.<br/>                                                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **\_ adrestyp " \_ Suche nach \_ höchster** Adresse" ist zulässig. Wenn dieser Adresstyp verwendet wird, sucht die-Funktion nach der IP-Adresse von IPX, xns, IP oder Vines, bevor die Ethernet-, TokenRing-oder die f-di-Adresse zurückgegeben wird. Diese Vorgehensweise ist nützlich für Protokolle und in Umgebungen, in denen zwei NICs unter einer einzelnen Server Adresse multiplext werden können.
+Der **\_ Adresstyp ADDRESS TYPE \_ FIND \_ HIGHEST** ist zulässig. Wenn dieser Adresstyp verwendet wird, sucht die Funktion nach der IPX-, XNS-, IP- oder VINES-IP-Adresse, bevor die ETHERNET-, TOKENRING- oder FDDI-Adresse zurückgegeben wird. Dieser Ansatz ist nützlich für Protokolle und in Umgebungen, in denen zwei NICs unter einer einzelnen Serveradresse multiplexiert werden können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,8 +110,8 @@ Der **\_ adrestyp " \_ Suche nach \_ höchster** Adresse" ist zulässig. Wenn di
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

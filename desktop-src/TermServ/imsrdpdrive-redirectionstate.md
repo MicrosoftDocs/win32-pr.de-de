@@ -1,10 +1,10 @@
 ---
-title: IMsRdpDrive RedirectionState-Eigenschaft
+title: IMsRdpDrive RedirectionState (Eigenschaft)
 description: Gibt den Umleitungsstatus des Laufwerks an.
 ms.assetid: 05333671-460d-4c07-8b7e-fbb7bc215353
 ms.tgt_platform: multiple
 keywords:
-- RedirectionState-Eigenschaft Remotedesktopdienste
+- RedirectionState-Remotedesktopdienste
 - RedirectionState-Eigenschaft Remotedesktopdienste , IMsRdpDrive-Schnittstelle
 - IMsRdpDrive-Schnittstelle Remotedesktopdienste , RedirectionState-Eigenschaft
 topic_type:
@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118351958"
 ---
-# <a name="imsrdpdriveredirectionstate-property"></a>IMsRdpDrive::RedirectionState-Eigenschaft
+# <a name="imsrdpdriveredirectionstate-property"></a>IMsRdpDrive::RedirectionState (Eigenschaft)
 
 Gibt den Umleitungsstatus des Laufwerks an.
 
@@ -49,11 +49,11 @@ HRESULT get_RedirectionState(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **VARIANT \_ FALSE fest.** , um die Umleitung oder **VARIANT \_ TRUE** zu deaktivieren. , um die Umleitung zu aktivieren.
+Legen Sie diesen Parameter auf **VARIANT \_ FALSE fest.** , um die Umleitung oder **VARIANT \_ TRUE zu deaktivieren.** , um die Umleitung zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
+Wenn die Methode erfolgreich ist, **wird S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -22,7 +22,7 @@ ms.locfileid: "118399150"
 # <a name="ifindcompressorcb-interface"></a>IFindCompressorCB-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
@@ -30,13 +30,13 @@ Die `IFindCompressorCB`-Schnittstelle wird nicht unterstützt.
 
 ## <a name="members"></a>Member
 
-Die **IFindCompressorCB-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
+Die **IFindCompressorCB-Schnittstelle** erbt von der [**IUnknown-Schnittstelle,**](/windows/win32/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[C++-Referenz zu DirectShow Editing Services](directshow-editing-services-c---reference.md)
+[C++-Referenz für DirectShow Editing Services](directshow-editing-services-c---reference.md)
 </dt> </dl>
 
  

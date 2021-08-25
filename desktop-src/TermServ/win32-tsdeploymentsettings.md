@@ -109,7 +109,7 @@ Gibt an, ob die Schriftartglättung zulässig ist.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -127,7 +127,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **CertificateExpiresOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -153,7 +153,7 @@ Der Fingerabdruck des Zertifikats, das zum Signieren von RDP-Dateien verwendet w
 **CertificateIssuedBy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -166,7 +166,7 @@ Gibt an, von wem das Zertifikat ausgestellt wird.
 **CertificateIssuedTo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -192,7 +192,7 @@ Die Farbbittiefe der Anzeige. Mögliche Werte sind 4, 8, 15, 16, 24 und 32.
 **CustomRDPSettings**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -205,7 +205,7 @@ Der Inhalt der RDP-Datei, die dem benutzerdefinierten RDP-Einstellungen in Remot
 **DeploymentRDPSettings**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -218,7 +218,7 @@ Der Inhalt der RDP-Datei, die den Bereitstellungseinstellungen in RemoteApp-Mana
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -233,7 +233,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **FarmName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -282,7 +282,7 @@ Ermöglicht dem Benutzer die Auswahl während der Verbindung.
 **GatewayName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -373,9 +373,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -390,7 +390,7 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -416,7 +416,7 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die Optionen für die Geräte- und Ressourcenumleitung für RemoteApp-Verbindungen an. Flags für **RedirectionOptions** können kombiniert werden. Die folgenden Werte sind möglich.
+Gibt die Geräte- und Ressourcenumleitungsoptionen für RemoteApp-Verbindungen an. Flags für **RedirectionOptions können** kombiniert werden. Die folgenden Werte sind möglich.
 
 <dt>
 
@@ -430,7 +430,7 @@ Keine Geräte- oder Ressourcenumleitung.
 1
 </dt> <dd>
 
-Leiten Sie Datenträgerlaufwerke um.
+Umleiten von Laufwerken.
 
 </dd> <dt>
 
@@ -451,21 +451,21 @@ Leiten Sie die Zwischenablage um.
 8
 </dt> <dd>
 
-Umleiten unterstützter Plug & Play Geräte.
+Leiten Sie unterstützte Plug & Play um.
 
 </dd> <dt>
 
 16
 </dt> <dd>
 
-Smartcards umleiten.
+Umleiten von Smartcards.
 
 </dd> <dt>
 
 32
 </dt> <dd>
 
-Audio umleiten.
+Umleiten von Audio.
 
 </dd> <dt>
 
@@ -503,9 +503,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element befindet sich weder in "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 <dt>
 
@@ -582,14 +582,14 @@ Gibt an, ob mehrere Monitore für den Desktop aktiviert sind.
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um Eigenschaften mit dieser Klasse festzulegen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um Eigenschaften mithilfe dieser Klasse festlegen zu können.
 
-Wenn **RequireServerAuth** auf **TRUE** festgelegt ist, sollten Sie Folgendes berücksichtigen:
+Wenn **RequireServerAuth** auf TRUE festgelegt **ist,** sollten Sie Folgendes berücksichtigen:
 
--   Wenn das RemoteApp-Programm für die Intranetverwendung vorgesehen ist und auf allen Clientcomputern entweder Windows Server 2008 oder Windows Vista ausgeführt wird, müssen Sie den RD-Sitzungshost Server nicht für die Verwendung eines SSL-Zertifikats konfigurieren. In diesem Fall wird Authentifizierung auf Netzwerkebene verwendet.
+-   Wenn das RemoteApp-Programm für die Intranetnutzung verwendet wird und auf allen Clientcomputern entweder Windows Server 2008 oder Windows Vista ausgeführt wird, müssen Sie den RD-Sitzungshost-Server nicht für die Verwendung eines SSL-Zertifikats konfigurieren. In diesem Fall wird Authentifizierung auf Netzwerkebene verwendet.
 -   Sie müssen den FQDN des Servers oder der Farm für den Wert der **FarmName-Eigenschaft** angeben.
 
-Um eine Verbindung mit dem Namespace "CIMV2 \\ TerminalServices" herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC C \_ \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**, die mithilfe der [**COM-Funktion CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) festgelegt werden kann. Bei Visual Basic- und Skriptaufrufen ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
+Um eine Verbindung mit dem Namespace "CIMV2 \\ TerminalServices" herzustellen, muss die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY,** die mithilfe der [**COM-Funktion CoSetProxyBlanket festgelegt**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) werden kann. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -600,7 +600,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation -Klassen (WMI). Sie werden auf dem Computer installiert, wenn Sie die zugeordnete Rolle hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). Sie werden auf dem Computer installiert, wenn Sie die zugeordnete Rolle hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -610,7 +610,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Man
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>Tsallow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 

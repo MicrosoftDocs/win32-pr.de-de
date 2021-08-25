@@ -1,10 +1,10 @@
 ---
-title: IADsClass-Eigenschaftenmethoden (Iads.h)
+title: IADsClass-Eigenschaftsmethoden (Iads.h)
 description: Die Eigenschaftenmethoden der IADsClass-Schnittstelle erhalten oder legen die folgenden Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 191f6873-c4bd-4e71-9d23-478454b7cec2
 ms.tgt_platform: multiple
 keywords:
-- IADsClass-Eigenschaftenmethoden ADSI
+- IADsClass-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -273,7 +273,7 @@ HRESULT put_DerivedFrom(
 **HelpFileContext**
 </dt> <dd> <dl>
 
-Kontext-ID in **HelpFileName,** wobei bestimmte Informationen für diese Klasse gefunden werden.
+Kontext-ID in **HelpFileName,** wobei bestimmte Informationen für diese Klasse gefunden werden können.
 
 <dt>
 
@@ -329,7 +329,7 @@ HRESULT put_HelpFileName(
 **MandatoryProperties**
 </dt> <dd> <dl>
 
-**SAFEARRAY von** **VARIANT** s, das die Eigenschaften auflistet, die festgelegt werden müssen, damit diese Klasse in den Speicher geschrieben werden kann. Wenn die Klasse nur eine Eigenschaft enthält, gibt **\_ get MandatoryProperties** einen **BSTR zurück.**
+**SAFEARRAY von** **VARIANT-Objekten,** die die Eigenschaften auflisten, die festgelegt werden müssen, damit diese Klasse in den Speicher geschrieben werden kann. Wenn die Klasse nur eine Eigenschaft enthält, gibt **\_ get MandatoryProperties** einen **BSTR zurück.**
 
 <dt>
 
@@ -582,7 +582,7 @@ Cleanup:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

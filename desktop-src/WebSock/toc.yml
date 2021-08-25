@@ -1,9 +1,9 @@
-- name: WebSocket-Protokoll Komponenten-API
+- name: WebSocket-Protokollkomponenten-API
   href: web-socket-protocol-component-api-portal.md
   items:
-    - name: Datentypen der WebSocket-Protokoll Komponenten-API
+    - name: WebSocket-Protokollkomponenten-API-Datentypen
       href: web-socket-protocol-component-api-data-types.md
-    - name: API-Enumerationen der WebSocket-Protokoll Komponente
+    - name: WebSocket-Protokollkomponenten-API-Enumerationen
       href: web-socket-protocol-component-api-enumerations.md
       items:
         - name: WEB_SOCKET_ACTION
@@ -16,36 +16,36 @@
           href: /windows/win32/api/Websocket/ne-websocket-web_socket_close_status
         - name: WEB_SOCKET_PROPERTY_TYPE
           href: /windows/win32/api/Websocket/ne-websocket-web_socket_property_type
-    - name: Funktionen der WebSocket-Protokoll Komponenten-API
+    - name: WebSocket-Protokollkomponenten-API-Funktionen
       href: web-socket-protocol-component-api-functions.md
       items:
-        - name: Websocketaborthandle
+        - name: WebSocketAbortHandle
           href: /windows/desktop/api/Websocket/nf-websocket-websocketaborthandle
-        - name: Websocketbeginclienthandshake
+        - name: WebSocketBeginClientHandshake
           href: /windows/desktop/api/Websocket/nf-websocket-websocketbeginclienthandshake
-        - name: Websocketbeginserverhandshake
+        - name: WebSocketBeginServerHandshake
           href: /windows/desktop/api/Websocket/nf-websocket-websocketbeginserverhandshake
-        - name: Websocketcompleteaction
+        - name: WebSocketCompleteAction
           href: /windows/desktop/api/Websocket/nf-websocket-websocketcompleteaction
-        - name: Websocketkreateclienthandle
+        - name: WebSocketCreateClientHandle
           href: /windows/desktop/api/Websocket/nf-websocket-websocketcreateclienthandle
-        - name: Websocketkreateserverhandle
+        - name: WebSocketCreateServerHandle
           href: /windows/desktop/api/Websocket/nf-websocket-websocketcreateserverhandle
-        - name: Websocketdeletehandle
+        - name: WebSocketDeleteHandle
           href: /windows/desktop/api/Websocket/nf-websocket-websocketdeletehandle
-        - name: Websocketendclienthandshake
+        - name: WebSocketEndClientHandshake
           href: /windows/desktop/api/Websocket/nf-websocket-websocketendclienthandshake
-        - name: Websocketendserverhandshake
+        - name: WebSocketEndServerHandshake
           href: /windows/desktop/api/Websocket/nf-websocket-websocketendserverhandshake
-        - name: Websocketgetaction
+        - name: WebSocketGetAction
           href: /windows/desktop/api/Websocket/nf-websocket-websocketgetaction
-        - name: Websocketgetglobalproperty
+        - name: WebSocketGetGlobalProperty
           href: /windows/desktop/api/Websocket/nf-websocket-websocketgetglobalproperty
-        - name: Websocketreceive
+        - name: WebSocketReceive
           href: /windows/desktop/api/Websocket/nf-websocket-websocketreceive
-        - name: Websocketsend
+        - name: WebSocketSend
           href: /windows/desktop/api/Websocket/nf-websocket-websocketsend
-    - name: API-Strukturen der WebSocket-Protokoll Komponente
+    - name: WebSocket-Protokollkomponenten-API-Strukturen
       href: web-socket-protocol-component-api-structures.md
       items:
         - name: WEB_SOCKET_BUFFER

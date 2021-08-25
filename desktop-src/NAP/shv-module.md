@@ -1,29 +1,29 @@
 ---
 title: SHV-Modul
-description: Hinweis die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht mehr verfügbar. es wird ein SHV-Modul (System Health Prüfungs) eingerichtet, einschließlich Registrierung und Aufhebung der Registrierung beim NAP-System.
+description: Hinweis Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 Richtet ein SHV-Modul (System Health Validator) ein, einschließlich Registrierung und Aufhebung der Registrierung mit dem NAP-System, nicht verfügbar.
 ms.assetid: 0f2edd23-d44a-4a01-ae33-f7eef0e4b27f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b95784d05f4bf377f356a91fe5b0c1811fb9671d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 344b3a6d74acee0e06e3d2a9fedd4784b1c9d76ac8ba84c68ed4b7ef8ceebc56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118133430"
 ---
 # <a name="shv-module"></a>SHV-Modul
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
- 
+ 
 
-Richtet ein SHV-Modul (System Health Prüfungs) ein, einschließlich Registrierung und Aufhebung der Registrierung beim NAP-System.
+Richtet ein SHV-Modul (System Health Validator) ein, einschließlich Registrierung und Aufhebung der Registrierung beim NAP-System.
 
 > [!Note]  
-> Das NAP-SDK enthält außerdem einen vollständigen Satz von Beispielcode, der sich im... \\ Beispiele für \\ netds- \\ NAP... Verzeichnis der SDK-Installation. Diese Beispiel Gruppe enthält einen Systemintegritäts-Agent (SHA), SHV und einen Erzwingungs Client (EC). Es verfügt über vollständige funktionierende NAP-Szenarien zum Einrichten der Kommunikation zwischen SHA-SHV und SHA-ec.
+> Das NAP SDK enthält auch einen vollständigen Satz von Beispielcode, der im \\ ... Beispiele \\ für NetDS \\ NAP... Verzeichnis Ihrer SDK-Installation. Dieser Beispielsatz enthält einen Systemzustands-Agent (SHA), SHV und erzwingungsclient (EC). Es verfügt über vollständig funktionierende NAP-Szenarien, in denen die Kommunikation zwischen SHA-SHV und SHA-EC eingerichtet wird.
 
- 
+ 
 
 
 ```C++
@@ -104,9 +104,9 @@ void FreeComponentRegistration(NapComponentRegistrationInfo *shvInfo)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

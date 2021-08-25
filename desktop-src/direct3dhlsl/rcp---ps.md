@@ -34,7 +34,7 @@ Berechnet den Kehrwert des Quellskalars.
 where
 
 -   dst ist das Zielregister.
--   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von replicate swizzle, d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von "replicate swizzle", d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -52,13 +52,13 @@ Die Ausgabe muss genau 1,0 sein, wenn die Eingabe genau 1,0 ist. Eine Quelle von
 
 Das skalare Ergebnis wird in alle Kanäle in der Ziel-Schreibmaske repliziert.
 
-Die Genauigkeit sollte mindestens 1,0/(2): absoluter Fehler über dem Bereich (1,0, 2,0) liegen, da allgemeine Implementierungen Mantisse und Exponent trennen.
+Die Genauigkeit sollte mindestens 1,0/(2): absoluter Fehler über dem Bereich (1,0, 2,0) sein, da allgemeine Implementierungen Mantisse und Exponent trennen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

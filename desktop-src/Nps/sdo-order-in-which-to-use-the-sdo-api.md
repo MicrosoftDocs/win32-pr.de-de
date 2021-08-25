@@ -1,6 +1,6 @@
 ---
 title: Reihenfolge, in der die SDO-API verwendet werden soll
-description: In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufruft werden.
+description: In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufgerufen werden.
 ms.assetid: 77ec6ed1-fc29-4962-8939-3ab0160df1f8
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,7 +14,7 @@ ms.locfileid: "118361586"
 ---
 # <a name="order-in-which-to-use-the-sdo-api"></a>Reihenfolge, in der die SDO-API verwendet werden soll
 
-In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufruft werden.
+In den folgenden Abschnitten wird die Reihenfolge beschrieben, in der die verschiedenen SDO-Schnittstellen aufgerufen werden.
 
 -   [Abrufen eines Computer-SDO](/windows/desktop/Nps/sdo-obtaining-a-machine-sdo)
 -   [Anfügen an den SDO-Computer](/windows/desktop/Nps/sdo-attaching-to-the-sdo-computer)

@@ -1,19 +1,19 @@
 ---
-description: Definiert ein Legacy Effekt-DWORD. Diese Vorlage wurde durch die effectparamdword-Vorlage ersetzt.
+description: Definiert einen Legacyeffekt DWORD. Diese Vorlage wurde durch die Vorlage EffectParamDWord ersetzt.
 ms.assetid: ef174f2d-0dc3-4c40-a3ae-6d1b2cc03f64
-title: Effectdword
+title: EffectDWord
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc8b1e5a45075f859aa3dc2e00ff17fe7cd42ec8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 44aa84703a10edf583b6b21f21d9df9cefb6319f5a266e48e11b885148edb49d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523087"
 ---
-# <a name="effectdword"></a>Effectdword
+# <a name="effectdword"></a>EffectDWord
 
-Definiert ein Legacy Effekt-DWORD. Diese Vorlage wurde durch die [**effectparamdword**](effectparamdword.md) -Vorlage ersetzt.
+Definiert einen Legacyeffekt DWORD. Diese Vorlage wurde durch die [**Vorlage EffectParamDWord**](effectparamdword.md) ersetzt.
 
 ``` syntax
 template EffectDWord

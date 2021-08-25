@@ -1,28 +1,28 @@
 ---
-description: Die complus-Tabelle enthält Informationen, die zum Installieren von com+-Anwendungen erforderlich sind.
+description: Die Tabelle Complus enthält Informationen, die zum Installieren von COM+-Anwendungen erforderlich sind.
 ms.assetid: 0c9a7469-5959-45ad-b84d-6cfd3e169ff6
-title: ComPlus-Tabelle
+title: Complus-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a2ad5b7b96044025b78bfc774ee0767c2756aa8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f77885688226689e5d81e074b1a9a28ef3801aaeba5febf51165377ac9ad9e65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118144971"
 ---
-# <a name="complus-table"></a>ComPlus-Tabelle
+# <a name="complus-table"></a>Complus-Tabelle
 
-Die complus-Tabelle enthält Informationen, die zum Installieren von com+-Anwendungen erforderlich sind.
+Die Tabelle Complus enthält Informationen, die zum Installieren von COM+-Anwendungen erforderlich sind.
 
-Die complus-Tabelle weist die folgenden Spalten auf.
+Die Complus-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| Komponente\_ | [Bezeichner](identifier.md) | J   | N        |
-| EXPTYPE     | [Integer](integer.md)       | N   | J        |
+| Komponente\_ | [Identifier](identifier.md) | J   | N        |
+| ExpType     | [Integer](integer.md)       | N   | J        |
 
 
 
@@ -32,27 +32,27 @@ Die complus-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Ein externer Schlüssel in die erste Spalte der [Komponenten Tabelle](component-table.md). Dies ist die Komponente, die die COM+-Anwendung enthält.
+Ein externer Schlüssel in der ersten Spalte der [Component-Tabelle.](component-table.md) Dies ist die Komponente, die die COM+-Anwendung enthält.
 
 </dd> <dt>
 
-<span id="ExpType"></span><span id="exptype"></span><span id="EXPTYPE"></span>EXPTYPE
+<span id="ExpType"></span><span id="exptype"></span><span id="EXPTYPE"></span>ExpType
 </dt> <dd>
 
-Exportiererungsflags, die während der Generierung der MSI-Datei verwendet werden. Weitere Informationen finden Sie in der com+-Dokumentation im Microsoft Windows Software Development Kit (SDK).
+Exportflags, die während der Generierung der .msi werden. Weitere Informationen finden Sie in der COM+-Dokumentation im Microsoft Windows Software Development Kit (SDK).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen finden Sie in der [registercomplus-Aktion](registercomplus-action.md) und der [unregistercomplus-Aktion](unregistercomplus-action.md).
+Weitere Informationen finden [Sie unter der Aktion RegisterComPlus](registercomplus-action.md) und der Aktion [UnregisterComPlus.](unregistercomplus-action.md)
 
-Weitere Informationen finden Sie unter [Installieren einer COM+-Anwendung mit dem Windows Installer](installing-a-com--application-with-the-windows-installer.md).
+Weitere [Informationen finden Sie unter Installieren einer COM+-Anwendung mit dem Windows Installer.](installing-a-com--application-with-the-windows-installer.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

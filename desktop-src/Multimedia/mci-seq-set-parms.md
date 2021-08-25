@@ -1,9 +1,9 @@
 ---
-title: MCI_SEQ_SET_PARMS-Struktur (mciapi. h)
-description: Die Struktur des MCI \_ Seq- \_ Set-Parametern \_ enthält Informationen zum MCI- \_ Befehl Set für die Komponenten von MIDI Sequencer.
+title: MCI_SEQ_SET_PARMS -Struktur (Mciapi.h)
+description: Die MCI \_ SEQ \_ SET \_ PARMS-Struktur enthält Informationen für den MCI \_ SET-Befehl für SEQUENCEr-Geräte.
 ms.assetid: 71638a92-c1d6-474b-bc97-ea63ca586aaa
 keywords:
-- MCI_SEQ_SET_PARMS Struktur Windows Multimedia
+- MCI_SEQ_SET_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 879dd575918a33676e3ba73bd2a8f6212e3dc412
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ffb96cfd2f652bf989673bad68c95c6765034d2105fa554efee057faf099a9c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374968"
 ---
-# <a name="mci_seq_set_parms-structure"></a>Struktur von MCI \_ Seq- \_ Set- \_ Parametern
+# <a name="mci_seq_set_parms-structure"></a>MCI \_ SEQ \_ SET \_ PARMS-Struktur
 
-Die Struktur des **MCI \_ Seq- \_ Set- \_ Parametern** enthält Informationen zum [**MCI-Befehl \_ Set**](mci-set.md) für die Komponenten von MIDI Sequencer.
+Die **MCI \_ SEQ \_ SET \_ PARMS-Struktur** enthält Informationen für den [**MCI \_ SET-Befehl**](mci-set.md) für SEQUENCEr-Geräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,65 +47,65 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort in niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwtimeformat**
+**dwTimeFormat**
 </dt> <dd>
 
-Das Zeitformat von Sequencer.
+Das Zeitformat des Sequencers.
 
 </dd> <dt>
 
-**dwaudiodatei**
+**dwAudio**
 </dt> <dd>
 
-Audioausgabechannel.
+Audioausgabekanal.
 
 </dd> <dt>
 
-**dwtempo**
+**dwTempo**
 </dt> <dd>
 
-Lern.
+Tempo.
 
 </dd> <dt>
 
-**dwport**
+**dwPort**
 </dt> <dd>
 
 Port.
 
 </dd> <dt>
 
-**dwslave**
+**dwSklave**
 </dt> <dd>
 
-Der Synchronisierungstyp, der vom Sequencer für den untergeordneten Vorgang verwendet wird.
+Synchronisierungstyp, der vom Sequencer für untergeordneten Vorgang verwendet wird.
 
 </dd> <dt>
 
-**dwmaster**
+**dwMaster**
 </dt> <dd>
 
-Der Synchronisierungstyp, der vom Sequencer für den Master Vorgang verwendet wird.
+Der Synchronisierungstyp, der vom Sequencer für den Mastervorgang verwendet wird.
 
 </dd> <dt>
 
 **dwOffset**
 </dt> <dd>
 
-Daten Offset.
+Datenoffset.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,21 +115,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Gruppe**](mci-set.md)
+[**MCI \_ SET**](mci-set.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

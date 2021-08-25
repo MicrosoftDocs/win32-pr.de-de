@@ -13,24 +13,24 @@ ms.locfileid: "118520081"
 ---
 # <a name="saving-all-device-states-with-a-stateblock-direct3d-9"></a>Speichern aller Gerätezustände mit einem StateBlock (Direct3D 9)
 
-Ein Zustandsblock kann verwendet werden, um alle Gerätezustände zu erfassen (siehe Zustandsblöcke Speichern und Wiederherstellen des Zustands [(Direct3D 9)](state-blocks-save-and-restore-state.md)). Die folgenden Zustandselemente sind im Gerätestatus enthalten:
+Ein Zustandsblock kann verwendet werden, um alle Gerätezustände zu erfassen (siehe [Zustandsblöcke Speichern und Wiederherstellen des Zustands (Direct3D 9)](state-blocks-save-and-restore-state.md)). Die folgenden Zustandselemente sind im Gerätezustand enthalten:
 
--   Scheitelpunktzustand (siehe [Speichern von Scheitelpunktzuständen mit einem StateBlock (Direct3D 9)](saving-vertex-states-with-a-stateblock.md)).
+-   Vertexstatus (siehe [Speichern von Scheitelpunktzuständen mit einem StateBlock (Direct3D 9)](saving-vertex-states-with-a-stateblock.md)).
 -   Pixelzustand (siehe [Speichern des Pixelzustands mit einem StateBlock (Direct3D 9)](saving-pixel-states-with-a-stateblock.md)).
 -   Jede Textur, die einem Sampler zugewiesen ist.
 -   Jede Scheitelpunkttextur.
 -   Jede Verschiebungszuordnungstextur.
 -   Die aktuelle Texturpalette.
--   Für jeden Scheitelpunktstream: ein Zeiger auf den Scheitelpunktpuffer, jedes Argument aus [**IDirect3DDevice9::SetStreamSource**](/windows/desktop/api)und der Unterteiler (falls eins) aus [**IDirect3DDevice9::SetStreamSourceFreq**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setstreamsourcefreq).
+-   Für jeden Scheitelpunktstream: ein Zeiger auf den Scheitelpunktpuffer, jedes Argument von [**IDirect3DDevice9::SetStreamSource**](/windows/desktop/api)und der Unterteiler (falls vorhanden) aus [**IDirect3DDevice9::SetStreamSourceFreq**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setstreamsourcefreq).
 -   Ein Zeiger auf den Indexpuffer.
 -   Der Viewport.
 -   Das Scissors-Rechteck.
 -   Die Welt-, Ansichts- und Projektionsmatrizen.
 -   Die Texturtransformationen.
--   Die Clippingebenen (sofern diese noch nicht angezeigt werden).
+-   Die Clippingebenen (sofern vorhanden).
 -   Das aktuelle Material.
 
-Um alle Gerätezustände mit einem Zustandsblock zu erfassen, geben Sie D3DSBT ALL beim Aufrufen von \_ [**IDirect3DDevice9::CreateStateBlock an.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createstateblock)
+Um alle Gerätezustände mit einem Zustandsblock zu erfassen, geben Sie D3DSBT \_ ALL beim Aufrufen von [**IDirect3DDevice9::CreateStateBlock**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createstateblock)an.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

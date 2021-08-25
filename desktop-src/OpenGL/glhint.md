@@ -44,17 +44,17 @@ void WINAPI glHint(
 *Ziel* 
 </dt> <dd>
 
-Eine symbolische Konstante, die das zu steuernde Verhalten angibt. Die folgenden symbolischen Konstanten werden zusammen mit der vorgeschlagenen Semantik akzeptiert.
+Eine symbolische Konstante, die das zu steuernde Verhalten angibt. Die folgenden symbolischen Konstanten werden zusammen mit vorgeschlagener Semantik akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                                              | Bedeutung                                                                                                                                                                                                                                                                                                           |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_FOG_HINT"></span><span id="gl_fog_hint"></span><dl> <dt>**\_ \_ GL-GL-GL-HINWEIS**</dt> </dl>                                                           | Gibt die Genauigkeit der Berechnung von Kalkulationen an. Wenn die Berechnung von Pixelspalten von der OpenGL-Implementierung nicht effizient unterstützt wird, können Hinweise auf GL DONT CARE oder GL FASTEST zu einer Scheitelpunktberechnung von Effekten \_ pro Scheitelpunkt \_ \_ führen.<br/>                                                                          |
-| <span id="GL_LINE_SMOOTH_HINT"></span><span id="gl_line_smooth_hint"></span><dl> <dt>**GL \_ LINE \_ SMOOTH \_ HINT**</dt> </dl>                                  | Gibt die Samplingqualität von Antialiasinglinien an. Der Hinweis GL NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere \_ Filterfunktion angewendet wird.<br/>                                                                                                               |
-| <span id="GL_PERSPECTIVE_CORRECTION_HINT"></span><span id="gl_perspective_correction_hint"></span><dl> <dt>**GL \_ PERSPECTIVE \_ CORRECTION \_ HINT**</dt> </dl> | Gibt die Qualität der Farb- und Texturkoordinateninterpolation an. Wenn die perspektivisch korrigierte Parameterinterpolation von der OpenGL-Implementierung nicht effizient unterstützt wird, können Hinweise auf GL DONT CARE oder GL FASTEST zu einer einfachen linearen Interpolation von Farben und/oder Texturkoordinaten \_ \_ \_ führen.<br/> |
-| <span id="GL_POINT_SMOOTH_HINT"></span><span id="gl_point_smooth_hint"></span><dl> <dt>**GL \_ POINT \_ SMOOTH \_ HINT**</dt> </dl>                               | Gibt die Samplingqualität von Antialiasingpunkten an. Der Hinweis GL NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere \_ Filterfunktion angewendet wird.<br/>                                                                                                              |
-| <span id="GL_POLYGON_SMOOTH_HINT"></span><span id="gl_polygon_smooth_hint"></span><dl> <dt>**GL \_ POLYGON \_ SMOOTH \_ HINT**</dt> </dl>                         | Gibt die Samplingqualität von Antialiasingpolygonen an. Der Hinweis GL NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere \_ Filterfunktion angewendet wird.<br/>                                                                                                            |
+| <span id="GL_FOG_HINT"></span><span id="gl_fog_hint"></span><dl> <dt>**\_ \_ GL-HINWEIS**</dt> </dl>                                                           | Gibt die Genauigkeit der Berechnung des Berechnungszeichens an. Wenn die Berechnung des Pro-Pixel-Knotens von der OpenGL-Implementierung nicht effizient unterstützt wird, kann ein Hinweis auf GL \_ DONT \_ CARE oder GL FASTEST zu einer \_ Pro-Scheitelpunkt-Berechnung von Effekten führen.<br/>                                                                          |
+| <span id="GL_LINE_SMOOTH_HINT"></span><span id="gl_line_smooth_hint"></span><dl> <dt>**GL \_ LINE \_ SMOOTH \_ HINT**</dt> </dl>                                  | Gibt die Stichprobenqualität von Antialiasinglinien an. Ein Hinweis auf GL \_ NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere Filterfunktion angewendet wird.<br/>                                                                                                               |
+| <span id="GL_PERSPECTIVE_CORRECTION_HINT"></span><span id="gl_perspective_correction_hint"></span><dl> <dt>**GL \_ PERSPECTIVE \_ CORRECTION \_ HINT**</dt> </dl> | Gibt die Qualität der Farb- und Texturkoordinateninterpolation an. Wenn die perspektivisch korrigierte Parameterinterpolation von der OpenGL-Implementierung nicht effizient unterstützt wird, kann das Angeben von GL \_ DONT \_ CARE oder GL FASTEST zu einer \_ einfachen linearen Interpolation von Farben und/oder Texturkoordinaten führen.<br/> |
+| <span id="GL_POINT_SMOOTH_HINT"></span><span id="gl_point_smooth_hint"></span><dl> <dt>**GL \_ POINT \_ SMOOTH \_ HINT**</dt> </dl>                               | Gibt die Stichprobenqualität von Antialiasingpunkten an. Ein Hinweis auf GL \_ NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere Filterfunktion angewendet wird.<br/>                                                                                                              |
+| <span id="GL_POLYGON_SMOOTH_HINT"></span><span id="gl_polygon_smooth_hint"></span><dl> <dt>**GL \_ POLYGON \_ SMOOTH \_ HINT**</dt> </dl>                         | Gibt die Stichprobenqualität von antialiasierten Polygonen an. Ein Hinweis auf GL \_ NICEST kann dazu führen, dass während der Rasterung mehr Pixelfragmente generiert werden, wenn eine größere Filterfunktion angewendet wird.<br/>                                                                                                            |
 
 
 
@@ -72,8 +72,8 @@ Eine symbolische Konstante, die das gewünschte Verhalten angibt. Die folgenden 
 | Wert                                                                                                                                                       | Bedeutung                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <span id="GL_FASTEST"></span><span id="gl_fastest"></span><dl> <dt>**GL \_ FASTEST**</dt> </dl>        | Die effizienteste Option sollte ausgewählt werden.<br/>                    |
-| <span id="GL_NICEST"></span><span id="gl_nicest"></span><dl> <dt>**GL \_ NICEST**</dt> </dl>           | Es sollte die richtige oder höchste Qualität ausgewählt werden.<br/> |
-| <span id="GL_DONT_CARE"></span><span id="gl_dont_care"></span><dl> <dt>**GL \_ DONT \_ CARE**</dt> </dl> | Der Client hat keine Einstellung.<br/>                          |
+| <span id="GL_NICEST"></span><span id="gl_nicest"></span><dl> <dt>**GL \_ NICEST**</dt> </dl>           | Die richtige oder höchste Qualität sollte ausgewählt werden.<br/> |
+| <span id="GL_DONT_CARE"></span><span id="gl_dont_care"></span><dl> <dt>**GL \_ DONT \_ CARE**</dt> </dl> | Der Client hat keine Präferenz.<br/>                          |
 
 
 
@@ -87,22 +87,22 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *mode* war kein akzeptierter Wert.<br/>                                                                              |
-| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Interpretationsraum zur Verfügung steht, können Sie bestimmte Aspekte des OpenGL-Verhaltens mit Hinweisen steuern. Sie geben einen Hinweis mit zwei Argumenten an. Der *Zielparameter* ist eine symbolische Konstante, die das zu steuernde Verhalten angibt, und *mode* ist eine weitere symbolische Konstante, die das gewünschte Verhalten angibt.
+Wenn Interpretationsmöglichkeiten vorhanden sind, können Sie bestimmte Aspekte des OpenGL-Verhaltens mit Hinweisen steuern. Sie geben einen Hinweis mit zwei Argumenten an. Der *Zielparameter* ist eine symbolische Konstante, die das zu steuernde Verhalten angibt, und *mode* ist eine weitere symbolische Konstante, die das gewünschte Verhalten angibt.
 
-Obwohl die Implementierungsaspekte, die angedeutet werden können, klar definiert sind, hängt die Interpretation der Hinweise von der Implementierung ab.
+Obwohl die Implementierungsaspekte, die hinweise können, klar definiert sind, hängt die Interpretation der Hinweise von der Implementierung ab.
 
 Die **glHint-Funktion** kann ignoriert werden.
 

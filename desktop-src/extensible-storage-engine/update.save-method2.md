@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Update. Save-Methode.
-title: Update. Save-Methode
+description: Weitere Informationen finden Sie unter Update.Save-Methode.
+title: Update.Save-Methode
 TOCTitle: 'Save method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Update.Save
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.update.save(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ad933c9601dc1a20932550aef363e067458ff79e
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 75927144f887ab5cd7dbfe05c6d8fbf4c690a0e29786c1834fa00f8e29fae76c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890061"
 ---
-# <a name="updatesave-method"></a>Update. Save-Methode
+# <a name="updatesave-method"></a>Update.Save-Methode
 
-Aktualisieren Sie TableID.
+Aktualisieren Sie tableid.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,18 +49,18 @@ instance.Save()
 public void Save()
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Speichern ist der letzte Schritt beim Ausführen einer INSERT-oder Update-Ausführung. Das Update wird zunächst durch Aufrufen eines Update Objekts und anschließendes Aufrufen von jetsetcolumn oder jetsetcolumns gestartet, um den Daten Satz Status festzulegen. Zum Schluss wird das Update aufgerufen, um den Aktualisierungs Vorgang abzuschließen. Indizes werden nur durch Update oder nicht von jetsetcolumn oder jetsetcolumns aktualisiert.
+Speichern ist der letzte Schritt beim Ausführen einer Einfügung oder eines Updates. Das Update wird gestartet, indem das Erstellen eines Update-Objekts und dann mindestens ein Mal JetSetColumns oder JetSetColumns aufgerufen wird, um den Datensatzzustand festzulegen. Schließlich wird Update aufgerufen, um den Updatevorgang abzuschließen. Indizes werden nur durch Update oder aktualisiert und nicht während JetSetColumns oder JetSetColumns.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Mitglieder aktualisieren](./update-members.md)
+[Aktualisieren von Membern](./update-members.md)
 
-[Überladung speichern](./update.save-method.md)
+[Speichern der Überladung](./update.save-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

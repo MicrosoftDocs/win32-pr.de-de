@@ -1,24 +1,24 @@
 ---
 title: Registrieren der SPNs für einen Dienst
-description: Im folgenden Codebeispiel wird ein oder mehrere Dienst Prinzipal Namen (SPNs) für eine Dienst Instanz registriert oder aufgehoben.
+description: Im folgenden Codebeispiel wird die Registrierung eines oder mehrere Dienstprinzipalnamen (SERVICE Principal Names, SPNs) für eine Dienstinstanz registriert oder aufgehoben.
 ms.assetid: 60c252c7-76d2-4683-bf90-0f3483e6e8e0
 ms.tgt_platform: multiple
 keywords:
-- Registrieren der SPNs für eine Dienst Anzeige
+- Registrieren der SPNs für ein Dienst-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f51e6e40113a76c4a85603aa88fbb2683945330
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: f1ff5d339ac9c2e51bceb15f29b7ad9cfd94e992ce826d596e2d81fcb25178ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103948549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118184445"
 ---
 # <a name="registering-the-spns-for-a-service"></a>Registrieren der SPNs für einen Dienst
 
-Im folgenden Codebeispiel wird ein oder mehrere Dienst Prinzipal Namen (SPNs) für eine Dienst Instanz registriert oder aufgehoben.
+Im folgenden Codebeispiel wird die Registrierung eines oder mehrere Dienstprinzipalnamen (SERVICE Principal Names, SPNs) für eine Dienstinstanz registriert oder aufgehoben.
 
-Im Beispiel wird die [**dswrite-accountspn**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) -Funktion aufgerufen, die die SPNs in Active Directory Domain Services unter dem [**servicePrincipalName**](/windows/desktop/ADSchema/a-serviceprincipalname) -Attribut des Konto Objekts speichert, das durch den *pszserviceacctdn* -Parameter angegeben wird. Das Account-Objekt entspricht dem Anmelde Konto, das im Befehl " [**anateservice**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) " für diese Dienst Instanz angegeben wurde. Wenn das Anmelde Konto ein Domänen Benutzerkonto ist, muss *pszserviceacctdn* der Distinguished Name des Konto Objekts in Active Directory-Domäne Servern für dieses Benutzerkonto sein. Wenn das Anmelde Konto des Diensts das LocalSystem-Konto ist, muss *pszserviceacctdn* der Distinguished Name des Computer Konto Objekts für den Host Computer sein, auf dem der Dienst installiert ist.
+Das Beispiel ruft die [**DsWriteAccountSpn-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dswriteaccountspna) auf, die die SPNs in Active Directory Domain Services unter dem [**servicePrincipalName-Attribut**](/windows/desktop/ADSchema/a-serviceprincipalname) des Kontoobjekts speichert, das durch den *pszServiceAcctDN-Parameter* angegeben wird. Das Kontoobjekt entspricht dem Anmeldekonto, das im [**CreateService-Aufruf**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) für diese Dienstinstanz angegeben ist. Wenn das Anmeldekonto ein Domänenbenutzerkonto ist, muss *pszServiceAcctDN* der Distinguished Name des Kontoobjekts in Active Directory-Domäne Server für dieses Benutzerkonto sein. Wenn das Anmeldekonto des Diensts das LocalSystem-Konto ist, muss *pszServiceAcctDN* der Distinguished Name des Computerkontoobjekts für den Hostcomputer sein, auf dem der Dienst installiert ist.
 
 
 ```C++
@@ -112,6 +112,6 @@ DWORD SpnRegister(TCHAR *pszServiceAcctDN,
 
 
 
- 
+ 
 
- 
+ 

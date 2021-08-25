@@ -68,7 +68,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 Kompositionen, Gruppen und Spuren haben immer eine Startzeit von 0.
 
-Während des Renderings rundet DES die Start- und Stoppzeiten eines Objekts auf die nächste Framegrenze. Des überschreibt jedoch nicht die Zeiten des Objekts. Wenn Sie die Gruppenbildrate ändern, werden die gerundeten Zeiten immer anhand der ursprünglichen Zeiten berechnet. Weitere Informationen finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
+Während des Renderings rundet DES die Start- und Stoppzeiten eines Objekts auf die nächste Framegrenze. DES überschreibt jedoch nicht die Zeiten des Objekts. Wenn Sie die Gruppenbildrate ändern, werden die gerundeten Zeiten immer anhand der ursprünglichen Zeiten berechnet. Weitere Informationen finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
 
 Um die Start- und Stoppzeiten im gerenderten Projekt zu bestimmen, übergeben Sie die von zurückgegebenen Werte an die `GetStartStop` [**IAMTimelineObj::FixTimes-Methode.**](iamtimelineobj-fixtimes.md)
 

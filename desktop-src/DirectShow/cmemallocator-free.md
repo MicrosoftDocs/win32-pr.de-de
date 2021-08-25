@@ -1,7 +1,7 @@
 ---
 description: Die Free-Methode wird während eines Decommit-Vorgangs aufgerufen.
 ms.assetid: 71a84730-ca71-4418-bf76-52fd42fc7a5a
-title: Cmemzuzucator. Free-Methode (amfilter. h)
+title: CMemAllocator.Free-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b707bb5b2a35466c47d05690a0f57f278d784542
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2c2ffea6fdd60e4053f6c00ee1c87ca9596560909864c861d46b5728dad13a49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118155992"
 ---
-# <a name="cmemallocatorfree-method"></a>Cmemzuzucator. Free-Methode
+# <a name="cmemallocatorfree-method"></a>CMemAllocator.Free-Methode
 
-Die- `Free` Methode wird während eines Decommit-Vorgangs aufgerufen. Diese Methode implementiert die reine virtuelle [**cbasezuordcator:: Free**](cbaseallocator-free.md) -Methode, bewirkt aber nichts. Der Puffer Arbeitsspeicher wird erst freigegeben, wenn das **cmemzuordcator** -Objekt zerstört wird. Die dekonstruktormethode ruft [**cmembelegcator:: reallyfree**](cmemallocator-reallyfree.md) auf, um den Arbeitsspeicher freizugeben.
+Die `Free` -Methode wird während eines Decommit-Vorgangs aufgerufen. Diese Methode implementiert die reine virtuelle [**CBaseAllocator::Free-Methode,**](cbaseallocator-free.md) führt jedoch keine Maßnahmen aus. Der Pufferspeicher wird erst freigegeben, wenn das **CMemAllocator-Objekt** zerstört wurde. Die Destruktormethode ruft [**CMemAllocator::ReallyFree**](cmemallocator-reallyfree.md) auf, um den Arbeitsspeicher freizugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,8 +50,8 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Cmemzuordcator-Klasse**](cmemallocator.md)
+[**CMemAllocator-Klasse**](cmemallocator.md)
 </dt> </dl>
 
  

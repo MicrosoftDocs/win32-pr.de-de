@@ -1,9 +1,9 @@
 ---
 title: Fehlerbehandlung (OpenGL)
-description: Wenn OpenGL einen Fehler erkennt, wird ein aktueller Fehlercode erfasst.
+description: Wenn OpenGL einen Fehler erkennt, wird ein aktueller Fehlercode aufgezeichnet.
 ms.assetid: 8e40e382-14fd-44df-8e1c-ebceb34af19c
 keywords:
-- Fehlerbehandlung bei OpenGL
+- Fehlerbehandlung für OpenGL
 - OpenGL-Fehlerbehandlung
 ms.topic: article
 ms.date: 05/31/2018
@@ -16,14 +16,14 @@ ms.locfileid: "118361380"
 ---
 # <a name="error-handling-opengl"></a>Fehlerbehandlung (OpenGL)
 
-Wenn OpenGL einen Fehler erkennt, wird ein aktueller Fehlercode erfasst. Die Funktion, die den Fehler verursacht hat, wird ignoriert, sodass sie keine Auswirkungen auf den OpenGL-Zustand oder den Framebuffer-Inhalt hat. (Wenn der aufgezeichnete Fehler GL war \_ OUT \_ OF MEMORY sind die Ergebnisse der Funktion jedoch nicht \_ definiert.) Nach der Aufzeichnung wird der aktuelle Fehlercode erst dann wiedergerufen, wenn Sie die [**abfragefunktion glGetError**](glgeterror.md) aufrufen, die den aktuellen Fehlercode zurückgibt.
+Wenn OpenGL einen Fehler erkennt, wird ein aktueller Fehlercode aufgezeichnet. Die Funktion, die den Fehler verursacht hat, wird ignoriert, sodass sie keine Auswirkungen auf den OpenGL-Zustand oder den Framepufferinhalt hat. (Wenn der aufgezeichnete Fehler GL \_ war NICHT \_ GENÜGEND \_ ARBEITSSPEICHER, die Ergebnisse der Funktion sind jedoch nicht definiert.) Nach der Aufzeichnung wird der aktuelle Fehlercode erst gelöscht, wenn Sie die [**GlGetError-Abfragefunktion**](glgeterror.md) aufrufen, die den aktuellen Fehlercode zurückgibt.
 
-Implementierungen von OpenGL geben möglicherweise mehrere aktuelle Fehlercodes zurück, die jeweils bis zur Abfrage festgelegt bleiben. Die **glGetError-Funktion** gibt GL NO ERROR zurück, nachdem Sie alle aktuellen Fehlercodes abgefragt haben oder \_ kein Fehler aufgetreten \_ ist. Wenn Sie einen Fehlercode erhalten, rufen Sie **daher glGetError** auf, bis GL NO ERROR zurückgegeben wird, um sicherzustellen, dass Sie alle \_ Fehler gefunden \_ haben. Eine Liste der Fehlercodes finden Sie unter [OpenGL-Fehlercodes.](opengl-error-codes.md)
+Implementierungen von OpenGL geben möglicherweise mehrere aktuelle Fehlercodes zurück, von denen jeder bis zur Abfrage festgelegt bleibt. Die **glGetError-Funktion** gibt GL NO ERROR zurück, \_ nachdem Sie alle \_ aktuellen Fehlercodes abgefragt haben oder wenn kein Fehler vorliegt. Wenn Sie einen Fehlercode erhalten, rufen Sie **daher glGetError** auf, bis GL \_ NO ERROR zurückgegeben \_ wird, um sicherzustellen, dass Sie alle Fehler ermittelt haben. Eine Liste der Fehlercodes finden Sie unter [OpenGL-Fehlercodes.](opengl-error-codes.md)
 
-Sie können die [**GLU-Funktion gluErrorString**](gluerrorstring.md) verwenden, um eine beschreibende Zeichenfolge zu erhalten, die dem übergebenen Fehlercode entspricht. Weitere Informationen zu **gluErrorString finden Sie** unter [Behandeln von Fehlern.](handling-errors.md)
+Sie können die [**gluErrorString**](gluerrorstring.md) GLU-Funktion verwenden, um eine beschreibende Zeichenfolge zu erhalten, die dem übergebenen Fehlercode entspricht. Weitere Informationen zu **gluErrorString** finden Sie unter [Behandeln von Fehlern.](handling-errors.md)
 
 > [!Note]  
-> GLU-Funktionen geben häufig Fehlerwerte zurück, wenn ein Fehler erkannt wird. Außerdem definiert die OpenGL-Hilfsprogrammbibliothek die Fehlercodes GLU INVALID ENUM, GLU INVALID VALUE und GLU OUT OF MEMORY, die dieselbe Bedeutung wie die zugehörigen \_ \_ \_ \_ \_ \_ \_ OpenGL-Fehlercodes haben.
+> GLU-Funktionen geben häufig Fehlerwerte zurück, wenn ein Fehler erkannt wird. Außerdem definiert die OpenGL-Hilfsprogrammbibliothek die Fehlercodes GLU \_ INVALID \_ ENUM, GLU \_ INVALID VALUE und GLU OUT OF \_ \_ \_ \_ MEMORY, die die gleiche Bedeutung wie die zugehörigen OpenGL-Fehlercodes haben.
 
  
 

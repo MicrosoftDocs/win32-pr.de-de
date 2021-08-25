@@ -3,22 +3,22 @@ title: Kopieren von Daten aus einer Datei in eine andere
 description: Kopieren von Daten aus einer Datei in eine andere
 ms.assetid: 1403c396-46ea-48b1-a535-922ffca31bc2
 keywords:
-- Windows Media-Format-SDK, Kopieren von Daten
+- Windows Medienformat-SDK, Kopieren von Daten
 - Advanced Systems Format (ASF), Kopieren von Daten
 - ASF (Advanced Systems Format), Kopieren von Daten
-- Streams, Kopieren von Daten
+- Streams,Kopieren von Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8b38a1675ac79630371fe4d3fda66d44b4b2990
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1e2fe8369a8e3ebef6bca191ceffdac7c284889b0afdb4145fbec9c44702a1a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118705075"
 ---
 # <a name="copying-data-from-one-file-to-another"></a>Kopieren von Daten aus einer Datei in eine andere
 
-Auf der grundlegendsten Ebene ist das Kopieren eines Streams aus einer ASF-Datei zu einem anderen recht unkompliziert. Beim Arbeiten mit Datenströmen aus mehreren Eingabedateien oder beim Kopieren von Streams, die Sie erstmalig Dekomprimieren und erneut codieren, müssen jedoch Probleme berücksichtigt werden.
+Auf der grundlegendsten Ebene ist das Kopieren eines Streams aus einer ASF-Datei in eine andere recht einfach. Beim Arbeiten mit Datenströmen aus mehreren Eingabedateien oder beim Kopieren von Streams, die Sie zuerst dekomprimieren und erneut codieren, müssen Sie jedoch Probleme berücksichtigen.
 
 In den folgenden Abschnitten wird das Kopieren von Datenströmen beschrieben.
 
@@ -26,12 +26,12 @@ In den folgenden Abschnitten wird das Kopieren von Datenströmen beschrieben.
 
 | `Section`                                                                                              | Descripiton                                                                                    |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [Kopieren von Streams, ohne die Daten zu entkomprimieren](copying-streams-without-decompressing-the-data.md) | Beschreibt, wie Datenströme mithilfe von komprimierten Beispielen kopiert werden, um die Qualität des Inhalts beizubehalten. |
-| [Kopieren von Streams mithilfe von nicht komprimierten Beispielen](copying-streams-using-decompressed-samples.md)         | Beschreibt die Schwierigkeiten beim Kopieren von Datenströmen mithilfe von entkomprimierten Beispielen.                      |
+| [Kopieren von Streams ohne Dekomprimieren der Daten](copying-streams-without-decompressing-the-data.md) | Beschreibt, wie Datenströme mithilfe komprimierter Beispiele kopiert werden, um die Qualität des Inhalts zu erhalten. |
+| [Kopieren von Streams mit dekomprimierten Beispielen](copying-streams-using-decompressed-samples.md)         | Beschreibt die Schwierigkeiten beim Kopieren von Streams mit dekomprimierten Beispielen.                      |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -49,9 +49,9 @@ In den folgenden Abschnitten wird das Kopieren von Datenströmen beschrieben.
 [**Writer-Objekt**](writer-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

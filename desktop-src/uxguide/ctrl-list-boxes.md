@@ -14,16 +14,16 @@ ms.locfileid: "118218100"
 # <a name="list-boxes"></a>Listenfelder
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Mit einem Listenfeld können Benutzer aus einer Gruppe von Werten auswählen, die in einer Liste angezeigt werden, die immer sichtbar ist. Mit einem Listenfeld mit nur einer Auswahl wählen Benutzer ein Element aus einer Liste von sich gegenseitig ausschließenden Werten aus. Mit einem Listenfeld mit mehrfacher Auswahl wählen Benutzer null oder mehr Elemente aus einer Liste von Werten aus.
+Mit einem Listenfeld können Benutzer aus einer Gruppe von Werten auswählen, die in einer Liste angezeigt werden, die immer sichtbar ist. Mit einem Listenfeld mit nur einer Auswahl wählen Benutzer ein Element aus einer Liste von sich gegenseitig ausschließenden Werten aus. Mit einem Listenfeld mit mehrfacher Auswahl wählen Benutzer 0 (null) oder mehr Elemente aus einer Liste von Werten aus.
 
-![Screenshot des Listenfelds für die Einzelauswahl ](images/ctrl-list-boxes-image1.png)
+![Screenshot des Listenfelds mit nur einer Auswahl ](images/ctrl-list-boxes-image1.png)
 
 Ein typisches Listenfeld mit nur einer Auswahl.
 
 > [!Note]  
-> Richtlinien im Zusammenhang [mit Layout-](vis-layout.md) [und Listenansichten](ctrl-list-views.md) werden in separaten Artikeln vorgestellt.
+> Richtlinien im Zusammenhang mit [Layout-](vis-layout.md) und [Listenansichten](ctrl-list-views.md) werden in separaten Artikeln vorgestellt.
 
  
 
@@ -31,56 +31,56 @@ Ein typisches Listenfeld mit nur einer Auswahl.
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Werden in der Liste Daten anstelle von Programmoptionen angezeigt?** In beiden Richtungen ist ein Listenfeld unabhängig von der Anzahl der Elemente eine geeignete Wahl. Im Gegensatz dazu [sind Optionsfelder](ctrl-radio-buttons.md) [oder Kontrollkästchen](ctrl-check-boxes.md) nur für eine kleine Anzahl von Programmoptionen geeignet.
--   **Müssen Benutzer Sichten ändern, gruppieren, nach Spalten sortieren oder Spaltenbreite und -reihenfolge ändern?** Wenn dies der Meinung ist, [verwenden Sie stattdessen eine Listenansicht.](ctrl-list-views.md)
--   **Muss das Steuerelement eine Ziehquelle oder ein Absturzziel sein?** Wenn dies der Meinung ist, verwenden Sie stattdessen eine Listenansicht.
--   **Müssen die Listenelemente in die Zwischenablage kopiert oder aus der Zwischenablage eingefügt werden?** Wenn dies der Meinung ist, verwenden Sie stattdessen eine Listenansicht.
+-   **Enthält die Liste Daten anstelle von Programmoptionen?** In beiden Fällen ist ein Listenfeld unabhängig von der Anzahl der Elemente eine geeignete Wahl. Im Gegensatz dazu eignen sich [Optionsfelder](ctrl-radio-buttons.md) oder [Kontrollkästchen](ctrl-check-boxes.md) nur für eine kleine Anzahl von Programmoptionen.
+-   **Müssen Benutzer Sichten ändern, gruppieren, nach Spalten sortieren oder Spaltenbreite und -reihenfolge ändern?** Verwenden Sie in diesem Falle stattdessen eine [Listenansicht.](ctrl-list-views.md)
+-   **Muss das Steuerelement eine Ziehquelle oder ein Ablageziel sein?** Verwenden Sie in diesem Falle stattdessen eine Listenansicht.
+-   **Müssen die Listenelemente in die Zwischenablage kopiert oder aus der Zwischenablage eingefügt werden?** Verwenden Sie in diesem Falle stattdessen eine Listenansicht.
 
 **Einzelauswahllisten**
 
--   **Wird das Steuerelement verwendet, um eine Option aus einer Liste von sich gegenseitig ausschließenden Werten zu wählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Um mehrere Optionen zu wählen, verwenden Sie stattdessen eine Standardliste mit Mehrfachauswahl, eine Kontrollkästchenliste, einen Listen-Generator oder eine Liste zum Hinzufügen/Entfernen.
--   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option zu sehen, als die Alternativen zu sehen? Wenn dies der Fall ist, sollten Sie eine Dropdownliste [verwenden,](/windows/desktop/uxguide/ctrl-drop) wenn Sie Benutzer nicht dazu ermutigen möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden.
+-   **Wird das Steuerelement verwendet, um eine Option aus einer Liste von sich gegenseitig ausschließenden Werten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Um mehrere Optionen auszuwählen, verwenden Sie stattdessen eine Standard-Mehrfachauswahlliste, eine Kontrollkästchenliste, einen Listen-Generator oder eine Liste hinzufügen/entfernen.
+-   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option zu sehen, als die Alternativen zu sehen? Wenn dies der Fall ist, sollten Sie eine [Dropdownliste](/windows/desktop/uxguide/ctrl-drop) verwenden, wenn Sie die Benutzer nicht dazu ermutigen möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden.
 
 ![Screenshot der höchsten Qualität als Standardschaltfläche ](images/ctrl-list-boxes-image2.png)
 
-In diesem Beispiel ist die höchste Farbqualität für die meisten Benutzer die beste Wahl, daher ist eine Dropdownliste eine gute Wahl, um die Alternativen herunterzuspielen.
+In diesem Beispiel ist die höchste Farbqualität für die meisten Benutzer die beste Wahl, sodass eine Dropdownliste eine gute Wahl ist, um die Alternativen herunterzuspielen.
 
--   **Erfordert die Liste eine konstante Interaktion?** Wenn ja, verwenden Sie eine Einzelauswahlliste, um die Interaktion zu vereinfachen.
+-   **Erfordert die Liste eine konstante Interaktion?** Verwenden Sie in diesem Falle eine Einzelauswahlliste, um die Interaktion zu vereinfachen.
 
-![Screenshot der Liste der Optionen, z. B. Nur-Text ](images/ctrl-list-boxes-image3.png)
+![Screenshot der Liste der Optionen wie Nur-Text ](images/ctrl-list-boxes-image3.png)
 
-In diesem Beispiel ändern Benutzer das ausgewählte Element in der Liste Elemente anzeigen ständig, um die Vordergrund- und Hintergrundfarben zu festlegen. Die Verwendung einer Dropdownliste wäre in diesem Fall sehr mühsam.
+In diesem Beispiel ändern Benutzer ständig das ausgewählte Element in der Liste Elemente anzeigen, um die Vordergrund- und Hintergrundfarben festzulegen. Die Verwendung einer Dropdownliste wäre in diesem Fall sehr mühsam.
 
--   **Sieht die Einstellung wie eine relative Menge aus? Würden Benutzer von sofortigem Feedback zu** den Auswirkungen von Einstellungsänderungen profitieren? Falls ja, sollten Sie stattdessen einen [Schieberegler](ctrl-sliders.md) verwenden.
--   **Gibt es eine signifikante hierarchische Beziehung zwischen den Listenelementen?** Wenn dies der Meinung ist, verwenden [Sie stattdessen ein Strukturansicht-Steuerelement.](ctrl-tree-views.md)
--   **Ist der Bildschirmbereich premium?** Wenn dies der Fall ist, verwenden Sie stattdessen eine Dropdownliste, da der verwendete Bildschirmbereich fest und unabhängig von der Anzahl der Listenelemente ist.
+-   **Sieht die Einstellung wie eine relative Menge aus? Würden Benutzer von sofortigem Feedback** zu den Auswirkungen von Einstellungsänderungen profitieren? In diesem Falle sollten Sie stattdessen einen [Schieberegler](ctrl-sliders.md) verwenden.
+-   **Gibt es eine erhebliche hierarchische Beziehung zwischen den Listenelementen?** Verwenden Sie in [](ctrl-tree-views.md) diesem Falle stattdessen ein Strukturansichtssteuerelement.
+-   **Ist der Bildschirmspeicherplatz premium?** Wenn dies der Fall ist, verwenden Sie stattdessen eine Dropdownliste, da der verwendete Bildschirmbereich fest und unabhängig von der Anzahl der Listenelemente ist.
 
 **Standard-Mehrfachauswahllisten und Kontrollkästchenlisten**
 
--   **Ist die Mehrfachauswahl für die Aufgabe unerlässlich oder wird sie häufig verwendet?** Wenn ja, verwenden Sie eine Kontrollkästchenliste, um die Mehrfachauswahl offensichtlich zu machen, insbesondere, wenn Ihre Zielbenutzer nicht erweitert sind. Viele Benutzer werden nicht feststellen, dass eine Standardliste mit mehrfacher Auswahl mehrfache Auswahl unterstützt. Verwenden Sie eine Standardmäßig-Mehrfachauswahlliste, wenn die Kontrollkästchen zu viel Aufmerksamkeit auf die Mehrfachauswahl ziehen oder zu viel Bildschirmübersicht führen würden.
--   **Ist die Stabilität der Mehrfachauswahl wichtig?** Wenn ja, verwenden Sie eine Kontrollkästchenliste, einen Listen-Generator oder eine Liste zum Hinzufügen/Entfernen, da durch Klicken immer nur ein Element gleichzeitig geändert wird. Mit einer Standard-Mehrfachauswahlliste ist es sehr einfach, alle Auswahlen auch bei einem Zufall zu löschen.
--   **Wird das Steuerelement verwendet, um null oder mehr Elemente aus einer Liste von Werten zu wählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie für die Auswahl eines Elements stattdessen eine Einzelauswahlliste.
+-   **Ist die Mehrfachauswahl für die Aufgabe wichtig oder wird sie häufig verwendet?** Verwenden Sie in diesem Falle eine Kontrollkästchenliste, um die Mehrfachauswahl offensichtlich zu machen, insbesondere dann, wenn Ihre Zielbenutzer nicht erweitert sind. Vielen Benutzern wird nicht bewusst sein, dass eine Standard-Mehrfachauswahlliste die Mehrfachauswahl unterstützt. Verwenden Sie eine Standardmäßige Mehrfachauswahlliste, wenn die Kontrollkästchen zu viel Aufmerksamkeit auf die Mehrfachauswahl lenken oder zu einer zu großen Bildschirmübersicht führen würden.
+-   **Ist die Stabilität der Mehrfachauswahl wichtig?** Verwenden Sie in diesem Falle eine Kontrollkästchenliste, einen Listen-Generator oder eine Liste hinzufügen/entfernen, da durch Klicken nur ein einzelnes Element gleichzeitig geändert wird. Bei einer Standard-Mehrfachauswahlliste ist es sehr einfach, alle Auswahlmöglichkeiten auch zufällig zu löschen.
+-   **Wird das Steuerelement verwendet, um 0 (null) oder mehr Elemente aus einer Liste von Werten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie für die Auswahl eines Elements stattdessen eine Einzelauswahlliste.
 
 **Vorschaulisten**
 
--   **Sind die Optionen mit Bildern einfacher auszuwählen als mit Text allein?** Wenn ja, verwenden Sie eine Vorschauliste.
+-   **Sind die Optionen mit Bildern einfacher auszuwählen als mit Text allein?** Verwenden Sie in diesem Falle eine Vorschauliste.
 
 **Auflisten von Generatoren und Hinzufügen/Entfernen von Listen**
 
--   **Wird das Steuerelement verwendet, um null oder mehr Elemente aus einer Liste von Werten zu wählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie für die Auswahl eines Elements stattdessen eine Einzelauswahlliste.
--   **Ist die Reihenfolge der ausgewählten Elemente wichtig?** Wenn ja, unterstützen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern die Reihenfolge, während die anderen Mehrfachauswahlmuster dies nicht tun.
--   **Ist es wichtig, dass Benutzer eine Zusammenfassung aller ausgewählten Elemente sehen?** Wenn ja, zeigen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern nur die ausgewählten Elemente an, die anderen Mehrfachauswahlmuster hingegen nicht.
--   **Sind die möglichen Optionen nicht ungeniert?** Wenn ja, verwenden Sie eine Liste zum Hinzufügen/Entfernen, damit Benutzer Werte auswählen können, die derzeit nicht in der Liste enthalten sind.
--   **Erfordert das Hinzufügen eines Werts zur Liste ein spezielles Dialogfeld zum Auswählen von Objekten?** Wenn ja, verwenden Sie eine Liste zum Hinzufügen/Entfernen, und zeigen Sie das Dialogfeld an, wenn Benutzer auf Hinzufügen klicken.
--   **Ist der Bildschirmbereich premium?** Wenn ja, verwenden Sie stattdessen eine Liste zum Hinzufügen/Entfernen, da sie weniger Platz auf dem Bildschirm verwendet, da nicht immer der Satz von Optionen angezeigt wird.
+-   **Wird das Steuerelement verwendet, um 0 (null) oder mehr Elemente aus einer Liste von Werten auszuwählen?** Wenn dies nicht erwünscht ist, verwenden Sie ein anderes Steuerelement. Verwenden Sie für die Auswahl eines Elements stattdessen eine Einzelauswahlliste.
+-   **Spielt die Reihenfolge der ausgewählten Elemente eine Rolle?** Wenn ja, unterstützen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern die Reihenfolge, die anderen Muster für die Mehrfachauswahl hingegen nicht.
+-   **Ist es für Benutzer wichtig, eine Zusammenfassung aller ausgewählten Elemente anzuzeigen?** Wenn ja, zeigen der Listen-Generator und das Hinzufügen/Entfernen von Listenmustern nur die ausgewählten Elemente an, während die anderen Muster für die Mehrfachauswahl nicht angezeigt werden.
+-   **Sind die möglichen Optionen uneingeschränkt?** Wenn ja, verwenden Sie eine Liste zum Hinzufügen/Entfernen, damit Benutzer Werte auswählen können, die derzeit nicht in der Liste enthalten sind.
+-   **Ist für das Hinzufügen eines Werts zur Liste ein spezielles Dialogfeld zum Auswählen von Objekten erforderlich?** Verwenden Sie in diesem Falle eine Liste zum Hinzufügen/Entfernen, und zeigen Sie das Dialogfeld an, wenn Benutzer auf Hinzufügen klicken.
+-   **Ist der Bildschirmspeicherplatz premium?** Wenn ja, verwenden Sie stattdessen eine Add-/Remove-Liste, da weniger Bildschirmbereich verwendet wird, da nicht immer der Satz von Optionen angezeigt wird.
 
-Bei Listenfeldern ist die Anzahl der Elemente **in** der Liste kein Faktor bei der Auswahl des Steuerelements, da sie von Tausenden von Elementen bis hin zu einem Element für Einzelauswahllisten (und keines für Mehrfachauswahllisten) skaliert werden. Da Listenfelder für Daten verwendet werden können, ist die Anzahl der Elemente möglicherweise nicht im Voraus bekannt.
+Bei Listenfeldern **ist die Anzahl der Elemente in der Liste kein Faktor bei der Auswahl des Steuerelements,** da sie von Tausenden von Elementen bis hin zu eins für Einzelauswahllisten (und keine für Mehrfachauswahllisten) skaliert werden. Da Listenfelder für Daten verwendet werden können, ist die Anzahl der Elemente möglicherweise nicht im Voraus bekannt.
 
-**Hinweis:** Manchmal wird ein Steuerelement, das wie ein Listenfeld aussieht, mithilfe einer Listenansicht implementiert und umgekehrt. Wenden Sie in solchen Fällen die Richtlinien basierend auf der Verwendung und nicht auf der Implementierung an.
+**Hinweis:** Manchmal wird ein Steuerelement, das wie ein Listenfeld aussieht, mithilfe einer Listenansicht implementiert und umgekehrt. Wenden Sie in solchen Fällen die Richtlinien basierend auf der Verwendung und nicht der Implementierung an.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Listenfelder haben mehrere Verwendungsmuster:
+Listenfelder weisen mehrere Verwendungsmuster auf:
 
 
 
@@ -91,26 +91,26 @@ Listenfelder haben mehrere Verwendungsmuster:
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Einzelauswahllisten</strong> Benutzern erlauben, ein Element nach dem anderen auszuwählen. <br/></td>
+<td><strong>Einzelauswahllisten</strong> Benutzern erlauben, jeweils ein Element auszuwählen. <br/></td>
 <td><img src="images/ctrl-list-boxes-image4.png" alt="Screen shot of list box with one item selected " /><br/> In diesem Beispiel können Benutzer nur ein Anzeigeelement auswählen.<br/></td>
 </tr>
 <tr class="even">
-<td><strong>Standard-Mehrfachauswahllisten</strong> Benutzern erlauben, eine beliebige Anzahl von Elementen auszuwählen, einschließlich keiner.<br/></td>
-<td>Standard-Mehrfachauswahllisten haben genau das gleiche Aussehen wie Einzelauswahllisten, sodass es keinen visuellen Hinweis darauf gibt, dass ein Listenfeld mehrfache Auswahl unterstützt. Da Benutzer diese Fähigkeit entdecken müssen, wird dieses Listenmuster am besten für Aufgaben verwendet, bei denen die Mehrfachauswahl nicht wichtig und selten verwendet wird. <br/> Es gibt zwei verschiedene Mehrfachauswahlmodi: <a href="glossary.md">mehrere und</a> <a href="glossary.md">erweiterte</a>. <strong>Der erweiterte</strong> Auswahlmodus ist weitaus häufiger, wobei die Auswahl durch Ziehen oder mit UMSCHALT+Klick und STRG+Klick erweitert werden kann, um Gruppen von zusammenhängenden bzw. nicht benachbarten Werten auszuwählen. Wenn Sie <strong>im Mehrfachauswahlmodus auf ein</strong>beliebiges Element klicken, wird sein Auswahlzustand unabhängig von der UMSCHALTTASTE und STRG-Taste umgeschaltet. Aufgrund dieses ungewöhnlichen Verhaltens ist der Mehrfachauswahlmodus veraltet, und Sie sollten stattdessen Kontrollkästchenlisten verwenden.<br/> <img src="images/ctrl-list-boxes-image5.png" alt="Screen shot of list box with several items selected " /><br/> In diesem Beispiel können Benutzer eine beliebige Anzahl von Elementen im Mehrfachauswahlmodus auswählen.<br/></td>
+<td><strong>Standardlisten für mehrfache Auswahl</strong> Benutzern das Auswählen einer beliebigen Anzahl von Elementen gestatten, einschließlich keines.<br/></td>
+<td>Standardlisten mit mehrfacher Auswahl weisen genau die gleiche Darstellung wie Einzelauswahllisten auf, sodass es keinen visuellen Hinweis darauf gibt, dass ein Listenfeld die Mehrfachauswahl unterstützt. Da Benutzer diese Fähigkeit ermitteln müssen, eignet sich dieses Listenmuster am besten für Aufgaben, bei denen die Mehrfachauswahl nicht wichtig ist und selten verwendet wird. <br/> Es gibt zwei verschiedene Modi für die Mehrfachauswahl: <a href="glossary.md">mehrere</a> und <a href="glossary.md">erweiterte</a>. <strong>Der erweiterte Auswahlmodus</strong> ist weitaus häufiger, wobei die Auswahl durch Ziehen oder mit UMSCHALT+KLICK und STRG+KLICK erweitert werden kann, um Gruppen zusammenhängender bzw. nicht benachbarter Werte auszuwählen. Wenn Sie im <strong>Mehrfachauswahlmodus</strong>auf ein element klicken, wird der Auswahlstatus unabhängig von der UMSCHALTTASTE und DER STRG-TASTE umgeschaltet. Aufgrund dieses ungewöhnlichen Verhaltens ist der Mehrfachauswahlmodus veraltet, und Sie sollten stattdessen Kontrollkästchenlisten verwenden.<br/> <img src="images/ctrl-list-boxes-image5.png" alt="Screen shot of list box with several items selected " /><br/> In diesem Beispiel können Benutzer eine beliebige Anzahl von Elementen im Mehrfachauswahlmodus auswählen.<br/></td>
 </tr>
 <tr class="odd">
-<td><strong>Kontrollkästchenlisten</strong> Wie standarde Mehrfachauswahllisten können Benutzer mit Kontrollkästchenlisten eine beliebige Anzahl von Elementen auswählen, einschließlich keiner.<br/></td>
-<td>Im Gegensatz zu standardmäßigen Mehrfachauswahllisten weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist. Verwenden Sie dieses Listenmuster für Aufgaben, bei denen mehrfache Auswahl wichtig ist oder häufig verwendet wird. <br/> <img src="images/ctrl-list-boxes-image6.png" alt="Screen shot of Toolbars check-box list " /><br/> In diesem Beispiel wählen Benutzer in der Regel mehrere Elemente aus, sodass eine Kontrollkästchenliste verwendet wird.<br/> Angesichts dieser eindeutigen Angabe der Mehrfachauswahl können Sie davon ausgehen, dass Kontrollkästchenlisten standardbasierten Mehrfachauswahllisten vorzuziehen sind. In der Praxis erfordern einige Aufgaben eine Mehrfachauswahl oder nutzen sie stark. Wird in solchen Fällen eine Kontrollkästchenliste verwendet, wird der Auswahl zu viel Aufmerksamkeit auf die Auswahl auf sich ziehen. Daher sind <strong>Standardmäßige Mehrfachauswahllisten viel häufiger.</strong><br/></td>
+<td><strong>Kontrollkästchenlisten</strong> Wie standard-Listenfelder mit mehrfacher Auswahl können Benutzer mit Kontrollkästchen eine beliebige Anzahl von Elementen auswählen, einschließlich keiner.<br/></td>
+<td>Im Gegensatz zu standardbasierten Mehrfachauswahllisten weisen die Kontrollkästchen eindeutig darauf hin, dass eine Mehrfachauswahl möglich ist. Verwenden Sie dieses Listenmuster für Aufgaben, bei denen die Mehrfachauswahl wichtig ist oder häufig verwendet wird. <br/> <img src="images/ctrl-list-boxes-image6.png" alt="Screen shot of Toolbars check-box list " /><br/> In diesem Beispiel wählen Benutzer in der Regel mehrere Elemente aus, sodass eine Kontrollkästchenliste verwendet wird.<br/> Angesichts dieses eindeutigen Hinweises auf die Mehrfachauswahl können Sie davon ausgehen, dass Kontrollkästchenlisten standard-Mehrfachauswahllisten vorzuziehen sind. In der Praxis erfordern einige Aufgaben eine Mehrfachauswahl oder verwenden sie stark. die Verwendung einer Kontrollkästchenliste in solchen Fällen macht der Auswahl zu viel Aufmerksamkeit. Folglich <strong>sind standardbasierte Mehrfachauswahllisten weitaus häufiger.</strong><br/></td>
 </tr>
 <tr class="even">
-<td><strong>Vorschaulisten</strong> Kann eine einzelne oder mehrere Auswahl sein, aber sie zeigen eine Vorschau des Effekts der Auswahl anstelle von Nur-Text an.<br/></td>
-<td><img src="images/ctrl-list-boxes-image7.png" alt="Screen shot of Window Color options preview " /><br/> In diesem Beispiel zeigt eine Vorschau der einzelnen Optionen deutlich die Auswirkungen der Auswahl, die effektiver ist als die Verwendung von Text allein.<br/></td>
+<td><strong>Vorschaulisten</strong> Kann eine einzelne oder mehrfache Auswahl sein, aber sie zeigen eine Vorschau der Auswirkungen der Auswahl anstelle von Nur-Text an.<br/></td>
+<td><img src="images/ctrl-list-boxes-image7.png" alt="Screen shot of Window Color options preview " /><br/> In diesem Beispiel zeigt eine Vorschau der einzelnen Optionen die Auswirkungen der Auswahl deutlich an, die effektiver als die Verwendung von Text allein ist.<br/></td>
 </tr>
 <tr class="odd">
-<td><strong>Auflisten von Generatoren</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie ein Element nach dem anderen hinzufügen und optional die Reihenfolge der Liste festlegen.<br/></td>
+<td><strong>Auflisten von Generatoren</strong> Ermöglichen Sie Es Benutzern, eine Liste von Auswahlmöglichkeiten zu erstellen, indem Sie jeweils ein Element hinzufügen und optional die Listenreihenfolge festlegen.<br/></td>
 <td>Ein Listen-Generator besteht aus zwei Einzelauswahllisten: Die Liste auf der linken Seite ist ein fester Satz von Optionen, und die Liste auf der rechten Seite ist die Liste, die erstellt wird. Es gibt zwei Befehlsschaltflächen zwischen den Listen: <br/>
 <ul>
-<li>Eine <strong>Schaltfläche</strong> Hinzufügen, die die aktuell ausgewählte Option in die Liste verschiebt, die erstellt und vor dem ausgewählten Element eingefügt wird. (Doppelklicken auf ein Optionselement hat die gleiche Auswirkung.)</li>
+<li>Eine Schaltfläche <strong>Hinzufügen,</strong> die die aktuell ausgewählte Option in die Liste verschiebt, die vor dem ausgewählten Element eingefügt wird. (Doppelklicken auf ein Optionselement hat die gleiche Auswirkung.)</li>
 <li>Eine <strong>Schaltfläche Entfernen,</strong> die das ausgewählte Element aus der erstellten Liste entfernt und an die Optionsliste zurückgibt. (Doppelklicken auf ein Element in der erstellten Liste hat die gleiche Auswirkung.) Die integrierte Liste kann optional über die <strong>Befehle Nach oben</strong> und Nach unten <strong>verfügen,</strong> um die Listenelemente zu bestellen.</li>
 </ul>
 <img src="images/ctrl-list-boxes-image8.png" alt="Screen shot of Toolbar buttons list builder " /><br/> In diesem Beispiel wird ein Listen-Generator verwendet, um eine Symbolleiste zu erstellen, indem Elemente aus einer Reihe verfügbarer Optionen ausgewählt und deren Reihenfolge festgelegt wird.<br/></td>
@@ -135,9 +135,9 @@ Ihre Nachteile sind, dass sie viel mehr Platz auf dem Bildschirm benötigen und 
 
 ### <a name="presentation"></a>Präsentation
 
--   **Sortieren Von Listenelementen in logischer Reihenfolge,** z. B. Gruppieren verwandter Optionen, Platzieren der am häufigsten verwendeten Elemente an erster Stelle oder alphabetische Reihenfolge. Sortieren Sie Namen in alphabetischer Reihenfolge, Zahlen in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge. Listen mit 12 oder mehr Elementen sollten alphabetisch sortiert werden, damit Elemente leichter zu finden sind.
+-   **Sortieren Sie Listenelemente in einer logischen Reihenfolge,** z. B. gruppieren sie verwandte Optionen, platzieren Sie die am häufigsten verwendeten Elemente an erster Stelle, oder verwenden Sie eine alphabetische Reihenfolge. Sortieren Sie Namen in alphabetischer Reihenfolge, Zahlen in numerischer Reihenfolge und Datumsangaben in chronologischer Reihenfolge. Listen mit 12 oder mehr Elementen sollten alphabetisch sortiert werden, damit Elemente leichter zu finden sind.
 
-**Richtig:** ![ Screenshot der Ausrichtung (links, mitte, rechts) ](images/ctrl-list-boxes-image10.png)
+**Richtig:** ![ Screenshot der Ausrichtung (links, zentriert, rechts) ](images/ctrl-list-boxes-image10.png)
 
 In diesem Beispiel werden die Listenfeldelemente nach ihrer räumlichen Beziehung sortiert.
 
@@ -222,7 +222,7 @@ In diesem Beispiel ist der speicherplatz, der zum Installieren der Komponenten e
 Empfohlene Größe und Abstand für Listenfelder.
 
 -   **Wählen Sie eine Listenfeldbreite aus, die für die längsten gültigen Daten geeignet ist.** Standardlistenfelder können nicht horizontal gescrollt werden, sodass Benutzer nur sehen können, was im Steuerelement sichtbar ist.
--   **Schließen Sie zusätzliche 30 Prozent** (bis zu 200 Prozent für kürzeren Text) für jeden Text (aber keine Zahlen) ein, der lokalisiert wird.
+-   **Schließen Sie zusätzliche 30 Prozent** (bis zu 200 Prozent für kürzeren Text) für text (aber keine Zahlen) ein, die lokalisiert werden.
 -   **Wählen Sie eine Listenfeldhöhe aus, die eine ganzzahliger Anzahl von Elementen anzeigt.** Vermeiden Sie das vertikale Abschneiden von Elementen.
 -   **Wählen Sie eine Listenfeldhöhe aus, die unnötiges vertikales Scrollen verhindert.** Listenfelder sollten zwischen 3 und 20 Elemente anzeigen, ohne dass ein Bildlauf notwendig ist. Erwägen Sie, ein Listenfeld etwas länger zu erstellen, wenn dadurch die vertikale Scrollleiste entfernt wird. Listen mit potenziell vielen Elementen sollten mindestens fünf Elemente anzeigen, um das Scrollen zu erleichtern, indem mehr Elemente gleichzeitig angezeigt werden und die Position der Scrollleiste vereinfacht wird.
 -   **Wenn Benutzer davon profitieren, das Listenfeld zu vergrößern, können Sie die Größe des Listenfelds und des übergeordneten Fensters ändern.** Auf diese Weise können Benutzer die Größe des Listenfelds nach Bedarf anpassen. In Listenfeldern, die die Größe ändern können, sollten jedoch nicht weniger als drei Elemente angezeigt werden.

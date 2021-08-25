@@ -1,11 +1,11 @@
 ---
-title: Igathernotify OnDataChange (deprecated)-Methode
-description: Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search-isearchpersistentitemschangedsink-API im Windows SDK abgelöst. | Igathernotify OnDataChange (deprecated)-Methode
+title: IGatherNotify OnDataChange-Methode (veraltet)
+description: Dieses Windows-Benutzeroberflächenthema für die Desktopsuche ist veraltet und wird durch die Windows Search ISearchPersistentItemsChangedSink-API im Windows SDK ersetzt. | IGatherNotify OnDataChange-Methode (veraltet)
 ms.assetid: 0cbfa6b7-44f0-41f0-93a3-d5941b5822de
 keywords:
-- OnDataChange (veraltet) Methode ältere Windows-Umgebungs Features
-- OnDataChange (veraltet) Methode ältere Windows-Umgebungs Features, igathernotify-Schnittstelle
-- Igathernotify-Schnittstelle ältere Windows-Umgebungs Features, OnDataChange (deprecated)-Methode
+- OnDataChange-Methode (veraltet) – Legacy-Windows-Umgebungsfeatures
+- OnDataChange-Methode (veraltet) Legacy-Windows Environment Features, IGatherNotify-Schnittstelle
+- IGatherNotify interface Legacy Windows Environment Features , OnDataChange (Veraltet) method (IGatherNotify interface Legacy Windows Environment Features , OnDataChange (Veraltet)-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,20 +15,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d41edeaa591a7f3cbc9494064906af1815597737
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 95533a7937136a0f828a292efe7e398258e3c880974e031d9d7d2797f721f2a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481594"
 ---
-# <a name="igathernotifyondatachange-deprecated-method"></a>Igathernotify:: OnDataChange (deprecated)-Methode
+# <a name="igathernotifyondatachange-deprecated-method"></a>IGatherNotify::OnDataChange-Methode (veraltet)
 
 \[**OnDataChange** kann in nachfolgenden Versionen des Betriebssystems oder Produkts geändert oder nicht verfügbar sein.\]
 
-Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search- [**isearchpersistentitemschangedsink**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) -API im Windows SDK abgelöst.
+Dieses Windows-Benutzeroberflächenthema für die Desktopsuche ist veraltet und wird durch die Windows Search [**ISearchPersistentItemsChangedSink-API**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) im Windows SDK ersetzt.
 
-Diese Methode benachrichtigt den Indexer von Daten, die sich geändert haben. Beim Senden der Benachrichtigung an den Indexer enthält Sie den Typ der Änderung, die physische Adresse und die logische Adresse.
+Diese Methode benachrichtigt den Indexer über geänderte Daten. Wenn die Benachrichtigung an den Indexer gesendet wird, enthält sie den Typ der Änderung, die physische Adresse und die logische Adresse.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,16 +47,16 @@ void OnDataChange (Deprecated)(
 
 <dl> <dt>
 
-*Echange-Empfehlung* \[ in\]
+*eChangeAdvise* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **long**
 
-Ein-Enumerationswert, der den Typ der Änderung angibt.
+Ein aufzählter Wert, der den Typ der Änderung angibt.
 
 </dd> <dt>
 
-*bstrauphysicaladdress* \[ in\]
+*bstrPhysicalAddress* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -65,7 +65,7 @@ Die physische Adresse des geänderten Elements.
 
 </dd> <dt>
 
-*bstraulogicaladdress* \[ in\]
+*bstrLogicalAddress* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**

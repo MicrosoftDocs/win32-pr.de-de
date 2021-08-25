@@ -1,7 +1,7 @@
 ---
-description: 'Die iresize-Schnittstelle muss von jedem benutzerdefinierten Filter zum Ändern der Größe von Videos für DirectShow-Bearbeitungs Dienste unterstützt werden. Um einen benutzerdefinierten Filter für die Größenänderung festzulegen, müssen Sie die IRenderEngine2:: setresizerguid-Methode für die Rendering-Engine aufzurufen.'
+description: Die IResize-Schnittstelle muss von jedem benutzerdefinierten Videoänderungsfilter für DirectShow Editing Services (DES) unterstützt werden. Um einen benutzerdefinierten Resizerfilter festzulegen, rufen Sie die IRenderEngine2::SetResizerGUID-Methode für die Render-Engine auf.
 ms.assetid: 4740dbff-0881-45e8-b382-98ed9d055403
-title: Iresize-Schnittstelle (qedit. h)
+title: IResize-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,55 +14,55 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 1b9684ed6f2d2901159dde5a79bb4563ca0b2bda
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 19aabd7c04cb5350ef3da87e1a20db6b75f6546f0fbcf5af3422c152bcafcf5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818069"
 ---
-# <a name="iresize-interface"></a>Iresize-Schnittstelle
+# <a name="iresize-interface"></a>IResize-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `IResize` Schnittstelle muss von jedem benutzerdefinierten Filter zum Ändern der Größe von Videos für DirectShow-Bearbeitungs Dienste unterstützt werden. Um einen benutzerdefinierten Filter für die Größenänderung festzulegen, müssen Sie die [**IRenderEngine2:: setresizerguid**](irenderengine2-setresizerguid.md) -Methode für die Rendering-Engine aufzurufen.
+Die `IResize` Schnittstelle muss von jedem benutzerdefinierten Videoänderungsfilter für DirectShow Editing Services (DES) unterstützt werden. Um einen benutzerdefinierten Resizerfilter festzulegen, rufen Sie die [**IRenderEngine2::SetResizerGUID-Methode**](irenderengine2-setresizerguid.md) für die Render-Engine auf.
 
 ## <a name="members"></a>Member
 
-Die **iresize** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iresize** verfügt auch über die folgenden Typen von Membern:
+Die **IResize-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IResize** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iresize** -Schnittstelle verfügt über diese Methoden.
+Die **IResize-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                          | BESCHREIBUNG                                                  |
+| Methode                                          | Beschreibung                                                  |
 |:------------------------------------------------|:-------------------------------------------------------------|
-| [**\_inputsize erhalten**](iresize-get-inputsize.md) | Gibt die aktuelle Eingabe Größe des Filter der Größenänderung zurück.<br/>  |
-| [**\_mediaType erhalten**](iresize-get-mediatype.md) | Gibt den Typ des Ausgabemediums für die Größe der Größe zurück.<br/>   |
-| [**\_Größe erhalten**](iresize-get-size.md)           | Gibt die aktuelle Ausgabegröße und den streckungs Modus zurück.<br/> |
-| [**\_mediaType platzieren**](iresize-put-mediatype.md) | Legt den Ausgabe Medientyp fest.<br/>                       |
-| [**Put \_ size**](iresize-put-size.md)           | Legt die Ausgabegröße und den streckungs Modus fest.<br/>            |
+| [**get \_ InputSize**](iresize-get-inputsize.md) | Gibt die aktuelle Eingabegröße des Resizerfilters zurück.<br/>  |
+| [**\_Get MediaType**](iresize-get-mediatype.md) | Gibt den Ausgabemedientyp des Resizerfilters zurück.<br/>   |
+| [**get \_ Size**](iresize-get-size.md)           | Gibt die aktuelle Ausgabegröße und den Stretchingmodus zurück.<br/> |
+| [**\_Put MediaType**](iresize-put-mediatype.md) | Legt den Ausgabemedientyp fest.<br/>                       |
+| [**put \_ Size**](iresize-put-size.md)           | Legt die Ausgabegröße und den Stretchmodus fest.<br/>            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -72,17 +72,17 @@ Die **iresize** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | DirectX 9,0 oder höher<br/>                                                         |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | DirectX 9.0 oder höher<br/>                                                         |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Bereitstellen eines benutzerdefinierten Videos zum Ändern der Größe](providing-a-custom-video-resizer.md)
+[Bereitstellen eines benutzerdefinierten Video-Resizers](providing-a-custom-video-resizer.md)
 </dt> </dl>
 
  

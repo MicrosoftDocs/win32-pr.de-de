@@ -78,7 +78,7 @@ Die **CIM \_ VersionCompatibilityCheck-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                 | BESCHREIBUNG                                                   |
+| Methode                                                                 | Beschreibung                                                   |
 |:-----------------------------------------------------------------------|:--------------------------------------------------------------|
 | [**Invoke**](invoke-method-in-class-cim-versioncompatibilitycheck.md) | Führt eine bestimmte Aktion aus. Nicht von WMI implementiert.<br/> |
 
@@ -333,7 +333,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT UNIX
+ATT-UNIX
 
 </dd> <dt>
 
@@ -587,7 +587,7 @@ A-Serie
 
 </dt> <dd>
 
-Verbund-NSK
+Tandem NSK
 
 </dd> <dt>
 
@@ -598,7 +598,7 @@ Verbund-NSK
 
 </dt> <dd>
 
-Nt-Verbund
+Tandem NT
 
 </dd> <dt>
 
@@ -636,7 +636,7 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
 
 
 </dt> <dd></dd> <dt>
@@ -675,7 +675,7 @@ BSD-UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Gnud** (44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU** Gnu(44)
 
 
 </dt> <dd></dd> <dt>
@@ -714,7 +714,7 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**ESAC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**OBC** (49)
 
 
 </dt> <dd></dd> <dt>
@@ -788,7 +788,7 @@ Handflächenbetriebssystem
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedizierend** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (59)
 
 
 </dt> <dd></dd> <dt>
@@ -818,17 +818,17 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte eine der folgenden Formen haben:
+Die Version des Vorgangs sollte in einer der folgenden Formen sein:
 
 -   <major>.<minor>.<revision>
 -   <major>.<minor><letter><revision>
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 </dd> </dl>
 
@@ -836,7 +836,7 @@ Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -852,7 +852,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
 description: Um das Beispielpatchpaket zu reproduzieren, benötigen Sie ein Softwaretool, das in der Lage ist, ein Windows Installer-Patchpaket zu erstellen und zu bearbeiten.
 ms.assetid: 0653d8f6-89b0-4c56-ae51-3c7cb7df2909
-title: Erstellen einer Patcherstellungs-Eigenschaftendatei
+title: Erstellen einer Eigenschaftendatei für die Patcherstellung
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 50873fd508aa9f31435bd401284d38d13310991e150b28f4e24e5ec27f505dc8
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118379405"
 ---
-# <a name="creating-a-patch-creation-properties-file"></a>Erstellen einer Patcherstellungs-Eigenschaftendatei
+# <a name="creating-a-patch-creation-properties-file"></a>Erstellen einer Eigenschaftendatei für die Patcherstellung
 
-Um das Beispielpatchpaket zu reproduzieren, benötigen Sie ein Softwaretool, das in der Lage ist, ein Windows Installer-Patchpaket zu erstellen und zu bearbeiten. Verschiedene Tools zum Erstellen von Patchpaketen sind von unabhängigen Softwareanbietern verfügbar. Im beispiel, das in den folgenden Abschnitten erläutert wird, wird ein Windows Installer-Datenbank-Editor namens Orca verwendet, um eine Datei mit Eigenschaften für die Patcherstellung (Erweiterung PCP) zu erstellen. Die PCP-Datei kann mit den Hilfsprogrammen [Msimsp.exe](msimsp-exe.md) und [Patchwiz.dll](patchwiz-dll.md) verwendet werden, um ein Windows Installer-Patchpaket (MSP-Erweiterung) zu generieren. Orca, Msimsp.exe und Patchwiz.dll werden in den [Windows SDK-Komponenten für Windows Installer-Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt.
+Um das Beispielpatchpaket zu reproduzieren, benötigen Sie ein Softwaretool, das in der Lage ist, ein Windows Installer-Patchpaket zu erstellen und zu bearbeiten. Mehrere Tools zum Erstellen von Patchpaketen sind von unabhängigen Softwareherstellern verfügbar. Das in den folgenden Abschnitten erläuterte Beispiel verwendet einen Windows Installer-Datenbank-Editor namens Orca, um eine Eigenschaftendatei für die Patcherstellung (ERWEITERUNG PCP) zu erstellen. Die PCP-Datei kann mit [](msimsp-exe.md) den Hilfsprogrammen [](patchwiz-dll.md)Msimsp.exeundPatchwiz.dllverwendet werden, um ein Windows Installer-Patchpaket (MSP-Erweiterung) zu generieren. Orca, Msimsp.exe und Patchwiz.dll werden in den Windows SDK-Komponenten für Windows [Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md)
 
-Eine leere Datei mit den Eigenschaften für die Patcherstellung, template.pcp, wird ebenfalls mit dem SDK bereitgestellt. Erstellen Sie eine Kopie von template.pcp, und benennen Sie diese Kopie in MNP2000.pcp um. Verwenden Sie Orca oder einen anderen Datenbank-Editor, um die folgenden Daten in die Tabelle Eigenschaften von MNP2000.pcp einzugeben. Die Tabelle Eigenschaften enthält globale Einstellungen für das Patchpaket.
+Eine leere Eigenschaftendatei für die Patcherstellung, template.pcp, wird ebenfalls mit dem SDK bereitgestellt. Erstellen Sie eine Kopie von template.pcp, und benennen Sie diese Kopie MNP2000.pcp um. Verwenden Sie Orca oder einen anderen Datenbank-Editor, um die folgenden Daten in die Properties-Tabelle von MNP2000.pcp ein. Die Tabelle Eigenschaften enthält globale Einstellungen für das Patchpaket.
 
 [Eigenschaftentabelle](properties-table-patchwiz-dll-.md)
 
@@ -38,7 +38,7 @@ Eine leere Datei mit den Eigenschaften für die Patcherstellung, template.pcp, w
 
  
 
-Verwenden Sie den Datenbank-Editor, um die folgenden Daten in die Tabelle ImageFamilies von MNP2000.pcp einzugeben. Die Tabelle ImageFamilies enthält Informationen, die der [Tabelle Media](media-table.md) während des Patchens hinzugefügt werden sollen.
+Geben Sie mithilfe des Datenbank-Editors die folgenden Daten in die ImageFamilies-Tabelle von MNP2000.pcp ein. Die Tabelle ImageFamilies enthält Informationen, die während des Patchens der [Media-Tabelle](media-table.md) hinzugefügt werden sollen.
 
 [ImageFamilies-Tabelle](imagefamilies-table-patchwiz-dll-.md)
 
@@ -52,7 +52,7 @@ Verwenden Sie den Datenbank-Editor, um die folgenden Daten in die Tabelle ImageF
 
  
 
-Geben Sie die folgenden Daten in die Tabelle UpgradedImages von MNP2000.pcp ein. Die Tabelle UpgradedImages enthält Informationen zum Aktualisierten Image, das Sie unter [Planen eines kleinen Updatepatches](planning-a-small-update-patch.md)erstellt haben.
+Geben Sie die folgenden Daten in die Tabelle UpgradedImages von MNP2000.pcp ein. Die Tabelle UpgradedImages enthält Informationen zum aktualisierten Image, das Sie unter [Planning a Small Update Patch (Planen eines kleinen Updatepatches) erstellt haben.](planning-a-small-update-patch.md)
 
 [Tabelle "UpgradedImages"](upgradedimages-table-patchwiz-dll-.md)
 
@@ -60,7 +60,7 @@ Geben Sie die folgenden Daten in die Tabelle UpgradedImages von MNP2000.pcp ein.
 
 | Upgraded   | MsiPath                                           | PatchMsiPath | SymbolPaths | Familie  |
 |------------|---------------------------------------------------|--------------|-------------|---------|
-| MNP \_ behoben | C: \\ \_ Hinweis: \\ Installationsprogrammpatch \\ aktualisiert \\MNP2000.msi |              |             | MNPapps |
+| MNP \_ behoben | C: \\ Hinweis: \_ Installer patch upgraded \\ \\ \\MNP2000.msi |              |             | MNPapps |
 
 
 
@@ -74,7 +74,7 @@ Geben Sie die folgenden Daten in die Tabelle TargetImages von MNP2000.pcp ein. D
 
 | Ziel     | MsiPath                                         | SymbolPaths | Upgraded   | Auftrag | ProductValidateFlags | IgnoreMissingSrcFiles |
 |------------|-------------------------------------------------|-------------|------------|-------|----------------------|-----------------------|
-| \_MNP-Fehler | C: \\ Hinweis Installer Patch Target \_ \\ \\ \\MNP2000.msi |             | MNP \_ behoben | 1     |                      | 0                     |
+| MNP-Fehler \_ | C: \\ Hinweis Installer Patch Target \_ \\ \\ \\MNP2000.msi |             | MNP \_ behoben | 1     |                      | 0                     |
 
 
 
@@ -82,7 +82,7 @@ Geben Sie die folgenden Daten in die Tabelle TargetImages von MNP2000.pcp ein. D
 
 Lassen Sie für das Beispielpatchpaket die folgenden Tabellen in MNP2000.pcp leer.
 
-[UpgradeFiles \_ OptionalData-Tabelle](upgradedfiles-optionaldata-table-patchwiz-dll-.md)
+[UpgradedFiles \_ OptionalData Table](upgradedfiles-optionaldata-table-patchwiz-dll-.md)
 
 [FamilyFileRanges-Tabelle](familyfileranges-table-patchwiz-dll-.md)
 
@@ -90,7 +90,7 @@ Lassen Sie für das Beispielpatchpaket die folgenden Tabellen in MNP2000.pcp lee
 
 [ExternalFiles-Tabelle](externalfiles-table-patchwiz-dll-.md)
 
-[UpgradedFilesToIgnore-Tabelle](upgradedfilestoignore-table-patchwiz-dll-.md)
+[Tabelle "UpgradedFilesToIgnore"](upgradedfilestoignore-table-patchwiz-dll-.md)
 
 [Fortsetzen](generating-a-patch-package.md)
 

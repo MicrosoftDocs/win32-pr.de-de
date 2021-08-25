@@ -23,7 +23,7 @@ ms.locfileid: "118358798"
 ---
 # <a name="glmultmatrixd-function"></a>glMultMatrixd-Funktion
 
-Die Funktionen **glMultMatrixd** und [**glMultMatrixf**](glmultmatrixf.md) multiplizieren die aktuelle Matrix mit einer beliebigen Matrix.
+Die **Funktionen glMultMatrixd** und [**glMultMatrixf**](glmultmatrixf.md) multiplizieren die aktuelle Matrix mit einer beliebigen Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glMultMatrixd(
 *m* 
 </dt> <dd>
 
-Ein Zeiger auf eine 4x4-Matrix, die in Spaltenhauptreihenfolge als 16 aufeinander folgende Werte gespeichert ist.
+Ein Zeiger auf eine 4x4-Matrix, die in Spalten-Hauptordnung als 16 aufeinander folgende Werte gespeichert ist.
 
 </dd> </dl>
 
@@ -53,35 +53,35 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Die **glMultMatrix-Funktion** multipliziert die aktuelle Matrix mit der in *m* angegebenen Matrix. Das heißt, wenn M die aktuelle Matrix und T die an **glMultMatrix** übergebene Matrix ist, wird M durch M T ersetzt.
+Die **glMultMatrix-Funktion** multipliziert die aktuelle Matrix mit der in *m angegebenen* Matrix. Das heißt, wenn M die aktuelle Matrix und T die Matrix ist, die **an glMultMatrix** übergeben wird, wird M durch M T ersetzt.
 
-Die aktuelle Matrix ist die Projektionsmatrix, Modellansichtsmatrix oder Texturmatrix, die durch den aktuellen Matrixmodus bestimmt wird (siehe [**glMatrixMode**](glmatrixmode.md)).
+Die aktuelle Matrix ist die Projektionsmatrix, Modellansichtsmatrix oder Texturmatrix, die vom aktuellen Matrixmodus bestimmt wird (siehe [**glMatrixMode**](glmatrixmode.md)).
 
-Der *m-Parameter* zeigt auf eine 4x4-Matrix von Gleitkommawerten mit einfacher oder doppelter Genauigkeit, die in Spaltenhauptreihenfolge gespeichert sind. Das heißt, die Matrix wird wie in der folgenden Abbildung dargestellt gespeichert.
+Der *m-Parameter* zeigt auf eine 4x4-Matrix mit Gleitkommawerten mit einzelner oder doppelter Genauigkeit, die in spalten wichtiger Reihenfolge gespeichert sind. Das heißt, die Matrix wird wie in der folgenden Abbildung gezeigt gespeichert.
 
 ![! [Diagramm der 4x4-Matrix, auf die der m-Parameter zeigt.]](images/multi01.png)
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMultMatrix** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMultMatrix ab:**
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MATRIX \_ MODE
 
-**glGet** mit argument GL \_ MODELVIEW \_ MATRIX
+**glGet** mit Argument GL \_ MODELVIEW \_ MATRIX
 
-**glGet** mit argument GL \_ PROJECTION \_ MATRIX
+**glGet** mit Argument GL \_ PROJECTION \_ MATRIX
 
-**glGet** mit argument GL \_ TEXTURE \_ MATRIX
+**glGet** mit Argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 

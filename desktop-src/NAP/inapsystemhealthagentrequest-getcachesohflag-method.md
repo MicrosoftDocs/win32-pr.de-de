@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentrequest getcachesohflag-Methode (napsystemhealthagent. h)
-description: Wird nur von NAPAgent verwendet.
+title: INapSystemHealthAgentRequest GetCacheSoHFlag-Methode (NapSystemHealthAgent.h)
+description: Wird nur vom NapAgent verwendet.
 ms.assetid: 97dd4e95-30c2-48e2-9359-b1019299581d
 keywords:
-- Getcachesohflag-Methode NAP
-- Getcachesohflag-Methode NAP, inapsystemhealthagentrequest-Schnittstelle
-- Inapsystemhealthagentrequest-Schnittstelle NAP, getcachesohflag-Methode
+- GetCacheSoHFlag-Methode NAP
+- GetCacheSoHFlag-Methode NAP, INapSystemHealthAgentRequest-Schnittstelle
+- INapSystemHealthAgentRequest-Schnittstelle NAP , GetCacheSoHFlag-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 53d8b458e4a49b690fe1f0f53482a72dd253c7c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9268e620f38ef314c0699612436518315e44cf7f554bb393d2259ae4664519cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118133675"
 ---
-# <a name="inapsystemhealthagentrequestgetcachesohflag-method"></a>Inapsystemhealthagentrequest:: getcachesohflag-Methode
+# <a name="inapsystemhealthagentrequestgetcachesohflag-method"></a>INapSystemHealthAgentRequest::GetCacheSoHFlag-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthagentrequest:: getcachesohflag** -Methode wird nur von NAPAgent verwendet.
+Die **INapSystemHealthAgentRequest::GetCacheSoHFlag-Methode** wird nur von NapAgent verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetCacheSoHFlag(
 
 <dl> <dt>
 
-*cachesohforlateral use* 
+*cacheSohForLaterUse* 
 </dt> <dd>
 
-Ein **boolescher** Wert, der **true** ist, wenn der NAPAgent das [**SoH**](/windows/win32/api/naptypes/ns-naptypes-soh) zwischenspeichern soll, andernfalls **false** .
+Eine **BOOL,** die **TRUE** ist, wenn NapAgent andernfalls [**soH**](/windows/win32/api/naptypes/ns-naptypes-soh) und **FALSE** zwischenspeichern soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,10 +76,10 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagentrt.dll</dt> </dl>             |
 
 
@@ -88,7 +88,7 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 <dl> <dt>
 
-[**Inapsystemhealthagentrequest**](inapsystemhealthagentrequest.md)
+[**INapSystemHealthAgentRequest**](inapsystemhealthagentrequest.md)
 </dt> </dl>
 
  

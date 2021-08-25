@@ -1,46 +1,46 @@
 ---
-title: Auflisten von senken
-description: Auflisten von senken
+title: Aufzählen von Senken
+description: Aufzählen von Senken
 ms.assetid: 1b635cd8-6bdd-4592-bfb5-bcdcf7818e18
 keywords:
-- Advanced Systems Format (ASF), Aufzählen von senken
-- ASF (Advanced Systems Format), Enumerieren von senken
-- Advanced Systems Format (ASF), senken
-- ASF (Advanced Systems Format), senken
-- senken, auflisten
+- Advanced Systems Format (ASF), Aufzählen von Senken
+- ASF (Advanced Systems Format), Aufzählen von Senken
+- Advanced Systems Format (ASF),sinks
+- ASF (Advanced Systems Format), sinks
+- sinks,enumerating
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff35124a8c88108082544b270aa4d9813ff67ea9
-ms.sourcegitcommit: b04e152a7f51618fc174ffa872654623fe088db2
+ms.openlocfilehash: 4b51b46f3efdf95902b1ca5b359227da845292c4b0f23dbf0bd52039fba151cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "103724030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118029071"
 ---
-# <a name="enumerating-sinks"></a>Auflisten von senken
+# <a name="enumerating-sinks"></a>Aufzählen von Senken
 
-Dem Writer können viele senken zugeordnet werden. Sie können die senken, die dem Writer hinzugefügt wurden, mithilfe von [**iwmschreiteradvanced:: getsink count**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-getsinkcount) und [**iwmschreiteradvanced:: getsink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-getsink)auflisten.
+Dem Writer können viele Senken zugeordnet sein. Sie können die Senken aufzählen, die dem Writer hinzugefügt wurden, indem Sie [**IWMWriterAdvanced::GetSinkCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-getsinkcount) und [**IWMWriterAdvanced::GetSink verwenden.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-getsink)
 
-Der Beispielcode in den [Fehlermeldungen aus einer Senke](getting-error-messages-from-a-sink.md) veranschaulicht die Senke-Enumeration.
+Der Beispielcode in Getting Error Messages from a Sink (Abrufen von Fehlermeldungen aus einer [Senke)](getting-error-messages-from-a-sink.md) veranschaulicht die Senkenenumeration.
 
 > [!Note]  
-> Beim Auflisten von senken wird die standardmäßige Datei Senke, die als Reaktion auf einen [**callmwriter:: setoutputfilename**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setoutputfilename) erstellt wurde, zusammen mit allen anderen senken aufgelistet, die Sie hinzugefügt haben. Wenn Sie nur die standardmäßige Datei Senke verwenden, können Sie darauf zugreifen, indem Sie **getsink** für Senke-Index 0 aufrufen.
+> Beim Aufzählen von Senken wird die Standarddateisenke, die als Reaktion auf einen Aufruf von [**IWMWriter::SetOutputFilename**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setoutputfilename) erstellt wurde, zusammen mit allen anderen hinzugefügten Senken aufzählt. Wenn Sie nur die Standarddateisenke verwenden, können Sie darauf zugreifen, indem Sie **GetSink für** senkenden Index 0 aufrufen.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmschreiteradvanced-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriteradvanced)
+[**IWMWriterAdvanced-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriteradvanced)
 </dt> <dt>
 
-[**Arbeiten mit Writer-senken**](working-with-writer-sinks.md)
+[**Arbeiten mit Writer-Senken**](working-with-writer-sinks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

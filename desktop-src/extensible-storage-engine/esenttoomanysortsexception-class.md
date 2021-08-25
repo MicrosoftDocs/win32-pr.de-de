@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentTooManySortsException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentTooManySortsException-Klasse'
 title: EsentTooManySortsException-Klasse
 TOCTitle: EsentTooManySortsException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTooManySortsException
@@ -69,7 +69,7 @@ public sealed class EsentTooManySortsException : EsentMemoryException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

@@ -4,9 +4,9 @@ description: Entfernt alle Lizenzserver aus der Liste der angegebenen Lizenzserv
 ms.assetid: de1633ca-3f0b-4540-8b45-44303a4e72fe
 ms.tgt_platform: multiple
 keywords:
-- EmptySpecifiedLicenseServerList-Remotedesktopdienste
+- EmptySpecifiedLicenseServerList-Methode Remotedesktopdienste
 - EmptySpecifiedLicenseServerList-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
-- Win32_TerminalServiceSetting klasse Remotedesktopdienste , EmptySpecifiedLicenseServerList-Methode
+- Win32_TerminalServiceSetting Klasse Remotedesktopdienste , EmptySpecifiedLicenseServerList-Methode
 topic_type:
 - apiref
 api_name:
@@ -43,7 +43,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,13 +53,13 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

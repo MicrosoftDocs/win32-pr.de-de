@@ -66,7 +66,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

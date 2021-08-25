@@ -1,33 +1,33 @@
 ---
-title: Beispiele für DNS-WMI-Anbieter – Verwalten von DNS-Ressourcen Einträgen
-description: Beispiele für DNS-WMI-Anbieter – Verwalten von DNS-Ressourcen Einträgen
+title: DNS-WMI-Anbieterbeispiele – Verwalten von DNS-Ressourceneinträgen
+description: DNS-WMI-Anbieterbeispiele – Verwalten von DNS-Ressourceneinträgen
 ms.assetid: 4b038c74-eec8-459c-9e3f-3be2a244d313
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6b6494168ef6a5ee4aa035879468e2c1a92d4e6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 089cf567452666db54ad0e0d784b2bf3b2566e0e986ba94a9e9d498a387468c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163839"
 ---
-# <a name="dns-wmi-provider-samplesmanaging-dns-resource-records"></a>Beispiele für DNS-WMI-Anbieter – Verwalten von DNS-Ressourcen Einträgen
+# <a name="dns-wmi-provider-samplesmanaging-dns-resource-records"></a>DNS-WMI-Anbieterbeispiele – Verwalten von DNS-Ressourceneinträgen
 
-Dieser Abschnitt veranschaulicht Skript Tasks, die mit der Verwaltung von DNS-Ressourcen Einträgen verknüpft sind. Die Links unten springen zu Unterroutinen in der Skriptdatei.
+In diesem Abschnitt werden Skripterstellungsaufgaben für die Verwaltung von DNS-Ressourceneinträgen veranschaulicht. Die folgenden Links wechseln zu Unterroutinen in der Skriptdatei.
 
--   [Auflisten von Ressourcen Einträgen](#list-resource-records)
--   [Hinzufügen eines Ressourcen Datensatzes](#add-a-resource-record)
--   [Löschen eines Ressourcen Datensatzes](#delete-a-resource-record)
--   [Ändern eines Ressourcen Datensatzes](#modify-a-resource-record)
--   [Herstellen einer Verbindung mit dem DNS-WMI-Anbieter](#connect-to-the-dns-wmi-provider)
+-   [Auflisten von Ressourcendatensätzen](#list-resource-records)
+-   [Hinzufügen eines Ressourcendatensatz](#add-a-resource-record)
+-   [Löschen eines Ressourcendatensatz](#delete-a-resource-record)
+-   [Ändern eines Ressourcendatensatz](#modify-a-resource-record)
+-   [Verbinden zum DNS-WMI-Anbieter](#connect-to-the-dns-wmi-provider)
 
 Die allgemeine Implementierung des Skripts lautet wie folgt:
 
-1.  Eine Klasse wird für jeden Ressourcen Daten Satz Typen erstellt.
-2.  Ressourcen Daten Satz Daten werden über Benutzer Befehlszeilen Eingaben und DNS-WMI-Anbieter Informationen für jede Daten Satz Klasse bereitgestellt.
-3.  Allgemeine Funktionen, wie z. b. List, DELETE und Modify, werden erstellt und können für einzelne Klassen von Ressourcen Daten Satz Typen verwendet werden.
+1.  Für jeden Ressourcendatensatztyp wird eine Klasse erstellt.
+2.  Ressourcendatensatzdaten werden über Benutzerbefehlszeileneingaben und DNS-WMI-Anbieterinformationen für jede Datensatztypklasse bereitgestellt.
+3.  Allgemeine Funktionen wie Auflisten, Löschen und Ändern werden erstellt und können für einzelne Ressourcendatensatz-Typklassen verwendet werden.
 
-Dieses Codebeispiel zeigt Aufgaben, die mit der Verwaltung von DNS-Ressourcen Einträgen verknüpft sind.
+Dieses Codebeispiel zeigt Aufgaben im Zusammenhang mit der Verwaltung von DNS-Ressourceneinträgen.
 
 
 ```VB
@@ -4192,9 +4192,9 @@ End Class
 
 
 
-## <a name="list-resource-records"></a>Auflisten von Ressourcen Einträgen
+## <a name="list-resource-records"></a>Auflisten von Ressourcendatensätzen
 
-Dieses Codebeispiel zeigt Aufgaben, die dem Auflisten von Ressourcen Datensätzen zugeordnet sind.
+Dieses Codebeispiel zeigt Aufgaben, die dem Auflisten von Ressourcendatensätzen zugeordnet sind.
 
 
 ```VB
@@ -4316,9 +4316,9 @@ End Sub
 
 
 
-## <a name="add-a-resource-record"></a>Hinzufügen eines Ressourcen Datensatzes
+## <a name="add-a-resource-record"></a>Hinzufügen eines Ressourcendatensatz
 
-Dieses Codebeispiel zeigt Aufgaben, die dem Hinzufügen von Ressourcen Einträgen zugeordnet sind.
+Dieses Codebeispiel zeigt Aufgaben, die dem Hinzufügen von Ressourcendatensätzen zugeordnet sind.
 
 
 ```VB
@@ -4406,9 +4406,9 @@ End Sub
 
 
 
-## <a name="delete-a-resource-record"></a>Löschen eines Ressourcen Datensatzes
+## <a name="delete-a-resource-record"></a>Löschen eines Ressourcendatensatz
 
-Dieses Codebeispiel zeigt Aufgaben, die mit dem Löschen von Ressourcen Einträgen verknüpft sind.
+Dieses Codebeispiel zeigt Aufgaben, die dem Löschen von Ressourcendatensätzen zugeordnet sind.
 
 
 ```VB
@@ -4490,9 +4490,9 @@ End Sub
 
 
 
-## <a name="modify-a-resource-record"></a>Ändern eines Ressourcen Datensatzes
+## <a name="modify-a-resource-record"></a>Ändern eines Ressourcendatensatz
 
-Dieses Codebeispiel zeigt Aufgaben, die mit dem Ändern von Ressourcen Einträgen verknüpft sind.
+Dieses Codebeispiel zeigt Aufgaben, die mit dem Ändern von Ressourcendatensätzen verknüpft sind.
 
 
 ```VB
@@ -5183,9 +5183,9 @@ End Function
 
 
 
-## <a name="connect-to-the-dns-wmi-provider"></a>Herstellen einer Verbindung mit dem DNS-WMI-Anbieter
+## <a name="connect-to-the-dns-wmi-provider"></a>Verbinden zum DNS-WMI-Anbieter
 
-Dieses Codebeispiel zeigt Aufgaben im Zusammenhang mit dem Herstellen einer Verbindung mit einem DNS-WMI-Anbieter.
+Dieses Codebeispiel zeigt Aufgaben, die dem Herstellen einer Verbindung mit einem DNS-WMI-Anbieter zugeordnet sind.
 
 
 ```VB
@@ -5417,9 +5417,9 @@ End Function
 
 
 
- 
+ 
 
- 
+ 
 
 
 

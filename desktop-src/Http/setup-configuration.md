@@ -1,27 +1,27 @@
 ---
-title: Setup Konfiguration
-description: Die Konfiguration des Setups erfordert Administratorrechte und ist bei Neustarts persistent.
+title: Setupkonfiguration
+description: Die Setupkonfiguration erfordert Administratorrechte und ist über Neustarts hinweg persistent.
 ms.assetid: 96e9c069-829b-4615-b94b-3761bc541440
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b43b543bfc81f963341d7b5f690f4b40312ee420
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 36d59065ff34e7998d9df0503f6ae7503d9d402def6053f8176ba5af5b6a9efa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117996117"
 ---
-# <a name="setup-configuration"></a>Setup Konfiguration
+# <a name="setup-configuration"></a>Setupkonfiguration
 
-Die Konfiguration des Setups erfordert Administratorrechte und ist bei Neustarts persistent. In der Regel führt eine Setup Anwendung, die mit Administratorrechten ausgeführt wird, eine solche persistente Konfiguration während des Setups aus, sodass Anwendungen dann mit niedrigeren Berechtigungen ausgeführt werden können, obwohl eine persistente Konfiguration jederzeit möglich ist. Die Setup Konfiguration kann eine der folgenden vier Aktivitäten umfassen:
+Die Setupkonfiguration erfordert Administratorrechte und ist über Neustarts hinweg persistent. In der Regel führt eine Setupanwendung, die mit Administratorrechten ausgeführt wird, eine solche persistente Konfiguration während des Setups durch, sodass Anwendungen dann mit niedrigeren Berechtigungen ausgeführt werden können, obwohl die permanente Konfiguration jederzeit erfolgen kann. Die Setupkonfiguration kann eine der folgenden vier Aktivitäten umfassen:
 
--   Erstellen einer URL-Reservierung. Die HTTP-API ermöglicht der Setup Anwendung das Reservieren von URL-Präfixen für Anforderungs Warteschlangen, die bestimmten Anwendungen zugeordnet sind. Um eine URL zu reservieren, ruft die Setup Anwendung die [**httpsetserviceconfiguration**](/windows/desktop/api/Http/nf-http-httpsetserviceconfiguration) -Funktion mit dem auf **httpserviceconfigurlaclinfo** festgelegten *ConfigID* -Parameter auf und übergibt einen Zeiger im *pconfiginformation* -Parameter an die Struktur der [**\_ \_ \_ urlacl- \_ Menge der HTTP-Dienst Konfiguration**](/windows/desktop/api/Http/ns-http-http_service_config_urlacl_set) , die die Registrierungsinformationen enthält. Weitere Informationen finden Sie unter [Namespace Reservierungen, Registrierungen und Routing](namespace-reservations-registrations-and-routing.md).
--   Konfigurieren von SSL. Zum Konfigurieren von SSL ruft der Administrator die [**httpsetserviceconfiguration**](/windows/desktop/api/Http/nf-http-httpsetserviceconfiguration) -Funktion mit dem auf **httpserviceconfigsslcertinfo** festgelegten *ConfigID* -Parameter auf und übergibt einen Zeiger im *pconfiginformation* -Parameter an eine SSL-Set-Struktur der [**http- \_ Dienst \_ Konfiguration \_ \_**](/windows/desktop/api/Http/ns-http-http_service_config_ssl_set) , die die SSL-Zertifikat Informationen enthält.
--   Festlegen anderer HTTP-Server – Wide, persistente Konfigurationen, wie z. b. die IP-Adressen, die der HTTP-Server überwacht, und der Server weite Timeout Wert. Siehe [IP-](ip-listen-list.md) lausch Liste und [**\_ \_ Konfigurations \_ Timeout \_ für HTTP-Dienst**](/windows/desktop/api/Http/ns-http-http_service_config_timeout_set).
+-   Erstellen einer URL-Reservierung. Mit der HTTP-API kann die Setupanwendung URL-Präfixe für Anforderungswarteschlangen reservieren, die bestimmten Anwendungen zugeordnet sind. Um eine URL zu reservieren, ruft die Setupanwendung die [**Funktion HttpSetServiceConfiguration**](/windows/desktop/api/Http/nf-http-httpsetserviceconfiguration) auf, *deren ConfigId-Parameter* auf **HttpServiceConfigUrlAclInfo** festgelegt ist, und übergibt einen Zeiger im *pConfigInformation-Parameter* an eine [**\_ \_ \_ URLACL \_ SET-Struktur**](/windows/desktop/api/Http/ns-http-http_service_config_urlacl_set) des HTTP-DIENSTs, die die Registrierungsinformationen enthält. Weitere Informationen finden Sie unter [Namespacereservierungen, Registrierungen und Routing.](namespace-reservations-registrations-and-routing.md)
+-   Konfigurieren von SSL. Zum Konfigurieren von SSL ruft der Administrator die [**HttpSetServiceConfiguration-Funktion**](/windows/desktop/api/Http/nf-http-httpsetserviceconfiguration) auf, *deren ConfigId-Parameter* auf **HttpServiceConfigSSLCertInfo** festgelegt ist, und übergibt einen Zeiger im *pConfigInformation-Parameter* an eine [**HTTP SERVICE \_ \_ CONFIG SSL \_ \_ SET-Struktur,**](/windows/desktop/api/Http/ns-http-http_service_config_ssl_set) die die SSL-Zertifikatinformationen enthält.
+-   Festlegen anderer persistenter HTTP-Serverkonfigurationen, z. B. der IP-Adressen, an denen der HTTP-Server lausiert, und des serverweiten Timeoutwerts. Weitere Informationen [finden Sie unter IP-Lauschenliste](ip-listen-list.md) [**und HTTP SERVICE \_ \_ CONFIG \_ TIMEOUT \_ SET**](/windows/desktop/api/Http/ns-http-http_service_config_timeout_set).
 
- 
+ 
 
- 
+ 
 
 
 

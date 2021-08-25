@@ -1,6 +1,6 @@
 ---
 title: DVC-Client-APIs
-description: Die CLIENT-APIs des dynamischen virtuellen Kanals (DYNAMIC Virtual Channel, DVC) werden speziell für den Remotedesktopverbindung -Client (RDC) der Verbindung implementiert.
+description: Die CLIENT-APIs des dynamischen virtuellen Kanals (DYNAMIC Virtual Channel, DVC) werden speziell für den Remotedesktopverbindung (RDC)-Client der Verbindung implementiert.
 ms.assetid: 976a6cc2-7bbe-4ecc-91b4-b7c659eca5ba
 ms.tgt_platform: multiple
 ms.topic: article
@@ -14,7 +14,7 @@ ms.locfileid: "118130816"
 ---
 # <a name="dvc-client-apis"></a>DVC-Client-APIs
 
-Die CLIENT-APIs des dynamischen virtuellen Kanals (DYNAMIC Virtual Channel, DVC) werden speziell für den Remotedesktopverbindung -Client (RDC) der Verbindung implementiert. Einige der APIs werden vom DVC-Framework und einige vom Plug-In-Entwickler implementiert. Einige der APIs werden zur Unterstützung des Remotedesktopverbindung-Client-Plug-Ins (RDC) verwendet und stehen nicht direkt im Zusammenhang mit dem Datentransport.
+Die CLIENT-APIs des dynamischen virtuellen Kanals (DYNAMIC Virtual Channel, DVC) werden speziell für den Remotedesktopverbindung (RDC)-Client der Verbindung implementiert. Einige der APIs werden vom DVC-Framework und einige vom Plug-In-Entwickler implementiert. Einige der APIs werden zur Unterstützung des Remotedesktopverbindung-Client-Plug-Ins (RDC) verwendet und stehen nicht direkt im Zusammenhang mit dem Datentransport.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

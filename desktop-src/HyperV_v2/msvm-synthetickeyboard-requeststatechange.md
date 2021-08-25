@@ -1,7 +1,7 @@
 ---
-description: RequestStateChange-Methode der Msvm_SyntheticKeyboard - Fordert eine Zustandsänderung an.
+description: 'RequestStateChange-Methode der Msvm_SyntheticKeyboard-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: 984e8a68-bc95-4a8b-99d6-ac248e96c45e
-title: RequestStateChange-Methode der Msvm_SyntheticKeyboard Klasse
+title: RequestStateChange-Methode der Msvm_SyntheticKeyboard-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: eb8714dfc652cd1ba1a581b99cf5a4066159fb1e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3a16710adafaf3c9a4d04658f556592c485fd3ce1fa5b88c198b8913dadda543
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118146720"
 ---
 # <a name="requeststatechange-method-of-the-msvm_synthetickeyboard-class"></a>RequestStateChange-Methode der Msvm \_ SyntheticKeyboard-Klasse
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der für das Element angeforderte Zustand. Diese Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der RequestStateChange-Methode 0 ('Completed with No Error') oder 4096 (0x1000) ('Job Started') ist. Ausführliche Erläuterungen zu den RequestedState-Werten finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState.** 
+Der für das Element angeforderte Zustand. Diese Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der RequestStateChange-Methode 0 ('Completed with No Error') oder 4096 (0x1000) ('Job Started') ist. Ausführliche Erläuterungen zu den **RequestedState-Werten** finden Sie in der Beschreibung der Eigenschaften EnabledState und **RequestedState.** 
 
 <dt>
 
@@ -85,14 +85,14 @@ Der für das Element angeforderte Zustand. Diese Informationen werden in die **R
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückern** (8)
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Ruhe** (9)
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -128,7 +128,7 @@ Der für das Element angeforderte Zustand. Diese Informationen werden in die **R
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den durch den Methodenaufruf initiierten Zustandsübergang nachverfolgung zu verfolgen.
+Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den Zustandsübergang nachzuverfolgen, der durch den Methodenaufruf initiiert wurde.
 
 </dd> <dt>
 
@@ -143,7 +143,7 @@ Wenn diese Eigenschaft nicht 0 oder NULL enthält und die Implementierung diesen
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt 0 zurück. andernfalls gibt einen Fehler zurück.
+Bei Erfolg wird 0 zurückgegeben. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -157,17 +157,17 @@ Bei Erfolg gibt 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

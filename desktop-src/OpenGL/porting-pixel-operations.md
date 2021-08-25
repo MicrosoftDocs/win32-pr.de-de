@@ -1,53 +1,53 @@
 ---
-title: Portieren von Pixel Vorgängen
-description: Portieren von Pixel Vorgängen
+title: Portieren von Pixelvorgängen
+description: Portieren von Pixelvorgängen
 ms.assetid: 57917f33-daf5-4db6-9583-ab596deab91a
 keywords:
-- IRIS GL Porting, Pixel
-- Portieren von IRIS GL, Pixel
-- Portieren auf OpenGL von IRIS GL, Pixel
-- OpenGL-Portierung von IRIS GL, Pixel
+- IRIS GL-Portierung, Pixel
+- Portieren von IRIS GL,Pixel
+- Portieren zu OpenGL von IRIS GL,Pixel
+- OpenGL-Portierung von IRIS GL,Pixel
 - Pixel, Portieren von IRIS GL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d1fd484efa031bd12af59cb729c8fa20b68fe88e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dc67a4c9224dbe6544c60cb205f8a192517af7f3ab16ba64134b4d55d1c8676f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132379"
 ---
-# <a name="porting-pixel-operations"></a>Portieren von Pixel Vorgängen
+# <a name="porting-pixel-operations"></a>Portieren von Pixelvorgängen
 
-Beachten Sie beim Portieren von Code, der Pixel Vorgänge umfasst, die folgenden Punkte:
+Beachten Sie beim Portieren von Code, der Pixelvorgänge umfasst, die folgenden Punkte:
 
--   Logische Pixel Vorgänge werden nicht auf RGBA-Farb Puffer angewendet. Weitere Informationen finden Sie unter [**gllogicop**](gllogicop.md).
--   Im Allgemeinen verwendet IRIS GL das Format ABGR für Pixel, während OpenGL RGBA verwendet. Sie können das Format mit [**glpixelstore**](glpixelstore-functions.md)ändern.
--   Beachten Sie bei der Portierung von **lrectwrite** -Funktionen, dass **lrectwrite** schreibt (z. b. könnte es in den tiefen Puffer schreiben).
+-   Logische Pixelvorgänge werden nicht auf RGBA-Farbpuffer angewendet. Weitere Informationen finden Sie unter [**glLogicOp**](gllogicop.md).
+-   Im Allgemeinen verwendet IRIS GL das Format ABGR für Pixel, während OpenGL RGBA verwendet. Sie können das Format mit [**glPixelStore**](glpixelstore-functions.md)ändern.
+-   Achten Sie beim Portieren von **lrectwrite-Funktionen** darauf, dass Sie beachten, wo **lrectwrite** schreibt (z. B. in den Tiefenpuffer schreiben).
 
-OpenGL bietet Ihnen zusätzliche Flexibilität bei Pixel Vorgängen. In der folgenden Tabelle werden die Iris GL-Funktionen für Pixel Vorgänge und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+OpenGL bietet Ihnen zusätzliche Flexibilität bei Pixelvorgängen. In der folgenden Tabelle sind die IRIS GL-Funktionen für Pixelvorgänge und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion                                   | OpenGL-Funktion                                                                           | Bedeutung                                                                 |
 |----------------------------------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| **lrectread**, **rectread**, Read **RGB**<br/> | [**glread Pixels**](glreadpixels.md)                                                      | Liest einen Pixel Block aus dem Framebuffer.                           |
-| **lrectwrite**, **rectwrite**                      | [**gldrawpixels**](gldrawpixels.md)                                                      | Schreibt einen Pixel Block in den Framebuffer.                            |
-| **neu kopieren**                                       | [**glcopypixels**](glcopypixels.md)                                                      | Kopiert Pixel im Framebuffer.                                       |
-| **rectzoom**                                       | [**glpixelzoom**](glpixelzoom.md)                                                        | Gibt die Pixel Zoomfaktoren für **gldrawpixels** und **glcopypixels** an. |
-| **cmov**                                           | [glRasterPos](glrasterpos-functions.md)                                                  | Gibt die Raster Position für Pixel Vorgänge an.                         |
-| **"lesen"**                                     | [**glread Buffer**](glreadbuffer.md)                                                      | Wählt eine Farb Puffer Quelle für Pixel aus.                               |
-| **pixmode**                                        | [**glpixelstore**](glpixelstore-functions.md),[**glpixeltransfer**](glpixeltransfer.md) | Legt die Pixel Speicher Modi fest. Legen Sie Pixel Übertragungsmodi fest.                      |
-| **logicop**                                        | [**gllogicop**](gllogicop.md)                                                            | Gibt eine logische Operation für Pixel Schreibvorgänge an.                         |
-|                                                    | [**glEnable**](glenable.md) (GL \_ Logic \_ OP)                                            | Schaltet Pixel Logik Vorgänge ein.                                        |
+| **lrectread**, **rectread**,**readRGB**<br/> | [**glReadPixels**](glreadpixels.md)                                                      | Liest einen Pixelblock aus dem Framepuffer.                           |
+| **lrectwrite**, **rectwrite**                      | [**glDrawPixels**](gldrawpixels.md)                                                      | Schreibt einen Block von Pixeln in den Framepuffer.                            |
+| **rectcopy**                                       | [**glCopyPixels**](glcopypixels.md)                                                      | Kopiert Pixel in den Framepuffer.                                       |
+| **rectzoom**                                       | [**glPixelZoom**](glpixelzoom.md)                                                        | Gibt Pixelzoomfaktoren für **glDrawPixels** und **glCopyPixels an.** |
+| **cmov**                                           | [glRasterPos](glrasterpos-functions.md)                                                  | Gibt die Rasterposition für Pixelvorgänge an.                         |
+| **readsource**                                     | [**glReadBuffer**](glreadbuffer.md)                                                      | Wählt eine Farbpufferquelle für Pixel aus.                               |
+| **pixmode**                                        | [**glPixelStore**](glpixelstore-functions.md),[**glPixelTransfer**](glpixeltransfer.md) | Legt die Pixelspeichermodi fest. Legen Sie die Pixelübertragungsmodi fest.                      |
+| **logicop**                                        | [**glLogicOp**](gllogicop.md)                                                            | Gibt einen logischen Vorgang für Pixel-Schreibvorgänge an.                         |
+|                                                    | [**glEnable**](glenable.md) ( GL \_ LOGIC \_ OP )                                            | Aktiviert Pixellogikvorgänge.                                        |
 
 
 
  
 
-Eine umfassende Liste der möglichen logischen Vorgänge finden Sie unter [**gllogicop**](gllogicop.md).
+Eine vollständige Liste der möglichen logischen Vorgänge finden Sie unter [**glLogicOp**](gllogicop.md).
 
-Dieses IRIS GL-Codebeispiel zeigt einen typischen Pixel Schreibvorgang:
+Dieses IRIS GL-Codebeispiel zeigt einen typischen Pixelschreibvorgang:
 
 ``` syntax
 unsigned long *packedRaster; 

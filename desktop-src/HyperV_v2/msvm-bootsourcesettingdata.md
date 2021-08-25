@@ -1,5 +1,5 @@
 ---
-description: Stellt die Parameter zum Festlegen der Start Quelle eines virtuellen Computers dar.
+description: Stellt die Parameter zum Festlegen der Startquelle eines virtuellen Computers dar.
 ms.assetid: 21CD4B71-3D05-469E-89BB-DC2C65F5AB10
 title: Msvm_BootSourceSettingData-Klasse
 ms.topic: reference
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0403846e10df4c9bd54146eea44e8e91c06d01c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7319c8df8c8f9b98ae39ed94f620445d4cc80b32f2c7b45189ce636c1c020dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117995037"
 ---
-# <a name="msvm_bootsourcesettingdata-class"></a>MSVM \_ bootsourcesettingdata-Klasse
+# <a name="msvm_bootsourcesettingdata-class"></a>Msvm \_ BootSourceSettingData-Klasse
 
-Stellt die Parameter zum Festlegen der Start Quelle eines virtuellen Computers dar. Diese Klasse wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))abgeleitet.
+Stellt die Parameter zum Festlegen der Startquelle eines virtuellen Computers dar. Diese Klasse wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))abgeleitet.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -55,39 +55,39 @@ class Msvm_BootSourceSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ bootsourcesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ BootSourceSettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ bootsourcesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ BootSourceSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bootsourcedescription**
+**BootSourceDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Beschreibung der von der Firmware bereitgestellten Start Quelle.
+Die Beschreibung der von der Firmware bereitgestellten Startquelle.
 
 </dd> <dt>
 
-**Bootsourcetype**
+**BootSourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein-Enumerationswert, der den Typ der Start Quelle angibt.
+Ein -Enumerationswert, der den Typ der Startquelle angibt.
 
 Dies sind gültige Werte:
 
@@ -126,62 +126,62 @@ Dies sind gültige Werte:
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** ( 64 )
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Anzeige Name für diese Instanz von SettingData. Außerdem kann der Anzeige Name als Index Eigenschaft für eine Suche oder Abfrage verwendet werden. (Hinweis: der Name muss innerhalb eines Namespace nicht eindeutig sein.)
+Der Anzeigename für diese Instanz von SettingData. Darüber hinaus kann der Anzeigename als Indexeigenschaft für eine Suche oder Abfrage verwendet werden. (Hinweis: Der Name muss innerhalb eines Namespace nicht eindeutig sein.)
 
 </dd> <dt>
 
-**Firmwaredevicepath**
+**FirmwareDevicePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Native Pfad, den die Firmware verwendet, um das Gerät zu beschreiben.
+Der native Pfad, den die Firmware zum Beschreiben des Geräts verwendet.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -190,41 +190,41 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Im Gültigkeitsbereich des instanziierten Namespaces identifiziert InstanceId verdeckt und identifiziert eine Instanz dieser Klasse eindeutig. Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert von InstanceId mit dem folgenden "bevorzugten" Algorithmus erstellt werden: *OrgId*:*localId* , bei der *OrgId* und *localId* durch einen Doppelpunkt (:)) getrennt sind und *OrgId* einen urheberrechtlich geschützten, mit einem Wert gekennzeichneten oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäfts Entität ist, die die InstanceId erstellt oder definiert, oder bei der es sich um eine registrierte, von einer anerkannten globalen Autorität zugewiesene ID handelt. (Diese Anforderung ähnelt dem Schema *Name* \_ *ClassName* -Struktur von Schema Klassennamen.) Außerdem darf *OrgId* keinen Doppelpunkt (:) enthalten, um die Eindeutigkeit sicherzustellen. Wenn dieser Algorithmus verwendet wird, muss der erste Doppelpunkt, der in InstanceId angezeigt wird, zwischen *OrgId* und *localId* angezeigt werden. *LocalId* wird von der Geschäfts Entität ausgewählt und sollte nicht wieder verwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn der oben genannte bevorzugte Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceId nicht für instanceids wieder verwendet wird, die von diesem oder anderen Anbietern für den Namespace dieser Instanz erstellt werden. Für von DMTF definierte Instanzen muss der "bevorzugte" Algorithmus verwendet werden, wenn die *OrgId* auf CIM festgelegt ist.
+Innerhalb des Bereichs des instanziierenden Namespace identifiziert InstanceID eine Instanz dieser Klasse nicht transparent und eindeutig. Um die Eindeutigkeit innerhalb des NameSpace zu gewährleisten, sollte der Wert von InstanceID mit dem folgenden "bevorzugten" Algorithmus erstellt werden: *OrgID: LocalID.**Dabei* werden *OrgID* und *LocalID* durch einen Doppelpunkt getrennt (:), und *orgID* muss einen urheberrechtlich geschützten, geschützten oder anderweitig eindeutigen Namen enthalten, der sich im Besitz der Geschäftsentität befindet, die die Instanz-ID erstellt oder definiert oder eine registrierte ID ist, die der Geschäftseinheit von einer anerkannten globalen Autorität zugewiesen wird. (Diese Anforderung ähnelt *schemaname.* \_ *ClassName-Struktur* von Schemaklassennamen.) Darüber hinaus darf *OrgID* keinen Doppelpunkt (:) enthalten, um eindeutig zu sein. Wenn Sie diesen Algorithmus verwenden, muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen *OrgID* und *LocalID* angezeigt werden. *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn der oben bevorzugte Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende Instanz-ID nicht für alle InstanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erstellt wurden. Für DMTF-definierte Instanzen muss der "bevorzugte" Algorithmus verwendet werden, wobei die *OrgID* auf CIM festgelegt ist.
 
 </dd> <dt>
 
 **OptionalData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-**Qualifizierer: octetstring**, [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: **OctetString**, [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Optionale Daten, die von der Firmware bereitgestellt werden.
 
 > [!Note]  
-> Die Eigenschaft wurde in Windows 10 hinzugefügt.
+> In Windows 10 hinzugefügte Eigenschaft.
 
  
 
 </dd> <dt>
 
-**Otherlocation**
+**OtherLocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die anderen Standortinformationen, sofern vorhanden, die die Firmware zur weiteren eindeutigen Identifizierung der Start Quelle verwendet.
+Die anderen Standortinformationen, sofern vorhanden, die von der Firmware verwendet werden, um die Startquelle weiter eindeutig zu identifizieren.
 
 </dd> </dl>
 
@@ -234,10 +234,10 @@ Die anderen Standortinformationen, sofern vorhanden, die die Firmware zur weiter
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -246,10 +246,10 @@ Die anderen Standortinformationen, sofern vorhanden, die die Firmware zur weiter
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**CIM- \_ SettingData**](/previous-versions//cc136911(v=vs.85))
+[**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))
 </dt> </dl>
 
  

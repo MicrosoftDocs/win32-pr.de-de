@@ -1,7 +1,7 @@
 ---
-description: Die setmacaddressinblob-Funktion legt die angeforderte Mac-Adresse eines BLOBs fest.
+description: Die SetMacAddressInBlob-Funktion legt die angeforderte MAC-Adresse eines BLOB fest.
 ms.assetid: f44d0cec-ced7-4d2a-a58e-aeb476bfe800
-title: Setmacaddressinblob-Funktion (Netmon. h)
+title: SetMacAddressInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 2183f5635dcdb15362a86a77ae2b3c109c71dbd5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20ed4a0358bc0aecada66858f9814bce94252ff9d705c971be947ca5af788ab3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364058"
 ---
-# <a name="setmacaddressinblob-function"></a>Setmacaddressinblob-Funktion
+# <a name="setmacaddressinblob-function"></a>SetMacAddressInBlob-Funktion
 
-Die **setmacaddressinblob** -Funktion legt die angeforderte Mac-Adresse eines BLOBs fest.
+Die **SetMacAddressInBlob-Funktion legt** die angeforderte MAC-Adresse eines BLOB fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,46 +43,46 @@ DWORD SetMacAddressInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
-Handle für das festzulegende BLOB.
+Handle für das blob, das festgelegt wird.
 
 </dd> <dt>
 
-*pownername* \[ in\]
+*pOwnerName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen des BLOB- **Besitzers** , der festgelegt wird.
+Zeiger auf den **BLOB-Besitzernamen,** der festgelegt wird.
 
 </dd> <dt>
 
-*pcategoryname* \[ in\]
+*pCategoryName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen der BLOB- **Kategorie** , die festgelegt wird.
+Zeiger auf den namen der **BLOB-Kategorie,** der festgelegt wird.
 
 </dd> <dt>
 
-*ptagname* \[ in\]
+*pTagName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den festzulegenden BLOB- **Tagnamen** .
+Zeiger auf den **BLOB-Tagnamen,** der festgelegt wird.
 
 </dd> <dt>
 
-*pmacaddress* \[ in\]
+*pMacAddress* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Mac-Adresse des festgelegten BLOBs.
+Zeiger auf die MAC-Adresse des festgelegten BLOBs.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,41 +92,41 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getmacaddressfromblob](getmacaddressfromblob.md)
+[GetMacAddressFromBlob](getmacaddressfromblob.md)
 </dt> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Setclassidinblob](setclassidinblob.md)
+[SetClassIDInBlob](setclassidinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setnetworkinfoinblob](setnetworkinfoinblob.md)
+[SetNetworkInfoInBlob](setnetworkinfoinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Setnpptriggerinblob](setnpptriggerinblob.md)
+[SetNPPTriggerInBlob](setnpptriggerinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

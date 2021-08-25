@@ -1,9 +1,9 @@
 ---
-title: TB_SETBITMAPSIZE Meldung (kommstrg. h)
-description: Legt die Größe der bitzugeordneten Bilder fest, die einer Symbolleiste hinzugefügt werden sollen.
+title: TB_SETBITMAPSIZE Meldung (Commctrl.h)
+description: Legt die Größe der Bitmapbilder fest, die einer Symbolleiste hinzugefügt werden sollen.
 ms.assetid: 20b99cd8-6ef1-4037-92d2-c64a1003b5fe
 keywords:
-- Windows-Steuerelemente für TB_SETBITMAPSIZE Meldung
+- TB_SETBITMAPSIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d9c8a717151041fb83b7a0206acf570a6ad7f76
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: db2a26dacd63c00d1dd793163facce0ab4a45302e85dde11522f8844977eb0ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167973"
 ---
-# <a name="tb_setbitmapsize-message"></a>TB \_ setbitmapsize-Meldung
+# <a name="tb_setbitmapsize-message"></a>TB \_ SETBITMAPSIZE-Nachricht
 
-Legt die Größe der bitzugeordneten Bilder fest, die einer Symbolleiste hinzugefügt werden sollen.
+Legt die Größe der Bitmapbilder fest, die einer Symbolleiste hinzugefügt werden sollen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,17 +39,17 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die Breite der bitzugeordneten Bilder in Pixel an. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die Höhe der bitzugeordneten Bilder in Pixel an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die Breite der Bitmapbilder in Pixel an. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die Höhe der Bitmapbilder in Pixel an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Größe kann nur festgelegt werden, bevor der Symbolleiste Bitmaps hinzugefügt werden. Wenn eine Anwendung die Bitmapgröße nicht explizit festlegt, ist die Größe standardmäßig 16 x 15 Pixel.
+Die Größe kann nur vor dem Hinzufügen von Bitmaps zur Symbolleiste festgelegt werden. Wenn eine Anwendung die Bitmapgröße nicht explizit angibt, wird die Größe standardmäßig auf 16 x 15 Pixel festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die Größe kann nur festgelegt werden, bevor der Symbolleiste Bitmaps hinzugef�
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

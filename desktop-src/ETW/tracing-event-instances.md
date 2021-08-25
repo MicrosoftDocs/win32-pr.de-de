@@ -1,25 +1,25 @@
 ---
-description: Klassische Anbieter verwenden die traceeventinstance-Funktion, um Ereignisse zu verfolgen, die Teil einer einzelnen Transaktion sind. Sie können diese Funktion auch verwenden, um übergeordnete/untergeordnete Ereignisse zu verfolgen.
+description: Klassische Anbieter verwenden die TraceEventInstance-Funktion, um Ereignisse nachzuverfolgen, die Teil einer einzelnen Transaktion sind. Sie können diese Funktion auch zum Nachverfolgen von übergeordneten/untergeordneten Ereignissen verwenden.
 ms.assetid: 246e9443-3120-49bf-a6e3-64dddba348fa
 title: Schreiben verwandter Ereignisse in einem klassischen Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 771b08a66625d5cd6e723fbc2e12eed87bd1d434
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41443c0a05bd94e25ae4ca6a4549671c6aa0682b848660ca31683bb4bf8b75b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813812"
 ---
 # <a name="writing-related-events-in-a-classic-provider"></a>Schreiben verwandter Ereignisse in einem klassischen Anbieter
 
-[Klassische](about-event-tracing.md) Anbieter verwenden die [**traceeventinstance**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) -Funktion, um Ereignisse zu verfolgen, die Teil einer einzelnen Transaktion sind. Sie können diese Funktion auch verwenden, um übergeordnete/untergeordnete Ereignisse zu verfolgen.
+[Klassische](about-event-tracing.md) Anbieter verwenden die [**TraceEventInstance-Funktion,**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) um Ereignisse nachzuverfolgen, die Teil einer einzelnen Transaktion sind. Sie können diese Funktion auch zum Nachverfolgen von übergeordneten/untergeordneten Ereignissen verwenden.
 
-Bevor Sie die [**traceeventinstance**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) -Funktion aufrufen, müssen Sie zuerst die [**createtraceinstanceid-**](/windows/win32/api/evntrace/nf-evntrace-createtraceinstanceid) Funktion aufrufen, um einen Transaktions Bezeichner zu erhalten. Diese Funktion generiert einen eindeutigen Transaktions Bezeichner und ordnet ihn einem registrierten Klassen-GUID-Handle zu. Die Handles für registrierte Klassen-GUIDs sind in den **reghandle** -Membern von [**Ablaufverfolgungs- \_ GUID- \_ Registrierungs**](/windows/win32/api/evntrace/ns-evntrace-trace_guid_registration) Strukturen nach dem Aufrufen der [**registertraceguids**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) -Funktion verfügbar. Der Transaktions Bezeichner wird in den **InstanceId-** Member einer [**\_ ereignisinstanzinfo \_**](/windows/win32/api/evntrace/ns-evntrace-event_instance_info) -Struktur eingefügt, die Sie an die Funktion " **kreatetraceinstanceid** " übergeben.
+Vor dem Aufrufen der [**TraceEventInstance-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) müssen Sie zunächst die [**CreateTraceInstanceId-Funktion**](/windows/win32/api/evntrace/nf-evntrace-createtraceinstanceid) aufrufen, um einen Transaktionsbezeichner abzurufen. Diese Funktion generiert einen eindeutigen Transaktionsbezeichner und ordnet ihn einem registrierten Klassen-GUID-Handle zu. Die Handles für registrierte Klassen-GUIDs sind in den **RegHandle-Membern** der [**TRACE \_ GUID \_ REGISTRATION-Strukturen**](/windows/win32/api/evntrace/ns-evntrace-trace_guid_registration) verfügbar, nachdem die [**RegisterTraceGuids-Funktion**](/windows/win32/api/evntrace/nf-evntrace-registertraceguidsa) aufgerufen wurde. Der Transaktionsbezeichner wird im **InstanceId-Member** einer [**EVENT INSTANCE \_ \_ INFO-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_instance_info) platziert, die Sie an die **CreateTraceInstanceId-Funktion** übergeben.
 
-Die [**Ereignis \_ Instanz- \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_instance_header) Struktur, die an die [**traceeventinstance**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) -Funktion weitergegeben wird, ähnelt der Ereignis-Ablauf Verfolgungs [**\_ \_ Header**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) -Struktur (siehe Ablauf [Verfolgungs Ereignisse](tracing-events.md)), mit der Ausnahme, dass Sie zusätzliche Informationen zu-Instanzen enthält und keinen **GUID** -Member enthält.
+Die [**EVENT \_ INSTANCE \_ HEADER-Struktur,**](/windows/win32/api/evntrace/ns-evntrace-event_instance_header) die an die [**TraceEventInstance-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) übergeben wird, ähnelt der [**EVENT TRACE \_ \_ HEADER-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) (siehe [Ablaufverfolgungsereignisse](tracing-events.md)), enthält jedoch zusätzliche Informationen im Zusammenhang mit -Instanzen und enthält keinen **GUID-Member.**
 
-Ereignis Instanzen können verwendet werden, um eine hierarchische Beziehung zwischen Ereignissen herzustellen. Die [**traceeventinstance**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) -Funktion akzeptiert instanzspezifische Informationen aus zwei Ereignis Instanzen. Der *pinstinfo* -Parameter verweist auf die [**Ereignis \_ Instanz- \_ Informations**](/windows/win32/api/evntrace/ns-evntrace-event_instance_info) Struktur der Ereignis Instanz, und der *pparameentinstinfo* -Parameter verweist auf die **ereignisinstanzinfo \_ \_** -Struktur einer übergeordneten Ereignis Instanz. Die Definition einer "übergeordneten" Ereignis Instanz ist von der Anwendung definiert. das übergeordnete Element kann eine beliebige Instanz sein, die bereits generiert wurde.
+Ereignisinstanzen können verwendet werden, um eine hierarchische Beziehung zwischen Ereignissen herzustellen. Die [**TraceEventInstance-Funktion**](/windows/win32/api/evntrace/nf-evntrace-traceeventinstance) akzeptiert instanzspezifische Informationen von zwei Ereignisinstanzen. Der *pInstInfo-Parameter* verweist auf die [**EVENT INSTANCE \_ \_ INFO-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_instance_info) der Ereignisinstanz, und der *pParentInstInfo-Parameter* verweist auf die **EVENT INSTANCE \_ \_ INFO-Struktur** einer übergeordneten Ereignisinstanz. Die Definition einer "übergeordneten" Ereignisinstanz ist anwendungsdefiniert. das übergeordnete Element kann eine beliebige Instanz sein, die bereits generiert wurde.
 
  
 

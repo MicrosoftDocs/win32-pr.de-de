@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 25bf778d9cccce20c736c5f8b83e6af9754ac933
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 750a33241358aee924ed3f91491185117a77a548a87bdfc5514d59fe4798a42c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118365865"
 ---
 # <a name="idelaydcstart-method"></a>IDelaydC::Start-Methode
 
@@ -59,18 +59,18 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung befindet sich in einem angehaltenen Zustand und muss beendet werden, bevor sie neu gestartet werden kann. Rufen [**Sie IDelaydC::Stop auf,**](idelaydc-stop.md) um die Erfassung zu beenden. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.<br/> |
 | <dl> <dt>**NMERR-ERFASSUNG \_**</dt> </dl>       | Die Erfassung wurde bereits gestartet.<br/>                                                                                                                                                                                 |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [**Sie IDelaydC::Connect auf, um**](idelaydc-connect.md) eine Verbindung mit dem Netzwerk herzustellen.<br/>                                                                                          |
-| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>    | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [**IDelaydC::Connect-Methode.**](idelaydc-connect.md)<br/>                                                                                                      |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [**Sie IDelaydC::Verbinden**](idelaydc-connect.md) auf, um eine Verbindung mit dem Netzwerk herzustellen.<br/>                                                                                          |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>    | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [**IDelaydC::Verbinden-Methode.**](idelaydc-connect.md)<br/>                                                                                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Speicherort der [*Erfassungsdatei*](c.md) wird in Ihrer Windows-Registrierung angegeben, aber Sie können Netzwerkmonitor verwenden, um den Speicherort der Datei zu ändern.
 
-Um die Erfassung **mithilfe von IDelaydC::Start** und [**IDelaydC::Stop**](idelaydc-stop.md)neu zu starten, müssen Sie die [**IDelaydC::Configure-Methode**](idelaydc-configure.md) aufrufen, um die Verbindung jedes Mal neu zu konfigurieren, wenn Sie die **IDelaydC::Start-Methode** aufrufen, um die Erfassung von Daten neu zu starten. Wenn Sie die Erfassung mit diesen drei Methoden starten und beenden, wird bei jedem Start der Erfassung eine neue Erfassungsdatei erstellt.
+Um die Erfassung **mithilfe von IDelaydC::Start und** [**IDelaydC::Stop**](idelaydc-stop.md)neu zu starten, müssen Sie die [**IDelaydC::Configure-Methode**](idelaydc-configure.md) aufrufen, um die Verbindung jedes Mal neu zu konfigurieren, wenn Sie die **IDelaydC::Start-Methode** aufrufen, um die Erfassung von Daten neu zu starten. Wenn Sie die Erfassung mit diesen drei Methoden starten und beenden, wird bei jedem Start der Erfassung eine neue Erfassungsdatei erstellt.
 
 > [!Note]  
 > Sie können die Erfassung auch mithilfe der [**Methoden IDelaydC::P ause und**](idelaydc-pause.md) [**IDelaydC::Resume**](idelaydc-resume.md) starten und beenden. Wenn Sie diese beiden Methoden verwenden, werden die erfassten Daten in derselben Erfassungsdatei gespeichert.
@@ -81,7 +81,7 @@ Um die Erfassung **mithilfe von IDelaydC::Start** und [**IDelaydC::Stop**](idela
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -100,7 +100,7 @@ Um die Erfassung **mithilfe von IDelaydC::Start** und [**IDelaydC::Stop**](idela
 [**IDelaydC::Configure**](idelaydc-configure.md)
 </dt> <dt>
 
-[**IDelaydC::Connect**](idelaydc-connect.md)
+[**IDelaydC::Verbinden**](idelaydc-connect.md)
 </dt> <dt>
 
 [**IDelaydC::P ause**](idelaydc-pause.md)

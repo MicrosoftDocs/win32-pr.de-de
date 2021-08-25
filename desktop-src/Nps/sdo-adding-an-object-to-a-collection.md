@@ -14,7 +14,7 @@ ms.locfileid: "118362262"
 ---
 # <a name="adding-an-object-to-a-collection"></a>Hinzufügen eines Objekts zu einer Auflistung
 
-Der folgende Code fügt der SAMMLUNG DER IAS-Richtlinien eine neue Richtlinie hinzu. Die Variable pClientsCollection verweist auf eine [**ISdoCollection-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) für die Auflistung. Informationen zum Abrufen des Sammlungsobjekts finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection) Sammlung.
+Mit dem folgenden Code wird der Sammlung der IAS-Richtlinien eine neue Richtlinie hinzufügt. Die Variable pClientsCollection verweist auf eine [**ISdoCollection-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) für die Auflistung. Informationen [zum Abrufen des Auflistungsobjekts](/windows/desktop/Nps/sdo-retrieving-a-collection) finden Sie unter Abrufen einer Auflistung.
 
 
 ```C++

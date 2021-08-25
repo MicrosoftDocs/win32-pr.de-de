@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentOutOfThreadsException-Konstruktor'
+description: 'Weitere Informationen zu: EsentOutOfThreadsException-Konstruktor'
 title: EsentOutOfThreadsException-Konstruktor
 TOCTitle: 'EsentOutOfThreadsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfThreadsException.#ctor
@@ -52,7 +52,7 @@ Dim instance As New EsentOutOfThreadsException()
 public EsentOutOfThreadsException()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

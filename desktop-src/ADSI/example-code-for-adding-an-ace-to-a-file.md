@@ -1,6 +1,6 @@
 ---
 title: Beispielcode zum Hinzufügen eines ACE zu einer Datei
-description: Das folgende Codebeispiel zeigt, wie Sie die IADsSecurityUtility-Schnittstelle verwenden, um einer Datei einen ACE hinzuzufügen.
+description: Das folgende Codebeispiel zeigt, wie Sie mithilfe der IADsSecurityUtility-Schnittstelle einer Datei einen ACE hinzufügen.
 ms.assetid: d47d3ebe-cc14-412d-be27-841e25b43c3a
 ms.tgt_platform: multiple
 keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "118428423"
 ---
 # <a name="example-code-for-adding-an-ace-to-a-file"></a>Beispielcode zum Hinzufügen eines ACE zu einer Datei
 
-Das folgende Codebeispiel zeigt, wie Sie die [**IADsSecurityUtility-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssecurityutility) verwenden, um einer Datei einen ACE hinzuzufügen.
+Das folgende Codebeispiel zeigt, wie Sie mithilfe der [**IADsSecurityUtility-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssecurityutility) einer Datei einen ACE hinzufügen.
 
 
 ```VB

@@ -1,9 +1,9 @@
 ---
 title: TaskVariables.GetInput-Methode
-description: Ruft für die Skripterstellung die Eingabevariablen für eine Aufgabe ab.
+description: Für die Skripterstellung ruft die Eingabevariablen für einen Task ab.
 ms.assetid: 6e4cb7a2-5bd9-4384-8b9e-931b70018544
 keywords:
-- GetInput-Methode Taskplaner
+- GetInput-Taskplaner
 - GetInput-Methode Taskplaner , TaskVariables-Objekt
 - TaskVariables-Objekt Taskplaner , GetInput-Methode
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "118354735"
 ---
 # <a name="taskvariablesgetinput-method"></a>TaskVariables.GetInput-Methode
 
-Ruft für die Skripterstellung die Eingabevariablen für eine Aufgabe ab. Diese Methode ist nicht implementiert.
+Für die Skripterstellung ruft die Eingabevariablen für einen Task ab. Diese Methode ist nicht implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ TaskVariables.GetInput( _
 
 <dl> <dt>
 
-*Eingabe* \[ out\]
+*eingabe* \[ out\]
 </dt> <dd>
 
 Die Eingabevariablen für eine Aufgabe.
@@ -59,14 +59,14 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

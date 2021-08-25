@@ -15,7 +15,7 @@ ms.locfileid: "118551344"
 ---
 # <a name="accesspermission"></a>AccessPermission
 
-Beschreibt die Access Control List (ACL) der Prinzipale, die auf Instanzen dieser Klasse zugreifen können. Diese ACL wird nur von Anwendungen verwendet, die [**CoInitializeSecurity nicht aufrufen.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)
+Beschreibt die Access Control List (ACL) der Prinzipale, die auf Instanzen dieser Klasse zugreifen können. Diese ACL wird nur von Anwendungen verwendet, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)nicht aufrufen.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
@@ -27,9 +27,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist ein **REG \_ BINARY-Wert.** Es enthält Daten, die die Access Control List (ACL) der Prinzipale beschreiben, die auf Instanzen dieser Klasse zugreifen können. Beim Empfang einer Anforderung zum Herstellen einer Verbindung mit einem vorhandenen Objekt dieser Klasse wird die ACL von der Anwendung überprüft, die beim Identitätswechsel des Aufrufers aufgerufen wird. Wenn bei der Zugriffsüberprüfung ein Fehler auftritt, ist die Verbindung nicht mehr verfügbar. Wenn dieser benannte Wert nicht vorhanden ist, wird die [**DefaultAccessPermission-ACL**](defaultaccesspermission.md) getestet, um zu bestimmen, ob die Verbindung zugelassen werden soll.
+Dies ist ein **REG \_ BINARY-Wert.** Sie enthält Daten, die die Access Control List (ACL) der Prinzipale beschreiben, die auf Instanzen dieser Klasse zugreifen können. Nach dem Empfang einer Anforderung zum Herstellen einer Verbindung mit einem vorhandenen Objekt dieser Klasse wird die ACL von der Anwendung überprüft, die aufgerufen wird, während sie die Identität des Aufrufers annimmt. Wenn bei der Zugriffsüberprüfung ein Fehler auftritt, ist die Verbindung nicht zulässig. Wenn dieser benannte Wert nicht vorhanden ist, wird die [**DefaultAccessPermission-ACL**](defaultaccesspermission.md) getestet, um zu bestimmen, ob die Verbindung zugelassen werden soll.
 
-Für Anwendungen, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) nicht aufrufen oder die [**IGlobalOptions-Schnittstelle**](/windows/win32/api/objidlbase/nn-objidlbase-iglobaloptions) nicht verwenden, um die AppID anzugeben, muss die ausführbare Datei der Binärdatei der Anwendung der AppID der Anwendung zugeordnet werden, wie in [**AppID beschrieben.**](appid.md) Dies ist erforderlich, damit COM die AppID der Anwendung finden kann.
+Für Anwendungen, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) nicht aufrufen oder die [**IGlobalOptions-Schnittstelle**](/windows/win32/api/objidlbase/nn-objidlbase-iglobaloptions) nicht verwenden, um die AppID anzugeben, muss die ausführbare Datei der Binärdatei der Anwendung der AppID der Anwendung zugeordnet werden, wie in [**AppID**](appid.md)beschrieben. Dies ist erforderlich, damit COM die AppID der Anwendung finden kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

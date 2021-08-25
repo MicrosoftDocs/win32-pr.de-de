@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentMissingLogFileException-Methoden'
+description: 'Weitere Informationen finden Sie unter: EsentMissingLogFileException-Methoden'
 title: 'EsentMissingLogFileException-Methoden '
 TOCTitle: EsentMissingLogFileException methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.EsentMissingLogFileException
@@ -16,8 +16,8 @@ ms.locfileid: "118494194"
 ---
 # <a name="esentmissinglogfileexception-methods"></a>EsentMissingLogFileException-Methoden 
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Der [EsentMissingLogFileException-Typ](./esentmissinglogfileexception-class.md) macht die folgenden Member verfügbar.
 
@@ -45,7 +45,7 @@ Der [EsentMissingLogFileException-Typ](./esentmissinglogfileexception-class.md) 
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -60,7 +60,7 @@ Der [EsentMissingLogFileException-Typ](./esentmissinglogfileexception-class.md) 
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -70,7 +70,7 @@ Der [EsentMissingLogFileException-Typ](./esentmissinglogfileexception-class.md) 
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -78,7 +78,7 @@ Der [EsentMissingLogFileException-Typ](./esentmissinglogfileexception-class.md) 
 
 Oben
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

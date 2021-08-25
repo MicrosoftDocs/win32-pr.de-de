@@ -1,5 +1,5 @@
 ---
-description: Ruft den Zeitraum des Animationssatzes ab.
+description: Ruft den Zeitraum des Animationssets ab.
 ms.assetid: 0bb19ec1-c918-44b6-83b0-4fdbb4e1a485
 title: ID3DXAnimationSet::GetPeriod-Methode (D3dx9anim.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118522329"
 ---
 # <a name="id3dxanimationsetgetperiod-method"></a>ID3DXAnimationSet::GetPeriod-Methode
 
-Ruft den Zeitraum des Animationssatzes ab.
+Ruft den Zeitraum des Animationssets ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Zeitraum des Animationssatzes.
+Zeitraum des Animationssets.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Zeitraum ist der Zeitraum, in dem die Animationsschlüsselrahmen gültig sind. Bei Schleifenanimationen ist dies der Zeitraum der Schleife. Die Zeiteinheiten, in denen die Keyframes angegeben werden (z. B. Sekunden), werden von der Anwendung bestimmt.
+Der Zeitraum ist der Zeitraum, in dem die Animations-Keyframes gültig sind. Bei Schleifenanimationen ist dies der Zeitraum der Schleife. Die Zeiteinheiten, in denen die Keyframes angegeben werden (z. B. Sekunden), werden von der Anwendung bestimmt.
 
 ## <a name="requirements"></a>Anforderungen
 

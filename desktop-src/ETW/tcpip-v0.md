@@ -49,7 +49,7 @@ Die **TcpIp \_ V0-Klasse** definiert keine Member.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

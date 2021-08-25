@@ -1,11 +1,11 @@
 ---
 title: ms-TS-Broken-Connection-Action-Attribut
-description: Terminal services session Broken Connection Action gibt die Aktion an, die beim Erreichen eines Sitzungslimits für Terminaldienste erforderlich ist.
+description: Terminal services session Broken Connection Action gibt die Aktion an, die bei Erreichen eines Sitzungslimits für Terminaldienste ergriffen werden soll.
 ms.assetid: a3c1556d-2de7-4945-aa91-7ef8d0ac8cd0
 ms.tgt_platform: multiple
 keywords:
 - MS-TS-Broken-Connection-Action-Attribut AD-Schema
-- AD-Schema des msTSBrokenConnectionAction-Attributs
+- MSTSBrokenConnectionAction-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118424775"
 ---
 # <a name="ms-ts-broken-connection-action-attribute"></a>ms-TS-Broken-Connection-Action-Attribut
 
-Terminal services session Broken Connection Action gibt die Aktion an, die beim Erreichen eines Sitzungslimits für Terminaldienste erforderlich ist.
+Terminal services session Broken Connection Action gibt die Aktion an, die bei Erreichen eines Sitzungslimits für Terminaldienste ergriffen werden soll.
 
 
 
@@ -35,8 +35,8 @@ Terminal services session Broken Connection Action gibt die Aktion an, die beim 
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1985              |
-| System-Id-Guid    | 1cf41bba-5604-463e-94d6-1a1287b72ca3 |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| System-ID-GUID    | 1cf41bba-5604-463e-94d6-1a1287b72ca3 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -55,7 +55,7 @@ Terminal services session Broken Connection Action gibt die Aktion an, die beim 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | True                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -76,7 +76,7 @@ Terminal services session Broken Connection Action gibt die Aktion an, die beim 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | True                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -97,7 +97,7 @@ Terminal services session Broken Connection Action gibt die Aktion an, die beim 
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Is-Single-Valued       | True                              |
+| Ist einwertig       | True                              |
 | Ist indiziert             | False                             |
 | Im globalen Katalog      | False                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |

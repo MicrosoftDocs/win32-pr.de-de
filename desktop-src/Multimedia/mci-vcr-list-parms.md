@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_LIST_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Listen \_ Parameter enthält Parameter für den MCI- \_ Listen Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_LIST_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ LIST \_ PARMS-Struktur enthält Parameter für den MCI \_ LIST-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: 88725599-8057-4787-96e6-49b4a651c894
 keywords:
 - MCI_VCR_LIST_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d3e7a2eae67ebc7148b7ff424361f16554a435c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8eeb74aeee254ab050d394dbf250c037d00d10d51fe872052dd5d36164b2c3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137981"
 ---
-# <a name="mci_vcr_list_parms-structure"></a>Struktur von MCI- \_ VCR- \_ Listen- \_ Parametern
+# <a name="mci_vcr_list_parms-structure"></a>MCI \_ VCR \_ LIST \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Listen \_** Parameter enthält Parameter für den [**MCI- \_ Listen**](mci-list.md) Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ LIST \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ LIST-Befehl**](mci-list.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct tagMCI_VCR_LIST_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwreturn**
+**dwReturn**
 </dt> <dd>
 
-Der Puffer für die zurückgegebenen Informationen.
+Puffer für zurückgegebene Informationen.
 
 </dd> <dt>
 
-**dwnumber**
+**dwNumber**
 </dt> <dd>
 
-Die Anzahl der Video-oder Audioeingaben von VCR.
+Anzahl der Video- oder Audioeingaben des VCR.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -83,13 +83,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Liste**](mci-list.md)
+[**\_MCI-LISTE**](mci-list.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

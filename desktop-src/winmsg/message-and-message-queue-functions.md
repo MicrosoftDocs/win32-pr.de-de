@@ -1,17 +1,17 @@
 ---
-description: Nachrichtenfunktionen (Windows und Meldungen)
+description: Nachrichtenfunktionen (Windows und Nachrichten)
 ms.assetid: 753d1c5b-e824-4fc3-b731-ae9cb16c0e16
-title: Nachrichtenfunktionen (Windows und Meldungen)
+title: Nachrichtenfunktionen (Windows und Nachrichten)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d44ebb7227cf6a97c9daed6eee3db69042a7956
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3b0eeda417e82921c04278236d9e065694f8562990b57a9d93fb206247df33b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108100398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118705796"
 ---
-# <a name="message-functions-windows-and-messages"></a>Nachrichtenfunktionen (Windows und Meldungen)
+# <a name="message-functions-windows-and-messages"></a>Nachrichtenfunktionen (Windows und Nachrichten)
 
 -   [**BroadcastSystemMessage**](/windows/win32/api/winuser/nf-winuser-broadcastsystemmessage)
 -   [**BroadcastSystemMessageEx**](/windows/win32/api/winuser/nf-winuser-broadcastsystemmessageexa)

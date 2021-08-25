@@ -18,16 +18,16 @@ ms.locfileid: "118587707"
 ---
 # <a name="query-schema-elements"></a>Abfrageschemaelemente
 
-Im Folgenden sind die Elemente angegeben, die vom Abfrageschema definiert werden. Dieser Abschnitt enthält die Namen der Elemente, die Sie in Ihrer Abfrage verwenden würden. Um jedoch die Details für jedes Element abzurufen, sehen Sie sich den komplexen Typ an, der das Element enthält.
+Im Folgenden sind die Elemente angegeben, die vom Abfrageschema definiert werden. Dieser Abschnitt enthält die Namen der Elemente, die Sie in Ihrer Abfrage verwenden würden. Um jedoch die Details für jedes Element zu erhalten, sehen Sie sich den komplexen Typ an, der das Element enthält.
 
 
 
-| Element                                                                  | BESCHREIBUNG                                                                                                                     |
+| Element                                                                  | Beschreibung                                                                                                                     |
 |--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | [**QueryList**](queryschema-querylist-element.md)                       | Der Stammknoten der Abfrage.<br/>                                                                                          |
-| [**Query (QueryListType)**](queryschema-query-querylisttype-element.md) | Definiert eine Reihe von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Resultset einzuschließen oder aus dem Resultset auszuschließen.<br/> |
-| [**Select (QueryType)**](queryschema-select-querytype-element.md)       | Eine XPath-Abfrage, die die Ereignisse identifiziert, die in das Abfrageresultset aufgenommen werden sollen.<br/>                                        |
-| [**Suppress (QueryType)**](queryschema-suppress-querytype-element.md)   | Eine XPath-Abfrage, die die Ereignisse identifiziert, die aus dem Abfrageresultset ausgeschlossen werden sollen.<br/>                                      |
+| [**Abfrage (QueryListType)**](queryschema-query-querylisttype-element.md) | Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Ergebnisset ein- oder auszuschließen.<br/> |
+| [**Auswählen (QueryType)**](queryschema-select-querytype-element.md)       | Eine XPath-Abfrage, die die Ereignisse identifiziert, die in das Abfrage-Resultset enthalten sein müssen.<br/>                                        |
+| [**Suppress (QueryType)**](queryschema-suppress-querytype-element.md)   | Eine XPath-Abfrage, die die Ereignisse identifiziert, die aus dem Abfrageergebnissatz ausgeschlossen werden.<br/>                                      |
 
 
 

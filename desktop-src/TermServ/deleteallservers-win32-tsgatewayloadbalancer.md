@@ -1,12 +1,12 @@
 ---
-title: DeleteAllServers-Methode der Win32_TSGatewayLoadBalancer Klasse
-description: Löscht alle Remotedesktop gateway (RD Gateway) Lastenausgleichsserver, die an der Lastenausgleichsfarm teilnehmen.
+title: DeleteAllServers-Methode der Win32_TSGatewayLoadBalancer-Klasse
+description: Löscht alle Remotedesktop Gateway-Lastenausgleichsserver (RD Gateway), die an der Lastenausgleichsfarm teilnehmen.
 ms.assetid: 091ed866-8f2b-47b8-990b-e9a6d7e1194c
 ms.tgt_platform: multiple
 keywords:
-- DeleteAllServers-Remotedesktopdienste
+- DeleteAllServers-Methode Remotedesktopdienste
 - DeleteAllServers-Methode Remotedesktopdienste , Win32_TSGatewayLoadBalancer-Klasse
-- Win32_TSGatewayLoadBalancer klasse Remotedesktopdienste , DeleteAllServers-Methode
+- Win32_TSGatewayLoadBalancer-Klasse Remotedesktopdienste , DeleteAllServers-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "118131042"
 ---
 # <a name="deleteallservers-method-of-the-win32_tsgatewayloadbalancer-class"></a>DeleteAllServers-Methode der Win32 \_ TSGatewayLoadBalancer-Klasse
 
-Löscht alle Remotedesktop gateway (RD Gateway) Lastenausgleichsserver, die an der Lastenausgleichsfarm teilnehmen.
+Löscht alle Remotedesktop Gateway-Lastenausgleichsserver (RD Gateway), die an der Lastenausgleichsfarm teilnehmen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,13 +59,13 @@ Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
 | MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

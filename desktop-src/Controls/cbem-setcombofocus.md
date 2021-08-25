@@ -3,7 +3,7 @@ title: CBEM_SETCOMBOFOCUS-Nachricht
 description: Legt den Fokus auf das angegebene Kombinationsfeld fest.
 ms.assetid: 156cc6ac-2cc6-457f-b57a-55372eb9fadb
 keywords:
-- CBEM_SETCOMBOFOCUS message Windows Controls
+- CBEM_SETCOMBOFOCUS meldungssteuerelemente Windows
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 405869c4c508e361cd79cbbe296dc2ea3c351abc8c0f12f9b8b22fd42f4b5851

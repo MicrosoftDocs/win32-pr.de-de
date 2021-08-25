@@ -77,7 +77,7 @@ Die **Win32 \_ TSNetworkAdapterSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                     | BESCHREIBUNG                                                                                              |
+| Methode                                                                                     | Beschreibung                                                                                              |
 |:-------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|
 | [**Wählen SieAllNetworkAdapters aus.**](win32-tsnetworkadaptersetting-selectallnetworkadapters.md) | Wählt alle Netzwerkadapter aus.<br/>                                                                 |
 | [**Wählen SieNetworkAdapterIP aus.**](win32-tsnetworkadaptersetting-selectnetworkadapterip.md)     | Wählt einen Netzwerkadapter basierend auf der IP-Adresse des Adapters aus.<br/>                                  |
@@ -352,7 +352,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -368,7 +368,7 @@ Diese Eigenschaft wird von [**Win32 \_ TerminalSetting geerbt.**](win32-terminal
 
 Beachten Sie, dass Winstations, die der Konsolensitzung zugeordnet sind, nicht auf die Methoden und Eigenschaften dieser Klasse zugreifen können. Wenn versucht wird, dies zu tun, indem "Console" als Wert der TerminalName-Eigenschaft angegeben wird, geben Methoden dieses Objekts **WBEM \_ E NOT SUPPORTED \_ \_ zurück.** Dieser Fehlercode wird auch zurückgegeben, wenn eine Fensterstation versucht, Methoden dieses Objekts auf aufruft, um die Sicherheitseigenschaften der Konten LocalSystem, LocalService oder NetworkService hinzuzufügen oder zu ändern.
 
-Um eine Verbindung mit dem Namespace "Root \\ CIMV2 TerminalServices" herzustellen, muss die \\ Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
+Um eine Verbindung mit dem Namespace "Root \\ CIMV2 \\ TerminalServices" herzustellen, muss die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -379,7 +379,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -395,7 +395,7 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
