@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. VerticalAlignment
-description: Mit dem VerticalAlignment-Attribut wird ein Wert angegeben oder abgerufen, der die vertikale Platzierung des-Steuer Elements angibt, wenn die Sicht oder die übergeordnete unter Ansicht gestreckt wird.
+title: AmbientAttributes.verticalAlignment
+description: Das verticalAlignment-Attribut gibt einen Wert an, der die vertikale Platzierung des Steuerelements angibt, wenn view oder die übergeordnete UNTERANSICHT gestreckt wird, oder ruft einen Wert ab.
 ms.assetid: 08ef483a-58ee-4a35-9973-2567076d07f7
 keywords:
-- Ambientattribute. VerticalAlignment-Fenster Media Player
+- AmbientAttributes.verticalAlignment Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88de2f5f54b95b14827fabb2bafb89ff6974966b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a116a8883fe1d591f5c68050e4a5ab738a3cf913322ae7c671c71a507f2c924d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956390"
 ---
-# <a name="ambientattributesverticalalignment"></a>Ambientattribute. VerticalAlignment
+# <a name="ambientattributesverticalalignment"></a>AmbientAttributes.verticalAlignment
 
-Mit dem **VerticalAlignment** -Attribut wird ein Wert angegeben oder abgerufen, der die vertikale Platzierung des-Steuer Elements angibt, wenn die **Sicht** oder die übergeordnete **unter Ansicht** gestreckt wird.
+Das **verticalAlignment-Attribut** gibt einen Wert an, der die vertikale Platzierung des Steuerelements angibt, wenn **view** oder die übergeordnete **UNTERANSICHT** gestreckt wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.verticalAlignment
@@ -29,26 +29,26 @@ Mit dem **VerticalAlignment** -Attribut wird ein Wert angegeben oder abgerufen, 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
 
 
-| Wert   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                     |
+| Wert   | Beschreibung                                                                                                                                                                                                                                                                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| top     | Standard. Behält die Platzierung des-Steuer Elements relativ zum oberen Rand der **Ansicht** oder übergeordneten **unter Ansicht** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                             |
-| bottom  | Behält die Platzierung des-Steuer Elements relativ zum unteren Rand der **Ansicht** oder übergeordneten **unter Ansicht** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                                   |
-| Zentrum  | Behält die Platzierung des-Steuer Elements relativ zur vertikalen Mitte der **Ansicht** oder übergeordneten **unter Ansicht** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                          |
-| strecken | Verwaltet die Platzierung des-Steuer Elements relativ zum oberen und unteren Rand der Ansicht, wenn die Größe geändert wird. Das Steuerelement wird gestreckt, damit es passt, wenn die **Ansicht** oder die übergeordnete **unter Ansicht** gestreckt wird. Das tatsächliche Bild wird nicht vergrößert oder verkleinert, es sei denn, die Größe kann geändert werden, aber der durch Klicken aktivierbare Bereich wächst oder verkleinert, wenn er nicht von einem **clippingimage** festgelegt ist. |
+| top     | Standard. Behält die Platzierung des Steuerelements relativ zum oberen Teil der **ANSICHT** oder übergeordneten **UNTERANSICHT** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                             |
+| bottom  | Behält die Platzierung des Steuerelements relativ zum unteren Rand der **VIEW-** oder übergeordneten **UNTERANSICHT** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                                   |
+| Zentrum  | Behält die Platzierung des Steuerelements relativ zur vertikalen Mitte der **VIEW-** oder übergeordneten **UNTERANSICHT** bei, wenn die Größe der Ansicht geändert wird.                                                                                                                                                                                                          |
+| strecken | Behält die Platzierung des Steuerelements relativ zum oberen und unteren Rand der Ansicht bei, wenn die Größe geändert wird. Das Steuerelement wird gestreckt, damit es passt, **wenn die VIEW-** oder **übergeordnete UNTERANSICHT** gestreckt wird. Das tatsächliche Bild wird nur dann größer oder verkleinert, wenn es in der Größe geändert werden kann, aber der klickbare Bereich wächst oder verkleinert sich, wenn er nicht durch ein **clippingImage-Objekt gebunden ist.** |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **VerticalAlignment** nicht auf "Center" festgelegt ist, behält das Steuerelement seinen ursprünglichen Abstand vom angegebenen Rand oder von beiden Kanten bei Angabe von "Stretch", und die Größe des Steuer Elements kann geändert werden. Wenn das Steuerelement nicht in der Größe geändert werden kann und "Stretch" angegeben ist, wird stattdessen der durch Klicken aktivierbare Bereich gestreckt.
+Sofern **verticalAlignment** nicht auf "center" festgelegt ist, behält das Steuerelement seinen ursprünglichen Abstand vom angegebenen Rand oder von beiden Kanten bei, wenn "stretch" angegeben ist und die Größe des Steuerelements geändert werden kann. Wenn die Größe des Steuerelements nicht geändert werden kann und "stretch" angegeben ist, wird stattdessen der klickbare Bereich gestreckt.
 
-Sie können eine beliebige Kombination der Attribute **HorizontalAlignment** und **VerticalAlignment** festlegen. Wenn Sie z. b. möchten, dass ein Steuerelement sowohl horizontal als auch vertikal zentriert wird, legen Sie **HorizontalAlignment** auf "Center" und **VerticalAlignment** auf "Center" fest.
+Sie können eine beliebige Kombination der **Attribute horizontalAlignment** und **verticalAlignment** festlegen. Wenn Sie beispielsweise möchten, dass ein Steuerelement sowohl horizontal als auch vertikal zentriert wird, legen Sie **horizontalAlignment** auf "center" und **verticalAlignment** auf "center" fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,18 +56,18 @@ Sie können eine beliebige Kombination der Attribute **HorizontalAlignment** und
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Ambient-Attribute**](ambient-attributes.md)
 </dt> <dt>
 
-[**Ambientattribute. HorizontalAlignment**](ambientattributes-horizontalalignment.md)
+[**AmbientAttributes.horizontalAlignment**](ambientattributes-horizontalalignment.md)
 </dt> </dl>
 
  

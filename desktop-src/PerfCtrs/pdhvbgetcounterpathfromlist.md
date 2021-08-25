@@ -1,7 +1,7 @@
 ---
-description: Die pdhvbgetcounterpathfromlist-Funktion kopiert den Indikator Pfad, auf den der Index-Parameter verweist, aus einer Indikator Pfad Liste, die vom Benutzer beim letzten Aufrufen der pdhvbkreatecounterpathlist-Funktion erstellt wurde.
+description: Die PdhVbGetCounterPathFromList-Funktion kopiert den Indikatorpfad, auf den der Index-Parameter verweist, aus einer Vom Benutzer erstellten Indikatorpfadliste aus dem letzten Aufruf der PdhVbCreateCounterPathList-Funktion.
 ms.assetid: e77a022d-42f2-4c48-acb7-36cb013730dd
-title: Pdhvbgetcounterpathfromlist-Funktion
+title: PdhVbGetCounterPathFromList-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Pdh.dll
-ms.openlocfilehash: 4c5ae4632ede898b7cd323723037ea68d53455b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85760bbcdcc81204340004304be1f0c14bf9bcbbbd7a5b59eebf47a25f7b15c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033780"
 ---
-# <a name="pdhvbgetcounterpathfromlist-function"></a>Pdhvbgetcounterpathfromlist-Funktion
+# <a name="pdhvbgetcounterpathfromlist-function"></a>PdhVbGetCounterPathFromList-Funktion
 
-Die **pdhvbgetcounterpathfromlist** -Funktion kopiert den Indikator Pfad, auf den der Index-Parameter verweist, aus einer *Indikator* Pfad Liste, die vom Benutzer beim letzten Aufrufen der [**pdhvbkreatecounterpathlist**](pdhvbcreatecounterpathlist.md) -Funktion erstellt wurde.
+Die **PdhVbGetCounterPathFromList-Funktion** kopiert den Indikatorpfad, auf den der *Index-Parameter* verweist, aus einer Vom Benutzer erstellten Indikatorpfadliste aus dem letzten Aufruf der [**PdhVbCreateCounterPathList-Funktion.**](pdhvbcreatecounterpathlist.md)
 
 > [!IMPORTANT]
-> Die Funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der Funktionen, die unter [Funktionen von Leistungsindikatoren](performance-counters-functions.md)beschrieben werden.
+> Die funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der unter [Leistungsindikatorfunktionen beschriebenen Funktionen.](performance-counters-functions.md)
 
-Funktion "pdhvbgetcounterpathfromlist" ( \_ ByVal-Index "Long", \_ ByVal-Puffer als Zeichenfolge, \_ ByVal-BufferLength "Long" \_ )
+Funktion PdhVbGetCounterPathFromList( \_ ByVal Index so \_ long, ByVal Buffer as String, \_ ByVal BufferLength as long \_ ) as long
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,27 +36,27 @@ Funktion "pdhvbgetcounterpathfromlist" ( \_ ByVal-Index "Long", \_ ByVal-Puffer 
 *Index* 
 </dt> <dd>
 
-Der Index des abzurufenden Indikator Pfads. Dies muss ein Wert sein, der größer oder gleich 1 und kleiner oder gleich dem Wert ist, der von der [**pdhvbkreatecounterpathlist**](pdhvbcreatecounterpathlist.md) -Funktion zurückgegeben wird.
+Index des abzurufenden Indikatorpfads. Dies muss ein Wert sein, der größer oder gleich 1 und kleiner oder gleich dem Wert ist, der von der [**PdhVbCreateCounterPathList-Funktion zurückgegeben**](pdhvbcreatecounterpathlist.md) wird.
 
 </dd> <dt>
 
 *Buffer* 
 </dt> <dd>
 
-Die dimensionierte und initialisierte Zeichenfolge, die den Indikator Pfad empfängt, der dem Wert des Index Parameters entspricht.
+Dimensionierte und initialisierte Zeichenfolge, die den Indikatorpfad erhält, der dem Wert des Index-Parameters entspricht.
 
 </dd> <dt>
 
 *BufferLength* 
 </dt> <dd>
 
-Maximale Anzahl von Zeichen, die in die Zeichenfolge passt, auf die von Buffer verwiesen wird.
+Maximale Anzahl von Zeichen, die in die Zeichenfolge passen, auf die buffer verweist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt die Anzahl der in den Puffer kopierten Zeichen zurück.
+Die Funktion gibt die Anzahl der in Buffer kopierten Zeichen zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Die-Funktion gibt die Anzahl der in den Puffer kopierten Zeichen zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Bibliothek<br/>                  | <dl> <dt>PDH. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Bibliothek<br/>                  | <dl> <dt>Pdh.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Pdh.dll</dt> </dl> |
 
 
@@ -75,13 +75,13 @@ Die-Funktion gibt die Anzahl der in den Puffer kopierten Zeichen zurück.
 
 <dl> <dt>
 
-[**Pdhvbkreatecounterpathlist**](pdhvbcreatecounterpathlist.md)
+[**PdhVbCreateCounterPathList**](pdhvbcreatecounterpathlist.md)
 </dt> <dt>
 
-[**Pdhvbgetcounterpathelements**](pdhvbgetcounterpathelements.md)
+[**PdhVbGetCounterPathElements**](pdhvbgetcounterpathelements.md)
 </dt> <dt>
 
-[**Pdhvbgetonecounterpath**](pdhvbgetonecounterpath.md)
+[**PdhVbGetOneCounterPath**](pdhvbgetonecounterpath.md)
 </dt> </dl>
 
  

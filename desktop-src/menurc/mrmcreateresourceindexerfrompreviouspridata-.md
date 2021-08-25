@@ -1,9 +1,9 @@
 ---
-title: Mrmkreateresourceingedexerfrompreviouspridata-Funktion (mrmresourceingedexer. h)
-description: Erstellt einen ressourcenindexer aus PRI-Daten, die durch einen vorherigen Aufruf von mrmkreateresourcefileinmemory erstellt wurden. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmCreateResourceIndexerFromPreviousPriData-Funktion (MrmResourceIndexer.h)
+description: Erstellt einen Ressourcenindexer aus PRI-Daten, die durch einen vorherigen Aufruf von MrmCreateResourceFileInMemory erstellt wurden. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: 945ED98C-8D73-404F-ACE3-7DD314FB405A
 keywords:
-- Mrmcreateresourcindexerfrompreviouspridata-Funktions Menüs und weitere Ressourcen
+- MrmCreateResourceIndexerFromPreviousPriData-Funktionsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 152ded28e6158fb80d8157c751026091afb51f65
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d178532a77e01bc724276b40881685e0ec44d5364617fd856ffc55acfd99cf98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952352"
 ---
-# <a name="mrmcreateresourceindexerfrompreviouspridata-function"></a>Mrmkreateresourceingedexerfrompreviouspridata-Funktion
+# <a name="mrmcreateresourceindexerfrompreviouspridata-function"></a>MrmCreateResourceIndexerFromPreviousPriData-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Erstellt einen ressourcenindexer aus PRI-Daten, die durch einen vorherigen Aufruf von [**mrmkreateresourcefileinmemory**](mrmcreateresourcefileinmemory.md)erstellt wurden. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Erstellt einen Ressourcenindexer aus PRI-Daten, die durch einen vorherigen Aufruf von [**MrmCreateResourceFileInMemory erstellt wurden.**](mrmcreateresourcefileinmemory.md) Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,69 +47,69 @@ HRESULT HRESULT MrmCreateResourceIndexerFromPreviousPriData (
 
 <dl> <dt>
 
-*projectroot* \[ in\]
+*projectRoot* \[ In\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Der Projektstamm der UWP-APP, für die Sie pri-Dateien erstellen. Anders ausgedrückt: der Pfad zu den Ressourcen Dateien dieser app. Sie geben diese Angabe an, damit Sie in nachfolgenden API-aufrufen desselben ressourcenindexers Pfade relativ zu diesem Stamm angeben können.
+Der Projektstamm der UWP-App, für die Sie PRI-Dateien generieren. Das heißt, der Pfad zu den Ressourcendateien dieser App. Sie geben dies an, damit Sie in nachfolgenden API-Aufrufen desselben Ressourcenindexers Pfade relativ zu diesem Stamm angeben können.
 
 </dd> <dt>
 
-*platformversion* \[ in\]
+*platformVersion* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmplatformversion**](mrmplatformversion.md)**
+Typ: **[ **MrmPlatformVersion**](mrmplatformversion.md)**
 
-Die Version der Zielplattform für den ressourcenindexer.
+Die Zielplattformversion für den Ressourcenindexer.
 
 </dd> <dt>
 
-*defaultqualifizierer* \[ in, optional\]
+*defaultQualifiers* \[ in, optional\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Eine Liste der Standard Ressourcen Qualifizierer. Beispiel: L "language-en-US \_ Scale-100 \_ Contrast-Standard"
+Eine Liste der Standardressourcenqualifizierer. Beispiel: L"language-en-US \_ scale-100 \_ contrast-standard"
 
 </dd> <dt>
 
-*pridata* \[ in\]
+*priData* \[ In\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Ein Zeiger auf PRI-Daten, die durch einen vorherigen-Befehl von [_ *mrmkreateresourcefileinmemory* *](mrmcreateresourcefileinmemory.md)erstellt wurden. Wenn Sie die von dieser Funktion erstellten ressourcenindexer nicht mehr verwenden, sollten Sie *pridata* nicht freigeben.
+Ein Zeiger auf PRI-Daten, die durch einen vorherigen Aufruf von [**MrmCreateResourceFileInMemory erstellt wurden.**](mrmcreateresourcefileinmemory.md) Geben Sie *priData erst frei,* nachdem Sie die Verwendung des von dieser Funktion erstellten Ressourcenindexers abgeschlossen haben.
 
 </dd> <dt>
 
-*prisize* \[ in\]
+*priSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Größe der Daten, auf die von *pridata* verwiesen wird.
+Die Größe der Daten, auf die *priData zeigt.*
 
 </dd> <dt>
 
 *Indexer* \[ in, out\]
 </dt> <dd>
 
-Typ: **[**mrmresourceindexerhandle**](mrmresourceindexerhandle.md) \** _
+Typ: **[ **MrmResourceIndexerHandle**](mrmresourceindexerhandle.md)\***
 
-Ein Zeiger auf ein ressourcenindexer-handle.
+Ein Zeiger auf ein Ressourcenindexerhand handle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um den Erfolg oder Fehler zu bestimmen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die von dieser Funktion erstellten ressourcenindexer nicht mehr verwenden, sollten Sie *pridata* nicht freigeben.
+Geben Sie *priData erst frei,* nachdem Sie die Verwendung des von dieser Funktion erstellten Ressourcenindexers abgeschlossen haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,10 +117,10 @@ Wenn Sie die von dieser Funktion erstellten ressourcenindexer nicht mehr verwend
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

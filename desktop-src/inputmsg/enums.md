@@ -1,28 +1,28 @@
 ---
-title: Zeiger Eingabe Meldungen und Benachrichtigungs Enumerationen
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Zeiger Eingabe Meldungen und Benachrichtigungs Enumerationen.
+title: Zeigereingabenachrichten und Benachrichtigungsenumerationen
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Zeigereingabenachrichten und Benachrichtigungsenumerationen.
 ms.assetid: 22241CD0-DAE1-4AC2-AB36-23D114803133
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: a857d5f2c5df826e4ba22a7e29448edff581b404
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 5eb9c9ca21a90d28951d4b574b9b91b5bcf04cc70a79c460209db9eabc7af36f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106352195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964284"
 ---
-# <a name="pointer-input-messages-and-notifications-enumerations"></a>Zeiger Eingabe Meldungen und Benachrichtigungs Enumerationen
+# <a name="pointer-input-messages-and-notifications-enumerations"></a>Zeigereingabenachrichten und Benachrichtigungsenumerationen
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeiger Eingabe Meldungen und Benachrichtigungs](messages-and-notifications-portal.md) Enumerationen.
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigereingabenachrichten und](messages-and-notifications-portal.md) Benachrichtigungsenumerationen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                          | BESCHREIBUNG                                                                        |
+| Thema                                                                          | Beschreibung                                                                        |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [**POINTER_BUTTON_CHANGE_TYPE**](/previous-versions/windows/desktop/api)<br/> | Identifiziert eine Änderung des Zustands einer Schaltfläche, die einem Zeiger zugeordnet ist.<br/> |
-| [**POINTER_INPUT_TYPE**](/previous-versions/windows/desktop/api)<br/>             | Listet die Zeiger Eingabetypen auf.<br/>                                          |
+| [**POINTER_INPUT_TYPE**](/previous-versions/windows/desktop/api)<br/>             | Listet die Zeigereingabetypen auf.<br/>                                          |
 
 
 
@@ -32,7 +32,7 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeig
 
 <dl> <dt>
 
-[Verweis auf Zeiger-Eingabe Nachricht](wmpointer-reference.md)
+[Zeigereingabe-Meldungsverweis](wmpointer-reference.md)
 </dt> </dl>
 
  

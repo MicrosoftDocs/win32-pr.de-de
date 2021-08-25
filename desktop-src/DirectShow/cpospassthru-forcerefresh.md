@@ -1,7 +1,7 @@
 ---
-description: Die forceRefresh-Methode ist veraltet.
+description: Die ForceRefresh-Methode ist veraltet.
 ms.assetid: 9895f72b-abf8-46a8-aa75-2a30901a4c41
-title: Cpospassthru. forceRefresh-Methode (ctlutil. h)
+title: CPosPassThru.ForceRefresh-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1955afe069dc419b710978eecf662758916e4cb1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 738a528562afd04e27105691b001958f130e353ec52aa60da86bec47c81b5ba0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915520"
 ---
-# <a name="cpospassthruforcerefresh-method"></a>Cpospassthru. forceRefresh-Methode
+# <a name="cpospassthruforcerefresh-method"></a>CPosPassThru.ForceRefresh-Methode
 
-Die- `ForceRefresh` Methode ist veraltet.
+Die `ForceRefresh` -Methode ist veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ursprünglich war diese Klasse so konzipiert, dass Zeiger auf die Schnittstellen [**imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition) und [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) der verbundenen Pin zwischengespeichert werden. Die- `ForceRefresh` Methode hat diese Schnittstellen freigegeben.
+Ursprünglich wurde diese Klasse entwickelt, um Zeiger auf die [**IMediaPosition-**](/windows/desktop/api/Control/nn-control-imediaposition) und IMediaSeeking-Schnittstellen des verbundenen [**Pins zwischenspeichern.**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) Die `ForceRefresh` -Methode hat diese Schnittstellen freigegeben.
 
-Wie momentan implementiert, speichert diese Klasse diese Schnittstellen nicht zwischen. Aus Kompatibilitätsgründen `ForceRefresh` ist die Methode weiterhin enthalten, aber Sie gibt "OK" zurück, \_ ohne etwas zu tun.
+Wie derzeit implementiert, speichert diese Klasse diese Schnittstellen nicht zwischen. Aus Kompatibilitätsgef noch immer ist die -Methode enthalten, gibt aber `ForceRefresh` "S \_ OK" zurück, ohne etwas zu tun.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Wie momentan implementiert, speichert diese Klasse diese Schnittstellen nicht zw
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Wie momentan implementiert, speichert diese Klasse diese Schnittstellen nicht zw
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

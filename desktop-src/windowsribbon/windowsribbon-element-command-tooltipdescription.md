@@ -1,9 +1,9 @@
 ---
-title: Command. tooltipdescription (Eigenschaft)
+title: Command.TooltipDescription (Eigenschaft)
 description: Stellt eine QuickInfo-Beschreibung dar.
 ms.assetid: 2d3ea497-2d96-4420-8fcf-39ac2c472bf1
 keywords:
-- Command. tooltipdescription-Eigenschaft, Windows-Menüband
+- Command.TooltipDescription-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 288578e74420912b7454be5037c4b2651918ac6a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b5dd356ae3bcfa5949e8469240330a3a09a11f01b5a919ed02f4eb55683fbc15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119933210"
 ---
-# <a name="commandtooltipdescription-property"></a>Command. tooltipdescription (Eigenschaft)
+# <a name="commandtooltipdescription-property"></a>Command.TooltipDescription (Eigenschaft)
 
 Stellt eine QuickInfo-Beschreibung dar.
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                   | BESCHREIBUNG                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**Schnür**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**String**](windowsribbon-element-string.md)<br/> | Kann nur einmal auftreten.<br/> <br/> |
 
 
 
@@ -51,37 +51,37 @@ Es gibt keine Attribute.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
+Kann für jeden Befehl mindestens einmal [**auftreten.**](windowsribbon-element-command.md)
 
-**Command. tooltipdescription** kann einen Wert vom Typ *xs: String* enthalten, der auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+**Command.TooltipDescription** kann einen Wert vom Typ *xs:string* enthalten, der auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruchzeichen.
 
 > [!Note]  
-> Verwenden Sie den XML-Zeichen Verweis Universal Character Set (UCS) `&#xA;` , um einen Zeilenumbruch anzugeben.
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenumbruch anzugeben.
 
  
 
-Die maximale Länge ist unbegrenzt.
+Die maximale Länge ist ungebunden.
 
-Wenn für **Command. tooltipdescription** kein Wert angegeben wird, ist das untergeordnete [**Zeichen**](windowsribbon-element-string.md) folgen Element erforderlich.
+Wenn kein Wert für **Command.TooltipDescription** angegeben wird, ist das untergeordnete [**String-Element**](windowsribbon-element-string.md) erforderlich.
 
 > [!Note]  
-> Wenn **Command. tooltipdescription** sowohl einen Wert als auch ein untergeordnetes [**Zeichen**](windowsribbon-element-string.md) folgen Element enthält, hat die **Zeichenfolge** Vorrang.
+> Wenn **Command.TooltipDescription** sowohl einen Wert als auch ein untergeordnetes [**String-Element**](windowsribbon-element-string.md) enthält, hat **String** Vorrang.
 
  
 
-" **Command. tooltipdescription** " unterstützt nur die linke Ausrichtung.
+**Command.TooltipDescription unterstützt** nur die linke Ausrichtung.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-element-command.md) -Element mit der **Command. tooltipdescription** -Deklaration veranschaulicht.
+Im folgenden Beispiel wird das Markup für ein [**Command-Element**](windowsribbon-element-command.md) mit einer **Command.TooltipDescription-Deklaration** veranschaulicht.
 
 
 ```XML
@@ -111,8 +111,8 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -120,7 +120,7 @@ Im folgenden Beispiel wird das Markup für ein [**Command**](windowsribbon-eleme
 
 <dl> <dt>
 
-[UI- \_ pkey- \_ tooltipdescription](windowsribbon-reference-properties-uipkey-tooltipdescription.md)
+[UI \_ PKEY \_ TooltipDescription](windowsribbon-reference-properties-uipkey-tooltipdescription.md)
 </dt> </dl>
 
  

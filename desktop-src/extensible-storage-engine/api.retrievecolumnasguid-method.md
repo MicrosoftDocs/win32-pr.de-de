@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. retrievecolaufnasguid-Methode'
-title: API. retrievecolaufnasguid-Methode
+description: 'Weitere Informationen finden Sie unter: Api.RetrieveColumnAsGuid-Methode'
+title: Api.RetrieveColumnAsGuid-Methode
 TOCTitle: 'RetrieveColumnAsGuid method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.RetrieveColumnAsGuid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.retrievecolumnasguid(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 38d5577faa8428dcae4157555fb6650600e2709e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f6b43f3cdbc8fe34d173e3e7db82c4a324dc4f39612454a41529aafddc4e655
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104553762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977410"
 ---
-# <a name="apiretrievecolumnasguid-method"></a>API. retrievecolaufnasguid-Methode
+# <a name="apiretrievecolumnasguid-method"></a>Api.RetrieveColumnAsGuid-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,13 +39,13 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334093(v=exchg.10).md">Retrievecolaufnasguid (JET_SESID, JET_TABLEID, JET_COLUMNID)</a></td>
-<td>Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist.</td>
+<td><a href="dn334093(v=exchg.10).md">RetrieveColumnAsGuid(JET_SESID, JET_TABLEID, JET_COLUMNID)</a></td>
+<td>Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn334061(v=exchg.10).md">Retrievecolbinasguid (JET_SESID, JET_TABLEID, JET_COLUMNID, retrievecolenngrbit)</a></td>
-<td>Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist.</td>
+<td><a href="dn334061(v=exchg.10).md">RetrieveColumnAsGuid(JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit)</a></td>
+<td>Ruft einen GUID-Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist.</td>
 </tr>
 </tbody>
 </table>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

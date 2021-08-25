@@ -1,34 +1,34 @@
 ---
-title: Erstellen eines privaten Sensor Pools
-description: Verwenden der Windows-Biometrieframework-API zum Erstellen eines privaten Sensor Pools.
+title: Erstellen eines privaten Sensorpools
+description: Hier erfahren Sie, wie Sie Windows Biometrieframework-API verwenden, um einen privaten Sensorpool zu erstellen.
 ms.assetid: 79944E30-A3D4-411D-A551-3B309DEA6FEA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8eda88f8a9bd0befcbf5527e52d572ec7ca55ce2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fda192ddfbb97599b1f3f58095fa75cba17e0497ac2b6e46efb56e0559997316
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993830"
 ---
-# <a name="creating-a-private-sensor-pool"></a>Erstellen eines privaten Sensor Pools
+# <a name="creating-a-private-sensor-pool"></a>Erstellen eines privaten Sensorpools
 
-Ein privater Sensor Pool ist eine Sammlung von biometrischen Einheiten, die für die ausschließliche Verwendung durch eine Client Anwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen es einer Client Anwendung, mithilfe von vom Hersteller angegebenen Steuerungs Befehlen auf eine biometrische Einheit zuzugreifen.
+Ein privater Sensorpool ist eine Sammlung biometrischer Einheiten, die für die exklusive Verwendung durch eine Clientanwendung reserviert sind. Private Pools unterstützen proprietäre Authentifizierungsmethoden und ermöglichen einer Clientanwendung den Zugriff auf eine biometrische Einheit mithilfe von vom Anbieter angegebenen Steuerungsbefehlen.
 
-Die folgenden Themen enthalten Codebeispiele, die zeigen, wie ein privater Sensor Pool erstellt wird.
+Die folgenden Themen enthalten Codebeispiele, die zeigen, wie Sie einen privaten Sensorpool erstellen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                         | BESCHREIBUNG                                                                                          |
+| Thema                                                                         | Beschreibung                                                                                          |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [Sensor Pools](sensor-pools.md)<br/>                                   | Beschreibt drei mögliche Sensor Pools: "System", "private" und "nicht zugewiesen".<br/>                   |
-| [Einrichtung des privaten Pools](private-pool-setup.md)<br/>                       | Enthält das Setup Konsolen Projekt.<br/>                                                       |
-| [Identität des privaten Pools](private-pool-identity.md)<br/>                 | Enthält das Identifikations Konsolen Projekt.<br/>                                              |
-| [Private Pool Registrierung](private-pool-enrollment.md)<br/>             | Enthält das Registrierungs Konsolen Projekt.<br/>                                                  |
-| [Hilfsfunktionen für private Pools](private-pool-helper-functions.md)<br/> | Enthält Hilfsfunktionen für die Setup-, Identifizierungs-und Registrierungs Konsolen Projekte.<br/> |
-| [Erstellen von Client Anwendungen](creating-client-applications.md)<br/>     | Verwenden der Windows-Biometrieframework-API zum Erstellen von Client Anwendungen<br/>             |
+| [Sensorpools](sensor-pools.md)<br/>                                   | Beschreibt drei mögliche Sensorpools: System, Privat und nicht zugewiesen.<br/>                   |
+| [Einrichten eines privaten Pools](private-pool-setup.md)<br/>                       | Enthält das Setupkonsolenprojekt.<br/>                                                       |
+| [Private Poolidentität](private-pool-identity.md)<br/>                 | Enthält das Identifikationskonsolenprojekt.<br/>                                              |
+| [Registrierung eines privaten Pools](private-pool-enrollment.md)<br/>             | Enthält das Registrierungskonsolenprojekt.<br/>                                                  |
+| [Hilfsfunktionen für private Pools](private-pool-helper-functions.md)<br/> | Enthält Hilfsfunktionen für die Setup-, Identifikations- und Registrierungskonsolenprojekte.<br/> |
+| [Erstellen von Clientanwendungen](creating-client-applications.md)<br/>     | Hier erfahren Sie, wie Sie Windows Biometrieframework-API verwenden, um Clientanwendungen zu erstellen.<br/>             |
 
 
 

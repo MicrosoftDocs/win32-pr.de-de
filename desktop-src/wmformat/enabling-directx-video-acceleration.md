@@ -1,87 +1,87 @@
 ---
-title: Aktivieren der DirectX-Video Beschleunigung
-description: Aktivieren der DirectX-Video Beschleunigung
+title: Aktivieren der DirectX-Videobeschleunigung
+description: Aktivieren der DirectX-Videobeschleunigung
 ms.assetid: 5cb2f564-88e3-4b60-bde3-6ccf69c97c48
 keywords:
-- Windows Media-Format-SDK, Aktivieren von DXVA
-- Windows Media-Format-SDK, DirectX-Video Beschleunigung (DXVA)
-- Windows Media-Format-SDK, Videobeschleunigung
-- Advanced Systems Format (ASF), Aktivieren von DXVA
-- ASF (Advanced Systems Format), Aktivieren von DXVA
-- Advanced Systems Format (ASF), DirectX-Video Beschleunigung (DXVA)
-- ASF (Advanced Systems-Format), DirectX-Video Beschleunigung (DXVA)
+- Windows Medienformat-SDK, Aktivieren von DXVA
+- Windows Medienformat-SDK, DirectX-Videobeschleunigung (DXVA)
+- Windows Medienformat-SDK, Videobeschleunigung
+- Advanced Systems Format (ASF), aktivieren von DXVA
+- ASF (Advanced Systems Format), aktivieren von DXVA
+- Advanced Systems Format (ASF), DirectX Video Acceleration (DXVA)
+- ASF (Advanced Systems Format), DirectX Video Acceleration (DXVA)
 - Advanced Systems Format (ASF), Videobeschleunigung
 - ASF (Advanced Systems Format), Videobeschleunigung
-- DirectX-Video Beschleunigung (DXVA), aktivieren
-- DXVA (DirectX-Video Beschleunigung), aktivieren
-- DirectX-Video Beschleunigung (DXVA), Reihenfolge der Vorgänge
-- DXVA (DirectX-Video Beschleunigung), Reihenfolge der Vorgänge
+- DirectX Video Acceleration (DXVA), aktivieren
+- DXVA (DirectX-Videobeschleunigung),aktivieren
+- DirectX Video Acceleration (DXVA), Reihenfolge der Vorgänge
+- DXVA (DirectX-Videobeschleunigung), Reihenfolge der Vorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 896147fe11b4b7f5fb91d8dc288e616b643bd5ce
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 840549c9a148fdfe8cc67daf46645ffb0925369057fe71f0c17217bfd36823ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930758"
 ---
-# <a name="enabling-directx-video-acceleration"></a>Aktivieren der DirectX-Video Beschleunigung
+# <a name="enabling-directx-video-acceleration"></a>Aktivieren der DirectX-Videobeschleunigung
 
-In diesem Abschnitt wird beschrieben, wie Sie Microsoft® DirectX® Video Beschleunigung bei der Wiedergabe von gestreuten Inhalten in einem benutzerdefinierten Player aktivieren.
+In diesem Abschnitt wird beschrieben, wie Sie die Microsoft® DirectX® Videobeschleunigung beim Wiedergeben von gestreamten Inhalten in einem benutzerdefinierten Player aktivieren.
 
 ## <a name="background"></a>Hintergrund
 
-DirectX-Video Beschleunigung (DirectX VA) ist eine API-Spezifikation für die Hardwarebeschleunigung von 2D-Decodierungs Vorgängen. Dadurch können Software Decoder bestimmte CPU-intensive Vorgänge zur Verarbeitung auf die Grafikkarte auslagern. Für Endbenutzer ist dies ein Video mit hoher Bitrate, z. b. voll Bild-DVD-Wiedergabe auf älteren Computern, die mit DirectX VA-kompatiblen Grafikkarten ausgestattet sind.
+DirectX Video Acceleration (DirectX VA) ist eine API-Spezifikation für die Hardwarebeschleunigung von 2D-Decodierungsvorgängen. Dadurch können Softwaredecoder bestimmte CPU-intensive Vorgänge zur Verarbeitung auf die Grafikkarte auslagern. Für Endbenutzer ermöglicht dies Video mit hoher Bitrate, z. B. die Vollbild-DVD-Wiedergabe auf älteren Computern, die mit DirectX VA-kompatiblen Grafikkarten ausgestattet sind.
 
-Der DMO-Wrapper Filter unterstützt ab dem Windows Media Format 9-Reihe-SDK DirectX VA. Dies bedeutet, dass Anwendungen für die lokale Wiedergabe den WM-ASF-Reader-Filter verwenden können, um Windows Media-basierte Inhalte wiederzugeben, und die DirectX VA-Hardwarebeschleunigung wird automatisch aufgerufen, wenn Sie von der Grafikkarte unterstützt wird. Der WM-ASF-Reader-Filter unterstützt die Wiedergabe von gestreuten Inhalten jedoch nicht. Wenn Sie DirectX VA bei der Wiedergabe von gestreuten Inhalten in einem benutzerdefinierten Player unterstützen möchten, müssen Sie daher einen alternativen Mechanismus verwenden. dieser Mechanismus wird von Windows Media Player der mit der Windows Media 9-Reihe verwendet wird.
+Ab dem Windows Media Format 9 Series SDK unterstützt der filter DMO Wrapper DirectX VA. Dies bedeutet, dass Anwendungen für die lokale Wiedergabe den WM ASF-Readerfilter verwenden können, um Windows medienbasierten Inhalt wiederzugeben, und die DirectX VA-Hardwarebeschleunigung wird automatisch aufgerufen, wenn die Grafikkarte dies unterstützt. Der WM ASF-Readerfilter unterstützt jedoch keine Wiedergabe von gestreamten Inhalten. Wenn Sie directX VA beim Wiedergeben von gestreamten Inhalten in einem benutzerdefinierten Player unterstützen möchten, müssen Sie daher einen alternativen Mechanismus verwenden, der von Windows Media Player ab der Windows Media 9-Serie verwendet wird.
 
-Da Windows Media Player vor der Entwicklung der qasf-Filter entworfen wurde, verfügt Windows Media Player über einen eigenen Quell Filter, der auf dem Windows Media-Format-SDK für die Wiedergabe von Windows Media-basierten Inhalten basiert. Der WMP-Windows Media-Quell Filter liefert dekomprimierte Daten direkt an die Audio-und Videorenderer. Im Gegensatz dazu stellt der WM-ASF-Reader komprimierte Inhalte Downstream an den Windows Media Decoder DirectX Media Objects (DMOs) bereit, die im DMO-Wrapper gehostet werden. In den folgenden Diagrammen werden die Unterschiede zwischen dem WM-ASF-Reader und dem WMP-Windows Media-Quell Filter veranschaulicht.
+Da Windows Media Player vor der Entwicklung der QASF-Filter entworfen wurde, verfügt Windows Media Player über einen eigenen Quellfilter, der auf dem Windows Medienformat-SDK basiert, um Windows medienbasierten Inhalt wiedergeben zu können. Der WMP-Windows Medienquellenfilter übermittelt dekomprimierte Daten direkt an die Audio- und Videorenderer. Im Gegensatz dazu übermittelt der WM ASF Reader komprimierte Inhalte downstream an die directX-Medienobjekte (DirectX Media Objects, DMOs) des Windows-Mediendecoders, die im DMO Wrapper gehostet werden. Die folgenden Diagramme veranschaulichen die Unterschiede zwischen dem WM ASF-Reader und dem WMP-Windows Medienquellenfilter.
 
-![benutzerdefinierter Quell Filter gibt unkomprimierte Beispiele aus](images/wmp-dxva-graph.png)
+![Benutzerdefinierter Quellfilter gibt unkomprimierte Beispiele aus.](images/wmp-dxva-graph.png)
 
-![qasf-Quell Filter gibt komprimierte Beispiele aus.](images/qasf-dxva-graph.png)
+![Qasf-Quellfilter gibt komprimierte Beispiele aus](images/qasf-dxva-graph.png)
 
-Um DirectX VA für das Streamen von Inhalten zu aktivieren, müssen Sie einen benutzerdefinierten Quell Filter wie den im oberen Diagramm erstellen. Im Grunde wird mit diesem Filter das Windows Media-Format-SDK verwendet, um ein WM-Reader-Objekt zu instanziieren, die Beispiele zu dekomprimieren und an die Ausgabe Pins zu senden. In dieser Erläuterung wird davon ausgegangen, dass Sie den Quell Filter bereits erstellt haben und jetzt bereit sind, die DirectX-VA-Unterstützung zu implementieren.
+Um DirectX VA für gestreamten Inhalt zu aktivieren, müssen Sie einen benutzerdefinierten Quellfilter wie den im oberen Diagramm erstellen. Im Grunde verwendet dieser Filter das Windows Media Format SDK, um ein WM Reader-Objekt zu instanziieren, die Beispiele zu dekomprimieren und sie downstream an die Ausgabepins zu senden. In dieser Erläuterung wird davon ausgegangen, dass Sie den Quellfilter bereits erstellt haben und nun bereit sind, die DirectX-Va-Unterstützung zu implementieren.
 
-Zum Aktivieren von DirectX VA besteht die grundlegende Aufgabe des Quell Filters darin, den Videorenderer und den WMV-Decoder DMO mit den Schnittstellen bereitzustellen, die für die Aushandlung der DirectX-VA-Verbindung erforderlich sind. Der Quell Filter ist nicht an diesen Verhandlungen beteiligt. Nachdem das Streaming gestartet wurde, besteht die einzige DirectX-VA-bezogene Aufgabe, die der Quell Filter ausführen kann, darin, die Zeitstempel in den Videobeispielen zu ändern, bevor der WMV-Decoder Sie an den Videorenderer übergibt. Der Hauptgrund hierfür ist die Bereitstellung eines benutzerdefinierten Zeitachsen-Steuer Elements, das über die Aktivierung der standardmäßigen DirectShow-® Schnittstellen hinausgeht
+Um DirectX VA zu aktivieren, besteht die grundlegende Aufgabe des Quellfilters darin, den Videorenderer und den WMV-Decoder DMO mit den Schnittstellen bereitzustellen, die sie zum Aushandeln der DirectX VA-Verbindung benötigen. Der Quellfilter nimmt nicht an diesen Handlungen teil. Nachdem das Streaming gestartet wurde, kann der Quellfilter nur die Zeitstempel der Videobeispiele ändern, bevor sie vom WMV-Decoder an den Videorenderer übermittelt werden. Der Hauptgrund hierfür ist die Bereitstellung einer benutzerdefinierten Zeitachsensteuerung, die über die standardmäßigen DirectShow®schnittstellen hinausgeht.
 
-Es werden drei Schnittstellen definiert, um die erforderliche Kommunikation zwischen dem Windows Media-Format-SDK, dem Quell Filter des Players, dem Windows Media Video Decoder DMO und dem Überlagerungs-oder videomischungs-Renderer zu ermöglichen. Diese Schnittstellen werden in der folgenden Tabelle beschrieben.
+Es werden drei Schnittstellen definiert, um die erforderliche Kommunikation zwischen dem Windows Media Format SDK, dem Quellfilter des Players, dem Windows Media Video-Decoder DMO und dem Overlay Mixer oder Video Mixing Renderer zu ermöglichen. Diese Schnittstellen werden in der folgenden Tabelle beschrieben.
 
 
 
 | Schnittstelle                                                        | BESCHREIBUNG                                                                                                                                                                                        |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iwmcodecamvideoaccelerator**](/previous-versions/windows/desktop/api/wmdxva/nn-wmdxva-iwmcodecamvideoaccelerator) | Wird vom Windows Media Decoder DMO verfügbar gemacht und durch den Quell Filter eines Media Player aufgerufen, um die verschiedenen Verbindungen einzurichten, die zum Aktivieren von DirectX VA für das Decodieren von Windows Media Video Inhalt erforderlich sind. |
-| [**Iwmplayertimestamphook**](/previous-versions/windows/desktop/api/wmdxva/nn-wmdxva-iwmplayertimestamphook)         | Wird für den Quell Filter des Players implementiert. Sie ermöglicht es dem Filter, die Zeitstempel in den Videobeispielen vor der Übertragung zu ändern.                                                 |
-| [**Iwmreaderaccelerator**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderaccelerator)             | Wird für das WM Reader-Objekt implementiert. Sie wird von einem Player-Quell Filter aufgerufen, um Schnittstellen vom Decoder-DMO abzurufen.                                                                             |
+| [**IWMCodecAMVideoAccelerator**](/previous-versions/windows/desktop/api/wmdxva/nn-wmdxva-iwmcodecamvideoaccelerator) | Wird vom Windows Mediendecoder verfügbar gemacht DMO und vom Quellfilter eines Medienplayers aufgerufen, um die verschiedenen Verbindungen einzurichten, die erforderlich sind, um DirectX VA für die Decodierung von Windows Media Video-Inhalten zu aktivieren. |
+| [**IWMPlayerTimestampHook**](/previous-versions/windows/desktop/api/wmdxva/nn-wmdxva-iwmplayertimestamphook)         | Implementiert für den Quellfilter des Players. Sie ermöglicht es dem Filter, die Zeitstempel der Videobeispiele zu ändern, bevor sie nachgeschaltet werden.                                                 |
+| [**IWMReaderAccelerator**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreaderaccelerator)             | Implementiert für das WM-Reader-Objekt. Er wird von einem Playerquellfilter aufgerufen, um Schnittstellen aus dem Decoder DMO abzurufen.                                                                             |
 
 
 
- 
+ 
 
-## <a name="order-of-operations-in-directx-vaenabled-playback"></a>Reihenfolge der Vorgänge in DirectX VA – aktivierter Wiedergabe
+## <a name="order-of-operations-in-directx-vaenabled-playback"></a>Reihenfolge der Vorgänge in directX VA-fähiger Wiedergabe
 
-In diesem Abschnitt wird die allgemeine Reihenfolge der Vorgänge zur Laufzeit für einen DirectX-aktivierten Player und dessen Quell Filter beschrieben. Die Komponenten, auf die in diesem Abschnitt verwiesen wird, lauten:
+In diesem Abschnitt wird die allgemeine Reihenfolge der Vorgänge zur Laufzeit für einen DirectX VA-fähigen Player und dessen Quellfilter beschrieben. Die komponenten, auf die in diesem Abschnitt verwiesen wird, sind:
 
--   Ein Drittanbieter-Media Player, der als Player bezeichnet wird.
--   Ein benutzerdefinierter Quell Filter, der vom Player instanziiert wird, der das Windows Media-Format-SDK zum Dekomprimieren von Windows Media-basiertem Inhalt verwendet.
--   Die Videoausgabe-PIN des Quell Filters des Players, der als Ausgabe-PIN bezeichnet wird.
--   Das Diagramm für den DirectShow-Videowiedergabe Filter, das als Graph bezeichnet wird.
--   Der Video Mischungs-Renderer, der als VMR bezeichnet wird.
--   Das Windows Media Format SDK-asynchrone Reader-Objekt, das als Reader bezeichnet wird.
--   Das DirectX-Medienobjekt Windows Media Video Decoder, das als Decoder DMO bezeichnet wird.
+-   Ein Media Player eines Drittanbieters, der als Player bezeichnet wird.
+-   Ein benutzerdefinierter Quellfilter, der vom Player instanziiert wird und das Windows Media Format SDK verwendet, um Windows medienbasierten Inhalt zu dekomprimieren.
+-   Der Videoausgabepin des Quellfilters des Players, der als Ausgabepin bezeichnet wird.
+-   Das DirectShow-Videowiedergabefilterdiagramm, das als Graph bezeichnet wird.
+-   Der Videomischungsrenderer, der als VMR bezeichnet wird.
+-   Das Windows Media Format SDK-Objekt für den asynchronen Reader, das als Reader bezeichnet wird.
+-   Das Windows Media Video Decoder DirectX Media Object, das als Decoder DMO bezeichnet wird.
 
 Die Reihenfolge der Vorgänge lautet wie folgt:
 
-1.  Der Player instanziiert seinen Quell Filter und ein Reader-Objekt. Der Reader erstellt einen Video Decoder DMO und legt den (komprimierten) Eingabetyp darauf fest. Dies muss eintreten, bevor der Player versucht, das Videowiedergabe Diagramm zu konfigurieren, da das SDK und der Decoder-DMO an dem Aushandlungs Prozess mit dem Diagramm beteiligt sein müssen, und der DMO muss das Eingabeformat in Schritt 9 kennen.
-2.  Der Player ruft **igraphbuilder:: Rendering** auf und stellt ihm die Ausgabe-PIN des Video Quell Filters bereit. An diesem Punkt versucht der DirectShow Filter Graph-Manager, die VMR mit dem Video Quell Filter des Players zu verbinden.
-3.  Der Filter Graph-Manager ruft **IPin:: Connect** in der Ausgabe-PIN des Video Quell Filters des Players auf.
+1.  Der Player instanziiert seinen Quellfilter und ein Readerobjekt. Der Reader erstellt einen Videodecoder DMO und legt den (komprimierten) Eingabetyp darauf fest. Dies muss geschehen, bevor der Player versucht, seinen Videowiedergabegraphen zu konfigurieren, da das SDK und der Decoder DMO am Aushandlungsprozess mit dem Diagramm beteiligt sein müssen und die DMO das Eingabeformat in Schritt 9 kennen müssen.
+2.  Der Player ruft **IGraphBuilder::Render** auf und stellt den Ausgabepin des Videoquellfilters bereit. An diesem Punkt versucht der DirectShow-Filtergraph-Manager, die VMR mit dem Videoquellfilter des Players zu verbinden.
+3.  Der Filtergraph-Manager ruft **IPin::Verbinden** auf dem Ausgabepin des Videoquellfilters des Players auf.
 
-Die Schritte 4 bis 10 erfolgen innerhalb von **IPin:: Connect**.
+Die Schritte 4 bis 10 finden in **IPin::Verbinden** statt.
 
-1.  Der Quell Filter Ruft die **iwmcodecamvideoaccelerator** -Schnittstelle aus der **iwmreaderaccelerator:: getcodecinterface** -Methode des Readers ab. Wenn der Codec DirectX VA nicht unterstützt, tritt beim Aufrufen von **getcodecinterface** möglicherweise ein Fehler auf. In diesem Fall verläuft die Aushandlung wie gewohnt, ohne DirectX-VA-Unterstützung.
-2.  Der Quell Filter übergibt den **iamvideoaccelerator** -Zeiger von **der an übergebenen Pin über** **iwmcodecamvideoaccelerator:: setacceleratorinterface**.
-3.  Der Quell Filter delegiert dann den Rest des **IPin:: Connect** -Vorgangs an die **cbaseoutputpin:: Connect** -Methode. Die formatenumeration mit dem SDK verläuft wie heute. Wenn der Codec DirectX VA für den Inhalt unterstützt, der verbunden wird, stellt der Codec-DMO diese DirectX VA-Untertypen zuerst vor, bevor die unterstützten YUV-und RGB-Typen unterstützt werden. Wenn die DirectX-VA-Unterstützung verfügbar ist, werden die Schritte 7 bis 11 im Kontext eines DirectX VA-unter Typs ausprobiert. Der folgende Code Ausschnitt zeigt, wie ein DirectX-VA-Medien Untertyp identifiziert wird.
+1.  Der Quellfilter ruft die **IWMCodecAMVideoAccelerator-Schnittstelle** von der **IWMReaderAccelerator::GetCodecInterface-Methode** des Readers ab. Wenn der Codec DirectX VA nicht unterstützt, schlägt der Aufruf von **GetCodecInterface** möglicherweise fehl. In diesem Fall wird die Aushandlung wie gewohnt ohne DirectX VA-Unterstützung fortgesetzt.
+2.  Der Quellfilter übergibt den **IAMVideoAccelerator-Zeiger** vom Pin, der an **Verbinden** übergeben wird, an den Decoder DMO über **IWMCodecAMVideoAccelerator::SetAcceleratorInterface**.
+3.  Der Quellfilter delegiert dann den Rest des **IPin::Verbinden-Vorgangs** an die **CBaseOutputPin::Verbinden-Methode.** Die Formatenumeration mit dem SDK wird wie heute fortgesetzt. Wenn der Codec DirectX VA für den Inhalt unterstützt, der verbunden wird, stellt der Codec DMO diese DirectX VA-Untertypen zuerst vor den unterstützten YUV- und RGB-Typen dar. Wenn DirectX VA-Unterstützung verfügbar ist, werden die Schritte 7 bis 11 im Kontext eines DirectX VA-Untertyps versucht. Der folgende Codeausschnitt zeigt, wie Sie einen DirectX VA-Medienuntertyp identifizieren.
     ```C++
     bool IsDXVASubtype( AM_MEDIA_TYPE * pmt )
     {
@@ -109,12 +109,12 @@ Die Schritte 4 bis 10 erfolgen innerhalb von **IPin:: Connect**.
 
     
 
-4.  Die **cbaseoutputpin:: Connect** -Implementierung ruft **IPin:: completeconnect** während Schritt 3 auf. Wenn ein DirectX-VA-Untertyp berücksichtigt wird, wird versucht, die DirectX-VA-Aushandlung auszuführen. Die Ausgabepin ruft **iwmcodecamvideoaccelerator:: aushandateconnetction** auf und übergibt dabei den aktuellen Ausgabe Medientyp.
-5.  Der Decoder DMO führt die erforderliche Aushandlung mit der VMR über die **iamvideoaccelerator** -Schnittstelle aus und gibt den Video Untertyp GUID zurück, den die beiden zugestimmt haben. Die Ausgabe-PIN delegiert alle **iamvideoacceleratornotify** -Aufrufe, die während dieses Prozesses empfangen werden, an die **iamvideoacceleratornotify** -Schnittstelle des Decoders DMO, die auch über die **iwmreaderaccelerator:: getcodecinterface** -Methode abgerufen werden kann.
-6.  Wenn **aushandateconnetction** erfolgreich ist, ruft die Ausgabepin **iwmcodecamvideoaccelerator:: setplayernotify** mit einer **iwmplayertimestamphook** -Schnittstelle auf. Mit diesem Hook kann der Quell Filter die Zeitstempel der Beispiele aktualisieren, bevor Sie an den Renderer übergeben werden.
-7.  Der Quell Filter ruft **iwmreaderaccelerator:: notify** mit dem ausgehandelten Medientyp auf. Dies ermöglicht es dem Reader, seine internen Variablen zu aktualisieren und an DirectX VA zu übergeben. Dies ist die letzte Stelle, an der der Codec oder der Reader fehlschlagen kann. Wenn einer der obigen Schritte fehlschlägt, sollte der Quell Filter zu Schritt 3 zurückkehren und den nächsten Typ, der vom Reader aufgelistet wird, testen.
-8.  Wiedergabe wird gestartet. Der Reader ignoriert Ausgabepuffer aus dem DMO-Decoder, wenn der Verbindungs Ausgabetyp DirectX VA ist.
-9.  Wenn **IPin::D isconnect** auftritt, ruft der Quell Filter **iwmcodecamvideoaccelerator:: setacceleratorinterface** mit einem **null**-Wert auf. Dadurch wird die DirectX-VA-Verbindung zwischen dem Codec und dem Renderer unterbrochen.
+4.  Die **CBaseOutputPin::Verbinden-Implementierung** ruft **IPin::CompleteConnect** während Schritt 3 auf. Wenn ein DirectX VA-Untertyp berücksichtigt wird, wird versucht, die DirectX-VA-Aushandlung zu versuchen. Der Ausgabepin ruft **IWMCodecAMVideoAccelerator::NegotiateConnection** auf und übergibt ihm den aktuellen Ausgabemedientyp.
+5.  Der Decoder DMO führt die erforderliche Aushandlung mit der VMR über die **IAMVideoAccelerator-Schnittstelle** durch und gibt die Videountertyp-GUID zurück, auf die sich die beiden einigen. Der Ausgabepin delegiert alle **IAMVideoAcceleratorNotify-Aufrufe,** die während dieses Prozesses empfangen wurden, an die **IAMVideoAcceleratorNotify-Schnittstelle** des Decoders DMO, die auch über die **IWMReaderAccelerator::GetCodecInterface-Methode** abgerufen werden kann.
+6.  Wenn **NegotiateConnection** erfolgreich ist, ruft der Ausgabepin **IWMCodecAMVideoAccelerator::SetPlayerNotify** mit einer **IWMPlayerTimestampHook-Schnittstelle** auf. Mit diesem Hook kann der Quellfilter die Zeitstempel der Stichproben aktualisieren, bevor sie an den Renderer übergeben werden.
+7.  Der Quellfilter ruft **IWMReaderAccelerator::Notify** mit dem ausgehandelten Medientyp auf. Dadurch kann der Reader seine internen Variablen aktualisieren und einen Commit für DirectX VA durchführen. Dies ist die letzte Stelle, an der der Codec oder Reader fehlschlagen kann. Wenn einer der oben genannten Schritte fehlschlägt, sollte der Quellfilter zu Schritt 3 zurückkehren und den nächsten Typ ausprobieren, der vom Reader aufzählt wird.
+8.  Die Wiedergabe beginnt. Der Reader ignoriert Ausgabepuffer aus dem Decoder DMO, wenn der Verbindungsausgabetyp DirectX VA ist.
+9.  Wenn **IPin::D isconnect** auftritt, ruft der Quellfilter **IWMCodecAMVideoAccelerator::SetAcceleratorInterface** mit einem **NULL-Wert** auf. Dadurch wird die DirectX VA-Verbindung zwischen dem Codec und dem Renderer unterbrochen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -123,9 +123,9 @@ Die Schritte 4 bis 10 erfolgen innerhalb von **IPin:: Connect**.
 [**Lesen von ASF-Dateien**](reading-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die FORM_INFO_1-Struktur enthält Informationen zu einem Druckformular. Die Informationen umfassen den Ursprung der Druckformulare, den Namen, die Dimensionen und die Dimensionen des druckbaren Bereichs.
+description: Die FORM_INFO_1-Struktur enthält Informationen zu einem Druckformular. Die Informationen umfassen den Ursprung der Druckformulare, ihren Namen, ihre Dimensionen und die Abmessungen des druckbaren Bereichs.
 ms.assetid: 1c42ea6c-82cf-463c-bc67-44a8d8c4a1e7
-title: FORM_INFO_1 Struktur (winspool. h)
+title: FORM_INFO_1 -Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 516f646d664a034f81a76eb2262b3ea8c950a87e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6f620d8bd2ed4ef39fc868c91068e10a7ff43f57d98510ecfbae1dbe2ae7c54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119949260"
 ---
-# <a name="form_info_1-structure"></a>FORM_INFO_1 Struktur
+# <a name="form_info_1-structure"></a>FORM_INFO_1-Struktur
 
-Die **FORM_INFO_1** -Struktur enthält Informationen zu einem Druckformular. Die Informationen umfassen den Ursprung des Druck Formulars, den Namen, seine Dimensionen und die Abmessungen des druckbaren Bereichs.
+Die **FORM_INFO_1-Struktur** enthält Informationen zu einem Druckformular. Die Informationen umfassen den Ursprung des Druckformulars, seinen Namen, seine Dimensionen und die Abmessungen des druckbaren Bereichs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,14 +47,14 @@ typedef struct _FORM_INFO_1 {
 **Flags**
 </dt> <dd>
 
-Die Formular Eigenschaften. Die folgenden Werte sind definiert.
+Die Formulareigenschaften. Die folgenden Werte werden definiert.
 
 
 
 | Wert         | Bedeutung                                                                                                                      |
 |---------------|------------------------------------------------------------------------------------------------------------------------------|
-| FORM_USER    | Wenn dieses Bitflag festgelegt ist, wurde das Formular vom Benutzer definiert. Formulare mit diesem Flagsatz werden in der Registrierung definiert.        |
-| FORM_BUILTIN | Wenn dieses Bitflag festgelegt ist, ist das Formular Teil des Spoolers. Formular Definitionen mit diesem Flagsatz werden nicht in der Registrierung angezeigt. |
+| FORM_USER    | Wenn dieses Bitflag festgelegt ist, wurde das Formular vom Benutzer definiert. Formulare, für die dieses Flag festgelegt ist, werden in der Registrierung definiert.        |
+| FORM_BUILTIN | Wenn dieses Bitflag festgelegt ist, ist das Formular Teil des Spoolers. Formulardefinitionen, für die dieses Flag festgelegt ist, werden nicht in der Registrierung angezeigt. |
 | FORM_PRINTER | Wenn dieses Bitflag festgelegt ist, wird das Formular einem bestimmten Drucker zugeordnet, und seine Definition wird in der Registrierung angezeigt.          |
 
 
@@ -66,21 +66,21 @@ Die Formular Eigenschaften. Die folgenden Werte sind definiert.
 **pName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Formulars angibt. Der Formular Name darf nicht länger als 31 Zeichen sein.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Formulars angibt. Der Formularname darf 31 Zeichen nicht überschreiten.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd>
 
-Die Breite und Höhe des Formulars in tausendstel Millimeter.
+Die Breite und Höhe des Formulars in Tausendstel Millimeter.
 
 </dd> <dt>
 
-**Imageablearea**
+**ImageableArea**
 </dt> <dd>
 
-Die Breite und Höhe des Formulars in tausendstel Millimeter.
+Die Breite und Höhe des Formulars in Tausendstel Millimeter.
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Die Breite und Höhe des Formulars in tausendstel Millimeter.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **_FORM_INFO_1W** (Unicode) und **_FORM_INFO_1A** (ANSI)<br/>                                 |
 
 
@@ -104,7 +104,7 @@ Die Breite und Höhe des Formulars in tausendstel Millimeter.
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**AddForm**](addform.md)
@@ -113,7 +113,7 @@ Die Breite und Höhe des Formulars in tausendstel Millimeter.
 [**GetForm**](getform.md)
 </dt> <dt>
 
-[**Setform**](setform.md)
+[**SetForm**](setform.md)
 </dt> </dl>
 
  

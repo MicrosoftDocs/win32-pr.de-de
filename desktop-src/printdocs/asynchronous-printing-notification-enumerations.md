@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Enumerationen werden bei der asynchronen Kommunikation zwischen Anwendungen und Komponenten verwendet, die vom Druck Spooler gehostet werden, z. b. Druckertreiber und Port Monitore.
+description: Die folgenden Enumerationen werden bei der asynchronen Kommunikation zwischen Anwendungen und Komponenten verwendet, die vom Druckspooler gehostet werden, z. B. Druckertreiber und Portmonitore.
 ms.assetid: 732a552b-caf9-45da-9a9e-a325c4f6341b
-title: Asynchrone Druck Benachrichtigungs Enumerationen
+title: Asynchrone Druckbenachrichtigungsenumeration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e2baf2a4476ac858a883dda55b2864a79d78cf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a86082d171fbf76afc4a7f02a9511fc7ad3d118ced1aa2ef4f43f87a2abd111
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950730"
 ---
-# <a name="asynchronous-printing-notification-enumerations"></a>Asynchrone Druck Benachrichtigungs Enumerationen
+# <a name="asynchronous-printing-notification-enumerations"></a>Asynchrone Druckbenachrichtigungsenumeration
 
-Die folgenden Enumerationen werden bei der asynchronen Kommunikation zwischen Anwendungen und Komponenten verwendet, die vom Druck Spooler gehostet werden, z. b. Druckertreiber und Port Monitore.
+Die folgenden Enumerationen werden bei der asynchronen Kommunikation zwischen Anwendungen und Komponenten verwendet, die vom Druckspooler gehostet werden, z. B. Druckertreiber und Portmonitore.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,9 +21,9 @@ Die folgenden Enumerationen werden bei der asynchronen Kommunikation zwischen An
 
 | Enumeration                                                                               | Beschreibung                                                                                                                                                                                                    |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Printasyncnotifyconversation-Stil**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyconversationstyle)<br/> | Gibt an, ob die Kommunikation bidirektional oder unidirektional zwischen Anwendungen und Druckspooler-gehosteten Komponenten wie Druckertreibern, Druck Prozessoren und Port Überwachungen ist.<br/>           |
-| [**Printasyncnotifyerror**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyerror)<br/>                         | Gibt den Fehlercode Teil des **HRESULT** an, der nach einem asynchronen Benachrichtigungs Fehler zurückgegeben wird.<br/>                                                                                            |
-| [**Printasyncnotif yuserfilter**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyuserfilter)<br/>               | Gibt an, ob Benachrichtigungen nur an Abhör Anwendungen gesendet werden, die dem gleichen Benutzer wie der vom Druck Spooler gehostete Absender zugeordnet sind, oder zu einem umfassenderen Satz von lauschenden Anwendungen wechseln.<br/> |
+| [**PrintAsyncNotifyConversationStyle**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyconversationstyle)<br/> | Gibt an, ob die Kommunikation bidirektional oder unidirektional zwischen Anwendungen und vom Druckerspooler gehosteten Komponenten wie Druckertreibern, Druckprozessoren und Portmonitoren ist.<br/>           |
+| [**PrintAsyncNotifyError**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyerror)<br/>                         | Gibt den Fehlercodeteil des **HRESULT** an, der nach einem asynchronen Benachrichtigungsfehler zurückgegeben wird.<br/>                                                                                            |
+| [**PrintAsyncNotifyUserFilter**](/windows/desktop/api/prnasnot/ne-prnasnot-printasyncnotifyuserfilter)<br/>               | Gibt an, ob Benachrichtigungen nur an lauschende Anwendungen gesendet werden, die demselben Benutzer wie der vom Druckerspooler gehostete Absender zugeordnet sind, oder an eine größere Gruppe von lauschenden Anwendungen.<br/> |
 
 
 

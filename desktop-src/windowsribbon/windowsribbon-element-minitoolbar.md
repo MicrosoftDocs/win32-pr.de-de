@@ -3,7 +3,7 @@ title: MiniToolbar-Element
 description: Stellt eine kontextbezogene Symbolleiste dar.
 ms.assetid: bb50890d-554a-4add-a583-d4fd48b823bf
 keywords:
-- MiniToolbar-Element Windows-Menüband
+- MiniToolbar-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ceea8ba1a220674f177e740411bf98a13d7bfc2e
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: e47fee9fbf2b6b0bc95153fd512f6484129dc7f3edebd56e1d97664ecc2bbef0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881740"
 ---
 # <a name="minitoolbar-element"></a>MiniToolbar-Element
 
 Stellt eine kontextbezogene Symbolleiste dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <MiniToolbar
@@ -37,7 +37,7 @@ Stellt eine kontextbezogene Symbolleiste dar.
 
 
 
-| attribute           | Typ                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
+| attribute           | type                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl> |
 
@@ -49,7 +49,7 @@ Stellt eine kontextbezogene Symbolleiste dar.
 
 | Element                                                         | BESCHREIBUNG                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -65,7 +65,7 @@ Stellt eine kontextbezogene Symbolleiste dar.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jede [**ContextPopup.MiniToolbars**](windowsribbon-element-contextpopup-minitoolbars.md)auftreten.
 
@@ -78,7 +78,7 @@ Wenn die **Minitoolleiste** ohne [**ContextMenu**](windowsribbon-element-context
 
  
 
-Da auf Steuerelemente in der **MiniToolbar** nicht über die Tastatur zugegriffen werden kann, sollten die verfügbar gemachten Befehle an anderer Stelle auf der Menübandbenutzeroberfläche verfügbar sein.
+Da Auf Steuerelemente in der **MiniToolbar** nicht über die Tastatur zugegriffen werden kann, sollten die verfügbar gemachten Befehle an anderer Stelle auf der Menübandbenutzeroberfläche verfügbar sein.
 
 ## <a name="examples"></a>Beispiele
 

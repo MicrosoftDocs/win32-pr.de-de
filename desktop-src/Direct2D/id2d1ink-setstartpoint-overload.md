@@ -1,9 +1,9 @@
 ---
-title: ID2D1Ink setstartpoint-Methoden
-description: Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird festgelegt, wo dieses frei Hand Objekt das Rendering startet.
+title: ID2D1Ink SetStartPoint-Methoden
+description: Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird bestimmt, wo dieses Ink-Objekt mit dem Rendern beginnt.
 ms.assetid: 908bb7ce-495b-6022-5aec-f0f8e733e768
 keywords:
-- Setstartpoint-Methoden Direct2D
+- SetStartPoint-Methoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,29 +12,29 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: fe8caf18faf69126cee25c13eeea362e6b50c52d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 948546e55a7e1bee948a7d8786988698d8de19f2302d827dd52b66d6b50bed10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917510"
 ---
-# <a name="id2d1inksetstartpoint-methods"></a>ID2D1Ink:: setstartpoint-Methoden
+# <a name="id2d1inksetstartpoint-methods"></a>ID2D1Ink::SetStartPoint-Methoden
 
-Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird festgelegt, wo dieses frei Hand Objekt das Rendering startet.
+Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird bestimmt, wo dieses Ink-Objekt mit dem Rendern beginnt.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                                                                         |
+| Methode                                                                | Beschreibung                                                                                                         |
 |:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**Setstartpoint (D2D1 \_ Ink \_ Point \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setstartpoint(constd2d1_ink_point))  | Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird festgelegt, wo dieses frei Hand Objekt das Rendering startet.<br/> |
-| [**Setstartpoint (D2D1 \_ Ink \_ Point&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setstartpoint(constd2d1_ink_point_)) | Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird festgelegt, wo dieses frei Hand Objekt das Rendering startet.<br/> |
+| [**SetStartPoint (D2D1 \_ INK \_ POINT \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setstartpoint(constd2d1_ink_point))  | Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird bestimmt, wo dieses Ink-Objekt mit dem Rendern beginnt.<br/> |
+| [**SetStartPoint (D2D1 \_ INK \_ POINT&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setstartpoint(constd2d1_ink_point_)) | Legt den Anfangspunkt für dieses Ink-Objekt fest. Dadurch wird bestimmt, wo dieses Ink-Objekt mit dem Rendern beginnt.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

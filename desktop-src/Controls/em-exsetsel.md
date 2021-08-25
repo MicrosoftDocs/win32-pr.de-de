@@ -1,9 +1,9 @@
 ---
-title: EM_EXSETSEL Meldung (RichEdit. h)
-description: Wählt einen Bereich von Zeichen oder Component Object Model (com)-Objekten in einem Rich-Edit-Steuerelement von Microsoft aus.
+title: EM_EXSETSEL (Richedit.h)
+description: Wählt einen Bereich von Zeichen oder Component Object Model (COM)-Objekten in einem Microsoft Rich Edit-Steuerelement aus.
 ms.assetid: 85a0d1d4-1826-4ac5-b823-de81a051441d
 keywords:
-- Windows-Steuerelemente für EM_EXSETSEL Meldung
+- EM_EXSETSEL von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6939156fb1a8f35e03527e64a4c6f5185180668d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c9e35840e404f295b7d3ed6ddd5dddf4c77076c236eb3260f6f719b152cef207
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915650"
 ---
-# <a name="em_exsetsel-message"></a>EM \_ Ex-tsel-Meldung
+# <a name="em_exsetsel-message"></a>EM \_ EXSETSEL-Nachricht
 
-Wählt einen Bereich von Zeichen oder Component Object Model (com)-Objekten in einem Rich-Edit-Steuerelement von Microsoft aus.
+Wählt einen Bereich von Zeichen oder Component Object Model (COM)-Objekten in einem Microsoft Rich Edit-Steuerelement aus.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Wählt einen Bereich von Zeichen oder Component Object Model (com)-Objekten in e
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eine [**charrange**](/windows/desktop/api/Richedit/ns-richedit-charrange) -Struktur, die den Auswahlbereich angibt.
+Eine [**CHARRANGE-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-charrange) die den Auswahlbereich angibt.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Der Rückgabewert ist die Auswahl, die tatsächlich festgelegt ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

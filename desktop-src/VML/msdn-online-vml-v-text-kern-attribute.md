@@ -1,50 +1,50 @@
 ---
-title: VML-V-Text-Kern-Attribut
-description: VML-V-Text-Kern-Attribut
+title: VML V-Text-Kern-Attribut
+description: VML V-Text-Kern-Attribut
 ms.assetid: cece49c3-8e62-4327-8949-684a1d073293
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b20eab11cc24cd7580b68de8acf86468fb1d16a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3e5ca41b66c05af673839ccbc8ba9eb95cf652eb223cd4dd3915799e91ff6c69
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974630"
 ---
-# <a name="vml-v-text-kern-attribute"></a>VML-V-Text-Kern-Attribut
+# <a name="vml-v-text-kern-attribute"></a>VML V-Text-Kern-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die kernung aktiviert ist. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob Kerning aktiviert ist. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "v-Text-Kern: *Expression* " >
+<v: *element* style="v-text-kern: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. v-Text-Kern = "*Ausdruck*"
+*element* .style.v-text-kern="*expression*"
 
-*Ausdruck* = *Element*. Style. v-Text-Kern
+*expression* = *Element*.style.v-text-kern
 
 **Anmerkungen**
 
-**True** gibt an, dass die kernung aktiviert ist. Der Standardwert ist **False**. Die kernung ist das Entfernen von Leerzeichen zwischen bestimmten Brief Paaren, um ungleichmäßige letterforms auszugleichen. Wenn z. b. die kerif-Aktivierung aktiviert ist, wird zusätzlicher Speicherplatz zwischen dem Großbuchstaben "T" und dem Kleinbuchstaben "i" entfernt.
+True **gibt an,** dass das Kerning aktiviert ist. Der Standardwert ist **False**. Kerning ist das Entfernen von Leerzeichen zwischen bestimmten Buchstabenpaaren, um ungleiche Buchstabenform zu kompensieren. Wenn z. B. Kerning aktiviert ist, wird zusätzlicher Platz zwischen einem groß geschriebenen "T" und einem Kleinbuchstaben "i" entfernt.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die kernung ist aktiviert.
+Kerning ist aktiviert.
 
 
 ```HTML
@@ -58,6 +58,6 @@ Die kernung ist aktiviert.
 
 
 
- 
+ 
 
- 
+ 

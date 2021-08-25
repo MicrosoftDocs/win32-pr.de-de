@@ -1,9 +1,9 @@
 ---
-title: DTM_GETMCFONT Meldung (kommstrg. h)
-description: Ruft die Schriftart ab, die das untergeordnete Monatskalender-Steuerelement des Datums-und Zeitauswahl Steuer Elements gegenwärtig verwendet. Sie können diese Nachricht explizit senden oder das "DateTime \_ getmonthcalfont"-Makro verwenden.
+title: DTM_GETMCFONT-Nachricht (Commctrl.h)
+description: Ruft die Schriftart ab, die das Kalendersteuerelement für untergeordnete Monate des DTP-Steuerelements (Date and Time Picker) derzeit verwendet. Sie können diese Nachricht explizit senden oder das DateTime \_ GetMonthCalFont-Makro verwenden.
 ms.assetid: 6687a1dc-6f6d-4684-80b2-f726b08d2f3a
 keywords:
-- Windows-Steuerelemente für DTM_GETMCFONT Meldung
+- DTM_GETMCFONT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d799d5dbbe5e3a4cdf7eede871f9aeac451d17a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b2bf60f226e7fe5d309324bc517a7fd215abe4591fd5141ff149b14e162ac9be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878130"
 ---
-# <a name="dtm_getmcfont-message"></a>DTM \_ getmcfont-Nachricht
+# <a name="dtm_getmcfont-message"></a>FEHLERMELDUNG \_ GETMCFONT
 
-Ruft die Schriftart ab, die das untergeordnete Monatskalender-Steuerelement des Datums-und Zeitauswahl Steuer Elements gegenwärtig verwendet. Sie können diese Nachricht explizit senden oder das " [**DateTime \_ getmonthcalfont**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getmonthcalfont) "-Makro verwenden.
+Ruft die Schriftart ab, die das Kalendersteuerelement für untergeordnete Monate des DTP-Steuerelements (Date and Time Picker) derzeit verwendet. Sie können diese Nachricht explizit senden oder das [**DateTime \_ GetMonthCalFont-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-datetime_getmonthcalfont) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Schriftart ab, die das untergeordnete Monatskalender-Steuerelement des 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen hFont-Wert zurück, der das Handle der aktuellen Schriftart ist.
+Gibt einen HFONT-Wert zurück, der das Handle für die aktuelle Schriftart ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen hFont-Wert zurück, der das Handle der aktuellen Schriftart ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

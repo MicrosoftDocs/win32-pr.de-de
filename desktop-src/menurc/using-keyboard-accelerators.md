@@ -1,77 +1,77 @@
 ---
-title: Verwenden von Tastatur Accelerators
-description: In diesem Abschnitt werden Aufgaben beschrieben, die mit Tastatur Accelerators verknüpft sind.
+title: Verwenden von Tastenkombinationen
+description: In diesem Abschnitt werden Aufgaben behandelt, die Tastenkombinationen zugeordnet sind.
 ms.assetid: 11c42d69-7454-43e6-9f44-c14a283814ce
 keywords:
-- Benutzereingabe, Tastaturbeschleuniger
-- Erfassen von Benutzereingaben, Tastatur Accelerators
-- Tastaturbeschleuniger
-- Accelerators
-- Zugriffstasten Tabellen
-- Zugriffstasten-Tabellen Ressourcen
-- Übersetzen der Beschleunigungs Funktion
-- WM_COMMAND Meldung
-- WM_SYS Befehls Meldung
+- Benutzereingabe,Tastenkombinationen
+- Erfassen von Benutzereingaben, Tastenkombinationen
+- Tastenkombinationen
+- Beschleuniger
+- Zugriffstastentabellen
+- Accelerator-Table-Ressourcen
+- Translate Accelerator-Funktion
+- WM_COMMAND-Nachricht
+- WM_SYS COMMAND-Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2241ba828ea9e6be5e4bb0b7471adcc3130940ca
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ecbb16c92b986cbe73aababc7edc24518cf59ce5009322e3a006bac827427c45
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886564"
 ---
-# <a name="using-keyboard-accelerators"></a>Verwenden von Tastatur Accelerators
+# <a name="using-keyboard-accelerators"></a>Verwenden von Tastenkombinationen
 
-In diesem Abschnitt werden Aufgaben beschrieben, die mit Tastatur Accelerators verknüpft sind.
+In diesem Abschnitt werden Aufgaben behandelt, die Tastenkombinationen zugeordnet sind.
 
--   [Verwenden einer Zugriffstasten-Tabellen Ressource](#using-an-accelerator-table-resource)
-    -   [Erstellen der Zugriffstasten-Tabellen Ressource](#creating-the-accelerator-table-resource)
-    -   [Laden der Zugriffstasten-Tabellen Ressource](#loading-the-accelerator-table-resource)
-    -   [Aufrufen der Translation Accelerator-Funktion](#calling-the-translate-accelerator-function)
-    -   [Verarbeiten von WM- \_ Befehls Meldungen](/windows)
-    -   [Zerstören der Zugriffstasten-Tabellen Ressource](#destroying-the-accelerator-table-resource)
-    -   [Erstellen von Accelerators für Schriftart Attribute](#creating-accelerators-for-font-attributes)
--   [Verwenden einer Zugriffstasten Tabelle, die zur Laufzeit erstellt wird](#using-an-accelerator-table-created-at-run-time)
+-   [Verwenden einer Accelerator-Tabellenressource](#using-an-accelerator-table-resource)
+    -   [Erstellen der Accelerator-Tabellenressource](#creating-the-accelerator-table-resource)
+    -   [Laden der Accelerator-Tabellenressource](#loading-the-accelerator-table-resource)
+    -   [Aufrufen der Translate Accelerator-Funktion](#calling-the-translate-accelerator-function)
+    -   [Verarbeiten von WM \_ COMMAND-Nachrichten](/windows)
+    -   [Zerstören der Accelerator-Tabellenressource](#destroying-the-accelerator-table-resource)
+    -   [Erstellen von Zugriffstasten für Schriftartattribute](#creating-accelerators-for-font-attributes)
+-   [Verwenden einer zur Laufzeit erstellten Zugriffstastentabelle](#using-an-accelerator-table-created-at-run-time)
     -   [Erstellen einer Run-Time Accelerator-Tabelle](#creating-a-run-time-accelerator-table)
-    -   [Verarbeiten von Accelerators](#processing-accelerators)
+    -   [Processing Accelerators](#processing-accelerators)
     -   [Zerstören einer Run-Time Accelerator-Tabelle](#destroying-a-run-time-accelerator-table)
-    -   [Erstellen von Benutzer bearbeitbaren Acceleratoren](#creating-user-editable-accelerators)
+    -   [Erstellen bearbeitbarer Accelerators für Benutzer](#creating-user-editable-accelerators)
 
-## <a name="using-an-accelerator-table-resource"></a>Verwenden einer Zugriffstasten-Tabellen Ressource
+## <a name="using-an-accelerator-table-resource"></a>Verwenden einer Accelerator-Tabellenressource
 
-Die gängigste Methode zum Hinzufügen von Zugriffstasten für eine Anwendung ist das Einschließen einer Zugriffstasten-Tabellen Ressource mit der ausführbaren Datei der Anwendung und das anschließende Laden der Ressource zur Laufzeit.
+Die häufigste Methode zum Hinzufügen von Zugriffstastenunterstützung zu einer Anwendung ist das Hinzufügen einer Accelerator-Table-Ressource in die ausführbare Datei der Anwendung und das anschließende Laden der Ressource zur Laufzeit.
 
 In diesem Abschnitt werden die folgenden Themen behandelt.
 
--   [Erstellen der Zugriffstasten-Tabellen Ressource](#creating-the-accelerator-table-resource)
--   [Laden der Zugriffstasten-Tabellen Ressource](#loading-the-accelerator-table-resource)
--   [Aufrufen der Translation Accelerator-Funktion](#calling-the-translate-accelerator-function)
--   [Verarbeiten von WM- \_ Befehls Meldungen](/windows)
--   [Zerstören der Zugriffstasten-Tabellen Ressource](#destroying-the-accelerator-table-resource)
--   [Erstellen von Accelerators für Schriftart Attribute](#creating-accelerators-for-font-attributes)
+-   [Erstellen der Accelerator-Tabellenressource](#creating-the-accelerator-table-resource)
+-   [Laden der Accelerator-Tabellenressource](#loading-the-accelerator-table-resource)
+-   [Aufrufen der Translate Accelerator-Funktion](#calling-the-translate-accelerator-function)
+-   [Verarbeiten von WM \_ COMMAND-Nachrichten](/windows)
+-   [Zerstören der Accelerator-Tabellenressource](#destroying-the-accelerator-table-resource)
+-   [Erstellen von Zugriffstasten für Schriftartattribute](#creating-accelerators-for-font-attributes)
 
-### <a name="creating-the-accelerator-table-resource"></a>Erstellen der Zugriffstasten-Tabellen Ressource
+### <a name="creating-the-accelerator-table-resource"></a>Erstellen der Accelerator-Tabellenressource
 
-Sie erstellen eine Accelerator-Table-Ressource, indem Sie die [Accelerators](./accelerators-resource.md) -Anweisung in der Ressourcen Definitionsdatei Ihrer Anwendung verwenden. Sie müssen der Zugriffstasten Tabelle einen Namen oder Ressourcen Bezeichner zuweisen, vorzugsweise im Gegensatz zu allen anderen Ressourcen. Das System verwendet diesen Bezeichner, um die Ressource zur Laufzeit zu laden.
+Sie erstellen eine Accelerator-Table-Ressource mithilfe der [ACCELERATORS-Anweisung](./accelerators-resource.md) in der Ressourcendefinitionsdatei Ihrer Anwendung. Sie müssen der Zugriffstastentabelle einen Namen oder Ressourcenbezeichner zuweisen, vorzugsweise im Gegensatz zu anderen Ressourcen. Das System verwendet diesen Bezeichner, um die Ressource zur Laufzeit zu laden.
 
-Jede Zugriffstaste, die Sie definieren, erfordert einen separaten Eintrag in der Zugriffstasten Tabelle. In jedem Eintrag definieren Sie den Tastatur Schlag (entweder einen ASCII-Zeichencode oder einen Code für den virtuellen Schlüssel), der die Zugriffstaste und den Bezeichner der Zugriffstaste generiert. Außerdem müssen Sie angeben, ob der Tastatur Strich in einer Kombination mit der alt-, UMSCHALT-oder STRG-Taste verwendet werden muss. Weitere Informationen zu virtuellen Schlüsseln finden Sie unter [Tastatureingabe](/windows/desktop/inputdev/keyboard-input).
+Jede von Ihnen definierte Zugriffstaste erfordert einen separaten Eintrag in der Zugriffstastentabelle. In jedem Eintrag definieren Sie die Tastatureingabe (entweder ein ASCII-Zeichencode oder virtueller Schlüsselcode), der die Zugriffstaste und den Bezeichner des Zugriffstasten generiert. Sie müssen auch angeben, ob die Tastatureingabe in einer Kombination mit den TASTEN ALT, UMSCHALT ODER STRG verwendet werden muss. Weitere Informationen zu virtuellen Tasten finden Sie unter [Tastatureingabe.](/windows/desktop/inputdev/keyboard-input)
 
-Ein ASCII-Tastatur Strich wird entweder durch Einschließen des ASCII-Zeichens in doppelte Anführungszeichen oder durch Verwendung des ganzzahligen Werts des Zeichens in Kombination mit dem ASCII-Flag angegeben. In den folgenden Beispielen wird gezeigt, wie Sie ASCII-Beschleuniger definieren.
+Eine ASCII-Tastatureingabe wird entweder angegeben, indem das ASCII-Zeichen in doppelte Anführungszeichen eingeschlossen wird oder indem der ganzzahlige Wert des Zeichens in Kombination mit dem ASCII-Flag verwendet wird. In den folgenden Beispielen wird gezeigt, wie ASCII-Zugriffstasten definiert werden.
 
 ``` syntax
 "A", ID_ACCEL1         ; SHIFT+A 
 65,  ID_ACCEL2, ASCII  ; SHIFT+A 
 ```
 
-Eine Tastenkombination für den Code eines virtuellen Schlüssels wird unterschiedlich angegeben, je nachdem, ob es sich bei der Tastatureingabe um einen alphanumerischen Schlüssel oder um einen nicht alphanumerischen Schlüssel handelt. Bei einem alphanumerischen Schlüssel wird der Buchstabe oder die Zahl des Schlüssels, der in doppelte Anführungszeichen eingeschlossen ist, mit dem **VIRTKEY** -Flag kombiniert. Bei einem nicht alphanumerischen Schlüssel wird der Code für den virtuellen Schlüssel für den jeweiligen Schlüssel mit dem **VIRTKEY** -Flag kombiniert. In den folgenden Beispielen wird veranschaulicht, wie Sie Code Accelerators für virtuelle Schlüssel definieren.
+Eine Tastatureingabe mit virtuellem Schlüsselcode wird unterschiedlich angegeben, je nachdem, ob es sich bei der Tastatureingabe um einen alphanumerischen Schlüssel oder um einen nicht alphanumerischen Schlüssel handelt. Bei einem alphanumerischen Schlüssel wird der Buchstabe oder die Zahl des Schlüssels in doppelten Anführungszeichen mit dem **VIRTKEY-Flag** kombiniert. Bei einem nicht alphanumerischen Schlüssel wird der virtuelle Schlüsselcode für den spezifischen Schlüssel mit dem **VIRTKEY-Flag** kombiniert. In den folgenden Beispielen wird gezeigt, wie Sie Code Accelerators für virtuelle Schlüssel definieren.
 
 ``` syntax
 "a",       ID_ACCEL3, VIRTKEY   ; A (caps-lock on) or a 
 VK_INSERT, ID_ACCEL4, VIRTKEY   ; INSERT key 
 ```
 
-Das folgende Beispiel zeigt eine Zugriffstaste für eine Ressource, die Accelerators für Datei Vorgänge definiert. Der Name der Ressource ist " *fileaccel*".
+Das folgende Beispiel zeigt eine Accelerator-Table-Ressource, die Zugriffstasten für Dateivorgänge definiert. Der Name der Ressource ist *FileAccel.*
 
 ``` syntax
 FileAccel ACCELERATORS 
@@ -83,7 +83,7 @@ BEGIN
 END 
 ```
 
-Wenn Sie möchten, dass der Benutzer die Alt-Taste, die UMSCHALTTASTE oder die STRG-Taste in einer Kombination mit der Zugriffstaste drücken, geben Sie die alt-, UMSCHALT-und steuerungflags in der Zugriffstasten Definition an. Hier einige Beispiele.
+Wenn der Benutzer die TASTEN ALT, UMSCHALT ODER STRG in einer Kombination mit der Tastenkombination drücken soll, geben Sie die Flags ALT, UMSCHALT und STRG in der Definition des Zugriffstastenbeschleunigers an. Hier einige Beispiele.
 
 ``` syntax
 "B",   ID_ACCEL5, ALT                   ; ALT_SHIFT+B 
@@ -91,13 +91,13 @@ Wenn Sie möchten, dass der Benutzer die Alt-Taste, die UMSCHALTTASTE oder die S
 VK_F5, ID_ACCEL7, CONTROL, ALT, VIRTKEY ; CTRL+ALT+F5 
 ```
 
-Wenn eine Zugriffstaste einem Menü Element entspricht, hebt das System standardmäßig das Menü Element hervor. Sie können das **noinvert** -Flag verwenden, um die Hervorhebung für eine einzelne Zugriffstaste zu verhindern. Im folgenden Beispiel wird gezeigt, wie das **noinvert** -Flag verwendet wird:
+Wenn eine Zugriffstaste einem Menüelement entspricht, hebt das System das Menüelement standardmäßig hervor. Sie können das **NOINVERT-Flag** verwenden, um die Hervorhebung für einen einzelnen Accelerator zu verhindern. Im folgenden Beispiel wird die Verwendung des **NOINVERT-Flags** veranschaulicht:
 
 ``` syntax
 VK_DELETE, ID_ACCEL8, VIRTKEY, SHIFT, NOINVERT  ; SHIFT+DELETE 
 ```
 
-Zum Definieren von Accelerators, die Menü Elementen in der Anwendung entsprechen, fügen Sie die Zugriffstasten in den Text der Menü Elemente ein. Im folgenden Beispiel wird gezeigt, wie Acceleratoren in Menü Element Text in eine Ressourcen Definitionsdatei eingeschlossen werden.
+Um Zugriffstasten zu definieren, die Menüelementen in Ihrer Anwendung entsprechen, schließen Sie die Zugriffstasten in den Text der Menüelemente ein. Das folgende Beispiel zeigt, wie Zugriffstasten in Menüelementtext in eine Ressourcendefinitionsdatei eingefügt werden.
 
 ``` syntax
 FilePopup MENU 
@@ -113,15 +113,15 @@ BEGIN
 END 
 ```
 
-### <a name="loading-the-accelerator-table-resource"></a>Laden der Zugriffstasten-Tabellen Ressource
+### <a name="loading-the-accelerator-table-resource"></a>Laden der Accelerator-Tabellenressource
 
-Eine Anwendung lädt eine Accelerator-Table-Ressource, indem Sie die [**loadaccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) -Funktion aufruft und den Instanzhandle für die Anwendung angibt, deren ausführbare Datei die Ressource und den Namen oder Bezeichner der Ressource enthält. **Loadaccelerators** lädt die angegebene Zugriffstasten Tabelle in den Arbeitsspeicher und gibt das Handle an die Zugriffstasten Tabelle zurück.
+Eine Anwendung lädt eine Accelerator-Table-Ressource, indem sie die [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) aufruft und das Instanzhandler für die Anwendung anknübe, deren ausführbare Datei die Ressource und den Namen oder Bezeichner der Ressource enthält. **LoadAccelerators lädt** die angegebene Zugriffstastentabelle in den Arbeitsspeicher und gibt das Handle an die Zugriffstastentabelle zurück.
 
-Eine Anwendung kann jederzeit eine Accelerator-Table-Ressource laden. Normalerweise lädt eine Single Thread-Anwendung die Zugriffstasten Tabelle, bevor Sie die Hauptnachrichten Schleife eingibt. Eine Anwendung, die mehrere Threads verwendet, lädt in der Regel die Zugriffstasten-Tabellen Ressource für einen Thread, bevor die Nachrichten Schleife für den Thread eingegeben wird. Eine Anwendung oder ein Thread kann auch mehrere Zugriffstasten Tabellen verwenden, die jeweils einem bestimmten Fenster in der Anwendung zugeordnet sind. Eine solche Anwendung lädt die Zugriffstasten Tabelle für das Fenster jedes Mal, wenn der Benutzer das Fenster aktiviert hat. Weitere Informationen zu Threads finden Sie unter [Prozesse und Threads](/windows/desktop/ProcThread/processes-and-threads).
+Eine Anwendung kann eine Zugriffstastentabellenressource jederzeit laden. In der Regel lädt eine Singlethreadanwendung ihre Zugriffstastentabelle, bevor sie in die Hauptnachrichtenschleife eintritt. Eine Anwendung, die mehrere Threads verwendet, lädt in der Regel die Accelerator-Table-Ressource für einen Thread, bevor sie in die Meldungsschleife für den Thread eintritt. Eine Anwendung oder ein Thread kann auch mehrere Zugriffstastentabellen verwenden, die jeweils einem bestimmten Fenster in der Anwendung zugeordnet sind. Eine solche Anwendung würde die Zugriffstastentabelle für das Fenster jedes Mal laden, wenn der Benutzer das Fenster aktiviert hat. Weitere Informationen zu Threads finden Sie unter [Prozesse und Threads](/windows/desktop/ProcThread/processes-and-threads).
 
-### <a name="calling-the-translate-accelerator-function"></a>Aufrufen der Translation Accelerator-Funktion
+### <a name="calling-the-translate-accelerator-function"></a>Aufrufen der Translate Accelerator-Funktion
 
-Zum Verarbeiten von Accelerators muss die Nachrichten Schleife einer Anwendung (oder des Threads) einen aufrufsvorgang der [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) -Funktion enthalten. **TranslateAccelerator** vergleicht Tastatureingaben mit einer Zugriffstasten Tabelle und übersetzt die Tastatureingaben in eine [**WM- \_ Befehls**](wm-command.md) Meldung (oder eine [**WM- \_ syscommand**](wm-syscommand.md)-Meldung), wenn eine Entsprechung gefunden wird. Die-Funktion sendet die Nachricht dann an eine Fenster Prozedur. Die Parameter der **TranslateAccelerator** -Funktion enthalten das Handle für das Fenster, das die WM- **\_ Befehls** Meldungen empfängt, das Handle für die Zugriffstasten Tabelle, die zum Übersetzen von Acceleratoren verwendet wird, und einen Zeiger auf eine [**msg**](/windows/win32/api/winuser/ns-winuser-msg) -Struktur, die eine Nachricht aus der Warteschlange enthält. Im folgenden Beispiel wird gezeigt, wie Sie **TranslateAccelerator** aus einer Nachrichten Schleife heraus abrufen können.
+Um Zugriffstasten zu verarbeiten, muss die Meldungsschleife einer Anwendung (oder eines Threads) einen Aufruf der [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) enthalten. **TranslateAccelerator** vergleicht Tastatureingaben mit einer Zugriffstastentabelle und übersetzt, wenn eine Übereinstimmung gefunden wird, die Tastatureingaben in eine [**WM \_ COMMAND-Nachricht**](wm-command.md) (oder [**WM \_ SYSCOMMAND).**](wm-syscommand.md) Die Funktion sendet dann die Nachricht an eine Fensterprozedur. Die Parameter der **TranslateAccelerator-Funktion** umfassen das Handle für das Fenster, das **die WM \_ COMMAND-Nachrichten** empfangen soll, das Handle für die Zugriffstastentabelle, die zum Übersetzen von Zugriffstasten verwendet wird, und einen Zeiger auf eine [**MSG-Struktur,**](/windows/win32/api/winuser/ns-winuser-msg) die eine Nachricht aus der Warteschlange enthält. Das folgende Beispiel zeigt, wie **TranslateAccelerator** innerhalb einer Meldungsschleife aufruft.
 
 
 ```
@@ -152,28 +152,28 @@ while ( (bRet = GetMessage(&msg, (HWND) NULL, 0, 0)) != 0)
 
 
 
-### <a name="processing-wm_command-messages"></a>Verarbeiten von WM- \_ Befehls Meldungen
+### <a name="processing-wm_command-messages"></a>Verarbeiten von WM \_ COMMAND-Nachrichten
 
-Wenn eine Zugriffstaste verwendet wird, empfängt das in der [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) -Funktion angegebene Fenster einen [**WM- \_ Befehl**](wm-command.md) oder eine [**WM- \_ syscommand**](wm-syscommand.md) -Nachricht. Das nieder wertige Wort des *wParam* -Parameters enthält den Bezeichner der Zugriffstaste. Die Fenster Prozedur überprüft den Bezeichner, um die Quelle der **WM- \_ Befehls** Nachricht zu bestimmen und die Nachricht entsprechend zu verarbeiten.
+Wenn eine Zugriffstaste verwendet wird, empfängt das in der [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) angegebene Fenster eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Meldung.**](wm-syscommand.md) Das niedrige Wort des *wParam-Parameters* enthält den Bezeichner der Zugriffstaste. Die Fensterprozedur untersucht den Bezeichner, um die Quelle der **WM \_ COMMAND-Nachricht** zu bestimmen und die Nachricht entsprechend zu verarbeiten.
 
-Wenn eine Zugriffstaste einem Menü Element in der Anwendung entspricht, wird in der Regel die Zugriffstaste und das Menü Element dem gleichen Bezeichner zugewiesen. Wenn Sie wissen möchten, ob eine [**WM- \_ Befehls**](wm-command.md) Nachricht von einer Zugriffstaste oder einem Menü Element generiert wurde, können Sie das höchst wertige Wort des *wParam* -Parameters überprüfen. Wenn eine Zugriffstaste die Meldung generiert hat, ist das höchst wertige Wort 1. Wenn ein Menü Element die Meldung generiert hat, ist das höchst wertige Wort 0.
+Wenn eine Zugriffstaste einem Menüelement in der Anwendung entspricht, wird der Zugriffstaste und dem Menüelement in der Regel der gleiche Bezeichner zugewiesen. Wenn Sie wissen müssen, ob eine [**WM \_ COMMAND-Nachricht**](wm-command.md) von einer Zugriffstaste oder einem Menüelement generiert wurde, können Sie das obere Wort des *wParam-Parameters* untersuchen. Wenn eine Zugriffstaste die Nachricht generiert hat, ist das obere Wort 1. Wenn ein Menüelement die Nachricht generiert hat, ist das hohe Wort 0.
 
-### <a name="destroying-the-accelerator-table-resource"></a>Zerstören der Zugriffstasten-Tabellen Ressource
+### <a name="destroying-the-accelerator-table-resource"></a>Zerstören der Accelerator-Tabellenressource
 
-Das System zerstört die von der [**loadaccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) -Funktion geladenen acceleratortabellenressourcen automatisch und entfernt die Ressource nach dem Schließen der Anwendung aus dem Arbeitsspeicher.
+Das System zerstört automatisch accelerator-table-Ressourcen, die von der [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) geladen wurden, und entfernt die Ressource aus dem Arbeitsspeicher, nachdem die Anwendung geschlossen wurde.
 
-### <a name="creating-accelerators-for-font-attributes"></a>Erstellen von Accelerators für Schriftart Attribute
+### <a name="creating-accelerators-for-font-attributes"></a>Erstellen von Zugriffstasten für Schriftartattribute
 
-Das Beispiel in diesem Abschnitt zeigt, wie die folgenden Aufgaben ausgeführt werden:
+Das Beispiel in diesem Abschnitt zeigt, wie sie die folgenden Aufgaben ausführen:
 
--   Erstellen Sie eine Zugriffstaste für eine Ressource.
--   Lädt die Zugriffstasten Tabelle zur Laufzeit.
--   Übersetzen Sie Accelerators in einer Nachrichten Schleife.
--   Prozess [**WM- \_ Befehls**](wm-command.md) Meldungen, die von den Accelerators generiert werden.
+-   Erstellen Sie eine Accelerator-Table-Ressource.
+-   Laden Sie die Zugriffstastentabelle zur Laufzeit.
+-   Übersetzen von Zugriffstasten in einer Nachrichtenschleife.
+-   Verarbeiten Von den Zugriffstasten generierte [**WM \_ COMMAND-Meldungen.**](wm-command.md)
 
-Diese Aufgaben werden im Kontext einer Anwendung veranschaulicht, die ein **Zeichen** Menü und entsprechende Acceleratoren enthält, mit denen der Benutzerattribute der aktuellen Schriftart auswählen kann.
+Diese Aufgaben werden im Kontext einer Anwendung  gezeigt, die ein Zeichenmenü und entsprechende Zugriffstasten enthält, mit denen der Benutzer Attribute der aktuellen Schriftart auswählen kann.
 
-Der folgende Teil einer Ressourcen Definitionsdatei definiert das **Zeichen** Menü und die zugehörige Zugriffstasten Tabelle. Beachten Sie, dass die Menü Elemente die Tastenkombinationen anzeigen und dass jede Zugriffstaste denselben Bezeichner wie das zugehörige Menü Element aufweist.
+Der folgende Teil einer Ressourcendefinitionsdatei definiert das **Menü Zeichen** und die zugeordnete Zugriffstastentabelle. Beachten Sie, dass die Menüelemente die Tastenkombinationen anzeigen und dass jede Zugriffstaste denselben Bezeichner wie das zugeordnete Menüelement hat.
 
 
 ```
@@ -203,7 +203,7 @@ FontAccel ACCELERATORS
 
 
 
-Die folgenden Abschnitte aus der Quelldatei der Anwendung veranschaulichen, wie die Accelerators implementiert werden.
+In den folgenden Abschnitten der Quelldatei der Anwendung wird gezeigt, wie die Zugriffstasten implementiert werden.
 
 
 ```
@@ -324,18 +324,18 @@ LRESULT APIENTRY MainWndProc(HWND hwndMain, UINT uMsg, WPARAM wParam, LPARAM lPa
 
 
 
-## <a name="using-an-accelerator-table-created-at-run-time"></a>Verwenden einer Zugriffstasten Tabelle, die zur Laufzeit erstellt wird
+## <a name="using-an-accelerator-table-created-at-run-time"></a>Verwenden einer zur Laufzeit erstellten Zugriffstastentabelle
 
-In diesem Thema wird die Verwendung von Zugriffstasten Tabellen erläutert, die zur Laufzeit erstellt werden.
+In diesem Thema wird erläutert, wie Zugriffstastentabellen verwendet werden, die zur Laufzeit erstellt wurden.
 
 -   [Erstellen einer Run-Time Accelerator-Tabelle](#creating-a-run-time-accelerator-table)
--   [Verarbeiten von Accelerators](#processing-accelerators)
+-   [Processing Accelerators](#processing-accelerators)
 -   [Zerstören einer Run-Time Accelerator-Tabelle](#destroying-a-run-time-accelerator-table)
--   [Erstellen von Benutzer bearbeitbaren Acceleratoren](#creating-user-editable-accelerators)
+-   [Erstellen bearbeitbarer Accelerators für Benutzer](#creating-user-editable-accelerators)
 
 ### <a name="creating-a-run-time-accelerator-table"></a>Erstellen einer Run-Time Accelerator-Tabelle
 
-Der erste Schritt beim Erstellen einer Zugriffstasten Tabelle zur Laufzeit ist das Auffüllen eines Arrays von [**Accel**](/windows/win32/api/winuser/ns-winuser-accel) -Strukturen. Jede Struktur im Array definiert eine Zugriffstaste in der Tabelle. Die Definition eines Zugriffstasten enthält die Flags, den Schlüssel und den Bezeichner. Die **Accel** -Struktur hat die folgende Form.
+Der erste Schritt beim Erstellen einer Zugriffstastentabelle zur Laufzeit ist das Füllen eines Arrays von [**ACCEL-Strukturen.**](/windows/win32/api/winuser/ns-winuser-accel) Jede Struktur im Array definiert einen Accelerator in der Tabelle. Die Definition eines Zugriffstasten enthält seine Flags, seinen Schlüssel und seinen Bezeichner. Die **ACCEL-Struktur** weist das folgende Format auf.
 
 ``` syntax
 typedef struct tagACCEL { // accl 
@@ -345,25 +345,25 @@ typedef struct tagACCEL { // accl
 } ACCEL;
 ```
 
-Sie definieren eine Tastenkombination einer Zugriffstaste, indem Sie einen ASCII-Zeichencode oder einen Code für den virtuellen Schlüssel im **Schlüssel** Element der [**Accel**](/windows/win32/api/winuser/ns-winuser-accel) -Struktur angeben. Wenn Sie einen Code für den virtuellen Schlüssel angeben, müssen Sie zunächst das **fvirtkey** -Flag in das **fvirt** -Member einschließen. Andernfalls interpretiert das System den Code als ASCII-Zeichencode. Sie können das **Fcontrol** **-, das**-oder das **fshift** -Flag oder alle drei einschließen, um die STRG-Taste, die Alt-Taste oder die UMSCHALTTASTE mit dem Tastatur Strich zu kombinieren.
+Sie definieren die Tastatureingabe einer Zugriffstaste, indem Sie einen ASCII-Zeichencode oder einen Code für virtuelle Schlüssel im **Schlüsselmember** der [**ACCEL-Struktur**](/windows/win32/api/winuser/ns-winuser-accel) angeben. Wenn Sie einen Virtuellen Schlüsselcode angeben, müssen Sie zuerst das **FVIRTKEY-Flag** in den **fVirt-Member** einschließen. Andernfalls interpretiert das System den Code als ASCII-Zeichencode. Sie können das **FCONTROL-,** **FALT-** oder **FSHIFT-Flag** oder alle drei einschließen, um die STRG-, ALT- oder UMSCHALTTASTE mit der Tastatureingabe zu kombinieren.
 
-Um die Zugriffstasten Tabelle zu erstellen, übergeben Sie einen Zeiger auf das Array von [**Accel**](/windows/win32/api/winuser/ns-winuser-accel) -Strukturen an [**die Funktion "**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) -Funktion". " **Kreateacceleratortable** " erstellt die Zugriffstasten Tabelle und gibt das Handle für die Tabelle zurück.
+Um die Zugriffstastentabelle zu erstellen, übergeben Sie einen Zeiger auf das Array von [**ACCEL-Strukturen**](/windows/win32/api/winuser/ns-winuser-accel) an die [**CreateAcceleratorTable-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) **CreateAcceleratorTable** erstellt die Zugriffstastentabelle und gibt das Handle an die Tabelle zurück.
 
-### <a name="processing-accelerators"></a>Verarbeiten von Accelerators
+### <a name="processing-accelerators"></a>Verarbeitungsbeschleuniger
 
-Das Laden und Aufrufen von Acceleratoren, die von einer zur Laufzeit erstellten Zugriffstasten-Tabelle bereitgestellt werden, ist identisch mit der Verarbeitung von Zugriffstasten, die von einer Zugriffstasten-Tabelle bereitgestellt werden Weitere Informationen finden Sie unter [Laden der](#loading-the-accelerator-table-resource) Zugriffstasten-Tabellen Ressource durch [Verarbeitung von WM- \_ befehlsnachrichten](/windows).
+Das Laden und Aufrufen von Zugriffstasten, die von einer zur Laufzeit erstellten Zugriffstastentabelle bereitgestellt werden, entspricht der Verarbeitung derjenigen, die von einer Zugriffstastentabellenressource bereitgestellt werden. Weitere Informationen finden Sie unter [Loading the Accelerator Table Resource](#loading-the-accelerator-table-resource) through Processing WM COMMAND [ \_ Messages](/windows).
 
 ### <a name="destroying-a-run-time-accelerator-table"></a>Zerstören einer Run-Time Accelerator-Tabelle
 
-Das System zerstört schnell Zugriffs Tabellen, die zur Laufzeit erstellt werden, und entfernt die Ressourcen nach dem Schließen der Anwendung aus dem Arbeitsspeicher. Sie können eine Zugriffstasten Tabelle zerstören und Sie zuvor aus dem Arbeitsspeicher entfernen, indem Sie das Handle der Tabelle an die [**DestroyAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable) -Funktion übergeben.
+Das System zerstört zur Laufzeit erstellte Zugriffstastentabellen automatisch und entfernt die Ressourcen aus dem Arbeitsspeicher, nachdem die Anwendung geschlossen wurde. Sie können eine Zugriffstastentabelle zuvor zerstören und aus dem Arbeitsspeicher entfernen, indem Sie das Handle der Tabelle an die [**DestroyAcceleratorTable-Funktion**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable) übergeben.
 
-### <a name="creating-user-editable-accelerators"></a>Erstellen von Benutzer bearbeitbaren Acceleratoren
+### <a name="creating-user-editable-accelerators"></a>Erstellen von bearbeitbaren Zugriffstasten für Benutzer
 
-In diesem Beispiel wird gezeigt, wie ein Dialogfeld erstellt wird, das es dem Benutzer ermöglicht, die einem Menü Element zugeordnete Zugriffstaste zu ändern. Das Dialogfeld besteht aus einem Kombinations Feld mit Menü Elementen, einem Kombinations Feld mit den Namen der Schlüssel und Kontrollkästchen zum Auswählen der Tasten STRG, alt und UMSCHALT. Die folgende Abbildung zeigt das Dialogfeld.
+In diesem Beispiel wird gezeigt, wie Sie ein Dialogfeld erstellen, das es dem Benutzer ermöglicht, die einem Menüelement zugeordnete Zugriffstaste zu ändern. Das Dialogfeld besteht aus einem Kombinationsfeld mit Menüelementen, einem Kombinationsfeld mit den Namen der Schlüssel und Kontrollkästchen zum Auswählen der Tasten STRG, ALT und UMSCHALT. Die folgende Abbildung zeigt das Dialogfeld.
 
-![Dialogfeld mit Kombinations Feldern und Kontrollkästchen](images/useredit.gif)
+![Dialogfeld mit Kombinationsfeldern und Kontrollkästchen](images/useredit.gif)
 
-Im folgenden Beispiel wird gezeigt, wie das Dialogfeld in der Ressourcen Definitionsdatei definiert ist.
+Das folgende Beispiel zeigt, wie das Dialogfeld in der Ressourcendefinitionsdatei definiert wird.
 
 ``` syntax
 EdAccelBox DIALOG 5, 17, 193, 114 
@@ -392,7 +392,7 @@ BEGIN
 END
 ```
 
-Die Menüleiste der Anwendung enthält ein Untermenü des **Zeichens** , dessen Elemente mit Zugriffstasten verknüpft sind.
+Die Menüleiste der Anwendung  enthält ein Zeichenuntermenü, dessen Elementen Zugriffstasten zugeordnet sind.
 
 ``` syntax
 MainMenu MENU 
@@ -416,7 +416,7 @@ FontAccel ACCELERATORS
  
 ```
 
-Die Menü Element Werte für die Menüvorlage sind Konstanten, die wie folgt in der Header Datei der Anwendung definiert sind.
+Die Menüelementwerte für die Menüvorlage sind Konstanten, die in der Headerdatei der Anwendung wie folgt definiert sind.
 
 ``` syntax
 #define IDM_REGULAR    1100
@@ -425,7 +425,7 @@ Die Menü Element Werte für die Menüvorlage sind Konstanten, die wie folgt in 
 #define IDM_ULINE      1400
 ```
 
-Im Dialogfeld wird ein Array von Anwendungs definierten VKey-Strukturen verwendet, von denen jedes eine Keystroke-Text Zeichenfolge und eine Zugriffs Text Zeichenfolge enthält. Wenn das Dialogfeld erstellt wird, wird das Array analysiert, und jede Keystroke-Text Zeichenfolge wird dem Kombinations Feld **KeyStroke auswählen** hinzugefügt. Wenn der Benutzer auf die Schaltfläche **OK** klickt, wird das Dialogfeld die ausgewählte Keystroke-Text Zeichenfolge nachschlagen und die entsprechende Zugriffstasten-Text Zeichenfolge abrufen. Das Dialogfeld fügt die Zugriffstasten-Text Zeichenfolge an den Text des Menü Elements an, das der Benutzer ausgewählt hat. Das folgende Beispiel zeigt das Array von VKey-Strukturen:
+Das Dialogfeld verwendet ein Array von anwendungsdefinierte VKEY-Strukturen, die jeweils eine Tastatureingabetextzeichenfolge und eine Accelerator-Textzeichenfolge enthalten. Wenn das Dialogfeld erstellt wird, analysiert es das Array und fügt jede Tastatureingabetextzeichenfolge dem Kombinationsfeld **Tastatureingabe auswählen** hinzu. Wenn der Benutzer auf die Schaltfläche **OK** klickt, sucht das Dialogfeld nach der ausgewählten Tastatureingabetextzeichenfolge und ruft die entsprechende Zugriffstastentextzeichenfolge ab. Das Dialogfeld fügt die Zeichenfolge accelerator-text an den Text des Menüelements an, das der Benutzer ausgewählt hat. Das folgende Beispiel zeigt das Array von VKEY-Strukturen:
 
 
 ```
@@ -469,7 +469,7 @@ VKEYS vkeys[MAXKEYS] = {
 
 
 
-Die Initialisierungs Prozedur des Dialog Felds füllt die Kombinations Felder **Select Item** und **KeyStroke** aus. Nachdem der Benutzer ein Menü Element und eine zugeordnete Zugriffstaste ausgewählt hat, überprüft das Dialogfeld die Steuerelemente im Dialogfeld, um die Benutzer Auswahl zu erhalten, aktualisiert den Text des Menü Elements und erstellt dann eine neue Zugriffstasten Tabelle, die die benutzerdefinierte neue Zugriffstaste enthält. Das folgende Beispiel zeigt die-Dialogfeld Prozedur. Beachten Sie, dass Sie in der Fenster Prozedur initialisieren müssen.
+Die Initialisierungsprozedur des Dialogfelds füllt die Kombinationsfelder **Element auswählen** und **Tastatureingabe auswählen** aus. Nachdem der Benutzer ein Menüelement und eine zugeordnete Zugriffstaste ausgewählt hat, überprüft das Dialogfeld die Steuerelemente im Dialogfeld, um die Auswahl des Benutzers abzurufen, aktualisiert den Text des Menüelements und erstellt dann eine neue Zugriffstastentabelle, die die benutzerdefinierte neue Zugriffstaste enthält. Das folgende Beispiel zeigt die Dialogfeldprozedur. Beachten Sie, dass Sie in der Fensterprozedur initialisieren müssen.
 
 
 ```
@@ -782,6 +782,6 @@ BOOL CALLBACK EdAccelProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,38 +1,38 @@
 ---
-title: Background-Plug-ins
-description: Background-Plug-ins
+title: Hintergrund-Plug-Ins
+description: Hintergrund-Plug-Ins
 ms.assetid: 23c8cd49-052d-4c23-8676-b8cf5b684cbf
 keywords:
-- Windows Media Player-Plug-ins, Hintergrund
-- Plug-ins, Hintergrund
-- Plug-Ins für die Benutzeroberfläche, Hintergrund
-- UI-Plug-ins, Hintergrund
-- Background-Plug-ins
+- Windows Media Player-Plug-Ins, Hintergrund
+- Plug-Ins, Hintergrund
+- Benutzeroberflächen-Plug-Ins, Hintergrund
+- Benutzeroberflächen-Plug-Ins, Hintergrund
+- Hintergrund-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26108d1415c380aa7605ffefcf3dfe7447544051
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bcd52b84b7a1c2de924de4aca88a9fd0b7db59707cc1b1d8d7729c497d7ea0c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902440"
 ---
-# <a name="background-plug-ins"></a>Background-Plug-ins
+# <a name="background-plug-ins"></a>Hintergrund-Plug-Ins
 
-Plug-Ins für die Hintergrund Benutzeroberfläche haben keine Benutzeroberflächen, es sei denn, Sie implementieren Eigenschaften Seiten. Wenn ein oder mehrere Hintergrund-Plug-Ins ausgeführt werden, wird ein spezielles Symbol in der Windows-Media Player angezeigt, das neben der laufenden Trackzeit angezeigt wird. Sie können auf dieses Symbol klicken, um im Dialogfeld Optionen die Optionen für die Hintergrund-Plug-ins anzuzeigen. Von dort aus kann der Benutzer die Eigenschaften Seite eines beliebigen Plug-ins öffnen, das eine unterstützt.
+Benutzeroberflächen-Plug-Ins im Hintergrund verfügen nur dann über Benutzeroberflächen, wenn sie Eigenschaftenseiten implementieren. Wenn ein oder mehrere Hintergrund-Plug-Ins ausgeführt werden, wird im Fenster neben Windows Media Player Ausführungszeit ein spezielles Symbol angezeigt. Auf dieses Symbol kann geklickt werden, um die Optionen für Hintergrund-Plug-Ins im Dialogfeld Optionen anzuzeigen. Von dort aus kann der Benutzer die Eigenschaftenseite eines beliebigen Plug-Ins öffnen, das eines unterstützt.
 
-Hintergrund-Plug-ins sind nützlich, um automatische Dienste bereitzustellen, für die keine Benutzereingaben erforderlich sind.
+Hintergrund-Plug-Ins sind nützlich, um automatische Dienste ohne Benutzereingaben bereitstellen zu können.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über das UI-Plug-in**](ui-plug-in-overview.md)
+[**Übersicht über das Benutzeroberflächen-Plug-In**](ui-plug-in-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,25 +1,25 @@
 ---
-description: Verwenden von "REMUX" mit elementaren Datenströmen
+description: Verwenden von Demux mit elementaren Streams
 ms.assetid: dd98aada-8309-428e-9609-2542195bc6ec
-title: Verwenden von "REMUX" mit elementaren Datenströmen
+title: Verwenden von Demux mit elementaren Streams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6b9004d6c99db96405797016b0d9854c96dae92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dec805b4c93432c6532edaefac50e9bd15ad8fac5a7d9672fd358c66e57363fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964670"
 ---
-# <a name="using-the-demux-with-elementary-streams"></a>Verwenden von "REMUX" mit elementaren Datenströmen
+# <a name="using-the-demux-with-elementary-streams"></a>Verwenden von Demux mit elementaren Streams
 
-Wenn MPEG-2 Demux PE-Nutzlasten bereitstellt, sendet es den es-Bytestream in Batches von Medien Beispielen. Die standardmäßige Stichprobengröße beträgt 8K. Die "Debug" startet ein neues Medien Beispiel für jede PES-Grenze, kann jedoch eine einzelne PES-Nutzlast in mehrere Beispiele unterbrechen. Wenn eine PES-Nutzlast z. b. 20K beträgt, wird Sie in zwei 8-KB-Stichproben gefolgt von einem 4K-Beispiel geliefert. Der Inhalt des Bytestreams wird von der Demux nicht untersucht. Der Decoder muss die Sequenz Header analysieren und nach Formatänderungen suchen.
+Wenn die MPEG-2-Demux PES-Nutzlasten übermittelt, sendet sie den ES-Bytestream in Batches von Medienbeispielen. Die Standardbeispielgröße beträgt 8.000. Der Demux startet an jeder PES-Grenze ein neues Medienbeispiel, unterbricht jedoch möglicherweise eine einzelne PES-Nutzlast in mehrere Stichproben. Wenn eine PES-Nutzlast beispielsweise 20.000 beträgt, wird sie in zwei 8K-Beispielen gefolgt von einem 4K-Beispiel übermittelt. Der Demux untersucht nicht den Inhalt des Bytestreams. Der Decoder muss die Sequenzheader analysieren und nach Formatänderungen suchen.
 
-Wenn die Ausgabe-PIN des Demux-Filters eine Verbindung mit dem Decoder herstellt, bietet Sie den Medientyp an, der beim Erstellen der PIN angegeben wurde. Da die Demux den es-Byte Datenstrom nicht untersucht, wird der Medientyp nicht überprüft. Theoretisch sollte ein MPEG-2-Decoder nur mit dem größten Typ und Untertyp, der ausgefüllt ist, eine Verbindung herstellen können, um den Datentyp anzugeben. Der Decoder sollte dann die Sequenz Header untersuchen, die in den Medien Beispielen eintreffen. In der Praxis werden jedoch viele Decoder nur dann verbunden, wenn der Medientyp einen kompletten Format Block enthält.
+Wenn der Ausgabepin des Demuxfilters eine Verbindung mit dem Decoder herstellt, bietet er den Medientyp, der beim Erstellen des Pins angegeben wurde. Da der Demux den ES-Bytestream nicht untersucht, wird der Medientyp nicht überprüft. Theoretisch sollte ein MPEG-2-Decoder nur mit dem ausgefüllten Haupttyp und Untertyp eine Verbindung herstellen können, um den Datentyp anzugeben. Der Decoder sollte dann die Sequenzheader untersuchen, die in den Medienbeispielen eintreffen. In der Praxis werden viele Decoder jedoch nur dann eine Verbindung herstellen, wenn der Medientyp einen vollständigen Formatblock enthält.
 
-Nehmen Sie beispielsweise an, dass die PID 0x31 das MPEG-2-Hauptprofil Video enthält. Sie müssen mindestens die folgenden Schritte ausführen.
+Angenommen, die PID-0x31 MPEG-2-Hauptprofilvideo enthält. Sie müssen mindestens die folgenden Schritte ausführen.
 
-Erstellen Sie zunächst einen Medientyp für das MPEG-2-Video. Der Format Block wird vorerst nicht mehr angezeigt:
+Erstellen Sie zunächst einen Medientyp für MPEG-2-Videos. Lassen Sie den Formatblock vorer mal weg:
 
 
 ```C++
@@ -32,7 +32,7 @@ mt.subtype = MEDIASUBTYPE_MPEG2_VIDEO;
 
 
 
-Erstellen Sie als nächstes eine Ausgabe-PIN auf der Demux-Datei:
+Erstellen Sie als Nächstes einen Ausgabepin auf der Demux-Beschriftung:
 
 
 ```C++
@@ -53,7 +53,7 @@ if (SUCCEEDED(hr))
 
 
 
-Fragen Sie dann die neue PIN der **IMPEG2PIDMap** -Schnittstelle ab, und nennen Sie **mappid**. Geben Sie die PID-Nummer 0x30 und den Medien \_ elementaren \_ Stream für PE-Nutzlasten an.
+Fragen Sie dann den neuen Pin für die **IMPEG2PIDMap-Schnittstelle** ab, und rufen **Sie MapPID auf.** Geben Sie pid number 0x30 und MEDIA \_ ELEMENTARY \_ STREAM für PES-Nutzlasten an.
 
 
 ```C++
@@ -72,7 +72,7 @@ if (SUCCEEDED(hr))
 
 
 
-Geben Sie abschließend alle Schnittstellen frei, wenn Sie dies abgeschlossen haben:
+Lassen Sie abschließend alle Schnittstellen frei, wenn Sie fertig sind:
 
 
 ```C++
@@ -82,7 +82,7 @@ pDemux->Release();
 
 
 
-Im folgenden finden Sie ein ausführeres Beispiel für das Festlegen des Medientyps, einschließlich des Format Blocks. In diesem Beispiel wird weiterhin ein MPEG-2-Hauptprofil-Video angenommen. Die Details variieren abhängig von den Datenstrom Inhalten:
+Hier ist ein vollständigeres Beispiel für das Festlegen des Medientyps, einschließlich des Formatblocks. In diesem Beispiel wird weiterhin ein MPEG-2-Hauptprofilvideo angenommen. Die Details variieren je nach Streaminhalt:
 
 
 ```C++
@@ -134,7 +134,7 @@ memcpy(pMVIH->dwSequenceHeader, SeqHdr, sizeof(SeqHdr));
 
 <dl> <dt>
 
-[Verwenden von MPEG-2 Demultiplexer](using-the-mpeg-2-demultiplexer.md)
+[Verwenden des MPEG-2-Demultiplexers](using-the-mpeg-2-demultiplexer.md)
 </dt> </dl>
 
  

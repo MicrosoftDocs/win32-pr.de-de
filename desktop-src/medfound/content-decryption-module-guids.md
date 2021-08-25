@@ -1,22 +1,22 @@
 ---
-description: Die folgenden GUIDs unterstützen CDM-Implementierungen (Content entschlüsseln Module).
+description: Die folgenden GUIDs unterstützen CDM-Implementierungen (Content Decryption Module).
 title: CDM-GUIDs (Content Decryption Module)
 ms.topic: reference
 ms.date: 01/21/2018
-ms.openlocfilehash: e06601fd23d3244d0965d2cfd7cd70a6f73a481f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ef4016b731b492ed61c6aed859a905446de72c308e03a734aa3cc8f573645668
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958780"
 ---
 # <a name="content-decryption-module-cdm-guids"></a>CDM-GUIDs (Content Decryption Module)
 
-Die folgenden GUIDs unterstützen CDM-Implementierungen (Content entschlüsseln Module).
+Die folgenden GUIDs unterstützen CDM-Implementierungen (Content Decryption Module).
 
 **MF_CONTENTDECRYPTIONMODULE_SERVICE**
 
-Dienst-GUID, die zum Abrufen von Schnittstellen aus einer [imfcontentdecryptionmodule](/windows/win32/api/mfcontentdecryptionmodule/nn-mfcontentdecryptionmodule-imfcontentdecryptionmodule) -Implementierung verwendet wird, z. b. die WinRT-Schnittstelle [imediaschutzpmpserver](/uwp/api/windows.media.protection.mediaprotectionpmpserver) Eine Implementierung von **IMF contentdecryptionmodule** sollte [IMF](/windows/win32/api/mfidl/nn-mfidl-imfgetservice) implementieren und diese Dienst-GUID unterstützen.
+Dienst-GUID, die verwendet wird, um Schnittstellen aus einer [IMPLEMENTATION VONCONTENTDecryptionModule](/windows/win32/api/mfcontentdecryptionmodule/nn-mfcontentdecryptionmodule-imfcontentdecryptionmodule) abzurufen, z. B. der WinRT [IMediaProtectionPMPServer-Schnittstelle.](/uwp/api/windows.media.protection.mediaprotectionpmpserver) Eine Implementierung von **"CONTENTContentDecryptionModule"** sollte ["CSVGetService"](/windows/win32/api/mfidl/nn-mfidl-imfgetservice) implementieren und diese Dienst-GUID unterstützen.
 
 
 ## <a name="requirements"></a>Anforderungen
@@ -25,7 +25,7 @@ Dienst-GUID, die zum Abrufen von Schnittstellen aus einer [imfcontentdecryptionm
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>MF contentdecryptionmodule. h</dt> </dl> |
+| Header<br/> | <dl> <dt>mfcontentdecryptionmodule.h</dt> </dl> |
 
 
 
@@ -34,9 +34,9 @@ Dienst-GUID, die zum Abrufen von Schnittstellen aus einer [imfcontentdecryptionm
 
 
 - [Media Foundation Konstanten](media-foundation-constants.md)
-- [IMF contentdecryptionmodule] (/windows/win32/api/mfcontentdecryptionmodule/nn-mfcontentdecryptionmodule-imfcontentdecryptionmodule
-- [Imediaschutzpmpserver](/uwp/api/windows.media.protection.mediaprotectionpmpserver)
-- [IMF-Dienst](/windows/win32/api/mfidl/nn-mfidl-imfgetservice)
+- [CONTENTContentDecryptionModule] (/windows/win32/api/mfcontentdecryptionmodule/nn-mfcontentdecryptionmodule-contentdecryptionmodule
+- [IMediaProtectionPMPServer](/uwp/api/windows.media.protection.mediaprotectionpmpserver)
+- [VERZRGETService](/windows/win32/api/mfidl/nn-mfidl-imfgetservice)
 
 
  

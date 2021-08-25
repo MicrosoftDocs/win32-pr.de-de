@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_KEYType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Schlüsselressourcen Daten Satz.
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_KEYType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen KEY-Ressourcendatensatz.
 ms.assetid: 77d7b800-4077-46da-9199-e2abb5801978
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_KEYType
-- DNS-MicrosoftDNS_KEYType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_KEYType-Klasse
+- MicrosoftDNS_KEYType-Klasse DNS, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b16dc8f3f591ba3aaf5ac9883cdd3a15c85146d0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 315ef898a101b3a86fa5a3085e4a171edd8efa28972cf62c006cc0eb87e354b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913140"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_keytype-class"></a>Die Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ KeyType-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_keytype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ KEYType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Schlüsselressourcen Daten Satz.
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen KEY-Ressourcendatensatz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,31 +51,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -83,7 +83,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -92,24 +92,24 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Flags, die zum Angeben der Zuordnung verwendet werden, wie in IETF RFC 2535 beschrieben.
+Flags zum Angeben der Zuordnung, wie in IETF RFC 2535 beschrieben.
 
 </dd> <dt>
 
-*Protokoll* \[ in\]
+*Protokoll* \[ In\]
 </dt> <dd>
 
-Das Protokoll, für das der im Ressourcen Daten Satz angegebene Schlüssel verwendet werden kann. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
+Protokoll, für das der im Ressourcendatensatz angegebene Schlüssel verwendet werden kann. Die zugewiesenen Werte werden in der folgenden Tabelle angezeigt.
 
 
 
@@ -117,7 +117,7 @@ Das Protokoll, für das der im Ressourcen Daten Satz angegebene Schlüssel verwe
 |----------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl>     | TLS<br/>           |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl>     | E-Mail<br/>        |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl>     | DNSSEC<br/>        |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl>     | Dnssec<br/>        |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl>     | IPsec<br/>         |
 | <span id="255"></span><dl> <dt>**255**</dt> </dl> | Alle Protokolle<br/> |
 
@@ -127,10 +127,10 @@ Das Protokoll, für das der im Ressourcen Daten Satz angegebene Schlüssel verwe
 
 </dd> <dt>
 
-*Algorithmus* \[ in\]
+*Algorithmus* \[ In\]
 </dt> <dd>
 
-Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
+Algorithmus, der mit dem im Ressourcendatensatz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte werden in der folgenden Tabelle angezeigt.
 
 
 
@@ -139,7 +139,7 @@ Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel ver
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | RSA/MD5 (RFC 2537)<br/>          |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | Diffie-Hellman (RFC 2539)<br/>   |
 | <span id="3"></span><dl> <dt>**3**</dt> </dl> | DSA (RFC 2536)<br/>              |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie mit elliptischer Kurve<br/> |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie der elliptischen Kurve<br/> |
 
 
 
@@ -147,17 +147,17 @@ Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel ver
 
 </dd> <dt>
 
-*PublicKey* \[ in\]
+*PublicKey* \[ In\]
 </dt> <dd>
 
 Öffentlicher Schlüssel, dargestellt in Basis 64, wie in Anhang A von RFC 2535 beschrieben.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -173,8 +173,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -182,13 +182,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ KeyType**](microsoftdns-keytype.md)
+[**MicrosoftDNS \_ KEYType**](microsoftdns-keytype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ KeyType-Klasse**](microsoftdns-keytype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ KEYType-Klasse**](microsoftdns-keytype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

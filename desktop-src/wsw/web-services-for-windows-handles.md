@@ -1,35 +1,35 @@
 ---
-title: Windows-Webdienst Handles
+title: Windows Webdiensthandles
 ms.assetid: a67f48ce-ebe3-48f9-9c00-67acd8b9fbe5
-description: 'Weitere Informationen: Windows-Webdienst Handles'
+description: 'Weitere Informationen finden Sie unter: Windows Webdiensthandles'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 102a0666c69abe791c532ee6a837e95c57392f6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd4eff84fe08728b9f336fdd32f2d929ba335125522311f0cec279825c2e70d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926840"
 ---
-# <a name="windows-web-services-handles"></a>Windows-Webdienst Handles
+# <a name="windows-web-services-handles"></a>Windows Webdiensthandles
 
-Die Windows-Webdienste-API umfasst die folgenden Handles:
+Die Windows-Webdienst-API enthält die folgenden Handles:
 
--   [WS- \_ Kanal](ws-channel.md)
--   [WS- \_ Fehler](ws-error.md)
--   [WS- \_ Heap](ws-heap.md)
--   [WS- \_ Listener](ws-listener.md)
--   [WS- \_ Nachricht](ws-message.md)
--   [WS- \_ Metadaten](ws-metadata.md)
--   [WS- \_ Vorgangs \_ Kontext](ws-operation-context.md)
--   [WS- \_ Richtlinie](ws-policy.md)
--   [WS- \_ Sicherheits \_ Kontext](ws-security-context.md)
--   [WS- \_ Sicherheits \_ Token](ws-security-token.md)
--   [WS- \_ Dienst \_ Host](ws-service-host.md)
--   [WS- \_ Dienst \_ Proxy](ws-service-proxy.md)
--   [WS- \_ XML- \_ Puffer](ws-xml-buffer.md)
--   [WS- \_ XML- \_ Reader](ws-xml-reader.md)
--   [WS- \_ XML- \_ Writer](ws-xml-writer.md)
+-   [\_WS-KANAL](ws-channel.md)
+-   [\_WS-FEHLER](ws-error.md)
+-   [\_WS-HEAP](ws-heap.md)
+-   [\_WS-LISTENER](ws-listener.md)
+-   [\_WS-NACHRICHT](ws-message.md)
+-   [\_WS-METADATEN](ws-metadata.md)
+-   [\_WS-VORGANGSKONTEXT \_](ws-operation-context.md)
+-   [\_WS-RICHTLINIE](ws-policy.md)
+-   [\_WS-SICHERHEITSKONTEXT \_](ws-security-context.md)
+-   [\_ \_ WS-SICHERHEITSTOKEN](ws-security-token.md)
+-   [\_WS-DIENSTHOST \_](ws-service-host.md)
+-   [\_WS-DIENSTPROXY \_](ws-service-proxy.md)
+-   [WS \_ XML \_ BUFFER](ws-xml-buffer.md)
+-   [\_ \_ WS-XML-READER](ws-xml-reader.md)
+-   [WS \_ XML \_ WRITER](ws-xml-writer.md)
 
  
 

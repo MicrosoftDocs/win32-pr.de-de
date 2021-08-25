@@ -1,37 +1,37 @@
 ---
 title: Zeichnen eines Bilds
-description: In diesem Thema wird veranschaulicht, wie mit der ImageList- \_ Zeichnungs Funktion ein Bild gezeichnet wird.
+description: In diesem Thema wird veranschaulicht, wie Sie die ImageList \_ Draw-Funktion verwenden, um ein Bild zu zeichnen.
 ms.assetid: BE2F20F3-B7D3-4FA2-B1E9-60A47A609C36
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ac13eef2eb5bc55866ac2fd930db5494f2683dd2
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: f7b42e97ad9b7cab8693431654dc31b473267414f31ae5811f4f66a6663ce8e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878330"
 ---
 # <a name="how-to-draw-an-image"></a>Zeichnen eines Bilds
 
-In diesem Thema wird veranschaulicht, wie mit der [**ImageList- \_ Zeichnungs**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) Funktion ein Bild gezeichnet wird.
+In diesem Thema wird veranschaulicht, wie Sie die [**ImageList \_ Draw-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) verwenden, um ein Bild zu zeichnen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Zum Zeichnen eines Bilds verwenden Sie die Funktion " [**ImageList \_ Draw**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) " oder " [**ImageList \_ drawex**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_drawex) ". Sie geben das Handle für eine Bildliste, den Index des zu zeichnenden Bilds, das Handle für den Zielgeräte Kontext, einen Speicherort innerhalb des Geräte Kontexts und einen oder mehrere Zeichnungs Stile an.
+Um ein Bild zu zeichnen, verwenden Sie die [**Funktion ImageList \_ Draw**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) oder [**ImageList \_ DrawEx.**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_drawex) Sie geben das Handle für eine Bildliste, den Index des zu zeichnende Bilds, das Handle für den Zielgerätekontext, eine Position im Gerätekontext und mindestens einen Zeichnungsstil an.
 
-Die benutzerdefinierte Funktion im folgenden C++-Codebeispiel verwendet die [**ImageList- \_ Draw**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) -Funktion zum Zeichnen eines Bilds und speichert die Client Koordinaten des umgebenden Rechtecks des Bilds. Eine nachfolgende Funktion verwendet das umgebende Rechteck, um zu bestimmen, ob der Benutzer auf das Bild geklickt hat.
+Die benutzerdefinierte Funktion im folgenden C++-Codebeispiel verwendet die [**ImageList \_ Draw-Funktion,**](/windows/desktop/api/Commctrl/nf-commctrl-imagelist_draw) um ein Bild zu zeichnen, und speichert die Clientkoordinaten des umgebenden Rechtecks des Bilds. Eine nachfolgende Funktion verwendet das umgrenzende Rechteck, um zu bestimmen, ob der Benutzer auf das Bild geklickt hat.
 
 
 

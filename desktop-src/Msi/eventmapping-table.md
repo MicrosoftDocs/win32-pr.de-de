@@ -1,30 +1,30 @@
 ---
-description: Die Tabelle EventMapping listet die Steuerelemente auf, die einige Steuerelement Ereignisse abonnieren, und listet das Attribut auf, das geändert werden soll, wenn das Ereignis von einem anderen Steuerelement oder dem Windows Installer veröffentlicht wird.
+description: Die EventMapping-Tabelle listet die Steuerelemente auf, die einige Steuerelementereignisse abonnieren, und listet das Attribut auf, das geändert werden soll, wenn das Ereignis von einem anderen Steuerelement oder vom Windows Installer veröffentlicht wird.
 ms.assetid: 63c9ba3e-aa8a-475b-8360-4aec78ed19db
 title: EventMapping-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6e9a7b5b4283b5d70102123dcb11e3e9e844221
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f17380e3e91669926ef50532c36fec71f44d61eb2ed7273d053defe45fa874e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963110"
 ---
 # <a name="eventmapping-table"></a>EventMapping-Tabelle
 
-Die Tabelle EventMapping listet die Steuerelemente auf, die einige Steuerelement Ereignisse abonnieren, und listet das Attribut auf, das geändert werden soll, wenn das Ereignis von einem anderen Steuerelement oder dem Windows Installer veröffentlicht wird.
+Die EventMapping-Tabelle listet die Steuerelemente auf, die einige Steuerelementereignisse abonnieren, und listet das Attribut auf, das geändert werden soll, wenn das Ereignis von einem anderen Steuerelement oder vom Windows Installer veröffentlicht wird.
 
 Die EventMapping-Tabelle weist die folgenden Spalten auf.
 
 
 
-| Spalte    | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte    | Typ                         | Key | Nullwerte zulässig |
 |-----------|------------------------------|-----|----------|
-| Dialog\_  | [Bezeichner](identifier.md) | J   | N        |
-| Steuerelement\_ | [Bezeichner](identifier.md) | J   | N        |
-| Ereignis     | [Bezeichner](identifier.md) | J   | N        |
-| Attribut | [Bezeichner](identifier.md) | N   | N        |
+| Dialog\_  | [Identifier](identifier.md) | J   | N        |
+| Steuerelement\_ | [Identifier](identifier.md) | J   | N        |
+| Ereignis     | [Identifier](identifier.md) | J   | N        |
+| attribute | [Identifier](identifier.md) | N   | N        |
 
 
 
@@ -34,50 +34,50 @@ Die EventMapping-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Dialog_"></span><span id="dialog_"></span><span id="DIALOG_"></span>Dialog\_
+<span id="Dialog_"></span><span id="dialog_"></span><span id="DIALOG_"></span>Dialogfeld\_
 </dt> <dd>
 
-Ein externer Schlüssel für die erste Spalte der [Dialog Feld Tabelle](dialog-table.md). Dieses Feld und das Steuerelement \_ Feld identifizieren ein Steuerelement.
+Ein externer Schlüssel für die erste Spalte der [Dialogtabelle](dialog-table.md). Dieses Feld und das Feld Steuerelement \_ identifizieren zusammen ein Steuerelement.
 
 </dd> <dt>
 
-<span id="Control_"></span><span id="control_"></span><span id="CONTROL_"></span>Steuerelement\_
+<span id="Control_"></span><span id="control_"></span><span id="CONTROL_"></span>Steuerung\_
 </dt> <dd>
 
-Ein externer Schlüssel für die zweite Spalte der [Steuerelement Tabelle](control-table.md). In diesem Feld und dem Dialog \_ Feld wird ein Steuerelement identifiziert.
+Ein externer Schlüssel für die zweite Spalte der [Steuertabelle](control-table.md). Dieses Feld und das \_ Dialogfeld -Feld identifizieren zusammen ein Steuerelement.
 
 </dd> <dt>
 
-<span id="Event"></span><span id="event"></span><span id="EVENT"></span>Veranstalter
+<span id="Event"></span><span id="event"></span><span id="EVENT"></span>Ereignis
 </dt> <dd>
 
-Dieses Feld ist ein Bezeichner, der den Ereignistyp angibt, der vom Steuerelement abonniert wird. Weitere Informationen finden Sie unter [ControlEvent Overview](controlevent-overview.md).
+Dieses Feld ist ein Bezeichner, der den Typ des Ereignisses angibt, das vom -Steuerelement abonniert wird. Weitere Informationen finden Sie unter [ControlEvent Overview](controlevent-overview.md).
 
 </dd> <dt>
 
-<span id="Attribute"></span><span id="attribute"></span><span id="ATTRIBUTE"></span>Versehen
+<span id="Attribute"></span><span id="attribute"></span><span id="ATTRIBUTE"></span>Attribut
 </dt> <dd>
 
-Der Name des Steuerelement \_ Attributs, das festgelegt wird, wenn das Ereignis in der Ereignis Spalte empfangen wird. Das-Argument des-Ereignisses wird als Argument des-Attribut Aufrufes zum Ändern dieses Attributs des-Steuer Elements übermittelt.
+Der Name des \_ Control-Attributs, das festgelegt wird, wenn das Ereignis in der Spalte Ereignis empfangen wird. Das Argument des Ereignisses wird als Argument des Attributaufrufs übergeben, um dieses Attribut des Steuerelements zu ändern.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [ControlEvent-Tabelle](controlevent-table.md) gibt die Steuerelement Ereignisse an, die gestartet werden, wenn ein Benutzer mit einem [PUSHBUTTON-Steuer](pushbutton-control.md)Element, [CheckBox-Steuer](checkbox-control.md)Element oder [SelectionTree-Steuer](selectiontree-control.md)Element interagiert. Dies sind die einzigen Steuerelemente, die ein Benutzer verwenden kann, um Steuerungs Ereignisse zu initiieren.
+Die [ControlEvent-Tabelle](controlevent-table.md) gibt die Steuerelementereignisse an, die gestartet werden, wenn ein Benutzer mit einem [PushButton-Steuerelement,](pushbutton-control.md) [einem CheckBox-Steuerelement](checkbox-control.md)oder einem [SelectionTree-Steuerelement](selectiontree-control.md)interagiert. Dies sind die einzigen Steuerelemente, die ein Benutzer verwenden kann, um Steuerungsereignisse zu initiieren.
 
-Mehrere Steuerelemente in einem Dialogfeld können dasselbe Ereignis abonnieren.
+Mehr als ein Steuerelement in einem Dialogfeld kann dasselbe Ereignis abonnieren.
 
-In der folgenden Liste sind die typischen Verwendungen der Tabelle EventMapping aufgeführt:
+In der folgenden Liste sind die typischen Verwendungsmöglichkeiten für die EventMapping-Tabelle aufgeführt:
 
--   So abonnieren Sie [ein Text-Steuer](text-control.md) Element für eine [Action Text ControlEvent](actiontext-controlevent.md)-, [Action Data ControlEvent](actiondata-controlevent.md)-, [scriptinprogress ControlEvent](scriptinprogress-controlevent.md) -oder [timeremaineing ControlEvent](timeremaining-controlevent.md) -Datei, die vom Windows Installer veröffentlicht wurde.
--   Zum Abonnieren eines [ProgressBar-Steuer](progressbar-control.md) Elements oder eines [Billboard-Steuer](billboard-control.md) Elements für einen [setProgress-ControlEvent](setprogress-controlevent.md).
--   , Um ein [directoriycombo-Steuer](directorycombo-control.md) Element für [ignorechange ControlEvent](ignorechange-controlevent.md)zu abonnieren.
--   Zum automatischen Deaktivieren eines [PUSHBUTTON-Steuer](pushbutton-control.md) Elements, das sich im gleichen Dialogfeld mit einem [SelectionTree-Steuer](selectiontree-control.md)Element befindet. Um die Schaltfläche "Push" zu deaktivieren, wenn im [SelectionTree-Steuer](selectiontree-control.md)Element keine Features aufgelistet sind, verwenden Sie die EventMapping-Tabelle, um das PUSHBUTTON-Steuerelement einem [selectionnoitems-ControlEvent](selectionnoitems-controlevent.md)zu abonnieren. Geben Sie im Feld Attribute der Tabelle EventMapping den Wert **enable** ein.
--   Zum Anzeigen eines [Text Steuer](text-control.md) Elements, das den Pfad zum Installations Speicherort für das Feature anzeigt, das in einem [SelectionTree-Steuer](selectiontree-control.md) Element im gleichen Dialogfeld ausgewählt ist. Verwenden Sie die Tabelle EventMapping, um das [Text Steuer](text-control.md) Element sowohl einem [selectionpathon ControlEvent](selectionpathon-controlevent.md) als auch dem [selectionpath ControlEvent](selectionpath-controlevent.md) zu abonnieren, das vom [SelectionTree-Steuer](selectiontree-control.md)Element veröffentlicht wurde.
--   Wenn Sie ein [Text Steuer](text-control.md) Element anzeigen möchten, das eine Beschreibung des Elements anzeigt, das in einem [SelectionTree-Steuer](selectiontree-control.md) Element im gleichen Dialogfeld hervorgehoben ist, verwenden Sie die EventMapping-Tabelle, um das [Text Steuer](text-control.md) Element einem [selectiondescription ControlEvent](selectiondescription-controlevent.md), [selectionsize ControlEvent](selectionsize-controlevent.md) oder [selectionaction ControlEvent](selectionaction-controlevent.md)zu abonnieren. Geben Sie im Feld Attribut der Tabelle EventMapping den **Text** ein.
+-   So abonnieren Sie ein [Textsteuerelement](text-control.md) für ein [ActionText ControlEvent,](actiontext-controlevent.md) [ActionData ControlEvent,](actiondata-controlevent.md) [ScriptInProgress ControlEvent](scriptinprogress-controlevent.md) oder [TimeRemaining ControlEvent,](timeremaining-controlevent.md) das vom Windows Installer veröffentlicht wurde.
+-   So abonnieren Sie ein [ProgressBar-Steuerelement](progressbar-control.md) oder [ein Control-Steuerelement von](billboard-control.md) [SetProgress .](setprogress-controlevent.md)
+-   So abonnieren Sie ein [DirectoryCombo-Steuerelement](directorycombo-control.md) für ein [IgnoreChange ControlEvent](ignorechange-controlevent.md).
+-   So deaktivieren Sie automatisch ein [PushButton-Steuerelement,](pushbutton-control.md) das sich im gleichen Dialogfeld mit einem [SelectionTree-Steuerelement](selectiontree-control.md)befindet. Um die Schaltfläche "Push" zu deaktivieren, wenn im [SelectionTree-Steuerelement](selectiontree-control.md)keine Features aufgeführt sind, verwenden Sie die EventMapping-Tabelle, um das PushButton-Steuerelement einem [SelectionNoItems ControlEvent](selectionnoitems-controlevent.md)zu abonnieren. Geben Sie **Aktivieren** in das Feld Attribute der EventMapping-Tabelle ein.
+-   So zeigen Sie ein [Textsteuerelement](text-control.md) an, das den Pfad zum Installationsspeicherort für das Feature anzeigt, das im selben Dialogfeld in einem [SelectionTree-Steuerelement](selectiontree-control.md) ausgewählt ist. Verwenden Sie die EventMapping-Tabelle, um das [Textsteuerelement](text-control.md) sowohl einem [SelectionPathOn ControlEvent](selectionpathon-controlevent.md) als auch einem [SelectionPath ControlEvent](selectionpath-controlevent.md) zu abonnieren, das vom [SelectionTree-Steuerelement](selectiontree-control.md)veröffentlicht wurde.
+-   Um ein [Textsteuerelement](text-control.md) anzuzeigen, das eine Beschreibung des Elements anzeigt, das in einem [SelectionTree-Steuerelement](selectiontree-control.md) hervorgehoben ist, das sich im gleichen Dialogfeld befindet, verwenden Sie die EventMapping-Tabelle, um das [Textsteuerelement](text-control.md) für [selectionDescription ControlEvent,](selectiondescription-controlevent.md) [SelectionSize ControlEvent](selectionsize-controlevent.md) oder [SelectionAction ControlEvent](selectionaction-controlevent.md)zu abonnieren. Geben Sie **Text** in das Feld Attribut der EventMapping-Tabelle ein.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

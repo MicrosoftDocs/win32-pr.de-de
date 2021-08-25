@@ -1,7 +1,7 @@
 ---
-description: 'Die currentstoptime-Methode ruft die Endzeit des Segments ab, die von der cbasepin:: newsegment-Methode festgelegt wird.'
+description: Die CurrentStopTime-Methode ruft die Segmentstoppzeit ab, die von der CBasePin::NewSegment-Methode festgelegt wird.
 ms.assetid: 2066c4a5-2d39-4a2e-b2d6-48c615862aec
-title: Cbasepin. currentstoptime-Methode (amfilter. h)
+title: CBasePin.CurrentStopTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 74fb25184bbcd0778268f74a4c40ccfb0722287f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2905913828c91fffde9fb474802c8dea0e0f83d59ccdb5408f846a1936071cf6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916700"
 ---
-# <a name="cbasepincurrentstoptime-method"></a>Cbasepin. currentstoptime-Methode
+# <a name="cbasepincurrentstoptime-method"></a>CBasePin.CurrentStopTime-Methode
 
-Die- `CurrentStopTime` Methode ruft die Endzeit des Segments ab, die von der [**cbasepin:: newsegment**](cbasepin-newsegment.md) -Methode festgelegt wird.
+Die `CurrentStopTime` -Methode ruft die Segmentstoppzeit ab, die von der [**CBasePin::NewSegment-Methode**](cbasepin-newsegment.md) festgelegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert von [**cbasepin:: m \_ thalte**](cbasepin-m-tstop.md)zurück.
+Gibt den Wert von [**CBasePin::m \_ tStop**](cbasepin-m-tstop.md)zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den Wert von [**cbasepin:: m \_ thalte**](cbasepin-m-tstop.md)zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt den Wert von [**cbasepin:: m \_ thalte**](cbasepin-m-tstop.md)zurück.
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Platt Form Pfad Überschreibung
+description: Plattformpfadüberschreibung
 ms.assetid: f430fd9a-f865-4cdb-b0ea-4e6d79913308
-title: Platt Form Pfad Überschreibung
+title: Plattformpfadüberschreibung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a9a6ae6795b444c44db91d90ecd93efd19ea9dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c63cc1e6ba4b1cb53c26e380eeab95a96091d5159e8356d8f7067529a6b589d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992620"
 ---
-# <a name="platform-path-override"></a>Platt Form Pfad Überschreibung
+# <a name="platform-path-override"></a>Plattformpfadüberschreibung
 
-Mit der [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) -Funktion wird beim Arbeiten mit INF-Dateien von einem anderen Computer eine Platt Form Pfad-außer Kraft setzung für einen Zielcomputer festgelegt. Daher kann Sie auf eine andere Plattform verweisen als auf die, auf der Sie derzeit ausgeführt wird. Für den Umgang mit Medienquellen kann es auf Plattformen verweisen, die nicht mehr unterstützt werden, wie z. b. Alpha, MIPS und PPC. Wenn kein Wert angegeben wird, wird der Platt Form Pfad außer Kraft gesetzt.
+Die [**SetupSetPlatformPathOverride-Funktion**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) wird verwendet, um eine Plattformpfadüberschreibung für einen Zielcomputer beim Arbeiten mit INF-Dateien von einem anderen Computer einzurichten. Daher kann sie auf eine andere Plattform verweisen als die, auf der sie derzeit ausgeführt wird. Für den Umgang mit Medienquellen kann er sich auf Plattformen beziehen, die nicht mehr unterstützt werden, z. B. Alpha, MIPS und PPC. Die Außerkraftsetzung des Plattformpfads wird entfernt, wenn kein Wert angegeben ist.
 
-Nachdem eine Platt Form Pfad Außerkraftsetzung durch einen aufzurufenden [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea)-Befehl festgelegt wurde, wird die endgültige Komponente des Quell Pfads von jeder Setup Funktion untersucht, die Datei Kopiervorgänge in Warteschlangen Wenn die endgültige Komponente mit dem Namen der Plattform des Benutzers übereinstimmt, wird Sie von der Setup Funktion durch die von **setupsetplatformpathoverride** festgelegte Überschreibungs Zeichenfolge ersetzt.
+Nachdem eine Plattformpfadüberschreibung durch einen Aufruf von [**SetupSetPlatformPathOverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea)festgelegt wurde, überprüft jede Setupfunktion, die Dateikopiervorgänge in die Warteschlange einreiht, die letzte Komponente des Quellpfads. Wenn die endgültige Komponente dem Namen der Plattform des Benutzers entspricht, ersetzt die Setupfunktion sie durch die überschreibende Zeichenfolge, die von **SetupSetPlatformPathOverride festgelegt wurde.**
 
-Wenn Sie z. b. Druckertreiber auf einem MIPS-Server installieren, können Sie Treiber für alle unterstützten Plattformen installieren. Wenn Sie die Dateien in die Warteschlange stellen, werden die Dateien, die in den MIPS-abhängigen Abschnitten der INF-Datei angegeben sind, mit Quell Pfaden installiert \\ \\ \\ \\ Um die Dateien für eine zweite Plattform zu installieren, müssen Sie [**setupsetplatformpathoverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) mit *außer Kraft* Setzung aufrufen, die die Ersatz Plattform angibt. Wenn der durch *override* festgestellte Speicherort den Zeichen folgen Wert "Alpha" enthält, wird der Quellpfad von Datei Kopier Vorgängen, die mit einem Quellpfad der Stamm Quelle MIPS an die Warteschlange gesendet werden, \\ \\ \\ \\ in \\ \\ root \\ Source \\ Alpha geändert. Sie würden diesen Vorgang für jede gewünschte Plattform wiederholen.
+Wenn Sie beispielsweise Druckertreiber auf einem MIPS-Server installieren, sollten Sie Treiber für alle unterstützten Plattformen installieren. Wenn Sie die Dateien in die Warteschlange einsenden, werden die in den MIPS-abhängigen Abschnitten der INF-Datei angegebenen Dateien mit Quellpfaden wie \\ \\ Stammquellen-Mips \\ \\ installiert. Um die Dateien für eine zweite Plattform zu installieren, müssen Sie [**SetupSetPlatformPathOverride**](/windows/desktop/api/Setupapi/nf-setupapi-setupsetplatformpathoverridea) mit *Override* aufrufen, das die Ersatzplattform angibt. Wenn der durch  Außerkraftsetzung angegebene Speicherort den Zeichenfolgenwert "alpha" enthält, würden Dateikopiervorgänge, die an die Warteschlange mit einem Quellpfad mit Stammquellen-Mips gesendet werden, ihren Quellpfad in Stammquellen-Alpha \\ \\ \\ \\ \\ \\ \\ \\ ändern. Sie würden diesen Vorgang für jede plattform von Interesse wiederholen.
 
  
 

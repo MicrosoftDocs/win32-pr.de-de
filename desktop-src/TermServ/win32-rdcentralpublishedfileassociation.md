@@ -1,11 +1,11 @@
 ---
 title: Win32_RDCentralPublishedFileAssociation-Klasse
-description: Informationen für eine Dateierweiterung, die einer Anwendung zugeordnet ist.
+description: Informationen zu einer Dateierweiterung, die einer Anwendung zugeordnet ist.
 ms.assetid: ba12d933-572c-48d3-bf0f-1c99de61457d
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDCentralPublishedFileAssociation-Klasse Remotedesktopdienste
-- Win32_RDCentralPublishedFileAssociation Klasse Remotedesktopdienste, beschrieben
+- Win32_RDCentralPublishedFileAssociation-Klassen-Remotedesktopdienste
+- Win32_RDCentralPublishedFileAssociation -Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65a0f1c9bf7905504ee3aa2ba6fff7e9804f4747
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41361959c56810036b8ca2e17d338e2ff1d3433c6e0384fd168a2d21d6e0e0f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868450"
 ---
-# <a name="win32_rdcentralpublishedfileassociation-class"></a>Win32 \_ rdcentralpublishedfileassociation-Klasse
+# <a name="win32_rdcentralpublishedfileassociation-class"></a>Win32 \_ RDCentralPublishedFileAssociation-Klasse
 
-Informationen für eine Dateierweiterung, die einer Anwendung zugeordnet ist.
+Informationen zu einer einer Anwendung zugeordneten Dateierweiterung
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -52,94 +52,94 @@ class Win32_RDCentralPublishedFileAssociation
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdcentralpublishedfileassociation** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDCentralPublishedFileAssociation-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdcentralpublishedfileassociation** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDCentralPublishedFileAssociation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Appalias**
+**AppAlias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Alias der RemoteApp der Datei Zuordnung.
+Alias der RemoteApp der Dateizuordnung.
 
 </dd> <dt>
 
-**Extname**
+**ExtName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Name der Erweiterung (z. b.. txt).
+Name der Erweiterung (z. B. .txt).
 
 </dd> <dt>
 
-**Farmalias**
+**FarmAlias**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Alias der RemoteApp-Farm der Datei Zuordnung
+Alias der RemoteApp-Farm der Dateizuordnung
 
 </dd> <dt>
 
-**Iconcontent**
+**IconContents**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Inhalt des Symbols für diese Datei Zuordnung.
+Inhalt des Symbols für diese Dateizuordnung.
 
 </dd> <dt>
 
-**Primaryhandler**
+**PrimaryHandler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Für die zukünftige Verwendung reserviert. Wird immer " **true**" sein.
+Für die zukünftige Verwendung reserviert. Ist immer **"true".**
 
 </dd> <dt>
 
-**Progidhint**
+**ProgIdHint**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Hinweise zum Öffnen von Dokumenten mit dieser Datei Zuordnung.
+Hinweis zum Öffnen von Dokumenten mit dieser Dateizuordnung.
 
 </dd> </dl>
 
@@ -151,8 +151,8 @@ Hinweise zum Öffnen von Dokumenten mit dieser Datei Zuordnung.
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMV2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>Tscpub. MOF</dt> </dl>    |
+| Namespace<br/>                | Root \\ cimv2 \\ TerminalServices<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>Tscpub.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>TscPubWmi.dll</dt> </dl> |
 
 

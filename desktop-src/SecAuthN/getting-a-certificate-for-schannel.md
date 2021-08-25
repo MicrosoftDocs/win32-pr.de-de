@@ -1,21 +1,21 @@
 ---
-description: Das folgende Beispiel zeigt die Schritte zum Abrufen einer CERT \_ -Kontext Struktur, die ein Zertifikat enthält. Sie sollten ein Zertifikat und einen Zertifikat Speicher auswählen, die für Ihre Anwendung geeignet sind.
+description: Das folgende Beispiel zeigt die Schritte zum Abrufen einer CERT \_ CONTEXT-Struktur, die ein Zertifikat enthält. Sie sollten ein Zertifikat und einen Zertifikatspeicher auswählen, die für Ihre Anwendung geeignet sind.
 ms.assetid: 31d7a8bd-729f-4db7-8e22-25d14296c0c4
-title: Erhalten eines Zertifikats für SChannel
+title: Abrufen eines Zertifikats für Schannel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5bf7f311ac31fe2ff033d4b57f7d04bd1f42424
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b648f55cdfe68bc6c6b1b02b9c0d5bc715fe4efeaad70d25072b4709a2cd0114
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883140"
 ---
-# <a name="getting-a-certificate-for-schannel"></a>Erhalten eines Zertifikats für SChannel
+# <a name="getting-a-certificate-for-schannel"></a>Abrufen eines Zertifikats für Schannel
 
-Das folgende Beispiel zeigt die Schritte zum Abrufen einer [**CERT- \_ Kontext**](/windows/desktop/api/wincrypt/ns-wincrypt-cert_context) Struktur, die ein Zertifikat enthält. Sie sollten ein Zertifikat und einen Zertifikat Speicher auswählen, die für Ihre Anwendung geeignet sind.
+Das folgende Beispiel zeigt die Schritte zum Abrufen einer [**CERT \_ CONTEXT-Struktur,**](/windows/desktop/api/wincrypt/ns-wincrypt-cert_context) die ein Zertifikat enthält. Sie sollten ein Zertifikat und einen Zertifikatspeicher auswählen, die für Ihre Anwendung geeignet sind.
 
-Dieses Beispiel veranschaulicht das Öffnen eines [*Zertifikat Speicher*](/windows/desktop/SecGloss/c-gly) und das Suchen eines Zertifikats, das mithilfe der [**SChannel- \_ Kred-**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred) Struktur an die [**AcquireCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) -Funktion übergeben wird.
+In diesem Beispiel wird das Öffnen eines [*Zertifikatspeichers*](/windows/desktop/SecGloss/c-gly) und das Suchen eines Zertifikats veranschaulicht, das mithilfe der [**SCHANNEL \_ CRED-Struktur**](/windows/desktop/api/Schannel/ns-schannel-schannel_cred) an die [**AcquireCredentialsHandle-Funktion**](/windows/win32/api/sspi/nf-sspi-acquirecredentialshandlea) übergeben wird.
 
 
 ```C++

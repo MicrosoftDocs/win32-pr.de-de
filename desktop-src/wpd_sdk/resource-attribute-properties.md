@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Ressourcen Attribut Eigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden Ressourcenattributeigenschaften.
 ms.assetid: 9b90db8a-e833-48cf-b484-70ac5ac32a76
-title: Eigenschaften des Ressourcen Attributs (portabledevice. h)
+title: Ressourcenattributeigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,32 +13,32 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 64f4f394fcd91d50f323a8e46a9556daa6a8dbff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 956cd349089afb00a1350bf32e8f06acd5747599f6d5a731e4bf5d8dd1c96295
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928070"
 ---
-# <a name="resource-attribute-properties"></a>Eigenschaften des Ressourcen Attributs
+# <a name="resource-attribute-properties"></a>Ressourcenattributeigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Ressourcen Attribut Eigenschaften.
+Windows Portable Geräte unterstützen die folgenden Ressourcenattributeigenschaften.
 
 
 
-| Eigenschaft                                    | VarType         | BESCHREIBUNG                                                                                                                                                               |
+| Eigenschaft                                    | VarType         | Beschreibung                                                                                                                                                               |
 |---------------------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ressourcen Schlüssel für WPD- \_ Ressourcen \_ Attribut \_ \_** | **VT \_ unbekannt** | Dies ist eine [**iportabledevicekeycollection**](iportabledevicekeycollection.md) , die einen einzelnen Wert enthält. Dies ist der Schlüssel, der die Ressource identifiziert.                     |
-| **WPD- \_ Ressourcen \_ Attribut \_ Format**        | **VT \_ CLSID**   | Ein GUID-Wert, der das Format der Ressource angibt. Eine Liste der Formate, die von tragbaren Windows-Geräten definiert werden, finden Sie unter [Objekt Formate](object-format-guids.md) . |
-| **Gesamtgröße des WPD- \_ Ressourcen \_ Attributs \_ \_**   | **VT \_ UI8**     | Die Gesamtgröße der Ressourcen Daten in Bytes.                                                                                                                            |
+| **RESSOURCENSCHLÜSSEL DES \_ \_ WPD-RESSOURCENATTRIBUTS \_ \_** | **VT \_ UNKNOWN** | Dies ist eine [**IPortableDeviceKeyCollection,**](iportabledevicekeycollection.md) die einen einzelnen Wert enthält, der der Schlüssel ist, der die Ressource identifiziert.                     |
+| **\_ \_ WPD-RESSOURCENATTRIBUTFORMAT \_**        | **VT \_ CLSID**   | Ein GUID-Wert, der das Format der Ressource angibt. Unter [Objektformate](object-format-guids.md) finden Sie eine Liste der Formate, die von portablen Windows definiert werden. |
+| **\_ \_ WPD-RESSOURCENATTRIBUT \_ \_ GESAMTGRÖßE**   | **VT \_ UI8**     | Die Gesamtgröße der Ressourcendaten in Bytes.                                                                                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Attribute werden von der [**iportabledeviceresources:: getresourceattributormethode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-getresourceattributes) zurückgegeben.
+Diese Attribute werden von der [**IPortableDeviceResources::GetResourceAttributes-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-getresourceattributes) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Diese Attribute werden von der [**iportabledeviceresources:: getresourceattribut
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
@@ -54,10 +54,10 @@ Diese Attribute werden von der [**iportabledeviceresources:: getresourceattribut
 
 <dl> <dt>
 
-[**Iportabledeviceresources:: getresourceattribute**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-getresourceattributes)
+[**IPortableDeviceResources::GetResourceAttributes**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceresources-getresourceattributes)
 </dt> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

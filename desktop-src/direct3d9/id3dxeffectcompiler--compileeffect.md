@@ -1,7 +1,7 @@
 ---
-description: Kompilieren eines Effekts.
+description: Kompilieren sie einen Effekt.
 ms.assetid: be6f862a-5091-4a06-a27a-308e81360129
-title: 'ID3DXEffectCompiler:: compileeffect-Methode (D3DX9Effect. h)'
+title: ID3DXEffectCompiler::CompileEffect-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 6552d0216cd05c40c122657270c02e0886438da1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f3769f3f7433aadc55e766d68ecc152a4e26444cf506344f80e3f11a0bca8fcf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951660"
 ---
-# <a name="id3dxeffectcompilercompileeffect-method"></a>ID3DXEffectCompiler:: compileeffect-Methode
+# <a name="id3dxeffectcompilercompileeffect-method"></a>ID3DXEffectCompiler::CompileEffect-Methode
 
-Kompilieren eines Effekts.
+Kompilieren sie einen Effekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT CompileEffect(
 
 <dl> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist nun der Standard. Weitere Informationen finden Sie unter [D3DXSHADER-Flags](d3dxshader-flags.md) .
+Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden. Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere Informationen finden Sie unter [D3DXSHADER-Flags.](d3dxshader-flags.md)
 
 </dd> <dt>
 
-*ppeer-ect* \[ Out, retval\]
+*ppEffect* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Der Puffer, der den kompilierten Effekt enthält. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der den kompilierten Effekt enthält. Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
 
 </dd> <dt>
 
-*pperrormsgs* \[ Out, retval\]
+*ppErrorMsgs* \[ out, retval\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Puffer, der mindestens die erste Kompilierungs Fehlermeldung enthält, die aufgetreten ist. Dies schließt Compilerfehler und allgemeine sprach Kompilierungsfehler ein. Weitere Informationen zum Zugreifen auf den Puffer finden Sie unter [**ID3DXBuffer**](id3dxbuffer.md).
+Puffer, der mindestens die erste kompilierungsfehlermeldung enthält, die aufgetreten ist. Dies schließt Compilerfehler und Kompilierungsfehler auf hoher Ebene ein. Weitere Informationen zum Zugriff auf den Puffer finden Sie unter [**ID3DXBuffer.**](id3dxbuffer.md)
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Puffer, der mindestens die erste Kompilierungs Fehlermeldung enthält, die aufge
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK.
 
-Wenn die Argumente ungültig sind, gibt die Methode D3DERR \_ invalidcallzurück.
+Wenn die Argumente ungültig sind, gibt die Methode D3DERR \_ INVALIDCALL zurück.
 
-Wenn die Methode fehlschlägt, lautet der Rückgabewert E \_ Fail.
+Wenn die Methode fehlschlägt, ist der Rückgabewert E \_ FAIL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Wenn die Methode fehlschlägt, lautet der Rückgabewert E \_ Fail.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

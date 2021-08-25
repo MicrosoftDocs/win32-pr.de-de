@@ -1,19 +1,19 @@
 ---
-description: Übergeordnetes Bluetooth-Gerät für die Abfrage. Erforderlich für nicht zwischengespeicherte Abfragen.
+description: Bluetooth übergeordnete Gerät für die Abfrage. Für nicht zwischenspeicherte Abfragen erforderlich.
 ms.assetid: ded2fc28-2a7e-4913-9828-331539accb4b
-title: System. Devices. aepservice. Bluetooth. TargetDevice
+title: System.Devices.AepService. Bluetooth. TargetDevice
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e1701d13e2ca488a9b4275f26022452c985fe1c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fa5957adaafc6befef3d1a7ba13f2b500255b0c3023d5446c1d559222b533bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885590"
 ---
-# <a name="systemdevicesaepservicebluetoothtargetdevice"></a>System. Devices. aepservice. Bluetooth. TargetDevice
+# <a name="systemdevicesaepservicebluetoothtargetdevice"></a>System.Devices.AepService. Bluetooth. TargetDevice
 
-Übergeordnetes Bluetooth-Gerät für die Abfrage. Erforderlich für nicht zwischengespeicherte Abfragen.
+Bluetooth übergeordnete Gerät für die Abfrage. Für nicht zwischenspeicherte Abfragen erforderlich.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607"></a>Windows 10, Version 1703, Windows 10, Version 1607
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. SETSECURITYDESCRIPTOR (Eigenschaft)
-description: Bei der Skripterstellung wird die Sicherheits Beschreibung für den Ordner festgelegt.
+title: TaskFolder.SetSecurityDescriptor (Eigenschaft)
+description: Legt für die Skripterstellung den Sicherheitsdeskriptor für den Ordner fest.
 ms.assetid: 50649100-08f6-4c2e-b084-7cfcf9f78e09
 keywords:
-- SETSECURITYDESCRIPTOR-Eigenschaft Taskplaner
-- SETSECURITYDESCRIPTOR-Eigenschaft Taskplaner, Task Folder-Objekt
-- Task Folder-Objekt Taskplaner, SETSECURITYDESCRIPTOR-Eigenschaft
+- Eigenschafteneigenschaft "SetSecurityDescriptor Taskplaner
+- SetSecurityDescriptor-Eigenschaft Taskplaner , TaskFolder-Objekt
+- TaskFolder-Objekt Taskplaner , SetSecurityDescriptor-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0854ee6485007e1465dd0a264c908d67443f248
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8416e14a5415de86f8ad3f4a1181ce231ecfbdc875e36e9e3fd14014de8c4935
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033790"
 ---
-# <a name="taskfoldersetsecuritydescriptor-property"></a>Taskfolder. SETSECURITYDESCRIPTOR (Eigenschaft)
+# <a name="taskfoldersetsecuritydescriptor-property"></a>TaskFolder.SetSecurityDescriptor (Eigenschaft)
 
-Bei der Skripterstellung wird die Sicherheits Beschreibung für den Ordner festgelegt.
+Legt für die Skripterstellung den Sicherheitsdeskriptor für den Ordner fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,9 +41,9 @@ TaskFolder.SetSecurityDescriptor( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die Zugriffs Steuerungs Liste (ACL) in der Sicherheits Beschreibung für einen Aufgaben Ordner angeben, um bestimmten Benutzern und Gruppen den Zugriff auf einen Aufgaben Ordner zu gewähren oder zu verweigern.
+Sie können die Zugriffssteuerungsliste (Access Control List, ACL) im Sicherheitsdeskriptor für einen Taskordner angeben, um bestimmten Benutzern und Gruppen den Zugriff auf einen Aufgabenordner zu ermöglichen oder zu verweigern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Sie können die Zugriffs Steuerungs Liste (ACL) in der Sicherheits Beschreibung 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -62,10 +62,10 @@ Sie können die Zugriffs Steuerungs Liste (ACL) in der Sicherheits Beschreibung 
 
 <dl> <dt>
 
-[**Registeredtask. SETSECURITYDESCRIPTOR**](registeredtask-setsecuritydescriptor.md)
+[**RegisteredTask.SetSecurityDescriptor**](registeredtask-setsecuritydescriptor.md)
 </dt> <dt>
 
-[**Taskfolder. getsecuritydescriptor**](taskfolder-getsecuritydescriptor.md)
+[**TaskFolder.GetSecurityDescriptor**](taskfolder-getsecuritydescriptor.md)
 </dt> </dl>
 
  

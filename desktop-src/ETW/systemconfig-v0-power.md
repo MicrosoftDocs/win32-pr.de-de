@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_V0_Power-Klasse: Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'SystemConfig_V0_Power-Klasse: Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: b3391435-dac0-4c48-b788-eb4d4a7aa635
 title: SystemConfig_V0_Power-Klasse
 ms.topic: reference
@@ -20,18 +20,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ab268e719374906e149dc9c1b733487f986e8308
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 588622fb010cf9ca43f7253adc269e86b1755e5e459cbd6320a28d1d5416706a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914340"
 ---
 # <a name="systemconfig_v0_power-class"></a>SystemConfig \_ V0 \_ Power-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Energiekonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -138,7 +138,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S2 unterstützt.
+True gibt an, dass das System den Standbyzustand S2 unterstützt.
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S3 unterstützt.
+True gibt an, dass das System den Standbyzustand S3 unterstützt.
 
 </dd> <dt>
 
@@ -170,7 +170,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S4 unterstützt.
+True gibt an, dass das System den Standbyzustand S4 unterstützt.
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-True gibt an, dass das System den Ruhezustand S5 unterstützt.
+True gibt an, dass das System den Standbyzustand S5 unterstützt.
 
 </dd> </dl>
 
@@ -194,14 +194,14 @@ True gibt an, dass das System den Ruhezustand S5 unterstützt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

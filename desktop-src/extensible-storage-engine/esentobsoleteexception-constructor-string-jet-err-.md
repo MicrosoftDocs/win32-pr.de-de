@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentobsoleteexception-Konstruktor (String, JET_err)'
-title: Esentobsoleteexception-Konstruktor (Zeichenfolge, JET_err)
+description: 'Weitere Informationen finden Sie unter: EsentObsoleteException-Konstruktor (String, JET_err)'
+title: EsentObsoleteException-Konstruktor (String, JET_err)
 TOCTitle: EsentObsoleteException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentObsoleteException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentobsoleteexception.esentobsoleteexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 435a3db75cb09a47bccc311733b90fae30563c86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 45aa611b9c91e548047a71466e2e86ca7a600ac7a9d2d24711b578f4399b8eef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851706"
 ---
-# <a name="esentobsoleteexception-constructor-string-jet_err"></a>Esentobsoleteexception-Konstruktor (Zeichenfolge, JET_err)
+# <a name="esentobsoleteexception-constructor-string-jet_err"></a>EsentObsoleteException-Konstruktor (String, JET_err)
 
-Initialisiert eine neue Instanz der esentobsoleteexception-Klasse.
+Initialisiert eine neue Instanz der EsentObsoleteException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,25 +60,25 @@ protected EsentObsoleteException(
 #### <a name="parameters"></a>Parameter
 
   - description  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Beschreibung des Fehlers.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+  - Err  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentObsoleteException-Klasse](./esentobsoleteexception-class.md)
 
-[Esentobsoleteexception-Member](./esentobsoleteexception-members.md)
+[EsentObsoleteException-Member](./esentobsoleteexception-members.md)
 
-[Esentobsoleteexception-Überladung](./esentobsoleteexception-constructor.md)
+[EsentObsoleteException-Überladung](./esentobsoleteexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

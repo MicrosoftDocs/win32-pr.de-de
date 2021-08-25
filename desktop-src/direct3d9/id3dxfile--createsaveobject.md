@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Speicher Objekt, das zum Speichern von Daten in einer x-Datei verwendet wird.
+description: Erstellt ein Speicherobjekt, das zum Speichern von Daten in einer X-Datei verwendet wird.
 ms.assetid: da064e83-605f-4c86-985d-9a0961c18e01
-title: 'ID3DXFile:: kreatesaveobject-Methode (D3DX9Xof. h)'
+title: ID3DXFile::CreateSaveObject-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: d7c5b3de020ad50abfd8834aabbdc8e6e848d71d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: aaf9f884a651182429de20fe261a250c8c6567eacd99d635213682e4d755b79a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353379"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951610"
 ---
-# <a name="id3dxfilecreatesaveobject-method"></a>ID3DXFile:: kreatesaveobject-Methode
+# <a name="id3dxfilecreatesaveobject-method"></a>ID3DXFile::CreateSaveObject-Methode
 
-Erstellt ein Speicher Objekt, das zum Speichern von Daten in einer x-Datei verwendet wird.
+Erstellt ein Speicherobjekt, das zum Speichern von Daten in einer X-Datei verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT CreateSaveObject(
 
 <dl> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
 Zeiger auf den Namen der Datei, die zum Speichern von Daten verwendet werden soll.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Type: **[D3DXF \_ filesaveoptions](d3dxf.md)**
+Typ: **[D3DXF \_ FILESAVEOPTIONS](d3dxf.md)**
 
--Wert, der den Namen der Datei angibt, in der Daten gespeichert werden sollen. Bei diesem Wert kann es sich um eines der Optionen für die [Dateispeicher Optionen](d3dxf.md) handeln.
+Wert, der den Namen der Datei angibt, in der Daten gespeichert werden sollen. Dieser Wert kann eines der Flags [dateispeicheroptionen](d3dxf.md) sein.
 
 </dd> <dt>
 
-*dwfileformat* \[ in\]
+*dwFileFormat* \[ In\]
 </dt> <dd>
 
-Type: **[D3DXF \_ File Format](d3dxf.md)**
+Typ: **[D3DXF \_ FILEFORMAT](d3dxf.md)**
 
-Gibt das Format an, das beim Speichern der x-Datei verwendet werden soll. Bei diesem Wert kann es sich um eines der [dateiformatflags](d3dxf.md) handeln. Weitere Informationen finden Sie in den Hinweisen.
+Gibt das Format an, das beim Speichern der X-Datei verwendet werden soll. Dieser Wert kann eines der [Dateiformatflags](d3dxf.md) sein. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
-*ppsaveobj* \[ vorgenommen\]
+*ppSaveObj* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DXFileSaveObject**](id3dxfilesaveobject.md)\*\***
 
-Adresse eines Zeigers auf eine [**ID3DXFileSaveObject**](id3dxfilesaveobject.md) -Schnittstelle, die das erstellte Save-Objekt darstellt.
+Adresse eines Zeigers auf eine [**ID3DXFileSaveObject-Schnittstelle,**](id3dxfilesaveobject.md) die das erstellte Speicherobjekt darstellt.
 
 </dd> </dl>
 
@@ -83,15 +83,15 @@ Adresse eines Zeigers auf eine [**ID3DXFileSaveObject**](id3dxfilesaveobject.md)
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DXFERR \_ badvalue, D3DXFERR Parameter \_ Error.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DXFERR \_ BADVALUE, D3DXFERR \_ PARSEERROR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie diese Methode verwendet haben, verwenden Sie Methoden der [**ID3DXFileSaveObject**](id3dxfilesaveobject.md) -Schnittstelle zum Erstellen von Datenobjekten und zum Speichern von Vorlagen oder Daten.
+Verwenden Sie nach der Verwendung dieser Methode Methoden der [**ID3DXFileSaveObject-Schnittstelle,**](id3dxfilesaveobject.md) um Datenobjekte zu erstellen und Vorlagen oder Daten zu speichern.
 
-Im gespeicherten Dateiformat *dwfileformat* muss eines der Binär-, Legacy-oder textflags in [Dateiformaten](d3dxf.md) angegeben werden. Die Datei kann mit dem optionalen D3DXF \_ File Format-Flag komprimiert werden \_ .
+Für das gespeicherte Dateiformat *dwFileFormat* muss eines der Binär-, Legacybinär- oder Textflags in [Dateiformaten](d3dxf.md) angegeben werden. Die Datei kann mithilfe des optionalen D3DXF \_ FILEFORMAT \_ COMPRESSED-Flags komprimiert werden.
 
-Die Dateiformat Werte können mit einem logischen OR kombiniert werden, um komprimierten Text oder komprimierte Binärdateien zu erstellen. Wenn Sie angeben, dass das Dateiformat Text und Komprimierung sein soll, wird die Datei zuerst als Text geschrieben und dann komprimiert. Komprimierte Textdateien sind jedoch nicht so effizient wie binäre Textdateien. in den meisten Fällen ist es daher ratsam, Binär und komprimierte anzugeben.
+Die Dateiformatwerte können in einem logischen OR kombiniert werden, um komprimierten Text oder komprimierte Binärdateien zu erstellen. Wenn Sie angeben, dass das Dateiformat Text und komprimiert sein soll, wird die Datei zuerst als Text geschrieben und dann komprimiert. Komprimierte Textdateien sind jedoch nicht so effizient wie binäre Textdateien. In den meisten Fällen sollten Sie daher binär und komprimiert angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Die Dateiformat Werte können mit einem logischen OR kombiniert werden, um kompr
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 

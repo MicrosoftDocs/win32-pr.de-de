@@ -1,19 +1,19 @@
 ---
-description: Tritt ein, wenn der Benutzer eine Taste drückt und freigibt, während das InkEdit-Steuerelement den Fokus besitzt.
+description: Tritt ein, wenn der Benutzer eine Taste drückt und freilässt, während das InkEdit-Steuerelement den Fokus besitzt.
 ms.assetid: 8284ab41-dfac-4da2-b101-6968a43b15d7
-title: InkEdit. KeyPress-Ereignis (Inked. h)
+title: InkEdit.KeyPress-Ereignis (Inked.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e49264f82b2cfe3c6998666339f08340a540791
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 713100edeae3ce6b950433afb73d13f40aefb291047e98984cbd6908dde3ce2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935099"
 ---
-# <a name="inkeditkeypress-event"></a>InkEdit. KeyPress-Ereignis
+# <a name="inkeditkeypress-event"></a>InkEdit.KeyPress-Ereignis
 
-Tritt ein, wenn der Benutzer eine Taste drückt und freigibt, während das [InkEdit](inkedit-control-reference.md) -Steuerelement den Fokus besitzt.
+Tritt ein, wenn der Benutzer eine Taste drückt und freilässt, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,17 +33,17 @@ HRESULT KeyPress(
 *Char* 
 </dt> <dd>
 
-Eine ganze Zahl, die einen numerischen Standard-ANSI-Keycode zurückgibt. Der *char* -Parameter wird als Verweis übergeben. durch das ändern wird ein anderes Zeichen an das Steuerelement gesendet. Wenn der *char* -Parameter in 0 geändert wird, wird das Ereignis abgebrochen.
+Eine ganze Zahl, die einen standardmäßigen numerischen ANSI-Schlüsselcode zurückgibt. Der *Char-Parameter* wird als Verweis übergeben. Wenn sie geändert wird, wird ein anderes Zeichen an das -Steuerelement übermittelt. Wenn Sie den *Char-Parameter* in 0 ändern, wird das Ereignis abgebrochen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der **\_ iinkeditevents** -Schnittstelle definiert. Die **\_ iinkeditevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner DISPID \_ ieekeypress.
+Diese Ereignismethode wird in der **\_ IInkEditEvents-Schnittstelle** definiert. Die **\_ IInkEditEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IeeKeyPress.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Diese Ereignismethode wird in der **\_ iinkeditevents** -Schnittstelle definiert
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>In "-. h" (auch als "gezeichneten \_ i. c" erforderlich)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Inked.h (erfordert auch inked \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkEd.dll</dt> </dl>                          |
 
 
@@ -62,13 +62,13 @@ Diese Ereignismethode wird in der **\_ iinkeditevents** -Schnittstelle definiert
 
 <dl> <dt>
 
-[InkEdit](inkedit-control-reference.md)
+[Inkedit](inkedit-control-reference.md)
 </dt> <dt>
 
-[**KeyDown-Ereignis, \[ InkEdit-Steuerelement\]**](inkedit-keydown.md)
+[**KeyDown-Ereignis \[ inkEdit-Steuerelement\]**](inkedit-keydown.md)
 </dt> <dt>
 
-[**KeyUp-Ereignis \[ InkEdit-Steuerelement\]**](inkedit-keyup.md)
+[**KeyUp-Ereignis \[ inkEdit-Steuerelement\]**](inkedit-keyup.md)
 </dt> </dl>
 
  

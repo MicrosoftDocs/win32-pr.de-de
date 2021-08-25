@@ -1,7 +1,7 @@
 ---
-description: Die disconnectinternal-Methode unterbricht die aktuelle PIN-Verbindung.
+description: Die DisconnectInternal-Methode unterbricht die aktuelle Pinverbindung.
 ms.assetid: 070301ad-d079-4ad3-abdf-d5de88872e52
-title: Cbasepin. disconnectinternal-Methode (amfilter. h)
+title: CBasePin.DisconnectInternal-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f0891a9446e09c56e3845c02217d39037aad38bf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c420419e49f7093e6fdf1fdc66880035f4844d03277db18b5c134d9ee69b10fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916530"
 ---
-# <a name="cbasepindisconnectinternal-method"></a>Cbasepin. disconnectinternal-Methode
+# <a name="cbasepindisconnectinternal-method"></a>CBasePin.DisconnectInternal-Methode
 
-Die- `DisconnectInternal` Methode unterbricht die aktuelle PIN-Verbindung.
+Die `DisconnectInternal` -Methode unterbricht die aktuelle Pinverbindung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>             | Die PIN war nicht verbunden.<br/>                                              |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>             | Die Stecknadel wurde nicht verbunden.<br/>                                              |
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Erfolg.<br/>                                                                |
-| <dl> <dt>**VFW \_ E \_ nicht \_ angehalten**</dt> </dl> | Der Filter ist aktiv, und die PIN unterstützt keine dynamische erneute Verbindung.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ BEENDET**</dt> </dl> | Der Filter ist aktiv, und der Pin unterstützt keine dynamische wiederhergestellte Verbindung.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbasepin::D isconnect**](cbasepin-disconnect.md) -Methode delegiert den Disconnect-Prozess an diese Methode. Diese Methode ruft die [**cbasepin:: breakconnect**](cbasepin-breakconnect.md) -Methode auf. Außerdem wird der Verweis Zähler für die andere Pin freigegeben, die von der in [**cbasepin:: m \_ verbundenen**](cbasepin-m-connected.md) Member-Variable gehalten wird.
+Die [**CBasePin::D isconnect-Methode**](cbasepin-disconnect.md) delegiert den Disconnect-Prozess an diese Methode. Diese Methode ruft die [**CBasePin::BreakConnect-Methode**](cbasepin-breakconnect.md) auf. Außerdem wird die Verweisanzahl für den anderen Pin frei, der von der [**CBasePin::m \_ Connected-Membervariablen**](cbasepin-m-connected.md) gehalten wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Die [**cbasepin::D isconnect**](cbasepin-disconnect.md) -Methode delegiert den D
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Die [**cbasepin::D isconnect**](cbasepin-disconnect.md) -Methode delegiert den D
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

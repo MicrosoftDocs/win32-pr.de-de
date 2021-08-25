@@ -1,20 +1,20 @@
 ---
-description: Das Objekt "Swap-Locator" stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemLocator-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: DA940EDC-5E30-4B59-BBF4-5FA806AD9579
 ms.tgt_platform: multiple
-title: Swap-Locator-Methoden
+title: SWbemLocator-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 330702156d86cc5d5a5e497722d781042a42dc47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3101f3a74df1cab616d95274394778224a9365b81306c3138fea4867c6e5c19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955180"
 ---
-# <a name="swbemlocator-methods"></a>Swap-Locator-Methoden
+# <a name="swbemlocator-methods"></a>SWbemLocator-Methoden
 
-Das Objekt " [**Swap-Locator**](swbemlocator.md) " stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemLocator-Objekt**](swbemlocator.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

@@ -1,9 +1,9 @@
 ---
-title: Videosettings. Contrast
-description: Das Attribut "Contrast" gibt die Kontrasteinstellung des Videos an oder ruft diese ab.
+title: VIDEOSETTINGS.contrast
+description: Das Kontrastattribut gibt die Kontrasteinstellung des Videos an oder ruft sie ab.
 ms.assetid: 8a7b90b3-5551-4910-9028-f354d0e836f7
 keywords:
-- Videosettings. Kontrast-Windows-Media Player
+- VIDEOSETTINGS.contrast Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2b004964729d17b1fd8773257c835f762b38aa1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 83d1b1019266035dbb56890f2145b28d1cb570f88b0e999b56f7b865431faf08
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900720"
 ---
-# <a name="videosettingscontrast"></a>Videosettings. Contrast
+# <a name="videosettingscontrast"></a>VIDEOSETTINGS.contrast
 
-Das Attribut " **Contrast** " gibt die Kontrasteinstellung des Videos an oder ruft diese ab.
+Das  Kontrastattribut gibt die Kontrasteinstellung des Videos an oder ruft sie ab.
 
 ``` syntax
         elementID.contrast
@@ -29,7 +29,7 @@ Das Attribut " **Contrast** " gibt die Kontrasteinstellung des Videos an oder ru
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich von-127 bis + 127 und einem Standardwert von 0. 
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**) mit einem Wert zwischen -127 und +127 und dem Standardwert 0. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich 
 
 <dl> <dt>
 
-[**Videosettings-Element**](videosettings-element.md)
+[**VIDEOSETTINGS-Element**](videosettings-element.md)
 </dt> </dl>
 
  

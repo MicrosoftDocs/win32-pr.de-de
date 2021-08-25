@@ -1,9 +1,9 @@
 ---
 title: NSC_Email
-description: Das NSC \_ -e-Mail-Attribut enthält die e-Mail-Adresse der Multicast Station.
+description: Das \_ NSC-E-Mail-Attribut enthält die E-Mail-Adresse der Multicaststation.
 ms.assetid: cbd30e01-d57b-48ee-95b0-71585a668a6c
 keywords:
-- NSC_Email Windows Media-Format
+- NSC_Email windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,38 +12,38 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34782a4675a6b4603f582e2d7016b0ba84a9e502
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 4b28fe33feb1c80e43ee9c36c79e4ca3e79b20d8abe2c44b9bc0de9a454ab5d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930670"
 ---
-# <a name="nsc_email"></a>NSC \_ -e-Mail
+# <a name="nsc_email"></a>\_NSC-E-Mail
 
-Das **NSC \_ -e-Mail-** Attribut enthält die e-Mail-Adresse der Multicast Station.
+Das **NSC \_ Email-Attribut** enthält die E-Mail-Adresse der Multicaststation.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmnscemail
+g \_ wszWMNSCEmail
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> <dt>
 
-[**Attribute für Multicast Station**](multicast-station-attributes.md)
+[**Multicaststationsattribute**](multicast-station-attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

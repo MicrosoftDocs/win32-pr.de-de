@@ -1,9 +1,9 @@
 ---
-title: Network. bufferingcount
-description: Die bufferingcount-Eigenschaft ruft die Häufigkeit ab, mit der die Pufferung während der Clip Wiedergabe erfolgt ist.
+title: Network.bufferingCount
+description: Die bufferingCount-Eigenschaft ruft ab, wie oft die Pufferung während der Clipwiedergabe aufgetreten ist.
 ms.assetid: 25a58795-161e-4290-8ea7-51acca968ef9
 keywords:
-- Network. bufferingcount-Windows-Media Player
+- Network.bufferingCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,34 +14,34 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 524dc66c7f4ed1d413f264a91ae9385d458d632b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9d19c80715ca04965927bb0a50450213d707beeb124fd671fd8071e2cdd90e3a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901760"
 ---
-# <a name="networkbufferingcount"></a>Network. bufferingcount
+# <a name="networkbufferingcount"></a>Network.bufferingCount
 
-Die **bufferingcount** -Eigenschaft ruft die Häufigkeit ab, mit der die Pufferung während der Clip Wiedergabe erfolgt ist.
+Die **bufferingCount-Eigenschaft** ruft ab, wie oft die Pufferung während der Clipwiedergabe aufgetreten ist.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **bufferingcount**
+*Player*. *network*. **bufferingCount**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf NULL festgelegt. Wenn die Wiedergabe angehalten wird, wird Sie nicht zurückgesetzt.
+Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf 0 (null) festgelegt. Sie wird nicht zurückgesetzt, wenn die Wiedergabe angehalten wird.
 
-Die Pufferung gilt nur für Streaminginhalte. Diese Eigenschaft gibt gültige Informationen nur zur Laufzeit zurück, wenn der *Player*. Die **URL** -Eigenschaft ist festgelegt.
+Die Pufferung gilt nur für Streaminginhalte. Diese Eigenschaft gibt gültige Informationen nur zur Laufzeit zurück, wenn der *Player*. **Die URL-Eigenschaft** ist festgelegt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **bufferingcount** , um anzuzeigen, wie oft die Pufferung während der Wiedergabe auftritt. Die Informationen werden in einem HTML div-Code angezeigt, der mit ID = "CB" erstellt wurde. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **bufferingCount,** um anzuzeigen, wie oft die Pufferung während der Wiedergabe auftritt. Die Informationen werden in einem HTML-DIV angezeigt, der mit der ID = "CB" erstellt wurde. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -61,7 +61,7 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **bufferingcount** , um 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -70,10 +70,10 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **bufferingcount** , um 
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Player. URL**](player-url.md)
+[**Player.URL**](player-url.md)
 </dt> </dl>
 
  

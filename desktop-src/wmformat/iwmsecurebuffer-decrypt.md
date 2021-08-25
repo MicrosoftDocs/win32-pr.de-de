@@ -1,11 +1,11 @@
 ---
-title: Iwmsecurebuffer-Entschlüsselungsmethode (wmdrmsdk. h)
-description: Die Entschlüsselungsmethode entschlüsselt einen Datenzeiger, der durch Aufrufen der Verschlüsselungsmethode verschlüsselt wurde.
+title: IWMSecureBuffer Decrypt-Methode (Wmdrmsdk.h)
+description: Die Decrypt-Methode entschlüsselt einen Datenzeiger, der durch Aufrufen der Encrypt-Methode verschlüsselt wurde.
 ms.assetid: 15cedb56-686a-4a3c-81a5-b1797cfe0838
 keywords:
-- Entschlüsselungsmethode Windows Media-Format
-- Entschlüsselungsmethode Windows Media-Format, iwmsecurebuffer-Schnittstelle
-- Iwmsecurebuffer-Schnittstelle Windows Media-Format, Entschlüsselungsmethode
+- Decrypt method windows Media Format
+- Decrypt method windows Media Format , IWMSecureBuffer interface
+- IWMSecureBuffer-Schnittstelle windows Media Format , Decrypt-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a6f48ae389090840e085c90b0bc5444e7cd6784e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb9867cb6476ab0a2838903c906f662032e14dfb0d4fa0547b045672e03b6ce8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930100"
 ---
-# <a name="iwmsecurebufferdecrypt-method"></a>Iwmsecurebuffer::D ecrypt-Methode
+# <a name="iwmsecurebufferdecrypt-method"></a>IWMSecureBuffer::D ecrypt-Methode
 
-Die **Entschlüsselungsmethode** entschlüsselt einen Datenzeiger, der durch Aufrufen der [**Verschlüsselungs**](iwmsecurebuffer-encrypt.md) Methode verschlüsselt wurde.
+Die **Decrypt-Methode** entschlüsselt einen Datenzeiger, der durch Aufrufen der [**Encrypt-Methode verschlüsselt**](iwmsecurebuffer-encrypt.md) wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT Decrypt(
 
 <dl> <dt>
 
-*psecurechannel* \[ in\]
+*pSecureChannel* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine sichere Kanal Schnittstelle, die den verschlüsselten Datenzeiger enthält.
+Zeiger auf eine sichere Kanalschnittstelle, die den verschlüsselten Datenzeiger enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -74,8 +74,8 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -83,10 +83,10 @@ Keine.
 
 <dl> <dt>
 
-[**Verschlüsseln**](iwmsecurebuffer-encrypt.md)
+[**Encrypt**](iwmsecurebuffer-encrypt.md)
 </dt> <dt>
 
-[**Iwmsecurebuffer-Schnittstelle**](iwmsecurebuffer.md)
+[**IWMSecureBuffer-Schnittstelle**](iwmsecurebuffer.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-title: Konstanten (Windows-Touchgesten)
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Windows-Touchgesten Konstanten.
+title: Konstanten (Windows Touchgesten)
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Windows Von Touch-Gesten konstanten.
 ms.assetid: 98FAD1C5-284A-4DE2-B3D2-B2B3153088DC
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 019016c1bbb891a60d6e157af122e0f3850eefb7
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 18c717c26c5a7aa83d06fd392b8e918750f0c330ed1e332584142592efe52130
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106337480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881480"
 ---
-# <a name="constants-windows-touch-gestures"></a>Konstanten (Windows-Touchgesten)
+# <a name="constants-windows-touch-gestures"></a>Konstanten (Windows Touchgesten)
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Windows-Touchgesten](guide-multi-touch-gestures.md) Konstanten.
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für Windows [Von Touch-Gesten](guide-multi-touch-gestures.md) konstanten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,7 +21,7 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Wind
 
 | Thema                                                                         | BESCHREIBUNG                                                                  |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| [**Windows-Touchgesten**](windows-touch-gestures-constants.md)<br/> | In diesem Abschnitt werden die Konstanten aufgelistet, die für Windows-Touchbewegungen verwendet werden<br/> |
+| [**Windows Touchgesten**](windows-touch-gestures-constants.md)<br/> | In diesem Abschnitt werden die Konstanten aufgeführt, die für Windows Touchgesten verwendet werden.<br/> |
 
 
 

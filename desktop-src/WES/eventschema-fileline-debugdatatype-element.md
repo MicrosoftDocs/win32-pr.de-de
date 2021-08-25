@@ -1,9 +1,9 @@
 ---
-title: FileLine-Element (Debug DataType)
-description: Der Name der Quelldatei und die Zeile in der Quelldatei, die die Ablauf Verfolgungs Meldung protokolliert hat.
+title: FileLine -Element (DebugDataType)
+description: Der Name der Quelldatei und die Zeile in der Quelldatei, die die Ablaufverfolgungsmeldung protokolliert hat.
 ms.assetid: 398fc254-d48f-49eb-9554-f110a7665628
 keywords:
-- FileLine-Element (Ereignisprotokoll)
+- FileLine-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 195c964e58e40a7bb4b77e8da142d3224159427b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6cceb2d6c7730aed49f91aab464e692ff3fa03873bcce8b3da1f60f8fdb58add
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904790"
 ---
-# <a name="fileline-debugdatatype-element"></a>FileLine-Element (Debug DataType)
+# <a name="fileline-debugdatatype-element"></a>FileLine -Element (DebugDataType)
 
-Der Name der Quelldatei und die Zeile in der Quelldatei, die die Ablauf Verfolgungs Meldung protokolliert hat.
+Der Name der Quelldatei und die Zeile in der Quelldatei, die die Ablaufverfolgungsmeldung protokolliert hat.
 
 ``` syntax
 <xs:element name="FileLine"
@@ -30,7 +30,7 @@ Der Name der Quelldatei und die Zeile in der Quelldatei, die die Ablauf Verfolgu
  />
 ```
 
-Das **FileLine** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **FileLine-Element** wird durch den komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **FileLine** -Element wird durch den komplexen Typ [**debugdatatype**](event
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

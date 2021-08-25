@@ -1,30 +1,30 @@
 ---
-description: Die folgenden GUIDs definieren Nutz Last Erweiterungen für ASF-Streams (Advanced Systems Format).
+description: Die folgenden GUIDs definieren Nutzlasterweiterungen für ASF-Datenströme (Advanced Systems Format).
 ms.assetid: db973b41-1e5c-4bc8-921d-5e9312eb21cb
-title: Namen der ASF-Nutz Last Erweiterung (wmcontainer. h)
+title: GUIDs der ASF-Nutzlasterweiterung (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb7dbd27212c8f4812360ba22f89a717659307f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6478c024d3e79b0f8035f03b6e893e2e5d0308037242f9ac3013450b57f83242
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959570"
 ---
-# <a name="asf-payload-extension-guids"></a>Namen der ASF-Nutz Last Erweiterung
+# <a name="asf-payload-extension-guids"></a>ASF-Nutzlasterweiterungs-GUIDs
 
-Die folgenden GUIDs definieren Nutz Last Erweiterungen für ASF-Streams (Advanced Systems Format).
+Die folgenden GUIDs definieren Nutzlasterweiterungen für ASF-Datenströme (Advanced Systems Format).
 
 
 
-| Konstante                                                                                                                                                                                                                                                                                      | BESCHREIBUNG                                                                                                                                                                      |
+| Konstante                                                                                                                                                                                                                                                                                      | Beschreibung                                                                                                                                                                      |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="MFASFSampleExtension_SampleDuration"></span><span id="mfasfsampleextension_sampleduration"></span><span id="MFASFSAMPLEEXTENSION_SAMPLEDURATION"></span><dl> <dt>**Mfasf Sample Extension \_ sampleduration**</dt> </dl>         | Die Daten zeigen die Dauer (in Millisekunden) des im Buffer-Objekt enthaltenen Beispiels an.<br/>                                                                       |
-| <span id="MFASFSampleExtension_OutputCleanPoint"></span><span id="mfasfsampleextension_outputcleanpoint"></span><span id="MFASFSAMPLEEXTENSION_OUTPUTCLEANPOINT"></span><dl> <dt>**Mfasf Sample Extension \_ outputcleanpoint**</dt> </dl> | Die Daten zeigen an, ob das Beispiel ein Keyframe ist. Der Wert 0 (null) gibt an, dass das Beispiel kein Keyframe ist. Ein Wert ungleich NULL gibt an, dass es sich um einen Keyframe handelt.<br/> |
-| <span id="MFASFSampleExtension_SMPTE"></span><span id="mfasfsampleextension_smpte"></span><span id="MFASFSAMPLEEXTENSION_SMPTE"></span><dl> <dt>**Mfasssampleextension ( \_ SMPTE)**</dt> </dl>                                             | Bei den Daten handelt es sich um einen SMPTE-Zeit Code.<br/>                                                                                                                                        |
-| <span id="MFASFSampleExtension_FileName"></span><span id="mfasfsampleextension_filename"></span><span id="MFASFSAMPLEEXTENSION_FILENAME"></span><dl> <dt>**Mfasf Sample Extension- \_ Dateiname**</dt> </dl>                                 | Die Daten in der Beispiel Erweiterung geben den Namen der Datei an, aus der der Inhalt in der Stichprobe entnommen wurde.<br/>                                                       |
-| <span id="MFASFSampleExtension_ContentType"></span><span id="mfasfsampleextension_contenttype"></span><span id="MFASFSAMPLEEXTENSION_CONTENTTYPE"></span><dl> <dt>**Mfasf Sample Extension- \_ ContentType**</dt> </dl>                     | Die Daten identifizieren den Inhaltstyp, den das Beispiel enthält.<br/>                                                                                                     |
-| <span id="MFASFSampleExtension_PixelAspectRatio"></span><span id="mfasfsampleextension_pixelaspectratio"></span><span id="MFASFSAMPLEEXTENSION_PIXELASPECTRATIO"></span><dl> <dt>**Mfasf Sample Extension \_ pixelaspectratio**</dt> </dl> | Die Daten zeigen das Pixel Seitenverhältnis des Inhalts in der Stichprobe an.<br/>                                                                                               |
+| <span id="MFASFSampleExtension_SampleDuration"></span><span id="mfasfsampleextension_sampleduration"></span><span id="MFASFSAMPLEEXTENSION_SAMPLEDURATION"></span><dl> <dt>**MFASFSampleExtension \_ SampleDuration**</dt> </dl>         | Die Daten geben die Dauer des im Pufferobjekt enthaltenen Beispiels in Millisekunden an.<br/>                                                                       |
+| <span id="MFASFSampleExtension_OutputCleanPoint"></span><span id="mfasfsampleextension_outputcleanpoint"></span><span id="MFASFSAMPLEEXTENSION_OUTPUTCLEANPOINT"></span><dl> <dt>**MFASFSampleExtension \_ OutputCleanPoint**</dt> </dl> | Die Daten geben an, ob es sich bei der Stichprobe um einen Keyframe handelt. Der Wert 0 (null) gibt an, dass es sich bei der Stichprobe nicht um einen Keyframe handelt. Ein Wert ungleich 0 (null) gibt an, dass es sich um einen Keyframe handelt.<br/> |
+| <span id="MFASFSampleExtension_SMPTE"></span><span id="mfasfsampleextension_smpte"></span><span id="MFASFSAMPLEEXTENSION_SMPTE"></span><dl> <dt>**MFASFSampleExtension \_ SMPTE**</dt> </dl>                                             | Die Daten sind ein SMPTE-Zeitcode.<br/>                                                                                                                                        |
+| <span id="MFASFSampleExtension_FileName"></span><span id="mfasfsampleextension_filename"></span><span id="MFASFSAMPLEEXTENSION_FILENAME"></span><dl> <dt>**MFASFSampleExtension \_ FileName**</dt> </dl>                                 | Die Daten in der Beispielerweiterung geben den Namen der Datei an, aus der der Inhalt des Beispiels entnommen wurde.<br/>                                                       |
+| <span id="MFASFSampleExtension_ContentType"></span><span id="mfasfsampleextension_contenttype"></span><span id="MFASFSAMPLEEXTENSION_CONTENTTYPE"></span><dl> <dt>**MFASFSampleExtension \_ ContentType**</dt> </dl>                     | Die Daten geben den Inhaltstyp an, der im Beispiel enthalten ist.<br/>                                                                                                     |
+| <span id="MFASFSampleExtension_PixelAspectRatio"></span><span id="mfasfsampleextension_pixelaspectratio"></span><span id="MFASFSAMPLEEXTENSION_PIXELASPECTRATIO"></span><dl> <dt>**MFASFSampleExtension \_ PixelAspectRatio**</dt> </dl> | Die Daten geben das Pixel-Seitenverhältnis des Inhalts im Beispiel an.<br/>                                                                                               |
 
 
 
@@ -34,20 +34,20 @@ Die folgenden GUIDs definieren Nutz Last Erweiterungen für ASF-Streams (Advance
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imfasf streamconfig:: addpayloadextension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-addpayloadextension)
+[**IMFASFStreamConfig::AddPayloadExtension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-addpayloadextension)
 </dt> <dt>
 
-[**Imfasf streamconfig:: getpayloadextension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextension)
+[**IMFASFStreamConfig::GetPayloadExtension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextension)
 </dt> <dt>
 
 [Media Foundation Konstanten](media-foundation-constants.md)

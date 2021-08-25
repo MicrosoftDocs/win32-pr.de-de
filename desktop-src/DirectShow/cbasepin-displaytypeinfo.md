@@ -1,7 +1,7 @@
 ---
-description: Die displaytypeinfo-Methode zeigt während des Debuggens Medientyp Informationen an.
+description: Die DisplayTypeInfo-Methode zeigt Medientypinformationen während des Debuggens an.
 ms.assetid: fd10d37b-57f5-4246-8ca3-f4bc59911445
-title: Cbasepin. displaytypeinfo-Methode (amfilter. h)
+title: CBasePin.DisplayTypeInfo-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 681e424505bb2ff840ac5beaa48431f17a5d177b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 10b4535950a46fa55aba0ea7d808a075186f074cc829be0d3225dc887512ad47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916450"
 ---
-# <a name="cbasepindisplaytypeinfo-method"></a>Cbasepin. displaytypeinfo-Methode
+# <a name="cbasepindisplaytypeinfo-method"></a>CBasePin.DisplayTypeInfo-Methode
 
-Die- `DisplayTypeInfo` Methode zeigt während des Debuggens Medientyp Informationen an.
+Die `DisplayTypeInfo` -Methode zeigt Medientypinformationen während des Debuggens an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void DisplayTypeInfo(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
 Ignoriert.
 
 </dd> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um den angegebenen Medientyp anzuzeigen. Bei Einzelhandels Builds führt diese Methode keine Aktion aus.
+In Debugbuilds ruft diese Methode die [**DbgLog-Funktion**](dbglog.md) auf, um den angegebenen Medientyp anzuzeigen. In Einzelhandelsbuilds führt diese Methode nichts aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um 
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

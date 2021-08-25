@@ -4,12 +4,12 @@ ms.assetid: 116f59e9-da65-430d-b5de-e7cd9686bd19
 title: Öffentliche PrintTicket-Schlüsselwörter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 492b8590681fa6b55effe6db6ebff4b408b76325
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2fdd62eedc21928cccb784452c7b0f6a8b96bb0b18e97668409531326a4261d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886310"
 ---
 # <a name="printticket-public-keywords"></a>Öffentliche PrintTicket-Schlüsselwörter
 

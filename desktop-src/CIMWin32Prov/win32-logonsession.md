@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Anmelde Sitzung oder Sitzungen, die einem Benutzer zugeordnet sind, der bei einem Computersystem mit Windows angemeldet ist.
+description: Beschreibt die Anmeldesitzung oder -sitzungen, die einem Benutzer zugeordnet sind, der bei einem Computersystem angemeldet ist, auf dem Windows.
 ms.assetid: d09a115b-95a3-47c7-a04d-c810d044ccc8
 ms.tgt_platform: multiple
 title: Win32_LogonSession-Klasse
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 78e14bbd41c2fd8bb0c10a7bfeeda0dc9d426b0f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 85cbc80050fafe887fa99974c41666c7189b2b12c21559aac0255870b2a697d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972982"
 ---
-# <a name="win32_logonsession-class"></a>Win32 \_ logonsession-Klasse
+# <a name="win32_logonsession-class"></a>Win32 \_ LogonSession-Klasse
 
-Die WMI-Klasse der **Win32- \_ logonsession** (siehe [Abrufen einer WMI-Klasse](/windows/desktop/wmisdk/retrieving-a-class)) beschreibt die Anmelde Sitzung oder die Sitzungen, die einem Benutzer zugeordnet sind, der bei einem Computersystem mit Windows angemeldet ist.
+Die WMI-Klasse **Win32 \_ LogonSession** (siehe Abrufen einer [WMI-Klasse)](/windows/desktop/wmisdk/retrieving-a-class)beschreibt die Anmeldesitzung oder -sitzungen, die einem Benutzer zugeordnet sind, der bei einem Computersystem angemeldet ist, auf dem Windows.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,87 +56,87 @@ class Win32_LogonSession : Win32_Session
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ logonsession** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ LogonSession-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ logonsession** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ LogonSession-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AuthenticationPackage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Subsystems, das zum Authentifizieren der Anmelde Sitzung verwendet wird.
+Name des Subsystems, das zum Authentifizieren der Anmeldesitzung verwendet wird.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Anmelde-ID**
+**LogonId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -145,27 +145,27 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Die der Anmelde Sitzung zugewiesene ID.
+ID, die der Anmeldesitzung zugewiesen ist.
 
 </dd> <dt>
 
 **LogonType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Numerischer Wert, der den Typ der Anmelde Sitzung angibt.
+Numerischer Wert, der den Typ der Anmeldesitzung angibt.
 
 <dt>
 
 0
 </dt> <dd>
 
-Wird nur vom System Konto verwendet.
+Wird nur vom Systemkonto verwendet.
 
 </dd> <dt>
 
@@ -176,7 +176,7 @@ Wird nur vom System Konto verwendet.
 
 </dt> <dd>
 
-Gedacht für Benutzer, die den Computer interaktiv verwenden, z. b. ein Benutzer, der von einem Terminal Server, einer Remoteshell oder einem ähnlichen Prozess angemeldet ist.
+Vorgesehen für Benutzer, die den Computer interaktiv verwenden, z. B. ein Benutzer, der von einem Terminalserver, einer Remoteshell oder einem ähnlichen Prozess angemeldet wird.
 
 </dd> <dt>
 
@@ -187,7 +187,7 @@ Gedacht für Benutzer, die den Computer interaktiv verwenden, z. b. ein Benutzer
 
 </dt> <dd>
 
-Ist für Hochleistungsserver zum Authentifizieren von Klartext-Kenn Wörtern vorgesehen. LogonUser speichert die Anmelde Informationen für diesen Anmeldetyp nicht zwischen.
+Vorgesehen für Hochleistungsserver zum Authentifizieren von Klartextkennwörtern. LogonUser speichert anmeldeinformationen für diesen Anmeldetyp nicht zwischen.
 
 </dd> <dt>
 
@@ -198,7 +198,7 @@ Ist für Hochleistungsserver zum Authentifizieren von Klartext-Kenn Wörtern vor
 
 </dt> <dd>
 
-Gedacht für Batch Server, bei denen Prozesse im Auftrag eines Benutzers ohne direkten Eingriff ausgeführt werden können. oder für Server mit höherer Leistung, die viele Clear-Text-Authentifizierungs Versuche gleichzeitig verarbeiten, z. b. e-Mail-oder Webserver. LogonUser speichert die Anmelde Informationen für diesen Anmeldetyp nicht zwischen.
+Für Batchserver vorgesehen, bei denen Prozesse ohne direkten Eingriff im Auftrag eines Benutzers ausgeführt werden können. oder für Server mit höherer Leistung, die viele Klartextauthentifizierungsversuche gleichzeitig verarbeiten, z. B. E-Mail- oder Webserver. LogonUser speichert anmeldeinformationen für diesen Anmeldetyp nicht zwischen.
 
 </dd> <dt>
 
@@ -209,7 +209,7 @@ Gedacht für Batch Server, bei denen Prozesse im Auftrag eines Benutzers ohne di
 
 </dt> <dd>
 
-Gibt die Anmeldung eines Dienst Typs an. Für das angegebene Konto muss die Dienst Berechtigung aktiviert sein.
+Gibt eine Diensttypanmeldung an. Für das bereitgestellte Konto muss die Dienstberechtigung aktiviert sein.
 
 </dd> <dt>
 
@@ -220,7 +220,7 @@ Gibt die Anmeldung eines Dienst Typs an. Für das angegebene Konto muss die Dien
 
 </dt> <dd>
 
-Gibt eine Proxy-Typ-Anmeldung an.
+Gibt eine Anmeldung vom Proxytyp an.
 
 </dd> <dt>
 
@@ -231,73 +231,73 @@ Gibt eine Proxy-Typ-Anmeldung an.
 
 </dt> <dd>
 
-Dieser Anmeldetyp ist für die Gina-DLLs-Protokollierung bei Benutzern vorgesehen, die den Computer interaktiv verwenden. Dieser Anmeldetyp ermöglicht das Generieren eines eindeutigen Überwachungsdaten Satzes, der anzeigt, wann die Arbeitsstation entsperrt wurde.
+Dieser Anmeldetyp ist für die Protokollierung von GINA-DLLs für Benutzer vorgesehen, die den Computer interaktiv verwenden. Mit diesem Anmeldetyp kann ein eindeutiger Überwachungsdatensatz generiert werden, der zeigt, wann die Arbeitsstation entsperrt wurde.
 
 </dd> <dt>
 
 <span id="NetworkCleartext"></span><span id="networkcleartext"></span><span id="NETWORKCLEARTEXT"></span>
 
-<span id="NetworkCleartext"></span><span id="networkcleartext"></span><span id="NETWORKCLEARTEXT"></span>**Network cleartext** (8)
+<span id="NetworkCleartext"></span><span id="networkcleartext"></span><span id="NETWORKCLEARTEXT"></span>**NetworkCleartext** (8)
 
 
 </dt> <dd>
 
-Behält den Namen und das Kennwort in den Authentifizierungs Paketen bei und ermöglicht dem Server das Herstellen von Verbindungen mit anderen Netzwerkservern, während die Identität des Clients angenommen wird. Dadurch kann ein Server Klartext-Anmelde Informationen von einem Client akzeptieren, LogonUser aufrufen, überprüfen, ob der Benutzer über das Netzwerk auf das System zugreifen kann und trotzdem mit anderen Servern kommunizieren kann.
+Behält den Namen und das Kennwort in den Authentifizierungspaketen bei, sodass der Server verbindungen mit anderen Netzwerkservern herstellen kann, während die Identität des Clients angenommen wird. Dadurch kann ein Server Klartextanmeldeinformationen von einem Client akzeptieren, LogonUser aufrufen, überprüfen, ob der Benutzer über das Netzwerk auf das System zugreifen und weiterhin mit anderen Servern kommunizieren kann.
 
 </dd> <dt>
 
 <span id="NewCredentials"></span><span id="newcredentials"></span><span id="NEWCREDENTIALS"></span>
 
-<span id="NewCredentials"></span><span id="newcredentials"></span><span id="NEWCREDENTIALS"></span>**Neuanmelde** Informationen (9)
+<span id="NewCredentials"></span><span id="newcredentials"></span><span id="NEWCREDENTIALS"></span>**NewCredentials** (9)
 
 
 </dt> <dd>
 
-Ermöglicht dem Aufrufer das Klonen seines aktuellen Tokens und das Angeben neuer Anmelde Informationen für ausgehende Verbindungen. Die neue Anmelde Sitzung hat dieselbe lokale Identifizierung, verwendet jedoch andere Anmelde Informationen für andere Netzwerkverbindungen.
+Ermöglicht dem Aufrufer, sein aktuelles Token zu klonen und neue Anmeldeinformationen für ausgehende Verbindungen anzugeben. Die neue Anmeldesitzung verfügt über die gleiche lokale Identifizierung, verwendet jedoch unterschiedliche Anmeldeinformationen für andere Netzwerkverbindungen.
 
 </dd> <dt>
 
 <span id="RemoteInteractive"></span><span id="remoteinteractive"></span><span id="REMOTEINTERACTIVE"></span>
 
-<span id="RemoteInteractive"></span><span id="remoteinteractive"></span><span id="REMOTEINTERACTIVE"></span>**Remoteinteractive** (10)
+<span id="RemoteInteractive"></span><span id="remoteinteractive"></span><span id="REMOTEINTERACTIVE"></span>**RemoteInteractive** (10)
 
 
 </dt> <dd>
 
-Terminal Dienste-Sitzung, die sowohl Remote als auch interaktiv ist.
+Terminaldienstesitzung, die sowohl remote als auch interaktiv ist.
 
 </dd> <dt>
 
 <span id="CachedInteractive"></span><span id="cachedinteractive"></span><span id="CACHEDINTERACTIVE"></span>
 
-<span id="CachedInteractive"></span><span id="cachedinteractive"></span><span id="CACHEDINTERACTIVE"></span>**Cachedinteractive** (11)
+<span id="CachedInteractive"></span><span id="cachedinteractive"></span><span id="CACHEDINTERACTIVE"></span>**CachedInteractive** (11)
 
 
 </dt> <dd>
 
-Versuchen Sie zwischengespeicherte Anmelde Informationen ohne Zugriff auf das Netzwerk.
+Versuchen Sie, zwischengespeicherte Anmeldeinformationen ohne Zugriff auf das Netzwerk zu verwenden.
 
 </dd> <dt>
 
 <span id="CachedRemoteInteractive"></span><span id="cachedremoteinteractive"></span><span id="CACHEDREMOTEINTERACTIVE"></span>
 
-<span id="CachedRemoteInteractive"></span><span id="cachedremoteinteractive"></span><span id="CACHEDREMOTEINTERACTIVE"></span>**Cachedremuteinteractive** (12)
+<span id="CachedRemoteInteractive"></span><span id="cachedremoteinteractive"></span><span id="CACHEDREMOTEINTERACTIVE"></span>**CachedRemoteInteractive** (12)
 
 
 </dt> <dd>
 
-Identisch mit remoteinteractive. Diese wird für die interne Überwachung verwendet.
+Identisch mit RemoteInteractive. Dies wird für die interne Überwachung verwendet.
 
 </dd> <dt>
 
 <span id="CachedUnlock"></span><span id="cachedunlock"></span><span id="CACHEDUNLOCK"></span>
 
-<span id="CachedUnlock"></span><span id="cachedunlock"></span><span id="CACHEDUNLOCK"></span>**Cachedunlock** (13)
+<span id="CachedUnlock"></span><span id="cachedunlock"></span><span id="CACHEDUNLOCK"></span>**CachedUnlock** (13)
 
 
 </dt> <dd>
 
-Arbeitsstations Anmeldung.
+Anmeldung auf der Arbeitsstation.
 
 </dd> </dl>
 
@@ -306,53 +306,53 @@ Arbeitsstations Anmeldung.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **StartTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die Sitzung gestartet wurde.
+Zeitpunkt, zu dem die Sitzung gestartet wurde.
 
-Diese Eigenschaft wird von der [**Win32- \_ Sitzung**](win32-session.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ Session geerbt.**](win32-session.md)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Betriebsstatus und nicht betriebsbereiter Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. eine SMART-fähige Festplatte).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Spiegelung des Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -374,35 +374,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -416,28 +416,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -446,9 +446,9 @@ Wird **beendet ("wird angehalten** ")
 
 ## <a name="examples"></a>Beispiele
 
-Das PowerShell-Beispiel " [Auflisten von Anmelde Informationen](https://Gallery.TechNet.Microsoft.Com/scriptcenter/64cc7ab5-f1cd-460c-9d37-e6f989444de3) " gibt Informationen zu Anmelde Sitzungen zurück, die dem aktuell auf einem Computer angemeldeten Benutzer zugeordnet sind.
+Das [PowerShell-Beispiel](https://Gallery.TechNet.Microsoft.Com/scriptcenter/64cc7ab5-f1cd-460c-9d37-e6f989444de3) Zum Auflisten von Anmeldesitzungsinformationen gibt Informationen zu Anmeldesitzungen zurück, die dem aktuell bei einem Computer angemeldeten Benutzer zugeordnet sind.
 
-Das folgende PowerShell-Beispiel prüft, ob eine Remote Sitzung für einen angegebenen Benutzer geöffnet ist.
+Im folgenden PowerShell-Beispiel wird überprüft, ob die Remotesitzung für einen angegebenen Benutzer geöffnet ist.
 
 
 ```PowerShell
@@ -478,8 +478,8 @@ $servers = gci servers.txt
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -488,7 +488,7 @@ $servers = gci servers.txt
 
 <dl> <dt>
 
-[**Win32- \_ Sitzung**](win32-session.md)
+[**Win32-Sitzung \_**](win32-session.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

@@ -1,6 +1,6 @@
 ---
-title: Template (templatelisttype)-Element
-description: Eine Vorlage, die die Daten definiert, die in einem Ereignis enthalten sein sollen. | Template (templatelisttype)-Element
+title: template (TemplateListType)-Element
+description: Eine Vorlage, die die Daten definiert, die mit einem Ereignis enthalten sein müssen. | template (TemplateListType)-Element
 ms.assetid: 97560254-100c-4d2a-bf3f-ca0897ece6c2
 keywords:
 - Template-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: aeba50057fdec03bfea5a03ca164b4c3d8f29593
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9bccc77d13eb07bf771fa61ef6537ad9010e4d8975dbf77389d9a7722eb8b664
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106350641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005700"
 ---
-# <a name="template-templatelisttype-element"></a>Template (templatelisttype)-Element
+# <a name="template-templatelisttype-element"></a>template (TemplateListType)-Element
 
-Eine Vorlage, die die Daten definiert, die in einem Ereignis enthalten sein sollen.
+Eine Vorlage, die die Daten definiert, die mit einem Ereignis enthalten sein müssen.
 
 ``` syntax
 <xs:element name="template"
@@ -30,7 +30,7 @@ Eine Vorlage, die die Daten definiert, die in einem Ereignis enthalten sein soll
  />
 ```
 
-Das **Template** -Element wird durch den komplexen Typ " [**templatelisttype**](eventmanifestschema-templatelisttype-complextype.md) " definiert.
+Das **Vorlagenelement** wird durch den komplexen [**TemplateListType-Typ**](eventmanifestschema-templatelisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Template** -Element wird durch den komplexen Typ " [**templatelisttype**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Template** -Element wird durch den komplexen Typ " [**templatelisttype**](
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Vorlagen (ProviderType)**](eventmanifestschema-templates-providertype-element.md)
+[**templates (ProviderType)**](eventmanifestschema-templates-providertype-element.md)
 </dt> </dl>
 
  

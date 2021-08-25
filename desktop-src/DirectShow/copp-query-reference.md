@@ -1,136 +1,136 @@
 ---
-description: COPP-Abfrage Verweis
+description: COPP-Abfragereferenz
 ms.assetid: 11eb1443-857d-4516-a5cb-c3cc02a5eba4
-title: COPP-Abfrage Verweis
+title: COPP-Abfragereferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41de36f3cdcc37a38e2ebc53caa7b6b37c204d9d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 59d36cde152600faaa1dd567faac916bfa8281e2b2edb9464074fe34a58d5011
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119909660"
 ---
-# <a name="copp-query-reference"></a>COPP-Abfrage Verweis
+# <a name="copp-query-reference"></a>COPP-Abfragereferenz
 
-In diesem Abschnitt werden die Statusabfragen beschrieben, die vom Certified Output Protection Protocol (COPP) unterstützt werden. Für jede Abfrage wird die GUID, die die Abfrage definiert, zusammen mit den Eingabedaten und den Rückgabe Daten aufgelistet.
+In diesem Abschnitt werden die Statusabfragen beschrieben, die vom Certified Output Protection Protocol (COPP) unterstützt werden. Für jede Abfrage wird die GUID, die die Abfrage definiert, zusammen mit den Eingabe- und Rückgabedaten aufgeführt.
 
 
 
 | Abfrage                   | GUID                                     |
 |-------------------------|------------------------------------------|
-| Busdaten                | **DXVA- \_ coppquerybusdata**               |
-| Connectortyp          | **DXVA " \_ coppqueryconnector Type"**         |
-| Anzeigen von Daten            | **DXVA-" \_ coppquerydisplaydata"**           |
-| HDCP-Schlüsseldaten           | **DXVA-" \_ coppqueryhdcpkeydata"**           |
-| Globale Schutz Ebene | **DXVA- \_ coppqueryglobalschutzlevel** |
-| Lokale Schutz Ebene  | **DXVA- \_ coppquerylocalschutzlevel**  |
-| Schutztyp         | **DXVA-" \_ coppqueryschutztype"**        |
-| Signaling               | **DXVA- \_ coppquerysignalisierung**             |
+| Busdaten                | **DXVA \_ COPPQueryBusData**               |
+| Connectortyp          | **DXVA \_ COPPQueryConnectorType**         |
+| Anzeigen von Daten            | **DXVA \_ COPPQueryDisplayData**           |
+| HDCP-Schlüsseldaten           | **DXVA \_ COPPQueryHDCPKeyData**           |
+| Globale Schutzebene | **DXVA \_ COPPQueryGlobalProtectionLevel** |
+| Lokale Schutzebene  | **DXVA \_ COPPQueryLocalProtectionLevel**  |
+| Schutztyp         | **DXVA \_ COPPQueryProtectionType**        |
+| Signaling               | **DXVA \_ COPPQuerySignaling**             |
 
 
 
  
 
-Busdaten Abfrage
+Busdatenabfrage
 
-Gibt den Typ des e/a-Busses zurück, der vom Grafikadapter verwendet wird.
+Gibt den Typ des E/A-Bus zurück, der vom Grafikadapter verwendet wird.
 
--   **GUID**: DXVA \_ coppquerybusdata
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA-Struktur " \_ coppstatus Data**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) " zurück. Der Bustyp wird im **dwdata** -Member als Flag aus der [**COPP \_ BusType**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_bustype) -Enumeration zurückgegeben.
+-   **GUID:** DXVA \_ COPPQueryBusData
+-   **Eingabedaten:** Keine.
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-COPPStatusData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) zurück. Der Bustyp wird im **dwData-Member** als Flag von der [**COPP \_ BusType-Enumeration**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_bustype) zurückgegeben.
 
-Connector-typabfrage
+Connectortypabfrage
 
-Gibt den physischen Verbindungstyp zurück.
+Gibt den physischen Connectortyp zurück.
 
--   **GUID**: DXVA-" \_ coppqueryconnector Type"
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA-Struktur " \_ coppstatus Data**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) " zurück. Der connectiontyp wird im **dwdata** -Member als Flag aus der [**COPP \_ Stecker Type**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_connectortype) -Enumeration zurückgegeben.
+-   **GUID:** DXVA \_ COPPQueryConnectorType
+-   **Eingabedaten:** Keine.
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-COPPStatusData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) zurück. Der Connectortyp wird im **dwData-Member** als Flag von der [**COPP \_ ConnectorType-Enumeration**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_connectortype) zurückgegeben.
 
 Datenabfrage anzeigen
 
 Gibt eine Beschreibung des Videosignals zurück, das über den Connector übertragen wird.
 
-Das über den Connector übertragene Videosignal weist nicht notwendigerweise dasselbe Format wie der Desktop Anzeigemodus auf. Der Desktop Anzeigemodus kann z. b. 1024 x 768 Pixel um 85 Hz betragen, während der Connector ein S-Video-Connector sein kann, der ein Video Signal mit 720x480 Pixel, 60/1.01 Hz mit Zeilen Sprung überträgt. In diesem Fall würde der Treiber die Auflösung des S-Video Signals und nicht die Desktop Auflösung zurückgeben.
+Das Videosignal, das über den Connector übertragen wird, hat nicht unbedingt das gleiche Format wie der Desktopanzeigemodus. Der Desktopanzeigemodus kann beispielsweise 1024 x 768 Pixel bei 85 Hz betragen, während der Connector ein S-Video-Connector sein kann, der ein Videosignal mit 720 x 480 Pixeln und 60/1,01 Hz-Interlacing überträgt. In diesem Fall gibt der Treiber die Auflösung des S-Video-Signals zurück, nicht die Desktopauflösung.
 
--   **GUID**: DXVA \_ coppquerydisplaydata
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA-Struktur von " \_ coppstatus-displayData**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdisplaydata) " zurück.
+-   **GUID:** DXVA \_ COPPQueryDisplayData
+-   **Eingabedaten:** Keine.
+-   **Rückgabedaten:** Gibt eine [**DXVA \_ COPPStatusDisplayData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdisplaydata) zurück.
 
-HDCP-Schlüsseldaten Abfrage
+HDCP-Schlüsseldatenabfrage
 
-Gibt den HDCP-Schlüsselauswahl Vektor (B-KSV) des Geräts zurück.
+Gibt den HDCP-Schlüsselauswahlvektor (B-KSV) des Geräts zurück.
 
-Der KSV ist ein Bezeichner, der dem Gerätehersteller zur Verfügung gestellt wird und im HDCP-Authentifizierungs-und-Setup Prozess verwendet wird. Die Anwendung sollte diesen Wert mit der Liste der gesperrten ksvs überprüfen. Der Mechanismus zum Abrufen der KSV-Sperr Liste liegt außerhalb des Gültigkeits Bereichs des COPP-Protokolls. Weitere Informationen finden Sie in der HDCP-Spezifikation.
+Die KSV ist ein Bezeichner, der dem Gerätehersteller bereitgestellt wird und bei der HDCP-Authentifizierung und -Einrichtung verwendet wird. Die Anwendung sollte diesen Wert mit der Liste der gesperrten KSVs überprüfen. Der Mechanismus zum Abrufen der KSV-Sperrliste liegt außerhalb des Bereichs des COPP-Protokolls. Weitere Informationen finden Sie in der HDCP-Spezifikation.
 
-Diese Abfrage bestimmt auch, ob das verbundene HDCP-Gerät ein Monitor oder ein HDCP-Wiederholungs Modul ist. Die Anwendung sollte geschützte Inhalte nicht wiedergeben, wenn das HDCP-Gerät ein HDCP-Repeater ist, da diese nicht von COPP unterstützt werden.
+Diese Abfrage bestimmt auch, ob das verbundene HDCP-Gerät ein Monitor oder ein HDCP-Repeater ist. Die Anwendung sollte keine geschützten Inhalte wieder geben, wenn das HDCP-Gerät ein HDCP-Repeater ist, da diese von COPP nicht unterstützt werden.
 
--   **GUID**: DXVA \_ coppqueryhdcpkeydata
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA- \_ coppstatuushdcpkeydata**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatushdcpkeydata) -Struktur zurück.
+-   **GUID:** DXVA \_ COPPQueryHDCPKeyData
+-   **Eingabedaten:** Keine.
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-STRUKTUR COPPStatusHDCPKeyData**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatushdcpkeydata) zurück.
 
-Abfrage der globalen Schutz Ebene
+Abfrage auf globaler Schutzebene
 
-Gibt die globale Schutz Ebene für einen angegebenen Schutzmechanismus zurück.
+Gibt die globale Schutzebene für einen angegebenen Schutzmechanismus zurück.
 
-Die globale Schutz Ebene ist die Schutz Ebene, die zurzeit auf den Connector angewendet wird, unabhängig davon, wie der Grafiktreiber angewiesen wurde, den Schutz anzuwenden. Beispielsweise kann eine Anwendung die ACP-Schutz Ebene durch Aufrufen der **changedisplaysettingsex** -Funktion festlegen. In diesem Fall würde die globale Schutz Ebene diese Einstellung widerspiegeln, auch wenn Sie nicht über COPP angefordert wurde.
+Die globale Schutzebene ist die Schutzebene, die derzeit auf den Connector angewendet wird, unabhängig davon, wie der Grafiktreiber angewiesen wurde, den Schutz anzuwenden. Beispielsweise kann eine Anwendung die ACP-Schutzebene festlegen, indem sie die **ChangeDisplaySettingsEx-Funktion** aufruft. In diesem Fall würde die globale Schutzebene diese Einstellung widerspiegeln, obwohl sie nicht über COPP angefordert wurde.
 
--   **GUID**: DXVA \_ coppqueryglobalschutzlevel
--   **Eingabedaten**: der abzufragende Schutzmechanismus, der als 32-Bit-Ganzzahl angegeben wird. Siehe [COPP-Schutztyp-Flags](copp-protection-type-flags.md).
--   **Return Data**: gibt eine [**DXVA-Struktur " \_ coppstatus Data**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) " zurück. Die aktuelle Schutz Ebene wird im **dwdata** -Member zurückgegeben. Die Bedeutung dieses Werts hängt von dem abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert des **dwdata** -Members ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle dargestellt.
+-   **GUID:** DXVA \_ COPPQueryGlobalProtectionLevel
+-   **Eingabedaten:** Der zu abfragende Schutzmechanismus, angegeben als 32-Bit-Ganzzahl. Weitere Informationen [finden Sie unter COPP-Schutztypflags](copp-protection-type-flags.md).
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-COPPStatusData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) zurück. Die aktuelle Schutzebene wird im **dwData-Element** zurückgegeben. Die Bedeutung dieses Werts hängt vom abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert des **dwData-Mitglieds** ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle gezeigt.
 
     | Schutzmechanismus | Enumeration                                                           |
     |----------------------|-----------------------------------------------------------------------|
-    | ACP                  | [**COPP \_ -ACP- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_acp_protection_level)     |
-    | CGMS-A               | [**COPP- \_ cgmsa- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_cgmsa_protection_level) |
-    | HDCP                 | [**COPP- \_ HDCP- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_hdcp_protection_level)   |
+    | ACP                  | [**COPP \_ \_ \_ ACP-Schutzebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_acp_protection_level)     |
+    | CGMS-A               | [**\_COPP-CGMSA-Schutzebene \_ \_**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_cgmsa_protection_level) |
+    | Hdcp                 | [**COPP \_ \_ HDCP-Schutzebene \_**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_hdcp_protection_level)   |
 
     
 
      
 
-Abfrage der lokalen Schutz Ebene
+Abfrage auf lokaler Schutzebene
 
-Gibt die lokale Schutz Ebene für einen angegebenen Schutzmechanismus zurück.
+Gibt die lokale Schutzebene für einen angegebenen Schutzmechanismus zurück.
 
-Die lokale Schutz Ebene ist die Schutz Ebene, die durch die aktuelle COPP-Sitzung angefordert wurde. Der Treiber kann eine höhere Schutz Ebene festlegen.
+Die lokale Schutzebene ist die Schutzebene, die über die aktuelle COPP-Sitzung angefordert wurde. Der Treiber kann eine höhere Schutzebene festlegen.
 
--   **GUID**: DXVA \_ coppquerylocalschutzlevel
--   **Eingabedaten**: der zu Abfrage Ende Schutzmechanismus als 32-Bit-Ganzzahl. Siehe [COPP-Schutztyp-Flags](copp-protection-type-flags.md).
--   **Return Data**: gibt eine [**DXVA-Struktur " \_ coppstatus Data**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) " zurück. Die aktuelle Schutz Ebene wird im **dwdata** -Member zurückgegeben. Die Bedeutung dieses Werts hängt von dem abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert des **dwdata** -Members ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle dargestellt.
+-   **GUID:** DXVA \_ COPPQueryLocalProtectionLevel
+-   **Eingabedaten:** Der abfragte Schutzmechanismus als 32-Bit-Ganzzahl. Weitere Informationen [finden Sie unter COPP-Schutztypflags](copp-protection-type-flags.md).
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-COPPStatusData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) zurück. Die aktuelle Schutzebene wird im **dwData-Element** zurückgegeben. Die Bedeutung dieses Werts hängt vom abgefragten Schutzmechanismus ab. Für jeden Schutzmechanismus ist der Wert des **dwData-Mitglieds** ein Flag aus einer anderen Enumeration, wie in der folgenden Tabelle gezeigt.
 
     | Schutzmechanismus | Enumeration                                                           |
     |----------------------|-----------------------------------------------------------------------|
-    | ACP                  | [**COPP \_ -ACP- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_acp_protection_level)     |
-    | CGMS-A               | [**COPP- \_ cgmsa- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_cgmsa_protection_level) |
-    | HDCP                 | [**COPP- \_ HDCP- \_ Schutz \_ Ebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_hdcp_protection_level)   |
+    | ACP                  | [**COPP \_ \_ \_ ACP-Schutzebene**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_acp_protection_level)     |
+    | CGMS-A               | [**\_COPP-CGMSA-Schutzebene \_ \_**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_cgmsa_protection_level) |
+    | Hdcp                 | [**COPP \_ \_ HDCP-Schutzebene \_**](/windows/desktop/api/dxva9typ/ne-dxva9typ-copp_hdcp_protection_level)   |
 
     
 
      
 
-Schutztyp Abfrage
+Schutztypabfrage
 
 Gibt die Schutzmechanismen zurück, die für den Connector verfügbar sind.
 
--   **GUID**: DXVA " \_ coppqueryschutztype"
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA-Struktur " \_ coppstatus Data**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) " zurück. Die Schutzmechanismen werden im **dwdata** -Member als eine Kombination aus null oder mehr Flags zurückgegeben. Siehe [COPP-Schutztyp-Flags](copp-protection-type-flags.md). Wenn mehr als ein Schutzmechanismus verfügbar ist, werden die Flags mit einem bitweisen **or** kombiniert.
+-   **GUID:** DXVA \_ COPPQueryProtectionType
+-   **Eingabedaten:** Keine.
+-   **Rückgabedaten:** Gibt eine [**\_ DXVA-COPPStatusData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatusdata) zurück. Die Schutzmechanismen werden im **dwData-Element** als Kombination aus 0 (null) oder mehr Flags zurückgegeben. Weitere Informationen [finden Sie unter COPP-Schutztypflags](copp-protection-type-flags.md). Wenn mehr als ein Schutzmechanismus verfügbar ist, werden die Flags mit einem bitweisen **OR** kombiniert.
 
-Signalisierungs Abfrage
+Signalisierungsabfrage
 
-Gibt eine Liste mit allen Schutzstandards zurück, die vom Treiber unterstützt werden, dem derzeit aktiven Standard und dem aktuellen Seitenverhältnis oder anderen Signalisierungs Daten.
+Gibt eine Liste aller Schutzstandards zurück, die vom Treiber unterstützt werden, den derzeit aktiven Standard und das aktuelle Seitenverhältnis oder andere Signaldaten.
 
--   **GUID**: DXVA- \_ coppquerysignalisierung
--   **Eingabedaten**: keine.
--   **Return Data**: gibt eine [**DXVA-Struktur von " \_ coppstatuussignalingcmddata**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatussignalingcmddata) " zurück.
+-   **GUID:** DXVA \_ COPPQuerySignaling
+-   **Eingabedaten:** Keine.
+-   **Daten zurückgeben:** Gibt eine [**\_ DXVA-COPPStatusSignalingCmdData-Struktur**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxva_coppstatussignalingcmddata) zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Certified Output Protection-Protokolls (COPP)](using-certified-output-protection-protocol--copp.md)
+[Verwenden von Certified Output Protection Protocol (COPP)](using-certified-output-protection-protocol--copp.md)
 </dt> </dl>
 
  

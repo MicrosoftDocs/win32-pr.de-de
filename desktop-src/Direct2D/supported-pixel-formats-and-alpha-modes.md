@@ -1,77 +1,77 @@
 ---
 title: Unterstützte Pixelformate und Alpha-Modi
-description: Beschreibt die Pixel Formate und Alpha Modi, die von den einzelnen renderzieltypen unterstützt werden.
+description: Beschreibt die Pixelformate und Alphamodi, die von den einzelnen Renderzieltypen unterstützt werden.
 ms.assetid: 09b1f9c6-1780-4733-ac22-9e8c21466b67
 keywords:
-- Direct2D, Pixel Formate
-- Direct2D, Alpha-Modi
+- Direct2D,Pixelformate
+- Direct2D, Alphamodi
 ms.topic: article
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9a3777cac7cc0a258002d1475fb7b1c6dd2546ca
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: d5b260741cae6aebb447a11692f03dad6e35498a19f33221aa77ac8a8507144a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104102538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917160"
 ---
 # <a name="supported-pixel-formats-and-alpha-modes"></a>Unterstützte Pixelformate und Alpha-Modi
 
-In diesem Thema werden die Pixel Formate und Alpha Modi beschrieben, die von den verschiedenen Teilen von Direct2D unterstützt werden, einschließlich der einzelnen renderzieltypen, [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap)und [**ID2D1ImageSource**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource). Der Abschnitt ist wie folgt gegliedert.
+In diesem Thema werden die Pixelformate und Alphamodi beschrieben, die von den verschiedenen Teilen von Direct2D unterstützt werden, einschließlich der einzelnen Renderzieltypen, [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap)und [**ID2D1ImageSource.**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource) Der Abschnitt ist wie folgt gegliedert.
 
--   [Unterstützte YUV-Formate für die DXGI-Image Quelle](#supported-yuv-formats-for-dxgi-image-source)
--   [Angeben eines Pixel Formats für ein Renderziel](#specifying-a-pixel-format-for-a-render-target)
+-   [Unterstützte YUV-Formate für DXGI-Bildquelle](#supported-yuv-formats-for-dxgi-image-source)
+-   [Angeben eines Pixelformats für ein Renderziel](#specifying-a-pixel-format-for-a-render-target)
 -   [Unterstützte Formate für ID2D1HwndRenderTarget](#supported-formats-for-id2d1hwndrendertarget)
 -   [Unterstützte Formate für ID2D1DeviceContext](#supported-formats-for-id2d1devicecontext)
 -   [Unterstützte Formate für kompatibles Renderziel](#supported-formats-for-compatible-render-target)
--   [Unterstützte Formate für das DXGI-Oberflächen Renderziel](#supported-formats-for-dxgi-surface-render-target)
--   [Unterstützte Formate für das Renderziel der WIC-Bitmap](#supported-formats-for-wic-bitmap-render-target)
+-   [Unterstützte Formate für DXGI Surface Render Target](#supported-formats-for-dxgi-surface-render-target)
+-   [Unterstützte Formate für das WIC-Bitmaprenderingziel](#supported-formats-for-wic-bitmap-render-target)
 -   [Unterstützte Formate für ID2D1DCRenderTarget](#supported-formats-for-id2d1dcrendertarget)
--   [Angeben eines Pixel Formats für ein ID2D1Bitmap](#specifying-a-pixel-format-for-an-id2d1bitmap)
+-   [Angeben eines Pixelformats für eine ID2D1Bitmap](#specifying-a-pixel-format-for-an-id2d1bitmap)
     -   [Unterstützte WIC-Formate](#supported-wic-formats)
 -   [Verwenden eines nicht unterstützten Formats](#using-an-unsupported-format)
--   [Informationen zu Alpha-Modi](#about-alpha-modes)
-    -   [Informationen zu vormultiplizierten und geraden Alpha Modi](#about-premultiplied-and-straight-alpha-modes)
-    -   [Die Unterschiede zwischen einem geraden und einem prämultiplizierten Alpha](#the-differences-between-straight-and-premultiplied-alpha)
-    -   [Alpha Modus für Renderziele](#alpha-mode-for-render-targets)
-    -   [ClearType-und Alpha-Modi](#cleartype-and-alpha-modes)
+-   [Informationen zu Alphamodi](#about-alpha-modes)
+    -   [Informationen zu prämultipliierten und geraden Alphamodi](#about-premultiplied-and-straight-alpha-modes)
+    -   [Unterschiede zwischen geradem und prämultipliiertem Alpha](#the-differences-between-straight-and-premultiplied-alpha)
+    -   [Alphamodus für Renderziele](#alpha-mode-for-render-targets)
+    -   [ClearType- und Alphamodi](#cleartype-and-alpha-modes)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="supported-yuv-formats-for-dxgi-image-source"></a>Unterstützte YUV-Formate für die DXGI-Image Quelle
+## <a name="supported-yuv-formats-for-dxgi-image-source"></a>Unterstützte YUV-Formate für DXGI-Bildquelle
 
-Bei einem [**ID2D1ImageSource**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource) handelt es sich um einen abstrahierten Anbieter von Pixeln. Sie kann entweder von WIC ("[**kreateimagesourcefromwic**](/windows/desktop/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromwic(iwicbitmapsource_id2d1imagesourcefromwic)) " oder " [**idxgisurface**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) " ("[**kreateimagesourcefromdxgi**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromdxgi)") aus instanziiert werden.
+Eine [**ID2D1ImageSource ist**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource) ein abstrahiertes Pixelanbieter. Sie kann entweder von WIC ([**CreateImageSourceFromWic oder**](/windows/desktop/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromwic(iwicbitmapsource_id2d1imagesourcefromwic)) [**idXGISurface**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) ([**CreateImageSourceFromDxgi ) instanziiert werden.**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromdxgi)
 
-[**ID2D1ImageSourceFromWic**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesourcefromwic) unterstützt denselben Satz von Pixel Formaten und Alpha Modi wie [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap).
+[**ID2D1ImageSourceFromWic unterstützt**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesourcefromwic) den gleichen Satz von Pixelformaten und Alphamodi wie [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap).
 
-Zusätzlich zu den oben genannten unterstützt ein [**ID2D1ImageSource**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource) , das von [**idxgisurface**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) instanziiert wird, auch einige YUV-Pixel Formate, einschließlich planaren Daten, die in mehrere Oberflächen aufgeteilt sind. Weitere Informationen zu den Anforderungen für die einzelnen Pixel Formate finden Sie unter " [**kreateimagesourcefromdxgi**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromdxgi) ".
+Darüber hinaus unterstützt eine [**ID2D1ImageSource,**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1imagesource) die von [**IDXGISurface**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) instanziiert wird, auch einige YUV-Pixelformate, einschließlich planarer Daten, die in mehrere Oberflächen aufgeteilt sind. Weitere Informationen zu den Anforderungen für jedes Pixelformat finden Sie unter [**CreateImageSourceFromDxgi.**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext2-createimagesourcefromdxgi)
 
 
 
 | Format                    |
 |---------------------------|
-| DXGI- \_ Format \_ ayuv        |
-| DXGI- \_ Format \_ NV12        |
-| DXGI- \_ Format \_ im YUY2        |
-| DXGI- \_ Format \_ P208        |
-| DXGI- \_ Format \_ V208        |
-| DXGI- \_ Format \_ v408        |
-| DXGI- \_ Format \_ R8 \_ unorm   |
-| DXGI- \_ Format \_ R8G8 \_ unorm |
+| DXGI \_ FORMAT \_ AYUV        |
+| DXGI \_ FORMAT \_ NV12        |
+| \_DXGI-FORMAT \_ YUY2        |
+| \_DXGI-FORMAT \_ P208        |
+| DXGI \_ FORMAT \_ V208        |
+| DXGI \_ FORMAT \_ V408        |
+| DXGI \_ FORMAT \_ R8 \_ UNORM   |
+| DXGI \_ FORMAT \_ R8G8 \_ UNORM |
 
 
 
- 
+ 
 
-## <a name="specifying-a-pixel-format-for-a-render-target"></a>Angeben eines Pixel Formats für ein Renderziel
+## <a name="specifying-a-pixel-format-for-a-render-target"></a>Angeben eines Pixelformats für ein Renderziel
 
-Wenn Sie ein Renderziel erstellen, müssen Sie das zugehörige Pixel Format angeben. Um das Pixel Format anzugeben, verwenden Sie eine [**D2D1 \_ Pixel \_ Format**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) -Struktur, um den **Pixel Format** -Member einer [**D2D1- \_ \_ Renderziel- \_ Eigenschaften**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) Struktur festzulegen. Anschließend übergeben Sie diese Struktur an die entsprechende Create-Methode, wie z. b. [**ID2D1Factory:: anatehwndrendertarget**](/previous-versions/windows/desktop/legacy/dd371275(v=vs.85)).
+Wenn Sie ein Renderziel erstellen, müssen Sie dessen Pixelformat angeben. Um das Pixelformat anzugeben, verwenden Sie eine [**D2D1 \_ PIXEL \_ FORMAT-Struktur,**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) um den **pixelFormat-Member** einer [**D2D1 \_ RENDER TARGET \_ \_ PROPERTIES-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) festzulegen. Anschließend übergeben Sie diese Struktur an die entsprechende Create-Methode, z.B. [**ID2D1Factory::CreateHwndRenderTarget**](/previous-versions/windows/desktop/legacy/dd371275(v=vs.85)).
 
-Die Struktur des [**D2D1- \_ Pixel \_ Formats**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) weist zwei Felder auf:
+Die [**Struktur D2D1 \_ PIXEL \_ FORMAT**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) verfügt über zwei Felder:
 
--   **Format**, ein [DXGI- \_ Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) Wert, der die Größe und Anordnung von Kanälen in jedem Pixel beschreibt, und
--   **Alpha**, ein [**D2D1- \_ alpha \_**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) -Moduswert, der beschreibt, wie Alpha Informationen interpretiert werden.
+-   **format**, ein [DXGI \_ FORMAT-Wert,](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) der die Größe und Anordnung von Kanälen in jedem Pixel beschreibt, und
+-   **alpha**, ein [**D2D1 \_ ALPHA \_ MODE-Wert,**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) der beschreibt, wie Alphainformationen interpretiert werden.
 
-Im folgenden Beispiel wird eine [**D2D1 \_ Pixel- \_ Format**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) Struktur erstellt und verwendet, um das Pixel Format und den Alpha Modus eines [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)anzugeben.
+Im folgenden Beispiel wird eine [**D2D1 \_ PIXEL \_ FORMAT-Struktur**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format) erstellt und verwendet, um das Pixelformat und den Alphamodus einer [**ID2D1HwndRenderTarget anzugeben.**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)
 
 
 ```C++
@@ -104,292 +104,292 @@ hr = m_pD2DFactory->CreateHwndRenderTarget(
 
 
 
-Verschiedene Renderziele unterstützen verschiedene Kombinationen aus Format und Alpha Modus. In den folgenden Abschnitten werden die von jedem Renderziel unterstützten Formate und Alpha Kombinationen aufgelistet.
+Verschiedene Renderziele unterstützen unterschiedliche Format- und Alphamoduskombinationen. In den folgenden Abschnitten werden die Format- und Alphakombinationen aufgeführt, die von den einzelnen Renderziel unterstützt werden.
 
 ## <a name="supported-formats-for-id2d1hwndrendertarget"></a>Unterstützte Formate für ID2D1HwndRenderTarget
 
-Die unterstützten Formate für ein [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) sind davon abhängig, ob es mithilfe von Hardware oder Software gerendert wird oder ob Direct2D standardmäßig automatisch den Renderingmodus behandelt.
+Die unterstützten Formate für [**ein ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) hängen davon ab, ob es mithilfe von Hardware oder Software gerendert wird oder ob Direct2D den Renderingmodus standardmäßig automatisch behandelt.
 
 > [!Note]  
-> Es wird empfohlen, dass Sie das [**DXGI- \_ Format \_ B8G8R8A8 \_ unorm**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) als Pixel Format verwenden, um die Leistung zu verbessern. Dies ist besonders hilfreich für softwarerenderziele. BGRA-Format Ziele erzielen eine bessere Leistung als RGBA-Formate.
+> Es wird empfohlen, [**DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) als Pixelformat zu verwenden, um die Leistung zu verbessern. Dies ist besonders hilfreich für Softwarerenderingziele. BGRA-Formatziele sind besser als RGBA-Formate.
 
- 
+ 
 
-Wenn Sie ein [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)erstellen, verwenden Sie die [**D2D1 \_ \_ Renderziel \_ Eigenschaften**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) -Struktur, um Renderingoptionen anzugeben. Die Optionen umfassen das Pixel Format, wie im vorherigen Abschnitt erwähnt. Mit dem type-Feld dieser Struktur können Sie angeben, ob das Renderziel in Hardware oder Software gerendert wird oder ob Direct2D den Renderingmodus automatisch bestimmen soll.
+Wenn Sie eine [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)erstellen, verwenden Sie die [**D2D1 \_ RENDER TARGET \_ \_ PROPERTIES-Struktur,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) um Renderingoptionen anzugeben. Die Optionen umfassen das Pixelformat, wie im vorherigen Abschnitt erwähnt. Mit dem Typfeld dieser Struktur können Sie angeben, ob das Renderziel auf Hardware oder Software gerendert wird oder ob Direct2D den Renderingmodus automatisch bestimmen soll.
 
-Um Direct2D zu ermöglichen, festzustellen, ob das Renderziel Hardware-oder Software Rendering verwendet, verwenden Sie die [**Standardeinstellung D2D1 \_ \_ renderzieltyp \_ \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) .
+Um Direct2D zu aktivieren, um zu bestimmen, ob das Renderziel Hardware- oder Softwarerendering verwendet, verwenden Sie die [**Einstellung D2D1 \_ RENDER TARGET TYPE \_ \_ \_ DEFAULT.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type)
 
-In der folgenden Tabelle werden die unterstützten Formate für [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) -Objekte aufgelistet, die mit der [**Standardeinstellung D2D1- \_ \_ renderzieltyp \_ \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) erstellt werden.
+In der folgenden Tabelle sind die unterstützten Formate für [**ID2D1HwndRenderTarget-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) aufgeführt, die mithilfe der [**Einstellung D2D1 \_ RENDER TARGET TYPE DEFAULT \_ \_ \_ erstellt**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) werden.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ VORMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ IGNORIEREN        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHAMODUS \_ UNBEKANNT       |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHA-MODUS \_ VORMULTIPLIED |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHA-MODUS \_ IGNORIEREN        |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHAMODUS \_ UNBEKANNT       |
 
 
 
- 
+ 
 
-Wenn Sie erzwingen möchten, dass ein Renderziel das Hardware Rendering verwendet, verwenden Sie die [**Hardware Einstellung D2D1 \_ Rendering \_ Target \_ Type \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) . In der folgenden Tabelle sind die unterstützten Formate für [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) -Objekte aufgeführt, die das Hardware Rendering explizit verwenden.
+Um zu erzwingen, dass ein Renderziel Hardwarerendering verwendet, verwenden Sie die [**HARDWAREeinstellung D2D1 \_ RENDER TARGET TYPE \_ \_ \_ HARDWARE.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) In der folgenden Tabelle sind die unterstützten Formate für [**ID2D1HwndRenderTarget-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) aufgeführt, die explizit Hardwarerendering verwenden.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ VORMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ IGNORIEREN        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ \_ ALPHAMODUS \_ UNBEKANNT       |
+| DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ VORMULTIPLIED |
+| DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ \_ ALPHA-MODUS \_ IGNORIEREN        |
+| DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ \_ ALPHAMODUS \_ UNBEKANNT       |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHA-MODUS \_ VORMULTIPLIED |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHA-MODUS \_ IGNORIEREN        |
+| DXGI \_ FORMAT \_ UNKNOWN         | D2D1 \_ \_ ALPHAMODUS \_ UNBEKANNT       |
 
 
 
- 
+ 
 
-Wenn Sie erzwingen möchten, dass ein Renderziel das Software Rendering verwendet, verwenden Sie die [**Software Einstellung D2D1 \_ \_ renderzieltyp \_ \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) . In der folgenden Tabelle sind die unterstützten Formate für [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) -Objekte aufgeführt, die das Software Rendering explizit verwenden.
+Um zu erzwingen, dass ein Renderziel Softwarerendering verwendet, verwenden Sie die [**Einstellung D2D1 \_ RENDER TARGET TYPE \_ \_ \_ SOFTWARE.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_render_target_type) In der folgenden Tabelle sind die unterstützten Formate für [**ID2D1HwndRenderTarget-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) aufgeführt, die explizit Softwarerendering verwenden.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
 
 
 
- 
+ 
 
-Unabhängig davon, ob die [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) Hardware beschleunigt ist, verwendet das [DXGI-Format \_ \_ unbekanntes](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) Format B8G8R8A8 standardmäßig das [DXGI \_ \_](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) -Format, und der Modus " [**\_ \_ \_ unbekannter**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) Alpha Modus im D2D1 Alpha Modus" verwendet standardmäßig den **D2D1 \_ alpha \_ Modus \_** .
+Unabhängig davon, ob [**id2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) hardwarebeschleunigt ist, verwendet das [DXGI \_ FORMAT \_ UNKNOWN-Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) standardmäßig [DXGI \_ FORMAT \_ B8G8R8A8,](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) und der [**D2D1 \_ ALPHA MODE \_ \_ UNKNOWN**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) Alpha-Modus verwendet standardmäßig **D2D1 \_ ALPHA MODE \_ \_ IGNORE.**
 
 ## <a name="supported-formats-for-id2d1devicecontext"></a>Unterstützte Formate für ID2D1DeviceContext
 
-Ab Windows 8 nutzt der [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) mehr der Direct3D-High- [**Color-Formate**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) , wie z. b.:
+Ab Windows 8 nutzt der [**Gerätekontext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) mehr [**direct3D-Formate**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) mit hoher Farbe, z. B.:
 
--   DXGI- \_ Format \_ B8G8R8A8 \_ unorm \_ sRGB
--   DXGI- \_ Format \_ R8G8B8A8 \_ unorm \_ sRGB
--   DXGI- \_ Format \_ R16G16B16A16 \_ unorm
--   DXGI- \_ Format \_ R16G16B16A16 \_ float
--   DXGI- \_ Format \_ R32G32B32A32 \_ float
+-   \_DXGI-FORMAT \_ B8G8R8A8 \_ UNORM \_ SRGB
+-   \_DXGI-FORMAT \_ R8G8B8A8 \_ UNORM \_ SRGB
+-   \_DXGI-FORMAT \_ R16G16B16A16 \_ UNORM
+-   DXGI \_ FORMAT \_ R16G16B16A16 \_ FLOAT
+-   \_DXGI-FORMAT \_ R32G32B32A32 \_ FLOAT
 
-Verwenden Sie die [**ID2D1DeviceContext:: isdxgiformatsupported**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-isdxgiformatsupported) -Methode, um festzustellen, ob ein Format in einem bestimmten Gerätekontext funktioniert. Diese Formate können auch in einem [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)funktionieren.
+Verwenden Sie die [**ID2D1DeviceContext::IsDxgiFormatSupported-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-isdxgiformatsupported) um festzustellen, ob ein Format in einem bestimmten Gerätekontext funktioniert. Diese Formate können auch für eine [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget)funktionieren.
 
-Diese Formate sind zusätzlich zu den von der [**ID2D1HwndRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) -Schnittstelle in Windows 7 unterstützten Formaten. Weitere Informationen finden Sie unter [Geräte und Geräte Kontexte](devices-and-device-contexts.md) .
+Diese Formate werden zusätzlich zu den Formaten unterstützt, die von der [**ID2D1HwndRenderTarget-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1hwndrendertarget) in Windows 7 unterstützt werden. Weitere Informationen finden Sie unter [Geräte und Gerätekontexte.](devices-and-device-contexts.md)
 
 ## <a name="supported-formats-for-compatible-render-target"></a>Unterstützte Formate für kompatibles Renderziel
 
-Ein kompatibles Renderziel (ein [**ID2D1BitmapRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmaprendertarget) , das von einer der [**ID2D1RenderTarget:: foratecompatiblerendertarget**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget)) -Methoden erstellt wird) erbt die unterstützten Formate und Alpha Modi des Renderziels, von dem es erstellt wurde. Ein kompatibles Renderziel unterstützt auch die folgenden Kombinationen aus Format und Alpha Modus, unabhängig davon, was das übergeordnete Element unterstützt
+Ein kompatibles Renderziel (ein [**ID2D1BitmapRenderTarget,**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmaprendertarget) das von einer der [**ID2D1RenderTarget::CreateCompatibleRenderTarget-Methoden**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget)) erstellt wird) erbt die unterstützten Formate und Alphamodi des Renderziels, das es erstellt hat. Ein kompatibles Renderziel unterstützt auch die folgenden Format- und Alphamoduskombinationen, unabhängig davon, was das übergeordnete Element unterstützt.
 
 
 
-| Format                  | Alpha-Modus                       |
+| Format                  | Alphamodus                       |
 |-------------------------|----------------------------------|
-| DXGI- \_ Format \_ a8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ a8 \_ unorm | D2D1 \_ alpha \_ Modus \_ direkt      |
-| DXGI- \_ Format \_ unbekannt   | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| \_DXGI-FORMAT \_ A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ STRAIGHT      |
+| \_DXGI-FORMAT \_ UNBEKANNT   | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
 
 
 
- 
+ 
 
-Im [DXGI \_ \_](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) -Format "unbekanntes Format" wird standardmäßig das übergeordnete renderzielformat verwendet, und der D2D1-Alpha Modus " [**\_ \_ \_ unbekannter**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) Alpha Modus" verwendet standardmäßig den **D2D1 \_ alpha- \_ Modus \_** .
+Das [DXGI \_ FORMAT \_ UNKNOWN-Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) verwendet standardmäßig das übergeordnete Renderzielformat, und im [**Modus D2D1 ALPHA MODE \_ \_ \_ UNKNOWN**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) alpha wird standardmäßig **D2D1 \_ ALPHA MODE \_ \_ PREMULTIPLIED verwendet.**
 
-## <a name="supported-formats-for-dxgi-surface-render-target"></a>Unterstützte Formate für das DXGI-Oberflächen Renderziel
+## <a name="supported-formats-for-dxgi-surface-render-target"></a>Unterstützte Formate für DXGI Surface Render Target
 
-Ein DXGI-Renderziel ist ein [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) -Wert, der von einer der [**ID2D1Factory:: erendertarget**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget)) -Methoden erstellt wird. Es unterstützt die folgenden Kombinationen aus Format und Alpha Modus.
+Ein DXGI-Renderziel ist ein [**ID2D1RenderTarget,**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) das von einer der [**ID2D1Factory::CreateDxgiSurfaceRenderTarget-Methoden**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createdxgisurfacerendertarget(idxgisurface_constd2d1_render_target_properties__id2d1rendertarget)) erstellt wird. Es unterstützt die folgenden Format- und Alphamoduskombinationen.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus \_ direkt      |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ ignorieren        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA \_ MODE \_ STRAIGHT      |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
 
 
 
- 
+ 
 
 > [!Note]  
-> Das Format muss mit dem Format der DXGI-Oberfläche identisch sein, mit der das Renderziel der DXGI-Oberfläche gezeichnet wird.
+> Das Format muss mit dem Format der DXGI-Oberfläche übereinstimmen, auf die die DXGI-Oberfläche das Renderziel zeichnet.
 
- 
+ 
 
-Das Format " [ \_ \_ unbekanntes DXGI-Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) " verwendet standardmäßig das Format der DXGI-Oberfläche. Verwenden Sie nicht den Modus "Unbekannter Alpha Modus im [**D2D1 \_ alpha \_ Modus \_**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) " mit einem DXGI-Oberflächen Renderziel. Es hat keinen Standardwert und bewirkt, dass das Renderziel der DXGI-Oberfläche nicht ausgeführt wird.
+Das [DXGI \_ FORMAT \_ UNKNOWN-Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) verwendet standardmäßig das DXGI-Oberflächenformat. Verwenden Sie nicht den [**Alphamodus D2D1 \_ ALPHA MODE \_ \_ UNKNOWN**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) mit einem DXGI-Oberflächenrenderziel. Er hat keinen Standardwert und führt dazu, dass die Erstellung des DXGI-Oberflächenrenderingziels fehlschlägt.
 
-## <a name="supported-formats-for-wic-bitmap-render-target"></a>Unterstützte Formate für das Renderziel der WIC-Bitmap
+## <a name="supported-formats-for-wic-bitmap-render-target"></a>Unterstützte Formate für WIC-Bitmap-Renderziel
 
-Ein WIC-Bitmap-Renderziel ist eine [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) , die von einer der [**ID2D1Factory:: | atewicbitmaprendertarget**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createwicbitmaprendertarget(iwicbitmap_constd2d1_render_target_properties_id2d1rendertarget)) -Methoden erstellt wird. Es unterstützt die folgenden Kombinationen aus Format und Alpha Modus.
+Ein WIC-Bitmaprenderziel ist ein [**ID2D1RenderTarget,**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) das von einer der [**ID2D1Factory::CreateWicBitmapRenderTarget-Methoden**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createwicbitmaprendertarget(iwicbitmap_constd2d1_render_target_properties_id2d1rendertarget)) erstellt wird. Es unterstützt die folgenden Format- und Alphamoduskombinationen.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus \_ direkt      |
-| DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ unbekannt         | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA \_ MODE \_ STRAIGHT      |
+| \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| \_DXGI-FORMAT \_ UNBEKANNT         | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
 
 
 
- 
+ 
 
-Das Pixel Format des WIC-Bitmap-Ziels muss mit dem Pixel Format der WIC-Bitmap identisch sein.
+Das Pixelformat des WIC-Bitmapziels muss mit dem Pixelformat der WIC-Bitmap übereinstimmen.
 
-Im [DXGI \_ \_](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) -Format "unbekanntes Format" wird standardmäßig das WIC-Bitmapformat verwendet, und im Modus " [**D2D1 \_ alpha \_ Mode \_ Unknown**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) Alpha" wird standardmäßig der WIC-bitmapmodus verwendet.
+Das [FORMAT DXGI \_ FORMAT \_ UNKNOWN](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) verwendet standardmäßig das WIC-Bitmapformat, und der [**Alphamodus D2D1 \_ ALPHA MODE \_ \_ UNKNOWN**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) alpha verwendet standardmäßig den WIC-Bitmap-Alphamodus.
 
 ## <a name="supported-formats-for-id2d1dcrendertarget"></a>Unterstützte Formate für ID2D1DCRenderTarget
 
-Ein [**ID2D1DCRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) unterstützt die folgenden Kombinationen aus Format und Alpha Modus.
+Ein [**ID2D1DCRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) unterstützt die folgenden Format- und Alphamoduskombinationen.
 
 
 
-| Format                        | Alpha-Modus                       |
+| Format                        | Alphamodus                       |
 |-------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
 
 
 
- 
+ 
 
-Verwenden Sie nicht das Format " [ \_ \_ unbekanntes DXGI-Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) " oder den D2D1-Alpha Modus " [**\_ \_ \_ unbekannter**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) Alpha Modus" mit einem [**ID2D1DCRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget)-Wert. Es hat keinen Standardwert und bewirkt, dass die **ID2D1DCRenderTarget** -Erstellung fehlschlägt.
+Verwenden Sie nicht das [FORMAT DXGI \_ FORMAT \_ UNKNOWN](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format) oder den [**Alphamodus D2D1 \_ ALPHA MODE \_ \_ UNKNOWN**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) mit einem [**ID2D1DCRenderTarget.**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) Er hat keinen Standardwert und führt dazu, dass die **ID2D1DCRenderTarget-Erstellung** fehlschlägt.
 
-## <a name="specifying-a-pixel-format-for-an-id2d1bitmap"></a>Angeben eines Pixel Formats für ein ID2D1Bitmap
+## <a name="specifying-a-pixel-format-for-an-id2d1bitmap"></a>Angeben eines Pixelformats für eine ID2D1Bitmap
 
-Im allgemeinen unterstützen [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Objekte die folgenden Formate und Alpha Modi (mit einigen Einschränkungen, die in den folgenden Abschnitten beschrieben werden).
+Im Allgemeinen unterstützen [**ID2D1Bitmap-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) die folgenden Formate und Alphamodi (mit einigen Einschränkungen, die in den folgenden Absätzen beschrieben werden).
 
 
 
-| Format                                                      | Alpha-Modus                       |
+| Format                                                      | Alphamodus                       |
 |-------------------------------------------------------------|----------------------------------|
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm                               | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm                               | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ B8G8R8A8 \_ unorm                               | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ a8 \_ unorm                                     | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ a8 \_ unorm                                     | D2D1 \_ alpha \_ Modus \_ direkt      |
-| DXGI- \_ Format \_ a8 \_ unorm                                     | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI- \_ Format \_ unbekannt                                       | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI- \_ Format \_ unbekannt                                       | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI- \_ Format \_ unbekannt                                       | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI \_ \_ -Format B8G8R8X8 \_ unorm (nur Windows 8.1 und höher) | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI \_ \_ -Format BC1 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI \_ \_ -Format BC1 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI \_ \_ -Format BC1 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI \_ \_ -Format BC2 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI \_ \_ -Format BC2 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI \_ \_ -Format BC2 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ unbekannt       |
-| DXGI \_ \_ -Format BC3 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert |
-| DXGI \_ \_ -Format BC3 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ ignorieren        |
-| DXGI \_ \_ -Format BC3 \_ unorm (nur Windows 8.1 und höher)      | D2D1 \_ alpha \_ Modus \_ unbekannt       |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM                               | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM                               | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM                               | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| \_DXGI-FORMAT \_ A8 \_ UNORM                                     | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ A8 \_ UNORM                                     | D2D1 \_ ALPHA \_ MODE \_ STRAIGHT      |
+| \_DXGI-FORMAT \_ A8 \_ UNORM                                     | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| \_DXGI-FORMAT \_ UNBEKANNT                                       | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| \_DXGI-FORMAT \_ UNBEKANNT                                       | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| \_DXGI-FORMAT \_ UNBEKANNT                                       | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM (nur Windows 8.1 und höher) | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ BC1 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ BC1 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ BC1 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| DXGI \_ FORMAT \_ BC2 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ BC2 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ BC2 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
+| DXGI \_ FORMAT \_ BC3 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED |
+| DXGI \_ FORMAT \_ BC3 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ IGNORE        |
+| DXGI \_ FORMAT \_ BC3 \_ UNORM (nur Windows 8.1 und höher)      | D2D1 \_ ALPHA \_ MODE \_ UNKNOWN       |
 
 
 
- 
+ 
 
-Wenn Sie die [**ID2D1RenderTarget:: kreatesharedbitmap**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap) -Methode verwenden, verwenden Sie das Pixel **Format** -Feld einer [**D2D1 \_ Bitmap \_ Properties**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_bitmap_properties) -Struktur, um das Pixel Format des neuen Renderziels anzugeben. Es muss dem Pixel Format der [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) -Quelle entsprechen.
+Wenn Sie die [**ID2D1RenderTarget::CreateSharedBitmap-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap) verwenden, verwenden Sie das **Feld pixelFormat** einer [**D2D1 \_ BITMAP \_ PROPERTIES-Struktur,**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_bitmap_properties) um das Pixelformat des neuen Renderziels anzugeben. Sie muss mit dem Pixelformat der [**ID2D1Bitmap-Quelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) übereinstimmen.
 
-Wenn Sie [**die Methode "**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties__id2d1bitmap)) " mit der Methode "D2D1" verwenden, verwenden Sie das Feld " **Pixel Format** " einer [**\_ Bitmap \_ Properties**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_bitmap_properties) -Struktur (anstelle des **Pixel Format** -Members einer [**D2D1 \_ \_ Renderziel- \_ Eigenschaften**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) Struktur), um das Pixel Format des neuen Renderziels anzugeben. Es muss dem Pixel Format der WIC-Bitmapquelle entsprechen.
+Wenn Sie die [**CreateBitmapFromWicBitmap-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties__id2d1bitmap)) verwenden, verwenden Sie das **Feld pixelFormat** einer [**D2D1 \_ BITMAP \_ PROPERTIES-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_bitmap_properties) (anstelle des **pixelsFormat-Members** einer [**D2D1 \_ RENDER TARGET \_ \_ PROPERTIES-Struktur),**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_render_target_properties) um das Pixelformat des neuen Renderziels anzugeben. Sie muss mit dem Pixelformat der WIC-Bitmapquelle übereinstimmen.
 
 > [!Note]  
-> Weitere Informationen zur Unterstützung für Block komprimierte Pixel Formate (BCN) finden Sie unter [Block Komprimierung (Block Komprimierung](block-compression.md)).
+> Weitere Informationen zur Unterstützung für blockkomprimierte Pixelformate (BCn) finden Sie unter [Blockkomprimierung.](block-compression.md)
 
- 
+ 
 
 ### <a name="supported-wic-formats"></a>Unterstützte WIC-Formate
 
-Wenn Sie die Methode " [**kreatebitmapfromwicbitmap**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties__id2d1bitmap)) " verwenden, um eine Bitmap aus einer WIC-Bitmap zu erstellen, oder wenn Sie die Methode " [**kreatesharedbitmap**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap) " mit [**iwicbitmaplock**](/windows/win32/api/wincodec/nn-wincodec-iwicbitmaplock)verwenden, muss die WIC-Quelle in einem von Direct2D unterstützten Format vorliegen.
+Wenn Sie die [**CreateBitmapFromWicBitmap-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createbitmapfromwicbitmap(iwicbitmapsource_constd2d1_bitmap_properties__id2d1bitmap)) verwenden, um eine Bitmap aus einer WIC-Bitmap zu erstellen, oder wenn Sie die [**CreateSharedBitmap-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createsharedbitmap) mit einem [**IWICBitmapLock**](/windows/win32/api/wincodec/nn-wincodec-iwicbitmaplock)verwenden, muss die WIC-Quelle in einem von Direct2D unterstützten Format vorliegen.
 
 
 
-| WIC-Format                     | Entsprechendes DXGI-Format     | Entsprechender Alpha-Modus                                        |
+| WIC-Format                     | Entsprechendes DXGI-Format     | Entsprechender Alphamodus                                        |
 |--------------------------------|-------------------------------|-----------------------------------------------------------------|
-| GUID \_ WICPixelFormat8bppAlpha  | DXGI- \_ Format \_ a8 \_ unorm       | D2D1 \_ alpha \_ Modus im \_ geraden-oder D2D1- \_ alpha \_ Modus \_ |
-| GUID \_ WICPixelFormat32bppPRGBA | DXGI- \_ Format \_ R8G8B8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert oder D2D1 \_ alpha \_ Modus \_ ignorieren   |
-| GUID \_ WICPixelFormat32bppBGR   | DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus \_ ignorieren                                       |
-| GUID \_ WICPixelFormat32bppPBGRA | DXGI- \_ Format \_ B8G8R8A8 \_ unorm | D2D1 \_ alpha \_ Modus ist \_ vorab multipliziert                                |
+| GUID \_ WICPixelFormat8bppAlpha  | \_DXGI-FORMAT \_ A8 \_ UNORM       | D2D1 \_ ALPHA MODE STRAIGHT oder \_ \_ D2D1 \_ ALPHA MODE \_ \_ PREMULTIPLIED |
+| GUID \_ WICPixelFormat32bppPRGBA | DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED oder D2D1 \_ ALPHA MODE \_ \_ IGNORE   |
+| GUID \_ WICPixelFormat32bppBGR   | DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ IGNORE                                       |
+| GUID \_ WICPixelFormat32bppPBGRA | DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM | D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED                                |
 
 
 
- 
+ 
 
-Ein Beispiel, das zeigt, wie Sie eine WIC-Bitmap in ein unterstütztes Format konvertieren, finden Sie unter Gewusst [wie: Laden einer Bitmap aus einer Datei](how-to-load-a-direct2d-bitmap-from-a-file.md).
+Ein Beispiel, das zeigt, wie eine WIC-Bitmap in ein unterstütztes Format konvertiert wird, finden Sie unter [Laden einer Bitmap aus einer Datei.](how-to-load-a-direct2d-bitmap-from-a-file.md)
 
 ## <a name="using-an-unsupported-format"></a>Verwenden eines nicht unterstützten Formats
 
-Die Verwendung einer beliebigen Kombination aus den in den früheren Tabellen aufgeführten Pixel Formaten und Alpha Modi führt zu einem [**D2DERR \_ nicht unterstützten \_ Pixel \_ Format**](direct2d-error-codes.md) oder einem **E \_ invalidArg** -Fehler.
+Die Verwendung einer beliebigen Kombination außer den Pixelformaten und Alphamodi, die in den vorherigen Tabellen aufgeführt sind, führt zu einem [**D2DERR \_ UNSUPPORTED \_ PIXEL \_ FORMAT**](direct2d-error-codes.md) oder einem **E \_ INVALIDARG-Fehler.**
 
-## <a name="about-alpha-modes"></a>Informationen zu Alpha-Modi
+## <a name="about-alpha-modes"></a>Informationen zu Alphamodi
 
-### <a name="about-premultiplied-and-straight-alpha-modes"></a>Informationen zu vormultiplizierten und geraden Alpha Modi
+### <a name="about-premultiplied-and-straight-alpha-modes"></a>Informationen zu prämultipliierten und geraden Alphamodi
 
-Die [**D2D1 \_ alpha \_ Mode**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) -Enumeration gibt an, ob der Alphakanal ein prämultipliziertes Alpha, ein einfaches Alpha oder eine ignoriert und als nicht transparent angesehen werden soll. Bei der geraden Alpha Angabe gibt der Alphakanal einen Wert an, der der Transparenz einer Farbe entspricht.
+Die [**D2D1 \_ ALPHA \_ MODE-Enumeration**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) gibt an, ob der Alphakanal prämultipliiertes Alpha, gerades Alpha verwendet oder ignoriert und als nicht transparent betrachtet werden soll. Bei geradem Alpha gibt der Alphakanal einen Wert an, der der Transparenz einer Farbe entspricht.
 
-Farben werden unabhängig vom Zielformat immer als geradliniges Alpha durch Direct2D Zeichnungs Befehle und Pinsel behandelt.
+Farben werden von Direct2D-Zeichnungsbefehlen und Pinseln unabhängig vom Zielformat immer als gerades Alpha behandelt.
 
-Mit einem prämultiplizierten Alpha wird jeder Farbkanal durch den Alpha-Wert skaliert. In der Regel ist kein Farb Kanal Wert größer als der Wert des Alphakanals. Wenn ein farbchannelwert in einem vorab multiplizierten Format größer als der Alphakanal ist, erstellt der standardmäßige quellenover-Mischungs mathematische eine Additive Mischung.
+Bei einem prämultiplizierten Alpha wird jeder Farbkanal durch den Alphawert skaliert. In der Regel ist kein Farbkanalwert größer als der Alphakanalwert. Wenn ein Farbkanalwert in einem vormultiplizierenden Format größer als der Alphakanal ist, erstellt die Standardmathematik für die Quellüberblendung eine additive Mischung.
 
-Der Wert des Alphakanals selbst ist sowohl in der geraden als auch im vorab multiplizierten Alpha identisch.
+Der Wert des Alphakanals selbst ist sowohl im geraden als auch im vor multiplizierten Alpha identisch.
 
-### <a name="the-differences-between-straight-and-premultiplied-alpha"></a>Die Unterschiede zwischen einem geraden und einem prämultiplizierten Alpha
+### <a name="the-differences-between-straight-and-premultiplied-alpha"></a>Unterschiede zwischen geradem und prämultipliiertem Alpha
 
-Beim Beschreiben einer RGBA-Farbe mithilfe von gerader Alpha wird der Alpha-Wert der Farbe im Alphakanal gespeichert. Um z. b. eine rote Farbe zu beschreiben, die 60% undurchsichtig ist, verwenden Sie die folgenden Werte: (255, 0, 0, 255 \* 0,6) = (255, 0, 0, 153). Der Wert 255 gibt vollständig rot an, und 153 (60 Prozent von 255) gibt an, dass die Farbe eine Deckkraft von 60 Prozent aufweisen soll.
+Beim Beschreiben einer RGBA-Farbe mithilfe von geradem Alpha wird der Alphawert der Farbe im Alphakanal gespeichert. Um beispielsweise eine rote Farbe zu beschreiben, die zu 60 % nicht transparent ist, verwenden Sie die folgenden Werte: (255, 0, 0, 255 \* 0,6) = (255, 0, 0, 153). Der Wert 255 gibt vollständiges Rot und 153 (60 Prozent von 255) an, dass die Farbe eine Deckkraft von 60 Prozent aufweisen soll.
 
-Beim Beschreiben einer RGBA-Farbe mithilfe von prämultipliziertem Alpha wird jede Farbe mit dem Alpha-Wert multipliziert: (255 \* 0,6, 0 \* 0,6, 0 \* 0,6, 255 \* 0,6) = (153, 0, 0, 153).
+Wenn eine RGBA-Farbe mithilfe von prämultiplizierendem Alpha beschrieben wird, wird jede Farbe mit dem Alphawert multipliziert: (255 \* 0,6, 0 \* 0,6, \* 0 0,6, 255 \* 0,6) = (153, 0, 0, 153).
 
-Unabhängig vom Alpha Modus des Renderziels werden [**D2D1 \_ Color \_ F**](d2d1-color-f.md) -Werte immer als gerades Alpha interpretiert. Wenn Sie z. b. die Farbe eines [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) für die Verwendung mit einem Renderziel angeben, das den Modus mit dem prämultiplizierten Alpha verwendet, geben Sie die Farbe genau so an, als wäre das Renderziel gerade alpha. Wenn Sie mit dem Pinsel zeichnen, übersetzt Direct2D die Farbe für Sie in das Zielformat.
+Unabhängig vom Alphamodus des Renderziels werden [**D2D1 \_ COLOR \_ F-Werte**](d2d1-color-f.md) immer als gerades Alpha interpretiert. Wenn Sie z. B. die Farbe eines [**ID2D1SolidColorBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1solidcolorbrush) für die Verwendung mit einem Renderziel angeben, das den prämultiplizierenden Alphamodus verwendet, geben Sie die Farbe genau so an, wie Sie es beim Renderziel mit geradem Alpha verwenden würden. Wenn Sie mit dem Pinsel zeichnen, übersetzt Direct2D die Farbe für Sie in das Zielformat.
 
-### <a name="alpha-mode-for-render-targets"></a>Alpha Modus für Renderziele
+### <a name="alpha-mode-for-render-targets"></a>Alphamodus für Renderziele
 
-Unabhängig von der Alpha Modus-Einstellung unterstützen die Inhalte eines Renderziels Transparenz. Wenn Sie z. b. ein teilweise transparentes rotes Rechteck mit einem Renderziel mit dem Alpha Modus " [**D2D1 \_ alpha \_ Mode \_ Ignore**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)" zeichnen, wird das Rechteck als Rosa angezeigt (wenn der Hintergrund weiß ist).
+Unabhängig von der Einstellung für den Alphamodus unterstützen die Inhalte eines Renderziels Transparenz. Wenn Sie z. B. ein teilweise transparentes rotes Rechteck mit einem Renderziel mit dem Alphamodus [**D2D1 \_ ALPHA \_ MODE \_ IGNORE**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)zeichnen, wird das Rechteck rot angezeigt (wenn der Hintergrund weiß ist).
 
-Wenn Sie ein teilweise transparentes rotes Rechteck zeichnen, während der Alpha Modus den [**D2D1- \_ alpha \_ Modus \_ vormultipliziert**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)ist, wird das Rechteck als Rosa angezeigt (vorausgesetzt, der Hintergrund ist weiß), und Sie können es bis auf das Renderziel sehen. Dies ist hilfreich, wenn Sie ein [**ID2D1DCRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) verwenden, um ein transparentes Fenster zu Renten, oder wenn Sie ein kompatibles Renderziel (ein [**Renderziel, das von der Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget)) "Methode" erstellt wurde) zum Erstellen einer Bitmap verwenden, die Transparenz unterstützt.
+Wenn Sie ein teilweise transparentes rotes Rechteck zeichnen, wenn der Alphamodus [**D2D1 \_ ALPHA \_ MODE \_ PREMULTIPLIED**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)ist, wird das Rechteck rosa angezeigt (vorausgesetzt, der Hintergrund ist weiß), und Sie können es bis zu dem sehen, was sich hinter dem Renderziel befindet. Dies ist nützlich, wenn Sie ein [**ID2D1DCRenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1dcrendertarget) verwenden, um in einem transparenten Fenster zu rendern, oder wenn Sie ein kompatibles Renderziel (ein Renderziel, das von der [**CreateCompatibleRenderTarget-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createcompatiblerendertarget(id2d1bitmaprendertarget)) erstellt wurde) verwenden, um eine Bitmap zu erstellen, die Transparenz unterstützt.
 
-### <a name="cleartype-and-alpha-modes"></a>ClearType-und Alpha-Modi
+### <a name="cleartype-and-alpha-modes"></a>ClearType- und Alphamodi
 
-Wenn Sie für ein Renderziel einen anderen Alpha Modus als [**D2D1 \_ alpha \_ Mode \_ Ignore**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) angeben, ändert sich der Text-Antialiasing-Modus automatisch von [**D2D1 \_ Text \_ Antialias Mode \_ ClearType**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_text_antialias_mode) in **D2D1 \_ Text \_ Antialias \_ Mode Grayscale**. (Wenn Sie den Alpha Modus " **D2D1 \_ alpha \_ Mode \_ Unknown**" angeben, legt Direct2D abhängig von der Art des Renderziels das Alpha für Sie fest.)
+Wenn Sie für ein Renderziel einen anderen Alphamodus als [**D2D1 \_ ALPHA \_ MODE \_ IGNORE**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode) angeben, ändert sich der Text-Antialiasingmodus automatisch von [**D2D1 \_ TEXT \_ ANTIALIAS \_ MODE CLEARTYPE**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_text_antialias_mode) in **D2D1 \_ TEXT \_ ANTIALIAS \_ MODE GRAYSCALE**. (Wenn Sie den Alphamodus **D2D1 \_ ALPHA \_ MODE \_ UNKNOWN** angeben, legt Direct2D das Alpha für Sie fest, je nach Art des Renderziels.)
 
-Sie können die [**settextantialiasmode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-settextantialiasmode) -Methode verwenden, um den Text-antialiasmodus wieder in den [**D2D1-Text-antialiasmoduscleartype \_ \_ \_**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_text_antialias_mode)zu ändern, aber das Rendern von ClearType-Text auf eine transparente Oberfläche kann zu Wenn Sie ClearType-Text in einem transparenten Renderziel Renderziel, empfiehlt es sich, eine der beiden folgenden Techniken zu verwenden.
+Sie können die [**SetTextAntialiasMode-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-settextantialiasmode) verwenden, um den Text-Antialiasmodus zurück in [**D2D1 \_ TEXT \_ ANTIALIAS \_ MODE CLEARTYPE**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_text_antialias_mode)zu ändern. Das Rendern von ClearType-Text in eine transparente Oberfläche kann jedoch unvorhersehbare Ergebnisse liefern. Wenn Sie ClearType-Text in einem transparenten Renderziel rendern möchten, empfiehlt es sich, eine der beiden folgenden Verfahren zu verwenden.
 
--   Verwenden Sie die [**pushaxisalignedclip**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f_d2d1_antialias_mode)) -Methode, um das Renderziel in den Bereich zu schneiden, in dem der Text gerendert wird, und geben Sie dann die [**Clear**](id2d1rendertarget-clear.md) -Methode an, und geben Sie eine nicht transparente Farbe an.
--   Verwenden Sie [**drawrechteck**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f_id2d1brush_float_id2d1strokestyle)) , um ein undurchsichtiges Rechteck hinter dem Bereich zu zeichnen, in dem der Text gerendert wird.
+-   Verwenden Sie die [**PushAxisAlignedClip-Methode,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushaxisalignedclip(constd2d1_rect_f_d2d1_antialias_mode)) um das Renderziel auf den Bereich zu beschneiden, in dem der Text gerendert wird. Rufen Sie dann die [**Clear-Methode**](id2d1rendertarget-clear.md) auf, geben Sie eine nicht transparente Farbe an, und rendern Sie ihren Text.
+-   Verwenden Sie [**DrawRectangle,**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawrectangle(constd2d1_rect_f_id2d1brush_float_id2d1strokestyle)) um ein nicht transparentes Rechteck hinter dem Bereich zu zeichnen, in dem der Text gerendert wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**D2D1 \_ Pixel \_ Format**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format)
+[**\_D2D1-PIXELFORMAT \_**](/windows/desktop/api/dcommon/ns-dcommon-d2d1_pixel_format)
 </dt> <dt>
 
-[**D2D1 \_ alpha \_ Modus**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)
+[**\_D2D1-ALPHAMODUS \_**](/windows/desktop/api/dcommon/ne-dcommon-d2d1_alpha_mode)
 </dt> <dt>
 
-[DXGI- \_ Format](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)
+[\_DXGI-FORMAT](/windows/win32/api/dxgiformat/ne-dxgiformat-dxgi_format)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

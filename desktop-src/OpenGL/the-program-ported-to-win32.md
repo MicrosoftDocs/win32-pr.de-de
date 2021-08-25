@@ -1,22 +1,22 @@
 ---
-title: Das Programm wurde nach Windows portiert.
-description: Das folgende Programm ist ein Windows OpenGL-Programm mit dem gleichen OpenGL-Code, der in der Datei "auxdemo" verwendet wird. C-Beispielprogramm, das mit dem Platform SDK bereitgestellt wird. Vergleichen Sie dieses Programm mit dem x Window System OpenGL-Programm in einem x Window System OpenGL-Programm.
+title: Das zu Windows portierte Programm
+description: Das folgende Programm ist ein Windows OpenGL-Programm mit dem gleichen OpenGL-Code, der in der AUXDEMO verwendet wird. C-Beispielprogramm, das mit dem Plattform-SDK bereitgestellt wird. Vergleichen Sie dieses Programm mit dem X Window System OpenGL-Programm in An X Window System OpenGL Program.
 ms.assetid: c42dce45-8f9e-4920-ac3d-ff7549aae3e9
 keywords:
-- Portieren auf OpenGL, Sample
+- Portieren zu OpenGL,Beispiel
 - OpenGL-Portierung, Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d0b86851ebc6acd5e61997b7e2efae662b11554
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1f8a90e205dbebc8ff4228e3114080b0e535cc6ecdcb6ebbd40738d6afc363fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888030"
 ---
-# <a name="the-program-ported-to-windows"></a>Das Programm wurde nach Windows portiert.
+# <a name="the-program-ported-to-windows"></a>Das zu Windows portierte Programm
 
-Das folgende Programm ist ein Windows OpenGL-Programm mit dem gleichen OpenGL-Code, der in der Datei "auxdemo" verwendet wird. C-Beispielprogramm, das mit dem Platform SDK bereitgestellt wird. Vergleichen Sie dieses Programm mit dem x Window System OpenGL-Programm in [einem x Window System OpenGL-Programm](an-x-window-system-opengl-program.md).
+Das folgende Programm ist ein Windows OpenGL-Programm mit dem gleichen OpenGL-Code, der in der AUXDEMO verwendet wird. C-Beispielprogramm, das mit dem Plattform-SDK bereitgestellt wird. Vergleichen Sie dieses Programm mit dem X Window System OpenGL-Programm in [Einem X Window System OpenGL-Programm.](an-x-window-system-opengl-program.md)
 
 
 ```C++
@@ -349,9 +349,9 @@ GLvoid drawScene(GLvoid)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

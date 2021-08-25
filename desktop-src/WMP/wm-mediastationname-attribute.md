@@ -1,9 +1,9 @@
 ---
-title: WM/mediastationname-Attribut
-description: Das Attribut WM/stationname gibt den Stationsnamen an, für den eine bestimmte Anzeige zuerst gesendet wurde.
+title: WM/MediaStationName-Attribut
+description: Das WM/StationName-Attribut gibt den Namen der Station an, auf der eine bestimmte Show zum ersten Mal übertragen wurde.
 ms.assetid: 4251dfbc-d24d-444b-8a43-a47473f8339f
 keywords:
-- WM/mediastationname-Attribut, Windows Media Player
+- WM/MediaStationName-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e85c4ad81efc27628fbd8c1fe5d81ebf7d16339
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a745268bcc94538fccf513f7062f061040103474030f1ecadcc748625e19a5c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900520"
 ---
-# <a name="wmmediastationname-attribute"></a>WM/mediastationname-Attribut
+# <a name="wmmediastationname-attribute"></a>WM/MediaStationName-Attribut
 
-Das Attribut **WM/stationname** gibt den Stationsnamen an, für den eine bestimmte Anzeige zuerst gesendet wurde.
+Das **WM/StationName-Attribut** gibt den Namen der Station an, auf der eine bestimmte Show zum ersten Mal übertragen wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmmediastationname.
+Die Windows Media Format SDK-Konstante für dieses Attribut lautet g \_ wszWMMediaStationName.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -47,7 +47,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

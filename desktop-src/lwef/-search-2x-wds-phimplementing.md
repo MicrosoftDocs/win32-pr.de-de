@@ -1,95 +1,95 @@
 ---
-title: Implementieren eines Protokoll Handlers für WDS
-description: Zum Erstellen eines Protokoll Handlers gehört das Implementieren von isearchprotocol zum Verwalten von urlaccessor-Objekten, iurlaccessor zum Generieren von Metadaten über und das identifizieren geeigneter Filter für Elemente im Datenspeicher, iprotocolhandlersite zum Instanziieren eines searchprotocol-Objekts und identifizieren geeigneter Filter, und ifilterto filtert proprietäre Dateien oder hierarchisch gespeicherte Dateien.
+title: Implementieren eines Protokollhandlers für WDS
+description: Das Erstellen eines Protokollhandlers umfasst die Implementierung von ISearchProtocol zum Verwalten von UrlAccessor-Objekten, IUrlAccessor zum Generieren von Metadaten zu und zum Identifizieren geeigneter Filter für Elemente im Datenspeicher, IProtocolHandlerSite zum Instanziieren eines SearchProtocol-Objekts und Identifizieren geeigneter Filter und IFilter, um proprietäre Dateien zu filtern oder hierarchisch gespeicherte Dateien aufzuzählen und zu filtern.
 ms.assetid: d4bcf370-4152-4cfd-a92e-eb9196d23ab4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c5a88ca5137b012431fff75bf5975a8b4820121
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 32e33a7ebf6d5f14d0ec4d78031e25b17d59bac5fb99ee7ea6d20046fbe95c78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963490"
 ---
-# <a name="implementing-a-protocol-handler-for-wds"></a>Implementieren eines Protokoll Handlers für WDS
+# <a name="implementing-a-protocol-handler-for-wds"></a>Implementieren eines Protokollhandlers für WDS
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [Windows Search](../search/-search-3x-wds-overview.md) .
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren [Versionen Windows Search.](../search/-search-3x-wds-overview.md)
 
-Das Erstellen eines Protokoll Handlers umfasst das Implementieren von [**isearchprotocol**](/windows/desktop/api/searchapi/nn-searchapi-isearchprotocol) zum Verwalten von urlaccessor-Objekten, [**iurlaccessor**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) zum Generieren von Metadaten über und das Ermitteln geeigneter Filter für Elemente im Datenspeicher, iprotocolhandlersite zum Instanziieren eines searchprotocol-Objekts und identifizieren geeigneter Filter und [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)zum Filtern von proprietären Dateien oder zum Auflisten und Filtern hierarchischer Dateien. Der Protokollhandler muss einen Multithread aufweisen.
+Das Erstellen eines Protokollhandlers umfasst die Implementierung von [**ISearchProtocol**](/windows/desktop/api/searchapi/nn-searchapi-isearchprotocol) zum Verwalten von UrlAccessor-Objekten, [**IUrlAccessor**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) zum Generieren von Metadaten zu und zum Identifizieren geeigneter Filter für Elemente im Datenspeicher, IProtocolHandlerSite zum Instanziieren eines SearchProtocol-Objekts und Identifizieren geeigneter Filter und [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)zum Filtern proprietärer Dateien oder zum Aufzählen und Filtern hierarchisch gespeicherter Dateien. Der Protokollhandler muss multithreaded sein.
 
 Diese Abschnitte enthalten die folgenden Themen:
 
 -   [Hinweis zu URLs](#note-on-urls)
 -   [Protokollhandlerschnittstellen](#protocol-handler-interfaces)
 -   [IFilters für Container](#ifilters-for-containers)
--   [Hinzufügen von protokollhandleroptionen](#adding-protocol-handler-options-functionality)
-    -   [Isearchprotocoloptions](#isearchprotocoloptions)
+-   [Hinzufügen der Funktionalität für Protokollhandleroptionen](#adding-protocol-handler-options-functionality)
+    -   [ISearchProtocolOptions](#isearchprotocoloptions)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="note-on-urls"></a>Hinweis zu URLs
 
-Die Microsoft Windows-Desktop Suche (WDS) verwendet URLs, um Elemente in einem Dateisystem, in einem Daten bankähnlichen Speicher oder im Web eindeutig zu identifizieren. Eine URL, die einen Einstiegs Knoten definiert, wird als Startseite bezeichnet. WDS beginnt an dieser Startseite und rekursiv den Datenspeicher durch Crawlen. Die typische URL-Struktur lautet wie folgt:
+Microsoft Windows Desktop Search (WDS) verwendet URLs, um Elemente in einem Dateisystem, in einem datenbankbasierten Speicher oder im Web eindeutig zu identifizieren. Eine URL, die einen Einstiegsknoten definiert, wird als Startseite bezeichnet. WDS beginnt bei dieser Startseite und durchforstung den Datenspeicher rekursiv. Die typische URL-Struktur ist:
 
 `protocol://host/path/name.extension`
 
 > [!Note]
 >
-> Wenn Sie einen neuen Datenspeicher hinzufügen möchten, müssen Sie einen Namen auswählen, um ihn zu identifizieren, der nicht mit aktuellen Konflikten in Konflikt steht. Diese Benennungs Konvention wird empfohlen: CompanyName. Scheme.
+> Wenn Sie einen neuen Datenspeicher hinzufügen möchten, müssen Sie einen Namen auswählen, um ihn zu identifizieren, der nicht mit dem aktuellen Datenspeicher in Konflikt steht. Es wird empfohlen, diese Benennungskonvention zu verwenden: companyName.scheme.
 
- 
+ 
 
 ## <a name="protocol-handler-interfaces"></a>Protokollhandlerschnittstellen
 
-**Isearchprotocol**
+**ISearchProtocol**
 
-Die [**isearchprotocol**](/windows/desktop/api/searchapi/nn-searchapi-isearchprotocol) -Schnittstelle ruft urlaccessor-Objekte auf, initialisiert und verwaltet Sie. Weitere Informationen zum Implementieren der isearchprotocol-Schnittstelle finden Sie unter **isearchprotocol Interface Reference**.
+Die [**ISearchProtocol-Schnittstelle**](/windows/desktop/api/searchapi/nn-searchapi-isearchprotocol) ruft UrlAccessor-Objekte auf, initialisiert und verwaltet sie. Weitere Informationen zum Implementieren der ISearchProtocol-Schnittstelle finden Sie in der **Referenz zur ISearchProtocol-Schnittstelle.**
 
-**Iurlaccessor**
+**IUrlAccessor**
 
-Für eine angegebene URL generiert die [**iurlaccessor**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) -Schnittstelle Metadaten über die Standortstruktur sowie enthaltene Elemente und bindet diese Elemente an einen Filter. Das **iurlaccessor** -Objekt wird von einem searchprotocol-Objekt instanziiert und initialisiert. Sie können jedoch auch eine interne Initialisierungs Methode implementieren, damit Ihr **iurlaccessor** -Objekt Initialisierungs Aufgaben ausführen kann, die für den Protokollhandler spezifisch sind, z. b. das Überprüfen der URL für ein Element, auf das zugegriffen wird, oder das Überprüfen der Uhrzeit der letzten Änderung, um zu bestimmen, ob eine Datei in der aktuellen durch Forstung
+Für eine angegebene URL generiert die [**IUrlAccessor-Schnittstelle**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) Metadaten über die Speicherortstruktur sowie enthaltene Elemente und bindet diese Elemente an einen Filter. Das **IUrlAccessor-Objekt** wird von einem SearchProtocol-Objekt instanziiert und initialisiert. Sie können jedoch auch eine interne Initialisierungsmethode implementieren, damit Ihr **IUrlAccessor-Objekt** initialisierungsaufgaben ausführen kann, die für Ihren Protokollhandler spezifisch sind, z. B. das Überprüfen der URL für ein Element, auf das zugegriffen wird, oder das Überprüfen des Zeitpunkts der letzten Änderung, um zu bestimmen, ob eine Datei in der aktuellen Durchforstung verarbeitet werden muss.
 
 > [!Note]
 >
-> Geänderte Zeiten für Verzeichnisse werden ignoriert. Das [**iurlaccessor**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) -Objekt muss die untergeordneten Objekte auflisten, um zu bestimmen, ob Änderungen oder Löschungen vorhanden sind.
+> Geänderte Zeiten für Verzeichnisse werden ignoriert. Das [**IUrlAccessor-Objekt**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) muss die untergeordneten Objekte aufzählen, um zu bestimmen, ob Änderungen oder Löschungen vorgenommen wurden.
 
- 
+ 
 
-Ein Großteil des Entwurfs des **urlaccessor** -Objekts ist davon abhängig, ob die Struktur hierarchisch oder Links basiert ist. Bei hierarchischen Daten speichern muss das **urlaccessor** -Objekt einen Filter finden, der ihren Inhalt auflisten kann. Ein weiterer Unterschied zwischen hierarchischen und Link basierten Protokoll Handlern ist die Verwendung der IsDirectory-Methode. In Link basierten Protokoll Handlern sollte diese Methode den Wert S false zurückgeben \_ . Hierarchische Protokollhandler müssen für Container den Wert S OK zurückgeben \_ .
+Ein Größerer Teil des Entwurfs des **UrlAccessor-Objekts** hängt davon ab, ob die Struktur hierarchisch oder link-basiert ist. Bei hierarchischen Datenspeichern muss das **UrlAccessor-Objekt** einen Filter finden, der seinen Inhalt aufzählen kann. Ein weiterer Unterschied zwischen hierarchischen und linkbasierten Protokollhandlern ist die Verwendung der IsDirectory-Methode. In linkbasierten Protokollhandlern sollte diese Methode S \_ FALSE zurückgeben. Hierarchische Protokollhandler müssen S \_ OK für Container zurückgeben.
 
-Weitere Anweisungen zum Implementieren einer [**iurlaccessor**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) -Schnittstelle finden Sie unter [**iurlaccessor Interface**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) Reference.
+Weitere Anweisungen zum Implementieren einer [**IUrlAccessor-Schnittstelle**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor) finden Sie in der [**Referenz zur IUrlAccessor-Schnittstelle.**](/windows/desktop/api/searchapi/nn-searchapi-iurlaccessor)
 
-**Iprotocolhandlersite**
+**IProtocolHandlerSite**
 
-Diese Schnittstelle wird verwendet, um ein **searchprotocol** -Objekt zu instanziieren und das **urlaccessor** -Objekt mit einem geeigneten Filter für eine angegebene Klassen-ID (CLSID) bereitzustellen.
+Diese Schnittstelle wird verwendet, um ein **SearchProtocol-Objekt** zu instanziieren, und stellt dem **UrlAccessor-Objekt** einen entsprechenden Filter für eine angegebene Klassen-ID (CLSID) bereit.
 
 ## <a name="ifilters-for-containers"></a>IFilters für Container
 
-Wenn Sie einen hierarchischen Protokollhandler implementieren, müssen Sie eine [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-Container Komponente implementieren, die URLs auflistet, die Container oder Ordner darstellen. Der enumerationsprozess ist eine Schleife durch die **GetChunk** -Methode und die **GetValue** -Methode der IFilter-Schnittstelle, die eine Liste von URLs zurückgeben, die jedes Element im Container darstellen.
+Wenn Sie einen hierarchischen Protokollhandler implementieren, müssen Sie eine [**IFilter-Containerkomponente**](/windows/desktop/api/filter/nn-filter-ifilter)implementieren, die URLs aufzählt, die Container oder Ordner darstellen. Der Enumerationsprozess ist eine Schleife durch die **GetChunk-** und **GetValue-Methoden** der IFilter-Schnittstelle, die eine Liste von URLs zurückgeben, die jedes Element im Container darstellen.
 
-Zuerst gibt **GetChunk** eine Vollversion mit dem Eigenschaften Satz Gather \_ -propset zurück und eine der folgenden:
+**GetChunk gibt zunächst** eine FULLPROSPEC mit dem Eigenschaftensatz GATHER \_ PROPSET und einer der folgenden Zurück:
 
--   PID \_ gthr \_ dirlink, die URL zu dem Element ohne den Zeitpunkt der letzten Änderung, oder
--   PID \_ gthr \_ dirlink \_ with \_ Time, die URL zusammen mit dem Zeitpunkt der letzten Änderung
+-   PID \_ GTHR \_ DIRLINK, die URL zum Element ohne zeitpunkt der letzten Änderung, oder
+-   PID \_ GTHR \_ DIRLINK \_ WITH \_ TIME, die URL zusammen mit dem Zeitpunkt der letzten Änderung
 
-Der Eigenschafts Satz-GUID für das Gather- \_ propset lautet 0b63e343-9ccc-11D0-bcdb-00805f ccce04. Die PROPSPEC-Eigenschaft ist entweder PID \_ gthr \_ dirlink = 2 oder PID \_ gthr \_ dirlink \_ mit \_ Time = 12 Decimal.
+Die GUID für den Eigenschaftensatz für GATHER \_ PROPSET ist 0B63E343-9CCC-11D0-BCDB-00805FCCCE04. Die PROPSPEC-Eigenschaft ist entweder PID \_ GTHR \_ DIRLINK=2 oder PID \_ GTHR \_ DIRLINK \_ WITH TIME = \_ 12 decimal.
 
-Die Rückgabe \_ von PID gthr \_ dirlink \_ mit \_ Zeit ist effizienter, da der Indexer sofort ermitteln kann, ob das Element indiziert werden muss, ohne die Methoden isearchprotocol->createurlaccessor () und iurlaccessor->getLastModified () aufzurufende.
+Die Rückgabe von PID GTHR DIRLINK WITH TIME ist effizienter, da der Indexer sofort bestimmen kann, ob das Element indiziert werden muss, ohne die \_ \_ Methoden \_ \_ ISearchProtocol->CreateUrlAccessor() und IUrlAccessor->GetLastModified() auf aufruft.
 
-Anschließend gibt **GetValue** eine PROPVARIANT für die URL (und die Uhrzeit der letzten Änderung) wie folgt zurück:
+Anschließend gibt **GetValue** eine PROPVARIANT-Eigenschaft für die URL (und den Zeitpunkt der letzten Änderung bei Verwendung) zurück:
 
 -   VT \_ LPWSTR, die URL des untergeordneten Elements oder
--   Vektor der URL, auf die eine FILETIME folgt.
+-   Vektor der URL gefolgt von filetime
 
-Der folgende Beispielcode veranschaulicht, wie die richtige PID \_ gthr \_ dirlink \_ mit \_ Zeit erstellt wird.
+Der folgende Beispielcode veranschaulicht, wie sie den richtigen PID \_ GTHR \_ DIRLINK \_ WITH TIME \_ erstellen.
 
 > [!Note]
 >
-> **Dieser Code und diese Informationen werden "wie immer" bereitgestellt, ohne jegliche Gewährleistungen jeglicher Art, entweder ausgedrückt oder impliziert, einschließlich, aber nicht beschränkt auf die impliziten Gewährleistungen der Handels Üblichkeit und/oder Eignung für einen bestimmten Zweck.**
+> **DIESER CODE UND DIE INFORMATIONEN WERDEN "WIE BEFÄHRT" BEREITGESTELLT, OHNE JEGLICHE GEWÄHRLEISTUNG, ENTWEDER AUSGEDRÜCKT ODER KONKLUDENT, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE KONKLUDENTEN GEWÄHRLEISTUNGEN DER HANDELSIERBARKEIT UND/ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.**
 >
-> Copyright (C) Microsoft. Alle Rechte vorbehalten.
+> Copyright (C) Microsoft. All rights reserved.
 
- 
+ 
 
 
 ```
@@ -154,48 +154,48 @@ HRESULT GetPropVariantForUrlAndTime(PCWSTR pszUrl, const FILETIME &ftLastModifie
 
 > [!Note]
 >
-> Eine [**IFilter**](/windows/desktop/api/filter/nn-filter-ifilter)-Container Komponente sollte immer alle untergeordneten URLs auflisten, auch wenn sich die untergeordneten URLs nicht geändert haben, da der Indexer Löschungen durch den enumerationsprozess erkennt. Wenn die Datums Ausgabe in einem dir- \_ Link \_ mit \_ der Zeit anzeigt, dass die Daten nicht geändert wurden, aktualisiert der Indexer nicht die Daten für diese URL.
+> Eine [**IFilter-Containerkomponente**](/windows/desktop/api/filter/nn-filter-ifilter)sollte immer alle untergeordneten URLs auflisten, auch wenn sich die untergeordneten URLs nicht geändert haben, da der Indexer Löschungen über den Enumerationsprozess erkennt. Wenn die Datumsausgabe in einer DIR LINKS WITH TIME angibt, dass die Daten nicht geändert wurden, aktualisiert der Indexer die Daten für \_ \_ diese URL \_ nicht.
 
- 
+ 
 
-Die physische URL ist die URL, die vom **urlaccessor** -Objekt verarbeitet wird. Wenn der Filter keine benutzerfreundliche Display URL ausgibt, zeigt WDS die physische URL für den Benutzer als Teil der Suchergebnisse an. Das WDS-Schema enthält zwei Eigenschaften, mit denen gesteuert werden kann, was für den Endbenutzer angezeigt wird, wie in der folgenden Tabelle dargestellt.
+Die physische URL ist die URL, die vom **UrlAccessor-Objekt** verarbeitet wird. Wenn der Filter keine benutzerfreundliche DisplayUrl aus gibt, zeigt WDS die physische URL für den Benutzer als Teil der Suchergebnisse an. Das WDS-Schema enthält zwei Eigenschaften, um zu steuern, was dem Endbenutzer angezeigt wird, wie in der folgenden Tabelle gezeigt.
 
 
 
-| GUID                                 | PROPSPEC      | BESCHREIBUNG                                         |
+| GUID                                 | PROPSPEC      | Beschreibung                                         |
 |--------------------------------------|---------------|-----------------------------------------------------|
-| D5CDD505-2E9C-101B-9397-08002B2CF9AE | DisplayFolder | Ordner Pfad, der dem Benutzer in den Suchergebnissen angezeigt wird |
-| D5CDD505-2E9C-101B-9397-08002B2CF9AE | FolderName    | Anzeige Name des übergeordneten Ordners                   |
+| D5CDD505-2E9C-101B-9397-08002B2CF9AE | DisplayFolder | Ordnerpfad, der dem Benutzer in den Suchergebnissen angezeigt wird |
+| D5CDD505-2E9C-101B-9397-08002B2CF9AE | FolderName    | Anzeigename des übergeordneten Ordners                   |
 
 
 
- 
+ 
 
-Wenn Ihr Code keinen DisplayFolder oder FolderName ausgibt, werden diese Werte aus der displayurl berechnet. Schrägstriche in der URL bezeichnen Container innerhalb des Stores oder Dateisystems.
+Wenn Ihr Code keinen DisplayFolder oder FolderName aus gibt, werden diese Werte aus der DisplayUrl berechnet. Schrägstriche in der URL bezeichnen Container innerhalb des Speichers oder Dateisystems.
 
-## <a name="adding-protocol-handler-options-functionality"></a>Hinzufügen von protokollhandleroptionen
+## <a name="adding-protocol-handler-options-functionality"></a>Hinzufügen der Funktionalität für Protokollhandleroptionen
 
-Damit der Protokollhandler über eine Standard Startseite (und eine Eingabe Knoten-URL) verfügt, müssen Sie die **isearchprotocoloptions** -Schnittstelle implementieren. In zukünftigen Versionen von WDS stellt diese Schnittstelle dem Dialogfeld "Optionen" Hooks für eine verbesserte Benutzeroberfläche bereit. Diese Schnittstelle bietet die folgenden Funktionen:
+Damit Ihr Protokollhandler über eine Standardstartseite (und url des Einstiegsknotens) verfügen kann, müssen Sie die **ISearchProtocolOptions-Schnittstelle** implementieren. In zukünftigen Versionen von WDS stellt diese Schnittstelle Hooks für das Dialogfeld Optionen bereit, um die Benutzerfreundlichkeit zu verbessern. Diese Schnittstelle bietet die folgenden Funktionen:
 
--   Bestimmt, ob die Anforderungen für den Protokollhandler erfüllt sind. Der Speicher des Protokoll Handlers benötigt z. b. möglicherweise Zugriff auf eine bestimmte Anwendung, um die Daten der Anwendung ordnungsgemäß zu indizieren, aber diese Anwendung ist nicht verfügbar.
--   Gibt die Mindestanforderungen an, die der Protokollhandler für die Verarbeitung eines Elements benötigt. Anforderungen können in einer benutzerfreundlichen, lokalisierten Beschreibung ausgedrückt werden, z. b. "Microsoft Outlook 2000 oder höher".
--   Definiert die URLs, die der Protokollhandler standardmäßig verarbeiten soll.
+-   Bestimmt, ob die Anforderungen für ihren Protokollhandler erfüllt sind. Beispielsweise kann der Speicher des Protokollhandlers Zugriff auf eine bestimmte Anwendung erfordern, um die Daten der Anwendung ordnungsgemäß zu indizieren, aber diese Anwendung ist nicht verfügbar.
+-   Gibt die Mindestanforderungen an, die Ihr Protokollhandler zum Verarbeiten eines Elements benötigt. Anforderungen können in einer benutzerfreundlichen, lokalisierten Beschreibung ausgedrückt werden, z. B. "Microsoft Outlook 2000 oder höher".
+-   Definiert die URLs, die ihr Protokollhandler standardmäßig verarbeiten soll.
 
-### <a name="isearchprotocoloptions"></a>Isearchprotocoloptions
+### <a name="isearchprotocoloptions"></a>ISearchProtocolOptions
 
-In der folgenden Tabelle werden die Methoden beschrieben, die Sie für die **isearchprotocoloptions** -Schnittstelle implementieren müssen.
+In der folgenden Tabelle werden die Methoden beschrieben, die Sie für die **ISearchProtocolOptions-Schnittstelle implementieren** müssen.
 
 
 
-| Methode               | BESCHREIBUNG                                                                                             |
+| Methode               | Beschreibung                                                                                             |
 |----------------------|---------------------------------------------------------------------------------------------------------|
-| Prüfanforderungen    | Bestimmt, ob die Mindestanforderungen eines benutzerdefinierten Protokoll Handlers erfüllt werden.                             |
-| Getdefaultcrawlscope | Gibt eine Liste von Standard-URLs in einem angegebenen Speicher für einen benutzerdefinierten Protokollhandler zurück.                   |
-| Getrequierungen      | Identifiziert eine benutzerfreundliche, lokalisierte Beschreibung der Mindestanforderungen für einen benutzerdefinierten Protokollhandler. |
+| CheckRequirements    | Bestimmt, ob die Mindestanforderungen eines benutzerdefinierten Protokollhandlers erfüllt sind.                             |
+| GetDefaultCrawlScope | Gibt eine Liste der Standard-URLs innerhalb eines angegebenen Speichers für einen benutzerdefinierten Protokollhandler zurück.                   |
+| GetRequirements      | Identifiziert eine benutzerfreundliche, lokalisierte Beschreibung der Mindestanforderungen für einen benutzerdefinierten Protokollhandler. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -204,15 +204,15 @@ In der folgenden Tabelle werden die Methoden beschrieben, die Sie für die **ise
 **Referenz**
 </dt> <dt>
 
-[Benachrichtigen des Index von Änderungen](-search-2x-wds-notifyingofchanges.md)
+[Benachrichtigen des Indexes über Änderungen](-search-2x-wds-notifyingofchanges.md)
 </dt> <dt>
 
 [Hinzufügen von Symbolen, Vorschauen und Kontextmenüs mit Shellerweiterungen](-search-2x-wds-ph-ui-extensions.md)
 </dt> <dt>
 
-[Installieren und Registrieren von Protokoll Handlern](-search-2x-wds-ph-install-registration.md)
+[Installieren und Registrieren von Protokollhandlern](-search-2x-wds-ph-install-registration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

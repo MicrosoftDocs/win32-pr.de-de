@@ -1,36 +1,36 @@
 ---
 title: Ändern von Elementen von Benutzerinformationen
-description: Die Netzwerk Verwaltungsfunktionen stellen eine Vielzahl von Informationsebenen bereit, um das Ändern von Benutzerinformationen zu unterstützen.
+description: Die Netzwerkverwaltungsfunktionen bieten eine Vielzahl von Informationsebenen zur Unterstützung beim Ändern von Benutzerinformationen.
 ms.assetid: dc126431-57b0-467b-9f56-1e66a647c7b1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e1aa6ec8d7fed30d38d25adc67974d8bad8ab1f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fd3161bb4d689b70f85f6c20c7c302779d0f685e8bcace43cffdee68b2cda2d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912500"
 ---
 # <a name="changing-elements-of-user-information"></a>Ändern von Elementen von Benutzerinformationen
 
-Die Netzwerk Verwaltungsfunktionen stellen eine Vielzahl von Informationsebenen bereit, um das Ändern von Benutzerinformationen zu unterstützen. Einige Ebenen erfordern Administratorrechte, um erfolgreich ausgeführt zu werden. Weitere Informationen zum Aufrufen von Funktionen, für die Administratorrechte erforderlich sind, finden Sie unter [Ausführen mit speziellen Berechtigungen](/windows/desktop/SecBP/running-with-special-privileges).
+Die Netzwerkverwaltungsfunktionen bieten eine Vielzahl von Informationsebenen zur Unterstützung beim Ändern von Benutzerinformationen. Einige Ebenen erfordern Administratorrechte, um erfolgreich ausgeführt zu werden. Weitere Informationen zum Aufrufen von Funktionen, die Administratorrechte erfordern, finden Sie unter [Ausführen mit speziellen Berechtigungen.](/windows/desktop/SecBP/running-with-special-privileges)
 
-Der Beispielcode in diesem Thema veranschaulicht, wie mehrere Elemente von Benutzerinformationen durch Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " geändert werden. Der Code verwendet verschiedene Netzwerk Verwaltungs Informationsstrukturen.
+Der Beispielcode in diesem Thema veranschaulicht, wie mehrere Elemente von Benutzerinformationen durch Aufrufen der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) geändert werden. Der Code verwendet verschiedene Netzwerkverwaltungsinformationsstrukturen.
 
-Wenn Sie Benutzerinformationen ändern, empfiehlt es sich, eine bestimmte Ebene für diese Informationen zu verwenden. Dadurch wird verhindert, dass nicht verknüpfte Informationen versehentlich zurückgesetzt werden, wenn die Werte der niedrigeren Ebene verwendet werden.
+Beim Ändern von Benutzerinformationen empfiehlt es sich, die spezifische Ebene für diese Information zu verwenden. Dadurch wird verhindert, dass nicht verknüpfte Informationen versehentlich zurückgesetzt werden, wenn die niedrigeren Ebenenwerte verwendet werden.
 
-Das Festlegen einiger der häufig verwendeten Ebenen ist in den folgenden Codebeispielen dargestellt:
+Das Festlegen einiger der am häufigsten verwendeten Ebenen wird in den folgenden Codebeispielen veranschaulicht:
 
--   [Festlegen des Benutzer Kennworts, Ebene 1003](#setting-the-user-password-level-1003)
--   [Festlegen der Benutzer Berechtigung, Ebene 1005](#setting-the-user-privilege-level-1005)
--   [Festlegen des Basisverzeichnisses des Benutzers, Ebene 1006](#setting-the-user-home-directory-level-1006)
--   [Festlegen des Benutzer Kommentar Felds, Ebene 1007](#setting-the-user-comment-field-level-1007)
+-   [Festlegen des Benutzerkennworts, Ebene 1003](#setting-the-user-password-level-1003)
+-   [Festlegen der Benutzerberechtigung, Ebene 1005](#setting-the-user-privilege-level-1005)
+-   [Festlegen des Benutzer-Stammverzeichnisses, Ebene 1006](#setting-the-user-home-directory-level-1006)
+-   [Festlegen des Felds "Benutzerkommentar", Ebene 1007](#setting-the-user-comment-field-level-1007)
 -   [Festlegen der Benutzerflags, Ebene 1008](#setting-the-user-flags-level-1008)
--   [Festlegen des Benutzer Skript Pfads, Ebene 1009](#setting-the-user-script-path-level-1009)
--   [Festlegen der benutzerautorierungsflags, Ebene 1010](#setting-the-user-authority-flags-level-1010)
+-   [Festlegen des Benutzerskriptpfads, Ebene 1009](#setting-the-user-script-path-level-1009)
+-   [Festlegen der Benutzerautoritätsflags, Ebene 1010](#setting-the-user-authority-flags-level-1010)
 -   [Festlegen des vollständigen Benutzernamens, Ebene 1011](#setting-the-user-full-name-level-1011)
 
-Alle Code Fragmente gehen davon aus, dass der Benutzer die Unicode-Kompilierungs Direktive definiert und die entsprechenden SDK-Header Dateien wie folgt eingefügt hat:
+Alle Codefragmente gehen davon aus, dass der Benutzer die UNICODE-Kompilierungsdirektive definiert und die entsprechenden SDK-Headerdateien wie folgt eingeschlossen hat:
 
 
 ```C++
@@ -53,9 +53,9 @@ DWORD netRet = 0;
 
 
 
-## <a name="setting-the-user-password-level-1003"></a>Festlegen des Benutzer Kennworts, Ebene 1003
+## <a name="setting-the-user-password-level-1003"></a>Festlegen des Benutzerkennworts, Ebene 1003
 
-Das folgende Code Fragment veranschaulicht, wie das Kennwort eines Benutzers mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " auf einen bekannten Wert festgelegt wird. Das Thema [**Benutzer \_ Info \_ 1003**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1003) enthält weitere Informationen.
+Das folgende Codefragment veranschaulicht, wie das Kennwort eines Benutzers mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) auf einen bekannten Wert festgelegt wird. Das Thema [**USER \_ INFO \_ 1003**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1003) enthält zusätzliche Informationen.
 
 
 ```C++
@@ -79,9 +79,9 @@ else
 
 
 
-## <a name="setting-the-user-privilege-level-1005"></a>Festlegen der Benutzer Berechtigung, Ebene 1005
+## <a name="setting-the-user-privilege-level-1005"></a>Festlegen der Benutzerberechtigung, Ebene 1005
 
-Das folgende Code Fragment veranschaulicht, wie die Ebene der Berechtigung, die einem Benutzer zugewiesen wird, mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " angegeben wird. Das Thema [**Benutzer \_ Info \_ 1005**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1005) enthält weitere Informationen. Weitere Informationen zu Konto Berechtigungen finden Sie unter [Berechtigungen](/windows/desktop/SecAuthZ/privileges) und [Autorisierungs Konstanten](/windows/desktop/SecAuthZ/authorization-constants).
+Das folgende Codefragment veranschaulicht, wie sie die Einem Benutzer zugewiesene Berechtigungsebene mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) angeben. Das Thema [**USER \_ INFO \_ 1005**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1005) enthält zusätzliche Informationen. Weitere Informationen zu Kontoberechtigungen finden Sie unter [Berechtigungen](/windows/desktop/SecAuthZ/privileges) und [Autorisierungskonstanten.](/windows/desktop/SecAuthZ/authorization-constants)
 
 
 ```C++
@@ -103,9 +103,9 @@ else
 
 
 
-## <a name="setting-the-user-home-directory-level-1006"></a>Festlegen des Basisverzeichnisses des Benutzers, Ebene 1006
+## <a name="setting-the-user-home-directory-level-1006"></a>Festlegen des Benutzer-Stammverzeichnisses, Ebene 1006
 
-Das folgende Code Fragment veranschaulicht, wie der Pfad des Basisverzeichnisses eines Benutzers mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " angegeben wird. Bei dem Verzeichnis kann es sich um einen hart codierten Pfad oder um einen gültigen Unicode-Pfad handeln. Das Thema [**Benutzer \_ Info \_ 1006**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1006) enthält weitere Informationen.
+Das folgende Codefragment veranschaulicht, wie der Pfad des Stammverzeichnisses eines Benutzers mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) angegeben wird. Bei dem Verzeichnis kann es sich um einen hart codierten Pfad oder einen gültigen Unicode-Pfad handeln. Das Thema [**USER \_ INFO \_ 1006**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1006) enthält zusätzliche Informationen.
 
 
 ```C++
@@ -128,9 +128,9 @@ else
 
 
 
-## <a name="setting-the-user-comment-field-level-1007"></a>Festlegen des Benutzer Kommentar Felds, Ebene 1007
+## <a name="setting-the-user-comment-field-level-1007"></a>Festlegen des Felds "Benutzerkommentar", Ebene 1007
 
-Das folgende Code Fragment veranschaulicht, wie ein Kommentar einem Benutzer zugeordnet wird, indem die Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " aufgerufen wird. Das Thema [**Benutzer \_ Info \_ 1007**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1007) enthält weitere Informationen.
+Das folgende Codefragment veranschaulicht das Zuordnen eines Kommentars zu einem Benutzer durch Aufrufen der [**NetUserSetInfo-Funktion.**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) Das Thema [**USER \_ INFO \_ 1007**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1007) enthält zusätzliche Informationen.
 
 
 ```C++
@@ -155,9 +155,9 @@ else
 
 ## <a name="setting-the-user-flags-level-1008"></a>Festlegen der Benutzerflags, Ebene 1008
 
-Das folgende Code Fragment veranschaulicht, wie Benutzerflags mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " festgelegt werden. Das Thema [**Benutzer \_ Info \_ 1008**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1008) enthält eine Liste gültiger Werte für die Flags und eine Beschreibung der einzelnen Flags.
+Das folgende Codefragment veranschaulicht das Festlegen von Benutzerflags mit einem Aufruf der [**NetUserSetInfo-Funktion.**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) Das Thema [**USER \_ INFO \_ 1008**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1008) enthält eine Liste gültiger Werte für die Flags und eine Beschreibung der einzelnen Flags.
 
-Beachten Sie, dass das \_ kennflag für das Angleichen Skript für Windows NT-, Windows 2000-, Windows XP-und LAN Manager-Netzwerke festgelegt werden muss Wenn Sie versuchen, andere Flags festzulegen, ohne ein "UF- \_ Skript" auf diese Netzwerke festzulegen, schlägt die Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " fehl
+Beachten Sie, dass das UF \_ SCRIPT-Flag für Windows NT-, Windows 2000-, Windows XP- und LAN Manager-Netzwerke festgelegt werden muss. Der Versuch, andere Flags festzulegen, ohne UF SCRIPT in diesen Netzwerken festzulegen, \_ führt dazu, dass die [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) fehlschlägt.
 
 
 ```C++
@@ -178,9 +178,9 @@ else
 
 
 
-## <a name="setting-the-user-script-path-level-1009"></a>Festlegen des Benutzer Skript Pfads, Ebene 1009
+## <a name="setting-the-user-script-path-level-1009"></a>Festlegen des Benutzerskriptpfads, Ebene 1009
 
-Das folgende Code Fragment veranschaulicht, wie der Pfad für die Anmelde Skriptdatei eines bestimmten Benutzers mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " festgelegt wird. Die Skriptdatei kann ein sein. Cmd-Datei, eine. EXE-Datei oder ein. BAT-Datei. Die Zeichenfolge kann auch NULL sein. Das Thema [**Benutzer \_ Info \_ 1009**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1009) enthält weitere Informationen.
+Das folgende Codefragment veranschaulicht, wie der Pfad für die Anmeldeskriptdatei eines bestimmten Benutzers mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) festgelegt wird. Die Skriptdatei kann ein sein. CMD-Datei, .EXE- oder .BAT datei. Die Zeichenfolge kann auch NULL sein. Das Thema [**USER \_ INFO \_ 1009**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1009) enthält zusätzliche Informationen.
 
 
 ```C++
@@ -201,9 +201,9 @@ else
 
 
 
-## <a name="setting-the-user-authority-flags-level-1010"></a>Festlegen der benutzerautorierungsflags, Ebene 1010
+## <a name="setting-the-user-authority-flags-level-1010"></a>Festlegen der Benutzerautoritätsflags, Ebene 1010
 
-Das folgende Code Fragment veranschaulicht, wie die Operatoren für Operator Privilegien für einen Benutzer mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " festgelegt werden. Das Thema [**Benutzer \_ Info \_ 1010**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1010) enthält eine Liste gültiger Werte für die Flags und eine Beschreibung der einzelnen Flags.
+Das folgende Codefragment veranschaulicht, wie die Operatorberechtigungsflags für einen Benutzer mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) festgelegt werden. Das Thema [**USER \_ INFO \_ 1010**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1010) enthält eine Liste gültiger Werte für die Flags und eine Beschreibung der einzelnen Flags.
 
 
 ```C++
@@ -226,7 +226,7 @@ else
 
 ## <a name="setting-the-user-full-name-level-1011"></a>Festlegen des vollständigen Benutzernamens, Ebene 1011
 
-Das folgende Code Fragment veranschaulicht, wie der vollständige Name eines Benutzers mit einem Aufrufen der Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " festgelegt wird. Das Thema [**Benutzer \_ Info \_ 1011**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1011) enthält weitere Informationen.
+Das folgende Codefragment veranschaulicht, wie der vollständige Name eines Benutzers mit einem Aufruf der [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) festgelegt wird. Das Thema [**USER \_ INFO \_ 1011**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1011) enthält zusätzliche Informationen.
 
 
 ```C++
@@ -247,6 +247,6 @@ else
 
 
 
- 
+ 
 
- 
+ 
