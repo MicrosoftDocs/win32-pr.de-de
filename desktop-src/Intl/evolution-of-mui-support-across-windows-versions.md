@@ -1,109 +1,79 @@
 ---
-description: Entwicklung der MUI-Unterstützung in Windows-Versionen
+description: Weiterentwicklung der SUPPORTS-Unterstützung über Windows Versionen hinweg
 ms.assetid: a3bda96e-6a54-41b3-88d3-9da88d7c0416
-title: Entwicklung der MUI-Unterstützung in Windows-Versionen
+title: Weiterentwicklung der SUPPORTS-Unterstützung über Windows Versionen hinweg
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b896c3651cbea3eef8f2d2021194742f24818f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57e08ff181cf34daa95710d5bf57a294703a88ef
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362548"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467897"
 ---
-# <a name="evolution-of-mui-support-across-windows-versions"></a>Entwicklung der MUI-Unterstützung in Windows-Versionen
+# <a name="evolution-of-mui-support-across-windows-versions"></a>Weiterentwicklung der SUPPORTS-Unterstützung über Windows Versionen hinweg
 
 -   [Vor Windows Vista](#before-windows-vista)
 -   [Windows Vista und darüber hinaus](#windows-vista-and-beyond)
-    -   [Ein sprach neutrales/MUI-Betriebssystem](#a-language-neutralmui-operating-system)
-    -   [Bereitstellungs Szenarien sind vollständig MUI-basiert](#deployment-scenarios-are-fully-mui-based)
-    -   [Bereitstellung mit einem Image](#single-image-deployment)
-    -   [Verbessertes Wartungs Modell](#improved-servicing-model)
-    -   [MUI-Infrastruktur](#mui-infrastructure)
-    -   [Sprach Verwaltung](#language-management)
-    -   [Ressourcen Behandlung](#resource-handling)
+    -   [Ein sprachneutrales/NAP-Betriebssystem](#a-language-neutralmui-operating-system)
+    -   [Bereitstellungsszenarios sind vollständig AUF DEM BEREITSTELLUNGS-Basierten basieren.](#deployment-scenarios-are-fully-mui-based)
+    -   [Bereitstellung eines einzelnen Images](#single-image-deployment)
+    -   [Verbessertes Wartungsmodell](#improved-servicing-model)
+    -   [INFRASTRUCTURE-Infrastruktur](#mui-infrastructure)
+    -   [Sprachverwaltung](#language-management)
+    -   [Ressourcenbehandlung](#resource-handling)
 
 ## <a name="before-windows-vista"></a>Vor Windows Vista
 
-Vor der Windows Vista-Version waren Windows mit einsprachigen Images ausgeliefert, was bedeutete, dass jede lokalisierte Version von Windows eine einzige Sprache für Ihre Benutzeroberfläche enthielt. MUI war ein Add-on für die englische Version des Betriebssystems, und die mehrsprachigen Benutzeroberflächen Pakete konnten nur bestimmten englischen Windows-Versionen hinzugefügt werden. Bei der Installation unter der englischen Version von Windows erlaubte MUI die Benutzeroberflächen Sprache des Betriebssystems entsprechend den Einstellungen einzelner Benutzer für eine der unterstützten Sprachen zu ändern.
+Vor der Version Windows Vista Windows mit Einzelsprachimages ausgeliefert, was bedeutete, dass jede lokalisierte Version von Windows eine einzelne Sprache für die Benutzeroberfläche enthielt. DIEs war ein Add-On zur englischen Version des Betriebssystems, und die mehrsprachige Benutzeroberfläche Packs konnten nur bestimmten englischen Versionen von Windows hinzugefügt werden. Bei der Installation auf der englischen Version von Windows erlaubte DIE LANGUAGE-Einstellung, dass die Sprache der Benutzeroberfläche des Betriebssystems gemäß den Einstellungen einzelner Benutzer in eine der unterstützten Sprachen geändert werden konnte.
 
-Das MUI Pack Modell hat die MUI-Unterstützung für Anwendungen nicht verfügbar gemacht. Obwohl Entwickler mehrsprachige Anwendungen erstellen konnten, mussten Sie dafür eigene Mechanismen erstellen.
+Das MUI Pack-Modell hat keine SUPPORTS-Unterstützung für Anwendungen verfügbar gemacht. Obwohl Entwickler mehrsprachige Anwendungen erstellen konnten, mussten sie dafür eigene Mechanismen erstellen.
 
 ## <a name="windows-vista-and-beyond"></a>Windows Vista und darüber hinaus
 
-Mit Windows Vista machte Microsoft bedeutende Investitionen in MUI. Windows Vista wurde von Grund auf auf einer MUI-Plattform erstellt. Obwohl dies ein wichtiger Fortschritt in der Windows-Lokalisierungsstrategie darstellt, ist es ein wichtiger Faktor für Microsoft, Windows in mehr Sprachen als je zuvor bereitzustellen. es ist vor allem eine gute Voraussetzung für Windows-Benutzer und-Kunden.
+Mit Windows Vista hat Microsoft eine erhebliche Investition in DAS UNTERNEHMEN getätigt. Windows Vista wird von Grund auf auf einer VISTA-Plattform erstellt. Dies ist zwar ein wichtiger Fortschritt in Windows Lokalisierungsstrategie, da es für Microsoft eine wichtige Möglichkeit ist, Windows in mehr Sprachen als je zuvor bereitzustellen, aber es ist für Windows Benutzer und Kunden ein großer Fortschritt.
 
-### <a name="a-language-neutralmui-operating-system"></a>Ein sprach neutrales/MUI-Betriebssystem
+### <a name="a-language-neutralmui-operating-system"></a>Ein sprachneutrales/NAP-Betriebssystem
 
-Die meisten Windows Vista-Binärdateien sind MUI-konform, und ihre lokalisierbaren Daten werden getrennt vom Code gespeichert. Dies bietet Flexibilität, da jeweils unterschiedliche Sprach Daten hinzugefügt werden können.
+Der Großteil der Windows Vista-Binärdateien ist MIT DEM-Standard konform, und ihre lokalisierbaren Daten werden getrennt vom Code gespeichert. Dies bietet Flexibilität, da jederzeit unterschiedliche Sprachdaten hinzugefügt werden können.
 
-### <a name="deployment-scenarios-are-fully-mui-based"></a>Bereitstellungs Szenarien sind vollständig MUI-basiert
+### <a name="deployment-scenarios-are-fully-mui-based"></a>Bereitstellungsszenarios sind vollständig AUF DER BASIS VON BEREITSTELLUNGEN basieren.
 
-Der Verpackungs-und Installations Entwurf von Windows Vista ist MUI-basiert, und alle lokalisierbaren Daten werden in sprachspezifischen Paketen verpackt, und die einzelnen Sprachpakete können in verschiedenen Szenarien bereitgestellt werden. Obwohl die Einzelhandels-DVDs für Windows Vista einzelne Sprachversionen enthalten, können Benutzer der Ultimate-Edition zusätzliche MUI Language Packs herunterladen und die Benutzeroberflächen Sprache über die Systemsteuerung für Regions **-und Sprachoptionen** wechseln. Lizenznehmer von Enterprise Edition erhalten alle Sprachen und können diese bereitstellen.
+Die Windows Vista-Paketierungs- und -Installationsentwurf sind AUF DER BASIS VON, und alle lokalisierbaren Daten werden in sprachspezifischen Paketen gepackt, und jedes Sprachpaket kann in unterschiedlichen Szenarien bereitgestellt werden. Obwohl die Verkaufs-DVDs für Windows Vista z. B. Einzelsprachversionen enthalten, können Benutzer der Ultimate-Edition zusätzliche EDITIONS-Sprachpakete herunterladen und die Benutzeroberflächensprache über die Systemsteuerung **"Regionale Optionen" und "Sprachoptionen"** wechseln. Enterprise-Editionslizenzen erhalten alle Sprachen und können jede dieser Sprachen bereitstellen.
 
-### <a name="single-image-deployment"></a>Bereitstellung mit einem Image
+### <a name="single-image-deployment"></a>Bereitstellung eines einzelnen Images
 
-Unternehmenskunden und-OEMs können nun die Anzahl der abzurufenden Images reduzieren, um Windows und Anwendungen auf Computern über verschiedene Gebiets Schemas über eine Bereitstellung mit nur einem Image bereitzustellen.
+Enterprise Kunden und OEMs können jetzt die Anzahl der Images reduzieren, die sie verwalten müssen, um Windows und Anwendungen auf Computern über verschiedene Gebietsschemas hinweg über die Bereitstellung einzelner Images bereitzustellen.
 
-Mit MUI unter Windows Vista kann ein Bild, das mehrere Sprachen enthält, für beliebige Benutzer bereitgestellt werden, und Benutzer können Ihre eigenen bevorzugten Sprachen (innerhalb der Richtlinie) während des Setups oder die anfängliche "Standarddarstellung" mit dem Computer ermitteln. Insbesondere können OEMs viele Benutzeroberflächen Sprachen auf Ihren neuen Computern ablegen, um Benutzern die Auswahl aus dem Begrüßungs Center zu ermöglichen. Daher wird von einem Bild mit mehreren Sprachpaketen eine Liste der verfügbaren Sprachen angezeigt, und Benutzer können eine der verfügbaren Sprachen auswählen. Alle internationalen Einstellungen werden dann entsprechend der ausgewählten Sprache oder dem ausgewählten Gebiets Schema festgelegt.
+Mit DEM FOKUS auf Windows Vista kann ein Image mit mehreren Sprachen für alle Sprachbenutzer bereitgestellt werden, und Benutzer können ihre eigenen bevorzugten Sprachen (innerhalb der Richtlinie) während des Setups oder der anfänglichen "out-of-the-box"-Benutzeroberfläche mit dem Computer bestimmen. OeMs können insbesondere viele Benutzeroberflächensprachen auf ihren neuen Computern installieren, damit Benutzer eine der Begrüßungscenter auswählen können. Aus einem Bild mit mehreren Sprachpaketen zeigt Setup daher eine Liste der verfügbaren Sprachen an und ermöglicht Benutzern die Auswahl einer dieser Sprachen. Alle internationalen Einstellungen werden dann so festgelegt, dass sie mit der ausgewählten Sprache oder dem ausgewählten Gebietsschema übereinstimmen.
 
-### <a name="improved-servicing-model"></a>Verbessertes Wartungs Modell
+### <a name="improved-servicing-model"></a>Verbessertes Wartungsmodell
 
-Das gleiche QFE-oder sicherheitsfixpaket kann nun auf allen Sprachsystemen installiert werden. Dies ist wichtig, da es einen schnelleren Trend der Sicherheitskorrekturen ermöglicht und es allen internationalen Benutzern ermöglicht wird, von der gleichen Zeit für alle Sicherheitskorrekturen zu profitieren.
+Das gleiche QFE- oder Sicherheitsfixpaket kann jetzt auf allen Sprachsystemen installiert werden. Dies ist wichtig, da sie insbesondere eine schnellere Verarbeitung von Sicherheitsfixes ermöglicht und es allen internationalen Benutzern ermöglicht, von der gleichen Zeitverfügbarkeit aller Sicherheitsfixes zu profitieren.
 
-### <a name="mui-infrastructure"></a>MUI-Infrastruktur
+### <a name="mui-infrastructure"></a>INFRASTRUCTURE-Infrastruktur
 
-Ab Windows Vista sind MUI-APIs verfügbar, mit denen Entwickler die MUI-Mechanismen für Ihre eigenen Anwendungen nutzen können, ohne benutzerdefinierte Logik für die Ressourcenverarbeitung und sprach Verwaltung erstellen zu müssen.
+Ab Windows Vista sind DIE APIs von CAB verfügbar, damit Entwickler die VORTEILE DER MECHANISMEN für ihre eigenen Anwendungen nutzen können, ohne benutzerdefinierte Logik für die Ressourcenbehandlung und Sprachverwaltung erstellen zu müssen.
 
-### <a name="language-management"></a>Sprach Verwaltung
+### <a name="language-management"></a>Sprachverwaltung
 
-Grundlegende MUI-APIs, die Verwaltungsfunktionen für die Benutzeroberfläche bereitstellen, sind als Teil der MUI-Infrastruktur verfügbar. Um die verschiedenen Einstellungen der Benutzeroberflächen Sprache auf System-, Benutzer-und Anwendungsebene verwalten zu können, kombiniert MUI Sie intern zu einer einzigen priorisierten Liste. MUI implementiert dann auf der Grundlage dieser priorisierten Liste einen Fall Back Mechanismus, der partielle Lokalisierungslösungen ermöglicht und Benutzern eine angemessene –, falls nicht gewünscht – Benutzeroberflächen Sprache bereitstellt.
+BaseBASE-APIs, die Funktionen zur Verwaltung von Benutzeroberflächensprachen bereitstellen, sind als Teil der INFRASTRUCTURE-Infrastruktur verfügbar. Um die verschiedenen Einstellungen für die Benutzeroberflächensprache auf System-, Benutzer- und Anwendungsebene zu verwalten, werden diese intern in einer einzigen priorisierten Liste zusammengefasst. DANN implementiert DAS PROGRAMM einen Fallbackmechanismus, der auf dieser priorisierten Liste basiert, sodass Teillokalisierungslösungen möglich sind, während Benutzern eine geeignete , falls nicht bevorzugte Benutzeroberfläche zur Verfügung steht.
 
-Beispielsweise kann ein System, auf dem die spanische Version von Windows Vista mit einem auf dem Basis Betriebssystem installierten Sprachschnittstellen Paket (Sync Language Interface Pack) ausgeführt wird, das folgende Verhalten unterstützen: das System versucht, seine Ressourcen zuerst in Katalanisch anzuzeigen. wenn diese Ressourcen nicht in Katalanisch verfügbar sind, sollten Sie dem Benutzer stattdessen spanische Ressourcen bereitstellen.
+Beispielsweise kann ein System, auf dem die spanischen Version von Windows Vista mit einem Language Interface Pack (LIP) installiert ist, das auf dem Basisbetriebssystem installiert ist, folgendes Verhalten unterstützen: Das System versucht zunächst, seine Ressourcen in "Zuerst" anzuzeigen, und wenn diese Ressourcen nicht in "English" verfügbar sind, stellen Sie dem Benutzer stattdessen spanischen Ressourcen zur Verfügung.
 
-### <a name="resource-handling"></a>Ressourcen Behandlung
+### <a name="resource-handling"></a>Ressourcenbehandlung
 
-Mit der verbesserten MUI-Infrastruktur, die ab Windows Vista verfügbar ist, sind die meisten gängigen Ressourcen Technologien MUI-fähig. In der folgenden Tabelle finden Sie weitere Informationen zur Unterstützung der Ressourcen Behandlung in Windows Vista.
+Mit der verbesserten INFRASTRUCTURE-Infrastruktur, die ab Windows Vista verfügbar ist, sind die gängigsten Ressourcentechnologien FÜR DIE BEREITSTELLUNG aktiviert. Die folgende Tabelle enthält zusätzliche Details zur Unterstützung der Ressourcenbehandlung, die in Windows Vista verfügbar ist.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Support</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Unterstützte Ressourcentypen</td>
-<td><ul>
-<li>Win32/nicht verwaltete Ressource:. DLL/. EXE/. OCX</li>
-<li>Shell-bezogene Registrierungen</li>
-<li>Verwaltungs bezogene Ressourcen: Ereignisprotokoll, Snap-in/MSC-Dateien</li>
-<li>WMI: MOF/MFL</li>
-<li>Gruppenrichtlinie: ADMX/ADML</li>
-<li>Verwaltete Resources.dll</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Entwicklungstools</td>
-<td><ul>
-<li>Für Win32: RC.exe, MUIRCT.exe und Visual Studio 2005 und höher</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Eingeschränkte Ressourcentyp Unterstützung</td>
-<td><ul>
-<li>*. chm-Hilfedateien</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Category | Support | 
+|----------|---------|
+| Unterstützte Ressourcentypen | <ul><li>Win32/nicht verwaltete Ressource: .DLL/.EXE/. OCX</li><li>Shell-bezogene Registrierungen</li><li>Verwaltungsbezogene Ressourcen: Ereignisprotokoll, Snap-In-/MSC-Dateien</li><li>WMI: MOF/MFL</li><li>Gruppenrichtlinie: ADMX/ADML</li><li>Verwaltete Resources.dll</li></ul> | 
+| Entwicklungstools | <ul><li>Für Win32: RC.exe, MUIRCT.exe und Visual Studio 2005 und höher</li></ul> | 
+| Eingeschränkte Ressourcentypunterstützung | <ul><li>*.chm-Hilfedateien</li></ul> | 
+
 
 
 

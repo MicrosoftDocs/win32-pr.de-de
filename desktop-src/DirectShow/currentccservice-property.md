@@ -1,24 +1,24 @@
 ---
-description: Die currentccservice-Eigenschaft legt den aktuellen Untertitel Dienst fest oder ruft ihn ab.
+description: Die CurrentCCService-Eigenschaft legt den aktuellen Untertiteldienst fest oder ruft diesen ab.
 ms.assetid: 094cf812-3122-4d5f-af8a-afd1c2264a2b
-title: Currentccservice (Eigenschaft)
+title: CurrentCCService-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb5c1ddf243b0ec943be1f22930a8802d28d1bda
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d836e852d1a144abb5422f71d0127eb9c37b8f333dce0723db2c2b3b1889ec50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075960"
 ---
-# <a name="currentccservice-property"></a>Currentccservice (Eigenschaft)
+# <a name="currentccservice-property"></a>CurrentCCService-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `CurrentCCService` Eigenschaft legt den aktuellen Untertitel Dienst fest oder ruft ihn ab.
+Die `CurrentCCService` -Eigenschaft legt den aktuellen Untertiteldienst fest oder ruft sie ab.
 
 ``` syntax
 [ iService = ] MSWebDVD.CurrentCCService
@@ -26,19 +26,19 @@ Die- `CurrentCCService` Eigenschaft legt den aktuellen Untertitel Dienst fest od
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen ganzzahligen Wert zurück, der den Typ des aktivierten Dienstanbieter dienstanens
+Gibt einen ganzzahligen Wert zurück, der den Typ des aktivierten Untertiteldiensts angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mögliche Werte für diese Eigenschaft:
+Die möglichen Werte dieser Eigenschaft sind:
 
 
 
 | Wert | BESCHREIBUNG                                                          |
 |-------|----------------------------------------------------------------------|
 | 0x0   | Kein aktueller Dienst. Dies ist der Standardwert.                       |
-| 0x1   | True Untertitel, erstes Feld. Standard Dienst.                       |
-| 0x2   | Untertitel für sekundäre Sprache, zweites Feld. Wird in der Regel nicht verwendet. |
+| 0x1   | True captioning, first field. Standarddienst.                       |
+| 0x2   | Beschriftung für sekundäre Sprache, zweites Feld. Im Allgemeinen nicht verwendet. |
 
 
 
@@ -50,7 +50,7 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 <dl> <dt>
 
-[**Ccactive**](ccactive-property.md)
+[**CCActive**](ccactive-property.md)
 </dt> </dl>
 
  

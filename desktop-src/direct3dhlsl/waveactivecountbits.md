@@ -1,6 +1,6 @@
 ---
 title: WaveActiveCountBits-Funktion
-description: Zählt die Anzahl der booleschen Variablen, die für alle aktiven Lanes in der aktuellen Welle als TRUE ausgewertet werden, und repliziert das Ergebnis auf alle Lanes in der Welle.
+description: Zählt die Anzahl der booleschen Variablen, die auf allen aktiven Spuren in der aktuellen Welle als true ausgewertet werden, und repliziert das Ergebnis auf alle Spuren in der Welle.
 ms.assetid: 053E100C-7E09-4F9D-9F38-9D5E208A38CE
 keywords:
 - WaveActiveCountBits-Funktion HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4e1642cbd5cbdef162511185e9d2c05e849d78486b82e8219623286f33e39223
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: a53a2953ba7d77f1969a7d5dabef3c17437e8bbb
+ms.sourcegitcommit: 8d7ce0c4827f8a4fd501cc6487f1a8360e944577
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118504935"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122767604"
 ---
 # <a name="waveactivecountbits-function"></a>WaveActiveCountBits-Funktion
 
-Zählt die Anzahl der booleschen Variablen, die für alle aktiven Lanes in der aktuellen Welle als TRUE ausgewertet werden, und repliziert das Ergebnis auf alle Lanes in der Welle.
+Zählt die Anzahl der booleschen Variablen, die auf allen aktiven Spuren in der aktuellen Welle als true ausgewertet werden, und repliziert das Ergebnis auf alle Spuren in der Welle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ uint WaveActiveCountBits(
 *bBit* 
 </dt> <dd>
 
-Die booleschen Variablen, die ausgewertet werden sollen. Wenn Sie einen expliziten true booleschen Wert bereitstellen, wird die Anzahl der aktiven Lanes zurückgegeben.
+Die auswertenden booleschen Variablen. Wenn Sie einen expliziten booleschen True-Wert bereitstellen, wird die Anzahl der aktiven Lanes zurückgegeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Anzahl von , die für alle aktiven Lanes in der aktuellen Welle als "true" ausgewertet wird.
+Die Anzahl der Lanes, für die die boolesche Variable auf allen aktiven Spuren in der aktuellen Welle als TRUE ausgewertet wird.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -60,13 +60,13 @@ Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Dies kann effizienter als ein vollständiges WaveActiveSum implementiert werden, wie im folgenden Beispiel beschrieben:
+Dies kann effizienter implementiert werden als ein vollständiges WaveActiveSum, wie im folgenden Beispiel beschrieben:
 
 ``` syntax
 result = WaveActiveCountBits( WaveActiveBallot( bBit ) );
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: EM_GETIMESTATUS Meldung (Winuser. h)
-description: Ruft einen Satz von Statusflags ab, die angeben, wie das Bearbeitungs Steuerelement mit dem Eingabemethoden-Editor (IME) interagiert.
+title: EM_GETIMESTATUS (Winuser.h)
+description: Ruft eine Reihe von Statusflags ab, die angeben, wie das Bearbeitungssteuerfeld mit dem Eingabemethode-Editor (Input Method Editor, IME) interagiert.
 ms.assetid: 56705aed-afab-4f4d-9e0b-dc533b516a15
 keywords:
-- Windows-Steuerelemente für EM_GETIMESTATUS Meldung
+- EM_GETIMESTATUS von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a9b449053972db8101db7f5c01d1a03611cae67
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01a8251a62aa9cf48bcc6476af27e4c3a5dbbb82dd0ce76ca21ae094225a3e46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048990"
 ---
-# <a name="em_getimestatus-message"></a>EM \_ getimestatus-Meldung
+# <a name="em_getimestatus-message"></a>EM \_ GETIMESTATUS-Nachricht
 
-Ruft einen Satz von Statusflags ab, die angeben, wie das Bearbeitungs Steuerelement mit dem Eingabemethoden-Editor (IME) interagiert.
+Ruft eine Reihe von Statusflags ab, die angeben, wie das Bearbeitungssteuerfeld mit dem Eingabemethode-Editor (Input Method Editor, IME) interagiert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,13 +32,13 @@ Ruft einen Satz von Statusflags ab, die angeben, wie das Bearbeitungs Steuerelem
 *wParam* 
 </dt> <dd>
 
-Der Typ des abzurufenden Status. Dieser Parameter kann den folgenden Wert aufweisen:
+Der Typ des abzurufenden Status. Dieser Parameter kann der folgende Wert sein.
 
 
 
 | Wert                                                                                                                                                                                       | Bedeutung                                                       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="EMSIS_COMPOSITIONSTRING"></span><span id="emsis_compositionstring"></span><dl> <dt>**Emsis \_ compositionstring**</dt> </dl> | Legt das Verhalten zum Verarbeiten der Kompositions Zeichenfolge fest.<br/> |
+| <span id="EMSIS_COMPOSITIONSTRING"></span><span id="emsis_compositionstring"></span><dl> <dt>**EMSIS \_ COMPOSITIONSTRING**</dt> </dl> | Legt das Verhalten für die Behandlung der Kompositionszeichenfolge fest.<br/> |
 
 
 
@@ -55,23 +55,23 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Spezifische Daten für den Typ des abzurufenden Status. Mit dem Wert " **\_ compositionstring" der Emsis** für " *Status*" ist dieser Rückgabewert mindestens einer der folgenden Werte.
+Daten, die für den Typ des abzurufenden Status spezifisch sind. Mit dem **EMSIS \_ COMPOSITIONSTRING-Wert** für *status* ist dieser Rückgabewert mindestens einer der folgenden Werte.
 
 
 
 | Rückgabecode                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**eimes \_ getcompstratonce**</dt> </dl>         | Wenn dieses Flag festgelegt ist, verknüpft das Bearbeitungs Steuerelement die [**WM \_ IME- \_ Kompositions**](/windows/desktop/Intl/wm-ime-composition) Nachricht mit *fFlags* , die auf GCS ResultStr festgelegt ist, \_ und gibt die Ergebnis Zeichenfolge sofort zurück. Wenn dieses Flag nicht festgelegt ist, übergibt das Bearbeitungs Steuerelement die **WM- \_ IME- \_ Kompositions** Meldung an die Standardfenster Prozedur und verarbeitet die Ergebnis Zeichenfolge aus der [**WM- \_ char**](/windows/desktop/inputdev/wm-char) -Nachricht. Dies ist das Standardverhalten des Bearbeitungs Steuer Elements.<br/> |
-| <dl> <dt>**eimes \_ cancelcompstrinfocus**</dt> </dl>     | Wenn dieses Flag festgelegt ist, bricht das Bearbeitungs Steuerelement die Kompositions Zeichenfolge ab, wenn es die [**WM- \_ SetFocus**](/windows/desktop/inputdev/wm-setfocus) -Nachricht empfängt. Wenn dieses Flag nicht festgelegt ist, wird die Kompositions Zeichenfolge vom Bearbeitungs Steuerelement nicht abgebrochen. Dies ist das Standardverhalten des Bearbeitungs Steuer Elements.<br/>                                                                                                                                                                       |
-| <dl> <dt>**eimes \_ completecompstrankillfocus**</dt> </dl> | Wenn dieses Flag festgelegt ist, schließt das Bearbeitungs Steuerelement die Kompositions Zeichenfolge nach dem Empfang der [**WM- \_ killfocus**](/windows/desktop/inputdev/wm-killfocus) -Meldung ab. Wenn dieses Flag nicht festgelegt ist, vervollständigt das Bearbeitungs Steuerelement die Kompositions Zeichenfolge nicht. Dies ist das Standardverhalten des Bearbeitungs Steuer Elements.<br/>                                                                                                                                                                   |
+| <dl> <dt>**EIMES \_ GETCOMPSTRATONCE**</dt> </dl>         | Wenn dieses Flag festgelegt ist, wird die [**WM \_ IME \_ COMPOSITION-Nachricht**](/windows/desktop/Intl/wm-ime-composition) mit *fFlags* auf GCS RESULTSTR festgelegt, und die Ergebniszeichenfolge wird \_ sofort zurückgegeben. Wenn dieses Flag nicht festgelegt ist, übergibt das Bearbeitungssteuerzeichen die **WM \_ IME \_ COMPOSITION-Meldung** an die Standardfensterprozedur und verarbeitet die Ergebniszeichenfolge aus der [**WM \_ CHAR-Meldung.**](/windows/desktop/inputdev/wm-char) Dies ist das Standardverhalten des Bearbeitungssteuerzeichens.<br/> |
+| <dl> <dt>**EIMES \_ CANCELCOMPSTRINFOCUS**</dt> </dl>     | Wenn dieses Flag festgelegt ist, bricht das Bearbeitungssteuerzeichen die Kompositionszeichenfolge ab, wenn es die [**WM \_ SETFOCUS-Meldung**](/windows/desktop/inputdev/wm-setfocus) empfängt. Wenn dieses Flag nicht festgelegt ist, bricht das Bearbeitungssteuerzeichen die Kompositionszeichenfolge nicht ab. dies ist das Standardverhalten des Bearbeitungssteuer steuerelements.<br/>                                                                                                                                                                       |
+| <dl> <dt>**EIMES \_ COMPLETECOMPSTRKILLFOCUS**</dt> </dl> | Wenn dieses Flag festgelegt ist, schließt das Bearbeitungssteuerzeichen die Kompositionszeichenfolge ab, wenn die [**WM \_ KILLFOCUS-Nachricht empfangen**](/windows/desktop/inputdev/wm-killfocus) wird. Wenn dieses Flag nicht festgelegt ist, schließt das Bearbeitungssteuerzeichen die Kompositionszeichenfolge nicht ab. dies ist das Standardverhalten des Bearbeitungssteuer steuerelements.<br/>                                                                                                                                                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Umfassende **Bearbeitung:** Die **\_ getimestatus** -Nachricht wird nicht unterstützt.
+**Umfangreiche Bearbeitung:** Die **EM \_ GETIMESTATUS-Meldung** wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,9 +79,9 @@ Umfassende **Bearbeitung:** Die **\_ getimestatus** -Nachricht wird nicht unters
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -89,7 +89,7 @@ Umfassende **Bearbeitung:** Die **\_ getimestatus** -Nachricht wird nicht unters
 
 <dl> <dt>
 
-[**EM- \_ Zeit Status**](em-setimestatus.md)
+[**EM \_ SETIMESTATUS**](em-setimestatus.md)
 </dt> </dl>
 
  

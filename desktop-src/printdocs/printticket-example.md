@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie in Anhang H der Spezifikation des Druckschemas.
+description: Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie in Anhang H der Spezifikation des Druckschemas.
 ms.assetid: bef5db10-fac2-48d9-bc8b-8c39d377d945
 title: PrintTicket-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91a1564099824bf99a123b875bc5745138522de3
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 4da38057db2bdee5b923f854477e125596c44dc4455b9574552d377bf3d62105
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119824630"
 ---
 # <a name="printticket-example"></a>PrintTicket-Beispiel
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Dieses Thema wurde in Anhang H der [Druckschemaspezifikation verschoben.](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema wurde in Anhang H der [Druckschemaspezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)verschoben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

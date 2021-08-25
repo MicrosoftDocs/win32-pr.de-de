@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdefaultvaluetoobigexception-Konstruktor'
-title: Esentdefaultvaluetoobigexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDefaultValueTooBigException-Konstruktor'
+title: EsentDefaultValueTooBigException-Konstruktor
 TOCTitle: 'EsentDefaultValueTooBigException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDefaultValueTooBigException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdefaultvaluetoobigexception.esentdefaultvaluetoobigexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 00320ad205b93e1cec1cfce1689f034e10bafc6c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5f1a63d688bc3851427099b3a4093aaf266294017a44d6591659970d8b9d132
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974220"
 ---
-# <a name="esentdefaultvaluetoobigexception-constructor"></a>Esentdefaultvaluetoobigexception-Konstruktor
+# <a name="esentdefaultvaluetoobigexception-constructor"></a>EsentDefaultValueTooBigException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdefaultvaluetoobigexception-Klasse.
+Initialisiert eine neue Instanz der EsentDefaultValueTooBigException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDefaultValueTooBigException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdefaultvaluetoobigexception-Klasse](./esentdefaultvaluetoobigexception-class.md)
+[EsentDefaultValueTooBigException-Klasse](./esentdefaultvaluetoobigexception-class.md)
 
-[Esentdefaultvaluetoobigexception-Elemente](./esentdefaultvaluetoobigexception-members.md)
+[EsentDefaultValueTooBigException-Member](./esentdefaultvaluetoobigexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentmustdisableloggingfordbupgradeexception-Klasse'
-title: Esentmustdisableloggingfordbupgradeexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentMustDisableLoggingForDbUpgradeException-Klasse'
+title: EsentMustDisableLoggingForDbUpgradeException-Klasse
 TOCTitle: EsentMustDisableLoggingForDbUpgradeException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentMustDisableLoggingForDbUpgradeException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmustdisableloggingfordbupgradeexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5c176dfbd9165f28225c4223ea3e47fdc24bb22c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 246bc2ca97dc70bbe4a9a44f3a1da8fd1f73963a97499033641d36933e121aa2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119971520"
 ---
-# <a name="esentmustdisableloggingfordbupgradeexception-class"></a>Esentmustdisableloggingfordbupgradeexception-Klasse
+# <a name="esentmustdisableloggingfordbupgradeexception-class"></a>EsentMustDisableLoggingForDbUpgradeException-Klasse
 
-Basisklasse für JET_err. Mustdisableloggingfordbupgrade-Ausnahmen.
+Basisklasse für JET_err. MustDisableLoggingForDbUpgrade-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentmustdisableloggingfordbupgradeexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentMustDisableLoggingForDbUpgradeException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmustdisableloggingfordbupgradeexception-Member](./esentmustdisableloggingfordbupgradeexception-members.md)
+[EsentMustDisableLoggingForDbUpgradeException-Member](./esentmustdisableloggingfordbupgradeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

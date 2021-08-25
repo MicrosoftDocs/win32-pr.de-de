@@ -1,7 +1,7 @@
 ---
-description: Die Element \_ Variable m memorydc ist ein Handle für den Kontext des Speichergeräts des besitzenden Fensters.
+description: Die m \_ MemoryDC-Membervariable ist ein Handle für den Speichergerätekontext des besitzenden Fensters.
 ms.assetid: b8fda761-3d06-478e-8c43-90f66b983bd7
-title: 'Cdrawimage:: m_MemoryDC Member (winutil. h)'
+title: CDrawImage::m_MemoryDC-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 359e0730d3dab5c634fd4292f8df4d28649246f5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: addca5d7d76ed7e6e88dfad2534184d40aa04243dd3c2fc2bf78c38ce7bc3e3a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076390"
 ---
-# <a name="cdrawimagem_memorydc-member"></a>Cdrawimage:: m \_ memorydc-Member
+# <a name="cdrawimagem_memorydc-member"></a>CDrawImage::m \_ MemoryDC-Member
 
-Die Element `m_MemoryDC` Variable ist ein Handle für den Kontext des Speichergeräts des besitzenden Fensters.
+Die `m_MemoryDC` Membervariable ist ein Handle für den Speichergerätekontext des besitzenden Fensters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ HDC m_MemoryDC;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,10 +51,10 @@ HDC m_MemoryDC;
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: setdrawcontext**](cdrawimage-setdrawcontext.md)
+[**CDrawImage::SetDrawContext**](cdrawimage-setdrawcontext.md)
 </dt> </dl>
 
  

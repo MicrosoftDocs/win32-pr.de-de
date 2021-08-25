@@ -58,7 +58,7 @@ HRESULT ServerStartApp(
 
 Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -71,7 +71,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

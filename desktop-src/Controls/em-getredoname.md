@@ -1,9 +1,9 @@
 ---
-title: EM_GETREDONAME Meldung (RichEdit. h)
-description: Ruft den Typ der nächsten Aktion (sofern vorhanden) in der Wiederholungs Warteschlange des Rich-Edit-Steuer Elements ab.
+title: EM_GETREDONAME Nachricht (Richedit.h)
+description: Ruft ggf. den Typ der nächsten Aktion in der Wiederholungswarteschlange des Rich Edit-Steuerelements ab.
 ms.assetid: 8649236f-32dc-45d3-847e-c9f65ffba44c
 keywords:
-- Windows-Steuerelemente für EM_GETREDONAME Meldung
+- EM_GETREDONAME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ea44257344b9ebdb8ffe91ad97e939aae0db9b9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9687ae54223ec7cc0f908d747eff2504216b79469b5f285863f8c8ffdfe91b3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048820"
 ---
-# <a name="em_getredoname-message"></a>EM \_ getredoname-Meldung
+# <a name="em_getredoname-message"></a>EM \_ GETREDONAME-Nachricht
 
-Ruft den Typ der nächsten Aktion (sofern vorhanden) in der Wiederholungs Warteschlange des Rich-Edit-Steuer Elements ab.
+Ruft ggf. den Typ der nächsten Aktion in der Wiederholungswarteschlange des Rich Edit-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Wiederholungs Warteschlange für das Steuerelement nicht leer ist, ist der zurückgegebene Wert ein [**undonameid**](/windows/desktop/api/Richedit/ne-richedit-undonameid) -Enumerationswert, der den Typ der nächsten Aktion in der Wiederholungs Warteschlange des Steuer Elements angibt.
+Wenn die Wiederholungswarteschlange für das Steuerelement nicht leer ist, ist der zurückgegebene Wert ein [**UNDONAMEID-Enumerationswert,**](/windows/desktop/api/Richedit/ne-richedit-undonameid) der den Typ der nächsten Aktion in der Wiederholungswarteschlange des Steuerelements angibt.
 
-Wenn keine Redoable-Aktionen vorhanden sind oder der Typ der nächsten Redoable-Aktion unbekannt ist, ist der Rückgabewert 0 (null).
+Wenn keine wiederholbaren Aktionen vorhanden sind oder der Typ der nächsten wiederholbaren Aktion unbekannt ist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können, sind das eingeben, löschen, Drag-Drop-, Ausschneide-und Einfügevorgänge. Diese Informationen können für Anwendungen nützlich sein, die eine erweiterte Benutzeroberfläche für Rückgängigvorgänge und Wiederholungs Vorgänge bereitstellen, z. b. ein Dropdown-Listenfeld mit Redoable-Aktionen.
+Zu den Aktionstypen, die rückgängig oder neu gezeichnet werden können, gehören Eingabe-, Lösch-, Drag&Drop-, Ausschneide- und Einfügevorgänge. Diese Informationen können für Anwendungen nützlich sein, die eine erweiterte Benutzeroberfläche für Rückgängig- und Wiederholungsvorgänge bereitstellen, z. B. ein Dropdownlistenfeld mit wiederverwendebaren Aktionen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,19 +69,19 @@ Die Typen von Aktionen, die rückgängig gemacht oder wiederholt werden können,
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getundoname**](em-getundoname.md)
+[**EM \_ GETUNDONAME**](em-getundoname.md)
 </dt> <dt>
 
-[**EM- \_ Wiederholung**](em-redo.md)
+[**EM \_ REDO**](em-redo.md)
 </dt> <dt>
 
-[**EM \_ rückgängig machen**](em-undo.md)
+[**EM \_ UNDO**](em-undo.md)
 </dt> <dt>
 
-[**Undonameid**](/windows/desktop/api/Richedit/ne-richedit-undonameid)
+[**UNDONAMEID**](/windows/desktop/api/Richedit/ne-richedit-undonameid)
 </dt> </dl>
 
  

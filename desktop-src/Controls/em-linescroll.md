@@ -1,9 +1,9 @@
 ---
-title: EM_LINESCROLL Meldung (Winuser. h)
-description: Scrollt den Text in einem mehrzeiligen Bearbeitungs Steuerelement.
+title: EM_LINESCROLL (Winuser.h)
+description: Führt einen Bildlauf für den Text in einem mehrzeilenigen Bearbeitungssteuerfeld durch.
 ms.assetid: 5398082d-f1ef-4a3a-9e5a-83cf286adbf1
 keywords:
-- Windows-Steuerelemente für EM_LINESCROLL Meldung
+- EM_LINESCROLL meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 646e225ef269ccddca2cdc29caf635d94c1671e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6da4adbd789a8d9ae3344a1a49d39c7f5fbe22b7ec1ca51fcc6cead98ea7780
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048640"
 ---
-# <a name="em_linescroll-message"></a>EM \_ linescroll-Nachricht
+# <a name="em_linescroll-message"></a>EM \_ LINESCROLL-Nachricht
 
-Scrollt den Text in einem mehrzeiligen Bearbeitungs Steuerelement.
+Führt einen Bildlauf für den Text in einem mehrzeilenigen Bearbeitungssteuerfeld durch.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,32 +32,32 @@ Scrollt den Text in einem mehrzeiligen Bearbeitungs Steuerelement.
 *wParam* 
 </dt> <dd>
 
-Steuer **Elemente bearbeiten:** Die Anzahl der Zeichen, die horizontal durchlaufen werden sollen.
+**Steuerelemente bearbeiten:** Die Anzahl der Zeichen, die horizontal gescrollt werden soll.
 
-**Rich Edit-Steuerelemente:** Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+**Umfangreiche Bearbeitungssteuerelemente:** Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Die Anzahl der Zeilen, für die vertikale Bildläufe durchführen
+Die Anzahl der Zeilen, die vertikal gescrollt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht an ein mehrzeilige Bearbeitungs Steuerelement gesendet wird, ist der Rückgabewert " **true**".
+Wenn die Nachricht an ein mehrstufiges Bearbeitungssteuerteil gesendet wird, ist der Rückgabewert **TRUE.**
 
-Wenn die Nachricht an ein einzeilige Bearbeitungs Steuerelement gesendet wird, ist der Rückgabewert **false**.
+Wenn die Nachricht an ein einzeilenbasiertes Bearbeitungssteuer steuerelement gesendet wird, ist der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das-Steuerelement scrollt nicht vertikal nach der letzten Textzeile im Bearbeitungs Steuerelement. Wenn die aktuelle Zeile zuzüglich der durch den *LPARAM* -Parameter angegebenen Anzahl von Zeilen die Gesamtzahl der Zeilen im Bearbeitungs Steuerelement überschreitet, wird der Wert so angepasst, dass die letzte Zeile des Bearbeitungs Steuer Elements auf den oberen Rand des Fensters zum Bearbeiten von Steuerelementen gescrollt wird.
+Das Steuerelement führt keinen vertikalen Bildlauf über die letzte Textzeile im Bearbeitungssteuerfeld durch. Wenn die aktuelle Zeile plus die Anzahl der vom *lParam-Parameter* angegebenen Zeilen die Gesamtzahl der Zeilen im Bearbeitungssteuerfeld überschreitet, wird der Wert so angepasst, dass die letzte Zeile des Bearbeitungssteuerfelds nach oben im Bearbeitungssteuerfenster gescrollt wird.
 
-Steuer **Elemente bearbeiten:** Die **\_ gelinescroll** -Nachricht scrollt den Text vertikal oder horizontal in einem mehrzeiligen Bearbeitungs Steuerelement. Die **EM \_ linescroll** -Nachricht kann verwendet werden, um einen horizontalen Bildlauf nach dem letzten Zeichen einer beliebigen Zeile durchführen.
+**Steuerelemente bearbeiten:** Die **MELDUNG EM \_ LINESCROLL** führt einen vertikalen oder horizontalen Bildlauf des Texts in einem mehrzeigen Bearbeitungssteuerfeld durch. Die **EM \_ LINESCROLL-Meldung** kann verwendet werden, um horizontal nach dem letzten Zeichen einer beliebigen Zeile zu scrollen.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Die **\_ gelinescroll** -Nachricht führt einen vertikalen Bildlauf in einem mehrzeiligen Bearbeitungs Steuerelement aus. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Die **MELDUNG EM \_ LINESCROLL** führt einen vertikalen Bildlauf des Texts in einem mehrzeigen Bearbeitungssteuerfeld durch. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,9 +65,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

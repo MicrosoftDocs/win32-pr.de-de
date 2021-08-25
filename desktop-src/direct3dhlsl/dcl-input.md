@@ -1,6 +1,6 @@
 ---
-title: dcl_input (sm4 – asm)
-description: dcl \_ input (sm4 – asm)
+title: dcl_input (sm4 - asm)
+description: dcl \_ input (sm4 - asm)
 ms.assetid: 13456f2a-ee6c-42da-a9fe-670ab0fcbddf
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 3242c2f1e753407d239057fdc4af0a6f04d6d83a66e2a22ffb1be929583c21c8
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 8214287a4afb4c683a94e213cdfed133c03219e2
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118986740"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467007"
 ---
-# <a name="dcl_input-sm4---asm"></a>dcl \_ input (sm4 – asm)
+# <a name="dcl_input-sm4---asm"></a>dcl \_ input (sm4 - asm)
 
 Deklariert ein Shadereingaberegister.
 
@@ -31,49 +31,22 @@ Deklariert ein Shadereingaberegister.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="vN_.mask_"></span><span id="vn_.mask_"></span><span id="VN_.MASK_"></span>v<em>N[.mask]</em><br/></td>
-<td>[in] Ein Scheitelpunktdatenregister. <br/>
-<ul>
-<li><em>N</em> ist eine ganze Zahl, die die Registernummer identifiziert.</li>
-<li><em>[.mask]</em> ist eine optionale Komponentenmaske (.xyzw), die angibt, welche der Registerkomponenten verwendet werden soll.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><span id="interpolationMode"></span><span id="interpolationmode"></span><span id="INTERPOLATIONMODE"></span><em>Interpolationmode</em><br/></td>
-<td>[in] Optional. Der Interpolationsmodus, der nur bei Pixel-Shadereingaberegistern berücksichtigt wird. Es kann sich um einen der folgenden Werte handeln: <br/>
-<ul>
-<li>constant: Interpolieren Sie nicht zwischen Registerwerten.</li>
-<li>linear: Interpolieren Sie linear zwischen Registerwerten.</li>
-<li>linearCentroid: entspricht dem linearen, aber beim Multisampling klammerten Schwerpunkt.</li>
-<li>linearNoperspective – identisch mit linear, aber ohne perspektivische Korrektur.</li>
-<li>linearNoperspectiveCentroid– identisch mit linearer, bei Multisampling geklammerter Schwerpunkt, keine perspektivische Korrektur.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Element | BESCHREIBUNG | 
+|------|-------------|
+| <span id="vN_.mask_"></span><span id="vn_.mask_"></span><span id="VN_.MASK_"></span>v<em>N[.mask]</em><br /> | [in] Ein Vertexdatenregister. <br /><ul><li><em>N ist</em> eine ganze Zahl, die die Registernummer identifiziert.</li><li><em>[.mask] ist</em> eine optionale Komponentenmaske (.xyzw), die angibt, welche der Registerkomponenten verwendet werden soll.</li></ul> | 
+| <span id="interpolationMode"></span><span id="interpolationmode"></span><span id="INTERPOLATIONMODE"></span><em>Interpolationmode</em><br /> | [in] Optional. Der Interpolationsmodus, der nur bei Pixel-Shadereingaberegistern verwendet wird. Es kann sich um einen der folgenden Werte handeln: <br /><ul><li>constant: Interpolieren Sie nicht zwischen Registerwerten.</li><li>linear: Lineare Interpolation zwischen Registerwerten.</li><li>linearCentroid: identisch mit linearem, aber beim Multisampling festgeklammerten Schwerpunkt.</li><li>linearNoperspective: identisch mit linear, aber ohne Perspektivkorrektur.</li><li>linearNoperspectiveCentroid– identisch mit linearem Schwerpunkt, der beim Multisampling an den Klammern klammert wird, keine Perspektivkorrektur.</li></ul> | 
+
 
 
 
  
 
-### <a name="interpolation-notes"></a>Hinweise zur Interpolation
+### <a name="interpolation-notes"></a>Interpolationshinweise
 
-Standardmäßig werden Scheitelpunktattribute von einem Pixelmittelpunkt interpoliert, wenn Multisample-Antialiasing ausgeführt wird. Wenn ein Pixelmittelpunkt nicht abgedeckt ist, wird ein Attribut vor der Interpolation in einen Pixelmittelpunkt extrapoliert.
+Standardmäßig werden Scheitelpunktattribute von einem Pixelmittelpunkt interpoliert, wenn Multisample-Antialiasing verwendet wird. Wenn ein Pixelcenter nicht abgedeckt wird, wird ein Attribut vor der Interpolation zu einem Pixelcenter extrapoliert.
 
-Für ein Pixel, das nicht vollständig abgedeckt ist, oder ein Attribut, das keinen Pixelmittelpunkt abdeckt, können Sie einen Schwerpunkt für die Stichprobenentnahme angeben, wodurch die Stichprobenentnahme an einer Stelle innerhalb des abgedeckten Bereichs des Pixels durchgeführt wird. Da eine Beispielmaske (sofern verwendet) angewendet wird, bevor der Schwerpunkt berechnet wird, kann jeder durch die Stichprobenmaske maskierte Beispielspeicherort nicht als Schwerpunktspeicherort ausgewählt werden.
+Für ein Pixel, das nicht vollständig abgedeckt ist, oder ein Attribut, das keinen Pixelzentrierungsbereich verdeckt, können Sie schwerpunktsyntierte Stichprobenentnahme angeben, die erzwingt, dass die Stichprobenentnahme an einer stelle innerhalb des abgedeckten Bereichs des Pixels erfolgt. Da eine Beispielmaske (sofern verwendet) angewendet wird, bevor der Schwerpunkt berechnet wird, kann jeder von der Beispielmaske maskierte Beispielspeicherort nicht als Schwerpunktposition ausgewählt werden.
 
 Diese Anweisung gilt für die folgenden Shaderstufen:
 
@@ -87,13 +60,13 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Um die Eingabe als Systemwert zu identifizieren, verwenden Sie [dcl \_ input sv \_ (sm4 - asm)](dcl-input-sv.md).
+Verwenden Sie dcl input [ \_ sv \_ (sm4 - asm),](dcl-input-sv.md)um die Eingabe als Systemwert zu identifizieren.
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
-Beispiele:
+Die folgende Auflistung enthält einige Beispiele:
 
 
 ```
@@ -104,7 +77,7 @@ dcl_input v0.x, linearCentroid
 
 
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -127,7 +100,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

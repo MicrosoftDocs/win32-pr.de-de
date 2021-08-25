@@ -1,29 +1,29 @@
 ---
-title: Verwenden der Image-Mastering-API
+title: Verwenden der Bildmaster-API
 description: In den folgenden Beispielen wird die Verwendung von IMAPI veranschaulicht.
 ms.assetid: 93f56e35-698e-4031-8595-9ff2ffb933ae
 keywords:
-- Image Mastering API IMAPI, using
+- Bildmastering-API IMAPI , mit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb700a0e69f182df6189e47745d93c0d8c431810
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a00972f446c62c4e5e1aa73108fc0474437a7a355d41964cd5ed299b9bdf82e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062495"
 ---
-# <a name="using-the-image-mastering-api"></a>Verwenden der Image-Mastering-API
+# <a name="using-the-image-mastering-api"></a>Verwenden der Bildmaster-API
 
 Die folgenden Beispiele veranschaulichen die Verwendung von IMAPI:
 
 -   [Interagieren mit IMAPI](interacting-with-imapi.md)
--   [Verhindern der Abmeldung oder aussetzen während eines Burn-Vorgangs](preventing-logoff-or-suspend-during-a-burn.md)
--   [Erstellen von Disketten mit mehreren Sitzungen](creating-discs-with-multiple-sessions.md)
+-   [Verhindern der Abmelde- oder Angehalten-Affung während einer Brandung](preventing-logoff-or-suspend-during-a-burn.md)
+-   [Erstellen von Datenträgern mit mehreren Sitzungen](creating-discs-with-multiple-sessions.md)
 
- 
+ 
 
- 
+ 
 
 
 

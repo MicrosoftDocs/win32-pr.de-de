@@ -1,6 +1,6 @@
 ---
 title: SplitButton-Steuerelementtyp
-description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den SplitButton-Steuerelementtyp.
+description: Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den SplitButton-Steuerelementtyp.
 ms.assetid: ca4f8e45-7487-4a8b-9df5-edc2b0e56663
 keywords:
 - Benutzeroberflächenautomatisierung,Unterstützung für den SplitButton-Steuerelementtyp
@@ -18,19 +18,19 @@ keywords:
 - Steuerelementtypen, Struktur für SplitButton-Steuerelementtyp
 - Steuerelementtypen, Steuerelementmuster für den SplitButton-Steuerelementtyp
 - Steuerelementtypen,Unterstützung für SplitButton
-- Steuerelementtypen, SplitButton
+- Steuerelementtypen,SplitButton
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb04f75a075fdd10b1cf31db01d09c6a9d9fd9a5d78c7c0499d9196a9ff8a956
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 30e420d369ee09dfd2d92b5e5d79cf94c7013566
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118825227"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470097"
 ---
 # <a name="splitbutton-control-type"></a>SplitButton-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den **SplitButton-Steuerelementtyp.**
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **SplitButton-Steuerelementtyp.**
 
 Das Steuerelement für geteilte Schaltflächen ermöglicht das Ausführen einer Aktion für ein Steuerelement und das Erweitern des Steuerelements, um eine Liste anderer möglicher Aktionen anzuzeigen, die ausgeführt werden können.
 
@@ -51,45 +51,11 @@ Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der B
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>SplitButton
-<ul>
-<li>Bild (0 oder 1)</li>
-<li>Text (0 oder 1)</li>
-<li>Button (1 oder 2)
-<ul>
-<li>Menü (0 oder 1; wird als untergeordnetes Element einer Unterschaltfläche angezeigt, die das ExpandCollapse-Muster unterstützt)
-<ul>
-<li>MenuItem (1:n)</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>SplitButton
-<ul>
-<li>Button (1 oder 2)
-<ul>
-<li>MenuItem (1:n)</li>
-</ul></li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>SplitButton<ul><li>Bild (0 oder 1)</li><li>Text (0 oder 1)</li><li>Button (1 oder 2)<ul><li>Menü (0 oder 1; wird als untergeordnetes Element einer Unterschaltfläche angezeigt, die das ExpandCollapse-Muster unterstützt)<ul><li>MenuItem (1:n)</li></ul></li></ul></li></ul></li></ul> | <ul><li>SplitButton<ul><li>Button (1 oder 2)<ul><li>MenuItem (1:n)</li></ul></li></ul></li></ul> | 
+
 
 
 
@@ -162,48 +128,11 @@ Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton-
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Benutzeroberflächenautomatisierung Struktur – Steuerelementansicht</th>
-<th>Benutzeroberflächenautomatisierung Struktur – Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>&quot;SplitButton-Name &quot; (Invoke, ExpandCollapse)
-<ul>
-<li>Schaltfläche &quot; "Mehr" &quot; (Option) (Aufrufen)
-<ul>
-<li>Menü
-<ul>
-<li>MenuItem</li>
-<li>...</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>&quot;SplitButton-Name &quot; (Invoke, ExpandCollapse)
-<ul>
-<li>Schaltfläche &quot; "Mehr" &quot; (Option) (Aufrufen)
-<ul>
-<li>Menü
-<ul>
-<li>MenuItem</li>
-<li>...</li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Benutzeroberflächenautomatisierung Struktur – Steuerelementansicht | Benutzeroberflächenautomatisierung Struktur – Inhaltsansicht | 
+|-----------------------------------|-----------------------------------|
+| <ul><li>SplitButton „Name“ (Invoke, ExpandCollapse)<ul><li>Schaltfläche "Weitere Option" (Aufrufen)<ul><li>Menü<ul><li>MenuItem</li><li>...</li></ul></li></ul></li></ul></li></ul> | <ul><li>SplitButton „Name“ (Invoke, ExpandCollapse)<ul><li>Schaltfläche "Weitere Option" (Aufrufen)<ul><li>Menü<ul><li>MenuItem</li><li>...</li></ul></li></ul></li></ul></li></ul> | 
+
 
 
 

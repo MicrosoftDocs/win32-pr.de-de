@@ -4,12 +4,12 @@ ms.assetid: f6384910-4411-4ac2-884d-3476c1b6ff96
 title: booleanFormat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9df8c7d2a72f7229c99fb13244aae2b6bc1d4ec63c272f10aa2d35a81740f5d3
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: cc6ed13194fa18ba558c9c7fbac8fb7cd4317b67
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119460050"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623716"
 ---
 # <a name="booleanformat"></a>booleanFormat
 
@@ -57,13 +57,13 @@ Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn ke
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>BESCHREIBUNG</th>
+<th>Attribut</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>

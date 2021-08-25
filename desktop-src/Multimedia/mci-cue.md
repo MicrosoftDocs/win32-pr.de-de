@@ -1,9 +1,9 @@
 ---
-title: MCI_CUE Befehl (MMSYSTEM. h)
-description: Der MCI-Hinweis \_ Befehl gibt ein Gerät an, sodass die Wiedergabe oder Aufzeichnung mit minimaler Verzögerung beginnt. Mit Digital Video-, VCR-und Waveform-Audiogeräten wird dieser Befehl erkannt.
+title: MCI_CUE Befehl (Mmsystem.h)
+description: Der MCI \_ CUE-Befehl gibt ein Gerät an, sodass die Wiedergabe oder Aufzeichnung mit minimaler Verzögerung beginnt. Digital-Video-, VCR- und Waveform-Audio-Geräte erkennen diesen Befehl.
 ms.assetid: 22da4a84-a7af-42df-b950-8d1184fff9ba
 keywords:
-- MCI_CUE Befehl Windows-Multimedia
+- MCI_CUE Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec8463c68f304fe216049568e0df518cbe1d0090
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 432c3fcd89a4841840559e44400716834df260b533d2cf40daa9da5e6a8fb6f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784600"
 ---
-# <a name="mci_cue-command"></a>MCI-Hinweis \_ Befehl
+# <a name="mci_cue-command"></a>MCI \_ CUE-Befehl
 
-Der MCI-Hinweis \_ Befehl gibt ein Gerät an, sodass die Wiedergabe oder Aufzeichnung mit minimaler Verzögerung beginnt. Mit Digital Video-, VCR-und Waveform-Audiogeräten wird dieser Befehl erkannt.
+Der MCI \_ CUE-Befehl gibt ein Gerät an, sodass die Wiedergabe oder Aufzeichnung mit minimaler Verzögerung beginnt. Digital-Video-, VCR- und Waveform-Audio-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,134 +43,134 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI \_ -Benachrichtigung, MCI \_ -Wartezeit oder, für Digital Video-und VCR-Geräte, MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder, für Digital Video- und VCR-Geräte, MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpCue"></span><span id="lpcue"></span><span id="LPCUE"></span>*lpcue*
+<span id="lpCue"></span><span id="lpcue"></span><span id="LPCUE"></span>*lpCue*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**GENERISCHE \_ MCI-PARMS-Struktur. \_**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags werden mit dem **Digitalvideo** -Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Gerätetyp digitalvideo** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_DGV_CUE_INPUT"></span><span id="mci_dgv_cue_input"></span>MCI \_ DGV-Hinweis \_ \_ Eingabe
+<span id="MCI_DGV_CUE_INPUT"></span><span id="mci_dgv_cue_input"></span>MCI \_ DGV \_ CUE \_ INPUT
 </dt> <dd>
 
-Eine Digital Video-Instanz sollte sich auf die Aufzeichnung vorbereiten. Wenn die Anwendung keinen Speicherplatz reserviert hat, reserviert das Gerät den Speicherplatz mithilfe seiner Standardparameter. Die Anwendung kann dieses Flag weglassen, wenn die aktuelle Präsentations Quelle bereits die externe Eingabe ist. (Dieses Flag hat keine Auswirkung auf die Auswahl der Präsentations Quelle.)
+Eine Digitale-Video-Instanz sollte sich auf die Aufzeichnung vorbereiten. Wenn die Anwendung nicht über reservierten Speicherplatz verfügt, reserviert das Gerät den Speicherplatz mithilfe seiner Standardparameter. Die Anwendung kann dieses Flag weglassen, wenn die aktuelle Präsentationsquelle bereits die externe Eingabe ist. (Dieses Flag hat keine Auswirkungen auf die Auswahl der Präsentationsquelle.)
 
 </dd> <dt>
 
-<span id="MCI_DGV_CUE_NOSHOW"></span><span id="mci_dgv_cue_noshow"></span>MCI \_ DGV-Hinweis \_ \_ noshow
+<span id="MCI_DGV_CUE_NOSHOW"></span><span id="mci_dgv_cue_noshow"></span>MCI \_ DGV \_ CUE \_ NOSHOW
 </dt> <dd>
 
-Eine Digital Video-Instanz sollte sich auf die Wiedergabe des Frames vorbereiten, der mit dem Befehl angegeben wurde, ohne ihn anzuzeigen. Wenn dieses Flag angegeben wird, zeigt die Anzeige weiterhin das Bild im Frame Puffer an, auch wenn der entsprechende Frame nicht die aktuelle Position ist. Wenn der Frame Puffer z. b. das Bild aus Frame 7 enthält, zeigt das Gerät weiterhin Frame 7 an, wenn dieses Flag verwendet wird, um das Gerät an eine beliebige andere Position zu überweisen. Mit einem nachfolgenden Hinweis Befehl ohne dieses Flag und ohne das Flag "MCI" wird \_ der aktuelle Frame angezeigt.
+Eine Digital-Video-Instanz sollte sich auf die Wiedergabe des mit dem Befehl angegebenen Frames vorbereiten, ohne ihn anzuzeigen. Wenn dieses Flag angegeben wird, zeigt die Anzeige weiterhin das Bild im Framepuffer an, obwohl der entsprechende Frame nicht die aktuelle Position ist. Wenn der Framepuffer beispielsweise das Bild aus Frame 7 enthält, zeigt das Gerät weiterhin Frame 7 an, wenn dieses Flag verwendet wird, um das Gerät an eine andere Position zu bringen. Ein nachfolgender Cue-Befehl ohne dieses Flag und ohne das MCI \_ TO-Flag zeigt den aktuellen Frame an.
 
 </dd> <dt>
 
-<span id="MCI_DGV_CUE_OUTPUT"></span><span id="mci_dgv_cue_output"></span>MCI- \_ DGV-Hinweis \_ \_ Ausgabe
+<span id="MCI_DGV_CUE_OUTPUT"></span><span id="mci_dgv_cue_output"></span>MCI \_ DGV \_ CUE \_ OUTPUT
 </dt> <dd>
 
-Eine Digital Video-Instanz sollte sich auf die Wiedergabe vorbereiten. Wenn der Arbeitsbereich angehalten wird, findet keine Positionierung statt. Wenn der Arbeitsbereich beendet wird, ändert sich die Position möglicherweise zu einem vorherigen Keyframe-Image. Die Anwendung kann dieses Flag weglassen, wenn die aktuelle Präsentations Quelle bereits der Arbeitsbereich ist.
+Eine Digitale-Video-Instanz sollte sich auf die Wiedergabe vorbereiten. Wenn der Arbeitsbereich angehalten wird, erfolgt keine Positionierung. Wenn der Arbeitsbereich beendet wird, ändert sich die Position möglicherweise in ein vorheriges Keyframebild. Die Anwendung kann dieses Flag weglassen, wenn die aktuelle Präsentationsquelle bereits der Arbeitsbereich ist.
 
 </dd> <dt>
 
-<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ zu
+<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ TO
 </dt> <dd>
 
-Eine Arbeitsbereichs Position ist im **dwto** -Member der durch *lpcue* identifizierten Struktur enthalten. Die den Positions Werten zugewiesenen Einheiten werden mit dem MCI- \_ Flag zum Festlegen \_ \_ des Zeit Formats des Befehls [ \_ MCI](mci-set.md) -Befehl festgelegt. Dies entspricht der Suche nach einer Position, mit der Ausnahme, dass das Gerät nach dem Befehl angehalten wird.
+Eine Arbeitsbereichsposition ist im **dwTo-Member** der durch *lpCue identifizierten* Struktur enthalten. Die Einheiten, die Positionswerten zugewiesen sind, werden mithilfe des MCI \_ SET \_ TIME \_ FORMAT-Flags des [MCI \_ SET-Befehls](mci-set.md) angegeben. Dies entspricht dem Suchen nach einer Position, mit dem Unterschied, dass das Gerät nach dem Befehl angehalten wird.
 
 </dd> </dl>
 
-Bei **Digitalvideo** -Geräten verweist der *lpcue* -Parameter auf eine [**MCI- \_ DGV \_ \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_cue_parms) -Parameter Struktur.
+Bei **Digitalvideogeräten** verweist der *lpCue-Parameter* auf eine [**MCI \_ DGV \_ CUE \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_cue_parms)
 
-Die folgenden zusätzlichen Flags werden für den **VCR** -Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Vcr-Gerätetyp** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_FROM"></span><span id="mci_from"></span>MCI \_ von
+<span id="MCI_FROM"></span><span id="mci_from"></span>MCI \_ FROM
 </dt> <dd>
 
-Der **dwfrom** -Member der Struktur, auf die von *lpcue* verwiesen wird, enthält die im aktuellen Zeitformat angegebene Startposition.
+Der **dwFrom-Member** der -Struktur, auf die *von lpCue* gezeigt wird, enthält die Startposition, die im aktuellen Zeitformat angegeben ist.
 
 </dd> <dt>
 
-<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ zu
+<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ TO
 </dt> <dd>
 
-Der **dwto** -Member der Struktur, auf die von *lpcue* verwiesen wird, enthält den im aktuellen Zeitformat angegebenen endspeicherort (Anhalten).
+Der **dwTo-Member** der -Struktur, auf die *lpCue* zeigt, enthält die endende (anhaltende) Position, die im aktuellen Zeitformat angegeben ist.
 
 </dd> <dt>
 
-<span id="MCI_VCR_CUE_INPUT"></span><span id="mci_vcr_cue_input"></span>MCI- \_ VCR-Hinweis \_ \_ Eingabe
+<span id="MCI_VCR_CUE_INPUT"></span><span id="mci_vcr_cue_input"></span>MCI \_ VCR \_ CUE \_ INPUT
 </dt> <dd>
 
-Vorbereiten der Aufzeichnung.
+Bereiten Sie die Aufzeichnung vor.
 
 </dd> <dt>
 
-<span id="MCI_VCR_CUE_OUTPUT"></span><span id="mci_vcr_cue_output"></span>MCI- \_ VCR-Hinweis \_ \_ Ausgabe
+<span id="MCI_VCR_CUE_OUTPUT"></span><span id="mci_vcr_cue_output"></span>MCI \_ VCR \_ CUE \_ OUTPUT
 </dt> <dd>
 
-Vorbereiten der Wiedergabe. Wenn weder MCI \_ VCR-Hinweis \_ \_ Eingaben noch die MCI- \_ VCR-Hinweis \_ \_ Ausgabe angegeben ist, wird die MCI- \_ VCR-Hinweis \_ \_ Ausgabe angenommen.
+Bereiten Sie sich auf die Wiedergabe vor. Wenn weder MCI \_ VCR \_ CUE \_ INPUT noch MCI \_ VCR \_ CUE OUTPUT angegeben \_ ist, wird MCI \_ VCR \_ CUE OUTPUT \_ angenommen.
 
 </dd> <dt>
 
-<span id="MCI_VCR_CUE_PREROLL"></span><span id="mci_vcr_cue_preroll"></span>MCI \_ VCR-Hinweis- \_ \_ Preroll
+<span id="MCI_VCR_CUE_PREROLL"></span><span id="mci_vcr_cue_preroll"></span>MCI \_ VCR \_ CUE \_ PREROLL
 </dt> <dd>
 
-Leiten Sie das Gerät an die aktuelle Position oder an die **dwfrom** -Position abzüglich der vorab Dauer der Vorabversion ab. Dadurch kann sich das Gerät vor dem Wechsel in den Daten Satz-oder Wiedergabemodus vorbereiten.
+Cue the device to the current position, or the dwFrom position, minus the preroll duration. (Cue the device to the current position, or the **dwFrom** position, minus the preroll duration. Dadurch kann sich das Gerät vorbereiten, bevor es in den Aufzeichnungs- oder Wiedergabemodus wechselt.
 
 </dd> <dt>
 
-<span id="MCI_VCR_CUE_REVERSE"></span><span id="mci_vcr_cue_reverse"></span>MCI- \_ VCR-Hinweis \_ \_ umkehren
+<span id="MCI_VCR_CUE_REVERSE"></span><span id="mci_vcr_cue_reverse"></span>MCI \_ VCR \_ CUE \_ REVERSE
 </dt> <dd>
 
-Die Richtung des nächsten Wiedergabe-oder Daten Satz Befehls ist umgekehrt.
+Die Richtung des nächsten Wiedergabe- oder Aufzeichnungsbefehls ist umgekehrt.
 
 </dd> </dl>
 
-Wenn Sie die Wiedergabe mit dem MCI-Hinweis \_ Befehl mit dem MCI- \_ VCR-Flag- \_ \_ ausgabeflag verwenden, können Sie die MCI-Verwendung abbrechen, \_ indem Sie den [MCI- \_ Wiedergabe](mci-play.md) Befehl mit MCI \_ von, MCI \_ an oder MCI \_ VCR \_ Play Reverse ausgeben \_ .
+Beim Cueing für die Wiedergabe mit dem MCI \_ CUE-Befehl mit dem MCI \_ VCR \_ CUE \_ OUTPUT-Flag können Sie MCI CUE abbrechen, indem Sie \_ den [MCI \_ PLAY-Befehl](mci-play.md) mit MCI \_ FROM, MCI \_ TO oder MCI \_ VCR PLAY REVERSE \_ \_ ausgeben.
 
-Wenn Sie die Aufzeichnung mit dem MCI- \_ Hinweis mit dem MCI \_ VCR-Flag Eingabe Kennzeichen durcharbeiten \_ \_ , können Sie den MCI-Hinweis abbrechen, \_ indem Sie den [MCI- \_ Eintrag](mci-record.md) Befehl mit MCI \_ from, MCI \_ to oder MCI \_ VCR \_ Record \_ Initialize ausgeben.
+Beim Cueing für die Aufzeichnung mit MCI \_ CUE mit dem MCI \_ VCR \_ CUE \_ INPUT-Flag können Sie MCI CUE abbrechen, indem Sie \_ den [MCI \_ RECORD-Befehl](mci-record.md) mit MCI \_ FROM, MCI \_ TO oder MCI \_ VCR RECORD \_ \_ INITIALIZE ausgeben.
 
-Bei **VCR** -Geräten verweist der *lpcue* -Parameter auf eine [**MCI- \_ VCR \_ \_**](mci-vcr-cue-parms.md) -Endpunkt-Parameter Struktur.
+Bei **Vcr-Geräten** zeigt der *lpCue-Parameter* auf eine [**MCI \_ VCR \_ CUE \_ PARMS-Struktur.**](mci-vcr-cue-parms.md)
 
-Die folgenden zusätzlichen Flags werden mit dem **waveaudiogerätetyp** verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Gerätetyp waveaudio** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_WAVE_INPUT"></span><span id="mci_wave_input"></span>MCI- \_ Wave- \_ Eingabe
+<span id="MCI_WAVE_INPUT"></span><span id="mci_wave_input"></span>MCI \_ WAVE \_ INPUT
 </dt> <dd>
 
-Ein Waveform-Audioeingabegerät sollte gecutzt werden.
+Ein Waveform-Audio-Eingabegerät sollte angekuppelt werden.
 
 </dd> <dt>
 
-<span id="MCI_WAVE_OUTPUT"></span><span id="mci_wave_output"></span>MCI- \_ Wave- \_ Ausgabe
+<span id="MCI_WAVE_OUTPUT"></span><span id="mci_wave_output"></span>MCI \_ \_ WAVE-AUSGABE
 </dt> <dd>
 
-Ein Waveform-Audioausgabegerät sollte gecutzt werden. Dies ist das Standardflag, wenn kein Flag angegeben wird.
+Ein Waveform-Audio-Ausgabegerät sollte angekuppelt werden. Dies ist das Standardflag, wenn kein Flag angegeben ist.
 
 </dd> </dl>
 
@@ -182,7 +182,7 @@ Ein Waveform-Audioausgabegerät sollte gecutzt werden. Dies ist das Standardflag
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -190,7 +190,7 @@ Ein Waveform-Audioausgabegerät sollte gecutzt werden. Dies ist das Standardflag
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

@@ -1,9 +1,9 @@
 ---
-title: EM_SETIMECOLOR Meldung (RichEdit. h)
-description: Legt die Zusammensetzung der Eingabemethoden-Editor (IME) für ein Rich-Edit-Steuerelement fest.
+title: EM_SETIMECOLOR Nachricht (Richedit.h)
+description: Legt die Kompositionsfarbe des Eingabemethoden-Editors (Input Method Editor, IME) für ein Rich-Edit-Steuerelement fest.
 ms.assetid: ea5449c9-7d0f-4340-8e3e-1e0b77d443f6
 keywords:
-- Windows-Steuerelemente für EM_SETIMECOLOR Meldung
+- EM_SETIMECOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c020bb3af2b1197afc005bd0b6efec82b609b88
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a0f68e548a36cbdaa28f292feb69b6d56cbc3264b0bea8bdb1938088717bd62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048400"
 ---
-# <a name="em_setimecolor-message"></a>EM- \_ Zeit Farb Meldung
+# <a name="em_setimecolor-message"></a>EM \_ SETIMECOLOR-Meldung
 
-Legt die Zusammensetzung der Eingabemethoden-Editor (IME) für ein Rich-Edit-Steuerelement fest.
+Legt die Kompositionsfarbe des Eingabemethoden-Editors (Input Method Editor, IME) für ein Rich-Edit-Steuerelement fest.
 
 > [!Note]  
-> Diese Meldung wird nur in asiatischen Sprachversionen von Microsoft Rich Edit 1,0 unterstützt. Sie wird in späteren Versionen nicht unterstützt.
+> Diese Meldung wird nur in asiatisch-sprachigen Versionen von Microsoft Rich Edit 1.0 unterstützt. In späteren Versionen wird dies nicht unterstützt.
 
  
 
@@ -37,14 +37,14 @@ Legt die Zusammensetzung der Eingabemethoden-Editor (IME) für ein Rich-Edit-Ste
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**compcolor**](/windows/desktop/api/Richedit/ns-richedit-compcolor) -Struktur, die die festzulegende Kompositions Farbe enthält.
+Zeiger auf eine [**COMPCOLOR-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-compcolor) die die festzulegende Kompositionsfarbe enthält.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Wenn der Vorgang fehlschlägt, ist der Rückgabewert 0 (null).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -70,13 +70,13 @@ Wenn der Vorgang fehlschlägt, ist der Rückgabewert 0 (null).
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getimecolor**](em-getimecolor.md)
+[**EM \_ GETIMECOLOR**](em-getimecolor.md)
 </dt> <dt>
 
-[**Compcolor**](/windows/desktop/api/Richedit/ns-richedit-compcolor)
+[**COMPCOLOR**](/windows/desktop/api/Richedit/ns-richedit-compcolor)
 </dt> </dl>
 
  

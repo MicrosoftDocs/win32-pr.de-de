@@ -1,19 +1,19 @@
 ---
-description: 'In diesem Abschnitt werden die eigenschaften aufgelistet, die von Windows Installer definiert werden:'
+description: 'In diesem Abschnitt werden die eigenschaften aufgeführt, die vom Windows definiert werden:'
 ms.assetid: c91119b9-59d5-4a33-91cd-d3ba63659d12
 title: Eigenschaftenverweis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18958c09c3a0c4c42363d725f61b03b9de00782049928c7f03cf43d4e89043b8
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: e38f952632609090c69b85786c6aef64243d420b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119828470"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481566"
 ---
 # <a name="property-reference"></a>Eigenschaftenverweis
 
-In diesem Abschnitt werden die eigenschaften aufgelistet, die von Windows Installer definiert werden:
+In diesem Abschnitt werden die eigenschaften aufgeführt, die vom Windows definiert werden:
 
 -   [Eigenschaften des Komponentenspeicherorts](#component-location-properties)
 -   [Konfigurationseigenschaften](#configuration-properties)
@@ -27,22 +27,22 @@ In diesem Abschnitt werden die eigenschaften aufgelistet, die von Windows Instal
 -   [Systemordnereigenschaften](#system-folder-properties)
 -   [Benutzerinformationseigenschaften](#user-information-properties)
 
-Zusätzliche Eigenschaften können durch erstellte Daten oder benutzerdefinierte Aktionen angegeben werden. Eigenschaften mit Namen, die keine Kleinbuchstaben enthalten, sind öffentliche Eigenschaften und können in der Befehlszeile angegeben werden.
+Zusätzliche Eigenschaften können durch erstellungsdaten oder benutzerdefinierte Aktionen angegeben werden. Eigenschaften mit Namen, die keine Kleinbuchstaben enthalten, sind öffentliche Eigenschaften und können in der Befehlszeile angegeben werden.
 
-Informationen zu Den Werten des **Registrierungsschlüssels deinstallieren,** die von den Installationseigenschaften bereitgestellt werden, finden Sie unter [Deinstallieren des Registrierungsschlüssels.](uninstall-registry-key.md)
+Informationen zu den Werten des Registrierungsschlüssels **Deinstallieren,** die von den Installereigenschaften bereitgestellt werden, finden Sie unter [Deinstallieren des Registrierungsschlüssels.](uninstall-registry-key.md)
 
 ## <a name="component-location-properties"></a>Eigenschaften des Komponentenspeicherorts
 
-Die folgende Liste enthält Links zu weiteren Informationen zu den Eigenschaften des Komponentenspeicherorts.
+Die folgende Liste enthält Links zu weitere Informationen zu den Eigenschaften des Komponentenspeicherorts.
 
 
 
-| Eigenschaft                                                            | Beschreibung                                                                                                                                                                                                        |
+| Eigenschaft                                                            | BESCHREIBUNG                                                                                                                                                                                                        |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**OriginalDatabase**](originaldatabase.md)<br/>             | Das Installationsprogramm legt diese Eigenschaft auf die gestartete Datenbank, die Datenbank auf der Quelle oder die zwischengespeicherte Datenbank fest.<br/>                                                                                     |
-| [**ParentOriginalDatabase**](parentoriginaldatabase.md)<br/> | Das Installationsprogramm legt diese Eigenschaft für Installationen fest, die von einer [Parallelinstallationsaktion](concurrent-installations.md) ausgeführt werden.<br/>                                                                             |
+| [**OriginalDatabase**](originaldatabase.md)<br/>             | Das Installationsprogramm legt diese Eigenschaft auf die aus der Datenbank gestartete Datenbank, die Datenbank in der Quelle oder die zwischengespeicherte Datenbank fest.<br/>                                                                                     |
+| [**ParentOriginalDatabase**](parentoriginaldatabase.md)<br/> | Das Installationsprogramm legt diese Eigenschaft für Installationen fest, die von einer Gleichzeitige [Installation ausgeführt](concurrent-installations.md) werden.<br/>                                                                             |
 | [**SourceDir**](sourcedir.md)<br/>                           | Stammverzeichnis, das die Quelldateien enthält.<br/>                                                                                                                                                          |
-| [**Targetdir**](targetdir.md)<br/>                           | Gibt das Stammzielverzeichnis für die Installation an. Während einer [Administratorinstallation](administrative-installation.md) ist diese Eigenschaft der Speicherort zum Kopieren des Installationspakets.<br/> |
+| [**TARGETDIR**](targetdir.md)<br/>                           | Gibt das Stammzielverzeichnis für die Installation an. Während einer [Administratorinstallation](administrative-installation.md) ist diese Eigenschaft der Speicherort zum Kopieren des Installationspakets.<br/> |
 
 
 
@@ -54,39 +54,39 @@ Die folgende Liste enthält Links zu weiteren Informationen zu anderen konfiguri
 
 
 
-| Eigenschaft                                                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                   |
+| Eigenschaft                                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aktion**](action.md)<br/>                                                     | Erste Aktion, die aufgerufen wird, nachdem das Installationsprogramm initialisiert wurde.<br/>                                                                                                                                                                                                                                                                                                                          |
+| [**AKTION**](action.md)<br/>                                                     | Die erste Aktion wird aufgerufen, nachdem das Installationsprogramm initialisiert wurde.<br/>                                                                                                                                                                                                                                                                                                                          |
 | [**ALLUSERS**](allusers.md)<br/>                                                 | Bestimmt, wo Konfigurationsinformationen gespeichert werden.<br/>                                                                                                                                                                                                                                                                                                                              |
 | [**ARPAUTHORIZEDCDFPREFIX**](arpauthorizedcdfprefix.md)<br/>                     | URL des Updatekanals für eine Anwendung.<br/>                                                                                                                                                                                                                                                                                                                                      |
-| [**ARPCOMMENTS**](arpcomments.md)<br/>                                           | Stellt Kommentare für das **Hinzufügen oder Entfernen von Programmen** in **Systemsteuerung** bereit.<br/>                                                                                                                                                                                                                                                                                                         |
-| [**ARPCONTACT**](arpcontact.md)<br/>                                             | Stellt Kontakt für das **Hinzufügen oder Entfernen von Programmen** in **Systemsteuerung** bereit.<br/>                                                                                                                                                                                                                                                                                                          |
-| [**ARPINSTALLLOCATION**](arpinstalllocation.md)<br/>                             | Vollqualifizierten Pfad zum primären Ordner einer Anwendung.<br/>                                                                                                                                                                                                                                                                                                                      |
+| [**ARPCOMMENTS**](arpcomments.md)<br/>                                           | Stellt Kommentare für das **Hinzufügen oder Entfernen von Programmen** in **Systemsteuerung.**<br/>                                                                                                                                                                                                                                                                                                         |
+| [**ARPCONTACT**](arpcontact.md)<br/>                                             | Stellt kontakt für das **Hinzufügen oder Entfernen von Programmen** in **Systemsteuerung.**<br/>                                                                                                                                                                                                                                                                                                          |
+| [**ARPINSTALLLOCATION**](arpinstalllocation.md)<br/>                             | Vollqualifizierter Pfad zum primären Ordner einer Anwendung.<br/>                                                                                                                                                                                                                                                                                                                      |
 | [**ARPNOMODIFY**](arpnomodify.md)<br/>                                           | Deaktiviert Funktionen, die ein Produkt ändern.<br/>                                                                                                                                                                                                                                                                                                                                    |
 | [**ARPNOREMOVE**](arpnoremove.md)<br/>                                           | Deaktiviert Funktionen, die ein Produkt entfernen.<br/>                                                                                                                                                                                                                                                                                                                                     |
-| [**ARPNOREPAIR**](arpnorepair.md)<br/>                                           | Deaktiviert die Schaltfläche **Reparieren** im Assistenten "Programme".<br/>                                                                                                                                                                                                                                                                                                                             |
+| [**ARPNOREPAIR**](arpnorepair.md)<br/>                                           | Deaktiviert die Schaltfläche **Reparieren** im Assistenten Programme.<br/>                                                                                                                                                                                                                                                                                                                             |
 | [**ARPPRODUCTICON**](arpproducticon.md)<br/>                                     | Gibt das primäre Symbol für das Installationspaket an.<br/>                                                                                                                                                                                                                                                                                                                           |
-| [**ARPREADME**](arpreadme.md)<br/>                                               | Stellt eine **ReadMe** für das **Hinzufügen oder Entfernen von Programmen** in **Systemsteuerung** bereit.<br/>                                                                                                                                                                                                                                                                                                     |
+| [**ARPREADME**](arpreadme.md)<br/>                                               | Stellt eine **ReadMe für** das **Hinzufügen oder Entfernen von Programmen** in Systemsteuerung. <br/>                                                                                                                                                                                                                                                                                                     |
 | [**ARPSIZE**](arpsize.md)<br/>                                                   | Geschätzte Größe einer Anwendung in Kilobyte.<br/>                                                                                                                                                                                                                                                                                                                                     |
-| [**ARPSYSTEMCOMPONENT**](arpsystemcomponent.md)<br/>                             | Verhindert die Anzeige einer Anwendung in der Liste **Programme hinzufügen oder entfernen.**<br/>                                                                                                                                                                                                                                                                                                         |
+| [**ARPSYSTEMCOMPONENT**](arpsystemcomponent.md)<br/>                             | Verhindert die Anzeige einer Anwendung in der **Liste Programme hinzufügen oder** entfernen.<br/>                                                                                                                                                                                                                                                                                                         |
 | [**ARPURLINFOABOUT**](arpurlinfoabout.md)<br/>                                   | URL für die Startseite einer Anwendung.<br/>                                                                                                                                                                                                                                                                                                                                           |
-| [**ARPURLUPDATEINFO**](arpurlupdateinfo.md)<br/>                                 | URL für Anwendungsupdateinformationen.<br/>                                                                                                                                                                                                                                                                                                                                            |
-| [**AVAILABLEFREEREG**](availablefreereg.md)<br/>                                 | Registrierungsspeicherplatz (in Kilobyte), den eine Anwendung benötigt. Wird von [der AllocateRegistrySpace-Aktion](allocateregistryspace-action.md)verwendet.<br/>                                                                                                                                                                                                                                              |
-| [**LAUFWERK \_ "CCM"**](ccp-drive.md)<br/>                                              | Der Stammpfad für die Qualifizierung von Produkten für KPCh.<br/>                                                                                                                                                                                                                                                                                                                                     |
+| [**ARPURLUPDATEINFO**](arpurlupdateinfo.md)<br/>                                 | URL für Informationen zum Anwendungsupdate.<br/>                                                                                                                                                                                                                                                                                                                                            |
+| [**AVAILABLEFREEREG**](availablefreereg.md)<br/>                                 | Registrierungsspeicherplatz (in Kilobytes), der für eine Anwendung erforderlich ist. Wird von [der AllocateRegistrySpace-Aktion verwendet.](allocateregistryspace-action.md)<br/>                                                                                                                                                                                                                                              |
+| [**CCP \_ DRIVE**](ccp-drive.md)<br/>                                              | Der Stammpfad für das Qualifizieren von Produkten für KPEs.<br/>                                                                                                                                                                                                                                                                                                                                     |
 | [**DefaultUIFont**](defaultuifont.md)<br/>                                       | Standardschriftart, die für Steuerelemente verwendet wird.<br/>                                                                                                                                                                                                                                                                                                                                              |
-| [**DISABLEADVTSHORTCUTS**](disableadvtshortcuts.md)<br/>                         | Legen Sie diese Einstellung fest, um die Generierung der spezifischen Tastenkombinationen zu deaktivieren, die [installation-on-demand](installation-on-demand.md)unterstützen.<br/>                                                                                                                                                                                                                                                            |
+| [**DISABLEADVTSHORTCUTS**](disableadvtshortcuts.md)<br/>                         | Legen Sie fest, um die Generierung der spezifischen Tastenkombinationen zu deaktivieren, die [installation-on-demand unterstützen.](installation-on-demand.md)<br/>                                                                                                                                                                                                                                                            |
 | [**DISABLEMEDIA**](-disablemedia.md)<br/>                                        | Verhindert, dass das Installationsprogramm Medienquellen wie CD-ROMs als gültige Quellen für das Produkt registriert.<br/>                                                                                                                                                                                                                                                                        |
 | [**DISABLEROLLBACK**](-disablerollback.md)<br/>                                  | Deaktiviert das Rollback für die aktuelle Konfiguration.<br/>                                                                                                                                                                                                                                                                                                                                   |
-| [**Executeaction**](executeaction.md)<br/>                                       | Von ExecuteAction initiierte Aktion der obersten Ebene.<br/>                                                                                                                                                                                                                                                                                                                                     |
-| [**EXECUTEMODE**](executemode.md)<br/>                                           | Ausführungsmodus, der vom Installationsprogramm ausgeführt wird.<br/>                                                                                                                                                                                                                                                                                                                                     |
+| [**EXECUTEACTION**](executeaction.md)<br/>                                       | Aktion der obersten Ebene, die von ExecuteAction initiiert wird.<br/>                                                                                                                                                                                                                                                                                                                                     |
+| [**EXECUTEMODE**](executemode.md)<br/>                                           | Ausführungsmodus, den das Installationsprogramm ausführt.<br/>                                                                                                                                                                                                                                                                                                                                     |
 | [**FASTOEM**](fastoem.md)<br/>                                                   | Verbessert die Installationsleistung in bestimmten OEM-Szenarien.<br/>                                                                                                                                                                                                                                                                                                                    |
 | [**INSTALLLEVEL**](installlevel.md)<br/>                                         | Anfängliche Ebene, auf der Features installiert werden.<br/>                                                                                                                                                                                                                                                                                                                                        |
-| [**LIMITUI**](limitui.md)<br/>                                                   | Die Benutzeroberflächenebene ist auf Basic begrenzt.<br/>                                                                                                                                                                                                                                                                                                                                                          |
-| [**LOGACTION**](logaction.md)<br/>                                               | Liste der zu protokollierenden Aktionsnamen.<br/>                                                                                                                                                                                                                                                                                                                                                 |
+| [**LIMITUI**](limitui.md)<br/>                                                   | Die Benutzeroberflächenebene ist auf "Basic" begrenzt.<br/>                                                                                                                                                                                                                                                                                                                                                          |
+| [**LOGACTION**](logaction.md)<br/>                                               | Liste der zu protokollierten Aktionsnamen.<br/>                                                                                                                                                                                                                                                                                                                                                 |
 | [**MEDIAPACKAGEPATH**](mediapackagepath.md)<br/>                                 | Diese Eigenschaft muss auf den relativen Pfad festgelegt werden, wenn sich das Installationspaket nicht im Stammverzeichnis der CD-ROM befindet.<br/>                                                                                                                                                                                                                                                               |
-| [**MSIARPSETTINGSIDENTIFIER**](msiarpsettingsidentifier.md)<br/>                 | Diese optionale Eigenschaft enthält eine durch Semikolons getrennte Liste der Registrierungsspeicherorte, in denen die Anwendung die Einstellungen und Einstellungen eines Benutzers speichert. Verfügbar mit Windows Installer 4.0.<br/>                                                                                                                                                                                        |
-| [**MSIDISABLEEEUI**](msidisableeeui.md)<br/>                                     | Deaktivieren Sie die eingebettete Benutzeroberfläche für die Installation.<br/> **[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)** Wird nicht unterstützt.<br/>                                                                                                                                                                                                           |
-| [**MSIFASTINSTALL**](msifastinstall.md)<br/>                                     | Reduzieren Sie die Zeit, die zum Installieren eines großen Windows Installer-Pakets erforderlich ist.<br/> **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/>                                                                                                                                                                                              |
+| [**MSIARPSETTINGSIDENTIFIER**](msiarpsettingsidentifier.md)<br/>                 | Diese optionale Eigenschaft enthält eine durch Semikolons getrennte Liste der Registrierungsspeicherorte, an denen die Anwendung die Einstellungen und Einstellungen eines Benutzers speichert. Verfügbar mit Windows Installer 4.0.<br/>                                                                                                                                                                                        |
+| [**MSIDISABLEEEUI**](msidisableeeui.md)<br/>                                     | Deaktivieren Sie die eingebettete Benutzeroberfläche für die Installation.<br/> **[Windows Installer 4.0 und früher:](not-supported-in-windows-installer-4-0.md)** Nicht unterstützt.<br/>                                                                                                                                                                                                           |
+| [**MSIFASTINSTALL**](msifastinstall.md)<br/>                                     | Reduzieren Sie die Zeit, die zum Installieren eines großen Installationspakets Windows Installer erforderlich ist.<br/> **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/>                                                                                                                                                                                              |
 | [**MSIINSTALLPERUSER**](msiinstallperuser.md)<br/>                               | Fordert an, dass Windows Installer das Paket nur für den aktuellen Benutzer installiert.<br/> **[Windows Installer 4.5 und früher:](not-supported-in-windows-installer-4-5.md)** Nicht unterstützt.<br/>                                                                                                                                                                                  |
 | [**MSINODISABLEMEDIA**](msinodisablemedia.md)<br/>                               | Legen Sie diese Eigenschaft fest, um zu verhindern, dass das Installationsprogramm die [**DISABLEMEDIA-Eigenschaft**](-disablemedia.md) festgelegt.<br/>                                                                                                                                                                                                                                                                        |
 | [**MSIENFORCEUPGRADECOMPONENTRULES**](msienforceupgradecomponentrules.md)<br/>   | Legen Sie diese Eigenschaft in der Befehlszeile oder in der Eigenschaftentabelle auf [](small-updates.md) 1 [](minor-upgrades.md) (eins) fest, um die Upgradekomponentenregeln bei kleinen Updates und kleineren Upgrades eines bestimmten Produkts anzuwenden. [](property-table.md) Verfügbar ab Windows Installer 3.0.<br/>                                                                                     |
@@ -94,12 +94,12 @@ Die folgende Liste enthält Links zu weiteren Informationen zu anderen konfiguri
 | [**PRIMARYFOLDER**](primaryfolder.md)<br/>                                       | Ermöglicht dem Autor, einen primären Ordner für eine Installation zu bestimmen. Wird verwendet, um die Werte für die [**Eigenschaften PrimaryVolumePath,**](primaryvolumepath.md) [**PrimaryVolumeSpaceAvailable,**](primaryvolumespaceavailable.md) [**PrimaryVolumeSpaceRequired**](primaryvolumespacerequired.md)und [**PrimaryVolumeSpaceRemaining**](primaryvolumespaceremaining.md) zu bestimmen.<br/> |
 | [**Privilegiert**](privileged.md)<br/>                                             | Führt eine Installation mit erhöhten Rechten aus.<br/>                                                                                                                                                                                                                                                                                                                                     |
 | [**PROMPTROLLBACKCOST**](promptrollbackcost.md)<br/>                             | Aktion, wenn nicht genügend Speicherplatz für die Installation vorhanden ist.<br/>                                                                                                                                                                                                                                                                                                                   |
-| [**Neustart**](reboot.md)<br/>                                                     | Erzwingt oder unterdrückt einen Neustart.<br/>                                                                                                                                                                                                                                                                                                                                                    |
+| [**NEUSTART**](reboot.md)<br/>                                                     | Erzwingt oder unterdrückt einen Neustart.<br/>                                                                                                                                                                                                                                                                                                                                                    |
 | [**REBOOTPROMPT**](rebootprompt.md)<br/>                                         | Unterdrückt die Anzeige von Aufforderungen für Neustarts für den Benutzer. Alle erforderlichen Neustarts werden automatisch ausgeführt.<br/>                                                                                                                                                                                                                                                                     |
 | [**ROOTDRIVE**](rootdrive.md)<br/>                                               | Standardlaufwerk für eine Installation.<br/>                                                                                                                                                                                                                                                                                                                                                 |
-| [**Sequenz**](sequence.md)<br/>                                                 | Eine Tabelle mit dem Sequenztabellenschema.<br/>                                                                                                                                                                                                                                                                                                                                        |
+| [**SEQUENCE**](sequence.md)<br/>                                                 | Eine Tabelle mit dem Sequenztabellenschema.<br/>                                                                                                                                                                                                                                                                                                                                        |
 | [**SHORTFILENAMES**](shortfilenames.md)<br/>                                     | Bewirkt, dass kurze Dateinamen verwendet werden.<br/>                                                                                                                                                                                                                                                                                                                                                |
-| [**Verwandelt**](transforms.md)<br/>                                             | Liste der Transformationen, die auf eine Datenbank angewendet werden sollen.<br/>                                                                                                                                                                                                                                                                                                                                    |
+| [**VERWANDELT**](transforms.md)<br/>                                             | Liste der Transformationen, die auf eine Datenbank angewendet werden sollen.<br/>                                                                                                                                                                                                                                                                                                                                    |
 | [**TRANSFORMSATSOURCE**](transformsatsource.md)<br/>                             | Informiert das Installationsprogramm darüber, dass sich die Transformationen für ein Produkt an der Quelle befinden.<br/>                                                                                                                                                                                                                                                                                                      |
 | [**TRANSFORMSSECURE**](transformssecure.md)<br/>                                 | Durch Festlegen [**der TRANSFORMSECURE-Eigenschaft**](transformssecure.md) auf 1 (eins) wird das Installationsprogramm darüber informiert, dass Transformationen lokal auf dem Benutzercomputer an einem Speicherort zwischengespeichert werden sollen, an dem der Benutzer keinen Schreibzugriff hat.<br/>                                                                                                                                                           |
 | [**MsiLogFileLocation**](msilogfilelocation.md)<br/>                             | Das Installationsprogramm legt den Wert dieser Eigenschaft auf den vollständigen Pfad der Protokolldatei fest, wenn die Protokollierung aktiviert wurde. Diese Eigenschaft ist ab Windows Installer 4.0 verfügbar.<br/>                                                                                                                                                                                                     |
@@ -116,10 +116,10 @@ Die [**Datums-**](date.md) [**und Uhrzeiteigenschaften**](time.md) sind Liveeige
 
 
 
-| Eigenschaft                        | Beschreibung                  |
+| Eigenschaft                        | BESCHREIBUNG                  |
 |---------------------------------|------------------------------|
 | [**Datum**](date.md)<br/> | Das aktuelle Datum.<br/> |
-| [**Zeit**](time.md)<br/> | Die aktuelle Zeit.<br/> |
+| [**Time**](time.md)<br/> | Die aktuelle Zeit.<br/> |
 
 
 
@@ -131,12 +131,12 @@ Die folgende Liste enthält Links zu zusätzlichen Informationen zu den Eigensch
 
 
 
-| Eigenschaft                                                                | Beschreibung                                                                                                                                                                       |
+| Eigenschaft                                                                | BESCHREIBUNG                                                                                                                                                                       |
 |-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**ADDDEFAULT**](adddefault.md)<br/>                             | Liste der Features, die in der Standardkonfiguration installiert werden sollen.<br/>                                                                                                         |
 | [**ADDLOCAL**](addlocal.md)<br/>                                 | Liste der Features, die lokal installiert werden sollen.<br/>                                                                                                                              |
 | [**ADDSOURCE**](addsource.md)<br/>                               | Liste der Features, die aus der Quelle ausgeführt werden sollen.<br/>                                                                                                                                |
-| [**Werben**](advertise.md)<br/>                               | Liste der Features, die angekündigt werden sollen.<br/>                                                                                                                                     |
+| [**WERBEN**](advertise.md)<br/>                               | Liste der Features, die angekündigt werden sollen.<br/>                                                                                                                                     |
 | [**COMPADDDEFAULT**](compadddefault.md)<br/>                     | Liste der Komponenten, die in der Standardkonfiguration installiert werden sollen.<br/>                                                                                                       |
 | [**COMPADDLOCAL**](compaddlocal.md)<br/>                         | Liste der Komponenten-IDs, die lokal installiert werden sollen.<br/>                                                                                                                         |
 | [**COMPADDSOURCE**](compaddsource.md)<br/>                       | Liste der Komponenten-IDs, die von Quellmedien ausgeführt werden.<br/>                                                                                                                        |
@@ -149,10 +149,10 @@ Die folgende Liste enthält Links zu zusätzlichen Informationen zu den Eigensch
 | [**MSIDISABLERMRESTART**](msidisablermrestart.md)<br/>           | Gibt an, wie Anwendungen oder Dienste, die derzeit dateien verwenden, die von einem Update betroffen sind, heruntergefahren und neu gestartet werden sollen, um die Installation des Updates zu aktivieren.<br/> |
 | [**MSIRMSHUTDOWN**](msirmshutdown.md)<br/>                       | Gibt an, wie Anwendungen oder Dienste, die derzeit dateien verwenden, die von einem Update betroffen sind, heruntergefahren werden sollen, um die Installation des Updates zu aktivieren.<br/>               |
 | [**MSIPATCHREMOVE**](msipatchremove.md)<br/>                     | Durch Festlegen dieser Eigenschaft werden Patches entfernt.<br/>                                                                                                                                 |
-| [**Patch**](patch.md)<br/>                                       | Durch Festlegen dieser Eigenschaft wird ein Patch angewendet.<br/>                                                                                                                                 |
-| [**Installieren**](reinstall.md)<br/>                               | Liste der funktionen, die neu installiert werden sollen.<br/>                                                                                                                                    |
+| [**PATCH**](patch.md)<br/>                                       | Durch Festlegen dieser Eigenschaft wird ein Patch angewendet.<br/>                                                                                                                                 |
+| [**INSTALLIEREN**](reinstall.md)<br/>                               | Liste der funktionen, die neu installiert werden sollen.<br/>                                                                                                                                    |
 | [**REINSTALLMODE**](reinstallmode.md)<br/>                       | Eine Zeichenfolge, die Buchstaben enthält, die den Typ der neu durchzuführenden Neuinstallation angeben.<br/>                                                                                          |
-| [**Entfernen**](remove.md)<br/>                                     | Liste der zu entfernenden Features.<br/>                                                                                                                                        |
+| [**ENTFERNEN**](remove.md)<br/>                                     | Liste der funktionen, die entfernt werden sollen.<br/>                                                                                                                                        |
 
 
 
@@ -164,77 +164,23 @@ In der folgenden Liste sind die Hardwareeigenschaften aufgeführt, die Windows I
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Eigenschaft</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="alpha.md"><strong>Alpha</strong></a><br/></td>
-<td>Die numerische Prozessorebene, wenn sie auf einem Alphaprozessor ausgeführt wird.<br/>
-<blockquote>
-[!Note]<br />
-Diese Eigenschaft ist veraltet. Die Alpha-Plattform wird vom Windows nicht unterstützt.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="borderside.md"><strong>BorderSide</strong></a><br/></td>
-<td>Die Breite des Fensterrahmens in Pixel.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="bordertop.md"><strong>BorderTop</strong></a><br/></td>
-<td>Die Höhe des Fensterrahmens in Pixel.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="captionheight.md"><strong>CaptionHeight</strong></a><br/></td>
-<td>Die Höhe des normalen Beschriftungsbereichs in Pixel.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="colorbits.md"><strong>ColorBits</strong></a><br/></td>
-<td>Die Anzahl der angrenzenden Farbbits für jedes Pixel.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="intel.md"><strong>Intel</strong></a><br/></td>
-<td>Die numerische Prozessorebene bei Ausführung auf einem Intel-Prozessor.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="intel64.md"><strong>Intel64</strong></a><br/></td>
-<td>Die numerische Prozessorebene, wenn sie auf einem Itanium-Prozessor ausgeführt wird.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="msix64.md"><strong>Msix64</strong></a><br/></td>
-<td>Die numerische Prozessorebene bei Ausführung auf einem x64-Prozessor.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="physicalmemory.md"><strong>PhysicalMemory</strong></a><br/></td>
-<td>Die Größe des installierten RAM in Megabyte.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="screenx.md"><strong>ScreenX</strong></a><br/></td>
-<td>Die Breite des Bildschirms in Pixel.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="screeny.md"><strong>Screeny</strong></a><br/></td>
-<td>Die Höhe des Bildschirms in Pixel.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="textheight.md"><strong>TextHeight</strong></a><br/></td>
-<td>Die Höhe der Zeichen in logischen Einheiten.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="virtualmemory.md"><strong>VirtualMemory</strong></a><br/></td>
-<td>Die Menge des verfügbaren Seitendateispeicherplatzes in Megabyte.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Eigenschaft | BESCHREIBUNG | 
+|----------|-------------|
+| <a href="alpha.md"><strong>Alpha</strong></a><br /> | Die numerische Prozessorebene, wenn auf einem Alphaprozessor ausgeführt wird.<br /><blockquote>[!Note]<br />Diese Eigenschaft ist veraltet, die Alphaplattform wird von Windows Installer nicht unterstützt.</blockquote><br /> | 
+| <a href="borderside.md"><strong>BorderSide</strong></a><br /> | Die Breite des Fensterrahmens in Pixel.<br /> | 
+| <a href="bordertop.md"><strong>BorderTop</strong></a><br /> | Die Höhe des Fensterrahmens in Pixel.<br /> | 
+| <a href="captionheight.md"><strong>CaptionHeight</strong></a><br /> | Die Höhe des normalen Beschriftungsbereichs in Pixel.<br /> | 
+| <a href="colorbits.md"><strong>ColorBits</strong></a><br /> | Die Anzahl benachbarter Farbbits für jedes Pixel.<br /> | 
+| <a href="intel.md"><strong>Intel</strong></a><br /> | Die numerische Prozessorebene bei Ausführung auf einem Intel-Prozessor.<br /> | 
+| <a href="intel64.md"><strong>Intel64</strong></a><br /> | Die numerische Prozessorebene bei Ausführung auf einem Itanium-Prozessor.<br /> | 
+| <a href="msix64.md"><strong>Msix64</strong></a><br /> | Die numerische Prozessorebene bei Ausführung auf einem x64-Prozessor.<br /> | 
+| <a href="physicalmemory.md"><strong>PhysicalMemory</strong></a><br /> | Die Größe des installierten RAM in Megabyte.<br /> | 
+| <a href="screenx.md"><strong>ScreenX</strong></a><br /> | Die Breite des Bildschirms in Pixel.<br /> | 
+| <a href="screeny.md"><strong>Screeny</strong></a><br /> | Die Höhe des Bildschirms in Pixel.<br /> | 
+| <a href="textheight.md"><strong>TextHeight</strong></a><br /> | Die Höhe von Zeichen in logischen Einheiten.<br /> | 
+| <a href="virtualmemory.md"><strong>VirtualMemory</strong></a><br /> | Die Menge des verfügbaren Seitendateispeicherplatzes in Megabyte.<br /> | 
+
 
 
 
@@ -242,39 +188,39 @@ Diese Eigenschaft ist veraltet. Die Alpha-Plattform wird vom Windows nicht unter
 
 ## <a name="installation-status-properties"></a>Installationsstatuseigenschaften
 
-Die folgende Liste enthält Links zu weitere Informationen zu Statuseigenschaften, die während der Installation vom Installationsprogramm aktualisiert werden.
+Die folgende Liste enthält Links zu weiteren Informationen zu Statuseigenschaften, die während der Installation vom Installationsprogramm aktualisiert werden.
 
 
 
-| Eigenschaft                                                                      | Beschreibung                                                                                                                                                                                                                                                              |
+| Eigenschaft                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                              |
 |-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**AFTERREBOOT**](afterreboot.md)<br/>                                 | Gibt an, dass die aktuelle Installation auf einen Neustart folgt, der von der [ForceReboot-Aktion](forcereboot-action.md) aufgerufen wird.<br/>                                                                                                                                                |
-| [**CostingComplete**](costingcomplete.md)<br/>                         | Gibt an, ob die Speicherplatzkosten abgeschlossen sind.<br/>                                                                                                                                                                                                             |
+| [**AFTERREBOOT**](afterreboot.md)<br/>                                 | Gibt an, dass die aktuelle Installation nach einem Neustart erfolgt, den die [ForceReboot-Aktion](forcereboot-action.md) aufruft.<br/>                                                                                                                                                |
+| [**CostingComplete**](costingcomplete.md)<br/>                         | Gibt an, ob die Speicherplatzkosten vollständig sind.<br/>                                                                                                                                                                                                             |
 | [**Installiert**](installed.md)<br/>                                     | Gibt an, dass ein Produkt bereits installiert ist.<br/>                                                                                                                                                                                                                |
-| [**MSICHECKCRCS**](msicheckcrcs.md)<br/>                               | Der Installer führt nur dann eine CRC für Dateien aus, wenn die [**MSICHECKCRCS-Eigenschaft**](msicheckcrcs.md) festgelegt ist.<br/>                                                                                                                                                           |
+| [**MSICHECKCRCS**](msicheckcrcs.md)<br/>                               | Das Installationsprogramm führt nur dann eine CRC für Dateien durch, wenn die [**MSICHECKCRCS-Eigenschaft**](msicheckcrcs.md) festgelegt ist.<br/>                                                                                                                                                           |
 | [**MsiRestartManagerSessionKey**](msirestartmanagersessionkey.md)<br/> | Der Installer legt diese Eigenschaft auf den Sitzungsschlüssel für die [Neustart-Manager-Sitzung](../rstmgr/restart-manager-portal.md) fest.<br/>                                                                                                                                                         |
-| [**MsiRunningElevated**](msirunningelevated-.md)<br/>                  | Der Installer legt den Wert dieser Eigenschaft auf 1 fest, wenn das Installationsprogramm mit erhöhten [*Rechten ausgeführt*](e-gly.md) wird.<br/>                                                                                                                   |
-| [**MsiSystemRebootPending**](msisystemrebootpending.md)<br/>           | Das Installationsprogramm legt diese Eigenschaft auf 1 fest, wenn derzeit ein Neustart des Betriebssystems aussteht.<br/>                                                                                                                                                              |
-| [**MsiUIHideCancel**](msiuihidecancel.md)<br/>                         | Der Installer legt [**MsiUIHideCancel**](msiuihidecancel.md) auf 1 fest, wenn die interne Installationsebene **INSTALLUILEVEL \_ HIDECANCEL enthält.**<br/>                                                                                                                   |
-| [**MsiUIProgressOnly**](msiuiprogressonly.md)<br/>                     | Der Installer legt [**MsiUIProgressOnly**](msiuiprogressonly.md) auf 1 fest, wenn die interne Installationsebene **INSTALLUILEVEL \_ PROGRESSONLY enthält.**<br/>                                                                                                             |
-| [**MsiUISourceResOnly**](msiuisourceresonly.md)<br/>                   | [**MsiUISourceResOnly auf**](msiuisourceresonly.md) 1 (eins), wenn die interne Installationsebene **INSTALLUILEVEL \_ SOURCERESONLY enthält.**<br/>                                                                                                                       |
+| [**MsiRunningElevated**](msirunningelevated-.md)<br/>                  | Der Installer legt den Wert dieser Eigenschaft auf 1 fest, wenn das Installationsprogramm mit [*erhöhten*](e-gly.md) Rechten ausgeführt wird.<br/>                                                                                                                   |
+| [**MsiSystemRebootPending**](msisystemrebootpending.md)<br/>           | Der Installer legt diese Eigenschaft auf 1 fest, wenn ein Neustart des Betriebssystems derzeit aussteht.<br/>                                                                                                                                                              |
+| [**MsiUIHideCancel**](msiuihidecancel.md)<br/>                         | Der Installer legt [**MsiUIHideCancel**](msiuihidecancel.md) auf 1 fest, wenn die interne Installationsebene **INSTALLUILEVEL \_ HIDECANCEL** enthält.<br/>                                                                                                                   |
+| [**MsiUIProgressOnly**](msiuiprogressonly.md)<br/>                     | Der Installer legt [**MsiUIProgressOnly**](msiuiprogressonly.md) auf 1 fest, wenn die interne Installationsebene **INSTALLUILEVEL \_ PROGRESSONLY** enthält.<br/>                                                                                                             |
+| [**MsiUISourceResOnly**](msiuisourceresonly.md)<br/>                   | [**MsiUISourceResOnly**](msiuisourceresonly.md) auf 1 (eins), wenn die interne Installationsebene **INSTALLUILEVEL \_ SOURCERESONLY** enthält.<br/>                                                                                                                       |
 | [**NOCOMPANYNAME**](nocompanyname.md)<br/>                             | Unterdrückt die automatische Einstellung der [**COMPANYNAME-Eigenschaft.**](companyname.md)<br/>                                                                                                                                                                          |
 | [**NOUSERNAME**](nousername.md)<br/>                                   | Unterdrückt die automatische Einstellung der [**USERNAME-Eigenschaft.**](username.md)<br/>                                                                                                                                                                                |
 | [**OutOfDiskSpace**](outofdiskspace.md)<br/>                           | Nicht genügend Speicherplatz für die Installation.<br/>                                                                                                                                                                                                      |
 | [**OutOfNoRbDiskSpace**](outofnorbdiskspace.md)<br/>                   | Nicht genügend Speicherplatz mit deaktivierten Rollbacks.<br/>                                                                                                                                                                                                             |
 | [**Vorgewählten**](preselected.md)<br/>                                 | Features sind bereits ausgewählt.<br/>                                                                                                                                                                                                                                |
 | [**PrimaryVolumePath**](primaryvolumepath.md)<br/>                     | Der Installer legt den Wert dieser Eigenschaft auf den Pfad des Volumes fest, das von der [**PRIMARYFOLDER-Eigenschaft**](primaryfolder.md) festgelegt wird.<br/>                                                                                                                  |
-| [**PrimaryVolumeSpaceAvailable**](primaryvolumespaceavailable.md)<br/> | Der Installer legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtzahl der auf dem Volume verfügbaren Bytes darstellt, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist.<br/>                                                      |
-| [**PrimaryVolumeSpaceRemaining**](primaryvolumespaceremaining.md)<br/> | Das Installationsprogramm legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtzahl der auf dem Volume verbleibenden Bytes darstellt, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist, wenn alle derzeit ausgewählten Funktionen installiert sind.<br/> |
-| [**PrimaryVolumeSpaceRequired**](primaryvolumespacerequired.md)<br/>   | Der Installer legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtanzahl von Bytes darstellt, die für alle aktuell ausgewählten Features auf dem Volume erforderlich sind, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist.<br/>                    |
+| [**PrimaryVolumeSpaceAvailable**](primaryvolumespaceavailable.md)<br/> | Der Installer legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtzahl der bytes darstellt, die auf dem Volume verfügbar sind, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist.<br/>                                                      |
+| [**PrimaryVolumeSpaceRemaining**](primaryvolumespaceremaining.md)<br/> | Der Installer legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtzahl der bytes darstellt, die auf dem Volume verbleiben, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist, wenn alle derzeit ausgewählten Features installiert sind.<br/> |
+| [**PrimaryVolumeSpaceRequired**](primaryvolumespacerequired.md)<br/>   | Der Installer legt den Wert dieser Eigenschaft auf eine Zeichenfolge fest, die die Gesamtzahl der Bytes darstellt, die für alle derzeit ausgewählten Features auf dem Volume erforderlich sind, auf das die [**PrimaryVolumePath-Eigenschaft**](primaryvolumepath.md) verweist.<br/>                    |
 | [**ProductLanguage**](productlanguage.md)<br/>                         | Numerischer Sprachbezeichner (LANGID) für die Datenbank. (ERFORDERLICH)<br/>                                                                                                                                                                                             |
 | [**ReplacedInUseFiles**](replacedinusefiles.md)<br/>                   | Legen Sie fest, ob das Installationsprogramm über eine Datei installiert wird, die verwendet wird.<br/>                                                                                                                                                                                          |
-| [**Fortsetzen**](resume.md)<br/>                                           | Die Installation wurde fortgesetzt.<br/>                                                                                                                                                                                                                                         |
+| [**FORTSETZEN**](resume.md)<br/>                                           | Die Installation wurde fortgesetzt.<br/>                                                                                                                                                                                                                                         |
 | [**RollbackDisabled**](rollbackdisabled.md)<br/>                       | Das Installationsprogramm legt diese Eigenschaft fest, wenn das Rollback deaktiviert ist.<br/>                                                                                                                                                                                                   |
 | [**UILevel**](uilevel.md)<br/>                                         | Gibt die Benutzeroberflächenebene an.<br/>                                                                                                                                                                                                                           |
-| [**UpdateStarted**](updatestarted.md)<br/>                             | Legen Sie fest, wann Änderungen am System für diese Installation begonnen haben.<br/>                                                                                                                                                                                              |
-| [**UPGRADINGPRODUCTCODE**](upgradingproductcode.md)<br/>               | Wird vom Installationsprogramm festgelegt, wenn bei einem Upgrade eine Anwendung entfernt wird.<br/>                                                                                                                                                                                                  |
-| [**VersionMsi**](versionmsi.md)<br/>                                   | Das Installationsprogramm legt diese Eigenschaft auf die Version Windows Installer fest, die während der Installation ausgeführt wird.<br/>                                                                                                                                                     |
+| [**UpdateStarted**](updatestarted.md)<br/>                             | Legen Sie fest, wenn Änderungen am System für diese Installation begonnen haben.<br/>                                                                                                                                                                                              |
+| [**UPGRADINGPRODUCTCODE**](upgradingproductcode.md)<br/>               | Wird vom Installationsprogramm festgelegt, wenn eine Anwendung durch ein Upgrade entfernt wird.<br/>                                                                                                                                                                                                  |
+| [**VersionMsi**](versionmsi.md)<br/>                                   | Das Installationsprogramm legt diese Eigenschaft auf die Version von Windows Installer fest, die während der Installation ausgeführt wird.<br/>                                                                                                                                                     |
 
 
 
@@ -282,15 +228,15 @@ Die folgende Liste enthält Links zu weitere Informationen zu Statuseigenschafte
 
 ## <a name="operating-system-properties"></a>Betriebssystemeigenschaften
 
-Die folgende Liste enthält Links zu weitere Informationen zu Betriebssystemeigenschaften, die der Installer beim Start legt.
+Die folgende Liste enthält Links zu weiteren Informationen zu Betriebssystemeigenschaften, die der Installer beim Start festlegt.
 
 
 
 | Eigenschaftsname                                                                             | Kurzbeschreibung                                                                                                                                                                                                                                                                               |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Adminuser**](adminuser.md)<br/>                                                 | Legen Sie Windows 2000 fest, wenn der Benutzer über Administratorrechte verfügt.<br/>                                                                                                                                                                                                                        |
+| [**Adminuser**](adminuser.md)<br/>                                                 | Legen Sie auf Windows 2000 fest, wenn der Benutzer über Administratorrechte verfügt.<br/>                                                                                                                                                                                                                        |
 | [**ComputerName**](computername.md)<br/>                                           | Computername des aktuellen Systems.<br/>                                                                                                                                                                                                                                                 |
-| [**MsiNetAssemblySupport**](msinetassemblysupport.md)<br/>                         | Auf Systemen, die Common Language Runtime-Assemblys unterstützen, legt der Installer den Wert dieser Eigenschaft auf die Dateiversion des fusion.dll. Das Installationsprogramm setzt diese Eigenschaft nicht, wenn das Betriebssystem keine Common Language Runtime-Assemblys unterstützt.<br/>                   |
+| [**MsiNetAssemblySupport**](msinetassemblysupport.md)<br/>                         | Auf Systemen, die Common Language Runtime-Assemblys unterstützen, legt der Installer den Wert dieser Eigenschaft auf die Dateiversion von fusion.dll fest. Der Installer legt diese Eigenschaft nicht fest, wenn das Betriebssystem keine Common Language Runtime-Assemblys unterstützt.<br/>                   |
 | [**MsiNTProductType**](msintproducttype.md)<br/>                                   | Gibt den Windows Produkttyp an.<br/>                                                                                                                                                                                                                                                  |
 | [**MsiNTSuiteBackOffice**](msintsuitebackoffice.md)<br/>                           | Unter Windows Betriebssystemen 2000 und höher legt der Installer diese Eigenschaft nur dann auf 1 (eins) fest, wenn Microsoft BackOffice-Komponenten installiert sind.<br/>                                                                                                                                      |
 | [**MsiNTSuiteDataCenter**](msintsuitedatacenter.md)<br/>                           | Unter Windows Betriebssystemen 2000 und höher legt der Installer diese Eigenschaft nur dann auf 1 (eins) fest, wenn Windows 2000 Datacenter Server installiert ist.<br/>                                                                                                                                        |
@@ -298,8 +244,8 @@ Die folgende Liste enthält Links zu weitere Informationen zu Betriebssystemeige
 | [**MsiNTSuitePersonal**](msintsuitepersonal.md)<br/>                               | Auf Windows XP-Betriebssystemen und höher legt der Installer diese Eigenschaft nur dann auf 1 (eins) fest, wenn das Betriebssystem Home (nicht Professional).<br/>                                                                                                                                      |
 | [**MsiNTSuiteSmallBusiness**](msintsuitesmallbusiness.md)<br/>                     | Unter Windows Betriebssystemen 2000 und höher legt der Installer diese Eigenschaft nur dann auf 1 (eins) fest, wenn Microsoft Small Business Server installiert ist.<br/>                                                                                                                                       |
 | [**MsiNTSuiteSmallBusinessRestricted**](msintsuitesmallbusinessrestricted.md)<br/> | Unter Windows Betriebssystemen 2000 und höher legt der Installer diese Eigenschaft nur dann auf 1 (eins) fest, wenn Microsoft Small Business Server mit der restriktiven Clientlizenz installiert ist.<br/>                                                                                                   |
-| [**MsiNTSuiteWebServer**](msintsuitewebserver.md)<br/>                             | Unter Windows Betriebssystemen 2000 und höher legt der Installer die [**MsiNTSuiteWebServer-Eigenschaft**](msintsuitewebserver.md) auf 1 (eins) fest, wenn die Webedition von Windows Server 2003 installiert ist. Nur verfügbar mit der Windows Server 2003-Version des Windows Installers.<br/> |
-| [**MsiTabletPC**](msitabletpc.md)<br/>                                             | Das Installationsprogramm legt diese Eigenschaft auf einen Wert ungleich 0 fest, wenn das aktuelle Betriebssystem Windows XP Tablet PC Edition installiert ist.<br/>                                                                                                                                                                 |
+| [**MsiNTSuiteWebServer**](msintsuitewebserver.md)<br/>                             | Unter Windows Betriebssystemen 2000 und höher legt der Installer die [**MsiNTSuiteWebServer-Eigenschaft**](msintsuitewebserver.md) auf 1 (eins) fest, wenn die Webedition von Windows Server 2003 installiert ist. Nur verfügbar mit Windows Server 2003 des Windows Installers.<br/> |
+| [**MsiTabletPC**](msitabletpc.md)<br/>                                             | Das Installationsprogramm legt diese Eigenschaft auf einen Wert ungleich 0 (null) fest, wenn das aktuelle Betriebssystem Windows XP Tablet PC Edition installiert ist.<br/>                                                                                                                                                                 |
 | [**MsiWin32AssemblySupport**](msiwin32assemblysupport.md)<br/>                     | Auf Systemen, die Win32-Assemblys unterstützen, legt der Installer den Wert dieser Eigenschaft auf die Dateiversion der sxs.dll. Das Installationsprogramm setzt diese Eigenschaft nicht, wenn das Betriebssystem Win32-Assemblys nicht unterstützt.<br/>                                                          |
 | [**OLEAdvtSupport**](oleadvtsupport.md)<br/>                                       | Legen Sie fest, ob OLE den Windows unterstützt.<br/>                                                                                                                                                                                                                                           |
 | [**RedirectedDllSupport**](redirecteddllsupport.md)<br/>                           | Das Installationsprogramm legt die [**RedirectedDllSupport-Eigenschaft**](redirecteddllsupport.md) fest, wenn das System, das die Installation vorsteuert, [isolierte Komponenten unterstützt.](isolated-components.md)<br/>                                                                                              |
@@ -356,7 +302,7 @@ Die folgenden Eigenschaften werden nur von Transformationen in MSP-Dateien festg
 
 
 
-| Eigenschaft                                                              | Beschreibung                                                                                                                  |
+| Eigenschaft                                                              | BESCHREIBUNG                                                                                                                  |
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | [**PATCHNEWPACKAGECODE**](patchnewpackagecode.md)<br/>         | Der Wert dieser Eigenschaft wird in die [**Revision number Summary-Eigenschaft**](revision-number-summary.md) geschrieben.<br/> |
 | [**PATCH PATCH PATCHPATCHUMMARYCOMMENTS**](patchnewsummarycomments.md)<br/> | Der Wert dieser Eigenschaft wird in die [**Comments Summary-Eigenschaft**](comments-summary.md) geschrieben.<br/>               |
@@ -372,7 +318,7 @@ Die folgende Liste enthält Links zu weiteren Informationen zu Systemordnern, di
 
 
 
-| Eigenschaft                                                        | Beschreibung                                                                           |
+| Eigenschaft                                                        | BESCHREIBUNG                                                                           |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | [**AdminToolsFolder**](admintoolsfolder.md)<br/>         | Der vollständige Pfad zum Verzeichnis, das Verwaltungstools enthält.<br/>         |
 | [**AppDataFolder**](appdatafolder.md)<br/>               | Der vollständige Pfad zum **Roamingordner** für den aktuellen Benutzer.<br/>              |
@@ -384,7 +330,7 @@ Die folgende Liste enthält Links zu weiteren Informationen zu Systemordnern, di
 | [**SchriftartenOrdner**](fontsfolder.md)<br/>                   | Der vollständige Pfad zum Ordner **Schriftarten.**<br/>                                     |
 | [**LocalAppDataFolder**](localappdatafolder.md)<br/>     | Der vollständige Pfad zu dem Ordner, der lokale Anwendungen (ohneRoaming) enthält.<br/> |
 | [**MyPicturesFolder**](mypicturesfolder.md)<br/>         | Der vollständige Pfad zum Ordner **Bilder.**<br/>                                  |
-| [**NetHoodFolder**](nethoodfolder.md)<br/>               | Der vollständige Pfad zum **NetHood-Ordner.**<br/>                                   |
+| [**NetHoodFolder**](nethoodfolder.md)<br/>               | Der vollständige Pfad zum **Ordner NetHood.**<br/>                                   |
 | [**PersonalFolder**](personalfolder.md)<br/>             | Der vollständige Pfad zum Ordner **Dokumente** für den aktuellen Benutzer.<br/>            |
 | [**PrintHoodFolder**](printhoodfolder.md)<br/>           | Der vollständige Pfad zum Ordner **PrintHood.**<br/>                                 |
 | [**ProgramFiles64Folder**](programfiles64folder.md)<br/> | Der vollständige Pfad zum vordefinierten **64-Bit-Ordner "Programme".**<br/>           |
@@ -400,7 +346,7 @@ Die folgende Liste enthält Links zu weiteren Informationen zu Systemordnern, di
 | [**TempFolder**](tempfolder.md)<br/>                     | Der vollständige Pfad zum Ordner **Temp.**<br/>                                      |
 | [**TemplateFolder**](templatefolder.md)<br/>             | Der vollständige Pfad zum **Vorlagenordner** für den aktuellen Benutzer.<br/>             |
 | [**WindowsFolder**](windowsfolder.md)<br/>               | Der vollständige Pfad zum **Ordner Windows.**<br/>                                   |
-| [**WindowsVolume**](windowsvolume.md)<br/>               | Das Volume des **Windows** Ordners.<br/>                                      |
+| [**WindowsVolume**](windowsvolume.md)<br/>               | Das Volume des **ordners Windows.**<br/>                                      |
 
 
 
@@ -412,16 +358,16 @@ Die folgende Liste enthält Links zu weiteren Informationen zu vom Benutzer bere
 
 
 
-| Eigenschaft                                                      | Beschreibung                                                                             |
+| Eigenschaft                                                      | BESCHREIBUNG                                                                             |
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | [**AdminProperties**](adminproperties.md)<br/>         | Liste der Eigenschaften, die während einer Administratorinstallation festgelegt werden.<br/>       |
-| [**Companyname**](companyname.md)<br/>                 | Organisationsname des Benutzers, der die Installation ausführt.<br/>            |
+| [**COMPANYNAME**](companyname.md)<br/>                 | Organisationsname des Benutzers, der die Installation ausführt.<br/>            |
 | [**Logonuser**](logonuser.md)<br/>                     | Benutzername für den Benutzer, der derzeit angemeldet ist.<br/>                           |
 | [**MsiHiddenProperties**](msihiddenproperties.md)<br/> | Liste der Eigenschaften, die verhindert werden, dass sie in das Protokoll geschrieben werden.<br/>       |
-| [**Pidkey**](pidkey.md)<br/>                           | Teil der Produkt-ID, die der Benutzer eingibt.<br/>                                 |
+| [**PIDKEY**](pidkey.md)<br/>                           | Teil der Produkt-ID, die der Benutzer eingibt.<br/>                                 |
 | [**Productid**](productid.md)<br/>                     | Vollständige Produkt-ID nach erfolgreicher Überprüfung.<br/>                               |
 | [**UserLanguageID**](userlanguageid.md)<br/>           | Standardsprachbezeichner des aktuellen Benutzers.<br/>                             |
-| [**Nutzername**](username.md)<br/>                       | Benutzer, der die Installation ausführt.<br/>                                     |
+| [**NUTZERNAME**](username.md)<br/>                       | Benutzer, der die Installation ausführt.<br/>                                     |
 | [**UserSID-Eigenschaft**](usersid.md)<br/>                | Wird vom Installationsprogramm entsprechend der Sicherheits-ID (SID) des Benutzers festgelegt.<br/> |
 
 

@@ -1,9 +1,9 @@
 ---
-title: CBN_SELENDOK Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer ein Listenelement auswählt oder ein Element auswählt und dann die Liste schließt. Gibt an, dass die Auswahl des Benutzers verarbeitet werden soll. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die WM- \_ Befehls Meldung.
+title: CBN_SELENDOK Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer ein Listenelement auswählt oder ein Element auswählt und dann die Liste schließt. Gibt an, dass die Auswahl des Benutzers verarbeitet werden soll. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die WM \_ COMMAND-Meldung.
 ms.assetid: ef0ac46f-2db9-40d6-ba82-7e90d71fdd37
 keywords:
-- Windows-Steuerelemente für CBN_SELENDOK Benachrichtigungs
+- CBN_SELENDOK Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a0b04fcce0ec2b3f6a2bf5b5e04fa4110ad6ceb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 57ad6b8a7d8449a646e7b95fd154fb219a9a8087593dcd432da27b9703ebfd28
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053990"
 ---
-# <a name="cbn_selendok-notification-code"></a>CBN- \_ selendok-Benachrichtigungs Code
+# <a name="cbn_selendok-notification-code"></a>CBN \_ SELENDOK-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer ein Listenelement auswählt oder ein Element auswählt und dann die Liste schließt. Gibt an, dass die Auswahl des Benutzers verarbeitet werden soll. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn der Benutzer ein Listenelement auswählt oder ein Element auswählt und dann die Liste schließt. Gibt an, dass die Auswahl des Benutzers verarbeitet werden soll. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,20 +42,20 @@ CBN_SELENDOK
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Steuerelementbezeichner des Kombinationsfelds. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einem Kombinations Feld mit dem [**\_ einfachen CBS**](combo-box-styles.md) -Stil wird der CBN- \_ selendok-Benachrichtigungs Code unmittelbar vor jedem [CBN- \_ selChange](cbn-selchange.md) -Benachrichtigungs Code gesendet.
+In einem Kombinationsfeld mit [**dem CBS \_ SIMPLE-Format**](combo-box-styles.md) wird der CBN SELENDOK-Benachrichtigungscode unmittelbar vor jedem \_ [CBN \_ SELCHANGE-Benachrichtigungscode](cbn-selchange.md) gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ In einem Kombinations Feld mit dem [**\_ einfachen CBS**](combo-box-styles.md) -
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -73,13 +73,13 @@ In einem Kombinations Feld mit dem [**\_ einfachen CBS**](combo-box-styles.md) -
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[CBN \_ selChange](cbn-selchange.md)
+[CBN \_ SELCHANGE](cbn-selchange.md)
 </dt> <dt>
 
-[CBN \_ selendcancel](cbn-selendcancel.md)
+[CBN \_ SELENDCANCEL](cbn-selendcancel.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -91,7 +91,7 @@ In einem Kombinations Feld mit dem [**\_ einfachen CBS**](combo-box-styles.md) -
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

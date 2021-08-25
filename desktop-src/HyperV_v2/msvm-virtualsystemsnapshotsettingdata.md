@@ -1,5 +1,5 @@
 ---
-description: Bietet zusätzliche Informationen, die mit der Methode "kreatesnapshot" der MSVM- \_ Klasse "virtualsystemsnapshotservice" verwendet werden können.
+description: Stellt zusätzliche Informationen bereit, die mit der CreateSnapshot-Methode der Msvm \_ VirtualSystemSnapshotService-Klasse verwendet werden.
 ms.assetid: d4a025c4-6a3c-4ae0-8f2c-421c1aa1eb23
 title: Msvm_VirtualSystemSnapshotSettingData-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 32ab52da97e9fcc943c3a70548bb6b1a6d7994a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d112e4109ed6d0ab899aadf59f0e991f52259eaf2c514c6d9215b04a8cafcab8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046250"
 ---
-# <a name="msvm_virtualsystemsnapshotsettingdata-class"></a>MSVM \_ virtualsystemsnapshotsettingdata-Klasse
+# <a name="msvm_virtualsystemsnapshotsettingdata-class"></a>Msvm \_ VirtualSystemSnapshotSettingData-Klasse
 
-Bietet zusätzliche Informationen, die mit der Methode " [**kreatesnapshot**](cim-virtualsystemsnapshotservice-createsnapshot.md) " der [**MSVM-Klasse " \_ virtualsystemsnapshotservice**](msvm-virtualsystemsnapshotservice.md) " verwendet werden können.
+Stellt zusätzliche Informationen bereit, die mit der [**CreateSnapshot-Methode**](cim-virtualsystemsnapshotservice-createsnapshot.md) der [**Msvm \_ VirtualSystemSnapshotService-Klasse**](msvm-virtualsystemsnapshotservice.md) verwendet werden.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -43,26 +43,26 @@ class Msvm_VirtualSystemSnapshotSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemsnapshotsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemSnapshotSettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemsnapshotsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemSnapshotSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ConsistencyLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Konsistenz Ebene der Momentaufnahme.
+Die Konsistenzebene der Momentaufnahme.
 
 <dt>
 
@@ -75,33 +75,33 @@ Die Konsistenz Ebene der Momentaufnahme.
 
 <span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>
 
-**Anwendungs konsistent** (1)
+**Anwendungskonsens** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>
 
-**Absturz konsistent** (2)
+**Absturzkons konsistent** (2)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Guestbackuptype**
+**GuestBackupType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der im Gast zu verwendende Sicherungstyp.
+Sicherungstyp, der innerhalb des Gasts verwendet werden soll.
 
 > [!Note]  
-> In Windows 10, Version 1703, hinzugefügte Eigenschaft
+> Eigenschaft in Windows 10, Version 1703 hinzugefügt
 
  
 
@@ -130,16 +130,16 @@ Der im Gast zu verwendende Sicherungstyp.
 
 </dd> <dt>
 
-**Ignoronsnapshottabledisks**
+**IgnoreNonSnapshottableDisks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob nicht snapsho\datenträger wie Pass-Through-Datenträger und Fibre Channel-Datenträger beim Erstellen der Momentaufnahme ignoriert werden.
+Gibt an, ob nicht momentaufnahmefähige Datenträger wie Passthrough-Datenträger und Fibre Channel Datenträger beim Erstellen der Momentaufnahme ignoriert werden sollen.
 
 </dd> </dl>
 
@@ -149,10 +149,10 @@ Gibt an, ob nicht snapsho\datenträger wie Pass-Through-Datenträger und Fibre C
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -161,7 +161,7 @@ Gibt an, ob nicht snapsho\datenträger wie Pass-Through-Datenträger und Fibre C
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

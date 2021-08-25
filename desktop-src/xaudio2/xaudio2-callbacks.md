@@ -1,38 +1,38 @@
 ---
-description: XAudio2 kann vom Client bereitgestellte Funktionen aufzurufen, um Sie asynchron über bestimmte Ereignisse zu benachrichtigen, die im Audioverarbeitungs Thread stattfinden.
+description: XAudio2 kann vom Client bereitgestellte Funktionen aufrufen, um ihn asynchron über bestimmte Ereignisse zu benachrichtigen, die im Audioverarbeitungsthread stattfinden.
 ms.assetid: 4fbd4229-f7ac-33b3-b4b7-f09150a60598
 title: XAudio2-Rückrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ee191ad8c15d238a065c837c6fb192befbe7a51
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3377bd029cc2e21971748eaca7309dd44390a5bd3420d772c45264dfdbd075c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054290"
 ---
 # <a name="xaudio2-callbacks"></a>XAudio2-Rückrufe
 
-XAudio2 kann vom Client bereitgestellte Funktionen aufzurufen, um Sie asynchron über bestimmte Ereignisse zu benachrichtigen, die im Audioverarbeitungs Thread stattfinden. Diese Rückrufe können global oder spezifisch für eine bestimmte Quell Stimme sein. Um globale Engine-Rückrufe zu erhalten, muss der Client eine Instanz einer Klasse bereitstellen, die die [**IXAudio2EngineCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback) -Schnittstelle implementiert, wenn XAudio2 initialisiert wird. Um Quellcode-Rückrufe zu erhalten, muss der Client eine Instanz einer Klasse bereitstellen, die die [**IXAudio2VoiceCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) -Schnittstelle implementiert, wenn Quell Stimmen erstellt werden. Weitere Informationen finden Sie unter **IXAudio2EngineCallback** und **IXAudio2VoiceCallback**.
+XAudio2 kann vom Client bereitgestellte Funktionen aufrufen, um ihn asynchron über bestimmte Ereignisse zu benachrichtigen, die im Audioverarbeitungsthread stattfinden. Diese Rückrufe können global oder spezifisch für eine bestimmte Quellstimme sein. Um globale Engine-Rückrufe zu empfangen, muss der Client eine Instanz einer Klasse bereitstellen, die die [**IXAudio2EngineCallback-Schnittstelle**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback) implementiert, wenn XAudio2 initialisiert wird. Um Quellstimmenrückrufe zu empfangen, muss der Client eine Instanz einer Klasse bereitstellen, die beim Erstellen von Quellstimmen die [**IXAudio2VoiceCallback-Schnittstelle**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) implementiert. Weitere Informationen finden Sie unter **IXAudio2EngineCallback** und **IXAudio2VoiceCallback.**
 
-Sie müssen Rückrufe sorgfältig implementieren, um zu vermeiden, dass die Audiodaten beeinträchtigt werden. Wenn ein Rückruf ausgeführt wird, kann XAudio2 keine Audiodaten generieren. Verzögerungen mit mehr als wenigen Millisekunden können zu einem Audioproblem führen. Bei Verzögerungen dieser Art wird auch eine Debugger-Ausgabe generiert. Dies deutet auf potenzielle Leistungsprobleme hin. Rückruf Funktionen dürfen mindestens nicht folgende Aktionen ausführen:
+Sie müssen Rückrufe sorgfältig implementieren, um unterbrechungsverursachende Audiodaten zu vermeiden. Wenn ein Rückruf ausgeführt wird, kann XAudio2 keine Audiodaten generieren. Verzögerungen von mehr als einigen Millisekunden können zu einem Audioproblem führen. Verzögerungen dieser Art generieren auch eine Debuggerausgabe. Dies weist auf potenzielle Leistungsprobleme hin. Rückruffunktionen dürfen mindestens folgende Aufgaben nicht ausführen:
 
--   Zugreifen auf die Festplatte oder einen anderen permanenten Speicher
--   Tätigen Sie teure oder blockierende API-Aufrufe
--   Mit anderen Teilen des Client Codes synchronisieren
--   Beträchtliche CPU-Auslastung erforderlich
+-   Zugreifen auf die Festplatte oder anderen permanenten Speicher
+-   Durchführen von teuren oder blockierenden API-Aufrufen
+-   Synchronisieren mit anderen Teilen des Clientcodes
+-   Erhebliche CPU-Auslastung erforderlich
 
-Wenn der Client Entwurf einen Rückruf zum Auslassen von Aktionen erfordert, wie z. b. die zuvor aufgeführten, sollte der Rückruf einem anderen Client Thread signalisieren, dass die Arbeit ausgeführt werden soll. Hierfür können Sie einen einfachen **SetEvent** -Mechanismus oder anspruchsvollere Mechanismen wie eine nicht blockierende Befehls Warteschlange verwenden, die von einem anderen Thread verwendet wird.
+Wenn der Cliententwurf einen Rückruf erfordert, um Aktionen wie die zuvor aufgeführten auszulösen, sollte der Rückruf einen anderen Clientthread signalisieren, um die Arbeit durchzuführen. Dazu können Sie einen einfachen **SetEvent-Mechanismus** oder komplexere Mechanismen wie eine Befehlswarteschlange ohne Blockierung verwenden, die von einem anderen Thread genutzt wird.
 
 ## <a name="ixaudio2enginecallback"></a>IXAudio2EngineCallback
 
-Die [**IXAudio2EngineCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback) -Klasse enthält Methoden, die den Client Benachrichtigen, wenn bestimmte Ereignisse in der XAudio2-Engine auftreten. Diese Methoden sollten vom XAudio2-Client implementiert werden. XAudio2 ruft diese Methoden mithilfe eines Schnittstellen Zeigers auf, der vom Client mithilfe der [**IXAudio2:: registerforcallbacks**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-registerforcallbacks) -Methode bereitgestellt wird. Alle diese Methoden geben **void** anstelle eines **HRESULT** zurück.
+Die [**IXAudio2EngineCallback-Klasse**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback) enthält Methoden, die den Client benachrichtigen, wenn bestimmte Ereignisse in der XAudio2-Engine auftreten. Diese Methoden sollten vom XAudio2-Client implementiert werden. XAudio2 ruft diese Methoden mithilfe eines Schnittstellenzeigers auf, der vom Client mit der [**IXAudio2::RegisterForCallbacks-Methode**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-registerforcallbacks) bereitgestellt wird. Alle diese Methoden geben **void** anstelle eines **HRESULT** zurück.
 
 ## <a name="ixaudio2voicecallback"></a>IXAudio2VoiceCallback
 
-Die [**IXAudio2VoiceCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) -Klasse enthält Methoden, die den Client Benachrichtigen, wenn bestimmte Ereignisse in einer bestimmten XAudio2-Quellsprache auftreten. XAudio2 ruft diese Methoden mithilfe eines Schnittstellen Zeigers auf, der vom Client in [**IXAudio2:: kreatesourcevoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsourcevoice)bereitgestellt wird. Wie bei [**IXAudio2EngineCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback)sollten diese Methoden vom XAudio2-Client implementiert werden und anstelle eines **HRESULT**" **void** " zurückgeben.
+Die [**IXAudio2VoiceCallback-Klasse**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2voicecallback) enthält Methoden, die den Client benachrichtigen, wenn bestimmte Ereignisse in einer bestimmten XAudio2-Quellstimme auftreten. XAudio2 ruft diese Methoden mithilfe eines Schnittstellenzeigers auf, der vom Client in [**IXAudio2::CreateSourceVoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createsourcevoice)bereitgestellt wird. Wie bei [**IXAudio2EngineCallback**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2enginecallback)sollten diese Methoden vom XAudio2-Client implementiert werden und **void** anstelle eines **HRESULT** zurückgeben.
 
-Wie bereits erwähnt, ist es von entscheidender Bedeutung, dass die vom Client bereitgestellten Implementierungen dieser Rückrufe so schnell wie möglich zurückgegeben werden, vorzugsweise innerhalb einer Millisekunde. Die Rückrufe werden im Audioverarbeitungs Thread ausgeführt, und die gesamte Verarbeitung wird unterbrochen, bis der Rückruf zurückgegeben wird. Eine Verzögerung in einem Rückruf kann problemlos zu einem Audioproblem führen.
+Wie bereits erwähnt, ist es entscheidend, dass die vom Client bereitgestellten Implementierungen dieser Rückrufe so schnell wie möglich zurückgegeben werden, vorzugsweise innerhalb einer Millisekunde. Die Rückrufe werden im Audioverarbeitungsthread ausgeführt, und die gesamte Verarbeitung wird unterbrochen, bis der Rückruf zurückgegeben wird. Eine Verzögerung bei einem Rückruf kann leicht zu einem Audioproblem führen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 38ddb306ee6fdcbd1eb792b2c29ca367adc0f4b88cc25dfcbdde22c2638258d1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 546ace6b93328c3420a33c131250510d8421491b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118765038"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470836"
 ---
 # <a name="jet_ls"></a>JET_LS
 
@@ -47,64 +47,25 @@ Der Wert JET_LSNil gibt ein ungültiges Kontexthand handle an.
 
 Ein Kontexthandl wird anfänglich mithilfe von [JetSetLS](./jetsetls-function.md) **dem** JET_LS zugeordnet. Das Kontexthandl kann mithilfe von [JetGetLS](./jetgetls-function.md) **aus** dem JET_LS abgerufen werden.
 
-Das Kontexthandl kann explizit vom Datentyp  JET_LS, indem [JetGetLS](./jetgetls-function.md) mit JET_bitLSReset. Alternativ kann das Kontexthand handle implizit vom **JET_LS-Datentyp** disassoziiert werden, wenn das zugrunde liegende Objekt durch die Datenbank-Engine als Ergebnis einer direkten oder indirekten Aktion durch die Anwendung freigegeben wird. Im impliziten Fall wird ein Laufzeitrückruf an die Anwendung ausgegeben, damit sie das Kontexthand handle bereinigen kann. Weitere Informationen zur impliziten Disassoziierung vom **JET_LS-Datentyp** finden Sie unter [JetSetLS](./jetsetls-function.md).
+Das Kontexthandl kann mithilfe von  [JetGetLS](./jetgetls-function.md) mit JET_LS explizit JET_bitLSReset. Alternativ kann das Kontexthand handle implizit vom **JET_LS-Datentyp** disassoziiert werden, wenn das zugrunde liegende Objekt durch die Datenbank-Engine als Ergebnis einer direkten oder indirekten Aktion durch die Anwendung freigegeben wird. Im impliziten Fall wird ein Laufzeitrückruf an die Anwendung ausgegeben, damit sie das Kontexthand handle bereinigen kann. Weitere Informationen zur impliziten Disassoziierung vom **JET_LS-Datentyp** finden Sie unter [JetSetLS](./jetsetls-function.md).
 
 Die folgenden Flags sind dem JET_LS zugeordnet.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Begriff</p></th>
-<th><p>BESCHREIBUNG</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitLSReset</p></td>
-<td><p>Die Zuordnung des Kontexthandpunkts zum -Objekt wird entfernt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitLSCursor</p></td>
-<td><p>Legen Sie den lokalen Speicher fest, der einem Tabellencursor zugeordnet ist, oder rufen Sie diesen ab.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitLSTable</p></td>
-<td><p>Legen Sie den lokalen Speicher fest, der einer Tabelle zugeordnet ist, oder rufen Sie diesen ab.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_LSNil</p></td>
-<td><p>Das Kontexthand handle ist ungültig.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Begriff</p> | <p>BESCHREIBUNG</p> | 
+|-------------|--------------------|
+| <p>JET_bitLSReset</p> | <p>Die Zuordnung des Kontexthandpunkts zum -Objekt wird entfernt.</p> | 
+| <p>JET_bitLSCursor</p> | <p>Legen Sie den lokalen Speicher fest, der einem Tabellencursor zugeordnet ist, oder rufen Sie diesen ab.</p> | 
+| <p>JET_bitLSTable</p> | <p>Legen Sie den lokalen Speicher fest, der einer Tabelle zugeordnet ist, oder rufen Sie diesen ab.</p> | 
+| <p>JET_LSNil</p> | <p>Das Kontexthand handle ist ungültig.</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

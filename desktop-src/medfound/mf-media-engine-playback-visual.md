@@ -1,35 +1,35 @@
 ---
-description: Legt eine Microsoft directcomposition-Visualisierung als Wiedergabe Bereich für die Medien-Engine fest.
+description: Legt ein Microsoft DirectComposition-Visual als Wiedergabebereich für die Medien-Engine fest.
 ms.assetid: C381D28E-B7A1-4A1A-9F8D-42A4ABB1C633
-title: MF_MEDIA_ENGINE_PLAYBACK_VISUAL-Attribut (MF mediaengine. h)
+title: MF_MEDIA_ENGINE_PLAYBACK_VISUAL Attribut (Mfmediaengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25e9c7366bd0fbf4bf36523cf7a68f2d6da70bc3
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d0e3c41d337fa198b2ab8b6f2e914d1dad53d180920f14860e5cc18faeb21117
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106351848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113910"
 ---
-# <a name="mf_media_engine_playback_visual-attribute"></a>Das \_ Visual-Attribut für die \_ \_ Wiedergabe \_ von MF
+# <a name="mf_media_engine_playback_visual-attribute"></a>MF \_ MEDIA ENGINE PLAYBACK \_ \_ \_ VISUAL-Attribut
 
-Legt eine Microsoft directcomposition-Visualisierung als Wiedergabe Bereich für die Medien-Engine fest.
+Legt ein Microsoft DirectComposition-Visual als Wiedergabebereich für die Medien-Engine fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**Idcompositionvisual \* *_ gespeichert als _* IUnknown\***
+**IDCompositionVisual \* *_ gespeichert als _* IUnknown\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: getunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: setunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown).
+Um dieses Attribut festzulegen, rufen Sie [**DIE ATTRIBUTEAttributes::SetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu directcomposition finden Sie unter [directcomposition](../directcomp/directcomposition-portal.md) und [**idcompositionvisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual).
+Weitere Informationen zu DirectComposition finden Sie unter [DirectComposition](../directcomp/directcomposition-portal.md) und [**IDCompositionVisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual).
 
-Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) -Methode verwendet, um die Medien-Engine zu initialisieren.
+Dieses Attribut wird mit der [**METHODE VONMEDIAENGINEClassFactory::CreateInstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) verwendet, um die Medien-Engine zu initialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>MF mediaengine. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmediaengine.h</dt> </dl> |
 
 
 

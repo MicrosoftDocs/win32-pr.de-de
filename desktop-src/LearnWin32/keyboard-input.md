@@ -1,114 +1,114 @@
 ---
-title: Tastatureingabe (Get Started with Win32 and C++)
-description: Tastatureingabe
+title: Tastatureingabe (Erste Schritte mit Win32 und C++)
+description: Tastatureingaben
 ms.assetid: FC682E8B-8360-4D58-AC42-4CEFD9CB750F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82065d4024428b48d4d3061da31a5384cab417d2
-ms.sourcegitcommit: 35bb565804eaeed7ac5503595753f59d120076dd
+ms.openlocfilehash: e3ed8ac1e8d7cd8e6ea35c9e9f58c10fd516cca010b5e5dce667817b32028c5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "106357137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119822350"
 ---
-# <a name="keyboard-input-get-started-with-win32-and-c"></a>Tastatureingabe (Get Started with Win32 and C++)
+# <a name="keyboard-input-get-started-with-win32-and-c"></a>Tastatureingabe (Erste Schritte mit Win32 und C++)
 
-Die Tastatur wird für verschiedene Typen von Eingaben verwendet, einschließlich:
+Die Tastatur wird für verschiedene Eingabetypen verwendet, einschließlich:
 
--   Zeicheneingabe. Text, der vom Benutzer in ein Dokument oder ein Bearbeitungsfeld eingetippt wird.
--   Tastenkombinationen. Tastenkombinationen, die Anwendungsfunktionen aufrufen. beispielsweise STRG + O zum Öffnen einer Datei.
--   System Befehle. Tastenkombinationen, die Systemfunktionen aufrufen. Beispiel: Alt + Tab zum Wechseln von Fenstern.
+-   Zeicheneingabe. Text, den der Benutzer in ein Dokument oder ein Bearbeitungsfeld eingibt.
+-   Tastenkombinationen. Tastenstriche, die Anwendungsfunktionen aufrufen; Drücken Sie z. B. STRG+O, um eine Datei zu öffnen.
+-   Systembefehle. Tastenstriche, die Systemfunktionen aufrufen; z. B. ALT + TAB, um Fenster zu wechseln.
 
-Bei der Betrachtung von Tastatureingaben ist es wichtig, sich daran zu erinnern, dass ein Schlüssel Strich nicht mit einem Zeichen identisch ist. Wenn Sie z. b. die Taste drücken, kann dies zu einem der folgenden Zeichen führen.
+Bei der Tastatureingabe ist es wichtig zu beachten, dass ein Tastenstrich nicht mit einem Zeichen identisch ist. Wenn Sie z. B. die A-Taste drücken, kann dies zu einem der folgenden Zeichen führen.
 
 -   a
 -   Ein
--   á (wenn die Tastatur das Kombinieren von Diakritik unterstützt)
+-   á (wenn die Tastatur die Kombination diakritischer Zeichen unterstützt)
 
-Wenn die Alt-Taste gedrückt gehalten wird, wird durch Drücken der Taste Alt + A erzeugt, die das System nicht als Zeichen behandelt, sondern als Systembefehl.
+Wenn die ALT-TASTE gedrückt gehalten wird, erzeugt das Drücken der A-Taste AUßERDEM ALT+A, was das System überhaupt nicht als Zeichen behandelt, sondern als Systembefehl.
 
-## <a name="key-codes"></a>Schlüssel Codes
+## <a name="key-codes"></a>Schlüsselcodes
 
-Wenn Sie eine Taste drücken, generiert die Hardware einen Überprüfungs *Code*. Überprüfungs Codes variieren von einer Tastatur zur nächsten, und es gibt separate Überprüfungs Codes für Key-up-und Key-down-Ereignisse. Sie werden die Scan Codes fast nie interessieren. Der Tastaturtreiber übersetzt Scan Codes in *virtuelle Schlüsselcodes*. Virtuelle Schlüsselcodes sind Geräte unabhängig. Wenn Sie auf eine beliebige Tastatur eine Taste drücken, wird derselbe Code für den virtuellen Schlüssel generiert.
+Wenn Sie eine Taste drücken, generiert die Hardware einen *Scancode.* Scancodes variieren von Tastatur zu Tastatur, und es gibt separate Scancodes für Key-Up- und Key-Down-Ereignisse. Scancodes sind ihnen fast nie wichtig. Der Tastaturtreiber übersetzt Scancodes in Codes mit *virtuellen Schlüsseln.* Codes für virtuelle Schlüssel sind geräteunabhängig. Durch Drücken der A-Taste auf einer Tastatur wird der gleiche Code mit virtuellen Tasten generiert.
 
-Im allgemeinen entsprechen die Codes von virtuellen Schlüsseln nicht ASCII-Codes oder einem anderen Zeichen Codierungsstandard. Dies ist offensichtlich, wenn Sie sich Gedanken darüber machen, da derselbe Schlüssel andere Zeichen generieren kann (a, a, á), und einige Schlüssel, wie z. b. Funktionstasten, entsprechen keinem Zeichen.
+Im Allgemeinen entsprechen Codes für virtuelle Schlüssel weder ASCII-Codes noch einem anderen Zeichencodierungsstandard. Dies ist offensichtlich, wenn Sie darüber nachdenken, da der gleiche Schlüssel verschiedene Zeichen (a, A, á) generieren kann und einige Schlüssel, z. B. Funktionstasten, keinem Zeichen entsprechen.
 
-Dies bedeutet, dass die folgenden virtuellen Schlüsselcodes ASCII-Entsprechungen zugeordnet werden:
+Die folgenden Codes für virtuelle Schlüssel werden jedoch ASCII-Entsprechungen zugeordnet:
 
--   0 bis 9 Schlüssel = ASCII ' 0 ' – ' 9 ' (0x30 – 0x39)
--   A bis Z Keys = ASCII ' A ' – ' Z ' (0x41 – 0x5A)
+-   0 bis 9 Schlüssel = ASCII '0' – '9' (0x30 – 0x39)
+-   A- bis Z-Schlüssel = ASCII "A" – "Z" (0x41 – 0x5A)
 
-In gewisser Hinsicht ist diese Zuordnung unglücklich, denn Sie sollten sich aus den beschriebenen Gründen nie mit virtuellen Schlüsselcodes als Zeichen vorstellen.
+In einigen Punkten ist diese Zuordnung leider, da Sie sich aus den beschriebenen Gründen niemals Codes für virtuelle Schlüssel als Zeichen vorstellen sollten.
 
-Die Header Datei WinUser. h definiert Konstanten für den größten Teil der Codes von virtuellen Schlüsseln. Beispielsweise ist der Code des virtuellen Schlüssels für die nach-links-Taste **VK \_ left** (0x25). Eine umfassende Liste der Codes für virtuelle Schlüssel finden Sie unter [**Code für virtuelle**](/windows/desktop/inputdev/virtual-key-codes)Schlüssel. Für die virtuellen Schlüsselcodes, die ASCII-Werten entsprechen, sind keine Konstanten definiert. Beispielsweise ist der Code des virtuellen Schlüssels für die A-Taste 0x41, aber es ist keine Konstante mit dem Namen " **VK \_ A**" vorhanden. Verwenden Sie stattdessen einfach den numerischen Wert.
+Die Headerdatei WinUser.h definiert Konstanten für die meisten Codes für virtuelle Schlüssel. Der Virtuelle Schlüsselcode für die NACH-LINKS-TASTE lautet beispielsweise **VK \_ LEFT** (0x25). Die vollständige Liste der Codes für virtuelle Schlüssel finden Sie unter Codes für [**virtuelle Schlüssel.**](/windows/desktop/inputdev/virtual-key-codes) Für die Codes mit virtuellen Schlüsseln, die ASCII-Werten entsprechen, werden keine Konstanten definiert. Beispielsweise ist der Code des virtuellen Schlüssels für den A-Schlüssel 0x41, aber es gibt keine Konstante mit dem Namen **VK \_ A.** Verwenden Sie stattdessen einfach den numerischen Wert.
 
-## <a name="key-down-and-key-up-messages"></a>Key-Down und Key-Up Meldungen
+## <a name="key-down-and-key-up-messages"></a>Key-Down und Key-Up Nachrichten
 
-Wenn Sie eine Taste drücken, empfängt das Fenster, das den Tastaturfokus besitzt, eine der folgenden Meldungen.
+Wenn Sie eine Taste drücken, empfängt das Fenster mit Tastaturfokus eine der folgenden Meldungen.
 
--   [**WM \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown)
--   [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown)
+-   [**WM \_ SYSKEYDOWN**](/windows/desktop/inputdev/wm-syskeydown)
+-   [**WM \_ KEYDOWN**](/windows/desktop/inputdev/wm-keydown)
 
-Die [**WM- \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown) -Meldung gibt eine *System Taste* an, bei der es sich um einen Schlüssel Strich handelt, der einen Systembefehl aufruft. Es gibt zwei Typen von System Schlüsseln:
+Die [**WM \_ SYSKEYDOWN-Meldung**](/windows/desktop/inputdev/wm-syskeydown) gibt einen *Systemschlüssel* an, bei dem es sich um einen Schlüsselstrich handelt, der einen Systembefehl aufruft. Es gibt zwei Arten von Systemschlüsseln:
 
--   ALT + beliebige Taste
+-   ALT + beliebiger Schlüssel
 -   F10
 
-Die Taste F10 aktiviert die Menüleiste eines Fensters. Verschiedene Kombinationen aus Alt-Taste rufen Systembefehle auf. Beispielsweise wechselt Alt + Tab zu einem neuen Fenster. Wenn ein Fenster außerdem über ein Menü verfügt, kann die Alt-Taste zum Aktivieren von Menü Elementen verwendet werden. Einige ALT-Tastenkombinationen machen nichts.
+Die Taste F10 aktiviert die Menüleiste eines Fensters. Verschiedene ALT-Tastenkombinationen rufen Systembefehle auf. Beispielsweise wechselt ALT + TAB zu einem neuen Fenster. Wenn ein Fenster über ein Menü verfügt, kann außerdem die ALT-TASTE verwendet werden, um Menüelemente zu aktivieren. Einige ALT-Tastenkombinationen haben keinerlei Möglichkeiten.
 
-Alle anderen Schlüssel Striche werden als nicht-Systemschlüssel betrachtet und die [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Nachricht erzeugt. Dies schließt die anderen Funktionstasten als F10 ein.
+Alle anderen Tastenstriche werden als Nichtsystemschlüssel betrachtet und erzeugen die [**WM \_ KEYDOWN-Nachricht.**](/windows/desktop/inputdev/wm-keydown) Dies schließt die anderen Funktionsschlüssel als F10 ein.
 
-Wenn Sie einen Schlüssel freigeben, sendet das System eine entsprechende Schlüssel Nachricht:
+Wenn Sie einen Schlüssel freigeben, sendet das System eine entsprechende Key-Up-Nachricht:
 
--   [**WM- \_ KeyUp**](/windows/desktop/inputdev/wm-keyup)
--   [**WM- \_ syskeyup**](/windows/desktop/inputdev/wm-syskeyup)
+-   [**WM \_ KEYUP**](/windows/desktop/inputdev/wm-keyup)
+-   [**WM \_ SYSKEYUP**](/windows/desktop/inputdev/wm-syskeyup)
 
-Wenn Sie einen Schlüssel gedrückt halten, um die Wiederholungsfunktion der Tastatur zu starten, sendet das System mehrere Schlüssel Meldungen, gefolgt von einer einzelnen Schlüssel Nachricht.
+Wenn Sie eine Taste gedrückt halten, die lang genug ist, um die Wiederholungsfunktion der Tastatur zu starten, sendet das System mehrere Tastenabdehnungsmeldungen, gefolgt von einer einzelnen Taste-nach-oben-Nachricht.
 
-In allen vier der bisher behandelten Tastatur Meldungen enthält der *wParam* -Parameter den Code für den virtuellen Schlüssel. Der *LPARAM* -Parameter enthält verschiedene Informationen, die in 32 Bits verpackt sind. In der Regel benötigen Sie die Informationen in *LPARAM* nicht. Ein Flag, das nützlich sein kann, ist Bit 30, das "Previous Key State"-Flag, das für wiederholte Schlüssel Meldungen auf 1 festgelegt ist.
+In allen vier tastaturbasierten Meldungen, die bisher erläutert wurden, enthält der *wParam-Parameter* den Virtuellen Schlüsselcode des Schlüssels. Der *lParam-Parameter* enthält verschiedene Informationen, die in 32 Bits gepackt sind. In der Regel benötigen Sie die Informationen in *lParam* nicht. Ein flag, das nützlich sein kann, ist Bit 30, das Flag "Vorheriger Schlüsselzustand", das für wiederholte Key-Down-Nachrichten auf 1 festgelegt ist.
 
-Wie der Name schon sagt, sind Systemschlüssel Striche hauptsächlich für die Verwendung durch das Betriebssystem vorgesehen. Wenn Sie die [**WM- \_ syskeydownnachricht abfangen**](/windows/desktop/inputdev/wm-syskeydown) , müssen Sie [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) nachher aufzurufen. Andernfalls blockieren Sie die Verarbeitung des Befehls durch das Betriebssystem.
+Wie der Name schon sagt, sind Systemschlüsselstriche in erster Linie für die Verwendung durch das Betriebssystem vorgesehen. Wenn Sie die [**\_ WM-SYSKEYDOWN-Nachricht**](/windows/desktop/inputdev/wm-syskeydown) abfangen, rufen Sie [**defWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) anschließend auf. Andernfalls blockieren Sie die Verarbeitung des Befehls durch das Betriebssystem.
 
-## <a name="character-messages"></a>Zeichen Nachrichten
+## <a name="character-messages"></a>Zeichenmeldungen
 
-Schlüssel Striche werden von der [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion in Zeichen konvertiert, die wir zuerst in [Modul 1](your-first-windows-program.md)gesehen haben. Diese Funktion untersucht KeyDown-Meldungen und übersetzt Sie in Zeichen. Für jedes Zeichen, das erzeugt wird, fügt die Funktion **translatemess** eine "WM char"-oder "WM"- [**\_ Sychar**](/windows/desktop/inputdev/wm-char) -Nachricht in die Nachrichten Warteschlange des Fensters ein. [**\_**](/windows/desktop/menurc/wm-syschar) Der *wParam* -Parameter der Nachricht enthält das UTF-16-Zeichen.
+Schlüsselstriche werden von der [**TranslateMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-translatemessage) in Zeichen konvertiert, die wir zum ersten Mal in [Modul 1](your-first-windows-program.md)gesehen haben. Diese Funktion untersucht Key-Down-Nachrichten und übersetzt sie in Zeichen. Für jedes erzeugte Zeichen fügt die **TranslateMessage-Funktion** eine [**WM \_ CHAR-**](/windows/desktop/inputdev/wm-char) oder [**WM \_ SYSCHAR-Nachricht**](/windows/desktop/menurc/wm-syschar) in die Nachrichtenwarteschlange des Fensters ein. Der *wParam-Parameter* der Nachricht enthält das UTF-16-Zeichen.
 
-Möglicherweise werden WM- [**\_ char**](/windows/desktop/inputdev/wm-char) -Nachrichten aus [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Meldungen generiert, während [**WM- \_ Sychar**](/windows/desktop/menurc/wm-syschar) -Nachrichten aus [**WM- \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown) -Nachrichten generiert werden. Nehmen wir beispielsweise an, dass der Benutzer die UMSCHALTTASTE drückt, gefolgt von der A-Taste. Wenn Sie ein Standardmäßiges Tastaturlayout annehmen, erhalten Sie die folgende Sequenz von Nachrichten:
+Wie Sie vielleicht vermuten, werden [**WM \_ CHAR-Nachrichten**](/windows/desktop/inputdev/wm-char) aus [**WM \_ KEYDOWN-Nachrichten**](/windows/desktop/inputdev/wm-keydown) generiert, während [**WM \_ SYSCHAR-Nachrichten**](/windows/desktop/menurc/wm-syschar) aus [**WM \_ SYSKEYDOWN-Nachrichten**](/windows/desktop/inputdev/wm-syskeydown) generiert werden. Angenommen, der Benutzer drückt die UMSCHALTTASTE gefolgt von der TASTE A. Wenn Sie ein Standardtastaturlayout verwenden, erhalten Sie die folgende Sequenz von Meldungen:
 
-**WM \_ KeyDown**: Shift  
-**WM \_ KeyDown**: A  
-**WM \_ CHAR**: ' A '  
-
-
-Auf der anderen Seite generiert die Kombination ALT + P Folgendes:
-
- **WM \_ syskeydown**: VK- \_ Menü  
-**WM \_ Syskeydown**: 0x50  
-**WM \_ Syschar**: ' p '  
-**WM \_ Syskeyup**: 0x50  
-**WM \_ KeyUp**: VK- \_ Menü  
+**WM \_ KEYDOWN:** UMSCHALT  
+**WM \_ KEYDOWN:** A  
+**WM \_ CHAR**: 'A'  
 
 
-(Der Code des virtuellen Schlüssels für die Alt-Taste wird als "VK \_ " bezeichnet. Menü aus historischen Gründen.)
+Andererseits würde die Kombination ALT +P Folgendes generieren:
 
-Die [**WM- \_ syschar**](/windows/desktop/menurc/wm-syschar) -Meldung gibt ein System Zeichen an. Wie bei [**WM- \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown)sollten Sie diese Nachricht in der Regel direkt an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben. Andernfalls können Sie die Standardsystem Befehle stören. Behandeln Sie vor allem die " **WM \_ syschar** " nicht als Text, den der Benutzer eingegeben hat.
-
-Die Meldung " [**WM \_ char**](/windows/desktop/inputdev/wm-char) " ist das, was Sie normalerweise als Zeicheneingabe betrachten. Der Datentyp für das Zeichen ist **WCHAR \_ t**, das ein UTF-16-Unicode-Zeichen darstellt. Zeichen Eingaben können Zeichen außerhalb des ASCII-Bereichs enthalten, insbesondere bei Tastaturlayouts, die häufig außerhalb der USA verwendet werden. Sie können verschiedene Tastaturlayouts ausprobieren, indem Sie eine regionale Tastatur installieren und anschließend die Tastatur Funktion auf dem Bildschirm verwenden.
-
-Benutzer können auch einen Eingabemethoden-Editor (Input Method Editor, IME) installieren, um komplexe Skripts, z. b. japanische Zeichen, mit einer Standardtastatur einzugeben. Wenn Sie z. b. eine japanische IME-Taste verwenden, um das Katakana Character カ (KA) einzugeben, erhalten Sie möglicherweise die folgenden Meldungen:
-
-**WM \_ KeyDown**: VK \_ ProcessKey (die Taste für den IME-Prozess)  
-**WM \_ KeyUp**: 0x4B  
-**WM \_ KeyDown**: VK \_ ProcessKey  
-**WM \_ KeyUp**: 0x41  
-**WM \_ KeyDown**: VK \_ ProcessKey  
-**WM \_ CHAR**: カ  
-**WM \_ KeyUp**: VK \_ Return  
+ **WM \_ SYSKEYDOWN:** \_ VK-MENÜ  
+**WM \_ SYSKEYDOWN:** 0x50  
+**WM \_ SYSCHAR:**'p'  
+**WM \_ SYSKEYUP:** 0x50  
+**WM \_ KEYUP:** \_ VK-MENÜ  
 
 
-Einige Tastenkombinationen für STRG werden in ASCII-Steuerzeichen übersetzt. Beispielsweise wird STRG + A in das ASCII-Zeichen STRG-A (SoH) übersetzt (ASCII-Wert 0x01). Bei Texteingaben sollten Sie die Steuerzeichen in der Regel herausfiltern. Vermeiden Sie außerdem die Verwendung von [**WM \_ char**](/windows/desktop/inputdev/wm-char) zum Implementieren von Tastenkombinationen. Verwenden Sie stattdessen die [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Meldungen, oder verwenden Sie eine Zugriffstasten Tabelle. Zugriffstasten Tabellen werden im nächsten Thema, Zugriffstasten [Tabellen](accelerator-tables.md), beschrieben.
+(Der Code des virtuellen Schlüssels für den ALT-Schlüssel heißt VK. \_ MENU aus historischen Gründen.)
 
-Der folgende Code zeigt die Haupt Tastatur Meldungen im Debugger an. Experimentieren Sie mit verschiedenen Tastenkombinationen, und sehen Sie sich an, welche Meldungen generiert werden.
+Die [**WM \_ SYSCHAR-Meldung**](/windows/desktop/menurc/wm-syschar) gibt ein Systemzeichen an. Wie bei [**WM \_ SYSKEYDOWN**](/windows/desktop/inputdev/wm-syskeydown)sollten Sie diese Meldung in der Regel direkt an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben. Andernfalls können Standardsystembefehle beeinträchtigt werden. Behandeln Sie WM **\_ SYSCHAR** insbesondere nicht als Text, den der Benutzer eingegeben hat.
+
+Die [**WM \_ CHAR-Nachricht**](/windows/desktop/inputdev/wm-char) ist das, was Sie normalerweise als Zeicheneingabe betrachten. Der Datentyp für das Zeichen ist **wchar \_ t**, der ein UTF-16 Unicode-Zeichen darstellt. Die Zeicheneingabe kann Zeichen außerhalb des ASCII-Bereichs enthalten, insbesondere bei Tastaturlayouts, die häufig außerhalb der USA verwendet werden. Sie können verschiedene Tastaturlayouts ausprobieren, indem Sie eine regionale Tastatur installieren und dann das Feature Bildschirmtastatur verwenden.
+
+Benutzer können auch einen Eingabemethoden-Editor (Input Method Editor, IME) installieren, um komplexe Skripts wie japanische Zeichen mit einer Standardtastatur einzugeben. Wenn Sie beispielsweise eine japanische IME verwenden, um das Katakana-Zeichen (ka) einzugeben, erhalten Sie möglicherweise die folgenden Meldungen:
+
+**WM \_ KEYDOWN:** VK \_ PROCESSKEY (der IME PROCESS-Schlüssel)  
+**WM \_ KEYUP:** 0x4B  
+**WM \_ KEYDOWN:** VK \_ PROCESSKEY  
+**WM \_ KEYUP:** 0x41  
+**WM \_ KEYDOWN:** VK \_ PROCESSKEY  
+**WM \_ CHAR:**  
+**WM \_ KEYUP:** VK \_ RETURN  
+
+
+Einige Tastenkombinationen mit STRG werden in ASCII-Steuerzeichen übersetzt. Beispielsweise wird STRG+A in das ASCII-ZEICHEN STRG+A (SOH) (ASCII-Wert 0x01) übersetzt. Bei der Texteingabe sollten Sie in der Regel die Steuerzeichen herausfiltern. Vermeiden Sie außerdem die Verwendung von [**WM \_ CHAR,**](/windows/desktop/inputdev/wm-char) um Tastenkombinationen zu implementieren. Verwenden Sie stattdessen [**WM \_ KEYDOWN-Nachrichten,**](/windows/desktop/inputdev/wm-keydown) oder besser noch, eine Zugriffstastentabelle. Zugriffstastentabellen werden im nächsten Thema, [Accelerator Tables , beschrieben.](accelerator-tables.md)
+
+Der folgende Code zeigt die Haupttastaturmeldungen im Debugger an. Versuchen Sie, mit verschiedenen Tastenkombinationen zu spielen und zu sehen, welche Meldungen generiert werden.
 
 
 ```C++
@@ -156,19 +156,19 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
-## <a name="miscellaneous-keyboard-messages"></a>Verschiedene Tastatur Meldungen
+## <a name="miscellaneous-keyboard-messages"></a>Sonstige Tastaturmeldungen
 
-Einige andere Tastatur Meldungen können von den meisten Anwendungen sicher ignoriert werden.
+Einige andere Tastaturmeldungen können von den meisten Anwendungen ignoriert werden.
 
--   Die [**WM \_ deadchar**](/windows/desktop/inputdev/wm-deadchar) -Nachricht wird für einen kombinierten Schlüssel, z. b. eine diakritische, gesendet. Beispielsweise wird auf der Tastatur der Sprache "Akzent" (") gefolgt von E" das Zeichen "é" erzeugt. Der **WM- \_ deadchar** -Wert wird für das Akzentzeichen gesendet.
--   Die [**WM \_ UNICHAR**](/windows/desktop/inputdev/wm-unichar) -Nachricht ist veraltet. Sie ermöglicht ANSI-Programmen den Empfang von Unicode-Zeichen Eingaben.
--   Das Zeichen " [**WM \_ IME \_ char**](/windows/desktop/Intl/wm-ime-char) " wird gesendet, wenn ein IME eine Tastatureingabe-Sequenz in Zeichen übersetzt. Es wird zusätzlich zur üblichen [**WM \_ char**](/windows/desktop/inputdev/wm-char) -Nachricht gesendet.
+-   Die [**WM \_ DEADCHAR-Nachricht**](/windows/desktop/inputdev/wm-deadchar) wird für einen Kombinationsschlüssel gesendet, z. B. für einen diakritischen Schlüssel. Wenn Sie beispielsweise auf einer Tastatur in spanischer Sprache Akzent (') gefolgt von E eingeben, wird das Zeichen "e" erzeugt. WM **\_ DEADCHAR wird** für das Akzentzeichen gesendet.
+-   Die [**WM \_ UNICHAR-Nachricht**](/windows/desktop/inputdev/wm-unichar) ist veraltet. Dadurch können ANSI-Programme Unicode-Zeicheneingaben empfangen.
+-   Das [**WM \_ IME \_ CHAR-Zeichen**](/windows/desktop/Intl/wm-ime-char) wird gesendet, wenn ein IME eine Tastatureingabesequenz in Zeichen übersetzt. Er wird zusätzlich zur üblichen [**WM \_ CHAR-Nachricht**](/windows/desktop/inputdev/wm-char) gesendet.
 
-## <a name="keyboard-state"></a>Tastatur Zustand
+## <a name="keyboard-state"></a>Tastaturstatus
 
-Die Tastatur Meldungen sind ereignisgesteuert. Das heißt, Sie erhalten eine Nachricht, wenn etwas Interessantes passiert, z. b. einen Tastendruck, und die Meldung gibt Aufschluss darüber, was gerade passiert ist. Sie können den Status eines Schlüssels jedoch auch jederzeit testen, indem Sie die [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) -Funktion aufrufen.
+Die Tastaturmeldungen sind ereignisgesteuert. Das heißt, Sie erhalten eine Meldung, wenn etwas Interessantes passiert, z. B. ein Drücken der Taste, und die Meldung informiert Sie darüber, was gerade passiert ist. Sie können den Zustand eines Schlüssels aber auch jederzeit testen, indem Sie die [**GetKeyState-Funktion**](/windows/desktop/api/winuser/nf-winuser-getkeystate) aufrufen.
 
-Nehmen Sie beispielsweise an, wie Sie die Tastenkombination mit der linken Maustaste und Alt-Taste erkennen. Sie können den Zustand der Alt-Taste nachverfolgen, indem Sie auf Tastatur Schlag Nachrichten lauschen und ein Flag speichern, aber [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) spart Ihnen die Probleme. Wenn Sie die [**WM- \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown) -Meldung erhalten, können Sie einfach **GetKeyState** wie folgt aufrufen:
+Überlegen Sie beispielsweise, wie Sie die Kombination aus linker Maustaste und ALT-TASTE erkennen würden. Sie können den Zustand der ALT-TASTE nachverfolgen, indem Sie auf Tastenstrichmeldungen lauschen und ein Flag speichern. [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) erspart Ihnen jedoch die Probleme. Wenn Sie die [**\_ WM-LBUTTONDOWN-Nachricht**](/windows/desktop/inputdev/wm-lbuttondown) erhalten, rufen Sie **getKeyState einfach** wie folgt auf:
 
 
 ```C++
@@ -180,9 +180,9 @@ if (GetKeyState(VK_MENU) & 0x8000))
 
 
 
-Die [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) -Nachricht nimmt einen Code für virtuelle Schlüssel als Eingabe an und gibt einen Satz von Bitflags zurück (tatsächlich nur zwei Flags). Der Wert 0X8000 enthält das Bitflag, das testet, ob der Schlüssel aktuell gedrückt ist.
+Die [**GetKeyState-Nachricht**](/windows/desktop/api/winuser/nf-winuser-getkeystate) verwendet einen virtuellen Schlüsselcode als Eingabe und gibt einen Satz von Bitflags zurück (eigentlich nur zwei Flags). Der Wert 0x8000 das Bitflag enthält, das testet, ob die Taste gerade gedrückt wird.
 
-Die meisten Tastaturen haben zwei Alt-Taste, Links und rechts. Im vorherigen Beispiel wird getestet, ob eine von Ihnen gedrückt wurde. Sie können [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) auch verwenden, um zwischen den linken und rechten Instanzen der Alt-Taste, der UMSCHALTTASTE oder der STRG-Taste zu unterscheiden. Der folgende Code testet z. b., ob die Rechte ALT-Taste gedrückt ist.
+Die meisten Tastaturen verfügen über zwei ALT-Tasten: links und rechts. Im vorherigen Beispiel wird überprüft, ob eines der Beiden gedrückt ist. Sie können auch [**GetKeyState verwenden,**](/windows/desktop/api/winuser/nf-winuser-getkeystate) um zwischen den linken und rechten Instanzen der ALT-, UMSCHALT- oder STRG-Tasten zu unterscheiden. Der folgende Code testet beispielsweise, ob die rechte ALT-TASTE gedrückt wird.
 
 
 ```C++
@@ -194,13 +194,13 @@ if (GetKeyState(VK_RMENU) & 0x8000))
 
 
 
-Die [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) -Funktion ist interessant, da Sie einen *virtuellen* Tastatur Zustand meldet. Dieser virtuelle Status basiert auf dem Inhalt der Nachrichten Warteschlange und wird aktualisiert, wenn Sie Nachrichten aus der Warteschlange entfernen. Wenn das Programmfenster Meldungen verarbeitet, gibt **GetKeyState** Ihnen eine Momentaufnahme der Tastatur zu dem Zeitpunkt, zu dem die einzelnen Nachrichten in die Warteschlange eingereiht wurden. Wenn die letzte Nachricht in der Warteschlange z. b. [**WM \_ lbuttondown**](/windows/desktop/inputdev/wm-lbuttondown)war, meldet **GetKeyState** den Tastatur Zustand zu dem Zeitpunkt, an dem der Benutzer auf die Maustaste geklickt hat.
+Die [**GetKeyState-Funktion**](/windows/desktop/api/winuser/nf-winuser-getkeystate) ist interessant, da sie einen *virtuellen Tastaturzustand* meldet. Dieser virtuelle Status basiert auf dem Inhalt Ihrer Nachrichtenwarteschlange und wird aktualisiert, wenn Sie Nachrichten aus der Warteschlange entfernen. Während das Programm Fenstermeldungen verarbeitet, erhalten Sie mit **GetKeyState** eine Momentaufnahme der Tastatur zu dem Zeitpunkt, zu dem jede Nachricht in die Warteschlange gestellt wurde. Wenn beispielsweise die letzte Nachricht in der Warteschlange [**WM \_ LBUTTONDOWN**](/windows/desktop/inputdev/wm-lbuttondown)war, meldet **GetKeyState** den Tastaturzustand zu dem Zeitpunkt, zu dem der Benutzer auf die Maustaste geklickt hat.
 
-Da [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) auf der Meldungs Warteschlange basiert, werden auch Tastatureingaben ignoriert, die an ein anderes Programm gesendet wurden. Wenn der Benutzer zu einem anderen Programm wechselt, werden alle Tastenkombinationen, die an das Programm gesendet werden, von **GetKeyState** ignoriert. Wenn Sie den unmittelbaren physischen Zustand der Tastatur wirklich kennen möchten, gibt es hierfür eine Funktion: [**GetAsyncKeyState**](/windows/desktop/api/winuser/nf-winuser-getasynckeystate). Bei den meisten UI-Code ist die korrekte Funktion jedoch **GetKeyState**.
+Da [**GetKeyState**](/windows/desktop/api/winuser/nf-winuser-getkeystate) auf Ihrer Nachrichtenwarteschlange basiert, ignoriert es auch Tastatureingaben, die an ein anderes Programm gesendet wurden. Wenn der Benutzer zu einem anderen Programm wechselt, werden alle Tastendrucke, die an dieses Programm gesendet werden, von **GetKeyState ignoriert.** Wenn Sie wirklich den unmittelbaren physischen Zustand der Tastatur kennen möchten, gibt es dafür eine Funktion: [**GetAsyncKeyState**](/windows/desktop/api/winuser/nf-winuser-getasynckeystate). Für die meisten Ui-Code ist die richtige Funktion **jedoch GetKeyState.**
 
 ## <a name="next"></a>Nächste
 
-[Zugriffstasten Tabellen](accelerator-tables.md)
+[Zugriffstastentabellen](accelerator-tables.md)
 
  
 

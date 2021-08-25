@@ -1,61 +1,61 @@
 ---
-title: Informationen über Aufgaben Dialoge
+title: Informationen zu Taskdialogfeldern
 description: Bei einem Aufgabendialogfeld handelt es sich um ein Dialogfeld zum Anzeigen von Informationen und zum Entgegennehmen einfacher Eingaben des Benutzers.
 ms.assetid: vs|controls|~\controls\toolbar\taskdialogsoverview.htm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2eb5cafa452a4ed653c404d053e888c6de644236
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f2367e3cadff68f10af9d883d4ed7959e4e862a6f406a83361ea2f40b2f69c78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947555"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061428"
 ---
-# <a name="about-task-dialogs"></a>Informationen über Aufgaben Dialoge
+# <a name="about-task-dialogs"></a>Informationen zu Taskdialogfeldern
 
-Bei einem Aufgabendialogfeld handelt es sich um ein Dialogfeld zum Anzeigen von Informationen und zum Entgegennehmen einfacher Eingaben des Benutzers. Wie ein Meldungs Feld wird es gemäß den von Ihnen festgelegten Parametern vom Betriebssystem formatiert. Ein Aufgaben Dialogfeld weist jedoch viele weitere Funktionen auf als ein Meldungs Feld.
+Bei einem Aufgabendialogfeld handelt es sich um ein Dialogfeld zum Anzeigen von Informationen und zum Entgegennehmen einfacher Eingaben des Benutzers. Wie ein Meldungsfeld wird es vom Betriebssystem entsprechend den von Ihnen festgelegten Parametern formatiert. Ein Aufgabendialogfeld verfügt jedoch über viel mehr Funktionen als ein Meldungsfeld.
 
 > [!Note]  
-> Aufgaben Dialogfelder erfordern das STA-Modell (Single Thread-Apartment).
+> Taskdialogfelder erfordern das Singlethread-Apartmentmodell (STA).
 
- 
+ 
 
-## <a name="parts-of-a-task-dialog"></a>Teile eines Aufgaben Dialogfelds
+## <a name="parts-of-a-task-dialog"></a>Teile eines Aufgabendialogfelds
 
-Ein Aufgaben Dialogfeld besteht aus mehreren Elementen, von denen die meisten optional sind. Die folgende Abbildung zeigt die verschiedenen Teile eines Aufgaben Dialogfelds.
+Ein Aufgabendialog besteht aus mehreren Elementen, von denen die meisten optional sind. Die folgende Abbildung zeigt die verschiedenen Teile eines Aufgabendialogfelds.
 
-![Screenshot eines Fensters, das verschiedene Schaltflächen anzeigt, einschließlich eines neben dem reduzierten Steuerelement Text](images/taskdialog.jpg)
+![Screenshot eines Fensters mit verschiedenen Schaltflächen, einschließlich eines neben reduzierten Steuerelementtexts](images/taskdialog.jpg)
 
-In der folgenden Abbildung hat der Benutzer auf die Schaltfläche neben dem reduzierten Steuerelement Text geklickt, wodurch alternativer Text dort und in der Fußzeile angezeigt wird.
+In der folgenden Abbildung hat der Benutzer auf die Schaltfläche neben dem reduzierten Steuerelementtext geklickt, sodass dort und in der Fußzeile alternativer Text angezeigt wird.
 
-![Screenshot des vorherigen Fensters, aber mit zwei Zeilen mit erweitertem Steuerelement Text](images/taskdialogexpand.jpg)
+![Screenshot des vorherigen Fensters, aber mit zwei Zeilen erweitertem Steuerelementtext](images/taskdialogexpand.jpg)
 
 Die Abbildungen zeigen die folgenden Teile:
 
 
 
-| Teil                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          | TASKDIALOGCONFIG-Member                                    |
+| Teil                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          | TASKDIALOGCONFIG-Mitglied                                    |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| Fenstertitel           | Beschriftung des Fensters.                                                                                                                                                                                                                                                                                                                                                               | **pszwindowtitle**                                         |
-| Hauptsymbol              | Ein großes Symbol, das den Zweck des Aufgaben Dialogfelds angibt.                                                                                                                                                                                                                                                                                                                          | **hmainicon** oder **pszmainicon**                           |
-| Main-Anweisung       | Prinzipal Text.                                                                                                                                                                                                                                                                                                                                                                      | **pszmaininstruction**                                     |
-| Inhalt                | Zusätzlicher Text.                                                                                                                                                                                                                                                                                                                                                                          | **pszcontent**                                             |
-| Statusleiste           | Eine animierte Leiste, die den Fortschritt einer Aufgabe anzeigt.                                                                                                                                                                                                                                                                                                                                | **dwFlags**                                                |
-| Optionsfelder          | Anwendungs definierte Optionen für den Benutzer.                                                                                                                                                                                                                                                                                                                                            | **"pradiobuttons"**                                          |
-| Benutzerdefinierte Schaltfläche          | Eine Schaltfläche, die nicht zu den allgemeinen Schaltflächen gehört. Dies kann entweder eine normale Schaltfläche oder, wie in der Abbildung gezeigt, ein Befehls Link mit bis zu zwei Textzeilen sein.                                                                                                                                                                                                                    | **pbuttons**                                               |
-| Schaltfläche zum erweitern/reduzieren | Eine Schaltfläche, die verwendet werden kann, um zwischen dem Anwendungs definierten reduzierten Steuerelement Text (z. b. "Weitere Details anzeigen") und dem erweiterten Steuerelement Text zu wechseln, der sich in zwei oder mehr Zeilen befinden kann. Wenn der Steuerelement Text erweitert ist, wird der zusätzliche Text in **pszexpandecodinformation** auch nach dem Inhalts Text oder (wie in der zweiten Abbildung gezeigt) in der Fußzeile angezeigt. | **pszredusedcontroltext** und **pszexpandecodcontroltext** |
-| Überprüfungs Kontrollkästchen | Ein Kontrollkästchen, das von Anwendungs definiertem Text begleitet wird, für einfache Optionen, wie z. b. "dieses Dialogfeld nicht mehr anzeigen".                                                                                                                                                                                                                                                                     | **pszverificationtext**                                    |
-| Footersymbol            | Ein kleines Symbol, das den Zweck des Footertexts angibt.                                                                                                                                                                                                                                                                                                                          | **hfootericon** oder **pszfootericon**                       |
-| Footertext            | Zusätzlicher Text. In den Abbildungen enthält der Text einen Hyperlink.                                                                                                                                                                                                                                                                                                                | **pszfooter**                                              |
-| Allgemeine Schaltfläche          | Eine Standard Schaltfläche. in den Abbildungen die Schaltfläche OK.                                                                                                                                                                                                                                                                                                                              | **dwcommonbuttons**                                        |
+| Fenstertitel           | Beschriftung des Fensters.                                                                                                                                                                                                                                                                                                                                                               | **pszWindowTitle**                                         |
+| Hauptsymbol              | Ein großes Symbol, das den Zweck des Aufgabendialogfelds andeutet.                                                                                                                                                                                                                                                                                                                          | **hMainIcon** oder **pszMainIcon**                           |
+| Main-Anweisung       | Prinzipaltext.                                                                                                                                                                                                                                                                                                                                                                      | **pszMainInstruction**                                     |
+| Content                | Zusätzlicher Text.                                                                                                                                                                                                                                                                                                                                                                          | **pszContent**                                             |
+| Statusleiste           | Eine animierte Leiste, die den Fortschritt einer Aufgabe zeigt.                                                                                                                                                                                                                                                                                                                                | **dwFlags**                                                |
+| Optionsfelder          | Anwendungsdefinierte Optionen für den Benutzer.                                                                                                                                                                                                                                                                                                                                            | **pRadioButtons**                                          |
+| Benutzerdefinierte Schaltfläche          | Eine Schaltfläche, die keine der gängigen Schaltflächen ist. Dies kann entweder eine normale Schaltfläche oder, wie in der Abbildung dargestellt, ein Befehlslink mit bis zu zwei Textzeilen sein.                                                                                                                                                                                                                    | **pButtons**                                               |
+| Schaltfläche "Erweitern/Reduzieren&quot; | Eine Schaltfläche, die verwendet werden kann, um zwischen dem anwendungsdefinierten reduzierten Steuerelementtext (z. B. &quot;Weitere Details anzeigen") und dem erweiterten Steuerelementtext, der in zwei oder mehr Zeilen angezeigt werden kann, umschalten zu können. Wenn der Steuerelementtext erweitert wird, wird der zusätzliche Text in **pszExpandedInformation** ebenfalls angezeigt, entweder nach dem Inhaltstext oder (wie in der zweiten Abbildung dargestellt) in der Fußzeile. | **pszCollapsedControlText** und **pszExpandedControlText** |
+| Kontrollkästchen "Überprüfung" | Ein Kontrollkästchen, das von anwendungsdefiniertm Text für einfache Optionen wie "Dieses Dialogfeld nicht mehr anzeigen" begleitet wird.                                                                                                                                                                                                                                                                     | **pszVerificationText**                                    |
+| Fußzeilensymbol            | Ein kleines Symbol, das den Zweck des Fußzeilentexts andeutet.                                                                                                                                                                                                                                                                                                                          | **hFooterIcon** oder **pszFooterIcon**                       |
+| Footertext            | Zusätzlicher Text. In den Abbildungen enthält der Text einen Link.                                                                                                                                                                                                                                                                                                                | **pszFooter**                                              |
+| Schaltfläche "Allgemein"          | Eine Standardschaltfläche; in den Abbildungen die Schaltfläche OK.                                                                                                                                                                                                                                                                                                                              | **dwCommonButtons**                                        |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

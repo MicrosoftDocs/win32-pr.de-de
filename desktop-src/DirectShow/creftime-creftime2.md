@@ -1,7 +1,7 @@
 ---
-description: Diese Methode für den Aufruf von "Methode" ("Ref time. h") verwendet den *msegcs* -Parameter.
+description: Diese CRefTime.CRefTime-Konstruktormethode (Reftime.h) verwendet den *msecs-Parameter.*
 ms.assetid: 039f57b2-0b5a-4087-b252-a9b8bbb7f284
-title: Der "up"-Konstruktor ("Ref time. h") "-msekunden"
+title: CRefTime.CRefTime-Konstruktor (Reftime.h) – msecs-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 00022ab493d08dd636be45008e0efdfde854e77a
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: db696a174c17b26f745a33a532c7020932e7e2cfd5a872ed8585d6a6291b0806
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106372027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054730"
 ---
-# <a name="creftimecreftime-constructor-reftimeh---msecs-parameter"></a>Der "up"-Konstruktor ("Ref time. h") "-msekunden"
+# <a name="creftimecreftime-constructor-reftimeh---msecs-parameter"></a>CRefTime.CRefTime-Konstruktor (Reftime.h) – msecs-Parameter
 
 Konstruktormethode.
 
@@ -42,7 +42,7 @@ CRefTime(
 
 <dl> <dt>
 
-*MS* 
+*msecs* 
 </dt> <dd>
 
 Zeit in Millisekunden.
@@ -55,8 +55,8 @@ Zeit in Millisekunden.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Ref time. h (Include Streams. h)                                                                                   |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Reftime.h (include Streams.h)                                                                                   |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: dcl_outputTopology (sm4 - asm)
-description: dcl \_ outputTopology (sm4 - asm)
+title: dcl_outputTopology (sm4 – asm)
+description: dcl \_ outputTopology (sm4 – asm)
 ms.assetid: a03a6feb-ec34-4655-a68c-a91e31e7140b
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b9648b1b662cb98bc762a479782e4d3742d4d32056fc9f15f43f58f8f4a89659
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f6a3b46dc226a85593a17b02118ed52088ed75d6
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117726940"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471996"
 ---
-# <a name="dcl_outputtopology-sm4---asm"></a>dcl \_ outputTopology (sm4 - asm)
+# <a name="dcl_outputtopology-sm4---asm"></a>dcl \_ outputTopology (sm4 – asm)
 
 Deklariert die Ausgabedaten des primitiven Typs geometry-shader.
 
 
 
-| dcl \_ outputTopology *Type* |
+| dcl \_ *outputTopology-Typ* |
 |----------------------------|
 
 
@@ -31,29 +31,11 @@ Deklariert die Ausgabedaten des primitiven Typs geometry-shader.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="Type"></span><span id="type"></span><span id="TYPE"></span><em>Typ</em><br/></td>
-<td>[in] Eine primitive Ausgabetopologie, bei der es sich um einen der folgenden Werte handelt: <br/>
-<ul>
-<li><em>pointlist</em></li>
-<li><em>linestrip</em></li>
-<li><em>trianglestrip</em></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Element | BESCHREIBUNG | 
+|------|-------------|
+| <span id="Type"></span><span id="type"></span><span id="TYPE"></span><em>Typ</em><br /> | [in] Eine primitive Ausgabetopologie, bei der es sich um einen der folgenden Werte handelt: <br /><ul><li><em>Pointlist</em></li><li><em>linestrip</em></li><li><em>trianglestrip</em></li></ul> | 
+
 
 
 
@@ -71,7 +53,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -84,7 +66,7 @@ dcl_outputTopology trianglestrip
 
 
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -107,7 +89,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

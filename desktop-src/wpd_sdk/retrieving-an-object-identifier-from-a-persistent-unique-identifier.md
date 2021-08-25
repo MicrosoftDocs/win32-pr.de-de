@@ -1,38 +1,38 @@
 ---
-description: Abrufen eines Objekt Bezeichners aus einem persistenten eindeutigen Bezeichner
+description: Abrufen eines Objektbezeichners aus einem persistenten eindeutigen Bezeichner
 ms.assetid: 146f8943-d4e1-4b87-a812-e534082a4f14
-title: Abrufen einer Objekt-ID aus einer permanenten eindeutigen ID
+title: Abrufen einer Objekt-ID aus einer persistenten eindeutigen ID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4f997f0faf586a374e5a83c6f96b6508f02eb41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6d4f08d496c7c03101602c945e6c27e7a2624fe84957eda932ead806f964d3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054770"
 ---
-# <a name="retrieving-an-object-id-from-a-persistent-unique-id"></a>Abrufen einer Objekt-ID aus einer permanenten eindeutigen ID
+# <a name="retrieving-an-object-id-from-a-persistent-unique-id"></a>Abrufen einer Objekt-ID aus einer persistenten eindeutigen ID
 
-Objekt Bezeichner sind nur für eine bestimmte Geräte Sitzung eindeutig. Wenn der Benutzer eine neue Verbindung herstellt, Stimmen Bezeichner aus einer vorherigen Sitzung möglicherweise nicht mit den Bezeichners für die aktuelle Sitzung ab. Um dieses Problem zu beheben, unterstützt die WPD-API persistente eindeutige Bezeichner (PUIDs), die über Geräte Sitzungen hinweg beibehalten werden.
+Objektbezeichner sind nur für eine bestimmte Gerätesitzung eindeutig. Wenn der Benutzer eine neue Verbindung ein richtet, können Bezeichner aus einer vorherigen Sitzung möglicherweise nicht mit Bezeichnern für die aktuelle Sitzung übereinstimmen. Um dieses Problem zu beheben, unterstützt die WPD-API persistente eindeutige Bezeichner (PERSISTENT UNIQUE Identifier, PUIDs), die über Gerätesitzungen hinweg beibehalten werden.
 
-Einige Geräte speichern Ihre PUIDs nativ mit einem bestimmten Objekt. Andere Benutzer können die PUID basierend auf einem Hash ausgewählter Objektdaten generieren. Andere können Objekt Bezeichner als PUIDs behandeln (da Sie sicherstellen können, dass diese Bezeichner niemals geändert werden).
+Einige Geräte speichern ihre PUIDs nativ mit einem bestimmten Objekt. Andere können die PUID basierend auf einem Hash der ausgewählten Objektdaten generieren. Andere können Objektbezeichner als PUIDs behandeln (da sie garantieren können, dass sich diese Bezeichner nie ändern).
 
-Die getobjectidentifierfrompersistentuniqueidentifier-Funktion im Modul contentproperties. cpp veranschaulicht das Abrufen eines Objekt Bezeichners für eine bestimmte PUID.
+Die GetObjectIdentifierFromPersistentUniqueIdentifier-Funktion im ContentProperties.cpp-Modul veranschaulicht das Abrufen eines Objektbezeichners für eine bestimmte PUID.
 
-Die Anwendung kann einen Objekt Bezeichner für eine entsprechende PUID mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
+Ihre Anwendung kann einen Objektbezeichner für eine entsprechende PUID mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen abrufen.
 
 
 
 | Schnittstelle                                                                                      | BESCHREIBUNG                                                                                         |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Bietet Zugriff auf die Abruf Methode.                                                            |
-| [**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird verwendet, um den Objekt Bezeichner und den entsprechenden permanenten eindeutigen Bezeichner (PUID) zu speichern. |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)                             | Ermöglicht den Zugriff auf die Abrufmethode.                                                            |
+| [**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md) | Wird verwendet, um sowohl den Objektbezeichner als auch den entsprechenden persistenten eindeutigen Bezeichner (PUID) zu speichern. |
 
 
 
  
 
-Die erste Aufgabe, die von der Beispielanwendung erreicht wird, ist das Abrufen einer PUID vom Benutzer.
+Die erste Aufgabe, die die Beispielanwendung erfüllt, besteht darin, eine PUID vom Benutzer zu erhalten.
 
 
 ```C++
@@ -47,7 +47,7 @@ if (FAILED(hr))
 
 
 
-Danach ruft die Beispielanwendung ein [**iportabledevicecontent**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) -Objekt ab, das verwendet wird, um die [**getobjectidsfrompersistentuniqueids**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-getobjectidsfrompersistentuniqueids) -Methode aufzurufen.
+Anschließend ruft die Beispielanwendung ein [**IPortableDeviceContent-Objekt**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent) ab, mit dem die [**GetObjectIDsFromPersistentUniqueIDs-Methode aufgerufen**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-getobjectidsfrompersistentuniqueids) wird.
 
 
 ```C++
@@ -63,7 +63,7 @@ if (SUCCEEDED(hr))
 
 
 
-Anschließend wird ein [**iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) -Objekt erstellt, das die vom Benutzer bereitgestellte PUID enthält.
+Als Nächstes wird ein [**IPortableDevicePropVariantCollection-Objekt**](iportabledevicepropvariantcollection.md) erstellt, das die vom Benutzer bereitgestellte PUID enthält.
 
 
 ```C++
@@ -75,7 +75,7 @@ hr = CoCreateInstance(CLSID_PortableDevicePropVariantCollection,
 
 
 
-Nachdem die vorangegangenen drei Schritte ausgeführt wurden, ist das Beispiel bereit, um den Objekt Bezeichner abzurufen, der mit der vom Benutzer bereitgestellten PUID übereinstimmt. Dies wird erreicht, indem die [**iportabledevicecontent:: getobjectidsfrompersistentuniqueids**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-getobjectidsfrompersistentuniqueids) -Methode aufgerufen wird. Vor dem Aufrufen dieser Methode wird im Beispiel eine PROPVARIANT-Struktur initialisiert, die vom Benutzer bereitgestellte PUID in diese Struktur geschrieben und dem iportabledevicepropvariantcollection-Objekt hinzugefügt, bei dem ppersistentuniqueids zeigt. Dieser Zeiger wird als erstes Argument an die getobjectidsfrompersistentuniqueids-Methode übermittelt. Das zweite Argument von getobjectidsfrompersistentuniqueids ist ein iportabledevicepropvariantcollection-Objekt, das den übereinstimmenden Objekt Bezeichner empfängt.
+Sobald die vorherigen drei Schritte erfolgt sind, kann das Beispiel den Objektbezeichner abrufen, der der vom Benutzer bereitgestellten PUID entspricht. Dies wird durch Aufrufen der [**IPortableDeviceContent::GetObjectIDsFromPersistentUniqueIDs-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevicecontent-getobjectidsfrompersistentuniqueids) erreicht. Vor dem Aufrufen dieser Methode initialisiert das Beispiel eine PROPVARIANT-Struktur, schreibt die vom Benutzer bereitgestellte PUID in diese Struktur und fügt sie dem IPortableDevicePropVariantCollection-Objekt hinzu, auf das pPersistentUniqueIDs zeigt. Dieser Zeiger wird als erstes Argument an die GetObjectIDsFromPersistentUniqueIDs-Methode übergeben. Das zweite Argument von GetObjectIDsFromPersistentUniqueIDs ist ein IPortableDevicePropVariantCollection-Objekt, das den übereinstimmenden Objektbezeichner empfängt.
 
 
 ```C++
@@ -146,13 +146,13 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

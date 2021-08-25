@@ -4,24 +4,24 @@ ms.assetid: 9099f9df-b620-4623-826e-c541202ebc4a
 title: Bereitstellen für schnellere Kommunikation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2594a7dbd34813013257350e2deb9d93db6bae5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 201185878a6d3fc041512b41fd3f51975ae5e0988f853dbbbcb77b716ea4cebe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070780"
 ---
 # <a name="deploying-for-faster-communication"></a>Bereitstellen für schnellere Kommunikation
 
-Die Leistung ist ein wichtiger Aspekt bei der Bereitstellung einer COM+-Anwendung, und der Speicherort der Komponente ist der Schlüssel zum erzielen der besten Leistung einer gut entworfenen Anwendung.
+Die Leistung ist ein wichtiger Aspekt bei der Bereitstellung einer COM+-Anwendung, und der Speicherort der Komponente ist der Schlüssel, um die beste Leistung aus einer gut entworfenen Anwendung zu erzielen.
 
-Es war in der Zwischenzeit mit skalierbaren Anwendungsarchitekturen, dass die Leistung durch einfaches Verschieben der primären Komponenten der Anwendung auf schnellere Hardware gelöst werden konnte. Dies hat sich als nicht wahr erwiesen. Leistungsprobleme treten nicht aus der Leistung einzelner Komponenten, sondern von den Verknüpfungen, die Komponenten verbinden, auf.
+Früher wurde allgemein festgestellt, dass mit skalierbaren Anwendungsarchitekturen die Leistung durch einfaches Verschieben primärer Komponenten der Anwendung auf schnellere Hardware behoben werden kann. Dies hat sich als nicht wahr erwiesen. Leistungsprobleme entstehen nicht durch die Leistung einzelner Komponenten, sondern durch die Links, die Komponenten verbinden.
 
-Der primäre Faktor für den Erfolg ist die Position. Near oder physischer Standort, Zeit, Kapazität und Zweck sind unterschiedliche Aspekte des Standorts, die für die Bereitstellung einer COM+-Anwendung gelten, die sich alle auf die Leistung auswirken.
+Der primäre Faktor für den Erfolg ist der Standort. Nähe oder physischer Standort, Zeit, Kapazität und Zweck sind unterschiedliche Aspekte des Standorts, die für die Bereitstellung einer COM+-Anwendung gelten und sich alle auf die Leistung auswirken.
 
-Die beste Leistung ist, wenn die Anwendungskomponenten und-Ressourcen entworfen und bereitgestellt werden, um die Anforderungen zu erfüllen, die von der Arbeitsauslastung der Anwendung auf diese angewendet werden
+Die beste Leistung erzielen Sie, wenn die Anwendungskomponenten und -ressourcen so entworfen und bereitgestellt werden, dass sie den Anforderungen der Anwendungsworkload entsprechen.
 
-Im Allgemeinen sollten Sie Komponenten bereitstellen, um prozessübergreifende und besonders Computer übergreifende Kommunikation zwischen Komponenten zu minimieren. Wenn ihr Anwendungs Entwurf effizient ist, werden Klassen innerhalb einer Komponente nach Verwendung und Funktion gruppiert, um die Kommunikation innerhalb von Komponenten zu maximieren. Beim Bereitstellen von Komponenten müssen Sie sicherstellen, dass sich die Komponenten logisch befinden, um die Beziehungen zwischen den Komponenten zu nutzen und die Menge an Messaging zwischen den Komponenten zu verringern.
+Im Allgemeinen sollten Sie Komponenten bereitstellen, um die prozess- und insbesondere computerübergreifende Kommunikation zwischen Komponenten zu minimieren. Wenn Ihr Anwendungsentwurf effizient ist, werden Klassen innerhalb einer Komponente nach Verwendung und Funktion gruppiert, um die Kommunikation innerhalb von Komponenten zu maximieren. Beim Bereitstellen von Komponenten müssen Sie sicherstellen, dass die Komponenten logisch angeordnet sind, um die Beziehungen zwischen den Komponenten zu nutzen und die Menge an Messaging zwischen Komponenten zu reduzieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

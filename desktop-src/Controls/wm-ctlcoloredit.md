@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLOREDIT Meldung (Winuser. h)
-description: Ein Bearbeitungs Steuerelement, das nicht schreibgeschützt oder deaktiviert ist, sendet die WM \_ ctlcoloredit-Nachricht an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll.
+title: WM_CTLCOLOREDIT (Winuser.h)
+description: Ein Bearbeitungssteuer steuerelement, das nicht schreibgeschützt oder deaktiviert ist, sendet die WM CTLCOLOREDIT-Nachricht an das übergeordnete Fenster, wenn das Steuerelement \_ gezeichnet werden soll.
 ms.assetid: 2294e3b8-00a7-43ef-b20a-fe0e46764055
 keywords:
-- Windows-Steuerelemente für WM_CTLCOLOREDIT Meldung
+- WM_CTLCOLOREDIT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e100367f37018424fad33dc7cea30700183a0a2c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: da7f1fd27c51cabc699cf945fd4701c36d2e9709d1654de45859777333b9b4bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053900"
 ---
-# <a name="wm_ctlcoloredit-message"></a>\_Ctlcoloredit-Meldung von WM
+# <a name="wm_ctlcoloredit-message"></a>WM \_ CTLCOLOREDIT-Meldung
 
-Ein Bearbeitungs Steuerelement, das nicht schreibgeschützt oder deaktiviert ist, sendet die **WM \_ ctlcoloredit** -Nachricht an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Wenn Sie auf diese Meldung reagieren, kann das übergeordnete Fenster den angegebenen Gerätekontext Handle verwenden, um die Text-und Hintergrundfarben des Bearbeitungs Steuer Elements festzulegen.
+Ein Bearbeitungssteuer steuerelement, das nicht schreibgeschützt oder deaktiviert ist, sendet die **WM \_ CTLCOLOREDIT-Nachricht** an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Wenn auf diese Meldung reagiert wird, kann das übergeordnete Fenster das angegebene Gerätekontexthand handle verwenden, um den Text und die Hintergrundfarben des Bearbeitungssteuerfelds festzulegen.
 
 
 ```C++
@@ -42,34 +42,34 @@ WM_CTLCOLOREDIT
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Gerätekontext für das Bearbeitungs Steuerelement Fenster.
+Ein Handle für den Gerätekontext für das Bearbeitungssteuerungsfenster.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement.
+Ein Handle für das Bearbeitungssteuer steuerelement.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, muss Sie das Handle eines Pinsels zurückgeben. Das System verwendet den Pinsel zum Zeichnen des Hintergrunds des Bearbeitungs Steuer Elements.
+Wenn eine Anwendung diese Nachricht verarbeitet, muss sie das Handle eines Pinsels zurückgeben. Das System verwendet den Pinsel, um den Hintergrund des Bearbeitungssteuer steuerelements zu zeichnen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung einen Pinsel zurückgibt, den Sie erstellt hat (z. b. durch die Verwendung [**der Funktion "**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) [**kreatesolidbrush**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) " oder "-Funktion"), muss die Anwendung den Pinsel freigeben. Wenn die Anwendung einen System Pinsel zurückgibt (z. b. einen, der von der [**GetStockObject**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) -Funktion oder der [**getsyscolorbrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Funktion abgerufen wurde), muss die Anwendung den Pinsel nicht freigeben.
+Wenn die Anwendung einen von ihr erstellten Pinsel zurückgibt (z. B. mithilfe der [**CreateSolidBrush-**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect-Funktion),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel frei geben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigibt.
 
-Standardmäßig wählt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die Standardsystem Farben für das Bearbeitungs Steuerelement aus.
+Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das Bearbeitungssteuerprogramm aus.
 
-Schreibgeschützte oder deaktivierte Bearbeitungs Steuerelemente senden die **WM- \_ ctlcoloredit** -Nachricht nicht, sondern senden die " [**WM \_ ctlcolorstatic**](wm-ctlcolorstatic.md) "-Nachricht.
+Schreibgeschützte oder deaktivierte Bearbeitungssteuerelemente senden die **\_ WM-CTLCOLOREDIT-Nachricht** nicht. Stattdessen senden sie die [**\_ WM-CTLCOLORSTATIC-Nachricht.**](wm-ctlcolorstatic.md)
 
-Die **WM- \_ ctlcoloredit** -Nachricht wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
+Die **WM \_ CTLCOLOREDIT-Nachricht** wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
 
-Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünschten Rückgabewert in ein **int- \_ ptr** umwandeln und den Wert direkt zurückgeben. Wenn die Dialogfeld Prozedur **false** zurückgibt, wird die standardmäßige Nachrichtenverarbeitung ausgeführt. Der \_ von der [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion festgelegte DWL-msgresult-Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert **in eine INT \_ PTR-Datei** casten und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE zurückgibt,** wird die Standardnachrichtenbehandlung ausgeführt. Der von der \_ [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) MSGRESULT-DWL-Wert wird ignoriert.
 
-Umfassende **Bearbeitung:** Diese Meldung wird nicht unterstützt. Um die Hintergrundfarbe für ein Rich-Edit-Steuerelement festzulegen, verwenden Sie die Nachricht [**EM \_ setbkgndcolor**](em-setbkgndcolor.md) .
+**Umfangreiche Bearbeitung:** Diese Meldung wird nicht unterstützt. Verwenden Sie die MELDUNG [**EM \_ SETBKGNDCOLOR,**](em-setbkgndcolor.md) um die Hintergrundfarbe für ein umfangreiches Bearbeitungssteuer steuerelement fest zu legen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Umfassende **Bearbeitung:** Diese Meldung wird nicht unterstützt. Um die Hinter
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -87,13 +87,13 @@ Umfassende **Bearbeitung:** Diese Meldung wird nicht unterstützt. Um die Hinter
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ setbkgndcolor**](em-setbkgndcolor.md)
+[**EM \_ SETBKGNDCOLOR**](em-setbkgndcolor.md)
 </dt> <dt>
 
-[**WM \_ ctlcolorstatic**](wm-ctlcolorstatic.md)
+[**WM \_ CTLCOLORSTATIC**](wm-ctlcolorstatic.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -105,7 +105,7 @@ Umfassende **Bearbeitung:** Diese Meldung wird nicht unterstützt. Um die Hinter
 [**RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette)
 </dt> <dt>
 
-[**SelectPalette**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
+[**Wählen SiePalette aus.**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
 </dt> </dl>
 
  

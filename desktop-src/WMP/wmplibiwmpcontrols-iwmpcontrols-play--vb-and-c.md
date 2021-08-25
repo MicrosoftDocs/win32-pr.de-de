@@ -1,11 +1,11 @@
 ---
-title: Wiedergabemethode von iwmpcontrols
-description: Die Play-Methode beginnt mit der Wiedergabe des aktuellen Medien Elements oder nimmt die Wiedergabe eines angehaltenen Elements wieder auf.
+title: IWMPControls-Wiedergabemethode
+description: Die Wiedergabemethode beginnt mit der Wiedergabe des aktuellen Medienelements oder setzt die Wiedergabe eines angehaltenen Elements wieder auf.
 ms.assetid: 02e00df6-4dc1-44bb-9826-e69e8298ccaa
 keywords:
-- Wiedergabemethode Windows Media Player
-- Wiedergabemethode, Windows Media Player, iwmpcontrols-Schnittstelle
-- Iwmpcontrols Interface, Windows Media Player, Play-Methode
+- Play-Windows Media Player
+- play-Windows Media Player , IWMPControls-Schnittstelle
+- IWMPControls-Schnittstelle Windows Media Player , Play-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fd87a2e2ba3d53b119df328fa68668c91c78d6d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2823c5f9846ec2569da0ede6629a4b7e8c04c7b61e14060451c8d0cf3a02f71d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119761020"
 ---
-# <a name="iwmpcontrolsplay-method"></a>Iwmpcontrols::p Lay-Methode
+# <a name="iwmpcontrolsplay-method"></a>IWMPControls::p lay-Methode
 
-Die **Play** -Methode beginnt mit der Wiedergabe des aktuellen Medien Elements oder nimmt die Wiedergabe eines angehaltenen Elements wieder auf.
+Die **Wiedergabemethode** beginnt mit der Wiedergabe des aktuellen Medienelements oder setzt die Wiedergabe eines angehaltenen Elements wieder auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,13 +53,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode während der schnellen Weiterleitung oder rebuggen aufgerufen wird, wird die Wiederholungsrate (der Wert von **iwmpsettings. Rate**) auf 1,0 festgelegt.
+Wenn diese Methode während der schnellen Weiterleitung oder Zurückladung aufgerufen wird, wird die Wiedergaberate (der Wert **von IWMPSettings.rate**) auf 1,0 festgelegt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Play** verwendet, um das aktuelle Medien Element als Reaktion auf das Click-Ereignis einer Schaltfläche wiederzugeben. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **play verwendet,** um das aktuelle Medienelement als Reaktion auf das Click-Ereignis einer Schaltfläche wieder zu spielen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -106,23 +106,23 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. PlayItem (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-playitem--vb-and-c.md)
+[**IWMPControls.playItem (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-playitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. Rate (VB und c#)**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)
+[**IWMPSettings.rate (VB und C#)**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: JET_PFNSTATUS Callback-Funktion'
-title: JET_PFNSTATUS Callback-Funktion
+description: 'Weitere Informationen zu: JET_PFNSTATUS Rückruffunktion'
+title: JET_PFNSTATUS Rückruffunktion
 TOCTitle: JET_PFNSTATUS Callback Function
 ms:assetid: 8b0cf5bf-a4ee-4d8f-8dd7-556c35cd269d
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269326(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c5f3eb374580dc6bed752900434706b66c6623b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d10de8491379a3e19217bcdb4a28f3546ebc009f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217057"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482916"
 ---
-# <a name="jet_pfnstatus-callback-function"></a>JET_PFNSTATUS Callback-Funktion
+# <a name="jet_pfnstatus-callback-function"></a>JET_PFNSTATUS Rückruffunktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_pfnstatus-callback-function"></a>JET_PFNSTATUS Callback-Funktion
+## <a name="jet_pfnstatus-callback-function"></a>JET_PFNSTATUS Rückruffunktion
 
-Die **JET_PFNSTATUS** Callback-Funktion empfängt Informationen zum Fortschritt von Vorgängen mit langer Ausführungszeit, z. b. Defragmentierungs-, Sicherungs-oder Wiederherstellungs Vorgänge. Bei solchen Vorgängen Ruft die Datenbank-Engine diese Rückruffunktion auf, um ein Update für den Fortschritt des Vorgangs zu erhalten.
+Die **JET_PFNSTATUS** Rückruffunktion empfängt Informationen über den Fortschritt von Vorgängen mit langer Ausführungszeit, z. B. Defragmentierungs-, Sicherungs- oder Wiederherstellungsvorgänge. Während solcher Vorgänge ruft die Datenbank-Engine diese Rückruffunktion auf, um ein Update des Vorgangsfortschritts durchzuführen.
 
 ```cpp
     JET_ERR JET_API JET_PFNSTATUS(
@@ -42,62 +42,45 @@ Die **JET_PFNSTATUS** Callback-Funktion empfängt Informationen zum Fortschritt 
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung vom Typ [JET_SESID](./jet-sesid.md) , mit der die Funktion mit langer Ausführungszeit aufgerufen wurde.
+Die Sitzung vom Typ [JET_SESID,](./jet-sesid.md) mit der die Langlauffunktion aufgerufen wurde.
 
-*SNP*
+*Snp*
 
-Der Typ des Vorgangs, wie in [JET_SNP](./jet-snp.md)angegeben. Zu den Vorgangs Typen zählen Reparatur, Compact, Restore, Backup, Update, scrube und Update des Daten Satz Formats.
+Der In [JET_SNP](./jet-snp.md)angegebene Vorgangstyp. Zu den Arten von Vorgängen gehören Reparatur, Kompakt, Wiederherstellung, Sicherung, Update, Bereinigung und Aktualisierung des Datensatzformats.
 
-*SNT*
+*Snt*
 
-Der Status eines Vorgangs. Zu den Status Typen zählen Anfang, in Bearbeitung, Abschluss oder Fehler. Der Status wird mit dem dritten Parameter des Typs [JET_SNT](./jet-snt.md)angegeben.
+Der Status eines Vorgangs. Zu den Statustypen gehören "Start", "In Bearbeitung", "Abschluss" oder "Fehler". Der Status wird mit dem dritten Parameter vom Typ [JET_SNT](./jet-snt.md)angegeben.
 
-*teuren*
+*Pv*
 
 Ein optionaler Zeiger auf eine Struktur vom Typ [JET_SNPROG](./jet-snprog-structure.md).
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der [Fehlercodes für die erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md)zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der [Extensible Storage Engine-Fehlercodes](./extensible-storage-engine-error-codes.md)zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 Bei Erfolg kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden. In einigen Fällen gibt der Rückruf möglicherweise eine Warnung zurück, die diesen Vorgang beeinflusst.
 
-Bei einem Fehler wird der Vorgang, der den Rückruf ausgegeben hat, normalerweise ordnungsgemäß fortgesetzt oder schlägt fehl.
+Bei einem Fehler kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden oder fehlschlagen.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Diese Rückruffunktion wird in einer Status Benachrichtigung verwendet, in der die Struktur den aktuellen Status des Fortschritts angibt. Beachten Sie, dass die Rückruffunktion möglicherweise mehrmals für den Fortschritt des Vorgangs aufgerufen wird.
+Diese Rückruffunktion wird in einer Statusbenachrichtigung verwendet, in der die Struktur den aktuellen Status des Fortschritts angibt. Beachten Sie, dass die Rückruffunktion für den Fortschritt des Vorgangs möglicherweise mehrmals aufgerufen wird.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Fehlercodes für erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md)  
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Erweiterbare Storage Engine-Fehlercodes](./extensible-storage-engine-error-codes.md)  
+[Erweiterbare Storage-Engine-Fehler](./extensible-storage-engine-errors.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_SNP](./jet-snp.md)  
 [JET_SNPROG](./jet-snprog-structure.md)  

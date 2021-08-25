@@ -1,9 +1,9 @@
 ---
-title: EM_FORMATRANGE Meldung (RichEdit. h)
-description: Formatiert einen Textbereich in einem Rich-Edit-Steuerelement für ein bestimmtes Gerät.
+title: EM_FORMATRANGE Nachricht (Richedit.h)
+description: Formatiert einen Textbereich in einem Rich Edit-Steuerelement für ein bestimmtes Gerät.
 ms.assetid: 6d1e562b-d741-4d4a-a395-554083cb0dbb
 keywords:
-- Windows-Steuerelemente für EM_FORMATRANGE Meldung
+- EM_FORMATRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8f235fb054643623510ea23e73001aaeb070be3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 941aceb8c8f91657c7f78aba3d83a627fc413ed20d71217c933c6fba9b6f39e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049350"
 ---
-# <a name="em_formatrange-message"></a>EM \_ FormatRange-Nachricht
+# <a name="em_formatrange-message"></a>EM \_ FORMATRANGE-Meldung
 
-Formatiert einen Textbereich in einem Rich-Edit-Steuerelement für ein bestimmtes Gerät.
+Formatiert einen Textbereich in einem Rich Edit-Steuerelement für ein bestimmtes Gerät.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Formatiert einen Textbereich in einem Rich-Edit-Steuerelement für ein bestimmte
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob der Text dargestellt werden soll. Wenn dieser Parameter nicht 0 (null) ist, wird der Text gerendert. Andernfalls wird der Text direkt gemessen.
+Gibt an, ob der Text gerendert werden soll. Wenn dieser Parameter nicht 0 (null) ist, wird der Text gerendert. Andernfalls wird der Text nur gemessen.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eine [**Format Bereichs**](/windows/desktop/api/Richedit/ns-richedit-formatrange) Struktur, die Informationen über das Ausgabegerät enthält, oder **null** , um vom-Steuerelement zwischengespeicherte Informationen freizugeben.
+Eine [**FORMATRANGE-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-formatrange) die Informationen über das Ausgabegerät enthält, oder **NULL,** um vom Steuerelement zwischengespeicherte Informationen freizugeben.
 
 </dd> </dl>
 
@@ -47,11 +47,11 @@ Eine [**Format Bereichs**](/windows/desktop/api/Richedit/ns-richedit-formatrange
 
 Diese Meldung gibt den Index des letzten Zeichens zurück, das in den Bereich passt, plus 1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird normalerweise verwendet, um den Inhalt eines Rich-Edit-Steuer Elements für ein Ausgabegerät wie einen Drucker zu formatieren.
+Diese Meldung wird in der Regel verwendet, um den Inhalt des Rich-Edit-Steuerelements für ein Ausgabegerät wie einen Drucker zu formatieren.
 
-Nachdem Sie diese Meldung verwendet haben, um einen Textbereich zu formatieren, ist es wichtig, dass Sie die zwischengespeicherten Informationen freigeben, indem Sie **EM \_ FormatRange** erneut senden, wobei *LPARAM* jedoch auf **null** festgelegt ist. andernfalls tritt ein Speicherfehler auf. Außerdem müssen Sie nach der Verwendung dieser Nachricht für ein Gerät zwischengespeicherte Informationen freigeben, bevor Sie es für ein anderes Gerät wieder verwenden.
+Nachdem Sie diese Nachricht zum Formatieren eines Textbereichs verwendet haben, ist es wichtig, zwischengespeicherte Informationen freizugeben, indem Sie **EM \_ FORMATRANGE** erneut senden, aber *wenn lParam* auf **NULL** festgelegt ist, tritt andernfalls ein Speicherverlust auf. Nachdem Sie diese Nachricht für ein Gerät verwendet haben, müssen Sie zwischengespeicherte Informationen freigeben, bevor Sie sie erneut für ein anderes Gerät verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Nachdem Sie diese Meldung verwendet haben, um einen Textbereich zu formatieren, 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Nachdem Sie diese Meldung verwendet haben, um einen Textbereich zu formatieren, 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ DisplayBand**](em-displayband.md)
+[**EM \_ DISPLAYBAND**](em-displayband.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Drucken von Rich Edit-Steuerelementen](printing-rich-edit-controls.md)

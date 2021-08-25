@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: fcd6396f6421060a67108e7c428c99bcd7ca9651
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ebc2b2620b0bdc019e117f9a4b2c376be6320be968fdae42509dc3f62c3cc9a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077660"
 ---
 # <a name="getaccessmask-method-of-the-win32_share-class"></a>GetAccessMask-Methode der Win32 \_ Share-Klasse
 
-Die **GetAccessMask-Methode** gibt eine uint32-Bitmap mit den Zugriffsrechten für die Freigabe zurück, die vom Benutzer oder der Gruppe gehalten wird, in dessen Auftrag die Instanz zurückgegeben wird.
+Die **GetAccessMask-Methode** gibt eine uint32-Bitmap mit den Zugriffsrechten auf die Freigabe zurück, die vom Benutzer oder der Gruppe, in dessen Auftrag die Instanz zurückgegeben wird, gehalten wird.
 
 In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Zugriffsrechte für die Freigabe des Benutzers oder der Gruppe.
+Zugriffsrechte für die Freigabe, die vom Benutzer oder der Gruppe gehalten wird.
 
 <dl> <dt>
 
@@ -60,11 +60,11 @@ Gewährt das Recht, Daten aus der Datei zu lesen. Für ein Verzeichnis gewährt 
 
 2 (0x2)
 
-Gewährt das Recht, Daten in die Datei zu schreiben. Für ein Verzeichnis gewährt dieser Wert das Recht, eine Datei im Verzeichnis zu erstellen.
+Gewährt das Recht, Daten in die Datei zu schreiben. Bei einem Verzeichnis gewährt dieser Wert das Recht, eine Datei im Verzeichnis zu erstellen.
 
 </dd> <dt>
 
-**\_FILE \_ ADD-UNTERVERZEICHNIS**
+**FILE \_ ADD \_ SUBDIRECTORY**
 </dt> <dd>
 
 4 (0x4)
@@ -82,7 +82,7 @@ Gewährt das Recht, erweiterte Attribute zu lesen.
 
 </dd> <dt>
 
-**\_DATEI-SCHREIB-EA \_**
+**FILE \_ WRITE \_ EA**
 </dt> <dd>
 
 16 (0x10)
@@ -96,16 +96,16 @@ Gewährt das Recht, erweiterte Attribute zu schreiben.
 
 32 (0x20)
 
-Gewährt das Recht, eine Datei auszuführen. Für ein Verzeichnis kann das Verzeichnis durchlaufen werden.
+Gewährt das Recht zum Ausführen einer Datei. Für ein Verzeichnis kann das Verzeichnis durchlaufen werden.
 
 </dd> <dt>
 
-**FILE \_ DELETE \_ CHILD**
+**UNTERGEORDNETE \_ \_ DATEILÖSCHUNG**
 </dt> <dd>
 
 64 (0x40)
 
-Gewährt das Recht, ein Verzeichnis und alle dateien zu löschen, die es enthält (seine unteren Elemente), auch wenn die Dateien schreibgeschützt sind.
+Gewährt das Recht, ein Verzeichnis und alle darin enthaltenen Dateien (seine untergeordneten Dateien) zu löschen, auch wenn die Dateien schreibgeschützt sind.
 
 </dd> <dt>
 
@@ -114,11 +114,11 @@ Gewährt das Recht, ein Verzeichnis und alle dateien zu löschen, die es enthäl
 
 128 (0x80)
 
-Gewährt das Recht, Dateiattribute zu lesen.
+Gewährt das Recht zum Lesen von Dateiattributen.
 
 </dd> <dt>
 
-**\_ \_ DATEI-SCHREIBATTRIBUTE**
+**\_ \_ DATEISCHREIBATTRIBUTE**
 </dt> <dd>
 
 256 (0x100)
@@ -145,7 +145,7 @@ Gewährt Lesezugriff auf den Sicherheitsdeskriptor und den Besitzer.
 
 </dd> <dt>
 
-**WRITE \_ DAC**
+**\_SCHREIB-DAC**
 </dt> <dd>
 
 262144 (0x40000)
@@ -163,16 +163,16 @@ Weist den Schreibbesitzer zu.
 
 </dd> <dt>
 
-**SYNCHRONIZE**
+**Synchronisieren**
 </dt> <dd>
 
 1048576 (0x100000)
 
-Synchronisiert den Zugriff und ermöglicht es einem Prozess, auf den Eintritt eines Objekts in den signalisierten Zustand zu warten.
+Synchronisiert den Zugriff und ermöglicht einem Prozess, auf den Eintritt eines Objekts in den signalisierten Zustand zu warten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **Die GetAccessMask-Methode** ist eine Objektmethode und wird bei einem Vorkommen dieser Klasse verwendet.
 
@@ -206,17 +206,17 @@ WScript.Echo Return
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Stamm \\ CIMV2<br/>                                                                  |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
 | MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

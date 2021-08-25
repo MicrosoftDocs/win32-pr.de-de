@@ -1,19 +1,19 @@
 ---
-description: Das Filter Diagramm wird vor dem zerstören heruntergefahren.
+description: Das Filterdiagramm wird heruntergefahren, bevor es zerstört wird.
 ms.assetid: f1b3fc87-16ec-485b-b659-fc7d975c4a22
-title: EC_SHUTTING_DOWN (DShow. h)
+title: EC_SHUTTING_DOWN (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 471b746df3980afd96bbfc122a164ccd30561846
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 917a8f79b1a5201e50d0fcf2761a99b2801f75601f95ef866902492fb36065f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079110"
 ---
-# <a name="ec_shutting_down"></a>EC \_ wird \_ heruntergefahren
+# <a name="ec_shutting_down"></a>EC \_ WIRD \_ HERUNTERGEFAHREN
 
-Das Filter Diagramm wird vor dem zerstören heruntergefahren.
+Das Filterdiagramm wird heruntergefahren, bevor es zerstört wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,15 +35,15 @@ Keinen.
 
 ## <a name="default-action"></a>Standardaktion
 
-Dieses Ereignis wird nicht an die Anwendung gesendet. Der Filter Graph-Manager sendet ihn an Plug-in-Verteiler, um Sie darüber zu benachrichtigen, dass das Diagramm heruntergefahren wird. Anwendungen können die Standardaktion dieses Ereignisses nicht überschreiben.
+Dieses Ereignis wird nicht an die Anwendung gesendet. Der Filtergraph-Manager sendet ihn an Plug-In-Verteiler, um sie darüber zu informieren, dass der Graph heruntergefahren wird. Anwendungen können die Standardaktion dieses Ereignisses nicht überschreiben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -51,10 +51,10 @@ Dieses Ereignis wird nicht an die Anwendung gesendet. Der Filter Graph-Manager s
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

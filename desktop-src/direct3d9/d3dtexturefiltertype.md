@@ -1,5 +1,5 @@
 ---
-description: Definiert Texturfiltermodi für eine Texturphase.
+description: Definiert Texturfilterungsmodi für eine Texturphase.
 ms.assetid: 4e0420fa-ac76-4be4-90d7-944d8d5a5de1
 title: D3DTEXTUREFILTERTYPE-Enumeration (D3D9Types.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: bd6038e1b3d2b2f85e5766605583db9879427343
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: a9a55632ee1f1b8f2e40b1be1272411c7c24b3b18c576563ff9c0de7c79bc413
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069370"
 ---
 # <a name="d3dtexturefiltertype-enumeration"></a>D3DTEXTUREFILTERTYPE-Enumeration
 
-Definiert Texturfiltermodi für eine Texturphase.
+Definiert Texturfilterungsmodi für eine Texturphase.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,32 +56,32 @@ Bei Verwendung mit [**D3DSAMP \_ MIPFILTER**](./d3dsamplerstatetype.md)deaktivie
 <span id="D3DTEXF_POINT"></span><span id="d3dtexf_point"></span>**D3DTEXF \_ POINT**
 </dt> <dd>
 
-Gibt bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)an, dass die Punktfilterung als Texturvergrößerungs- bzw. Minierungsfilter verwendet werden soll. Bei Verwendung mit **D3DSAMP \_ MIPFILTER** aktiviert mipmapping und gibt an, dass der Rasterizer die Farbe aus dem Texel der nächsten MIP-Ebene auswählt.
+Gibt bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)an, dass die Punktfilterung als Texturvergrößerungs- bzw. Vergrößerungsfilter verwendet werden soll. Bei Verwendung mit **D3DSAMP \_ MIPFILTER** aktiviert mipmapping und gibt an, dass der Rasterizer die Farbe aus dem Texel der nächsten Mipebene ausgibt.
 
 </dd> <dt>
 
 <span id="D3DTEXF_LINEAR"></span><span id="d3dtexf_linear"></span>**D3DTEXF \_ LINEAR**
 </dt> <dd>
 
-Gibt bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)an, dass die lineare Filterung als Texturvergrößerungs- bzw. Minierungsfilter verwendet werden soll. Bei Verwendung mit **D3DSAMP \_ MIPFILTER** ermöglicht mipmapping und trilineare Filterung. Es gibt an, dass der Rasterizer zwischen den beiden nächsten MIP-Ebenen interpoliert.
+Gibt bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)an, dass die lineare Filterung als Texturvergrößerungs- bzw. Vergrößerungsfilter verwendet werden soll. Bei Verwendung mit **D3DSAMP \_ MIPFILTER** ermöglicht mipmapping und trilineare Filterung. Es gibt an, dass der Rasterizer zwischen den beiden nächsten Mip-Ebenen interpoliert.
 
 </dd> <dt>
 
-<span id="D3DTEXF_ANISOTROPIC"></span><span id="d3dtexf_anisotropic"></span>**D3DTEXF \_ ANISOTROPIC**
+<span id="D3DTEXF_ANISOTROPIC"></span><span id="d3dtexf_anisotropic"></span>**D3DTEXF \_ ANISOTROP**
 </dt> <dd>
 
-Gibt bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)an, dass die anisotrope Texturfilterung als Texturvergrößerungs- bzw. Minierungsfilter verwendet wird. Gleicht die Verzerrung aus, die durch den Unterschied im Winkel zwischen dem Texturpolygon und der Bildschirmebene verursacht wird. Die Verwendung **mit D3DSAMP \_ MIPFILTER** ist nicht definiert.
+Bei Verwendung mit [**D3DSAMP \_ MAGFILTER**](./d3dsamplerstatetype.md) oder [**D3DSAMP \_ MINFILTER**](./d3dsamplerstatetype.md)gibt an, dass die Anisotrope Texturfilterung als Texturvergrößerungs- bzw. Vergrößerungsfilter verwendet wird. Kompensiert die Verzerrung, die durch den Unterschied im Winkel zwischen dem Texturpolygon und der Bildschirmebene verursacht wird. Die Verwendung mit **D3DSAMP \_ MIPFILTER** ist nicht definiert.
 
 </dd> <dt>
 
 <span id="D3DTEXF_PYRAMIDALQUAD"></span><span id="d3dtexf_pyramidalquad"></span>**D3DTEXF \_ PYRAMIDALQUAD**
 </dt> <dd>
 
-Ein 4-Beispiel-Festzeltfilter, der als Texturvergrößerungs- oder Minierungsfilter verwendet wird. Die Verwendung [**mit D3DSAMP \_ MIPFILTER**](./d3dsamplerstatetype.md) ist nicht definiert.
+Ein 4-Stichproben-Festzeltfilter, der als Texturvergrößerungs- oder Vergrößerungsfilter verwendet wird. Die Verwendung mit [**D3DSAMP \_ MIPFILTER**](./d3dsamplerstatetype.md) ist nicht definiert.
 
 </dd> <dt>
 
-<span id="D3DTEXF_GAUSSIANQUAD"></span><span id="d3dtexf_gaussianquad"></span>**D3DTEXF \_ GASSIANQUAD**
+<span id="D3DTEXF_GAUSSIANQUAD"></span><span id="d3dtexf_gaussianquad"></span>**D3DTEXF \_ GAUSSIANQUAD**
 </dt> <dd>
 
 Ein 4-Stichproben-Filter, der als Texturvergrößerungs- oder Vergrößerungsfilter verwendet wird. Die Verwendung mit [**D3DSAMP \_ MIPFILTER**](./d3dsamplerstatetype.md) ist nicht definiert.
@@ -118,13 +118,13 @@ D3DTEXTUREFILTERTYPE wird von [**IDirect3DDevice9::SetSamplerState**](/windows/w
 
 Um zu überprüfen, ob ein Format andere Texturfiltertypen als D3DTEXF POINT unterstützt \_ (was immer unterstützt wird), rufen Sie [**IDirect3D9::CheckDeviceFormat**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat) mit D3DUSAGE \_ QUERY FILTER \_ auf.
 
-Legen Sie den Vergrößerungsfilter einer Texturstufe fest, indem [**Sie IDirect3DDevice9::SetSamplerState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate) mit dem D3DSAMP \_ MAGFILTER-Wert als zweiten Parameter und einem Member dieser Enumeration als dritten Parameter aufrufen.
+Legen Sie den Vergrößerungsfilter einer Texturphase fest, indem [**Sie IDirect3DDevice9::SetSamplerState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate) mit dem D3DSAMP \_ MAGFILTER-Wert als zweiten Parameter und einem Member dieser Enumeration als dritten Parameter aufrufen.
 
 Legen Sie den Qualifizierungsfilter einer Texturstufe fest, indem [**Sie IDirect3DDevice9::SetSamplerState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate) mit dem D3DSAMP \_ MINFILTER-Wert als zweiten Parameter und einem Member dieser Enumeration als dritten Parameter aufrufen.
 
 Legen Sie den Texturfilter für die Verwendung zwischen MIPMAP-Ebenen fest, indem [**Sie IDirect3DDevice9::SetSamplerState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate) mit dem D3DSAMP \_ MIPFILTER-Wert als zweiten Parameter und einem Member dieser Enumeration als dritten Parameter aufrufen.
 
-Nicht alle gültigen Filtermodi für ein Gerät gelten für Volumezuordnungen. Im Allgemeinen werden die Vergrößerungsfilter D3DTEXF \_ POINT und D3DTEXF \_ LINEAR für Volumezuordnungen unterstützt. Wenn D3DPTEXTURECAPS MIPVOLUMEMAP festgelegt ist, werden die Filter \_ D3DTEXF \_ POINT mipmap und D3DTEXF POINT und \_ D3DTEXF LINEAR minification für Volumezuordnungen \_ unterstützt. Das Gerät unterstützt möglicherweise den D3DTEXF \_ LINEAR mipmap-Filter für Volumezuordnungen. Geräte, die die anisotrope Filterung für 2D-Karten unterstützen, unterstützen nicht notwendigerweise die anisotrope Filterung für Volumezuordnungen. Anwendungen, die die anisotrope Filterung aktivieren, erhalten jedoch die beste verfügbare Filterung (wahrscheinlich linear), wenn die anisotrope Filterung nicht unterstützt wird.
+Nicht alle gültigen Filtermodi für ein Gerät gelten für Volumezuordnungen. Im Allgemeinen werden D3DTEXF \_ POINT- und D3DTEXF \_ LINEAR-Vergrößerungsfilter für Volumezuordnungen unterstützt. Wenn D3DPTEXTURECAPS \_ MIPVOLUMEMAP festgelegt ist, werden die Mipmapfilter D3DTEXF POINT und die \_ Filter D3DTEXF \_ POINT und D3DTEXF \_ LINEAR minification für Volumezuordnungen unterstützt. Das Gerät unterstützt möglicherweise den D3DTEXF \_ LINEAR-Mipmapfilter für Volumezuordnungen. Geräte, die die Anisotrope Filterung für 2D-Karten unterstützen, unterstützen nicht unbedingt die Anisotrope Filterung für Volumezuordnungen. Anwendungen, die die Anisotrope Filterung aktivieren, erhalten jedoch die beste verfügbare Filterung (wahrscheinlich linear), wenn die Anisotrope Filterung nicht unterstützt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
