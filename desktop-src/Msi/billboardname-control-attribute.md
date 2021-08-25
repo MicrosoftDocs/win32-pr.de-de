@@ -1,31 +1,31 @@
 ---
-description: Mit diesem Attribut wird der Name des derzeit aktuell laufenden Billboard zurückgegeben, oder es wird ein Billboard nach dem Namen festgelegt und angezeigt. Dieses Attribut wird im Vorschaumodus verwendet.
+description: Dieses Attribut gibt den Namen des derzeit ausgeführten Bzw. legt fest und zeigt einen Nachnamen an. Dieses Attribut wird im Vorschaumodus verwendet.
 ms.assetid: 7ef7bc0f-ee4c-4a97-bea8-dd16a2cf28bc
-title: Billboardname-Steuerelement Attribut
+title: Attribut des Steuerelements "Sollname"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 591c90e6a47e3a5190a56fe33e5840d8514cc03a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79e068fc3ceb88920ce43bcd00b914b47483c50f7b068044b584a0df368af2aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927020"
 ---
-# <a name="billboardname-control-attribute"></a>Billboardname-Steuerelement Attribut
+# <a name="billboardname-control-attribute"></a>Attribut des Steuerelements "Sollname"
 
-Mit diesem Attribut wird der Name des derzeit aktuell laufenden Billboard zurückgegeben, oder es wird ein Billboard nach dem Namen festgelegt und angezeigt. Dieses Attribut wird im Vorschaumodus verwendet.
+Dieses Attribut gibt den Namen des derzeit ausgeführten Bzw. legt fest und zeigt einen Nachnamen an. Dieses Attribut wird im Vorschaumodus verwendet.
 
 ## <a name="valid-controls"></a>Gültige Steuerelemente
 
 [Billboard](billboard-control.md)
 
-## <a name="associated-bit-flags"></a>Zugehörige Bitflags
+## <a name="associated-bit-flags"></a>Zugeordnete Bitflags
 
 Dieses Attribut verwendet keine Bitflags.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Steuerelement Attribute](control-attributes.md) und das Steuerelement, das Sie unter Steuer [Elementen](controls.md)erstellen müssen.
+Weitere [Informationen finden Sie unter Steuerelementattribute](control-attributes.md) und das Steuerelement, das Sie unter Steuerelemente erstellen [müssen.](controls.md)
 
  
 

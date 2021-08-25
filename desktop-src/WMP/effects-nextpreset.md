@@ -1,9 +1,9 @@
 ---
-title: Effects. nextvoreinstellung
-description: Die nextvoreinstellung-Methode zeigt die nächste Voreinstellung der aktuellen Visualisierung an.
+title: EFFECTS.nextPreset
+description: Die nextPreset-Methode zeigt die nächste Voreinstellung der aktuellen Visualisierung an.
 ms.assetid: e17917c0-95b5-4799-8657-1f0d9bb7ec86
 keywords:
-- Effekte. nextvoreinstellung-Fenster Media Player
+- EFFECTS.nextPreset-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5650aa97906db2947d5d794c12edfb5be68e0057
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c6d0afcd25ee1caa601fda8b98e28e8d5213b15f09e39f90e1f7e868196ed9f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863050"
 ---
-# <a name="effectsnextpreset"></a>Effects. nextvoreinstellung
+# <a name="effectsnextpreset"></a>EFFECTS.nextPreset
 
-Die **nextvoreinstellung** -Methode zeigt die nächste Voreinstellung der aktuellen Visualisierung an.
+Die **nextPreset-Methode** zeigt die nächste Voreinstellung der aktuellen Visualisierung an.
 
 ``` syntax
         elementID.nextPreset()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn es sich bei der aktuellen Voreinstellung um die letzte Voreinstellung in der Liste für die aktuelle Visualisierung handelt, wird die erste Voreinstellung aktuell gemacht.
+Wenn die aktuelle Voreinstellung die letzte in der Liste für die aktuelle Visualisierung ist, wird die erste Voreinstellung als aktuell festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Wenn es sich bei der aktuellen Voreinstellung um die letzte Voreinstellung in de
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -54,13 +54,13 @@ Wenn es sich bei der aktuellen Voreinstellung um die letzte Voreinstellung in de
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Zuweisung**](effects-allowall.md)
+[**EFFECTS.allowAll**](effects-allowall.md)
 </dt> <dt>
 
-[**Effekte. Previous**](effects-previous.md)
+[**EFFECTS.previous**](effects-previous.md)
 </dt> </dl>
 
  

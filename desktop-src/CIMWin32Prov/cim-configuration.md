@@ -1,5 +1,5 @@
 ---
-description: Das CIM \_ -Konfigurationsobjekt ermöglicht die Gruppierung von Parametersätzen (definiert in CIM- \_ Einstellungs Objekten) und Abhängigkeiten für ein oder mehrere verwaltete Systemelemente.
+description: Das \_ CIM-Konfigurationsobjekt ermöglicht das Gruppieren von Parametersätzen (definiert in CIM-Einstellungsobjekten) und Abhängigkeiten für ein \_ oder mehrere verwaltete Systemelemente.
 ms.assetid: f597fe78-be50-4d31-b1eb-d219acaf1751
 ms.tgt_platform: multiple
 title: CIM_Configuration-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c069f5c7186d08f01b54fe02c0568dbb4ff43d26
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c6df2338d46438bf3e1af371ebbce8b36f1a337f26a4785064119cca45bece46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924930"
 ---
-# <a name="cim_configuration-class"></a>CIM- \_ Konfigurations Klasse
+# <a name="cim_configuration-class"></a>\_CIM-Konfigurationsklasse
 
-Das **CIM- \_ Konfigurations** Objekt ermöglicht die Gruppierung von Parametersätzen (definiert in [**CIM- \_ Einstellungs**](cim-setting.md) Objekten) und Abhängigkeiten für ein oder mehrere verwaltete Systemelemente. Dieses Objekt stellt ein bestimmtes Verhalten oder einen gewünschten funktionalen Zustand für die verwalteten Systemelemente dar. Der gewünschte funktionale Zustand wird in der Regel durch externe Anforderungen, z. b. Zeit oder Speicherort, gesteuert. Wenn Sie z. b. eine Verbindung mit einem e-Mail-System von Hause aus herstellen möchten, besteht eine Abhängigkeit von einem Modem eine Abhängigkeit von einem Netzwerkadapter ist dagegen bei der Arbeit vorhanden. Einstellungen für die entsprechenden logischen Geräte (in diesem Beispiel für das Modem-Modem und den Netzwerkadapter) können durch die **CIM- \_ Konfiguration** definiert und aggregiert werden. Daher können zwei "Connect to Mail"-Konfigurationen definiert werden, indem die relevanten Abhängigkeiten und [**CIM- \_ Einstellungs**](cim-setting.md) Objekte gruppiert werden.
+Das **\_ CIM-Konfigurationsobjekt** ermöglicht das Gruppieren von Parametersätzen (definiert in [**\_ CIM-Einstellungsobjekten)**](cim-setting.md) und Abhängigkeiten für ein oder mehrere verwaltete Systemelemente. Dieses Objekt stellt ein bestimmtes Verhalten oder einen gewünschten Funktionszustand für die verwalteten Systemelemente dar. Der gewünschte Funktionszustand wird in der Regel durch externe Anforderungen wie Zeit oder Standort gesteuert. Wenn Sie beispielsweise von zu Hause aus eine Verbindung mit einem E-Mail-System herstellen möchten, besteht eine Abhängigkeit von einem Modem. eine Abhängigkeit von einem Netzwerkadapter ist hingegen am Arbeitsplatz vorhanden. Einstellungen für die relevanten logischen Geräte (in diesem Beispiel: MODEMS-Modem und Netzwerkadapter) können durch die **CIM-Konfiguration definiert und aggregiert \_ werden.** Aus diesem Grund können zwei Konfigurationen Verbinden an E-Mail gesendet werden, indem die relevanten Abhängigkeiten und [**CIM-Einstellungsobjekte \_ gruppieren**](cim-setting.md) werden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,66 +49,66 @@ class CIM_Configuration
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Konfigurations** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Konfigurationsklasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Konfigurations** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Konfigurationsklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des **CIM- \_ Konfigurations** Objekts.
+Kurze Textbeschreibung des **\_ CIM-Konfigurationsobjekts.**
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des **CIM- \_ Konfigurations** Objekts.
+Textbeschreibung des **\_ CIM-Konfigurationsobjekts.**
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Bezeichnung, nach der das **CIM- \_ Konfigurations** Objekt bekannt ist.
+Bezeichnung, unter der **das \_ CIM-Konfigurationsobjekt** bekannt ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,8 +118,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

@@ -1,123 +1,123 @@
 ---
-title: Migrieren zum Windows-Menü Band Framework
-description: Eine Anwendung, die auf herkömmlichen Menüs, Symbolleisten und Dialogfeldern basiert, kann auf die umfangreiche, dynamische und Kontext gesteuerte Benutzeroberfläche des Windows-Menü Band Framework-befehlssystems migriert werden.
+title: Migrieren zum Windows Menübandframework
+description: Eine Anwendung, die auf herkömmlichen Menüs, Symbolleisten und Dialogen basiert, kann zur vielfältigen, dynamischen und kontextgesteuerten Benutzeroberfläche des Windows-Menübandframework-Befehlssystems migriert werden.
 ms.assetid: 3a8ca41e-18b3-4c9d-865b-5f4c5fcf7ceb
 keywords:
-- Windows-Menüband, Migrieren zu
-- Multifunktionsleiste, Migrieren zu
-- Migrieren zu Windows-Menüband
+- Windows Menüband, Migrieren zu
+- Menüband, Migrieren zu
+- Migrieren zum Windows Menüband
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a74822781f891815c6eb30d9e15a7f7efaa983fe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8a011e9b5dad52f6f71fab272f0fded39ec59eb71cc7311ab9cf5ffccb4dfbca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841120"
 ---
-# <a name="migrating-to-the-windows-ribbon-framework"></a>Migrieren zum Windows-Menü Band Framework
+# <a name="migrating-to-the-windows-ribbon-framework"></a>Migrieren zum Windows Menübandframework
 
-Eine Anwendung, die auf herkömmlichen Menüs, Symbolleisten und Dialogfeldern basiert, kann auf die umfangreiche, dynamische und Kontext gesteuerte Benutzeroberfläche des Windows-Menü Band Framework-befehlssystems migriert werden. Dies ist eine einfache und effektive Möglichkeit, um die Anwendung zu modernisieren und zu beleben und gleichzeitig die Barrierefreiheit, die Benutzerfreundlichkeit und die Auffindbarkeit ihrer Funktionalität zu verbessern.
+Eine Anwendung, die auf herkömmlichen Menüs, Symbolleisten und Dialogen basiert, kann zur vielfältigen, dynamischen und kontextgesteuerten Benutzeroberfläche des Windows-Menübandframework-Befehlssystems migriert werden. Dies ist eine einfache und effektive Möglichkeit, die Anwendung zu modernisieren und zu verbessern und gleichzeitig die Barrierefreiheit, Benutzerfreundlichkeit und Aufserfbarkeit ihrer Funktionalität zu verbessern.
 
 ## <a name="introduction"></a>Einführung
 
-Im allgemeinen umfasst die Migration einer vorhandenen Anwendung zum Menüband-Framework Folgendes:
+Im Allgemeinen umfasst die Migration einer vorhandenen Anwendung zum Menübandframework Folgendes:
 
--   Entwerfen eines Menüband-Layouts und einer Steuerelement Organisation, das die Funktionalität der vorhandenen Anwendung verfügbar macht und flexibel genug ist, um neue Funktionen zu unterstützen.
+-   Entwerfen eines Menübandlayouts und einer Steuerelementorganisation, die die Funktionalität der vorhandenen Anwendung verfügbar macht und flexibel genug ist, um neue Funktionen zu unterstützen.
 -   Anpassen des Codes der vorhandenen Anwendung.
--   Migrieren vorhandener Anwendungs Ressourcen (Zeichen folgen und Bilder) zum Menüband-Framework.
+-   Migrieren vorhandener Anwendungsressourcen (Zeichenfolgen und Bilder) zum Menübandframework.
 
 > [!Note]  
-> Die [Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx) für die Multifunktionsleisten-Benutzeroberfläche sollten überprüft werden, um festzustellen, ob die Anwendung für eine Multifunktionsleisten-Benutzeroberfläche geeignet ist
+> Die [Richtlinien für die Menübandbenutzeroberfläche](https://msdn.microsoft.com/library/cc872782.aspx) sollten überprüft werden, um zu ermitteln, ob die Anwendung ein geeigneter Kandidat für eine Menüband-Benutzeroberfläche ist.
 
- 
+ 
 
-## <a name="design-the-ribbon-layout"></a>Entwerfen des Menüband-Layouts
+## <a name="design-the-ribbon-layout"></a>Entwerfen des Menübandlayouts
 
-Mögliche Entwurfs-und Steuerelement Layouts der Multifunktionsleiste können durch Ausführen der folgenden Schritte identifiziert werden:
+Potenzielle Designs der Menübandbenutzeroberfläche und Steuerelementlayouts können durch Ausführen der folgenden Schritte identifiziert werden:
 
-1.  Bestandsaufnahme aller vorhandenen Funktionen.
-2.  Übersetzen dieser Funktionalität in Menü Band Befehle.
+1.  Inventarisierung aller vorhandenen Funktionen.
+2.  Übersetzen dieser Funktionalität in Menübandbefehle.
 3.  Organisieren der Befehle in logische Gruppen.
 
-### <a name="take-inventory"></a>Inventur übernehmen
+### <a name="take-inventory"></a>Inventarisierung
 
-Im Menüband-Framework werden die Funktionen, die von einer Anwendung verfügbar gemacht werden, die den Zustand oder die Ansicht eines Arbeitsbereichs oder Dokuments bearbeitet, als Befehl angesehen. Was einen Befehl ausmacht, kann variieren und hängt von der Art und Domäne der vorhandenen Anwendung ab.
+Im Menübandframework wird die Funktionalität, die von einer Anwendung verfügbar gemacht wird, die den Zustand oder die Ansicht eines Arbeitsbereichs oder Dokuments bearbeitet, als Befehl betrachtet. Was einen Befehl bildet, kann variieren und hängt von der Art und Domäne der vorhandenen Anwendung ab.
 
-In der folgenden Tabelle sind die grundlegenden Befehle für eine hypothetische Text Bearbeitungs Anwendung aufgeführt:
+In der folgenden Tabelle sind einige grundlegende Befehle für eine hypothetische Textbearbeitungsanwendung aufgeführt:
 
 
 
 | Symbol           | id     | BESCHREIBUNG               |
 |------------------|--------|---------------------------|
-| ID- \_ Datei \_ neu    | 0xe100 | Neues Dokument              |
-| ID- \_ Datei \_ Speichern   | 0xe103 | Dokument speichern             |
-| ID- \_ Datei ( \_ SaveAs) | 0xe104 | Speichern unter... Dialog       |
-| ID- \_ Datei \_ geöffnet   | 0xe101 | Öffnen Sie... Dialog          |
-| ID- \_ Datei \_ Beenden   | 0xe102 | Beenden der Anwendung      |
-| ID- \_ Bearbeitung \_ rückgängig   | 0xe12b | Rückgängig                      |
-| ID- \_ Bearbeitungs \_ Ausschnitt    | 0xe123 | Ausgewählten Text ausschneiden         |
-| ID zum \_ Bearbeiten der \_ Kopie   | 0xe122 | Ausgewählten Text kopieren        |
-| ID \_ Bearbeiten, \_ Einfügen  | 0xe125 | Text aus Zwischenablage einfügen |
-| ID- \_ Bearbeitung \_ Löschen  | 0xe120 | Ausgewählten Text löschen      |
-| Vergrößern der ID- \_ Ansicht \_   | 1242   | Zoom... Dialog          |
+| \_ID-DATEI \_ NEU    | 0xE100 | Neues Dokument              |
+| \_ID-DATEI \_ SPEICHERN   | 0xE103 | Dokument speichern             |
+| ID \_ FILE \_ SAVEAS | 0xE104 | Speichern unter... (Dialogfeld)       |
+| \_ID-DATEI \_ GEÖFFNET   | 0xE101 | Öffnen... (Dialogfeld)          |
+| ID \_ FILE \_ EXIT   | 0xE102 | Beenden der Anwendung      |
+| ID \_ BEARBEITEN \_ UNDO   | 0xE12B | Rückgängig                      |
+| ID \_ EDIT \_ CUT    | 0xE123 | Ausgewählten Text ausschneiden         |
+| ID \_ BEARBEITEN \_ KOPIEREN   | 0xE122 | Kopieren des ausgewählten Texts        |
+| ID \_ BEARBEITEN \_ EINFÜGEN  | 0xE125 | Einfügen von Text aus der Zwischenablage |
+| ID \_ BEARBEITEN \_ LÖSCHEN  | 0xE120 | Löschen des ausgewählten Texts      |
+| ID \_ VIEW \_ ZOOM   | 1242   | Zoom... (Dialogfeld)          |
 
 
 
- 
+ 
 
-Sehen Sie sich die vorhandenen Menüs und Symbolleisten an, wenn Sie ein Inventar von Befehlen aufbauen. Denken Sie daran, wie Benutzer mit dem Arbeitsbereich interagieren können. Obwohl nicht jeder Befehl für die Einbindung in das Menüband geeignet ist, kann diese Übung sehr gut Befehle verfügbar machen, die zuvor von Benutzeroberflächen Ebenen verdeckt wurden.
+Sehen Sie sich beim Erstellen eines Inventars von Befehlen über vorhandene Menüs und Symbolleisten hinaus. Berücksichtigen Sie alle Möglichkeiten, wie ein Benutzer mit dem Arbeitsbereich interagieren kann. Auch wenn nicht jeder Befehl für die Aufnahme in das Menüband geeignet ist, kann diese Übung sehr gut Befehle verfügbar machen, die zuvor von Ebenen der Benutzeroberfläche verdeckt wurden.
 
 ### <a name="translate"></a>Translate
 
-Nicht jeder Befehl muss in der Menüband-Benutzeroberfläche dargestellt werden. Wenn Sie z. b. Text eingeben, eine Auswahl ändern, einen Bildlauf durchführen oder die Einfügemarke mit der Maus bewegen, sind diese als Befehle im hypothetischen Text-Editor qualifiziert. Diese können jedoch nicht in einer Befehlsleiste verfügbar gemacht werden, da jeweils eine direkte Interaktion mit der Benutzeroberfläche der Anwendung besteht.
+Nicht jeder Befehl muss auf der Menüband-Benutzeroberfläche dargestellt werden. Wenn Sie beispielsweise Text eingeben, eine Auswahl ändern, scrollen oder die Einfügemarke mit der Maus verschieben, gelten alle als Befehle im hypothetischen Text-Editor. Diese sind jedoch nicht geeignet, um sie in einer Befehlsleiste verfügbar zu machen, da jede eine direkte Interaktion mit der Benutzeroberfläche der Anwendung umfasst.
 
-Im Gegensatz dazu werden einige Funktionen möglicherweise nicht als Befehl im herkömmlichen Sinne betrachtet. Anstatt z. b. in einem Dialogfeld verborgen zu sein, können Seitenränder im Menüband als Gruppe von Spinner-Steuerelementen in einer Kontext Registerkarte oder im [Anwendungsmodus](ribbon-applicationmodes.md)dargestellt werden.
+Im Gegensatz dazu können einige Funktionen nicht als Befehl im herkömmlichen Sinn gedacht werden. Anstatt z. B. in einem Dialogfeld zu sein, können Seitenrandanpassungen für Drucker im Menüband als Gruppe von Spinner-Steuerelementen in einer kontextbezogenen Registerkarte oder im Anwendungsmodus [dargestellt werden.](ribbon-applicationmodes.md)
 
 > [!Note]  
-> Notieren Sie sich die numerische ID, die jedem Befehl zugewiesen werden kann. Einige Benutzeroberflächen-Frameworks, wie z. b. Microsoft Foundation Classes (MFC), definieren IDs für Befehle, z. b. die Datei und das Bearbeitungs Menü (0xe100 bis 0xe200).
+> Notieren Sie sich die numerische ID, die jedem Befehl zugewiesen werden kann. Einige Benutzeroberflächenframeworks, z. B. Microsoft Foundation Classes (MFC), definieren IDs für Befehle wie das Datei- und Bearbeitungsmenü (0xE100 0xE200).
 
- 
+ 
 
 ### <a name="organize"></a>Organisieren
 
-Bevor Sie versuchen, die Befehls Inventur zu organisieren, sollten Sie die [Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx) für die Multifunktionsleisten-Benutzeroberfläche auf bewährte Methoden beim Implementieren einer Multifunktionsleisten-Benutzeroberfläche
+Bevor Sie versuchen, die Befehlsinventur zu organisieren, sollten Sie die [Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx) für die Menübandbenutzeroberfläche auf bewährte Methoden beim Implementieren einer Menüband-Benutzeroberfläche überprüfen.
 
-Im Allgemeinen können die folgenden Regeln auf die Menü Band Befehls Organisation angewendet werden:
+Im Allgemeinen können die folgenden Regeln auf die Menübandbefehlsorganisation angewendet werden:
 
--   Befehle, die für die Datei oder die gesamte Anwendung ausgeführt werden, gehören höchstwahrscheinlich im [Anwendungsmenü](windowsribbon-controls-applicationmenu.md).
--   Häufig verwendete Befehle, wie z. b. Ausschneiden, kopieren und Einfügen (wie im Beispiel Text-Editor), werden in der Regel auf einer Standard Registerkarte Home abgelegt. In komplexeren Anwendungen können Sie an anderer Stelle in der Menüband-Benutzeroberfläche dupliziert werden.
--   Wichtige oder häufig verwendete Befehle können die Standard Einbindung in der [Symbolleiste für den schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md)rechtfertigen.
+-   Befehle, die für die Datei oder die gesamte Anwendung ausgeführt werden, gehören höchstwahrscheinlich zum [Anwendungsmenü](windowsribbon-controls-applicationmenu.md).
+-   Häufig verwendete Befehle wie Ausschneiden, Kopieren und Einfügen (wie im Text-Editor-Beispiel) werden in der Regel auf einer Standardregisterkarte für die Startseite platziert. In komplexeren Anwendungen können sie an anderer Stelle auf der Menüband-Benutzeroberfläche dupliziert werden.
+-   Wichtige oder häufig verwendete Befehle rechtfertigen möglicherweise die Standardmäßige Aufnahme in die [Symbolleiste für den Schnellzugriff.](windowsribbon-controls-quickaccesstoolbar.md)
 
-Das Menüband-Framework stellt außerdem die ContextMenu-und MiniToolbar-Steuerelemente über die contextpopup-Ansicht bereit. Diese Features sind nicht obligatorisch, aber wenn Ihre Anwendung über mindestens ein vorhandenes Kontextmenü verfügt, kann die Verwendung der enthaltenen Befehle möglicherweise die Wiederverwendung der vorhandenen Codebasis mit automatischer Bindung an vorhandene Ressourcen ermöglichen.
+Das Menübandframework bietet auch ContextMenu- und MiniToolbar-Steuerelemente über die ContextPopup-Ansicht. Diese Features sind nicht obligatorisch, aber wenn Ihre Anwendung über ein oder mehrere vorhandene Kontextmenüs verfügt, kann die Migration der befehle, die sie enthalten, die Wiederverwendung der vorhandenen Codebasis mit automatischer Bindung an vorhandene Ressourcen ermöglichen.
 
-Da jede Anwendung unterschiedlich ist, lesen Sie die Richtlinien, und versuchen Sie, Sie so umfassend wie möglich anzuwenden. Eines der Ziele des Multifunktionsleisten-Frameworks ist das Bereitstellen einer vertrauten, konsistenten Benutzer Darstellung. dieses Ziel ist besser, wenn die Entwürfe für neue Anwendungen vorhandene Multifunktionsleisten-Anwendungen so weit wie möglich spiegeln.
+Da jede Anwendung anders ist, lesen Sie die Richtlinien, und versuchen Sie, sie so weit wie möglich anzuwenden. Eines der Ziele des Menübandframework ist es, eine vertraute, konsistente Benutzeroberfläche zu bieten, und dieses Ziel ist besser erreichbar, wenn Entwürfe für neue Anwendungen vorhandene Menübandanwendungen so weit wie möglich spiegeln.
 
-## <a name="adapt-your-code"></a>Anpassen Ihres Codes
+## <a name="adapt-your-code"></a>Anpassen des Codes
 
-Nachdem die Menüband-Befehle identifiziert und in logische Gruppierungen organisiert wurden, hängt die Anzahl der Schritte, die bei der Einbindung des Multifunktionsleisten-Frameworks in vorhandenen Anwendungscode aufgetreten sind, von der Komplexität der ursprünglichen Anwendung ab. Im Allgemeinen gibt es drei grundlegende Schritte:
+Nachdem die Menübandbefehle identifiziert und in logische Gruppierungen organisiert wurden, hängt die Anzahl der Schritte, die beim Integrieren des Menübandframework in vorhandenen Anwendungscode erforderlich sind, von der Komplexität der ursprünglichen Anwendung ab. Im Allgemeinen gibt es drei grundlegende Schritte:
 
--   Erstellen Sie das Menüband-Markup auf der Grundlage der Befehls Organisation und Layoutspezifikation.
--   Ersetzen Sie die Legacy Menü-und Symbolleisten Funktionalität durch Multifunktionsleisten-Funktionalität
--   Implementieren Sie einen iuicommandhandler-Adapter.
+-   Erstellen Sie das Menübandmarkup basierend auf der Befehlsorganisations- und Layoutspezifikation.
+-   Ersetzen Sie legacy-Menü- und Symbolleistenfunktionen durch Menübandfunktionen.
+-   Implementieren Sie einen IUICommandHandler-Adapter.
 
-### <a name="create-the-markup"></a>Markup erstellen
+### <a name="create-the-markup"></a>Erstellen des Markups
 
-Die Liste der Befehle sowie deren Organisation und Layout werden über die Menüband-Markup Datei deklariert, die vom [Menüband-Markup Compiler](windowsribbon-intentcl.md)verwendet wird.
-
-> [!Note]  
-> Viele der Schritte, die erforderlich sind, um eine vorhandene Anwendung anzupassen, ähneln den Schritten, die zum Starten einer neuen Multifunktionsleistenanwendung erforderlich sind. Weitere Informationen finden Sie im Tutorial [Erstellen einer Menüband-Anwendung](windowsribbon-stepbystep.md) für eine neue Exemplarische Vorgehensweise für eine Menüband-Anwendung.
-
- 
-
-Es gibt zwei primäre Abschnitte zum Menü Band Markup. Der erste Abschnitt ist ein Manifest von Befehlen und den zugehörigen Ressourcen (Zeichen folgen und Bilder). Der zweite Abschnitt gibt die Struktur und die Platzierung von Steuerelementen auf dem Menüband an.
-
-Das Markup für den einfachen Text-Editor kann in etwa wie im folgenden Beispiel aussehen:
+Die Liste der Befehle sowie ihre Organisation und ihr Layout werden über die Menüband-Markupdatei deklariert, die vom [Menüband-Markupcompiler verwendet wird.](windowsribbon-intentcl.md)
 
 > [!Note]  
-> Bild-und Zeichen folgen Ressourcen werden weiter unten in diesem Artikel behandelt.
+> Viele der erforderlichen Schritte zum Anpassen einer vorhandenen Anwendung ähneln denen, die zum Starten einer neuen Menübandanwendung erforderlich sind. Weitere Informationen finden Sie im Tutorial [Erstellen einer Menübandanwendung](windowsribbon-stepbystep.md) für eine neue Menübandanwendung.
 
- 
+ 
+
+Das Menübandmarkup enthält zwei hauptabschnitte. Der erste Abschnitt ist ein Manifest von Befehlen und den zugehörigen Ressourcen (Zeichenfolgen und Bilder). Der zweite Abschnitt gibt die Struktur und Platzierung von Steuerelementen auf dem Menüband an.
+
+Das Markup für den einfachen Text-Editor könnte in etwa wie im folgenden Beispiel aussehen:
+
+> [!Note]  
+> Bild- und Zeichenfolgenressourcen werden weiter unten in diesem Artikel behandelt.
+
+ 
 
 
 ```C++
@@ -184,9 +184,9 @@ Das Markup für den einfachen Text-Editor kann in etwa wie im folgenden Beispiel
 
 
 
-Um das erneute definieren von Symbolen zu vermeiden, die von einem UI-Framework wie MFC definiert werden, verwendet das vorherige Beispiel für jeden Befehl etwas andere Symbolnamen (ID- \_ Datei \_ New und ID \_ cmd \_ New). Die numerische ID, die den einzelnen Befehlen zugewiesen ist, muss jedoch unverändert bleiben.
+Um zu vermeiden, dass Symbole, die von einem Benutzeroberflächenframework wie MFC definiert werden, neu definiert werden, verwendet das vorherige Beispiel etwas andere Symbolnamen für jeden Befehl (ID FILE NEW im Vergleich zu \_ \_ ID \_ CMD \_ NEW). Die numerische ID, die jedem Befehl zugewiesen ist, muss jedoch unverändert bleiben.
 
-Um die Markup Datei in eine Anwendung zu integrieren, konfigurieren Sie einen benutzerdefinierten Buildschritt, um den Menü Band Markup Compiler (UICC.exe) auszuführen. Die resultierenden Header-und Ressourcen Dateien werden dann in das vorhandene Projekt integriert. Wenn die Menüband-Anwendung für den Beispiel Text-Editor den Namen "ribbonpad" hat, ist eine benutzerdefinierte Buildbefehlszeile ähnlich der folgenden erforderlich:
+Um die Markupdatei in eine Anwendung zu integrieren, konfigurieren Sie einen benutzerdefinierten Buildschritt, um den Menüband-Markupcompiler UICC.exe. Die resultierenden Header- und Ressourcendateien werden dann in das vorhandene Projekt integriert. Wenn die Beispielanwendung des Text-Editor-Menübands den Namen "RibbonPad" hat, ist eine Benutzerdefinierte Buildbefehlszeile erforderlich, die der folgenden ähnelt:
 
 
 ```
@@ -196,7 +196,7 @@ UICC.exe res\RibbonPad_ribbon.xml res\RibbonPad_ribbon.bin
 
 
 
-Der Markup Compiler erstellt eine Binärdatei, eine Header Datei (H) und eine Ressourcen Datei (RC). Da die vorhandene Anwendung wahrscheinlich über eine vorhandene RC-Datei verfügt, müssen Sie die generierten H-und RC-Dateien in diese RC-Datei einschließen, wie im folgenden Beispiel gezeigt:
+Der Markupcompiler erstellt eine Binärdatei, eine Headerdatei (H) und eine Ressourcendatei (RC). Da die vorhandene Anwendung wahrscheinlich über eine vorhandene RC-Datei verfügt, schließen Sie die generierten H- und RC-Dateien in diese RC-Datei ein, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -227,23 +227,23 @@ LANGUAGE 9, 1
 
 
 
-### <a name="replace-legacy-menus-and-toolbars"></a>Legacy Menüs und Symbolleisten ersetzen
+### <a name="replace-legacy-menus-and-toolbars"></a>Ersetzen von Legacymenüs und Symbolleisten
 
-Zum Ersetzen von Standardmenüs und Symbolleisten durch ein Menüband in einer Legacy Anwendung ist Folgendes erforderlich:
+Das Ersetzen von Standardmenüs und Symbolleisten durch ein Menüband in einer Legacyanwendung erfordert Folgendes:
 
-1.  Entfernen Sie Symbolleisten-und Menü Ressourcen Verweise aus der Ressourcen Datei der Anwendung.
-2.  Löscht den gesamten Initialisierungs Code der Symbolleisten-und Menüleiste.
-3.  Löschen Sie den Code, der zum Anfügen einer Symbolleiste oder einer Menüleiste an das Fenster der obersten Ebene der Anwendung verwendet wird.
-4.  Instanziieren Sie das Menüband-Framework.
+1.  Entfernen Sie Verweise auf Symbolleisten- und Menüressourcen aus der Ressourcendatei der Anwendung.
+2.  Löschen Sie den gesamten Initialisierungscode der Symbolleiste und Menüleiste.
+3.  Löschen Sie code, der zum Anfügen einer Symbolleiste oder Menüleiste an das Fenster der obersten Ebene der Anwendung verwendet wird.
+4.  Instanziieren Sie das Menübandframework.
 5.  Fügen Sie das Menüband an das Fenster der obersten Ebene der Anwendung an.
 6.  Laden Sie das kompilierte Markup.
 
 > [!IMPORTANT]
-> Vorhandene Statusleiste und Tastatur Verknüpfungs Tabellen sollten beibehalten werden, da das Menüband-Framework diese Features nicht ersetzt.
+> Vorhandene Statusleisten- und Tastenkombinationstabellen sollten beibehalten werden, da das Menübandframework diese Funktionen nicht ersetzt.
 
- 
+ 
 
-Im folgenden Beispiel wird veranschaulicht, wie das Framework mithilfe von [**iuiframework:: Initialisieren**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-initialize)initialisiert wird:
+Im folgenden Beispiel wird veranschaulicht, wie das Framework mit [**IUIFramework::Initialize initialisiert**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-initialize)wird:
 
 
 ```C++
@@ -267,7 +267,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 
 
-Im folgenden Beispiel wird veranschaulicht, wie [**iuiframework:: loadui**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) verwendet wird, um das kompilierte Markup zu laden:
+Im folgenden Beispiel wird veranschaulicht, wie [**IUIFramework::LoadUI**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) zum Laden des kompilierten Markups verwendet wird:
 
 
 ```C++
@@ -309,13 +309,13 @@ HRESULT InitRibbon(CMainFrame* pMainFrame, IUnknown** ppFramework)
 
 
 
-Die capplication-Klasse, auf die oben verwiesen wird, muss ein paar von Component Object Model (com)-Schnittstellen implementieren, die durch das Menüband-Framework definiert werden: [**iuiapplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) und [**iuicommandhandler**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler).
+Die CApplication-Klasse, auf die oben verwiesen wird, muss ein Paar von COM-Schnittstellen (Component Object Model) implementieren, die vom Menübandframework definiert werden: [**IUIApplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) und [**IUICommandHandler**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler).
 
-[**Iuiapplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) stellt die Haupt Rückruf Schnittstelle zwischen dem Framework und der Anwendung bereit (z. b. wird die Höhe des Menübands über [**iuiapplication:: OnViewChanged**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged)kommuniziert), während die Rückrufe für einzelne Befehle als Antwort auf [**iuiapplication:: onkreateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand)bereitgestellt werden.
+[**IUIApplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) stellt die Hauptrückrufschnittstelle zwischen dem Framework und der Anwendung bereit (z. B. wird die Höhe des Menübands über [**IUIApplication::OnViewChanged**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged)kommuniziert), während die Rückrufe für einzelne Befehle als Reaktion [**auf IUIApplication::OnCreateUICommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand)bereitgestellt werden.
 
-**Tipp:** Einige Anwendungs Frameworks, wie z. b. MFC, erfordern, dass die Höhe der Menü Band Leiste beim Rendern des Dokument Raums der Anwendung berücksichtigt wird. In diesen Fällen ist das Hinzufügen eines ausgeblendeten Fensters zum Überlagern der Menü Band Leiste und das Erzwingen des Dokument Raums zur gewünschten Höhe erforderlich. Ein Beispiel für diesen Ansatz, bei dem eine Layoutfunktion basierend auf der von der [**iuiribbon:: GetHeight**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-getheight) -Methode zurückgegebenen Menüband-Höhe aufgerufen wird, finden Sie im [htmleditribbon-Beispiel](windowsribbon-htmleditribbonsample.md).
+**Tipp:** Einige Anwendungsframeworks, z. B. MFC, erfordern, dass die Höhe der Menübandleiste beim Rendern des Dokumentraums der Anwendung berücksichtigt wird. In diesen Fällen ist das Hinzufügen eines ausgeblendeten Fensters zum Überlagern der Menübandleiste und zum Erzwingen des Dokumentraums auf die gewünschte Höhe erforderlich. Ein Beispiel für diesen Ansatz, bei dem eine Layoutfunktion basierend auf der von der [**IUIRibbon::GetHeight-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-getheight) zurückgegebenen Menübandhöhe aufgerufen wird, finden Sie im [HTMLEditRibbon-Beispiel.](windowsribbon-htmleditribbonsample.md)
 
-Im folgenden Codebeispiel wird eine [**iuiapplication:: OnViewChanged**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged) -Implementierung veranschaulicht:
+Im folgenden Codebeispiel wird eine [**IUIApplication::OnViewChanged-Implementierung**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged) veranschaulicht:
 
 
 ```C++
@@ -395,11 +395,11 @@ private:
 
 
 
-### <a name="implement-an-iuicommandhandler-adapter"></a>Implementieren eines iuicommandhandler-Adapters
+### <a name="implement-an-iuicommandhandler-adapter"></a>Implementieren eines IUICommandHandler-Adapters
 
-Abhängig vom Entwurf der ursprünglichen Anwendung ist es möglicherweise einfacher, mehrere Befehls Handlerimplementierungen zu haben, oder einen einzelnen Bridging-Befehls Handler, der die vorhandene Anwendungs Befehls Logik aufruft. Viele Anwendungen verwenden \_ für diesen Zweck WM-befehlsnachrichten, bei denen es ausreichend ist, einen einzelnen Befehls Handler für alle Zwecke bereitzustellen, der einfach WM- \_ Befehls Meldungen an das Fenster der obersten Ebene weiterleitet.
+Je nach Entwurf der ursprünglichen Anwendung ist es möglicherweise einfacher, mehrere Befehlshandlerimplementierungen oder einen einzigen Überbrückungsbefehlshandler zu verwenden, der die Befehlslogik der vorhandenen Anwendung aufruft. Viele Anwendungen verwenden WM \_ COMMAND-Nachrichten für diesen Zweck, wobei es ausreichend ist, einen einzigen allzweckbasierten Befehlshandler bereitzustellen, der WM \_ COMMAND-Nachrichten einfach an das Fenster der obersten Ebene weiterleitet.
 
-Bei diesem Ansatz ist jedoch eine spezielle Behandlung für Befehle wie " **Exit** " oder " **Close**" erforderlich. Da das Menüband nicht zerstört werden kann, während es eine Fenster Nachricht verarbeitet, \_ sollte die WM close-Nachricht an den UI-Thread der Anwendung gesendet werden und sollte nicht synchron verarbeitet werden, wie im folgenden Beispiel gezeigt:
+Dieser Ansatz erfordert jedoch eine besondere Behandlung für Befehle wie **Beenden** oder **Schließen.** Da das Menüband während der Verarbeitung einer Fenstermeldung nicht zerstört werden kann, sollte die WM \_ CLOSE-Nachricht an den UI-Thread der Anwendung gesendet und nicht synchron verarbeitet werden, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -435,53 +435,53 @@ Bei diesem Ansatz ist jedoch eine spezielle Behandlung für Befehle wie " **Exit
 
 ## <a name="migrating-resources"></a>Migrieren von Ressourcen
 
-Wenn das Manifest der Befehle definiert wurde, die Struktur des Menübands deklariert wurde und der Anwendungscode zum Hosten des Menüband-Frameworks angepasst wurde, ist der letzte Schritt die Angabe von Zeichen folgen-und Bild Ressourcen für jeden Befehl.
+Wenn das Manifest von Befehlen definiert wurde, die Struktur des Menübands deklariert wurde und der Anwendungscode zum Hosten des Menübandframeworks angepasst wurde, ist der letzte Schritt die Angabe von Zeichenfolgen- und Imageressourcen für jeden Befehl.
 
 > [!Note]  
-> Zeichen folgen-und Bild Ressourcen werden in der Regel in der Markup Datei bereitgestellt. Sie können jedoch Programm gesteuert durch Implementieren der [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode generiert oder ersetzt werden.
+> Zeichenfolgen- und Bildressourcen werden in der Regel in der Markupdatei bereitgestellt. Sie können jedoch programmgesteuert generiert oder ersetzt werden, indem die [**IUICommandHandler::UpdateProperty-Rückrufmethode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) implementiert wird.
 
- 
+ 
 
-### <a name="string-resources"></a>Zeichen folgen Ressourcen
+### <a name="string-resources"></a>Zeichenfolgenressourcen
 
-[**Command. labeltitle**](windowsribbon-element-command-labeltitle.md) ist die häufigste Zeichen folgen Eigenschaft, die für einen Befehl definiert ist. Diese werden als Text Beschriftungen für Registerkarten, Gruppen und einzelne Steuerelemente gerendert. Eine Bezeichnungs Zeichenfolge aus einem Legacy Menü Element kann in der Regel für einen **Befehl. labeltitle** ohne große Bearbeitung wieder verwendet werden.
+[**Command.LabelTitle**](windowsribbon-element-command-labeltitle.md) ist die gängigste Zeichenfolgeneigenschaft, die für einen Befehl definiert ist. Diese werden als Textbeschriftungen für Registerkarten, Gruppen und einzelne Steuerelemente gerendert. Eine Bezeichnungszeichenfolge aus einem Legacymenüelement kann in der Regel ohne große Bearbeitung für **Command.LabelTitle** wiederverwendet werden.
 
-Die folgenden Konventionen haben sich jedoch bei der Einführung des Menübands geändert:
+Mit der Einführung des Menübands haben sich jedoch die folgenden Konventionen geändert:
 
--   Das Auslassungs Zeichen (...), das verwendet wird, um einen Befehl zum Starten des Dialog Felds anzugeben, ist nicht mehr erforderlich.
--   Das kaufmännische und-Objekt (&) kann weiterhin verwendet werden, um eine Tastenkombination für einen Befehl anzugeben, der in einem Menü angezeigt wird, die vom Framework unterstützte [**Command. KeyTip**](windowsribbon-element-command-keytip.md) -Eigenschaft erfüllt jedoch einen ähnlichen Zweck.
+-   Das Suffix mit den Auslassungszeichen (...), das zum Angeben eines Befehls zum Starten des Dialogs verwendet wird, ist nicht mehr erforderlich.
+-   Das ampersand (&) kann weiterhin verwendet werden, um eine Tastenkombination für einen Befehl anzugeben, der in einem Menü angezeigt wird, aber die vom Framework unterstützte [**Command.Keytip-Eigenschaft**](windowsribbon-element-command-keytip.md) erfüllt einen ähnlichen Zweck.
 
-Wenn Sie auf das Beispiel Text-Editor zurückverweisen, können die folgenden Zeichen folgen für "labeltitle" und "KeyTip" angegeben werden:
+In Bezug auf das Text-Editor-Beispiel können die folgenden Zeichenfolgen für LabelTitle und Keytip angegeben werden:
 
 
 
-| Symbol           | Ursprüngliche Zeichenfolge | Labeltitle-Zeichenfolge | KeyTip-Zeichenfolge |
+| Symbol           | Ursprüngliche Zeichenfolge | LabelTitle-Zeichenfolge | Keytip-Zeichenfolge |
 |------------------|-----------------|-------------------|---------------|
-| ID- \_ Datei \_ neu    | Neu &            | Neu &              | N             |
-| ID- \_ Datei \_ Speichern   | &speichern           | &speichern             | E             |
-| ID- \_ Datei ( \_ SaveAs) | &speichern unter...       | &speichern unter          | A             |
-| ID- \_ Datei \_ geöffnet   | &geöffnet...          | &amp;Open             | O             |
-| ID- \_ Datei \_ Beenden   | &Beenden           | &Beenden             | X             |
-| ID- \_ Bearbeitung \_ rückgängig   | &rückgängig machen           | Rückgängig              | Z             |
-| ID- \_ Bearbeitungs \_ Ausschnitt    | Cu&t            | Cu&t              | X             |
-| ID zum \_ Bearbeiten der \_ Kopie   | &Kopie           | &Kopie             | C             |
-| ID \_ Bearbeiten, \_ Einfügen  | &einfügen          | &einfügen            | V             |
-| ID- \_ Bearbeitung \_ Löschen  | &löschen         | &löschen           | D             |
-| Vergrößern der ID- \_ Ansicht \_   | &Zoom...          | Zoom              | Z             |
+| ID \_ FILE \_ NEW    | &Neu            | &Neu              | N             |
+| ID \_ FILE \_ SAVE   | &Speichern           | &Speichern             | E             |
+| ID \_ FILE \_ SAVEAS | Save &As...       | Speichern Sie &unter .          | Ein             |
+| ID \_ FILE \_ OPEN   | &Öffnen...          | &amp;Open             | O             |
+| ID \_ FILE \_ EXIT   | &Beenden           | &Beenden             | X             |
+| ID \_ BEARBEITEN \_ RÜCKGÄNGIG   | &Rückgängig           | Rückgängig              | Z             |
+| ID \_ EDIT \_ CUT    | Cu&t            | Cu&t              | X             |
+| ID \_ EDIT \_ COPY   | &Kopieren           | &Kopieren             | C             |
+| ID EDIT PASTE (EINFÜGEN DER ID \_ \_ BEARBEITEN)  | &Einfügen          | &Einfügen            | V             |
+| ID \_ EDIT \_ CLEAR  | &Löschen         | &Löschen           | D             |
+| ZOOM \_ DER ID-ANSICHT \_   | &Zoom...          | Zoom              | Z             |
 
 
 
- 
+ 
 
-Im folgenden finden Sie eine Liste anderer Zeichen folgen Eigenschaften, die für die meisten Befehle festgelegt werden sollten:
+Im Folgenden finden Sie eine Liste anderer Zeichenfolgeneigenschaften, die für die meisten Befehle festgelegt werden sollten:
 
--   [**Command. labeldescription**](windowsribbon-element-command-labeldescription.md)
--   [**Command. ToolTipTitle**](windowsribbon-element-command-tooltiptitle.md)
--   [**Command. tooltipdescription**](windowsribbon-element-command-tooltipdescription.md)
+-   [**Command.LabelDescription**](windowsribbon-element-command-labeldescription.md)
+-   [**Command.TooltipTitle**](windowsribbon-element-command-tooltiptitle.md)
+-   [**Command.TooltipDescription**](windowsribbon-element-command-tooltipdescription.md)
 
-Registerkarten, Gruppen und andere Funktionen der Multifunktionsleisten-Benutzeroberfläche können jetzt mit allen angegebenen Zeichen folgen-und Bild Ressourcen deklariert werden.
+Registerkarten, Gruppen und andere Funktionen der Menüband-Benutzeroberfläche können jetzt mit allen angegebenen Zeichenfolgen- und Bildressourcen deklariert werden.
 
-Im folgenden Menüband-Markup Beispiel werden verschiedene Zeichen folgen Ressourcen veranschaulicht:
+Im folgenden Menübandmarkupbeispiel werden verschiedene Zeichenfolgenressourcen veranschaulicht:
 
 
 ```C++
@@ -521,22 +521,22 @@ Im folgenden Menüband-Markup Beispiel werden verschiedene Zeichen folgen Ressou
 
 
 
-### <a name="image-resources"></a>Bild Ressourcen
+### <a name="image-resources"></a>Imageressourcen
 
-Das Menüband-Framework unterstützt Bildformate, die ein viel reicheres Aussehen und Gefühl bieten als die Bildformate, die von vorherigen Menü-und Symbolleisten Komponenten unterstützt
+Das Menübandframework unterstützt Bildformate, die ein viel umfangreicheres Aussehen und Gefühl bieten als die Bildformate, die von vorherigen Menü- und Symbolleistenkomponenten unterstützt werden.
 
-Für Windows 8 und höher unterstützt das Menüband-Framework die folgenden Grafikformate: 32-Bit-ARGB-Bitmap-Dateien (BMP) und Portable Network Graphics-Dateien (PNG) mit Transparenz.
+Für Windows 8 und höher unterstützt das Menübandframework die folgenden Grafikformate: 32-Bit-ARGB-Bitmapdateien (BMP) und PNG-Dateien (Portable Network Graphics) mit Transparenz.
 
-Für Windows 7 und früher müssen Bild Ressourcen dem standardmäßigen BMP-Grafikformat entsprechen, das in Windows verwendet wird.
+Für Windows 7 und früher müssen Bildressourcen dem in Windows verwendeten BMP-Standardgrafikformat entsprechen.
 
 > [!Note]  
-> Vorhandene Bilddateien können in beide Formate konvertiert werden. Die Ergebnisse sind jedoch möglicherweise kleiner als zufriedenstellend, wenn die Bilddateien Antialiasing und Transparenz nicht unterstützen.
+> Vorhandene Bilddateien können in beide Formate konvertiert werden. Die Ergebnisse können jedoch weniger zufriedenstellend sein, wenn die Bilddateien keine Antialiasing und Transparenz unterstützen.
 
- 
+ 
 
-Es ist nicht möglich, eine einzelne Standardgröße für Bild Ressourcen im Menüband-Framework anzugeben. Um das [Adaptive Layout](windowsribbon-templates.md) von Steuerelementen zu unterstützen, können Bilder jedoch in zwei Größen (groß und klein) angegeben werden. Alle Bilder im Menüband-Framework werden entsprechend der dpi-Auflösung (dpi) der Anzeige mit der exakten gerenderten Größe skaliert, die von dieser dpi-Einstellung abhängig ist. Weitere Informationen finden Sie unter [Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md) .
+Es ist nicht möglich, eine einzelne Standardgröße für Bildressourcen im Menübandframework anzugeben. Um jedoch [das adaptive Layout](windowsribbon-templates.md) von Steuerelementen zu unterstützen, können Bilder in zwei Größen (groß und klein) angegeben werden. Alle Bilder im Menübandframework werden entsprechend der DPI-Auflösung (Dots per Inch) der Anzeige skaliert, wobei die genaue gerenderte Größe von dieser DPI-Einstellung abhängt. Weitere Informationen finden Sie unter [Angeben von Menübandbildressourcen.](windowsribbon-imageformats.md)
 
-Im folgenden Beispiel wird veranschaulicht, wie auf einen Satz von dpi-spezifischen Bildern im Markup verwiesen wird:
+Im folgenden Beispiel wird veranschaulicht, wie auf einen Satz dpi-spezifischer Bilder im Markup verwiesen wird:
 
 
 ```C++
@@ -564,9 +564,9 @@ Im folgenden Beispiel wird veranschaulicht, wie auf einen Satz von dpi-spezifisc
 
 <dl> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -14,12 +14,12 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 44c19f22cf57a811a7caebfbcc9bf4202c8d2ad7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e3d48974ecfae4cd932ed58718dded4b54b382317d269fea30ac450d8b05ef75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119878780"
 ---
 # <a name="getsecuritydescriptor-method-of-the-win32_service-class-cimwin32-wmi-providers"></a>GetSecurityDescriptor-Methode der Win32_Service-Klasse (CIMWin32-WMI-Anbieter)
 
@@ -49,7 +49,7 @@ Der dem Dienst zugeordnete Sicherheitsdeskriptor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -238,7 +238,7 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 
 20
 
-Der Dienstname enthält ungültige Zeichen.
+Der Dienstname weist ungültige Zeichen auf.
 
 </dd> <dt>
 
@@ -285,15 +285,15 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine DACL (Discretionary [*Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine Systemzugriffssteuerungsliste (SACL). [](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Listen.](/windows/desktop/SecAuthZ/access-control-lists)
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine SACL [*(System Access Control List).*](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Lists](/windows/desktop/SecAuthZ/access-control-lists).
 
-Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Privilege Constants**](/windows/desktop/WmiSdk/privilege-constants) und [Executing Privileged Operations](/windows/desktop/WmiSdk/executing-privileged-operations).
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge.](/windows/desktop/WmiSdk/executing-privileged-operations)
 
 ## <a name="examples"></a>Beispiele
 
-Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, dass Sie "Sicherheit" verwenden und als Administrator ausführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls löst Ihr Code möglicherweise einen Berechtigungsfehler aus.
+Achten Sie beim Abrufen eines Sicherheitsdeskriptors in VBScript darauf, "Sicherheit" zu verwenden und als Administrator auszuführen, wie im folgenden Codeausschnitt gezeigt. Andernfalls kann Ihr Code einen Berechtigungsfehler auslösen.
 
 
 ```VB
@@ -303,7 +303,7 @@ Set objWMIService = GetObject("winmgmts:" _
 
 
 
-Ebenso müssen Sie in VB.NET sicherstellen, dass Sie "EnablePrivileges = True" festlegen und die Anwendung als Administrator ausführen.
+Achten Sie auf ähnliche Weise in VB.NET darauf, "EnablePrivileges = True" festzulegen und die Anwendung als Administrator auszuführen.
 
 
 ```VB
@@ -317,7 +317,7 @@ Scope.Options.EnablePrivileges = True
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -327,17 +327,17 @@ Scope.Options.EnablePrivileges = True
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Win32-Dienst \_**](win32-service.md)
+[**\_Win32-Dienst**](win32-service.md)
 </dt> <dt>
 
-[**Berechtigungskonst constants**](/windows/desktop/WmiSdk/privilege-constants)
+[**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants)
 </dt> <dt>
 
-[WMI-Sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+[WMI-Sicherheitsbeschreibungsobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 </dt> <dt>
 
 [Ändern der Zugriffssicherheit für sicherungsfähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)

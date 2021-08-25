@@ -1,9 +1,9 @@
 ---
-title: TBN_GETBUTTONINFO Benachrichtigungs Code (kommctrl. h)
-description: Ruft Informationen zur Symbolleisten Anpassung ab und benachrichtigt das übergeordnete Fenster der Symbolleiste über alle Änderungen, die an der Symbolleiste vorgenommen werden. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_GETBUTTONINFO Benachrichtigungscode (Commctrl.h)
+description: Ruft Anpassungsinformationen zur Symbolleiste ab und benachrichtigt das übergeordnete Fenster der Symbolleiste über alle Änderungen, die an der Symbolleiste vorgenommen werden. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 088527fe-5a38-4c35-ba68-d0cbfdee410c
 keywords:
-- Windows-Steuerelemente für TBN_GETBUTTONINFO Benachrichtigungs
+- TBN_GETBUTTONINFO Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 409297306901980fa8b831e5c1129a13c596ef0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 32a73b7da3efee0b1bb1ba829cf40356e6060a5f7e7fdfcc2467e2cca32226a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876860"
 ---
-# <a name="tbn_getbuttoninfo-notification-code"></a>TBN- \_ getbuttoninfo-Benachrichtigungs Code
+# <a name="tbn_getbuttoninfo-notification-code"></a>TBN \_ GETBUTTONINFO-Benachrichtigungscode
 
-Ruft Informationen zur Symbolleisten Anpassung ab und benachrichtigt das übergeordnete Fenster der Symbolleiste über alle Änderungen, die an der Symbolleiste vorgenommen werden. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Ruft Anpassungsinformationen zur Symbolleiste ab und benachrichtigt das übergeordnete Fenster der Symbolleiste über alle Änderungen, die an der Symbolleiste vorgenommen werden. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,17 +43,17 @@ TBN_GETBUTTONINFO
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtoolbar**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) -Struktur. Das **iItem-Element** gibt einen NULL basierten Index an, der die Anzahl der Schaltflächen bereitstellt. das Dialogfeld Symbolleiste anpassen wird sowohl als verfügbar als auch auf der Symbolleiste angezeigt. Der **pszText** -Member gibt die Adresse des aktuellen Schaltflächen Texts an, und **cchtext** gibt seine Länge in Zeichen an. Die Anwendung sollte die Struktur mit Informationen über die Schaltfläche Auffüllen.
+Zeiger auf eine [**NMTOOLBAR-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) Das **iItem-Element** gibt einen nullbasierten Index an, der die Anzahl der Schaltflächen bereitstellt, die im Dialogfeld Symbolleiste anpassen sowohl als verfügbar als auch auf der Symbolleiste angezeigt werden. Der **pszText-Member** gibt die Adresse des aktuellen Schaltflächentexts an, und **cchText** gibt seine Länge in Zeichen an. Die Anwendung sollte die Struktur mit Informationen über die Schaltfläche füllen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn Schaltflächen Informationen in die angegebene-Struktur kopiert wurden, andernfalls **false** .
+Gibt **TRUE** zurück, wenn Schaltflächeninformationen in die angegebene Struktur kopiert wurden, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Symbolleisten-Steuerelement ordnet einen Puffer zu, und der Empfänger (übergeordnetes Fenster) muss den Text in diesen Puffer kopieren. Der **cchtext** -Member enthält die Länge des Puffers, der von der Symbolleiste zugewiesen wird, wenn TBN \_ getbuttoninfo an das übergeordnete Fenster gesendet wird.
+Das Symbolleisten-Steuerelement ordnet einen Puffer zu, und der Empfänger (übergeordnetes Fenster) muss den Text in diesen Puffer kopieren. Das **cchText-Element** enthält die Länge des Puffers, der von der Symbolleiste zugeordnet wird, wenn TBN \_ GETBUTTONINFO an das übergeordnete Fenster gesendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Das Symbolleisten-Steuerelement ordnet einen Puffer zu, und der Empfänger (übe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TBN \_ Getbuttoninfow** (Unicode) und **TBN \_ getbuttoninfoa** (ANSI)<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TBN \_ GETBUTTONINFOW** (Unicode) und **TBN \_ GETBUTTONINFOA** (ANSI)<br/>       |
 
 
 

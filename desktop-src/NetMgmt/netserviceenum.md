@@ -1,6 +1,6 @@
 ---
-title: Netserviceaufumum
-description: Die netserviceenum-Funktion ist veraltet. Es ist aus Gründen der Kompatibilität mit 16-Bit-Versionen von Windows enthalten. Andere Anwendungen sollten die Dienstfunktionen verwenden.
+title: NetServiceEnum
+description: Die NetServiceEnum-Funktion ist veraltet. Sie ist aus Kompatibilitäts- und 16-Bit-Versionen von Windows. Andere Anwendungen sollten die Dienstfunktionen verwenden.
 ms.assetid: 24e0872b-c408-4be4-a01d-4a1caa71f9b3
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,17 +12,17 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 978cfb62458c2cbcecba8c8d7ba8d9e7df201d2a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a7b7460dcbadc82a0bb8acb647f2ffd03edea711610bd5827c7aff057babf1ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911875"
 ---
-# <a name="netserviceenum"></a>Netserviceaufumum
+# <a name="netserviceenum"></a>NetServiceEnum
 
-Die **netserviceenum** -Funktion ist veraltet. Es ist aus Gründen der Kompatibilität mit 16-Bit-Versionen von Windows enthalten. Andere Anwendungen sollten die [Dienstfunktionen](/windows/desktop/Services/service-functions)verwenden.
+Die **NetServiceEnum-Funktion** ist veraltet. Sie ist aus Kompatibilitäts- und 16-Bit-Versionen von Windows. Andere Anwendungen sollten die [Dienstfunktionen verwenden.](/windows/desktop/Services/service-functions)
 
- 
+ 
 
- 
+ 

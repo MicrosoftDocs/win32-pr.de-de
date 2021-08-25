@@ -1,35 +1,35 @@
 ---
-description: Gibt Informationen zum Long-Term Reference (LTR)-Frame an und wird im Ausgabe Beispiel zurückgegeben.
+description: Gibt LTR-Frameinformationen (Long Term Reference) an und wird im Ausgabebeispiel zurückgegeben.
 ms.assetid: 0632D780-C56B-4FDB-8A76-B7A7DE414242
-title: MFSampleExtension_LongTermReferenceFrameInfo-Attribut (mfapi. h)
+title: MFSampleExtension_LongTermReferenceFrameInfo-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3af85ffa5876cdf58a21a6933c46f460c23e7456
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 5642c246adf0e5e1c10249085201fba3dc430b6547516b79fe4929e9de4b998a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848120"
 ---
-# <a name="mfsampleextension_longtermreferenceframeinfo-attribute"></a>Mfsampleextension \_ longtermreferenceframeinfo-Attribut
+# <a name="mfsampleextension_longtermreferenceframeinfo-attribute"></a>MFSampleExtension \_ LongTermReferenceFrameInfo-Attribut
 
-Gibt Informationen zum Long-Term Reference (LTR)-Frame an und wird im Ausgabe Beispiel zurückgegeben.
+Gibt LTR-Frameinformationen (Long Term Reference) an und wird im Ausgabebeispiel zurückgegeben.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**H. 264/AVC-Encoder:**
+**H.264/AVC-Encoder:**
 
-Encoder müssen dieses Attribut für das Ausgabe Beispiel zurückgeben, wenn die Anwendung die Ltr-Frames steuert, die von [codecapi \_ avencvideoltrbuffercontrol](codecapi-avencvideoltrbuffercontrol.md)angegeben werden.
+Encoder müssen dieses Attribut im Ausgabebeispiel zurückgeben, wenn die Anwendung LTR-Frames steuert, die von [CODECAPI \_ AVEncVideoLTRBufferControl](codecapi-avencvideoltrbuffercontrol.md)angegeben werden.
 
-Mfsampleextension \_ longtermreferenceframeinfo gibt bis zu zwei Felder zurück.
+MFSampleExtension \_ LongTermReferenceFrameInfo gibt bis zu zwei Felder zurück.
 
-Das erste Feld (Bits \[ 0.. 15) \] ist *longtermframeidx* , das dem Ausgabe Frame zugeordnet ist, wenn er als Ltr-Frame markiert ist. Der erste Wert ist 0xFFFF, wenn dieser Ausgabe Rahmen ein kurzfristiger Verweis Rahmen oder ein nicht Verweis Rahmen ist.
+Das erste Feld, bits \[ 0..15, \] ist *LongTermFrameIdx,* das dem Ausgabeframe zugeordnet ist, wenn es als LTR-Frame markiert ist. Der erste Wert ist 0xffff, wenn es sich bei diesem Ausgabeframe um einen kurzzeitigen Verweisrahmen oder einen Nicht-Verweisrahmen handelt.
 
-Das zweite Feld, Bits \[ 16.. 31 \] , ist eine Bitmap, die aus " *maxnumltrframes* " zahlreiche Bits besteht, die angeben, welche Ltr-Frames zum Codieren dieses Ausgabe Frames verwendet wurden, beginnend bei Bit 16. Der Rest der Bits muss auf 0 festgelegt werden. Der zweite Wert ist 0, wenn dieser Ausgabe Rahmen nicht mithilfe von Ltr-Frames codiert wird. *Maxnumltrframes* ist die maximale Anzahl von Ltr-Frames, die über [codecapi \_ avencvideoltrbuffercontrol](codecapi-avencvideoltrbuffercontrol.md)festgelegt werden.
+Das zweite Feld, bits \[ 16..31, ist eine Bitmap, die \] aus *MaxNumLTRFrames* viele Bits besteht, die angeben, welche LTR-Frame(s) ab Bit 16 zum Codieren dieses Ausgabeframes verwendet wurden. Die restlichen Bits müssen auf 0 festgelegt werden. Der zweite Wert ist 0, wenn dieser Ausgaberahmen nicht mit LTR-Frames codiert ist. *MaxNumLTRFrames* ist die maximale Anzahl von LTR-Frames, die über [CODECAPI \_ AVEncVideoLTRBufferControl](codecapi-avencvideoltrbuffercontrol.md)festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Das zweite Feld, Bits \[ 16.. 31 \] , ist eine Bitmap, die aus " *maxnumltrframe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

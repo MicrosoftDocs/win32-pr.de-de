@@ -1,9 +1,9 @@
 ---
-title: Healthclassvalue-Enumeration (napprotocol. h)
-description: Gibt den Wert der Integritäts Klasse TLV an.
+title: HealthClassValue-Enumeration (NapProtocol.h)
+description: Gibt den Wert der Integritätsklasse TLV an.
 ms.assetid: af80c27a-a686-494b-8795-73eb366deaa0
 keywords:
-- Healthclassvalue-Enumeration NAP
+- NAP für healthClassValue-Enumeration
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ade44b74d03a69d6ccf410a042adf3819b8cc782
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b76b3fef268417f14bf22d2e25539a245cebc31820b746847f1e7b1091492b82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891640"
 ---
-# <a name="healthclassvalue-enumeration"></a>Healthclassvalue-Enumeration
+# <a name="healthclassvalue-enumeration"></a>HealthClassValue-Enumeration
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Der " **healthclassvalue** "-Enumerationstyp gibt den Wert der Integritäts Klasse "TLV" an.
+Der **Enumerationstyp HealthClassValue** gibt den Wert der Integritätsklasse TLV an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,38 +49,38 @@ typedef enum tagHealthClassValue {
 
 <dl> <dt>
 
-<span id="healthClassFirewall"></span><span id="healthclassfirewall"></span><span id="HEALTHCLASSFIREWALL"></span>**healthclassfirewall**
+<span id="healthClassFirewall"></span><span id="healthclassfirewall"></span><span id="HEALTHCLASSFIREWALL"></span>**healthClassFirewall**
 </dt> <dd>
 
-Die Integritäts Klasse TLV ist Firewall.
+Die Integritätsklasse TLV ist firewall.
 
 </dd> <dt>
 
-<span id="healthClassPatchLevel"></span><span id="healthclasspatchlevel"></span><span id="HEALTHCLASSPATCHLEVEL"></span>**healthclasspatchlevel**
+<span id="healthClassPatchLevel"></span><span id="healthclasspatchlevel"></span><span id="HEALTHCLASSPATCHLEVEL"></span>**healthClassPatchLevel**
 </dt> <dd>
 
-Die Integritäts Klasse TLV ist die Patchebene.
+Die Integritätsklasse TLV ist Patchebene.
 
 </dd> <dt>
 
-<span id="healthClassAntiVirus"></span><span id="healthclassantivirus"></span><span id="HEALTHCLASSANTIVIRUS"></span>**healthclassantivirus**
+<span id="healthClassAntiVirus"></span><span id="healthclassantivirus"></span><span id="HEALTHCLASSANTIVIRUS"></span>**healthClassAntiVirus**
 </dt> <dd>
 
-Die Integritäts Klasse TLV ist Antivirus.
+Die Integritätsklasse TLV ist Antivirus.
 
 </dd> <dt>
 
-<span id="healthClassCriticalUpdate"></span><span id="healthclasscriticalupdate"></span><span id="HEALTHCLASSCRITICALUPDATE"></span>**healthclasscriticalupdate**
+<span id="healthClassCriticalUpdate"></span><span id="healthclasscriticalupdate"></span><span id="HEALTHCLASSCRITICALUPDATE"></span>**healthClassCriticalUpdate**
 </dt> <dd>
 
-Die Integritäts Klasse TLV ist ein kritisches Update.
+Die Integritätsklasse TLV ist ein kritisches Update.
 
 </dd> <dt>
 
-<span id="healthClassReserved"></span><span id="healthclassreserved"></span><span id="HEALTHCLASSRESERVED"></span>**healthclassreserved**
+<span id="healthClassReserved"></span><span id="healthclassreserved"></span><span id="HEALTHCLASSRESERVED"></span>**healthClassReserved**
 </dt> <dd>
 
-Nur für die Verwendung durch das System reserviert.
+Nur für die Systemverwendung reserviert.
 
 </dd> </dl>
 
@@ -90,10 +90,10 @@ Nur für die Verwendung durch das System reserviert.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TBN_DELETINGBUTTON Meldung (kommstrg. h)
-description: Wird von einem Symbolleisten-Steuerelement gesendet, wenn eine Schaltfläche gelöscht wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_DELETINGBUTTON (Commctrl.h)
+description: Wird von einem Symbolleisten-Steuerelement gesendet, wenn eine Schaltfläche gelöscht werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 08116071-36d6-456b-88f9-62a22cdb7ed9
 keywords:
-- Windows-Steuerelemente für TBN_DELETINGBUTTON Meldung
+- TBN_DELETINGBUTTON meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26337fd1abc6c67351fe2b38e83ee7d90a11f6e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a426d32af308d6d254a4221bbf35b103b401f07ab1ba6fa74801b6debd46ab70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876970"
 ---
-# <a name="tbn_deletingbutton-message"></a>TBN- \_ Delta Button-Meldung
+# <a name="tbn_deletingbutton-message"></a>TBN \_ DELETINGBUTTON-Meldung
 
-Wird von einem Symbolleisten-Steuerelement gesendet, wenn eine Schaltfläche gelöscht wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Symbolleisten-Steuerelement gesendet, wenn eine Schaltfläche gelöscht werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ Wird von einem Symbolleisten-Steuerelement gesendet, wenn eine Schaltfläche gel
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtoolbar**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) -Struktur, die Informationen über die Schaltfläche enthält, die gelöscht wird. Bei diesem Benachrichtigungs Code sind nur die **HDR** -und **iItem** -Member dieser Struktur gültig. Der **iItem** -Member dieser Struktur enthält den Befehls Bezeichner der Schaltfläche, die gelöscht wird.
+Zeiger auf eine [**NMTOOLBAR-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmtoolbara) die Informationen über die zu löschende Schaltfläche enthält. Für diesen Benachrichtigungscode sind nur **die Hdr-** und **iItem-Member** dieser Struktur gültig. Das **iItem-Member** dieser Struktur enthält den Befehlsbezeichner der schaltfläche, die gelöscht wird.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Instanz der boundingsphere-Klasse.
+description: Erstellt eine Instanz der BoundingSphere-Klasse.
 ms.assetid: c733c15d-034f-4c95-bd10-f5757fc4e813
-title: DirectX. boundingsphere-Konstruktoren
+title: DirectX.BoundingSphere-Konstruktoren
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 7d33ba964a43063cfcfc3ffcac10a525b9087474
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7098cf6159321d3572b4d7898e1c265d187adec370a940a41c79feddc9735a08
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119841660"
 ---
-# <a name="directxboundingsphere-constructors"></a>DirectX. boundingsphere-Konstruktoren
+# <a name="directxboundingsphere-constructors"></a>DirectX.BoundingSphere-Konstruktoren
 
-Erstellt eine Instanz der boundingsphere-Klasse.
+Erstellt eine Instanz der BoundingSphere-Klasse.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -28,9 +28,9 @@ Erstellt eine Instanz der boundingsphere-Klasse.
 
 | Konstruktor                                                                     | BESCHREIBUNG                                                 |
 |:--------------------------------------------------------------------------------|:------------------------------------------------------------|
-| [**DirectX. boundingsphere ()**](/windows/win32/api/appmgmt/ns-appmgmt-appcategoryinfo)                      | Erstellt eine Instanz der boundingsphere-Klasse.<br/> |
-| [**DirectX. boundingsphere (const XMFLOAT3&, float)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constxmfloat3__float)) | Erstellt eine Instanz der boundingsphere-Klasse.<br/> |
-| [**DirectX. boundingsphere (const boundingsphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constboundingsphere_)) | Erstellt eine Instanz der boundingsphere-Klasse.<br/> |
+| [**DirectX.BoundingSphere ()**](/windows/win32/api/appmgmt/ns-appmgmt-appcategoryinfo)                      | Erstellt eine Instanz der BoundingSphere-Klasse.<br/> |
+| [**DirectX.BoundingSphere (const XMFLOAT3&,float)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constxmfloat3__float)) | Erstellt eine Instanz der BoundingSphere-Klasse.<br/> |
+| [**DirectX.BoundingSphere (const BoundingSphere&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingsphere-boundingsphere(constboundingsphere_)) | Erstellt eine Instanz der BoundingSphere-Klasse.<br/> |
 
 
 
@@ -38,7 +38,7 @@ Erstellt eine Instanz der boundingsphere-Klasse.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)

@@ -1,9 +1,9 @@
 ---
-title: Contextpopup. contextmaps (Eigenschaft)
-description: Stellt einen Container für contextmap-Elemente dar.
+title: ContextPopup.ContextMaps-Eigenschaft
+description: Stellt einen Container für ContextMap-Elemente dar.
 ms.assetid: 06dfd4ba-a1d8-48bb-b185-d265e007a820
 keywords:
-- Contextpopup. contextmaps-Eigenschaften Fenster (Menüband)
+- ContextPopup.ContextMaps-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 034381c4af840219ff1d6dd4d7a73aa34f528915
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05b6f6e2f1533553c33949b300213c1957cb47b8606d811f1b6f1f8f6cf33b9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119840830"
 ---
-# <a name="contextpopupcontextmaps-property"></a>Contextpopup. contextmaps (Eigenschaft)
+# <a name="contextpopupcontextmaps-property"></a>ContextPopup.ContextMaps-Eigenschaft
 
-Stellt einen Container für [**contextmap**](windowsribbon-element-contextmap.md) -Elemente dar.
+Stellt einen Container für [**ContextMap-Elemente**](windowsribbon-element-contextmap.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                           | BESCHREIBUNG                                        |
 |-------------------------------------------------------------------|----------------------------------------------------|
-| [**Contextmap**](windowsribbon-element-contextmap.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ContextMap**](windowsribbon-element-contextmap.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,21 +51,21 @@ Es gibt keine Attribute.
 
 | Element                                                               |
 |-----------------------------------------------------------------------|
-| [**Contextpopup**](windowsribbon-element-contextpopup.md)<br/> |
+| [**ContextPopup**](windowsribbon-element-contextpopup.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**contextpopup**](windowsribbon-element-contextpopup.md)vorkommen.
+Kann höchstens einmal für jede [**ContextPopup-Datei**](windowsribbon-element-contextpopup.md)auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Code Abschnitt zeigt eine **contextpopup. contextmaps** -Steuerelement Deklaration.
+Dieser Codeabschnitt zeigt eine **ContextPopup.ContextMaps-Steuerelementdeklaration.**
 
 
 ```XML
@@ -158,8 +158,8 @@ Dieser Code Abschnitt zeigt eine **contextpopup. contextmaps** -Steuerelement De
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -167,7 +167,7 @@ Dieser Code Abschnitt zeigt eine **contextpopup. contextmaps** -Steuerelement De
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

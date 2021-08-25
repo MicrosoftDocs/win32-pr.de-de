@@ -1,10 +1,10 @@
 ---
-title: DRM_OUTPUT_PROTECTION Struktur (wmdrmsdk. h)
-description: Die DRM- \_ Ausgabe \_ Schutz Struktur enthält Informationen zu einer Ausgabe Schutz Technologie.
+title: DRM_OUTPUT_PROTECTION-Struktur (Wmdrmsdk.h)
+description: Die DRM \_ OUTPUT \_ PROTECTION-Struktur enthält Informationen zu einer Ausgabeschutztechnologie.
 ms.assetid: e458013d-b77e-4e03-bff9-e3ecfc72ebdb
 keywords:
-- DRM_OUTPUT_PROTECTION Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_OUTPUT_PROTECTION Strukturfenster Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a10428d86503e952dc82a7d45bddc11f5dd1286
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 82454d8b4982e6546b003ae3977c7a98869d46ba393ea49f0b97773f95572777
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881130"
 ---
-# <a name="drm_output_protection-structure"></a>DRM- \_ Ausgabe \_ Schutz Struktur
+# <a name="drm_output_protection-structure"></a>DRM \_ OUTPUT \_ PROTECTION-Struktur
 
-Die **DRM- \_ Ausgabe \_ Schutz** Struktur enthält Informationen zu einer Ausgabe Schutz Technologie.
+Die **DRM \_ OUTPUT \_ PROTECTION-Struktur** enthält Informationen zu einer Ausgabeschutztechnologie.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ typedef struct DRM_OUTPUT_PROTECTION {
 
 <dl> <dt>
 
-**guidid darf**
+**guidId**
 </dt> <dd>
 
-GUID, die die Ausgabe Schutz Technologie identifiziert.
+GUID, die die Ausgabeschutztechnologie identifiziert.
 
 </dd> <dt>
 
-**bconfigdata**
+**bConfigData**
 </dt> <dd>
 
 Konfigurationsdaten für die Technologie.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**DRM \_ Der \_ \_ audioausgabeschutz** und der **DRM- \_ Video \_ Ausgabe \_ Schutz** werden in **typedef** -Anweisungen als **DRM- \_ Ausgabe \_ Schutz** definiert.
+**DRM \_ AUDIO \_ OUTPUT \_ PROTECTION** und **DRM VIDEO OUTPUT \_ \_ \_ PROTECTION** werden in **typedef-Anweisungen** als **DRM OUTPUT \_ \_ PROTECTION** definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Konfigurationsdaten für die Technologie.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Konfigurationsdaten für die Technologie.
 
 <dl> <dt>
 
-[**DRM- \_ Ausgabe \_ Schutz ( \_ Ex)**](drm-output-protection-ex.md)
+[**DRM \_ OUTPUT \_ PROTECTION \_ EX**](drm-output-protection-ex.md)
 </dt> <dt>
 
 [**Strukturen**](drm-structures.md)

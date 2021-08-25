@@ -1,7 +1,7 @@
 ---
-description: Legt die Gewichtung für die Prioritäts Mischung für den angegebenen Animations Titel fest.
+description: Legt die Prioritätsmischungsgewichtung für die angegebene Animationsspur fest.
 ms.assetid: 8d40b0f6-d79a-42c1-99fb-3f76bd46f30c
-title: 'ID3DXAnimationController:: settrackpriority-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetTrackPriority-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 32f1f8cce4641203782b0a84840d2986780da26a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: be294710fcd6ec2d8e72c7d7c9437623d29a2729a52144d4edfdc91e5be7eea1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848970"
 ---
-# <a name="id3dxanimationcontrollersettrackpriority-method"></a>ID3DXAnimationController:: settrackpriority-Methode
+# <a name="id3dxanimationcontrollersettrackpriority-method"></a>ID3DXAnimationController::SetTrackPriority-Methode
 
-Legt die Gewichtung für die Prioritäts Mischung für den angegebenen Animations Titel fest.
+Legt die Prioritätsmischungsgewichtung für die angegebene Animationsspur fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetTrackPriority(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Bezeichner nachverfolgen.
+Nachverfolgungsbezeichner.
 
 </dd> <dt>
 
-*Priorität* \[ in\]
+*Priorität* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXPRIORITY- \_ Typ**](./d3dxpriority-type.md)**
+Typ: **[ **D3DXPRIORITY \_ TYPE**](./d3dxpriority-type.md)**
 
-Priorität nachverfolgen. Dieser Parameter sollte auf eine der Konstanten vom [**D3DXPRIORITY- \_ Typ**](./d3dxpriority-type.md)festgelegt werden.
+Nachverfolgungspriorität. Dieser Parameter sollte auf eine der Konstanten von [**D3DXPRIORITY \_ TYPE**](./d3dxpriority-type.md)festgelegt werden.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Priorität nachverfolgen. Dieser Parameter sollte auf eine der Konstanten vom [*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -73,8 +73,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

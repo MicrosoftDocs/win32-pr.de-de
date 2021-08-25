@@ -1,9 +1,9 @@
 ---
-title: Lokalisierungs Element (instrumentationmanifest)
-description: Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wird. | Lokalisierungs Element (instrumentationmanifest)
+title: localization (instrumentationManifest)-Element
+description: Definiert eine Gruppe lokalisierter Ressourcen, auf die Sie im Manifest verweisen. | localization (instrumentationManifest)-Element
 ms.assetid: 20c41456-cba2-4c8c-9c7e-2ffa0d1b37e5
 keywords:
-- EventLog für Lokalisierungs Element
+- Lokalisierungselement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: df7629a2fb4662527426271892bd10da490daee4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 40cbee0cd5a8e9254b1fa6bf613c1153bb77eaebd8327e752aca24cdc8bb7330
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863330"
 ---
-# <a name="localization-instrumentationmanifest-element"></a>Lokalisierungs Element (instrumentationmanifest)
+# <a name="localization-instrumentationmanifest-element"></a>localization (instrumentationManifest)-Element
 
-Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wird.
+Definiert eine Gruppe lokalisierter Ressourcen, auf die Sie im Manifest verweisen.
 
 ``` syntax
 <xs:element name="localization"
@@ -30,7 +30,7 @@ Definiert eine Gruppe lokalisierter Ressourcen, auf die im Manifest verwiesen wi
  />
 ```
 
-Das **Lokalisierungs** Element wird durch das [**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md) -Element definiert.
+Das **Lokalisierungselement** wird durch das [**instrumentationManifest-Element**](eventmanifestschema-instrumentationmanifest-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Lokalisierungs** Element wird durch das [**instrumentationmanifest**](even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Lokalisierungs** Element wird durch das [**instrumentationmanifest**](even
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**instrumentationmanifest**](eventmanifestschema-instrumentationmanifest-element.md)
+[**instrumentationManifest**](eventmanifestschema-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

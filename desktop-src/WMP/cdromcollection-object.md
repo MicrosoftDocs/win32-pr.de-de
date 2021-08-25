@@ -1,9 +1,9 @@
 ---
-title: Cdromcollection-Objekt
-description: Das cdromcollection-Objekt bietet eine Möglichkeit zum organisieren und Zugreifen auf eine Sammlung von CD-oder DVD-Laufwerken.
+title: CcollectionCollection-Objekt
+description: Das Ccollection-Objekt bietet eine Möglichkeit, eine Sammlung von CD- oder DVD-Laufwerken zu organisieren und darauf zuzugreifen.
 ms.assetid: 02429ba7-a053-42bf-9ed5-c05e13c964c0
 keywords:
-- Cdromcollection-Objekt, Windows Media Player
+- Windows Media Player des Ccollection-Objekts
 topic_type:
 - apiref
 api_name:
@@ -13,64 +13,64 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0d5367a6887290f06d36225f211f42048e98ba03
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0f8fe20bc138feb3eb1ad5bc937ef1f53f0e6b08e5757bbe03791177fe4c3531
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863950"
 ---
-# <a name="cdromcollection-object"></a>Cdromcollection-Objekt
+# <a name="cdromcollection-object"></a>CcollectionCollection-Objekt
 
-Das **cdromcollection** -Objekt bietet eine Möglichkeit zum organisieren und Zugreifen auf eine Sammlung von CD-oder DVD-Laufwerken.
+Das **Ccollection-Objekt** bietet eine Möglichkeit, eine Sammlung von CD- oder DVD-Laufwerken zu organisieren und darauf zuzugreifen.
 
-Das **cdromcollection** -Objekt unterstützt die folgende Eigenschaft.
+Das **Ccollection-Objekt** unterstützt die folgende Eigenschaft.
 
 
 
 | Eigenschaft                           | BESCHREIBUNG                                                        |
 |------------------------------------|--------------------------------------------------------------------|
-| [count](cdromcollection-count.md) | Ruft die Anzahl der verfügbaren CD-und DVD-Laufwerke im System ab. |
+| [count](cdromcollection-count.md) | Ruft die Anzahl der verfügbaren CD- und DVD-Laufwerke auf dem System ab. |
 
 
 
- 
+ 
 
-Das **cdromcollection** -Objekt unterstützt die folgenden Methoden.
+Das **CcollectionCollection-Objekt** unterstützt die folgenden Methoden.
 
 
 
 | Methode                                                         | BESCHREIBUNG                                                                               |
 |----------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [getbydrivespecifier](cdromcollection-getbydrivespecifier.md) | Ruft das [CDROM](cdrom-object.md) -Objekt ab, das einem bestimmten Laufwerk Buchstaben zugeordnet ist. |
-| [item](cdromcollection-item.md)                               | Ruft das [CDROM](cdrom-object.md) -Objekt am angegebenen Index ab.                        |
+| [getByDriveSpecifier](cdromcollection-getbydrivespecifier.md) | Ruft das einem bestimmten Laufwerkbuchstaben zugeordnete [Credo-Objekt](cdrom-object.md) ab. |
+| [item](cdromcollection-item.md)                               | Ruft das [Cverzeichnisse-Objekt](cdrom-object.md) am angegebenen Index ab.                        |
 
 
 
- 
+ 
 
-Der Zugriff auf das **cdromcollection** -Objekt erfolgt über die folgende Eigenschaft.
+Auf das **Ccollection-Objekt** wird über die folgende Eigenschaft zugegriffen.
 
 
 
 | Object                      | Eigenschaft                                      |
 |-----------------------------|-----------------------------------------------|
-| [Player](player-object.md) | [cdromcollection](player-cdromcollection.md) |
+| [Player](player-object.md) | [ccollectionCollection](player-cdromcollection.md) |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Objektmodell Referenz für die Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

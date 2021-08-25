@@ -1,9 +1,9 @@
 ---
-title: ISAN
-description: Das Isan-Attribut enthält die internationale Standard mäßige audionummer (ISAN), die den Inhalt identifiziert.
+title: Isan
+description: Das ISAN-Attribut enthält die Isan -Eigenschaft (International Standard Number, Internationale Standard-Nummer der Zahl der Toten), die den Inhalt identifiziert.
 ms.assetid: 2937d422-f062-4373-845e-dd200512ed0b
 keywords:
-- Windows Media-Format von Isan
+- ISAN-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,36 +12,36 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88dc4a850edc43178deb043143ee8f9b37140507
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: ec2af088938219ed48f2b281c627c0b64cc8e13fdea630b54a51a6f23db1b448
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104389968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808820"
 ---
-# <a name="isan"></a>ISAN
+# <a name="isan"></a>Isan
 
-Das **Isan** -Attribut enthält die internationale Standard mäßige audionummer (ISAN), die den Inhalt identifiziert.
+Das **ISAN-Attribut** enthält die Isan -Eigenschaft (International Standard Number, Internationale Standard-Nummer der Zahl der Toten), die den Inhalt identifiziert.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszisan
+g \_ wszZWN
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-ISAN ist ein internationaler Standard für die Identifizierung von audiovisuellen Works. Informationen zu Isan finden Sie auf der Standard [Website](https://www.isan.org/)von.
+ISAN ist ein internationaler Standard für die Identifizierung von Erkennungsarbeiten. Informationen zu ISAN finden Sie auf der [Standardwebsite](https://www.isan.org/).
 
-Das Metadateneditor-Objekt überprüft die ISA-Zeichenfolge, wenn Sie dieses Attribut festlegen. Die akzeptable Zeichen folgen Formatierung, wie in Abschnitt 4,1 der Isan-Spezifikation beschrieben, besteht aus 16 hexadezimalen Ziffern, die optional durch Leerzeichen oder Bindestriche in vierstellige Segmente voneinander getrennt sind. Die formatierte Zahl muss befolgt werden, auch optional durch ein Leerzeichen oder Bindestrich getrennt, durch ein gültiges Häkchen. Das Häkchen kann eine Dezimal Ziffer oder ein Großbuchstabe sein. Informationen zum Ableiten der Kontrollnummer finden Sie in Anhang A des Isan-Benutzerhandbuchs.
+Das Metadaten-Editor-Objekt überprüft die ISAN-Zeichenfolge, wenn Sie dieses Attribut festlegen. Die zulässige Zeichenfolgenformatierung, wie in Abschnitt 4.1 der ISAN-Spezifikation beschrieben, besteht aus 16 Hexadezimalziffern, die optional durch Leerzeichen oder Bindestriche in vierstellige Segmente getrennt sind. Auf die formatierte Zahl muss optional durch ein Leerzeichen oder Bindestrich ein gültiges Häkungszeichen folgen. Das Häkungszeichen kann eine Dezimalstelle oder ein Großbuchstaben sein. Informationen zum Ableiten der Prüfnummer finden Sie im Anhang A des ISAN-Benutzerhandbuchs.
 
-Auf die standardmäßige Isan-Zeichenfolge folgen möglicherweise Versionsinformationen. Falls vorhanden, bestehen Versionsinformationen aus acht hexadezimalen Ziffern, gefolgt von einer Kontrollnummer. Die Formatierung dieser Zeichen folgt denselben Regeln wie die Basis Zeichenfolge.
+Auf die ISAN-Standardzeichenfolge können Versionsinformationen folgen. Falls vorhanden, bestehen Versionsinformationen aus acht Hexadezimalziffern, gefolgt von einer Prüfnummer. Die Formatierung dieser Zeichen folgt den gleichen Regeln wie die einfache Zeichenfolge.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie drei Zeichen folgen mit akzeptabler Formatierung für ein Beispiel-Isan.
+Im Folgenden finden Sie drei Zeichenfolgen, die für ein ISAN-Beispiel akzeptiert werden können.
 
 
 ```
@@ -52,7 +52,7 @@ Im folgenden finden Sie drei Zeichen folgen mit akzeptabler Formatierung für ei
 
 
 
-Die folgende Zeichenfolge zeigt das Format eines Isan mit Versionsinformationen.
+Die folgende Zeichenfolge zeigt das Format eines ISAN mit Versionsinformationen.
 
 
 ```C++
@@ -68,9 +68,9 @@ Die folgende Zeichenfolge zeigt das Format eines Isan mit Versionsinformationen.
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

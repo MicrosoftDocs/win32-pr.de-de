@@ -1,11 +1,11 @@
 ---
-title: Upgradeeditionwithproductkeymethod-Methode der MDM_WindowsLicensing-Klasse
-description: Gibt eine Product Key für ein Editions Upgrade von Windows 10 Desktop-Geräten ein. Siehe auch Upgrade editionwithproductkey.
+title: UpgradeEditionWithProductKeyMethod-Methode der MDM_WindowsLicensing-Klasse
+description: Gibt einen Product Key für ein Editionsupgrade von Windows 10 Desktopgeräten ein. Siehe auch UpgradeEditionWithProductKey.
 ms.assetid: 6576fb5c-210c-4979-8c01-ed8f78e72c2c
 keywords:
-- Upgradeeditionwithproductkeymethod-Methode
-- Upgradeeditionwithproductkeymethod-Methode, MDM_WindowsLicensing-Klasse
-- MDM_WindowsLicensing-Klasse, upgradeeditionwithproductkeymethod-Methode
+- UpgradeEditionWithProductKeyMethod-Methode
+- UpgradeEditionWithProductKeyMethod-Methode, MDM_WindowsLicensing-Klasse
+- MDM_WindowsLicensing-Klasse, UpgradeEditionWithProductKeyMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85824fc6fac9e5a15bf2bc890215afcbd0958680
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a44293701c5a18f20b7e286530446c662778999f3ffa5ed8edffb5819dda8a91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913240"
 ---
-# <a name="upgradeeditionwithproductkeymethod-method-of-the-mdm_windowslicensing-class"></a>Upgradeeditionwithproductkeymethod-Methode der MDM- \_ windowslicensing-Klasse
+# <a name="upgradeeditionwithproductkeymethod-method-of-the-mdm_windowslicensing-class"></a>UpgradeEditionWithProductKeyMethod-Methode der \_ MDM-WindowsLicensing-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Gibt eine Product Key für ein Editions Upgrade von Windows 10 Desktop-Geräten ein. Siehe auch [Upgrade editionwithproductkey](/windows/client-management/mdm/windowslicensing-csp).
+Gibt einen Product Key für ein Editionsupgrade von Windows 10 Desktopgeräten ein. Siehe auch [UpgradeEditionWithProductKey](/windows/client-management/mdm/windowslicensing-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 UpgradeEditionWithProductKeyMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd>
 
 Der Product Key.
@@ -57,10 +57,10 @@ Der Product Key.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -69,10 +69,10 @@ Der Product Key.
 
 <dl> <dt>
 
-[**MDM- \_ windowslicensing**](mdm-windowslicensing.md)
+[**MDM \_ WindowsLicensing**](mdm-windowslicensing.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

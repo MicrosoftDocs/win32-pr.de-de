@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection-Methode hinzufügen
-description: Die Add-Methode fügt der Bibliothek ein neues Medien Element oder eine neue Wiedergabeliste hinzu. | Iwmpmediacollection-Methode hinzufügen
+title: Hinzufügen einer IWMPMediaCollection-Methode
+description: Die add-Methode fügt der Bibliothek ein neues Medienelement oder eine neue Wiedergabeliste hinzu. | Hinzufügen einer IWMPMediaCollection-Methode
 ms.assetid: a3539646-797b-4481-a31e-86771f3633a9
 keywords:
-- Hinzufügen von Methoden Fenster Media Player
-- Add-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle, Windows Media Player, Methode hinzufügen
+- add method Windows Media Player
+- Add-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , Methode hinzufügen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7953067281e394df71a1a53c874cb80837a5f35d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 778850da4094d8ac745018b115248de9008d15339b7ffee75de177cf957d3fc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370509"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861162"
 ---
-# <a name="iwmpmediacollectionadd-method"></a>Iwmpmediacollection:: Add-Methode
+# <a name="iwmpmediacollectionadd-method"></a>IWMPMediaCollection::add-Methode
 
-Die **Add** -Methode fügt der Bibliothek ein neues Medien Element oder eine neue Wiedergabeliste hinzu.
+Die **add-Methode** fügt der Bibliothek ein neues Medienelement oder eine neue Wiedergabeliste hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,28 +53,28 @@ Implements IWMPMediaCollection.add
 
 <dl> <dt>
 
-*bstrinurl* \[ in\]
+*bstrURL* \[ In\]
 </dt> <dd>
 
-Eine **System. String** -URL, die den Speicherort des Medien Elements oder der Wiedergabeliste angibt.
+Eine **System.String,die** die URL ist, die den Speicherort des Medienelements oder der Wiedergabeliste angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **WMPLib. iwmpmedia** -Schnittstelle für das hinzugefügte Element oder Wiedergabeliste.
+Die **WMPLib.IWMPMedia-Schnittstelle** für das hinzugefügte Element oder die Wiedergabeliste.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode lädt ein vorhandenes Medien Element oder eine vorhandene Wiedergabeliste in die Bibliothek, sofern ein Pfad angegeben ist. Diese Methode verschiebt oder ändert die Datei nicht. Bei dieser Methode tritt ein Fehler auf, wenn ein ungültiger lokaler Pfad vorliegt, die Medienelemente selbst jedoch nicht auf Gültigkeit überprüft werden, bevor Sie der Bibliothek hinzugefügt werden.
+Diese Methode lädt ein vorhandenes Medienelement oder eine vorhandene Wiedergabeliste unter Berücksichtigung eines Pfads in die Bibliothek. Mit dieser Methode wird die Datei nicht verschoben oder geändert. Diese Methode schlägt fehl, wenn ein ungültiger lokaler Pfad angegeben wird, Medienelemente selbst jedoch nicht auf Gültigkeit überprüft werden, bevor sie der Bibliothek hinzugefügt werden.
 
-Diese Methode akzeptiert sowohl statische als auch automatische Wiedergabelisten Dateien. Die **iwmpplaylistcollection. importwiedergabe** -Methode kann auch verwendet werden, um der Bibliothek eine statische Wiedergabeliste hinzuzufügen.
+Diese Methode akzeptiert sowohl statische als auch automatische Wiedergabelistendateien. Die **IWMPPlaylistCollection.importPlaylist-Methode** kann auch verwendet werden, um der Bibliothek eine statische Wiedergabeliste hinzuzufügen.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden der Windows Media Player-Medien Auflistung drei Medienobjekte hinzugefügt. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel werden der Windows Media Player Medienauflistung drei Medienobjekte hinzugefügt. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -115,7 +115,7 @@ player.mediaCollection.add(&quot;C:\WMSDK\WMPSDK\samples\media\house.wma&quot;)
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -125,13 +125,13 @@ player.mediaCollection.add(&quot;C:\WMSDK\WMPSDK\samples\media\house.wma&quot;)
 
 <dl> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection. Remove (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-remove--vb-and-c.md)
+[**IWMPMediaCollection.remove (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-remove--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection. importwiedergabe (VB und c#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-importplaylist--vb-and-c.md)
+[**IWMPPlaylistCollection.importPlaylist (VB und C#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-importplaylist--vb-and-c.md)
 </dt> </dl>
 
  

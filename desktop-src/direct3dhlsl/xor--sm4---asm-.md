@@ -1,23 +1,23 @@
 ---
-title: XOR (SM4-ASM)
-description: Bitweises XOR.
+title: xor (sm4 - asm)
+description: Bitweises xor.
 ms.assetid: 6B949653-6DDA-402B-8ABE-B93858B68470
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7a998bd1e95793f463d7f234b464a542bed4fc0
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 9a4dae86a4c6ade427b749c2bb72974564b8a4b7a6baae6821edb3c0d63b2164
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892410"
 ---
-# <a name="xor-sm4---asm"></a>XOR (SM4-ASM)
+# <a name="xor-sm4---asm"></a>xor (sm4 - asm)
 
-Bitweises XOR.
+Bitweises xor.
 
 
 
-| XOR dest \[ . mask \] , src0 \[ . Swizzle \] , Quelle1 \[ . Swizzle\] |
+| xor dest \[ .mask \] , src0 \[ .swizzle \] , src1 \[ .swizzle\] |
 |-------------------------------------------------------|
 
 
@@ -28,19 +28,19 @@ Bitweises XOR.
 
 | Element                                                            | BESCHREIBUNG                                          |
 |-----------------------------------------------------------------|------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[im \] Ergebnis des Vorgangs.<br/>       |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten zu XOR mit *Quelle1*.<br/> |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den Komponenten zu XOR mit *src0*.<br/> |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs.<br/>       |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in The components to XOR with src1 ( Die Komponenten \] zu XOR mit *src1*).<br/> |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] The components to XOR with *src0*.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt ein Komponenten weises logisches XOR für jedes Paar von 32-Bit-Werten aus *src0* und *Quelle1* aus. 32-Bit-Ergebnisse werden in *dest* platziert.
+Diese Anweisung führt ein komponentenweises logisches XOR jedes Paars von 32-Bit-Werten aus *src0* und *src1 aus.* 32-Bit-Ergebnisse werden in *dest platziert.*
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -52,20 +52,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

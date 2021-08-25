@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Linien- \_ devspecificex-Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Rückruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
+description: Die TAPI LINE DEVSPECIFICEX-Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem \_ Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
 ms.assetid: 137e91fd-a09e-430c-9d46-8e5be65f03d1
-title: LINE_DEVSPECIFICEX Meldung (TAPI. h)
+title: LINE_DEVSPECIFICEX (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba25047858c641ea4c6cec7d15ba06df24e8ee39
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a0b65b322b265b6bbd9717a9fc5b3c0eccf46bb3802fef7684a58d2d69645cdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867070"
 ---
-# <a name="line_devspecificex-message"></a>Zeilen- \_ devspecificex-Meldung
+# <a name="line_devspecificex-message"></a>LINE \_ DEVSPECIFICEX-Meldung
 
-Die TAPI- **Linien- \_ devspecificex** -Nachricht wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Rückruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
+Die TAPI **LINE \_ DEVSPECIFICEX-Nachricht** wird gesendet, um die Anwendung über gerätespezifische Ereignisse zu benachrichtigen, die in einer Zeile, Adresse oder einem Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter sind gerätespezifisch.
 
 
 ```C++
@@ -26,17 +26,17 @@ Die TAPI- **Linien- \_ devspecificex** -Nachricht wird gesendet, um die Anwendun
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für ein Zeilen Gerät oder einen-Befehl. Dieser Parameter ist gerätespezifisch.
+Ein Handle für ein Liniengerät oder einen Anruf. Dieser Parameter ist gerätespezifisch.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wurde.
 
 </dd> <dt>
 
@@ -65,9 +65,9 @@ Gerätespezifisch.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Zeile \_ devspecificex** -Meldung wird von einem Dienstanbieter in Verbindung mit der [**linedevspecific**](/windows/desktop/api/Tapi/nf-tapi-linedevspecific) -Funktion verwendet. Seine Bedeutung ist gerätespezifisch.
+Die **LINE \_ DEVSPECIFICEX-Nachricht** wird von einem Dienstanbieter in Verbindung mit der [**lineDevSpecific-Funktion**](/windows/desktop/api/Tapi/nf-tapi-linedevspecific) verwendet. Seine Bedeutung ist gerätespezifisch.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die **Zeile \_ devspecificex** -Meldung wird von einem Dienstanbieter in Verbind
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

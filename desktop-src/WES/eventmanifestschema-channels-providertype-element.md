@@ -1,9 +1,9 @@
 ---
-title: Channels (ProviderType)-Element
-description: Definiert eine Liste von Kanälen, zu denen Anbieter Ereignisse protokollieren können. | Channels (ProviderType)-Element
+title: channels(ProviderType)-Element
+description: Definiert eine Liste von Kanälen, an die Anbieter Ereignisse protokollieren können. | channels(ProviderType)-Element
 ms.assetid: f30e9b0e-71f3-41a9-9457-403ca9a4fbab
 keywords:
-- Channels-Element EventLog
+- channels-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 91aac4916bc745cb2620a25ff4abc1d6539b8512
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 15f425ef1300bbe4a6e02cedab9b91e8efc47ee6f883eaa14a47851c6188fe5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863640"
 ---
-# <a name="channels-providertype-element"></a>Channels (ProviderType)-Element
+# <a name="channels-providertype-element"></a>channels(ProviderType)-Element
 
-Definiert eine Liste von Kanälen, zu denen Anbieter Ereignisse protokollieren können.
+Definiert eine Liste von Kanälen, an die Anbieter Ereignisse protokollieren können.
 
 ``` syntax
 <xs:element name="channels"
@@ -30,7 +30,7 @@ Definiert eine Liste von Kanälen, zu denen Anbieter Ereignisse protokollieren k
  />
 ```
 
-Das **Channels** -Element wird durch den komplexen [**ProviderType**](eventmanifestschema-providertype-complextype.md) -Typ definiert.
+Das **Channels-Element** wird durch den komplexen [**ProviderType-Typ**](eventmanifestschema-providertype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Channels** -Element wird durch den komplexen [**ProviderType**](eventmanif
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Channels** -Element wird durch den komplexen [**ProviderType**](eventmanif
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Anbieter (eventstype)**](eventmanifestschema-provider-eventstype-element.md)
+[**provider (EventsType)**](eventmanifestschema-provider-eventstype-element.md)
 </dt> </dl>
 
  

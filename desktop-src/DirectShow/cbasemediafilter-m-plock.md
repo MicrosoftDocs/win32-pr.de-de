@@ -1,7 +1,7 @@
 ---
 description: Zeiger auf einen kritischen Abschnitt.
 ms.assetid: 7d949b7f-a6a7-4ab5-b651-f85b70d55065
-title: 'Cbasemediafilter:: m_pLock Member (amfilter. h)'
+title: CBaseMediaFilter::m_pLock-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 126aa213004dd032eea43b28198b6f8b49fe7f3e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ad92cf07cc096c50ffa50f862c26f6133fc8dbb9b9b059419bb516e07cbd5daa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910790"
 ---
-# <a name="cbasemediafilterm_plock-member"></a>Cbasemediafilter:: m \_ Plock-Member
+# <a name="cbasemediafilterm_plock-member"></a>CBaseMediaFilter::m \_ pLock-Member
 
 Zeiger auf einen kritischen Abschnitt.
 
@@ -36,9 +36,9 @@ CCritSec *m_pLock;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der kritische Abschnitt wird während der Statusübergänge ([**cbasemediafilter:: Run**](cbasemediafilter-run.md), [**cbasemediafilter::P ause**](cbasemediafilter-pause.md), [**cbasemediafilter:: beenden**](cbasemediafilter-stop.md)), beim Zugriff auf die Referenzuhr ([**cbasemediafilter:: setsyncsource**](cbasemediafilter-setsyncsource.md), [**cbasemediafilter:: getsyncsource**](cbasemediafilter-getsyncsource.md)) und in der [**cbasemediafilter:: IsActive**](cbasemediafilter-isactive.md) -Methode gespeichert.
+Der kritische Abschnitt wird während Zustandsübergängen [**(CBaseMediaFilter::Run,**](cbasemediafilter-run.md) [**CBaseMediaFilter::P ause,**](cbasemediafilter-pause.md) [**CBaseMediaFilter::Stop**](cbasemediafilter-stop.md)), beim Zugriff auf die Referenzuhr ([**CBaseMediaFilter::SetSyncSource,**](cbasemediafilter-setsyncsource.md) [**CBaseMediaFilter::GetSyncSource**](cbasemediafilter-getsyncsource.md)) und in der [**CBaseMediaFilter::IsActive-Methode**](cbasemediafilter-isactive.md) gehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Der kritische Abschnitt wird während der Statusübergänge ([**cbasemediafilter
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

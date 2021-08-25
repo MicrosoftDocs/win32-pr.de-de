@@ -1,27 +1,27 @@
 ---
-description: Der Installer zeichnet Fehler und Ereignisse in einem eigenen Fehlerprotokoll auf.
+description: Das Installationsprogramm zeichnet Fehler und Ereignisse in seinem eigenen Fehlerprotokoll auf.
 ms.assetid: 244e9afa-2052-469e-aa57-424e03ce5673
 title: Normale Protokollierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0846305ef53c596fbd6f117eaf76b0715a94c313
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1dd1abeb4f110603bcc596cb7981ea65c7d9820d8054adc7533c4f85de2d8bf7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828540"
 ---
 # <a name="normal-logging"></a>Normale Protokollierung
 
-Der Installer zeichnet Fehler und Ereignisse in einem eigenen Fehlerprotokoll auf. Der Protokollierungstyp, der vom Installationsprogramm ausgeführt wird, wird durch die Einstellung des Protokollierungs Modus bestimmt. Die Protokollierung ist aktiviert, und der Modus kann mithilfe der folgenden Methoden festgelegt werden:
+Das Installationsprogramm zeichnet Fehler und Ereignisse in seinem eigenen Fehlerprotokoll auf. Der Typ der Protokollierung, die vom Installationsprogramm ausgeführt wird, wird durch die Einstellung des Protokollierungsmodus bestimmt. Die Protokollierung ist aktiviert, und der Modus kann mithilfe der folgenden Methoden festgelegt werden:
 
--   Der Protokollierungs Modus einer Installation, die über die Befehlszeile gestartet wird, kann mithilfe der Option/L der [Befehlszeilenoptionen](command-line-options.md)angegeben werden. Wenn der Protokollierungs Modus nicht mithilfe der Befehlszeilenoption/L angegeben wird, wird der Standard Protokollierungs Modus verwendet.
--   Der Protokollierungs Modus eines Installationsprozesses kann Programm gesteuert mithilfe der [**msienablelog**](/windows/desktop/api/Msi/nf-msi-msienableloga) -Funktion oder der [**EnableLog**](installer-enablelog.md) -Methode angegeben werden. Wenn der Protokollierungs Modus nicht mithilfe der **msienablelog** -Funktion oder der **EnableLog** -Methode angegeben wird, wird der Standard Protokollierungs Modus verwendet.
--   Der Standard Protokollierungs Modus eines bestimmten Installationspakets kann durch Festlegen der [**MsiLogging**](msilogging.md) -Eigenschaft in der [Eigenschaften Tabelle](property-table.md) des Pakets angegeben werden. Diese Eigenschaft ist ab Windows Installer 4,0 verfügbar.
--   Wenn die [**MsiLogging**](msilogging.md) -Eigenschaft in der [Eigenschaften Tabelle](property-table.md)vorhanden ist, kann der Standard Protokollierungs Modus des Pakets geändert werden, indem der Wert mithilfe einer [Daten Bank Transformation](database-transforms.md)geändert wird. Der Standard Protokollierungs Modus kann nicht mithilfe von [patchpaketen](patch-packages.md) (MSP-Datei) geändert werden.
--   Wenn die [**MsiLogging**](msilogging.md) -Eigenschaft nicht festgelegt wurde, kann der Standard Protokollierungs Modus für alle Benutzer des Computers mithilfe der [Protokollierungs](logging.md) Richtlinie angegeben werden.
--   Wenn die [**MsiLogging**](msilogging.md) -Eigenschaft festgelegt wurde, kann der Standard Protokollierungs Modus für alle Benutzer des Computers durch Festlegen der Richtlinie " [disableloggingfrompackage](disableloggingfrompackage.md) " und der [Protokollierungs](logging.md) Richtlinie angegeben werden.
--   Wenn der Protokollierungs Modus nicht durch die/L-Option, die [**msienablelog**](/windows/desktop/api/Msi/nf-msi-msienableloga), die [**EnableLog**](installer-enablelog.md), die [**MsiLogging**](msilogging.md) -Eigenschaft oder die [Protokollierungs](logging.md) Richtlinie angegeben wurde, entspricht der Standard Protokollierungs Modus für das Paket dem Modus, der als Festlegen der **MsiLogging** -Eigenschaft auf ' iwearmo ' abgerufen wird.
+-   Der Protokollierungsmodus einer Installation, die über die Befehlszeile gestartet wird, kann mithilfe der Option /L der [Befehlszeilenoptionen angegeben werden.](command-line-options.md) Wenn der Protokollierungsmodus nicht mithilfe der Befehlszeilenoption /L angegeben wird, wird der Standardprotokollierungsmodus verwendet.
+-   Der Protokollierungsmodus eines Installationsprozesses kann programmgesteuert mithilfe der [**MsiEnableLog-Funktion**](/windows/desktop/api/Msi/nf-msi-msienableloga) oder der [**EnableLog-Methode angegeben**](installer-enablelog.md) werden. Wenn der Protokollierungsmodus nicht mithilfe der **MsiEnableLog-Funktion** oder der **EnableLog-Methode** angegeben wird, wird der Standardprotokollierungsmodus verwendet.
+-   Der Standardprotokollierungsmodus eines bestimmten Installationspakets kann durch Festlegen der [**MsiLogging-Eigenschaft**](msilogging.md) in der [Property-Tabelle des](property-table.md) Pakets angegeben werden. Diese Eigenschaft ist ab Windows Installer 4.0 verfügbar.
+-   Wenn die [**MsiLogging-Eigenschaft**](msilogging.md) in der [Property-Tabelle](property-table.md)vorhanden ist, kann der Standardprotokollierungsmodus des Pakets geändert werden, indem der Wert mithilfe einer [Datenbanktransformation geändert wird.](database-transforms.md) Der Standardprotokollierungsmodus kann nicht mithilfe von [Patchpaketen](patch-packages.md) (MSP-Datei) geändert werden.
+-   Wenn die [**MsiLogging-Eigenschaft**](msilogging.md) nicht festgelegt wurde, kann der Standardprotokollierungsmodus für alle Benutzer des Computers mithilfe der [Protokollierungsrichtlinie angegeben](logging.md) werden.
+-   Wenn die [**MsiLogging-Eigenschaft**](msilogging.md) festgelegt wurde, kann der Standardprotokollierungsmodus für alle Benutzer des Computers durch Festlegen der [DisableLoggingFromPackage-Richtlinie](disableloggingfrompackage.md) und der [Protokollierungsrichtlinie angegeben](logging.md) werden.
+-   Wenn der Protokollierungsmodus nicht durch die Option /L, [**MsiEnableLog,**](/windows/desktop/api/Msi/nf-msi-msienableloga) [**EnableLog,**](installer-enablelog.md) [**msiLogging**](msilogging.md) oder die Protokollierungsrichtlinie angegeben wurde, ist der Standardprotokollierungsmodus für das Paket der gleiche Modus, der beim Festlegen der **MsiLogging-Eigenschaft** auf "iojmo" ermittelt wird. [](logging.md)
 
  
 

@@ -1,33 +1,33 @@
 ---
-title: Waveform-Audiodatei
-description: Waveform-Audiodatei
+title: Waveform-Audio
+description: Waveform-Audio
 ms.assetid: 3188355c-65be-4372-8e87-e7f755982592
 keywords:
-- Windows Multimedia, Waveform-Audiodatei
-- Multimedia, Waveform-Audiodatei
-- Multimedia-Audiodatei, Wellenform
-- Audiodaten, Wellenform
-- Wellenform-Audiodatei, Info
+- Windows multimedia,waveform audio
+- Multimedia,Waveform-Audio
+- Multimediaaudio, Wellenform
+- audio,waveform
+- waveform audio,about
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09826e521628497082a5765ac5d3be7a95b8ea9c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3258a0b9d2088b69edf06cc36b726cfa1b4a3fa2a8d929473744ffbfaa68370
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119892100"
 ---
-# <a name="waveform-audio"></a>Waveform-Audiodatei
+# <a name="waveform-audio"></a>Waveform-Audio
 
-In dieser Übersicht wird erläutert, wie Sie mithilfe von Wellenform und zusätzlichen audiodiensten Sound zu Anwendungen hinzufügen.
+In dieser Übersicht wird erläutert, wie Sie die Wellenform und zusätzliche Audiodienste verwenden, um Anwendungen Sound hinzuzufügen.
 
--   [Informationen zu Waveform-Audiodaten](about-waveform-audio.md)
--   [Verwenden von Waveform und hilfsaudiodaten](using-waveform-and-auxiliary-audio.md)
+-   [Informationen zu Waveform-Audio](about-waveform-audio.md)
+-   [Verwenden von Waveform- und Hilfsaudio](using-waveform-and-auxiliary-audio.md)
 -   [Waveform-Audioreferenz](waveform-audio-reference.md)
 
- 
+ 
 
- 
+ 
 
 
 

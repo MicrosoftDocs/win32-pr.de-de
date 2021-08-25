@@ -1,17 +1,17 @@
 ---
 description: Legt die Schlüssel-ID für das Beispiel fest.
 ms.assetid: 75339350-05AA-486E-9C28-11070C0DA61D
-title: MFSampleExtension_Content_KeyID-Attribut (mfapi. h)
+title: MFSampleExtension_Content_KeyID-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b40d698dbb2d64e9744027b3cd8a3bb2dceec226
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38498665dddaed0cd38082246f61f0f86c9b1b7a1e8cec7d19d476c860fe8d6d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848170"
 ---
-# <a name="mfsampleextension_content_keyid-attribute"></a>MF Sample Extension- \_ Content \_ keyid-Attribut
+# <a name="mfsampleextension_content_keyid-attribute"></a>MFSampleExtension \_ Content \_ KeyID-Attribut
 
 Legt die Schlüssel-ID für das Beispiel fest.
 
@@ -21,7 +21,7 @@ Legt die Schlüssel-ID für das Beispiel fest.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie die Schlüssel-ID für das Beispiel festgelegt wird.
+Das folgende Beispiel zeigt, wie Sie die Schlüssel-ID für das Beispiel festlegen.
 
 
 ```C++
@@ -39,23 +39,23 @@ m_spSample->SetGUID( MFSampleExtension_Content_KeyID, guidKID );
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**1000000000**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 </dt> <dt>
 
-[MF SampleExtension \_ Encryption \_ subsamplemappingsplit](mfsampleextension-encryption-subsamplemappingsplit.md)
+[MFSampleExtension \_ Encryption \_ SubSampleMappingSplit](mfsampleextension-encryption-subsamplemappingsplit.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die cbaseobject-Klasse ist eine abstrakte Klasse für die Implementierung von DirectShow-Objekten. Um Component Object Model (com)-Objekte zu implementieren, verwenden Sie die cunknown-Klasse, die von cbaseobject abgeleitet wird.
+description: Die CBaseObject-Klasse ist eine abstrakte Klasse zum Implementieren von DirectShow-Objekten. Verwenden Sie Component Object Model CUnknown-Klasse, die von CBaseObject abgeleitet ist, um com-Objekte (COM) zu implementieren.
 ms.assetid: 4b651d43-b177-4081-8c76-f6615ff2830c
-title: Cbaseobject-Klasse (ComBase. h)
+title: CBaseObject-Klasse (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,32 +16,32 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bbc3e072c31618dab6a7bc07048728f60dbcf0d2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7809ec53746730f02f9b095ede3ae00b53f1fe55c21116c22d854c3d4b193e97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910620"
 ---
-# <a name="cbaseobject-class"></a>Cbaseobject-Klasse
+# <a name="cbaseobject-class"></a>CBaseObject-Klasse
 
-Die **cbaseobject** -Klasse ist eine abstrakte Klasse für die Implementierung von DirectShow-Objekten. Um Component Object Model (com)-Objekte zu implementieren, verwenden Sie die [**cunknown**](cunknown.md) -Klasse, die von **cbaseobject** abgeleitet wird.
+Die **CBaseObject-Klasse** ist eine abstrakte Klasse zum Implementieren von DirectShow-Objekten. Zum Implementieren Component Object Model (COM)-Objekten verwenden Sie die [**CUnknown-Klasse,**](cunknown.md) die von **CBaseObject abgeleitet wird.**
 
 
 
-| Klassen Methoden                                      | BESCHREIBUNG                            |
+| Klassenmethoden                                      | Beschreibung                            |
 |----------------------------------------------------|----------------------------------------|
-| [**Cbaseobject**](cbaseobject-cbaseobject.md)     | Konstruktormethode.                    |
-| [**~ Cbaseobject**](cbaseobject--cbaseobject.md)   | Dekonstruktormethode.                     |
-| [**Objectatactive**](cbaseobject-objectsactive.md) | Ruft die Anzahl der aktiven-Objekte ab. |
+| [**CBaseObject**](cbaseobject-cbaseobject.md)     | Konstruktormethode.                    |
+| [**~CBaseObject**](cbaseobject--cbaseobject.md)   | Destruktormethode.                     |
+| [**ObjectsActive**](cbaseobject-objectsactive.md) | Ruft die Anzahl der aktiven Objekte ab. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die meisten DirectShow-Basisklassen werden von **cbaseobject** abgeleitet. Diese Klasse stellt Debuggingunterstützung bereit, indem die Anzahl der während der Laufzeit aktiven DirectShow-Objekte beibehalten wird. Die Objekt Anzahl wird in einer klassenstatischen Element Variablen gespeichert:
+Die meisten DirectShow-Basisklassen werden von **CBaseObject abgeleitet.** Diese Klasse bietet Unterstützung beim Debuggen, indem die Anzahl aller DirectShow-Objekte zur Laufzeit aktiv ist. Die Objektanzahl wird in einer klassen statischen Membervariablen gespeichert:
 
 
 ```
@@ -55,9 +55,9 @@ private:
 
 
 
-In Debugbuilds bestätigt die dll, dass Sie entladen wird, während die Objekt Anzahl größer als 0 (null) ist. Dies erleichtert das Ermitteln von Verlusten aufgrund von Problemen bei der Verweis Zählung.
+In Debugbuilds gibt die DLL zu, wenn sie entladen wird, während die Objektanzahl größer als 0 (null) ist. Dadurch können Lecks, die durch Probleme mit der Verweiszählung verursacht werden, leichter nachverfolgt werden.
 
-Der **cbaseobject** -Konstruktor benötigt ein Argument, einen debugnamen für das Objekt. Dieser Name wird in einer globalen Tabelle in der dll gespeichert. Die Funktion [**dbgdumpobjectregiester**](dbgdumpobjectregister.md) formatiert eine Liste der in der dll aktiven Objekte und sendet Sie an die Debugausgabe.
+Der **CBaseObject-Konstruktor** verwendet ein Argument, einen Debugnamen für das Objekt. Dieser Name wird in einer globalen Tabelle in der DLL gespeichert. Die [**DbgDumpObjectRegister-Funktion**](dbgdumpobjectregister.md) formatiert eine Liste der in der DLL aktiven Objekte und sendet sie an die Debugausgabe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,12 +65,12 @@ Der **cbaseobject** -Konstruktor benötigt ein Argument, einen debugnamen für d
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmplibrary-Typeigenschaft
-description: Die Type-Eigenschaft ruft einen Wert ab, der den Bibliothekstyp angibt.
+title: IWMPLibrary-Typeigenschaft
+description: Die type-Eigenschaft ruft einen Wert ab, der den Bibliothekstyp angibt.
 ms.assetid: 869eab74-e793-4b04-b634-079feac8cf7b
 keywords:
-- Typeigenschaften Fenster Media Player
-- Type-Eigenschaft, Windows Media Player, iwmplibrary-Schnittstelle
-- Iwmplibrary Interface, Windows Media Player, Type-Eigenschaft
+- type-Windows Media Player
+- type-Windows Media Player , IWMPLibrary-Schnittstelle
+- IWMPLibrary-Schnittstelle Windows Media Player , Typeigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c47aa4069b9886d79fd77a6816eede4eb4ad81e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 44cb7aaf892d6f73a498d5d880c41ab2df3fa8e028039ea39966b6547b11d9b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861789"
 ---
-# <a name="iwmplibrarytype-property"></a>Iwmplibrary:: Type (Eigenschaft)
+# <a name="iwmplibrarytype-property"></a>IWMPLibrary::type-Eigenschaft
 
-Die **Type** -Eigenschaft ruft einen Wert ab, der den Bibliothekstyp angibt.
+Die **type-Eigenschaft** ruft einen Wert ab, der den Bibliothekstyp angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Public ReadOnly Property type As WMPLibraryType
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **WMPLib. wmplibrarytype** , bei dem es sich um einen Wert aus der **wmplibrarytype** -Enumeration handelt, der den Bibliothekstyp angibt.
+Ein **WMPLib.WMPLibraryType,** der ein Wert aus der **WMPLibraryType-Enumeration** ist, der den Bibliothekstyp angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,13 +64,13 @@ Ein **WMPLib. wmplibrarytype** , bei dem es sich um einen Wert aus der **wmplibr
 
 <dl> <dt>
 
-[**Iwmplibrary-Schnittstelle (VB und c#)**](iwmplibrary--vb-and-c.md)
+[**IWMPLibrary-Schnittstelle (VB und C#)**](iwmplibrary--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPLibrary.Name (VB und c#)**](wmplibiwmplibrary-iwmplibrary-name--vb-and-c.md)
+[**IWMPLibrary.name (VB und C#)**](wmplibiwmplibrary-iwmplibrary-name--vb-and-c.md)
 </dt> <dt>
 
-[**Wmplibrarytype**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmplibrarytype)
+[**WMPLibraryType**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmplibrarytype)
 </dt> </dl>
 
  

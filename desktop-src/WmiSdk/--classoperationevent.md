@@ -1,5 +1,5 @@
 ---
-description: Ist eine Basisklasse für alle systeminternen Ereignisse, die sich auf eine Klasse beziehen.
+description: Eine Basisklasse für alle systeminternen Ereignisse, die sich auf eine Klasse beziehen.
 ms.assetid: 554bbabd-2639-40f5-8786-6df2188db0ec
 ms.tgt_platform: multiple
 title: __ClassOperationEvent-Klasse
@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 0c7a78219cec5c014e289dad4bf1cc29f0466a06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52ff5854d5510b22eaf264bcdbbfd39bbb02c7d2a2766eb3fbd8f336bd0b8074
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119860610"
 ---
-# <a name="__classoperationevent-class"></a>\_\_Classoperationevent-Klasse
+# <a name="__classoperationevent-class"></a>\_\_ClassOperationEvent-Klasse
 
-Die **\_ \_ classoperationevent** -System Klasse ist eine Basisklasse für alle systeminternen Ereignisse, die sich auf eine Klasse beziehen.
+Die **\_ \_ ClassOperationEvent-Systemklasse** ist eine Basisklasse für alle systeminternen Ereignisse, die sich auf eine Klasse beziehen.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,68 +43,68 @@ class __ClassOperationEvent : __Event
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ classoperationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ ClassOperationEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ classoperationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ ClassOperationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
-**Targetclass**
+**TargetClass**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Klasse, auf die sich das Ereignis auswirkt. Bei Erstellungs Ereignissen handelt es sich hierbei um die neu erstellte Klasse. Bei Änderungs Ereignissen handelt es sich hierbei um die neue Version der geänderten-Klasse. Bei Lösch Ereignissen handelt es sich hierbei um die gelöschte-Klasse.
+Vom Ereignis betroffene Klasse. Bei Erstellungsereignissen ist dies die neu erstellte Klasse. Bei Änderungsereignissen ist dies die neue Version der geänderten Klasse. Bei Löschereignissen ist dies die gelöschte Klasse.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Coordinated Universal Times) angegeben. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ classoperationevent** -Klasse wird von [**\_ \_ Event**](--event.md)abgeleitet.
+Die **\_ \_ ClassOperationEvent-Klasse** wird von Event [**\_ \_ abgeleitet.**](--event.md)
 
-Es werden keine Instanzen von **\_ \_ classoperationevent** erstellt; es werden nur Instanzen der Unterklassen erstellt. Die folgenden Klassen werden von **\_ \_ classoperationevent** abgeleitet:
+Instanzen von **\_ \_ ClassOperationEvent** werden nicht erstellt, sondern nur Instanzen ihrer Unterklassen. Die folgenden Klassen werden von **\_ \_ ClassOperationEvent ableiten:**
 
-[**\_\_Classcreationevent**](--classcreationevent.md)
+[**\_\_ClassCreationEvent**](--classcreationevent.md)
 
-[**\_\_Classmodificationevent**](--classmodificationevent.md)
+[**\_\_ClassModificationEvent**](--classmodificationevent.md)
 
-[**\_\_Classdeletionevent**](--classdeletionevent.md)
+[**\_\_ClassDeletionEvent**](--classdeletionevent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -125,10 +125,10 @@ Es werden keine Instanzen von **\_ \_ classoperationevent** erstellt; es werden 
 [**\_\_Ereignis**](/windows/desktop/WmiSdk/--event)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[Bestimmen des zu empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md)
+[Bestimmen des Zu empfangenden Ereignistyps](determining-the-type-of-event-to-receive.md)
 </dt> </dl>
 
  

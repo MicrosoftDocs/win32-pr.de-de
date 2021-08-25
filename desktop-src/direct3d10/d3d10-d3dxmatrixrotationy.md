@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixRotationY-Funktion (D3DX10Math.h): Erstellt eine Matrix, die um die y-Achse gedreht wird.'
+description: 'D3DXMatrixRotationY-Funktion (D3DX10Math.h): Erstellt eine Matrix, die sich um die y-Achse dreht.'
 ms.assetid: b58def9b-29dc-4c7d-89a3-188ef9b9f94f
 title: D3DXMatrixRotationY-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 570179fadc9008c5f919acf657541e53ab399ac8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 29f222d2bc5a6e20dfad6d0f77b5a76ddfa1dc8174cb46bde47ee39770259839
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895560"
 ---
 # <a name="d3dxmatrixrotationy-function-d3dx10mathh"></a>D3DXMatrixRotationY-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die um die y-Achse gedreht wird.
+Erstellt eine Matrix, die sich um die y-Achse dreht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis 
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entlang der Drehachse zum Ursprung hin betrachtet werden.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn die Drehachse zum Ursprung hin betrachtet wird.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entla
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine D3DXMATRIX-Struktur, die um die y-Achse gedreht wurde.
+Zeiger auf eine um die y-Achse gedrehte D3DXMATRIX-Struktur.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixRotationY-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -73,14 +73,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

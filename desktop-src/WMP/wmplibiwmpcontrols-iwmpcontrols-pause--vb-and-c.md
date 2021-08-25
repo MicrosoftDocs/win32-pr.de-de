@@ -1,11 +1,11 @@
 ---
-title: Methode zum Anhalten von iwmpcontrols
-description: Die Pause-Methode hält die Wiedergabe des Medien Elements an. | Methode zum Anhalten von iwmpcontrols
+title: IWMPControls pause-Methode
+description: Die Pause-Methode hält die Wiedergabe des Medienelements an. | IWMPControls pause-Methode
 ms.assetid: 1d9ebaf3-84b4-458d-a393-2b685cd0dbfb
 keywords:
-- Windows-Media Player für die Methoden Pause
-- Pause-Methode, Windows Media Player, iwmpcontrols-Schnittstelle
-- Iwmpcontrols Interface, Windows Media Player, anhaltemethode
+- pause-Methode Windows Media Player
+- pause-Methode Windows Media Player , IWMPControls-Schnittstelle
+- IWMPControls-Schnittstelle Windows Media Player , pause-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cf89cfef66c84be76a529d9c0cef6ec3ae6ac40
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 49950b5d2c5588e27755f3845e65f0a79ce0aae6ccc4a05dd4e5af3186b879de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861880"
 ---
-# <a name="iwmpcontrolspause-method"></a>Iwmpcontrols::p ause-Methode
+# <a name="iwmpcontrolspause-method"></a>IWMPControls::p ause-Methode
 
-Die **Pause** -Methode hält die Wiedergabe des Medien Elements an.
+Die **Pause-Methode** hält die Wiedergabe des Medienelements an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,15 +53,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Datei angehalten wird, gibt Windows Media Player keine Systemressourcen, z. b. das Audiogerät, aus.
+Wenn eine Datei angehalten wird, gibt Windows Media Player keine Systemressourcen auf, z. B. das Audiogerät.
 
-Um zu ermitteln, ob ein bestimmter Medientyp angehalten werden kann, übergeben Sie den **System. String** -Wert "Pause" an die **iwmpcontrols. IsAvailable** -Eigenschaft (die **iwmpcontrols. get \_ IsAvailable** -Methode in c#).
+Um zu bestimmen, ob ein bestimmter Medientyp angehalten werden kann, übergeben Sie den **System.String-Wert** "pause" an die **IWMPControls.isAvailable-Eigenschaft** (die **IWMPControls.get \_ isAvailable-Methode** in C#).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Pause** verwendet, um die Wiedergabe des aktuellen Medien Elements als Reaktion auf das Click-Ereignis einer Schaltfläche anzuhalten. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **pause** verwendet, um die Wiedergabe des aktuellen Medienelements als Reaktion auf das Click-Ereignis einer Schaltfläche anzuhalten. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -108,7 +108,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -118,10 +118,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. IsAvailable (VB und c#)**](iwmpcontrols-isavailable--vb-and-c.md)
+[**IWMPControls.isAvailable (VB und C#)**](iwmpcontrols-isavailable--vb-and-c.md)
 </dt> </dl>
 
  

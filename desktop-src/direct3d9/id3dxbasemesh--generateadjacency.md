@@ -1,7 +1,7 @@
 ---
-description: 'ID3DXBaseMesh::GenerateAdjaency-Methode: Generieren Sie eine Liste von Gitternetzkanten sowie eine Liste von Gesichtern, die die einzelnen Kanten gemeinsam nutzen.'
+description: 'ID3DXBaseMesh::GenerateAdjacency-Methode: Generiert eine Liste von Gitternetzrändern sowie eine Liste von Gesichtern, die die einzelnen Ränder gemeinsam verwenden.'
 ms.assetid: 9d52290f-1c9e-43a7-b239-35cd54e36466
-title: ID3DXBaseMesh::GenerateAdencyency-Methode (D3DX9Mesh.h)
+title: ID3DXBaseMesh::GenerateAdjacency-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 783ed7ad61337e606793b9b467e4b17fddd7ecd2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d51070b5b67b50859338943a60e44cbb224e572ab9e5704e56940328a65479f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848530"
 ---
-# <a name="id3dxbasemeshgenerateadjacency-method"></a>ID3DXBaseMesh::GenerateAdjaency-Methode
+# <a name="id3dxbasemeshgenerateadjacency-method"></a>ID3DXBaseMesh::GenerateAdjacency-Methode
 
-Generieren Sie eine Liste von Gitternetzrändern sowie eine Liste von Gesichtern, die die einzelnen Kanten gemeinsam nutzen.
+Generieren Sie eine Liste von Gitternetzrändern sowie eine Liste von Gesichtern, die die einzelnen Ränder gemeinsam haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +46,16 @@ HRESULT GenerateAdjacency(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gibt an, dass Scheitelpunkte, die sich in der Position um weniger als epsilon unterscheiden, als zufällig behandelt werden sollen.
+Gibt an, dass Scheitelungen, die sich an der Position von kleiner als epsilon unterscheiden, als zufällig behandelt werden sollen.
 
 </dd> <dt>
 
-*pAdjazenz* \[ In\]
+*pAdjacency* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das mit den Indizes benachbarter Gesichter gefüllt werden soll. Die Anzahl der Bytes in diesem Array muss mindestens \* [**3 ID3DXBaseMesh::GetNumFaces**](id3dxbasemesh--getnumfaces.md) \* sizeof(DWORD) betragen.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die mit den Indizes benachbarter Gesichter gefüllt werden sollen. Die Anzahl der Bytes in diesem Array muss mindestens \* [**3 ID3DXBaseMesh::GetNumFaces**](id3dxbasemesh--getnumfaces.md) \* sizeof(DWORD) sein.
 
 </dd> </dl>
 
@@ -63,26 +63,26 @@ Zeiger auf ein Array von drei DWORDs pro Gesicht, das mit den Indizes benachbart
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem eine Anwendung Adjazenzinformationen für ein Gitternetz generiert hat, können die Gitternetzdaten optimiert werden, um eine bessere Zeichnungsleistung zu erzielen.
+Nachdem eine Anwendung Adjazienzinformationen für ein Gitternetz generiert hat, können die Gitternetzdaten für eine bessere Zeichnungsleistung optimiert werden.
 
-Die Reihenfolge der Einträge im Adjazenzpuffer wird durch die Reihenfolge der Scheitelpunktindizes im Indexpuffer bestimmt. Das angrenzende Dreieck 0 entspricht immer dem Rand zwischen den Indizes der Ecken 0 und 1. Das angrenzende Dreieck 1 entspricht immer dem Rand zwischen den Indizes der Ecken 1 und 2, während das angrenzende Dreieck 2 dem Rand zwischen den Indizes der Ecken 2 und 0 entspricht.
+Die Reihenfolge der Einträge im Adjacency-Puffer wird durch die Reihenfolge der Scheitelpunktindizes im Indexpuffer bestimmt. Das benachbarte Dreieck 0 entspricht immer dem Rand zwischen den Indizes der Ecken 0 und 1. Das angrenzende Dreieck 1 entspricht immer dem Rand zwischen den Indizes der Ecken 1 und 2, während das angrenzende Dreieck 2 dem Rand zwischen den Indizes der Ecken 2 und 0 entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

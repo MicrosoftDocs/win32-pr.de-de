@@ -1,18 +1,18 @@
 ---
-title: Übersicht über Windows Media-Metadatendateien
-description: Übersicht über Windows Media-Metadatendateien
+title: Windows Übersicht über Medienmetadateien
+description: Windows Übersicht über Medienmetadateien
 ms.assetid: 5b7742c0-f416-4bf4-ae03-9554b51fe620
 keywords:
-- Windows Media-Metadateien, Informationen zu
-- Windows Media Player, Metafiles
-- Windows Media Player, Windows Media-Metadateien
-- Metadatendateien, Informationen zu
-- Windows Media, Metafiles
-- Windows Media Metadatei-Wiedergabelisten, Informationen zu
+- Windows Medienmetadateien, Informationen
+- Windows Media Player,Metafiles
+- Windows Media Player,Windows Medienmetadateien
+- Metadateien, Informationen
+- Windows Medien,Metadateien
+- Windows Wiedergabelisten von Medienmetadateien, Informationen
 - Wiedergabelisten, Informationen
-- Windows Media-Metadateien, Syntax
-- Metadatendateien, Syntax
-- Metadatei-Wiedergabelisten, Informationen
+- Windows Medienmetadateien,Syntax
+- Metadateien, Syntax
+- Metafile-Wiedergabelisten, Informationen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -20,31 +20,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e7ed86cca023103c044f28141e0212542d83d200
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: acf11766460424ad5783110456e93de9fa32225e9847834b839c3e8c50f69117
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119862250"
 ---
-# <a name="windows-media-metafiles-overview"></a>Übersicht über Windows Media-Metadatendateien
+# <a name="windows-media-metafiles-overview"></a>Windows Übersicht über Medienmetadateien
 
-Der wichtigste Teil der erfolgreichen Verwendung von Windows Media-Metadateien ist die Verwendung der korrekten Syntax für die Metadatei-Elemente. Syntax Fehler in einer Windows Media-Metadatei können dazu führen, dass von einem einzelnen Attribut übersehen wird, dass die Metadatei nicht als gültig erkannt wird und nicht funktioniert.
+Der wichtigste Teil der erfolgreichen Verwendung Windows Media-Metadateien ist die Verwendung der richtigen Syntax für die Metadateielemente. Syntaxfehler in einer Windows Media-Metadatei können dazu führen, dass etwas von einem einzelnen Attribut übersehen wird, bis die Metadatei nicht als gültig erkannt wird und nicht funktioniert.
 
-Fast ebenso wichtig ist die Reihenfolge, in der die Elemente in einer Windows Media-Metadatei angezeigt werden. Die Attribute einiger Elemente überschreiben vorübergehend die Attribute ähnlicher Elemente in verschiedenen Abschnitten der Metadatei. Es gibt eine definierte [Rangfolge](order-of-precedence.md).
+Fast genauso wichtig ist die Reihenfolge, in der die Elemente in einer Windows Medienmetadatei angezeigt werden. Die Attribute einiger Elemente überschreiben vorübergehend die Attribute ähnlicher Elemente in verschiedenen Abschnitten der Metadatei. Es gibt eine definierte [Rangfolge.](order-of-precedence.md)
 
-Windows Media Metadatei-Wiedergabelisten sind Windows Media-Metadateien, die Informationen bereitstellen, die Windows Media Player verwendet, um Unicaststreams, Multicast Ströme und andere unterstützte Medien aus einem Intranet oder dem Internet zu empfangen. Eine Metadatei-Wiedergabeliste ist im Grunde eine Verknüpfung mit Medieninhalten. Eine Metadatei-Wiedergabeliste kann als e-Mail gesendet, als Link Verweis auf einer Webseite verwendet, dynamisch mithilfe von Active Server Seiten (ASP) erstellt oder als eigenständige Datei auf einem lokalen Laufwerk vorhanden sein. Eine Metadatei-Wiedergabeliste kann auf eine andere metadatenwiedergabe-Wiedergabeliste, eine ASP-Seite oder eine Windows Media-Stations Datei (mit der Dateinamenerweiterung ". NSC") verweisen. Eine NSC-Datei wird verwendet, um eine Windows Media-Station für Windows Media Player zu definieren. Der grundlegende Behandlungsprozess ist für jeden Fall identisch.
+Windows Wiedergabelisten von Medienmetadateien sind Windows Medienmetadateien, die Informationen bereitstellen, die Windows Media Player zum Empfangen von Unicaststreams, Multicaststreams und anderen unterstützten Medien aus einem Intranet oder dem Internet verwendet. Eine Metadateiwiedergabeliste ist im Grunde eine Verknüpfung mit Medieninhalten. Eine Metadateiwiedergabeliste kann als E-Mail gesendet, als Linkverweis auf einer Webseite verwendet, dynamisch mithilfe von Active Server Pages (ASP) erstellt oder als eigenständige Datei auf einem lokalen Laufwerk vorhanden sein. Eine Metadateiwiedergabeliste kann auf eine andere Metadateiwiedergabeliste, eine ASP-Seite oder eine Windows Media Station-Datei (mit der Dateierweiterung .nsc) verweisen. Eine NSC-Datei wird verwendet, um eine Media Station zu Windows, die Windows Media Player. Der grundlegende Verarbeitungsprozess ist für jeden Fall identisch.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Windows Media-Metadateien**](about-windows-media-metafiles.md)
+[**Informationen Windows Medienmetadateien**](about-windows-media-metafiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

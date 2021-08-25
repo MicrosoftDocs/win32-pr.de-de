@@ -4,16 +4,16 @@ ms.assetid: e03d2ab5-50ea-4916-9774-850506714538
 title: Abfragen von Ereignisinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcd20521060ecceb5dcec1fbd37cbdac4f34c5b7
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: a0488ea6ae91632b3609d88517c9c62a73f6ed48ee849c8f5e14b778ef122623
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111826308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927830"
 ---
 # <a name="querying-for-event-information"></a>Abfragen von Ereignisinformationen
 
-Das folgende Beispiel zeigt, wie Sie ein Ereignisprotokoll öffnen, Ereignisse aus dem Protokoll lesen, Informationen zu den Ereignissen drucken und dann das Ereignisprotokoll schließen. Dieses Beispiel filtert nach den Ereignissen, die im Beispiel unter [Melden eines Ereignisses geschrieben wurden.](reporting-an-event.md)
+Das folgende Beispiel zeigt, wie Sie ein Ereignisprotokoll öffnen, Ereignisse aus dem Protokoll lesen, Informationen zu den Ereignissen drucken und dann das Ereignisprotokoll schließen. Dieses Beispiel filtert nach den Ereignissen, die im Beispiel unter [Reporting an Event (Melden eines Ereignisses)](reporting-an-event.md)geschrieben wurden.
 
 
 ```C++

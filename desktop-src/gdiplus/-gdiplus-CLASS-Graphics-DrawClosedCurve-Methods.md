@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die DrawClosedCurve-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawClosedCurve-Methoden der Graphics-Klasse aufgeführt. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: 366c883b-0acf-4c2d-8ecd-18baa1c75b76
-title: Graphics. DrawClosedCurve-Methode (gdipl"-Grafiken. h")
+title: Graphics.DrawClosedCurve-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 897fc3e914526db33dc21c752d6025dfa77823f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e85132f45678f2ad1a6a0e153f18442f52639fbdfe06c5962053e077a679171
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104996491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848890"
 ---
-# <a name="graphicsdrawclosedcurve-methods"></a>Graphics. DrawClosedCurve-Methoden
+# <a name="graphicsdrawclosedcurve-methods"></a>Graphics.DrawClosedCurve-Methoden
 
-In diesem Thema werden die DrawClosedCurve-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawClosedCurve-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgeführt. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Graphics**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,20 +21,20 @@ In diesem Thema werden die DrawClosedCurve-Methoden der [**Grafik**](/windows/wi
 
 | Methode                                                                                                                                    | BESCHREIBUNG                                                                                                                                                                      |
 |:------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DrawClosedCurve (Stift \* , Punkt \* , int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint))                     | Die [**Grafik::D rawclosedcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint)) -Methode zeichnet einen geschlossenen kardinalspline.<br/>               |
-| [**DrawClosedCurve (Stift \* , PointF \* , int)**](/previous-versions//ms536143(v=vs.85))                   | Die [**Grafik::D rawclosedcurve**](/previous-versions//ms536143(v=vs.85)) -Methode zeichnet einen geschlossenen kardinalspline.<br/>              |
-| [**DrawClosedCurve (Stift \* , Punkt \* , int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint_inreal))   | Die [**Grafik::D rawclosedcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint_inreal)) -Methode zeichnet einen geschlossenen kardinalspline.<br/>  |
-| [**DrawClosedCurve (Stift \* , PointF \* , int, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpointf_inint_inreal)) | Die [**Grafik::D rawclosedcurve**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpointf_inint_inreal)) -Methode zeichnet einen geschlossenen kardinalspline.<br/> |
+| [**DrawClosedCurve(Pen \* , Point , \* INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint))                     | Die [**Graphics::D rawClosedCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint)) zeichnet eine geschlossene Kardinalspline.<br/>               |
+| [**DrawClosedCurve(Pen \* , PointF \* , INT)**](/previous-versions//ms536143(v=vs.85))                   | Die [**Graphics::D rawClosedCurve-Methode**](/previous-versions//ms536143(v=vs.85)) zeichnet eine geschlossene Kardinalspline.<br/>              |
+| [**DrawClosedCurve(Stift \* , Punkt , \* INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint_inreal))   | Die [**Graphics::D rawClosedCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpoint_inint_inreal)) zeichnet eine geschlossene Kardinalspline.<br/>  |
+| [**DrawClosedCurve(Pen \* , PointF \* , INT, REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpointf_inint_inreal)) | Die [**Graphics::D rawClosedCurve-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawclosedcurve(inconstpen_inconstpointf_inint_inreal)) zeichnet eine geschlossene Kardinalspline.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

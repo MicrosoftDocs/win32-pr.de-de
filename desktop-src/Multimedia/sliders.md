@@ -3,34 +3,34 @@ title: Schieberegler (Windows Multimedia)
 description: Schieberegler
 ms.assetid: cfd82672-5b22-4b59-82b5-15ca68a451fc
 keywords:
-- Audiomischungen, Steuerelemente
+- Audiomixer, Steuerelemente
 - Audiomixer, Schieberegler
-- Mischungen, Steuerelemente
+- Mixer, Steuerelemente
 - Mixer, Schieberegler
 - Schieberegler-Steuerelemente
 - MIXERCONTROLDETAILS_SIGNED Struktur
-- Pan-Steuerelement
-- QSound Pan-Steuerelement
+- Schwenken-Steuerelement
+- QSound-Schwenksteuerelement
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d1d7644255e2fa9ee6384cbb5102df81c2a1eb0
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6e902e3ead0416cb4b2a7d56d289f91779563109cb9494784635affc75069dfe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805350"
 ---
 # <a name="sliders-windows-multimedia"></a>Schieberegler (Windows Multimedia)
 
-Die Schieberegler-Steuerelemente sind in der Regel horizontale Steuerelemente, die nach links oder rechts angepasst werden können. Diese Steuerelemente verwenden die [**\_ signierte "mixercontroldetails**](/previous-versions//dd757297(v=vs.85)) "-Struktur zum Abrufen und Festlegen von Steuerelement Eigenschaften. In der folgenden Tabelle werden die Typen von Schiebereglern beschrieben.
+Die Schieberegler-Steuerelemente sind in der Regel horizontale Steuerelemente, die nach links oder rechts angepasst werden können. Diese Steuerelemente verwenden die [**MIXERCONTROLDETAILS \_ SIGNED-Struktur,**](/previous-versions//dd757297(v=vs.85)) um Steuerelementeigenschaften abzurufen und festzulegen. In der folgenden Tabelle werden die Typen von Schiebereglern beschrieben.
 
 
 
-| Control    | BESCHREIBUNG                                                                                                               |
+| Control    | Beschreibung                                                                                                               |
 |------------|---------------------------------------------------------------------------------------------------------------------------|
-| Schieberegler     | Hat einen Bereich von – 32.768 bis 32.767. Der mischertreibers definiert die Begrenzungen dieses Steuer Elements.                               |
-| Schwenken        | Hat einen Bereich von – 32.768 bis 32.767. Der mischertreibers definiert die Begrenzungen dieses Steuer Elements mit 0 als Wert für Midrange. |
-| QSound schwenken | Bietet erweiterte Soundsteuerung durch QSound. Dieses Steuerelement hat einen Bereich von – 15 bis 15.                               |
+| Schieberegler     | Hat einen Bereich von –32.768 bis 32.767. Der Mixertreiber definiert die Grenzwerte dieses Steuerelements.                               |
+| Schwenken        | Hat einen Bereich von –32.768 bis 32.767. Der Mixertreiber definiert die Grenzwerte dieses Steuerelements, wobei 0 als Mittelbereichswert festgelegt ist. |
+| QSound Pan | Stellt erweitertes Soundsteuerelement über QSound bereit. Dieses Steuerelement hat einen Bereich von –15 bis 15.                               |
 
 
 

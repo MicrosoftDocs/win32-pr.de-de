@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientAdvancedSettings7-Schnittstelle
-description: Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuer Elements verwalten.
+description: Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuerelements verwalten.
 ms.assetid: 2d6848b4-2ce6-4624-b46e-65e7daf2d0f1
 ms.tgt_platform: multiple
 keywords:
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, beschrieben
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,40 +16,40 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eed28c5d26ecf280507ce3cce835a6d0a71fc3bb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5df2990a257d8f7fa544c24e33dba6a2422d2db8bea878f2487ca131e5bd607
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866560"
 ---
 # <a name="imsrdpclientadvancedsettings7-interface"></a>IMsRdpClientAdvancedSettings7-Schnittstelle
 
-Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuer Elements verwalten.
+Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des ActiveX-Steuerelements verwalten.
 
-Um eine Instanz dieser Schnittstelle abzurufen, verwenden Sie die [**imstscax:: advancedsettings**](imstscax-advancedsettings.md) -Eigenschaft, um einen [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstellen Zeiger zu erhalten. Nennen Sie dann [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **imstscadvancedsettings** -Zeiger, und übergeben Sie **IID \_ IMsRdpClientAdvancedSettings7** an **QueryInterface**.
+Um eine Instanz dieser Schnittstelle abzurufen, verwenden Sie die [**IMsTscAx::AdvancedSettings-Eigenschaft,**](imstscax-advancedsettings.md) um einen [**IMsTscAdvancedSettings-Schnittstellenzeiger**](imstscadvancedsettings-interface.md) abzurufen. Rufen Sie dann [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **IMsTscAdvancedSettings-Zeiger** auf, und übergeben Sie **IID \_ IMsRdpClientAdvancedSettings7** an **QueryInterface**.
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClientAdvancedSettings7** -Schnittstelle erbt von **IMsRdpClientAdvancedSettings6**. **IMsRdpClientAdvancedSettings7** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpClientAdvancedSettings7-Schnittstelle** erbt von **IMsRdpClientAdvancedSettings6.** **IMsRdpClientAdvancedSettings7** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **IMsRdpClientAdvancedSettings7** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpClientAdvancedSettings7-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                                                    | Zugriffstyp           | BESCHREIBUNG                                                                                                                                          |
 |:------------------------------------------------------------------------------------------------------------|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Audiocaptureredirectionmode**](imsrdpclientadvancedsettings7-audiocaptureredirectionmode.md)<br/> | Lesen/Schreiben<br/> | Gibt einen Wert an, der angibt, ob das standardmäßige Audioeingabegerät vom Client an die Remote Sitzung umgeleitet wird, oder ruft diesen Wert ab.<br/> |
-| [**Audioqualitymode**](imsrdpclientadvancedsettings7-audioqualitymode.md)<br/>                       | Lesen/Schreiben<br/> | Gibt einen Wert an oder ruft ihn ab, der die Einstellung für den audioqualitätsmodus für umgeleitete Audiodaten angibt<br/>                                        |
-| [**Enablesuperpan**](imsrdpclientadvancedsettings7-enablesuperpan.md)<br/>                           | Lesen/Schreiben<br/> | Gibt einen Wert an, der angibt, ob superpan aktiviert oder deaktiviert ist, oder ruft ihn ab.<br/>                                                    |
-| [**Networkconnectiontype**](imsrdpclientadvancedsettings7-networkconnectiontype.md)<br/>             | Lesen/Schreiben<br/> | Gibt einen Wert an, der den Netzwerk Verbindungstyp angibt, oder ruft ihn ab.<br/>                                                                |
-| [**Redirectdirectx**](imsrdpclientadvancedsettings7-redirectdirectx.md)<br/>                         | Lesen/Schreiben<br/> | Diese Eigenschaft wird nicht verwendet.<br/>                                                                                                                |
-| [**Superpanaccelerationfactor**](imsrdpclientadvancedsettings7-superpanaccelerationfactor.md)<br/>   | Lesen/Schreiben<br/> | Gibt einen Wert an, der den superpan-Beschleunigungs Faktor angibt, oder ruft ihn ab.<br/>                                                           |
-| [**Videoplaybackmode**](imsrdpclientadvancedsettings7-videoplaybackmode.md)<br/>                     | Lesen/Schreiben<br/> | Gibt einen Wert an, der den Videowiedergabe Modus angibt, oder ruft ihn ab.<br/>                                                                    |
+| [**AudioCaptureRedirectionMode**](imsrdpclientadvancedsettings7-audiocaptureredirectionmode.md)<br/> | Lesen/Schreiben<br/> | Gibt einen Wert an, der angibt, ob das Standardaudioeingabegerät vom Client zur Remotesitzung umgeleitet wird, oder ruft diesen ab.<br/> |
+| [**AudioQualityMode**](imsrdpclientadvancedsettings7-audioqualitymode.md)<br/>                       | Lesen/Schreiben<br/> | Gibt einen Wert an, der die Einstellung des Audioqualitätsmodus für umgeleitetes Audio angibt, oder ruft diesen ab.<br/>                                        |
+| [**EnableSuperPan**](imsrdpclientadvancedsettings7-enablesuperpan.md)<br/>                           | Lesen/Schreiben<br/> | Gibt einen Wert an, der angibt, ob SuperPan aktiviert oder deaktiviert ist, oder ruft diesen ab.<br/>                                                    |
+| [**NetworkConnectionType**](imsrdpclientadvancedsettings7-networkconnectiontype.md)<br/>             | Lesen/Schreiben<br/> | Gibt einen Wert an, der den Netzwerkverbindungstyp angibt, oder ruft diesen ab.<br/>                                                                |
+| [**RedirectDirectX**](imsrdpclientadvancedsettings7-redirectdirectx.md)<br/>                         | Lesen/Schreiben<br/> | Diese Eigenschaft wird nicht verwendet.<br/>                                                                                                                |
+| [**SuperPanAccelerationFactor**](imsrdpclientadvancedsettings7-superpanaccelerationfactor.md)<br/>   | Lesen/Schreiben<br/> | Gibt einen Wert an, der den SuperPan-Beschleunigungsfaktor angibt, oder ruft diesen ab.<br/>                                                           |
+| [**VideoPlaybackMode**](imsrdpclientadvancedsettings7-videoplaybackmode.md)<br/>                     | Lesen/Schreiben<br/> | Gibt einen Wert an, der den Videowiedergabemodus angibt, oder ruft diesen ab.<br/>                                                                    |
 
 
 
@@ -65,7 +65,7 @@ Die **IMsRdpClientAdvancedSettings7** -Schnittstelle verfügt über diese Eigens
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                                |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 wird als 26036036-4010-4578-8091-0db9a1edf-C3 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings7 ist als 26036036-4010-4578-8091-0db9a1edf9c3 definiert.<br/> |
 
 
 
@@ -88,10 +88,10 @@ Die **IMsRdpClientAdvancedSettings7** -Schnittstelle verfügt über diese Eigens
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> </dl>
 
  

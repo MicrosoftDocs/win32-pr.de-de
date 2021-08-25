@@ -1,7 +1,7 @@
 ---
-description: Die-Methode wird von der-Methode der-Methode geteilt, und der Teil Fragment wird an der Spitze einer anderen Liste eingefügt.
+description: Die MoveToHead-Methode teilt die Liste auf und fügt den Teil am Anfang einer anderen Liste ein.
 ms.assetid: 46e4f8fe-6707-44c6-9d49-0168b35d2364
-title: Cbaselist. muvedehead-Methode (wxlist. h)
+title: CBaseList.MoveToHead-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 80adec6c8e2f6d42b5cf2cabd3a83a4c3aededa3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18133107a3c8038780662bc39c8bd621c8b2c445a6e1e930f8fbfc015807e9fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928680"
 ---
-# <a name="cbaselistmovetohead-method"></a>Cbaselist. muvedehead-Methode
+# <a name="cbaselistmovetohead-method"></a>CBaseList.MoveToHead-Methode
 
-Die `MoveToHead` -Methode teilt die Liste auf und fügt den Teil Fragment an der Spitze einer anderen Liste ein.
+Die `MoveToHead` -Methode teilt die Liste auf und fügt den Teil am Anfang einer anderen Liste ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ BOOL MoveToHead(
 *pos* 
 </dt> <dd>
 
-Positionsindikator, mit dem die Aufteilung in der Liste markiert wird.
+Positionsindikator, der die Teilung in der Liste markiert.
 
 </dd> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
 Zeiger auf eine andere Liste.
@@ -59,11 +59,11 @@ Zeiger auf eine andere Liste.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode teilt die Liste vor der durch den *POS* -Parameter angegebenen Position. Der Kopfteil verbleibt in der Liste. Der Teil Teil wird an der Spitze der anderen Liste eingefügt.
+Diese Methode teilt die Liste vor der durch den *pos-Parameter* angegebenen Position auf. Der Hauptteil verbleibt in der Liste. Der Teil des Endes wird am Anfang der anderen Liste eingefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Methode teilt die Liste vor der durch den *POS* -Parameter angegebenen Pos
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Diese Methode teilt die Liste vor der durch den *POS* -Parameter angegebenen Pos
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

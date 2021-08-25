@@ -3,29 +3,29 @@ title: Lesen von Attributwerten von einer CD oder DVD
 description: Lesen von Attributwerten von einer CD oder DVD
 ms.assetid: 441916fb-f66d-4a12-a95c-b47561c93e64
 keywords:
-- Windows Media Player, Attribute für Medienelemente
-- Windows Media Player-Objektmodell, Attribute für Medienelemente
-- Objektmodell, Attribute für Medienelemente
-- Windows Media Player Mobile, Attribute für Medienelemente
+- Windows Media Player,Attribute für Medienelemente
+- Windows Media Player Objektmodell, Attribute für Medienelemente
+- Objektmodell,Attribute für Medienelemente
+- Windows Media Player Mobil, Attribute für Medienelemente
 - Windows Media Player ActiveX-Steuerelement, Attribute für Medienelemente
-- Windows Media Player Mobile ActiveX-Steuerelement, Attribute für Medienelemente
+- Windows Media Player Mobiles ActiveX-Steuerelement,Attribute für Medienelemente
 - ActiveX-Steuerelement, Attribute für Medienelemente
-- Windows Media Player-Bibliothek, Attribute für Medienelemente
+- Windows Media Player Bibliothek,Attribute für Medienelemente
 - Bibliothek, Attribute für Medienelemente
-- Attribute, Lesen von Werten
+- Attribute,Lesen von Werten
 - Lesen von Attributwerten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8909a752e9a974e4959be8ecd933d4bb3f1bfd4a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 800fda1bf3002f015873b69e29503ecba637a978bac1b167724c04f5f15228b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119861770"
 ---
 # <a name="reading-attribute-values-from-a-cd-or-dvd"></a>Lesen von Attributwerten von einer CD oder DVD
 
-In diesem Thema wurde das **Player** -Objekt wie folgt definiert:
+In diesem Thema wurde das **Player-Objekt** wie folgt definiert:
 
 
 ```C++
@@ -36,7 +36,7 @@ using WMPLib;
 
 
 
-Der folgende c#-Beispielcode ruft die Werte aller Attribute auf der aktuellen Festplatte auf dem Laufwerk ab und schreibt Sie in eine Datei.
+Der folgende C#-Beispielcode ruft die Werte aller Attribute auf dem aktuellen Datenträger auf dem Laufwerk ab und schreibt sie in eine Datei.
 
 
 ```C++
@@ -110,15 +110,15 @@ private void logDiscAttributes()
 
 <dl> <dt>
 
-[**Medien Element Attribute**](media-item-attributes.md)
+[**Medienelementattribute**](media-item-attributes.md)
 </dt> <dt>
 
 [**Medienobjekt**](media-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

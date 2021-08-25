@@ -1,12 +1,12 @@
 ---
-title: Download Item-Objekt
-description: Download Item-Objekt
+title: DownloadItem-Objekt
+description: DownloadItem-Objekt
 ms.assetid: 668ee632-0a3d-426b-baab-08e88b9fc607
 keywords:
-- Windows Media Player Online Stores, Downloader-Objekt
-- Online Stores, Download Item-Objekt
-- Typ 2 Online Stores, Downloader-Objekt
-- Download Item
+- Windows Media Player,DownloadItem-Objekt
+- Onlineshops,DownloadItem-Objekt
+- Typ 2 Onlineshops,DownloadItem-Objekt
+- DownloadItem
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -14,66 +14,66 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c367eee37f2f4d8329d71f3d42a3c78771a50a6c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6bfea6241e81352b8848304c3601650ef4dec2a8e5692874fa20995ccddcce38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119863460"
 ---
-# <a name="downloaditem-object"></a>Download Item-Objekt
+# <a name="downloaditem-object"></a>DownloadItem-Objekt
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Das **downloadaditem** -Objekt stellt eine Datei Download Anforderung dar. Sie kann von Webseiten verwendet werden, die im vollständigen Windows-Media Player gehostet werden und Zugriff auf das **externe** Objekt haben, z. b. Premium-Dienste.
+Das **DownloadItem-Objekt** stellt eine Dateidownloadanforderung dar. Sie kann von Webseiten verwendet werden, die im Vollmodus gehostet Windows Media Player  und Zugriff auf das Externe Objekt haben, z. B. Premium-Dienste.
 
-Das Objekt " **Downloader** " unterstützt die folgenden Eigenschaften.
+Das **DownloadItem-Objekt** unterstützt die folgenden Eigenschaften.
 
 
 
 | Eigenschaft                                        | BESCHREIBUNG                                      |
 |-------------------------------------------------|--------------------------------------------------|
-| [Download Status](downloaditem-downloadstate.md) | Ruft den Status des Downloads ab.             |
-| [Progress](downloaditem-progress.md)           | Ruft den Fortschritt des Downloads in Bytes ab. |
+| [downloadState](downloaditem-downloadstate.md) | Ruft den Status des Downloads ab.             |
+| [Fortschritt](downloaditem-progress.md)           | Ruft den Fortschritt des Downloads in Bytes ab. |
 | [size](downloaditem-size.md)                   | Ruft die Größe des Downloads ab.              |
-| [SourceURL](downloaditem-sourceurl.md)         | Ruft die Quell-URL des Downloads ab.        |
+| [sourceURL](downloaditem-sourceurl.md)         | Ruft die Quell-URL des Downloads ab.        |
 | [type](downloaditem-type.md)                   | Ruft den Typ des Downloads ab.              |
 
 
 
- 
+ 
 
-Das Objekt " **Downloader** " unterstützt die folgenden Methoden.
+Das **DownloadItem-Objekt** unterstützt die folgenden Methoden.
 
 
 
 | Methode                                      | BESCHREIBUNG                                                |
 |---------------------------------------------|------------------------------------------------------------|
 | [cancel](downloaditem-cancel.md)           | Bricht den Download ab.                                      |
-| [getItemInfo](downloaditem-getiteminfo.md) | Ruft den Wert eines Attributs für das Download Element ab. |
+| [getItemInfo](downloaditem-getiteminfo.md) | Ruft den Wert eines Attributs für das Downloadelement ab. |
 | [pause](downloaditem-pause.md)             | Hält den Download an.                                       |
-| [zusetzen](downloaditem-resume.md)           | Der Download wird fortgesetzt.                                      |
+| [Fortsetzen](downloaditem-resume.md)           | Setzt den Download wieder auf.                                      |
 
 
 
- 
+ 
 
-Der Zugriff auf das **Download** Item-Objekt erfolgt über die folgende Eigenschaft.
+Der **Zugriff auf das DownloadItem-Objekt** erfolgt über die folgende Eigenschaft.
 
 
 
 | Object                                              | Eigenschaft                            |
 |-----------------------------------------------------|-------------------------------------|
-| [Download Sammlung](downloadcollection-object.md) | [item](downloadcollection-item.md) |
+| [DownloadCollection](downloadcollection-object.md) | [item](downloadcollection-item.md) |
 
 
 
- 
+ 
 
-Zum Zweck der Veranschaulichung **Download Manager**. **getdownloadcollection**(*CollectionId*). **Item**(*ItemID*) wird in den Abschnitten der Verweis Syntax verwendet.
+Zur Veranschaulichung **herunterladenManager**. **getDownloadCollection**(*collectionId*). **item**(*itemId*) wird in den Abschnitten zur Referenzsyntax verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -82,9 +82,9 @@ Zum Zweck der Veranschaulichung **Download Manager**. **getdownloadcollection**(
 [**Referenz für Typ 2-Onlineshops**](reference-for-type-2-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

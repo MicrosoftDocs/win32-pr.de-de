@@ -1,9 +1,9 @@
 ---
-title: Vmusbdeviceclassenum-Enumeration (vpccominterfaces. h)
+title: VMUSBDeviceClassEnum-Enumeration (VPCCOMInterfaces.h)
 description: Gibt die USB-Geräteklasse an.
 ms.assetid: 3f5044ea-f7a4-4524-bfb8-55db22732f81
 keywords:
-- Virtueller PC für vmusbdebug-Enumeration
+- VMUSBDeviceClassEnum-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 70335ae083ac2a80717ae64cc8c76f0aff9e791b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75fa711718ecb37a89bd1c209131b2c18d1c25ca8aef91f4d0fb218f44b80c78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119866550"
 ---
-# <a name="vmusbdeviceclassenum-enumeration"></a>Vmusbdebug-um-Enumeration
+# <a name="vmusbdeviceclassenum-enumeration"></a>VMUSBDeviceClassEnum-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Gibt die USB-Geräteklasse an.
 
@@ -60,133 +60,133 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmUSBDeviceClass_InterfaceDescriptor"></span><span id="vmusbdeviceclass_interfacedescriptor"></span><span id="VMUSBDEVICECLASS_INTERFACEDESCRIPTOR"></span>**vmusbtoviceclass \_ interfacedescriptor**
+<span id="vmUSBDeviceClass_InterfaceDescriptor"></span><span id="vmusbdeviceclass_interfacedescriptor"></span><span id="VMUSBDEVICECLASS_INTERFACEDESCRIPTOR"></span>**vmUSBDeviceClass \_ InterfaceDescriptor**
 </dt> <dd>
 
 Ein nicht identifiziertes Gerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Audio"></span><span id="vmusbdeviceclass_audio"></span><span id="VMUSBDEVICECLASS_AUDIO"></span>**vmusbdebug \_ -Audiodatei**
+<span id="vmUSBDeviceClass_Audio"></span><span id="vmusbdeviceclass_audio"></span><span id="VMUSBDEVICECLASS_AUDIO"></span>**vmUSBDeviceClass \_ Audio**
 </dt> <dd>
 
 Audiogerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Communication"></span><span id="vmusbdeviceclass_communication"></span><span id="VMUSBDEVICECLASS_COMMUNICATION"></span>**vmusbdebug- \_ Kommunikation**
+<span id="vmUSBDeviceClass_Communication"></span><span id="vmusbdeviceclass_communication"></span><span id="VMUSBDEVICECLASS_COMMUNICATION"></span>**vmUSBDeviceClass \_ Communication**
 </dt> <dd>
 
 Kommunikationsgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_HID"></span><span id="vmusbdeviceclass_hid"></span><span id="VMUSBDEVICECLASS_HID"></span>**vmusbdebug- \_ HID**
+<span id="vmUSBDeviceClass_HID"></span><span id="vmusbdeviceclass_hid"></span><span id="VMUSBDEVICECLASS_HID"></span>**vmUSBDeviceClass \_ HID**
 </dt> <dd>
 
-Versteckgerät.
+HID-Gerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Physical"></span><span id="vmusbdeviceclass_physical"></span><span id="VMUSBDEVICECLASS_PHYSICAL"></span>**vmusbdebug- \_ physischer**
+<span id="vmUSBDeviceClass_Physical"></span><span id="vmusbdeviceclass_physical"></span><span id="VMUSBDEVICECLASS_PHYSICAL"></span>**vmUSBDeviceClass \_ Physical**
 </dt> <dd>
 
 Physisches Sensorgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Image"></span><span id="vmusbdeviceclass_image"></span><span id="VMUSBDEVICECLASS_IMAGE"></span>**vmusbdebug- \_ Bild**
+<span id="vmUSBDeviceClass_Image"></span><span id="vmusbdeviceclass_image"></span><span id="VMUSBDEVICECLASS_IMAGE"></span>**vmUSBDeviceClass-Image \_**
 </dt> <dd>
 
-Geräte scannen oder Abbild Erstellung.
+Scannen oder Bildverarbeitungsgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Printer"></span><span id="vmusbdeviceclass_printer"></span><span id="VMUSBDEVICECLASS_PRINTER"></span>**vmusbdebug- \_ Drucker**
+<span id="vmUSBDeviceClass_Printer"></span><span id="vmusbdeviceclass_printer"></span><span id="VMUSBDEVICECLASS_PRINTER"></span>**vmUSBDeviceClass-Drucker \_**
 </dt> <dd>
 
 Druckergerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_MassStorage"></span><span id="vmusbdeviceclass_massstorage"></span><span id="VMUSBDEVICECLASS_MASSSTORAGE"></span>**vmusbde viceclass- \_ massspeicher**
+<span id="vmUSBDeviceClass_MassStorage"></span><span id="vmusbdeviceclass_massstorage"></span><span id="VMUSBDEVICECLASS_MASSSTORAGE"></span>**vmUSBDeviceClass \_ MassStorage**
 </dt> <dd>
 
-Massen Speichergerät.
+Massenspeichergerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Hub"></span><span id="vmusbdeviceclass_hub"></span><span id="VMUSBDEVICECLASS_HUB"></span>**vmusbdebug- \_ Hub**
+<span id="vmUSBDeviceClass_Hub"></span><span id="vmusbdeviceclass_hub"></span><span id="VMUSBDEVICECLASS_HUB"></span>**vmUSBDeviceClass \_ Hub**
 </dt> <dd>
 
-Hub-Gerät
+Hubgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_CDCData"></span><span id="vmusbdeviceclass_cdcdata"></span><span id="VMUSBDEVICECLASS_CDCDATA"></span>**vmusbdeviceclass \_ cdcdata**
+<span id="vmUSBDeviceClass_CDCData"></span><span id="vmusbdeviceclass_cdcdata"></span><span id="VMUSBDEVICECLASS_CDCDATA"></span>**vmUSBDeviceClass \_ CDCData**
 </dt> <dd>
 
-CDC-Daten Gerät.
+CDC-Datengerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_SmartCard"></span><span id="vmusbdeviceclass_smartcard"></span><span id="VMUSBDEVICECLASS_SMARTCARD"></span>**vmusbdeviceclass \_ Smartcard**
+<span id="vmUSBDeviceClass_SmartCard"></span><span id="vmusbdeviceclass_smartcard"></span><span id="VMUSBDEVICECLASS_SMARTCARD"></span>**vmUSBDeviceClass \_ SmartCard**
 </dt> <dd>
 
 Smartcardgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_ContentSecurity"></span><span id="vmusbdeviceclass_contentsecurity"></span><span id="VMUSBDEVICECLASS_CONTENTSECURITY"></span>**vmusbdebug- \_ ContentSecurity**
+<span id="vmUSBDeviceClass_ContentSecurity"></span><span id="vmusbdeviceclass_contentsecurity"></span><span id="VMUSBDEVICECLASS_CONTENTSECURITY"></span>**vmUSBDeviceClass \_ ContentSecurity**
 </dt> <dd>
 
-Inhalts Sicherheitsgerät.
+Inhaltssicherheitsgerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Video"></span><span id="vmusbdeviceclass_video"></span><span id="VMUSBDEVICECLASS_VIDEO"></span>**vmusbdebug- \_ Video**
+<span id="vmUSBDeviceClass_Video"></span><span id="vmusbdeviceclass_video"></span><span id="VMUSBDEVICECLASS_VIDEO"></span>**vmUSBDeviceClass \_ Video**
 </dt> <dd>
 
-Video Gerät.
+Videogerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_PersonalHealthcare"></span><span id="vmusbdeviceclass_personalhealthcare"></span><span id="VMUSBDEVICECLASS_PERSONALHEALTHCARE"></span>**vmusbdebug- \_ Personalwesen**
+<span id="vmUSBDeviceClass_PersonalHealthcare"></span><span id="vmusbdeviceclass_personalhealthcare"></span><span id="VMUSBDEVICECLASS_PERSONALHEALTHCARE"></span>**vmUSBDeviceClass \_ PersonalHealthcare**
 </dt> <dd>
 
-Health Care-Gerät.
+Gerät für das Gesundheitswesen.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_DiagnosticDevice"></span><span id="vmusbdeviceclass_diagnosticdevice"></span><span id="VMUSBDEVICECLASS_DIAGNOSTICDEVICE"></span>**vmusbdeviceclass \_ diagnosticdevice**
+<span id="vmUSBDeviceClass_DiagnosticDevice"></span><span id="vmusbdeviceclass_diagnosticdevice"></span><span id="VMUSBDEVICECLASS_DIAGNOSTICDEVICE"></span>**vmUSBDeviceClass \_ DiagnosticDevice**
 </dt> <dd>
 
 Diagnosegerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_WirelessController"></span><span id="vmusbdeviceclass_wirelesscontroller"></span><span id="VMUSBDEVICECLASS_WIRELESSCONTROLLER"></span>**vmusbabviceclass \_ wirelesscontroller**
+<span id="vmUSBDeviceClass_WirelessController"></span><span id="vmusbdeviceclass_wirelesscontroller"></span><span id="VMUSBDEVICECLASS_WIRELESSCONTROLLER"></span>**vmUSBDeviceClass \_ WirelessController**
 </dt> <dd>
 
-Drahtlos Gerät.
+Drahtloses Gerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_Miscellaneous"></span><span id="vmusbdeviceclass_miscellaneous"></span><span id="VMUSBDEVICECLASS_MISCELLANEOUS"></span>**vmusbde viceclass \_ Sonstiges**
+<span id="vmUSBDeviceClass_Miscellaneous"></span><span id="vmusbdeviceclass_miscellaneous"></span><span id="VMUSBDEVICECLASS_MISCELLANEOUS"></span>**vmUSBDeviceClass \_ Sonstiges**
 </dt> <dd>
 
-Verschiedenes Gerät.
+Sonstiges Gerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_ApplicationSpecific"></span><span id="vmusbdeviceclass_applicationspecific"></span><span id="VMUSBDEVICECLASS_APPLICATIONSPECIFIC"></span>**vmusbdeviceclass \_ applicationspecific**
+<span id="vmUSBDeviceClass_ApplicationSpecific"></span><span id="vmusbdeviceclass_applicationspecific"></span><span id="VMUSBDEVICECLASS_APPLICATIONSPECIFIC"></span>**vmUSBDeviceClass \_ ApplicationSpecific**
 </dt> <dd>
 
 Anwendungsspezifisches Gerät.
 
 </dd> <dt>
 
-<span id="vmUSBDeviceClass_VendorSpecific"></span><span id="vmusbdeviceclass_vendorspecific"></span><span id="VMUSBDEVICECLASS_VENDORSPECIFIC"></span>**vmusbdebug- \_ vendorspecific**
+<span id="vmUSBDeviceClass_VendorSpecific"></span><span id="vmusbdeviceclass_vendorspecific"></span><span id="VMUSBDEVICECLASS_VENDORSPECIFIC"></span>**vmUSBDeviceClass \_ VendorSpecific**
 </dt> <dd>
 
 Herstellerspezifisches Gerät.
@@ -199,11 +199,11 @@ Herstellerspezifisches Gerät.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
@@ -211,7 +211,7 @@ Herstellerspezifisches Gerät.
 
 <dl> <dt>
 
-[**Ivmusbdevice::D eviceclass**](ivmusbdevice-deviceclass.md)
+[**IVMUSBDevice::D eviceClass**](ivmusbdevice-deviceclass.md)
 </dt> </dl>
 
  

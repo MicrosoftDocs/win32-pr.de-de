@@ -1,36 +1,36 @@
 ---
-description: Wenn die Anzahl der Zertifikate, Zertifikat Sperr Listen (CRLs) und Zertifikat Vertrauens Listen (CTLs) in der Sammlung eines Benutzers zunimmt, wird die Organisation dieser Zertifikate zu einem Problem.
+description: Mit zunehmender Anzahl von Zertifikaten, Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) und Zertifikatvertrauenslisten (Certificate Trust List, CTLs) in der Sammlung eines Benutzers wird die Organisation dieser Zertifikate zu einem Problem.
 ms.assetid: 13e7e077-e8be-4ba4-99e1-08421fd2452e
-title: Sammlungs Speicher
+title: Sammlungsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bfeb8ef071d7a5ccf6bc7ce43ba418117879536
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66d783aafe6d0ff22cd990195f6bce5ce433f2f01595bed2cf20c5c41ea3a24e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876914"
 ---
-# <a name="collection-stores"></a>Sammlungs Speicher
+# <a name="collection-stores"></a>Sammlungsspeicher
 
-Wenn die Anzahl der [*Zertifikate*](../secgloss/c-gly.md), [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRLs) und [*Zertifikat Vertrauens Listen*](../secgloss/c-gly.md) (CTLs) in der Sammlung eines Benutzers zunimmt, wird die Organisation dieser Zertifikate zu einem Problem. Eine mögliche Lösung besteht darin, separate Zertifikat Speicher zu erstellen, um unterschiedliche Arten von Zertifikaten zu erhalten. Diese Lösung erstellt ein neues Problem, da eine Anwendung möglicherweise mehrere verschiedene Speicher durchsuchen muss, um ein bestimmtes Zertifikat zu finden. Das Problem wird durch die Verwendung logischer oder Sammlungs Speicher gelöst.
+Mit zunehmender Anzahl von [*Zertifikaten,*](../secgloss/c-gly.md)Zertifikatsperrlisten (Certificate [*Revocation Lists,*](../secgloss/c-gly.md) CRLs) und Zertifikatvertrauenslisten (Certificate [*Trust List,*](../secgloss/c-gly.md) CTLs) in der Sammlung eines Benutzers wird die Organisation dieser Zertifikate zu einem Problem. Eine mögliche Lösung besteht in der Erstellung separater Zertifikatspeicher, um verschiedene Arten von Zertifikaten zu behalten. Diese Lösung verursacht ein neues Problem, da eine Anwendung möglicherweise mehrere verschiedene Speicher durchsuchen muss, um ein bestimmtes Zertifikat zu finden. Dieses Problem wird durch die Verwendung logischer Speicher oder Sammlungsspeicher gelöst.
 
-Ein [*Logischer Speicher*](../secgloss/l-gly.md) und ein Sammlungs Zertifikat Speicher sind Gruppen physischer Speicher, die einer Anwendung als einzelner Speicher angezeigt werden. Alle Element Speicher eines logischen Speichers oder eines Sammlungs Speichers können durchsucht oder mit einem einzelnen Funktions aufrufentweder von " [**certfindcertifitoreinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore) " oder " [**certenumcertifitoresinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore)" aufgezählt werden.
+Ein [*logischer Speicher*](../secgloss/l-gly.md) und ein Sammlungszertifikatspeicher sind Gruppen physischer Speicher, die einer Anwendung als einzelner Speicher angezeigt werden. Alle Memberspeicher eines logischen Speichers oder Sammlungsspeichers können mit einem einzigen Funktionsaufruf von [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore) oder [**CertEnumCertificatesInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore)durchsucht oder aufzählt werden.
 
-Die Verwendung logischer oder Sammlungs Speicher bietet auch eine größere Flexibilität bei Papier Datensätzen. Ein Zertifikat in einem einzelnen physischen Speicher muss möglicherweise Mitglied mehrerer logischer Gruppen sein. Daher kann ein einzelner physischer Speicher Mitglied von mehr als einem logischen oder Sammlungs Speicher sein, wie in der folgenden Abbildung dargestellt.
+Die Verwendung von logischen Speichern oder Sammlungsspeichern bietet auch Flexibilität, die mit Papierdatensätzen schwierig zu erreichen ist. Ein Zertifikat in einem einzelnen physischen Speicher muss möglicherweise Mitglied mehrerer verschiedener logischer Gruppen sein. Daher kann ein einzelner physischer Speicher Mitglied von mehr als einem logischen Speicher oder Sammlungsspeicher sein, wie in der folgenden Abbildung dargestellt.
 
-![Sammlungs Speicher](images/mancert.png)
+![Sammlungsspeicher](images/mancert.png)
 
-Diese Abbildung zeigt die folgenden grundlegenden logischen Zertifikat Speicherkonzepte:
+In dieser Abbildung werden die folgenden grundlegenden logischen Zertifikatspeicherkonzepte dargestellt:
 
--   Ein Sammlungs Zertifikat Speicher weist einen Zeiger auf den ersten Zeiger Block für diesen Sammlungs Speicher auf.
--   Jeder Zeiger Block eines Sammlungs Speicher verfügt über einen Zeiger auf einen gleich geordneten Speicher und einen Zeiger auf den nächsten Zeiger Block der Auflistung.
--   Jeder gleich geordnete Speicher in einer Sammlung ist ein einfacher physischer Zertifikat Speicher.
--   Ein einfacher Zertifikat Speicher kann ein Mitglied eines gleich geordneten Speichers in vielen verschiedenen Sammlungs speichern sein.
--   Einem Sammlungs Speicher hinzugefügte Zertifikate werden physisch einem der gleich geordneten Speicher in der Auflistung hinzugefügt.
--   Auf Zertifikate in einem gleich geordneten Speicher kann von jedem Sammlungs Speicher zugegriffen werden, in dem der gleich geordnete Speicher ein Member ist.
+-   Ein Sammlungszertifikatspeicher verfügt über einen Zeiger auf den ersten Zeigerblock für diesen Sammlungsspeicher.
+-   Jeder Zeigerblock eines Sammlungsspeichers verfügt über einen Zeiger auf einen gleichgeordneten Speicher und einen Zeiger auf den nächsten Zeigerblock der Auflistung.
+-   Jeder gleichgeordnete Speicher in einer Sammlung ist ein einfacher physischer Zertifikatspeicher.
+-   Ein einfacher Zertifikatspeicher kann ein gleichgeordneter Mitgliedsspeicher in vielen verschiedenen Sammlungsspeichern sein.
+-   Einem Sammlungsspeicher hinzugefügte Zertifikate werden physisch einem der gleichgeordneten Speicher in der Sammlung hinzugefügt.
+-   Auf Zertifikate in einem gleichgeordneten Speicher kann von jedem Sammlungsspeicher zugegriffen werden, in dem der gleichgeordnete Speicher Mitglied ist.
 
-Sammlungs Speicher werden in einer Anwendung erstellt, indem ein Sammlungs Speicher mithilfe von [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) geöffnet und dann mithilfe von [**certaddstoretocollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddstoretocollection) ein offener, gleich geordneter Speicher zum Sammlungs Speicher hinzugefügt wird. Ein gleich geordneter Speicher kann durch Aufrufen von [**certrerovestorefromcollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certremovestorefromcollection)aus einem Sammlungs Speicher gelöscht werden.
+Sammlungsspeicher werden in einer Anwendung erstellt, indem ein Sammlungsspeicher mithilfe von [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore) geöffnet und dann [**CertAddStoreToCollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddstoretocollection) verwendet wird, um dem Sammlungsspeicher einen geöffneten gleichgeordneten Speicher hinzuzufügen. Ein gleichgeordneter Speicher kann durch Aufrufen von [**CertRemoveStoreFromCollection**](/windows/desktop/api/Wincrypt/nf-wincrypt-certremovestorefromcollection)aus einem Sammlungsspeicher gelöscht werden.
 
  
 

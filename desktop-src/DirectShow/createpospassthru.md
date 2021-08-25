@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "anatepospassthru" erstellt ein cpospassthru-Objekt oder ein crendererpospassthru-Objekt.
+description: Die CreatePosPassThru-Funktion erstellt ein CPosPassThru-Objekt oder ein CRendererPosPassThru-Objekt.
 ms.assetid: d6fccfb4-b256-40aa-b927-84c7a886f631
-title: Funktion "kreatepospassthru" (ctlutil. h)
+title: CreatePosPassThru-Funktion (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 08735a0bac2cc5aa8f5bb61461f10097435ad9c7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0118299bd328d09d77ccbb8d5258b25c0ac57bdc21fc7a47f642374e8be12357
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119908750"
 ---
-# <a name="createpospassthru-function"></a>Funktion "kreatepospassthru"
+# <a name="createpospassthru-function"></a>CreatePosPassThru-Funktion
 
-Die- `CreatePosPassThru` Funktion erstellt ein [**cpospassthru**](cpospassthru.md) -Objekt oder ein [**crendererpospassthru**](crendererpospassthru.md) -Objekt.
+Die `CreatePosPassThru` Funktion erstellt ein [**CPosPassThru-Objekt**](cpospassthru.md) oder [**ein CRendererPosPassThru-Objekt.**](crendererpospassthru.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,43 +45,43 @@ STDAPI CreatePosPassThru(
 
 <dl> <dt>
 
-*pagg* 
+*pAgg* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger an die **IUnknown** -Schnittstelle des Aggregations Objekts. Andernfalls legen Sie diesen Parameter auf **null** fest.
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die **IUnknown-Schnittstelle des aggregierenden** Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
-*brenderer* 
+*bRenderer* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Filter ein Renderer ist. Verwenden Sie den Wert **true** , wenn der Filter ein Renderer ist, und andernfalls **false** . Wenn der Wert **true** ist, erstellt diese Methode eine Instanz der [**crendererpospassthru**](crendererpospassthru.md) -Klasse. Wenn der Wert **false** ist, erstellt die Methode eine Instanz der **cpospassthru** -Klasse.
+Boolescher Wert, der angibt, ob der Filter ein Renderer ist. Verwenden Sie den Wert **TRUE,** wenn der Filter ein Renderer ist, **andernfalls FALSE.** Wenn der Wert **TRUE ist,** erstellt diese Methode eine Instanz der [**CRendererPosPassThru-Klasse.**](crendererpospassthru.md) Wenn der Wert **FALSE ist,** erstellt die Methode eine Instanz der **CPosPassThru-Klasse.**
 
 </dd> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle für die Eingabe-PIN des Filters.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) auf dem Eingabepin des Filters.
 
 </dd> <dt>
 
-*pppassthru* 
+*ppPassThru* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die **IUnknown** -Schnittstelle des Objekts empfängt.
+Adresse einer Variablen, die einen Zeiger auf die **IUnknown-Schnittstelle** des Objekts empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück. Andernfalls wird ein **HRESULT** -Wert zurückgegeben, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich. Andernfalls gibt einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode verwendet die [**iseekingpassthru**](/windows/desktop/api/Strmif/nn-strmif-iseekingpassthru) -Schnittstelle zum Erstellen des-Objekts. Das Objekt wird dynamisch aus Quartz.dll geladen.
+Diese Methode verwendet die [**ISeekingPassThru-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-iseekingpassthru) um das -Objekt zu erstellen. Das -Objekt wird dynamisch aus dem Quartz.dll.
 
-Wenn die Funktion erfolgreich ausgeführt wird, weist die zurückgegebene **IUnknown** -Schnittstelle einen ausstehenden Verweis Zähler auf. Der Aufrufer muss die-Schnittstelle freigeben.
+Wenn die Funktion erfolgreich ist, verfügt die zurückgegebene **IUnknown-Schnittstelle** über eine ausstehende Verweisanzahl. Der Aufrufer muss die Schnittstelle frei geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, weist die zurückgegebene **IUnk
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, weist die zurückgegebene **IUnk
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

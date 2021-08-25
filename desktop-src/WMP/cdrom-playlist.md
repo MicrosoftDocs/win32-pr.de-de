@@ -1,9 +1,9 @@
 ---
-title: Cdrom. Wiedergabeliste
-description: Die Wiedergabelisten Eigenschaft ruft ein Wiedergabelisten Objekt ab, das die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk oder die Titel Einträge auf der Stamm Ebene für DVD darstellt.
+title: Corpora.playlist
+description: Die Wiedergabelisteneigenschaft ruft ein Wiedergabelistenobjekt ab, das die Titel auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befinden, oder die Titeleinträge auf Stammebene für die DVD.
 ms.assetid: 71c76b6c-1344-4d45-b86b-7e49be44dba8
 keywords:
-- Cdrom. Wiedergabelisten-Fenster Media Player
+- C csv.playlist Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bcdb50daa169c6f6eb0690de376abd4433ffe130
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b29419b68c50718165e49c0fbe9e75487e9154c19243453981ab352f03e8209a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864180"
 ---
-# <a name="cdromplaylist"></a>Cdrom. Wiedergabeliste
+# <a name="cdromplaylist"></a>Corpora.playlist
 
-Die **Wiedergabe** Listen Eigenschaft ruft ein **Wiedergabe** Listen Objekt ab, das die Spuren auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk oder die Titel Einträge auf der Stamm Ebene für DVD darstellt.
+Die **Wiedergabelisteneigenschaft** ruft ein **Wiedergabelistenobjekt** ab, das die Titel auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befinden, oder die Titeleinträge auf Stammebene für die DVD.
 
 ``` syntax
 player.cdromCollection.item(
@@ -34,23 +34,23 @@ player.cdromCollection.item(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes **Wiedergabe** Listen Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes **Wiedergabelistenobjekt.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel sind DVDs in Titeln organisiert. Jeder Titel enthält ein oder mehrere Kapitel. Jede DVD wird unterschiedlich erstellt, sodass Titel und Kapitel für den Inhalts Autor verwendet werden.
+In der Regel sind DVDs in Titel organisiert. Jeder Titel enthält mindestens ein Kapitel. Jede DVD wird anders erstellt, sodass die Verwendung von Titeln und Kapiteln dem Inhaltsautor obliegt.
 
-Bei der DVD ruft diese Methode eine Wiedergabeliste ab, die als erstes Element ein **Medien** Objekt enthält, das das DVD-Medium darstellt. Die Wiedergabe des Elements führt dazu, dass die DVD von Anfang an wiedergegeben wird, wenn es sich um das erste Mal nach dem Einfügen einer neuen DVD handelt, oder die Wiedergabe wieder aufzunehmen, wenn die DVD mit der letzten angezeigten DVD identisch ist. Wenn Sie dieses Element während der Wiedergabe als das aktuelle Element festlegen, wird die DVD von Anfang an wiedergegeben.
+Bei DVD ruft diese Methode eine Wiedergabeliste ab, die als erstes Element ein **Medienobjekt** enthält, das die DVD-Medien darstellt. Die Wiedergabe des Elements führt dazu, dass die DVD von Anfang an wiedergegeben wird, wenn es sich um die erste Wiedergabe nach dem Einfügen einer neuen DVD handelt, oder die Wiedergabe wird wieder aufgenommen, wenn die DVD mit der letzten angezeigten DVD identisch ist. Wenn dieses Element während der Wiedergabe als aktuelles Element festgelegt wird, wird die DVD von Anfang an wiedergegeben.
 
-Zusätzliche Elemente (**Medien** Objekte) in der Wiedergabeliste sind DVD-Titel, die durch in der Liste dargestellte Wiedergabelisten dargestellt werden. Wenn Sie Steuer *Elemente* angeben. das Element, das einem dieser in der Liste eingefügten Wiedergabelisten Elemente entspricht, **wird von Windows** Media Player automatisch die geklickte Wiedergabeliste als *Player* festgelegt. **currentwiedergabe** nach Beginn der Wiedergabe des Kapitels. Sie können dann die Eigenschaften, Methoden und Ereignisse des **currentwiedergabe** -Objekts verwenden, um mit DVD-Kapiteln zu arbeiten, die auch Wiedergabelisten Elemente sind.
+Zusätzliche Elemente **(Medienobjekte)** in der Wiedergabeliste sind DVD-Titel, die durch geschachtelte Wiedergabelisten dargestellt werden. Wenn Sie *Controls* angeben. **currentItem** entspricht einem dieser geschachtelten Wiedergabelistenelemente, Windows Media Player legt die geschachtelte Wiedergabeliste automatisch auf *Player* fest. **currentPlaylist** nach Beginn der Kapitelwiedergabe. Sie können dann die **currentPlaylist-Objekteigenschaften,** -Methoden und -Ereignisse verwenden, um mit DVD-Kapiteln zu arbeiten, bei denen es sich ebenfalls um Wiedergabelistenelemente handelt.
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird *CDROM* verwendet. **Wiedergabeliste** zum Ausfüllen eines HTML-Text Elements mit dem Namen "MyText" mit den Titeln der AudioCD, die sich zurzeit auf dem ersten CD-Laufwerk befinden. Verwenden Sie *cdromcollection*. **Anzahl, um** die Anzahl der verfügbaren CD-Laufwerke zu bestimmen. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird *C csv* verwendet. **Wiedergabeliste** zum Ausfüllen eines HTML-Textelements namens myText mit den Titeln der Audio-CD, die sich derzeit auf dem ersten CD-Laufwerk befindet. Verwenden Sie *C csvCollection*. **count,** um die Anzahl der verfügbaren CD-Laufwerke zu bestimmen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```
@@ -73,9 +73,9 @@ for(var i = 0; i < pl.count; i++){
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Version<br/>                  | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Version<br/>                  | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>                      | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -84,13 +84,13 @@ for(var i = 0; i < pl.count; i++){
 
 <dl> <dt>
 
-[**Cdrom-Objekt**](cdrom-object.md)
+[**Chole-Objekt**](cdrom-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

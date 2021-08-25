@@ -1,25 +1,25 @@
 ---
-description: In diesem Thema wird gezeigt, wie Sie die Menge der Audiodaten erhöhen oder verringern können, indem Sie die Funktion setfrequencyratio in einer Quellsprache ändern.
+description: In diesem Thema erfahren Sie, wie Sie die Tonhöhe von Audiodaten erhöhen oder verringern können, indem Sie die Wiedergaberate mithilfe der SetFrequencyRatio-Funktion für eine Quellstimme ändern.
 ms.assetid: 93408116-1c1f-307f-7e1f-090f2663ff0b
-title: 'Vorgehensweise: Ändern der Stimm Schrift'
+title: 'How to: Change Voice Pitch'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7143dda30eae48bd8ed966c4170da2884d2633ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc44fe757c563e3556f760ead594bb619da9f62fb2c3eafc774e15d7b9e5bc85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926470"
 ---
-# <a name="how-to-change-voice-pitch"></a>Vorgehensweise: Ändern der Stimm Schrift
+# <a name="how-to-change-voice-pitch"></a>How to: Change Voice Pitch
 
-In diesem Thema wird gezeigt, wie Sie die Menge der Audiodaten erhöhen oder verringern können, indem Sie die Funktion [**setfrequencyratio**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-setfrequencyratio) in einer Quellsprache ändern.
+In diesem Thema erfahren Sie, wie Sie die Tonhöhe von Audiodaten erhöhen oder verringern können, indem Sie die Wiedergaberate mithilfe der [**SetFrequencyRatio-Funktion**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-setfrequencyratio) für eine Quellstimme ändern.
 
-## <a name="to-change-the-pitch-of-a-source-voice"></a>So ändern Sie die Tonhöhe einer Quell Stimme
+## <a name="to-change-the-pitch-of-a-source-voice"></a>So ändern Sie die Tonhöhe einer Quellstimme
 
-1.  Legen Sie das gewünschte Häufigkeits Verhältnis für die [**Quell Stimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice)fest.
+1.  Bestimmen Sie das gewünschte Häufigkeitsverhältnis für die [**Quellstimme**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2sourcevoice).
 
-    Weitere Informationen zum Berechnen des Häufigkeits Verhältnisses finden Sie unter [XAudio2 Volume und Pitch Control](xaudio2-volume-and-pitch-control.md) .
+    Weitere Informationen zum Berechnen des Häufigkeitsverhältnisses finden Sie unter [XAudio2 Volume and Pitch Control (XAudio2-Lautstärke- und Tonhöhensteuerung).](xaudio2-volume-and-pitch-control.md)
 
     ```
     float frequencyRatio = sourceRate / targetRate;
@@ -27,7 +27,7 @@ In diesem Thema wird gezeigt, wie Sie die Menge der Audiodaten erhöhen oder ver
 
     
 
-2.  Verwenden Sie die Funktion [**setfrequencyratio**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-setfrequencyratio) , um das Häufigkeits Verhältnis der Quell Stimme festzulegen.
+2.  Verwenden Sie die [**SetFrequencyRatio-Funktion,**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-setfrequencyratio) um das Häufigkeitsverhältnis der Quellstimme festzulegen.
 
     ```
     pSourceVoice->SetFrequencyRatio(frequencyRatio);
@@ -45,7 +45,7 @@ In diesem Thema wird gezeigt, wie Sie die Menge der Audiodaten erhöhen oder ver
 [So wird's gemacht: Erstellen eines grundlegenden Audioverarbeitungsdiagramms](how-to--build-a-basic-audio-processing-graph.md)
 </dt> <dt>
 
-[XAudio2 Volume und Tonhöhe-Steuerelement](volume-and-pitch-control.md)
+[XAudio2-Lautstärke- und Tonhöhen-Steuerelement](volume-and-pitch-control.md)
 </dt> </dl>
 
  

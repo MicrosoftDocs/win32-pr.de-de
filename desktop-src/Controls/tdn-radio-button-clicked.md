@@ -1,9 +1,9 @@
 ---
-title: TDN_RADIO_BUTTON_CLICKED Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer einen Optionsfeld-oder Befehls Link im Aufgaben Dialogfeld auswählt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_RADIO_BUTTON_CLICKED Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer ein Optionsfeld oder einen Befehlslink im Aufgabendialogfeld auswählt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: d9a29874-6755-4754-bcaf-94746b218b47
 keywords:
-- Windows-Steuerelemente für TDN_RADIO_BUTTON_CLICKED Benachrichtigungs
+- TDN_RADIO_BUTTON_CLICKED Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0c8b16f738e4807c94a060b41b3932d0f3e07ea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea1917a1523cdc3a106398d07912d3fff5295f7da18a59055f059a13007f98b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875760"
 ---
-# <a name="tdn_radio_button_clicked-notification-code"></a>TDN-Optionsfeld, auf das Sie \_ \_ \_ geklickt haben
+# <a name="tdn_radio_button_clicked-notification-code"></a>TDN \_ \_ OPTIONSFELD \_ KLICKT Benachrichtigungscode
 
-Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer einen Optionsfeld-oder Befehls Link im Aufgaben Dialogfeld auswählt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer ein Optionsfeld oder einen Befehlslink im Aufgabendialogfeld auswählt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) registriert werden kann.
 
 
 ```C++
@@ -42,7 +42,7 @@ TDN_RADIO_BUTTON_CLICKED
 *wParam* 
 </dt> <dd>
 
-Ein **int** -Wert, der die ID angibt, die dem Optionsfeld entspricht, auf das geklickt wurde.
+Ein Wert vom Wert **int,** der die ID angibt, die dem Optionsfeld entspricht, auf das geklickt wurde.
 
 </dd> <dt>
 
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

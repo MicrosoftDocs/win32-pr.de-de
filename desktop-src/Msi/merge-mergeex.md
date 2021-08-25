@@ -1,7 +1,7 @@
 ---
-description: Die mergeex-Methode des Merge-Objekts entspricht der Merge-Funktion, mit der Ausnahme, dass Sie ein zusätzliches Argument annimmt.
+description: Die MergeEx-Methode des Merge-Objekts entspricht der Merge-Funktion, außer dass sie ein zusätzliches Argument verwendet.
 ms.assetid: 83b6d62b-d176-42ac-b513-d1c2e562965c
-title: Merge. mergeex-Methode (Mergemod. h)
+title: Merge.MergeEx-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 12accfcbc87877300b803ae90d8c924802410e9f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7e683597d78e568e6bfec9b59241fe45f922c5346ef83f427598ad0a7c59dcac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926530"
 ---
-# <a name="mergemergeex-method"></a>Merge. mergeex-Methode
+# <a name="mergemergeex-method"></a>Merge.MergeEx-Methode
 
-Die **mergeex** -Methode des [**Merge**](merge-object.md) -Objekts entspricht der [**Merge**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) -Funktion, mit der Ausnahme, dass Sie ein zusätzliches Argument annimmt. Das *pconfiguration* -Argument ist eine vom Client implementierte Schnittstelle. Das Argument kann NULL sein. Das vorhanden sein dieses Arguments gibt an, dass der Client die Konfigurationsfunktionen unterstützen kann, aber den Client nicht zum Bereitstellen von Konfigurationsdaten für ein bestimmtes konfigurierbares Element löscht.
+Die **MergeEx-Methode** des [**Merge-Objekts**](merge-object.md) entspricht der [**Merge-Funktion,**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) außer dass sie ein zusätzliches Argument verwendet. Das *pConfiguration-Argument* ist eine Schnittstelle, die vom Client implementiert wird. Das Argument kann NULL sein. Das Vorhandensein dieses Arguments gibt an, dass der Client in der Lage ist, die Konfigurationsfunktionalität zu unterstützen, aber der Client wird nicht gezwungen, Konfigurationsdaten für ein bestimmtes konfigurierbares Element bereitzustellen.
 
-Die [**Merge**](merge-merge.md) -Methode führt einen Merge der aktuellen Datenbank und des aktuellen Moduls aus. Der Merge fügt die Komponenten im Modul an die Funktion an, die durch die *Funktion* identifiziert wird. Der Stamm der Verzeichnisstruktur des Moduls wird an den von *redirectdir* angegebenen Speicherort umgeleitet.
+Die [**Merge-Methode**](merge-merge.md) führt eine Zusammenführung der aktuellen Datenbank und des aktuellen Moduls aus. Der Merge fügt die Komponenten im Modul an das *feature* identifizierte Feature an. Der Stamm der Verzeichnisstruktur des Moduls wird an den Von *RedirectDir* angegebenen Speicherort umgeleitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,21 +47,21 @@ Merge.MergeEx(
 *Feature* 
 </dt> <dd>
 
-Der Name einer Funktion in der Datenbank.
+Der Name eines Features in der Datenbank.
 
 </dd> <dt>
 
-*Redirectdir* 
+*RedirectDir* 
 </dt> <dd>
 
-Der Schlüssel eines Eintrags in der [Verzeichnis Tabelle](directory-table.md) der Datenbank. Dieser Parameter kann NULL oder eine leere Zeichenfolge sein.
+Der Schlüssel eines Eintrags in der [Verzeichnistabelle](directory-table.md) der Datenbank. Dieser Parameter kann NULL oder eine leere Zeichenfolge sein.
 
 </dd> <dt>
 
-*pconfiguration* 
+*pConfiguration* 
 </dt> <dd>
 
-Das *pconfiguration* -Argument ist eine vom Client implementierte Schnittstelle. Das Argument kann NULL sein. Das vorhanden sein dieses Arguments gibt an, dass der Client die Konfigurationsfunktionen unterstützen kann, aber den Client nicht zum Bereitstellen von Konfigurationsdaten für ein bestimmtes konfigurierbares Element löscht.
+Das *pConfiguration-Argument* ist eine Schnittstelle, die vom Client implementiert wird. Das Argument kann NULL sein. Das Vorhandensein dieses Arguments gibt an, dass der Client in der Lage ist, die Konfigurationsfunktionalität zu unterstützen, aber der Client wird nicht gezwungen, Konfigurationsdaten für ein bestimmtes konfigurierbares Element bereitzustellen.
 
 </dd> </dl>
 
@@ -69,19 +69,19 @@ Das *pconfiguration* -Argument ist eine vom Client implementierte Schnittstelle.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem die Zusammenführung fertiggestellt wurde, werden die Komponenten im Modul an das von der *Funktion* identifizierte Feature angefügt. Diese Funktion wird nicht erstellt und muss ein vorhandenes Feature sein. Das Modul kann mit der [**Connect**](merge-connect.md) -Methode an zusätzliche Features angefügt werden.
+Sobald die Zusammenführung abgeschlossen ist, werden Komponenten im Modul an das Feature angefügt, das durch *Feature* identifiziert wird. Dieses Feature wird nicht erstellt und muss ein vorhandenes Feature sein. Das Modul kann mithilfe der [**Verbinden-Methode**](merge-connect.md) an zusätzliche Features angefügt werden.
 
-Änderungen, die an der Datenbank vorgenommen werden, werden nur dann gespeichert, wenn die Methode [**CloseDatabase**](merge-closedatabase.md) aufgerufen wird und *bcommit* auf **true** festgelegt ist.
+An der Datenbank vorgenommene Änderungen werden nur gespeichert, wenn die [**CloseDatabase-Methode**](merge-closedatabase.md) aufgerufen wird und *bCommit* auf **TRUE** festgelegt ist.
 
-Wenn Mergekonflikte auftreten, einschließlich Ausschlüsse, werden Sie für den späteren Abruf in den Fehler Enumerator eingefügt, führen jedoch nicht zu einem Fehler bei der Zusammenführung. Fehler können mithilfe der [**Errors**](merge-errors.md) -Eigenschaft abgerufen werden. Fehler und Informationsmeldungen werden in der aktuellen Protokolldatei gepostet.
+Wenn Mergekonflikte auftreten, einschließlich Ausschlüssen, werden sie zum späteren Abrufen im Fehlerenumerator platziert, führen jedoch nicht dazu, dass die Zusammenführung fehlschlägt. Fehler können über die [**Errors-Eigenschaft**](merge-errors.md) abgerufen werden. Fehler und Informationsmeldungen werden an die aktuelle Protokolldatei gesendet.
 
-Wenn die Zusammenführung aufgrund einer falschen Modulkonfiguration fehlschlägt, gibt die [**mergeex**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex) -Funktion E \_ Fail zurück. Dies schließt folgende msmerrortype-Fehler ein: **msmerrorbadnullsubstitution**, **msmerrorbadsubstitutiontype**, **msmerrorbadnullresponse**, **msmerrormissingconfigitem** und **msmerrordatarequestfailed**. Diese Fehler bewirken, dass die Zusammenführung sofort beendet wird, wenn der Fehler auftritt. Das Error-Objekt wird immer noch dem Enumerator hinzugefügt, wenn **mergeex** E Fail zurückgibt \_ . Weitere Informationen zu msmerrortype-Fehlern finden [**Sie unter Get \_ Type Function (Error Object)**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_type). Alle anderen Fehler bewirken, dass **mergeex** den Wert "false" zurückgibt \_ und den Vorgang fortsetzen kann.
+Wenn die Zusammenführung aufgrund einer falschen Modulkonfiguration fehlschlägt, gibt die [**MergeEx-Funktion**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex) E \_ FAIL zurück. Dies schließt die folgenden msmErrorType-Fehler ein: **msmErrorBadNullSubsune**, **msmErrorBadSubsuneType**, **msmErrorBadNullResponse**, **msmErrorMissingConfigItem** und **msmErrorDataRequestFailed**. Diese Fehler bewirken, dass die Zusammenführung sofort beendet wird, wenn der Fehler auftritt. Das Fehlerobjekt wird dem Enumerator weiterhin hinzugefügt, wenn **MergeEx** E FAIL \_ zurückgibt. Weitere Informationen zu msmErrorType-Fehlern finden Sie unter [**get \_ Type Function (Error Object) .**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_type) Alle anderen Fehler führen dazu, dass **MergeEx** S FALSE zurückgibt \_ und die Zusammenführung fortgesetzt wird.
 
 ### <a name="c"></a>C++
 
-Siehe [**mergeex**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex) -Funktion.
+Weitere Informationen finden Sie unter [**MergeEx-Funktion.**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Siehe [**mergeex**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 2,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 2.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

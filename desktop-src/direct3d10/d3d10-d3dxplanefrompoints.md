@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a3af01df7d1ce66029994226d040544b733a75df
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 07275d7a67527959396ba82f7e0fb8cbbc39b27d7e3adeca70df2e174fe09258
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895380"
 ---
 # <a name="d3dxplanefrompoints-function-d3dx10mathh"></a>D3DXPlaneFromPoints-Funktion (D3DX10Math.h)
 
@@ -85,7 +85,7 @@ Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
 Zeiger auf die D3DXPLANE-Struktur, die aus den angegebenen Punkten erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXPlaneFromPoints-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -93,14 +93,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

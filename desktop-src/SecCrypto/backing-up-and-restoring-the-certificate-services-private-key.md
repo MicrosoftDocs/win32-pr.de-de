@@ -1,25 +1,25 @@
 ---
-description: Die Sicherungs-und Wiederherstellungs Funktionen des Certadm.dll können nicht zum Sichern der privaten Schlüssel der Zertifikat Dienste verwendet werden.
+description: Sie können die Sicherungs- und Wiederherstellungsfunktionen der Certadm.dll nicht verwenden, um die privaten Schlüssel der Zertifikatdienste zu sichern.
 ms.assetid: 27ee8caa-8f5e-46dc-b55d-afde5471507e
-title: Sichern und Wiederherstellen des privaten Schlüssels für Zertifikat Dienste
+title: Sichern und Wiederherstellen des privaten Schlüssels der Zertifikatdienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 891794f36e87b2aa4b6a5d5c8dde55304da20601
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a65b8c25e627e516d92b8dc8219db9c7933bd8d9902b1f75bea204d723edd61f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119879780"
 ---
-# <a name="backing-up-and-restoring-the-certificate-services-private-key"></a>Sichern und Wiederherstellen des privaten Schlüssels für Zertifikat Dienste
+# <a name="backing-up-and-restoring-the-certificate-services-private-key"></a>Sichern und Wiederherstellen des privaten Schlüssels der Zertifikatdienste
 
-Die Sicherungs-und Wiederherstellungs Funktionen des Certadm.dll können nicht zum Sichern der [*privaten Schlüssel*](../secgloss/p-gly.md)der Zertifikat Dienste verwendet werden. Private Schlüssel können nicht von diesen Funktionen gesichert werden, da diese Funktionen zum Sichern und Wiederherstellen der Zertifikat Dienst Datenbank (und zugehöriger Dateien) vorgesehen sind, und diese Datenbank enthält keine privaten Schlüssel (selbst für selbst ausgestellte Zertifikate).
+Sie können die Sicherungs- und Wiederherstellungsfunktionen der Certadm.dll nicht verwenden, um die [*privaten Schlüssel*](../secgloss/p-gly.md)der Zertifikatdienste zu sichern. Private Schlüssel können nicht durch diese Funktionen gesichert werden, da diese Funktionen zum Sichern und Wiederherstellen der Zertifikatdienstdatenbank (und zugehöriger Dateien) vorgesehen sind und diese Datenbank keine privaten Schlüssel enthält (auch nicht für selbst ausgestellte Zertifikate).
 
-Verwenden Sie das MMC-Snap-in "Zertifizierungsstelle" oder den Befehl "Certutil" (with-Backup oder-backupkey), um einen privaten Schlüssel für die Zertifikat Dienste zu sichern. Beim Sichern des privaten Schlüssels mit dem MMC-Snap-in "Zertifizierungsstelle" oder "Certutil" wird der private Schlüssel in die PKCS \# 12-Datei geschrieben. Obwohl diese PKCS \# 12-Datei Kenn Wort geschützt ist, sollte Sie als äußerst sensibel eingestuft werden und muss sicher gespeichert werden. das Kennwort für die PKCS \# 12-Datei sollte auch vor nicht autorisierten Personen geschützt werden.
+Verwenden Sie zum Sichern eines privaten Zertifikatdienstschlüssels das MMC-Snap-In der Zertifizierungsstelle oder den Befehl certutil (mit angegebener Angabe von -backup oder -backupkey). Das Sichern des privaten Schlüssels mit dem ZERTIFIZIERUNGSSTELLEN-MMC-Snap-In oder certutil führt dazu, dass der private Schlüssel in die PKCS \# 12-Datei geschrieben wird. Obwohl diese PKCS \# 12-Datei kennwortgeschützt ist, sollte sie als äußerst vertraulich betrachtet und sicher gespeichert werden. Das Kennwort für die PKCS \# 12-Datei sollte auch vor nicht autorisierten Personen geschützt werden.
 
-Auf ähnliche Weise können private Schlüssel nicht durch die Sicherungs-und Wiederherstellungs Funktionen der Zertifikat Dienste wieder hergestellt werden. Ein Sicherungs Schlüssel für Zertifikat Dienste, der in einer PKCS \# 12-Datei enthalten ist, kann mit dem MMC-Snap-in "Zertifizierungsstelle" oder mit dem Befehl "Certutil" (Angabe von "-Restore" oder "-restorekey") wieder hergestellt werden. Beachten Sie, dass die Person, die den Wiederherstellungs Vorgang ausführt, das Kennwort für die \# Datei
+Ebenso können private Schlüssel nicht von den Sicherungs- und Wiederherstellungsfunktionen der Zertifikatdienste wiederhergestellt werden. Ein in einer PKCS 12-Datei enthaltener Zertifikatdienste-Sicherungsschlüssel \# kann durch das MMC-Snap-In der Zertifizierungsstelle oder durch den Befehl certutil (unter Angabe der Verben -restore oder -restorekey) wiederhergestellt werden. Beachten Sie, dass die Person, die den Wiederherstellungsvorgang ausführt, das Kennwort für die PKCS \# 12-Datei kennen muss.
 
-Es gibt nur zwei Fälle, in denen der private Schlüssel der Zertifikat Dienste gesichert werden muss. Der erste Fall ist die Installation von Zertifikat Diensten. Der zweite Fall ist nach jedem Erneuerungs Vorgang des Zertifikat Dienst Zertifikats.
+Es gibt nur zwei Fälle, in denen ein privater Zertifikatdienste-Schlüssel gesichert werden muss. Der erste Fall ist nach der Installation von Zertifikatdiensten. Der zweite Fall ist nach einem Erneuerungsvorgang des Zertifikatdienstzertifikats.
 
  
 

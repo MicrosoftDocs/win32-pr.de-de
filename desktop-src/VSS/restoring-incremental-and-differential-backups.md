@@ -1,49 +1,49 @@
 ---
-description: Die Wiederherstellung einer inkrementellen oder differenziellen Sicherung unter VSS unterscheidet sich nicht wesentlich von anderen VSS-Wiederherstellungs Vorgängen
+description: Das Wiederherstellen einer inkrementellen oder differenziellen Sicherung unter VSS ist nicht wesentlich von anderen VSS-Wiederherstellungsvorgangen.
 ms.assetid: 67143f6f-0bb8-4740-9289-8bbfeb7caadf
-title: Inkrementelle und differenzielle Sicherungen
+title: Wiederherstellen inkrementeller und differenzieller Sicherungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 639919ea24f12fbc036116bd89b1630321cbae54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcc0c2df57e2f7c0f21436248ddaa46231c7bf6440c76a38f4d1c92ab2adf97f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119864050"
 ---
-# <a name="restoring-incremental-and-differential-backups"></a>Inkrementelle und differenzielle Sicherungen
+# <a name="restoring-incremental-and-differential-backups"></a>Wiederherstellen inkrementeller und differenzieller Sicherungen
 
-Die Wiederherstellung einer inkrementellen oder differenziellen Sicherung unter VSS unterscheidet sich nicht wesentlich von anderen VSS-Wiederherstellungs Vorgängen
+Das Wiederherstellen einer inkrementellen oder differenziellen Sicherung unter VSS ist nicht wesentlich von anderen VSS-Wiederherstellungsvorgangen.
 
-Ein Writer kann Wiederherstellungs Ziele ändern oder die Ziel Adressieren von Anforderungen ändern, und ein Anforderer muss Alternative Speicherort Zuordnungen und neue Ziele wie jede andere Wiederherstellung verarbeiten. Es gibt jedoch zwei wichtige Probleme, die bei der Behandlung der Wiederherstellung einer inkrementellen oder differenziellen Sicherung zu beachten sind: zusätzliche Wiederherstellungen und Sicherungs Stempel.
+Ein Writer kann Wiederherstellungsziele oder anforderungsgesteuerte Zielgruppenadressierungen ändern, und ein An anfordernde Benutzer muss wie bei jeder anderen Wiederherstellung alternative Speicherortzuordnungen und neue Ziele verarbeiten. Es gibt jedoch zwei wichtige Probleme, die bei der Wiederherstellung einer inkrementellen oder differenziellen Sicherung zu beachten sind: zusätzliche Wiederherstellungen und Sicherungsstempel.
 
-## <a name="additional-restores"></a>Weitere Wiederherstellungen
+## <a name="additional-restores"></a>Zusätzliche Wiederherstellungen
 
-Das erste Problem ist die zusätzliche Wiederherstellung. Ein Sicherungs Operator muss möglicherweise mehrere Wiederherstellungs Vorgänge mithilfe eines anfänglichen vollständigen und nachfolgenden inkrementellen oder differenziellen Sicherungs Mediums als Quelle ausführen.
+Das erste Problem besteht in zusätzlichen Wiederherstellungen. Ein Sicherungsoperator muss möglicherweise mehrere Wiederherstellungsvorgänge ausführen, indem er ein erstes vollständiges und nachfolgendes inkrementelles oder differenzielles Sicherungsmedium als Quelle verwendet.
 
-Einige Writer (in der Regel als Teil ihrer Behandlung eines [*postrestore*](vssgloss-p.md) -Ereignisses mit [**CVssWriter:: OnPostRestore**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostrestore)) verwenden wiederhergestellte Dateien, um Updates der aktuell auf dem Datenträger gespeicherten Daten auszuführen. Für einige dieser Writer ist es ineffizient – oder gefährlich –, Daten auf dem Datenträger wiederholt aus wiederhergestellten Dateien zu aktualisieren.
+Einige Writer verwenden in der Regel im Rahmen der Verarbeitung eines [*PostRestore-Ereignisses*](vssgloss-p.md) mit [**CVssWriter::OnPostRestore**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostrestore)wiederhergestellte Dateien, um Aktualisierungen von Daten durchzuführen, die derzeit auf dem Datenträger gespeichert sind. Für einige dieser Writer ist es ineffizient oder gefährlich, wiederholt Datenträgerdaten aus wiederhergestellten Dateien zu aktualisieren.
 
-Daher ist es wichtig, dass Sicherungs Anwendungen angeben, wenn eine Komponente oder ein Komponenten Satz nachfolgende Wiederherstellungen erfordern, indem [**IVssBackupComponents:: setadditionalbackups**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores)aufgerufen wird.
+Daher ist es wichtig, dass Sicherungsanwendungen angeben, wann eine Komponente oder ein Komponentensatz nachfolgende Wiederherstellungen erfordern kann, indem [**IVssBackupComponents::SetAdditionalRestores aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores)
 
-Ein Writer würde [**IVssComponent:: getadditionalbackups**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) aufrufen, um zu bestimmen, ob der Sicherungs Operator eine größere Anzahl von Wiederherstellungen der Komponente oder des Komponenten Satzes geplant hat.
+Ein Writer würde [**IVssComponent::GetAdditionalRestores**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) aufrufen, um zu bestimmen, ob der Sicherungsoperator weitere Wiederherstellungen des Komponenten- oder Komponentensets geplant hat.
 
-Wenn der Anforderer nicht [**IVssBackupComponents:: setadditionalrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores)aufgerufen hat, gibt [**IVssComponent:: getadditionalrestore**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) false zurück, und der Writer kann jede Verarbeitung nach der Wiederherstellung ausführen, die benötigt wird.
+Wenn der Anfordernde [**IVssBackupComponents::SetAdditionalRestores**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores)nicht aufgerufen hat, gibt [**IVssComponent::GetAdditionalRestores**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) false zurück, und der Writer kann jede verarbeitung nach der Wiederherstellung durchführen, die er benötigt.
 
-Wenn [**IVssBackupComponents:: setadditionalrestore**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores) aufgerufen wurde, gibt [**IVssComponent:: getadditionalrestore**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) den Wert **true** zurück, und ein Writer sollte entscheiden, wie nach der Wiederherstellung gearbeitet werden soll – beispielsweise kann der Writer seine Daten auf dem Datenträger nicht aktualisieren.
+Wenn [**IVssBackupComponents::SetAdditionalRestores**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setadditionalrestores) aufgerufen wurde, gibt [**IVssComponent::GetAdditionalRestores**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getadditionalrestores) **true** zurück, und ein Writer sollte entscheiden, wie Vorgänge nach der Wiederherstellung behandelt werden sollen. Beispielsweise kann der Writer seine Daten auf dem Datenträger nicht aktualisieren.
 
-## <a name="backup-stamps"></a>Sicherungs Stempel
+## <a name="backup-stamps"></a>Sicherungsstempel
 
-Im Rahmen des vorherigen vollständigen Sicherungs Vorgangs hat ein Writer möglicherweise einen Sicherungs Stempel im Dokument mit den Sicherungs Komponenten der Anforderer gespeichert.
+Im Rahmen des vorherigen vollständigen Sicherungsvorgang hat ein Writer möglicherweise einen Sicherungsstempel im Sicherungskomponentendokument des Anfordernden gespeichert.
 
-Der Sicherungs Stempel wird als Zeichenfolge gespeichert, und sein Format und seine Informationen sind für den Anforderer nicht verständlich. Daher kann der Anforderer die Sicherungs Stempel Informationen nicht direkt verwenden.
+Der Sicherungsstempel wird als Zeichenfolge gespeichert, und das Format und die Informationen sind für den Anfordernden nicht verständlich. Daher kann der Anfordernde die Informationen zum Sicherungsstempel nicht direkt verwenden.
 
-Stattdessen besteht seine Aufgabe darin, diese Informationen für den Writer verfügbar zu machen, indem die [**IVssBackupComponents:: setpreviousbackupstamp**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp) -Methode vor der Generierung eines [**PrepareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) -Ereignisses für eine inkrementelle Sicherung aufgerufen wird.
+Stattdessen besteht die Aufgabe darin, diese Informationen dem Writer zur Verfügung zu stellen, indem die [**IVssBackupComponents::SetPreviousBackupStamp-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp) vor der Generierung eines [**PrepareForBackup-Ereignisses**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup) für eine inkrementelle Sicherung aufruft.
 
-Der Anforderer führt dies Komponenten Weise aus. Ein Anforderer überprüft gespeicherte Komponenten-oder Komponenten Sicherungs Stempel Informationen mithilfe von [**IVssComponent:: getbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp).
+Der Anfordernde führt dies komponentenspezifischen Ausklang aus. Eine Anfordernde untersucht gespeicherte Komponenten- oder Komponentensatz-Sicherungsstempelinformationen mithilfe von [**IVssComponent::GetBackupStamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getbackupstamp).
 
-Wenn Sicherungs Stempel Informationen für die Art der Wiederherstellung geeignet sind, die der Anforderer unternimmt, wird er als Zeitstempel der letzten Sicherung einer Komponente mit der [**IVssBackupComponents:: setpreviousbackupstamp**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp) -Methode zur Verfügung gestellt.
+Wenn sicherungsstempelinformationen für den Wiederherstellungstyp geeignet sind, den der Anfordernde durchführen soll, macht er ihn als Zeitstempel der letzten Sicherung einer Komponente mit der [**IVssBackupComponents::SetPreviousBackupStamp-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-setpreviousbackupstamp) verfügbar.
 
-Ein Writer stellt die Sicherungs Stempel Informationen mithilfe von [**IVssComponent:: getpreviousbackupstamp**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp)wieder her. Ein Writer dieser Klasse hat den ersten Sicherungs Stempel generiert, sodass der Writer diesen Stempel decodieren und die Informationen verwenden kann. Basierend darauf kann ein Writer bei der Verarbeitung eines [**vorab**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) Diensts Aktionen ausführen, z. b. das Ändern von Wiederherstellungs Zielen oder das Anfordern einer gerichteten Ziel adressierenden adressieren.
+Ein Writer stellt die Sicherungsstempelinformationen mithilfe von [**IVssComponent::GetPreviousBackupStamp wieder her.**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscomponent-getpreviousbackupstamp) Ein Writer dieser Klasse hat den anfänglichen Sicherungsstempel generiert, sodass der Writer diesen Stempel decodieren und die Informationen verwenden kann. Basierend darauf kann ein Writer bei der Behandlung eines [**PreRestore-Ereignisses**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prerestore) aktionen wie das Ändern von Wiederherstellungszielen oder das Anfordern einer gezielten Zielgruppenadressierung durchführen.
 
  
 

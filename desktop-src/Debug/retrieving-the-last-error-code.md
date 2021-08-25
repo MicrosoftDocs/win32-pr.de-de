@@ -1,21 +1,21 @@
 ---
-description: Wenn viele Systemfunktionen ausfallen, legen Sie den letzten Fehlercode fest.
+description: Wenn viele Systemfunktionen fehlschlagen, legen sie den Code für den letzten Fehler fest.
 ms.assetid: 4cc626ac-7574-44ce-8377-e0bdd8e74b7e
 title: Abrufen des Last-Error Codes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c28ba096fae2bd38bb8dc9c291a677aa6fa161d2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 853fb6991bab5ad761dacaf18a2ec086dbf8fc4176964888bd0ededc548fbeda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912450"
 ---
 # <a name="retrieving-the-last-error-code"></a>Abrufen des Last-Error Codes
 
-Wenn viele Systemfunktionen ausfallen, legen Sie den letzten Fehlercode fest. Wenn Ihre Anwendung weitere Details zu einem Fehler benötigt, kann Sie den letzten Fehlercode mithilfe der [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion abrufen und eine Beschreibung des Fehlers mithilfe der [**FormatMessage**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) -Funktion anzeigen.
+Wenn viele Systemfunktionen fehlschlagen, legen sie den Code für den letzten Fehler fest. Wenn Ihre Anwendung weitere Details zu einem Fehler benötigt, kann sie den Code des letzten Fehlers mithilfe der [**GetLastError-Funktion**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) abrufen und mithilfe der [**FormatMessage-Funktion**](/windows/desktop/api/WinBase/nf-winbase-formatmessage) eine Beschreibung des Fehlers anzeigen.
 
-Das folgende Beispiel enthält eine Fehler Behandlungs Funktion, die die Fehlermeldung ausgibt und den Prozess beendet. Der *lpszfunction* -Parameter ist der Name der Funktion, die den letzten Fehlercode festgelegt hat.
+Das folgende Beispiel enthält eine Fehlerbehandlungsfunktion, die die Fehlermeldung aus druckt und den Prozess beendet. Der *lpszFunction-Parameter* ist der Name der Funktion, die den Code für den letzten Fehler festgelegt hat.
 
 
 ```C++

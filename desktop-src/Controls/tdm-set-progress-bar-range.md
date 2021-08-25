@@ -1,9 +1,9 @@
 ---
-title: TDM_SET_PROGRESS_BAR_RANGE Meldung (kommstrg. h)
-description: Legt die minimalen und maximalen Werte für die Statusanzeige in einem Aufgaben Dialogfeld fest.
+title: TDM_SET_PROGRESS_BAR_RANGE Nachricht (Commctrl.h)
+description: Legt die Minimal- und Höchstwerte für die Statusanzeige in einem Aufgabendialogfeld fest.
 ms.assetid: ca8b48bc-cf56-4678-bb3d-7c730a96d98c
 keywords:
-- Windows-Steuerelemente für TDM_SET_PROGRESS_BAR_RANGE Meldung
+- TDM_SET_PROGRESS_BAR_RANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,38 +14,38 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d17ebb6caa2c33282dccbb117980fc970cd45477
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 54d94da64bd01b17addeb8f65def177e7e7e5d7daccbafb1629d1158f8c6636d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119875910"
 ---
-# <a name="tdm_set_progress_bar_range-message"></a>TDM \_ - \_ Meldung "Statusanzeige \_ \_ Bereich festlegen"
+# <a name="tdm_set_progress_bar_range-message"></a>TDM \_ SET PROGRESS BAR RANGE \_ \_ \_ message
 
-Legt die minimalen und maximalen Werte für die Statusanzeige in einem Aufgaben Dialogfeld fest.
+Legt die Minimal- und Höchstwerte für die Statusanzeige in einem Aufgabendialogfeld fest.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
 Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt den Mindestwert an. Standardmäßig ist der Minimalwert 0 (null). Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den maximalen Wert an. Standardmäßig ist der Höchstwert 100.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt den Minimalwert an. Standardmäßig ist der Mindestwert 0 (null). [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Maximalwert an. Standardmäßig ist der Höchstwert 100.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den vorherigen minimalen und maximalen Wert zurück, wenn erfolgreich, andernfalls 0 (null). Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den minimalen Wert, und das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält den maximalen Wert.
+Gibt die vorherigen Mindest- und Höchstwerte zurück, falls erfolgreich, oder 0 (null). [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Minimalwert, und [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält den Höchstwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt den vorherigen minimalen und maximalen Wert zurück, wenn erfolgreich, ande
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

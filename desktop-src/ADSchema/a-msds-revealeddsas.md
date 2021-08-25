@@ -1,11 +1,11 @@
 ---
-title: ms-DS-enthüllte-DSAs-Attribut
-description: Rückwärts Verknüpfung für ms-DS-offen-Benutzer. Gibt an, welcher RODC den geheimen Benutzer des Benutzers enthält.
+title: ms-DS-Revealed-DSAs-Attribut
+description: Rückwärtslink für ms-DS-Revealed-Users. Gibt an, welcher RODC das Geheimnis des Benutzers enthält.
 ms.assetid: cd84db75-d961-4290-8aa7-2805febbd842
 ms.tgt_platform: multiple
 keywords:
-- das AD-Schema "ms-DS-enthüllte-DSAs-Attribut"
-- AD-Schema des msDS-revealeddsas-Attributs
+- MS-DS-Revealed-DSAs-Attribut AD-Schema
+- MSDS-RevealedDSAs-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e77dfd69fafffc3286f0ff9419965d7ae9daaa0
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5b8cd94e5cde7c5ea021558088852f551fcdcf733eab131216d663d363c5a544
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119925500"
 ---
-# <a name="ms-ds-revealed-dsas-attribute"></a>ms-DS-enthüllte-DSAs-Attribut
+# <a name="ms-ds-revealed-dsas-attribute"></a>ms-DS-Revealed-DSAs-Attribut
 
-Rückwärts Verknüpfung für [**ms-DS-offen-Benutzer**](a-msds-revealedusers.md). Gibt an, welcher RODC den geheimen Schlüssel dieses Benutzers enthält.
+Rückwärtslink für [**ms-DS-Revealed-Users**](a-msds-revealedusers.md). Gibt an, welcher RODC das Geheimnis dieses Benutzers enthält.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-offengelegt-DSAs                     |
-| LDAP-Display-Name | MSDS-revealeddsas                       |
+| CN                | ms-DS-Revealed-DSAs                     |
+| Ldap-Anzeigename | msDS-RevealedDSAs                       |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1930                 |
-| System-ID-GUID    | 94f 6f 2AC-c76d-4b5e-b71l-o332c3e93c22    |
+| System-ID-GUID    | 94f6f2ac-c76d-4b5e-b71f-f332c3e93c22    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,10 +55,10 @@ Rückwärts Verknüpfung für [**ms-DS-offen-Benutzer**](a-msds-revealedusers.md
 | Link-ID                | 2103                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -76,10 +76,10 @@ Rückwärts Verknüpfung für [**ms-DS-offen-Benutzer**](a-msds-revealedusers.md
 | Link-ID                | 2103                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -97,10 +97,10 @@ Rückwärts Verknüpfung für [**ms-DS-offen-Benutzer**](a-msds-revealedusers.md
 | Link-ID                | 2103                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

@@ -1,7 +1,7 @@
 ---
-description: Die \_ Struktur Port Info \_ 1 identifiziert einen unterstützten Druckerport.
+description: Die \_ PORT INFO \_ 1-Struktur identifiziert einen unterstützten Druckerport.
 ms.assetid: e474fe9c-e554-406a-a5bf-de07f9a72b32
-title: PORT_INFO_1 Struktur (winspool. h)
+title: PORT_INFO_1-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: d64e7dfa29cbe6b3f7efd3aaa0076851aea0311b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff6e4c3a43c35118772aede2e329a2e1e761fc0f147b5a3a9ceeef97bbf8fb00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947810"
 ---
-# <a name="port_info_1-structure"></a>Port \_ Info \_ 1-Struktur
+# <a name="port_info_1-structure"></a>PORT \_ INFO \_ 1-Struktur
 
-Die Struktur **Port \_ Info \_ 1** identifiziert einen unterstützten Druckerport.
+Die **PORT \_ INFO \_ 1-Struktur** identifiziert einen unterstützten Druckerport.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ typedef struct _PORT_INFO_1 {
 **pName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die einen unterstützten Druckerport identifiziert (z. b. "LPT1:").
+Zeiger auf eine auf NULL endende Zeichenfolge, die einen unterstützten Druckerport identifiziert (z.B. "LPT1:").
 
 </dd> </dl>
 
@@ -56,8 +56,8 @@ Zeiger auf eine mit NULL endenden Zeichenfolge, die einen unterstützten Drucker
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Port \_ Info \_ 1W** (Unicode) und **\_ Port \_ Info \_ 1a** (ANSI)<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PORT \_ INFO \_ 1W** (Unicode) und **\_ PORT INFO \_ \_ 1A** (ANSI)<br/>                                 |
 
 
 
@@ -68,7 +68,7 @@ Zeiger auf eine mit NULL endenden Zeichenfolge, die einen unterstützten Drucker
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**EnumPorts**](enumports.md)

@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse der WMI-Klasse für die WMI-Klasse "Win32 systemsetting" verknüpft ein Computersystem und eine allgemeine Einstellung
+description: Die WMI-Klasse für die abstrakte Win32 SystemSetting-Zuordnung bezieht sich auf ein Computersystem und eine allgemeine \_ Einstellung auf diesem System.
 ms.assetid: 796ee263-2526-43f8-bd3d-23442b6bd4ca
 ms.tgt_platform: multiple
 title: Win32_SystemSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e29b752d769cd347ce1cfdb729bf8c0c3959a4f5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 75c4ee9db2f48d02151c3874cc0ac5775f04e2d119ada972db09826dd1f791c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119827790"
 ---
-# <a name="win32_systemsetting-class"></a>Win32 \_ systemsetting-Klasse
+# <a name="win32_systemsetting-class"></a>Win32 \_ SystemSetting-Klasse
 
-Die [WMI-Klasse der WMI-Klasse für die WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ systemsetting** " verknüpft ein Computersystem und eine allgemeine Einstellung
+Die **WMI-Klasse \_ für die abstrakte Win32 SystemSetting-Zuordnung** bezieht sich auf ein Computersystem und eine allgemeine Einstellung auf diesem System. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,53 +42,53 @@ class Win32_SystemSetting : CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ systemsetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SystemSetting-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ systemsetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SystemSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ Computersystem**
+Datentyp: **Win32 \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Computersystem")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ ComputerSystem")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Eigenschaften eines Computer Systems darstellt, auf dem diese Einstellung angewendet werden kann.
+Verweis auf die -Instanz, die die Eigenschaften eines Computersystems darstellt, auf die diese Einstellung angewendet werden kann.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Einstellung**
+Datentyp: **\_ CIM-Einstellung**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM- \_ Einstellung")
+Qualifizierer: [**Schlüssel,**](../wmisdk/key-qualifier.md) [**Überschreibung**](../wmisdk/standard-qualifiers.md) ("Einstellung"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| \_ CIM-Einstellung")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Eigenschaften der Einstellung darstellt, die auf das Computersystem angewendet werden können.
+Verweis auf die -Instanz, die die Eigenschaften der Einstellung darstellt, die auf das Computersystem angewendet werden können.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ systemsetting** -Klasse wird von [**CIM \_ Element Setting**](cim-elementsetting.md)abgeleitet.
+Die **Win32 \_ SystemSetting-Klasse** wird von [**CIM \_ ElementSetting abgeleitet.**](cim-elementsetting.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -96,8 +96,8 @@ Die **Win32- \_ systemsetting** -Klasse wird von [**CIM \_ Element Setting**](ci
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -106,7 +106,7 @@ Die **Win32- \_ systemsetting** -Klasse wird von [**CIM \_ Element Setting**](ci
 
 <dl> <dt>
 
-[**CIM- \_ Element Setting**](cim-elementsetting.md)
+[**\_CIM-ElementSetting**](cim-elementsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

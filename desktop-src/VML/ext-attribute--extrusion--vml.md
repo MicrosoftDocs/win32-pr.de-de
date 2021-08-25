@@ -1,47 +1,47 @@
 ---
-title: Ext-Attribut (Extrusion) (VML)
-description: Ext-Attribut (Extrusion) (VML)
+title: Ext-Attribut (Extrusion)(VML)
+description: Ext-Attribut (Extrusion)(VML)
 ms.assetid: 5c7b2137-ddb6-422c-a202-6de494dc993f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b19721ebe03198485b7f43ff671cfd3c45b236c5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d571e5665c314fc0e4c52a48046915613dcd632fcafeee86f49b6e2fc3989ace
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867420"
 ---
-# <a name="ext-attribute-extrusionvml"></a>Ext-Attribut (Extrusion) (VML)
+# <a name="ext-attribute-extrusionvml"></a>Ext-Attribut (Extrusion)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert das standardmäßige Extrusionsverhalten für grafische Editoren. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert das Standardextrusionsverhalten für grafische Editoren. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* v:ext = " *Ausdruck* " >
+<o: *element* v:ext="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . ext = "*Ausdruck*"
+*element* .ext="*expression*"
 
-*Ausdruck* = *Element*. ext
+*expression* = *Element*.ext
 
 **Anmerkungen**
 
-Weist einen grafischen Editor an, das Element zu Rendering. Wenn das Element nicht wieder hergestellt werden kann, sollte stattdessen die Bitmap-Darstellung verwendet werden. Der Standardwert ist " **View**".
+Weist einen grafischen Editor an, das Element zu rendern. Wenn das Element nicht gerendert werden kann, sollte stattdessen die Bitmapdarstellung verwendet werden. Der Standardwert ist **view.**
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
- 
+ 
 
- 
+ 
