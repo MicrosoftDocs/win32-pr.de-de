@@ -5,20 +5,20 @@ ms.assetid: b8b8de00-0def-4506-ab73-d03a7e06256d
 ms.tgt_platform: multiple
 keywords:
 - Lesebenutzer kann Kennwort (WinNT-Anbieter) ADSI nicht ändern
-- User Cannot Change Password (WinNT Provider) ADSI , reading
-- WinNT-Anbieter ADSI, Benutzerverwaltungsbeispiele,User Cannot Change Password,reading
+- Benutzer kann Kennwort (WinNT-Anbieter) ADSI nicht ändern, lesen
+- WinNT-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Benutzer kann Kennwort nicht ändern,Lesen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd075bfb6700779b60f9e578a4e89957487a2646
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 761a1ef0a332f1cdfd7dad1b20426b749618ed2286832c7ff16b207cee57c176
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119637550"
 ---
 # <a name="reading-user-cannot-change-password-winnt-provider"></a>Lesebenutzer kann Kennwort nicht ändern (WinNT-Anbieter)
 
-Die Fähigkeit eines Benutzers, sein eigenes Kennwort zu ändern, ist eine Berechtigung, die erteilt oder verweigert werden kann. Lesen Sie das **ADS \_ UF \_ PASSWD \_ CANT \_ CHANGE-Flag** der **userFlags-Eigenschaft** des Benutzerobjekts, um zu ermitteln, ob dem Benutzer diese Berechtigung für den WinNT-Anbieter erteilt wurde. Das **ADS \_ UF \_ PASSWD \_ CANT \_ CHANGE-Flag** ist in der [**ADS USER FLAG \_ \_ \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_user_flag_enum) definiert.
+Die Fähigkeit eines Benutzers, sein eigenes Kennwort zu ändern, ist eine Berechtigung, die erteilt oder verweigert werden kann. Um festzustellen, ob dem Benutzer diese Berechtigung für den WinNT-Anbieter erteilt wurde, lesen Sie das **ADS \_ UF \_ PASSWD \_ CANT \_ CHANGE-Flag** der **userFlags-Eigenschaft** des Benutzerobjekts. Das **ADS \_ UF \_ PASSWD \_ CANT \_ CHANGE-Flag** ist in der [**ADS USER FLAG \_ \_ \_ ENUM-Enumeration**](/windows/win32/api/iads/ne-iads-ads_user_flag_enum) definiert.
 
 ## <a name="example-code"></a>Beispielcode
 

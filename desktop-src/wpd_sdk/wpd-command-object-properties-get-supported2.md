@@ -1,7 +1,7 @@
 ---
-description: Ruft die Eigenschaften ab, die von einem-Objekt unterstützt werden.
+description: Ruft die eigenschaften ab, die von einem -Objekt unterstützt werden.
 ms.assetid: 842bd4d6-0824-4597-bb5d-9ef8769055fb
-title: WPD_COMMAND_OBJECT_PROPERTIES_GET_SUPPORTED Befehl (portabledevice. h)
+title: WPD_COMMAND_OBJECT_PROPERTIES_GET_SUPPORTED Befehl (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: bd816e1dc4ce9c3cbb1fb3c0b118004983baea54
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5020494658f380abc465a9059544131174edc8c417f69f6322636e6c9d4170d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119703980"
 ---
-# <a name="wpd_command_object_properties_get_supported-command"></a>WPD- \_ Befehls \_ Objekt \_ Eigenschaften \_ Get supported- \_ Befehl
+# <a name="wpd_command_object_properties_get_supported-command"></a>WPD \_ COMMAND \_ OBJECT \_ PROPERTIES \_ GET \_ SUPPORTED Command
 
-Der Befehl " **\_ \_ \_ \_ get \_ supported" (WPD Command Object Properties** ) Ruft die von einem Objekt unterstützten Eigenschaften ab.
+Mit **dem Befehl WPD COMMAND OBJECT \_ PROPERTIES GET \_ \_ \_ \_ SUPPORTED** werden die eigenschaften abgerufen, die von einem -Objekt unterstützt werden.
 
-## <a name="command-category"></a>Befehls Kategorie
+## <a name="command-category"></a>Befehlskategorie
 
-**\_ \_ Objekt \_ Eigenschaften der WPD-Kategorie**
+**WPD \_ CATEGORY \_ OBJECT \_ PROPERTIES**
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,9 +34,9 @@ Der Treiber erwartet den folgenden Parameter.
 
 
 
-| Parameter                                         | VarType        | BESCHREIBUNG                                                            |
+| Parameter                                         | VarType        | Beschreibung                                                            |
 |---------------------------------------------------|----------------|------------------------------------------------------------------------|
-| **Objekt-ID der WPD- \_ \_ \_ Eigenschaften \_ \_ Objekte** | **VT \_ LPWSTR** | Erforderlich. Die ID des-Objekts, das die angeforderten Eigenschaften enthält. |
+| **WPD \_ PROPERTY \_ OBJECT \_ PROPERTIES \_ OBJECT \_ ID** | **VT \_ LPWSTR** | Erforderlich. Die ID des Objekts, das die angeforderten Eigenschaften enthält. |
 
 
 
@@ -48,11 +48,11 @@ Als Ergebnisse des Treibers werden erwartet:
 
 
 
-| Ergebnis                                                | VarType         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                            |
+| Ergebnis                                                | VarType         | Beschreibung                                                                                                                                                                                                                                                                                                                                            |
 |-------------------------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Eigenschaften Schlüssel für WPD- \_ Eigenschafts \_ Objekt \_ Eigenschaften \_ \_** | **VT \_ unbekannt** | Erforderlich. Eine [**iportabledevicekeycollection**](iportabledevicekeycollection.md) -Schnittstelle, die alle unterstützten Eigenschaften angibt.                                                                                                                                                                                                            |
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ HRESULT**                    | **VT- \_ Fehler**   | Erforderlich. Ein **HRESULT** -Wert, der den Gesamterfolg oder Misserfolg angibt. Mögliche Ergebnis Werte sind [Fehlercodes für tragbare Windows-Geräte](error-constants.md). Wenn der Aufrufer eine ungültige Anforderung sendet, sollte der Treiber **HRESULT \_ aus Win32 zurückgeben \_ (Fehler \_ nicht \_ unterstützt)** . andernfalls ist es nicht erforderlich, einen anderen Ergebniswert zurückzugeben. |
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ Treiber \_ Fehler \_ Code**        | **VT \_ UI4**     | Dies ist optional. Ein Treiber spezifischer Fehlercode. Dies wird in der Regel nur für Treiber Tests oder für den Treiber, das Gerät und den Client verwendet.                                                                                                                                                                                                |
+| **\_EIGENSCHAFTENEIGENSCHAFTEN-SCHLÜSSEL \_ DES WPD-EIGENSCHAFTENOBJEKTS \_ \_ \_** | **VT \_ UNKNOWN** | Erforderlich. Eine [**IPortableDeviceKeyCollection-Schnittstelle,**](iportabledevicekeycollection.md) die alle unterstützten Eigenschaften angibt.                                                                                                                                                                                                            |
+| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**                    | **\_VT-FEHLER**   | Erforderlich. Ein **HRESULT-Wert,** der den Gesamterfolg oder -fehler angibt. Mögliche Ergebniswerte sind Windows [Fehlercodes für portable Geräte.](error-constants.md) Wenn der Aufrufer eine ungültige Anforderung vorgibt, sollte der Treiber **HRESULT \_ FROM \_ WIN32 (ERROR \_ NOT \_ SUPPORTED)** zurückgeben, andernfalls muss kein anderer Ergebniswert zurückgegeben werden. |
+| **\_WPD-EIGENSCHAFT \_ COMMON DRIVER \_ ERROR \_ \_ CODE**        | **VT \_ UI4**     | Optional. Ein treiberspezifischer Fehlercode. Dies wird in der Regel nur für Treibertests verwendet, oder wenn Treiber, Gerät und Client zusammen entworfen werden.                                                                                                                                                                                                |
 
 
 
@@ -64,7 +64,7 @@ Als Ergebnisse des Treibers werden erwartet:
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "ExpertSubmitEvent" gibt an, dass eine Ereignis Bedingung vorhanden ist, und stellt eine Datenstruktur bereit, die die Bedingung beschreibt.
+description: Die ExpertSubmitEvent-Funktion gibt an, dass eine Ereignisbedingung vorhanden ist, und stellt eine Datenstruktur zur Beschreibung der Bedingung zurEntspricht.
 ms.assetid: 2339b530-427b-4028-aef6-c2cdd1353f77
-title: ExpertSubmitEvent-Funktion (Netmon. h)
+title: ExpertSubmitEvent-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 448d77e9cb009b8aced0aba752526dc08b503066
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6ce73d378e4d8432459a23a76b30ebf4d558a5f82ec230e6841eeeb621aed13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119744220"
 ---
 # <a name="expertsubmitevent-function"></a>ExpertSubmitEvent-Funktion
 
-Die Funktion " **ExpertSubmitEvent** " gibt an, dass eine Ereignis Bedingung vorhanden ist, und stellt eine Datenstruktur bereit, die die Bedingung beschreibt.
+Die **ExpertSubmitEvent-Funktion** gibt an, dass eine Ereignisbedingung vorhanden ist, und stellt eine Datenstruktur zur Beschreibung der Bedingung zurEntspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,25 +40,25 @@ DWORD WINAPI ExpertSubmitEvent(
 
 <dl> <dt>
 
-*hexpertkey* \[ in\]
+*hExpertKey* \[ In\]
 </dt> <dd>
 
-Eindeutiger Bezeichner des Experten. Netzwerkmonitor übergibt *hexpertkey* an den Experten, wenn die Funktion [Run](run.md) aufgerufen wird.
+Eindeutiger Bezeichner des Experten. Netzwerkmonitor *hExpertKey an* den Experten übergeben, wenn er die [Run-Funktion](run.md) aufruft.
 
 </dd> <dt>
 
-*pexpertevent* \[ in\]
+*pExpertEvent* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine **nmeventdata** -Struktur, die die Ereignis Bedingung beschreibt.
+Ein Zeiger auf eine **NMEVENTDATA-Struktur,** die die Ereignisbedingung beschreibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, gibt der Rückgabewert den Grund für den Fehler an. Wenn der Rückgabewert nmerr- \_ Experte \_ beendet ist, bereinigt der Experte sofort und gibt ihn zurück.
+Wenn die Funktion nicht erfolgreich ist, gibt der Rückgabewert den Grund für den Fehler an. Wenn der Rückgabewert NMERR EXPERT TERMINATE ist, bereinigt der Experte \_ \_ sofort und gibt zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Wenn die Funktion nicht erfolgreich ist, gibt der Rückgabewert den Grund für d
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

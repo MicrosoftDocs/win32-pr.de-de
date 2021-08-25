@@ -1,7 +1,7 @@
 ---
-description: Die advanceddocumentproperties-Funktion zeigt ein druckerkonfigurationsdialogfeld für den angegebenen Drucker an, sodass der Benutzer diesen Drucker konfigurieren kann.
+description: Die AdvancedDocumentProperties-Funktion zeigt ein Dialogfeld für die Druckerkonfiguration für den angegebenen Drucker an, sodass der Benutzer diesen Drucker konfigurieren kann.
 ms.assetid: 29e33f34-f6ec-4989-b076-e1fef8eb5bc4
-title: Advanceddocumentproperties-Funktion (winspool. h)
+title: AdvancedDocumentProperties-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: da8754add6e3f5997354c940c303c41d4588c7b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2451f8e0668e0064566511bbf5eeb05e65094967486142719629400cf8d97348
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720270"
 ---
-# <a name="advanceddocumentproperties-function"></a>Advanceddocumentproperties-Funktion
+# <a name="advanceddocumentproperties-function"></a>AdvancedDocumentProperties-Funktion
 
-Die **advanceddocumentproperties** -Funktion zeigt ein druckerkonfigurationsdialogfeld für den angegebenen Drucker an, sodass der Benutzer diesen Drucker konfigurieren kann.
+Die **AdvancedDocumentProperties-Funktion** zeigt ein Dialogfeld für die Druckerkonfiguration für den angegebenen Drucker an, sodass der Benutzer diesen Drucker konfigurieren kann.
 
-Diese Funktion ist ein Sonderfall der [**DocumentProperties**](documentproperties.md) -Funktion. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Diese Funktion ist ein Sonderfall der [**DocumentProperties-Funktion.**](documentproperties.md) Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ LONG AdvancedDocumentProperties(
 
 <dl> <dt>
 
-*HWND* \[ in\]
+*hWnd* \[ In\]
 </dt> <dd>
 
-Ein Handle für das übergeordnete Fenster des druckerkonfigurationsdialogfelds.
+Ein Handle für das übergeordnete Fenster des Dialogfelds "Druckerkonfiguration".
 
 </dd> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für ein Drucker Objekt. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für ein Druckerobjekt. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> <dt>
 
-*pdevicename* \[ in\]
+*pDeviceName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Geräts angibt, für das ein Dialogfeld für die Druckerkonfiguration angezeigt werden soll.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Geräts angibt, für das ein Dialogfeld für die Druckerkonfiguration angezeigt werden soll.
 
 </dd> <dt>
 
-*pdevmodeoutput* \[ vorgenommen\]
+*pDevModeOutput* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur, die die vom Benutzer angegebenen Konfigurationsdaten enthält.
+Ein Zeiger auf eine [**DEVMODE-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die die vom Benutzer angegebenen Konfigurationsdaten enthält.
 
 </dd> <dt>
 
-*pdevmodeinput* \[ in\]
+*pDevModeInput* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur, die die Konfigurationsdaten enthält, die zum Initialisieren der Steuerelemente im Dialogfeld Druckerkonfiguration verwendet werden.
+Ein Zeiger auf eine [**DEVMODE-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die die Konfigurationsdaten enthält, die zum Initialisieren der Steuerelemente des Dialogfelds "Druckerkonfiguration" verwendet werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die [**DocumentProperties**](documentproperties.md) -Funktion mit diesen Parametern erfolgreich ist, ist der Rückgabewert von **advanceddocumentproperties** 1. Andernfalls ist der Rückgabewert 0 (null).
+Wenn die [**DocumentProperties-Funktion**](documentproperties.md) mit diesen Parametern erfolgreich ist, ist der Rückgabewert von **AdvancedDocumentProperties** 1. Andernfalls ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Diese Funktion kann nur das Dialogfeld Druckerkonfiguration anzeigen, sodass Sie von einem Benutzer konfiguriert werden kann. Wenn Sie mehr Kontrolle haben, verwenden Sie [**DocumentProperties**](documentproperties.md). Die Eingabeparameter für diese Funktion werden direkt an **DocumentProperties** übermittelt, und der *fmode* -Wert wird in der \_ Puffer- \_ \| DM \_ in der \_ Eingabeaufforderung-DM- \| \_ \_ Puffer auf DM festgelegt. Im Gegensatz zu **DocumentProperties** gibt diese Funktion nur 1 oder 0 zurück. Daher können Sie die erforderliche Größe von [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) nicht ermitteln, indem Sie *pdevmode* auf NULL festlegen.
+Diese Funktion kann nur das Dialogfeld "Druckerkonfiguration" anzeigen, damit ein Benutzer es konfigurieren kann. Verwenden Sie [**documentProperties, um**](documentproperties.md)mehr Kontrolle zu haben. Die Eingabeparameter für diese Funktion werden direkt an **DocumentProperties** übergeben, und der *fMode-Wert* wird auf DM \_ IN BUFFER DM IN PROMPT DM OUT \_ BUFFER \| \_ \_ \| \_ \_ festgelegt. Im **Gegensatz zu DocumentProperties** gibt diese Funktion nur 1 oder 0 zurück. Daher können Sie die erforderliche Größe von [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) nicht ermitteln, indem *Sie pDevMode auf* 0 (null) festlegen.
 
-Eine Anwendung kann den Namen, auf den der *pdevicename* -Parameter verweist, abrufen, indem Sie die [**GetPrinter**](getprinter.md) -Funktion aufruft und dann den **pprintername** -Member der " [**Printer \_ Info \_ 2**](printer-info-2.md) "-Struktur untersucht.
+Eine Anwendung kann den Namen abrufen, auf den der *pDeviceName-Parameter* verweist, indem sie die [**GetPrinter-Funktion**](getprinter.md) aufruft und dann den **pPrinterName-Member** der [**PRINTER INFO \_ \_ 2-Struktur**](printer-info-2.md) untersucht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,10 +105,10 @@ Eine Anwendung kann den Namen, auf den der *pdevicename* -Parameter verweist, ab
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Advanceddocumentpropertiesw** (Unicode) und **advanceddocumentpropertiesa** (ANSI)<br/>           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **AdvancedDocumentPropertiesW** (Unicode) und **AdvancedDocumentPropertiesA** (ANSI)<br/>           |
 
 
 
@@ -125,10 +125,10 @@ Eine Anwendung kann den Namen, auf den der *pdevicename* -Parameter verweist, ab
 [**AddPrinter**](addprinter.md)
 </dt> <dt>
 
-[**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
+[**Devmode**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 </dt> <dt>
 
-[**DocumentProperties**](documentproperties.md)
+[**Documentproperties**](documentproperties.md)
 </dt> <dt>
 
 [**GetPrinter**](getprinter.md)
@@ -137,7 +137,7 @@ Eine Anwendung kann den Namen, auf den der *pdevicename* -Parameter verweist, ab
 [**OpenPrinter**](openprinter.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 2**](printer-info-2.md)
+[**DRUCKERINFORMATIONEN \_ \_ 2**](printer-info-2.md)
 </dt> </dl>
 
  

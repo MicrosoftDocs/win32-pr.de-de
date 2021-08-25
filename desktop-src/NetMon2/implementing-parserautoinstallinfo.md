@@ -1,54 +1,54 @@
 ---
-description: Netzwerkmonitor verwendet die parserautoinstallinfo-Exportfunktion, um einen Parser zu installieren. Wenn parserautoinstallinfo aufgerufen wird, gibt der Parser eine PF \_ parserdllinfo-Struktur zurück, die alle Informationen enthält, die Netzwerkmonitor zum Installieren einer Parser-DLL benötigt.
+description: Netzwerkmonitor verwendet die Exportfunktion ParserAutoInstallInfo, um einen Parser zu installieren. Wenn ParserAutoInstallInfo aufgerufen wird, gibt der Parser eine PF \_ PARSERDLLINFO-Struktur zurück, die alle Informationen enthält, die Netzwerkmonitor zum Installieren einer Parser-DLL benötigt.
 ms.assetid: 1add9988-9cb2-43f9-8ae2-32acfe21b6f3
-title: Implementieren von "parameserautoinstallinfo"
+title: Implementieren von ParserAutoInstallInfo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d79a9ba5036673acb076be9f3634dae7556b5bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6d1c797f53ad110392fea304cc0a610fdb0f9346c745e2f7dea2bff16208e05
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119743080"
 ---
-# <a name="implementing-parserautoinstallinfo"></a>Implementieren von "parameserautoinstallinfo"
+# <a name="implementing-parserautoinstallinfo"></a>Implementieren von ParserAutoInstallInfo
 
-Netzwerkmonitor verwendet die [**parserautoinstallinfo**](parserautoinstallinfo.md) -Exportfunktion, um einen Parser zu installieren. Wenn **parserautoinstallinfo** aufgerufen wird, gibt der Parser eine [**PF \_ parserdllinfo**](pf-parserdllinfo.md) -Struktur zurück, die alle Informationen enthält, die Netzwerkmonitor zum Installieren einer Parser-DLL benötigt.
+Netzwerkmonitor verwendet die Exportfunktion [**ParserAutoInstallInfo,**](parserautoinstallinfo.md) um einen Parser zu installieren. Wenn **ParserAutoInstallInfo** aufgerufen wird, gibt der Parser eine [**PF \_ PARSERDLLINFO-Struktur**](pf-parserdllinfo.md) zurück, die alle Informationen enthält, die Netzwerkmonitor zum Installieren einer Parser-DLL benötigen.
 
 > [!Note]  
-> Netzwerkmonitor behält eine Liste vorhandener Parser in der [*Parser.ini*](p.md) Datei bei und erstellt eine separate ini-Datei für jeden installierten Parser.
+> Netzwerkmonitor speichert eine Liste vorhandener Parser in der [*Parser.ini-Datei*](p.md) und erstellt eine separate INI-Datei für jeden installierten Parser.
 
  
 
 Während des Installationsvorgangs muss die Parser-DLL Folgendes identifizieren:
 
--   Die Anzahl der Parser in der dll – einschließlich eines Namens und einer Kommentar Beschreibung für jeden Parser.
--   Die Protokolle, die dem parserprotokoll vorangestellt sind.
--   Die Protokolle, die dem Parser-Protokoll folgen.
+-   Die Anzahl der Parser in der DLL, einschließlich eines Namens und einer Kommentarbeschreibung für jeden Parser.
+-   Die Protokolle, die dem Parserprotokoll vorangestellt sind.
+-   Die Protokolle, die dem Parserprotokoll folgen.
 
 > [!Note]  
-> Netzwerkmonitor verwendet die vorhergehenden und folgenden Parser-Protokollinformationen, um die [*Übergabe Sätze*](h.md) zu aktualisieren und die Sätze von Parser zu [*befolgen*](f.md) , die von der Parser-DLL identifiziert werden.
+> Netzwerkmonitor verwendet die obigen und folgenden Parserprotokollinformationen, um die [*Übergabesätze*](h.md) zu aktualisieren und den von der Parser-DLL identifizierten [*Parsersätzen zu folgen.*](f.md)
 
  
 
-Im folgenden Verfahren werden die erforderlichen Schritte zum Implementieren von " [**Parser autoinstallinfo**](parserautoinstallinfo.md)" beschrieben.
+Mit dem folgenden Verfahren werden die Schritte identifiziert, die zum Implementieren von [**ParserAutoInstallInfo**](parserautoinstallinfo.md)erforderlich sind.
 
-**So implementieren Sie "Parser autoinstallinfo"**
+**So implementieren Sie ParserAutoInstallInfo**
 
-1.  Zuordnen einer [**PF \_ parserdllinfo**](pf-parserdllinfo.md) -Struktur mithilfe von **HeapAlloc**.
-2.  Geben Sie mithilfe von **HeapFree** Arbeitsspeicher an den Heap zurück.
-3.  Beachten Sie, dass dieser-Befehl auch eine [**PF \_ parserinfo**](pf-parserinfo.md) -Struktur für jeden Parser in der dll zuordnen muss.
-4.  Geben Sie die Anzahl der Parser (in der Regel eine) an, die die dll im **nparser** -Member von [**PF-Parser " \_ Parser**](pf-parserdllinfo.md)" enthält.
-5.  Geben Sie einen Namen, einen Kommentar und eine optionale Hilfedatei in den Elementen **szprotocolname**, **szcomment** und **szhelpfile** jeder [**PF \_**](pf-parserinfo.md) -Parameter Info-Struktur an.
-6.  Geben Sie die Protokolle an, die jedem dll-Protokoll vorangestellt sind. Eine der folgenden Bedingungen gilt für einen eingehenden Übergabe-Satz.
-    -   Wenn die oben genannten Protokolle feststellen können, ob Ihr Protokoll aus den Daten in den vorangehenden Protokollen folgt, legen Sie den **pwhohandsofftome** -Member von PF-Parameter [**\_ Info**](pf-parserinfo.md)fest. In diesem Fall wird Ihr Protokoll dann den [*Übergabe Sätzen*](h.md) der vorherigen Protokolle hinzugefügt.
-    -   Wenn die oben genannten Protokolle nicht bestimmen können, ob Ihr Protokoll aus den Daten in den vorangehenden Protokollen folgt, legen Sie das **pwhocanvoran-** Element von PF-Parameter [**\_ Info**](pf-parserinfo.md)fest. In diesem Fall wird Ihr Protokoll den [*folgenden Protokoll Sätzen*](f.md) hinzugefügt.
-7.  Geben Sie die Protokolle an, die den einzelnen dll-Protokollen entsprechen. Eine der folgenden Bedingungen gilt für eine ausgehende Folge Gruppe.
-    -   Wenn Ihr Protokoll basierend auf den Daten in Ihrem Protokoll feststellen kann, welche Protokolle befolgt werden, legen Sie den **pwhodoihandoffto** -Member von PF-Parameter [**\_ Info**](pf-parserinfo.md)fest. In diesem Fall werden diese Protokolle dem [*Übergabe Satz*](h.md) ihrer Protokolle hinzugefügt.
-    -   Wenn Ihr Protokoll nicht ermitteln kann, welche Protokolle auf der Grundlage von Daten in Ihrem Protokoll befolgt werden, legen Sie das **pwhocanfollowme** -Element von PF-Parameter [**\_ Info**](pf-parserinfo.md)fest. In diesem Fall werden diese Protokolle dem [*folgenden Protokoll Satz*](f.md) hinzugefügt.
-8.  Gibt die [**PF- \_ parameserdllinfo**](pf-parserdllinfo.md) -Struktur an Netzwerkmonitor zurück.
+1.  Zuordnen einer [**PF \_ PARSERDLLINFO-Struktur**](pf-parserdllinfo.md) mit **HeapAlloc**.
+2.  Geben Sie mit **HeapFree** Arbeitsspeicher an den Heap zurück.
+3.  Beachten Sie, dass dieser Aufruf auch eine [**PF \_ PARSERINFO-Struktur**](pf-parserinfo.md) für jeden Parser in der DLL zuordnen muss.
+4.  Geben Sie die Anzahl der Parser (in der Regel eins) an, die die DLL im **nParsers-Member** von [**PF \_ PARSERDLLINFO**](pf-parserdllinfo.md)enthält.
+5.  Geben Sie einen Namen, einen Kommentar und eine optionale Hilfedatei in den **Membern szProtocolName,** **szComment** und **szHelpFile** jeder [**PF \_ PARSERINFO-Struktur**](pf-parserinfo.md) an.
+6.  Geben Sie die Protokolle an, die jedem DLL-Protokoll vorangestellt sind. Eine der folgenden Bedingungen gilt für einen eingehenden Übergabesatz.
+    -   Wenn die vorherigen Protokolle bestimmen können, dass Ihr Protokoll den Daten in den vorherigen Protokollen folgt, legen Sie den **pWhoHandsOffToMe-Member** von [**PF \_ PARSERINFO**](pf-parserinfo.md)fest. In diesem Fall wird Ihr Protokoll dann den [*Übergabesätzen*](h.md) der vorherigen Protokolle hinzugefügt.
+    -   Wenn die vorherigen Protokolle nicht ermitteln können, ob Ihr Protokoll auf daten in den vorherigen Protokollen folgt, legen Sie **pWhoCanPrecedeMe-Member** von [**PF \_ PARSERINFO**](pf-parserinfo.md)fest. In diesem Fall wird das Protokoll dann den [*folgenden Protokollsätzen*](f.md) hinzugefügt.
+7.  Geben Sie die Protokolle an, die den einzelnen DLL-Protokollen folgen. Eine der folgenden Bedingungen gilt für einen ausgehenden Follow-Set.
+    -   Wenn Ihr Protokoll anhand der Daten in Ihrem Protokoll bestimmen kann, welche Protokolle folgen, legen Sie den **pWhoDoIHandOffTo-Member** von [**PF \_ PARSERINFO**](pf-parserinfo.md)fest. In diesem Fall werden diese Protokolle dem [*Übergabesatz*](h.md) Ihrer Protokolle hinzugefügt.
+    -   Wenn Ihr Protokoll anhand der Daten in Ihrem Protokoll nicht bestimmen kann, welche Protokolle folgen, legen Sie den **pWhoCanFollowMe-Member** von [**PF \_ PARSERINFO**](pf-parserinfo.md)fest. In diesem Fall werden diese Protokolle dem [*folgenden Satz*](f.md) Ihres Protokolls hinzugefügt.
+8.  Gibt die [**\_ PARSERDLLINFO-PF-Struktur**](pf-parserdllinfo.md) an Netzwerkmonitor zurück.
 
-Im folgenden finden Sie eine grundlegende Implementierung von " [**Parser autoinstallinfo**](parserautoinstallinfo.md)". Das Codebeispiel stammt aus dem generischen Parser, den Netzwerkmonitor bereitstellt.
+Im Folgenden ist eine grundlegende Implementierung von [**ParserAutoInstallInfo .**](parserautoinstallinfo.md) Das Codebeispiel stammt aus dem generischen Parser, den Netzwerkmonitor bereitstellt.
 
 ``` syntax
 #include <windows.h>

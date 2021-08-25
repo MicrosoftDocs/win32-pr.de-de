@@ -1,12 +1,12 @@
 ---
-title: Restoredefaults-Methode der Win32_TSPermissionsSetting-Klasse (Netfw. h)
-description: Stellt die standardmäßigen Berechtigungs Satz Werte für das Terminal wieder her.
+title: RestoreDefaults-Methode der Win32_TSPermissionsSetting-Klasse (Netfw.h)
+description: Stellt die Standardberechtigungssatzwerte für das Terminal wieder her.
 ms.assetid: bdd01290-7c7c-4355-85dc-ade51b2abd94
 ms.tgt_platform: multiple
 keywords:
-- Restoredefaults-Methode Remotedesktopdienste
-- Restoredefaults-Methode Remotedesktopdienste, Win32_TSPermissionsSetting-Klasse
-- Win32_TSPermissionsSetting-Klasse Remotedesktopdienste, restoredefaults-Methode
+- RestoreDefaults-Methode Remotedesktopdienste
+- RestoreDefaults-Methode Remotedesktopdienste , Win32_TSPermissionsSetting-Klasse
+- Win32_TSPermissionsSetting-Klasse Remotedesktopdienste , RestoreDefaults-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 073a8f8267ab9e7f7cbd50f15f4f3f20594d2e39
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8ef81f4b3008f68129026a90d1b2e98e8c13c298537952175e116c9c8e02c4f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769450"
 ---
-# <a name="restoredefaults-method-of-the-win32_tspermissionssetting-class"></a>Restoredefaults-Methode der Win32 \_ tspermissionssetting-Klasse
+# <a name="restoredefaults-method-of-the-win32_tspermissionssetting-class"></a>RestoreDefaults-Methode der Win32 \_ TSPermissionsSetting-Klasse
 
-Die **restoredefaults** -Methode stellt die standardmäßigen Berechtigungs Satz Werte für das Terminal wieder her.
+Die **RestoreDefaults-Methode** stellt die Standardberechtigungssatzwerte für das Terminal wieder her.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls fehlgeschlagen.
+Gibt Erfolg bei Erfolg zurück, andernfalls Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standard Berechtigungen lauten wie folgt:
+Die Standardberechtigungen sind:
 
--   Die Konten "Administratoren", "System" und "Remotedesktop Help Assistant" verfügen über alle [Remotedesktopdienste Berechtigungen](terminal-services-permissions.md).
--   Das Remotedesktop Benutzerkonto verfügt über die Berechtigungen anmelden, verbinden, Abfrage Informationen und Nachricht senden.
--   Die Konten "lokaler Dienst" und "Netzwerkdienst" verfügen über Abfrage Informationen und die Berechtigung "Nachricht senden".
+-   Die Konten Administratoren, System und Remotedesktop Help Assistant verfügen über alle [Remotedesktopdienste Berechtigungen.](terminal-services-permissions.md)
+-   Das konto Remotedesktop Users verfügt über die Berechtigungen Anmelden, Verbinden, Abfrageinformationen und Nachricht senden.
+-   Die Konten lokaler Dienst und Netzwerkdienst verfügen über Abfrageinformationen und die Berechtigung Nachricht senden.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| Header<br/>                   | <dl> <dt>Netfw. h</dt> </dl>      |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netfw.h</dt> </dl>      |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -74,7 +74,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ tspermissionssetting**](win32-tspermissionssetting.md)
+[**Win32 \_ TSPermissionsSetting**](win32-tspermissionssetting.md)
 </dt> </dl>
 
  

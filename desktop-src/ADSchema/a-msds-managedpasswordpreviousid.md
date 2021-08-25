@@ -1,11 +1,11 @@
 ---
-title: ms-DS-managedpasswordpreviousid-Attribut
-description: Dieses konstruierte Attribut enthält den Schlüssel Bezeichner für die vorherigen verwalteten Kenn Wort Daten für eine Gruppen-MSA.
+title: ms-DS-ManagedPasswordPreviousId-Attribut
+description: Dieses konstruierte Attribut enthält den Schlüsselbezeichner für die vorherigen verwalteten Kennwortdaten für eine Gruppen-MSA.
 ms.assetid: 02e1a57b-6d56-44ab-ba89-50b82d325fe7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-managedpasswordpreviousid-Attributs
-- AD-Schema des msDS-managedpasswordpreviousid-Attributs
+- ms-DS-ManagedPasswordPreviousId-Attribut AD-Schema
+- msDS-ManagedPasswordPreviousId-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fab69454b85b4509f8184303f0ac7999589fb8f8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8375d1136c41468ab8d814a4f3102ceb8b128a0bc3a03fe7866a77aa9c411fad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804040"
 ---
-# <a name="ms-ds-managedpasswordpreviousid-attribute"></a>ms-DS-managedpasswordpreviousid-Attribut
+# <a name="ms-ds-managedpasswordpreviousid-attribute"></a>ms-DS-ManagedPasswordPreviousId-Attribut
 
-Dieses konstruierte Attribut enthält den Schlüssel Bezeichner für die vorherigen verwalteten Kenn Wort Daten für eine Gruppen-MSA.
+Dieses konstruierte Attribut enthält den Schlüsselbezeichner für die vorherigen verwalteten Kennwortdaten für eine Gruppen-MSA.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-managedpasswordpreviousid                       |
-| LDAP-Display-Name | MSDS-managedpasswordpreviousid                        |
+| CN                | ms-DS-ManagedPasswordPreviousId                       |
+| Ldap-Anzeigename | msDS-ManagedPasswordPreviousId                        |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2198                               |
 | System-ID-GUID    | d0d62131-2d4a-d04f-99d9-1c63646229a4                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
@@ -52,16 +52,16 @@ Dieses konstruierte Attribut enthält den Schlüssel Bezeichner für die vorheri
 |------------------------|---------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                          |
 | MAPI-Id                | \-                                                                                          |
-| System-Only            | Richtig                                                                                        |
-| Ist-einwertig       | Richtig                                                                                        |
+| System-Only            | True                                                                                        |
+| Ist einwertig       | True                                                                                        |
 | Ist indiziert             | False                                                                                       |
 | Im globalen Katalog      | False                                                                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                |
 | Range-Lower            | \-                                                                                          |
 | Range-Upper            | \-                                                                                          |
 | Search-Flags           | 0x00000000                                                                                  |
 | System-Flags           | 0x00000010                                                                                  |
-| In verwendete Klassen        | [**ms-DS-Group-Managed-Service-Konto**](c-msds-groupmanagedserviceaccount.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Group-Managed-Service-Account**](c-msds-groupmanagedserviceaccount.md)<br/> |
 
 
 

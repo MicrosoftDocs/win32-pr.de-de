@@ -1,5 +1,5 @@
 ---
-description: Unterklassen werden automatisch Unterklassen und 3D-Effekte zu allen Dialogfeldern in der Anwendung hinzugefügt.
+description: Automatisches Unterklassen und Hinzufügen von 3D-Effekten zu allen Dialogfeldern in der Anwendung.
 ms.assetid: 96555052-c564-4cc7-9b24-e527f8e2f879
 title: Ctl3dAutoSubclass-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 85f4c85d1d608ff97147a935806b090162f5a78a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5edc8bafb00d5444f18b61e0600fb075b6a7367c315c2ab1cfe38f911e9a84d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654610"
 ---
 # <a name="ctl3dautosubclass-function"></a>Ctl3dAutoSubclass-Funktion
 
-Unterklassen werden automatisch Unterklassen und 3D-Effekte zu allen Dialogfeldern in der Anwendung hinzugefügt.
+Automatisches Unterklassen und Hinzufügen von 3D-Effekten zu allen Dialogfeldern in der Anwendung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ PUBLIC BOOL FAR PASCAL Ctl3dAutoSubclass(
 
 <dl> <dt>
 
-*hinstapp* 
+*hinstApp* 
 </dt> <dd>
 
 Ein Handle für die Anwendung, die als Client registriert werden soll.
@@ -48,15 +48,15 @@ Ein Handle für die Anwendung, die als Client registriert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, es sei denn, eine der folgenden Bedingungen ist vorhanden. in diesem Fall wird **false** zurückgegeben:
+Gibt **TRUE** zurück, es sei denn, eine der folgenden Bedingungen ist vorhanden. In diesem Fall wird **FALSE** zurückgegeben:
 
--   Ctl3d wird unter Windows, Version 3,0 oder früher, ausgeführt.
--   Ctl3d ist in den Tabellen für die aktuelle Anwendung nicht verfügbar. Ctl3d kann bis zu 32 Anwendungen gleichzeitig bedienen.
--   Ctl3d kann seinen CBT-Hook nicht installieren.
+-   CTL3D wird unter Windows Version 3.0 oder früher ausgeführt.
+-   Für CTL3D ist in den Tabellen für die aktuelle Anwendung kein Speicherplatz verfügbar. CTL3D kann bis zu 32 Anwendungen gleichzeitig bedienen.
+-   CTL3D kann den CBT-Hook nicht installieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

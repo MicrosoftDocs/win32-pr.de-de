@@ -1,7 +1,7 @@
 ---
-description: Die getserializedsize-Methode berechnet die Puffergröße, die zum Speichern einer serialisierten iportabledevicevalues-Schnittstelle erforderlich ist.
+description: Die GetSerializedSize-Methode berechnet die Puffergröße, die zum Speichern einer serialisierten IPortableDeviceValues-Schnittstelle erforderlich ist.
 ms.assetid: 12fa6ed1-ce3b-4c5d-920a-87ff693fe0ea
-title: 'Iwpdserializer:: getserializedsize-Methode (portabledevicetypes. h)'
+title: IWpdSerializer::GetSerializedSize-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7b50f7f6158145cd71125b5e5f26649712bb065b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae6b8381928c64b7d16e9f5daa4dd9fd85acd9b61c13531365d871563ef6afe0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704520"
 ---
-# <a name="iwpdserializergetserializedsize-method"></a>Iwpdserializer:: getserializedsize-Methode
+# <a name="iwpdserializergetserializedsize-method"></a>IWpdSerializer::GetSerializedSize-Methode
 
-Die **getserializedsize** -Methode berechnet die Puffergröße, die zum Speichern einer serialisierten [**iportabledevicevalues**](iportabledevicevalues.md) -Schnittstelle erforderlich ist.
+Die **GetSerializedSize-Methode** berechnet die Puffergröße, die zum Speichern einer serialisierten [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md) erforderlich ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetSerializedSize(
 
 <dl> <dt>
 
-*psource* \[ in\]
+*pSource* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**iportabletovicevalues**](iportabledevicevalues.md) -Schnittstelle, deren Größe Sie anfordern möchten.
+Zeiger auf eine [**IPortableDeviceValues-Schnittstelle,**](iportabledevicevalues.md) deren Größe Sie anfordern möchten.
 
 </dd> <dt>
 
-*pdwSize* \[ vorgenommen\]
+*pdwSize* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein **DWORD** , das die für die Serialisierung von *psource* erforderliche Puffergröße in Bytes angibt.
+Zeiger auf ein **DWORD,** das die Puffergröße angibt, die zum Serialisieren *von pSource* in Bytes erforderlich ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                            |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Die Methode wurde erfolgreich ausgeführt.<br/>                                       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein erforderliches Zeigerargument war **null**.<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Es war nicht genügend Arbeitsspeicher verfügbar, um den Puffer zu erstellen.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein erforderliches Zeigerargument war **NULL.**<br/>                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es war nicht genügend Arbeitsspeicher verfügbar, um den Puffer zu erstellen.<br/> |
 
 
 
@@ -77,8 +77,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Iwpdserializer-Schnittstelle**](iwpdserializer.md)
+[**IWpdSerializer-Schnittstelle**](iwpdserializer.md)
 </dt> </dl>
 
  

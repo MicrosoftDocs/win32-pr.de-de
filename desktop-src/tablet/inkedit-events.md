@@ -4,12 +4,12 @@ ms.assetid: 1b9c0587-5854-45b5-b6d3-97d736cf92aa
 title: InkEdit-Ereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54727b4e582fa4133768269a8980ccbafe12975a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67be45ccf1c4afa782189267ea07dd0bff09df937ba6e3c17bd701d6dfe98be1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712930"
 ---
 # <a name="inkedit-events"></a>InkEdit-Ereignisse
 
@@ -17,21 +17,21 @@ Dieser Abschnitt enthält Ereignisse, die zum InkEdit-Steuerelement gehören.
 
 
 
-| Ereignis                                                  | BESCHREIBUNG                                                                                                                                                                                                                  |
+| Ereignis                                                  | Beschreibung                                                                                                                                                                                                                  |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Klima**](inkedit-change.md)                       | Tritt auf, wenn sich der Inhalt des Steuer Elements oder ein Eigenschafts Wert ändert.<br/>                                                                                                                                               |
-| [**Sie**](inkedit-click.md)                         | Tritt beim Klicken auf das Steuerelement ein.<br/>                                                                                                                                                                               |
-| [**DblClick**](inkedit-dblclick.md)                   | Tritt beim Doppelklicken auf das Steuerelement ein.<br/>                                                                                                                                                                        |
-| [**Geste**](inkedit-gesture.md)                     | Tritt auf, wenn eine Anwendungs Geste erkannt wird.<br/>                                                                                                                                                                 |
-| [**KeyDown**](inkedit-keydown.md)                     | Tritt ein, wenn der Benutzer eine Taste drückt, während das [InkEdit](inkedit-control-reference.md) -Steuerelement den Fokus besitzt.<br/>                                                                                                          |
-| [**KeyPress**](inkedit-keypress.md)                   | Tritt auf, wenn eine Taste gedrückt wird, während das [InkEdit](inkedit-control-reference.md) -Steuerelement den Fokus besitzt.<br/>                                                                                                                |
-| [**KeyUp**](inkedit-keyup.md)                         | Tritt auf, wenn eine Taste losgelassen wird, während das [InkEdit](inkedit-control-reference.md) -Steuerelement den Fokus besitzt.<br/>                                                                                                               |
-| [**MouseDown**](inkedit-mousedown.md)                 | Tritt ein, wenn sich der Mauszeiger über dem [InkEdit](inkedit-control-reference.md) -Steuerelement befindet und eine Maustaste gedrückt wird.<br/>                                                                                         |
-| [**MouseMove**](inkedit-mousemove.md)                 | Tritt ein, wenn der Mauszeiger über das [InkEdit](inkedit-control-reference.md) -Steuerelement bewegt wird.<br/>                                                                                                                 |
-| [**MouseUp**](inkedit-mouseup.md)                     | Tritt ein, wenn sich der Mauszeiger über dem [InkEdit](inkedit-control-reference.md) -Steuerelement befindet und eine Maustaste losgelassen wird.<br/>                                                                                        |
-| [**Erkennungs Ergebnis**](inkedit-recognitionresult.md) | Tritt auf, wenn das [InkEdit](inkedit-control-reference.md) -Steuerelement Ergebnisse manuell von einem Rückruf der Erkennungsmethode oder automatisch nach dem [**Auslösen des Erkennungs**](/windows/desktop/api/inked/nf-inked-iinkedit-recognize) Timeouts abruft.<br/> |
-| [**SelChange**](inkedit-selchange.md)                 | Tritt auf, wenn sich die Auswahl von frei Hand Eingaben im [InkEdit](inkedit-control-reference.md) -Steuerelement ändert.<br/>                                                                                                             |
-| [**Stellung**](inkedit-stroke.md)                       | Tritt auf, wenn der Benutzer ein neues [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt für ein beliebiges [**iinktablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) -Objekt zeichnet.<br/>                                                                                  |
+| [**Change**](inkedit-change.md)                       | Tritt ein, wenn sich der Inhalt des Steuerelements oder ein Eigenschaftswert ändert.<br/>                                                                                                                                               |
+| [**Klicken**](inkedit-click.md)                         | Tritt beim Klicken auf das Steuerelement ein.<br/>                                                                                                                                                                               |
+| [**Dblclick**](inkedit-dblclick.md)                   | Tritt beim Doppelklicken auf das Steuerelement ein.<br/>                                                                                                                                                                        |
+| [**Geste**](inkedit-gesture.md)                     | Tritt ein, wenn eine Anwendungsgeste erkannt wird.<br/>                                                                                                                                                                 |
+| [**Keydown**](inkedit-keydown.md)                     | Tritt ein, wenn der Benutzer eine Taste drückt, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.<br/>                                                                                                          |
+| [**Keypress**](inkedit-keypress.md)                   | Tritt ein, wenn eine Taste gedrückt wird, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.<br/>                                                                                                                |
+| [**Keyup**](inkedit-keyup.md)                         | Tritt ein, wenn ein Schlüssel losgelassen wird, während das [InkEdit-Steuerelement](inkedit-control-reference.md) den Fokus besitzt.<br/>                                                                                                               |
+| [**Mousedown**](inkedit-mousedown.md)                 | Tritt ein, wenn sich der Mauszeiger über dem [InkEdit-Steuerelement](inkedit-control-reference.md) befindet und eine Maustaste gedrückt wird.<br/>                                                                                         |
+| [**Mousemove**](inkedit-mousemove.md)                 | Tritt ein, wenn der Mauszeiger über das [InkEdit-Steuerelement](inkedit-control-reference.md) bewegt wird.<br/>                                                                                                                 |
+| [**Mouseup**](inkedit-mouseup.md)                     | Tritt ein, wenn sich der Mauszeiger über dem [InkEdit-Steuerelement](inkedit-control-reference.md) befindet und eine Maustaste losgelassen wird.<br/>                                                                                        |
+| [**Recognitionresult**](inkedit-recognitionresult.md) | Tritt ein, wenn das [InkEdit-Steuerelement](inkedit-control-reference.md) manuell Ergebnisse aus einem Aufruf der [**Recognize-Methode**](/windows/desktop/api/inked/nf-inked-iinkedit-recognize) oder automatisch nach dem Ausgelösten Erkennungstimeout abruft.<br/> |
+| [**SelChange**](inkedit-selchange.md)                 | Tritt ein, wenn sich die Auswahl von Ink im [InkEdit-Steuerelement](inkedit-control-reference.md) ändert.<br/>                                                                                                             |
+| [**Takt**](inkedit-stroke.md)                       | Tritt ein, wenn der Benutzer ein neues [**IInkStrokeDisp-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) für ein [**IInkTablet-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) zeichnet.<br/>                                                                                  |
 
 
 

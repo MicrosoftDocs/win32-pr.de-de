@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 83d603d2ec5fde00ef0b29d84368e04a1276f992
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9ede66e7250a1dec095bd03a72ea69e58afb59a60b43647fd49adfc958689cfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748120"
 ---
 # <a name="id3dxloaduserdata-interface"></a>ID3DXLoadUserData-Schnittstelle
 
@@ -37,7 +37,7 @@ Die **ID3DXLoadUserData-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                              | BESCHREIBUNG                                      |
+| Methode                                                              | Beschreibung                                      |
 |:--------------------------------------------------------------------|:-------------------------------------------------|
 | [**LoadFrameChildData**](id3dxloaduserdata--loadframechilddata.md) | Laden sie untergeordnete Framedaten aus einer X-Datei.<br/> |
 | [**LoadMeshChildData**](id3dxloaduserdata--loadmeshchilddata.md)   | Laden von untergeordneten Meshdaten aus einer X-Datei.<br/>  |
@@ -47,7 +47,7 @@ Die **ID3DXLoadUserData-Schnittstelle** verfügt über diese Methoden.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der LPD3DXLOADUSERDATA-Typ ist als Zeiger auf diese Schnittstelle definiert.
 
@@ -63,7 +63,7 @@ typedef interface ID3DXLoadUserData *LPD3DXLOADUSERDATA;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

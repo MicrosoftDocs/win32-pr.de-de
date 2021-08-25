@@ -1,6 +1,6 @@
 ---
-title: Win32_TSVm Methoden
-description: Die Win32- \_ Klasse "ZVM Methods" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSVm-Methoden
+description: Die Win32 \_ TSVm-Methodenklasse macht die folgenden Methoden verfügbar.
 ms.assetid: 43CD191D-0F58-48FB-843B-647491C37415
 ms.tgt_platform: multiple
 ms.topic: reference
@@ -10,45 +10,45 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: cf160e796749bd6379ae82c7b11b716f7c2771d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9a95f1e826932fea41d797ca10024fba32f5345e2cccc51960c1bf7f7969f97f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769020"
 ---
-# <a name="win32_tsvm-methods"></a>Win32-Methoden für die- \_ VM
+# <a name="win32_tsvm-methods"></a>Win32 \_ TSVm-Methoden
 
-Die Win32-Klasse " [**\_ ZVM Methods**](win32-tsvm.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSVm-Methodenklasse**](win32-tsvm.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Queryofflineinformation-Methode**](queryofflineinformation-win32-tsvm.md)
+[**QueryOfflineInformation-Methode**](queryofflineinformation-win32-tsvm.md)
 </dt> <dd>
 
-Ruft die Eigenschaften des aktuellen virtuellen Desktop Servers (VDS) ab, jedoch nur, wenn der Server offline ist.
+Ruft die Eigenschaften des aktuellen virtuellen Desktopservers (Virtual Desktop Server, VDS) ab, jedoch nur, wenn der Server offline ist.
 
 </dd> <dt>
 
-[**Dumpvminfo-Methode**](dumpvminfo-win32-tsvm.md)
+[**DumpVmInfo-Methode**](dumpvminfo-win32-tsvm.md)
 </dt> <dd>
 
-Dieser Member dient zu internen Testzwecken und sollte nicht in Ihrem Code verwendet werden.
+Dieser Member dient internen Testzwecken und sollte nicht in Ihrem Code verwendet werden.
 
 </dd> <dt>
 
-[**Export Methode**](export-win32-tsvm.md)
+[**Exportmethode**](export-win32-tsvm.md)
 </dt> <dd>
 
-Ruft die Überwachungsinformationen für die Sitzung der virtuellen Maschine ab.
+Ruft die Sitzungsüberwachungsinformationen des virtuellen Computers ab.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
 title: mad-Funktion
-description: Führt eine arithmetische Multiplikation/Add-Operation für drei Werte aus.
+description: Führt eine arithmetische Multiplikations-/Add-Operation für drei Werte aus.
 ms.assetid: 2e58229d-2387-4319-adc6-2d66eda88bd1
 keywords:
-- Mad-Funktion HLSL
+- mad-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 208b1bbc87c430ca5a58a70fb3c86f9edae762bf
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 52e0e4819e4c78f092ee99c78403ace5d0205037db3096dfe45865c2216d486d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104472005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788820"
 ---
 # <a name="mad-function"></a>mad-Funktion
 
-Führt eine arithmetische Multiplikation/Add-Operation für drei Werte aus.
+Führt eine arithmetische Multiplikations-/Add-Operation für drei Werte aus.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 numeric mad(
-  in numeric mvalue,
-  in numeric avalue,
-  in numeric bvalue
+  in numeric mvalue,
+  in numeric avalue,
+  in numeric bvalue
 );
 ```
 
@@ -38,30 +38,30 @@ numeric mad(
 
 <dl> <dt>
 
-*mValue* \[ in\]
+*mvalue* \[ In\]
 </dt> <dd>
 
 Typ: **numerisch**
 
-Der Multiplikations Wert.
+Der Multiplikationswert.
 
 </dd> <dt>
 
-*verfügbar* \[ in\]
+*avalue* \[ In\]
 </dt> <dd>
 
 Typ: **numerisch**
 
-Der erste Additions Wert.
+Der erste Additionswert.
 
 </dd> <dt>
 
-*bvalue* \[ in\]
+*bvalue* \[ In\]
 </dt> <dd>
 
 Typ: **numerisch**
 
-Der zweite Additions Wert.
+Der zweite Additionswert.
 
 </dd> </dl>
 
@@ -69,53 +69,53 @@ Der zweite Additions Wert.
 
 Typ: **numerisch**
 
-Das Ergebnis des *mValue* -Werts für den \*   +  *bvalue*.
+Das Ergebnis von *mvalue* \* *avalue*  +  *bvalue*.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
-Shaderautoren können **die Mad-Hardware Anweisung** in der kompilierten Shader-Ausgabe mit dem **Mad** instrauc explizit als Ziel verwenden. Dies ist besonders nützlich für Shader, die Ergebnisse mit dem Schlüsselwort " [präzise](dx-graphics-hlsl-appendix-keywords.md) " markieren. Die **Mad** -Anweisung kann in Hardware als "Fused" implementiert werden, was eine höhere Genauigkeit als die Implementierung einer **mul** -Anweisung, gefolgt von einer **Add** -Anweisung oder als **mul**-  +  **Add**, bietet.
+Shaderautoren können mithilfe der instrinsischen Instrinsik explizit auf die **unbrauchbare** Hardwareanweisung in der kompilierten Shaderausgabe abzielen. Dies ist besonders nützlich bei Shadern, die Ergebnisse mit dem [schlüsselwort precise](dx-graphics-hlsl-appendix-keywords.md) markieren.  Die **tollsinnige** Anweisung kann in der Hardware entweder als "fused" implementiert werden, was eine höhere Genauigkeit als die Implementierung einer **mul-Anweisung** gefolgt von einer **add-Anweisung** bietet, oder als **ein mul**  +  **add**.
 
-Wenn shaderautoren den **Mad** instrauc verwenden, um ein Ergebnis zu berechnen, das der Shader als genau gekennzeichnet hat, geben Sie der Hardware an, dass eine beliebige gültige Implementierung der **Mad** -Anweisung verwendet werden soll ("Fused" oder "Not"), solange die Implementierung für alle Verwendungen dieses **verrückten** in jedem Shader auf dieser Hardware konsistent ist. Shader können dann potenzielle Leistungsverbesserungen nutzen, indem Sie eine native **Mad** -Anweisung (im Gegensatz zu **mul**  +  **Add**) auf Hardware anwenden. Das Ergebnis der Ausführung einer systemeigenen **Mad** -Hardware Anweisung unterscheidet sich möglicherweise von der Durchführung einer **mul** , gefolgt von einem **Add**-in. Allerdings muss das Ergebnis, was das Ergebnis ist, konsistent sein, damit derselbe Vorgang in mehreren Shader oder unterschiedlichen Teilen eines Shader erfolgt.
+Wenn Shaderautoren  die instrinsische Farbe verwenden, um ein Ergebnis zu berechnen, das der Shader als präzise markiert hat, geben sie der Hardware an, eine gültige Implementierung der **irrsinnigen** Anweisung zu verwenden (fused oder nicht), solange die Implementierung für alle Verwendungen dieser intrinsischen **Intrinsik** in einem Shader auf dieser Hardware konsistent ist. Shader können dann die Vorteile potenzieller Leistungsverbesserungen nutzen, indem sie eine native **tollanweisung** (im Gegensatz zu **mul**  +  **add**) auf einigen Hardwarekomponenten verwenden. Das Ergebnis der Ausführung einer nativen **rauschenden** Hardwareanweisung unterscheidet sich möglicherweise von der Ausführung eines **Muls** gefolgt von einer **add -Anweisung.** Unabhängig vom Ergebnis muss das Ergebnis jedoch konsistent sein, damit der gleiche Vorgang in mehreren Shadern oder verschiedenen Teilen eines Shaders ausgeführt wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

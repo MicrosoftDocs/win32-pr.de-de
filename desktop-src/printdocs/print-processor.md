@@ -1,31 +1,31 @@
 ---
-description: Der Druck Spooler überwacht die aktuellen Druckaufträge und den Ziel Drucker, um eine geeignete Zeit zum Drucken eines Auftrags zu ermitteln.
+description: Der Druckspooler überwacht die aktuellen Druckaufträge und den Zieldrucker, um eine geeignete Zeit zum Drucken eines Auftrags zu bestimmen.
 ms.assetid: c3ce7c63-b72d-4e91-9509-5189f2ccac8a
-title: Druck Prozessor
+title: Druckprozessor
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bcb7ed062b4e03069201d3ec1faa0ee427f0973
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1250c617706b8e11309ffaf151fb09820ba1acbdb9f09d5cf44086e2153f8c5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119718620"
 ---
-# <a name="print-processor"></a>Druck Prozessor
+# <a name="print-processor"></a>Druckprozessor
 
-Der Druck Spooler überwacht die aktuellen Druckaufträge und den Ziel Drucker, um eine geeignete Zeit zum Drucken eines Auftrags zu ermitteln. Wenn der Spooler feststellt, dass ein Auftrag gedruckt werden soll, ruft er den Druck Prozessor auf. Der Druck Prozessor ist ein Plug-in, das Druckauftrags Daten verarbeitet.
+Der Druckspooler überwacht die aktuellen Druckaufträge und den Zieldrucker, um eine geeignete Zeit zum Drucken eines Auftrags zu bestimmen. Sobald der Spooler bestimmt, dass ein Auftrag gedruckt werden soll, ruft er den Druckprozessor auf. Der Druckprozessor ist ein Plug-In, das Druckauftragsdaten verarbeitet.
 
-Verwenden Sie die folgenden Funktionen, um mit Druck Prozessoren zu arbeiten.
+Verwenden Sie die folgenden Funktionen, um mit Druckprozessoren zu arbeiten.
 
 
 
-| Funktion                                                           | BESCHREIBUNG                                                          |
+| Funktion                                                           | Beschreibung                                                          |
 |--------------------------------------------------------------------|----------------------------------------------------------------------|
-| [**Addprintprocessor**](addprintprocessor.md)                     | Installiert einen Druck Prozessor auf einem angegebenen Server.                    |
-| [**Deleteprintprocessor**](deleteprintprocessor.md)               | Entfernt einen Drucker Prozessor von einem angegebenen Server.                 |
-| [**Enumprintprocessordatatypes**](enumprintprocessordatatypes.md) | Listet die Datentypen auf, die ein angegebener Druck Prozessor unterstützt. |
-| [**Enumprintprozessoren**](enumprintprocessors.md)                 | Listet die Druck Prozessoren auf, die auf einem angegebenen Server installiert sind.     |
-| [**Getprintprocessordirectory**](getprintprocessordirectory.md)   | Ruft den Pfad für den Druck Prozessor auf dem angegebenen Server ab.  |
+| [**AddPrintProcessor**](addprintprocessor.md)                     | Installiert einen Druckprozessor auf einem angegebenen Server.                    |
+| [**DeletePrintProcessor**](deleteprintprocessor.md)               | Entfernt einen Druckerprozessor von einem angegebenen Server.                 |
+| [**EnumPrintProcessorDatatypes**](enumprintprocessordatatypes.md) | Listet die Datentypen auf, die ein angegebener Druckprozessor unterstützt. |
+| [**EnumPrintProcessors**](enumprintprocessors.md)                 | Listet die druckprozessoren auf, die auf einem angegebenen Server installiert sind.     |
+| [**GetPrintProcessorDirectory**](getprintprocessordirectory.md)   | Ruft den Pfad für den Druckprozessor auf dem angegebenen Server ab.  |
 
 
 

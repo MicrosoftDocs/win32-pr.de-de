@@ -1,9 +1,9 @@
 ---
-title: RB_INSERTBAND Meldung (kommstrg. h)
-description: Fügt ein neues Band in ein Grund leisten-Steuerelement ein.
+title: RB_INSERTBAND (Commctrl.h)
+description: Fügt ein neues Band in ein Rebar-Steuerelement ein.
 ms.assetid: ac621f65-b8ab-41d6-928d-a48fbea572e7
 keywords:
-- Windows-Steuerelemente für RB_INSERTBAND Meldung
+- RB_INSERTBAND meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c39b45eb662fb4c2058b87837352339c84762188
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e0e21020302e4dcbfeb75f4a57d37be4b5c5703668231e8ec8e9dd9bd9577cbb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119770160"
 ---
-# <a name="rb_insertband-message"></a>RB \_ InsertBand-Nachricht
+# <a name="rb_insertband-message"></a>RB \_ INSERTBAND-Nachricht
 
-Fügt ein neues Band in ein Grund leisten-Steuerelement ein.
+Fügt ein neues Band in ein Rebar-Steuerelement ein.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,20 +34,20 @@ Fügt ein neues Band in ein Grund leisten-Steuerelement ein.
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index der Position, an der das Band eingefügt wird. Wenn Sie diesen Parameter auf "-1" festlegen, fügt das Steuerelement das neue Band am letzten Speicherort hinzu.
+Nullbasierter Index der Position, an der das Band eingefügt wird. Wenn Sie diesen Parameter auf -1 festlegen, fügt das Steuerelement das neue Band an der letzten Position hinzu.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**REBARBANDINFO**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) -Struktur, die das einzufügende Band definiert. Sie müssen den **CBSIZE** -Member dieser Struktur auf **sizeof**(REBARBANDINFO) festlegen, bevor Sie diese Nachricht senden.
+Zeiger auf eine [**REBARBANDINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfoa) die das zu einfügende Band definiert. Sie müssen den **cbSize-Member** dieser -Struktur auf **sizeof**(REBARBANDINFO) festlegen, bevor Sie diese Nachricht senden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **RB \_ Insertbandw** (Unicode) und **RB \_ insertbanda** (ANSI)<br/>               |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **RB \_ INSERTBANDW** (Unicode) und **RB \_ INSERTBANDA** (ANSI)<br/>               |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentindextuplesvarsegmacnotallowedexception-Konstruktor'
-title: Esentindextuplesvarsegmacnotallowedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentIndexTuplesVarSegMacNotAllowedException-Konstruktor'
+title: EsentIndexTuplesVarSegMacNotAllowedException-Konstruktor
 TOCTitle: 'EsentIndexTuplesVarSegMacNotAllowedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentIndexTuplesVarSegMacNotAllowedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentindextuplesvarsegmacnotallowedexception.esentindextuplesvarsegmacnotallowedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cfaab90f96bc66bcef96c868767aff768d116589
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35501ec78fb0a209b86776e3342d44e7a0c52adaecb844d2e05fa8e4bf6b1f23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119724140"
 ---
-# <a name="esentindextuplesvarsegmacnotallowedexception-constructor"></a>Esentindextuplesvarsegmacnotallowedexception-Konstruktor
+# <a name="esentindextuplesvarsegmacnotallowedexception-constructor"></a>EsentIndexTuplesVarSegMacNotAllowedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentindextuplesvarsegmacnotallowedexception-Klasse.
+Initialisiert eine neue Instanz der EsentIndexTuplesVarSegMacNotAllowedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentIndexTuplesVarSegMacNotAllowedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentindextuplesvarsegmacnotallowedexception-Klasse](./esentindextuplesvarsegmacnotallowedexception-class.md)
+[EsentIndexTuplesVarSegMacNotAllowedException-Klasse](./esentindextuplesvarsegmacnotallowedexception-class.md)
 
-[Esentindextuplesvarsegmacnotallowedexception-Elemente](./esentindextuplesvarsegmacnotallowedexception-members.md)
+[EsentIndexTuplesVarSegMacNotAllowedException-Member](./esentindextuplesvarsegmacnotallowedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

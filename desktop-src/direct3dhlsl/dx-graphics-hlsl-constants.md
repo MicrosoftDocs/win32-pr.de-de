@@ -14,12 +14,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f314be4b8da98ff80bd7404c270479855e13fb6e
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: b2a6b2ffa9168e870aeb405badb6ff71b0a4a59b23d76947e56a9c085ed0107a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119726550"
 ---
 # <a name="shader-constants-hlsl"></a>Shaderkonstanten (HLSL)
 
@@ -83,13 +83,13 @@ Das Deklarieren eines konstanten Puffers oder Texturpuffers sieht sehr ähnlich 
 <span id="packoffset_c_.xyzw_"></span><span id="PACKOFFSET_C_.XYZW_"></span>**packoffset**(c \# .xyzw)
 </dt> <dd>
 
-\[im \] Optional-Schlüsselwort, das zum manuellen Packen konstanter Daten verwendet wird. Konstanten können in einem beliebigen konstanten Puffer gepackt werden, wobei die Registernummer durch ( ) angegeben *\#* wird. Das Packen von Unterkomponenten (mit xyzw swizzling) ist für Konstanten verfügbar, deren Größe in ein einzelnes Register passt (nicht über eine Registergrenze hinaus). Beispielsweise konnte ein float4-Element nicht in ein einzelnes Register gepackt werden, das mit der y-Komponente beginnt, da es nicht in ein Vier-Komponenten-Register passen würde.
+\[im \] Optional-Schlüsselwort, das zum manuellen Packen konstanter Daten verwendet wird. Konstanten können in einem beliebigen konstanten Puffer gepackt werden, wobei die Registernummer durch ( ) angegeben *\#* wird. Das Packen von Unterkomponenten (mit xyzw swizzling) ist für Konstanten verfügbar, deren Größe in ein einzelnes Register passt (keine Registerbegrenzung überschreiten). Beispielsweise konnte ein float4-Element nicht in einem einzelnen Register gepackt werden, beginnend mit der y-Komponente, da es nicht in ein Vier-Komponenten-Register passt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Konstante Puffer verringern die Bandbreite, die zum Aktualisieren von Shaderkonstten erforderlich ist, indem shader-Konstanten gleichzeitig gruppiert und ein Commit für diese konstanten Konstanten ermöglicht wird, anstatt einzelne Aufrufe zum getrennten Commit jeder Konstante zu tätigen.
+Konstante Puffer verringern die Bandbreite, die zum Aktualisieren von Shaderkonst constants erforderlich ist, indem shader-Konstanten gleichzeitig gruppiert und commitiert werden können, anstatt einzelne Aufrufe zum getrennten Commit jeder Konstante zu tätigen.
 
 Ein konstanter Puffer ist eine spezialisierte Pufferressource, auf die wie ein Puffer zugegriffen wird. Jeder konstante Puffer kann bis zu 4.096 [Vektoren halten.](dx-graphics-hlsl-vector.md) Jeder Vektor enthält bis zu vier 32-Bit-Werte. Sie können bis zu 14 konstante Puffer pro Pipelinephase binden (zwei zusätzliche Slots sind für die interne Verwendung reserviert).
 
@@ -101,7 +101,7 @@ Weitere Informationen zur Verwendung konstanter Puffer in einer D3D10-Anwendung 
 
 Weitere Informationen zur Verwendung konstanter Puffer in einer D3D11-Anwendung finden Sie unter [Introduction to Buffers in Direct3D 11 (Einführung in Puffer in Direct3D 11)](/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-intro) und [How to: Create a Constant Buffer](/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to)(Erstellen eines konstanten Puffers).
 
-Ein konstanter Puffer erfordert nicht, [dass eine](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-access-views) Sicht an die Pipeline gebunden ist. Ein Texturpuffer erfordert jedoch eine Ansicht und muss an einen Texturslot gebunden sein (oder bei Verwendung eines Effekts an [**SetTextureBuffer**](/windows/desktop/api/d3d10effect/nf-d3d10effect-id3d10effectconstantbuffer-settexturebuffer) gebunden sein).
+Für einen konstanten Puffer muss keine [Sicht](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-access-views) an die Pipeline gebunden werden. Ein Texturpuffer erfordert jedoch eine Ansicht und muss an einen Texturslot gebunden sein (oder bei Verwendung eines Effekts an [**SetTextureBuffer**](/windows/desktop/api/d3d10effect/nf-d3d10effect-id3d10effectconstantbuffer-settexturebuffer) gebunden werden).
 
 Es gibt zwei Möglichkeiten, Konstantendaten zu packen: die Schlüsselwörter [register (DirectX HLSL)](dx-graphics-hlsl-variable-register.md) und [packoffset (DirectX HLSL).](dx-graphics-hlsl-variable-packoffset.md)
 
@@ -115,7 +115,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 10 und 11:
 
 ### <a name="organizing-constant-buffers"></a>Organisieren konstanter Puffer
 
-Konstante Puffer verringern die Bandbreite, die zum Aktualisieren von Shaderkonstten erforderlich ist, indem shader-Konstanten gleichzeitig gruppiert und ein Commit für diese konstanten Konstanten ermöglicht wird, anstatt einzelne Aufrufe zum getrennten Commit jeder Konstante zu tätigen.
+Konstante Puffer verringern die Bandbreite, die zum Aktualisieren von Shaderkonst constants erforderlich ist, indem shader-Konstanten gleichzeitig gruppiert und commitiert werden können, anstatt einzelne Aufrufe zum getrennten Commit jeder Konstante zu tätigen.
 
 Die beste Möglichkeit zur effizienten Nutzung von Konstantenpuffern ist die Organisation von Shadervariablen in Konstantenpuffern anhand der Updatehäufigkeit. Dadurch kann eine Anwendung die bandbreite minimieren, die zum Aktualisieren von Shaderkonst constants erforderlich ist. Beispielsweise kann ein Shader zwei konstante Puffer deklarieren und die Daten in jedem basierend auf der Aktualisierungshäufigkeit organisieren: Daten, die pro Objekt aktualisiert werden müssen (z. B. eine Weltmatrix), werden in einem konstanten Puffer gruppiert, der für jedes Objekt aktualisiert werden kann. Dies ist getrennt von Daten, die eine Szene charakterisieren, und wird daher wahrscheinlich viel seltener aktualisiert (wenn sich die Szene ändert).
 
@@ -140,7 +140,7 @@ cbuffer myScene
 
 ### <a name="default-constant-buffers"></a>Standardkonst constant buffers (Standardkonst constant buffers)
 
-Es sind zwei Standardkonst constant-Puffer verfügbar: $Global und $Param. Variablen, die im globalen Bereich platziert werden, werden dem $Global cbuffer implizit hinzugefügt. Dabei wird die gleiche Füllmethode verwendet, die auch für cbuffers verwendet wird. Einheitliche Parameter in der Parameterliste einer Funktion werden im $Param angezeigt, wenn ein Shader außerhalb des Effektframework kompiliert wird. Bei der Kompilierung innerhalb des Effektframework müssen alle Uniformen in Variablen auflösen, die im globalen Gültigkeitsbereich definiert sind.
+Es sind zwei Standardkonst constant-Puffer verfügbar: $Global und $Param. Variablen, die im globalen Bereich platziert werden, werden dem $Global cbuffer implizit hinzugefügt, indem die gleiche Packmethode verwendet wird, die für cbuffers verwendet wird. Einheitliche Parameter in der Parameterliste einer Funktion werden im $Param angezeigt, wenn ein Shader außerhalb des Effektframework kompiliert wird. Bei der Kompilierung innerhalb des Effektframework müssen alle Uniformen in Variablen auflösen, die im globalen Gültigkeitsbereich definiert sind.
 
 ## <a name="examples"></a>Beispiele
 

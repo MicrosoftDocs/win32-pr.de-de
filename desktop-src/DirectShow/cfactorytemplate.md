@@ -1,7 +1,7 @@
 ---
-description: Bietet eine Vorlage zum Erstellen von Klassenfactorys.
+description: Stellt eine Vorlage zum Erstellen von Klassen factorys zur
 ms.assetid: 3dbe6402-15f8-4490-9fe2-bebaa4e79170
-title: Cfactorytemplate-Klasse (ComBase. h)
+title: CFactoryTemplate-Klasse (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,35 +16,35 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: be5ca9b8319eeddf777cbf0071c1930f21524369
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f9fbc76fe65e1f1136fb44d22db36500c4d8870f97befa8e36fa08a108ada71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697620"
 ---
-# <a name="cfactorytemplate-class"></a>Cfactorytemplate-Klasse
+# <a name="cfactorytemplate-class"></a>CFactoryTemplate-Klasse
 
-Bietet eine Vorlage zum Erstellen von Klassenfactorys.
+Stellt eine Vorlage zum Erstellen von Klassen factorys zur
 
-In DirectShow werden **Klassenfactorys mithilfe der cfactorytemplate** -Klasse, die auch als Factoryvorlage bezeichnet wird, spezialisiert.  Jede Klassenfactory enthält einen Zeiger auf eine Factoryvorlage. Die Factoryvorlage enthält Informationen über ein COM-Objekt, einschließlich des Klassen Bezeichners (CLSID) des Objekts und eines Zeigers auf eine Funktion, die das Objekt erstellt.
+In DirectShow werden Klassenfactorys mithilfe der **CFactoryTemplate-Klasse** spezialisiert, die auch als *Factoryvorlage bezeichnet wird.* Jede Klassen factory enthält einen Zeiger auf eine Factoryvorlage. Die Factoryvorlage enthält Informationen zu einem COM-Objekt, einschließlich des Klassenbezeichners (CLSID) des Objekts und eines Zeigers auf eine Funktion, die das Objekt erstellt.
 
-Deklarieren Sie in der dll ein globales Array von fabricvorlagen mit dem Namen *g- \_ Vorlagen*. Fügen Sie für jedes Objekt in der DLL eine Factory-Vorlage ein. Wenn die [**DllGetClassObject**](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) -Funktion eine neue Klassenfactory erstellt, durchsucht Sie das Array nach einer Vorlage mit einer entsprechenden CLSID. Wenn Sie einen gefunden hat, wird eine Klassenfactory erstellt, die einen Zeiger auf die entsprechende Vorlage enthält. Wenn der Client **IClassFactory:: kreateinstance** aufruft, ruft die Klassenfactory die in der Vorlage definierte instanzizierungsfunktion auf.
+Deklarieren Sie in Ihrer DLL ein globales Array von Factoryvorlagen mit dem Namen *g \_ Templates*. Schließen Sie eine Factoryvorlage für jedes Objekt in die DLL ein. Wenn die [**DllGetClassObject-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) eine neue Klassen factory erstellt, durchsucht sie das Array nach einer Vorlage mit einer übereinstimmenden CLSID. Wenn eine gefunden wird, wird eine Klassen factory erstellt, die einen Zeiger auf die übereinstimmende Vorlage enthält. Wenn der Client **IClassFactory::CreateInstance** aufruft, ruft die Klassenfactory die instanziierte Funktion auf, die in der Vorlage definiert ist.
 
-Weitere Informationen finden Sie unter [Erstellen einer DirectShow-Filter-DLL](how-to-create-a-dll.md).
+Weitere Informationen finden Sie unter [Erstellen einer DirectShow-Filter-DLL.](how-to-create-a-dll.md)
 
 
 
-| Öffentliche Element Variablen                                                   | BESCHREIBUNG                                                                |
+| Öffentliche Membervariablen                                                   | Beschreibung                                                                |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [**m- \_ Name**](cfactorytemplate-m-name.md)                                | Name des Filters.                                                        |
-| [**m \_ CLSID**](cfactorytemplate-m-clsid.md)                              | Zeiger auf die CLSID des Objekts.                                        |
-| [**m \_ lpfnnew**](cfactorytemplate-m-lpfnnew.md)                          | Ein Zeiger auf eine Funktion, die eine Instanz des-Objekts erstellt.              |
-| [**m \_ lpfninit**](cfactorytemplate-m-lpfninit.md)                        | Ein Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.           |
-| [**m- \_ pamoviesetup- \_ Filter**](cfactorytemplate-m-pamoviesetup-filter.md) | Zeiger auf eine [**amoviesetup- \_ Filter**](amoviesetup-filter.md) Struktur. |
-| Öffentliche Methoden                                                            | BESCHREIBUNG                                                                |
-| [**Isclassid**](cfactorytemplate-isclassid.md)                           | Bestimmt, ob eine CLSID dieser Klassen Vorlage entspricht.                    |
-| [**CreateInstance**](cfactorytemplate-createinstance.md)                 | Ruft die Objekt Erstellungs Funktion für die-Klasse auf.                          |
+| [**m \_ Name**](cfactorytemplate-m-name.md)                                | Name des Filters.                                                        |
+| [**m \_ ClsID**](cfactorytemplate-m-clsid.md)                              | Zeiger auf die CLSID des Objekts.                                        |
+| [**m \_ lpfnNew**](cfactorytemplate-m-lpfnnew.md)                          | Zeiger auf eine Funktion, die eine Instanz des -Objekts erstellt.              |
+| [**m \_ lpfnInit**](cfactorytemplate-m-lpfninit.md)                        | Zeiger auf eine Funktion, die vom DLL-Einstiegspunkt aufgerufen wird.           |
+| [**m \_ pAMovieSetup-Filter \_**](cfactorytemplate-m-pamoviesetup-filter.md) | Zeiger auf eine [**AMOVIESETUP-FILTER-Struktur. \_**](amoviesetup-filter.md) |
+| Öffentliche Methoden                                                            | Beschreibung                                                                |
+| [**IsClassID**](cfactorytemplate-isclassid.md)                           | Bestimmt, ob eine CLSID dieser Klassenvorlage entspricht.                    |
+| [**CreateInstance**](cfactorytemplate-createinstance.md)                 | Ruft die Objekterstellungsfunktion für die -Klasse auf.                          |
 
 
 
@@ -56,8 +56,8 @@ Weitere Informationen finden Sie unter [Erstellen einer DirectShow-Filter-DLL](h
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> " <dt>Ermbase. lib;</dt> " " <dt>Straumbasd. lib</dt> " </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib; </dt> <dt>Strmbasd.lib</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Weitere Informationen finden Sie unter [Erstellen einer DirectShow-Filter-DLL](h
 
 <dl> <dt>
 
-[Basisklassen Referenz](base-class-reference.md)
+[Basisklassenreferenz](base-class-reference.md)
 </dt> </dl>
 
  

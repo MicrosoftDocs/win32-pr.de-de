@@ -1,28 +1,28 @@
 ---
-title: Auflisten von Dateien in einem Auftrag
-description: Um Dateien in einem Auftrag aufzuzählen, können Sie die ibackgroundcopyjob-EnumFiles-Methode abrufen. Die-Methode gibt einen ienumbackgroundcopyfiles-Schnittstellen Zeiger zurück, mit dem Sie die Dateien aufzählen.
+title: Aufzählen von Dateien in einem Auftrag
+description: Rufen Sie zum Aufzählen von Dateien in einem Auftrag die IBackgroundCopyJob EnumFiles-Methode auf. Die -Methode gibt einen IEnumBackgroundCopyFiles-Schnittstellenzeiger zurück, den Sie zum Aufzählen der Dateien verwenden.
 ms.assetid: 0e1fa024-4576-434c-bc5f-518d246b5faa
 keywords:
-- Übertragen von Auftrags Bits, Auflisten von Dateien
-- Auflisten von Datei Bits
-- Auflisten von Bits, Dateien
-- Datei Übertragungs Bits, auflisten
+- BITS des Übertragungsauftrags, Aufzählen von Dateien
+- Aufzählen von Dateien BITS
+- Aufzählen von BITS, Dateien
+- File Transfer BITS , aufzählend
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0db704e47a0e075801de2434ed30ba6fb8d8c91
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 01a986b8a8869008db34e97c1cc7e0cd733c301f5cdc57ce4ef6e313ff382479
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119801460"
 ---
-# <a name="enumerating-files-in-a-job"></a>Auflisten von Dateien in einem Auftrag
+# <a name="enumerating-files-in-a-job"></a>Aufzählen von Dateien in einem Auftrag
 
-Um Dateien in einem Auftrag aufzulisten, müssen Sie die [**ibackgroundcopyjob:: EnumFiles**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-enumfiles) -Methode aufzurufen. Die-Methode gibt einen [**ienumbackgroundcopyfiles**](/windows/desktop/api/Bits/nn-bits-ienumbackgroundcopyfiles) -Schnittstellen Zeiger zurück, mit dem Sie die Dateien aufzählen.
+Rufen Sie zum Aufzählen von Dateien in einem Auftrag die [**IBackgroundCopyJob::EnumFiles-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-enumfiles) auf. Die -Methode gibt einen [**IEnumBackgroundCopyFiles-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ienumbackgroundcopyfiles) zurück, den Sie zum Aufzählen der Dateien verwenden.
 
-Beachten Sie, dass es sich bei der aufgelisteten Liste um eine Momentaufnahme der Dateien im Auftrag handelt, wenn Sie die [**EnumFiles**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-enumfiles) -Methode aufgerufen haben. Die Eigenschaftswerte dieser Datei Objekte entsprechen jedoch den aktuellen Werten der Datei.
+Beachten Sie, dass die Aufzählliste eine Momentaufnahme der Dateien im Auftrag zum Zeitpunkt des Aufrufs der [**EnumFiles-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-enumfiles) ist. Die Eigenschaftswerte dieser Dateiobjekte spiegeln jedoch die aktuellen Werte der Datei wider.
 
-Im folgenden Beispiel wird gezeigt, wie Sie Dateien in einem Auftrag aufzählen und deren Eigenschaften abrufen. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist.
+Das folgende Beispiel zeigt, wie Dateien in einem Auftrag aufzählt und deren Eigenschaften abgerufen werden. Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist.
 
 
 ```C++
@@ -88,9 +88,9 @@ if (SUCCEEDED(hr))
 
 
 
- 
+ 
 
- 
+ 
 
 
 

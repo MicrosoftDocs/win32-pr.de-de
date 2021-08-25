@@ -1,22 +1,22 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen zu den Component Object Model (com)-Schnittstellen, die von Microsoft Direct3D 9 bereitgestellt werden.
+description: Dieser Abschnitt enthält Referenzinformationen zu den Component Object Model -Schnittstellen (COM), die von Microsoft Direct3D 9 bereitgestellt werden.
 ms.assetid: f12facdc-5a3f-4f89-8ae3-a322ef3389b2
 title: Direct3D-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e81d7da07a9389dad1629e517c728488cb5b6bf9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 85e48620ea697a52f9e5da599c4455b6c8051154394870dc4cc6bde37ef454eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791420"
 ---
 # <a name="direct3d-interfaces"></a>Direct3D-Schnittstellen
 
-Dieser Abschnitt enthält Referenzinformationen zu den Component Object Model (com)-Schnittstellen, die von Microsoft Direct3D 9 bereitgestellt werden.
+Dieser Abschnitt enthält Referenzinformationen zu den Component Object Model -Schnittstellen (COM), die von Microsoft Direct3D 9 bereitgestellt werden.
 
 > [!Note]  
-> Direct3D Windows Store-Apps können die Direct3D 9-API nicht verwenden. Verwenden Sie stattdessen die API Microsoft Direct3D 11 oder höher mit der [Featureebene](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x.
+> Direct3D Windows Store-Apps können die Direct3D 9-API nicht verwenden. Verwenden Sie stattdessen die Api Microsoft Direct3D 11 oder höher mit [Featureebene](../direct3d11/overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x.
 
  
 

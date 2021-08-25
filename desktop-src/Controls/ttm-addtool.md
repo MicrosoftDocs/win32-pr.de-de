@@ -1,9 +1,9 @@
 ---
-title: TTM_ADDTOOL Meldung (kommstrg. h)
+title: TTM_ADDTOOL Meldung (Commctrl.h)
 description: Registriert ein Tool mit einem QuickInfo-Steuerelement.
 ms.assetid: c974866b-20e7-45bc-914e-9dcf9af161e0
 keywords:
-- Windows-Steuerelemente für TTM_ADDTOOL Meldung
+- TTM_ADDTOOL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29dad3e297f8c3430f18286afa9a998eaf578a26
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bb66c43033e54ce51b396ff5bb11efe3b2a99e8eb2578a2e9fe4d4bc4487ccf0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769540"
 ---
-# <a name="ttm_addtool-message"></a>TTM \_ AddTool-Meldung
+# <a name="ttm_addtool-message"></a>TTM \_ ADDTOOL-Nachricht
 
 Registriert ein Tool mit einem QuickInfo-Steuerelement.
 
@@ -37,13 +37,13 @@ Registriert ein Tool mit einem QuickInfo-Steuerelement.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**toolinfo**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur, die Informationen enthält, die das QuickInfo-Steuerelement zum Anzeigen von Text für das Tool benötigt. Der **CBSIZE** -Member dieser Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
+Zeiger auf eine [**TOOLINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) die Informationen enthält, die das QuickInfo-Steuerelement benötigt, um Text für das Tool anzuzeigen. Der **cbSize-Member** dieser Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,27 +51,27 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TTM \_ Addtoolw** (Unicode) und **TTM \_ AddIn** (ANSI)<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TTM \_ ADDTOOLW** (Unicode) und **TTM \_ ADDTOOLA** (ANSI)<br/>                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TTM \_ Delta Tool**](ttm-deltool.md)
+[**TTM \_ DELTOOL**](ttm-deltool.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Info-Steuerelemente](tooltip-controls.md)
+[Informationen zu QuickInfo-Steuerelementen](tooltip-controls.md)
 </dt> </dl>
 
  

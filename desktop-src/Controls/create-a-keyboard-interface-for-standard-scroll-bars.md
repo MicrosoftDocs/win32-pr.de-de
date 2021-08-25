@@ -1,38 +1,38 @@
 ---
-title: Erstellen einer Tastaturschnittstelle für Standard Scrollleisten
-description: Obwohl ein Schiebe leisten-Steuerelement eine integrierte Tastaturschnittstelle bereitstellt, ist dies für eine Standard Scrollleiste nicht der Standard.
+title: Erstellen einer Tastaturschnittstelle für Standard-Scrollleisten
+description: Obwohl ein Bildlaufleisten-Steuerelement eine integrierte Tastaturschnittstelle bereitstellt, ist dies bei einer Standardbildlaufleiste nicht der DerEinführungsschutz.
 ms.assetid: 249D0077-6E61-479A-91D5-A4BD9752B82E
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43b739638d95d9f3e530718f8e9b9e6168069420
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: f25994639a40a6380bbf2f9cc0075e8a78b9e15787dbdf1babf0e6a15550faf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119698740"
 ---
-# <a name="how-to-create-a-keyboard-interface-for-standard-scroll-bars"></a>Erstellen einer Tastaturschnittstelle für Standard Scrollleisten
+# <a name="how-to-create-a-keyboard-interface-for-standard-scroll-bars"></a>Erstellen einer Tastaturschnittstelle für Standard-Scrollleisten
 
-Obwohl ein Schiebe leisten-Steuerelement eine integrierte Tastaturschnittstelle bereitstellt, ist dies für eine Standard Scrollleiste nicht der Standard. Um eine Tastaturschnittstelle für eine Standard Scrollleiste zu implementieren, muss eine Fenster Prozedur die [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Nachricht verarbeiten und den durch den *wParam* -Parameter angegebenen Code des virtuellen Schlüssels überprüfen. Wenn der Code des virtuellen Schlüssels einer Pfeiltaste entspricht, sendet die Fenster Prozedur selbst eine [**WM \_ HScroll**](wm-hscroll.md) -oder [**WM \_ VScroll**](wm-vscroll.md) -Nachricht, bei der das nieder wertige Wort des *wParam* -Parameters auf den entsprechenden Anforderungs Code der Schiebe Leiste festgelegt ist.
+Obwohl ein Bildlaufleisten-Steuerelement eine integrierte Tastaturschnittstelle bereitstellt, ist dies bei einer Standardbildlaufleiste nicht der DerEinführungsschutz. Um eine Tastaturschnittstelle für eine Standardschiebeleiste zu implementieren, muss eine Fensterprozedur die [**WM \_ KEYDOWN-Meldung**](/windows/desktop/inputdev/wm-keydown) verarbeiten und den durch den *wParam-Parameter* angegebenen Code mit virtuellen Schlüsseln untersuchen. Wenn der Code des virtuellen Schlüssels einer Pfeiltaste entspricht, sendet sich die Fensterprozedur selbst eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht,**](wm-vscroll.md) wobei das Wort in niedriger Reihenfolge des *wParam-Parameters* auf den entsprechenden Code für die Scrollleistenanforderung festgelegt ist.
 
-Wenn der Benutzer z. b. die nach-oben-Taste drückt, empfängt die Fenster Prozedur eine [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -Nachricht mit *wParam* , die der "VK up" entspricht \_ . Als Antwort sendet die Fenster Prozedur eine WM- [**\_ VScroll**](wm-vscroll.md) -Nachricht, bei der das nieder wertige Wort von *wParam* auf den SB-Anstellungs Anforderungs Code festgelegt ist \_ .
+Wenn der Benutzer beispielsweise die NACH-OBEN-TASTE drückt, empfängt die Fensterprozedur eine [**WM \_ KEYDOWN-Meldung**](/windows/desktop/inputdev/wm-keydown) mit *wParam* gleich VK \_ UP. Als Antwort sendet sich die Fensterprozedur selbst eine [**\_ WM-VSCROLL-Nachricht,**](wm-vscroll.md) wobei das Wort *wParam* in niedriger Reihenfolge auf den SB \_ LINEUP-Anforderungscode festgelegt ist.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-keyboard-interface-for-a-standard-scroll-bar"></a>Erstellen einer Tastaturschnittstelle für eine Standard Scrollleiste
+### <a name="create-a-keyboard-interface-for-a-standard-scroll-bar"></a>Erstellen einer Tastaturschnittstelle für eine Standardbildlaufleiste
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Tastaturschnittstelle für eine Standard Scrollleiste einschließen.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Tastaturschnittstelle für eine Standard-Scrollleiste einschließen.
 
 
 ```C++
@@ -80,12 +80,12 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Tastaturschnittstel
 
 <dl> <dt>
 
-[Verwenden von Scrollleisten](using-scroll-bars.md)
+[Verwenden von Bildlaufleisten](using-scroll-bars.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo zu Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

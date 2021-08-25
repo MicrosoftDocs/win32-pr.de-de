@@ -1,9 +1,9 @@
 ---
-title: Cdromburnmediaerror-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das cdromburnmediaerror-Ereignis tritt auf, wenn beim Brennen eines einzelnen Medien Elements auf einer CD ein Fehler auftritt.
+title: CholeMediaMediaError-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das C csvMediaError-Ereignis tritt auf, wenn ein Fehler auftritt, während ein einzelnes Medienelement auf eine CD geschaltet wird.
 ms.assetid: 0847a8a2-1fef-41a0-affb-9fa6bd10b925
 keywords:
-- Cdromburnmediaerror-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CholeMediaMediaError-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d9fac8902fe8700171d2c909e8140c74c8cc3c8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba161945edcda7409b842987ab97768c30a6e1f0ba011772cf7f3757d3f61c33
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765269"
 ---
-# <a name="cdromburnmediaerror-event-of-the-axwindowsmediaplayer-object"></a>Cdromburnmediaerror-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="cdromburnmediaerror-event-of-the-axwindowsmediaplayer-object"></a>CholeMediaMediaError-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das cdromburnmediaerror-Ereignis tritt auf, wenn beim Brennen eines einzelnen Medien Elements auf einer CD ein Fehler auftritt.
+Das C csvMediaError-Ereignis tritt auf, wenn ein Fehler auftritt, während ein einzelnes Medienelement auf eine CD geschaltet wird.
 
 ``` syntax
 [C#]
@@ -41,22 +41,22 @@ Private Sub player_CdromBurnMediaError(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnmediaerroreventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnmediaerrorevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ C csvMediaErrorEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ C csvMediaErrorEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft   | BESCHREIBUNG                                                                                                             |
+| Eigenschaft   | Beschreibung                                                                                                             |
 |------------|-------------------------------------------------------------------------------------------------------------------------|
-| pcdromburn | WMPLib. iwmpcdromburndie-Schnittstelle, die den Brennvorgang darstellt, der den Fehler ausgelöst hat.<br/>               |
-| pmedia     | System. objectdas Medien Element, das den Fehler ausgelöst hat. Sie können dies in eine iwmpmedia-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| pC über die 1000-Prozent-1 | WMPLib.IWMPCiba Über die Schnittstelle, die den Vorgang darstellt, der den Fehler ausgelöst hat.<br/>               |
+| pMedia     | System.ObjectDas Medienelement, das den Fehler ausgelöst hat. Sie können diese in eine IWMPMedia-Schnittstelle umleiten, um darauf zuzugreifen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um generische Fehler zu erfassen, behandeln Sie AxWMPLib. \_ Wmpocxevents \_ cdromburnerror-Ereignis.
+Behandeln Sie AxWMPLib, um generische Fehler zu erfassen. \_ WMPOCXEvents-C \_ csvError-Ereignis.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,16 +74,16 @@ Um generische Fehler zu erfassen, behandeln Sie AxWMPLib. \_ Wmpocxevents \_ cdr
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. cdromburnerror-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-cdromburnerror.md)
+[**AxWindowsMediaPlayer.C csvError-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-cdromburnerror.md)
 </dt> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCorpora Überl-Schnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

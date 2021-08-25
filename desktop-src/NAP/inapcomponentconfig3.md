@@ -1,10 +1,10 @@
 ---
-title: INapComponentConfig3-Schnittstelle (napcommon. h)
-description: Stellt NAP-System Konfigurations Methoden für System Integritätsprüfungen (SHVs) bereit, um Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen und zu ändern.
+title: INapComponentConfig3-Schnittstelle (NapCommon.h)
+description: Stellt NAP-Systemkonfigurationsmethoden für System health validators (SHVs) bereit, um Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen und zu ändern.
 ms.assetid: dbb78f7a-7c6b-4bf1-b471-374857d5dafe
 keywords:
 - INapComponentConfig3-Schnittstelle NAP
-- INapComponentConfig3 Interface NAP, beschrieben
+- INapComponentConfig3-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,21 +15,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac0cfead891da106a1a950ba83b9108b5950a738
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fea8ab7b42589fa548439b03c04ade56db498750ccd47841b806dcb6b506d3d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803080"
 ---
 # <a name="inapcomponentconfig3-interface"></a>INapComponentConfig3-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **INapComponentConfig3** -Schnittstelle stellt NAP-System Konfigurations Methoden für System Integritätsprüfungen (SHVs) bereit, um Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen und zu ändern.
+Die **INapComponentConfig3-Schnittstelle** stellt NAP-Systemkonfigurationsmethoden für System health validators (SHVs) zum Festlegen und Ändern von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereit.
 
 > [!Note]  
 > Diese Schnittstelle erbt alle Methoden von [**INapComponentConfig2**](inapcomponentconfig2.md) und sollte stattdessen verwendet werden.
@@ -38,31 +38,31 @@ Die **INapComponentConfig3** -Schnittstelle stellt NAP-System Konfigurations Met
 
 ## <a name="members"></a>Member
 
-Die **INapComponentConfig3** -Schnittstelle erbt von [**INapComponentConfig2**](inapcomponentconfig2.md). **INapComponentConfig3** verfügt auch über die folgenden Typen von Membern:
+Die **INapComponentConfig3-Schnittstelle erbt** von [**INapComponentConfig2.**](inapcomponentconfig2.md) **INapComponentConfig3** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **INapComponentConfig3** -Schnittstelle verfügt über diese Methoden.
+Die **INapComponentConfig3-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                | BESCHREIBUNG                                                                                                    |
+| Methode                                                                                | Beschreibung                                                                                                    |
 |:--------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| [**INapComponentConfig3::D eleteallconfig**](inapcomponentconfig3-deleteallconfig.md) | Wird von SHVs implementiert und bietet eine Möglichkeit, den SHV-Speicher nach dem Setup in seinen ursprünglichen Zustand zurückzusetzen.<br/>      |
-| [**INapComponentConfig3::D eleteconfig**](inapcomponentconfig3-deleteconfig.md)       | Wird von SHVs implementiert, um eine Möglichkeit zum Löschen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.<br/>  |
-| [**INapComponentConfig3:: getconfigfromid**](inapcomponentconfig3-getconfigfromid.md) | Wird von SHVs implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.<br/>  |
-| [**INapComponentConfig3:: newconfig**](inapcomponentconfig3-newconfig.md)             | Wird von SHVs implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.<br/>  |
-| [**INapComponentConfig3:: setconfigtoid**](inapcomponentconfig3-setconfigtoid.md)     | Wird von SHVs implementiert und bietet eine Möglichkeit, die Konfigurationsdaten für eine bestimmte Konfigurations-ID festzulegen.<br/> |
+| [**INapComponentConfig3::D eleteAllConfig**](inapcomponentconfig3-deleteallconfig.md) | Wird von SHVs implementiert, um eine Möglichkeit zu bieten, den SHV-Speicher nach dem Setup auf seinen ursprünglichen Zustand zurückzusetzen.<br/>      |
+| [**INapComponentConfig3::D eleteConfig**](inapcomponentconfig3-deleteconfig.md)       | Wird von SHVs implementiert, um eine Möglichkeit zum Löschen von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen.<br/>  |
+| [**INapComponentConfig3::GetConfigFromID**](inapcomponentconfig3-getconfigfromid.md) | Wird von SHVs implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen.<br/>  |
+| [**INapComponentConfig3::NewConfig**](inapcomponentconfig3-newconfig.md)             | Wird von SHVs implementiert, um eine Möglichkeit zum Erstellen von Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen.<br/>  |
+| [**INapComponentConfig3::SetConfigToID**](inapcomponentconfig3-setconfigtoid.md)     | Wird von SHVs implementiert, um eine Möglichkeit zum Festlegen der Konfigurationsdaten für eine bestimmte Konfigurations-ID bereitzustellen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle sollte nicht von Systemintegritäts-Agents (SHAs) oder Quarantäne Erzwingungs Clients (qecs) implementiert werden.
+Diese Schnittstelle sollte nicht von System health agents (SHAs) oder Quarantäneerzwingungsclients (QECs) implementiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,9 +71,9 @@ Diese Schnittstelle sollte nicht von Systemintegritäts-Agents (SHAs) oder Quara
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 

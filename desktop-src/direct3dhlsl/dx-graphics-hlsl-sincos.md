@@ -1,9 +1,9 @@
 ---
-title: SinCos
-description: Gibt den Sinus und Kosinus von x zurück.
+title: sincos
+description: Gibt den Sinus und kosinus von x zurück.
 ms.assetid: 2ef9e84e-4539-47f5-9966-d8e02ca15d36
 keywords:
-- SinCos HLSL
+- sincos HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8391c2fcecc939db1d7044fe56fbd281fe3e79fc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ff2854ea4c8b956298a65107136a963c5591b91de32d108b3179772bd0043a6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673480"
 ---
-# <a name="sincos"></a>SinCos
+# <a name="sincos"></a>sincos
 
-Gibt den Sinus und Kosinus von x zurück.
+Gibt den Sinus und kosinus von x zurück.
 
 
 
-| SinCos (*x*, out *s*, out *c*) |
+| sincos(*x*, out *s*, out *c*) |
 |-------------------------------|
 
 
@@ -37,11 +37,11 @@ Gibt den Sinus und Kosinus von x zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                                        |
+| Element                                                   | Beschreibung                                        |
 |--------------------------------------------------------|----------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert im Bogenmaße.<br/> |
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[Out \] gibt den Sinus von x zurück.<br/>          |
-| <span id="c"></span><span id="C"></span>*scher*<br/> | \[Out \] gibt den Kosinus von x zurück.<br/>        |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert im Bogenmaß.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[out \] Gibt den Sinus von x zurück.<br/>          |
+| <span id="c"></span><span id="C"></span>*C*<br/> | \[out \] Gibt den Kosinus von x zurück.<br/>        |
 
 
 
@@ -57,34 +57,34 @@ Keine.
 
 | Name | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*  | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *s*  | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
-| c    | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*  | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *s*  | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
+| c    | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

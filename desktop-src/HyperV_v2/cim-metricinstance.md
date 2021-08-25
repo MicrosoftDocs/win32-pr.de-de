@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einer Instanz eines metrikwerts und einer metrikdefinition dar.
+description: Stellt eine Zuordnung zwischen einer Instanz eines Metrikwerts und einer Metrikdefinition dar.
 ms.assetid: 4c620a7a-8b15-49ad-ae84-246e2fca175d
 title: CIM_MetricInstance-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: defba85f46e037c226a96cfaa8ffac44b99244f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ff08757b8043e51d43079be6011b69731bdc761f22da27ff85272b95d4795c1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695060"
 ---
-# <a name="cim_metricinstance-class"></a>CIM \_ metricinstance-Klasse
+# <a name="cim_metricinstance-class"></a>CIM \_ MetricInstance-Klasse
 
-Stellt eine Zuordnung zwischen einer Instanz eines metrikwerts und einer metrikdefinition dar.
+Stellt eine Zuordnung zwischen einer Instanz eines Metrikwerts und einer Metrikdefinition dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_MetricInstance : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ metricinstance** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse "MetricInstance"** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ metricinstance** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MetricInstance-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ basemetricdefinition**
+Datentyp: **CIM \_ BaseMetricDefinition**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Die Definition des metrikwerts.
+Die Definition des Metrikwerts.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ basemetricvalue**
+Datentyp: **CIM \_ BaseMetricValue**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Der Metrikwert, der der metrikdefinition zugeordnet ist.
+Der Metrikwert, der der Metrikdefinition zugeordnet ist.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Der Metrikwert, der der metrikdefinition zugeordnet ist.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Der Metrikwert, der der metrikdefinition zugeordnet ist.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

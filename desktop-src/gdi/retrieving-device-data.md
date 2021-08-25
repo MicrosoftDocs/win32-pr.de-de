@@ -1,32 +1,32 @@
 ---
-description: 'Anwendungen können die folgenden Funktionen verwenden, um Gerätedaten mit einem Gerätekontext abzurufen: GetDeviceCaps und devicecapabili.'
+description: 'Anwendungen können die folgenden Funktionen verwenden, um Gerätedaten mithilfe eines Gerätekontexts abzurufen: GetDeviceCaps und DeviceCapabilities.'
 ms.assetid: eed6a323-b7eb-41a2-adb9-592f3f912884
 title: Abrufen von Gerätedaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28fa4054170f9b66d73e3494928db312eb8aa9d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: adf956a04c733883cb5fb374e4e75dc4e93e8029f9968deb90cc113cef460864
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119717990"
 ---
 # <a name="retrieving-device-data"></a>Abrufen von Gerätedaten
 
-Anwendungen können die folgenden Funktionen verwenden, um Gerätedaten mit einem Gerätekontext abzurufen: [**GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) und [**devicecapabili.**](/windows/win32/api/wingdi/nf-wingdi-devicecapabilitiesa)
+Anwendungen können die folgenden Funktionen verwenden, um Gerätedaten mithilfe eines Gerätekontexts abzurufen: [**GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) und [**DeviceCapabilities.**](/windows/win32/api/wingdi/nf-wingdi-devicecapabilitiesa)
 
-[**Getabvicecaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) Ruft allgemeine Gerätedaten für die folgenden Geräte ab:
+[**GetDeviceCaps**](/windows/desktop/api/Wingdi/nf-wingdi-getdevicecaps) ruft allgemeine Gerätedaten für die folgenden Geräte ab:
 
--   Raster anzeigen
--   Punkt-Matrix-Drucker
+-   Rasteranzeigen
+-   Dot-Matrixdrucker
 -   Ink-Jet-Drucker
--   Laser Drucker
--   Vektor Plottern
--   Raster Kameras
+-   Drucker von Druckern
+-   Vektorplotter
+-   Rasterkameras
 
-Die Daten umfassen die unterstützten Funktionen des Geräts, einschließlich der Geräte Auflösung (für Video-anzeigen), des Farb Formats (bei Video-und Farbdruckern), der Anzahl von Grafikobjekten, Raster Funktionen, Kurven Zeichnung, Zeilen Zeichnung, Polygon Zeichnung und Text Zeichnung. Eine Anwendung ruft diese Daten ab, indem Sie ein Handle bereitstellt, das den entsprechenden Gerätekontext identifiziert, sowie einen Index, der den Typ der Daten angibt, die von der Funktion abgerufen werden sollen.
+Die Daten umfassen die unterstützten Funktionen des Geräts, einschließlich Geräteauflösung (für Videoanzeigen), Farbformat (für Videoanzeigen und Farbdrucker), Anzahl von Grafikobjekten, Rasterfunktionen, Kurvenzeichnung, Linienzeichnung, Polygonzeichnung und Textzeichnung. Eine Anwendung ruft diese Daten ab, indem sie ein Handle angibt, das den entsprechenden Gerätekontext identifiziert, sowie einen Index, der den Typ der Daten angibt, die die Funktion abrufen soll.
 
-Die Funktion [**devicecapabiliruft**](/windows/win32/api/wingdi/nf-wingdi-devicecapabilitiesa) spezifische Daten für Drucker ab, einschließlich der Anzahl der verfügbaren Papierbehälter, der Duplex Funktionen des Druckers, der vom Drucker unterstützten Auflösungen, der maximalen und der minimalen unterstützten Papiergröße usw. Eine Anwendung ruft diese Daten durch Bereitstellen von Zeichen folgen ab, die ein Druckergerät und einen Port angeben, sowie einen Index, der den Typ der Daten angibt, die von der Funktion abgerufen werden sollen.
+Die [**DeviceCapabilities-Funktion**](/windows/win32/api/wingdi/nf-wingdi-devicecapabilitiesa) ruft druckerspezifische Daten ab, z. B. die Anzahl der verfügbaren Papierbehälter, die Duplexfunktionen des Druckers, die vom Drucker unterstützten Auflösungen, die maximale und minimale unterstützte Papiergröße usw. Eine Anwendung ruft diese Daten ab, indem Zeichenfolgen angegeben werden, die ein Druckergerät und einen Port angeben, sowie einen Index, der den Typ der Daten angibt, die die Funktion abrufen soll.
 
  
 

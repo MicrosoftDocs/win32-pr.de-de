@@ -1,11 +1,11 @@
 ---
-title: ms-DS-minimal-Password-Age-Attribut
-description: Das minimale Alter für Kenn Wörter von Benutzerkonten.
+title: ms-DS-Minimum-Password-Age-Attribut
+description: Mindestalter für Benutzerkonten-Kennwörter.
 ms.assetid: a51d86ed-9f57-4e7e-b1a0-181e9f0092ba
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-minimal-Password-Age\"-Attribut AD-Schema"
-- AD-Schema des msDS-MinimumPasswordAge-Attributs
+- MS-DS-Minimum-Password-Age-Attribut AD-Schema
+- MSDS-MinimumPasswordAge-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 294299ee478380530640a1b37e52d9828119b403
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bc6f1884bc608932a93eed1de98b97632d8bc4d319f1d47dd1763e16006d5fff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803930"
 ---
-# <a name="ms-ds-minimum-password-age-attribute"></a>ms-DS-minimal-Password-Age-Attribut
+# <a name="ms-ds-minimum-password-age-attribute"></a>ms-DS-Minimum-Password-Age-Attribut
 
-Das minimale Alter für Kenn Wörter von Benutzerkonten.
+Mindestalter für Benutzerkonten-Kennwörter.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-minimal-Kennwort-Alter           |
-| LDAP-Display-Name | msDS-MinimumPasswordAge              |
+| CN                | ms-DS-Minimum-Password-Age           |
+| Ldap-Anzeigename | msDS-MinimumPasswordAge              |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2012              |
-| System-ID-GUID    | 2a74f 878-4d9c-49b9-97b3-6767d1cbd9a3 |
+| System-ID-GUID    | 2a74f878-4d9c-49f9-97b3-6767d1cbd9a3 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -55,15 +55,15 @@ Das minimale Alter für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -76,15 +76,15 @@ Das minimale Alter für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 
@@ -97,15 +97,15 @@ Das minimale Alter für Kenn Wörter von Benutzerkonten.
 | Link-ID                | \-                                                                    |
 | MAPI-Id                | \-                                                                    |
 | System-Only            | False                                                                 |
-| Ist-einwertig       | Richtig                                                                  |
+| Ist einwertig       | True                                                                  |
 | Ist indiziert             | False                                                                 |
 | Im globalen Katalog      | False                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                          |
 | Range-Lower            | \-                                                                    |
 | Range-Upper            | \-                                                                    |
 | Search-Flags           | 0x00000000                                                            |
 | System-Flags           | 0x00000010                                                            |
-| In verwendete Klassen        | [**ms-DS-Password-Settings**](c-msds-passwordsettings.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Password-Einstellungen**](c-msds-passwordsettings.md)<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_FILE_SAVEDIB Meldung (VFW. h)
-description: Die \_ savedib-Nachricht der WM-Cap- \_ Datei \_ kopiert den aktuellen Frame in eine DIB-Datei. Sie können diese Nachricht explizit oder mithilfe des capfilesavedib-Makros senden.
+title: WM_CAP_FILE_SAVEDIB (Vfw.h)
+description: Die WM \_ CAP \_ FILE \_ SAVEDIB-Meldung kopiert den aktuellen Frame in eine DIB-Datei. Sie können diese Nachricht explizit oder mithilfe des Makros capFileSaveDIB senden.
 ms.assetid: bf6d343b-9236-4e68-bbda-2ed6e197a5cb
 keywords:
-- WM_CAP_FILE_SAVEDIB-Nachricht (Multimedia)
+- WM_CAP_FILE_SAVEDIB-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2155febfdac1b3f24133df47ce206c8e5ec33d3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66d6dd9b8675e1fb8625349afc4b3f86347d71d605407d5c99fbca291ade744d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803810"
 ---
-# <a name="wm_cap_file_savedib-message"></a>WM- \_ Cap- \_ Datei ( \_ savedib)
+# <a name="wm_cap_file_savedib-message"></a>WM \_ CAP \_ FILE \_ SAVEDIB-Meldung
 
-Die **\_ \_ \_ savedib** -Nachricht der WM-Cap-Datei kopiert den aktuellen Frame in eine DIB-Datei. Sie können diese Nachricht explizit oder mithilfe des [**capfilesavedib**](/windows/desktop/api/Vfw/nf-vfw-capfilesavedib) -Makros senden.
+Die **WM CAP FILE \_ \_ \_ SAVEDIB-Meldung** kopiert den aktuellen Frame in eine DIB-Datei. Sie können diese Nachricht explizit oder mithilfe des [**Makros capFileSaveDIB**](/windows/desktop/api/Vfw/nf-vfw-capfilesavedib) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = (LPARAM) (LPVOID) (LPSTR) (szName);
 
 <dl> <dt>
 
-<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*szName*
+<span id="szName"></span><span id="szname"></span><span id="SZNAME"></span>*Szname*
 </dt> <dd>
 
-Ein Zeiger auf die NULL-terminierte Zeichenfolge, die den Namen der Ziel-DIB-Datei enthält.
+Zeiger auf die auf NULL beendete Zeichenfolge, die den Namen der DIB-Zieldatei enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
-Wenn ein Fehler auftritt und eine Fehler Rückruffunktion mithilfe der WM- [**\_ Cap- \_ \_ Rückruf \_ Fehlermeldung**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehler Rückruffunktion aufgerufen.
+Wenn ein Fehler auftritt und eine Fehlerrückruffunktion mithilfe der [**MELDUNG WM CAP SET \_ \_ \_ CALLBACK \_ ERROR**](wm-cap-set-callback-error.md) festgelegt wird, wird die Fehlerrückruffunktion aufgerufen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Aufzeichnungs Treiber Frames in einem komprimierten Format bereitstellt, versucht dieser Vorgang, den Frame zu dekomprimieren, bevor die Datei geschrieben wird.
+Wenn der Erfassungstreiber Frames in einem komprimierten Format liefert, versucht dieser Aufruf, den Frame vor dem Schreiben der Datei zu dekomprimieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,18 +63,18 @@ Wenn der Aufzeichnungs Treiber Frames in einem komprimierten Format bereitstellt
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

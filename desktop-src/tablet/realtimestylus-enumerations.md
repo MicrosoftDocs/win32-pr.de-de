@@ -4,12 +4,12 @@ ms.assetid: d7df269a-2b08-4bc2-ad7e-9b69d8f2f2a5
 title: RealTimeStylus-Enumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b334ee297ae863060c3cde100eb683f5e85320b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 844f2522cfa933d36e48b39bd00037c96cb84b7ae20bf31f48b7d1b21b0c5a79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119820340"
 ---
 # <a name="realtimestylus-enumerations"></a>RealTimeStylus-Enumerationen
 
@@ -21,9 +21,9 @@ Dieser Abschnitt enthält Enumerationen, die zur [**RealTimeStylus-Klasse**](rea
 
 | Enumeration                                                                  | Beschreibung                                                                                                                                                                                        |
 |------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stylusqueue-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-stylusqueue)                               | Gibt an, welche Warteschlange Tablettstiftdaten hinzufügen soll.<br/>                                                                                                                                               |
-| [**Realtimestyluslocktype-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-realtimestyluslocktype)         | Gibt die Sperren innerhalb des [**RealTimeStylus-Klassen**](realtimestylus-class.md) Objekts an, das die Elemente und Eigenschaften der **RealTimeStylus-Klassen** Objekte vor Änderungen schützt.<br/> |
-| [**Realtimestylusdatainterest-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-realtimestylusdatainterest) | Definiert die Werte, die von Plug-ins verwendet werden, um anzugeben, welche Ereignis Benachrichtigungen die Plug-ins empfangen.<br/>                                                                                          |
+| [**StylusQueue-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-stylusqueue)                               | Gibt an, welche Warteschlange Stiftdaten hinzugefügt werden soll.<br/>                                                                                                                                               |
+| [**RealTimeStylusLockType-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-realtimestyluslocktype)         | Gibt die Sperren im [**RealTimeStylus-Klassenobjekt**](realtimestylus-class.md) an, die die Member und Eigenschaften des **RealTimeStylus Class-Objekts** vor Änderungen schützen.<br/> |
+| [**RealTimeStylusDataInterest-Enumeration**](/windows/desktop/api/RTSCom/ne-rtscom-realtimestylusdatainterest) | Definiert die Werte, die von Plug-Ins verwendet werden, um anzugeben, welche Ereignisbenachrichtigungen die Plug-Ins empfangen.<br/>                                                                                          |
 
 
 
@@ -33,10 +33,10 @@ Dieser Abschnitt enthält Enumerationen, die zur [**RealTimeStylus-Klasse**](rea
 
 <dl> <dt>
 
-[**Istylusplugin::D atainterest-Methode**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-datainterest)
+[**IStylusPlugin::D ataInterest-Methode**](/windows/desktop/api/RTSCom/nf-rtscom-istylusplugin-datainterest)
 </dt> <dt>
 
-[**Istylusplugin-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istylusplugin)
+[**IStylusPlugin-Schnittstelle**](/windows/desktop/api/RTSCom/nn-rtscom-istylusplugin)
 </dt> <dt>
 
 [**RealTimeStylus-Klasse**](realtimestylus-class.md)

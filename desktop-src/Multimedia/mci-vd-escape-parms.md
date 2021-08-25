@@ -1,6 +1,6 @@
 ---
-title: MCI_VD_ESCAPE_PARMS-Struktur (mciapi. h)
-description: Die MCI-VD-escapeparameterstruktur \_ \_ \_ enthält den Befehl, der für den Befehl "MCI-Escapezeichen" an ein Gerät gesendet wird \_ .
+title: MCI_VD_ESCAPE_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ VD \_ ESCAPE \_ PARMS-Struktur enthält den Befehl, der an ein Gerät für den MCI \_ ESCAPE-Befehl für videodisc-Geräte gesendet wird.
 ms.assetid: 7c735943-b67a-4be5-82b5-6a058349623e
 keywords:
 - MCI_VD_ESCAPE_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a80712cd693e2c7ebe290be6b9827c1e051dd86a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2f9a0fef0e60168d4539756c741527d751fd726ab3d2472cdbaf3b080784e70c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783845"
 ---
-# <a name="mci_vd_escape_parms-structure"></a>MCI-VD-escapeparameterstruktur \_ \_ \_
+# <a name="mci_vd_escape_parms-structure"></a>MCI \_ VD \_ ESCAPE \_ PARMS-Struktur
 
-Die **MCI- \_ VD \_ \_** -escapeparameterstruktur enthält den Befehl, der für den Befehl " [**MCI \_**](mci-escape.md) -Escapezeichen" an ein Gerät gesendet wird.
+Die **MCI \_ VD ESCAPE \_ \_ PARMS-Struktur** enthält den Befehl, der an ein Gerät für den [**MCI \_ ESCAPE-Befehl**](mci-escape.md) für videodisc-Geräte gesendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**lpstraucommand**
+**lpstrCommand**
 </dt> <dd>
 
-Befehl, der an das Gerät gesendet werden soll.
+Befehl zum Senden an das Gerät.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Escape**](mci-escape.md)
+[**MCI \_ ESCAPE**](mci-escape.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

@@ -1,11 +1,11 @@
 ---
-title: Removepackagemethod-Methode der MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
+title: RemovePackageMethod-Methode der MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
 description: Methode zum Entfernen von Paketen. Siehe auch RemovePackage.
 ms.assetid: 0f48fd9c-5a3f-48e5-a954-e937e79af049
 keywords:
-- Removepackagemethod-Methode
-- Removepackagemethod-Methode, MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
-- MDM_EnterpriseModernAppManagement_AppManagement01-Klasse, removepackagemethod-Methode
+- RemovePackageMethod-Methode
+- RemovePackageMethod-Methode, MDM_EnterpriseModernAppManagement_AppManagement01-Klasse
+- MDM_EnterpriseModernAppManagement_AppManagement01 Klasse, RemovePackageMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c2cdeb2c1a8dfaebdde73e52b2910da180b638c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f58e1e4a21f33ba16b6d40363aa86a02e29f56f2e0107bc5b7e777b4ed311d01
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655620"
 ---
-# <a name="removepackagemethod-method-of-the-mdm_enterprisemodernappmanagement_appmanagement01-class"></a>Removepackagemethod-Methode der MDM \_ enterprismodernappmanagement \_ AppManagement01-Klasse
+# <a name="removepackagemethod-method-of-the-mdm_enterprisemodernappmanagement_appmanagement01-class"></a>RemovePackageMethod-Methode der MDM \_ EnterpriseModernAppManagement \_ AppManagement01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
@@ -44,7 +44,7 @@ uint32 RemovePackageMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -53,10 +53,10 @@ uint32 RemovePackageMethod(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -65,7 +65,7 @@ uint32 RemovePackageMethod(
 
 <dl> <dt>
 
-[**MDM \_ enterprigenmodernappmanagement \_ AppManagement01**](mdm-enterprisemodernappmanagement-appmanagement01.md)
+[**MDM \_ EnterpriseModernAppManagement \_ AppManagement01**](mdm-enterprisemodernappmanagement-appmanagement01.md)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-title: Hinzufügen des schließenden ButtonElement
-description: Hinzufügen des schließenden ButtonElement
+title: Hinzufügen des Schaltflächenelements "Schließen"
+description: Hinzufügen des Schaltflächenelements "Schließen"
 ms.assetid: 18f0ee9d-b0d4-4134-8dd6-6ece480b2818
 keywords:
-- Erstellen von Skins, ButtonElement-Element
-- Windows Media Player Skins, ButtonElement-Element
-- Skins, ButtonElement-Element
-- Skin-Definitions Dateien, ButtonElement-Element
-- ButtonElement-Element
-- Elemente, ButtonElement
-- Erstellen von Skins, schließen von Schaltflächen
-- Windows Media Player Skins, schließen von Schaltflächen
-- Skins, Schaltflächen Schließen
-- Skin-Definitions Dateien, schließen-Schaltflächen
-- Schließen von Schaltflächen
+- Erstellen von Skins, BUTTONELEMENT-Element
+- Windows Media Player Skins, BUTTONELEMENT-Element
+- skins,BUTTONELEMENT-Element
+- Skindefinitionsdateien, BUTTONELEMENT-Element
+- BUTTONELEMENT-Element
+- elements,BUTTONELEMENT
+- Erstellen von Skins, Schaltflächen schließen
+- Windows Media Player Skins, Schaltflächen schließen
+- Skins, Schaltflächen schließen
+- Skindefinitionsdateien, Schaltflächen schließen
+- Schaltflächen schließen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40716d4094d23eaf6ab86414f37c0778cc8d89cf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bf5d2a85e43ae4a664504c213d182b396707ff9cfa663187e7f153fa4cc154e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765475"
 ---
-# <a name="adding-the-close-buttonelement"></a>Hinzufügen des schließenden ButtonElement
+# <a name="adding-the-close-buttonelement"></a>Hinzufügen des Schaltflächenelements "Schließen"
 
-Die Schaltfläche Schließen ähnelt dem Konzept der Wiedergabe Schaltfläche, verfügt aber über unterschiedliche Codes und Farben.
+Die Schaltfläche Schließen ähnelt dem Konzept der Wiedergabeschaltfläche, weist jedoch unterschiedliche Codes und Farben auf.
 
-Fügen Sie den schließenden **ButtonElement** -Code nach der schließenden Spitze Klammer des Wiedergabe- **buttonelements** ein.
+Setzen Sie den Code **Buttonelement** schließen nach der schließenden spitzen Klammer von **Play BUTTONELEMENT**.
 
 
 ```C++
@@ -40,30 +40,30 @@ Fügen Sie den schließenden **ButtonElement** -Code nach der schließenden Spit
 
 
 
-Die folgenden Attribute werden verwendet, um das **ButtonElement** für die Schaltfläche "Schließen" zu definieren:
+Die folgenden Attribute werden verwendet, um **buttonelement** für die Schaltfläche Schließen zu definieren:
 
 **mappingColor**
 
-Dies ist der Farbwert des Bereichs in der Mappings-Grafikdatei, den Sie zuvor erstellt haben. In diesem Fall ist es die rote Farbe. Dieses Attribut ist für ein beliebiges **ButtonElement** erforderlich. Wenn Sie diese Farbe definieren, sagen Sie Windows Media Player, diesen Farbbereich dem XML-Code dieser Schaltfläche zuzuordnen.
+Dies ist der Farbwert des Bereichs in der Zuordnungsartdatei, die Sie zuvor erstellt haben. In diesem Fall handelt es sich um die rote Volltonfarbe. Dieses Attribut ist für jedes **BUTTONELEMENT** erforderlich. Indem Sie diese Farbe definieren, teilen Sie Windows Media Player mit, diesen Farbbereich dem XML-Code dieser Schaltfläche zuzuordnen.
 
-**uptooltip**
+**upToolTip**
 
-Dadurch wird der Text definiert, der angezeigt wird, wenn der Benutzer mit dem Mauszeiger auf die Schaltfläche bewegt wird. Dies ist identisch mit der Wiedergabe Schaltfläche, mit der Ausnahme, dass Sie mit "Close" gekennzeichnet ist.
+Dadurch wird der Text definiert, der angezeigt wird, wenn der Benutzer mit der Maus auf die Schaltfläche zeigt. Dies entspricht der Wiedergabeschaltfläche, mit der Ausnahme, dass sie mit "Schließen" bezeichnet wird.
 
-**OnClick**
+**Onclick**
 
-Definiert das Ereignis, das auftritt, wenn mit der Maus auf die Schaltfläche geklickt wird. Der Wert dieses Ereignis Attributs wird als Ereignishandler bezeichnet und ist entweder eine Zeile von Microsoft JScript-Code oder eine JScript-Funktion in einer externen Textdatei, die vom **loadscript** -Attribut einer **Ansicht** geladen wird. In diesem Fall ruft der JScript-Code die **Close** -Methode des **Ansichts** Elements mithilfe der globalen Attribut **Ansicht** auf, die die Ansicht schließt und Windows-Media Player herunterfährt.
+Dadurch wird das Ereignis definiert, das auftritt, wenn mit der Maustaste auf die Schaltfläche geklickt wird. Der Wert dieses Ereignisattributs wird als Ereignishandler bezeichnet und ist entweder eine Zeile von Microsoft JScript Code oder eine JScript Funktion in einer externen Textdatei, die vom **loadScript-Attribut** einer **VIEW** geladen wird. In diesem Fall ruft der JScript Code die **close-Methode** des **VIEW-Elements** mithilfe der globalen **Attributansicht** auf, die die Ansicht schließt und Windows Media Player herunterfährt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen der Skin-Definitionsdatei**](creating-the-skin-definition-file.md)
+[**Erstellen der Skindefinitionsdatei**](creating-the-skin-definition-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

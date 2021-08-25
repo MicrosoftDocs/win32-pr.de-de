@@ -1,7 +1,7 @@
 ---
-description: Wandelt boundingfrustum um.
+description: Transformiert das BoundingFrustum.
 ms.assetid: c989e8e5-b94a-4bb3-bd8c-5bc7c1a24d24
-title: Boundingfrustum. Transform-Methoden
+title: BoundingFrustum.Transform-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,25 +11,25 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 33715c8fb8cf6388c22e6348c1161d8b3aa7190b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbfbe4f178c404484ff4a2b95da5a325a9bdc51f6923cab8918576d860a48dec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787069"
 ---
-# <a name="boundingfrustumtransform-methods"></a>Boundingfrustum. Transform-Methoden
+# <a name="boundingfrustumtransform-methods"></a>BoundingFrustum.Transform-Methoden
 
-Wandelt [**boundingfrustum um**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).
+Transformiert den [**BoundingFrustum.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                       | BESCHREIBUNG                                                                                                                       |
+| Methode                                                                                                       | Beschreibung                                                                                                                       |
 |:-------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|
-| [**Boundingfrustum:: Transform (boundingfrustum&, xmmatrix)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector))                | Wandelt [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) um die angegebene Transformationsmatrix um.<br/>                      |
-| [**Boundingfrustum:: Transform (boundingfrustum&, float, xmvector, xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector)) | Wandelt [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) mithilfe der angegebenen Skalierungs-, Drehungs-und Übersetzungs Vektoren um.<br/> |
+| [**BoundingFrustum::Transform (BoundingFrustum&,XMMATRIX)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector))                | Transformiert das [**BoundingFrustum durch**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) die angegebene Transformationsmatrix.<br/>                      |
+| [**BoundingFrustum::Transform (BoundingFrustum&,float,XMVECTOR,XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-transform(boundingfrustum__float_fxmvector_fxmvector)) | Transformiert das [**BoundingFrustum mithilfe**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum) der angegebenen Skalierungs-, Drehungs- und Übersetzungsvektoren.<br/> |
 
 
 
@@ -40,10 +40,10 @@ Wandelt [**boundingfrustum um**](/windows/win32/api/directxcollision/ns-directxc
 [Methoden](boundingfrustum-methods.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

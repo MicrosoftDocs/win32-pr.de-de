@@ -1,9 +1,9 @@
 ---
-title: RAS_PARAMS_FORMAT-Enumeration (rassapi. h)
-description: Der \_ \_ Enumerationstyp "RAS-Parametertyp" wird in der Struktur der RAS- \_ Parameter verwendet, um den Datentyp anzugeben, der einem medienspezifischen Schlüssel zugeordnet ist.
+title: RAS_PARAMS_FORMAT-Enumeration (Rassapi.h)
+description: Der RAS \_ PARAMS \_ FORMAT-Enumerationstyp wird in der RAS \_ PARAMETERS-Struktur verwendet, um den Datentyp anzugeben, der einem medienspezifischen Schlüssel zugeordnet ist.
 ms.assetid: dd2c0110-1f27-4a8f-bc61-f15588ebc4ca
 keywords:
-- RAS_PARAMS_FORMAT-Enumeration RAS
+- RAS_PARAMS_FORMAT-Enumerations-RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00065f3781fd2ada420f67367e84e0863fe3b446
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92b798ef8a5257afcb4e4ad653801bda0d21691057abad970d6e8158f592146e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673180"
 ---
-# <a name="ras_params_format-enumeration"></a>RAS- \_ parametriams- \_ formatenumeration
+# <a name="ras_params_format-enumeration"></a>RAS \_ PARAMS \_ FORMAT-Enumeration
 
-\[Die **RAS- \_ parametriams- \_ formatenumeration** wird ab Windows Vista nicht unterstützt.\]
+\[Die **RAS \_ PARAMS \_ FORMAT-Enumeration** wird ab Windows Vista nicht unterstützt.\]
 
-Der Enumerationstyp " **RAS \_ \_** -Parametertyp" wird in der Struktur der [**RAS- \_ Parameter**](ras-parameters-str.md) verwendet, um den Datentyp anzugeben, der einem medienspezifischen Schlüssel zugeordnet ist.
+Der **RAS \_ PARAMS FORMAT-Enumerationstyp \_** wird in der RAS [**\_ PARAMETERS-Struktur**](ras-parameters-str.md) verwendet, um den Datentyp anzugeben, der einem medienspezifischen Schlüssel zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ typedef enum RAS_PARAMS_FORMAT {
 
 <dl> <dt>
 
-<span id="ParamNumber"></span><span id="paramnumber"></span><span id="PARAMNUMBER"></span>**Paramnumber**
+<span id="ParamNumber"></span><span id="paramnumber"></span><span id="PARAMNUMBER"></span>**ParamNumber**
 </dt> <dd>
 
 Gibt an, dass die dem Schlüssel zugeordneten Daten eine Zahl sind.
@@ -66,8 +66,8 @@ Gibt an, dass die dem Schlüssel zugeordneten Daten eine Zeichenfolge sind.
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Gibt an, dass die dem Schlüssel zugeordneten Daten eine Zeichenfolge sind.
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Administrations Enumerationen](ras-server-administration-enumerations.md)
+[RAS-Serververwaltungsenumerationen](ras-server-administration-enumerations.md)
 </dt> <dt>
 
-[**RAS- \_ Parameter**](ras-parameters-str.md)
+[**\_RAS-PARAMETER**](ras-parameters-str.md)
 </dt> </dl>
 
  

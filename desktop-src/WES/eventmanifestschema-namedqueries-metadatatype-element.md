@@ -1,9 +1,9 @@
 ---
-title: namedqueries (metadataType)-Element
-description: Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldungs Zeichenfolge nach einem Wert Abfragen und eine angegebene Aktion ausführen, sofern gefunden. | namedqueries (metadataType)-Element
+title: namedQueries (MetadataType)-Element
+description: Wird nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignismeldungszeichenfolge nach einem Wert abfragen und ggf. eine angegebene Aktion ausführen. | namedQueries (MetadataType)-Element
 ms.assetid: c2d5a6be-2367-4c08-b5b5-501a5a5a0dbe
 keywords:
-- namedqueries-Element EventLog
+- namedQueries-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7cc6dc5766bf4de9473a28c812d036fd74c20365
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 030c23fa97734021233878e3be2ee94f6eaef0e3a9bdd4f628796cb3887d8658
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106370385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119652230"
 ---
-# <a name="namedqueries-metadatatype-element"></a>namedqueries (metadataType)-Element
+# <a name="namedqueries-metadatatype-element"></a>namedQueries (MetadataType)-Element
 
-Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldungs Zeichenfolge nach einem Wert Abfragen und eine angegebene Aktion ausführen, sofern gefunden.
+Wird nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignismeldungszeichenfolge nach einem Wert abfragen und ggf. eine angegebene Aktion ausführen.
 
 ``` syntax
 <xs:element name="namedQueries"
@@ -30,7 +30,7 @@ Nicht verwendet. Definiert eine Liste benannter Abfragen, die die Ereignis Meldu
  />
 ```
 
-Das **namedqueries** -Element wird durch den komplexen [**metadataType**](eventmanifestschema-metadatatype-complextype.md) -Typ definiert.
+Das **namedQueries-Element** wird durch den komplexen [**MetadataType-Typ**](eventmanifestschema-metadatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **namedqueries** -Element wird durch den komplexen [**metadataType**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **namedqueries** -Element wird durch den komplexen [**metadataType**](eventm
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Metadaten (instrumentationmanifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
+[**metadata (instrumentationManifest)**](eventmanifestschema-metadata-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

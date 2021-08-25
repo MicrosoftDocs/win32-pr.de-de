@@ -1,9 +1,9 @@
 ---
-title: TTM_GETDELAYTIME Meldung (kommstrg. h)
-description: Ruft die anfänglichen, Popup-und neuanschau Dauer ab, die aktuell für ein QuickInfo-Steuerelement festgelegt sind.
+title: TTM_GETDELAYTIME Nachricht (Commctrl.h)
+description: Ruft die anfänglichen, Popup- und Wiederholungsdauern ab, die derzeit für ein QuickInfo-Steuerelement festgelegt sind.
 ms.assetid: f89a75ed-ba80-4741-927f-c571f3b2efe7
 keywords:
-- Windows-Steuerelemente für TTM_GETDELAYTIME Meldung
+- TTM_GETDELAYTIME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ff8c75f078465646333cae1f519049733a0c9f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f0e63eca126477a6f602e6e23be75495319d30aa2814d2d72b8426a96c078326
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769260"
 ---
-# <a name="ttm_getdelaytime-message"></a>TTM \_ getdelta-Zeit Nachricht
+# <a name="ttm_getdelaytime-message"></a>TTM \_ GETDELAYTIME-Nachricht
 
-Ruft die anfänglichen, Popup-und neuanschau Dauer ab, die aktuell für ein QuickInfo-Steuerelement festgelegt sind.
+Ruft die anfänglichen, Popup- und Wiederholungsdauern ab, die derzeit für ein QuickInfo-Steuerelement festgelegt sind.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,15 +32,15 @@ Ruft die anfänglichen, Popup-und neuanschau Dauer ab, die aktuell für ein Quic
 *wParam* 
 </dt> <dd>
 
-Flag, das angibt, welcher Duration-Wert abgerufen wird. Dieser Parameter kann einen der folgenden Werte aufweisen:
+Flag, das angibt, welcher Wert für die Dauer abgerufen wird. Dieser Parameter kann einen der folgenden Werte aufweisen:
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TTDT_AUTOPOP"></span><span id="ttdt_autopop"></span><dl> <dt>**ttdt- \_ autopop**</dt> </dl> | Ruft die Zeitspanne ab, die das QuickInfo-Fenster sichtbar bleibt, wenn der Zeiger innerhalb des umgebenden Rechtecks eines Tools stationär ist.<br/>      |
-| <span id="TTDT_INITIAL"></span><span id="ttdt_initial"></span><dl> <dt>**ttdt- \_ Initial**</dt> </dl> | Ruft die Zeitspanne ab, die der Zeiger innerhalb des umgebenden Rechtecks eines Tools stationär bleiben muss, bevor das QuickInfo-Fenster angezeigt wird.<br/> |
-| <span id="TTDT_RESHOW"></span><span id="ttdt_reshow"></span><dl> <dt>**ttdt \_ erneut anzeigen**</dt> </dl>    | Ruft die Zeitspanne ab, die benötigt wird, bis nachfolgende QuickInfo-Fenster angezeigt werden, wenn der Zeiger von einem Tool zu einem anderen verschoben wird.<br/>         |
+| <span id="TTDT_AUTOPOP"></span><span id="ttdt_autopop"></span><dl> <dt>**TTDT \_ AUTOPOP**</dt> </dl> | Rufen Sie den Zeitraum ab, in dem das QuickInfo-Fenster sichtbar bleibt, wenn der Zeiger im umgrenzten Rechteck eines Tools stationär ist.<br/>      |
+| <span id="TTDT_INITIAL"></span><span id="ttdt_initial"></span><dl> <dt>**TTDT \_ INITIAL**</dt> </dl> | Rufen Sie ab, wie lange der Zeiger innerhalb des umgrenzenden Rechtecks eines Tools stationär bleiben muss, bevor das QuickInfo-Fenster angezeigt wird.<br/> |
+| <span id="TTDT_RESHOW"></span><span id="ttdt_reshow"></span><dl> <dt>**TTDT \_ RESHOW**</dt> </dl>    | Rufen Sie ab, wie lange es dauert, bis nachfolgende QuickInfo-Fenster angezeigt werden, während der Zeiger von einem Tool zu einem anderen bewegt wird.<br/>         |
 
 
 
@@ -53,7 +53,7 @@ Flag, das angibt, welcher Duration-Wert abgerufen wird. Dieser Parameter kann ei
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen int-Wert mit der angegebenen Dauer in Millisekunden zurück.
+Gibt und den INT-Wert mit der angegebenen Dauer in Millisekunden zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,17 +61,17 @@ Gibt einen int-Wert mit der angegebenen Dauer in Millisekunden zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TTM \_ setdelta Time**](ttm-setdelaytime.md)
+[**TTM \_ SETDELAYTIME**](ttm-setdelaytime.md)
 </dt> </dl>
 
  

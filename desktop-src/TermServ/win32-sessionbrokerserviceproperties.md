@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionBrokerServiceProperties-Klasse
-description: Definiert die Abfrage für einen Sitzungs Broker Dienst.
+description: Definiert die Abfrage für einen Sitzungsbrokerdienst.
 ms.assetid: fe7a0317-8b52-4685-9d0d-2f81058b4561
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste
-- Win32_SessionBrokerServiceProperties Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionBrokerServiceProperties-Klassen-Remotedesktopdienste
+- Win32_SessionBrokerServiceProperties-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 507c4211b9506e0635966e9541167d24495735ef
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3f095272ee0d836e77542e20badbe5bb1169206cc6b0e87d742e3fbd235acd52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656180"
 ---
-# <a name="win32_sessionbrokerserviceproperties-class"></a>Win32 \_ sessionbrokerserviceproperties-Klasse
+# <a name="win32_sessionbrokerserviceproperties-class"></a>Win32 \_ SessionBrokerServiceProperties-Klasse
 
-Definiert die Abfrage für einen Sitzungs Broker Dienst.
+Definiert die Abfrage für einen Sitzungsbrokerdienst.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -46,25 +46,25 @@ class Win32_SessionBrokerServiceProperties
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ sessionbrokerserviceproperties** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionBrokerServiceProperties-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](/windows)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ sessionbrokerserviceproperties** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ SessionBrokerServiceProperties-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                          |
+| Methode                                                                                                | Beschreibung                                                                                                                                                                                                                          |
 |:------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Delta-bdbconnectionstring**](win32-sessionbrokerserviceproperties-deletesbdbconnectionstring.md) | Löscht DB-Verbindungs Zeichenfolgen (Primär und sekundär) aus der Registrierung.<br/> **Windows Server 2012 R2, Windows Server 2012 und Windows Server 2008 R2:** Diese Methode ist vor Windows Server 2016 nicht verfügbar.<br/> |
-| [**Installbrokerdatabase**](win32-sessionbrokerserviceproperties-installbrokerdatabase.md)           | Installiert RD-Verbindungsbroker DB auf Central SQL Server<br/>                                                                                                                                                                    |
-| [**Isdbreachable**](win32-sessionbrokerserviceproperties-isdbreachable.md)                           | Prüft, ob DB erreichbar ist.<br/>                                                                                                                                                                                                 |
-| [**Setbrokerhamode**](win32-sessionbrokerserviceproperties-setbrokerhamode.md)                       | Migriert Daten von der lokalen wid-Datenbank zum neuen SQL Server basierten DB. Außerdem wird der Broker Server für die Verwendung des zentralen SQL Server konfiguriert.<br/>                                                                                        |
-| [**Setbrokernonhamode**](win32-sessionbrokerserviceproperties-setbrokernonhamode.md)                 | Migriert Daten von der zentralen SQL Server zur lokalen Datenbank. Außerdem wird der Broker Server für die Verwendung der lokalen Datenbank konfiguriert.<br/>                                                                                                              |
-| [**"Menbdbconnectionstrings"**](win32-sessionbrokerserviceproperties-setsbdbconnectionstrings.md)     | Speichert DB-Verbindungs Zeichenfolgen (Primär und sekundär) in der Registrierung.<br/> **Windows Server 2012 R2, Windows Server 2012 und Windows Server 2008 R2:** Diese Methode ist vor Windows Server 2016 nicht verfügbar.<br/>     |
+| [**DeleteSBDbConnectionString**](win32-sessionbrokerserviceproperties-deletesbdbconnectionstring.md) | Löscht Datenbankverbindungszeichenfolgen (primär und sekundär) aus der Registrierung.<br/> **Windows Server 2012 R2, Windows Server 2012 und Windows Server 2008 R2:** Diese Methode ist vor Windows Server 2016 nicht verfügbar.<br/> |
+| [**InstallBrokerDatabase**](win32-sessionbrokerserviceproperties-installbrokerdatabase.md)           | Installiert rd connection broker db on central SQL Server<br/>                                                                                                                                                                    |
+| [**IsDbReachable**](win32-sessionbrokerserviceproperties-isdbreachable.md)                           | Überprüft, ob die Datenbank erreichbar ist.<br/>                                                                                                                                                                                                 |
+| [**SetBrokerHAMode**](win32-sessionbrokerserviceproperties-setbrokerhamode.md)                       | Migriert Daten von der lokalen WID-Datenbank zur neuen SQL Server-basierten Datenbank. Außerdem wird der Brokerserver für die Verwendung des zentralen SQL Server<br/>                                                                                        |
+| [**SetBrokerNonHAMode**](win32-sessionbrokerserviceproperties-setbrokernonhamode.md)                 | Migriert Daten von zentralen SQL Server zur lokalen Datenbank. Außerdem wird der Brokerserver für die Verwendung der lokalen Datenbank konfiguriert.<br/>                                                                                                              |
+| [**SetSBDbConnectionStrings**](win32-sessionbrokerserviceproperties-setsbdbconnectionstrings.md)     | Speichert Datenbankverbindungszeichenfolgen (primär und sekundär) in der Registrierung.<br/> **Windows Server 2012 R2, Windows Server 2012 und Windows Server 2008 R2:** Diese Methode ist vor Windows Server 2016 nicht verfügbar.<br/>     |
 
 
 
@@ -72,50 +72,50 @@ Die **Win32 \_ sessionbrokerserviceproperties** -Klasse verfügt über diese Met
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ sessionbrokerserviceproperties** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionBrokerServiceProperties-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sbdbconnectionstring**
+**SBDbConnectionString**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Vom Sitzungs Broker Dienst verwendete Daten bankverbindungs Zeichenfolge.
+Vom Sitzungsbrokerdienst verwendete Datenbankverbindungszeichenfolge.
 
 **Windows Server 2008 R2:** Diese Eigenschaft ist vor Windows Server 2012 nicht verfügbar.
 
 </dd> <dt>
 
-**Sbdbsecondaryconnectionstring**
+**SBDbSecondaryConnectionString**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Dies ist optional. Verbindungs Zeichenfolge der sekundären Datenbank, die vom Sitzungs Broker Dienst zur Unterstützung des Kennworts verwendet wird
+Optional. Verbindungszeichenfolge der sekundären Datenbank, die vom Sitzungsbrokerdienst zur Unterstützung des Kennwortablaufs verwendet wird.
 
 **Windows Server 2012 R2, Windows Server 2012 und Windows Server 2008 R2:** Diese Eigenschaft ist vor Windows Server 2016 nicht verfügbar.
 
 </dd> <dt>
 
-**Sbnetworkname**
+**SBNetworkName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der vom Sitzungs Broker Dienst verwendete Netzwerkname.
+Der vom Sitzungsbrokerdienst verwendete Netzwerkname.
 
 </dd> </dl>
 
@@ -128,7 +128,7 @@ Der vom Sitzungs Broker Dienst verwendete Netzwerkname.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 

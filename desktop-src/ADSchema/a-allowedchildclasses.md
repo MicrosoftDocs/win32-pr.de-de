@@ -1,11 +1,11 @@
 ---
-title: Zulässige Attribute für untergeordnete Klassen
+title: Allowed-Child-Classes-Attribut
 description: Klassen, die in einer Klasse enthalten sein können.
 ms.assetid: 3bfeefe3-b728-40a2-8b0a-3064a9ca42d0
 ms.tgt_platform: multiple
 keywords:
-- Das Active Directory-Attribut für den untergeordneten Klassen
-- AD-Schema des attribuwedchildclasses-Attributs
+- Ad-Schema des Attributs "Allowed-Child-Classes"
+- allowedChildClasses-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45c295036ad8b1c132e2dbf97d2e0d9ab38f9598
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 62d4e8e91a519a148acf84940a4220e1cfe35fc2b44a948a949d4e32d833caa2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656970"
 ---
-# <a name="allowed-child-classes-attribute"></a>Zulässige Attribute für untergeordnete Klassen
+# <a name="allowed-child-classes-attribute"></a>Allowed-Child-Classes-Attribut
 
 Klassen, die in einer Klasse enthalten sein können.
 
@@ -29,11 +29,11 @@ Klassen, die in einer Klasse enthalten sein können.
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
-| CN                | Zulässige, untergeordnete Klassen                                           |
-| LDAP-Display-Name | "Zuweisung von Klassen"                                             |
+| CN                | Allowed-Child-Classes                                           |
+| Ldap-Anzeigename | allowedChildClasses                                             |
 | Size              | \-                                                              |
-| Berechtigung aktualisieren  | \-                                                              |
-| Aktualisierungshäufigkeit  | \-                                                              |
+| Aktualisieren von Berechtigungen  | \-                                                              |
+| Updatehäufigkeit  | \-                                                              |
 | Attribute-Id      | 1.2.840.113556.1.4.911                                          |
 | System-ID-GUID    | 9a7ad942-ca53-11d1-bbd0-0080c76670c0                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
@@ -43,7 +43,7 @@ Klassen, die in einer Klasse enthalten sein können.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Klassen, die in einer Klasse enthalten sein können.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,11 +100,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Ist einwertig       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,11 +121,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,11 +142,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,11 +163,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -184,11 +184,11 @@ Klassen, die in einer Klasse enthalten sein können.
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
+| System-Only            | True                            |
+| Is-Single-Valued       | False                           |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

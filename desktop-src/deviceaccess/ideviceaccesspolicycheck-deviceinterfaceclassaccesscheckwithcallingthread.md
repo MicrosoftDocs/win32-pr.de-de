@@ -1,11 +1,11 @@
 ---
-title: Ideviceaccesspolicycheck deviceinterfaceclassaccesscheckwithcallingthread-Methode
-description: Diese API bestimmt, ob das Token für den aktuellen Kontext Zugriff auf die angegebene Geräteschnittstellen Klasse hat. IID 7d276ff2-ce90-4275-a2a8-9a48b10d3e0b.
+title: IDeviceAccessPolicyCheck DeviceInterfaceClassAccessCheckWithCallingThread-Methode
+description: Diese API bestimmt, ob das Token für den aktuellen Kontext Zugriff auf die angegebene Geräteschnittstellenklasse hat. IID 7D276FF2-CE90-4275-A2A8-9A48B10D3E0B.
 ms.assetid: D7BFE1F3-4876-4BAB-A32D-46DB533140BB
 keywords:
-- Deviceingeterfaceclassaccesscheckwithcallingthread-Methode Geräte Zugriffs Broker-API
-- Deviceinterfaceclassaccesscheckwithcallingthread-Methode Geräte Zugriffs Broker-API, ideviceaccesspolicycheck-Schnittstelle
-- Ideviceaccesspolicycheck Interface Geräte Zugriffs Broker-API, deviceinterfaceclassaccesscheckwithcallingthread-Methode
+- DeviceInterfaceClassAccessCheckWithCallingThread-Methode Device Access Broker-API
+- DeviceInterfaceClassAccessCheckWithCallingThread-Methode Device Access Broker-API, IDeviceAccessPolicyCheck-Schnittstelle
+- IDeviceAccessPolicyCheck-Schnittstelle Device Access Broker-API, DeviceInterfaceClassAccessCheckWithCallingThread-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,26 +16,26 @@ ms.topic: article
 ms.date: 02/11/2020
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 44eb44a83175cf8f735abfeb8cfec4de83f46bd2
-ms.sourcegitcommit: 01a4383738056cf3de4f45f36d98ef73d4dc694d
+ms.openlocfilehash: f279972c3b716f111fa37fc2dd01ef9184b2f804f07106f6b971358daf290c44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "106337205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635350"
 ---
-# <a name="ideviceaccesspolicycheckdeviceinterfaceclassaccesscheckwithcallingthread-method"></a>Ideviceaccesspolicycheck::D eviceinterfaceclassaccesscheckwithcallingthread-Methode
+# <a name="ideviceaccesspolicycheckdeviceinterfaceclassaccesscheckwithcallingthread-method"></a>IDeviceAccessPolicyCheck::D eviceInterfaceClassAccessCheckWithCallingThread-Methode
 
 > [!Important]  
-> Diese Schnittstellen werden nicht unterstützt und sollten nicht verwendet werden. Verwenden Sie stattdessen die APIs in der [C++-Programmier Referenz für die Geräte Zugriffs-API](device-access-api-c---programming-reference.md) .
+> Diese Schnittstellen werden nicht unterstützt und sollten nicht verwendet werden. Verwenden Sie stattdessen die APIs in [Gerätezugriffs-API C++-Programmierreferenz.](device-access-api-c---programming-reference.md)
 
-Diese API bestimmt, ob das Token für den aktuellen Kontext Zugriff auf die angegebene Geräteschnittstellen Klasse hat. IID = 7d276ff2-ce90-4275-a2a8-9a48b10d3e0b.
+Diese API bestimmt, ob das Token für den aktuellen Kontext Zugriff auf die angegebene Geräteschnittstellenklasse hat. IID = 7D276FF2-CE90-4275-A2A8-9A48B10D3E0B.
 
 ## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT DeviceInterfaceClassAccessCheckWithCallingThread(
-  [in] PCWSTR pszDeviceInterfaceClassGuid,
-  [in] DWORD  dwClientThreadId
+  [in] PCWSTR pszDeviceInterfaceClassGuid,
+  [in] DWORD  dwClientThreadId
 );
 ```
 
@@ -43,20 +43,20 @@ HRESULT DeviceInterfaceClassAccessCheckWithCallingThread(
 
 <dl> <dt>
 
-*pszbeviceingeterfakeclassguid* \[ in\]
+*pszDeviceInterfaceClassGuid* \[ In\]
 </dt> <dd>
 
-Die Geräteschnittstellen Klassen-GUID, für die der Zugriff geprüft werden soll.
+GuiD der Geräteschnittstellenklasse, für die der Zugriff überprüft werden soll.
 
 </dd> <dt>
 
-*dwclientthreadid* \[ in\]
+*dwClientThreadId* \[ In\]
 </dt> <dd>
 
-Clientthread-ID, bei der ggf. eine zugeordnete Benutzeroberfläche angezeigt werden soll.
+Clientthread-ID, in der bei Bedarf eine zugeordnete Benutzeroberfläche angezeigt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird S_OK zurückgegeben. Andernfalls wird ein HRESULT-Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, gibt sie S_OK. Andernfalls wird ein HRESULT-Fehlercode zurückgegeben.

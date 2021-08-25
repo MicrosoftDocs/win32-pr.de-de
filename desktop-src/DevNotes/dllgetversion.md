@@ -1,7 +1,7 @@
 ---
-description: Die dllgetversion-Funktion Ruft die Versionsnummer Cabinet.dll mithilfe der cabinetdllversioninfo-Struktur ab.
+description: Die DllGetVersion-Funktion ruft die Versionsnummer der Cabinet.dll mithilfe der CABINETDLLVERSIONINFO-Struktur ab.
 ms.assetid: 93f6c29e-6a62-46c2-a42b-8270fe522494
-title: Dllgetversion-Funktion
+title: DllGetVersion-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Cabinet.dll
-ms.openlocfilehash: e04fd8bc520f037c89912af730c537159867219e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7671465d20987de9ebe526db5961513c81cea5b30d6ad095baf4d3df3d798194
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654040"
 ---
-# <a name="dllgetversion-function"></a>Dllgetversion-Funktion
+# <a name="dllgetversion-function"></a>DllGetVersion-Funktion
 
-\[Diese Funktion wird nicht mehr unterst체tzt, sodass Ihr Verhalten nicht garantiert werden kann.\]
+\[Diese Funktion wird nicht mehr unterst체tzt, sodass ihr Verhalten nicht garantiert werden kann.\]
 
-Die **dllgetversion** -Funktion Ruft die Versionsnummer Cabinet.dll mithilfe der [**cabinetdllversioninfo**](cabinetdllversioninfo.md) -Struktur ab.
+Die **DllGetVersion-Funktion** ruft die Versionsnummer der Cabinet.dll mithilfe der [**CABINETDLLVERSIONINFO-Struktur**](cabinetdllversioninfo.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ VOID WINAPI DllGetVersion(
 *pcdvi* 
 </dt> <dd>
 
-Ein Zeiger auf die [**cabinetdllversioninfo**](cabinetdllversioninfo.md) -Struktur, die die Versionsinformationen enth채lt.
+Zeiger auf die [**CABINETDLLVERSIONINFO-Struktur,**](cabinetdllversioninfo.md) die die Versionsinformationen enth채lt.
 
 </dd> </dl>
 
@@ -52,9 +52,9 @@ Ein Zeiger auf die [**cabinetdllversioninfo**](cabinetdllversioninfo.md) -Strukt
 
 Diese Funktion gibt keinen Wert zur체ck.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,10 +70,10 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Cabinetdllversioninfo**](cabinetdllversioninfo.md)
+[**CABINETDLLVERSIONINFO**](cabinetdllversioninfo.md)
 </dt> <dt>
 
-[**Getdllversion**](getdllversion.md)
+[**GetDllVersion**](getdllversion.md)
 </dt> </dl>
 
  

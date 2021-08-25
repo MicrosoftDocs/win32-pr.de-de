@@ -1,5 +1,5 @@
 ---
-description: Beschreibt die Einschränkungen für die Eigenschaften eines zugeordneten CIM \_ enabledlogicalelement-Objekts.
+description: Beschreibt die Einschränkungen für die Eigenschaften eines zugeordneten CIM \_ EnabledLogicalElement-Objekts.
 ms.assetid: debce40c-9a0e-43a7-88fa-9336afd52e17
 title: CIM_EnabledLogicalElementCapabilities-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 35f400643e01821667c999342603fd402a3ae419
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbec7b52d735b6dcff4da4c211da1db8b36d18adf20798fdcaa3932e1761119a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119695910"
 ---
-# <a name="cim_enabledlogicalelementcapabilities-class"></a>CIM \_ enabledlogicalelementfunktionalitäten-Klasse
+# <a name="cim_enabledlogicalelementcapabilities-class"></a>CIM \_ EnabledLogicalElementCapabilities-Klasse
 
-Beschreibt die Einschränkungen für die Eigenschaften eines zugeordneten [**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md) -Objekts.
+Beschreibt die Einschränkungen für die Eigenschaften eines zugeordneten [**CIM \_ EnabledLogicalElement-Objekts.**](cim-enabledlogicalelement.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,82 +43,82 @@ class CIM_EnabledLogicalElementCapabilities : CIM_Capabilities
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ enabledlogicalelementfunktionsklasse** verfügt über diese Typen von Membern:
+Die **CIM \_ EnabledLogicalElementCapabilities-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ enabledlogicalelementfunktionalitäten** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ EnabledLogicalElementCapabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Elementnameeditsupported**
+**ElementNameEditSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("FC-Swap. "INCITS-T11 \| \_ \_ \_ \_ \| ", "", "", "", [](/windows/desktop/WmiSdk/standard-qualifiers) "", "", "", "", "[**CIM \_ managedelta**](cim-managedelement.md)".**Elementname**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("FC-SWAPI. INCITS-T11 \| SWAPI \_ UNIT \_ CONFIG \_ CAPS T \_ \| EditName"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ManagedElement**](cim-managedelement.md).**ElementName**")
 </dt> </dl>
 
-**true** , wenn die **ElementName** -Eigenschaft des aktivierten logischen Elements geändert werden kann. andernfalls **false**.
+**TRUE,** wenn die **ElementName-Eigenschaft** des aktivierten logischen Elements geändert werden kann. andernfalls **FALSE.**
 
 </dd> <dt>
 
-**Elementnamemask**
+**ElementNameMask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ enabledlogicalelementutilities**".**Maxelementnamelen**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EnabledLogicalElementCapabilities**.**MaxElementNameLen**")
 </dt> </dl>
 
-Ein regulärer Ausdruck, der die Einschränkungen für die Element **Name** -Eigenschaft des logischen Elements enable angibt. Die zulässige Syntax finden Sie unter *DMTF Standard ABNF mit dem Verwendungs Handbuch zur Verwaltungs Profil Spezifikation*(Anhang C).
+Ein regulärer Ausdruck, der die Einschränkungen für die **ElementName-Eigenschaft** des logischen Elements enable angibt. Informationen zur zulässigen Syntax finden Sie *unter DMTF standard ABNF with the Management Profile Specification Usage Guide*, Anhang C.
 
 > [!Note]  
-> Wenn diese Eigenschaft und die **elementnamemask** -Eigenschaft des logischen Elements enable die maximale Länge von Element **Name** beschreiben, wird der kleinere Wert verwendet.
+> Wenn diese Eigenschaft und die **ElementNameMask-Eigenschaft** des logischen Enable-Elements die maximale Länge von **ElementName** beschreiben, wird der kleinere Wert verwendet.
 
  
 
 </dd> <dt>
 
-**Maxelementnamelen**
+**MaxElementNameLen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("FC-Swap-API. INCITS-T11-- \| \_ Einheiten config-Einheiten \_ config \_ \_ T \| maxnamechars "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ fcswitchfunktionalitäten. elementnameeditsupported ","**CIM \_ enabledlogicalelementutilities**".**Elementnamemask**")
+Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("FC-SWAPI. INCITS-T11 \| SWAPI \_ UNIT \_ CONFIG \_ CAPS T \_ \| MaxNameChars"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ FCSwitchCapabilities.ElementNameEditSupported", "**CIM \_ EnabledLogicalElementCapabilities**.**ElementNameMask**")
 </dt> </dl>
 
-Die maximal unterstützte Länge der **ElementName** -Eigenschaft des aktivierten logischen Elements.
+Die maximal unterstützte Länge der **ElementName-Eigenschaft** des aktivierten logischen Elements.
 
 </dd> <dt>
 
-**Requestedstaatunter stützt**
+**RequestedStatesSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)".**RequestStateChange**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md).**RequestStateChange**")
 </dt> </dl>
 
-Die möglichen Zustände, die von der [**requestStateChange**](cim-enabledlogicalelement-requeststatechange.md) -Methode auf dem aktivierten logischen Element angefordert werden können.
+Die möglichen Zustände, die für das aktivierte logische Element durch die [**RequestStateChange-Methode**](cim-enabledlogicalelement-requeststatechange.md) angefordert werden können.
 
 <dt>
 
@@ -138,7 +138,7 @@ Die möglichen Zustände, die von der [**requestStateChange**](cim-enabledlogica
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -159,14 +159,14 @@ Die möglichen Zustände, die von der [**requestStateChange**](cim-enabledlogica
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-Zurück **stellen (8** )
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -195,8 +195,8 @@ Still **legung (9** )
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -205,7 +205,7 @@ Still **legung (9** )
 
 <dl> <dt>
 
-[**CIM- \_ Funktionen**](cim-capabilities.md)
+[**\_CIM-Funktionen**](cim-capabilities.md)
 </dt> </dl>
 
  

@@ -1,16 +1,16 @@
 ---
 title: AxWindowsMediaPlayer-Objekt (VB and C )
-description: AxWindowsMediaPlayer-Objekt (VB und C \)
+description: AxWindowsMediaPlayer-Objekt (VB und C\)
 ms.assetid: d7eeac20-1afa-4e73-9af6-9772fbb65516
 keywords:
-- Windows Media Player, AxWindowsMediaPlayer-Objekt
-- Windows Media Player Mobile, AxWindowsMediaPlayer-Objekt
-- Windows Media Player-Objektmodell, AxWindowsMediaPlayer-Objekt
-- Objektmodell, AxWindowsMediaPlayer-Objekt
+- Windows Media Player,AxWindowsMediaPlayer-Objekt
+- Windows Media Player Mobile,AxWindowsMediaPlayer-Objekt
+- Windows Media Player Objektmodell,AxWindowsMediaPlayer-Objekt
+- Objektmodell,AxWindowsMediaPlayer-Objekt
 - ActiveX-Steuerelement, AxWindowsMediaPlayer-Objekt
 - Windows Media Player ActiveX-Steuerelement, AxWindowsMediaPlayer-Objekt
-- Windows Media Player Mobile ActiveX-Steuerelement, AxWindowsMediaPlayer-Objekt
-- Verweis für Objektmodell, AxWindowsMediaPlayer-Objekt
+- Windows Media Player Mobiles ActiveX-Steuerelement,AxWindowsMediaPlayer-Objekt
+- Referenz für Objektmodell,AxWindowsMediaPlayer-Objekt
 - AxWindowsMediaPlayer-Objekt
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,194 +19,194 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 32f814560c8b6eb13dc5abb8736378432ec4565e
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: 1d0c66360e80ea293795442472ce163292c38152baa859889086a5687f03764f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104472420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119765280"
 ---
-# <a name="axwindowsmediaplayer-object-vb-and-c"></a>AxWindowsMediaPlayer-Objekt (VB und c#)
+# <a name="axwindowsmediaplayer-object-vb-and-c"></a>AxWindowsMediaPlayer-Objekt (VB und C#)
 
-Das AxWindowsMediaPlayer-Objekt ist das Stamm Objekt für das Windows Media Player-Steuerelement. Die Eigenschaften, Methoden und Ereignisse, die in den folgenden Tabellen aufgelistet sind, werden unterstützt.
+Das AxWindowsMediaPlayer-Objekt ist das Stammobjekt für das Windows Media Player-Steuerelement. Sie unterstützt die Eigenschaften, Methoden und Ereignisse, die in den folgenden Tabellen aufgeführt sind.
 
 Das AxWindowsMediaPlayer-Objekt unterstützt die folgenden Eigenschaften.
 
 
 
-| Eigenschaft                                                                             | BESCHREIBUNG                                                                                                                        |
+| Eigenschaft                                                                             | Beschreibung                                                                                                                        |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [cdromcollection](axwmplib-axwindowsmediaplayer-cdromcollection--vb-and-c.md)       | Ruft eine **iwmpcdromcollection** -Schnittstelle ab.                                                                                         |
-| [closedcaption](axwmplib-axwindowsmediaplayer-closedcaption--vb-and-c.md)           | Ruft eine iwmpclosedcaption-Schnittstelle ab.                                                                                               |
-| [CTL-Steuerelemente](axwmplib-axwindowsmediaplayer-ctlcontrols--vb-and-c.md)               | Ruft eine iwmpcontrols-Schnittstelle ab.                                                                                                    |
-| [Ctlenabled](axwmplib-axwindowsmediaplayer-ctlenabled--vb-and-c.md)                 | Ruft einen Wert ab, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist                                               |
-| [currentMedia](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)             | Ruft die iwmpmedia-Schnittstelle ab, die dem aktuellen Medien Element entspricht, oder legt diese fest.                                                   |
-| [currentwiedergabe](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)       | Ruft die aktuelle **iwmpwiedergabe** -Schnittstelle ab oder legt Sie fest.                                                                               |
-| [DVD](axwmplib-axwindowsmediaplayer-dvd--vb-and-c.md)                               | Ruft eine iwmpdvd-Schnittstelle ab.                                                                                                         |
-| [enablecontextmenu](axwmplib-axwindowsmediaplayer-enablecontextmenu--vb-and-c.md)   | Ruft einen Wert ab, der angibt, ob das Kontextmenü aktiviert werden soll, das beim Klicken mit der rechten Maustaste angezeigt wird, oder legt diesen fest.          |
-| [Fehler](axwmplib-axwindowsmediaplayer-error--vb-and-c.md)                           | Ruft eine iwmperror-Schnittstelle ab.                                                                                                       |
-| [Vollbild](axwmplib-axwindowsmediaplayer-fullscreen--vb-and-c.md)                 | Ruft einen Wert ab, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden, oder legt diesen fest.                                          |
-| [IsOnline](axwmplib-axwindowsmediaplayer-isonline--vb-and-c.md)                     | Ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.                                                                |
-| IsRemote                                                                             | Wird für die .NET-Programmierung nicht unterstützt.                                                                                                |
-| [mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)       | Ruft eine iwmpmediacollection-Schnittstelle ab.                                                                                             |
-| [network](axwmplib-axwindowsmediaplayer-network--vb-and-c.md)                       | Ruft eine iwmpnetwork-Schnittstelle ab.                                                                                                     |
-| [openstate](axwmplib-axwindowsmediaplayer-openstate--vb-and-c.md)                   | Ruft einen Wert ab, der den Zustand der Inhaltsquelle angibt.                                                                           |
-| playerapplication                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                                                |
-| [playlistcollection](axwmplib-axwindowsmediaplayer-playlistcollection--vb-and-c.md) | Ruft eine iwmpplaylistcollection-Schnittstelle ab.                                                                                          |
-| [playstate](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)                   | Ruft einen Wert ab, der den Zustand des Windows-Media Player Vorgangs angibt.                                                           |
-| [settings](axwmplib-axwindowsmediaplayer-settings--vb-and-c.md)                     | Ruft eine iwmpsettings-Schnittstelle ab.                                                                                                    |
-| [status](axwmplib-axwindowsmediaplayer-status--vb-and-c.md)                         | Ruft einen Wert ab, der den aktuellen Status von Windows-Media Player angibt.                                                                |
-| [stretchdefit](axwmplib-axwindowsmediaplayer-stretchtofit--vb-and-c.md)             | Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob Video auf die Größe der Windows-Media Player Steuerelement-Videoanzeige gestreckt wird          |
-| [uiMode](axwmplib-axwindowsmediaplayer-uimode--vb-and-c.md)                         | Ruft einen Wert ab, der angibt, welche Steuerelemente in der Benutzeroberfläche angezeigt werden, wenn Windows Media Player in eine Webseite eingebettet ist, oder legt diesen fest. |
-| [URL](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)                               | Ruft den Namen des wieder zugebende Clips ab oder legt diesen fest.                                                                                         |
-| [VERSIONINFO](axwmplib-axwindowsmediaplayer-versioninfo--vb-and-c.md)               | Ruft einen-Wert ab, der die Version des Windows-Media Player angibt.                                                               |
-| [windowlessvideo](axwmplib-axwindowsmediaplayer-windowlessvideo--vb-and-c.md)       | Ruft einen Wert ab, der angibt, ob das Windows Media Player-Steuerelement Videos im fensterlosen Modus rendert, oder legt diesen fest                         |
+| [ccollectionCollection](axwmplib-axwindowsmediaplayer-cdromcollection--vb-and-c.md)       | Ruft eine **IWMPCcollectionCollection-Schnittstelle** ab.                                                                                         |
+| [closedCaption](axwmplib-axwindowsmediaplayer-closedcaption--vb-and-c.md)           | Ruft eine IWMPClosedCaption-Schnittstelle ab.                                                                                               |
+| [Ctlcontrols](axwmplib-axwindowsmediaplayer-ctlcontrols--vb-and-c.md)               | Ruft eine IWMPControls-Schnittstelle ab.                                                                                                    |
+| [Strgbard](axwmplib-axwindowsmediaplayer-ctlenabled--vb-and-c.md)                 | Ruft einen Wert ab, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist, oder legt einen Wert fest.                                               |
+| [currentMedia](axwmplib-axwindowsmediaplayer-currentmedia--vb-and-c.md)             | Ruft die IWMPMedia-Schnittstelle ab, die dem aktuellen Medienelement entspricht, oder legt sie fest.                                                   |
+| [currentPlaylist](axwmplib-axwindowsmediaplayer-currentplaylist--vb-and-c.md)       | Ruft die aktuelle **IWMPPlaylist-Schnittstelle** ab oder legt sie fest.                                                                               |
+| [Dvd](axwmplib-axwindowsmediaplayer-dvd--vb-and-c.md)                               | Ruft eine IWMPDVD-Schnittstelle ab.                                                                                                         |
+| [enableContextMenu](axwmplib-axwindowsmediaplayer-enablecontextmenu--vb-and-c.md)   | Ruft einen Wert ab, der angibt, ob das Kontextmenü aktiviert werden soll, das angezeigt wird, wenn mit der rechten Maustaste geklickt wird, oder legt diesen fest.          |
+| [Fehler](axwmplib-axwindowsmediaplayer-error--vb-and-c.md)                           | Ruft eine IWMPError-Schnittstelle ab.                                                                                                       |
+| [Fullscreen](axwmplib-axwindowsmediaplayer-fullscreen--vb-and-c.md)                 | Ruft einen Wert ab, der angibt, ob Videoinhalte im Vollbildmodus wiedergegeben werden, oder legt den Wert fest.                                          |
+| [isOnline](axwmplib-axwindowsmediaplayer-isonline--vb-and-c.md)                     | Ruft einen Wert ab, der angibt, ob der Benutzer mit einem Netzwerk verbunden ist.                                                                |
+| isRemote                                                                             | Wird für die .NET-Programmierung nicht unterstützt.                                                                                                |
+| [mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)       | Ruft eine IWMPMediaCollection-Schnittstelle ab.                                                                                             |
+| [network](axwmplib-axwindowsmediaplayer-network--vb-and-c.md)                       | Ruft eine IWMPNetwork-Schnittstelle ab.                                                                                                     |
+| [openState](axwmplib-axwindowsmediaplayer-openstate--vb-and-c.md)                   | Ruft einen Wert ab, der den Zustand der Inhaltsquelle angibt.                                                                           |
+| playerApplication                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                                                |
+| [playlistCollection](axwmplib-axwindowsmediaplayer-playlistcollection--vb-and-c.md) | Ruft eine IWMPPlaylistCollection-Schnittstelle ab.                                                                                          |
+| [playState](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)                   | Ruft einen Wert ab, der den Zustand des Windows Media Player Vorgangs angibt.                                                           |
+| [settings](axwmplib-axwindowsmediaplayer-settings--vb-and-c.md)                     | Ruft eine IWMPSettings-Schnittstelle ab.                                                                                                    |
+| [status](axwmplib-axwindowsmediaplayer-status--vb-and-c.md)                         | Ruft einen Wert ab, der den aktuellen Status von Windows Media Player angibt.                                                                |
+| [stretchToFit](axwmplib-axwindowsmediaplayer-stretchtofit--vb-and-c.md)             | Ruft einen Wert ab, der angibt, ob das Video an die Größe der Windows Media Player Videoanzeige des Steuerelements angepasst wird, oder legt diesen fest.          |
+| [uiMode](axwmplib-axwindowsmediaplayer-uimode--vb-and-c.md)                         | Ruft einen Wert ab, der angibt, welche Steuerelemente auf der Benutzeroberfläche angezeigt werden, wenn Windows Media Player in eine Webseite eingebettet ist, oder legt den Wert fest. |
+| [URL](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)                               | Ruft den Namen des abgespielten Clips ab oder legt diesen fest.                                                                                         |
+| [versionInfo](axwmplib-axwindowsmediaplayer-versioninfo--vb-and-c.md)               | Ruft einen Wert ab, der die Version der Windows Media Player angibt.                                                               |
+| [windowlessVideo](axwmplib-axwindowsmediaplayer-windowlessvideo--vb-and-c.md)       | Ruft einen Wert ab, der angibt, ob das Windows Media Player-Steuerelement Video im fensterlosen Modus rendert, oder legt den Wert fest.                         |
 
 
 
- 
+ 
 
 Das AxWindowsMediaPlayer-Objekt unterstützt die folgenden Methoden.
 
 
 
-| Methode                                                       | BESCHREIBUNG                                               |
+| Methode                                                       | Beschreibung                                               |
 |--------------------------------------------------------------|-----------------------------------------------------------|
-| [close](axwmplib-axwindowsmediaplayer-close.md)             | Gibt Windows Media Player-Ressourcen frei.                  |
-| [launchurl](axwmplib-axwindowsmediaplayer-launchurl.md)     | Sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. |
-| [newmedia](axwmplib-axwindowsmediaplayer-newmedia.md)       | Gibt eine iwmpmedia-Schnittstelle für ein neues Medien Element zurück.      |
-| [neue](axwmplib-axwindowsmediaplayer-newplaylist.md) | gibt eine iwmpwiedergabe-Schnittstelle für eine neue Wiedergabeliste zurück.     |
-| [openplayer](axwmplib-axwindowsmediaplayer-openplayer.md)   | Öffnet Windows-Media Player mit der angegebenen URL.       |
+| [close](axwmplib-axwindowsmediaplayer-close.md)             | Gibt Windows Media Player Ressourcen frei.                  |
+| [launchURL](axwmplib-axwindowsmediaplayer-launchurl.md)     | Sendet eine URL an den Standardbrowser des Benutzers, der gerendert werden soll. |
+| [Newmedia](axwmplib-axwindowsmediaplayer-newmedia.md)       | Gibt eine IWMPMedia-Schnittstelle für ein neues Medienelement zurück.      |
+| [newPlaylist](axwmplib-axwindowsmediaplayer-newplaylist.md) | gibt eine IWMPPlaylist-Schnittstelle für eine neue Wiedergabeliste zurück.     |
+| [openPlayer](axwmplib-axwindowsmediaplayer-openplayer.md)   | Öffnet Windows Media Player unter Verwendung der angegebenen URL.       |
 
 
 
- 
+ 
 
 Das AxWindowsMediaPlayer-Objekt unterstützt die folgenden Ereignisse.
 
 
 
-| Ereignis                                                                                                              | BESCHREIBUNG                                                                                                |
+| Ereignis                                                                                                              | Beschreibung                                                                                                |
 |--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [Audiolanguagechange](axwmplib-axwindowsmediaplayer-audiolanguagechange.md)                                       | Tritt auf, wenn sich die aktuelle Audiosprache ändert.                                                            |
-| [Pufferung](axwmplib-axwindowsmediaplayer-buffering.md)                                                           | Tritt auf, wenn das Windows Media Player-Steuerelement die Pufferung startet oder beendet.                                     |
-| [Cdromburnerror](axwmplib-axwindowsmediaplayer-cdromburnerror.md)                                                 | Tritt auf, wenn während eines CD-Brennvorgangs ein generischer Fehler auftritt.                                         |
-| [Cdromburnmediaerror](axwmplib-axwindowsmediaplayer-cdromburnmediaerror.md)                                       | Tritt auf, wenn beim Brennen eines einzelnen Medien Elements auf einer CD ein Fehler auftritt.                               |
-| [Cdromburnstatechange](axwmplib-axwindowsmediaplayer-cdromburnstatechange.md)                                     | Tritt auf, wenn der Zustand eines CD-Brennvorgangs geändert wird.                                                          |
-| [Cdrommediachange](axwmplib-axwindowsmediaplayer-cdrommediachange.md)                                             | Tritt auf, wenn eine CD oder DVD in ein CD-oder DVD-Laufwerk eingefügt oder von dort aus entfernt wird.                                |
-| [Cdromripmediaerror](axwmplib-axwindowsmediaplayer-cdromripmediaerror.md)                                         | Tritt auf, wenn ein Fehler auftritt, während ein einzelner Track von einer CD gerippt wird.                                  |
-| [Cdromripstatechange](axwmplib-axwindowsmediaplayer-cdromripstatechange.md)                                       | Tritt auf, wenn sich ein CD-einreißen-Vorgang ändert.                                                          |
+| [AudioLanguageChange](axwmplib-axwindowsmediaplayer-audiolanguagechange.md)                                       | Tritt ein, wenn sich die aktuelle Audiosprache ändert.                                                            |
+| [Pufferung](axwmplib-axwindowsmediaplayer-buffering.md)                                                           | Tritt ein, wenn das Windows Media Player-Steuerelement mit der Pufferung beginnt oder beendet.                                     |
+| [CholeError](axwmplib-axwindowsmediaplayer-cdromburnerror.md)                                                 | Tritt auf, wenn während eines CD-Vorgangs ein generischer Fehler auftritt.                                         |
+| [CholeHoleMediaError](axwmplib-axwindowsmediaplayer-cdromburnmediaerror.md)                                       | Tritt auf, wenn ein Fehler auftritt, während ein einzelnes Medienelement an eine CD ausgegeben wird.                               |
+| [CholeStateChange](axwmplib-axwindowsmediaplayer-cdromburnstatechange.md)                                     | Tritt ein, wenn sich der Zustand eines CD-Vorgangs ändert.                                                          |
+| [CholeMediaChange](axwmplib-axwindowsmediaplayer-cdrommediachange.md)                                             | Tritt ein, wenn eine CD oder DVD in ein CD- oder DVD-Laufwerk eingefügt oder von einem CD- oder DVD-Laufwerk aus ihr eingefügt wird.                                |
+| [CorporaRipMediaError](axwmplib-axwindowsmediaplayer-cdromripmediaerror.md)                                         | Tritt auf, wenn ein Fehler auftritt, während eine einzelne Spur von einer CD entfernt wird.                                  |
+| [CorporaRipStateChange](axwmplib-axwindowsmediaplayer-cdromripstatechange.md)                                       | Tritt ein, wenn sich der Zustand eines CD-Löschvorgangs ändert.                                                          |
 | [Klicken](axwmplib-axwindowsmediaplayer-click.md)                                                                   | Tritt ein, wenn der Benutzer auf eine Maustaste klickt.                                                                |
-| "Kreatepartnershipcomplete"                                                                                          | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| [Ereignis Wechsel](axwmplib-axwindowsmediaplayer-currentitemchange.md)                                           | Tritt auf, wenn [iwmpcontrols.](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md) Currency Item geändert wird. |
-| [Currentmediaitemavailable](axwmplib-axwindowsmediaplayer-currentmediaitemavailable.md)                           | Tritt auf, wenn ein grafisches Metadatenelement im aktuellen Medien Element verfügbar wird.                           |
-| [Currentplaylistchange](axwmplib-axwindowsmediaplayer-currentplaylistchange.md)                                   | Tritt auf, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.                                                 |
-| [Currentplaylistitemavailable](axwmplib-axwindowsmediaplayer-currentplaylistitemavailable.md)                     | Tritt ein, wenn das aktuelle Wiedergabelisten Element verfügbar wird.                                                   |
+| CreatePartnershipComplete                                                                                          | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| [CurrentItemChange](axwmplib-axwindowsmediaplayer-currentitemchange.md)                                           | Tritt auf, [wenn sich IWMPControls.currentItem](wmplibiwmpcontrols-iwmpcontrols-currentitem--vb-and-c.md) ändert. |
+| [CurrentMediaItemAvailable](axwmplib-axwindowsmediaplayer-currentmediaitemavailable.md)                           | Tritt ein, wenn ein grafisches Metadatenelement im aktuellen Medienelement verfügbar wird.                           |
+| [CurrentPlaylistChange](axwmplib-axwindowsmediaplayer-currentplaylistchange.md)                                   | Tritt ein, wenn sich etwas innerhalb der aktuellen Wiedergabeliste ändert.                                                 |
+| [CurrentPlaylistItemAvailable](axwmplib-axwindowsmediaplayer-currentplaylistitemavailable.md)                     | Tritt ein, wenn das aktuelle Wiedergabelistenelement verfügbar wird.                                                   |
 | DeviceConnect                                                                                                      | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Devicedisconnect                                                                                                   | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Devicestatuschange                                                                                                 | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Geräte Fehlercode                                                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Devicesyncstatechange                                                                                              | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| [Disconnect](axwmplib-axwindowsmediaplayer-disconnect.md) (Trennen)                                                         | Für die zukünftige Verwendung reserviert.                                                                                   |
-| [Domainchange](axwmplib-axwindowsmediaplayer-domainchange.md)                                                     | Tritt auf, wenn die DVD-Domäne geändert wird.                                                                        |
-| [DoubleClick](axwmplib-axwindowsmediaplayer-doubleclick.md)                                                       | Tritt ein, wenn der Benutzer auf eine Maustaste doppelklickt.                                                         |
-| [Durationunitchange](axwmplib-axwindowsmediaplayer-durationunitchange.md)                                         | Für die zukünftige Verwendung reserviert.                                                                                   |
+| DeviceDisconnect                                                                                                   | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| DeviceStatusChange                                                                                                 | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| DeviceSyncError                                                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| DeviceSyncStateChange                                                                                              | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| [Trennen](axwmplib-axwindowsmediaplayer-disconnect.md)                                                          | Für die zukünftige Verwendung reserviert.                                                                                   |
+| [DomainChange](axwmplib-axwindowsmediaplayer-domainchange.md)                                                     | Tritt ein, wenn sich die DVD-Domäne ändert.                                                                        |
+| [Doubleclick](axwmplib-axwindowsmediaplayer-doubleclick.md)                                                       | Tritt ein, wenn der Benutzer auf eine Maustaste doppelklickt.                                                         |
+| [DurationUnitChange](axwmplib-axwindowsmediaplayer-durationunitchange.md)                                         | Für die zukünftige Verwendung reserviert.                                                                                   |
 | [EndOfStream](axwmplib-axwindowsmediaplayer-endofstream.md)                                                       | Für die zukünftige Verwendung reserviert.                                                                                   |
-| [Fehler](axwmplib-axwindowsmediaplayer-error.md)                                                                   | Tritt auf, wenn das Windows Media Player-Steuerelement einen Fehlerzustand aufweist.                                       |
-| [Folderscanstatechange](axwmplib-axwindowsmediaplayer-folderscanstatechange.md)                                   | Tritt auf, wenn der Status einer Ordner Überwachung geändert wird.                                                   |
-| [KeyDown](axwmplib-axwindowsmediaplayer-keydown.md)                                                               | Tritt beim Drücken einer Taste ein.                                                                              |
-| [KeyPress](axwmplib-axwindowsmediaplayer-keypress.md)                                                             | Tritt auf, wenn eine Taste gedrückt und anschließend freigegeben wird.                                                            |
-| [KeyUp](axwmplib-axwindowsmediaplayer-keyup.md)                                                                   | Tritt ein, wenn eine Taste losgelassen wird.                                                                             |
-| [Libraryconnect](axwmplib-axwindowsmediaplayer-libraryconnect.md)                                                 | Tritt auf, wenn eine Bibliothek verfügbar wird.                                                                   |
-| [Librarydisconnect](axwmplib-axwindowsmediaplayer-librarydisconnect.md)                                           | Tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.                                                              |
-| [Markerhit](axwmplib-axwindowsmediaplayer-markerhit.md)                                                           | Tritt ein, wenn ein Marker erreicht wird.                                                                           |
-| [Mediachange](axwmplib-axwindowsmediaplayer-mediachange.md)                                                       | Tritt auf, wenn ein Medien Element geändert wird.                                                                          |
-| [Mediacollectionattributestringadded](axwmplib-axwindowsmediaplayer-mediacollectionattributestringadded.md)       | Tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird.                                                    |
-| [Mediacollectionattributestringchanged](axwmplib-axwindowsmediaplayer-mediacollectionattributestringchanged.md)   | Tritt auf, wenn ein Attribut Wert in der Bibliothek geändert wird.                                                  |
-| [Mediacollectionattributestraningrebewegt](axwmplib-axwindowsmediaplayer-mediacollectionattributestringremoved.md)   | Tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird.                                                |
-| [Mediacollectionchange](axwmplib-axwindowsmediaplayer-mediacollectionchange.md)                                   | Tritt auf, wenn die Mediensammlung geändert wird.                                                                  |
-| [Mediacollectionmediaadded](axwmplib-axwindowsmediaplayer-mediacollectionmediaadded.md)                           | Tritt auf, wenn der lokalen Bibliothek ein Medien Element hinzugefügt wird.                                                    |
-| [Mediacollectionmediarebewegt](axwmplib-axwindowsmediaplayer-mediacollectionmediaremoved.md)                       | Tritt auf, wenn ein Medien Element aus der lokalen Bibliothek entfernt wird.                                                |
-| [MediaError](axwmplib-axwindowsmediaplayer-mediaerror.md)                                                         | Tritt auf, wenn das **Medien** Objekt einen Fehlerzustand aufweist.                                                   |
-| [Modeänderung](axwmplib-axwindowsmediaplayer-modechange.md)                                                         | Tritt auf, wenn ein Windows Media Player-Modus geändert wird.                                                     |
-| [MouseDown](axwmplib-axwindowsmediaplayer-mousedown.md)                                                           | Tritt auf, wenn eine Maustaste gedrückt wird.                                                                     |
-| [MouseMove](axwmplib-axwindowsmediaplayer-mousemove.md)                                                           | Tritt ein, wenn der Mauszeiger verschoben wird.                                                                    |
-| [MouseUp](axwmplib-axwindowsmediaplayer-mouseup.md)                                                               | Tritt auf, wenn eine Maustaste losgelassen wird.                                                                    |
+| [Fehler](axwmplib-axwindowsmediaplayer-error.md)                                                                   | Tritt ein, wenn das Windows Media Player-Steuerelement eine Fehlerbedingung auf hat.                                       |
+| [FolderScanStateChange](axwmplib-axwindowsmediaplayer-folderscanstatechange.md)                                   | Tritt ein, wenn ein Ordnerüberwachungsvorgang den Zustand ändert.                                                   |
+| [Keydown](axwmplib-axwindowsmediaplayer-keydown.md)                                                               | Tritt beim Drücken einer Taste ein.                                                                              |
+| [Keypress](axwmplib-axwindowsmediaplayer-keypress.md)                                                             | Tritt ein, wenn eine Taste gedrückt und dann freigegeben wird.                                                            |
+| [Keyup](axwmplib-axwindowsmediaplayer-keyup.md)                                                                   | Tritt ein, wenn eine Taste losgelassen wird.                                                                             |
+| [LibraryConnect](axwmplib-axwindowsmediaplayer-libraryconnect.md)                                                 | Tritt ein, wenn eine Bibliothek verfügbar wird.                                                                   |
+| [LibraryDisconnect](axwmplib-axwindowsmediaplayer-librarydisconnect.md)                                           | Tritt auf, wenn eine Bibliothek nicht mehr verfügbar ist.                                                              |
+| [MarkerHit](axwmplib-axwindowsmediaplayer-markerhit.md)                                                           | Tritt ein, wenn ein Marker erreicht wird.                                                                           |
+| [MediaChange](axwmplib-axwindowsmediaplayer-mediachange.md)                                                       | Tritt ein, wenn sich ein Medienelement ändert.                                                                          |
+| [MediaCollectionAttributeStringAdded](axwmplib-axwindowsmediaplayer-mediacollectionattributestringadded.md)       | Tritt ein, wenn der Bibliothek ein Attributwert hinzugefügt wird.                                                    |
+| [MediaCollectionAttributeStringChanged](axwmplib-axwindowsmediaplayer-mediacollectionattributestringchanged.md)   | Tritt ein, wenn ein Attributwert in der Bibliothek geändert wird.                                                  |
+| [MediaCollectionAttributeStringRemoved](axwmplib-axwindowsmediaplayer-mediacollectionattributestringremoved.md)   | Tritt ein, wenn ein Attributwert aus der Bibliothek entfernt wird.                                                |
+| [MediaCollectionChange](axwmplib-axwindowsmediaplayer-mediacollectionchange.md)                                   | Tritt ein, wenn sich die Mediensammlung ändert.                                                                  |
+| [MediaCollectionMediaAdded](axwmplib-axwindowsmediaplayer-mediacollectionmediaadded.md)                           | Tritt ein, wenn der lokalen Bibliothek ein Medienelement hinzugefügt wird.                                                    |
+| [MediaCollectionMediaRemoved](axwmplib-axwindowsmediaplayer-mediacollectionmediaremoved.md)                       | Tritt ein, wenn ein Medienelement aus der lokalen Bibliothek entfernt wird.                                                |
+| [MediaError](axwmplib-axwindowsmediaplayer-mediaerror.md)                                                         | Tritt auf, wenn das **Media-Objekt** eine Fehlerbedingung auf hat.                                                   |
+| [ModeChange](axwmplib-axwindowsmediaplayer-modechange.md)                                                         | Tritt ein, wenn ein Modus Windows Media Player geändert wird.                                                     |
+| [Mousedown](axwmplib-axwindowsmediaplayer-mousedown.md)                                                           | Tritt ein, wenn eine Maustaste gedrückt wird.                                                                     |
+| [Mousemove](axwmplib-axwindowsmediaplayer-mousemove.md)                                                           | Tritt ein, wenn der Mauszeiger bewegt wird.                                                                    |
+| [Mouseup](axwmplib-axwindowsmediaplayer-mouseup.md)                                                               | Tritt ein, wenn eine Maustaste losgelassen wird.                                                                    |
 | [NewStream](axwmplib-axwindowsmediaplayer-newstream.md)                                                           | Für die zukünftige Verwendung reserviert.                                                                                   |
-| [Openplaylistswitch](axwmplib-axwindowsmediaplayer-openplaylistswitch.md)                                         | Tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt.                                                               |
-| [OpenStateChange](axwmplib-axwindowsmediaplayer-openstatechange.md)                                               | Tritt auf, wenn sich der Zustand des Windows Media Player-Steuer Elements ändert                                                |
-| Playerdockedstatechange                                                                                            | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Playerreconnect                                                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| [Playlistchange](axwmplib-axwindowsmediaplayer-playlistchange.md)                                                 | Tritt auf, wenn eine Wiedergabeliste geändert wird.                                                                            |
-| [Playlistcollectionchange](axwmplib-axwindowsmediaplayer-playlistcollectionchange.md)                             | Tritt auf, wenn sich etwas in der Wiedergabelisten Auflistung ändert.                                                  |
-| [Playlistcollectionplaylistadded](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistadded.md)               | Tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird.                                                |
-| [Playlistcollectionplaylistreverschohe](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistremoved.md)           | Tritt auf, wenn eine Wiedergabeliste aus der Wiedergabelisten Auflistung entfernt wird.                                            |
-| [Playlistcollectionplaylisteintasdeleted](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistsetasdeleted.md) | Für die zukünftige Verwendung reserviert.                                                                                   |
-| [PlayStateChange](axwmplib-axwindowsmediaplayer-playstatechange.md)                                               | Tritt auf, wenn sich der Wiedergabe Zustand des Windows-Media Player Steuer Elements ändert.                                    |
-| [Positionsänderung](axwmplib-axwindowsmediaplayer-positionchange.md)                                                 | Tritt ein, wenn die aktuelle Position des Medien Elements geändert wurde.                                       |
-| [ScriptCommand](axwmplib-axwindowsmediaplayer-scriptcommand.md)                                                   | Tritt auf, wenn ein synchronisierter Befehl oder eine URL empfangen wird.                                                     |
-| [StatusChange](axwmplib-axwindowsmediaplayer-statuschange.md)                                                     | Tritt ein, wenn der Wert der **Status** Eigenschaft geändert wird.                                                         |
-| [Stringcollectionchange](axwmplib-axwindowsmediaplayer-stringcollectionchange.md)                                 | Tritt auf, wenn eine Zeichen folgen Auflistung geändert wird.                                                                   |
-| Switchedto Control                                                                                                  | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
-| Switchedtoplayerapplication                                                                                        | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| [OpenPlaylistSwitch](axwmplib-axwindowsmediaplayer-openplaylistswitch.md)                                         | Tritt ein, wenn die Wiedergabe eines Titels auf einer DVD beginnt.                                                               |
+| [OpenStateChange](axwmplib-axwindowsmediaplayer-openstatechange.md)                                               | Tritt ein, wenn das Windows Media Player-Steuerelement den Zustand ändert.                                                |
+| PlayerDockedStateChange                                                                                            | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| PlayerReconnect                                                                                                    | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| [PlaylistChange](axwmplib-axwindowsmediaplayer-playlistchange.md)                                                 | Tritt ein, wenn sich eine Wiedergabeliste ändert.                                                                            |
+| [PlaylistCollectionChange](axwmplib-axwindowsmediaplayer-playlistcollectionchange.md)                             | Tritt ein, wenn sich etwas in der Wiedergabelistensammlung ändert.                                                  |
+| [PlaylistCollectionPlaylistAdded](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistadded.md)               | Tritt ein, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird.                                                |
+| [PlaylistCollectionPlaylistRemoved](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistremoved.md)           | Tritt ein, wenn eine Wiedergabeliste aus der Wiedergabelistensammlung entfernt wird.                                            |
+| [PlaylistCollectionPlaylistSetAsDeleted](axwmplib-axwindowsmediaplayer-playlistcollectionplaylistsetasdeleted.md) | Für die zukünftige Verwendung reserviert.                                                                                   |
+| [PlayStateChange](axwmplib-axwindowsmediaplayer-playstatechange.md)                                               | Tritt ein, wenn sich der Wiedergabezustand des Windows Media Player ändert.                                    |
+| [PositionChange](axwmplib-axwindowsmediaplayer-positionchange.md)                                                 | Tritt ein, wenn die aktuelle Position des Medienelements geändert wurde.                                       |
+| [ScriptCommand](axwmplib-axwindowsmediaplayer-scriptcommand.md)                                                   | Tritt ein, wenn ein synchronisierter Befehl oder eine synchronisierte URL empfangen wird.                                                     |
+| [StatusChange](axwmplib-axwindowsmediaplayer-statuschange.md)                                                     | Tritt ein, wenn **die Statuseigenschaft** den Wert ändert.                                                         |
+| [StringCollectionChange](axwmplib-axwindowsmediaplayer-stringcollectionchange.md)                                 | Tritt ein, wenn sich eine Zeichenfolgenauflistung ändert.                                                                   |
+| SwitchedToControl                                                                                                  | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
+| SwitchedToPlayerApplication                                                                                        | Wird für die .NET-Programmierung nicht unterstützt.                                                                        |
 | [Warnung](axwmplib-axwindowsmediaplayer-warning.md)                                                               | Für die zukünftige Verwendung reserviert.                                                                                   |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle (VB und c#)**](iwmpcdromcollection--vb-and-c.md)
+[**IWMPCcollectionCollection-Schnittstelle (VB und C#)**](iwmpcdromcollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmperror-Schnittstelle (VB und c#)**](iwmperror--vb-and-c.md)
+[**IWMPError-Schnittstelle (VB und C#)**](iwmperror--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> <dt>
 
-[**Objektmodell Referenz für Visual Basic .net und C #**](object-model-reference-for-visual-basic--net-and-c.md)
+[**Objektmodellreferenz für Visual Basic .NET und C #**](object-model-reference-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**Wmpopenstate**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpopenstate)
+[**WMPOpenState**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpopenstate)
 </dt> <dt>
 
 [**WMPPlayState**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpplaystate)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

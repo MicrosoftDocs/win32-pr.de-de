@@ -1,46 +1,46 @@
 ---
-title: Medien Steuerungs Schnittstelle (MCI)
-description: Medien Steuerungs Schnittstelle (MCI)
+title: Media Control Interface (MCI)
+description: Media Control Interface (MCI)
 ms.assetid: e22f23b5-0fa6-4957-bbbf-b1b3a4c8bd31
 keywords:
 - Windows Multimedia, Media Control Interface (MCI)
-- Multimedia, Medien Steuerungs Schnittstelle (MCI)
-- Multimedia-Audiodaten, Medien Steuerungs Schnittstelle (MCI)
-- Audioschnittstelle, Medien Steuerungs Schnittstelle (MCI)
-- Digital Instrumentation Digital Interface (MIDI), Media Control Interface (MCI)
-- MIDI (Digital Instrumentation Digital Interface), Medien Steuerungs Schnittstelle (MCI)
-- Media Control Interface (MCI), Digital Instrumentation Digital Interface (MIDI)
-- MCI (Media Control Interface), Digital Instrumentation Digital Interface (MIDI)
-- Media Control Interface (MCI), MIDI Sequencer
-- MCI (Medien Steuerungs Schnittstelle), MIDI Sequencer
-- MCI-MIDI-Sequencer, Informationen zu
+- multimedia, Media Control Interface (MCI)
+- Multimediaaudio, Media Control Interface (MCI)
+- audio, Media Control Interface (MCI)
+- Music Instrument Digital Interface (SENDER), Media Control Interface (MCI)
+- INSTRUMENTS (Music Instrument Digital Interface), Media Control Interface (MCI)
+- Mediensteuerungsschnittstelle (Media Control Interface, MCI), Music Instrument Digital Interface (INSTRUMENTS)
+- MCI (Media Control Interface), Music Instrument Digital Interface (INSTRUMENTS)
+- Media Control Interface (MCI), OPC Sequencer
+- MCI (Media Control Interface), OPC Sequencer
+- MCI-SEQUENZER, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00aaf582f625c4411a2400ee381ec5c17d4d8ae7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c4c8d21588754d0f66dbed97c74bbaabe4c005335059dace2997012691a24c8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119782980"
 ---
-# <a name="media-control-interface-mci"></a>Medien Steuerungs Schnittstelle (MCI)
+# <a name="media-control-interface-mci"></a>Media Control Interface (MCI)
 
-Der MCI-c#-Sequencer ist die MCI-Systemkomponente, die die Dateien von MIDI wieder gibt Anwendungen können mithilfe von MCI die Verwendung von MIDI-Dateien problemlos wiedergeben, aber MCI erzwingt die folgenden Einschränkungen für die Funktionen von "
+Der MCI-SEQUENCER IST die MCI-Systemkomponente, die CSV-Dateien abspielt. Anwendungen können DATEIEN problemlos mithilfe von MCI wiedergeben, aber MCI erzwingt die folgenden Einschränkungen für DIE FUNKTIONEN von DOSSIER:
 
--   MCI unterstützt nur die MIDI-Ausgabe.
--   MCI lässt die Synchronisierung zwischen den Integritäts-und anderen Echt Zeit Ereignissen (z. b. Video) nicht zu.
+-   MCI unterstützt nur die AUSGABE VON ONLY.
+-   MCI lässt keine enge Synchronisierung zwischen EREIGNISSEN und anderen Echtzeitereignissen (z. B. Videos) zu.
 
-Wenn Sie eine genaue MIDI-Synchronisierung benötigen, müssen Sie die Datenstrom Puffer oder die Dienst-MIDI-Dienste verwenden. Wenn Sie über die Funktionen der MIDI-Eingabe verfügen, müssen Sie die-Dienst-Dienste verwenden.
+Wenn Sie eine genaue SYNCHRONISIEREN-Synchronisierung benötigen, müssen Sie die Streampuffer oder die CSV-Dienste verwenden. Wenn Sie DIE INPUT-Funktionen benötigen, müssen Sie die SERVICES-Dienste verwenden.
 
-Der MCI-Dienst für die Integration von MIDI gibt standardmäßige Dateien für die Dateiformat-und ssmid-Dateien (Resource Interchange File Format) wieder. Standard-MIDI-Dateien entsprechen der Standard--Datei für die-und- [Dateien 1,0](creating-midi-files.md) Da es sich bei RMID-Dateien um standardmäßige MIDI-Dateien mit einem Riff-Header handelt, gelten die Informationen zu den standardmäßigen-Dateien für die Verwendung von Weitere Informationen zu Riff Dateien finden Sie unter [Datei Format Dienste für den Ressourcenaustausch](resource-interchange-file-format-services.md).
+Der MCI-CAB-Sequencer gibt STANDARDMÄßIGe CSV-Dateien und CSV-Dateien (Resource Interchange File Format, Ressourcenaustauschdateiformat) wieder, die als RMID-Dateien bezeichnet werden. STANDARDMÄßIGE DATEIEN entsprechen der [STANDARD-SPEZIFIKATION VON STANDARDS FILES 1.0.](creating-midi-files.md) Da es sich bei RMID-Dateien um STANDARDMÄßIGE DATEIEN mit einem CSV-Header handelt, gelten Informationen zu STANDARDMÄßIGEN DATEIEN auch für RMID-Dateien. Weitere Informationen zu CSV-Dateien finden Sie unter [Resource Interchange File Format Services](resource-interchange-file-format-services.md).
 
-Obwohl derzeit drei Arten von Standard-MIDI-Dateien vorhanden sind, gibt der MCI-Sequencer nur zwei der folgenden Elemente aus: Format 0 und Format 1-MIDI-Dateien.
+Obwohl derzeit drei Arten von STANDARDMÄßIGEN DATEIEN vorhanden sind, gibt der MCI-Sequencer nur zwei davon wieder: Format 0- und Format 1 CSV-Dateien.
 
-Weitere Informationen zum Steuern von Multimedia-Geräten (einschließlich Sequencer) mithilfe von MCI-Befehlen finden Sie unter [MCI](mci.md).
+Weitere Informationen zum Steuern von Multimediageräten (einschließlich Sequencern) mithilfe von MCI-Befehlen finden Sie unter [MCI](mci.md).
 
- 
+ 
 
- 
+ 
 
 
 

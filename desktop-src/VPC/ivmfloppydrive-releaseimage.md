@@ -1,11 +1,11 @@
 ---
-title: Ivmfloppydrive ReleaseImage-Methode (vpccominterfaces. h)
-description: Gibt ein Disketten Medienbild auf dem Host vom Diskettenlaufwerk aus.
+title: IVMFloppyDrive ReleaseImage-Methode (VPCCOMInterfaces.h)
+description: Gibt ein Diskettenmedienbild auf dem Host vom Diskettenlaufwerk frei.
 ms.assetid: 12fc6dc4-8450-4122-b0f0-ed11cc10134c
 keywords:
-- ReleaseImage-Methode Virtual PC
-- ReleaseImage-Methode Virtual PC, ivmfloppydrive-Schnittstelle
-- Ivmfloppydrive Interface Virtual PC, ReleaseImage-Methode
+- ReleaseImage-Methode Virtueller PC
+- ReleaseImage-Methode Virtual PC , IVMFloppyDrive-Schnittstelle
+- IVMFloppyDrive-Schnittstelle Virtueller PC, ReleaseImage-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ece899bbb615fc2d54a3cbdc86193e743168ef23
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 253e62ec35ccca5a254c6e70ef7fd1890fb6c1a52848c84d319686e0726a038d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119654050"
 ---
-# <a name="ivmfloppydrivereleaseimage-method"></a>Ivmfloppydrive:: ReleaseImage-Methode
+# <a name="ivmfloppydrivereleaseimage-method"></a>IVMFloppyDrive::ReleaseImage-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt ein Disketten Medienbild auf dem Host vom Diskettenlaufwerk aus.
+Gibt ein Diskettenmedienbild auf dem Host vom Diskettenlaufwerk frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,13 +48,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                          | BESCHREIBUNG                                                                            |
+| Rückgabecode/-wert                                                                                                                                                          | Beschreibung                                                                            |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                | Der Vorgang wurde durchgeführt.<br/>                                               |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>          | Die Konfiguration für diesen virtuellen Computer ist ungültig oder wurde nicht gefunden.<br/> |
-| <dl> <dt>**VM \_ E \_ Medien \_ falscher \_ Typ**</dt> <dt>0xa00400728</dt> </dl>  | Das an dieses Diskettenlaufwerk angefügte Medium ist kein Disketten Image.<br/>         |
-| <dl> <dt>**VM \_ E \_ kein \_ Medium \_ erfasst**</dt> <dt>0xa00400652</dt> </dl> | An dieses Diskettenlaufwerk sind keine Medien angefügt.<br/>                            |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>          | Ein unerwarteter Fehler ist aufgetreten.<br/>                                           |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>          | Die Konfiguration für diesen virtuellen Computer ist ungültig oder wurde nicht gefunden.<br/> |
+| <dl> <dt>**VM \_ E \_ MEDIA \_ WRONG \_ TYPE**</dt> <dt>0xA00400728</dt> </dl>  | Das an dieses Diskettenlaufwerk angefügte Medium ist kein Diskettenimage.<br/>         |
+| <dl> <dt>**VM \_ E \_ NO \_ MEDIA \_ CAPTURED**</dt> <dt>0xA00400652</dt> </dl> | An dieses Diskettenlaufwerk sind keine Medien angefügt.<br/>                            |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>          | Ein unerwarteter Fehler ist aufgetreten.<br/>                                           |
 
 
 
@@ -66,12 +66,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmfloppydrive ist als 661abee6-112a-4ed9-BABF -3c874969s10e definiert.<br/>             |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMFloppyDrive ist als 661abee6-112a-4ed9-wadf-3c874969f10e definiert.<br/>             |
 
 
 
@@ -79,7 +79,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmfloppydrive**](ivmfloppydrive.md)
+[**IVMFloppyDrive**](ivmfloppydrive.md)
 </dt> </dl>
 
  

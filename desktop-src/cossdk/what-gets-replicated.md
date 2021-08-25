@@ -4,36 +4,36 @@ ms.assetid: d1f0bc92-37bc-4de2-876a-e6b8b09da58d
 title: Was wird repliziert?
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd2739cb0ff615ddc38f30a7aa9b0a572be5e28a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d60b08151c14d0254bd856fe2ee5b7b83d85714d1b435a32817bf66cc11a1e81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119636650"
 ---
 # <a name="what-gets-replicated"></a>Was wird repliziert?
 
 ## <a name="applications"></a>Anwendungen
 
-Alle auf dem Quellcomputer installierten Anwendungen werden mit Ausnahme der folgenden repliziert:
+Alle auf dem Quellcomputer installierten Anwendungen werden repliziert, mit Ausnahme der folgenden:
 
 <dl> <dt>
 
-<span id="Non-COM__application_elements_and_dependencies"></span><span id="non-com__application_elements_and_dependencies"></span><span id="NON-COM__APPLICATION_ELEMENTS_AND_DEPENDENCIES"></span>Nicht-com +-Anwendungs Elemente und-Abhängigkeiten
+<span id="Non-COM__application_elements_and_dependencies"></span><span id="non-com__application_elements_and_dependencies"></span><span id="NON-COM__APPLICATION_ELEMENTS_AND_DEPENDENCIES"></span>Nicht-COM+-Anwendungselemente und -Abhängigkeiten
 </dt> <dd>
 
-Der Administrator ist dafür verantwortlich, alle Elemente zu replizieren, von denen eine COM+-Anwendung abhängt, die jedoch nicht ordnungsgemäß Teil der Anwendung selbst ist, wie z. b. Datendateien und DLLs. Comrepl repliziert nichts außerhalb der com+-Anwendungs Elemente.
+Der Administrator ist für die Replikation aller Daten verantwortlich, von denen eine COM+-Anwendung abhängt, die jedoch nicht ordnungsgemäß Teil der Anwendung selbst ist, z. B. Datendateien und DLLs. COMREPL repliziert nichts außerhalb von COM+-Anwendungselementen.
 
 </dd> <dt>
 
-<span id="COM__preinstalled_applications"></span><span id="com__preinstalled_applications"></span><span id="COM__PREINSTALLED_APPLICATIONS"></span>Vorinstallierte com+-Anwendungen
+<span id="COM__preinstalled_applications"></span><span id="com__preinstalled_applications"></span><span id="COM__PREINSTALLED_APPLICATIONS"></span>Vorinstallierte COM+-Anwendungen
 </dt> <dd>
 
-Anwendungen, die intern von com+ verwendet werden und über das com+-Setup Programm installiert werden, werden nicht repliziert. Dabei handelt es sich z. B. um:
+Anwendungen, die intern von COM+ verwendet und über das COM+-Setupprogramm installiert werden, werden nicht repliziert. Dabei handelt es sich z. B. um:
 
--   System Anwendung
--   Com+-Hilfsprogramme
--   Anqueue-Listener für com+-QC
+-   Systemanwendung
+-   COM+-Hilfsprogramme
+-   COM+ QC Dead Letter Queue Listener
 
 </dd> <dt>
 
@@ -42,40 +42,40 @@ Anwendungen, die intern von com+ verwendet werden und über das com+-Setup Progr
 
 Diese Anwendungen werden nicht repliziert und umfassen Folgendes:
 
--   IIS-in-Process-Anwendungen
+-   IIS-In-Process-Anwendungen
 -   IIS-Hilfsprogramme
 -   Alle Anwendungen, die für isolierte oder gepoolte virtuelle Stämme erstellt wurden
 
 </dd> </dl>
 
-## <a name="computer-list"></a>Computer Liste
+## <a name="computer-list"></a>Computerliste
 
-Die Remote Computer, die im Ordner " **Computer** " im Verwaltungs Tool "Komponenten Dienste" genannt werden, werden nicht von der Quell-auf den Zielcomputer repliziert.
+Die Remotecomputer, die im Ordner **Computer** im Verwaltungstool komponentendienste genannt werden, werden nicht vom Quell- zum Zielcomputer repliziert.
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden **LocalComputer** -Sammlungs Eigenschaften werden repliziert:
+Die folgenden **LocalComputer-Sammlungseigenschaften** werden repliziert:
 
 -   TransactionTimeout
--   Resourcepoolingenabled
--   Dcomaktiviert
+-   ResourcePoolingEnabled
+-   DCOMEnabled
 -   DefaultAuthenticationLevel
 -   DefaultImpersonationLevel
--   Securitytrackingenabled
--   Cisenabled
--   Securereferencesaktiviert
--   Internetportslisted
--   Deafulttinternetports
+-   SecurityTrackingEnabled
+-   CISEnabled
+-   SecureReferencesEnabled
+-   InternetPortsListed
+-   DeafultToInternetPorts
 -   Ports
--   Rpcproxyaktivierte
+-   RpcProxyEnabled
 
-Die folgenden **LocalComputer** -Sammlungs Eigenschaften werden nicht repliziert:
+Die folgenden **LocalComputer-Sammlungseigenschaften** werden nicht repliziert:
 
--   BESCHREIBUNG
--   Applicationproxyrsn
--   Isrouter
+-   Beschreibung
+-   ApplicationProxyRSN
+-   IsRouter
 
-Beschreibungen der Eigenschaften der **LocalComputer** -Sammlung finden Sie unter [**LocalComputer**](localcomputer.md).
+Beschreibungen der **LocalComputer-Sammlungseigenschaften** finden Sie unter [**LocalComputer**](localcomputer.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -87,10 +87,10 @@ Beschreibungen der Eigenschaften der **LocalComputer** -Sammlung finden Sie unte
 [Protokollierung und Fehlerberichterstattung](logging-and-error-reporting.md)
 </dt> <dt>
 
-[Replikations Phasen](replication-phases.md)
+[Replikationsphasen](replication-phases.md)
 </dt> <dt>
 
-[Verwenden von Comrepl](using-comrepl.md)
+[Verwenden von COMREPL](using-comrepl.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die paintwindow-Methode bewirkt, dass das Fenster neu gezeichnet wird.
+description: Die PaintWindow-Methode bewirkt, dass das Fenster neu gepaint wird.
 ms.assetid: dce3d782-00e5-4176-9365-378d59d48ebc
-title: Cbasewindow. paintwindow-Methode (winutil. h)
+title: CBaseWindow.PaintWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3b0932422f85cb31d587485976dfacbaa51e2bf7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7cc998f270947890327fb3cbacce4a29183604047824b05b8a66538c163bdc08
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635120"
 ---
-# <a name="cbasewindowpaintwindow-method"></a>Cbasewindow. paintwindow-Methode
+# <a name="cbasewindowpaintwindow-method"></a>CBaseWindow.PaintWindow-Methode
 
-Die- `PaintWindow` Methode bewirkt, dass das Fenster neu gezeichnet wird.
+Die `PaintWindow` -Methode bewirkt, dass das Fenster neu gepaint wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void PaintWindow(
 
 <dl> <dt>
 
-*berase* 
+*bErase* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Hintergrund gelöscht wird. Wenn der Wert **true** ist, wird der Hintergrund gelöscht.
+Boolescher Wert, der angibt, ob der Hintergrund gelöscht wird. Wenn der Wert **TRUE ist,** wird der Hintergrund gelöscht.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob der Hintergrund gelöscht wird. Wenn der Wert **
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode generiert eine WM \_ -Zeichnungs Nachricht, indem der gesamte Client Bereich des Fensters ungültig wird.
+Diese Methode generiert eine WM \_ PAINT-Nachricht, indem der gesamte Clientbereich des Fensters ungültig wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode generiert eine WM \_ -Zeichnungs Nachricht, indem der gesamte Clie
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode generiert eine WM \_ -Zeichnungs Nachricht, indem der gesamte Clie
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

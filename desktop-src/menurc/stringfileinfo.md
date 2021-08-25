@@ -1,9 +1,9 @@
 ---
-title: Stringfileingefo-Struktur
-description: Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält Versionsinformationen, die für eine bestimmte Sprache und Codepage angezeigt werden können.
+title: StringFileInfo-Struktur
+description: Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Versionsinformationen, die für eine bestimmte Sprache und Codepage angezeigt werden können.
 ms.assetid: dda38fee-e8ea-4e58-b5ee-72e4cdb08f42
 keywords:
-- Stringfileingefo-Struktur Menüs und weitere Ressourcen
+- StringFileInfo-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f252077a5536194e635281d4b4178a457f7a82cb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e130090c7281f6ef61ed0a3a82b822863bb5c12ff1194e26b07a70467db82cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720830"
 ---
-# <a name="stringfileinfo-structure"></a>Stringfileingefo-Struktur
+# <a name="stringfileinfo-structure"></a>StringFileInfo-Struktur
 
-Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält Versionsinformationen, die für eine bestimmte Sprache und Codepage angezeigt werden können.
+Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält Versionsinformationen, die für eine bestimmte Sprache und Codepage angezeigt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ typedef struct {
 
 <dl> <dt>
 
-**wlength**
+**wLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge des gesamten **stringfileinfo** -Blocks in Bytes, einschließlich aller **vom untergeordneten** Element angegeben Strukturen.
+Die Länge des gesamten **StringFileInfo-Blocks** in Bytes, einschließlich aller strukturen, die durch den **Children-Member** angegeben werden.
 
 </dd> <dt>
 
-**wvaluelength**
+**wValueLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -69,52 +69,52 @@ Dieser Member ist immer gleich 0 (null).
 **wType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Daten in der Versions Ressource. Dieser Member ist 1, wenn die Versions Ressource Textdaten enthält, und 0, wenn die Versions Ressource binäre Daten enthält.
+Der Datentyp in der Versionsressource. Dieser Member ist 1, wenn die Versionsressource Textdaten enthält, und 0, wenn die Versionsressource Binärdaten enthält.
 
 </dd> <dt>
 
-**szkey**
+**szKey**
 </dt> <dd>
 
 Typ: **WCHAR**
 
 </dd> <dd>
 
-Die Unicode-Zeichenfolge L "stringfileingefo".
+Die Unicode-Zeichenfolge L"StringFileInfo".
 
 </dd> <dt>
 
 **Auffüllen**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-So viele Null-Wörter, wie erforderlich, **um den unter** geordneten Member an einer 32-Bit-Grenze auszurichten.
+So viele 0 Wörter wie erforderlich, um das **Children-Element** an einer 32-Bit-Grenze auszurichten.
 
 </dd> <dt>
 
 **Children**
 </dt> <dd>
 
-Typ: **[ **STRINGTABLE**](stringtable.md)**
+Typ: **[ **StringTable**](stringtable.md)**
 
 </dd> <dd>
 
-Ein Array mit einem oder mehreren [**STRINGTABLE**](stringtable.md) -Strukturen. Jeder **szkey** -Member der **STRINGTABLE** -Struktur gibt die entsprechende Sprache und Codepage zum Anzeigen des Texts in der **STRINGTABLE** -Struktur an.
+Ein Array von einer oder mehreren [**StringTable-Strukturen.**](stringtable.md) Der **szKey-Member** jeder **StringTable-Struktur** gibt die entsprechende Sprache und Codepage für die Anzeige des Texts in dieser **StringTable-Struktur** an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist keine echte C-Sprachstruktur, da Sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versions Ressource erstellt und wird nicht in den Header Dateien angezeigt, die im Windows Software Development Kit (SDK) enthalten sind.
+Diese Struktur ist keine echte C-Sprachstruktur, da sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versionsressource erstellt und wird in keiner der Headerdateien angezeigt, die mit dem Windows Software Development Kit (SDK) ausgeliefert werden.
 
-Das **Children** -Element der [**vs \_ VERSIONINFO**](vs-versioninfo.md) -Struktur kann NULL oder mehr **stringfileinfo** -Strukturen enthalten.
+Der **Children-Member** der [**VS \_ VERSIONINFO-Struktur**](vs-versioninfo.md) kann 0 (null) oder mehr **StringFileInfo-Strukturen** enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,23 +127,23 @@ Das **Children** -Element der [**vs \_ VERSIONINFO**](vs-versioninfo.md) -Strukt
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**STRINGTABLE**](stringtable.md)
+[**Stringtable**](stringtable.md)
 </dt> <dt>
 
-[**Schnür**](string-str.md)
+[**String**](string-str.md)
 </dt> <dt>
 
 [**VS \_ VERSIONINFO**](vs-versioninfo.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Versionsinformationen](version-information.md)

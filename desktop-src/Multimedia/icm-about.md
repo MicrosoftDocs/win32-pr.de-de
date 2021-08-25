@@ -1,9 +1,9 @@
 ---
-title: ICM_ABOUT Meldung (VFW. h)
-description: In der ICM Info- \_ Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um das Dialogfeld Info anzuzeigen, oder ein Video Komprimierungs Treiber wird abgefragt, um zu bestimmen, ob er über ein Dialogfeld Info verfügt Sie können diese Nachricht explizit oder mithilfe des icabout-Makros senden.
+title: ICM_ABOUT-Nachricht (Vfw.h)
+description: Die ICM \_ ABOUT-Meldung benachrichtigt einen Videokomprimierungstreiber, sein Dialogfeld "About" anzuzeigen, oder fragt einen Videokomprimierungstreiber ab, um festzustellen, ob er über ein Dialogfeld "About" verfügt. Sie können diese Nachricht explizit oder mithilfe des ICAbout-Makros senden.
 ms.assetid: 6eca69a3-0463-48e6-befb-5003b7515e7d
 keywords:
-- ICM_ABOUT-Nachricht (Multimedia)
+- ICM_ABOUT nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1e03e88993ba1e345a3ea32a9de7adb2d63abe9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5bf47ff93ef1986d805b2cb37697fdf4d86876c5552fe6aeffb00ff172673018
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785070"
 ---
-# <a name="icm_about-message"></a>ICM \_ zur Meldung
+# <a name="icm_about-message"></a>\_ICM ABOUT-Nachricht
 
-In der ICM Info-Meldung wird ein Video Komprimierungs Treiber benachrichtigt, um das Dialogfeld Info anzuzeigen, oder ein Video Komprimierungs Treiber wird abgefragt, um zu bestimmen, ob er über ein Dialogfeld Info verfügt **\_** Sie können diese Nachricht explizit oder mithilfe des [**icabout**](/windows/desktop/api/Vfw/nf-vfw-icabout) -Makros senden.
+Die **ICM \_ ABOUT-Meldung** benachrichtigt einen Videokomprimierungstreiber, sein Dialogfeld "About" anzuzeigen, oder fragt einen Videokomprimierungstreiber ab, um festzustellen, ob er über ein Dialogfeld "About" verfügt. Sie können diese Nachricht explizit oder mithilfe des [**ICAbout-Makros**](/windows/desktop/api/Vfw/nf-vfw-icabout) senden.
 
 
 ```C++
@@ -38,16 +38,16 @@ lParam = 0;
 
 <dl> <dt>
 
-<span id="hwnd"></span><span id="HWND"></span>*HWND*
+<span id="hwnd"></span><span id="HWND"></span>*Hwnd*
 </dt> <dd>
 
-Handle für das übergeordnete Fenster des angezeigten Dialog Felds. Sie können auch bestimmen, ob ein Treiber über ein Dialogfeld Info verfügt, indem Sie-1 in diesem Parameter angeben, wie im [**icqueryabout**](/windows/desktop/api/Vfw/nf-vfw-icqueryabout) -Makro. Der Treiber gibt ICERR \_ OK zurück, wenn ein Info Dialogfeld oder ICERR \_ nicht unterstützt wird.
+Handle für das übergeordnete Fenster des angezeigten Dialogfelds. Sie können auch ermitteln, ob ein Treiber über ein Dialogfeld "About" verfügt, indem Sie in diesem Parameter -1 angeben, wie im [**ICQueryAbout-Makro.**](/windows/desktop/api/Vfw/nf-vfw-icqueryabout) Der Treiber gibt ICERR \_ OK zurück, wenn er über ein About-Dialogfeld oder andernfalls ICERR \_ UNSUPPORTED verfügt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ICERR \_ OK zurück, wenn der Treiber diese Nachricht unterstützt oder wenn ICERR \_ andernfalls nicht unterstützt wird.
+Gibt ICERR \_ OK zurück, wenn der Treiber diese Meldung unterstützt, andernfalls ICERR \_ UNSUPPORTED.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,18 +57,18 @@ Gibt ICERR \_ OK zurück, wenn der Treiber diese Nachricht unterstützt oder wen
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5138d979f73b67609bbacac3c3aa10e8f9fe8c9a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 453da6685ecdc851490ce6b947e146130be777af52ba0443e7b1a6b14076b3f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747810"
 ---
 # <a name="id3dxprtbuffergetheight-method"></a>ID3DXPRTBuffer::GetHeight-Methode
 
@@ -48,14 +48,14 @@ Gibt die Höhe der Textur in Pixel zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

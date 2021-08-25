@@ -1,7 +1,7 @@
 ---
-description: Legen Sie Skalierungsinformationen für einen bestimmten Keyframe im Animations Satz fest.
+description: Legen Sie Skalierungsinformationen für einen bestimmten Keyframe in der Animationsmenge fest.
 ms.assetid: b606e5d3-11c9-4997-ad3c-d3ae21c32e10
-title: 'ID3DXKeyframedAnimationSet:: setscalekey-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::SetScaleKey-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 12ac4d46a2719e452d44d2da67f178e6146b799b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d5d33ab0c8e6bd01335d5843121917f89e3cf60bd81a5d54a85d298ec990e4a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748209"
 ---
-# <a name="id3dxkeyframedanimationsetsetscalekey-method"></a>ID3DXKeyframedAnimationSet:: setscalekey-Methode
+# <a name="id3dxkeyframedanimationsetsetscalekey-method"></a>ID3DXKeyframedAnimationSet::SetScaleKey-Methode
 
-Legen Sie Skalierungsinformationen für einen bestimmten Keyframe im Animations Satz fest.
+Legen Sie Skalierungsinformationen für einen bestimmten Keyframe in der Animationsmenge fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetScaleKey(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Keyframe.
 
 </dd> <dt>
 
-*pscalekeys* \[ in\]
+*pScaleKeys* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md)**
 
-Zeiger auf die Skalierungs Daten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md).
+Zeiger auf die Skalierungsdaten. Siehe [**D3DXKEY \_ VECTOR3.**](d3dxkey-vector3.md)
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf die Skalierungs Daten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

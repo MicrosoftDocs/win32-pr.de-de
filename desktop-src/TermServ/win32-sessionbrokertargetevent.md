@@ -1,11 +1,11 @@
 ---
 title: Win32_SessionBrokerTargetEvent-Klasse
-description: Stellt eine Änderung an einem Sitzungs Broker Ziel dar.
+description: Stellt eine Änderung an einem Sitzungsbrokerziel dar.
 ms.assetid: ee3ae0ed-eb8b-4777-9b9e-0e50722cf52a
 ms.tgt_platform: multiple
 keywords:
-- Win32_SessionBrokerTargetEvent-Klasse Remotedesktopdienste
-- Win32_SessionBrokerTargetEvent Klasse Remotedesktopdienste, beschrieben
+- Win32_SessionBrokerTargetEvent-Klassen-Remotedesktopdienste
+- Win32_SessionBrokerTargetEvent-Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d7f1cf6aab1c4497ce85cb93318c9ca79368853
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92fcd6cb93e3ac7abaa5fef33e1557008eb29b46940fae6d5165809d9252fa16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769970"
 ---
-# <a name="win32_sessionbrokertargetevent-class"></a>Win32 \_ sessionbrokertargetevent-Klasse
+# <a name="win32_sessionbrokertargetevent-class"></a>Win32 \_ SessionBrokerTargetEvent-Klasse
 
-Stellt eine Änderung an einem Sitzungs Broker Ziel dar.
+Stellt eine Änderung an einem Sitzungsbrokerziel dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -56,26 +56,26 @@ class Win32_SessionBrokerTargetEvent : __ExtrinsicEvent
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ sessionbrokertargetevent** " verfügt über diese Typen von Membern:
+Die **Win32 \_ SessionBrokerTargetEvent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Win32-Klasse " **\_ sessionbrokertargetevent** " verfügt über diese Eigenschaften.
+Die **Win32 \_ SessionBrokerTargetEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ChangeType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die aufgetretene Änderung an. Dies kann einer der folgenden Werte sein:
+Gibt die aufgetretene Änderung an. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
@@ -89,14 +89,14 @@ Der Typ der Änderung ist nicht angegeben.
 2 (0x2)
 </dt> <dd>
 
-Die externe IP-Adresse hat sich geändert.
+Die externe IP-Adresse wurde geändert.
 
 </dd> <dt>
 
 4 (0x4)
 </dt> <dd>
 
-Die interne IP-Adresse hat sich geändert.
+Die interne IP-Adresse wurde geändert.
 
 </dd> <dt>
 
@@ -117,7 +117,7 @@ Das Ziel wurde entfernt.
 32 (0x20)
 </dt> <dd>
 
-Der Status des Ziels hat sich geändert.
+Der Status des Ziels wurde geändert.
 
 </dd> <dt>
 
@@ -133,22 +133,22 @@ Das Ziel befindet sich im Leerlauf.
 **Umgebung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Umgebungsname. Bei einem Ziel eines virtuellen Computers (VM) kann dies der VM-hostname sein.
+Der Umgebungsname. Im Fall eines VM-Ziels kann dies der VM-Hostname sein.
 
 **Windows Server 2008 R2:** Diese Eigenschaft ist vor Windows Server 2012 nicht verfügbar.
 
 </dd> <dt>
 
-**Farmname**
+**FarmName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -160,10 +160,10 @@ Der Name der Farm, zu der das Ziel gehört.
 
 </dd> <dt>
 
-**GUID**
+**Guid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -178,35 +178,35 @@ Die GUID des Ziels.
 **PluginName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Plug-ins.
+Der Name des Plug-Ins.
 
 **Windows Server 2008 R2:** Diese Eigenschaft ist vor Windows Server 2012 nicht verfügbar.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSBESCHREIBUNG**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](/windows/desktop/WmiSdk/--event)geerbt. Weitere Informationen zu Konstanten, die verwendet werden, um diese Sicherheits Beschreibung festzulegen, finden Sie unter [WMI-Sicherheits Konstanten](/windows/desktop/WmiSdk/wmi-security-constants).
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von [**\_ \_ Ereignis**](/windows/desktop/WmiSdk/--event)geerbt. Weitere Informationen zu Konstanten, die zum Festlegen dieser Sicherheitsbeschreibung verwendet werden, finden Sie unter [WMI-Sicherheitskonstanten.](/windows/desktop/WmiSdk/wmi-security-constants)
 
 </dd> <dt>
 
-**TargetName**
+**Targetname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -218,18 +218,18 @@ Der Name des Ziels.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](/windows/desktop/WmiSdk/--event)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (Coordinated Universal Times) vor. Diese Eigenschaft wird von [**\_ \_ Ereignis**](/windows/desktop/WmiSdk/--event)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> </dl>
 
@@ -242,7 +242,7 @@ Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Si
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
-| MOF<br/>                      | <dl> <dt>"Tssdwmi. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 
 

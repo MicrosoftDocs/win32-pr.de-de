@@ -1,43 +1,43 @@
 ---
-description: Die lineagentsessionstate- \_ Konstanten beschreiben verschiedene agentsitzungszustände.
+description: Die \_ LINEAGENTSESSIONSTATE-Konstanten beschreiben verschiedene Agent-Sitzungszustände.
 ms.assetid: 8a0d06bb-51ba-4eaf-8719-120aed817f63
-title: LINEAGENTSESSIONSTATE_ Konstanten (TAPI. h)
+title: LINEAGENTSESSIONSTATE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bdfd1be8cf846d0e23828f0a3540960a86a83ef1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 702c9820fb6c2157a386241b13ea0593c4156195bc74bcfa7655c76db171083d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119682200"
 ---
-# <a name="lineagentsessionstate_-constants"></a>Lineagentsessionstate- \_ Konstanten
+# <a name="lineagentsessionstate_-constants"></a>LINEAGENTSESSIONSTATE-Konstanten \_
 
-Die **lineagentsessionstate- \_ Konstanten** beschreiben verschiedene agentsitzungszustände.
+Die **\_ LINEAGENTSESSIONSTATE-Konstanten beschreiben** verschiedene Agent-Sitzungszustände.
 
 <dl> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_BUSYONCALL"></span><span id="lineagentsessionstate_busyoncall"></span>**lineagentsessionstate \_ busyoncallcenter**
+<span id="LINEAGENTSESSIONSTATE_BUSYONCALL"></span><span id="lineagentsessionstate_busyoncall"></span>**LINEAGENTSESSIONSTATE \_ BUSYONCALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Agent ist mit der Verarbeitung eines Aufrufes ausgelastet.
+Der Agent ist damit beschäftigt, einen Aufruf zu behandeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_BUSYWRAPUP"></span><span id="lineagentsessionstate_busywrapup"></span>**lineagentsessionstate \_ busywrapup**
+<span id="LINEAGENTSESSIONSTATE_BUSYWRAPUP"></span><span id="lineagentsessionstate_busywrapup"></span>**LINEAGENTSESSIONSTATE \_ BUSYWRAPUP**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Agent ist ausgelastet, um die Zusammenfassung des Aufrufes aufzurufen.
+Der Agent ist damit beschäftigt, die Zusammenfassung des Aufrufs zu behandeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_ENDED"></span><span id="lineagentsessionstate_ended"></span>**lineagentsessionstate wurde \_ beendet.**
+<span id="LINEAGENTSESSIONSTATE_ENDED"></span><span id="lineagentsessionstate_ended"></span>**LINEAGENTSESSIONSTATE \_ BEENDET**
 </dt> <dd> <dl> <dt>
 
 
@@ -47,27 +47,27 @@ Die Agentsitzung wurde beendet.
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_NOTREADY"></span><span id="lineagentsessionstate_notready"></span>**lineagentsessionstate \_ notready**
+<span id="LINEAGENTSESSIONSTATE_NOTREADY"></span><span id="lineagentsessionstate_notready"></span>**LINEAGENTSESSIONSTATE \_ NOTREADY**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Agent ist angemeldet, aber mit einer anderen Aufgabe als dem Ausführen eines Aufrufens (z. b. bei einer Unterbrechung) beschäftigt. Es sollten keine weiteren Aufrufe an den Agent weitergeleitet werden.
+Der Agent ist angemeldet, aber mit einer anderen Aufgabe als dem Bedienen eines Aufrufs (z. B. bei einer Unterbrechung) beschäftigt. Es sollten keine zusätzlichen Aufrufe an den Agent geroutet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_READY"></span><span id="lineagentsessionstate_ready"></span>**lineagentsessionstate ist \_ bereit**
+<span id="LINEAGENTSESSIONSTATE_READY"></span><span id="lineagentsessionstate_ready"></span>**LINEAGENTSESSIONSTATE \_ READY**
 </dt> <dd> <dl> <dt>
 
 
 
-Der Agent ist zum Akzeptieren von Aufrufen bereit.
+Der Agent ist bereit, Aufrufe zu akzeptieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEAGENTSESSIONSTATE_RELEASED"></span><span id="lineagentsessionstate_released"></span>**lineagentsessionstate \_ veröffentlicht**
+<span id="LINEAGENTSESSIONSTATE_RELEASED"></span><span id="lineagentsessionstate_released"></span>**LINEAGENTSESSIONSTATE \_ VERÖFFENTLICHT**
 </dt> <dd> <dl> <dt>
 
 
@@ -83,8 +83,8 @@ Die Agentsitzung wurde freigegeben.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

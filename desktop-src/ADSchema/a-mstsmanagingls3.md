@@ -1,11 +1,11 @@
 ---
 title: MS-TS-ManagingLS3-Attribut
-description: Der Aussteller Name des dritten Terminal Servers pro Benutzer-CAL.
+description: Ausstellername des dritten Terminalservers pro Benutzer-CAL.
 ms.assetid: bc03d162-d039-424a-8c67-cd58c1d1ac2b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-ManagingLS3-Attribut
-- msTSManagingLS3-Attribut AD-Schema
+- AD-Schema des MS-TS-ManagingLS3-Attributs
+- msTSManagingLS3-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df9b0c92ca5f5eac822d5a62bd23af813842cdf6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4ea6cbd68b4925a23de66abdd03c29b9763fe405ad1608c67b01c113e3028d92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119802660"
 ---
 # <a name="ms-ts-managingls3-attribute"></a>MS-TS-ManagingLS3-Attribut
 
-Der Aussteller Name des dritten Terminal Servers pro Benutzer-CAL.
+Ausstellername des dritten Terminalservers pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-TS-ManagingLS3                           |
-| LDAP-Display-Name | msTSManagingLS3                             |
+| Ldap-Anzeigename | msTSManagingLS3                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2005                     |
 | System-ID-GUID    | fad5dcc1-2130-4c87-a118-75322cd67050        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -55,10 +55,10 @@ Der Aussteller Name des dritten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -76,10 +76,10 @@ Der Aussteller Name des dritten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -97,10 +97,10 @@ Der Aussteller Name des dritten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Ist einwertig       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |

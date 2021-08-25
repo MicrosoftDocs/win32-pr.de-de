@@ -1,7 +1,7 @@
 ---
-description: Definiert ein paar von 802,11-Authentifizierungs-und Verschlüsselungsalgorithmen, die gleichzeitig auf der 802,11-Station aktiviert werden können.
+description: Definiert ein Paar aus 802.11-Authentifizierungs- und Verschlüsselungsalgorithmen, die gleichzeitig auf der 802.11-Station aktiviert werden können.
 ms.assetid: 5fbe23f6-7902-46d4-a1f0-57f045d78662
-title: DOT11_AUTH_CIPHER_PAIR Struktur (wlantypes. h)
+title: DOT11_AUTH_CIPHER_PAIR-Struktur (Wlantypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wlantypes.h
-ms.openlocfilehash: fd1a8ef03d5c5cb897d95b768f8ab48705098d74
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84e4abde6192cf1be92b21df0c6a79125a198e0fde28e304cf583d76ea91689f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119801480"
 ---
-# <a name="dot11_auth_cipher_pair-structure"></a>DOT11 \_ auth- \_ Chiffre- \_ paar-Struktur
+# <a name="dot11_auth_cipher_pair-structure"></a>DOT11 \_ AUTH \_ CIPHER \_ PAIR-Struktur
 
-Die **DOT11 \_ auth- \_ Chiffre- \_ paar** -Struktur definiert ein paar von 802,11-Authentifizierungs-und Verschlüsselungsalgorithmen, die gleichzeitig auf der 802,11-Station aktiviert werden können.
+Die **DOT11 \_ AUTH \_ CIPHER \_ PAIR-Struktur** definiert ein Paar aus 802.11-Authentifizierungs- und Verschlüsselungsalgorithmen, die gleichzeitig auf der 802.11-Station aktiviert werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ typedef struct _DOT11_AUTH_CIPHER_PAIR {
 
 <dl> <dt>
 
-**Authalgoid**
+**AuthAlgoId**
 </dt> <dd>
 
-Ein Authentifizierungsalgorithmus, der einen enumerierten Typ des [**DOT11 \_ auth- \_ Algorithmus**](dot11-auth-algorithm.md) verwendet.
+Ein Authentifizierungsalgorithmus, der einen [**DOT11 \_ AUTH ALGORITHM-Enumerationstyp \_**](dot11-auth-algorithm.md) verwendet.
 
 </dd> <dt>
 
-**Cipheralgoid**
+**CipherAlgoId**
 </dt> <dd>
 
-Ein Verschlüsselungsalgorithmus, der einen enumerierten Typ des [**DOT11 \_ Chiffre \_ Algorithmus**](dot11-cipher-algorithm.md) verwendet.
+Ein Verschlüsselungsalgorithmus, der einen [**DOT11 \_ CIPHER ALGORITHM-Enumerationstyp \_**](dot11-cipher-algorithm.md) verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die DOT11 \_ auth- \_ Chiffre \_ -paar-Struktur definiert einen Authentifizierungs-und Chiffre Algorithmus, der zusammen für Basic Service Set (BSS)-Netzwerkverbindungen aktiviert werden kann.
+Die DOT11 \_ AUTH \_ CIPHER \_ PAIR-Struktur definiert einen Authentifizierungs- und Verschlüsselungsalgorithmus, der zusammen für BSS-Netzwerkverbindungen (Basic Service Set) aktiviert werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,10 +64,10 @@ Die DOT11 \_ auth- \_ Chiffre \_ -paar-Struktur definiert einen Authentifizierun
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP3 \[ Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                        |
-| Verteilbare Komponente<br/>          | Drahtlose LAN-API für Windows XP mit SP2<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Wlantypes. h (Include Windot11. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP3-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                        |
+| Verteilbare Komponente<br/>          | WLAN-API für Windows XP mit SP2<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Wlantypes.h (einschließlich Windot11.h)</dt> </dl> |
 
 
 
@@ -75,10 +75,10 @@ Die DOT11 \_ auth- \_ Chiffre \_ -paar-Struktur definiert einen Authentifizierun
 
 <dl> <dt>
 
-[**DOT11 \_ auth- \_ Algorithmus**](dot11-auth-algorithm.md)
+[**\_DOT11-AUTHENTIFIZIERUNGSALGORITHMUS \_**](dot11-auth-algorithm.md)
 </dt> <dt>
 
-[**DOT11- \_ Chiffre \_ Algorithmus**](dot11-cipher-algorithm.md)
+[**\_DOT11-VERSCHLÜSSELUNGSALGORITHMUS \_**](dot11-cipher-algorithm.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: MediaRenderer. isaudiosupported-Eigenschaft
-description: Ruft einen Wert ab, der angibt, ob der DMR Audioinhalt abspielen kann.
+title: MediaRenderer.IsAudioSupported-Eigenschaft
+description: Ruft einen Wert ab, der angibt, ob die DMR Audioinhalte wiedergeben kann.
 ms.assetid: a1965cba-3e7c-4a81-ab1d-6d3af7826115
 keywords:
-- Isaudiosupported-Eigenschaft Medien Streaming-API
-- Isaudiosupported-Eigenschaft Medien Streaming-API, MediaRenderer-Schnittstelle
-- MediaRenderer Interface Medien Streaming-API, isaudiosupported-Eigenschaft
+- IsAudioSupported-Eigenschaft Medienstreaming-API
+- IsAudioSupported-Eigenschaft Media Streaming API , MediaRenderer-Schnittstelle
+- MediaRenderer-Schnittstelle Medienstreaming-API , IsAudioSupported-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e948e3c7b3a1c00c7a3fb5fe6a758849f060545a
-ms.sourcegitcommit: 4f5016b1fbfd703dbf769c508db464c2518c0fa5
+ms.openlocfilehash: dc3995464a71412bbd098d68a2cb4e19d65a570f35973f528b5bd2efbad5b478
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104313266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119720950"
 ---
-# <a name="mediarendererisaudiosupported-property"></a>MediaRenderer. isaudiosupported-Eigenschaft
+# <a name="mediarendererisaudiosupported-property"></a>MediaRenderer.IsAudioSupported-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob der DMR Audioinhalt abspielen kann.
+Ruft einen Wert ab, der angibt, ob die DMR Audioinhalte wiedergeben kann.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_IsAudioSupported(
-  [out] boolean *value
+  [out] boolean *value
 );
 ```
 
@@ -41,18 +41,18 @@ HRESULT get_IsAudioSupported(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der **true** ist, wenn der DMR Audioinhalt abspielen kann, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR Audioinhalte wiedergeben kann, und **FALSE,** wenn dies nicht der Fall ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**MediaRenderer**](mediarenderer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

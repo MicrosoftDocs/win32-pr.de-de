@@ -4,12 +4,12 @@ description: IAgentCharacter Prepare
 ms.assetid: e016039f-a0b1-4ae9-bff6-7212b02c1ad8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b383bf10330934379990693b75fe2908a432f8d5
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: de29c49960bbfd00a6e0d0e9ff1cb055a01cb930c414708fe9144ff0ff4b75af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119725328"
 ---
 # <a name="iagentcharacterprepare"></a>IAgentCharacter::P repare
 
@@ -93,7 +93,7 @@ Für. WAV-Dateien: Legen Sie *bszName* auf die URL oder Dateispezifikation für 
 <span id="bQueue"></span><span id="bqueue"></span><span id="BQUEUE"></span>*bQueue*
 </dt> <dd>
 
-Ein boolescher Wert, der angibt, ob der Server die [**Prepare-Anforderung**](/windows/desktop/lwef/iagentcharacter--prepare) in die Warteschlange stellt. **True** stellt die Anforderung in die Warteschlange und bewirkt, dass jede darauf folgende Animationsanforderung wartet, bis die von ihr angegebenen Animationsdaten geladen werden. **False** ruft die Animationsdaten asynchron ab.
+Ein boolescher Wert, der angibt, ob der Server die [**Prepare-Anforderung**](/windows/desktop/lwef/iagentcharacter--prepare) in die Warteschlange einreiht. **True** stellt die Anforderung in die Warteschlange und bewirkt, dass jede darauf folgende Animationsanforderung wartet, bis die von ihr angegebenen Animationsdaten geladen werden. **False** ruft die Animationsdaten asynchron ab.
 
 </dd> <dt>
 
