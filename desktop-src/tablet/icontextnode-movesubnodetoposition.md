@@ -1,7 +1,7 @@
 ---
-description: Ordnet ein angegebenes untergeordnetes icontextnode-Objekt an den angegebenen Index zurück.
+description: Ordnet ein angegebenes untergeordnetes IContextNode-Objekt dem angegebenen Index neu an.
 ms.assetid: 1cee73af-8d5b-4d5d-bc67-a3ac6f4b2462
-title: 'Icontextnode:: muvesubnodetoposition-Methode (iacom. h)'
+title: IContextNode::MoveSubNodeToPosition-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 398a56cf2c30c93a72e061dfe968de24276888f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d48876be10a2c45daca62b3175a358d31ed128ddd3bcb045c052e2d51308c66
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119773820"
 ---
-# <a name="icontextnodemovesubnodetoposition-method"></a>Icontextnode:: muvesubnodetoposition-Methode
+# <a name="icontextnodemovesubnodetoposition-method"></a>IContextNode::MoveSubNodeToPosition-Methode
 
-Ordnet ein angegebenes untergeordnetes [**icontextnode**](icontextnode.md) -Objekt an den angegebenen Index zurück.
+Ordnet ein angegebenes untergeordnetes [**IContextNode-Objekt**](icontextnode.md) dem angegebenen Index neu an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ HRESULT MoveSubNodeToPosition(
 
 <dl> <dt>
 
-*psubnoabtomove* \[ in\]
+*pSubnodeToMove* \[ In\]
 </dt> <dd>
 
-Das [**icontextnode**](icontextnode.md) -Objekt, das verschoben werden soll.
+Das [**zu verschiebende IContextNode-Objekt.**](icontextnode.md)
 
 </dd> <dt>
 
-*ulnetwindex* \[ in\]
+*ulNewIndex* \[ In\]
 </dt> <dd>
 
-Der Index für die neue Position des unter Knotens.
+Der Index für die neue Position des Unternodes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt " **E \_ invalidArg** " zurück, wenn " *psubnoenttomove* " kein untergeordneter Knoten dieses [**icontextnode**](icontextnode.md)ist.
+Gibt **E \_ INVALIDARG** zurück, *wenn pSubnodeToMove* kein untergeordneter Knoten dieses [**IContextNode ist.**](icontextnode.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Gibt " **E \_ invalidArg** " zurück, wenn " *psubnoenttomove* " kein untergeord
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -79,13 +79,13 @@ Gibt " **E \_ invalidArg** " zurück, wenn " *psubnoenttomove* " kein untergeord
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: "kreatesubnode"**](icontextnode-createsubnode.md)
+[**IContextNode::CreateSubNode**](icontextnode-createsubnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

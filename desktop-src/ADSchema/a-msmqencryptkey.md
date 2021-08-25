@@ -1,11 +1,11 @@
 ---
-title: MSMQ-verschlüsselungsschlüsselattribut
+title: MSMQ-Encrypt-Key-Attribut
 description: Der öffentliche Verschlüsselungsschlüssel des Computers.
 ms.assetid: 2213be9d-9c24-48f7-806a-039c1121d37d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-verschlüsselungsschlüsselattribut
-- AD-Schema des msmqverschlüsseltkey-Attributs
+- AD-Schema des MSMQ-Encrypt-Key-Attributs
+- AD-Schema des mSMQEncryptKey-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf2c4453deede78620cb76acfec062206812aa87
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 12fec50e216412184de658e5e4500d5e418c70843689512497e2e4a1d32ed87b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066710"
 ---
-# <a name="msmq-encrypt-key-attribute"></a>MSMQ-verschlüsselungsschlüsselattribut
+# <a name="msmq-encrypt-key-attribute"></a>MSMQ-Encrypt-Key-Attribut
 
 Der öffentliche Verschlüsselungsschlüssel des Computers.
 
@@ -29,13 +29,13 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MSMQ-Verschlüsselungsschlüssel                                      |
-| LDAP-Display-Name | msmqverschlüsseltkey                                        |
+| CN                | MSMQ-Encrypt-Key                                      |
+| Ldap-Anzeigename | mSMQEncryptKey                                        |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.936                                |
-| System-ID-GUID    | 9a0dc331-C100-11d1-bbc5-0080c76670c0                  |
+| System-Id-Guid    | 9a0dc331-c100-11d1-laut5-0080c76670c0                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -70,7 +70,7 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -99,11 +99,11 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Is-Single-Valued       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
@@ -120,16 +120,16 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der öffentliche Verschlüsselungsschlüssel des Computers.
 |------------------------|--------------------------------------------------------------|
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
-| System-Only            | False                                                        |
-| Ist-einwertig       | Richtig                                                         |
-| Ist indiziert             | False                                                        |
+| System-Only            | Falsch                                                        |
+| Ist einwertig       | Richtig                                                         |
+| Ist indiziert             | Falsch                                                        |
 | Im globalen Katalog      | Richtig                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
 | Range-Lower            | \-                                                           |
 | Range-Upper            | \-                                                           |
 | Search-Flags           | 0x00000000                                                   |
 | System-Flags           | 0x00000010                                                   |
-| In verwendete Klassen        | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Configuration**](c-msmqconfiguration.md)<br/> |
 
 
 

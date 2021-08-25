@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Bitrate-Methode ruft eine ungefähre Bitrate für das Video ab.
+description: Die get \_ BitRate-Methode ruft eine ungefähre Bitrate für das Video ab.
 ms.assetid: e12e4677-a038-479f-8b64-937ad521c4be
-title: CBaseControlVideo.get_BitRate-Methode (ctlutil. h)
+title: CBaseControlVideo.get_BitRate-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 62f1feaed786b397801bbd17d2d2d41c0ccb813d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b33e3584bb0460b798101d8062c3647b983841c77653adcffd18580eade25c6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057270"
 ---
-# <a name="cbasecontrolvideoget_bitrate-method"></a>Cbasecontrolvideo. get- \_ Bitrate-Methode
+# <a name="cbasecontrolvideoget_bitrate-method"></a>\_CBaseControlVideo.get-BitRate-Methode
 
-Die- `get_BitRate` Methode ruft eine ungefähre Bitrate für das Video ab.
+Die `get_BitRate` -Methode ruft eine ungefähre Bitrate für das Video ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_BitRate(
 
 <dl> <dt>
 
-*pbitrate* 
+*pBitRate* 
 </dt> <dd>
 
 Zeiger auf die Bitrate in Bits pro Sekunde.
@@ -51,11 +51,11 @@ Zeiger auf die Bitrate in Bits pro Sekunde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn \_ nicht genügend Arbeitsspeicher verfügbar ist, wird noError zurückgegeben, wenn der Vorgang erfolgreich war.
+Gibt NOERROR zurück, wenn erfolgreich, oder E \_ OUTOFMEMORY, wenn nicht genügend Arbeitsspeicher verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ Bitrate**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_bitrate) -Methode. Er ruft den reinen virtuellen [**cbasecontrolvideo:: getvideoformat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur aus der abgeleiteten Klasse abzurufen.
+Diese Memberfunktion implementiert die [**IBasicVideo::get \_ BitRate-Methode.**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_bitrate) Sie ruft das rein virtuelle [**CBaseControlVideo::GetVideoFormat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) aus der abgeleiteten Klasse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ Bitrate**](/wind
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ Bitrate**](/wind
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

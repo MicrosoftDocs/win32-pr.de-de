@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für virtuelle Zuordnungs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für virtuelle Zuordnungsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 037d33e0-da94-4834-bc02-814c1cae1d8d
 title: PageFault_VirtualAlloc-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f9e754bc3dc09f492682d5a522a6489cfde27ceb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa3dd8eb53e9c1a79cf38edde0d9c4dba93ea85b0994bfb316b97064f211f26e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927570"
 ---
-# <a name="pagefault_virtualalloc-class"></a>Pagefault- \_ virtualzuweisung-Klasse
+# <a name="pagefault_virtualalloc-class"></a>PageFault \_ VirtualAlloc-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für virtuelle Zuordnungs Ereignisse.
+Diese Klasse ist die Ereignistypklasse für virtuelle Zuordnungsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,96 +44,96 @@ class PageFault_VirtualAlloc : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **Pagefault- \_ virtualordc** -Klasse verfügt über diese Typen von Membern:
+Die **PageFault \_ VirtualAlloc-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Pagefault- \_ virtualordc** -Klasse verfügt über diese Eigenschaften.
+Die **PageFault \_ VirtualAlloc-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **BaseAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Die Startadresse, an der der Arbeitsspeicher zugeordnet oder freigegeben wurde.
+Die Startadresse, an der Arbeitsspeicher belegt oder freigegeben wurde.
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Format ("x")
+Qualifizierer: WmiDataId(4), Format("x")
 </dt> </dl>
 
-Der Typ der Speicher Belegung, der ausgeführt wurde. Mögliche Werte finden Sie unter der *fltypcationtype* -Parameter der [**virtualzuweisung**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex) -Funktion.
+Der Typ der Speicherbelegung, die ausgeführt wurde. Mögliche Werte finden Sie im *flAllocationType-Parameter* der [**VirtualAllocEx-Funktion.**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex)
 
 </dd> <dt>
 
-**ProcessID**
+**Processid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Der Prozess, der den Arbeitsspeicher besaß (kann sich von dem Thread unterscheiden, der die Zuordnung durchgeführt hat).
+Der Prozess, der den Arbeitsspeicher besitzt (kann sich von dem Thread unterscheiden, der die Zuordnung ausgeführt hat).
 
 </dd> <dt>
 
-**Regionsize**
+**RegionSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(2), Extension("SizeT")
 </dt> </dl>
 
-Die Größe (in Bytes) des Arbeitsspeichers, der zugeordnet oder freigegeben wurde.
+Die Größe des belegten oder freigegebenen Arbeitsspeichers in Bytes.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Pagefault \_ v2**](pagefault-v2.md)
+[**PageFault \_ V2**](pagefault-v2.md)
 </dt> </dl>
 
  

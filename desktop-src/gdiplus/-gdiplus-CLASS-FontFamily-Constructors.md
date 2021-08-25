@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die Konstruktoren der FontFamily-Klasse aufgelistet. Eine vollständige Klassen Auflistung finden Sie unter fontfamilyclass.
+description: In diesem Thema werden die Konstruktoren der FontFamily-Klasse aufgeführt. Eine vollständige Klassenauflistung finden Sie unter FontFamilyClass.
 ms.assetid: 9d8f73d7-d6ea-44d4-be5c-a003f6eba508
-title: FontFamily. FontFamily-Konstruktoren
+title: FontFamily.FontFamily-Konstruktoren
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: b1b7bbee5fedffa117d51b3ea97bea9b0c0599ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d45135c6960e0b3b88d8faecf83e1ce62575e1e7d8073eaf7eec47436622a42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888860"
 ---
-# <a name="fontfamilyfontfamily-constructors"></a>FontFamily. FontFamily-Konstruktoren
+# <a name="fontfamilyfontfamily-constructors"></a>FontFamily.FontFamily-Konstruktoren
 
-In diesem Thema werden die Konstruktoren der [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Klasse aufgelistet. Eine vollständige Klassen Auflistung finden Sie unter **fontfamilyclass**.
+In diesem Thema werden die Konstruktoren der [**FontFamily-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) aufgeführt. Eine vollständige Klassenauflistung finden Sie unter **FontFamilyClass**.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,8 +21,8 @@ In diesem Thema werden die Konstruktoren der [**FontFamily**](/windows/win32/api
 
 | Konstruktor                                                                                               | BESCHREIBUNG                                                                                                                                               |
 |:----------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**FontFamily ()**](/previous-versions//ms536182(v=vs.85))                                             | Erstellt ein leeres [**FontFamily:: FontFamily**](/previous-versions//ms536182(v=vs.85)) -Objekt.<br/>                                               |
-| [**FontFamily (WChar \* , FontCollection \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-fontfamily-fontfamily(inconstwchar_inconstfontcollection)) | Erstellt ein [**FontFamily:: FontFamily**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-fontfamily-fontfamily(inconstwchar_inconstfontcollection)) -Objekt auf Grundlage einer angegebenen Schriftfamilie.<br/> |
+| [**FontFamily()**](/previous-versions//ms536182(v=vs.85))                                             | Erstellt ein [**leeres FontFamily::FontFamily-Objekt.**](/previous-versions//ms536182(v=vs.85))<br/>                                               |
+| [**FontFamily(WCHAR \* , FontCollection \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-fontfamily-fontfamily(inconstwchar_inconstfontcollection)) | Erstellt ein [**FontFamily::FontFamily-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-fontfamily-fontfamily(inconstwchar_inconstfontcollection)) basierend auf einer angegebenen Schriftfamilie.<br/> |
 
 
 

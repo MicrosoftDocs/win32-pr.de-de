@@ -1,44 +1,44 @@
 ---
-description: Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert eine PROPVARIANT ist. Attribute werden in Microsoft Media Foundation zum Konfigurieren von Objekten, zum Beschreiben von Medienformaten, zum Abfragen von Objekteigenschaften und zu anderen Zwecken verwendet.
+description: Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert ein PROPVARIANT ist. Attribute werden in der gesamten Microsoft Media Foundation, um Objekte zu konfigurieren, Medienformate, Abfrageobjekteigenschaften und andere Zwecke zu beschreiben.
 ms.assetid: 44af5e03-5f0a-4564-b9d6-b8c935df35b2
 title: Attribute in Media Foundation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6e7893586aa1e966b95c1af5d04246bbb0c82ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f46cc919f426ff7b0862de73d8852291d25b7e31f2b5d67d7a4955369be6d17
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943300"
 ---
 # <a name="attributes-in-media-foundation"></a>Attribute in Media Foundation
 
-Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert eine **PROPVARIANT** ist. Attribute werden in Microsoft Media Foundation zum Konfigurieren von Objekten, zum Beschreiben von Medienformaten, zum Abfragen von Objekteigenschaften und zu anderen Zwecken verwendet.
+Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert ein **PROPVARIANT-Wert ist.** Attribute werden in der gesamten Microsoft Media Foundation, um Objekte zu konfigurieren, Medienformate, Abfrageobjekteigenschaften und andere Zwecke zu beschreiben.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Info zu Attributen](#about-attributes)
 -   [Serialisieren von Attributen](#serializing-attributes)
--   [Implementieren von imfattributes](#implementing-imfattributes)
+-   [Implementieren von ATTRIBUTEN](#implementing-imfattributes)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="about-attributes"></a>Info zu Attributen
 
-Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert eine **PROPVARIANT** ist. Attributwerte sind auf die folgenden Datentypen beschränkt:
+Ein Attribut ist ein Schlüssel-Wert-Paar, bei dem der Schlüssel eine GUID und der Wert ein **PROPVARIANT-Wert ist.** Attributwerte sind auf die folgenden Datentypen beschränkt:
 
--   32-Bit-Ganzzahl ohne Vorzeichen (**UInt32**).
+-   32-Bit-Ganzzahl ohne Vorzeichen (**UINT32**).
 -   64-Bit-Ganzzahl ohne Vorzeichen (**UINT64**).
--   64-Bit-Gleit Komma Zahl.
+-   64-Bit-Gleitkommazahl.
 -   GUID.
 -   Auf NULL endende Zeichenfolge für breite Zeichen.
 -   Bytearray.
--   **IUnknown** -Zeiger.
+-   **IUnknown-Zeiger.**
 
-Diese Typen werden in der [**MF- \_ \_ Attributtyp**](/windows/desktop/api/mfobjects/ne-mfobjects-mf_attribute_type) -Enumeration definiert. Um Attributwerte festzulegen oder abzurufen, verwenden Sie die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle. Diese Schnittstelle enthält typsichere Methoden, um Werte nach dem Datentyp zu erhalten und festzulegen. Um z. b. eine 32-Bit-Ganzzahl festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32). Attribut Schlüssel sind innerhalb eines Objekts eindeutig. Wenn Sie zwei verschiedene Werte mit demselben Schlüssel festlegen, überschreibt der zweite Wert den ersten.
+Diese Typen werden in der [**MF \_ ATTRIBUTE \_ TYPE-Enumeration**](/windows/desktop/api/mfobjects/ne-mfobjects-mf_attribute_type) definiert. Verwenden Sie zum Festlegen oder Abrufen von Attributwerten [**die SCHNITTSTELLE ATTRIBUTEAttributes.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) Diese Schnittstelle enthält typsichere Methoden zum Erhalten und Festlegen von Werten nach Datentyp. Rufen Sie z. B. ZUM Festlegen einer 32-Bit-Ganzzahl [**DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) Attributschlüssel sind innerhalb eines Objekts eindeutig. Wenn Sie zwei verschiedene Werte mit demselben Schlüssel festlegen, überschreibt der zweite Wert den ersten Wert.
 
-Mehrere Media Foundation Schnittstellen erben die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle. Objekte, die diese Schnittstelle verfügbar machen, verfügen über optionale oder obligatorische Attribute, die von der Anwendung für das Objekt festgelegt werden sollen, oder über Attribute, die die Anwendung abrufen kann. Außerdem akzeptieren einige Methoden und Funktionen einen **imfattributes** -Zeiger als Parameter, der es der Anwendung ermöglicht, Konfigurationsinformationen festzulegen. Die Anwendung muss einen Attribut Speicher zum Speichern der Konfigurations Attribute erstellen. Um einen leeren Attribut Speicher zu erstellen, rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)auf.
+Mehrere Media Foundation erben die [**INTERFACE DER ATTRIBUTEAttributes.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) Objekte, die diese Schnittstelle verfügbar machen, verfügen über optionale oder obligatorische Attribute, die die Anwendung für das Objekt festlegen soll, oder über Attribute, die die Anwendung abrufen kann. Außerdem verwenden einige Methoden und Funktionen einen **ATTRIBUTEAttributes-Zeiger** als Parameter, wodurch die Anwendung Konfigurationsinformationen festlegen kann. Die Anwendung muss einen Attributspeicher erstellen, um die Konfigurationsattribute zu speichern. Um einen leeren Attributspeicher zu erstellen, rufen [**Sie MFCreateAttributes auf.**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes)
 
-Der folgende Code zeigt zwei Funktionen. Der erste erstellt einen neuen Attribut Speicher und legt ein hypothetisches Attribut \_ mit dem Namen My Attribute mit einem Zeichen folgen Wert fest. Die zweite Funktion Ruft den Wert dieses Attributs ab.
+Der folgende Code zeigt zwei Funktionen. Der erste erstellt einen neuen Attributspeicher und legt ein hypothetisches Attribut namens MY \_ ATTRIBUTE mit einem Zeichenfolgenwert fest. Die zweite Funktion ruft den Wert dieses Attributs ab.
 
 
 ```C++
@@ -101,34 +101,34 @@ HRESULT ShowGetAttributes()
 
 
 
-Eine umfassende Liste der Media Foundation Attribute finden Sie unter [Media Foundation Attribute](media-foundation-attributes.md). Der erwartete Datentyp für jedes Attribut ist hier dokumentiert.
+Eine vollständige Liste der Media Foundation Attribute finden Sie unter [Media Foundation Attribute.](media-foundation-attributes.md) Der erwartete Datentyp für jedes Attribut ist dort dokumentiert.
 
 ## <a name="serializing-attributes"></a>Serialisieren von Attributen
 
-Media Foundation verfügt über zwei Funktionen zum Serialisieren von Attribut speichern. Eine schreibt die Attribute in ein Bytearray, das andere schreibt Sie in einen Stream, der die **IStream** -Schnittstelle unterstützt. Jede Funktion verfügt über eine entsprechende Funktion, mit der die Daten geladen werden.
+Media Foundation verfügt über zwei Funktionen zum Serialisieren von Attributspeichern. Eines schreibt die Attribute in ein Bytearray, das andere schreibt sie in einen Stream, der die **IStream-Schnittstelle** unterstützt. Jede Funktion verfügt über eine entsprechende Funktion, die die Daten lädt.
 
 
 
-| Vorgang | Bytearray                                                   | IStream                                                                        |
+| Vorgang | Bytearray                                                   | Istream                                                                        |
 |-----------|--------------------------------------------------------------|--------------------------------------------------------------------------------|
-| Speichern      | [**Mfgetattributesasblob**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributesasblob)       | [**MF serializeattributestostream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfserializeattributestostream)         |
-| Laden      | [**Mfinitattributesfromblob**](/windows/desktop/api/mfapi/nf-mfapi-mfinitattributesfromblob) | [**MF deserializeattributesfromstream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfdeserializeattributesfromstream) |
+| Speichern      | [**MFGetAttributesAsBlob**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributesasblob)       | [**MFSerializeAttributesToStream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfserializeattributestostream)         |
+| Laden      | [**MFInitAttributesFromBlob**](/windows/desktop/api/mfapi/nf-mfapi-mfinitattributesfromblob) | [**MFDeserializeAttributesFromStream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfdeserializeattributesfromstream) |
 
 
 
  
 
-Um den Inhalt eines Attribut Speichers in ein Bytearray zu schreiben, müssen Sie [**mfgetattributesasblob**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributesasblob)aufrufen. Attribute mit **IUnknown** -Zeiger Werten werden ignoriert. Um die Attribute wieder in einen Attribut Speicher zu laden, müssen Sie [**mfinitattributesfromblob**](/windows/desktop/api/mfapi/nf-mfapi-mfinitattributesfromblob)aufrufen.
+Um den Inhalt eines Attributspeichers in ein Bytearray zu schreiben, rufen Sie [**MFGetAttributesAsBlob auf.**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributesasblob) Attribute mit **IUnknown-Zeigerwerten** werden ignoriert. Rufen Sie [**MFInitAttributesFromBlob**](/windows/desktop/api/mfapi/nf-mfapi-mfinitattributesfromblob)auf, um die Attribute wieder in einen Attributspeicher zu laden.
 
-Um einen Attribut Speicher in einen Stream zu schreiben, nennen Sie [**mfserializeattributestostream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfserializeattributestostream). Diese Funktion kann **IUnknown** -Zeiger Werte Mars Hallen. Der Aufrufer muss ein Streamobjekt bereitstellen, das die **IStream** -Schnittstelle implementiert. Um einen Attribut Speicher aus einem Stream zu laden, müssen Sie [**mfdeserializeattributesfromstream**](/windows/desktop/api/mfobjects/nf-mfobjects-mfdeserializeattributesfromstream)aufrufen.
+Um einen Attributspeicher in einen Stream zu schreiben, rufen Sie [**MFSerializeAttributesToStream auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-mfserializeattributestostream) Diese Funktion kann **IUnknown-Zeigerwerte** marshallen. Der Aufrufer muss ein Streamobjekt bereitstellen, das die **IStream-Schnittstelle** implementiert. Um einen Attributspeicher aus einem Stream zu laden, rufen Sie [**MFDeserializeAttributesFromStream auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-mfdeserializeattributesfromstream)
 
-## <a name="implementing-imfattributes"></a>Implementieren von imfattributes
+## <a name="implementing-imfattributes"></a>Implementieren von ATTRIBUTEN
 
-Media Foundation stellt eine Aktien Implementierung von [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)bereit, die durch Aufrufen der Funktion [**mfcreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) abgerufen wird. In den meisten Fällen sollten Sie diese Implementierung verwenden und keine eigene benutzerdefinierte Implementierung bereitstellen.
+Media Foundation stellt eine Vorratimplementierung von [**ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)zur Anwendung, die durch Aufrufen der [**MFCreateAttributes-Funktion abgerufen**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) wird. In den meisten Fällen sollten Sie diese Implementierung verwenden und keine eigene benutzerdefinierte Implementierung bereitstellen.
 
-Es gibt eine Situation, in der Sie die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle implementieren müssen, wenn Sie eine zweite Schnittstelle implementieren, die **imfattributes** erbt. In diesem Fall müssen Sie Implementierungen für die **imfattributes** -Methoden bereitstellen, die von der zweiten Schnittstelle geerbt werden.
+Es gibt eine Situation, in der Sie möglicherweise die [**BESCHRIFTUNGAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) implementieren müssen: Wenn Sie eine zweite Schnittstelle implementieren, die **DIE ATTRIBUTEs erbt.** In diesem Fall müssen Sie Implementierungen für die VON der zweiten Schnittstelle geerbten **METHODEN DER ATTRIBUTEAttributes** bereitstellen.
 
-In dieser Situation wird empfohlen, die vorhandene Media Foundation Implementierung von [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)einzubinden. Der folgende Code zeigt eine Klassen Vorlage, die einen **imfattributes** -Zeiger enthält und jede **imfattributes** -Methode umschließt, mit Ausnahme der **IUnknown** -Methoden.
+In diesem Fall empfiehlt es sich, die vorhandene [**Media Foundation-Implementierung von ATTRIBUTEAttributes zu umschließen.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) Der folgende Code zeigt eine Klassenvorlage, die einen **ATTRIBUTEAttributes-Zeiger** enthält und mit Ausnahme der **IUnknown-Methoden** jede **METHODE DES ATTRIBUTEAttributes** umschließt.
 
 
 ```C++
@@ -504,7 +504,7 @@ public:
 
 
 
-Der folgende Code zeigt, wie Sie eine Klasse von dieser Vorlage ableiten:
+Der folgende Code zeigt, wie sie eine Klasse von dieser Vorlage ableiten:
 
 
 ```C++
@@ -576,15 +576,15 @@ public:
 
 
 
-Sie müssen aufzurufen `CBaseAttributes::Initialize` , um den Attribut Speicher zu erstellen. Im vorherigen Beispiel wird dies innerhalb einer statischen Erstellungs Funktion durchgeführt.
+Sie müssen `CBaseAttributes::Initialize` aufrufen, um den Attributspeicher zu erstellen. Im vorherigen Beispiel erfolgt dies innerhalb einer statischen Erstellungsfunktion.
 
-Das Vorlagen Argument ist ein Schnittstellentyp, der standardmäßig auf " [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)" festgelegt ist. Wenn das Objekt eine Schnittstelle implementiert, die **imfattributes** erbt (z. b. [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)), legen Sie das Vorlagen Argument auf den Namen der abgeleiteten Schnittstelle fest.
+Das Vorlagenargument ist ein Schnittstellentyp, der standardmäßig [**AUF ATTRIBUTEs festgelegt ist.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) Wenn Ihr -Objekt eine Schnittstelle implementiert, die **DIE ATTRIBUTE erbt**, z. B. [**DURCHAKTIVIeren,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)legen Sie das Vorlagenargument auf den Namen der abgeleiteten Schnittstelle fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Media Foundation primitiver](media-foundation-primitives.md)
+[Media Foundation Primitive](media-foundation-primitives.md)
 </dt> </dl>
 
  

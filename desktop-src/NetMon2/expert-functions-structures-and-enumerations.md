@@ -1,23 +1,23 @@
 ---
-description: Diese Expertenfunktionen, Strukturen und enumerationsabschnitte enthalten Informationen über die Funktionen, Strukturen und Enumerationen, die nur von Experten verwendet werden können.
+description: Dieser Abschnitt zu Funktionen, Strukturen und Enumerationen von Experten enthält Informationen zu den Funktionen, Strukturen und Enumerationen, die nur Von Experten verwendet werden können.
 ms.assetid: d4078937-2899-43c8-81bf-9ee97ef7070b
-title: Expertenfunktionen, Strukturen und Enumerationen
+title: Funktionen, Strukturen und Enumerationen von Experten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ba238e346a0f14490816aec3f1ce745cbbc5c643
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e73fac14aae5722cb4cacb97bf82910831d9a10da7f1ee1d756a9b4ff01256b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911100"
 ---
-# <a name="expert-functions-structures-and-enumerations"></a>Expertenfunktionen, Strukturen und Enumerationen
+# <a name="expert-functions-structures-and-enumerations"></a>Funktionen, Strukturen und Enumerationen von Experten
 
-Diese Expertenfunktionen, Strukturen und enumerationsabschnitte enthalten Informationen über die Funktionen, Strukturen und Enumerationen, die nur von Experten verwendet werden können. Die Themen in diesem Abschnitt umfassen Folgendes:
+Dieser Abschnitt zu Funktionen, Strukturen und Enumerationen von Experten enthält Informationen zu den Funktionen, Strukturen und Enumerationen, die nur Von Experten verwendet werden können. Die Themen in diesem Abschnitt umfassen Folgendes:
 
--   [Export Funktionen der Experten-dll](expert-dll-export-functions.md)
+-   [Exportfunktionen der Expert-DLL](expert-dll-export-functions.md)
 
-    In diesen Themen werden die Funktionen beschrieben, die von erfahrenen DLLs exportiert werden müssen.
+    In diesen Themen werden die Funktionen beschrieben, die von expertenorientierten DLLs exportiert werden müssen.
 
 -   [Expertenfunktionen](expert-functions.md)
 
@@ -27,9 +27,9 @@ Diese Expertenfunktionen, Strukturen und enumerationsabschnitte enthalten Inform
 
     In diesen Themen werden die Strukturen beschrieben, die von Expertenfunktionen verwendet werden.
 
--   [Expertenenumerationen](expert-enumerations.md)
+-   [Expert-Enumerationen](expert-enumerations.md)
 
-    In diesen Themen werden die von expertenstrukturen und-Funktionen verwendeten Enumerationen beschrieben.
+    In diesen Themen werden die Enumerationen beschrieben, die von Expertenstrukturen und -funktionen verwendet werden.
 
  
 

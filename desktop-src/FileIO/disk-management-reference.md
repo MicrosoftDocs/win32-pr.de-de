@@ -1,32 +1,32 @@
 ---
-description: Elemente, die in der Datenträgerverwaltung verwendet werden
+description: Elemente, die in der Datenträgerverwaltung verwendet werden.
 ms.assetid: baff3cae-d869-456b-981c-452973d0914d
 title: Referenz zur Datenträgerverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa7d96bdf9b9aa743023a1bca213dd90b8da4268
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbb5f3eb10127e9a8498bcf41cfad6497fe98c510138c9c069e23bfdba5c8d36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119812070"
 ---
 # <a name="disk-management-reference"></a>Referenz zur Datenträgerverwaltung
 
-Die folgenden Elemente werden in der Datenträgerverwaltung verwendet.
+Die folgenden Elemente werden bei der Datenträgerverwaltung verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                 | BESCHREIBUNG                                             |
+| Thema                                                                                 | Beschreibung                                             |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------|
-| [Steuerungs Codes für die Datenträgerverwaltung](disk-management-control-codes.md)<br/>         | Steuerungs Codes, die in der Datenträgerverwaltung verwendet werden.<br/>       |
-| [Enumerationstypen der Datenträgerverwaltung](disk-management-enumeration-types.md)<br/> | Mit der Datenträgerverwaltung verwendete Enumerationstypen.<br/> |
-| [Funktionen der Datenträgerverwaltung](disk-management-functions.md)<br/>                 | Funktionen, die in der Datenträgerverwaltung verwendet werden<br/>           |
-| [Datenträger Verwaltungs Schnittstellen](disk-management-interfaces.md)<br/>               | In der Datenträgerverwaltung verwendete Schnittstellen.<br/>          |
-| [Strukturen der Datenträgerverwaltung](disk-management-structures.md)<br/>               | In der Datenträgerverwaltung verwendete Strukturen.<br/>          |
-| [**Datenträger-Partitionstypen**](disk-partition-types.md)<br/>                       | Gültige Partitionstypen, die von Datenträger Treibern verwendet werden.<br/>  |
+| [Steuerungscodes für die Datenträgerverwaltung](disk-management-control-codes.md)<br/>         | Steuerungscodes, die in der Datenträgerverwaltung verwendet werden.<br/>       |
+| [Datenträgerverwaltungs-Enumerationstypen](disk-management-enumeration-types.md)<br/> | Enumerationstypen, die mit der Datenträgerverwaltung verwendet werden.<br/> |
+| [Datenträgerverwaltungsfunktionen](disk-management-functions.md)<br/>                 | Funktionen, die in der Datenträgerverwaltung verwendet werden.<br/>           |
+| [Datenträgerverwaltungsschnittstellen](disk-management-interfaces.md)<br/>               | Schnittstellen, die in der Datenträgerverwaltung verwendet werden.<br/>          |
+| [Datenträgerverwaltungsstrukturen](disk-management-structures.md)<br/>               | Strukturen, die in der Datenträgerverwaltung verwendet werden.<br/>          |
+| [**Datenträgerpartitionstypen**](disk-partition-types.md)<br/>                       | Gültige Partitionstypen, die von Datenträgertreibern verwendet werden.<br/>  |
 
 
 

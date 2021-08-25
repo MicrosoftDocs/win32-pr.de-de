@@ -1,7 +1,7 @@
 ---
-description: Die checktargetrect-Methode bestimmt, ob ein Ziel Rechteck gültig ist.
+description: Die CheckTargetRect-Methode bestimmt, ob ein Zielrechteck gültig ist.
 ms.assetid: a16e7faf-6421-4f78-bbb1-40d38f1a5525
-title: Cbasecontrolvideo. checktargetrect-Methode (ctlutil. h)
+title: CBaseControlVideo.CheckTargetRect-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 94f8d50aea58f556634e7f20b3880aecad72cc39
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c8444764af729f9536471a6a9df221cc118edb7d043112eb0b5351f45982d87f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057320"
 ---
-# <a name="cbasecontrolvideochecktargetrect-method"></a>Cbasecontrolvideo. checktargetrect-Methode
+# <a name="cbasecontrolvideochecktargetrect-method"></a>CBaseControlVideo.CheckTargetRect-Methode
 
-Die- `CheckTargetRect` Methode bestimmt, ob ein Ziel Rechteck gültig ist.
+Die `CheckTargetRect` -Methode bestimmt, ob ein Zielrechteck gültig ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ virtual HRESULT CheckTargetRect(
 
 <dl> <dt>
 
-*ptargetrect* 
+*pTargetRect* 
 </dt> <dd>
 
-Zeiger auf das zu Überprüfung des Ziel Rechtecks.
+Zeiger auf das zu überprüfende Zielrechteck.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E \_ invalidArg" zurück, wenn es ungültig ist; andernfalls wird "noError (S OK)" zurückgegeben \_ .
+Gibt E \_ INVALIDARG zurück, wenn ungültig; andernfalls gibt NOERROR (S \_ OK) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion bestimmt, ob das angeforderte Ziel Rechteck gültig ist. Da das Ziel Rechteck eine Position im logischen Client des Fensters angibt, können die Koordinaten negativ sein, obwohl die Gesamtbreite und Höhe nicht 0 (null) oder ein negativer Wert sein dürfen.
+Diese Memberfunktion bestimmt, ob das angeforderte Zielrechteck gültig ist. Da das Zielrechteck eine Position im logischen Client des Fensters angibt, können die Koordinaten negativ sein, obwohl die Gesamtbreite und Höhe nicht 0 (null) oder ein negativer Wert sein darf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion bestimmt, ob das angeforderte Ziel Rechteck gültig ist. D
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion bestimmt, ob das angeforderte Ziel Rechteck gültig ist. D
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

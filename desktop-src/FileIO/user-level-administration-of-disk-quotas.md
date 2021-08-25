@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie, wie Sie nach überschreiten des Kontingentkontingents mehr freien Speicherplatz erhalten.
+description: Erfahren Sie, wie Sie nach dem Überschreiten des Kontingentkontingents mehr freien Speicherplatz erhalten.
 ms.assetid: a73b6a11-36f1-4437-a83d-e89918b1b0ae
 title: Verwaltung von Datenträgerkontingenten auf Benutzerebene
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "119914360"
 ---
 # <a name="user-level-administration-of-disk-quotas"></a>Verwaltung von Datenträgerkontingenten auf Benutzerebene
 
-Datenträgerkontingente sind für den Benutzer transparent. Wenn ein Benutzer fragt, wie viel Speicherplatz auf einem Datenträger frei ist, meldet das System nur das verfügbare Kontingent, das dem Benutzer zur Verfügung steht. Wenn der Benutzer diese Überschreitung überschreitet, gibt das System den Fehler **ERROR \_ DISK \_ FULL** zurück, so wie er angibt, dass der Datenträger voll ist.
+Datenträgerkontingente sind für den Benutzer transparent. Wenn ein Benutzer fragt, wie viel Speicherplatz auf einem Datenträger frei ist, meldet das System nur das verfügbare Kontingentkontingent, das dem Benutzer zur Verfügung steht. Wenn der Benutzer dieses Überschreitungszertifikat überschreitet, gibt das System den Fehler **ERROR \_ DISK \_ FULL** zurück, so wie er angibt, dass der Datenträger voll war.
 
-Um nach überschreiten des Kontingentkontingents mehr freien Speicherplatz zu erhalten, muss der Benutzer einen der folgenden Schritte unternehmen:
+Um nach dem Überschreiten des Kontingentkontingents mehr freien Speicherplatz zu erhalten, muss der Benutzer eine der folgenden Schritte ausführen:
 
 -   Löschen Sie einige Dateien.
--   Besitz einiger Dateien durch einen anderen Benutzer beanspruchen.
--   Der Administrator muss das Kontingent erhöhen.
+-   Ein anderer Benutzer beansprucht den Besitz einiger Dateien.
+-   Lassen Sie den Administrator das Kontingentkontingent erhöhen.
 
-Programme, die die tatsächliche Menge an freiem Speicherplatz abrufen müssen, können die [**GetDiskFreeSpaceEx-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getdiskfreespaceexa) aufrufen und den *TotalNumberOfFreeBytes-Parameter* betrachten.
+Programme, die den tatsächlichen freien Speicherplatz abrufen müssen, können die [**GetDiskFreeSpaceEx-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-getdiskfreespaceexa) aufrufen und sich den *TotalNumberOfFreeBytes-Parameter* ansehen.
 
  
 

@@ -1,32 +1,32 @@
 ---
-description: Eine WS-Discovery Nachricht, die als Reaktion auf eine Testnachricht für Clients von einem Dienst gesendet wird.
+description: Eine WS-Discovery, die von einem Dienst als Antwort auf eine Clients-Testnachricht gesendet wird.
 ms.assetid: 58d3d016-ae29-4090-9b88-e1125db59c95
-title: Probe Matches-Meldung
+title: ProbeMatches-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfd856cda51d558073585f41f3db23c75fea7f17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa395557aac7c67a82163066cf1bfbb854348e1c
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349436"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627866"
 ---
-# <a name="probematches-message"></a>Probe Matches-Meldung
+# <a name="probematches-message"></a>ProbeMatches-Nachricht
 
-Eine Probe Matches-Nachricht ist eine WS-Discovery Nachricht, die von einem Dienst als Antwort [auf die Test](probe-message.md) Nachricht eines Clients gesendet wird. Weitere Informationen zu Probe Matches-Meldungen finden Sie im Abschnitt 5,3 der [WS-Discovery-Spezifikation](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
+Eine ProbeMatches-Nachricht ist eine WS-Discovery, die von einem Dienst als Antwort auf die Testnachricht eines Clients [gesendet](probe-message.md) wird. Weitere Informationen zu ProbeMatches-Nachrichten finden Sie in Abschnitt 5.3 der [WS-Discovery Specification](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
 
-Eine Probe Matches-Meldung wird von UDP Unicast an den Port gesendet, von dem aus die Test [Nachricht des Clients](probe-message.md) gesendet wurde. Probe Matches muss innerhalb von 4 Sekunden der Testnachricht gesendet werden. Andernfalls kann das Paket von der Windows-Firewall gelöscht werden.
+Eine ProbeMatches-Nachricht wird von UDP-Unicast an den Port gesendet, von dem die [Testnachricht](probe-message.md) des Clients gesendet wurde. ProbeMatches muss innerhalb von 4 Sekunden nach der Testnachricht gesendet werden. Andernfalls Windows Firewall das Paket möglicherweise ab.
 
-Wenn keine xaddrs in der probematches-Nachricht enthalten sind, sendet der Client möglicherweise eine [Auflösungs](resolve-message.md) Meldung von UDP-Multicast an Port 3702. Der Client sendet nur dann eine Auflösungs Nachricht, wenn eine HTTP-Nachricht (z. b. eine [Get](get--metadata-exchange--http-request-and-message.md) Metadata Exchange-Anforderung oder eine Dienst Nachricht) gesendet wird.
+Wenn keine XAddrs in der ProbeMatches-Nachricht enthalten sind, kann der Client eine Resolve-Nachricht per UDP-Multicast an Port 3702 senden. [](resolve-message.md) Der Client sendet nur dann eine Auflösungsnachricht, wenn eine HTTP-Nachricht (z. B. eine [Anforderung zum](get--metadata-exchange--http-request-and-message.md) Abrufen des Metadatenaustauschs oder eine Dienstnachricht) gesendet wird.
 
-Alle DPWS-Anwendungen, die Test [Nachrichten senden, empfangen Probe Matches](probe-message.md) -Nachrichten.
+Jede DPWS-Anwendung, die [Testnachrichten](probe-message.md) sendet, erhält ProbeMatches-Nachrichten.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> Dieses Thema zeigt eine DPWS-Beispielmeldung, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-konforme Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie [stattdessen das WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Probe Matches-Beispiel Nachricht.
+Die folgende SOAP-Nachricht zeigt eine ProbeMatches-Beispielmeldung.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -72,30 +72,30 @@ Die folgende SOAP-Nachricht zeigt eine Probe Matches-Beispiel Nachricht.
 </soap:Envelope>
 ```
 
-Eine Probe Matches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine ProbeMatches-Meldung weist die folgenden Fokuspunkte auf.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>XML</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Probe Matches</td>
+<td>ProbeMatches</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2005/04/discovery/ProbeMatches
 </wsa:Action></code></pre></td>
-<td>Die Aktion Probe Matches SOAP identifiziert die Nachricht als Probe Matches-Nachricht.</td>
+<td>Die ProbeMatches SOAP-Aktion identifiziert die Nachricht als ProbeMatches-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>RelatesTo</td>
@@ -110,21 +110,21 @@ Eine Probe Matches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;9&quot;>
 </wsd:AppSequence></code></pre></td>
-<td>Enthält Informationen zur Anwendungs Sequenzierung, die die Reihenfolge der Nachrichten auch dann beibehalten, wenn Sie nicht in der richtigen Reihenfolge empfangen werden. Die appsequence wird wie in <a href="appsequence-validation-rules.md">appsequence-Validierungsregeln</a>beschrieben überprüft.</td>
+<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann verwaltet werden kann, wenn sie nicht in der reihenfolgenfolgenden Reihenfolge empfangen werden. AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln) beschrieben überprüft.</a></td>
 </tr>
 <tr class="even">
 <td>Adresse</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Address>
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsa:Address></code></pre></td>
-<td>Enthält die Endpunkt Adresse. Auf diese adressierte Meldung kann in einer <a href="resolve-message.md">Auflösungs</a> Meldung verwiesen werden.</td>
+<td>Enthält die Endpunktadresse. Auf dieses Problem kann in einer <a href="resolve-message.md">Auflösungsmeldung verwiesen</a> werden.</td>
 </tr>
 <tr class="odd">
-<td>Xaddrs</td>
+<td>XAddrs</td>
 <td><pre class="syntax" data-space="preserve"><code><wsd:XAddrs>
     https://192.168.0.2:5357/37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsd:XAddrs></code></pre></td>
-<td>Xaddrs sind Transport Adressen, die für die Kommunikation zwischen Client und Dienst verwendet werden können. Addrs werden wie in <a href="xaddr-validation-rules.md">xaddr-Validierungsregeln</a>beschrieben überprüft.</td>
+<td>XAddrs sind Transportadressen, die für die Kommunikation zwischen Client und Dienst verwendet werden können. Add-Ins werden wie unter <a href="xaddr-validation-rules.md">XAddr-Validierungsregeln beschrieben überprüft.</a></td>
 </tr>
 </tbody>
 </table>
@@ -137,10 +137,10 @@ Eine Probe Matches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Discovery and Metadata Exchange Messages](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Testnachricht](probe-message.md)
+[Testmeldung](probe-message.md)
 </dt> </dl>
 
  

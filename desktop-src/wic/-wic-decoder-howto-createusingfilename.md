@@ -1,23 +1,23 @@
 ---
-description: In diesem Thema wird beschrieben, wie ein Bitmap-Decoder mithilfe eines Bild Datei namens erstellt wird.
+description: In diesem Thema wird beschrieben, wie ein Bitmapdecoder mithilfe eines Bilddateinamens erstellt wird.
 ms.assetid: b384861d-4e71-4e07-8b44-5c1cbcb3a70f
-title: Erstellen eines Decoders mit einem Bilddateinamen
+title: Erstellen eines Decoders mithilfe eines Bilddateinamens
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 113ea82b741f2a8dab6c92d6391d65eb7d7e99c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 867581e06692188913e4bb1af4956956c462c46bc189a4983f3c5d24bc38c986
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811990"
 ---
-# <a name="how-to-create-a-decoder-using-an-image-filename"></a>Erstellen eines Decoders mit einem Bilddateinamen
+# <a name="how-to-create-a-decoder-using-an-image-filename"></a>Erstellen eines Decoders mithilfe eines Bilddateinamens
 
-In diesem Thema wird beschrieben, wie ein Bitmap-Decoder mithilfe eines Bild Datei namens erstellt wird.
+In diesem Thema wird beschrieben, wie ein Bitmapdecoder mithilfe eines Bilddateinamens erstellt wird.
 
-So erstellen Sie einen Bitmap-Decoder mit einem Bilddateinamen
+So erstellen Sie einen Bitmapdecoder mithilfe eines Bilddateinamens
 
-1.  Erstellen Sie ein [**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) -Objekt, um WIC-Objekte (Windows Imaging Component) zu erstellen.
+1.  Erstellen Sie [**ein IWICImagingFactory-Objekt,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) um Windows Imaging Component (WIC)-Objekte zu erstellen.
 
     ```C++
     // Create WIC factory
@@ -31,7 +31,7 @@ So erstellen Sie einen Bitmap-Decoder mit einem Bilddateinamen
 
     
 
-2.  Verwenden Sie die Methode "Methode" von "| [**atedecoderfromfilename**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) ", um einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
+2.  Verwenden Sie [**die CreateDecoderFromFilename-Methode,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) um [**einen IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
 
     ```C++
     HRESULT hr = S_OK;
@@ -50,7 +50,7 @@ So erstellen Sie einen Bitmap-Decoder mit einem Bilddateinamen
 
     
 
-3.  Holen Sie sich den ersten [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
+3.  Sie erhalten den [**ersten IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
 
     ```C++
     // Retrieve the first bitmap frame.
@@ -62,16 +62,16 @@ So erstellen Sie einen Bitmap-Decoder mit einem Bilddateinamen
 
     
 
-    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da es sich bei der Datei in diesem Beispiel um eine JPEG-Datei handelt, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden [Sie unter Abrufen der Frames eines Bilds](-wic-bitmapsources-howto-retrieveimageframes.md) für den Zugriff auf die einzelnen Frames des Bilds.
+    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da die Datei in diesem Beispiel eine JPEG-Datei ist, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden Sie unter Abrufen der [Frames](-wic-bitmapsources-howto-retrieveimageframes.md) eines Bilds für den Zugriff auf die einzelnen Frames des Bilds.
 
-4.  Verarbeiten Sie den Bildframe. Weitere Informationen zu [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) -Objekten finden Sie in der [Übersicht über Bitmap-Quellen](-wic-bitmapsources.md).
+4.  Verarbeiten Sie den Bildrahmen. Weitere Informationen zu [**IWICBitmapSource-Objekten finden**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) Sie in der Übersicht über [Bitmapquellen.](-wic-bitmapsources.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

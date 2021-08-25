@@ -1,7 +1,7 @@
 ---
-description: Die deleteprinterdata-Funktion löscht die angegebenen Konfigurationsdaten für einen Drucker. Ein Drucker Konfigurationsdaten besteht aus einem Satz benannter und typisierter Werte. Die deleteprinterdata-Funktion löscht einen dieser Werte, der durch den Wert Namen angegeben wird.
+description: Die DeletePrinterData-Funktion löscht die angegebenen Konfigurationsdaten für einen Drucker. Die Konfigurationsdaten eines Druckers bestehen aus einem Satz benannter werte und typ benannter Werte. Die DeletePrinterData-Funktion löscht einen dieser Werte, der durch ihren Wertnamen angegeben wird.
 ms.assetid: 03c0bd75-d6de-46e3-b8e9-5a55df5135ea
-title: Deleteprinterdata-Funktion (winspool. h)
+title: DeletePrinterData-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_location:
 - Winspool.drv
 - Ext-MS-Win-Printer-WinSpool-l1-1-2.dll
 - Ext-MS-Win-Printer-WinSpool-L1-1-3.dll
-ms.openlocfilehash: a88df8484d367ae2cc50f4a465b5db1dcd53c355
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09600b2c84192378f654758a495ee22240211759fa0e961587ff70c7a10ac939
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092130"
 ---
-# <a name="deleteprinterdata-function"></a>Deleteprinterdata-Funktion
+# <a name="deleteprinterdata-function"></a>DeletePrinterData-Funktion
 
-Die **deleteprinterdata** -Funktion löscht die angegebenen Konfigurationsdaten für einen Drucker. Die Konfigurationsdaten eines Druckers bestehen aus einem Satz von benannten und typisierten Werten. Die **deleteprinterdata** -Funktion löscht einen dieser Werte, der durch den Wert Namen angegeben wird.
+Die **DeletePrinterData-Funktion** löscht die angegebenen Konfigurationsdaten für einen Drucker. Die Konfigurationsdaten eines Druckers bestehen aus einem Satz von benannten und typierten Werten. Die **DeletePrinterData-Funktion** löscht einen dieser Werte, der durch ihren Wertnamen angegeben wird.
 
-Das Aufrufen von **deleteprinterdata** entspricht dem Aufrufen der [**deleteprinterdataex**](deleteprinterdataex.md) -Funktion, wobei der *pkeyname* -Parameter auf "printerdriverdata" festgelegt ist.
+Das **Aufrufen von DeletePrinterData** entspricht dem Aufrufen der [**DeletePrinterDataEx-Funktion,**](deleteprinterdataex.md) bei der der *pKeyName-Parameter* auf "PrinterDriverData" festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,30 +46,30 @@ DWORD DeletePrinterData(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, dessen Konfigurationsdaten gelöscht werden sollen. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für den Drucker, dessen Konfigurationsdaten gelöscht werden sollen. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> <dt>
 
-*pvaluename* \[ in\]
+*pValueName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den null-terminierten Namen des zu löschenden Konfigurationsdaten Werts.
+Ein Zeiger auf den auf NULL beendeten Namen des zu löschenden Konfigurationsdatenwerts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
@@ -81,10 +81,10 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Deleteprinterdataw** (Unicode) und **deleteprinterdataa** (ANSI)<br/>                             |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **DeletePrinterDataW** (Unicode) und **DeletePrinterDataA** (ANSI)<br/>                             |
 
 
 
@@ -98,10 +98,10 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code.
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Enumprinterdata**](enumprinterdata.md)
+[**EnumPrinterData**](enumprinterdata.md)
 </dt> <dt>
 
-[**Getprinterdata**](getprinterdata.md)
+[**GetPrinterData**](getprinterdata.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -110,7 +110,7 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code.
 [**SetPrinter**](setprinter.md)
 </dt> <dt>
 
-[**Setprinterdata**](setprinterdata.md)
+[**SetPrinterData**](setprinterdata.md)
 </dt> </dl>
 
  

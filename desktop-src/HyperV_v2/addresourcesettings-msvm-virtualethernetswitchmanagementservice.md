@@ -1,7 +1,7 @@
 ---
-description: Fügt einer Konfiguration des virtuellen Switches Ressourcen hinzu.
+description: Fügt einer Konfiguration eines virtuellen Switches Ressourcen hinzu.
 ms.assetid: aad5fac1-3884-4a95-abe3-bf192f23ea41
-title: Adresssourcesettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: AddResourceSettings-Methode der Msvm_VirtualEthernetSwitchManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: cc29376a03403949c57b831f40b2437ced30a51a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e13b9a9738b830f5b9dfcce5f37efa23c1014c735a5cb0a9cc0e09afa7b0038
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914150"
 ---
-# <a name="addresourcesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Adresssourcesettings-Methode der MSVM \_ virtualethernettwitchmanagementservice-Klasse
+# <a name="addresourcesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>AddResourceSettings-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
-Fügt einer Konfiguration des virtuellen Switches Ressourcen hinzu. Wenn Sie auf eine VM-Konfiguration mit dem Status "State" angewendet werden, werden dem aktiven virtuellen Computer als Nebeneffekt Ressourcen hinzugefügt.
+Fügt einer Konfiguration eines virtuellen Switches Ressourcen hinzu. Wenn sie auf eine Konfiguration des virtuellen Computers "Zustand" angewendet wird, werden dem aktiven virtuellen Computer Nebeneffektressourcen hinzugefügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ uint32 AddResourceSettings(
 
 <dl> <dt>
 
-*Affectedconfiguration* \[ in\]
+*AffectedConfiguration* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)) -Objekt, das die betroffene Konfiguration des virtuellen Switches darstellt.
+Ein Verweis auf ein [**CIM \_ VirtualSystemSettingData-Objekt,**](/previous-versions//cc136954(v=vs.85)) das die betroffene Konfiguration des virtuellen Switches darstellt.
 
 </dd> <dt>
 
-*Resourcesettings* \[ in\]
+*ResourceSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, das eine eingebettete Instanz der [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) -Klasse enthält, die die virtuellen Aspekte einer virtuellen Ressource beschreibt, die dem virtuellen Switch hinzugefügt werden soll.
+Ein Array von Zeichenfolgen, das eine eingebettete Instanz der [**\_ CIM-Klasse ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) enthält, die die virtuellen Aspekte einer virtuellen Ressource beschreibt, die dem virtuellen Switch hinzugefügt werden soll.
 
 </dd> <dt>
 
-*Resultingresourcesettings* \[ vorgenommen\]
+*ResultingResourceSettings* \[ out\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen der [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) -Klasse, die virtuelle Aspekte der hinzugefügten virtuellen Ressourcen darstellt.
+Ein Array von Verweisen auf Instanzen der [**\_ CIM-Klasse ResourceAllocationSettingData,**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata) die virtuelle Aspekte der hinzugefügten virtuellen Ressourcen darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -82,7 +82,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -91,16 +91,16 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -109,10 +109,10 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -121,13 +121,13 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**Modifyresourcesettings**](modifyresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**ModifyResourceSettings**](modifyresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**Removeresourcesettings**](removeresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**RemoveResourceSettings**](removeresourcesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

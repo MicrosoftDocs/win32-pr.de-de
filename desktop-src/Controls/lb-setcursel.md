@@ -1,9 +1,9 @@
 ---
-title: LB_SETCURSEL Meldung (Winuser. h)
-description: Wählt eine Zeichenfolge aus und führt ggf. einen Bildlauf in die Ansicht aus. Wenn die neue Zeichenfolge ausgewählt ist, wird die Hervorhebung im Listenfeld aus der zuvor ausgewählten Zeichenfolge entfernt.
+title: LB_SETCURSEL Meldung (Winuser.h)
+description: Wählt eine Zeichenfolge aus und scrollt sie bei Bedarf in die Ansicht. Wenn die neue Zeichenfolge ausgewählt ist, entfernt das Listenfeld die Hervorhebung aus der zuvor ausgewählten Zeichenfolge.
 ms.assetid: 28d81f9d-a926-400c-8803-dcdb0e8f193d
 keywords:
-- Windows-Steuerelemente für LB_SETCURSEL Meldung
+- LB_SETCURSEL Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77d1305ccece9c220d6a20e72e0ee54a428f8b13
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b33964d98717ab84a325b5070eec6c4e1cacf334ba2272d4691d340a15af78a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085340"
 ---
-# <a name="lb_setcursel-message"></a>LB- \_ setcurrsel-Nachricht
+# <a name="lb_setcursel-message"></a>LB \_ SETCURSEL-Nachricht
 
-Wählt eine Zeichenfolge aus und führt ggf. einen Bildlauf in die Ansicht aus. Wenn die neue Zeichenfolge ausgewählt ist, wird die Hervorhebung im Listenfeld aus der zuvor ausgewählten Zeichenfolge entfernt.
+Wählt eine Zeichenfolge aus und scrollt sie bei Bedarf in die Ansicht. Wenn die neue Zeichenfolge ausgewählt ist, entfernt das Listenfeld die Hervorhebung aus der zuvor ausgewählten Zeichenfolge.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,9 +32,9 @@ Wählt eine Zeichenfolge aus und führt ggf. einen Bildlauf in die Ansicht aus. 
 *wParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index der ausgewählten Zeichenfolge an. Wenn dieser Parameter-1 ist, wird für das Listenfeld festgelegt, dass keine Auswahl vorhanden ist.
+Gibt den nullbasierten Index der ausgewählten Zeichenfolge an. Wenn dieser Parameter -1 ist, ist das Listenfeld auf keine Auswahl festgelegt.
 
-Windows 95/Windows 98/Windows Millennium Edition (Windows Me): der *wParam* -Parameter ist auf 16-Bit-Werte beschränkt. Dies bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, wird die Gesamtgröße der Elemente in einem Listenfeld in Bytes nur durch den verfügbaren Arbeitsspeicher beschränkt.
+Windows 95/Windows 98/Windows Edition (Windows Me): Der *wParam-Parameter* ist auf 16-Bit-Werte beschränkt. Das bedeutet, dass Listenfelder nicht mehr als 32.767 Elemente enthalten dürfen. Obwohl die Anzahl der Elemente eingeschränkt ist, ist die Gesamtgröße der Elemente in einem Listenfeld in Byte nur durch den verfügbaren Arbeitsspeicher beschränkt.
 
 </dd> <dt>
 
@@ -47,21 +47,21 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein Fehler auftritt, ist der Rückgabewert lb \_ Err. Wenn der *wParam* -Parameter-1 ist, ist der Rückgabewert "lb err", obwohl \_ kein Fehler aufgetreten ist.
+Wenn ein Fehler auftritt, lautet der Rückgabewert LB \_ ERR. Wenn der *wParam-Parameter* -1 ist, lautet der Rückgabewert LB \_ ERR, obwohl kein Fehler aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Meldung nur für Listenfelder mit einfacher Auswahl. Sie können Sie nicht verwenden, um eine Auswahl in einem Listenfeld mit Mehrfachauswahl festzulegen oder zu entfernen.
+Verwenden Sie diese Meldung nur mit Listenfeldern mit nur einer Auswahl. Sie können sie nicht verwenden, um eine Auswahl in einem Mehrfachauswahllistenfeld festzulegen oder zu entfernen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Verwenden Sie diese Meldung nur für Listenfelder mit einfacher Auswahl. Sie kö
 
 <dl> <dt>
 
-[**LB- \_ getcurrsel**](lb-getcursel.md)
+[**LB \_ GETCURSEL**](lb-getcursel.md)
 </dt> </dl>
 
  

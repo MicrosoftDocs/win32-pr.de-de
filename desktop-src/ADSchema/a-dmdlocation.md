@@ -1,11 +1,11 @@
 ---
 title: DMD-Location-Attribut
-description: Der Distinguished Name der Schema Partition.
+description: Der Distinguished Name der Schemapartition.
 ms.assetid: 94b60093-00f4-4ea2-a047-b2c0cdbafca9
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für DMD-Location-Attribut
-- dmdlocation-Attribut, AD-Schema
+- DMD-Location AD-Schema
+- AD-Schema des dMDLocation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: faed299a0b89be2726b3111262bcc0450d7c90dc
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d801a2aac5c3b8bbeb9a9d20219346a4dca68449ad918c041eaad99aa3d4fcc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085990"
 ---
 # <a name="dmd-location-attribute"></a>DMD-Location-Attribut
 
-Der Distinguished Name der Schema Partition.
+Der Distinguished Name der Schemapartition.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | DMD-Location                            |
-| LDAP-Display-Name | dmdlocation                             |
+| Ldap-Anzeigename | dMDLocation                             |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.        |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.        |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.2.36                   |
-| System-ID-GUID    | f0f8ff8b-1191-11d0-a060-00aa006c33ed    |
+| System-Id-Guid    | f0f8ff8b-1191-11d0-a060-00aa006c33ed    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Der Distinguished Name der Schema Partition.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -71,7 +71,7 @@ Der Distinguished Name der Schema Partition.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -101,10 +101,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Is-Single-Valued       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -122,10 +122,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -143,10 +143,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -164,10 +164,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -185,10 +185,10 @@ Der Distinguished Name der Schema Partition.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | Richtig                                     |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |

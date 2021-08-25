@@ -1,7 +1,7 @@
 ---
-description: Die \_ Get Duration-Methode ruft die Dauer des Streams ab. Diese Methode implementiert die IMediaPosition::get \_ Duration-Methode.
+description: Die Get \_ Duration-Methode ruft die Dauer des Streams ab. Diese Methode implementiert die IMediaPosition::get \_ Duration-Methode.
 ms.assetid: 326a8cd3-d05f-49d0-941d-08f9778e9a06
-title: CPosPassThru.get_Duration-Methode (Ctlutil.h)
+title: CPosPassThru.get_Duration -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -42,7 +42,7 @@ HRESULT get_Duration(
 
 <dl> <dt>
 
-*Ngth* 
+*-1000000* 
 </dt> <dd>
 
 Zeiger auf eine Variable, die die gesamte Streamlänge in Sekunden empfängt.
@@ -51,7 +51,7 @@ Zeiger auf eine Variable, die die gesamte Streamlänge in Sekunden empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,11 +60,11 @@ Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

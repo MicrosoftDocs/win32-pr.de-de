@@ -1,7 +1,7 @@
 ---
-description: Die folgenden Konstanten bilden den Satz gültiger Hardware Geräte Befehle zur Windows-Abbild Beschaffung (WIA).
+description: Die folgenden Konstanten bilden den Satz gültiger WIA-Hardwaregerätebefehle (Windows Image Acquisition).
 ms.assetid: f86a0944-2f2a-467e-a9e8-4cdecfc50175
-title: WIA-Geräte Befehle (wiadef. h)
+title: WIA-Gerätebefehle (Wiadef.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,80 +20,31 @@ api_type:
 - HeaderDef
 api_location:
 - wiadef.h
-ms.openlocfilehash: 6e9e732520a256519ebcb21da84eac7ca8d8b630
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08aeb26502686d2550d872bcfa845e3c68230ac4
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862667"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467107"
 ---
-# <a name="wia-device-commands"></a>WIA-Geräte Befehle
+# <a name="wia-device-commands"></a>WIA-Gerätebefehle
 
-Die folgenden Konstanten bilden den Satz gültiger Hardware Geräte Befehle zur Windows-Abbild Beschaffung (WIA).
+Die folgenden Konstanten bilden den Satz gültiger WIA-Hardwaregerätebefehle (Windows Image Acquisition).
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Konstante</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span id="WIA_CMD_SYNCHRONIZE"></span><span id="wia_cmd_synchronize"></span><dl> <dt><strong>WIA_CMD_SYNCHRONIZE</strong></dt> </dl></td>
-<td style="text-align: left;">Bewirkt, dass der Mini Treiber des Geräts zwischengespeicherte Elemente mit dem Hardware Gerät synchronisiert. Wenn das Gerät die <a href="/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-analyzeitem"><strong>iwiaitem:: analyzeitem</strong></a> -Methode unterstützt, bewirkt die Ausgabe dieses Befehls, dass der Mini Treiber die Analyseergebnisse verworfen und das Element in seinen ursprünglichen Zustand zurücksetzt. Alle Treiber müssen diesen Befehl unterstützen.<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span id="WIA_CMD_TAKE_PICTURE"></span><span id="wia_cmd_take_picture"></span><dl> <dt><strong>WIA_CMD_TAKE_PICTURE</strong></dt> </dl></td>
-<td style="text-align: left;">Bewirkt, dass ein WIA-Gerät ein Image aberhält.<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span id="WIA_CMD_DELETE_ALL_ITEMS"></span><span id="wia_cmd_delete_all_items"></span><dl> <dt><strong>WIA_CMD_DELETE_ALL_ITEMS</strong></dt> </dl></td>
-<td style="text-align: left;">Weist das Gerät an, alle Elemente zu löschen, die aus der Struktur von <a href="/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem"><strong>iwiaitem</strong></a> -Objekten, die das Gerät darstellen, gelöscht werden können. Das Löschen von Elementen wird verhindert, indem die Eigenschaften des Elements festgelegt werden. Weitere Informationen finden Sie unter <a href="/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-setpropertystream"><strong>iwiapropertystorage:: setpropertystream</strong></a> und <a href="-wia-property-attributes.md">Property-Attribute</a>.<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span id="WIA_CMD_CHANGE_DOCUMENT"></span><span id="wia_cmd_change_document"></span><dl> <dt><strong>WIA_CMD_CHANGE_DOCUMENT</strong></dt> </dl></td>
-<td style="text-align: left;">Wird für Dokument Scanner verwendet. Bewirkt, dass der Scanner die nächste Seite in seinem Dokument Handler lädt.<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span id="WIA_CMD_UNLOAD_DOCUMENT"></span><span id="wia_cmd_unload_document"></span><dl> <dt><strong>WIA_CMD_UNLOAD_DOCUMENT</strong></dt> </dl></td>
-<td style="text-align: left;">Wird für Dokument Scanner verwendet. Weist das Gerät an, alle verbleibenden Seiten im Dokument Handler zu entladen. <br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span id="WIA_CMD_START_FEEDER"></span><span id="wia_cmd_start_feeder"></span><dl> <dt><strong>WIA_CMD_START_FEEDER</strong></dt> </dl></td>
-<td style="text-align: left;">Wird für Dokument Scanner verwendet, die über einen Seiten feedertyp verfügen. Weist das Gerät an, den feedermotor zu starten. Diese Funktion ist ab Windows 8 verfügbar.<br/>
-<blockquote>
-[!Note]<br />
-Der WIA-Mini Treiber muss diesen Befehl ablehnen und <strong>WIA_ERROR_INVALID_COMMAND</strong> zurückgeben, wenn die <a href="/windows-hardware/drivers/image/wia-ips-feeder-control"><strong>WIA_IPS_FEEDER_CONTROL</strong></a> -Eigenschaft nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO festgelegt ist.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span id="WIA_CMD_STOP_FEEDER"></span><span id="wia_cmd_stop_feeder"></span><dl> <dt><strong>WIA_CMD_STOP_FEEDER</strong></dt> </dl></td>
-<td style="text-align: left;">Wird für Dokument Scanner verwendet, die über einen Seiten feedertyp verfügen. Weist das Gerät an, den feedermotor anzuhalten. Diese Funktion ist ab Windows 8 verfügbar.<br/>
-<blockquote>
-[!Note]<br />
-Der WIA-Mini Treiber muss diesen Befehl ablehnen und <strong>WIA_ERROR_INVALID_COMMAND</strong> zurückgeben, wenn die <strong>WIA_IPS_FEEDER_CONTROL</strong> -Eigenschaft nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO festgelegt ist.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span id="WIA_CMD_PAUSE_FEEDER"></span><span id="wia_cmd_pause_feeder"></span><dl> <dt><strong>WIA_CMD_PAUSE_FEEDER</strong></dt> </dl></td>
-<td style="text-align: left;">Wird für Dokument Scanner verwendet, die über einen Seiten feedertyp verfügen. Weist das Gerät an, den feedermotor anzuhalten. Diese Funktion ist ab Windows 8 verfügbar.<br/>
-<blockquote>
-[!Note]<br />
-Der WIA-Mini Treiber muss diesen Befehl ablehnen und <strong>WIA_ERROR_INVALID_COMMAND</strong> zurückgeben, wenn die <strong>WIA_IPS_FEEDER_CONTROL</strong> -Eigenschaft nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO festgelegt ist.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Konstante | BESCHREIBUNG | 
+|----------|-------------|
+| <span id="WIA_CMD_SYNCHRONIZE"></span><span id="wia_cmd_synchronize"></span><dl><dt><strong>WIA_CMD_SYNCHRONIZE</strong></dt></dl> | Bewirkt, dass der Minitreiber des Geräts zwischengespeicherte Elemente mit dem Hardwaregerät synchronisiert. Wenn das Gerät die <a href="/windows/desktop/api/wia_xp/nf-wia_xp-iwiaitem-analyzeitem"><strong>IWiaItem::AnalyzeItem-Methode</strong></a> unterstützt, bewirkt das Ausführen dieses Befehls, dass der Minitreiber die Analyseergebnisse verwirft und das Element auf seinen ursprünglichen Zustand zurückgesetzt. Dieser Befehl muss von allen Treibern unterstützt werden.<br /> | 
+| <span id="WIA_CMD_TAKE_PICTURE"></span><span id="wia_cmd_take_picture"></span><dl><dt><strong>WIA_CMD_TAKE_PICTURE</strong></dt></dl> | Bewirkt, dass ein WIA-Gerät ein Image erhält.<br /> | 
+| <span id="WIA_CMD_DELETE_ALL_ITEMS"></span><span id="wia_cmd_delete_all_items"></span><dl><dt><strong>WIA_CMD_DELETE_ALL_ITEMS</strong></dt></dl> | Weist das Gerät an, alle Elemente zu löschen, die aus der Struktur von <a href="/windows/desktop/api/wia_xp/nn-wia_xp-iwiaitem"><strong>IWiaItem-Objekten</strong></a> gelöscht werden können, die das Gerät darstellen. Das Löschen von Element wird verhindert, indem die Eigenschaften des Elements festlegen. Weitere Informationen finden Sie unter <a href="/windows/desktop/api/wia_xp/nf-wia_xp-iwiapropertystorage-setpropertystream"><strong>IWiaPropertyStorage::SetPropertyStream</strong></a> und <a href="-wia-property-attributes.md">Eigenschaftenattribute.</a><br /> | 
+| <span id="WIA_CMD_CHANGE_DOCUMENT"></span><span id="wia_cmd_change_document"></span><dl><dt><strong>WIA_CMD_CHANGE_DOCUMENT</strong></dt></dl> | Wird für Dokumentscanner verwendet. Bewirkt, dass die Scanner die nächste Seite im Dokumenthandler laden.<br /> | 
+| <span id="WIA_CMD_UNLOAD_DOCUMENT"></span><span id="wia_cmd_unload_document"></span><dl><dt><strong>WIA_CMD_UNLOAD_DOCUMENT</strong></dt></dl> | Wird für Dokumentscanner verwendet. Weist das Gerät an, alle verbleibenden Seiten im Dokumenthandler zu entladen. <br /> | 
+| <span id="WIA_CMD_START_FEEDER"></span><span id="wia_cmd_start_feeder"></span><dl><dt><strong>WIA_CMD_START_FEEDER</strong></dt></dl> | Wird für Dokumentscanner verwendet, die über einen Seitenfeeder verfügen. Weist das Gerät an, den Feeder-Motor zu starten. Dieses Feature ist ab diesem Windows 8.<br /><blockquote>[!Note]<br />Der WIA-Minitreiber muss diesen <strong></strong> Befehl ablehnen und WIA_ERROR_INVALID_COMMAND zurückgeben, wenn die <a href="/windows-hardware/drivers/image/wia-ips-feeder-control"><strong>WIA_IPS_FEEDER_CONTROL-Eigenschaft</strong></a> nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO.</blockquote><br /> | 
+| <span id="WIA_CMD_STOP_FEEDER"></span><span id="wia_cmd_stop_feeder"></span><dl><dt><strong>WIA_CMD_STOP_FEEDER</strong></dt></dl> | Wird für Dokumentscanner verwendet, die über einen Seitenfeeder verfügen. Weist das Gerät an, den Feeder-Motor anzuhalten. Dieses Feature ist ab diesem Windows 8.<br /><blockquote>[!Note]<br />Der WIA-Minitreiber muss diesen <strong></strong> Befehl ablehnen und WIA_ERROR_INVALID_COMMAND zurückgeben, wenn die <strong>WIA_IPS_FEEDER_CONTROL-Eigenschaft</strong> nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO.</blockquote><br /> | 
+| <span id="WIA_CMD_PAUSE_FEEDER"></span><span id="wia_cmd_pause_feeder"></span><dl><dt><strong>WIA_CMD_PAUSE_FEEDER</strong></dt></dl> | Wird für Dokumentscanner verwendet, die über einen Seitenfeeder verfügen. Weist das Gerät an, den Feeder-Motor anzuhalten. Dieses Feature ist ab diesem Windows 8.<br /><blockquote>[!Note]<br />Der WIA-Minitreiber muss diesen <strong></strong> Befehl ablehnen und WIA_ERROR_INVALID_COMMAND zurückgeben, wenn die <strong>WIA_IPS_FEEDER_CONTROL-Eigenschaft</strong> nicht unterstützt wird oder auf WIA_FEEDER_CONTROL_AUTO.</blockquote><br /> | 
+
 
 
 
@@ -103,9 +54,9 @@ Der WIA-Mini Treiber muss diesen Befehl ablehnen und <strong>WIA_ERROR_INVALID_C
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Wiadef. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Wiadef.h</dt> </dl> |
 
 
 

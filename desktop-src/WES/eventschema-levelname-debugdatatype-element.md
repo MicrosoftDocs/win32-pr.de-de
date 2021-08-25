@@ -1,6 +1,6 @@
 ---
-title: LevelName-Element (Debug DataType)
-description: Der bei der Aktivierung an den Anbieter über gegebene levelwert.
+title: LevelName(DebugDataType)-Element
+description: Der Levelwert, der an den Anbieter übergeben wurde, als er aktiviert wurde.
 ms.assetid: 0daa1b2e-10b2-4516-ac06-b6763a0768a4
 keywords:
 - LevelName-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0cc046965c067b95b5fae425863bb08f7a750f34
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41c26e2aff825213bf5a61be687ff5f0170176123d6299b424f1fa9203a740d5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904660"
 ---
-# <a name="levelname-debugdatatype-element"></a>LevelName-Element (Debug DataType)
+# <a name="levelname-debugdatatype-element"></a>LevelName(DebugDataType)-Element
 
-Der bei der Aktivierung an den Anbieter über gegebene levelwert.
+Der Levelwert, der an den Anbieter übergeben wurde, als er aktiviert wurde.
 
 ``` syntax
 <xs:element name="LevelName"
@@ -30,7 +30,7 @@ Der bei der Aktivierung an den Anbieter über gegebene levelwert.
  />
 ```
 
-Das **Levelname** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **LevelName-Element** wird durch den komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Levelname** -Element wird durch den komplexen Typ [**debugdatatype**](even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -47,13 +47,13 @@ Das **Levelname** -Element wird durch den komplexen Typ [**debugdatatype**](even
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Debug DataType**](eventschema-debugdatatype-complextype.md)
+[**DebugDataType**](eventschema-debugdatatype-complextype.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**DebugData (EventType)**](eventschema-debugdata-eventtype-element.md)

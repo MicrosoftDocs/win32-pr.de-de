@@ -1,5 +1,5 @@
 ---
-description: Von XMUSHORTN4 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUSHORTN4 verfügbar gemacht werden.
 ms.assetid: b2babc18-b35f-428e-aeab-dc588e5c8b1d
 title: XMUSHORTN4-Konstruktoren
 ms.topic: reference
@@ -11,12 +11,12 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2f9e4f5182e47a06193411a4ea1c61f3fa3f0ad9c0010f40891ae7c8e052e64b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 5031f726896ee5d6ad6ae1faf2e3192037e36c2f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118499431"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122465447"
 ---
 # <a name="xmushortn4-constructors"></a>XMUSHORTN4-Konstruktoren
 
@@ -33,65 +33,15 @@ Erstellt Instanzen der [**XMUSHORTN4-Struktur.**](/windows/desktop/api/DirectXPa
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Konstruktor</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constfloat)"><strong>XMUSHORTN4 ()</strong></a></td>
-<td style="text-align: left;">Standardkonstruktor für <code>XMUSHORTN4</code> . <br/> Standardkonstruktor für <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4.</strong></a> <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constfloat)"><strong>XMUSHORTN4 (const float*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMUSHORTN4</code> vier <code>float</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus einem aus einem Arrayargument mit vier <code>float</code> Elementen. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constuint16_t)"><strong>XMUSHORTN4 (const uint16_t*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMUSHORTN4</code> vier <code>uint16_t</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus einem aus einem Arrayargument mit vier <code>uint16_t</code> Elementen. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(float_float_float_float)"><strong>XMUSHORTN4 (float,float,float,float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORTN4</code> aus vier normalisierten <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus vier normalisierten <code>float</code> Argumenten. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(uint16_t_uint16_t_uint16_t_uint16_t)"><strong>XMUSHORTN4 (uint16_t,uint16_t,uint16_t,uint16_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORTN4</code> aus vier <code>uint16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus vier <code>uint16_t</code> Argumenten. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Konstruktor | BESCHREIBUNG | 
+|-------------|-------------|
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constfloat)"><strong>XMUSHORTN4 ()</strong></a> | Standardkonstruktor für <code>XMUSHORTN4</code> . <br /> Standardkonstruktor für <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a>. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constfloat)"><strong>XMUSHORTN4 (const float*)</strong></a> | Initialisiert eine neue Instanz von aus <code>XMUSHORTN4</code> einem Arrayargument mit <code>float</code> vier Element. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus einem aus einem Arrayargument mit <code>float</code> vier Elemente. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(constuint16_t)"><strong>XMUSHORTN4 (const uint16_t*)</strong></a> | Initialisiert eine neue Instanz von aus <code>XMUSHORTN4</code> einem Arrayargument mit <code>uint16_t</code> vier Element. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4</strong></a> aus einem aus einem Arrayargument mit <code>uint16_t</code> vier Elemente. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(float_float_float_float)"><strong>XMUSHORTN4 (float,float,float,float)</strong></a> | Initialisiert eine neue Instanz von <code>XMUSHORTN4</code> aus vier normalisierten <code>float</code> Argumenten. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4 aus</strong></a> vier normalisierten <code>float</code> Argumenten. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushortn4-xmushortn4(uint16_t_uint16_t_uint16_t_uint16_t)"><strong>XMUSHORTN4 (uint16_t,uint16_t,uint16_t,uint16_t)</strong></a> | Initialisiert eine neue Instanz von <code>XMUSHORTN4</code> aus vier <code>uint16_t</code> Argumenten. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4"><strong>XMUSHORTN4 aus</strong></a> vier <code>uint16_t</code> Argumenten. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+
 
 
 

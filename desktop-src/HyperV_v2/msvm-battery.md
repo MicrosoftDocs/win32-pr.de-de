@@ -1,5 +1,5 @@
 ---
-description: Stellt ein virtuelles Akku Gerät dar.
+description: Stellt ein virtuelles Akkugerät dar.
 ms.assetid: 24e745cc-d92b-429b-87eb-4caae5d4a95a
 title: Msvm_Battery-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 047594768c4cfcf96067d43e023e3dcc01cd1a56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 070eb7fb8e953161f21cc9b4d467097ccd1f8902cc429f730dc9435e03002518
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870404"
 ---
-# <a name="msvm_battery-class"></a>MSVM \_ Akku Klasse
+# <a name="msvm_battery-class"></a>Msvm \_ Battery-Klasse
 
-Stellt ein virtuelles Akku Gerät dar.
+Stellt ein virtuelles Akkugerät dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -37,7 +37,7 @@ class Msvm_Battery : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ Akku** Klasse definiert keine Member.
+Die **Msvm \_ Battery-Klasse** definiert keine Member.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,10 +45,10 @@ Die **MSVM- \_ Akku** Klasse definiert keine Member.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

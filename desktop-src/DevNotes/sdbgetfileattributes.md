@@ -1,7 +1,7 @@
 ---
 description: Ruft die Attributdaten für die angegebene Datei ab.
 ms.assetid: 899b4af3-8185-4ce5-8e81-05ec3a446e42
-title: Sdbgetfileattribute-Funktion
+title: SdbGetFileAttributes-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 651b9af34afdd2ffd767eba7ca4467ecfee081cf
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a75dd64bfbeaf027839c63227c594ada7602101d059cbbd9d10deb085152918d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103650"
 ---
-# <a name="sdbgetfileattributes-function"></a>Sdbgetfileattribute-Funktion
+# <a name="sdbgetfileattributes-function"></a>SdbGetFileAttributes-Funktion
 
 Ruft die Attributdaten für die angegebene Datei ab.
 
@@ -41,21 +41,21 @@ BOOL WINAPI SdbGetFileAttributes(
 
 <dl> <dt>
 
-*lpwszfilename* \[ in\]
+*lpwszFileName* \[ In\]
 </dt> <dd>
 
 Der Pfad zur Datei.
 
 </dd> <dt>
 
-*ppattrinfo* \[ vorgenommen\]
+*ppAttrInfo* \[ out\]
 </dt> <dd>
 
-Ein Array von [**attrinfo**](attrinfo.md) -Strukturen, die die Attributdaten enthalten.
+Ein Array von [**ATTRINFO-Strukturen,**](attrinfo.md) die die Attributdaten enthalten.
 
 </dd> <dt>
 
-*lpdwattrcount* \[ vorgenommen\]
+*lpdwAttrCount* \[ out\]
 </dt> <dd>
 
 Die Anzahl der Attribute.
@@ -64,11 +64,11 @@ Die Anzahl der Attribute.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE bei** Erfolg oder **FALSE bei** Einem Fehler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie mit den Daten fertig sind, können Sie Sie mit der [**sdbfreefileattribute**](sdbfreefileattributes.md) -Funktion freigeben.
+Wenn Sie mit den Daten fertig sind, geben Sie sie mithilfe der [**Funktion SdbFreeFileAttributes**](sdbfreefileattributes.md) frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Wenn Sie mit den Daten fertig sind, können Sie Sie mit der [**sdbfreefileattrib
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -86,10 +86,10 @@ Wenn Sie mit den Daten fertig sind, können Sie Sie mit der [**sdbfreefileattrib
 
 <dl> <dt>
 
-[**Sdbformatattribute**](sdbformatattribute.md)
+[**SdbFormatAttribute**](sdbformatattribute.md)
 </dt> <dt>
 
-[**Sdbfrefileattribute**](sdbfreefileattributes.md)
+[**SdbFreeFileAttributes**](sdbfreefileattributes.md)
 </dt> </dl>
 
  

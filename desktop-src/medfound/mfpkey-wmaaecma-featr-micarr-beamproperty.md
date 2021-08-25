@@ -1,19 +1,19 @@
 ---
-description: Gibt an, welcher Strahl der sprach Erfassungs-DSP für die Verarbeitung von mikrofonarrays verwendet.
+description: Gibt an, welcher Balken der Spracherfassungs-DSP für die Mikrofonarrayverarbeitung verwendet.
 ms.assetid: 9ed761da-3f1b-47e8-b71f-becc56fe8801
-title: MFPKEY_WMAAECMA_FEATR_MICARR_BEAM-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_FEATR_MICARR_BEAM-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9165eec0dee87fa5d9f6a751f41e81d0de2d9958
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b9a91cef7d270af37adc8fda9805d7bf275ef9877883ed8ff8cfdbf9e7a55e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953530"
 ---
-# <a name="mfpkey_wmaaecma_featr_micarr_beam-property"></a>Mfpkey \_ wmaaecma \_ featr \_ micarr- \_ Eigenschaft (Eigenschaft)
+# <a name="mfpkey_wmaaecma_featr_micarr_beam-property"></a>MFPKEY \_ WMAAECMA \_ FEATR \_ MICARR-EIGENSCHAFT \_ "BALKEN"
 
-Gibt an, welcher Strahl der sprach Erfassungs-DSP für die Verarbeitung von mikrofonarrays verwendet.
+Gibt an, welcher Balken der Spracherfassungs-DSP für die Mikrofonarrayverarbeitung verwendet.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -25,15 +25,15 @@ VT \_ I4
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Spracherfassungs-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie diese Eigenschaft fest, wenn der Wert der Eigenschaft " [mfpkey \_ wmaaecma \_ featr \_ micarr \_ Mode](mfpkey-wmaaecma-featr-micarr-modeproperty.md) " micarray \_ extern \_ Beam ist.
+Legen Sie diese Eigenschaft fest, wenn der Wert der [MFPKEY \_ WMAAECMA \_ FEATR \_ MICARR \_ MODE-Eigenschaft](mfpkey-wmaaecma-featr-micarr-modeproperty.md) MICARRAY \_ EXTERN \_ BALKEN ist.
 
-Wenn der Wert von " [**mfpkey \_ wmaaecma \_ featr \_ micarr \_ Mode**](mfpkey-wmaaecma-featr-micarr-modeproperty.md) " micarray \_ Single \_ Beam ist, können Sie diese Eigenschaft lesen, um abzufragen, welcher Strahl vom DSP ausgewählt wurde.
+Wenn der Wert von [**MFPKEY \_ WMAAECMA \_ FEATR \_ MICARR \_ MODE**](mfpkey-wmaaecma-featr-micarr-modeproperty.md) MICARRAY \_ SINGLE BEAM \_ lautet, können Sie diese Eigenschaft lesen, um abzufragen, welcher Balken vom DSP ausgewählt wurde.
 
-Diese Eigenschaft kann die folgenden Werte aufweisen. Werte sind horizontal in Grad.
+Diese Eigenschaft kann die folgenden Werte aufweisen. Die Werte sind in Grad horizontal.
 
 
 
@@ -44,7 +44,7 @@ Diese Eigenschaft kann die folgenden Werte aufweisen. Werte sind horizontal in G
 | 2     | -30 Grad.             |
 | 3     | -20 Grad.             |
 | 4     | -10 Grad.             |
-| 5     | 0 Grad (Mittelstrahl). |
+| 5     | 0 Grad (Mittelbalken). |
 | 6     | 10 Grad.              |
 | 7     | 20 Grad.              |
 | 8     | 30 Grad.              |
@@ -61,9 +61,9 @@ Diese Eigenschaft kann die folgenden Werte aufweisen. Werte sind horizontal in G
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -71,10 +71,10 @@ Diese Eigenschaft kann die folgenden Werte aufweisen. Werte sind horizontal in G
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Spracherfassungs-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die get \_ streamtypeb-Methode ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.
+description: Die \_ get StreamTypeB-Methode ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.
 ms.assetid: 99ae4b52-4449-4b7c-babf-1a6cba479499
-title: 'Imediadet:: get_StreamTypeB-Methode (qedit. h)'
+title: IMediaDet::get_StreamTypeB-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: fd1cdf4bbadfa769654f20792cf2fda17dbe2806
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8fc424a6fcbba4450980e389b88878d019d7e82a40bb42e11ce29097c254123c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083710"
 ---
-# <a name="imediadetget_streamtypeb-method"></a>Imediadet:: get \_ streamtypeb-Methode
+# <a name="imediadetget_streamtypeb-method"></a>IMediaDet::get \_ StreamTypeB-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `get_StreamTypeB` Methode ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.
+Die `get_StreamTypeB` -Methode ruft eine Zeichenfolge ab, die die GUID des Medientyps für den aktuellen Stream darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,34 +45,34 @@ HRESULT get_StreamTypeB(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt eine Zeichen folgen Darstellung der Medientyp-GUID.
+Empfängt eine Zeichenfolgendarstellung des Medientyps GUID.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der zurückgegebene **BSTR** ist wie folgt formatiert: `{73647561-0000-0010-8000-00AA00389B71}`
 
-Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString** aufzurufen, um den Arbeitsspeicher freizugeben.
+Die -Methode belegt Arbeitsspeicher für die Zeichenfolge. Die Anwendung muss **SysFreeString** aufrufen, um den Arbeitsspeicher freizugeben.
 
-Bevor Sie diese Methode aufrufen, legen Sie den Dateinamen und den Stream durch Aufrufen von [**imediadet::p UT \_ filename**](imediadet-put-filename.md) und [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md)fest.
+Legen Sie vor dem Aufrufen dieser Methode den Dateinamen und den Stream fest, indem [**Sie IMediaDet::p ut \_ Filename**](imediadet-put-filename.md) und [**IMediaDet::p ut \_ CurrentStream**](imediadet-put-currentstream.md)aufrufen.
 
-Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \_ invalidArg zurück. Weitere Informationen finden Sie unter [**imediadet:: enterbitmapgrabmode**](imediadet-enterbitmapgrabmode.md).
+Wenn sich die Medienerkennung im Bitmapgrabbermodus befindet, gibt diese Methode E \_ INVALIDARG zurück. Weitere Informationen finden Sie unter [**IMediaDet::EnterBitmapGrabMode**](imediadet-enterbitmapgrabmode.md).
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -82,8 +82,8 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Wenn sich der Medien Detektor im bitmapingmodus befindet, gibt diese Methode E \
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

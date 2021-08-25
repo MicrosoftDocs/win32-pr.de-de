@@ -1,41 +1,41 @@
 ---
 title: Einrichten der Erweiterungs-DLLs
-description: Beim Start überprüft NPS die Registrierung auf eine Liste der aufzurufenden DLLs von Drittanbietern.
+description: Beim Start überprüft NPS die Registrierung auf eine Liste der dlLs von Drittanbietern, die sie aufrufen können.
 ms.assetid: fbbd9031-3ebe-47b8-8d8b-e359fa7d4b67
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14e8589f31144f12b120f9a77f281dd57a9f30ce
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 737d53bd25a28321c333e890a019af881ae54fa1c5ae92299b1776689f9abb74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962510"
 ---
 # <a name="setting-up-the-extension-dlls"></a>Einrichten der Erweiterungs-DLLs
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Internet Authentication Service (IAS) wurde ab Windows Server 2008 in Network Policy Server (NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-Beim Start überprüft NPS die Registrierung auf eine Liste der aufzurufenden DLLs von Drittanbietern.
+Beim Start überprüft NPS die Registrierung auf eine Liste der dlLs von Drittanbietern, die sie aufrufen können.
 
-Wenn Sie eine Authentifizierungs-oder Autorisierungs-dll auf einem NPS-Server einrichten möchten, können Sie die Pfade zu den DLLs in Werten unter dem folgenden Registrierungsschlüssel auflisten:
+Zum Einrichten einer Authentifizierungs- oder Autorisierungs-DLL auf einem NPS-Server listen Sie die Pfade zu den DLLs in Werten unter dem folgenden Registrierungsschlüssel auf:
 
-**"HKLM \\ System \\ CurrentControlSet \\ Services \\ authsrv \\ Parameters"\\**
+**AuthSrv-Parameter des HKLM-Systems \\ \\ "CurrentControlSet \\ \\ \\ Services"\\**
 
-Wenn die Parameter " **authsrv** " und " **Parameters** " nicht vorhanden sind, erstellen Sie Sie.
+Wenn die **Schlüssel AuthSrv** und **Parameters** nicht vorhanden sind, erstellen Sie sie.
 
-Der Wert zum Auflisten der authentifizierungserweiterungs-DLLs lautet:
+Der Wert, in dem die Authentifizierungserweiterungs-DLLs aufgeführt werden, ist:
 
-**Extensiondlls**
+**ExtensionDLLs**
 
-Der Wert für die Liste der Autorisierungs Erweiterungs-DLLs lautet:
+Der Wert, in dem die Autorisierungserweiterungs-DLLs aufgeführt werden, ist:
 
-**Authorizationdlls**
+**AuthorizationDLLs**
 
-Die Werte für " **extensiondlls** " und " **authorizationdlls** " müssen den Typ " **reg \_ \_ MultiSZ**" aufweisen. Mit diesem Typ können Sie mehrere DLLs auflisten.
+Sowohl die **Werte ExtensionDLLs** als **auch AuthorizationDLLs** müssen vom Typ **REG MULTI SZ \_ \_ sein.** Mit diesem Typ können Sie mehrere DLLs auflisten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,9 +44,9 @@ Die Werte für " **extensiondlls** " und " **authorizationdlls** " müssen den T
 [Aufrufen der Erweiterungs-DLLs](/windows/desktop/Nps/ias-authentication-and-authorization-process)
 </dt> <dt>
 
-[Benutzer Identifizierungs Attribute](/windows/desktop/Nps/ias-user-identification-attributes)
+[Benutzeridentifikationsattribute](/windows/desktop/Nps/ias-user-identification-attributes)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

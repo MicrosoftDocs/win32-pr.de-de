@@ -1,6 +1,6 @@
 ---
-title: Headersteuerelementmeldungen
-description: Headersteuerelementmeldungen
+title: Headersteuerungsmeldungen
+description: Headersteuerungsmeldungen
 ms.assetid: 77743235-fba5-472c-8a86-065e280c6eeb
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119916800"
 ---
-# <a name="header-control-messages"></a>Headersteuerelementmeldungen
+# <a name="header-control-messages"></a>Headersteuerungsmeldungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

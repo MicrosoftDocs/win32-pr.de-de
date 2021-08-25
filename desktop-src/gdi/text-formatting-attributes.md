@@ -1,67 +1,67 @@
 ---
-description: 'Eine Anwendung kann sechs Funktionen verwenden, um die Text Formatierungs Attribute für einen Gerätekontext festzulegen: SetBkColor, setbkmode, setTextAlign, settextcharakteriextra, SetTextColor und settextbegrün dung.'
+description: 'Eine Anwendung kann sechs Funktionen verwenden, um die Textformatierungsattribute für einen Gerätekontext festzulegen: SetBkColor, SetBkMode, SetTextAlign, SetTextCharacterExtra, SetTextColor und SetTextJustification.'
 ms.assetid: fd4d81ee-7f8f-41e8-88a5-d3ed89f4c7bd
 title: Text-Formatting Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58d345bfcfe1693a7ff0b25bb323615dffe221ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e74cb8d30a0eb9b44f05be611da963b413e8798b81da2a334dc083bd3cc1651
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104561270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015280"
 ---
 # <a name="text-formatting-attributes"></a>Text-Formatting Attribute
 
-Eine Anwendung kann sechs Funktionen verwenden, um die Text Formatierungs Attribute für einen Gerätekontext festzulegen: [SetBkColor](/windows/desktop/api/Wingdi/nf-wingdi-setbkcolor), [setbkmode](/windows/desktop/api/Wingdi/nf-wingdi-setbkmode), [setTextAlign](/windows/desktop/api/Wingdi/nf-wingdi-settextalign), [settextcharakteriextra](/windows/desktop/api/Wingdi/nf-wingdi-settextcharacterextra), [SetTextColor](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor)und [settextbegrün dung](/windows/desktop/api/Wingdi/nf-wingdi-settextjustification). Diese Funktionen beeinflussen die Textausrichtung, den Abstand zwischen Zeichen, die Textausrichtung und Text-und Hintergrundfarben. Außerdem können sechs weitere Funktionen verwendet werden, um die aktuellen Text Formatierungs Attribute für jeden Gerätekontext abzurufen: [GetBkColor](/windows/desktop/api/Wingdi/nf-wingdi-getbkcolor), [getbkmode](/windows/desktop/api/Wingdi/nf-wingdi-getbkmode), [gettextalign](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign), [gettextcharakteriextra](/windows/desktop/api/Wingdi/nf-wingdi-gettextcharacterextra), [gettextcolor](/windows/desktop/api/Wingdi/nf-wingdi-gettextcolor)und [GetTextExtentPoint32](/windows/desktop/api/Wingdi/nf-wingdi-gettextextentpoint32a).
+Eine Anwendung kann sechs Funktionen verwenden, um die Textformatierungsattribute für einen Gerätekontext festzulegen: [SetBkColor,](/windows/desktop/api/Wingdi/nf-wingdi-setbkcolor) [SetBkMode,](/windows/desktop/api/Wingdi/nf-wingdi-setbkmode) [SetTextAlign,](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) [SetTextCharacterExtra,](/windows/desktop/api/Wingdi/nf-wingdi-settextcharacterextra) [SetTextColor](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor)und [SetTextJustification.](/windows/desktop/api/Wingdi/nf-wingdi-settextjustification) Diese Funktionen wirken sich auf die Textausrichtung, den Abstand des Interzeichens, die Textausrichtung sowie Text- und Hintergrundfarben aus. Darüber hinaus können sechs weitere Funktionen verwendet werden, um die aktuellen Textformatierungsattribute für jeden Gerätekontext abzurufen: [GetBkColor,](/windows/desktop/api/Wingdi/nf-wingdi-getbkcolor) [GetBkMode,](/windows/desktop/api/Wingdi/nf-wingdi-getbkmode) [GetTextAlign,](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign) [GetTextCharacterExtra,](/windows/desktop/api/Wingdi/nf-wingdi-gettextcharacterextra) [GetTextColor](/windows/desktop/api/Wingdi/nf-wingdi-gettextcolor)und [GetTextExtentPoint32.](/windows/desktop/api/Wingdi/nf-wingdi-gettextextentpoint32a)
 
 ## <a name="text-alignment"></a>Textausrichtung
 
-Anwendungen können die [setTextAlign](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) -Funktion verwenden, um anzugeben, wie das System die Zeichen in einer Text Zeichenfolge positionieren soll, wenn Sie eine der Zeichnungsfunktionen aufrufen. Diese Funktion kann verwendet werden, um Überschriften, Seitenzahlen, Legenden usw. zu positionieren. Das System positioniert eine Text Zeichenfolge durch Ausrichten eines Bezugspunkts an einem imaginären Rechteck, das die Zeichenfolge umgibt, mit der aktuellen Cursorposition oder mit einem Punkt, der als Argument an eine der Text Zeichnungsfunktionen weitergegeben wird. Mit der [**setTextAlign**](/windows/win32/api/wingdi/nf-wingdi-settextalign) -Funktion kann die Anwendung den Speicherort dieses Bezugspunkts angeben. Im folgenden finden Sie eine Liste der möglichen Bezugspunkt Positionen.
+Anwendungen können die [SetTextAlign-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) verwenden, um anzugeben, wie das System die Zeichen in einer Textzeichenfolge positionieren soll, wenn sie eine der Zeichnungsfunktionen aufrufen. Diese Funktion kann verwendet werden, um Überschriften, Seitenzahlen, Aufrufe usw. zu positionieren. Das System positioniert eine Textzeichenfolge durch Ausrichten eines Verweispunkts auf einem imaginären Rechteck, das die Zeichenfolge umgibt, mit der aktuellen Cursorposition oder mit einem Punkt, der als Argument an eine der Textzeichnungsfunktionen übergeben wird. Mit der [**SetTextAlign-Funktion**](/windows/win32/api/wingdi/nf-wingdi-settextalign) kann die Anwendung den Speicherort dieses Referenzpunkts angeben. Im Folgenden sind die möglichen Referenzpunktpositionen aufgeführt.
 
 
 
 | Standort         | BESCHREIBUNG                                                                                                             |
 |------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Links/unten      | Der Bezugspunkt befindet sich in der unteren linken Ecke des Rechtecks.                                               |
-| Links/Basislinie   | Der Bezugspunkt befindet sich an der Schnittmenge der Zeichen Zellen-Basislinie und der linken Kante des Rechtecks.  |
-| Links/oben         | Der Bezugspunkt befindet sich in der linken oberen Ecke des Rechtecks.                                                 |
-| zentriert/unten    | Der Bezugspunkt befindet sich in der Mitte des Rechtecks.                                            |
-| zentrieren/Basislinie | Der Bezugspunkt befindet sich an der Schnittmenge der Zeichen Zellen-Basislinie und der Mitte des Rechtecks.     |
-| zentriert/oben       | Der Bezugspunkt befindet sich in der Mitte des oberen Rands des Rechtecks.                                               |
-| rechts/unten     | Der Bezugspunkt befindet sich in der unteren rechten Ecke des Rechtecks.                                              |
-| rechts/Basislinie  | Der Bezugspunkt befindet sich an der Schnittmenge der Zeichen Zellen-Basislinie und der rechten Kante des Rechtecks. |
-| rechts/oben        | Der Bezugspunkt befindet sich in der oberen rechten Ecke des Rechtecks.                                                |
+| links/unten      | Der Verweispunkt befindet sich in der unteren linken Ecke des Rechtecks.                                               |
+| linke/Basislinie   | Der Verweispunkt befindet sich an der Schnittmenge der Basislinie der Zeichenzelle und am linken Rand des Rechtecks.  |
+| links/oben         | Der Verweispunkt befindet sich in der oberen linken Ecke des Rechtecks.                                                 |
+| Mitte/Unten    | Der Verweispunkt befindet sich in der Mitte des unteren Rands des Rechtecks.                                            |
+| Mitte/Basislinie | Der Verweispunkt befindet sich an der Schnittmenge der Basislinie der Zeichenzelle und der Mitte des Rechtecks.     |
+| Center/Top       | Der Verweispunkt befindet sich in der Mitte des oberen Rands des Rechtecks.                                               |
+| rechts/unten     | Der Verweispunkt befindet sich in der unteren rechten Ecke des Rechtecks.                                              |
+| rechte/Basislinie  | Der Verweispunkt befindet sich an der Schnittmenge der Basislinie der Zeichenzelle und am rechten Rand des Rechtecks. |
+| rechts/oben        | Der Verweispunkt befindet sich in der oberen rechten Ecke des Rechtecks.                                                |
 
 
 
  
 
-Die folgende Abbildung zeigt eine Text Zeichenfolge, die durch Aufrufen der [TextOut](/windows/desktop/api/Wingdi/nf-wingdi-textouta) -Funktion gezeichnet wird. Vor dem Zeichnen des Texts wurde die Funktion " [setTextAlign](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) " aufgerufen, um den Bezugspunkt an jedem der neun möglichen Orte zu verschieben.
+Die folgende Abbildung zeigt eine Zeichenfolge mit Text, die durch Aufrufen der [TextOut-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-textouta) gezeichnet wurde. Vor dem Zeichnen des Texts wurde die [SetTextAlign-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-settextalign) aufgerufen, um den Verweispunkt an jeder der neun möglichen Positionen zu verschieben.
 
-![die Abbildung zeigt neun Mal denselben Text, einen für jeden möglichen Verweis Punkt Speicherort.](images/csftx-04.png)
+![Abbildung, die neunmal den gleichen Text zeigt, einen für jede mögliche Referenzpunktposition](images/csftx-04.png)
 
-Die Standardtext Ausrichtung für einen Gerätekontext ist die linke obere Ecke des imaginären Rechtecks, das den Text umgibt. Eine Anwendung kann die aktuelle Einstellung für die Textausrichtung für beliebige Geräte Kontexte abrufen, indem Sie die [gettextalign](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign) -Funktion aufrufen.
+Die Standardtextausrichtung für einen Gerätekontext ist die obere linke Ecke des imaginären Rechtecks, das den Text umgibt. Eine Anwendung kann die aktuelle Textausrichtungseinstellung für jeden Gerätekontext abrufen, indem sie die [GetTextAlign-Funktion aufruft.](/windows/desktop/api/Wingdi/nf-wingdi-gettextalign)
 
 ## <a name="intercharacter-spacing"></a>Intercharacter-Abstand
 
-Anwendungen können die Funktion " [settextcharacter extra](/windows/desktop/api/Wingdi/nf-wingdi-settextcharacterextra) " verwenden, um den zwischen Raum von Textausgabe Vorgängen in einem angegebenen Gerätekontext zu ändern. Die folgende Abbildung zeigt eine Text Zeichenfolge, die zweimal durch Aufrufen der [TextOut](/windows/desktop/api/Wingdi/nf-wingdi-textouta) -Funktion gezeichnet wird. Bevor der Text beim zweiten Mal gezeichnet wird, wurde die Funktion [**settextcharacter extra**](/windows/win32/api/wingdi/nf-wingdi-settextcharacterextra) aufgerufen, um den intercharacter-Abstand zu erhöhen.
+Anwendungen können die [SetTextCharacterExtra-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-settextcharacterextra) verwenden, um den Interzeichenabstand für alle Textausgabevorgänge in einem angegebenen Gerätekontext zu ändern. Die folgende Abbildung zeigt eine Zeichenfolge mit Text, die zweimal durch Aufrufen der [TextOut-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-textouta) gezeichnet wurde. Vor dem zweiten Zeichnen des Texts wurde die [**SetTextCharacterExtra-Funktion**](/windows/win32/api/wingdi/nf-wingdi-settextcharacterextra) aufgerufen, um den Abstand zwischen Zeichen zu erhöhen.
 
-![zweimaliges durchlaufen desselben Texts: zuerst mit normalem Zeichenabstand, dann mit größerem Abstand](images/csftx-06.png)
+![Abbildung, in der derselbe Text zweimal angezeigt wird: zuerst mit normalem Interzeichenabstand, dann mit größerem Abstand](images/csftx-06.png)
 
-Der standardmäßige intercharacter-Abstands Wert für alle Geräte Kontexte ist 0 (null). Eine Anwendung kann den aktuellen intercharacter-Abstands Wert für einen Gerätekontext abrufen, indem die [gettextcharakteriextra](/windows/desktop/api/Wingdi/nf-wingdi-gettextcharacterextra) -Funktion aufgerufen wird.
+Der Standardmäßige Intercharacter-Abstandswert für jeden Gerätekontext ist 0 (null). Eine Anwendung kann den aktuellen Intercharacter-Abstandswert für einen Gerätekontext abrufen, indem sie die [GetTextCharacterExtra-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-gettextcharacterextra) aufruft.
 
-## <a name="text-justification"></a>Text Ausrichtung
+## <a name="text-justification"></a>Text-Begründung
 
-Anwendungen können eine Textzeile mithilfe der Funktionen [GetTextExtentPoint32](/windows/desktop/api/Wingdi/nf-wingdi-gettextextentpoint32a) und [settextbegrün dung](/windows/desktop/api/Wingdi/nf-wingdi-settextjustification) rechtfertigen. Die Text Ausrichtung ist ein gängiger Vorgang bei jeder Desktop Veröffentlichung und in den meisten Textverarbeitungsanwendungen. Die [**GetTextExtentPoint32**](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32a) -Funktion berechnet die Breite und Höhe einer Text Zeichenfolge. Nachdem die Breite berechnet wurde, kann die Anwendung die [**settextspecification**](/windows/win32/api/wingdi/nf-wingdi-settextjustification) -Funktion aufrufen, um den zusätzlichen Abstand zwischen den Wörtern in einer Textzeile zu verteilen. Die folgende Abbildung zeigt einen Absatz von Text, der zweimal gedruckt wurde: im ersten Absatz wurde der Text nicht gerechtfertigt. im zweiten Absatz wurde der Text durch Aufrufen der Funktionen **GetTextExtentPoint32** und **settextbegrün dung** gerechtfertigt.
+Anwendungen können die Funktionen [GetTextExtentPoint32](/windows/desktop/api/Wingdi/nf-wingdi-gettextextentpoint32a) und [SetTextJustification](/windows/desktop/api/Wingdi/nf-wingdi-settextjustification) verwenden, um eine Textzeile zu rechtfertigen. Die Textgrundlage ist ein gängiger Vorgang in jeder Desktopveröffentlichung und in den meisten Textverarbeitungsanwendungen. Die [**GetTextExtentPoint32-Funktion**](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32a) berechnet die Breite und Höhe einer Textzeichenfolge. Nachdem die Breite berechnet wurde, kann die Anwendung die [**SetTextJustification-Funktion**](/windows/win32/api/wingdi/nf-wingdi-settextjustification) aufrufen, um zusätzliche Abstände zwischen den einzelnen Wörtern in einer Textzeile zu verteilen. Die folgende Abbildung zeigt einen Absatz von Text, der zweimal gedruckt wird: Im ersten Absatz wurde der Text nicht gerechtfertigt. Im zweiten Absatz wurde der Text durch Aufrufen der Funktionen **GetTextExtentPoint32** und **SetTextJustification** gerechtfertigt.
 
-![die Abbildung zeigt einen Absatz, der sich nur auf der linken Seite richtet, dann den gleichen Absatz auf der linken und rechten Seite.](images/csftx-05.png)
+![Abbildung eines Absatzes, der nur links und dann links und rechts ausgerichtet ist](images/csftx-05.png)
 
-## <a name="text-and-background-color"></a>Text und Hintergrundfarbe
+## <a name="text-and-background-color"></a>Text- und Hintergrundfarbe
 
-Anwendungen können die [SetTextColor](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor) -Funktion verwenden, um die Farbe des Texts, der im Client Bereich ihrer Fenster gezeichnet wird, sowie die Farbe des Texts, der auf einem Farbdrucker gezeichnet wird, festzulegen. Eine Anwendung kann die [SetBkColor](/windows/desktop/api/Wingdi/nf-wingdi-setbkcolor) -Funktion verwenden, um die Farbe festzulegen, die hinter jedem Zeichen angezeigt wird, und die [setbkmode](/windows/desktop/api/Wingdi/nf-wingdi-setbkmode) -Funktion, um anzugeben, wie das System die ausgewählte Hintergrundfarbe mit der aktuellen Farbe oder den Farben in der Videoanzeige vermischen soll.
+Anwendungen können die [SetTextColor-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor) verwenden, um die Farbe des im Clientbereich der Fenster gezeichneten Texts sowie die Farbe des Texts festzulegen, der auf einem Farbdrucker gezeichnet wird. Eine Anwendung kann die [SetBkColor-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-setbkcolor) verwenden, um die Farbe festzulegen, die hinter jedem Zeichen angezeigt wird, und die [SetBkMode-Funktion,](/windows/desktop/api/Wingdi/nf-wingdi-setbkmode) um anzugeben, wie das System die ausgewählte Hintergrundfarbe mit der aktuellen Farbe oder den aktuellen Farben auf der Videoanzeige kombinieren soll.
 
-Die Standard Textfarbe für einen Anzeigegeräte Kontext ist schwarz. die Standard Hintergrundfarbe ist weiß. und der Standard Hintergrundmodus ist nicht transparent. Eine Anwendung kann die aktuelle Textfarbe für einen Gerätekontext abrufen, indem Sie die [gettextcolor](/windows/desktop/api/Wingdi/nf-wingdi-gettextcolor) -Funktion aufrufen. Eine Anwendung kann die aktuelle Hintergrundfarbe für einen Gerätekontext abrufen, indem Sie die [GetBkColor](/windows/desktop/api/Wingdi/nf-wingdi-getbkcolor) -Funktion und den aktuellen Hintergrundmodus durch Aufrufen der [getbkmode](/windows/desktop/api/Wingdi/nf-wingdi-getbkmode) -Funktion aufrufen.
+Die Standardtextfarbe für einen Anzeigegerätekontext ist schwarz. Die Standardhintergrundfarbe ist weiß. und der Standardhintergrundmodus ist OPAQUE. Eine Anwendung kann die aktuelle Textfarbe für einen Gerätekontext abrufen, indem sie die [GetTextColor-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-gettextcolor) aufruft. Eine Anwendung kann die aktuelle Hintergrundfarbe für einen Gerätekontext abrufen, indem sie die [GetBkColor-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-getbkcolor) und den aktuellen Hintergrundmodus aufruft, indem sie die [GetBkMode-Funktion](/windows/desktop/api/Wingdi/nf-wingdi-getbkmode) aufruft.
 
  
 

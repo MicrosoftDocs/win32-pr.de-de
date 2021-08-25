@@ -1,9 +1,9 @@
 ---
-title: CB_GETHORIZONTALEXTENT Meldung (Winuser. h)
-description: Ruft die Breite in Pixel ab, in der das Listenfeld horizontal gescrollt werden kann (die Breite scrollfähig). Dies gilt nur, wenn das Listenfeld eine horizontale Schiebe Leiste aufweist.
+title: CB_GETHORIZONTALEXTENT Meldung (Winuser.h)
+description: Ruft die Breite in Pixel ab, die das Listenfeld horizontal scrollen kann (die scrollbare Breite). Dies gilt nur, wenn das Listenfeld über eine horizontale Scrollleiste verfügt.
 ms.assetid: 7c9fff88-2750-4c94-b7f6-6bdd81c224e9
 keywords:
-- Windows-Steuerelemente für CB_GETHORIZONTALEXTENT Meldung
+- CB_GETHORIZONTALEXTENT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a2b1fb7c8fe7549360801516364528c9a2ef1f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 928561b812dd3a09909d8d89c7dda1dc67b63f9177769d80db2d16ac78cbbf72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089210"
 ---
-# <a name="cb_gethorizontalextent-message"></a>CB \_ gethorizontalblock-Nachricht
+# <a name="cb_gethorizontalextent-message"></a>CB \_ GETHORIZONTALEXTENT-Nachricht
 
-Ruft die Breite in Pixel ab, in der das Listenfeld horizontal gescrollt werden kann (die Breite scrollfähig). Dies gilt nur, wenn das Listenfeld eine horizontale Schiebe Leiste aufweist.
+Ruft die Breite in Pixel ab, die das Listenfeld horizontal scrollen kann (die scrollbare Breite). Dies gilt nur, wenn das Listenfeld über eine horizontale Scrollleiste verfügt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die scrollfähige Breite in Pixel.
+Der Rückgabewert ist die bildlauffähige Breite in Pixel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Der Rückgabewert ist die scrollfähige Breite in Pixel.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Der Rückgabewert ist die scrollfähige Breite in Pixel.
 
 <dl> <dt>
 
-[**CB-Wertebereich \_**](cb-sethorizontalextent.md)
+[**CB \_ SETHORIZONTALEXTENT**](cb-sethorizontalextent.md)
 </dt> </dl>
 
  

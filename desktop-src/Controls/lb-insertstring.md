@@ -1,9 +1,9 @@
 ---
-title: LB_INSERTSTRING Meldung (Winuser. h)
-description: Fügt eine Zeichenfolge oder Elementdaten in ein Listenfeld ein. Anders als bei der LB \_ AddString-Nachricht bewirkt die LB- \_ InsertString-Nachricht nicht, dass eine Liste mit dem lbs- \_ Sortier Stil sortiert wird.
+title: LB_INSERTSTRING-Nachricht (Winuser.h)
+description: Fügt eine Zeichenfolge oder Elementdaten in ein Listenfeld ein. Im Gegensatz zur LB \_ ADDSTRING-Nachricht führt die LB \_ INSERTSTRING-Nachricht nicht dazu, dass eine Liste mit dem \_ LBS-SORT-Stil sortiert wird.
 ms.assetid: dfaa742d-2f42-4485-aed5-cda8ca9ba66c
 keywords:
-- Windows-Steuerelemente für LB_INSERTSTRING Meldung
+- LB_INSERTSTRING Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5858af0e0229f90a5ed9928e7478d0ac9a71c8f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dd47d08ef78c590ecb3b5900143b29bc49676b86d8facdcc91b05bb34c8f4aa1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085390"
 ---
-# <a name="lb_insertstring-message"></a>LB- \_ InsertString-Nachricht
+# <a name="lb_insertstring-message"></a>LB \_ INSERTSTRING-Nachricht
 
-Fügt eine Zeichenfolge oder Elementdaten in ein Listenfeld ein. Anders als bei der [**lb \_ AddString**](lb-addstring.md) -Nachricht bewirkt die **lb- \_ InsertString** -Nachricht nicht, dass eine Liste mit dem [**lbs- \_ Sortier**](list-box-styles.md) Stil sortiert wird.
+Fügt eine Zeichenfolge oder Elementdaten in ein Listenfeld ein. Im Gegensatz zur [**LB \_ ADDSTRING-Nachricht**](lb-addstring.md) führt die **LB \_ INSERTSTRING-Nachricht** nicht dazu, dass eine Liste mit dem [**\_ LBS-SORT-Stil**](list-box-styles.md) sortiert wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,38 +32,38 @@ Fügt eine Zeichenfolge oder Elementdaten in ein Listenfeld ein. Anders als bei 
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index der Position, an der die Zeichenfolge eingefügt werden soll. Wenn dieser Parameter-1 ist, wird die Zeichenfolge am Ende der Liste hinzugefügt.
+Der nullbasierte Index der Position, an der die Zeichenfolge eingefügt werden soll. Wenn dieser Parameter -1 ist, wird die Zeichenfolge am Ende der Liste hinzugefügt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die mit NULL endende Zeichenfolge, die eingefügt werden soll. Wenn im Listenfeld ein vom Besitzer gezeichneter Stil, aber nicht der [**lbs \_ hasstrings**](list-box-styles.md) -Stil enthalten ist, wird dieser Parameter nicht als Zeichenfolge, sondern als Elementdaten gespeichert. Sie können die [**lb- \_ GetItemData**](lb-getitemdata.md) -und [**lb- \_ ltitemdata**](lb-setitemdata.md) -Nachrichten senden, um die Elementdaten abzurufen oder zu ändern.
+Ein Zeiger auf die auf NULL endende Zeichenfolge, die eingefügt werden soll. Wenn das Listenfeld einen vom Besitzer gezeichneten Stil hat, aber nicht den [**LBS \_ HASSTRINGS-Stil,**](list-box-styles.md) wird dieser Parameter als Elementdaten anstelle einer Zeichenfolge gespeichert. Sie können die [**LB \_ GETITEMDATA-**](lb-getitemdata.md) und [**LB \_ SETITEMDATA-Nachrichten**](lb-setitemdata.md) senden, um die Elementdaten abzurufen oder zu ändern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der Index der Position, an der die Zeichenfolge eingefügt wurde. Wenn ein Fehler auftritt, ist der Rückgabewert lb \_ Err. Wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeichenfolge zu speichern, ist der Rückgabewert "lb \_ errspace".
+Der Rückgabewert ist der Index der Position, an der die Zeichenfolge eingefügt wurde. Wenn ein Fehler auftritt, lautet der Rückgabewert LB \_ ERR. Wenn nicht genügend Speicherplatz zum Speichern der neuen Zeichenfolge vorhanden ist, lautet der Rückgabewert LB \_ ERRSPACE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die " [**lb- \_ InitStorage**](lb-initstorage.md) "-Nachricht beschleunigt die Initialisierung von Listenfeldern, die über eine große Anzahl von Elementen (mehr als 100) verfügen. Sie reserviert die angegebene Menge an Arbeitsspeicher, sodass nachfolgende **lb- \_ InsertString** -Nachrichten die kürzeste Zeit in Anspruch nehmen. Sie können Schätzwerte für den *wParam* -Parameter und den *LPARAM* -Parameter verwenden. Wenn Sie den Wert überschätzen, wird der zusätzliche Arbeitsspeicher zugeordnet. Wenn Sie unterschätzen, wird die normale Zuordnung für Elemente verwendet, die den angeforderten Betrag überschreiten.
+Die [**LB \_ INITSTORAGE-Nachricht**](lb-initstorage.md) beschleunigt die Initialisierung von Listenfeldern mit einer großen Anzahl von Elementen (mehr als 100). Die angegebene Arbeitsspeichermenge wird reserviert, sodass nachfolgende **LB \_ INSERTSTRING-Nachrichten** die kürzeste Zeit in Anspruch nehmen. Sie können Schätzungen für die *Parameter wParam* und *lParam* verwenden. Wenn Sie überbewerten, wird der zusätzliche Arbeitsspeicher belegt. Wenn Sie dies nicht möchten, wird die normale Zuordnung für Elemente verwendet, die den angeforderten Betrag überschreiten.
 
-Wenn das Listenfeld den [**WS- \_ HScroll**](/windows/desktop/winmsg/window-styles) -Stil aufweist und Sie eine Zeichenfolge als das Listenfeld einfügen, senden Sie eine [**lb- \_ lthorizontalblock**](lb-sethorizontalextent.md) -Nachricht, um sicherzustellen, dass die horizontale Bild Lauf Leiste angezeigt wird.
+Wenn das Listenfeld den [**WS \_ HSCROLL-Stil**](/windows/desktop/winmsg/window-styles) auf hat und Sie eine Zeichenfolge einfügen, die breiter als das Listenfeld ist, senden Sie eine [**LB \_ SETHORIZONTALEXTENT-Nachricht,**](lb-sethorizontalextent.md) um sicherzustellen, dass die horizontale Scrollleiste angezeigt wird.
 
-Für eine ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mithilfe von CP ACP in Unicode \_ . Dies kann zu Problemen führen. Beispielsweise werden Zeichen mit untergeordneten Zeichen in einem nicht-Unicode-Listenfeld in einem japanischen Fenster gegartet. Um dieses Problem zu beheben, kompilieren Sie die Anwendung entweder als Unicode, oder verwenden Sie ein vom Besitzer gezeichnetes Listenfeld.
+Bei einer ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mit CP ACP in \_ Unicode. Dies kann Probleme verursachen. Beispielsweise werden romanische Zeichen mit Akzent in einem Nicht-Unicode-Listenfeld in japanischen Windows verschachtelt angezeigt. Kompilieren Sie die Anwendung entweder als Unicode, oder verwenden Sie ein vom Besitzer gezeichnetes Listenfeld, um dieses Problem zu beheben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -71,16 +71,16 @@ Für eine ANSI-Anwendung konvertiert das System den Text in einem Listenfeld mit
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB- \_ AddString**](lb-addstring.md)
+[**LB \_ ADDSTRING**](lb-addstring.md)
 </dt> <dt>
 
-[**LB- \_ SelectString**](lb-selectstring.md)
+[**LB \_ SELECTSTRING**](lb-selectstring.md)
 </dt> <dt>
 
-[**LB-Abbild \_ Umfang**](lb-sethorizontalextent.md)
+[**LB \_ SETHORIZONTALEXTENT**](lb-sethorizontalextent.md)
 </dt> </dl>
 
  

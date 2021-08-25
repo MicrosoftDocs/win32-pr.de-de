@@ -1,11 +1,11 @@
 ---
-title: Ivmtask (prozentuabgeschlossen)-Eigenschaft (vpccominterfaces. h)
-description: Ruft den Abschluss Prozentsatz der Aufgabe ab.
+title: IVMTask PercentCompleted-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft den Abschlussprozentsatz der Aufgabe ab.
 ms.assetid: 23ba9696-06ed-44ec-a1ec-ef3bf9122c6f
 keywords:
-- Der Eigenschaften-PC für die abgeschlossene Eigenschaft
-- Prozentuenabgeschlossene Eigenschaft Virtual PC, ivmtask-Schnittstelle
-- Ivmtask Interface Virtual PC, Eigenschaft "prozentuabgeschlossen"
+- PercentCompleted-Eigenschaft Virtueller PC
+- PercentCompleted-Eigenschaft Virtueller PC, IVMTask-Schnittstelle
+- IVMTask-Schnittstelle Virtueller PC, PercentCompleted-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa820adbbde2fc68632da27a9b146bd0e8f40143
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb15d187b4e9246c0c7a5b0af03e0ab8a9eec2bb6b8b9242120f9faf4c6fc96f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958860"
 ---
-# <a name="ivmtaskpercentcompleted-property"></a>Ivmtask::P ercentabgeschlossene-Eigenschaft
+# <a name="ivmtaskpercentcompleted-property"></a>IVMTask::P ercentCompleted-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft den Abschluss Prozentsatz der Aufgabe ab.
+Ruft den Abschlussprozentsatz der Aufgabe ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_PercentCompleted(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der aktuelle Abschluss Prozentsatz. Der Wert ist eine Zahl zwischen 0 und 100.
+Der aktuelle Abschlussprozentsatz. Der Wert ist eine Zahl zwischen 0 und 100.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der aktuelle Abschluss Prozentsatz. Der Wert ist eine Zahl zwischen 0 und 100.
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der Parameterwert ist **null**.<br/>  |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameterwert ist **NULL.**<br/>  |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ Der aktuelle Abschluss Prozentsatz. Der Wert ist eine Zahl zwischen 0 und 100.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmtask ist als ab72b222-6e9c-48ae-AA54-85e3e635767c definiert.<br/>                    |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMTask ist als ab72b222-6e9c-48ae-aa54-85e3e635767c definiert.<br/>                    |
 
 
 
@@ -78,7 +78,7 @@ Der aktuelle Abschluss Prozentsatz. Der Wert ist eine Zahl zwischen 0 und 100.
 
 <dl> <dt>
 
-[**Ivmtask**](ivmtask.md)
+[**IVMTask**](ivmtask.md)
 </dt> </dl>
 
  

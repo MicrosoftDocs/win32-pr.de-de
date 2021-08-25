@@ -1,60 +1,60 @@
 ---
-title: Vorgehensweise beim Scrollen von Text
-description: In diesem Abschnitt werden die Änderungen beschrieben, die Sie an der Hauptfenster Prozedur einer Anwendung vornehmen können, damit ein Benutzer einen Bildlauf durchführen kann.
+title: Scrollen von Text
+description: In diesem Abschnitt werden die Änderungen beschrieben, die Sie an der Hauptfensterprozedur einer Anwendung vornehmen können, um einem Benutzer das Scrollen von Text zu ermöglichen.
 ms.assetid: ACB4FF34-38EF-4F3D-9395-D48D58A72C0B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9ef9a2eea9490beac7b6ff5048b70de61eb635f
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: d2139ac1bff3d197d63011e6a6e76c861b984c5e20b5c54ceab8871678d31a52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914220"
 ---
-# <a name="how-to-scroll-text"></a>Vorgehensweise beim Scrollen von Text
+# <a name="how-to-scroll-text"></a>Scrollen von Text
 
-In diesem Abschnitt werden die Änderungen beschrieben, die Sie an der Hauptfenster Prozedur einer Anwendung vornehmen können, damit ein Benutzer einen Bildlauf durchführen kann. Im Beispiel in diesem Abschnitt wird ein Array von Text Zeichenfolgen erstellt und angezeigt. Außerdem werden die Bild Lauf leisten Meldungen [**WM \_ HScroll**](wm-hscroll.md) und [**WM \_ VScroll**](wm-vscroll.md) verarbeitet, sodass der Benutzer sowohl vertikal als auch horizontal einen Bildlauf durchführen kann.
+In diesem Abschnitt werden die Änderungen beschrieben, die Sie an der Hauptfensterprozedur einer Anwendung vornehmen können, um einem Benutzer das Scrollen von Text zu ermöglichen. Im Beispiel in diesem Abschnitt wird ein Array von Textzeichenfolgen erstellt und angezeigt, und WM [**\_ HSCROLL-**](wm-hscroll.md) und [**WM \_ VSCROLL-Scrollleistenmeldungen**](wm-vscroll.md) werden verarbeitet, sodass der Benutzer text vertikal und horizontal scrollen kann.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="processing-the-wm_create-message"></a>Verarbeiten der WM \_ Create-Nachricht
+### <a name="processing-the-wm_create-message"></a>Verarbeiten der WM \_ CREATE-Nachricht
 
-Scrolleinheiten werden in der Regel beim Verarbeiten der [**WM \_ Create**](/windows/desktop/winmsg/wm-create) -Nachricht festgelegt. Es ist praktisch, die scrolleinheiten auf den Dimensionen der Schriftart zu basieren, die dem Gerätekontext (DC) des Fensters zugeordnet ist. Verwenden Sie die [**GetTextMetrics**](/windows/desktop/api/wingdi/nf-wingdi-gettextmetrics) -Funktion, um die Schriftart Dimensionen für einen bestimmten Domänen Controller abzurufen.
+Bildlaufeinheiten werden in der Regel während der Verarbeitung der [**WM \_ CREATE-Nachricht**](/windows/desktop/winmsg/wm-create) festgelegt. Es ist praktisch, die Bildlaufeinheiten auf den Abmessungen der Schriftart zu basieren, die dem Gerätekontext (DC) des Fensters zugeordnet ist. Verwenden Sie die [**GetTextMetrics-Funktion,**](/windows/desktop/api/wingdi/nf-wingdi-gettextmetrics) um die Schriftdimensionen für einen bestimmten Domänencontroller abzurufen.
 
-Im Beispiel in diesem Abschnitt ist eine vertikale scrolleinheit mit der Höhe einer Zeichen Zelle Plus externer führenden identisch. Eine horizontale scrolleinheit entspricht der durchschnittlichen Breite einer Zeichen Zelle. Die horizontalen scrollpositionen entsprechen daher nicht den tatsächlichen Zeichen, es sei denn, die Bildschirm Schriftart ist mit fester Breite versehen.
+Im Beispiel in diesem Abschnitt entspricht eine vertikale Bildlaufeinheit der Höhe einer Zeichenzelle plus externer führendem Zeichen. Eine horizontale Bildlaufeinheit entspricht der durchschnittlichen Breite einer Zeichenzelle. Die horizontalen Bildlaufpositionen entsprechen daher nicht den tatsächlichen Zeichen, es sei denn, die Bildschirmschriftart hat eine feste Breite.
 
-### <a name="processing-the-wm_size-message"></a>Verarbeiten der WM- \_ Größen Meldung
+### <a name="processing-the-wm_size-message"></a>Verarbeiten der WM \_ SIZE-Nachricht
 
-Bei der Verarbeitung der [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Nachricht ist es praktisch, den scrollbereich und die Bild Lauf Position entsprechend der Abmessungen des Client Bereichs und der Anzahl der angezeigten Textzeilen anzupassen.
+Bei der Verarbeitung der [**WM \_ SIZE-Nachricht**](/windows/desktop/winmsg/wm-size) ist es praktisch, den Bildlaufbereich und die Bildlaufposition so anzupassen, dass die Abmessungen des Clientbereichs sowie die Anzahl der angezeigten Textzeilen widergespiegelt werden.
 
-Die [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) -Funktion legt die minimalen und maximalen Positionswerte, die Seitengröße und die Scrollposition für eine Schiebe Leiste fest.
+Die [**SetScrollInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) legt die Minimal- und Höchstpositionswerte, die Seitengröße und die Bildlaufposition für eine Bildlaufleiste fest.
 
-### <a name="processing-the-wm_hscroll-and-wm_vscroll-messages"></a>Verarbeiten der \_ Nachrichten "WM HScroll" und "WM \_ VScroll"
+### <a name="processing-the-wm_hscroll-and-wm_vscroll-messages"></a>Verarbeiten der WM \_ HSCROLL- und WM \_ VSCROLL-Nachrichten
 
-Die Bild Lauf Leiste sendet [**WM \_ HScroll**](wm-hscroll.md) -und [**WM- \_ VScroll**](wm-vscroll.md) -Nachrichten an die Fenster Prozedur, wenn der Benutzer auf die Bild Lauf Leiste klickt oder das Bild Lauf Feld zieht. Die nieder wertigen Wörter von **WM \_ VScroll** und **WM \_ HScroll** enthalten einen Anforderungs Code, der die Richtung und die Größe der scrollaktion angibt.
+Die Scrollleiste sendet [**WM \_ HSCROLL-**](wm-hscroll.md) und [**WM \_ VSCROLL-Meldungen**](wm-vscroll.md) an die Fensterprozedur, wenn der Benutzer auf die Scrollleiste klickt oder das Scrollfeld zieht. Die Wörter in niedriger Reihenfolge von **WM \_ VSCROLL** und **WM \_ HSCROLL** enthalten jeweils einen Anforderungscode, der die Richtung und Größe der Scrollaktion angibt.
 
-Wenn die " [**WM \_ HScroll**](wm-hscroll.md) "-und " [**WM \_ VScroll**](wm-vscroll.md) "-Nachrichten verarbeitet werden, wird der Anforderungs Code der Scrollleiste überprüft, und das scrollinkrement wird berechnet. Nachdem das Inkrement auf die aktuelle Scrollposition angewendet wurde, wird das Fenster mithilfe der [**scrollwindowex**](/windows/desktop/api/Winuser/nf-winuser-scrollwindowex) -Funktion an die neue Position gescrollt, und die Position des Bild Lauf Felds wird mithilfe der [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) -Funktion angepasst.
+Wenn die [**WM \_ HSCROLL-**](wm-hscroll.md) und [**WM \_ VSCROLL-Nachrichten**](wm-vscroll.md) verarbeitet werden, wird der Anforderungscode der Scrollleiste untersucht und das Scrollinkrement berechnet. Nachdem das Inkrement auf die aktuelle Bildlaufposition angewendet wurde, wird das Fenster mithilfe der [**ScrollWindowEx-Funktion**](/windows/desktop/api/Winuser/nf-winuser-scrollwindowex) zur neuen Position gescrollt, und die Position des Bildlauffelds wird mithilfe der [**SetScrollInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) angepasst.
 
-Nachdem ein Fenster einen Rollup ausgeführt hat, wird ein Teil des Client Bereichs als ungültig festgestellt. Um sicherzustellen, dass die ungültige Region aktualisiert wird, wird die [**UpdateWindow**](/windows/desktop/api/winuser/nf-winuser-updatewindow) -Funktion verwendet, um eine [**WM \_ Paint**](/windows/desktop/gdi/wm-paint) -Meldung zu generieren.
+Nachdem ein Fenster gescrollt wurde, wird ein Teil des Clientbereichs ungültig. Um sicherzustellen, dass die ungültige Region aktualisiert wird, wird die [**UpdateWindow-Funktion**](/windows/desktop/api/winuser/nf-winuser-updatewindow) verwendet, um eine [**WM \_ PAINT-Meldung**](/windows/desktop/gdi/wm-paint) zu generieren.
 
-### <a name="processing-the-wm_paint-message"></a>Die WM-Zeichnungs Nachricht wird verarbeitet. \_
+### <a name="processing-the-wm_paint-message"></a>Verarbeiten der \_ WM-PAINT-Nachricht
 
-Beim Verarbeiten der [**WM \_**](/windows/desktop/gdi/wm-paint) -Zeichnungs Nachricht ist es praktisch, die Textzeilen zu zeichnen, die im ungültigen Teil des Fensters angezeigt werden sollen. Im folgenden Beispiel wird die aktuelle Scrollposition und die Dimensionen des ungültigen Bereichs verwendet, um den Bereich der Zeilen innerhalb des ungültigen Bereichs zu bestimmen, um Sie anzuzeigen.
+Bei der Verarbeitung der [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) ist es praktisch, die Textzeilen zu zeichnen, die im ungültigen Teil des Fensters angezeigt werden sollen. Im folgenden Beispiel werden die aktuelle Bildlaufposition und die Abmessungen des ungültigen Bereichs verwendet, um den Zeilenbereich innerhalb des ungültigen Bereichs zu bestimmen, um sie anzuzeigen.
 
-## <a name="example-of-scrolling-text"></a>Beispiel für Scrolltext
+## <a name="example-of-scrolling-text"></a>Beispiel für das Scrollen von Text
 
-Das folgende Beispiel zeigt eine Fenster Prozedur für ein Fenster, in dem Text im Client Bereich angezeigt wird. Im Beispiel wird veranschaulicht, wie der Text als Reaktion auf Eingaben von den horizontalen und vertikalen Schiebe leisten durchlaufen wird.
+Das folgende Beispiel ist eine Fensterprozedur für ein Fenster, das Text im Clientbereich anzeigt. Im Beispiel wird veranschaulicht, wie der Text als Reaktion auf Eingaben von den horizontalen und vertikalen Bildlaufleisten gescrollt wird.
 
 
 ```C++
@@ -323,12 +323,12 @@ switch (uMsg)
 
 <dl> <dt>
 
-[Verwenden von Scrollleisten](using-scroll-bars.md)
+[Verwenden von Bildlaufleisten](using-scroll-bars.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

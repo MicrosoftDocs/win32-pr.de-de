@@ -1,6 +1,6 @@
 ---
-title: dcl_maxOutputVertexCount (SM4-ASM)
-description: DCL \_ maxoutputvertexcount (SM4-ASM)
+title: dcl_maxOutputVertexCount (sm4 – asm)
+description: dcl \_ maxOutputVertexCount (sm4 - asm)
 ms.assetid: 91eb2dfc-f4ff-4f23-9cb4-ec5fdb676157
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 31a09788b2f407673f57dad8a71792a5b02b7613
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ba7783575ac5782c63bc1ec3ca5f56f6ffe9a1bc7483f3f01ccbcf8adac5e23f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068520"
 ---
-# <a name="dcl_maxoutputvertexcount-sm4---asm"></a>DCL \_ maxoutputvertexcount (SM4-ASM)
+# <a name="dcl_maxoutputvertexcount-sm4---asm"></a>dcl \_ maxOutputVertexCount (sm4 - asm)
 
-Deklariert die maximale Anzahl von Vertices, die von einem Geometry-Shader ausgegeben werden können.
+Deklariert die maximale Anzahl von Scheitelpunkten, die von einem Geometrie-Shader ausgegeben werden können.
 
 
 
-| DCL- \_ maxoutputvertexcount- *Anzahl* |
+| dcl \_ maxOutputVertexCount *count* |
 |-----------------------------------|
 
 
@@ -33,21 +33,21 @@ Deklariert die maximale Anzahl von Vertices, die von einem Geometry-Shader ausge
 
 | Element                                                               | BESCHREIBUNG                                                             |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------|
-| <span id="count"></span><span id="COUNT"></span>*Countdown*<br/> | \[in \] einer 32-Bit-Ganzzahl ohne Vorzeichen zwischen 1 und n (einschließlich).<br/> |
+| <span id="count"></span><span id="COUNT"></span>*Count*<br/> | \[in \] einer 32-Bit-Ganzzahl ohne Vorzeichen zwischen 1 und n (einschließlich).<br/> |
 
 
 
  
 
-Ein Geometry-Shader kann maximal 1024 32-Bit-Werte ausgeben. Diese maximale Größe schließt die Größe der Eingabedaten und die Größe der vom Shader erstellten Daten ein.
+Ein geometriebasierter Shader kann maximal 1024 32-Bit-Werte ausgeben. Dieses Maximum schließt die Größe der Eingabedaten und die Größe der vom Shader erstellten Daten ein.
 
-Es folgen einige Einschränkungen:
+Hier sind einige Einschränkungen:
 
--   Wenn die Anzahl der Scheitel Punkte erreicht wird, bevor der Geometrie-Shader die Ausführung beendet, wird der Shader beendet.
--   Ein Geometry-Shader kann das Ende seines Programms erreichen, bevor er Vertices ausstellt. Dies ist absolut zulässig.
--   Wenn Sie einen Geometry-Shader Debuggen, können Sie die Anzahl der generierten Scheitel Punkte ermitteln, indem Sie die Anzahl der generierten ausgangsweisungen zählen.
+-   Wenn die Anzahl der Scheitelpunkte erreicht ist, bevor die Ausführung des Geometry-Shaders abgeschlossen ist, wird der Shader beendet.
+-   Ein geometry-shader kann das Ende des Programms erreichen, bevor er Scheitelpunkte ausgibt. dies ist völlig zulässig.
+-   Wenn Sie einen Geometrie-Shader debuggen, können Sie die Anzahl der generierten Scheitelpunkte angeben, indem Sie die Anzahl der generierten Emit-Anweisungen zählen.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -59,13 +59,13 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
 
 ## <a name="example"></a>Beispiel
 
-Hier einige Beispiele.
+Beispiele:
 
-Nehmen Sie an, dass die Eingabedaten aus der Position (. xyzw) und der Farbe (RGB) erstellt wurden. Jede Komponente verwendet ein Byte. bei 7 Bytes beträgt die maximale Anzahl von Vertices, die der Shader generieren kann, 1024/(4 + 3) = 146.
+Angenommen, Eingabedaten bestehen aus Position (.xyzw) und Farbe (.rgb). Jede Komponente verbraucht ein Byte. bei 7 Bytes beträgt die maximale Anzahl von Scheitelpunkten, die der Shader generieren kann, 1024 / (4 + 3) = 146.
 
 
 ```
@@ -74,7 +74,7 @@ dcl_maxOutputVertexCount 146
 
 
 
-Angenommen, Ihr Geometry-Shader erstellt 32 4-komponentenvektoren. Die maximale Anzahl der Scheitel Punkte, die der Shader generieren kann, ist 1024/(32 \* 4) = 8.
+Angenommen, Ihr Geometrie-Shader erstellt 32 Vektoren mit vier Komponenten. Die maximale Anzahl von Scheitelpunkten, die der Shader generieren kann, wäre 1024 / (32 \* 4) = 8.
 
 
 ```
@@ -83,20 +83,20 @@ dcl_maxOutputVertexCount 8
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -106,7 +106,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

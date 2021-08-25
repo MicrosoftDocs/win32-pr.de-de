@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fd5a00c7cf68feea13dc0e617e5fe2adb34551032c8ec54bda6e0810fbb092e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7524e51908f7d941aa04b138cc67ba6c4ab6a2a8
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118195170"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479496"
 ---
 # <a name="wmt_videoimage_transition_star"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ STAR
 
@@ -31,46 +31,14 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Struktur-Member</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>X zentrieren</td>
-<td><strong>fEffectPara0</strong></td>
-<td>X-Koordinate, relativ zum Videoframe, der Mitte des Sterns.</td>
-</tr>
-<tr class="even">
-<td>Y zentrieren</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Y-Koordinate, relativ zum Videoframe, der Mitte des Sterns.</td>
-</tr>
-<tr class="odd">
-<td>Radius</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Radius des Kreises, der durch die Punkte des Sterns definiert wird, in Pixel.</td>
-</tr>
-<tr class="even">
-<td>Aufbau</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Legen Sie auf einen der folgenden Werte fest:
-<ul>
-<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li>
-<li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Struktur-Member | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| X zentrieren | <strong>fEffectPara0</strong> | X-Koordinate, relativ zum Videoframe, der Mitte des Sterns. | 
+| Y zentrieren | <strong>fEffectPara1</strong> | Y-Koordinate, relativ zum Videoframe, der Mitte des Sterns. | 
+| Radius | <strong>fEffectPara2</strong> | Radius des Kreises, der durch die Punkte des Sterns definiert wird, in Pixel. | 
+| Aufbau | <strong>fEffectPara3</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 

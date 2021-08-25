@@ -1,7 +1,7 @@
 ---
-description: Mit der CopyPalette-Methode wird die Palette aus einer beliebigen videoinfo-Struktur in eine beliebige, von einer beliebigen Struktur über videoinfo-Struktur
+description: Die CopyPalette-Methode kopiert die Palette aus einer beliebigen VIDEOINFO-Struktur in eine beliebige palettierte VIDEOINFO-Struktur.
 ms.assetid: ea06b40b-3f96-4c11-921c-52f3a44e0a30
-title: Cimagepalette. CopyPalette-Methode (winutil. h)
+title: CImagePalette.CopyPalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b429c5fd4d3d0e0e28cd0662fbee0a1ac926ddc5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5c6f645d134ccf5fa786ff59cf0bc6cd37211af0cb2571bbc9955e5bb6367a97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371512"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055450"
 ---
-# <a name="cimagepalettecopypalette-method"></a>Cimagepalette. CopyPalette-Methode
+# <a name="cimagepalettecopypalette-method"></a>CImagePalette.CopyPalette-Methode
 
-Die- `CopyPalette` Methode kopiert die Palette aus einer beliebigen [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur in eine beliebige paletsierte **videoinfo** -Struktur.
+Die `CopyPalette` -Methode kopiert die Palette aus einer beliebigen [**VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) in eine beliebige palettierte **VIDEOINFO-Struktur.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT CopyPalette(
 *pSrc* 
 </dt> <dd>
 
-Zeiger auf den Quell Medientyp.
+Zeiger auf den Quellmedientyp.
 
 </dd> <dt>
 
@@ -59,11 +59,11 @@ Zeiger auf den Zielmedientyp.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "S OK" zurück, \_ Wenn die Palette kopiert wurde. Gibt "false" zurück, \_ Wenn entweder der Quell-oder Ziel Medientyp keine Palette hat.
+Gibt S \_ OK zurück, wenn die Palette kopiert wurde. Gibt S \_ FALSE zurück, wenn der Quell- oder Zielmedientyp nicht über eine Palette verfügt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *pdest* -Medientyp muss ein paletsiertes Format mit einer Farbtiefe von 8 Bits oder weniger sein. Der *psrc* -Medientyp kann ein beliebiger [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Typ mit einer Palette sein, einschließlich YUV-und True-Color-Formaten mit paletteneinträgen. Die-Methode kopiert die Paletteneinträge aus *psrc* in eine neue Palette und fügt die neue Palette an den *pdest* an.
+Der *pDest-Medientyp* muss ein palettiertes Format mit einer Farbtiefe von mindestens 8 Bits sein. Der *Medientyp pSrc* kann ein [**beliebiger VIDEOINFOHEADER-Typ**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) mit einer Palette sein, einschließlich YUV- und True-Color-Formaten mit Paletteneinträgen. Die -Methode kopiert die Paletteneinträge aus *pSrc* in eine neue Palette und fügt die neue Palette an *pDest* an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Der *pdest* -Medientyp muss ein paletsiertes Format mit einer Farbtiefe von 8 Bi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Der *pdest* -Medientyp muss ein paletsiertes Format mit einer Farbtiefe von 8 Bi
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

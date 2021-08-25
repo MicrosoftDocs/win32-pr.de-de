@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNCREATE. CP-Eigenschaft.
-title: JET_COLUMNCREATE. CP-Eigenschaft
+description: 'Weitere Informationen zu: JET_COLUMNCREATE.cp-Eigenschaft'
+title: JET_COLUMNCREATE.cp-Eigenschaft
 TOCTitle: 'cp property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNCREATE.cp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columncreate.cp(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b39c47402a70778543f203777b6e2d0d3fc9ac29
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: baf182b1e53de4131c773e05ee75577cb5d5f5d6c3fc7be9b138ae3bd672c75c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119945780"
 ---
-# <a name="jet_columncreatecp-property"></a>JET_COLUMNCREATE. CP-Eigenschaft
+# <a name="jet_columncreatecp-property"></a>JET_COLUMNCREATE.cp-Eigenschaft
 
-Ruft die Codepage der Spalte ab oder legt Sie fest. Dies ist nur für Spalten vom Typ " [Text](./jet-coltyp-enumeration.md) " und " [LONGTEXT](./jet-coltyp-enumeration.md)" sinnvoll.
+Ruft die Codepage der Spalte ab oder legt diese fest. Dies ist nur für Spalten vom Typ [Text](./jet-coltyp-enumeration.md) und [LongText](./jet-coltyp-enumeration.md)sinnvoll.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_CP cp { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_CP](./jet-cp-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_CP](./jet-cp-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNCREATE-Klasse](./jet-columncreate-class.md)
 
-[Mitglieder JET_COLUMNCREATE](./jet-columncreate-members.md)
+[JET_COLUMNCREATE-Member](./jet-columncreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

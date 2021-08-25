@@ -1,19 +1,19 @@
 ---
-description: Das optionale <dateCreated> -Element identifiziert das Datum und die Uhrzeit der Erstellung dieses Suchconnector mit dem ISO 8601-Standard. Sie verfügt über keine untergeordneten Elemente und keine Attribute.
+description: Das optionale -Element identifiziert das Datum und die Uhrzeit der Erstellung dieses Suchconnectors unter Verwendung des <dateCreated> ISO 8601-Standards. Sie verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: 96d8b067-b5ab-4d36-a8d7-1d084a9f661d
-title: DateCreated-Element (Suchconnector-Schema)
+title: dateCreated-Element (Suchconnectorschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6017c0555d464a49192c4fe8cb7e347bbab0e367
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6b59af62b2bd7ce8678fafb1fdd84646314f41a51414b4285db3077b5db0e0f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119944400"
 ---
-# <a name="datecreated-element-search-connector-schema"></a>DateCreated-Element (Suchconnector-Schema)
+# <a name="datecreated-element-search-connector-schema"></a>dateCreated-Element (Suchconnectorschema)
 
-Das optionale <dateCreated> -Element identifiziert das Datum und die Uhrzeit der Erstellung dieses Suchconnector mit dem ISO 8601-Standard. Sie verfügt über keine untergeordneten Elemente und keine Attribute.
+Das optionale -Element identifiziert das Datum und die Uhrzeit der Erstellung dieses Suchconnectors unter Verwendung des <dateCreated> ISO 8601-Standards. Sie verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ Das optionale <dateCreated> -Element identifiziert das Datum und die Uhrzeit der
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Format des Werts dieses Elements folgt dem ISO 8601-Standard. Eine gängige Verwendung wäre eine der folgenden:
+Das Format des Werts dieses Elements entspricht dem ISO 8601-Standard. Eine häufige Verwendung wäre eine der folgenden:
 
--   \[Yyyy \] - \[ mm \] - \[ DD \] T \[ HH \] : \[ mm \] : \[ SS \] ± \[ HH \] : \[ mm \] ("1981-04-05t14:30:30-05:00")
--   \[Yyyy \] \[ mm \] \[ DD \] T \[ HH \] \[ mm \] \[ SS \] Z ("19810405t193030Z")
+-   \[YYYY \] - \[ MM \] - \[ DD \] T \[ hh : mm : \] \[ \] \[ ss ± \] \[ hh : mm \] \[ \] ("1981-04-05T14:30:30-05:00")
+-   \[YYYY \] \[ MM \] \[ DD \] T \[ hh mm \] \[ \] \[ ss \] Z ("19810405T193030Z")
 
 ## <a name="example"></a>Beispiel
 

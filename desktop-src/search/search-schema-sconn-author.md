@@ -1,19 +1,19 @@
 ---
-description: Das optionale- <author> Element gibt den Autor dieser Bibliothek an. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+description: Das <author> optionale -Element gibt den Autor dieser Bibliothek an. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 ms.assetid: c91042d5-9564-463a-9104-97b927027fc9
-title: Author-Element (Suchconnector-Schema)
+title: author-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74a2facbf4e3fa743b4dbe56a1c83eb57509c067
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3b0a6b0eb8103f1f1c962984be488a162b645a128f0477ab851d2819aacc3e74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885180"
 ---
-# <a name="author-element-search-connector-schema"></a>Author-Element (Suchconnector-Schema)
+# <a name="author-element-search-connector-schema"></a>author-Element (Search Connector Schema)
 
-Das optionale- <author> Element gibt den Autor dieser Bibliothek an. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das <author> optionale -Element gibt den Autor dieser Bibliothek an. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Das optionale- <author> Element gibt den Autor dieser Bibliothek an. Dieses Elem
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 

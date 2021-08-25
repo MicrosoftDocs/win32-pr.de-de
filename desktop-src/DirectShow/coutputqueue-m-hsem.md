@@ -1,7 +1,7 @@
 ---
-description: Handle für ein Semaphor, das vom Thread verwendet wird, um auf Beispiele zu warten.
+description: Handle für ein Semaphor, das vom Thread verwendet wird, um auf Stichproben zu warten.
 ms.assetid: c64a7221-6eea-459b-b306-e6d547a233b2
-title: 'Coutputqueue:: m_hSem-Member (outputq. h)'
+title: COutputQueue::m_hSem-Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 262c9997a681b8f9ba332efe1b9fb225c112b591
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bab58e572172a0758673c6a452916eb49a23bac0eeb9d6a07e71883ddf3fed45
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087200"
 ---
-# <a name="coutputqueuem_hsem-member"></a>Coutputqueue:: m \_ hsem-Member
+# <a name="coutputqueuem_hsem-member"></a>COutputQueue::m \_ hSem-Member
 
-Handle für ein Semaphor, das vom Thread verwendet wird, um auf Beispiele zu warten.
+Handle für ein Semaphor, das vom Thread verwendet wird, um auf Stichproben zu warten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ HANDLE m_hSem;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ HANDLE m_hSem;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

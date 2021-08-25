@@ -1,103 +1,103 @@
 ---
 title: Remotedesktopverbindung Broker-Klassen
-description: Der WMI-Anbieter für den Remotedesktopverbindung Broker (RD-Verbindungsbroker) stellt die folgenden Klassen bereit.
+description: Der Remotedesktopverbindung Broker -WMI-Anbieter (RD-Verbindungsbroker) bietet die folgenden Klassen.
 ms.assetid: cabec269-b8e5-406e-a608-5f3313c4e874
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a573898a21727c53f4586d483b58492573485f4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1cae14a57e8b8fedec45b261e142bfdbdbd1691f8df424b9076160f31baa287a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869990"
 ---
 # <a name="remote-desktop-connection-broker-classes"></a>Remotedesktopverbindung Broker-Klassen
 
-Der WMI-Anbieter für den Remotedesktopverbindung Broker (RD-Verbindungsbroker) stellt die folgenden Klassen bereit.
+Der Remotedesktopverbindung Broker -WMI-Anbieter (RD-Verbindungsbroker) bietet die folgenden Klassen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Win32 \_ sessionbrokerfarm**](win32-sessionbrokerfarm.md)
+[**Win32 \_ SessionBrokerFarm**](win32-sessionbrokerfarm.md)
 </dt> <dd>
 
-Definiert die Abfrage für eine Sitzungs Broker Farm.
+Definiert die Abfrage für eine Sitzungsbrokerfarm.
 
 </dd> <dt>
 
-[**Win32 \_ sessionbrokerfarmaccount**](win32-sessionbrokerfarmaccount.md)
+[**Win32 \_ SessionBrokerFarmAccount**](win32-sessionbrokerfarmaccount.md)
 </dt> <dd>
 
-Die Win32-Klasse " [**\_ sessionbrokerfarmaccount**](win32-sessionbrokerfarmaccount.md) " ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar.
+Die [**Win32 \_ SessionBrokerFarmAccount-Klasse**](win32-sessionbrokerfarmaccount.md) ist ab diesem Windows Server 2012.
 
 </dd> <dt>
 
-[**Win32 \_ sessionbrokerserviceproperties**](win32-sessionbrokerserviceproperties.md)
+[**Win32 \_ SessionBrokerServiceProperties**](win32-sessionbrokerserviceproperties.md)
 </dt> <dd>
 
-Definiert die Abfrage für einen Sitzungs Broker Dienst.
+Definiert die Abfrage für einen Sitzungsbrokerdienst.
 
 </dd> <dt>
 
-[**Win32 \_ sessionbrokertarget**](win32-sessionbrokertarget.md)
+[**Win32 \_ SessionBrokerTarget**](win32-sessionbrokertarget.md)
 </dt> <dd>
 
-Definiert die Abfrage für ein Sitzungs Broker Ziel.
+Definiert die Abfrage für ein Sitzungsbrokerziel.
 
 </dd> <dt>
 
-[**Win32 \_ sessionbrokertargetevent**](win32-sessionbrokertargetevent.md)
+[**Win32 \_ SessionBrokerTargetEvent**](win32-sessionbrokertargetevent.md)
 </dt> <dd>
 
-Stellt eine Änderung an einem Sitzungs Broker Ziel dar.
+Stellt eine Änderung an einem Sitzungsbrokerziel dar.
 
 </dd> <dt>
 
-[**Win32 \_ sessiondirectoriycluster**](win32-sessiondirectorycluster.md)
+[**Win32 \_ SessionDirectoryCluster**](win32-sessiondirectorycluster.md)
 </dt> <dd>
 
-Stellt Eigenschaften zum Anzeigen der Eigenschaften einer Farm in RD-Verbindungsbroker bereit.
+Stellt Eigenschaften zum Anzeigen der Eigenschaften einer Farm im RD-Verbindungsbroker zur Seite.
 
 </dd> <dt>
 
-[**Win32 \_ sessiondirectoriyserver**](win32-sessiondirectoryserver.md)
+[**Win32 \_ SessionDirectoryServer**](win32-sessiondirectoryserver.md)
 </dt> <dd>
 
-Stellt Eigenschaften zum Anzeigen der Eigenschaften eines RD-Verbindungsbroker Servers bereit.
+Stellt Eigenschaften zum Anzeigen der Eigenschaften eines RD-Verbindungsbrokerservers zur Seite.
 
 </dd> <dt>
 
-[**Win32 \_ sessiondirectoriysession**](win32-sessiondirectorysession.md)
+[**Win32 \_ SessionDirectorySession**](win32-sessiondirectorysession.md)
 </dt> <dd>
 
-Stellt Eigenschaften zum Anzeigen der Eigenschaften einer RD-Verbindungsbroker Sitzung bereit.
+Stellt Eigenschaften zum Anzeigen der Eigenschaften einer RD-Verbindungsbrokersitzung zur Seite.
 
 </dd> <dt>
 
-[**Win32 \_ sessiondirectoriyvirtualdesktopserver**](win32-sessiondirectoryvirtualdesktopserver.md)
+[**Win32 \_ SessionDirectoryVirtualDesktopServer**](win32-sessiondirectoryvirtualdesktopserver.md)
 </dt> <dd>
 
-Stellt einen Remotedesktop-Virtualisierungshost Server (RD-Virtualisierungshost) dar, der einem Sitzungs Broker hinzugefügt wurde.
+Stellt einen Remotedesktop Virtualization Host (RD Virtualization Host)-Server dar, der mit einem Sitzungsbroker verbunden ist.
 
 </dd> <dt>
 
-[**Win32 \_ sessiondirector yvmmplugin**](win32-sessiondirectoryvmmplugin.md)
+[**Win32 \_ SessionDirectoryVMMPlugin**](win32-sessiondirectoryvmmplugin.md)
 </dt> <dd>
 
-Stellt ein VMM-Plug-in (Virtual Machine Manager) dar, das bei einem Sitzungs Broker registriert ist.
+Stellt ein VMM-Plug-In (Virtual Machine Manager) dar, das bei einem Sitzungsbroker registriert ist.
 
 </dd> </dl>
 
 > [!Note]  
-> In Windows Server 2008 R2 wurde der Name des Terminal Dienste-Sitzungs Brokers (TS-Sitzungs Broker) in "RD-Verbindungsbroker" geändert.
+> In Windows Server 2008 R2 wurde der Name von Terminal Services Session Broker (TS Session Broker) in RD-Verbindungsbroker geändert.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

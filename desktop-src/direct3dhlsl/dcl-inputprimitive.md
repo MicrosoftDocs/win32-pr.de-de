@@ -1,6 +1,6 @@
 ---
-title: dcl_inputPrimitive (SM4-ASM)
-description: DCL \_ inputprimitiv (SM4-ASM)
+title: dcl_inputPrimitive (sm4 - asm)
+description: dcl \_ inputPrimitive (sm4 - asm)
 ms.assetid: 86672fd3-7955-45ac-a8b2-a9cc8d1e8805
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 76c131b7c4225c0b30ad1183e4da1fe6c0561754
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 0660fe4da14a20f074e4f04de8891fc0848f2597
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103948331"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479896"
 ---
-# <a name="dcl_inputprimitive-sm4---asm"></a>DCL \_ inputprimitiv (SM4-ASM)
+# <a name="dcl_inputprimitive-sm4---asm"></a>dcl \_ inputPrimitive (sm4 - asm)
 
-Deklariert den primitiven Typ für Geometry-shadereingaben.
+Deklariert den primitiven Typ für Geometry-Shader-Eingaben.
 
 
 
-| DCL- \_ inputprimitiver *Typ* |
+| dcl \_ *inputPrimitive-Typ* |
 |----------------------------|
 
 
@@ -31,37 +31,17 @@ Deklariert den primitiven Typ für Geometry-shadereingaben.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="type"></span><span id="TYPE"></span><em>Sorte</em><br/></td>
-<td>in Primitiver Typ der Eingabe-Data, der einer der folgenden Typen ist: <br/>
-<ul>
-<li><em>Punkt</em> - Punkt Liste</li>
-<li><em>Zeile</em> - Zeilen Liste</li>
-<li><em>Dreieck</em> - Dreiecks Liste</li>
-<li><em>line_adj</em> - Zeilen Liste mit Daten</li>
-<li><em>triangle_adj</em> - Dreiecks Liste mit Daten</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Element | BESCHREIBUNG | 
+|------|-------------|
+| <span id="type"></span><span id="TYPE"></span><em>Typ</em><br /> | [in] Primitiver Eingabedatentyp, der einer der folgenden ist: <br /><ul><li><em>point</em> - point list</li><li><em>line</em> - line list</li><li><em>dreieck</em> – Dreiecksliste</li><li><em>line_adj:</em> Zeilenliste mit Adjacency-Daten</li><li><em>triangle_adj:</em> Dreiecksliste mit Adjacency-Daten</li></ul> | 
+
 
 
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -73,7 +53,7 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -86,20 +66,20 @@ dcl_inputPrimitive triangle
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

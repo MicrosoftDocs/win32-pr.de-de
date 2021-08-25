@@ -1,7 +1,7 @@
 ---
-description: Gibt den Ursprung der 802.1 x-Sicherheitseinstellungen an, die von einer IHV-Sicherheitskomponente verwendet werden.
+description: Gibt den Ursprung von 802.1X-Sicherheitseinstellungen an, die von einer IHV-Sicherheitskomponente verwendet werden.
 ms.assetid: 9c216319-d962-4c68-89a3-116eff3f4376
-title: usemsonex (IHV)-Element
+title: useMSOneX-Element (IHV)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,20 +12,20 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: aa9f2092ac0e76feae89b02f333ae3098288ccef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a62f2f25ef2a4a52fae82e2ce8ddb097a4b434d7c2f8f35a2783703a617ad8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103959974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912640"
 ---
-# <a name="usemsonex-ihv-element"></a>usemsonex (IHV)-Element
+# <a name="usemsonex-ihv-element"></a>useMSOneX-Element (IHV)
 
-Das **usemsonex** (IHV)-Element gibt den Ursprung der 802.1 x-Sicherheitseinstellungen an, die von einer IHV-Sicherheitskomponente verwendet werden.
+Das **useMSOneX-Element** (IHV) gibt den Ursprung von 802.1X-Sicherheitseinstellungen an, die von einer IHV-Sicherheitskomponente verwendet werden.
 
-Wenn **usemsonex** auf true festgelegt ist, verwenden die IHV-Sicherheitskomponenten von Microsoft definierte 802.1 x-Einstellungen. Wenn **usemsonex** den Wert false hat, verwenden IHV-Sicherheitskomponenten vom Hersteller bereitgestellte 802.1 x-Einstellungen.
+Wenn **useMSOneX** true ist, verwenden IHV-Sicherheitskomponenten von Microsoft definierte 802.1X-Einstellungen. Wenn **useMSOneX** false ist, verwenden IHV-Sicherheitskomponenten vom Anbieter bereitgestellte 802.1X-Einstellungen.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="useMSOneX"
@@ -34,7 +34,7 @@ Wenn **usemsonex** auf true festgelegt ist, verwenden die IHV-Sicherheitskompone
  />
 ```
 
-Das-Element wird durch das [**IHV**](wlan-profileschema-ihv-wlanprofile-element.md) -Element definiert.
+Das -Element wird durch das [**IHV-Element**](wlan-profileschema-ihv-wlanprofile-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,8 +42,8 @@ Das-Element wird durch das [**IHV**](wlan-profileschema-ihv-wlanprofile-element.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -51,16 +51,16 @@ Das-Element wird durch das [**IHV**](wlan-profileschema-ihv-wlanprofile-element.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**IHV**](wlan-profileschema-ihv-wlanprofile-element.md)
+[**Ihv**](wlan-profileschema-ihv-wlanprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**IHV (wlanprofile)**](wlan-profileschema-ihv-wlanprofile-element.md)
+[**IHV (WLANProfile)**](wlan-profileschema-ihv-wlanprofile-element.md)
 </dt> </dl>
 
  

@@ -1,24 +1,24 @@
 ---
-description: Profilekreationtype (in "mudedmconfigprofile")
+description: ProfileCreationType (in ModemDMConfigProfile)
 MS-HAID: WWAN\_profile\_v4.element\_1\_ProfileCreationType
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Profilekreationtype (in "mudedmconfigprofile")
+title: ProfileCreationType (in ModemDMConfigProfile)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b755840d0308ec2d7a7bba5896b0cf67b7b61198
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29867412bbadc8041bcf864a9575b0fc6001a499
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862515"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479956"
 ---
-# <a name="span-idwwan_profile_v4element_1_profilecreationtypespanprofilecreationtype-in-modemdmconfigprofile"></a><span id="WWAN_profile_v4.element_1_ProfileCreationType"></span>Profilekreationtype (in "mudedmconfigprofile")
+# <a name="span-idwwan_profile_v4element_1_profilecreationtypespanprofilecreationtype-in-modemdmconfigprofile"></a><span id="WWAN_profile_v4.element_1_ProfileCreationType"></span>ProfileCreationType (in ModemDMConfigProfile)
 
 Gibt an, wie dieses Modem-DM-Profil erstellt wurde.
 
-Dieser Wert wird verwendet, um zu entscheiden, ob ein Benutzer das Profil löschen kann. Benutzer können nur **Benutzer bereitgestellte** Profile löschen.
+Dieser Wert wird verwendet, um zu entscheiden, ob ein Benutzer das Profil löschen kann. Benutzer können nur **UserProvisioned-Profile** löschen.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -47,24 +47,11 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a> | <p>Modem-DM-Konfigurationsprofil.</p> | 
+
 
  
 
@@ -72,22 +59,13 @@ Keine.
 
 Die folgenden Elemente haben denselben Namen wie dieses Element, aber ihr Inhalt oder ihre Attribute sind anders.
 
--   **[Profilekreationtype (in mbnprofileext)](element-profilecreationtype.md)**
+-   **[ProfileCreationType (in MBNProfileExt)](element-profilecreationtype.md)**
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

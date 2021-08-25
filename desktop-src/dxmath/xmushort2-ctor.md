@@ -11,12 +11,12 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3dbb7183b858a62dc0a4d2907717a8ad66faec5cdbc72dee7249d9e4c2bac9af
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6a67542df7475077350f71cac98330f808fd72f6
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119978710"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480076"
 ---
 # <a name="xmushort2-constructors"></a>XMUSHORT2-Konstruktoren
 
@@ -33,65 +33,15 @@ Erstellt Instanzen der [**XMUSHORT2-Struktur.**](/windows/desktop/api/DirectXPac
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Konstruktor</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(constfloat)"><strong>XMUSHORT2 ()</strong></a></td>
-<td style="text-align: left;">Standardkonstruktor für <code>XMUSHORT2</code> .<br/> Standardkonstruktor für <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2</strong></a>.<br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(float_float)"><strong>XMUSHORT2 (float,float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus zwei <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> zwei <code>float</code> Argumenten. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/ee420629(v=vs.85)"><strong>XMUSHORT2 (const float*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUSHORT2</code> einem Arrayargument mit <code>float</code> zwei Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> einem aus einem Arrayargument mit <code>float</code> zwei Element. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="/previous-versions/windows/desktop/legacy/hh404766(v=vs.85)"><strong>XMUSHORT2 (const uint16_t*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus einem Array von <code>uint16_t</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus einem Array von <code>uint16_t</code> Argumenten.<br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(uint16_t_uint16_t)"><strong>XMUSHORT2 (uint16_t,uint16_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus zwei <code>uint16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> zwei <code>uint16_t</code> Argumenten. <br/>
-<blockquote>
-[!Note]<br />
-Dieser Konstruktor ist nur unter C++ verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Konstruktor | BESCHREIBUNG | 
+|-------------|-------------|
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(constfloat)"><strong>XMUSHORT2 ()</strong></a> | Standardkonstruktor für <code>XMUSHORT2</code> .<br /> Standardkonstruktor für <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2</strong></a>.<br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(float_float)"><strong>XMUSHORT2 (float,float)</strong></a> | Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus zwei <code>float</code> Argumenten. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> zwei <code>float</code> Argumenten. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/ee420629(v=vs.85)"><strong>XMUSHORT2 (const float*)</strong></a> | Initialisiert eine neue Instanz von aus <code>XMUSHORT2</code> einem Arrayargument mit <code>float</code> zwei Element. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> einem aus einem Arrayargument mit <code>float</code> zwei Element. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/previous-versions/windows/desktop/legacy/hh404766(v=vs.85)"><strong>XMUSHORT2 (const uint16_t*)</strong></a> | Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus einem Array von <code>uint16_t</code> Argumenten.<br /> Dieser Konstruktor initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus einem Array von <code>uint16_t</code> Argumenten.<br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+| <a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort2-xmushort2(uint16_t_uint16_t)"><strong>XMUSHORT2 (uint16_t,uint16_t)</strong></a> | Initialisiert eine neue Instanz von <code>XMUSHORT2</code> aus zwei <code>uint16_t</code> Argumenten. <br /> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort2"><strong>XMUSHORT2 aus</strong></a> zwei <code>uint16_t</code> Argumenten. <br /><blockquote>[!Note]<br />Dieser Konstruktor ist nur unter C++ verfügbar.</blockquote><br /> | 
+
 
 
 

@@ -1,27 +1,27 @@
 ---
-description: Beispiel für einen wavdest-Filter
+description: WavDest-Filterbeispiel
 ms.assetid: b7102e39-b3c7-42fb-a89b-f05f3ee75df7
-title: Beispiel für einen wavdest-Filter
+title: WavDest-Filterbeispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a13a5b1ef3cf6189042db152a2c47d578d63147
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 845c2cea35fbe3c43a556cb7e047488597ce6192c3b577c55c5490f8db95c037
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119903240"
 ---
-# <a name="wavdest-filter-sample"></a>Beispiel für einen wavdest-Filter
+# <a name="wavdest-filter-sample"></a>WavDest-Filterbeispiel
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Der wavdes-Filter schreibt einen Audiostream in eine WAV-Datei. Er nimmt einen einzelnen Audiostream als Eingabe an, und seine Ausgabe-PIN muss mit dem [dateiwriter](file-writer-filter.md) -Filter verbunden sein. Dieser Beispiel Filter basiert auf der [**ctransformfilter**](ctransformfilter.md) -Klasse.
+Der WavDes-Filter schreibt einen Audiostream in eine WAV-Datei. Es wird ein einzelner Audiodatenstrom als Eingabe verwendet, und sein Ausgabepin muss mit dem [File Writer-Filter verbunden](file-writer-filter.md) sein. Dieser Beispielfilter basiert auf der [**CTransformFilter-Klasse.**](ctransformfilter.md)
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Installieren Sie zum Herunterladen der DirectShow SDK-Beispiele die neueste Version des [Windows SDK.](https://msdn.microsoft.com/windowsvista/bb980924.aspx)
 
-Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK Root \]* \\ Samples \\ Multimedia \\ DirectShow \\ Filters \\ wavdest.
+Dieses Beispiel wird unter dem folgenden Pfad installiert: *\[ SDK \] Root* Samples Multimedia \\ \\ \\ DirectShow Filters \\ \\ WavDest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

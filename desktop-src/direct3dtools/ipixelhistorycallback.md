@@ -1,5 +1,5 @@
 ---
-description: Nicht verwendet. Früher ein Rückruf zum gleichzeitigen Zurückgeben aller Pixelverlaufsergebnisse.
+description: Nicht verwendet. Früher ein Rückruf, um alle Pixelverlaufsergebnisse gleichzeitig zurückzugeben.
 MS-HAID: vspixengine.IPixelHistoryCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d207badad9b483435fb177eaec035122413e27e0cc5d5714ed4d0507703bb3f0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: acdee69a844025aab831e8e1c465b90569d97acf
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118283205"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627516"
 ---
 # <a name="span-idvspixengineipixelhistorycallbackspanipixelhistorycallback-interface"></a><span id="vspixengine.ipixelhistorycallback"></span>IPixelHistoryCallback-Schnittstelle
 
-Wird nicht verwendet. Früher ein Rückruf zum gleichzeitigen Zurückgeben aller Pixelverlaufsergebnisse.
+Nicht verwendet. Früher ein Rückruf, um alle Pixelverlaufsergebnisse gleichzeitig zurückzugeben.
 
 ## <a name="members"></a>Member
 
-Die **IPixelHistoryCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixelHistoryCallback** verfügt auch über diese Membertypen:
+Die **IPixelHistoryCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixelHistoryCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,13 +38,13 @@ Die **IPixelHistoryCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstel
 
 Die **IPixelHistoryCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback-resultcallback-dword-pixelhistoryoperation-arr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host über die Ergebnisse der Pixelverlaufsanforderung benachrichtigt.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistorycallback-resultcallback-dword-pixelhistoryoperation-arr"><strong>ResultCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host der Pixelverlaufsanforderungsergebnisse benachrichtigt.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7e4076730f249695cc37c473643d8f0dc20d24f79fb48ec822afaf9b8d4234b1
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: dc3184f18bf692c333d7088ade79ff4ac5360f1a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119393090"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631358"
 ---
 # <a name="groupsizedefinition-element"></a>GroupSizeDefinition-Element
 
 Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <GroupSizeDefinition
@@ -39,17 +39,17 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -69,7 +69,7 @@ Stellt eine Layoutgröße für eine Gruppe von Steuerelementen in einer benutzer
 
 
 
-| Element                                                                                 | BESCHREIBUNG                                        |
+| Element                                                                                 | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**ColumnBreak**](windowsribbon-element-columnbreak.md)<br/>                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -193,7 +193,7 @@ Das folgende Codebeispiel veranschaulicht eine einfache benutzerdefinierte Vorla
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

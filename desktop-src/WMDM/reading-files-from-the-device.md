@@ -3,40 +3,40 @@ title: Lesen von Dateien vom Gerät
 description: Lesen von Dateien vom Gerät
 ms.assetid: adb87b53-39e2-4f83-ab6d-7e2f7c0bd5d3
 keywords:
-- Windows Media Device Manager, Lesen von Dateien von Geräten
-- Device Manager, Lesen von Dateien von Geräten
-- Programmier Handbuch, Lesen von Dateien von Geräten
-- Desktop Anwendungen, Lesen von Dateien von Geräten
-- Erstellen von Windows Media Device Manager-Anwendungen, Lesen von Dateien von Geräten
+- Windows Medien Geräte-Manager,Lesen von Dateien von Geräten
+- Geräte-Manager,Lesen von Dateien von Geräten
+- Programmierhandbuch,Lesen von Dateien von Geräten
+- Desktopanwendungen,Lesen von Dateien von Geräten
+- Erstellen Windows Media Geräte-Manager-Anwendungen,Lesen von Dateien von Geräten
 - Lesen von Dateien von Geräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0b80cf820e889b29e612206f90b07e1cb02c4c7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4352be59a335461f46bfc722146e4c51d31f72c1559e9ad8631e80cb6752c241
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904000"
 ---
 # <a name="reading-files-from-the-device"></a>Lesen von Dateien vom Gerät
 
-Wenn Sie eine Datei gefunden haben, die Sie vom Gerät kopieren möchten, können Sie die Datei mit einem einzigen-Befehl vom Gerät auf den Computer kopieren oder einen Rückruf verwenden, damit die Datei Bytes direkt in die Anwendung gelesen werden. auf diese Weise können die Daten nach Bedarf verarbeitet oder gespeichert werden.
+Wenn Sie eine Datei gefunden haben, die Sie vom Gerät kopieren möchten, können Sie die Datei in einem einzigen Aufruf vom Gerät auf den Computer kopieren oder einen Rückruf verwenden, um die Dateibytes direkt in Ihre Anwendung lesen zu lassen, die dann die Daten nach Ihren Anforderungen verarbeiten oder speichern kann.
 
-Die folgenden Schritte zeigen die grundlegende Methode zum Kopieren einer Datei von einem Gerät in einem einzelnen-Befehl:
+Die folgenden Schritte zeigen die grundlegende Methode zum Kopieren einer Datei von einem Gerät in einem einzigen Aufruf:
 
-1.  Erhalten Sie ein Handle für die Datei auf dem Gerät. Sie können das Handle über eine rekursive Dateisuche oder, wenn Sie die persistente ID des Speichers kennen, durch Aufrufen von [**IWMDMDevice3:: findstorage**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-findstorage)abrufen. In beiden Fällen benötigen Sie die [**iwmdmstorage**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage) -Schnittstelle des-Objekts.
-2.  Bestimmen Sie, ob es sich beim Speicher um eine Datei oder einen Ordner handelt. Nur Dateien können vom Gerät kopiert werden. Aufrufen von [**iwmdmstorage:: GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getattributes) zum Abrufen von Speicher Attributen, die Aufschluss darüber geben, ob es sich bei dem Speicher um eine Datei oder einen Ordner handelt.
-3.  Fragen Sie **iwmdmstorage** nach [**iwmdmstoragecontrol**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstoragecontrol)ab, und nennen Sie [**iwmdmstoragecontrol:: Read**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-read) , um die Datei vom Gerät zu lesen und an einem angegebenen Speicherort zu speichern.
+1.  Erhalten Sie ein Handle für die Datei auf dem Gerät. Sie können das Handle mithilfe einer rekursiven Dateisuche oder, wenn Sie die persistente ID des Speichers kennen, durch Aufrufen [**von IWMDMDevice3::FindStorage abrufen.**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-findstorage) In beiden Fällen benötigen Sie die [**IWMDMStorage-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstorage) des Objekts.
+2.  Bestimmen Sie, ob der Speicher eine Datei oder ein Ordner ist. Nur Dateien können vom Gerät kopiert werden. Rufen [**Sie IWMDMStorage::GetAttributes**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstorage-getattributes) auf, um Speicherattribute zu erhalten, die Ihnen mitteilen, ob es sich bei dem Speicher um eine Datei oder einen Ordner handelt.
+3.  Fragen **Sie IWMDMStorage** nach [**IWMDMStorageControl**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmstoragecontrol)ab, und rufen Sie [**IWMDMStorageControl::Read**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmstoragecontrol-read) auf, um die Datei vom Gerät zu lesen und an einem angegebenen Speicherort zu speichern.
 
-Wenn Sie stattdessen den File Block by-Block vom Gerät lesen möchten, müssen Sie die [**iwmdmoperation**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation) -Rückruf Schnittstelle implementieren. Übergeben Sie diese Schnittstelle an den **iwmdmstoragecontrol:: Read** -Befehl, und der Windows Media-Device Manager sendet Teilmengen von Datei Daten sequenziell an Ihren Rückruf. Die folgenden Schritte zeigen, wie ein Gerätedatei Block nach Block gelesen wird:
+Wenn Sie stattdessen den Dateiblock block by block vom Gerät lesen möchten, müssen Sie die [**IWMDMOperation-Rückrufschnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation) implementieren. Übergeben Sie diese Schnittstelle an **den IWMDMStorageControl::Read-Aufruf,** und Windows Media Geräte-Manager sendet Sequenzen von Dateidaten an Ihren Rückruf. Die folgenden Schritte zeigen, wie Sie einen Gerätedateiblock nach Block lesen:
 
-1.  Holen Sie sich die **iwmdmstorage** -Schnittstelle für den Speicher, und bestimmen Sie, ob es sich um eine Datei handelt, wie zuvor beschrieben
-2.  Bereiten Sie alle Datei Handles oder anderen Handles vor, die Sie zum Speichern der empfangenen Daten benötigen.
-3.  Abfrage für die **iwmdmstoragecontrol** -Schnittstelle des Speichers
-4.  Nennen Sie **iwmdmstoragecontrol:: Read** , um den Lesevorgang zu starten, und übergeben Sie die von Ihnen implementierte **iwmdmoperation** -Schnittstelle.
-5.  Windows Media Device Manager sendet den Datenblock nach Block an Ihr Gerät, wie unter [Manuelles Verarbeiten von Dateiübertragungen](handling-file-transfers-manually.md)beschrieben.
+1.  Ermitteln Sie **die IWMDMStorage-Schnittstelle** für den Speicher, und bestimmen Sie, ob es sich um eine Datei handelt, wie zuvor beschrieben.
+2.  Bereiten Sie alle Dateihandles oder andere Handles vor, die Sie zum Speichern der empfangenen Daten benötigen.
+3.  Abfragen der **IWMDMStorageControl-Schnittstelle des** Speichers
+4.  Rufen **Sie IWMDMStorageControl::Read** auf, um den Lesevorgang zu starten, und übergeben Sie dabei die von Ihnen implementierte **IWMDMOperation-Schnittstelle.**
+5.  Windows Media Geräte-Manager sendet den Datenblock block by block an Ihr Gerät, wie unter Manuelles Verarbeiten von [Dateiübertragungen beschrieben.](handling-file-transfers-manually.md)
 
-Die folgende C++-Beispiel Funktion liest ein Speicher Objekt von einem Gerät. Die Funktion akzeptiert einen optionalen **iwmdmoperation** -Schnittstellen Zeiger. Wenn Sie übermittelt wird, erstellt die Funktion eine Datei explizit und verarbeitet das Schreiben der Daten in die Datei bei der Implementierung von **iwmdmoperation:: transferobjectdata**; Wenn dies nicht der Fall ist, wird die Datei gelesen und in dem durch *pwszdestname* angegebenen Ziel gespeichert.
+Die folgende C++-Beispielfunktion liest ein Speicherobjekt von einem Gerät. Die Funktion akzeptiert einen optionalen **IWMDMOperation-Schnittstellenzeiger.** wenn übermittelt, erstellt die Funktion explizit eine Datei und verarbeitet das Schreiben der Daten in die Datei bei der Implementierung **von IWMDMOperation::TransferObjectData**; Wenn dies nicht der Wert ist, wird die Datei gelesen und an dem von *pwszDestName angegebenen Ziel gespeichert.*
 
 
 ```C++
@@ -121,12 +121,12 @@ HRESULT myFileRead(IWMDMStorage pStorage, LPWSTR pwszDestName, IWMDMOperation* p
 
 <dl> <dt>
 
-[**Erstellen einer Windows Media Device Manager-Anwendung**](creating-a-windows-media-device-manager-application.md)
+[**Erstellen einer Windows Media Geräte-Manager Anwendung**](creating-a-windows-media-device-manager-application.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

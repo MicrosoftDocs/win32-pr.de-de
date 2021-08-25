@@ -1,40 +1,40 @@
 ---
-description: Festlegen des ersten DVD-Bereichs
+description: Festlegen des anfänglichen DVD-Bereichs
 ms.assetid: b8238cb4-a101-4998-866f-4cf9ebd5d277
-title: Festlegen des ersten DVD-Bereichs
+title: Festlegen des anfänglichen DVD-Bereichs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d3f5181b804a9d83c04eed0abc70095bf9f1cf2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a7bf019c7d5ddae8efb257435e1b23037575a37f809ef012190b49c619cc3211
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104520387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102320"
 ---
-# <a name="setting-the-initial-dvd-region"></a>Festlegen des ersten DVD-Bereichs
+# <a name="setting-the-initial-dvd-region"></a>Festlegen des anfänglichen DVD-Bereichs
 
-Es liegt in der Verantwortung des Systemherstellers, einen ersten DVD-Bereich für das DVD-Laufwerk auf ihren PCs auszuwählen.
+Es liegt in der Verantwortung des Systemherstellers, eine anfängliche DVD-Region für das DVD-Laufwerk auf den PCs auszuwählen.
 
 > [!Note]  
-> Zum Festlegen der Region können nur verschlüsselte Festplatten verwendet werden.
+> Nur verschlüsselte Datenträger können verwendet werden, um die Region festzulegen.
 
  
 
 ### <a name="windows-2000-and-later"></a>Windows 2000 und höher
 
-Ab Windows 2000 wird der Standard-DVD-Bereich basierend auf dem Gebiets Schema ausgewählt, für das der Computer eingerichtet ist. Windows 2000 legt die Anfangs Region für ein DVD-Laufwerk immer mit dieser Standard Region und der Region des Datenträgers fest, wenn sich ein Festplattenlaufwerk auf dem Laufwerk befindet. Der Systemhersteller muss nichts tun, um die Anfangs Region für DVD-Laufwerke mit Windows 2000 oder höher festzulegen.
+Ab Windows 2000 wird der DVD-Standardbereich basierend auf dem Gebietsschema ausgewählt, für das der Computer eingerichtet ist. Windows 2000 wird immer die ursprüngliche Region für ein DVD-Laufwerk mit dieser Standardregion sowie die Region des Datenträgers festgelegt, wenn sich ein Datenträger auf dem Laufwerk befindet. Der Systemhersteller muss nichts unternehmen, um den anfänglichen Bereich für Windows 2000 oder höher-DVD-Laufwerke festzulegen.
 
-Wenn während des Starts keine Festplatte im Laufwerk vorhanden ist, wird die Standard Region für RPC1-Laufwerke nur basierend auf dem Gebiets Schema des Computers festgelegt. Wenn beim Start des Laufwerks eine DVD-CD vorhanden ist, wird die Standard Region als die Region des Laufwerks ausgewählt, sofern Sie mit einem Bereich der Festplatte übereinstimmt. Andernfalls wird die niedrigste Region auf der Festplatte als Ausgangsbereich des Laufwerks ausgewählt. Für den Benutzer (oder den Systemhersteller) ist eine verbleibende Änderung zulässig, falls die Standardeinstellung nicht korrekt war.
+Wenn bei RPC1-Laufwerken während des Starts kein Datenträger auf dem Laufwerk vorhanden ist, wird die Standardregion nur basierend auf dem Gebietsschema des Computers festgelegt. Wenn während des Starts ein DVD-Datenträger auf dem Laufwerk vorhanden ist, wird die Standardregion als Region des Laufwerks ausgewählt, sofern sie mit einem Bereich des Datenträgers übereinstimmt. Andernfalls wird der niedrigste Bereich auf dem Datenträger als erster Bereich des Laufwerks ausgewählt. Für den Benutzer (oder Systemhersteller) ist eine verbleibende Änderung zulässig, falls der Standardwert nicht korrekt war.
 
-Wenn bei der Installation von rpc2-Laufwerken während des Setup Vorgangs Windows 2000 feststellt, dass für das Laufwerk keine Region festgelegt ist, wird versucht, eine Region wie oben auszuwählen. Dies gilt jedoch nur, wenn auf dem Laufwerk eine Platte vorhanden ist. (Bei RPC1-Laufwerken wird die Region ohne Laufwerk im Laufwerk ausgewählt.) Nachdem eine Region für rpc2-Laufwerke festgelegt wurde, wird Sie nicht automatisch durch eine Neuinstallation oder eine Neuinstallation des Betriebssystems geändert.
+Wenn bei RPC2-Laufwerken während des Setupvorgangs Windows 2000 feststellt, dass auf dem Laufwerk keine Region festgelegt ist, wird wie oben beschrieben versucht, eine Region zu wählen, aber nur, wenn sich ein Datenträger auf dem Laufwerk befindet. (RPC1-Laufwerke wählen die Region ohne Datenträger im Laufwerk aus.) Sobald eine Region für RPC2-Laufwerke festgelegt wurde, wird sie weder durch eine Neuinstallation noch durch eine Neuinstallation des Betriebssystems automatisch geändert.
 
-Der OEM kann einen Registrierungsschlüssel mit dem Standard-DVD-Bereich für das System festlegen. Beim ersten Start wird der Laufwerks Bereich auf diesen Wert festgelegt. Der Registrierungsschlüssel unter Windows 2000 und höher ist die HKLM \\ System \\ CurrentControlSet- \\ Steuerelement \\ Klasse \\ <CDROM GUID> \\ <instance number> \\ defaultdvdregion (Binary).
+Der OEM kann einen Registrierungsschlüssel festlegen, der den DVD-Standardbereich für das System enthält. Beim ersten Start wird der Laufwerkbereich auf diesen Wert festgelegt. Der Registrierungsschlüssel für Windows 2000 und höher ist HKLM \\ System \\ CurrentControlSet \\ Control Class \\ \\ <CDROM GUID> \\ <instance number> \\ DefaultDVDRegion(binary) .
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Unterstützung der Änderung von DVD-Regionen in Windows](dvd-region-change-support-in-windows.md)
+[Unterstützung für DVD-Regionsänderungen in Windows](dvd-region-change-support-in-windows.md)
 </dt> </dl>
 
  

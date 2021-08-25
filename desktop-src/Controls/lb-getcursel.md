@@ -1,9 +1,9 @@
 ---
-title: LB_GETCURSEL Meldung (Winuser. h)
-description: Ruft den Index des derzeit ausgewählten Elements (sofern vorhanden) in einem Listenfeld mit einer einzelnen Auswahl ab.
+title: LB_GETCURSEL (Winuser.h)
+description: Ruft den Index des aktuell ausgewählten Elements in einem Listenfeld mit nur einer Auswahl ab( sofern verfügbar).
 ms.assetid: 39ab7f77-6c8e-45a4-aad4-47eba0a11a11
 keywords:
-- Windows-Steuerelemente für LB_GETCURSEL Meldung
+- LB_GETCURSEL message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a6209f1f5b67e059f9a2b8a224e6f96ec671e38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d67a060669d48a9ab020540c78ece395504c9f0b7e36807e3ac59daf216ea395
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085520"
 ---
-# <a name="lb_getcursel-message"></a>LB- \_ getcurrsel-Nachricht
+# <a name="lb_getcursel-message"></a>LB \_ GETCURSEL-Nachricht
 
-Ruft den Index des derzeit ausgewählten Elements (sofern vorhanden) in einem Listenfeld mit einer einzelnen Auswahl ab.
+Ruft den Index des aktuell ausgewählten Elements in einem Listenfeld mit nur einer Auswahl ab( sofern verfügbar).
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert in einem Listenfeld mit einer einzelnen Auswahl ist der null basierte Index des aktuell ausgewählten Elements. Wenn keine Auswahl vorhanden ist, lautet der Rückgabewert lb \_ Err.
+In einem Listenfeld mit nur einer Auswahl ist der Rückgabewert der nullbasierte Index des aktuell ausgewählten Elements. Wenn keine Auswahl getroffen wird, ist der Rückgabewert LB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Indizes der ausgewählten Elemente in einem Listenfeld mit Mehrfachauswahl abzurufen, verwenden Sie die [**\_ getselitems**](lb-getselitems.md) -Nachricht. Um zu ermitteln, ob das Element, das das Fokus Rechteck enthält, in einem Mehrfachauswahl-Listenfeld ausgewählt ist, verwenden Sie die [**\_ GetSEL**](lb-getsel.md) -Nachricht "lb".
+Um die Indizes der ausgewählten Elemente in einem Mehrfachauswahllistenfeld abzurufen, verwenden Sie die [**LB \_ GETSELITEMS-Meldung.**](lb-getselitems.md) Um zu bestimmen, ob das Element mit dem Fokusrechteck in einem Mehrfachauswahllistenfeld ausgewählt ist, verwenden Sie die [**LB \_ GETSEL-Meldung.**](lb-getsel.md)
 
-Beim Senden an ein Listenfeld mit Mehrfachauswahl gibt **lb \_ getcurrsel** den Index des Elements zurück, das über das Fokus Rechteck verfügt. Wenn keine Elemente ausgewählt sind, wird NULL zurückgegeben.
+Wenn es an ein Mehrfachauswahl-Listenfeld gesendet wird, gibt **LB \_ GETCURSEL** den Index des Elements zurück, das über das Fokusrechteck verfügt. Wenn keine Elemente ausgewählt sind, wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Beim Senden an ein Listenfeld mit Mehrfachauswahl gibt **lb \_ getcurrsel** den 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,19 +69,19 @@ Beim Senden an ein Listenfeld mit Mehrfachauswahl gibt **lb \_ getcurrsel** den 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**LB \_ getcaretindex**](lb-getcaretindex.md)
+[**LB \_ GETCARETINDEX**](lb-getcaretindex.md)
 </dt> <dt>
 
-[**LB- \_ GetSEL**](lb-getsel.md)
+[**LB \_ GETSEL**](lb-getsel.md)
 </dt> <dt>
 
-[**LB- \_ getselitems**](lb-getselitems.md)
+[**LB \_ GETSELITEMS**](lb-getselitems.md)
 </dt> <dt>
 
-[**LB- \_ setcurrsel**](lb-setcursel.md)
+[**LB \_ SETCURSEL**](lb-setcursel.md)
 </dt> </dl>
 
  

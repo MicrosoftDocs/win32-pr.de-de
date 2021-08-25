@@ -1,37 +1,37 @@
 ---
-description: Gibt an, ob die Aufzeichnungs-Engine die DirectX-Videobeschleunigung (DXVA) zum Decodieren von Videos verwendet.
+description: Gibt an, ob die Erfassungs-Engine DirectX Video Acceleration (DXVA) für die Videodecodierung verwendet.
 ms.assetid: 9F677E6E-0DCD-456F-8A00-1C11011BAA13
-title: MF_CAPTURE_ENGINE_DISABLE_DXVA-Attribut (MF. Engine. h)
+title: MF_CAPTURE_ENGINE_DISABLE_DXVA-Attribut (Mfcaptureengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d2ce31ed55e151e7254168e5e6bcce0c5460e88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4c722b70e1707e6ad5d14b7afca0da2c8d1a63b3a132345e727de1f37023916a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941010"
 ---
-# <a name="mf_capture_engine_disable_dxva-attribute"></a>\_ \_ \_ \_ DXVA-Attribut für MF-Erfassungs Modul deaktivieren
+# <a name="mf_capture_engine_disable_dxva-attribute"></a>MF \_ CAPTURE ENGINE DISABLE \_ \_ \_ DXVA-Attribut
 
-Gibt an, ob die Aufzeichnungs-Engine die DirectX-Videobeschleunigung (DXVA) zum Decodieren von Videos verwendet.
+Gibt an, ob die Erfassungs-Engine DirectX Video Acceleration (DXVA) für die Videodecodierung verwendet.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Attribut gilt, wenn die folgenden Bedingungen zutreffen:
 
--   Die Aufzeichnungs-Engine decodiert einen komprimierten Videostream aus dem Erfassungsgerät (z. b. wenn das Erfassungsgerät H. 264-Video ausgibt).
--   Der Video Decoder unterstützt die hardwarebeschleunigte Decodierung mithilfe von DXVA.
--   Die Anwendung verwendet das [ \_ \_ \_ D3D \_ Manager](mf-capture-engine-d3d-manager.md) -Attribut der MF-Erfassungs-Engine zum Festlegen der DXGI-Device Manager für die Aufzeichnungs-Engine.
+-   Die Erfassungs-Engine decodiert einen komprimierten Videodatenstrom vom Erfassungsgerät (z. B. wenn das Erfassungsgerät H.264-Video ausgibt).
+-   Der Videodecoder unterstützt die hardwarebeschleunigte Decodierung mit DXVA.
+-   Die Anwendung verwendet das [ATTRIBUT MF CAPTURE ENGINE \_ \_ \_ D3D \_ MANAGER,](mf-capture-engine-d3d-manager.md) um die DXGI-Geräte-Manager auf der Erfassungs-Engine festzulegen.
 
 Andernfalls wird dieses Attribut ignoriert.
 
-Dieses Attribut ermöglicht es der Anwendung, DXVA zu deaktivieren, während die Decodierung an Direct3D-Oberflächen noch nicht
+Mit diesem Attribut kann die Anwendung DXVA deaktivieren, während sie weiterhin in Direct3D-Oberflächen decodiert.
 
-Der Standardwert dieses Attributs ist **false**. Dies bedeutet, dass die DXVA-Decodierung aktiviert ist, wenn verfügbar.
+Der Standardwert dieses Attributs ist **FALSE.** Dies bedeutet, dass die DXVA-Decodierung aktiviert ist, wenn verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Der Standardwert dieses Attributs ist **false**. Dies bedeutet, dass die DXVA-De
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>"MF"-Engine. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                   |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>Mfcaptureengine.h</dt> </dl> |
 
 
 
@@ -52,10 +52,10 @@ Der Standardwert dieses Attributs ist **false**. Dies bedeutet, dass die DXVA-De
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Attribute der Aufzeichnungs-Engine](capture-engine-attributes.md)
+[Attribute der Erfassungs-Engine](capture-engine-attributes.md)
 </dt> <dt>
 
-[**IMF captureengine:: Initialize**](/windows/desktop/api/mfcaptureengine/nf-mfcaptureengine-imfcaptureengine-initialize)
+[**ADRPaturEngine::Initialize**](/windows/desktop/api/mfcaptureengine/nf-mfcaptureengine-imfcaptureengine-initialize)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: MPEXECUTION_STATUS-Enumeration (mpclient. h)
-description: Möglicher Bedrohungs Ausführungs Status.
+title: MPEXECUTION_STATUS -Enumeration (MpClient.h)
+description: Möglicher Status der Bedrohungsausführung.
 ms.assetid: 89D6BD9F-4A4C-48F5-BFD1-D09A240EB253
 keywords:
-- MPEXECUTION_STATUS-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPEXECUTION_STATUS enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPEXECUTION_STATUS enumeration Legacy Windows Environment Features
+- PMPEXECUTION_STATUS enumeration pointer Legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5cc21a0d8ec45d0715a7b1af8fb81a25e260711
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e4748b6d97e1b7ee05db8044837b89e2653a14fd1e6f87068a40107cdd9ee60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943910"
 ---
-# <a name="mpexecution_status-enumeration"></a>Mpexecution- \_ statusenumeration
+# <a name="mpexecution_status-enumeration"></a>MPEXECUTION \_ STATUS-Enumeration
 
-Möglicher Bedrohungs Ausführungs Status.
+Möglicher Status der Bedrohungsausführung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ typedef enum tagMPEXECUTION_STATUS {
 
 <dl> <dt>
 
-<span id="MP_EXECUTION_STATUS_UNKNOWN"></span><span id="mp_execution_status_unknown"></span>**MP- \_ Ausführungs \_ Status \_ unbekannt**
+<span id="MP_EXECUTION_STATUS_UNKNOWN"></span><span id="mp_execution_status_unknown"></span>**\_ \_ MP-AUSFÜHRUNGSSTATUS \_ UNBEKANNT**
 </dt> <dd>
 
-Der Ausführungs Status ist nicht bekannt.
+Der Ausführungsstatus ist nicht bekannt.
 
 </dd> <dt>
 
-<span id="MP_EXECUTION_STATUS_BLOCKED"></span><span id="mp_execution_status_blocked"></span>**MP- \_ Ausführungs \_ Status \_ blockiert**
+<span id="MP_EXECUTION_STATUS_BLOCKED"></span><span id="mp_execution_status_blocked"></span>**\_ \_ MP-AUSFÜHRUNGSSTATUS \_ BLOCKIERT**
 </dt> <dd>
 
-Die Ausführung durch den Mini Filter wurde blockiert.
+Ausführung durch Minifilter blockiert.
 
 </dd> <dt>
 
-<span id="MP_EXECUTION_STATUS_ALLOWED"></span><span id="mp_execution_status_allowed"></span>**MP- \_ Ausführungs \_ Status \_ zulässig**
+<span id="MP_EXECUTION_STATUS_ALLOWED"></span><span id="mp_execution_status_allowed"></span>**\_ \_ MP-AUSFÜHRUNGSSTATUS \_ ZULÄSSIG**
 </dt> <dd>
 
-Die Ausführung durch den Mini Filter ist zulässig.
+Die Ausführung per Minifilter ist zulässig.
 
 </dd> <dt>
 
-<span id="MP_EXECUTION_STATUS_EXECUTING"></span><span id="mp_execution_status_executing"></span>**Ausführungs Status von MP wird \_ \_ \_ ausgeführt**
+<span id="MP_EXECUTION_STATUS_EXECUTING"></span><span id="mp_execution_status_executing"></span>**\_ \_ AUSFÜHRUNGSSTATUS DES MP \_**
 </dt> <dd>
 
 Die Bedrohung wird ausgeführt.
 
 </dd> <dt>
 
-<span id="MP_EXECUTION_STATUS_NOT_EXECUTING"></span><span id="mp_execution_status_not_executing"></span>**MP- \_ Ausführungs \_ Status wird \_ nicht \_ ausgeführt**
+<span id="MP_EXECUTION_STATUS_NOT_EXECUTING"></span><span id="mp_execution_status_not_executing"></span>**\_ \_ MP-AUSFÜHRUNGSSTATUS \_ \_ WIRD NICHT AUSGEFÜHRT**
 </dt> <dd>
 
-Die Bedrohung wird nicht ausgeführt und ist nur während der Wiederherstellung über die Engine verfügbar.
+Die Bedrohung wird nicht ausgeführt und ist nur während der Behebung über die Engine verfügbar.
 
 </dd> </dl>
 
@@ -86,9 +86,9 @@ Die Bedrohung wird nicht ausgeführt und ist nur während der Wiederherstellung 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
