@@ -6,12 +6,12 @@ ms.localizationpriority: low
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 4222e9637d87f5c2a6df7a296465c8b9d148dde87a6698f8296fb0a1ed646345
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 5dd546055c22711ecd9a3796e520ad034e9e46c6
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119608550"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812687"
 ---
 # <a name="core-structures"></a>Core-Strukturen
 
@@ -64,7 +64,7 @@ Die folgenden Strukturen werden in d3d12.h deklariert.
 | [**D3D12_FEATURE_DATA_D3D12_OPTIONS6**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options6). Gibt den Unterstützungsgrad an, den der Adapter für die Schattierung mit variabler Rate (VRS) bietet, und gibt an, ob die Hintergrundverarbeitung unterstützt wird. |
 | [**D3D12_FEATURE_DATA_D3D12_OPTIONS7**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options7). Gibt die Unterstützungsebene an, die der Adapter für Gitternetz- und Verstärkungs-Shader sowie für Feedback zu Samplern bietet. |
 | [**D3D12_FEATURE_DATA_D3D12_OPTIONS8**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options8). Gibt an, ob nicht ausgerichtete blockkomprimierte Texturen unterstützt werden. |
-| [**D3D12_FEATURE_DATA_D3D12_OPTIONS9**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options9). Gibt an, ob Unterstützung für Gitternetz-Shader, Werte von *SV_RenderTargetArrayIndex,* die 8 oder höher sind, typisierter Ressource 64-Bit-Ganzzahl-Atomarwerte, ableitungs- und ableitungsabhängige Texturbeispielvorgänge und die Unterstützungsstufe für WaveMMA-Vorgänge (wave_matrix) vorhanden sind. |
+| [**D3D12_FEATURE_DATA_D3D12_OPTIONS9**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options9). Gibt an, ob Unterstützung für Gitternetz-Shader, Werte von *SV_RenderTargetArrayIndex,* die 8 oder höher sind, typisierter Ressource 64-Bit-Ganzzahl-Atomics, ableitungs- und ableitungsabhängige Texturbeispielvorgänge und die Unterstützungsstufe für WaveMMA-Vorgänge (wave_matrix) vorhanden sind. |
 | [**D3D12_FEATURE_DATA_D3D12_OPTIONS10**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options10). Gibt an, ob der SUM-Kombinierer verwendet  werden kann und ob SV_ShadingRate Gitternetz-Shader festgelegt werden können. |
 | [**D3D12_FEATURE_DATA_D3D12_OPTIONS11**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_d3d12_options11). Gibt an, ob 64-Bit-Ganzzahl-Atomarwerte für Ressourcen in Deskriptorhaps unterstützt werden. |
 | [**D3D12_FEATURE_DATA_EXISTING_HEAPS**](/windows/win32/api/d3d12/ns-d3d12-d3d12_feature_data_existing_heaps). Wird verwendet, um zu bestimmen, ob der Adapter das Erstellen von Heaps aus vorhandenem Systemspeicher unterstützt. Solche Heaps sind nicht für die allgemeine Verwendung vorgesehen, sind aber für Diagnosezwecke besonders nützlich, da sie garantiert auch nach den Adapterfehlern beibehalten werden oder ein Ereignis zum Entfernen des Geräts auftritt. |
@@ -110,7 +110,7 @@ Die folgenden Strukturen werden in d3d12.h deklariert.
 | [**D3D12_RAYTRACING_ACCELERATION_STRUCTURE_POSTBUILD_INFO_TOOLS_VISUALIZATION_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_acceleration_structure_postbuild_info_tools_visualization_desc). Beschreibt den Speicherplatzbedarf für das Decodieren einer Beschleunigungsstruktur in ein Formular, das von Tools visualisiert werden kann. |
 | [**D3D12_RAYTRACING_ACCELERATION_STRUCTURE_PREBUILD_INFO**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_acceleration_structure_prebuild_info). Stellt Prebuildinformationen über eine Raytracingbeschleunigungsstruktur dar. Rufen Sie [**getRaytracingAccelerationStructurePrebuildInfo**](/windows/win32/api/d3d12/nf-d3d12-id3d12device5-getraytracingaccelerationstructureprebuildinfo)auf, um eine Instanz dieser Struktur abzurufen. |
 | [**D3D12_RAYTRACING_ACCELERATION_STRUCTURE_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_acceleration_structure_srv). Eine Shaderressourcenansichtsstruktur (SRV) zum Speichern einer Raytracingbeschleunigungsstruktur. |
-| [**D3D12_RAYTRACING_GEOMETRY_AABBS_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_geometry_aabbs_desc). Beschreibt eine Reihe von an der Achse ausgerichteten Begrenzungsfeldern, die in der [**D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS-Struktur**](/windows/win32/api/d3d12/ns-d3d12-d3d12_build_raytracing_acceleration_structure_inputs) verwendet werden, um Eingabedaten für einen Raytracingbeschleunigungsstrukturbuildvorgang bereitzustellen. |
+| [**D3D12_RAYTRACING_GEOMETRY_AABBS_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_geometry_aabbs_desc). Beschreibt eine Reihe von an der Achse ausgerichteten Begrenzungsfeldern, die in der [**D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS-Struktur**](/windows/win32/api/d3d12/ns-d3d12-d3d12_build_raytracing_acceleration_structure_inputs) verwendet werden, um Eingabedaten für einen Raytracingbeschleunigungsstruktur-Buildvorgang bereitzustellen. |
 | [**D3D12_RAYTRACING_GEOMETRY_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_geometry_desc). Beschreibt einen Satz von Geometrie, der in der [**D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS-Struktur**](/windows/win32/api/d3d12/ns-d3d12-d3d12_build_raytracing_acceleration_structure_inputs) verwendet wird, um Eingabedaten für einen Raytracingbeschleunigungsstruktur-Buildvorgang bereitzustellen. |
 | [**D3D12_RAYTRACING_GEOMETRY_TRIANGLES_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_geometry_triangles_desc). Beschreibt eine Gruppe von Dreiecken, die als Raytracinggeometrie verwendet werden. Die Geometrie, auf die diese Struktur zeigt, befindet sich immer in Dreieckslistenform, indiziert oder nicht indiziert. Dreiecksstreifen werden nicht unterstützt. |
 | [**D3D12_RAYTRACING_INSTANCE_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_raytracing_instance_desc). Beschreibt eine Instanz einer Raytracingbeschleunigungsstruktur, die während des Erstellungsprozesses der Beschleunigungsstruktur im GPU-Arbeitsspeicher verwendet wird. |
@@ -164,39 +164,39 @@ Die folgenden Strukturen werden in d3d12.h deklariert.
 | [**D3D12_TEX1D_ARRAY_UAV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_array_uav). Beschreibt ein Array von 1D-Texturressourcen mit ungeordneten Zugriffen. |
 | [**D3D12_TEX1D_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_dsv). Beschreibt die Unterressource aus einer 1D-Textur, auf die eine Tiefenschablonenansicht zugreifen kann. |
 | [**D3D12_TEX1D_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_rtv). Beschreibt die Unterressource aus einer 1D-Textur, die in einer Renderzielansicht verwendet werden soll. |
-| [**D3D12_TEX1D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_srv). Gibt die Unterressource aus einer 1D-Textur an, die in einer Shader-Ressourcenansicht verwendet werden soll. |
+| [**D3D12_TEX1D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_srv). Gibt die Unterressource aus einer 1D-Textur an, die in einer Shaderressourcenansicht verwendet werden soll. |
 | [**D3D12_TEX1D_UAV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex1d_uav). Beschreibt eine 1D-Texturressource mit ungeordneten Zugriffen. |
-| [**D3D12_TEX2D_ARRAY_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_dsv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, auf die eine Tiefenschablonenansicht zugreifen kann. |
-| [**D3D12_TEX2D_ARRAY_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_rtv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, die in einer Renderzielansicht verwendet werden sollen. |
-| [**D3D12_TEX2D_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_srv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, die in einer Shader-Ressourcenansicht verwendet werden sollen. |
+| [**D3D12_TEX2D_ARRAY_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_dsv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, auf die für eine Tiefen-Schablonenansicht zugegriffen werden kann. |
+| [**D3D12_TEX2D_ARRAY_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_rtv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, die in einer Renderzielansicht verwendet werden. |
+| [**D3D12_TEX2D_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_srv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen, die in einer Shaderressourcenansicht verwendet werden. |
 | [**D3D12_TEX2D_ARRAY_UAV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_array_uav). Beschreibt ein Array von 2D-Texturressourcen mit ungeordneten Zugriffen. |
-| [**D3D12_TEX2D_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_dsv). Beschreibt die Unterressource aus einer 2D-Textur, auf die eine Tiefenschablonenansicht zugreifen kann. |
+| [**D3D12_TEX2D_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_dsv). Beschreibt die Unterressource aus einer 2D-Textur, die für eine Tiefen-Schablonenansicht zugänglich ist. |
 | [**D3D12_TEX2D_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_rtv). Beschreibt die Unterressource aus einer 2D-Textur, die in einer Renderzielansicht verwendet werden soll. |
-| [**D3D12_TEX2D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_srv). Beschreibt die Unterressource aus einer 2D-Textur, die in einer Shader-Ressourcenansicht verwendet werden soll. |
+| [**D3D12_TEX2D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_srv). Beschreibt die Unterressource aus einer 2D-Textur, die in einer Shaderressourcenansicht verwendet werden soll. |
 | [**D3D12_TEX2D_UAV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2d_uav). Beschreibt eine 2D-Texturressource mit ungeordneten Zugriffen. |
-| [**D3D12_TEX2DMS_ARRAY_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_dsv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben für eine Tiefenschablonenansicht. |
-| [**D3D12_TEX2DMS_ARRAY_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_rtv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben, die in einer Renderzielansicht verwendet werden sollen. |
-| [**D3D12_TEX2DMS_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_srv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben, die in einer Shader-Ressourcenansicht verwendet werden sollen. |
-| [**D3D12_TEX2DMS_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_dsv). Beschreibt die Unterressource aus einer 2D-Textur mit mehreren Stichproben, auf die eine Tiefenschablonenansicht zugreifen kann. |
+| [**D3D12_TEX2DMS_ARRAY_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_dsv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben für eine Tiefen-Schablonenansicht. |
+| [**D3D12_TEX2DMS_ARRAY_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_rtv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben, die in einer Renderzielansicht verwendet werden. |
+| [**D3D12_TEX2DMS_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_array_srv). Beschreibt die Unterressourcen aus einem Array von 2D-Texturen mit mehreren Stichproben, die in einer Shaderressourcenansicht verwendet werden. |
+| [**D3D12_TEX2DMS_DSV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_dsv). Beschreibt die Unterressource aus einer 2D-Textur mit mehreren Stichproben, die für eine Tiefen-Schablonenansicht zugänglich ist. |
 | [**D3D12_TEX2DMS_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_rtv). Beschreibt die Unterressource aus einer 2D-Textur mit mehreren Stichproben, die in einer Renderzielansicht verwendet werden soll. |
-| [**D3D12_TEX2DMS_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_srv). Beschreibt die Unterressourcen aus einer 2D-Textur mit mehreren Stichproben, die in einer Shader-Ressourcenansicht verwendet werden sollen. |
-| [**D3D12_TEX3D_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex3d_rtv). Beschreibt die Unterressourcen aus einer 3D-Textur, die in einer Renderzielansicht verwendet werden sollen. |
-| [**D3D12_TEX3D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex3d_srv). Beschreibt die Unterressourcen aus einer 3D-Textur, die in einer Shader-Ressourcenansicht verwendet werden sollen. |
+| [**D3D12_TEX2DMS_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex2dms_srv). Beschreibt die Unterressourcen aus einer 2D-Textur mit mehreren Stichproben, die in einer Shaderressourcenansicht verwendet werden soll. |
+| [**D3D12_TEX3D_RTV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex3d_rtv). Beschreibt die Unterressourcen aus einer 3D-Textur, die in einer Renderzielansicht verwendet werden soll. |
+| [**D3D12_TEX3D_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex3d_srv). Beschreibt die Unterressourcen aus einer 3D-Textur, die in einer Shaderressourcenansicht verwendet werden soll. |
 | [**D3D12_TEX3D_UAV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tex3d_uav). Beschreibt eine 3D-Texturressource mit ungeordneten Zugriffen. |
-| [**D3D12_TEXCUBE_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_texcube_array_srv). Beschreibt die Unterressourcen aus einem Array von Cubetexturen, die in einer Shader-Ressourcenansicht verwendet werden sollen. |
-| [**D3D12_TEXCUBE_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_texcube_srv). Beschreibt die Unterressource aus einer Cubetextur, die in einer Shader-Ressourcenansicht verwendet werden soll. |
+| [**D3D12_TEXCUBE_ARRAY_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_texcube_array_srv). Beschreibt die Unterressourcen aus einem Array von Cubetexturen, die in einer Shaderressourcenansicht verwendet werden sollen. |
+| [**D3D12_TEXCUBE_SRV**](/windows/win32/api/d3d12/ns-d3d12-d3d12_texcube_srv). Beschreibt die Unterressource aus einer Cubetextur, die in einer Shaderressourcenansicht verwendet werden soll. |
 | [**D3D12_TEXTURE_COPY_LOCATION**](/windows/win32/api/d3d12/ns-d3d12-d3d12_texture_copy_location). Beschreibt einen Teil einer Textur zum Zweck von Texturkopien. |
-| [**D3D12_TILE_REGION_SIZE**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tile_region_size). Beschreibt die Größe eines gekachelten Bereichs. |
-| [**D3D12_TILE_SHAPE**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tile_shape). Beschreibt die Form einer Kachel, indem ihre Dimensionen angegeben werden. |
+| [**D3D12_TILE_REGION_SIZE**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tile_region_size). Beschreibt die Größe eines gekachelten Bereich. |
+| [**D3D12_TILE_SHAPE**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tile_shape). Beschreibt die Form einer Kachel durch Angabe ihrer Dimensionen. |
 | [**D3D12_TILED_RESOURCE_COORDINATE**](/windows/win32/api/d3d12/ns-d3d12-d3d12_tiled_resource_coordinate). Beschreibt die Koordinaten einer gekachelten Ressource. |
-| [**D3D12_UNORDERED_ACCESS_VIEW_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_unordered_access_view_desc). Beschreibt die Unterressourcen einer Ressource, auf die über eine Ansicht mit ungeordneten Zugriff zugegriffen werden kann. |
-| [**D3D12_VERTEX_BUFFER_VIEW**](/windows/win32/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view). Beschreibt eine Vertexpufferansicht. |
-| [**D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA**](/windows/win32/api/d3d12/ns-d3d12-d3d12_versioned_device_removed_extended_data). Stellt daten mit Versionsangaben vom Gerät entfernte erweiterte Daten (DEVICE Removed Extended Data, DRED) dar, sodass Debugger und Debuggererweiterungen auf DRED-Daten zugreifen können. |
+| [**D3D12_UNORDERED_ACCESS_VIEW_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_unordered_access_view_desc). Beschreibt die Unterressourcen einer Ressource, auf die mithilfe einer Ansicht mit ungeordneten Zugriffsberechtigungen zugegriffen werden kann. |
+| [**D3D12_VERTEX_BUFFER_VIEW**](/windows/win32/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view). Beschreibt eine Scheitelpunktpufferansicht. |
+| [**D3D12_VERSIONED_DEVICE_REMOVED_EXTENDED_DATA**](/windows/win32/api/d3d12/ns-d3d12-d3d12_versioned_device_removed_extended_data). Stellt DATEN zu entfernten erweiterten Daten (DEVICE Removed Extended Data, DRED) mit Versionszugriff dar, sodass Debugger und Debuggererweiterungen auf DRED-Daten zugreifen können. |
 | [**D3D12_VERSIONED_ROOT_SIGNATURE_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_versioned_root_signature_desc). Enthält eine beliebige Version einer Stammsignaturbeschreibung und ist für die Verwendung mit Serialisierungs-/Deserialisierungsfunktionen konzipiert. |
 | [**D3D12_VIEW_INSTANCE_LOCATION**](/windows/win32/api/d3d12/ns-d3d12-d3d12_view_instance_location). Gibt den Viewport/die Schablone und das Renderziel an, die einer Ansichtsinstanz zugeordnet sind. |
-| [**D3D12_VIEW_INSTANCING_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_view_instancing_desc). Gibt Parameter an, die während der Konfiguration der Ansichtsinstanzierung verwendet werden. |
+| [**D3D12_VIEW_INSTANCING_DESC**](/windows/win32/api/d3d12/ns-d3d12-d3d12_view_instancing_desc). Gibt parameter an, die während der Konfiguration der Ansichtsinstancierung verwendet werden. |
 | [**D3D12_VIEWPORT**](/windows/win32/api/d3d12/ns-d3d12-d3d12_viewport). Beschreibt die Dimensionen eines Viewports. |
-| [**D3D12_WRITEBUFFERIMMEDIATE_PARAMETER**](/windows/win32/api/d3d12/ns-d3d12-d3d12_writebufferimmediate_parameter). Gibt den unmittelbaren Wert und die Zieladresse an, die mit [**ID3D12CommandList2::WriteBufferImmediate**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist2)geschrieben wurden. |
+| [**D3D12_WRITEBUFFERIMMEDIATE_PARAMETER**](/windows/win32/api/d3d12/ns-d3d12-d3d12_writebufferimmediate_parameter). Gibt den unmittelbaren Wert und die Zieladresse an, die mit [**ID3D12CommandList2::WriteBufferImmediate geschrieben wurden.**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist2) |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

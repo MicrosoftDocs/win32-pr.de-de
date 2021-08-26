@@ -1,33 +1,33 @@
 ---
-description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für die Republik Deutschland. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für die Tschechisch-Republik. Häufigkeitsindizes eignen sich nicht für Kanalnummern.
 ms.assetid: 6bbef2a3-7104-4b5f-8381-0a89751e572b
 title: Tschechische Republik
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91e3d946fdfc42f0e418d7bba1a786d49c5d6785
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: cadcc51becba548bcbd59421866bebaf52c624bfe1913bf01f4b87af15d287bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998436"
 ---
 # <a name="czech-republic"></a>Tschechische Republik
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen der Tschechisch-Republik eignen sich nicht für die Verwendung als Kanalnummern.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [Übertragungszuweisungen in der Republik Deutschland](#czech-republic-broadcast-assignments)
-    -   [Zuweisungen von Kabeln in der Republik Deutschland](#czech-republic-cable-assignments)
+    -   [Broadcastzuweisungen in der Republik "Tschechisch"](#czech-republic-broadcast-assignments)
+    -   [Kabelzuweisungen in der Republik Tschechisch](#czech-republic-cable-assignments)
 -   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
-    -   [Übertragungszuweisungen in der Republik Deutschland](#czech-republic-broadcast-assignments)
-    -   [Zuweisungen von Kabeln in der Republik Deutschland](#czech-republic-cable-assignments)
--   [Verwandte Themen](#related-topics)
+    -   [Broadcastzuweisungen in der Republik "Tschechisch"](#czech-republic-broadcast-assignments)
+    -   [Kabelzuweisungen in der Republik Tschechisch](#czech-republic-cable-assignments)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="czech-republic-broadcast-assignments"></a>Übertragungszuweisungen in der Republik Deutschland
+### <a name="czech-republic-broadcast-assignments"></a>Broadcastzuweisungen in der Republik "Tschechisch"
 
 ``` syntax
         1L,             // Lowest channel
@@ -106,7 +106,7 @@ Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht 
        855250000L,      // 71 TV71
 ```
 
-### <a name="czech-republic-cable-assignments"></a>Zuweisungen von Kabeln in der Republik Deutschland
+### <a name="czech-republic-cable-assignments"></a>Kabelzuweisungen in der Republik Tschechisch
 
 ``` syntax
         1L,             // Lowest channel
@@ -254,7 +254,7 @@ Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht 
 
 ## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="czech-republic-broadcast-assignments"></a>Übertragungszuweisungen in der Republik Deutschland
+### <a name="czech-republic-broadcast-assignments"></a>Broadcastzuweisungen in der Republik "Tschechisch"
 
 ``` syntax
         1L,             // Lowest channel
@@ -333,7 +333,7 @@ Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht 
        855250000L,      // 69
 ```
 
-### <a name="czech-republic-cable-assignments"></a>Zuweisungen von Kabeln in der Republik Deutschland
+### <a name="czech-republic-cable-assignments"></a>Kabelzuweisungen in der Republik Tschechisch
 
 ``` syntax
         1L,             // Lowest channel
@@ -403,7 +403,7 @@ Die Häufigkeitsindizes in den Tabellen der republikkischen Republik sind nicht 
 
 <dl> <dt>
 
-[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

@@ -8,16 +8,16 @@ ms:contentKeyID: 74520139
 ms.date: 03/30/2018
 ms.topic: article
 mtps_version: v=VS.85
-ms.openlocfilehash: c9192bf650588b7c21f17afb45149fe460f91bea
-ms.sourcegitcommit: ecd0ba4732f5264aab9baa2839c11f7fea36318f
+ms.openlocfilehash: 216952ac05811226c403739d389f8de9f636c3b8
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "113481865"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880526"
 ---
 # <a name="setting-the-default-dpi-awareness-for-a-process"></a>Festlegen des DPI-Standardbewusstseins für einen Prozess
 
-Desktopanwendungen auf Windows können in verschiedenen DPI-Bewusstseinsmodi ausgeführt werden. Diese Modi ermöglichen ein anderes DPI-Skalierungsverhalten und können unterschiedliche Koordinatenräume verwenden. Weitere Informationen zur DPI-Bekanntheit finden Sie unter [High DPI Desktop Application Development on Windows.](https://msdn.microsoft.com/library/mt843498\(v=vs.85\)) Es ist wichtig, dass Sie explizit den standardmäßigen DPI-Bewusstseinsmodus Ihres Prozesses festlegen, um unerwartetes Verhalten zu vermeiden.
+Desktopanwendungen auf Windows können in verschiedenen DPI-Bewusstseinsmodi ausgeführt werden. Diese Modi ermöglichen ein anderes DPI-Skalierungsverhalten und können unterschiedliche Koordinatenräume verwenden. Weitere Informationen zur DPI-Kenntnis finden Sie unter [High DPI Desktop Application Development on Windows.](https://msdn.microsoft.com/library/mt843498\(v=vs.85\)) Es ist wichtig, dass Sie explizit den standardmäßigen DPI-Bewusstseinsmodus Ihres Prozesses festlegen, um unerwartetes Verhalten zu vermeiden.
 
 Es gibt zwei Hauptmethoden, um die Standard-DPI-Kenntnis eines Prozesses anzugeben:
 
@@ -29,48 +29,18 @@ Es wird empfohlen, den DPI-Standardprozess über eine Manifesteinstellung anzuge
 
 ## <a name="setting-default-awareness-with-the-application-manifest"></a>Festlegen des Standardbewusstseins mit dem Anwendungsmanifest
 
-Es gibt zwei Manifesteinstellungen, mit denen Sie den Standardmäßigen DPI-Aktivierungsmodus des Prozesses angeben können: \<dpiAwareness\> und \<dpiAware\> . \<dpiAware\>wurde in Windows Vista eingeführt und ermöglicht nur, dass Ihr Prozess standardmäßig auf Systembewusstsein festgelegt wird. \<dpiAwareness\>wurde in Windows 10 Version 1607 eingeführt und ermöglicht ihnen das Angeben einer geordneten Liste von prozessbasierten DPI-Awareness-Modi. Dadurch können Sie Sicherungs-DPI-Awareness-Modi festlegen, die verwendet werden, wenn Ihre Anwendung auf einer Version von ausgeführt wird, Windows den ersten angegebenen Bewusstseinsmodus nicht unterstützen kann. Bei älteren Windows wird das neuere Tag \<dpiAwareness\> ignoriert. Dies bedeutet, dass Sie beide Manifesteinstellungen verwenden können, um ein Szenario zu ermöglichen, in dem Ihre Prozesseinstellung auf ältere Versionen von Windows festgelegt werden kann, während sie Per-Monitor für Versionen größer als Windows 10, Version 1607, verwendet werden. In Windows 10 Version 1607 und on wird die Einstellung \<dpiAware\> ignoriert, wenn \<dpiAwareness\> das Element vorhanden ist.
+Es gibt zwei Manifesteinstellungen, mit denen Sie den Standardmäßigen DPI-Aktivierungsmodus des Prozesses angeben können: \<dpiAwareness\> und \<dpiAware\> . \<dpiAware\>wurde in Windows Vista eingeführt und ermöglicht nur, dass Ihr Prozess standardmäßig auf Systembewusstsein festgelegt wird. \<dpiAwareness\>wurde in Windows 10 Version 1607 eingeführt und ermöglicht ihnen das Angeben einer geordneten Liste von Prozess-Standard-DPI-Bewusstseinsmodi. Dadurch können Sie Sicherungs-DPI-Awareness-Modi festlegen, die verwendet werden, wenn Ihre Anwendung auf einer Version von ausgeführt wird, Windows den ersten angegebenen Bewusstseinsmodus nicht unterstützen kann. Bei älteren Windows wird das neuere Tag \<dpiAwareness\> ignoriert. Dies bedeutet, dass Sie beide Manifesteinstellungen verwenden können, um ein Szenario zu ermöglichen, in dem Ihre Prozesseinstellung auf ältere Versionen von Windows festgelegt werden kann, während sie Per-Monitor versionen größer als Windows 10 Version 1607 sind. Bei Windows 10 Version 1607 und on wird die Einstellung \<dpiAware\> ignoriert, wenn \<dpiAwareness\> das Element vorhanden ist.
 
-In der folgenden Tabelle wird gezeigt, wie sie mithilfe der beiden Manifesteinstellungen unterschiedliche Prozess-Standard-DPI-Bewusstseinsmodi angeben:
+In der folgenden Tabelle wird gezeigt, wie Sie mithilfe der beiden Manifesteinstellungen unterschiedliche DPI-Standard-Prozess-DPI-Bewusstseinsmodi angeben:
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Verarbeiten des standardmäßigen DPI-Bewusstseinsmodus</th>
-<th>&lt;dpiAware-Einstellung &gt;</th>
-<th>&lt;Einstellung "dpiAwareness" &gt; (Windows 10, Version 1607 und höher)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>nicht bekannt</td>
-<td><p>N/A (keine DpiAware-Einstellung im Manifest)</p>
-<p>oder</p>
-<p>&lt;dpiAware &gt; false &lt; /dpiAware&gt;</p></td>
-<td>&lt;DpiAwareness &gt; nicht bekannt &lt; /dpiAwareness&gt;</td>
-</tr>
-<tr class="even">
-<td>Systembewusst</td>
-<td>&lt;dpiAware &gt; true &lt; /dpiAware&gt;</td>
-<td>&lt;dpiAwareness &gt; system &lt; /dpiAwareness&gt;</td>
-</tr>
-<tr class="odd">
-<td>Pro Monitor</td>
-<td>&lt;dpiAware &gt; true/pm &lt; dpiAware&gt;</td>
-<td>&lt;dpiAwareness &gt; PerMonitor &lt; /dpiAwareness&gt;</td>
-</tr>
-<tr class="even">
-<td>Pro Monitor V2</td>
-<td>Nicht unterstützt</td>
-<td>&lt;dpiAwareness &gt; PerMonitorV2 &lt; /dpiAwareness&gt;</td>
-</tr>
-</tbody>
-</table>
+
+| Verarbeiten des standardmäßigen DPI-Bewusstseinsmodus | &lt;dpiAware-Einstellung &gt; | &lt;Einstellung "dpiAwareness" &gt; (Windows 10, Version 1607 und höher) | 
+|------------------------------------|--------------------|--------------------------------------------------------------|
+| nicht bekannt | <p>N/A (keine DpiAware-Einstellung im Manifest)</p><p>oder</p><p>&lt;dpiAware &gt; false &lt; /dpiAware&gt;</p> | &lt;DpiAwareness &gt; nicht bekannt &lt; /dpiAwareness&gt; | 
+| Systembewusst | &lt;dpiAware &gt; true &lt; /dpiAware&gt; | &lt;dpiAwareness &gt; system &lt; /dpiAwareness&gt; | 
+| Pro Monitor | &lt;dpiAware &gt; true/pm &lt; dpiAware&gt; | &lt;dpiAwareness &gt; PerMonitor &lt; /dpiAwareness&gt; | 
+| Pro Monitor V2 | Nicht unterstützt | &lt;dpiAwareness &gt; PerMonitorV2 &lt; /dpiAwareness&gt; | 
+
 
  
 
@@ -96,51 +66,16 @@ Es gibt mehrere APIs, mit denen Sie die DPI-Standarderlädung für Ihren Prozess
 
  
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>API</th>
-<th>Mindestversion der Windows</th>
-<th>DPI nicht bekannt</th>
-<th>System-DPI-bewusst</th>
-<th>DPI-bewusst pro Monitor</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="/windows/win32/api/winuser/nf-winuser-setprocessdpiaware">SetProcessDPIAware</a></td>
-<td>Windows Vista</td>
-<td>–</td>
-<td>SetProcessDPIAware()</td>
-<td>–</td>
-</tr>
-<tr class="even">
-<td><a href="/windows/win32/api/shellscalingapi/nf-shellscalingapi-setprocessdpiawareness"><strong>SetProcessDpiAwareness</strong></a></td>
-<td>Windows 8.1</td>
-<td>SetProcessDpiAwareness(PROCESS_DPI_UNAWARE)</td>
-<td>SetProcessDpiAwareness(PROCESS_SYSTEM_DPI_AWARE)</td>
-<td>SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE)</td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/win32/api/winuser/nf-winuser-setprocessdpiawarenesscontext"><strong>SetProcessDpiAwarenessContext</strong></a></td>
-<td>Windows 10, Version 1607</td>
-<td>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_UNAWARE)</td>
-<td>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_SYSTEM_AWARE)</td>
-<td><p>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE)</p>
-<p>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2)</p></td>
-</tr>
-</tbody>
-</table>
+
+| API | Mindestversion Windows | DPI nicht bekannt | System-DPI-bewusst | DPI-bewusst pro Monitor | 
+|-----|----------------------------|-------------|------------------|-----------------------|
+| <a href="/windows/win32/api/winuser/nf-winuser-setprocessdpiaware">SetProcessDPIAware</a> | Windows Vista | – | SetProcessDPIAware() | – | 
+| <a href="/windows/win32/api/shellscalingapi/nf-shellscalingapi-setprocessdpiawareness"><strong>SetProcessDpiAwareness</strong></a> | Windows 8.1 | SetProcessDpiAwareness(PROCESS_DPI_UNAWARE) | SetProcessDpiAwareness(PROCESS_SYSTEM_DPI_AWARE) | SetProcessDpiAwareness(PROCESS_PER_MONITOR_DPI_AWARE) | 
+| <a href="/windows/win32/api/winuser/nf-winuser-setprocessdpiawarenesscontext"><strong>SetProcessDpiAwarenessContext</strong></a> | Windows 10, Version 1607 | SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_UNAWARE) | SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_SYSTEM_AWARE) | <p>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE)</p><p>SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2)</p> | 
+
 
  
 
-## <a name="process-default-vs-thread-default"></a>Prozess-Standard und Thread-Standard
+## <a name="process-default-vs-thread-default"></a>Prozess-Standard im Vergleich zu Thread-Standard
 
 Dieses Dokument bezieht sich auf das Festlegen des DPI-Standardbewusstseins für Ihren Prozess. Dies liegt daran, Windows 10 unterstützung für die Ausführung von mehr als einem DPI-Bewusstseinsmodus innerhalb eines einzelnen Prozesses eingeführt hat (vor Windows 10 musste der gesamte Prozess einem einzelnen DPI-Bewusstseinsmodus entsprechen). Die Unterstützung für die Ausführung von mehr als einem DPI-Bewusstseinsmodus innerhalb eines Prozesses wird als "DPI-Skalierung im gemischten Modus" bezeichnet. Wenn Sie die DPI-Skalierung im gemischten Modus in Ihrem Prozess verwenden, kann jedes Fenster der obersten Ebene in einem DPI-Bewusstseinsmodus ausgeführt werden, der sich möglicherweise von dem des Standardprozesses unterscheiden kann. Sofern nicht explizit angegeben, wird für jeden Thread standardmäßig der Standardprozess verwendet, wenn er erstellt wird. Weitere Informationen zur DPI-Skalierung im gemischten Modus finden Sie im Artikel [DPI-Skalierung im gemischten](https://msdn.microsoft.com/library/mt744321\(v=vs.85\)) Modus.

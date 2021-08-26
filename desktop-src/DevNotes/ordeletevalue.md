@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen benannten Wert aus dem angegebenen Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+description: Entfernt einen benannten Wert aus dem angegebenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 ms.assetid: d2192607-34b8-4915-ac86-8ee206993071
-title: Ordeletevalue-Funktion (offreg. h)
+title: ORDeleteValue-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: 426765950fd38cbb3e3c99f4001db2965ddb07e3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 717464b1ba44593a9b36ccf26e5df248cb95df9bfa40a7786896c87041e246d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045290"
 ---
-# <a name="ordeletevalue-function"></a>Ordeletevalue-Funktion
+# <a name="ordeletevalue-function"></a>ORDeleteValue-Funktion
 
-Entfernt einen benannten Wert aus dem angegebenen Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Entfernt einen benannten Wert aus dem angegebenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ DWORD ORDeleteValue(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 </dd> <dt>
 
-*lpvaluename* \[ in, optional\]
+*lpValueName* \[ in, optional\]
 </dt> <dd>
 
-Der zu entfernende Registrierungs Wert. Wenn dieser Parameter **null** oder eine leere Zeichenfolge ist, wird der von der [**orsetvalue**](orsetvalue.md) -Funktion festgelegte unbenannte Standardwert entfernt.
+Der zu entfernende Registrierungswert. Wenn dieser Parameter **NULL oder** eine leere Zeichenfolge ist, wird der von der [**ORSetValue-Funktion**](orsetvalue.md) festgelegte unbenannte Standardwert entfernt.
 
-Bei Werten Namen wird die Groß-/Kleinschreibung nicht beachtet
+Bei Wertnamen wird die Schreibung nicht beachtet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null), der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerfreier Code, der in Winerror.h definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem Flag FORMAT \_ MESSAGE FROM SYSTEM \_ \_ verwenden, um eine generische Beschreibung des Fehlers zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,8 +68,8 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offlineregistrierungsbibliothek, Version 1.0 oder höher<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
@@ -78,7 +78,7 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 
 
 <dl> <dt>
 
-[**Orsetvalue**](orsetvalue.md)
+[**ORSetValue**](orsetvalue.md)
 </dt> </dl>
 
  

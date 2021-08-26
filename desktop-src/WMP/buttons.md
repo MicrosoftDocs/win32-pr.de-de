@@ -3,24 +3,24 @@ title: Schaltflächen (Windows Media Player SDK)
 description: Schaltflächen
 ms.assetid: 1212e2d9-e8f8-45d8-8c7f-20865c9c9c94
 keywords:
-- Windows Media Player Mobile Skins, Schaltflächen Übersicht
-- Skins, Schaltflächen Übersicht
-- Verweis für Skins, Schaltflächen
-- Schaltflächen in Skins, Info
+- Windows Media Player Mobile Skins, Übersicht über Schaltflächen
+- Skins, Übersicht über Schaltflächen
+- Referenz für Skins, Schaltflächen
+- Schaltflächen in Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0f06eb2fe21ee18a24f92e92d4fa760e9c76887
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 96128c723c5b8bbac31c82a32060704bc892dfb7
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102758"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885541"
 ---
 # <a name="buttons-windows-media-player-sdk"></a>Schaltflächen (Windows Media Player SDK)
 
-Sie möchten eine oder mehrere Schaltflächen in der Skin verwenden, und jede Schaltfläche muss in der Skin-Definitionsdatei definiert werden. Wenn Sie in diesem Abschnitt keine Schaltfläche definieren, kann Sie von der Skin nicht verwendet werden.
+Sie sollten eine oder mehrere Schaltflächen in Ihrer Skin verwenden, und jede Schaltfläche muss in der Skindefinitionsdatei definiert werden. Wenn Sie in diesem Abschnitt keine Schaltfläche definieren, kann Ihre Skin sie nicht verwenden.
 
-Der Schaltflächen Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden Zeile:
+Der Abschnitt buttons der Skindefinitionsdatei beginnt mit dieser Zeile:
 
 
 ```C++
@@ -30,7 +30,7 @@ Der Schaltflächen Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden
 
 
 
-Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zu den einzelnen Schaltflächen in der Skin enthalten. Eine typische Zeile könnte wie folgt lauten:
+Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zu den einzelnen Schaltflächen in Ihrer Skin enthalten. Eine typische Zeile kann sein:
 
 
 ```C++
@@ -40,9 +40,9 @@ Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informatione
 
 
 
-Beachten Sie, dass dieser Code als eine Zeile typisiert werden muss, die mit "PLAYPAUSE" beginnt und mit "Pushvorgang @ 160, 98" endet.
+Beachten Sie, dass dieser Code als eine Zeile beginnend mit "PlayPause" und endend mit "Pushed @ 160,98" typiert werden sollte.
 
-Sie können die folgende Vorlage für den Schaltflächen Abschnitt Ihrer Skin-Definitionsdatei verwenden:
+Sie können die folgende Vorlage für den Abschnitt Schaltfläche ihrer Skindefinitionsdatei verwenden:
 
 
 ```C++
@@ -53,22 +53,22 @@ Sie können die folgende Vorlage für den Schaltflächen Abschnitt Ihrer Skin-De
 
 
 
-Beachten Sie, dass diese als einzelne Zeilen eingegeben werden müssen, wobei der erste mit "// <Function> " beginnt und mit " &lt; Push 2 Image src &gt; " endet. Die zweite Zeile beginnt mit "//----------" und endet mit "------------------.".
+Beachten Sie auch hier, dass diese als einzelne Zeilen typiert werden sollten. Die erste beginnt mit "/ Funktion " und endet &lt; &gt; mit " Push &lt; 2 Image Src &gt; ". Die zweite Zeile beginnt mit "/ ----------" und endet mit "------------------."
 
-Die Schaltflächen Informationen für jede Zeile im Schaltflächen Abschnitt müssen in der folgenden Reihenfolge angezeigt werden. Nur die ersten sechs Teile der Zeile sind erforderlich. Sekundäre Images sind nur enthalten, wenn Sie benötigt werden.
+Schaltflächeninformationen für jede Zeile im Abschnitt Schaltfläche müssen in der folgenden Reihenfolge angezeigt werden. Nur die ersten sechs Teile der Zeile sind erforderlich. Sekundäre Images sind nur enthalten, wenn sie benötigt werden.
 
 1.  [Button-Funktion](button-function.md)
-2.  [Schalt Flächentyp](button-type.md)
-3.  [Schaltflächen Position](button-location.md)
-4.  [Bildquelle mit pushübertragung](pushed-image-source.md)
+2.  [Schaltflächentyp](button-type.md)
+3.  [Schaltflächenposition](button-location.md)
+4.  [Pushed Image Source](pushed-image-source.md)
 5.  [Bildquelle für deaktivierte Schaltfläche](image-source-for-disabled-button.md)
-6.  [RGB-Farbe](hit-rgb-color.md)
-7.  [Normale sekundäre Image Quelle](normal-secondary-image-source.md)
-8.  [Normale tertiäre Image Quelle](normal-tertiary-image-source.md)
-9.  [Quelle für das sekundäre Image](pushed-secondary-image-source.md)
-10. [Quelle für tertiäres Image übermittelt](pushed-tertiary-image-source.md)
+6.  [Rgb-Farbe treffen](hit-rgb-color.md)
+7.  [Normale sekundäre Imagequelle](normal-secondary-image-source.md)
+8.  [Normale, tertiäre Bildquelle](normal-tertiary-image-source.md)
+9.  [Pushed Secondary Image Source](pushed-secondary-image-source.md)
+10. [Pushed Tertiary Image Source](pushed-tertiary-image-source.md)
 
-Ein Beispiel für einen Schaltflächen Code finden Sie im [Abschnitt Sample Button](sample-button-section.md).
+Ein Beispiel für Schaltflächencode finden Sie im [Abschnitt "Beispielschaltfläche".](sample-button-section.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

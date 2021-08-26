@@ -1,58 +1,58 @@
 ---
-description: Zusätzlich zu den Informationen, die in den vorherigen Abschnitten erläutert wurden, enthält uisample.msi auch Daten für eine Beispiel Benutzeroberfläche.
+description: Zusätzlich zu den in den vorherigen Abschnitten erläuterten Informationen enthält uisample.msi auch Daten für eine Beispiel-Benutzeroberfläche.
 ms.assetid: 7e4ae4b8-e7b2-49b3-97b7-374b69006a2f
 title: Importieren der Benutzeroberfläche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2957dbec645bb85121c9748de83bc5c96ad04b05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2678eb2c6fb1c53f0d052c6bb1553af0f3d773b75d057969c66d74a39e499f35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043640"
 ---
 # <a name="importing-the-user-interface"></a>Importieren der Benutzeroberfläche
 
-Zusätzlich zu den Informationen, die in den vorherigen Abschnitten erläutert wurden, enthält uisample.msi auch Daten für eine Beispiel Benutzeroberfläche. Wenn Sie uisample.msi im Abschnitt [Importieren einer leeren Datenbank](importing-a-blank-database.md)in MNP2000.msi zusammengeführt haben, sind diese Informationen auch in MNP2000.msi vorhanden. Die Informationen für die Beispiel Benutzeroberfläche finden Sie in den folgenden Tabellen.
+Zusätzlich zu den in den vorherigen Abschnitten erläuterten Informationen enthält uisample.msi auch Daten für eine Beispiel-Benutzeroberfläche. Wenn Sie uisample.msi im Abschnitt Importieren einer leeren Datenbank in MNP2000.msi zusammengeführt [haben,](importing-a-blank-database.md)sind diese Informationen auch in MNP2000.msi vorhanden. Die Informationen für die Beispiel-Benutzeroberfläche sind in den folgenden Tabellen aufgeführt.
 
--   [Tabelle "aktiontext"](actiontext-table.md)
+-   [ActionText-Tabelle](actiontext-table.md)
 -   [Binäre Tabelle](binary-table.md)
--   [Steuerungs Tabelle](control-table.md)
+-   [Steuertabelle](control-table.md)
 -   [ControlEvent-Tabelle](controlevent-table.md)
--   [Dialog Feld Tabelle](dialog-table.md)
--   [Fehler Tabelle](error-table.md)
+-   [Dialogtabelle](dialog-table.md)
+-   [Fehlertabelle](error-table.md)
 -   [EventMapping-Tabelle](eventmapping-table.md)
 -   [RadioButton-Tabelle](radiobutton-table.md)
 -   [TextStyle-Tabelle](textstyle-table.md)
 -   [UIText-Tabelle](uitext-table.md)
 
-Der Datenbank-Editor, der mit dem Installationsprogramm bereitgestellt wird, enthält eine Dialogfeld Vorschau-Option, mit der Sie eine Vorschau der Dialogfelder der Benutzeroberfläche anzeigen können, die in den obigen Tabellen in den Daten angegeben sind.
+Der mit dem Installationsprogramm bereitgestellte Datenbank-Editor Orca enthält eine Dialogfeldvorschauoption, mit der Sie eine Vorschau der Dialogfelder der Benutzeroberfläche anzeigen können, die von den Daten in den obigen Tabellen angegeben werden.
 
-Das Beispiel Installationspaket MNP2000.msi ist jetzt für die Paketüberprüfung bereit. Führen Sie die Überprüfung immer für ein neues Paket aus, bevor Sie das Paket zum ersten Mal installieren. Dies wird unter Validieren des Installations Beispiels erläutert.
+Das Beispielinstallationspaket MNP2000.msi jetzt für die Paketvalidierung bereit. Führen Sie die Validierung immer für ein neues Paket aus, bevor Sie versuchen, das Paket zum ersten Mal zu installieren. Dies wird unter Überprüfen des Installationsbeispiels erläutert.
 
-Wenn Sie die Benutzeroberfläche nicht in das Beispiel Paket einschließen möchten, können Sie alle Informationen in den oben gezeigten Tabellen weglassen oder entfernen, mit Ausnahme der [TextStyle-Tabelle](textstyle-table.md) (die zum Definieren der [**defaultuifont**](defaultuifont.md) -Eigenschaft erforderlich ist). Sie sollten auch die Eigenschaften der Benutzeroberfläche aus der Eigenschaften [Tabelle](property-table.md)entfernen. Im folgenden wird eine Beispiel Eigenschaften Tabelle für das Notepad-Beispiel ohne Benutzeroberfläche angezeigt. Verwenden Sie die in der Tabelle gezeigten GUIDs nicht erneut, wenn Sie dieses Beispiel kopieren.
+Wenn Sie die Benutzeroberfläche nicht in das Beispielpaket ein- oder auslassen möchten, lassen Oder entfernen Sie alle Informationen in den oben gezeigten Tabellen mit Ausnahme der [TextStyle-Tabelle](textstyle-table.md) (die zum Definieren der [**DefaultUIFont-Eigenschaft erforderlich**](defaultuifont.md) ist). Sie sollten auch Benutzeroberflächeneigenschaften aus der [Eigenschaftentabelle entfernen.](property-table.md) Im Folgenden finden Sie eine Beispieltabelle Editor Eigenschaft für das Beispiel ohne Benutzeroberfläche. Verwenden Sie die in der Tabelle angezeigten GUIDs nicht wieder, wenn Sie dieses Beispiel kopieren.
 
-[Eigenschaften Tabelle](property-table.md)
+[Eigenschaftentabelle](property-table.md)
 
 
 
 | Eigenschaft                                   | Wert                                  |
 |--------------------------------------------|----------------------------------------|
-| [**Defaultuifont**](defaultuifont.md)     | DlgFont8                               |
+| [**DefaultUIFont**](defaultuifont.md)     | DlgFont8                               |
 | [**INSTALLLEVEL**](installlevel.md)       | 3                                      |
-| [**Limitui**](limitui.md)                 | 1                                      |
+| [**LIMITUI**](limitui.md)                 | 1                                      |
 | [**Hersteller**](manufacturer.md)       | Microsoft                              |
-| [**ProductCode**](productcode.md)         | {18a9233c-0b34-4127-a966-c257386270bc} |
-| [**Productlanguage**](productlanguage.md) | 1033                                   |
-| [**ProductName**](productname.md)         | MNP2000                                |
+| [**ProductCode**](productcode.md)         | {18A9233C-0B34-4127-A966-C257386270BC} |
+| [**ProductLanguage**](productlanguage.md) | 1033                                   |
+| [**Productname**](productname.md)         | MNP2000                                |
 | [**ProductVersion**](productversion.md)   | 01.40.0000                             |
-| [**UpgradeCode auch**](upgradecode.md)         | {908e378a-9551-4772-BF1D-5cfaf6fd9cb4} |
+| [**Upgradecode**](upgradecode.md)         | {908E378A-9551-4772-BF1D-5CFAF6FD9CB4} |
 
 
 
  
 
-Ein Paket ohne Benutzeroberfläche kann von der Befehlszeile oder von einem Programm installiert werden. Verwenden Sie die unter [Befehlszeilenoptionen](command-line-options.md)beschriebenen Methoden, um ein Paket über die Befehlszeile zu installieren. Verwenden Sie zum Installieren eines Pakets von einem Programm die unter [using Installer Functions](using-installer-functions.md)beschriebenen Methoden. Führen Sie die Überprüfung immer für ein neues Paket aus, bevor Sie ein neues Paket zum ersten Mal installieren.
+Ein Paket ohne Benutzeroberfläche kann über die Befehlszeile oder über ein Programm installiert werden. Verwenden Sie zum Installieren eines Pakets über die Befehlszeile die unter [Befehlszeilenoptionen beschriebenen Methoden.](command-line-options.md) Verwenden Sie zum Installieren eines Pakets aus einem Programm die unter [Verwenden von Installerfunktionen beschriebenen Methoden.](using-installer-functions.md) Führen Sie die Validierung immer für ein neues Paket aus, bevor Sie zum ersten Mal versuchen, ein neues Paket zu installieren.
 
 [Fortsetzen](validating-an-installation-database.md)
 

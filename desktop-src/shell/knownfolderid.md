@@ -1,20 +1,20 @@
 ---
-Description: Die KNOWNFOLDERID-Konstanten stellen GUIDs dar, die Standardordner identifizieren, die beim System als bekannte Ordner registriert sind.
+Description: Die KNOWNFOLDERID-Konstanten stellen GUIDs dar, die Standardordner identifizieren, die beim System als Bekannte Ordner registriert sind.
 ms.assetid: f2c08ade-3083-44e4-82b0-dde45f0e3094
 title: KNOWNFOLDERID (Knownfolders.h)
 ms.topic: reference
 ms.custom: snippet-project
 ms.date: 07/27/2020
-ms.openlocfilehash: eb4b6ef46179abbe515edfcd323a349c7d091ac9
-ms.sourcegitcommit: c8f1dc81483739b697c96ae97ca533028efc3b2c
+ms.openlocfilehash: 3d27f8831e4a68b6fb5bb95d7f4a6c34fe361db5
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "114656878"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626376"
 ---
 # <a name="knownfolderid"></a>KNOWNFOLDERID
 
-Die **KNOWNFOLDERID-Konstanten** stellen GUIDs dar, die Standardordner identifizieren, die beim System als [Bekannte Ordner registriert sind.](known-folders.md) Diese Ordner werden mit den Betriebssystemen Windows Vista und höher installiert, und auf einem Computer sind nur die für ihn geeigneten Ordner installiert. Beschreibungen dieser Ordner finden Sie unter [**CSIDL**](csidl.md).
+Die **KNOWNFOLDERID-Konstanten** stellen GUIDs dar, die Standardordner identifizieren, die beim System als Bekannte Ordner registriert [sind.](known-folders.md) Diese Ordner werden mit Windows Vista und späteren Betriebssystemen installiert, und auf einem Computer werden nur Ordner installiert, die für ihn geeignet sind. Beschreibungen dieser Ordner finden Sie unter [**CSIDL**](csidl.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -56,7 +56,7 @@ HRESULT CExplorerBrowserHostDialog::_FillViewWithKnownFolders(IResultsFolder *pr
 
 ```
 
-Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/winui/shell/appplatform/ExplorerBrowserCustomContents/ExplorerBrowserCustomContents.cpp) auf GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples/blob/1d363ff4bd17d8e20415b92e2ee989d615cc0d91/Samples/Win7Samples/winui/shell/appplatform/ExplorerBrowserCustomContents/ExplorerBrowserCustomContents.cpp) zu GitHub.
 
 ## <a name="constants"></a>Konstanten
 
@@ -64,19 +64,19 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Konstante</th>
-<th style="text-align: left;">Beschreibung</th>
+<th >Konstante</th>
+<th >Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_AccountPictures"></span><span id="folderid_accountpictures"></span><span id="FOLDERID_ACCOUNTPICTURES"></span><dl> <dt><strong>FOLDERID_AccountPictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AccountPictures"></span><span id="folderid_accountpictures"></span><span id="FOLDERID_ACCOUNTPICTURES"></span><dl> <dt><strong>FOLDERID_AccountPictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -89,7 +89,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -97,15 +97,15 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8</td>
+<td>None, in Windows 8 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -113,8 +113,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_AddNewPrograms"></span><span id="folderid_addnewprograms"></span><span id="FOLDERID_ADDNEWPROGRAMS"></span><dl> <dt><strong>FOLDERID_AddNewPrograms</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AddNewPrograms"></span><span id="folderid_addnewprograms"></span><span id="FOLDERID_ADDNEWPROGRAMS"></span><dl> <dt><strong>FOLDERID_AddNewPrograms</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -123,11 +123,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Programme erhalten</td>
+<td>Abrufen von Programmen</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -139,10 +139,10 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Neue Programme hinzufügen (im Element <strong>"Programme</strong> hinzufügen" oder "Programme entfernen" im Systemsteuerung)</td>
+<td>Neue Programme hinzufügen (finden Sie im Systemsteuerung im Element <strong>Programme hinzufügen oder entfernen)</strong></td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -151,8 +151,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_AdminTools"></span><span id="folderid_admintools"></span><span id="FOLDERID_ADMINTOOLS"></span><dl> <dt><strong>FOLDERID_AdminTools</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AdminTools"></span><span id="folderid_admintools"></span><span id="FOLDERID_ADMINTOOLS"></span><dl> <dt><strong>FOLDERID_AdminTools</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -165,11 +165,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%APPDATA%\Microsoft\Windows\Startmenü\Programme\Verwaltung</td>
+<td>%APPDATA%\Microsoft\Windows\Startmenü\Programme\Verwaltungstools</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -180,8 +180,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <td>Verwaltung</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>%USERPROFILE%\Start menu\Programs\Administrative Tools</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Startmenü\Programme\Administrative Tools</td>
 </tr>
 </tbody>
 </table>
@@ -189,8 +189,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_AppDataDesktop"></span><span id="folderid_appdatadesktop"></span><span id="FOLDERID_APPDATADESKTOP"></span><dl> <dt><strong>FOLDERID_AppDataDesktop</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppDataDesktop"></span><span id="folderid_appdatadesktop"></span><span id="FOLDERID_APPDATADESKTOP"></span><dl> <dt><strong>FOLDERID_AppDataDesktop</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -203,7 +203,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -211,25 +211,25 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 10, Version 1709</td>
+<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_AppDataDocuments"></span><span id="folderid_appdatadocuments"></span><span id="FOLDERID_APPDATADOCUMENTS"></span><dl> <dt><strong>FOLDERID_AppDataDocuments</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppDataDocuments"></span><span id="folderid_appdatadocuments"></span><span id="FOLDERID_APPDATADOCUMENTS"></span><dl> <dt><strong>FOLDERID_AppDataDocuments</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -242,7 +242,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -250,25 +250,25 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 10, Version 1709</td>
+<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_AppDataFavorites"></span><span id="folderid_appdatafavorites"></span><span id="FOLDERID_APPDATAFAVORITES"></span><dl> <dt><strong>FOLDERID_AppDataFavorites</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppDataFavorites"></span><span id="folderid_appdatafavorites"></span><span id="FOLDERID_APPDATAFAVORITES"></span><dl> <dt><strong>FOLDERID_AppDataFavorites</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -281,7 +281,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -289,25 +289,25 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
+<td>None, value introduced in Windows 10, Version 1709</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_AppDataProgramData"></span><span id="folderid_appdataprogramdata"></span><span id="FOLDERID_APPDATAPROGRAMDATA"></span><dl> <dt><strong>FOLDERID_AppDataProgramData</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppDataProgramData"></span><span id="folderid_appdataprogramdata"></span><span id="FOLDERID_APPDATAPROGRAMDATA"></span><dl> <dt><strong>FOLDERID_AppDataProgramData</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -320,7 +320,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -328,25 +328,25 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 10, Version 1709 eingeführter Wert</td>
+<td>None, value introduced in Windows 10, Version 1709</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
 
 <p> </p>
-<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu ermöglichen. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
+<p>Diese FOLDERID wird intern von .NET-Anwendungen verwendet, um plattformübergreifende App-Funktionen zu aktivieren. Sie ist nicht für die direkte Verwendung aus einer Anwendung vorgesehen.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ApplicationShortcuts"></span><span id="folderid_applicationshortcuts"></span><span id="FOLDERID_APPLICATIONSHORTCUTS"></span><dl> <dt><strong>FOLDERID_ApplicationShortcuts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ApplicationShortcuts"></span><span id="folderid_applicationshortcuts"></span><span id="FOLDERID_APPLICATIONSHORTCUTS"></span><dl> <dt><strong>FOLDERID_ApplicationShortcuts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -359,7 +359,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -367,15 +367,15 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführter Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -383,8 +383,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_AppsFolder"></span><span id="folderid_appsfolder"></span><span id="FOLDERID_APPSFOLDER"></span><dl> <dt><strong>FOLDERID_AppsFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppsFolder"></span><span id="folderid_appsfolder"></span><span id="FOLDERID_APPSFOLDER"></span><dl> <dt><strong>FOLDERID_AppsFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -393,11 +393,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Anwendungen</td>
+<td>Applications</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -405,15 +405,15 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführter Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -421,8 +421,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_AppUpdates"></span><span id="folderid_appupdates"></span><span id="FOLDERID_APPUPDATES"></span><dl> <dt><strong>FOLDERID_AppUpdates</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_AppUpdates"></span><span id="folderid_appupdates"></span><span id="FOLDERID_APPUPDATES"></span><dl> <dt><strong>FOLDERID_AppUpdates</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -435,7 +435,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -447,11 +447,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>None, in Windows Vista eingeführter Wert. In früheren Versionen von Windows waren die Informationen auf dieser Seite unter <strong>Software</strong> enthalten, wenn das Kontrollkästchen <strong>Updates anzeigen</strong> aktiviert war.</td>
+<td>None, value introduced in Windows Vista. In früheren Versionen von Windows die Informationen auf dieser Seite <strong>im</strong> Feld <strong></strong> Programme hinzufügen oder entfernen enthalten, wenn das Kontrollkästchen Updates anzeigen aktivieren war.</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -459,8 +459,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_CameraRoll"></span><span id="folderid_cameraroll"></span><span id="FOLDERID_CAMERAROLL"></span><dl> <dt><strong>FOLDERID_CameraRoll</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CameraRoll"></span><span id="folderid_cameraroll"></span><span id="FOLDERID_CAMERAROLL"></span><dl> <dt><strong>FOLDERID_CameraRoll</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -473,7 +473,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -481,15 +481,15 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8.1 eingeführter Wert</td>
+<td>None, value introduced in Windows 8.1</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -497,8 +497,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_CDBurning"></span><span id="folderid_cdburning"></span><span id="FOLDERID_CDBURNING"></span><dl> <dt><strong>FOLDERID_CDBurning</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CDBurning"></span><span id="folderid_cdburning"></span><span id="FOLDERID_CDBURNING"></span><dl> <dt><strong>FOLDERID_CDBurning</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -507,11 +507,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Temporärer Ordner "Burn"</td>
+<td>Temporärer Burn-Ordner</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -523,11 +523,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>CD-Platte</td>
+<td>CD-2016</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>%USERPROFILE%\Local Einstellungen\Application Data\Microsoft\CD Überprüfen</td>
+<td>Legacy-Standardpfad</td>
+<td>%USERPROFILE%\Local Einstellungen\Application Data\Microsoft\CD</td>
 </tr>
 </tbody>
 </table>
@@ -535,8 +535,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ChangeRemovePrograms"></span><span id="folderid_changeremoveprograms"></span><span id="FOLDERID_CHANGEREMOVEPROGRAMS"></span><dl> <dt><strong>FOLDERID_ChangeRemovePrograms</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ChangeRemovePrograms"></span><span id="folderid_changeremoveprograms"></span><span id="FOLDERID_CHANGEREMOVEPROGRAMS"></span><dl> <dt><strong>FOLDERID_ChangeRemovePrograms</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -549,7 +549,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -573,8 +573,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_CommonAdminTools"></span><span id="folderid_commonadmintools"></span><span id="FOLDERID_COMMONADMINTOOLS"></span><dl> <dt><strong>FOLDERID_CommonAdminTools</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonAdminTools"></span><span id="folderid_commonadmintools"></span><span id="FOLDERID_COMMONADMINTOOLS"></span><dl> <dt><strong>FOLDERID_CommonAdminTools</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -587,7 +587,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -611,8 +611,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_CommonOEMLinks"></span><span id="folderid_commonoemlinks"></span><span id="FOLDERID_COMMONOEMLINKS"></span><dl> <dt><strong>FOLDERID_CommonOEMLinks</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonOEMLinks"></span><span id="folderid_commonoemlinks"></span><span id="FOLDERID_COMMONOEMLINKS"></span><dl> <dt><strong>FOLDERID_CommonOEMLinks</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -625,7 +625,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -649,8 +649,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_CommonPrograms"></span><span id="folderid_commonprograms"></span><span id="FOLDERID_COMMONPROGRAMS"></span><dl> <dt><strong>FOLDERID_CommonPrograms</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonPrograms"></span><span id="folderid_commonprograms"></span><span id="FOLDERID_COMMONPROGRAMS"></span><dl> <dt><strong>FOLDERID_CommonPrograms</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -663,7 +663,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -687,8 +687,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_CommonStartMenu"></span><span id="folderid_commonstartmenu"></span><span id="FOLDERID_COMMONSTARTMENU"></span><dl> <dt><strong>FOLDERID_CommonStartMenu</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonStartMenu"></span><span id="folderid_commonstartmenu"></span><span id="FOLDERID_COMMONSTARTMENU"></span><dl> <dt><strong>FOLDERID_CommonStartMenu</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -701,7 +701,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -725,8 +725,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_CommonStartup"></span><span id="folderid_commonstartup"></span><span id="FOLDERID_COMMONSTARTUP"></span><dl> <dt><strong>FOLDERID_CommonStartup</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonStartup"></span><span id="folderid_commonstartup"></span><span id="FOLDERID_COMMONSTARTUP"></span><dl> <dt><strong>FOLDERID_CommonStartup</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -739,11 +739,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ALLUSERSPROFILE%\Microsoft\Windows\Start menu\Programs\StartUp</td>
+<td>%ALLUSERSPROFILE%\Microsoft\Windows\Startmenü\Programme\StartUp</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -763,8 +763,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_CommonTemplates"></span><span id="folderid_commontemplates"></span><span id="FOLDERID_COMMONTEMPLATES"></span><dl> <dt><strong>FOLDERID_CommonTemplates</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_CommonTemplates"></span><span id="folderid_commontemplates"></span><span id="FOLDERID_COMMONTEMPLATES"></span><dl> <dt><strong>FOLDERID_CommonTemplates</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -777,7 +777,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -801,8 +801,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ComputerFolder"></span><span id="folderid_computerfolder"></span><span id="FOLDERID_COMPUTERFOLDER"></span><dl> <dt><strong>FOLDERID_ComputerFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ComputerFolder"></span><span id="folderid_computerfolder"></span><span id="FOLDERID_COMPUTERFOLDER"></span><dl> <dt><strong>FOLDERID_ComputerFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -815,7 +815,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -839,8 +839,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ConflictFolder"></span><span id="folderid_conflictfolder"></span><span id="FOLDERID_CONFLICTFOLDER"></span><dl> <dt><strong>FOLDERID_ConflictFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ConflictFolder"></span><span id="folderid_conflictfolder"></span><span id="FOLDERID_CONFLICTFOLDER"></span><dl> <dt><strong>FOLDERID_ConflictFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -853,7 +853,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -865,11 +865,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht zutreffend. Diese <strong>KNOWNFOLDERID</strong> bezieht sich auf den Windows Vista Synchronization Manager. Es handelt sich nicht um den Ordner, auf den der ältere <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>ISyncMgrConflictFolder verweist.</strong></a></td>
+<td>Nicht zutreffend Diese <strong>KNOWNFOLDERID</strong> bezieht sich auf den Windows Vista Synchronization Manager. Es handelt sich nicht um den Ordner, auf den der ältere <a href="/windows/desktop/api/Syncmgr/nn-syncmgr-isyncmgrconflictfolder"><strong>ISyncMgrConflictFolder verweist.</strong></a></td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -877,8 +877,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ConnectionsFolder"></span><span id="folderid_connectionsfolder"></span><span id="FOLDERID_CONNECTIONSFOLDER"></span><dl> <dt><strong>FOLDERID_ConnectionsFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ConnectionsFolder"></span><span id="folderid_connectionsfolder"></span><span id="FOLDERID_CONNECTIONSFOLDER"></span><dl> <dt><strong>FOLDERID_ConnectionsFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -891,7 +891,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -915,8 +915,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Contacts"></span><span id="folderid_contacts"></span><span id="FOLDERID_CONTACTS"></span><dl> <dt><strong>FOLDERID_Contacts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Contacts"></span><span id="folderid_contacts"></span><span id="FOLDERID_CONTACTS"></span><dl> <dt><strong>FOLDERID_Contacts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -929,7 +929,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -941,11 +941,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -953,8 +953,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ControlPanelFolder"></span><span id="folderid_controlpanelfolder"></span><span id="FOLDERID_CONTROLPANELFOLDER"></span><dl> <dt><strong>FOLDERID_ControlPanelFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ControlPanelFolder"></span><span id="folderid_controlpanelfolder"></span><span id="FOLDERID_CONTROLPANELFOLDER"></span><dl> <dt><strong>FOLDERID_ControlPanelFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -967,7 +967,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -991,8 +991,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Cookies"></span><span id="folderid_cookies"></span><span id="FOLDERID_COOKIES"></span><dl> <dt><strong>FOLDERID_Cookies</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Cookies"></span><span id="folderid_cookies"></span><span id="FOLDERID_COOKIES"></span><dl> <dt><strong>FOLDERID_Cookies</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1005,7 +1005,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1029,8 +1029,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Desktop"></span><span id="folderid_desktop"></span><span id="FOLDERID_DESKTOP"></span><dl> <dt><strong>FOLDERID_Desktop</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Desktop"></span><span id="folderid_desktop"></span><span id="FOLDERID_DESKTOP"></span><dl> <dt><strong>FOLDERID_Desktop</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1043,7 +1043,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1067,8 +1067,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_DeviceMetadataStore"></span><span id="folderid_devicemetadatastore"></span><span id="FOLDERID_DEVICEMETADATASTORE"></span><dl> <dt><strong>FOLDERID_DeviceMetadataStore</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_DeviceMetadataStore"></span><span id="folderid_devicemetadatastore"></span><span id="FOLDERID_DEVICEMETADATASTORE"></span><dl> <dt><strong>FOLDERID_DeviceMetadataStore</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1081,7 +1081,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1093,11 +1093,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1105,8 +1105,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Documents"></span><span id="folderid_documents"></span><span id="FOLDERID_DOCUMENTS"></span><dl> <dt><strong>FOLDERID_Documents</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Documents"></span><span id="folderid_documents"></span><span id="FOLDERID_DOCUMENTS"></span><dl> <dt><strong>FOLDERID_Documents</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1119,7 +1119,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1143,8 +1143,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_DocumentsLibrary"></span><span id="folderid_documentslibrary"></span><span id="FOLDERID_DOCUMENTSLIBRARY"></span><dl> <dt><strong>FOLDERID_DocumentsLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_DocumentsLibrary"></span><span id="folderid_documentslibrary"></span><span id="FOLDERID_DOCUMENTSLIBRARY"></span><dl> <dt><strong>FOLDERID_DocumentsLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1157,7 +1157,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1169,11 +1169,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1181,8 +1181,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Downloads"></span><span id="folderid_downloads"></span><span id="FOLDERID_DOWNLOADS"></span><dl> <dt><strong>FOLDERID_Downloads</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Downloads"></span><span id="folderid_downloads"></span><span id="FOLDERID_DOWNLOADS"></span><dl> <dt><strong>FOLDERID_Downloads</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1195,7 +1195,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1207,11 +1207,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1219,8 +1219,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Favorites"></span><span id="folderid_favorites"></span><span id="FOLDERID_FAVORITES"></span><dl> <dt><strong>FOLDERID_Favorites</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Favorites"></span><span id="folderid_favorites"></span><span id="FOLDERID_FAVORITES"></span><dl> <dt><strong>FOLDERID_Favorites</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1233,7 +1233,7 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1257,8 +1257,8 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Fonts"></span><span id="folderid_fonts"></span><span id="FOLDERID_FONTS"></span><dl> <dt><strong>FOLDERID_Fonts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Fonts"></span><span id="folderid_fonts"></span><span id="FOLDERID_FONTS"></span><dl> <dt><strong>FOLDERID_Fonts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1295,11 +1295,11 @@ Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windo
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Games"></span><span id="folderid_games"></span><span id="FOLDERID_GAMES"></span><dl> <dt><strong>FOLDERID_Games</strong></dt> </dl></td>
-<td style="text-align: left;"><div class="alert">
+<td ><span id="FOLDERID_Games"></span><span id="folderid_games"></span><span id="FOLDERID_GAMES"></span><dl> <dt><strong>FOLDERID_Games</strong></dt> </dl></td>
+<td ><div class="alert">
 <blockquote>
 [!Note]<br />
-Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Versionen wird 0x80070057 zurückgegeben– <strong>E_INVALIDARG</strong>
+Diese FOLDERID ist in Windows 10, Version 1803 und höher, veraltet. In diesen Versionen wird 0x80070057 zurückgegeben– <strong>E_INVALIDARG</strong>
 </blockquote>
 </div>
 <div>
@@ -1318,7 +1318,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1330,11 +1330,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1342,8 +1342,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_GameTasks"></span><span id="folderid_gametasks"></span><span id="FOLDERID_GAMETASKS"></span><dl> <dt><strong>FOLDERID_GameTasks</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_GameTasks"></span><span id="folderid_gametasks"></span><span id="FOLDERID_GAMETASKS"></span><dl> <dt><strong>FOLDERID_GameTasks</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1368,11 +1368,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1380,8 +1380,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_History"></span><span id="folderid_history"></span><span id="FOLDERID_HISTORY"></span><dl> <dt><strong>FOLDERID_History</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_History"></span><span id="folderid_history"></span><span id="FOLDERID_HISTORY"></span><dl> <dt><strong>FOLDERID_History</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1418,8 +1418,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_HomeGroup"></span><span id="folderid_homegroup"></span><span id="FOLDERID_HOMEGROUP"></span><dl> <dt><strong>FOLDERID_HomeGroup</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_HomeGroup"></span><span id="folderid_homegroup"></span><span id="FOLDERID_HOMEGROUP"></span><dl> <dt><strong>FOLDERID_HomeGroup</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1432,7 +1432,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1444,11 +1444,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1456,8 +1456,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_HomeGroupCurrentUser"></span><span id="folderid_homegroupcurrentuser"></span><span id="FOLDERID_HOMEGROUPCURRENTUSER"></span><dl> <dt><strong>FOLDERID_HomeGroupCurrentUser</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_HomeGroupCurrentUser"></span><span id="folderid_homegroupcurrentuser"></span><span id="FOLDERID_HOMEGROUPCURRENTUSER"></span><dl> <dt><strong>FOLDERID_HomeGroupCurrentUser</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1470,7 +1470,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1482,11 +1482,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1494,8 +1494,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ImplicitAppShortcuts"></span><span id="folderid_implicitappshortcuts"></span><span id="FOLDERID_IMPLICITAPPSHORTCUTS"></span><dl> <dt><strong>FOLDERID_ImplicitAppShortcuts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ImplicitAppShortcuts"></span><span id="folderid_implicitappshortcuts"></span><span id="FOLDERID_IMPLICITAPPSHORTCUTS"></span><dl> <dt><strong>FOLDERID_ImplicitAppShortcuts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1520,11 +1520,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1532,8 +1532,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_InternetCache"></span><span id="folderid_internetcache"></span><span id="FOLDERID_INTERNETCACHE"></span><dl> <dt><strong>FOLDERID_InternetCache</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_InternetCache"></span><span id="folderid_internetcache"></span><span id="FOLDERID_INTERNETCACHE"></span><dl> <dt><strong>FOLDERID_InternetCache</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1546,11 +1546,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LOCALAPPDATA%\Microsoft\Windows\Temporäre Internetdateien</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows\Temporary Internet Files</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -1561,7 +1561,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Temporäre Internetdateien</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%USERPROFILE%\Local Einstellungen\Temporary Internet Files</td>
 </tr>
 </tbody>
@@ -1570,8 +1570,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_InternetFolder"></span><span id="folderid_internetfolder"></span><span id="FOLDERID_INTERNETFOLDER"></span><dl> <dt><strong>FOLDERID_InternetFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_InternetFolder"></span><span id="folderid_internetfolder"></span><span id="FOLDERID_INTERNETFOLDER"></span><dl> <dt><strong>FOLDERID_InternetFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1584,7 +1584,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1599,7 +1599,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Internet Explorer</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -1608,8 +1608,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Libraries"></span><span id="folderid_libraries"></span><span id="FOLDERID_LIBRARIES"></span><dl> <dt><strong>FOLDERID_Libraries</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Libraries"></span><span id="folderid_libraries"></span><span id="FOLDERID_LIBRARIES"></span><dl> <dt><strong>FOLDERID_Libraries</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1622,7 +1622,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1630,15 +1630,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 7</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1646,8 +1646,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Links"></span><span id="folderid_links"></span><span id="FOLDERID_LINKS"></span><dl> <dt><strong>FOLDERID_Links</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Links"></span><span id="folderid_links"></span><span id="FOLDERID_LINKS"></span><dl> <dt><strong>FOLDERID_Links</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1660,7 +1660,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1672,11 +1672,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1684,8 +1684,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_LocalAppData"></span><span id="folderid_localappdata"></span><span id="FOLDERID_LOCALAPPDATA"></span><dl> <dt><strong>FOLDERID_LocalAppData</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_LocalAppData"></span><span id="folderid_localappdata"></span><span id="FOLDERID_LOCALAPPDATA"></span><dl> <dt><strong>FOLDERID_LocalAppData</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1694,11 +1694,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Lokal</td>
+<td>Lokales Gerät</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1713,7 +1713,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%USERPROFILE%\Local Einstellungen\Application Data</td>
 </tr>
 </tbody>
@@ -1722,8 +1722,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_LocalAppDataLow"></span><span id="folderid_localappdatalow"></span><span id="FOLDERID_LOCALAPPDATALOW"></span><dl> <dt><strong>FOLDERID_LocalAppDataLow</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_LocalAppDataLow"></span><span id="folderid_localappdatalow"></span><span id="FOLDERID_LOCALAPPDATALOW"></span><dl> <dt><strong>FOLDERID_LocalAppDataLow</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1736,7 +1736,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1748,11 +1748,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1760,8 +1760,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_LocalizedResourcesDir"></span><span id="folderid_localizedresourcesdir"></span><span id="FOLDERID_LOCALIZEDRESOURCESDIR"></span><dl> <dt><strong>FOLDERID_LocalizedResourcesDir</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_LocalizedResourcesDir"></span><span id="folderid_localizedresourcesdir"></span><span id="FOLDERID_LOCALIZEDRESOURCESDIR"></span><dl> <dt><strong>FOLDERID_LocalizedResourcesDir</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1789,7 +1789,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Keine</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%windir%\resources\0409 (Codepage)</td>
 </tr>
 </tbody>
@@ -1798,8 +1798,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Music"></span><span id="folderid_music"></span><span id="FOLDERID_MUSIC"></span><dl> <dt><strong>FOLDERID_Music</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Music"></span><span id="folderid_music"></span><span id="FOLDERID_MUSIC"></span><dl> <dt><strong>FOLDERID_Music</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1824,7 +1824,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Meine Musik</td>
+<td>Eigene Musik</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
@@ -1836,8 +1836,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_MusicLibrary"></span><span id="folderid_musiclibrary"></span><span id="FOLDERID_MUSICLIBRARY"></span><dl> <dt><strong>FOLDERID_MusicLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_MusicLibrary"></span><span id="folderid_musiclibrary"></span><span id="FOLDERID_MUSICLIBRARY"></span><dl> <dt><strong>FOLDERID_MusicLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1862,11 +1862,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1874,8 +1874,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_NetHood"></span><span id="folderid_nethood"></span><span id="FOLDERID_NETHOOD"></span><dl> <dt><strong>FOLDERID_NetHood</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_NetHood"></span><span id="folderid_nethood"></span><span id="FOLDERID_NETHOOD"></span><dl> <dt><strong>FOLDERID_NetHood</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1912,8 +1912,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_NetworkFolder"></span><span id="folderid_networkfolder"></span><span id="FOLDERID_NETWORKFOLDER"></span><dl> <dt><strong>FOLDERID_NetworkFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_NetworkFolder"></span><span id="folderid_networkfolder"></span><span id="FOLDERID_NETWORKFOLDER"></span><dl> <dt><strong>FOLDERID_NetworkFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1926,7 +1926,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -1950,8 +1950,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Objects3D"></span><span id="folderid_objects3d"></span><span id="FOLDERID_OBJECTS3D"></span><dl> <dt><strong>FOLDERID_Objects3D</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Objects3D"></span><span id="folderid_objects3d"></span><span id="FOLDERID_OBJECTS3D"></span><dl> <dt><strong>FOLDERID_Objects3D</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -1976,11 +1976,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -1988,8 +1988,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_OriginalImages"></span><span id="folderid_originalimages"></span><span id="FOLDERID_ORIGINALIMAGES"></span><dl> <dt><strong>FOLDERID_OriginalImages</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_OriginalImages"></span><span id="folderid_originalimages"></span><span id="FOLDERID_ORIGINALIMAGES"></span><dl> <dt><strong>FOLDERID_OriginalImages</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2014,11 +2014,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2026,8 +2026,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PhotoAlbums"></span><span id="folderid_photoalbums"></span><span id="FOLDERID_PHOTOALBUMS"></span><dl> <dt><strong>FOLDERID_PhotoAlbums</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PhotoAlbums"></span><span id="folderid_photoalbums"></span><span id="FOLDERID_PHOTOALBUMS"></span><dl> <dt><strong>FOLDERID_PhotoAlbums</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2036,7 +2036,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Bildschirmpräsentationen</td>
+<td>Diashows</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
@@ -2052,11 +2052,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2064,8 +2064,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PicturesLibrary"></span><span id="folderid_pictureslibrary"></span><span id="FOLDERID_PICTURESLIBRARY"></span><dl> <dt><strong>FOLDERID_PicturesLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PicturesLibrary"></span><span id="folderid_pictureslibrary"></span><span id="FOLDERID_PICTURESLIBRARY"></span><dl> <dt><strong>FOLDERID_PicturesLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2090,11 +2090,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2102,8 +2102,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Pictures"></span><span id="folderid_pictures"></span><span id="FOLDERID_PICTURES"></span><dl> <dt><strong>FOLDERID_Pictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Pictures"></span><span id="folderid_pictures"></span><span id="FOLDERID_PICTURES"></span><dl> <dt><strong>FOLDERID_Pictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2128,7 +2128,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Meine Bilder</td>
+<td>Eigene Bilder</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
@@ -2140,8 +2140,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Playlists"></span><span id="folderid_playlists"></span><span id="FOLDERID_PLAYLISTS"></span><dl> <dt><strong>FOLDERID_Playlists</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Playlists"></span><span id="folderid_playlists"></span><span id="FOLDERID_PLAYLISTS"></span><dl> <dt><strong>FOLDERID_Playlists</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2166,11 +2166,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2178,8 +2178,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PrintersFolder"></span><span id="folderid_printersfolder"></span><span id="FOLDERID_PRINTERSFOLDER"></span><dl> <dt><strong>FOLDERID_PrintersFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PrintersFolder"></span><span id="folderid_printersfolder"></span><span id="FOLDERID_PRINTERSFOLDER"></span><dl> <dt><strong>FOLDERID_PrintersFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2192,7 +2192,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2216,8 +2216,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PrintHood"></span><span id="folderid_printhood"></span><span id="FOLDERID_PRINTHOOD"></span><dl> <dt><strong>FOLDERID_PrintHood</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PrintHood"></span><span id="folderid_printhood"></span><span id="FOLDERID_PRINTHOOD"></span><dl> <dt><strong>FOLDERID_PrintHood</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2254,8 +2254,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Profile"></span><span id="folderid_profile"></span><span id="FOLDERID_PROFILE"></span><dl> <dt><strong>FOLDERID_Profile</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Profile"></span><span id="folderid_profile"></span><span id="FOLDERID_PROFILE"></span><dl> <dt><strong>FOLDERID_Profile</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2292,8 +2292,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ProgramData"></span><span id="folderid_programdata"></span><span id="FOLDERID_PROGRAMDATA"></span><dl> <dt><strong>FOLDERID_ProgramData</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ProgramData"></span><span id="folderid_programdata"></span><span id="FOLDERID_PROGRAMDATA"></span><dl> <dt><strong>FOLDERID_ProgramData</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2321,7 +2321,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Anwendungsdaten</td>
 </tr>
 </tbody>
@@ -2330,8 +2330,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFiles"></span><span id="folderid_programfiles"></span><span id="FOLDERID_PROGRAMFILES"></span><dl> <dt><strong>FOLDERID_ProgramFiles</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFiles"></span><span id="folderid_programfiles"></span><span id="FOLDERID_PROGRAMFILES"></span><dl> <dt><strong>FOLDERID_ProgramFiles</strong></dt> </dl></td>
+<td ><p>Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2360,7 +2360,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
@@ -2369,8 +2369,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFilesX64"></span><span id="folderid_programfilesx64"></span><span id="FOLDERID_PROGRAMFILESX64"></span><dl> <dt><strong>FOLDERID_ProgramFilesX64</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Dieser Wert wird unter 32-Bit-Betriebssystemen nicht unterstützt. Sie wird auch nicht für 32-Bit-Anwendungen unterstützt, die unter 64-Bit-Betriebssystemen ausgeführt werden. Der Versuch, FOLDERID_ProgramFilesX64 in beiden Situationen zu verwenden, führt zu einem Fehler. Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFilesX64"></span><span id="folderid_programfilesx64"></span><span id="FOLDERID_PROGRAMFILESX64"></span><dl> <dt><strong>FOLDERID_ProgramFilesX64</strong></dt> </dl></td>
+<td ><p>Dieser Wert wird unter 32-Bit-Betriebssystemen nicht unterstützt. Es wird auch nicht für 32-Bit-Anwendungen unterstützt, die unter 64-Bit-Betriebssystemen ausgeführt werden. Der Versuch, FOLDERID_ProgramFilesX64 in beiden Situation zu verwenden, führt zu einem Fehler. Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2399,7 +2399,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
@@ -2408,8 +2408,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFilesX86"></span><span id="folderid_programfilesx86"></span><span id="FOLDERID_PROGRAMFILESX86"></span><dl> <dt><strong>FOLDERID_ProgramFilesX86</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFilesX86"></span><span id="folderid_programfilesx86"></span><span id="FOLDERID_PROGRAMFILESX86"></span><dl> <dt><strong>FOLDERID_ProgramFilesX86</strong></dt> </dl></td>
+<td ><p>Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2438,7 +2438,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Programme</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ProgramFiles% (%SystemDrive%\Programme)</td>
 </tr>
 </tbody>
@@ -2447,8 +2447,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFilesCommon"></span><span id="folderid_programfilescommon"></span><span id="FOLDERID_PROGRAMFILESCOMMON"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommon</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFilesCommon"></span><span id="folderid_programfilescommon"></span><span id="FOLDERID_PROGRAMFILESCOMMON"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommon</strong></dt> </dl></td>
+<td ><p>Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2477,7 +2477,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Allgemeine Dateien</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ProgramFiles%\Common Files</td>
 </tr>
 </tbody>
@@ -2486,8 +2486,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFilesCommonX64"></span><span id="folderid_programfilescommonx64"></span><span id="FOLDERID_PROGRAMFILESCOMMONX64"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommonX64</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFilesCommonX64"></span><span id="folderid_programfilescommonx64"></span><span id="FOLDERID_PROGRAMFILESCOMMONX64"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommonX64</strong></dt> </dl></td>
+<td ><p>Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2516,7 +2516,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Allgemeine Dateien</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ProgramFiles%\Common Files</td>
 </tr>
 </tbody>
@@ -2525,8 +2525,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ProgramFilesCommonX86"></span><span id="folderid_programfilescommonx86"></span><span id="FOLDERID_PROGRAMFILESCOMMONX86"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommonX86</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Weitere Informationen finden Sie unter Hinweise.</p>
+<td ><span id="FOLDERID_ProgramFilesCommonX86"></span><span id="folderid_programfilescommonx86"></span><span id="FOLDERID_PROGRAMFILESCOMMONX86"></span><dl> <dt><strong>FOLDERID_ProgramFilesCommonX86</strong></dt> </dl></td>
+<td ><p>Weitere Informationen finden Sie unter Hinweise.</p>
 
 <table>
 <tbody>
@@ -2564,8 +2564,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Programs"></span><span id="folderid_programs"></span><span id="FOLDERID_PROGRAMS"></span><dl> <dt><strong>FOLDERID_Programs</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Programs"></span><span id="folderid_programs"></span><span id="FOLDERID_PROGRAMS"></span><dl> <dt><strong>FOLDERID_Programs</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2578,7 +2578,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESENER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2602,8 +2602,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Public"></span><span id="folderid_public"></span><span id="FOLDERID_PUBLIC"></span><dl> <dt><strong>FOLDERID_Public</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Public"></span><span id="folderid_public"></span><span id="FOLDERID_PUBLIC"></span><dl> <dt><strong>FOLDERID_Public</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2628,11 +2628,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2640,8 +2640,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PublicDesktop"></span><span id="folderid_publicdesktop"></span><span id="FOLDERID_PUBLICDESKTOP"></span><dl> <dt><strong>FOLDERID_PublicDesktop</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicDesktop"></span><span id="folderid_publicdesktop"></span><span id="FOLDERID_PUBLICDESKTOP"></span><dl> <dt><strong>FOLDERID_PublicDesktop</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2654,7 +2654,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2678,8 +2678,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PublicDocuments"></span><span id="folderid_publicdocuments"></span><span id="FOLDERID_PUBLICDOCUMENTS"></span><dl> <dt><strong>FOLDERID_PublicDocuments</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicDocuments"></span><span id="folderid_publicdocuments"></span><span id="FOLDERID_PUBLICDOCUMENTS"></span><dl> <dt><strong>FOLDERID_PublicDocuments</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2692,7 +2692,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2716,8 +2716,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PublicDownloads"></span><span id="folderid_publicdownloads"></span><span id="FOLDERID_PUBLICDOWNLOADS"></span><dl> <dt><strong>FOLDERID_PublicDownloads</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicDownloads"></span><span id="folderid_publicdownloads"></span><span id="FOLDERID_PUBLICDOWNLOADS"></span><dl> <dt><strong>FOLDERID_PublicDownloads</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2730,7 +2730,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2742,11 +2742,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2754,8 +2754,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PublicGameTasks"></span><span id="folderid_publicgametasks"></span><span id="FOLDERID_PUBLICGAMETASKS"></span><dl> <dt><strong>FOLDERID_PublicGameTasks</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicGameTasks"></span><span id="folderid_publicgametasks"></span><span id="FOLDERID_PUBLICGAMETASKS"></span><dl> <dt><strong>FOLDERID_PublicGameTasks</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2768,7 +2768,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2780,11 +2780,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2792,8 +2792,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PublicLibraries"></span><span id="folderid_publiclibraries"></span><span id="FOLDERID_PUBLICLIBRARIES"></span><dl> <dt><strong>FOLDERID_PublicLibraries</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicLibraries"></span><span id="folderid_publiclibraries"></span><span id="FOLDERID_PUBLICLIBRARIES"></span><dl> <dt><strong>FOLDERID_PublicLibraries</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2806,7 +2806,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2818,11 +2818,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2830,8 +2830,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PublicMusic"></span><span id="folderid_publicmusic"></span><span id="FOLDERID_PUBLICMUSIC"></span><dl> <dt><strong>FOLDERID_PublicMusic</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicMusic"></span><span id="folderid_publicmusic"></span><span id="FOLDERID_PUBLICMUSIC"></span><dl> <dt><strong>FOLDERID_PublicMusic</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2844,7 +2844,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2868,8 +2868,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PublicPictures"></span><span id="folderid_publicpictures"></span><span id="FOLDERID_PUBLICPICTURES"></span><dl> <dt><strong>FOLDERID_PublicPictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicPictures"></span><span id="folderid_publicpictures"></span><span id="FOLDERID_PUBLICPICTURES"></span><dl> <dt><strong>FOLDERID_PublicPictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2882,7 +2882,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2906,8 +2906,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PublicRingtones"></span><span id="folderid_publicringtones"></span><span id="FOLDERID_PUBLICRINGTONES"></span><dl> <dt><strong>FOLDERID_PublicRingtones</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicRingtones"></span><span id="folderid_publicringtones"></span><span id="FOLDERID_PUBLICRINGTONES"></span><dl> <dt><strong>FOLDERID_PublicRingtones</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2920,7 +2920,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2932,11 +2932,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2944,8 +2944,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_PublicUserTiles"></span><span id="folderid_publicusertiles"></span><span id="FOLDERID_PUBLICUSERTILES"></span><dl> <dt><strong>FOLDERID_PublicUserTiles</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicUserTiles"></span><span id="folderid_publicusertiles"></span><span id="FOLDERID_PUBLICUSERTILES"></span><dl> <dt><strong>FOLDERID_PublicUserTiles</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2958,7 +2958,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -2970,11 +2970,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -2982,8 +2982,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_PublicVideos"></span><span id="folderid_publicvideos"></span><span id="FOLDERID_PUBLICVIDEOS"></span><dl> <dt><strong>FOLDERID_PublicVideos</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_PublicVideos"></span><span id="folderid_publicvideos"></span><span id="FOLDERID_PUBLICVIDEOS"></span><dl> <dt><strong>FOLDERID_PublicVideos</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -2996,7 +2996,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3020,8 +3020,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_QuickLaunch"></span><span id="folderid_quicklaunch"></span><span id="FOLDERID_QUICKLAUNCH"></span><dl> <dt><strong>FOLDERID_QuickLaunch</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_QuickLaunch"></span><span id="folderid_quicklaunch"></span><span id="FOLDERID_QUICKLAUNCH"></span><dl> <dt><strong>FOLDERID_QuickLaunch</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3049,7 +3049,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Schnellstart</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%APPDATA%\Microsoft\Internet Explorer\Schnellstart</td>
 </tr>
 </tbody>
@@ -3058,8 +3058,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_Recent"></span><span id="folderid_recent"></span><span id="FOLDERID_RECENT"></span><dl> <dt><strong>FOLDERID_Recent</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Recent"></span><span id="folderid_recent"></span><span id="FOLDERID_RECENT"></span><dl> <dt><strong>FOLDERID_Recent</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3072,7 +3072,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3087,7 +3087,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Meine letzten Dokumente</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%USERPROFILE%\Recent</td>
 </tr>
 </tbody>
@@ -3096,12 +3096,12 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_RecordedTV"></span><span id="folderid_recordedtv"></span><span id="FOLDERID_RECORDEDTV"></span><dl> <dt><strong>FOLDERID_RecordedTV</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Wird nicht verwendet. Dieser Wert ist ab Windows 7 nicht definiert.</p></td>
+<td ><span id="FOLDERID_RecordedTV"></span><span id="folderid_recordedtv"></span><span id="FOLDERID_RECORDEDTV"></span><dl> <dt><strong>FOLDERID_RecordedTV</strong></dt> </dl></td>
+<td ><p>Nicht verwendet. Dieser Wert ist ab 7 Windows definiert.</p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_RecordedTVLibrary"></span><span id="folderid_recordedtvlibrary"></span><span id="FOLDERID_RECORDEDTVLIBRARY"></span><dl> <dt><strong>FOLDERID_RecordedTVLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_RecordedTVLibrary"></span><span id="folderid_recordedtvlibrary"></span><span id="FOLDERID_RECORDEDTVLIBRARY"></span><dl> <dt><strong>FOLDERID_RecordedTVLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3114,7 +3114,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3122,15 +3122,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführter Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3138,8 +3138,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_RecycleBinFolder"></span><span id="folderid_recyclebinfolder"></span><span id="FOLDERID_RECYCLEBINFOLDER"></span><dl> <dt><strong>FOLDERID_RecycleBinFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_RecycleBinFolder"></span><span id="folderid_recyclebinfolder"></span><span id="FOLDERID_RECYCLEBINFOLDER"></span><dl> <dt><strong>FOLDERID_RecycleBinFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3152,7 +3152,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3167,7 +3167,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Papierkorb</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>Nicht zutreffend – virtueller Ordner</td>
 </tr>
 </tbody>
@@ -3176,8 +3176,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_ResourceDir"></span><span id="folderid_resourcedir"></span><span id="FOLDERID_RESOURCEDIR"></span><dl> <dt><strong>FOLDERID_ResourceDir</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_ResourceDir"></span><span id="folderid_resourcedir"></span><span id="FOLDERID_RESOURCEDIR"></span><dl> <dt><strong>FOLDERID_ResourceDir</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3205,7 +3205,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Ressourcen</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%windir%\Resources</td>
 </tr>
 </tbody>
@@ -3214,8 +3214,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Ringtones"></span><span id="folderid_ringtones"></span><span id="FOLDERID_RINGTONES"></span><dl> <dt><strong>FOLDERID_Ringtones</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Ringtones"></span><span id="folderid_ringtones"></span><span id="FOLDERID_RINGTONES"></span><dl> <dt><strong>FOLDERID_Ringtones</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3228,7 +3228,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3236,15 +3236,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführter Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3252,8 +3252,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_RoamingAppData"></span><span id="folderid_roamingappdata"></span><span id="FOLDERID_ROAMINGAPPDATA"></span><dl> <dt><strong>FOLDERID_RoamingAppData</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_RoamingAppData"></span><span id="folderid_roamingappdata"></span><span id="FOLDERID_ROAMINGAPPDATA"></span><dl> <dt><strong>FOLDERID_RoamingAppData</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3266,7 +3266,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3281,8 +3281,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Anwendungsdaten</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>%APPDATA% (%USERPROFILE%\Application Data)</td>
+<td>Legacy-Standardpfad</td>
+<td>%APPDATA% (%USERPROFILE%\Anwendungsdaten)</td>
 </tr>
 </tbody>
 </table>
@@ -3290,8 +3290,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_RoamedTileImages"></span><span id="folderid_roamedtileimages"></span><span id="FOLDERID_ROAMEDTILEIMAGES"></span><dl> <dt><strong>FOLDERID_RoamedTileImages</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_RoamedTileImages"></span><span id="folderid_roamedtileimages"></span><span id="FOLDERID_ROAMEDTILEIMAGES"></span><dl> <dt><strong>FOLDERID_RoamedTileImages</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3304,7 +3304,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3312,15 +3312,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführter Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3328,8 +3328,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_RoamingTiles"></span><span id="folderid_roamingtiles"></span><span id="FOLDERID_ROAMINGTILES"></span><dl> <dt><strong>FOLDERID_RoamingTiles</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_RoamingTiles"></span><span id="folderid_roamingtiles"></span><span id="FOLDERID_ROAMINGTILES"></span><dl> <dt><strong>FOLDERID_RoamingTiles</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3342,7 +3342,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3350,15 +3350,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 8 eingeführter Wert</td>
+<td>None, value introduced in Windows 8</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3366,8 +3366,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SampleMusic"></span><span id="folderid_samplemusic"></span><span id="FOLDERID_SAMPLEMUSIC"></span><dl> <dt><strong>FOLDERID_SampleMusic</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SampleMusic"></span><span id="folderid_samplemusic"></span><span id="FOLDERID_SAMPLEMUSIC"></span><dl> <dt><strong>FOLDERID_SampleMusic</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3380,11 +3380,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%PUBLIC%\Musik\Sample Musik</td>
+<td>%PUBLIC%\Musik\Beispiel Musik</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -3395,7 +3395,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Beispiel Musik</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Documents\My Musik\Sample Musik</td>
 </tr>
 </tbody>
@@ -3404,8 +3404,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SamplePictures"></span><span id="folderid_samplepictures"></span><span id="FOLDERID_SAMPLEPICTURES"></span><dl> <dt><strong>FOLDERID_SamplePictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SamplePictures"></span><span id="folderid_samplepictures"></span><span id="FOLDERID_SAMPLEPICTURES"></span><dl> <dt><strong>FOLDERID_SamplePictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3418,7 +3418,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3433,7 +3433,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Beispielbilder</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%ALLUSERSPROFILE%\Documents\My Pictures\Sample Pictures</td>
 </tr>
 </tbody>
@@ -3442,8 +3442,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SamplePlaylists"></span><span id="folderid_sampleplaylists"></span><span id="FOLDERID_SAMPLEPLAYLISTS"></span><dl> <dt><strong>FOLDERID_SamplePlaylists</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SamplePlaylists"></span><span id="folderid_sampleplaylists"></span><span id="FOLDERID_SAMPLEPLAYLISTS"></span><dl> <dt><strong>FOLDERID_SamplePlaylists</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3456,23 +3456,23 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%PUBLIC%\Musik\Sample Playlists</td>
+<td>%PUBLIC%\Musik\Beispielwiedergabelisten</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführter Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3480,8 +3480,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SampleVideos"></span><span id="folderid_samplevideos"></span><span id="FOLDERID_SAMPLEVIDEOS"></span><dl> <dt><strong>FOLDERID_SampleVideos</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SampleVideos"></span><span id="folderid_samplevideos"></span><span id="FOLDERID_SAMPLEVIDEOS"></span><dl> <dt><strong>FOLDERID_SampleVideos</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3494,11 +3494,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%PUBLIC%\Videos\Sample Videos</td>
+<td>%PUBLIC%\Videos\Beispielvideos</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -3506,11 +3506,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3518,8 +3518,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SavedGames"></span><span id="folderid_savedgames"></span><span id="FOLDERID_SAVEDGAMES"></span><dl> <dt><strong>FOLDERID_SavedGames</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SavedGames"></span><span id="folderid_savedgames"></span><span id="FOLDERID_SAVEDGAMES"></span><dl> <dt><strong>FOLDERID_SavedGames</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3532,7 +3532,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3540,15 +3540,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows Vista eingeführter Wert</td>
+<td>None, value introduced in Windows Vista</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3556,8 +3556,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SavedPictures"></span><span id="folderid_savedpictures"></span><span id="FOLDERID_SAVEDPICTURES"></span><dl> <dt><strong>FOLDERID_SavedPictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SavedPictures"></span><span id="folderid_savedpictures"></span><span id="FOLDERID_SAVEDPICTURES"></span><dl> <dt><strong>FOLDERID_SavedPictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3582,11 +3582,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3594,8 +3594,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SavedPicturesLibrary"></span><span id="folderid_savedpictureslibrary"></span><span id="FOLDERID_SAVEDPICTURESLIBRARY"></span><dl> <dt><strong>FOLDERID_SavedPicturesLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SavedPicturesLibrary"></span><span id="folderid_savedpictureslibrary"></span><span id="FOLDERID_SAVEDPICTURESLIBRARY"></span><dl> <dt><strong>FOLDERID_SavedPicturesLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3620,11 +3620,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3632,8 +3632,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SavedSearches"></span><span id="folderid_savedsearches"></span><span id="FOLDERID_SAVEDSEARCHES"></span><dl> <dt><strong>FOLDERID_SavedSearches</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SavedSearches"></span><span id="folderid_savedsearches"></span><span id="FOLDERID_SAVEDSEARCHES"></span><dl> <dt><strong>FOLDERID_SavedSearches</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3658,11 +3658,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3670,8 +3670,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Screenshots"></span><span id="folderid_screenshots"></span><span id="FOLDERID_SCREENSHOTS"></span><dl> <dt><strong>FOLDERID_Screenshots</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Screenshots"></span><span id="folderid_screenshots"></span><span id="FOLDERID_SCREENSHOTS"></span><dl> <dt><strong>FOLDERID_Screenshots</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3696,11 +3696,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3708,8 +3708,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SEARCH_CSC"></span><span id="folderid_search_csc"></span><dl> <dt><strong>FOLDERID_SEARCH_CSC</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SEARCH_CSC"></span><span id="folderid_search_csc"></span><dl> <dt><strong>FOLDERID_SEARCH_CSC</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3722,7 +3722,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3734,11 +3734,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3746,8 +3746,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SearchHistory"></span><span id="folderid_searchhistory"></span><span id="FOLDERID_SEARCHHISTORY"></span><dl> <dt><strong>FOLDERID_SearchHistory</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SearchHistory"></span><span id="folderid_searchhistory"></span><span id="FOLDERID_SEARCHHISTORY"></span><dl> <dt><strong>FOLDERID_SearchHistory</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3772,11 +3772,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3784,8 +3784,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SearchHome"></span><span id="folderid_searchhome"></span><span id="FOLDERID_SEARCHHOME"></span><dl> <dt><strong>FOLDERID_SearchHome</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SearchHome"></span><span id="folderid_searchhome"></span><span id="FOLDERID_SEARCHHOME"></span><dl> <dt><strong>FOLDERID_SearchHome</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3798,7 +3798,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3810,11 +3810,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3822,8 +3822,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SEARCH_MAPI"></span><span id="folderid_search_mapi"></span><dl> <dt><strong>FOLDERID_SEARCH_MAPI</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SEARCH_MAPI"></span><span id="folderid_search_mapi"></span><dl> <dt><strong>FOLDERID_SEARCH_MAPI</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3836,7 +3836,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3848,11 +3848,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3860,8 +3860,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SearchTemplates"></span><span id="folderid_searchtemplates"></span><span id="FOLDERID_SEARCHTEMPLATES"></span><dl> <dt><strong>FOLDERID_SearchTemplates</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SearchTemplates"></span><span id="folderid_searchtemplates"></span><span id="FOLDERID_SEARCHTEMPLATES"></span><dl> <dt><strong>FOLDERID_SearchTemplates</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3874,7 +3874,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3882,15 +3882,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8.1</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3898,8 +3898,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SendTo"></span><span id="folderid_sendto"></span><span id="FOLDERID_SENDTO"></span><dl> <dt><strong>FOLDERID_SendTo</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SendTo"></span><span id="folderid_sendto"></span><span id="FOLDERID_SENDTO"></span><dl> <dt><strong>FOLDERID_SendTo</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3912,7 +3912,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -3927,7 +3927,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Sendto</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%USERPROFILE%\SendTo</td>
 </tr>
 </tbody>
@@ -3936,8 +3936,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SidebarDefaultParts"></span><span id="folderid_sidebardefaultparts"></span><span id="FOLDERID_SIDEBARDEFAULTPARTS"></span><dl> <dt><strong>FOLDERID_SidebarDefaultParts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SidebarDefaultParts"></span><span id="folderid_sidebardefaultparts"></span><span id="FOLDERID_SIDEBARDEFAULTPARTS"></span><dl> <dt><strong>FOLDERID_SidebarDefaultParts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3950,11 +3950,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>gemeinsam</td>
+<td>GEMEINSAM</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%ProgramFiles%\Windows Sidebar\Gadgets</td>
+<td>%ProgramFiles%\Windows Randleiste\Gadgets</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -3962,11 +3962,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -3974,8 +3974,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SidebarParts"></span><span id="folderid_sidebarparts"></span><span id="FOLDERID_SIDEBARPARTS"></span><dl> <dt><strong>FOLDERID_SidebarParts</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SidebarParts"></span><span id="folderid_sidebarparts"></span><span id="FOLDERID_SIDEBARPARTS"></span><dl> <dt><strong>FOLDERID_SidebarParts</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -3988,11 +3988,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
-<td>%LOCALAPPDATA%\Microsoft\Windows Sidebar\Gadgets</td>
+<td>%LOCALAPPDATA%\Microsoft\Windows Randleiste\Gadgets</td>
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
@@ -4000,11 +4000,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4012,8 +4012,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SkyDrive"></span><span id="folderid_skydrive"></span><span id="FOLDERID_SKYDRIVE"></span><dl> <dt><strong>FOLDERID_SkyDrive</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SkyDrive"></span><span id="folderid_skydrive"></span><span id="FOLDERID_SKYDRIVE"></span><dl> <dt><strong>FOLDERID_SkyDrive</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4026,7 +4026,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4034,15 +4034,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8.1</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4050,8 +4050,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SkyDriveCameraRoll"></span><span id="folderid_skydrivecameraroll"></span><span id="FOLDERID_SKYDRIVECAMERAROLL"></span><dl> <dt><strong>FOLDERID_SkyDriveCameraRoll</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SkyDriveCameraRoll"></span><span id="folderid_skydrivecameraroll"></span><span id="FOLDERID_SKYDRIVECAMERAROLL"></span><dl> <dt><strong>FOLDERID_SkyDriveCameraRoll</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4064,7 +4064,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4072,15 +4072,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8.1</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4088,8 +4088,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SkyDriveDocuments"></span><span id="folderid_skydrivedocuments"></span><span id="FOLDERID_SKYDRIVEDOCUMENTS"></span><dl> <dt><strong>FOLDERID_SkyDriveDocuments</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SkyDriveDocuments"></span><span id="folderid_skydrivedocuments"></span><span id="FOLDERID_SKYDRIVEDOCUMENTS"></span><dl> <dt><strong>FOLDERID_SkyDriveDocuments</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4102,7 +4102,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4110,15 +4110,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8.1</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4126,8 +4126,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SkyDrivePictures"></span><span id="folderid_skydrivepictures"></span><span id="FOLDERID_SKYDRIVEPICTURES"></span><dl> <dt><strong>FOLDERID_SkyDrivePictures</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SkyDrivePictures"></span><span id="folderid_skydrivepictures"></span><span id="FOLDERID_SKYDRIVEPICTURES"></span><dl> <dt><strong>FOLDERID_SkyDrivePictures</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4140,7 +4140,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4148,15 +4148,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 8.1</td>
+<td>None, in Windows 8.1 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4164,8 +4164,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_StartMenu"></span><span id="folderid_startmenu"></span><span id="FOLDERID_STARTMENU"></span><dl> <dt><strong>FOLDERID_StartMenu</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_StartMenu"></span><span id="folderid_startmenu"></span><span id="FOLDERID_STARTMENU"></span><dl> <dt><strong>FOLDERID_StartMenu</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4178,7 +4178,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4193,7 +4193,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Startmenü</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%USERPROFILE%\Startmenü</td>
 </tr>
 </tbody>
@@ -4202,8 +4202,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Startup"></span><span id="folderid_startup"></span><span id="FOLDERID_STARTUP"></span><dl> <dt><strong>FOLDERID_Startup</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Startup"></span><span id="folderid_startup"></span><span id="FOLDERID_STARTUP"></span><dl> <dt><strong>FOLDERID_Startup</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4216,7 +4216,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4231,8 +4231,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Start</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>%USERPROFILE%\Start menu\Programs\StartUp</td>
+<td>Legacystandardpfad</td>
+<td>%USERPROFILE%\Startmenü\Programme\StartUp</td>
 </tr>
 </tbody>
 </table>
@@ -4240,8 +4240,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SyncManagerFolder"></span><span id="folderid_syncmanagerfolder"></span><span id="FOLDERID_SYNCMANAGERFOLDER"></span><dl> <dt><strong>FOLDERID_SyncManagerFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SyncManagerFolder"></span><span id="folderid_syncmanagerfolder"></span><span id="FOLDERID_SYNCMANAGERFOLDER"></span><dl> <dt><strong>FOLDERID_SyncManagerFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4254,7 +4254,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4262,15 +4262,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows Vista</td>
+<td>None, in Windows Vista eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4278,8 +4278,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_SyncResultsFolder"></span><span id="folderid_syncresultsfolder"></span><span id="FOLDERID_SYNCRESULTSFOLDER"></span><dl> <dt><strong>FOLDERID_SyncResultsFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SyncResultsFolder"></span><span id="folderid_syncresultsfolder"></span><span id="FOLDERID_SYNCRESULTSFOLDER"></span><dl> <dt><strong>FOLDERID_SyncResultsFolder</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4292,45 +4292,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
-</tr>
-<tr class="even">
-<td>Standard Path</td>
-<td>Nicht zutreffend – virtueller Ordner</td>
-</tr>
-<tr class="odd">
-<td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows Vista</td>
-</tr>
-<tr class="even">
-<td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
-</tr>
-<tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
-</tr>
-</tbody>
-</table>
-
-<p> </p></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SyncSetupFolder"></span><span id="folderid_syncsetupfolder"></span><span id="FOLDERID_SYNCSETUPFOLDER"></span><dl> <dt><strong>FOLDERID_SyncSetupFolder</strong></dt> </dl></td>
-<td style="text-align: left;">
-<table>
-<tbody>
-<tr class="odd">
-<td>GUID</td>
-<td>{0F214138-B1D3-4a90-BBA9-27CBC0C5389A}</td>
-</tr>
-<tr class="even">
-<td>Anzeigename</td>
-<td>Synchronisierungssetup</td>
-</tr>
-<tr class="odd">
-<td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4342,11 +4304,49 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
 <td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
+</tr>
+</tbody>
+</table>
+
+<p> </p></td>
+</tr>
+<tr class="odd">
+<td ><span id="FOLDERID_SyncSetupFolder"></span><span id="folderid_syncsetupfolder"></span><span id="FOLDERID_SYNCSETUPFOLDER"></span><dl> <dt><strong>FOLDERID_SyncSetupFolder</strong></dt> </dl></td>
+<td >
+<table>
+<tbody>
+<tr class="odd">
+<td>GUID</td>
+<td>{0F214138-B1D3-4a90-BBA9-27CBC0C5389A}</td>
+</tr>
+<tr class="even">
+<td>Anzeigename</td>
+<td>Setup für die Synchronisierung</td>
+</tr>
+<tr class="odd">
+<td>Ordnertyp</td>
+<td>VIRTUELLEN</td>
+</tr>
+<tr class="even">
+<td>Standard Path</td>
+<td>Nicht zutreffend – virtueller Ordner</td>
+</tr>
+<tr class="odd">
+<td>CSIDL-Entsprechung</td>
+<td>None, value introduced in Windows Vista</td>
+</tr>
+<tr class="even">
+<td>Legacyanzeigename</td>
+<td>Nicht zutreffend</td>
+</tr>
+<tr class="odd">
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4354,8 +4354,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_System"></span><span id="folderid_system"></span><span id="FOLDERID_SYSTEM"></span><dl> <dt><strong>FOLDERID_System</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_System"></span><span id="folderid_system"></span><span id="FOLDERID_SYSTEM"></span><dl> <dt><strong>FOLDERID_System</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4383,7 +4383,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>system32</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%windir%\system32</td>
 </tr>
 </tbody>
@@ -4392,8 +4392,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_SystemX86"></span><span id="folderid_systemx86"></span><span id="FOLDERID_SYSTEMX86"></span><dl> <dt><strong>FOLDERID_SystemX86</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_SystemX86"></span><span id="folderid_systemx86"></span><span id="FOLDERID_SYSTEMX86"></span><dl> <dt><strong>FOLDERID_SystemX86</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4421,7 +4421,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>system32</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%windir%\system32</td>
 </tr>
 </tbody>
@@ -4430,8 +4430,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Templates"></span><span id="folderid_templates"></span><span id="FOLDERID_TEMPLATES"></span><dl> <dt><strong>FOLDERID_Templates</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Templates"></span><span id="folderid_templates"></span><span id="FOLDERID_TEMPLATES"></span><dl> <dt><strong>FOLDERID_Templates</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4444,7 +4444,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4459,7 +4459,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Vorlagen</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
+<td>Legacy-Standardpfad</td>
 <td>%USERPROFILE%\Templates</td>
 </tr>
 </tbody>
@@ -4468,12 +4468,12 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_TreeProperties"></span><span id="folderid_treeproperties"></span><span id="FOLDERID_TREEPROPERTIES"></span><dl> <dt><strong>FOLDERID_TreeProperties</strong></dt> </dl></td>
-<td style="text-align: left;"><p>Wird in Windows Vista nicht verwendet. Ab Windows 7 nicht mehr unterstützt.</p></td>
+<td ><span id="FOLDERID_TreeProperties"></span><span id="folderid_treeproperties"></span><span id="FOLDERID_TREEPROPERTIES"></span><dl> <dt><strong>FOLDERID_TreeProperties</strong></dt> </dl></td>
+<td ><p>Wird nicht in Windows Vista verwendet. Ab Version Windows 7 nicht mehr unterstützt.</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_UserPinned"></span><span id="folderid_userpinned"></span><span id="FOLDERID_USERPINNED"></span><dl> <dt><strong>FOLDERID_UserPinned</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UserPinned"></span><span id="folderid_userpinned"></span><span id="FOLDERID_USERPINNED"></span><dl> <dt><strong>FOLDERID_UserPinned</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4486,7 +4486,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>SOLLSER</td>
+<td>BESER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4494,15 +4494,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, in Windows 7 eingeführter Wert</td>
+<td>None, value introduced in Windows 7</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4510,8 +4510,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_UserProfiles"></span><span id="folderid_userprofiles"></span><span id="FOLDERID_USERPROFILES"></span><dl> <dt><strong>FOLDERID_UserProfiles</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UserProfiles"></span><span id="folderid_userprofiles"></span><span id="FOLDERID_USERPROFILES"></span><dl> <dt><strong>FOLDERID_UserProfiles</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4536,11 +4536,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacystandardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacy-Standardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4548,8 +4548,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_UserProgramFiles"></span><span id="folderid_userprogramfiles"></span><span id="FOLDERID_USERPROGRAMFILES"></span><dl> <dt><strong>FOLDERID_UserProgramFiles</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UserProgramFiles"></span><span id="folderid_userprogramfiles"></span><span id="FOLDERID_USERPROGRAMFILES"></span><dl> <dt><strong>FOLDERID_UserProgramFiles</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4562,7 +4562,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4570,15 +4570,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 7</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4586,8 +4586,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_UserProgramFilesCommon"></span><span id="folderid_userprogramfilescommon"></span><span id="FOLDERID_USERPROGRAMFILESCOMMON"></span><dl> <dt><strong>FOLDERID_UserProgramFilesCommon</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UserProgramFilesCommon"></span><span id="folderid_userprogramfilescommon"></span><span id="FOLDERID_USERPROGRAMFILESCOMMON"></span><dl> <dt><strong>FOLDERID_UserProgramFilesCommon</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4600,7 +4600,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4608,15 +4608,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 7</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4624,8 +4624,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_UsersFiles"></span><span id="folderid_usersfiles"></span><span id="FOLDERID_USERSFILES"></span><dl> <dt><strong>FOLDERID_UsersFiles</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UsersFiles"></span><span id="folderid_usersfiles"></span><span id="FOLDERID_USERSFILES"></span><dl> <dt><strong>FOLDERID_UsersFiles</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4634,11 +4634,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Anzeigename</td>
-<td>Der vollständige Name des Benutzers (z.B. Beim Erstellen des Benutzerkontos wurde Der vollständige Name des Benutzers eingegeben, z.B. "Durch das Bagel-Konto" bezeichnet).</td>
+<td>Beim Erstellen des Benutzerkontos wurde der vollständige Name des Benutzers eingegeben (z. B. Benutzerkontenbehälter).</td>
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4650,11 +4650,11 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4662,8 +4662,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_UsersLibraries"></span><span id="folderid_userslibraries"></span><span id="FOLDERID_USERSLIBRARIES"></span><dl> <dt><strong>FOLDERID_UsersLibraries</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_UsersLibraries"></span><span id="folderid_userslibraries"></span><span id="FOLDERID_USERSLIBRARIES"></span><dl> <dt><strong>FOLDERID_UsersLibraries</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4676,7 +4676,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>Virtuellen</td>
+<td>VIRTUELLEN</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4684,15 +4684,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 7</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4700,8 +4700,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Videos"></span><span id="folderid_videos"></span><span id="FOLDERID_VIDEOS"></span><dl> <dt><strong>FOLDERID_Videos</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Videos"></span><span id="folderid_videos"></span><span id="FOLDERID_VIDEOS"></span><dl> <dt><strong>FOLDERID_Videos</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4714,14 +4714,14 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
 <td>%USERPROFILE%\Videos</td>
 </tr>
 <tr class="odd">
-<td>Csidl</td>
+<td>CSIDL</td>
 <td>CSIDL_MYVIDEO</td>
 </tr>
 <tr class="even">
@@ -4729,7 +4729,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>Meine Videos</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%USERPROFILE%\Eigene Dokumente\Meine Videos</td>
 </tr>
 </tbody>
@@ -4738,8 +4738,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span id="FOLDERID_VideosLibrary"></span><span id="folderid_videoslibrary"></span><span id="FOLDERID_VIDEOSLIBRARY"></span><dl> <dt><strong>FOLDERID_VideosLibrary</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_VideosLibrary"></span><span id="folderid_videoslibrary"></span><span id="FOLDERID_VIDEOSLIBRARY"></span><dl> <dt><strong>FOLDERID_VideosLibrary</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4752,7 +4752,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>Ordnertyp</td>
-<td>BESER</td>
+<td>SOLLSER</td>
 </tr>
 <tr class="even">
 <td>Standard Path</td>
@@ -4760,15 +4760,15 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 </tr>
 <tr class="odd">
 <td>CSIDL-Entsprechung</td>
-<td>None, value introduced in Windows 7</td>
+<td>None, in Windows 7 eingeführter Wert</td>
 </tr>
 <tr class="even">
 <td>Legacyanzeigename</td>
-<td>Nicht verfügbar</td>
+<td>Nicht zutreffend</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
-<td>Nicht verfügbar</td>
+<td>Legacystandardpfad</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -4776,8 +4776,8 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <p> </p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span id="FOLDERID_Windows"></span><span id="folderid_windows"></span><span id="FOLDERID_WINDOWS"></span><dl> <dt><strong>FOLDERID_Windows</strong></dt> </dl></td>
-<td style="text-align: left;">
+<td ><span id="FOLDERID_Windows"></span><span id="folderid_windows"></span><span id="FOLDERID_WINDOWS"></span><dl> <dt><strong>FOLDERID_Windows</strong></dt> </dl></td>
+<td >
 <table>
 <tbody>
 <tr class="odd">
@@ -4805,7 +4805,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 <td>WINDOWS</td>
 </tr>
 <tr class="odd">
-<td>Legacy-Standardpfad</td>
+<td>Legacystandardpfad</td>
 <td>%windir%</td>
 </tr>
 </tbody>
@@ -4820,7 +4820,7 @@ Diese FOLDERID ist in Windows 10 Version 1803 und höher veraltet. In diesen Ver
 
 ## <a name="remarks"></a>Hinweise
 
-Die Interpretation bestimmter **KNOWNFOLDERID-Werte** hängt davon ab, ob der Ordner Teil einer 32-Bit- oder 64-Bit-Anwendung ist und ob diese Anwendung unter einem 32-Bit- oder 64-Bit-Betriebssystem ausgeführt wird. Wenn Ihre Anwendung z. B. zwischen **Programme** und **Programmdateien (x86)** unterscheiden muss, müssen Sie für diese Situation die richtige **KNOWNFOLDERID** verwenden.
+Die Interpretation bestimmter **KNOWNFOLDERID-Werte** hängt davon ab, ob der Ordner Teil einer 32-Bit- oder 64-Bit-Anwendung ist und ob diese Anwendung unter einem 32-Bit- oder 64-Bit-Betriebssystem ausgeführt wird. Wenn Ihre Anwendung z. B. zwischen **Programmdateien** und **Programmdateien (x86)** unterscheiden muss, müssen Sie für diese Situation die richtige **KNOWNFOLDERID** verwenden.
 
 In den folgenden Tabellen wird die Verwendung **von KNOWNFOLDERID** in diesen Fällen zusammengefasst.
 
@@ -4831,26 +4831,26 @@ In den folgenden Tabellen wird die Verwendung **von KNOWNFOLDERID** in diesen F�
 |------------------|-------------|---------------|--------------|------------------|  
 | 32-Bit | 32-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Programme | \_CSIDL-PROGRAMMDATEIEN \_ |
 | 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Programme | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
-| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird unter 32-Bit-Betriebssystemen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird unter 32-Bit-Betriebssystemen nicht unterstützt) | Nicht zutreffend | Nicht zutreffend |
 | 64-Bit | 64-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Programme | \_CSIDL-PROGRAMMDATEIEN \_ |
 | 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Program Files (x86) | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
 | 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesX64 | %SystemDrive% \\ Programme | Keine |
 | 64-Bit | 32-Bit | FOLDERID \_ ProgramFiles | %SystemDrive% \\ Program Files (x86) | \_CSIDL-PROGRAMMDATEIEN \_ |
 | 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesX86 | %SystemDrive% \\ Program Files (x86) | \_ \_ CSIDL-PROGRAMMDATEIENX86 |
-| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird für 32-Bit-Anwendungen nicht unterstützt) | Nicht verfügbar | Nicht verfügbar |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesX64 (wird für 32-Bit-Anwendungen nicht unterstützt) | Nicht zutreffend | Nicht zutreffend |
 
 
 **FOLDERID \_ ProgramFilesCommon**
 
 | Betriebssystem | Application | KNOWNFOLDERID | Standard Path | CSIDL-Entsprechung |
 |------------------|-------------|---------------|--------------|------------------|  
-| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_ \_ CSIDL-PROGRAMMDATEIEN \_ ( COMMON) |
 | 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
-| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX64 (nicht definiert) | Nicht verfügbar | Nicht verfügbar |
-| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 32-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX64 (nicht definiert) | Nicht zutreffend | Nicht zutreffend |
+| 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles% \\ Common Files | \_ \_ CSIDL-PROGRAMMDATEIEN \_ ( COMMON) |
 | 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
 | 64-Bit | 64-Bit | FOLDERID \_ ProgramFilesCommonX64 | %ProgramFiles% \\ Common Files | Keine |
-| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ ( COMMON) |
+| 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommon | %ProgramFiles(x86)% \\ Common Files | \_ \_ CSIDL-PROGRAMMDATEIEN \_ ( COMMON) |
 | 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX86 | %ProgramFiles(x86)% \\ Common Files | \_CSIDL-PROGRAMMDATEIEN \_ \_ COMMONX86 |
 | 64-Bit | 32-Bit | FOLDERID \_ ProgramFilesCommonX64 | %ProgramFiles% \\ Common Files | Keine |
 
@@ -4867,7 +4867,7 @@ In den folgenden Tabellen wird die Verwendung **von KNOWNFOLDERID** in diesen F�
 | 64-Bit | 32-Bit | FOLDERID \_ SystemX86 | %windir% \\ syswow64 | CSIDL \_ SYSTEMX86 |
 
 
-In diesem Thema haben wir Umgebungszeichenfolgen verwendet, um generische Pfade bereitzustellen. Die folgenden Tabellen enthalten Beispiele für die Pfade, die diese Umgebungszeichenfolgen darstellen. In einigen Fällen stimmen diese Pfade möglicherweise nicht mit denen auf einem bestimmten Computer überein, weil während der Installation oder späteren Ordnerumleitung Entscheidungen getroffen wurden. Beachten Sie, dass sich einige Pfade für Windows Vista geändert haben.
+In diesem Thema haben wir Umgebungszeichenfolgen verwendet, um generische Pfade bereitzustellen. Die folgenden Tabellen enthalten Beispiele für die Pfade, die diese Umgebungszeichenfolgen darstellen. In einigen Fällen stimmen diese Pfade möglicherweise nicht mit denen auf einem bestimmten Computer überein, da während der Installation oder späteren Ordnerumleitung Entscheidungen getroffen wurden. Beachten Sie, dass sich einige Pfade für Windows Vista geändert haben.
 
 
 **Windows Vista und höher**
@@ -4898,7 +4898,7 @@ In diesem Thema haben wir Umgebungszeichenfolgen verwendet, um generische Pfade 
 | %windir% | C: \\ Windows |
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 | Anforderung | Wert |
@@ -4907,11 +4907,11 @@ In diesem Thema haben wir Umgebungszeichenfolgen verwendet, um generische Pfade 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Csidl**](csidl.md)
+[**CSIDL**](csidl.md)
 </dt> <dt>
 
 [Bekannte Ordner](known-folders.md)

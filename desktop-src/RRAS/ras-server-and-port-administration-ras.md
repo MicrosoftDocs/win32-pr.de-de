@@ -1,38 +1,38 @@
 ---
-title: RAS-Server und-Port Verwaltung
-description: Mit den RAS-Server-Verwaltungsfunktionen können Sie Informationen zu einem angegebenen RAS-Server und seinen Ports erhalten. Mit diesen Funktionen können Sie auch eine Verbindung auf einem angegebenen RAS-Serverport beenden.
+title: RAS-Server- und Portverwaltung
+description: Mithilfe der RAS-Serververwaltungsfunktionen können Sie Informationen zu einem angegebenen RAS-Server und dessen Ports abrufen. Mit diesen Funktionen können Sie auch eine Verbindung an einem angegebenen RAS-Serverport beenden.
 ms.assetid: 783b0ded-7c0e-49eb-8040-563d5dd675f0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2af21dfeda38a1c1147bf864a1fa1959092ac946
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 82d09d683bf0850b5f51a5d9c1ac1aa21b25f2968ddedbed2d383d28dad7785f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028800"
 ---
-# <a name="ras-server-and-port-administration"></a>RAS-Server und-Port Verwaltung
+# <a name="ras-server-and-port-administration"></a>RAS-Server- und Portverwaltung
 
-Mit den RAS-Server-Verwaltungsfunktionen können Sie Informationen zu einem angegebenen RAS-Server und seinen Ports erhalten. Mit diesen Funktionen können Sie auch eine Verbindung auf einem angegebenen RAS-Serverport beenden.
+Mithilfe der RAS-Serververwaltungsfunktionen können Sie Informationen zu einem angegebenen RAS-Server und dessen Ports abrufen. Mit diesen Funktionen können Sie auch eine Verbindung an einem angegebenen RAS-Serverport beenden.
 
-Die [**rasadminservergetinfo**](rasadminservergetinfo.md) -Funktion gibt eine [**RAS-Server- \_ \_ 0**](ras-server-0-str.md) -Struktur zurück, die Informationen zur Konfiguration eines RAS-Servers enthält. Die zurückgegebenen Informationen enthalten die Anzahl der Ports, die derzeit für die Verbindung verfügbar sind, die Anzahl der derzeit verwendeten Ports und die Server Versionsnummer.
+Die [**RasAdminServerGetInfo-Funktion**](rasadminservergetinfo.md) gibt eine [**RAS SERVER \_ \_ 0-Struktur**](ras-server-0-str.md) zurück, die Informationen zur Konfiguration eines RAS-Servers enthält. Die zurückgegebenen Informationen umfassen die Anzahl der derzeit für die Verbindung verfügbaren Ports, die Anzahl der derzeit verwendeten Ports und die Serverversionsnummer.
 
-Die [**rasadminportenum**](rasadminportenum.md) -Funktion Ruft ein Array von [**RAS- \_ Port \_ 0**](ras-port-0-str.md) -Strukturen ab, das Informationen für jeden der auf einem RAS-Server konfigurierten Ports enthält. Die Informationen zu den einzelnen Ports umfassen Folgendes:
+Die [**RasAdminPortEnum-Funktion**](rasadminportenum.md) ruft ein Array von [**RAS PORT \_ \_ 0-Strukturen**](ras-port-0-str.md) ab, das Informationen zu jedem der ports enthält, die auf einem RAS-Server konfiguriert sind. Die Informationen für jeden Port umfassen Folgendes:
 
 -   Der Name des Ports
--   Informationen zu dem Gerät, das mit dem Port verbunden ist
+-   Informationen zum Gerät, das an den Port angeschlossen ist
 -   Gibt an, ob der dem Port zugeordnete RAS-Server ein Windows NT/Windows 2000-Server ist.
--   Gibt an, ob der Port zurzeit verwendet wird und ob es sich um Informationen zur Verbindung handelt.
+-   Gibt an, ob der Port derzeit verwendet wird, und , falls ja, Informationen zur Verbindung.
 
-Sie können die [**rasadminportgetinfo**](rasadminportgetinfo.md) -Funktion aufrufen, um zusätzliche Informationen über einen angegebenen Port auf einem RAS-Server zu erhalten. Diese Funktion gibt eine Struktur des [**RAS- \_ Ports \_ 1**](ras-port-1-str.md) zurück, die eine [**RAS- \_ Port \_ 0**](/windows/desktop/api/Mprapi/ns-mprapi-ras_port_0) -Struktur und zusätzliche Informationen über den aktuellen Status des Ports enthält. Die **rasadminportgetinfo** -Funktion gibt auch ein Array von [**RAS- \_ Parameter**](ras-parameters-str.md) Strukturen zurück, die die Werte von medienspezifischen Schlüsseln beschreiben, die dem Port zugeordnet sind. Eine **RAS- \_ Parameter** Struktur verwendet einen Wert aus der RAS-parametriams- [**\_ \_ formatenumeration**](ras-params-format-str.md) , um das Format des Werts für jeden medienspezifischen Schlüssel anzugeben.
+Sie können die [**RasAdminPortGetInfo-Funktion**](rasadminportgetinfo.md) aufrufen, um zusätzliche Informationen zu einem angegebenen Port auf einem RAS-Server abzurufen. Diese Funktion gibt eine [**RAS \_ PORT \_ 1-Struktur**](ras-port-1-str.md) zurück, die eine [**RAS PORT \_ \_ 0-Struktur**](/windows/desktop/api/Mprapi/ns-mprapi-ras_port_0) und zusätzliche Informationen zum aktuellen Zustand des Ports enthält. Die **RasAdminPortGetInfo-Funktion** gibt auch ein Array von [**RAS \_ PARAMETERS-Strukturen**](ras-parameters-str.md) zurück, die die Werte aller medienspezifischen Schlüssel beschreiben, die dem Port zugeordnet sind. Eine **RAS \_ PARAMETERS-Struktur** verwendet einen Wert aus der [**RAS \_ PARAMS \_ FORMAT-Enumeration,**](ras-params-format-str.md) um das Format des Werts für jeden medienspezifischen Schlüssel anzugeben.
 
-Die [**rasadminportgetinfo**](rasadminportgetinfo.md) -Funktion gibt auch eine [**RAS- \_ Port \_ Statistik**](ras-port-statistics-str.md) Struktur zurück, die verschiedene Statistik Leistungsindikatoren für die aktuelle Verbindung (sofern vorhanden) auf dem Port enthält. Bei einem Port, der Teil einer Verbindung mit mehreren Links ist, gibt **rasadminportgetinfo** Statistiken für den einzelnen Port und die kumulierten Statistiken für alle an der Verbindung beteiligten Ports zurück. Mit der [**rasadminportclearstatistics**](rasadminportclearstatistics.md) -Funktion können Sie die Statistik Zähler für den Port zurücksetzen. Die [**rasadminportdisconnect**](rasadminportdisconnect.md) -Funktion trennt den verwendeten Port.
+Die [**RasAdminPortGetInfo-Funktion**](rasadminportgetinfo.md) gibt auch eine [**RAS PORT \_ \_ STATISTICS-Struktur**](ras-port-statistics-str.md) zurück, die verschiedene Statistikindikatoren für die aktuelle Verbindung am Port enthält, sofern vorhanden. Für einen Port, der Teil einer Multilinkverbindung ist, gibt **RasAdminPortGetInfo** Statistiken für den einzelnen Port und kumulative Statistiken für alle ports zurück, die an der Verbindung beteiligt sind. Sie können die [**RasAdminPortClearStatistics-Funktion**](rasadminportclearstatistics.md) verwenden, um die Statistikindikatoren für den Port zurückzusetzen. Die [**RasAdminPortDisconnect-Funktion**](rasadminportdisconnect.md) trennt einen verwendeten Port.
 
-Verwenden Sie die [**rasadminfreebuffer**](rasadminfreebuffer.md) -Funktion, um Arbeitsspeicher freizugeben, der von den Funktionen [**rasadminportenum**](rasadminportenum.md) und [**rasadminportgetinfo**](rasadminportgetinfo.md) zugewiesen wird. Verwenden Sie die [**rasadmingeterrorstring**](rasadmingeterrorstring.md) -Funktion, um eine Zeichenfolge abzurufen, die einen RAS-Fehlercode beschreibt, der von einer der RAS-Server Verwaltungsfunktionen (rasadmin) zurückgegeben wurde.
+Verwenden Sie die [**RasAdminFreeBuffer-Funktion,**](rasadminfreebuffer.md) um den von den [**Funktionen RasAdminPortEnum**](rasadminportenum.md) und [**RasAdminPortGetInfo**](rasadminportgetinfo.md) belegten Arbeitsspeicher freizugeben. Verwenden Sie die [**RasAdminGetErrorString-Funktion,**](rasadmingeterrorstring.md) um eine Zeichenfolge abzurufen, die einen RAS-Fehlercode beschreibt, der von einer der RAS-Serververwaltungsfunktionen (RasAdmin) zurückgegeben wird.
 
- 
+ 
 
- 
+ 
 
 
 

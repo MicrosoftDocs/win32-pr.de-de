@@ -1,42 +1,42 @@
 ---
-description: Die pkey \_ audioendpoint \_ GUID-Eigenschaft stellt den DirectSound-Geräte Bezeichner bereit, der dem audioendpunktgerät entspricht.
+description: Die PKEY \_ AudioEndpoint \_ GUID-Eigenschaft stellt den DirectSound-Gerätebezeichner zur Anwendung, der dem Audioendpunktgerät entspricht.
 ms.assetid: d3119504-9b6a-47b8-b3c6-15cb329929cb
-title: PKEY_AudioEndpoint_GUID (mmdeviceapi. h)
+title: PKEY_AudioEndpoint_GUID (Mmdeviceapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45405cd2350777e535b50859e77aa56755d191fc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 357531a76316381e9ae39f867a5b6cfa0a055a04f41b0cba5fab95fcccbcc7fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104360"
 ---
-# <a name="pkey_audioendpoint_guid"></a>Pkey- \_ audioendpunkt- \_ GUID
+# <a name="pkey_audioendpoint_guid"></a>\_PKEY-AudioEndpoint-GUID \_
 
-Die **pkey \_ audioendpoint \_ GUID** -Eigenschaft stellt den DirectSound-Geräte Bezeichner bereit, der dem audioendpunktgerät entspricht. Der Eigenschafts Wert ist eine GUID, die der Client als Geräte Bezeichner für die **directsoundcreate** -oder **directsoundcaptuneu** -Funktion in der DirectSound-API bereitstellen kann. Durch diesen Wert wird das audioendpunktgerät für alle audioendpunktgeräte im System eindeutig identifiziert. Weitere Informationen zu DirectSound finden Sie in der DirectX SDK-Dokumentation.
+Die **PKEY \_ AudioEndpoint \_ GUID-Eigenschaft** stellt den DirectSound-Gerätebezeichner zur Anwendung, der dem Audioendpunktgerät entspricht. Der Eigenschaftswert ist eine GUID, die der Client als Gerätebezeichner für die **DirectSoundCreate-** oder **DirectSoundCaptureCreate-Funktion** in der DirectSound-API angeben kann. Dieser Wert identifiziert das Audioendpunktgerät auf allen Audioendpunktgeräten im System eindeutig. Weitere Informationen zu DirectSound finden Sie in der DirectX SDK-Dokumentation.
 
-Der **VT** -Member der **PROPVARIANT** -Struktur ist auf VT \_ LPWSTR festgelegt.
+Der **vt-Member** der **PROPVARIANT-Struktur** ist auf VT \_ LPWSTR festgelegt.
 
-Der **pwszval** -Member der **PROPVARIANT** -Struktur verweist auf eine mit NULL endenden Zeichenfolge mit breit Zeichen, die eine GUID enthält, die das audioendpunktgerät in DirectSound identifiziert.
+Der **pwszVal-Member** der **PROPVARIANT-Struktur** zeigt auf eine null endende Breitzeichenfolge, die eine GUID enthält, die das Audioendpunktgerät in DirectSound identifiziert.
 
-Wie bereits erläutert, unterstützt die [mmdevice-API](mmdevice-api.md) [Geräte Rollen](device-roles.md). Obwohl DirectSound Geräte Rollen nicht direkt unterstützt, kann ein DirectSound-Client die pkey \_ audioendpoint- \_ GUID-Eigenschaft verwenden, um auf der Grundlage seiner Geräte Rolle ein DirectSound-Rendering oder-Erfassungsgerät auszuwählen.
+Wie bereits erläutert, unterstützt die [MMDevice-API](mmdevice-api.md) [Geräterollen.](device-roles.md) Obwohl DirectSound Geräterollen nicht direkt unterstützt, kann ein DirectSound-Client die PKEY AudioEndpoint-GUID-Eigenschaft verwenden, um ein DirectSound-Rendering- oder -Erfassungsgerät basierend auf seiner Geräterolle \_ \_ auszuwählen.
 
-Beispielsweise führt eine DirectSound-Anwendung die folgenden Schritte aus, um ein DirectSound-Gerät zu erstellen, das dem renderingendpunktgerät entspricht, dem der Benutzer die emultimedia-Rolle zugewiesen hat:
+Eine DirectSound-Anwendung führt beispielsweise die folgenden Schritte aus, um ein DirectSound-Gerät zu erstellen, das dem Renderingendpunktgerät entspricht, dem der Benutzer die eMultimedia-Rolle zugewiesen hat:
 
-1.  Aufrufen der [**immdeviceenumerator:: getdefaultaudioendpoint**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) -Methode zum Abrufen der [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle des renderingendpunktgeräts, das über die emultimedia-Rolle verfügt.
-2.  Rufen Sie die [**immdevice:: openpropertystore**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) -Methode auf, um die **IPropertyStore** -Schnittstelle des emultimedia-Geräts abzurufen. Weitere Informationen zu **IPropertyStore** finden Sie in der Windows SDK-Dokumentation.
-3.  Rufen Sie die **IPropertyStore:: GetValue** -Methode auf, um den pkey \_ audioendpoint- \_ GUID-Eigenschafts Wert zu erhalten.
-4.  Konvertieren Sie den Eigenschafts Wert von einer GUID im Zeichen folgen Format in eine 16-Byte-GUID-Struktur.
-5.  Rufen Sie die **DirectSound Create** -Funktion mit der GUID auf, um das Gerät mit der emultimedia-Rolle zu erstellen.
+1.  Rufen Sie [**die IMMDeviceEnumerator::GetDefaultAudioEndpoint-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdefaultaudioendpoint) auf, um die [**IMMDevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) des Renderingendpunktgeräts mit der eMultimedia-Rolle zu erhalten.
+2.  Rufen Sie [**die IMMDevice::OpenPropertyStore-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) auf, um die **IPropertyStore-Schnittstelle** des eMultimedia-Geräts zu erhalten. Weitere Informationen zu **IPropertyStore finden** Sie in der Windows SDK-Dokumentation.
+3.  Rufen Sie **die IPropertyStore::GetValue-Methode** auf, um den PKEY \_ AudioEndpoint \_ GUID-Eigenschaftswert zu erhalten.
+4.  Konvertieren Sie den Eigenschaftswert von einer GUID im Zeichenfolgenformat in eine 16-Byte-GUID-Struktur.
+5.  Rufen Sie **die DirectSoundCreate-Funktion** mit der GUID auf, um das Gerät mit der eMultimedia-Rolle zu erstellen.
 
 > [!Note]  
-> **Pkey \_ Audioendpoint \_ GUID** ist eine schreibgeschützte Eigenschaft, unabhängig vom Speicherzugriffs Modus, der von der Anwendung in [**immdevice:: openpropertystore**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore)angefordert wird. Wenn eine Anwendung versucht, mithilfe von **IPropertyStore:: SetValue** einen Wert festzulegen, schlägt dieser-Befehl mit dem \_ Fehlercode "E AccessDenied" fehl.
+> **PKEY \_ AudioEndpoint \_ GUID** ist eine schreibgeschützte Eigenschaft, unabhängig vom Speicherzugriffsmodus, der von der Anwendung in [**IMMDevice::OpenPropertyStore angefordert wird.**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) Wenn eine Anwendung versucht, einen Wert mithilfe von **IPropertyStore::SetValue** festlegen, schlägt dieser Aufruf mit dem Fehlercode E \_ ACCESSDENIED fehl.
 
  
 
-Beachten Sie, dass die in Schritt 4 generierte 16-Byte-GUID mit der Geräte-GUID übereinstimmt, die das Gerät während der DirectSound-Geräte Enumeration identifiziert. Die Funktion " **directsoundenumerate** " listet renderingendpunktgeräte auf, und die Funktion " **directsoundcaptureenumerate** " listet Erfassungs Endpunkt Geräte auf. In beiden Fällen ist die Geräte-GUID der erste Parameter, der an die enumerationsrückruf-Funktion übergeben wird. Weitere Informationen zur DirectSound-Enumeration finden Sie in der DirectX SDK-Dokumentation.
+Beachten Sie, dass die in Schritt 4 generierte 16-Byte-GUID der Geräte-GUID entspricht, die das Gerät während der DirectSound-Geräteenumeration identifiziert. Die **DirectSoundEnumerate-Funktion** aufzählt Renderingendpunktgeräte, und die **DirectSoundCaptureEnumerate-Funktion** aufzählt Erfassungsendpunktgeräte. In beiden Fällen ist die Geräte-GUID der erste Parameter, der an die Enumerationsrückruffunktion übergeben wird. Weitere Informationen zur DirectSound-Enumeration finden Sie in der DirectX SDK-Dokumentation.
 
-Ein Codebeispiel, in dem die pkey \_ audioendpoint- \_ GUID-Eigenschaft verwendet wird, finden Sie unter [Geräte Rollen für DirectSound-Anwendungen](device-roles-for-directsound-applications.md).
+Ein Codebeispiel, in dem die Eigenschaft PKEY \_ AudioEndpoint GUID verwendet wird, finden Sie \_ unter [Geräterollen für DirectSound-Anwendungen.](device-roles-for-directsound-applications.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,9 +44,9 @@ Ein Codebeispiel, in dem die pkey \_ audioendpoint- \_ GUID-Eigenschaft verwende
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Mmdeviceapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mmdeviceapi.h</dt> </dl> |
 
 
 
@@ -54,7 +54,7 @@ Ein Codebeispiel, in dem die pkey \_ audioendpoint- \_ GUID-Eigenschaft verwende
 
 <dl> <dt>
 
-[**Eigenschaften des audioendpunkts**](audio-endpoint-properties.md)
+[**Audioendpunkteigenschaften**](audio-endpoint-properties.md)
 </dt> <dt>
 
 [Kernaudioeigenschaften](core-audio-properties.md)

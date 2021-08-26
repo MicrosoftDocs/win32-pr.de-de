@@ -1,9 +1,9 @@
 ---
-title: TCM_REMOVEIMAGE Meldung (kommstrg. h)
-description: Entfernt ein Bild aus der Bildliste eines Registerkarten-Steuer Elements. Sie können diese Nachricht explizit oder mithilfe des tabctrl \_ removeimage-Makros senden.
+title: TCM_REMOVEIMAGE Meldung (Commctrl.h)
+description: Entfernt ein Bild aus der Bildliste eines Registerkartensteuerelements. Sie können diese Nachricht explizit oder mithilfe des \_ TabCtrl RemoveImage-Makros senden.
 ms.assetid: f2761338-0afa-47d8-9d9c-1d5a4a7f7bcf
 keywords:
-- Windows-Steuerelemente für TCM_REMOVEIMAGE Meldung
+- TCM_REMOVEIMAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cbc51aa0efed847e39e735443c0d42e288bbaab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 40d2305386f948e1dc4522124708b31ca360203ba9723241c99262fcdb5d2b20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104840"
 ---
-# <a name="tcm_removeimage-message"></a>TCM \_ removeimage-Nachricht
+# <a name="tcm_removeimage-message"></a>TCM \_ REMOVEIMAGE-Nachricht
 
-Entfernt ein Bild aus der Bildliste eines Registerkarten-Steuer Elements. Sie können diese Nachricht explizit oder mithilfe des [**tabctrl \_ removeimage**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_removeimage) -Makros senden.
+Entfernt ein Bild aus der Bildliste eines Registerkartensteuerelements. Sie können diese Nachricht explizit oder mithilfe des [**TabCtrl \_ RemoveImage-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_removeimage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Entfernt ein Bild aus der Bildliste eines Registerkarten-Steuer Elements. Sie k�
 *wParam* 
 </dt> <dd>
 
-Der Index des zu entfernenden Bilds.
+Index des zu entfernende Bilds.
 
 </dd> <dt>
 
@@ -43,9 +43,9 @@ Der Index des zu entfernenden Bilds.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Registerkarten-Steuerelement aktualisiert den Bildindex jeder Registerkarte, sodass jede Registerkarte dem gleichen Bild wie zuvor zugeordnet bleibt. Wenn eine Registerkarte das zu entfernende Bild verwendet, wird die Registerkarte so festgelegt, dass Sie kein Bild hat.
+Das Registerkartensteuerelement aktualisiert den Imageindex jeder Registerkarte, sodass jede Registerkarte demselben Bild wie zuvor zugeordnet bleibt. Wenn eine Registerkarte das entfernte Bild verwendet, wird die Registerkarte auf kein Bild festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Das Registerkarten-Steuerelement aktualisiert den Bildindex jeder Registerkarte,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

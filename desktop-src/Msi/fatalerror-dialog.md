@@ -1,19 +1,19 @@
 ---
-description: Dieses modale Dialogfeld wird am Ende einer-Installation angezeigt, wenn die Installation aufgrund eines schwerwiegenden Fehlers beendet wurde.
+description: Dieses modale Dialogfeld wird am Ende einer Installation angezeigt, wenn die Installation aufgrund eines schwerwiegenden Fehlers beendet wird.
 ms.assetid: 0740e4d3-63ca-46bc-84ab-19fed0b2ccac
-title: Dialog Feld "FatalError"
+title: Schwerwiegender Fehler (Dialogfeld)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c456d0442606ae4a50fc1a41f163aaa0d5057879
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8804b632b7496c4aa876b4a84c633dc36c0928badfc7b674d3da2a34bdd743fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129570"
 ---
-# <a name="fatalerror-dialog"></a>Dialog Feld "FatalError"
+# <a name="fatalerror-dialog"></a>Schwerwiegender Fehler (Dialogfeld)
 
-Dieses modale Dialogfeld wird am Ende einer-Installation angezeigt, wenn die Installation aufgrund eines schwerwiegenden Fehlers beendet wurde. Dieses Dialogfeld enthält in der Regel nur Text und eine Schaltfläche **OK** . Der Name dieses Dialog Felds muss in der [Tabelle AdminUISequence](adminuisequence-table.md) und in der [Tabelle InstallUISequence](installuisequence-table.md) mit-3 als Sequenznummer angezeigt werden.
+Dieses modale Dialogfeld wird am Ende einer Installation angezeigt, wenn die Installation aufgrund eines schwerwiegenden Fehlers beendet wird. Dieses Dialogfeld enthält in der Regel nur Text und eine **Schaltfläche OK.** Der Name dieses Dialogfelds muss in der [Tabelle AdminUISequence](adminuisequence-table.md) und in der [InstallUISequence-Tabelle](installuisequence-table.md) mit -3 als Sequenznummer angezeigt werden.
 
  
 

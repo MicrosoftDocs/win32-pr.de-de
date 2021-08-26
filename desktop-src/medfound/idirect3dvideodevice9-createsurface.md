@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine komprimierte Oberfläche für die DirectX-Video Beschleunigung (DXVA)-Decodierung.
+description: Erstellt eine komprimierte Oberfläche für die Decodierung der DirectX-Videobeschleunigung (DXVA).
 ms.assetid: 2bb8c99d-1151-4f6d-869f-2c1a592e76af
-title: 'IDirect3DVideoDevice9:: kreatesurface-Methode (DXVA. h)'
+title: IDirect3DVideoDevice9::CreateSurface-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: d9e87c9767619241fd6228bb6b0a531249dd2d7b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5bc624527c7ef3ea2a8bb9c878f1d97e865a54341ae5902449fb8a015374f3a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887870"
 ---
-# <a name="idirect3dvideodevice9createsurface-method"></a>IDirect3DVideoDevice9:: kreatesurface-Methode
+# <a name="idirect3dvideodevice9createsurface-method"></a>IDirect3DVideoDevice9::CreateSurface-Methode
 
-Erstellt eine komprimierte Oberfläche für die DirectX-Video Beschleunigung (DXVA)-Decodierung.
+Erstellt eine komprimierte Oberfläche für die Decodierung der DirectX-Videobeschleunigung (DXVA).
 
-Um die Oberflächen Anforderungen zu ermitteln, müssen Sie [**IDirect3DVideoDevice9:: getdxvacompressedbufferinfo**](idirect3dvideodevice9-getdxvacompressedbufferinfo.md) aufrufen und die zurückgegebenen [**dxvacompbufferinfo**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvacompbufferinfo) -Strukturen untersuchen.
+Rufen Sie zum Erhalten der Oberflächenanforderungen [**IDirect3DVideoDevice9::GetDXVACompressedBufferInfo**](idirect3dvideodevice9-getdxvacompressedbufferinfo.md) auf, und untersuchen Sie die zurückgegebenen [**DXVACompBufferInfo-Strukturen.**](/windows/desktop/api/dxva9typ/ns-dxva9typ-dxvacompbufferinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,62 +51,62 @@ HRESULT CreateSurface(
 *Width* 
 </dt> <dd>
 
-Die Breite der Oberfläche in Pixel. Legen Sie diesen Parameter auf **dxvacompbufferinfo. widthtocreate** fest.
+Die Breite der Oberfläche in Pixel. Legen Sie diesen Parameter auf **DXVACompBufferInfo.WidthToCreate fest.**
 
 </dd> <dt>
 
 *Height* 
 </dt> <dd>
 
-Die Höhe der Oberfläche in Pixel. Legen Sie diesen Parameter auf **dxvacompbufferinfo. heighttocreate** fest.
+Die Höhe der Oberfläche in Pixel. Legen Sie diesen Parameter auf **DXVACompBufferInfo.HeightToCreate fest.**
 
 </dd> <dt>
 
-*BackBuffer* 
+*BackBuffers* 
 </dt> <dd>
 
-Die Anzahl der Back Puffer. Dieser Parameter kann NULL sein.
+Die Anzahl der Hintergrundpuffer. Dieser Parameter kann 0 (null) sein.
 
 </dd> <dt>
 
 *Format* 
 </dt> <dd>
 
-Das als **D3DFORMAT** -Wert angegebene Pixel Format. Legen Sie diesen Parameter auf **dxvacompbufferinfo. Format** fest.
+Das Als **D3DFORMAT-Wert** angegebene Pixelformat. Legen Sie diesen Parameter auf **DXVACompBufferInfo.Format fest.**
 
 </dd> <dt>
 
 *Pool* 
 </dt> <dd>
 
-Der Speicherpool, in dem die-Oberfläche erstellt werden soll, angegeben als **D3DPOOL** -Wert. Legen Sie diesen Parameter auf **dxvacompbufferinfo. Pool** fest.
+Der Speicherpool, in dem die Oberfläche erstellt werden soll, angegeben als **D3DPOOL-Wert.** Legen Sie diesen Parameter auf **DXVACompBufferInfo.Pool fest.**
 
 </dd> <dt>
 
 *Verwendung* 
 </dt> <dd>
 
-Ein bitweises **or** von mindestens einer **D3DUSAGE** -Konstante. Legen Sie diesen Parameter auf **dxvacompbufferinfo. Usage fest.**
+Ein **bitweises OR** einer oder mehrere **D3DUSAGE-Konstanten.** Legen Sie diesen Parameter auf **DXVACompBufferInfo.Usage fest.**
 
 </dd> <dt>
 
-*ppsurface* 
+*ppSurface* 
 </dt> <dd>
 
-Empfängt einen Zeiger auf die **IDirect3DSurface9** -Schnittstelle. Der Aufrufer muss die-Schnittstelle freigeben.
+Empfängt einen Zeiger auf die **IDirect3DSurface9-Schnittstelle.** Der Aufrufer muss die Schnittstelle frei geben.
 
 </dd> <dt>
 
-*psharedhandle* 
+*pSharedHandle* 
 </dt> <dd>
 
-Reserviert. Auf **null** festgelegt.
+Reserviert. Legen Sie auf **NULL fest.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,9 +114,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 

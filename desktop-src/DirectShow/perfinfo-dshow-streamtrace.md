@@ -1,7 +1,7 @@
 ---
-description: Die perfinfo \_ DShow \_ streamtrace-Struktur enthält Daten für ein DirectShow-Ablauf Verfolgungs Ereignis vom Typ GUID \_ streamtrace.
+description: Die PERFINFO \_ DSHOW \_ STREAMTRACE-Struktur enthält Daten für ein DirectShow-Ablaufverfolgungsereignis vom Typ GUID \_ STREAMTRACE.
 ms.assetid: 41fbf95c-e86c-4c64-898f-01fbf5f8839c
-title: PERFINFO_DSHOW_STREAMTRACE-Struktur (perfstruct. h)
+title: PERFINFO_DSHOW_STREAMTRACE-Struktur (Perfstruct.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Perfstruct.h
-ms.openlocfilehash: 2bee4f3c11cf8462c8292cc412a6da5d9f9bfa78
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e17d013d90b133f9c6819b8d9ddf4b5970582cae
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352887"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477005"
 ---
-# <a name="perfinfo_dshow_streamtrace-structure"></a>Perfinfo \_ DShow \_ streamtrace-Struktur
+# <a name="perfinfo_dshow_streamtrace-structure"></a>PERFINFO \_ DSHOW \_ STREAMTRACE-Struktur
 
-Die `PERFINFO_DSHOW_STREAMTRACE` Struktur enthält Daten für ein DirectShow-Ablauf Verfolgungs Ereignis vom Typ GUID \_ streamtrace.
+Die `PERFINFO_DSHOW_STREAMTRACE` -Struktur enthält Daten für ein DirectShow-Ablaufverfolgungsereignis vom Typ GUID \_ STREAMTRACE.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,121 +45,58 @@ typedef struct _PERFINFO_DSHOW_STREAMTRACE {
 **id**
 </dt> <dd>
 
-Ereignis Bezeichner. Siehe Hinweise.
+Ereignisbezeichner. Siehe Hinweise.
 
 </dd> <dt>
 
-**bleiben**
+**reserved**
 </dt> <dd>
 
 Reserviert. Auf NULL festlegen.
 
 </dd> <dt>
 
-**dshowclock**
+**dshowClock**
 </dt> <dd>
 
-Streamzeit für dieses Ereignis in 100-Nanosecond-Einheiten. Dieser Wert ist optional und kann NULL sein.
+Streamzeit für dieses Ereignis in Einheiten von 100 Nanosekunden. Dieser Wert ist optional und kann 0 (null) sein.
 
 </dd> <dt>
 
 **data**
 </dt> <dd>
 
-Optionale Ereignisdaten, die aus vier **ULONGLONG** -Werten bestehen. Die Bedeutung dieser Daten hängt vom Ereignis Bezeichner ab.
+Optionale Ereignisdaten, die aus vier **ULONGLONG-Werten** bestehen. Die Bedeutung dieser Daten hängt vom Ereignisbezeichner ab.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Ereignis Bezeichner sind definiert.
+Die folgenden Ereignisbezeichner werden definiert.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Ereignis Bezeichner</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_MPEG2DEMUX_PTS_TRANSLATION</td>
-<td>Wird protokolliert, wenn der <a href="mpeg-2-demultiplexer.md">MPEG-2-Demultiplexer-</a> Filter einen Präsentationszeit Stempel (PTS) in eine streamzeit konvertiert.
-<ul>
-<li><strong>data</strong>[0]: Converted start time.</li>
-<li><strong>data</strong>[1]: Converted stop time.</li>
-<li><strong>Daten</strong>[2]. Datenstrom Bezeichner für die eingabepin.</li>
-<li><strong>data</strong>[3]: PTS that was converted.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>PERFINFO_STREAMTRACE_MPEG2DEMUX_SAMPLE_RECEIVE</td>
-<td>Wird protokolliert, wenn MPEG-2 Demultiplexer ein Beispiel empfängt.
-<ul>
-<li><strong>Daten</strong> [0]: Current time returned by  <a href="/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter"><strong>QueryPerformanceCounter</strong></a>.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_VMR_BEGIN_ADVISE</td>
-<td>Wird protokolliert, wenn der VMR ein Beispiel für das Rendering plant, unmittelbar bevor der VMR <a href="/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime"><strong>IReferenceClock:: advientime</strong></a>aufruft.
-<ul>
-<li><strong>data</strong>[0]: Reference time when streaming began, which corresponds to stream time zero.</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>PERFINFO_STREAMTRACE_VMR_BEGIN_DECODE</td>
-<td>Wird protokolliert, wenn der VMR einen Decodierungs Vorgang startet – d. h., wenn der Decoder <a href="/previous-versions/windows/desktop/api/videoacc/nf-videoacc-iamvideoaccelerator-beginframe"><strong>iamvideoaccelerator:: beginFrame</strong></a>aufruft. Keine Ereignisdaten.</td>
-</tr>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_VMR_BEGIN_DEINTERLACE</td>
-<td>Wird protokolliert, wenn der VMR einen Deinterlacing-oder Video Zusammensetzung-Vorgang startet. Keine Ereignisdaten.</td>
-</tr>
-<tr class="even">
-<td>PERFINFO_STREAMTRACE_VMR_DROPPED_FRAME</td>
-<td>Wird protokolliert, wenn der VMR einen Frame löscht. beispielsweise, wenn ein Beispiel spät war.
-<ul>
-<li><strong>data</strong>[0]: Sample start time.</li>
-<li><strong>data</strong>[1]: Sample end time.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_VMR_END_ADVISE</td>
-<td>Wird protokolliert, wenn der VMR eine Benachrichtigungs Benachrichtigung von der Referenzuhr empfängt. Keine Ereignisdaten.</td>
-</tr>
-<tr class="even">
-<td>PERFINFO_STREAMTRACE_VMR_END_DECODE</td>
-<td>Wird protokolliert, wenn der VMR einen Decodierungs Vorgang beendet – d. h., wenn der Decoder <a href="/previous-versions/windows/desktop/api/videoacc/nf-videoacc-iamvideoaccelerator-endframe"><strong>iamvideoaccelerator:: Endframe</strong></a>aufruft. Keine Ereignisdaten.</td>
-</tr>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_VMR_END_DEINTERLACE</td>
-<td>Wird protokolliert, wenn der VMR einen Deinterlacing-oder Video Zusammensetzung-Vorgang abschließt. Keine Ereignisdaten.</td>
-</tr>
-<tr class="even">
-<td>PERFINFO_STREAMTRACE_VMR_RECEIVE</td>
-<td>Wird protokolliert, wenn der VMR ein neues Beispiel empfängt. Keine Ereignisdaten.</td>
-</tr>
-<tr class="odd">
-<td>PERFINFO_STREAMTRACE_VMR_RENDER_TIME</td>
-<td>Wird protokolliert, wenn der VMR das Rendern eines Frames abgeschlossen hat.
-<ul>
-<li><strong>data</strong>[0]: Time that it took to render this frame.</li>
-<li><strong>data</strong>[1]: Running average of frame rendering times.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Ereignisbezeichner | BESCHREIBUNG | 
+|------------------|-------------|
+| PERFINFO_STREAMTRACE_MPEG2DEMUX_PTS_TRANSLATION | Wird protokolliert, wenn der <a href="mpeg-2-demultiplexer.md">MPEG-2 Demultiplexer-Filter</a> einen Präsentationszeitstempel (PTS) in die Streamzeit konvertiert.<ul><li><strong>data</strong>[0]: Konvertierte Startzeit.</li><li><strong>data</strong>[1]: Konvertierte Beendigungszeit.</li><li><strong>data</strong>[2]. Streambezeichner für den Eingabepin.</li><li><strong>data</strong>[3]: PTS, der konvertiert wurde.</li></ul> | 
+| PERFINFO_STREAMTRACE_MPEG2DEMUX_SAMPLE_RECEIVE | Wird protokolliert, wenn MPEG-2 Demultiplexer ein Beispiel empfängt.<ul><li><strong>data</strong>[0]: Aktuelle Zeit, die von <a href="/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter"><strong>QueryPerformanceCounter</strong></a>zurückgegeben wird.</li></ul> | 
+| PERFINFO_STREAMTRACE_VMR_BEGIN_ADVISE | Wird protokolliert, wenn die VMR ein Beispiel für das Rendering plant, unmittelbar bevor die VMR <a href="/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-advisetime"><strong>IReferenceClock::AdviseTime aufruft.</strong></a><ul><li><strong>data</strong>[0]: Referenzzeit zum Beginn des Streamings, was der Streamzeit 0 (null) entspricht.</li></ul> | 
+| PERFINFO_STREAMTRACE_VMR_BEGIN_DECODE | Wird protokolliert, wenn die VMR einen Decodierungsvorgang startet, d. h., wenn der Decoder <a href="/previous-versions/windows/desktop/api/videoacc/nf-videoacc-iamvideoaccelerator-beginframe"><strong>IAMVideoAccelerator::BeginFrame</strong></a>aufruft. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_BEGIN_DEINTERLACE | Wird protokolliert, wenn die VMR einen Deinterlacing- oder Video-Compositingvorgang startet. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_DROPPED_FRAME | Protokolliert, wenn die VMR einen Frame löscht; Beispielsweise, wenn ein Beispiel zu spät war.<ul><li><strong>data</strong>[0]: Beispielstartzeit.</li><li><strong>data</strong>[1]: Beispielendzeit.</li></ul> | 
+| PERFINFO_STREAMTRACE_VMR_END_ADVISE | Wird protokolliert, wenn die VMR eine Empfehlungsbenachrichtigung von der Referenzuhr empfängt. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_END_DECODE | Wird protokolliert, wenn die VMR einen Decodierungsvorgang beendet, d. h., wenn der Decoder <a href="/previous-versions/windows/desktop/api/videoacc/nf-videoacc-iamvideoaccelerator-endframe"><strong>IAMVideoAccelerator::EndFrame</strong></a>aufruft. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_END_DEINTERLACE | Wird protokolliert, wenn die VMR einen Deinterlacing- oder Video-Compositingvorgang abschließt. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_RECEIVE | Wird protokolliert, wenn die VMR ein neues Beispiel empfängt. Keine Ereignisdaten. | 
+| PERFINFO_STREAMTRACE_VMR_RENDER_TIME | Wird protokolliert, wenn die VMR das Rendern eines Frames beendet.<ul><li><strong>data</strong>[0]: Zeit, die zum Rendern dieses Frames gedauert hat.</li><li><strong>data</strong>[1]: Durchschnittliche Ausführung der Framerenderingzeiten.</li></ul> | 
+
 
 
 
  
 
-Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie die Funktion " **Perflog \_ streamtrace** ", die in der Header Datei "dxmperf. h" definiert ist. Dieser Header ist in den DirectShow-Basisklassen enthalten.
+Verwenden Sie zum Protokollieren dieses Ereignisses aus einem DirectShow-Filter die **PERFLOG \_ STREAMTRACE-Funktion,** die in der Headerdatei Dxmperf.h definiert ist. Dieser Header ist in den DirectShow-Basisklassen enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -167,21 +104,21 @@ Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie 
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Perfstruct. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Perfstruct.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DirectShow-Strukturen](directshow-structures.md)
 </dt> <dt>
 
-[Ereignis Ablauf Verfolgung in DirectShow](event-tracing-in-directshow.md)
+[Ereignisablaufverfolgung in DirectShow](event-tracing-in-directshow.md)
 </dt> <dt>
 
-[GUIDs der Ablauf Verfolgungs Ereignisse](trace-guids.md)
+[GUIDs für Ablaufverfolgungsereignisse](trace-guids.md)
 </dt> </dl>
 
  

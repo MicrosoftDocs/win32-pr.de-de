@@ -1,43 +1,43 @@
 ---
-description: Gibt den physischen Verbindungstyp der Videoausgabe zurück.
+description: Gibt den physischen Connectortyp der Videoausgabe zurück.
 ms.assetid: c5862758-0125-4dbe-af72-5ed4a85bd702
-title: OPM_GET_CONNECTOR_TYPE (opmapi. h)
+title: OPM_GET_CONNECTOR_TYPE (Opmapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a95ca88b079aa93b4c2665fe7aa954eb58cfc1a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3099da66193048b52011e58eb5ce3f925d451fc1ad26b193f2955f6012f0e607
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887500"
 ---
-# <a name="opm_get_connector_type"></a>OPM \_ get \_ Connector- \_ Typ
+# <a name="opm_get_connector_type"></a>OPM \_ GET \_ CONNECTOR \_ TYPE
 
-Gibt den physischen Verbindungstyp der Videoausgabe zurück.
+Gibt den physischen Connectortyp der Videoausgabe zurück.
 
 
 
 | Anforderung | Wert |
 |--------------|-----------------------------------------------------------------------------|
-| Anforderungs-GUID | OPM \_ get \_ Connector- \_ Typ                                                   |
+| Anforderungs-GUID | OPM \_ GET \_ CONNECTOR \_ TYPE                                                   |
 | Eingabedaten   | Keine                                                                        |
-| Daten zurückgeben  | Eine [**OPM- \_ Standard \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) Struktur |
+| Daten zurückgeben  | Eine [**OPM \_ STANDARD \_ INFORMATION-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Verbindungstyp wird im **ulinformation** -Member der [**OPM- \_ Standard \_ Informations**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) Struktur zurückgegeben. Der Wert von **ulinformation** ist gleich einem der Connector-Typen, die in [**OPM-Connector-Typflags**](opm-connector-type-flags.md)aufgeführt sind.
+Der Connectortyp wird im **ulInformation-Member** der [**OPM \_ STANDARD \_ INFORMATION-Struktur**](/windows/desktop/api/ksopmapi/ns-ksopmapi-opm_standard_information) zurückgegeben. Der Wert von **ulInformation** entspricht einem der Connectortypen, die unter [**OPM-Connectortypflags aufgeführt sind.**](opm-connector-type-flags.md)
 
-Im COPP-Emulations Modus kann der Verbindungstyp mit dem **internen OPM- \_ \_ \_ \_ Kopiertyp \_** -Flag kombiniert werden. Verwenden Sie ein bitweises **and-** Element, um den Verbindungstyp zu extrahieren:
+Im COPP-Emulationsmodus kann der Connectortyp mit dem **OPM \_ COPP \_ COMPATIBLE CONNECTOR \_ TYPE \_ \_ INTERNAL-Flag kombiniert** werden. Verwenden Sie ein **bitweises AND,** um den Connectortyp zu extrahieren:
 
 `ulInformation & ~OPM_COPP_COMPATIBLE_CONNECTOR_TYPE_INTERNAL`
 
-Anwendungen sollten das interne Flag " **OPM \_ COPP \_ Compatible \_ Connector \_ Type \_** " ignorieren. Weitere Informationen finden Sie im Abschnitt "Hinweise" der [**OPM-Connector-Typflags**](opm-connector-type-flags.md).
+Anwendungen sollten das **FLAG OPM \_ COPP \_ COMPATIBLE CONNECTOR \_ \_ TYPE \_ INTERNAL** ignorieren. Weitere Informationen finden Sie im Abschnitt "Hinweise" von [**OPM-Connectortypflags.**](opm-connector-type-flags.md)
 
-Diese Abfrage entspricht der DXVA- \_ Abfrage "coppqueryconnector Type", die im Certified Output Protection Protocol (COPP) verwendet wird.
+Diese Abfrage entspricht der \_ DXVA-Abfrage COPPQueryConnectorType, die im Certified Output Protection Protocol (COPP) verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Diese Abfrage entspricht der DXVA- \_ Abfrage "coppqueryconnector Type", die im 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Opmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Opmapi.h</dt> </dl> |
 
 
 
@@ -55,13 +55,13 @@ Diese Abfrage entspricht der DXVA- \_ Abfrage "coppqueryconnector Type", die im 
 
 <dl> <dt>
 
-[**IOPMVideoOutput:: COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
+[**IOPMVideoOutput::COPPCompatibleGetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-coppcompatiblegetinformation)
 </dt> <dt>
 
-[**IOPMVideoOutput:: GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
+[**IOPMVideoOutput::GetInformation**](/windows/desktop/api/opmapi/nf-opmapi-iopmvideooutput-getinformation)
 </dt> <dt>
 
-[OPM-Status Anforderungen](opm-status-requests.md)
+[OPM-Statusanforderungen](opm-status-requests.md)
 </dt> </dl>
 
  

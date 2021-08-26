@@ -1,26 +1,26 @@
 ---
-description: Zielstregruppen
+description: PurposeGroups
 MS-HAID: WWAN\_profile\_v4.element\_PurposeGroups
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Zielstregruppen
+title: PurposeGroups
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 370cf6b0dc13848ca21a2a06e0b9806d753878c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d3b158938e1a41f6ab8d3f1df0cae6a2166bc21c
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350425"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630936"
 ---
-# <a name="span-idwwan_profile_v4element_purposegroupsspanpurposegroups"></a><span id="WWAN_profile_v4.element_PurposeGroups"></span>Zielstregruppen
+# <a name="span-idwwan_profile_v4element_purposegroupsspanpurposegroups"></a><span id="WWAN_profile_v4.element_PurposeGroups"></span>PurposeGroups
 
-Eine optionale Liste der Gruppen von Profilen, wobei jede Gruppe Profile enthält, die für einen allgemeinen Zweck verwendet werden.
+Eine optionale Liste von Profilgruppen, wobei jede Gruppe Profile enthält, die für einen gemeinsamen Zweck verwendet werden.
 
-Dieses Element ist neu für V4 des Schemas.
+Dieses Element ist neu für v4 des Schemas.
 
-Ein Profil kann in mehreren Gruppen aufgelistet werden.
+Ein Profil kann in mehreren Gruppen aufgeführt werden.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -40,7 +40,7 @@ Ein Profil kann in mehreren Gruppen aufgelistet werden.
 
 ### <a name="key"></a>Schlüssel
 
-`{}`   bestimmter Bereich von vorkommen
+`{}`   bestimmter Bereich von Vorkommen
 
 ## <a name="span-idattributes_and_elementsspanspan-idattributes_and_elementsspanspan-idattributes_and_elementsspanattributes-and-elements"></a><span id="Attributes_and_Elements"></span><span id="attributes_and_elements"></span><span id="ATTRIBUTES_AND_ELEMENTS"></span>Attribute und Elemente
 
@@ -52,8 +52,8 @@ Keine.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -63,33 +63,33 @@ Keine.
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="element-purposegroupguid.md">"Zielstregroupguid"</a></td>
-<td><p>Stellt ein Profil in einer Zweck Gruppe von Profilen dar.</p>
-<p>Profile werden durch Ihren <a href="simpletype-guidtype.md"><strong>guidtype</strong></a> -Wert angegeben.</p>
+<td><a href="element-purposegroupguid.md">PurposeGroupGuid</a></td>
+<td><p>Stellt ein Profil in einer PurposeGroup von Profilen dar.</p>
+<p>Profile werden durch ihren <a href="simpletype-guidtype.md"><strong>guidType-Wert</strong></a> angegeben.</p>
 <p>Vier GUID-Werte werden definiert, wie in der folgenden Tabelle aufgeführt.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Zweck Gruppe</th>
+<th>Zweckgruppe</th>
 <th>GUID</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Internet</td>
-<td>3e5545d2-1137-4dc8-a198-33F & 1c657515f</td>
+<td>3E5545D2-1137-4DC8-A198-33F1C657515F</td>
 </tr>
 <tr class="even">
 <td>mms</td>
-<td>53e2c5d3-D13C-4068-AA38-9c48ff2e55a8</td>
+<td>53E2C5D3-D13C-4068-AA38-9C48FF2E55A8</td>
 </tr>
 <tr class="odd">
 <td>IMS</td>
-<td>474d66ed-0e4b-476b-A455-19bb1239ed13</td>
+<td>474D66ED-0E4B-476B-A455-19BB1239ED13</td>
 </tr>
 <tr class="even">
 <td>SUPL</td>
-<td>6d42669l-52a9-408e-9493-1071dcc437bd</td>
+<td>6D42669F-52A9-408E-9493-1071DCC437BD</td>
 </tr>
 </tbody>
 </table>
@@ -104,32 +104,32 @@ Keine.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">

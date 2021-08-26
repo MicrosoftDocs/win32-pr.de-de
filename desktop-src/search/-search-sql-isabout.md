@@ -4,16 +4,16 @@ ms.assetid: e2629c4c-4b44-4427-ac1d-17f55fd969e3
 title: ISABOUT-Begriff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5665e7bf62da4858cf2e7d68e65d0f42771903d55e3189db12f19cdd5414530d
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ee772bbd3be1f9ef3924989dfbaa2a9afd77d4a6
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118969609"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627356"
 ---
 # <a name="isabout-term"></a>ISABOUT-Begriff
 
-**Veraltet**
+**Als veraltet markiert**
 
 Dieses Feature wurde ab Windows 8 entfernt. Wenn Sie neue Anwendungen schreiben, vermeiden Sie die Verwendung dieser veralteten Funktion. Wenn Sie vorhandene Anwendungen ändern, wird dringend empfohlen, alle Abhängigkeiten von diesem Feature zu entfernen.
 
@@ -26,7 +26,7 @@ ISABOUT(<components>) [RANKMETHOD <method>]
 
 
 
-Der optionale RANKMETHOD-Begriff gibt die Berechnungsmethode an, die zum Bewerten der Dokumente verwendet wird, die einer oder mehreren Komponenten entsprechen. Wenn keine RANKMETHOD angegeben ist, wird die standardmäßige Csv-Koeffizient-Rangfolgemethode verwendet.
+Der optionale RANKMETHOD-Begriff gibt die Berechnungsmethode an, die zum Bewerten der Dokumente verwendet wird, die einer oder mehreren Komponenten entsprechen. Wenn keine RANKMETHOD-Methode angegeben ist, wird die standardmäßige Rangfolgemethode " Equitycard-Koeffizient" verwendet.
 
 Der ISABOUT-Begriff kann eine oder mehrere Komponenten enthalten. Die im [CONTAINS-Prädikat](-search-sql-contains.md) angegebenen Spalten werden für jede Komponente getestet. Das Dokument ist in den Ergebnissen enthalten, wenn mindestens eine der Komponenten übereinstimmt. Kommas trennen mehrere Komponenten.
 
@@ -47,14 +47,14 @@ In der folgenden Tabelle werden mögliche Übereinstimmungsbegriffstypen beschri
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>type</th>
-<th>BESCHREIBUNG</th>
+<th>Typ</th>
+<th>Beschreibung</th>
 <th>Beispiele</th>
 </tr>
 </thead>
@@ -65,7 +65,7 @@ In der folgenden Tabelle werden mögliche Übereinstimmungsbegriffstypen beschri
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -77,13 +77,13 @@ In der folgenden Tabelle werden mögliche Übereinstimmungsbegriffstypen beschri
 </td>
 </tr>
 <tr class="even">
-<td>Ausdruck</td>
+<td>Satz</td>
 <td>Mehrere Wörter oder eingeschlossene Leerzeichen.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -102,7 +102,7 @@ In der folgenden Tabelle werden mögliche Übereinstimmungsbegriffstypen beschri
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">

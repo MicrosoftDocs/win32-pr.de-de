@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_ISDNType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen ISDN-Datensatz darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen ISDN-Eintrag darstellt.
 ms.assetid: 8925042c-65d3-465f-aedd-9f7c862620b5
 keywords:
-- DNS-MicrosoftDNS_ISDNType Klasse
-- DNS-MicrosoftDNS_ISDNType Klasse, beschrieben
+- MicrosoftDNS_ISDNType DNS-Klasse
+- MicrosoftDNS_ISDNType DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -19,18 +19,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d4e8b50d75f7b6d57226247c978ced45e07b1acc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: af06ad782b6d36213e9a1df210916f9346e1e4f8bd0a98dd619651a579dc5c4e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131720"
 ---
-# <a name="microsoftdns_isdntype-class"></a>MicrosoftDNS \_ isdntype-Klasse
+# <a name="microsoftdns_isdntype-class"></a>MicrosoftDNS \_ ISDNType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen ISDN-Datensatz darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen ISDN-Eintrag darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ class MicrosoftDNS_ISDNType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ isdntype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ ISDNType-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ isdntype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ ISDNType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                           |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                           |
 |:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen ISDN-Ressourcen Eintrag auf der Grundlage der Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer Namen, der Klasse (Standard = in), dem Gültigkeitsdauer Wert und der ISDN-Nummer und der unter Adresse des Besitzers. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer, die ISDN-Nummer und die unter Adresse auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>                   |
+| **CreateInstanceFromPropertyData** | Instanziiert einen ISDN-Ressourceneintrag basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername, Klasse (Standard = IN), Lebzeitwert sowie ISDN-Nummer und Unteradresse des Besitzers. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert TTL, ISDN Number und Subaddress auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                   |
 
 
 
@@ -66,11 +66,11 @@ Die **MicrosoftDNS- \_ isdntype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ isdntype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ ISDNType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Isdnnumber**
+**ISDNNumber**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -79,11 +79,11 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-ISDN-Nummer und DDI für den Besitzer des Datensatzes.
+ISDN-Nummer und DDI des Besitzers des Datensatzes.
 
 </dd> <dt>
 
-**Unter Adresse**
+**Unteradresse**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -92,7 +92,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die untergeordnete Adresse des Besitzers, sofern definiert.
+Unteradresse des Besitzers, sofern definiert.
 
 </dd> </dl>
 
@@ -105,7 +105,7 @@ Die untergeordnete Adresse des Besitzers, sofern definiert.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -113,13 +113,13 @@ Die untergeordnete Adresse des Besitzers, sofern definiert.
 
 <dl> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ isdntype"**](microsoftdns-isdntype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ ISDNType-Klasse**](microsoftdns-isdntype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ isdntype-Klasse**](microsoftdns-isdntype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ ISDNType-Klasse**](microsoftdns-isdntype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

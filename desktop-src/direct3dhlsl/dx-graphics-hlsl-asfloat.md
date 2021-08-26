@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d85f6010a8c82f8ae66d5fa56a979a9e946316a5e2737fe2c7257570499055d1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 901b64099547060305bab6db43cbe75b3fdb8d9c
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119043848"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886266"
 ---
 # <a name="asfloat"></a>asfloat
 
@@ -56,7 +56,7 @@ Die Als Gleitkommazahl interpretierte Eingabe.
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                         | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------|
 | *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**float,**](/windows/desktop/WinProg/windows-data-types) [**int,**](/windows/desktop/WinProg/windows-data-types) [**uint**](/windows/desktop/WinProg/windows-data-types) | any                            |
-| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                                                                                | Gleiche Dimension(en) wie eingabe *x* |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**float**](/windows/desktop/WinProg/windows-data-types)                                                                                | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
@@ -64,9 +64,9 @@ Die Als Gleitkommazahl interpretierte Eingabe.
 
 ## <a name="function-overloads"></a>Funktionsüberladungen
 
-<dl> 'float <x> asfloat(float <x> value); `  
-` float <x> asfloat(int <x> value); `  
-` float <x> asfloat(uint <x> value);'
+<dl> `float&lt;x&gt; asfloat(float&lt;x&gt; value);`  
+`float&lt;x&gt; asfloat(int&lt;x&gt; value);`  
+`float&lt;x&gt; asfloat(uint&lt;x&gt; value);`  
 </dl>
 
 ## <a name="minimum-shader-model"></a>Shader-Mindestmodell
@@ -77,7 +77,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | ja       |
 | [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | Nein        |
 | [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | Nein        |
 | [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
@@ -90,7 +90,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 Ältere Compiler haben fälschlicherweise `asfloat(bool)` zugelassen, aber beachten Sie, dass bool-Eingaben nicht unterstützt werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

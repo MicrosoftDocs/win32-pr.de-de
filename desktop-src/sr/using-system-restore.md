@@ -1,23 +1,23 @@
 ---
-title: Verwenden der System Wiederherstellung
-description: In den folgenden Beispielen wird veranschaulicht, wie Wiederherstellungspunkte mithilfe der srsettrestorepoint-Funktion erstellt und abgebrochen werden.
+title: Verwenden der Systemwiederherstellung
+description: Die folgenden Beispiele veranschaulichen das Erstellen und Abbrechen von Wiederherstellungspunkten mithilfe der SRSetRestorePoint-Funktion.
 ms.assetid: 98c79305-3659-4d1a-8165-bb6e451e2d1e
 keywords:
-- System Wiederherstellung, using
+- Systemwiederherstellung mit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fd19e3a90cfdc766a62bdf20e2e4027e1e4c5ba
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2f707609dd844941402c282b52430eb56ee7ff481f23b8dc9aedbae04d6e3b12
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111260"
 ---
-# <a name="using-system-restore"></a>Verwenden der System Wiederherstellung
+# <a name="using-system-restore"></a>Verwenden der Systemwiederherstellung
 
-In den folgenden Beispielen wird veranschaulicht, wie Wiederherstellungspunkte mithilfe der [**srsettrestorepoint**](/windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srsetrestorepointa) -Funktion erstellt und abgebrochen werden.
+Die folgenden Beispiele veranschaulichen das Erstellen und Abbrechen von Wiederherstellungspunkten mithilfe der [**SRSetRestorePoint-Funktion.**](/windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srsetrestorepointa)
 
-Der erste Schritt bei der Verwendung der System Wiederherstellung ist das Einrichten der com-Aufrufe an [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) und [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity). Dies ist für alle Prozesse erforderlich, die die [**srsettrestorepoint**](/windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srsetrestorepointa) -Funktion verwenden. Network Service, LocalService und System müssen zulässig sein, um Aufrufe an den Prozess auszuführen. Die folgende **initializecomsecurity** -Funktion ist ein Beispiel für die Initialisierung der com-Sicherheit. Möglicherweise müssen Sie die Parameter für die **CoInitializeSecurity** -Funktion für Ihre Anwendung ändern.
+Der erste Schritt bei der Verwendung der Systemwiederherstellung ist das Einrichten der COM-Aufrufe von [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) und [**CoInitializeSecurity.**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) Dies ist für jeden Prozess erforderlich, der die [**SRSetRestorePoint-Funktion**](/windows/desktop/api/SRRestorePtAPI/nf-srrestoreptapi-srsetrestorepointa) verwendet. NetworkService, LocalService und System müssen aufruft werden dürfen. Die folgende **InitializeCOMSecurity-Funktion** ist ein Beispiel für das Initialisieren der COM-Sicherheit. Möglicherweise müssen Sie die Parameter der **CoInitializeSecurity-Funktion** für Ihre Anwendung ändern.
 
 
 ```C++
@@ -217,7 +217,7 @@ BOOL InitializeCOMSecurity()
 
 
 
-## <a name="example-1-create-a-restore-point"></a>Beispiel 1: Erstellen eines Wiederherstellungs Punkts.
+## <a name="example-1-create-a-restore-point"></a>Beispiel 1: Erstellen eines Wiederherstellungspunkts.
 
 
 ```C++
@@ -349,7 +349,7 @@ exit:
 
 
 
-## <a name="example-2-create-and-cancel-a-restore-point"></a>Beispiel 2: Erstellen und Abbrechen eines Wiederherstellungs Punkts.
+## <a name="example-2-create-and-cancel-a-restore-point"></a>Beispiel 2: Erstellen und Abbrechen eines Wiederherstellungspunkts.
 
 
 ```C++
@@ -470,6 +470,6 @@ exit:
 
 
 
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-title: Gather (DirectX HLSL-Texturobjekt)
+title: Gather (DirectX HLSL Texture Object)
 description: Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Textur für die bilineare Interpolation verwendet werden.
 ms.assetid: a394d8c2-99cc-4a38-9ac9-34afc666ebe0
 ms.topic: reference
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5edf92b127210a5eb05e5339a1dff4cc08ce9443e638461b71d7bf7d27c7b78a
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: bf364bc9d8feac199235319639ab5be8b851de4b
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118513089"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626956"
 ---
-# <a name="gather-directx-hlsl-texture-object"></a>Gather (DirectX HLSL-Texturobjekt)
+# <a name="gather-directx-hlsl-texture-object"></a>Gather (DirectX HLSL Texture Object)
 
 Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Textur für die bilineare Interpolation verwendet werden.
 
@@ -32,13 +32,13 @@ Ruft die vier Stichproben (nur rote Komponente) ab, die beim Sampling einer Text
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>

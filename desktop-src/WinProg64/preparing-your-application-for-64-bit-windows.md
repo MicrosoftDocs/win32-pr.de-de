@@ -1,26 +1,26 @@
 ---
 title: Vorbereiten der Anwendung für 64-Bit-Windows
-description: Es gibt mehrere Features, die es Ihnen erleichtern, Anwendungen zu entwickeln, die auf 32-und 64-Bit-Fenstern ausgeführt werden können. Die meisten dieser Informationen, wie z. b. die neuen Datentypen, werden unter Vorbereiten für 64-Bit-Windows beschrieben.
+description: Es gibt mehrere Features, die ihnen die Entwicklung von Anwendungen erleichtern, die sowohl auf 32- als auch auf 64-Bit-Windows. Die meisten dieser Datentypen, z. B. die neuen Datentypen, werden unter Getting Ready for 64-bit Windows.
 ms.assetid: 6559b0ab-17cf-4bec-bf2d-3a0da0a344d3
 keywords:
-- 64-Bit-Toolkit 64-Bit-Windows-Programmierung
+- 64-Bit-Toolkit 64-Bit-Windows Programmierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76f3b40d2fb22b84abdd4322f476981dc54c7ad3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3b6c8d31b685e6f545aca4bdaac341fe25a3c96f458048808536899a8416120a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071620"
 ---
 # <a name="preparing-your-application-for-64-bit-windows"></a>Vorbereiten der Anwendung für 64-Bit-Windows
 
-Es gibt mehrere Features, die es Ihnen erleichtern, Anwendungen zu entwickeln, die auf 32-und 64-Bit-Fenstern ausgeführt werden können. Die meisten dieser Informationen, wie z. b. die neuen Datentypen, werden unter [vorbereiten für 64-Bit-Windows](getting-ready-for-64-bit-windows.md)beschrieben.
+Es gibt mehrere Features, die ihnen die Entwicklung von Anwendungen erleichtern, die sowohl auf 32- als auch auf 64-Bit-Windows. Die meisten dieser Datentypen, z. B. die neuen Datentypen, werden unter [Getting Ready for 64-bit Windows](getting-ready-for-64-bit-windows.md).
 
-Das 64-Bit-Toolkit, das im Lieferumfang des Windows SDK enthalten ist, enthält einen 64-Bit-Mittelwert Compiler, Midl.exe, zum Erstellen von nativen 64-Bit-stubwerten sowie 32-Bit-stubwerte. Verwenden Sie den Schalter **/env Win64** , um nur 64-Bit-stubwerte zu generieren. Standardmäßig werden duale stubwerte generiert, die auf beiden Plattformen ausgeführt werden.
+Das im Windows SDK enthaltene 64-Bit-Toolkit enthält einen 64-Bit-MIDL-Compiler Midl.exe zum Generieren nativer 64-Bit-Stubs sowie 32-Bit-Stubs. Verwenden Sie **den Schalter /env win64,** um nur 64-Bit-Stubs zu generieren. Standardmäßig werden duale Stubs generiert, die auf beiden Plattformen ausgeführt werden.
 
-Beachten Sie, dass die 64-Bit-Mittell nur die Optimierungs Modi [**/Oicf**](/windows/desktop/Midl/-oi) und [**/OS**](/windows/desktop/Midl/-os) unterstützt.
+Beachten Sie, dass die 64-Bit-MIDL nur die [**Optimierungsmodi /Oicf**](/windows/desktop/Midl/-oi) und [**/Os**](/windows/desktop/Midl/-os) unterstützt.
 
- 
+ 
 
- 
+ 

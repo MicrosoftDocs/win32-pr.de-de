@@ -1,9 +1,9 @@
 ---
-title: Rasadminportdisconnect-Funktion (rassapi. h)
-description: Die rasadminportdisconnect-Funktion trennt einen Port, der zurzeit verwendet wird.
+title: RasAdminPortDisconnect-Funktion (Rassapi.h)
+description: Die RasAdminPortDisconnect-Funktion trennt die Verbindung mit einem port, der derzeit verwendet wird.
 ms.assetid: 7ed3bc46-2d56-44c8-afd5-fcbdad0f7f3a
 keywords:
-- Rasadminportdisconnect-Funktion (RAS)
+- RasAdminPortDisconnect-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee05e7927bd6c9adb086a09f76b9022affd74792
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 369a0f3abf4cee54f92c9bfd846557623de5e23fffd4724a701ca7c04aa818af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028520"
 ---
-# <a name="rasadminportdisconnect-function"></a>Rasadminportdisconnect-Funktion
+# <a name="rasadminportdisconnect-function"></a>RasAdminPortDisconnect-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminportdisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminportdisconnect) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Es wird ERROR \_ CALL NOT IMPLEMENTED auf Windows Server \_ \_ 2003 zurückgegeben. Anwendungen sollten die [**MprAdminPortDisconnect-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminportdisconnect) verwenden.\]
 
-Die **rasadminportdisconnect** -Funktion trennt einen Port, der zurzeit verwendet wird.
+Die **RasAdminPortDisconnect-Funktion** trennt die Verbindung mit einem port, der derzeit verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ DWORD RasAdminPortDisconnect(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des Windows NT/Windows 2000-RAS-Servers angibt. Geben Sie den Namen mit führenden " \\ \\ " Zeichen im folgenden Format an: \\ \\ *Servername*.
+Zeiger auf eine auf NULL beendete Unicode-Zeichenfolge, die den Namen des nt Windows/Windows 2000-RAS-Servers angibt. Geben Sie den Namen mit den \\ \\ führenden Zeichen " " im folgenden Formular an: \\ \\ *Servername*.
 
 </dd> <dt>
 
-*lpszport* \[ in\]
+*lpszPort* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des Ports auf dem Server angibt.
+Zeiger auf eine auf NULL beendete Unicode-Zeichenfolge, die den Namen des Ports auf dem Server angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
 Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehlercodes sein.
 
@@ -67,14 +67,14 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehle
 
 | Wert                                                                                               | Bedeutung                                      |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Port.**</dt> </dl> | Der angegebene Port ist ungültig.<br/>    |
-| <dl> <dt>**NERR \_ usernotfound**</dt> </dl>   | Der Port wird derzeit nicht verwendet.<br/> |
+| <dl> <dt>**FEHLER: \_ \_ UNGÜLTIGER PORT**</dt> </dl> | Der angegebene Port ist ungültig.<br/>    |
+| <dl> <dt>**NERR \_ UserNotFound**</dt> </dl>   | Der Port wird derzeit nicht verwendet.<br/> |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie [**getLastError nicht auf.**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
@@ -94,10 +94,10 @@ Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> </dl>
 
  

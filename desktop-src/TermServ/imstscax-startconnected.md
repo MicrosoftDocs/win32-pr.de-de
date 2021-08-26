@@ -1,30 +1,30 @@
 ---
-title: Imstscax startconnected (Eigenschaft)
-description: Gibt an, ob das-Steuerelement die Server Verbindung des Remotedesktop-Sitzungshost (RD-Sitzungshost) unmittelbar nach dem Start herstellen soll.
+title: IMsTscAx-Eigenschaft "StartConnected"
+description: Gibt an, ob das Steuerelement die Remotedesktop-Sitzungshost (RD-Sitzungshost)-Serververbindung sofort nach dem Start herstellt.
 ms.assetid: cf2956c0-be4f-4f80-a14b-253ae8117824
 ms.tgt_platform: multiple
 keywords:
-- Startconnected-Eigenschaften Remotedesktopdienste
-- Startconnected-Eigenschaften Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, startconnected-Eigenschaft
-- Startconnected-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, startconnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
+- StartConnected-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , StartConnected-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 09bda77a06723a6df63055374a3fc96cb80f7654
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9bdae5535d079335354306e47ed8378fa09450d9
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340977"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880056"
 ---
-# <a name="imstscaxstartconnected-property"></a>Imstscax:: startconnected (Eigenschaft)
+# <a name="imstscaxstartconnected-property"></a>IMsTscAx::StartConnected-Eigenschaft
 
-Gibt an, ob das-Steuerelement die Server Verbindung des Remotedesktop-Sitzungshost (RD-Sitzungshost) unmittelbar nach dem Start herstellen soll.
+Gibt an, ob das Steuerelement die Remotedesktop-Sitzungshost (RD-Sitzungshost)-Serververbindung sofort nach dem Start herstellt.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -94,21 +94,21 @@ HRESULT get_StartConnected(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **true** fest, wenn das Steuerelement beim Start sofort eine Verbindung herstellen soll, und andernfalls **false** .
+Legen Sie diesen Parameter auf **TRUE** fest, wenn das Steuerelement beim Start sofort eine Verbindung herstellen soll, **andernfalls FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist besonders nützlich, wenn die Steuerelement Eigenschaften in der Parameterliste eines <OBJECT> Tags anstelle von Skript aufrufen festgelegt werden.
+Diese Eigenschaft ist am nützlichsten, wenn die Steuerelementeigenschaften nicht &lt; über Skriptaufrufe, sondern in der Parameterliste eines OBJECT-Tags festgelegt &gt; werden.
 
-Diese Eigenschaft kann nur verwendet werden, wenn der Servername auch mit der Server-Eigenschaft angegeben wird. Dieser Parameter muss festgelegt werden, bevor das-Steuerelement beispielsweise gestartet wird, indem es in der Parameterliste eines Tags eingeschlossen wird, <OBJECT> Wenn das Steuerelement auf einer Webseite verwendet wird.
+Diese Eigenschaft kann nur verwendet werden, wenn der Servername auch mithilfe der Servereigenschaft angegeben wird. Dieser Parameter muss festgelegt werden, bevor das Steuerelement gestartet wird, z. B. durch Einschließen in die Parameterliste eines &lt; &gt; OBJECT-Tags, wenn das Steuerelement von einer Webseite verwendet wird.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -118,15 +118,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -153,10 +153,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[Einbetten des Remotedesktop ActiveX-Steuer Elements in eine Webseite](embedding-the-remote-desktop-activex-control-in-a-web-page.md)
+[Einbetten des Remotedesktop ActiveX-Steuerelements in eine Webseite](embedding-the-remote-desktop-activex-control-in-a-web-page.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 9ab8de48b5f3d8b31df7001f53ee370a4e0f4eaa
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 483150a567be858359f518417a01d3b68193f29d
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122622526"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786296"
 ---
 # <a name="span-idvspixengineipixengine3spanipixengine3-interface"></a><span id="vspixengine.ipixengine3"></span>IPixEngine3-Schnittstelle
 
 Erweiterungen der IPixEngine2-Schnittstelle.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **IPixEngine3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixEngine3** verfügt auch über diese Membertypen:
+Die **IPixEngine3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixEngine3** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,11 +38,11 @@ Die **IPixEngine3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/wi
 
 Die **IPixEngine3-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixengine3-setupresources-resourcepair-arr-uint"><strong>SetupResources</strong></a></td><td style="text-align: left;"><p>Übergibt Ressourcen an die Engine, z. B. Zeichenfolgen für Fehlermeldungen.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipixengine3-setupresources-resourcepair-arr-uint"><strong>SetupRessourcen</strong></a></td><td ><p>Übergibt Ressourcen an die Engine, z. B. Zeichenfolgen für Fehlermeldungen.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

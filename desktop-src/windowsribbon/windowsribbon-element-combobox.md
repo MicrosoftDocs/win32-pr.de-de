@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 60ee7a03d25508df45469577f4d4159b5db5f5190f188ca594b71f176d037526
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 62cebc67a0666caad88722b934e4891e01d32bab
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117851189"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122632108"
 ---
 # <a name="combobox-element"></a>ComboBox-Element
 
 Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ComboBox
@@ -40,15 +40,15 @@ Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) 
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -96,8 +96,8 @@ Es gibt keine untergeordneten Elemente.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -196,7 +196,7 @@ Dieser Codeabschnitt zeigt die **ComboBox-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

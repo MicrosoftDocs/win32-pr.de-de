@@ -1,75 +1,75 @@
 ---
-title: Funktionen für Textur Stichproben der Kachel Ressourcen
-description: In diesem Abschnitt werden die Funktionen für Textur Stichproben von Kacheln beschrieben
+title: Textursyntaturfeatures für gekachelte Ressourcen
+description: In diesem Abschnitt werden die Textursyntaturfeatures für kachelierte Ressourcen beschrieben.
 ms.assetid: E56737CE-C468-4D3C-84EE-E8EB2AB6F505
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cdd46c96219e54aea6990e91de8e340fdca5e32b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1356b274b5e101a730e3de92a6cdf98b1f293515228fb420a77642f4603757c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119476"
 ---
-# <a name="tiled-resources-texture-sampling-features"></a>Funktionen für Textur Stichproben der Kachel Ressourcen
+# <a name="tiled-resources-texture-sampling-features"></a>Textursyntaturfeatures für gekachelte Ressourcen
 
-In diesem Abschnitt werden die Funktionen für Textur Stichproben von Kacheln beschrieben
+In diesem Abschnitt werden die Textursyntaturfeatures für kachelierte Ressourcen beschrieben.
 
-## <a name="requirements-of-tiled-resources-texture-sampling-features"></a>Anforderungen an die Textur-Sampling-Features der Kachel Ressourcen
+## <a name="requirements-of-tiled-resources-texture-sampling-features"></a>Anforderungen von Textursyntaturfeatures für kachelierte Ressourcen
 
-Die hier beschriebenen Funktionen für die Textur Stichproben erfordern die Unterstützung von untergeordneten Elementen der Ebene [2](tier-2.md) .
+Die hier beschriebenen Textursyntatures erfordern [Die Ebene 2](tier-2.md) der Unterstützung von gekachelten Ressourcen.
 
-## <a name="shader-feedback-about-mapped-areas"></a>Shader-Feedback zu zugeordneten Bereichen
+## <a name="shader-feedback-about-mapped-areas"></a>Shaderfeedback zu zugeordneten Bereichen
 
-Jede shaderanweisung, die eine gekachelte Ressource liest und/oder schreibt, bewirkt, dass Statusinformationen aufgezeichnet werden. Dieser Status wird als optionaler zusätzlicher Rückgabewert für jede Ressourcen Zugriffs Anweisung verfügbar gemacht, die in ein Temp-32-Bit-Register übergeht. Der Inhalt des Rückgabewerts ist nicht transparent. Das heißt, das direkte Lesen durch das Shader-Programm ist nicht zulässig. Sie können jedoch die [**checkaccessfullymapping**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) -Funktion verwenden, um die Statusinformationen zu extrahieren.
+Jede Shaderanweisung, die eine gekachelte Ressource liest und/oder schreibt, bewirkt, dass Statusinformationen aufgezeichnet werden. Dieser Status wird als optionaler zusätzlicher Rückgabewert für jede Ressourcenzugriffsanweisung verfügbar gemacht, die in ein temporäres 32-Bit-Register übergeht. Der Inhalt des Rückgabewerts ist nicht transparent. Das heißt, das direkte Lesen durch das Shaderprogramm ist nicht zu vererblich. Sie können jedoch die [**CheckAccessFullyMapped-Funktion**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) verwenden, um die Statusinformationen zu extrahieren.
 
-## <a name="fully-mapped-check"></a>Vollständige Zuordnung überprüfen
+## <a name="fully-mapped-check"></a>Vollständig zugeordnete Überprüfung
 
-Die [**checkaccessfullymapping**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) -Funktion interpretiert den von einem Speicherzugriff zurückgegebenen Status und gibt an, ob alle Daten, auf die zugegriffen wird, in der Ressource zugeordnet wurden. **Checkaccessfullymapping** gibt true (0xFFFFFFFF) zurück, wenn Daten zugeordnet wurden, oder false (0x00000000), wenn die Daten nicht zugeordnet wurden.
+Die [**CheckAccessFullyMapped-Funktion**](/windows/desktop/direct3dhlsl/checkaccessfullymapped) interpretiert den von einem Speicherzugriff zurückgegebenen Status und gibt an, ob alle Daten, auf die zugegriffen wird, in der Ressource zugeordnet wurden. **CheckAccessFullyMapped** gibt true (0xFFFFFFFF) zurück, wenn Daten zugeordnet wurden, oder false (0x00000000), wenn daten nicht zugeordnet wurden.
 
-Bei Filter Vorgängen ist die Gewichtung eines bestimmten Texttyps manchmal 0,0. Ein Beispiel hierfür ist ein lineares Beispiel mit Texturkoordinaten, die sich direkt in einem texturcenter befinden: 3 andere texeln (die von der Hardware abweichen können) tragen zum Filter bei, aber mit 0 Gewichtung. Diese 0-Gewichtungs texeln tragen überhaupt nicht zum Filterergebnis bei. Wenn Sie also auf **null** -Kacheln fallen, werden Sie nicht als nicht zugeordneter Zugriff gezählt. Beachten Sie, dass die gleiche Garantie für Textur Filter gilt, die mehrere MIP-Ebenen einschließen. Wenn die texeln in einer der Mipmaps nicht zugeordnet sind, aber die Gewichtung für diese texeln gleich 0 ist, werden diese texeln nicht als nicht zugeordneter Zugriff gezählt.
+Bei Filtervorgängen beträgt die Gewichtung eines bestimmten Texels manchmal 0,0. Ein Beispiel ist ein lineares Beispiel mit Texturkoordinaten, die direkt auf ein Texelcenter fallen: 3 andere Texel (die sie je nach Hardware variieren können) tragen zum Filter bei, jedoch mit einer Gewichtung von 0. Diese 0-Gewicht-Texel tragen überhaupt nicht zum Filterergebnis bei.  Wenn sie also auf NULL-Kacheln fallen, werden sie nicht als nicht zugeordneter Zugriff gezählt. Beachten Sie, dass die gleiche Garantie für Texturfilter gilt, die mehrere MIP-Ebenen enthalten. Wenn die Texel auf einem der Mipmaps nicht zugeordnet sind, die Gewichtung dieser Texel jedoch 0 beträgt, werden diese Texel nicht als nicht zugeordneter Zugriff gezählt.
 
-Wenn die Stichprobenentnahme von einem Format mit weniger als 4 Komponenten (z. b. DXGI- \_ Format \_ R8 \_ unorm) erfolgt, führen alle texeln, die auf **null** -Kacheln fallen, dazu, dass ein **null** zugeordneter Zugriff gemeldet wird, unabhängig davon, welche Komponenten der Shader tatsächlich im Ergebnis untersucht. Beispielsweise scheint das Lesen aus dem R8 \_ -unorm und das Maskieren des Lese Ergebnisses im Shader mit. GBA/. yzw die Textur überhaupt nicht zu lesen. Wenn die textrece jedoch eine **null** zugeordnete Kachel ist, wird der Vorgang weiterhin als **null** -Zuordnungs Zugriff gezählt.
+Beim Sampling aus einem Format mit weniger als 4 Komponenten (z. B. DXGI FORMAT R8 UNORM) führen alle \_ \_ \_ Texel,  die auf **NULL-Kacheln** fallen, dazu, dass ein NULL-zugeordneter Zugriff unabhängig davon gemeldet wird, welche Komponenten der Shader im Ergebnis tatsächlich untersucht. Wenn Sie z. B. aus R8 UNORM lesen und das Leseergebnis im Shader mit .gba/.yzw maskieren, scheint es überhaupt nicht notwendig zu sein, die Textur \_ zu lesen. Wenn es sich bei der Texeladresse jedoch um eine Kachel handelt, die **null** zugeordnet ist, zählt der Vorgang weiterhin als **NULL-Zuordnungszugriff.**
 
-Der Shader kann den Status überprüfen und jede gewünschte Vorgehensweise bei einem Fehler verfolgen. Eine Vorgehensweise kann z. b. "Fehler" protokollieren (z. b. über den UAV-Schreibvorgang) und/oder einen anderen Lesevorgang an eine gröbere-Lod ausgeben, die bekanntermaßen zugeordnet ist. Eine Anwendung kann auch erfolgreiche Zugriffe nachverfolgen, um einen Eindruck davon zu erhalten, auf welchen Teil des zugeordneten Satzes von Kacheln zugegriffen wurde.
+Der Shader kann den Status überprüfen und jede gewünschte Aktion bei einem Fehler verfolgen. Eine Aktion kann z. B. das Protokollieren von "Misses" (z. B. über UAV-Schreibzugriff) und/oder das Ausstellen eines weiteren Lesezugriffs sein, der an eine unebenere LOD-Datei geklammert ist, die als zugeordnet bekannt ist. Eine Anwendung möchte möglicherweise auch erfolgreiche Zugriffe nachverfolgen, um einen Überblick darüber zu erhalten, auf welchen Teil der zugeordneten Kacheln zugegriffen wurde.
 
-Eine Komplikation für die Protokollierung besteht darin, dass kein Mechanismus vorhanden ist, mit dem der genaue Satz von Kacheln gemeldet werden kann Die Anwendung kann konservative Schätzwerte auf der Grundlage der für den Zugriff verwendeten Koordinaten und mithilfe der Lod-Anweisung (z. b. [**tex2Dlod**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), die die Berechnung der Hardware-Lod zurückgibt, durchführen.
+Eine Mögliche Ursache für die Protokollierung ist, dass kein Mechanismus zum Melden der genauen Kacheln vorhanden ist, auf die zugegriffen worden wäre. Die Anwendung kann konservative Schätzungen treffen, indem sie die Koordinaten kennt, die sie für den Zugriff verwendet hat, sowie die LOD-Anweisung (z. B. [**tex2Dlod),**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)die die Hardware-LOD-Berechnung zurückgibt.
 
-Eine weitere Komplikation ist, dass viele Zugriffe auf die gleichen Kacheln erfolgen, sodass eine Menge redundanter Protokollierung und möglicherweise Konflikte im Speicher stattfindet. Es kann praktisch sein, wenn der Hardware die Möglichkeit eingeräumt wird, sich nicht auf den Zugriff auf Berichts Kacheln zu kümmern, wenn Sie an anderer Stelle als gemeldet wurden. Möglicherweise könnte der Status einer solchen Nachverfolgung von der API zurückgesetzt werden (wahrscheinlich an Frame Grenzen).
+Eine weitere Komplikation ist, dass viele Zugriffe auf dieselben Kacheln erfolgen, sodass eine große Menge redundanter Protokollierung und möglicherweise Schwierigkeiten im Arbeitsspeicher auftreten. Es könnte praktisch sein, wenn die Hardware die Option erhalten könnte, kachelzugriffe nicht zu melden, wenn sie zuvor an anderer Stelle gemeldet wurden. Möglicherweise kann der Status einer solchen Nachverfolgung von der API zurückgesetzt werden (wahrscheinlich an Rahmengrenzen).
 
-## <a name="per-sample-minlod-clamp"></a>Minlod-Klammer pro Stichprobe
+## <a name="per-sample-minlod-clamp"></a>MinLOD-Klammer pro Beispiel
 
-Um Shader bei der Vermeidung von Bereichen in falsch zugeordneten Kacheln zu unterstützen, die bekanntermaßen nicht zugeordnet sind, haben die meisten shaderanweisungen mit einem Sampler (Filterung) einen neuen Modus, der es dem Shader ermöglicht, einen zusätzlichen float32 minlod-Klammer Parameter an das Textur Beispiel zu übergeben. Dieser Wert befindet sich im Gegensatz zur zugrunde liegenden Ressource im MipMap-Nummernbereich der Ansicht.
+Damit Shader Bereiche in gekachelten Ressourcen mit Mipmappe vermeiden können, die bekannterweise nicht zugeordnet sind, verfügen die meisten Shaderanweisungen, die die Verwendung eines Samplers (Filtern) umfassen, über einen neuen Modus, mit dem der Shader einen zusätzlichen float32 MinLOD-Klammerparameter an das Texturbeispiel übergeben kann. Dieser Wert befindet sich im Mipmap-Zahlenbereich der Ansicht, im Gegensatz zur zugrunde liegenden Ressource.
 
-Die Hardware führt [**Max**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)("f", "f", "f") am gleichen Speicherort wie die Lod-Berechnung aus, bei der die ressourcenbasierte minlod-Klammer auftritt. Dies ist auch ein **Maximum**().
+Die Hardware führt [**die maximale**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-max)Leistung (fShaderMinLODClamp,fComputedLOD) an der gleichen Stelle in der LOD-Berechnung aus, an der die MinLOD-Klammer pro Ressource auftritt, die ebenfalls ein Max. **()** ist.
 
-Wenn das Ergebnis der Anwendung der Lod-Klammer pro Stichprobe und sämtlicher anderer im Sampler definierter Lod-Klammern eine leere Menge ist, ist das Ergebnis das gleiche out-of-Limit-Zugriffs Ergebnis wie die pro-Ressource-minlod-Klammer: 0 für Komponenten im Oberflächen Format und Standardwerte für fehlende Komponenten.
+Wenn das Ergebnis der Anwendung der LOD-Klammer pro Stichprobe und anderer im Sampler definierter LOD-Klammern ein leerer Satz ist, ist das Ergebnis das gleiche Ergebnis des Zugriffs über grenzenlose Grenzen wie die minLOD-Klammer pro Ressource: 0 für Komponenten im Oberflächenformat und Standardwerte für fehlende Komponenten.
 
-Die Lod-Anweisung (z. b. [**tex2Dlod**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)), in der die hier beschriebene minlod-Klammer für Samplingwerte vorausgeht, gibt sowohl eine angehaltene und ungebundene Lod zurück. Die von dieser Lod-Anweisung zurückgegebene gebundene Lod spiegelt alle Klammern wider, einschließlich der pro-Ressource-Klammer, aber keine pro-Stichproben-Klammer. Die pro-Stichproben-Klammer wird gesteuert und wird vom Shader trotzdem bekannt, sodass der Shader-Autor diese Klammer bei Bedarf manuell auf den Rückgabewert der Lod-Anweisung anwenden kann.
+Die LOD-Anweisung (z. B. [**tex2Dlod),**](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-tex2dlod)die der hier beschriebenen minLOD-Klammer pro Stichprobe vorangibt, gibt sowohl eine geklammerte als auch eine nicht geblendete LOD zurück. Die von dieser LOD-Anweisung zurückgegebene geklammerte LOD spiegelt alle Klammern wider, einschließlich der ressourcenspezifischen Klammer, aber keine Klammer pro Stichprobe. Die Klammer pro Beispiel wird sowieso gesteuert und vom Shader bekannt, sodass der Shaderautor diese Klammer bei Wunsch manuell auf den Rückgabewert der LOD-Anweisung anwenden kann.
 
-## <a name="minmax-reduction-filtering"></a>Minimale/maximale Reduzierungs Filterung
+## <a name="minmax-reduction-filtering"></a>Filterung der Mindest-/Maximalreduzierung
 
-Anwendungen können Ihre eigenen Datenstrukturen verwalten, die Sie über das Aussehen der Zuordnungen für eine gekachelte Ressource informieren. Ein Beispiel wäre eine Oberfläche, die ein Texel enthält, das Informationen für jede Kachel in einer gekachelten Ressource enthalten soll. Eine kann die erste Lod speichern, die an einem bestimmten Kachel Speicherort zugeordnet ist. Durch die sorgfältige Stichprobenentnahme dieser Datenstruktur auf die gleiche Weise, wie die gekachelte Ressource als Stichprobe verwendet werden soll, kann man ermitteln, was die minimale Lod ist, die für einen vollständigen Textur Filter vollständig zugeordnet ist. Um diesen Prozess zu vereinfachen, bietet Direct3D 11,2 einen neuen allgemeinen Samplingmodus, Min/Max-Filterung.
+Anwendungen können ihre eigenen Datenstrukturen verwalten, die sie darüber informieren, wie die Zuordnungen für eine gekachelte Ressource aussehen. Ein Beispiel wäre eine Oberfläche, die ein Texel enthält, das Informationen für jede Kachel in einer gekachelten Ressource enthält. Sie können die erste LOD speichern, die an einer bestimmten Kachelposition zugeordnet ist. Durch eine sorgfältige Stichprobenentnahme dieser Datenstruktur auf eine ähnliche Weise wie die gekachelte Ressource, die für die Stichprobenentnahme vorgesehen ist, kann man feststellen, wie die minimale LOD sein wird, die vollständig für einen gesamten Texturfilterbedarf zugeordnet ist. Um diesen Prozess zu vereinfachen, führt Direct3D 11.2 den neuen allgemeinen Samplermodus min/max filtering ein.
 
-Das Hilfsprogramm der Min/Max-Filterung für die Lod-Nachverfolgung kann für andere Zwecke nützlich sein, z. b. das Filtern von tiefen Oberflächen.
+Das Hilfsprogramm der Min/Max-Filterung für die LOD-Nachverfolgung kann für andere Zwecke nützlich sein, z. B. für das Filtern von Tiefenoberflächen.
 
-Die minimale/maximale Reduzierungs Filterung ist ein Modus für Samplern, der denselben textursatz abruft, der von einem normalen Textur Filter abgerufen wird. Anstatt jedoch die Werte zu mischen, um eine Antwort zu erhalten, gibt Sie die minimale () oder die maximale Anzahl () der texeln zurück, die pro Komponente abgerufen werden (z. b. die minimale Anzahl aller R-Werte, getrennt von der Summe aller G-Werte usw.).
+Min/max reduction filtering ist ein Modus für Sampler, der den gleichen Satz von Texeln abruft, den ein normaler Texturfilter abrufen würde. Anstatt jedoch die Werte zu mischen, um eine Antwort zu erhalten, wird min() oder max() der abgerufenen Texel auf Komponentenbasis zurückgegeben (z. B. der Mindestwert aller R-Werte, getrennt vom Mindestwert aller G-Werte und so weiter).
 
-Die Min/Max-Vorgänge folgen den Regeln für die arithmetische Genauigkeit Direct3D. Die Reihenfolge der Vergleiche spielt keine Rolle.
+Die Min/Max-Vorgänge folgen den Regeln für die arithmetische Genauigkeit von Direct3D. Die Reihenfolge der Vergleiche spielt keine Rolle.
 
-Bei Filter Vorgängen, bei denen es sich nicht um min/max handelt, ist die Gewichtung eines bestimmten Texttyps manchmal 0,0. Ein Beispiel hierfür ist ein lineares Beispiel mit Texturkoordinaten, die sich direkt in einem Texel-Center-3 anderen texeln (bei denen Sie je nach Hardware variieren können) zu dem Filter beitragen, aber mit 0 (null). Bei allen diesen texeln, bei denen es sich um 0 (null) bei einem nicht-Min/Max-Filter handeln würde, tragen diese textteln nach wie vor nicht zum Ergebnis bei, und die Gewichtungen wirken sich nicht auf den Min/Max-Filter Vorgang aus.
+Bei Filtervorgängen, die nicht min/max sind, beträgt die Gewichtung eines bestimmten Texels manchmal 0,0. Ein Beispiel ist ein lineares Beispiel mit Texturkoordinaten, die direkt auf ein Texelcenter fallen. 3 andere Texel (die sie je nach Hardware variieren können) tragen zum Filter bei, jedoch mit einer Gewichtung von 0. Für jedes dieser Texel, das eine Gewichtung von 0 (0) auf einem Nicht-Min/Max-Filter haben würde, tragen diese Texel immer noch nicht zum Ergebnis bei (und die Gewichtungen wirken sich ansonsten nicht auf den Min/Max-Filtervorgang aus).
 
-Die vollständige Liste der Filtermodi wird in der [**D3D11 \_ Filter**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_filter) -Enumeration mit dem Minimalwert und dem Maximum in den Enumerationswerten angezeigt.
+Die vollständige Liste der Filtermodi wird in der [**FILTER-Enumeration \_ D3D11**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_filter) mit MINIMUM und MAXIMUM in den Enumerationswerten angezeigt.
 
-Die Unterstützung für dieses Feature hängt von der Unterstützung der [Ebene 2](tier-2.md) für gekachelte Ressourcen
+Die Unterstützung für dieses Feature hängt von der [Unterstützung der Ebene 2](tier-2.md) für gekachelte Ressourcen ab.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pipeline Zugriff auf gekachelte Ressourcen](pipeline-access-to-tiled-resources.md)
+[Pipelinezugriff auf gekachelte Ressourcen](pipeline-access-to-tiled-resources.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

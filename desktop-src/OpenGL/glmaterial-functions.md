@@ -1,41 +1,41 @@
 ---
-title: glmaterial-Funktionen
+title: glMaterial-Funktionen
 description: Diese Funktionen geben Materialparameter für das Beleuchtungsmodell an.
 ms.assetid: a3f55129-da54-48ca-a629-88fed936551e
 keywords:
-- OpenGL, glmaterial-Funktionen
-- OpenGL-Referenz, glmaterial-Funktionen
-- Referenz für OpenGL, glmaterial-Funktionen
-- OpenGL, Material Functions
-- OpenGL-Referenz, Material-Funktionen
-- Referenz für OpenGL, Material Functions
-- glmaterial-Funktionen
-- Material Funktionen
+- OpenGL,glMaterial-Funktionen
+- OpenGL-Referenz,glMaterial-Funktionen
+- Referenz für OpenGL,glMaterial-Funktionen
+- OpenGL, Materialfunktionen
+- OpenGL-Referenz,Materialfunktionen
+- Referenz zu OpenGL,material-Funktionen
+- glMaterial-Funktionen
+- material-Funktionen
 - Light-Funktionen
-- OpenGL, Light Functions
+- OpenGL, light-Funktionen
 - OpenGL-Referenz, Light-Funktionen
-- Referenz für OpenGL, Light Functions
+- Referenz für OpenGL,light-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e14ca663f1d6a3d437900ec00da1d1b9b9637728
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e09d01f7f3d6d30f086919a037e1447bfcc5f7f417a2d5590d9194a212c37f8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128250"
 ---
-# <a name="glmaterial-functions"></a>glmaterial-Funktionen
+# <a name="glmaterial-functions"></a>glMaterial-Funktionen
 
 Diese Funktionen geben Materialparameter für das Beleuchtungsmodell an:
 
--   [**glmaterialf**](glmaterialf.md)
--   [**glmateriali**](glmateriali.md)
--   [**glmaterialfv**](glmaterialfv.md)
--   [**glmaterialiv**](glmaterialiv.md)
+-   [**glMaterialf**](glmaterialf.md)
+-   [**glMateriali**](glmateriali.md)
+-   [**glMaterialfv**](glmaterialfv.md)
+-   [**glMaterialiv**](glmaterialiv.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -4,12 +4,12 @@ description: .NET Framework 4.5 ist standard und .NET Framework 3.5 optional.
 ms.assetid: 19B53C82-812A-49AC-87C6-C08E7C199208
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e875f7508bc0940689afde5eb9b3f00407dd2c7dd70e35de52fe580717c8ad53
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 18b45aef294e035f5fb7e647c49b22206ac8aadd
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119549790"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883128"
 ---
 # <a name="net-framework-45-is-default-and-net-framework-35-is-optional"></a>.NET Framework 4.5 ist standard und .NET Framework 3.5 optional.
 
@@ -76,7 +76,7 @@ IT-Administratoren können .NET 3.5-Apps für die Ausführung unter .NET 3.5 ode
 
 **Für Unternehmens-OEMs:**
 
-So aktivieren .NET Framework 3.5 für DIEP-Builds und anwendungen, die keinen Zugriff auf Windows Haben:
+So aktivieren sie .NET Framework 3.5 für DIEP-Builds und für Anwendungen, die keinen Zugriff auf Windows haben:
 
 1.  Kopieren \\ Sie \\ SX-Quellen aus dem bereitgestellten ISO-Image für den \\ Betriebssystem-Build in den Ordner dotnet35 oder einen ähnlichen Ordner. Beispiel:
     ```
@@ -95,7 +95,7 @@ So aktivieren .NET Framework 3.5 für DIEP-Builds und anwendungen, die keinen Zu
 
 **Für Unternehmen:**
 
-Für Computer, die für die Verwendung von WSUS für die Wartung konfiguriert sind, können Sie einen Registrierungseintrag festlegen, damit der Computer Windows Update zum Aktivieren von .NET 3.5 anstelle von WSUS verwenden kann (die Wartung wird in diesem Fall weiterhin von WSUS durchgeführt).
+Für Computer, die für die Verwendung von WSUS für die Wartung konfiguriert sind, können Sie einen Registrierungseintrag festlegen, um dem Computer die Verwendung von Windows Update zum Aktivieren von .NET 3.5 anstelle von WSUS zu ermöglichen .NET 3.5 (die Wartung wird in diesem Fall weiterhin von WSUS durchgeführt).
 
 -   Legen Sie den Hauptschlüssel fest:
     ```
@@ -127,9 +127,9 @@ Dieser Registrierungseintrag wird unterstützt:
 <tbody>
 <tr class="odd">
 <td>Lokaler Quellpfad</td>
-<td>Reg_expand_sz</td>
+<td>REG_EXPAND_SZ</td>
 <td>Standardmäßig zu verwendende lokale Quellpfade. Es können mehrere Pfade angegeben werden. sie sollten durch getrennt werden; . Standorte werden in der Reihenfolge durchsucht, in der sie angegeben sind. <br/> Lokale Quellspeicherorte, die in der DISM-Befehlszeile angegeben sind, haben Vorrang vor den in diesem Registrierungseintrag angegebenen Speicherorten. Ordnerspeicherorte können in diesem Registrierungseintrag angegeben werden. <br/> WIMs können verwendet werden, aber der Pfad muss zur WIM-Datei sein. es ist nicht notwendig, es zu mounten, z. B.: <br/> <dl> wim: \\ machine\share\file.wim:1<br />
-</dl> Beachten Sie die 1 am Ende. Sie müssen den numerischen Index des Bilds angeben, das Sie in der WIM-Datei verwenden möchten. <br/> Bei einer bereitgestellten WIM-Datei muss der Quellpfad auf das Windows-Verzeichnis des bereitgestellten Images und nicht auf den Bereitstellungspunkt verweisen (z. B. /source: \windows anstelle von <mount_point> /source: <mount_point> ). <br/></td>
+</dl> Beachten Sie die 1 am Ende. Sie müssen den numerischen Index des Bilds angeben, das Sie in der WIM-Datei verwenden möchten. <br/> Bei einem bereitgestellten WIM muss der Quellpfad auf das Windows-Verzeichnis des bereitgestellten Images verweisen, nicht auf den Bereitstellungspunkt (z. B. /source: mount_point \windows anstelle von &lt; &gt; /source: &lt; mount_point &gt; ). <br/></td>
 </tr>
 </tbody>
 </table>

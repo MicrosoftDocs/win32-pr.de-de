@@ -1,112 +1,112 @@
 ---
-title: Mittlere Command-Line Referenz
-description: Dieser Abschnitt enthält Referenzinformationen zu den einzelnen Befehlszeilenoptionen und Switch-Optionen, die vom Microsoft RPC-compilermittelungscompiler erkannt werden.
+title: MIDLCommand-Line Referenz
+description: Dieser Abschnitt enthält Referenzinformationen zu jedem Befehlszeilenschalter und jeder Switchoption, die vom Microsoft RPC MIDL-Compiler erkannt werden.
 ms.assetid: a0e5efb0-a704-4dc5-bd7e-6c98466a2874
 keywords:
-- Microsoft Interface Definition Language-Mittell, Referenz
-- Befehlszeilen Referenz-Mittell
+- Microsoft Interface Definition Language MIDL , Referenz
+- Befehlszeilenreferenz MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1569e29daf8a2976379576a5f1671f5117e7990c
-ms.sourcegitcommit: 9cf1ed65dfbea1ba118b63d0656f30c3685d8520
+ms.openlocfilehash: df927ded3f1a46045437fe1f9e72e2c7f80dd17d
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342887"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887345"
 ---
-# <a name="midl-command-line-reference"></a>Mittlere Command-Line Referenz
+# <a name="midl-command-line-reference"></a>MIDLCommand-Line Referenz
 
-Dieser Abschnitt enthält Referenzinformationen zu den einzelnen Befehlszeilenoptionen und Switch-Optionen, die vom Microsoft RPC-compilermittelungscompiler erkannt werden. Switch-Einträge werden in alphabetischer Reihenfolge angeordnet. [Allgemeine Syntax](general-midl-command-line-syntax.md) der Befehlszeile in der Befehlszeile beschreibt die allgemeine Befehlszeilen Syntax.
+Dieser Abschnitt enthält Referenzinformationen zu jedem Befehlszeilenschalter und jeder Switchoption, die vom Microsoft RPC MIDL-Compiler erkannt werden. Switcheinträge werden in alphabetischer Reihenfolge angeordnet. [Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md) beschreibt die allgemeine Befehlszeilensyntax.
 
 <dl>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)  
-[Der Antwortdatei Befehl.](the-response-file-command.md)  
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)  
+[Befehl "Antwortdatei"](the-response-file-command.md)  
 [**/acf**](-acf.md)  
 [**/align**](-align.md)  
 [**/amd64**](-amd64.md)  
-[**/APP- \_ Konfiguration**](-app-config.md)  
-[/Backward- \_ Kompatibilität](-backward-compat.md)  
+[**/app \_ config**](-app-config.md)  
+[\_/backward-Kompatibilität](-backward-compat.md)  
 [**/c \_ ext**](-c-ext.md)  
 [**/caux**](-caux.md)  
-[**/Char**](-char.md)  
-[**/Client**](-client.md)  
+[**/char**](-char.md)  
+[**/client**](-client.md)  
 [**/confirm**](-confirm.md)  
-[**/cpp- \_ cmd**](-cpp-cmd.md)  
-[**/cpp \_ Opt**](-cpp-opt.md)  
+[**/cpp \_ cmd**](-cpp-cmd.md)  
+[**/cpp \_ opt**](-cpp-opt.md)  
 [**/cstruct_out**](-cstruct-out.md) 
  [ **/cstub**](-cstub.md)  
 [**/D**](-d.md)  
 [**/dlldata**](-dlldata.md)  
-[**/ENV**](-env.md)  
-[**/Error**](-error.md)  
-[**/Error**](-error.md)  
+[**/env**](-env.md)  
+[**/error**](-error.md)  
+[**/error**](-error.md)  
 [**/h**](-h.md)  
-[**/Header**](-header.md)  
-[**/Help (/?)**](-help-.md)  
+[**/header**](-header.md)  
+[**/help (/?)**](-help-.md)  
 [**/ia64**](-ia64.md)  
 [**/I**](-i.md)  
-[**/IID**](-iid.md)  
-[**/Import**](-import.md)  
-[**/LCID**](-lcid.md)  
+[**/iid**](-iid.md)  
+[**/import**](-import.md)  
+[**/lcid**](-lcid.md)  
 [**/mktyplib203**](-mktyplib203.md)  
-[**/MS \_ ext**](-ms-ext.md)  
-[**/MS- \_ Union**](-ms-union.md)  
-[**/MSC \_ Ver**](-msc-ver.md)  
-[**/neue**](-new.md)  
+[**/ms \_ ext**](-ms-ext.md)  
+[**/ms \_ union**](-ms-union.md)  
+[**/msc \_ ver**](-msc-ver.md)  
+[**/new**](-new.md)  
 [**/newtlb**](-newtlb.md)  
-[**/No \_ cpp,/nocpp**](-no-cpp-nocpp.md)  
-[**/No \_ Standard- \_ EPV**](-no-default-epv.md)  
-[**/No \_ DEF \_ Idir**](-no-def-idir.md)  
-[**/No \_ Format \_ Opt**](-no-format-opt.md)  
-[**/No \_ robust**](-no-robust.md)  
-[**/No \_ warnen**](-no-warn.md)  
+[**/no \_ cpp, /nocpp**](-no-cpp-nocpp.md)  
+[**/no \_ default \_ epv**](-no-default-epv.md)  
+[**/no \_ def \_ idir**](-no-def-idir.md)  
+[**/no \_ format \_ opt**](-no-format-opt.md)  
+[**/no \_ robust**](-no-robust.md)  
+[**/no \_ warn**](-no-warn.md)  
 [**/nologo**](-nologo.md)  
 [**/notlb**](-notlb.md)  
 [**/o**](-o.md)  
 [**/Oi**](-oi.md)  
-[**/Old**](-old.md)  
+[**/old**](-old.md)  
 [**/oldtlb**](-oldtlb.md)  
 [**/oldnames**](-oldnames.md)  
-[**/OS**](-os.md)  
+[**/Os**](-os.md)  
 [**/osf**](-osf.md)  
-[**/Out**](-out.md)  
-[**/Pack**](-pack.md)  
+[**/out**](-out.md)  
+[**/pack**](-pack.md)  
 [**/prefix**](-prefix.md)  
-[**/Protocol**](-protocol.md)  
-[**/Proxy**](-proxy.md)  
+[**/protocol**](-protocol.md)  
+[**/proxy**](-proxy.md)  
 [**/robust**](-robust.md)  
 [**/rpcss**](-rpcss.md)  
 [**/sal**](-sal.md)  
-[**/SAL \_ lokal**](-sal-local.md)  
+[**/sal \_ local**](-sal-local.md)  
 [**/saux**](-saux.md)  
 [**/savePP**](-savepp.md)  
 [**/sstub**](-sstub.md)  
-[**/Syntax \_ überprüfen**](-syntax-check.md)  
-[**/<system>**](-system-.md)  
-[**/Target**](-target.md)  
-[**/TLB**](-tlb.md)  
+[**/syntax \_ check**](-syntax-check.md)  
+[**/&lt;System&gt;**](-system-.md)  
+[**/target**](-target.md)  
+[**/tlb**](-tlb.md)  
 [**/U**](-u.md)  
-[**/Verwenden Sie " \_ EPV**](-use-epv.md)  
-[**/Version- \_ Stempel**](-version-stamp.md)  
+[**/use \_ epv**](-use-epv.md)  
+[**/version \_ stamp**](-version-stamp.md)  
 [**/W**](-w.md)  
-[**/Warn**](-warn.md)  
+[**/warn**](-warn.md)  
 [**/win32**](-win32.md)  
 [**/win64**](-win64.md)  
 [**/WX**](-wx.md)  
-[**/ZP**](-zp.md)  
-[**/ZS**](-zs.md)  
+[**/Zp**](-zp.md)  
+[**/Zs**](-zs.md)  
 </dl>
 
-Der mittlerer l-Compiler kann Code für verschiedene Plattformen und System Releases generieren. Weitere Informationen zu vorgeschlagenen Switches und zum Generieren von Code, der für eine bestimmte Version optimiert ist, finden Sie unter [**/target**](-target.md) .
+Der MIDL-Compiler kann Code für verschiedene Plattformen und Systemversionen generieren. Weitere Informationen zu vorgeschlagenen Switches und zum Generieren von Code, der für ein bestimmtes Release optimiert ist, finden Sie unter [**/target.**](-target.md)
 
-Beachten Sie, dass das Minuszeichen (–) in allen Mittell-Befehls zeilenschaltern, die mit einem Schrägstrich (/) beginnen, den Schrägstrich (/) ersetzen kann. Das folgende Beispiel zeigt die Äquivalenz beim Aufrufen des Mittel l-Compilers.
+Beachten Sie, dass das Minuszeichen (–) in allen MIDL-Befehlszeilenschaltern, die mit einem Schrägstrich (/) beginnen, durch den Schrägstrich (/) ersetzt werden kann. Im folgenden Beispiel wird ihre Äquivalenz beim Aufrufen des MIDL-Compilers veranschaulicht.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/ACF My \_ ACF. ACF** *filename * * *. idl**
+**midl /acf my \_ acf.acf** *dateiname**.idl**
 
-**Mittel l-ACF My \_ ACF. ACF** *Dateiname * * *. idl**
+**midl -acf my \_ acf.acf** *dateiname**.idl**
 
  
 

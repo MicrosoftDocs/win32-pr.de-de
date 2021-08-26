@@ -1,25 +1,25 @@
 ---
-description: Das- <searchConnectorDescriptionType> Element ist der Container der obersten Ebene für die Suchconnector-Definition.
+description: Das &lt; searchConnectorDescriptionType-Element ist der Container der obersten Ebene &gt; für die Definition des Suchconnectors.
 ms.assetid: a6b45864-210d-4099-804d-7548fd8eb562
-title: searchconnectordescriptiontype-Element (suchconnectorschema)
+title: searchConnectorDescriptionType-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7edb69647567b7e18e25e11dcd0fc773d0be7902
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f89621ab34f65fb3c3b1f8e88bbdc8dca246b8d
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345486"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885080"
 ---
-# <a name="searchconnectordescriptiontype-element-search-connector-schema"></a>searchconnectordescriptiontype-Element (suchconnectorschema)
+# <a name="searchconnectordescriptiontype-element-search-connector-schema"></a>searchConnectorDescriptionType-Element (Search Connector Schema)
 
-Das- <searchConnectorDescriptionType> Element ist der Container der obersten Ebene für die Suchconnector-Definition.
+Das &lt; searchConnectorDescriptionType-Element ist der Container der obersten Ebene &gt; für die Definition des Suchconnectors.
 
 -   [Syntax](#syntax)
 -   [Elementinformationen](#element-information)
 -   [Attribute](#attributes)
 -   [Anmerkungen](#remarks)
--   [Beispiel für eine Suchconnector-Beschreibungsdatei](#example-of-a-search-connector-description-file)
+-   [Beispiel für eine Suchconnectorbeschreibungsdatei](#example-of-a-search-connector-description-file)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="syntax"></a>Syntax
@@ -111,22 +111,22 @@ Das- <searchConnectorDescriptionType> Element ist der Container der obersten Ebe
 
 | Übergeordnetes Element | Untergeordnete Elemente                                                                                                           |
 |----------------|--------------------------------------------------------------------------------------------------------------------------|
-|                | [issearchonlyitem-Element (Suchconnector-Schema)](search-schema-sconn-issearchonlyitem.md)                           |
-|                | [isdefaultsaveloation-Element (Suchconnector-Schema)](search-schema-sconn-isdefaultsavelocation.md)                 |
-|                | [isdefaultnonbesitzsaveloationselement (Suchconnector-Schema)](search-schema-sconn-isdefaultnonownersavelocation.md) |
-|                | [Description-Element (Suchconnector-Schema)](search-schema-sconn-description.md)                                     |
-|                | [iconReference-Element (Suchconnector-Schema)](search-schema-sconn-iconreference.md)                                 |
-|                | [IMAGELINK-Element (Suchconnector-Schema)](search-schema-sconn-imagelink.md)                                         |
-|                | [Author-Element (Suchconnector-Schema)](search-schema-sconn-author.md)                                               |
-|                | [DateCreated-Element (Suchconnector-Schema)](search-schema-sconn-datecreated.md)                                     |
-|                | [templateingefo-Element (Suchconnector-Schema)](search-schema-sconn-templateinfo.md)                                   |
-|                | [locationprovider-Element (Suchconnector-Schema)](search-schema-sconn-locationprovider.md)                           |
-|                | [Scope-Element (Suchconnector-Schema)](search-schema-sconn-scope.md)                                                 |
-|                | [PropertyStore-Element (Suchconnector-Schema)](search-schema-sconn-propertystore.md)                                 |
-|                | [includeinstartmenus-Element (Suchconnector-Schema)](search-schema-sconn-includeinstartmenuscope.md)             |
-|                | [Domain-Element (Suchconnector-Schema)](search-schema-sconn-domain.md)                                               |
-|                | [supportsadvancedquerysyntax-Element (Suchconnector-Schema)](search-schema-sconn-supportsadvancedquerysyntax.md)     |
-|                | [isinentxed-Element (Suchconnector-Schema)](search-schema-sconn-isindexed.md)                                         |
+|                | [isSearchOnlyItem-Element (Search Connector Schema)](search-schema-sconn-issearchonlyitem.md)                           |
+|                | [isDefaultSaveLocation-Element (Connectorschema suchen)](search-schema-sconn-isdefaultsavelocation.md)                 |
+|                | [isDefaultNonOwnerSaveLocation-Element (Connectorschema durchsuchen)](search-schema-sconn-isdefaultnonownersavelocation.md) |
+|                | [description-Element (Search Connector Schema)](search-schema-sconn-description.md)                                     |
+|                | [iconReference-Element (Suchconnectorschema)](search-schema-sconn-iconreference.md)                                 |
+|                | [imageLink-Element (Connectorschema suchen)](search-schema-sconn-imagelink.md)                                         |
+|                | [author-Element (Search Connector Schema)](search-schema-sconn-author.md)                                               |
+|                | [dateCreated-Element (Suchconnectorschema)](search-schema-sconn-datecreated.md)                                     |
+|                | [templateInfo-Element (Search Connector Schema)](search-schema-sconn-templateinfo.md)                                   |
+|                | [locationProvider-Element (Connectorschema suchen)](search-schema-sconn-locationprovider.md)                           |
+|                | [scope-Element (Search Connector Schema)](search-schema-sconn-scope.md)                                                 |
+|                | [propertyStore-Element (Connectorschema suchen)](search-schema-sconn-propertystore.md)                                 |
+|                | [includeInStartMenuScope-Element (Search Connector Schema)](search-schema-sconn-includeinstartmenuscope.md)             |
+|                | [domain-Element (Search Connector Schema)](search-schema-sconn-domain.md)                                               |
+|                | [supportsAdvancedQuerySyntax-Element (Search Connector Schema)](search-schema-sconn-supportsadvancedquerysyntax.md)     |
+|                | [isIndexed-Element (Search Connector Schema)](search-schema-sconn-isindexed.md)                                         |
 
 
 
@@ -136,22 +136,22 @@ Das- <searchConnectorDescriptionType> Element ist der Container der obersten Ebe
 
 
 
-| Attribut | BESCHREIBUNG                                                                      |
+| attribute | Beschreibung                                                                      |
 |-----------|----------------------------------------------------------------------------------|
-| publisher | Dies ist optional. Der Anzeige Name des Verlegers, der den Suchconnector bereitstellt.      |
-| product   | Dies ist optional. Der Anzeige Name des Produkts, auf das der Suchconnector angewendet wird. |
+| publisher | Optional. Der Anzeigename des Herausgebers, der den Suchconnector an stellt.      |
+| product   | Optional. Der Anzeigename des Produkts, für das der Suchconnector gilt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Suchconnectors für die Verbund Suche können nicht in Bibliotheken verwendet werden. Das Schema für Bibliotheks Suchconnectors ist eine Erweiterung des hier beschriebenen Schemas und enthält Informationen, die für Bibliotheken spezifisch sind.
+Suchconnectors für die Verbundsuche können nicht in Bibliotheken verwendet werden. Das Schema für Bibliothekssuchconnectors ist eine Erweiterung des hier beschriebenen Schemas und enthält spezifische Informationen für Bibliotheken.
 
-## <a name="example-of-a-search-connector-description-file"></a>Beispiel für eine Suchconnector-Beschreibungsdatei
+## <a name="example-of-a-search-connector-description-file"></a>Beispiel für eine Suchconnectorbeschreibungsdatei
 
-Im folgenden finden Sie ein Beispiel für eine Suchconnector-Beschreibungsdatei für einen Verbund Suchweb Dienst.
+Im Folgenden finden Sie ein Beispiel für eine Search Connector Description-Datei für einen Verbundsuchwebdienst.
 
 
 ```
@@ -179,7 +179,7 @@ Im folgenden finden Sie ein Beispiel für eine Suchconnector-Beschreibungsdatei 
 
 
 
-Im folgenden finden Sie ein Beispiel für eine Suchconnector-Beschreibungsdatei für einen MAPI-Protokollhandler.
+Im Folgenden finden Sie ein Beispiel für eine Search Connector Description-Datei für einen MAPI-Protokollhandler.
 
 
 ```
@@ -206,10 +206,10 @@ Im folgenden finden Sie ein Beispiel für eine Suchconnector-Beschreibungsdatei 
 **Referenz**
 </dt> <dt>
 
-[Übersicht über das Suchconnector-Beschreibungs Schema](search-sconn-desc-schema-entry.md)
+[Übersicht über das Suchconnector-Beschreibungsschema](search-sconn-desc-schema-entry.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)

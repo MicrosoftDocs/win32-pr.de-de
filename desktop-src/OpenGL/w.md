@@ -1,53 +1,53 @@
 ---
 title: W (OpenGL)
-description: Definitionen von OpenGL-Begriffen, die mit dem Buchstaben "W" beginnen.
+description: Definitionen von OpenGL-Begriffen, die mit dem Buchstaben W beginnen.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 7f8235a3-ea48-40eb-8957-e7a55a5778af
 keywords:
 - Windows
-- Fenster Ausrichtung
-- Fenster Koordinaten
-- Draht Modell
+- fensterbündig ausgerichtet
+- Fensterkoordinaten
+- Drahtmodell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1f6f1897af46c85ed48171d251ebe1b2de8c5e1
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: cab63248917d4490d6b577ac490ef6185e173e8b78031a055625e246c17e5485
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103739273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887830"
 ---
 # <a name="w-opengl"></a>W (OpenGL)
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) [J K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) [U V](u-v.md) W [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) J [K](jk.md) [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) U [V](u-v.md) W X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
-<span id="opengl_window"></span><span id="OPENGL_WINDOW"></span>**ster**
+<span id="opengl_window"></span><span id="OPENGL_WINDOW"></span>**Fenster**
 </dt> <dd>
 
-Ein Unterbereich des Framebuffer (normalerweise rechteckig), dessen Pixel alle die gleiche Puffer Konfiguration aufweisen. Ein OpenGL-Kontext wird in einem Fenster gleichzeitig gerendert.
+Eine Unterregion des Framepuffers, in der Regel rechteckig, dessen Pixel alle die gleiche Pufferkonfiguration aufweisen. Ein OpenGL-Kontext wird jeweils in einem Fenster gerendert.
 
 </dd> <dt>
 
-<span id="opengl_window_aligned"></span><span id="OPENGL_WINDOW_ALIGNED"></span>**Fenster Ausrichtung**
+<span id="opengl_window_aligned"></span><span id="OPENGL_WINDOW_ALIGNED"></span>**fensterbündig ausgerichtet**
 </dt> <dd>
 
-Beim Verweis auf Liniensegmente oder Polygon Ränder impliziert, dass diese parallel zu den Fenstergrenzen sind. (In OpenGL ist das Fenster rechteckig mit horizontaler und vertikaler Kanten). Beim Verweis auf ein Polygon Muster impliziert, dass das Muster relativ zum Fenster Ursprung fest ist.
+Wenn auf Liniensegmente oder Polygonkanten verwiesen wird, bedeutet dies, dass diese parallel zu den Fenstergrenzen sind. (In OpenGL ist das Fenster rechteckig, mit horizontalen und vertikalen Rändern). Wenn auf ein Polygonmuster verwiesen wird, bedeutet dies, dass das Muster relativ zum Fensterursprung fixiert ist.
 
 </dd> <dt>
 
-<span id="opengl_window_coordinates"></span><span id="OPENGL_WINDOW_COORDINATES"></span>**Fenster Koordinaten**
+<span id="opengl_window_coordinates"></span><span id="OPENGL_WINDOW_COORDINATES"></span>**Fensterkoordinaten**
 </dt> <dd>
 
-Das Koordinatensystem eines Fensters. Es ist wichtig, die Namen von Pixeln, die diskret sind, und das Fenster Koordinatensystem, das kontinuierlich ist, zu unterscheiden. Beispielsweise ist das Pixel in der unteren linken Ecke eines Fensters Pixel (0,0); die Fenster Koordinaten der Mitte dieses Pixels sind (0,5, 0,5, z). Beachten Sie, dass Fenster Koordinaten eine Tiefe oder z-Komponente enthalten, und dass diese Komponente ebenfalls kontinuierlich ist.
+Das Koordinatensystem eines Fensters. Es ist wichtig, zwischen den Namen der diskreten Pixel und dem fortlaufenden Fensterkoordinatensystem zu unterscheiden. Beispielsweise ist das Pixel in der unteren linken Ecke eines Fensters Pixel (0, 0); Die Fensterkoordinaten der Mitte dieses Pixels sind (0,5, 0,5, z). Beachten Sie, dass Fensterkoordinaten eine Tiefen- oder Z-Komponente enthalten und dass diese Komponente auch fortlaufend ist.
 
 </dd> <dt>
 
-<span id="opengl_wireframe"></span><span id="OPENGL_WIREFRAME"></span>**Draht Modell**
+<span id="opengl_wireframe"></span><span id="OPENGL_WIREFRAME"></span>**Drahtmodell**
 </dt> <dd>
 
-Eine Darstellung eines Objekts, das nur Liniensegmente enthält. In der Regel geben die Liniensegmente Polygon Kanten an.
+Eine Darstellung eines Objekts, das nur Liniensegmente enthält. In der Regel geben die Liniensegmente Polygonkanten an.
 
 </dd> </dl>
 

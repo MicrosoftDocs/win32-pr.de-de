@@ -1,9 +1,9 @@
 ---
-title: Executiontimelimit (triggerbasetype)-Element
-description: Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden kann.
+title: ExecutionTimeLimit (triggerBaseType)-Element
+description: Gibt die maximale Zeitspanne an, in der der Task vom Trigger gestartet werden kann.
 ms.assetid: f78e7c7b-d069-4920-9435-020f6e081eff
 keywords:
-- Executiontimelimit-Element Taskplaner
+- ExecutionTimeLimit-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fbe56fb0431ab109b1a19030ae6ba20af55492ea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e958c6a2b873bb78e66645ce2a2ae8100e2acbc
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478183"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812519"
 ---
-# <a name="executiontimelimit-triggerbasetype-element"></a>Executiontimelimit (triggerbasetype)-Element
+# <a name="executiontimelimit-triggerbasetype-element"></a>ExecutionTimeLimit (triggerBaseType)-Element
 
-Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden kann. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Die maximale Zeit, die der vom Trigger gestartete Task ausführen darf. Das Format für diese Zeichenfolge lautet PnYnMnDTnHnMnS, wobei nY die Anzahl der Jahre, nM die Anzahl der Monate, nD die Anzahl der Tage, "T" das Datums-/Uhrzeittrennzeichen, nH die Anzahl der Stunden, nM die Anzahl der Minuten und nS die Anzahl von Sekunden ist (z. B. PT5M gibt 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="ExecutionTimeLimit"
@@ -30,29 +30,29 @@ Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden ka
  />
 ```
 
-Das **executiontimelimit** -Element wird durch den komplexen [**triggerbasetype**](taskschedulerschema-boottriggertype-complextype.md) -Typ definiert.
+Das **ExecutionTimeLimit-Element** wird durch den komplexen [**TriggerBaseType-Typ**](taskschedulerschema-boottriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                  |
+| Element                                                                                     | Abgeleitet von                                                                               | Beschreibung                                                                                  |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen-Fehler an, mit dem eine Aufgabe gestartet wird, wenn das System gestartet wird.<br/>                 |
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/>   |
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/>                |
-| [**Idle-Auslösung**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idletriggertype**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der Computer in den Leerlauf wechselt.<br/> |
-| [**Logonauslöst**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen-Vorgang an, der einen Task startet, wenn sich ein Benutzer anmeldet.<br/>                       |
-| [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.<br/>               |
-| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timetriggertype**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird<br/>             |
+| [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/>                 |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/>   |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/>                |
+| [**IdleTrigger**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idleTriggerType**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Computer in den Leerlauf wechselt.<br/> |
+| [**LogonTrigger**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich ein Benutzer anmeldet.<br/>                       |
+| [**RegistrationTrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Task registriert wird.<br/>               |
+| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timeTriggerType**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.<br/>             |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird das Ausführungszeit Limit mithilfe der [**Trigger.Executiontimelimit**](trigger-executiontimelimit.md) -Eigenschaft angegeben, die von den all-Triggerobjekten geerbt wird.
+Für die Skriptentwicklung wird das Ausführungszeitlimit mithilfe der [**Trigger.ExecutionTimeLimit-Eigenschaft**](trigger-executiontimelimit.md) angegeben, die von allen Triggerobjekten geerbt wird.
 
-Bei der C++-Entwicklung wird das Ausführungszeit Limit mithilfe der [**ITrigger: executiontimelimit**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_executiontimelimit) -Eigenschaft angegeben, die von den all-triggerschnittstellen geerbt wird.
+Für die C++-Entwicklung wird das Ausführungszeitlimit mithilfe der [**ITrigger::ExecutionTimeLimit-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_executiontimelimit) angegeben, die von allen Triggerschnittstellen geerbt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Bei der C++-Entwicklung wird das Ausführungszeit Limit mithilfe der [**ITrigger
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -69,7 +69,7 @@ Bei der C++-Entwicklung wird das Ausführungszeit Limit mithilfe der [**ITrigger
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

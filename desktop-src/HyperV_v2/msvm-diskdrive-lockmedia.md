@@ -1,7 +1,7 @@
 ---
-description: Sperrt oder entsperrt das Medium.
+description: Sperrt oder entsperrt die Medien.
 ms.assetid: 805efb2d-71a7-4c74-821f-942644928ff9
-title: Lockmedia-Methode der Msvm_DiskDrive-Klasse
+title: LockMedia-Methode der Msvm_DiskDrive-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7ddc082ca6ceb7141eaa42bdfddf7a97897a9240
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d6a3b35b418427a4af8f86dfb162cff7009539d93eab3d87f0c96423a5e951e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106361127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130580"
 ---
-# <a name="lockmedia-method-of-the-msvm_diskdrive-class"></a>Lockmedia-Methode der MSVM \_ diskdrive-Klasse
+# <a name="lockmedia-method-of-the-msvm_diskdrive-class"></a>LockMedia-Methode der Msvm \_ DiskDrive-Klasse
 
-Sperrt oder entsperrt das Medium.
+Sperrt oder entsperrt die Medien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ uint32 LockMedia(
 
 <dl> <dt>
 
-*Sperre* \[ in\]
+*Sperre* \[ In\]
 </dt> <dd>
 
-" **true** ", um die Medien zu sperren. **false** zum Freigeben der Medien.
+**TRUE,** um das Medium zu sperren; **FALSE,** um die Medien frei zu geben.
 
 </dd> </dl>
 
@@ -67,7 +67,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -76,7 +76,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 <dl> <dt>
 
-[**MSVM \_ diskdrive**](msvm-diskdrive.md)
+[**Msvm \_ DiskDrive**](msvm-diskdrive.md)
 </dt> </dl>
 
  

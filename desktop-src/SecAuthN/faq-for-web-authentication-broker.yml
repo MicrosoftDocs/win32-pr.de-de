@@ -5,12 +5,12 @@ metadata:
   title: Häufig gestellte Fragen zum Webauthentifizierungsbroker
   ms.topic: article
   ms.date: 05/31/2018
-  ms.openlocfilehash: ef15108a0c6384d833faaef052480c0e3eb79dda
-  ms.sourcegitcommit: 6377cd944d1f09f2dfe5727170ca8b330c8235bf
+  ms.openlocfilehash: fab271c9787650213b6bb575888960d921f0dda35a62ff3b7d43c1b50585e43c
+  ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 07/07/2021
-  ms.locfileid: "113366761"
+  ms.lasthandoff: 08/11/2021
+  ms.locfileid: "120101310"
 title: Häufig gestellte Fragen zum Webauthentifizierungsbroker
 summary: >
   Häufig gestellte Fragen zum Webauthentifizierungsbroker.
@@ -18,19 +18,19 @@ sections:
 - name: Wird ignoriert.
   questions:
   - question: >
-      Wie kann ich sicherstellen, dass meine https://-Seite mit dem Webauthentifizierungsbroker funktioniert?
+      Wie kann ich sicherstellen, dass meine https:// mit dem Webauthentifizierungsbroker funktioniert?
     answer: >
-      Versuchen Sie, die Seite in Windows Internet Explorer zu laden, bevor Sie sie mit dem Webauthentifizierungsbroker ausprobieren. Wenn Ihre Webseite ohne Fehler geladen wird, wird sie auch vom Webauthentifizierungsbroker ordnungsgemäß gerendert.
+      Laden Sie die Seite in Windows Internet Explorer, bevor Sie sie mit web authentication broker ausprobieren. Wenn Ihre Webseite ohne Fehler geladen wird, wird sie auch vom Webauthentifizierungsbroker ordnungsgemäß gerendert.
   - question: >
       Werden die Fehlercodes im Falle eines Fehlers dem Benutzer angezeigt?
     answer: >
-      Während dem Benutzer eine Fehlerseite angezeigt wird, wird der zugrunde liegende Fehlercode nicht angezeigt. Sie wird nur an die App zurückgegeben. Alternativ können Sie auch die Betriebsprotokolle verwenden.
+      Zwar wird dem Benutzer eine Fehlerseite angezeigt, der zugrunde liegende Fehlercode wird jedoch nicht angezeigt. Sie wird nur an die App zurückgegeben. Alternativ können Sie auch die Betriebsprotokolle verwenden.
   - question: >
-      Wie finde ich weitere Details zu dem aufgetretenen Fehler?
+      Wie finde ich weitere Details zum aufgetretenen Fehler?
     answer: >
-      Ausführliche Informationen finden Sie in den Betriebsprotokollen.
+      Verwenden Sie die Betriebsprotokolle für Details.
   - question: >
-      Gibt der App-Container für einmaliges Anmelden (Single Sign-On, SSO) seine Cookies für die Internet Explorer oder andere Browser frei?
+      Gibt der App-Container für einmaliges Anmelden (Single Sign-On, SSO) seine Cookies mit dem Internet Explorer oder anderen Browsern weiter?
     answer: >
       Nein. 
-additionalContent: "\n## <a name=\"related-topics\"></a>Zugehörige Themen\n\n[Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)\n\n[Webauthentifizierungsbroker-SDK-Beispiel-App](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)\n\n[**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web)"
+additionalContent: "\n## <a name=\"related-topics\"></a>Zugehörige Themen\n\n[Überlegungen für die Webseitenentwicklung](considerations-for-the-web-page-development.md)\n\n[Beispiel-App für das Webauthentifizierungsbroker-SDK](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)\n\n[**Windows.Security.Authentication.Web**](/uwp/api/Windows.Security.Authentication.Web)"

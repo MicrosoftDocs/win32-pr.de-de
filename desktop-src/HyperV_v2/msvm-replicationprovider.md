@@ -19,18 +19,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 8cc821b6bdd5d6f5d1c1085a804799c662f9d62e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84b64ec1462d9d3cb487cac807891d57c219de7f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865520"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885700"
 ---
-# <a name="msvm_replicationprovider-class"></a>MSVM \_ replicationprovider-Klasse
+# <a name="msvm_replicationprovider-class"></a>Msvm \_ ReplicationProvider-Klasse
 
 Stellt die verfügbaren Anbieter für die Replikation dar.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und enthält diese geerbten Eigenschaften.
+Die folgende Syntax wird aus MOF-Code vereinfacht und enthält diese geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,112 +49,112 @@ class Msvm_ReplicationProvider : CIM_ManagedSystemElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ replicationprovider** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ReplicationProvider-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ replicationprovider** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ReplicationProvider-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Für dieses Objekt lautet der Wert:
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Für dieses Objekt lautet der Wert:
 
-"Replikations Anbieter"
+"Replikationsanbieter"
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Für externe Anbieter wird der Wert von Ihnen bereitgestellt. Für Host zum Hosten des integrierten Anbieters lautet der Wert:
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Für externe Anbieter wird der Wert von ihnen bereitgestellt. Der Wert für host to host inbuilt provider lautet:
 
-"Replikations Anbieter für virtuelle Computer auf Hyper-V-Host"
+"Vm-Replikationsanbieter auf Hyper-V-Host"
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für den Endpunkt Anbieter. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für den Endpunktanbieter. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
-Damit Host den integrierten Anbieter hostet, wird diese Eigenschaft immer auf festgelegt:
+Für den Host zum Hosten des inbuilten Anbieters ist diese Eigenschaft immer auf festgelegt:
 
-"Replikations Anbieter für virtuelle Computer auf Hyper-V-Host"
+"Vm-Replikationsanbieter auf Hyper-V-Host"
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Schlüssel,** **MaxLen** (256)
 </dt> </dl>
 
-Die WMI-Instanz-ID, die den Anbieter identifiziert. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Das Format dieser Eigenschaft ist "Microsoft: <Host-Computername>\\ replicationprovider \\<Provider-Name>".
+Die WMI-Instanz-ID, die den Anbieter identifiziert. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt. Das Format dieser Eigenschaft lautet "Microsoft: &lt; host-machine-name &gt; \\ ReplicationProvider \\ &lt; provider-Name". &gt;
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Globally Unique Identifier (GUID) des Anbieters, der den Endpunkt Anbieter identifiziert. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Der GUID (Globally Unique Identifier) des Anbieters, der den Endpunktanbieter identifiziert. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
-Bei einem externen Anbieter ist diese Eigenschaft die CLSID des COM-Klassen Objekts des Anbieters. Damit Host den integrierten Anbieter hostet, wird diese Eigenschaft wie folgt korrigiert:
+Bei einem externen Anbieter ist diese Eigenschaft die CLSID des COM-Klassenobjekts des Anbieters. Für host to host inbuilt provider (Host zum Hosten des inbuilten Anbieters) wird diese Eigenschaft wie hier festgelegt:
 
-"22391cdc-272c-4ddf-ba88-9bebb1a0975c"
+"22391CDC-272C-4DDF-BA88-9BEFB1A0975C"
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf festgelegt:
+Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Arrayelement ist immer auf festgelegt:
 
 <dl> <dt>
 
@@ -163,25 +163,25 @@ Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSy
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Aktivieren einer Replikations Beziehung können Sie einen beliebigen verfügbaren Anbieter und die [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse verwenden. Standardmäßig wählt Hyper-V den integrierten Host zum Hosten des Anbieters aus, der beim Erstellen der Replikation geändert werden kann. Der Hyper-V-Verwaltungsdienst kommuniziert mit einem externen Anbieter mithilfe von com.
+Sie können einen beliebigen verfügbaren Anbieter und die [**Msvm \_ ReplicationRelationship-Klasse**](msvm-replicationrelationship.md) verwenden, um eine Replikationsbeziehung zu aktivieren. Hyper-V wählt standardmäßig den integrierte Host zum Hostanbieter aus, der beim Erstellen der Replikation geändert werden kann. Der Hyper-V-Verwaltungsdienst kommuniziert mit einem externen Anbieter über COM.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

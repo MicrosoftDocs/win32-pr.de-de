@@ -1,9 +1,9 @@
 ---
-title: Mrmkreateresourcefilinput Memory-Funktion (mrmresourceingedexer. h)
-description: Erstellt PRI-Informationen als BLOB im Speicher, nicht als Datei auf dem Datenträger.
+title: MrmCreateResourceFileInMemory-Funktion (MrmResourceIndexer.h)
+description: Erstellt PRI-Informationen als Blob im Arbeitsspeicher, nicht als Datei auf dem Datenträger.
 ms.assetid: 68BDAD27-545A-4DC6-B909-4242A0863690
 keywords:
-- Funktionen von "mrmcreateresourcefilinput Memory" und weitere Ressourcen
+- Menüs und andere Ressourcen der MrmCreateResourceFileInMemory-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17bbe36a55b5be18f9f4005b4e0ae24d3d610bd5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff34ddaab25f47f537c1270ad3a70719a43e2e1efa978fbad19cbe9ae77ba937
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886750"
 ---
-# <a name="mrmcreateresourcefileinmemory-function"></a>Mrmkreateresourcefilinput Memory-Funktion
+# <a name="mrmcreateresourcefileinmemory-function"></a>MrmCreateResourceFileInMemory-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Erstellt PRI-Informationen als BLOB im Speicher, nicht als Datei auf dem Datenträger. Die-Funktion ordnet Speicher zu und gibt einen Zeiger auf diesen Speicher in *outputpridata* zurück. Nennen Sie [**mrmfreememory**](mrmfreememory.md) mit dem gleichen Zeiger, um diesen Arbeitsspeicher freizugeben. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Erstellt PRI-Informationen als Blob im Arbeitsspeicher, nicht als Datei auf dem Datenträger. Die Funktion belegt Arbeitsspeicher und gibt einen Zeiger auf diesen Speicher in *outputPriData* zurück. Rufen Sie [**MrmFreeMemory**](mrmfreememory.md) mit dem gleichen Zeiger auf, um diesen Arbeitsspeicher freizugeben. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für [die Paketressourcenindizierung (PACKAGE Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,48 +46,48 @@ HRESULT HRESULT MrmCreateResourceFileInMemory(
 
 <dl> <dt>
 
-*Indexer* \[ in\]
+*Indexer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmresourceindexerhandle**](mrmresourceindexerhandle.md)**
+Typ: **[ **MrmResourceIndexerHandle**](mrmresourceindexerhandle.md)**
 
-Ein Handle, das den ressourcenindexer identifiziert, von dem die PRI-Informationen erstellt werden sollen.
+Ein Handle, das den Ressourcenindexer identifiziert, aus dem die PRI-Informationen erstellt werden sollen.
 
 </dd> <dt>
 
-*packagingmode* \[ in\]
+*packagingMode* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmpackagingmode**](mrmpackagingmode.md)**
+Typ: **[ **MrmPackagingMode**](mrmpackagingmode.md)**
 
-Gibt an, ob die PRI-Informationen eigenständig oder ein Ressourcenpaket sein sollen. **Mrmpackagingmodeautosplit** wird nicht unterstützt.
+Gibt an, ob die PRI-Informationen eigenständig oder ein Ressourcenpaket sein sollen. **MrmPackagingModeAutoSplit** wird nicht unterstützt.
 
 </dd> <dt>
 
-*packagingoptions* \[ in\]
+*packagingOptions* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmpackagingoptions**](mrmpackagingoptions.md)**
+Typ: **[ **MrmPackagingOptions**](mrmpackagingoptions.md)**
 
 Gibt zusätzliche Optionen zu den PRI-Informationen an.
 
 </dd> <dt>
 
-*outputpridata* \[ vorgenommen\]
+*outputPriData* \[ out\]
 </dt> <dd>
 
-Type: **Byte \* \***
+Typ: **BYTE \* \***
 
-Die Adresse eines Zeigers auf ein Byte. Die-Funktion ordnet Speicher zu und gibt einen Zeiger auf diesen Speicher in *outputpridata* zurück. Nennen Sie [**mrmfreememory**](mrmfreememory.md) mit dem Zeiger auf Byte, um diesen Arbeitsspeicher freizugeben.
+Die Adresse eines Zeigers auf BYTE. Die Funktion belegt Arbeitsspeicher und gibt einen Zeiger auf diesen Speicher in *outputPriData* zurück. Rufen Sie [**MrmFreeMemory**](mrmfreememory.md) mit Ihrem Zeiger auf BYTE auf, um diesen Arbeitsspeicher freizugeben.
 
 </dd> <dt>
 
-*outputprisize* \[ vorgenommen\]
+*outputPriSize* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
-Die Adresse eines ulong. In _outputPriSize * gibt die-Funktion die Größe des belegten Speichers zurück, auf den von *outputpridata* verwiesen wird.
+Die Adresse eines ULONG. In *outputPriSize* gibt die Funktion die Größe des zugeordneten Arbeitsspeichers zurück, auf den *outputPriData* zeigt.
 
 </dd> </dl>
 
@@ -95,11 +95,11 @@ Die Adresse eines ulong. In _outputPriSize * gibt die-Funktion die Größe des b
 
 Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um erfolg- oder fehlerbestimmend zu sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie *outputpridata* an [**mrmkreateresourcindexerfrompreviouspridata**](mrmcreateresourceindexerfrompreviouspridata-.md)übergeben, geben Sie den Arbeitsspeicher erst frei, nachdem Sie den ressourcenindexer verwendet haben.
+Wenn Sie *outputPriData* an [**MrmCreateResourceIndexerFromPreviousPriData**](mrmcreateresourceindexerfrompreviouspridata-.md)übergeben, geben Sie den Arbeitsspeicher erst frei, nachdem Sie den Ressourcenindexer verwendet haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,10 +107,10 @@ Wenn Sie *outputpridata* an [**mrmkreateresourcindexerfrompreviouspridata**](mrm
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1803 \[\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows \[Nur Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

@@ -1,36 +1,36 @@
 ---
-description: Windows Installer führt während der erneuten Installation einer Anwendung die folgenden Aktionen aus, wenn das Paket isolierte Komponenten enthält. In der Regel \_ handelt es sich bei der gemeinsam genutzten Komponente um eine DLL, die von Komponenten \_ Anwendungen und anderen ausführbaren Client Dateien gemeinsam genutzt wird
+description: Windows Das Installationsprogramm führt die folgenden Aktionen während der Neuinstallation einer Anwendung aus, wenn das Paket isolierte Komponenten enthält. In der Regel ist Die \_ freigegebene Komponente eine DLL, die von der Komponentenanwendung und anderen \_ ausführbaren Clientdateien gemeinsam genutzt wird.
 ms.assetid: 65909b47-dc09-4e9a-920a-9cb3f55b2e67
 title: Neuinstallation isolierter Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 68ad1c7fb53eb09e96882209f7738e95be9b4a64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c624777647ab9e5023cd6c78d9aaa4d20951563f915afcd800ba60ca3b233174
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086010"
 ---
 # <a name="reinstallation-of-isolated-components"></a>Neuinstallation isolierter Komponenten
 
-Windows Installer führt während der erneuten Installation einer Anwendung die folgenden Aktionen aus, wenn das Paket isolierte Komponenten enthält. In der Regel \_ handelt es sich bei der gemeinsam genutzten Komponente um eine DLL, die von Komponenten \_ Anwendungen und anderen ausführbaren Client Dateien gemeinsam genutzt wird
+Windows Das Installationsprogramm führt die folgenden Aktionen während der Neuinstallation einer Anwendung aus, wenn das Paket isolierte Komponenten enthält. In der Regel ist Die \_ freigegebene Komponente eine DLL, die von der Komponentenanwendung und anderen \_ ausführbaren Clientdateien gemeinsam genutzt wird.
 
 ## <a name="reinstallation"></a>Neuinstallation
 
--   Installieren Sie die Dateien der-Komponente, die \_ im selben Ordner wie die Komponenten Anwendung freigegeben \_ werden, neu, wenn die Komponenten \_ Anwendung ebenfalls neu installiert wird.
--   Erhöhen Sie nicht die Client Liste der freigegebenen Komponenten, \_ und erhöhen Sie die Anzahl der SHAREDDLL nicht.
--   Erstellen Sie die 0-Byte-Datei mit dem kurzen Dateinamen der Schlüsseldatei der Komponenten \_ Anwendung neu. Diese Datei muss sich im selben Ordner wie \_ die Komponenten Anwendung befinden und die Erweiterung aufweisen. Nah.
--   Installieren Sie wie gewohnt alle Ressourcen der Komponenten \_ Anwendung neu.
+-   Installieren Sie die Dateien von Component Shared nur dann erneut im gleichen Ordner wie die Komponentenanwendung, wenn die \_ \_ \_ Komponentenanwendung ebenfalls neu installiert wird.
+-   Erhöhen Sie die Clientliste von Component Shared nicht, und erhöhen Sie nicht \_ die SharedDLL-Anzahl.
+-   Erstellen Sie die Null-Byte-Datei mit dem kurzen Dateinamen der Schlüsseldatei der \_ Komponentenanwendung neu. Diese Datei muss sich im gleichen Ordner wie die Komponentenanwendung befinden \_ und die Erweiterung haben. lokal.
+-   Installieren Sie alle Ressourcen der \_ Komponentenanwendung wie gewohnt neu.
 
-Wenn SHAREDDLL refcount für die frei \_ gegebene Komponente größer als 1 ist, oder wenn andere Produkte in der Client Liste der freigegebenen Komponenten verbleiben \_ :
+Wenn der SharedDLL-Refcount für Freigegebene Komponente größer als 1 ist oder andere Produkte in der Clientliste von \_ Component Shared (Freigegebene Komponente) \_ verbleiben:
 
--   Installieren Sie keine Dateien erneut an den freigegebenen Speicherort der frei \_ gegebenen Komponente.
+-   Installieren Sie keine Dateien am freigegebenen Speicherort der Freigegebenen \_ Komponente neu.
 
-Wenn SHAREDDLL refcount für die frei \_ gegebene Komponente 1 ist, oder wenn keine anderen verbleibenden Clients der Komponente frei \_ gegeben sind:
+Wenn der SharedDLL-Refcount für Die freigegebene Komponente gleich 1 ist oder keine anderen clients von \_ Component Shared (Freigegebene Komponente) noch nicht \_ mehr zur Verfügung stehen:
 
--   Installieren Sie die Dateien der an \_ den freigegebenen Speicherort freigegebenen Komponenten mithilfe der Regeln für die [Datei Versions](file-versioning-rules.md)Verwaltung neu.
--   Alle Neuinstallations Aktionen für freigegebene Komponenten verarbeiten \_ .
--   Wenn die \_ freigegebene Komponente eine COM-Komponente ist, registrieren Sie den vollständigen com-Pfad, sodass der Installer \[ $Component \] und den \[ \# filekey- \] Punkt auf den freigegebenen Speicherort der freigegebenen Komponente verweist \_ .
+-   Installieren Sie die Dateien von Component Shared erneut am freigegebenen \_ Speicherort, indem Sie die [Dateiversionsregeln verwenden.](file-versioning-rules.md)
+-   Verarbeiten Sie alle Neuinstallationsaktionen für Freigegebene \_ Komponenten.
+-   Wenn component Shared eine COM-Komponente ist, registrieren Sie den vollständigen COM-Pfad, damit die Installersyntaxen $Component und FileKey auf den freigegebenen Speicherort von \_ \[ Component Shared \] \[ \# \] \_ zeigen.
 
  
 

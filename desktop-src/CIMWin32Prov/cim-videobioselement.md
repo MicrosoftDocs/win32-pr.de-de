@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ VideoBIOSElement-Klasse stellt die Software auf niedriger Ebene dar, die in einen nicht flüchtigen Speicher geladen wird und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems verwendet wird.
+description: Die CIM VideoBIOSElement-Klasse stellt die Low-Level-Software dar, die in einen nicht flüchtigen Speicher geladen und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems \_ verwendet wird.
 ms.assetid: f23d411f-4781-4727-abd1-61fe1a366bf0
 ms.tgt_platform: multiple
 title: CIM_VideoBIOSElement-Klasse
@@ -31,23 +31,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 4864e3787b00ca72f90d0c6d15c35049abd58acd04c3d221aa29436d8885a652
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 317bbf71b166ea51e665ad96c58657927412cbab
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119080254"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882032"
 ---
 # <a name="cim_videobioselement-class"></a>CIM \_ VideoBIOSElement-Klasse
 
-Die **CIM \_ VideoBIOSElement-Klasse** stellt die Software auf niedriger Ebene dar, die in einen nicht flüchtigen Speicher geladen wird und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems verwendet wird.
+Die **CIM \_ VideoBIOSElement-Klasse** stellt die Low-Level-Software dar, die in einen nicht flüchtigen Speicher geladen und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems verwendet wird.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,7 +77,7 @@ class CIM_VideoBIOSElement : CIM_SoftwareElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ VideoBIOSElement-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ VideoBIOSElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -90,7 +90,7 @@ Die **CIM \_ VideoBIOSElement-Klasse** verfügt über diese Eigenschaften.
 **BuildNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -101,14 +101,14 @@ Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [
 
 Interner Bezeichner für die Kompilierung dieses Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -119,14 +119,14 @@ Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [
 
 Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **CodeSet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -135,34 +135,34 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Codesatz, der vom Softwareelement verwendet wird.
+Vom Softwareelement verwendeter Codesatz.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
 Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **IdentificationCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -171,9 +171,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.7")
 </dt> </dl>
 
-Der Bezeichner des Herstellers für das Softwareelement, z. B. eine Lagerhaltungseinheit (Stock-Keeping Unit, SKU) oder eine Teilenummer.
+Der Bezeichner des Herstellers für das Softwareelement, z. B. eine Vorrateinheit (Stock Keeping Unit, SKU) oder eine Teilenummer.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
@@ -186,12 +186,12 @@ Datentyp: **datetime**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
 Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
@@ -207,14 +207,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Video BIOS \| 001.5")
 </dt> </dl>
 
-True gibt an, dass das Video-BIOS überschatten wird.
+True **gibt an,** dass das Video-BIOS als Schatten angezeigt wird.
 
 </dd> <dt>
 
 **LanguageEdition**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -223,16 +223,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (32), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.6")
 </dt> </dl>
 
-Sprachversion des Softwareelements. Die in ISO 639 definierten Sprachcodes sollten verwendet werden. Wenn das Softwareelement eine mehrsprachige oder internationale Version eines Produkts darstellt, sollte die Zeichenfolge "Multilingual" verwendet werden.
+Sprachedition des Softwareelements. Die in ISO 639 definierten Sprachcodes sollten verwendet werden. Wenn das Softwareelement eine mehrsprachige oder internationale Version eines Produkts darstellt, sollte die Zeichenfolge "Multilingual" verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -241,30 +241,30 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.1")
 </dt> </dl>
 
-Hersteller des Softwareelements Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Hersteller des Softwareelements Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Name zum Identifizieren des Softwareelements Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Name zum Identifizieren des Softwareelements Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **OtherTargetOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -273,14 +273,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ OperatingSystem**](cim-operatingsystem.md).**OtherTypeDescription**")
 </dt> </dl>
 
-Hersteller- und Betriebssystemtyp für ein Softwareelement, wenn die **TargetOperatingSystem-Eigenschaft** den Wert 1 ("Other") hat. Wenn die **TargetOperatingSystem-Eigenschaft** über den Wert 1 verfügt, muss diese Eigenschaft einen Wert ungleich NULL aufweisen. Für alle anderen **TargetOperatingSystem-Werte** ist diese Eigenschaft NULL. Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Hersteller- und Betriebssystemtyp für ein Softwareelement, wenn die **TargetOperatingSystem-Eigenschaft** den Wert 1 ("Sonstige") hat. Wenn die **TargetOperatingSystem-Eigenschaft** den Wert 1 aufgibt, muss diese Eigenschaft einen Wert haben, der nicht NULL ist. Für alle anderen **TargetOperatingSystem-Werte** ist diese Eigenschaft NULL. Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -291,25 +291,25 @@ Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [
 
 Zugewiesene Seriennummer des Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Bezeichner für das Softwareelement, das in Verbindung mit anderen Schlüsseln verwendet werden soll, um eine eindeutige Darstellung der [**CIM \_ SoftwareElement-Klasse**](cim-softwareelement.md) zu erstellen.
+Bezeichner für das Softwareelement, das in Verbindung mit anderen Schlüsseln verwendet werden soll, um eine eindeutige Darstellung der [**CIM \_ SoftwareElement-Klasse zu**](cim-softwareelement.md) erstellen.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 </dd> <dt>
 
@@ -322,12 +322,12 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Status eines Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ SoftwareElement**](cim-softwareelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ SoftwareElement geerbt.**](cim-softwareelement.md)
 
 <dt>
 
@@ -1023,8 +1023,8 @@ Version des Vorgangs.
 
 Die Version des Vorgangs sollte eine der folgenden Formen haben:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; nebenversion &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; Revision von &gt; &lt; Nebenbuchstaben &gt; &lt;&gt;
 
 Diese Eigenschaft wird von der [**CIM \_ SoftwareElement-Klasse**](cim-softwareelement.md) geerbt.
 
@@ -1038,7 +1038,7 @@ WMI implementiert diese Klasse nicht.
 
 Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

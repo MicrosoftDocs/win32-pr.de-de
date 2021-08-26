@@ -1,9 +1,9 @@
 ---
-title: TBN_WRAPACCELERATOR Benachrichtigungs Code (kommctrl. h)
-description: Fordert den Index der Schaltfläche in einem oder mehreren Symbolleisten an, der dem angegebenen Zugriffstasten Zeichen entspricht. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_WRAPACCELERATOR Benachrichtigungscode (Commctrl.h)
+description: Fordert den Index der Schaltfläche in einer oder mehreren Symbolleisten an, die dem angegebenen Zugriffstastenzeichen entsprechen. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: fc2443fd-e1b3-4085-b65d-96c08f544944
 keywords:
-- Windows-Steuerelemente für TBN_WRAPACCELERATOR Benachrichtigungs
+- TBN_WRAPACCELERATOR Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ed5e6063f8ac32b317b8f7ce37682b151c56a4a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c5ec222f387108e2cb4d240e6dddf0fcb904d814097a96624a177425eb805ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105030"
 ---
-# <a name="tbn_wrapaccelerator-notification-code"></a>TBN- \_ wrapaccelerator-Benachrichtigungs Code
+# <a name="tbn_wrapaccelerator-notification-code"></a>TBN \_ WRAPACCELERATOR-Benachrichtigungscode
 
-Fordert den Index der Schaltfläche in einem oder mehreren Symbolleisten an, der dem angegebenen Zugriffstasten Zeichen entspricht. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Fordert den Index der Schaltfläche in einer oder mehreren Symbolleisten an, die dem angegebenen Zugriffstastenzeichen entsprechen. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,19 +41,19 @@ TBN_WRAPACCELERATOR
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die das Tastenkombination-Zeichen enthält und den Index der entsprechenden Schaltfläche empfängt. Der Index ist-1, wenn die Zugriffstaste keinem Befehl entspricht.
+Ein Zeiger auf eine -Struktur, die das Zugriffstastenzeichen enthält und den Index der entsprechenden Schaltfläche empfängt. Der Index ist -1, wenn die Zugriffstaste keinem Befehl entspricht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**True** , wenn ein Index zurückgegeben wird, andernfalls **false**.
+**TRUE,** wenn ein Index zurückgegeben wird, andernfalls **FALSE**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen mit einem oder mehreren Symbolleisten können diesen Benachrichtigungs Code erhalten.
+Anwendungen mit einer oder mehreren Symbolleisten erhalten möglicherweise diesen Benachrichtigungscode.
 
-Die **nmtbwrapaccelerator** -Struktur muss von der Anwendung wie folgt definiert werden:
+Die **NMTBWRAPACCELERATOR-Struktur** muss von der Anwendung wie folgt definiert werden:
 
 ``` syntax
 typedef struct tagNMTBWRAPACCELERATOR {
@@ -69,9 +69,9 @@ typedef struct tagNMTBWRAPACCELERATOR {
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

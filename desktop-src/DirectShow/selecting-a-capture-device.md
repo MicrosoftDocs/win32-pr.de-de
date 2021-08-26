@@ -1,39 +1,39 @@
 ---
-description: Auswählen eines Erfassungs Geräts
+description: Auswählen eines Erfassungsgeräts
 ms.assetid: 8f92873d-569a-48af-a913-6d4cce65640f
-title: Auswählen eines Erfassungs Geräts
+title: Auswählen eines Erfassungsgeräts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b599728c6bd2d98b89285b6008923aa4fb2a3aef
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: e5bf92692070c8a0191a91559481d5446bf3d4d894c8e7f6aafc2ed9e73a6667
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904410"
 ---
-# <a name="selecting-a-capture-device"></a>Auswählen eines Erfassungs Geräts
+# <a name="selecting-a-capture-device"></a>Auswählen eines Erfassungsgeräts
 
-Verwenden Sie zum Auswählen eines Audiogeräts oder Video Erfassungs Geräts den [Enumerator "Systemgeräte](system-device-enumerator.md)", der im Thema [Verwenden des Enumerators "Systemgeräte](using-the-system-device-enumerator.md)" beschrieben wird. Der Enumerator für System Geräte gibt eine Sammlung von gerätermonikern zurück, die nach Gerätekategorie ausgewählt ist. Ein *Moniker* ist ein COM-Objekt, das Informationen über ein anderes Objekt enthält. Moniker ermöglichen es der Anwendung, Informationen zu einem Objekt zu erhalten, ohne das Objekt tatsächlich zu erstellen. Später kann die Anwendung den Moniker zum Erstellen des Objekts verwenden. Weitere Informationen zu Monikern finden Sie in der Dokumentation für [**IMoniker**](/windows/win32/api/objidl/nn-objidl-imoniker).
+Verwenden Sie zum Auswählen eines Audio- oder Videoaufnahmegeräts den [Systemgeräte-Enumerator,](system-device-enumerator.md)der im Thema Verwenden des [Systemgeräte-Enumerators beschrieben wird.](using-the-system-device-enumerator.md) Der Systemgeräte-Enumerator gibt eine Sammlung von Gerätemonikern zurück, die nach Gerätekategorie ausgewählt wurden. Ein *Moniker ist* ein COM-Objekt, das Informationen zu einem anderen Objekt enthält. Moniker ermöglichen es der Anwendung, Informationen zu einem Objekt zu erhalten, ohne das Objekt tatsächlich zu erstellen. Später kann die Anwendung den Moniker verwenden, um das Objekt zu erstellen. Weitere Informationen zu Monikern finden Sie in der Dokumentation für [**IMoniker**](/windows/win32/api/objidl/nn-objidl-imoniker).
 
-Führen Sie die folgenden Schritte aus, um den Enumerator für System Geräte zu verwenden.
+Führen Sie die folgenden Schritte aus, um den Systemgeräte-Enumerator zu verwenden.
 
-1.  Rufen Sie [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um eine Instanz des Enumerators für System Geräte zu erstellen.
-2.  Nennen Sie [**ikreatedevenum:: feateclassenumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) , und geben Sie die Gerätekategorie als GUID an. Für Erfassungsgeräte sind die folgenden Kategorien relevant. 
+1.  Rufen [**Sie CoCreateInstance auf,**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) um eine Instanz des Systemgeräte-Enumerators zu erstellen.
+2.  Rufen [**Sie ICreateDevEnum::CreateClassEnumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) auf, und geben Sie die Gerätekategorie als GUID an. Für Erfassungsgeräte sind die folgenden Kategorien relevant. 
 
     | Kategorie-GUID                       | BESCHREIBUNG           |
     |-------------------------------------|-----------------------|
-    | **CLSID \_ audioinputentvicecategory** | Audioerfassungs Geräte |
-    | **CLSID \_ videoinputentvicecategory** | Video Erfassungsgeräte |
+    | **CLSID \_ AudioInputDeviceCategory** | Audioaufnahmegeräte |
+    | **CLSID \_ VideoInputDeviceCategory** | Videoaufnahmegeräte |
 
     
 
      
 
-    Wenn eine Videokamera über ein integriertes Mikrofon verfügt, wird Sie in beiden Kategorien angezeigt. Die Kamera und das Mikrofon werden jedoch vom System als separate Geräte behandelt, um Aufzählungs-, Geräte-und datenstreamingvorgänge durchlaufen zu können.
+    Wenn eine Videokamera über ein integriertes Mikrofon verfügt, wird sie in beiden Kategorien angezeigt. Die Kamera und das Mikrofon werden jedoch vom System zur Aufzählung, Geräteerstellung und Datenstreaming als separate Geräte behandelt.
 
-3.  Die Methode " [**kreateclassenumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) " gibt einen Zeiger auf die [**IEnumMoniker**](/windows/win32/api/objidl/nn-objidl-ienummoniker) -Schnittstelle zurück. Um die Moniker aufzuzählen, nennen Sie [**IEnumMoniker:: Next**](/windows/win32/api/objidl/nf-objidl-ienummoniker-next).
+3.  Die [**CreateClassEnumerator-Methode**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) gibt einen Zeiger auf die [**IEnumMoniker-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ienummoniker) zurück. Rufen Sie zum Aufzählen der Moniker [**IEnumMoniker::Next auf.**](/windows/win32/api/objidl/nf-objidl-ienummoniker-next)
 
-Mit dem folgenden Code wird ein Enumerator für eine angegebene Gerätekategorie erstellt.
+Der folgende Code erstellt einen Enumerator für eine angegebene Gerätekategorie.
 
 
 ```C++
@@ -65,34 +65,34 @@ HRESULT EnumerateDevices(REFGUID category, IEnumMoniker **ppEnum)
 
 
 
-Mit der [**IEnumMoniker**](/windows/win32/api/objidl/nn-objidl-ienummoniker) -Schnittstelle wird eine Liste der [**IMoniker**](/windows/win32/api/objidl/nn-objidl-imoniker) -Schnittstellen aufgelistet, von denen jede einen gerätermoniker darstellt. Die Anwendung kann Eigenschaften aus dem Moniker lesen oder den Moniker zum Erstellen eines DirectShow-Erfassungs Filters für das Gerät verwenden. Monikereigenschaften werden als **Variant** -Werte zurückgegeben. Die folgenden Eigenschaften werden von gerätermonikern unterstützt.
+Die [**IEnumMoniker-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ienummoniker) listet [**IMoniker-Schnittstellen**](/windows/win32/api/objidl/nn-objidl-imoniker) auf, von denen jede einen Gerätemoniker darstellt. Die Anwendung kann Eigenschaften aus dem Moniker lesen oder den Moniker verwenden, um einen DirectShow-Erfassungsfilter für das Gerät zu erstellen. Monikereigenschaften werden als **VARIANT-Werte** zurückgegeben. Die folgenden Eigenschaften werden von Gerätemonikern unterstützt.
 
 
 
 | Eigenschaft       | BESCHREIBUNG                                                               | VARIANT-Typ |
 |----------------|---------------------------------------------------------------------------|--------------|
-| FriendlyName | Der Name des Geräts.                                                   | **VT \_ BSTR** |
-| Beschreibung  | Eine Beschreibung des Geräts.                                              | **VT \_ BSTR** |
-| DevicePath   | Eine eindeutige Zeichenfolge, die das Gerät identifiziert. (Nur Video Erfassungsgeräte.) | **VT \_ BSTR** |
-| "Waveingeid"     | Der Bezeichner für ein audioerfassungs Gerät. (Nur audioerfassungs Geräte.) | **VT \_ I4**   |
+| "FriendlyName" | Der Name des Geräts.                                                   | **VT \_ BSTR** |
+| "Beschreibung"  | Eine Beschreibung des Geräts.                                              | **VT \_ BSTR** |
+| "DevicePath"   | Eine eindeutige Zeichenfolge, die das Gerät identifiziert. (Nur Videoaufnahmegeräte.) | **VT \_ BSTR** |
+| "WaveInID"     | Der Bezeichner für ein Audioaufnahmegerät. (Nur Audioaufnahmegeräte.) | **VT \_ I4**   |
 
 
 
  
 
-Die Eigenschaften "FriendlyName" und "Description" sind für die Anzeige in einer Benutzeroberfläche geeignet.
+Die Eigenschaften "FriendlyName" und "Description" eignen sich für die Anzeige auf einer Benutzeroberfläche.
 
 -   Die Eigenschaft "FriendlyName" ist für jedes Gerät verfügbar. Sie enthält einen lesbaren Namen für das Gerät.
--   Die "Description"-Eigenschaft ist nur für DV-und D-VHS/MPEG-Camcorder-Geräte verfügbar. Weitere Informationen finden Sie unter [msdv Driver](msdv-driver.md) und [mstape Driver](mstape-driver.md). Wenn Sie verfügbar ist, enthält Sie eine Beschreibung des Geräts, das spezifischer ist als die Eigenschaft "FriendlyName". In der Regel enthält Sie den Herstellernamen.
--   Die Eigenschaft "DevicePath" ist keine für menschenlesbare Zeichenfolge, Sie ist jedoch für jedes Video Erfassungsgerät im System eindeutig. Mit dieser Eigenschaft können Sie zwischen zwei oder mehr Instanzen desselben Geräte Modells unterscheiden.
--   Wenn die Eigenschaft "waveinid" vorhanden ist, bedeutet dies, dass der DirectShow-Erfassungs Filter die [Waveform-audioapis](../multimedia/waveform-audio.md) intern verwendet, um mit dem Gerät zu kommunizieren. Der Wert der waveiniid-Eigenschaft entspricht dem Bezeichner, der von den **\* WaveIn* _-Funktionen verwendet wird, z. b. [_ *waveiniopen* *](/windows/win32/api/mmeapi/nf-mmeapi-waveinopen).
+-   Die Eigenschaft "Beschreibung" ist nur für DV- und D-VHS-/MPEG-Geräte verfügbar. Weitere Informationen finden Sie unter [MSDV-Treiber](msdv-driver.md) und [MSTape-Treiber.](mstape-driver.md) Falls verfügbar, enthält sie eine Beschreibung des Geräts, die spezifischer als die Eigenschaft "FriendlyName" ist. In der Regel enthält sie den Herstellernamen.
+-   Die Eigenschaft "DevicePath" ist keine für Menschen lesbare Zeichenfolge, sondern garantiert eindeutig für jedes Videoaufnahmegerät im System. Sie können diese Eigenschaft verwenden, um zwischen zwei oder mehr Instanzen desselben Gerätemodells zu unterscheiden.
+-   Wenn die Eigenschaft "WaveInID" vorhanden ist, bedeutet dies, dass der DirectShow-Erfassungsfilter die [Waveform-Audio-APIs](../multimedia/waveform-audio.md) intern für die Kommunikation mit dem Gerät verwendet. Der Wert der Eigenschaft "WaveInID" entspricht dem Bezeichner, der von den **\* waveIn* _-Funktionen verwendet wird, z. B. [_ *waveInOpen* *](/windows/win32/api/mmeapi/nf-mmeapi-waveinopen).
 
 Führen Sie die folgenden Schritte aus, um Eigenschaften aus dem Moniker zu lesen.
 
-1.  Aufrufen von [**IMoniker:: bindesstorage**](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage) zum Abrufen eines Zeigers auf die [**IPropertyBag**](../com/ipropertybag-and-ipersistpropertybag.md) -Schnittstelle.
-2.  Aufrufen von **IPropertyBag:: Read** , um die Eigenschaft zu lesen.
+1.  Rufen [**Sie IMoniker::BindToStorage auf,**](/windows/win32/api/objidl/nf-objidl-imoniker-bindtostorage) um einen Zeiger auf die [**IPropertyBag-Schnittstelle**](../com/ipropertybag-and-ipersistpropertybag.md) zu erhalten.
+2.  Rufen **Sie IPropertyBag::Read auf,** um die Eigenschaft zu lesen.
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie eine Liste von gerätermonikern auflisten und die Eigenschaften erhalten.
+Das folgende Codebeispiel zeigt, wie Sie eine Liste von Gerätemonikern auflisten und die Eigenschaften erhalten.
 
 
 ```C++
@@ -174,7 +174,7 @@ void main()
 
 
 
-Um einen DirectShow-Erfassungs Filter für das Gerät zu erstellen, rufen Sie die [**IMoniker:: BindTo Object**](/windows/win32/api/objidl/nf-objidl-imoniker-bindtoobject) -Methode auf, um einen [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Zeiger abzurufen. Klicken Sie dann auf [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) , um dem Filter Diagramm den Filter hinzuzufügen:
+Um einen DirectShow-Erfassungsfilter für das Gerät zu erstellen, rufen Sie die [**IMoniker::BindToObject-Methode**](/windows/win32/api/objidl/nf-objidl-imoniker-bindtoobject) auf, um einen [**IBaseFilter-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) zu erhalten. Rufen Sie dann [**IFilterGraph::AddFilter auf,**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) um dem Filterdiagramm den Filter hinzuzufügen:
 
 
 ```C++
@@ -192,10 +192,10 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[Audioerfassung](audio-capture.md)
+[Audioaufnahme](audio-capture.md)
 </dt> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

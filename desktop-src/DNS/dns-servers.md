@@ -6,12 +6,12 @@ keywords:
 - DNS-Server
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fe2415c50cdd2472b20e8f14123afa2aa919d26
-ms.sourcegitcommit: 8f0a1d212dd154e8d94ab4c0e4ced053fa16823a
+ms.openlocfilehash: b3f1eb0391d588431e082c69bcd19768c4047b1e4e24c64fbda251c11703a7eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "112011253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131830"
 ---
 # <a name="dns-servers"></a>DNS-Server
 
@@ -37,7 +37,7 @@ Zusätzlich zu primären und sekundären DNS-Servern können zusätzliche DNS-Se
 
 ## <a name="caching-servers"></a>Zwischenspeichern von Servern
 
-[*Zwischenspeichern von*](c-gly.md)Servern, die auch als Server mit ausschließlicher Zwischenspeicherung bekannt sind, wird wie von ihrem Namen vorgeschlagen ausgeführt. Sie stellen nur zwischengespeicherte Abfragedienste für DNS-Antworten zur Verfügung. Anstatt Zonendateien wie andere sekundäre Server zu verwalten, führen dns-Server Zwischenspeicherungsabfragen aus, speichern die Antworten zwischen und geben die Ergebnisse an den abfragenden Client zurück. Der Hauptunterschied zwischen Zwischenspeicherungsservern und anderen sekundären Servern besteht in der Beibehaltung von Zonendateien durch andere sekundäre Server (und gegebenenfalls der Erstellung von Zonenübertragungen, wodurch der Übertragung zugeordneter Netzwerkdatenverkehr generiert wird). Dies gilt nicht für Cacheserver.
+[*Zwischenspeichern von*](c-gly.md)Servern , auch als Server mit ausschließlicher Zwischenspeicherung bekannt, wird wie von ihrem Namen vorgeschlagen ausgeführt. Sie stellen nur zwischengespeicherte Abfragedienste für DNS-Antworten zur Verfügung. Anstatt Zonendateien wie bei anderen sekundären Servern zu verwalten, führt das Zwischenspeichern von DNS-Servern Abfragen aus, speichert die Antworten zwischen und gibt die Ergebnisse an den abfragenden Client zurück. Der Hauptunterschied zwischen Zwischenspeicherungsservern und anderen sekundären Servern besteht in der Beibehaltung von Zonendateien durch andere sekundäre Server (und gegebenenfalls durch Zonenübertragungen, wodurch Netzwerkdatenverkehr generiert wird, der der Übertragung zugeordnet ist). Zwischenspeicherungsserver hingegen nicht.
 
  
 

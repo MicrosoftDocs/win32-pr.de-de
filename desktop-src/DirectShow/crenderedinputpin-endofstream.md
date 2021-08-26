@@ -1,7 +1,7 @@
 ---
-description: 'Die EndOfStream-Methode benachrichtigt die PIN, dass keine weiteren Daten erwartet werden, bis ein neuer Run-Befehl an den Filter ausgegeben wird. Diese Methode implementiert die IPin:: EndOf Stream-Methode.'
+description: Die EndOfStream-Methode benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden, bis ein neuer Ausführungsbefehl für den Filter ausgegeben wird. Diese Methode implementiert die IPin::EndOfStream-Methode.
 ms.assetid: 915beab4-2fc3-4acd-bb30-c0851df058db
-title: Crenderedinputpin. EndOf Stream-Methode (amextra. h)
+title: CRenderedInputPin.EndOfStream-Methode (Amextra.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c836b1098c92a69fa720fb7b87e4a63b3c05a526
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26f7a5075e06a3943978a8e938f034fbabcaddfa31c9ffa2a2b37d33a0120640
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107990"
 ---
-# <a name="crenderedinputpinendofstream-method"></a>Crenderedinputpin. EndOf Stream-Methode
+# <a name="crenderedinputpinendofstream-method"></a>CRenderedInputPin.EndOfStream-Methode
 
-Die- `EndOfStream` Methode benachrichtigt die PIN, dass keine weiteren Daten erwartet werden, bis ein neuer Run-Befehl an den Filter ausgegeben wird. Diese Methode implementiert die [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) -Methode.
+Die -Methode benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden, bis ein neuer `EndOfStream` Ausführungsbefehl für den Filter ausgegeben wird. Diese Methode implementiert die [**IPin::EndOfStream-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, andernfalls ein Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Filter ausgeführt wird, sendet diese Methode ein [**EC \_ Complete**](ec-complete.md) -Ereignis an den Filter Graph-Manager. Andernfalls wird von ein Flag festgelegt, sodass das EC \_ Complete-Ereignis gesendet wird, wenn der Filter das nächste Mal ausgeführt wird. Durch das Leeren des Filters wird das Flag gelöscht.
+Wenn der Filter ausgeführt wird, sendet diese Methode ein [**EC \_ COMPLETE-Ereignis**](ec-complete.md) an den Filter Graph Manager. Andernfalls legt ein Flag fest, sodass das EC \_ COMPLETE-Ereignis gesendet wird, wenn der Filter das nächste Mal ausgeführt wird. Durch Leeren des Filters wird das Flag geleert.
 
-Sie sollten diese Methode überschreiben, um die streamingabsperre der PIN zu halten:
+Sie sollten diese Methode überschreiben, um die Streamingsperre des Pins zu halten:
 
 
 ```C++
@@ -71,7 +71,7 @@ STDMETHODIMP CMyInputPin::EndOfStream(void)
 
 
 
-Wenn die Filterprozesse außerdem asynchron Aufrufe **empfangen** , sollte die PIN warten, bis das "EC Complete"-Ereignis gesendet wird, \_ bis der Filter alle ausstehenden Stichproben verarbeitet hat.
+Wenn der Filter  Receive-Aufrufe asynchron verarbeitet, sollte der Pin außerdem warten, bis das EC COMPLETE-Ereignis gesendet wird, bis der Filter alle ausstehenden \_ Stichproben verarbeitet hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Wenn die Filterprozesse außerdem asynchron Aufrufe **empfangen** , sollte die P
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amextra. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amextra.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ Wenn die Filterprozesse außerdem asynchron Aufrufe **empfangen** , sollte die P
 
 <dl> <dt>
 
-[**Crenderedinputpin-Klasse**](crenderedinputpin.md)
+[**CRenderedInputPin-Klasse**](crenderedinputpin.md)
 </dt> </dl>
 
  

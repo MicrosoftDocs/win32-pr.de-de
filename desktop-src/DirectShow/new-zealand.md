@@ -4,12 +4,12 @@ ms.assetid: a314d0b1-9e4f-42dd-914a-65a8f3610300
 title: Neuseeland
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9879e89f6460ab25aa93594001068526404dcd84
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 63f8f95412f4c8038708ddfde068fd1ddb27aca78bc50206484640ffb552a700
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112067985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102390"
 ---
 # <a name="new-zealand"></a>Neuseeland
 
@@ -23,7 +23,7 @@ Die Häufigkeitsindizes in der Neuseeländischen Broadcasttabelle eignen sich f�
 -   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
     -   [Neuseeländische Broadcastzuweisungen](#new-zealand-broadcast-assignments)
     -   [Neuseeländische Kabelzuweisungen](#new-zealand-cable-assignments)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
