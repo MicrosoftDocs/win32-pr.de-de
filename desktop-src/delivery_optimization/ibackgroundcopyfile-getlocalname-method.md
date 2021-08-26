@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyfile getLocalName-Methode (deliveryoptimization. h)
+title: IBackgroundCopyFile GetLocalName-Methode (Deliveryoptimization.h)
 description: Ruft den lokalen Namen der Datei ab.
 ms.assetid: 9AA57EB7-5C29-4E5E-972B-DD34B130E6E4
 keywords:
 - GetLocalName-Methode
-- GetLocalName-Methode, ibackgroundcopyfile-Schnittstelle
-- Ibackgroundcopyfile-Schnittstelle, getLocalName-Methode
+- GetLocalName-Methode, IBackgroundCopyFile-Schnittstelle
+- IBackgroundCopyFile-Schnittstelle, GetLocalName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e1c3a957e64701242d9c698a014ec2ab4028cd85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0d8c3f3e6a722c7d98fffd5904b398a9573b7a809225e35ae89b5910eb965f5e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953600"
 ---
-# <a name="ibackgroundcopyfilegetlocalname-method"></a>Ibackgroundcopyfile:: getLocalName-Methode
+# <a name="ibackgroundcopyfilegetlocalname-method"></a>IBackgroundCopyFile::GetLocalName-Methode
 
 Ruft den lokalen Namen der Datei ab.
 
@@ -43,16 +43,16 @@ HRESULT GetLocalName(
 
 <dl> <dt>
 
-*ppName* \[ vorgenommen\]
+*ppName* \[ out\]
 </dt> <dd>
 
-Eine auf NULL endenden Zeichenfolge, die den Namen der Datei auf dem Client enthält. Der Name ist voll qualifiziert. Wenn Sie die Funktion " [**CoTaskMemFree**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) " aufrufen, wird " *ppName* " freigegeben.
+Auf NULL beendete Zeichenfolge, die den Namen der Datei auf dem Client enthält. Der Name ist vollqualifiziert. Rufen Sie die [**CoTaskMemFree-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um *ppName frei* zu geben, wenn Sie fertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HRESULT** -Werte bei einem Fehler zurück.
+Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HRESULT-Werte** bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,13 +60,13 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HR
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyFile ist als 01b7bd23-B88-4a77-8490-5891d3e4653a definiert.<br/>              |
+| IID<br/>                      | IID_IBackgroundCopyFile ist als 01B7BD23-FB88-4A77-8490-5891D3E4653A definiert.<br/>              |
 
 
 
@@ -74,10 +74,10 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com **HR
 
 <dl> <dt>
 
-[**Ibackgroundcopyfile**](ibackgroundcopyfile.md)
+[**IBackgroundCopyFile**](ibackgroundcopyfile.md)
 </dt> <dt>
 
-[**Ibackgroundcopyfile:: getremutename**](ibackgroundcopyfile-getremotename-method.md)
+[**IBackgroundCopyFile::GetRemoteName**](ibackgroundcopyfile-getremotename-method.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Sendet einen Strahl in eine Suche nach Treffern in einer Beschleunigungs Struktur.
+description: Sendet einen Strahl in eine Suche nach Treffern in einer Beschleunigungsstruktur.
 ms.assetid: ''
 title: TraceRay-Funktion
 ms.localizationpriority: low
@@ -12,19 +12,19 @@ api_name:
 - TraceRay
 api_type:
 - NA
-ms.openlocfilehash: faeed928b25acb4dac95e47a46a103daf87124e0
-ms.sourcegitcommit: 3d9dce1bd6c84e2b51759e940aa95aa9b459cd20
+ms.openlocfilehash: 4e22a26d7bd2fd91029c106133667bce98c163d90d99f0700dac7f2bdf0796fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "106355728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027980"
 ---
 # <a name="traceray-function"></a>TraceRay-Funktion
 
-Sendet einen Strahl in eine Suche nach Treffern in einer Beschleunigungs Struktur.
+Sendet einen Strahl in eine Suche nach Treffern in einer Beschleunigungsstruktur.
 
 ## <a name="syntax"></a>Syntax
-Diese intrinsische Funktionsdefinition entspricht der folgenden Funktions Vorlage:
+Diese systeminterne Funktionsdefinition entspricht der folgenden Funktionsvorlage:
 
 ```
 Template<payload_t>
@@ -45,46 +45,46 @@ void TraceRay(RaytracingAccelerationStructure AccelerationStructure,
 
 `AccelerationStructure`
 
-Die zu verwendende Beschleunigungs Struktur auf oberster Ebene. Die Angabe einer NULL-Beschleunigungs Struktur erzwingt einen Fehler.
+Die zu verwendende Beschleunigungsstruktur der obersten Ebene. Das Angeben einer NULL-Beschleunigungsstruktur erzwingt einen Fehlfehler.
 
 `RayFlags`
 
-Gültige Kombination von [ray_flag](ray_flag.md) Werten. Nur definierte Ray-Flags werden vom System weitergegeben, d. h., Sie sind für den systeminternen [rayflags](rayflags.md) -Shader sichtbar.
+Gültige Kombination von [ray_flag](ray_flag.md) Werten. Nur definierte Rayflags werden vom System weitergegeben, d. h. sie sind für den intrinsischen [RayFlags-Shader](rayflags.md) sichtbar.
 
 `InstanceInclusionMask`
 
-Eine ganze Zahl ohne Vorzeichen, von der die unteren 8 Bits verwendet werden, um geometry-Instanzen auf der Grundlage von instancemask in jeder Instanz einzubeziehen oder abzulehnen. Beispiel:
+Eine ganze Zahl ohne Vorzeichen, deren unterste 8 Bits verwendet werden, um geometry-Instanzen basierend auf der InstanceMask in jeder Instanz einzuschließen oder abzulehnen. Beispiel:
 ```
 if(!((InstanceInclusionMask & InstanceMask) & 0xff)) { //ignore intersection }
 ```
 
 `RayContributionToHitGroupIndex`
 
-Eine ganze Zahl ohne Vorzeichen, die den Offset angibt, der zur Adressierung von Berechnungen in shadertabellen für die Treffer Gruppen Indizierung hinzugefügt  Nur die untersten 4 Bits dieses Werts werden verwendet.
+Eine ganze Zahl ohne Vorzeichen, die den Offset angibt, der in Adressierungsberechnungen in Shadertabellen für die Treffergruppenindizierung hinzugefügt werden soll.  Es werden nur die unteren 4 Bits dieses Werts verwendet.
 
 `MultiplierForGeometryContributionToHitGroupIndex`
 
-Eine Ganzzahl ohne Vorzeichen, die den Schritt angibt, der von *geometrycontributiontohitgroupindex* multipliziert werden soll. Hierbei handelt es sich nur um den 0-basierten Index, den die Geometrie von der app in der Struktur der untersten Beschleunigung bereitgestellt hat. Es werden nur die untersten 16 Bits dieses Multiplikator-Werts verwendet.
+Eine ganze Zahl ohne Vorzeichen, die den Schritt angibt, der mit *GeometryContributionToHitGroupIndex* multipliziert werden soll. Dies ist nur der 0-basierte Index, den die Geometrie von der App in ihre Beschleunigungsstruktur auf der unteren Ebene bereitgestellt hat. Es werden nur die untersten 16 Bits dieses Multiplikatorwerts verwendet.
 
 `MissShaderIndex`
 
-Eine ganze Zahl ohne Vorzeichen, die den Index des fehlshaders innerhalb einer shadertabelle angibt.
+Eine ganze Zahl ohne Vorzeichen, die den Index des fehlenden Shaders innerhalb einer Shadertabelle angibt.
 
 `Ray`
 
-Ein [**raydebug**](raydesc.md) -Objekt, das den zu über mittelenden Strahl darstellt.
+Ein [**RayDesc,**](raydesc.md) der den zu verfolgenden Strahl darstellt.
 
 `Payload`
 
-Eine benutzerdefinierte Strahl Nutzlast, auf die sowohl für die Eingabe als auch für die Ausgabe durch Shader zugegriffen wird, die während der Raytracing  Nachdem [**traceray**](traceray-function.md) abgeschlossen ist, kann der Aufrufer auch auf die Nutzlast zugreifen.
+Eine benutzerdefinierte Raynutzlast, auf die sowohl für die Eingabe als auch für die Ausgabe durch Shader zugegriffen wird, die während des Raytracings aufgerufen werden.  Nach Abschluss von [**TraceRay**](traceray-function.md) kann der Aufrufer auch auf die Nutzlast zugreifen.
 
 ## <a name="return-value"></a>Rückgabewert
 
 **void**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Closest Hit-Shader**](closest-hit-shader.md)
 * [**Miss-Shader**](miss-shader.md)

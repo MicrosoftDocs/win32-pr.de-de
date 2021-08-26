@@ -1,31 +1,31 @@
 ---
-title: Steuern von Meldungen
-description: Dieser Abschnitt enthält Informationen darüber, wie Windows-Meldungen für die Kommunikation mit-Steuerelementen verwendet werden.
+title: Steuern von Nachrichten
+description: Dieser Abschnitt enthält Informationen dazu, wie Windows Nachrichten für die Kommunikation mit Steuerelementen verwendet werden.
 ms.assetid: 94d34132-25c2-4a1a-bd0e-35e5a666bbfa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 923a1b47d625a2797a900a6c582d00c5169097f3
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: ed60ebb66341332b6248b8427045abc5b62a2311427d56e46b25fe93b3d899ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921100"
 ---
-# <a name="control-messages"></a>Steuern von Meldungen
+# <a name="control-messages"></a>Steuern von Nachrichten
 
-Dieser Abschnitt enthält Informationen darüber, wie Windows-Meldungen für die Kommunikation mit-Steuerelementen verwendet werden.
+Dieser Abschnitt enthält Informationen dazu, wie Windows Nachrichten für die Kommunikation mit Steuerelementen verwendet werden.
 
-Die folgenden Themen werden erörtert.
+Die folgenden Themen werden erläutert.
 
--   [Nachrichten an allgemeine Steuerelemente](#messages-to-common-controls)
+-   [Meldungen an allgemeine Steuerelemente](#messages-to-common-controls)
 -   [Benachrichtigungen von Steuerelementen](#notifications-from-controls)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="messages-to-common-controls"></a>Nachrichten an allgemeine Steuerelemente
+## <a name="messages-to-common-controls"></a>Meldungen an allgemeine Steuerelemente
 
-Da es sich bei den allgemeinen Steuerelementen um Windows handelt, kann eine Anwendung mit Ihnen kommunizieren, indem allgemeine Microsoft Win32-Nachrichten wie [**WM \_ getFont**](/windows/desktop/winmsg/wm-getfont) oder [**WM \_ SetText**](/windows/desktop/winmsg/wm-settext)verwendet werden. Außerdem unterstützt die Fenster Klasse der einzelnen allgemeinen Steuerelemente eine Reihe von Steuerelement spezifischen Meldungen. In der Regel verwendet eine Anwendung [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) oder [**SendDlgItemMess**](/windows/desktop/api/winuser/nf-winuser-senddlgitemmessagea) , um Nachrichten an das Steuerelement zu übergeben (häufig werden Informationen im Rückgabewert empfangen).
+Da allgemeine Steuerelemente Fenster sind, kann eine Anwendung mit ihnen kommunizieren, indem sie gängige Microsoft Win32-Nachrichten wie [**WM \_ GETFONT**](/windows/desktop/winmsg/wm-getfont) oder [**WM \_ SETTEXT verwendet.**](/windows/desktop/winmsg/wm-settext) Darüber hinaus unterstützt die Fensterklasse jedes allgemeinen Steuerelements einen Satz von steuerelementspezifischen Meldungen. In der Regel verwendet eine Anwendung [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) oder [**SendDlgItemMessage,**](/windows/desktop/api/winuser/nf-winuser-senddlgitemmessagea) um Nachrichten an das Steuerelement zu übergeben (häufig werden Informationen im Rückgabewert empfangen).
 
-Einige allgemeine Steuerelemente verfügen auch über eine Reihe von Makros, die eine Anwendung anstelle von [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)verwenden kann. Die Makros sind in der Regel einfacher zu verwenden als die Funktionen. Der folgende Beispielcode ruft den Text des ausgewählten Struktur Ansichts Elements ab, wobei zuerst die unformatierten Nachrichten verwendet werden, und zweitens, indem die entsprechenden Makros verwendet werden. Nehmen Sie an, dass *HWND* das Handle des Steuerelement Fensters ist.
+Einige gängige Steuerelemente verfügen auch über einen Satz von Makros, die eine Anwendung anstelle von [**SendMessage verwenden kann.**](/windows/desktop/api/winuser/nf-winuser-sendmessage) Die Makros sind in der Regel einfacher zu verwenden als die Funktionen. Der folgende Beispielcode ruft den Text des ausgewählten Strukturansichtselements ab, zuerst mithilfe der Unformatiertmeldungen und zweitens mithilfe der entsprechenden Makros. Angenommen, *hwnd* ist das Handle des Steuerelementfensters.
 
 
 ```
@@ -47,23 +47,23 @@ fSuccess = TreeView_GetItem(hwnd, &tvItem);
 
 
 
-Wenn an den System Farbeinstellungen eine Änderung vorgenommen wird, sendet Windows eine [**\_ System-syscolorchange**](/windows/desktop/gdi/wm-syscolorchange) -Meldung an alle Fenster der obersten Ebene. Das Fenster der obersten Ebene muss die **System- \_ syscolorchange** -Nachricht an die allgemeinen Steuerelemente weiterleiten. andernfalls werden die Steuerelemente nicht über die Farbänderung benachrichtigt. Durch Weiterleiten der Nachricht wird sichergestellt, dass die von den allgemeinen Steuerelementen verwendeten Farben mit den von anderen Benutzeroberflächen Objekten verwendeten Farben konsistent sind. Beispielsweise verwendet ein ToolBar-Steuerelement die Farbe "3D-Objekte", um seine Schaltflächen zu zeichnen. Wenn der Benutzer die Farbe des 3D-Objekts ändert, aber die **WM- \_ syscolorchange** -Meldung nicht an die Symbolleiste weitergeleitet wird, bleiben die Schaltflächen der Symbolleiste in der ursprünglichen Farbe (oder sogar in eine Kombination aus alten und neuen Farben geändert), während sich die Farbe anderer Schaltflächen im System ändert.
+Wenn eine Änderung an den Systemfarbeinstellungen vorgenommen wird, sendet Windows [**eine WM \_ SYSCOLORCHANGE-Nachricht**](/windows/desktop/gdi/wm-syscolorchange) an alle Fenster der obersten Ebene. Das Fenster der obersten Ebene muss die **WM \_ SYSCOLORCHANGE-Nachricht** an die allgemeinen Steuerelemente weitersennen. Andernfalls werden die Steuerelemente nicht über die Farbänderung benachrichtigt. Durch das Weiterleiten der Nachricht wird sichergestellt, dass die von Ihren allgemeinen Steuerelementen verwendeten Farben mit denen anderer Benutzeroberflächenobjekte konsistent sind. Beispielsweise verwendet ein Symbolleisten-Steuerelement die Farbe "3D Objects", um seine Schaltflächen zu zeichnen. Wenn der Benutzer die Farbe des 3D-Objekts ändert, die **\_ WM SYSCOLORCHANGE-Meldung** jedoch nicht an die Symbolleiste weitergeleitet wird, bleiben die Symbolleistenschaltflächen in ihrer ursprünglichen Farbe erhalten (oder ändern sich sogar in eine Kombination aus alten und neuen Farben), während sich die Farbe anderer Schaltflächen im System ändert.
 
 ## <a name="notifications-from-controls"></a>Benachrichtigungen von Steuerelementen
 
-Steuerelemente sind untergeordnete Fenster, die Benachrichtigungs Meldungen an das übergeordnete Fenster senden, wenn Ereignisse, die normalerweise durch eine Eingabe des Benutzers ausgelöst werden, im-Steuerelement auftreten. Die Anwendung nutzt diese Benachrichtigungs Meldungen, um zu bestimmen, welche Aktion der Benutzer ausführen möchte. Mit Ausnahme von trackbars, die die [**"WM \_ HScroll**](wm-hscroll.md) "-und " [**WM \_ VScroll**](wm-vscroll.md) "-Meldungen verwenden, um das übergeordnete Element von Änderungen zu benachrichtigen, senden allgemeine Steuerelemente Benachrichtigungen als [**WM- \_ Befehl**](/windows/desktop/menurc/wm-command) oder [**WM- \_ Benachrichtigungs**](wm-notify.md) Meldungen, wie im Referenz Thema für die Benachrichtigung angegeben. In der Regel verwenden ältere Benachrichtigungen (die für einen langen Zeitraum in der API enthalten waren) **den \_ Befehl WM**.
+Steuerelemente sind untergeordnete Fenster, die Benachrichtigungsmeldungen an das übergeordnete Fenster senden, wenn Ereignisse, die in der Regel durch Eingabe des Benutzers ausgelöst werden, im -Steuerelement auftreten. Die Anwendung nutzt diese Benachrichtigungen, um zu bestimmen, welche Aktion der Benutzer ergreifen möchte. Mit Ausnahme von Trackleisten, die die [**WM \_ HSCROLL-**](wm-hscroll.md) und [**WM \_ VSCROLL-Meldungen**](wm-vscroll.md) verwenden, um das übergeordnete Element über Änderungen zu benachrichtigen, senden allgemeine Steuerelemente Benachrichtigungen als [**WM \_ COMMAND-**](/windows/desktop/menurc/wm-command) oder [**WM \_ NOTIFY-Nachrichten,**](wm-notify.md) wie im Referenzthema für die Benachrichtigung angegeben. In der Regel verwenden ältere Benachrichtigungen (die seit langer Zeit in der API enthalten sind) **WM \_ COMMAND**.
 
-Der *LPARAM* -Parameter von [**WM \_ Notify**](wm-notify.md) ist entweder die Adresse einer [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur oder die Adresse einer größeren Struktur, die **NMHDR** als ersten Member enthält. Die-Struktur enthält den Benachrichtigungs Code und identifiziert das allgemeine Steuerelement, das die Benachrichtigungs Meldung gesendet hat. Die Bedeutung der übrigen Strukturmember variiert ggf. je nach Benachrichtigungs Code.
+Der *lParam-Parameter* von [**WM \_ NOTIFY**](wm-notify.md) ist entweder die Adresse einer [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) oder die Adresse einer größeren Struktur, die **NMHDR** als ersten Member enthält. Die -Struktur enthält den Benachrichtigungscode und identifiziert das allgemeine Steuerelement, das die Benachrichtigungsnachricht gesendet hat. Die Bedeutung der verbleibenden Strukturmitglieder variiert je nach Benachrichtigungscode, falls diese elemente sind.
 
-Jeder Typ von Common Control verfügt über einen entsprechenden Satz von Benachrichtigungs Codes. Die allgemeine Steuerelement Bibliothek bietet auch Benachrichtigungs Codes, die von mehreren Typen von allgemeinen Steuerelementen gesendet werden können. Sehen Sie sich die Dokumentation für das relevante Steuerelement an, um zu bestimmen, welche Benachrichtigungs Codes gesendet werden und welches Format Sie annehmen.
+Jeder Typ von allgemeinem Steuerelement verfügt über einen entsprechenden Satz von Benachrichtigungscodes. Die allgemeine Steuerelementbibliothek stellt auch Benachrichtigungscodes zur Verfügung, die von mehr als einem Typ von allgemeinem Steuerelement gesendet werden können. Informationen dazu, welche Benachrichtigungscodes gesendet werden und welches Format sie verwenden, finden Sie in der Dokumentation zur Steuerung von Interesse.
 
-Beispielcode zum Behandeln von WM- [**\_ Benachrichtigungs**](wm-notify.md) Nachrichten finden Sie im Referenz Thema für diese Nachricht.
+Beispielcode, der zeigt, wie [**WM \_ NOTIFY-Nachrichten**](wm-notify.md) behandelt werden, finden Sie im Referenzthema für diese Nachricht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Allgemeine Steuerungs Referenz](common-control-reference.md)
+[Allgemeine Steuerelementreferenz](common-control-reference.md)
 </dt> </dl>
 
  

@@ -1,8 +1,8 @@
 ---
-description: Die CIM \_ -Klasse "Hostdienst" stellt eine Zuordnung zwischen einem Dienst und dem System dar, auf dem sich die Funktionalität befindet.
+description: Die CIM \_ HostedService-Klasse stellt eine Zuordnung zwischen einem Dienst und dem System dar, auf dem sich die Funktionalität befindet.
 ms.assetid: 23bb385d-dd22-4126-aea9-d2f22527223e
 ms.tgt_platform: multiple
-title: CIM_HostedService-Klasse (cimwin32-WMI-Anbieter)
+title: CIM_HostedService-Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c63b28fed7977c9fce78fe1030afbe66d5b2d75e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7e70f7dea8fe6f5be0da7d76b37cf99ba4dcc7397c09cf27b542129232212286
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921600"
 ---
-# <a name="cim_hostedservice-class-cimwin32-wmi-providers"></a>CIM_HostedService-Klasse (cimwin32-WMI-Anbieter)
+# <a name="cim_hostedservice-class-cimwin32-wmi-providers"></a>CIM_HostedService-Klasse (CIMWin32-WMI-Anbieter)
 
-Die CIM-Klasse " **\_ Hostdienst** " stellt eine Zuordnung zwischen einem Dienst und dem System dar, auf dem sich die Funktionalität befindet. Ein System kann viele Dienste hosten, die auf das Hostingsystem zurückgreifen. Das Modell stellt keine Dienste dar, die auf mehreren Systemen gehostet werden.
+Die **CIM \_ HostedService-Klasse** stellt eine Zuordnung zwischen einem Dienst und dem System dar, auf dem sich die Funktionalität befindet. Ein System kann viele Dienste hosten, die auf das Hostsystem zurückstellen. Das Modell stellt keine Dienste dar, die auf mehreren Systemen gehostet werden.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_HostedService : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ hustedservice** " verfügt über diese Typen von Membern:
+Die **CIM \_ HostedService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ hustedservice** " verfügt über diese Eigenschaften.
+Die **CIM \_ HostedService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ System**
+Datentyp: **\_ CIM-System**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ System**](cim-system.md) , das das Hostingsystem beschreibt.
+Ein [**\_ CIM-System,**](cim-system.md) das das Hostsystem beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Dienst**
+Datentyp: **\_ CIM-Dienst**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig"), [**schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Ein [**CIM- \_ Dienst**](cim-service.md) , der den auf dem System gehosteten Dienst beschreibt.
+Ein [**\_ CIM-Dienst,**](cim-service.md) der den auf dem System gehosteten Dienst beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**CIM \_ Der "hustedservice** " ist von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+**CIM \_ HostedService** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

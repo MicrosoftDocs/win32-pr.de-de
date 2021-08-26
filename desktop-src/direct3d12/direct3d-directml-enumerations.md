@@ -5,12 +5,12 @@ ms.localizationpriority: low
 ms.topic: article
 ms.date: 11/06/2020
 ms.custom: 19H1
-ms.openlocfilehash: 2a761dba639ece37eba347115a831d3c6803a618
-ms.sourcegitcommit: d168355cd7112871f24643b4079c2640b36f4975
+ms.openlocfilehash: a74ce2fc3b5bcf94a97d7f51cec20d5f9f0d8e9837a7b59d2f1bdea80328db90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111521215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953100"
 ---
 # <a name="directml-enumerations"></a>DirectML-Enumerationen
 
@@ -24,7 +24,7 @@ Die folgenden Enumerationen werden in DirectML.h deklariert.
 | [**DML_BINDING_TYPE**](/windows/desktop/api/directml/ne-directml-dml_binding_type). Definiert Konstanten, die die Art der Ressourcen angeben, auf die durch eine Bindungsbeschreibung DML_BINDING_DESC [wird.](/windows/desktop/api/directml/ns-directml-dml_binding_desc) |
 | [**DML_CONVOLUTION_DIRECTION**](/windows/desktop/api/directml/ne-directml-dml_convolution_direction). Definiert Konstanten, die eine Richtung für den DirectML-Konvolutionsoperator angeben (wie in der DML_CONVOLUTION_OPERATOR_DESC [beschrieben).](/windows/desktop/api/directml/ns-directml-dml_convolution_operator_desc) |
 | [**DML_CONVOLUTION_MODE**](/windows/desktop/api/directml/ne-directml-dml_convolution_mode). Definiert Konstanten, die einen Modus für den DirectML-Konvolutionsoperator angeben (wie in der DML_CONVOLUTION_OPERATOR_DESC [beschrieben).](/windows/desktop/api/directml/ns-directml-dml_convolution_operator_desc) |
-| [**DML_CREATE_DEVICE_FLAGS**](/windows/desktop/api/directml/ne-directml-dml_create_device_flags). Stellt zusätzliche Optionen zum Erstellen von Geräten für [DMLCreateDevice zur Verfügung.](/windows/desktop/api/directml/nf-directml-dmlcreatedevice) |
+| [**DML_CREATE_DEVICE_FLAGS**](/windows/desktop/api/directml/ne-directml-dml_create_device_flags). Stellt zusätzliche Optionen für die Geräteerstellung [für DMLCreateDevice zur Verfügung.](/windows/desktop/api/directml/nf-directml-dmlcreatedevice) |
 | [**DML_DEPTH_SPACE_ORDER**](/windows/desktop/api/directml/ne-directml-dml_depth_space_order). Definiert Konstanten, die die Transformation steuern, die in den DirectML-Operatoren DML_OPERATOR_DEPTH_TO_SPACE1 **und** DML_OPERATOR_SPACE_TO_DEPTH1. [](/windows/win32/api/directml/ne-directml-dml_operator_type) |
 | [**DML_EXECUTION_FLAGS**](/windows/desktop/api/directml/ne-directml-dml_execution_flags). Stellt Optionen für DirectML zur Verfügung, um die Ausführung von Operatoren zu steuern. |
 | [**DML_FEATURE**](/windows/desktop/api/directml/ne-directml-dml_feature). Definiert eine Reihe optionaler Features und Funktionen, die vom DirectML-Gerät abgefragt werden können. |

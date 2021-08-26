@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht es einer Anwendung, erneut eine Verbindung mit einer Smartcard oder einem Reader herzustellen, ohne einen Trenn Befehl, gefolgt von einem attachbyhandle-oder attachbyifd-Rückruf, ausgeben zu müssen.
+description: Ermöglicht einer Anwendung das erneute Herstellen einer Verbindung mit einer Smartcard oder einem Reader, ohne einen Detach-Aufruf gefolgt von einem AttachByHandle- bzw. AttachByIFD-Aufruf aus geben zu müssen.
 ms.assetid: 450e817d-2cb2-4752-a86e-50cc8e434723
-title: 'Iscardmanage:: Reconnect-Methode'
+title: ISCardManage::Reconnect-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b8b05e6292a92267569eb1f53e10f6143554aba1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c0359a062f62e49b52b92623714e6d94aff015e53a71afa45d4a433c31f28c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013980"
 ---
-# <a name="iscardmanagereconnect-method"></a>Iscardmanage:: Reconnect-Methode
+# <a name="iscardmanagereconnect-method"></a>ISCardManage::Reconnect-Methode
 
-\[Die Methode zum **erneuten Verbinden** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Reconnect-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Mit der Methode " **Verbindung Connect** " kann eine Anwendung erneut eine Verbindung mit einer [*Smartcard*](../secgloss/s-gly.md) oder einem [*Reader*](../secgloss/r-gly.md) herstellen, ohne einen [**Trenn**](iscardmanage-detach.md) Befehl, gefolgt von einem [**attachbyhandle**](iscardmanage-attachbyhandle.md) -oder [**attachbyifd-**](iscardmanage-attachbyifd.md) Rückruf, ausgeben zu müssen.
+Mit **der Reconnect-Methode** kann eine Anwendung [](../secgloss/r-gly.md) erneut eine Verbindung [](iscardmanage-detach.md) mit einer Smartcard oder einem Reader herstellen, ohne einen Detach-Aufruf gefolgt von einem [**AttachByHandle-**](iscardmanage-attachbyhandle.md) bzw. [**AttachByIFD-Aufruf**](iscardmanage-attachbyifd.md) aus geben zu müssen. [](../secgloss/s-gly.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,28 +40,28 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-So fügen Sie einen smartcardanrufe an [](iscardmanage-attachbyhandle.md) [](iscardmanage-attachbyifd.md)
+Um eine Smartcard anfügen, rufen [**Sie AttachByHandle**](iscardmanage-attachbyhandle.md) oder [**AttachByIFD auf.**](iscardmanage-attachbyifd.md)
 
-Um eine Smartcard zu trennen, wenden Sie [**trennen**](iscardmanage-detach.md)an.
+Um eine Smartcard zu trennen, rufen Sie [**Trennen auf.**](iscardmanage-detach.md)
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardmanage**](iscardmanage.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardManage**](iscardmanage.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,10 +69,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -80,16 +80,16 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Attachbyhandle**](iscardmanage-attachbyhandle.md)
+[**AttachByHandle**](iscardmanage-attachbyhandle.md)
 </dt> <dt>
 
-[**Attachbyifd**](iscardmanage-attachbyifd.md)
+[**AttachByIFD**](iscardmanage-attachbyifd.md)
 </dt> <dt>
 
 [**Trennen**](iscardmanage-detach.md)
 </dt> <dt>
 
-[**Iscardmanage**](iscardmanage.md)
+[**ISCardManage**](iscardmanage.md)
 </dt> </dl>
 
  

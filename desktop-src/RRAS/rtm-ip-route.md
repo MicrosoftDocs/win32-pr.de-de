@@ -1,10 +1,10 @@
 ---
-title: RTM_IP_ROUTE Struktur (RTM. h)
-description: Die RTM \_ -IP- \_ Routen Struktur enthält Informationen, die eine Route beschreiben, die der IP-Protokollfamilie gehört.
+title: RTM_IP_ROUTE-Struktur (Rtm.h)
+description: Die \_ \_ RTM-IP-ROUTE-Struktur enthält Informationen, die eine Route im Besitz der IP-Protokollfamilie beschreiben.
 ms.assetid: e752a4ae-a6bf-4cd3-9638-7615ff3901b7
 keywords:
-- RTM_IP_ROUTE Struktur-RAS
-- PRTM_IP_ROUTE-Struktur Zeiger RAS
+- RTM_IP_ROUTE struktur RAS
+- PRTM_IP_ROUTE Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1978503a3ec37e0c39716569030d5ea6599e19d9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0fd854864dcc61397fa52df7af9419a38ac829a81382be6b6190e4cb3db41d7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026730"
 ---
-# <a name="rtm_ip_route-structure"></a>RTM \_ -IP- \_ Routen Struktur
+# <a name="rtm_ip_route-structure"></a>\_RTM-IP-ROUTENstruktur \_
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde von der Routing Table Manager Version [2-API](about-routing-table-manager-version-2.md) abgelöst und ist nicht mehr als Windows Server 2003 verfügbar. Anwendungen sollten die Routing Table Manager Version 2-API verwenden.\]
 
-Die **RTM \_ -IP- \_ Routen** Struktur enthält Informationen, die eine Route beschreiben, die der IP-Protokollfamilie gehört.
+Die **\_ RTM-IP-ROUTE-Struktur \_** enthält Informationen, die eine Route im Besitz der IP-Protokollfamilie beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,58 +49,58 @@ typedef struct _RTM_IP_ROUTE {
 
 <dl> <dt>
 
-**RR- \_ Zeitstempel**
+**\_RR-Zeitstempel**
 </dt> <dd>
 
-Gibt die Uhrzeit an, zu der der Routen Eintrag erstellt oder zuletzt aktualisiert wurde. Dieser Member wird vom Routing Tabellen-Manager festgelegt. Die Zeit wird als FILETIME-Struktur ausgedrückt.
+Gibt den Zeitpunkt an, zu dem der Routeneintrag erstellt oder zuletzt aktualisiert wurde. Dieses Element wird vom Routingtabellen-Manager festgelegt. Die Zeit wird als FILETIME-Struktur ausgedrückt.
 
 </dd> <dt>
 
-**RR \_ routingprotocol**
+**RR \_ RoutingProtocol**
 </dt> <dd>
 
-Gibt das Routing Protokoll an, das die Route hinzugefügt hat.
+Gibt das Routingprotokoll an, das die Route hinzugefügt hat.
 
 </dd> <dt>
 
-**RR- \_ interfakeid**
+**RR \_ InterfaceID**
 </dt> <dd>
 
 Gibt die Schnittstelle an, über die die Route abgerufen wurde.
 
 </dd> <dt>
 
-**RR \_ protocolspecificdata**
+**RR \_ ProtocolSpecificData**
 </dt> <dd>
 
-Gibt eine [**Protokoll \_ spezifische \_ Daten**](protocol-specific-data.md) Struktur an, die Arbeitsspeicher enthält, der für Routing Protokoll spezifische Daten reserviert ist.
+Gibt eine [**\_ PROTOKOLLSPEZIFISCHE \_ DATENstruktur**](protocol-specific-data.md) an, die Speicher enthält, der für routingprotokollspezifische Daten reserviert ist.
 
 </dd> <dt>
 
-**RR- \_ Netzwerk**
+**\_RR-Netzwerk**
 </dt> <dd>
 
-Gibt eine [**IP- \_ Netzwerk**](ip-network.md) Struktur an, die eine IP-Netzwerkadresse enthält.
+Gibt eine [**\_ IP-NETZWERKstruktur**](ip-network.md) an, die eine IP-Netzwerkadresse enthält.
 
 </dd> <dt>
 
 **RR \_ NextHopAddress**
 </dt> <dd>
 
-Gibt eine [**IP \_ - \_ \_ Adress**](ip-next-hop-address.md) Struktur mit dem nächsten Hop an, die die Adresse des Routers für den nächsten Hop enthält.
+Gibt eine [**IP-NEXT \_ \_ HOP \_ ADDRESS-Struktur**](ip-next-hop-address.md) an, die die Adresse des Next-Hop-Routers enthält.
 
 </dd> <dt>
 
-**RR \_ familyspecificdata**
+**RR \_ FamilySpecificData**
 </dt> <dd>
 
-Gibt eine [**IP- \_ spezifische \_ Daten**](ip-specific-data.md) Struktur an, die für die IP-Protokollfamilie spezifische Daten enthält.
+Gibt eine [**\_ IP-SPEZIFISCHE \_ DATENstruktur**](ip-specific-data.md) an, die IP-Protokollfamilienspezifische Daten enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Mitglieder der **RTM \_ -IP- \_ Routen** Struktur sind alle **DWORD** -Elemente ausgerichtet.
+Die Member der **\_ RTM-IP-ROUTE-Struktur \_** sind alle **DWORD-ausgerichtet.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,8 +110,8 @@ Die Mitglieder der **RTM \_ -IP- \_ Routen** Struktur sind alle **DWORD** -Eleme
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl> |
 
 
 
@@ -119,19 +119,19 @@ Die Mitglieder der **RTM \_ -IP- \_ Routen** Struktur sind alle **DWORD** -Eleme
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Referenz zu Routingtabellen-Manager, Version 1](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Routing Tabellen-Manager, Version 1, Strukturen](routing-table-manager-version-1-structures.md)
+[Routingtabellen-Manager- Version 1-Strukturen](routing-table-manager-version-1-structures.md)
 </dt> <dt>
 
-[**IP- \_ Netzwerk**](ip-network.md)
+[**\_IP-NETZWERK**](ip-network.md)
 </dt> <dt>
 
-[**IP- \_ Adresse des nächsten \_ Hops \_**](ip-next-hop-address.md)
+[**\_IP NEXT HOP ADDRESS \_ (IP-ADRESSE DES NÄCHSTEN HOPS) \_**](ip-next-hop-address.md)
 </dt> <dt>
 
-[**IP- \_ spezifische \_ Daten**](ip-specific-data.md)
+[**\_IP-SPEZIFISCHE \_ DATEN**](ip-specific-data.md)
 </dt> </dl>
 
  

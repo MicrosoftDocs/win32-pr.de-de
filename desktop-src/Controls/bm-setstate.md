@@ -1,9 +1,9 @@
 ---
-title: BM_SETSTATE Meldung (Winuser. h)
-description: Legt den Hervorhebungs Zustand einer Schaltfläche fest. Der Hervorhebungs Zustand gibt an, ob die Schaltfläche hervorgehoben wird, als ob der Benutzer Sie gedrückt hätte. Sie können diese Nachricht explizit senden oder das SetState-Makro der Schaltfläche verwenden \_ .
+title: BM_SETSTATE (Winuser.h)
+description: Legt den Hervorhebungszustand einer Schaltfläche fest. Der Hervorhebungszustand gibt an, ob die Schaltfläche so hervorgehoben ist, als hätte der Benutzer sie gedrückt. Sie können diese Nachricht explizit senden oder das Button \_ SetState-Makro verwenden.
 ms.assetid: 675ebe8d-b381-46ca-b328-ebe9f25d864a
 keywords:
-- Windows-Steuerelemente für BM_SETSTATE Meldung
+- BM_SETSTATE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab9b60231980f406b0aeb499d724dc6aa7025513
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7e3bb9451041c602541f039afcd85a895af2f02302dc5d55d64fbefb5bc6e3ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921210"
 ---
-# <a name="bm_setstate-message"></a>BM- \_ SetState-Nachricht
+# <a name="bm_setstate-message"></a>BM \_ SETSTATE-Nachricht
 
-Legt den Hervorhebungs Zustand einer Schaltfläche fest. Der Hervorhebungs Zustand gibt an, ob die Schaltfläche hervorgehoben wird, als ob der Benutzer Sie gedrückt hätte. Sie können diese Nachricht explizit senden oder das [**\_ SetState**](/windows/desktop/api/Windowsx/nf-windowsx-button_setstate) -Makro der Schaltfläche verwenden.
+Legt den Hervorhebungszustand einer Schaltfläche fest. Der Hervorhebungszustand gibt an, ob die Schaltfläche so hervorgehoben ist, als hätte der Benutzer sie gedrückt. Sie können diese Nachricht explizit senden oder das [**Button \_ SetState-Makro**](/windows/desktop/api/Windowsx/nf-windowsx-button_setstate) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt den Hervorhebungs Zustand einer Schaltfläche fest. Der Hervorhebungs Zusta
 *wParam* 
 </dt> <dd>
 
-Ein **boolescher** Wert, der angibt, ob die Schaltfläche markiert ist. Durch den Wert **true** wird die Schaltfläche hervorgehoben. Der Wert **false** entfernt alle Hervorhebungen.
+Eine **BOOL,** die angibt, ob die Schaltfläche hervorgehoben ist. Der Wert **TRUE hebt** die Schaltfläche hervor. Durch den Wert **FALSE werden** alle Hervorhebungen entfernt.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
@@ -47,11 +47,11 @@ Nicht verwendet.
 
 Diese Meldung gibt immer 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Hervorhebung wirkt sich nur auf die Darstellung einer Schaltfläche aus. Dies hat keine Auswirkung auf den Status des Kontrollkästchens oder des Kontrollkästchens.
+Die Hervorhebung wirkt sich nur auf die Darstellung einer Schaltfläche aus. Dies hat keine Auswirkungen auf den Überprüfungszustand eines Optionsfelds oder Kontrollkästchens.
 
-Eine Schaltfläche wird automatisch hervorgehoben, wenn der Benutzer den Cursor darüber positioniert und die linke Maustaste gedrückt hält. Die Hervorhebung wird entfernt, wenn der Benutzer die Maustaste loslässt.
+Eine Schaltfläche wird automatisch hervorgehoben, wenn der Benutzer den Cursor darüber positioniert und die linke Maustaste drückt und hält. Die Hervorhebung wird entfernt, wenn der Benutzer die Maustaste loslässt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Eine Schaltfläche wird automatisch hervorgehoben, wenn der Benutzer den Cursor 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Eine Schaltfläche wird automatisch hervorgehoben, wenn der Benutzer den Cursor 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**BM \_ GetState**](bm-getstate.md)
+[**BM \_ GETSTATE**](bm-getstate.md)
 </dt> <dt>
 
-[**BM- \_ setcheck**](bm-setcheck.md)
+[**BM \_ SETCHECK**](bm-setcheck.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_MRType-Klasse
-description: Die CreateInstanceFromPropertyData-Methode instanziiert einen MR-Ressourceneintrag (Mailbox Rename).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_MRType Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen MR-Ressourcendatensatz (Mailbox Rename).
 ms.assetid: 7dab86e0-bf05-4e98-b1f8-e1daecd4425c
 keywords:
 - CreateInstanceFromPropertyData-Methode DNS
 - CreateInstanceFromPropertyData-Methode DNS , MicrosoftDNS_MRType-Klasse
-- MicrosoftDNS_MRType-Klasse DNS, CreateInstanceFromPropertyData-Methode
+- MicrosoftDNS_MRType DNS-Klasse, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "119967280"
 ---
 # <a name="createinstancefrompropertydata-method-of-the-microsoftdns_mrtype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MRType-Klasse
 
-Die **CreateInstanceFromPropertyData-Methode** instanziiert einen MR-Ressourceneintrag (Mailbox Rename).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen MR-Ressourcendatensatz (Mailbox Rename).
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,7 +58,7 @@ FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 *ContainerName* \[ In\]
 </dt> <dd>
 
-Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
+Name des Containers für die Zone-, Cache- oder RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
@@ -89,24 +89,24 @@ Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-*Gültigkeitsdauer* \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
 *MRMailbox* \[ In\]
 </dt> <dd>
 
-FQDN, der ein Postfach angibt, das die richtige Umbenennung des Postfachs ist, das im Besitzernamen des Datensatzes angegeben ist.
+Der FQDN gibt ein Postfach an, das die richtige Umbenennung des Postfachs ist, das im Besitzernamen des Datensatzes angegeben ist.
 
 </dd> <dt>
 
 *RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue Objekt.
+Verweis auf das neue -Objekt.
 
 </dd> </dl>
 
@@ -122,12 +122,12 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
 | MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
@@ -137,7 +137,7 @@ Diese Methode gibt keinen Wert zurück.
 [**Modify-Methode der MicrosoftDNS \_ MRType-Klasse**](microsoftdns-mrtype-modify.md)
 </dt> <dt>
 
-[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

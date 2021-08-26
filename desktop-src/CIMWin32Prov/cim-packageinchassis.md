@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ packageinchassis-Zuordnung stellt die Beziehung dar, in der ein Chassis Andere Pakete enthalten kann, z. b. anderes Chassis und Karten.
+description: Die CIM \_ PackageInChassis-Zuordnung stellt die Beziehung dar, in der ein Gehäuse andere Pakete enthalten kann, z. B. andere Gehäuse und Karten.
 ms.assetid: 3243bc0f-ce20-4108-b6e3-838bcb8f2fec
 ms.tgt_platform: multiple
 title: CIM_PackageInChassis-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 26b65f983970c91d36e8d0a301277c67a2cc5639
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2dec66ed5ee930db9bff7917e942de44bdc9582ec130a987e83cbb9d633523cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921300"
 ---
-# <a name="cim_packageinchassis-class"></a>CIM \_ packageingechassis-Klasse
+# <a name="cim_packageinchassis-class"></a>CIM \_ PackageInChassis-Klasse
 
-Die **CIM \_ packageinchassis** -Zuordnung stellt die Beziehung dar, in der ein Chassis Andere Pakete enthalten kann, z. b. anderes Chassis und Karten.
+Die **CIM \_ PackageInChassis-Zuordnung** stellt die Beziehung dar, in der ein Gehäuse andere Pakete enthalten kann, z. B. andere Gehäuse und Karten.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,70 +49,70 @@ class CIM_PackageInChassis : CIM_Container
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ packageinchassis** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ PackageInChassis-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ packageingechassis** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ PackageInChassis-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Chassis**
+Datentyp: **\_ CIM-Gehäuse**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM- \_ Chassis**](cim-chassis.md) , das das Chassis beschreibt, das andere physische Pakete enthält.
+Ein [**\_ CIM-Gehäuse,**](cim-chassis.md) das das Gehäuse beschreibt, das andere physische Pakete enthält.
 
 </dd> <dt>
 
-**Locationwithincontainer**
+**LocationWithinContainer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen in Bezug auf die stationären Elemente im Container (z. b. "Second Drive Bay from the Top"), Winkel, Höhen und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann anstelle der Instanziierung des [**CIM- \_ Speicherort**](cim-location.md) Objekts ergänzt oder verwendet werden.
+Freiformzeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen relativ zu stationären Elementen im Container (z. B. "zweite Laufwerkbucht von oben"), Winkel, Höhen und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann anstelle der Instanziierung des [**\_ CIM-Speicherortobjekts**](cim-location.md) ergänzt oder verwendet werden.
 
-Diese Eigenschaft wird vom [**CIM- \_ Container**](cim-container.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Container**](cim-container.md)geerbt.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ physicalpackage**
+Datentyp: **CIM \_ PhysicalPackage**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ physicalpackage**](cim-physicalpackage.md) , das das physische Paket beschreibt, das im Gehäuse enthalten ist.
+Ein [**CIM \_ PhysicalPackage,**](cim-physicalpackage.md) das das physische Paket beschreibt, das im Gehäuse enthalten ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ packageingechassis** -Klasse wird vom [**CIM- \_ Container**](cim-container.md)abgeleitet.
+Die **CIM \_ PackageInChassis-Klasse** wird vom [**\_ CIM-Container**](cim-container.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,8 +122,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -132,7 +132,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Container**](cim-container.md)
+[**\_CIM-Container**](cim-container.md)
 </dt> </dl>
 
  

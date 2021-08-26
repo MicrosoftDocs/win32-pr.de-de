@@ -1,50 +1,50 @@
 ---
-description: Ermöglicht die Verarbeitung mit niedriger Latenz in der Microsoft Media Foundation Pipeline.
+description: Ermöglicht die Verarbeitung mit geringer Latenz in der Microsoft Media Foundation Pipeline.
 ms.assetid: 4D11B4D6-8CFF-4850-BF8F-9019A1F79153
-title: MF_LOW_LATENCY-Attribut (mfapi. h)
+title: MF_LOW_LATENCY-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02d1b0a89452256f01fc893ced7dc191fd064bbe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c51421b68e23ab3f29c15b0b360a7d189befb45cd9046176e6dcb99f1b0748f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956450"
 ---
-# <a name="mf_low_latency-attribute"></a>\_Attribut mit geringer Latenz bei MF \_
+# <a name="mf_low_latency-attribute"></a>MF \_ LOW \_ LATENCY-Attribut
 
-Ermöglicht die Verarbeitung mit niedriger Latenz in der Microsoft Media Foundation Pipeline.
+Ermöglicht die Verarbeitung mit geringer Latenz in der Microsoft Media Foundation Pipeline.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Geringe Latenzzeit wird als kleinste mögliche Verzögerung beim Generieren (oder empfangen) der Mediendaten beim Rendern definiert. Geringe Latenzzeit ist für echt Zeit Kommunikationsszenarien wünschenswert. In anderen Szenarien, wie z. b. der lokalen Wiedergabe oder der Transcodierung, sollten Sie in der Regel den Modus mit niedriger Latenz nicht aktivieren, da dies die Qualität beeinflussen kann.
+Niedrige Latenz wird als die kleinstmögliche Verzögerung zwischen dem Generieren (oder Empfangen) der Mediendaten und dem Rendern definiert. Niedrige Latenz ist für Echtzeitkommunikationsszenarien wünschenswert. Für andere Szenarien, z. B. lokale Wiedergabe oder Transcodierung, sollten Sie in der Regel den Modus mit niedriger Latenz nicht aktivieren, da dies die Qualität beeinträchtigen kann.
 
 > [!Note]  
-> Der GUID-Wert dieses Attributs ist mit der Eigenschaft " [codecapi \_ avlowlatencymode](codecapi-avlowlatencymode.md) " identisch, die für die [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Schnittstelle definiert ist.
+> Der GUID-Wert dieses Attributs ist identisch mit der [CODECAPI \_ AVLowLatencyMode-Eigenschaft,](codecapi-avlowlatencymode.md) die für die [**ICodecAPI-Schnittstelle**](/windows/win32/api/strmif/nn-strmif-icodecapi) definiert ist.
 
  
 
-Legen Sie dieses Attribut für Pipeline Komponenten wie folgt fest:
+Legen Sie dieses Attribut für Pipelinekomponenten wie folgt fest:
 
--   Medienquelle: Verwenden Sie die [**imfmediasourceex:: getsourceattributormethode**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getsourceattributes) .
--   Media Foundation Transformation (MFT): Verwenden Sie die [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) -Methode. Bei Encodern unterstützt der Encoder möglicherweise eine geringe Latenzzeit über die [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Schnittstelle.
--   Medien Senke: Abfragen der Medien Senke für die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle.
+-   Medienquelle: Verwenden Sie die [**METHODE VONMEDIASOURCEEx::GetSourceAttributes.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getsourceattributes)
+-   Media Foundation-Transformation (MFT): Verwenden Sie die [**METHODE VONTRANSFORM::GetAttributes.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) Bei Encodern unterstützt der Encoder möglicherweise eine geringe Latenz über die [**ICodecAPI-Schnittstelle.**](/windows/win32/api/strmif/nn-strmif-icodecapi)
+-   Mediensenke: Fragen Sie die Mediensenke für die [**SCHNITTSTELLE VON ATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) ab.
 
-Anwendungen legen dieses Attribut in der Regel nicht direkt auf den Pipeline Komponenten fest, sondern legen stattdessen das-Attribut für eines der folgenden Objekte fest:
+Anwendungen legen dieses Attribut in der Regel nicht direkt auf den Pipelinekomponenten fest, sondern legen es für eines der folgenden Objekte fest:
 
--   [Medien Sitzung](media-session.md): Verwenden Sie den *pkonfigurations* -Parameter der [**mfkreatemediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) -oder [**mfkreatepmpmediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) -Funktion, oder legen Sie das-Attribut in der Topologie fest.
--   [Quell Leser](source-reader.md): Legen Sie das-Attribut mit den Konfigurations Eigenschaften beim Erstellen des Quell Readers fest. Weitere Informationen finden Sie unter [Attribute des Quell Readers](source-reader-attributes.md).
--   [Sink Writer](sink-writer.md): Legen Sie das-Attribut mit den Konfigurations Eigenschaften fest, wenn Sie den Senke-Writer erstellen. Weitere Informationen finden Sie unter [senkenwriter-Attribute](sink-writer-attributes.md).
+-   [Mediensitzung:](media-session.md)Verwenden Sie den *pConfiguation-Parameter* der [**MFCreateMediaSession-**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) oder [**MFCreatePMPMediaSession-Funktion,**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) oder legen Sie andernfalls das -Attribut für die Topologie fest.
+-   [Quellleser:](source-reader.md)Legen Sie das Attribut mit den Konfigurationseigenschaften fest, wenn Sie den Quellleser erstellen. Weitere Informationen finden Sie unter [Quellleseattribute.](source-reader-attributes.md)
+-   [Sink Writer:](sink-writer.md)Legen Sie das Attribut mit den Konfigurationseigenschaften fest, wenn Sie den Sink Writer erstellen. Weitere Informationen finden Sie unter [Sink Writer Attributes](sink-writer-attributes.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Anwendungen legen dieses Attribut in der Regel nicht direkt auf den Pipeline Kom
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -65,13 +65,13 @@ Anwendungen legen dieses Attribut in der Regel nicht direkt auf den Pipeline Kom
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Senkenwriter-Attribute](sink-writer-attributes.md)
+[Sink Writer-Attribute](sink-writer-attributes.md)
 </dt> <dt>
 
-[Attribute des Quell Readers](source-reader-attributes.md)
+[Quellleseattribute](source-reader-attributes.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

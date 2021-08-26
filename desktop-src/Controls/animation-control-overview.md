@@ -1,78 +1,78 @@
 ---
-title: Informationen zu Animations Steuerelementen
-description: Ein Animations Steuerelement ist ein Fenster, in dem ein Audio-Video Interleaved (AVI)-Clip angezeigt wird. Ein AVI-Clip ist eine Reihe von bitmapframes, wie z. b. einem Film. Von Animations Steuerelementen können nur AVI-Clips angezeigt werden, die keine Audiodaten enthalten.
+title: Informationen zu Animationssteuerelementen
+description: Ein Animationssteuer steuerelement ist ein Fenster, in dem ein Audio-Video AVI-Clip (Interleaved) angezeigt wird. Ein AVI-Clip ist eine Reihe von Bitmapframes wie ein Film. Animationssteuerelemente können nur AVI-Clips anzeigen, die keine Audiodaten enthalten.
 ms.assetid: 6be69d1a-5b2c-41d5-b6d7-e86ddac2cb0d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1625828e5f4febce7314da365c9db93ce3a07136
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 57a2a579334fe266499884ccf40ad1154b3465ffd301c92643f248ff2664ed4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106341563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921790"
 ---
-# <a name="about-animation-controls"></a>Informationen zu Animations Steuerelementen
+# <a name="about-animation-controls"></a>Informationen zu Animationssteuerelementen
 
-Ein *Animations Steuer* Element ist ein Fenster, in dem ein Audio-Video Interleaved (AVI)-Clip angezeigt wird. Ein AVI-Clip ist eine Reihe von bitmapframes, wie z. b. einem Film. Von Animations Steuerelementen können nur AVI-Clips angezeigt werden, die keine Audiodaten enthalten.
+Ein *Animationssteuer steuerelement* ist ein Fenster, in dem ein Audio-Video ZWISCHENAB-Clip (Interleaved) angezeigt wird. Ein AVI-Clip ist eine Reihe von Bitmapframes wie ein Film. Animationssteuerelemente können nur AVI-Clips anzeigen, die keine Audiodaten enthalten.
 
-Ein Animations Steuerelement wird häufig verwendet, um die Systemaktivität während eines langen Vorgangs anzuzeigen. Dies ist möglich, da der Vorgangs Thread weiterhin ausgeführt wird, während der AVI-Clip angezeigt wird. Im Dialogfeld Suchen von Windows Explorer wird z. b. ein beweglicher Vergrößerungsglas angezeigt, während das System nach einer Datei sucht.
-
-> [!Note]  
-> Wenn Sie ComCtl32.dll Version 6 verwenden, wird der Thread nicht unterstützt. Stellen Sie sicher, dass die Benutzeroberfläche nicht von der Anwendung blockiert wird, da andernfalls keine Animation stattfindet.
-
- 
-
-Ein Animations Steuerelement kann einen AVI-Clip anzeigen, der aus einer unkomprimierten AVI-Datei oder aus einer mit der Lauf Zeit Länge (BI RLE8) komprimierten AVI-Datei stammt \_ . Sie können den AVI-Clip als AVI-Ressource zu Ihrer Anwendung hinzufügen, oder der Clip kann die Anwendung als separate AVI-Datei begleiten.
+Eine häufige Verwendung für ein Animationssteuer steuerelement ist das Angeben der Systemaktivität während eines längeren Vorgangs. Dies ist möglich, da der Vorgangsthread weiterhin ausgeführt wird, während der AVI-Clip angezeigt wird. Beispielsweise zeigt das Dialogfeld Suchen des Windows Explorer eine sich bewegende Lupe an, während das System nach einer Datei sucht.
 
 > [!Note]  
-> Die AVI-Datei bzw. Ressource darf keinen Audiokanal aufweisen. Die Funktionen des Animations Steuer Elements sind sehr eingeschränkt und können geändert werden. Wenn Sie ein Steuerelement benötigen, um Multimedia-Wiedergabe-und Aufzeichnungsfunktionen für Ihre Anwendung bereitzustellen, können Sie das mciwnd-Steuerelement verwenden. Weitere Informationen finden Sie unter [mciwnd Window Class](/windows/desktop/Multimedia/mciwnd-window-class).
+> Wenn Sie Version ComCtl32.dll 6 verwenden, wird der Thread nicht unterstützt. Stellen Sie sicher, dass Ihre Anwendung die Benutzeroberfläche nicht blockiert, da die Animation sonst nicht erfolgt.
 
- 
+ 
 
-In diesem Abschnitt werden die folgenden Themen behandelt.
+Ein Animationssteuersatz kann einen AVI-Clip anzeigen, der entweder aus einer unkomprimierten AVI-Datei oder aus einer AVI-Datei stammt, die mithilfe der Codierung der Ausführungslänge (BI \_ RLE8) komprimiert wurde. Sie können den AVI-Clip ihrer Anwendung als AVI-Ressource hinzufügen, oder der Clip kann Ihre Anwendung als separate AVI-Datei begleiten.
 
--   [Erstellen eines Animations Steuer Elements](#animation-control-creation)
--   [Informationen zu Animations Steuerungs Meldungen](#about-animation-control-messages)
--   [Standard Nachrichtenverarbeitung](#default-message-processing)
+> [!Note]  
+> Die AVI-Datei oder -Ressource darf keinen Soundkanal haben. Die Funktionen des Animationssteuer steuerelements sind sehr eingeschränkt und können sich ändern. Wenn Sie ein Steuerelement benötigen, um Multimediawiedergabe- und Aufzeichnungsfunktionen für Ihre Anwendung zu bieten, können Sie das MCIWnd-Steuerelement verwenden. Weitere Informationen finden Sie unter [MCIWnd Window Class](/windows/desktop/Multimedia/mciwnd-window-class).
 
-## <a name="animation-control-creation"></a>Erstellen eines Animations Steuer Elements
+ 
 
-Ein Animations Steuerelement gehört zur [**animieren \_ Class**](common-control-window-classes.md) Window-Klasse. Sie erstellen ein Animations Steuerelement mit der Funktion "up [**Window**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " oder "up Create [**" oder dem**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Makro " [**animieren \_ Erstellen**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) ". Das-Makro positioniert das Animations Steuerelement in der oberen linken Ecke des übergeordneten Fensters und legt die Breite und Höhe des Steuer Elements auf der Grundlage der Abmessungen eines Frames im AVI-Clip fest, wenn der [**ACS- \_ Mittelwert**](animation-control-styles.md) nicht angegeben ist. Wenn **ACS \_ Center** angegeben ist, legt **animieren \_ Create** die Breite und Höhe des Steuer Elements auf 0 (null) fest. Sie können die [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion verwenden, um die Position und Größe des Steuer Elements festzulegen.
+In diesem Abschnitt werden die folgenden Themen erläutert.
 
-Wenn Sie ein Animations Steuerelement in einem Dialogfeld oder einer Dialogfeld Ressource erstellen, wird das Steuerelement automatisch zerstört, wenn der Benutzer das Dialogfeld schließt. Wenn Sie ein Animations Steuerelement in einem Fenster erstellen, müssen Sie das Steuerelement explizit zerstören.
+-   [Erstellung von Animationssteuer steuerelementen](#animation-control-creation)
+-   [Informationen zu Animationssteuerungsmeldungen](#about-animation-control-messages)
+-   [Standardnachrichtenverarbeitung](#default-message-processing)
 
-## <a name="about-animation-control-messages"></a>Informationen zu Animations Steuerungs Meldungen
+## <a name="animation-control-creation"></a>Erstellung von Animationssteuer steuerelementen
 
-Eine Anwendung sendet Nachrichten an ein Animations Steuerelement, um den entsprechenden AVI-Clip zu öffnen, wiederzugeben, zu beenden und zu schließen. Jede Nachricht verfügt über ein oder mehrere Makros, die Sie verwenden können, statt die Nachricht explizit zu senden.
+Ein Animationssteuer steuerelement gehört zur [**Fensterklasse ANIMATE \_ CLASS.**](common-control-window-classes.md) Sie erstellen ein Animationssteuerobjekt mit der [**CreateWindow- oder**](/windows/desktop/api/winuser/nf-winuser-createwindowa) [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) oder dem [**Animieren des \_ Create-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) Das Makro positioniert das Animationssteuerobjekt in der oberen linken Ecke des übergeordneten Fensters und legt die Breite und Höhe des Steuerelements basierend auf den Abmessungen eines Frames im AVI-Clip fest, wenn der [**ACS \_ CENTER-Stil**](animation-control-styles.md) nicht angegeben ist. Wenn **ACS \_ CENTER angegeben** ist, legt **\_ Animieren erstellen** die Breite und Höhe des Steuerelements auf 0 (null) fest. Sie können die [**SetWindowPos-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) verwenden, um die Position und Größe des Steuerelements festlegen.
 
-Nach dem Erstellen eines Animations Steuer Elements sendet eine Anwendung die [**\_ geöffnete ACM**](acm-open.md) -Nachricht, um einen AVI-Clip zu öffnen und in den Arbeitsspeicher zu laden. Die Meldung gibt entweder den Pfad einer AVI-Datei oder den Namen einer AVI-Ressource an. Das System lädt die AVI-Ressource aus dem Modul, das das Animations Steuerelement erstellt hat.
+Wenn Sie ein Animationssteuerfeld innerhalb eines Dialogfelds oder aus einer Dialogfeldressource erstellen, wird das Steuerelement automatisch zerstört, wenn der Benutzer das Dialogfeld schließt. Wenn Sie ein Animationssteuer steuerelement innerhalb eines Fensters erstellen, müssen Sie das Steuerelement explizit zerstören.
 
-Wenn das Animations Steuerelement über die [**ACS- \_ AutoPlay**](animation-control-styles.md) -Art verfügt, beginnt das Steuerelement, den AVI-Clip sofort nach dem Öffnen der AVI-Datei oder der AVI-Ressource abspielen. Andernfalls kann eine Anwendung die [**ACM- \_ Wiedergabe**](acm-play.md) Nachricht verwenden, um den AVI-Clip zu starten. Eine Anwendung kann den Clip jederzeit beenden, indem Sie die [**ACM- \_ Stoppnachricht**](acm-stop.md) sendet. Der letzte wiedergegebene Frame wird angezeigt, wenn das-Steuerelement die Wiedergabe des AVI-Clips oder das Senden von **ACM \_** beendet hat.
+## <a name="about-animation-control-messages"></a>Informationen zu Animationssteuerungsmeldungen
 
-Ein Animations Steuerelement kann zwei Benachrichtigungs Codes an das übergeordnete Fenster senden: [ACN \_ Start](acn-start.md) und [ACN \_ Beenden](acn-stop.md). Die meisten Anwendungen verarbeiten keine Benachrichtigung.
+Eine Anwendung sendet Nachrichten an ein Animationssteuer steuerelement, um den entsprechenden AVI-Clip zu öffnen, wiederzuhalten, zu beenden und zu schließen. Jede Nachricht verfügt über ein oder mehrere Makros, die Sie verwenden können, anstatt die Nachricht explizit zu senden.
 
-Um die AVI-Datei oder die AVI-Ressource zu schließen und aus dem Arbeitsspeicher zu entfernen, kann eine Anwendung das [**animieren \_ Close**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close) -Makro verwenden, das [**ACM \_ geöffnet**](acm-open.md) sendet, wobei der Dateiname oder der Ressourcen Name auf **null** festgelegt ist.
+Nach dem Erstellen eines Animationssteuer steuerelements sendet eine Anwendung die [**ACM \_ OPEN-Nachricht,**](acm-open.md) um einen AVI-Clip zu öffnen und in den Arbeitsspeicher zu laden. Die Meldung gibt entweder den Pfad einer AVI-Datei oder den Namen einer AVI-Ressource an. Das System lädt die AVI-Ressource aus dem Modul, das das Animationssteuer steuerelement erstellt hat.
 
-## <a name="default-message-processing"></a>Standard Nachrichtenverarbeitung
+Wenn das Animationssteuerfeld über den [**ACS \_ AUTOPLAY-Stil**](animation-control-styles.md) verfügt, beginnt das Steuerelement mit der Wiedergabe des AVI-Clips unmittelbar nach dem Öffnen der AVI-Datei oder DER AVI-Ressource. Andernfalls kann eine Anwendung die [**ACM \_ PLAY-Nachricht verwenden,**](acm-play.md) um den AVI-Clip zu starten. Eine Anwendung kann den Clip jederzeit beenden, indem sie die [**ACM \_ STOP-Nachricht**](acm-stop.md) sendet. Der letzte abgespielte Frame wird angezeigt, wenn das Steuerelement die Wiedergabe des AVI-Clips beendet oder **ACM \_ STOP** gesendet wird.
 
-In diesem Abschnitt werden die Fenster Meldungen beschrieben, die von der Fenster Prozedur für die Animation [**\_ Class**](common-control-window-classes.md) Window Class behandelt werden.
+Ein Animationssteuer steuerelement kann zwei Benachrichtigungscodes an das übergeordnete Fenster senden: [ACN \_ START](acn-start.md) und [ACN \_ STOP.](acn-stop.md) Die meisten Anwendungen verarbeiten keine der beiden Benachrichtigungen.
+
+Um die AVI-Datei oder DIE AVI-Ressource zu schließen und aus dem Arbeitsspeicher zu entfernen, kann eine Anwendung das [**Makro Schließen \_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close) animieren verwenden, das [**ACM \_ OPEN**](acm-open.md) sendet, bei dem der Dateiname oder Ressourcenname auf **NULL festgelegt ist.**
+
+## <a name="default-message-processing"></a>Standardnachrichtenverarbeitung
+
+In diesem Abschnitt werden die Fenstermeldungen beschrieben, die von der Fensterprozedur für die [**ANIMATE \_ CLASS-Fensterklasse**](common-control-window-classes.md) verarbeitet werden.
 
 
 
-| `Message`                                    | Verarbeitung wird ausgeführt                                                                                                                                                                                                                                                                        |
+| `Message`                                    | Verarbeitung ausgeführt                                                                                                                                                                                                                                                                        |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WM \_ Schließen**](/windows/desktop/winmsg/wm-close)           | Gibt die dem Animations Steuerelement zugeordnete AVI-Datei oder AVI-Ressource frei.                                                                                                                                                                                                                   |
-| [**WM \_ zerstören**](/windows/desktop/winmsg/wm-destroy)       | Gibt die AVI-Datei oder die AVI-Ressource frei, gibt eine interne Datenstruktur frei und ruft dann die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion auf.                                                                                                                                                |
-| [**WM- \_ erasebkgnd**](/windows/desktop/winmsg/wm-erasebkgnd) | Löscht den Fenster Hintergrund mithilfe der aktuellen Hintergrundfarbe für statische Steuerelemente.                                                                                                                                                                                                        |
-| [**WM- \_ nccreate**](/windows/desktop/winmsg/wm-nccreate)     | Ordnet eine interne Datenstruktur zu und initialisiert sie und ruft dann [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)auf.                                                                                                                                                                              |
-| [**WM- \_ nchittest**](/windows/desktop/inputdev/wm-nchittest) | Gibt den Wert für den httransparent-Treffer Test zurück.                                                                                                                                                                                                                                                   |
-| [**WM- \_ Paint**](/windows/desktop/gdi/wm-paint)              | Zeichnet einen AVI-Frame im Animations Steuerelement.                                                                                                                                                                                                                                                |
-| [**WM- \_ Größe**](/windows/desktop/winmsg/wm-size)             | Überprüft, ob das Steuerelement über den [**ACS- \_ mittelstil**](animation-control-styles.md) verfügt. Wenn das-Steuerelement dies nicht bewirkt, wird [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)aufgerufen. Andernfalls wird die Animation im Steuerelement zentriert, das Steuerelement für ungültig erklärt und dann " **defwindowproc**" aufgerufen. |
+| [**WM \_ CLOSE**](/windows/desktop/winmsg/wm-close)           | Gibt die AVI-Datei oder DIE AVI-Ressource frei, die dem Animationssteuer steuerelement zugeordnet ist.                                                                                                                                                                                                                   |
+| [**WM \_ DESTROY**](/windows/desktop/winmsg/wm-destroy)       | Gibt die AVI-Datei oder DIE AVI-Ressource frei, gibt eine interne Datenstruktur frei und ruft dann die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) auf.                                                                                                                                                |
+| [**WM \_ ERASEBKGND**](/windows/desktop/winmsg/wm-erasebkgnd) | Löscht den Fensterhintergrund mithilfe der aktuellen Hintergrundfarbe für statische Steuerelemente.                                                                                                                                                                                                        |
+| [**WM \_ NCCREATE**](/windows/desktop/winmsg/wm-nccreate)     | Ordnet eine interne Datenstruktur zu und initialisiert sie und ruft [**dann DefWindowProc auf.**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)                                                                                                                                                                              |
+| [**WM \_ NCHITTEST**](/windows/desktop/inputdev/wm-nchittest) | Gibt den HTTRANSPARENT-Treffertestwert zurück.                                                                                                                                                                                                                                                   |
+| [**WM \_ PAINT**](/windows/desktop/gdi/wm-paint)              | Zeichnet einen AVI-Frame im Animation-Steuerelement.                                                                                                                                                                                                                                                |
+| [**WM \_ SIZE**](/windows/desktop/winmsg/wm-size)             | Überprüft, ob das Steuerelement den [**ACS \_ CENTER-Stil**](animation-control-styles.md) auf hat. Wenn das Steuerelement dies nicht tut, ruft es [**DefWindowProc auf.**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) Andernfalls wird die Animation im -Steuerelement centert, das Steuerelement für ungültig erklärt und **dann DefWindowProc aufruft.** |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

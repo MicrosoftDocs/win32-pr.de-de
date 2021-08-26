@@ -1,9 +1,9 @@
 ---
-title: BM_GETCHECK Meldung (Winuser. h)
-description: Ruft den Status der Überprüfung eines Options Felds oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das Schaltfläche \_ getcheck-Makro verwenden.
+title: BM_GETCHECK-Nachricht (Winuser.h)
+description: Ruft den Kontrollkästchenzustand eines Optionsfelds oder Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das \_ Schaltflächenmakro GetCheck verwenden.
 ms.assetid: a25b2c8d-0b32-4807-bfb4-e277675924f1
 keywords:
-- Windows-Steuerelemente für BM_GETCHECK Meldung
+- BM_GETCHECK Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f1aa89dc256ea9e0036259239d1c74e1e82b272
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5eb87d98752bd0cd447d48c648bc4a55e93c3f8eb418a81a07e04113a86633a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921290"
 ---
-# <a name="bm_getcheck-message"></a>BM- \_ getcheck-Meldung
+# <a name="bm_getcheck-message"></a>BM \_ GETCHECK-Nachricht
 
-Ruft den Status der Überprüfung eines Options Felds oder eines Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das [**Schaltfläche \_ getcheck**](/windows/desktop/api/Windowsx/nf-windowsx-button_getcheck) -Makro verwenden.
+Ruft den Kontrollkästchenzustand eines Optionsfelds oder Kontrollkästchens ab. Sie können diese Nachricht explizit senden oder das [**Schaltflächenmakro \_ GetCheck**](/windows/desktop/api/Windowsx/nf-windowsx-button_getcheck) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,23 +45,23 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert einer Schaltfläche, die mit dem Format " [**\_ Auto Checkbox**](button-styles.md)", " [**SB \_ AUTORADIOBUTTON**](button-styles.md)", "SB [**\_ AUTO3STATE**](button-styles.md)", "SB [**", " \_**](button-styles.md) [**SB \_ RadioButton**](button-styles.md)" oder " [**SB \_ 3STATE**](button-styles.md) " erstellt wurde, kann eines der folgenden sein.
+Der Rückgabewert einer Schaltfläche, die mit dem Format [**BS \_ AUTOCHECKBOX,**](button-styles.md) [**BS \_ AUTORADIOBUTTON,**](button-styles.md) [**BS \_ AUTO3STATE,**](button-styles.md) [**BS \_ CHECKBOX,**](button-styles.md) [**BS \_ RADIOBUTTON**](button-styles.md)oder [**BS \_ 3STATE**](button-styles.md) erstellt wurde, kann einer der folgenden Sein.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                                                                                                                                                                                       |
 |---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**BST \_ aktiviert**</dt> </dl>       | Die Schaltfläche ist aktiviert.<br/>                                                                                                                                                                                     |
-| <dl> <dt>**BST \_ unbestimmt**</dt> </dl> | Die Schaltfläche ist abgeblendet und zeigt einen unbestimmten Zustand an (gilt nur, wenn die Schaltfläche den Typ " [**\_ 3STATE**](button-styles.md) " oder " [**SB \_ AUTO3STATE**](button-styles.md) " aufweist).<br/> |
-| <dl> <dt>**BST \_ deaktiviert**</dt> </dl>     | Schaltfläche ist deaktiviert<br/>                                                                                                                                                                                      |
+| <dl> <dt>**BST \_ CHECKED**</dt> </dl>       | Die Schaltfläche ist aktiviert.<br/>                                                                                                                                                                                     |
+| <dl> <dt>**BST \_ INDETERMINATE**</dt> </dl> | Die Schaltfläche ist grau und gibt einen unbestimmten Zustand an (gilt nur, wenn die Schaltfläche den [**Stil BS \_ 3STATE**](button-styles.md) oder [**BS \_ AUTO3STATE auf hat).**](button-styles.md)<br/> |
+| <dl> <dt>**BST \_ UNCHECKED**</dt> </dl>     | Schaltfläche wird gelöscht<br/>                                                                                                                                                                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Schaltfläche einen anderen Stil als die aufgeführten hat, ist der Rückgabewert 0 (null).
+Wenn die Schaltfläche über einen anderen Stil als die aufgeführten verfügt, ist der Rückgabewert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ Wenn die Schaltfläche einen anderen Stil als die aufgeführten hat, ist der Rü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -79,13 +79,13 @@ Wenn die Schaltfläche einen anderen Stil als die aufgeführten hat, ist der Rü
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**BM \_ GetState**](bm-getstate.md)
+[**BM \_ GETSTATE**](bm-getstate.md)
 </dt> <dt>
 
-[**BM- \_ setcheck**](bm-setcheck.md)
+[**BM \_ SETCHECK**](bm-setcheck.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-description: Signalisiert den Fortschritt eines Inhalts Wegbereiter-Objekts. Objekte, die die imfcontentenabler-Schnittstelle verfügbar machen, können dieses Ereignis ausgeben, um die Anwendung über den Fortschritt der Aktionen des Inhalts Virtualisierungsebene zählt zu benachrichtigen.
+description: Signalisiert den Fortschritt eines Content Enabler-Objekts. Objekte, die die SCHNITTSTELLE "CONTENTContentEnabler" verfügbar machen, können dieses Ereignis auslösen, um die Anwendung über den Fortschritt der Content Enabler-Aktionen zu benachrichtigen.
 ms.assetid: ec14ba9b-cfb6-4e32-870e-2436e11c308b
-title: Meenablerprogress-Ereignis (mfobjects. h)
+title: MEEnablerProgress-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58303835113408a7fe09436967286d5ff988acdc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9772a076e1d9de0cff2336b4c6d6b9b068f11e4fc572b44f0f914a8353f651bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013760"
 ---
-# <a name="meenablerprogress-event"></a>Meenablerprogress-Ereignis
+# <a name="meenablerprogress-event"></a>MEEnablerProgress-Ereignis
 
-Signalisiert den Fortschritt eines Inhalts Wegbereiter-Objekts. Objekte, die die [**imfcontentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) -Schnittstelle verfügbar machen, können dieses Ereignis ausgeben, um die Anwendung über den Fortschritt der Aktionen des Inhalts Enablers zu benachrichtigen.
+Signalisiert den Fortschritt eines Content Enabler-Objekts. Objekte, die die [**SCHNITTSTELLE "CONTENTContentEnabler"**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) verfügbar machen, können dieses Ereignis auslösen, um die Anwendung über den Fortschritt der Aktionen des Content Enablers zu benachrichtigen.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE               | BESCHREIBUNG                                                               |
+| VARTYPE               | Beschreibung                                                               |
 |-----------------------|---------------------------------------------------------------------------|
-| VT \_ LPWSTR<br/> | Breit Zeichen-Zeichenfolge, die den Fortschritt beschreibt.<br/> <br/> |
+| VT \_ LPWSTR<br/> | Breitzeichenzeichenfolge, die den Fortschritt beschreibt.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Ereignis zu erhalten, Fragen Sie die [**imfcontentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) -Schnittstelle für die [**imfmediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle ab. Aufrufen Sie dann [**imfmediaeventgenerator:: begingetevent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent), wie im Thema [Medienereignis-Generatoren](media-event-generators.md)beschrieben.
+Um dieses Ereignis zu empfangen, fragen Sie die [**SCHNITTSTELLE "CONTENTContentEnabler"**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) nach der [**SCHNITTSTELLE "ARRANGEMediaEventGenerator"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) ab. Rufen Sie dann [**DENMEDIAEventGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent)auf, wie im Thema [Medienereignisgeneratoren](media-event-generators.md)beschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Um dieses Ereignis zu erhalten, Fragen Sie die [**imfcontentenabler**](/windows/
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -47,13 +47,13 @@ Um dieses Ereignis zu erhalten, Fragen Sie die [**imfcontentenabler**](/windows/
 
 <dl> <dt>
 
-[**IMF contentenabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler)
+[**CONTENTContentEnabler**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler)
 </dt> <dt>
 
-[Medienereignis Generatoren](media-event-generators.md)
+[Medienereignisgeneratoren](media-event-generators.md)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

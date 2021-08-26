@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ RedundancyComponent-Klasse ordnet eine Redundanz Gruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen Redundanz bereitstellen.
+description: Die CIM RedundancyComponent-Klasse ordnet eine Redundanzgruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen \_ Redundanz bereitstellen.
 ms.assetid: 2511ae26-011a-4e0d-ad34-d5fe9c78f0ff
 ms.tgt_platform: multiple
 title: CIM_RedundancyComponent-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5bcd1c16417ba0c02e13579f9e471076d4c61818
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bf2264d88a36f684c1ae198224a6e5543063bbf86ed3da77b0211f066eb080d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920790"
 ---
-# <a name="cim_redundancycomponent-class"></a>CIM \_ redundant cycomponent-Klasse
+# <a name="cim_redundancycomponent-class"></a>CIM \_ RedundancyComponent-Klasse
 
-Die **CIM \_ RedundancyComponent** -Klasse ordnet eine Redundanz Gruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen Redundanz bereitstellen. Alle Elemente, die in einer Redundanz Gruppe aggregiert werden, sollten Instanziierungen der gleichen Objektklasse sein.
+Die **CIM \_ RedundancyComponent-Klasse** ordnet eine Redundanzgruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen Redundanz bereitstellen. Alle in einer Redundanzgruppe aggregierten Elemente sollten Instanziierungen derselben Objektklasse sein.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,29 +47,29 @@ class CIM_RedundancyComponent : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ redundant cycomponent** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ RedundancyComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ redundant cycomponent** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ RedundancyComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ redundant cygroup**
+Datentyp: **CIM \_ RedundancyGroup**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Die **CIM \_ redundant cycomponent** -Zuordnung gibt an, dass diese Gruppe von Fans oder diese physischen Blöcke an einer einzelnen Redundanz Gruppe teilnehmen.
+Die **CIM \_ RedundancyComponent-Zuordnung** gibt an, dass "diese Gruppe von Lüftern" oder "diese physischen Speichergruppen" teil einer einzelnen Redundanzgruppe ist.
 
 </dd> <dt>
 
@@ -82,19 +82,19 @@ Datentyp: **CIM \_ ManagedSystemElement**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) , das das untergeordnete Element in der Zuordnung beschreibt.
+Ein [**CIM \_ ManagedSystemElement,**](cim-managedsystemelement.md) das das untergeordnete Element in der Zuordnung beschreibt.
 
-Diese Eigenschaft wird von der [**CIM- \_ Komponente**](cim-component.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Komponente \_ geerbt.**](cim-component.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**CIM \_ Redundant cycomponent** wird von der [**CIM- \_ Komponente**](cim-component.md)abgeleitet.
+**CIM \_ RedundancyComponent** wird von der [**\_ CIM-Komponente abgeleitet.**](cim-component.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,8 +104,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -114,7 +114,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> </dl>
 
  

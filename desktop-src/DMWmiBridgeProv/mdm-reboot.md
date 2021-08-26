@@ -1,6 +1,6 @@
 ---
 title: MDM_Reboot-Klasse
-description: Die MDM- \_ rebootclass wird zum Konfigurieren der Neustart Einstellungen verwendet.
+description: Die MDM \_ Rebootclass wird verwendet, um Neustarteinstellungen zu konfigurieren.
 ms.assetid: 876ba854-1c26-49cf-915d-194be9f9c1d4
 keywords:
 - MDM_Reboot-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d3e078dfef883db5aad67e7ee834ceca4bd0a942
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b742754cc22d069cce47ef32a60739c517f578df76fc42dbf5076972c5e63b0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967490"
 ---
-# <a name="mdm_reboot-class"></a>MDM- \_ Neustart Klasse
+# <a name="mdm_reboot-class"></a>MDM \_ Reboot-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Neustart** Klasse wird verwendet, um Neustart Einstellungen zu konfigurieren.
+Die **MDM \_ Reboot-Klasse** wird verwendet, um Neustarteinstellungen zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -45,20 +45,20 @@ class MDM_Reboot
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Neustart** Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Reboot-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MDM- \_ Neustart** Klasse verfügt über diese Methoden.
+Die **MDM \_ Reboot-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                | BESCHREIBUNG                                             |
+| Methode                                                | Beschreibung                                             |
 |:------------------------------------------------------|:--------------------------------------------------------|
-| [**Rebootnowmethod**](mdm-reboot-rebootnowmethod.md) | Diese Methode führt einen Neustart des Geräts aus.<br/> |
+| [**RebootNowMethod**](mdm-reboot-rebootnowmethod.md) | Diese Methode führt einen Neustart des Geräts aus.<br/> |
 
 
 
@@ -66,14 +66,14 @@ Die **MDM- \_ Neustart** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Neustart** Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Reboot-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -82,14 +82,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "Reboot".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "Reboot".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -98,7 +98,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> </dl>
 
@@ -108,11 +108,11 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 

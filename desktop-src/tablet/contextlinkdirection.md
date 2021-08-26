@@ -1,7 +1,7 @@
 ---
-description: Gibt die Richtung eines icontextlink-Objekts an.
+description: Gibt die Richtung eines IContextLink-Objekts an.
 ms.assetid: 4ba7dca7-6801-45bf-bbf1-1dd3172fbfa2
-title: ContextLinkDirection-Enumeration (iacom. h)
+title: ContextLinkDirection-Enumeration (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - IACom.h
-ms.openlocfilehash: 82e10c7e908b4cc4035d8bfdde55d863f7b6ecf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cd187b2a6efed6de5e6ee866cbd2e75ad67defc67b4b6d2250eb9117c62d89e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941180"
 ---
 # <a name="contextlinkdirection-enumeration"></a>ContextLinkDirection-Enumeration
 
-Gibt die Richtung eines [**icontextlink**](icontextlink.md) -Objekts an.
+Gibt die Richtung eines [**IContextLink-Objekts**](icontextlink.md) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ typedef enum ContextLinkDirection {
 
 <dl> <dt>
 
-<span id="ContextLinkDirection_LinksWith"></span><span id="contextlinkdirection_linkswith"></span><span id="CONTEXTLINKDIRECTION_LINKSWITH"></span>**ContextLinkDirection \_ linkswith**
+<span id="ContextLinkDirection_LinksWith"></span><span id="contextlinkdirection_linkswith"></span><span id="CONTEXTLINKDIRECTION_LINKSWITH"></span>**ContextLinkDirection \_ LinksWith**
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) ist eine direktionale Zeichnung, die von [**icontextlink**](icontextlink.md)entfernt wird.
+Der [**IContextNode ist**](icontextnode.md) eine direktionale Zeichnung, die von [**IContextLink weg zeigt.**](icontextlink.md)
 
 </dd> <dt>
 
-<span id="ContextLinkDirection_LinksFrom"></span><span id="contextlinkdirection_linksfrom"></span><span id="CONTEXTLINKDIRECTION_LINKSFROM"></span>**ContextLinkDirection \_ linksfrom**
+<span id="ContextLinkDirection_LinksFrom"></span><span id="contextlinkdirection_linksfrom"></span><span id="CONTEXTLINKDIRECTION_LINKSFROM"></span>**ContextLinkDirection \_ LinksFrom**
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) ist eine direktionale Zeichnung, die auf [**icontextlink**](icontextlink.md)zeigt.
+[**IContextNode ist eine**](icontextnode.md) direktionale Zeichnung, die auf den [**IContextLink zeigt.**](icontextlink.md)
 
 </dd> <dt>
 
-<span id="ContextLinkDirection_LinksTo"></span><span id="contextlinkdirection_linksto"></span><span id="CONTEXTLINKDIRECTION_LINKSTO"></span>**ContextLinkDirection \_ linksto**
+<span id="ContextLinkDirection_LinksTo"></span><span id="contextlinkdirection_linksto"></span><span id="CONTEXTLINKDIRECTION_LINKSTO"></span>**ContextLinkDirection \_ LinksTo**
 </dt> <dd>
 
-Der Link enthält keine direktionalen Zeichnungen. Beispielsweise kann eine frei Handzeichnung ein frei Hand Wort unterstreichen. Es gibt keine Richtung, die aus der Unterstreichung abgeleitet wurde.
+Im Link sind keine richtungswechsellichen Zeichnungen zu sehen. Beispielsweise kann eine Ink-Zeichnung ein Ink-Wort unterstrichen. Es gibt keine Richtung, die vom Unterstrich abgeleitet wird.
 
 </dd> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein [**icontextnode**](icontextnode.md) -Objekt, `m_pSelectedNode` , übernommen und alle **icontextnode** -Objekte, mit denen es verknüpft ist, gespeichert, indem die Vorgänger Struktur durchlaufen und die Objekte zu einem-Objekt hinzugefügt `CArray` werden `linkedToNodes` . `CheckHResult` eine Funktion, die eine `HRESULT` -und eine-Zeichenfolge annimmt und eine mit der-Zeichenfolge erstellte Ausnahme auslöst, wenn der `HRESULT` nicht **erfolgreich** ist.
+Im folgenden Beispiel wird das [**IContextNode-Objekt**](icontextnode.md) verwendet, und alle `m_pSelectedNode` **IContextNode-Objekte,** mit denen es verknüpft ist, werden gespeichert, indem die Vorgängerstruktur durchgehen und die Objekte einem -Objekt `CArray` hinzugefügt werden. `linkedToNodes` `CheckHResult`ist eine Funktion, die eine und eine Zeichenfolge verwendet und eine Ausnahme auslöst, die mit der Zeichenfolge erstellt wird, wenn nicht `HRESULT` `HRESULT` SUCCESS **ist.**
 
 
 ```C++
@@ -116,9 +116,9 @@ while (pAncestor != NULL)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 
 
 
@@ -126,10 +126,10 @@ while (pAncestor != NULL)
 
 <dl> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**Icontextnode:: addcontextlink**](icontextnode-addcontextlink.md)
+[**IContextNode::AddContextLink**](icontextnode-addcontextlink.md)
 </dt> </dl>
 
  

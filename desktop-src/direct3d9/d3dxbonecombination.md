@@ -1,7 +1,7 @@
 ---
-description: Beschreibt eine Teilmenge des Netzes, das über das gleiche Attribut und die gleiche Kombination aus dem gleichen Knoten verfügt.
+description: Beschreibt eine Teilmenge des Gitters, die über das gleiche Attribut und die gleiche Kombination aus Kombinationen verfügt.
 ms.assetid: e6a4b3bb-d28d-44c2-a6df-f60f0412a70e
-title: D3DXBONECOMBINATION-Struktur (D3dx9mesh. h)
+title: D3DXBONECOMBINATION-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 3553ba37d0d9376fa5912143fb58849f03c5a83a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 72d60b5c87d43763be4700ba7931c61c41cf0101d80390afb737c7f4afda83a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952490"
 ---
 # <a name="d3dxbonecombination-structure"></a>D3DXBONECOMBINATION-Struktur
 
-Beschreibt eine Teilmenge des Netzes, das über das gleiche Attribut und die gleiche Kombination aus dem gleichen Knoten verfügt.
+Beschreibt eine Teilmenge des Gitters, die über das gleiche Attribut und die gleiche Kombination aus Kombinationen verfügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,25 +44,25 @@ typedef struct D3DXBONECOMBINATION {
 
 <dl> <dt>
 
-**Atungbid**
+**AttribId**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Attribut Tabellen Bezeichner.
+Attributtabellenbezeichner.
 
 </dd> <dt>
 
-**Fakestart**
+**FaceStart**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Startseite.
+Startgesicht.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Gesichter.
+Anzahl der Gesichtserkennungen.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Scheitelpunkt wird gestartet.
+Scheitelpunkt wird gestartet.
 
 </dd> <dt>
 
@@ -95,26 +95,26 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Vertex-Anzahl.
+Scheitelpunktanzahl.
 
 </dd> <dt>
 
-**Boneid**
+**OmId**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
 </dd> <dd>
 
-Ein Zeiger auf ein Array von Werten, die jeden der Knochen identifizieren, die in einem einzelnen Zeichnungs Befehl gezeichnet werden können. Beachten Sie, dass das Array eine Variable Länge aufweisen kann, um die Kombination der Variablen mit variabler Länge von [**convertumindexedblendedmesh**](id3dxskininfo--converttoindexedblendedmesh.md)zu unterstützen.
+Zeiger auf ein Array von Werten, die die einzelnen Zeichner identifizieren, die in einem einzigen Zeichnungsaufruf gezeichnet werden können. Beachten Sie, dass das Array eine variable Länge haben kann, um Kombinationen von [**ConvertToIndexedBlendedMesh**](id3dxskininfo--converttoindexedblendedmesh.md)mit variabler Länge aufnehmen zu können.
 
-Die Größe des Arrays variiert je nach Typ des generierten Diagrammtyps. Eine nicht indizierte Gitter Array Größe ist gleich der Anzahl der Gewichtungen pro Scheitelpunkt (pmaxvertexinfl in [**convertumblendedmesh**](id3dxskininfo--converttoblendedmesh.md)). Die Größe eines indizierten Mesh-Arrays entspricht der Anzahl der Einträge in der Band Matrix Palette (palettesize in [**convertumindexedblendedmesh**](id3dxskininfo--converttoindexedblendedmesh.md)).
+Die Größe des Arrays variiert je nach Typ des generierten Gitters. Eine nicht indizierte Gitternetzarraygröße entspricht der Anzahl der Gewichtungen pro Scheitelpunkt (pMaxVertexInfl in [**ConvertToBlendedMesh**](id3dxskininfo--converttoblendedmesh.md)). Die Größe eines indizierten Gitternetzarrays entspricht der Anzahl von Matrixpaletteneinträgen (paletteSize in [**ConvertToIndexedBlendedMesh).**](id3dxskininfo--converttoindexedblendedmesh.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Teilmenge des von **D3DXBONECOMBINATION** beschriebenen Netzes kann in einem einzelnen Zeichnungs Befehl gerendert werden.
+Die Teilmenge des Gitters, die **von D3DXBONECOMBINATION** beschrieben wird, kann in einem einzigen Zeichnungsaufruf gerendert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,7 +122,7 @@ Die Teilmenge des von **D3DXBONECOMBINATION** beschriebenen Netzes kann in einem
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 

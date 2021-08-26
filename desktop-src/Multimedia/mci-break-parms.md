@@ -1,6 +1,6 @@
 ---
-title: MCI_BREAK_PARMS-Struktur (mciapi. h)
-description: Die Struktur der MCI \_ \_ -break-Parser enthält Code-und Fenster Informationen des virtuellen Schlüssels für den MCI- \_ break-Befehl.
+title: MCI_BREAK_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ BREAK \_ PARMS-Struktur enthält Code für virtuelle Schlüssel und Fensterinformationen für den MCI \_ BREAK-Befehl.
 ms.assetid: c8df8c55-cc6b-4dd7-b275-784d3eb9dce1
 keywords:
 - MCI_BREAK_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e66b52992827b447b6d4b5585ca3f98564142680
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: efaff8841e0e8ef0387535aa8d42723cf9477887511b7111f02a6ee0cb2b527b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039510"
 ---
-# <a name="mci_break_parms-structure"></a>Struktur der MCI- \_ break- \_ Parametern
+# <a name="mci_break_parms-structure"></a>MCI \_ BREAK \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ break- \_ Parser** enthält Code-und Fenster Informationen des virtuellen Schlüssels für den [**MCI- \_ break**](mci-break.md) -Befehl.
+Die **MCI \_ BREAK \_ PARMS-Struktur** enthält Code für virtuelle Schlüssel und Fensterinformationen für den [**MCI \_ BREAK-Befehl.**](mci-break.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,42 +42,42 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**nvirtkey**
+**nVirtKey**
 </dt> <dd>
 
-Code des virtuellen Schlüssels für die Pause-Taste.
+Virtueller Schlüsselcode für Halteschlüssel.
 
 </dd> <dt>
 
-**hwndbreak**
+**hwndBreak**
 </dt> <dd>
 
-Handle für das Fenster, das das aktuelle Fenster für die unterschieterkennung sein muss.
+Handle für das Fenster, das das aktuelle Fenster für die Unterbrechungserkennung sein muss.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen. Die folgenden Flags sind definiert:
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen. Die folgenden Flags sind definiert:
 
-MCI- \_ break- \_ HWND
+MCI \_ BREAK \_ HWND
 
-Überprüft das **hwndbreak** -Element und gibt das Fenster an, das den Fokus haben muss, um die Unterbrechung zu aktivieren.
+Überprüft das **hwndBreak-Element,** das das Fenster angibt, das den Fokus haben muss, um die Unterbrechungserkennung zu aktivieren.
 
-MCI- \_ break- \_ Taste
+\_MCI-BREAK \_ KEY
 
-Überprüft den **nvirtkey** -Member, der den Code für den virtuellen Schlüssel angibt, der für die Break Key-Taste verwendet werden soll.
+Überprüft das **nVirtKey-Element,** das den für den Halteschlüssel zu verwendenden Virtuellen Schlüsselcode angibt.
 
-MCI-unter \_ Brechung \_
+MCI \_ BREAK \_ OFF
 
-Deaktiviert alle vorhandenen Break-Schlüssel.
+Deaktiviert alle vorhandenen Halteschlüssel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,7 +87,7 @@ Deaktiviert alle vorhandenen Break-Schlüssel.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -95,13 +95,13 @@ Deaktiviert alle vorhandenen Break-Schlüssel.
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI-unter \_ Brechung**](mci-break.md)
+[**\_MCI-UNTERBRECHUNG**](mci-break.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

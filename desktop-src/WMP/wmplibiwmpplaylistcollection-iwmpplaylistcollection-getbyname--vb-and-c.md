@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistcollection getByName-Methode
-description: Die getByName-Methode gibt eine iwmpplaylistarray-Schnittstelle zurück, die Zugriff auf Wiedergabelisten mit dem angegebenen Namen bietet, sofern vorhanden.
+title: IWMPPlaylistCollection getByName-Methode
+description: Die getByName-Methode gibt eine IWMPPlaylistArray-Schnittstelle zurück, die den Zugriff auf Wiedergabelisten mit dem angegebenen Namen ermöglicht, sofern vorhanden.
 ms.assetid: d41afab1-4103-4f59-a432-21a502499444
 keywords:
-- getByName-Methode, Windows-Media Player
-- getByName-Methode, Windows Media Player, iwmpplaylistcollection-Schnittstelle
-- Iwmpplaylistcollection-Schnittstelle Windows Media Player, getByName-Methode
+- getByName-Windows Media Player
+- getByName-Methode Windows Media Player , IWMPPlaylistCollection-Schnittstelle
+- IWMPPlaylistCollection-Schnittstelle Windows Media Player , getByName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e51f83b4db019286c04762a081e649fec282135e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fcee45af3ef55d53a05bab290fa92d3e6842fbb097358235b6720cbb1b54e0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999740"
 ---
-# <a name="iwmpplaylistcollectiongetbyname-method"></a>Iwmpplaylistcollection:: getByName-Methode
+# <a name="iwmpplaylistcollectiongetbyname-method"></a>IWMPPlaylistCollection::getByName-Methode
 
-Die **getByName** -Methode gibt eine **iwmpplaylistarray** -Schnittstelle zurück, die Zugriff auf Wiedergabelisten mit dem angegebenen Namen bietet, sofern vorhanden.
+Die **getByName-Methode** gibt eine **IWMPPlaylistArray-Schnittstelle** zurück, die den Zugriff auf Wiedergabelisten mit dem angegebenen Namen ermöglicht, sofern vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,26 +53,26 @@ Implements IWMPPlaylistCollection.getByName
 
 <dl> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Name der Wiedergabeliste ist.
+Eine **System.String,** die der Name der Wiedergabeliste ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpplaylistarray** -Schnittstelle für das abgerufene Array von Wiedergabelisten.
+Eine **WMPLib.IWMPPlaylistArray-Schnittstelle** für das abgerufene Array von Wiedergabelisten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **iwmpplaylistarray. count** , um zu bestimmen, ob eine Wiedergabeliste vorhanden ist. Wenn **count** 0 (null) ist, ist das Array leer.
+Verwenden **Sie IWMPPlaylistArray.count,** um zu bestimmen, ob eine Wiedergabeliste vorhanden ist. Wenn **count** 0 (null) ist, ist das Array leer.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **getByName** verwendet, um die Wiedergabelisten Auflistung auf eine Wiedergabeliste mit dem Namen "Favoriten--4 und 5 Sterne bewertet" zu überprüfen. Wenn eine Wiedergabeliste mit diesem Namen vorhanden ist, wird Sie von **getByName** als aktuelle Wiedergabeliste festgelegt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **getByName** verwendet, um die Wiedergabelistensammlung auf eine Wiedergabeliste mit dem Namen "Favoriten - 4 und 5 sterngewertet" zu überprüfen. Wenn eine Wiedergabeliste mit diesem Namen vorhanden ist, **legt getByName** diese als aktuelle Wiedergabeliste fest. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -118,23 +118,23 @@ End If
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player 9-Serie oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpplaylistarray-Schnittstelle (VB und c#)**](iwmpplaylistarray--vb-and-c.md)
+[**IWMPPlaylistArray-Schnittstelle (VB und C#)**](iwmpplaylistarray--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistarray. Count (VB und c#)**](wmplibiwmpplaylistarray-iwmpplaylistarray-count--vb-and-c.md)
+[**IWMPPlaylistArray.count (VB und C#)**](wmplibiwmpplaylistarray-iwmpplaylistarray-count--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> </dl>
 
  

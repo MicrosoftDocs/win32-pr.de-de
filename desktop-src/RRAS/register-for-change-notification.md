@@ -1,19 +1,19 @@
 ---
-title: Für Änderungs Benachrichtigung registrieren
-description: Der folgende Beispielcode zeigt, wie Sie sich für Änderungs Benachrichtigungen in der Routing Tabelle registrieren. Das Thema \ 0034; Verwenden Sie den Ereignis Benachrichtigungs Rückruf \ 0034; veranschaulicht, wie diese Änderungs Benachrichtigungen verwendet werden.
+title: Registrieren für Änderungsbenachrichtigungen
+description: Der folgende Beispielcode zeigt, wie Sie sich für Änderungsbenachrichtigungen in der Routingtabelle registrieren. Das Thema \ 0034; Verwenden Sie den Ereignisbenachrichtigungsrückruf \ 0034; veranschaulicht die Verwendung dieser Änderungsbenachrichtigungen.
 ms.assetid: a311759a-e337-4297-af3d-55e969162b0f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1491a2e0ceed448459adaec7df8e67e650aebb15
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: aebc8bfffd7efcbe5992fccc965435294510bdfa16c03bfe050a211d9b26d704
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028416"
 ---
-# <a name="register-for-change-notification"></a>Für Änderungs Benachrichtigung registrieren
+# <a name="register-for-change-notification"></a>Registrieren für Änderungsbenachrichtigungen
 
-Der folgende Beispielcode zeigt, wie Sie sich für Änderungs Benachrichtigungen in der Routing Tabelle registrieren. Das Thema "[Verwenden des Ereignis Benachrichtigungs Rückrufs](use-the-event-notification-callback.md)" veranschaulicht, wie diese Änderungs Benachrichtigungen verwendet werden.
+Der folgende Beispielcode zeigt, wie Sie sich für Änderungsbenachrichtigungen in der Routingtabelle registrieren. Das Thema[Verwenden des Ereignisbenachrichtigungsrückrufs](use-the-event-notification-callback.md)veranschaulicht die Verwendung dieser Änderungsbenachrichtigungen.
 
 
 ```C++
@@ -105,9 +105,9 @@ int __cdecl main(){
 
 
 
- 
+ 
 
- 
+ 
 
 
 

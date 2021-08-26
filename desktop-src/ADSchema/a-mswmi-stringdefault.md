@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-stringdefault-Attribut
-description: Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen Parameter-Objekten.
+title: ms-WMI-stringDefault-Attribut
+description: Standardzeichenfolgeneinstellung für einen Satz von Zeichenfolgenparameterobjekten.
 ms.assetid: d467905a-b361-4689-8c1f-abb0f2f58766
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-WMI-stringdefault-Attribut
-- AD-Schema für mswap-stringdefault-Attribut
+- ms-WMI-stringDefault-Attribut-AD-Schema
+- MSWMI-StringDefault-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffe21c17ec1abd64081991e9f50293417910beb1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2f647894443f1795542603fd1d811a74cdf01bb7e04cf9dc74a3c7b3ca2d345b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346166"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066030"
 ---
-# <a name="ms-wmi-stringdefault-attribute"></a>MS-WMI-stringdefault-Attribut
+# <a name="ms-wmi-stringdefault-attribute"></a>ms-WMI-stringDefault-Attribut
 
-Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen Parameter-Objekten.
+Standardzeichenfolgeneinstellung für einen Satz von Zeichenfolgenparameterobjekten.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-WMI-stringdefault                        |
-| LDAP-Display-Name | mswap-stringdefault                         |
+| CN                | ms-WMI-stringDefault                        |
+| Ldap-Anzeigename | msWMI-StringDefault                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator                  |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator                  |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1636                     |
-| System-ID-GUID    | 152 e42b6-37c5-4b55-AB48-1606384a9aea        |
+| System-ID-GUID    | 152e42b6-37c5-4f55-ab48-1606384a9aea        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen P
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -77,11 +77,11 @@ Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen P
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -98,11 +98,11 @@ Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen P
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -119,11 +119,11 @@ Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen P
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -140,11 +140,11 @@ Standardmäßige Zeichen folgen Einstellung für einen Satz von Zeichen folgen P
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

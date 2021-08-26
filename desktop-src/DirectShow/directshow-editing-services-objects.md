@@ -1,63 +1,63 @@
 ---
-description: DirectShow-Bearbeitungs Dienste-Objekte
+description: DirectShow Editing Services-Objekte
 ms.assetid: 0b78c928-eee7-46ab-b01b-30c9c62ceeb2
-title: DirectShow-Bearbeitungs Dienste-Objekte
+title: DirectShow Editing Services-Objekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1dd4ff12af8925dbcf7a46c251584e595621fcb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: adcdd082efac7c66ec3b6e8f6aaa8d8f6bc3ea30cf21d6a6be83e979feebb923
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966550"
 ---
-# <a name="directshow-editing-services-objects"></a>DirectShow-Bearbeitungs Dienste-Objekte
+# <a name="directshow-editing-services-objects"></a>DirectShow Editing Services-Objekte
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-DirectShow-Bearbeitungs Dienste (de) enthalten die folgenden COM-Komponenten.
+DirectShow Editing Services (DES) umfasst die folgenden COM-Komponenten.
 
-### <a name="timeline-objects"></a>Timeline-Objekte
+### <a name="timeline-objects"></a>Zeitachsenobjekte
 
 -   [Aufbau](composition.md)
 -   [Auswirkung](effect.md)
--   [Gruppieren](group.md)
+-   [Gruppe](group.md)
 -   [Quelle](source.md)
 -   [Zeitachse](timeline.md)
--   [Nachverfolgen](track.md)
+-   [Track](track.md)
 -   [Umstellung](transition.md)
 
 ### <a name="helper-objects"></a>Hilfsobjekte
 
--   [Einfache Renderingengine](basic-render-engine.md)
--   [Medien Erkennung (mediadet)](media-detector--mediadet.md)
+-   [Grundlegende Render-Engine](basic-render-engine.md)
+-   [Medienerkennung (MediaDet)](media-detector--mediadet.md)
 -   [Medienlocator](media-locator.md)
--   [Eigenschaften Setter](property-setter.md)
--   [Smart-Rendering-Engine](smart-render-engine.md)
+-   [Eigenschaftensetter](property-setter.md)
+-   [Intelligente Render-Engine](smart-render-engine.md)
 -   [XML-Parser](xml-parser.md)
 
 ### <a name="filters"></a>Filter
 
--   [**Beispiel für einen Grabber Filter**](sample-grabber-filter.md)
--   [**NULL-rendererfilter**](null-renderer-filter.md)
+-   [**Beispielgrabberfilter**](sample-grabber-filter.md)
+-   [**NULL-Rendererfilter**](null-renderer-filter.md)
 
 ### <a name="transitions-and-effects"></a>Übergänge und Effekte
 
--   [Alpha Setter](alpha-setter-effect.md)
+-   [Alphasetter](alpha-setter-effect.md)
 -   [Compositor](compositor-transition.md)
 -   [Schlüssel](key-transition.md)
--   [SMPTE-Löschung](smpte-wipe-transition.md)
--   [Video Farbquelle](video-color-source.md)
+-   [SMPTE-Zurücksetzung](smpte-wipe-transition.md)
+-   [Videofarbquelle](video-color-source.md)
 -   [Volumeumschlag](volume-envelope-effect.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[DirectShow-Bearbeitungs Dienste C++ Referenz](directshow-editing-services-c---reference.md)
+[C++-Referenz zu DirectShow Editing Services](directshow-editing-services-c---reference.md)
 </dt> </dl>
 
  

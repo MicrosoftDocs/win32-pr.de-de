@@ -4,12 +4,12 @@ ms.assetid: 5162800c-9c55-40de-be66-a98765324f76
 title: MEEnablerCompleted-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f05459a648f6b357fd483baa9fc56809540e64a1
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 2983cbcf3927626da88432c0cc04f28e2fc5d3e866d161b514dcbe5108bcf92a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013800"
 ---
 # <a name="meenablercompleted-event"></a>MEEnablerCompleted-Ereignis
 
@@ -30,7 +30,7 @@ Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfob
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Statuscode des Ereignisses kann einen der folgenden Werte enthalten.
 
@@ -48,15 +48,15 @@ Der Statuscode des Ereignisses kann einen der folgenden Werte enthalten.
 
 Um dieses Ereignis zu empfangen, fragen Sie die [**SCHNITTSTELLE "CONTENTContentEnabler"**](/windows/desktop/api/mfidl/nn-mfidl-imfcontentenabler) nach der [**SCHNITTSTELLE "ARRANGEMediaEventGenerator"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) ab. Rufen Sie dann [**DENMEDIAEventGenerator::BeginGetEvent**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaeventgenerator-begingetevent)auf, wie im Thema [Medienereignisgeneratoren](media-event-generators.md)beschrieben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Um dieses Ereignis zu empfangen, fragen Sie die [**SCHNITTSTELLE "CONTENTContent
 [Medienereignisgeneratoren](media-event-generators.md)
 </dt> <dt>
 
-[Media Foundation Ereignisse](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

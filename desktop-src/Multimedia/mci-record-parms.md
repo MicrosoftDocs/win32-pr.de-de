@@ -1,9 +1,9 @@
 ---
-title: MCI_RECORD_PARMS-Struktur (mciapi. h)
-description: Die Struktur der MCI- \_ Daten Satz- \_ Parser enthält Positionsinformationen für den MCI- \_ Datensatz-Befehl.
+title: MCI_RECORD_PARMS -Struktur (Mciapi.h)
+description: Die MCI \_ RECORD \_ PARMS-Struktur enthält Positionierungsinformationen für den MCI \_ RECORD-Befehl.
 ms.assetid: 5d502cf8-3963-49d6-b515-d26e19195322
 keywords:
-- MCI_RECORD_PARMS Struktur Windows Multimedia
+- MCI_RECORD_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b633ce192d0f4b2467cb744d614ea38056eafb60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9c531b5b186a6119a22cafc4e252424ace2e388b2545461b440cd7957694494b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039080"
 ---
-# <a name="mci_record_parms-structure"></a>Struktur von MCI- \_ Daten Satz- \_ Parametern
+# <a name="mci_record_parms-structure"></a>MCI \_ RECORD \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ Daten Satz- \_ Parser** enthält Positionsinformationen für den [**MCI- \_ Datensatz**](mci-record.md) -Befehl.
+Die **MCI \_ RECORD \_ PARMS-Struktur** enthält Positionierungsinformationen für den [**MCI \_ RECORD-Befehl.**](mci-record.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Wiedergabe Position
+Position, von der aus sie abspielt werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position der Wiedergabe.
+Position, an der abspielt werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,7 +75,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -83,13 +83,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Datensatz**](mci-record.md)
+[**MCI \_ RECORD**](mci-record.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

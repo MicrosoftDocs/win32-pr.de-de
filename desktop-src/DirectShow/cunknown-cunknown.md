@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 32859871f8ef69ce357fe204f0741356314fbb06
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f7d2f1b70202200c705394790bb4b1e8d81349b71f534cc36fba9a8baed65f03
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998930"
 ---
 # <a name="cunknowncunknown-constructor"></a>CUnknown.CUnknown-Konstruktor
 
@@ -46,18 +46,18 @@ CUnknown(
 *pName* 
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen des Objekts enthält. wird im [**CBaseObject-Konstruktor zum**](cbaseobject.md) Debuggen verwendet.
+Zeichenfolge, die den Namen des Objekts enthält; wird im [**CBaseObject-Konstruktor**](cbaseobject.md) für das Debuggen verwendet.
 
 </dd> <dt>
 
 *Punk* 
 </dt> <dd>
 
-Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die IUnknown-Schnittstelle des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL fest.**
+Zeiger auf den Besitzer dieses Objekts. Wenn das Objekt aggregiert wird, übergeben Sie einen Zeiger auf die IUnknown-Schnittstelle des aggregierenden Objekts. Legen Sie andernfalls diesen Parameter auf **NULL** fest.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das -Objekt wird mit einem Verweiszähler von 0 (null) initialisiert.
 
@@ -65,10 +65,10 @@ Das -Objekt wird mit einem Verweiszähler von 0 (null) initialisiert.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Combase.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

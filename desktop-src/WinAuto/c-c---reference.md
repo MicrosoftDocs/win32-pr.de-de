@@ -1,28 +1,28 @@
 ---
 title: C/C++-Referenz
-description: Dieser Abschnitt enthält C/C++-Sprachreferenz Informationen zum Microsoft Active Accessibility \ 32; Found. In dieser sectionactive Accessibility-Benutzeroberfläche servicesactive Barrierefreiheits Text Dienste.
+description: Dieser Abschnitt enthält C/C++-Sprachreferenzinformationen zum Microsoft Active Accessibility \32; Api. In diesem AbschnittActive Accessibility Benutzeroberfläche ServicesActive Accessibility Text Services.
 ms.assetid: 2ffb5772-14ba-4bb4-b966-5aec080c1a64
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3384f1fe3175ba7550fba14aab35bfa0e0d2a43f
-ms.sourcegitcommit: 85688bbfbe5b121bc05ddf112d54c23a469dfbc0
+ms.openlocfilehash: 9f772f7d0ad7049513d134d55f4cac6559c249e1d39a77133c3aac94e6daa59b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "104314064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998800"
 ---
 # <a name="cc-reference"></a>C/C++-Referenz
 
-Dieser Abschnitt enthält Referenzinformationen zur C/C++-Sprache der Microsoft Active Accessibility-API.
+Dieser Abschnitt enthält C/C++-Sprachreferenzinformationen zur Microsoft Active Accessibility-API.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Active Accessibility von Benutzeroberflächen Diensten](active-accessibility-user-interface-services-ref.md)
--   [Active Accessibility Text Dienste](active-accessibility-text-services.md)
+-   [Active Accessibility Benutzeroberfläche Services](active-accessibility-user-interface-services-ref.md)
+-   [Active Accessibility Textdienste](active-accessibility-text-services.md)
 
- 
+ 
 
- 
+ 
 
 
 

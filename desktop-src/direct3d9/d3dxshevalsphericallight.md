@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: db671d58806d999e07b1aac1e8e4da2fb38acc6f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0b6618747659c62b6ce954725690a6d707cead489db56788850bbe8eca216acf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027270"
 ---
 # <a name="d3dxshevalsphericallight-function-d3dx9mathh"></a>D3DXSHEvalSphericalLight-Funktion (D3dx9math.h)
 
@@ -133,11 +133,11 @@ Zeiger auf den SH-Ausgabevektor für die blaue Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wertet ein sphärisches Licht aus und gibt unerklärliche SH-Daten zurück. Es gibt keine Normalisierung der Intensität des Lichts, wie es für [gerichtete Beleuchtungen](light-types.md)gibt. Daher muss beim Angeben der Intensitäten sorgfältig vorgegangen werden. Dadurch werden drei Testbeispiele berechnet: *pROut* wird zurückgegeben, während *pGOut* und *pBOut* zurückgegeben werden können.
+Wertet ein pherisches Licht aus und gibt sh-Daten zurück. Es gibt keine Normalisierung der Intensität des Lichts [](light-types.md)wie bei direktionalen Beleuchtungen. Daher muss bei der Angabe der Intensitäten vorsichtssam vor worden sein. Dadurch werden drei Beispielbeispiele berechnet. *pROut* wird zurückgegeben, während *pGOut* und *pBOut* zurückgegeben werden können.
 
 Auf der Kugel mit Einheitenradius, wie in der folgenden Abbildung dargestellt, kann die Richtung einfach mit theta, dem Winkel um die Z-Achse in der rechtshändigen Richtung und phi, dem Winkel von z, angegeben [werden.](coordinate-systems.md)
 
@@ -151,14 +151,14 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

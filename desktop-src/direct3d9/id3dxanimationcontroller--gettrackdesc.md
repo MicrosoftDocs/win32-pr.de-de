@@ -1,7 +1,7 @@
 ---
-description: Ruft die Titel Beschreibung ab.
+description: Ruft die Titelbeschreibung ab.
 ms.assetid: 7663a26f-5ad3-4a17-a502-c0dcfa730db2
-title: 'ID3DXAnimationController:: gettrackdesc-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetTrackDesc-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 940b43ede480766155d09ebe51dfb55eba114c50
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: af3c8fbddc841f345ab0dcdea67f35706bba26c13d81ffae781ab4d3def9c7bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026810"
 ---
-# <a name="id3dxanimationcontrollergettrackdesc-method"></a>ID3DXAnimationController:: gettrackdesc-Methode
+# <a name="id3dxanimationcontrollergettrackdesc-method"></a>ID3DXAnimationController::GetTrackDesc-Methode
 
-Ruft die Titel Beschreibung ab.
+Ruft die Titelbeschreibung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetTrackDesc(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Bezeichner nachverfolgen.
+Nachverfolgungsbezeichner.
 
 </dd> <dt>
 
-*PDE SC* \[ vorgenommen\]
+*pDesc* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXTRACK \_ DESC**](d3dxtrack-desc.md)**
 
-Zeiger auf die Titel Beschreibung. Weitere Informationen finden Sie unter [**D3DXTRACK \_**](d3dxtrack-desc.md).
+Zeiger auf die Trackbeschreibung. Siehe [**D3DXTRACK \_ DESC**](d3dxtrack-desc.md).
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf die Titel Beschreibung. Weitere Informationen finden Sie unter [**D3D
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

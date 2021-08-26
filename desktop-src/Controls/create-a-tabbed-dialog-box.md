@@ -1,43 +1,43 @@
 ---
-title: Erstellen eines Dialog Felds im Registerkarten Format
-description: Das Beispiel in diesem Abschnitt veranschaulicht, wie ein Dialogfeld erstellt wird, in dem Registerkarten verwendet werden, um mehrere Seiten von Steuerelementen bereitzustellen.
+title: Erstellen eines Dialogfelds im Registerkartenfenster
+description: Im Beispiel in diesem Abschnitt wird veranschaulicht, wie ein Dialogfeld erstellt wird, das Registerkarten verwendet, um mehrere Seiten von Steuerelementen zur Verfügung zu stellen.
 ms.assetid: DBF7FBDF-AADC-45CE-833E-F893C1129FC0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa0b84a8a77d18903ddbdb29687cc2b97b88872b
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 8fa2ad8ba22c2972c6bdd502728af413d4800dabf0ab5c9196a4033a52267115
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920710"
 ---
-# <a name="how-to-create-a-tabbed-dialog-box"></a>Erstellen eines Dialog Felds im Registerkarten Format
+# <a name="how-to-create-a-tabbed-dialog-box"></a>Erstellen eines Dialogfelds im Registerkartenfenster
 
-Das Beispiel in diesem Abschnitt veranschaulicht, wie ein Dialogfeld erstellt wird, in dem Registerkarten verwendet werden, um mehrere Seiten von Steuerelementen bereitzustellen. Das Haupt Dialogfeld ist ein modales Dialogfeld. Jede Seite von Steuerelementen wird durch eine Dialogfeld Vorlage mit dem untergeordneten [**WS \_ -Stil**](/windows/desktop/winmsg/window-styles) definiert. Wenn eine Registerkarte ausgewählt ist, wird ein nicht modalem Dialogfeld für die eingehende Seite erstellt, und das Dialogfeld für die ausgehende Seite wird zerstört.
+Im Beispiel in diesem Abschnitt wird veranschaulicht, wie ein Dialogfeld erstellt wird, das Registerkarten verwendet, um mehrere Seiten von Steuerelementen zur Verfügung zu stellen. Das Hauptdialogfeld ist ein modales Dialogfeld. Jede Seite von Steuerelementen wird durch eine Dialogfeldvorlage definiert, die über den [**WS \_ CHILD-Stil**](/windows/desktop/winmsg/window-styles) verfügt. Wenn eine Registerkarte ausgewählt ist, wird ein nicht modusloses Dialogfeld für die eingehende Seite erstellt, und das Dialogfeld für die ausgehende Seite wird zerstört.
 
 > [!Note]  
-> In vielen Fällen können Sie mithilfe von Eigenschaften Blättern leichter Dialogfelder mit mehreren Seiten implementieren. Weitere Informationen zu Eigenschaften Blättern finden Sie unter Informationen [zu Eigenschaften Blättern](property-sheets.md).
+> In vielen Fällen können Sie Dialogfelder mit mehreren Seiten einfacher implementieren, indem Sie Eigenschaftenblätter verwenden. Weitere Informationen zu Eigenschaftenblättern finden Sie unter [Informationen zu Eigenschaftenblättern.](property-sheets.md)
 
- 
+ 
 
-Mit der Vorlage für das Haupt Dialogfeld werden lediglich zwei Schaltflächen-Steuerelemente definiert. Beim Verarbeiten der " [**WM \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog) "-Meldung erstellt die Dialogfeld Prozedur ein Registerkarten-Steuerelement und lädt die Dialogfeld Vorlagen Ressourcen für jedes der untergeordneten Dialogfelder.
+Die Vorlage für das Hauptdialogfeld definiert einfach zwei Schaltflächen-Steuerelemente. Beim Verarbeiten der [**WM \_ INITDIALOG-Meldung**](/windows/desktop/dlgbox/wm-initdialog) erstellt die Dialogfeldprozedur ein Registerkarten-Steuerelement und lädt die Vorlagenressourcen des Dialogfelds für jedes untergeordnete Dialogfeld.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-tabbed-dialog-box"></a>Dialog Feld "Registerkarten" erstellen
+### <a name="create-a-tabbed-dialog-box"></a>Dialogfeld "Erstellen eines Registerkarten"-Dialogfelds
 
-Die Informationen werden in einer Anwendungs definierten Struktur namens dlghdr gespeichert. Ein Zeiger auf diese-Struktur wird dem Dialogfeld Fenster mithilfe der [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion zugeordnet. Die Struktur wird wie folgt in der Header Datei der Anwendung definiert.
+Die Informationen werden in einer anwendungsdefinierten Struktur namens DLGHDR gespeichert. Ein Zeiger auf diese Struktur wird dem Dialogfeldfenster mithilfe der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) zugeordnet. Die -Struktur wird wie folgt in der Headerdatei der Anwendung definiert.
 
 
 ```C++
@@ -53,9 +53,9 @@ typedef struct tag_dlghdr {
 
 
 
-Die folgende Funktion verarbeitet die [**WM- \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog) -Nachricht für das Haupt Dialogfeld. Die-Funktion ordnet die- `DLGHDR` Struktur zu, lädt die Dialogfeld Vorlagen Ressourcen für die untergeordneten Dialogfelder und erstellt das Registerkarten-Steuerelement.
+Die folgende Funktion verarbeitet die [**WM \_ INITDIALOG-Meldung**](/windows/desktop/dlgbox/wm-initdialog) für das Hauptdialogfeld. Die Funktion ordnet die Struktur zu, lädt die Vorlagenressourcen des Dialogfelds für die untergeordneten Dialogfelder `DLGHDR` und erstellt das Registerkarten-Steuerelement.
 
-Die Größe der einzelnen untergeordneten Dialogfelder wird von der [**dlgtemplateex**](/windows/desktop/dlgbox/dlgtemplateex) -Struktur angegeben. Die-Funktion überprüft die Größe der einzelnen Dialogfelder und verwendet das-Makro für die [**TCM \_**](tcm-adjustrect.md) -Nachricht, um eine geeignete Größe für das Registerkarten-Steuerelement zu berechnen. Anschließend wird das Dialogfeld so groß, dass die beiden Schaltflächen entsprechend positioniert werden. In diesem Beispiel wird der TCM-Typ mit dem [**tabstrg \_**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_adjustrect) -Element "tabstrg;" gesendet. **\_**
+Die Größe der einzelnen untergeordneten Dialogfelder wird von der [**DLGTEMPLATEEX-Struktur**](/windows/desktop/dlgbox/dlgtemplateex) angegeben. Die Funktion untersucht die Größe der einzelnen Dialogfelder und verwendet das Makro für die [**\_ TCM-Nachricht ADJUSTRECT,**](tcm-adjustrect.md) um eine geeignete Größe für das Registerkartensteuerfeld zu berechnen. Anschließend wird die Größe des Dialogfelds angepasst, und die beiden Schaltflächen werden entsprechend positioniert. In diesem Beispiel wird **TCM \_ ADJUSTRECT mithilfe** des [**TabCtrl-Makros \_ AdjustRect**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_adjustrect) sendet.
 
 
 ```C++
@@ -195,7 +195,7 @@ DLGTEMPLATEEX* DoLockDlgRes(LPCTSTR lpszResName)
 
 
 
-Die folgende Funktion verarbeitet den [TCN \_ selChange](tcn-selchange.md) -Benachrichtigungs Code für das Haupt Dialogfeld. Die-Funktion zerstört ggf. das Dialogfeld für die ausgehende Seite. Anschließend wird mithilfe der [**Funktion "**](/windows/desktop/api/winuser/nf-winuser-createdialogindirecta) -Funktion" die Funktion "-Dialogfeld" für die eingehende Seite erstellt.
+Die folgende Funktion verarbeitet den [TCN \_ SELCHANGE-Benachrichtigungscode](tcn-selchange.md) für das Hauptdialogfeld. Die -Funktion zerstört das Dialogfeld für die ausgehende Seite, falls dies der Fall ist. Anschließend wird die [**CreateDialogIndirect-Funktion**](/windows/desktop/api/winuser/nf-winuser-createdialogindirecta) verwendet, um ein modusloses Dialogfeld für die eingehende Seite zu erstellen.
 
 
 ```C++
@@ -226,7 +226,7 @@ VOID OnSelChanged(HWND hwndDlg)
 
 
 
-Die folgende Funktion verarbeitet die [**WM- \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog) -Nachricht für jedes der untergeordneten Dialogfelder. Es ist nicht möglich, die Position eines Dialog Felds anzugeben [**, das mit der Funktion**](/windows/desktop/api/winuser/nf-winuser-createdialogindirecta) "-Funktion" erstellt wird. Diese Funktion verwendet die [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion, um das untergeordnete Dialogfeld im Anzeigebereich des Registerkarten-Steuer Elements zu positionieren.
+Die folgende Funktion verarbeitet die [**WM \_ INITDIALOG-Nachricht**](/windows/desktop/dlgbox/wm-initdialog) für jedes der untergeordneten Dialogfelder. Sie können die Position eines Dialogfelds, das mit der [**CreateDialogIndirect-Funktion**](/windows/desktop/api/winuser/nf-winuser-createdialogindirecta) erstellt wird, nicht angeben. Diese Funktion verwendet die [**SetWindowPos-Funktion,**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) um den untergeordneten Dialog im Anzeigebereich des Registerkartensteuerfelds zu positionieren.
 
 
 ```C++
@@ -255,12 +255,12 @@ VOID WINAPI OnChildDialogInit(HWND hwndDlg)
 
 <dl> <dt>
 
-[Verwenden von Register Steuerelementen](using-tab-controls.md)
+[Verwenden von Registerkartensteuerelementen](using-tab-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

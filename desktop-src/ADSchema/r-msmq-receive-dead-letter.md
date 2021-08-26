@@ -1,10 +1,10 @@
 ---
-title: MSMQ-Receive-Dead-Letter erweitert rechts
-description: Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellbare
+title: erweitertes Recht "msmq-Receive-Dead-Letter"
+description: Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzugehten Nachrichten.
 ms.assetid: e7e37e6b-8f2a-4ca6-bfeb-0e74d7a80785
 ms.tgt_platform: multiple
 keywords:
-- Schema "MSMQ-Receive-Dead-Letter Extended right AD"
+- ERWEITERTEs AD-Schema für msmq-Receive-Dead-Letter
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ee68beb0afc7b9bcbb38157ffd1de82fc447dd4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b10155964a22c129cc614c8a3a898c654a0d8d8eb8dfae462f265c90010452d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922110"
 ---
-# <a name="msmq-receive-dead-letter-extended-right"></a>MSMQ-Receive-Dead-Letter erweitert rechts
+# <a name="msmq-receive-dead-letter-extended-right"></a>erweitertes Recht "msmq-Receive-Dead-Letter"
 
-Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellbare
+Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzugehten Nachrichten.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MSMQ-Receive-Dead-Letter             |
-| Anzeigename | Unzustellbare Nachricht empfangen                  |
+| CN           | msmq-Receive-Dead-Letter             |
+| Anzeigename | Empfangen von unzugeschreibenden Nachrichten                  |
 | Rights-GUID  | 4b6e08c0-df3c-11d1-9c86-006008764d0e |
 
 
@@ -37,7 +37,7 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 
@@ -72,7 +72,7 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 
@@ -83,7 +83,7 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 
@@ -94,7 +94,7 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 
@@ -105,7 +105,7 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange für unzustellba
 | Eingabe | Wert |
 |-------------------------|--------------------------------------------------------------|
 | Applies-To              | [**MSMQ-Konfiguration**](c-msmqconfiguration.md)<br/> |
-| Lokalisierung-Display-ID | 38                                                           |
+| Lokalisierungsanzeige-ID | 38                                                           |
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Ruft die Liste der verfügbaren DDE-Freigaben ab.
 ms.assetid: ce5aeddd-d9d1-40a2-a807-1a9c9f98f171
-title: Ndde ShareEnum-Funktion (nddecoapi. h)
+title: NDdeShareEnum-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: 8bfa4884b88e72cb9a3b64bebf58af53cdc1047e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6b101a7ba45e28175a8d6ee0730e704a6f519142f94e4fc2273d1d76dcfe1cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014740"
 ---
-# <a name="nddeshareenum-function"></a>Ndde ShareEnum-Funktion
+# <a name="nddeshareenum-function"></a>NDdeShareEnum-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
 Ruft die Liste der verfügbaren DDE-Freigaben ab.
 
@@ -48,53 +48,53 @@ UINT NDdeShareEnum(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Der Name des Servers, auf dem sich die DSDM befindet.
+Der Name des Servers, auf dem sich das DSDM befindet.
 
 </dd> <dt>
 
-*Nlevel* \[ in\]
+*nLevel* \[ In\]
 </dt> <dd>
 
-Reserviert. Dieser Parameter muss NULL sein.
+Reserviert. Dieser Parameter muss 0 (null) sein.
 
 </dd> <dt>
 
-*lpBuffer* \[ vorgenommen\]
+*lpBuffer* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die Liste der DDE-Freigaben empfängt. Die Liste der DDE-Freigaben wird als Sequenz von durch Null getrennten Zeichen folgen gespeichert, die mit einem doppelten NULL-Zeichen am Ende beendet werden. Dieser Parameter kann **NULL** sein. Wenn *lpBuffer* **null** ist, gibt die DSDM die Größe des Puffers zurück, der zum Speichern der Liste der Freigaben im *lpcbtotalavailable* -Parameter erforderlich ist.
+Ein Zeiger auf einen Puffer, der die Liste der DDE-Freigaben empfängt. Die Liste der DDE-Freigaben wird als Sequenz von Durch NULL getrennten Zeichenfolgen gespeichert, die am Ende mit einem doppelten NULL-Zeichen enden. Dieser Parameter kann **NULL** sein. Wenn *lpBuffer* **NULL** ist, gibt das DSDM die Größe des Puffers zurück, der für die Liste der Freigaben im *lpcbTotalAvailable-Parameter* erforderlich ist.
 
 </dd> <dt>
 
-*cbubsize* \[ in\]
+*cBufSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *lpBuffer* -Puffers in Bytes. Dieser Parameter muss NULL sein, wenn *lpBuffer* **null** ist.
+Die Größe des *lpBuffer-Puffers* in Bytes. Dieser Parameter muss 0 (null) sein, wenn *lpBuffer* **NULL** ist.
 
 </dd> <dt>
 
-*lpnentriesread* \[ vorgenommen\]
+*lpnEntriesRead* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Gesamtzahl der aufgelisteten Freigaben empfängt. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf eine Variable, die die Gesamtzahl der aufgezählten Freigaben empfängt. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*lpcbtotalavailable* \[ vorgenommen\]
+*lpcbTotalAvailable* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die im Puffer zum Speichern der Liste der DDE-Freigaben benötigt werden. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die im Puffer zum Speichern der Liste der DDE-Freigaben benötigt werden. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert "ndde \_ No \_ Error".
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert NDDE \_ NO \_ ERROR.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch den Aufruf von [**nddegeterrorstring**](nddegeterrorstring.md)in eine Text Fehlermeldung übersetzt werden kann. Wenn der *lpBuffer* -Parameter **null** ist, wird ndde \_ buf \_ zu \_ klein zurückgegeben.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann. Wenn der *lpBuffer-Parameter* **NULL** ist, wird NDDE \_ BUF \_ TOO SMALL \_ zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,21 +104,21 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Ndde shareenumw** (Unicode) und **nddebug** (ANSI)<br/>                  |
+| Unicode- und ANSI-Name<br/>   | **NDdeShareEnumW** (Unicode) und **NDdeShareEnumA** (ANSI)<br/>                  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Network dynamische Daten Exchange Overview (Übersicht über Netzwerk-dynamische Daten Exchange)](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[Netzwerk-DDE-Funktionen](network-dde-functions.md)
 </dt> </dl>
 
  

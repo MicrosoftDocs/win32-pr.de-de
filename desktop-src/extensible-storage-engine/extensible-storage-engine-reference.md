@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Referenz zu Extensible Storage Engine
-title: Extensible Storage Engine-Referenz
+description: Weitere Informationen finden Sie unter Extensible Storage Engine Reference (Referenz zur erweiterbaren Storage-Engine).
+title: Referenz zur erweiterbaren Storage-Engine
 TOCTitle: Extensible Storage Engine Reference
 ms:assetid: 5033f53b-72f1-4a28-926e-242461863071
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269245(v=EXCHG.10)
@@ -15,44 +15,44 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0fa0c26a99b5dcf640173d4720fa59954a25a049
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61efc6587d080e4afd99c54a72963a1a7afea2b77859097fb919920d85a19382
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968850"
 ---
-# <a name="extensible-storage-engine-reference"></a>Extensible Storage Engine-Referenz
+# <a name="extensible-storage-engine-reference"></a>Referenz zur erweiterbaren Storage-Engine
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="extensible-storage-engine-reference"></a>Extensible Storage Engine-Referenz
+## <a name="extensible-storage-engine-reference"></a>Referenz zur erweiterbaren Storage-Engine
 
 Die Extensible Storage Engine-Referenz enthält die folgenden Abschnitte:
 
-  - [Rückruf Funktionen für Extensible Storage Engine](./extensible-storage-engine-callback-functions.md)
+  - [Erweiterbare Storage-Engine-Rückruffunktionen](./extensible-storage-engine-callback-functions.md)
 
 <!-- end list -->
 
-  - [Erweiterbare Speicher-Engine-Konstanten](./extensible-storage-engine-constants.md)
+  - [Erweiterbare Storage-Engine-Konstanten](./extensible-storage-engine-constants.md)
 
 <!-- end list -->
 
-  - [Datentypen der Extensible Storage Engine](./extensible-storage-engine-data-types.md)
+  - [Erweiterbare Storage-Engine-Datentypen](./extensible-storage-engine-data-types.md)
 
 <!-- end list -->
 
-  - [Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)
+  - [Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)
 
 <!-- end list -->
 
-  - [Extensible Storage Engine-Dateien](./extensible-storage-engine-files.md)
+  - [Erweiterbare Storage-Engine-Dateien](./extensible-storage-engine-files.md)
 
 <!-- end list -->
 
-  - [Funktionen der erweiterbaren Speicher-Engine](./extensible-storage-engine-functions.md)
+  - [Erweiterbare Storage-Engine-Funktionen](./extensible-storage-engine-functions.md)
 
 <!-- end list -->
 
-  - [Erweiterbare Speicher-Engine-Strukturen](./extensible-storage-engine-structures.md)
+  - [Erweiterbare Storage-Engine-Strukturen](./extensible-storage-engine-structures.md)

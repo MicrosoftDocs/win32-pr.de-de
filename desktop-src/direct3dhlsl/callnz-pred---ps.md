@@ -1,6 +1,6 @@
 ---
-title: callnz pred-PS
-description: Ruft mit einem Prädikat auf, wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. Das-Prädikat verwendet einen booleschen Wert, um zu bestimmen, ob die Anweisung nicht durchgeführt werden soll.
+title: callnz pred - ps
+description: Rufen Sie mit einem Prädikat auf, wenn dies nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. Prädication verwendet einen booleschen Wert, um zu bestimmen, ob von die Anweisung nicht ausführen soll.
 ms.assetid: 9c839fc7-8b4d-4ca1-b30f-5c3f8fb45eae
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,46 +9,46 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a04bd4b1bfa16d965a90b66e3956674ecb112590
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: f56699a4853b7012401529ecfad6fbfb0006e21990a99a2fe5631faebd57674d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103948317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983290"
 ---
-# <a name="callnz-pred---ps"></a>callnz pred-PS
+# <a name="callnz-pred---ps"></a>callnz pred - ps
 
-Ruft mit einem Prädikat auf, wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. Das-Prädikat verwendet einen booleschen Wert, um zu bestimmen, ob die Anweisung nicht durchgeführt werden soll.
+Rufen Sie mit einem Prädikat auf, wenn dies nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. Prädication verwendet einen booleschen Wert, um zu bestimmen, ob von die Anweisung nicht ausführen soll.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| callnz l \# , \[ ! \] P0. Stuben|Teenie|z|Löw |
+| callnz l \# , \[ ! \] p0. {x\|y\|z\|w} |
 |----------------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   dabei \# ist l eine [Bezeichnung-PS](label---ps.md) , die den Anfang der aufzurufenden Unterroutine kennzeichnet.
--   \[!\] ist ein optionaler Negation-Modifizierer.
--   P0 ist das Prädikat Register. Siehe [Predicate Register](dx9-graphics-reference-asm-ps-registers-predicate.md).
--   {x \| y \| z \| w} ist das erforderliche Replizieren von Replizieren auf p0.
+-   Wobei l \# eine Bezeichnung ist – [ps](label---ps.md) markiert den Anfang der auf zu aufgerufenen Unterroutine.
+-   \[!\] ist ein optionaler Negatmodifizierer.
+-   p0 ist das Prädikatregister. Weitere Informationen [finden Sie unter Prädikatregister.](dx9-graphics-reference-asm-ps-registers-predicate.md)
+-   {x \| y \| z \| w} ist die erforderliche Replikation von Swizzle auf p0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| callnz-präd           |      |      |      |      |      | x    | x     | x    | x     |
+| callnz pred           |      |      |      |      |      | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 Diese Anweisung führt Folgendes aus:
 
@@ -67,12 +67,12 @@ if (specified register component is not zero)
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

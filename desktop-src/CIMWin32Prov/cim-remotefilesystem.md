@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ remotefile System-Klasse stellt ein Remote Dateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert.
+description: Die \_ CIM-Klasse RemoteFileSystem stellt ein Remotedateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert.
 ms.assetid: 932970a8-0ab3-45d8-912d-c4ba7cf433b5
 ms.tgt_platform: multiple
 title: CIM_RemoteFileSystem-Klasse
@@ -33,23 +33,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7c29e0212ba55b37abd734fb149d118ccc693908
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5d21d46de5f3a9a8d85ff94e5996dc3d19481a03f003d7030384ca2f82f0e019
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920510"
 ---
-# <a name="cim_remotefilesystem-class"></a>CIM- \_ remotefile System-Klasse
+# <a name="cim_remotefilesystem-class"></a>\_CIM-Klasse "RemoteFileSystem"
 
-Die **CIM- \_ remotefile** System-Klasse stellt ein Remote Dateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert. Der Dateispeicher für ein NFS-Dateisystem befindet sich z. b. in der Regel nicht auf den lokal kontrollierten Medien eines Computer Systems, und der Zugriff darauf erfolgt nicht direkt über einen Gerätetreiber. Unterklassen von **CIM \_ remotefile** System enthalten Client seitige Konfigurationsinformationen, die sich auf den Zugriff auf das Dateisystem beziehen.
+Die **\_ CIM-Klasse RemoteFileSystem** stellt ein Remotedateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert. Beispielsweise befindet sich der Dateispeicher für ein NFS-Dateisystem in der Regel nicht auf den lokal gesteuerten Medien eines Computersystems und wird auch nicht direkt über einen Gerätetreiber aufgerufen. Unterklassen von **CIM \_ RemoteFileSystem** enthalten clientseitige Konfigurationsinformationen im Zusammenhang mit dem Zugriff auf das Dateisystem.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -81,40 +81,40 @@ class CIM_RemoteFileSystem : CIM_FileSystem
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ remotefile System** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ RemoteFileSystem-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ remotefile System** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse RemoteFileSystem** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AvailableSpace**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Partition \| 002,4 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Bytes ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Partition \| 002.4"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes")
 </dt> </dl>
 
-Die Menge des freien Speicherplatzes für das Dateisystem in Bytes. Wenn unbekannt, geben Sie 0 ein.
+Menge des freien Speicherplatzes für das Dateisystem in Bytes. Wenn unbekannt, geben Sie 0 ein.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**BlockSize**
+**Blöcke**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -123,72 +123,72 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes")
 </dt> </dl>
 
-Größe (in Bytes) der Blöcke, die den Speicherblock bilden. Wenn unbekannt, oder wenn ein Block Konzept nicht gültig ist (z. b. für Aggregat Blöcke, Arbeitsspeicher oder logische Datenträger), geben Sie 1 (eins) ein.
+Größe der Blöcke in Bytes, die den Speicherblock bilden. Wenn unbekannt oder ein Blockkonzept nicht gültig ist (z. B. für aggregierte Blockungen, Arbeitsspeicher oder logische Datenträger), geben Sie 1 (eins) ein.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Casekonservierte**
+**CasePreserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn **true**, wird die Groß-/Kleinschreibung von Dateinamen beibehalten.
+True **gibt an,** dass der Fall von Dateinamen beibehalten wird.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
 **CaseSensitive**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass die Dateinamen der Groß-/Kleinschreibung unterstützt
+True **gibt an,** dass Dateinamen, bei der die Schreibung beachtet wird, unterstützt werden.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
-**Codesatz**
+**CodeSet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Dateisystem Unterstützte Zeichensätze oder Codierungen. Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Vom Dateisystem unterstützte Zeichensätze oder Codierungen. Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 <dt>
 
@@ -236,7 +236,7 @@ Vom Dateisystem Unterstützte Zeichensätze oder Codierungen. Diese Eigenschaft 
 
 <span id="Extended_UNIX_Code"></span><span id="extended_unix_code"></span><span id="EXTENDED_UNIX_CODE"></span>
 
-**Erweiterter UNIX-Code** (6)
+**Erweiterter UNIX Code** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -260,113 +260,113 @@ Vom Dateisystem Unterstützte Zeichensätze oder Codierungen. Diese Eigenschaft 
 **CompressionMethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Partition \| 002,7 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Partition \| 002.7")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die den Algorithmus oder das Tool angibt, das zum Komprimieren der logischen Datei verwendet wird. Wenn das Komprimierungs Schema unbekannt oder nicht beschrieben ist, verwenden Sie "unknown". Wenn die logische Datei komprimiert ist, das Komprimierungs Schema jedoch unbekannt oder nicht beschrieben ist, verwenden Sie "komprimiert". Wenn die logische Datei nicht komprimiert ist, verwenden Sie "nicht komprimiert".
+Freiformzeichenfolge, die den Algorithmus oder das Tool zum Komprimieren der logischen Datei angibt. Wenn das Komprimierungsschema unbekannt oder nicht beschrieben ist, verwenden Sie "Unknown". Wenn die logische Datei komprimiert ist, das Komprimierungsschema jedoch unbekannt oder nicht beschrieben ist, verwenden Sie "Compressed". Wenn die logische Datei nicht komprimiert ist, verwenden Sie "Nicht komprimiert".
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft, dass alle Instanzen der Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Computersystem**](cim-computersystem.md).**"Kreationclassname**")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**CreationClassName**")
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Computer Systems.
+Der Name der Erstellungsklasse des Computersystems.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Computersystem**](cim-computersystem.md).**Name**")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**")
 </dt> </dl>
 
-Der Name des Computer Systems wird festgelegt.
+Der Name des Bereichscomputersystems.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Verschlüsselungsmethode**
+**Encryptionmethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Partition \| 002,8 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Partition \| 002.8")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die den Algorithmus oder das Tool identifiziert, das zum Verschlüsseln einer logischen Datei verwendet wird. Wenn das Verschlüsselungsschema nicht verwendet wird (z. b. aus Sicherheitsgründen), verwenden Sie "unknown". Wenn die Datei verschlüsselt ist, das Verschlüsselungsschema jedoch unbekannt ist oder nicht offengelegt ist, verwenden Sie "verschlüsselt". Wenn die logische Datei nicht verschlüsselt ist, verwenden Sie "nicht verschlüsselt". Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Freiformzeichenfolge, die den Algorithmus oder das Tool zum Verschlüsseln einer logischen Datei identifiziert. Wenn das Verschlüsselungsschema nicht verschlüsselt ist (z. B. aus Sicherheitsgründen), verwenden Sie "Unknown". Wenn die Datei verschlüsselt ist, ihr Verschlüsselungsschema jedoch unbekannt oder nicht offengelegt ist, verwenden Sie "Encrypted". Wenn die logische Datei nicht verschlüsselt ist, verwenden Sie "Nicht verschlüsselt". Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
-**File System size**
+**FileSystemSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -377,42 +377,42 @@ Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("By
 
 Gesamtgröße des Dateisystems in Bytes. Wenn unbekannt, geben Sie 0 ein.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Maxdatamelength**
+**MaxFileNameLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Maximale Länge eines Datei namens innerhalb des Dateisystems. Der Wert 0 gibt an, dass die Länge des Datei namens unbegrenzt ist.
+Maximale Länge eines Dateinamens innerhalb des Dateisystems. Der Wert 0 gibt an, dass die Länge des Dateinamens unbegrenzt ist.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
@@ -425,34 +425,34 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **ReadOnly**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrfsaccess ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrFSAccess")
 </dt> </dl>
 
-**True** gibt an, dass das Dateisystem schreibgeschützt ist.
+True **gibt** an, dass das Dateisystem als schreibgeschützt festgelegt ist.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
-**Fasst**
+**wurzel**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -461,12 +461,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrfsmountpoint ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrFSMountPoint")
 </dt> </dl>
 
 Pfadname oder andere Informationen, die den Stamm des Dateisystems definieren.
 
-Diese Eigenschaft wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ FileSystem geerbt.**](cim-filesystem.md)
 
 </dd> <dt>
 
@@ -479,12 +479,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
 Aktueller Status des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -506,35 +506,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -548,41 +548,41 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ remotefile System** -Klasse wird vom [**CIM- \_ Dateisystem**](cim-filesystem.md)abgeleitet.
+Die **CIM \_ RemoteFileSystem-Klasse** wird von [**CIM \_ FileSystem abgeleitet.**](cim-filesystem.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -592,8 +592,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -602,7 +602,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Dateisystem**](cim-filesystem.md)
+[**CIM \_ FileSystem**](cim-filesystem.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Protokoll Controller und einer verfügbar gemachten logischen Einheit dar.
+description: Stellt eine Zuordnung zwischen einem Protokollcontroller und einer verfügbar gemachten logischen Einheit dar.
 ms.assetid: e8bf2b32-b4a6-4963-8a50-2b06776965e8
 title: CIM_ProtocolControllerForUnit-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 26020745057d5963ed4a892ba8639ac078aaa20b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2722bca49dbac3996295c2937003877321d5c58eb8394b4405d9ce9afce65b48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981170"
 ---
-# <a name="cim_protocolcontrollerforunit-class"></a>CIM \_ protocolcontrollerforunit-Klasse
+# <a name="cim_protocolcontrollerforunit-class"></a>CIM \_ ProtocolControllerForUnit-Klasse
 
-Stellt eine Zuordnung zwischen einem Protokoll Controller und einer verfügbar gemachten logischen Einheit dar.
+Stellt eine Zuordnung zwischen einem Protokollcontroller und einer verfügbar gemachten logischen Einheit dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,33 +41,33 @@ class CIM_ProtocolControllerForUnit : CIM_ProtocolControllerForDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ protocolcontrollerforunit** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ProtocolControllerForUnit-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ protocolcontrollerforunit** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ProtocolControllerForUnit-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ protocolcontroller**
+Datentyp: **CIM \_ ProtocolController**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Der Protokoll Controller.
+Der Protokollcontroller.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -76,23 +76,23 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Die logische Einheit, die dem Protokoll Controller zugeordnet ist.
+Die logische Einheit, die dem Protokollcontroller zugeordnet ist.
 
 </dd> <dt>
 
-**Deviceaccess**
+**DeviceAccess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zugriffsrechte, die der logischen Einheit über den Protokoll Controller erteilt wurden.
+Die Zugriffsrechte, die der logischen Einheit über den Protokollcontroller gewährt werden.
 
 <dt>
 
@@ -105,14 +105,14 @@ Die Zugriffsrechte, die der logischen Einheit über den Protokoll Controller ert
 
 <span id="Read_Write"></span><span id="read_write"></span><span id="READ_WRITE"></span>
 
-**Lese Schreibvorgang** (2)
+**Lese-/Schreibzugriff** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Read-Only"></span><span id="read-only"></span><span id="READ-ONLY"></span>
 
-Schreib **geschützt (3** )
+**Schreibgeschützt** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -126,14 +126,14 @@ Schreib **geschützt (3** )
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (5.. 15999)
+**DMTF Reserved** (5..15999)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (16000..)
+**Vendor Reserved** (16000.)
 
 
 </dt> <dd></dd> </dl>
@@ -149,7 +149,7 @@ Schreib **geschützt (3** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -158,7 +158,7 @@ Schreib **geschützt (3** )
 
 <dl> <dt>
 
-[**CIM \_ protocolcontrollerfordevice**](cim-protocolcontrollerfordevice.md)
+[**CIM \_ ProtocolControllerForDevice**](cim-protocolcontrollerfordevice.md)
 </dt> </dl>
 
  

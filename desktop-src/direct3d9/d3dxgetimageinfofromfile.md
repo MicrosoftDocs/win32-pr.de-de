@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bb03b6482d140a3b78e43d8b99c60499ae6c8b16
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1726fae1697a48d8e4aa406f5eb5cec03f6071fed4b36a199b10e385a24e6249
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027630"
 ---
 # <a name="d3dxgetimageinfofromfile-function"></a>D3DXGetImageInfoFromFile-Funktion
 
@@ -46,7 +46,7 @@ HRESULT D3DXGetImageInfoFromFile(
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Dateiname des Bilds, zu dem Informationen abgerufen werden. Wenn UNICODE oder UNICODE definiert sind, ist dieser \_ Parametertyp LPCWSTR, andernfalls ist der Typ LPCSTR.
+Dateiname des Bilds, zu dem Informationen abgerufen werden sollen. Wenn UNICODE oder \_ UNICODE definiert ist, ist dieser Parametertyp LPCWSTR, andernfalls LPCSTR.
 
 </dd> <dt>
 
@@ -63,9 +63,9 @@ Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit der
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion unterstützt sowohl Unicode- als auch ANSI-Zeichenfolgen.
 
@@ -73,14 +73,14 @@ Diese Funktion unterstützt sowohl Unicode- als auch ANSI-Zeichenfolgen.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

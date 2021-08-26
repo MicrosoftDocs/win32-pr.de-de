@@ -1,7 +1,7 @@
 ---
-description: Die getwindowposition-Methode ruft die aktuellen Koordinaten für das Fenster ab.
+description: Die GetWindowPosition-Methode ruft die aktuellen Koordinaten für das Fenster ab.
 ms.assetid: a2f46a87-b2cd-450f-8d2b-0f8695432fda
-title: Cbasecontrolwindow. getwindowposition-Methode (ctlutil. h)
+title: CBaseControlWindow.GetWindowPosition-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: af2b1bdb8b2c839644e8c0629e3e272c123d3c21
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6d576f065e807c2af47621d43940d7e48c54f36f0617d20590953a5e83ab2fc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966730"
 ---
-# <a name="cbasecontrolwindowgetwindowposition-method"></a>Cbasecontrolwindow. getwindowposition-Methode
+# <a name="cbasecontrolwindowgetwindowposition-method"></a>CBaseControlWindow.GetWindowPosition-Methode
 
-Die- `GetWindowPosition` Methode ruft die aktuellen Koordinaten für das Fenster ab.
+Die `GetWindowPosition` -Methode ruft die aktuellen Koordinaten für das Fenster ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,37 +45,37 @@ HRESULT GetWindowPosition(
 
 <dl> <dt>
 
-*pleft* 
+*pLeft* 
 </dt> <dd>
 
-Zeiger auf die linke Koordinate in Bildschirm Koordinaten.
+Zeiger auf die linke Koordinate in Bildschirmkoordinaten.
 
 </dd> <dt>
 
-*ptop* 
+*pTop* 
 </dt> <dd>
 
-Zeiger auf die obere Koordinate in Bildschirm Koordinaten.
+Zeiger auf die obere Koordinate in Bildschirmkoordinaten.
 
 </dd> <dt>
 
 *pWidth* 
 </dt> <dd>
 
-Zeiger auf die Fensterbreite in Bildschirm Koordinaten.
+Zeiger auf die Fensterbreite in Bildschirmkoordinaten.
 
 </dd> <dt>
 
 *pHeight* 
 </dt> <dd>
 
-Zeiger auf die Fensterhöhe in Bildschirm Koordinaten.
+Zeiger auf die Fensterhöhe in Bildschirmkoordinaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -92,7 +92,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

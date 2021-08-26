@@ -1,34 +1,34 @@
 ---
-description: Gibt an, ob für eine ASF-Datei (Advanced Systems Format) die VBR-Codierung (Variable Bitrate) verwendet wird.
+description: Gibt an, ob eine ASF-Datei (Advanced Systems Format) eine VBR-Codierung (Variable Bit Rate) verwendet.
 ms.assetid: 69888d66-8e96-4a20-b8c5-a01267ff3c05
-title: MF_PD_ASF_METADATA_IS_VBR-Attribut (wmcontainer. h)
+title: MF_PD_ASF_METADATA_IS_VBR-Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5863d5366fd94e230040f81d3f67f4c75fd3fe3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e97d471c6a6466290c5b2ac490f88ae33de29aa3823af420ef8b8116a81192a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955420"
 ---
-# <a name="mf_pd_asf_metadata_is_vbr-attribute"></a>MF \_ PD, \_ ASF- \_ Metadaten \_ sind \_ VBR-Attribut
+# <a name="mf_pd_asf_metadata_is_vbr-attribute"></a>MF \_ PD \_ ASF METADATA IS \_ \_ \_ VBR attribute
 
-Gibt an, ob für eine ASF-Datei (Advanced Systems Format) die VBR-Codierung (Variable Bitrate) verwendet wird.
+Gibt an, ob eine ASF-Datei (Advanced Systems Format) eine VBR-Codierung (Variable Bit Rate) verwendet.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt. Wenn der Wert **true** ist, wurde die Datei mit VBR codiert. Wenn der Wert **false** ist oder das Attribut nicht vorhanden ist, wird die VBR-Codierung in der Datei nicht verwendet.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalt. Wenn der Wert **TRUE** ist, wurde die Datei mit VBR codiert. Wenn der Wert **FALSE** ist oder das Attribut nicht vorhanden ist, verwendet die Datei keine VBR-Codierung.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode generiert dieses Attribut und legt es für den Präsentations Deskriptor fest.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) generiert dieses Attribut und legt es für den Präsentationsdeskriptor fest.
 
 > [!Note]  
-> Dieses Attribut entspricht dem **isvbr** -Attribut im Windows Media-Format-SDK.
+> Dieses Attribut entspricht dem **IsVBR-Attribut** im Windows Media Format SDK.
 
  
 
@@ -38,9 +38,9 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
@@ -51,22 +51,22 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEAttributes::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**PRESENTPresentationDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Darstellungsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

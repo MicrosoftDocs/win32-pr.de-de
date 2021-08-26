@@ -1,7 +1,7 @@
 ---
-description: Methode zum Durchführen einer vorab Überprüfung, um zu bestimmen, ob ein virtuelles System wahrscheinlich erfolgreich zu einem Zielhost migriert wird, der durch einen Netzwerknamen oder eine IP-Adresse angegeben ist.
+description: Methode zum Durchführen einer Vorabüberprüfung, um zu bestimmen, ob ein virtuelles System wahrscheinlich erfolgreich zu einem Zielhost migriert wird, der durch einen Netzwerknamen oder eine IP-Adresse angegeben wird.
 ms.assetid: bfcd4063-30fe-4d18-9df9-7b84a680814c
-title: CheckVirtualSystemIsMigratableToHost-Methode der CIM_VirtualSystemMigrationService-Klasse
+title: CheckVirtualSystemIsMigratableToHost-Methode der CIM_VirtualSystemMigrationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5769691a792b8f74225b640b0058ad4bd0e27c3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 061cf41d2c509a1fb670f2fc8fb5d56c98d54e3619bfddae59857c2cf9cc51b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980520"
 ---
-# <a name="checkvirtualsystemismigratabletohost-method-of-the-cim_virtualsystemmigrationservice-class"></a>CheckVirtualSystemIsMigratableToHost-Methode der CIM \_ virtualsystemmigrationservice-Klasse
+# <a name="checkvirtualsystemismigratabletohost-method-of-the-cim_virtualsystemmigrationservice-class"></a>CheckVirtualSystemIsMigratableToHost-Methode der CIM \_ VirtualSystemMigrationService-Klasse
 
-Methode zum Durchführen einer vorab Überprüfung, um zu bestimmen, ob ein virtuelles System wahrscheinlich erfolgreich zu einem Zielhost migriert wird, der durch einen Netzwerknamen oder eine IP-Adresse angegeben ist. Diese Methode garantiert nicht, dass eine nachfolgende Migration aufgrund dynamischer Ressourcen Verfügbarkeit immer erfolgreich ist.
+Methode zum Durchführen einer Vorabüberprüfung, um zu bestimmen, ob ein virtuelles System wahrscheinlich erfolgreich zu einem Zielhost migriert wird, der durch einen Netzwerknamen oder eine IP-Adresse angegeben wird. Diese Methode garantiert nicht, dass eine nachfolgende Migration aufgrund der dynamischen Ressourcenverfügbarkeit immer erfolgreich ist.
 
-Rückgabecode Beschreibung:
+Rückgabecodebeschreibung:
 
-Hinweis: Diese Methode ist nur dann als Übergangslösung vorgesehen, wenn eine Modellierung der Cluster Unterstützung verfügbar ist.
+Hinweis: Diese Methode ist nur als Übergangslösung vorgesehen, bis die Modellierung der Clusterunterstützung verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,68 +48,68 @@ uint32 CheckVirtualSystemIsMigratableToHost(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein [**CIM \_ Computersystem**](cim-computersystem.md) -Verweis auf das zu migrierende virtuelle Quellcomputer System.
+Ein [**\_ CIM-ComputerSystemverweis**](cim-computersystem.md) auf das zu migrierende virtuelle Quellcomputersystem.
 
 </dd> <dt>
 
-*Destinationhost* \[ in\]
+*DestinationHost* \[ In\]
 </dt> <dd>
 
-Ziel Host System für die Migration.
+Zielhostsystem für die Migration.
 
-Zulässige Formate für diesen Parameter werden durch Werte von Elementen der **destinationhostformatssupported** - \[ \] Array Eigenschaft in der Instanz von [**CIM \_ virtualsystemmigrationfunktionen**](cim-virtualsystemmigrationcapabilities.md) übermittelt, die durch die [**CIM \_ elementfunktionalitäten**](cim-elementcapabilities.md) -Zuordnung verknüpft ist.
+Akzeptable Formate für diesen Parameter werden durch Werte von Elementen der **DestinationHostFormatsSupported-Arrayeigenschaft** in der Instanz der CIM \[ \] [**\_ VirtualSystemMigrationCapabilities**](cim-virtualsystemmigrationcapabilities.md) vermittelt, die durch die [**\_ CIM-ElementCapabilities-Zuordnung zugeordnet**](cim-elementcapabilities.md) ist.
 
 </dd> <dt>
 
-*Migrationsettingdata* \[ in\]
+*MigrationSettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ virtualsystemmigrationsettingdata**](cim-virtualsystemmigrationsettingdata.md) -Klasse enthält, die für den Migrations Vorgang geltende Migrations Einstellungen darstellt.
+Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ VirtualSystemMigrationSettingData-Klasse**](cim-virtualsystemmigrationsettingdata.md) enthält, die migrationseinstellungen darstellt, die für den Migrationsvorgang gelten.
 
 </dd> <dt>
 
-*Newsystemsettingdata* \[ in\]
+*NewSystemSettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md) -Klasse enthält, die neue Eigenschaften darstellt, die für das virtuelle System nach der Migration gelten.
+Eine Zeichenfolge, die eine eingebettete Instanz der [**CIM \_ VirtualSystemSettingData-Klasse**](cim-virtualsystemsettingdata.md) enthält, die neue Eigenschaften darstellt, die nach der Migration auf das virtuelle System anwendbar sind.
 
 </dd> <dt>
 
-*Newresourcesettingdata* \[ in\]
+*NewResourceSettingData* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, das eine eingebettete Instanz der [**CIM \_ resourcezucationsettingdata**](cim-resourceallocationsettingdata.md) -Klasse enthält, die neue Eigenschaften darstellt, die für virtuelle Ressourcen im Bereich des virtuellen Systems nach der Migration gelten.
+Array von Zeichenfolgen, die jeweils eine eingebettete Instanz der [**\_ CIM-Klasse ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md) enthalten, die neue Eigenschaften darstellt, die nach der Migration auf virtuelle Ressourcen im Bereich des virtuellen Systems anwendbar sind.
 
 </dd> <dt>
 
-*IsMigratable* \[ vorgenommen\]
+*IsMigratable* \[ out\]
 </dt> <dd>
 
-Das Ergebnis der Migrations Überprüfung, das angibt, ob das virtuelle System erfolgreich migriert werden kann.
+Das Migrationsüberprüfungsergebnis, das angibt, ob das virtuelle System erfolgreich migriert werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                            |
+| Rückgabecode/-wert                                                                                                                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>    | Überprüfung durchgeführt Das Ergebnis wurde über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                                                                                                                                                                                                                 |
-| <dl> <dt>**Nicht unterstützt**</dt> <dt>1</dt> </dl>              | Die Methode wird von der Implementierung nicht unterstützt. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                                                                                                                                                                                       |
-| <dl> <dt></dt> Fehler <dt>2</dt> </dl>                     | Überprüfen von nicht spezifizierten Gründen fehlgeschlagen. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                                                                                                                                                                                         |
-| <dl> <dt>**Timeout**</dt> <dt>3</dt> </dl>                    | Timeout bei der Überprüfung. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                                                                                                                                                                                                              |
-| <dl> <dt>**Ungültiger Parameter**</dt> <dt>4</dt> </dl>          | Mindestens ein Parameter ist formal ungültig. Beispielsweise könnte der Wert des *destinationhost* -Parameters in einem nicht unterstützten Format angegeben werden. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                                                                    |
-| <dl> <dt>**Ungültiger Status**</dt> <dt>5</dt> </dl>              | Das virtuelle Quellsystem, das Quell Host System oder das Ziel Host System befinden sich in einem Zustand, der die Initiierung der angeforderten Migration des virtuellen Systems zulässt. Dabei kann es sich um eine temporäre Bedingung handeln. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/>                                                                                           |
-| <dl> Nicht <dt>**kompatible Parameter**</dt> <dt>6</dt> </dl>    | Mindestens ein Eingabeparameter ist nicht als Satz oder in Bezug auf den Zielhost inkompatibel. Beispielsweise enthält der Wert des *migrationnewsettingdata* -Parameters Eigenschaften, die vom Ziel Host System, das durch den Wert des *destinationhost* -Parameters identifiziert wird, nicht unterstützt werden. Es wurde kein Ergebnis über den Wert des \[ out \] *IsMigratable* -Parameters berichtet.<br/> |
-| <dl> <dt>**DMTF reserviert**</dt> <dt>..</dt> </dl>             |                                                                                                                                                                                                                                                                                                                                                                                        |
-| <dl> <dt>**Reservierte Methode**</dt> <dt>4097.. 32767</dt> </dl>  |                                                                                                                                                                                                                                                                                                                                                                                        |
-| <dl> <dt>**Hersteller spezifischer**</dt> <dt>32768.. 65535</dt> </dl> |                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>    | Durchgeführte Überprüfung; Ergebnis, das über den Wert des \[ Out \] *IsMigratable-Parameters gemeldet* wird.<br/>                                                                                                                                                                                                                                                                                 |
+| <dl> <dt>**Nicht unterstützt**</dt> <dt>1</dt> </dl>              | Methode, die von der Implementierung nicht unterstützt wird. Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/>                                                                                                                                                                                                                                                       |
+| <dl> <dt>**Fehler**</dt> <dt>2</dt> </dl>                     | Fehler bei der Überprüfung aus nicht angegebenen Gründen. Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/>                                                                                                                                                                                                                                                         |
+| <dl> <dt>**Timeout**</dt> <dt>3</dt> </dl>                    | Check timed out (Timed beim Überprüfen). Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/>                                                                                                                                                                                                                                                                              |
+| <dl> <dt>**Ungültiger Parameter**</dt> <dt>4</dt> </dl>          | Mindestens ein Parameter ist formal ungültig. Beispielsweise hätte der Wert des *Parameters DestinationHost* in einem nicht unterstützten Format angegeben werden können. Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/>                                                                                                                                    |
+| <dl> <dt>**Ungültiger Zustand**</dt> <dt>5</dt> </dl>              | Das virtuelle Quellsystem, das Quellhostsystem oder das Zielhostsystem befinden sich in einem Zustand, der die Initiierung der angeforderten Migration des virtuellen Systems ermöglicht. dies kann eine vorübergehende Bedingung sein. Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/>                                                                                           |
+| <dl> <dt>**Inkompatible Parameter**</dt> <dt>6</dt> </dl>    | Mindestens ein Eingabeparameter ist als Satz oder in Bezug auf den Zielhost inkompatibel. Der Wert des Parameters *MigrationNewSettingData* enthält beispielsweise Eigenschaften, die nicht vom Zielhostsystem unterstützt werden, das durch den Wert des *DestinationHost-Parameters identifiziert* wird. Über den Wert des Out \[ \] *IsMigratable-Parameters* wird kein Ergebnis gemeldet.<br/> |
+| <dl> <dt>**DMTF Reserved**</dt> <dt>..</dt> </dl>             |                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**Reservierte**</dt> <dt>Methode 4097..32767</dt> </dl>  |                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**Herstellerspezifisch**</dt> <dt>32768..65535</dt> </dl> |                                                                                                                                                                                                                                                                                                                                                                                        |
 
 
 
@@ -124,7 +124,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -133,7 +133,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md)
+[**CIM \_ VirtualSystemMigrationService**](cim-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

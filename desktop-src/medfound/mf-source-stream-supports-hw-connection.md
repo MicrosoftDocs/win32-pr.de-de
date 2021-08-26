@@ -1,40 +1,40 @@
 ---
-description: Gibt an, ob eine Medienquelle den Hardware Datenfluss unterstützt.
+description: Gibt an, ob eine Medienquelle den Hardwaredatenfluss unterstützt.
 ms.assetid: 32FEBC99-0AE0-4FE9-90AB-5FB204BD4C83
-title: MF_SOURCE_STREAM_SUPPORTS_HW_CONNECTION-Attribut (mspdl. h)
+title: MF_SOURCE_STREAM_SUPPORTS_HW_CONNECTION -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 751d672e664ab1849376d839285393075ddf6af6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 659672b11cbcaa51f543eec8239f56ba792584a4b1ac44af25ed76016cdeb2a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955145"
 ---
-# <a name="mf_source_stream_supports_hw_connection-attribute"></a>Der MF- \_ \_ Quellstream \_ unterstützt das \_ HW- \_ Verbindungs Attribut
+# <a name="mf_source_stream_supports_hw_connection-attribute"></a>MF \_ SOURCE STREAM SUPPORTS HW CONNECTION attribute (MF-QUELLSTREAM \_ UNTERSTÜTZT \_ \_ \_ HW-VERBINDUNGSattribut)
 
-Gibt an, ob eine Medienquelle den Hardware Datenfluss unterstützt.
+Gibt an, ob eine Medienquelle den Hardwaredatenfluss unterstützt.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird verwendet, wenn eine Medienquelle einen Proxy für ein Hardware Gerät verwendet und Daten nach unten über einen Hardwarebus übertragen kann, ohne dass Daten an die CPU gesendet werden. Beispielsweise kann eine Webcam H. 264-codiertes Video direkt an einen integrierten Hardware Decoder übermitteln.
+Dieses Attribut wird verwendet, wenn eine Medienquelle einen Proxy an ein Hardwaregerät sendet und Daten nachgeschaltet über einen Hardwarebus übertragen kann, ohne Daten an die CPU zu senden. Beispielsweise kann eine Webcam H.264-codiertes Video direkt an einen integrierten Hardwaredecoder senden.
 
-In diesem Szenario werden Quelle und Decoder weiterhin in der Microsoft Media Foundation durch ein [Medienquellen](media-sources.md) Objekt und eine [Media Foundation Transformation](media-foundation-transforms.md) (MFT) dargestellt. Zwischen diesen beiden Objekten auf der Pipeline Ebene werden jedoch keine Daten übertragen, sondern nur auf der Hardwareebene, wie in der folgenden Abbildung dargestellt.
+In diesem Szenario werden Quelle und Decoder weiterhin in [](media-sources.md) der Microsoft Media Foundation medienquellenobjekt und einer Media Foundation Transform (MFT) dargestellt. [](media-foundation-transforms.md) Allerdings fließen keine Daten zwischen diesen beiden Objekten auf der Pipelineebene, sondern nur auf der Hardwareebene, wie im folgenden Diagramm dargestellt.
 
-![ein Diagramm, das eine Hardware Proxy Quelle anzeigt.](images/proxy-mft3.png)
+![Ein Diagramm, das eine Hardwareproxyquelle zeigt.](images/proxy-mft3.png)
 
-Die Verbindung zwischen der Medienquelle und der MFT wird wie folgt ausgehandelt.
+Die Verbindung zwischen der Medienquelle und MFT wird wie folgt ausgehandelt.
 
-1.  Die Pipeline fragt die Medienquelle für die [**imfmediasourceex**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourceex) -Schnittstelle ab. (Diese Schnittstelle ist für Medienquellen optional, die unterstützt.)
-2.  Die Pipeline ruft [**imfmediasourceex:: getstreamattributs**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getstreamattributes) auf, um einen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger zu erhalten.
-3.  Die Pipeline Abfragen für den MF- \_ Quelldaten \_ Strom \_ unterstützen das HW- \_ \_ Verbindungs Attribut. Wenn das Attribut vorhanden und gleich **true** ist, unterstützt die Medienquelle Hardware Verbindungen.
-4.  Die Pipeline prüft, ob es sich bei der MFT auch um einen Hardware Proxy handelt, indem auf der MFT das Attribut Attribut für die MFT-Aufzählung der [ \_ Hardware- \_ \_ URL \_ ](mft-enum-hardware-url-attribute.md) überprüft wird. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
-5.  Die Pipeline legt das [Attribut Attribut des verbundenen MFT- \_ \_ Streams \_ ](mft-connected-stream-attribute.md) auf dem MFT fest. Der Wert dieses Attributs ist der [**imfattribute**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger, der aus der Medienquelle in Schritt 2 abgerufen wurde.
-6.  Die Pipeline legt die mit dem [ \_ HW- \_ \_ \_ streamattribut verbundene MFT](mft-connected-to-hw-stream.md) für die Medienquelle und die MFT auf " **true** " fest.
+1.  Die Pipeline fragt die Medienquelle für die [**BENUTZEROBERFLÄCHEMediaSourceEx-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourceex) ab. (Diese Schnittstelle ist optional, damit Medienquellen unterstützt werden.)
+2.  Die Pipeline ruft [**DEN TYPSMEDIASourceEx::GetStreamAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getstreamattributes) auf, um einen [**ATTRIBUTATTRIBUTEs-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) zu erhalten.
+3.  Die Pipelineabfragen für das MF \_ SOURCE \_ STREAM SUPPORTS \_ \_ HW \_ CONNECTION-Attribut. Wenn das Attribut vorhanden und gleich **TRUE** ist, unterstützt die Medienquelle Hardwareverbindungen.
+4.  Die Pipeline überprüft, ob MFT auch ein Hardwareproxy ist, indem sie auf das [Attribut MFT \_ ENUM HARDWARE URL Attribute (MFT-ENUM-HARDWARE-URL-Attribut) \_ \_ \_ ](mft-enum-hardware-url-attribute.md) im MFT überprüft. Weitere Informationen finden Sie unter [Hardware-MFTs](hardware-mfts.md).
+5.  Die Pipeline legt das [Attribut MFT \_ CONNECTED STREAM \_ \_ ATTRIBUTE](mft-connected-stream-attribute.md) auf dem MFT fest. Der Wert dieses Attributs ist der VON der Medienquelle in Schritt 2 abgerufene [**ATTRIBUTEAttribute-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)
+6.  Die Pipeline legt das [MFT \_ CONNECTED TO \_ \_ HW \_ STREAM-Attribut](mft-connected-to-hw-stream.md) sowohl für die Medienquelle als auch für MFT auf TRUE fest. 
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,9 +42,9 @@ Die Verbindung zwischen der Medienquelle und der MFT wird wie folgt ausgehandelt
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -52,7 +52,7 @@ Die Verbindung zwischen der Medienquelle und der MFT wird wie folgt ausgehandelt
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Hardware-MFTs](hardware-mfts.md)

@@ -1,7 +1,7 @@
 ---
 description: Erstellt ein Sprite-Objekt, das einem bestimmten Gerät zugeordnet ist. Sprite-Objekte werden verwendet, um 2D-Bilder auf den Bildschirm zu zeichnen.
 ms.assetid: 1611073f-0590-415a-8ea5-dc1d224f20b9
-title: D3DXCreateSprite-Funktion (D3dx9core. h)
+title: D3DXCreateSprite-Funktion (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1e16feb2ff07f10703c5243ebeaaee3a2a15e7f0
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8fe6d4897a581302f27544217c3caf5b6c723ce2ff4aed611b40a21cd7b0d35f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027740"
 ---
 # <a name="d3dxcreatesprite-function"></a>D3DXCreateSprite-Funktion
 
@@ -41,21 +41,21 @@ HRESULT D3DXCreateSprite(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, das Gerät, das dem Sprite zugeordnet werden soll.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das Gerät, das dem Sprite zugeordnet werden soll.
 
 </dd> <dt>
 
-*ppsprite* \[ vorgenommen\]
+*ppSprite* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXSPRITE**](id3dxsprite.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXSprite**](id3dxsprite.md) -Schnittstelle. Diese Schnittstelle ermöglicht dem Benutzer den Zugriff auf Sprite-Funktionen.
+Adresse eines Zeigers auf eine [**ID3DXSprite-Schnittstelle.**](id3dxsprite.md) Diese Schnittstelle ermöglicht dem Benutzer den Zugriff auf Sprite-Funktionen.
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Adresse eines Zeigers auf eine [**ID3DXSprite**](id3dxsprite.md) -Schnittstelle.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Schnittstelle kann verwendet werden, um zweidimensionale Bilder im Bildschirmbereich des zugeordneten Geräts zu zeichnen.
 
@@ -75,8 +75,8 @@ Diese Schnittstelle kann verwendet werden, um zweidimensionale Bilder im Bildsch
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -84,7 +84,7 @@ Diese Schnittstelle kann verwendet werden, um zweidimensionale Bilder im Bildsch
 
 <dl> <dt>
 
-[Universell Funktionen](dx9-graphics-reference-d3dx-functions-general-purpose.md)
+[Universell Functions](dx9-graphics-reference-d3dx-functions-general-purpose.md)
 </dt> </dl>
 
  

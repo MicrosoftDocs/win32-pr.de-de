@@ -1,11 +1,11 @@
 ---
-title: Iwmperror clearerrorqueue-Methode
-description: Mit der clearerrorqueue-Methode werden die Fehler in der Fehler Warteschlange gelöscht. | Iwmperror clearerrorqueue-Methode
+title: IWMPError clearErrorQueue-Methode
+description: Die clearErrorQueue-Methode löscht die Fehler aus der Fehlerwarteschlange. | IWMPError clearErrorQueue-Methode
 ms.assetid: a8e8e666-56e4-4e75-9ed5-2714d272ce7c
 keywords:
-- clearerrorqueue-Methode, Windows Media Player
-- clearerrorqueue-Methode, Windows Media Player, iwmperror-Schnittstelle
-- Iwmperror-Schnittstelle, Windows Media Player, clearerrorqueue-Methode
+- clearErrorQueue-Methode Windows Media Player
+- clearErrorQueue-Methode Windows Media Player , IWMPError-Schnittstelle
+- IWMPError-Schnittstelle Windows Media Player , clearErrorQueue-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98c3f422a9bc32049106d83c970bd8d2c9b2110f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8f75b4e4d2a0e80a3f55a38744758497abc71f5899498fee95ee3b3db752631c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000450"
 ---
-# <a name="iwmperrorclearerrorqueue-method"></a>Iwmperror:: clearerrorqueue-Methode
+# <a name="iwmperrorclearerrorqueue-method"></a>IWMPError::clearErrorQueue-Methode
 
-Mit der **clearerrorqueue** -Methode werden die Fehler in der Fehler Warteschlange gelöscht.
+Die **clearErrorQueue-Methode** löscht die Fehler aus der Fehlerwarteschlange.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,15 +53,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um die Fehler Warteschlange zu löschen, nachdem eine Reihe von Fehlern verarbeitet wurde.
+Verwenden Sie diese Methode, um die Fehlerwarteschlange zu löschen, nachdem eine Reihe von Fehlern verarbeitet wurde.
 
-Sie sollten **iwmpsettings. enableerrordialogs** auf **false** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Sie sollten **IWMPSettings.enableErrorDialogs** auf **FALSE** festlegen, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **clearerrorqueue** in einem Fehler Ereignishandler verwendet, um die Fehler Warteschlange zu leeren, nachdem alle Fehlerbeschreibungen angezeigt wurden. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **clearErrorQueue** in einem Error-Ereignishandler verwendet, um die Fehlerwarteschlange zu leeren, nachdem alle Fehlerbeschreibungen angezeigt wurden. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -120,7 +120,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -130,10 +130,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmperror-Schnittstelle (VB und c#)**](iwmperror--vb-and-c.md)
+[**IWMPError-Schnittstelle (VB und C#)**](iwmperror--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. enableerrordialogs (VB und c#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
+[**IWMPSettings.enableErrorDialogs (VB und C#)**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)
 </dt> </dl>
 
  

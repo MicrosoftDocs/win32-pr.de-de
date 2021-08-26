@@ -1,54 +1,54 @@
 ---
-title: VML-alt-Attribut
-description: VML-alt-Attribut
+title: VML ALT-Attribut
+description: VML ALT-Attribut
 ms.assetid: 6b7e778c-d8e2-432e-b69a-5d80fa62d105
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b420d556e69ed2f987a3a3b10a5709f926dc5c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 08714efca9a390cbbec2f3dcf14782053d34db3506462214b9e62ebf1da206a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905340"
 ---
-# <a name="vml-alt-attribute"></a>VML-alt-Attribut
+# <a name="vml-alt-attribute"></a>VML ALT-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert alternativen Text, der anstelle einer Grafik angezeigt werden soll. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* alt = " *Ausdruck* " >
+<v: *element* alt=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . alt = "*Ausdruck*"
+*element* .alt="*expression*"
 
-*Ausdruck* = *Element*. alt
+*expression* = *.alt-Element*
 
 **Anmerkungen**
 
-Das **alt** -Attribut ähnelt dem standardmäßigen HTML- **alt** -Attribut. Dieses Attribut bietet eine Möglichkeit für Browser, die Text in Sprache konvertieren, um grafische Elemente auf einer Seite zu beschreiben.
+Das **Alt-Attribut** ähnelt dem STANDARD-HTML-Alt-Attribut.  Dieses Attribut bietet Browsern, die Text in Sprache konvertieren, eine Möglichkeit, grafische Elemente auf einer Seite zu beschreiben.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Beispiel**
 
-Das **alt** -Element unten zeigt den Ausdruck "rotes Rechteck" in Browsern an, in denen Webseiten in gesprochene Ausdrücke konvertiert werden.
+Das unten stehende **Alt-Element** zeigt den Ausdruck "Rotes Rechteck" in Browsern an, die Webseiten in gesprochene Ausdrücke konvertieren.
 
 
 ```HTML
@@ -59,8 +59,8 @@ Das **alt** -Element unten zeigt den Ausdruck "rotes Rechteck" in Browsern an, i
 
 
 
-[Beispiel](/previous-versions/bb229663(v=vs.85))für ein alt-Attribut. (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Alt-Attribut – Beispiel.](/previous-versions/bb229663(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

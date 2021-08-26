@@ -1,37 +1,37 @@
 ---
-description: Die servicabstall-Tabelle wird verwendet, um einen Dienst zu installieren, der über die folgenden Spalten verfügt.
+description: Die Tabelle ServiceInstall wird zum Installieren eines Diensts verwendet und weist die folgenden Spalten auf.
 ms.assetid: 81688d31-e560-4dd0-8d84-efb50206c76e
-title: Servicabstall-Tabelle
+title: ServiceInstall-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b502583802a26c10bfd9572375149720c7c597f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3850b957df4dd0af662354c14f82717e4b86ad597f151c6a45bb8dc1bebea5af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039960"
 ---
-# <a name="serviceinstall-table"></a>Servicabstall-Tabelle
+# <a name="serviceinstall-table"></a>ServiceInstall-Tabelle
 
-Die servicabstall-Tabelle wird verwendet, um einen Dienst zu installieren, der über die folgenden Spalten verfügt.
+Die Tabelle ServiceInstall wird zum Installieren eines Diensts verwendet und weist die folgenden Spalten auf.
 
 
 
-| Spalte         | Typ                               | Schlüssel | Nullwerte zulässig |
+| Spalte         | Typ                               | Key | Nullwerte zulässig |
 |----------------|------------------------------------|-----|----------|
-| Serviceingestall | [Bezeichner](identifier.md)       | J   | N        |
-| Name           | [Großformatige](formatted.md)         | N   | N        |
-| DisplayName    | [Großformatige](formatted.md)         | N   | J        |
-| ServiceType    | [Doubleiteger](doubleinteger.md) | N   | N        |
-| StartType      | [Doubleiteger](doubleinteger.md) | N   | N        |
-| ErrorControl   | [Doubleiteger](doubleinteger.md) | N   | N        |
-| LoadOrderGroup | [Großformatige](formatted.md)         | N   | J        |
-| Abhängigkeiten   | [Großformatige](formatted.md)         | N   | J        |
-| StartName      | [Großformatige](formatted.md)         | N   | J        |
-| Kennwort       | [Großformatige](formatted.md)         | N   | J        |
-| Argumente      | [Großformatige](formatted.md)         | N   | J        |
-| Komponente\_    | [Bezeichner](identifier.md)       | N   | N        |
-| BESCHREIBUNG    | [Großformatige](formatted.md)         | N   | J        |
+| ServiceInstall | [Identifier](identifier.md)       | J   | N        |
+| Name           | [Formatiert](formatted.md)         | N   | N        |
+| DisplayName    | [Formatiert](formatted.md)         | N   | J        |
+| ServiceType    | [DoubleInteger](doubleinteger.md) | N   | N        |
+| StartType      | [DoubleInteger](doubleinteger.md) | N   | N        |
+| ErrorControl   | [DoubleInteger](doubleinteger.md) | N   | N        |
+| LoadOrderGroup | [Formatiert](formatted.md)         | N   | J        |
+| Abhängigkeiten   | [Formatiert](formatted.md)         | N   | J        |
+| StartName      | [Formatiert](formatted.md)         | N   | J        |
+| Kennwort       | [Formatiert](formatted.md)         | N   | J        |
+| Argumente      | [Formatiert](formatted.md)         | N   | J        |
+| Komponente\_    | [Identifier](identifier.md)       | N   | N        |
+| BESCHREIBUNG    | [Formatiert](formatted.md)         | N   | J        |
 
 
 
@@ -41,52 +41,52 @@ Die servicabstall-Tabelle wird verwendet, um einen Dienst zu installieren, der �
 
 <dl> <dt>
 
-<span id="ServiceInstall"></span><span id="serviceinstall"></span><span id="SERVICEINSTALL"></span>Serviceingestall
+<span id="ServiceInstall"></span><span id="serviceinstall"></span><span id="SERVICEINSTALL"></span>ServiceInstall
 </dt> <dd>
 
 Dies ist der Primärschlüssel für die Tabelle.
 
 </dd> <dt>
 
-<span id="Name"></span><span id="name"></span><span id="NAME"></span>Benennen
+<span id="Name"></span><span id="name"></span><span id="NAME"></span>Namen
 </dt> <dd>
 
-Diese Spalte ist die Zeichenfolge, mit der der zu installier End Dienst Name erteilt wird. Die Zeichenfolge hat eine maximale Länge von 256 Zeichen. Die Dienststeuerungs-Manager-Datenbank behält die Groß-/Kleinschreibung der Zeichen im Dienstnamen bei Ein Schrägstrich (/) und ein umgekehrter Schrägstrich ( \\ ) sind ungültige Dienst namens Zeichen.
+Diese Spalte ist die Zeichenfolge, die den zu installierende Dienstnamen angibt. Die Zeichenfolge hat eine maximale Länge von 256 Zeichen. Die Dienststeuerungs-Manager-Datenbank behält die Groß-/Kleinschreibung der Zeichen im Dienstnamen bei, bei Vergleichen von Dienstnamen wird jedoch die Groß-/Kleinschreibung nicht beachtet. Schrägstriche (/) und umgekehrter Schrägstrich \\ () sind ungültige Dienstnamenzeichen.
 
 </dd> <dt>
 
-<span id="DisplayName"></span><span id="displayname"></span><span id="DISPLAYNAME"></span>Display Name
+<span id="DisplayName"></span><span id="displayname"></span><span id="DISPLAYNAME"></span>Displayname
 </dt> <dd>
 
-Diese Spalte ist die lokalisierbare Zeichenfolge, mit der Benutzeroberflächen Programme den Dienst identifizieren. Die Zeichenfolge hat eine maximale Länge von 256 Zeichen. Der Dienststeuerungs-Manager behält die Groß-/Kleinschreibung des anzeigen Amens bei
+Diese Spalte ist die lokalisierbare Zeichenfolge, die Benutzeroberflächenprogramme zum Identifizieren des Diensts verwenden. Die Zeichenfolge hat eine maximale Länge von 256 Zeichen. Der Dienststeuerungs-Manager behält die Groß-/Kleinschreibung des Anzeigenamens bei, bei Anzeigenamenvergleichen wird jedoch die Groß-/Kleinschreibung nicht beachtet.
 
 </dd> <dt>
 
-<span id="ServiceType"></span><span id="servicetype"></span><span id="SERVICETYPE"></span>Service Type
+<span id="ServiceType"></span><span id="servicetype"></span><span id="SERVICETYPE"></span>Servicetype
 </dt> <dd>
 
-Bei dieser Spalte handelt es sich um einen Satz von Bitflags, die den Diensttyp angeben. In dieser Spalte muss einer der folgenden Dienst Typen angegeben werden.
+Diese Spalte besteht aus einer Reihe von Bitflags, die den Diensttyp angeben. Einer der folgenden Diensttypen muss in dieser Spalte angegeben werden.
 
 
 
 | Diensttyp                | Wert      | BESCHREIBUNG                                                                                                                                                                                                                  |
 |--------------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Eigener Win32-Dienst \_ \_ Prozess   | 0x00000010 | Ein Microsoft Win32-Dienst, der seinen eigenen Prozess ausführt.                                                                                                                                                                         |
-| \_Win32- \_ Freigabe \_ Prozess für Dienst | 0x00000020 | Ein Win32-Dienst, der einen Prozess freigibt.                                                                                                                                                                                       |
-| \_interaktiver Dienst \_ Prozess  | 0x00000100 | Ein Win32-Dienst, der mit dem Desktop interagiert. Dieser Wert kann nicht allein verwendet werden und muss einem der beiden vorherigen Typen hinzugefügt werden. Bei Verwendung dieses Flags muss die StartName-Spalte auf LocalSystem oder NULL festgelegt werden.<br/> |
+| SERVICE \_ WIN32 \_ OWN \_ PROCESS   | 0x00000010 | Ein Microsoft Win32-Dienst, der einen eigenen Prozess ausführt.                                                                                                                                                                         |
+| \_ \_ DIENST-WIN32-FREIGABEPROZESS \_ | 0x00000020 | Ein Win32-Dienst, der einen Prozess gemeinsam nutzt.                                                                                                                                                                                       |
+| \_INTERAKTIVER \_ DIENSTPROZESS  | 0x00000100 | Ein Win32-Dienst, der mit dem Desktop interagiert. Dieser Wert kann nicht allein verwendet werden und muss einem der beiden vorherigen Typen hinzugefügt werden. Die Spalte StartName muss bei Verwendung dieses Flags auf LocalSystem oder NULL festgelegt werden.<br/> |
 
 
 
  
 
-Die folgenden Dienst Typen werden nicht unterstützt.
+Die folgenden Diensttypen werden nicht unterstützt.
 
 
 
 | Diensttyp               | Wert      | BESCHREIBUNG                   |
 |-------------------------------|------------|-------------------------------|
-| Dienst \_ -Kernel- \_ Treiber       | 0x00000001 | Ein Treiber Dienst.             |
-| Dienst \_ Datei \_ System- \_ Treiber | 0x00000002 | Ein Dateisystem-Treiber Dienst. |
+| \_ \_ DIENSTKERNELTREIBER       | 0x00000001 | Ein Treiberdienst.             |
+| \_ \_ \_ DIENSTDATEISYSTEMTREIBER | 0x00000002 | Ein Dateisystemtreiberdienst. |
 
 
 
@@ -97,38 +97,38 @@ Die folgenden Dienst Typen werden nicht unterstützt.
 <span id="StartType"></span><span id="starttype"></span><span id="STARTTYPE"></span>StartType
 </dt> <dd>
 
-Bei dieser Spalte handelt es sich um einen Satz von Bitflags, die angeben, wann der Dienst gestartet werden soll. In dieser Spalte muss einer der folgenden Typen von Dienst Starts angegeben werden.
+Diese Spalte besteht aus einer Reihe von Bitflags, die angeben, wann der Dienst gestartet werden soll. Einer der folgenden Dienststarttypen muss in dieser Spalte angegeben werden.
 
 
 
-| Typ des Dienst Starts  | Wert      | BESCHREIBUNG                                                                                                |
+| Typ des Dienststarts  | Wert      | BESCHREIBUNG                                                                                                |
 |------------------------|------------|------------------------------------------------------------------------------------------------------------|
-| \_automatischer Dienst \_ Start   | 0x00000002 | Ein Dienst wird beim Systemstart gestartet.                                                              |
-| Service \_ Demand- \_ Start | 0x00000003 | Ein Dienst wird gestartet, wenn der Dienststeuerungs-Manager die [**Start Service**](/windows/win32/api/winsvc/nf-winsvc-startservicea) -Funktion aufruft. |
-| Dienst \_ deaktiviert      | 0x00000004 | Gibt einen Dienst an, der nicht mehr gestartet werden kann.                                                         |
+| SERVICE \_ AUTO \_ START   | 0x00000002 | Ein Dienst wird während des Systemstarts gestartet.                                                              |
+| SERVICE \_ DEMAND \_ START | 0x00000003 | Ein Dienst wird gestartet, wenn der Dienststeuerungs-Manager die [**StartService-Funktion**](/windows/win32/api/winsvc/nf-winsvc-startservicea) aufruft. |
+| DIENST \_ DEAKTIVIERT      | 0x00000004 | Gibt einen Dienst an, der nicht mehr gestartet werden kann.                                                         |
 
 
 
  
 
-Der Windows Installer kann die Startoptionen für Dienst Starts \_ \_ und Dienst System nicht verwenden \_ \_ .
+Der Windows Installer kann die Optionen SERVICE BOOT START und SERVICE SYSTEM START nicht \_ \_ \_ \_ verwenden.
 
 </dd> <dt>
 
 <span id="ErrorControl"></span><span id="errorcontrol"></span><span id="ERRORCONTROL"></span>ErrorControl
 </dt> <dd>
 
-Diese Spalte gibt die vom Start Programm ausgeführte Aktion an, wenn der Dienst beim Start nicht gestartet werden kann. Diese Werte wirken sich auf die ServiceControl-StartService-Ereignisse für installierte Dienste aus. In dieser Spalte muss eines der folgenden fehlersteuerungflags angegeben werden.
+Diese Spalte gibt die Aktion an, die vom Startprogramm ausgeführt wird, wenn der Dienst während des Starts nicht gestartet werden kann. Diese Werte wirken sich auf die ServiceControl StartService-Ereignisse für installierte Dienste aus. Eines der folgenden Fehlersteuerungsflags muss in dieser Spalte angegeben werden.
 
-Durch das Hinzufügen der Konstanten **msidbserviceinstallerrorcontrolvital** (Value = 0x08000) zu den Flags in der folgenden Tabelle wird angegeben, dass die allgemeine Installation fehlschlagen soll, wenn der Dienst nicht im System installiert werden kann.
+Wenn Sie den Flags in der folgenden Tabelle die Konstante **msidbServiceInstallErrorControlVital** (value = 0x08000) hinzufügen, wird angegeben, dass die Gesamtinstallation fehlschlagen sollte, wenn der Dienst nicht im System installiert werden kann.
 
 
 
-| Fehlersteuerungsflag       | Wert      | Aktion des Start Programms                                                                                                                                                                       |
+| Fehlersteuerungsflag       | Wert      | Aktion des Startprogramms                                                                                                                                                                       |
 |--------------------------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dienst \_ Fehler \_ ignorieren   | 0x00000000 | Protokolliert den Fehler und setzt den Startvorgang fort.                                                                                                                                       |
-| Dienst \_ Fehler \_ Normal   | 0x00000001 | Protokolliert den Fehler, zeigt ein Meldungs Feld an und setzt den Startvorgang fort.                                                                                                                    |
-| Dienst \_ Fehler \_ kritisch | 0x00000003 | Protokolliert den Fehler, falls dies möglich ist, und das System wird neu gestartet, und die letzte Konfiguration ist gut bekannt. Wenn die zuletzt bekannte, gute Konfiguration gestartet wird, tritt beim Startvorgang ein Fehler auf. |
+| DIENSTFEHLER \_ \_ IGNORIEREN   | 0x00000000 | Protokolliert den Fehler und setzt den Startvorgang fort.                                                                                                                                       |
+| DIENSTFEHLER \_ \_ NORMAL   | 0x00000001 | Protokolliert den Fehler, zeigt ein Meldungsfeld an und setzt den Startvorgang fort.                                                                                                                    |
+| DIENSTFEHLER \_ \_ KRITISCH | 0x00000003 | Protokolliert den Fehler, wenn dies möglich ist und das System mit der letzten als gut bekannten Konfiguration neu gestartet wird. Wenn die letzte als funktionierend bekannte Konfiguration gestartet wird, schlägt der Startvorgang fehl. |
 
 
 
@@ -139,73 +139,73 @@ Durch das Hinzufügen der Konstanten **msidbserviceinstallerrorcontrolvital** (V
 <span id="LoadOrderGroup"></span><span id="loadordergroup"></span><span id="LOADORDERGROUP"></span>LoadOrderGroup
 </dt> <dd>
 
-Diese Spalte enthält die Zeichenfolge, die die Gruppe der Lade Reihen benennt, in der dieser Dienst Mitglied ist. Geben Sie NULL oder eine leere Zeichenfolge an, wenn der Dienst nicht zu einer Gruppe gehört.
+Diese Spalte enthält die Zeichenfolge, die die Lastreihenfolgegruppe benennt, der dieser Dienst angehört. Geben Sie NULL oder eine leere Zeichenfolge an, wenn der Dienst nicht zu einer Gruppe gehört.
 
 </dd> <dt>
 
-<span id="Dependencies"></span><span id="dependencies"></span><span id="DEPENDENCIES"></span>Zen
+<span id="Dependencies"></span><span id="dependencies"></span><span id="DEPENDENCIES"></span>Abhängigkeiten
 </dt> <dd>
 
-Diese Spalte ist eine Liste der Namen von Diensten oder lade Auftrags Gruppen, die das System vor diesem Dienst starten muss. Trennen Sie die Namen in der Liste durch Nullen. Wenn der Dienst keine Abhängigkeiten aufweist, geben Sie NULL oder eine leere Zeichenfolge an. Verwenden Sie die Syntax \[ ~ \] , um einen NULL-Wert einzufügen. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
+Diese Spalte enthält eine Liste der Namen von Diensten oder Auslastungsreihenfolgegruppen, die das System vor diesem Dienst starten muss. Trennen Sie Namen in der Liste durch NULL-Werte. Wenn der Dienst über keine Abhängigkeiten verfügt, geben Sie NULL oder eine leere Zeichenfolge an. Verwenden Sie die \[ ~ \] -Syntax, um einen NULL-Wert einzufügen. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
 
-Um z. b. festzulegen, dass das System Service1 und Service2 starten muss, bevor der Dienst in der ServiceInstall-Spalte aufgeführt wird, geben Sie Service1 \[ ~ \] Service2 \[ ~ \] \[ ~ \] in die Spalte Abhängigkeiten ein. Die Bezeichner Service1 und Service2 müssen entweder im Primärschlüssel der Tabelle oder im Namen des bereits installierten Dienstanbieter vorkommen.
+Um beispielsweise zu verlangen, dass das System service1 und service2 startet, geben Sie service1 service2 in die Spalte Abhängigkeiten ein, bevor der in der Spalte ServiceInstall aufgeführte Dienst gestartet \[ ~ \] \[ ~ \] \[ ~ \] wird. Die Bezeichner service1 und service2 müssen entweder im Primärschlüssel der Tabelle enthalten sein oder der Name des diensts sein, der bereits installiert ist.
 
-Sie müssen Gruppennamen mit + als Präfix versehen, damit Sie von einem Dienstnamen unterschieden werden können. Geben Sie Service1 \[ ~ \] + myGroup ein, \[ ~ \] \[ um ~ \] zu verlangen, dass das System Service1 und mindestens ein Mitglied der Bestell Gruppe myGroup startet, bevor Sie den Dienst in der ServiceInstall-Spalte auflisten.
+Sie müssen Gruppennamen das Präfix + vorangestellt haben, damit sie von einem Dienstnamen unterschieden werden können. Damit das System service1 und mindestens ein Mitglied der Bestellgruppe MyGroup starten muss, bevor der in der Spalte ServiceInstall aufgeführte Dienst gestartet wird, geben Sie service1 \[ ~ \] + MyGroup \[ ~ \] \[ ~ \] ein.
 
 </dd> <dt>
 
 <span id="StartName"></span><span id="startname"></span><span id="STARTNAME"></span>StartName
 </dt> <dd>
 
-Der Dienst ist als der von der Zeichenfolge in dieser Spalte angegebene Name angemeldet. Wenn der Diensttyp der Dienst \_ Win32-Prozess ist, \_ verwenden Sie \_ einen Kontonamen im Format Domain Name \\ username. Wenn das Konto zur integrierten Domäne gehört, dürfen Sie angeben. \\ User. Das LocalSystem-Konto muss verwendet werden, wenn der Diensttyp ein \_ Win32- \_ Freigabe \_ Prozess oder Dienst \_ interaktiver Prozess ist \_ . Die Funktion "{ [**ateservice**](/windows/win32/api/winsvc/nf-winsvc-createservicea) " verwendet das LocalSystem-Konto, wenn "StartName" als NULL angegeben ist und die meisten Dienste daher diese Spalte leer lassen.
+Der Dienst wird als name angemeldet, der von der Zeichenfolge in dieser Spalte angegeben wird. Wenn der Diensttyp SERVICE WIN32 OWN PROCESS lautet, \_ verwenden Sie einen \_ \_ Kontonamen im Format DomainName \\ UserName. Wenn das Konto zur integrierten Domäne gehört, ist es zulässig, anzugeben. \\ Nutzername. Das LocalSystem-Konto muss verwendet werden, wenn der Diensttyp SERVICE \_ WIN32 \_ SHARE PROCESS oder SERVICE INTERACTIVE PROCESS \_ \_ \_ lautet. Die [**CreateService-Funktion**](/windows/win32/api/winsvc/nf-winsvc-createservicea) verwendet das LocalSystem-Konto, wenn StartName als NULL angegeben ist und die meisten Dienste diese Spalte daher leer lassen.
 
 </dd> <dt>
 
-<span id="Password"></span><span id="password"></span><span id="PASSWORD"></span>Anmelden
+<span id="Password"></span><span id="password"></span><span id="PASSWORD"></span>Passwort
 </dt> <dd>
 
-Diese Zeichenfolge ist das Kennwort für den Kontonamen, der in der StartName-Spalte angegeben ist. Beachten Sie, dass der Benutzer über Berechtigungen zum Anmelden als Dienst verfügen muss. Der Dienst hat kein Kennwort, wenn StartName NULL oder eine leere Zeichenfolge ist. Der StartName von "LocalSystem" ist NULL, und das Kennwort in dieser Instanz ist daher NULL, sodass die meisten Dienste diese Spalte leer lassen.
+Diese Zeichenfolge ist das Kennwort für den Kontonamen, der in der Spalte StartName angegeben ist. Beachten Sie, dass der Benutzer über Berechtigungen zum Anmelden als Dienst verfügen muss. Der Dienst hat kein Kennwort, wenn StartName NULL oder eine leere Zeichenfolge ist. Der Startname von LocalSystem ist NULL, und daher ist das Kennwort in dieser Instanz NULL, sodass die meisten Dienste diese Spalte leer lassen.
 
-Beachten Sie, dass das Installationsprogramm nach dem Löschen eines Dienstes, der mit einem Benutzernamen und einem Kennwort installiert wurde, kein Rollback für den Dienst ausführen kann, ohne zuvor eine benutzerdefinierte Aktion zum erhalten des Kennworts Das Installationsprogramm kann alle erforderlichen Informationen zum Dienst abrufen, mit Ausnahme des Kennworts, das in einem geschützten Teil des Systems gespeichert wird. Die benutzerdefinierte Aktion erhält das Kennwort, indem der Benutzer dazu aufgefordert wird, eine Eigenschaft aus der Datenbank zu lesen oder eine Datei zu lesen. Die benutzerdefinierte Aktion muss dann [**ChangeServiceConfig**](/windows/win32/api/winsvc/nf-winsvc-changeserviceconfiga)aufzurufen, um das Kennwort bereitzustellen, bevor der Dienst neu installiert wird.
+Beachten Sie, dass das Installationsprogramm nach dem Löschen eines Diensts, der mit einem Benutzernamen und einem Kennwort installiert wurde, keinen Rollback des Diensts durchführen kann, ohne zuerst eine benutzerdefinierte Aktion zum Abrufen des Kennworts zu verwenden. Das Installationsprogramm kann alle erforderlichen Informationen zum Dienst abrufen, mit Ausnahme des Kennworts, das in einem geschützten Teil des Systems gespeichert ist. Die benutzerdefinierte Aktion erhält das Kennwort, indem der Benutzer dazu aufgefordert wird, eine Eigenschaft aus der Datenbank zu lesen oder eine Datei zu lesen. Die benutzerdefinierte Aktion muss dann [**ChangeServiceConfig**](/windows/win32/api/winsvc/nf-winsvc-changeserviceconfiga)aufrufen, um das Kennwort anzugeben, bevor der Dienst neu installiert wird.
 
-Der in das Kenn Wortfeld eingegebene Wert wird von Windows Installer nicht in die Protokolldatei geschrieben.
+Windows Das Installationsprogramm schreibt den in das Feld Kennwort eingegebenen Wert nicht in die Protokolldatei.
 
 </dd> <dt>
 
-<span id="Arguments"></span><span id="arguments"></span><span id="ARGUMENTS"></span>Argumentation
+<span id="Arguments"></span><span id="arguments"></span><span id="ARGUMENTS"></span>Argumente
 </dt> <dd>
 
-Diese Spalte enthält alle Befehlszeilenargumente oder-Eigenschaften, die zum Ausführen des Dienstanbieter erforderlich sind.
+Diese Spalte enthält alle Befehlszeilenargumente oder -eigenschaften, die zum Ausführen des Diensts erforderlich sind.
 
 </dd> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel für Spalte einer der [Komponenten Tabellen](component-table.md). Beachten Sie, dass der KEYPATH für diese Komponente die ausführbare Datei für den Dienst sein muss, um diesen Dienst mithilfe der installservice-Tabelle zu installieren.
+Externer Schlüssel zur Spalte einer der [Komponententabellen.](component-table.md) Beachten Sie, dass keyPath für diese Komponente die ausführbare Datei für den Dienst sein muss, um diesen Dienst mithilfe der Tabelle InstallService zu installieren.
 
 </dd> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>Beschreibung
 </dt> <dd>
 
-Diese Spalte enthält eine lokalisierbare Beschreibung für den konfigurierten Dienst. Wenn diese Spalte leer bleibt, verwendet das Installationsprogramm die vorhandene Beschreibung des Dienstanbieter, sofern vorhanden. Weitere Informationen finden Sie unter Dienst \_ Beschreibung im Microsoft Windows Software Development Kit (SDK). Geben Sie zum Löschen einer vorhandenen Beschreibung \[ ~ \] in dieser Spalte "" ein. Dies führt zu einer leeren Beschreibung für einen neuen oder vorhandenen Dienst.
+Diese Spalte enthält eine lokalisierbare Beschreibung für den dienst, der konfiguriert wird. Wenn diese Spalte leer gelassen wird, verwendet das Installationsprogramm die vorhandene Beschreibung des Diensts, sofern vorhanden. Weitere Informationen finden Sie unter SERVICE \_ DESCRIPTION im Microsoft Windows Software Development Kit (SDK). Geben Sie " " in diese Spalte ein, um eine vorhandene Beschreibung zu \[ ~ \] löschen. Dies führt zu einer leeren Beschreibung für einen neuen oder vorhandenen Dienst.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [installservices](installservices-action.md) -Aktion in [*Sequenz Tabellen*](s-gly.md) verarbeitet die Informationen in dieser Tabelle. Weitere Informationen zum Verwenden von *Sequenz Tabellen* finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Die [InstallServices-Aktion](installservices-action.md) in [*Sequenztabellen*](s-gly.md) verarbeitet die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen* finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-Diese Tabelle hat die meisten Parameter für die Win32-Funktion " [**deeservice**](/windows/win32/api/winsvc/nf-winsvc-createservicea) ".
+Diese Tabelle enthält die meisten Parameter für die Win32 [**CreateService-Funktion.**](/windows/win32/api/winsvc/nf-winsvc-createservicea)
 
-Obwohl es möglich ist, die Benutzeroberfläche zu verwenden, um anzugeben, dass ein Dienst als aus der Quelle ausführbare Version installiert werden soll, wird diese Art der Installation vom Installationsprogramm nicht unterstützt. Dienste, die mit der Berechtigungsstufe des lokalen Systems ausgeführt werden, müssen installiert sein, um von der lokalen Festplatte ausgeführt werden zu können. Vermeiden Sie die Installation von Diensten, die die Berechtigungen eines bestimmten Benutzers annehmen, da dadurch Sicherheitsdaten in ein Protokoll oder die Systemregistrierung geschrieben werden können. Dies kann potenziell zu einem Sicherheitsproblem, einem Kenn Wort Konflikt oder dem Verlust von Konfigurationsdaten führen, wenn das System neu gestartet wird.
+Obwohl es möglich ist, die Benutzeroberfläche zu verwenden, um anzugeben, dass ein Dienst als "Aus Quelle ausführen" installiert werden soll, unterstützt das Installationsprogramm diese Art der Installation nicht tatsächlich. Dienste, die mit der Berechtigungsstufe des lokalen Systems ausgeführt werden, müssen installiert werden, um von der lokalen Festplatte aus ausgeführt zu werden. Vermeiden Sie die Installation von Diensten, die die Identität der Berechtigungen eines bestimmten Benutzers annehmen, da dies Sicherheitsdaten in ein Protokoll oder die Systemregistrierung schreiben kann. Dies kann möglicherweise zu einem Sicherheitsproblem, einem Kennwortkonflikt oder dem Verlust von Konfigurationsdaten führen, wenn das System neu gestartet wird.
 
-Um einen Dienst während einer Neuinstallation zu löschen, muss ein entsprechender Datensatz für den Dienst in der [Tabelle ServiceControl](servicecontrol-table.md) vorhanden sein, und das Flag **msidbservicecontroleventuninstalldelete** muss in der Spalte Ereignis angezeigt werden. Der Installer löscht in der Tabelle ServiceInstall während der deinstalstallation keinen Dienst, ohne diesen Eintrag in der Tabelle ServiceControl zu verwenden.
+Um einen Dienst während einer Deinstallation zu löschen, muss ein entsprechender Datensatz für den Dienst in der [ServiceControl-Tabelle](servicecontrol-table.md) vorhanden sein, und das **msidbServiceControlEventUninstallDelete-Flag** muss in der Spalte Ereignis angezeigt werden. Das Installationsprogramm löscht einen Dienst in der ServiceInstall-Tabelle während der Deinstallation nicht ohne diesen Eintrag in der ServiceControl-Tabelle.
 
-Informationen zum Sichern eines dienstanzdienstanbieter finden Sie in der [Tabelle "msilockpermissionsex](msilockpermissionsex-table.md)".
+Informationen zum Sichern eines Diensts finden Sie in der [MsiLockPermissionsEx-Tabelle.](msilockpermissionsex-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

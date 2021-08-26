@@ -1,23 +1,23 @@
 ---
-description: Gibt eine numerische Darstellung der Kompromisse zwischen Bewegungs Glätte und Bildqualität der Codec-Ausgabe an.
+description: Gibt eine numerische Darstellung des Kompromisses zwischen Bewegungsglättung und Bildqualität der Codecausgabe an.
 ms.assetid: 63915450-71c5-4097-91d7-5817249c1cda
-title: MFPKEY_CRISP-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_CRISP-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04ff20b37bcedf3995ec3e16178b823c40b352ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 177ae5e9d1c8a9aba359000e04483c8e45c44f823c9db924155dd5ef3d5989a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954260"
 ---
-# <a name="mfpkey_crisp-property"></a>Mfpkey- \_ Eigenschaft (Crisp)
+# <a name="mfpkey_crisp-property"></a>\_MFPKEY-EIGENSCHAFT "KEYKEY"
 
-Gibt eine numerische Darstellung der Kompromisse zwischen Bewegungs Glätte und Bildqualität der Codec-Ausgabe an.
+Gibt eine numerische Darstellung des Kompromisses zwischen Bewegungsglättung und Bildqualität der Codecausgabe an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvccrisp
+g \_ wszWMVCCrisp
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,11 +27,11 @@ VT \_ I4
 
 75
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser ganzzahlige Wert kann zwischen 0 und 100 liegen. Je höher der Wert ist, desto mehr wird der Codec die Codierung für die Bildqualität einzelner Frames optimieren, was normalerweise die Bewegungs Glätte reduziert.
+Dieser ganzzahlige Wert kann zwischen 0 und 100 liegen. Je höher der Wert ist, desto stärker optimiert der Codec die Codierung für die Bildqualität einzelner Frames, was in der Regel die Bewegungsglättung reduziert.
 
-Diese Eigenschaft sollte nur für die CBR-Codierung (Constant-Bit-Rate) festgelegt werden. Die Optimierungen für die Codierung variabler Bitrate (VBR) funktionieren anders.
+Diese Eigenschaft sollte nur für die CBR-Codierung (Constant Bit Rate) festgelegt werden. Die Optimierungen für die VBR-Codierung (Variable Bit Rate) funktionieren anders.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,17 +39,17 @@ Diese Eigenschaft sollte nur für die CBR-Codierung (Constant-Bit-Rate) festgele
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

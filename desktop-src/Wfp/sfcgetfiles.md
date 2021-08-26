@@ -1,7 +1,7 @@
 ---
 description: Listet geschützte Dateien auf.
 ms.assetid: 46a1ff83-afed-4ce3-bb62-551446efdb78
-title: Sfcgetfiles-Funktion (sfcfiles. h)
+title: SfcGetFiles-Funktion (Sfcfiles.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Sfcfiles.dll
-ms.openlocfilehash: 6b38b761372db656308e778fd96ea48607cf1f21
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3201621808708229419542acd7fa0caab0aa7f6e7d38bfe723b7f53bc68c4005
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999280"
 ---
-# <a name="sfcgetfiles-function"></a>Sfcgetfiles-Funktion
+# <a name="sfcgetfiles-function"></a>SfcGetFiles-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Die Unterstützung für diese Funktion wurde in Windows Vista und Windows Server 2008 entfernt. Verwenden Sie stattdessen die in [WRP-Funktionen](wfp-functions.md) aufgeführten unterstützten Funktionen.\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Die Unterstützung für diese Funktion wurde in Windows Vista und Windows Server 2008 entfernt. Verwenden Sie stattdessen die unterstützten Funktionen, die in [WRP Functions](wfp-functions.md) aufgeführt sind.\]
 
 Listet geschützte Dateien auf.
 
@@ -42,23 +42,23 @@ NTSTATUS WINAPI SfcGetFiles(
 
 <dl> <dt>
 
-" *Protfiledata* \[ " vorgenommen\]
+*ProtFileData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**pprotect- \_ Datei \_ Eintrags**](pprotect-file-entry.md) Struktur, die die Liste der geschützten Dateien enthält.
+Ein Zeiger auf eine [**PPROTECT \_ FILE \_ ENTRY-Struktur,**](pprotect-file-entry.md) die die Liste der geschützten Dateien enthält.
 
 </dd> <dt>
 
-*Dateianzahl* \[ vorgenommen\]
+*FileCount* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Speicherort, der einen Ulong-Wert enthält, der die Anzahl der geschützten Dateien ist.
+Ein Zeiger auf einen Speicherort, der einen ULONG-Wert enthält, der der Anzahl der geschützten Dateien entspricht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert Status \_ Success. Wenn die Funktion fehlschlägt, wird der entsprechende NTSTATUS-Fehlercode zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert STATUS \_ SUCCESS. Wenn die Funktion fehlschlägt, wird der entsprechende NTSTATUS-Fehlercode zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,20 +66,20 @@ Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert Status 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Sfcfiles. h</dt> </dl>   |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Sfcfiles.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Sfcfiles.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**pprotect- \_ Datei \_ Eintrag**](pprotect-file-entry.md)
+[**\_PPROTECT-DATEIEINTRAG \_**](pprotect-file-entry.md)
 </dt> </dl>
 
  

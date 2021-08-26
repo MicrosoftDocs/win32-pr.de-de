@@ -1,9 +1,9 @@
 ---
-title: ICM_GET Meldung (VFW. h)
-description: Die ICM \_ GET-Nachricht Ruft einen von der Anwendung definierten DWORD-Wert von einem Video Komprimierungs Treiber ab.
+title: ICM_GET (Vfw.h)
+description: Die ICM \_ GET-Nachricht ruft einen anwendungsdefinierten DWORD-Wert aus einem Videokomprimierungstreiber ab.
 ms.assetid: 288c0053-16a1-4547-b748-da218a0b588c
 keywords:
-- ICM_GET-Nachricht (Multimedia)
+- ICM_GET von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e23cd994546be41b5f938331b2dc632897635c32
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8885faf7b0605378ace3004165004384a582c9d49a0a8ce047122c108b6cb8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038730"
 ---
-# <a name="icm_get-message"></a>ICM- \_ GET-Nachricht
+# <a name="icm_get-message"></a>\_ICM GET-Nachricht
 
-Die **ICM \_ Get** -Nachricht Ruft einen von der Anwendung definierten **DWORD** -Wert von einem Video Komprimierungs Treiber ab.
+Die **ICM \_ GET-Nachricht** ruft einen anwendungsdefinierten **DWORD-Wert** aus einem Videokomprimierungstreiber ab.
 
 
 ```C++
@@ -38,14 +38,14 @@ lParam = (DWORD) cb;
 
 <dl> <dt>
 
-<span id="pv"></span><span id="PV"></span>*teuren*
+<span id="pv"></span><span id="PV"></span>*Pv*
 </dt> <dd>
 
-Ein Zeiger auf einen Speicherblock, der mit dem aktuellen Zustand aufgefüllt werden soll. Sie können auch **null** angeben, um den von den Zustandsinformationen benötigten Arbeitsspeicher zu ermitteln.
+Zeiger auf einen Speicherblock, der mit dem aktuellen Zustand gefüllt werden soll. Sie können auch **NULL angeben,** um die Menge an Arbeitsspeicher zu bestimmen, die für die Zustandsinformationen erforderlich ist.
 
 </dd> <dt>
 
-<span id="cb"></span><span id="CB"></span>*betrieben*
+<span id="cb"></span><span id="CB"></span>*Cb*
 </dt> <dd>
 
 Größe des Speicherblocks in Bytes.
@@ -54,11 +54,11 @@ Größe des Speicherblocks in Bytes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Größe des Arbeitsspeichers in Bytes zurück, der zum Speichern der Statusinformationen erforderlich ist.
+Gibt die Menge an Arbeitsspeicher in Bytes zurück, die zum Speichern der Statusinformationen erforderlich ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Struktur, die zum Darstellen von Zustandsinformationen verwendet wird, ist Treiber spezifisch und wird vom Treiber definiert.
+Die Zum Darstellen von Zustandsinformationen verwendete Struktur ist treiberspezifisch und wird vom Treiber definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Die Struktur, die zum Darstellen von Zustandsinformationen verwendet wird, ist T
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Die Struktur, die zum Darstellen von Zustandsinformationen verwendet wird, ist T
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

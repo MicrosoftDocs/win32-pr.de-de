@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob ein Zeiger NULL ist. Wenn der Zeiger NULL ist, gibt die Funktion oder Methode, in der das Makro angezeigt wird, den angegebenen Wert zurück.
+description: Überprüft, ob ein Zeiger NULL ist. Wenn der Zeiger NULL ist, gibt die Funktion oder Methode, in der bzw. der das Makro angezeigt wird, den angegebenen Wert zurück.
 ms.assetid: eca73fbf-5fd8-4b76-af06-ca0c22510b55
-title: Check Pointer-Makro (wxdebug. h)
+title: CheckPointer-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 04f442303e520ef758a3576d21c2df810ef26fb2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ef1fa2370def45321958862ebaf3ded341b13f45ddae1ecafdc4a17e937aca08
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999290"
 ---
-# <a name="checkpointer-macro"></a>Check Pointer-Makro
+# <a name="checkpointer-macro"></a>CheckPointer-Makro
 
-Überprüft, ob ein Zeiger **null** ist. Wenn der Zeiger **null** ist, gibt die Funktion oder Methode, in der das Makro angezeigt wird, den angegebenen Wert zurück.
+Überprüft, ob ein Zeiger NULL **ist.** Wenn der Zeiger **NULL** ist, gibt die Funktion oder Methode, in der bzw. der das Makro angezeigt wird, den angegebenen Wert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT CheckPointer(
 
 <dl> <dt>
 
-*cker* 
+*p* 
 </dt> <dd>
 
-Der zu Überprüfung Ende Zeiger.
+Zu überprüfende Zeiger.
 
 </dd> <dt>
 
-*TZI* 
+*Ret* 
 </dt> <dd>
 
-Der Wert, den die Funktion oder Methode zurückgibt, wenn *p* **null** ist.
+Der Wert, den die Funktion oder Methode zurückgibt, wenn *p* **NULL ist.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die umgebende Funktion gibt *ret* zurück, wenn *p* **null** ist. Andernfalls bewirkt das Makro nicht, dass die umgebende Funktion zurückgibt.
+Die umgebende Funktion gibt *ret zurück,* wenn *p* **NULL ist.** Andernfalls führt das Makro nicht zur Rückgabe der umgebenden Funktion.
 
 ## <a name="examples"></a>Beispiele
 
@@ -79,15 +79,15 @@ HRESULT MyFunction(VOID *pSomeParameter)
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Zeiger Validierungs Makros](pointer-validation-macros.md)
+[Zeigervalidierungsmakros](pointer-validation-macros.md)
 </dt> </dl>
 
  

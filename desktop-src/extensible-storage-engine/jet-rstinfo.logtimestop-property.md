@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_RSTINFO. logtimestoppt-Eigenschaft.
-title: JET_RSTINFO. logtimestopp(Eigenschaft)
+description: 'Weitere Informationen zu: JET_RSTINFO.logtimeStop-Eigenschaft'
+title: JET_RSTINFO.logtimeStop-Eigenschaft
 TOCTitle: 'logtimeStop property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RSTINFO.logtimeStop
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_rstinfo.logtimestop(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2d4b5e770fafdded138224cd3e7868c24d42e13f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d776bd5f4cadf11a8ed0edc188650fea73c917f7f683eaaf280553a8835da785
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967610"
 ---
-# <a name="jet_rstinfologtimestop-property"></a>JET_RSTINFO. logtimestopp(Eigenschaft)
+# <a name="jet_rstinfologtimestop-property"></a>JET_RSTINFO.logtimeStop-Eigenschaft
 
-Ruft die Zeit ab, zu der Sie beendet wurde, oder legt Sie fest
+Ruft die Zeit ab, zu der sie beendet wurde, oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_LOGTIME logtimeStop { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RSTINFO-Klasse](./jet-rstinfo-class.md)
 
-[Mitglieder JET_RSTINFO](./jet-rstinfo-members.md)
+[JET_RSTINFO-Member](./jet-rstinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

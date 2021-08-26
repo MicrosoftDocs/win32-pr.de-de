@@ -1,11 +1,11 @@
 ---
-title: MS-TS-Max-Leerlaufzeit Attribut
-description: Die maximale Leerlaufzeit der Terminaldienste-Sitzung ist die maximale Zeitspanne (in Minuten), in der die Terminaldienste-Sitzung im Leerlauf bleiben kann.
+title: ms-TS-Max-Idle-Time-Attribut
+description: Die maximale Leerlaufzeit der Terminaldienstesitzung ist die maximale Zeitspanne in Minuten, in der die Terminaldienstesitzung im Leerlauf bleiben kann.
 ms.assetid: a6da59a9-d3e5-4f54-9481-a4dc6a5eb5cd
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-Max-Leerlaufzeit Attribut
-- AD-Schema für das mstsmaxidletime-Attribut
+- MS-TS-Max-Idle-Time-Attribut AD-Schema
+- MSTSMaxIdleTime-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c48c0643a96cfd6cb23b684916580b53a6321ccf
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f1712c3ded333ef23dc8b79429404907a0c2c7b1b24459ee6eb1be5f9ea20747
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066083"
 ---
-# <a name="ms-ts-max-idle-time-attribute"></a>MS-TS-Max-Leerlaufzeit Attribut
+# <a name="ms-ts-max-idle-time-attribute"></a>ms-TS-Max-Idle-Time-Attribut
 
-Die maximale Leerlaufzeit der Terminaldienste-Sitzung ist die maximale Zeitspanne (in Minuten), in der die Terminaldienste-Sitzung im Leerlauf bleiben kann.
+Die maximale Leerlaufzeit der Terminaldienstesitzung ist die maximale Zeitspanne in Minuten, in der die Terminaldienstesitzung im Leerlauf bleiben kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-TS-Max-Leerlaufzeit                  |
-| LDAP-Display-Name | mstsmaxidletime                      |
+| CN                | ms-TS-Max-Idle-Time                  |
+| Ldap-Anzeigename | msTSMaxIdleTime                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1983              |
 | System-ID-GUID    | ff739e9c-6bb7-460e-b221-e250f3de0f95 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -54,11 +54,11 @@ Die maximale Leerlaufzeit der Terminaldienste-Sitzung ist die maximale Zeitspann
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -75,11 +75,11 @@ Die maximale Leerlaufzeit der Terminaldienste-Sitzung ist die maximale Zeitspann
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -96,11 +96,11 @@ Die maximale Leerlaufzeit der Terminaldienste-Sitzung ist die maximale Zeitspann
 |------------------------|-----------------------------------|
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Ist einwertig       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

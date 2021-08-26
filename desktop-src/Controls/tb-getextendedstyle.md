@@ -1,9 +1,9 @@
 ---
-title: TB_GETEXTENDEDSTYLE Meldung (kommstrg. h)
+title: TB_GETEXTENDEDSTYLE (Commctrl.h)
 description: Ruft die erweiterten Stile für ein Symbolleisten-Steuerelement ab.
 ms.assetid: d9e31a8e-5e5a-4d2d-bc3b-65ac40e8592f
 keywords:
-- Windows-Steuerelemente für TB_GETEXTENDEDSTYLE Meldung
+- TB_GETEXTENDEDSTYLE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f80bc4f4ad45e5c1c75366e0890f3fd76ec1fa74
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ab059933c2019009ebc746cc59df6affb840f09c40a201a4ee4048dc2498a17
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918860"
 ---
-# <a name="tb_getextendedstyle-message"></a>TB \_ GetExtendedStyle-Nachricht
+# <a name="tb_getextendedstyle-message"></a>TB \_ GETEXTENDEDSTYLE-Nachricht
 
 Ruft die erweiterten Stile für ein Symbolleisten-Steuerelement ab.
 
@@ -37,7 +37,7 @@ Ruft die erweiterten Stile für ein Symbolleisten-Steuerelement ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **DWORD** zurück, das die derzeit für das Symbolleisten-Steuerelement verwendeten Stile darstellt. Bei diesem Wert kann es sich um eine Kombination [erweiterter Stile](toolbar-extended-styles.md)handeln.
+Gibt ein **DWORD zurück,** das die derzeit für das Symbolleisten-Steuerelement verwendeten Stile darstellt. Dieser Wert kann eine Kombination aus erweiterten [Stilen sein.](toolbar-extended-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt ein **DWORD** zurück, das die derzeit für das Symbolleisten-Steuerelement
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TB/ \_ textendecodstyle**](tb-setextendedstyle.md)
+[**TB \_ SETEXTENDEDSTYLE**](tb-setextendedstyle.md)
 </dt> </dl>
 
  

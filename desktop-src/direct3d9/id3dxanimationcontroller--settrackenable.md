@@ -1,7 +1,7 @@
 ---
-description: Aktiviert oder deaktiviert eine Spur im Animations Controller.
+description: Aktiviert oder deaktiviert eine Spur im Animationscontroller.
 ms.assetid: 8d06287b-e076-4553-962c-5c423e355101
-title: 'ID3DXAnimationController:: settrackenable-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetTrackEnable-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 920576cbf630e061cd4d460315e905bdabf31ff5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 61078a40e13ee1422c29de091e1758444e2bafa1586bb443e763e50d57457ad5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026580"
 ---
-# <a name="id3dxanimationcontrollersettrackenable-method"></a>ID3DXAnimationController:: settrackenable-Methode
+# <a name="id3dxanimationcontrollersettrackenable-method"></a>ID3DXAnimationController::SetTrackEnable-Methode
 
-Aktiviert oder deaktiviert eine Spur im Animations Controller.
+Aktiviert oder deaktiviert eine Spur im Animationscontroller.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetTrackEnable(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des Titels, der gemischt werden soll.
+Bezeichner der zu mischenden Spur.
 
 </dd> <dt>
 
-*Aktivieren* \[ von in\]
+*Aktivieren* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Aktivieren Sie den Wert. Legen Sie diese Einstellung auf " **true** " fest, um diese Spur im Controller zu aktivieren, oder auf " **false** ", um eine Vermischung zu verhindern
+Wert aktivieren. Legen Sie auf **TRUE** fest, um diese Spur im Controller zu aktivieren, oder auf **FALSE,** um zu verhindern, dass sie gemischt wird.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Aktivieren Sie den Wert. Legen Sie diese Einstellung auf " **true** " fest, um d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Enable-Flag muss auf " **true**" festgelegt werden, um eine Spur mit anderen Spuren zu mischen. Umgekehrt verhindert das Festlegen des Flags auf **false** , dass der Track nicht mit anderen Spuren gemischt wird.
+Um eine Spur mit anderen Spuren zu kombinieren, muss das Enable-Flag auf **TRUE** festgelegt werden. Umgekehrt verhindert das Festlegen des Flags auf **FALSE,** dass die Spur mit anderen Spuren gemischt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Das Enable-Flag muss auf " **true**" festgelegt werden, um eine Spur mit anderen
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: ms-TPM-Besitzer Information-Attribut
-description: Enthält die Besitzer Informationen eines bestimmten TPM.
+title: ms-TPM-OwnerInformation-Attribut
+description: Enthält die Besitzerinformationen eines bestimmten TPM.
 ms.assetid: 0d7e459f-2449-47b7-add7-ede84ecaaecd
 ms.tgt_platform: multiple
 keywords:
-- ms-TPM-Besitzer Informations Attribut AD-Schema
-- mstpm-Besitzer Informations Attribut AD-Schema
+- MS-TPM-OwnerInformation-Attribut AD-Schema
+- AD-Schema des msTPM-OwnerInformation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41456f99d90b4d6e915669fc3f5c84109efa5be5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c55a774457cd95b8e70604cd09e4164acf3669dbec9f9c63b6997e9a6e262672
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066139"
 ---
-# <a name="ms-tpm-ownerinformation-attribute"></a>ms-TPM-Besitzer Information-Attribut
+# <a name="ms-tpm-ownerinformation-attribute"></a>ms-TPM-OwnerInformation-Attribut
 
-Enthält die Besitzer Informationen eines bestimmten TPM.
+Enthält die Besitzerinformationen eines bestimmten TPM.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-TPM-Besitzer Informationen                     |
-| LDAP-Display-Name | mstpm-Besitzer Informationen                      |
+| CN                | ms-TPM-OwnerInformation                     |
+| Ldap-Anzeigename | msTPM-OwnerInformation                      |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1966                     |
-| System-ID-GUID    | aa4e1a6d-550d-4e05-8c35-4afcb917a9fe        |
+| System-Id-Guid    | aa4e1a6d-550d-4e05-8c35-4afcb917a9fe        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -54,11 +54,11 @@ Enthält die Besitzer Informationen eines bestimmten TPM.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000298                                |
@@ -75,11 +75,11 @@ Enthält die Besitzer Informationen eines bestimmten TPM.
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Is-Single-Valued       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000298                                |
@@ -96,11 +96,11 @@ Enthält die Besitzer Informationen eines bestimmten TPM.
 |------------------------|---------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                  |
 | MAPI-Id                | \-                                                                                                                  |
-| System-Only            | False                                                                                                               |
-| Ist-einwertig       | Richtig                                                                                                                |
-| Ist indiziert             | False                                                                                                               |
-| Im globalen Katalog      | False                                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                        |
+| System-Only            | Falsch                                                                                                               |
+| Is-Single-Valued       | Richtig                                                                                                                |
+| Ist indiziert             | Falsch                                                                                                               |
+| Im globalen Katalog      | Falsch                                                                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                        |
 | Range-Lower            | \-                                                                                                                  |
 | Range-Upper            | \-                                                                                                                  |
 | Search-Flags           | 0x00000298                                                                                                          |

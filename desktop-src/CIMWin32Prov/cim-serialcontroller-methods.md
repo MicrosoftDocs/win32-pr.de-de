@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ SerialController-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ SerialController-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 6EE3E7A0-D722-475F-BA9A-5221CF5B54A2
 ms.tgt_platform: multiple
-title: CIM_SerialController Methoden
+title: CIM_SerialController-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7877babdd27938a36ee8edfe6f6a585f96467e14
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ef52d2336111a04d2034bee40f2fbe30c94c6b1bfd45d2376125c1436e5cd1d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919930"
 ---
 # <a name="cim_serialcontroller-methods"></a>CIM \_ SerialController-Methoden
 
-Die [**CIM \_ SerialController**](cim-serialcontroller.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ SerialController-Klasse**](cim-serialcontroller.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

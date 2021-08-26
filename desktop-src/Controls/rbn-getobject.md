@@ -1,9 +1,9 @@
 ---
-title: RBN_GETOBJECT Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Grund leisten-Steuerelement gesendet, das mit dem Register Drop-Stil von RB erstellt \_ wird, wenn ein Objekt über ein Band im-Steuerelement gezogen wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: RBN_GETOBJECT Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Rebar-Steuerelement gesendet, das mit dem RBS REGISTERDROP-Stil erstellt wurde, wenn ein Objekt über ein \_ Band im Steuerelement gezogen wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 057474c1-5f65-4290-973e-4366b760365a
 keywords:
-- Windows-Steuerelemente für RBN_GETOBJECT Benachrichtigungs
+- RBN_GETOBJECT Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a390bc5c5f74a577805ca8ae1128fbb24e6b10b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d9709313a16d068e44b847f5e0862adf1e133b9f0ea92136a12e9aae24ffb14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985040"
 ---
-# <a name="rbn_getobject-notification-code"></a>RBN- \_ GetObject-Benachrichtigungs Code
+# <a name="rbn_getobject-notification-code"></a>RBN \_ GETOBJECT-Benachrichtigungscode
 
-Wird von einem Grund leisten-Steuerelement gesendet, das mit dem [**\_ Register Drop**](rebar-control-styles.md) -Stil von RB erstellt wird, wenn ein Objekt über ein Band im-Steuerelement gezogen wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Rebar-Steuerelement gesendet, das mit [**dem RBS \_ REGISTERDROP-Stil**](rebar-control-styles.md) erstellt wurde, wenn ein Objekt über ein Band im Steuerelement gezogen wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ RBN_GETOBJECT
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmujectnotify**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) -Struktur, die Informationen über das Band enthält, über das das Objekt gezogen wird. Außerdem werden die Daten, die von der empfangenden Anwendung als Reaktion auf diesen Benachrichtigungs Code bereitgestellt werden, empfangen.
+Zeiger auf eine [**NMOBJECTNOTIFY-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmobjectnotify) die Informationen über das Band enthält, über das das Objekt gezogen wird, und empfängt auch die Daten, die von der empfangenden Anwendung als Antwort auf diesen Benachrichtigungscode bereitgestellt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diesen Benachrichtigungs Code muss NULL sein.
+Der Rückgabewert für diesen Benachrichtigungscode muss 0 (null) sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den RBN- \_ GetObject-Benachrichtigungs Code zu erhalten, initialisieren Sie OLE mit einem Aufrufen von [**OleInitialize**](/windows/desktop/api/ole2/nf-ole2-oleinitialize) oder [**CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize).
+Initialisieren Sie OLE mit einem Aufruf von \_ [**OleInitialize**](/windows/desktop/api/ole2/nf-ole2-oleinitialize) oder [**CoInitialize,**](/windows/desktop/api/objbase/nf-objbase-coinitialize)um den RBN GETOBJECT-Benachrichtigungscode zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Um den RBN- \_ GetObject-Benachrichtigungs Code zu erhalten, initialisieren Sie 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

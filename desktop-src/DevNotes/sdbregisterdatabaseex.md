@@ -1,7 +1,7 @@
 ---
 description: Registriert die angegebene Datenbank.
 ms.assetid: 65eceb1a-9ce1-4b97-98d7-731932797794
-title: Sdbregisterdatabaseex-Funktion
+title: SdbRegisterDatabaseEx-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 74872f8895032abe02b024396fda12c43dc1611d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 512e180549c246a5504bc14675d61082c68904aa767d98deca5111d9a275dc60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984100"
 ---
-# <a name="sdbregisterdatabaseex-function"></a>Sdbregisterdatabaseex-Funktion
+# <a name="sdbregisterdatabaseex-function"></a>SdbRegisterDatabaseEx-Funktion
 
 Registriert die angegebene Datenbank.
 
@@ -41,32 +41,32 @@ BOOL WINAPI SdbRegisterDatabaseEx(
 
 <dl> <dt>
 
-*pszdatabasepath* \[ in\]
+*pszDatabasePath* \[ In\]
 </dt> <dd>
 
-Der Daten Bank Pfad. Dieser Parameter darf nicht **null** sein.
+Der Datenbankpfad. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*dwdatabasetype* \[ in\]
+*dwDatabaseType* \[ In\]
 </dt> <dd>
 
-Der Datenbanktyp. Eine Liste der Werte finden Sie unter [Shim-Datenbanktypen](shim-database-types.md) .
+Der Datenbanktyp. Eine Liste der Werte finden Sie unter [Shim-Datenbanktypen.](shim-database-types.md)
 
 </dd> <dt>
 
-*ptimestamp* \[ in, optional\]
+*pTimeStamp* \[ in, optional\]
 </dt> <dd>
 
-Der Zeitstempel für die Datenbank. Wenn dieser Parameter **null** ist, wird die Systemzeit verwendet.
+Der Zeitstempel für die Datenbank. Wenn dieser Parameter **NULL** ist, wird die Systemzeit verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE** bei Erfolg oder **FALSE** bei Einem Fehler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine Datenbank muss registriert werden, bevor Sie andere SDB-Funktionen verwenden können.
 
@@ -76,8 +76,8 @@ Eine Datenbank muss registriert werden, bevor Sie andere SDB-Funktionen verwende
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Eine Datenbank muss registriert werden, bevor Sie andere SDB-Funktionen verwende
 
 <dl> <dt>
 
-[**Sdbunregisterdatabase**](sdbunregisterdatabase.md)
+[**SdbUnregisterDatabase**](sdbunregisterdatabase.md)
 </dt> </dl>
 
  

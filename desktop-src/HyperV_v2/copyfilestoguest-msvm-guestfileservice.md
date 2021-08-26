@@ -1,7 +1,7 @@
 ---
-description: Dateien werden vom Hyper-V-Host auf den virtuellen Computer kopiert.
+description: Kopiert Dateien vom Hyper-V-Host auf den virtuellen Computer.
 ms.assetid: 76667557-13B2-4286-BC6B-E32FADE62A7A
-title: 'Msvm_GuestFileService:: copyfilestoguest-Methode'
+title: Msvm_GuestFileService::CopyFilesToGuest-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9424dee6d28e0bd9cd6ac43c15ad27cdebdb7017
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e027d71faf8dda5769962d3c71d1fcfb5958c61c91993cf17fbf472d93aff50f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980480"
 ---
-# <a name="msvm_guestfileservicecopyfilestoguest-method"></a>MSVM \_ guestfileservice:: copyfilestoguest-Methode
+# <a name="msvm_guestfileservicecopyfilestoguest-method"></a>Msvm \_ GuestFileService::CopyFilesToGuest-Methode
 
-Dateien werden vom Hyper-V-Host auf den virtuellen Computer kopiert.
+Kopiert Dateien vom Hyper-V-Host auf den virtuellen Computer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,32 +41,32 @@ uint32 CopyFilesToGuest(
 
 <dl> <dt>
 
-*Copyfiledeguestsettings* \[ in\]
+*CopyFileToGuestSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Instanzen der [**MSVM \_ copyfiledeguestsettingdata**](msvm-copyfiletoguestsettingdata.md) -Klasse, das einen Gast Datei Dienst-Vorgangs Auftrag darstellt.
+Ein Array von Instanzen der [**Msvm \_ CopyFileToGuestSettingData-Klasse,**](msvm-copyfiletoguestsettingdata.md) das einen Vorgangsauftrag für den Gastdateidienst darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Ein optionaler Parameter zum Überwachen des Fortschritts des Vorgangs, der verwendet wird, wenn die Methode nicht synchron ausgeführt werden konnte. Wenn der Vorgang asynchron ausgeführt wird, ist der Rückgabewert 4096.
 
 > [!Note]  
-> Dieser Parameter wurde in Windows 10 hinzugefügt.
+> Dieser Parameter wurde in der Windows 10.
 
  
 
 </dd> <dt>
 
-"Parser"- *Pools* \[ Out, optional\]
+*ParentPools* \[ out, optional\]
 </dt> <dd>
 
-Ein optionales Array von [**MSVM \_ copyfiledeguestjob**](msvm-copyfiletoguestjob.md) -verweisen, die zum Überwachen des Fortschritts des Vorgangs verwendet werden. **Copyfilestoguest** verwendet *para Pools* , wenn es nicht synchron ausgeführt werden kann. Wenn der Vorgang asynchron ausgeführt wird, ist der Rückgabewert 4096.
+Ein optionales Array [**von Msvm \_ CopyFileToGuestJob-Verweisen,**](msvm-copyfiletoguestjob.md) die zum Überwachen des Fortschritts des Vorgangs verwendet werden. **CopyFilesToGuest verwendet** *ParentPools,* wenn es nicht synchron ausgeführt werden kann. Wenn der Vorgang asynchron ausgeführt wird, ist der Rückgabewert 4096.
 
 > [!Note]  
-> Dieser Parameter wurde in Windows 10 entfernt.
+> Dieser Parameter wurde in der Windows 10.
 
  
 
@@ -74,17 +74,17 @@ Ein optionales Array von [**MSVM \_ copyfiledeguestjob**](msvm-copyfiletoguestjo
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg wird 0 zurückgegeben. Andernfalls wird ein Fehlerwert zurückgegeben.
+Bei Erfolg gibt 0 zurück. andernfalls gibt einen Fehlerwert zurück.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -93,28 +93,28 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -123,10 +123,10 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -135,7 +135,7 @@ Das **System ist nicht verfügbar** (32777).
 
 <dl> <dt>
 
-[**MSVM \_ guestfileservice**](msvm-guestfileservice.md)
+[**Msvm \_ GuestFileService**](msvm-guestfileservice.md)
 </dt> </dl>
 
  

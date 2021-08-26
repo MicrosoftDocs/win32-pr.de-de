@@ -1,7 +1,7 @@
 ---
 description: Die Anzahl der Frames, die der Filter seit dem letzten Keyframe empfangen hat.
 ms.assetid: 6320e8fe-606b-4ca3-aeb7-c583145c0b77
-title: 'Cvideotransformfilter:: m_nFramesSinceKeyFrame Member (vtrans. h)'
+title: CVideoTransformFilter::m_nFramesSinceKeyFrame-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2d32b8ad982f39e5431710b8a1f43bffc74db0e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 02d3ff4dc05c8bee84706efa6566d090fad3f1c39e15dfa23283e1fab2f2a22e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353805"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998550"
 ---
-# <a name="cvideotransformfilterm_nframessincekeyframe-member"></a>Cvideotransformfilter:: m \_ nframessincekeyframe-Member
+# <a name="cvideotransformfilterm_nframessincekeyframe-member"></a>CVideoTransformFilter::m \_ nFramesSinceKeyFrame-Member
 
 Die Anzahl der Frames, die der Filter seit dem letzten Keyframe empfangen hat.
 
@@ -42,8 +42,8 @@ int m_nFramesSinceKeyFrame;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (einschließlich Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ int m_nFramesSinceKeyFrame;
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

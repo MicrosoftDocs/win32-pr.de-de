@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_RESOURCE_DESC-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Resource \_ DESC-Struktur zu ermöglichen.
+title: CD3DX12_RESOURCE_DESC -Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ RESOURCE \_ DESC-Struktur zu ermöglichen.
 ms.assetid: F18D41BE-8AEF-444E-AC8B-EC57C63BF083
 keywords:
-- CD3DX12_RESOURCE_DESC Struktur
+- CD3DX12_RESOURCE_DESC-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b341646b2dee7f469235c0b0bc9bb4550e56ff5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5c9d92953abdb0cf77a7a55f7b64341b857a111baaef0d84d4d44855b02efb2a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028300"
 ---
-# <a name="cd3dx12_resource_desc-structure"></a>CD3DX12 Ressourcen-zu- \_ \_ Struktur-Struktur
+# <a name="cd3dx12_resource_desc-structure"></a>CD3DX12 \_ RESOURCE \_ DESC-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Resource \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ RESOURCE \_ DESC-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc) ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,197 +56,197 @@ struct CD3DX12_RESOURCE_DESC  : public D3D12_RESOURCE_DESC{
 
 <dl> <dt>
 
-**CD3DX12- \_ Ressource \_ ()**
+**CD3DX12 \_ RESOURCE \_ DESC()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12- \_ Ressource \_ .
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ RESOURCE \_ DESC.
 
 </dd> <dt>
 
-**explizites CD3DX12 Resource Manager- \_ Ressourcen \_ (konstant D3D12 \_ Ressourcen- \_& o)**
+**explizites CD3DX12 \_ RESOURCE \_ DESC(const D3D12 \_ RESOURCE \_ DESC& o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ Ressource \_ , die mit dem Inhalt einer anderen [**D3D12 \_ Resource \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc) -Debug-Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 RESOURCE DESC, initialisiert mit dem Inhalt einer anderen \_ \_ [**D3D12 \_ RESOURCE \_ DESC-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)
 
 </dd> <dt>
 
-**CD3DX12 \_ Resource \_ DESC (D3D12 \_ Resource \_ Dimension Dimension, UINT64 Alignment, UINT64 Width, uint Height, UInt16 depthorarraysize, UInt16 miplevels, DXGI \_ Format Format, uint samplecount, uint samplequality, D3D12 \_ Texture \_ Layout Layout, D3D12 \_ \_ Ressourcenflags Flags)**
+**CD3DX12 \_ RESOURCE \_ DESC(D3D12 \_ RESOURCE DIMENSION \_ dimension, UINT64 alignment, UINT64 width, UINT height, UINT16 depthOrArraySize, UINT16 mipLevels, DXGI \_ FORMAT format, UINT sampleCount, UINT sampleQuality, D3D12 \_ TEXTURE LAYOUT \_ layout, D3D12 \_ RESOURCE \_ FLAGS flags)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12 \_ Resource \_ DESC und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ RESOURCE \_ DESC und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ Dimension der Ressourcen \_ Dimension**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension)
+[**D3D12 \_ RESOURCE \_ DIMENSION-Dimension**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension)
 
 UINT64-Ausrichtung
 
 UINT64-Breite
 
-Uint-Höhe
+UINT-Höhe
 
-UInt16 depthorarraysize
+UINT16 depthOrArraySize
 
-UInt16 miplevels
+UINT16 mipLevels
 
-[**DXGI \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Format
+[**DXGI \_ FORMAT-Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
-Uint-samplecount
+UINT sampleCount
 
-Uint samplequality
+UINT sampleQuality
 
-[**D3D12 \_ Layout des Textur \_ Layouts**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout)
+[**D3D12 \_ \_TEXTURLAYOUT-Layout**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout)
 
-[**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) -Flags
+[**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags)
 
 </dd> <dt>
 
-**statischer Inline Puffer (Konstante D3D12 \_ Ressourcen \_ Zuordnungs \_ Info& resallocinfo, \_ D3D12 \_ Ressourcenflags Flags = D3D12 \_ \_ ressourcenflag \_ None)**
+**static inline Buffer(const D3D12 \_ RESOURCE ALLOCATION INFO& \_ \_ resAllocInfo, D3D12 \_ RESOURCE \_ FLAGS flags = D3D12 \_ RESOURCE FLAG \_ \_ NONE)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**D3D12 \_ \_ \_ Informationen zur Ressourcenzuweisung**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)& resallocinfo
+[**D3D12 \_ RESOURCE \_ ALLOCATION \_ INFO**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_allocation_info)& resAllocInfo
 
-Opt [**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) Flags = \_ D3D12 \_ ressourcenflag " \_ None"
+(opt) [**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) = D3D12 \_ RESOURCE FLAG \_ \_ NONE
 
 </dd> <dt>
 
-**statischer Inline Puffer (UINT64 Width, \_ D3D12 \_ Ressourcenflags Flags = D3D12 \_ \_ ressourcenflag \_ None, UINT64 Alignment = 0)**
+**static inline Buffer(UINT64 width, D3D12 \_ RESOURCE \_ FLAGS flags = D3D12 \_ RESOURCE FLAG \_ \_ NONE, UINT64 alignment = 0)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
 UINT64-Breite
 
-Opt [**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) Flags = \_ D3D12 \_ ressourcenflag " \_ None"
+(opt) [**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) = D3D12 \_ RESOURCE FLAG \_ \_ NONE
 
-Opt UINT64 Alignment = 0
+(opt) UINT64-Ausrichtung = 0
 
 </dd> <dt>
 
-**static Inline Tex1D (DXGI \_ Format Format, UINT64 Width, UInt16 arraySize = 1, UInt16 miplevels = 0, D3D12 \_ \_ Ressourcenflags Flags = \_ D3D12 \_ ressourcentflag \_ None, D3D12 \_ Texture \_ Layout Layout = D3D12 \_ Texture \_ Layout \_ unknown, UINT64 Alignment = 0)**
+**static inline Tex1D(DXGI \_ FORMAT format, UINT64 width, UINT16 arraySize = 1, UINT16 mipLevels = 0, D3D12 \_ RESOURCE \_ FLAGS flags = D3D12 \_ RESOURCE FLAG \_ \_ NONE, D3D12 \_ TEXTURE LAYOUT layout = \_ D3D12 \_ TEXTURE LAYOUT \_ \_ UNKNOWN, UINT64 alignment = 0)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**DXGI \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Format
+[**DXGI \_ FORMAT-Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
 UINT64-Breite
 
-Opt UInt16 arraySize = 1
+(opt) UINT16 arraySize = 1
 
-Opt UInt16 miplevels = 0
+(opt) UINT16 mipLevels = 0
 
-Opt [**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) Flags = \_ D3D12 \_ ressourcenflag " \_ None"
+(opt) [**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) = D3D12 \_ RESOURCE FLAG \_ \_ NONE
 
-Opt [**D3D12 \_ Layout des Textur \_ Layouts**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ Textur \_ Layout \_ unbekannt
+(opt) [**D3D12 \_ \_TEXTURLAYOUTlayout**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ \_ TEXTURLAYOUT \_ UNBEKANNT
 
-Opt UINT64 Alignment = 0
+(opt) UINT64-Ausrichtung = 0
 
 </dd> <dt>
 
-**static Inline Tex2D (DXGI \_ Format Format, UINT64 Width, uint Height, UInt16 arraySize = 1, UInt16 miplevels = 0, uint samplecount = 1, uint samplequality = 0, D3D12 \_ \_ Ressourcenflags Flags = D3D12 \_ Resource \_ Flag \_ None, D3D12 \_ Texture \_ Layout Layout = D3D12 \_ Texture \_ Layout \_ unknown, UINT64 Alignment = 0)**
+**static inline Tex2D(DXGI \_ FORMAT format, UINT64 Width, UINT height, UINT16 arraySize = 1, UINT16 mipLevels = 0, UINT sampleCount = 1, UINT sampleQuality = 0, D3D12 \_ RESOURCE \_ FLAGS flags = D3D12 \_ RESOURCE FLAG \_ \_ NONE, D3D12 \_ TEXTURE LAYOUT layout = \_ D3D12 \_ TEXTURE LAYOUT \_ \_ UNKNOWN, UINT64 alignment = 0)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**DXGI \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Format
+[**DXGI \_ FORMAT-Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
 UINT64-Breite
 
-Uint-Höhe
+UINT-Höhe
 
-Opt UInt16 arraySize = 1
+(opt) UINT16 arraySize = 1
 
-Opt UInt16 miplevels = 0
+(opt) UINT16 mipLevels = 0
 
-Opt Uint samplecount = 1
+(opt) UINT sampleCount = 1
 
-Opt Uint samplequality = 0
+(opt) UINT sampleQuality = 0
 
-Opt [**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) Flags = \_ D3D12 \_ ressourcenflag " \_ None"
+(opt) [**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) = D3D12 \_ RESOURCE FLAG \_ \_ NONE
 
-Opt [**D3D12 \_ Layout des Textur \_ Layouts**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ Textur \_ Layout \_ unbekannt
+(opt) [**D3D12 \_ \_TEXTURLAYOUTlayout**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ \_ TEXTURLAYOUT \_ UNBEKANNT
 
-Opt UINT64 Alignment = 0
+(opt) UINT64-Ausrichtung = 0
 
 </dd> <dt>
 
-**static Inline Tex3D (DXGI \_ Format Format, UINT64 Width, uint Height, UInt16 Tiefe, UInt16 miplevels = 0, D3D12 \_ \_ Ressourcenflags Flags = \_ D3D12 \_ ressourcentflag \_ None, D3D12 \_ Texture Layout \_ Layout = D3D12 \_ Texture \_ Layout \_ unknown, UINT64 Alignment = 0)**
+**static inline Tex3D(DXGI \_ FORMAT format, UINT64 width, UINT height, UINT16 depth, UINT16 mipLevels = 0, D3D12 \_ RESOURCE \_ FLAGS flags = D3D12 \_ RESOURCE FLAG \_ \_ NONE, D3D12 \_ TEXTURE LAYOUT layout = \_ D3D12 \_ TEXTURE LAYOUT \_ \_ UNKNOWN, UINT64 alignment = 0)**
 </dt> <dd>
 
 Gibt eine Funktion an, die die folgenden Parameter initialisiert:
 
-[**DXGI \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Format
+[**DXGI \_ FORMAT-Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
 UINT64-Breite
 
-Uint-Höhe
+UINT-Höhe
 
-UInt16 Tiefe
+UINT16-Tiefe
 
-Opt UInt16 miplevels = 0
+(opt) UINT16 mipLevels = 0
 
-Opt [**D3D12 \_ \_Ressourcenflags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) Flags = \_ D3D12 \_ ressourcenflag " \_ None"
+(opt) [**D3D12 \_ RESOURCE \_ FLAGS-Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_flags) = D3D12 \_ RESOURCE FLAG \_ \_ NONE
 
-Opt [**D3D12 \_ Layout des Textur \_ Layouts**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ Textur \_ Layout \_ unbekannt
+(opt) [**D3D12 \_ \_TEXTURLAYOUTlayout**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_layout) = D3D12 \_ \_ TEXTURLAYOUT \_ UNBEKANNT
 
-Opt UINT64 Alignment = 0
-
-</dd> <dt>
-
-**Inline Tiefe () konstant**
-</dt> <dd>
-
-Wenn Dimension = = [**D3D12 \_ Resource \_ Dimension**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension) \_ TEXTURE3D, wird depthorarraysize zurückgegeben. Wenn Dimension! = D3D12 \_ Resource \_ Dimension \_ TEXTURE3D, wird 1 zurückgegeben.
+(opt) UINT64-Ausrichtung = 0
 
 </dd> <dt>
 
-**Inline arraySize () konstant**
+**inline Depth() const**
 </dt> <dd>
 
-Wenn Dimension! = D3D12 \_ Resource \_ Dimension \_ TEXTURE3D, wird depthorarraysize zurückgegeben. Wenn Dimension = = D3D12 \_ Resource \_ Dimension \_ TEXTURE3D, wird 1 zurückgegeben. Weitere Informationen finden Sie unter [**D3D12 \_ Resource \_ Dimension**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension) \_ TEXTURE3D.
+Wenn Dimension == [**D3D12 \_ RESOURCE \_ DIMENSION**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension) \_ TEXTURE3D ist, gibt DepthOrArraySize zurück. Wenn Dimension != D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE3D, gibt 1 zurück.
 
 </dd> <dt>
 
-**Inline planecount (ID3D12Device \* pdevice) konstant**
+**inline ArraySize() const**
 </dt> <dd>
 
-Gibt D3D12GetFormatPlaneCount (pdevice, Format) zurück. Siehe [**D3D12GetFormatPlaneCount**](d3d12getformatplanecount.md) und [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device).
+Wenn Dimension != D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE3D, gibt DepthOrArraySize zurück. Wenn Dimension == D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE3D ist, wird 1 zurückgegeben. Siehe [**D3D12 \_ RESOURCE \_ DIMENSION**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_dimension) \_ TEXTURE3D.
 
 </dd> <dt>
 
-**Inline-unter Berichte (ID3D12Device \* pdevice) konstant**
+**inline PlaneCount(ID3D12Device \* pDevice) const**
 </dt> <dd>
 
-Gibt die Anzahl der unter Ressourcen zurück, die als miplevels \* arraySize () \* planecount (pdevice) berechnet werden.
+Gibt D3D12GetFormatPlaneCount(pDevice, Format) zurück. Siehe [**D3D12GetFormatPlaneCount**](d3d12getformatplanecount.md) und [**ID3D12Device**](/windows/desktop/api/d3d12/nn-d3d12-id3d12device).
 
 </dd> <dt>
 
-**Inline-calcsubresource (uint mipslice, uint arrayslice, uint planeslice)**
+**inline Subresources(ID3D12Device \* pDevice) const**
 </dt> <dd>
 
-Berechnet mithilfe von [**D3D12CalcSubresource**](d3d12calcsubresource.md)einen subresource-Index.
+Gibt die Anzahl der Unterressourcen zurück, berechnet als MipLevels \* ArraySize() \* PlaneCount(pDevice).
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Ressourcen- \_& () Konstanten**
+**inline CalcSubresource(UINT MipSlice, UINT ArraySlice, UINT PlaneSlice)**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Berechnet einen Unterressourcenindex mithilfe von [**D3D12CalcSubresource.**](d3d12calcsubresource.md)
 
 </dd> <dt>
 
-**Operator = = (konstant D3D12 \_ Ressourcen- \_& l, konstant D3D12 \_ Ressource \_& r)**
+**operator const D3D12 \_ RESOURCE \_ DESC&() const**
 </dt> <dd>
 
-Gibt "true" zurück, wenn alle Elemente der einzelnen-Strukturen identisch sind.
+Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> <dt>
 
-**Operator! = (Konstante D3D12 \_ Ressourcen- \_& l, konstant D3D12 \_ Ressource \_& r)**
+**operator == (const D3D12 \_ RESOURCE \_ DESC& l, const D3D12 \_ RESOURCE \_ DESC& r)**
 </dt> <dd>
 
-Gibt false zurück, wenn alle Member jeder Struktur identisch sind.
+Gibt TRUE zurück, wenn alle Member jeder Struktur identisch sind.
+
+</dd> <dt>
+
+**operator != (const D3D12 \_ RESOURCE \_ DESC& l, const D3D12 \_ RESOURCE \_ DESC& r)**
+</dt> <dd>
+
+Gibt FALSE zurück, wenn alle Member jeder Struktur identisch sind.
 
 </dd> </dl>
 
@@ -256,7 +256,7 @@ Gibt false zurück, wenn alle Member jeder Struktur identisch sind.
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -264,7 +264,7 @@ Gibt false zurück, wenn alle Member jeder Struktur identisch sind.
 
 <dl> <dt>
 
-[**D3D12 \_ Ressource \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)
+[**D3D12 \_ RESOURCE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

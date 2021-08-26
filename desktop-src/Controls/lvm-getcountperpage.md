@@ -1,5 +1,5 @@
 ---
-title: LVM_GETCOUNTPERPAGE Nachricht (Commctrl.h)
+title: LVM_GETCOUNTPERPAGE Meldung (Commctrl.h)
 description: Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines Listenansichtssteuerelements passen können, wenn sie sich in der Listen- oder Berichtsansicht befinden. Es werden nur vollständig sichtbare Elemente gezählt. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetCountPerPage-Makros senden.
 ms.assetid: 2ffd2bb1-cddf-4a4a-a4a8-087c9dc3fec0
 keywords:

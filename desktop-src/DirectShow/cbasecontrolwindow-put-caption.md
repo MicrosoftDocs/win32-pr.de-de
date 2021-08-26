@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ Caption-Methode legt den Titel oder die Beschriftung des Fensters fest.
+description: Die \_ Put Caption-Methode legt den Fenstertitel oder die Beschriftung fest.
 ms.assetid: 6671805a-e1ef-40f1-bc3f-bf7954ff9851
-title: CBaseControlWindow.put_Caption-Methode (ctlutil. h)
+title: CBaseControlWindow.put_Caption-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: aca8e5e7ad04acae9fab1cfe2d44f982266805e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c7f0c9da5ad2c3ae409e14a1ca9918a0c1aa7ef04615ab4d647ce1a3467c7311
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983700"
 ---
-# <a name="cbasecontrolwindowput_caption-method"></a>Cbasecontrolwindow. Put- \_ Beschriftungs Methode
+# <a name="cbasecontrolwindowput_caption-method"></a>CBaseControlWindow.put \_ Caption-Methode
 
-Die- `put_Caption` Methode legt den Titel oder die Beschriftung des Fensters fest.
+Die `put_Caption` -Methode legt den Fenstertitel oder die Beschriftung fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT put_Caption(
 
 <dl> <dt>
 
-*Überschrift* 
+*strCaption* 
 </dt> <dd>
 
-Neue Fenster Beschriftung.
+Neue Fensterbeschriftung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Den meisten Fenstern der obersten Ebene auf einem Windows-basierten Desktop ist ein Titel (Beschriftung) zugeordnet. Diese Eigenschaft kann durch die [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -Schnittstelle abgefragt und festgelegt werden. Jeder Beschriftungs Satz ist nur sichtbar, wenn für das Fenster der WS- \_ Beschriftungs Stil angewendet wurde. Wenn dies nicht der Fall ist, kann die Beschriftung weiterhin festgelegt (und abgerufen) werden, auch wenn Sie für den Benutzer nicht sichtbar ist.
+Den meisten Fenstern der obersten Ebene auf einem Windows-basierten Desktop ist ein Titel (Beschriftung) zugeordnet. Diese Eigenschaft kann über die [**IVideoWindow-Schnittstelle**](/windows/desktop/api/Control/nn-control-ivideowindow) abgefragt und festgelegt werden. Beschriftungssätze sind nur sichtbar, wenn auf das Fenster das WS \_ CAPTION-Format angewendet wurde. Andernfalls kann die Beschriftung weiterhin festgelegt (und abgerufen) werden, obwohl sie für den Benutzer nicht sichtbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Den meisten Fenstern der obersten Ebene auf einem Windows-basierten Desktop ist 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Den meisten Fenstern der obersten Ebene auf einem Windows-basierten Desktop ist 
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

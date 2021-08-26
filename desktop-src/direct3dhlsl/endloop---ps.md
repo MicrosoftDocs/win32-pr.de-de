@@ -1,6 +1,6 @@
 ---
-title: ENDLOOP-PS
-description: Ende einer Schleife... ENDLOOP-Block.
+title: endloop – ps
+description: Ende einer Schleife – ps... endloop-Block.
 ms.assetid: 8d05d0b3-88d2-44e3-a22d-54d8a8ceb5f4
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,30 +9,30 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ee1a7eb10146e40a39c05bcecb99d3a7667dee2c
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: b35daa5ca00db04b6e69dc70dd1a07aaf1287c2f9188819d5b65af9773edfe1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103948313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982490"
 ---
-# <a name="endloop---ps"></a>ENDLOOP-PS
+# <a name="endloop---ps"></a>endloop – ps
 
-Ende einer [Schleife](loop---ps.md)... ENDLOOP-Block.
+Ende einer [Schleife – ps](loop---ps.md)... endloop-Block.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| ENDLOOP               |      |      |      |      |      |      |       | x    | x     |
+| endloop               |      |      |      |      |      |      |       | x    | x     |
 
 
 
- 
+ 
 
-ENDLOOP muss der letzten Anweisung eines [Schleifen-PS-](loop---ps.md) Blocks folgen.
+endloop muss der letzten Anweisung einer [Schleife](loop---ps.md) folgen – ps block.
 
 ## <a name="example"></a>Beispiel
 
@@ -52,9 +52,9 @@ endloop
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

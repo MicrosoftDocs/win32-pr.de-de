@@ -44,7 +44,7 @@ Rendert einen Teil oder den ganzen angegebenen Spritebatch mithilfe der angegebe
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

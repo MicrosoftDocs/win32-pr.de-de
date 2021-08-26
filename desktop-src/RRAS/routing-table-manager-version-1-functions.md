@@ -1,56 +1,56 @@
 ---
-title: Funktionen der Routing-Tabellen-Manager-Version 1
-description: Verwenden Sie die folgenden Funktionen für den Zugriff auf die Routing Tabellen, die vom Routing Tabellen-Manager verwaltet werden.
+title: Funktionen des Routingtabellen-Managers, Version 1
+description: Verwenden Sie die folgenden Funktionen, um auf die Routingtabellen zuzugreifen, die vom Routingtabellen-Manager verwaltet werden.
 ms.assetid: 65ba03b2-5a30-43a5-86dd-73b1d4642a22
 keywords:
-- RRAS für den Routing-und RAS-Dienst, Routing Table Manager Version 1, Functions
-- Routing Table Manager Version 1 RRAS, Functions
+- Routing- und RAS-Dienst RRAS , Routing Table Manager Version 1, Funktionen
+- Routingtabellen-Manager, Version 1 RRAS, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2337ea09b4dd116f9db90c37e0a1ea3ea2a62b9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2d7d898a180499cafb2f3a128ed81a72e0fea783b8b3620192034694a59a6709
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027220"
 ---
-# <a name="routing-table-manager-version-1-functions"></a>Funktionen der Routing-Tabellen-Manager-Version 1
+# <a name="routing-table-manager-version-1-functions"></a>Funktionen des Routingtabellen-Managers, Version 1
 
-**Windows Server 2003:** Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Neue Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.
+**Windows Server 2003:** Diese API wurde durch die Routing Table Manager Version [2-API](about-routing-table-manager-version-2.md) ersetzt und ist nach Windows Server 2003 nicht mehr verfügbar. Neue Anwendungen sollten die Routing Table Manager Version 2-API verwenden.
 
-Verwenden Sie die folgenden Funktionen für den Zugriff auf die Routing Tabellen, die vom Routing Tabellen-Manager verwaltet werden:
+Verwenden Sie die folgenden Funktionen, um auf die Routingtabellen zuzugreifen, die vom Routingtabellen-Manager verwaltet werden:
 
-[**Rtmaddroute**](rtmaddroute.md)
+[**RtmAddRoute**](rtmaddroute.md)
 
-[**Rtmblockdeleteroutes**](rtmblockdeleteroutes.md)
+[**RtmBlockDeleteRoutes**](rtmblockdeleteroutes.md)
 
-[**Rtmcloseenumerationhandle**](rtmcloseenumerationhandle.md)
+[**RtmCloseEnumerationHandle**](rtmcloseenumerationhandle.md)
 
-[**Rtmkreateenumerationhandle**](rtmcreateenumerationhandle.md)
+[**RtmCreateEnumerationHandle**](rtmcreateenumerationhandle.md)
 
-[**Rtmdeleteroute**](rtmdeleteroute.md)
+[**RtmDeleteRoute**](rtmdeleteroute.md)
 
-[**Rtmde queueroutechangemess**](rtmdequeueroutechangemessage.md)
+[**RtmDequeueRouteChangeMessage**](rtmdequeueroutechangemessage.md)
 
-[**Rtmderegisterclient**](rtmderegisterclient.md)
+[**RtmDeregisterClient**](rtmderegisterclient.md)
 
-[**Rtmenumschlag-ategetnextroute**](rtmenumerategetnextroute.md)
+[**RtmEnumerateGetNextRoute**](rtmenumerategetnextroute.md)
 
-[**Rtmgetfirstroute**](rtmgetfirstroute.md)
+[**RtmGetFirstRoute**](rtmgetfirstroute.md)
 
-[**Rtmgetnetworkcount**](rtmgetnetworkcount.md)
+[**RtmGetNetworkCount**](rtmgetnetworkcount.md)
 
-[**Rtmgetnextroute**](rtmgetnextroute.md)
+[**RtmGetNextRoute**](rtmgetnextroute.md)
 
-[**Rtmgetrouteage**](rtmgetrouteage.md)
+[**RtmGetRouteAge**](rtmgetrouteage.md)
 
-[**Rtmisroute**](rtmisroute.md)
+[**RtmIsRoute**](rtmisroute.md)
 
-[**Rtmregisterclient**](rtmregisterclient.md)
+[**RtmRegisterClient**](rtmregisterclient.md)
 
- 
+ 
 
- 
+ 
 
 
 

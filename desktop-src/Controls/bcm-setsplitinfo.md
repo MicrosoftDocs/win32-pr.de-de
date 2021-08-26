@@ -1,9 +1,9 @@
 ---
-title: BCM_SETSPLITINFO Meldung (kommstrg. h)
-description: Legt Informationen für ein unterteilte Schaltflächen Steuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe der Schaltfläche \_ setsplitinfo-Makro.
+title: BCM_SETSPLITINFO Nachricht (Commctrl.h)
+description: Legt Informationen für ein Steuerelement für geteilte Schaltflächen fest. Senden Sie diese Nachricht explizit oder mithilfe des Button \_ SetSplitInfo-Makros.
 ms.assetid: 609b8972-9616-4850-a72c-2f87ce19f563
 keywords:
-- Windows-Steuerelemente für BCM_SETSPLITINFO Meldung
+- BCM_SETSPLITINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac40f2d1ef016ee76ab21ccf2dc4733d0ff427f3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 17332ce5f10fa612d739598222e4973000961435fa525190a650adaa9aa9fc4c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921420"
 ---
-# <a name="bcm_setsplitinfo-message"></a>BCM- \_ setsplitinfo-Meldung
+# <a name="bcm_setsplitinfo-message"></a>BCM \_ SETSPLITINFO-Nachricht
 
-Legt Informationen für ein unterteilte Schaltflächen Steuerelement fest. Senden Sie diese Nachricht explizit oder mithilfe der [**Schaltfläche \_ setsplitinfo**](/windows/desktop/api/Commctrl/nf-commctrl-button_setsplitinfo) -Makro.
+Legt Informationen für ein Steuerelement für geteilte Schaltflächen fest. Senden Sie diese Nachricht explizit oder mithilfe des [**Button \_ SetSplitInfo-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-button_setsplitinfo)
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,20 +36,20 @@ Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**\_ splitinfo**](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) -Struktur der Schaltfläche, die Informationen über die unterteilte Schaltfläche enthält.
+Ein Zeiger auf eine [**BUTTON \_ SPLITINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) die Informationen über die unterteilte Schaltfläche enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton**](button-styles.md) und [**SB \_ defsplitbutton**](button-styles.md) .
+Verwenden Sie diese Meldung nur mit den Schaltflächenstilen [**BS \_ SPLITBUTTON**](button-styles.md) und [**BS \_ DEFSPLITBUTTON.**](button-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -67,13 +67,13 @@ Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton*
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [Schaltflächenstile](button-styles.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Schaltflächentypen](button-types-and-styles.md)

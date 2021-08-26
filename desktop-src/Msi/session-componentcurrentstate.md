@@ -1,7 +1,7 @@
 ---
-description: Bei der componentcurrentstate-Eigenschaft des Session-Objekts handelt es sich um eine schreibgeschützte Eigenschaft, die den aktuell installierten Zustand der angegebenen Komponente zurückgibt. Informationen zu Zustands Werten finden Sie unter der componentrequeststate-Eigenschaft.
+description: Die ComponentCurrentState-Eigenschaft des Session-Objekts ist eine schreibgeschützte Eigenschaft, die den aktuellen installierten Zustand der angegebenen Komponente zurückgibt. Zustandswerte finden Sie in der ComponentRequestState-Eigenschaft.
 ms.assetid: c8343e90-8867-462d-9844-e547341a590c
-title: Session. componentcurrentstate-Eigenschaft
+title: Session.ComponentCurrentState-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 8c556dd9656ebced155ef90fe96abd394a32ff1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce060c7eddb76491480f4a1de9f477629da489ae9d8412adc02da25b8d7a0a1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039857"
 ---
-# <a name="sessioncomponentcurrentstate-property"></a>Session. componentcurrentstate-Eigenschaft
+# <a name="sessioncomponentcurrentstate-property"></a>Session.ComponentCurrentState-Eigenschaft
 
-Bei der **componentcurrentstate** -Eigenschaft des [**Session**](session-object.md) -Objekts handelt es sich um eine schreibgeschützte Eigenschaft, die den aktuell installierten Zustand der angegebenen Komponente zurückgibt. Informationen zu Zustands Werten finden Sie unter der [**componentrequeststate**](session-componentrequeststate.md) -Eigenschaft.
+Die **ComponentCurrentState-Eigenschaft** des [**Session-Objekts**](session-object.md) ist eine schreibgeschützte Eigenschaft, die den aktuellen installierten Zustand der angegebenen Komponente zurückgibt. Zustandswerte finden Sie in der [**ComponentRequestState-Eigenschaft.**](session-componentrequeststate.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,11 +37,11 @@ propVal = Session.ComponentCurrentState
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Erforderlicher Zeichen folgen Name der angeforderten Komponente, Primärschlüssel in der Komponenten Tabelle.
+Erforderlicher Zeichenfolgenname der angeforderten Komponente, Primärschlüssel in der Tabelle Komponente.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mi
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ ISession ist definiert als 000c109e-0000-0000-C000-000000000046<br/>                                                                                                                                                                             |
+| IID<br/>     | IID \_ ISession ist als 000C109E-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                             |
 
 
 
@@ -59,10 +59,10 @@ Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mi
 
 <dl> <dt>
 
-[**Sitzung**](session-object.md)
+[**Sitzungskonsistenz**](session-object.md)
 </dt> <dt>
 
-[**Componentrequeststate (Eigenschaft)**](session-componentrequeststate.md)
+[**ComponentRequestState-Eigenschaft**](session-componentrequeststate.md)
 </dt> </dl>
 
  

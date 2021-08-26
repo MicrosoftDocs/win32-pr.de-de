@@ -1,9 +1,9 @@
 ---
-title: PGM_GETBKCOLOR Nachricht (Commctrl.h)
-description: Ruft die aktuelle Hintergrundfarbe für das Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das Pager-Makro \_ GetBkColor verwenden.
+title: PGM_GETBKCOLOR (Commctrl.h)
+description: Ruft die aktuelle Hintergrundfarbe für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das \_ Pager-Makro GetBkColor verwenden.
 ms.assetid: c39ad721-fe39-44e9-8305-67444acc5d65
 keywords:
-- PGM_GETBKCOLOR Meldung Windows-Steuerelementen
+- PGM_GETBKCOLOR message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119985940"
 ---
 # <a name="pgm_getbkcolor-message"></a>PGM \_ GETBKCOLOR-Nachricht
 
-Ruft die aktuelle Hintergrundfarbe für das Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das [**Pager-Makro \_ GetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbkcolor) verwenden.
+Ruft die aktuelle Hintergrundfarbe für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ Pager-Makro GetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbkcolor) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Gibt einen **COLORREF-Wert** zurück, der die aktuelle Hintergrundfarbe enthält
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig verwendet das Pager-Steuerelement die Gesichtsfarbe der Systemschaltfläche als Hintergrundfarbe. Dies ist die gleiche Farbe, die durch Aufrufen von [**GetSysColorBrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) mit COLOR BTNFACE abgerufen werden \_ kann.
+Standardmäßig verwendet das Pager-Steuerelement die Gesichtsfarbe der Systemschaltfläche als Hintergrundfarbe. Dies ist die gleiche Farbe, die durch Aufrufen von [**GetSysColorBrush mit**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) COLOR \_ BTNFACE abgerufen werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Standardmäßig verwendet das Pager-Steuerelement die Gesichtsfarbe der Systemsc
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

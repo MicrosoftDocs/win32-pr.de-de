@@ -1,35 +1,35 @@
 ---
-description: Gibt die höchste Volumeebene zurück, die im Audioinhalt vorhanden war.
+description: Gibt die höchste Lautstärkeebene zurück, die im Audioinhalt vorhanden war.
 ms.assetid: 1d9a6a22-bb82-45e1-80d2-88627c90340c
-title: AVEncStatAudioPeakPCMValue-Eigenschaft (codecapi. h)
+title: AVEncStatAudioPeakPCMValue-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00d75444631a63c946d4020fe91cdd3a980fc393
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 330f3eea62ce5f0232504786c63e87c233bd802f6d06fad6306f476f9d6b5361
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999840"
 ---
-# <a name="avencstataudiopeakpcmvalue-property"></a>AVEncStatAudioPeakPCMValue-Eigenschaft
+# <a name="avencstataudiopeakpcmvalue-property"></a>AVEncStatAudioPeakPCMValue(Eigenschaft)
 
-Gibt die höchste Volumeebene zurück, die im Audioinhalt vorhanden war.
+Gibt die höchste Lautstärkeebene zurück, die im Audioinhalt vorhanden war.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ AVEncStatAudioPeakPCMValue**
+**CODECAPI \_ AVEncStatAudioPeakPCMValue**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist nach Abschluss der Codierung verfügbar.
+Diese Eigenschaft ist verfügbar, nachdem die Codierung abgeschlossen wurde.
 
-Diese Eigenschaft gilt nur für die Qualitäts basierte Variable Bitrate (VBR)-Codierung.
+Diese Eigenschaft gilt nur für die qualitätsbasierte VBR-Codierung (Variable Bit Rate).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,20 +37,20 @@ Diese Eigenschaft gilt nur für die Qualitäts basierte Variable Bitrate (VBR)-C
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  
