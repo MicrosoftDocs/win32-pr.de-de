@@ -1,21 +1,21 @@
 ---
-description: Wird an ein minimiertes (legendäres) Fenster gesendet.
+description: Wird an ein minimiertes Fenster gesendet.
 ms.assetid: e4f0e638-f606-4745-888b-14a846c7fd37
-title: WM_QUERYDRAGICON Meldung (Winuser. h)
+title: WM_QUERYDRAGICON-Nachricht (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed2c6040df06923e778eb717db4148bed233db4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20aac405a247f89a31c49f60a4e421fa171465d399dcb61a436936de5c646362
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055990"
 ---
-# <a name="wm_querydragicon-message"></a>WM \_ querydragicon-Meldung
+# <a name="wm_querydragicon-message"></a>WM \_ QUERYDRAGICON-Meldung
 
-Wird an ein minimiertes (legendäres) Fenster gesendet. Das Fenster wird vom Benutzer gezogen, aber es ist kein Symbol für seine Klasse definiert. Eine Anwendung kann ein Handle für ein Symbol oder einen Cursor zurückgeben. Das System zeigt diesen Cursor oder dieses Symbol an, während der Benutzer das Symbol zieht.
+Wird an ein minimiertes Fenster gesendet. Das Fenster wird vom Benutzer gezogen, aber es ist kein Symbol für seine Klasse definiert. Eine Anwendung kann ein Handle an ein Symbol oder einen Cursor zurückgeben. Das System zeigt diesen Cursor oder dieses Symbol an, während der Benutzer das Symbol zieht.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -46,13 +46,13 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Eine Anwendung sollte ein Handle für einen Cursor oder ein Symbol zurückgeben, den das System anzeigen soll, während der Benutzer das Symbol zieht. Der Cursor oder das Symbol muss mit der Auflösung des Anzeige Treibers kompatibel sein. Wenn die Anwendung **null** zurückgibt, zeigt das System den Standard Cursor an.
+Eine Anwendung sollte ein Handle an einen Cursor oder ein Symbol zurückgeben, das vom System angezeigt werden soll, während der Benutzer das Symbol zieht. Der Cursor oder das Symbol muss mit der Auflösung des Anzeigetreibers kompatibel sein. Wenn die Anwendung **NULL** zurückgibt, zeigt das System den Standardcursor an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Benutzer das Symbol eines Fensters ohne ein Klassen Symbol zieht, ersetzt das System das Symbol durch einen Standard Cursor. Wenn die Anwendung erfordert, dass während des Zieh Punkts ein anderer Cursor angezeigt wird, muss ein Handle für den Cursor oder das Symbol zurückgegeben werden, das mit der Auflösung des Anzeige Treibers kompatibel ist. Wenn eine Anwendung ein Handle für einen Farb Cursor oder ein Symbol zurückgibt, konvertiert das System den Cursor oder das Symbol in schwarz und weiß. Die Anwendung kann die [**LoadCursor**](/windows/win32/api/winuser/nf-winuser-loadcursora) -oder [**LoadIcon**](/windows/win32/api/winuser/nf-winuser-loadicona) -Funktion aufrufen, um einen Cursor oder ein Symbol aus den Ressourcen in der ausführbaren Datei (. exe) zu laden und dieses Handle abzurufen.
+Wenn der Benutzer das Symbol eines Fensters ohne Klassensymbol zieht, ersetzt das System das Symbol durch einen Standardcursor. Wenn die Anwendung beim Ziehen einen anderen Cursor anzeigen muss, muss sie ein Handle für den Cursor oder das Symbol zurückgeben, das mit der Auflösung des Anzeigetreibers kompatibel ist. Wenn eine Anwendung ein Handle an einen Farbcursor oder ein Farbsymbol zurückgibt, konvertiert das System den Cursor oder das Symbol in Schwarz-Weiß. Die Anwendung kann die [**LoadCursor-**](/windows/win32/api/winuser/nf-winuser-loadcursora) oder [**LoadIcon-Funktion**](/windows/win32/api/winuser/nf-winuser-loadicona) aufrufen, um einen Cursor oder ein Symbol aus den Ressourcen in der ausführbaren Datei (.exe) zu laden und dieses Handle abzurufen.
 
-Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünschten Rückgabewert in einen **booleschen** Wert umwandeln und den Wert direkt zurückgeben. Der von der [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) -Funktion festgelegte **DWL- \_ msgresult** -Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert in eine **BOOL-Datei** konvertieren und den Wert direkt zurückgeben. Der von der [**SetWindowLong-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) festgelegte **\_ DWL-MSGRESULT-Wert** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünsc
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -70,7 +70,7 @@ Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünsc
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**LoadCursor**](/windows/win32/api/winuser/nf-winuser-loadcursora)
@@ -79,7 +79,7 @@ Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünsc
 [**LoadIcon**](/windows/win32/api/winuser/nf-winuser-loadicona)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

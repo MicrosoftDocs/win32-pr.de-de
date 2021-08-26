@@ -1,60 +1,60 @@
 ---
-title: Prozedur Format Zeichenfolgen
-description: Im folgenden finden Sie eine ausführliche Beschreibung der Format Zeichenfolge. Es assembliert alle Ebenen, die mit verschiedenen Phasen der interpreterentwicklung verknüpft sind.
+title: Prozedurformatzeichenfolgen
+description: Es folgt eine vollständige Formatzeichenfolgenbeschreibung. Sie stellt alle Ebenen zusammen, die sich auf verschiedene Phasen der Interpreterentwicklung beziehen.
 ms.assetid: fab603ed-1f68-4e0b-9c8d-b9730b8cd389
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0e58a9acf10caad23063bdba117dc402e411638
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fb17434a1c05b66212283237d61ee4492aa23ed0bf1ecca75f1fec1b3ddd784b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019058"
 ---
-# <a name="procedure-format-strings"></a>Prozedur Format Zeichenfolgen
+# <a name="procedure-format-strings"></a>Prozedurformatzeichenfolgen
 
-Im folgenden finden Sie eine ausführliche Beschreibung der Format Zeichenfolge. Es assembliert alle Ebenen, die mit verschiedenen Phasen der interpreterentwicklung verknüpft sind.
+Es folgt eine vollständige Formatzeichenfolgenbeschreibung. Sie stellt alle Ebenen zusammen, die sich auf verschiedene Phasen der Interpreterentwicklung beziehen.
 
-## <a name="procedure-descriptor-overview"></a>Übersicht über den Prozedur Deskriptor
+## <a name="procedure-descriptor-overview"></a>Übersicht über den Prozedurdeskriptor
 
-Ein Prozedur Deskriptor besteht aus den Header Deskriptoren und den Parameter Deskriptoren. Die Beschreibung des [**– Oi**](/windows/desktop/Midl/-oi) -Stils wird in Bezug auf die allgemeine Verwendung in der aktuellen RPC-Programmierung als veraltet eingestuft. **– OIF** gilt als aktueller.
+Ein Prozedurdeskriptor besteht aus den Headerdeskriptoren und den Parameterdeskriptoren. Die [**–Oi-Stilbeschreibung**](/windows/desktop/Midl/-oi) gilt im Hinblick auf die allgemeine Verwendung in der aktuellen RPC-Programmierung als veraltet. Der **-Oif** wird als aktueller betrachtet.
 
-## <a name="the-oi-style-description"></a>Die Beschreibung des – Oi-Stils
+## <a name="the-oi-style-description"></a>Beschreibung des –Oi-Stils
 
-Diese Beschreibung besteht aus den folgenden Elementen:
+Diese Beschreibung umfasst Folgendes:
 
 ``` syntax
 -Oi_style_header_descriptor<>
 {-Oi_style_parameter_descriptor<>}*
 ```
 
-Der-Header würde zwischen 6 und 16 Bytes umfassen.
+Der Header hätte zwischen 6 und 16 Bytes.
 
-Die gesamte Beschreibung wird generiert, wenn im [**– Oi**](/windows/desktop/Midl/-oi) -Modus kompiliert wird. Im [**– OS**](/windows/desktop/Midl/-os) -Modus werden nur die Parameter Deskriptoren generiert, die für die Konvertierung verwendet werden. Der Pick-Interpreter verwendet alte Stil Parameter Deskriptoren.
+Die vollständige Beschreibung wird beim Kompilieren im [**–Oi-Modus**](/windows/desktop/Midl/-oi) generiert. Im Modus [**"-Os"**](/windows/desktop/Midl/-os) werden nur die Parameterdeskriptoren generiert, die für die Konvertierung verwendet werden. Der Picklinginterpreter verwendet alte Stilparameterdeskriptoren.
 
-## <a name="the-oif-style-description"></a>Die Beschreibung des – OIF-Stils
+## <a name="the-oif-style-description"></a>Beschreibung des –Oif-Stils
 
-Die Beschreibung besteht aus den folgenden Elementen:
+Die Beschreibung umfasst Folgendes:
 
 ``` syntax
 -Oif_style_header_descriptor<>
 {-Oif_style_parameter_descriptor<6>}*
 ```
 
-Der Header Deskriptor des [**– OIF**](/windows/desktop/Midl/-oi) -Stils besteht aus
+Der [](/windows/desktop/Midl/-oi) -Oif-Stilheaderdeskriptor besteht aus
 
-Die Beschreibung des – OIF-Stils wird generiert, wenn im [**– OIF**](/windows/desktop/Midl/-oi) -oder **– Oicf** -Modus des Compilers kompiliert wird.
+Die Beschreibung des -Oif-Stils wird beim Kompilieren im [**-Oif-**](/windows/desktop/Midl/-oi) oder **-Oicf-Modus** des Compilers generiert.
 
 ``` syntax
 -Oi_style_header_descriptor<>
 -Oif_extensions_to_the_old_header<6>
 ```
 
-Einige neuere Features wie Pipe, Async und [**/robust**](/windows/desktop/Midl/-robust) erzwingen den [**– Oicf**](/windows/desktop/Midl/-oi) -Modus des Compilers, wenn er verwendet wird.
+Einige neuere Features wie pipe, async und [**/robust**](/windows/desktop/Midl/-robust) erzwingen bei Verwendung den [**-Oicf-Modus**](/windows/desktop/Midl/-oi) des Compilers.
 
-## <a name="the-extended-oif-description"></a>Die erweiterte –-OIF-Beschreibung
+## <a name="the-extended-oif-description"></a>Die erweiterte Beschreibung von –Oif
 
-Die Beschreibung besteht aus den folgenden Elementen:
+Die Beschreibung umfasst Folgendes:
 
 ``` syntax
 -Oif_style_header_descriptor<>
@@ -62,6 +62,6 @@ extensions_to_the_-Oif_header<8>
 {-Oif style parameter descriptors<6>}*
 ```
 
- 
+ 
 
- 
+ 

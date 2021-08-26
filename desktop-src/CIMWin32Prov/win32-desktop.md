@@ -1,5 +1,5 @@
 ---
-description: Die Win32 \_ desktopwmi-Klasse stellt die allgemeinen Merkmale des Desktops eines Benutzers dar. Die Eigenschaften dieser Klasse können vom Benutzer geändert werden, um den Desktop anzupassen.
+description: Die Win32 \_ DesktopWMI-Klasse stellt die allgemeinen Merkmale des Desktops eines Benutzers dar. Die Eigenschaften dieser Klasse können vom Benutzer geändert werden, um den Desktop anzupassen.
 ms.assetid: 9615a443-7611-4c30-9693-ea71b09b013b
 ms.tgt_platform: multiple
 title: Win32_Desktop-Klasse
@@ -35,18 +35,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1d005104cb663a680bac080b7ff9b6529fd9b7a1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5c59adebd2fdf3c0727016473e6c347be3af139d539bb007c794eb2aafb4c1e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002880"
 ---
-# <a name="win32_desktop-class"></a>Win32 \_ -Desktop Klasse
+# <a name="win32_desktop-class"></a>Win32 \_ Desktop-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für den **Win32 \_ -Desktop** stellt die allgemeinen Merkmale des Desktops eines Benutzers dar. Die Eigenschaften dieser Klasse können vom Benutzer geändert werden, um den Desktop anzupassen.
+Die **Win32 \_ Desktop**[WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) stellt die allgemeinen Merkmale des Desktops eines Benutzers dar. Die Eigenschaften dieser Klasse können vom Benutzer geändert werden, um den Desktop anzupassen.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,29 +80,29 @@ class Win32_Desktop : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ -Desktop** Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ Desktop-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ -Desktop** Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ Desktop-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Rahmenbreite**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -Systemsteuerung \\ \\ Desktop \\ \\ WindowMetrics \| BorderWidth ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung Desktop \\ \\ \\ \\ WindowMetrics \| BorderWidth")
 </dt> </dl>
 
-Breite der Rahmen um alle Fenster mit anpassbaren Rändern.
+Breite der Rahmen um alle Fenster mit anpassbaren Rahmen.
 
 Beispiel: 3
 
@@ -111,50 +111,50 @@ Beispiel: 3
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
-**Coolswitch**
+**CoolSwitch**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Control Panel \\ \\ Desktop \| coolswitch")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Systemsteuerung Desktop \\ \\ \| CoolSwitch")
 </dt> </dl>
 
-Der schnelle Aufgaben Wechsel ist aktiviert. Der schnelle Aufgaben Wechsel ermöglicht es dem Benutzer, mithilfe der Tastenkombination **Alt + Tab** zwischen Fenstern zu wechseln.
+Schnelles Wechseln von Aufgaben ist aktiviert. Schnelles Wechseln von Aufgaben ermöglicht es dem Benutzer, mithilfe der Tastenkombination **ALT+TAB** zwischen Fenstern zu wechseln.
 
 </dd> <dt>
 
-**Cursor-Blinkrate**
+**CursorBlinkRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Control Panel \\ \\ Desktop \| geschweisorblinkrate"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millisekunden")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Systemsteuerung Desktop \\ \\ \| CursorBlinkRate"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Millisekunden")
 </dt> </dl>
 
-Zeitspanne zwischen aufeinander folgenden Cursor-Blinks.
+Die Zeitspanne zwischen aufeinanderfolgenden Cursorblinzeln.
 
 Beispiel: 530
 
@@ -163,62 +163,62 @@ Beispiel: 530
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **DragFullWindows**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Control Panel \\ \\ Desktop \| DragFullWindows")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Systemsteuerung Desktop \\ \\ \| DragFullWindows")
 </dt> </dl>
 
 Der Inhalt eines Fensters wird angezeigt, wenn ein Benutzer das Fenster verschiebt.
 
 </dd> <dt>
 
-**Gridgranularität**
+**GridGranularity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Control Panel \\ \\ Desktop- \| Granularität"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("8 Pixel")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Systemsteuerung Desktop \\ \\ \| GridGranularity"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("8 Pixel")
 </dt> </dl>
 
-Abstand des Rasters, an das Windows auf dem Desktop gebunden ist. Dies erleichtert das Organisieren von Fenstern. Der Abstand ist in der Regel ausreichend, dass der Benutzer ihn nicht bemerkt.
+Abstand des Rasters, an das Fenster auf dem Desktop gebunden sind. Dies erleichtert das Organisieren von Fenstern. Der Abstand ist in der Regel ausreichend, damit der Benutzer ihn nicht bemerkt.
 
 Beispiel: 1
 
 </dd> <dt>
 
-**IconSpacing**
+**SymbolSpacing**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \\ \\ WindowMetrics \| IconSpacing "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Pixel ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ \\ \\ DesktopfensterMetrikensymbolSpacing"), \| [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pixel")
 </dt> </dl>
 
 Abstand zwischen Symbolen.
@@ -227,16 +227,16 @@ Beispiel: 75
 
 </dd> <dt>
 
-**Icontitlefakename**
+**IconTitleFaceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \\ \\ WindowMetrics \| IconFont ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ Desktop \\ \\ WindowMetrics \| IconFont")
 </dt> </dl>
 
 Schriftart, die für die Namen der Symbole verwendet wird.
@@ -248,16 +248,16 @@ Beispiel: "MS San Serif"
 **IconTitleSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Font and Text Structures \| [**logfontw**](/windows/win32/api/wingdi/ns-wingdi-logfonta) \| lfheight"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("Point")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Font and Text Structures \| [**LOGFONTW**](/windows/win32/api/wingdi/ns-wingdi-logfonta) \| lfHeight"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("point")
 </dt> </dl>
 
-Schriftart Größe des Symbols.
+Schriftgrad des Symbols.
 
 Beispiel: 9
 
@@ -266,196 +266,196 @@ Beispiel: 9
 **IconTitleWrap**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \\ \\ WindowMetrics \| IconTitleWrap ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ Desktop \\ \\ WindowMetrics \| IconTitleWrap")
 </dt> </dl>
 
-Der Titeltext des Symbols wird in die nächste Zeile umschlossen.
+Der Titeltext des Symbols wird in die nächste Zeile umbrochen.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
+Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI")
 </dt> </dl>
 
-Der Name, der das aktuelle Desktop Profil identifiziert.
+Name, der das aktuelle Desktopprofil identifiziert.
 
-Beispiel: "mainprof"
+Beispiel: "MainProf"
 
 </dd> <dt>
 
 **Muster**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -System Steuerungs \\ \\ Desktop- \| Muster ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ \| DesktopMuster")
 </dt> </dl>
 
-Der Name des Musters, das als Hintergrund für den Desktop verwendet wird.
+Name des Musters, das als Hintergrund für den Desktop verwendet wird.
 
 </dd> <dt>
 
 **ScreenSaverActive**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -Systemsteuerung \\ \\ Desktop \| screensaveactive ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung Desktop \\ \\ \| ScreenSaveActive")
 </dt> </dl>
 
-Der Bildschirmschoner ist aktiv.
+Bildschirmschoner ist aktiv.
 
 </dd> <dt>
 
-**Screensaverausführ Bare Datei**
+**ScreenSaverExecutable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -Systemsteuerung \\ \\ Desktop \|SCRNSAVE.EXE ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ Desktop \|SCRNSAVE.EXE")
 </dt> </dl>
 
-Der Name der aktuellen ausführbaren Datei für den Bildschirmschoner.
+Name der ausführbaren Datei des aktuellen Bildschirmschonrs.
 
-Beispiel: "Login. SCR
+Beispiel: "LOGON. SCR"
 
 </dd> <dt>
 
 **ScreenSaverSecure**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \| ScreenSaverIsSecure ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung Desktop \\ \\ \| ScreenSaverIsSecure")
 </dt> </dl>
 
 Das Kennwort ist für den Bildschirmschoner aktiviert.
 
 </dd> <dt>
 
-**Screensavertimeout**
+**ScreenSaverTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \| SCREENSAVETIMEOUT "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Sekunden ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ Desktop \| ScreenSaveTimeOut"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sekunden")
 </dt> </dl>
 
-Die Zeitspanne, die vor dem Start des Bildschirmschoners verstrichen ist.
+Die Zeitspanne, die verstreicht, bevor der Bildschirmschoner gestartet wird.
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, durch den das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **Hintergrundbild**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -System Steuerungs \\ \\ Desktop- \| Hintergrundbild ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung Desktop \\ \\ \| Wallpaper")
 </dt> </dl>
 
-Der Dateiname für das Hintergrundbild im Hintergrund des Desktops.
+Dateiname für das Hintergrundbilddesign im Hintergrund des Desktops.
 
 Beispiel: "WINNT.BMP"
 
 </dd> <dt>
 
-**Wallpapier gestreckt**
+**WallpaperStretched**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ -Systemsteuerung \\ \\ Desktop \| Wallart ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung Desktop \\ \\ \| WallpaperStyle")
 </dt> </dl>
 
-Das Hintergrundbild wird gestreckt, um den gesamten Bildschirm auszufüllen. Microsoft Plus! muss installiert werden, bevor diese Option verfügbar ist. Wenn der Wert **false** ist, behält das Hintergrund seine ursprünglichen Dimensionen im Desktop Hintergrund.
+Hintergrundbild wird gestreckt, um den gesamten Bildschirm zu füllen. Microsoft Plus! muss installiert sein, bevor diese Option verfügbar ist. **False** gibt an, dass das Hintergrundbild seine ursprünglichen Abmessungen auf dem Desktophintergrund beibehält.
 
 </dd> <dt>
 
-**Wallpapierkachel**
+**WallpaperTiled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . Standard \\ \\ systemsteuerungpanel \\ \\ Desktop \| tilewallpaper ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| . DEFAULT \\ \\ Systemsteuerung \\ \\ Desktop \| TileWallpaper")
 </dt> </dl>
 
-Das Hintergrundbild wird gekachelt oder zentriert.
+Hintergrundbilder sind gekachelt oder zentriert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ -Desktop** Klasse wird von der [**CIM- \_ Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ Desktop-Klasse** wird von [**der \_ CIM-Einstellung**](cim-setting.md)abgeleitet.
 
-Der aufrufenden Prozess, der diese Klasse verwendet, muss auf dem Computer, auf dem sich die Registrierung befindet, über die Berechtigung " **SE \_ Restore \_ Name** " verfügen. Wenn Sie diese Klasse z. b. auf dem lokalen Computer auflisten, muss das Konto, unter dem Ihre Anwendung ausgeführt wird, über diese Berechtigung verfügen. Weitere Informationen finden Sie unter [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+Der aufrufende Prozess, der diese Klasse verwendet, muss über die **SE \_ RESTORE \_ NAME-Berechtigung** auf dem Computer verfügen, auf dem sich die Registrierung befindet. Wenn Sie diese Klasse beispielsweise auf dem lokalen Computer aufzählen, muss das Konto, unter dem die Anwendung ausgeführt wird, über diese Berechtigung verfügen. Weitere Informationen finden Sie unter [Ausführen privilegierter Vorgänge.](/windows/desktop/WmiSdk/executing-privileged-operations)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird das Abrufen von Desktop Informationen beschrieben.
+Im folgenden Codebeispiel wird beschrieben, wie Desktopinformationen abgerufen werden.
 
 
 ```PowerShell
@@ -499,8 +499,8 @@ Foreach ($dt in $desktops) {
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -509,7 +509,7 @@ Foreach ($dt in $desktops) {
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

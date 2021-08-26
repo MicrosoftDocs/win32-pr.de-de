@@ -1,6 +1,6 @@
 ---
 title: Precise (Genau)
-description: Die pro-Anweisung-Deaktivierung des arithmetischen refactorings.
+description: 'Pro-Anweisung: Deaktivieren des arithmetischen Refactorings.'
 ms.assetid: A26E569A-32EA-4AED-83C2-4F937AD3829E
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,59 +9,59 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 03f288fb5dafee0e29c8c11cab72156f7ad3d569
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3c7929a7ebab01b17aca3e11cb98de8796bf568cd08a3a7b04d8f3395f531d72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104516478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067910"
 ---
 # <a name="precise"></a>Precise (Genau)
 
-Die pro-Anweisung-Deaktivierung des arithmetischen refactorings.
+Pro-Anweisung: Deaktivieren des arithmetischen Refactorings.
 
 
 
-| präzise (Komponenten Maske) |
+| precise (Komponentenmaske) |
 |--------------------------|
 
 
 
- 
+ 
 
-Dieser Modifizierer erfordert das globale shaderflag "Refactoring \_ zugelassen". Wenn das Refactoring \_ zulässig ist, können einzelne Komponenten Ergebnisse einzelner Anweisungen erzwungen werden, damit Sie durch Compiler oder Treiber präzise oder nicht umgestaltbar bleiben. Wenn die Komponenten einer [**Mad**](mad--sm4---asm-.md) -Anweisung als **präzise** gekennzeichnet sind, muss die Hardware eine **Mad** -Anweisung oder die exakte Entsprechung ausführen, und Sie kann Sie nicht in ein multiplizieren, gefolgt von einem Add-Wert, aufteilen. Umgekehrt kann ein multiplizieren, gefolgt von einem Add-in, bei dem entweder oder beide als **genau** gekennzeichnet sind, nicht mit einem gemergten **Mad** zusammengeführt werden.
+Dieser Modifizierer erfordert das globale Shaderflag "REFACTORING \_ ALLOWED". Wenn REFACTORING \_ ALLOWED vorhanden ist, können einzelne Komponentenergebnisse einzelner Anweisungen gezwungen werden, präzise zu bleiben oder von Compilern oder Treibern nicht umgestaltbar zu bleiben. Wenn Komponenten einer [**"toll"-Anweisung**](mad--sm4---asm-.md) als **präzise** gekennzeichnet werden, muss die Hardware eine **"toll"-Anweisung** oder die genaue Entsprechung ausführen und kann sie nicht in eine Multiplikation aufteilen, auf die ein Add folgt. Umgekehrt kann eine Multiplikation gefolgt von einem Add,bei dem entweder oder beide als **präzise** gekennzeichnet sind, nicht in einem fused-toll zusammengeführt werden. 
 
-Wenn Refactoring \_ zugelassen nicht angegeben wurde, ist der **exakte** Modifizierer nicht zulässig. Er ist nicht erforderlich, da alles präzise ist. Der **genaue** Modifizierer wirkt sich auf jeden Vorgang aus, nicht nur auf Arithmetik.
+Wenn REFACTORING \_ ALLOWED nicht angegeben wurde, ist der **genaue** Modifizierer nicht zulässig. Sie ist nicht erforderlich, da alles präzise ist. Der **genaue** Modifizierer wirkt sich auf alle Vorgänge aus, nicht nur auf arithmetische Vorgänge.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Dieser Modifizierer wird in den folgenden shadermodellen unterstützt.
+Dieser Modifizierer wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader Model 5-Anweisungs modifiziererer](shader-model-5-instruction-modifiers.md)
+[Shadermodell 5-Anweisungsmodifizierer](shader-model-5-instruction-modifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

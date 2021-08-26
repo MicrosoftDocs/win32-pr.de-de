@@ -1,35 +1,35 @@
 ---
-title: Remotefx-Medien Umleitungs-API-Strukturen
-description: Die remotefx-Medien Umleitungs-API definiert die folgenden Strukturen.
+title: RemoteFX Medienumleitungs-API-Strukturen
+description: Die RemoteFX-API für die Medienumleitung definiert die folgenden Strukturen.
 ms.assetid: 9519F39D-E0EA-40E4-BEFD-E160DE012ECF
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f30d5cec4cdce9c08c1bcafdad155ddef62c9994
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 9902e3c905b382ebf1d3fe0c39b91e05118ef8b54c951f4ed9d376d1fe1c4331
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988580"
 ---
-# <a name="remotefx-media-redirection-api-structures"></a>Remotefx-Medien Umleitungs-API-Strukturen
+# <a name="remotefx-media-redirection-api-structures"></a>RemoteFX Medienumleitungs-API-Strukturen
 
-Die remotefx-Medien Umleitungs-API definiert die folgenden Strukturen.
+Die RemoteFX-API für die Medienumleitung definiert die folgenden Strukturen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Bitmap- \_ \_ rendererstatistik**](/windows/desktop/api/tsvirtualchannels/ns-tsvirtualchannels-bitmap_renderer_statistics)
+[**\_BITMAP-RENDERERSTATISTIKEN \_**](/windows/desktop/api/tsvirtualchannels/ns-tsvirtualchannels-bitmap_renderer_statistics)
 </dt> <dd>
 
-Enthält Statistiken für den Bitmap-Renderer der remotefx-Medien Umleitung.
+Enthält Statistiken für den RemoteFX-Renderer für die Medienumleitung.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

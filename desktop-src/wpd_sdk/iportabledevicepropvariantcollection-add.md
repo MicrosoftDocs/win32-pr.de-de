@@ -14,12 +14,12 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 7aed732cb92ea7e0f2fb3c2ebdd615f643bc3107
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: fd90e4702045200e4f2766f6dcdd661ff83b6cd3370970a22e3211eebfa13c90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055260"
 ---
 # <a name="iportabledevicepropvariantcollectionadd-method"></a>IPortableDevicePropVariantCollection::Add-Methode
 
@@ -49,7 +49,7 @@ Zeiger auf ein neues **PROPVARIANT-Objekt,** das der Auflistung hinzugefügt wer
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -61,11 +61,11 @@ Die -Methode gibt ein **HRESULT zurück.** Mögliches Werte (aber nicht die Einz
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der VARTYPE für *pValue* VT VECTOR oder VT UI1 ist, wird das Festlegen und Abrufen eines Puffers mit \_ \_ **NULL-** oder Nullgröße nicht unterstützt. Beispielsweise sind weder pValue.caub.pElems = **NULL** noch pValue.caub.cElems = 0 zulässig.
 
-Wenn ein Aufrufer versucht, ein Element eines anderen VARTYPE-Elements hinzuzufügen, das in der Auflistung enthalten ist, und der PROPVARIANT-Wert von dieser Schnittstelle nicht automatisch geändert werden kann, wird diese Methode fehlschlagen. Um den Auflistungstyp manuell zu ändern, rufen [**Sie IPortableDevicePropVariantCollection::ChangeType auf.**](iportabledevicepropvariantcollection-changetype.md)
+Wenn ein Aufrufer versucht, ein Element eines anderen VARTYPE-Elements hinzuzufügen, das in der Auflistung enthalten ist, und der PROPVARIANT-Wert von dieser Schnittstelle nicht automatisch geändert werden kann, kann diese Methode nicht ausgeführt werden. Um den Auflistungstyp manuell zu ändern, rufen [**Sie IPortableDevicePropVariantCollection::ChangeType auf.**](iportabledevicepropvariantcollection-changetype.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -75,14 +75,14 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter Abrufen eines O
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

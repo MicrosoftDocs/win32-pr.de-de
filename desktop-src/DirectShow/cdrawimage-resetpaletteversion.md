@@ -1,7 +1,7 @@
 ---
-description: Die resetpaletteversion-Methode setzt die palettenversion zurück. Ruft diese Methode auf, wenn die PIN des besitzenden Filters erneut eine Verbindung herstellt.
+description: Die ResetPaletteVersion-Methode setzt die Palettenversion zurück. Rufen Sie diese Methode auf, wenn der Stecknadel des besitzenden Filters erneut eine Verbindung herstellen kann.
 ms.assetid: c9e5588c-5501-4356-bdec-a339d33f9eb5
-title: Cdrawimage. resetpaletteversion-Methode (winutil. h)
+title: CDrawImage.ResetPaletteVersion-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a94cd04de428a29308ead8fa33ccfe1792e021a0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d367060c86c54fb9df5bd7b0f05cea1fa3d7b7f3316dce327fca7ce9985fadfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055960"
 ---
-# <a name="cdrawimageresetpaletteversion-method"></a>Cdrawimage. resetpaletteversion-Methode
+# <a name="cdrawimageresetpaletteversion-method"></a>CDrawImage.ResetPaletteVersion-Methode
 
-Die- `ResetPaletteVersion` Methode setzt die palettenversion zurück. Ruft diese Methode auf, wenn die PIN des besitzenden Filters erneut eine Verbindung herstellt.
+Die `ResetPaletteVersion` -Methode setzt die Palettenversion zurück. Rufen Sie diese Methode auf, wenn der Stecknadel des besitzenden Filters erneut eine Verbindung herstellen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt den Wert von **m \_ paletteversion** auf eine vordefinierte Konstante **, \_ palettenversion**, fest.
+Diese Methode legt den Wert von **m \_ PaletteVersion** auf eine vordefinierte Konstante fest, **PALETTE \_ VERSION**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode legt den Wert von **m \_ paletteversion** auf eine vordefinierte K
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Diese Methode legt den Wert von **m \_ paletteversion** auf eine vordefinierte K
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: getpaletteversion**](cdrawimage-getpaletteversion.md)
+[**CDrawImage::GetPaletteVersion**](cdrawimage-getpaletteversion.md)
 </dt> <dt>
 
-[**Cdrawimage:: incrementpaletteversion**](cdrawimage-incrementpaletteversion.md)
+[**CDrawImage::IncrementPaletteVersion**](cdrawimage-incrementpaletteversion.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getimagesize-Methode ruft Informationen zur Video Bild Größe ab.
+description: Die GetImageSize-Methode ruft Informationen zur Videobildgröße ab.
 ms.assetid: a6d7f949-c6a9-49e9-b10a-f6f5bd73dc00
-title: Cbasecontrolvideo. getimagesize-Methode (ctlutil. h)
+title: CBaseControlVideo.GetImageSize-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ed7795e3998bc101e907bce87c9981e86f51fcb6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a7e0d970e06186ced3800d4b1f4dc4190778834941b69ac17402e2294312b05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057060"
 ---
-# <a name="cbasecontrolvideogetimagesize-method"></a>Cbasecontrolvideo. getimagesize-Methode
+# <a name="cbasecontrolvideogetimagesize-method"></a>CBaseControlVideo.GetImageSize-Methode
 
-Die- `GetImageSize` Methode ruft Informationen zur Video Bild Größe ab.
+Die `GetImageSize` -Methode ruft Informationen zur Videobildgröße ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,47 +44,47 @@ HRESULT GetImageSize(
 
 <dl> <dt>
 
-*pvideoinfo* 
+*pVideoInfo* 
 </dt> <dd>
 
-Zeiger auf eine [**videinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur, die ausgefüllt werden soll.
+Zeiger auf eine [**VIDEOINFOHEADER-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) die ausgefüllt werden soll.
 
 </dd> <dt>
 
-*pbuffersize* 
+*pBufferSize* 
 </dt> <dd>
 
-Ein Zeiger auf die Größe des Video Puffers.
+Zeiger auf die Größe des Videopuffers.
 
 </dd> <dt>
 
-*psourcerect* 
+*pSourceRect* 
 </dt> <dd>
 
-Zeiger auf die Rechteck Abmessungen des Quellvideos.
+Zeiger auf die Rechteckdimensionen des Quellvideos.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte sein, oder andere Werte, die nicht aufgeführt sind.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                                               |
 |----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>       | Fehler.<br/>                                                       |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültiges Argument. Das Datenformat ist nicht kompatibel.<br/>           |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Unerwarteter Fehler. Mindestens ein Argument ist **null**.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>       | Fehler.<br/>                                                       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiges Argument. Das Datenformat ist nicht kompatibel.<br/>           |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Unerwarteter Fehler. Mindestens ein Argument ist **NULL.**<br/> |
 | <dl> <dt>**NOERROR**</dt> </dl>       | Erfolg.<br/>                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion ist eine Hilfsfunktion zum Erstellen von Image-Renderings von DIB-Images im Speicher. Sie wird von der Basisklassen Implementierung von [**cbasecontrolvideo:: Get-/timage**](cbasecontrolvideo-getcurrentimage.md) aufgerufen, wenn ein **null**-_pvideoimage_ -Parameter an diese Member-Funktion übergeben wird. Folglich erstellt diese Member-Funktion eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur und gibt Sie zurück, wobei die Informationen in *pbuffersize* und *psourcerect* verwendet werden.
+Diese Memberfunktion ist eine Hilfsfunktion, die zum Erstellen von Speicherbildrenderings von DIB-Bildern verwendet wird. Sie wird von der Basisklassenimplementierung von [**CBaseControlVideo::GetCurrentImage**](cbasecontrolvideo-getcurrentimage.md) aufgerufen, wenn ein _NULL-pVideoImage-Parameter_ an diese Memberfunktion übergeben wird.  Daher erstellt diese Memberfunktion eine [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) und gibt sie mithilfe der Informationen in *pBufferSize* und *pSourceRect* zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,8 +92,8 @@ Diese Member-Funktion ist eine Hilfsfunktion zum Erstellen von Image-Renderings 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -101,7 +101,7 @@ Diese Member-Funktion ist eine Hilfsfunktion zum Erstellen von Image-Renderings 
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

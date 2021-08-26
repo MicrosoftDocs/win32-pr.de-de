@@ -1,43 +1,43 @@
 ---
-description: Ein System Energie Verwaltungs Ereignis ist eine Änderung des System Energiestatus, des Betriebsmodus eines Geräts oder des Systems oder des Werts einer Energie Einstellung.
+description: Ein Systemleistungsverwaltungsereignis ist eine Änderung des Systemleistungsstatus, des Betriebsmodus eines Geräts oder des Systems oder des Werts einer Energieeinstellung.
 ms.assetid: f73b072a-1f69-4e26-9712-dab428edca18
-title: Ereignisse der System Energie Verwaltung
+title: System Power Management Events
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ab18fad9116cfff9e1cd35703e32a49e3b12c8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0558dfe0c846c6b48125a382d14f03181d7f18fb2d11deb4783af975e57c4cf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032930"
 ---
-# <a name="system-power-management-events"></a>Ereignisse der System Energie Verwaltung
+# <a name="system-power-management-events"></a>System Power Management Events
 
-Ein System Energie Verwaltungs Ereignis ist eine Änderung des System Energiestatus, des Betriebsmodus eines Geräts oder des Systems oder des Werts einer Energie Einstellung. Da diese Ereignisse den Betrieb von Anwendungen und installierbaren Treibern beeinflussen können, benachrichtigt das System alle Anwendungen und installierbaren Treiber, indem eine Benachrichtigung für jedes Ereignis gesendet wird. Anwendungen und Dienste registrieren sich mithilfe der [**RegisterPowerSettingNotification**](/windows/desktop/api/WinUser/nf-winuser-registerpowersettingnotification) -Funktion für Benachrichtigungen. Benachrichtigungen werden über die [**WM- \_ powerbroadcast**](wm-powerbroadcast.md) -Nachricht empfangen, in der das Energie Verwaltungs Ereignis und alle zugehörigen ereignisspezifischen Daten enthalten sind.
+Ein Systemleistungsverwaltungsereignis ist eine Änderung des Systemleistungsstatus, des Betriebsmodus eines Geräts oder des Systems oder des Werts einer Energieeinstellung. Da sich diese Ereignisse auf den Betrieb von Anwendungen und installierbaren Treibern auswirken können, benachrichtigt das System alle Anwendungen und installierbaren Treiber, indem es eine Benachrichtigung für jedes Ereignis sendet. Anwendungen und Dienste registrieren sich mithilfe der [**Funktion RegisterPowerSettingNotification**](/windows/desktop/api/WinUser/nf-winuser-registerpowersettingnotification) für Benachrichtigungen. Benachrichtigungen werden über die [**WM \_ POWERBROADCAST-Nachricht**](wm-powerbroadcast.md) empfangen, die das Energieverwaltungsereignis und alle zugehörigen ereignisspezifischen Daten enthält.
 
-## <a name="system-power-status-events"></a>System Energie Status-Ereignisse
+## <a name="system-power-status-events"></a>System Power Status Events
 
-Ein *System Energiestatus-Ereignis* tritt auf, wenn sich die Stromversorgung oder der System Akku Status ändert. Das System überträgt z. b. ein [PBT \_ apmpowerstatuschange](pbt-apmpowerstatuschange.md) -Ereignis, wenn der Benutzer von der Akku-in die Stromversorgung oder umgekehrt wechselt. Das System leitet dieses Ereignis auch dann weiter, wenn die verbleibende Akkuleistung unter einen vom Benutzer festgelegten Wert sinkt oder sich um einen angegebenen Prozentsatz ändert.
+Ein *Systemleistungsstatusereignis* tritt auf, wenn sich die Stromversorgung oder der Akkustatus des Systems ändern. Beispielsweise überträgt das System ein [ \_ PBT-APMPOWERSTATUSCHANGE-Ereignis,](pbt-apmpowerstatuschange.md) wenn der Benutzer vom Akku zum Netzbetrieb wechselt oder umgekehrt. Das System leitet dieses Ereignis auch dann weiter, wenn die verbleibende Akkuleistung unter einen vom Benutzer festgelegten Wert sinkt oder sich um einen angegebenen Prozentsatz ändert.
 
-## <a name="operational-mode-events"></a>Betriebsmodus-Ereignisse
+## <a name="operational-mode-events"></a>Betriebsmodusereignisse
 
-Ein *Betriebsmodus-Ereignis* tritt auf, wenn sich der Stromverbrauch ändert, z. b. wenn das System aufgrund von Inaktivität in den Ruhezustand wechselt oder der Benutzer das System manuell in den Standbymodus versetzt. Das System überträgt Ereignisse über diese Änderungen, bevor die Änderung des Stromverbrauchs erfolgt. Wenn das System z. b. erkennt, dass es sich im Leerlauf befindet, sendet es ein [PBT \_ apmsuspend](pbt-apmsuspend.md) -Ereignis, das Anwendungen und Treibern benachrichtigt, dass der Betrieb und der Standbymodus angehalten werden, um Energie zu sparen. Anwendungen und Treiber können sich auf den Standbymodus vorbereiten, indem Sie Dateien schließen und Daten speichern, um potenzielle Datenverluste zu vermeiden.
+Ein *Betriebsmodusereignis* tritt auf, wenn sich der Stromverbrauch ändert, z. B. wenn das System aufgrund von Inaktivität in den Energiesparmodus wechselt oder der Benutzer das System manuell in den Energiesparmodus versetzt. Das System überträgt Ereignisse zu diesen Änderungen, bevor die Änderung des Stromverbrauchs vorgenommen wird. Wenn das System beispielsweise feststellt, dass es sich im Leerlauf befindet, sendet es ein [ \_ PBT-APMSUSPEND-Ereignis,](pbt-apmsuspend.md) das Anwendungen und Treiber benachrichtigt, dass der Betrieb angehalten und der Energiesparmodus unterbrochen wird, um Energie zu sparen. Anwendungen und Treiber können sich auf den Standbymodus vorbereiten, indem Sie Dateien schließen und Daten speichern, um potenzielle Datenverluste zu vermeiden.
 
-Wenn das System eine kritische unter *Brechung* durchführt, wird das System sofort aufgrund einer kritischen Bedingung, z. b. eines kritischen Akku Alarms, in den Standbymodus versetzt. Im Gegensatz zu einem normalen Ruhezustand benachrichtigt das Systemanwendungen und Treiber nicht, bevor eine kritische Unterbrechung durchgeführt wird. Daher müssen Anwendungen darauf vorbereitet sein, kritische Suspendierungen zu verarbeiten.
+Wenn das System eine *kritische Unterbrechung* ausführt, wird das System aufgrund eines kritischen Zustands, z. B. eines kritischen Akkualarms, sofort in den Energiesparmodus versetzt. Im Gegensatz zu einem normalen Standbyübergang benachrichtigt das System Anwendungen und Treiber nicht, bevor eine kritische Unterbrechung durchgeführt wird. Daher müssen Anwendungen darauf vorbereitet sein, kritische Unterbrechungen zu verarbeiten.
 
-Wenn der System Vorgang wieder hergestellt wird, nachdem er angehalten wurde, benachrichtigt das System alle Anwendungen und Treiber. Außerdem wird angegeben, ob das System von einer kritischen Unterbrechung fortgesetzt wird, damit die Anwendung oder der Treiber die entsprechenden Schritte ausführen kann, um die Daten wiederherzustellen und den Vorgang fortzusetzen.
+Wenn der Systemvorgang nach dem Anhalten wiederhergestellt wird, benachrichtigt das System alle Anwendungen und Treiber. Außerdem wird angegeben, ob das System nach einer kritischen Unterbrechung fortgesetzt wird, damit die Anwendung oder der Treiber geeignete Schritte ausführen kann, um seine Daten wiederherzustellen und den Betrieb fortzusetzen.
 
-Anwendungen sollten jeden Versuch, den Übergang in den Ruhezustand zu versetzen, ohne Benutzereingriff durchführen zu müssen, da der Benutzer möglicherweise nicht antwortet. Beispielsweise kann der Deckel auf dem Notebook-Computer geschlossen werden. Wenn eine Anwendung eine Benachrichtigung erhält, dass das System in den Standbymodus wechselt, sollte Sie alle notwendigen Vorgänge schnell ausführen und die Nachrichten Schleife zurückgeben. Das System lässt bei der Verarbeitung dieser Nachricht maximal zwei Sekunden pro Anwendung zu, bevor ein Timeout eintritt.
+Anwendungen sollten jeden Versuch unternehmen, den Übergang in den Standbyzustand ohne Benutzereingriff zu verarbeiten, da der Benutzer möglicherweise nicht reagieren kann. Beispielsweise kann der Deckel auf dem Notebookcomputer geschlossen werden. Wenn eine Anwendung eine Benachrichtigung erhält, dass das System in den Standbymodus versetzt wird, sollte sie alle erforderlichen Vorgänge schnell ausführen und aus der Nachrichtenschleife zurückkehren. Das System lässt maximal zwei Sekunden pro Anwendung zu, wenn diese Meldung vor dem Timeout verarbeitet wird.
 
-## <a name="power-setting-change-events"></a>Energie Einstellungs Änderungs Ereignisse
+## <a name="power-setting-change-events"></a>Energieeinstellungsänderungsereignisse
 
-Ein Energie Einstellungs Änderungs Ereignis tritt auf, wenn der Wert einer Energie Einstellung geändert wird. Der Benutzer ändert z. b. in der Systemsteuerung in der Anwendung Energieoptionen den Energie Sparplan von hohe Leistung in ausgeglichen. In diesem Fall würde das System ein Ereignis übertragen, das angibt, dass sich der Energie Sparplan geändert hat. Dieses Ereignis enthält den neuen Wert für die Energie Einstellung.
+Ein Energieeinstellungsänderungsereignis tritt auf, wenn der Wert einer Energieeinstellung geändert wird. Beispielsweise ändert der Benutzer den Energiesparplan in der anwendung Energieoptionen in Systemsteuerung von "Hohe Leistung" in "Ausgeglichen". In diesem Fall sendet das System ein Ereignis, das angibt, dass sich der Energiesparplan geändert hat. Dieses Ereignis enthält den neuen Wert für die Energieeinstellung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Energie Verwaltung](about-power-management.md)
+[Informationen zur Energieverwaltung](about-power-management.md)
 </dt> </dl>
 
  

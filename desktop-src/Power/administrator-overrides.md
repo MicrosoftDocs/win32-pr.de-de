@@ -1,25 +1,25 @@
 ---
-description: Administrator Überschreibungen
+description: Administratorüberschreibungen
 ms.assetid: 25b6ce86-52c8-4f7f-97af-86b2eaf3e9af
-title: Administrator Überschreibungen
+title: Administratorüberschreibungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c43e16c9aa3eb3ab9fd5ee7c8d17b9bb4536315
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af73f6d6fe3fe7d4edb8272c4d39c385a84973e4a3263c448505f5235adec855
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106363468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033020"
 ---
-# <a name="administrator-overrides"></a>Administrator Überschreibungen
+# <a name="administrator-overrides"></a>Administratorüberschreibungen
 
-Windows verfügt über eine einzige Standard-Zugriffs Steuerungs Liste (ACL) für alle Energierichtlinien Objekte. Die ACL gewährt Mitgliedern der Gruppe "authentifizierte Benutzer" Lese-, Schreib-und Änderungs Berechtigungen. Allen anderen Benutzern wird die Berechtigung schreibgeschützt erteilt. Anwendungen, die Energierichtlinien Funktionen aufzurufen, können bestimmen, ob ein Benutzer über Berechtigungen für eine angegebene Energie Einstellung verfügt, indem er die Funktion " [**powersettingaccesscheck**](/windows/desktop/api/PowrProf/nf-powrprof-powersettingaccesscheck) " verwendet.
+Windows verfügt über eine einzelne Standardzugriffssteuerungsliste (Access Control List, ACL) für alle Energierichtlinienobjekte. Die Zugriffssteuerungsliste gewährt Mitgliedern der Gruppe Authentifizierte Benutzer Lese-, Schreib- und Änderungsberechtigungen. Allen anderen Benutzern wird eine schreibgeschützte Berechtigung erteilt. Anwendungen, die Energierichtlinienfunktionen aufrufen, können mithilfe der [**PowerSettingAccessCheck-Funktion**](/windows/desktop/api/PowrProf/nf-powrprof-powersettingaccesscheck) bestimmen, ob ein Benutzer über Berechtigungen für eine angegebene Energieeinstellung verfügt.
 
-Energie Einstellungen können über Gruppenrichtlinie überschrieben werden. Außer Kraft setzungen können über eine Domänen Gruppenrichtlinie oder eine lokale Gruppenrichtlinie festgelegt werden. [**Powersettingaccesscheck**](/windows/desktop/api/PowrProf/nf-powrprof-powersettingaccesscheck) meldet, ob eine angegebene Energie Einstellung eine Gruppenrichtlinien-außer Kraft Setzung aufweist.
+Energieeinstellungen können über Gruppenrichtlinie überschrieben werden. Außerkraftsetzungen können über Domänengruppenrichtlinien oder lokale Gruppenrichtlinien festgelegt werden. [**PowerSettingAccessCheck**](/windows/desktop/api/PowrProf/nf-powrprof-powersettingaccesscheck) meldet, ob eine angegebene Energieeinstellung über eine Außerkraftsetzung der Gruppenrichtlinie verfügt.
 
-Das Befehlszeilen Tool **PowerCfg.exe** zeigt eine Fehlermeldung an, wenn ein Befehl nicht abgeschlossen werden kann, da der Benutzer nicht über Berechtigungen zum Ändern der Energie Einstellung verfügt oder weil die Energie Einstellung eine Gruppenrichtlinien-außer Kraft Setzung aufweist.
+Das Befehlszeilentool **PowerCfg.exe** zeigt eine Fehlermeldung an, wenn ein Befehl nicht abgeschlossen werden kann, weil der Benutzer nicht über die Berechtigungen zum Ändern der Energieeinstellung verfügt oder weil die Energieeinstellung eine Gruppenrichtlinienüberschreibung aufweist.
 
-Die Anwendung Energieoptionen in der Systemsteuerung bietet keine Unterstützung für das Konfigurieren von Berechtigungen für den Energierichtlinien Zugriff. Das Ändern von Berechtigungen muss über **PowerCfg.exe** erfolgen.
+Die Energieoptionen Anwendung in Systemsteuerung bietet keine Unterstützung für die Konfiguration von Energierichtlinienzugriffsberechtigungen. Das Ändern von Berechtigungen muss über **PowerCfg.exe** erfolgen.
 
  
 

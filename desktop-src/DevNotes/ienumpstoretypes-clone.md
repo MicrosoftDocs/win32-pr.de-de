@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen zusätzlichen Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.
+description: Erstellt einen zusätzlichen Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.
 ms.assetid: b4027520-62cc-40d4-b9fd-01fa9c652a54
-title: 'Isumpstoretypes:: Clone-Methode (pstore. h)'
+title: IEnumPStoreTypes::Clone-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 4ac088ae708b62f458d7bba52127dadc8ef77c5a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b1f93fed0e6631dff0eac0d5bf149138d189abed73bae7301df2561970376104
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002220"
 ---
-# <a name="ienumpstoretypesclone-method"></a>Isumpstoretypes:: Clone-Methode
+# <a name="ienumpstoretypesclone-method"></a>IEnumPStoreTypes::Clone-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
-Erstellt einen zusätzlichen Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.
+Erstellt einen zusätzlichen Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT Clone(
 
 <dl> <dt>
 
-*ppum* \[ vorgenommen\]
+*ppenum* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen [**iumumpstoreitems**](ienumpstoreitems.md) -Zeiger.
+Ein Zeiger auf einen [**IEnumPStoreItems-Zeiger.**](ienumpstoreitems.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert.
+Der Rückgabewert ist ein **HRESULT-Wert.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
@@ -67,10 +67,10 @@ Der Rückgabewert ist ein **HRESULT** -Wert.
 
 <dl> <dt>
 
-[**Iumumpstoreitems**](ienumpstoreitems.md)
+[**IEnumPStoreItems**](ienumpstoreitems.md)
 </dt> <dt>
 
-[**Iumumpstoretypes**](ienumpstoretypes.md)
+[**IEnumPStoreTypes**](ienumpstoretypes.md)
 </dt> </dl>
 
  

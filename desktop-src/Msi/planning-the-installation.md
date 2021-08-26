@@ -1,85 +1,85 @@
 ---
-description: Wenn die Installation einer vorhandenen Anwendung aus einer anderen Setup Technologie in Windows Installer verschoben wird, startet der Setup Entwickler möglicherweise mit der Erstellung eines Windows Installer Pakets mithilfe der Quell-und Ziel Datei Images der vorhandenen-Installation.
+description: Wenn die Installation einer vorhandenen Anwendung von einer anderen Setuptechnologie in den Windows-Installer verschoben wird, kann der Setupentwickler mit der Erstellung eines Windows Installer-Pakets beginnen, indem er die Quell- und Zieldateiabbilder der vorhandenen Installation verwendet.
 ms.assetid: 8b0fb473-e19f-4427-b2a1-d0721cde9d38
 title: Planen der Installation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5eb98368c5c5c8e13a8f9b03a44805a8cff6e517
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d406ec97fd5edb34468586eb9f707eff32b289df3dc88b803b8c55d4aad10cd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042360"
 ---
 # <a name="planning-the-installation"></a>Planen der Installation
 
-Wenn die Installation einer vorhandenen Anwendung aus einer anderen Setup Technologie in Windows Installer verschoben wird, startet der Setup Entwickler möglicherweise mit der Erstellung eines Windows Installer Pakets mithilfe der Quell-und Ziel Datei Images der vorhandenen-Installation. Ein detaillierter Plan, wie die Dateien und anderen Ressourcen an Quelle und Ziel organisiert werden, ist ein guter Ausgangspunkt für die Entwicklung eines Pakets für eine neue Anwendung.
+Wenn die Installation einer vorhandenen Anwendung von einer anderen Setuptechnologie in den Windows-Installer verschoben wird, kann der Setupentwickler mit der Erstellung eines Windows Installer-Pakets beginnen, indem er die Quell- und Zieldateiabbilder der vorhandenen Installation verwendet. Ein detaillierter Plan für die Organisation der Dateien und anderen Ressourcen an Quelle und Ziel ist auch ein guter Ausgangspunkt für die Entwicklung eines Pakets für eine neue Anwendung.
 
-Das Beispiel Installationspaket übernimmt die folgenden Dateien, die am Quell Speicherort für die Anwendung gespeichert sind, und installiert Sie auf dem Computer des Benutzers.
+Das Beispielinstallationspaket verwendet die folgenden Dateien, die am Quellspeicherort für die Anwendung gespeichert sind, und installiert sie auf dem Ziel auf dem Computer des Benutzers.
 
 
 
 | Datei         | BESCHREIBUNG                               | Pfad zur Quelle                                    | Pfad zum Ziel                                          |
 |--------------|-------------------------------------------|---------------------------------------------------|---------------------------------------------------------|
-| Redpark.exe  | Ausführbare Datei des Text-Editors.              | C: \\ Beispiel für \\ Notepad \\Redpark.exe                  | \[Ordner "ProgramFilesFolder \] \\ Red \_ Park \\Redpark.exe"          |
-| Readme.txt   | Eine Informationsdatei.                    | C: \\ Beispiel für \\ Notepad \\Readme.txt                   | \[Ordner "ProgramFilesFolder \] \\ Red \_ Park \\Readme.txt"           |
-| Help.txt     | Hilfe manuell                               | C: \\ Beispiel für \\ Notepad \\Help.txt                     | Nicht installiert. Immer aus Quelle ausführen.                  |
-| Baseball.txt | Der Plan für das Baseball Spiel für Jahr 2000.     | C: \\ Beispiel für \\ Notepad- \\ Ereignisse \\Baseball.txt         | \[ProgramFilesFolder \] \\ Red \_ Park \\ Sport \\Baseball.txt |
-| Football.txt | Zeitplan für Fußballspiel für Jahr 2000.     | C: \\ Beispiel für \\ Notepad- \\ Ereignisse \\Football.txt         | \[ProgramFilesFolder \] \\ Red \_ Park \\ Sport \\Football.txt |
-| Dance.txt    | Tanzaufführungen für Jahr 2000.         | C: \\ Beispiel für \\ Notepad- \\ Ereignisse \\Dance.txt            | \[ProgramFilesFolder \] \\ Red \_ Park \\ Arts \\Dance.txt      |
-| Concert.txt  | Musik Aufführungen für Jahr 2000.         | C: \\ Beispiel für \\ Notepad- \\ Ereignisse \\Concert.txt          | \[ProgramFilesFolder \] \\ Red \_ Park \\ Arts \\Concert.txt    |
-| January.txt  | Zuweisungen im Januar des Jahres 2000.       | C: \\ Beispiel für \\ Notepad- \\ Gate \\January.txt            | \[ProgramFilesFolder \] \\ rotes \_ Park \\ Gate \\January.txt    |
-| NewYears.txt | Eintritte an den neuen Jahren Jahr 2000. | C: \\ Beispiel für \\ Notepad \\ Gate \\ Holidays \\NewYears.txt | \[ProgramFilesFolder \] \\ rotes \_ Park \\ Gate \\NewYears.txt   |
+| Redpark.exe  | Ausführbare Text-Editor-Datei.              | C: \\ \\ Beispiel Editor \\Redpark.exe                  | \[ProgramFilesFolder \] \\ Red Park \_ \\Redpark.exe          |
+| Readme.txt   | Eine Informationsdatei.                    | C: \\ \\ Beispiel Editor \\Readme.txt                   | \[ProgramFilesFolder \] \\ Red Park \_ \\Readme.txt           |
+| Help.txt     | Hilfehandbuch                               | C: \\ \\ Beispiel Editor \\Help.txt                     | Nicht installiert. Führen Sie immer aus der Quelle aus.                  |
+| Baseball.txt | Baseballspielzeitplan für jahr 2000.     | C: \\ Beispiel für Editor Ereignisse \\ \\ \\Baseball.txt         | \[ProgramFilesFolder \] \\ Red Park Sports \_ \\ \\Baseball.txt |
+| Football.txt | Spielzeitplan für das Jahr 2000.     | C: \\ Beispiel für Editor Ereignisse \\ \\ \\Football.txt         | \[ProgramFilesFolder \] \\ Red Park Sports \_ \\ \\Football.txt |
+| Dance.txt    | Musikvorführung für das Jahr 2000.         | C: \\ Beispiel für Editor Ereignisse \\ \\ \\Dance.txt            | \[ProgramFilesFolder \] \\ Red \_ \\ Park- und \\Dance.txt      |
+| Concert.txt  | Musik Jahr 2000.         | C: \\ Beispiel für Editor Ereignisse \\ \\ \\Concert.txt          | \[ProgramFilesFolder \] \\ Red \_ \\ Park- und \\Concert.txt    |
+| January.txt  | Zulassungen im Januar des Jahres 2000.       | C: \\ Beispiel für Editor \\ \\ \\ GateJanuary.txt            | \[ProgramFilesFolder \] \\ Red Park Gate \_ \\ \\January.txt    |
+| NewYears.txt | Zulassungen am Neujahrstag des Jahres 2000. | C: \\ Beispiel für Editor \\ \\ \\ \\ Gate-FeiertageNewYears.txt | \[ProgramFilesFolder \] \\ Red Park Gate \_ \\ \\NewYears.txt   |
 
 
 
  
 
-Im Beispiel werden die folgenden Werte in der Registrierung des Benutzers unter **HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Notepad Sample** geschrieben.
+Das Beispiel schreibt die folgenden Werte in die Registrierung des Benutzers unter **HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Editor \_ \\ \\ \\ Sample**.
 
 
 
 | Name             | Wert    |
 |------------------|----------|
-| LF charset        | 0        |
-| LF ClipPrecision  | 2        |
-| lffacename       | Fixedsys |
-| LFI         | 0        |
-| lforientation    | 0        |
-| LF OutPrecision   | 1        |
-| fsavepgesete | 0        |
-| LF PitchAndFamily | 49       |
-| ipointsize       | 120      |
-| LF-Qualität        | 2        |
-| LF Strip-out      | 0        |
-| LF Weight         | 400      |
-| Umbruch            | 0        |
+| lfCharSet        | 0        |
+| lfClipPrecision  | 2        |
+| lfFaceName       | FixedSys |
+| lfItalic         | 0        |
+| lfOrientation    | 0        |
+| lfOutPrecision   | 1        |
+| fSavePageSetting | 0        |
+| lfPitchAndFamily | 49       |
+| iPointSize       | 120      |
+| lfQuality        | 2        |
+| lfStrikeOut      | 0        |
+| lfWeight         | 400      |
+| fWrap            | 0        |
 
 
 
  
 
-Im Beispiel werden die folgenden Tastenkombinationen installiert. Eine dieser Verknüpfungen kann während des Setups als angekündigte Verknüpfung ausgewählt werden, damit der Benutzer die-on-Demand-Baseball Funktion installieren kann.
+Im Beispiel werden die folgenden Tastenkombinationen installiert. Eine dieser Tastenkombinationen kann während des Setups als angekündigte Verknüpfung ausgewählt werden, damit der Benutzer das Baseball-Feature bei Bedarf installieren kann.
 
 
 
-| Name      | Verknüpfungs Position                         | Verknüpfungs Ziel                                         |
+| Name      | Verknüpfungsposition                         | Verknüpfungsziel                                         |
 |-----------|-------------------------------------------|---------------------------------------------------------|
-| SNotepad  | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[Ordner "ProgramFilesFolder \] \\ Red \_ Park \\Redpark.exe"          |
-| sInfo   | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[Ordner "ProgramFilesFolder \] \\ Red \_ Park \\Readme.txt"           |
-| sHelp     | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[Editor für ProgramFilesFolder- \] \\ Beispiel \\ \\Help.txt       |
-| sbaseball | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ Red \_ Park \\ Sport \\Baseball.txt |
-| sfußball | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ Red \_ Park \\ Sport \\Football.txt |
-| sdance    | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ Red \_ Park \\ Arts \\Dance.txt      |
-| sconcert  | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ Red \_ Park \\ Arts \\Concert.txt    |
-| sjanuar  | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ rotes \_ Park \\ Gate \\January.txt    |
-| snewyears | \[Menü "ProgramFilesFolder \] \\ Red \_ Park" \\\\ | \[ProgramFilesFolder \] \\ rotes \_ Park \\ Gate \\NewYears.txt   |
+| sNotepad  | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park \_ \\Redpark.exe          |
+| sReadme   | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park \_ \\Readme.txt           |
+| sHelp     | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder-Editor \] \\ \\ \\Help.txt       |
+| sBaseball | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park Sports \_ \\ \\Baseball.txt |
+| sFootball | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park Sports \_ \\ \\Football.txt |
+| sDance    | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red \_ \\ Park- und \\Dance.txt      |
+| sConcert  | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park \_ \\Concert.txt \\    |
+| sJanuary  | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park Gate \_ \\ \\January.txt    |
+| sNewYears | \[ProgramFilesFolder \] \\ Red \_ Park \\ Menu\\ | \[ProgramFilesFolder \] \\ Red Park Gate \_ \\ \\NewYears.txt   |
 
 
 
  
 
-Um das Beispiel zu reproduzieren, erstellen Sie zunächst die Quellverzeichnis Struktur, die in der ersten Tabelle angegeben ist. Sie können eine Kopie der Notepad.exe Datei Ihres Systems erstellen und diese Kopie dann Redpark.exe umbenennen. Verwenden Sie den Editor, um die verbleibenden Textdateien zu erstellen. Die Verzeichnisstruktur des Ziels, die Registrierungs Werte und die Verknüpfungen werden durch das Erstellen der Installations Datenbank hinzugefügt.
+Um das Beispiel zu reproduzieren, erstellen Sie zunächst die Quellverzeichnisstruktur, die in der ersten Tabelle angegeben ist. Sie können eine Kopie der Notepad.exe-Datei Ihres Systems erstellen und diese Kopie dann Redpark.exe umbenennen. Verwenden Sie den Editor Editor, um die verbleibenden Textdateien zu erstellen. Die Verzeichnisstruktur des Ziels, die Registrierungswerte und die Verknüpfungen werden durch Erstellen der Installationsdatenbank hinzugefügt.
 
 [Fortsetzen](importing-a-blank-database.md)
 

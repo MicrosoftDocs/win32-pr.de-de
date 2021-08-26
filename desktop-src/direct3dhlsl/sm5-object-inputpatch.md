@@ -1,9 +1,9 @@
 ---
-title: Input Patch
-description: Stellt ein Array von Steuerungs Punkten dar, die dem Hull-Shader als Eingaben zur Verfügung stehen.
+title: InputPatch
+description: Stellt ein Array von Kontrollpunkten dar, die dem Hüllen-Shader als Eingaben zur Verfügung stehen.
 ms.assetid: a2eeb45a-85b2-4ed0-b071-fcbb8abf4f2d
 keywords:
-- Inputpatch HLSL
+- InputPatch HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a882d032133ccb7bc98a34b3ef99551aa18fa51b
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: df92eea333c15da934ed7c243b91e657e0a5ea6c2f7954e3bd7764b813cada49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104992887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067710"
 ---
-# <a name="inputpatch"></a>Input Patch
+# <a name="inputpatch"></a>InputPatch
 
-Stellt ein Array von Steuerungs Punkten dar, die dem Hull-Shader als Eingaben zur Verfügung stehen.
+Stellt ein Array von Kontrollpunkten dar, die dem Hüllen-Shader als Eingaben zur Verfügung stehen.
 
 
 
 | Methode                                                      | BESCHREIBUNG                         |
 |-------------------------------------------------------------|-------------------------------------|
-| [**KOM\[\]**](sm5-object-inputpatch-operatorindex.md) | Ruft eine schreibgeschützte Ressourcen Variable ab. |
+| [**Operator\[\]**](sm5-object-inputpatch-operatorindex.md) | Ruft eine schreibgeschützte Ressourcenvariable ab. |
 
 
 
- 
+ 
 
-Die inputpatch-Klasse unterstützt auch die folgenden Eigenschaften:
+Die InputPatch-Klasse unterstützt auch die folgenden Eigenschaften:
 
 
 
@@ -44,44 +44,44 @@ Die inputpatch-Klasse unterstützt auch die folgenden Eigenschaften:
 
 
 
- 
+ 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        | x        |       |         |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

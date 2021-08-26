@@ -1,7 +1,7 @@
 ---
-description: Ändert die erweiterte Replikations Beziehung zur primären Beziehung für einen virtuellen Replikat Computer. Der virtuelle Replikat Computer muss den Status "Failover committet" aufweisen.
+description: Ändert die erweiterte Replikationsbeziehung in die primäre Beziehung für einen virtuellen Replikatcomputer. Der virtuelle Replikatcomputer muss sich in einem Failoverstatus befinden, für den ein Commit ausgeführt wurde.
 ms.assetid: B593A155-B5E6-44E5-8835-09DEB1FF868E
-title: 'Msvm_ReplicationService:: changereplicationmodetoprimary-Methode'
+title: Msvm_ReplicationService::ChangeReplicationModeToPrimary-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0a18b3c9f1003ff7b263f5c6b7cc89abedccfd1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 943e8220df0a3be48daf4d21e8d913946c72901c769a031486fc2a7dc38ef74a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042020"
 ---
-# <a name="msvm_replicationservicechangereplicationmodetoprimary-method"></a>MSVM \_ replicationservice:: changereplicationmodetoprimary-Methode
+# <a name="msvm_replicationservicechangereplicationmodetoprimary-method"></a>Msvm \_ ReplicationService::ChangeReplicationModeToPrimary-Methode
 
-Ändert die erweiterte Replikations Beziehung zur primären Beziehung für einen virtuellen Replikat Computer. Der virtuelle Replikat Computer muss den Status "Failover committet" aufweisen.
+Ändert die erweiterte Replikationsbeziehung in die primäre Beziehung für einen virtuellen Replikatcomputer. Der virtuelle Replikatcomputer muss sich in einem Failoverstatus befinden, für den ein Commit ausgeführt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ChangeReplicationModeToPrimary(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer darstellt, für den diese Methode die erweiterte Replikations Beziehung zur primären Beziehung ändert.
+Ein Verweis auf eine [**CIM \_ ComputerSystem-Instanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den diese Methode die erweiterte Replikationsbeziehung in die primäre Beziehung ändert.
 
 </dd> <dt>
 
-*Replicationrelationship* \[ in\]
+*ReplicationRelationship* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung einer eingebetteten Instanz der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse, die die erweiterte Replikations Beziehung definiert, die von dieser Methode in die primäre Beziehung geändert wird.
+Eine Zeichenfolgendarstellung einer eingebetteten Instanz der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) die die erweiterte Replikationsbeziehung definiert, die diese Methode in die primäre Beziehung ändert.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird. Dieser Verweis kann **null** sein, wenn der Task beendet ist.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde. Dieser Verweis kann **NULL** sein, wenn der Task abgeschlossen ist.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,7 +83,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -95,19 +95,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,10 +116,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,7 +128,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

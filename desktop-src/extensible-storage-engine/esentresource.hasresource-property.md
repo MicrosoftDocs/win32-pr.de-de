@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der esentresource. hasresource-Eigenschaft.
-title: Esentresource. hasresource (Eigenschaft)
+description: 'Weitere Informationen zu: EsentResource.HasResource-Eigenschaft'
+title: EsentResource.HasResource-Eigenschaft
 TOCTitle: 'HasResource property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.EsentResource.HasResource
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentresource.hasresource(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5f69afdacff576636781fa01957ee2540793a1a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6f41ee7c8ead90084e64c0ed3067c68339d4310d7dace88728b4c75dbccf3b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119970780"
 ---
-# <a name="esentresourcehasresource-property"></a>Esentresource. hasresource (Eigenschaft)
+# <a name="esentresourcehasresource-property"></a>EsentResource.HasResource-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die zugrunde liegende Ressource zurzeit zugeordnet ist.
+Ruft einen Wert ab, der angibt, ob die zugrunde liegende Ressource derzeit zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ protected bool HasResource { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentresource-Klasse](./esentresource-class.md)
+[EsentResource-Klasse](./esentresource-class.md)
 
-[Esentresource-Member](./esentresource-members.md)
+[EsentResource-Elemente](./esentresource-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

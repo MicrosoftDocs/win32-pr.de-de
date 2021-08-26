@@ -1,82 +1,82 @@
 ---
-title: Verwenden des Windows Media Player-Steuer Elements mit Microsoft Office
-description: Verwenden des Windows Media Player-Steuer Elements mit Microsoft Office
+title: Verwenden des Windows Media Player-Steuerelements mit Microsoft Office
+description: Verwenden des Windows Media Player-Steuerelements mit Microsoft Office
 ms.assetid: bc7b2623-8e6d-4af6-b4d0-8087c0159273
 keywords:
-- Windows Media Player, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Mobile, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player ActiveX-Steuerelement, einbetten
-- Windows Media Player Mobile ActiveX-Steuerelement, einbetten
-- ActiveX-Steuerelement, einbetten
-- Windows Media Player, Office
-- Windows Media Player-Objektmodell, Office
-- Objektmodell, Office
-- Windows Media Player Mobile, Office
-- Windows Media Player ActiveX-Steuerelement, Office
-- Windows Media Player Mobile ActiveX-Steuerelement, Office
-- ActiveX-Steuerelement, Office
-- Office-Dokument Einbettung
-- einbetten, Office-Dokumente
-- Windows Media Player ActiveX-Steuerelement, Excel
-- Windows Media Player Mobile ActiveX-Steuerelement, Excel
-- ActiveX-Steuerelement, Excel
-- einbetten, Excel-Kalkulations Tabellen
-- Einbettung von Excel-Tabellen
-- Windows Media Player ActiveX-Steuerelement, PowerPoint
-- Windows Media Player Mobile ActiveX-Steuerelement, PowerPoint
-- ActiveX-Steuerelement, PowerPoint
-- einbetten, PowerPoint-Folien anzeigen
-- PowerPoint-Folien Anzeige Einbettung
-- Windows Media Player ActiveX-Steuerelement, Word
+- Windows Media Player,einbetten ActiveX Steuerelement
+- Windows Media Player Objektmodell, Einbetten ActiveX Steuerelements
+- Objektmodell,Einbetten ActiveX Steuerelement
+- Windows Media Player Mobil,einbetten ActiveX Steuerelement
+- Windows Media Player ActiveX,Einbetten
+- Windows Media Player Mobile ActiveX-Steuerelement,Einbetten
+- ActiveX,Einbetten
+- Windows Media Player,Office
+- Windows Media Player-Objektmodell,Office
+- Objektmodell,Office
+- Windows Media Player Mobil,Office
+- Windows Media Player ActiveX,Office
+- Windows Media Player Mobile ActiveX-Steuerelement,Office
+- ActiveX,Office
+- Office des Einbettens von Dokumenten
+- Einbetten, Office Dokumente
+- Windows Media Player ActiveX,Excel
+- Windows Media Player Mobile ActiveX-Steuerelement,Excel
+- ActiveX,Excel
+- Einbetten, Excel Tabellenkalkulationen
+- Excel einbetten von Tabellenkalkulationen
+- Windows Media Player ActiveX,PowerPoint
+- Windows Media Player Mobile ActiveX-Steuerelement,PowerPoint
+- ActiveX,PowerPoint
+- Embedding,PowerPoint slide shows
+- PowerPoint einbetten
+- Windows Media Player ActiveX,Word
 - Windows Media Player Mobile ActiveX-Steuerelement, Word
-- ActiveX-Steuerelement, Word
-- Wort Papier Einbettung
-- einbetten, Word-Dokumente
+- ActiveX,Word
+- Einbetten von Word-Dokumenten
+- Einbetten, Word-Dokumente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2504b46b4fb409dede108c41b43014c3aaeae5ec
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 418c082cad2793e3ebd676c4d648339f9e637f46c7519efc1b426a44b69ee05c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001400"
 ---
-# <a name="using-the-windows-media-player-control-with-microsoft-office"></a>Verwenden des Windows Media Player-Steuer Elements mit Microsoft Office
+# <a name="using-the-windows-media-player-control-with-microsoft-office"></a>Verwenden des Windows Media Player-Steuerelements mit Microsoft Office
 
-In diesem Abschnitt wird beschrieben, wie Sie das ActiveX-Steuerelement Windows Media Player 9 oder höher in verschiedene Dokumente einbetten, die mit Microsoft Office XP erstellt wurden.
+In diesem Abschnitt wird beschrieben, wie Sie das Windows Media Player 9-Serie-Steuerelement oder höher in ActiveX Dokumente einbetten, die mithilfe von Microsoft Office XP erstellt wurden.
 
-In den® von Microsoft Word, Excel und PowerPoint Betten Sie das Steuerelement ein, indem Sie im Menü **Einfügen** die Option **Objekt** auswählen und dann **Windows Media Player** aus der Liste der verfügbaren Objekttypen auswählen. Das Windows Media Player-Steuerelement wird im Dokument am aktuellen Speicherort angezeigt. Anschließend können Sie im Kontextmenü des-Steuer Elements **Format Control** ( **Format Objekt** in Excel) auswählen, um Layout, Text Wrapping Stil und andere Format Optionen anzupassen. In Word und Excel müssen Sie zu diesem Zweck den Entwurfs Modus verwenden.
+In Microsoft Word, Excel und PowerPoint® betten Sie das Steuerelement ein, indem Sie im  Menü Einfügen die Option  Objekt und dann Windows Media Player in der Liste der verfügbaren Objekttypen auswählen.  Das Windows Media Player-Steuerelement wird im Dokument an der aktuellen Position angezeigt. Sie können dann im Kontextmenü des Steuerelements die Option Formatsteuerelement **(Objekt** **in** Excel formatieren) auswählen, um das Layout, den Textumbruchstil und andere Formatoptionen anzupassen. In Word und Excel müssen Sie sich dazu im Entwurfsmodus befinden.
 
-Nachdem Sie das Steuerelement positioniert und formatiert haben, können Sie es mithilfe des Dialog Felds **Eigenschaften** konfigurieren, das über die **Steuer** Element-Toolbox oder über das Kontextmenü im Entwurfs Modus für Word und Excel zugänglich ist. Hier können Sie grundlegende Player-Steuerelement Eigenschaften angeben, z. b. den Namen des Steuer Elements, die URL einer digitalen Mediendatei und den Benutzeroberflächen Modus. Wenn die **uiMode** -Eigenschaft auf "None" festgelegt wird, werden alle Elemente im Steuerelement mit Ausnahme des Videos oder Visualisierungs Fensters ausgeblendet, sodass Sie eigene Schaltflächen hinzufügen und Skriptcode mithilfe Visual Basic for Applications (VBA) schreiben können, um die Schaltflächen Klicks und Player-Steuerelement Ereignisse zu verarbeiten
+Nachdem Sie das Steuerelement positioniert und formatiert haben,  können Sie es mithilfe des Dialogfelds Eigenschaften konfigurieren, auf das über die **Steuerelement-Toolbox** oder über das Kontextmenü im Entwurfsmodus für Word und Excel. Hier können Sie grundlegende Player-Steuerelementeigenschaften angeben, z. B. den Steuerelementnamen, die URL einer digitalen Mediendatei und den Benutzeroberflächenmodus. Wenn Sie die **uiMode-Eigenschaft** auf "none" festlegen, wird alles im Steuerelement außer dem Video- oder Visualisierungsfenster ausblendet, sodass Sie eigene Schaltflächen hinzufügen und Skriptcode mithilfe von Visual Basic for Applications (VBA) schreiben können, um die Klicks auf die Schaltflächen und Player-Steuerelementereignisse zu verarbeiten.
 
-Im Dialogfeld "grundlegende **Eigenschaften** " können Sie auch auf das Dialogfeld "anspruchsvollere **Eigenschaften von Windows Media Player-Steuer** Element" zugreifen, indem Sie auf die Zeile "(Benutzer definiert)" doppelklicken oder nach dem Auswählen der Zeile auf die Schaltfläche mit den Auslassungs Punkten ("...") klicken In diesem Dialogfeld können Sie alle verfügbaren Player-Steuerelement Eigenschaften ändern.
-
-> [!Note]  
-> Sie müssen darauf achten, keine Aktionen in Ereignis Handlern für Player-Steuerelemente auszuführen, die dazu führen, dass das Steuerelement zerstört wird. Wenn Sie z. b. das Windows Media Player-Steuerelement auf einer Folie in einer PowerPoint-Präsentation einbetten, sollten Sie die PowerPoint-Methode " **Next** " nicht aus dem **OpenStateChange** -Ereignis des Players oder einem anderen Ereignis abrufen
-
- 
+Im Dialogfeld  Grundlegende Eigenschaften können Sie auch auf das anspruchsvollere Dialogfeld **Windows Media Player-Steuerelementeigenschaften** zugreifen, indem Sie auf die Zeile "(Benutzerdefiniert)" doppelklicken oder auf die Schaltfläche mit den Auslassungstasten ("...") klicken, nachdem Sie diese Zeile ausgewählt haben. In diesem Dialogfeld können Sie alle verfügbaren Eigenschaften des Player-Steuerelements ändern.
 
 > [!Note]  
-> Außerdem sollten Sie die Eigenschaft " **Player. URL** " nicht von einem Ereignishandler für Player-Steuerelemente festlegen.
+> Sie müssen darauf achten, keine Aktionen in Ereignishandlern des Player-Steuerelements durchzuführen, die dazu führen, dass das Steuerelement zerstört wird. Wenn Sie z. B. das Windows Media Player-Steuerelement auf einer Folie in eine PowerPoint-Präsentation einbetten, rufen Sie die PowerPoint **Next-Methode** nicht aus dem Player **openStateChange-Ereignis** oder einem anderen Ereignis auf.
 
- 
+ 
 
-Fügen Sie in FrontPage der Webseite das Windows Media Player-Steuerelement hinzu, indem Sie im Menü **Einfügen** die Option **Webkomponente** auswählen. Wählen Sie im Dialogfeld **Webkomponente einfügen** in der Liste **Komponententyp** die Option **Erweiterte Steuerelemente** aus, und wählen Sie dann in der Liste der Steuerelement Optionen **ActiveX-Steuer** Element aus. Wählen Sie im nächsten Fenster des Dialog Felds die Option **Windows Media Player** aus. Wenn Sie nicht aufgeführt ist, klicken Sie auf **Anpassen** , und aktivieren Sie das Kontrollkästchen **Windows Media Player** in der **Steuer** Elementliste.
+> [!Note]  
+> Darüber hinaus sollten Sie die **Player.URL-Eigenschaft** nicht aus einem Ereignishandler des Player-Steuerelements festlegen.
 
-Nachdem das Windows Media Player-Steuerelement eingebettet ist, können Sie es positionieren und seine Größe ändern und seine Eigenschaften ändern, indem Sie im Kontextmenü für das Steuerelement **ActiveX-Steuerelement Eigenschaften** auswählen. In der HTML-Ansicht werden die von Ihnen angegebenen Eigenschaftswerte im Object-Element angezeigt, das das Windows Media Player-Steuerelement darstellt. Der Objektname wird als ID-Attribut angezeigt, und die Steuerelement Eigenschaften werden als param-Tags angezeigt. Der Objektname ermöglicht Ihnen den Zugriff auf das Windows-Media Player Steuerelement-Objektmodell, das Sie mit Microsoft JScript programmieren können. Weitere Informationen finden Sie unter [Verwenden des Windows Media Player-Steuer Elements in einer Webseite](using-the-windows-media-player-control-in-a-web-page.md).
+ 
+
+Fügen Sie in FrontPage das Windows Media Player einer Webseite hinzu, indem Sie im Menü **Einfügen** die Option **Webkomponente** auswählen. Wählen Sie im **Dialogfeld Webkomponente** einfügen  in der Liste Komponententyp die Option Erweiterte Steuerelemente und dann ActiveX Steuerelement **aus** der Liste der Steuerelementoptionen aus.  Wählen Sie im nächsten Fenster des Dialogfelds die Option **Windows Media Player.** Wenn sie nicht aufgeführt ist, klicken Sie auf **Anpassen,** und aktivieren Sie **Windows Media Player** Kontrollkästchen in der **Liste Steuerelement.**
+
+Nachdem das Windows Media Player-Steuerelement eingebettet wurde, können Sie es positionieren und seine  Größe ändern und seine Eigenschaften ändern, indem Sie ActiveX Steuerelementeigenschaften im Kontextmenü für das Steuerelement auswählen. In der HTML-Ansicht werden die von Ihnen angegebenen Eigenschaftswerte im OBJECT-Element angezeigt, das das Windows Media Player darstellt. Der Objektname wird als ID-Attribut angezeigt, und die Steuerelementeigenschaften werden als PARAM-Tags angezeigt. Mit dem Objektnamen erhalten Sie Zugriff auf das Windows Media Player-Steuerelementobjektmodell, das Sie mit microsoft JScript. Weitere Informationen finden Sie unter [Verwenden des Windows Media Player-Steuerelements in einer Webseite.](using-the-windows-media-player-control-in-a-web-page.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Player-Steuerelement Handbuch**](player-control-guide.md)
+[**Leitfaden zum Player-Steuerelement**](player-control-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

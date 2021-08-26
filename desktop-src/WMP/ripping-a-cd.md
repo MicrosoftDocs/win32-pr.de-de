@@ -1,45 +1,45 @@
 ---
-title: Ripping einer CD
-description: Ripping einer CD
+title: Erstellen einer CD
+description: Erstellen einer CD
 ms.assetid: f5c1b5bf-d616-48cb-8690-e0237c56e402
 keywords:
-- Windows Media Player, CD-einreißen
-- Windows Media Player-Objektmodell, CD-einreißen
-- Objektmodell, CD-einreißen
-- Windows Media Player ActiveX-Steuerelement, CD-einreißen
-- ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-einreißen
-- Windows Media Player Mobile, CD-einreißen
-- CD-Ripping, Info
-- einreißen CDs, Info
+- Windows Media Player,CD-Lässing
+- Windows Media Player-Objektmodell,CD-Bebauung
+- Objektmodell,CD-Bebauung
+- Windows Media Player ActiveX,CD-Steuerung
+- ActiveX,CD-Steuerung
+- Windows Media Player Mobile ActiveX,CD-Steuerung
+- Windows Media Player Mobil, CD-10
+- CD-Ing, Informationen
+- Verwenden von CDs, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 767734b3449fd0a64b31c8f351406bbf9f6c805b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 313262bf29f3ee873b546dd639ec7b32c774be476e87f75592041f1bda6a2cdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002530"
 ---
-# <a name="ripping-a-cd"></a>Ripping einer CD
+# <a name="ripping-a-cd"></a>Erstellen einer CD
 
-Es gibt zwei Möglichkeiten, eine CD mit dem Windows Media Player-Steuerelement zu zerreißen. Windows Media Player 9 kann CDs mithilfe von **iwmpplayerservices:: settaskpane** zerreißen. Windows Media Player 11 führt die **iwmpcdromrip** -Schnittstelle für das einreißen von CDs ein. Diese Schnittstelle bietet mehr Funktionalität als **iwmpplayerservices:: settaskpane**, und es wird empfohlen, dass Sie **iwmpcdromrip** verwenden, wenn es verfügbar ist.
+Es gibt zwei Möglichkeiten, eine CD mithilfe des Steuerelements Windows Media Player zu reißt. Windows Media Player 9 können CDs mithilfe von **IWMPPlayerServices::setTaskPane reißen.** Windows Media Player 11 führt die **IWMPCiererRip-Schnittstelle** für die Benutzeroberfläche von CDs ein. Diese Schnittstelle bietet mehr Funktionalität als **IWMPPlayerServices::setTaskPane,** und es wird empfohlen, **IWMPCiererRip** zu verwenden, sofern verfügbar.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie eine CD mithilfe von Windows Media Player zerreißen.
+In den folgenden Abschnitten wird beschrieben, wie Sie eine CD mithilfe von Windows Media Player.
 
--   [Ripping mithilfe der iwmpcdromrip-Schnittstelle](ripping-by-using-the-iwmpcdromrip-interface.md)
--   [Ripping mithilfe von iwmpplayerservices:: settaskpane](ripping-by-using-iwmpplayerservices--settaskpane.md)
+-   [Anzippen mithilfe der IWMPCiererRip-Schnittstelle](ripping-by-using-the-iwmpcdromrip-interface.md)
+-   [Beschriftung mitHILFE von IWMPPlayerServices::setTaskPane](ripping-by-using-iwmpplayerservices--settaskpane.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Player-Steuerelement Handbuch**](player-control-guide.md)
+[**Leitfaden zum Player-Steuerelement**](player-control-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

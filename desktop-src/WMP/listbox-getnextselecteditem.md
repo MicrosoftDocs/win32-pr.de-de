@@ -1,9 +1,9 @@
 ---
-title: ListBox. getnextselecteditem
-description: Die getnextselecteditem-Methode ruft das nächste ausgewählte Element im Listenfeld-Steuerelement ab, beginnend mit dem Element, das mit dem angegebenen Index beginnt.
+title: LISTBOX.getNextSelectedItem
+description: Die getNextSelectedItem-Methode ruft das nächste ausgewählte Element im Listenfeld-Steuerelement ab, beginnend am Element nach dem Element mit dem angegebenen Index.
 ms.assetid: 060d196d-2b14-4386-ba01-34256c137db5
 keywords:
-- ListBox. getnextselecteditem-Fenster Media Player
+- LISTBOX.getNextSelectedItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8afb3df1f1b6a6adc528e02dd6531ac4fc1a9a3e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f4a5d95880b1300ebfb7f1732e7c20b6975ad82cf2d15514c58e68b9f9c42cc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003400"
 ---
-# <a name="listboxgetnextselecteditem"></a>ListBox. getnextselecteditem
+# <a name="listboxgetnextselecteditem"></a>LISTBOX.getNextSelectedItem
 
-Die **getnextselecteditem** -Methode ruft das nächste ausgewählte Element im Listenfeld-Steuerelement ab, beginnend mit dem Element, das mit dem angegebenen Index beginnt.
+Die **getNextSelectedItem-Methode** ruft das nächste ausgewählte Element im Listenfeld-Steuerelement ab, beginnend am Element nach dem Element mit dem angegebenen Index.
 
 ``` syntax
         elementID.getNextSelectedItem(startIndex)
@@ -32,20 +32,20 @@ Die **getnextselecteditem** -Methode ruft das nächste ausgewählte Element im L
 
 <dl> <dt>
 
-<span id="startIndex"></span><span id="startindex"></span><span id="STARTINDEX"></span>*Start Index*
+<span id="startIndex"></span><span id="startindex"></span><span id="STARTINDEX"></span>*Startindex*
 </dt> <dd>
 
-**Number** (**Long**) mit dem Index des Elements, das dem abgerufenen Element vorangestellt ist.
+**Zahl** (**long**), die den Index des Elements enthält, das dem abzurufenden Element vorausgeht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück, die den Index des nächsten ausgewählten Elements enthält.
+Diese Methode gibt eine **Zahl** (**long**) zurück, die den Index des nächsten ausgewählten Elements enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie zum Starten der Suche von Anfang an den Wert 1 für den Start Index.
+Um die Suche von Anfang an zu starten, verwenden Sie 1 für den Startindex.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,11 +57,11 @@ Verwenden Sie zum Starten der Suche von Anfang an den Wert 1 für den Start Inde
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

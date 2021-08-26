@@ -1,5 +1,5 @@
 ---
-title: CD3DX12_TILE_SHAPE -Struktur (D3dx12.h)
+title: CD3DX12_TILE_SHAPE-Struktur (D3dx12.h)
 description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ TILE \_ SHAPE-Struktur zu ermöglichen.
 ms.assetid: 0A5963F1-8CE5-4B03-B69F-83B2B801CC21
 keywords:
@@ -24,7 +24,7 @@ ms.locfileid: "119987870"
 ---
 # <a name="cd3dx12_tile_shape-structure"></a>CD3DX12 \_ TILE \_ SHAPE-Struktur
 
-Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ TILE \_ SHAPE-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape) ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ TILE \_ SHAPE-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,14 +47,14 @@ struct CD3DX12_TILE_SHAPE  : public D3D12_TILE_SHAPE{
 **CD3DX12 \_ TILE \_ SHAPE()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ TILE \_ SHAPE-Instanz.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ TILE \_ SHAPE.
 
 </dd> <dt>
 
 **explicit CD3DX12 \_ TILE \_ SHAPE(const D3D12 \_ TILE SHAPE &\_ o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12 TILE SHAPE,initialisiert mit dem Inhalt einer anderen \_ \_ [**D3D12 \_ TILE \_ SHAPE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape)
+Erstellt eine neue Instanz einer CD3DX12 \_ TILE \_ SHAPE, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ TILE \_ SHAPE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape)
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ UINT depthInTexels
 **operator const D3D12 \_ TILE \_ SHAPE&() const**
 </dt> <dd>
 
-Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -88,11 +88,11 @@ Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**D3D12 \_ TILE \_ SHAPE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape)
+[**\_D3D12-KACHELFORM \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_shape)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

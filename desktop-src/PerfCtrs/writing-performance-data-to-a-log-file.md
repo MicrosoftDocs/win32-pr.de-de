@@ -4,18 +4,18 @@ ms.assetid: a1bc40ea-d928-495a-abc0-daf097202a12
 title: Schreiben von Leistungsdaten in eine Protokolldatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: afce3c85b36d66f1b621e4c4f174bff327e6084a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f97bce7d5256db5ebeaee659a12809535b9718bc6fdadc807c9d9ffdc8b67c7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033080"
 ---
 # <a name="writing-performance-data-to-a-log-file"></a>Schreiben von Leistungsdaten in eine Protokolldatei
 
-Im folgenden Beispiel werden Leistungsdaten in Echtzeit in eine Protokolldatei geschrieben. Im Beispiel werden die Funktionen " [**pdhopenquery**](/windows/desktop/api/Pdh/nf-pdh-pdhopenquerya) " und " [**pdhaddcounter**](/windows/desktop/api/Pdh/nf-pdh-pdhaddcountera) " aufgerufen, um eine Abfrage zum Sammeln von Prozessorzeit-gegen Daten zu erstellen. Im Beispiel wird dann die [**pdhopenlog**](/windows/desktop/api/Pdh/nf-pdh-pdhopenloga) -Funktion aufgerufen, um die Protokolldatei zu erstellen, in die die Daten geschrieben werden sollen. Im Beispiel wird die [**pdhupdatelog**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga) -Funktion aufgerufen, um ein Beispiel zu erfassen und die Protokolldatei einmal pro Sekunde für 20 Sekunden zu aktualisieren.
+Im folgenden Beispiel werden Leistungsdaten in Echtzeit in eine Protokolldatei geschrieben. Das Beispiel ruft die [**Funktionen PdhOpenQuery**](/windows/desktop/api/Pdh/nf-pdh-pdhopenquerya) und [**PdhAddCounter**](/windows/desktop/api/Pdh/nf-pdh-pdhaddcountera) auf, um eine Abfrage zum Sammeln von Prozessorzeitzählerdaten zu erstellen. Das Beispiel ruft dann die [**PdhOpenLog-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhopenloga) auf, um die Protokolldatei zu erstellen, in die die Daten geschrieben werden. Das Beispiel ruft die [**PdhUpdateLog-Funktion**](/windows/desktop/api/Pdh/nf-pdh-pdhupdateloga) auf, um ein Beispiel zu sammeln und die Protokolldatei einmal pro Sekunde für 20 Sekunden zu aktualisieren.
 
-Ein Beispiel, in dem die generierte Protokolldatei gelesen wird, finden Sie unter [Lesen von Leistungsdaten aus einer Protokolldatei](reading-performance-data-from-a-log-file.md).
+Ein Beispiel zum Lesen der generierten Protokolldatei finden Sie unter [Lesen von Leistungsdaten aus einer Protokolldatei.](reading-performance-data-from-a-log-file.md)
 
 
 ```C++

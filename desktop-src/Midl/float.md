@@ -1,9 +1,9 @@
 ---
 title: float-Attribut
-description: Das float-Schlüsselwort gibt eine 32-Bit-Gleit Komma Zahl an.
+description: Das float-Schlüsselwort legt eine 32-Bit-Gleitkommazahl fest.
 ms.assetid: dfc94378-13a4-4d34-a254-7ff68f4f9d40
 keywords:
-- float-Attribut, Mittel l
+- FLOAT-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c82d298506c5117c0643df8ecea841832d5f923
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 096bd5488335d59944b03815184735a4530b20310ddc7c21389e86fac1997eec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040088"
 ---
 # <a name="float-attribute"></a>float-Attribut
 
-Das **float** -Schlüsselwort gibt eine 32-Bit-Gleit Komma Zahl an.
+Das **float-Schlüsselwort** legt eine 32-Bit-Gleitkommazahl fest.
 
 ``` syntax
 float identifier-name;
@@ -34,35 +34,35 @@ float identifier-name;
 *Bezeichnername* 
 </dt> <dd>
 
-Gibt einen gültigen Mittell-Bezeichner an. Gültige Mittell-Bezeichner bestehen aus bis zu 31 alphanumerischen Zeichen und/oder unterstrichen und müssen mit einem Buchstaben oder einem Unterstrich beginnen.
+Gibt einen gültigen MIDL-Bezeichner an. Gültige MIDL-Bezeichner bestehen aus bis zu 31 alphanumerischen Zeichen und/oder Unterstrichen und müssen mit einem Alphabet- oder Unterstrich beginnen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **float** -Typ ist einer der Basis Typen der IDL (Interface Definition Language). Der **float** -Typ kann als Typspezifizierer in [**typedef**](typedef.md) -Deklarationen, allgemeinen Deklarationen und Funktions Deklaratoren (als Funktions Rückgabetyp-Spezifizierer und Parameter-Typspezifizierer) vorkommen. Informationen zu dem Kontext, in dem typspezifier angezeigt wird, finden Sie unter [Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md).
+Der **Float-Typ** ist einer der Basistypen der Schnittstellendefinitionssprache (Interface Definition Language, IDL). Der **float-Typ** kann als Typspezifizierer in typedef-Deklarationen, allgemeinen Deklarationen und Funktionsdeklaratoren (als Funktionsrückgabetypspezifizierer und Parametertypspezifizierer) angezeigt werden. [](typedef.md) Den Kontext, in dem Typspezifizierer angezeigt werden, finden Sie unter [Schnittstellendefinitionsdatei (IDL).](interface-definition-idl-file.md)
 
-Der **float** -Typ kann nicht in [**Konstanten**](const.md) Deklarationen auftreten.
+Der **float-Typ** kann nicht in [**const-Deklarationen**](const.md) angezeigt werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
-[**Maß**](double.md)
+[**Doppel**](double.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

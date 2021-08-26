@@ -1,7 +1,7 @@
 ---
-description: Die setbuffervalue-Methode fügt einen neuen \* Bytewert (Type VT \_ Vector \| VT \_ UI1) hinzu oder überschreibt eine vorhandene.
+description: Die SetBufferValue-Methode fügt einen neuen BYTE-Wert \* (Typ VT \_ VECTOR \| VT UI1) hinzu oder überschreibt \_ einen vorhandenen.
 ms.assetid: 6c421240-2ff8-4862-bd90-1feee5d15a8d
-title: 'Iportabledevicevalues:: setbuffervalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetBufferValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: e04b41fdd397d8d03e7e0576d2ba8fb3b6ad1401
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 25a087c6f2d1e254e225f82ef794915898fbc20c7203fe20315d51f78e9770f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055100"
 ---
-# <a name="iportabledevicevaluessetbuffervalue-method"></a>Iportabledevicevalues:: setbuffervalue-Methode
+# <a name="iportabledevicevaluessetbuffervalue-method"></a>IPortableDeviceValues::SetBufferValue-Methode
 
-Die **setbuffervalue** -Methode fügt einen neuen  \* Bytewert (Type VT \_ Vector \| VT \_ UI1) hinzu oder überschreibt eine vorhandene.
+Die **SetBufferValue-Methode** fügt einen neuen **BYTE-Wert** \* (Typ VT VECTOR \_ \| VT UI1) hinzu oder überschreibt \_ einen vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetBufferValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY-Objekt,** das das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ in\]
+*pValue* \[ In\]
 </dt> <dd>
 
-Ein **Byte \*** , das die Daten enthält, die in das Element geschrieben werden sollen. Die gesendeten Puffer Daten werden in die-Schnittstelle kopiert, sodass der Aufrufer diesen Puffer nach dem Aufruf freigeben kann.
+Ein **BYTE, \*** das die Daten enthält, die in das Element geschrieben werden. Die übermittelten Pufferdaten werden in die Schnittstelle kopiert, sodass der Aufrufer diesen Puffer nach diesem Aufruf frei geben kann.
 
 </dd> <dt>
 
-*cbValue* \[ in\]
+*cbValue* \[ In\]
 </dt> <dd>
 
-Die Größe des Werts, auf den *pValue* zeigt (in Bytes).
+Die Größe des Werts, auf den *pValue* zeigt, in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -77,11 +77,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
+Wenn ein vorhandener Wert über denselben  Schlüssel verfügt, der vom Schlüsselparameter angegeben wird, überschreibt er den vorhandenen Wert ohne Warnung. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
 
-Das Festlegen eines Puffers, der **null oder NULL** ist, wird nicht unterstützt.
+Das Festlegen **eines NULL-Puffers** oder eines Puffers der Größe 0 (null) wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Das Festlegen eines Puffers, der **null oder NULL** ist, wird nicht unterstützt
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -98,10 +98,10 @@ Das Festlegen eines Puffers, der **null oder NULL** ist, wird nicht unterstützt
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getbuffervalue**](iportabledevicevalues-getbuffervalue.md)
+[**IPortableDeviceValues::GetBufferValue**](iportabledevicevalues-getbuffervalue.md)
 </dt> </dl>
 
  

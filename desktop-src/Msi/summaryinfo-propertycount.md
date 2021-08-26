@@ -1,7 +1,7 @@
 ---
-description: Die PropertyCount-Eigenschaft des SummaryInfo-Objekts ist eine schreibgeschützte Eigenschaft, die die aktuelle Anzahl der Eigenschaftswerte im Zusammenfassungs Informationsobjekt angibt. Es berücksichtigt Eigenschaften, die hinzugefügt, gelöscht oder ersetzt wurden.
+description: Die PropertyCount-Eigenschaft des SummaryInfo-Objekts ist eine schreibgeschützte Eigenschaft, die die aktuelle Anzahl von Eigenschaftswerten im Zusammenfassungsinformationsobjekt angibt. Dabei werden Eigenschaften berücksichtigt, die hinzugefügt, gelöscht oder ersetzt wurden.
 ms.assetid: 577d3733-23ff-4bb1-9de2-0824215c5e25
-title: SummaryInfo. PropertyCount (Eigenschaft)
+title: SummaryInfo.PropertyCount (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: bf1540b3a75bce5b78b020ff8895825cbf4c9e87
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd47409dcf2ce34c41c8102278911402c44a29b8b7bd8d95e8cc28092dfc1599
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039560"
 ---
-# <a name="summaryinfopropertycount-property"></a>SummaryInfo. PropertyCount (Eigenschaft)
+# <a name="summaryinfopropertycount-property"></a>SummaryInfo.PropertyCount (Eigenschaft)
 
-Die **PropertyCount** -Eigenschaft des [**SummaryInfo**](summaryinfo-object.md) -Objekts ist eine schreibgeschützte Eigenschaft, die die aktuelle Anzahl der Eigenschaftswerte im Zusammenfassungs Informationsobjekt angibt. Es berücksichtigt Eigenschaften, die hinzugefügt, gelöscht oder ersetzt wurden.
+Die **PropertyCount-Eigenschaft** des [**SummaryInfo-Objekts**](summaryinfo-object.md) ist eine schreibgeschützte Eigenschaft, die die aktuelle Anzahl von Eigenschaftswerten im Zusammenfassungsinformationsobjekt angibt. Dabei werden Eigenschaften berücksichtigt, die hinzugefügt, gelöscht oder ersetzt wurden.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -43,9 +43,9 @@ propVal = SummaryInfo.PropertyCount
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ isummaryinfo ist definiert als 000c109b-0000-0000-C000-000000000046<br/>                                                                                                                                                                         |
+| IID<br/>     | IID \_ ISummaryInfo ist als 000C109B-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                         |
 
 
 

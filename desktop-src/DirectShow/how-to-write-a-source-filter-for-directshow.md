@@ -1,34 +1,34 @@
 ---
-description: In diesem Thema wird beschrieben, wie ein benutzerdefinierter Quell Filter für DirectShow geschrieben wird.
+description: In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Quellfilter für DirectShow schreiben.
 ms.assetid: 032f7624-2237-41cd-844a-18ed4a2e420d
-title: Schreiben eines Quell Filters für DirectShow
+title: Schreiben eines Quellfilters für DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87af99595a43c86be0e2f4ecaa51768a211e9674
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 79ea6821dc7d56f2628ce68e7320e5e76b2c1643978e68287d434b7a111cbbd0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043240"
 ---
-# <a name="how-to-write-a-source-filter-for-directshow"></a>Schreiben eines Quell Filters für DirectShow
+# <a name="how-to-write-a-source-filter-for-directshow"></a>Schreiben eines Quellfilters für DirectShow
 
-In diesem Thema wird beschrieben, wie ein benutzerdefinierter Quell Filter für DirectShow geschrieben wird.
+In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Quellfilter für DirectShow schreiben.
 
 > [!Note]  
-> In diesem Thema werden nur pushquellen beschrieben. Es werden keine pullquellen, z. b. der Async-Reader-Filter, oder Splitter Filter beschrieben, die eine Verbindung mit Pull-Quellen herstellen. Informationen zu den Unterschieden zwischen *Push* -und *Pull* -Quellen finden Sie unter [Datenfluss für Filter Entwickler](data-flow-for-filter-developers.md).
+> In diesem Thema werden nur Pushquellen beschrieben. Sie beschreibt keine Pullquellen, z. B. den Async Reader Filter oder Splitterfilter, die eine Verbindung mit Pullquellen herstellen. Informationen zum Unterschied zwischen *Push-* und *Pullquellen* finden Sie unter [Data Flow for Filter Developers](data-flow-for-filter-developers.md).
 
  
 
 ## <a name="the-directshow-streaming-model"></a>Das DirectShow-Streamingmodell
 
-Wenn Sie einen Quell Filter schreiben, ist es wichtig zu verstehen, dass eine pushquelle nicht dasselbe wie eine Live Quelle ist. Eine Live Quelle ruft Daten aus einer externen Quelle, z. b. einer Kamera oder einem Netzwerkstream, ab. Im Allgemeinen kann eine Live Quelle die eingehende Daten Rate nicht steuern. Wenn die downstreamfilter die Daten nicht schnell genug verarbeiten, muss die Quelle Beispiele ablegen.
+Wenn Sie einen Quellfilter schreiben, ist es wichtig zu verstehen, dass eine Pushquelle nicht mit einer Livequelle identisch ist. Eine Livequelle ruft Daten aus einer externen Quelle ab, z. B. einer Kamera oder einem Netzwerkdatenstrom. Im Allgemeinen kann eine Livequelle die eingehende Datenrate nicht steuern. Wenn die Downstreamfilter die Daten nicht schnell genug nutzen, muss die Quelle Stichproben löschen.
 
-Eine pushquelle muss jedoch keine Live Quelle sein. Beispielsweise kann eine pushquelle Daten aus einer lokalen Datei lesen. In diesem Fall bestimmen die nachgeschalteten rendererfilter, wie schnell die Daten aus der Quelle genutzt werden, basierend auf der Referenzuhr und den Beispiel Zeitstempeln. Der Quell Filter liefert Stichproben so schnell wie möglich, aber der tatsächliche Datenfluss wird durch die Renderer eingeschränkt. Die Mechanismen zum Durchlaufen des Datenflusses werden im [Datenfluss für Filter Entwickler](data-flow-for-filter-developers.md)beschrieben.
+Eine Pushquelle muss jedoch keine Livequelle sein. Beispielsweise kann eine Pushquelle Daten aus einer lokalen Datei lesen. In diesem Fall bestimmen die Downstreamrendererfilter basierend auf der Referenzuhr und den Beispielzeitstempeln, wie schnell sie die Daten aus der Quelle nutzen. Der Quellfilter liefert so schnell wie möglich Stichproben, aber der tatsächliche Datenfluss wird durch die Renderer eingeschränkt. Die Mechanismen zum Gating des Datenflusses werden unter [Data Flow for Filter Developers (Daten Flow für Filterentwickler)](data-flow-for-filter-developers.md)beschrieben.
 
-Jede Ausgabe-PIN im Quell Filter erstellt einen Thread, der als *streamingthread* bezeichnet wird. Die PIN liefert Beispiele für den streamingthread. In der Regel erfolgen alle Decodierungs-, Verarbeitungs-und Rendering-Vorgänge in diesem Thread, obwohl einige downstreamfilter zusätzliche Threads erstellen können, um Ihre Ausgabe Beispiele in die Warteschlange zu stellen
+Jeder Ausgabepin im Quellfilter erstellt einen Thread, der als *Streamingthread* bezeichnet wird. Die Stecknadel liefert Beispiele für den Streamingthread. In der Regel erfolgt die gesamte Decodierung, Verarbeitung und das Rendering in diesem Thread, obwohl einige Downstreamfilter zusätzliche Threads erstellen können, um ihre Ausgabebeispiele in die Warteschlange zu stellen.
 
-Der streamingthread führt eine-Schleife mit der folgenden Struktur aus:
+Der Streamingthread führt eine Schleife mit der folgenden Struktur aus:
 
 ``` syntax
 until (stopped)
@@ -38,109 +38,109 @@ until (stopped)
   4. Deliver the sample downstream.
 ```
 
-Wenn keine Beispiele verfügbar sind, blockiert Schritt 1, bis eine Stichprobe verfügbar wird. Schritt 4 kann auch blockieren. Beispielsweise kann dies blockiert werden, während das Diagramm angehalten wird.
+Wenn keine Beispiele verfügbar sind, wird Schritt 1 blockiert, bis ein Beispiel verfügbar wird. Schritt 4 kann ebenfalls blockiert werden. Sie kann z. B. blockieren, während das Diagramm angehalten wird.
 
-Die-Schleife wird so schnell wie möglich ausgeführt, aber Sie ist darauf beschränkt, wie schnell der rendererfilter die einzelnen Beispiele rendert. Wenn das Filter Diagramm eine Referenzuhr aufweist, wird die Rate durch die Präsentations Zeiten der Stichproben bestimmt. Wenn keine Referenzuhr vorhanden ist, verarbeitet der Renderer die Stichproben so schnell wie möglich.
+Die -Schleife wird so schnell wie möglich ausgeführt, ist jedoch durch die Anzahl der Rendererfilter beschränkt, die jedes Beispiel rendern. Wenn das Filterdiagramm über eine Referenzuhr verfügt, wird die Rate durch die Präsentationszeiten der Stichproben bestimmt. Wenn keine Referenzuhr vorhanden ist, verwendet der Renderer Stichproben so schnell wie möglich.
 
-## <a name="using-csource-and-csourcestream"></a>Verwenden von CSource und csourcestream
+## <a name="using-csource-and-csourcestream"></a>Verwenden von CSource und CSourceStream
 
-Die DirectShow-Basisklassen enthalten zwei Klassen, die pushquellen unterstützen: [**CSource**](csource.md) und [**csourcestream**](csourcestream.md).
+Die DirectShow-Basisklassen enthalten zwei Klassen, die Pushquellen unterstützen: [**CSource**](csource.md) und [**CSourceStream.**](csourcestream.md)
 
--   [**CSource**](csource.md) ist die Basisklasse für den Filter und implementiert die [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Schnittstelle.
--   [**Csourcestream**](csourcestream.md) ist die Basisklasse für die Ausgabe Pins und implementiert die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle.
+-   [**CSource**](csource.md) ist die Basisklasse für den Filter und implementiert die [**IBaseFilter-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)
+-   [**CSourceStream**](csourcestream.md) ist die Basisklasse für die Ausgabepins und implementiert die [**IPin-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-ipin)
 
-### <a name="output-pins"></a>Ausgabe Pins
+### <a name="output-pins"></a>Ausgabepins
 
-Ein Quell Filter kann über mehr als eine Ausgabepin verfügen. Erstellen Sie in der Konstruktormethode Ihres Filters mindestens eine PIN, die von [**csourcestream**](csourcestream.md) (eine PIN pro Ausgabestream) abgeleitet ist. Sie müssen keine Zeiger auf die Pins speichern. die Pins werden automatisch dem Filter hinzugefügt, wenn Sie erstellt werden.
+Ein Quellfilter kann mehrere Ausgabepins aufweisen. Erstellen Sie in der Konstruktormethode Ihres Filters mindestens einen von [**CSourceStream**](csourcestream.md) abgeleiteten Pin (einen Pin pro Ausgabestream). Sie müssen keine Zeiger auf die Stecknadeln speichern. die Pins fügen sich automatisch dem Filter hinzu, wenn sie erstellt werden.
 
 ### <a name="output-formats"></a>Ausgabeformate
 
-Die Ausgabe-PIN verarbeitet die formataushandlung mit den folgenden [**csourcestream**](csourcestream.md) -Methoden:
+Der Ausgabepin verarbeitet die Formataushandlung mit den folgenden [**CSourceStream-Methoden:**](csourcestream.md)
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Methode                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getmediatype**](csourcestream-getmediatype.md)     | Ruft einen Medientyp aus der Ausgabe-PIN ab. <br/> Die PIN muss mindestens einen Medientyp vorschlagen, da der Downstream-Filter möglicherweise keine Typen vorschlägt. In den meisten Fällen ist der Downstream-Filter ein Decoder oder ein Renderer, je nachdem, ob der Quell Filter komprimierte oder nicht komprimierte Daten bereitstellt. Ein rendererfilter erfordert in der Regel einen vollständigen Medientyp, der alle zum Rendern des Streams erforderlichen Formatierungsinformationen enthält. Bei einem Decoder hängt die Menge der Informationen, die im Medientyp erforderlich ist, stark vom Codierungsformat ab.<br/> |
-| [**Checkmediatype**](csourcestream-checkmediatype.md) | Überprüft, ob die Ausgabepin einen bestimmten Medientyp akzeptiert. Das Überschreiben dieser Methode ist optional, je nachdem, wie Sie " [**getmediatype**](csourcestream-getmediatype.md)" implementieren.                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [**GetMediaType**](csourcestream-getmediatype.md)     | Ruft einen Medientyp vom Ausgabepin ab. <br/> Der Pin muss mindestens einen Medientyp vorschlagen, da der Downstreamfilter möglicherweise keine Typen vorschlägt. In den meisten Fällen ist der Downstreamfilter ein Decoder oder renderer, je nachdem, ob der Quellfilter komprimierte oder nicht komprimierte Daten übermittelt. Ein Rendererfilter erfordert in der Regel einen vollständigen Medientyp, der alle Formatinformationen enthält, die zum Rendern des Streams erforderlich sind. Bei einem Decoder hängt die Menge der erforderlichen Informationen im Medientyp stark vom Codierungsformat ab.<br/> |
+| [**CheckMediaType**](csourcestream-checkmediatype.md) | Überprüft, ob der Ausgabepin einen bestimmten Medientyp akzeptiert. Das Überschreiben dieser Methode ist optional, je nachdem, wie Sie [**GetMediaType**](csourcestream-getmediatype.md)implementieren.                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 
  
 
-Die [**getmediatype**](csourcestream-getmediatype.md) -Methode ist überladen:
+Die [**GetMediaType-Methode**](csourcestream-getmediatype.md) ist überladen:
 
--   [**Getmediatype**](csourcestream-getmediatype.md) (1) übernimmt einen einzelnen Parameter, einen Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt.
--   [**Getmediatype**](csourcestream-getmediatype2.md) (2) nimmt eine Index Variable und einen Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt an.
+-   [**GetMediaType**](csourcestream-getmediatype.md) (1) verwendet einen einzelnen Parameter, einen Zeiger auf ein [**CMediaType-Objekt.**](cmediatype.md)
+-   [**GetMediaType**](csourcestream-getmediatype2.md) (2) verwendet eine Indexvariable und einen Zeiger auf ein [**CMediaType-Objekt.**](cmediatype.md)
 
-Wenn die Ausgabe-PIN des Quell Filters genau ein Medienformat unterstützt, sollten Sie (1) überschreiben, um das [**cmediatype**](cmediatype.md) -Objekt mit diesem Format zu initialisieren. Belassen Sie die Standard Implementierung von (2), und belassen Sie auch die Standard Implementierung von [**checkmediatype**](csourcestream-checkmediatype.md).
+Wenn der Ausgabepin des Quellfilters genau ein Medienformat unterstützt, sollten Sie (1) überschreiben, um das [**CMediaType-Objekt**](cmediatype.md) mit diesem Format zu initialisieren. Belassen Sie die Standardimplementierungen von (2) und die Standardimplementierungen von [**CheckMediaType.**](csourcestream-checkmediatype.md)
 
-Wenn die PIN mehr als ein Format unterstützt, überschreiben Sie (2). Initialisieren Sie das [**cmediatype**](cmediatype.md) -Objekt gemäß dem Wert der Index Variable. Die PIN sollte die Formate als geordnete Liste zurückgeben. In diesem Fall müssen Sie auch den [**checkmediatype**](csourcestream-checkmediatype.md) außer Kraft setzen, um den Medientyp mit der Liste der Formate zu überprüfen.
+Wenn der Pin mehrere Formate unterstützt, überschreiben Sie (2). Initialisieren Sie das [**CMediaType-Objekt**](cmediatype.md) entsprechend dem Wert der Indexvariablen. Die Stecknadel sollte die Formate als sortierte Liste zurückgeben. In diesem Fall müssen Sie auch [**CheckMediaType**](csourcestream-checkmediatype.md) überschreiben, um den Medientyp anhand Ihrer Formatliste zu überprüfen.
 
-Beachten Sie, dass der Downstream-Filter für nicht komprimierte Videoformate Formate mit verschiedenen Stride-Werten vorschlagen kann. Der Filter sollte jeden gültigen Stride-Wert akzeptieren. Weitere Informationen finden Sie unter [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader).
+Beachten Sie bei nicht komprimierten Videoformaten, dass der Downstreamfilter Formate mit verschiedenen Schrittwerten vorschlagen kann. Ihr Filter sollte jeden gültigen Schrittwert akzeptieren. Weitere Informationen finden Sie unter [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader).
 
-Sie müssen auch die pure-Virtual [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md) -Methode überschreiben. Verwenden Sie diese Methode, um die Größe der Beispiel Puffer festzulegen.
+Sie müssen auch die rein virtuelle [**CBaseOutputPin::D ecideBufferSize-Methode**](cbaseoutputpin-decidebuffersize.md) überschreiben. Verwenden Sie diese Methode, um die Größe der Beispielpuffer festzulegen.
 
 ### <a name="streaming"></a>Streaming
 
-Die [**csourcestream**](csourcestream.md) -Klasse erstellt den streamingthread für die PIN. Die Thread Prozedur wird in der [**csourcestream::D obufferprocessingloop**](csourcestream-dobufferprocessingloop.md) -Methode implementiert. Diese Methode ruft die pure-Virtual [**csourcestream:: FillBuffer**](csourcestream-fillbuffer.md) -Methode auf, die von der abgeleiteten Klasse überschrieben werden muss. Bei dieser Methode füllt der PIN den Puffer mit Daten. Wenn Ihr Filter beispielsweise unkomprimierte Videos bereitstellt, können Sie die Video Frames zeichnen.
+Die [**CSourceStream-Klasse**](csourcestream.md) erstellt den Streamingthread für den Pin. Die Threadprozedur wird in der [**CSourceStream::D oBufferProcessingLoop-Methode**](csourcestream-dobufferprocessingloop.md) implementiert. Diese Methode ruft die rein virtuelle [**CSourceStream::FillBuffer-Methode**](csourcestream-fillbuffer.md) auf, die die abgeleitete Klasse überschreiben muss. Bei dieser Methode füllt der Stecknadel den Puffer mit Daten. Wenn Ihr Filter beispielsweise unkomprimierte Videos übermittelt, zeichnen Sie die Videoframes an dieser Stelle.
 
-Die-Basisklasse startet und beendet automatisch die Thread Schleife, wenn der Filter anhält oder angehalten wird. In diesem Fall ruft die [**csourcestream**](csourcestream.md) -Klasse einige Methoden auf, um die abgeleitete Klasse zu benachrichtigen:
+Die Basisklasse startet und beendet die Threadschleife automatisch zu den richtigen Zeiten, wenn der Filter angehalten oder beendet wird. In diesem Fall ruft die [**CSourceStream-Klasse**](csourcestream.md) einige Methoden auf, um ihre abgeleitete Klasse zu benachrichtigen:
 
--   [**Csourcestream:: onthreadcreate**](csourcestream-onthreadcreate.md)
--   [**Csourcestream:: onthreaddestroy**](csourcestream-onthreaddestroy.md)
--   [**Csourcestream:: onthreadstartplay**](csourcestream-onthreadstartplay.md)
+-   [**CSourceStream::OnThreadCreate**](csourcestream-onthreadcreate.md)
+-   [**CSourceStream::OnThreadDestroy**](csourcestream-onthreaddestroy.md)
+-   [**CSourceStream::OnThreadStartPlay**](csourcestream-onthreadstartplay.md)
 
-Sie können diese Methoden überschreiben, wenn Sie eine spezielle Behandlung hinzufügen müssen. Andernfalls geben die Standard Implementierungen einfach **S \_ OK** zurück.
+Sie können diese Methoden überschreiben, wenn Sie eine spezielle Behandlung hinzufügen müssen. Andernfalls geben die Standardimplementierungen einfach **S \_ OK** zurück.
 
-## <a name="seeking"></a>Diejenigen
+## <a name="seeking"></a>Suchen
 
-Wenn Sie über einen Quell Filter mit einem Ausgabepin verfügen, können Sie die [**csourceseeking**](csourceseeking.md) -Klasse als Ausgangspunkt für die Implementierung der Suche verwenden. Erben Sie Ihre PIN-Klasse sowohl aus [**csourcestream**](csourcestream.md) als auch aus **csourceseeking**.
+Wenn Sie über einen Quellfilter mit einem Ausgabepin verfügen, können Sie die [**CSourceSeeking-Klasse**](csourceseeking.md) als Ausgangspunkt für die Implementierung von Suchabfragen verwenden. Erben Sie Ihre Pin-Klasse sowohl von [**CSourceStream**](csourcestream.md) als **auch von CSourceSeeking.**
 
 > [!Note]  
-> [**Csourceseeking**](csourceseeking.md) wird nicht für einen Filter mit mehr als einer Ausgabe-PIN empfohlen. Das Hauptproblem besteht darin, dass nur eine PIN auf Suchanforderungen reagieren soll. Dies erfordert in der Regel die Kommunikation zwischen den Pins und dem Filter.
+> [**CSourceSeeking**](csourceseeking.md) wird für filter mit mehr als einem Ausgabepin nicht empfohlen. Das Hauptproblem besteht darin, dass nur ein Pin auf Suchanforderungen reagieren sollte. Dies erfordert in der Regel die Kommunikation zwischen den Pins und dem Filter.
 
  
 
-Die [**csourceseeking**](csourceseeking.md) -Klasse verwaltet die Wiedergabe Rate, die Startzeit, die Endzeit und die Dauer. Die abgeleitete Klasse sollte die anfängliche Endzeit und die Dauer festlegen. Wenn sich einer dieser Werte ändert, wird die [**csourceseeking:: changerate**](csourceseeking-changerate.md)-, [**csourceseeking:: changestart**](csourceseeking-changestart.md)-oder [**csourceseeking:: changestoppt**](csourceseeking-changestop.md) -Methode entsprechend aufgerufen. Bei den Methoden handelt es sich um reine virtuelle Methoden. Die abgeleitete Pin-Klasse überschreibt diese Methoden, um Folgendes durchzuführen:
+Die [**CSourceSeeking-Klasse**](csourceseeking.md) verwaltet die Wiedergaberate, Startzeit, Beendigungszeit und Dauer. Ihre abgeleitete Klasse sollte die anfängliche Beendigungszeit und -dauer festlegen. Wenn sich einer dieser Werte ändert, wird die [**Methode CSourceSeeking::ChangeRate,**](csourceseeking-changerate.md) [**CSourceSeeking::ChangeStart**](csourceseeking-changestart.md)oder [**CSourceSeeking::ChangeStop**](csourceseeking-changestop.md) nach Bedarf aufgerufen. Die Methoden sind alle rein virtuelle Methoden. Die abgeleitete Pin-Klasse überschreibt diese Methoden, um Folgendes zu tun:
 
-1.  Aufrufen von [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) auf der Downstream-PIN. Dies bewirkt, dass Downstream-Filter Stichproben freigeben und neue Beispiele ablehnen.
-2.  [**Csourcestream:: Beendigung**](csourcestream-stop.md) aufrufen, um den Streaminginhalt zu verhindern. Der Quell Filter hält die Erstellung neuer Daten an.
-3.  Nennen Sie [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) für die downstreampin. Dies signalisiert den downstreamfiltern, neue Daten zu akzeptieren.
-4.  Nennen Sie [**IPin:: newsegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) mit den neuen Start-und Endzeit Zeiten und der Geschwindigkeit.
-5.  Legen Sie die Diskontinuität-Eigenschaft für das nächste Beispiel fest.
+1.  Rufen Sie [**IPin::BeginFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) auf dem Downstreampin auf. Dies führt dazu, dass Downstreamfilter Stichproben freigeben, die sie enthalten, und neue Stichproben ablehnen.
+2.  Rufen Sie [**CSourceStream::Stop**](csourcestream-stop.md) auf, um den Streamingthread zu beenden. Der Quellfilter unterbricht die Erstellung neuer Daten.
+3.  Rufen Sie [**IPin::EndFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) auf dem Downstreampin auf. Dies signalisiert den Downstreamfiltern, dass sie neue Daten akzeptieren.
+4.  Rufen Sie [**IPin::NewSegment**](/windows/desktop/api/Strmif/nf-strmif-ipin-newsegment) mit den neuen Start- und Stoppzeiten und der Rate auf.
+5.  Legen Sie die Diskontinuitätseigenschaft für das nächste Beispiel fest.
 
-Weitere Informationen finden Sie [unter unterstützen von Such Vorschauen in einem Quell Filter](supporting-seeking-in-a-source-filter.md).
+Weitere Informationen finden Sie unter [Unterstützen von Suchabfragen in einem Quellfilter.](supporting-seeking-in-a-source-filter.md)
 
-Wenn der Filter Suchvorgänge unterstützt, ist die Streamposition jetzt unabhängig von der Präsentationszeit. Nach einer Suche werden Zeitstempel auf 0 (null) zurückgesetzt. Die allgemeine Formel für Zeitstempel lautet:
+Wenn Ihr Filter Suchabfragen unterstützt, ist die Streamposition jetzt unabhängig von der Präsentationszeit. Nach einer Suche werden Zeitstempel auf 0 (null) zurückgesetzt. Die allgemeine Formel für Zeitstempel lautet:
 
--   Beispiel Startzeit = verstrichene Zeit/Wiedergabe Rate
--   Beispiel Endzeit = Stichproben Startzeit + (Zeit pro Frame/Wiedergabe Rate)
+-   Beispielstartzeit = verstrichene Zeit/Wiedergaberate
+-   Endzeit der Stichprobe = Startzeit der Stichprobe + (Zeit pro Frame/Wiedergaberate)
 
-die *verstrichene Zeit* ist die verstrichene Zeit seit Beginn der Ausführung des Filters oder seit dem letzten Seek-Befehl.
+dabei ist die *verstrichene Zeit* die Zeit, die seit der Ausführung des Filters oder seit dem letzten Suchbefehl verstrichen ist.
 
-### <a name="time-formats-for-seeking"></a>Zeitformate für Suchvorgänge
+### <a name="time-formats-for-seeking"></a>Zeitformate für Suche
 
-Standardmäßig befinden sich Such Befehle in Einheiten von 100-Nanosekunden. Der Quell Filter kann zusätzliche Zeitformate unterstützen, z. b. die Suche nach Frame Nummer. Jedes Zeitformat wird durch eine GUID identifiziert. siehe [**Zeit Format-GUIDs**](time-format-guids.md).
+Standardmäßig liegen seek-Befehle in Einheiten von 100 Nanosekunden vor. Ihr Quellfilter kann zusätzliche Zeitformate unterstützen, z. B. die Suche nach Framenummer. Jedes Mal, wenn das Format durch eine GUID identifiziert wird; weitere Informationen finden Sie unter [**Zeitformat-GUIDs.**](time-format-guids.md)
 
-Um zusätzliche Zeitformate zu unterstützen, müssen Sie die folgenden Methoden für die Ausgabepin implementieren:
+Um zusätzliche Zeitformate zu unterstützen, müssen Sie die folgenden Methoden auf dem Ausgabepin implementieren:
 
--   [**Imediaseeking:: converttimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat)
--   [**Imediaseeking:: getTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat)
--   [**Imediaseeking:: isformatsupported**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isformatsupported)
--   [**Imediaseeking:: isusingtimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isusingtimeformat)
--   [**Imediaseeking:: querypreferredformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-querypreferredformat)
--   [**Imediaseeking:: settimeformat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat)
+-   [**IMediaSeeking::ConvertTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-converttimeformat)
+-   [**IMediaSeeking::GetTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-gettimeformat)
+-   [**IMediaSeeking::IsFormatSupported**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isformatsupported)
+-   [**IMediaSeeking::IsUsingTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-isusingtimeformat)
+-   [**IMediaSeeking::QueryPreferredFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-querypreferredformat)
+-   [**IMediaSeeking::SetTimeFormat**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-settimeformat)
 
-Wenn die Anwendung ein neues Zeitformat festlegt, werden alle Positions Parameter in den [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Methoden im Hinblick auf das neue Zeitformat interpretiert. Wenn das Zeitformat z. b. Frames ist, muss die [**imediaseeking:: getduration**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration) -Methode die Dauer in Frames zurückgeben.
+Wenn die Anwendung ein neues Zeitformat festlegt, werden alle Positionsparameter in den [**IMediaSeeking-Methoden**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) als neues Zeitformat interpretiert. Wenn das Zeitformat beispielsweise Frames ist, muss die [**IMediaSeeking::GetDuration-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration) die Dauer in Frames zurückgeben.
 
-In der Praxis unterstützen nur wenige DirectShow-Filter zusätzliche Zeitformate. Folglich nutzen einige DirectShow-Anwendungen diese Funktion.
+In der Praxis unterstützen einige DirectShow-Filter zusätzliche Zeitformate, und daher nutzen nur wenige DirectShow-Anwendungen diese Funktion.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schreiben von Quell Filtern](writing-source-filters.md)
+[Schreiben von Quellfiltern](writing-source-filters.md)
 </dt> </dl>
 
  

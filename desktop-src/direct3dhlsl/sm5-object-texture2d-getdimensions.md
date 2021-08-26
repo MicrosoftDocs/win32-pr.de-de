@@ -1,6 +1,6 @@
 ---
-title: 'Texture2D:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | Texture2D:: GetDimensions-Funktion'
+title: Texture2D::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | Texture2D::GetDimensions-Funktion
 ms.assetid: 921e425d-c0dd-4b8d-b590-0599fabfe606
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ba1fa832b51e86b5df3193895caa293bb006d82a
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 46eb5101dc119d2779f60d2e2b39a42c695933a5bffd477b407fea56c930038c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067700"
 ---
-# <a name="texture2dgetdimensions-function"></a>Texture2D:: GetDimensions-Funktion
+# <a name="texture2dgetdimensions-function"></a>Texture2D::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -42,39 +42,39 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Miplevel* \[ in\]
+*MipLevel* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Optional. Die MipMap-Ebene (muss angegeben werden, wenn " *numoflevels* " verwendet wird).
+Optional. Die Mipmapebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wird).
 
 </dd> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
-*Höhe* \[ vorgenommen\]
+*Höhe* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Ressourcen Höhe in Texels.
+Die Ressourcenhöhe in Texeln.
 
 </dd> <dt>
 
-*Nummerige* \[ vorgenommen\]
+*NumberOfLevels* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
+Die Anzahl der Mipmap-Ebenen (erfordert *auch MipLevel).*
 
 </dd> </dl>
 
@@ -82,7 +82,7 @@ Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
 
 Nichts
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -107,11 +107,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -119,14 +119,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Texture2D](sm5-object-texture2d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

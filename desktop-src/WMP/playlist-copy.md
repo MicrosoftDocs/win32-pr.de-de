@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. Kopieren
-description: Die Copy-Methode startet einen Kopiervorgang von der CD.
+title: PLAYLIST.copy
+description: Die Kopiermethode startet einen Kopiervorgang von der CD.
 ms.assetid: 7d919ae5-456b-4cb9-ad52-9396f5c867d6
 keywords:
-- Wiedergabeliste. Windows-Media Player kopieren
+- PLAYLIST.copy Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f1c24de6af571eec948a92f666a76df6b65187c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 07b897d22c1aa8e666c5de40aecb8ef63d17384957e82eee8dc7d569f0e71f57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003190"
 ---
-# <a name="playlistcopy"></a>Wiedergabeliste. Kopieren
+# <a name="playlistcopy"></a>PLAYLIST.copy
 
-Die **Copy** -Methode startet einen Kopiervorgang von der CD.
+Die **Kopiermethode** startet einen Kopiervorgang von der CD.
 
 ``` syntax
         elementID.copy()
@@ -36,9 +36,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kopiert nur die aktivierten Elemente in der Wiedergabeliste und funktioniert auf die gleiche Weise wie im Bereich **aus CD kopieren** im vollständigen Modus von Windows Media Player. Damit diese Methode funktioniert, muss sich eine CD auf dem CD-Laufwerk befinden. Legen Sie das **checkboxesvisible** -Attribut auf "true" fest, damit Benutzer einzelne Elemente auf einer CD vor dem Kopieren auswählen können.
+Diese Methode kopiert nur die überprüften Elemente in der Wiedergabeliste und funktioniert genauso wie im Bereich **Aus CD kopieren** im vollständigen Modus von Windows Media Player. Damit diese Methode funktioniert, muss sich eine CD auf dem CD-Laufwerk befindet. Legen Sie die **KontrollkästchenVisible-Attribut** auf TRUE fest, damit Benutzer einzelne Elemente auf einer CD vor dem Kopieren auswählen können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Diese Methode kopiert nur die aktivierten Elemente in der Wiedergabeliste und fu
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -54,13 +54,13 @@ Diese Methode kopiert nur die aktivierten Elemente in der Wiedergabeliste und fu
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. abortcopy**](playlist-abortcopy.md)
+[**PLAYLIST.abortCopy**](playlist-abortcopy.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Kopieren**](playlist-copying.md)
+[**PLAYLIST.copying**](playlist-copying.md)
 </dt> </dl>
 
  

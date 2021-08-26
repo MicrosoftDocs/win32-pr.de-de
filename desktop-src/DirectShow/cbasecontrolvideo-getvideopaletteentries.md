@@ -1,7 +1,7 @@
 ---
-description: Die getvideopaletteentries-Methode ruft einen Bereich von paletteneinträgen für das Video ab.
+description: Die GetVideoPaletteEntries-Methode ruft einen Bereich von Paletteneinträgen für das Video ab.
 ms.assetid: 7ac12e28-daa7-4d6c-9983-401971e6704d
-title: Cbasecontrolvideo. getvideopaletteentries-Methode (ctlutil. h)
+title: CBaseControlVideo.GetVideoPaletteEntries-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6fa354922e57436c0d9e3e18924dcf31afe1629e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5eb1c017353ed3e5095f5ee5d24870773c11211c14eaa44a673b4f12913c56c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057040"
 ---
-# <a name="cbasecontrolvideogetvideopaletteentries-method"></a>Cbasecontrolvideo. getvideopaletteentries-Methode
+# <a name="cbasecontrolvideogetvideopaletteentries-method"></a>CBaseControlVideo.GetVideoPaletteEntries-Methode
 
-Die- `GetVideoPaletteEntries` Methode ruft einen Bereich von paletteneinträgen für das Video ab.
+Die `GetVideoPaletteEntries` -Methode ruft einen Bereich von Paletteneinträgen für das Video ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,24 +45,24 @@ HRESULT GetVideoPaletteEntries(
 
 <dl> <dt>
 
-*Start Index* 
+*Startindex* 
 </dt> <dd>
 
-Der null basierte Start Paletteneintrag.
+Nullbasierter Startpaletteneintrag.
 
 </dd> <dt>
 
-*Gewinner* 
+*Einträge* 
 </dt> <dd>
 
 Anzahl der erforderlichen Einträge.
 
 </dd> <dt>
 
-*vorab bereitgestellt* 
+*pRetrieved* 
 </dt> <dd>
 
-Ein Zeiger auf die Anzahl der gewonnenen Farben.
+Zeiger auf die Anzahl der erhaltenen Farben.
 
 </dd> <dt>
 
@@ -75,11 +75,11 @@ Zeiger auf den Ausgabepuffer für Farben.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt noError zurück, wenn nicht genügend Arbeitsspeicher verfügbar ist, Vfw \_ e \_ keine \_ Palette \_ verfügbar ist, wenn die Videobeispiele keine Farbpalette haben, e \_ OutOfMemory, wenn nicht genügend Arbeitsspeicher verfügbar ist, e \_ invalidArg if *startIndex* ist ungültig, oder S \_ false, wenn die Palette keine Farben enthält.
+Gibt NOERROR zurück, wenn erfolgreich, VFW E NO PALETTE AVAILABLE, wenn die Videobeispiele keine Farbpalette \_ \_ \_ \_ haben, E \_ OUTOFMEMORY, \_  wenn nicht genügend Arbeitsspeicher verfügbar ist, E INVALIDARG, wenn StartIndex ungültig ist, oder S \_ FALSE, wenn keine Farben in der Palette vorhanden sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion gibt die aktuelle Palette des Videos als Array zurück, das vom Benutzer zugeordnet wird. Um konsistent zu bleiben, verwenden Sie die Elemente in der Win32 **PaletteEntry** -Struktur, um die Farben anstelle der Elemente in der **rgbquad** -Struktur zurückzugeben (obwohl der-Parameter ein **Long**-Parameter ist). Der Arbeitsspeicher wird vom Aufrufer zugeordnet. Kopieren Sie also alle nacheinander. Stellen Sie fest, dass die Anzahl der angeforderten Einträge und der Offset der Startposition gültig sind. Wenn die Anzahl der Einträge NULL ergibt, wird ein S false-Code zurückgegeben \_ .
+Diese Memberfunktion gibt die aktuelle Palette des Videos als vom Benutzer zugeordnetes Array zurück. Um konsistent zu bleiben, verwenden Sie die Member in der Win32 **PALETTEENTRY-Struktur,** um die Farben zurückgibt, anstatt die Member in der **RGBQUAD-Struktur** (obwohl der -Parameter ein **LONG-Wert ist).** Der Arbeitsspeicher wird vom Aufrufer zugeordnet, also kopieren Sie einfach jeden nacheinander. Bestimmen Sie, ob die Anzahl der angeforderten Einträge und der Offset der Startposition gültig sind. Wenn die Anzahl der Einträge null ist, geben Sie einen S \_ FALSE-Code zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Diese Member-Funktion gibt die aktuelle Palette des Videos als Array zurück, da
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -96,7 +96,7 @@ Diese Member-Funktion gibt die aktuelle Palette des Videos als Array zurück, da
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

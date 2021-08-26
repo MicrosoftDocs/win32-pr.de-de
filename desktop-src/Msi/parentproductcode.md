@@ -1,33 +1,33 @@
 ---
-description: Während einer gleichzeitigen Installation legt das Installationsprogramm die Eigenschaft "Eigenschaft" in der Sitzung der gleichzeitigen Installation auf denselben Wert wie die Eigenschaft "ProductCode" in der übergeordneten Installation fest.
+description: Während einer gleichzeitigen Installation legt das Installationsprogramm die ParentProductCode-Eigenschaft in der Sitzung der gleichzeitigen Installation auf den gleichen Wert wie die ProductCode-Eigenschaft in der Sitzung der übergeordneten Installation fest.
 ms.assetid: 7bf2b9b1-9efd-4d47-9fa3-253421f1ba4f
-title: Parametriproductcode-Eigenschaft
+title: ParentProductCode(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82385a4df94d3a044f0ee6a77461d69e63cc6d46
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a56e7a120455723eb95f2bd7f5ea08c59894d3a1951aeb042afb30e3b0e2fdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042450"
 ---
-# <a name="parentproductcode-property"></a>Parametriproductcode-Eigenschaft
+# <a name="parentproductcode-property"></a>ParentProductCode(Eigenschaft)
 
-Während einer gleichzeitigen Installation legt das Installationsprogramm die Eigenschaft **"Eigenschaft"** in der Sitzung der gleichzeitigen Installation auf denselben Wert wie die Eigenschaft " [**ProductCode**](productcode.md) " in der übergeordneten Installation fest. Übergeordnete Installationen führen die gleichzeitigen Installations Aktionen aus, um eine gleichzeitige Installation auszuführen. Mithilfe eines Installationspakets kann festgestellt werden, ob es durch eine parallele Installations Aktion installiert wird, indem der Wert dieser Eigenschaft überprüft wird.
+Während einer gleichzeitigen Installation legt das Installationsprogramm die **ParentProductCode-Eigenschaft** in der Sitzung der gleichzeitigen Installation auf den gleichen Wert wie die [**ProductCode-Eigenschaft**](productcode.md) in der Sitzung der übergeordneten Installation fest. Übergeordnete Installationen führen die gleichzeitigen Installationsaktionen aus, um eine gleichzeitige Installation durchzuführen. Ein Installationspaket kann ermitteln, ob es durch eine gleichzeitige Installationsaktion installiert wird, indem der Wert dieser Eigenschaft überprüft wird.
 
 > [!Note]  
-> Parallele Installationen werden nicht für die Installation von Anwendungen empfohlen, die für die öffentliche Veröffentlichung vorgesehen sind. Weitere Informationen zu gleichzeitigen Installationen finden Sie unter [parallele Installationen](concurrent-installations.md).
+> Gleichzeitige Installationen werden nicht für die Installation von Anwendungen empfohlen, die für die Veröffentlichung an die Öffentlichkeit vorgesehen sind. Informationen zu gleichzeitigen Installationen finden Sie unter [Gleichzeitige Installationen.](concurrent-installations.md)
 
  
 
 > [!Note]  
-> Diese Eigenschaft ist nicht festgelegt, wenn die parallele Installation von der Aktion " [RemoveExistingProducts](removeexistingproducts-action.md) " ausgeführt wird.
+> Diese Eigenschaft wird nicht festgelegt, wenn die gleichzeitige Installation durch die [RemoveExistingProducts-Aktion ausgeführt](removeexistingproducts-action.md) wird.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der folgenden Bedingungs Anweisungen hinzu, um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird. Dadurch wird verhindert, dass das Paket jemals durch eine parallele Installations Aktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket von der Aktion " [RemoveExistingProducts](removeexistingproducts-action.md) " installiert wird.
+Um zu verhindern, dass ein Paket jemals als gleichzeitige Installation installiert wird, fügen Sie eine der folgenden Bedingungsanweisungen zur [LaunchCondition-Tabelle](launchcondition-table.md) hinzu. Dadurch wird verhindert, dass das Paket durch eine gleichzeitige Installationsaktion installiert wird, die von einer anderen Installation ausgeführt wird. Dies verhindert nicht, dass das Paket von der [RemoveExistingProducts-Aktion installiert](removeexistingproducts-action.md) wird.
 
 ``` syntax
 "Not ParentProductCode"
@@ -43,7 +43,7 @@ Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der fol
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 
@@ -54,7 +54,7 @@ Fügen Sie der [LaunchCondition](launchcondition-table.md) -Tabelle eine der fol
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[**"Parser-originaldatabase"**](parentoriginaldatabase.md)
+[**ParentOriginalDatabase**](parentoriginaldatabase.md)
 </dt> </dl>
 
  

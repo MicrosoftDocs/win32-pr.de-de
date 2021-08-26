@@ -1,12 +1,12 @@
 ---
-title: Pingsessiondirectory-Methode der Win32_TSSessionDirectory-Klasse
-description: Überprüft, ob der Remotedesktopverbindung Broker-Server (RD-Verbindungsbroker) verfügbar ist.
+title: PingSessionDirectory-Methode der Win32_TSSessionDirectory Klasse
+description: Überprüft, ob Remotedesktopverbindung Broker-Server (RD-Verbindungsbroker) verfügbar ist.
 ms.assetid: 89243998-5ab2-4ea6-aa31-95ec63289055
 ms.tgt_platform: multiple
 keywords:
-- Pingsessiondirectory-Methode Remotedesktopdienste
-- Pingsessiondirectory-Methode Remotedesktopdienste, Win32_TSSessionDirectory-Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, pingsessiondirectory-Methode
+- PingSessionDirectory-Remotedesktopdienste
+- PingSessionDirectory-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory klasse Remotedesktopdienste , PingSessionDirectory-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4022a0c34094a19651522c3f8153038c6d9df503
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d26afbf26ab637dd58d8249ee822e152feefd948079f97c6e0adb876b4c7f990
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988840"
 ---
-# <a name="pingsessiondirectory-method-of-the-win32_tssessiondirectory-class"></a>Pingsessiondirectory-Methode der Win32- \_ Klasse "tssessiondirectory"
+# <a name="pingsessiondirectory-method-of-the-win32_tssessiondirectory-class"></a>PingSessionDirectory-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Überprüft, ob der Remotedesktopverbindung Broker-Server (RD-Verbindungsbroker) verfügbar ist.
+Überprüft, ob Remotedesktopverbindung Broker-Server (RD-Verbindungsbroker) verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 PingSessionDirectory(
 
 <dl> <dt>
 
-*Servername* \[ in\]
+*ServerName* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der Name des RD-Verbindungsbroker Servers.
+Name des RD-Verbindungsbrokerservers.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,17 +70,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

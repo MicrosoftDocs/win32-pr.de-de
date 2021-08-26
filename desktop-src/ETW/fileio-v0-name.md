@@ -1,5 +1,5 @@
 ---
-description: Die Klasse "fleio \_ v0 \_ Name" ist eine ältere Version der Ereignistyp Klasse für Datei-e/a-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die FileIo \_ V0 \_ Name-Klasse ist eine ältere Version der Ereignistypklasse für Datei-E/A-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: dcbe37f2-6df0-41a5-b85f-dcd06cbd5901
 title: FileIo_V0_Name-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 6e88d1b9b5b36815b1a833062c30e804e4db744a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 11a85c182511a866d3fb76f291b0a73ed0541fdee34b7e6f74c036b5446792db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041860"
 ---
-# <a name="fileio_v0_name-class"></a>Klasse "fleio \_ v0 \_ Name"
+# <a name="fileio_v0_name-class"></a>FileIo \_ V0 \_ Name-Klasse
 
-Die Klasse " **fleio \_ v0 \_ Name** " ist eine ältere Version der Ereignistyp Klasse für Datei-e/a-Ereignisse.
+Die **FileIo \_ V0 \_ Name-Klasse** ist eine ältere Version der Ereignistypklasse für Datei-E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,53 +40,53 @@ class FileIo_V0_Name : FileIo_V0
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ v0 \_ Name** " verfügt über diese Typen von Membern:
+Die **FileIo \_ V0 \_ Name-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **fleio \_ v0 \_ Name** " verfügt über diese Eigenschaften.
+Die **FileIo \_ V0 \_ Name-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 FileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(2), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Vollständiger Pfad zur Datei, ohne den Laufwerk Buchstaben.
+Vollständiger Pfad zur Datei, ohne laufwerksbuchstabe.
 
 </dd> <dt>
 
-File Object
+FileObject
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in einem [**diskio \_ TypeGroup1**](diskio-typegroup1.md) -Ereignis, um den Typ des e/a-Vorgangs zu bestimmen.
+Stimmen Sie den Wert dieses Zeigers mit dem **FileObject-Zeigerwert** in einem [**DiskIo \_ TypeGroup1-Ereignis**](diskio-typegroup1.md) ab, um den Typ des E/A-Vorgangs zu bestimmen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Windows Server 2003:** Zum Abrufen des Laufwerk Buchstabens für den Dateinamen Pfad verwenden Sie den **FileObject** -Eigenschafts Wert, um dem entsprechenden [**diskio \_ TypeGroup1**](diskio-typegroup1.md) -Ereignis zuzuordnen. Verwenden Sie aus dem **diskio \_ TypeGroup1** -Ereignis die **disknumber** -und **Byteoffset** -Eigenschaftswerte, um das entsprechende [**SystemConfig \_ logdisk**](systemconfig-logdisk.md) -Ereignis zuzuordnen. Die " **driveletterstring** "-Eigenschaft enthält den Laufwerk Buchstaben.
+**Windows Server 2003:** Um den Laufwerkbuchstaben für den Dateinamenpfad abzurufen, verwenden Sie den **FileObject-Eigenschaftswert,** um dem entsprechenden [**DiskIo \_ TypeGroup1-Ereignis**](diskio-typegroup1.md) zuzuordnen. Verwenden Sie aus dem **DiskIo \_ TypeGroup1-Ereignis** die Eigenschaftswerte **DiskNumber** und **ByteOffset,** um dem entsprechenden [**SystemConfig \_ LogDisk-Ereignis**](systemconfig-logdisk.md) zuzuordnen. Die **DriveLetterString-Eigenschaft** enthält den Laufwerkbuchstaben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -97,11 +97,11 @@ Vergleichen Sie den Wert dieses Zeigers mit dem **FileObject** -Zeiger Wert in e
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**"Fleio \_ v0"**](fileio-v0.md)
+[**FileIo \_ V0**](fileio-v0.md)
 </dt> </dl>
 
  

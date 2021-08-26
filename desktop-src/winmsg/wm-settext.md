@@ -1,17 +1,17 @@
 ---
 description: Legt den Text eines Fensters fest.
 ms.assetid: 1b48c309-6903-4139-bf42-e8526963e681
-title: WM_SETTEXT Meldung (Winuser. h)
+title: WM_SETTEXT (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3284855d817d5207b0d7572a41774e961c0113f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fc2ab860fd89d726b9763c198fe8d58caa1376a3b919fd3587ad39a612d6667
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055980"
 ---
-# <a name="wm_settext-message"></a>WM- \_ SetText-Nachricht
+# <a name="wm_settext-message"></a>WM \_ SETTEXT-Nachricht
 
 Legt den Text eines Fensters fest.
 
@@ -36,7 +36,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Fenster Text ist.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, bei der es sich um den Fenstertext handelt.
 
 </dd> </dl>
 
@@ -44,13 +44,13 @@ Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Fenster Text ist.
 
 Typ: **LRESULT**
 
-Der Rückgabewert ist **true** , wenn der Text festgelegt ist. Es ist **false** (bei einem Bearbeitungs Steuerelement), **lb- \_ errspace** (für ein Listenfeld) oder **CB \_ errspace** (für ein Kombinations Feld), wenn nicht genügend Speicherplatz zum Festlegen des Texts im Bearbeitungs Steuerelement verfügbar ist. Es ist **CB \_ Err** , wenn diese Nachricht an ein Kombinations Feld ohne Bearbeitungs Steuerelement gesendet wird.
+Der Rückgabewert ist **TRUE,** wenn der Text festgelegt ist. Sie ist **FALSE** (für ein Bearbeitungssteuerfeld), **LB \_ ERRSPACE** (für ein Listenfeld) oder **CB \_ ERRSPACE** (für ein Kombinationsfeld), wenn nicht genügend Platz zum Festlegen des Texts im Bearbeitungssteuerfeld verfügbar ist. Es handelt **sich um CB \_ ERR,** wenn diese Nachricht ohne Bearbeitungssteuerfeld an ein Kombinationsfeld gesendet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion wird der Fenster Text festgelegt und angezeigt. Bei einem Bearbeitungs Steuerelement ist der Text der Inhalt des Bearbeitungs Steuer Elements. Bei einem Kombinations Feld ist der Text der Inhalt des Bearbeitungs Steuer Elements im Kombinations Feld. Für eine Schaltfläche ist der Text der Schaltflächen Name. Bei anderen Fenstern ist der Text der Fenstertitel.
+Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) legt den Fenstertext fest und zeigt den Text an. Bei einem Bearbeitungssteuerfeld ist der Text der Inhalt des Bearbeitungssteuerfelds. Für ein Kombinationsfeld ist der Text der Inhalt des Edit-Control-Teils des Kombinationsfelds. Bei einer Schaltfläche ist der Text der Schaltflächenname. Bei anderen Fenstern ist der Text der Fenstertitel.
 
-Mit dieser Meldung wird die aktuelle Auswahl im Listenfeld eines Kombinations Felds nicht geändert. Eine Anwendung sollte die [**CB- \_ SelectString**](../controls/cb-selectstring.md) -Nachricht verwenden, um das Element in einem Listenfeld auszuwählen, das mit dem Text im Bearbeitungs Steuerelement übereinstimmt.
+Diese Meldung ändert nicht die aktuelle Auswahl im Listenfeld eines Kombinationsfelds. Eine Anwendung sollte die [**CB \_ SELECTSTRING-Meldung**](../controls/cb-selectstring.md) verwenden, um das Element in einem Listenfeld auszuwählen, das dem Text im Bearbeitungssteuerelement entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Mit dieser Meldung wird die aktuelle Auswahl im Listenfeld eines Kombinations Fe
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -68,16 +68,16 @@ Mit dieser Meldung wird die aktuelle Auswahl im Listenfeld eines Kombinations Fe
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
 </dt> <dt>
 
-[**WM \_ gettext**](wm-gettext.md)
+[**WM \_ GETTEXT**](wm-gettext.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)
@@ -86,7 +86,7 @@ Mit dieser Meldung wird die aktuelle Auswahl im Listenfeld eines Kombinations Fe
 **Andere Ressourcen**
 </dt> <dt>
 
-[**CB- \_ SelectString**](../controls/cb-selectstring.md)
+[**CB \_ SELECTSTRING**](../controls/cb-selectstring.md)
 </dt> </dl>
 
  

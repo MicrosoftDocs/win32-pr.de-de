@@ -1,9 +1,9 @@
 ---
-title: TVN_KEYDOWN Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer eine Taste gedrückt hat und das Strukturansicht-Steuerelement den Eingabefokus besitzt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TVN_KEYDOWN Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass der Benutzer eine Taste gedrückt hat und das Strukturansicht-Steuerelement den Eingabefokus besitzt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: da0d2b62-2295-4dce-9b37-a250f3be087f
 keywords:
-- Windows-Steuerelemente für TVN_KEYDOWN Benachrichtigungs
+- TVN_KEYDOWN Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ccb18c3bf7dc03056abb55575850821e11eb9bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dadd3386e83e541288249b83028119111a42855a111f7ecb398571a1d46ab356
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002470"
 ---
-# <a name="tvn_keydown-notification-code"></a>TVN- \_ KeyDown-Benachrichtigungs Code
+# <a name="tvn_keydown-notification-code"></a>TVN \_ KEYDOWN-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer eine Taste gedrückt hat und das Strukturansicht-Steuerelement den Eingabefokus besitzt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass der Benutzer eine Taste gedrückt hat und das Strukturansicht-Steuerelement den Eingabefokus besitzt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ TVN_KEYDOWN
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtvkeydown**](/windows/win32/api/commctrl/ns-commctrl-nmtvkeydown) -Struktur. Der **wvkey** -Member gibt den Code des virtuellen Schlüssels an.
+Zeiger auf eine [**NMTVKEYDOWN-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtvkeydown) Der **wVKey-Member** gibt den Code des virtuellen Schlüssels an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der **wvkey** -Member von *LPARAM* ein Zeichen Schlüsselcode ist, wird das Zeichen im Rahmen einer inkrementellen Suche verwendet. Gibt einen Wert ungleich 0 (null) zurück, wenn das Zeichen aus der inkrementellen Suche ausgeschlossen werden soll Bei allen anderen Schlüsseln wird der Rückgabewert ignoriert.
+Wenn das **wVKey-Member** von *lParam* ein Zeichenschlüsselcode ist, wird das Zeichen als Teil einer inkrementellen Suche verwendet. Geben Sie einen Wert ungleich 0 (null) zurück, um das Zeichen von der inkrementellen Suche auszuschließen, oder 0 (null), um das Zeichen in die Suche einschließt. Für alle anderen Schlüssel wird der Rückgabewert ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn der **wvkey** -Member von *LPARAM* ein Zeichen Schlüsselcode ist, wird das
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

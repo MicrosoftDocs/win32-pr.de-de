@@ -1,9 +1,9 @@
 ---
-title: Doreadermode-Funktion
-description: Aktiviert den Lesemodus in einem-Fenster.
+title: DoReaderMode-Funktion
+description: Aktiviert den Readermodus in einem Fenster.
 ms.assetid: 8f898cdd-c907-430a-8287-15d88390c756
 keywords:
-- Windows-Steuerelemente der doreadermode-Funktion
+- DoReaderMode-Funktion Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5f5c5863e804cd4bbaab651447e4c6f22dc24a6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63b71538e41e4b70155da8352e531b620fbe5de7f62746713c3a2a58f3adddf2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002690"
 ---
-# <a name="doreadermode-function"></a>Doreadermode-Funktion
+# <a name="doreadermode-function"></a>DoReaderMode-Funktion
 
-\[**Doreadermode** ist über Windows XP mit Service Pack 2 (SP2) verfügbar. Er ist möglicherweise in nachfolgenden Versionen nicht verfügbar.\]
+\[**DoReaderMode** ist über Windows XP mit Service Pack 2 (SP2) verfügbar. In nachfolgenden Versionen ist sie möglicherweise nicht verfügbar.\]
 
-Aktiviert den Lesemodus in einem-Fenster.
+Aktiviert den Readermodus in einem Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,12 +42,12 @@ void WINAPI DoReaderMode(
 
 <dl> <dt>
 
-*prmi* \[ in\]
+*prmi* \[ In\]
 </dt> <dd>
 
-Typ: **preadermodeinfo**
+Typ: **PREADERMODEINFO**
 
-Ein Zeiger auf eine [**readermodeinfo**](readermodeinfo.md) -Struktur, die Initialisierungs Informationen für den Lesemodus enthält.
+Ein Zeiger auf eine [**READERMODEINFO-Struktur,**](readermodeinfo.md) die Initialisierungsinformationen für den Readermodus enthält.
 
 </dd> </dl>
 
@@ -55,12 +55,12 @@ Ein Zeiger auf eine [**readermodeinfo**](readermodeinfo.md) -Struktur, die Initi
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Reader-Modus wird über die unterstützten Geräte per Mausklick aktiviert, in der Regel mit einer dritten Maustaste oder einem Mausrad. Die nachfolgende Mausbewegung in einem angegebenen Bereich führt einen Bildlauf für den Inhalt des Bereichs aus, anstatt einen Zeiger zu verschieben Außerhalb dieses Bereichs wird der Mauszeiger angezeigt und funktioniert normal. Mit einem zweiten Klick auf die Schaltfläche oder das Mausrad wird das Gerät im Lesemodus freigegeben.
+Der Readermodus wird über unterstützte Geräte per Mausklick aktiviert, in der Regel mit einer dritten Maustaste oder einem Scrollrad. Nachfolgende Mausbewegungen in einem angegebenen Bereich scrollen in den Inhalt dieses Bereichs, anstatt einen Zeiger zu bewegen. Außerhalb dieses Bereichs wird der Mauszeiger angezeigt und funktioniert normal. Ein zweiter Klick auf die Schaltfläche oder das Scrollrad gibt das Gerät aus dem Readermodus frei.
 
 > [!Note]  
-> Diese Funktion ist in keinem öffentlichen Header deklariert. Um es zu verwenden, müssen Sie über Comctl32.dll als Ordnungszahl 383 darauf zugreifen.
+> Diese Funktion wird in keinem öffentlichen Header deklariert. Um es zu verwenden, müssen Sie über Comctl32.dll als Ordnungszahl 383 darauf zugreifen.
 
  
 
@@ -70,9 +70,9 @@ Der Reader-Modus wird über die unterstützten Geräte per Mausklick aktiviert, 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista, Windows Vista \[ -Desktop-Apps\]<br/>                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                            |
-| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 4,72 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                            |
+| DLL<br/>                      | <dl> <dt>Comctl32.dll (Version 4.72 oder höher)</dt> </dl> |
 
 
 

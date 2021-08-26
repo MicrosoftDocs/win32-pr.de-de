@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: InstanceParameters.Systemdirectory-Eigenschaft'
-title: InstanceParameters.Systemdirectory-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: InstanceParameters.SystemDirectory-Eigenschaft'
+title: InstanceParameters.SystemDirectory-Eigenschaft
 TOCTitle: 'SystemDirectory property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.InstanceParameters.SystemDirectory
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.instanceparameters.systemdirectory(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8c0478b4b9d626610549240d58f3289fc24d10aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 870a039e15e42170dc6ae85127866cd2075773468ac71fcc5b8d7b3ee56635c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017660"
 ---
-# <a name="instanceparameterssystemdirectory-property"></a>InstanceParameters.Systemdirectory-Eigenschaft
+# <a name="instanceparameterssystemdirectory-property"></a>InstanceParameters.SystemDirectory-Eigenschaft
 
-Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Prüf Punkt Datei für die-Instanz enthält, oder legt ihn fest.
+Ruft den relativen oder absoluten Dateisystempfad des Ordners ab, der die Prüfpunktdatei für die Instanz enthalten soll, oder legt diesen fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public string SystemDirectory { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. String](/dotnet/api/system.string)  
+Typ: [System.String](/dotnet/api/system.string)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Instanceparameters-Klasse](./instanceparameters-class.md)
+[InstanceParameters-Klasse](./instanceparameters-class.md)
 
-[Instanceparameters-Elemente](./instanceparameters-members.md)
+[InstanceParameters-Member](./instanceparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

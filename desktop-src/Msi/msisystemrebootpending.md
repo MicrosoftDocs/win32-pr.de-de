@@ -1,21 +1,21 @@
 ---
-description: Der Installer legt den Wert der Eigenschaft msisystemrebootpending auf 1 fest, wenn ein Vorgang aussteht, um eine Datei umzubenennen.
+description: Das Installationsprogramm legt den Wert der MsiSystemRebootPending-Eigenschaft auf 1 fest, wenn ein Vorgang zum Umbenennen einer Datei aussteht.
 ms.assetid: 8bbbf42e-fb55-4e5d-a574-2c3aaa87a73a
-title: Msisystemrebootpending (Eigenschaft)
+title: MsiSystemRebootPending-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dec5db7550be3fa27b0ed272ff08d88a4cad915a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b6cab600ca7c0f1bbc240f8fb1a9d93f3da62914e8250863333b75f8973d6c1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042650"
 ---
-# <a name="msisystemrebootpending-property"></a>Msisystemrebootpending (Eigenschaft)
+# <a name="msisystemrebootpending-property"></a>MsiSystemRebootPending-Eigenschaft
 
-Der Installer legt den Wert der Eigenschaft **msisystemrebootpending** auf 1 fest, wenn ein Vorgang aussteht, um eine Datei umzubenennen.
+Das Installationsprogramm legt den Wert der **MsiSystemRebootPending-Eigenschaft** auf 1 fest, wenn ein Vorgang zum Umbenennen einer Datei aussteht.
 
-Paket Autoren können eine Bedingung in der [LaunchCondition-Tabelle](launchcondition-table.md) für diese Eigenschaft basieren, um die Installation des Pakets zu verhindern, wenn ein Vorgang aussteht, um eine Datei umzubenennen. Dies kann durchgeführt werden, um einen Neustart des Betriebssystems zu verhindern, das durch das Umbenennen der Datei verursacht wurde. Der Installer legt die **msisystemrebootpending** -Eigenschaft nicht in allen Fällen fest, für die ein Neustart des Systems erforderlich ist.
+Paketautoren können eine Bedingung in der [LaunchCondition-Tabelle](launchcondition-table.md) auf dieser Eigenschaft basieren, um die Installation ihres Pakets in Fällen zu verhindern, in denen ein Vorgang zum Umbenennen einer Datei aussteht. Dies kann geschehen, um einen Neustart des Betriebssystems zu verhindern, der durch die Umbenennung der Datei verursacht wird. Das Installationsprogramm legt die **MsiSystemRebootPending-Eigenschaft** nicht in allen Fällen fest, die einen Neustart des Systems erfordern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -23,7 +23,7 @@ Paket Autoren können eine Bedingung in der [LaunchCondition-Tabelle](launchcond
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 4,5 unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 4.5 auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindest erforderlichen Windows Service Packs für eine Windows Installer-Version.<br/> |
 
 
 
@@ -34,10 +34,10 @@ Paket Autoren können eine Bedingung in der [LaunchCondition-Tabelle](launchcond
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[System Neustarts](system-reboots.md)
+[Systemneustarts](system-reboots.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

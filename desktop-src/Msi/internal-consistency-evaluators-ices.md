@@ -1,30 +1,30 @@
 ---
-description: Interne Konsistenz Auswertungen, auch als "ICES" bezeichnet, sind benutzerdefinierte Aktionen, die in VBScript, JScript oder als DLL oder exe geschrieben sind.
+description: Interne Konsistenzauswertungen, auch ICEs genannt, sind benutzerdefinierte Aktionen, die in VBScript, JScript oder als DLL oder EXE geschrieben werden.
 ms.assetid: 0789103d-ae34-46be-a9fb-093e066d6d4b
-title: Interne Konsistenz Auswertung-ICES
+title: Interne Konsistenzauswertungen – ICEs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77be6e2bf33bbe348acab45191782a211ea4663a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 744915d7f484128095e308f390caae75323775b684b38a0184592dc99a2700f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043380"
 ---
-# <a name="internal-consistency-evaluators---ices"></a>Interne Konsistenz Auswertung-ICES
+# <a name="internal-consistency-evaluators---ices"></a>Interne Konsistenzauswertungen – ICEs
 
-Interne Konsistenz Auswertungen, auch als "ICES" bezeichnet, sind benutzerdefinierte Aktionen, die in VBScript, JScript oder als DLL oder exe geschrieben sind. Wenn diese benutzerdefinierten Aktionen ausgeführt werden, wird die Datenbank auf Einträge in Datenbankdaten Sätzen überprüft, die gültig sind, wenn Sie einzeln überprüft werden, dies kann jedoch zu fehlerhaftem Verhalten im Kontext der gesamten Datenbank führen. Beachten Sie, dass sich dies von der Validierung der einzelnen Datensätze mithilfe von " [**msiviewmodify**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify)" unterscheidet.
+Interne Konsistenzauswertungen, auch ICEs genannt, sind benutzerdefinierte Aktionen, die in VBScript, JScript oder als DLL oder EXE geschrieben werden. Wenn diese benutzerdefinierten Aktionen ausgeführt werden, wird die Datenbank auf Einträge in Datenbankdatensätzen überprüft, die bei der individuellen Untersuchung gültig sind, aber im Kontext der gesamten Datenbank zu falschem Verhalten führen können. Beachten Sie, dass sich dies von der Überprüfung für einzelne Datensätze mit [**msiViewModify ab unterscheiden.**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify)
 
-Beispielsweise können in der [Component-Tabelle](component-table.md) mehrere Komponenten aufgeführt werden, die alle gültig sind, wenn Sie einzeln mit [**msiviewmodify**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify)getestet werden. **Msiviewmodify** würde den Fehler jedoch nicht abfangen, wenn zwei Komponenten dieselbe [GUID](guid.md) wie der Komponenten Code verwenden. Die benutzerdefinierte Aktion [ICE08](ice08.md) ist darauf ausgelegt, zu überprüfen, ob die Komponenten Tabelle doppelte Komponenten Code-GUIDs enthält.
+Die Tabelle Component [kann](component-table.md) beispielsweise mehrere Komponenten auflisten, die alle gültig sind, wenn sie einzeln mit [**MsiViewModify getestet werden.**](/windows/desktop/api/Msiquery/nf-msiquery-msiviewmodify) **MsiViewModify** würde den Fehler jedoch nicht abfangen, wenn zwei Komponenten dieselbe [GUID wie](guid.md) ihr Komponentencode verwenden. Die benutzerdefinierte [Aktion ICE08](ice08.md) wurde entwickelt, um zu überprüfen, ob die Component-Tabelle keine doppelten Komponentencode-GUIDs enthält.
 
-Benutzerdefinierte Ice-Aktionen geben vier Arten von Nachrichten zurück:
+Benutzerdefinierte ICE-Aktionen geben vier Arten von Nachrichten zurück:
 
--   [**Fehler**](merge-errors.md) Fehlermeldungen melden Daten Bank Erstellung, die falsches Verhalten verursachen. Doppelte Komponenten-GUIDs bewirken beispielsweise, dass das Installationsprogramm fälschlicherweise Komponenten registriert.
--   **Warnungen** Warnmeldungen melden Daten Bank Erstellung, die in bestimmten Fällen falsches Verhalten verursachen. Warnungen können auch unerwartete Nebeneffekte der Daten Bank Erstellung melden. Wenn Sie z. b. denselben Eigenschaften Namen in zwei Bedingungen eingeben, die sich nur durch die Groß-/Kleinschreibung von Buchstaben im Namen unterscheiden. Da beim Installer die Groß-/Kleinschreibung beachtet wird, werden diese vom Installationsprogramm als verschiedene Eigenschaften behandelt.
--   **Fehler** Fehlermeldungen melden den Fehler bei der benutzerdefinierten Ice-Aktion. Der Fehler wird häufig durch eine Datenbank mit schwerwiegenden Problemen verursacht, die das Eis nicht selbst ausführen kann.
--   **Information** Informationsmeldungen liefern Informationen aus dem Eis und weisen nicht auf ein Problem mit der Datenbank hin. Häufig sind Sie Informationen zum Eis selbst, z. b. eine kurze Beschreibung. Sie können auch Statusinformationen bereitstellen, wenn die eisläufe ausgeführt werden.
+-   [**Fehler**](merge-errors.md) Fehlermeldungen melden die Datenbankerstellung, die ein falsches Verhalten verursacht. Beispielsweise führen doppelte Komponenten-GUIDs dazu, dass das Installationsprogramm Komponenten falsch registriert.
+-   **Warnungen** Warnmeldungen melden die Datenbankerstellung, die in bestimmten Fällen ein falsches Verhalten verursacht. Warnungen können auch unerwartete Nebeneffekte der Datenbankerstellung melden. Wenn Sie z. B. den gleichen Eigenschaftennamen in zwei Bedingungen eingeben, die sich nur durch die Groß-/Kleinbuchstaben im Namen unterscheiden. Da beim Installationsprogramm die Kleinschreibung beachtet wird, behandelt das Installationsprogramm diese als unterschiedliche Eigenschaften.
+-   **Fehler** Fehlermeldungen melden den Fehler der benutzerdefinierten ICE-Aktion. Fehler werden häufig durch eine Datenbank mit so schwerwiegenden Problemen verursacht, dass das ICE nicht einmal ausgeführt werden kann.
+-   **Information** Informationsmeldungen enthalten Informationen aus dem ICE und weisen nicht auf ein Problem mit der Datenbank hin. Häufig handelt es sich um Informationen über das ICE selbst, z. B. eine kurze Beschreibung. Sie können auch Statusinformationen bereitstellen, während der ICE ausgeführt wird.
 
-Weitere Informationen finden Sie unter [using Internal Konsistenz Evaluators](using-internal-consistency-evaluators.md).
+Weitere Informationen finden Sie unter [Verwenden von internen Konsistenzauswertungen.](using-internal-consistency-evaluators.md)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: Aspectratioy
-description: Das aspectratioy-Attribut enthält die Height-Komponente des Pixel Seitenverhältnisses für einen Videostream.
+title: AspectRatioY
+description: Das AspectRatioY-Attribut enthält die Höhenkomponente des Pixel-Seitenverhältnisses für einen Videostream.
 ms.assetid: e5b043d7-8fae-45d0-b140-a34d9bc6d2d8
 keywords:
-- Aspectratioy-Windows Media-Format
+- AspectRatioY windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fb7c8f109fb1d393b3b5646907f697d394e99c6
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0c83bcf3f809c3a25f9e17daab9acdc63d78b3b2b8b7b2d9f3c5fd7533c315f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055710"
 ---
-# <a name="aspectratioy"></a>Aspectratioy
+# <a name="aspectratioy"></a>AspectRatioY
 
-Das **aspectratioy** -Attribut enthält die Height-Komponente des Pixel Seitenverhältnisses für einen Videostream.
+Das **AspectRatioY-Attribut** enthält die Höhenkomponente des Pixel-Seitenverhältnisses für einen Videostream.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmaspectratioy
+g \_ wszWMAspectRatioY
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ DWORD**
+**\_WMT-TYP \_ DWORD**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Zugriff auf die **IWMHeaderInfo3** -Schnittstelle des Writer-Objekts können Sie diesen Wert hinzufügen oder ändern. In anderen Objekten (Metadaten-Editor, Reader und synchroner Reader) ist dieser Wert schreibgeschützt.
+Wenn Sie auf die **IWMHeaderInfo3-Schnittstelle** des Writerobjekts zugreifen, können Sie diesen Wert hinzufügen oder ändern. In anderen Objekten (Metadaten-Editor, Reader und synchroner Reader) ist dieser Wert schreibgeschützt.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -42,12 +42,12 @@ Beim Zugriff auf die **IWMHeaderInfo3** -Schnittstelle des Writer-Objekts könne
 [**Attributliste**](attribute-list.md)
 </dt> <dt>
 
-[**So lesen und schreiben Sie Videostreams mit nicht quadratischen Pixeln**](to-read-and-write-video-streams-with-non-square-pixels.md)
+[**So lesen und schreiben Sie Video Streams mit nicht quadratischen Pixeln**](to-read-and-write-video-streams-with-non-square-pixels.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

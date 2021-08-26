@@ -1,12 +1,12 @@
 ---
-title: Publishls-Methode der Win32_TSLicenseServer-Klasse
+title: PublishLS-Methode der Win32_TSLicenseServer-Klasse
 description: Veröffentlicht den Remotedesktop Lizenzserver in Active Directory Domain Services.
 ms.assetid: 726d5dec-e438-455e-adb8-56d646d65d13
 ms.tgt_platform: multiple
 keywords:
-- Publishls-Methode Remotedesktopdienste
-- Publishls-Methode Remotedesktopdienste, Win32_TSLicenseServer-Klasse
-- Win32_TSLicenseServer-Klasse Remotedesktopdienste, publishls-Methode
+- Remotedesktopdienste der PublishLS-Methode
+- PublishLS-Methode Remotedesktopdienste , Win32_TSLicenseServer-Klasse
+- Win32_TSLicenseServer-Klasse Remotedesktopdienste , PublishLS-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ad3d20efe8b61cd00e1986bb190500c93fd9473
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5559fc41e08535142642c64658234902aea22d2a47e6b43add30427fdaec0778
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988830"
 ---
-# <a name="publishls-method-of-the-win32_tslicenseserver-class"></a>Publishls-Methode der Win32- \_ Klasse "zlicenseserver"
+# <a name="publishls-method-of-the-win32_tslicenseserver-class"></a>PublishLS-Methode der Win32 \_ TSLicenseServer-Klasse
 
 Veröffentlicht den Remotedesktop Lizenzserver in Active Directory Domain Services.
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode aufzurufen, müssen Sie als Unternehmens Administrator an der Gesamtstruktur angemeldet sein, in der der Lizenzserver Mitglied ist.
+Um diese Methode aufzurufen, müssen Sie als Unternehmensadministrator bei der Gesamtstruktur angemeldet sein, in der der Lizenzserver Mitglied ist.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,16 +60,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Lizenznehmer**](win32-tslicenseserver.md)
+[**Win32 \_ TSLicenseServer**](win32-tslicenseserver.md)
 </dt> </dl>
 
  

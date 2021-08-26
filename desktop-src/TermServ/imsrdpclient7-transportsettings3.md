@@ -5,14 +5,14 @@ ms.assetid: d11f0943-241e-44cd-a98c-595916ab0718
 ms.tgt_platform: multiple
 keywords:
 - TransportSettings3-Eigenschaft Remotedesktopdienste
-- TransportSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, TransportSettings3-Eigenschaft
-- TransportSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, TransportSettings3-Eigenschaft
-- TransportSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, TransportSettings3-Eigenschaft
-- TransportSettings3-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, TransportSettings3-Eigenschaft
+- TransportSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , TransportSettings3-Eigenschaft
+- TransportSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , TransportSettings3-Eigenschaft
+- TransportSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , TransportSettings3-Eigenschaft
+- TransportSettings3-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , TransportSettings3-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -30,16 +30,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c60b58f8f2438de0d43f69ce0b3bb73607e7551
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eeff2c3d3427c9c8c5323f3c4cbea9d194c81d223c2a07ee364f87dd1dd2c33d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033340"
 ---
-# <a name="imsrdpclient7transportsettings3-property"></a>IMsRdpClient7:: TransportSettings3-Eigenschaft
+# <a name="imsrdpclient7transportsettings3-property"></a>IMsRdpClient7::TransportSettings3-Eigenschaft
 
-Ruft ein Objekt ab, das die [**IMsRdpClientTransportSettings3**](imsrdpclienttransportsettings3.md) -Schnittstelle unterstützt.
+Ruft ein Objekt ab, das die [**IMsRdpClientTransportSettings3-Schnittstelle**](imsrdpclienttransportsettings3.md) unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -56,7 +56,7 @@ HRESULT get_TransportSettings3(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse eines [**IMsRdpClientTransportSettings3**](imsrdpclienttransportsettings3.md) -Schnittstellen Zeigers, der das-Objekt empfängt.
+Die Adresse eines [**IMsRdpClientTransportSettings3-Schnittstellenzeigers,**](imsrdpclienttransportsettings3.md) der das Objekt empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 

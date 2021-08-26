@@ -1,9 +1,9 @@
 ---
-title: Settings. IsAvailable
-description: Die IsAvailable-Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann. | Settings. IsAvailable
+title: Einstellungen.isAvailable
+description: Die isAvailable-Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann. | Einstellungen.isAvailable
 ms.assetid: 89403125-545c-482b-a27e-6fee06abe247
 keywords:
-- "\"Settings. IsAvailable\"-Windows-Media Player"
+- Einstellungen.isAvailable Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,43 +14,43 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a96923fa57ffab4fb2e47b16afd03a06bbffd0ff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: df10026007dd9e04fe88d634a3da566074b0d6a88420ef444d5f2bae39a793fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002410"
 ---
-# <a name="settingsisavailable"></a>Settings. IsAvailable
+# <a name="settingsisavailable"></a>Einstellungen.isAvailable
 
-Die **IsAvailable** -Eigenschaft gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine bestimmte Aktion ausgeführt werden kann.
+Die **isAvailable-Eigenschaft** gibt an, ob ein angegebener Informationstyp verfügbar ist oder eine angegebene Aktion ausgeführt werden kann.
 
 ## <a name="syntax"></a>Syntax
 
-Player. Settings. IsAvailable (Name)
+player.settings.isAvailable( name )
 
 ## <a name="parameters"></a>Parameter
 
 *name*
 
-Eine Zeichenfolge, die einen der folgenden Werte enthält.
+Zeichenfolge, die einen der folgenden Werte enthält.
 
 
 
 | Zeichenfolge             | Beschreibung                                                    |
 |--------------------|----------------------------------------------------------------|
-| AutoStart          | Bestimmt, ob die Autostart-Eigenschaft festgelegt werden kann.          |
+| AutoStart          | Bestimmt, ob die autoStart-Eigenschaft festgelegt werden kann.          |
 | Balance            | Bestimmt, ob die Balance-Eigenschaft festgelegt werden kann.            |
-| Basis            | Bestimmt, ob die baseurl-Eigenschaft festgelegt werden kann.            |
-| Defaultframe       | Bestimmt, ob die defaultframe-Eigenschaft festgelegt werden kann.       |
-| Enableerrordialogfelder | Bestimmt, ob die enableerrordialogs-Eigenschaft festgelegt werden kann. |
+| BaseURL            | Bestimmt, ob die baseURL-Eigenschaft festgelegt werden kann.            |
+| DefaultFrame       | Bestimmt, ob die defaultFrame-Eigenschaft festgelegt werden kann.       |
+| EnableErrorDialogs | Bestimmt, ob die enableErrorDialogs-Eigenschaft festgelegt werden kann. |
 | GetMode            | Bestimmt, ob die getMode-Methode aufgerufen werden kann.           |
-| Invokeurls         | Bestimmt, ob die invokeurls-Eigenschaft festgelegt werden kann.         |
-| Mute               | Bestimmt, ob die stumm Eigenschaft festgelegt werden kann.               |
-| Playcount          | Bestimmt, ob die playcount-Eigenschaft festgelegt werden kann.          |
-| Rate               | Bestimmt, ob die Raten Eigenschaft festgelegt werden kann.               |
-| SetMode            | Bestimmt, ob die setmode-Methode aufgerufen werden kann.           |
-| Lautstärke             | Bestimmt, ob die Volumeeigenschaft festgelegt werden kann.             |
+| InvokeURLs         | Bestimmt, ob die invokeURLs-Eigenschaft festgelegt werden kann.         |
+| Mute               | Bestimmt, ob die Stummschaltungseigenschaft festgelegt werden kann.               |
+| PlayCount          | Bestimmt, ob die playCount-Eigenschaft festgelegt werden kann.          |
+| Rate               | Bestimmt, ob die Rate-Eigenschaft festgelegt werden kann.               |
+| SetMode            | Bestimmt, ob die setMode-Methode aufgerufen werden kann.           |
+| Volume             | Bestimmt, ob die Volumeeigenschaft festgelegt werden kann.             |
 
 
 
@@ -66,7 +66,7 @@ Diese Methode gibt einen **booleschen** Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -75,7 +75,7 @@ Diese Methode gibt einen **booleschen** Wert zurück.
 
 <dl> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> </dl>
 
  

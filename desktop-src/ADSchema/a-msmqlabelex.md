@@ -1,11 +1,11 @@
 ---
 title: MSMQ-Label-Ex-Attribut
-description: Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange bereitgestellt wird.
+description: Eine Zeichenfolge, die den Typ des von der Warteschlange bereitgestellten Diensts beschreibt.
 ms.assetid: 09dff3ce-f0c5-40c7-993f-6c78644bc721
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "MSMQ-Label-Ex"
-- AD-Schema des msmqlabelex-Attributs
+- AD-Schema des MSMQ-Label-Ex-Attributs
+- mSMQLabelEx-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33c3872e521f3b9232f204797e979d157e95173b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 7831b371e5207b6028f31781f19bf7795f782d8780e73e7158de7afc781e1405
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066525"
 ---
 # <a name="msmq-label-ex-attribute"></a>MSMQ-Label-Ex-Attribut
 
-Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange bereitgestellt wird.
+Eine Zeichenfolge, die den Typ des von der Warteschlange bereitgestellten Diensts beschreibt.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MSMQ-Bezeichnung-Ex                               |
-| LDAP-Display-Name | msmqlabelex                                 |
+| CN                | MSMQ-Label-Ex                               |
+| Ldap-Anzeigename | mSMQLabelEx                                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1415                     |
-| System-ID-GUID    | 4580ad25-D407-48d2-AD24-43e6e56793d7        |
+| System-ID-GUID    | 4580ad25-d407-48d2-ad24-43e6e56793d7        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Eine Zeichenfolge, die den Diensttyp beschreibt, der von der Warteschlange berei
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
 | Ist indiziert             | Richtig                                         |
 | Im globalen Katalog      | Richtig                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | 0                                            |
 | Range-Upper            | 124                                          |
 | Search-Flags           | 0x00000001                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
 
 
 

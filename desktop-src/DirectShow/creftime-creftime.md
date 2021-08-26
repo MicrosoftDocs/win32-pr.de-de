@@ -1,7 +1,7 @@
 ---
-description: Die Methode "TOS-Konstruktor" ("Ref time. h") weist keine Parameter auf.
+description: Die CRefTime.CRefTime-Konstruktormethode (Reftime.h) verfügt über keine Parameter.
 ms.assetid: 009ade28-0788-48d7-a037-4835736f77da
-title: "\"Up\"-Konstruktor (\"Ref time. h\"): keine Parameter"
+title: CRefTime.CRefTime-Konstruktor (Reftime.h) – Keine Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 71b0ab9ae84c2995062979f6c2821903189b56cf
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 4f967d940fb8a117c58e85e951eeaa355d8d3dcc6cc97df432d7ce245744ca83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106372028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054750"
 ---
-# <a name="creftimecreftime-constructor-reftimeh---no-parameters"></a>"Up"-Konstruktor ("Ref time. h"): keine Parameter
+# <a name="creftimecreftime-constructor-reftimeh---no-parameters"></a>CRefTime.CRefTime-Konstruktor (Reftime.h) – Keine Parameter
 
 Konstruktormethode.
 
@@ -38,11 +38,11 @@ CRefTime();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Verweis Zeit ist standardmäßig 0 (null).
+Die Verweiszeit ist standardmäßig auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Die Verweis Zeit ist standardmäßig 0 (null).
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Ref time. h (Include Streams. h)                                                                                   |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Reftime.h (include Streams.h)                                                                                   |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 
 

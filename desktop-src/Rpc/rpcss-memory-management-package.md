@@ -1,28 +1,28 @@
 ---
-title: RPCSS-Speicher Verwaltungspaket
-description: Das standardmäßige Zuweisungs-/zuordnerpaar, das von den Stub-und Laufzeit-Speicherplatz für die Speicher Belegung im Auftrag der Anwendung verwendet wird, ist die mittlere \_ Benutzer \_ Zuordnung/mittlere \_ Benutzer Freigabe \_ .
+title: RpcSs-Speicherverwaltungspaket
+description: Das standarde Zuweisungs-/Zuordnungspaar, das von den Stubs und der Laufzeit beim Zuweisen von Arbeitsspeicher im Auftrag der Anwendung verwendet wird, ist midl \_ user \_ allocate/midl \_ user \_ free.
 ms.assetid: 9477e677-59cb-45d5-b485-ab0171ac17ba
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26dca10ebea44fbb202240e981612e16e7960216
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 93648b56ed47eb98a83b27a39b606fa2a51de9bf5791ad1b732e7169ef5dfa63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120018180"
 ---
-# <a name="rpcss-memory-management-package"></a>RPCSS-Speicher Verwaltungspaket
+# <a name="rpcss-memory-management-package"></a>RpcSs-Speicherverwaltungspaket
 
-Das standardmäßige Allocator-/zuordnerpaar, das von den Stub-und Lauf Zeit Elementen verwendet wird, wenn Speicher im Auftrag der Anwendung **belegt wird \_ \_** / **\_ \_** Allerdings können Sie das RPCSS-Paket anstelle der Standardeinstellung mithilfe des ACF-Attributs " **\[ \_ zuordnen \]**" auswählen. Das RPCSS-Paket besteht aus RPC-Funktionen, die mit dem Präfix **RPCSS** oder **rpcsm** beginnen. Das RPCSS-Paket wird für Windows-Anwendungen nicht empfohlen.
+Das standarde Zuweisungs-/Zuordnungspaar, das von den Stubs und der Laufzeit beim Zuweisen von Arbeitsspeicher im Auftrag der Anwendung verwendet wird, ist **midl \_ user \_ allocate** / **midl \_ user \_ free**. Sie können jedoch das RpcSs-Paket anstelle des Standardpakets auswählen, indem Sie das ACF-Attribut **\[ enable \_ allocate \] verwenden.** Das RpcSs-Paket besteht aus RPC-Funktionen, die mit dem Präfix **RpcSs** oder **RpcSm** beginnen. Das RpcSs-Paket wird für Windows Anwendungen nicht empfohlen.
 
 > [!Note]  
-> Das RPCSS-Speicher Verwaltungspaket ist veraltet. Es wird empfohlen, dass die [**\_ Benutzer \_**](/windows/desktop/Midl/midl-user-allocate-1) Namen-und [**Mittel \_ \_ lose Benutzerzuordnungen**](/windows/desktop/Midl/midl-user-free-1) an dieser Stelle verwendet werden.
+> Das Rpcss-Speicherverwaltungspaket ist veraltet. Es wird empfohlen, [**midl \_ user \_ allocate**](/windows/desktop/Midl/midl-user-allocate-1) und [**midl \_ user \_ free**](/windows/desktop/Midl/midl-user-free-1) an seiner Stelle zu verwenden.
 
- 
+ 
 
-Im **/OSF** -Modus wird das RPCSS-Paket automatisch für die von der Mitte generierten Stub aktiviert, wenn vollständige Zeiger verwendet werden, wenn die Argumente eine Speicher Belegung erfordern oder wenn das Attribut " **\[ \_ \] zuordnen** " verwendet wird. Im Standardmodus (Microsoft Extended) ist das RPCSS-Paket nur aktiviert, wenn das Attribut " **\[ \_ zuordnen \]** " verwendet wird. Das Attribut " **\[ \_ zuordnen \]** " ermöglicht die RPCSS-Umgebung durch die serverseitigen Stub. Die Clientseite wird mit der Möglichkeit benachrichtigt, dass das RPCSS-Paket aktiviert werden kann. Im **/OSF** -Modus ist die Clientseite nicht betroffen.
+Im **Modus /osf** wird das RpcSs-Paket automatisch für MIDL-generierte Stubs aktiviert, wenn vollständige Zeiger verwendet werden, wenn die Argumente eine Speicherbelegung erfordern oder das **\[ Attribut enable \_ allocate \]** verwendet wird. Im Standardmodus (Erweitert von Microsoft) ist das RpcSs-Paket nur aktiviert, wenn das **\[ Attribut enable \_ allocate \]** verwendet wird. Das **\[ Attribut enable \_ allocate \]** aktiviert die RpcSs-Umgebung durch die serverseitigen Stubs. Die Clientseite wird über die Möglichkeit benachrichtigt, dass das RpcSs-Paket aktiviert werden kann. Im **Modus /osf** ist die Clientseite nicht betroffen.
 
-Wenn das RPCSS-Paket aktiviert ist, wird die Speicher Belegung auf der Serverseite mit den privaten RPCSS-Speicher Verwaltungs Zuordnungen und dem deallokator-paar erreicht. Sie können Speicher mithilfe desselben Mechanismus zuweisen, indem Sie [**rpcsmallo(**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) oder [**rpcsszuordnen**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssallocate)) aufrufen. Bei der Rückgabe vom Serverstub wird der gesamte vom RPCSS-Paket zugewiesene Arbeitsspeicher automatisch freigegeben. Das folgende Beispiel zeigt, wie Sie das RPCSS-Paket aktivieren:
+Wenn das RpcSs-Paket aktiviert ist, wird die Speicherbelegung auf serverseitiger Seite mit dem privaten RpcSs-Speicherverwaltungszuordnungs- und -Zuordnungspaar erreicht. Sie können Arbeitsspeicher mit demselben Mechanismus zuordnen, indem [**Sie RpcSmAllocate**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) (oder [**RpcSsAllocate)**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssallocate)aufrufen. Nach der Rückgabe vom Serverstub wird der gesamte vom RpcSs-Paket belegte Arbeitsspeicher automatisch freigegeben. Das folgende Beispiel zeigt, wie das RpcSs-Paket aktiviert wird:
 
 ``` syntax
 /* ACF file fragment */
@@ -41,10 +41,10 @@ interface iface
     p=RpcSmAllocate(size, &status);       /*returns error code */
 ```
 
-Die Anwendung kann durch Aufrufen der Funktion [**rpcssfree**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssfree) oder [**rpcsmfree**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmfree) explizit Arbeitsspeicher freigeben. Beachten Sie, dass diese Funktionen keinen Speicherplatz freigeben. Sie markieren Sie zum Löschen. Die RPC-Bibliothek gibt den Arbeitsspeicher frei, wenn das Programm " [**rpcssdisableallolealloleallolealloleallolealloleallole**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdisableallocate) [](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdisableallocate)
+Ihre Anwendung kann explizit Arbeitsspeicher freigeben, indem sie die [**RpcSsFree-**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssfree) oder [**RpcSmFree-Funktion**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmfree) aufruft. Beachten Sie, dass diese Funktionen nicht tatsächlich Arbeitsspeicher freigeben. Sie markieren sie zum Löschen. Die RPC-Bibliothek gibt den Arbeitsspeicher frei, wenn Ihr Programm [**RpcSsDisableAllocate**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdisableallocate) oder [**RpcSsDisableAllocate aufruft.**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcssdisableallocate)
 
-Sie können auch die Speicher Verwaltungs Umgebung für Ihre Anwendung aktivieren, indem Sie die [**rpcsmenableallo-**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmenableallocate) Routine aufrufen (und Sie können Sie deaktivieren, indem Sie die Routine [**rpcsmdisablebelegungs**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmdisableallocate) Vorgang aufrufen). Nachdem die Funktion aktiviert wurde, kann der Anwendungscode Arbeitsspeicher zuordnen und seine Freigabe durch Aufrufen von Funktionen aus dem RPCSS-Paket verringern.
+Sie können auch die Speicherverwaltungsumgebung für Ihre Anwendung aktivieren, indem Sie die [**RpcSmEnableAllocate-Routine**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmenableallocate) aufrufen (und sie deaktivieren, indem Sie die [**RpcSmDisableAllocate-Routine**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmdisableallocate) aufrufen). Nach der Aktivierung kann der Anwendungscode Arbeitsspeicher zuweisen und die Zuordnung wieder aufteilen, indem Funktionen aus dem RpcSs-Paket aufgerufen werden.
 
- 
+ 
 
- 
+ 

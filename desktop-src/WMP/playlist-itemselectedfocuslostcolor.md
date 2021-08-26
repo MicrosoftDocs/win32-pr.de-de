@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. itemselectedfoclelostcolor
-description: Mit dem itemselectedfocuslostcolor-Attribut wird ein Wert angegeben oder abgerufen, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt, wenn die Wiedergabeliste den Fokus verliert.
+title: PLAYLIST.itemSelectedFocusLostColor
+description: Das itemSelectedFocusLostColor-Attribut gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt oder abruft, wenn die Wiedergabeliste den Fokus verliert.
 ms.assetid: 3dd30f09-0490-47d7-a7e5-9590deeacbb5
 keywords:
-- Wiedergabeliste. itemselectedfocslostcolor (Windows Media Player)
+- PLAYLIST.itemSelectedFocusLostColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6a5099c3f76a1a7be93a5341e461a06c5267c14
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 94bf7099bfccbc624f565377ce149b894c8edaad12e6c9112c7b26a04d96988a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002950"
 ---
-# <a name="playlistitemselectedfocuslostcolor"></a>Wiedergabeliste. itemselectedfoclelostcolor
+# <a name="playlistitemselectedfocuslostcolor"></a>PLAYLIST.itemSelectedFocusLostColor
 
-Mit dem **itemselectedfocuslostcolor** -Attribut wird ein Wert angegeben oder abgerufen, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt, wenn die Wiedergabeliste den Fokus verliert.
+Das **itemSelectedFocusLostColor-Attribut** gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt oder abruft, wenn die Wiedergabeliste den Fokus verliert.
 
 ``` syntax
         elementID.itemSelectedFocusLostColor
@@ -29,7 +29,7 @@ Mit dem **itemselectedfocuslostcolor** -Attribut wird ein Wert angegeben oder ab
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine Farbe darstellt. Der Standardwert ist die Textfarbe der Windows-Schaltfläche.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die eine Farbe darstellt. Der Standardwert ist die Textfarbe Windows Schaltfläche.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,10 +45,10 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine Farbe darstel
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

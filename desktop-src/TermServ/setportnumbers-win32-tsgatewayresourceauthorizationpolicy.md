@@ -1,12 +1,12 @@
 ---
-title: SetPortNumbers-Methode der Win32_TSGatewayResourceAuthorizationPolicy Klasse
+title: SetPortNumbers-Methode der Win32_TSGatewayResourceAuthorizationPolicy-Klasse
 description: Legt die Portnummern fest, die eine Verbindung mit der Ressource über Remotedesktop Gateway (RD-Gateway) herstellen dürfen.
 ms.assetid: f8237ec3-84dc-44f8-ad86-54c46be1fd03
 ms.tgt_platform: multiple
 keywords:
 - SetPortNumbers-Remotedesktopdienste
 - SetPortNumbers-Methode Remotedesktopdienste , Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-- Win32_TSGatewayResourceAuthorizationPolicy klasse Remotedesktopdienste , SetPortNumbers-Methode
+- Win32_TSGatewayResourceAuthorizationPolicy der Remotedesktopdienste , SetPortNumbers-Methode
 topic_type:
 - apiref
 api_name:
@@ -46,13 +46,13 @@ uint32 SetPortNumbers(
 *PortNumbers* \[ In\]
 </dt> <dd>
 
-Liste der durch Semikolons getrennten Portnummern, die für diese Remotedesktop Resource Authorization Policy (RD RD RD) zulässig sind. Um eine beliebige Portnummer zu ermöglichen, legen Sie " \* " fest.
+Liste der durch Semikolons getrennten Portnummern, die für diese Richtlinie Remotedesktop Resource Authorization Policy (RD RD RD) zulässig sind. Um eine beliebige Portnummer zu ermöglichen, legen Sie " \* " fest.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 

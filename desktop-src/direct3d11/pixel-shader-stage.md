@@ -1,54 +1,54 @@
 ---
-title: Pixel-Shader-Phase
-description: Die Pixel-Shader-Stufe (PS) ermöglicht umfassende Schattierungs Techniken wie z. b. pro Pixel-Beleuchtung und Nachbearbeitung.
+title: Pixel-Shader-Stufe
+description: Die Pixel-Shader-Stufe (PS) ermöglicht umfassende Schattierungstechniken wie pixelbasierte Beleuchtung und Nachbearbeitung.
 ms.assetid: 09831B10-4FD1-41E7-8D81-5AA63DC90020
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57142e9c32919a6959a7fac14bf544cca1dacd79
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0dd58bbc55bbc2fb7d590036bceb061f2a304c0be16ff058d04f226021dfe3cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988160"
 ---
-# <a name="pixel-shader-stage"></a>Pixel-Shader-Phase
+# <a name="pixel-shader-stage"></a>Pixel-Shader-Stufe
 
-Die Pixel-Shader-Stufe (PS) ermöglicht umfassende Schattierungs Techniken wie z. b. pro Pixel-Beleuchtung und Nachbearbeitung. Ein Pixelshader ist ein Programm, das Konstante Variablen, Textur Daten, interpoliert pro Scheitelpunkt Werte und andere Daten kombiniert, um pro-Pixel-Ausgaben zu liefern. Die Raster-Stufe Ruft einen Pixel-Shader einmal für jedes Pixel auf, das von einem primitiven abgedeckt wird. es ist jedoch möglich, einen **null** -Shader anzugeben, um das Ausführen eines Shaders zu vermeiden.
+Die Pixel-Shader-Stufe (PS) ermöglicht umfassende Schattierungstechniken wie pixelbasierte Beleuchtung und Nachbearbeitung. Ein Pixel-Shader ist ein Programm, das konstante Variablen, Texturdaten, interpolierte Werte pro Scheitelpunkt und andere Daten kombiniert, um Pixelausgaben zu erzeugen. Die Rasterizerphase ruft einen Pixel-Shader einmal für jedes Pixel auf, das von einem Primitiven abgedeckt wird. Es ist jedoch möglich, einen **NULL-Shader** anzugeben, um die Ausführung eines Shaders zu vermeiden.
 
-## <a name="the-pixel-shader"></a>Der Pixelshader.
+## <a name="the-pixel-shader"></a>Der Pixel-Shader
 
-Beim multisamplinggrad einer Textur wird ein Pixelshader einmal pro abgedecktem Pixel aufgerufen, während bei jedem behandelten Multisample ein tiefen-/Schablone-Test erfolgt. Beispiele, die den tiefen-/Schablone-Test bestehen, werden mit der Pixel-Shader-Ausgabe Farbe aktualisiert.
+Beim Multisampling einer Textur wird ein Pixelshader einmal pro abgedeckten Pixel aufgerufen, während für jedes abgedeckte Multisample ein Tiefen-/Schablonentest durchgeführt wird. Beispiele, die den Tiefen-/Schablonentest bestehen, werden mit der Ausgabefarbe des Pixelshader aktualisiert.
 
-Die intrinsischen Funktionen des Pixel-Shaders liefern oder verwenden Ableitungen von Mengen in Bezug auf den Bildschirmbereich x und y. Die häufigste Verwendung von Ableitungen ist die Berechnung von Detail Berechnungen für die Textur Stichprobe und im Fall von anisotrope Filterung, indem Beispiele entlang der Achse von Anisotropie ausgewählt werden. In der Regel führt eine Hardware Implementierung einen Pixel-Shader auf mehreren Pixeln (z. b. ein 2 x 2-Raster) gleichzeitig aus, sodass Ableitungen von Mengen, die im Pixelshader berechnet werden, als Delta der Werte zum gleichen Zeitpunkt der Ausführung in angrenzenden Pixeln angleichen können.
+Die systeminternen Funktionen des Pixelshader erzeugen oder verwenden Ableitungen von Mengen in Bezug auf den Bildschirmbereich x und y. Die häufigste Verwendung für Ableitungen ist das Berechnen von Detailberechnungen für die Textursampling und im Fall der Anisotropiefilterung die Auswahl von Stichproben entlang der Achse der Anisotropie. In der Regel führt eine Hardwareimplementierung einen Pixel-Shader auf mehreren Pixeln (z. B. einem 2x2-Raster) gleichzeitig aus, sodass Ableitungen von Mengen, die im Pixelshader berechnet werden, als Deltas der Werte an demselben Ausführungspunkt in angrenzenden Pixeln relativ geschätzt werden können.
 
 ### <a name="inputs"></a>Eingaben
 
-Wenn die Pipeline ohne einen Geometry-Shader konfiguriert ist, ist ein Pixelshader auf 16, 32-Bit, 4-komponenteneingaben beschränkt. Andernfalls kann ein Pixelshader bis zu 32, 32-Bit, 4-komponenteneingaben annehmen.
+Wenn die Pipeline ohne geometriebasierten Shader konfiguriert ist, ist ein Pixel-Shader auf Eingaben mit 16, 32 Bit und 4 Komponenten beschränkt. Andernfalls kann ein Pixel-Shader eingaben mit bis zu 32, 32 Bit und 4 Komponenten dauern.
 
-Die Pixel-Shader-Eingabedaten enthalten Scheitelpunkt Attribute (die mit oder ohne Perspektiven Korrektur interpoliert werden können) oder als primitive Konstanten behandelt werden können. Pixel-shadereingaben werden aus den Vertex-Attributen des primitiven, das auf der Grundlage des deklarierten Interpolations Modus basiert, interpoliert. Wenn ein primitiver vor der rasterisierung abgeschnitten wird, wird der Interpolations Modus während des clippingprozesses ebenfalls berücksichtigt.
+Pixel-Shadereingabedaten enthalten Scheitelpunktattribute (die mit oder ohne perspektivische Korrektur interpoliert werden können) oder können als primitive Konstanten behandelt werden. Pixel-Shadereingaben werden basierend auf dem deklarierten Interpolationsmodus aus den Scheitelpunktattributen des Primitiven interpoliert, der gerastet wird. Wenn ein Primitiv vor der Rasterung abgeschnitten wird, wird der Interpolationsmodus auch während des Clippingprozesses berücksichtigt.
 
-Vertex-Attribute werden an Pixel-Shader-Mittelpunkt Positionen interpoliert (oder ausgewertet). Pixelshader-Attribut Interpolations Modi werden in einer Eingabe Register Deklaration in einer pro-Element-Basis in einem [Argument](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-function-parameters) oder einer [Eingabe Struktur](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-struct)deklariert. Attribute können linear oder mit [Schwerpunkt-Sampling](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)interpoliert werden. Die Centroid-Auswertung ist nur bei der multisamplinggrad relevant, um Fälle abzudecken, in denen ein Pixel durch ein primitiv abgedeckt ist, ein Pixel Center jedoch möglicherweise nicht ist. die Schwerpunkt Auswertung erfolgt so nah wie möglich im (nicht abgedeckten) Pixel Center.
+Scheitelpunktattribute werden an Pixel-Shader-Mittelpunkten interpoliert (oder ausgewertet). Die Interpolationsmodi des Pixelshaderattributs werden in einer Eingaberegisterdeklaration auf Elementbasis entweder in einem [Argument](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-function-parameters) oder in einer [Eingabestruktur](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-struct)deklariert. Attribute können linear oder mit [schwerpunktmäßiger Stichprobenentnahme](https://msdn.microsoft.com/library/Ee415231(v=VS.85).aspx)interpoliert werden. Die Schwerpunktauswertung ist nur während des Multisamplings relevant, um Fälle abzudecken, in denen ein Pixel von einem Primitiven abgedeckt wird, aber ein Pixelmittelpunkt möglicherweise nicht ist. Die Schwerpunktauswertung erfolgt so nah wie möglich am (nicht abgedeckten) Pixelmittelpunkt.
 
-Eingaben können auch mit einer [System Wert Semantik](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)deklariert werden, die einen Parameter markiert, der von anderen Pipeline Stufen verwendet wird. Beispielsweise sollte eine Pixelposition mit der SV- \_ Positions Semantik gekennzeichnet werden. Die IA-Phase kann einen Skalarwert für einen PixelShader (mit \_ der SV primitiveid) erzeugen; die Raster-Stufe kann auch einen Skalarwert für einen PixelShader generieren (mithilfe von SV \_ isfrontface).
+Eingaben können auch mit einer [Systemwertsemantik](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)deklariert werden, die einen Parameter markiert, der von anderen Pipelinephasen verwendet wird. Beispielsweise sollte eine Pixelposition mit der \_ SV-Positionssemantik markiert werden. Die IA-Stufe kann einen Skalar für einen Pixel-Shader erzeugen (mit SV \_ PrimitiveID). Die Rasterizerphase kann auch einen Skalar für einen Pixelshader generieren (mit SV \_ IsFrontFace).
 
 ### <a name="outputs"></a>Ausgaben
 
-Ein Pixelshader kann bis zu 8, 32-Bit, 4-Komponentenfarben oder keine Farbe ausgeben, wenn das Pixel verworfen wird. Die Pixel-Shader-Ausgabe Register Komponenten müssen deklariert werden, bevor Sie verwendet werden können. jedem Register ist eine eindeutige Ausgabe-/Schreibmaske gestattet.
+Ein Pixel-Shader kann bis zu 8, 32 Bit, 4-Komponenten-Farben oder keine Farbe ausgeben, wenn das Pixel verworfen wird. Pixel-Shader-Ausgaberegisterkomponenten müssen deklariert werden, bevor sie verwendet werden können. Für jedes Register ist eine unterschiedliche Ausgabe-/Schreibmaske zulässig.
 
-Verwenden Sie den Status "Tiefe-Write-Enable" (in der Ausgabe-Fusion-Phase), um zu steuern, ob die Tiefendaten in einen tiefen Puffer geschrieben werden (oder verwenden Sie die Verwerfungs Anweisung, um Daten für dieses Pixel zu verwerfen). Ein Pixelshader kann auch einen optionalen 32-Bit-, 1-Component-, Gleit Komma-und Tiefen Wert für tiefen Tests ausgeben (mit der SV- \_ tiefen Semantik). Der tiefen Wert wird im otiefe-Register ausgegeben und ersetzt den interinterpolated-tiefen Wert für tiefen Tests (vorausgesetzt, die tiefen Tests sind aktiviert). Es gibt keine Möglichkeit, dynamisch zwischen der Verwendung der tiefen Tiefe oder der Shader-otiefe zu wechseln.
+Verwenden Sie den Zustand "Depth-Write-Enable" (in der Ausgabezusammenführungsphase), um zu steuern, ob Tiefendaten in einen Tiefenpuffer geschrieben werden (oder verwenden Sie die Anweisung discard, um Daten für dieses Pixel zu verwerfen). Ein Pixel-Shader kann auch einen optionalen 32-Bit-, 1-Komponenten-, Gleitkomma- und Tiefenwert für Tiefentests ausgeben (mithilfe der \_ SV-Tiefensemantik). Der Tiefenwert wird im oDepth-Register ausgegeben und ersetzt den interpolierten Tiefenwert für Tiefentests (vorausgesetzt, tiefentests sind aktiviert). Es gibt keine Möglichkeit, zwischen der Verwendung von fester Funktionstiefe oder dem Shader oDepth dynamisch zu wechseln.
 
-Ein Pixelshader kann einen Schablonen Wert nicht ausgeben.
+Ein Pixel-Shader kann keinen Schablonenwert ausgeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Grafik Pipeline](overviews-direct3d-11-graphics-pipeline.md)
+[Grafikpipeline](overviews-direct3d-11-graphics-pipeline.md)
 </dt> <dt>
 
-[Pipeline Stufen (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-pipeline-stages)
+[Pipelinestufen (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-pipeline-stages)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

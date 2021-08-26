@@ -1,11 +1,11 @@
 ---
-title: Lschräypack-Struktur
-description: Enthält Informationen zu einem bestimmten Remotedesktopdienste Licensing Key Pack.
+title: LSKeyPack-Struktur
+description: Enthält Informationen zu einem bestimmten Remotedesktopdienste-Schlüsselpaket.
 ms.assetid: c26d27ee-7dd3-49f0-a79c-752d23693a2a
 ms.tgt_platform: multiple
 keywords:
-- Lschräypack-Struktur Remotedesktopdienste
-- Lplschräypack-Struktur Zeiger Remotedesktopdienste
+- LSKeyPack-Remotedesktopdienste
+- LPLSKeyPack-Strukturzeiger Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2b1ac1f51e66a0a3c15c33f2535bc02f1fd3528f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3a8b2c7c8b6c42464e273008f9de2730b41ea64981e44583eb48f4125da3ba9b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989089"
 ---
-# <a name="lskeypack-structure"></a>Lschräypack-Struktur
+# <a name="lskeypack-structure"></a>LSKeyPack-Struktur
 
-Enthält Informationen zu einem bestimmten Remotedesktopdienste Licensing Key Pack.
+Enthält Informationen zu einem bestimmten Remotedesktopdienste-Schlüsselpaket.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in einer Headerdatei nicht definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -69,77 +69,77 @@ typedef struct _LSKeyPack {
 **dwVersion**
 </dt> <dd>
 
-Version des Schlüssel Pakets.
+Version des Schlüsselpakets.
 
 </dd> <dt>
 
-**uckeypacktype**
+**ucKeyPackType**
 </dt> <dd>
 
-Der Typ des Schlüssel Pakets.
+Typ des Schlüsselpakets.
 
 </dd> <dt>
 
-**szcompanyname**
+**szCompanyName**
 </dt> <dd>
 
-Name des Unternehmens, von dem das Schlüssel Paket ausgestellt wurde.
+Name des Unternehmens, das das Schlüsselpaket ausgestellt hat.
 
 </dd> <dt>
 
-**szkeypackid**
+**szKeyPackId**
 </dt> <dd>
 
-ID des Schlüssel Pakets.
+ID des Schlüsselpakets.
 
 </dd> <dt>
 
-**szproductname**
+**szProductName**
 </dt> <dd>
 
-Der Name des Produkts, zu dem dieses Schlüssel Paket gehört.
+Name des Produkts, zu dem dieses Key Pack gehört.
 
 </dd> <dt>
 
-**szproductid**
+**szProductId**
 </dt> <dd>
 
-ID des Produkts, zu dem dieses Schlüssel Paket gehört.
+ID des Produkts, zu dem dieses Key Pack gehört.
 
 </dd> <dt>
 
-**szproductde**
+**szProductDesc**
 </dt> <dd>
 
-Die Beschreibung des Produkts, zu dem dieses Schlüssel Paket gehört.
+Beschreibung des Produkts, zu dem dieses Key Pack gehört.
 
 </dd> <dt>
 
-**wmajorversion**
+**wMajorVersion**
 </dt> <dd>
 
-Hauptversion des Produkts, zu dem dieses Schlüssel Paket gehört.
+Hauptversion des Produkts, zu dem dieses Key Pack gehört.
 
 </dd> <dt>
 
-**wminorversion**
+**wMinorVersion**
 </dt> <dd>
 
-Neben Version des Produkts, zu dem dieses Schlüssel Paket gehört.
+Nebenversion des Produkts, zu dem dieses Key Pack gehört.
 
 </dd> <dt>
 
-**dwplatformtype**
+**dwPlatformType**
 </dt> <dd>
 
 Plattformtyp.
 
 </dd> <dt>
 
-**uclicensertyp**
+**ucLicenseType**
 </dt> <dd>
 
-Der Typ der Lizenzen im Schlüssel Paket.
+Typ der Lizenzen im Schlüsselpaket.
 
 </dd> <dt>
 
@@ -150,63 +150,63 @@ Sprach-ID.
 
 </dd> <dt>
 
-**ucchannelofpurchase**
+**ucChannelOfPurchase**
 </dt> <dd>
 
-Kanal des Kaufs.
+Kaufkanal.
 
 </dd> <dt>
 
-**szbeginserialnumber**
+**szBeginSerialNumber**
 </dt> <dd>
 
 Seriennummer für die erste Lizenz.
 
 </dd> <dt>
 
-**dwtotallicenseingekeypack**
+**dwTotalLicenseInKeyPack**
 </dt> <dd>
 
-Die Gesamtanzahl der Lizenzen im Schlüssel Paket.
+Gesamtanzahl der Lizenzen im Schlüsselpaket.
 
 </dd> <dt>
 
-**dwproductflags**
+**dwProductFlags**
 </dt> <dd>
 
-Fahren.
+Flaggen.
 
 </dd> <dt>
 
-**dwkeypackid**
+**dwKeyPackId**
 </dt> <dd>
 
-ID des Schlüssel Pakets.
+ID des Schlüsselpakets.
 
 </dd> <dt>
 
-**uckeypackstatus**
+**ucKeyPackStatus**
 </dt> <dd>
 
-Der Status des Schlüssel Pakets.
+Status des Schlüsselpakets.
 
 </dd> <dt>
 
-**dwactivatedate**
+**dwActivateDate**
 </dt> <dd>
 
-Aktivierungsdatum für das Schlüssel Paket.
+Aktivierungsdatum für das Schlüsselpaket.
 
 </dd> <dt>
 
-**dwexpirationdate**
+**dwExpirationDate**
 </dt> <dd>
 
-Das Ablaufdatum für das Schlüssel Paket.
+Ablaufdatum für das Schlüsselpaket.
 
 </dd> <dt>
 
-**dwnumoflicenses**
+**dwNumberOfLicenses**
 </dt> <dd>
 
 Anzahl der Lizenzen.
@@ -228,13 +228,13 @@ Anzahl der Lizenzen.
 
 <dl> <dt>
 
-[**Tlskeypackenumbegin**](tlskeypackenumbegin.md)
+[**TLSKeyPackEnumBegin**](tlskeypackenumbegin.md)
 </dt> <dt>
 
-[**Tlskeypackenumnext**](tlskeypackenumnext.md)
+[**TLSKeyPackEnumNext**](tlskeypackenumnext.md)
 </dt> <dt>
 
-[**Tlskeypackenumend**](tlskeypackenumend.md)
+[**TLSKeyPackEnumEnd**](tlskeypackenumend.md)
 </dt> </dl>
 
  

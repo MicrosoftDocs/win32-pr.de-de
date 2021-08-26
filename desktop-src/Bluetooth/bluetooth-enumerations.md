@@ -1,35 +1,35 @@
 ---
-title: Bluetooth-Enumerationen
+title: Bluetooth Enumerationen
 description: Die folgenden Enumerationen unterstützen die Microsoft Bluetooth-Implementierung.
 ms.assetid: 122c4872-acd1-403f-bb94-16349e73a320
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70fb2a5e9abf2b276a42df7f396f26870d7ec7b4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a2052408f2df1024a725371ba8f3918b14708139e82a3f21ff0b9ae7419919c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004120"
 ---
-# <a name="bluetooth-enumerations"></a>Bluetooth-Enumerationen
+# <a name="bluetooth-enumerations"></a>Bluetooth Enumerationen
 
 Die folgenden Enumerationen unterstützen die Microsoft Bluetooth-Implementierung.
 
 
 
-| `Section`                                                                                  | Inhalt                                                                |
+| `Section`                                                                                  | Content                                                                |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Bluetooth- \_ Authentifizierungs \_ Anforderungen**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_authentication_requirements) | Definiert die "man-in-the-Middle"-Schutzmethoden für die Authentifizierung. |
-| [**Bluetooth- \_ Authentifizierungs \_ Methode**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_authentication_method)             | Definiert die unterstützten Authentifizierungs Typen während der Geräte Kopplung.      |
-| [**Bluetooth \_ IO- \_ Funktion**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_io_capability)                             | Definiert die Eingabe-/Ausgabefunktionen eines Bluetooth-Geräts.           |
+| [**\_ANFORDERUNGEN AN DIE BLUETOOTH-AUTHENTIFIZIERUNG \_**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_authentication_requirements) | Definiert die Schutzmethoden "Man in the Middle" für die Authentifizierung. |
+| [**\_BLUETOOTH-AUTHENTIFIZIERUNGSMETHODE \_**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_authentication_method)             | Definiert die unterstützten Authentifizierungstypen während der Gerätekopplung.      |
+| [**\_ \_ BLUETOOTH-E/A-FUNKTION**](/windows/desktop/api/BluetoothAPIs/ne-bluetoothapis-bluetooth_io_capability)                             | Definiert die Eingabe-/Ausgabefunktionen eines Bluetooth Geräts.           |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

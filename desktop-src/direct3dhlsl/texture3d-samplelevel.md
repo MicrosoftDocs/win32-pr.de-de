@@ -1,9 +1,9 @@
 ---
-title: 'Texture3D:: Texture3D samplelevel-Methoden'
-description: 'Prüft eine Textur auf der angegebenen MipMap-Ebene. | Texture3D:: Texture3D samplelevel-Methoden'
+title: Texture3D::Texture3D SampleLevel-Methoden
+description: Probieren Sie eine Textur auf der angegebenen Mipmapebene aus. | Texture3D::Texture3D SampleLevel-Methoden
 ms.assetid: 0C3CACD0-C870-4C69-9BB6-2D7376386711
 keywords:
-- Samplelevel-Methoden HLSL
+- SampleLevel-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: c50096552781784420404ac5a4ef2e68149fd5aa
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 3011b0e197083b3ed2daa5d875e6f307d7b965ac2632677198b89f34bb396624
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067310"
 ---
-# <a name="texture3dsamplelevel-methods"></a>Texture3D:: samplelevel-Methoden
+# <a name="texture3dsamplelevel-methods"></a>Texture3D::SampleLevel-Methoden
 
-Prüft eine Textur auf der angegebenen MipMap-Ebene.
+Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,19 +29,19 @@ Prüft eine Textur auf der angegebenen MipMap-Ebene.
 
 | Methode                                                                                 | BESCHREIBUNG                                                                                        |
 |:---------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Samplelevel (S, float, float, int)**](dx-graphics-hlsl-to-samplelevel.md)              | Prüft eine Textur auf der angegebenen MipMap-Ebene.<br/>                                        |
-| [**Samplelevel (S, float, float, int, uint)**](t3d-samplelevel-s-float-float-int-uint-.md) | Führt eine Stichprobe für eine Textur auf der angegebenen MipMap-Ebene aus und gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleLevel(S,float,float,int)**](dx-graphics-hlsl-to-samplelevel.md)              | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.<br/>                                        |
+| [**SampleLevel(S,float,float,int,uint)**](t3d-samplelevel-s-float-float-int-uint-.md) | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**Texture3D**](sm5-object-texture3d.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

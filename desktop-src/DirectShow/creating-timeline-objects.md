@@ -1,23 +1,23 @@
 ---
-description: Erstellen von Zeitachsen Objekten
+description: Erstellen von Zeitachsenobjekten
 ms.assetid: fb369b32-a54b-4d8a-8358-5f05aa48f853
-title: Erstellen von Zeitachsen Objekten
+title: Erstellen von Zeitachsenobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 929fffb6a953e198b6e7ed9b17250d45e84f7932
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c7c0a2a88b2cd931e6a9d12274f4a2503b4c97d52348b6ed2629c22bf204f302
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054780"
 ---
-# <a name="creating-timeline-objects"></a>Erstellen von Zeitachsen Objekten
+# <a name="creating-timeline-objects"></a>Erstellen von Zeitachsenobjekten
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Der Beispielcode in diesem Artikel beginnt mit einer leeren Zeitachse, aber die gleichen Schritte gelten auch, wenn Sie ein vorhandenes Projekt laden und diesem Objekte hinzufügen möchten.
+Der in diesem Artikel vorgestellte Beispielcode beginnt mit einer leeren Zeitachse, aber die gleichen Schritte gelten, wenn Sie ein vorhandenes Projekt laden und diesem Objekte hinzufügen möchten.
 
-Um einen beliebigen Objekttyp in der Zeitachse zu erstellen, rufen Sie die [**iamtimeline::**](iamtimeline-createemptynode.md) -Methode auf. Mit dem folgenden Code wird beispielsweise eine neue Gruppe erstellt:
+Um einen beliebigen Objekttyp auf der Zeitachse zu erstellen, rufen Sie die [**IAMTimeline::CreateEmptyNode-Methode**](iamtimeline-createemptynode.md) auf. Mit dem folgenden Code wird beispielsweise eine neue Gruppe erstellt:
 
 
 ```C++
@@ -27,13 +27,13 @@ pTL->CreateEmptyNode(&pGroupObj, TIMELINE_MAJOR_TYPE_GROUP);
 
 
 
-Der zweite Parameter ist ein Member der [**Timeline- \_ \_ Haupttyp**](timeline-major-type.md) -Enumeration. Gibt den Typ des zu erstellenden Zeitachsen Objekts an, z. b. eine Gruppe oder eine Spur.
+Der zweite Parameter ist ein Member der [**TIMELINE \_ MAJOR \_ TYPE-Enumeration.**](timeline-major-type.md) Sie gibt den Typ des zu erstellenden Zeitachsenobjekts an, z. B. eine Gruppe oder eine Spur.
 
-Die Methode " **kreateemptynode** " erstellt das Objekt und gibt einen Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des Objekts zurück. Außerdem erhöht Sie den Verweis Zähler für die **iamtimelineobj** -Schnittstelle, sodass Sie die Schnittstelle freigeben müssen, wenn Sie die Verwendung abgeschlossen haben. Nennen Sie die [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion nicht. Verwenden Sie stattdessen immer "antachse **", um** ein Zeitachsen Objekt zu erstellen, da das neue-Objekt für die Verwendung in einer Zeitachse initialisiert wird.
+Die **CreateEmptyNode-Methode** erstellt das -Objekt und gibt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle des Objekts**](iamtimelineobj.md) zurück. Außerdem wird die Verweisanzahl für die **IAMTimelineObj-Schnittstelle** erhöht, sodass Sie die Schnittstelle wieder frei geben müssen, wenn Sie sie nicht mehr verwenden. Rufen Sie die [**CoCreateInstance-Funktion nicht**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf. Verwenden Sie stattdessen immer **CreateEmptyNode,** um ein Zeitachsenobjekt zu erstellen, da es das neue Objekt für die Verwendung in einer Zeitachse initialisiert.
 
-Die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle ist eine generische Schnittstelle. Es stellt Methoden bereit, die allen Typen von Timeline-Objekten gemeinsam sind. Jeder Objekttyp macht auch andere Schnittstellen verfügbar. Beispielsweise machen Gruppen unter anderem die [**iamtimelinegroup**](iamtimelinegroup.md) -Schnittstelle verfügbar. Sie können Zeiger auf die anderen Schnittstellen abrufen, indem Sie **QueryInterface** aufrufen.
+Die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) ist eine generische Schnittstelle. Sie bietet Methoden, die allen Typen von Zeitachsenobjekten gemeinsam sind. Jeder Objekttyp macht auch andere Schnittstellen verfügbar. Gruppen machen z. B. die [**IAMTimelineGroup-Schnittstelle**](iamtimelinegroup.md) verfügbar. Sie können Zeiger auf die anderen Schnittstellen abrufen, indem Sie **QueryInterface aufrufen.**
 
-Nachdem Sie ein Objekt erstellt haben, ist es noch kein Teil der Zeitachse. Die Methode zum Hinzufügen eines Objekts zur Zeitachse hängt vom Objekttyp ab. Im folgenden Abschnitt wird beschrieben, wie Sie Gruppen, Kompositionen und Spuren zur Zeitachse hinzufügen.
+Nachdem Sie ein Objekt erstellt haben, ist es noch kein Teil der Zeitachse. Die Methode zum Hinzufügen eines Objekts zur Zeitachse hängt vom Objekttyp ab. Im folgenden Abschnitt wird beschrieben, wie Der Zeitachse Gruppen, Kompositionen und Spuren hinzugefügt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

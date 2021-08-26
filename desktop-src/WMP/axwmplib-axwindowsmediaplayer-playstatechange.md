@@ -1,9 +1,9 @@
 ---
 title: PlayStateChange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das PlayStateChange-Ereignis tritt auf, wenn sich der Wiedergabe Zustand des Windows Media Player-Steuer Elements ändert.
+description: Das PlayStateChange-Ereignis tritt auf, wenn sich der Wiedergabezustand des Windows Media Player ändert.
 ms.assetid: f8823c90-2084-4771-a2fe-7081d4e49e63
 keywords:
-- PlayStateChange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- PlayStateChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af97803224df89287847ee2b9ef83d8e976d91b7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a02f533211ccb6f2f2617d402eed8343a444fad4a7c3ccf49e187ede71ce9513
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003990"
 ---
 # <a name="playstatechange-event-of-the-axwindowsmediaplayer-object"></a>PlayStateChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das PlayStateChange-Ereignis tritt auf, wenn sich der Wiedergabe Zustand des Windows Media Player-Steuer Elements ändert.
+Das PlayStateChange-Ereignis tritt auf, wenn sich der Wiedergabezustand des Windows Media Player ändert.
 
 ``` syntax
 [C#]
@@ -42,25 +42,25 @@ private void player_PlayStateChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ playstatechangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ playstatechangeevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlayStateChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ PlayStateChangeEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft     | BESCHREIBUNG                                     |
+| Eigenschaft     | Beschreibung                                     |
 |--------------|-------------------------------------------------|
-| **newState** | System. Int32Specifies der neue Zustand.<br/> |
+| **newState** | System.Int32 Gibt den neuen Zustand an.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist nicht garantiert, dass Windows-Media Player Zustände in einer bestimmten Reihenfolge auftreten. Außerdem treten nicht alle Zustände notwendigerweise während einer Sequenz von Ereignissen auf. Sie sollten keinen Code schreiben, der auf der Status Reihenfolge basiert.
+Windows Media Player, dass Zustände nicht in einer bestimmten Reihenfolge auftreten. Darüber hinaus tritt nicht jeder Zustand notwendigerweise während einer Abfolge von Ereignissen auf. Sie sollten keinen Code schreiben, der von der Zustandsordnung abhängig ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein Ereignishandler für das PlayStateChange-Ereignis veranschaulicht, das den aktuellen Wiedergabe Zustand in einer Bezeichnung anzeigt. Das AxWMPLib. AxWindowsMediaPlayer-Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird ein Ereignishandler für das PlayStateChange-Ereignis veranschaulicht, der den aktuellen Wiedergabezustand in einer Bezeichnung anzeigt. Das AxWMPLib.AxWindowsMediaPlayer-Objekt wird durch die Variable player dargestellt.
 
 
 ```
@@ -195,20 +195,20 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. playstate (VB und c#)**](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)
+[**AxWindowsMediaPlayer.playState (VB und C#)**](axwmplib-axwindowsmediaplayer-playstate--vb-and-c.md)
 </dt> </dl>
 
  

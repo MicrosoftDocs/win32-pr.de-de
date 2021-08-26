@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinvalidsystempathexception-Konstruktor'
-title: Esentinvalidsystempathexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidSystemPathException-Konstruktor'
+title: EsentInvalidSystemPathException-Konstruktor
 TOCTitle: 'EsentInvalidSystemPathException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidSystemPathException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidsystempathexception.esentinvalidsystempathexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 237570ab2c0ce2f06a3957652a9313e0069d1500
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7136dbcc04dbc06e07765f52ec2ca64f9dc1a020809a90595eeda68bf244a6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119971940"
 ---
-# <a name="esentinvalidsystempathexception-constructor"></a>Esentinvalidsystempathexception-Konstruktor
+# <a name="esentinvalidsystempathexception-constructor"></a>EsentInvalidSystemPathException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidsystempathexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidSystemPathException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidSystemPathException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidsystempathexception-Klasse](./esentinvalidsystempathexception-class.md)
+[EsentInvalidSystemPathException-Klasse](./esentinvalidsystempathexception-class.md)
 
-[Esentinvalidsystempathexception-Member](./esentinvalidsystempathexception-members.md)
+[EsentInvalidSystemPathException-Member](./esentinvalidsystempathexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

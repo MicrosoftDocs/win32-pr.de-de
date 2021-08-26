@@ -1,23 +1,23 @@
 ---
-title: Zugreifen auf Remote Computer
-description: Sie können die Windows-Ereignisprotokoll-API verwenden, um auf Daten auf dem lokalen Computer oder auf einem Remote Computer zuzugreifen.
+title: Zugreifen auf Remotecomputer
+description: Sie können die Windows Ereignisprotokoll-API verwenden, um auf Daten auf dem lokalen Computer oder auf einem Remotecomputer zuzugreifen.
 ms.assetid: df789981-0e1c-4d68-9bd5-5d054f1724d4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e0063238560ddd7f1613e94b83ecc7f27900bb3
-ms.sourcegitcommit: c2a1c4314550ea9bd202d28adfcc7bfe6180932f
+ms.openlocfilehash: 0a64bf1b3bded6ba1c72231e85bc78fa7f486739741fea1391c869ad79b457e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "104101366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032580"
 ---
-# <a name="accessing-remote-computers"></a>Zugreifen auf Remote Computer
+# <a name="accessing-remote-computers"></a>Zugreifen auf Remotecomputer
 
-Sie können die Windows-Ereignisprotokoll-API verwenden, um auf Daten auf dem lokalen Computer oder auf einem Remote Computer zuzugreifen. Um auf Daten auf einem Remote Computer zuzugreifen, müssen Sie die [**evtopensession**](/windows/desktop/api/WinEvt/nf-winevt-evtopensession) -Funktion aufrufen, um einen Remote Sitzungs Kontext zu erstellen. Wenn Sie diese Funktion verwenden, geben Sie den Namen des Remote Computers, mit dem Sie eine Verbindung herstellen möchten, die Benutzer Anmelde Informationen für die Verbindung und den Authentifizierungstyp an, der zum Authentifizieren des Benutzers verwendet werden soll. Um den aktuellen Benutzer anzugeben, legen Sie die Member Domäne, Benutzer und Kennwort auf **null** fest.
+Sie können die Windows Ereignisprotokoll-API verwenden, um auf Daten auf dem lokalen Computer oder auf einem Remotecomputer zuzugreifen. Um auf Daten auf einem Remotecomputer zu zugreifen, müssen Sie die [**EvtOpenSession-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopensession) aufrufen, um einen Remotesitzungskontext zu erstellen. Wenn Sie diese Funktion aufrufen, geben Sie den Namen des Remotecomputers, mit dem Sie eine Verbindung herstellen möchten, die Benutzeranmeldeinformationen, die zum Herstellen der Verbindung verwendet werden, und den Authentifizierungstyp an, der zum Authentifizieren des Benutzers verwendet werden soll. Um den aktuellen Benutzer anzugeben, legen Sie die Domänen-, Benutzer- und Kennwortmitglieder auf **NULL fest.**
 
-Wenn Sie die Windows-Ereignisprotokoll-API aufgerufen haben, übergeben Sie das Handle an den Remote Sitzungs Kontext, der von der [**evtopensession**](/windows/desktop/api/WinEvt/nf-winevt-evtopensession) -Funktion zurückgegeben wird. (Um auf die Daten auf dem lokalen Computer zuzugreifen, übergeben Sie **null** , um die Standard Sitzung anzugeben.) Für den Zugriff auf Daten auf dem Remote Computer muss der Remote Computer die Windows-Firewallausnahme "Remote-Ereignisprotokoll Verwaltung" aktivieren. Andernfalls tritt beim Versuch, das Sitzungs Handle zu verwenden, ein Fehler auf, wenn der RPC \_ S-Server nicht verfügbar ist \_ \_ . Auf dem Computer, mit dem Sie eine Verbindung herstellen, muss Windows Vista oder höher ausgeführt werden.
+Wenn Sie Windows Ereignisprotokoll-API aufrufen, übergeben Sie das Handle an den Remotesitzungskontext, den die [**EvtOpenSession-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtopensession) zurückgibt. (Um auf Daten auf dem lokalen Computer zu zugreifen, übergeben Sie **NULL,** um die Standardsitzung anzugeben.) Für den Zugriff auf Daten auf dem Remotecomputer muss der Remotecomputer die Remoteereignisprotokollverwaltung Windows Firewallausnahme aktivieren. Andernfalls tritt beim Versuch, das Sitzungshandy zu verwenden, ein Fehler mit RPC \_ S \_ SERVER \_ UNAVAILABLE auf. Auf dem Computer, mit dem Sie eine Verbindung herstellen, muss Windows Vista oder höher ausgeführt werden.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine Verbindung mit einem Remote Computer herstellen.
+Das folgende Beispiel zeigt, wie Sie eine Verbindung mit einem Remotecomputer herstellen.
 
 
 ```C++

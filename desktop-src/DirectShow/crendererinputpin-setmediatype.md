@@ -1,7 +1,7 @@
 ---
-description: 'Die setmediatype-Methode legt den Medientyp für die Verbindung fest. Diese Methode überschreibt die cbasepin:: setmediatype-Methode.'
+description: Die SetMediaType-Methode legt den Medientyp für die Verbindung fest. Diese Methode überschreibt die CBasePin::SetMediaType-Methode.
 ms.assetid: b2668bb1-0739-413c-bea8-ec5541acfb3e
-title: Crendererinputpin. setmediatype-Methode (renbase. h)
+title: CRendererInputPin.SetMediaType-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ca70878f8f6358a3297c22cbb9ac8e49ba0ce310
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 83f248e15c3965305719269a19a1f2ff2c8feddfe0e57b6349985d9133e38789
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054400"
 ---
-# <a name="crendererinputpinsetmediatype-method"></a>Crendererinputpin. setmediatype-Methode
+# <a name="crendererinputpinsetmediatype-method"></a>CRendererInputPin.SetMediaType-Methode
 
-Die- `SetMediaType` Methode legt den Medientyp für die Verbindung fest. Diese Methode überschreibt die [**cbasepin:: setmediatype**](cbasepin-setmediatype.md) -Methode.
+Die `SetMediaType` -Methode legt den Medientyp für die Verbindung fest. Diese Methode überschreibt die [**CBasePin::SetMediaType-Methode.**](cbasepin-setmediatype.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT SetMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Crendererinputpin-Klasse**](crendererinputpin.md)
+[**CRendererInputPin-Klasse**](crendererinputpin.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung sendet die WM- \_ mdicreate-Meldung an ein MDI-Client Fenster (Multiple Document Interface), um ein untergeordnetes MDI-Fenster zu erstellen.
+description: Eine Anwendung sendet die WM \_ MDICREATE-Nachricht an ein MDI-Clientfenster (Multiple Document Interface), um ein untergeordnetes MDI-Fenster zu erstellen.
 ms.assetid: f2313ffd-867f-4870-a667-3e5f5402776f
-title: WM_MDICREATE Meldung (Winuser. h)
+title: WM_MDICREATE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fc11e9dfc561b138a95b711d68ecd831a43d2ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c69a894ebd2e55bb74486e26cd118366b1e533a490cc50feb5f77aad64c6be3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056010"
 ---
-# <a name="wm_mdicreate-message"></a>WM- \_ mdicreate-Meldung
+# <a name="wm_mdicreate-message"></a>WM \_ MDICREATE-Nachricht
 
-Eine Anwendung sendet die **WM- \_ mdicreate** -Meldung an ein MDI-Client Fenster (Multiple Document Interface), um ein untergeordnetes MDI-Fenster zu erstellen.
+Eine Anwendung sendet die **WM \_ MDICREATE-Nachricht** an ein MDI-Clientfenster (Multiple Document Interface), um ein untergeordnetes MDI-Fenster zu erstellen.
 
 
 ```C++
@@ -36,7 +36,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**mdikreatestruct**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) -Struktur, die Informationen enthält, die das System verwendet, um das untergeordnete MDI-Fenster zu erstellen.
+Ein Zeiger auf eine [**MDICREATESTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) mit Informationen, die das System zum Erstellen des untergeordneten MDI-Fensters verwendet.
 
 </dd> </dl>
 
@@ -46,17 +46,17 @@ Typ: **HWND**
 
 Wenn die Nachricht erfolgreich ist, ist der Rückgabewert das Handle für das neue untergeordnete Fenster.
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert **null**.
+Wenn die Meldung fehlschlägt, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das untergeordnete MDI-Fenster wird mit [**den Fenster Stil**](window-styles.md) Bits **WS \_ Child**, **WS \_ clipcaption**, **WS \_ clipchildren**, **WS \_ sysmenu**, **WS \_ Caption**, **WS Thick \_ Frame**, **WS \_ MinimizeBox** und **WS \_ MaximizeBox** sowie zusätzlichen stilbits erstellt, die in der [**mdikreatestruct**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) -Struktur angegeben sind. Das System fügt den Titel des neuen untergeordneten Fensters dem Fenstermenü des Rahmen Fensters hinzu. Eine Anwendung sollte diese Meldung verwenden, um alle untergeordneten Fenster des Client Fensters zu erstellen.
+Das untergeordnete MDI-Fenster [](window-styles.md) wird mit den Fensterformatbits **WS \_ CHILD,** **WS \_ CLIPSIBLINGS,** **WS \_ CLIPCHILDREN,** **WS \_ SYSMENU,** **WS \_ CAPTION**, **WS \_ THICKFRAME,** **WS \_ MINIMIZEBOX** und **WS \_ MAXIMIZEBOX** sowie zusätzlichen Stilbits erstellt, die in der [**MDICREATESTRUCT-Struktur angegeben**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) sind. Das System fügt dem Fenstermenü des Rahmenfensters den Titel des neuen untergeordneten Fensters hinzu. Eine Anwendung sollte diese Meldung verwenden, um alle untergeordneten Fenster des Clientfensters zu erstellen.
 
-Wenn ein MDI-Client Fenster eine Nachricht empfängt, die die Aktivierung der untergeordneten Fenster ändert, während das aktive untergeordnete Fenster maximiert ist, stellt das System das aktive untergeordnete Fenster wieder her und maximiert das neu aktivierte untergeordnete Fenster.
+Wenn ein MDI-Clientfenster eine Meldung empfängt, die die Aktivierung seiner untergeordneten Fenster ändert, während das aktive untergeordnete Fenster maximiert ist, stellt das System das aktive untergeordnete Fenster wieder auf und maximiert das neu aktivierte untergeordnete Fenster.
 
-Wenn ein untergeordnetes MDI-Fenster erstellt wird, sendet das System die [**WM \_ Create**](wm-create.md) -Meldung an das Fenster. Der *LPARAM* -Parameter der " **WM \_ Create** "-Meldung enthält einen Zeiger auf eine " [**foratestruct**](/windows/win32/api/winuser/ns-winuser-createstructa) "-Struktur. Der Member *lpkreateparameams* dieser Struktur enthält einen Zeiger auf die [**mdikreatestruct**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) -Struktur, die mit der **WM- \_ mdicreate** -Meldung übergeben wurde, die das untergeordnete MDI-Fenster erstellt hat.
+Wenn ein untergeordnetes MDI-Fenster erstellt wird, sendet das System die [**WM \_ CREATE-Nachricht**](wm-create.md) an das Fenster. Der *lParam-Parameter* der **WM \_ CREATE-Nachricht** enthält einen Zeiger auf eine [**CREATESTRUCT-Struktur.**](/windows/win32/api/winuser/ns-winuser-createstructa) Das *lpCreateParams-Member* dieser -Struktur enthält einen Zeiger auf die [**MDICREATESTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa) die mit der **WM \_ MDICREATE-Nachricht** übergeben wurde, die das untergeordnete MDI-Fenster erstellt hat.
 
-Eine Anwendung sollte keine zweite WM- **\_ mdicreate** -Nachricht senden, während eine **WM- \_ mdicreate** -Nachricht noch verarbeitet wird. Beispielsweise sollte eine **WM- \_ mdicreate** -Nachricht nicht gesendet werden, solange ein untergeordnetes MDI-Fenster die **WM- \_ mdicreate** -Nachricht verarbeitet.
+Eine Anwendung sollte keine zweite **\_ WM MDICREATE-Nachricht** senden, während eine **WM \_ MDICREATE-Nachricht** noch verarbeitet wird. Beispielsweise sollte keine WM **\_ MDICREATE-Nachricht** gesendet werden, während ein untergeordnetes MDI-Fenster seine **WM \_ MDICREATE-Nachricht** verarbeitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Eine Anwendung sollte keine zweite WM- **\_ mdicreate** -Nachricht senden, währ
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -74,28 +74,28 @@ Eine Anwendung sollte keine zweite WM- **\_ mdicreate** -Nachricht senden, währ
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**"Anatemdiwindow"**](/windows/win32/api/winuser/nf-winuser-createmdiwindowa)
+[**CreateMDIWindow**](/windows/win32/api/winuser/nf-winuser-createmdiwindowa)
 </dt> <dt>
 
 [**CREATESTRUCT**](/windows/win32/api/winuser/ns-winuser-createstructa)
 </dt> <dt>
 
-[**Mdikreatestruct**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa)
+[**MDICREATESTRUCT**](/windows/win32/api/winuser/ns-winuser-mdicreatestructa)
 </dt> <dt>
 
-[**WM \_ Erstellen**](wm-create.md)
+[**WM \_ CREATE**](wm-create.md)
 </dt> <dt>
 
-[**WM- \_ mdidestroy**](wm-mdidestroy.md)
+[**WM \_ MDIDESTROY**](wm-mdidestroy.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Mehrere Dokument Schnittstellen](multiple-document-interface.md)
+[Mehrere Dokumentschnittstellen](multiple-document-interface.md)
 </dt> </dl>
 
  

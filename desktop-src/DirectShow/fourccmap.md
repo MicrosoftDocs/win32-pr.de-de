@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b9254986bebadeffafaa832817f59194bfc58e12
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: a0ba22ce288535a8d940a5f70275f0152ffa559090d820b77df06ed3d1a9178d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043265"
 ---
 # <a name="fourccmap-class"></a>FOURCCMap-Klasse
 
 ![fourccmap-Klassenhierarchie](images/fourcc01.png)
 
-Die **FOURCCMap-Klasse** ermöglicht die Konvertierung zwischen **GUID-Medienuntertypen** und 32-Bit-Medientags im alten Format.  In den ursprünglichen Windows-Multimedia-APIs wurden Medientypen mit 32-Bit-Werten markiert, die aus vier 8-Bit-Zeichen erstellt wurden und als **FOURCC** s bezeichnet wurden. DirectShow-Medientypen verfügen über **GUID-S** für den Untertyp, auch weil diese einfacher zu erstellen sind (die Erstellung einer neuen **FOURCC** erfordert die Registrierung bei Microsoft). Da **FOURCC-s** eindeutig sind, wurde eine 1:1-Zuordnung ermöglicht, indem ein Bereich von 4.000 Millionen **GUID-S** zugeordnet wurde, die **FOURCC** s darstellen. Bei diesem Bereich handelt es sich um alle **GUIDs** des Formulars:
+Die **FOURCCMap-Klasse** ermöglicht die Konvertierung zwischen **GUID-Medienuntertypen** und 32-Bit-Medientags im alten Format.  In der ursprünglichen Windows Multimedia-APIs wurden Medientypen mit 32-Bit-Werten markiert, die aus vier 8-Bit-Zeichen erstellt wurden und als **FOURCC** s bezeichnet wurden. DirectShow-Medientypen verfügen über **GUID-S** für den Untertyp, auch weil diese einfacher zu erstellen sind (die Erstellung einer neuen **FOURCC** erfordert die Registrierung bei Microsoft). Da **FOURCC-s** eindeutig sind, wurde eine 1:1-Zuordnung ermöglicht, indem ein Bereich von 4.000 Millionen **GUID-S** zugeordnet wurde, die **FOURCC** s darstellen. Bei diesem Bereich handelt es sich um alle **GUIDs** des Formulars:
 
 `XXXXXXXX-0000-0010-8000-00AA00389B71`
 
@@ -40,7 +40,7 @@ Die [**Methoden GetFOURCC**](fourccmap-getfourcc.md) und [**SetFOURCC**](fourccm
 | Bezeichnung | Wert |
 |------------------------------------------|----------------------------------------------------------|
 | [**FOURCCMap**](fourccmap-fourccmap.md) | Konstruktormethode.                                      |
-| [**GetFOURCC**](fourccmap-getfourcc.md) | Ruft **fourcc aus einem** **FOURCCMap-Objekt** ab.    |
+| [**GetFOURCC**](fourccmap-getfourcc.md) | Ruft die **FOURCC** aus einem **FOURCCMap-Objekt** ab.    |
 | [**SetFOURCC**](fourccmap-setfourcc.md) | Legt den **FOURCC-Teil** des **FOURCCMap-Objekts** fest. |
 
 

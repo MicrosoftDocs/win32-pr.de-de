@@ -1,36 +1,36 @@
 ---
-title: Primitive und benutzerdefinierte Bindungs Handles
-description: Alle Handles, die mit den Handle \_ t-oder RPC- \_ Bindungs handle-Typen deklariert werden, \_ sind primitive Bindungs Handles.
+title: Primitive und benutzerdefinierte Bindungshandles
+description: Alle Handles, die mit dem Handle t- oder \_ RPC BINDING HANDLE-Typ deklariert \_ \_ werden, sind primitive Bindungshandles.
 ms.assetid: 7a948aad-02fa-421d-b32c-f5dab071bd04
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d496a9a54ba0ee7b9552326f7c4dc15792a72bce
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2e0e1d6f7cc2ad4d11e268e0f5c83b0275fcd2677a32303820507272f550b834
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019150"
 ---
-# <a name="primitive-and-custom-binding-handles"></a>Primitive und benutzerdefinierte Bindungs Handles
+# <a name="primitive-and-custom-binding-handles"></a>Primitive und benutzerdefinierte Bindungshandles
 
-Alle Handles, die mit den [handle \_ t](/windows/desktop/Midl/handle-t) -oder [**RPC- \_ Bindungs \_ handle**](rpc-binding-handle.md) -Typen deklariert werden, sind primitive Bindungs Handles. Sie können die [handle \_ t](/windows/desktop/Midl/handle-t) -oder [**RPC- \_ Bindungs \_ handle**](rpc-binding-handle.md) -Typen so erweitern, dass mehr oder andere Informationen als der primitive Handle-Typ enthalten sind. Wenn Sie dies tun, erstellen Sie ein benutzerdefiniertes Bindungs handle.
+Alle Handles, die mit dem Handle [ \_ t-](/windows/desktop/Midl/handle-t) oder [**RPC BINDING \_ \_ HANDLE-Typ deklariert**](rpc-binding-handle.md) werden, sind primitive Bindungshandles. Sie können die [ \_ Handletypen t](/windows/desktop/Midl/handle-t) oder [**RPC BINDING \_ \_ HANDLE**](rpc-binding-handle.md) so erweitern, dass sie mehr oder andere Informationen enthalten, als der primitive Handletyp enthält. Wenn Sie dies tun, erstellen Sie ein benutzerdefiniertes Bindungshand handle.
 
-Um ein benutzerdefiniertes Bindungs Handle für Ihre verteilte Anwendung zu erstellen, müssen Sie einen eigenen Datentyp erstellen und das \[ [handle](/windows/desktop/Midl/handle) - \] Attribut für eine Typdefinition in der IDL-Datei angeben. Letztendlich ordnen die Stub-Dateien primitive Handles benutzerdefinierte Bindungs Handles zu.
+Um ein benutzerdefiniertes Bindungshandl für Ihre verteilte Anwendung zu erstellen, müssen Sie einen eigenen Datentyp erstellen und das Handleattribut für eine Typdefinition in Ihrer \[ [](/windows/desktop/Midl/handle) \] IDL-Datei angeben. Letztendlich ordnen die Stubdateien benutzerdefinierte Bindungshandles primitiven Handles zu.
 
-Wenn Sie einen eigenen Bindungs Handle-Typ erstellen, müssen Sie auch Bindungs-und Bindung-Routinen bereitstellen, die der Clientstub verwendet, um ein benutzerdefiniertes Handle einem primitiven handle zuzuordnen. Der Stub Ruft die BIND-und Bindung-Routinen am Anfang und am Ende jedes Remote Prozedur Aufrufs auf. Die Bindungs-und Bindung-Routinen müssen den folgenden Funktionsprototypen entsprechen.
+Wenn Sie einen eigenen Bindungshandpunkttyp erstellen, müssen Sie auch Bindungs- und Bindungsaufbindungsroutinen verwenden, die der Clientstub verwendet, um einem primitiven Handle ein benutzerdefiniertes Handle zu zuordnen. Der Stub ruft die Bindungs- und Bindungsroutinen am Anfang und Ende jedes Remoteprozeduraufrufs auf. Die Bindungs- und Bindungsaufbindungsroutinen müssen den folgenden Funktionsprototypen entsprechen.
 
 
 
-| Funktionsprototyp                     | BESCHREIBUNG       |
+| Funktionsprototyp                     | Beschreibung       |
 |----------------------------------------|-------------------|
-| Handle \_ t- \_ Typbindung (*Typ*)           | Bindungs Routine   |
-| void Type \_ Unbind (*Type*, *handle \_ t*) | Bindung der Routine aufheben |
+| handle \_ t type \_ bind(*type*)           | Bindungsroutine   |
+| void type \_ unbind(*type*, *handle \_ t*) | Entbindungsroutine |
 
 
 
- 
+ 
 
-Im folgenden Beispiel wird gezeigt, wie ein benutzerdefiniertes Bindungs Handle in der IDL-Datei definiert werden kann:
+Das folgende Beispiel zeigt, wie ein benutzerdefiniertes Bindungshandl in der IDL-Datei definiert werden kann:
 
 ``` syntax
 /* usrdef.idl */
@@ -58,11 +58,11 @@ interface usrdef
 }
 ```
 
-Wenn die Bindungs Routine einen Fehler feststellt, sollte Sie mithilfe der [**rpcraiseexception**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcraiseexception) -Funktion eine Ausnahme auslöst. Der Clientstub wird dann bereinigt, und die Ausnahme wird durch den Ausnahme Block für den Remote Prozedur Aufrufe auf der Clientseite gefiltert. Wenn die Bindungs Routine einfach **null** zurückgibt, wird der Client Code Fehler-RPC \_ S \_ ungültige \_ Bindung erhalten. Dies kann in bestimmten Situationen akzeptabel sein, aber andere Situationen (z. b. nicht genügend Arbeitsspeicher) Antworten nicht gut. Die Bindung-Routine sollte so entworfen werden, dass Sie nicht fehlschlägt. Die Bindung-Routine sollte keine Ausnahmen ausgelöst werden.
+Wenn die Bindungsroutine auf einen Fehler stößt, sollte sie mithilfe der [**RpcRerklärexception-Funktion eine Ausnahme**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcraiseexception) auslösen. Der Clientstub wird dann bereinigt und lässt die Ausnahme bis zum Ausnahmeblock filtern, der den Remoteprozeduraufruf auf clientseitiger Seite umhing. Wenn die Bindungsroutine einfach **NULL zurückgibt,** erhält der Clientcode den Fehler RPC \_ S INVALID \_ \_ BINDING. Dies kann in bestimmten Situationen akzeptabel sein, aber andere Situationen (z. B. nicht genügend Arbeitsspeicher) reagieren nicht gut. Die Unbind-Routine sollte so entworfen werden, dass sie nicht fehlschlägt. Die Unbind-Routine sollte keine Ausnahmen auslösen.
 
-Die vom Programmierer definierten Bindungs-und Bindung-Routinen werden in der Client Anwendung angezeigt. Im folgenden Beispiel ruft die BIND-Routine [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding) auf, um die Zeichen folgen Bindungs Informationen in ein Bindungs Handle zu konvertieren. Die Bindung-Routine ruft [**rpcbindingfree**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfree) auf, um das Bindungs Handle freizugeben.
+Die vom Programmierer definierten Bindungs- und Bindungsaufbindungsroutinen werden in der Clientanwendung angezeigt. Im folgenden Beispiel ruft die Bindungsroutine [**RpcBindingFromStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfromstringbinding) auf, um die Zeichenfolgenbindungsinformationen in ein Bindungshand handle zu konvertieren. Die Unbind-Routine ruft [**RpcBindingFree auf,**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingfree) um das Bindungshand handle frei zu geben.
 
-Der Name des vom Programmierer definierten Bindungs Handles, Daten \_ handle \_ Type, wird als Teil des Namens der Funktionen angezeigt. Sie wird auch als Parametertyp in den Funktionsparametern verwendet.
+Der Name des vom Programmierer definierten Bindungshandrs DATA HANDLE TYPE wird als Teil des \_ \_ Namens der Funktionen angezeigt. Sie wird auch als Parametertyp in den Funktionsparametern verwendet.
 
 ``` syntax
 /* The client stub calls this _bind routine at the */
@@ -108,13 +108,13 @@ void __RPC_USER DATA_HANDLE_TYPE_unbind(
 }
 ```
 
-Sowohl implizite als auch explizite Bindungs Handles können primitive oder benutzerdefinierte Handles sein. Das heißt, ein Handle kann sein:
+Sowohl implizite als auch explizite Bindungshandles können primitive oder benutzerdefinierte Handles sein. Das heißt, ein Handle kann folgendes sein:
 
 -   Primitiv und implizit
--   Benutzer definiert und implizit
+-   Benutzerdefiniert und implizit
 -   Primitiv und explizit
--   Benutzer definiert und explizit
+-   Benutzerdefiniert und explizit
 
- 
+ 
 
- 
+ 

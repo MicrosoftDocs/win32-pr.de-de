@@ -1,27 +1,27 @@
 ---
-title: Server seitige asynchrone Pipe-Verarbeitung
-description: Die Manager-Routine einer asynchronen Funktion empfängt immer das asynchrone Handle als ersten Parameter.
+title: Serverseitige asynchrone Pipebehandlung
+description: Die Managerroutine einer asynchronen Funktion empfängt immer das asynchrone Handle als ersten Parameter.
 ms.assetid: ddf9c319-6c4d-4de1-ab29-0ef9b76531ba
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2b0f11372090f1fd181c0d7272aa1446e5e3d22
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 58b879cad9b3bde57798a3ebd3c04f7c9a76cb0d1ed055d219195db51cbed4a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017790"
 ---
-# <a name="server-side-asynchronous-pipe-handling"></a>Server seitige asynchrone Pipe-Verarbeitung
+# <a name="server-side-asynchronous-pipe-handling"></a>Serverseitige asynchrone Pipebehandlung
 
-Die Manager-Routine einer asynchronen Funktion empfängt immer das asynchrone Handle als ersten Parameter. Der Server verwendet dieses Handle zum Senden der Antwort und zum Senden der ausgehenden Pipe-Daten, sobald diese verfügbar sind. Das Handle bleibt gültig, bis [**rpcasynccompletecalldarauf**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) aufgerufen wird, der Aufruf von [**rpcasyncabortcallcenter**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall)abgebrochen wird oder eine Ausnahme in der Manager-Routine auftritt. Die Anwendung muss alle Zeiger der obersten Ebene für die \[ **out** - \] und in- \[ **, out** -Parameter nachverfolgen \] , um Sie vor Abschluss des Aufrufes zu aktualisieren. Die Anwendung muss außerdem die \[ [**in**](/windows/desktop/Midl/in) \] -und Out- \[ [](/windows/desktop/Midl/out-idl) \] Pipes verfolgen.
+Die Managerroutine einer asynchronen Funktion empfängt immer das asynchrone Handle als ersten Parameter. Der Server verwendet dieses Handle, um die Antwort zu senden und die Out pipe-Daten zu senden, sobald sie verfügbar sind. Das Handle bleibt gültig, bis [**RpcAsyncCompleteCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) dafür aufgerufen wird, der Aufruf von [**RpcAsyncAbortCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall)abgebrochen wird oder eine Ausnahme in der Managerroutine auftritt. Die Anwendung muss alle Zeiger der obersten Ebene für die \[  \] Out- und \[  In-Out-Parameter \] nachverfolgen, um sie vor abschluss des Aufrufs zu aktualisieren. Die Anwendung muss auch die \[ [**In-**](/windows/desktop/Midl/in) \] und \[ [](/windows/desktop/Midl/out-idl) \] Out-Pipes nachverfolgen.
 
-Der Server sendet asynchrone pipedaten auf die gleiche Weise wie der Client. Weitere Informationen finden Sie unter [Client seitige asynchrone Pipe-Verarbeitung](client-side-asynchronous-pipe-handling.md).
+Der Server sendet asynchrone Pipedaten auf die gleiche Weise wie der Client. Weitere Informationen finden Sie unter [Clientseitige asynchrone Pipebehandlung.](client-side-asynchronous-pipe-handling.md)
 
-Der Server empfängt asynchrone pipedaten auf die gleiche Weise wie der Client. Wenn der Empfangs Mechanismus asynchrone Prozedur Aufrufe (APCs) ist, muss der Server ein Thread handle (in pAsync->u. APC. hThread) angeben und das asynchrone Handle mit der Lauf Zeit Bibliothek registrieren.
+Der Server empfängt asynchrone Pipedaten auf die gleiche Weise wie der Client. Wenn der Empfangsmechanismus asynchrone Prozeduraufrufe (APCs) ist, muss der Server ein Threadhandle (in pAsync->u.APC.hThread) angeben und das asynchrone Handle bei der Laufzeitbibliothek registrieren.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel behandelt die Server-Manager-Routine myasyncpipefunc den Remote Prozedur Aufrufe vom Client.
+In diesem Beispiel verarbeitet die Server-Manager-Routine MyAsyncPipeFunc den Remoteprozeduraufruf vom Client.
 
 
 ```C++
@@ -178,12 +178,12 @@ void MyAsyncPipeAPCRoutine (
 [Pipes](pipes.md)
 </dt> <dt>
 
-[Asynchrone Mittell](/windows/desktop/Midl/async)
+[Asynchrone MIDL](/windows/desktop/Midl/async)
 </dt> <dt>
 
-[Server seitiges asynchrones RPC](server-side-asynchronous-rpc.md)
+[Serverseitiger asynchroner RPC](server-side-asynchronous-rpc.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

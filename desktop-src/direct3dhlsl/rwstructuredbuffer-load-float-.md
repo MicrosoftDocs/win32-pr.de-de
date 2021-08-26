@@ -1,9 +1,9 @@
 ---
-title: 'Rwstructuredbuffer:: Load (int)-Funktion'
-description: 'Liest Puffer Daten. | Rwstructuredbuffer:: Load (int)-Funktion'
+title: RWStructuredBuffer::Load(int)-Funktion
+description: Liest Pufferdaten. | RWStructuredBuffer::Load(int)-Funktion
 ms.assetid: 9CB40579-6BF8-468C-81B8-936D9940458E
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c20998faef8f5a018aaf95571be3c9d64730c436
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e3cc8fbd0cfa18f2ac6c5d7109e8690d829bbde2175e8808865e68e29e63c955
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067756"
 ---
-# <a name="rwstructuredbufferloadint-function"></a>Rwstructuredbuffer:: Load (int)-Funktion
+# <a name="rwstructuredbufferloadint-function"></a>RWStructuredBuffer::Load(int)-Funktion
 
-Liest Puffer Daten.
+Liest Pufferdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ Liest Puffer Daten.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort des Puffers.
+Die Position des Puffers.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Der Speicherort des Puffers.
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**rwstructuredbuffer**](sm5-object-rwstructuredbuffer.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWStructuredBuffer-Objekt.**](sm5-object-rwstructuredbuffer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -68,11 +68,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](rwstructuredbuffer-load.md)
+[Laden von Methoden](rwstructuredbuffer-load.md)
 </dt> </dl>
 
  

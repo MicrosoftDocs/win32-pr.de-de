@@ -1,9 +1,9 @@
 ---
-title: Processquadtess factorsavg-Funktion
-description: Generiert die korrigierten Mosaik Faktoren für einen Quad-Patch. | Processquadtess factorsavg-Funktion
+title: ProcessQuadTessFactorsAvg-Funktion
+description: Generiert die korrigierten Mosaikfaktoren für einen Quad patch. | ProcessQuadTessFactorsAvg-Funktion
 ms.assetid: 3af1dad3-1923-45f3-9908-ca403e7f0cfe
 keywords:
-- Processquadtess factorsavg-Funktion HLSL
+- ProcessQuadTessFactorsAvg-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 36a50dd971161f3e03514947db447774da5b6a62
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 601036c20651da03de15fe4de807ccb6e9d73f5e0b6fc9c1cefc48ccb48b9147
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067790"
 ---
-# <a name="processquadtessfactorsavg-function"></a>Processquadtess factorsavg-Funktion
+# <a name="processquadtessfactorsavg-function"></a>ProcessQuadTessFactorsAvg-Funktion
 
-Generiert die korrigierten Mosaik Faktoren für einen Quad-Patch.
+Generiert die korrigierten Mosaikfaktoren für einen Quad patch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,48 +40,48 @@ void ProcessQuadTessFactorsAvg(
 
 <dl> <dt>
 
-*Rawedgefactors* \[ in\]
+*RawEdgeFactors* \[ In\]
 </dt> <dd>
 
 Typ: **float4**
 
-Die Edge-Mosaik Faktoren, die an die Mosaik Phase übergebenen werden.
+Die Mosaikfaktoren der Kante, die an die Mosaikphase übergeben werden.
 
 </dd> <dt>
 
-*Insidescale* \[ in\]
+*InsideScale* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Der Skalierungsfaktor, der auf die von der Mosaik Phase berechneten UV-Mosaik Faktoren angewendet wird. Der zulässige Bereich für insidescale liegt zwischen 0,0 und 1,0.
+Der Skalierungsfaktor, der auf die UV-Mosaikfaktoren angewendet wird, die von der Mosaikphase berechnet werden. Der zulässige Bereich für InsideScale liegt zwischen 0,0 und 1,0.
 
 </dd> <dt>
 
-*Roundebug Factors* \[ vorgenommen\]
+*RoundedEdgeTessFactors* \[ out\]
 </dt> <dd>
 
 Typ: **float4**
 
-Die gerundeten Edge-Mosaik Faktoren, die von der Mosaik Phase berechnet werden.
+Die gerundeten Edge-Mosaikfaktoren, die von der Mosaikphase berechnet werden.
 
 </dd> <dt>
 
-*Rounabdinsidetess Factors* \[ vorgenommen\]
+*RoundedInsideTessFactors* \[ out\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die gerundeten Mosaik Faktoren, die von der Mosaik Phase für innere Ränder berechnet werden.
+Die gerundeten Mosaikfaktoren, die von der Mosaikstufe für innerhalb von Kanten berechnet werden.
 
 </dd> <dt>
 
-*Unroundecodinsidetess Factors* \[ vorgenommen\]
+*UnroundedInsideTessFactors* \[ out\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Mosaik Faktoren, die von der Mosaik Phase für innere Ränder berechnet werden.
+Die Mosaikfaktoren, die von der Mosaikphase für innerhalb von Kanten berechnet werden.
 
 </dd> </dl>
 
@@ -89,29 +89,29 @@ Die Mosaik Faktoren, die von der Mosaik Phase für innere Ränder berechnet werd
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Generiert die korrigierten Mosaik Faktoren für einen Quad-Patch, wobei die in Mosaik Faktoren als Durchschnitt der Edge-Mosaik Faktoren berechnet werden. Die inneren Tess-Faktoren sind identische Werte, die durch den Durchschnitt aller vier von insidescale skalierten Kanten bestimmt werden. Das Ergebnis wird dann basierend auf dem Partitionierungs Modus abgerundet, aber die nicht gerundeten Ergebnisse sind mithilfe des Parameters unroundedinsidetess Factors verfügbar.
+Generiert die korrigierten Mosaikfaktoren für einen Quad patch und setzt die Mosaikfaktoren innerhalb des Durchschnittlichen der Mosaikfaktoren des Edgesesselns. Die Inside-Tess-Faktoren sind identische Werte, die durch den Durchschnitt aller vier von InsideScale skalierten Kanten bestimmt werden. Das Ergebnis wird dann basierend auf dem Partitionierungsmodus gerundet, aber die ungerundeten Ergebnisse sind mithilfe des UnroundedInsideTessFactors-Parameters verfügbar.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
  
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        |          |       |         |
 
@@ -119,14 +119,14 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

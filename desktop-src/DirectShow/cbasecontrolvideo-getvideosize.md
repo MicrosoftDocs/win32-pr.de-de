@@ -1,7 +1,7 @@
 ---
-description: Die getvideosize-Methode ruft die Breite und Höhe des nativen Videos ab.
+description: Die GetVideoSize-Methode ruft die Breite und Höhe des nativen Videos ab.
 ms.assetid: b3461a56-705b-465a-9cfc-e86fd52a07c5
-title: Cbasecontrolvideo. getvideosize-Methode (ctlutil. h)
+title: CBaseControlVideo.GetVideoSize-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4b1df6fe781f036043728050354519dfa6e28d00
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b49f58901ac362b5a03d069485ec4dbf74e22d4549dc628f26baa5c2bfa85234
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056940"
 ---
-# <a name="cbasecontrolvideogetvideosize-method"></a>Cbasecontrolvideo. getvideosize-Methode
+# <a name="cbasecontrolvideogetvideosize-method"></a>CBaseControlVideo.GetVideoSize-Methode
 
 Die `GetVideoSize` -Methode ruft die Breite und Höhe des nativen Videos ab.
 
@@ -46,20 +46,20 @@ HRESULT GetVideoSize(
 *pWidth* 
 </dt> <dd>
 
-Zeiger auf die Video Breite.
+Zeiger auf die Videobreite.
 
 </dd> <dt>
 
 *pHeight* 
 </dt> <dd>
 
-Ein Zeiger auf die Video Höhe.
+Zeiger auf die Videohöhe.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Gibt einen **HRESULT** -Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Gibt einen **HRESULT** -Wert zurück.
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

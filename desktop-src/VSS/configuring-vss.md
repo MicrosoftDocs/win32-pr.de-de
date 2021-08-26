@@ -1,23 +1,23 @@
 ---
-description: 'Durch die Verwendung der VSS-Konfigurationstools&\# 8212; einschließlich Festlegen des schattenkopiespaces, Auswählen einer Wiederherstellungsmethode und Ändern eines Wiederherstellungs Ziels&\# 8212; Writer und Anforderer steuern, wie ein Sicherungs-oder Wiederherstellungs Vorgang stattfindet:'
+description: 'Mithilfe von VSS-Konfigurationstools&8212; einschließlich Festlegen des Schattenkopiekontexts, Auswählen einer Wiederherstellungsmethode und Ändern eines Wiederherstellungsziels \#&8212;Writer und An anfordernde Stellen steuern, wie ein Sicherungs- oder Wiederherstellungsvorgang durchgeführt \# wird:'
 ms.assetid: fe6d7e5d-c181-4413-a4ca-c9e0c7cfc6f5
 title: Konfigurieren von VSS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b042e33a46a36f68883c204ae1698899c5a83529
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 911ba58b29b63e84cdfc12c17618ba394ee0b24d3b2c0d3f3381360548a3c135
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032850"
 ---
 # <a name="configuring-vss"></a>Konfigurieren von VSS
 
-Mithilfe der VSS-Konfigurationstools – einschließlich Festlegen des schattenkopiespaces, Auswählen einer Wiederherstellungsmethode und Ändern eines Wiederherstellungs Ziels – Writer und Anforderer steuern, wie ein Sicherungs-oder Wiederherstellungs Vorgang stattfindet:
+Mithilfe von VSS-Konfigurationstools – einschließlich festlegen des Schattenkopiekontexts, Auswählen einer Wiederherstellungsmethode und Ändern eines Wiederherstellungsziels – steuern Writer und Ansteller, wie ein Sicherungs- oder Wiederherstellungsvorgang durchgeführt wird:
 
--   [Kontext Konfigurationen für Schatten Kopien](shadow-copy-context-configurations.md)
--   [VSS-Sicherungs Konfigurationen](vss-backup-configurations.md)
--   [VSS-Wiederherstellungs Konfigurationen](vss-restore-configurations.md)
+-   [Schattenkopiekontextkonfigurationen](shadow-copy-context-configurations.md)
+-   [VSS-Sicherungskonfigurationen](vss-backup-configurations.md)
+-   [VSS-Wiederherstellungskonfigurationen](vss-restore-configurations.md)
 
  
 

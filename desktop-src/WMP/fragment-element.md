@@ -1,9 +1,9 @@
 ---
-title: Fragment-Element
-description: Das Fragment-Element gibt eine Bedingung der Abfrage an, die Elemente aus der Bibliothek auswählt. Bedingungen werden durch Bedingungs Zeichenfolgen angegeben. Eine Bedingungs Zeichenfolge weist in der Regel einen Namensteil, einen Bedingungs Teil und einen Wertanteil auf.
+title: fragment-Element
+description: Das Fragmentelement gibt eine Bedingung der Abfrage an, die Elemente aus der Bibliothek auswählt. Bedingungen werden durch Bedingungszeichenfolgen angegeben. Eine Bedingungszeichenfolge verfügt in der Regel über einen Namensteil, einen Bedingungsteil und einen Wertteil.
 ms.assetid: 1575318f-8527-42ba-9c2f-9993a60987d7
 keywords:
-- Fenster Media Player des fragmentelements
+- fragment-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: da4cd18c6286cf2439e310b4e797f6978f3b2395
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1010b269302f88f163232bcaf3e37111e5fc219944ff1d141c1189e119bba05a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003700"
 ---
-# <a name="fragment-element"></a>Fragment-Element
+# <a name="fragment-element"></a>fragment-Element
 
-Das **Fragment** -Element gibt eine Bedingung der Abfrage an, die Elemente aus der Bibliothek auswählt. Bedingungen werden durch Bedingungs Zeichenfolgen angegeben. Eine Bedingungs Zeichenfolge weist in der Regel einen Namensteil, einen Bedingungs Teil und einen Wertanteil auf.
+Das **Fragmentelement** gibt eine Bedingung der Abfrage an, die Elemente aus der Bibliothek auswählt. Bedingungen werden durch Bedingungszeichenfolgen angegeben. Eine Bedingungszeichenfolge verfügt in der Regel über einen Namensteil, einen Bedingungsteil und einen Wertteil.
 
 ``` syntax
 <fragment
@@ -35,29 +35,29 @@ Das **Fragment** -Element gibt eine Bedingung der Abfrage an, die Elemente aus d
 
 <dl> <dt>
 
-<span id="name__required______________"></span><span id="NAME__REQUIRED______________"></span>**Name** (erforderlich) 
+<span id="name__required______________"></span><span id="NAME__REQUIRED______________"></span>**name** (erforderlich) 
 </dt> <dd>
 
-Ein Teil einer Bedingungs Zeichenfolge. Siehe Hinweise.
+Ein Teil einer Bedingungszeichenfolge. Siehe Hinweise.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                                                               |
 |-----------|------------------------------------------------------------------------|
-| Parent    | [Filter](filter-element.md), [SourceFilter](sourcefilter-element.md) |
+| Parent    | [filter](filter-element.md), [sourceFilter](sourcefilter-element.md) |
 | Untergeordnet     | [argument](argument-element.md)                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bestimmte Bedingungs Zeichenfolgen verfügen über einen metadatenattributteil, einen Bedingungs Teil und einen Wertteil. In der Bedingungs Zeichenfolge "Album Artist is Joe" lautet der metadatenattributteil z. b. "Album Artist", der Bedingungs Teil ist "is", und der Wert Teil ist "Joe".
+Bestimmte Bedingungszeichenfolgen verfügen über einen Metadatenattributteil, einen Bedingungsteil und einen Wertteil. In der Bedingungszeichenfolge "Album Interpret Is Joe" ist der Metadatenattributteil beispielsweise "Album Interpret", der Bedingungsteil ist "Is", und der Wertteil ist "Joe".
 
 Beispiel:
 
@@ -71,29 +71,29 @@ Beispiel:
 
 
 
-Für Bedingungs Zeichenfolgen dieses Typs zeigt die folgende Tabelle die möglichen Metadatenattribute, mögliche Bedingungen und mögliche Werte an:
+Für Bedingungszeichenfolgen dieses Typs enthält die folgende Tabelle die möglichen Metadatenattribute, mögliche Bedingungen und mögliche Werte:
 
 
 
 | Metadatenattribut                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Mögliche Bedingungen                                                                                             | Mögliche Werte                                                                                                                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Actor Album-Künstler<br/> Titel des Albums<br/> Autor<br/> Caption<br/> Channel<br/> Composer<br/> Dirigentin<br/> Inhaltsanbieter<br/> Inhaltsanbieter Genre<br/> Beitragende Künstlerin<br/> Copyright Text<br/> Regisseur<br/> Episode<br/> Dateityp<br/> Genre<br/> Schlüssel<br/> Keywords<br/> Sprache<br/> Mood<br/> Eltern Bewertung<br/> Zeitraum<br/> Producer<br/> Anbieter<br/> Publisher<br/> Reihen<br/> Stationsname<br/> Subgenre<br/> Untertitel<br/> Titel<br/> Writer<br/> | Equalsist nicht gleich<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | Ein beliebiger Zeichenfolgenwert                                                                                                                                                                                                                                                                                                  |
-| Bitrate (in Kilobyte pro Sekunde)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Equalsist nicht gleich<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | 4864<br/> 96<br/> 128<br/> 160<br/> 192<br/> 256<br/> 300<br/> 500<br/> 750<br/> 1000<br/> 1500<br/> 3000<br/> 4500<br/> 6000<br/> 7.500<br/>                                                                            |
-| Sekundärer Medientyp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Equalsist nicht gleich<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | Audiodatei: newsaudiodatei: Talk Show<br/> Audiodokumentation: Audiobücher<br/> Audiosprache: audiowort<br/> Video: Neuigkeiten<br/> Video: Talk Show<br/> Video: Homepage-Video<br/> Video: Movie/Film<br/> Video: TV Show<br/> Video: Video zu Unternehmen<br/> Video: Musikvideo<br/> |
-| Bildhöhe der Dateigröße (in KB)<br/> Bildbreite<br/> Wiedergabe Anzahl: Gesamtsummen<br/> Wiedergabe Anzahl: Abend Summen<br/> Wiedergabe Anzahl: Morgen Summen<br/> Wiedergabe Anzahl: Nacht Summen<br/> Wiedergabe Anzahl: Gesamt Gesamt<br/> Wiedergabe Anzahl: Gesamter Wochentag<br/> Wiedergabe Anzahl: Gesamt Wochenende<br/>                                                                                                                                                                                                                                                                                                                  | Ist kleiner als<br/> Is<br/> Ist nicht<br/>                                          | Beliebige Zahl                                                                                                                                                                                                                                                                                                        |
-| Broadcast-timedate-codiert<br/> Erfasste Datumsangaben<br/> Datum der Erstellung<br/> Releasejahr<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Ist "beforeis" nach<br/> Is<br/> Ist nicht<br/>                                                    | Gestern letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/> 2000er Sek.<br/> 1990er Jahren<br/> 1980er<br/> 70er Jahren<br/> 60er Jahren<br/> 50er Jahre<br/> 1940s<br/>                                                            |
-| Date Added                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Ist "beforeis" nach<br/> Is<br/> Ist nicht<br/>                                                    | Gestern letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/>                                                                                                                                                                                   |
-| Letztes Datum                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Älterer thanaktueller als<br/> Is<br/> Ist nicht<br/>                                           | Gestern letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/>                                                                                                                                                                                   |
-| Ergriffene Monate                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Ist beforeis aktueller als<br/> Is<br/> Ist nicht<br/>                                         | 12<br/> 3<br/> 4<br/> 5<br/> 6<br/> 7<br/> 8<br/> 9<br/> 10<br/> 11<br/> 12<br/> 13<br/>                                                                                                                                                  |
-| Jahres Angabe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Ist beforeis aktueller als<br/> Is<br/> Ist nicht<br/>                                         | Beliebiges Jahr                                                                                                                                                                                                                                                                                                          |
-| Automatische Ratingbewertung<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Ist bei "leastis" nicht mehr als<br/> Is<br/> Ist nicht<br/>                                           | Unrated1-Stern<br/> Zwei Sterne<br/> Drei Sterne<br/> Vier Sterne<br/> Fünf Sterne<br/>                                                                                                                                                                                                              |
-| Benutzerdefiniertes Feld \# 1 benutzerdefiniertes Feld \# 2<br/> Dateiname<br/> Schlüsselfelder<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | "Kontains" enthält nicht<br/>                                                                             | Beliebige Zeichenfolge                                                                                                                                                                                                                                                                                                        |
+| Actor ("Actor("Akteur)"<br/> Albumtitel<br/> Autor<br/> Caption<br/> Kanal<br/> Composer<br/> Dirigent<br/> Inhaltsanbieter<br/> Content Provider Genre<br/> Mitwirkende Interpretin<br/> Copyrighttext<br/> Regisseur<br/> Episode<br/> Dateityp<br/> Genre<br/> Key<br/> Keywords<br/> Sprache<br/> Stimmung<br/> Bewertung der Eltern<br/> Zeitraum<br/> Producer<br/> Anbieter<br/> Herausgeber<br/> Reihen<br/> Stationsname<br/> Subgenre<br/> Untertitel<br/> Titel<br/> Writer<br/> | EqualsDoes Not Equal<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | Ein beliebiger Zeichenfolgenwert                                                                                                                                                                                                                                                                                                  |
+| Bitrate (in Kilobytes pro Sekunde)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | EqualsDoes Not Equal<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | 4864<br/> 96<br/> 128<br/> 160<br/> 192<br/> 256<br/> 300<br/> 500<br/> 750<br/> 1000<br/> 1500<br/> 3000<br/> 4500<br/> 6000<br/> 7.500<br/>                                                                            |
+| Sekundärer Medientyp                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | EqualsDoes Not Equal<br/> Is<br/> Ist nicht<br/> Enthält<br/> Enthält nicht<br/> | Audio: NewsAudio: Talk Show<br/> Audio: Audio Books<br/> Audio: Gesprochenes Audiowort<br/> Video: Neuigkeiten<br/> Video: Talk Show<br/> Video: Home-Video<br/> Video: Film/Film<br/> Video: TV-Show<br/> Video: Unternehmensvideo<br/> Video: Musik Video<br/> |
+| Dateigröße (in KB)Bildhöhe<br/> Bildbreite<br/> Anzahl der Wiedergaben: Gesamtsummen der Gesamtanzahl der Sonntage<br/> Anzahl der Wiedergaben: Gesamtsummen für den Abend<br/> Play Count : Morning Totals<br/> Play Count : Night Totals<br/> Wiedergabeanzahl: Gesamtsumme<br/> Play Count : Total Weekday<br/> Play Count : Total Weekend<br/>                                                                                                                                                                                                                                                                                                                  | Ist kleiner alsIs größer als<br/> Is<br/> Ist nicht<br/>                                          | Beliebige Zahl                                                                                                                                                                                                                                                                                                        |
+| BroadcastzeitDate codiert<br/> Aufgezeichnetes Datum<br/> Datum der Erstellung<br/> Releasejahr<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Ist BeforeIs After<br/> Is<br/> Ist nicht<br/>                                                    | Gestrige Letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/> 2000er<br/> 1990er-Jahre<br/> 1980er-Jahre<br/> 1970er jahren<br/> 1960er jahren<br/> 1950er-Jahre<br/> 1940er-Jahre<br/>                                                            |
+| Date Added                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Ist BeforeIs After<br/> Is<br/> Ist nicht<br/>                                                    | Gestrige Letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/>                                                                                                                                                                                   |
+| Datum der letzten Abspielung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Älter alsWeiter zuletzt als<br/> Is<br/> Ist nicht<br/>                                           | Gestrige Letzte Woche<br/> Letzter Monat<br/> 6 Monate<br/> 1 Jahr<br/> 2 Jahre<br/> 5 Jahre<br/>                                                                                                                                                                                   |
+| Genommener Monat                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Ist beforeIs aktueller als<br/> Is<br/> Ist nicht<br/>                                         | 12<br/> 3<br/> 4<br/> 5<br/> 6<br/> 7<br/> 8<br/> 9<br/> 10<br/> 11<br/> 12<br/> 13<br/>                                                                                                                                                  |
+| Aufgenommenes Jahr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Ist beforeIs aktueller als<br/> Is<br/> Ist nicht<br/>                                         | Beliebiges Jahr                                                                                                                                                                                                                                                                                                          |
+| Automatische BewertungMeine Bewertung<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Ist at leastIs nicht mehr als<br/> Is<br/> Ist nicht<br/>                                           | Unrated1 Star<br/> Zwei Sterne<br/> Drei Sterne<br/> Vier Sterne<br/> Fünf Sterne<br/>                                                                                                                                                                                                              |
+| Benutzerdefiniertes \# Feld 1Custom Field \# 2<br/> Dateiname<br/> Schlüsselfelder<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | ContainsDoes Not Contain<br/>                                                                             | Beliebige Zeichenfolge                                                                                                                                                                                                                                                                                                        |
 
 
 
  
 
-Bestimmte Bedingungs Zeichenfolgen haben einen begrenterteil, einen Zahlen Teil und einen Format Teil. In der Bedingungs Zeichenfolge "begrenzen der Gesamtgröße auf 3 Megabyte" lautet der Begrenzungs Teil beispielsweise "begrenzen der Gesamtgröße auf", der Zahlen Teil "3" und der Format Teil "Megabytes".
+Bestimmte Bedingungszeichenfolgen verfügen über einen Begrenzungsteil, einen Zahlenteil und einen Formatteil. In der Bedingungszeichenfolge "Limit Total Size To 3 Megabytes" ist der Limiterteil beispielsweise "Limit Total Size To", der Zahlenteil ist "3" und der Formatteil ist "Megabytes".
 
 Beispiel:
 
@@ -107,20 +107,20 @@ Beispiel:
 
 
 
-Für Bedingungs Zeichenfolgen dieses Typs werden in der folgenden Tabelle die möglichen begrentoren und Formate angezeigt.
+Für Bedingungszeichenfolgen dieses Typs enthält die folgende Tabelle die möglichen Grenzwerte und Formate.
 
 
 
-| Einschränkung                 | Mögliche Zahlen | Mögliche Formate                |
+| Limiter                 | Mögliche Zahlen | Mögliche Formate                |
 |-------------------------|------------------|---------------------------------|
-| Beschränken der Gesamtgröße auf     | Beliebige Zahl       | Kilobyte, Megabyte, Gigabyte |
-| Beschränken der Gesamtdauer auf | Beliebige Zahl       | Sekunden, Minuten, Stunden, Tage   |
+| Gesamtgröße begrenzen auf     | Beliebige Zahl       | Kilobytes, Megabytes, Gigabytes |
+| Gesamtdauer begrenzen auf | Beliebige Zahl       | Sekunden, Minuten, Stunden, Tage   |
 
 
 
  
 
-Bestimmte Bedingungs Zeichenfolgen haben einen begrenterteil und einen Zahlen Teil. In der Bedingungs Zeichenfolge "Anzahl von Elementen auf 25 begrenzen" lautet der Begrenzungs Teil beispielsweise "Limit number of Items", und der Zahlen Teil ist "25".
+Bestimmte Bedingungszeichenfolgen verfügen über einen Begrenzungsteil und einen Zahlenteil. In der Bedingungszeichenfolge "Limit Number of Items to 25" (Anzahl von Elementen auf 25 beschränken) ist der Limiterteil beispielsweise "Limit Number of Items" (Anzahl der Elemente begrenzen) und number (Anzahl) ist "25".
 
 Beispiel:
 
@@ -133,19 +133,19 @@ Beispiel:
 
 
 
-Für Bedingungs Zeichenfolgen dieses Typs wird in der folgenden Tabelle die einzige mögliche Begrenzung angezeigt.
+Für Bedingungszeichenfolgen dieses Typs zeigt die folgende Tabelle den einzigen möglichen Grenzwert.
 
 
 
-| Einschränkung               | Mögliche Zahlen |
+| Limiter               | Mögliche Zahlen |
 |-----------------------|------------------|
-| Anzahl der Elemente begrenzen | Beliebige Zahl       |
+| Begrenzen der Anzahl von Elementen | Beliebige Zahl       |
 
 
 
  
 
-Bestimmte Bedingungs Zeichenfolgen verfügen über einen Schutzbereich und einen Bedingungs Teil. Beispielsweise ist die Bedingungs Zeichenfolge "Schutz ist vorhanden" der Schutz Teil "Schutz", und der Bedingungs Teil ist "ist".
+Bestimmte Bedingungszeichenfolgen verfügen über einen Schutz- und einen Bedingungsteil. In der Bedingungszeichenfolge "Protection Is present" (Schutz ist vorhanden) ist der Schutzteil "Protection", und der Bedingungsteil ist "Is".
 
 Beispiel:
 
@@ -158,11 +158,11 @@ Beispiel:
 
 
 
-Für Bedingungs Zeichenfolgen dieses Typs zeigt die folgende Tabelle die möglichen Bedingungen an.
+Für Bedingungszeichenfolgen dieses Typs zeigt die folgende Tabelle die möglichen Bedingungen.
 
 
 
-| Schutz Teil | Mögliche Bedingungen             |
+| Schutzteil | Mögliche Bedingungen             |
 |--------------------|---------------------------------|
 | Schutz         | Is<br/> Ist nicht<br/> |
 
@@ -170,7 +170,7 @@ Für Bedingungs Zeichenfolgen dieses Typs zeigt die folgende Tabelle die möglic
 
  
 
-Es gibt einen Typ von **Fragment** -Element, der keine Bedingungs Zeichenfolge enthält. Wenn das Name-Attribut eines **Fragment** -Elements "zufällige Wiedergabe Reihenfolge" ist, enthält das **Fragment** -Element keine **Argument** Elemente. Dieses **Fragment** -Element weist den Player an, die Liste in zufälliger Reihenfolge wiederzugeben.
+Es gibt einen **Fragmentelementtyp,** der keine Bedingungszeichenfolge enthält. Wenn das Name-Attribut eines **Fragmentelements** "Randomize Playback Order" lautet, enthält das **Fragmentelement** keine **Argumentelemente.** Dieses **Fragmentelement** weist den Spieler an, die Liste in zufälliger Reihenfolge wieder zu spielen.
 
 Beispiel:
 
@@ -182,7 +182,7 @@ Beispiel:
 
 
 
-Bestimmte Bedingungs Zeichenfolgen verfügen über einen Sortierungs Teil, einen Wertanteil und einen Bedingungs Teil. In der Bedingungs Zeichenfolge "Sortieren nach Titel aufsteigender Reihenfolge" lautet der Sortierungs Teil z. b. "Sortieren nach", der Wertteil ist "Title", und der Bedingungs Teil ist "Aufsteigend". Beachten Sie, dass in diesem Fall der Wert Teil ein Metadatenattribut ist.
+Bestimmte Bedingungszeichenfolgen verfügen über einen Sortierteil, einen Wertteil und einen Bedingungsteil. In der Bedingungszeichenfolge "Sort By Title Ascending Order" ist der Sortierteil beispielsweise "Sort By", der Wertteil ist "Title" und der Bedingungsteil ist "Ascending". Beachten Sie, dass in diesem Fall der Wertteil ein Metadatenattribut ist.
 
 Beispiel:
 
@@ -196,29 +196,29 @@ Beispiel:
 
 
 
-Für Bedingungs Zeichenfolgen dieses Typs zeigt die folgende Tabelle die möglichen Werte und Bedingungen an.
+Für Bedingungszeichenfolgen dieses Typs enthält die folgende Tabelle die möglichen Werte und Bedingungen.
 
 
 
-| Sortier Teil | Mögliche Werte                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Mögliche Bedingungen                              |
+| Sortierteil | Mögliche Werte                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Mögliche Bedingungen                              |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| Sortieren nach      | Genretitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Wiedergabe Anzahl: Gesamt Gesamt<br/> Wiedergabe Anzahl: Morgen Summen<br/> Wiedergabe Anzahl: Gesamtsummen<br/> Wiedergabe Anzahl: Abend Summen<br/> Wiedergabe Anzahl: Nacht Summen<br/> Wiedergabe Anzahl: Gesamter Wochentag<br/> Wiedergabe Anzahl: Gesamt Wochenende<br/> Akteur<br/> Untertitel<br/> Stationsname<br/> Channel<br/> Broadcast Zeit<br/> Regisseur<br/> Releasejahr<br/> Writer<br/> Producer<br/> Erfasste Datumsangaben<br/> Codiertes Datum<br/> Bitrate<br/> Schutz<br/> | Aufsteisteigend<br/> Zufällig<br/> |
+| Sortieren nach      | GenreTitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Wiedergabeanzahl: Gesamtsumme<br/> Play Count : Morning Totals<br/> Anzahl der Wiedergaben: Gesamtsummen der Gesamtanzahl der Sonntage<br/> Anzahl der Wiedergaben: Gesamtsummen für den Abend<br/> Play Count : Night Totals<br/> Play Count : Total Weekday<br/> Play Count : Total Weekend<br/> Akteur<br/> Untertitel<br/> Stationsname<br/> Kanal<br/> Übertragungszeit<br/> Regisseur<br/> Releasejahr<br/> Writer<br/> Producer<br/> Aufgezeichnetes Datum<br/> Datumscodiert<br/> Bitrate<br/> Schutz<br/> | AscendingDescending<br/> Zufällig<br/> |
 
 
 
  
 
-Wenn Sie ein Fragment-Element zum Sortieren einer Wiedergabeliste verwenden, müssen Sie nach einem Metadatenattribut sortieren, das für den Typ der zu sortierenden Medienelemente gilt. Wenn Sie z. b. Musik Elemente sortieren, können Sie nicht nach Actor sortieren. In der folgenden Tabelle sind die Metadatenattribute aufgeführt, die Sie zum Sortieren der Medientypen verwenden können.
+Wenn Sie ein Fragmentelement zum Sortieren einer Wiedergabeliste verwenden, müssen Sie nach einem Metadatenattribut sortieren, das für den Typ der Medienelemente gilt, die Sie sortieren. Wenn Sie beispielsweise Musikelemente sortieren, können Sie nicht nach Actor sortieren. Die folgende Tabelle zeigt, welche Metadatenattribute Sie zum Sortieren der Medientypen verwenden können.
 
 
 
 | Medientyp  | Mögliche Metadatenattribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Musik       | Genretitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Wiedergabe Anzahl: Gesamt Gesamt<br/> Wiedergabe Anzahl: Morgen Summen<br/> Wiedergabe Anzahl: Gesamtsummen<br/> Wiedergabe Anzahl: Abend Summen<br/> Wiedergabe Anzahl: Nacht Summen<br/> Wiedergabe Anzahl: Gesamter Wochentag<br/> Wiedergabe Anzahl: Gesamt Wochenende<br/>                                                                                                                                                                                                                                                                                            |
-| Video oder TV | Genreaktor<br/> Untertitel<br/> Titel<br/> Date Added<br/> Automatische Bewertung<br/> Stationsname<br/> Channel<br/> Broadcast Zeit<br/> Regisseur<br/> Releasejahr<br/> Writer<br/> Producer<br/> Erfasste Datumsangaben<br/> Codiertes Datum<br/> Bitrate<br/> Meine Bewertung<br/> Schutz<br/> Wiedergabe Anzahl: Gesamt Gesamt<br/> Wiedergabe Anzahl: Morgen Summen<br/> Wiedergabe Anzahl: Gesamtsummen<br/> Wiedergabe Anzahl: Abend Summen<br/> Wiedergabe Anzahl: Nacht Summen<br/> Wiedergabe Anzahl: Gesamter Wochentag<br/> Wiedergabe Anzahl: Gesamt Wochenende<br/> |
-| Radio       | Titledate hinzugefügt<br/> Bitrate<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Musik       | GenreTitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Wiedergabeanzahl: Gesamtsumme<br/> Play Count : Morning Totals<br/> Anzahl der Wiedergaben: Gesamtsummen der Gesamtanzahl der Spiele<br/> Play Count :Evening Totals<br/> Play Count :Night Totals<br/> Play Count :Total Weekday<br/> Play Count : Total Weekend<br/>                                                                                                                                                                                                                                                                                            |
+| Video oder TV | GenreActor<br/> Untertitel<br/> Titel<br/> Date Added<br/> Automatische Bewertung<br/> Stationsname<br/> Kanal<br/> Übertragungszeit<br/> Regisseur<br/> Releasejahr<br/> Writer<br/> Producer<br/> Aufgezeichnetes Datum<br/> Datumscodiert<br/> Bitrate<br/> Meine Bewertung<br/> Schutz<br/> Wiedergabeanzahl: Gesamtsumme<br/> Play Count : Morning Totals<br/> Anzahl der Wiedergaben: Gesamtsummen der Gesamtanzahl der Sonntage<br/> Anzahl der Wiedergaben: Gesamtsummen für den Abend<br/> Play Count : Night Totals<br/> Play Count : Total Weekday<br/> Play Count : Total Weekend<br/> |
+| Radio       | TitleDate hinzugefügt<br/> Bitrate<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Photo       | Titel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Sonstiges       | Genretitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Bitrate<br/> Wiedergabe Anzahl: Gesamt Gesamt<br/> Wiedergabe Anzahl: Morgen Summen<br/> Wiedergabe Anzahl: Gesamtsummen<br/> Wiedergabe Anzahl: Abend Summen<br/> Wiedergabe Anzahl: Nacht Summen<br/> Wiedergabe Anzahl: Gesamter Wochentag<br/> Wiedergabe Anzahl: Gesamt Wochenende<br/>                                                                                                                                                                                                                                                                    |
+| Andere       | GenreTitle<br/> Date Added<br/> Automatische Bewertung<br/> Meine Bewertung<br/> Bitrate<br/> Anzahl der Wiedergaben: Gesamt gesamt<br/> Anzahl der Wiedergaben: Gesamtsummen am Morgen<br/> Anzahl der Wiedergaben: Gesamtsummen<br/> Anzahl der Wiedergaben: Abendsummen<br/> Play Count : Night Totals<br/> Anzahl der Wiedergaben: Gesamter Wochentag<br/> Play Count : Total Weekend<br/>                                                                                                                                                                                                                                                                    |
 
 
 
@@ -230,24 +230,24 @@ Wenn Sie ein Fragment-Element zum Sortieren einer Wiedergabeliste verwenden, mü
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Argument-Element**](argument-element.md)
+[**argument-Element**](argument-element.md)
 </dt> <dt>
 
-[**Filter-Element**](filter-element.md)
+[**filter-Element**](filter-element.md)
 </dt> <dt>
 
-[**SourceFilter-Element**](sourcefilter-element.md)
+[**sourceFilter-Element**](sourcefilter-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

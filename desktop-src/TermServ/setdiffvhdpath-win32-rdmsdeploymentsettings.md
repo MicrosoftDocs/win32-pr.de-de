@@ -1,12 +1,12 @@
 ---
-title: Setdiffvhdpath-Methode der Win32_RDMSDeploymentSettings-Klasse
+title: SetDiffVHDPath-Methode der Win32_RDMSDeploymentSettings-Klasse
 description: Aktualisiert den Verzeichnispfad, in dem die differenzierenden Datenträger für eine Sammlung virtueller Desktops bereitgestellt werden.
 ms.assetid: 665ffbf9-0250-4956-9bce-f5a6714b47e4
 ms.tgt_platform: multiple
 keywords:
-- Setdiffvhdpath-Methode Remotedesktopdienste
-- Setdiffvhdpath-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, setdiffvhdpath-Methode
+- SetDiffVHDPath-Methode Remotedesktopdienste
+- SetDiffVHDPath-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings Klasse Remotedesktopdienste , SetDiffVHDPath-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e52d206c9e0cbff19f26e38a2a02f04ea0acc03d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d275f848bb29c9cac4930f738a9a123cc6aa3a8e80a77b746f2495d44f68cf96
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988040"
 ---
-# <a name="setdiffvhdpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>Setdiffvhdpath-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="setdiffvhdpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>SetDiffVHDPath-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
 Aktualisiert den Verzeichnispfad, in dem die differenzierenden Datenträger für eine Sammlung virtueller Desktops bereitgestellt werden.
 
@@ -43,16 +43,16 @@ uint32 SetDiffVHDPath(
 
 <dl> <dt>
 
-*Directoriypath* \[ in\]
+*DirectoryPath* \[ In\]
 </dt> <dd>
 
-Der neue differenzierende Datenträger Pfad.
+Der neue differenzierende Datenträgerpfad.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

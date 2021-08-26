@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Auftrag und den CIM \_ managedelta-Objekten dar, die von seiner Ausführung betroffen sein können.
+description: Stellt eine Zuordnung zwischen einem Auftrag und den CIM \_ ManagedElement-Objekten dar, die von seiner Ausführung betroffen sein können.
 ms.assetid: 94c5e602-214c-4003-921c-8955c3859738
 title: CIM_AffectedJobElement-Klasse
 ms.topic: reference
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 830e798ff12dc87c88126375736f116c044de731
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85e801f4b7d32ecc66a9bdfd0b11c2e97a4331b73eaa66e54a4f7b30562e0fd5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041720"
 ---
-# <a name="cim_affectedjobelement-class"></a>CIM \_ affectedjobelements-Klasse
+# <a name="cim_affectedjobelement-class"></a>CIM \_ AffectedJobElement-Klasse
 
-Stellt eine Zuordnung zwischen einem Auftrag und den **CIM \_ managedelta** -Objekten dar, die von seiner Ausführung betroffen sein können. Möglicherweise ist es für den Auftrag nicht möglich, alle betroffenen Elemente zu beschreiben. Der Hauptzweck dieser Zuordnung besteht darin, Informationen bereitzustellen, wenn für einen Auftrag eine ausschließliche Verwendung der betroffenen verwalteten Elemente erforderlich ist oder wenn die Nebeneffekte beschrieben werden, die möglicherweise entstehen.
+Stellt eine Zuordnung zwischen einem Auftrag und den **CIM \_ ManagedElement-Objekten** dar, die von seiner Ausführung betroffen sein können. Möglicherweise ist es für den Auftrag nicht möglich, alle betroffenen Elemente zu beschreiben. Der Hauptzweck dieser Zuordnung besteht darin, Informationen zur Verfügung zu stellen, wenn ein Auftrag eine exklusive Verwendung der betroffenen verwalteten Elemente erfordert oder wenn die sich daraus ergebenden Nebeneffekte beschrieben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ class CIM_AffectedJobElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ affectedjobelements** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ AffectedJobElement-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ affectedjobelements** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ AffectedJobElement-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Affectedelta-Element**
+**AffectedElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -69,10 +69,10 @@ Das verwaltete Element, das von der Ausführung des Auftrags betroffen ist.
 
 </dd> <dt>
 
-**Affectingelement**
+**AffectingElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Auftrag**
+Datentyp: **\_ CIM-Auftrag**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -81,20 +81,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Auftrag, der sich auf das verwaltete Element auswirkt.
+Der Auftrag, der das verwaltete Element beeinflusst.
 
 </dd> <dt>
 
-**Elementeffects**
+**ElementEffects**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ affectedjobeless**.**Otherelementeffect-Beschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ AffectedJobElement**.**OtherElementEffectsDescriptions**")
 </dt> </dl>
 
 Die Auswirkung des Auftrags auf das verwaltete Element.
@@ -124,14 +124,14 @@ Die Auswirkung des Auftrags auf das verwaltete Element.
 
 <span id="Performance_Impact"></span><span id="performance_impact"></span><span id="PERFORMANCE_IMPACT"></span>
 
-**Leistungs Beeinträchtigung** (3)
+**Auswirkungen auf die** Leistung (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Element_Integrity"></span><span id="element_integrity"></span><span id="ELEMENT_INTEGRITY"></span>
 
-**Element Integrität** (4)
+**Elementintegrität** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -145,19 +145,19 @@ Die Auswirkung des Auftrags auf das verwaltete Element.
 
 </dd> <dt>
 
-**Otherelementeffect-Beschreibungen**
+**OtherElementEffectsDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ affectedjobeless**.**Elementeffects**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ AffectedJobElement**.**ElementEffects**")
 </dt> </dl>
 
-Weitere Details zu den entsprechenden "1"-Werten (sonstige) im **elementeffects** -Array.
+Zusätzliche Details für entsprechende "1" (Andere) Werte im **ElementEffects-Array.**
 
 </dd> </dl>
 
@@ -170,7 +170,7 @@ Weitere Details zu den entsprechenden "1"-Werten (sonstige) im **elementeffects*
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

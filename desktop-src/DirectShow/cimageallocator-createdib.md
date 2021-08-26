@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Methode" erstellt eine GDI-geräteunabhängige Bitmap (DIB). Das DIB wird in einem freigegebenen mempory-Block zugeordnet, der einen Kopiervorgang ausschließt, wenn der besitzende Filter das Image löscht.
+description: Die CreateDIB-Methode erstellt eine geräteunabhängige GDI-Bitmap (DIB). Der DIB wird in einem freigegebenen Memporyblock zugeordnet, wodurch ein Kopiervorgang entfernt wird, wenn der besitzende Filter das Bild blitt.
 ms.assetid: 8a9ab1cf-4104-48e9-ba6c-28d0f1a1d226
-title: Cimagezuzuordcator. kreatedib-Methode (winutil. h)
+title: CImageAllocator.CreateDIB-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 316b7aeadfa442a8df4e80075380464758f3c6bc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 94a629831ea50219b47500c0637cfeaebfbc95b1ee99a8b9d3872a655ab5485c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055480"
 ---
-# <a name="cimageallocatorcreatedib-method"></a>Cimagezuzuordcator. kreatedib-Methode
+# <a name="cimageallocatorcreatedib-method"></a>CImageAllocator.CreateDIB-Methode
 
-Die `CreateDIB` -Methode erstellt eine GDI-geräteunabhängige Bitmap (DIB). Das DIB wird in einem freigegebenen mempory-Block zugeordnet, der einen Kopiervorgang ausschließt, wenn der besitzende Filter das Image löscht.
+Die `CreateDIB` -Methode erstellt eine geräteunabhängige GDI-Bitmap (DIB). Der DIB wird in einem freigegebenen Memporyblock zugeordnet, wodurch ein Kopiervorgang entfernt wird, wenn der besitzende Filter das Bild blitt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ HRESULT CreateDIB(
 
 <dl> <dt>
 
-*Insize* 
+*InSize* 
 </dt> <dd>
 
 Größe der Bitmap.
 
 </dd> <dt>
 
-*Dibdata* \[ atur\]
+*DibData* \[ Ref\]
 </dt> <dd>
 
-Verweis auf eine [**dibdata**](dibdata.md) -Struktur. Die-Methode füllt diese-Struktur mit Informationen über das DIB aus.
+Verweis auf eine [**DIBDATA-Struktur.**](dibdata.md) Die -Methode füllt diese Struktur mit Informationen zum DIB auf.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, andernfalls ein Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
 
 <dl> <dt>
 
-[**Cimagezuordcator-Klasse**](cimageallocator.md)
+[**CImageAllocator-Klasse**](cimageallocator.md)
 </dt> <dt>
 
-[**Cimagezuordcator:: zuzuweisung**](cimageallocator-alloc.md)
+[**CImageAllocator::Alloc**](cimageallocator-alloc.md)
 </dt> </dl>
 
  

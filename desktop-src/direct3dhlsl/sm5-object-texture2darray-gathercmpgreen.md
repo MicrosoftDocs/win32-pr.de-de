@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DArray:: gathercmpgreen (S, float, float, int)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filterungs Vorgang verwendet werden, wird ein Vergleich der grünen Komponente mit einem Vergleichswert zurückgegeben. | Texture2DArray:: gathercmpgreen (S, float, float, int)-Funktion'
+title: Texture2DArray::GatherCmpGreen(S,float,float,int)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer grünen Komponente mit einem Vergleichswert zurück. | Texture2DArray::GatherCmpGreen(S,float,float,int)-Funktion
 ms.assetid: baf14de9-5237-42a5-bffc-848e55cbc28f
 keywords:
-- Gathercmpgreen-Funktion HLSL
+- GatherCmpGreen-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4f29da331d71c1fa8a2ceff783e4daec4a886d06
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 50251f83a0aae7e066ae1e586aa31eb74a002ad20c2843e2a0e22168ccf8e8c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067580"
 ---
-# <a name="texture2darraygathercmpgreensfloatfloatint-function"></a>Texture2DArray:: gathercmpgreen (S, float, float, int)-Funktion
+# <a name="texture2darraygathercmpgreensfloatfloatint-function"></a>Texture2DArray::GatherCmpGreen(S,float,float,int)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filterungs Vorgang verwendet werden, wird ein Vergleich der grünen Komponente mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer grünen Komponente mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ float4 GatherCmpGreen(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **samplercomparisonstate**
+Typ: **SamplerComparisonState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float3**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*\_ Vergleichswert* \[ in\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinate angewendet wird.
 
 </dd> </dl>
 
@@ -79,17 +79,17 @@ Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet
 
 Typ: **float4**
 
-Ein vier komponentenwert, wobei jede Komponente das Ergebnis eines Vergleichs pro Komponente ist.
+Ein Wert mit vier Komponenten, jede Komponente ist das Ergebnis eines Komponentenvergleichs.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -97,14 +97,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Gathercmpgreen-Methoden](texture2darray-gathercmpgreen.md)
+[GatherCmpGreen-Methoden](texture2darray-gathercmpgreen.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

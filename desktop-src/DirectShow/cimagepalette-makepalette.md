@@ -1,7 +1,7 @@
 ---
-description: Die makepalette-Methode erstellt eine logische Palette aus der Farbtabelle in einem Videoformat.
+description: Die MakePalette-Methode erstellt eine logische Palette aus der Farbtabelle in einem Videoformat.
 ms.assetid: f158e529-d683-4210-818d-21a834fc7683
-title: Cimagepalette. makepalette-Methode (winutil. h)
+title: CImagePalette.MakePalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 20c4484b2666b25b5d713ede450a9a5a99f93348
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f270797c224617c02b14752b15bbdb54b64a7457670e0b26bae54c39a93657eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055390"
 ---
-# <a name="cimagepalettemakepalette-method"></a>Cimagepalette. makepalette-Methode
+# <a name="cimagepalettemakepalette-method"></a>CImagePalette.MakePalette-Methode
 
-Mit der- `MakePalette` Methode wird eine logische Palette aus der Farbtabelle in einem Videoformat erstellt.
+Die `MakePalette` -Methode erstellt eine logische Palette aus der Farbtabelle in einem Videoformat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ HPALETTE MakePalette(
 
 <dl> <dt>
 
-*pvideoinfo* 
+*pVideoInfo* 
 </dt> <dd>
 
-Zeiger auf eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur, die die Farbtabelle enthält.
+Zeiger auf eine [**VIDEOINFOHEADER-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) die die Farbtabelle enthält.
 
 </dd> <dt>
 
-*szdevice* 
+*szDevice* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Anzeige Geräts enthält, wie von der GDI-Funktion " **EnumDisplayDevices** " zurückgegeben. Legen Sie diesen Parameter auf **null** fest, um das Haupt Anzeigegerät zu verwenden.
+Zeiger auf eine Zeichenfolge, die den Namen des Anzeigegeräts enthält, wie von der **GDI-Funktion EnumDisplayDevices** zurückgegeben. Um das Hauptanzeigegerät zu verwenden, legen Sie diesen Parameter auf **NULL** fest.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird ein Handle für die Palette zurückgegeben. Andernfalls wird **null** zurückgegeben.
+Wenn erfolgreich, gibt ein Handle an die Palette zurück. Andernfalls gibt **NULL** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Wenn erfolgreich, wird ein Handle für die Palette zurückgegeben. Andernfalls w
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Wenn erfolgreich, wird ein Handle für die Palette zurückgegeben. Andernfalls w
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

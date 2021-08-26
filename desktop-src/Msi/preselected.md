@@ -1,36 +1,36 @@
 ---
-description: Die vorab ausgewählte Eigenschaft gibt an, dass bereits Features ausgewählt wurden und dass das Auswahl Dialogfeld nicht angezeigt werden muss. Bedingte Ausdrücke, die davon abhängen, ob Features bereits installiert sind, verwenden diesen Wert.
+description: Die Preselected -Eigenschaft gibt an, dass Features bereits ausgewählt wurden und dass das Auswahldialogfeld nicht angezeigt werden muss. Bedingte Ausdrücke, die davon abhängen, ob Features bereits installiert sind, verwenden diesen Wert.
 ms.assetid: 2bbab8b9-084a-4515-904c-d556d183d06e
 title: Vorab ausgewählte Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 369a6d5fe7db99fab0032ee933afdb54bdb87efc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a85f5c3248002fec776e45e9d7ad37550d3e16d7a5d76b098948b571b8c9c546
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042320"
 ---
 # <a name="preselected-property"></a>Vorab ausgewählte Eigenschaft
 
-Die **vorab ausgewählte** Eigenschaft gibt an, dass bereits Features ausgewählt wurden und dass das Auswahl Dialogfeld nicht angezeigt werden muss.
+Die **Preselected** -Eigenschaft gibt an, dass Features bereits ausgewählt wurden und dass das Auswahldialogfeld nicht angezeigt werden muss.
 
-Bedingte Ausdrücke, die davon abhängen, ob Features bereits installiert sind, verwenden diesen Wert. Beispielsweise kann die-Eigenschaft verwendet werden, um alle Dialogfelder zu unterdrücken, die während der Wiederaufnahme einer angehaltenen Installation die Funktionsauswahl betreffen.
+Bedingte Ausdrücke, die davon abhängen, ob Features bereits installiert sind, verwenden diesen Wert. Beispielsweise kann die -Eigenschaft verwendet werden, um alle Dialoge zu unterdrücken, die funktionsauswahl während der Wiederaufnahme einer angehaltenen Installation betreffen.
 
-Der Installer legt die **vorab ausgewählte** Eigenschaft während der Wiederaufnahme einer angehaltenen Installation auf den Wert "1" fest, oder wenn eine der folgenden Eigenschaften in der Befehlszeile angegeben wird. Wenn die **vorab ausgewählte** Eigenschaft auf 1 festgelegt wurde, verwendet das Installationsprogramm die Bedingungs [Tabelle](condition-table.md) nicht, um die Auswahl der Features auszuwerten. Funktionen werden basierend auf den folgenden Eigenschaften installiert. Das Installationsprogramm wertet diese Eigenschaften immer in der folgenden Reihenfolge aus:
+Das Installationsprogramm legt die **Preselected-Eigenschaft** während der Wiederaufnahme einer angehaltenen Installation oder wenn eine der folgenden Eigenschaften in der Befehlszeile angegeben wird, auf den Wert "1" fest. Wenn die **Preselected-Eigenschaft** auf 1 festgelegt wurde, verwendet das Installationsprogramm die [Tabelle Bedingung](condition-table.md) nicht, um die Auswahl der Features auszuwerten. Features werden basierend auf den folgenden Eigenschaften installiert. Das Installationsprogramm wertet diese Eigenschaften immer in der folgenden Reihenfolge aus:
 
 1.  [**ADDLOCAL**](addlocal.md)
-2.  [**Aufgeh**](remove.md)
-3.  [**Addsource**](addsource.md)
-4.  [**Adddefault**](adddefault.md)
-5.  [**Installieren Sie**](reinstall.md)
-6.  [**Benen**](advertise.md)
-7.  [**Compaddlocal**](compaddlocal.md)
-8.  [**Compaddsource**](compaddsource.md)
-9.  [**Compadddefault**](compadddefault.md)
-10. [**Fileaddlocal**](fileaddlocal.md)
-11. [**Fileaddsource**](fileaddsource.md)
-12. [**Fileadddefault**](fileadddefault.md)
+2.  [**Entfernen**](remove.md)
+3.  [**ADDSOURCE**](addsource.md)
+4.  [**ADDDEFAULT**](adddefault.md)
+5.  [**Installieren**](reinstall.md)
+6.  [**Werben**](advertise.md)
+7.  [**COMPADDLOCAL**](compaddlocal.md)
+8.  [**COMPADDSOURCE**](compaddsource.md)
+9.  [**COMPADDDEFAULT**](compadddefault.md)
+10. [**FILEADDLOCAL**](fileaddlocal.md)
+11. [**FILEADDSOURCE**](fileaddsource.md)
+12. [**FILEADDDEFAULT**](fileadddefault.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Der Installer legt die **vorab ausgewählte** Eigenschaft während der Wiederauf
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zu den Windows Service [Pack-Mindestanforderungen,](windows-installer-portal.md) die für eine Windows Installer-Version erforderlich sind, finden Sie unter Run-Time Anforderungen für Windows Installer.<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Warning-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das Warning-Ereignis ist für die zukünftige Verwendung reserviert.
+title: Warnungsereignis des AxWindowsMediaPlayer-Objekts
+description: Das Warnungsereignis ist für die zukünftige Verwendung reserviert.
 ms.assetid: 3de63756-2726-4864-8988-fd614f23bcad
 keywords:
-- Warn Ereignis des AxWindowsMediaPlayer-Objekt Windows-Media Player
+- Warnungsereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a868ba7f619287cd96929c62d89dee3555d908b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18925236148a508e66bb34e83f7ddb69f0cb59d87c98dfe0188f780ea2fc3605
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004000"
 ---
-# <a name="warning-event-of-the-axwindowsmediaplayer-object"></a>Warning-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="warning-event-of-the-axwindowsmediaplayer-object"></a>Warnungsereignis des AxWindowsMediaPlayer-Objekts
 
-Das Warning-Ereignis ist für die zukünftige Verwendung reserviert.
+Das Warnungsereignis ist für die zukünftige Verwendung reserviert.
 
 ``` syntax
 [C#]
@@ -41,21 +41,21 @@ Private Sub player_Warning(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ warningeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ warningevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ WarningEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ WarningEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft    | BESCHREIBUNG                                |
+| Eigenschaft    | Beschreibung                                |
 |-------------|--------------------------------------------|
-| warningtype | **System. Int32** Nicht unterstützt.<br/>  |
-| Parameter       | **System. Int32** Nicht unterstützt.<br/>  |
-| description | **System. String** Nicht unterstützt.<br/> |
+| warningType | **System.Int32** Nicht unterstützt.<br/>  |
+| Parameter       | **System.Int32** Nicht unterstützt.<br/>  |
+| description | **System.String** Nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
@@ -71,11 +71,11 @@ Dieses Ereignis ist für die zukünftige Verwendung reserviert.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  
