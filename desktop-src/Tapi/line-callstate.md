@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-zeilige \_ CallState-Nachricht wird gesendet, wenn sich der Status des angegebenen Aufrufes geändert hat.
+description: Die TAPI LINE \_ CALLSTATE-Nachricht wird gesendet, wenn sich der Status des angegebenen Aufrufs geändert hat.
 ms.assetid: 7b24e3c3-bc69-488b-a698-cf17875bc3c5
-title: LINE_CALLSTATE Meldung (TAPI. h)
+title: LINE_CALLSTATE (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4159037c448307c99e759d8741ed19a14ab2562f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 90d82dfb5f0d5e306085ecd2d7f29270d19c2c9c101e30ac547fe246b7e6fddb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012570"
 ---
-# <a name="line_callstate-message"></a>Zeilen \_ Aufruf Zustands Meldung
+# <a name="line_callstate-message"></a>LINE \_ CALLSTATE-Nachricht
 
-Die TAPI- **zeilige \_ CallState** -Nachricht wird gesendet, wenn sich der Status des angegebenen Aufrufes geändert hat. In der Regel werden während der Lebensdauer eines Aufrufes einige dieser Nachrichten empfangen. Anwendungen werden über neue eingehende Anrufe mit dieser Nachricht benachrichtigt. der neue-Befehl befindet sich im *Angebots* Zustand. Die Anwendung kann [**linegetcallstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus) verwenden, um ausführlichere Informationen zum aktuellen Status des Aufrufes abzurufen.
+Die TAPI **LINE \_ CALLSTATE-Nachricht** wird gesendet, wenn sich der Status des angegebenen Aufrufs geändert hat. In der Regel werden während der Lebensdauer eines Aufrufs mehrere solcher Nachrichten empfangen. Anwendungen werden über neue eingehende Aufrufe mit dieser Nachricht benachrichtigt. Der neue Aufruf befindet sich im *Angebotszustand.* Die Anwendung kann [**lineGetCallStatus verwenden,**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus) um ausführlichere Informationen zum aktuellen Status des Aufrufs abzurufen.
 
 
 ```C++
@@ -26,35 +26,35 @@ Die TAPI- **zeilige \_ CallState** -Nachricht wird gesendet, wenn sich der Statu
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Ein Handle für den-Befehl.
+Ein Handle für den Aufruf.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile des Aufrufs angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile des Aufrufs angegeben wurde.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Der neue Status des Aufrufes. Dieser Parameter darf nur eine der folgenden [**linecallstate- \_ Konstanten**](linecallstate--constants.md)sein.
+Der neue Aufrufzustand. Dieser Parameter muss eine und nur eine der folgenden [**LINECALLSTATE-Konstanten \_ sein.**](linecallstate--constants.md)
 
 
 
 | dwParam1                                                                                                                                                                                             | Bedeutung                                                                                                                                                                          |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="LINECALLSTATE_BUSY"></span><span id="linecallstate_busy"></span><dl> <dt>**linecallstate \_ ausgelastet**</dt> </dl>                         | *dwParam2* enthält Details zum ausgelasteten Modus. Dieser Parameter verwendet eine der [**linebusymode- \_ Konstanten**](linebusymode--constants.md).<br/>                          |
-| <span id="LINECALLSTATE_CONNECTED"></span><span id="linecallstate_connected"></span><dl> <dt>**linecallstate \_ verbunden**</dt> </dl>          | *dwParam2* enthält Details zum verbundenen Modus. Dieser Parameter verwendet eine der [**lineconnectedmode- \_ Konstanten**](lineconnectedmode--constants.md).<br/>           |
-| <span id="LINECALLSTATE_DIALTONE"></span><span id="linecallstate_dialtone"></span><dl> <dt>**linecallstate \_ Dialtone**</dt> </dl>             | *dwParam2* enthält Details zum wählermodusmodus. Dieser Parameter verwendet eine der [**linedialtonemode- \_ Konstanten**](linedialtonemode--constants.md).<br/>             |
-| <span id="LINECALLSTATE_OFFERING"></span><span id="linecallstate_offering"></span><dl> <dt>**linecallstate- \_ Angebot**</dt> </dl>             | *dwParam2* enthält Details zum verbundenen Modus. Dieser Parameter verwendet eine der [**lineofferingmode- \_ Konstanten**](lineofferingmode--constants.md).<br/>             |
-| <span id="LINECALLSTATE_SPECIALINFO"></span><span id="linecallstate_specialinfo"></span><dl> <dt>**linecallstate \_ specialinfo**</dt> </dl>    | *dwParam2* enthält die Details zum speziellen Informationsmodus. Dieser Parameter verwendet eine der [**linespecialinfo- \_ Konstanten**](linespecialinfo--constants.md).<br/> |
-| <span id="LINECALLSTATE_DISCONNECTED"></span><span id="linecallstate_disconnected"></span><dl> <dt>**linecallstate \_ getrennt**</dt> </dl> | *dwParam2* enthält Details zum Disconnect-Modus. Dieser Parameter verwendet eine der [**linedisconnectmode- \_ Konstanten**](linedisconnectmode--constants.md).<br/>        |
+| <span id="LINECALLSTATE_BUSY"></span><span id="linecallstate_busy"></span><dl> <dt>**LINECALLSTATE \_ AUSGELASTET**</dt> </dl>                         | *dwParam2 enthält* Details zum Ausgelastetmodus. Dieser Parameter verwendet eine der [**LINEBUSYMODE-Konstanten \_**](linebusymode--constants.md).<br/>                          |
+| <span id="LINECALLSTATE_CONNECTED"></span><span id="linecallstate_connected"></span><dl> <dt>**LINECALLSTATE \_ CONNECTED**</dt> </dl>          | *dwParam2 enthält* Details zum verbundenen Modus. Dieser Parameter verwendet eine der [**LINECONNECTEDMODE-Konstanten \_**](lineconnectedmode--constants.md).<br/>           |
+| <span id="LINECALLSTATE_DIALTONE"></span><span id="linecallstate_dialtone"></span><dl> <dt>**LINECALLSTATE \_ DIALTONE**</dt> </dl>             | *dwParam2 enthält* Details zum Dial-Tonmodus. Dieser Parameter verwendet eine der [**LINEDIALTONEMODE-Konstanten \_**](linedialtonemode--constants.md).<br/>             |
+| <span id="LINECALLSTATE_OFFERING"></span><span id="linecallstate_offering"></span><dl> <dt>**LINECALLSTATE-ANGEBOT \_**</dt> </dl>             | *dwParam2 enthält* Details zum verbundenen Modus. Dieser Parameter verwendet eine der [**LINEOFFERINGMODE-Konstanten \_**](lineofferingmode--constants.md).<br/>             |
+| <span id="LINECALLSTATE_SPECIALINFO"></span><span id="linecallstate_specialinfo"></span><dl> <dt>**LINECALLSTATE \_ SPECIALINFO**</dt> </dl>    | *dwParam2* enthält die Details zum speziellen Informationsmodus. Dieser Parameter verwendet eine der [**LINESPECIALINFO-Konstanten \_**](linespecialinfo--constants.md).<br/> |
+| <span id="LINECALLSTATE_DISCONNECTED"></span><span id="linecallstate_disconnected"></span><dl> <dt>**LINECALLSTATE \_ DISCONNECTED**</dt> </dl> | *dwParam2 enthält* Details zum Trennungsmodus. Dieser Parameter verwendet eine der [**LINEDISCONNECTMODE-Konstanten \_**](linedisconnectmode--constants.md).<br/>        |
 
 
 
@@ -65,23 +65,23 @@ Der neue Status des Aufrufes. Dieser Parameter darf nur eine der folgenden [**li
 *dwParam2* 
 </dt> <dd>
 
-Aufrufzustands abhängige Informationen. Siehe *dwParam1*.
+Vom Aufrufzustand abhängige Informationen. Weitere Informationen *finden Sie unter dwParam1.*
 
 > [!Note]  
-> In Fällen, in denen eine *verzögerte* Antwort angemessen ist, verwenden Sie den linedisconnectmode- \_ tempfailure. Wenn eine *Blockierungs* Antwort angemessen ist, verwenden Sie "linedisconnect \_ blockiert". Weitere Informationen finden Sie unter [**linedisconnectmode- \_ Konstanten**](linedisconnectmode--constants.md).
+> Verwenden Sie  LINEDISCONNECTMODE TEMPFAILURE, wenn eine verzögerte Antwort \_ angemessen ist. Wenn eine *in der Blockliste aufgeführte* Antwort geeignet ist, verwenden Sie LINEDISCONNECT \_ BLOCKED. Weitere Informationen finden Sie unter [**LINEDISCONNECTMODE-Konstanten. \_**](linedisconnectmode--constants.md)
 
  
 
-Wenn *dwParam1* auf linecallstate zuweist \_ , enthält *dwParam2* den *hconfcallparameter* des übergeordneten Aufrufens der Konferenz, von der der Betreff- *hcallmember* ist. Wenn der in *dwParam2* angegebene-Befehl nicht zuvor von der Anwendung als übergeordnete Konferenz aufgerufen wurde (*hconfcallcenter*), muss die Anwendung dies als Ergebnis dieser Nachricht ausführen. Wenn die Anwendung kein Handle für den übergeordneten Aufruf der Konferenz hat (weil Sie zuvor [**linedezugecall**](/windows/desktop/api/Tapi/nf-tapi-linedeallocatecall) für dieses Handle aufgerufen hat), wird *dwParam2* auf **null** festgelegt.
+Wenn *dwParam1* LINECALLSTATE \_ CONFERENCED ist, enthält *dwParam2* den *hConfCall-Parameter* des übergeordneten Aufrufs der Konferenz, deren Mitglied der Subjekt *hCall* ist. Wenn der in *dwParam2 angegebene* Aufruf zuvor von der Anwendung nicht als übergeordneter Telefonkonferenzaufruf (*hConfCall)* angesehen wurde, muss die Anwendung dies als Ergebnis dieser Nachricht tun. Wenn die Anwendung kein Handle für den übergeordneten Aufruf der Konferenz hat (da sie zuvor [**lineDeallocateCall für**](/windows/desktop/api/Tapi/nf-tapi-linedeallocatecall) dieses Handle aufgerufen hat), wird *dwParam2* auf **NULL festgelegt.**
 
 </dd> <dt>
 
 *dwParam3* 
 </dt> <dd>
 
-Wenn der Wert NULL ist, gibt dieser Parameter an, dass die Berechtigung der Anwendung für den-Befehl nicht geändert wurde.
+Bei 0 (null) gibt dieser Parameter an, dass die Berechtigung der Anwendung für den Aufruf nicht geändert wurde.
 
-Wenn ungleich 0 (null) angegeben ist, wird die Berechtigung der Anwendung für den-Befehl angegeben. Dies tritt in den folgenden Situationen auf: (1), wenn der Anwendung das erste Mal ein Handle für diesen Aufruf zugewiesen wird. (2), wenn die Anwendung das Ziel einer callhandoff ist (selbst wenn die Anwendung bereits Besitzer des Aufrufes ist). Dieser Parameter verwendet eine der folgenden [**linecallprivilege- \_ Konstanten**](linecallprivilege--constants.md).
+Wenn dieser Wert ungleich 0 (null) ist, wird die Berechtigung der Anwendung für den Aufruf angegeben. Dies tritt in den folgenden Situationen auf: (1) Wenn die Anwendung zum ersten Mal ein Handle für diesen Aufruf erhält; (2) Wenn die Anwendung das Ziel einer Anruf-Übergabe ist (auch wenn die Anwendung bereits Besitzer des Aufrufs war). Dieser Parameter verwendet eine der folgenden [**LINECALLPRIVILEGE-Konstanten. \_**](linecallprivilege--constants.md)
 
 </dd> </dl>
 
@@ -89,15 +89,15 @@ Wenn ungleich 0 (null) angegeben ist, wird die Berechtigung der Anwendung für d
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird an jede Anwendung gesendet, die über ein Handle für den-Befehl verfügt. In der **Zeile \_ CallState** werden auch Anwendungen benachrichtigt, die Aufrufe in einer Zeile über das vorhanden sein und den Status der ausgehenden Aufrufe, die von anderen Anwendungen oder manuell durch den Benutzer (z. b. auf einem angeschlossenen Telefongerät), überwachen. Der Aufruf Zustand solcher Aufrufe gibt den tatsächlichen Status des Aufrufs an, der nicht *angeboten* wird. Durch die Untersuchung des aufrufzustands kann die Anwendung bestimmen, ob der-Rückruf ein eingehender-Befehl ist, der beantwortet werden muss.
+Diese Nachricht wird an jede Anwendung gesendet, die über ein Handle für den Aufruf verfügt. Die **LINE \_ CALLSTATE-Nachricht** benachrichtigt auch Anwendungen, die Aufrufe über eine Zeile überwachen, über das Vorhandensein und den Status von ausgehenden Anrufen, die von anderen Anwendungen oder manuell vom Benutzer eingerichtet wurden (z. B. auf einem angeschlossenen Telefongerät). Der Aufrufzustand solcher Aufrufe spiegelt den tatsächlichen Zustand des Aufrufs wider, der nicht *an bietet.* Durch Untersuchen des Anrufzustands kann die Anwendung bestimmen, ob es sich bei dem Anruf um einen eingehenden Anruf handelt, der beantwortet werden muss.
 
-Eine **Zeilen Aufruf \_ Zustands** Meldung mit einem unbekannten Aufruf Zustand kann als Ergebnis eines erfolgreichen [**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall), [**lineforward**](/windows/desktop/api/Tapi/nf-tapi-lineforward), [**lineunpark**](/windows/desktop/api/Tapi/nf-tapi-lineunpark), [**lineSetupTransfer**](/windows/desktop/api/Tapi/nf-tapi-linesetuptransfer), [**linepickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup), [**linesetupconference**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)oder [**lineprepareadddeconference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference) , das von einer anderen Anwendung angefordert wurde, an eine Überwachungsanwendung gesendet werden. Gleichzeitig, dass die anfordernde Anwendung für den angeforderten Vorgang eine [**Zeilen \_ Antwort**](line-reply.md) (Erfolg) sendet, wird allen Überwachungsanwendungen in der Zeile die **Zeile \_ CallState** (unknown) zugestellt. Eine **line \_ CallState** -Meldung, die angibt, dass der "Real"-Aufruf Zustand des neu generierten Aufrufes gesendet wird (mithilfe der vom Dienstanbieter bereitgestellten Informationen), kurz danach an die Anforderungs-und Überwachungsanwendungen.
+Eine **LINE \_ CALLSTATE-Nachricht** mit einem unbekannten Aufrufstatus kann als Ergebnis einer erfolgreichen [**LineMakeCall-,**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) [**lineForward-,**](/windows/desktop/api/Tapi/nf-tapi-lineforward) [**lineUnpark-,**](/windows/desktop/api/Tapi/nf-tapi-lineunpark) [**lineSetupTransfer-,**](/windows/desktop/api/Tapi/nf-tapi-linesetuptransfer) [**linePickup-,**](/windows/desktop/api/Tapi/nf-tapi-linepickup) [**lineSetupConference-**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)oder [**linePrepareAddToConference-Nachricht**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference) an eine Überwachungsanwendung gesendet werden, die von einer anderen Anwendung angefordert wurde. Gleichzeitig mit dem Senden einer LINE [**\_ REPLY(Success)**](line-reply.md) für den angeforderten Vorgang an die anfordernde Anwendung wird allen Überwachungsanwendungen in der Zeile die **Meldung LINE \_ CALLSTATE** (unbekannt) gesendet. Eine **LINE \_ CALLSTATE-Meldung,** die den "echten" Aufrufzustand des neu generierten Aufrufs angibt, wird kurz darauf (anhand der vom Dienstanbieter bereitgestellten Informationen) an die anfordernden und überwachenden Anwendungen gesendet.
 
-Eine Nachricht vom Typ " **\_ CallState** " (unbekannt) wird nur dann an Überwachungsanwendungen gesendet, wenn " [**linecompletetransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer) " bewirkt, dass Aufrufe in eine drei-Wege-Konferenz aufgelöst werden.
+Eine **LINE \_ CALLSTATE-Nachricht** (unbekannt) wird nur dann an Überwachungsanwendungen gesendet, wenn [**lineCompleteTransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer) bewirkt, dass Aufrufe in eine Drei-Wege-Konferenz aufgelöst werden.
 
-Aus Gründen der Abwärtskompatibilität erwarten ältere Anwendungen keinen bestimmten Wert in *dwParam2* einer mit linecallstate zugewandten \_ Nachricht. TAPI übergibt daher unabhängig von der API-Version der Anwendung, die die Nachricht empfängt, den übergeordneten Befehl " *hconfcall"* in *dwParam2* . Im Fall eines Konferenz Aufrufs, der vom Dienstanbieter initiiert wurde, weiß die ältere Anwendung nicht, dass der übergeordnete Aufruf zu einem Konferenz Aufruf geworden ist, es sei denn, es erfolgt eine spontane Untersuchung anderer Informationen (z. b. [**linegetanfrelatedcalls**](/windows/desktop/api/Tapi/nf-tapi-linegetconfrelatedcalls)).
+Aus Gründen der Abwärtskompatibilität erwarten ältere Anwendungen keinen bestimmten Wert in *dwParam2* einer LINECALLSTATE \_ CONFERENCED-Nachricht. TAPI übergibt daher den übergeordneten *Aufruf hConfCall* in *dwParam2* unabhängig von der API-Version der Anwendung, die die Nachricht empfängt. Im Fall eines vom Dienstanbieter initiierten Telefonkonferenzs ist der älteren Anwendung nicht bewusst, dass der übergeordnete Anruf zu einem Telefonanruf geworden ist, es sei denn, es werden andere Informationen sorgfältig untersucht (z. B. [**lineGetConfRelatedCalls).**](/windows/desktop/api/Tapi/nf-tapi-linegetconfrelatedcalls)
 
 Diese Meldung kann nicht deaktiviert werden.
 
@@ -107,8 +107,8 @@ Diese Meldung kann nicht deaktiviert werden.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -116,43 +116,43 @@ Diese Meldung kann nicht deaktiviert werden.
 
 <dl> <dt>
 
-[**Zeilen \_ Antwort**](line-reply.md)
+[**LINE \_ REPLY**](line-reply.md)
 </dt> <dt>
 
-[**linecompletetransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer)
+[**lineCompleteTransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer)
 </dt> <dt>
 
-[**linedezugewiesene eCall**](/windows/desktop/api/Tapi/nf-tapi-linedeallocatecall)
+[**lineDeallocateCall**](/windows/desktop/api/Tapi/nf-tapi-linedeallocatecall)
 </dt> <dt>
 
-[**Linedialpara**](/windows/desktop/api/Tapi/ns-tapi-linedialparams)
+[**LINEDIALPARAMS**](/windows/desktop/api/Tapi/ns-tapi-linedialparams)
 </dt> <dt>
 
-[**lineforward**](/windows/desktop/api/Tapi/nf-tapi-lineforward)
+[**lineForward**](/windows/desktop/api/Tapi/nf-tapi-lineforward)
 </dt> <dt>
 
-[**linegeneratedigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits)
+[**lineGenerateDigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits)
 </dt> <dt>
 
-[**linegetcallstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus)
+[**lineGetCallStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus)
 </dt> <dt>
 
-[**lineget-frelatedcalls**](/windows/desktop/api/Tapi/nf-tapi-linegetconfrelatedcalls)
+[**lineGetConfRelatedCalls**](/windows/desktop/api/Tapi/nf-tapi-linegetconfrelatedcalls)
 </dt> <dt>
 
-[**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
+[**lineMakeCall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
 </dt> <dt>
 
-[**linepickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup)
+[**linePickup**](/windows/desktop/api/Tapi/nf-tapi-linepickup)
 </dt> <dt>
 
-[**lineprepareaddumconference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference)
+[**linePrepareAddToConference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference)
 </dt> <dt>
 
 [**lineSetupTransfer**](/windows/desktop/api/Tapi/nf-tapi-linesetuptransfer)
 </dt> <dt>
 
-[**lineunpark**](/windows/desktop/api/Tapi/nf-tapi-lineunpark)
+[**lineUnpark**](/windows/desktop/api/Tapi/nf-tapi-lineunpark)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft DDE-Freigabe Informationen ab. Dies erfolgt in der Regel zur Bearbeitung.
+description: Ruft DDE-Freigabeinformationen ab. Dies erfolgt in der Regel für die Bearbeitung.
 ms.assetid: a2e48a4d-2b72-40a3-b827-474da1db0910
-title: Ndde sharegetinfo-Funktion (nddecoapi. h)
+title: NDdeShareGetInfo-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: 72dc9ae12b174555debfa21afac15e5bfbed993e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c622a611b3d917dcf67de2ec6b96070ec0e54e9e53b0cef04c3c9e35b859e40
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014750"
 ---
-# <a name="nddesharegetinfo-function"></a>Nddebug-Funktion
+# <a name="nddesharegetinfo-function"></a>NDdeShareGetInfo-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NICHT \_ IMPLEMENTIERT zurück.\]
 
-Ruft DDE-Freigabe Informationen ab. Dies erfolgt in der Regel zur Bearbeitung.
+Ruft DDE-Freigabeinformationen ab. Dies erfolgt in der Regel für die Bearbeitung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,60 +49,60 @@ UINT NDdeShareGetInfo(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Der Name des Servers, auf dem sich die DSDM befindet.
+Der Name des Servers, auf dem sich das DSDM befindet.
 
 </dd> <dt>
 
-*lpszsharename* \[ in\]
+*lpszShareName* \[ In\]
 </dt> <dd>
 
-Der Freigabe Name, dessen Informationen aus dem DSDM abgerufen werden sollen. Dieser Parameter darf nicht **null** sein.
+Der Freigabename, dessen Informationen aus dem DSDM abgerufen werden sollen. Dieser Parameter darf nicht NULL **sein.**
 
 </dd> <dt>
 
-*Nlevel* \[ in\]
+*nLevel* \[ In\]
 </dt> <dd>
 
 Die Informationsebene. Dieser Parameter muss 2 sein.
 
 </dd> <dt>
 
-*lpBuffer* \[ vorgenommen\]
+*lpBuffer* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die [**ndbeshareingefo**](nddeshareinfo-str.md) -Struktur und die zugehörigen Daten empfängt, auf die von den Membern verwiesen wird. Dieser Parameter kann **NULL** sein. Wenn *lpBuffer* **null** ist, berechnet die DSDM die Anzahl der Bytes, die zum Speichern der angeforderten Freigabe Informationen erforderlich sind, und gibt diesen Wert im Feld *lpntotalavailable* zusammen mit dem \_ zu kleinen ndde buf- \_ Fehler zurück \_ .
+Ein Zeiger auf einen Puffer, der die [**NDDESHAREINFO-Struktur**](nddeshareinfo-str.md) und die zugeordneten Daten empfängt, auf die die Member zeigen. Dieser Parameter kann **NULL** sein. Wenn *lpBuffer* **NULL ist,** berechnet das DSDM die Anzahl der Bytes, die zum Speichern der angeforderten Freigabeinformationen erforderlich sind, und gibt diesen Wert zusammen mit dem Fehler NDDE BUF TOO SMALL im Feld *lpnTotalAvailable* \_ \_ \_ zurück.
 
 </dd> <dt>
 
-*cbubsize* \[ in\]
+*cBufSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *lpBuffer* -Puffers in Bytes. Wenn *lpBuffer* den Wert **null** hat, sollte *cbubsize* gleich NULL sein.
+Die Größe des *lpBuffer-Puffers* in Bytes. Wenn *lpBuffer* NULL **ist,** sollte *cBufSize* 0 (null) sein.
 
 </dd> <dt>
 
-*lpntotalavailable* \[ vorgenommen\]
+*lpnTotalAvailable* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die zum Speichern der angeforderten Freigabe Informationen benötigt werden. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf eine Variable, die die Gesamtzahl der Bytes empfängt, die zum Speichern der angeforderten Freigabeinformationen erforderlich sind. Dieser Parameter darf nicht **NULL sein.**
 
 </dd> <dt>
 
-*lpnitems* \[ in\]
+*lpnItems* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Elementauswahl Maske für das Abrufen partieller Freigabe Informationen.
+Ein Zeiger auf eine Elementauswahlmaske zum Abrufen von Teilfreigabeinformationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert "ndde \_ No \_ Error".
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NDDE \_ NO \_ ERROR.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch den Aufruf von [**nddegeterrorstring**](nddegeterrorstring.md)in eine Text Fehlermeldung übersetzt werden kann. Wenn der *lpBuffer* -Parameter **null** ist, wird ndde \_ buf \_ zu \_ klein zurückgegeben.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann. Wenn der *lpBuffer-Parameter* **NULL ist,** wird NDDE \_ BUF \_ TOO SMALL \_ zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,27 +112,27 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Nddebug** (Unicode) und **ndabsharegetinfoa** (ANSI)<br/>            |
+| Unicode- und ANSI-Name<br/>   | **NDdeShareGetInfoW** (Unicode) und **NDdeShareGetInfoA** (ANSI)<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Übersicht dynamische Daten Exchange Netzwerksicherheit](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[DDE-Netzwerkfunktionen](network-dde-functions.md)
 </dt> <dt>
 
-[**Nddebug-Info**](nddeshareinfo-str.md)
+[**NDDESHAREINFO**](nddeshareinfo-str.md)
 </dt> <dt>
 
-[**Nddesharesetinfo**](nddesharesetinfo.md)
+[**NDdeShareSetInfo**](nddesharesetinfo.md)
 </dt> </dl>
 
  

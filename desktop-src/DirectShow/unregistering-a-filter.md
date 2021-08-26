@@ -4,18 +4,18 @@ ms.assetid: 5459d172-7dfe-4786-bcf2-031e441e30a2
 title: Aufheben der Registrierung eines Filters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d161b7d1f169b84ba43ac734bf01708a37eb700a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74e26f2d524ff501fcff1db645c9ccdf1a1c9c80c4056af1af206b996f801207
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049680"
 ---
 # <a name="unregistering-a-filter"></a>Aufheben der Registrierung eines Filters
 
-Um die Registrierung eines Filters aufzuheben, implementieren Sie die **DllUnregisterServer** -Funktion. In dieser Funktion wird die DirectShow [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) -Funktion mit dem Wert **false** aufgerufen. Wenn Sie **IFilterMapper2:: registerfilter** beim Registrieren des Filters aufgerufen haben, müssen Sie hier die [**IFilterMapper2:: unregisterfilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-unregisterfilter) -Methode aufrufen.
+Um die Registrierung eines Filters aufzuheben, implementieren Sie die **DllUnregisterServer-Funktion.** Rufen Sie in dieser Funktion die [**DirectShow-Funktion AMovieDllRegisterServer2**](amoviedllregisterserver2.md) mit dem Wert **FALSE** auf. Wenn Sie **IFilterMapper2::RegisterFilter** beim Registrieren des Filters aufgerufen haben, rufen Sie hier die [**IFilterMapper2::UnregisterFilter-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltermapper2-unregisterfilter) auf.
 
-Im folgenden Beispiel wird gezeigt, wie die Registrierung eines Filters aufgehoben wird:
+Das folgende Beispiel zeigt, wie Sie die Registrierung eines Filters aufheben:
 
 
 ```C++

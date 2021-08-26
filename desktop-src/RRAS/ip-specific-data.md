@@ -1,10 +1,10 @@
 ---
-title: IP_SPECIFIC_DATA Struktur (RTM. h)
-description: Die IP \_ -spezifische Datenstruktur enthält IP-spezifische Daten.
+title: IP_SPECIFIC_DATA-Struktur (Rtm.h)
+description: Die \_ IP-SPEZIFISCHE DATENstruktur enthält IP-spezifische Daten.
 ms.assetid: 68f2f4cc-141b-4f22-94ac-cc72e8dcca0a
 keywords:
-- IP_SPECIFIC_DATA Struktur-RAS
-- PIP_SPECIFIC_DATA-Struktur Zeiger RAS
+- IP_SPECIFIC_DATA struktur ras
+- PIP_SPECIFIC_DATA Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a3ed319f7cf42295bf918ed3ec67f5d59fe5d80
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 906ae9f2accb3d380227f08ad6b65642b96ce6bfa928591bd11a69c478f531b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036670"
 ---
-# <a name="ip_specific_data-structure"></a>IP- \_ spezifische \_ Datenstruktur
+# <a name="ip_specific_data-structure"></a>\_IP-SPEZIFISCHE \_ DATENstruktur
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde von der Routing Table Manager Version [2-API](about-routing-table-manager-version-2.md) abgelöst und ist nicht mehr als Windows Server 2003 verfügbar. Anwendungen sollten die Routing Table Manager Version 2-API verwenden.\]
 
-Die **IP- \_ spezifische Daten** Struktur enthält IP-spezifische Daten.
+Die **\_ IP-SPEZIFISCHE DATENstruktur** enthält IP-spezifische Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,19 +53,19 @@ typedef struct _IP_SPECIFIC_DATA {
 
 <dl> <dt>
 
-**Typ " \_ Typ"**
+**\_FSD-Typ**
 </dt> <dd>
 
-Gibt den Routentyp an, wie in [RFC 1354](routing-protocols-request-for-comments.md)definiert. In der folgenden Tabelle werden die möglichen Werte für diesen Member angezeigt.
+Gibt den Routentyp an, wie in [RFC 1354](routing-protocols-request-for-comments.md)definiert. Die folgende Tabelle zeigt die möglichen Werte für dieses Element.
 
 
 
 | Member                                                                                               | Bedeutung                                                                                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Der Routentyp wurde nicht angegeben. Der-Typ unterscheidet sich von den hier aufgeführten.<br/>                                                                                                                                                                                         |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Die Route ist ungültig. Normalerweise wird dieser Wert verwendet, um eine Route für ungültig zu erklären. Da die Invalidierung vom Routing Tabellen-Manager jedoch nicht unterstützt wird, wird die Route weiterhin in den Best-Route-Berechnungen berücksichtigt. Daher sollten Routing Protokolle diesen Wert nicht verwenden.<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Der Routentyp ist nicht angegeben. Der Typ unterscheidet sich von den hier aufgeführten Typen.<br/>                                                                                                                                                                                         |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Die Route ist ungültig. Normalerweise wird dieser Wert verwendet, um eine Route ungültig zu machen. Da die Invalidierung jedoch vom Routingtabellen-Manager nicht unterstützt wird, wird die Route in Berechnungen mit der besten Route weiterhin berücksichtigt. Daher sollten Routingprotokolle diesen Wert nicht verwenden.<br/> |
 | <span id="3"></span><dl> <dt>**3**</dt> </dl> | Die Route ist eine lokale Route, d. h., der nächste Hop ist das endgültige Ziel.<br/>                                                                                                                                                                                            |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Die Route ist eine Remote Route, d. h., der nächste Hop ist nicht das endgültige Ziel.<br/>                                                                                                                                                                                       |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Die Route ist eine Remoteroute, d. h., der nächste Hop ist nicht das endgültige Ziel.<br/>                                                                                                                                                                                       |
 
 
 
@@ -73,85 +73,85 @@ Gibt den Routentyp an, wie in [RFC 1354](routing-protocols-request-for-comments.
 
 </dd> <dt>
 
-**F- \_ Richtlinie**
+**\_FSD-Richtlinie**
 </dt> <dd>
 
-Gibt den Satz von Bedingungen an, die die Auswahl einer multipfadroute bewirken würden. Dieser Member befindet sich in der Regel im IP-Adressformat. Weitere Informationen finden Sie unter [RFC 1354](routing-protocols-request-for-comments.md).
+Gibt den Satz von Bedingungen an, die die Auswahl einer Route mit mehreren Pfaden verursachen würden. Dieser Member weist in der Regel das IP-TOS-Format auf. Weitere Informationen finden Sie unter [RFC 1354](routing-protocols-request-for-comments.md).
 
 </dd> <dt>
 
-**F// \_ nexthopas**
+**FSD \_ NextHopAS**
 </dt> <dd>
 
-Gibt die autonome System Nummer des nächsten Hops an.
+Gibt die autonome Systemnummer des nächsten Hops an.
 
 </dd> <dt>
 
-**F- \_ Priorität**
+**\_FSD-Priorität**
 </dt> <dd>
 
-Gibt einen Metrikwert an. Der Routing Tabellen-Manager verwendet diesen Wert, um diesen Routen Eintrag mit Routen Einträgen zu vergleichen, die aus anderen Routing Protokollen abgerufen wurden. Der Wert dieses Members wird vom Routing Tabellen-Manager festgelegt.
+Gibt einen Metrikwert an. Der Routingtabellen-Manager verwendet diesen Wert, um diesen Routeneintrag mit Routeneinträgen zu vergleichen, die von anderen Routingprotokollen abgerufen wurden. Der Wert dieses Members wird vom Routingtabellen-Manager festgelegt.
 
 </dd> <dt>
 
-**F- \_ Metrik**
+**\_FSD-Metrik**
 </dt> <dd>
 
-Gibt einen Metrikwert an. Der Routing Tabellen-Manager verwendet diesen Wert, um diesen Routen Eintrag mit anderen Routen Einträgen zu vergleichen, die aus demselben Routing Protokoll abgerufen werden. Der Wert dieses Members wird durch das Routing Protokoll festgelegt.
+Gibt einen Metrikwert an. Der Routingtabellen-Manager verwendet diesen Wert, um diesen Routeneintrag mit anderen Routeneinträgen zu vergleichen, die aus dem gleichen Routingprotokoll abgerufen wurden. Der Wert dieses Members wird durch das Routingprotokoll festgelegt.
 
 </dd> <dt>
 
-**\_Metric1**
+**FSD \_ Metric1**
 </dt> <dd>
 
-Gibt einen Routing Protokoll spezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
+Gibt einen routingprotokollspezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
 
 </dd> <dt>
 
-**\_Metric2**
+**FSD \_ Metric2**
 </dt> <dd>
 
-Gibt einen Routing Protokoll spezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
+Gibt einen routingprotokollspezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
 
 </dd> <dt>
 
-**\_Metric3**
+**\_FSD-Metrik3**
 </dt> <dd>
 
-Gibt einen Routing Protokoll spezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
+Gibt einen routingprotokollspezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
 
 </dd> <dt>
 
-**\_Metric4**
+**\_FSD-Metrik4**
 </dt> <dd>
 
-Gibt einen Routing Protokoll spezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
+Gibt einen routingprotokollspezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
 
 </dd> <dt>
 
-**\_Metric5**
+**\_FSD-Metrik5**
 </dt> <dd>
 
-Gibt einen Routing Protokoll spezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
+Gibt einen routingprotokollspezifischen Metrikwert an. Dieser Metrikwert ist in [RFC 1354](routing-protocols-request-for-comments.md)dokumentiert.
 
 </dd> <dt>
 
-**F- \_ Flags**
+**\_FSD-Flags**
 </dt> <dd>
 
-Gibt an, ob die Route gültig ist. Das Routing Protokoll sollte diese Flags zuerst löschen und dann die Route als gültig oder ungültig festlegen. Das Routing Protokoll sollte zum Durchführen dieser Vorgänge die Makros **clearrouteflags ()** **, "", "**", "", "", "", "", "", " **", "** " Diese Makros sind in RTM. h definiert.
+Gibt an, ob die Route gültig ist. Das Routingprotokoll sollte diese Flags zuerst löschen und dann die Route entweder als gültig oder ungültig festlegen. Das Routingprotokoll sollte die Makros **ClearRouteFlags()**, **SetRouteValid()** und **ClearRouteValid()** verwenden, um diese Vorgänge auszuführen. Diese Makros werden in Rtm.h definiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Routing Tabellen-Manager verwendet die **FSD- \_ Priorität** und die **FSD- \_ metrikelemente** , um die beste Route zu einem bestimmten Zielnetzwerk zu berechnen.
+Der Routingtabellen-Manager verwendet die **\_ FSD-Prioritäts-** und **\_ FSD-Metrikmember,** um die beste Route zu einem bestimmten Zielnetzwerk zu berechnen.
 
-Die **FSD- \_ Metrik \[ 1-5 \]** -Elemente sind für die MIB II-Konformität vorgesehen. In MIB II-Agents werden nur diese Metrikwerte angezeigt. Der Wert der **SSD \_** -Metrik wird nicht angezeigt. Damit die **FSD- \_ Metrik** angezeigt wird, sollte das Routing Protokoll auch den Wert in einem der **FSD- \_ Metrik \[ 1-5 \]** -Elemente speichern.
+Die FSD Metric 1-5 members are for MIB II conformance **\_ (FSD-Metrik \[ \] 1-5-Member** für DIE MIB II-Konformität). MIB II-Agents zeigen nur diese Metrikwerte an. Der Metrikwert der **\_ FSD-Metrik** wird nicht angezeigt. Damit die **\_ FSD-Metrik** angezeigt wird, sollte das Routingprotokoll auch den Wert in einem der **\_ FSD-Metrik \[ 1-5 \]** Member speichern.
 
-Der Routing Tabellen-Manager verwendet die Metrikwerte in den **FSD- \_ Metrik \[ 1-5 \]** -Membern nicht, wenn die beste Route zu einem Zielnetzwerk berechnet wird. Daher sollte das Routing Protokoll sicherstellen, dass das **FSD- \_ metrikelement** über einen entsprechenden Metrikwert verfügt.
+Der Routingtabellen-Manager verwendet beim Berechnen der besten Route zu einem Zielnetzwerk nicht die Metrikwerte in den **\_ \[ FSD-Metrik \] 1-5-Mitgliedern.** Daher sollte das Routingprotokoll sicherstellen, dass das **\_ FSD-Metrikmitglied** über einen geeigneten Metrikwert verfügt.
 
-Ein Routing Protokoll könnte mithilfe der **FSD- \_ Flags** eine Route als ungültig markieren, wenn die Route nicht von anderen Routing Protokollen verwendet werden soll.
+Ein Routingprotokoll kann die **\_ FSD-Flags** verwenden, um eine Route als ungültig zu kennzeichnen, wenn die Route nicht von anderen Routingprotokollen verwendet werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -161,22 +161,22 @@ Ein Routing Protokoll könnte mithilfe der **FSD- \_ Flags** eine Route als ung�
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Referenz zu Routingtabellen-Manager, Version 1](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Routing Tabellen-Manager, Version 1, Strukturen](routing-table-manager-version-1-structures.md)
+[Routingtabellen-Manager- Version 1-Strukturen](routing-table-manager-version-1-structures.md)
 </dt> <dt>
 
-[**RTM \_ -IP- \_ Route**](rtm-ip-route.md)
+[**\_RTM-IP-ROUTE \_**](rtm-ip-route.md)
 </dt> </dl>
 
  

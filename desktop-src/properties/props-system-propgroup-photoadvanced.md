@@ -1,21 +1,21 @@
 ---
 description: Erfahren Sie mehr über die System.PropGroup.PhotoAdvanced-Eigenschaft. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
 ms.assetid: ae4024d2-ffb8-46a3-a35b-08f9c9dfab8c
-title: System.PropGroup.PhotoAdvanced
+title: System.PropGroup.PhotoErweitert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50dd122f709fc1b9337922277e45a9995a65830b
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 44a27822a95a7b3004cfb7f067d3d796b01b3733ca123a9ffcb88ec5d131fd4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112403763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009930"
 ---
-# <a name="systempropgroupphotoadvanced"></a>System.PropGroup.PhotoAdvanced
+# <a name="systempropgroupphotoadvanced"></a>System.PropGroup.PhotoErweitert
 
-Das in Eigenschaftenlisten verwendete Eigenschaftengruppentrennzeichen, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
+Das Eigenschaftengruppentrennzeichen, das in Eigenschaftenlisten verwendet wird, um Audiodateien von anderen Typen zu trennen. Verwenden Sie diese Eigenschaft nicht zum Abrufen oder Festlegen von Werten. Sie ist nur als Marker vorgesehen.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -30,7 +30,7 @@ propertyDescription
       type = Null
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

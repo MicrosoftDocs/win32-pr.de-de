@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Async.h
-ms.openlocfilehash: 03cbbc70e633f8289f99e094602cb1a912b711c5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3bcc32e94d6329d42edd27f1daf39e40d28b71ba65cc32fd88d4ae3951d5012e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989240"
 ---
 # <a name="d3dx10createeffectfrommemory-function"></a>D3DX10CreateEffectFromMemory-Funktion
 
@@ -52,129 +52,129 @@ HRESULT D3DX10CreateEffectFromMemory(
 
 <dl> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Effekt im Speicher.
+Zeiger auf den Effekt im Arbeitsspeicher.
 
 </dd> <dt>
 
-*DATALENGTH* \[ in\]
+*DataLength* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)**
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)**
 
 Größe des Effekts im Arbeitsspeicher.
 
 </dd> <dt>
 
-*psrcfilename* \[ in\]
+*pSrcFileName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Effekt Datei im Arbeitsspeicher.
+Name der Effektdatei im Arbeitsspeicher.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefdefine* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**D3D \_ Shader- \_ Makro**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
+Typ: **const [**D3D \_ SHADER \_ MACRO**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
 
-Ein mit Null endendes Array von Shader-Makros (siehe [**D3D \_ Shader \_ Macro**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)); legen Sie diese Einstellung auf **null** fest, um keine Makros anzugeben.
+Ein auf NULL terminiertes Array von Shadermakros (siehe [**D3D-SHADER-MAKRO). \_ \_**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)Legen Sie diesen Wert auf **NULL** fest, um keine Makros anzugeben.
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Include**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))\***
 
-Ein Zeiger auf eine include-Schnittstelle (siehe [**ID3D10Include-Schnittstelle**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))). Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf eine Includeschnittstelle (siehe [**ID3D10Include Interface**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))). Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*pprofile* \[ in\]
+*pProfile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Eine Zeichenfolge, die das [Shader-Profil](../direct3dhlsl/dx-graphics-hlsl-models.md)oder Shader-Modell angibt.
+Eine Zeichenfolge, die das [Shaderprofil oder](../direct3dhlsl/dx-graphics-hlsl-models.md)das Shadermodell angibt.
 
 </dd> <dt>
 
-*Hlslflags* \[ in\]
+*HLSLFlags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-HLSL-Kompilierungsoptionen (siehe [d3d10 \_ Shader Konstanten](d3d10-shader.md)).
+HLSL-Kompilierungsoptionen (siehe [D3D10-SHADER-Konstanten \_ ](d3d10-shader.md)).
 
 </dd> <dt>
 
-*Fxflags* \[ in\]
+*FXFlags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Effekt Kompilierungsoptionen (siehe [d3d10 \_ Effect Konstanten](d3d10-effect.md)).
+Effect-Kompilierungsoptionen (siehe [D3D10 \_ EFFECT-Konstanten](d3d10-effect.md)).
 
 </dd> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Device**](/windows/win32/api/D3D10/nn-d3d10-id3d10device)\***
 
-Ein Zeiger auf das Gerät (siehe [**ID3D10Device Interface**](/windows/win32/api/D3D10/nn-d3d10-id3d10device)), von dem die Ressourcen verwendet werden.
+Ein Zeiger auf das Gerät (siehe [**ID3D10Device Interface),**](/windows/win32/api/D3D10/nn-d3d10-id3d10device)das die Ressourcen verwendet.
 
 </dd> <dt>
 
-"Peer"- *Pool* \[ in\]
+*pEffectPool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10EffectPool**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effectpool)\***
 
-Zeiger auf einen Effekt Pool (siehe [**ID3D10EffectPool Interface**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effectpool)) für die Freigabe von Variablen zwischen Effekten.
+Zeiger auf einen Effektpool (siehe [**ID3D10EffectPool-Schnittstelle**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effectpool)) zum Freigeben von Variablen zwischen Effekten.
 
 </dd> <dt>
 
-*ppump* \[ in\]
+*pPump* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10ThreadPump**](id3dx10threadpump.md)\***
 
-Ein Zeiger auf eine Thread-Pump Schnittstelle (siehe [**ID3DX10ThreadPump Interface**](id3dx10threadpump.md)). Verwenden Sie **null** , um anzugeben, dass diese Funktion erst zurückgegeben werden soll, wenn Sie abgeschlossen ist.
+Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md)). Verwenden **Sie NULL,** um anzugeben, dass diese Funktion erst zurückgegeben werden soll, wenn sie abgeschlossen ist.
 
 </dd> <dt>
 
-*ppeer-ect* \[ vorgenommen\]
+*ppEffect* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Effect**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effect)\*\***
 
-Adresse eines Zeigers auf den Effekt (siehe [**ID3D10Effect Interface**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effect)), der erstellt wird.
+Adresse eines Zeigers auf den Effekt (siehe [**ID3D10Effect-Schnittstelle**](/windows/win32/api/D3D10Effect/nn-d3d10effect-id3d10effect)), der erstellt wird.
 
 </dd> <dt>
 
-*pperroren* \[ vorgenommen\]
+*ppErrors* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)\*\***
 
-Die Adresse eines Zeigers auf den Speicher (siehe [**ID3D10Blob Interface**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)), die Auswirkungen auf Kompilierungsfehler enthält (sofern vorhanden).
+Die Adresse eines Zeigers auf den Arbeitsspeicher (siehe [**ID3D10Blob-Schnittstelle**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)), der Kompilierungsfehler für Auswirkungen enthält, sofern diese aufgetreten sind.
 
 </dd> <dt>
 
-*phresult* \[ vorgenommen\]
+*pHResult* \[ out\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null** ist, muss *phresult* eine gültige Speicheradresse sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann NULL **sein.** Wenn *pPump* nicht **NULL ist,** muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -182,7 +182,7 @@ Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -190,7 +190,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Async. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Async.h</dt> </dl> |
 
 
 
@@ -198,7 +198,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

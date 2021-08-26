@@ -1,21 +1,21 @@
 ---
-title: Festlegen von L2TP-und PPTP-Ports für den lokalen RRAS-Dienst
-description: In diesem Beispiel wird die L2TP-und PPTP-Port Konfiguration des lokalen RRAS-Dienstanbieter abgerufen und festgelegt. Es wird davon ausgegangen, dass der Aufrufprozess über ausreichende Berechtigungen für den Zugriff auf den lokalen RRAS-Dienst verfügt
+title: Festlegen von L2TP- und PPTP-Ports des lokalen RRAS-Diensts
+description: Dieses Beispiel ruft die L2TP- und PPTP-Portkonfiguration des lokalen RRAS-Diensts ab und legt sie fest. Es wird davon ausgegangen, dass der aufrufende Prozess über ausreichende Berechtigungen für den Zugriff auf den lokalen RRAS-Dienst verfügt.
 ms.assetid: 9e4aa8d4-e09e-4c84-acf0-c505a58841a4
 keywords:
 - Festlegen von RRAS-Dienstports
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7590ec249fd73934dab2e07bfb4dbef77d46aeda
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3ae05fabd171bba59286b3a68120895132b303af9c5e81e7c6a36410e98195be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073770"
 ---
-# <a name="setting-l2tp-and-pptp-ports-of-local-rras-service"></a>Festlegen von L2TP-und PPTP-Ports für den lokalen RRAS-Dienst
+# <a name="setting-l2tp-and-pptp-ports-of-local-rras-service"></a>Festlegen von L2TP- und PPTP-Ports des lokalen RRAS-Diensts
 
-In diesem Beispiel wird die L2TP-und PPTP-Port Konfiguration des lokalen RRAS-Dienstanbieter abgerufen und festgelegt. Es wird davon ausgegangen, dass der Aufrufprozess über ausreichende Berechtigungen für den Zugriff auf den lokalen RRAS-Dienst verfügt
+Dieses Beispiel ruft die L2TP- und PPTP-Portkonfiguration des lokalen RRAS-Diensts ab und legt sie fest. Es wird davon ausgegangen, dass der aufrufende Prozess über ausreichende Berechtigungen für den Zugriff auf den lokalen RRAS-Dienst verfügt.
 
 
 ```C++
@@ -98,9 +98,9 @@ int __cdecl main(){
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: Idschreitelocalfontfileloader-Schnittstelle
-description: Eine integrierte Implementierung der idschreitefontfileloader-Schnittstelle, die mit lokalen Schriftart Dateien arbeitet und lokale Schriftart Dateiinformationen aus dem Schriftart Datei-Verweis Schlüssel verfügbar macht.
+title: IDWriteLocalFontFileLoader-Schnittstelle
+description: Eine integrierte Implementierung der IDWriteFontFileLoader-Schnittstelle, die für lokale Schriftartdateien verwendet wird und lokale Schriftartdateiinformationen aus dem Schriftartdateiverweisschlüssel verfügbar macht.
 ms.assetid: acb777c8-24c6-452e-8f58-8fb2ad8c0b6c
 keywords:
-- Idwrite telocalfontfileloader-Schnittstelle direkt schreiben
-- Direkter Schreibvorgang der idschreitelocalfontfileloader-Schnittstelle, beschrieben
+- IDWriteLocalFontFileLoader-Schnittstelle – Direkter Schreibzugriff
+- IDWriteLocalFontFileLoader-Schnittstelle Direct Write , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,34 +15,34 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c65f537dc2a4a96161a11d85ae0a4e1869a331e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fa073b0d39e5dfbcdb90f2cd67db5f09a04e21c3e36790d4d841e5719490c753
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048690"
 ---
-# <a name="idwritelocalfontfileloader-interface"></a>Idschreitelocalfontfileloader-Schnittstelle
+# <a name="idwritelocalfontfileloader-interface"></a>IDWriteLocalFontFileLoader-Schnittstelle
 
-Eine integrierte Implementierung der [**idschreitefontfileloader**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileloader) -Schnittstelle, die mit lokalen Schriftart Dateien arbeitet und lokale Schriftart Dateiinformationen aus dem Schriftart Datei-Verweis Schlüssel verfügbar macht. Verweise auf Schriftart Dateien, [**die mithilfe von**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createfontfilereference) "" erstellt wurden, verwenden dieses Schriftart Datei Lade Tool.
+Eine integrierte Implementierung der [**IDWriteFontFileLoader-Schnittstelle,**](/windows/win32/api/dwrite/nn-dwrite-idwritefontfileloader) die für lokale Schriftartdateien verwendet wird und lokale Schriftartdateiinformationen aus dem Schriftartdateiverweisschlüssel verfügbar macht. Schriftartdateiverweise, die mit [**CreateFontFileReference erstellt wurden,**](/windows/win32/api/dwrite/nf-dwrite-idwritefactory-createfontfilereference) verwenden dieses Schriftartdateilader.
 
 ## <a name="members"></a>Member
 
-Die **idwrite telocalfontfileloader** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Idwrite telocalfontfileloader** verfügt auch über die folgenden Typen von Membern:
+Die **IDWriteLocalFontFileLoader-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IDWriteLocalFontFileLoader** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idwrite telocalfontfileloader** -Schnittstelle verfügt über diese Methoden.
+Die **IDWriteLocalFontFileLoader-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                  | BESCHREIBUNG                                                                               |
 |:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
-| [**Getfilepathfromkey**](idwritelocalfontfileloader-getfilepathfromkey.md)             | Ruft den absoluten Schriftart Datei Pfad aus dem Verweis Schlüssel der Schriftart Datei ab.<br/>          |
-| [**Getfilepathlängen fromkey**](idwritelocalfontfileloader-getfilepathlengthfromkey.md) | Ruft die Länge des absoluten Dateipfads aus dem Verweis Schlüssel der Schriftart Datei ab.<br/> |
-| [**Getlastschreitetimefromkey**](idwritelocalfontfileloader-getlastwritetimefromkey.md)   | Ruft den Zeitpunkt des letzten Schreibzugriffs auf die Datei aus dem Verweis Schlüssel der Schriftart Datei ab.<br/>      |
+| [**GetFilePathFromKey**](idwritelocalfontfileloader-getfilepathfromkey.md)             | Erhält den absoluten Schriftartdateipfad aus dem Schriftartdateiverweisschlüssel.<br/>          |
+| [**GetFilePathLengthFromKey**](idwritelocalfontfileloader-getfilepathlengthfromkey.md) | Erhält die Länge des absoluten Dateipfads aus dem Verweisschlüssel der Schriftartdatei.<br/> |
+| [**GetLastWriteTimeFromKey**](idwritelocalfontfileloader-getlastwritetimefromkey.md)   | Erhält den Zeitpunkt des letzten Schreibzugriffs der Datei aus dem Verweisschlüssel der Schriftartdatei.<br/>      |
 
 
 
@@ -54,7 +54,7 @@ Die **idwrite telocalfontfileloader** -Schnittstelle verfügt über diese Method
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 

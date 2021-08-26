@@ -1,9 +1,9 @@
 ---
-title: WM_RASDIALEVENT Meldung (RAS. h)
-description: Das Betriebssystem sendet eine WM- \_ rasdialereignisnachricht an eine Fenster Prozedur, wenn während eines RAS-Verbindungsprozesses eine Änderung des Zustands Ereignisses auftritt.
+title: WM_RASDIALEVENT Meldung (Ras.h)
+description: Das Betriebssystem sendet eine WM \_ RASDIALEVENT-Nachricht an eine Fensterprozedur, wenn während eines RAS-Verbindungsprozesses ein Zustandsänderungsereignis auftritt.
 ms.assetid: 4526da20-04e7-47b2-b576-8dc36c08b053
 keywords:
-- WM_RASDIALEVENT-Message-RAS
+- WM_RASDIALEVENT Nachricht RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 470fe3915c9f672c4663971159386e529ea60db4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 093591ffe07ecbe662ca85306b74c34c670e1adbe51e2605b1f21faa20696c3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024770"
 ---
-# <a name="wm_rasdialevent-message"></a>WM- \_ rasdialereignismeldung
+# <a name="wm_rasdialevent-message"></a>WM \_ RASDIALEVENT-Nachricht
 
-Das Betriebssystem sendet eine **WM- \_ rasdialereignisnachricht** an eine Fenster Prozedur, wenn während eines RAS-Verbindungsprozesses eine Änderung des Zustands Ereignisses auftritt. Dies ist der Fall, wenn ein Fenster angegeben wurde, das Benachrichtigungen über solche Ereignisse mithilfe des *Benachrichtigung* -Parameters von [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala)behandelt.
+Das Betriebssystem sendet eine **\_ WM-RASDIALEVENT-Nachricht** an eine Fensterprozedur, wenn während eines RAS-Verbindungsprozesses ein Zustandsänderungsereignis auftritt. Dies geschieht, wenn ein Fenster angegeben wurde, um Benachrichtigungen solcher Ereignisse mithilfe des *Notifier-Parameters* von [**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala)zu behandeln.
 
-Die beiden Nachrichten Parameter entsprechen den Parametern mit denselben Namen, die mit den Rückruf Funktionen von " [**rasdialfunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) " und " [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) " verwendet werden.
+Die beiden Nachrichtenparameter entsprechen den Parametern der gleichen Namen, die mit den Rückruffunktionen [**RasDialFunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) und [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) verwendet werden.
 
 
 ```C++
@@ -41,25 +41,25 @@ dwError = (DWORD) lParam;
 
 <dl> <dt>
 
-*rasrestate* 
+*rasconnstate* 
 </dt> <dd>
 
-Der Wert von *wParam*. Entspricht dem " *rasconfiguration State* "-Parameter der " [**rasdialfunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) "-und " [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) "-Rückruffunktion. Gibt einen " [**rasnetwork State**](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85)) "-Enumeratorwert an, der den Zustand angibt, in den der RAS-RAS-Verbindungsprozess eintritt.
+Der Wert von *wParam.* Entspricht dem *rasconnstate-Parameter* der Rückruffunktionen [**RasDialFunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) und [**RasDialFunc1.**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) Gibt einen RASCONNSTATE-Enumeratorwert an, der den Zustand angibt, in den der RasDial-Remotezugriffsverbindungsprozess eingegeben werden soll. [](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85))
 
 </dd> <dt>
 
 *dwError* 
 </dt> <dd>
 
-Der Wert von *LPARAM*. Entspricht dem *dwError* -Parameter der " [**rasdialfunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) "-und " [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) "-Rückruffunktion. Ein Wert ungleich NULL gibt den Fehler an, der aufgetreten ist, oder 0 (null), wenn kein Fehler aufgetreten ist.
+Der Wert von *lParam.* Entspricht dem *dwError-Parameter* der Rückruffunktionen [**RasDialFunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc) und [**RasDialFunc1.**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1) Ein Wert ungleich 0 (null) gibt den aufgetretenen Fehler oder 0 (null) an, wenn kein Fehler aufgetreten ist.
 
-Der [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) sendet diese Nachricht mit *dwError* auf NULL festgelegt, wenn für den jeweiligen Verbindungsstatus ein Eintrag festgelegt ist. Wenn ein Fehler innerhalb eines Zustands auftritt, wird die Nachricht erneut für den Zustand gesendet, dieses Mal mit einem *dwError* -Wert ungleich 0 (null).
+[**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala) sendet diese Nachricht, wobei *dwError* beim Eintrag in jeden Verbindungszustand auf 0 (null) festgelegt ist. Wenn ein Fehler innerhalb eines Zustands auftritt, wird die Nachricht für den Zustand erneut gesendet, dieses Mal mit einem dwError-Wert ungleich *0 (null).*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie " **true**" zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie **TRUE** zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie " **true**" zurückg
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>RAS. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ras.h</dt> </dl> |
 
 
 
@@ -77,22 +77,22 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie " **true**" zurückg
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[Remote Zugriffs Dienst-Meldungen](remote-access-service-messages.md)
+[Remotezugriffsdienst-Nachrichten](remote-access-service-messages.md)
 </dt> <dt>
 
-[**Rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala)
+[**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala)
 </dt> <dt>
 
-[**Rasdialfunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc)
+[**RasDialFunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc)
 </dt> <dt>
 
 [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1)
 </dt> <dt>
 
-[**Rasrestate**](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85))
+[**RASCONNSTATE**](/previous-versions/windows/desktop/legacy/aa376727(v=vs.85))
 </dt> </dl>
 
  

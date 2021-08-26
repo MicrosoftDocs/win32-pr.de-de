@@ -4,16 +4,16 @@ ms.assetid: 82b9f849-b9dc-439b-8ca7-9dcd992338ab
 title: WM ASF-Readerfilter (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 330ab870b97fc3e84ccb5b0f726d4f35ef1af147
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 2e87642637e7a210707c049d9b3c6a1a431b0a277774ce432b1c5c962ff2f317
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113118665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049160"
 ---
 # <a name="wm-asf-reader-filter-directshow"></a>WM ASF-Readerfilter (DirectShow)
 
-Der WM ASF-Reader ist ein Wrapperfilter für das reader-Objekt, das mit dem Windows Media Format SDK bereitgestellt wird, und ist der empfohlene Quellfilter für die Dateiwiedergabe von Windows Media-basierten Inhalten und Inhalten, die mit einem der Microsoft MPEG-4 Encoder-DMOs erstellt wurden.
+Der WM ASF-Reader ist ein Wrapperfilter für das Readerobjekt, das mit dem Windows Media Format SDK bereitgestellt wird, und ist der empfohlene Quellfilter für die Dateiwiedergabe von Windows Medienbasierten Inhalten und Inhalten, die mit einem der Microsoft MPEG-4 Encoder-DMOs erstellt wurden.
 
 
 
@@ -34,11 +34,11 @@ Der WM ASF-Reader ist ein Wrapperfilter für das reader-Objekt, das mit dem Wind
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn der Name einer ASF-Datei oder einer URL angegeben wird, liest der WM ASF-Reader den komprimierten Inhalt, analysiert die komprimierten Datenströme und macht für jeden einen Ausgabepin verfügbar. Dieser Filter verbindet downstream mit Audio- und/oder Videocodecfiltern, die die Dekomprimierung anwenden. Die Suche wird unterstützt, wenn die ASF-Datei durchsuchbar ist. Der ASF-Reader stempelt die Stichproben, bevor er sie nachgelagert sendet, ändert die Zeitstempel jedoch in irgendeiner Weise.
 
-Die Wiedergabe mit anderen Geschwindigkeiten als 1,0 (wie in [**IMediaSeeking::SetRate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate)angegeben) wird nicht unterstützt.
+Die Wiedergabe mit anderen Geschwindigkeiten als 1.0 (wie in [**IMediaSeeking::SetRate**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-setrate)angegeben) wird nicht unterstützt.
 
 Wenn die Windows Media Format SDK-Runtime [**WMT \_ STATUS-Nachrichten**](/previous-versions/windows/desktop/api/wmsdkidl/ne-wmsdkidl-wmt_status) an den WM ASF Writer-Filter sendet, leitet der Filter alle Nachrichten im Zusammenhang mit dem DRM-Lizenzerwerb als [**EC \_ WMT \_ EVENT-Ereignisse**](ec-wmt-event.md) weiter. Weitere Informationen finden Sie unter [Lesen DRM-Protected ASF-Dateien in DirectShow](reading-drm-protected-asf-files-in-directshow.md).
 

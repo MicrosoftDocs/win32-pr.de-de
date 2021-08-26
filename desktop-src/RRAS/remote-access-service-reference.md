@@ -1,31 +1,31 @@
 ---
-title: RAS-Dienst Referenz
-description: Die folgenden Funktionen, Strukturen, Meldungen und Enumerationstypen werden verwendet, um RAS-Client Anwendungen (Remote Access Service) zu implementieren.
+title: Referenz zum RAS-Dienst
+description: Die folgenden Funktionen, Strukturen, Nachrichten und Enumerationstypen werden verwendet, um RAS-Clientanwendungen (Remote Access Service) zu implementieren.
 ms.assetid: 238420a7-6a18-43bc-8225-6581f0fd4d63
 keywords:
-- RAS-Dienst-RAS, Referenz
+- RAS-Ras des Ras-Diensts , Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37004077716767dd66cbed69a1b1346d69b58626
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fd92c22a2468a4dc8779dc55ae1ee0fbd916e33d912ebe6783e39763ccc8c840
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028130"
 ---
-# <a name="remote-access-service-reference"></a>RAS-Dienst Referenz
+# <a name="remote-access-service-reference"></a>Referenz zum RAS-Dienst
 
-Die folgenden Funktionen, Strukturen, Meldungen und Enumerationstypen werden verwendet, um RAS-Client Anwendungen (Remote Access Service) zu implementieren.
+Die folgenden Funktionen, Strukturen, Nachrichten und Enumerationstypen werden verwendet, um RAS-Clientanwendungen (Remote Access Service) zu implementieren.
 
--   [**RAS-Dienst Datentypen**](remote-access-service-data-types.md)
+-   [**Datentypen des RAS-Diensts**](remote-access-service-data-types.md)
 -   [Funktionen des RAS-Diensts](remote-access-service-functions.md)
--   [Remote Zugriffs Dienst-Meldungen](remote-access-service-messages.md)
--   [RAS-Dienst Strukturen](remote-access-service-structures.md)
--   [RAS-Dienst-Enumerationen](remote-access-service-enumerations.md)
+-   [Remotezugriffsdienstnachrichten](remote-access-service-messages.md)
+-   [Remotezugriffsdienststrukturen](remote-access-service-structures.md)
+-   [Remotezugriffsdienst-Enumerationen](remote-access-service-enumerations.md)
 
- 
+ 
 
- 
+ 
 
 
 

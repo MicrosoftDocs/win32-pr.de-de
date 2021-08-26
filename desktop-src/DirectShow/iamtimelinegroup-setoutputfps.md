@@ -1,7 +1,7 @@
 ---
-description: Die setoutputfps-Methode legt die nicht komprimierte Ausgabe Frame Rate für diese Gruppe fest.
+description: Die SetOutputFPS-Methode legt die unkomprimierte Ausgabebildrate für diese Gruppe fest.
 ms.assetid: 335ea106-d5db-43a1-b771-b027e25164a6
-title: 'Iamtimelinegroup:: setoutputfps-Methode (qedit. h)'
+title: IAMTimelineGroup::SetOutputFPS-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: bbec5de572dd2ed2a0e6b3062b208f1084bafd07
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 332e9ea33e0ca559800e560409066946247d1cff34b8e6b48fd1fadbdb91e38f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052700"
 ---
-# <a name="iamtimelinegroupsetoutputfps-method"></a>Iamtimelinegroup:: setoutputfps-Methode
+# <a name="iamtimelinegroupsetoutputfps-method"></a>IAMTimelineGroup::SetOutputFPS-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SetOutputFPS` Methode legt die nicht komprimierte Ausgabe Frame Rate für diese Gruppe fest.
+Die `SetOutputFPS` -Methode legt die unkomprimierte Ausgabebildrate für diese Gruppe fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,27 +48,27 @@ HRESULT SetOutputFPS(
 *FPS* 
 </dt> <dd>
 
-Ausgabe Frame Rate für diese Gruppe in Frames pro Sekunde. Der Wert kann nicht gleich 0 (null) sein und darf nicht mehr als sieben Ziffern nach der Dezimalstelle enthalten.
+Ausgabebildrate für diese Gruppe in Frames pro Sekunde. Der Wert darf nicht gleich 0 (null) sein und darf nach der Dezimalstelle nicht mehr als sieben Ziffern enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die gerenderte Ausgabe dieser Gruppe wird mit der angegebenen Framerate ausgeführt, und alle bearbeitvorgänge im Quellmaterial werden wie durch die Frame Rate definiert auf die nächste Frame Grenze gerundet. Verwenden Sie für eine optimale Leistung die gleiche Framerate für alle Gruppen, Videos und Audiodateien.
+Die gerenderte Ausgabe dieser Gruppe wird mit der angegebenen Bildfrequenz ausgeführt, und alle Bearbeitungen am Quellmaterial werden auf die nächste Framegrenze gerundet, wie durch die Bildfrequenz definiert. Um eine optimale Leistung zu erzielen, verwenden Sie die gleiche Bildfrequenz für alle Gruppen, Videos und Audiodaten.
 
-Die [**iamtimelinegroup::**](iamtimelinegroup-setsmartrecompressformat.md) -Methode zum Festlegen der Methode überschreibt die Framerate.
+Die [**IAMTimelineGroup::SetSmartRecompressFormat-Methode**](iamtimelinegroup-setsmartrecompressformat.md) überschreibt die Bildfrequenz.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -78,8 +78,8 @@ Die [**iamtimelinegroup::**](iamtimelinegroup-setsmartrecompressformat.md) -Meth
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Die [**iamtimelinegroup::**](iamtimelinegroup-setsmartrecompressformat.md) -Meth
 
 <dl> <dt>
 
-[**Iamtimelinegroup-Schnittstelle**](iamtimelinegroup.md)
+[**IAMTimelineGroup-Schnittstelle**](iamtimelinegroup.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

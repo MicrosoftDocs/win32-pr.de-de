@@ -1,31 +1,31 @@
-- name: Windows-projiziertes Datei System
+- name: Windows Projiziertes Dateisystem
   href: projected-file-system.md
   items:
-    - name: Programmier Handbuch für das projizierte Datei System
+    - name: Programmierhandbuch für projizierte Dateisysteme
       href: projfs-programming-guide.md
       items:
-        - name: Übersicht über den Anbieter
+        - name: Anbieterübersicht
           href: provider-overview.md
-        - name: Cache Status im virtualisierungsstamm
+        - name: Cachestatus im Virtualisierungsstamm
           href: cache-state.md
-        - name: Aktivieren des in Windows projizierten Dateisystems
+        - name: Aktivieren Windows projizierten Dateisystems
           href: enabling-windows-projected-file-system.md
-        - name: Lebenszyklus der virtualisierungsinstanz
+        - name: Virtualisierungsinstanzlebenszyklus
           href: virtualization-instance-lifecycle.md
         - name: Auflisten von Dateien und Verzeichnissen
           href: enumerating-files-and-directories.md
         - name: Bereitstellen von Dateidaten
           href: providing-file-data.md
-        - name: Datei System-Vorgangs Benachrichtigungen
+        - name: Dateisystem-Vorgangsbenachrichtigungen
           href: file-system-operation-notifications.md
-        - name: Behandeln von Änderungen der Ansicht
+        - name: Behandeln von Ansichtsänderungen
           href: handling-view-changes.md
-        - name: Asynchrone Rückruf Behandlung
+        - name: Asynchrone Rückrufbehandlung
           href: asynchronous-callback-handling.md
-    - name: Referenz zu projizierten Dateisystemen
+    - name: Referenz zum projizierten Dateisystem
       href: projfs-reference.md
       items:
-        - name: Projizierte Datei System-Rückruf Funktionen
+        - name: Rückruffunktionen für projizierte Dateisysteme
           href: projfs-callback-functions.md
           items:
             - name: PRJ_CANCEL_COMMAND_CB
@@ -44,48 +44,48 @@
               href: /windows/win32/api/projectedfslib/nc-projectedfslib-prj_query_file_name_cb
             - name: PRJ_START_DIRECTORY_ENUMERATION_CB
               href: /windows/win32/api/projectedfslib/nc-projectedfslib-prj_start_directory_enumeration_cb
-        - name: Projizierte Datei System Funktionen
+        - name: Projizierte Dateisystemfunktionen
           href: projfs-functions.md
           items:
-            - name: Prjzuzuordnen catealignedbuffer
+            - name: PrjAllocateAlignedBuffer
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjallocatealignedbuffer
-            - name: Prjclearnegativepathcache
+            - name: PrjClearNegativePathCache
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjclearnegativepathcache
-            - name: Prjcompletecommand
+            - name: PrjCompleteCommand
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjcompletecommand
-            - name: Prjdeletefile
+            - name: PrjDeleteFile
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjdeletefile
-            - name: Prjdoesnamecontainwildcards
+            - name: PrjDoesNameContainWildCards
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjdoesnamecontainwildcards
-            - name: Prjdateinamecompare
+            - name: PrjFileNameCompare
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamecompare
-            - name: Prjfile-amematch
+            - name: PrjFileNameMatch
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamematch
-            - name: Prjfilldirentrybuffer
+            - name: PrjFillDirEntryBuffer
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer
             - name: PrjFillDirEntryBuffer2
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer2
-            - name: Prjfrealignedbuffer
+            - name: PrjFreeAlignedBuffer
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjfreealignedbuffer
-            - name: Prjgetondiskfilestate
+            - name: PrjGetOnDiskFileState
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjgetondiskfilestate
-            - name: Prjgetvirtualizationinstanceingefo
+            - name: PrjGetVirtualizationInstanceInfo
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjgetvirtualizationinstanceinfo
-            - name: Prjmarkdirector yasplachalter
+            - name: PrjMarkDirectoryAsPlaceholder
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjmarkdirectoryasplaceholder
-            - name: Prjstartvirtualisieren
+            - name: PrjStartVirtualizing
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjstartvirtualizing
-            - name: Prjstopvirtualisieren
+            - name: PrjStopVirtualizing
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjstopvirtualizing
-            - name: Prjupdatefileifbenötigter
+            - name: PrjUpdateFileIfNeeded
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjupdatefileifneeded
-            - name: Prjschreitefiledata
+            - name: PrjWriteFileData
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjwritefiledata
-            - name: Prjschreiteplaceholderinfo
+            - name: PrjWritePlaceholderInfo
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo
             - name: PrjWritePlaceholderInfo2
               href: /windows/win32/api/projectedfslib/nf-projectedfslib-prjwriteplaceholderinfo2
-        - name: Projizierte Datei System Strukturen
+        - name: Projizierte Dateisystemstrukturen
           href: projfs-structures.md
           items:
             - name: PRJ_CALLBACK_DATA
@@ -108,7 +108,7 @@
               href: /windows/win32/api/projectedfslib/ns-projectedfslib-prj_startvirtualizing_options
             - name: PRJ_VIRTUALIZATION_INSTANCE_INFO
               href: /windows/win32/api/projectedfslib/ns-projectedfslib-prj_virtualization_instance_info
-        - name: Projizierte Datei System-Enumerationen
+        - name: Projizierte Dateisystemenumerationen
           href: projfs-enumerations.md
           items:
             - name: PRJ_CALLBACK_DATA_FLAGS

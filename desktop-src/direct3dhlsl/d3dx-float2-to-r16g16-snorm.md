@@ -1,9 +1,9 @@
 ---
 title: D3DX_FLOAT2_to_R16G16_SNORM-Funktion
-description: Packt den angegebenen XMFLOAT2 zurück in ein DXGI- \_ Format \_ R16G16 \_ snorm.
+description: Packt den angegebenen XMFLOAT2 wieder in ein DXGI \_ FORMAT \_ R16G16 \_ SNORM.
 ms.assetid: 7c5c6aae-b750-435a-9582-18b7689bc2d9
 keywords:
-- D3DX_FLOAT2_to_R16G16_SNORM-Funktion HLSL
+- D3DX_FLOAT2_to_R16G16_SNORM HlSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba63d7d7f03988e416d06b645e5c15163e431a7e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8d9ad7d4ff95113d4d684cba7cc348c2d60a536e12171afa6ad421724a668e63
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025000"
 ---
-# <a name="d3dx_float2_to_r16g16_snorm-function"></a>D3DX \_ FLOAT2 \_ to \_ R16G16 \_ snorm-Funktion
+# <a name="d3dx_float2_to_r16g16_snorm-function"></a>D3DX \_ FLOAT2 \_ zu \_ R16G16 \_ SNORM-Funktion
 
-Packt den angegebenen XMFLOAT2 zurück in ein DXGI- \_ Format \_ R16G16 \_ snorm.
+Packt den angegebenen XMFLOAT2 wieder in ein DXGI \_ FORMAT \_ R16G16 \_ SNORM.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,24 +37,24 @@ UINT D3DX_FLOAT2_to_R16G16_SNORM(
 
 <dl> <dt>
 
-*unpackedinput* 
+*unpackedInput* 
 </dt> <dd>
 
-Die entpackten Shader-Daten.
+Die entpackten Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Die gepackten Shader-Daten.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

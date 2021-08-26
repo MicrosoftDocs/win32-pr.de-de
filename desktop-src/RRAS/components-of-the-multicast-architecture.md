@@ -1,37 +1,37 @@
 ---
-title: Komponenten der Multicast Architektur
-description: 'Die Hauptkomponenten der Multicast-Routing Architektur werden in den folgenden Themen erläutert:'
+title: Komponenten der Multicastarchitektur
+description: Die Hauptkomponenten der Multicastroutingarchitektur werden in den folgenden Themen erläutert.
 ms.assetid: 34de56a6-d170-44f8-a537-d62825825c4c
 keywords:
-- Multicast Architektur
+- Multicastarchitektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4329cd053285c39778c9537613afdec6f449d15e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a3240c6dcb7591618804e8fc73255db02970e92b0ebb926491870e4108b7604f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030210"
 ---
-# <a name="components-of-the-multicast-architecture"></a>Komponenten der Multicast Architektur
+# <a name="components-of-the-multicast-architecture"></a>Komponenten der Multicastarchitektur
 
-Die Hauptkomponenten der Multicast-Routing Architektur werden in den folgenden Themen erläutert:
+Die Hauptkomponenten der Multicastroutingarchitektur werden in den folgenden Themen erläutert:
 
 -   [Router](router.md)
--   [Multicast Routing Protokoll](multicast-routing-protocol.md)
+-   [Multicastroutingprotokoll](multicast-routing-protocol.md)
 -   [Interface](interface.md)
--   [Multicast Quelle](multicast-source.md)
--   [Multicast Gruppe](multicast-group.md)
--   [(s, g), ( \* , g) und ( \* , \* )-Paare](-s-g-g-and-pairs.md)
+-   [Multicastquelle](multicast-source.md)
+-   [Multicastgruppe](multicast-group.md)
+-   [(s, g), ( \* , g) und ( \* , \* ) -Paare](-s-g-g-and-pairs.md)
 -   [Ziel](destination.md)
 -   [Nächster Hop](next-hop.md)
 -   [Multicast-Gruppen-Manager-Client](multicast-group-manager-client.md)
 
-In dem Abschnitt, in dem [die Multicast Architektur zusammenpasst](how-the-multicast-architecture-fits-together.md) , wird erläutert, wie diese Komponenten interagieren.
+Im Abschnitt [How the Multicast Architecture Fits Together (Zusammenpassen der Multicastarchitektur)](how-the-multicast-architecture-fits-together.md) wird erläutert, wie diese Komponenten interagieren.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: EM_SETPUNCTUATION Meldung (RichEdit. h)
-description: Legt die Interpunktions Zeichen für ein Rich-Edit-Steuerelement fest.
+title: EM_SETPUNCTUATION (Richedit.h)
+description: Legt die Interpunktionszeichen für ein Rich-Edit-Steuerelement fest.
 ms.assetid: c0c8ad14-63e2-4be8-8fc0-6b8ef9be4522
 keywords:
-- Windows-Steuerelemente für EM_SETPUNCTUATION Meldung
+- EM_SETPUNCTUATION von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 710392cee7f7a1fb04fce59d6549134255499172
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9a5e0856c1ee1882695dc5e6d7dfdd6b72ea0f6c4f16ee7396bbfde2b76b49b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062900"
 ---
-# <a name="em_setpunctuation-message"></a>EM- \_ setinterpunktions-Nachricht
+# <a name="em_setpunctuation-message"></a>EM \_ SETPUNCTUATION-Meldung
 
-Legt die Interpunktions Zeichen für ein Rich-Edit-Steuerelement fest.
+Legt die Interpunktionszeichen für ein Rich-Edit-Steuerelement fest.
 
 > [!Note]  
-> Diese Meldung wird nur in asiatischen Sprachversionen von Microsoft Rich Edit 1,0 unterstützt. Sie wird in späteren Versionen nicht unterstützt.
+> Diese Meldung wird nur in asiatisch-sprachbasierten Versionen von Microsoft Rich Edit 1.0 unterstützt. Sie wird in späteren Versionen nicht unterstützt.
 
  
 
@@ -37,16 +37,16 @@ Legt die Interpunktions Zeichen für ein Rich-Edit-Steuerelement fest.
 *wParam* 
 </dt> <dd>
 
-Gibt den Interpunktions Typ an, bei dem es sich um einen der folgenden Werte handeln kann.
+Gibt den Interpunktionstyp an, der einer der folgenden Werte sein kann.
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <span id="PC_LEADING"></span><span id="pc_leading"></span><dl> <dt>**PC- \_ führend**</dt> </dl>       | Führende Interpunktions Zeichen.<br/>   |
-| <span id="PC_FOLLOWING"></span><span id="pc_following"></span><dl> <dt>**PC \_ nach**</dt> </dl> | Die folgenden Interpunktions Zeichen.<br/> |
-| <span id="PC_DELIMITER"></span><span id="pc_delimiter"></span><dl> <dt>**PC- \_ Trennzeichen**</dt> </dl> | Trennzeichen.<br/>                        |
-| <span id="PC_OVERFLOW_"></span><span id="pc_overflow_"></span><dl> <dt>**PC \_ Überlauf**</dt> </dl> | Wird nicht unterstützt.<br/>                    |
+| <span id="PC_LEADING"></span><span id="pc_leading"></span><dl> <dt>**PC \_ LEADING**</dt> </dl>       | Führende Interpunktionszeichen.<br/>   |
+| <span id="PC_FOLLOWING"></span><span id="pc_following"></span><dl> <dt>**PC \_ FOLLOWING**</dt> </dl> | Folgende Interpunktionszeichen.<br/> |
+| <span id="PC_DELIMITER"></span><span id="pc_delimiter"></span><dl> <dt>**\_PC-TRENNZEICHEN**</dt> </dl> | Trennzeichen.<br/>                        |
+| <span id="PC_OVERFLOW_"></span><span id="pc_overflow_"></span><dl> <dt>**PC \_ OVERFLOW**</dt> </dl> | Wird nicht unterstützt.<br/>                    |
 
 
 
@@ -57,7 +57,7 @@ Gibt den Interpunktions Typ an, bei dem es sich um einen der folgenden Werte han
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Interpunktions**](/windows/desktop/api/Richedit/ns-richedit-punctuation) Struktur, die die Interpunktions Zeichen enthält.
+Zeiger auf eine [**PUNCTUATION-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-punctuation) die die Interpunktionszeichen enthält.
 
 </dd> </dl>
 
@@ -73,9 +73,9 @@ Wenn der Vorgang fehlschlägt, ist der Rückgabewert 0 (null).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -83,13 +83,13 @@ Wenn der Vorgang fehlschlägt, ist der Rückgabewert 0 (null).
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM- \_ Zeichensatz**](em-getpunctuation.md)
+[**EM \_ GETPUNCTUATION**](em-getpunctuation.md)
 </dt> <dt>
 
-[**Interpunktions**](/windows/desktop/api/Richedit/ns-richedit-punctuation)
+[**Satzzeichen**](/windows/desktop/api/Richedit/ns-richedit-punctuation)
 </dt> </dl>
 
  

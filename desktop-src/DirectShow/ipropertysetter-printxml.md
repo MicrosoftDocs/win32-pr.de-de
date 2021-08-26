@@ -1,7 +1,7 @@
 ---
-description: Die printxml-Methode konvertiert Eigenschafts Daten in eine XML-Zeichenfolge.
+description: Die PrintXML-Methode konvertiert Eigenschaftsdaten in eine XML-Zeichenfolge.
 ms.assetid: 24638489-b5ed-4bdd-b40e-6d61c0db1533
-title: Ipropertysetter::P rintxml-Methode (qedit. h)
+title: IPropertySetter::P rintXML-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: f31d36e8642cb669f5e365d6ffe25b538268bd1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5070a6906d7f30ab12171f551270f82b9851fa8c3990fade47aca6d2927509be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051510"
 ---
-# <a name="ipropertysetterprintxml-method"></a>Ipropertysetter::P rintxml-Methode
+# <a name="ipropertysetterprintxml-method"></a>IPropertySetter::P rintXML-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `PrintXML` Methode konvertiert Eigenschafts Daten in eine XML-Zeichenfolge.
+Die `PrintXML` -Methode konvertiert Eigenschaftsdaten in eine XML-Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,47 +48,47 @@ HRESULT PrintXML(
 
 <dl> <dt>
 
-*pszxml* \[ vorgenommen\]
+*pszXML* \[ out\]
 </dt> <dd>
 
 Zeiger auf einen Puffer, der die XML-Zeichenfolge empfängt.
 
 </dd> <dt>
 
-*cbxml* \[ in\]
+*cbXML* \[ In\]
 </dt> <dd>
 
-Größe des Puffers, auf den *pszxml* zeigt (in Bytes).
+Größe des Puffers, auf den *pszXML zeigt,* in Bytes.
 
 </dd> <dt>
 
-*pcbprint* \[ vorgenommen\]
+*zeichenPrinted* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Länge der XML-Zeichenfolge empfängt. Kann **null** sein.
+Zeiger auf eine Variable, die die Länge der XML-Zeichenfolge empfängt. Kann NULL **sein.**
 
 </dd> <dt>
 
-*Einzug* \[ in\]
+*Einzug* \[ In\]
 </dt> <dd>
 
-Anzahl der Einzugs Ebenen für das äußerste Tag.
+Anzahl der Einzugsebenen für das äußerste Tag.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück. Andernfalls wird ein **HRESULT** -Wert zurückgegeben, der die Ursache des Fehlers angibt. Wenn die XML-Zeichenfolge länger als der Puffer ist, gibt die Methode E \_ outo-Memory zurück.
+Gibt S \_ OK zurück, wenn erfolgreich. Andernfalls gibt einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt. Wenn die XML-Zeichenfolge länger als der Puffer ist, gibt die Methode E \_ OUTOFMEMORY zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -98,19 +98,19 @@ Gibt \_ bei Erfolg S OK zurück. Andernfalls wird ein **HRESULT** -Wert zurückg
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipropertysetter-Schnittstelle**](ipropertysetter.md)
+[**IPropertySetter-Schnittstelle**](ipropertysetter.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

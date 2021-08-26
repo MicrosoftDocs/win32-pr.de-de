@@ -1,31 +1,31 @@
 ---
-description: Dieser Abschnitt enthält umfassende Referenzinformationen für die folgenden COM-Schnittstellen, Funktionen und Strukturen, die für die Entwicklung von Experten-, Parser-und NPP-Anwendungen verwendet werden.
+description: Dieser Abschnitt enthält vollständige Referenzinformationen für die folgenden COM-Schnittstellen, -Funktionen und -Strukturen, die zum Entwickeln von Experten-, Parser- und NPP-Anwendungen verwendet werden.
 ms.assetid: f2c37c55-7994-4436-a653-6a4e221a29a2
-title: Verweis (Netzwerkmonitor)
+title: Referenz (Netzwerkmonitor)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 97020b81281469ee4bf02bac7bcff05d225452f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f72833c7c9da15b9c478bb2194cb2514d468eafe5ec50de3d695eb837e4d3da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074520"
 ---
-# <a name="reference-network-monitor"></a>Verweis (Netzwerkmonitor)
+# <a name="reference-network-monitor"></a>Referenz (Netzwerkmonitor)
 
-Dieser Abschnitt enthält umfassende Referenzinformationen für die folgenden COM-Schnittstellen, Funktionen und Strukturen, die für die Entwicklung von Experten-, Parser-und NPP-Anwendungen verwendet werden.
+Dieser Abschnitt enthält vollständige Referenzinformationen für die folgenden COM-Schnittstellen, -Funktionen und -Strukturen, die zum Entwickeln von Experten-, Parser- und NPP-Anwendungen verwendet werden.
 
 
 
-| Element                                                                                               | BESCHREIBUNG                                                                                                             |
+| Element                                                                                               | Beschreibung                                                                                                             |
 |----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md)                       | Funktionen, die zur Entwicklung von [*Parser*](p.md) und [*Experten*](e.md)verwendet werden.               |
-| [Expertenfunktionen, Strukturen und Enumerationen](expert-functions-structures-and-enumerations.md) | Export Funktionen, Hilfsfunktionen, Strukturen und Enumerationen, die zum Entwickeln von [*Experten*](e.md)verwendet werden. |
-| [Parser-Funktionen und-Strukturen](parser-functions-and-structures.md)                             | Export Funktionen, Hilfsfunktionen und Strukturen, die zum Entwickeln von- [*Parser*](p.md)verwendet werden.               |
-| [NPP-Schnittstellen](npp-interfaces.md)                                                               | COM-Schnittstellen zum Entwickeln von [*NPP-Anwendungen*](n.md).                                 |
-| [NPP-Strukturen](npp-structures.md)                                                               | Zum Entwickeln von [*NPP-Anwendungen*](n.md)verwendete Strukturen.                                     |
-| [BLOB-Funktionen](blob-functions.md)                                                               | Funktionen zum Verwalten von Netzwerkmonitor-BLOB.                                                                         |
-| [BLOB-Strukturen](blob-structures.md)                                                             | Strukturen, die von BLOB-Funktionen verwendet werden.                                                                                      |
+| [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md)                       | Funktionen, die zum Entwickeln von [*Parser*](p.md) und [*Experten*](e.md)verwendet werden.               |
+| [Expertenfunktionen, Strukturen und Enumerationen](expert-functions-structures-and-enumerations.md) | Exportieren Sie Funktionen, Hilfsfunktionen, Strukturen und Enumerationen, die zum Entwickeln von [*Experten*](e.md)verwendet werden. |
+| [Parserfunktionen und -strukturen](parser-functions-and-structures.md)                             | Exportieren Sie Funktionen, Hilfsfunktionen und Strukturen, die zum Entwickeln von [*Parsern*](p.md)verwendet werden.               |
+| [NPP-Schnittstellen](npp-interfaces.md)                                                               | COM-Schnittstellen, die zum Entwickeln von [*NPP-Anwendungen*](n.md)verwendet werden.                                 |
+| [NPP-Strukturen](npp-structures.md)                                                               | Strukturen, die zum Entwickeln von [*NPP-Anwendungen*](n.md)verwendet werden.                                     |
+| [BLOB-Funktionen](blob-functions.md)                                                               | Funktionen, die zum Verwalten Netzwerkmonitor BLOBs verwendet werden.                                                                         |
+| [BLOB-Strukturen](blob-structures.md)                                                             | Von BLOB-Funktionen verwendete Strukturen.                                                                                      |
 
 
 

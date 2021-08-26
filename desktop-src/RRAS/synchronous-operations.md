@@ -1,25 +1,25 @@
 ---
 title: Synchrone Vorgänge
-description: Wenn "rasdial" als synchroner Vorgang aufgerufen wird, gibt die Funktion erst dann zurück, wenn die Verbindung hergestellt wurde oder ein Fehler auftritt.
+description: Wenn RasDial als synchroner Vorgang aufgerufen wird, gibt die Funktion erst dann zurück, wenn die Verbindung hergestellt wurde oder ein Fehler auftritt.
 ms.assetid: 5333ca88-bcec-48bc-88d2-3c6c0701802e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2463e3112c3faac4d7601023ea73f0182e2d5b73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 80c923a22758e7d6b9563cde9e4c9b2ce6036afa47f85116c0c18ed523996e49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025610"
 ---
 # <a name="synchronous-operations"></a>Synchrone Vorgänge
 
-Wenn " [**rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala) " als synchroner Vorgang aufgerufen wird, gibt die Funktion erst dann zurück, wenn die Verbindung hergestellt wurde oder ein Fehler auftritt. Der synchrone Modus ist eine einfache Möglichkeit für einen RAS-Client, eine Verbindung herzustellen. Der Client kann einfach " **rasdial**" aufrufen, warten, bis die Funktion zurückgegeben wird, und dann die Funktion " [**rasgetconnectstatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) " aufrufen, um zu bestimmen, ob der Verbindungsvorgang erfolgreich war. Nachdem die Verbindung hergestellt wurde, kann die Client Anwendung beendet werden, ohne dass die Verbindung unterbrochen wird. Wenn ein Fehler auftritt, muss die Client Anwendung [den Verbindungsvorgang](disconnecting.md) beenden, bevor Sie beendet wird.
+Wenn [**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala) als synchroner Vorgang aufgerufen wird, gibt die Funktion erst dann zurück, wenn die Verbindung hergestellt wurde oder ein Fehler auftritt. Der synchrone Modus bietet einem RAS-Client eine einfache Möglichkeit, eine Verbindung herzustellen. Der Client kann einfach **RasDial** aufrufen, warten, bis die Funktion zurückgegeben wird, und dann die [**RasGetConnectStatus-Funktion**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) aufrufen, um zu bestimmen, ob der Verbindungsvorgang erfolgreich war. Nachdem die Verbindung hergestellt wurde, kann die Clientanwendung beendet werden, ohne die Verbindung zu beenden. Wenn ein Fehler auftritt, muss die Clientanwendung den Verbindungsvorgang vor dem Beenden [herunterfahren.](disconnecting.md)
 
-Der Nachteil des synchronen Modus besteht darin, dass der Client keine Status Benachrichtigungen empfängt, während der Verbindungsvorgang fortgesetzt wird. Um diese fehlende Fortschritts Benachrichtigung zu umgehen, kann ein Client im synchronen Modus einen separaten Thread verwenden, der " [**rasgetconnectstatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) " aufruft, um den aktuellen Status abzurufen und anzuzeigen. Für RAS-Clients, die Statusinformationen empfangen möchten, empfiehlt es sich jedoch, den Vorgang [**asynchron**](/windows/desktop/api/Ras/nf-ras-rasdiala) aufzurufen.
+Der Nachteil des synchronen Modus ist, dass der Client keine Statusbenachrichtigungen empfängt, während der Verbindungsvorgang fortgesetzt wird. Als Problemumgehung für dieses Fehlen von Statusbenachrichtigungen kann ein Client im synchronen Modus einen separaten Thread verwenden, der [**RasGetConnectStatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) aufruft, um den aktuellen Status abzufragen und anzuzeigen. Für RAS-Clients, die Statusinformationen erhalten möchten, besteht die bevorzugte Technik jedoch darin, [**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala) asynchron aufzurufen.
 
- 
+ 
 
- 
+ 
 
 
 

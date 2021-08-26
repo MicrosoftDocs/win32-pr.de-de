@@ -6,24 +6,24 @@ keywords:
 - Programmierprobleme, RTMv2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b607adc939ff72a4d9fee99c15f6aa5192fa4c6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 584568fc3c4e7a46a2a2114781b81465d893b80978471aa3149d93d38f0c8c5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035590"
 ---
 # <a name="rtmv2-programming-issues"></a>RTMv2-Programmierprobleme
 
 RTMv2-Funktionen werden mit den folgenden Annahmen geschrieben.
 
--   RTMv2-Funktionen weisen keinen Arbeitsspeicher für den Client zu. Der Client muss immer Arbeitsspeicher zuweisen.
--   Wenn die Registrierung eines Clients aufgehoben wird, muss er Bereinigungs Vorgänge selbst durchführen, z. b. den gesamten zugeordneten Arbeitsspeicher freigeben.
--   Clients müssen Handles ordnungsgemäß freigeben. Speicher Verluste können auftreten, wenn ein Client diese Vorgehensweise nicht beachtet.
+-   RTMv2-Funktionen weisen dem Client keinen Arbeitsspeicher zu. Der Client muss immer Arbeitsspeicher zuweisen.
+-   Wenn die Registrierung eines Clients aufgehoben wird, muss er Bereinigungsvorgänge selbst durchführen, z. B. das Freigeben des zugeordneten Arbeitsspeichers.
+-   Clients müssen Handles ordnungsgemäß veröffentlichen. Speicherverlusten können auftreten, wenn ein Client diese Vorgehensweise nicht beachtet.
 
- 
+ 
 
- 
+ 
 
 
 

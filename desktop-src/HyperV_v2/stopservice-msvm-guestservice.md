@@ -1,7 +1,7 @@
 ---
-description: Beendet den Gast Dienst.
+description: Beendet den Gastdienst.
 ms.assetid: 67FFA46C-0B61-4845-A617-BA10F4D42CBC
-title: 'Msvm_GuestService:: Stop Service-Methode'
+title: Msvm_GuestService::StopService-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6c396078e2bd623a768f391a645091679694f453
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f67234a09ad150f2f039a57b321797e03444c75defe2e83cfd06b60de320a664
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050390"
 ---
-# <a name="msvm_guestservicestopservice-method"></a>MSVM \_ guestservice:: Stop Service-Methode
+# <a name="msvm_guestservicestopservice-method"></a>Msvm \_ GuestService::StopService-Methode
 
-Beendet den Gast Dienst.
+Beendet den Gastdienst.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Rückgabecode/-wert                                                                                                                                             | BESCHREIBUNG         |
+| Rückgabecode/-wert                                                                                                                                             | Beschreibung         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl> | Erfolg.<br/> |
 | <dl> <dt>**Nicht unterstützt**</dt> <dt>1</dt> </dl>           |                     |
@@ -58,19 +58,19 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM- \_ guestservice**](msvm-guestservice.md)
+[**Msvm \_ GuestService**](msvm-guestservice.md)
 </dt> </dl>
 
  

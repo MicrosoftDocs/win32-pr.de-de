@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 64f02529ba10d98092eb30a1bcc350d5c72049fc
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 494ec12a0bb9c5c312f34e9cc53e82bfcbe155f90c38b98b2ba807e9c87b6945
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037150"
 ---
 # <a name="istatsstart-method"></a>IStats::Start-Methode
 
@@ -50,19 +50,19 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 |--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl>  | Die Erfassung wurde angehalten und muss beendet werden, bevor sie neu gestartet werden kann. Rufen Sie die [IStats::Stop-Methode auf,](istats-stop.md) um die Erfassung zu beenden.<br/> |
 | <dl> <dt>**NMERR-ERFASSUNG \_**</dt> </dl>        | Die Erfassung wurde bereits gestartet.<br/>                                                                                                            |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [die IStats::Connect-Methode auf,](istats-connect.md) um die NPP mit dem Netzwerk zu verbinden.<br/>           |
-| <dl> <dt>**NMERR \_ NICHT \_ NUR STATISTIKEN \_**</dt> </dl> | Der NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IStats::Connect-Methode.](istats-connect.md)<br/>                                          |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [die IStats::Verbinden-Methode](istats-connect.md) auf, um den NPP mit dem Netzwerk zu verbinden.<br/>           |
+| <dl> <dt>**NMERR \_ NICHT \_ NUR STATISTIKEN \_**</dt> </dl> | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IStats::Verbinden-Methode.](istats-connect.md)<br/>                                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn Sie die Erfassung mithilfe der Methoden IStats::Start und [IStats::Stop](istats-stop.md) neu starten, müssen Sie die [IStats::Configure-Methode](istats-configure.md) aufrufen, um die Verbindung jedes Mal neu zu konfigurieren, wenn Sie IStats::Start aufrufen, um die Datenerfassung neu zu starten.
 
 > [!Note]  
-> Sie können die Erfassung auch mithilfe der [Methoden IStats::P ause und](istats-pause.md) [IStats::Resume](istats-resume.md) starten und beenden. Wenn Sie diese Methoden verwenden, werden die erfassten Daten in derselben Erfassungsdatei gespeichert.
+> Sie können die Erfassung auch mithilfe der [Methoden IStats::P ause](istats-pause.md) und [IStats::Resume](istats-resume.md) starten und beenden. Wenn Sie diese Methoden verwenden, werden die erfassten Daten in derselben Erfassungsdatei gespeichert.
 
  
 
@@ -70,7 +70,7 @@ Wenn Sie die Erfassung mithilfe der Methoden IStats::Start und [IStats::Stop](is
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -89,7 +89,7 @@ Wenn Sie die Erfassung mithilfe der Methoden IStats::Start und [IStats::Stop](is
 [IStats::Configure](istats-configure.md)
 </dt> <dt>
 
-[IStats::Connect](istats-connect.md)
+[IStats::Verbinden](istats-connect.md)
 </dt> <dt>
 
 [IStats::P ause](istats-pause.md)

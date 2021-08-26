@@ -1,11 +1,11 @@
 ---
-title: Ivmaccountant cpunutzungseigenschaft (vpccominterfaces. h)
+title: IVMAccountant CPUUtilization-Eigenschaft (VPCCOMInterfaces.h)
 description: Ruft den Prozentsatz der aktuellen CPU-Auslastung für diesen virtuellen Computer ab.
 ms.assetid: 69bb61ec-af41-4bd0-95bd-4698a1d33098
 keywords:
-- Cpunutzungseigenschaft virtueller PC
-- Cpunutzungseigenschaft Virtual PC, ivmaccountant-Schnittstelle
-- Ivmaccountant Interface Virtual PC, cpunutzungseigenschaft
+- CPUUtilization-Eigenschaft Virtueller PC
+- CPUUtilization-Eigenschaft Virtueller PC, IVMAccountant-Schnittstelle
+- IVMAccountant-Schnittstelle Virtueller PC, CPUUtilization-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9e38c223f47678cdb9c2d49e06452d014083c94
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ba54d7ec3a3fc447a49e9a72addd72fc5e3929b486c8fd4271276a40a7041f4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007308"
 ---
-# <a name="ivmaccountantcpuutilization-property"></a>Ivmaccountant:: cpunutzungseigenschaft
+# <a name="ivmaccountantcpuutilization-property"></a>IVMAccountant::CPUUtilization-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Prozentsatz der aktuellen CPU-Auslastung für diesen virtuellen Computer ab.
 
@@ -54,9 +54,9 @@ Der Prozentsatz der aktuellen CPU-Auslastung.
 | Name/Wert                                                                                                                                                    | Bedeutung                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>       |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>          |
-| <dl> <dt>S \_ Falsch</dt> <dt>1</dt> </dl>                    | Der virtuelle Computer wird nicht ausgeführt.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>   |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>          |
+| <dl> <dt>S \_ FALSE</dt> <dt>1</dt> </dl>                    | Der virtuelle Computer wird nicht ausgeführt.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>   |
 
 
 
@@ -66,12 +66,12 @@ Der Prozentsatz der aktuellen CPU-Auslastung.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmaccountant ist als 6376c067-7b57-4d63-B754-06e2e4f 51d73 definiert.<br/>              |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMAccountant ist als 6376c067-7f57-4d63-b754-06e2e4f51d73 definiert.<br/>              |
 
 
 
@@ -79,7 +79,7 @@ Der Prozentsatz der aktuellen CPU-Auslastung.
 
 <dl> <dt>
 
-[**Ivmaccountant**](ivmaccountant.md)
+[**IVMAccountant**](ivmaccountant.md)
 </dt> </dl>
 
  

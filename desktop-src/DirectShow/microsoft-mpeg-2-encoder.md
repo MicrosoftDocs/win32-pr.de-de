@@ -1,19 +1,19 @@
 ---
-description: Der Microsoft MPEG-2 Encoder-Filter codiert MPEG-2-Audiodaten und-Videos und multiplediert die Streams, um einen MPEG-2-Programmstream oder einen Transportstream zu generieren.
+description: Der Microsoft MPEG-2-Encoderfilter codiert MPEG-2-Audio und -Video und multiplext die Datenströme, um einen MPEG-2-Programmstream oder -Transportstream zu generieren.
 ms.assetid: 61e8918b-7f5a-4720-bb3b-df9ac7614894
-title: Microsoft MPEG-2 Encoder (wmcodecdsp. h)
+title: Microsoft MPEG-2 Encoder (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef5fad3b316db9ac4e47efcb9de761227cdd3279
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 91ae7f1bd9cb8233d919689bbeb1eea496760ae1254bae88120776364528243d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051230"
 ---
 # <a name="microsoft-mpeg-2-encoder"></a>Microsoft MPEG-2-Encoder
 
-Der Microsoft MPEG-2 Encoder-Filter codiert MPEG-2-Audiodaten und-Videos und multiplediert die Streams, um einen MPEG-2-Programmstream oder einen Transportstream zu generieren.
+Der Microsoft MPEG-2-Encoderfilter codiert MPEG-2-Audio und -Video und multiplext die Datenströme, um einen MPEG-2-Programmstream oder -Transportstream zu generieren.
 
 > [!Note]  
 > Dieser Filter wird auf IA-64-basierten Plattformen nicht unterstützt.
@@ -22,31 +22,31 @@ Der Microsoft MPEG-2 Encoder-Filter codiert MPEG-2-Audiodaten und-Videos und mul
 
 
 
-Filter Informationen
+Filterinformationen
 
-Filter Schnittstellen
+Filterschnittstellen
 
-[**Ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)<br/> [**Icodecapi**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)<br/> **Iencoderapi**<br/> [**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**Ivideoencoder**](/windows/win32/api/strmif/nn-strmif-ivideoencoder)<br/>
+[**IBaseFilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter)<br/> [**ICodecAPI**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)<br/> **IEncoderAPI**<br/> [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**IVideoEncoder**](/windows/win32/api/strmif/nn-strmif-ivideoencoder)<br/>
 
-Eingabe-PIN-Medientypen
-
-Siehe Hinweise
-
-PIN-Eingabeschnittstellen
-
-[**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**Iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
-
-Ausgabe-PIN-Medientypen
+Eingabepinmedientypen
 
 Siehe Hinweise
 
-PIN-Schnittstellen
+Eingabe-Pin-Schnittstellen
 
-[**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**Iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
+[**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin)<br/> [**Ipin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
 
-CLSID Filtern
+Medientypen des Ausgabepins
 
-**CLSID \_ CMPEG2EncoderDS** (in wmcodecdsp. h deklariert)
+Siehe Hinweise
+
+Ausgabe-Pin-Schnittstellen
+
+[**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)<br/> [**Ipin**](/windows/desktop/api/Strmif/nn-strmif-ipin)<br/> [**IQualityControl**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol)<br/>
+
+Filtern von CLSID
+
+**CLSID \_ CMPEG2EncoderDS** (deklariert in wmcodecdsp.h)
 
 Ausführbare Datei
 
@@ -54,45 +54,45 @@ msmpeg2enc.dll
 
 [Verdienst](merit.md)
 
-**das Verdienst wird \_ \_ nicht \_ verwendet.**
+**NOT USE (NICHT \_ \_ \_ VERWENDEN)**
 
-[Filter Kategorie](filter-categories.md)
+[Filterkategorie](filter-categories.md)
 
-**CLSID \_ legacyamfiltercategory**
+**CLSID \_ LegacyAmFilterCategory**
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Filter kombiniert die Codierungs Funktionen von zwei anderen Filtern:
+Dieser Filter kombiniert die Codierungsfunktionen von zwei anderen Filtern:
 
 -   [**Microsoft MPEG-2-Audioencoder**](microsoft-mpeg-2-audio-encoder.md)
--   [**Microsoft MPEG-2-Video Encoder**](microsoft-mpeg-2-video-encoder.md)
+-   [**Microsoft MPEG-2 Video Encoder**](microsoft-mpeg-2-video-encoder.md)
 
-Sofern nicht anders angegeben, unterstützt dieser Filter dieselben Codierungs Funktionen wie diese beiden Encoder.
+Außer wie bereits erwähnt unterstützt dieser Filter die gleichen Codierungsfeatures wie diese beiden Encoder.
 
-Anfänglich hat der Filter eine Eingabe-PIN, die Audiodaten oder Videoeingaben akzeptieren kann. Wenn diese Pin verbunden ist, erstellt der Filter eine zweite Eingabe-PIN. Wenn die erste Eingabe-PIN Audiodaten empfängt, akzeptiert die zweite Eingabe-PIN nur Video und umgekehrt. Jede Eingabe-PIN unterstützt die gleichen Medientypen wie der entsprechende Codierungs Filter.
+Anfänglich verfügt der Filter über einen Eingabepin, der Audio- oder Videoeingaben akzeptieren kann. Wenn diese Stecknadel verbunden ist, erstellt der Filter einen zweiten Eingabepin. Wenn der erste Eingabepin Audiodaten empfängt, akzeptiert der zweite Eingabepin nur Videos und umgekehrt. Jeder Eingabepin unterstützt die gleichen Medientypen wie der entsprechende Encoderfilter.
 
-Wenn nur eine Eingabe-PIN verbunden ist, unterstützt der Filter dieselben Ausgabetypen wie der entsprechende Audio-oder Video Encoder. Wenn beide Pins verbunden sind, unterstützt der Filter die folgenden Arten der Ausgabe:
+Wenn nur ein Eingabepin verbunden ist, unterstützt der Filter die gleichen Ausgabetypen wie der entsprechende Audio- oder Videoencoder. Wenn beide Pins verbunden sind, unterstützt der Filter die folgenden Ausgabearten:
 
--   Audiovisualisierung in einem MPEG-2-Programmstream
--   Audiovisualisierung in einem MPEG-2-Transportstream
+-   Audiovisual in einem MPEG-2-Programmstream
+-   Audiovisual in einem MPEG-2-Transportstream
 
 Diese entsprechen den folgenden Ausgabetypen:
 
--   **MediaType \_ Stream**, **mediasubtype \_ - \_ Programm**
--   **MediaType \_ Stream**, **mediasubtype \_ MPEG2- \_ Transport**
+-   **MEDIATYPE \_ Stream,** **MEDIASUBTYPE \_ MPEG2 \_ PROGRAM**
+-   **MEDIATYPE \_ Stream,** **MEDIASUBTYPE \_ MPEG2 \_ TRANSPORT**
 
-Dieser Filter kann keine zuvor codierten Datenströme Multiplexes. Die Eingabedaten Ströme müssen unkomprimierte Audiodaten und Videos sein, die vom Filter vor Multiplexing codiert werden. Der Multiplex-Stream ist auf ein Programm beschränkt, das bis zu einen Audiostream und einen Videostream enthält.
+Dieser Filter kann keine Multiplexstreams, die zuvor codiert wurden. Die Eingabestreams müssen unkomprimierte Audio-/Videodatenströme sein, die der Filter vor dem Multiplexing codiert. Der Multiplexstream ist auf ein Programm beschränkt, das bis zu einem Audio- und einem Videostream enthält.
 
-### <a name="codec-properties"></a>Codec-Eigenschaften
+### <a name="codec-properties"></a>Codeceigenschaften
 
-Der Filter unterstützt die kombinierten Eigenschaften des [**MPEG-2-Audioencoders**](microsoft-mpeg-2-audio-encoder.md) und [**MPEG-2-Video Encoder**](microsoft-mpeg-2-video-encoder.md) -Filter mit folgendem Unterschied:
+Der Filter unterstützt die kombinierten Eigenschaften der Filter [**MPEG-2 Audio Encoder**](microsoft-mpeg-2-audio-encoder.md) und [**MPEG-2 Video Encoder**](microsoft-mpeg-2-video-encoder.md) mit folgendem Unterschied:
 
--   Mit der Eigenschaft " [**avenccommonmeanbitrate**](avenccommonmeanbitrate-property.md) " wird die durchschnittliche Bitrate für den Videostream festgelegt.
--   Mit der Eigenschaft " [**avencaudiomeanbitrate**](avencaudiomeanbitrate.md) " wird die durchschnittliche Bitrate für den Audiostream festgelegt.
+-   Die [**AVEncCommonMeanBitRate-Eigenschaft**](avenccommonmeanbitrate-property.md) legt die durchschnittliche Bitrate für den Videostream fest.
+-   Die [**AVEncAudioMeanBitRate-Eigenschaft**](avencaudiomeanbitrate.md) legt die durchschnittliche Bitrate für den Audiostream fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,13 +100,13 @@ Der Filter unterstützt die kombinierten Eigenschaften des [**MPEG-2-Audioencode
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista Home Premium, Windows Vista Ultimate, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, Windows 7 Ultimate \[ Desktop Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Home Premium, Windows Vista Ultimate, Windows 7 Home Premium, Windows 7 Professional, Windows 7 Enterprise, nur Windows 7 \[ Ultimate-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl>                                                                                       |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl>                                                                                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

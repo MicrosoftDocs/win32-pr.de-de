@@ -1,7 +1,7 @@
 ---
-description: 'Die Receive-Methode empfängt ein Medien Beispiel, verarbeitet sie und stellt ein Ausgabe Beispiel für den downstreamfilter bereit. Diese Methode überschreibt die ctransformfilter:: Receive-Methode.'
+description: Die Receive-Methode empfängt ein Medienbeispiel, verarbeitet es und übermittelt ein Ausgabebeispiel an den Downstreamfilter. Diese Methode überschreibt die CTransformFilter::Receive-Methode.
 ms.assetid: 35e22a63-471e-4ca8-be3b-d84920cec7cb
-title: Cvideotransformfilter. Receive-Methode (vtrans. h)
+title: CVideoTransformFilter.Receive-Methode (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bdc33773a31a7c9ddfd7adb0f3fb20f8fcf6d520
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6bce69d5f14a522f403eed54b56a340ab02316507766c0cc6d60ff897ec73541
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998510"
 ---
-# <a name="cvideotransformfilterreceive-method"></a>Cvideotransformfilter. Receive-Methode
+# <a name="cvideotransformfilterreceive-method"></a>CVideoTransformFilter.Receive-Methode
 
-Die- `Receive` Methode empfängt ein Medien Beispiel, verarbeitet sie und stellt ein Ausgabe Beispiel für den downstreamfilter bereit. Diese Methode überschreibt die [**ctransformfilter:: Receive**](ctransformfilter-receive.md) -Methode.
+Die `Receive` -Methode empfängt ein Medienbeispiel, verarbeitet es und übermittelt ein Ausgabebeispiel an den Downstreamfilter. Diese Methode überschreibt die [**CTransformFilter::Receive-Methode.**](ctransformfilter-receive.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ HRESULT Receive(
 
 <dl> <dt>
 
-*psample* 
+*pSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle für das Eingabe Beispiel.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) im Eingabebeispiel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                 |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Der upstreamfilter sollte das Senden von Beispielen abbrechen.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Der Upstreamfilter sollte das Senden von Beispielen beenden.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft [**cvideotransformfilter:: dendskipframe**](cvideotransformfilter-shouldskipframe.md) auf, um zu bestimmen, ob dieses Beispiel bereitgestellt oder einfach verworfen werden soll. Wenn " **dendskipframe** " **false** zurückgibt (was angibt, dass das Beispiel übermittelt werden soll), führt die Methode Folgendes aus:
+Diese Methode ruft [**CVideoTransformFilter::ShouldSkipFrame**](cvideotransformfilter-shouldskipframe.md) auf, um zu bestimmen, ob dieses Beispiel übermittelt oder einfach verworfen werden soll. Wenn **ShouldSkipFrame** **FALSE** zurückgibt (was angibt, dass das Beispiel übermittelt werden soll), führt die Methode folgende Schritte aus:
 
-1.  Ruft [**ctransformfilter:: initializeoutputsample**](ctransformfilter-initializeoutputsample.md) auf, um das Ausgabe Beispiel vorzubereiten
-2.  Ruft [**ctransformfilter:: Transform**](ctransformfilter-transform.md) auf, um das Eingabe Beispiel zu verarbeiten. Diese Methode ist rein virtuell und muss in der abgeleiteten Klasse implementiert werden.
-3.  Ruft [**cbaseoutputpin::D eliver**](cbaseoutputpin-deliver.md) auf, um das Ausgabe Beispiel bereitzustellen.
+1.  Ruft [**CTransformFilter::InitializeOutputSample**](ctransformfilter-initializeoutputsample.md) auf, um das Ausgabebeispiel vorzubereiten.
+2.  Ruft [**CTransformFilter::Transform**](ctransformfilter-transform.md) auf, um das Eingabebeispiel zu verarbeiten. Diese Methode ist rein virtuell und muss in der abgeleiteten Klasse implementiert werden.
+3.  Ruft [**CBaseOutputPin::D eliver**](cbaseoutputpin-deliver.md) auf, um das Ausgabebeispiel zu übermitteln.
 
-Außerdem prüft diese Methode, ob im Eingabe-oder Ausgabe Beispiel Formatänderungen durch Aufrufen von [**imediasample:: getmediatype**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatype)durchgeführt werden. Wenn eine Formatänderung vorliegt, legt die-Methode den Verbindungstyp für die entsprechende PIN fest. Bevor der neue Typ festgelegt wird, wird **stopstreaming** aufgerufen. Nachdem der neue Typ festgelegt wurde, wird **startstreaming** aufgerufen. Diese Methoden können von der abgeleiteten Klasse zum Aktualisieren Ihres internen Zustands verwendet werden. Die abgeleitete Klasse muss möglicherweise auch das neue Format in der **Transformations** Methode überprüfen.
+Außerdem überprüft diese Methode auf Formatänderungen im Eingabe- oder Ausgabebeispiel, indem [**IMediaSample::GetMediaType**](/windows/desktop/api/Strmif/nf-strmif-imediasample-getmediatype)aufgerufen wird. Wenn eine Formatänderung erfolgt, legt die -Methode den Verbindungstyp auf dem entsprechenden Pin fest. Bevor der neue Typ festgelegt wird, ruft er **StopStreaming auf.** Nachdem der neue Typ festgelegt wurde, ruft er **StartStreaming auf.** Die abgeleitete Klasse kann diese Methoden verwenden, um ihren internen Zustand zu aktualisieren. Die abgeleitete Klasse muss möglicherweise auch in ihrer **Transform-Methode** nach dem neuen Format suchen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,8 +80,8 @@ Außerdem prüft diese Methode, ob im Eingabe-oder Ausgabe Beispiel Formatänder
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -89,7 +89,7 @@ Außerdem prüft diese Methode, ob im Eingabe-oder Ausgabe Beispiel Formatänder
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

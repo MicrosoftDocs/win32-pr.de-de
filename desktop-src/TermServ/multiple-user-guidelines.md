@@ -1,20 +1,20 @@
 ---
 title: Richtlinien für mehrere Benutzer
-description: Richtlinien für die Entwicklung von Anwendungen für mehrere Benutzer in einer Remotedesktopdienste Umgebung.
+description: Richtlinien für die Entwicklung von Anwendungen für mehrere Benutzer in einer Remotedesktopdienste-Umgebung.
 ms.assetid: c7acbedb-3bf2-4519-ab11-a50bf071e757
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a06db01da6d9413684e3197aa9758d6e5c04643f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5bc598042530ab59c0c8932522185ce5a9d0d3dce04cabce44239c3c81b79d59
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988850"
 ---
 # <a name="multiple-user-guidelines"></a>Richtlinien für mehrere Benutzer
 
-In den folgenden Abschnitten finden Sie Richtlinien zum Entwickeln von Anwendungen für mehrere Benutzer in einer Remotedesktopdienste Umgebung.
+Die folgenden Abschnitte enthalten Richtlinien für die Entwicklung von Anwendungen für mehrere Benutzer in einer Remotedesktopdienste-Umgebung.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,7 +23,7 @@ In den folgenden Abschnitten finden Sie Richtlinien zum Entwickeln von Anwendung
 [Anwendungseinrichtung](application-setup-in-a-terminal-services-environment.md)
 </dt> <dd>
 
-Durch die Installation einer Anwendung für einen einzelnen Benutzer können Probleme in einer mehr Benutzer Remotedesktopdienste Umgebung entstehen.
+Das Installieren einer Anwendung für einen einzelnen Benutzer kann probleme in einer Umgebung mit mehreren Benutzern Remotedesktopdienste verursachen.
 
 </dd> <dt>
 
@@ -37,7 +37,7 @@ Anwendungen sollten benutzerspezifische Informationen an benutzerspezifischen Sp
 [Kernelobjektnamespaces](kernel-object-namespaces.md)
 </dt> <dd>
 
-Remotedesktopdienste verwendet mehrere Namespaces für Kernel Objekte. ein globaler Namespace wird hauptsächlich von Diensten in Client/Server-Anwendungen verwendet.
+Remotedesktopdienste verwendet mehrere Namespaces für Kernelobjekte. ein globaler Namespace wird hauptsächlich von Diensten in Client-/Serveranwendungen verwendet.
 
 </dd> <dt>
 
@@ -50,11 +50,11 @@ Es darf nicht davon ausgegangen werden, dass der Computername oder die dem Compu
 
 Sperren Sie wie immer Dateien und Datenbanken, während Sie Änderungen vornehmen, um unbeabsichtigte Datenverluste zu verhindern.
 
-Die Anwendung darf keine Lauf Zeit Anwendungs Dateien sperren, bei denen es sich nicht um benutzerspezifische Dateien handelt. Gesperrte Laufzeitdateien können die Ausführung mehrerer Instanzen der Anwendung oder der Prozesse unter der Anwendung, z. b. Assistenten, behalten. Eine gute Möglichkeit, um zu testen, welche Dateien Lauf Zeit Anwendungs Dateien sind, besteht darin, zu verfolgen, welche Dateien vom Anwendungs Setup installiert werden. Benutzerspezifische Dateien werden nur selten vom-Setup installiert. Daher sind die meisten Dateien, die durch das-Setup installiert werden, Lauf Zeit Anwendungs Dateien.
+Ihre Anwendung darf keine Laufzeitanwendungsdateien sperren, die keine Benutzerdateien sind. Gesperrte Laufzeitdateien können dazu führen, dass mehrere Instanzen der Anwendung oder Prozesse in der Anwendung, z. B. Assistenten, nicht ausgeführt werden. Eine gute Möglichkeit, zu testen, welche Dateien Laufzeitanwendungsdateien sind, besteht darin, nachzuverfolgen, welche Dateien vom Anwendungssetup installiert werden. Benutzerspezifische Dateien werden nur selten vom Setup installiert. Daher sind die meisten vom Setup installierten Dateien Laufzeitanwendungsdateien.
 
- 
+ 
 
- 
+ 
 
 
 

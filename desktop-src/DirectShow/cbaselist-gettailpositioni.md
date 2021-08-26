@@ -1,7 +1,7 @@
 ---
-description: Die gettailpositioni-Methode ruft die Position des letzten Elements der Liste ab.
+description: Die GetTailPositionI-Methode ruft die Position des letzten Elements der Liste ab.
 ms.assetid: 7fdffde8-3cef-4ad5-bb63-e4a02090a783
-title: Cbaselist. gettailpositioni-Methode (wxlist. h)
+title: CBaseList.GetTailPositionI-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 923f9592b14dff78f1942d179c695fb7d976c0b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c16ede5177d6e3765a96293032d520e1f8928fa6f41794a495d4c91681b145ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999780"
 ---
-# <a name="cbaselistgettailpositioni-method"></a>Cbaselist. gettailpositioni-Methode
+# <a name="cbaselistgettailpositioni-method"></a>CBaseList.GetTailPositionI-Methode
 
-Die- `GetTailPositionI` Methode ruft die Position des letzten Elements der Liste ab.
+Die `GetTailPositionI` -Methode ruft die Position des letzten Elements der Liste ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Positionswert oder **null** zurück, wenn die Liste leer ist.
+Gibt einen POSITION-Wert oder **NULL** zurück, wenn die Liste leer ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt einen Positionswert oder **null** zurück, wenn die Liste leer ist.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen Positionswert oder **null** zurück, wenn die Liste leer ist.
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

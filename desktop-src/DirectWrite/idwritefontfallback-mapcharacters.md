@@ -1,11 +1,11 @@
 ---
-title: Idwrite Test fontfallback-mapcharacter-Methode
-description: Bestimmt eine entsprechende Schriftart, die zum Rendering des Anfangs Bereichs von Text verwendet werden soll.
+title: IDWriteFontFallback MapCharacters-Methode
+description: Bestimmt eine geeignete Schriftart, die zum Rendern des Anfangsbereichs von Text verwendet werden soll.
 ms.assetid: 9D3DBBF7-72D4-473D-A321-E64BC94493D5
 keywords:
-- Mapcharacters-Methode, direktes Schreiben
-- Mapcharacters-Methode direkt schreiben, idwrite-fontfallback-Schnittstelle
-- Idwrite-fontfallback-Schnittstelle Direct Write, mapcharacters-Methode
+- MapCharacters-Methode – Direkter Schreibzugriff
+- MapCharacters-Methode Direct Write, IDWriteFontFallback-Schnittstelle
+- IDWriteFontFallback-Schnittstelle Direct Write , MapCharacters-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 428778afc12c668d284dffb5a8a6f734c03f0705
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 99f18932121d44f61d67c8124faa2d26638035bdcff473ad26c4222ceea9a85b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048790"
 ---
-# <a name="idwritefontfallbackmapcharacters-method"></a>Idschreitefontfallback:: mapcharacters-Methode
+# <a name="idwritefontfallbackmapcharacters-method"></a>IDWriteFontFallback::MapCharacters-Methode
 
-Bestimmt eine entsprechende Schriftart, die zum Rendering des Anfangs Bereichs von Text verwendet werden soll.
+Bestimmt eine geeignete Schriftart, die zum Rendern des Anfangsbereichs von Text verwendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,110 +52,110 @@ HRESULT MapCharacters(
 
 <dl> <dt>
 
-*Quelle* 
+*source* 
 </dt> <dd>
 
-Typ: **[**idschreitetextanalysissource**](/windows/win32/api/dwrite/nn-dwrite-idwritetextanalysissource) \** _
+Typ: **[ **IDWriteTextAnalysisSource**](/windows/win32/api/dwrite/nn-dwrite-idwritetextanalysissource)\***
 
-Die Textquellen Implementierung enthält den Text und das Gebiets Schema.
+Die Textquellenimplementierung enthält den Text und das Locale.
 
 </dd> <dt>
 
-_textPosition * 
+*textPosition* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
 Startposition, die analysiert werden soll.
 
 </dd> <dt>
 
-*TextLength* 
+*textLength* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Länge des zu analysierenden Texts.
+Länge des zu analysierenden Texts.
 
 </dd> <dt>
 
-*basefontcollection* \[ in, optional\]
+*baseFontCollection* \[ in, optional\]
 </dt> <dd>
 
-Typ: **[**idschreitefontcollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection) \** _
+Typ: **[ **IDWriteFontCollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection)\***
 
-Die zu verwendende Standard Schriftart Auflistung.
+Zu verwendende Standardschriftartauf auflistung.
 
 </dd> <dt>
 
-_baseFamilyName * \[ in, optional\]
+*baseFamilyName* \[ in, optional\]
 </dt> <dd>
 
-Typ: * Konstante *WCHAR \_ t \** _
+Typ: **const wchar \_ t \***
 
-Der Familienname der Basis Schriftart. Wenn Sie NULL übergeben, erfolgt keine Übereinstimmung mit der Familie.
+Der Familienname der Basisschriftart. Wenn Sie NULL übergeben, wird keine Übereinstimmung mit der Familie durchgeführt.
 
 </dd> <dt>
 
-_baseWeight * 
+*baseWeight* 
 </dt> <dd>
 
-Type: **[ **dwrite \_ Schriftart \_ Weight**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_weight)**
+Typ: **[ **SCHRIFTGRAD "DWRITE" \_ \_**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_weight)**
 
 Die gewünschte Gewichtung.
 
 </dd> <dt>
 
-*BaseStyle* 
+*baseStyle* 
 </dt> <dd>
 
-Type: **[ **dwrite- \_ Schriftart \_ Stil**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_style)**
+Typ: **[ **DWRITE-SCHRIFTSCHNITT \_ \_**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_style)**
 
 Der gewünschte Stil.
 
 </dd> <dt>
 
-*basestretch* 
+*baseStretch* 
 </dt> <dd>
 
-Typ: **[ **dwrite- \_ Schriftart \_ Streckung**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)**
+Typ: **[ **DWRITE \_ FONT \_ STRETCH**](/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)**
 
 Die gewünschte Streckung.
 
 </dd> <dt>
 
-*mappedlength* \[ vorgenommen\]
+*mappedLength* \[ out\]
 </dt> <dd>
 
-Typ: **UInt32 \** _
+Typ: **UINT32 \***
 
-Länge des Texts, der der zugeordneten Schriftart zugeordnet ist. Diese ist immer kleiner oder gleich der Textlänge und größer als 0 (wenn die Textlänge ungleich NULL ist), sodass der Aufrufer mindestens ein Zeichen verschiebt.
+Länge des Texts, der der zugeordneten Schriftart zugeordnet ist. Dies ist immer kleiner oder gleich der Textlänge und größer als 0 (null), sodass der Aufrufer mindestens ein Zeichen vorangestellt wird.
 
 </dd> <dt>
 
-_mappedFont * \[ out\]
+*mappedFont* \[ out\]
 </dt> <dd>
 
-Typ: **[ **idschreiteschriftart**](/windows/win32/api/dwrite/nn-dwrite-idwritefont)\*\***
+Typ: **[ **IDWriteFont**](/windows/win32/api/dwrite/nn-dwrite-idwritefont)\*\***
 
-Die Schriftart, die verwendet werden soll, um die ersten *mappedlength* -Zeichen des Texts zu erzeugen. Wenn NULL zurückgegeben wird, bedeutet dies, dass der Text von keiner Schriftart gerendert werden kann, und *mappedlength* die Anzahl der zu über springenden Zeichen (mit einem fehlenden Symbol gerendert).
+Die Schriftart, die zum Rendern der ersten *mappedLength-Zeichen* des Texts verwendet werden soll. Wenn NULL zurückgegeben wird, bedeutet dies, dass keine Schriftart den Text rendern kann, und *mappedLength* ist die Anzahl der zu überspringenden Zeichen (gerendert mit einem fehlenden Glyphen).
 
 </dd> <dt>
 
-*skalieren* \[ vorgenommen\]
+*Scale (Skalieren* \[ out\]
 </dt> <dd>
 
-Typ: **float \** _
+Typ: **\* FLOAT**
 
-Skalierungsfaktor, um die Geviert Größe der zurückgegebenen Schriftart zu multiplizieren.
+Skalierungsfaktor zum Multiplizieren der Ge em-Größe der zurückgegebenen Schriftart mit .
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -163,10 +163,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
@@ -175,7 +175,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idschreitefontfallback**](/windows/win32/api/dwrite_2/nn-dwrite_2-idwritefontfallback)
+[**IDWriteFontFallback**](/windows/win32/api/dwrite_2/nn-dwrite_2-idwritefontfallback)
 </dt> </dl>
 
  

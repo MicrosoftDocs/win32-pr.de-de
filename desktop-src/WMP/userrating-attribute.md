@@ -1,9 +1,9 @@
 ---
-title: Userrating-Attribut
-description: Das userrating-Attribut ist die vom Benutzer in der Bibliothek angegebene Bewertung.
+title: UserRating-Attribut
+description: Das UserRating-Attribut ist die Bewertung, die vom Benutzer in der Bibliothek angegeben wird.
 ms.assetid: 33df5316-1506-4ecb-b729-c2d66b878825
 keywords:
-- Userrating-Attribut Windows Media Player
+- UserRating-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,34 +12,34 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a25dd7b4e55195deaecf5228b9ad5bad9195c2c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 41725119f97e0609931a3c9b7789e86d16a20507523e76a3f5642a0955998d6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001650"
 ---
-# <a name="userrating-attribute"></a>Userrating-Attribut
+# <a name="userrating-attribute"></a>UserRating-Attribut
 
-Das **userrating** -Attribut ist die vom Benutzer in der Bibliothek angegebene Bewertung.
+Das **UserRating-Attribut** ist die Bewertung, die vom Benutzer in der Bibliothek angegeben wird.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folgenden Tabelle beschrieben. Wenn Sie einen Wert angeben, verwenden Sie einen der Werte aus der Spalte zum Schreiben von Werten. Beim Abrufen von Werten können Sie die Bereiche in der Spalte Lesewerte verwenden, um die Anzahl der Sterne zu bestimmen.
+Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folgenden Tabelle beschrieben. Verwenden Sie beim Angeben eines Werts einen der Werte aus der Spalte Schreibwert. Beim Abrufen von Werten können Sie die Bereiche in der Spalte Lesewerte verwenden, um die Anzahl der Sterne zu bestimmen.
 
 
 
-| Rating  | Wert wird geschrieben | Lesen von Werten |
+| Rating  | Schreiben eines Werts | Lesen von Werten |
 |---------|---------------|----------------|
-| Unbewertete | 0             | 0              |
+| Unrated | 0             | 0              |
 | 1 Stern  | 1             | 1 bis 12        |
 | 2 Sterne | 25            | 13 bis 37       |
 | 3 Sterne | 50            | 38 bis 62       |
@@ -50,9 +50,9 @@ Benutzerbewertungen werden durch ganzzahlige Werte dargestellt, wie in der folge
 
  
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher (das Foto Element wird nur in Windows Media Player 10 oder höher unterstützt)<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher (Das Fotoelement wird nur in Windows Media Player 10 oder höher unterstützt)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

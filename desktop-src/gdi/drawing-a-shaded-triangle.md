@@ -1,19 +1,19 @@
 ---
-description: Zum Zeichnen eines schattierten Dreiecks definieren Sie eine trivertex-Struktur mit drei Elementen und einer einzelnen Gradient- \_ Dreiecks Struktur.
+description: Um ein schattiertes Dreieck zu zeichnen, definieren Sie eine TRIVERTEX-Struktur mit drei Elementen und einer einzelnen GRADIENT \_ TRIANGLE-Struktur.
 ms.assetid: 78834f92-00cb-4899-851a-1de5e3c1f4fa
 title: Zeichnen eines schattierten Dreiecks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3200a1ec061d7513cbac56c8c66104154005cef9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b1b6742f8ff6a3e2d543592e86cac87489048ca4d9748dc4e111cd4613b2f207
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062410"
 ---
 # <a name="drawing-a-shaded-triangle"></a>Zeichnen eines schattierten Dreiecks
 
-Zum Zeichnen eines schattierten Dreiecks definieren Sie eine [**trivertex**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex) -Struktur mit drei Elementen und einer einzelnen [**Gradient- \_ Dreiecks**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle) Struktur. Im folgenden Codebeispiel wird veranschaulicht, wie ein schattiertes Dreieck mithilfe der [**GradientFill**](/windows/desktop/api/WinGdi/nf-wingdi-gradientfill) -Funktion mit dem für den \_ Füll Zeichenmodus definierten Farbverlaufs Modus gezeichnet wird \_ .
+Um ein schattiertes Dreieck zu zeichnen, definieren Sie eine [**TRIVERTEX-Struktur**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex) mit drei Elementen und einer einzelnen [**GRADIENT \_ TRIANGLE-Struktur.**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle) Das folgende Codebeispiel zeigt, wie sie ein schattiertes Dreieck mithilfe der [**GradientFill-Funktion**](/windows/desktop/api/WinGdi/nf-wingdi-gradientfill) zeichnen, für die der GRADIENT \_ FILL \_ TRIANGLE-Modus definiert ist.
 
 
 ```C++
@@ -90,9 +90,9 @@ GradientFill(hdc, vertex, 3, &gTriangle, 1, GRADIENT_FILL_TRIANGLE);
 
 
 
-Die folgende Abbildung zeigt die Zeichnungs Ausgabe des vorangehenden Code Beispiels.
+Die folgende Abbildung zeigt die Zeichnungsausgabe des vorherigen Codebeispiels.
 
-![Abbildung, die ein Dreieck zeigt, das am oberen Punkt auf Magenta am unteren Rand von Orange füllt](images/gradientfilltriangle.png)
+![Abbildung eines Dreiecks, das sich von orange am oberen Punkt bis zum Magenta am unteren Rand ausfüllt](images/gradientfilltriangle.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -101,22 +101,22 @@ Die folgende Abbildung zeigt die Zeichnungs Ausgabe des vorangehenden Code Beisp
 [Übersicht über Bitmaps](bitmaps.md)
 </dt> <dt>
 
-[Bitmap-Funktionen](bitmap-functions.md)
+[Bitmapfunktionen](bitmap-functions.md)
 </dt> <dt>
 
 [Zeichnen eines schattierten Rechtecks](drawing-a-shaded-rectangle.md)
 </dt> <dt>
 
-[**Emrgradientfill**](/windows/win32/api/wingdi/ns-wingdi-emrgradientfill)
+[**EMRGRADIENTFILL**](/windows/win32/api/wingdi/ns-wingdi-emrgradientfill)
 </dt> <dt>
 
-[**\_gradientendreieck**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle)
+[**\_FARBVERLAUFSDREIECK**](/windows/desktop/api/Wingdi/ns-wingdi-gradient_triangle)
 </dt> <dt>
 
 [**GradientFill**](/windows/desktop/api/WinGdi/nf-wingdi-gradientfill)
 </dt> <dt>
 
-[**"Drei"**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex)
+[**TRIVERTEX**](/windows/desktop/api/Wingdi/ns-wingdi-trivertex)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: EN_ERRSPACE Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn ein Bearbeitungs Steuerelement nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine WM- \_ Befehls Meldung.
+title: EN_ERRSPACE Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn ein Bearbeitungssteuerelement nicht genügend Arbeitsspeicher zuweisen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Bearbeitungssteuerelements empfängt diesen Benachrichtigungscode über eine WM \_ COMMAND-Meldung.
 ms.assetid: 23a6eb10-a9d7-4fd5-9176-407c35e6f492
 keywords:
-- Windows-Steuerelemente für EN_ERRSPACE Benachrichtigungs
+- EN_ERRSPACE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05b100811741ee5c5f6bf53eb49ff05b118de3c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 548270e6382befa8a202a94c625f8cea214025d41661305f290250d66a771cbe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047770"
 ---
-# <a name="en_errspace-notification-code"></a>EN \_ errspace-Benachrichtigungs Code
+# <a name="en_errspace-notification-code"></a>EN \_ ERRSPACE-Benachrichtigungscode
 
-Wird gesendet, wenn ein Bearbeitungs Steuerelement nicht genügend Arbeitsspeicher zuordnen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn ein Bearbeitungssteuerelement nicht genügend Arbeitsspeicher zuweisen kann, um eine bestimmte Anforderung zu erfüllen. Das übergeordnete Fenster des Bearbeitungssteuerelements empfängt diesen Benachrichtigungscode über eine [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,22 +42,22 @@ EN_ERRSPACE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungs Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungssteuerelements. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement.
+Ein Handle für das Bearbeitungssteuerelement.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das übergeordnete Fenster erhält immer eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung für dieses Ereignis. es ist keine Benachrichtigungs Maske erforderlich, die mit der EM-Nachricht " [**\_ tventmask**](em-seteventmask.md) " gesendet wird.
+Das übergeordnete Fenster erhält immer eine [**WM \_ COMMAND-Nachricht**](/windows/desktop/menurc/wm-command) für dieses Ereignis. Es ist keine Benachrichtigungsmaske erforderlich, die mit der [**EM \_ SETEVENTMASK-Nachricht**](em-seteventmask.md) gesendet wird.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,9 +65,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

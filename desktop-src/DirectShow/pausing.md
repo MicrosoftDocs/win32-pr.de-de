@@ -4,16 +4,16 @@ ms.assetid: 945e1b1a-2557-4be2-bfdb-bb11ac7c3fe8
 title: Status „Wird angehalten“
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a07f6f610c3cfac9361e1db40c0fcd37b90645b2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 15f113bdaa41709055202886112d678c2a1fbb172d99e880ceaafc997817412a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119997280"
 ---
 # <a name="pausing"></a>Status „Wird angehalten“
 
-Alle Filter Zustandsänderungen müssen die Filter Sperre enthalten. Erstellen Sie in der **Pause** -Methode alle Ressourcen, die der Filter benötigt:
+Alle Filterzustandsänderungen müssen die Filtersperre enthalten. Erstellen Sie in der **Pause-Methode** alle Ressourcen, die der Filter benötigt:
 
 
 ```C++
@@ -29,7 +29,7 @@ HRESULT CMyFilter::Pause()
 
 
 
-Die [**cbasefilter::P ause**](cbasefilter-pause.md) -Methode legt den korrekten Zustand für den Filter fest (Zustand \_ angehalten) und ruft die [**cbasepin:: Active**](cbasepin-active.md) -Methode für jede verbundene PIN im Filter auf. Die **aktive** Methode teilt der PIN mit, dass der Filter aktiv ist. Wenn die PIN Ressourcen erstellt, überschreiben Sie die **aktive** Methode wie folgt:
+Die [**CBaseFilter::P ause-Methode**](cbasefilter-pause.md) legt den richtigen Zustand für den Filter fest (State \_ Paused) und ruft die [**CBasePin::Active-Methode**](cbasepin-active.md) für jeden verbundenen Pin im Filter auf. Die **Active-Methode** informiert den Pin darüber, dass der Filter aktiv geworden ist. Wenn der Pin Ressourcen erstellt, überschreiben Sie die **Active-Methode** wie folgt:
 
 
 ```C++

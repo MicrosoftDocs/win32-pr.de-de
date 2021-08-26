@@ -1,9 +1,9 @@
 ---
-title: Komplexer bitmapvaluetype-Typ
-description: Definiert die Zuordnung zwischen einem Bitwert und einem Zeichen folgen Wert. | Komplexer bitmapvaluetype-Typ
+title: Komplexer BitMapValueType-Typ
+description: Definiert die Zuordnung zwischen einem Bitwert und einem Zeichenfolgenwert. | Komplexer BitMapValueType-Typ
 ms.assetid: 2ef9ed89-83cf-4c47-9c6c-64459b6d7198
 keywords:
-- Bitmapvaluetype komplexer Typ EventLog
+- Komplexer BitMapValueType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f2da7e0576579b0f0c509de7a8318e46e5dd955d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6d5f1b254ad4a833c1523f5a139224fc1fed508d4530a056ffdb0f111db5769e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032350"
 ---
-# <a name="bitmapvaluetype-complex-type"></a>Komplexer bitmapvaluetype-Typ
+# <a name="bitmapvaluetype-complex-type"></a>Komplexer BitMapValueType-Typ
 
-Definiert die Zuordnung zwischen einem Bitwert und einem Zeichen folgen Wert.
+Definiert die Zuordnung zwischen einem Bitwert und einem Zeichenfolgenwert.
 
 ``` syntax
 <xs:complexType name="BitMapValueType"
@@ -55,15 +55,15 @@ Definiert die Zuordnung zwischen einem Bitwert und einem Zeichen folgen Wert.
 
 | Name    | type                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                    |
 |---------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| message | [**"Strauch"**](eventmanifestschema-strtableref-simpletype.md) | Der lokalisierte Zeichen folgen Wert, dem der Bitwert zugeordnet ist. Die Meldungs Zeichenfolge verweist auf eine lokalisierte Zeichenfolge im [**STRINGTABLE**](eventmanifestschema-stringtable-resources-element.md) -Abschnitt des Manifests. <br/>                                                                                  |
-| Symbol  | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das für den Verweis auf die Karte in der Anwendung verwendet werden soll. Der [**Nachrichten Compiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Zuordnung in der vom Compiler generierten Header Datei zu erstellen. Wenn Sie kein Symbol angeben, generiert der Compiler einen für Sie.<br/> |
-| value   | [**HexInt32Type**](eventmanifestschema-hex32type-simpletype.md)  | Der Bitwert, der dem Zeichen folgen Wert zugeordnet werden soll. Sie müssen eine hexadezimale Zahl angeben, für die ein einzelnes Bit festgelegt ist.<br/>                                                                                                                                                                                          |
+| message | [**strTableRef**](eventmanifestschema-strtableref-simpletype.md) | Der lokalisierte Zeichenfolgenwert, dem der Bitwert zugeordnet wird. Die Meldungszeichenfolge verweist auf eine lokalisierte Zeichenfolge im [**StringTable-Abschnitt**](eventmanifestschema-stringtable-resources-element.md) des Manifests. <br/>                                                                                  |
+| Symbol  | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Karte in Ihrer Anwendung zu verweisen. Der [**Nachrichtencompiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Zuordnung in der Headerdatei zu erstellen, die der Compiler generiert. Wenn Sie kein Symbol angeben, generiert der Compiler ein Symbol für Sie.<br/> |
+| value   | [**HexInt32Type**](eventmanifestschema-hex32type-simpletype.md)  | Der Bitwert, der dem Zeichenfolgenwert zugeordnet werden soll. Sie müssen eine Hexadezimalzahl angeben, für die ein einzelnes Bit festgelegt ist.<br/>                                                                                                                                                                                          |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ordnet einen hexadezimalen Wert zu (die Zahl muss 0x vorangestellt sein), wobei ein einzelnes Bit auf einen Namen festgelegt ist.
+Karten einen Hexadezimalwert (der Zahl muss 0x vorangestellt werden) mit einem einzelnen Bit, das auf einen Namen festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Ordnet einen hexadezimalen Wert zu (die Zahl muss 0x vorangestellt sein), wobei 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

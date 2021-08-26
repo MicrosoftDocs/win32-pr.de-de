@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork-framesskipped (Eigenschaft)
-description: Die framesskipped-Eigenschaft ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
+title: IWMPNetwork framesSkipped-Eigenschaft
+description: Die framesSkipped-Eigenschaft ruft die Gesamtanzahl von Frames ab, die während der Wiedergabe übersprungen wurden.
 ms.assetid: eedecfa9-0c82-4800-979e-ca85fb78c480
 keywords:
-- Eigenschaften Fenster für "framesskipped" Media Player
-- framesskipped-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, framesskipped (Eigenschaft)
+- framesSkipped-Eigenschaft Windows Media Player
+- framesSkipped-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , framesSkipped-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8409cec50089111184f96e4463f57cc9c4fbae07
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3640ff73eeadd1bf59eecc29045b0434f0885b7dc1eef319d6e6ee040442abdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999980"
 ---
-# <a name="iwmpnetworkframesskipped-property"></a>Iwmpnetwork:: framesskipped (Eigenschaft)
+# <a name="iwmpnetworkframesskipped-property"></a>IWMPNetwork::framesSkipped-Eigenschaft
 
-Die **framesskipped** -Eigenschaft ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
+Die **framesSkipped-Eigenschaft** ruft die Gesamtanzahl von Frames ab, die während der Wiedergabe übersprungen wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property framesSkipped As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl der übersprungenen Frames ist.
+Ein **System.Int32,** bei dem es sich um die Anzahl der übersprungenen Frames handelt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **framesskipped** verwendet, um die Gesamtzahl der Rahmen anzuzeigen, die während der Wiedergabe ausgelassen wurden. Die Informationen werden in einer Bezeichnung angezeigt, wenn der Benutzer auf eine Schaltfläche klickt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **framesSkipped** verwendet, um die Gesamtanzahl von Frames anzuzeigen, die während der Wiedergabe übersprungen wurden. Die Informationen werden in einer Bezeichnung angezeigt, wenn der Benutzer auf eine Schaltfläche klickt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -80,17 +80,17 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  
