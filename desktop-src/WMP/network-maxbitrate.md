@@ -1,9 +1,9 @@
 ---
-title: Network. maxbitrate
-description: Die maxbitrate-Eigenschaft ruft die maximal mögliche Video Bitrate ab.
+title: Network.maxBitRate
+description: Die maxBitRate-Eigenschaft ruft die maximal mögliche Videobitrate ab.
 ms.assetid: d1e6b548-0a2e-4bd4-8859-d504309a119e
 keywords:
-- Network. maxbitrate-Windows-Media Player
+- Network.maxBitRate Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,24 +14,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77522da2ef471a3be9208a9df30bf7435a5476e2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b8188b4c3019e5b420b3c8b60a7de2ea30eb7a52d1d080fa01c3d46f89308576
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901520"
 ---
-# <a name="networkmaxbitrate"></a>Network. maxbitrate
+# <a name="networkmaxbitrate"></a>Network.maxBitRate
 
-Die **maxbitrate** -Eigenschaft ruft die maximal mögliche Video Bitrate ab.
+Die **maxBitRate-Eigenschaft** ruft die maximal mögliche Videobitrate ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **maxbitrate**
+*Player*. *network*. **maxBitRate**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,7 +39,7 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -48,7 +48,7 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> </dl>
 
  

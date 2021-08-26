@@ -1,6 +1,6 @@
 ---
-title: komplexe mspeapconnectionpropertiesv1-Schema Typen
-description: Weitere Informationen zum mspeapconnectionpropertiesv1-Schema. Dieses Schema definiert die komplexen Typen "etapextensionstype" und "servervalidationparameters".
+title: mspeapconnectionpropertiesv1 Schema Complex Types
+description: Erfahren Sie mehr über das Schema mspeapconnectionpropertiesv1. Dieses Schema definiert die komplexen Typen PeapExtensionsType und ServerValidationParameters.
 ms.assetid: 544ee8fc-6b96-4661-bba5-9e26a7af661d
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,25 +9,25 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 87ad1b77b13d1f601431498cef4b7265524fd62c
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: bf557bbab2c7dfc8003c5fa2b97d89c5a07b517743c47738d498234394d45ac4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104102358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948090"
 ---
-# <a name="mspeapconnectionpropertiesv1-schema-complex-types"></a>komplexe mspeapconnectionpropertiesv1-Schema Typen
+# <a name="mspeapconnectionpropertiesv1-schema-complex-types"></a>mspeapconnectionpropertiesv1 Schema Complex Types
 
-Das [mspeapconnectionpropertiesv1](mspeapconnectionpropertiesv1schema-schema.md) -Schema definiert die folgenden komplexen Typen.
+Das [Schema mspeapconnectionpropertiesv1](mspeapconnectionpropertiesv1schema-schema.md) definiert die folgenden komplexen Typen.
 
--   [**Peer-extensionstype**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
--   [**Servervalidationparameters**](mspeapconnectionpropertiesv1schema-servervalidationparameters-complextype.md)
+-   [**PeapExtensionsType**](mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md)
+-   [**ServerValidationParameters**](mspeapconnectionpropertiesv1schema-servervalidationparameters-complextype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
@@ -36,9 +36,9 @@ Das [mspeapconnectionpropertiesv1](mspeapconnectionpropertiesv1schema-schema.md)
 [mspeapconnectionpropertiesv2-Schema](mspeapconnectionpropertiesv2schema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,119 +1,119 @@
 ---
-title: Arbeiten mit Galerien
-description: Das Windows-Menü Band Framework bietet Entwicklern ein stabiles und konsistentes Modell für die Verwaltung dynamischer Inhalte über eine Vielzahl von Sammlungs basierten Steuerelementen.
+title: Arbeiten mit Katalogen
+description: Das Windows-Menübandframework bietet Entwicklern ein stabiles und konsistentes Modell für die Verwaltung dynamischer Inhalte über eine Vielzahl sammlungsbasierter Steuerelemente hinweg.
 ms.assetid: 447039f3-1428-4b6f-94cf-78cf81974041
 keywords:
-- Windows-Menüband, Galerien
-- Menüband, Galerien
-- Windows-Menüband, dropdowngallery-Steuerelement
-- Menüband, dropdowngallery-Steuerelement
-- Windows-Menüband, splitbuttongallery-Steuerelement
-- Multifunktionsleiste, splitbuttongallery-Steuerelement
-- Dropdowngallery-Steuerelement
-- Splitbuttongallery-Steuerelement
-- Menüband für Windows-Kataloge
+- Windows Menüband,Kataloge
+- Menüband,Kataloge
+- Windows Menüband, DropDownGallery-Steuerelement
+- Menüband, DropDownGallery-Steuerelement
+- Windows Menüband, SplitButtonGallery-Steuerelement
+- Menüband, SplitButtonGallery-Steuerelement
+- DropDownGallery-Steuerelement
+- SplitButtonGallery-Steuerelement
+- Kataloge für Windows Menüband
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 784c69b0cf23edad906fbb35ee9a2a45454eacea
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ce142c1159d7a7c4129f402716ed7e394ebb4829f043d7c58dd23221b1479720
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119933445"
 ---
-# <a name="working-with-galleries"></a>Arbeiten mit Galerien
+# <a name="working-with-galleries"></a>Arbeiten mit Katalogen
 
-Das Windows-Menü Band Framework bietet Entwicklern ein stabiles und konsistentes Modell für die Verwaltung dynamischer Inhalte über eine Vielzahl von Sammlungs basierten Steuerelementen. Durch das anpassen und Neukonfigurieren der Multifunktionsleisten-Benutzeroberfläche ermöglichen diese dynamischen Steuerelemente dem Framework die Reaktion auf Benutzerinteraktionen sowohl in der Host Anwendung als auch auf dem Menüband selbst und bieten die Flexibilität, verschiedene Laufzeitumgebungen zu verarbeiten.
+Das Windows-Menübandframework bietet Entwicklern ein stabiles und konsistentes Modell für die Verwaltung dynamischer Inhalte über eine Vielzahl sammlungsbasierter Steuerelemente hinweg. Durch Anpassen und Neukonfigurieren der Menüband-Benutzeroberfläche ermöglichen diese dynamischen Steuerelemente dem Framework, sowohl in der Hostanwendung als auch im Menüband selbst auf Benutzerinteraktion zu reagieren und die Flexibilität zur Handhabung verschiedener Laufzeitumgebungen zu bieten.
 
 -   [Introduction (Einführung)](#introduction)
--   [Buden](#working-with-galleries)
-    -   [Element Kataloge](#item-galleries)
-    -   [Befehls Galerien](#command-galleries)
-    -   [Katalog Steuerelemente](#working-with-galleries)
--   [Vorgehensweise beim Implementieren eines Katalogs](#how-to-implement-a-gallery)
+-   [Kataloge](#working-with-galleries)
+    -   [Elementgalerien](#item-galleries)
+    -   [Befehlsgalerien](#command-galleries)
+    -   [Katalogsteuerelemente](#working-with-galleries)
+-   [Implementieren eines Katalogs](#how-to-implement-a-gallery)
     -   [Die grundlegenden Komponenten](#the-basic-components)
     -   [Deklarieren der Steuerelemente im Markup](#declare-the-controls-in-markup)
-    -   [Erstellen eines Befehls Handlers](#create-a-command-handler)
-    -   [Binden des Befehls Handlers](#bind-the-command-handler)
-    -   [Initialisieren einer Sammlung](#initialize-a-collection)
-    -   [Behandeln von Sammlungs Ereignissen](#handle-collection-events)
+    -   [Erstellen eines Befehlshandlers](#create-a-command-handler)
+    -   [Binden des Befehlshandlers](#bind-the-command-handler)
+    -   [Initialisieren einer Auflistung](#initialize-a-collection)
+    -   [Behandeln von Sammlungsereignissen](#handle-collection-events)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Diese Fähigkeit des Multifunktionsleisten-Frameworks, sich dynamisch an Lauf Zeit Bedingungen, Anwendungsanforderungen und Endbenutzer Eingaben anzupassen, hebt die umfassenden Benutzeroberflächen Funktionen des Frameworks hervor und bietet Entwicklern die Flexibilität, eine breite Palette von Kundenanforderungen zu erfüllen.
+Diese Fähigkeit des Menübandframework, sich dynamisch an Laufzeitbedingungen, Anwendungsanforderungen und Endbenutzereingaben anzupassen, hebt die umfassenden Benutzeroberflächenfunktionen des Frameworks hervor und bietet Entwicklern die Flexibilität, eine Vielzahl von Kundenanforderungen zu erfüllen.
 
-Der Schwerpunkt dieses Handbuchs besteht darin, die dynamischen Katalog Steuerelemente zu beschreiben, die vom Framework unterstützt werden, ihre Unterschiede zu erläutern, zu erörtern, wann und wo Sie am besten verwendet werden können, und zu veranschaulichen, wie Sie in eine Menü Bandanwendung integriert werden können
+Der Schwerpunkt dieses Leitfadens liegt darauf, die dynamischen Katalogsteuerelemente zu beschreiben, die vom Framework unterstützt werden, ihre Unterschiede zu erläutern, zu besprechen, wann und wo sie am besten verwendet werden können, und zu veranschaulichen, wie sie in eine Menübandanwendung integriert werden können.
 
 ## <a name="galleries"></a>Kataloge
 
-Galerien sind funktionale und grafisch umfangreiche Listenfeld-Steuerelemente. Die Element Auflistung eines Katalogs kann nach Kategorien organisiert werden, die in flexiblen Spalten-und Zeilen basierten Layouts angezeigt werden, die mit Bildern und Text dargestellt werden. abhängig vom Typ des Katalogs wird die Live Vorschau unterstützt.
+Kataloge sind funktionstüchtige und grafisch umfangreiche Listenfeld-Steuerelemente. Die Elementsammlung eines Katalogs kann nach Kategorien organisiert, in flexiblen spalten- und zeilenbasierten Layouts angezeigt, mit Bildern und Text dargestellt werden und je nach Art des Katalogs die Livevorschau unterstützen.
 
-Kataloge sind aus folgenden Gründen funktionell von anderen dynamischen Menüband-Steuerelementen unterschieden:
+Kataloge unterscheiden sich aus den folgenden Gründen funktionell von anderen dynamischen Menüband-Steuerelementen:
 
--   Kataloge implementieren die [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Schnittstelle, die die verschiedenen Methoden zum Bearbeiten von Galerie Element Auflistungen definiert.
--   Kataloge können zur Laufzeit auf der Grundlage von Aktivitäten aktualisiert werden, die direkt im Menüband auftreten, z. b. Wenn ein Benutzer der Symbolleiste für den schnell Zugriff (QAT) einen Befehl hinzufügt.
--   Kataloge können zur Laufzeit aktualisiert werden, basierend auf Aktivitäten, die indirekt aus der Laufzeitumgebung auftreten, z. b. Wenn ein Druckertreiber nur Hochformat Layouts unterstützt.
--   Kataloge können zur Laufzeit aktualisiert werden, basierend auf Aktivitäten, die indirekt in der Host Anwendung auftreten, z. b. Wenn ein Benutzer ein Element in einem Dokument auswählt.
+-   Kataloge implementieren die [**IUICollection-Schnittstelle,**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) die die verschiedenen Methoden zum Bearbeiten von Katalogelementsammlungen definiert.
+-   Kataloge können zur Laufzeit aktualisiert werden, basierend auf Aktivitäten, die direkt im Menüband auftreten, z. B. wenn ein Benutzer der Symbolleiste für den Schnellzugriff (QAT) einen Befehl hinzufügt.
+-   Kataloge können zur Laufzeit aktualisiert werden, basierend auf Aktivitäten, die indirekt aus der Laufzeitumgebung auftreten, z. B. wenn ein Druckertreiber nur Layouts für Hochformatseiten unterstützt.
+-   Kataloge können zur Laufzeit aktualisiert werden, basierend auf Aktivitäten, die indirekt in der Hostanwendung auftreten, z. B. wenn ein Benutzer ein Element in einem Dokument auswählt.
 
-Das Menüband-Framework macht zwei Arten von Galerien verfügbar: Element Kataloge und Befehls Galerien.
+Das Menübandframework macht zwei Arten von Katalogen verfügbar: Elementgalerien und Befehlsgalerien.
 
-### <a name="item-galleries"></a>Element Kataloge
+### <a name="item-galleries"></a>Elementgalerien
 
-Element Kataloge enthalten eine indexbasierte Auflistung verwandter Elemente, wobei jedes Element durch ein Bild, eine Zeichenfolge oder beides dargestellt wird. Das-Steuerelement ist an einen einzelnen Befehls Handler gebunden, der auf dem Indexwert basiert, der von der Benutzeroberflächen- [ \_ pkey \_ SelectedItem](windowsribbon-reference-properties-uipkey-selecteditem.md) -Eigenschaft identifiziert wird.
+Elementgalerien enthalten eine indexbasierte Auflistung verwandter Elemente, bei der jedes Element durch ein Bild, eine Zeichenfolge oder beides dargestellt wird. Das Steuerelement ist an einen einzelnen Befehlshandler gebunden, der auf dem Indexwert basiert, der von der [ \_ PKEY \_ SelectedItem-Eigenschaft](windowsribbon-reference-properties-uipkey-selecteditem.md) der Benutzeroberfläche identifiziert wird.
 
-Element Kataloge unterstützen die Live Vorschau. Dies bedeutet, dass ein Befehls Ergebnis basierend auf mouseover oder Fokus angezeigt wird, ohne dass ein Commit für den Befehl ausgeführt oder tatsächlich aufgerufen wird.
+Elementgalerien unterstützen die Livevorschau. Dies bedeutet, dass ein Befehlsergebnis basierend auf Mauszeiger oder Fokus angezeigt wird, ohne den Befehl zu committen oder tatsächlich auf den Befehl zu übertragen.
 
 > [!IMPORTANT]
-> Das Framework bietet keine Unterstützung für das Hosting von Element Galerien im Anwendungsmenü.
+> Das Framework unterstützt das Hosten von Elementgalerien im Anwendungsmenü nicht.
 
- 
+ 
 
-### <a name="command-galleries"></a>Befehls Galerien
+### <a name="command-galleries"></a>Befehlsgalerien
 
-Befehls Galerien enthalten eine Auflistung von eindeutigen, nicht indizierten Elementen. Jedes Element wird durch ein einzelnes Steuerelement dargestellt, das über eine Befehls-ID an einen Befehls Handler gebunden ist. Ebenso wie eigenständige Steuerelemente leitet jedes Element in einer Befehls Galerie Eingabeereignisse an einen zugeordneten Befehls Handler weiter – die Befehls Galerie selbst lauscht nicht auf Ereignisse.
+Befehlsgalerien enthalten eine Auflistung unterschiedlicher, nicht indizierter Elemente. Jedes Element wird durch ein einzelnes Steuerelement dargestellt, das über eine Befehls-ID an einen Befehlshandler gebunden ist. Wie eigenständige Steuerelemente leitet jedes Element in einem Befehlskatalog Eingabeereignisse an einen zugeordneten Befehlshandler weiter– der Befehlskatalog selbst laussiert nicht auf Ereignisse.
 
-Befehls Galerien unterstützen keine Live Vorschau.
+Befehlsgalerien unterstützen keine Livevorschau.
 
-### <a name="gallery-controls"></a>Katalog Steuerelemente
+### <a name="gallery-controls"></a>Katalogsteuerelemente
 
-Es gibt vier Katalog Steuerelemente im Menüband-Framework: [**dropdowngallery**](windowsribbon-element-dropdowngallery.md), [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md), [**inribbongallery**](windowsribbon-element-inribbongallery.md)und [**ComboBox**](windowsribbon-element-combobox.md). Alle außer **ComboBox** können entweder als Element Katalog oder als Befehls Katalog implementiert werden.
+Es gibt vier Katalogsteuerelemente im Menübandframework: [**DropDownGallery,**](windowsribbon-element-dropdowngallery.md) [**SplitButtonGallery,**](windowsribbon-element-splitbuttongallery.md) [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)und [**ComboBox.**](windowsribbon-element-combobox.md) Alle außer **ComboBox können** entweder als Elementkatalog oder als Befehlskatalog implementiert werden.
 
-### <a name="dropdowngallery"></a>Dropdown Gallery
+### <a name="dropdowngallery"></a>DropDownGallery
 
-Ein [**dropdowngallery**](windowsribbon-element-dropdowngallery.md) ist eine Schaltfläche, die eine Dropdown Liste anzeigt, die eine Auflistung von sich gegenseitig ausschließenden Elementen oder Befehlen enthält.
+Eine [**DropDownGallery ist**](windowsribbon-element-dropdowngallery.md) eine Schaltfläche, die eine Dropdownliste anzeigt, die eine Sammlung von sich gegenseitig ausschließenden Elementen oder Befehlen enthält.
 
-Der folgende Screenshot veranschaulicht das Menüband [-Dropdown-](windowsribbon-controls-dropdowngallery.md) Katalog Steuerelement in Microsoft Paint für Windows 7.
+Der folgende Screenshot veranschaulicht das [Menüband-Dropdownkatalog-Steuerelement](windowsribbon-controls-dropdowngallery.md) in Microsoft Paint für Windows 7.
 
-![Screenshot eines Dropdown Galerie-Steuer Elements in Microsoft Paint für Windows 7.](images/controls/dropdowngallery.png)
+![Screenshot eines Dropdownkatalog-Steuerelements in Microsoft Paint für Windows 7.](images/controls/dropdowngallery.png)
 
-### <a name="splitbuttongallery"></a>Splitbuttongallery
+### <a name="splitbuttongallery"></a>SplitButtonGallery
 
-Ein [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) ist ein zusammengesetztes Steuerelement, das ein einzelnes Standardelement oder einen einzelnen Befehl aus seiner Auflistung auf einer primären Schaltfläche verfügbar macht und andere Elemente oder Befehle in einer sich gegenseitig ausschließenden Dropdown Liste anzeigt, die angezeigt wird, wenn auf eine sekundäre Schaltfläche geklickt wird.
+[**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) ist ein zusammengesetztes Steuerelement, das ein einzelnes Standardelement oder einen Befehl aus seiner Sammlung auf einer primären Schaltfläche verfügbar macht und andere Elemente oder Befehle in einer sich gegenseitig ausschließenden Dropdownliste anzeigt, die angezeigt wird, wenn auf eine sekundäre Schaltfläche geklickt wird.
 
-Der folgende Screenshot veranschaulicht das Steuerelement für den [Menüband-unterteilte Schalt](windowsribbon-controls-splitbuttongallery.md) Flächen Katalog in Microsoft Paint für Windows 7.
+Der folgende Screenshot veranschaulicht das Steuerelement Ribbon [Split Button Gallery](windowsribbon-controls-splitbuttongallery.md) in Microsoft Paint für Windows 7.
 
-![Screenshot eines Steuer Elements für eine unterteilte Schaltflächen Galerie in Microsoft Paint für Windows 7.](images/controls/splitbuttongallery.png)
+![Screenshot eines Katalogsteuerfelds mit geteilter Schaltfläche in Microsoft Paint für Windows 7.](images/controls/splitbuttongallery.png)
 
-### <a name="inribbongallery"></a>Inribbongallery
+### <a name="inribbongallery"></a>InRibbonGallery
 
-Ein [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Katalog ist ein Katalog, in dem eine Sammlung verwandter Elemente oder Befehle im Menüband angezeigt wird. Wenn im Katalog zu viele Elemente vorhanden sind, wird ein Erweiterungs Pfeil bereitgestellt, um den Rest der Auflistung in einem erweiterten Bereich anzuzeigen.
+Eine [**InRibbonGallery**](windowsribbon-element-inribbongallery.md) ist ein Katalog, der eine Sammlung verwandter Elemente oder Befehle im Menüband anzeigt. Wenn zu viele Elemente im Katalog vorhanden sind, wird ein Erweiterungspfeil bereitgestellt, um den Rest der Sammlung in einem erweiterten Bereich anzuzeigen.
 
-Der folgende Screenshot veranschaulicht das Multifunktionsleisten [-Steuerelement im Menüband-](windowsribbon-controls-inribbongallery.md) Katalog Steuerelement in Microsoft Paint für Windows 7.
+Der folgende Screenshot veranschaulicht das [Menüband-In-Ribbon Gallery-Steuerelement](windowsribbon-controls-inribbongallery.md) in Microsoft Paint für Windows 7.
 
-![Screenshot eines in-Ribbon Gallery-Steuer Elements im Microsoft Paint-Menüband.](images/controls/inribbongallery.png)
+![Screenshot eines Katalogsteuerelementes im Menüband im Microsoft-Farbband.](images/controls/inribbongallery.png)
 
 ### <a name="combobox"></a>Kombinationsfeld
 
-Ein Kombinations [**Feld**](windowsribbon-element-combobox.md) ist ein einspaltige Listenfeld, das eine Auflistung von Elementen mit einem statischen Steuerelement oder einem Bearbeitungs Steuerelement und einem Dropdown Pfeil enthält. Der Listenfeld Bereich des Steuer Elements wird angezeigt, wenn der Benutzer auf den Dropdown Pfeil klickt.
+Ein [**ComboBox-Steuerelement**](windowsribbon-element-combobox.md) ist ein Einspalten-Listenfeld, das eine Sammlung von Elementen mit einem statischen Steuerelement oder einem Bearbeitungssteuerfeld und einem Dropdownpfeil enthält. Der Listenfeldteil des Steuerelements wird angezeigt, wenn der Benutzer auf den Dropdownpfeil klickt.
 
-Der folgende Screenshot veranschaulicht ein Menüband-Kombinations [Feld](windowsribbon-controls-combobox.md) -Steuerelement von Windows Live Movie Maker.
+Der folgende Screenshot veranschaulicht ein [Menüband-Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) aus Windows Live Movie Maker.
 
-![Screenshot eines ComboBox-Steuer Elements im Microsoft Paint-Menüband.](images/controls/combobox.png)
+![Screenshot eines Kombinationsfeld-Steuerelements im Microsoft-Farbband.](images/controls/combobox.png)
 
-Da es sich bei der [**ComboBox**](windowsribbon-element-combobox.md) ausschließlich um einen Element Katalog handelt, werden Befehls Elemente nicht unterstützt. Es ist auch das einzige Katalog Steuerelement, das keinen Befehlsbereich unterstützt. (Ein Befehlsbereich ist eine Auflistung von Befehlen, die im Markup deklariert und am unteren Rand einer Element Galerie oder Befehls Galerie aufgelistet werden.)
+Da [**comboBox ausschließlich**](windowsribbon-element-combobox.md) ein Elementkatalog ist, werden keine Befehlselemente unterstützt. Es ist auch das einzige Katalogsteuer steuerelement, das keinen Befehlsraum unterstützt. (Ein Befehlsraum ist eine Sammlung von Befehlen, die im Markup deklariert und am unteren Rand eines Elementkatalogs oder Befehlskatalogs aufgeführt werden.)
 
-Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren eines Befehls Raums mit drei Schaltflächen in einem [**dropdowngallery**](windowsribbon-element-dropdowngallery.md)erforderlich ist.
+Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren eines Befehlsraums mit drei Schaltflächen in einer [**DropDownGallery erforderlich ist.**](windowsribbon-element-dropdowngallery.md)
 
 
 ```C++
@@ -134,46 +134,46 @@ Das folgende Codebeispiel zeigt das Markup, das zum Deklarieren eines Befehls Ra
 
 
 
-Der folgende Screenshot veranschaulicht den drei-Schaltflächen-Befehlsbereich des vorangehenden Code Beispiels.
+Der folgende Screenshot veranschaulicht den Befehlsraum mit drei Schaltflächen des vorangehenden Codebeispiels.
 
-![Screenshot eines Befehls Raums mit drei Schaltflächen in einer dropdowngallery.](images/markup/gallerysample-commandspace.png)
+![Screenshot eines Befehlsraums mit drei Schaltflächen in einer Dropdownliste.](images/markup/gallerysample-commandspace.png)
 
-## <a name="how-to-implement-a-gallery"></a>Vorgehensweise beim Implementieren eines Katalogs
+## <a name="how-to-implement-a-gallery"></a>Implementieren eines Katalogs
 
-In diesem Abschnitt werden die Implementierungsdetails von Menü Band Katalogen erläutert und erläutert, wie Sie in eine Menü Bandanwendung integriert werden.
+In diesem Abschnitt werden die Implementierungsdetails von Menüband-Katalogen erläutert und erläutert, wie sie in eine Menübandanwendung integriert werden.
 
 ### <a name="the-basic-components"></a>Die grundlegenden Komponenten
 
-In diesem Abschnitt werden die Eigenschaften und Methoden beschrieben, die das Backbone dynamischer Inhalte im Menüband Framework bilden und das Hinzufügen, löschen, aktualisieren und anderweitig bearbeiten des Inhalts und des visuellen Layouts von Menü Band Katalogen zur Laufzeit unterstützen.
+In diesem Abschnitt werden die Eigenschaften und Methoden beschrieben, die den Backbone dynamischer Inhalte im Menübandframework bilden und das Hinzufügen, Löschen, Aktualisieren und anderweitige Bearbeiten des Inhalts und visuellen Layouts von Menüband-Katalogen zur Laufzeit unterstützen.
 
-### <a name="iuicollection"></a>Iuicollection
+### <a name="iuicollection"></a>IUICollection
 
-Kataloge benötigen einen grundlegenden Satz von Methoden, um auf die einzelnen Elemente in ihren Sammlungen zuzugreifen und Sie zu bearbeiten.
+Kataloge erfordern einen grundlegenden Satz von Methoden, um auf die einzelnen Elemente in ihren Sammlungen zu zugreifen und sie zu bearbeiten.
 
-Die [IEnumUnknown](/windows/win32/api/objidlbase/nn-objidlbase-ienumunknown) -Schnittstelle definiert diese Methoden, und das Framework ergänzt ihre Funktionalität durch zusätzliche Methoden, die in der [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Schnittstelle definiert sind. **Iuicollection** wird vom Framework für jede Katalog Deklaration im Menü Band Markup implementiert.
+Die [IEnumUnknown-Schnittstelle](/windows/win32/api/objidlbase/nn-objidlbase-ienumunknown) definiert diese Methoden, und das Framework ergänzt ihre Funktionalität durch zusätzliche Methoden, die in der [**IUICollection-Schnittstelle definiert**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) sind. **IUICollection** wird vom Framework für jede Katalogdeklaration im Menübandmarkup implementiert.
 
-Wenn zusätzliche Funktionen erforderlich sind, die nicht von der [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Schnittstelle bereitgestellt werden, kann ein benutzerdefiniertes Auflistungs Objekt, das von der Host Anwendung implementiert und von [IEnumUnknown](/windows/win32/api/objidlbase/nn-objidlbase-ienumunknown) abgeleitet wurde, für die frameworkauflistung ersetzt werden.
+Wenn zusätzliche Funktionen erforderlich sind, die nicht von der [**IUICollection-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) bereitgestellt werden, kann ein benutzerdefiniertes Sammlungsobjekt, das von der Hostanwendung implementiert und von [IEnumUnknown](/windows/win32/api/objidlbase/nn-objidlbase-ienumunknown) abgeleitet wird, durch die Frameworksammlung ersetzt werden.
 
-### <a name="iuicollectionchangedevent"></a>Iuicollectionchangede Vent
+### <a name="iuicollectionchangedevent"></a>IUICollectionChangedEvent
 
-Damit eine Anwendung auf Änderungen in einer Galerie Auflistung antwortet, muss Sie die [**iuicollectionchangedebug**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollectionchangedevent) -Schnittstelle implementieren. Anwendungen können Benachrichtigungen von einem [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt über den [**iuicollectionchangedevent:: OnChanged**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicollectionchangedevent-onchanged) -Ereignislistener abonnieren.
+Damit eine Anwendung auf Änderungen in einer Katalogsammlung reagieren kann, muss sie die [**IUICollectionChangedEvent-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollectionchangedevent) implementieren. Anwendungen können Benachrichtigungen von einem [**IUICollection-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) über den [**IUICollectionChangedEvent::OnChanged-Ereignislistener**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicollectionchangedevent-onchanged) abonnieren.
 
-Wenn die Anwendung die vom Framework bereitgestellte Galerie Auflistung durch eine benutzerdefinierte Auflistung ersetzt, sollte die Anwendung die [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) -Schnittstelle implementieren. Wenn [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) nicht implementiert ist, kann die Anwendung das Framework von Änderungen in der benutzerdefinierten Sammlung, die dynamische Aktualisierungen des Katalog-Steuer Elements erfordern, nicht benachrichtigen.
+Wenn die Anwendung die vom Framework bereitgestellte Katalogsammlung durch eine benutzerdefinierte Sammlung ersetzt, sollte die Anwendung die [IConnectionPointContainer-Schnittstelle](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) implementieren. Wenn [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) nicht implementiert ist, kann die Anwendung das Framework nicht über Änderungen in der benutzerdefinierten Sammlung benachrichtigen, die dynamische Aktualisierungen des Katalogsteuerpunkts erfordern.
 
-In Fällen, in denen [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) nicht implementiert ist, kann das Katalog-Steuerelement nur durch die Invalidierung durch [**iuiframework:: invalidateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) und [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty)oder durch Aufrufen von [**iuiframework:: setuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty)aktualisiert werden.
+In Fällen, in denen [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) nicht implementiert ist, kann das Katalogsteuerfeld nur durch Ungültigkeit über [**IUIFramework::InvalidateUICommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) und [**IUICommandHandler::UpdateProperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty)oder durch Aufrufen von [**IUIFramework::SetUICommandProperty aktualisiert werden.**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty)
 
-### <a name="iuisimplepropertyset"></a>Iuisimplepropertyset
+### <a name="iuisimplepropertyset"></a>IUISimplePropertySet
 
-Anwendungen müssen iuisimplepropertyset für jedes Element oder jeden Befehl in einer Galerie Auflistung implementieren. Die Eigenschaften, die mit [**iuisimplepropertyset:: GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) angefordert werden können, sind jedoch unterschiedlich.
+Anwendungen müssen IUISimplePropertySet für jedes Element oder jeden Befehl in einer Katalogsammlung implementieren. Die Eigenschaften, die mit [**IUISimplePropertySet::GetValue angefordert**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) werden können, variieren jedoch.
 
-Elemente werden über den Benutzeroberflächen- [ \_ pkey \_ ItemsSource](windowsribbon-reference-properties-uipkey-itemssource.md) -Eigenschafts Schlüssel definiert und an einen Katalog gebunden, und es werden Eigenschaften mit einem [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt verfügbar gemacht.
+Elemente werden über den [ \_ PKEY \_ ItemsSource-Eigenschaftsschlüssel](windowsribbon-reference-properties-uipkey-itemssource.md) der Benutzeroberfläche definiert und an einen Katalog gebunden und machen Eigenschaften mit einem [**IUICollection-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) verfügbar.
 
-Die gültigen Eigenschaften für Elemente in Element Galerien ([**UI \_ CommandType \_ Collection**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_commandtype)) werden in der folgenden Tabelle beschrieben.
+Die gültigen Eigenschaften für Elemente in Elementgalerien ([**UI \_ COMMANDTYPE \_ COLLECTION**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_commandtype)) werden in der folgenden Tabelle beschrieben.
 
 > [!Note]  
-> Einige Element Eigenschaften, z. b. die [UI- \_ pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md), können im Markup definiert werden. Weitere Details finden Sie in der Referenz Dokumentation zu [Eigenschafts Schlüsseln](windowsribbon-reference-properties.md) .
+> Einige Elementeigenschaften, z. [B. \_ \_ PKEY-Beschriftung der Benutzeroberfläche,](windowsribbon-reference-properties-uipkey-label.md)können im Markup definiert werden. Weitere Informationen finden Sie in der [Referenzdokumentation zu](windowsribbon-reference-properties.md) Eigenschaftsschlüsseln.
 
- 
+ 
 
 
 
@@ -183,64 +183,64 @@ Eigenschaften
 
 [**ComboBox**](windowsribbon-element-combobox.md)
 
-[Benutzeroberfläche \_ Pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md), [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)
+[Benutzeroberfläche \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md), [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)
 
-[**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)
+[**DropDownGallery**](windowsribbon-element-dropdowngallery.md)
 
-[Benutzeroberfläche \_ Pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md), [UI \_ pkey \_ itemImage](windowsribbon-reference-properties-uipkey-itemimage.md) , [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)
+[Benutzeroberfläche \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md), [UI \_ PKEY \_ ItemImage](windowsribbon-reference-properties-uipkey-itemimage.md) , [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)
 
-[**Inribbongallery**](windowsribbon-element-inribbongallery.md)
+[**InRibbonGallery**](windowsribbon-element-inribbongallery.md)
 
-[Benutzeroberfläche \_ Pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md), [UI \_ pkey \_ itemImage](windowsribbon-reference-properties-uipkey-itemimage.md) , [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)
+[Benutzeroberfläche \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md), [UI \_ PKEY \_ ItemImage](windowsribbon-reference-properties-uipkey-itemimage.md) , [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)
 
-[**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)
+[**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)
 
-[Benutzeroberfläche \_ Pkey- \_ Bezeichnung](windowsribbon-reference-properties-uipkey-label.md), [UI \_ pkey \_ itemImage](windowsribbon-reference-properties-uipkey-itemimage.md), [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)
+[Benutzeroberfläche \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md), [UI \_ PKEY \_ ItemImage](windowsribbon-reference-properties-uipkey-itemimage.md), [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)
 
-[Benutzeroberfläche \_ Pkey \_ SelectedItem](windowsribbon-reference-properties-uipkey-selecteditem.md) ist eine Eigenschaft der Element Galerie.
+[Benutzeroberfläche \_ PKEY \_ SelectedItem](windowsribbon-reference-properties-uipkey-selecteditem.md) ist eine Eigenschaft des Elementkatalogs.
 
 
 
- 
+ 
 
-Die gültigen Element Eigenschaften für Befehls Galerien ([**UI \_ CommandType \_ CommandCollection**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_commandtype)) werden in der folgenden Tabelle beschrieben.
+Die gültigen Elementeigenschaften für Befehlssammlungen ([**UI \_ COMMANDTYPE \_ COMMANDCOLLECTION**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_commandtype)) werden in der folgenden Tabelle beschrieben.
 
 
 
 | Control                                                                | Eigenschaften                                                                                                                                                                                                                                            |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Dropdown Gallery**](windowsribbon-element-dropdowngallery.md)       | [Benutzeroberfläche \_ Pkey \_ CommandID](windowsribbon-reference-properties-uipkey-commandid.md), [UI \_ pkey \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md) , [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md) |
-| [**Inribbongallery**](windowsribbon-element-inribbongallery.md)       | [Benutzeroberfläche \_ Pkey \_ CommandID](windowsribbon-reference-properties-uipkey-commandid.md), [UI \_ pkey \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md) , [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md) |
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) | [Benutzeroberfläche \_ Pkey \_ CommandID](windowsribbon-reference-properties-uipkey-commandid.md), [UI \_ pkey \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md), [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md)  |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)       | [Benutzeroberfläche \_ PKEY \_ CommandId,](windowsribbon-reference-properties-uipkey-commandid.md) [UI \_ PKEY \_ CommandType,](windowsribbon-reference-properties-uipkey-commandtype.md) [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md) |
+| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)       | [Benutzeroberfläche \_ PKEY \_ CommandId,](windowsribbon-reference-properties-uipkey-commandid.md) [UI \_ PKEY \_ CommandType,](windowsribbon-reference-properties-uipkey-commandtype.md) [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md) |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md) | [Benutzeroberfläche \_ PKEY \_ CommandId,](windowsribbon-reference-properties-uipkey-commandid.md) [UI \_ PKEY \_ CommandType,](windowsribbon-reference-properties-uipkey-commandtype.md) [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md)  |
 
 
 
- 
+ 
 
-Kategorien werden verwendet, um Elemente und Befehle in Galerien zu organisieren. Kategorien werden mithilfe des Eigenschafts Schlüssels der UI- [ \_ pkey- \_ Kategorien](windowsribbon-reference-properties-uipkey-categories.md) definiert und an einen Katalog gebunden, und es werden Eigenschaften mit einem kategoriespezifischen [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt verfügbar gemacht.
+Kategorien werden verwendet, um Elemente und Befehle in Katalogen zu organisieren. Kategorien werden über den [Eigenschaftenschlüssel \_ PKEY \_ Categories](windowsribbon-reference-properties-uipkey-categories.md) der Benutzeroberfläche definiert und an einen Katalog gebunden und machen Eigenschaften mit einem kategoriespezifischen [**IUICollection-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) verfügbar.
 
-Kategorien haben keinen CommandType und unterstützen keine Benutzerinteraktion. Beispielsweise können Kategorien nicht zum SelectedItem in einem Element Katalog werden, und Sie sind nicht an einen Befehl in einer Befehls Galerie gebunden. Wie andere Katalog Element Eigenschaften können auch Kategorieeigenschaften wie " [UI \_ pkey \_](windowsribbon-reference-properties-uipkey-label.md) " und " [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md) " durch Aufrufen von " [**iuisimplepropertyset:: GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue)" abgerufen werden.
+Kategorien haben keinen CommandType und unterstützen keine Benutzerinteraktion. Beispielsweise können Kategorien nicht zum SelectedItem in einem Elementkatalog werden, und sie sind nicht an einen Befehl in einem Befehlskatalog gebunden. Wie andere Katalogelementeigenschaften können Kategorieeigenschaften wie [UI \_ PKEY \_ Label](windowsribbon-reference-properties-uipkey-label.md) und [UI \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md) durch Aufrufen von [**IUISimplePropertySet::GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue)abgerufen werden.
 
 > [!IMPORTANT]
-> [**Iuisimplepropertyset:: GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) sollte den [**benutzeroberflächensammlungs- \_ \_ InvalidIndex**](/windows/desktop/windowsribbon/windowsribbon-ui-collection-invalidindex) zurückgeben, wenn die [UI \_ pkey \_ CategoryID](windowsribbon-reference-properties-uipkey-categoryid.md) für ein Element angefordert wird, dem keine Kategorie zugeordnet ist.
+> [**IUISimplePropertySet::GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) sollte [**UI COLLECTION \_ \_ INVALIDINDEX**](/windows/desktop/windowsribbon/windowsribbon-ui-collection-invalidindex) zurückgeben, wenn [ui \_ PKEY \_ CategoryId](windowsribbon-reference-properties-uipkey-categoryid.md) für ein Element angefordert wird, dem keine Kategorie zugeordnet ist.
 
- 
+ 
 
 ### <a name="declare-the-controls-in-markup"></a>Deklarieren der Steuerelemente im Markup
 
-Galerien müssen wie alle Menü Band Steuerelemente im Markup deklariert werden. Ein Katalog wird im Markup als Element Katalog oder Befehls Katalog identifiziert, und verschiedene Präsentations Details werden deklariert. Im Gegensatz zu anderen Steuerelementen ist es für Kataloge erforderlich, dass nur der Basis Steuerelement-oder Sammlungs Container im Markup deklariert wird. Die tatsächlichen Sammlungen werden zur Laufzeit aufgefüllt. Wenn ein Katalog im Markup deklariert wird, wird mit dem *Type* -Attribut angegeben, ob es sich bei dem Katalog um eine Element Galerie einer Befehls Galerie handelt.
+Kataloge müssen wie alle Menübandsteuerelemente im Markup deklariert werden. Ein Katalog wird im Markup als Elementkatalog oder Befehlskatalog identifiziert, und verschiedene Präsentationsdetails werden deklariert. Im Gegensatz zu anderen Steuerelementen müssen Kataloge nur das Basissteuerelement oder den Sammlungscontainer im Markup deklariert werden. Die tatsächlichen Auflistungen werden zur Laufzeit aufgefüllt. Wenn ein Katalog im Markup deklariert wird, wird das *Type-Attribut* verwendet, um anzugeben, ob der Katalog ein Elementkatalog eines Befehlskatalogs ist.
 
-Es gibt eine Reihe optionaler Layoutattribute, die für jedes der hier beschriebenen Steuerelemente verfügbar sind. Diese Attribute stellen Entwicklereinstellungen für das Framework zur Verfügung, die sich direkt darauf auswirken, wie ein Steuerelement in einem Menüband aufgefüllt und angezeigt wird. Die in Markup anwendbaren Einstellungen beziehen sich auf die Anzeige-und Layoutvorlagen und Verhaltensweisen, die unter [Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)erläutert werden.
+Für jedes der hier erläuterten Steuerelemente stehen eine Reihe optionaler Layoutattribute zur Verfügung. Diese Attribute bieten Entwicklereinstellungen für das Framework, die sich direkt darauf auswirken, wie ein Steuerelement aufgefüllt und in einem Menüband angezeigt wird. Die im Markup anwendbaren Einstellungen beziehen sich auf die Anzeige- und Layoutvorlagen und -verhaltensweisen, die unter [Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)erläutert werden.
 
-Wenn ein bestimmtes Steuerelement keine Layouteinstellungen direkt im Markup zulässt oder die Layouteinstellungen nicht angegeben sind, definiert das Framework Steuerelement spezifische Anzeige Konventionen basierend auf der Menge des verfügbaren Bildschirm Raums.
+Wenn ein bestimmtes Steuerelement layouteinstellungen nicht direkt im Markup zulässt oder die Layouteinstellungen nicht angegeben sind, definiert das Framework steuerelementspezifische Anzeigekonventionen basierend auf dem verfügbaren Bildschirmspeicherplatz.
 
-In den folgenden Beispielen wird veranschaulicht, wie Sie einen Satz von Galerien in eine Multifunktionsleiste integrieren.
+In den folgenden Beispielen wird veranschaulicht, wie Sie eine Reihe von Katalogen in ein Menüband integrieren.
 
-### <a name="command-declarations"></a>Befehls Deklarationen
+### <a name="command-declarations"></a>Befehlsdeklarationen
 
-Befehle sollten mit einem *CommandName* -Attribut deklariert werden, das zum Zuordnen eines Steuer Elements oder einer Gruppe von Steuerelementen mit dem Befehl verwendet wird.
+Befehle sollten mit einem *CommandName-Attribut* deklariert werden, das zum Zuordnen eines Steuerelements oder einer Gruppe von Steuerelementen zum Befehl verwendet wird.
 
-Ein *CommandID* -Attribut, das zum Binden eines Befehls an einen Befehls Handler verwendet wird, wenn das Markup kompiliert wird, kann auch hier angegeben werden. Wenn keine ID angegeben ist, wird eine von dem Framework generiert.
+Ein *CommandId-Attribut,* das zum Binden eines Befehls an einen Befehlshandler beim Kompilieren des Markups verwendet wird, kann hier ebenfalls angegeben werden. Wenn keine ID angegeben wird, wird eine vom Framework generiert.
 
 
 ```XML
@@ -302,11 +302,11 @@ Ein *CommandID* -Attribut, das zum Binden eines Befehls an einen Befehls Handler
 
 
 
-### <a name="control-declarations"></a>Steuerelement Deklarationen
+### <a name="control-declarations"></a>Steuerelementdeklarationen
 
-Dieser Abschnitt enthält Beispiele, die das grundlegende Steuerelement Markup veranschaulichen, das für die verschiedenen Katalog Typen erforderlich ist. Sie zeigen, wie die Katalog Steuerelemente deklariert und mit einem Befehl über das *CommandName* -Attribut verknüpft werden.
+Dieser Abschnitt enthält Beispiele, die das grundlegende Steuerelementmarkup veranschaulichen, das für die verschiedenen Katalogtypen erforderlich ist. Sie zeigen, wie sie die Katalogsteuerelemente deklarieren und einem Befehl über das *CommandName-Attribut* zuordnen.
 
-Das folgende Beispiel zeigt eine Steuerelement Deklaration für [**dropdowngallery**](windowsribbon-element-dropdowngallery.md) , in der das *Type* -Attribut verwendet wird, um anzugeben, dass es sich um eine Befehls Galerie handelt.
+Das folgende Beispiel zeigt eine Steuerelementdeklaration für [**dropDownGallery,**](windowsribbon-element-dropdowngallery.md) wobei das *Type-Attribut* verwendet wird, um anzugeben, dass es sich um einen Befehlskatalog handelt.
 
 
 ```XML
@@ -337,7 +337,7 @@ Das folgende Beispiel zeigt eine Steuerelement Deklaration für [**dropdowngalle
 
 
 
-Das folgende Beispiel zeigt eine Steuerelement Deklaration für den [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md).
+Das folgende Beispiel zeigt eine Steuerelementdeklaration für [**splitButtonGallery.**](windowsribbon-element-splitbuttongallery.md)
 
 
 ```XML
@@ -364,12 +364,12 @@ Das folgende Beispiel zeigt eine Steuerelement Deklaration für den [**splitbutt
 
 
 
-Das folgende Beispiel zeigt eine Steuerelement Deklaration für den [**inribbongallery**](windowsribbon-element-inribbongallery.md).
+Das folgende Beispiel zeigt eine Steuerelementdeklaration für [**inRibbonGallery.**](windowsribbon-element-inribbongallery.md)
 
 > [!Note]  
-> Da der [**inribbongallery**](windowsribbon-element-inribbongallery.md) so konzipiert ist, dass er eine Teilmenge der Element Auflistung im Menüband anzeigt, ohne ein Dropdown Menü zu aktivieren, bietet er eine Reihe optionaler Attribute, die seine Größe und das Element Layout bei der Menü Band Initialisierung steuern. Diese Attribute sind für den **inribbongallery** eindeutig und nicht in den anderen dynamischen Steuerelementen verfügbar.
+> Da [**InRibbonGallery**](windowsribbon-element-inribbongallery.md) so konzipiert ist, dass eine Teilmenge der Elementauflistung im Menüband angezeigt wird, ohne ein Dropdownmenü zu aktivieren, stellt es eine Reihe optionaler Attribute bereit, die die Größe und das Elementlayout bei der Menübandinitialisierung steuern. Diese Attribute sind für **inRibbonGallery** eindeutig und nicht in den anderen dynamischen Steuerelementen verfügbar.
 
- 
+ 
 
 
 ```XML
@@ -400,7 +400,7 @@ Das folgende Beispiel zeigt eine Steuerelement Deklaration für den [**inribbong
 
 
 
-Das folgende Beispiel zeigt eine Steuerelement Deklaration für das [**ComboBox**](windowsribbon-element-combobox.md)-Steuerelement.
+Das folgende Beispiel zeigt eine Steuerelementdeklaration für das [**ComboBox -Steuerelement.**](windowsribbon-element-combobox.md)
 
 
 ```XML
@@ -413,24 +413,24 @@ Das folgende Beispiel zeigt eine Steuerelement Deklaration für das [**ComboBox*
 
 
 
-### <a name="create-a-command-handler"></a>Erstellen eines Befehls Handlers
+### <a name="create-a-command-handler"></a>Erstellen eines Befehlshandlers
 
-Für jeden Befehl erfordert das Menüband-Framework einen entsprechenden Befehls Handler in der Host Anwendung. Befehls Handler werden von der Menüband-Host Anwendung implementiert und werden von der [**iuicommandhandler**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) -Schnittstelle abgeleitet.
+Für jeden Befehl benötigt das Menübandframework einen entsprechenden Befehlshandler in der Hostanwendung. Befehlshandler werden von der Menübandhostanwendung implementiert und von der [**IUICommandHandler-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) abgeleitet.
 
 > [!Note]  
-> Mehrere Befehle können an einen einzelnen Befehls Handler gebunden werden.
+> Mehrere Befehle können an einen einzelnen Befehlshandler gebunden werden.
 
- 
+ 
 
-Ein Befehls Handler dient zwei Zwecken:
+Ein Befehlshandler dient zwei Zwecken:
 
--   [**Iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) antwortet auf Aktualisierungs Anforderungen für Eigenschaften. Die Werte der Befehls Eigenschaften, z. b. [ \_ \_ aktivierte UI pkey](windowsribbon-reference-properties-uipkey-enabled.md) -oder [UI \_ pkey \_](windowsribbon-reference-properties-uipkey-label.md)-Bezeichnungen, werden durch Aufrufe von [**iuiframework:: setuicommandproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) oder [**iuiframework:: invalidateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand)festgelegt.
--   [**Iuicommandhandler:: Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) antwortet auf Execute-Ereignisse. Diese Methode unterstützt die folgenden drei Ausführungs Zustände, die durch den [**UI \_ executionverb**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_executionverb) -Parameter angegeben werden.
-    -   Der Ausführungs Status führt alle Befehle aus, an die der Handler gebunden ist, oder führt Sie aus.
-    -   Der Vorschau Zustand zeigt eine Vorschau der Befehle an, an die der Handler gebunden ist. Dadurch werden die Befehle ausgeführt, ohne dass ein Commit für das Ergebnis ausgeführt wird.
-    -   Der cancelpreview-Status bricht alle in der Vorschau angezeigten Befehle ab. Dies ist erforderlich, um die Traversierung über ein Menü oder eine Liste und eine sequenzielle Vorschau zu unterstützen und die Ergebnisse nach Bedarf rückgängig zu machen
+-   [**IUICommandHandler::UpdateProperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) antwortet auf Anforderungen zum Aktualisieren von Eigenschaften. Die Werte der Befehlseigenschaften, z. B. [UI \_ PKEY \_ Enabled](windowsribbon-reference-properties-uipkey-enabled.md) oder [UI \_ PKEY \_ Label,](windowsribbon-reference-properties-uipkey-label.md)werden durch Aufrufe von [**IUIFramework::SetUICommandProperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) oder [**IUIFramework::InvalidateUICommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand)festgelegt.
+-   [**IUICommandHandler::Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) reagiert auf Ausführungsereignisse. Diese Methode unterstützt die folgenden drei Ausführungszustände, die vom [**\_ EXECUTIONVERB-Parameter**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_executionverb) der Benutzeroberfläche angegeben werden.
+    -   Der Ausführungsstatus führt befehle aus, an die der Handler gebunden ist, oder führt einen Commit an diese aus.
+    -   Der Vorschauzustand zeigt eine Vorschau aller Befehle an, an die der Handler gebunden ist. Dies führt im Wesentlichen die Befehle aus, ohne ein Commit für das Ergebnis auszuführen.
+    -   Der CancelPreview-Zustand bricht alle Befehle in der Vorschau ab. Dies ist erforderlich, um das Durchlaufen eines Menüs oder einer Liste zu unterstützen und sequenziell eine Vorschau anzuzeigen und die Ergebnisse nach Bedarf rückgängig zu machen.
 
-Im folgenden Beispiel wird ein Katalog Befehls Handler veranschaulicht.
+Im folgenden Beispiel wird ein Katalogbefehlshandler veranschaulicht.
 
 
 ```C++
@@ -568,11 +568,11 @@ public:
 
 
 
-### <a name="bind-the-command-handler"></a>Binden des Befehls Handlers
+### <a name="bind-the-command-handler"></a>Binden des Befehlshandlers
 
-Nachdem Sie einen Befehls Handler definiert haben, muss der Befehl an den Handler gebunden werden.
+Nachdem Sie einen Befehlshandler definiert haben, muss der Befehl an den Handler gebunden werden.
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Galerie Befehl an einen bestimmten Befehls Handler gebunden wird. In diesem Fall werden die [**ComboBox**](windowsribbon-element-combobox.md) -Steuerelemente und die Gallery-Steuerelemente an die entsprechenden Befehls Handler gebunden.
+Im folgenden Beispiel wird veranschaulicht, wie ein Katalogbefehl an einen bestimmten Befehlshandler gebunden wird. In diesem Fall sind sowohl die [**ComboBox-**](windowsribbon-element-combobox.md) als auch die Katalogsteuerelemente an ihre jeweiligen Befehlshandler gebunden.
 
 
 ```C++
@@ -603,11 +603,11 @@ STDMETHOD(OnCreateUICommand)(UINT32 nCmdID,
 
 
 
-### <a name="initialize-a-collection"></a>Initialisieren einer Sammlung
+### <a name="initialize-a-collection"></a>Initialisieren einer Auflistung
 
-Im folgenden Beispiel wird eine benutzerdefinierte Implementierung von [**iuisimplepropertyset**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) für Element-und Befehls Galerien veranschaulicht.
+Im folgenden Beispiel wird eine benutzerdefinierte Implementierung von [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) für element- und command-Kataloge veranschaulicht.
 
-Die citemproperties-Klasse in diesem Beispiel wird von [**iuisimplepropertyset**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset)abgeleitet. Zusätzlich zur erforderlichen [**iuisimplepropertyset:: GetValue**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue)-Methode implementiert die citemproperties-Klasse einen Satz von Hilfsfunktionen für die Initialisierung und Index Verfolgung.
+Die CItemProperties-Klasse in diesem Beispiel wird von [**IUISimplePropertySet**](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset)abgeleitet. Zusätzlich zur erforderlichen [**IUISimplePropertySet::GetValue-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue)implementiert die CItemProperties-Klasse eine Reihe von Hilfsfunktionen für die Initialisierung und Indexnachverfolgung.
 
 
 ```C++
@@ -701,9 +701,9 @@ private:
 
 
 
-### <a name="handle-collection-events"></a>Behandeln von Sammlungs Ereignissen
+### <a name="handle-collection-events"></a>Behandeln von Sammlungsereignissen
 
-Im folgenden Beispiel wird eine iuicollectionchangedebug-Implementierung veranschaulicht.
+Im folgenden Beispiel wird eine IUICollectionChangedEvent-Implementierung veranschaulicht.
 
 
 ```C++
@@ -838,24 +838,24 @@ HRESULT CQATHandler::OnCollectionChanged(
 
 <dl> <dt>
 
-[Sammlungs Eigenschaften](windowsribbon-reference-properties-collection.md)
+[Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 </dt> <dt>
 
-[Erstellen einer Menü Bandanwendung](windowsribbon-stepbystep.md)
+[Erstellen einer Menübandanwendung](windowsribbon-stepbystep.md)
 </dt> <dt>
 
 [Grundlegendes zu Befehlen und Steuerelementen](windowsribbon-commandscontrols.md)
 </dt> <dt>
 
-[Multifunktionsleisten-Benutzeroberflächen Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx)
+[Richtlinien für die Menübandbenutzerfreundlichkeit](https://msdn.microsoft.com/library/cc872782.aspx)
 </dt> <dt>
 
-[Menüband-Entwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
+[Menübandentwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
 </dt> <dt>
 
-[Galerie Beispiel](windowsribbon-gallerysample.md)
+[Katalogbeispiel](windowsribbon-gallerysample.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

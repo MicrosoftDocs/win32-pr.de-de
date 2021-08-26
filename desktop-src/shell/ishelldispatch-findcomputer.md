@@ -4,7 +4,7 @@ ms.assetid: 9B687A8A-BB29-49a0-8AE3-11A75FAF3257 title: IShellDispatch.FindCompu
 - APIRef
 - kbSyntax api_name: 
 - IShellDispatch.FindComputer api_type: 
-- COM-api_location: 
+- COM api_location: 
 - Shell32.dll
 ---
 
@@ -43,7 +43,7 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode wird implementiert und über die [**Shell.FindComputer-Methode**](shell-findcomputer.md) aufgerufen.
 
@@ -51,7 +51,7 @@ Diese Methode wird implementiert und über die [**Shell.FindComputer-Methode**](
 
 Die folgenden Beispiele zeigen die Verwendung von **FindComputer** in JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -107,9 +107,9 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |

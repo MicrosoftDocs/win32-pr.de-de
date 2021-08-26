@@ -3,29 +3,29 @@ title: Festlegen und Abrufen der Eigenschaften eines Auftrags
 description: Der Besitzer des Auftrags oder ein Benutzer mit Administratorrechten kann die Eigenschaften des Auftrags jederzeit festlegen und abrufen.
 ms.assetid: 5d0ab96b-b818-4b41-8317-cf50ad17c12d
 keywords:
-- Übertragen von Auftrags Bits, Eigenschaften
-- Festlegen von Auftrags Eigenschaften Bits
-- Abrufen von Auftrags Eigenschaften Bits
+- BITS des Übertragungsauftrags , Eigenschaften
+- Festlegen von Auftragseigenschaften BITS
+- Abrufen von Auftragseigenschaften BITS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 609299e3e7bdee477e2008f3f4ce83ae24583ffd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3ded532d3c99c8f8063a5c372c60086f35320d321860b056b60f2cb5a9a4003
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004830"
 ---
 # <a name="setting-and-retrieving-the-properties-of-a-job"></a>Festlegen und Abrufen der Eigenschaften eines Auftrags
 
-Der Besitzer des Auftrags oder ein Benutzer mit Administratorrechten kann die Eigenschaften des Auftrags jederzeit festlegen und abrufen. Eine umfassende Liste der Eigenschaften, die Sie festlegen und abrufen können, finden Sie unter [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob)-, [**IBackgroundCopyJob2**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2)-, [**IBackgroundCopyJob3**](/windows/desktop/api/Bits2_0/nn-bits2_0-ibackgroundcopyjob3)-und [**IBackgroundCopyJob4**](/windows/desktop/api/Bits3_0/nn-bits3_0-ibackgroundcopyjob4) -Schnittstellen.
+Der Besitzer des Auftrags oder ein Benutzer mit Administratorrechten kann die Eigenschaften des Auftrags jederzeit festlegen und abrufen. Eine vollständige Liste der Eigenschaften, die Sie festlegen und abrufen können, finden Sie in den Schnittstellen [**IBackgroundCopyJob,**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) [**IBackgroundCopyJob2,**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2) [**IBackgroundCopyJob3**](/windows/desktop/api/Bits2_0/nn-bits2_0-ibackgroundcopyjob3)und [**IBackgroundCopyJob4.**](/windows/desktop/api/Bits3_0/nn-bits3_0-ibackgroundcopyjob4)
 
-Dateien enthalten außerdem Eigenschaften. Informationen zum Abrufen einer Datei und ihrer Eigenschaften aus einem Auftrag finden Sie unter Auflisten von [Dateien in einem Auftrag](enumerating-files-in-a-job.md).
+Dateien enthalten auch Eigenschaften. Informationen zum Abrufen einer Datei und ihrer Eigenschaften aus einem Auftrag finden Sie unter Aufzählen von [Dateien in einem Auftrag.](enumerating-files-in-a-job.md)
 
-Um Dateien zu übertragen, müssen Sie die Standardwerte der Eigenschaften des Auftrags nicht ändern – Bits verwendet die Standardwerte, die für die typische Anwendung geeignet sind.
+Zum Übertragen von Dateien müssen Sie die Standardwerte der Auftragseigenschaften nicht ändern– BITS verwendet Standardwerte, die für die typische Anwendung geeignet sind.
 
 ## <a name="setting-the-properties-of-a-job"></a>Festlegen der Eigenschaften eines Auftrags
 
-Im folgenden Beispiel wird gezeigt, wie die Eigenschaften festgelegt werden, die am wahrscheinlichsten von Ihrer Anwendung geändert werden: [Priorität](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setpriority), [Benachrichtigungs Schnittstelle](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface), [Benachrichtigungs-Flags](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags)und [Antwort Dateiname](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setreplyfilename). Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger, pjob, gültig ist.
+Im folgenden Beispiel wird gezeigt, wie die Eigenschaften festgelegt werden, die ihre Anwendung am wahrscheinlichsten ändert: [Priorität,](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setpriority)Schnittstelle [benachrichtigen,](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyinterface) [Flags](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags)benachrichtigen und [Antwortdateiname.](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setreplyfilename) Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) pJob gültig ist.
 
 
 ```C++
@@ -76,13 +76,13 @@ pJob4->Release();
 
 
 
-Standardmäßig lädt Bits Inhalt vom Ursprungsserver herunter. Zum Herunterladen von Inhalten von einem Peer müssen der Computer und der Auftrag das Peer Caching aktivieren. Um Peer Caching auf dem Computer zu aktivieren, legen Sie die Gruppenrichtlinien Einstellung enablepeercaching fest. Sie können auch die [**ibitspeercacheadministration:: setconfigurationflags**](/windows/desktop/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-setconfigurationflags) -Methode aufrufen, um das Peer Caching auf dem Computer zu aktivieren. die Einstellungs Einstellung wird jedoch von der Richtlinie überschrieben, sofern festgelegt. Um Peer Caching für den Auftrag zu aktivieren, müssen Sie die [**IBackgroundCopyJob4:: setpeercachingflags**](/windows/desktop/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-setpeercachingflags) -Methode aufrufen.
+Standardmäßig lädt BITS Inhalte vom Ursprungsserver herunter. Um Inhalte von einem Peer herunterzuladen, müssen sowohl der Computer als auch der Auftrag die Peerzwischenspeicherung aktivieren. Um die Peerzwischenspeicherung auf dem Computer zu aktivieren, legen Sie die Gruppenrichtlinieneinstellung EnablePeerCaching fest. Sie können auch die [**IBitsPeerCacheAdministration::SetConfigurationFlags-Methode**](/windows/desktop/api/Bits3_0/nf-bits3_0-ibitspeercacheadministration-setconfigurationflags) aufrufen, um die Peerzwischenspeicherung auf dem Computer zu aktivieren. die Einstellung wird jedoch von der Richtlinie überschrieben, sofern festgelegt. Um die Peerzwischenspeicherung für den Auftrag zu aktivieren, müssen Sie die [**IBackgroundCopyJob4::SetPeerCachingFlags-Methode**](/windows/desktop/api/Bits3_0/nf-bits3_0-ibackgroundcopyjob4-setpeercachingflags) aufrufen.
 
-Um benutzerdefinierte Header, ein Client Zertifikat für die Client Authentifizierung und http-Optionen wie Umleitungs Richtlinie, CRL-Prüfung und anzugeben, welche Zertifikat Fehler ignoriert werden sollen, verwenden Sie die [**ibackgroundcopyjobhttpoptions**](/windows/desktop/api/Bits2_5/nn-bits2_5-ibackgroundcopyjobhttpoptions) -Schnittstelle. Um die **ibackgroundcopyjobhttpoptions** -Schnittstelle zu erhalten, Fragen Sie eine beliebige [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstelle ab.
+Verwenden Sie die [**IBackgroundCopyJobHttpOptions-Schnittstelle,**](/windows/desktop/api/Bits2_5/nn-bits2_5-ibackgroundcopyjobhttpoptions) um benutzerdefinierte Header, ein Clientzertifikat für die Clientauthentifizierung und HTTP-Optionen wie Umleitungsrichtlinie, Überprüfung der Zertifikatsperrliste und Angabe der zu ignorierenden Zertifikatfehler anzugeben. Um die **IBackgroundCopyJobHttpOptions-Schnittstelle** zu erhalten, fragen Sie eine der [**IBackgroundCopyJob-Schnittstellen**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) ab.
 
 ## <a name="retrieving-the-properties-of-a-job"></a>Abrufen der Eigenschaften eines Auftrags
 
-Das folgende Beispiel zeigt, wie Sie die Eigenschaftswerte " [Anzeige Name](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getdisplayname)", " [Besitzer](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getowner) [", "](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress)Status" und " [Status](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getstate) " eines Auftrags abrufen. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger, pjob, gültig ist.
+Das folgende Beispiel zeigt, wie sie die Anzeigenamen, Besitzer, Status [und](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getprogress)Zustandseigenschaftswerte eines Auftrags abrufen. [](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getdisplayname) [](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getowner) [](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-getstate) Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) pJob gültig ist.
 
 
 ```C++
@@ -189,9 +189,9 @@ if (SUCCEEDED(hr))
 
 
 
- 
+ 
 
- 
+ 
 
 
 

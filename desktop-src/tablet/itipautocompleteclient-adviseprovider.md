@@ -1,7 +1,7 @@
 ---
-description: Registriert den Anbieter beim Client, damit der Client das Auto Vervollständigen-Anbieter Objekt der Anwendung abrufen kann.
+description: Registriert den Anbieter beim Client, damit der Client das Anbieterobjekt für die automatische Vervollständigung der Anwendung aufrufen kann.
 ms.assetid: 7b761b30-66f7-454a-9e0d-f45c8099f19f
-title: 'Itipaudecompleteclient:: adviseprovider-Methode (tipaudecomplete. h)'
+title: ITipAutocompleteClient::AdviseProvider-Methode (TipAutoComplete.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - tiptsf.dll
-ms.openlocfilehash: 9ef35ac730089403ac47c14421de96e75a022192
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd48cdfbf35c5132b42f8185cdc93f53ec34c77df78a51d16da9fa5a5311c144
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938580"
 ---
-# <a name="itipautocompleteclientadviseprovider-method"></a>Itipaudecompleteclient:: adviseprovider-Methode
+# <a name="itipautocompleteclientadviseprovider-method"></a>ITipAutocompleteClient::AdviseProvider-Methode
 
-Registriert den Anbieter beim Client, damit der Client das Auto Vervollständigen-Anbieter Objekt der Anwendung abrufen kann.
+Registriert den Anbieter beim Client, damit der Client das Anbieterobjekt für die automatische Vervollständigung der Anwendung aufrufen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT AdviseProvider(
 
 <dl> <dt>
 
-*hwndfield* \[ in\]
+*hWndField* \[ In\]
 </dt> <dd>
 
-Das Fenster Handle des Felds, das die Funktion für automatisches Vervollständigen bereitstellt.
+Das Fensterhandle des Felds, das die Funktion für die automatische Vervollständigung bereitstellt.
 
 </dd> <dt>
 
-*piacprovider* \[ in\]
+*pLIAProvider* \[ In\]
 </dt> <dd>
 
-Der Schnittstellen Zeiger auf die Auto Vervollständigen-Anbieter Schnittstelle.
+Der Schnittstellenzeiger auf die Anbieterschnittstelle für die automatische Vervollständigung.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -75,9 +75,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                       |
-| Header<br/>                   | <dl> <dt>Tipautocomplete. h (erfordert auch "pinputpanel \_ i. c")</dt> </dl> |
+| Header<br/>                   | <dl> <dt>TipAutoComplete.h (erfordert auch Peninputpanel \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Tiptsf.dll</dt> </dl>                                           |
 
 
@@ -86,13 +86,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itipauwebcompleteclient-Schnittstelle**](itipautocompleteclient.md)
+[**ITipAutocompleteClient-Schnittstelle**](itipautocompleteclient.md)
 </dt> <dt>
 
-[**Itipaudecompleteclient:: unadviseprovider-Methode**](itipautocompleteclient-unadviseprovider.md)
+[**ITipAutocompleteClient::UnadviseProvider-Methode**](itipautocompleteclient-unadviseprovider.md)
 </dt> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> </dl>
 
  

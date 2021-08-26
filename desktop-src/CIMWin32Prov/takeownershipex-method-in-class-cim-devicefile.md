@@ -1,8 +1,8 @@
 ---
-description: Ruft den Besitz der logischen Gerätedatei ab, die im Objekt Pfad angegeben ist. Bei dieser Methode handelt es sich um eine erweiterte Version der TakeOwnership-Methode, die von CIM \_ LogicalFile geerbt wird.
+description: Erhält den Besitz der logischen Gerätedatei, die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der TakeOwnerShip-Methode und wird von CIM \_ LogicalFile geerbt.
 ms.assetid: 084f755a-e837-4d21-8bd2-0f63f80302fc
 ms.tgt_platform: multiple
-title: Takebesitzshipex-Methode der CIM_DeviceFile-Klasse
+title: TakeOwnerShipEx-Methode der CIM_DeviceFile Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3c36239d7d0ea6b0bf3bfa67bfb2f59617ab209a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e129bfb5347c958e678214de88c740ef194559882be7a6f02378d0af000370cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922890"
 ---
-# <a name="takeownershipex-method-of-the-cim_devicefile-class"></a>Takebesitzshipex-Methode der CIM \_ Devicefile-Klasse
+# <a name="takeownershipex-method-of-the-cim_devicefile-class"></a>TakeOwnerShipEx-Methode der CIM \_ DeviceFile-Klasse
 
-Die Methode " **takebesitzshipex** " erhält den Besitz der Datei im logischen Gerät, die im Objekt Pfad angegeben ist. Bei dieser Methode handelt es sich um eine erweiterte Version der [**TakeOwnership**](takeownership-method-in-class-cim-devicefile.md) -Methode, die von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt wird. Wenn die logische Datei ein Verzeichnis ist, wird diese Methode rekursiv durchlaufen und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die im Verzeichnis enthalten sind.
+Die **TakeOwnerShipEx-Methode** erhält den Besitz der logischen Gerätedatei, die im Objektpfad angegeben ist. Diese Methode ist eine erweiterte Version der [**TakeOwnerShip-Methode**](takeownership-method-in-class-cim-devicefile.md) und wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md) Wenn die logische Datei ein Verzeichnis ist, verhält sich diese Methode rekursiv und übernimmt den Besitz aller Dateien und Unterverzeichnisse, die das Verzeichnis enthält.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,30 +49,30 @@ uint32 TakeOwnerShipEx(
 
 <dl> <dt>
 
-*Stop filename* \[ vorgenommen\]
+*StopFileName* \[ out\]
 </dt> <dd>
 
-Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter ist **null** , wenn die Methode erfolgreich ist.
+Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der bzw. dem die Methode fehlgeschlagen ist. Dieser Parameter ist **NULL,** wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
-*Startdateiname* \[ in\]
+*StartFileName* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der Parameter " *StartFileName* " der Parameter " *StopFileName* ", der die Datei oder das Verzeichnis angibt, in dem ein Fehler im vorherigen Methoden aufrufstyp aufgetreten Wenn dieser Parameter **null** ist, wird der Vorgang für die im **ExecMethod** -Befehl angegebene Datei oder das Verzeichnis ausgeführt.
+Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der *StartFileName-Parameter* der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter NULL **ist,** wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das **im ExecMethod-Aufruf angegeben** ist.
 
 </dd> <dt>
 
-*Rekursiv* \[ in\]
+*Rekursiv* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass die Methode auch rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ Devicefile**](cim-devicefile.md) -Instanz angegeben wird. Bei Datei Instanzen wird dieser Parameter ignoriert.
+True **gibt** an, dass die -Methode auch rekursiv auf Dateien und Verzeichnisse innerhalb des Verzeichnisses angewendet wird, das von der [**CIM \_ DeviceFile-Instanz angegeben**](cim-devicefile.md) wird. Bei Dateiinstanzen wird dieser Parameter ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) und eine beliebige andere Zahl zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -90,7 +90,7 @@ Erfolg.
 
 2
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -99,7 +99,7 @@ Zugriff verweigert.
 
 8
 
-Nicht spezifizierter Fehler.
+Nicht angegebener Fehler.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Das Objekt ist bereits vorhanden.
 
 11
 
-Das Dateisystem ist nicht NTFS.
+Dateisystem, nicht NTFS.
 
 </dd> <dt>
 
@@ -144,7 +144,7 @@ Plattform nicht Windows.
 
 13
 
-Das Laufwerk ist nicht identisch.
+Laufwerk nicht identisch.
 
 </dd> <dt>
 
@@ -180,7 +180,7 @@ Ungültige Startdatei.
 
 17
 
-Die Berechtigung wurde nicht aufrechterhalten.
+Die Berechtigung wurde nicht gehalten.
 
 </dd> <dt>
 
@@ -193,11 +193,11 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -207,20 +207,20 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[CIM- \_ Devicefile](takeownershipex-method-in-class-cim-devicefile.md)
+[CIM \_ DeviceFile](takeownershipex-method-in-class-cim-devicefile.md)
 </dt> <dt>
 
-[**CIM- \_ Devicefile**](cim-devicefile.md)
+[**CIM \_ DeviceFile**](cim-devicefile.md)
 </dt> </dl>
 
  

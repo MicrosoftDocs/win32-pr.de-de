@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für die Türkei
+description: In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für "Nach" verwendet werden.
 ms.assetid: 840dbd02-a500-47fe-b8ce-5ed2e902b4a6
-title: Zuordnungen von türkischen Kanälen
+title: Zuweisungen des Kanals "Channel"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c68b24b6226572877c007e67e03502192bd0f1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c621e2e73bbf850adec34f9f65f847d9b1f688b6bd86b5d9bf92d96430190ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119903680"
 ---
-# <a name="turkey-channel-assignments"></a>Zuordnungen von türkischen Kanälen
+# <a name="turkey-channel-assignments"></a>Zuweisungen des Kanals "Channel"
 
-In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für die Türkei
+In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für "Nach" verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Unicable Frequency-Tabelle](unicable-frequency-table.md) verwendet.
 
--   [Übertragungs Zuweisungen](#broadcast-assignments)
--   [Kabel Zuweisungen](#cable-assignments)
+-   [Broadcastzuweisungen](#broadcast-assignments)
+-   [Kabelzuweisungen](#cable-assignments)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="broadcast-assignments"></a>Übertragungs Zuweisungen
+## <a name="broadcast-assignments"></a>Broadcastzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -132,7 +132,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
        855250000L,      // 101 TV101
 ```
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -251,7 +251,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

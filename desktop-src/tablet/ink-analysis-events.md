@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwendeten Ereignissen.
+description: Dieser Abschnitt enthält Informationen zu den Ereignissen, die bei der Ink-Analyse verwendet werden.
 ms.assetid: e12eddd4-57fb-4d64-90b1-e05d043013a2
-title: Frei Hand Analyse Ereignisse
+title: Ink Analysis Events
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3cf5956e13da559676fbb63588fd81b9d98e385e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13aa32dc1274727c89c335027544ab5f11f5a41468598393402db6f39f22caf3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939480"
 ---
-# <a name="ink-analysis-events"></a>Frei Hand Analyse Ereignisse
+# <a name="ink-analysis-events"></a>Ink Analysis Events
 
-Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwendeten Ereignissen.
+Dieser Abschnitt enthält Informationen zu den Ereignissen, die bei der Ink-Analyse verwendet werden.
 
 ## <a name="event-sources"></a>Ereignisquellen
 
@@ -21,8 +21,8 @@ Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwen
 
 | Ereignisquelle                                            | BESCHREIBUNG                                                                                                         |
 |---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [\_Ianalysil Vents](-ianalysisevents.md)               | Gibt Ereignisse an, die den Analyse Schritten eines [**iinkanalyzer**](iinkanalyzer.md) -Objekts zugeordnet sind.<br/>   |
-| [**\_Ianalysisproxyevents**](-ianalysisproxyevents.md) | Gibt Ereignisse an, die den Daten Proxy Schritten eines [**iinkanalyzer**](iinkanalyzer.md) -Objekts zugeordnet sind.<br/> |
+| [\_IAnalysisEvents](-ianalysisevents.md)               | Gibt Ereignisse an, die den Analyseschritten eines [**IInkAnalyzer-Objekts zugeordnet**](iinkanalyzer.md) sind.<br/>   |
+| [**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md) | Gibt Ereignisse an, die den Datenproxyschritten eines [**IInkAnalyzer-Objekts zugeordnet**](iinkanalyzer.md) sind.<br/> |
 
 
 
@@ -32,7 +32,7 @@ Dieser Abschnitt enthält Informationen zu den in der Handschrift Analyse verwen
 
 <dl> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

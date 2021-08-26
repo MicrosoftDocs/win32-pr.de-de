@@ -1,21 +1,21 @@
 ---
-title: WS_HEAP (Webservices. h)
-description: Ein nicht transparenter Typ, mit dem auf ein Heap Objekt verwiesen wird.
+title: WS_HEAP (WebServices.h)
+description: Ein nicht transparenter Typ, der verwendet wird, um auf ein Heapobjekt zu verweisen.
 ms.assetid: 1866f54f-26fc-4889-a88f-0d298a418bdc
 keywords:
 - WS_HEAP
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05d996d3a3905a7f247cfc84840e5aae4baa781f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 79ca6f8eb745fa53b035cdb79d068099e96d2e037c87c139f4b19c30f933ecac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926800"
 ---
-# <a name="ws_heap"></a>WS- \_ Heap
+# <a name="ws_heap"></a>WS \_ HEAP
 
-Ein nicht transparenter Typ, mit dem auf ein [Heap](heap.md) Objekt verwiesen wird.
+Ein nicht transparenter Typ, der verwendet wird, um auf ein [Heapobjekt](heap.md) zu verweisen.
 
 
 ```C++
@@ -24,9 +24,9 @@ typedef struct _WS_HEAP WS_HEAP;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [Thread Sicherheit](thread-safety.md).
+Dieses Objekt ist nicht threadsicher. Weitere Informationen finden Sie unter [Threadsicherheit.](thread-safety.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Dieses Objekt ist nicht Thread sicher. Weitere Informationen finden Sie unter [T
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Webservices. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>WebServices.h</dt> </dl> |
 
 
 

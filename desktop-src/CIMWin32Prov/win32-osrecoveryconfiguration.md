@@ -1,5 +1,5 @@
 ---
-description: Die Win32 \_ osherstellyconfiguration&\# 8194; Die WMI-Klasse stellt die Arten von Informationen dar, die beim Ausfall des Betriebssystems aus dem Arbeitsspeicher gesammelt werden. Dies schließt Start Fehler und Systemabstürze ein.
+description: Win32 \_ OSRecoveryConfiguration&\# 8194; Die WMI-Klasse stellt die Arten von Informationen dar, die aus dem Arbeitsspeicher gesammelt werden, wenn das Betriebssystem ausfällt. Dies schließt Startfehler und Systemabstürze ein.
 ms.assetid: 0c8a2aeb-2fd9-44b7-8f91-d19afb8d2de6
 ms.tgt_platform: multiple
 title: Win32_OSRecoveryConfiguration-Klasse
@@ -29,18 +29,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e2371ba7ee449497e2d695e60d75c59454282d54
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0a780e0997ef3a56bc644adda2842b905aaf9744d28a2075fbc4726134c16aa6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972290"
 ---
-# <a name="win32_osrecoveryconfiguration-class"></a>Win32 \_ osherstellyconfiguration-Klasse
+# <a name="win32_osrecoveryconfiguration-class"></a>Win32 \_ OSRecoveryConfiguration-Klasse
 
-Die  [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32 \_ oswiederherstellungskonfiguration** stellt die Arten von Informationen dar, die beim Ausfall des Betriebssystems aus dem Arbeitsspeicher gesammelt werden. Dies schließt Start Fehler und Systemabstürze ein.
+Die **WMI-Klasse Win32 \_ OSRecoveryConfiguration** stellt die Typen von Informationen dar, die aus dem Arbeitsspeicher gesammelt werden, wenn das Betriebssystem ausfällt. [](../wmisdk/retrieving-a-class.md) Dies schließt Startfehler und Systemabstürze ein.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,78 +68,78 @@ class Win32_OSRecoveryConfiguration : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ oswiederherstellungskonfigurations** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ OSRecoveryConfiguration-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ osherstellyconfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ OSRecoveryConfiguration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AutoReboot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| AutoReboot")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| AutoReboot")
 </dt> </dl>
 
-Das System wird während eines Wiederherstellungs Vorgangs automatisch neu gestartet.
+Das System wird während eines Wiederherstellungsvorgang automatisch neu gestartet.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
-**"Debug filePath"**
+**DebugFilePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| dumpfile")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| DumpFile")
 </dt> </dl>
 
-Vollständiger Pfad zur Debugdatei. Eine Debugdatei wird mit dem Speicher Zustand des Computers nach einem Computerfehler erstellt.
+Vollständiger Pfad zur Debugdatei. Nach einem Computerausfall wird eine Debugdatei mit dem Arbeitsspeicherstatus des Computers erstellt.
 
-Beispiel: "C: \\ Windows \\ Memory. dmp"
+Beispiel: "C: \\ Windows \\ Memory.dmp"
 
 </dd> <dt>
 
 **DebugInfoType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Typ der Debuginformationen, die in die Protokolldatei geschrieben werden.
+Typ der Debuginformationen, die in die Protokolldatei geschrieben werden.
 
 <dt>
 
@@ -152,21 +152,21 @@ Der Typ der Debuginformationen, die in die Protokolldatei geschrieben werden.
 
 <span id="Complete_memory_dump"></span><span id="complete_memory_dump"></span><span id="COMPLETE_MEMORY_DUMP"></span>
 
-**Speicher** Abbild vervollständigen (1)
+**Vollständiges Speicherabbild** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Kernel_memory_dump"></span><span id="kernel_memory_dump"></span><span id="KERNEL_MEMORY_DUMP"></span>
 
-**Kernel Speicher** Abbild (2)
+**Kernel-Speicherabbild** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Small_memory_dump"></span><span id="small_memory_dump"></span><span id="SMALL_MEMORY_DUMP"></span>
 
-**Kleines Speicher** Abbild (3)
+**Kleines Speicherabbild** (3)
 
 
 </dt> <dd></dd> </dl>
@@ -176,183 +176,183 @@ Der Typ der Debuginformationen, die in die Protokolldatei geschrieben werden.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
-**Expandecoddebug FilePath**
+**ExpandedDebugFilePath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Erweiterte Version der **DebugFilePath** -Eigenschaft.
+Erweiterte Version der **DebugFilePath-Eigenschaft.**
 
-Beispiel: "C: \\ Windows \\ Memory. dmp"
+Beispiel: "C: \\ Windows \\ Memory.dmp"
 
 </dd> <dt>
 
-**Expandecodminidumpdirectory**
+**ExpandedMiniDumpDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Erweiterte Version der **MiniDumpDirectory** -Eigenschaft.
+Erweiterte Version der **MiniDumpDirectory-Eigenschaft.**
 
-Beispiel: "C: \\ Windows \\ Minidump"
+Beispiel: "C: \\ Windows \\ MiniDump"
 
 </dd> <dt>
 
-**Kerneldumponly**
+**KernelDumpOnly**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| kerneldumponly")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| KernelDumpOnly")
 </dt> </dl>
 
-Nur Kernel-Debuginformationen werden in die Debug-Protokolldatei geschrieben. Wenn der Wert **true** ist, wird nur der Zustand des Kernels in eine Datei geschrieben, wenn ein Systemfehler auftritt. **False** gibt an, dass das System versucht, den Zustand des Arbeitsspeichers und alle Geräte zu protokollieren, die Informationen über das System bereitstellen können, wenn ein Fehler aufgetreten ist.
+Nur Kerneldebuginformationen werden in die Debugprotokolldatei geschrieben. True **gibt** an, dass bei einem Systemfehler nur der Status des Kernels in eine Datei geschrieben wird. False **gibt** an, dass das System versucht, den Zustand des Arbeitsspeichers sowie alle Geräte zu protokollieren, die bei einem Fehler Informationen zum System bereitstellen können.
 
 </dd> <dt>
 
 **MiniDumpDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| minidumpdir")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| MiniDumpDir")
 </dt> </dl>
 
-Verzeichnis, in dem kleine Speicher Abbild Dateien aufgezeichnet und gesammelt werden.
+Verzeichnis, in dem kleine Speicherabbilddateien aufgezeichnet und gesammelt werden.
 
-Beispiel: "% SystemRoot% \\ Minidump"
+Beispiel: "%systemRoot% \\ MiniDump"
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**Schlüssel,**](../wmisdk/key-qualifier.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Der Name für diese Instanz der Win32-Klasse " **\_ osherstellyconfiguration** ".
+Identifizieren des Namens für diese Instanz der **Win32 \_ OSRecoveryConfiguration-Klasse.**
 
 </dd> <dt>
 
-**Overschreiteexistingdebugfile**
+**OverwriteExistingDebugFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| Überschreibung")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| Overwrite")
 </dt> </dl>
 
-Die neue Debugdatei überschreibt eine vorhandene.
+Eine neue Debugdatei überschreibt eine vorhandene.
 
 </dd> <dt>
 
-**Sendadminalert**
+**SendAdminAlert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| sendalert")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| SendAlert")
 </dt> </dl>
 
-Eine Warnmeldung wird im Falle eines Betriebssystem Fehlers an den Systemadministrator gesendet.
+Bei einem Betriebssystemfehler wird eine Warnmeldung an den Systemadministrator gesendet.
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, unter dem das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
-**Schreib debuginfo**
+**WriteDebugInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| crashdumpaktivierte")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| CrashDumpEnabled")
 </dt> </dl>
 
 Debuginformationen müssen in eine Protokolldatei geschrieben werden.
 
 </dd> <dt>
 
-**"Write-tosystemlog"**
+**WriteToSystemLog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| LogEvent")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control \\ \\ CrashControl \| LogEvent")
 </dt> </dl>
 
-Ereignisse werden in ein System Protokoll geschrieben.
+Ereignisse werden in ein Systemprotokoll geschrieben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Win32-Klasse " **\_ osherstellyconfiguration** " ist von der [**CIM- \_ Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ OSRecoveryConfiguration-Klasse** wird von [**der \_ CIM-Einstellung**](cim-setting.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -362,8 +362,8 @@ Die Win32-Klasse " **\_ osherstellyconfiguration** " ist von der [**CIM- \_ Eins
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -372,7 +372,7 @@ Die Win32-Klasse " **\_ osherstellyconfiguration** " ist von der [**CIM- \_ Eins
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

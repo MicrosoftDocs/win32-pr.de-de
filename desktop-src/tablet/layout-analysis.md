@@ -1,40 +1,40 @@
 ---
-description: Die Layoutanalyse basiert auf einer Striche-Auflistung und klassifiziert die Striche in Handschrift-und Zeichnungs Elemente. Das Divider-Objekt ermöglicht den Zugriff auf die Features der Tablet PC-Layoutanalyse.
+description: Die Layoutanalyse arbeitet mit einer Strokes-Auflistung und klassifiziert die Striche in Handschrift- und Zeichnungselemente. Das Divider-Objekt bietet Zugriff auf die Layoutanalysefeatures des Tablet-PCs.
 ms.assetid: ac30d5c2-13a1-4f9e-a519-2bf428e21c75
 title: Layoutanalyse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0901e7c7df96bec5ea3972f643469033fbb22ed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f8131859dd7e4c7bd6927db42bd605541001ac0f1222bfbf27b0e59809d4b7bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934820"
 ---
 # <a name="layout-analysis"></a>Layoutanalyse
 
-Die Layoutanalyse basiert auf einer [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung und klassifiziert die Striche in Handschrift-und Zeichnungs Elemente. Das [**Divider**](inkdivider-class.md) -Objekt ermöglicht den Zugriff auf die Features der Tablet PC-Layoutanalyse.
+Die Layoutanalyse arbeitet mit einer [**Strokes-Auflistung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) und klassifiziert die Striche in Handschrift- und Zeichnungselemente. Das [**Divider-Objekt**](inkdivider-class.md) bietet Zugriff auf die Layoutanalysefeatures des Tablet-PCs.
 
-In der folgenden Tabelle werden die strukturellen Elementtypen der [**InkDivisionType**](/windows/win32/api/msinkaut15/ne-msinkaut15-inkdivisiontype) -Enumeration beschrieben, in die das unter [**Teiler**](inkdivider-class.md) -Objekt Striche klassifiziert.
+In der folgenden Tabelle werden die strukturellen Elementtypen der [**InkDivisionType-Enumeration**](/windows/win32/api/msinkaut15/ne-msinkaut15-inkdivisiontype) beschrieben, in die das [**Divider-Objekt**](inkdivider-class.md) Striche klassifiziert.
 
 
 
 | type          | BESCHREIBUNG                                                                      |
 |---------------|----------------------------------------------------------------------------------|
-| **Segment**   | Ein Erkennungs Segment.<br/>                                                |
-| **Line**      | Eine Handschrift Zeile, die ein oder mehrere Erkennungs Segmente enthält.<br/> |
-| **Paragraph** | Ein Block von Strichen, der eine oder mehrere Zeilen der Handschrift enthält.<br/>    |
-| **Zeichnung**   | Frei Handschrift.<br/>                                          |
+| **Segment**   | Ein Erkennungssegment.<br/>                                                |
+| **Linie**      | Eine Handschriftzeile, die ein oder mehrere Erkennungssegmente enthält.<br/> |
+| **Paragraph** | Ein Strichblock, der eine oder mehrere Handschriftzeilen enthält.<br/>    |
+| **Zeichnung**   | Ink, die keine Handschrift ist.<br/>                                          |
 
 
 
  
 
-Das [**Divider**](inkdivider-class.md) -Objekt verfügt über eine [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung, die das **Divider** -Objekt dynamisch analysiert, wenn Sie der Auflistung hinzufügen oder daraus löschen. Das **Divider** -Objekt ist nicht serialisierbar, und der Analyse Zustand kann nicht gespeichert werden. Folglich ist das **Divider** -Objekt für Anwendungen konzipiert, die zwischen gemischtem Handschrift und Zeichnungs Eingaben unterscheiden müssen, aber keine großen Mengen von frei Hand Eingaben zwischen den Sitzungen neu analysieren müssen.
+Das [**Divider-Objekt**](inkdivider-class.md) verfügt über eine [**Strokes-Auflistung,**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) die das **Divider-Objekt** jedes Mal dynamisch analysiert, wenn Sie der Auflistung hinzufügen oder daraus löschen. Das **Divider-Objekt** ist nicht serialisierbar, und Sie können seinen Analysezustand nicht speichern. Daher ist **das Divider-Objekt** für Anwendungen konzipiert, die zwischen gemischter Handschrift und Zeicheneingabe unterscheiden müssen, aber keine großen Mengen von Ink zwischen Sitzungen neuanalysieren müssen.
 
-Sie können eine statische Momentaufnahme des aktuellen Analyse Ergebnisses abrufen, die in einem [**DivisionResult**](/windows/desktop/api/msinkaut15/nn-msinkaut15-iinkdivisionresult) -Objekt zurückgegeben wird. Sie können [**DivisionUnit**](/windows/desktop/api/msinkaut15/nn-msinkaut15-iinkdivisionunit) -Objekte abrufen, die jeweils ein einzelnes Strukturelement eines **DivisionResult** -Objekts darstellen. Die Objekte " **DivisionResult** " und " **DivisionUnit** " sind nicht serialisierbar. Zustandsinformationen aus diesen Objekten sind jedoch verfügbar.
+Sie können eine statische Momentaufnahme des aktuellen Analyseergebnisses abrufen, die in einem [**DivisionResult-Objekt zurückgegeben**](/windows/desktop/api/msinkaut15/nn-msinkaut15-iinkdivisionresult) wird. Sie können [**DivisionUnit-Objekte**](/windows/desktop/api/msinkaut15/nn-msinkaut15-iinkdivisionunit) abrufen, die jeweils ein einzelnes strukturelles Element eines **DivisionResult-Objekts** darstellt. Die **Objekte DivisionResult** und **DivisionUnit** sind nicht serialisierbar. Es sind jedoch Zustandsinformationen aus diesen Objekten verfügbar.
 
-Das [**Divider**](inkdivider-class.md) -Objekt funktioniert nur mit der Handschrift von links nach rechts. Damit das unter **Teiler** -Objekt vertikale Sprachen, wie z. b. Chinesisch, ordnungsgemäß analysieren kann, müssen die Zeichen von links nach rechts und nicht von oben nach unten gezeichnet werden.
+Das [**Divider-Objekt**](inkdivider-class.md) funktioniert nur mit der Handschrift von links nach rechts. Damit das **Divider-Objekt** vertikale Sprachen wie Chinesisch richtig analysieren kann, müssen die Zeichen von links nach rechts anstatt von oben nach unten gezeichnet werden.
 
  
 

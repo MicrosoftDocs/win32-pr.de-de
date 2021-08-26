@@ -1,7 +1,7 @@
 ---
-description: Die perfinfo \_ DShow \_ audiobreak-Struktur enthält Daten für ein Ablauf Verfolgungs Ereignis vom Typ GUID \_ audiobreak. Der DirectSound-rendererfilter protokolliert dieses Ereignis, wenn im Audiodatenstrom eine Unterbrechung vorliegt.
+description: Die PERFINFO \_ DSHOW \_ AUDIOBREAK-Struktur enthält Daten für ein Ablaufverfolgungsereignis vom Typ GUID \_ AUDIOBREAK. Der Filter DirectSound Renderer protokolliert dieses Ereignis, wenn im Audiostream eine Unterbrechung vorliegt.
 ms.assetid: 9e7abdca-7d4c-4006-997f-9605f8d18e1d
-title: PERFINFO_DSHOW_AUDIOBREAK-Struktur (perfstruct. h)
+title: PERFINFO_DSHOW_AUDIOBREAK-Struktur (Perfstruct.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Perfstruct.h
-ms.openlocfilehash: 599befea67b28acbedffd5c98ebce84aadf70838
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c7b8f83fffaa718c27e0333d864a564282228c0943f4d77fb653dc1800a6ddd2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928190"
 ---
-# <a name="perfinfo_dshow_audiobreak-structure"></a>Perfinfo \_ DShow \_ audiobreak-Struktur
+# <a name="perfinfo_dshow_audiobreak-structure"></a>PERFINFO \_ DSHOW \_ AUDIOBREAK-Struktur
 
-Die `PERFINFO_DSHOW_AUDIOBREAK` Struktur enthält Daten für ein Ablauf Verfolgungs Ereignis vom Typ GUID \_ audiobreak.
+Die `PERFINFO_DSHOW_AUDIOBREAK` -Struktur enthält Daten für ein Ablaufverfolgungsereignis vom Typ GUID \_ AUDIOBREAK.
 
-Der [DirectSound](directsound-renderer-filter.md) -rendererfilter protokolliert dieses Ereignis, wenn im Audiodatenstrom eine Unterbrechung vorliegt.
+Der [Filter DirectSound Renderer](directsound-renderer-filter.md) protokolliert dieses Ereignis, wenn im Audiostream eine Unterbrechung vorliegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ typedef struct PERFINFO_DSHOW_AUDIOBREAK {
 
 <dl> <dt>
 
-**CycleCounter**
+**cycleCounter**
 </dt> <dd>
 
-Letzte Anzahl von Uhrzyklen (RDTSC-Anweisung).
+Aktuelle Taktzyklusanzahl (RDTSC-Anweisung).
 
 </dd> <dt>
 
-**dshowclock**
+**dshowClock**
 </dt> <dd>
 
 Aktuelle Schreibposition im DirectSound-Puffer.
 
 </dd> <dt>
 
-**sampletime**
+**sampleTime**
 </dt> <dd>
 
-Start der audiopause im DirectSound-Puffer.
+Beginn der Audiounterbrechung im DirectSound-Puffer.
 
 </dd> <dt>
 
-**sampleduration**
+**sampleDuration**
 </dt> <dd>
 
 Dauer der Unterbrechung in Millisekunden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Ereignis zu aktivieren, müssen Sie beim \_ Aufrufen von **EnableTrace** das audiobreak-Bitflag im *EnableFlag* -Parameter festlegen. Dieses Flag ist in der Header Datei dxmperf. h definiert, die in den DirectShow-Basisklassen enthalten ist.
+Um dieses Ereignis zu aktivieren, müssen Sie das AUDIOBREAK \_ BIT-Flag im *EnableFlag-Parameter* festlegen, wenn Sie **EnableTrace** aufrufen. Dieses Flag wird in der Headerdatei Dxmperf.h definiert, die in den DirectShow-Basisklassen enthalten ist.
 
-Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie das **Perflog \_ audiobreak** -Makro, das in "dxmperf. h" definiert ist.
+Um dieses Ereignis aus einem DirectShow-Filter zu protokollieren, verwenden Sie das **PERFLOG \_ AUDIOBREAK-Makro,** das in Dxmperf.h definiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie 
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Perfstruct. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Perfstruct.h</dt> </dl> |
 
 
 
@@ -95,10 +95,10 @@ Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie 
 [DirectShow-Strukturen](directshow-structures.md)
 </dt> <dt>
 
-[Ereignis Ablauf Verfolgung in DirectShow](event-tracing-in-directshow.md)
+[Ereignisablaufverfolgung in DirectShow](event-tracing-in-directshow.md)
 </dt> <dt>
 
-[GUIDs der Ablauf Verfolgungs Ereignisse](trace-guids.md)
+[GUIDs für Ablaufverfolgungsereignisse](trace-guids.md)
 </dt> </dl>
 
  

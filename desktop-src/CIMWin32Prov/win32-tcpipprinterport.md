@@ -1,5 +1,5 @@
 ---
-description: Win32 \_ tcpipprinterport&\# 32; Die WMI-Klasse stellt einen TCP/IP-Dienst Zugriffspunkt dar.
+description: Win32 \_ TCPIPPrinterPort&\# 32; Die WMI-Klasse stellt einen TCP/IP-Dienstzugriffspunkt dar.
 ms.assetid: b1be18b6-47de-461c-a90b-c7e0537130ef
 ms.tgt_platform: multiple
 title: Win32_TCPIPPrinterPort-Klasse
@@ -31,18 +31,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7a0b0f0cb73cc60ff117399a636b0ab8542fac6e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b2861d12740f894cc17a91d6a3f4c2b6792d38f658063bc89474f3656a74b45f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917410"
 ---
-# <a name="win32_tcpipprinterport-class"></a>Win32 \_ tcpipprinterport-Klasse
+# <a name="win32_tcpipprinterport-class"></a>Win32 \_ TCPIPPrinterPort-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ tcpipprinterport** " stellt einen TCP/IP-Dienst Zugriffspunkt dar.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) **Win32 \_ TCPIPPrinterPort** stellt einen TCP/IP-Dienstzugriffspunkt dar.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,109 +71,109 @@ class Win32_TCPIPPrinterPort : CIM_ServiceAccessPoint
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ tcpipprinterport** -Klasse verfügt über diese Typen von Membern:
+Die **\_ Win32-TCPIPPrinterPort-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ tcpipprinterport** -Klasse verfügt über diese Eigenschaften.
+Die **\_ Win32-TCPIPPrinterPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ByteCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass der Computer die Bytes in einem Dokument anzählt, bevor Sie an den Drucker gesendet werden, und der Drucker meldet die Anzahl der tatsächlich gelesenen Bytes. Diese Funktion wird für die Diagnose verwendet, wenn fehlende Bytes in der Druckausgabe erkannt werden.
+True gibt an, dass der Computer die Bytes in einem Dokument zählt, bevor er sie an den Drucker sendet, und der Drucker meldet die Anzahl der tatsächlich gelesenen Bytes zurück. Diese Funktion wird für die Diagnose verwendet, wenn fehlende Bytes in der Druckausgabe erkannt werden.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
-Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Beschreibung")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Host Kleid**
+**HostAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Adresse des Geräts oder Druck Servers.
+Adresse des Geräts oder Druckerservers.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -182,44 +182,44 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**Schlüssel,**](../wmisdk/key-qualifier.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Identifiziert den Dienst Zugriffspunkt eindeutig und gibt Aufschluss über die verwaltete Funktionalität. Diese Funktionalität wird in der Description-Eigenschaft des Objekts ausführlicher beschrieben.
+Identifiziert den Dienstzugriffspunkt eindeutig und gibt einen Hinweis auf die funktionalität, die verwaltet wird. Diese Funktionalität wird in der Description-Eigenschaft des Objekts ausführlicher beschrieben.
 
-Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)geerbt.
 
 </dd> <dt>
 
-**PortNumber**
+**Portnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der TCP-Ports, die vom Port Monitor für die Kommunikation mit dem Gerät verwendet werden.
+Anzahl der TCP-Ports, die vom Portmonitor für die Kommunikation mit dem Gerät verwendet werden.
 
 </dd> <dt>
 
 **Protokoll**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Druck Protokoll wird verwendet. Einige Drucker unterstützen nur LPR.
+Verwendetes Druckprotokoll. Einige Drucker unterstützen nur LPR.
 
 <dt>
 
@@ -232,7 +232,7 @@ Das Druck Protokoll wird verwendet. Einige Drucker unterstützen nur LPR.
 
 RAW
 
-Direktes Drucken auf einem Gerät oder Druckserver.
+Direktes Drucken auf einem Gerät oder Druckerserver.
 
 </dd> <dt>
 
@@ -243,9 +243,9 @@ Direktes Drucken auf einem Gerät oder Druckserver.
 
 </dt> <dd>
 
-LPR
+Lpr
 
-Legacy-Protokoll, das letztendlich durch RAW ersetzt wird.
+Legacyprotokoll, das schließlich durch RAW ersetzt wird.
 
 </dd> </dl>
 
@@ -254,35 +254,35 @@ Legacy-Protokoll, das letztendlich durch RAW ersetzt wird.
 **Warteschlange**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Druck Warteschlange auf dem Server, wenn er mit dem LPR-Protokoll verwendet wird.
+Name der Druckwarteschlange auf dem Server bei Verwendung mit dem LPR-Protokoll.
 
 </dd> <dt>
 
 **SNMPCommunity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Sicherheitsstufen Wert für das Gerät.
+Wert der Sicherheitsstufe für das Gerät.
 
-Beispiel: "Public"
+Beispiel: "public".
 
 </dd> <dt>
 
 **SNMPDevIndex**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -292,10 +292,10 @@ SNMP-Indexnummer dieses Geräts für den SNMP-Agent.
 
 </dd> <dt>
 
-**Snmpaktivierte**
+**SNMPEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -308,18 +308,18 @@ Zugriffstyp: Schreibgeschützt
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -343,35 +343,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -385,74 +385,74 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**"), [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**Weitergegeben**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems.
+Der Name der Erstellungsklasse des Bereichssystems.
 
-Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)geerbt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**Name**"), [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**Weitergegeben**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**Name**), [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name des Bereichs Systems.
+Der Name des Bereichssystems.
 
-Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)geerbt.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -461,9 +461,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](../wmisdk/standard-qualifiers.md) ("Win32")
 </dt> </dl>
 
-Typ von SAP, z. b. angefügt oder umgeleitet.
+Sap-Typ, z. B. angefügt oder umgeleitet.
 
-Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)geerbt.
 
 <dt>
 
@@ -504,17 +504,17 @@ Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoin
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ tcpipprinterport** wird von [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md) abgeleitet, das von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet ist.
+Die **Win32 \_ TCPIPPrinterPort-Klasse** wird von [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md) abgeleitet, das von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet wird.
 
-Zum Löschen einer Instanz dieser WMI-Klasse ist die **SeLoadDriverPrivilege** -Berechtigung erforderlich. Der folgende Skript Ausschnitt veranschaulicht, wie Sie eine Verbindung mit WMI herstellen, die diese Berechtigung verwendet.
+Die **SeLoadDriverPrivilege-Berechtigung** ist erforderlich, um eine Instanz dieser WMI-Klasse zu löschen. Der folgende Skriptausschnitt veranschaulicht, wie eine Verbindung mit WMI hergestellt wird, die diese Berechtigung verwendet.
 
 `Set objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate, (LoadDriver)}")`
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende PowerShell-Beispiel entfernt einen Drucker und den zugeordneten tcpip-Druckerport.
+Im folgenden PowerShell-Beispiel werden ein Drucker und der zugehörige TCPIP-Druckerport entfernt.
 
 
 ```PowerShell
@@ -537,20 +537,20 @@ function Remove-PrinterAndPort{
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)
+[**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

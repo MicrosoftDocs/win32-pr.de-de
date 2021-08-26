@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_MBType-Klasse
-description: Die Modify-Methode aktualisiert einen Post Fach Ressourcen Daten Satz (MB).
+title: Modify-Methode der MicrosoftDNS_MBType Klasse
+description: Die Modify-Methode aktualisiert einen Postfachressourcendatensatz (MB).
 ms.assetid: ee76031c-ac1b-4ebb-9fb2-3b64553867cc
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_MBType-Klasse
-- DNS-MicrosoftDNS_MBType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_MBType class
+- MicrosoftDNS_MBType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 135d6f0fcb0faf5c1e8da152798863c8cecc8641
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75b0e4183a2b736d0ed896fee4bf2cc57e35f0e6b628a9aee4345f4c33b33ed6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918340"
 ---
-# <a name="modify-method-of-the-microsoftdns_mbtype-class"></a>Modify-Methode der MicrosoftDNS- \_ Klasse von mbtype
+# <a name="modify-method-of-the-microsoftdns_mbtype-class"></a>Modify-Methode der MicrosoftDNS \_ MBType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Post Fach Ressourcen Daten Satz (MB).
+Die **Modify-Methode** aktualisiert einen Postfachressourcendatensatz (MB).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Mbhost* \[ in\]
+*MBHost* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die den Post Fach Hostnamen für den MB-Datensatz darstellt.
+Eine Zeichenfolge, die den Postfachhostnamen für den MB-Datensatz darstellt.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -69,9 +69,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,21 +82,21 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ mbtype**](microsoftdns-mbtype.md)
+[**MicrosoftDNS \_ MBType**](microsoftdns-mbtype.md)
 </dt> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der Klasse "MicrosoftDNS \_ mbtype"**](microsoftdns-mbtype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ MBType-Klasse**](microsoftdns-mbtype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

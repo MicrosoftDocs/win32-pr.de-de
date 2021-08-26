@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für die Win32-pnpdevice-Zuordnung verknüpft ein Gerät (bekannt als pntztity) und die Funktion Configuration Manager, die es ausführt.
+description: Die WMI-Klasse für die \_ Win32-PnPDevice-Zuordnung verknüpft ein Gerät (bekannt als PNPEntity Konfigurations-Manager) und die funktion, die es ausführt.
 ms.assetid: 5163a423-60f2-416d-bf82-89517b499f93
 ms.tgt_platform: multiple
 title: Win32_PnPDevice-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c17dc6d4169854469d630e2a622eacc85e8a587c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a136c86c0fd0744c555af2071943d99ca8569a33ce9c59d9d22191c4a78d2a32
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972040"
 ---
-# <a name="win32_pnpdevice-class"></a>Win32- \_ pnpdevice-Klasse
+# <a name="win32_pnpdevice-class"></a>Win32 \_ PnPDevice-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32- \_ pnpdevice** -Zuordnung verknüpft ein Gerät (bekannt als pntztity) und die Funktion Configuration Manager, die es ausführt. Die Funktion wird durch eine Unterklasse des logischen Geräts dargestellt, das deren Verwendung beschreibt. Beispielsweise eine [**Win32- \_ Tastatur**](win32-keyboard.md) oder eine [**Win32 \_ diskdrive**](win32-diskdrive.md) -Instanz. Beide referenzierten Objekte stellen dasselbe zugrunde liegende System Gerät dar. Änderungen an der Ressourcen Zuordnung auf der pnptity-Seite wirken sich auf das zugehörige Gerät aus.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für **die Win32-PnPDevice-Zuordnung \_** verknüpft ein Gerät (bekannt als PNPEntity Konfigurations-Manager) und die funktion, die es ausführt. Seine Funktion wird durch eine Unterklasse des logischen Geräts dargestellt, die seine Verwendung beschreibt. Beispielsweise eine [**Win32-Tastatur- \_**](win32-keyboard.md) oder [**Win32 \_ DiskDrive-Instanz.**](win32-diskdrive.md) Beide Objekte, auf die verwiesen wird, stellen das gleiche zugrunde liegende Systemgerät dar. Änderungen an der Ressourcenzuordnung aufseiten von PNPEntity wirken sich auf das zugeordnete Gerät aus.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ class Win32_PnPDevice
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ pnpdevice** -Klasse verfügt über diese Typen von mempdevice:
+Die **\_ Win32-PnPDevice-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ pnpdevice** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PnPDevice-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -61,26 +61,26 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("CIM \| CIM \_ LogicalDevice")
 </dt> </dl>
 
-Verweis auf die [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Instanz, die die Eigenschaften des logischen Geräts darstellt, die dem Plug & Play-Gerät zugeordnet sind.
+Reference to the [**CIM\_LogicalDevice**](cim-logicaldevice.md) instance representing the logical device properties associated with the Plug and Play device.
 
 </dd> <dt>
 
-**Systemelement**
+**SystemElement**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ pnptity**
+Datentyp: **Win32 \_ PnPEntity**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ pnptity")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ PnPEntity")
 </dt> </dl>
 
-Verweis auf die [**Win32- \_ pnptity**](win32-pnpentity.md) -Instanz, die das Plug & Play Gerät darstellt, das dem logischen Gerät zugeordnet ist.
+Reference to the [**Win32\_PnPEntity**](win32-pnpentity.md) instance representing the Plug and Play device associated with the logical device.
 
 </dd> </dl>
 
@@ -92,17 +92,17 @@ Verweis auf die [**Win32- \_ pnptity**](win32-pnpentity.md) -Instanz, die das Pl
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

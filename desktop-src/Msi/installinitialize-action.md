@@ -1,29 +1,29 @@
 ---
-description: Die Aktion installinitialisieren und InstallFinalize markieren den Anfang und das Ende einer Sequenz von Aktionen, durch die das System geändert wird.
+description: Die Aktion InstallInitialize und installFinalize markieren den Anfang und das Ende einer Sequenz von Aktionen, die das System ändern.
 ms.assetid: c2637070-3fd9-422c-9252-cf15045c6485
 title: InstallInitialize-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80d500779ed018905edfc5347d85d21cc40e6175
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7031ab79bc099ea067fd8d83cb83d8cefd1f36a1e83f696a1ee3b4487b3cac88
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996570"
 ---
 # <a name="installinitialize-action"></a>InstallInitialize-Aktion
 
-Die Aktion installinitialisieren und [InstallFinalize](installfinalize-action.md) markieren den Anfang und das Ende einer Sequenz von Aktionen, durch die das System geändert wird.
+Die Aktion InstallInitialize und [installFinalize](installfinalize-action.md) markieren den Anfang und das Ende einer Sequenz von Aktionen, die das System ändern.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die InstallInitialize-Aktion muss vor den Aktionen, mit denen das System geändert wird, sequenziert werden, wie z. b. die Aktion [InstallFiles](installfiles-action.md) , die Aktion " [schreiteregistryvalues](writeregistryvalues-action.md) ", die [SelfRegModules](selfregmodules-action.md) -Aktion und die [processcomponents](processcomponents-action.md) -Aktion. Daher muss die InstallInitialize-Aktion vor der [InstallFinalize](installfinalize-action.md) -Aktion und der [InstallExecute](installexecute-action.md) -Aktion sequenziert werden.
+Die InstallInitialize-Aktion muss vor allen Aktionen sequenziert werden, die das System ändern, z. B. die [InstallFiles-Aktion,](installfiles-action.md) die [WriteRegistryValues-Aktion,](writeregistryvalues-action.md) die [SelfRegModules-Aktion](selfregmodules-action.md) und die [ProcessComponents-Aktion.](processcomponents-action.md) Die InstallInitialize-Aktion muss daher vor der [InstallFinalize-Aktion](installfinalize-action.md) und der [InstallExecute-Aktion sequenziert](installexecute-action.md) werden.
 
-[Benutzerdefinierte Aktionen](custom-actions.md) , mit denen das Windows Installer Paket geändert wird, z. b. durch das Hinzufügen von Zeilen zu einer Tabelle, in der installierbare Ressourcen behandelt werden, z. b. die [Registrierungs](registry-table.md) Tabelle oder die [duplicatefile](duplicatefile-table.md) -Tabelle, müssen vor der InstallInitialize
+[Benutzerdefinierte](custom-actions.md) Aktionen, die das Windows Installer-Paket ändern, z. B. durch Hinzufügen von Zeilen zu einer Tabelle, die installierbare Ressourcen behandelt, z. B. die Tabelle [Registry](registry-table.md) oder [DuplicateFile,](duplicatefile-table.md) müssen vor der InstallInitialize-Aktion sequenziert werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
  
 

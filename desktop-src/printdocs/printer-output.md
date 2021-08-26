@@ -1,25 +1,25 @@
 ---
-description: Ebenso wie eine Anwendung einen Gerätekontext anzeigen (DC) erfordert, bevor Sie im Client Bereich eines Fensters gezeichnet werden kann, benötigt Sie einen Drucker-DC, bevor Sie mit dem Senden der Ausgabe an einen Drucker beginnen kann.
+description: So wie eine Anwendung einen Anzeigegerätekontext (DC) erfordert, bevor sie mit dem Zeichnen im Clientbereich eines Fensters beginnen kann, benötigt sie einen Druckerdomänencontroller, bevor sie mit dem Senden der Ausgabe an einen Drucker beginnen kann.
 ms.assetid: 5bdcec28-e28d-402d-8d80-e8aa5ecb4e74
-title: Drucker Geräte Kontexte (Dokumente und Drucken)
+title: Druckergerätekontexte (Dokumente und Drucken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1b75fb79d6ab8bb4198bf52bff10eccf5ec3cf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0c868d5bf8247375375b33bcb034a70bd6f28c5b9104b61e264543a63281069
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947400"
 ---
-# <a name="printer-device-contexts-documents-and-printing"></a>Drucker Geräte Kontexte (Dokumente und Drucken)
+# <a name="printer-device-contexts-documents-and-printing"></a>Druckergerätekontexte (Dokumente und Drucken)
 
-Ebenso wie eine Anwendung einen Gerätekontext anzeigen (DC) erfordert, bevor Sie im Client Bereich eines Fensters gezeichnet werden kann, benötigt Sie einen Drucker-DC, bevor Sie mit dem Senden der Ausgabe an einen Drucker beginnen kann. Ein Drucker-DC ähnelt einem Display-DC darin, dass es sich um eine interne Datenstruktur handelt, die eine Reihe von Grafikobjekten und deren zugeordneten Attributen definiert und die Grafikmodi angibt, die die Ausgabe beeinflussen. Die Grafik Objekte enthalten einen Stift für das Zeichnen von Zeilen, einen Pinsel zum Zeichnen und ausfüllen und eine Schriftart für die Textausgabe.
+So wie eine Anwendung einen Anzeigegerätekontext (DC) erfordert, bevor sie mit dem Zeichnen im Clientbereich eines Fensters beginnen kann, benötigt sie einen Druckerdomänencontroller, bevor sie mit dem Senden der Ausgabe an einen Drucker beginnen kann. Ein Druckerdomänencontroller ähnelt einem Anzeigedomänencontroller, da es sich um eine interne Datenstruktur handelt, die eine Reihe von Grafikobjekten und deren zugeordnete Attribute definiert und die Grafikmodi angibt, die sich auf die Ausgabe auswirken. Die grafischen Objekte enthalten einen Stift für die Linienzeichnung, einen Pinsel zum Zeichnen und Auffüllen und eine Schriftart für die Textausgabe.
 
-Anders als bei einem Anzeige-DC ist ein Drucker-DC nicht im Besitz der Fenster Verwaltungs Komponente, und er kann nicht durch Aufrufen der [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc) -Funktion abgerufen werden. Stattdessen muss eine [**Anwendung die Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createdca) "up" oder " [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) " aufrufen.
+Im Gegensatz zu einem Anzeigedomänencontroller befindet sich ein Druckerdomänencontroller nicht im Besitz der Fensterverwaltungskomponente und kann nicht durch Aufrufen der [**GetDC-Funktion ermittelt**](/windows/desktop/api/winuser/nf-winuser-getdc) werden. Stattdessen muss eine Anwendung die [**Funktion CreateDC**](/windows/desktop/api/wingdi/nf-wingdi-createdca) oder [**PrintDlgEx**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) aufrufen.
 
-Wenn die Anwendung [**die Funktion "**](/windows/desktop/api/wingdi/nf-wingdi-createdca) Funktion" aufruft, muss Sie einen Treiber-und einen Portnamen angeben. Rufen Sie die Funktion [**GetPrinter**](getprinter.md) oder [**enumprinter**](enumprinters.md) auf, um diese Namen abzurufen.
+Wenn Ihre Anwendung die [**CreateDC-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-createdca) aufruft, muss sie einen Treiber- und Portnamen angeben. Um diese Namen abzurufen, rufen Sie die [**GetPrinter- oder**](getprinter.md) [**EnumPrinters-Funktion**](enumprinters.md) auf.
 
-Wenn die Anwendung die [**printdlgex**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) -Funktion aufruft und den PD \_ returndc-Wert im **Flags** -Member der [**printdlgex**](/windows/win32/api/commdlg/ns-commdlg-printdlgexa) -Struktur angibt, gibt das System ein Handle für einen Gerätekontext für den Drucker zurück, der vom Benutzer ausgewählt wurde. Weitere Informationen finden Sie unter [Drucken von Eigenschaften](../dlgbox/print-property-sheet.md) Seiten und "Verwenden des Druckeigenschaften Blatts" in [Verwenden von allgemeinen Dialog Feldern](../dlgbox/using-common-dialog-boxes.md).
+Wenn Ihre Anwendung die [**PrintDlgEx-Funktion**](/previous-versions/windows/desktop/legacy/ms646942(v=vs.85)) aufruft und den PD RETURNDC-Wert im \_ **Flags-Element** der [**PRINTDLGEX-Struktur**](/windows/win32/api/commdlg/ns-commdlg-printdlgexa) angibt, gibt das System ein Handle an einen Gerätekontext für den vom Benutzer ausgewählten Drucker zurück. Weitere Informationen finden Sie unter [Print Property Sheet](../dlgbox/print-property-sheet.md) und "Using the Print Property Sheet" in Using Common Dialog [Boxes](../dlgbox/using-common-dialog-boxes.md).
 
  
 

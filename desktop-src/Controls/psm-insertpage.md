@@ -1,9 +1,9 @@
 ---
-title: PSM_INSERTPAGE Meldung (prsht. h)
-description: Fügt eine neue Seite in ein vorhandenes Eigenschaften Blatt ein. Die Seite kann entweder an einem angegebenen Index oder nach einer angegebenen Seite eingefügt werden. Sie können diese Nachricht explizit oder mithilfe des "propsheet \_ insertpage"-Makros senden.
+title: PSM_INSERTPAGE (Prsht.h)
+description: Fügt eine neue Seite in ein vorhandenes Eigenschaftenblatt ein. Die Seite kann entweder an einem angegebenen Index oder nach einer angegebenen Seite eingefügt werden. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ InsertPage-Makros senden.
 ms.assetid: 69d55e68-510d-45f1-93d6-ce2bf5dfdb6d
 keywords:
-- Windows-Steuerelemente für PSM_INSERTPAGE Meldung
+- PSM_INSERTPAGE der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afdd58536a5cdd18d39a331df4b18c9bbae93842
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 11c81869b1ca575efa960fc00eea09536ca4b6b2f43a5e637c5dc6a9d7632983
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985662"
 ---
-# <a name="psm_insertpage-message"></a>PSM \_ insertpage-Nachricht
+# <a name="psm_insertpage-message"></a>PSM \_ INSERTPAGE-Meldung
 
-Fügt eine neue Seite in ein vorhandenes Eigenschaften Blatt ein. Die Seite kann entweder an einem angegebenen Index oder nach einer angegebenen Seite eingefügt werden. Sie können diese Nachricht explizit oder mithilfe des " [**propsheet \_ insertpage**](/windows/desktop/api/Prsht/nf-prsht-propsheet_insertpage) "-Makros senden.
+Fügt eine neue Seite in ein vorhandenes Eigenschaftenblatt ein. Die Seite kann entweder an einem angegebenen Index oder nach einer angegebenen Seite eingefügt werden. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ InsertPage-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_insertpage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Fügt eine neue Seite in ein vorhandenes Eigenschaften Blatt ein. Die Seite kann
 *wParam* 
 </dt> <dd>
 
-Der Ort, an dem die Seite eingefügt werden soll. Legen Sie diesen Parameter auf **null** fest, um die neue Seite als erste Seite zu erstellen. Um anzugeben, wo die neue Seite eingefügt werden soll, können Sie entweder einen Index oder das hpropsheetpage-Handle einer vorhandenen Seite übergeben.
+An der Stelle, an der die Seite eingefügt werden soll. Legen Sie diesen Parameter auf **NULL fest,** um die neue Seite zur ersten Seite zu machen. Um anzugeben, wo die neue Seite eingefügt werden soll, können Sie entweder einen Index oder das HPROPSHEETPAGE-Handle einer vorhandenen Seite übergeben.
 
 
 
 | Wert                                                                                                                                             | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt></dt> <dt>index</dt> </dl>            | Wenn der *wParam* -Parameter kleiner als maxushort (die größte ganze Zahl ohne Vorzeichen) ist, gibt der *wParam* -Parameter den NULL basierten Index für die neue Seite an. Wenn Sie z. b. die eingefügte Seite zur dritten Seite auf dem Eigenschaften Blatt machen möchten, legen Sie *wParam* auf 2 fest. Legen Sie *wParam* auf 0 fest, um es als erste Seite zu erstellen. Wenn für *wParam* ein Wert größer als die Anzahl der Seiten und kleiner als maxushort angegeben ist, wird die Seite angefügt.<br/> |
-| <dl> <dt></dt><dt>hpagumsertafter</dt> </dl> | Wenn Sie den *wParam* -Parameter auf das hpropsheetpage-Handle einer vorhandenen Seite festlegen, wird die neue Seite eingefügt.<br/>                                                                                                                                                                                                                                                                                          |
+| <dl> <dt></dt> <dt>index</dt> </dl>            | Wenn der *wParam-Parameter* kleiner als MAXUSHORT (die größte kurze ganze Zahl ohne Vorzeichen) ist, gibt *wParam* den nullbasierten Index für die neue Seite an. Um beispielsweise die eingefügte Seite zur dritten Seite auf dem Eigenschaftenblatt zu machen, legen Sie *wParam auf* 2 fest. Um dies zur ersten Seite zu machen, legen *Sie wParam* auf 0 fest. Wenn *wParam* einen Wert hat, der größer als die Anzahl der Seiten und kleiner als MAXUSHORT ist, wird die Seite angefügt.<br/> |
+| <dl> <dt></dt><dt>hpageInsertAfter</dt> </dl> | Wenn Sie den *wParam-Parameter* auf das HPROPSHEETPAGE-Handle einer vorhandenen Seite festlegen, wird die neue Seite danach eingefügt.<br/>                                                                                                                                                                                                                                                                                          |
 
 
 
@@ -50,7 +50,7 @@ Der Ort, an dem die Seite eingefügt werden soll. Legen Sie diesen Parameter auf
 *lParam* 
 </dt> <dd>
 
-Handle für die einzufügende Seite. Die Seite muss zuerst durch einen aufzurufenden Befehl für [**die Funktion "**](/windows/desktop/api/Prsht/nf-prsht-createpropertysheetpagea) -Funktion" erstellt werden.
+Handle für die seite, die eingefügt werden soll. Die Seite muss zuerst durch einen Aufruf der [**CreatePropertySheetPage-Funktion erstellt**](/windows/desktop/api/Prsht/nf-prsht-createpropertysheetpagea) werden.
 
 </dd> </dl>
 
@@ -58,32 +58,32 @@ Handle für die einzufügende Seite. Die Seite muss zuerst durch einen aufzurufe
 
 Gibt einen Wert ungleich 0 (null) zurück, wenn die Seite erfolgreich eingefügt wurde, andernfalls 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Seiten nach der Einfügemarke werden nach rechts verschoben, um der neuen Seite Rechnung zu tragen.
+Die Seiten nach der Einfügemarke werden nach rechts verschoben, um die neue Seite anzuzeigen.
 
-Die Größe des Eigenschaften Blatts wird nicht an die neue Seite angepasst. Machen Sie die neue Seite nicht größer als die größte Seite des Eigenschaften Blatts.
+Die Größe des Eigenschaftenblatts wird nicht an die neue Seite geändert. Die neue Seite darf nicht größer als die größte Seite des Eigenschaftenblatts sein.
 
-Eine Reihe von Nachrichten und ein Funktions aufruftritt auf, während das Eigenschaften Blatt die Liste der Seiten bearbeitet. Während diese Aktion ausgeführt wird, kann der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen führen. Dementsprechend sollten Sie die PSM \_ insertpage-Nachricht nicht in der Implementierung von [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Behandlung der folgenden Benachrichtigungen und Windows-Meldungen verwenden.
+Eine Reihe von Meldungen und ein Funktionsaufruf treten auf, während das Eigenschaftenblatt die Liste der Seiten manipuliert. Während diese Aktion stattfindet, führt der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen. Daher sollten Sie die PSM INSERTPAGE-Nachricht nicht in Ihrer Implementierung von \_ [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Verarbeitung der folgenden Benachrichtigungen und Windows verwenden.
 
--   [PSN- \_ Anwendung](psn-apply.md)
--   [PSN- \_ killactive](psn-killactive.md)
--   [PSN- \_ zurück Setzung](psn-reset.md)
--   [PSN- \_ SETACTIVE](psn-setactive.md)
--   [**WM \_ zerstören**](/windows/desktop/winmsg/wm-destroy)
--   [**WM \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog)
+-   [PSN \_ APPLY](psn-apply.md)
+-   [PSN \_ KILLACTIVE](psn-killactive.md)
+-   [PSN \_ RESET](psn-reset.md)
+-   [PSN \_ SETACTIVE](psn-setactive.md)
+-   [**WM \_ DESTROY**](/windows/desktop/winmsg/wm-destroy)
+-   [**WM \_ INITDIALOG**](/windows/desktop/dlgbox/wm-initdialog)
 
-Wenn Sie eine Eigenschaften Blattseite ändern müssen, während Sie eine dieser Nachrichten verarbeiten, oder wenn [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, stellen Sie selbst eine private Windows-Meldung bereit. Die Anwendung empfängt diese Nachricht erst, nachdem die Aufgaben des Eigenschaften Blatt-Managers beendet wurden. Anschließend können Sie die Seitenliste ändern.
+Wenn Sie eine Eigenschaftenblattseite ändern müssen, während Sie eine dieser Nachrichten behandeln, oder wenn [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, senden Sie sich selbst eine private Windows Nachricht. Ihre Anwendung erhält diese Meldung erst, nachdem der Eigenschaftenblatt-Manager seine Aufgaben abgeschlossen hat. Anschließend können Sie die Liste der Seiten ändern.
 
-Die folgenden Benachrichtigungen sind auch von der Änderung von Eigenschaften Seiten betroffen.
+Die folgenden Benachrichtigungen sind auch von der Änderung des Eigenschaftenblatts betroffen.
 
--   [PSN- \_ witzback](psn-wizback.md)
--   [PSN- \_ nächstes](psn-wiznext.md)
+-   [PSN \_ WIZBACK](psn-wizback.md)
+-   [PSN \_ WIZNEXT](psn-wiznext.md)
 
-Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder entfernen, vorausgesetzt, dass Sie (über DWL \_ msgresult) einen Wert ungleich 0 (null) zurückgeben, um die gewünschte neue Seite anzugeben. Beachten Sie jedoch Folgendes: Wenn Sie eine Seite einfügen, die sich vor der aktuellen Seite befindet (die einen kleineren Index als die aktuelle Seite aufweist), wird " [PSN \_ killactive](psn-killactive.md) " möglicherweise an die falsche Seite gesendet.
+Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder entfernen, sofern Sie (über DWL MSGRESULT) einen Wert ungleich 0 (null) zurückgeben, um die gewünschte \_ neue Seite anzugeben. Beachten Sie jedoch, dass [PSN \_ KILLACTIVE](psn-killactive.md) möglicherweise an die falsche Seite gesendet wird, wenn Sie eine Seite einfügen, die sich vor der aktuellen Seite befindet (die über einen kleineren Index als die aktuelle Seite verfügt).
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> This message is not supported when using the Aero wizard style ([**PSH\_AEROWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -93,9 +93,9 @@ Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder en
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

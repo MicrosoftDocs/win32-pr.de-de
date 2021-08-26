@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel enthält eine PKCS \# 7-Erneuerungs Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine PKCS \# 7-Verlängerungsanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 ms.assetid: 3752600c-40a9-401b-9949-8536203d7f14
-title: PKCS \# 7-Erneuerungs Anforderung
+title: PKCS \# 7-Verlängerungsanforderung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ec3e8985ff77876295aa73b030e1c17d3e27c3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44473282c3b0efb283c4ad3e8b5cad17bed5b143449781f4708114a868546c60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119880705"
 ---
-# <a name="pkcs-7-renewal-request"></a>PKCS \# 7-Erneuerungs Anforderung
+# <a name="pkcs-7-renewal-request"></a>PKCS \# 7-Verlängerungsanforderung
 
-Das folgende Beispiel enthält eine PKCS \# 7-Erneuerungs Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine PKCS \# 7-Verlängerungsanforderung. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -21,7 +21,7 @@ RequestType=pkcs7
 RenewalCert=248f7d3c00000000086e
 ```
 
-Die Konfiguration gibt den Typ der Anforderung (PKCS \# 7) und die Seriennummer des Zertifikats an, auf dem die Anforderung basiert. Dadurch wird die folgende Ausgabe generiert.
+Die Konfiguration gibt den Anforderungstyp (PKCS \# 7) und die Seriennummer des Zertifikats an, auf dem die Anforderung basiert. Dadurch wird die folgende Ausgabe generiert.
 
 ``` syntax
 PKCS7 Message:
@@ -937,7 +937,7 @@ CertUtil: -dump command completed successfully.
 
 <dl> <dt>
 
-[Beispiel Anforderungen](sample-requests.md)
+[Beispielanforderungen](sample-requests.md)
 </dt> </dl>
 
  

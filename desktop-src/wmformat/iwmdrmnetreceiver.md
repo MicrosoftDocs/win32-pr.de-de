@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmnetreceiver-Schnittstelle
-description: Die iwmdrmnetreceiver-Schnittstelle stellt Methoden bereit, die für die Verwendung von Microsoft Windows Media DRM für Netzwerkgeräte als Empfänger benötigt werden. Um eine Instanz dieser Schnittstelle zu erhalten, rufen Sie iwmdrmprovider-Erstellungsobjekt auf. Übergeben Sie IID \_ iwmdrmnetreceiver als riid-Parameter.
+title: IWMDRMNetReceiver-Schnittstelle
+description: Die IWMDRMNetReceiver-Schnittstelle stellt Methoden bereit, die erforderlich sind, um Microsoft Windows Media DRM für Netzwerkgeräte als Empfänger zu verwenden. Rufen Sie IWMDRMProvider CreateObject auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie IID \_ IWMDRMNetReceiver als riid-Parameter.
 ms.assetid: 29966260-c0aa-4e7e-b827-a872c7429333
 keywords:
-- Iwmdrmnetreceiver-Schnittstelle Windows Media-Format
-- Iwmdrmnetreceiver-Schnittstelle Windows Media-Format, beschrieben
+- IWMDRMNetReceiver-Schnittstelle windows Medienformat
+- IWMDRMNetReceiver-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,37 +14,37 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7a85ae1525a81e97984e29a5dd28763d934dba2b
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5cb917d7d229b81a6792461c506b2a6b50aaee2af3bd5f133e44273077924f86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930110"
 ---
-# <a name="iwmdrmnetreceiver-interface"></a>Iwmdrmnetreceiver-Schnittstelle
+# <a name="iwmdrmnetreceiver-interface"></a>IWMDRMNetReceiver-Schnittstelle
 
-Die **iwmdrmnetreceiver** -Schnittstelle stellt Methoden bereit, die für die Verwendung von Microsoft Windows Media DRM für Netzwerkgeräte als Empfänger benötigt werden.
+Die **IWMDRMNetReceiver-Schnittstelle** stellt Methoden bereit, die erforderlich sind, um Microsoft Windows Media DRM für Netzwerkgeräte als Empfänger zu verwenden.
 
-Um eine Instanz dieser Schnittstelle abzurufen, rufen Sie [**iwmdrmprovider:: builateobject**](iwmdrmprovider-createobject.md)auf. Übergeben Sie **IID \_ iwmdrmnetreceiver** als *riid* -Parameter.
+Rufen Sie [**IWMDRMProvider::CreateObject**](iwmdrmprovider-createobject.md)auf, um eine Instanz dieser Schnittstelle abzurufen. Übergeben Sie **IID \_ IWMDRMNetReceiver** als *riid-Parameter.*
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmnetreceiver** -Schnittstelle erbt von [**iwmdrmeventgenerator**](iwmdrmeventgenerator.md). **Iwmdrmnetreceiver** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMNetReceiver-Schnittstelle** erbt von [**IWMDRMEventGenerator.**](iwmdrmeventgenerator.md) **IWMDRMNetReceiver** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmnetreceiver** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMNetReceiver-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                               | BESCHREIBUNG                                                                                                                     |
 |:-------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
-| [**Getlicenanchallenge**](iwmdrmnetreceiver-getlicensechallenge.md)                 | Generiert eine Lizenz Aufforderung, die beim Anfordern geschützter Inhalte an den Sender gesendet wird.<br/>                     |
-| [**Getregistrationchallenge**](iwmdrmnetreceiver-getregistrationchallenge.md)       | Generiert eine Registrierungs Aufforderung, die beim Registrieren oder erneuten Validieren des Empfängers an den Sender gesendet wird.<br/> |
-| [**Processlicenseresponse**](iwmdrmnetreceiver-processlicenseresponse.md)           | Verarbeitet die vom Sender gesendete Lizenz Antwort als Antwort auf eine Lizenz Herausforderung.<br/>                              |
-| [**Processregistrationresponse**](iwmdrmnetreceiver-processregistrationresponse.md) | Verarbeitet die vom Sender gesendete Registrierungs Antwort als Antwort auf eine Registrierungs Aufforderung.<br/>                    |
+| [**GetLicenseChallenge**](iwmdrmnetreceiver-getlicensechallenge.md)                 | Generiert eine Lizenzaufforderung, die beim Anfordern geschützter Inhalte an den Sender gesendet wird.<br/>                     |
+| [**GetRegistrationChallenge**](iwmdrmnetreceiver-getregistrationchallenge.md)       | Generiert eine Registrierungsaufforderung, die an den Sender gesendet wird, wenn der Empfänger registriert oder erneut validiert wird.<br/> |
+| [**ProcessLicenseResponse**](iwmdrmnetreceiver-processlicenseresponse.md)           | Verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzaufforderung gesendet wird.<br/>                              |
+| [**ProcessRegistrationResponse**](iwmdrmnetreceiver-processregistrationresponse.md) | Verarbeitet die Registrierungsantwort, die vom Sender als Antwort auf eine Registrierungsaufforderung gesendet wird.<br/>                    |
 
 
 
@@ -57,10 +57,10 @@ Die **iwmdrmnetreceiver** -Schnittstelle verfügt über diese Methoden.
 [**Schnittstellen**](drm-interfaces.md)
 </dt> <dt>
 
-[**Iwmdrmeventgenerator**](iwmdrmeventgenerator.md)
+[**IWMDRMEventGenerator**](iwmdrmeventgenerator.md)
 </dt> <dt>
 
-[**Iwmdrmnettransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
+[**IWMDRMNetTransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ removedirectoryaction-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ RemoveDirectoryAction-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 6C8619D4-2D40-4B96-B2DD-BDDD2FCE4030
 ms.tgt_platform: multiple
-title: CIM_RemoveDirectoryAction Methoden
+title: CIM_RemoveDirectoryAction-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f85a33021bf6796ae2f2d7fe06793c01ff1b4265
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 85a1e9835562df38723c1c6aa844c8e46d3310dc588485b7dce5eae93606af5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920450"
 ---
-# <a name="cim_removedirectoryaction-methods"></a>CIM \_ removedirectoryaction-Methoden
+# <a name="cim_removedirectoryaction-methods"></a>CIM \_ RemoveDirectoryAction-Methoden
 
-Die [**CIM \_ removedirectoryaction**](cim-removedirectoryaction.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ RemoveDirectoryAction-Klasse**](cim-removedirectoryaction.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

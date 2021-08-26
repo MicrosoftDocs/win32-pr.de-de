@@ -4,20 +4,20 @@ ms.assetid: 3af46a07-027f-4b31-9958-4a16971c81f8
 title: Europa, Westen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 552d2fc92b8a3c8433e863e7a69f63859b7efab8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8238078aa5b5c8fc0776fa0e604b09a1255823a6c348b2e9701087755afeadc5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982360"
 ---
 # <a name="western-europe"></a>Europa, Westen
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in den Westeuropa-Tabellen sind nicht für die Verwendung als Kanalnummern geeignet.
+Die Häufigkeitsindizes in den Tabellen in Westeuropa sind nicht für die Verwendung als Kanalnummern geeignet.
 
-### <a name="western-europe-broadcast-assignments"></a>Westeuropa-Broadcast Zuweisungen
+### <a name="western-europe-broadcast-assignments"></a>Übertragungszuweisungen in Westeuropa
 
 
 ```C++
@@ -99,9 +99,9 @@ Die Häufigkeits Indizes in den Westeuropa-Tabellen sind nicht für die Verwendu
 
 
 
-### <a name="western-europe-cable-assignments"></a>Westeuropa-Kabel Zuweisungen
+### <a name="western-europe-cable-assignments"></a>Kabelzuweisungen in Westeuropa
 
-Es gab Daten, die eine standardisierte Kabel Auflistung für einige Länder/Regionen unterstützen. Für diejenigen Länder/Regionen, die keine channelauflistungs Daten gemeldet haben, wird die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Es gab Daten, die eine standardisierte Kabellinie für einige Länder/Regionen unterstützen. Für die Länder/Regionen, in denen keine Kanal-Lineupdaten angezeigt wurden, wird die [Tabelle unicable Frequency](unicable-frequency-table.md) verwendet.
 
 ``` syntax
          1L,            // Lowest channel
@@ -221,7 +221,7 @@ Es gab Daten, die eine standardisierte Kabel Auflistung für einige Länder/Regi
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

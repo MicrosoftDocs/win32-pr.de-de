@@ -1,59 +1,59 @@
 ---
-title: Iagentcharakteriex
-description: Iagentcharakteriex
+title: IAgentCharacterEx
+description: IAgentCharacterEx
 ms.assetid: 8defc836-cc54-40c7-8afc-ec90f941861b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f92a9f9c39804d6b5d3ac777457fff5b7f03823c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 04e4b6661641ebf472001e502a7fec3042332ea039ec94c01349d58bbe93346d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961960"
 ---
-# <a name="iagentcharacterex"></a>Iagentcharakteriex
+# <a name="iagentcharacterex"></a>IAgentCharacterEx
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-**Iagentcharakteriex** wird von der [**iagentcharacter**](iagentcharacter.md) -Schnittstelle abgeleitet. Sie enthält alle **iagentcharacter** -Methoden und ermöglicht den Zugriff auf zusätzliche Funktionen.
+**IAgentCharacterEx** wird von der [**IAgentCharacter-Schnittstelle**](iagentcharacter.md) ableiten. Sie enthält alle **IAgentCharacter-Methoden** und bietet Zugriff auf zusätzliche Funktionen.
 
 **Methoden in Vtable-Reihenfolge**
 
 
 
-| Iagentcharakteriex-Methoden                                         | BESCHREIBUNG                                                                    |
+| IAgentCharacterEx-Methoden                                         | BESCHREIBUNG                                                                    |
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [**ShowPopupMenu**](iagentcharacterex--showpopupmenu.md)         | Zeigt das Popup Menü für das Zeichen an.                                    |
-| [**"Stautopopupmenu"**](iagentcharacterex--setautopopupmenu.md)   | Legt fest, ob der Server das Popup Menü des Zeichens automatisch anzeigt.    |
-| [**GetAutoPopupMenu**](iagentcharacterex--getautopopupmenu.md)   | Gibt zurück, ob der Server das Popup Menü des Zeichens automatisch anzeigt. |
-| [**Gethelpfilename**](iagentcharacterex--gethelpfilename.md)     | Gibt den Hilfe Dateinamen für das Zeichen zurück.                                   |
-| [**"Setup File Name"**](iagentcharacterex--sethelpfilename.md)     | Legt den Hilfe Dateinamen für das Zeichen fest.                                      |
-| [**"Setup"**](iagentcharacterex--sethelpmodeon.md)         | Legt den Hilfe Modus auf fest.                                                             |
-| [**Gethelpmudeon**](iagentcharacterex--gethelpmodeon.md)         | Gibt zurück, ob der Hilfe Modus on ist.                                               |
-| [**"Setup"**](iagentcharacterex--sethelpcontextid.md)   | Legt die HelpContextID für das Zeichen fest.                                      |
-| [**Gethelpcontextid**](iagentcharacterex--gethelpcontextid.md)   | Gibt die HelpContextID für das Zeichen zurück.                                   |
-| [**Getactive**](iagentcharacterex--getactive.md)                 | Gibt den aktiven Zustand für das Zeichen zurück.                                    |
-| [**Lauschen**](iagentcharacterex--listen.md)                       | Legt den Empfangs Zustand für das Zeichen fest.                                    |
-| [**Setlanguageid**](iagentcharacterex--setlanguageid.md)         | Legt die Sprachen-ID für das Zeichen fest.                                        |
-| [**getlanguageid**](iagentcharacterex--getlanguageid.md)         | Gibt die Sprachen-ID für das Zeichen zurück.                                     |
-| [**getttmodeid**](iagentcharacterex--getttsmodeid.md)           | Gibt die für das Zeichen festgelegte TTS-Modus-ID zurück.                                 |
-| [**Settungmodeid**](iagentcharacterex--setttsmodeid.md)           | Legt die ID des TTS-Modus für das Zeichen fest.                                        |
-| [**gezrmodeid**](iagentcharacterex--getsrmodeid.md)             | Gibt die Modus-ID der aktuellen sprach Erkennungs-Engine zurück.                       |
-| [**-rmodeid**](iagentcharacterex--setsrmodeid.md)             | Legt die Spracherkennungs-Engine fest.                                            |
+| [**ShowPopupMenu**](iagentcharacterex--showpopupmenu.md)         | Zeigt das Popupmenü für das Zeichen an.                                    |
+| [**SetAutoPopupMenu**](iagentcharacterex--setautopopupmenu.md)   | Legt fest, ob der Server automatisch das Popupmenü des Zeichens anzeigt.    |
+| [**GetAutoPopupMenu**](iagentcharacterex--getautopopupmenu.md)   | Gibt zurück, ob der Server automatisch das Popupmenü des Zeichens anzeigt. |
+| [**GetHelpFileName**](iagentcharacterex--gethelpfilename.md)     | Gibt den Hilfedateinamen für das Zeichen zurück.                                   |
+| [**SetHelpFileName**](iagentcharacterex--sethelpfilename.md)     | Legt den Hilfedateinamen für das Zeichen fest.                                      |
+| [**SetHelpModeOn**](iagentcharacterex--sethelpmodeon.md)         | Legt den Hilfemodus auf fest.                                                             |
+| [**GetHelpModeOn**](iagentcharacterex--gethelpmodeon.md)         | Gibt zurück, ob der Hilfemodus aktiviert ist.                                               |
+| [**SetHelpContextID**](iagentcharacterex--sethelpcontextid.md)   | Legt die HelpContextID für das Zeichen fest.                                      |
+| [**GetHelpContextID**](iagentcharacterex--gethelpcontextid.md)   | Gibt die HelpContextID für das Zeichen zurück.                                   |
+| [**GetActive**](iagentcharacterex--getactive.md)                 | Gibt den aktiven Zustand für das Zeichen zurück.                                    |
+| [**Hören**](iagentcharacterex--listen.md)                       | Legt den Lauschenzustand für das Zeichen fest.                                    |
+| [**SetLanguageID**](iagentcharacterex--setlanguageid.md)         | Legt die Sprach-ID für das Zeichen fest.                                        |
+| [**getLanguageID**](iagentcharacterex--getlanguageid.md)         | Gibt die Sprach-ID für das Zeichen zurück.                                     |
+| [**getTTSModeID**](iagentcharacterex--getttsmodeid.md)           | Gibt die TTS-Modus-ID zurück, die für das Zeichen festgelegt wurde.                                 |
+| [**SetTTSModeID**](iagentcharacterex--setttsmodeid.md)           | Legt die TTS-Modus-ID für das Zeichen fest.                                        |
+| [**getSRModeID**](iagentcharacterex--getsrmodeid.md)             | Gibt die Modus-ID der aktuellen Spracherkennungs-Engine zurück.                       |
+| [**setSRModeID**](iagentcharacterex--setsrmodeid.md)             | Legt die Spracherkennungs-Engine fest.                                            |
 | [**GetGUID**](iagentcharacterex--getguid.md)                     | Gibt den Bezeichner des Zeichens zurück.                                            |
-| [**Getoriginalsize**](iagentcharacterex--getoriginalsize.md)     | Gibt die ursprüngliche Größe des Zeichen Rahmens zurück.                              |
-| [**Meiner**](iagentcharacterex--think.md)                         | Zeigt den angegebenen Text in der "Thought"-Sprechblase des Zeichens an.              |
-| [**GetVersion**](iagentcharacterex--getversion.md)               | Gibt die Version des Zeichens zurück.                                          |
-| [**Getanimationnames**](iagentcharacterex--getanimationnames.md) | Gibt die Namen der Animationen für das Zeichen zurück.                         |
-| [**gestatrstatus**](iagentcharacterex--getsrstatus.md)             | Gibt die für die Unterstützung der Spracheingabe erforderlichen Bedingungen zurück.                      |
+| [**GetOriginalSize**](iagentcharacterex--getoriginalsize.md)     | Gibt die ursprüngliche Größe des Zeichenrahmens zurück.                              |
+| [**Denke**](iagentcharacterex--think.md)                         | Zeigt den angegebenen Text im "thought"-Balloon des Zeichens an.              |
+| [**Getversion**](iagentcharacterex--getversion.md)               | Gibt die Version des Zeichens zurück.                                          |
+| [**GetAnimationNames**](iagentcharacterex--getanimationnames.md) | Gibt die Namen der Animationen für das Zeichen zurück.                         |
+| [**getSRStatus**](iagentcharacterex--getsrstatus.md)             | Gibt die Bedingungen zurück, die zur Unterstützung der Spracheingabe erforderlich sind.                      |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

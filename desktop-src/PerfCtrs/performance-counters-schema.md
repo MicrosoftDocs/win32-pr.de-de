@@ -1,42 +1,42 @@
 ---
-description: Verwenden Sie ein XML-Manifest, um die Leistungsindikatoren zu definieren, die Ihr Anbieter bereitstellt.
+description: Verwenden Sie ein XML-Manifest, um die vom Anbieter angegebenen Leistungsindikatoren zu definieren.
 ms.assetid: fa13d13a-f2e2-4732-8bf7-cb0a0f1d4ed7
 title: Schema der Leistungsindikatoren
 ms.topic: article
 ms.date: 08/17/2020
-ms.openlocfilehash: 5c41e9d54e259d6e53453a55cc97f7734ce793fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e31aa6e42d185f95b142fac864dbaf725bbba456161c3484aba157c8afd6557
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962370"
 ---
 # <a name="performance-counters-schema"></a>Schema der Leistungsindikatoren
 
-V2-Leistungsdaten Anbieter werden unter Windows Vista oder höher unterstützt. Es wird ein verwendet. Die man-Datei (XML-Instrumentations Manifest) zum Definieren des Anbieters, der Gegensätze und der Zähler.
+V2-Leistungsdatenanbieter werden unter Windows Vista oder höher unterstützt. Sie verwenden eine . MAN-Datei (XML-Instrumentierungsmanifest), um den Anbieter, die Countersets und die Leistungsindikatoren zu definieren.
 
 > [!NOTE]
-> Instrumentierungs Manifeste können Informationen zu den Anbietern der Ereignis Ablauf Verfolgung für Windows (ETW) und Leistungs Anbieter enthalten. Ausführliche Informationen zu Instrumentierungs Manifesten finden Sie unter [eventmanifest-Schema](/windows/desktop/WES/eventmanifestschema-schema) und [Schreiben eines Instrumentierungs](/windows/desktop/WES/writing-an-instrumentation-manifest)Manifests.
+> Instrumentierungsmanifesten können Informationen sowohl zu ETW-Anbietern (Event Tracing for Windows) als auch zu Leistungsindikatoranbietern enthalten. Weitere Informationen zu Instrumentierungsmanifesten finden Sie [unter EventManifest-Schema](/windows/desktop/WES/eventmanifestschema-schema) und [Schreiben eines Instrumentierungsmanifests](/windows/desktop/WES/writing-an-instrumentation-manifest)).
 
-In diesem Abschnitt werden die folgenden Elemente und Typen beschrieben, die im- `counters` Abschnitt eines Instrumentierungs Manifests verwendet werden:
+In diesem Abschnitt werden die folgenden Elemente und Typen beschrieben, die Sie im Abschnitt `counters` eines Instrumentierungsmanifests verwenden:
 
-- [Leistungsindikator Elemente](performance-counters-elements.md)
-- [Einfache Typen von Leistungsindikatoren](performance-counters-simple-types.md)
+- [Leistungsindikatorelemente](performance-counters-elements.md)
+- [Leistungsindikatoren – Einfache Typen](performance-counters-simple-types.md)
 - [Komplexe Typen von Leistungsindikatoren](performance-counters-complex-types.md)
 
-Verwenden Sie die `localization` Abschnitte oder `stringTable` des Instrumentierungs Manifests nicht für Leistungsdaten Zeichenfolgen. Geben Sie stattdessen die Zeichen folgen als Werte für das Attribut an, das Sie festlegen.
+Verwenden Sie nicht die `localization` Abschnitte oder `stringTable` des Instrumentierungsmanifests für Leistungsdatenzeichenfolgen. Geben Sie stattdessen die Zeichenfolgen als Werte des Attributs an, das Sie festlegen.
 
-Verwenden Sie nach dem Erstellen des Manifests das Tool [ctrpp](ctrpp.md) , um das Manifest zu validieren und Code ( `.h` ) und Ressourcen Dateien () zu generieren, die `.rc` beim Erstellen des Anbieters verwendet werden sollen.
+Verwenden Sie nach dem Erstellen des Manifests das [CTRPP-Tool,](ctrpp.md) um das Manifest zu überprüfen und Codedateien ( ) und Ressourcendateien () zu generieren, die beim Erstellen Ihres `.h` `.rc` Anbieters verwendet werden sollen.
 
-Wenn Sie die Anwendung installieren, führen Sie das [LodCtr.exe Tool](/windows-server/administration/windows-commands/lodctr) mit dem-Parameter aus, `/M:` um die Leistungsindikatoren zu installieren. Das LodCtr.exe Tool zeichnet die erforderlichen Informationen in der Registrierung unter auf `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\_V2Providers\{ProviderGuid}` , einschließlich des vollständigen Pfads der Binärdatei, die die Zeichen folgen Ressourcen für Ihren Anbieter enthält (wie im- `applicationIdentity` Attribut des Manifests angegeben). Sie müssen über Administratorrechte verfügen, um LodCtr.exe ausführen zu können. Beispiel für einen Installations Befehl:
+Wenn Sie Ihre Anwendung installieren, führen Sie dasLodCtr.exe [ mit](/windows-server/administration/windows-commands/lodctr) dem `/M:` Parameter aus, um Ihre Leistungsindikatoren zu installieren. Das LodCtr.exe-Tool wird die erforderlichen Informationen in der Registrierung unter aufzeichnen, einschließlich des vollständigen Pfads zur Binärdatei, die die Zeichenfolgenressourcen für Ihren Anbieter enthält (wie im -Attribut des Manifests `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\_V2Providers\{ProviderGuid}` `applicationIdentity` angegeben). Sie müssen über Administratorrechte verfügen, um die LodCtr.exe. Beispiel für einen Installationsbefehl:
 
-**LodCtr.exe** /M: "*Manifest*" \[ "*applicationidentitydirectory*"\]
+**LodCtr.exe** /M:"*manifest*" \[ "*ApplicationIdentityDirectory*"\]
 
-Wenn Sie einen CounterSet aktualisieren müssen, deinstallieren Sie das alte CounterSet mithilfe des [UnlodCtr.exe Tools](/windows-server/administration/windows-commands/unlodctr_1) mit dem- `/G:` Parameter oder dem- `/P:` Parameter. Nachdem der alte CounterSet deinstalliert wurde, können Sie den aktualisierten CounterSet installieren.
+Wenn Sie ein Counterset aktualisieren müssen, deinstallieren Sie das alte Counterset mithilfe desUnlodCtr.exe [ Tools](/windows-server/administration/windows-commands/unlodctr_1) mit den `/G:` Parametern oder `/P:` . Nachdem das alte Counterset deinstalliert wurde, können Sie das aktualisierte Counterset installieren.
 
 ## <a name="schema"></a>Schema
 
-Im folgenden finden Sie das Leistungsindikator Schema, das Sie verwenden können, um den Abschnitt ihres Manifests zu validieren `counters` . Dieses Schema befindet sich in der Windows SDK `counterman.xsd` . Ausführliche Informationen zu dem Schema, das Sie zum Überprüfen des Instrumentations Abschnitts des Manifests verwenden, finden Sie unter [eventmanifest-Schema](/windows/desktop/WES/eventmanifestschema-schema).
+Im Folgenden finden Sie das Schema der Leistungsindikatoren, mit dem Sie den `counters` Abschnitt Ihres Manifests überprüfen können. Dieses Schema befindet sich im Windows SDK als `counterman.xsd` . Weitere Informationen zum Schema, das Sie zum Überprüfen des Instrumentierungsabschnitts des Manifests verwenden, finden Sie unter [EventManifest-Schema.](/windows/desktop/WES/eventmanifestschema-schema)
 
 ``` syntax
 <xs:schema
@@ -376,9 +376,9 @@ Im folgenden finden Sie das Leistungsindikator Schema, das Sie verwenden können
 </xs:schema>
 ```
 
-## <a name="example-user-mode-manifest"></a>Beispiel User-Mode Manifest
+## <a name="example-user-mode-manifest"></a>Beispiel für User-Mode Manifest
 
-Das folgende Beispiel zeigt ein Beispiel Manifest, das Leistungsindikatoren für einen benutzermodusanbieter definiert.
+Das folgende Beispielmanifest definiert Leistungsindikatoren für einen Benutzermodusanbieter.
 
 ```XML
 <?xml version="1.0"?>
@@ -538,9 +538,9 @@ Das folgende Beispiel zeigt ein Beispiel Manifest, das Leistungsindikatoren für
 </instrumentationManifest>
 ```
 
-## <a name="example-kernel-mode-manifest"></a>Beispiel Kernel-Mode Manifest
+## <a name="example-kernel-mode-manifest"></a>Beispiel für Kernel-Mode Manifest
 
-Das folgende Beispiel zeigt ein Beispiel Manifest, das Leistungsindikatoren für einen kernelmodusanbieter definiert.
+Im Folgenden finden Sie ein Beispielmanifest, das Leistungsindikatoren für einen Kernelmodusanbieter definiert.
 
 ```XML
 <?xml version="1.0"?>

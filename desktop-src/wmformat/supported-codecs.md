@@ -3,23 +3,23 @@ title: Unterstützte Codecs
 description: Unterstützte Codecs
 ms.assetid: d5907d38-2e26-442e-a0d1-1d7e267b9948
 keywords:
-- Windows Media-Format-SDK, unterstützte Codecs
-- Windows Media-Format-SDK, IWMCodecInfo3-Schnittstelle
+- Windows Medienformat-SDK, unterstützte Codecs
+- Windows Medienformat-SDK, IWMCodecInfo3-Schnittstelle
 - Codecs, unterstützt
-- IWMCodecInfo3, Informationen zu
-- Codecs, IWMCodecInfo3-Schnittstelle
+- IWMCodecInfo3,About
+- codecs,IWMCodecInfo3-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5ac06ad3d58d066254fa666f96283dca9b8b6ae
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 12734c73145b13a02c0b97cab283e0ba104d37f41592b5d55d64bb2502101302
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006590"
 ---
 # <a name="supported-codecs"></a>Unterstützte Codecs
 
-Das Windows Media-Format SDK bietet Unterstützung für die folgenden Codecs, die bei der Installation des SDK enthalten sind.
+Das Windows Media Format SDK bietet Unterstützung für die folgenden Codecs, die bei der Installation des SDK enthalten sind.
 
 
 
@@ -37,46 +37,46 @@ Das Windows Media-Format SDK bietet Unterstützung für die folgenden Codecs, di
 <tbody>
 <tr class="odd">
 <td>Windows Media Audio</td>
-<td>Audiocodec zur allgemeinen Verwendung bei der Codierung komplexer Audiodaten, z. b. für Musik. Die neuesten Versionen dieses Codecs sind der Windows Media Audio 9-Codec und der Windows Media Audio 9,1-Codec.<br/></td>
+<td>Audiocodec für die allgemeine Verwendung bei der Codierung komplexer Audiodaten, z. B. Musik. Die neuesten Versionen dieses Codecs sind der Windows Media Audio 9-Codec und der Windows Media Audio 9.1-Codec.<br/></td>
 </tr>
 <tr class="even">
-<td>Windows Media Audio Professional</td>
-<td>Audiocodec für komplexe Audiodaten, wie z. b. Musik. Unterstützt die Multichannel-und 24-Bit-Codierung. Es gibt zwei Versionen dieses Codecs:<br/>
+<td>Windows Medienaudio Professional</td>
+<td>Audiocodec für komplexe Audiodaten, z. B. Musik. Unterstützt Multichannel- und 24-Bit-Codierung. Es gibt zwei Versionen dieses Codecs:<br/>
 <ul>
 <li>Windows Media Audio 9 Professional</li>
-<li>Windows Media Audio 9,1 Professional</li>
+<li>Windows Media Audio 9.1 Professional</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Verlust von Windows Media Audio Verlust</td>
-<td>Audiocodec für Verlust lose Codierung. Es gibt zwei Versionen dieses Codecs:<br/>
+<td>Windows Medienaudio verlustfrei</td>
+<td>Audiocodec für verlustfreie Codierung. Es gibt zwei Versionen dieses Codecs:<br/>
 <ul>
-<li>Windows Media Audio 9 verlustfreier</li>
-<li>Windows Media Audio 9,1 verlustfreie</li>
+<li>Windows Media Audio 9 – verlustfrei</li>
+<li>Windows Medienaudio 9.1 Verlustlos</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Windows Media Audio 9-Stimme</td>
-<td>Audiocodec, der für die Codierung der menschlichen Stimme bei hohen Komprimierungs Verhältnissen optimiert ist. Dies ist der bevorzugte Codec für Streams, die größtenteils aus gesprochenen Wörtern bestehen. Für Inhalte, die gemischte Musik und Sprache sind, kann dieser Codec den Codierungs Algorithmus dynamisch ändern, der zum Erzielen optimaler Qualität verwendet wird.</td>
+<td>Windows Media Audio 9 Voice</td>
+<td>Audiocodec, der für die Codierung der menschlichen Stimme mit hohen Komprimierungsverhältnissen optimiert ist. Dies ist der bevorzugte Codec für Streams, die größtenteils aus gesprochenen Wörtern bestehen. Bei Inhalten mit gemischter Musik und Sprache kann dieser Codec den Codierungsalgorithmus, der verwendet wird, dynamisch ändern, um eine optimale Qualität zu erzielen.</td>
 </tr>
 <tr class="odd">
-<td>Windows Media Video 9</td>
-<td>Videocodec zur allgemeinen Verwendung bei der Codierung komplexer Videos, z. b. Filme.</td>
+<td>Windows Medienvideo 9</td>
+<td>Videocodec für die allgemeine Verwendung bei der Codierung komplexer Videos, z. B. Filme.</td>
 </tr>
 <tr class="even">
-<td>Erweiterte profile Windows Media Video 9</td>
-<td>Videocodec, der erweiterte Codierungs Funktionen enthält, einschließlich Zeilen Sprung Codierung.</td>
+<td>Windows Media Video 9 – Erweitertes Profil</td>
+<td>Videocodec mit erweiterten Codierungsfunktionen, einschließlich Interlacingcodierung.</td>
 </tr>
 <tr class="odd">
-<td>Windows Media Video 9-Bildschirm</td>
-<td>Videocodec für die Codierung sequenzieller Screenshots optimiert. Dieser Codec wird häufig für Software Schulungen oder-Unterstützung verwendet, indem Überwachungs Images aufgezeichnet werden, wenn Computeranwendungen verwendet werden.</td>
+<td>Windows Bildschirm "Medienvideo 9"</td>
+<td>Für die Codierung sequenzieller Screenshots optimierter Videocodec. Dieser Codec wird häufig für Softwaretraining oder -unterstützung verwendet, indem Überwachungsbilder aufgezeichnet werden, während Computeranwendungen verwendet werden.</td>
 </tr>
 <tr class="even">
-<td>Bild Windows Media Video</td>
-<td>Videocodec zum wandeln von Bitmapbildern mit demarkerinformationen in komprimiertes Video. Es gibt zwei Versionen dieses Codecs:<br/>
+<td>Windows Medienvideobild</td>
+<td>Videocodec zum Konvertieren von Bitmapbildern mit Infodaten in komprimierte Videos. Es gibt zwei Versionen dieses Codecs:<br/>
 <ul>
-<li>Bild Windows Media Video 9</li>
-<li>Windows Media Video 9 Abbild v2</li>
+<li>Windows Video 9-Medienbild</li>
+<li>Windows Media Video 9 Image v2</li>
 </ul></td>
 </tr>
 </tbody>
@@ -86,7 +86,7 @@ Das Windows Media-Format SDK bietet Unterstützung für die folgenden Codecs, di
 
  
 
-Abhängig von der Version des Windows Media-Format-SDKs, das Sie installieren, sind verschiedene Versionen der Windows Media Audio-und Video Codecs für die Codierung verfügbar. Wenn Sie die-Methoden verwenden, wenn die [**IWMCodecInfo3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo3) -Schnittstelle zum Auflisten von Codecs und Codec-Formaten verwendet wird, werden nur die neuesten unterstützten Versionen aufgelistet.
+Je nach Version des Windows Media Format SDK, das Sie installieren, stehen verschiedene Versionen der Windows Medienaudio- und Videocodecs für die Codierung zur Verfügung. Wenn Sie die Methoden verwenden, wenn die [**IWMCodecInfo3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo3) zum Auflisten von Codecs und Codecformaten verwendet wird, werden nur die neuesten unterstützten Versionen aufgeführt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -95,7 +95,7 @@ Abhängig von der Version des Windows Media-Format-SDKs, das Sie installieren, s
 [**Auswählen einer Codierungsmethode**](choosing-an-encoding-method.md)
 </dt> <dt>
 
-[**Codec-Features**](codec-features.md)
+[**Codecfunktionen**](codec-features.md)
 </dt> </dl>
 
  

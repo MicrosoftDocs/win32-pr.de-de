@@ -1,95 +1,95 @@
 ---
-description: Beim Arbeiten mit Peer Diagrammen müssen Funktionen in einer bestimmten Reihenfolge aufgerufen werden. Der Ablauf von Aufrufen hängt davon ab, ob Sie ein Peer Diagramm erstellen oder öffnen. In diesem Thema wird der Ablauf von Funktionsaufrufen in einer einfachen Peer Graph-Anwendung beschrieben.
+description: Beim Arbeiten mit Peerdiagrammen müssen Funktionen in einer bestimmten Reihenfolge aufgerufen werden. Der Fluss der Aufrufe hängt davon ab, ob Sie ein Peerdiagramm erstellen oder öffnen. In diesem Thema wird der Fluss von Funktionsaufrufen in einer einfachen Peergraphanwendung beschrieben.
 ms.assetid: cb4f48d0-d1e2-4a4b-bd5a-6e8f66d03806
 title: Arbeiten mit Diagrammen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4328b7a0109139421cf03c72a7228a3dc17e375
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcdb4a40f1c086ada772239798990c3dfb24326b3e70bd768a95eacc35ee384b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034030"
 ---
 # <a name="working-with-graphs"></a>Arbeiten mit Diagrammen
 
-Beim Arbeiten mit Peer Diagrammen müssen Funktionen in einer bestimmten Reihenfolge aufgerufen werden. Der Ablauf von Aufrufen hängt davon ab, ob Sie ein Peer Diagramm erstellen oder öffnen. In diesem Thema wird der Ablauf von Funktionsaufrufen in einer einfachen Peer Graph-Anwendung beschrieben.
+Beim Arbeiten mit Peerdiagrammen müssen Funktionen in einer bestimmten Reihenfolge aufgerufen werden. Der Fluss der Aufrufe hängt davon ab, ob Sie ein Peerdiagramm erstellen oder öffnen. In diesem Thema wird der Fluss von Funktionsaufrufen in einer einfachen Peergraphanwendung beschrieben.
 
-## <a name="starting-up-a-graph"></a>Starten eines Diagramms
+## <a name="starting-up-a-graph"></a>Starten eines Graph
 
-Bevor eine Anwendung eine Funktion in der Peer graphende-API aufruft, muss [**peergraphstartup**](/windows/desktop/api/P2P/nf-p2p-peergraphstartup) aufgerufen werden, um die Peer graphapi für eine Anwendung zu initialisieren und dann die unterstützte Version festzulegen.
+Bevor eine Anwendung eine Funktion in der Peer Graphing-API aufruft, muss [**PeerGraphStartup**](/windows/desktop/api/P2P/nf-p2p-peergraphstartup) aufgerufen werden, um die Peer Graphing-API für eine Anwendung zu initialisieren, und dann die unterstützte Version festlegen.
 
-## <a name="creating-a-peer-graph"></a>Erstellen eines Peer Diagramms
+## <a name="creating-a-peer-graph"></a>Erstellen eines Peer-Graph
 
-Im folgenden Verfahren wird der Fluss von Aufrufen zum Erstellen eines Peer Diagramms identifiziert.
+Das folgende Verfahren identifiziert den Fluss der Aufrufe zum Erstellen eines Peerdiagramms.
 
 > [!IMPORTANT]
-> [**Peergraphcreate**](/windows/desktop/api/P2P/nf-p2p-peergraphcreate)sollte nur von einem Peer aufgerufen werden. Alle anderen Peers sollten [**peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen)aufruft. Mehrere Aufrufe von " **Peer Graph Create** " machen ein Diagramm ungültig.
+> Nur ein Peer sollte [**PeerGraphCreate aufrufen.**](/windows/desktop/api/P2P/nf-p2p-peergraphcreate) Alle anderen Peers sollten [**PeerGraphOpen aufrufen.**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) Mehrere Aufrufe von **PeerGraphErkennen** eines Graphen ungültig.
 
  
 
--   Erstellen Sie ein Peer Diagramm. Rufen Sie " [**Peer graphcreate**](/windows/desktop/api/P2P/nf-p2p-peergraphcreate)" auf.
--   Registrieren Sie sich für Peer Ereignisse. Aufrufen von " [**Peer Diagramm Register Event**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)".
+-   Erstellen Sie ein Peerdiagramm. Rufen Sie [**PeerGraphErzeugen auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphcreate)
+-   Registrieren Sie sich für Peerereignisse. Rufen Sie [**PeerGraphRegisterEvent auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)
     > [!Note]  
-    > Weitere Informationen zum Registrieren von Peer Ereignissen finden Sie unter [Events Infrastructure](peer-events-infrastructure.md).
+    > Weitere Informationen zum Registrieren für Peerereignisse finden Sie unter [Ereignisinfrastruktur.](peer-events-infrastructure.md)
 
      
 
--   Lauschen Sie auf Verbindungen mit einem Peer Diagramm. Nennen Sie " [**Peer Diagramm**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)".
--   Ausführen von Anwendungs abhängigen Funktionen für die restliche Dauer der Laufzeit, z. b. verarbeiten von Peer Ereignissen und arbeiten mit Verbindungen.
--   Schließen Sie die Verbindung mit einem Peer Diagramm. Ruft " [**Peer graphclose**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)" auf.
+-   Lauschen Sie auf Verbindungen mit einem Peerdiagramm. Rufen Sie [**PeerGraphListen auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)
+-   Führen Sie anwendungsabhängige Funktionen für den Rest der Ausführungszeit aus, z. B. Verarbeiten von Peerereignissen und Arbeiten mit Verbindungen.
+-   Schließen Sie die Verbindung mit einem Peerdiagramm. Rufen Sie [**PeerGraphClose auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)
 
-## <a name="opening-a-peer-graph"></a>Öffnen eines Peer Diagramms
+## <a name="opening-a-peer-graph"></a>Öffnen eines Peer-Graph
 
-Der Ablauf von Funktionsaufrufen zum Öffnen eines Peer Diagramms hängt vom Rückgabewert des Aufrufs von [**peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen)ab. Die wichtigsten Werte sind **S \_ OK** und **Peer S- \_ \_ Daten \_**, die in den folgenden Abschnitten dieses Themas erläutert werden.
+Der Fluss von Funktionsaufrufen zum Öffnen eines Peerdiagramms hängt vom Rückgabewert des Aufrufs von [**PeerGraphOpen ab.**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) Die wichtigsten Werte sind **S \_ OK** und **PEER S DATA \_ \_ \_ CREATED,** die in den folgenden Abschnitten dieses Themas erläutert werden.
 
 > [!Note]  
-> Wenn bei einem [**peergraphopen-peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) -Befehl keine **S \_ OK** -oder **Peer \_ S- \_ Daten \_** zurückgegeben werden, behandeln Sie den Fehler.
+> Wenn bei einem Aufruf von [**PeerGraphOpen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **weder S \_ OK** noch **PEER S DATA \_ \_ \_ CREATED** zurückgegeben wird, behandeln Sie den Fehler.
 
  
 
-## <a name="when-peergraphopen-returns-s_ok"></a>Wenn "Peer Diagramm Open" S \_ OK zurückgibt
+## <a name="when-peergraphopen-returns-s_ok"></a>Wenn PeerGraphOpen S \_ OK zurückgibt
 
-Wenn ein Aufruf von [**peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **S \_ OK** zurückgibt, wurden ein Peer Diagramm und eine vorhandene Datenbank geöffnet. Das folgende Verfahren zeigt, wie Sie ein Peer Diagramm öffnen können, wenn ein Aufruf von **peergraphopen** **S \_ OK** zurückgibt.
+Wenn ein Aufruf von [**PeerGraphOpen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **S \_ OK** zurückgibt, wurden ein Peerdiagramm und eine vorhandene Datenbank geöffnet. Das folgende Verfahren identifiziert, was Sie tun können, um ein Peerdiagramm zu öffnen, wenn ein Aufruf von **PeerGraphOpen** **S OK \_ zurückgibt.**
 
--   Registrieren Sie sich für Peer Ereignisse. Aufrufen von " [**Peer Diagramm Register Event**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)".
+-   Registrieren Sie sich für Peerereignisse. Rufen Sie [**PeerGraphRegisterEvent auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)
     > [!Note]  
-    > Weitere Informationen zum Registrieren von Ereignissen finden Sie unter [Events Infrastructure](peer-events-infrastructure.md).
+    > Weitere Informationen zum Registrieren für Ereignisse finden Sie unter [Ereignisinfrastruktur.](peer-events-infrastructure.md)
 
      
 
--   Suchen Sie einen Knoten. Dabei handelt es sich um einen Prozess, der außerhalb der Peer Diagramm Infrastruktur durchgeführt wird, indem eine Methode oder eine Anwendung verwendet wird, die Sie identifizieren. Die Peer Graph-API bietet keinen spezifischen Mechanismus zum Suchen eines ersten Diagramm Knotens, mit dem eine Verbindung hergestellt werden soll. Eine Anwendung muss einen anderen Mechanismus, wie z. b. die API des [Peer Name Resolution-Protokolls (PNRP)](pnrp-namespace-provider-api.md) , verwenden, um den ersten Knoten zu suchen.
--   Wenn ein Knoten gefunden wird, stellen Sie eine Verbindung mit ihm her. Nennen Sie [**peergraphconnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect), und klicken Sie dann auf [**peergraphlauschen**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) , um Verbindungen mit dem Peer Diagramm zu überwachen.
+-   Suchen Sie einen Knoten. Dies ist ein Prozess, der außerhalb der Peer graphing-Infrastruktur mithilfe einer von Ihnen identifizierten Methode oder Anwendung ausgeführt wird. Die Peer Graphing-API bietet keinen bestimmten Mechanismus zum Suchen eines anfänglichen Graphknotens, mit dem eine Verbindung hergestellt werden soll. Eine Anwendung muss einen anderen Mechanismus verwenden, z. B. die [PNRP-API (Peer Name Resolution Protocol),](pnrp-namespace-provider-api.md) um den ersten Knoten zu finden.
+-   Wenn ein Knoten gefunden wird, stellen Sie eine Verbindung mit ihm herstellen. Rufen [**Sie PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect)auf, und rufen Sie [**dann PeerGraphListen auf,**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) um auf Verbindungen mit dem Peerdiagramm zu lauschen.
     > [!Note]  
-    > Wenn ein Knoten nicht gefunden wird, dürfen Sie nicht " [**Peer Diagramm Connect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) " und " [**Peer Diagramm**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)" anrufen.
+    > Wenn kein Knoten gefunden wird, rufen Sie [**PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) und [**PeerGraphListen nicht auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)
 
      
 
--   Ausführen von Anwendungs abhängigen Funktionen für die restliche Dauer der Laufzeit, z. b. verarbeiten von Peer Ereignissen und arbeiten mit Verbindungen, je nachdem, ob der Knoten mit dem peergraph verbunden ist oder nicht. Die Anwendung kann z. b. ein Timeout oder eine regelmäßige Ermittlung für einen aktiven Knoten im Diagramm auswählen.
--   Schließen Sie die Verbindung mit dem Peer Diagramm. Ruft " [**Peer graphclose**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)" auf.
+-   Führen Sie anwendungsabhängige Funktionen für den Rest der Ausführungszeit aus, z. B. Verarbeiten von Peerereignissen und Arbeiten mit Verbindungen, je nachdem, ob der Knoten mit dem Peerdiagramm verbunden ist oder nicht. Beispielsweise kann die Anwendung ein Timeout festlegen oder regelmäßig eine Ermittlung für einen aktiven Knoten im Graphen durchführen.
+-   Schließen Sie die Verbindung mit dem Peerdiagramm. Rufen Sie [**PeerGraphClose auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)
 
-## <a name="when-peergraphopen-returns-peer_s_data_created"></a>Wenn peergraphopen Peer S-Daten zurückgibt, die \_ \_ \_ erstellt wurden
+## <a name="when-peergraphopen-returns-peer_s_data_created"></a>Wenn PeerGraphOpen PEER \_ S \_ DATA CREATED \_ zurückgibt
 
-Wenn [**peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **Peer- \_ S- \_ Daten \_** zurückgibt, bedeutet dies, dass eine vorhandene Datenbank für ein Peer Diagramm nicht gefunden wird, eine neue Datenbank erstellt wird und diese zum ersten Mal geöffnet wird. Um ein Peer Diagramm zu verwenden oder zu lauschen, muss ein Peer mit einem Peer Diagramm verbunden und synchronisiert werden.
+Wenn [**PeerGraphOpen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **PEER S DATA \_ \_ \_ CREATED** zurückgibt, bedeutet dies, dass keine vorhandene Datenbank für einen Peergraphen gefunden wird, eine neue Datenbank erstellt wird, und dies ist das erste Mal, wenn sie geöffnet wird. Um ein Peerdiagramm zu verwenden oder zu lauschen, muss ein Peer mit einem Peerdiagramm verbunden und mit diesem synchronisiert werden.
 
-Das folgende Verfahren zeigt, wie Sie ein Peer Diagramm öffnen können, wenn ein Aufruf von [**peergraphopen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **Peer- \_ S \_ - \_ Daten** zurückgibt.
+Das folgende Verfahren identifiziert, was Sie tun können, um ein Peerdiagramm zu öffnen, wenn ein Aufruf von [**PeerGraphOpen**](/windows/desktop/api/P2P/nf-p2p-peergraphopen) **PEER S DATA CREATED \_ \_ \_ zurückgibt.**
 
--   Öffnen Sie ein Peer Diagramm. Ruft " [**Peer Diagramm Open**](/windows/desktop/api/P2P/nf-p2p-peergraphopen)" auf.
--   Registrieren Sie sich für Peer Ereignisse. Aufrufen von " [**Peer Diagramm Register Event**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)".
+-   Öffnen Sie ein Peerdiagramm. Rufen Sie [**PeerGraphOpen auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphopen)
+-   Registrieren Sie sich für Peerereignisse. Rufen Sie [**PeerGraphRegisterEvent auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphregisterevent)
     > [!Note]  
-    > Weitere Informationen zum Registrieren von Peer Ereignissen finden Sie unter [Events Infrastructure](peer-events-infrastructure.md).
+    > Weitere Informationen zum Registrieren für Peerereignisse finden Sie unter [Ereignisinfrastruktur.](peer-events-infrastructure.md)
 
      
 
--   Suchen Sie einen Knoten. Dabei handelt es sich um einen Prozess, der außerhalb der Peer Diagramm Infrastruktur durchgeführt wird, indem eine Methode oder eine Anwendung verwendet wird, die Sie identifizieren. Die Peer Graph-API bietet keinen spezifischen Mechanismus zum Suchen eines ersten Diagramm Knotens, mit dem eine Verbindung hergestellt werden soll. Eine Anwendung muss einen anderen Mechanismus, wie z. b. die API des [Peer Name Resolution-Protokolls (PNRP)](pnrp-namespace-provider-api.md) , verwenden, um den ersten Knoten zu suchen.
--   Wenn ein Knoten gefunden wird, stellen Sie eine Verbindung mit ihm her. Nennen Sie [**peergraphconnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect), und klicken Sie dann auf [**peergraphlauschen**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) , um Verbindungen mit dem Peer Diagramm zu überwachen.
+-   Suchen Sie einen Knoten. Dies ist ein Prozess, der außerhalb der Peer graphing-Infrastruktur mithilfe einer von Ihnen identifizierten Methode oder Anwendung ausgeführt wird. Die Peer Graphing-API bietet keinen bestimmten Mechanismus zum Suchen eines anfänglichen Graphknotens, mit dem eine Verbindung hergestellt werden soll. Eine Anwendung muss einen anderen Mechanismus verwenden, z. B. die [PNRP-API (Peer Name Resolution Protocol),](pnrp-namespace-provider-api.md) um den ersten Knoten zu finden.
+-   Wenn ein Knoten gefunden wird, stellen Sie eine Verbindung mit ihm herstellen. Rufen [**Sie PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect)auf, und rufen Sie [**dann PeerGraphListen auf,**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) um auf Verbindungen mit dem Peerdiagramm zu lauschen.
     > [!Note]  
-    > Wenn ein Knoten nicht gefunden wird, dürfen Sie nicht " [**Peer Diagramm Connect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) " und " [**Peer Diagramm**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)" anrufen.
+    > Wenn kein Knoten gefunden wird, rufen Sie [**PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) und [**PeerGraphListen nicht auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)
 
      
 
--   Ausführen von Anwendungs abhängigen Funktionen für die restliche Dauer der Laufzeit, z. b. verarbeiten von Peer Ereignissen und arbeiten mit Verbindungen, je nachdem, ob der Knoten mit dem peergraph verbunden ist oder nicht. Die Anwendung kann z. b. ein Timeout oder eine regelmäßige Ermittlung für einen aktiven Knoten im Diagramm auswählen.
--   Schließen Sie die Verbindung mit dem Peer Diagramm. Ruft " [**Peer graphclose**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)" auf.
+-   Führen Sie anwendungsabhängige Funktionen für den Rest der Ausführungszeit aus, z. B. Verarbeiten von Peerereignissen und Arbeiten mit Verbindungen, je nachdem, ob der Knoten mit dem Peerdiagramm verbunden ist oder nicht. Beispielsweise kann die Anwendung ein Timeout festlegen oder regelmäßig eine Ermittlung für einen aktiven Knoten im Graphen durchführen.
+-   Schließen Sie die Verbindung mit dem Peerdiagramm. Rufen Sie [**PeerGraphClose auf.**](/windows/desktop/api/P2P/nf-p2p-peergraphclose)
 
  
 

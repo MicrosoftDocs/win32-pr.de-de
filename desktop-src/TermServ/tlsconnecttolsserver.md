@@ -1,10 +1,10 @@
 ---
-title: Tlsconnecttolsserver-Funktion
-description: Öffnet ein Handle für die angegebene Remotedesktop Lizenzservers.
+title: TLSConnectToLsServer-Funktion
+description: Öffnet ein Handle für den angegebenen Remotedesktop Lizenzserver.
 ms.assetid: 9e90a8e8-9319-42ee-b541-a1d028b6ed4d
 ms.tgt_platform: multiple
 keywords:
-- Tlsconnecttolsserver-Funktion Remotedesktopdienste
+- TLSConnectToLsServer-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fc7f36b519399f0a8c1627fad7c7768f36ece57f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dbfc3c1e365a97b8199df34c2e55a8362f48b7f6a2a43e524e3c6e937de5cb0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986970"
 ---
-# <a name="tlsconnecttolsserver-function"></a>Tlsconnecttolsserver-Funktion
+# <a name="tlsconnecttolsserver-function"></a>TLSConnectToLsServer-Funktion
 
-Öffnet ein Handle für die angegebene Remotedesktop Lizenzservers.
+Öffnet ein Handle für den angegebenen Remotedesktop Lizenzserver.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mstlsapi.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mstlsapi.dll.
 
  
 
@@ -46,10 +46,10 @@ TLS_HANDLE WINAPI TLSConnectToLsServer(
 
 <dl> <dt>
 
-*pszlsserver* \[ in\]
+*pszLsServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit **null** endenden Zeichenfolge, die den NetBIOS-Namen des Remotedesktop Lizenzservers angibt. Wenn der Wert dieses Parameters **null** ist, ist der angegebene Server der lokale Computer.
+Zeiger auf eine mit **NULL beendete** Zeichenfolge, die den NetBIOS-Namen des Remotedesktop angibt. Wenn der Wert dieses Parameters **NULL ist,** ist der angegebene Server der lokale Computer.
 
 </dd> </dl>
 
@@ -57,11 +57,11 @@ Zeiger auf eine mit **null** endenden Zeichenfolge, die den NetBIOS-Namen des Re
 
 Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Handle für den angegebenen Server.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert **null**. Um erweiterte Fehlerinformationen abzurufen, müssen Sie die [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion aufrufen.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert **NULL.** Um erweiterte Fehlerinformationen zu erhalten, rufen Sie die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie mit der Verwendung des Handles, das von der **tlsconnecttolsserver** -Funktion zurückgegeben wird, fertig sind, geben Sie es durch Aufrufen der [**tlsdisconnectfromserver**](tlsdisconnectfromserver.md) -Funktion frei.
+Wenn Sie das von der **TLSConnectToLsServer-Funktion** zurückgegebene Handle nicht mehr verwenden, geben Sie es frei, indem Sie die [**TLSDisconnectFromServer-Funktion**](tlsdisconnectfromserver.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,10 +79,10 @@ Wenn Sie mit der Verwendung des Handles, das von der **tlsconnecttolsserver** -F
 
 <dl> <dt>
 
-[**TLS- \_ handle**](tls-handle.md)
+[**\_TLS-HANDLE**](tls-handle.md)
 </dt> <dt>
 
-[**Tlsdisconnectfromserver**](tlsdisconnectfromserver.md)
+[**TLSDisconnectFromServer**](tlsdisconnectfromserver.md)
 </dt> </dl>
 
  

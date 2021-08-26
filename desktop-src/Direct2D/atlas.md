@@ -1,39 +1,39 @@
 ---
 title: Atlas-Effekt
-description: Sie können diesen Effekt verwenden, um einen Teil eines Bilds auszugeben, aber den Bereich außerhalb des Teils für die Verwendung in nachfolgenden Vorgängen beibehalten.
+description: Sie können diesen Effekt verwenden, um einen Teil eines Images ausausgaben, aber den Bereich außerhalb des Teils für die Verwendung in nachfolgenden Vorgängen beibehalten.
 ms.assetid: D35E32CB-4DF7-408F-A717-1E421DDC8763
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f9e1d4c6df0698d47a35eb2cbdaf670b98ed125
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 71b0d55e7751ef73d8f6bdff65a6ae5d5933695600a1003b9c4a010231628019
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929049"
 ---
 # <a name="atlas-effect"></a>Atlas-Effekt
 
-Sie können diesen Effekt verwenden, um einen Teil eines Bilds auszugeben, aber den Bereich außerhalb des Teils für die Verwendung in nachfolgenden Vorgängen beibehalten.
+Sie können diesen Effekt verwenden, um einen Teil eines Images ausausgaben, aber den Bereich außerhalb des Teils für die Verwendung in nachfolgenden Vorgängen beibehalten.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Atlas.
 
-Der Atlas-Effekt ist hilfreich, wenn Sie ein umfangreiches Bild laden möchten, das aus vielen kleineren Bildern besteht, z. b. aus verschiedenen Rahmen eines Sprite.
+Der Atlaseffekt ist nützlich, wenn Sie ein großes Bild laden möchten, das aus vielen kleineren Bildern besteht, z. B. verschiedenen Frames eines Sprite.
 
-So erstellen Sie die Ausgabe:
+So erstellen Sie die Ausgabe des Effekts:
 
-1.  Fügt die Eingabe in die angegebene *inputrect* -Eigenschaft ein.
+1.  Endt die Eingabe in die *gegebene InputRect-Eigenschaft.*
 2.  Übersetzt den Ursprung des Ergebnisses in (0,0).
 
 > [!Note]  
-> Die *inputpaddingrect* -Eigenschaft sollte nur dann größer sein, wenn die Pixel zwischen den zwei Rechtecke in der Eingabe transparent sind. Dies kann dazu führen, dass Direct2D das Diagramm optimaler ausführt.
+> Die *InputPaddingRect-Eigenschaft* sollte nur dann größer sein, wenn die Pixel zwischen den beiden Rechtecke in der Eingabe transparent schwarz sind. Dies kann dazu führen, dass Direct2D den Graphen optimaler ausführen kann.
 
  
 
-Im folgenden finden Sie ein Beispiel für den Effekt. Dieses Bild ist für Illustrationszwecke klein und einfach.
+Hier ist ein Beispiel für den Effekt. Dieses Bild ist zu Veranschaulichungszwecken klein und einfach.
 
 ![Eingabebild.](images/atlas.png)
 
-Die vorherige Abbildung ist die Eingabe für den Effekt. Der Code hier erstellt einen Atlas-Effekt, legt die Eingabe fest, legt das Eingabe Rechteck fest und zeichnet dann die Ausgabe.
+Das obige Bild ist die Eingabe für den Effekt. Der Code hier erstellt einen Atlaseffekt, legt die Eingabe fest, legt das Eingaberechteck fest und zeichnet dann die Ausgabe.
 
 
 ```C++
@@ -62,23 +62,23 @@ m_d2dContext->DrawImage(atlasEffect.Get());
 
 
 
-Der vorangehende Code wählt ein Rechteck aus, das sich um das zweite Dreieck dreht. Der Abstand um diese wird ignoriert. Hier sehen Sie das resultierende Image.
+Der vorangehende Code wählt ein Rechteck aus, das sich um das zweite Dreieck befindet. Die Padding um sie wird ignoriert. Hier sehen Sie das resultierende Bild.
 
-![Ausgabe Bild.](images/atlas2.png)
+![Ausgabebild.](images/atlas2.png)
 
 > [!Note]  
-> Dies ist eine Situation, in der Sie ggf. eine *inputpaddingrect* -Angabe festlegen können, da der Abstand transparent schwarz ist. Das Rechteck wäre `D2D1::Vector4F(size + (padding * 2), 0, size + padding, size + padding);` .
+> Dies ist eine Situation, in der Sie ein *InputPaddingRect* angeben können, da die Auf padding transparent schwarz ist. Das Rechteck wäre `D2D1::Vector4F(size + (padding * 2), 0, size + padding, size + padding);` .
 
  
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                             | BESCHREIBUNG                                                                                                                                                                  |
+| Anzeigename und Indexenumeration                                             | BESCHREIBUNG                                                                                                                                                                  |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Input Rect<br/> D2D1 \_ Atlas \_ - \_ Eingabe \_ Rect<br/>                 | Der Teil des Bilds, der an den nächsten Effekt weitergeleitet wird.<br/> Typ: D2D1 \_ Vector \_ 4f<br/> Der Standardwert ist (-f \_ Max,-f Max \_ , SLT \_ Max, SLT \_ max). <br/> |
-| Input paddingrect<br/> D2D1 \_ Atlas \_ \_ Eingabe \_ \_ Auffüll Auffüll Text Rect<br/> | Die maximale Größe, die für das Ausgabe Rechteck Stichprobe ist.<br/> Typ: D2D1 \_ Vector \_ 4f<br/> Der Standardwert ist (-f \_ Max,-f Max \_ , SLT \_ Max, SLT \_ max).<br/>   |
+| InputRect<br/> D2D1 \_ ATLAS \_ PROP \_ INPUT \_ RECT<br/>                 | Der Teil des Bilds, der an den nächsten Effekt übergeben wird.<br/> Typ: D2D1 \_ VECTOR \_ 4F<br/> Der Standardwert ist (-FLT \_ MAX, -FLT \_ MAX, FLT \_ MAX, FLT \_ MAX). <br/> |
+| InputPaddingRect<br/> D2D1 \_ ATLAS \_ PROP \_ INPUT \_ PADDING \_ RECT<br/> | Die maximale Größe, die für das Ausgaberechteck entnommen wurde.<br/> Typ: D2D1 \_ VECTOR \_ 4F<br/> Der Standardwert ist (-FLT \_ MAX, -FLT \_ MAX, FLT \_ MAX, FLT \_ MAX).<br/>   |
 
 
 
@@ -90,10 +90,10 @@ Der vorangehende Code wählt ein Rechteck aus, das sich um das zweite Dreieck dr
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

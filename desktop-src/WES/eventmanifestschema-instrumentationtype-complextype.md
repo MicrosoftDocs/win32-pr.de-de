@@ -1,9 +1,9 @@
 ---
 title: Komplexer InstrumentationType-Typ
-description: Definiert den Inhalt des Instrumentations Abschnitts des Manifests.
+description: Definiert den Inhalt des Instrumentierungsabschnitts des Manifests.
 ms.assetid: dbbb978d-50dd-44c0-8bd1-3e48b41afb88
 keywords:
-- Instrumentierungstyp komplexer Typ EventLog
+- Komplexer InstrumentationType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1679ae310a996458aad3e25aba74955036094e00
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 21462782ad14dfd977c87ab0898b7b9d2211e730bae42ed6281207fc557a4101
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905000"
 ---
 # <a name="instrumentationtype-complex-type"></a>Komplexer InstrumentationType-Typ
 
-Definiert den Inhalt des Instrumentations Abschnitts des Manifests.
+Definiert den Inhalt des Instrumentierungsabschnitts des Manifests.
 
 ``` syntax
 <xs:complexType name="InstrumentationType">
@@ -50,7 +50,7 @@ Definiert den Inhalt des Instrumentations Abschnitts des Manifests.
 
 | Element                                                                  | type                                                             | BESCHREIBUNG                                                        |
 |--------------------------------------------------------------------------|------------------------------------------------------------------|--------------------------------------------------------------------|
-| [**events**](eventmanifestschema-events-instrumentationtype-element.md) | [**Eventstype**](eventmanifestschema-eventstype-complextype.md) | Enthält eine Liste der Anbieter, die das Manifest definiert.<br/> |
+| [**events**](eventmanifestschema-events-instrumentationtype-element.md) | [**EventsType**](eventmanifestschema-eventstype-complextype.md) | Enthält eine Liste von Anbietern, die das Manifest definiert.<br/> |
 
 
 
@@ -60,8 +60,8 @@ Definiert den Inhalt des Instrumentations Abschnitts des Manifests.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

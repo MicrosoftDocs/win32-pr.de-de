@@ -1,19 +1,19 @@
 ---
 title: Befehlsreferenz (Audiobearbeitungstool für linguistische Informationen)
-description: In dieser Befehlsreferenz wird das Sprachbearbeitungstool für linguistische Informationen beschrieben. Microsoft Agent ist ab Windows 7 veraltet.
+description: In dieser Befehlsreferenz wird das Sprachbearbeitungstool für linguistische Informationen beschrieben. Microsoft Agent ist ab 7 Windows veraltet.
 ms.assetid: 084f14ee-6774-46e2-a4ec-92f480f2f74a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a929691a96cfa62417785e1348448d78cc227be
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 7d942bccfc8d995b716902b3569eb05ddcd4cad5b12dc9e5fa2a781d692b6ac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963230"
 ---
 # <a name="command-reference-linguistic-information-sound-editing-tool"></a>Befehlsreferenz (Audiobearbeitungstool für linguistische Informationen)
 
-\[Microsoft Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ### <a name="the-file-menu"></a>Menü "Datei"
 
@@ -64,7 +64,7 @@ Verfolgt die zuletzt geöffneten Zeichendefinitionsdateien nach. Wenn Sie eine D
 <span id="Exit"></span><span id="exit"></span><span id="EXIT"></span>**Ausfahrt**
 </dt> <dd>
 
-Beendet den Sound-Editor. Wenn eine vorhandene Datei geladen wird und über nicht gespeicherte Bearbeitungen verfügt, zeigt der Sound-Editor eine Meldung an, um zu bestimmen, ob nicht gespeicherte Änderungen gespeichert oder verworfen werden.
+Beendet den Sound-Editor. Wenn eine vorhandene Datei geladen wird und nicht gespeicherte Bearbeitungen enthält, zeigt der Sound-Editor eine Meldung an, um zu bestimmen, ob nicht gespeicherte Änderungen gespeichert oder verworfen werden.
 
 </dd> </dl>
 

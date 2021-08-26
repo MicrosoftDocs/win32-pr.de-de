@@ -1,6 +1,6 @@
 ---
 title: MDM_BitLocker-Klasse
-description: Die MDM \_ -BitLocker-Klasse wird vom Unternehmen verwendet, um die Verschlüsselung von PCs und Geräten zu verwalten.
+description: Die \_ MDM-BitLocker-Klasse wird vom Unternehmen verwendet, um die Verschlüsselung von PCs und Geräten zu verwalten.
 ms.assetid: e8bea6dc-8d3d-46d2-b2e3-9a4c547a639f
 keywords:
 - MDM_BitLocker-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b94db491333cada64b6287dc87ec233b420bf0f6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 25c930742a6015f9c7638e9e1a5a677cc85c7f65b6c296da4544390ab8abf402
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984870"
 ---
-# <a name="mdm_bitlocker-class"></a>MDM- \_ BitLocker-Klasse
+# <a name="mdm_bitlocker-class"></a>\_MDM-BitLocker-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM \_ -BitLocker-Klasse wird vom Unternehmen verwendet, um die Verschlüsselung von PCs und Geräten zu verwalten.
+Die \_ MDM-BitLocker-Klasse wird vom Unternehmen verwendet, um die Verschlüsselung von PCs und Geräten zu verwalten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -56,17 +56,17 @@ class MDM_BitLocker
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ BitLocker** -Klasse verfügt über diese Typen von Membern:
+Die **\_ MDM-BitLocker-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ BitLocker** -Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-BitLocker-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowwarningforotherdiskencryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
+[AllowWarningForOtherDiskEncryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -77,7 +77,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Verschlüsselungsmethodbydrivetype](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+[EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Fixeddrivesherstellyoptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
+[FixedDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -99,7 +99,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Fixeddrivesrequirements-Verschlüsselung](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
+[FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -124,7 +124,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -138,7 +138,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Removabledrivesrequirements-Verschlüsselung](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+[RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -149,7 +149,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements deviceencryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+[RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -160,7 +160,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements storagecardencryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
+[RequireStorageCardEncryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -171,7 +171,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Systemdrivesminimumpinlength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
+[SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -182,7 +182,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Systemdriveswiederherstellbarkeits-](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)
+[SystemDrivesRecoveryMessage](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -193,7 +193,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Systemdriveswiederherstellbarkeits Optionen](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
+[SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -204,7 +204,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Systemdrivesrequirements startupauthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+[SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -221,10 +221,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

@@ -1,17 +1,17 @@
 ---
 description: Passt den Kontrast an.
 ms.assetid: 32ae514a-eeba-4205-b6e6-70fc01b93a95
-title: MFPKEY_COLOR_CONTRAST-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_COLOR_CONTRAST-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5de0733e743c3ce12bfe9a04159a2e881bf2143
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94c1c794b10580cbb323d19f52eed7d3bfb5fc6cf96e316d708491025776cfff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954470"
 ---
-# <a name="mfpkey_color_contrast-property"></a>Eigenschaft für den mfpkey- \_ Farb \_ Kontrast
+# <a name="mfpkey_color_contrast-property"></a>MFPKEY \_ COLOR \_ CONTRAST-Eigenschaft
 
 Passt den Kontrast an.
 
@@ -29,13 +29,13 @@ VT \_ I4
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Farb Steuerungs Transformation (DSP)](colorcontroltransform.md)
+-   [Farbsteuerelementtransformations-DSP](colorcontroltransform.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Kontrast Anpassung erfolgt durch Multiplikation der YCbCr-Werte mit einem Skalierungsfaktor.
+Die Kontrastanpassung erfolgt durch Multiplikation der YCbCr-Werte mit einem Skalierungsfaktor.
 
-Diese Eigenschaft hat einen Bereich von-127 bis 127. NULL gibt an, dass keine Änderung im Gegensatz dazu besteht.
+Diese Eigenschaft hat einen Bereich von -127 bis 127. 0 (null) gibt keine Änderung des Kontrasts an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Diese Eigenschaft hat einen Bereich von-127 bis 127. NULL gibt an, dass keine Ä
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -53,7 +53,7 @@ Diese Eigenschaft hat einen Bereich von-127 bis 127. NULL gibt an, dass keine Ä
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

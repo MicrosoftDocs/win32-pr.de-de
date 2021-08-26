@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicencmanagement | atelicenabenumeration-Methode (wmdrmsdk. h)
-description: Die Methode "samatelicenseenumeration" erstellt ein Lizenz-Enumeratorobjekt, mit dem Sie Informationen zu Lizenzen im lokalen Lizenz Speicher erhalten können.
+title: IWMDRMLicenseManagement CreateLicenseEnumeration-Methode (Wmdrmsdk.h)
+description: Die CreateLicenseEnumeration-Methode erstellt ein Lizenzenumeratorobjekt, mit dem Sie Informationen zu Lizenzen im lokalen Lizenzspeicher erhalten können.
 ms.assetid: 48da1ef4-89bc-4cba-b5c9-0e202eb2986f
 keywords:
-- Windows Media-Format für die Methode "samatelicenabenumeration"
-- Methode "kreatelicenabenumeration" Windows Media-Format, iwmdrmlicensitzungsschnittstelle
-- Iwmdrmlicencmanagement-Schnittstelle Windows Media-Format, Methode "kreatelicenabenumeration"
+- CreateLicenseEnumeration-Methode windows Media Format
+- CreateLicenseEnumeration-Methode windows Media Format, IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , CreateLicenseEnumeration-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bb75d21cc640da39c3679ac118ead629b24f719
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e442870961735d09c786a21ed1ea8be765e8f0c59b3f760278be9316daa0bb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881080"
 ---
-# <a name="iwmdrmlicensemanagementcreatelicenseenumeration-method"></a>Iwmdrmlicenaberation-Methode
+# <a name="iwmdrmlicensemanagementcreatelicenseenumeration-method"></a>IWMDRMLicenseManagement::CreateLicenseEnumeration-Methode
 
-Die Methode " **samatelicenseenumeration** " erstellt ein Lizenz-Enumeratorobjekt, mit dem Sie Informationen zu Lizenzen im lokalen Lizenz Speicher erhalten können.
+Die **CreateLicenseEnumeration-Methode** erstellt ein Lizenzenumeratorobjekt, mit dem Sie Informationen zu Lizenzen im lokalen Lizenzspeicher erhalten können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ HRESULT CreateLicenseEnumeration(
 
 <dl> <dt>
 
-*plicenabfilter* \[ in\]
+*pLicenseFilter* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**WMDRM- \_ Lizenz \_ Filter**](wmdrm-license-filter.md) Struktur, die die Filter Parameter für die Liste der Lizenzen im Enumerator enthält.
+Zeiger auf eine [**WMDRM LICENSE \_ \_ FILTER-Struktur,**](wmdrm-license-filter.md) die die Filterparameter für die Liste der Lizenzen im Enumerator enthält.
 
 </dd> <dt>
 
-*Pendler* \[ vorgenommen\]
+*pEnumerator* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der die Adresse der [**iwmdrmlicense**](iwmdrmlicense.md) -Schnittstelle des neu erstellten License-Enumeratorobjekts empfängt.
+Zeiger, der die Adresse der [**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md) des neu erstellten Lizenz-Enumeratorobjekts empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ DRM- \_ RIV \_ zu \_ klein**</dt> </dl> | Es wird eine aktualisierte Inhalts Sperr Liste benötigt.<br/> |
+| <dl> <dt>**NS \_ E \_ \_ DRM:NS: ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
@@ -83,8 +83,8 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -92,10 +92,10 @@ Keine.
 
 <dl> <dt>
 
-[**Auflisten von Lizenzen im lokalen Lizenz Speicher**](enumerating-licenses-in-the-local-license-store.md)
+[**Aufzählen von Lizenzen im lokalen Store**](enumerating-licenses-in-the-local-license-store.md)
 </dt> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

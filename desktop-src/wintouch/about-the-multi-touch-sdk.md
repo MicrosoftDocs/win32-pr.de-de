@@ -1,35 +1,35 @@
 ---
-title: Info zur Windows-Eingabe
-description: Dieses Thema enthält eine kurze Übersicht über Windows-Finger Eingaben.
+title: Informationen zu Windows Touch
+description: Dieses Thema bietet eine kurze Übersicht über Windows Touch.
 ms.assetid: 19100652-3778-4f25-8d54-70e70363239b
 keywords:
-- Windows-Fingereingabe, Software Development Kit
-- Windows-Touchscreen, SDK
-- Windows-Kontakt, Info
-- Windows-Fingereingabe, neue Features
-- Windows-Fingereingabe, Neuerungen
+- Windows Touch, Software Development Kit
+- Windows Toucheingabe, SDK
+- Windows Toucheingabe, Informationen
+- Windows Toucheingabe, neue Features
+- Windows Toucheingabe, Neuerungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81e9a3ebab9a5c85127a1548c07c2ea0fa2cae54
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f3d3d86270ea6c43cc37c39a5d29282a0451dd38d312b996041dcd21f30de8d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119881531"
 ---
-# <a name="about-windows-touch"></a>Info zur Windows-Eingabe
+# <a name="about-windows-touch"></a>Informationen zu Windows Touch
 
-Dieses Thema enthält eine kurze Übersicht über Windows-Finger Eingaben.
+Dieses Thema bietet eine kurze Übersicht über Windows Touch.
 
-Neue Hardware-und API-Elemente im Windows 7-Betriebssystem bieten Anwendungen die Möglichkeit, Eingaben von mehreren Kontakten zu empfangen. Dies ermöglicht es solchen Anwendungen, mehrere gleichzeitige Berührungspunkte auf der sichtbaren Oberfläche der Anwendung zu erkennen und darauf zu reagieren. Die Funktionalität für dieses Feature in Windows 7 wird durch eine neue Meldung bereitgestellt, die von den Berichten und Nachverfolgen berührt wird. Die neue Nachricht, [**WM \_ berühren**](wm-touchdown.md), meldet die Aktion (nach oben, nach unten, Verschiebung), Position und einen Bezeichner für Berührungspunkte. Windows-Finger Eingabenachrichten werden von Windows generiert und an Windows übermittelt, die sich für Windows-Fingereingabe Eingaben registrieren.
+Neue Hardware- und API-Elemente im betriebssystem Windows 7 bieten Anwendungen die Möglichkeit, Eingaben von mehreren Kontakten zu empfangen. Dadurch können solche Anwendungen mehrere gleichzeitige Berührungspunkte auf der sichtbaren Oberfläche der Anwendung erkennen und darauf reagieren. Die Funktionalität für dieses Feature in Windows 7 wird durch eine neue Meldung bereitgestellt, die Berührungen meldet und nachzeichnet. Die neue Meldung [**WM \_ TOUCH**](wm-touchdown.md)meldet die Aktion (nach oben, unten, verschieben), position und einen Bezeichner für Berührungspunkte. Windows Touchnachrichten werden von Windows generiert und an Fenster übermittelt, die sich für Windows Toucheingabe registrieren.
 
-Zusätzlich zur neuen toucheingabenachricht wurden der vorhandenen Liste der Fenster Meldungen Gesten Meldungen hinzugefügt. Die Messaging Unterstützung für Gesten wird durch eine einzelne neue Fenster Meldung ([**WM- \_ Geste**](wm-gesture.md)) aktiviert, die an entsprechende Anwendungsfenster gesendet oder an diese gesendet wird, wenn Benutzereingaben als Geste erkannt werden. Dedizierte API-Funktionen kapseln die Details für die Erstellung und den Verbrauch dieser Nachricht. Dies ist der Fall, da sich die der Nachricht zugeordneten Informationen in der Zukunft ändern können, ohne dass Anwendungen, die diese Nachricht bereits nutzen, unterbrochen werden.
+Zusätzlich zur neuen Toucheingabenachricht wurden der vorhandenen Liste der Fenstermeldungen Gestennachrichten hinzugefügt. Die Messagingunterstützung für Gesten wird durch eine einzelne neue Fenstermeldung [**(WM \_ GESTURE)**](wm-gesture.md)aktiviert, die gesendet oder an entsprechende Anwendungsfenster gesendet wird, wenn Benutzereingaben als Geste erkannt werden. Dedizierte API-Funktionen kapseln die Details für die Erstellung und Nutzung dieser Nachricht. Dies geschieht, da sich die der Nachricht zugeordneten Informationen in Zukunft ändern können, ohne dass Anwendungen, die diese Nachricht bereits nutzen, nicht mehr stören.
 
-Neben Gesten Nachrichten wurden dem Windows SDK spezialisierte Schnittstellen hinzugefügt. Diese Schnittstellen ermöglichen erweiterte Unterstützung für Berührungs Eingaben, damit Anwendungsentwickler problemlos natürliche Benutzeroberflächen erstellen können. Die [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle interpretiert WM-Fingereingabe Meldungen, um Ereignisse mit Übersetzungs-, Rotations-und Skalierungsinformationen über eine Auflistung von Berührungspunkten zu erhalten. [**\_**](wm-touchdown.md) Die [**IInertiaProcessor**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) -Schnittstelle kann in Verbindung mit der **IManipulationProcessor** -Schnittstelle verwendet werden, um Animationen zu aktivieren und sicherzustellen, dass Objekte auf dem Bildschirm des Benutzers bleiben, wenn Sie verschoben werden.
+Zusätzlich zu Gestennachrichten wurden dem Windows SDK spezielle Schnittstellen hinzugefügt. Diese Schnittstellen ermöglichen erweiterte Unterstützung für Toucheingaben, sodass Anwendungsentwickler ganz einfach natürliche Benutzeroberflächen erstellen können. Die [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) interpretiert [**WM \_ TOUCH-Nachrichten,**](wm-touchdown.md) um Ereignisse auszublenden, die Übersetzungs-, Drehungs- und Skalierungsinformationen zu einer Sammlung von Berührungspunkten enthalten. Die [**IInertiaProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-iinertiaprocessor) kann in Verbindung mit der **IManipulationProcessor-Schnittstelle** verwendet werden, um Animationen zu ermöglichen und sicherzustellen, dass Objekte beim Verschieben auf dem Bildschirm des Benutzers verbleiben.
 
-API-Elemente für Windows-Finger Eingaben haben einige Ähnlichkeiten mit dem Microsoft Pixel Sense SDK (ehemals Microsoft Surface SDK), Anwendungen, die auf Microsoft Pixel Sense abzielen, werden jedoch nicht auf Windows-Touchscreen-Computern ausgeführt. Außerdem können Anwendungen, die auf Windows-Finger Eingaben abzielen, nicht unter Microsoft Pixel Sense ausgeführt werden.
+API-Elemente für Windows Touch weisen einige Ähnlichkeiten mit dem Microsoft PixelSense SDK (früher als Microsoft Surface SDK bezeichnet) auf, aber Anwendungen für Microsoft PixelSense werden nicht auf Windows Touch-Computern ausgeführt. Außerdem werden Anwendungen für Windows Touch nicht auf Microsoft PixelSense ausgeführt.
 
-Einige der Funktionen von Windows-Finger Eingaben sind in den Kern von Windows 7 integriert. Diese Funktion ist für Benutzer verfügbar, ohne dass Entwickler die Unterstützung explizit aktivieren müssen. Um Windows-Finger Eingaben in vollem Umfang nutzen zu können, müssen Entwickler jedoch die Windows-Eingabe-API verwenden. Informationen zu den ersten Schritten mit der Funktionsweise von Windows Touchscreen finden Sie im [Programmier Handbuch](programming-guide.md) , oder beginnen Sie mit [der Auswahl des richtigen Ansatzes für Windows](choosing-the-right-approach-to-windows-touch.md)-Finger Eingaben.
+Ein Teil der Funktionalität von Windows Touch ist in den Kern von Windows 7 integriert. Diese Funktionalität ist für Benutzer verfügbar, ohne dass Entwickler die Unterstützung explizit aktivieren müssen. Um jedoch Windows Touch voll nutzen zu können, müssen Entwickler die Windows Touch-API verwenden. Informationen zur Funktionsweise von Windows Touch finden Sie im [Programmierhandbuch,](programming-guide.md) oder beginnen Sie mit [Auswählen des richtigen Ansatzes zum Windows Touch.](choosing-the-right-approach-to-windows-touch.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,15 +38,15 @@ Einige der Funktionen von Windows-Finger Eingaben sind in den Kern von Windows 7
 [Übersicht über die Architektur](architectural-overview.md)
 </dt> <dt>
 
-[Auswählen des richtigen Ansatzes für Windows-Finger Eingaben](choosing-the-right-approach-to-windows-touch.md)
+[Auswählen des richtigen Ansatzes für die Windows Toucheingabe](choosing-the-right-approach-to-windows-touch.md)
 </dt> <dt>
 
-[Windows-Fingereingabe](windows-touch-portal.md)
+[Windows Touch](windows-touch-portal.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

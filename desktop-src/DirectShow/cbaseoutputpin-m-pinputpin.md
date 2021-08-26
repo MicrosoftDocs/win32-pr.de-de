@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf die Eingabe-PIN, die mit dieser Pin verbunden ist.
+description: Zeiger auf den Eingabepin, der mit diesem Stecknadel verbunden ist.
 ms.assetid: 752f01ca-4195-4558-9a81-4a6a24e19b75
-title: 'Cbaseoutputpin:: m_pInputPin Member (amfilter. h)'
+title: CBaseOutputPin::m_pInputPin-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6206a900a24f6339ba20fd5d5c68cb45a6db838
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b87508d602ed57c19ce0713418652ac82b0d7949f3984b4516c3a4d2b4a7e9ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983430"
 ---
-# <a name="cbaseoutputpinm_pinputpin-member"></a>Cbaseoutputpin:: m \_ pinputpin-Element
+# <a name="cbaseoutputpinm_pinputpin-member"></a>CBaseOutputPin::m \_ pInputPin-Member
 
-Zeiger auf die Eingabe-PIN, die mit dieser Pin verbunden ist.
+Zeiger auf den Eingabepin, der mit diesem Stecknadel verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ IMemInputPin *m_pInputPin;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

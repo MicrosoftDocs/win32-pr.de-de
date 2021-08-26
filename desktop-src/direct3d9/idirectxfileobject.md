@@ -1,7 +1,7 @@
 ---
-description: Anwendungen verwenden die Methoden der idirectxfileobject-Schnittstelle zum Abrufen von Informationen zu Microsoft DirectX-Datei Objekten. Veraltet.
+description: Anwendungen verwenden die Methoden der IDirectXFileObject-Schnittstelle, um Informationen zu Microsoft DirectX-Dateiobjekten abzurufen. Veraltet.
 ms.assetid: 015d2c4e-4a25-40da-b88a-bad0c4e20e09
-title: Idirectxfileobject-Schnittstelle (dxfile. h)
+title: IDirectXFileObject-Schnittstelle (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,43 +14,43 @@ api_type:
 api_location:
 - d3dxof.lib
 - d3dxof.dll
-ms.openlocfilehash: e03f4a80c0cff25fa9416d35c20f2d60d17b206b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3aa0ffffb8766707841fa0a4a5ec54fe0db9caf1d86b885afc36bffa5f8352d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951300"
 ---
-# <a name="idirectxfileobject-interface"></a>Idirectxfileobject-Schnittstelle
+# <a name="idirectxfileobject-interface"></a>IDirectXFileObject-Schnittstelle
 
-Anwendungen verwenden die Methoden der idirectxfileobject-Schnittstelle zum Abrufen von Informationen zu Microsoft DirectX-Datei Objekten. Veraltet.
+Anwendungen verwenden die Methoden der IDirectXFileObject-Schnittstelle, um Informationen zu Microsoft DirectX-Dateiobjekten abzurufen. Veraltet.
 
 ## <a name="members"></a>Member
 
-Die **idirectxfileobject** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Idirectxfileobject** verfügt auch über die folgenden Typen von Membern:
+Die **IDirectXFileObject-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IDirectXFileObject** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idirectxfileobject** -Schnittstelle verfügt über diese Methoden.
+Die **IDirectXFileObject-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                         | BESCHREIBUNG                                                                                   |
 |:-----------------------------------------------|:----------------------------------------------------------------------------------------------|
-| [**GetId**](idirectxfileobject--getid.md)     | Ruft einen Zeiger auf die GUID ab, mit der ein DirectX-Datei Objekt identifiziert wird. Veraltet.<br/> |
-| [**GetName**](idirectxfileobject--getname.md) | Ruft einen Zeiger auf den Namen eines DirectX-Datei Objekts ab. Veraltet.<br/>                   |
+| [**Getid**](idirectxfileobject--getid.md)     | Ruft einen Zeiger auf die GUID ab, die ein DirectX-Dateiobjekt identifiziert. Veraltet.<br/> |
+| [**GetName**](idirectxfileobject--getname.md) | Ruft einen Zeiger auf den Namen eines DirectX-Dateiobjekts ab. Veraltet.<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die GUID für die idirectxfileobject-Schnittstelle ist IID \_ idirectxfileobject.
+Die GUID für die IDirectXFileObject-Schnittstelle ist IID \_ IDirectXFileObject.
 
-Der lpdirectxfileobject-Typ wird als Zeiger auf diese Schnittstelle definiert.
+Der LPDIRECTXFILEOBJECT-Typ wird als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -65,8 +65,8 @@ typedef interface IDirectXFileObject *LPDIRECTXFILEOBJECT;
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ typedef interface IDirectXFileObject *LPDIRECTXFILEOBJECT;
 
 <dl> <dt>
 
-[X-Datei Schnittstellen](dx9-graphics-reference-x-file-interfaces.md)
+[X-Dateischnittstellen](dx9-graphics-reference-x-file-interfaces.md)
 </dt> </dl>
 
  

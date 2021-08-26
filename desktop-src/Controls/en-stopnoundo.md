@@ -1,9 +1,9 @@
 ---
-title: EN_STOPNOUNDO Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass eine Aktion aufgetreten ist, für die das-Steuerelement nicht genügend Arbeitsspeicher zuordnen kann Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_STOPNOUNDO Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich Edit-Steuerelements, dass eine Aktion aufgetreten ist, für die das Steuerelement nicht genügend Arbeitsspeicher zuweisen kann, um den Rückgängigzustand beizubehalten. Ein Rich-Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer WM \_ NOTIFY-Nachricht.
 ms.assetid: 5608f6dd-83dc-4712-b485-dd9bc17dea24
 keywords:
-- Windows-Steuerelemente für EN_STOPNOUNDO Benachrichtigungs
+- EN_STOPNOUNDO Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ab71e6e1a78c468e6349fc1f42d03e9b68fb043
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e2bd22161f215e9544db08f845eb144fe94ec083b8a887a3db6fc46220d822d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047390"
 ---
-# <a name="en_stopnoundo-notification-code"></a>EN \_ stopnoundo-Benachrichtigungs Code
+# <a name="en_stopnoundo-notification-code"></a>EN \_ STOPNOUNDO-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass eine Aktion aufgetreten ist, für die das-Steuerelement nicht genügend Arbeitsspeicher zuordnen kann Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Fenster eines Rich Edit-Steuerelements, dass eine Aktion aufgetreten ist, für die das Steuerelement nicht genügend Arbeitsspeicher zuweisen kann, um den Rückgängigzustand beizubehalten. Ein Rich-Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer [**WM \_ NOTIFY-Nachricht.**](wm-notify.md)
 
 
 ```C++
@@ -41,19 +41,19 @@ EN_STOPNOUNDO
 *lParam* 
 </dt> <dd>
 
-Eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur.
+Eine [**NMHDR-Struktur.**](/windows/desktop/api/richedit/ns-richedit-nmhdr)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-NULL zurückgeben, um **den** Rückgängigvorgang fortzusetzen
+Geben Sie 0 (null) zurück, um **den** Rückgängig-Vorgang fortzusetzen.
 
-Gibt einen Wert ungleich 0 zurück, um  den Rückgängigvorgang zu verhindern
+Gibt einen Wert ungleich 0 (null) zurück, um den **Rückgängig-Vorgang** zu beenden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das übergeordnete Fenster ruft immer eine [**WM \_**](wm-notify.md) -Benachrichtigungs Meldung für dieses Ereignis ab. es ist keine Benachrichtigungs Maske erforderlich, die mit der "em-Einstellungs [**\_ Maske**](em-seteventmask.md)" gesendet wird.
+Das übergeordnete Fenster erhält immer eine [**WM \_ NOTIFY-Meldung**](wm-notify.md) für dieses Ereignis. Es ist keine Benachrichtigungsmaske erforderlich, die mit [**EM \_ SETEVENTMASK**](em-seteventmask.md)gesendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Das übergeordnete Fenster ruft immer eine [**WM \_**](wm-notify.md) -Benachrich
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -71,13 +71,13 @@ Das übergeordnete Fenster ruft immer eine [**WM \_**](wm-notify.md) -Benachrich
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr)
 </dt> <dt>
 
-[**WM- \_ Benachrichtigung**](wm-notify.md)
+[**WM \_ NOTIFY**](wm-notify.md)
 </dt> </dl>
 
  

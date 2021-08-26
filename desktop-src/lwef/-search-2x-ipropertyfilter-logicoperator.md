@@ -1,11 +1,11 @@
 ---
-title: Ipropertyfilter logicoperator-Eigenschaft (wdssharedidl. h)
-description: Der zum Anwenden eines Filters zu verwendende Logik Operator.
+title: IPropertyFilter LogicOperator-Eigenschaft (WdsSharedIDL.h)
+description: Logikoperator, der beim Anwenden eines Filters verwendet werden soll.
 ms.assetid: 9461c7a3-1c70-41bf-a4fe-8dacd4d2ba49
 keywords:
-- Logicoperator-Eigenschaft Legacy Funktionen der Windows-Umgebung
-- Logicoperator-Eigenschaft Legacy Windows-Umgebungs Funktionen, ipropertyfilter-Schnittstelle
-- Ipropertyfilter Interface Legacy Windows-Umgebungs Funktionen, logicoperator (Eigenschaft)
+- LogicOperator-Eigenschaft Legacy Windows Umgebungsfeatures
+- LogicOperator-Eigenschaft Legacy Windows Umgebungsfeatures, IPropertyFilter-Schnittstelle
+- IPropertyFilter-Schnittstelle Legacy Windows Umgebungsfeatures, LogicOperator-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,19 +18,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c514ae6231a9d83063b4a294680bdd3949c91102
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1fb4638edbb839581ad20ab6c860afc918b0ddd08e5fe6a36fc92f0dd4cea4a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963830"
 ---
-# <a name="ipropertyfilterlogicoperator-property"></a>Ipropertyfilter:: logicoperator (Eigenschaft)
+# <a name="ipropertyfilterlogicoperator-property"></a>IPropertyFilter::LogicOperator-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Der zum Anwenden eines Filters zu verwendende Logik Operator.
+Logikoperator, der beim Anwenden eines Filters verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,7 +51,7 @@ HRESULT get_LogicOperator(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Typ des Logik Operators fest.
+Legt den Logikoperatortyp fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Legt den Typ des Logik Operators fest.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TB_GETHOTITEM Meldung (kommstrg. h)
-description: Ruft den Index des aktiven Elements auf einer Symbolleiste ab.
+title: TB_GETHOTITEM Meldung (Commctrl.h)
+description: Ruft den Index des heißen Elements in einer Symbolleiste ab.
 ms.assetid: a87dbfc3-c6be-4a0a-9b6a-301b900d7929
 keywords:
-- Windows-Steuerelemente für TB_GETHOTITEM Meldung
+- TB_GETHOTITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 829864cc9223ba15b49b1ecc623f294fd4a6b4fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c22f33566a586ceaa524f720a9d688897f132ee227950f1f786093150955eafa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918830"
 ---
-# <a name="tb_gethotitem-message"></a>TB- \_ gethotitem-Nachricht
+# <a name="tb_gethotitem-message"></a>TB \_ GETHOTITEM-Nachricht
 
-Ruft den Index des aktiven Elements auf einer Symbolleiste ab.
+Ruft den Index des heißen Elements in einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft den Index des aktiven Elements auf einer Symbolleiste ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des aktiven Elements oder-1 zurück, wenn kein heißes Element festgelegt ist. Symbolleisten-Steuerelemente, die nicht über den [**\_ flachen tbstyle**](toolbar-control-and-button-styles.md) -Stil verfügen, verfügen nicht über heiße Elemente.
+Gibt den Index des heißen Elements oder -1 zurück, wenn kein heißes Element festgelegt ist. Symbolleistensteuerelemente, die nicht über den [**TBSTYLE \_ FLAT-Stil**](toolbar-control-and-button-styles.md) verfügen, verfügen nicht über heiße Elemente.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt den Index des aktiven Elements oder-1 zurück, wenn kein heißes Element fe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

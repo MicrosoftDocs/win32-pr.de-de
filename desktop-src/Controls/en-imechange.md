@@ -1,9 +1,9 @@
 ---
-title: EN_IMECHANGE Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuer Elements, dass der IME-Konvertierungs Status geändert wurde.
+title: EN_IMECHANGE Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuerelements, dass sich der IME-Konvertierungsstatus geändert hat.
 ms.assetid: 2893e4ef-5904-4a57-95c5-3f6cfbb60d90
 keywords:
-- Windows-Steuerelemente für EN_IMECHANGE Benachrichtigungs
+- EN_IMECHANGE Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4fa0e0c8fe4e7d6d8de876a5d1a1fb7a10754096
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4974c4126606b8ed95ffa645778469b6fc897488533b81498347de1c1995e7a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047680"
 ---
-# <a name="en_imechange-notification-code"></a>EN \_ ImeChange-Benachrichtigungs Code
+# <a name="en_imechange-notification-code"></a>EN \_ IMECHANGE-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuer Elements, dass der IME-Konvertierungs Status geändert wurde. Dieser Benachrichtigungs Code ist *nur* für Versionen des Betriebssystems in der asiatischen Sprache verfügbar. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Benachrichtigt das übergeordnete Element eines Rich-Edit-Steuerelements, dass sich der IME-Konvertierungsstatus geändert hat. Dieser Benachrichtigungscode ist *nur für* sprachasiatische Versionen des Betriebssystems verfügbar. Dieses Benachrichtigungscode wird von einem Rich-Edit-Steuerelement in Form einer [**WM \_ COMMAND-Nachricht**](/windows/desktop/menurc/wm-command) gesendet.
 
 
 ```C++
@@ -42,27 +42,27 @@ EN_IMECHANGE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Rich Edit-Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Bezeichner des Rich-Edit-Steuerelements. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Rich Edit-Steuerelement.
+Handle für das Rich-Edit-Steuerelement.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Benachrichtigungs Code gibt NULL zurück.
+Dieser Benachrichtigungscode gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um \_ ImeChange-Benachrichtigungs Codes zu erhalten, geben Sie [**ENM \_ ImeChange**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der Nachricht [**EM \_**](em-seteventmask.md) -Nachricht gesendet wurde.
+Um EN \_ IMECHANGE-Benachrichtigungscodes zu erhalten, geben Sie [**ENM \_ IMECHANGE**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht gesendet**](em-seteventmask.md) wird.
 
 > [!Note]  
-> Dieser Benachrichtigungs Code wird nur in der asiatischen Version von Rich Edit 1,0 unterstützt. Sie wird in späteren Versionen nicht unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+> Dieser Benachrichtigungscode wird nur in der asiatischen Version von Rich Edit 1.0 unterstützt. Sie wird in späteren Versionen nicht unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
  
 
@@ -72,9 +72,9 @@ Um \_ ImeChange-Benachrichtigungs Codes zu erhalten, geben Sie [**ENM \_ ImeChan
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Um \_ ImeChange-Benachrichtigungs Codes zu erhalten, geben Sie [**ENM \_ ImeChan
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

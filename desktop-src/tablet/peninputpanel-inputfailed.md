@@ -1,21 +1,21 @@
 ---
-description: Veraltet. Der "tzinputpanel" wurde durch den Text Eingabe Panel (Tip) ersetzt. Tritt auf, wenn sich der Eingabefokus ändert, bevor das Objekt "pinputpanel" Benutzereingaben in das angefügte Steuerelement einfügen konnte.
+description: Veraltet. Das PenInputPanel wurde durch den Texteingabebereich (TIP) ersetzt. Tritt ein, wenn sich der Eingabefokus ändert, bevor das PenInputPanel-Objekt Benutzereingaben in das angefügte Steuerelement einfügen konnte.
 ms.assetid: a5928f78-29d6-40e8-8f87-17c188e51ba9
-title: Das Ereignis "pinputpanel. InputFailed" (msink AUT. h)
+title: PenInputPanel.InputFailed-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 198c2b466dc03357d9851d7c8a6b7f44c6bf6884
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2cc3234c73fc8ba47faa7d1f2ec89477a1bfb86b7c2abda263aff227c5961f1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934760"
 ---
-# <a name="peninputpanelinputfailed-event"></a>"Pinputpanel. InputFailed"-Ereignis
+# <a name="peninputpanelinputfailed-event"></a>PenInputPanel.InputFailed-Ereignis
 
-Veraltet. Der " [**tzinputpanel**](peninputpanel-class.md) " wurde durch den [Text Eingabe Panel (Tip)](text-input-panel-reference.md)ersetzt.
+Veraltet. Das [**PenInputPanel**](peninputpanel-class.md) wurde durch den [Texteingabebereich (TIP) ersetzt.](text-input-panel-reference.md)
 
-Tritt auf, wenn sich der Eingabefokus ändert, bevor das Objekt " [**pinputpanel**](peninputpanel-class.md) " Benutzereingaben in das angefügte Steuerelement einfügen konnte.
+Tritt ein, wenn sich der Eingabefokus ändert, bevor das [**PenInputPanel-Objekt**](peninputpanel-class.md) Benutzereingaben in das angefügte Steuerelement einfügen konnte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,48 +35,48 @@ HRESULT InputFailed(
 
 <dl> <dt>
 
-*HWND* \[ in\]
+*hWnd* \[ In\]
 </dt> <dd>
 
-Das Fenster Handle des Steuer Elements [**, das das Objekt "**](peninputpanel-class.md) " mit dem Objekt "-Objekt" aufgerufen hat.
+Das Fensterhand handle des Steuerelements, das das [**PenInputPanel-Objekt aufgerufen**](peninputpanel-class.md) hat.
 
 </dd> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Der virtuelle Schlüssel, der dem gedrückten Schlüssel entspricht.
+Die virtuelle Taste, die der gedrückten Taste entspricht.
 
 </dd> <dt>
 
-*Text* \[ in\]
+*Text* \[ In\]
 </dt> <dd>
 
-Die Zeichenfolge, die in das Steuerelement eingefügt werden soll, das durch den *HWND* -Parameter dargestellt wird, als das **InputFailed** -Ereignis ausgelöst wurde.
+Die Zeichenfolge, die in das Steuerelement eingefügt werden sollte, das durch den *hWnd-Parameter* dargestellt wurde, als das **InputFailed-Ereignis** ausgelöst wurde.
 
-Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zum BSTR-Datentyp finden Sie unter [Verwenden der COM-Bibliothek](using-the-com-library.md).
 
 </dd> <dt>
 
-*ShiftKey* \[ in\]
+*UMSCHALTTASTETASTE* \[ In\]
 </dt> <dd>
 
-Der Zustand der Tastatur modifiziererer, einschließlich Shift, Caps, STRG und alt.
+Der Zustand der Tastaturmodifizierer, einschließlich UMSCHALT, CAPS, STRG und ALT.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **InputFailed** -Ereignis tritt auf, wenn sich der Eingabefokus ändert, bevor Benutzereingaben in das angefügte Steuerelement eingefügt wurden. Wenn der Benutzer z. b. Freihand in den Schreib-Pad eingibt und dann auf ein anderes Bearbeitungs Steuerelement tippt, bevor die Erkennung abgeschlossen werden konnte, wird dieses Ereignis ausgelöst.
+Das **InputFailed-Ereignis** tritt auf, wenn sich der Eingabefokus ändert, bevor die Benutzereingabe in das angefügte Steuerelement eingefügt wurde. Wenn der Benutzer beispielsweise Ink in das Schreibpad ein gibt und dann auf ein anderes Bearbeitungssteuer steuerelement tippt, bevor die Suche abgeschlossen werden konnte, wird dieses Ereignis angezeigt.
 
-Wenn Sie das Fenster Handle verwenden, das an dieses Ereignis übermittelt wurde, können Sie den Text selbst einfügen, wenn dieses Ereignis auftritt.
+Mithilfe des an dieses Ereignis übergebenen Fensterhandpunkts können Sie den Text selbst einfügen, wenn dieses Ereignis eintritt.
 
 > [!Note]  
-> Ab Microsoft Windows XP Tablet PC Edition 2005 gilt das Ereignis " **InputFailed** " nicht mehr. Text wird immer eingefügt, bevor der Fokus geändert wird.
+> Ab Microsoft Windows XP Tablet PC Edition 2005 gilt **das InputFailed-Ereignis** nicht mehr. Text wird immer eingefügt, bevor sich der Fokus ändert.
 
  
 
@@ -86,9 +86,9 @@ Wenn Sie das Fenster Handle verwenden, das an dieses Ereignis übermittelt wurde
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -97,7 +97,7 @@ Wenn Sie das Fenster Handle verwenden, das an dieses Ereignis übermittelt wurde
 
 <dl> <dt>
 
-[**"Pendel Panel"**](peninputpanel-class.md)
+[**Peninputpanel**](peninputpanel-class.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt eine appbar, wenn ein Ereignis aufgetreten ist, das sich auf die Größe und Position der appbar auswirken kann.
+description: Benachrichtigt eine App-Leiste, wenn ein Ereignis aufgetreten ist, das sich auf die Größe und Position der App-Leiste auswirken kann.
 ms.assetid: 1016a362-4d2b-410e-aec9-c1cc8f497778
-title: ABN_POSCHANGED Meldung (shellapi. h)
+title: ABN_POSCHANGED (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24b0a800b1c112cba18fbadbba79a999ec83c77e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92528de38b60c1f4705873427616b1ed7a5be6be5875a21e352d2136313c84df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943600"
 ---
-# <a name="abn_poschanged-message"></a>ABN- \_ Nachricht
+# <a name="abn_poschanged-message"></a>ABN \_ POSCHANGED-Nachricht
 
-Benachrichtigt eine appbar, wenn ein Ereignis aufgetreten ist, das sich auf die Größe und Position der appbar auswirken kann. Zu den Ereignissen zählen Änderungen in der Größe, Position und Sichtbarkeit der Taskleiste sowie das Hinzufügen, entfernen oder Ändern der Größe einer anderen appbar auf der gleichen Seite des Bildschirms.
+Benachrichtigt eine App-Leiste, wenn ein Ereignis aufgetreten ist, das sich auf die Größe und Position der App-Leiste auswirken kann. Ereignisse umfassen Änderungen an Größe, Position und Sichtbarkeitszustand der Taskleiste sowie das Addition, Entfernen oder Ändern der Größe einer anderen App-Leiste auf derselben Seite des Bildschirms.
 
 
 ```C++
@@ -24,25 +24,25 @@ ABN_POSCHANGED
 
 ## <a name="parameters"></a>Parameter
 
-Diese Nachricht weist keine Parameter auf.
+Diese Meldung enthält keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine appbar sollte auf diese Benachrichtigungs Meldung reagieren, indem die [**ABM- \_ querypos**](abm-querypos.md) -und [**ABM- \_ SetPos**](abm-setpos.md) -Nachrichten gesendet werden. Wenn sich die Position geändert hat, sollte die appbar die [**MoveWindow**](/windows/desktop/api/winuser/nf-winuser-movewindow) -Funktion zum Verschieben an die neue Position aufruft.
+Eine App-Leiste sollte auf diese Benachrichtigung reagieren, indem die [**ABM \_ QUERYPOS-**](abm-querypos.md) und [**ABM \_ SETPOS-Nachrichten gesendet**](abm-setpos.md) werden. Wenn sich die Position geändert hat, sollte die App-Leiste die [**MoveWindow-Funktion**](/windows/desktop/api/winuser/nf-winuser-movewindow) aufrufen, um sich selbst an die neue Position zu verschieben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

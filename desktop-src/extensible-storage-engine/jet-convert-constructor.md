@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_CONVERT-Konstruktor'
+description: 'Weitere Informationen zu: JET_CONVERT-Konstruktor'
 title: JET_CONVERT-Konstruktor
 TOCTitle: 'JET_CONVERT constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_CONVERT.#ctor
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ee21fad93d6dce8c884b8f3b00dbb6a3a171fea5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 825a3927c6f15479c9201d3ceefae67271ace715b2639f8be61cfd1a1e08826e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968250"
 ---
 # <a name="jet_convert-constructor"></a>JET_CONVERT-Konstruktor
 
-**Hinweis: Diese API ist mittlerweile veraltet.**
+**HINWEIS: Diese API ist jetzt veraltet.**
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,10 +56,10 @@ protected JET_CONVERT()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_CONVERT-Klasse](./jet-convert-class.md)
 
-[Mitglieder JET_CONVERT](./jet-convert-members.md)
+[JET_CONVERT-Member](./jet-convert-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

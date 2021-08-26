@@ -1,9 +1,9 @@
 ---
-title: DL_BEGINDRAG Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster des Zieh Listen Felds, dass der Benutzer mit der linken Maustaste auf ein Element geklickt hat. Ein Drag-Listenfeld sendet diesen Benachrichtigungs Code in Form einer Drag List-Nachricht. Weitere Informationen finden Sie unter Drag List Box Messages.
+title: DL_BEGINDRAG Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster des Ziehlistenfelds, dass der Benutzer auf die linke Maustaste eines Elements geklickt hat. Ein Ziehlistenfeld sendet diesen Benachrichtigungscode in Form einer Ziehlistennachricht. Weitere Informationen finden Sie unter Drag List Box Messages.
 ms.assetid: ccf66818-e5f7-4165-8d0d-4d279944f70e
 keywords:
-- Windows-Steuerelemente für DL_BEGINDRAG Benachrichtigungs
+- DL_BEGINDRAG Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f2d3ee211641c5b5e02482f914145fdf2e119f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e2c843398b21ad51df51ae706a515c2e6f9831b89d32092b87148598b4bed5f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968330"
 ---
-# <a name="dl_begindrag-notification-code"></a>DL \_ BeginDrag-Benachrichtigungs Code
+# <a name="dl_begindrag-notification-code"></a>DL \_ BEGINDRAG-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster des Zieh Listen Felds, dass der Benutzer mit der linken Maustaste auf ein Element geklickt hat. Ein Drag-Listenfeld sendet diesen Benachrichtigungs Code in Form einer Drag List-Nachricht. Weitere Informationen finden Sie unter [Drag List Box Messages](about-list-boxes.md).
+Benachrichtigt das übergeordnete Fenster des Ziehlistenfelds, dass der Benutzer auf die linke Maustaste eines Elements geklickt hat. Ein Ziehlistenfeld sendet diesen Benachrichtigungscode in Form einer Ziehlistennachricht. Weitere Informationen finden Sie unter [Drag List Box Messages](about-list-boxes.md).
 
 
 ```C++
@@ -41,17 +41,17 @@ DL_BEGINDRAG
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**draglistinfo**](/windows/win32/api/commctrl/ns-commctrl-draglistinfo) -Struktur, die den DL \_ BeginDrag-Benachrichtigungs Code, das Handle für das Zieh Listenfeld und die Cursorposition enthält.
+Ein Zeiger auf eine [**DRAGLISTINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-draglistinfo) die den DL BEGINDRAG-Benachrichtigungscode, das Handle zum Ziehlistenfeld und \_ die Cursorposition enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, um den Zieh Vorgang zu starten, oder **false** , um den Zieh Vorgang zu verhindern.
+Geben **Sie TRUE zurück,** um den Ziehvorgang zu starten, oder **FALSE,** um den Ziehvorgang zu verhindern.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Verarbeitung dieses Benachrichtigungs Codes bestimmt eine Fenster Prozedur in der Regel das Listenelement an der angegebenen Cursorposition mithilfe der [**lbitemfrompt**](/windows/desktop/api/Commctrl/nf-commctrl-lbitemfrompt) -Funktion. Anschließend wird " **true** " oder " **false**" zurückgegeben, je nachdem, ob das Element gezogen werden soll. Vor der Rückgabe von **true** sollte die Fenster Prozedur den Index des Listen Elements speichern, damit die Anwendung weiß, welches Element verschoben oder kopiert werden soll, wenn der Zieh Vorgang abgeschlossen ist.
+Bei der Verarbeitung dieses Benachrichtigungscodes bestimmt eine Fensterprozedur in der Regel das Listenelement an der angegebenen Cursorposition mithilfe der [**LBItemFromPt-Funktion.**](/windows/desktop/api/Commctrl/nf-commctrl-lbitemfrompt) Anschließend wird **TRUE oder** **FALSE zurückgegeben,** je nachdem, ob das Element gezogen werden soll. Vor der **Rückgabe von TRUE** sollte die Fensterprozedur den Index des Listenelements speichern, damit die Anwendung weiß, welches Element nach Abschluss des Ziehvorganges bewegt oder kopiert werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Bei der Verarbeitung dieses Benachrichtigungs Codes bestimmt eine Fenster Prozed
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

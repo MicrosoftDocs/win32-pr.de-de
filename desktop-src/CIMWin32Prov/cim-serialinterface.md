@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ serialinterface-Klasse stellt eine CIM \_ controlledby-Beziehung dar, die angibt, auf welche Geräte über den seriellen Controller und die Eigenschaften des Zugriffs zugegriffen werden.
+description: Die CIM \_ SerialInterface-Klasse stellt eine CIM \_ ControlledBy-Beziehung dar, die angibt, auf welche Geräte über den seriellen Controller zugegriffen wird, und die Eigenschaften des Zugriffs.
 ms.assetid: bebc304a-c2b7-41c7-b24a-8f450ee3c4bb
 ms.tgt_platform: multiple
 title: CIM_SerialInterface-Klasse
@@ -24,23 +24,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1df787ff64798f412035a72e6db6d7b01b4b9b0a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6c6b704c8af9e6907150ed4d09caacaafb0229902005fdbc63453dc315a3401a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919830"
 ---
-# <a name="cim_serialinterface-class"></a>CIM \_ serialinterface-Klasse
+# <a name="cim_serialinterface-class"></a>CIM \_ SerialInterface-Klasse
 
-Die **CIM \_ serialinterface** -Klasse stellt eine [**CIM \_ controlledby**](cim-controlledby.md) -Beziehung dar, die angibt, auf welche Geräte über den seriellen Controller und die Eigenschaften des Zugriffs zugegriffen werden.
+Die **CIM \_ SerialInterface-Klasse** stellt eine [**CIM \_ ControlledBy-Beziehung**](cim-controlledby.md) dar, die angibt, auf welche Geräte über den seriellen Controller zugegriffen wird, und die Eigenschaften des Zugriffs.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,28 +63,28 @@ class CIM_SerialInterface : CIM_ControlledBy
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ serialinterface** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SerialInterface-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ serialinterface** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SerialInterface-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Controller aktiv auf das Gerät zugreift oder darauf zugreift. Diese Informationen sind erforderlich, wenn ein logisches Gerät durch mehrere Controller befohlen werden kann oder darauf zugegriffen werden kann.
+Gibt an, ob der Controller aktiv befehlet oder auf das Gerät zugreift. Diese Informationen sind erforderlich, wenn ein logisches Gerät von mehreren Controllern befehlsgesteuert oder über diese aufgerufen werden kann.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 <dt>
 
@@ -111,7 +111,7 @@ Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ SerialController**
@@ -120,14 +120,14 @@ Datentyp: **CIM \_ SerialController**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ SerialController**](cim-serialcontroller.md) , der den seriellen Controller beschreibt.
+Ein [**CIM \_ SerialController,**](cim-serialcontroller.md) der den seriellen Controller beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -136,23 +136,23 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das logische Gerät beschreibt.
+Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) der das logische Gerät beschreibt.
 
 </dd> <dt>
 
-**Flowcontrolinfo**
+**FlowControlInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fluss Steuerung für übertragene Daten an.
+Gibt die Flusssteuerung für übertragene Daten an.
 
 <dt>
 
@@ -179,7 +179,7 @@ Gibt die Fluss Steuerung für übertragene Daten an.
 
 <span id="XonXoff"></span><span id="xonxoff"></span><span id="XONXOFF"></span>
 
-<span id="XonXoff"></span><span id="xonxoff"></span><span id="XONXOFF"></span>**XOnXOff** (3)
+<span id="XonXoff"></span><span id="xonxoff"></span><span id="XONXOFF"></span>**TexasXoff** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -193,21 +193,21 @@ Gibt die Fluss Steuerung für übertragene Daten an.
 
 <span id="Both_XonXoff_and_RTS_CTS"></span><span id="both_xonxoff_and_rts_cts"></span><span id="BOTH_XONXOFF_AND_RTS_CTS"></span>
 
-<span id="Both_XonXoff_and_RTS_CTS"></span><span id="both_xonxoff_and_rts_cts"></span><span id="BOTH_XONXOFF_AND_RTS_CTS"></span>**XOnXOff und RTS/CTS** (5)
+<span id="Both_XonXoff_and_RTS_CTS"></span><span id="both_xonxoff_and_rts_cts"></span><span id="BOTH_XONXOFF_AND_RTS_CTS"></span>**Sowohl VvXoff als auch RTS/CTS** (5)
 
 
 </dt> <dd>
 
-XOnXOff und RTS/CTS
+TexasXoff und RTS/CTS
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Aushandateddatawidth**
+**NegotiatedDataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -216,16 +216,16 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsdaten breiten möglich sind, definiert diese Eigenschaft die jeweils verwendete Eigenschaft zwischen den Geräten. Die Daten Breite wird in Bits angegeben. Wenn die Daten Breite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsdatenbreiten möglich sind, definiert diese Eigenschaft den zwischen den Geräten verwendeten. Die Datenbreite wird in Bits angegeben. Wenn die Datenbreite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection**](cim-deviceconnection.md)geerbt.
 
 </dd> <dt>
 
-**Aushandatedspeed**
+**NegotiatedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -234,48 +234,48 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde")
 </dt> </dl>
 
-Wenn mehrere Bus-oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn Verbindungs-oder Busgeschwindigkeiten nicht ausgehandelt werden oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- oder Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die zwischen den Geräten verwendete. Die Geschwindigkeit wird in Bits pro Sekunde angegeben. Wenn keine Verbindungs- oder Busgeschwindigkeiten ausgehandelt werden oder diese Informationen für die Geräteverwaltung nicht verfügbar oder wichtig sind, sollte die -Eigenschaft auf 0 (null) festgelegt werden.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ erviceconnetction**](cim-deviceconnection.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection**](cim-deviceconnection.md)geerbt.
 
 </dd> <dt>
 
-**Anzahlersätze**
+**NumberOfHardResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl von Festplatten, die vom Controller ausgegeben werden. Bei einer festen zurück setzung wird das Gerät wieder in den Initialisierungs-oder Startzustand versetzt. Alle internen Geräte Zustandsinformationen und Daten gehen verloren.
+Die Anzahl der vom Controller ausgegebenen hard resets. Durch eine harte Zurücksetzung wird das Gerät in den Initialisierungs- oder Startzustand zurückgesetzt. Alle informationen und Daten zum internen Gerätezustand gehen verloren.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**Anzahlermengen**
+**NumberOfSoftResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der vom Controller ausgestellten Soft-zurück Stellungen. Eine weiche zurück Setzung löscht den aktuellen Gerätestatus und die Daten nicht vollständig. Die genaue Semantik ist abhängig vom Gerät und den Protokollen und Mechanismen, die für die Kommunikation mit dem Gerät verwendet werden.
+Anzahl der vom Controller ausgestellten soft resets. Bei einem soft reset werden der aktuelle Gerätezustand und die Aktuellen Daten nicht vollständig gelöscht. Die genaue Semantik hängt vom Gerät sowie von den Protokollen und Mechanismen ab, die für die Kommunikation mit dem Gerät verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](cim-controlledby.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy**](cim-controlledby.md)geerbt.
 
 </dd> <dt>
 
-**"Nummeriofstopbits"**
+**NumberOfStopBits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -284,20 +284,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits")
 </dt> </dl>
 
-Anzahl der zu übermittelten Stoppbits.
+Anzahl der zu übertragenden Stoppbits.
 
 </dd> <dt>
 
-**ParameterInfo**
+**ParityInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Informationen über die Paritäts Einstellung für übertragene Daten.
+Informationen zur Paritätseinstellung für übertragene Daten.
 
 <dt>
 
@@ -317,7 +317,7 @@ Informationen über die Paritäts Einstellung für übertragene Daten.
 
 <span id="Even"></span><span id="even"></span><span id="EVEN"></span>
 
-**Sogar** (2)
+**Even** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -331,13 +331,13 @@ Informationen über die Paritäts Einstellung für übertragene Daten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ serialinterface** -Klasse wird von [**CIM \_ controlledby**](cim-controlledby.md)abgeleitet.
+Die **CIM \_ SerialInterface-Klasse** wird von [**CIM \_ ControlledBy**](cim-controlledby.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -347,8 +347,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -357,7 +357,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ controlledby**](cim-controlledby.md)
+[**CIM \_ ControlledBy**](cim-controlledby.md)
 </dt> </dl>
 
  

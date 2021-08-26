@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Enabled AudioOutput-Objekteigenschaft. 
 ms.assetid: 6526f249-be13-4732-b79e-a9952489461f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b807b4cadcc9a0157b4efa400dd9d0e3cb5cf21a
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 515b7148acf65d98b0ec8b5a5f324e5bfd9dccd10c874e165adfa2d0de9442ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963040"
 ---
 # <a name="enabled-property-audiooutput-object"></a>Enabled-Eigenschaft (AudioOutput-Objekt)
 
@@ -42,7 +42,7 @@ Gibt einen booleschen Wert zurück, der angibt, ob die Audioausgabe (gesprochen)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft spiegelt die Option Audioausgabe wiedergeben auf der Seite Ausgabe des Eigenschaftenblatts agent (Erweiterte Zeichenoptionen) wider. Wenn die [**Enabled-Eigenschaft**](enabled-property.md) **True** zurückgibt, erzeugt die [**Speak-Methode**](speak-method.md) eine Audioausgabe, wenn eine kompatible TTS-Engine installiert ist oder Sie Audiodateien für die gesprochene Ausgabe verwenden. Wenn **False** zurückgegeben wird, bedeutet dies, dass die Sprachausgabe nicht installiert ist oder vom Benutzer deaktiviert wurde. Die Eigenschafteneinstellung gilt für alle -Agent-Zeichen und ist schreibgeschützt. nur der Benutzer kann diesen Eigenschaftswert festlegen.
 

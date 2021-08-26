@@ -1,38 +1,38 @@
 ---
 description: Das width-Attribut gibt die Breite des Ausgabevideos in Pixel an.
 ms.assetid: 3fcc28d8-b7ef-474b-8594-b31422974998
-title: Width-Attribut
+title: width-Attribut
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b7480f80fdd1f862f1018a2e1909e68c68526bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8249888c2016993879d3c27460efa035531a1ed1e7f7fcee3bf3aa94a3b584cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982270"
 ---
-# <a name="width-attribute"></a>Width-Attribut
+# <a name="width-attribute"></a>width-Attribut
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Das- `width` Attribut gibt die Breite des Ausgabevideos in Pixel an.
+Das `width` -Attribut gibt die Breite des Ausgabevideos in Pixel an.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Gleitkommawert. Der Wert muss die führende Null vor der Dezimalstelle enthalten. Beispielsweise 0,3, nicht. 3. Verwenden Sie nicht mehr als sieben Dezimalziffern.
+Gleitkommawert. Der Wert muss die führende 0 (null) vor der Dezimalstelle enthalten. Beispiel: 0.3, nicht .3. Verwenden Sie nicht mehr als sieben Dezimalstellen.
 
 ## <a name="applies-to"></a>Gilt für
 
-[**Kreis**](group-element.md)
+[**Gruppe**](group-element.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie dieses Attribut nur dann fest, wenn das **Type** -Attribut ist `video` .
+Legen Sie dieses  Attribut nur fest, wenn das Typattribut `video` ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

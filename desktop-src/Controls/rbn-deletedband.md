@@ -1,9 +1,9 @@
 ---
-title: RBN_DELETEDBAND Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Grund leisten-Steuerelement gesendet, nachdem ein Band gelöscht wurde. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: RBN_DELETEDBAND Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Rebar-Steuerelement gesendet, nachdem ein Band gelöscht wurde. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: ef4aca07-de08-47de-b236-321e84e6e81c
 keywords:
-- Windows-Steuerelemente für RBN_DELETEDBAND Benachrichtigungs
+- RBN_DELETEDBAND Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6af4e107ccb1a42b82335255f48d0328e03019a9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f0e60d1a8ad062d77800ccc9e2790718f5d8c8dcac2fb87a37f62b8f1131e5cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985240"
 ---
-# <a name="rbn_deletedband-notification-code"></a>RBN- \_ deletedband-Benachrichtigungs Code
+# <a name="rbn_deletedband-notification-code"></a>RBN \_ DELETEDBAND-Benachrichtigungscode
 
-Wird von einem Grund leisten-Steuerelement gesendet, nachdem ein Band gelöscht wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Rebar-Steuerelement gesendet, nachdem ein Band gelöscht wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ RBN_DELETEDBAND
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmrebar**](/windows/win32/api/commctrl/ns-commctrl-nmrebar) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMREBAR-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrebar) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

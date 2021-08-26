@@ -1,35 +1,35 @@
 ---
-description: Legen Sie dies auf ein ipropertyset fest, das eine Zuordnung vom Typ "Track" zu einem "iriandomaccessstream" definiert, der den DRM-Kontext (Digital Rights Management) enthält.
+description: Legen Sie auf ein IPropertySet fest, das eine Zuordnung vom Tracktyp zu einem IRandomAccessStream definiert, der den Digital Rights Management(DRM)-Kontext enthält.
 ms.assetid: 76911293-CEB3-4D0E-A021-70A2D1303ED1
-title: MFPKEY_MediaProtectionSystemContextsPerTrack-Eigenschaft (mspdl. h)
+title: MFPKEY_MediaProtectionSystemContextsPerTrack -Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af5df5d233281a3fc437eed85cddc82297409a9a
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 578f9a3e18f420eec01db8ac8ad3ce6df4a74029217b13e54a3ed1ab00263913
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953920"
 ---
-# <a name="mfpkey_mediaprotectionsystemcontextspertrack-property"></a>Mfpkey \_ mediaschutzsystemcontextspertrack (Eigenschaft)
+# <a name="mfpkey_mediaprotectionsystemcontextspertrack-property"></a>MFPKEY \_ MediaProtectionSystemContextsPerTrack (Eigenschaft)
 
-Legen Sie dies auf ein ipropertyset fest, das eine Zuordnung vom Typ "Track" zu einem " [**iriandomaccessstream**](/previous-versions//hh438400(v=vs.85)) " definiert, der den DRM-Kontext (Digital Rights Management) enthält.
+Legen Sie auf ein IPropertySet fest, das eine Zuordnung vom Tracktyp zu [**einem IRandomAccessStream**](/previous-versions//hh438400(v=vs.85)) definiert, der den Digital Rights Management(DRM)-Kontext enthält.
 
-**Typ:** \* VT \_ unknown, der auf einen IMap-<hstring, iinspectable zeigt\*>
+**Typ:** \* VT \_ UNKNOWN, das auf eine IMap<HSTRING,IInspectable zeigt\*>
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**IUnknown**
+**Iunknown**
 
-VT \_ unknown, der auf einen IMap-<hstring, iinspectable zeigt\*>
+VT \_ UNKNOWN, das auf eine IMap<HSTRING,IInspectable zeigt\*>
 
-**punkVal**
+**beival**
 
 
 
@@ -39,17 +39,17 @@ VT \_ unknown, der auf einen IMap-<hstring, iinspectable zeigt\*>
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Desktop-Apps \| UWP-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

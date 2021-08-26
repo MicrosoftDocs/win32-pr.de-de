@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentrestoreingeprogressexception-Konstruktor'
-title: Esentrestoreingeprogressexception-Konstruktor
+description: 'Weitere Informationen zu: EsentRestoreInProgressException-Konstruktor'
+title: EsentRestoreInProgressException-Konstruktor
 TOCTitle: 'EsentRestoreInProgressException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRestoreInProgressException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrestoreinprogressexception.esentrestoreinprogressexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: caa160beb4a10843677f51bf4171e7a8e92483a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27a14c3f6a070349f733b8f7afb7009d4b4b293adeaa520057cd4268513653bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119946770"
 ---
-# <a name="esentrestoreinprogressexception-constructor"></a>Esentrestoreingeprogressexception-Konstruktor
+# <a name="esentrestoreinprogressexception-constructor"></a>EsentRestoreInProgressException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrestoreinprogressexception-Klasse.
+Initialisiert eine neue Instanz der EsentRestoreInProgressException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentRestoreInProgressException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrestoreingeprogressexception-Klasse](./esentrestoreinprogressexception-class.md)
+[EsentRestoreInProgressException-Klasse](./esentrestoreinprogressexception-class.md)
 
-[Esentrestoreingeprogressexception-Elemente](./esentrestoreinprogressexception-members.md)
+[EsentRestoreInProgressException-Member](./esentrestoreinprogressexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

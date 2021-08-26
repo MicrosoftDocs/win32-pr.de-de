@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung sendet die WM- \_ mdinext-Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das nächste oder vorherige untergeordnete Fenster zu aktivieren.
+description: Eine Anwendung sendet die WM \_ MDINEXT-Nachricht an ein MDI-Clientfenster (Multiple Document Interface), um das nächste oder vorherige untergeordnete Fenster zu aktivieren.
 ms.assetid: a4822b99-330a-4094-bad9-b9a5923e02a8
-title: WM_MDINEXT Meldung (Winuser. h)
+title: WM_MDINEXT (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 20e0af031c11ea37129e1405e31b07b18f023b7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8aa2b88e5368db2a6b700e0b4d469d1ba680d3caa4d2c1e1c208c5143660396f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931240"
 ---
-# <a name="wm_mdinext-message"></a>WM- \_ mdinext-Nachricht
+# <a name="wm_mdinext-message"></a>WM \_ MDINEXT-Nachricht
 
-Eine Anwendung sendet die **WM- \_ mdinext** -Nachricht an ein MDI-Client Fenster (Multiple Document Interface), um das nächste oder vorherige untergeordnete Fenster zu aktivieren.
+Eine Anwendung sendet die **WM \_ MDINEXT-Nachricht** an ein MDI-Clientfenster (Multiple Document Interface), um das nächste oder vorherige untergeordnete Fenster zu aktivieren.
 
 
 ```C++
@@ -29,26 +29,26 @@ Eine Anwendung sendet die **WM- \_ mdinext** -Nachricht an ein MDI-Client Fenste
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das untergeordnete MDI-Fenster. Das System aktiviert das untergeordnete Fenster direkt vor oder nach dem angegebenen untergeordneten Fenster, abhängig vom Wert des *LPARAM* -Parameters. Wenn der *wParam* -Parameter **null** ist, aktiviert das System das untergeordnete Fenster, das unmittelbar vor oder nach dem momentan aktiven untergeordneten Fenster liegt.
+Ein Handle für das untergeordnete MDI-Fenster. Das System aktiviert das untergeordnete Fenster, das sich direkt vor oder nach dem angegebenen untergeordneten Fenster befindet, abhängig vom Wert des *lParam-Parameters.* Wenn der *wParam-Parameter* **NULL ist,** aktiviert das System das untergeordnete Fenster unmittelbar vor oder nach dem derzeit aktiven untergeordneten Fenster.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Wenn dieser Parameter NULL ist, aktiviert das System das nächste untergeordnete MDI-Fenster und platziert das untergeordnete Fenster, das durch den *wParam* -Parameter identifiziert wird, hinter allen anderen untergeordneten Fenstern. Wenn dieser Parameter ungleich NULL ist, aktiviert das System das vorherige untergeordnete Fenster und platziert es vor dem durch *wParam* identifizierten untergeordneten Fenster.
+Wenn dieser Parameter 0 (null) ist, aktiviert das System das nächste untergeordnete MDI-Fenster und platziert das untergeordnete Fenster, das durch den *wParam-Parameter* identifiziert wird, hinter allen anderen untergeordneten Fenstern. Wenn dieser Parameter ungleich 0 (null) ist, aktiviert das System das vorherige untergeordnete Fenster und platziert es vor dem untergeordneten Fenster, das von *wParam identifiziert wird.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **null**
+Typ: **0 (null)**
 
 Der Rückgabewert ist immer 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein MDI-Client Fenster eine Nachricht empfängt, die die Aktivierung der untergeordneten Fenster ändert, während das aktive untergeordnete MDI-Fenster maximiert ist, stellt das System das aktive untergeordnete Fenster wieder her und maximiert das neu aktivierte untergeordnete Fenster.
+Wenn ein MDI-Clientfenster eine Meldung empfängt, die die Aktivierung seiner untergeordneten Fenster ändert, während das aktive untergeordnete MDI-Fenster maximiert ist, stellt das System das aktive untergeordnete Fenster wieder auf und maximiert das neu aktivierte untergeordnete Fenster.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,27 +58,27 @@ Wenn ein MDI-Client Fenster eine Nachricht empfängt, die die Aktivierung der un
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM- \_ mdiaktivierung**](wm-mdiactivate.md)
+[**WM \_ MDIACTIVATE**](wm-mdiactivate.md)
 </dt> <dt>
 
-[**WM- \_ mdigetactive**](wm-mdigetactive.md)
+[**WM \_ MDIGETACTIVE**](wm-mdigetactive.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Mehrere Dokument Schnittstellen](multiple-document-interface.md)
+[Mehrere Dokumentschnittstellen](multiple-document-interface.md)
 </dt> </dl>
 
  

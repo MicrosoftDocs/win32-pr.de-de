@@ -1,17 +1,17 @@
 ---
-title: Funktionen zum Signieren von sicheren Start Features für Kernelmodustreiber
-description: Funktionen zum Signieren von sicheren Start Features für Kernelmodustreiber
+title: Anforderungen an die Signierung sicherer Startfeatures für Kernelmodustreiber
+description: Anforderungen an die Signierung sicherer Startfeatures für Kernelmodustreiber
 ms.assetid: 7FF64BA2-89E3-4E6F-B542-7BC7BF7F4FB2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a63a8b1fca1677aa125bac96dfec290dcd736b5
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 05146645e01406fed0129c4f31660509e04581ce889213c7addf01731e45e87f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "106342168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932170"
 ---
-# <a name="secure-boot-feature-signing-requirements-for-kernel-mode-drivers"></a>Funktionen zum Signieren von sicheren Start Features für Kernelmodustreiber
+# <a name="secure-boot-feature-signing-requirements-for-kernel-mode-drivers"></a>Anforderungen an die Signierung sicherer Startfeatures für Kernelmodustreiber
 
 ## <a name="platforms"></a>Plattformen
 
@@ -19,28 +19,28 @@ ms.locfileid: "106342168"
 **Server** – Windows Server 2012  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-In Windows 8 und Windows Server 2012, einschließlich WinPE, wurde der Kernel gesperrt, um zu verhindern, dass Schadsoftware, die von Start-oder Rootkits eingeführt wurde, die Sicherheitsanforderungen des Windows-Betriebssystems für signierte Treiber umgeht.
+In Windows 8 und Windows Server 2012, einschließlich WinPE, wurde der Kernel gesperrt, um zu verhindern, dass schadsoftware, die durch Boot- oder Root Kits eingeführt wird, die Sicherheitsanforderungen des Windows-Betriebssystems für signierte Treiber umgehen kann.
 
-Diese Änderung wirkt sich auf alle Kernelmodustreiber für Geräte aus, die den sicheren Start von Unified Extensible Firmware Interface (UEFI) unterstützen. UEFI Secure Boot ist für die Windows 8-Zertifizierung für Client Computer und optional für-Server erforderlich. Er wirkt sich nicht auf Benutzermodus-Treiber aus.
+Diese Änderung wirkt sich auf alle Kernelmodustreiber für Geräte aus, die den sicheren Start der einheitlichen erweiterbaren Firmwareschnittstelle (UEFI) unterstützen. Der sichere UEFI-Start ist für Windows 8-Zertifizierung für Clientcomputer und optional für Server erforderlich. Dies wirkt sich nicht auf Treiber im Benutzermodus aus.
 
-Die Standard Entwicklung für Kernelmodustreiber umfasst entweder die Verwendung des kernelmodusdebuggens oder die Start Konfigurationsdaten-Einstellung (BCD) <testsigning> . Beide werden deaktiviert, wenn der sichere Start aktiviert ist.
+Die Standardentwicklung für Kernelmodustreiber umfasst entweder das Debuggen im Kernelmodus oder die Einstellung für Startkonfigurationsdaten (Boot Configuration <testsigning> Data, BCD). Beides ist deaktiviert, wenn der gesicherte Start aktiviert ist.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Kernelmodustreiber können nicht ausgeführt werden, wenn Sie von einer vertrauenswürdigen Zertifizierungsstelle nicht ordnungsgemäß signiert wurden. Das Betriebssystem lässt nicht zu, dass nicht vertrauenswürdige Treiber ausgeführt werden, und Standardmechanismen wie Kernel Debugging und TESTSIGNING sind nicht zulässig.
+Treiber im Kernelmodus werden nicht ausgeführt, wenn sie nicht ordnungsgemäß von einer vertrauenswürdigen Zertifizierungsstelle signiert wurden. Das Betriebssystem lässt nicht vertrauenswürdige Treiber nicht zu, und Standardmechanismen wie Kerneldebuggen und Testsignierung sind nicht zulässig.
 
 ## <a name="mitigation"></a>Minderung
 
-Zum Testen von Treibern müssen Sie den sicheren Start im BIOS deaktivieren und die anderen Anforderungen an die Test Signierung erfüllen (siehe unten).
+Zum Testen von Treibern müssen Sie den sicheren Start in BIOS deaktivieren und die anderen Testsignieranforderungen erfüllen (siehe unten).
 
-Wenn Treiber häufiger verteilt werden, müssen Sie von einer vertrauenswürdigen Zertifizierungsstelle ordnungsgemäß signiert werden.
+Wenn Treiber häufiger verteilt werden, müssen sie ordnungsgemäß von einer vertrauenswürdigen Zertifizierungsstelle signiert werden.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Signatur Treiber](/previous-versions/windows/hardware/design/dn653563(v=vs.85))
+-   [Signierungstreiber](/previous-versions/windows/hardware/design/dn653563(v=vs.85))
 
- 
+ 
 
- 
+ 

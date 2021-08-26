@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das vom System beim Versuch, ein Spiel zu starten, generiert wurde. Verschiedene Feldwerte werden vom Games Explorer-System und den zugehörigen GDF-Metadaten (Game Definition File) bereitgestellt, die von unterstützten Spielen bereitgestellt werden.
+description: Benutzerspezifisches Ereignis, das vom System beim Versuch generiert wird, ein Spiel zu starten. Verschiedene Feldwerte werden vom Games Explorer-System und den entsprechenden GDF-Metadaten (Game Definition File) bereitgestellt, die von unterstützten Spielen bereitgestellt werden.
 ms.assetid: c870f9fb-3be1-4039-9a33-dddff17a4faa
-title: WPCEVENT_GAME_START-Ereignis (wpcevent. h)
+title: WPCEVENT_GAME_START (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5cc47144910f624005031573e28f5078db10ee9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41367a47a9bace8dd615ab4b6eea0a875099aab465c285389478c4bee0a39392
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951500"
 ---
-# <a name="wpcevent_game_start-event"></a>Wpcevent- \_ Spiel \_ Start Ereignis
+# <a name="wpcevent_game_start-event"></a>WPCEVENT \_ GAME \_ START-Ereignis
 
-Pro-Benutzer-Ereignis, das vom System beim Versuch, ein Spiel zu starten, generiert wurde. Verschiedene Feldwerte werden vom Games Explorer-System und den zugehörigen GDF-Metadaten (Game Definition File) bereitgestellt, die von unterstützten Spielen bereitgestellt werden.
+Benutzerspezifisches Ereignis, das vom System beim Versuch generiert wird, ein Spiel zu starten. Verschiedene Feldwerte werden vom Games Explorer-System und den entsprechenden GDF-Metadaten (Game Definition File) bereitgestellt, die von unterstützten Spielen bereitgestellt werden.
 
 
 ```C++
@@ -29,39 +29,39 @@ const EVENT_DESCRIPTOR WPCEVENT_GAME_START = {0x2, 0x0, 0x10, 0x4, 0x16, 0x2, 0x
 *AppID* 
 </dt> <dd>
 
-Der GUID des Spiels, das versucht hat, zu starten.
+Die GUID des Spiels, das gestartet werden soll.
 
 </dd> <dt>
 
 *InstanceID* 
 </dt> <dd>
 
-Die GUID, die zur Unterscheidung zwischen mehreren Installationen verwendet wird.
+Die GUID, die verwendet wird, um zwischen mehreren Installationen zu unterscheiden.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Versions Zeichenfolge für das Spiel.
+Die Versionszeichenfolge für das Spiel.
 
 </dd> <dt>
 
-*Pfad* 
+*Path* 
 </dt> <dd>
 
-Der Pfad zum primären Verzeichnis der Spielinstallation.
+Der Pfad zum primären Verzeichnis der Spieleinstallation.
 
 </dd> <dt>
 
 *Rating* 
 </dt> <dd>
 
-Eine Zeichenfolge, die die Bewertungs Ebene eines Spiels im Bewertungssystem identifiziert.
+Eine Zeichenfolge, die die Bewertungsebene eines Spiels innerhalb des Bewertungssystems identifiziert.
 
 </dd> <dt>
 
-*Ratingsystem* 
+*RatingSystem* 
 </dt> <dd>
 
 Eine GUID, die das aktuelle Bewertungssystem identifiziert, für das die Bewertungsstufe gilt.
@@ -71,11 +71,11 @@ Eine GUID, die das aktuelle Bewertungssystem identifiziert, für das die Bewertu
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse nicht verwendet werden und welche Steuerelemente verwendet werden.
 
 </dd> <dt>
 
-*Desccount* 
+*DescCount* 
 </dt> <dd>
 
 Die Anzahl der Deskriptoren, die im Deskriptorfeld vorhanden sind.
@@ -89,10 +89,10 @@ Eine durch Trennzeichen getrennte Zeichenfolge, die Deskriptoren enthält, die f
 
 </dd> <dt>
 
-*Lauer* 
+*Pid* 
 </dt> <dd>
 
-Die Prozess-ID des Spiels, das verwendet wird, um das Herunterfahren des Prozesses mit einem Shim zu korrelieren.
+Die Prozess-ID des Spiels, die zum Korrelieren mit einem Shim-Herunterfahren des Prozesses verwendet wird.
 
 </dd> </dl>
 
@@ -102,9 +102,9 @@ Die Prozess-ID des Spiels, das verwendet wird, um das Herunterfahren des Prozess
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -112,10 +112,10 @@ Die Prozess-ID des Spiels, das verwendet wird, um das Herunterfahren des Prozess
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

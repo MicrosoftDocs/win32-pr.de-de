@@ -1,44 +1,44 @@
 ---
-description: Es ist in der Regel wünschenswert, einen komplizierteren Satz von Informationen zu kopieren, als im frei Hand Format (Ink serialisiert Format, ISF) enthalten sein können.
+description: Es ist in der Regel wünschenswert, einen komplizierteren Satz von Informationen zu kopieren, als im ink serialisierten Format (ISF) enthalten sein kann.
 ms.assetid: 1cef7f91-118c-4a16-802d-bd2ec5d15416
-title: Speichern von frei Hand Eingaben in HTML
+title: Speichern von Ink in HTML
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8372e6e77ea0284bc44fa70883964e53b3063bab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d8949582c5743ba7be5ac664627792c7b7f8a0cd5968a67f5db08b6428cb886
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934360"
 ---
-# <a name="storing-ink-in-html"></a>Speichern von frei Hand Eingaben in HTML
+# <a name="storing-ink-in-html"></a>Speichern von Ink in HTML
 
-Es ist in der Regel wünschenswert, einen komplizierteren Satz von Informationen zu kopieren, als im frei Hand Format (Ink serialisiert Format, ISF) enthalten sein können. HTML ist aufgrund seiner starken Akzeptanz als Industriestandard und der Fähigkeit, heterogenen Inhalt darzustellen, besonders als Interoperabilitäts Format nützlich.
+Es ist in der Regel wünschenswert, einen komplizierteren Satz von Informationen zu kopieren, als im ink serialisierten Format (ISF) enthalten sein kann. HTML ist aufgrund seiner starken Akzeptanz als Branchenstandard und seiner Fähigkeit, heterogene Inhalte darzustellen, besonders nützlich als Interoperabilitätsformat.
 
-HTML ist weitgehend verständlich, gut dokumentiert und mit vielen Entwicklern vertraut. Es gibt viele Tools für die HTML-Produktion. Darüber hinaus enthält Microsoft Windows APIs (Application Programming Interfaces) zum Rendern und manipulieren von HTML. Zum Schluss bieten die Tablet PC Platform-APIs das befestigte GIF-Persistenzformat, das zum Einbetten in andere Formate geeignet ist. Dieses Format besteht aus einer GIF-Datei mit ISF (Ink Serialized Format), die in einen Anwendungs Erweiterungs Block eingebettet ist.
+HTML ist für viele Entwickler allgemein verständlich, gut dokumentiert und vertraut. Es gibt viele Tools für die HTML-Produktion. Darüber hinaus enthält Microsoft Windows APIs (Application Programming Interfaces) zum Rendern und Bearbeiten von HTML. Schließlich stellen die Tablet PC Platform-APIs das persistente GIF-Persistenzformat bereit, das für die Einbettung in andere Formate geeignet ist, vor allem HTML. Dieses Format besteht aus einer GIF-Datei mit serialisiertes Freihandformat (ISF), die in einen Anwendungserweiterungsblock eingebettet ist.
 
-Diese GIF-Dateien sind Darstellungen von frei Hand Objekten, die:
+Diese GIF-Dateien sind Darstellungen von Freihandobjekten, die:
 
--   Rendering in Anwendungen, die nicht frei Hand fähig sind, z. b. Browser oder ältere Word-Prozessoren.
--   Enthalten alle erforderlichen Informationen aus der ursprünglichen frei Hand Eingabe, die Sie für Zwecke wie z. b. Bearbeitung oder Erkennung beibehalten möchten.
+-   Rendern in Nicht-Ink-fähigen Anwendungen, z. B. Browsern oder Legacy-Textprozessoren.
+-   Enthält alle erforderlichen Informationen aus der ursprünglichen Ink, die zu Bearbeitungs- oder Erkennungszwecken verwaltet werden sollen.
 
-Diese GIF-Dateien können mithilfe der persistenzmethoden der Tablet PC Platform-APIs erstellt werden. Dabei handelt es sich um GIFs, und Sie sollten die GIF-Erweiterung und für eine Anwendung verwenden, die nicht frei Hand Eingaben aktiviert ist, von einer normalen GIF. Für eine frei Hand aktivierte Anwendung gibt es jedoch einen umfangreichen Satz von Daten, die dem Bild zugrunde liegen.
+Diese GIF-Dateien können mithilfe der Persistenzmethoden der Tablet PC Platform-APIs erstellt werden. Es handelt sich um GIFs, die die GIF-Erweiterung verwenden sollten. Für eine Anwendung, die nicht ink-fähig ist, gibt es nichts anderes als ein normales GIF. Für eine Anwendung mit Ink-Aktivierung gibt es jedoch einen umfangreichen Satz von Daten, die dem Image zugrunde liegen.
 
-Nachdem Sie von den Tablet PC Platform-APIs erstellt wurde, wird auf ein befestigtes GIF von einem IMG-Tag in HTML verwiesen. Der HTML-Code wird dann im standardmäßigen CF- \_ HTML-Zwischenablage Slot gespeichert. Dadurch kann der HTML-Code für andere Anwendungen sichtbar sein, unabhängig davon, ob Sie frei Hand Eingabe fähig sind. Das Image selbst kann im Windows-Internet Cache gespeichert werden und nach einem angemessenen Zeitraum auf "Age out" festgelegt werden.
+Nachdem sie von den Tablet PC Platform-APIs erstellt wurde, wird auf ein verstärktes GIF durch ein IMG-Tag in HTML verwiesen. Der HTML-Code wird dann im STANDARDMÄßIGEN CF \_ HTML-Zwischenablageslot gespeichert. Dadurch kann der HTML-Code für andere Anwendungen sichtbar sein, unabhängig davon, ob sie ink-fähig sind. Das Image selbst kann im Windows Internetcache gespeichert und nach einer angemessenen Zeitspanne auf das Altern festgelegt werden.
 
-Bestimmte Zusatzelemente für das img-Tag werden bereitgestellt oder sind erforderlich. Diese Zusatzelemente identifizieren den HTML-Code als enthaltende Freihand. Das folgende Beispiel verweist auf ein befestigtes GIF mithilfe von HTML-Tags:
+Bestimmte Adornments für das IMG-Tag werden bereitgestellt oder sind erforderlich. Diese Adornments identifizieren den HTML-Code als mit Ink. Im folgenden Beispiel wird mithilfe von HTML-Tags auf ein verstärktes GIF verwiesen:
 
 `<img href="34372423432.gif" />`
 
-Wenn es erforderlich ist, auf andere Weise auf das Image zu verweisen, z. b. Cascading Stylesheets oder Vector Markup Language (VML), sollte noch ein img-Tag vorhanden sein, das auf das Bild verweist. Dies ermöglicht das Auslagern und Einfügen in alle Anwendungen, die HTML-Darstellungen von frei Hand Eingaben akzeptieren.
+Wenn auf das Bild auf andere Weise verwiesen werden muss, z. B. mit cascading stylesheets oder Vector Markup Language (VML), sollte weiterhin ein IMG-Tag vorhanden sein, das auf das Image verweist. Dies ermöglicht das Ausschneiden und Einfügen in und aus jeder Anwendung, die HTML-Darstellungen von Ink akzeptiert.
 
 Anwendungen, die Freihand in HTML unterstützen, sollten:
 
--   Generieren Sie CF \_ HTML, wenn der Benutzer eine Kopie ausführt. Wenn Sie CF- \_ HTML beim Kopieren generieren (oder als HTML speichern), verwenden Sie die [Microsoft. Ink. Ink. Save](/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90)) -Methode, indem Sie den [Microsoft. Ink. PersistenceFormat](/previous-versions/ms827245(v=msdn.10)) -Wert im *p* -Parameter angeben, um ein befestigtes GIF-Bild zu generieren. Der alt-Text sollte auf das präzisere Erkennungs Ergebnis festgelegt werden. Sie können die Positionierung wie gewünscht auf absolut oder direkt festlegen.
--   Überprüfen Sie alle IMG-Tags, um zu bestimmen, ob Bilder, auf die Sie verweisen, frei Hand Eingaben enthalten, wenn der CF- \_ HTML-Slot für ein einfügen Wenn dies der Fall ist, behandeln Sie die Bilder [intern als frei](/previous-versions/aa515768(v=msdn.10)) Hand Objekte. Obwohl nur GIF-Dateien in dieser Version unterstützt werden, sollte Ihre Anwendung auch nicht-GIF-Images überprüfen, falls in Zukunft weitere Bildformate unterstützt werden.
--   Unterstützt das Kopieren und Einfügen von ISF. Anwendungen, die HTML unterstützen, sollten auch ISF unterstützen, um die Interoperabilität mit frei Hand fähigen Anwendungen zu verbessern, die HTML nicht erkennen. Dies ähnelt der Konvention, dass Anwendungen, die HTML in der Zwischenablage platzieren, auch Text platzieren.
+-   Generieren Sie \_ CF-HTML, wenn der Benutzer eine Kopie ausführt. Verwenden Sie beim Generieren von CF \_ HTML beim Kopieren (oder Speichern als HTML) die [Microsoft.Ink.Ink.Save-Methode,](/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90)) und geben Sie den [Wert Microsoft.Ink.PersistenceFormat](/previous-versions/ms827245(v=msdn.10)) im *p-Parameter* an, um ein verstärktes GIF-Bild zu generieren. Der alte Text sollte auf das genaueste Erkennungsergebnis festgelegt werden. Sie können die Positionierung nach Bedarf entweder auf absolut oder an Ort und Stelle festlegen.
+-   Überprüfen Sie alle IMG-Tags, um zu ermitteln, ob Bilder, auf die sie zeigen, Ink enthalten, ob der \_ CF-HTML-Slot für ein Einfügen ausgewählt wird. Wenn ja, behandeln Sie die Bilder intern als [Ink-Objekte.](/previous-versions/aa515768(v=msdn.10)) Obwohl in dieser Version nur GIF-Dateien unterstützt werden, sollte Ihre Anwendung auch Nicht-GIF-Bilder überprüfen, falls in Zukunft zusätzliche Bildformate unterstützt werden.
+-   Unterstützt das Kopieren und Einfügen von ISF. Anwendungen, die HTML unterstützen, sollten auch ISF unterstützen, um die Interoperabilität mit Ink-fähigen Anwendungen zu verbessern, die HTML nicht erkennen. Dies ähnelt der Konvention, dass Anwendungen, die HTML in der Zwischenablage platzieren, auch Text platzieren.
 
-Weitere Informationen zu den verstärkten-GIFs finden Sie unter [Bausteine](building-blocks.md).
+Weitere Informationen zu verstärkten GIFs finden Sie unter [Bausteine.](building-blocks.md)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: TB_GETANCHORHIGHLIGHT Meldung (kommstrg. h)
-description: Ruft die Anker Hervorhebungs Einstellung für eine Symbolleiste ab.
+title: TB_GETANCHORHIGHLIGHT (Commctrl.h)
+description: Ruft die Einstellung für die Hervorhebung des Ankers für eine Symbolleiste ab.
 ms.assetid: 167d481c-8684-40eb-9323-cfa238be3643
 keywords:
-- Windows-Steuerelemente für TB_GETANCHORHIGHLIGHT Meldung
+- TB_GETANCHORHIGHLIGHT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bfff5ef1853bbf5657604c673dcc6a9be43af83
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eadee4fd029cfe8ffb43960070538cf6574ca3bb178829f65af1ddc0753b9ef2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919080"
 ---
-# <a name="tb_getanchorhighlight-message"></a>TB \_ getanchorhervorhebungs Meldung
+# <a name="tb_getanchorhighlight-message"></a>TB \_ GETANCHORHIGHLIGHT-Nachricht
 
-Ruft die Anker Hervorhebungs Einstellung für eine Symbolleiste ab.
+Ruft die Einstellung für die Hervorhebung des Ankers für eine Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Anker Hervorhebungs Einstellung für eine Symbolleiste ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen booleschen Wert zurück, der angibt, ob Anker Hervorhebung festgelegt ist. Wenn dieser Wert ungleich 0 (null) ist, ist die Anker Hervorhebung aktiviert. Wenn dieser Wert 0 (null) ist, wird er deaktiviert.
+Gibt einen booleschen Wert zurück, der angibt, ob die Ankerhervorhebung festgelegt ist. Wenn dieser Wert ungleich 0 (null) ist, wird die Ankerhervorhebung aktiviert. Wenn dieser Wert 0 (null) ist, ist er deaktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt einen booleschen Wert zurück, der angibt, ob Anker Hervorhebung festgelegt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TB \_**](tb-setanchorhighlight.md)
+[**TB \_ SETANCHORHIGHLIGHT**](tb-setanchorhighlight.md)
 </dt> </dl>
 
  
