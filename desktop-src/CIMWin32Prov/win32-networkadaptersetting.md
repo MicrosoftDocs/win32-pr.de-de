@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 networkadaptersetting Association" verknüpft einen Netzwerkadapter und seine Konfigurationseinstellungen.
+description: Die \_ WMI-Zuordnungsklasse Win32 NetworkAdapterSetting bezieht sich auf einen Netzwerkadapter und dessen Konfigurationseinstellungen.
 ms.assetid: 6fc646c3-05f9-4c92-8598-07ea20fffaca
 ms.tgt_platform: multiple
 title: Win32_NetworkAdapterSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c51ef9ed790c902a6a662dc3ebc45df97fa29721
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8f7330e5b6a2b86508528bb1136acd58b308ca4b9c44b31b9b6e0777f4eccd19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972671"
 ---
-# <a name="win32_networkadaptersetting-class"></a>Win32 \_ networkadaptersetting-Klasse
+# <a name="win32_networkadaptersetting-class"></a>Win32 \_ NetworkAdapterSetting-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ networkadaptersetting** Association" verknüpft einen Netzwerkadapter und seine Konfigurationseinstellungen.
+Die **WMI-Zuordnungsklasse \_ Win32 NetworkAdapterSetting** bezieht sich auf einen Netzwerkadapter und dessen Konfigurationseinstellungen. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,57 +42,57 @@ class Win32_NetworkAdapterSetting : Win32_DeviceSettings
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ networkadaptersetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ NetworkAdapterSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ networkadaptersetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ NetworkAdapterSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ NetworkAdapter**
+Datentyp: **Win32 \_ NetworkAdapter**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Network Adapter")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ NetworkAdapter")
 </dt> </dl>
 
-Ein [**Win32- \_ NetworkAdapter**](win32-networkadapter.md) , der die Eigenschaften des Netzwerkadapters beschreibt, der eine bestimmte Netzwerkadapter Einstellung verwendet.
+Ein [**Win32 \_ NetworkAdapter,**](win32-networkadapter.md) der die Eigenschaften des Netzwerkadapters beschreibt, der eine bestimmte Netzwerkadaptereinstellung verwendet.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ networkadapterconfiguration**
+Datentyp: **Win32 \_ NetworkAdapterConfiguration**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ networkadapterconfiguration")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) [**("Einstellung"), MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ NetworkAdapterConfiguration")
 </dt> </dl>
 
-Eine [**Win32- \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md) , die die auf dem Netzwerkadapter verwendeten Konfigurationseinstellungen beschreibt.
+Eine [**Win32 \_ NetworkAdapterConfiguration,**](win32-networkadapterconfiguration.md) die die auf dem Netzwerkadapter verwendeten Konfigurationseinstellungen beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ networkadaptersetting** -Klasse wird von [**Win32- \_ devicesettings**](win32-devicesettings.md)abgeleitet.
+Die **Win32 \_ NetworkAdapterSetting-Klasse** wird von [**Win32 \_ DeviceSettings abgeleitet.**](win32-devicesettings.md)
 
-Weitere Informationen zum Verwenden von Zuordnungs Klassen finden Sie unter [ASSOCIATORS of Statement](../wmisdk/associators-of-statement.md).
+Informationen zur Verwendung von Zuordnungsklassen finden Sie unter [ASSOCIATORS OF Statement](../wmisdk/associators-of-statement.md).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Beispiel wird **Win32 \_ networkadaptersetting** verwendet, um die IP-Adresse in der LAN-Verbindung zu identifizieren.
+Im folgenden VBScript-Beispiel wird **Win32 \_ NetworkAdapterSetting** verwendet, um die IP-Adresse der Lokalen Verbindung zu identifizieren.
 
 
 ```VB
@@ -128,8 +128,8 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -138,13 +138,13 @@ Next
 
 <dl> <dt>
 
-[**Win32-Geräte-Manager \_**](win32-devicesettings.md)
+[**Win32 \_ DeviceSettings**](win32-devicesettings.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](../wmisdk/wmi-tasks--networking.md)
+[WMI-Aufgaben: Netzwerk](../wmisdk/wmi-tasks--networking.md)
 </dt> </dl>
 
  

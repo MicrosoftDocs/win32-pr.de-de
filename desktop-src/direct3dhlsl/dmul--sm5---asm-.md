@@ -4,12 +4,12 @@ description: Komponentenweise Multiplikation mit doppelter Genauigkeit.
 ms.assetid: 53AE27BE-2F4B-4C55-B496-D7122C00DC52
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a5d311cb5c958e8b7403197027c9854d1a93a64
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 838b9e2b3ed24dd5a6025c230439ce0719922d88bac723b3aed759c5fa224d8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107999087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068380"
 ---
 # <a name="dmul-sm5---asm"></a>dmul (sm5 - asm)
 
@@ -41,7 +41,7 @@ Komponentenweise Multiplikation mit doppelter Genauigkeit.
 Die gültigen Swizzles für die Quellparameter sind .xyzw, .xyxy, .zwxy, .zwzw. Die *gültigen Destmasken* sind .xy, .zw und .xyzw. Die folgenden *src-Zuordnungen* sind post swizzle:
 
 -   *dest* ist ein double vec2 über (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
--   *src0* ist ein double vec2 über (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
+-   *src0* ist eine doppelte Vec2 zwischen (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
 -   *src1* ist ein double-vec2 zwischen (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
 
 Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt.
@@ -78,7 +78,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
@@ -86,12 +86,12 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -101,7 +101,7 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

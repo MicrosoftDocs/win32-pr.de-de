@@ -5,22 +5,22 @@ ms.assetid: 30935099-7f33-4745-8a31-f9a28ab78b63
 ms.tgt_platform: multiple
 keywords:
 - AdvancedSettings4-Eigenschaft Remotedesktopdienste
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
-- AdvancedSettings4-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
+- AdvancedSettings4-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , AdvancedSettings4-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -46,16 +46,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7a229c28b645e7920212a04cc44ca5a9ce42be3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 77e8bd4d5562f5f7b73eac6c580fe7b033a10b8ce7f0471b2d1ca969cd7ae0ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033540"
 ---
-# <a name="imsrdpclient3advancedsettings4-property"></a>IMsRdpClient3:: AdvancedSettings4-Eigenschaft
+# <a name="imsrdpclient3advancedsettings4-property"></a>IMsRdpClient3::AdvancedSettings4-Eigenschaft
 
-Ruft einen Zeiger auf die [**IMsRdpClientAdvancedSettings3**](imsrdpclientadvancedsettings3.md) -Schnittstelle ab.
+Ruft einen Zeiger auf die [**IMsRdpClientAdvancedSettings3-Schnittstelle**](imsrdpclientadvancedsettings3.md) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -72,13 +72,13 @@ HRESULT get_AdvancedSettings4(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Zeiger auf die [**IMsRdpClientAdvancedSettings3**](imsrdpclientadvancedsettings3.md) -Schnittstelle. Die-Schnittstelle kann verwendet werden, um erweiterte Einstellungen für das Client Steuerelement festzulegen.
+Zeiger auf die [**IMsRdpClientAdvancedSettings3-Schnittstelle.**](imsrdpclientadvancedsettings3.md) Die -Schnittstelle kann verwendet werden, um erweiterte Einstellungen für das Clientsteuerelement festzulegen.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
 

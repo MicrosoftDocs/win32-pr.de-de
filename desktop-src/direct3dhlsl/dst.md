@@ -1,9 +1,9 @@
 ---
-title: DST-Funktion
-description: Berechnet einen Entfernungs Vektor. | DST-Funktion
+title: dst-Funktion
+description: Berechnet einen Entfernungsvektor. | dst-Funktion
 ms.assetid: 24d22743-5867-49db-8d0a-55cc3625c947
 keywords:
-- DST-Funktion HLSL
+- dst-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 58ce243cf9a9f3e6118763368445e5bcf26ba4cc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d8b0d8112902486102e6a4338445a2526b23cab8dafb2ea8b7d68b87d5b803af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068340"
 ---
-# <a name="dst-function"></a>DST-Funktion
+# <a name="dst-function"></a>dst-Funktion
 
-Berechnet einen Entfernungs Vektor.
+Berechnet einen Entfernungsvektor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,19 +37,19 @@ fVector dst(
 
 <dl> <dt>
 
-*src0* \[ in\]
+*src0* \[ In\]
 </dt> <dd>
 
-Type: " **[atvector](dx-graphics-hlsl-vector.md) "**
+Typ: **[fVector](dx-graphics-hlsl-vector.md)**
 
 Der erste Vektor.
 
 </dd> <dt>
 
-*Quelle1* \[ in\]
+*src1* \[ In\]
 </dt> <dd>
 
-Type: " **[atvector](dx-graphics-hlsl-vector.md) "**
+Typ: **[fVector](dx-graphics-hlsl-vector.md)**
 
 Der zweite Vektor.
 
@@ -57,19 +57,19 @@ Der zweite Vektor.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: " **[atvector](dx-graphics-hlsl-vector.md) "**
+Typ: **[fVector](dx-graphics-hlsl-vector.md)**
 
-Der berechnete Entfernungs Vektor.
+Der berechnete Entfernungsvektor.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese intrinsische Funktion bietet die gleiche Funktionalität wie die Vertex-Shader-Anweisung [DST](dst---vs.md).
+Diese systeminterne Funktion bietet die gleiche Funktionalität wie die Vertex-Shaderanweisung [dst](dst---vs.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

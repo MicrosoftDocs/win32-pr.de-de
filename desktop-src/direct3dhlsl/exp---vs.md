@@ -1,6 +1,6 @@
 ---
-title: Exp-vs
-description: Bietet eine exponentielle vollständige Genauigkeit (2X). | Exp-vs
+title: exp – im Vergleich zu
+description: Stellt eine exponentielle 2-fache vollständige Genauigkeit bereit. | exp – im Vergleich zu
 ms.assetid: 3644046b-3257-4257-9880-146ca50f6b0b
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c5b49b69e1270075aef4368dedca5791c2784657
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2b5b27067e83cbfd7604165ec1191d3371634aac15781a719377c92c69e29e6f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067950"
 ---
-# <a name="exp---vs"></a>Exp-vs
+# <a name="exp---vs"></a>exp – im Vergleich zu
 
-Bietet eine exponentielle vollständige Genauigkeit 2<sup>x</sup>.
+Stellt exponentielle 2<sup>x</sup>volle Genauigkeit bereit.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Exp DST, src |
+| exp dst, src |
 |--------------|
 
 
@@ -33,14 +33,14 @@ Bietet eine exponentielle vollständige Genauigkeit 2<sup>x</sup>.
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von replizierten Strichen, d. h. genau einer der x-, y-,. z-,. w-Swizzle-Komponenten (oder r,. g,. b,. a-äquivalente) muss angegeben werden. Weitere Informationen finden Sie unter [Quellen Register: schwenken](dx9-graphics-reference-asm-vs-registers-modifiers-source-swizzling.md).
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von replicate swizzle, d.h., dass genau eine der .x-, .y-, .z-, W-Swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) angegeben werden muss. Weitere Informationen finden Sie [unter Source Register Swizzling](dx9-graphics-reference-asm-vs-registers-modifiers-source-swizzling.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | exp                    | x    | x    | x    | x     | x    | x     |
 
@@ -48,9 +48,9 @@ where
 
  
 
-Diese Anweisung bietet mindestens 21 Bits an Genauigkeit.
+Diese Anweisung bietet mindestens 21 Bit Genauigkeit.
 
-Das folgende Code Fragment zeigt die Vorgänge, die ausgeführt werden:
+Das folgende Codefragment zeigt die ausgeführten Vorgänge:
 
 
 ```
@@ -63,7 +63,7 @@ dest.x = dest.y = dest.z = dest.w = (float)pow(2, src.replicateSwizzleComponent)
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

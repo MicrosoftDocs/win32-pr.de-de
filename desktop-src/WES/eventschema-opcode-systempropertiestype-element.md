@@ -1,6 +1,6 @@
 ---
-title: Opcode (systempropertiestype)-Element
-description: Der im Ereignis definierte Opcode.
+title: Opcode -Element (SystemPropertiesType)
+description: Der im -Ereignis definierte Opcode.
 ms.assetid: ec59a0f0-0573-4e0d-b108-cfca5ffecfba
 keywords:
 - Opcode-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8c2d9b5ae9d49b9030675beca92b2c5af28c51a6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 07f774363c9f57f0eb9fb5540bb079fe4511950a0d7187a75e2c483150b8205c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005400"
 ---
-# <a name="opcode-systempropertiestype-element"></a>Opcode (systempropertiestype)-Element
+# <a name="opcode-systempropertiestype-element"></a>Opcode -Element (SystemPropertiesType)
 
-Der im Ereignis definierte Opcode.
+Der im -Ereignis definierte Opcode.
 
 ``` syntax
 <xs:element name="Opcode"
@@ -30,7 +30,7 @@ Der im Ereignis definierte Opcode.
  />
 ```
 
-Das **Opcode** -Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **Opcode-Element** wird durch den komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Opcode** -Element wird durch den komplexen [**systempropertiestype**](even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

@@ -1,23 +1,23 @@
 ---
 title: Verwenden von WinRM Windows PowerShell-Cmdlets zum Verwalten von BITS-Übertragungsaufträgen
-description: Windows-Remoteverwaltung PowerShell-Cmdlets können Background Intelligent Transfer Service (Bits)-Übertragungs Aufträge verwalten.
+description: Windows PowerShell-Cmdlets für die Remoteverwaltung können Background Intelligent Transfer Service (BITS)-Übertragungsaufträge verwalten.
 ms.assetid: 9fbef8a1-ed3f-4277-9a07-ed427f60d7a8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6eefd874a1056e959d1516d515891ae216e4aca3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9f24f4776d8a8431ac8c910fb8145633961bf353721698f8c3e5b4737ee0a1c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004640"
 ---
 # <a name="using-winrm-windows-powershell-cmdlets-to-manage-bits-transfer-jobs"></a>Verwenden von WinRM Windows PowerShell-Cmdlets zum Verwalten von BITS-Übertragungsaufträgen
 
-Windows-Remoteverwaltung PowerShell-Cmdlets können Background Intelligent Transfer Service (Bits)-Übertragungs Aufträge verwalten. Weitere Informationen zur Bits-Remote Verwaltung finden Sie unter [Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider) -und Bits- [Anbieter Klassen]( /previous-versions//dd904507(v=vs.85)).
+Windows PowerShell-Cmdlets für die Remoteverwaltung können Background Intelligent Transfer Service (BITS)-Übertragungsaufträge verwalten. Weitere Informationen zur BITS-Remoteverwaltung finden Sie unter [BITS-Anbieter-](/previous-versions/windows/desktop/bitsprov/bits-provider) und [BITS-Anbieterklassen.]( /previous-versions//dd904507(v=vs.85))
 
-Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider). Der Bits-Anbieter ist verfügbar, nachdem der BITS Compact-Server installiert wurde. Informationen zum Installieren des Compact-Servers finden Sie in der Dokumentation zu [BITS Compact Server](bits-compact-server.md) .
+In den folgenden Beispielen ist der [BITS-Anbieter erforderlich.](/previous-versions/windows/desktop/bitsprov/bits-provider) Der BITS-Anbieter ist verfügbar, nachdem der BITS Compact-Server installiert wurde. Informationen zum Installieren des Compact-Servers finden Sie in der [Dokumentation zu BITS Compact Server.](bits-compact-server.md)
 
-1.  Erstellen Sie einen Bits-Übertragungs Auftrag.
+1.  Erstellen Sie einen BITS-Übertragungsauftrag.
 
     ```PowerShell
     # Get the credentials to connect to the remote client computer
@@ -29,18 +29,18 @@ Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows
 
     
 
-    Das [Get-Credential-](/previous-versions//dd315327(v=technet.10)) Cmdlet fordert die Anmelde Informationen des Benutzers auf, um eine Verbindung mit dem Remote Computer herzustellen, und weist die Anmelde Informationen dem $cred-Objekt zu.
+    Das [Cmdlet Get-Credential](/previous-versions//dd315327(v=technet.10)) fordert die Anmeldeinformationen des Benutzers zum Herstellen einer Verbindung mit dem Remotecomputer an und weist die Anmeldeinformationen dem $cred zu.
 
-    Das " [Aufruf-wsmanaction"-](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1) Cmdlet erstellt den Bits-Übertragungs Auftrag auf CLIENT1, indem eine Instanz der Klasse " [bitsclientjob](/previous-versions/windows/desktop/legacy/dd904502(v=vs.85)) " erstellt und die in dem *valueset* -Parameter definierten Informationen in der Hash Tabelle verwendet werden. Der *valueset* -Parameter gibt die Informationen an, die erforderlich sind, um die Parameter der Methode " [kreatejob](/previous-versions/windows/desktop/bitsprov/createjob-bitsclientjob) " aufzufüllen. Im vorherigen Beispiel hat der Benutzer den *Typparameter* auf 0 (Download) festgelegt. Der Benutzer gibt auch den Namen der Remote Dateien und lokalen Dateien für den Download Auftrag an. Weitere Informationen zum Erstellen von Bits-Übertragungs Aufträgen und ausführliche Informationen zu Parametern finden Sie unter Methode " [kreatejob](/previous-versions/windows/desktop/bitsprov/createjob-bitsclientjob) ".
+    Das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1) erstellt den BITS-Übertragungsauftrag auf Client1, indem es eine Instanz der [BitsClientJob-Klasse](/previous-versions/windows/desktop/legacy/dd904502(v=vs.85)) erstellt und die Informationen in der Hashtabelle verwendet, die im *Valueset-Parameter definiert* ist. Der *Valueset-Parameter* gibt die Informationen an, die zum Auffüllen der Parameter der [CreateJob-Methode erforderlich](/previous-versions/windows/desktop/bitsprov/createjob-bitsclientjob) sind. Im vorherigen Beispiel legt der Benutzer den *Type-Parameter* auf 0 (Download) fest. Der Benutzer gibt auch den Namen der Remote- und lokalen Dateien für den Downloadauftrag an. Weitere Informationen zum Erstellen von BITS-Übertragungsaufträgen und ausführliche Informationen zu Parametern finden Sie unter [CreateJob-Methode.](/previous-versions/windows/desktop/bitsprov/createjob-bitsclientjob)
 
-    Das " [Aufruf-wsmanaction"-](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) Cmdlet weist das Ergebnis der $Result Variablen zu.
+    Das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) weist das Ergebnis der $result zu.
 
     > [!Note]  
-    > Das Zeichen mit einem Doppel Akzent ( \` ) wird verwendet, um einen Zeilenumbruch anzugeben.
+    > Das Zeichen mit Dem-Akzent ( \` ) wird verwendet, um einen Zeilenumbruch anzugeben.
 
      
 
-2.  Legen Sie die Priorität des Bits-Übertragungs Auftrags fest.
+2.  Legen Sie die Priorität des BITS-Übertragungsauftrags fest.
 
     ```PowerShell
     Set-WsmanInstance  -ResourceURI  wmi/root/microsoft/bits/BitsClientJob -SelectorSet @{JobId=$result.JobId} `
@@ -49,9 +49,9 @@ Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows
 
     
 
-    Das [Set-wsmaninstance](/powershell/module/Microsoft.WsMan.Management/Set-WSManInstance?view=powershell-5.1&preserve-view=true) -Cmdlet ändert die neue Bits-Übertragungs Auftrags Priorität in 0 (**BG \_ Job \_ priority \_ Vordergrund**). Weitere Informationen zu den Prioritätsstufen finden Sie unter der [**BG- \_ Auftrags \_ Prioritäts**](/windows/desktop/api/Bits/ne-bits-bg_job_priority) -Enumeration.
+    Das [Cmdlet Set-WsmanInstance](/powershell/module/Microsoft.WsMan.Management/Set-WSManInstance?view=powershell-5.1&preserve-view=true) ändert die Neue Bits-Übertragungsauftragspriorität in 0 **(BG JOB PRIORITY \_ \_ \_ FOREGROUND**). Weitere Informationen zu den Prioritätsebenen finden Sie in der [**BG \_ JOB \_ PRIORITY-Enumeration.**](/windows/desktop/api/Bits/ne-bits-bg_job_priority)
 
-3.  Setzen Sie den Bits-Übertragungs Auftrag fort.
+3.  Setzen Sie den BITS-Übertragungsauftrag wieder auf.
 
     ```PowerShell
     Invoke-WsmanAction -Action SetJobState -ResourceUri wmi/root/microsoft/bits/BitsClientJob  -selectorset @{JobId=$result.JobId}  `
@@ -60,9 +60,9 @@ Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows
 
     
 
-    Das " [Aufruf-wsmanaction"-](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) Cmdlet ruft die [setjobstate](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) -Methode auf, mit der der Auftragsstatus auf 2 festgelegt wird (Fortsetzen des Auftrags).
+    Das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) ruft die [SetJobState-Methode](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) auf, die den Auftragsstatus auf 2 (Auftrag fortsetzen) setzt.
 
-4.  Verwalten des Bits-Übertragungs Auftrags.
+4.  Verwalten des BITS-Übertragungsauftrags.
 
     ```PowerShell
     $IsPprocessing = $TRUE
@@ -101,13 +101,13 @@ Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows
 
     
 
-    Das vorherige Beispiel ist ein Skript, mit dem der Status des Auftrags abgerufen und eine Aktion basierend auf dem Status ausgeführt wird. Die folgenden Aktionen sind möglich:
+    Das vorherige Beispiel ist ein Skript, mit dem sie den Status des Auftrags abruft und basierend auf dem Status eine Aktion ausführen kann. Die folgenden Aktionen sind möglich:
 
-    -   Wenn $result. Der Status ist 4 (**Fehler des BG- \_ Auftrags \_ Zustands \_**), das [Aufruf-wsmanaction](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) -Cmdlet ruft die [setjobstate](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) -Methode auf und bricht den Auftrag ab.
-    -   Wenn $result. Der Status ist 5 (ein **\_ \_ \_ vorübergehender \_ Fehler des BG-Auftrags Zustands**), das Cmdlet " [Aufruf-wsmanaction](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) " Ruft die Methode " [setjobstate](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) " auf und bricht den Auftrag ab.
-    -   Wenn $result. Der Status ist 6 (der **BG- \_ Auftrags \_ Status wurde \_ übertragen**), das Cmdlet " [Aufruf-wsmanaction](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) " Ruft die [setjobstate](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) -Methode auf und legt den Status auf "abgeschlossen" fest
+    -   Wenn $result. Der Zustand ist 4 (**BG \_ JOB STATE \_ \_ ERROR),** das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) ruft die [SetJobState-Methode](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) auf und bricht den Auftrag ab.
+    -   Wenn $result. Der Zustand ist 5 (**BG JOB STATE TRANSIENT \_ \_ \_ \_ ERROR),** das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) ruft die [SetJobState-Methode](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) auf und bricht den Auftrag ab.
+    -   Wenn $result. Der Zustand ist 6 (**BG \_ JOB STATE \_ \_ TRANSFERD),** das [Invoke-WsmanAction-Cmdlet](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true) ruft die [SetJobState-Methode](/previous-versions/windows/desktop/bitsprov/setjobstate-bitsclientjob) auf und legt den Zustand für den Abschluss fest.
 
-    Weitere Informationen zu Auftrags Zuständen finden Sie unter der [**BG- \_ Auftrags \_ Status**](/windows/desktop/api/Bits/ne-bits-bg_job_state) -Enumeration.
+    Weitere Informationen zu Auftragszuständen finden Sie in der [**BG \_ JOB \_ STATE-Enumeration.**](/windows/desktop/api/Bits/ne-bits-bg_job_state)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -116,10 +116,10 @@ Die folgenden Beispiele erfordern den [Bits-Anbieter](/previous-versions/windows
 [Get-Credential](/previous-versions//dd315327(v=technet.10))
 </dt> <dt>
 
-["Aufrufen-wsmanaction"](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true)
+[Invoke-WsmanAction](/powershell/module/Microsoft.WsMan.Management/Invoke-WSManAction?view=powershell-5.1&preserve-view=true)
 </dt> <dt>
 
-[Set-wsmaninstance](/powershell/module/Microsoft.WsMan.Management/Set-WSManInstance?view=powershell-5.1&preserve-view=true)
+[Set-WsmanInstance](/powershell/module/Microsoft.WsMan.Management/Set-WSManInstance?view=powershell-5.1&preserve-view=true)
 </dt> </dl>
 
  

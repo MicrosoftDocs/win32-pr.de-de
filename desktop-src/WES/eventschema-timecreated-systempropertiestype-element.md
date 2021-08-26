@@ -1,9 +1,9 @@
 ---
-title: TimeCreated-Element (systempropertiestype)
-description: Der Zeitstempel, der angibt, wann das Ereignis protokolliert wurde.
+title: TimeCreated (SystemPropertiesType)-Element
+description: Der Zeitstempel, der identifiziert, wann das Ereignis protokolliert wurde.
 ms.assetid: 16b2b71b-078e-4862-b1be-ef7cec315bc5
 keywords:
-- TimeCreated-Element (Ereignisprotokoll)
+- TimeCreated-Element – EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 998bb03601f0ecbe87c571daa94b1f33e307d6af
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5026bed56e3e065a403c0e6076daa0ec478223c4d742db0a35109a41cc98d5c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005300"
 ---
-# <a name="timecreated-systempropertiestype-element"></a>TimeCreated-Element (systempropertiestype)
+# <a name="timecreated-systempropertiestype-element"></a>TimeCreated (SystemPropertiesType)-Element
 
-Der Zeitstempel, der angibt, wann das Ereignis protokolliert wurde.
+Der Zeitstempel, der identifiziert, wann das Ereignis protokolliert wurde.
 
 ``` syntax
 <xs:element name="TimeCreated">
@@ -35,7 +35,7 @@ Der Zeitstempel, der angibt, wann das Ereignis protokolliert wurde.
 </xs:element>
 ```
 
-Das **TimeCreated** -Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **TimeCreated-Element** wird durch den komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="attributes"></a>Attributes
 
@@ -53,8 +53,8 @@ Das **TimeCreated** -Element wird durch den komplexen [**systempropertiestype**]
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

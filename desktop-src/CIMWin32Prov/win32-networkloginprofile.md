@@ -1,5 +1,5 @@
 ---
-description: Das Win32- \_ networkloginprofile-&\# 8194; Die WMI-Klasse stellt die Netzwerk Anmelde Informationen eines bestimmten Benutzers auf einem Computersystem dar, auf dem Windows ausgeführt wird.
+description: Win32 \_ NetworkLoginProfile&\# 8194; Die WMI-Klasse stellt die Netzwerkanmeldungsinformationen eines bestimmten Benutzers auf einem Computersystem dar, auf dem Windows.
 ms.assetid: e5a8e934-d5a7-43fa-b140-c3cca972590f
 ms.tgt_platform: multiple
 title: Win32_NetworkLoginProfile-Klasse
@@ -46,16 +46,16 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3b138ce4bc92088896286f4a21a039b068e2206e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4fb71b27093cb1011b9aebaadf0a6760124b64f9e13ae7b5ef46f5ffc478cce4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972649"
 ---
-# <a name="win32_networkloginprofile-class"></a>Win32 \_ networkloginprofile-Klasse
+# <a name="win32_networkloginprofile-class"></a>Win32 \_ NetworkLoginProfile-Klasse
 
-Die **Win32 \_ networkloginprofile**- [WMI-Klasse](../wmisdk/retrieving-a-class.md) stellt die Netzwerk Anmelde Informationen eines bestimmten Benutzers auf einem Computersystem dar, auf dem Windows ausgeführt wird. Dies umfasst u. a. den Kenn Wort Status, Zugriffsrechte, Datenträger Kontingente und Anmelde Verzeichnispfade.
+Die **WMI-Klasse \_ Win32 NetworkLoginProfile** stellt die Netzwerkanmeldungsinformationen eines bestimmten Benutzers auf einem Computersystem dar, auf dem Windows. [](../wmisdk/retrieving-a-class.md) Dies schließt Kennwortstatus, Zugriffsberechtigungen, Datenträgerkontingente und Anmeldeverzeichnispfade ein, ist aber nicht darauf beschränkt.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -102,47 +102,47 @@ class Win32_NetworkLoginProfile : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ networkloginprofile** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ NetworkLoginProfile-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ networkloginprofile** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ NetworkLoginProfile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccountExpires**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Acct \_ läuft ab")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ acct \_ expires")
 </dt> </dl>
 
-Das Konto läuft ab. Dieser Wert wird anhand der Anzahl der seit 00:00:00, dem 1. Januar 1970 verstrichenen Sekunden berechnet und im folgenden Format festgelegt: YYYYMMDDHHMMSS. mmmmmm sutc.
+Das Konto läuft ab. Dieser Wert wird aus der Anzahl der Sekunden berechnet, die seit dem 1. Januar 1970 um 00:00:00 Verstrichen sind, und wird in diesem Format festgelegt: yyyymmddhhmmss.mmmmmm sutc.
 
-Beispiel: 20521201000230,000000 000
+Beispiel: 20521201000230.000000 000
 
 </dd> <dt>
 
-**Authorizationflags**
+**AuthorizationFlags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Authentifizierung \_ Flags"), [**BitValues**](../wmisdk/standard-qualifiers.md) ("Printer", "Communication", "Server", "Accounts")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ auth \_ flags"), [**BitValues**](../wmisdk/standard-qualifiers.md) ("Printer", "Communication", "Server", "Accounts")
 </dt> </dl>
 
-Ein Satz von Flags, die die Ressourcen angeben, die ein Benutzer für die Verwendung oder Änderung autorisiert ist.
+Eine Gruppe von Flags, die die Ressourcen angeben, zu deren Verwendung oder Änderung ein Benutzer berechtigt ist.
 
 <dt>
 
@@ -179,16 +179,16 @@ Konten
 **BadPasswordCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Functions \| nettuserenum")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsfunktionen \| \| NetUserEnum")
 </dt> </dl>
 
-Gibt an, wie oft der Benutzer ein ungültiges Kennwort eingibt, wenn er sich bei einem Computersystem mit Windows anmeldet.
+Gibt an, wie oft der Benutzer ein fehlerhaftes Kennwort ein gibt, wenn er sich bei einem Computersystem mit Windows.
 
 Beispiel: 0
 
@@ -197,97 +197,97 @@ Beispiel: 0
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **CodePage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ \_ Codepage")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ code \_ page")
 </dt> </dl>
 
-Codepage für die Sprache des Benutzers. Eine Codepage ist der verwendete Zeichensatz.
+Codepage für die Sprache des Benutzers ihrer Wahl. Eine Codepage ist der verwendete Zeichensatz.
 
 </dd> <dt>
 
-**Kommentar**
+**Comment**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ comment")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ comment")
 </dt> </dl>
 
-Kommentar oder Beschreibung für dieses Anmelde Profil.
+Kommentar oder Beschreibung für dieses Anmeldeprofil.
 
 </dd> <dt>
 
-**CountryCode**
+**Countrycode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Country \_ Code")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ country \_ code")
 </dt> </dl>
 
-Länder-/Regionscode für die Sprache des Benutzers.
+Länder-/Regioncode für die Sprache der Wahl des Benutzers.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Flags"), [**Bitmap**](../wmisdk/standard-qualifiers.md) ("0", "1", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "16", "17", "18", "19", "20", "21", "22", "23"), [**BitValues**](../wmisdk/standard-qualifiers.md) ("Script", "Account deaktiviert", "Home dir erforderlich", "Lock out", "password not required", "paswword nicht ändern", "verschlüsseltes Testkennwort zulässig", "temporäres doppeltes Konto", "normales Konto", "Konto für Domänen übergreifende Vertrauensstellung" "," Arbeitsstations-Vertrauensstellungs Konto "," Server Vertrauensstellungs Konto "," Kennwort nicht ablaufen "," MNS-Anmelde Konto "," Smartcard erforderlich "," vertrauenswürdig für Delegierung "," nicht delegiert "," nur den Schlüssel verwenden "," keine vorab Autorisierung erforderlich "," Kennwort abgelaufen ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ flags"), [**BitMap**](../wmisdk/standard-qualifiers.md) ("0", "1", "3", "4", "5", "6", "7", "8", "9", "11", "12", "13", "16", "17", "18", "19", "20", "21", "22", "23"), [**BitValues**](../wmisdk/standard-qualifiers.md) ("Script", "Account Disabled", "Home Dir Required", "Lockout", "Password Not Required", "Paswword Can't Change", "Encrypted Test Password Allowed", "Temp Duplicate Account", "Normal Account", "InterDomain Trust Account", "WorkStation Trust Account", "Server Trust Account", "Don't Expire Password", "MNS Logon Account", "Smartcard Required", "Trusted for Delegation", "Not Delegated", "Use DES Key Only", "Don't Require Preauthorization", "Password Expired")
 </dt> </dl>
 
-Die Eigenschaften, die für dieses Netzwerk Profil verfügbar sind.
+Die eigenschaften, die für dieses Netzwerkprofil verfügbar sind.
 
 Folgende Eigenschaften können festgelegt werden:
 
@@ -298,7 +298,7 @@ Folgende Eigenschaften können festgelegt werden:
 
 Skript
 
-Ein ausgeführtes Anmelde Skript. Dieser Wert muss für den LAN-Manager 2,0 festgelegt werden.
+Ein ausgeführtes Anmeldeskript. Dieser Wert muss für LAN Manager 2.0 festgelegt werden.
 
 </dd> <dt>
 
@@ -314,9 +314,9 @@ Das Konto des Benutzers ist deaktiviert.
 8 (0x8)
 </dt> <dd>
 
-Basisverzeichnis erforderlich
+Startverzeichnis erforderlich
 
-Ein Basisverzeichnis ist erforderlich.
+Ein Startverzeichnis ist erforderlich.
 
 </dd> <dt>
 
@@ -325,7 +325,7 @@ Ein Basisverzeichnis ist erforderlich.
 
 Sperrung
 
-Das Konto ist zurzeit gesperrt. Für " [**nettusersetinfo**](/windows/win32/api/lmaccess/nf-lmaccess-netusersetinfo)" kann dieser Wert gelöscht werden, um ein zuvor gesperrtes Konto zu entsperren. Dieser Wert kann nicht verwendet werden, um ein zuvor entsperrtes Konto zu sperren.
+Das Konto ist derzeit gesperrt. Für [**NetUserSetInfo kann**](/windows/win32/api/lmaccess/nf-lmaccess-netusersetinfo)dieser Wert zum Entsperren eines zuvor gesperrten Kontos aufgehoben werden. Dieser Wert kann nicht zum Sperren eines zuvor entsperrten Kontos verwendet werden.
 
 </dd> <dt>
 
@@ -341,7 +341,7 @@ Es ist kein Kennwort erforderlich.
 64 (0x40)
 </dt> <dd>
 
-Kenn Wort Änderung nicht möglich
+Kennwort kann nicht geändert werden
 
 Der Benutzer kann das Kennwort nicht ändern.
 
@@ -359,7 +359,7 @@ Verschlüsseltes Testkennwort zulässig
 
 Temporäres doppeltes Konto
 
-Ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto ermöglicht dem Benutzer den Zugriff auf diese Domäne, jedoch nicht auf eine Domäne, die dieser Domäne vertraut. Der Benutzer-Manager verweist auf diesen Kontotyp als lokales Benutzerkonto.
+Ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto bietet Benutzerzugriff auf diese Domäne, aber nicht auf eine Domäne, die dieser Domäne vertraut. Der Benutzer-Manager bezieht sich auf diesen Kontotyp als lokales Benutzerkonto.
 
 </dd> <dt>
 
@@ -368,34 +368,34 @@ Ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne bef
 
 Normales Konto
 
-Der Standard Kontotyp, der einen typischen Benutzer darstellt.
+Standardkontotyp, der einen typischen Benutzer darstellt.
 
 </dd> <dt>
 
 2048 (0x800)
 </dt> <dd>
 
-Konto für Domänen übergreifende Vertrauensstellung
+Domänenübergreifendes Vertrauensstellungskonto
 
-Eine Zulassungsberechtigung für ein Vertrauensstellungs Konto für eine Domäne, die anderen Domänen vertraut.
+Eine Genehmigung für ein Vertrauenskonto für eine Domäne, die anderen Domänen vertraut.
 
 </dd> <dt>
 
 4096 (0x1000)
 </dt> <dd>
 
-Arbeitsstations-Vertrauens Konto
+Arbeitsstations-Vertrauensstellungskonto
 
-Ein Computer Konto für eine Windows-Arbeitsstation oder einen Server, das Mitglied dieser Domäne ist.
+Ein Computerkonto für eine Windows arbeitsstation oder server, die bzw. der Mitglied dieser Domäne ist.
 
 </dd> <dt>
 
 8192 (0x2000)
 </dt> <dd>
 
-Server Vertrauensstellungs Konto
+Server-Vertrauensstellungskonto
 
-Ein Computer Konto für einen Sicherungs Domänen Controller, der Mitglied dieser Domäne ist.
+Ein Computerkonto für einen Sicherungsdomänencontroller, der Mitglied dieser Domäne ist.
 
 </dd> <dt>
 
@@ -409,9 +409,9 @@ Kennwort nicht ablaufen
 131072 (0x20000)
 </dt> <dd>
 
-MNS-Anmelde Konto
+MNS-Anmeldekonto
 
-MNS-Anmelde Kontotyp (Majority Node Set), der einen MNS-Benutzer darstellt.
+MNS-Anmeldekontotyp (Majority Node Set), der einen MNS-Benutzer darstellt.
 
 </dd> <dt>
 
@@ -425,7 +425,7 @@ Smartcard erforderlich
 524288 (0x80000)
 </dt> <dd>
 
-Vertrauenswürdige Delegierung
+Vertrauenswürdig für Delegierung
 
 </dd> <dt>
 
@@ -436,17 +436,17 @@ Nicht delegiert
 
 </dd> <dt>
 
-2097152 (0x200.000)
+2097152 (0x200000)
 </dt> <dd>
 
-Nur des-Schlüssels verwenden
+Nur DES-Schlüssel verwenden
 
 </dd> <dt>
 
 4194304 (0x400000)
 </dt> <dd>
 
-Keine vorab Autorisierung erforderlich
+Keine Vorautorisierung erforderlich
 
 </dd> <dt>
 
@@ -461,187 +461,187 @@ Gibt an, dass das Kennwort abgelaufen ist.
 
 Die folgenden Eigenschaften beschreiben den Kontotyp. Es kann nur ein Wert festgelegt werden:
 
--   \_normales \_ Konto
--   \_Konto für Temp Temp- \_ Duplizierung \_
--   Konto der Vertrauensstellung der \_ \_ Vertrauensstellung \_
--   \_ \_ \_ Konto Vertrauens Konto für den Server
--   Konto für die Vertrauensstellung der \_ Verbindungs Domäne \_ \_
+-   NORMALES \_ \_ UF-KONTO
+-   TEMPORÄRES \_ DOPPELTES \_ UF-KONTO \_
+-   UF \_ WORKSTATION \_ TRUST \_ ACCOUNT
+-   UF \_ SERVER \_ TRUST \_ ACCOUNT
+-   UF \_ INTERDOMAIN \_ TRUST \_ ACCOUNT
 
 </dd> <dt>
 
 **FullName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Full \_ Name")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ full \_ name")
 </dt> </dl>
 
-Der vollständige Name des Benutzers, der zum Netzwerk Anmelde Profil gehört. Diese Zeichenfolge kann leer sein, wenn der Benutzer keinen vollständigen Namen mit einem Benutzernamen zuordnen möchte.
+Vollständiger Name des Benutzers, der zum Netzwerkanmeldungsprofil gehört. Diese Zeichenfolge kann leer sein, wenn der Benutzer sich dafür entscheidet, einem Benutzernamen keinen vollständigen Namen zu zuordnen.
 
 </dd> <dt>
 
 **HomeDirectory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Home \_ dir")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ home \_ dir")
 </dt> </dl>
 
-Pfad zum Basisverzeichnis des Benutzers. Diese Zeichenfolge ist möglicherweise leer, wenn der Benutzer kein Basisverzeichnis angeben möchte.
+Pfad zum Startverzeichnis des Benutzers. Diese Zeichenfolge ist möglicherweise leer, wenn der Benutzer kein Startverzeichnis angibt.
 
-Beispiel: " \\ homedir"
+Beispiel: \\ "HOMEDIR"
 
 </dd> <dt>
 
-**Homedirectorydrive**
+**HomeDirectoryDrive**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Home \_ dir \_ Drive")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ home dir \_ \_ drive")
 </dt> </dl>
 
-Laufwerk Buchstabe, der dem Basisverzeichnis des Benutzers für die Anmeldung zugewiesen wird.
+Laufwerkbuchstaben, der dem Basisverzeichnis des Benutzers für die Anmeldung zugewiesen ist.
 
 Beispiel: "C:"
 
 </dd> <dt>
 
-**Lastlogoff**
+**LastLogoff**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Last \_ Logoff")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ last \_ logoff")
 </dt> </dl>
 
-Der Benutzer hat das System zuletzt abgemeldet. Dieser Wert wird anhand der Anzahl der Sekunden berechnet, die seit 00:00:00, dem 1. Januar 1970, verstrichen sind. Der Wert " \* \* \* \* \* \* \* \* \* \* \* \* \* \* . \* \* \* \* \* \* + \* \* \* " bedeutet, dass die letzte Abmelde Zeit unbekannt ist. Das Format dieses Werts lautet YYYYMMDDHHMMSS. mmmmmm sutc. Informationen zum übersetzen dieser Eigenschaft in die Ortszeit finden Sie unter [WMI-Tasks: Datums-und Uhrzeitangaben](../wmisdk/wmi-tasks--dates-and-times.md).
+Der Benutzer hat sich zuletzt vom System abgemelgt. Dieser Wert wird anhand der Anzahl der Sekunden berechnet, die seit dem 1. Januar 1970 um 00:00:00 Verstrichen sind. Der Wert " \* \* \* \* \* \* \* \* \* \* \* \* \* \* . \* \* \* \* \* \* + \* \* \* " bedeutet, dass der Zeitpunkt der letzten Abmeldezeit unbekannt ist. Das Format dieses Werts ist yyyymmddhhmmss.mmmmmm sutc. Informationen zum Übersetzen dieser Eigenschaft in Ihre lokale Zeit finden Sie unter [WMI Tasks: Dates and Times ( WMI-Aufgaben: Datumsangaben und Uhrzeiten](../wmisdk/wmi-tasks--dates-and-times.md)).
 
-Beispiel: 19521201000230,000000 000
+Beispiel: 19521201000230.000000 000
 
 </dd> <dt>
 
 **LastLogon**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Last \_ Login")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ last \_ logon")
 </dt> </dl>
 
-Der Benutzer hat sich zuletzt am System angemeldet. Dieser Wert wird anhand der Anzahl der Sekunden berechnet, die seit 00:00:00, dem 1. Januar 1970, verstrichen sind. Das Format dieses Werts lautet YYYYMMDDHHMMSS. mmmmmm sutc. Informationen zum übersetzen dieser Eigenschaft in die Ortszeit finden Sie unter [WMI-Tasks: Datums-und Uhrzeitangaben](../wmisdk/wmi-tasks--dates-and-times.md).
+Der Benutzer hat sich zuletzt beim System angemeldet. Dieser Wert wird anhand der Anzahl der Sekunden berechnet, die seit dem 1. Januar 1970 um 00:00:00 Verstrichen sind. Das Format dieses Werts ist yyyymmddhhmmss.mmmmmm sutc. Informationen zum Übersetzen dieser Eigenschaft in Ihre lokale Zeit finden Sie unter [WMI Tasks: Dates and Times ( WMI-Aufgaben: Datumsangaben und Uhrzeiten](../wmisdk/wmi-tasks--dates-and-times.md)).
 
-Beispiel: 19521201000230,000000 000
+Beispiel: 19521201000230.000000 000
 
 </dd> <dt>
 
 **LogonHours**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (147), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Logon \_ Hours")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (147), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ logon \_ hours")
 </dt> </dl>
 
-Die Zeiten in der Woche, an denen sich der Benutzer anmelden kann. Jedes Bit stellt eine Zeiteinheit dar, die durch die **UnitsPerWeek** -Eigenschaft angegeben wird. Wenn beispielsweise die Zeiteinheit stündlich ist, ist das erste Bit (Bit 0, Wort 0) Sonntag, 0:00 bis 0:59, das zweite Bit (Bit 1, Wort 0) ist Sonntag, 1:00 bis 1:59 usw. Wenn dieser Member auf **null** festgelegt ist, gibt es keine Zeitbeschränkung. Die Uhrzeit wird auf GMT festgelegt und muss für andere Zeitzonen angepasst werden (z. b. GMT minus 8 Stunden für PST).
+Zeiten während der Woche, in denen sich der Benutzer anmelden kann. Jedes Bit stellt eine Zeiteinheit dar, die von der **UnitsPerWeek-Eigenschaft angegeben** wird. Wenn die Zeiteinheit beispielsweise stündlich ist, ist das erste Bit (Bit 0, Wort 0) Sonntag, 0:00 bis 0:59, das zweite Bit (Bit 1, Wort 0) Sonntag, 1:00 bis 1:59 und so weiter. Wenn dieser Member auf **NULL festgelegt ist,** gibt es keine Zeitbeschränkung. Die Zeit ist auf GMT festgelegt und muss für andere Zeitzonen angepasst werden (z. B. GMT minus 8 Stunden für PST).
 
 </dd> <dt>
 
-**LOGONSERVER**
+**LogonServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Logon \_ Server")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ logon \_ server")
 </dt> </dl>
 
-Der Name des Servers, an den Anmelde Anforderungen gesendet werden. Server Namen sollten zwei umgekehrte Schrägstriche () vorangestellt werden \\ \\ . Ein Servername mit einem Sternchen ( \\ \\ \* ) gibt an, dass die Anmelde Anforderung von jedem beliebigen Anmelde Server verarbeitet werden kann. Eine NULL-Zeichenfolge gibt an, dass Anforderungen an den Domänen Controller gesendet werden.
+Name des Servers, an den Anmeldeanforderungen gesendet werden. Servernamen sollten zwei schräge Schrägstriche vorangehende werden ( \\ \\ ). Ein Servername mit einem Sternchen ( ) gibt an, dass die Anmeldeanforderung von jedem \\ \\ \* Anmeldeserver verarbeitet werden kann. Eine NULL-Zeichenfolge gibt an, dass Anforderungen an den Domänencontroller gesendet werden.
 
-Beispiel: " \\ \\ myserver"
+Beispiel: \\ \\ "MyServer"
 
 </dd> <dt>
 
 **MaximumStorage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Max \_ Storage"), [**Units**](../wmisdk/standard-qualifiers.md) ("Bytes")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ max \_ storage"), [**Units**](../wmisdk/standard-qualifiers.md) ("bytes")
 </dt> </dl>
 
-Maximale Menge an Speicherplatz, die dem Benutzer zur Verfügung steht. Wenn MaximumStorage auf User \_ maxstorage Unlimited festgelegt ist \_ , darf der Benutzer den gesamten verfügbaren Speicherplatz verwenden.
+Maximal verfügbarer Speicherplatz für den Benutzer. Wenn MaximumStorage auf USER MAXSTORAGE UNLIMITED festgelegt ist, kann der Benutzer den verfügbaren \_ \_ Speicherplatz nutzen.
 
-Beispiel: 10 Millionen
+Beispiel: 10000000
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Name")
+Qualifizierer: [**Schlüssel**](../wmisdk/key-qualifier.md), [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| \| [**USER INFO \_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Name")
 </dt> </dl>
 
-Benutzerkonto für eine bestimmte Domäne oder einen bestimmten Computer. Die Anzahl der Zeichen im Namen darf den Wert von UNLEN nicht überschreiten.
+Benutzerkonto auf einer bestimmten Domäne oder einem bestimmten Computer. Die Anzahl der Zeichen im Namen darf den Wert von UNLEN nicht überschreiten.
 
-Beispiel: "somedomäne \\ JohnDoe"
+Beispiel: "somedomain \\ johndoe"
 
 </dd> <dt>
 
-**Anzahloflogone**
+**NumberOfLogons**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ NUM \_ Logons")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ num \_ logons")
 </dt> </dl>
 
-Gibt an, wie oft der Benutzer versucht hat, sich bei diesem Konto anzumelden. Der Wert 0xFFFFFFFF gibt an, dass der Wert unbekannt ist. Diese Eigenschaft wird auf jedem Sicherungs Domänen Controller (BDC) in der Domäne separat verwaltet. Um einen exakten Wert zu erhalten, sollte nur der größte Wert aus allen BDCs verwendet werden.
+Anzahl der erfolgreichen Versuche des Benutzers, sich bei diesem Konto anzumelden. Der Wert 0xFFFFFFFF gibt an, dass der Wert unbekannt ist. Diese Eigenschaft wird auf jedem Sicherungsdomänencontroller (BDC) in der Domäne separat verwaltet. Um einen genauen Wert zu erhalten, sollte nur der größte Wert von allen BDCs verwendet werden.
 
 Beispiel: 4
 
@@ -650,65 +650,65 @@ Beispiel: 4
 **Parameter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ para")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ parms")
 </dt> </dl>
 
-Leerraum, der für die Verwendung durch Anwendungen reserviert ist. Diese Zeichenfolge kann NULL sein, oder Sie kann eine beliebige Anzahl von Zeichen vor dem abschließenden NULL-Zeichen enthalten. Microsoft-Produkte verwenden dieses Mitglied zum Speichern von Benutzer Konfigurationsinformationen. Ändern Sie diese Informationen nicht, da dieser Wert für eine Anwendung spezifisch ist.
+Speicherplatz, der für die Verwendung durch Anwendungen vorgesehen ist. Diese Zeichenfolge kann NULL sein oder eine beliebige Anzahl von Zeichen vor dem abschließenden NULL-Zeichen enthalten. Microsoft-Produkte verwenden dieses Mitglied, um Benutzerkonfigurationsinformationen zu speichern. Ändern Sie diese Informationen nicht, da dieser Wert für eine Anwendung spezifisch ist.
 
 </dd> <dt>
 
 **PasswordAge**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ password \_ Age")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ password \_ age")
 </dt> </dl>
 
-Die Zeitspanne, für die ein Kennwort wirksam ist. Dieser Wert wird von der Anzahl der Sekunden gemessen, die seit der letzten Änderung des Kennworts verstrichen sind.
+Die Zeitspanne, für die ein Kennwort in Kraft war. Dieser Wert wird anhand der Anzahl von Sekunden gemessen, die seit der letzten Änderung des Kennworts verstrichen sind.
 
-Beispiel: 00001201000230,000000 000
+Beispiel: 00001201000230.0000000 000
 
 </dd> <dt>
 
 **PasswordExpires**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**Benutzer \_ modals \_ Info \_ 0**](/windows/win32/api/lmaccess/ns-lmaccess-user_modals_info_0) \| usrmod0 \_ Max \_ Kennwort \_ Age")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| \| [**USER \_ MODALS INFO \_ \_ 0**](/windows/win32/api/lmaccess/ns-lmaccess-user_modals_info_0) \| usrmod0 \_ max \_ passwd \_ age")
 </dt> </dl>
 
-Datum und Uhrzeit des Ablaufs des Kennworts. Der Wert wird im folgenden Format festgelegt: YYYYMMDDHHMMSS. mmmmmm sutc
+Datum und Uhrzeit des Ablaufs des Kennworts. Der Wert wird in folgendem Format festgelegt: yyyymmddhhmmss.mmmmmm sutc
 
-Beispiel: 19521201000230,000000 000
+Beispiel: 19521201000230.0000000 000
 
 </dd> <dt>
 
 **PrimaryGroupId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Primary \_ Group \_ ID")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ primäre \_ \_ Gruppen-ID")
 </dt> </dl>
 
 Relativer Bezeichner (RID) der primären globalen Gruppe für diesen Benutzer. Der Bezeichner überprüft die primäre Gruppe, zu der das Profil des Benutzers gehört.
@@ -718,16 +718,16 @@ Relativer Bezeichner (RID) der primären globalen Gruppe für diesen Benutzer. D
 **Berechtigungen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ PRIV")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ priv")
 </dt> </dl>
 
-Ebene der Berechtigung, die der **usri3 \_ Name** -Eigenschaft zugewiesen ist.
+Berechtigungsstufe, die der **usri3-Namenseigenschaft \_** zugewiesen ist.
 
 <dt>
 
@@ -757,16 +757,16 @@ Ebene der Berechtigung, die der **usri3 \_ Name** -Eigenschaft zugewiesen ist.
 **Profil**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ profile")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3-Profil") \_
 </dt> </dl>
 
-Der Pfad zum Profil des Benutzers. Dieser Wert kann eine NULL-Zeichenfolge, ein lokaler absoluter Pfad oder ein UNC-Pfad sein. Ein Benutzerprofil enthält Einstellungen, die für jeden Benutzer anpassbar sind, z. b. die Desktop Farben.
+Pfad zum Profil des Benutzers. Dieser Wert kann eine NULL-Zeichenfolge, ein lokaler absoluter Pfad oder ein UNC-Pfad sein. Ein Benutzerprofil enthält Einstellungen, die für jeden Benutzer angepasst werden können, z. B. die Desktopfarben.
 
 Beispiel: "C: \\ Windows"
 
@@ -775,52 +775,52 @@ Beispiel: "C: \\ Windows"
 **ScriptPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Script \_ path")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3-Skriptpfad") \_ \_
 </dt> </dl>
 
-Verzeichnispfad zum Anmelde Skript des Benutzers. Ein Anmelde Skript führt automatisch eine Reihe von Befehlen aus, wenn sich ein Benutzer bei einem System anmeldet.
+Verzeichnispfad zum Anmeldeskript des Benutzers. Ein Anmeldeskript führt jedes Mal, wenn sich ein Benutzer bei einem System anmeldet, automatisch eine Reihe von Befehlen aus.
 
-Beispiel: "C: \\ Win \\ Profiles \\ thomassteven"
+Beispiel: "C: \\ win \\ profiles \\ ThomasSteven"
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, durch den das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **UnitsPerWeek**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Units \_ per \_ Week")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Einheiten pro \_ \_ Woche")
 </dt> </dl>
 
-Die Anzahl der Zeiteinheiten, in die die Woche aufgeteilt ist. Sie wird mit der **LogonHours** -Eigenschaft verwendet, um den Benutzer Zugriff auf den Computer einzuschränken.
+Anzahl der Zeiteinheiten, in die die Woche unterteilt ist. Sie wird mit der **LogonHours-Eigenschaft** verwendet, um den Benutzerzugriff auf den Computer zu beschränken.
 
 Beispiel: 168 (Stunden pro Woche)
 
@@ -829,13 +829,13 @@ Beispiel: 168 (Stunden pro Woche)
 **UserComment**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ usr \_ comment")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ usr \_ comment")
 </dt> </dl>
 
 Benutzerdefinierter Kommentar oder Beschreibung für dieses Profil.
@@ -845,41 +845,41 @@ Benutzerdefinierter Kommentar oder Beschreibung für dieses Profil.
 **UserId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ User \_ ID")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ user \_ id")
 </dt> </dl>
 
-Entfernen Sie den Benutzer. Der Bezeichner überprüft, ob der Benutzer vorhanden und für diese Domäne eindeutig ist.
+RID des Benutzers. Der Bezeichner überprüft, ob der Benutzer vorhanden ist und für diese Domäne eindeutig ist.
 
 </dd> <dt>
 
 **UserType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Flags")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Netzwerkverwaltungsstrukturen \| USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3-Flags") \_
 </dt> </dl>
 
-Der Kontotyp, für den der Benutzer über Berechtigungen verfügt.
+Typ des Kontos, für das der Benutzer über Berechtigungen verfügt.
 
 Die Werte sind:
 
 -   "Normales Konto"
 -   "Doppeltes Konto"
--   "Arbeitsstations-Vertrauens Konto"
--   "Server Vertrauensstellungs Konto"
--   "Vertrauenswürdiges Domänen Konto"
--   Unbekannter
+-   "Arbeitsstations-Vertrauenskonto"
+-   "Server trust account" (Serververtrauenskonto)
+-   "Interdomain Trust Account" (Domänenübergreifendes Vertrauensstellungskonto)
+-   "Unbekannt"
 
 <dt>
 
@@ -892,42 +892,42 @@ Die Werte sind:
 
 <span id="Duplicate_Account"></span><span id="duplicate_account"></span><span id="DUPLICATE_ACCOUNT"></span>
 
-**Doppeltes Konto** ("doppeltes Konto")
+**Doppeltes Konto** ("Doppeltes Konto")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Workstation_Trust_Account"></span><span id="workstation_trust_account"></span><span id="WORKSTATION_TRUST_ACCOUNT"></span>
 
-Arbeitsstations **Vertrauens Konto** ("Arbeitsstations-Vertrauensstellungs Konto")
+**Arbeitsstations-Vertrauensstellungskonto** ("Arbeitsstations-Vertrauensstellungskonto")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Server_Trust_Account"></span><span id="server_trust_account"></span><span id="SERVER_TRUST_ACCOUNT"></span>
 
-**Server Vertrauensstellungs Konto** ("Server Vertrauensstellungs Konto")
+**Server-Vertrauensstellungskonto** ("Server-Vertrauensstellungskonto")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interdomain_Trust_Account"></span><span id="interdomain_trust_account"></span><span id="INTERDOMAIN_TRUST_ACCOUNT"></span>
 
-**Domänen Vertrauensstellungs Konto** ("interdomäne-Vertrauensstellungs Konto")
+**Domänenübergreifendes Vertrauensstellungskonto** ("Domänenübergreifendes Vertrauensstellungskonto")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Arbeitsstationen**
+**Workstations**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -936,24 +936,24 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures \| [**User \_ Info \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ Workstations")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Network Management Structures USER INFO \| [**\_ \_ 3**](/windows/win32/api/lmaccess/ns-lmaccess-user_info_3) \| usri3 \_ workstations")
 </dt> </dl>
 
-Namen von Arbeitsstationen, von denen der Benutzer sich anmelden kann. Es können bis zu acht Arbeitsstationen angegeben werden. die Namen müssen durch Kommas (,) getrennt werden. Eine NULL-Zeichenfolge weist keine Einschränkungen auf. Um Anmeldungen von allen Arbeitsstationen für dieses Konto zu deaktivieren, legen Sie die Eigenschaft "UF \_ accountdeaktiviert" in der **Flags** -Eigenschaft dieser Klasse fest.
+Namen von Arbeitsstationen, von denen sich der Benutzer anmelden kann. Es können bis zu acht Arbeitsstationen angegeben werden. die Namen müssen durch Kommas (,) getrennt werden. Eine NULL-Zeichenfolge gibt keine Einschränkungen an. Um Anmeldungen von allen Arbeitsstationen für dieses Konto zu deaktivieren, legen Sie UF \_ ACCOUNTDISABLE in der **Flags-Eigenschaft** dieser Klasse fest.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ networkloginprofile** -Klasse wird von der [**CIM- \_ Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ NetworkLoginProfile-Klasse** wird von [**der \_ CIM-Einstellung abgeleitet.**](cim-setting.md)
 
-Der aufrufenden Prozess, der diese Klasse verwendet, muss auf dem Computer, auf dem sich die Registrierung befindet, über die Berechtigung " **SE \_ Restore \_ Name** " verfügen. Weitere Informationen finden Sie unter [Ausführen privilegierter Vorgänge](../wmisdk/executing-privileged-operations.md).
+Der aufrufende Prozess, der diese Klasse verwendet, muss auf dem Computer, auf dem sich die Registrierung befindet, über SE **\_ RESTORE \_ NAME-Berechtigung** verfügen. Weitere Informationen finden Sie unter [Ausführen von privilegierten Vorgängen.](../wmisdk/executing-privileged-operations.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das PowerShell-Beispiel " [List Network Login Profiles](https://Gallery.TechNet.Microsoft.Com/4b84fb8a-964e-4811-98d2-de1009685a14) " gibt Netzwerk Anmelde Informationen für alle Benutzer eines Computers zurück.
+Im [PowerShell-Beispiel Netzwerkanmeldungsprofile](https://Gallery.TechNet.Microsoft.Com/4b84fb8a-964e-4811-98d2-de1009685a14) auflisten werden Netzwerkanmeldungsinformationen für alle Benutzer eines Computers zurückgegeben.
 
-Im folgenden VBScript-Beispiel werden Netzwerk Anmelde Informationen zurückgegeben.
+Im folgenden VBScript-Beispiel werden Netzwerkanmeldungsinformationen zurückgegeben.
 
 
 ```VB
@@ -1029,8 +1029,8 @@ End Function
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -1039,7 +1039,7 @@ End Function
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

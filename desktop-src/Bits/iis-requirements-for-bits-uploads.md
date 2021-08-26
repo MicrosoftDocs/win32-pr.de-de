@@ -1,38 +1,38 @@
 ---
 title: IIS-Anforderungen für BITS-Uploads
-description: Für Uploads erfordert BITS IIS 6,0 unter Windows Server 2003 und IIS 7,0 unter Windows Server 2008; IIS 5,1 wird von Bits unter Windows XP nicht unterstützt.
+description: Für Uploads erfordert BITS IIS 6.0 auf Windows Server 2003 und IIS 7.0 auf Windows Server 2008. BITS unterstützt IIS 5.1 nicht auf Windows XP.
 ms.assetid: 8ab07af5-3b59-4c98-8e57-f614deb8b594
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8fc1eb9bae86e7bb2635b3a250e8a9efe1bc630
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eb09ec8c55cce592baf48b4b39faf031e5d6c98909927c0e597be6aaae8712e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004990"
 ---
 # <a name="iis-requirements-for-bits-uploads"></a>IIS-Anforderungen für BITS-Uploads
 
-Für Uploads erfordert BITS IIS 6,0 unter Windows Server 2003 und IIS 7,0 unter Windows Server 2008; IIS 5,1 wird von Bits unter Windows XP nicht unterstützt. Das virtuelle IIS-Verzeichnis muss für Uploads aktiviert sein, und die BITS-IIS-Erweiterungen müssen konfiguriert sein.
+Für Uploads erfordert BITS IIS 6.0 auf Windows Server 2003 und IIS 7.0 auf Windows Server 2008. BITS unterstützt IIS 5.1 nicht auf Windows XP. Das virtuelle IIS-Verzeichnis muss für Uploads aktiviert sein und die BITS IIS-Erweiterungen konfiguriert haben.
 
-**Core-Installationen von Windows Server:** BITS-IIS-Erweiterungen werden nicht unterstützt.
+**Kerninstallationen von Windows Server:** BITS IIS-Erweiterungen werden nicht unterstützt.
 
-Verwenden Sie unter Windows Server 2008 die **Server-Manager** , um das Feature für BITS-Server Erweiterungen zu installieren. Klicken Sie im linken Bereich von **Server-Manager** auf **Features** . Überprüfen Sie im **Assistenten zum Hinzufügen von Features** BITS-Server Erweiterungen. Beachten Sie, dass die IIS 6-Verwaltungs Kompatibilitäts Rollen installiert werden müssen.
+Verwenden Windows Server 2008 die **Server-Manager,** um das Feature BITS-Servererweiterungen zu installieren. Klicken **Server-Manager** im linken Bereich **auf Features.** Aktivieren Sie **im Assistenten zum Hinzufügen** von Funktionen bits-Servererweiterungen. Beachten Sie, dass die IIS 6-Verwaltungskompatibilitätsrollen installiert sein müssen.
 
-Verwenden Sie unter Windows Server 2003 den **Assistenten für Windows-Komponenten** , um die BITS-Server Erweiterung zu installieren. Wählen Sie in der **Systemsteuerung** die Option **Programme hinzufügen oder entfernen** aus. Wählen Sie dann **Windows-Komponenten hinzufügen/entfernen** aus, um den **Assistenten für Windows-Komponenten** anzuzeigen. Die BITS-Server Erweiterung ist eine Unterkomponente von Internetinformationsdienste (IIS), bei der es sich um eine Unterkomponente des Webanwendungs Servers handelt.
+Verwenden Windows Server 2003 den Assistenten Windows **Komponenten,** um die BITS-Servererweiterung zu installieren. Wählen **Systemsteuerung** die Option Software hinzufügen **oder entfernen aus.** Wählen Sie dann **Add/Remove Windows Components (Komponenten hinzufügen/entfernen) aus,** um den **assistenten Windows anzuzeigen.** Die BITS-Servererweiterung ist eine Unterkomponente von Internetinformationsdienste (IIS), die eine Unterkomponente des Webanwendungsservers ist.
 
 > [!Note]  
-> Wenn der IISAdmin-Dienst neu gestartet wird, muss der IIS-Arbeitsprozess wieder verwendet werden, bevor der BITS-Dienst Uploads fortsetzen kann. Der IIS-Arbeitsprozess kann mithilfe des Befehlszeilen-Hilfsprogramms **IISReset.exe** manuell wieder verwendet werden.
+> Wenn der IISAdmin-Dienst neu gestartet wird, muss der IIS-Arbeitsprozess wiederverwendet werden, bevor der BITS-Dienst uploads fortsetzen kann. Der IIS-Workerprozess kann manuell mithilfe des BefehlszeilenprogrammsIISReset.exe **werden.**
 
- 
+ 
 
-Weitere Informationen zum Konfigurieren von IIS für Uploads finden [Sie unter Einrichten des Servers für Uploads](setting-up-the-server-for-uploads.md).
+Informationen zum Konfigurieren von IIS für Uploads finden Sie unter [Einrichten des Servers für Uploads.](setting-up-the-server-for-uploads.md)
 
-Ausführliche Informationen zu den Eigenschaften, die von Bits zu IIS hinzugefügt werden, finden Sie unter [BITS-Server Einstellungen für Upload-Aufträge](bits-server-settings-for-upload-jobs.md).
+Weitere Informationen zu den Eigenschaften, die BITS IIS hinzufügt, finden Sie unter [BITS Server Einstellungen for Hochladen Jobs](bits-server-settings-for-upload-jobs.md).
 
- 
+ 
 
- 
+ 
 
 
 

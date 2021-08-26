@@ -1,21 +1,21 @@
 ---
-description: FourCC-Codes
+description: FOURCC-Codes
 ms.assetid: 7627b580-4119-48e2-88b7-51b714b5d5b2
-title: FourCC-Codes
+title: FOURCC-Codes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb789bc16a1643ee737c1c1a63bdbc5704567931
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 25820d21fb8e8386fb11816c373debf427fa783b8a2f2d4723a46e689e6aea0d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043320"
 ---
-# <a name="fourcc-codes"></a>FourCC-Codes
+# <a name="fourcc-codes"></a>FOURCC-Codes
 
-Vielen digitalen Medienformaten werden FOURCC-Codes zugewiesen. Bei einem FourCC-Code handelt es sich um eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verkettung von vier ASCII-Zeichen erstellt wird. Der FourCC-Code für im YUY2 Video lautet beispielsweise "im YUY2". Für komprimierte Videoformate und nicht-RGB-Videoformate (z. b. YUV) sollte der **bicompression** -Member der [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur auf den FourCC-Code festgelegt werden.
+Vielen digitalen Medienformaten sind FOURCC-Codes zugewiesen. Ein FOURCC-Code ist eine 32-Bit-Ganzzahl ohne Vorzeichen, die durch Verkettung von vier ASCII-Zeichen erstellt wird. Der FOURCC-Code für das YUY2-Video ist beispielsweise "YUY2". Bei komprimierten Videoformaten und Nicht-RGB-Videoformaten (z. B. YUV) sollte das **biCompression-Element** der [**BITMAPINFOHEADER-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) auf den FOURCC-Code festgelegt werden.
 
-Es gibt verschiedene C/C++-Makros, die das Deklarieren von FourCC-Werten im Quellcode vereinfachen. Beispielsweise wird das **makefourcc** -Makro in MMSYSTEM. h deklariert, und das **FCC** -Makro wird in aviriff. h deklariert. Verwenden Sie diese wie folgt:
+Es gibt verschiedene C/C++-Makros, die das Deklarieren von FOURCC-Werten im Quellcode vereinfachen. Beispielsweise wird das **MAKEFOURCC-Makro** in Mmsystem.h deklariert, und das **FCC-Makro** wird in Aviriff.h deklariert. Verwenden Sie sie wie folgt:
 
 
 ```C++
@@ -25,7 +25,7 @@ DWORD fccYUY2 = FCC('YUY2');
 
 
 
-Sie können einen FourCC-Code auch direkt als Zeichenfolgenliterale deklarieren, indem Sie einfach die Reihenfolge der Zeichen umkehren. Beispiel:
+Sie können einen FOURCC-Code auch direkt als Zeichenfolgenliteral deklarieren, indem Sie einfach die Reihenfolge der Zeichen umkehren. Beispiel:
 
 
 ```C++
@@ -34,13 +34,13 @@ DWORD fccYUY2 = '2YUY';  // Declares the FOURCC 'YUY2'.
 
 
 
-Das Umkehren der Reihenfolge ist erforderlich, da das Microsoft Windows-Betriebssystem eine Little-Endian-Architektur verwendet. ' Y ' = 0x59, ' U ' = 0x55 und ' 2 ' = 0x32, daher ist ' 2yuy ' 0x32595559.
+Das Umkehren der Reihenfolge ist erforderlich, da das Microsoft Windows-Betriebssystem eine Little-Endian-Architektur verwendet. "Y" = 0x59, "U" = 0x55 und "2" = 0x32, sodass "2 TOKENY" 0x32595559.
 
-### <a name="converting-fourcc-codes-to-subtype-guids"></a>Umstellen von FOURCC-Codes in Untertyp-GUIDs
+### <a name="converting-fourcc-codes-to-subtype-guids"></a>Konvertieren von FOURCC-Codes in Untertyp-GUIDs
 
-Ein Bereich von 2 \* 32 GUIDs ist für die Darstellung von fourccs reserviert. Diese GUIDs sind in der Form, `XXXXXXXX-0000-0010-8000-00AA00389B71` in der `XXXXXXXX` der FourCC-Code ist. Daher ist die Untertyp-GUID für im YUY2 `32595559-0000-0010-8000-00AA00389B71` .
+Ein Bereich von 2 \* 32 GUIDs ist für die Darstellung von FOURCCs reserviert. Diese GUIDs haben alle das Formular, `XXXXXXXX-0000-0010-8000-00AA00389B71` wobei `XXXXXXXX` der FOURCC-Code ist. Daher ist die Untertyp-GUID für YUY2 `32595559-0000-0010-8000-00AA00389B71` .
 
-Viele dieser GUIDs sind bereits in der Header Datei "UUIDs. h" definiert. Beispielsweise ist der im YUY2-Untertyp als mediasubtype \_ im YUY2 definiert. Die DirectShow-Basisklassen Bibliothek bietet auch eine Hilfsklasse, " [**fourccmap**](fourccmap.md)", die zum Konvertieren von FOURCC-Codes in GUID-Werte verwendet werden kann. Der **fourccmap** -Konstruktor nimmt einen FourCC-Code als Eingabeparameter an. Anschließend können Sie das **fourccmap** -Objekt in die entsprechende GUID umwandeln:
+Viele dieser GUIDs sind bereits in der Headerdatei Uuids.h definiert. Der YUY2-Untertyp ist beispielsweise als MEDIASUBTYPE \_ YUY2 definiert. Die DirectShow-Basisklassenbibliothek stellt auch die Hilfsklasse [**FOURCCMap**](fourccmap.md)zur Verfügung, die zum Konvertieren von FOURCC-Codes in GUID-Werte verwendet werden kann. Der **FOURCCMap-Konstruktor** akzeptiert einen FOURCC-Code als Eingabeparameter. Anschließend können Sie das **FOURCCMap-Objekt** in die entsprechende GUID umwanden:
 
 
 ```C++
@@ -60,7 +60,7 @@ GUID g2 = (GUID)FOURCCMap(FCC('YUY2'));
 [**Audiountertypen**](audio-subtypes.md)
 </dt> <dt>
 
-[Video Untertypen](video-subtypes.md)
+[Videountertypen](video-subtypes.md)
 </dt> <dt>
 
 [Arbeiten mit Codecs](working-with-codecs.md)

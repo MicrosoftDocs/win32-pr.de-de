@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec2CatmullRom-Funktion (D3DX10Math.h): Führt eine Catmull-Rom-Interpolation mithilfe der angegebenen 2D-Vektoren aus.'
+description: 'D3DXVec2CatmullRom-Funktion (D3DX10Math.h): Führt unter Verwendung der angegebenen 2D-Vektoren eine Catmull-Rom Interpolation aus.'
 ms.assetid: 8ec1abfa-0fa9-486a-b86d-bbb8f1d63849
 title: D3DXVec2CatmullRom-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 41b61d9488e09b72c73cba885d836c6451631c56
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bfa83302c62c7e09991cb8c3cc9282b41cdd17ec396bc721511d7e13e59ed95a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989950"
 ---
 # <a name="d3dxvec2catmullrom-function-d3dx10mathh"></a>D3DXVec2CatmullRom-Funktion (D3DX10Math.h)
 
-Führt eine Catmull-Rom Interpolation mit den angegebenen 2D-Vektoren aus.
+Führt eine Catmull-Rom Interpolation unter Verwendung der angegebenen 2D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ D3DXVECTOR2* D3DXVec2CatmullRom(
 
 Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
-Zeiger auf den [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) der das Ergebnis des Vorgangs ist.
+Zeiger auf [**D3DXVECTOR2,**](d3d10-d3dxvector2.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -105,9 +105,9 @@ Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
 Zeiger auf eine D3DXVECTOR2-Struktur, die das Ergebnis der Catmull-Rom Interpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Suchen Sie bei vier Punkten (p1, p2, p3, p4) eine Funktion Q(s) so, dass:
+Bei vier Punkten (p1, p2, p3, p4) suchen Sie eine Funktion Q(s) so, dass:
 
 
 ```
@@ -119,7 +119,7 @@ Q(s) is parallel to the line joining p2 to p4 when s is 1.
 
 
 
-Die Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
+Der Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
 
 
 ```
@@ -150,7 +150,7 @@ Q(s) = (2s3 - 3s2 + 1)v1 + (-2s3 + 3s2)v2 + (s3 - 2s2 + s)t1 + (s3 - s2)t2
 
 
 
-und Ersetzen durch v1, v2, t1, t2 ergibt:
+und ersetzen durch v1, v2, t1, t2 und ergeben:
 
 
 ```
@@ -159,7 +159,7 @@ Q(s) = (2s3 - 3s2 + 1)p2 + (-2s3 + 3s2)p3 + (s3 - 2s2 + s)(p3 - p1) / 2 + (s3 - 
 
 
 
-Dies kann wie hier erläutert neu angeordnet werden:
+Dies kann wie hier angezeigt neu angeordnet werden:
 
 
 ```
@@ -172,14 +172,14 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

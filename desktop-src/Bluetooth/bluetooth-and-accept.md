@@ -1,27 +1,27 @@
 ---
-title: Bluetooth und Accept
-description: Bluetooth verwendet die Accept-Funktion, um eingehende Verbindungsversuche für einen Socket zu aktivieren.
+title: Bluetooth und Akzeptieren
+description: Bluetooth verwendet die accept-Funktion, um eingehende Verbindungsversuche für einen Socket zu ermöglichen.
 ms.assetid: 79708118-2f70-4759-b5d6-cf5cfc33c27e
 keywords:
 - accept (Akzeptieren)
 - Bluetooth
 - Bluetooth
-- Bluetooth und Accept
+- Bluetooth und Akzeptieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 28dff84ec05429411614e64a08ab159a5ee134b6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2c5f12a7fd9fee508354dfcd9421f830e814eed09bb207cc6024b50705cc3566
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004610"
 ---
-# <a name="bluetooth-and-accept"></a>Bluetooth und Accept
+# <a name="bluetooth-and-accept"></a>Bluetooth und Akzeptieren
 
-Bluetooth verwendet die [**Accept**](/windows/desktop/api/winsock2/nf-winsock2-accept) -Funktion, um eingehende Verbindungsversuche für einen Socket zu aktivieren. Die BTH- \_ addr der Client Anwendung wird durchlesen des Transport spezifischen Bluetooth-Abschnitts der zurückgegebenen [**sockaddr**](/windows/desktop/WinSock/sockaddr-2) -Struktur abgerufen. Die Verwendung der **Accept** -Funktion mit Bluetooth weist das folgende Format auf:
+Bluetooth verwendet die [](/windows/desktop/api/winsock2/nf-winsock2-accept) accept-Funktion, um eingehende Verbindungsversuche für einen Socket zu aktivieren. Die \_ BTH-ADDR der Clientanwendung wird durch Lesen des Bluetooth transportspezifischen Abschnitts der [**zurückgegebenen Sockaddr-Struktur**](/windows/desktop/WinSock/sockaddr-2) abgerufen. Die Verwendung der **accept-Funktion** mit Bluetooth hat das folgende Format:
 
--   Der *addr* -Parameter der [**Accept**](/windows/desktop/api/winsock2/nf-winsock2-accept) -Funktion ist ein optionaler Zeiger auf einen Puffer, der die Adresse der verbundenen Entität empfängt, wie Sie der Kommunikationsschicht bekannt ist. Ein Zeiger auf eine [**sockaddr- \_ BTH**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth) -Struktur mit der Remote-Bluetooth-Geräteadresse wird zurückgegeben.
--   Der *addrlen* -Parameter der [**Accept**](/windows/desktop/api/winsock2/nf-winsock2-accept) -Funktion ist ein optionaler Zeiger auf eine Ganzzahl, die die Länge von addr in Bytes enthält. Der ganzzahlige Wert muss größer als oder gleich dem Wert von **sizeof** ([**sockaddr \_ BTH**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth)) sein.
+-   Der *addr-Parameter* der [**accept-Funktion**](/windows/desktop/api/winsock2/nf-winsock2-accept) ist ein optionaler Zeiger auf einen Puffer, der die Adresse der verbindenden Entität empfängt, wie es der Kommunikationsschicht bekannt ist. Ein Zeiger auf eine [**SOCKADDR-BTH-Struktur \_**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth) mit der Remote-Bluetooth Geräteadresse wird zurückgegeben.
+-   Der *addrlen-Parameter* der [**accept-Funktion**](/windows/desktop/api/winsock2/nf-winsock2-accept) ist ein optionaler Zeiger auf eine ganze Zahl, die die Länge des Addrs in Bytes enthält. Die ganze Zahl muss größer oder gleich dem Wert von **sizeof** ([**SOCKADDR \_ BTH**](/windows/desktop/api/Ws2bth/ns-ws2bth-sockaddr_bth)) sein.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -30,9 +30,9 @@ Bluetooth verwendet die [**Accept**](/windows/desktop/api/winsock2/nf-winsock2-a
 [Windows-Sockets](/windows/desktop/WinSock/windows-sockets-start-page-2)
 </dt> <dt>
 
-[**erst**](/windows/desktop/api/winsock2/nf-winsock2-accept)
+[**Akzeptieren**](/windows/desktop/api/winsock2/nf-winsock2-accept)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
